@@ -1,19 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1.ebuild,v 1.2 2002/08/30 22:55:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1.ebuild,v 1.1 2002/09/28 19:22:09 azarah Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
-inherit makeedit
+inherit flag-o-matic gcc makeedit
 
-EMVER="0.65.2"
-IPCVER="1.0.0.1"
+# Crashes on start when compiled with -fomit-frame-pointer
+filter-flags "-fomit-frame-pointer"
+
+EMVER="0.63.3"
+IPCVER="0.99.63"
 
 # handle _rc versions
 MY_PV1=${PV/_}
 MY_PV2=${MY_PV1/eta}
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.gz
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
 	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-${EMVER}.tar.gz
 	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )"
 HOMEPAGE="http://www.mozilla.org"
@@ -48,8 +51,7 @@ export MOZILLA_OFFICIAL=1
 export BUILD_OFFICIAL=1
 
 # enable XFT
-[ "${DISABLE_XFT}" != "1" ] && [ -z "`use gtk2`" ] && \
-	export MOZ_ENABLE_XFT=1
+[ "${DISABLE_XFT}" != "1" ] && export MOZ_ENABLE_XFT=1
 
 # make sure the nss module gets build (for NSS support)
 [ -n "`use ssl`" ] && export MOZ_PSM=1
@@ -68,8 +70,7 @@ src_unpack() {
 	# Fix a ownership porblem
 	chown -R root.root *
 
-	[ -z "${CC}" ] && CC=gcc
-	if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
+	if [ "$(gcc-version)" != "2.95" ] ; then
 		# Fix bogus asm (from Mandrake .spec)
 #		patch -p1 < ${FILESDIR}/mozilla-1.0-asmfixes.patch || die
 
@@ -84,8 +85,8 @@ src_unpack() {
 	patch -p1 < ${FILESDIR}/mozilla-ft-bytecode.patch || die
 
 	# Unpack the enigmail plugin
-	if [ -n "`use crypt`" ] && [ -z "`use moznomail`" ] && \
-	   [ "${NO_MAIL}" != "YES" ] && [ "${NO_MAIL}" != "yes" ]
+	if [ -n "`use crypt`" -a -z "`use moznomail`" ] && \
+	   [ "${NO_MAIL}" != "YES" -a "${NO_MAIL}" != "yes" ]
 	then
 		mv ${WORKDIR}/ipc ${S}/extensions/
 		mv ${WORKDIR}/enigmail ${S}/extensions/
@@ -128,6 +129,10 @@ src_compile() {
 		myconf="${myconf} --enable-xft"
 	fi
 
+	if [ -n "`use ipv6`" ] ; then
+		myconf="${myconf} --enable-ipv6"
+	fi
+
 
 	# NB!!:  Due to the fact that the non default extensions do not always
 	#        compile properly, using them is considered unsupported, and
@@ -157,7 +162,7 @@ src_compile() {
 
 	
 	if [ -n "`use moznomail`" ] || \
-	   [ "${NO_MAIL}" = "YES" ] || [ "${NO_MAIL}" = "yes" ]
+	   [ "${NO_MAIL}" = "YES" -o "${NO_MAIL}" = "yes" ]
 	then
 		myconf="${myconf} --disable-mailnews"
 	fi
@@ -167,18 +172,21 @@ src_compile() {
 
 	# Currently gcc-3.1.1 dont work well if we specify "-march"
 	# and other optimizations for pentium4.
-	[ -z "${CC}" ] && CC=gcc
-	if [ "`${CC} -dumpversion | cut -d. -f1`" -eq "3" ] ; then
+	if [ "$(gcc-major-version)" -eq "3" ] ; then
 		export CFLAGS="${CFLAGS/pentium4/pentium3}"
 		export CXXFLAGS="${CXXFLAGS/pentium4/pentium3}"
+
+		# Enable us to use flash, etc plugins compiled with gcc-2.95.3
+		if [ "${ARCH}" = "x86" ] ; then
+			myconf="${myconf} --enable-old-abi-compat-wrappers"
+		fi
 	fi
 	
 	#This should enable parallel builds, I hope
 	export MAKE="emake"
-		
-	# Crashes on start when compiled with -fomit-frame-pointer
-	CFLAGS="${CFLAGS/-fomit-frame-pointer}"
-	CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer} -Wno-deprecated"
+	
+	# Get it to work without warnings on gcc3
+	CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
 	./configure --prefix=/usr/lib/mozilla \
 		--disable-pedantic \
@@ -187,7 +195,6 @@ src_compile() {
 		--without-system-nspr \
 		--enable-nspr-autoconf \
 		--with-system-zlib \
-		--enable-ipv6 \
 		--enable-xsl \
 		--enable-crypto \
 		--enable-detect-webshell-leaks \
@@ -221,8 +228,8 @@ src_compile() {
 	fi
 
 	# Build the enigmail plugin
-	if [ -n "`use crypt`" ] && [ -z "`use moznomail`" ] && \
-	   [ "${NO_MAIL}" != "YES" ] && [ "${NO_MAIL}" != "yes" ]
+	if [ -n "`use crypt`" -a -z "`use moznomail`" ] && \
+	   [ "${NO_MAIL}" != "YES" -a "${NO_MAIL}" != "yes" ]
 	then
 		cd ${S}/extensions/ipc
 		make || die
@@ -277,6 +284,24 @@ src_install() {
 		unset SOURCE_BIN_DIR
 	fi
 
+	cd ${S}/build/unix
+	# Fix mozilla-config and install it
+	perl -pi -e "s:/lib/mozilla-${PV}::g" mozilla-config
+	perl -pi -e "s:/mozilla-${PV}::g" mozilla-config
+	exeinto /usr/lib/mozilla
+	doexe mozilla-config
+	# Fix pkgconfig files and install them
+	insinto /usr/lib/pkgconfig
+	for x in *.pc
+	do
+		if [ -f ${x} ]
+		then
+			perl -pi -e "s:/lib/mozilla-${PV}::g" ${x}
+			perl -pi -e "s:/mozilla-${PV}::g" ${x}
+			doins ${x}
+		fi
+	done
+
 	cd ${S}
 	exeinto /usr/bin
 	newexe ${FILESDIR}/mozilla.sh mozilla
@@ -296,9 +321,7 @@ src_install() {
 
 		# Fix comment of menu entry
 		cd ${S}/build/package/rpm/SOURCES
-		cp mozilla.desktop mozilla.desktop.orig
-		sed -e 's:Comment=Mozilla:Comment=Mozilla Web Browser:'	\
-			mozilla.desktop.orig > mozilla.desktop
+		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Web Browser:' mozilla.desktop
 		cd ${S}
 		insinto /usr/share/gnome/apps/Internet
 		doins ${S}/build/package/rpm/SOURCES/mozilla.desktop
@@ -336,19 +359,18 @@ pkg_postinst() {
 
 	# Make symlink for Java plugin (do not do in src_install(), else it only
 	# gets installed every second time)
-	if [ "`use java`" ] && [ ! -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ]
+	if [ "`use java`" -a ! -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ]
 	then
 		if [ -e `java-config --full-browser-plugin-path=mozilla` ]
 		then
-			ln -sf `java-config --full-browser-plugin-path=mozilla` \
+			ln -snf `java-config --full-browser-plugin-path=mozilla` \
 				${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` 
 		fi
 	fi
 
 	# We do not yet want any JAVA plugins with gcc-3.x, as they cause
 	# mozilla to crash in some cases.
-	[ -z "${CC}" ] && CC=gcc
-	if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] && [ "`use java`" ] ; then
+	if [ "$(gcc-version)" != "2.95" -a -n "`use java`" ] ; then
 		if [ -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ] ; then
 			rm -f ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla`
 		fi
@@ -397,12 +419,6 @@ pkg_postinst() {
 	einfo "* mozilla headers and libs (galeon, nautilus, ...)              *"
 	einfo "*****************************************************************"
 	echo
-	einfo "*****************************************************************"
-	einfo "* Any Errors seen during Component and Chrome registration is   *"
-	einfo "* caused by pre 1.1 versions of mozilla being installed.        *"
-	einfo "* Please unmerge older versions and everything should be fine.  *"
-	einfo "*****************************************************************"
-	einfo
 }
 
 pkg_postrm() {

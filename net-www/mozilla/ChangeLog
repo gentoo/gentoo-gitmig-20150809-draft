@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.37 2002/09/08 12:55:07 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.38 2002/09/28 19:22:09 azarah Exp $
+
+*mozilla-1.0.1 (28 Sep 2002)
+  28 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  New version.
 
 *mozilla-1.1-r1 (7 Sep 2002)
   9 Sep 2002; Spider <spider@gentoo.org> mozilla-1.1-r1.ebuild :
