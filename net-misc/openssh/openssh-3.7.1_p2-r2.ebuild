@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.13 2004/03/07 10:16:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.14 2004/03/09 14:49:13 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -66,6 +66,9 @@ src_unpack() {
 
 src_compile() {
 	use ldap && filter-flags -funroll-loops
+	use static && append-ldflags -static
+	export LDFLAGS
+
 
 	autoconf
 
@@ -101,10 +104,10 @@ src_compile() {
 		${myconf} \
 		|| die "bad configure"
 
-	use static && {
-		# statically link to libcrypto -- good for the boot cd
-		sed -i "s:-lcrypto:/usr/lib/libcrypto.a:g" Makefile
-	}
+#	use static && {
+#		# statically link to libcrypto -- good for the boot cd
+#		sed -i "s:-lcrypto:/usr/lib/libcrypto.a:g" Makefile
+#	}
 
 	emake || die "compile problem"
 }

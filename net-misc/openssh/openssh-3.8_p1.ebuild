@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8_p1.ebuild,v 1.3 2004/03/02 16:59:07 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8_p1.ebuild,v 1.4 2004/03/09 14:49:13 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -8,14 +8,14 @@ inherit eutils flag-o-matic ccc gnuconfig
 # and _p? releases.
 PARCH=${P/_/}
 
-X509_PATCH="${PARCH}+x509g2.diff.gz"
+X509_PATCH="${PARCH}+x509g4.diff.gz"
 SELINUX_PATCH="openssh-3.7.1_p1-selinux.diff"
 
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
-SRC_URI="mirror://openssh/${PARCH}.tar.gz"
-#	X509? ( http://roumenpetrov.info/openssh/x509g2/${X509_PATCH} )"
+SRC_URI="mirror://openssh/${PARCH}.tar.gz
+	X509? ( http://roumenpetrov.info/openssh/x509g4/${X509_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -49,7 +49,7 @@ src_unpack() {
 
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
-#	use X509 && epatch ${DISTDIR}/${X509_PATCH}
+	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 
 	use skey && {
 		# prevent the conftest from violating the sandbox
@@ -64,27 +64,25 @@ src_unpack() {
 }
 
 src_compile() {
+	# make sure .sbss is large enough
+	use skey && use alpha && append-ldflags -mlarge-data
 	use ldap && filter-flags -funroll-loops
+	use selinux && append-flags "-DWITH_SELINUX"
+	use static && append-ldflags -static
+	export LDFLAGS
 
 	autoconf
-
-	local myconf
 
 	# Allow OpenSSH to detect mips systems
 	use mips && gnuconfig_update
 
-	myconf="\
+	local myconf="\
 		$( use_with tcpd tcp-wrappers ) \
 		$( use_with kerberos kerberos5 ) \
 		$( use_with pam ) \
 		$( use_with skey )"
 
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
-
-	# make sure .sbss is large enough
-	use skey && use alpha && append-ldflags -mlarge-data
-
-	use selinux && append-flags "-DWITH_SELINUX"
 
 	./configure \
 		--prefix=/usr \
@@ -100,10 +98,10 @@ src_compile() {
 		${myconf} \
 		|| die "bad configure"
 
-	use static && {
-		# statically link to libcrypto -- good for the boot cd
-		sed -i "s:-lcrypto:/usr/lib/libcrypto.a:g" Makefile
-	}
+#	use static && {
+#		# statically link to libcrypto -- good for the boot cd
+#		sed -i "s:-lcrypto:/usr/lib/libcrypto.a:g" Makefile
+#	}
 
 	emake || die "compile problem"
 }
@@ -149,10 +147,5 @@ pkg_postinst() {
 		einfo "Please be aware users need a valid shell in /etc/passwd"
 		einfo "in order to be allowed to login."
 		einfo
-	}
-
-	use X509 >/dev/null 2>&1 && {
-		ewarn "X509 support has been removed until upstream author"
-		ewarn "releases a patch aginst this version."
 	}
 }

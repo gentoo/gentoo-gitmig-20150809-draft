@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.71 2004/03/07 10:16:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.72 2004/03/09 14:49:13 aliz Exp $
+
+  09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> openssh-3.8_p1.ebuild:
+  + Add X509 patch back in, bumped to g4.
+  + Fix static compile by Sascha Silbe <sascha-gentoo-bugzilla@silbe.org> in #44077.
 
   07 Mar 2004; Joshua Kinard <kumba@gentoo.org> openssh-3.7.1_p2-r2.ebuild:
   Marked stable on mips.
