@@ -39,6 +39,7 @@ Get a stage1 sparc64 gcc:
 Remove sparc32 gcc compiler and binutils from your system
 # emerge unmerge \=sys-devel/gcc-<version> \=sys-devel/binutils-<version>
 # rm /etc/env.d/gcc/config-sparc-unknown-linux-gnu /etc/env.d/05gcc-sparc-unknown-linux-gnu /etc/env.d/binutils/binutils/config-sparc-unknown-linux-gnu 
+# rm /etc/env.d/binutils/config-sparc-unknown-linux-gnu
 
 Use gcc-config to set your gcc
 Choose the sparc64-unknown-linux-gnu one you just emerged
@@ -58,3 +59,5 @@ find /usr/lib /usr/kde/*/lib /usr/qt/*/lib -name '*.la' -exec \
                -e 's:/lib\(ffi\|g2c\|objc\|stdc++\|supc++\):/32/lib\1:g' \
                -e 's:/32/32/:/32/:g' \
 	       {} \;
+
+Next, get rid of the /usr/lib/gcc/sparc64-unknown-linux-gnu/<gcc version>/*.la files.  They will confuse libtool.  See bug #75420 for more info on this.
