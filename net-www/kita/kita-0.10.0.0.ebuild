@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.6.4.1.ebuild,v 1.5 2004/01/06 22:02:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.10.0.0.ebuild,v 1.1 2004/01/17 18:20:23 usata Exp $
 
 IUSE=""
 
@@ -10,13 +10,12 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Kita - 2ch client for KDE"
 HOMEPAGE="http://kita.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/kita/7077/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/kita/7691/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
-# kde-base/kdebase is needed for konqueror
 DEPEND="virtual/glibc
 	>=x11-libs/qt-3.1
 	>=kde-base/kdebase-3.1
@@ -39,9 +38,16 @@ DEPEND="virtual/glibc
 
 S=${WORKDIR}/${MY_P}
 
+src_compile() {
+	addwrite ${QTDIR}/etc
+
+	econf || die
+	emake || die
+}
+
 src_install() {
 
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
