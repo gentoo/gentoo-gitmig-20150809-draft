@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.4 2004/10/14 12:22:09 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.5 2004/10/14 14:30:59 ribosome Exp $
 
 inherit gcc
 
@@ -21,14 +21,14 @@ src_unpack(){
 	unpack ${A}
 	cd ${S}
 	# No longer needed. see emake line below.
-	sed -i -e "s/CC	= cc/CC	= ${CC:gcc}/" makefile
+	sed -i -e "s/CC	= cc/CC	= $(gcc-getCC)/" makefile
 	sed -i -e "s/CFLAGS  = -c -O/CFLAGS  = -c ${CFLAGS}/" makefile
 	sed -i -e "s/LFLAGS	= -O -lm/LFLAGS	= -lm ${CFLAGS}/" makefile
 	sed -i -e "s%clustalw_help%/usr/share/doc/${PF}/clustalw_help%" clustalw.c
 }
 
 src_compile() {
-	CC=${CC:-$(gcc-getCC)} emake || die
+	CC=$(gcc-getCC) emake || die
 }
 
 src_install() {
