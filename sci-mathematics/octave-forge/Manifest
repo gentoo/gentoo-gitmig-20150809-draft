@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3d0fadebbb4144323a085f3da5f2e53e octave-forge-2003.06.02.ebuild 1937
-MD5 48230075912fa882b2f7db24e851cce4 octave-forge-2004.11.16.ebuild 1936
+MD5 ec424b9207a426d5c380b67f8cd1dae8 octave-forge-2004.11.16.ebuild 2146
 MD5 d2f4f3ace915d5831cbcad92627221b0 octave-forge-2003.02.22.ebuild 1966
 MD5 20ee4328bf374413c8e70aca60c1e04d octave-forge-2004.02.12.ebuild 2227
-MD5 4b3e982fd50995917819a884f000023d ChangeLog 2852
+MD5 f0549f1be8bd924517d21a587a2e4581 ChangeLog 3005
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 df51218baee555e6ec187aa95115aa01 files/digest-octave-forge-2003.02.22 76
 MD5 b0d60c59feed689f1454ba67e50df211 files/digest-octave-forge-2003.06.02 76
@@ -11,3 +14,11 @@ MD5 7a2c9437d0cf3b7b65738969d0aac2e1 files/digest-octave-forge-2004.02.12 76
 MD5 3aacf6f3c335a1f63edef94a9bd7011a files/digest-octave-forge-2004.11.16 76
 MD5 8d2f41d57f555add4c78fbe6dc0ee758 files/octave-2.1.57+.patch 905
 MD5 9429fc7b84a5d36c0599ddeccad6d379 files/octave-forge-2004.02.12-fPIC.patch 526
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFCDszJPpIsIjIzwiwRAp97AKD0VI/jzUwcE5GMA6BaVsrS1KoeEACgwmk0
+3ngjSJvr1vx9WzYUxjQxrs8=
+=9lBr
+-----END PGP SIGNATURE-----

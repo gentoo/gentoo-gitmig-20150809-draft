@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2004.11.16.ebuild,v 1.1 2005/01/17 11:36:23 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2004.11.16.ebuild,v 1.2 2005/02/13 03:42:53 robbat2 Exp $
 
 inherit eutils
 
@@ -23,6 +23,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}.patch
+
+	# make it compile when X isn't installed. The source file there really
+	# doesn't need X at all.
+	# 02 Feb 2005, Robin H. Johnson <robbat2@gentoo.org>
+	sed -e '/#include <X11/d' -i ${S}/main/audio/aurecord.cc
 }
 
 src_compile() {

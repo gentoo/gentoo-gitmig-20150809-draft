@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave-forge
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.5 2005/01/18 19:53:30 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.6 2005/02/13 03:42:53 robbat2 Exp $
+
+  12 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  octave-forge-2004.11.16.ebuild:
+  Put in a fix to allow aurecord to build when X isn't installed.
 
   18 Jan 2005; Patrick Kursawe <phosphan@gentoo.org>
   octave-forge-2004.02.12.ebuild:
