@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.1.23.ebuild,v 1.1 2005/01/22 22:49:29 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.1.23.ebuild,v 1.2 2005/01/23 21:45:40 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -13,12 +13,12 @@ LICENSE="LGPL-2.1 GPL-2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~mips ~alpha ~ppc64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~mips ~alpha ~ppc64 ~hppa"
 
 # Removed keywords awaiting >=dev-libs/libtasn1-0.2.10 keywords (bug #61944)
-# ~ppc64  ~ia64 ~hppa
+# ~ia64
 
-RDEPEND=">=dev-libs/libgcrypt-1.1.94
+RDEPEND=">=dev-libs/libgcrypt-1.2.0
 	crypt? ( >=app-crypt/opencdk-0.5.5 )
 	zlib? ( >=sys-libs/zlib-1.1 )
 	virtual/libc
@@ -72,10 +72,10 @@ pkg_postinst() {
 	ewarn
 	ewarn "What is required is a revdep-rebuild."
 	ewarn "To show you what is needed to rebuild"
-	ewarn "revdep-rebuild --soname libgnutls.so.10 -- -p"
+	ewarn "revdep-rebuild --soname libgnutls.so.11 -- -p"
 	ewarn ""
 	ewarn "Then do:"
-	ewarn "revdep-rebuild --soname libgnutls.so.10"
+	ewarn "revdep-rebuild --soname libgnutls.so.11"
 	einfo ""
 	einfo "Afterward just try:"
 	einfo "revdep-rebuild -- -p"

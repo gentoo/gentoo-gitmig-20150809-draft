@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1a473e99a72e09441bd6e2efd0ebfd45 ChangeLog 6141
-MD5 27967073e00680184abfe6600ea2830f gnutls-1.1.23.ebuild 2198
+MD5 1fed05a54690917ebf0cd9a9e92fc977 ChangeLog 6421
+MD5 b99e7100a78e724dfb69ce4293825959 gnutls-1.1.23.ebuild 2194
 MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 MD5 d48def440d5d8c9047ffed1bcdea2a3f gnutls-1.0.17.ebuild 2428
-MD5 22c40591bbf08fcf7536da831dc03344 gnutls-1.0.23.ebuild 2196
-MD5 cfa78b7df28ec06ca09763bd8c908ebc files/digest-gnutls-1.0.17 67
-MD5 0d66c99930a1284b50b8d518f3a4f944 files/digest-gnutls-1.1.23 67
+MD5 4c20cebdafb97e826e68cfa19f49272f gnutls-1.0.23.ebuild 2188
 MD5 29d3e8994448eb3fe1d15c6720621b40 files/gnutls-1.0.14-extra.h.patch 479
 MD5 e21500e19520a3980b3c08d655a6a9e0 files/digest-gnutls-1.0.23 66
+MD5 cfa78b7df28ec06ca09763bd8c908ebc files/digest-gnutls-1.0.17 67
+MD5 0d66c99930a1284b50b8d518f3a4f944 files/digest-gnutls-1.1.23 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB8tkACHk4+ZoBpvsRAt/GAKCIxD8K17WT0aFKMH9ogtJFuPhE2gCeOujm
-b6puuyKG8yBDcqkPwqOjZcA=
-=ME5v
+iD8DBQFB9BsamdTrptrqvGERAnjoAJ9imrBNX5h9aacc4aLCLCIz3J8GggCdF1Un
+GQPzGjiRFeBMBkC3ctQuZrk=
+=bRSp
 -----END PGP SIGNATURE-----
