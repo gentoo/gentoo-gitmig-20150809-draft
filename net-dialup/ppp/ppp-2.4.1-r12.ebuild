@@ -1,21 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.11 2003/09/11 01:23:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.12 2003/09/26 05:57:37 vapier Exp $
 
-IUSE="crypt ipv6 activefilter"
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
-SRC_URI="mirror://gentoo/${P}-pppoe4.tgz"
 HOMEPAGE="http://www.samba.org/ppp"
+SRC_URI="mirror://gentoo/${P}-pppoe4.tgz"
+
+LICENSE="BSD GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc ~sparc hppa alpha"
+IUSE="crypt ipv6 activefilter"
 
 DEPEND="virtual/glibc
 	activefilter? ( net-libs/libpcap )"
-
-PROVIDE="virtual/pppd"
-
-SLOT="0"
-LICENSE="BSD GPL-2"
-KEYWORDS="x86 ppc ~sparc hppa alpha"
 
 src_compile() {
 
