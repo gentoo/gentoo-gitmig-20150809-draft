@@ -1,6 +1,10 @@
 If your version of Portage dies for some reason, try using the
 portage-rescue package as follows for Gentoo Linux 1.0+ systems:
 
+SUBSTITUTE A FILE THAT EXISTS FOR THE EXAMPLE VERSION BELOW.
+IF AN ARCHITECTURE IS SPECIFIED IN THE FILENAME BE SURE IT IS
+THE CORRECT ONE FOR YOUR ARCH.
+
 # tar xjpUvf portage-rescue-1.8.16.tbz2 -C /
 
 You'll see a warning about garbage at the end of the tarball/bzip2.  That's
