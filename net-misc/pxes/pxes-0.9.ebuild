@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9.ebuild,v 1.5 2005/01/10 18:47:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.9.ebuild,v 1.6 2005/01/15 21:23:04 wolf31o2 Exp $
 
 IUSE="cdr"
 MY_PV=${PV}-1
@@ -50,6 +50,4 @@ src_install() {
 	# Cleanup from improper install
 	cp -r ${D}/${D}/usr ${D}
 	rm -rf ${D}/var
-	dodir bin
-	dosym /usr/bin/cpio /bin/cpio || die
 }
