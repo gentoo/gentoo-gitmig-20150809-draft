@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/app-misc/gkrellm-volume-0.8.ebuild,v 1.0 
-# 26 Apr 2001 21:30 CST blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-newsticker/gkrellm-newsticker-0.3.ebuild,v 1.2 2003/06/12 22:24:34 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A news headlines scroller for GKrellM"
