@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/scrot-0.8.ebuild,v 1.10 2004/11/04 00:19:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/scrot-0.8.ebuild,v 1.11 2004/11/07 02:03:47 ka0ttic Exp $
 
 inherit bash-completion
 
@@ -23,12 +23,4 @@ src_install () {
 	dodoc TODO README AUTHORS ChangeLog
 
 	dobashcompletion ${FILESDIR}/${PN}.bash-completion ${PN}
-}
-
-pkg_postinst() {
-	echo
-	einfo "To enable command-line completion for scrot, issue the following"
-	einfo "command as root:"
-	einfo "  ln -s /usr/share/bash-completion/scrot /etc/bash_completion.d/"
-	echo
 }
