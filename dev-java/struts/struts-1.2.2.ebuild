@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1-r1.ebuild,v 1.5 2004/09/10 13:33:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.2.ebuild,v 1.1 2004/09/10 13:33:30 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="A powerful Model View Controller Framework for JSP/Servlets"
-SRC_URI="mirror://apache/jakarta/struts/source/jakarta-${PN}-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/struts/source/jakarta-${PN}-${PV}-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/struts/index.html"
 LICENSE="Apache-1.1"
 SLOT="0"
@@ -18,15 +18,15 @@ DEPEND=">=virtual/jre-1.4
 	dev-java/struts-legacy
 	>=dev-java/commons-digester-1.5
 	>=dev-java/commons-fileupload-1.0
-	>=dev-java/commons-lang-1.0
-	>=dev-java/commons-logging-1.0
-	>=dev-java/commons-validator-1.0
-	>=dev-java/oro-2.0.6
+	>=dev-java/commons-lang-2.0
+	>=dev-java/commons-logging-1.0.4
+	>=dev-java/commons-validator-1.1.3
+	>=dev-java/oro-2.0.7
 	=dev-java/servletapi-2.3*"
 IUSE="doc jikes"
 KEYWORDS="~x86 ~ppc"
 
-S=${WORKDIR}/jakarta-${PN}-${PV}-src
+S=${WORKDIR}/jakarta-struts
 
 src_compile() {
 	local antflags="compile.library"
@@ -50,6 +50,6 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar target/library/struts.jar
-	dodoc README STATUS
+	dodoc README STATUS.txt
 	use doc && dohtml -r target/documentation/
 }
