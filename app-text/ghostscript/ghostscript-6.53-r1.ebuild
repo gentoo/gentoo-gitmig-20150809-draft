@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>, Geert Bevin <gbevin@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.50-r3.ebuild,v 1.1 2002/01/01 22:34:52 azarah Exp
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.53-r1.ebuild,v 1.1 2002/03/13 20:59:39 gbevin Exp $
 
 GPV="4.2.0"
 JPEG=jpegsrc.v6b.tar.gz
-ZLIB=zlib-1.1.3.tar.gz
+ZLIB=zlib-1.1.4.tar.bz2
 LIBPNG=libpng-1.2.1.tar.bz2
 
 S=${WORKDIR}/${P}
@@ -34,7 +34,7 @@ src_unpack() {
 	tmpdir=${tmpdir/.tar.gz/}
 	mv ${WORKDIR}/${tmpdir} ${S}/jpeg || die
 	
-	tmpdir=${ZLIB/.tar.gz/}
+	tmpdir=${ZLIB/.tar.bz2/}
 	mv ${WORKDIR}/${tmpdir} ${S}/zlib || die
 
 	tmpdir=${LIBPNG/.tar.bz2/}
