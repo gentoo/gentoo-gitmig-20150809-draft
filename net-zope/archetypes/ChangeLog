@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/archetypes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/ChangeLog,v 1.8 2004/07/27 18:56:48 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/ChangeLog,v 1.9 2004/07/27 19:06:11 batlogg Exp $
+
+  27 Jul 2004; Jodok Batlogg <batlogg@gentoo.org>; :
+  oops, ebuild was not added to cvs
 
 *archetypes-1.3.0_beta3 (27 Jul 2004)
 
