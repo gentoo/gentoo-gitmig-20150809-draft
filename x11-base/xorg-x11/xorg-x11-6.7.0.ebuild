@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.1 2004/04/07 08:56:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.2 2004/04/07 18:09:15 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -721,7 +721,7 @@ src_install() {
 
 	# Fix default config files after installing fonts to /usr/share/fonts
 	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
-		${D}/etc/X11/XF86Config.example
+		${D}/etc/X11/xorg.conf.example
 	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
 		${D}/etc/X11/fs/config
 
@@ -1190,9 +1190,6 @@ pkg_postinst() {
 	fi
 
 	echo
-	einfo "If you experience font corruption on OpenOffice.org or similar"
-	einfo "glitches please remake your XF86Config"
-	echo
 	einfo "Please note that the xcursors are in /usr/share/cursors/${PN}"
 	einfo "Any custom cursor sets should be placed in that directory"
 	echo
@@ -1208,7 +1205,7 @@ pkg_postinst() {
 	ewarn "BEWARE:"
 	ewarn "Font installation location has MOVED to:"
 	ewarn "/usr/share/fonts"
-	ewarn "Edit /etc/X11/XF86Config, /etc/fonts/fonts.conf,"
+	ewarn "Edit /etc/X11/xorg.conf, /etc/fonts/fonts.conf,"
 	ewarn "/etc/fonts/local.conf and /etc/X11/fs/config"
 	ewarn "to reflect this change."
 	einfo "One compatibility symlink to the misc fonts,"
