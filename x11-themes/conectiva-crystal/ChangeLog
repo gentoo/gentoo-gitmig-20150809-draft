@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/conectiva-crystal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.6 2002/10/23 17:10:29 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.7 2002/10/28 17:48:15 satai Exp $
+
+*conectiva-crystal-102802 (28 Oct 02)
+
+  28 Oct 02; Matthew Turk <satai@gentoo.org> :
+
+  Version bump (180 more icons).
 
 *conectiva-crystal-102302 (23 Oct 02)
 

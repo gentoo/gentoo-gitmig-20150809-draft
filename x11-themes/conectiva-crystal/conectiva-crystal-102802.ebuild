@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/conectiva-crystal-101402.ebuild,v 1.2 2002/10/22 15:45:01 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/conectiva-crystal-102802.ebuild,v 1.1 2002/10/28 17:48:15 satai Exp $
 inherit kde # not kde-base since we don't need c++ deps
 
 need-kde 3
