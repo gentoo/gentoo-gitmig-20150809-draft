@@ -1,0 +1,113 @@
+--- configure.in	2003-08-10 01:17:22.000000000 +0000
++++ configure.in	2004-02-06 14:15:57.889662976 +0000
+@@ -40,21 +40,30 @@
+ pcap_dir=""
+ 
+ for dir in $PCAP_DIR ; do 
+-    if test -d $dir -a -r "$dir/pcap.h" -a \
+-                       -r "$dir/net/bpf.h" ; then 
+-       if test -n "$pcap_dir" -a "$pcap_dir" != "$dir"; then
+-          echo 
+-          echo; echo more than one set found in:
+-          echo  $pcap_dir 
+-          echo  $dir
+-          echo; echo please wipe out all unused pcap installations
+-          exit
+-       else 
+-          pcap_dir="$dir"
+-       fi
++    if test -d $dir ; then
++        if test -r "$dir/pcap.h" ; then
++            if test -r "$dir/net/$bpf_h" -o -r "$dir/pcap-$bpf_h" ; then
++                if test -n "$pcap_dir" -a "$pcap_dir" != "$dir"; then
++                  echo 
++                  echo; echo more than one set found in:
++                  echo  $pcap_dir 
++                  echo  $dir
++                  echo; echo please wipe out all unused pcap installations
++                  exit
++                else 
++                  pcap_dir="$dir"
++                fi
++            fi
++        fi
+     fi
+ done
+ 
++if test -r "$pcap_dir/pcap-bpf.h" ; then
++  bpf_h="pcap-bpf.h"
++else
++  bpf_h="net/bpf.h"
++fi
++
+ if test -z "$pcap_dir" ; then
+    echo no; echo couldn\'t find a complete set of pcap headers
+    exit
+@@ -67,14 +76,14 @@
+    AC_SUBST(PCAP_INCLUDE)
+    AC_SUBST(PCAP_LINK)
+    
+-   AC_MSG_CHECKING(for usable bpf.h)
+-   if test -n "`grep DLT_RAW $pcap_dir/net/bpf.h`" ; then
++   AC_MSG_CHECKING(for usable $bpf_h)
++   if test -n "`grep DLT_RAW $pcap_dir/$bpf_h`" ; then
+       echo yep
+    else 
+ 
+ echo nope
+ echo '***************************************************************'
+-echo an important define is missing from the bpf.h I found.  this
++echo an important define is missing from the $bpf_h I found.  this
+ echo probably means that your installation of pcap is outdated and
+ echo needs upgrading.  I\'ll go ahead and add the define for you but
+ echo understand that matching certain types of packets may not 
+@@ -128,10 +137,10 @@
+ dnl Check for DLT_* types that might not have existed in older
+ dnl libpcap's
+ dnl
+-AC_MSG_CHECKING(for DLT_LINUX_SLL in bpf.h)
++AC_MSG_CHECKING(for DLT_LINUX_SLL in $bpf_h)
+ AC_EGREP_HEADER(yes, 
+ [
+-#include <net/bpf.h> 
++#include <$bpf_h> 
+ #ifdef DLT_LINUX_SLL
+ yes
+ #endif	 
+@@ -140,10 +149,10 @@
+ echo yes, 
+ echo no)
+ 
+-AC_MSG_CHECKING(for DLT_LOOP in bpf.h)
++AC_MSG_CHECKING(for DLT_LOOP in $bpf_h)
+ AC_EGREP_HEADER(yes, 
+ [
+-#include <net/bpf.h> 
++#include <$bpf_h> 
+ #ifdef DLT_LOOP
+ yes
+ #endif	 
+@@ -152,10 +161,10 @@
+ echo yes,
+ echo no)
+ 
+-AC_MSG_CHECKING(for DLT_IEEE802_11 in bpf.h)
++AC_MSG_CHECKING(for DLT_IEEE802_11 in $bpf_h)
+ AC_EGREP_HEADER(yes, 
+ [
+-#include <net/bpf.h> 
++#include <$bpf_h> 
+ #ifdef DLT_IEEE802_11
+ yes
+ #endif	 
+--- ngrep.c     2003-08-10 04:14:52.000000000 +0000
++++ ngrep.c     2004-02-06 14:18:52.958048536 +0000
+@@ -55,7 +55,6 @@
+ #include <netinet/ip_icmp.h>
+
+ #include <pcap.h>
+-#include <net/bpf.h>
+
+ #include <stdlib.h>
+ #include <string.h>
+

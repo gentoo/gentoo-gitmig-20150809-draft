@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ngrep
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.10 2004/02/01 19:53:56 azarah Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.11 2004/02/06 14:22:56 aliz Exp $
+
+  06 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> ngrep-1.41.ebuild,
+  files/ngrep-1.41-fix-HAVE_DUMB_UDPHDR-test.patch,
+  files/ngrep-1.41-libpcap-include.patch:
+  Fix compilation aginst the new libpcap include files.
 
 *ngrep-1.41 (01 Feb 2004)
 

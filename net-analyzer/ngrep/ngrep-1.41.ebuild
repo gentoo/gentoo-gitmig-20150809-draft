@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.41.ebuild,v 1.5 2004/02/01 19:53:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.41.ebuild,v 1.6 2004/02/06 14:22:56 aliz Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A grep for network layers"
@@ -9,22 +9,24 @@ RESTRICT="nomirror"
 HOMEPAGE="http://ngrep.sourceforge.net"
 
 DEPEND="virtual/glibc
-	>=net-libs/libpcap-0.5.2"
+	>=net-libs/libpcap-0.5.2
+	sys-devel/autoconf"
 
 RDEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ~amd64"
 
 src_unpack() {
-	unpack ${A}
-
-	cd ${S}
+	unpack ${A} ; cd ${S}
+	epatch ${FILESDIR}/${P}-libpcap-include.patch
 	epatch ${FILESDIR}/${P}-fix-HAVE_DUMB_UDPHDR-test.patch
 }
 
 src_compile() {
+	autoconf
+
 	econf || die
 	make || die
 }
