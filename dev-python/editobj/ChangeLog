@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/editobj
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.1 2003/05/10 18:43:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.2 2003/12/05 06:40:20 kloeri Exp $
+
+*editobj-0.5.2 (05 Dec 2003)
+
+  05 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> editobj-0.5.2.ebuild:
+  Version bump
 
 *editobj-0.4.2 (10 May 2003)
 
