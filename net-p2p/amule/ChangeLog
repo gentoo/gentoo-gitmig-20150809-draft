@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.10 2004/01/07 22:52:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.11 2004/01/14 22:04:35 mholzer Exp $
+
+*amule-1.2.4 (14 Jan 2004)
+
+  14 Jan 2004; Martin Holzer <mholzer@gentoo.org> amule-1.2.4.ebuild:
+  Version bumped. Closes 38170.
 
   08 Jan 2004; Martin Holzer <mholzer@gentoo.org> amule-1.2.3.ebuild:
   adding curl to depend. Closes 37529.
