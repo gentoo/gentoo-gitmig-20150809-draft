@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/extutils-pkgconfig
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.1 2003/12/26 12:32:39 mcummings Exp $
+
+*extutils-pkgconfig-1.02 (26 Dec 2003)
+
+  26 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  extutils-pkgconfig-1.02.ebuild:
+  New depend for glib-perl
+
