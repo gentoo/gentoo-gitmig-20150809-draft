@@ -149,3 +149,4 @@ move app-sci/electric sci-electronics/electric
 move app-sci/espresso-ab sci-electronics/espresso-ab
 move app-sci/freehdl sci-electronics/freehdl
 move app-sci/geda sci-electronics/geda
+move app-sci/gerbv sci-electronics/gerbv
