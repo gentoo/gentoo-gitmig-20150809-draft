@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.7 2003/09/01 19:55:18 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.8 2003/09/04 19:29:29 brad Exp $
+
+*mozilla-thunderbird-0.2 (04 Sep 2003)
+
+  04 Sep 2003; Brad Laue <brad@gentoo.org> mozilla-thunderbird-0.2.ebuild:
+  Introducing Mozilla Thunderbird 0.2, with enigmail support - since this is an
+  actual release and not a CVS snapshot, bugs filed will now be treated
+  officially.
 
 *mozilla-thunderbird-0.2_alpha20030826 (01 Sep 2003)
 
