@@ -51,3 +51,4 @@ slotmove <net-www/tomcat-5.0.27 0 5
 move dev-java/jython dev-java/jython-bin
 move dev-java/avalon-logkit dev-java/avalon-logkit-bin
 move dev-java/blackdown-java3d dev-java/blackdown-java3d-bin
+move dev-java/bluej dev-java/bluej-bin
