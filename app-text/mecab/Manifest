@@ -1,8 +1,18 @@
-MD5 ce83ad157c8d765b60eec23737a552dd ChangeLog 1301
-MD5 b62aae9d5a6e54d09f9d85a9a99651d0 mecab-0.79.ebuild 890
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48d871673ef950949577a6aeafc58451 ChangeLog 1378
 MD5 d6e2dd2aa84813c0564398e57c34cda7 mecab-0.78.ebuild 824
-MD5 dd08653ad9bf72e2f670c5897bde2dbc mecab-0.80.ebuild 978
+MD5 b62aae9d5a6e54d09f9d85a9a99651d0 mecab-0.79.ebuild 890
+MD5 9f4b3dfb12383b28ce93228e88cd6010 mecab-0.80.ebuild 981
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 89d2c5718559030b51532b37db3d6baf files/digest-mecab-0.78 127
 MD5 d1028488de24a640c56a9eda48124838 files/digest-mecab-0.79 127
 MD5 436949af36c7d36e3aea462cf05fdef3 files/digest-mecab-0.80 127
-MD5 89d2c5718559030b51532b37db3d6baf files/digest-mecab-0.78 127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3sCj60LfUIagIAkRAkYKAKDXn7xSFE+FaFHeU7GErBVINZJXTACeIDhY
+nymZKMuSu+336rZMP/iQ6q0=
+=NPNu
+-----END PGP SIGNATURE-----
