@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3.ebuild,v 1.15 2004/10/07 03:10:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3.ebuild,v 1.16 2004/10/23 05:13:03 chriswhite Exp $
 
-inherit nsplugins
+inherit eutils nsplugins
 
 DESCRIPTION="GTK+ Front-End for libxine"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -22,12 +22,22 @@ KEYWORDS="x86 ~ppc sparc ~amd64 ~ppc64"
 
 SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
 
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+
+	#fixes bug #65303 with missing X11 libs
+	epatch ${FILESDIR}/${P}-Makefile.in.patch
+}
+
 src_compile() {
 
 	# Most of these are not working currently, but are here for completeness
 	local myconf
 	use X	   || myconf="${myconf} --disable-x11 --disable-xv"
-	use nls	   || myconf="${myconf} --disable-nls"
+
+	myconf="${myconf} $(use_enable nls)"
 
 	econf ${myconf} || die
 	emake || die

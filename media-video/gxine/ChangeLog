@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.20 2004/10/07 03:10:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.21 2004/10/23 05:13:03 chriswhite Exp $
+
+  23 Oct 2004; Chris White <chriswhite@gentoo.org>
+  +files/gxine-0.3.3-Makefile.in.patch, gxine-0.3.3.ebuild:
+  Patched gxine makefile to properly include X11 libs.  This closes bug #65303.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> gxine-0.3.3.ebuild:
   get_libdir fixes.

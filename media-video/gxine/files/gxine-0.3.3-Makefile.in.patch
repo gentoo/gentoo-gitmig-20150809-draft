@@ -1,0 +1,11 @@
+--- src/Makefile.in_old	2004-10-23 04:02:47.292943592 +0900
++++ src/Makefile.in	2004-10-23 04:03:13.083022904 +0900
+@@ -148,7 +148,7 @@
+ 
+ gxine_LDADD = @XINE_LIBS@ @GTHREAD2_LIBS@ @GTK2_LIBS@ $(XTEST_LIBS) \
+ 	      $(top_builddir)/src/spidermonkey/libspidermonkey.la \
+-	      $(LIRC_LIBS)
++	      $(LIRC_LIBS) $(X_LIBS)
+ 
+ 
+ gxine_client_SOURCES = client.c
