@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.3-r1.ebuild,v 1.7 2004/07/30 18:43:29 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.3-r1.ebuild,v 1.8 2004/07/31 11:51:12 axxo Exp $
 
 inherit java-pkg
 
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	echo "log4j.jar=`java-config -p log4j`" > build.properties
-	echo "logkit.jar=`java-config -p avalon-logkit`" >> build.properties
+	echo "logkit.jar=`java-config -p avalon-logkit-bin`" >> build.properties
 	echo "junit.jar=`java-config -p junit`" >> build.properties
 }
 
