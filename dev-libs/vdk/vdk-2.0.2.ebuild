@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.0.2.ebuild,v 1.5 2003/02/13 10:52:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.0.2.ebuild,v 1.6 2003/03/27 09:35:00 seemant Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://vdkbuilder.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-IUSE="nls gnome pic"
+IUSE="nls gnome"
 
 DEPEND="dev-libs/atk
 	x11-libs/pango
@@ -28,7 +28,6 @@ src_compile() {
 		--with-gnu-ld \
 		`use_enable nls` \
 		`use_enable gnome` \
-		`use_with pic` \
 		|| die "econf failed"
 	emake || die
 }
