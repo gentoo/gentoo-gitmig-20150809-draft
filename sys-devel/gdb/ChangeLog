@@ -1,6 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.7 2002/08/21 13:56:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.8 2002/10/11 20:29:14 raker Exp $
 
 *gdb-5.2.1 (20 Aug 2002)
+
+  11 Oct 2002; Nick Hadaway <raker@gentoo.org> gdb-5.2.1.ebuild :
+  Throttled optimization flags down to -O2.  See bug #6089
 
   20 Aug 2002; Nick Hadaway <raker@gentoo.org>
   gdb-5.2.1.ebuild, files/digest-gdb-5.2.1, files/man.diff :

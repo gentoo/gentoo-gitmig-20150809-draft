@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.2.1.ebuild,v 1.4 2002/10/05 05:39:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.2.1.ebuild,v 1.5 2002/10/11 20:29:14 raker Exp $
+
+inherit flag-o-matic
 
 IUSE="nls"
 
@@ -34,6 +36,7 @@ src_compile() {
 	
 	use nls && myconf="--enable-nls" || myconf="--disable-nls"
 
+	replace-flags -O? -O2
 	econf ${myconf} || die
 
 	make || die
