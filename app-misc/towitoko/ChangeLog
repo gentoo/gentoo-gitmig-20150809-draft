@@ -2,6 +2,13 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # $Header
 
+*towitoko-2.0.7-r1 (13 Jul 2004)
+
+  13 Jul 2004; Seemant Kulleen <seemant@gentoo.org> +towitoko-2.0.7-r1.ebuild:
+  add use flag for moneyplex to enable usage of libtowitoko with moneyplex
+  software from matrica.de. Thanks to: Diego Garcia <diego@envigo.net> in bug
+  #40611
+
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> towitoko-2.0.7.ebuild:
   Add die following econf for bug 48950
 
