@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.10 2004/12/25 18:46:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.11 2005/01/14 11:18:58 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -18,8 +18,13 @@ if [ -z "$KMNAME" ]; then
 fi
 
 myPN="$KMNAME"
-myP="$myPN-$PV"
-myPV="$PV"
+case "$PV" in
+	3.4.0_alpha1)	myPV="${PV/3.4.0_alpha1/3.3.90}" ;;
+	3.4.0_beta1)	myPV="${PV/3.4.0_beta1/3.3.91}" ;;
+	*)		myPV="$PV" ;;
+esac
+myP="$myPN-$myPV"
+
 # is this a kde-base ebuild, vs eg koffice
 case "$myPN" in kde-i18n|arts|kdeaccessibility|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdewebdev|kdelibs-apidocs)
 	debug-print "$ECLASS: KDEBASE ebuild recognized"
@@ -31,15 +36,16 @@ esac
 if [ "$KDEBASE" = "true" ]; then
 	unset SRC_URI
 	
-	need-kde $myPV
+	need-kde $PV
 	
-	DESCRIPTION="KDE ${myPV} - "
+	DESCRIPTION="KDE ${PV} - "
 	HOMEPAGE="http://www.kde.org/"
 	LICENSE="GPL-2"
 	SLOT="$KDEMAJORVER.$KDEMINORVER"
 	
 	# Main tarball for normal downloading style
 	case "$myPV" in
+		3.3.9?)		SRC_PATH="unstable/${myPV}/src/${myPN}-${myPV}.tar.bz2" ;;
 		3.3.0)		SRC_PATH="stable/3.3/src/${myP}.tar.bz2" ;;
 		3*)			SRC_PATH="stable/${myPV}/src/${myP}.tar.bz2" ;;
 		5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
@@ -50,18 +56,19 @@ if [ "$KDEBASE" = "true" ]; then
 	# Base tarball and xdeltas for patch downloading style
 	# Note that we use XDELTA_BASE, XDELTA_DELTA again in src_unpack()
 	# For future versions, add all applicable xdeltas (from x.y.0) in correct order to XDELTA_DELTA
+	# For versions that don't have deltas, it's more efficient to leave XDELTA_BASE
+	# unset, making src_unpack extract directly from the tarball in distfiles
 	case "$myPV" in
-		3.3.0)		XDELTA_BASE="stable/3.3/src/${myP}.tar.bz2"
-					XDELTA_DELTA=""
-					;;
 		3.3.1)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
 					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta"
 					;;
 		3.3.2)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
 					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta stable/3.3.2/src/${myPN}-3.3.1-3.3.2.tar.xdelta"
 					;;
-		*)			die "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI"
+		3.3.91)		XDELTA_BASE="unstable/3.3.90/src/${myPN}-3.3.90.tar.bz2"
+					XDELTA_DELTA="unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta"
 					;;
+		*)			;;
 	esac	
 
 elif [ "$KMNAME" == "koffice" ]; then
@@ -86,6 +93,8 @@ if [ -n "$XDELTA_BASE" ]; then # depends on $PV only, so is safe to modify SRC_U
 		SRC_URI="$SRC_URI mirror://kde/$x"
 	done
 	SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
+else # xdelta don't available, for example with kde 3.4 alpha/beta/rc ebuilds.
+	SRC_URI="$SRC_URI mirror://kde/$SRC_PATH"
 fi
 	
 debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"
@@ -96,11 +105,18 @@ DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
 
 # END adapted from kde-dist.eclass
 
-# prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
-# use a newer tarball without increasing the ebuild revision.
+# Don't support prepackaged Makefiles with alpha/beta/rc version.
 # DISABLED - SEMIBROKEN --danarmak
-#MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
-#SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
+# case $myPV in
+# 	3.3.0 | 3.3.1 | 3.3.2)
+# 		# prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
+# 		# use a newer tarball without increasing the ebuild revision.
+# 		MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
+# 		SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
+# 		;;
+# 		
+# 	*) ;;
+# esac
 
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
@@ -234,27 +250,31 @@ function change_makefiles() {
 	fi
 }
 
+function set_common_variables() {
+	# Overridable module (subdirectory) name, with default value
+	if [ "$KMNOMODULE" != "true" ] && [ -z "$KMMODULE" ]; then
+		KMMODULE=$PN
+	fi
+
+	# Unless disabled, docs are also extracted, compiled and installed
+	DOCS=""
+	if [ "$KMNOMODULE" != "true" ] && [ "$KMNODOCS" != "true" ]; then
+		DOCS="doc/$KMMODULE"
+	fi
+}
+
 # This has function sections now. Call unpack, apply any patches not in $PATCHES,
 # then call makefiles.
 function kde-meta_src_unpack() {
 	debug-print-function $FUNCNAME $*
 
+	set_common_variables
+	
 	sections="$@"
 	[ -z "$sections" ] && sections="unpack makefiles"
 	for section in $sections; do
 	case $section in
 	unpack)
-
-		# Overridable module (subdirectory) name, with default value
-		if [ "$KMNOMODULE" != "true" ] && [ -z "$KMMODULE" ]; then
-			KMMODULE=$PN
-		fi
-	
-		# Unless disabled, docs are also extracted, compiled and installed
-		DOCS=""
-		if [ "$KMNOMODULE" != "true" ] && [ "$KMNODOCS" != "true" ]; then
-			DOCS="doc/$KMMODULE"
-		fi
 		
 		# Create final list of stuff to extract
 		extractlist=""
@@ -266,15 +286,16 @@ function kde-meta_src_unpack() {
 		done
 
 		# xdeltas require us to uncompress to a tar file first.
-		# $KMTARPARAMS is for an ebuild to use; currently used by kturtle
-		if useq kdexdeltas; then
+		# $KMTARPARAMS is also available for an ebuild to use; currently used by kturtle
+		if useq kdexdeltas && [ -n "$XDELTA_BASE" ]; then
 			echo ">>> Base archive + xdelta patch mode enabled."
 			echo ">>> Uncompressing base archive..."
 			cd $T
 			bunzip2 -dkc ${DISTDIR}/${XDELTA_BASE/*\//} > ${myP}.tar
-			for x in $XDELTA_DELTA; do
-				echo ">>> Applying xdelta: $x"
-				xdelta patch ${DISTDIR}/${x/*\//} ${myP}.tar ${myP}.tar.1
+			for delta in $XDELTA_DELTA; do
+				deltafile="${delta/*\//}"
+				echo ">>> Applying xdelta: $deltafile"
+				xdelta patch ${DISTDIR}/$deltafile ${myP}.tar ${myP}.tar.1
 				mv ${myP}.tar.1 ${myP}.tar
 			done
 			TARFILE=$T/$myP.tar
@@ -283,6 +304,7 @@ function kde-meta_src_unpack() {
 			KMTARPARAMS="$KMTARPARAMS -j"
 		fi
 		cd $WORKDIR
+		
 		echo ">>> Extracting from tarball..."
 		# Note that KMTARPARAMS is also used by an ebuild
 		tar -xpf $TARFILE $KMTARPARAMS $extractlist	
@@ -297,20 +319,30 @@ function kde-meta_src_unpack() {
 		libname=""
 		for x in $KMCOPYLIB; do
 			if [ "$libname" == "" ]; then
-			libname=$x
+				libname=$x
 			else
-			dirname=$x
-			cd $S
-			mkdir -p ${dirname}
-			cd ${dirname}
-			ln -s ${PREFIX}/lib/${libname}* .
-			libname=""
+				dirname=$x
+				cd $S
+				mkdir -p ${dirname}
+				cd ${dirname}
+				if [ ! "$(find ${PREFIX}/lib/ -name "${libname}*")" == "" ]; then
+					echo "Symlinking library ${libname} under ${PREFIX}/lib/ in source dir"
+					ln -s ${PREFIX}/lib/${libname}* .
+				else
+					die "Can't find library ${libname} under ${PREFIX}/lib/"
+				fi
+				libname=""
 			fi
 		done
 	
 		# apply any patches
 		kde_src_unpack autopatch
 	
+		# kdebase: Remove the installation of the "startkde" script.
+		if [ "$KMNAME" == "kdebase" ]; then
+			sed -i -e s:"bin_SCRIPTS = startkde"::g ${S}/Makefile.am.in
+		fi
+		
 		# for ebuilds with extended src_unpack
 		cd $S
 	
@@ -337,7 +369,7 @@ function kde-meta_src_unpack() {
 # 			if [ -n "$KM_PACKAGEMAKEFILES" ]; then
 # 				make -f admin/Makefile.common || die "Failed to create makefile templates"
 # 				cd $WORKDIR
-# 	 			# skipped:  $P/configure.in.in* $P/acinclude.m4 $P/aclocal.m4 $P/configure 
+# 				# skipped:  $P/configure.in.in* $P/acinclude.m4 $P/aclocal.m4 $P/configure 
 # 				/bin/tar -cjpf $T/$MAKEFILESTARBALL $P/stamp-h.in $P/configure.in $P/configure.files \
 # 					`find $P -name Makefile\*` $P/config.h.in $P/subdirs
 # 				echo ">>> Saved generated makefile templates in $T/$MAKEFILESTARBALL"
@@ -354,6 +386,8 @@ function kde-meta_src_unpack() {
 
 function kde-meta_src_compile() {
 	debug-print-function $FUNCNAME $*
+	
+	set_common_variables	
 
 	# kdebase: all configure.in's talk about java. Need to investigate which ones 
 	# actually need it.
@@ -392,6 +426,8 @@ function kde-meta_src_compile() {
 
 function kde-meta_src_install() {
 	debug-print-function $FUNCNAME $*
+	
+	set_common_variables
 	
 	if [ "$1" == "" ]; then
 		kde-meta_src_install make dodoc
