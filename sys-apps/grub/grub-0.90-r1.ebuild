@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.90-r1.ebuild,v 1.1 2001/10/31 18:24:08 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.90-r1.ebuild,v 1.2 2001/10/31 22:59:32 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"
@@ -34,6 +34,9 @@ src_unpack() {
 src_compile() {
 
 	./configure --prefix=/usr --sbindir=/sbin --mandir=/usr/share/man --infodir=/usr/share/info --host=${CHOST} || die
+	# Have to do this since the configure-script seems a little broken
+	echo "#define VGA16 1" >> config.h
+
 	emake -e CPPFLAGS="-Wall -Wmissing-prototypes -Wunused -Wshadow -malign-jumps=1 -malign-loops=1 -malign-functions=1 -Wundef" || die
 
 }
