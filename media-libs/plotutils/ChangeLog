@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plotutils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.10 2003/07/15 15:32:16 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.11 2004/02/06 17:30:30 agriffis Exp $
+
+  06 Feb 2004; Aron Griffis <agriffis@gentoo.org> plotutils-2.4.1-r2.ebuild:
+  stable on alpha
 
   15 Jul 2003; Heinrich Wendel <lanius@gentoo.org>
   files/plotutils-2.4.1-gentoo.patch:

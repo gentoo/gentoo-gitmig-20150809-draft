@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.14 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.15 2004/02/06 17:30:30 agriffis Exp $
 
 IUSE="X"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.gnu.org/software/plotutils/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )"
