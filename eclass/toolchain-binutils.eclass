@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.4 2004/11/15 17:14:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.5 2004/11/16 06:18:07 vapier Exp $
+
+# We install binutils into CTARGET-VERSION specific directories.  This lets 
+# us easily merge multiple versions for multiple targets (if we wish) and 
+# then switch the versions on the fly (with `binutils-config`).
 
 inherit eutils libtool flag-o-matic gnuconfig
 ECLASS=toolchain-binutils
@@ -102,7 +106,6 @@ toolchain-binutils_src_test() {
 	emake check
 }
 
-# TODO: COMMENT THIS CRAP :)
 toolchain-binutils_src_install() {
 	local x d
 
@@ -110,7 +113,9 @@ toolchain-binutils_src_install() {
 	make DESTDIR="${D}" tooldir="${LIBPATH}" install || die
 	rm -rf "${D}"/${LIBPATH}/bin
 
-	# Now we collect everything in /usr
+	# Now we collect everything intp the proper SLOT-ed dirs
+	# When something is built to cross-compile, it installs into
+	# /usr/$CHOST/ by default ... we have to 'fix' that :)
 	if is_cross ; then
 		cd "${D}"/${BINPATH}
 		for x in * ; do
@@ -127,6 +132,9 @@ toolchain-binutils_src_install() {
 	mv "${D}"/${LIBPATH}/lib/* "${D}"/${LIBPATH}/
 	rm -r "${D}"/${LIBPATH}/lib
 
+	# Now we generate all the standard links to binaries ...
+	# if this is a native package, we install the basic symlinks (ld,nm,as,etc...)
+	# in addition to the ${CTARGET}-{ld,nm,as,etc...} symlinks
 	cd "${D}"/${BINPATH}
 	dodir /usr/bin
 	for x in * ; do
