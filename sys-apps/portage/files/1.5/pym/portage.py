@@ -412,12 +412,15 @@ class config:
 			mydict[x]=self[x]
 		return mydict
 	
-def spawn(mystring):
+def spawn(mystring,debug=0):
 	global settings
 	mypid=os.fork()
 	if mypid==0:
 		mycommand="/bin/bash"
-		myargs=["bash","-c",mystring]
+		if debug:
+			myargs["bash","-x","-c",mystring]
+		else:
+			myargs=["bash","-c",mystring]
 		os.execve(mycommand,myargs,settings.environ())
 		return
 	retval=os.waitpid(mypid,0)[1]
@@ -428,7 +431,7 @@ def spawn(mystring):
 		#interrupted by signal
 		return 16
 
-def doebuild(myebuild,mydo,checkdeps=1):
+def doebuild(myebuild,mydo,checkdeps=1,debug=0):
 	global settings
 	if not os.path.exists(myebuild):
 		print "!!!",myebuild,"not found."
@@ -437,6 +440,7 @@ def doebuild(myebuild,mydo,checkdeps=1):
 		print "!!!",myebuild,"does not appear to be an ebuild file."
 		return 1
 	settings.reset()
+	settings["PORTAGE_DEBUG"]=str(debug)
 	settings["ROOT"]=root
 	settings["STARTDIR"]=os.getcwd()
 	settings["EBUILD"]=os.path.abspath(myebuild)

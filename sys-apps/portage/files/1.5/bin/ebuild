@@ -1,11 +1,21 @@
 #!/usr/bin/spython
 import sys
 import portage
+import getopt
+
 if len(sys.argv)<=2:
 	print "expecting two arguments."
 	sys.exit(1)
-for x in sys.argv[2:]:
-	a=portage.doebuild(sys.argv[1],x)
+
+debug=0
+	
+opts,pargs=getopt.getopt(sys.argv[1:],'',['debug'])
+for opt in opts:
+  	 if opt[0]=='--debug':
+		print "DEBUG MODE"
+		debug=1 
+
+for x in pargs[1:]:
+	a=portage.doebuild(pargs[0],x,debug=debug)
 	if a:
 		sys.exit(a)
-		

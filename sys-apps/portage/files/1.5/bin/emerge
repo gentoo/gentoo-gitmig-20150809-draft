@@ -47,7 +47,7 @@ class depgraph:
 				sys.exit(1)
 				mydep={}
 			myebuild=self.db[myroot]["porttree"].getname(mykey)
-			edepend=portage.doebuild(myebuild,"depend")
+			edepend=portage.doebuild(myebuild,"depend",1,edebug)
 		mydep={}	
 		if portage.root=="/":
 			mydep["/"]=edepend[0]+" "+edepend[1]
@@ -143,11 +143,11 @@ class depgraph:
 			if x[0]=="ebuild":
 				if "--buildpkg" in self.myopts:
 					#create pkg, then merge pkg
-					retval=portage.doebuild(y,"clean",0)
+					retval=portage.doebuild(y,"clean",0,edebug)
 					if retval:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
-					retval=portage.doebuild(y,"package",0)
+					retval=portage.doebuild(y,"package",0,edebug)
 					if retval:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
@@ -159,11 +159,11 @@ class depgraph:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
 				else:
-					retval=portage.doebuild(y,"clean",0)
+					retval=portage.doebuild(y,"clean",0,edebug)
 					if retval:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
-					retval=portage.doebuild(y,"merge",0)
+					retval=portage.doebuild(y,"merge",0,edebug)
 					if retval:
 						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
@@ -178,16 +178,16 @@ class depgraph:
 				#need to check for errors
 			self.db[x[1]]["vartree"].inject(x[2])
 			if "--autoclean" in self.myopts:
-				retval=portage.doebuild(y,"clean",0)
+				retval=portage.doebuild(y,"clean",0,edebug)
 				if retval:
 					print "!!! emerge aborting on ",y,"."
 					sys.exit(1)
-opts=["--help","--pretend","--buildpkg","--usepkg","--autoclean","--clean"]
+opts=["--help","--pretend","--buildpkg","--usepkg","--autoclean","--clean","--debug"]
 modes=["rsync","system","update","config"]
 myopts=[]
 mymode=[]
 myfiles=[]
-
+edebug=0
 for x in sys.argv[1:]:
 	if len(x)>=2:
 		if x[0:2]=="--":
@@ -212,7 +212,8 @@ for x in sys.argv[1:]:
 if not portage.settings.has_key("MAINTAINER"):
 	if not "--autoclean" in myopts:
 		myopts.append("--autoclean")
-
+if "--debug" in myopts:
+	edebug=1
 if "--help" in myopts:
 	if len(mymode)==0:
 		print
@@ -227,6 +228,12 @@ if "--help" in myopts:
 		print "       \x1b[32;01m--help\x1b[0m [ mode ]"
 		print "              display this help (specify optional \"rsync\" or \"system\" for"
 		print "              more info)"
+		print 
+		print "       \x1b[32;01m--debug\x1b[0m"
+		print "              tell emerge to run the \x1b[36;01mebuild\x1b[0m command in --debug"
+		print "              mode.  In this mode, the bash build environment will run with"
+		print "              the -x option, causing it to output verbose debug information"
+		print "              to stdout.  --debug is great for finding bash syntax errors."
 		print
 		print "       \x1b[32;01m--usepkg\x1b[0m"
 		print "              tell emerge to use binary packages (from $DISTDIR) if they are"
