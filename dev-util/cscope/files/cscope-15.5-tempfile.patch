@@ -1,0 +1,77 @@
+diff -Naur ./cscope-15.5/src/global.h ./cscope-15.5/src/global.h
+--- ./cscope-15.5/src/global.h	2003-09-04 17:54:03.000000000 +0200
++++ ./cscope-15.5/src/global.h	2004-11-19 13:19:18.000000000 +0100
+@@ -241,7 +241,7 @@
+ extern	long	totalterms;	/* total inverted index terms */
+ extern	BOOL	trun_syms;	/* truncate symbols to 8 characters */
+ extern	char	tempstring[8192]; /* global dummy string buffer */
+-extern	char	*tmpdir;	/* temporary directory */
++extern	char	tmpdir[2048];	/* temporary directory */
+ 
+ /* command.c global data */
+ extern	BOOL	caseless;	/* ignore letter case when searching */
+diff -Naur ./cscope-15.5/src/main.c ./cscope-15.5/src/main.c
+--- ./cscope-15.5/src/main.c	2003-08-14 16:36:18.000000000 +0200
++++ ./cscope-15.5/src/main.c	2004-11-19 13:31:26.000000000 +0100
+@@ -105,7 +105,7 @@
+ BOOL	trun_syms;		/* truncate symbols to 8 characters */
+ char	tempstring[8192];	/* use this as a buffer, instead of 'yytext', 
+ 				 * which had better be left alone */
+-char	*tmpdir;		/* temporary directory */
++char	tmpdir[2048];		/* temporary directory */
+ 
+ static	BOOL	onesearch;		/* one search only in line mode */
+ static	char	*reflines;		/* symbol reference lines file */
+@@ -312,8 +312,18 @@
+ 	shell = mygetenv("SHELL", SHELL);
+ 	lineflag = mygetenv("CSCOPE_LINEFLAG", LINEFLAG);
+ 	lineflagafterfile = getenv("CSCOPE_LINEFLAG_AFTER_FILE")?1:0;
+-	tmpdir = mygetenv("TMPDIR", TMPDIR);
+ 
++	char template[] = "cscope.XXXXXX";
++	snprintf(tmpdir, sizeof(tmpdir), "%s/%s", mygetenv("TMPDIR", TMPDIR), template);
++	tmpdir[sizeof(tmpdir)-1] = '\0';
++	char *ret;
++	ret = mkdtemp(tmpdir);
++	if (ret == NULL)
++	{
++		fprintf (stderr, "cscope: Temporary directory %s cannot be created.\n", tmpdir);
++		myexit(1);
++	}
++	
+ 	/* XXX remove if/when clearerr() in dir.c does the right thing. */
+ 	if (namefile && strcmp(namefile, "-") == 0 && !buildonly)
+ 	{
+@@ -331,8 +341,10 @@
+ 
+ 	/* create the temporary file names */
+ 	pid = getpid();
+-	(void) sprintf(temp1, "%s/cscope%d.1", tmpdir, pid);
+-	(void) sprintf(temp2, "%s/cscope%d.2", tmpdir, pid);
++	(void) snprintf(temp1, sizeof(temp1), "%s/cscope%d.1", tmpdir, pid);
++	temp1[sizeof(temp1)-1] = '\0';
++	(void) snprintf(temp2, sizeof(temp1), "%s/cscope%d.2", tmpdir, pid);
++	temp2[sizeof(temp2)-1] = '\0';
+ 
+ 	/* if running in the foreground */
+ 	if (signal(SIGINT, SIG_IGN) != SIG_IGN) {
+@@ -825,6 +837,7 @@
+ void
+ myexit(int sig)
+ {
++	int retval;
+ 	/* HBB 20010313; close file before unlinking it. Unix may not care
+ 	 * about that, but DOS absolutely needs it */
+ 	if (refsfound != NULL)
+@@ -834,6 +847,10 @@
+ 	if (temp1[0] != '\0') {
+ 		(void) unlink(temp1);
+ 		(void) unlink(temp2);
++		if (retval = rmdir(tmpdir) != 0)
++		{
++			fprintf(stderr, "error deleting %s\n", tmpdir);
++		}
+ 	}
+ 	/* restore the terminal to its original mode */
+ 	if (incurses == YES) {
+
