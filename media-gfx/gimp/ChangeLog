@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.75 2004/04/15 03:52:37 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.76 2004/04/15 12:25:27 geoman Exp $
+
+  15 Apr 2004; Stephen P. Becker <geoman@gentoo.org> gimp-2.0.0.ebuild:
+  Added ~mips keyword.
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> gimp-1.2.5.ebuild:
   Marked stable on mips.
