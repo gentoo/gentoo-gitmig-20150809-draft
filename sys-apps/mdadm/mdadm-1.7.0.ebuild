@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/mdadm-1.5.0.ebuild,v 1.4 2004/06/30 20:45:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/mdadm-1.7.0.ebuild,v 1.1 2004/08/26 20:25:03 aliz Exp $
 
 DESCRIPTION="A useful tool for running RAID systems - it can be used as a replacement for the raidtools, or as a supplement."
-HOMEPAGE="http://www.cse.unsw.edu.au/~neilb/source"
-SRC_URI="http://www.cse.unsw.edu.au/~neilb/source/${PN}/${P}.tgz"
+HOMEPAGE="http://cgi.cse.unsw.edu.au/~neilb/mdadm"
+SRC_URI="mirror://kernel/utils/raid/mdadm/${P}.tgz
+	http://neilb.web.cse.unsw.edu.au/source/mdadm/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64"
 IUSE="static"
 
 RDEPEND="virtual/libc"
@@ -22,8 +23,8 @@ src_unpack() {
 	if use static ; then
 		sed -i \
 			-e "44s:^# ::" \
-			-e "45s:^# ::" Makefile \
-				|| die "sed Makefile failed"
+			-e "45s:^# ::" \
+			Makefile || die "sed Makefile failed"
 	fi
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/mdadm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.17 2004/08/21 06:19:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.18 2004/08/26 20:25:03 aliz Exp $
+
+*mdadm-1.7.0 (26 Aug 2004)
+
+  26 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> mdadm-1.7.0.ebuild:
+  Version bump, closing #61455.
+  Updated SRC_URI and HOMEPAGE.
+  Cleaned old versions.
 
   21 Aug 2004; Mike Frysinger <vapier@gentoo.org> mdadm-1.6.0.ebuild:
   Stabilize since current stable is broken #60632.
