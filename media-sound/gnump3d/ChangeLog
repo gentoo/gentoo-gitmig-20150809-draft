@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.19 2004/04/27 20:07:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.20 2004/05/31 06:45:20 eradicator Exp $
+
+*gnump3d-2.8 (30 May 2004)
+
+  30 May 2004; Jeremy Huddleston <eradicator@gentoo.org> gnump3d-2.8.ebuild:
+  Version bump.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnump3d-2.7.ebuild:
   Add inherit eutils
