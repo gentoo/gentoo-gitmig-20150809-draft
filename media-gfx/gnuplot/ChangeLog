@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.7 2002/11/06 09:09:57 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.8 2003/02/11 03:40:16 latexer Exp $
 
 *gnuplot-3.7.2 (06 Nov 2002)
 
@@ -9,6 +9,9 @@
   Version bump.
 
 *gnuplot-3.7.1-r3 (12 Apr 2002)
+
+  10 Feb 2003; Peter Johanson <latexer@gentoo.org> gnuplot-3.7.1-r3.ebuild :
+  Added ~alpha to KEYWORDS.
 
   19 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.

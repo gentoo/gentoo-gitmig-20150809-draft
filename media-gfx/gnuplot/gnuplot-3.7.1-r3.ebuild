@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.1-r3.ebuild,v 1.10 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.1-r3.ebuild,v 1.11 2003/02/11 03:40:16 latexer Exp $
 
 IUSE="X readline svga plotutils"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnuplot.info"
 
 SLOT="0"
 LICENSE="gnuplot"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~alpha"
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )
