@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.42 2003/11/03 13:52:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.43 2003/11/07 13:52:19 taviso Exp $
+
+  07 Nov 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.8.ebuild:
+  append-flags -fPIC on alpha.
 
   03 Nov 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.8.ebuild:
   set FVWM_BUGADDR.

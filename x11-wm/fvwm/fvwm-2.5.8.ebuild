@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.7 2003/11/04 22:32:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.8 2003/11/07 13:52:19 taviso Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi imlib tcltk debug gtk2"
 
@@ -59,6 +59,9 @@ src_unpack() {
 	# planned on disabling these debug statements before the release, but
 	# never got around to it.
 	cd ${S}; epatch ${FILESDIR}/disable-debug-statements.diff
+
+	# build fails on alpha with certain options without this.
+	use alpha && append-flags -fPIC
 }
 
 src_compile() {
