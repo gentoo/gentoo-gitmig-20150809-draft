@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.37 2004/10/05 14:04:05 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.38 2004/10/17 10:17:29 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> dia-0.93.ebuild:
+  stable on amd64.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dia-0.93.ebuild:
   Masked dia-0.93.ebuild stable for ppc
