@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/basc-1.4.0.ebuild,v 1.1 2004/12/26 18:31:31 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/basc-1.4.0.ebuild,v 1.2 2004/12/28 11:30:19 mr_bones_ Exp $
 
 # ebuild contributed by Alexander Mieland and Daniel Herzog
 
@@ -62,8 +62,8 @@ pkg_postinst() {
 	einfo ""
 	einfo "  \"basc -u\"."
 	einfo ""
-  einfo "Note: You have to be in the stats group to use the client!"
-  einfo ""
+	einfo "Note: You have to be in the stats group to use the client!"
+	einfo ""
 	einfo "If you want to automatically launch the client every 24h,"
 	einfo "you must set up a cronjob for the stats user or a user in"
 	einfo "the stats group."
