@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.9 2003/06/16 17:59:09 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.10 2003/06/18 08:27:20 taviso Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -8,7 +8,7 @@
 # functions to make ebuilds more ccc friendly.
 # 
 # 16/6/2003 - Added otsify()
-#
+# 18/6/2003 - regex tweaks.
 
 ECLASS=ccc
 INHERITED="${INHERITED} ${ECLASS}"
@@ -148,7 +148,7 @@ replace-cc-hardcode()
 	# Makefiles. Try and fix these.
 	#
 	find ${WORKDIR} -iname Makefile | \
-		xargs | ccc-fixup "s#^\(CC.*=\).*g*cc#\1${CC:-gcc}#g"
+		xargs | ccc-fixup "s#^\(CC.*=\).*g\?cc#\1${CC:-gcc}#g"
 }
 
 replace-cxx-hardcode()
@@ -156,7 +156,7 @@ replace-cxx-hardcode()
 	# lots of developers hardcode g++ into thier
 	# Makefiles. Try and fix these.
 	find ${WORKDIR} -iname Makefile | \
-		xargs | ccc-fixup "s#^\(CXX.*=\).*[gc]*++#\1${CXX:-g++}#g"
+		xargs | ccc-fixup "s#^\(CXX.*=\).*[gc]\{1\}++#\1${CXX:-g++}#g"
 }
 
 is-ccc()
