@@ -1,11 +1,17 @@
 # ChangeLog for app-sci/lin-seti
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/ChangeLog,v 1.8 2003/07/12 10:13:07 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/ChangeLog,v 1.9 2003/09/08 12:16:09 tantive Exp $
+
+*lin-seti-0.7.6 (09 Sep 2003)
+
+  09 Sep 2003; Michael Imhof <tantive@gentoo.org> :
+  lin-seti-0.7.6.ebuild:
+  Version bumped. Closes #28024.
 
 *lin-seti-0.7.5 (12 Jul 2003)
 
   12 Jul 2003; Michael Imhof <tantive@gentoo.org> :
-  lin-seti-0.7.4.ebuild:
+  lin-seti-0.7.5.ebuild:
   Version bumped
 
 *lin-seti-0.7.4 (10 Jul 2003)
