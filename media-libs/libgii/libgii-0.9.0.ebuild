@@ -1,26 +1,31 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.8.1.ebuild,v 1.20 2005/03/28 03:47:10 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.1 2005/03/28 03:47:10 chriswhite Exp $
 
 inherit eutils
 
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 HOMEPAGE="http://www.ggi-project.org/"
-SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.0/${P}.tar.bz2"
+SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.1/${P}.src.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X"
 
 DEPEND="X? ( virtual/x11 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-linux26-headers.patch
+}
 
 src_compile() {
 	local myconf
 
 	use X || myconf="--without-x --disable-x --disable-xwin"
 
-	epatch ${FILESDIR}/libgii-linux-headers-2.6.patch
 	econf ${myconf} || die
 	emake || die
 
