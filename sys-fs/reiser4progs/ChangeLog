@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/reiser4progs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.17 2004/12/16 17:27:46 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.18 2005/03/10 20:25:05 chainsaw Exp $
+
+  10 Mar 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/reiser4progs-1.0.3-gcc4.patch, reiser4progs-1.0.3.ebuild:
+  GCC 4 compat fix by Bret Towe <magnade@gmail.com>, closes bug #81054.
 
 *reiser4progs-1.0.3 (16 Dec 2004)
 
