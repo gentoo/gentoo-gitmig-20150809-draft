@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3.ebuild,v 1.15 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3.ebuild,v 1.16 2003/09/07 00:47:41 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
@@ -31,7 +31,7 @@ src_install() {
 	dobin busybox
 	into /usr
 	dodoc AUTHORS Changelog LICENSE README TODO
-	
+
 	cd docs
 	doman *.1
 	docinto txt

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r2.ebuild,v 1.1 2003/08/27 10:42:49 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r2.ebuild,v 1.2 2003/09/07 00:47:41 msterret Exp $
 
 inherit flag-o-matic
 
@@ -31,7 +31,7 @@ src_unpack() {
 			-e "s://#define.*BB_TTY:#define BB_TTY:g" \
 			-e "s://#define.*BB_WATCH:#define BB_WATCH:g" \
 			-e "s:BB_TRACEROUTE:BB_TRACEROUTE_${RANDOM}:g" \
-			< ${S}/Config.h > ${S}/Config.h.new && 
+			< ${S}/Config.h > ${S}/Config.h.new &&
 			mv ${S}/Config.h{.new,}
 		[ -f ${FILESDIR}/${PN}-${PV}-dietlibc.diff ] &&
 			epatch ${FILESDIR}/${PN}-${PV}-dietlibc.diff ||
@@ -52,7 +52,7 @@ src_compile() {
 
 	if [ "`use diet`" != "" ] ; then
 		append-flags -D_BSD_SOURCE
-		emake CC="diet ${CC}" CLFAGS="${CFLAGS}" ${myconf} || 
+		emake CC="diet ${CC}" CLFAGS="${CFLAGS}" ${myconf} ||
 			die "Failed to make diet ${PN}"
 	else
 		emake ${myconf} || die
@@ -64,7 +64,7 @@ src_install() {
 	dobin busybox
 	into /usr
 	dodoc AUTHORS Changelog LICENSE README TODO
-	
+
 	cd docs
 	doman *.1
 	docinto txt
