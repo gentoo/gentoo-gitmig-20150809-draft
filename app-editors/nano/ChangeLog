@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.32 2003/08/18 22:18:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.33 2003/08/19 22:32:22 vapier Exp $
 
 *nano-1.2.2 (18 Aug 2003)
+
+  19 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Back out the slang support since it looks broken #26897.
 
   18 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
   Add back in optional slang support + add in debug support.
