@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/lfhex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.9 2005/01/01 13:30:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.10 2005/01/10 20:49:42 luckyduck Exp $
+
+  10 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> lfhex-0.3.7-r1.ebuild:
+  added ~amd64 to KEYWORDS. fixes #69598.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   lfhex-0.3.7-r1.ebuild:
