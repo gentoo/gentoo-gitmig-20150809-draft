@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.94 2004/07/30 10:07:38 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.95 2004/08/20 09:35:34 mglauche Exp $
+
+*samba-3.0.6 (20 Aug 2004)
+
+  20 Aug 2004; <mglauche@gentoo.org> samba-3.0.6.ebuild:
+  new upstream version, fixes memory leaks, winbindd and some cifs problems
 
   30 Jul 2004; Christian Andreetta <satya@gentoo.org> samba-3.0.5-r1.ebuild:
   empty dirs disappearance fixed (bug #53976)
