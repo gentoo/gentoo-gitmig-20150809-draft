@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.6 2004/06/24 22:28:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.7 2004/07/01 03:52:43 tgall Exp $
 
 inherit java nsplugins
 
 S="${WORKDIR}/j2sdk${PV}"
 DESCRIPTION="IBM Java Development Kit ${PV}"
 SRC_URI="ppc?(mirror://IBMJava2-JRE-141.ppc.tgz)
+	ppc64?(mirror://IBMJava2-JRE-141.ppc64.tgz)
 	x86?(mirror://IBMJava2-JRE-141.tgz)"
 PROVIDE="virtual/jre-1.4.1
 	virtual/java-scheme-2"
 IUSE="doc"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
-KEYWORDS="ppc ~x86"
+KEYWORDS="ppc ~x86 ppc64"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5"
 RDEPEND="${DEPEND}"
@@ -21,6 +22,8 @@ RDEPEND="${DEPEND}"
 
 if use ppc; then
 	S=${WORKDIR}/IBMJava2-ppc-141
+elif use ppc64; then
+	S=${WORKDIR}/IBMJava2-ppc64-141
 else
 	S=${WORKDIR}/IBMJava2-141
 fi;

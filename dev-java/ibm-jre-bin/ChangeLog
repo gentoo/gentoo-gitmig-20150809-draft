@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.7 2004/06/24 22:28:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.8 2004/07/01 03:52:43 tgall Exp $
+
+  30 Jun 2004; Tom Gall <tgall@gentoo.org> ibm-jre-bin-1.4.1-r1.ebuild:
+  stable on ppc64, bug #55598
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> ibm-jre-bin-1.4.1-r1.ebuild,
   ibm-jre-bin-1.4.1.ebuild:
