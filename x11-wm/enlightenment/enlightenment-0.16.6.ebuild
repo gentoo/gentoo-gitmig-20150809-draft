@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.6 2003/11/12 16:24:02 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.7 2003/12/11 15:41:55 vapier Exp $
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-kde-menu.patch
+	epatch ${FILESDIR}/${PV}-edox.patch
 }
 
 src_compile() {
@@ -48,6 +49,7 @@ src_compile() {
 src_install() {
 	export USER=root
 	emake install DESTDIR=${D} || die
+	mv ${D}/usr/bin/{,e}dox
 	exeinto /etc/X11/Sessions
 	doexe ${FILESDIR}/enlightenment
 
