@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.54.ebuild,v 1.3 2005/04/06 20:39:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.54.ebuild,v 1.4 2005/04/06 21:47:43 seemant Exp $
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 HOMEPAGE="http://www.obsession.se/gentoo/"
@@ -19,7 +19,8 @@ src_compile() {
 	econf \
 		--sysconfdir=/etc/gentoo \
 		$(use_enable fam) \
-		$(use_enable nls) || die
+		--disable-nls || die # temporarily disable nls, will fix tomorrow
+		#$(use_enable nls) || die
 
 	emake || die
 }
