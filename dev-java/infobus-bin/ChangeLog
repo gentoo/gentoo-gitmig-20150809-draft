@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/infobus-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.3 2004/10/16 17:16:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.4 2004/10/20 08:27:54 absinthe Exp $
+
+  20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> infobus-bin-1.2.ebuild:
+  Fixed HOMEPAGE. Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> infobus-bin-1.2.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
