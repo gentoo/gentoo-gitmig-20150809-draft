@@ -1,4 +1,4 @@
-MD5 18fa7737d614926d8f593b1e6f6b8003 puretls-0.94_beta4.ebuild 1226
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 c01f462d3871dfd0753e0d19282857ff ChangeLog 435
 MD5 72e5e38066c9bd32bb64a5fbb7487db9 files/digest-puretls-0.94_beta4 213
+MD5 0836819ccf16cc245aa097ac4c5258d7 ChangeLog 436
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 9116b091ebf8bc0356576b588aae82c9 puretls-0.94_beta4.ebuild 1227
