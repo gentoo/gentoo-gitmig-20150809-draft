@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20040731.ebuild,v 1.3 2004/10/23 22:15:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20040731.ebuild,v 1.4 2004/10/24 17:12:51 lanius Exp $
 
 inherit eutils
 
@@ -28,9 +28,11 @@ src_compile() {
 src_install() {
 	make install DESTDIR=${D} || die
 	dodoc CHANGES README VERSION
+
 	docinto samples
 	dodoc samples/*
-	docinto samples/*
 	docinto samples/install
 	dodoc samples/install/*
+	docinto samples/copifuncs
+	dodoc samples/copifuncs/*
 }
