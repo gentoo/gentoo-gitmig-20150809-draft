@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2.ebuild,v 1.5 2003/09/26 06:06:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2.ebuild,v 1.6 2003/09/30 17:49:24 aliz Exp $
 
 inherit eutils flag-o-matic ccc
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -9,15 +9,15 @@ inherit eutils flag-o-matic ccc
 # and _p? releases.
 PARCH=${P/_/}
 
-#X509_PATCH="openssh-3.7.1p1+x509g2.diff.gz"
+X509_PATCH="${PARCH}+x509g2.diff.gz"
 SELINUX_PATCH="openssh-3.7.1_p1-selinux.diff.bz2"
 
 S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openssh/${PARCH}.tar.gz
-	selinux? ( http://dev.gentoo.org/~pebenito/${SELINUX_PATCH} )"
-#	X509? ( http://roumenpetrov.info/openssh/x509g2/${X509_PATCH} )
+	selinux? ( http://dev.gentoo.org/~pebenito/${SELINUX_PATCH} )
+	X509? ( http://roumenpetrov.info/openssh/x509g2/${X509_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -47,7 +47,7 @@ src_unpack() {
 
 	use selinux && epatch ${DISTDIR}/${SELINUX_PATCH}
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
-#	use X509 && epatch ${DISTDIR}/${X509_PATCH}
+	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 
 	# looks like this one was rewriten somewhat.
 	# epatch ${FILESDIR}/${P}-memory-bugs.patch
