@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.18 2004/07/21 02:12:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r4.ebuild,v 1.1 2004/12/16 18:12:22 vapier Exp $
 
 inherit eutils perl-module games
 
@@ -14,7 +14,7 @@ SRC_URI="http://guillaume.cottenceau.free.fr/fb/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
@@ -28,12 +28,14 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch "${FILESDIR}/fb-sdlperl-deb.patch"
+	epatch "${FILESDIR}"/${PV}-fb-sdlperl-deb.patch
+	epatch "${FILESDIR}"/${PV}-sdl-perl-check.patch
+	epatch "${FILESDIR}"/${PV}-no-chainreaction.patch
 	sed -i \
 		-e 's:INSTALLDIRS=.*:PREFIX=${D}/usr:' \
 		c_stuff/Makefile \
 		|| die 'sed c_stuff/Makefile failed'
-	cd "${WORKDIR}/${NET_SERVER_P}"
+	cd "${WORKDIR}"/${NET_SERVER_P}
 	sed -i \
 		-e '/^dnl AM_CONFIG_HEADER/s:dnl ::' configure.in \
 		|| die "sed configure.in failed"
@@ -43,6 +45,10 @@ src_unpack() {
 		WANT_AUTOCONF=2.5 \
 		./bootstrap.sh || die "bootstrap failed"
 	echo '#include "config.h"' >> fb_serv.h
+	cd "${WORKDIR}"/${NET_CLIENT_P}
+	ln -s frozen-bubble-client frozen-bubble
+	epatch "${FILESDIR}"/${PV}-fb-sdlperl-deb.patch
+	rm frozen-bubble
 }
 
 src_compile() {

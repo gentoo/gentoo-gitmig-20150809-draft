@@ -1,0 +1,12 @@
+--- frozen-bubble.orig	2004-10-13 19:30:51.817394448 +0200
++++ frozen-bubble	2004-10-13 19:17:38.680079840 +0200
+@@ -1590,6 +1590,9 @@
+ 	$TIME_HURRY_WARN = 250;
+ 	$TIME_HURRY_MAX = 375;
+     } elsif (is_1p_game()) {
++    if ($chainreaction) {
++        $chainreaction = 0;
++    }
+ 	$backgr = $imgbin{back_1p};
+ 	%POS = %POS_1P;
+ 	$TIME_APPEARS_NEW_ROOT = 8;
