@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.88.ebuild,v 1.4 2004/12/05 02:39:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.88.ebuild,v 1.5 2005/01/10 21:21:05 vapier Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -175,7 +175,7 @@ src_install() {
 	fi
 	exeinto "${GAMES_LIBDIR}/${PN}"
 	doexe chdman || die "doexe failed"
-	if [ ${PN} == "xmame" ; then
+	if [[ ${PN} == "xmame" ]] ; then
 		doexe xml2info || die "doexe failed"
 	fi
 
