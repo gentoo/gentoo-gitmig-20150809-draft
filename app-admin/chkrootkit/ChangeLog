@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.35 2004/07/27 08:22:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.36 2004/07/29 04:05:01 solar Exp $
+
+  29 Jul 2004; <solar@gentoo.org> chkrootkit-0.43-r2.ebuild:
+  app-admin/chkrootkit: strings-static is not static. bug 57701
 
   27 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   -chkrootkit-0.42b.ebuild, -chkrootkit-0.43-r1.ebuild:
