@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 699986886b29fb15d719b47051aa405b ChangeLog 2353
+MD5 6ad998e386c2c2ebc87d1989b486477e ChangeLog 2507
 MD5 88f72013e06b3ca10468fa0865508921 libtomcrypt-0.97b.ebuild 837
 MD5 8e170189f60a2ed2879b9deb471f2e07 metadata.xml 2276
 MD5 33805b3bbfe701feb20e08ba7703d73a libtomcrypt-0.98.ebuild 836
+MD5 31a42365df4ba03498404b8549db3bb8 libtomcrypt-0.98-r1.ebuild 1020
 MD5 41a02d98c847ad2690feca120ba74ba0 files/digest-libtomcrypt-0.97b 64
 MD5 4d8cfd1b7ab6d0868c8db16c16cbff19 files/digest-libtomcrypt-0.98 63
+MD5 57b1fb6c4356a56f05833b26d37d1bf4 files/digest-libtomcrypt-0.98-r1 126
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBE73UHTu7gpaalycRAtdGAKDscVRoWt07vYEJo2oJ8W3O4SichACg+FXr
-+F/ntKbI7uNmtCG5abvtj7U=
-=0WD2
+iD8DBQFBHOFtHTu7gpaalycRAvT4AJ9kdPQ3gPlBii7my/mwK/0RMb53PgCgpY72
+PWh6xPH9iGvLDIsu0DgyPME=
+=5eRT
 -----END PGP SIGNATURE-----
