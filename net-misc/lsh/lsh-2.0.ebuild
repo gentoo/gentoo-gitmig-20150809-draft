@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-1.4.3-r1.ebuild,v 1.3 2005/02/06 10:32:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-2.0.ebuild,v 1.1 2005/02/06 10:32:10 vapier Exp $
 
 inherit eutils
 
@@ -11,11 +11,12 @@ SRC_URI="ftp://ftp.lysator.liu.se/pub/security/lsh/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="pam tcpd ipv6 zlib X"
 
 RDEPEND="dev-libs/gmp
 	dev-libs/liboop
+	dev-libs/nettle
 	zlib? ( sys-libs/zlib )
 	X? ( virtual/x11 )
 	tcpd? ( sys-apps/tcp-wrappers )
@@ -26,9 +27,24 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc34.patch
-	epatch ${FILESDIR}/${PV}-configure.patch
+	cd "${S}"
+	# remove bundled nettle crap #56156 ... this is pretty ugly sed foo,
+	# but the alternative is a bigger, uglier patch which would probably 
+	# need updating with every version :/
+	sed -i -e '/src\/nettle/d' configure || die "sed configure failed"
+	sed -i \
+		-e '/^SUBDIRS/s:nettle::' \
+		-e '/^LDADD/s:nettle/libnettle\.a:-lnettle:' \
+		-e 's:nettle/libnettle\.a::' \
+		src/Makefile.in || die "sed src failed"
+	sed -i \
+		-e 's:\.\./\.\./nettle/libnettle\.a::' \
+		src/spki/tools/Makefile.in || die "sed spki failed"
+	sed -i \
+		-e '/^LDADD/s:\.\./nettle/libnettle\.a:-lnettle:' \
+		-e 's:\.\./nettle/libnettle\.a::' \
+		src/testsuite/Makefile.in || die "sed test failed"
+	rm -r src/nettle
 }
 
 src_compile() {
@@ -44,17 +60,13 @@ src_compile() {
 		$(use_with tcpd tcpwrappers) \
 		$(use_with X x) \
 		|| die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die
+	emake install DESTDIR="${D}" || die "install failed"
 	dodoc ANNOUNCE AUTHORS ChangeLog FAQ NEWS README
 
-	newinitd ${FILESDIR}/lsh.rc lshd
-	newconfd ${FILESDIR}/lsh.confd lshd
-
-	# remove bundled crap #56156
-	cd ${D}/usr
-	rm -rf lib include share/info/nettle.info*
+	newinitd "${FILESDIR}"/lsh.rc lshd
+	newconfd "${FILESDIR}"/lsh.confd lshd
 }
