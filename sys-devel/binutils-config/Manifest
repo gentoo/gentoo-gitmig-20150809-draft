@@ -2,17 +2,20 @@
 Hash: SHA1
 
 MD5 77032215f7b1d5e6564ce3252f0629ee binutils-config-1.0.ebuild 599
-MD5 0850e66246f52a10276d2f2f0e2064f1 ChangeLog 600
+MD5 350b056e4c9ae48af4cd6529197c61cb ChangeLog 795
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 0bee95c4faa1cb7bf5586f59ccc18f23 binutils-config-1.1.ebuild 599
+MD5 d38fcb3dfb9aab1c305578144ee8cf04 binutils-config-1.2.ebuild 599
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.0 0
+MD5 dd51688a6f468831e3f796500a83267e files/binutils-config-1.2 5819
 MD5 e76151a1ce45a03054ec865c4cef7dfd files/binutils-config-1.1 5656
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.1 0
 MD5 89f444ee1aafa7cbc86ceea992fcb3c3 files/binutils-config-1.0 4353
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.2 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBt7t9roRuSHgZdywRAncVAJ48QyyIs+kZE464/gLQg3TRirR4CQCfT8IK
-yNFrV4dsu9XehLGx3SG/vpM=
-=oEA4
+iD8DBQFBwG3VroRuSHgZdywRAhkSAJ99vAi+Rq+lPUT+HTE95kc5Qm7PTQCdFTVb
+dmpRR1rnwbRXcPIRxic9Eu0=
+=pR20
 -----END PGP SIGNATURE-----
