@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r2.ebuild,v 1.2 2002/12/03 05:32:26 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r2.ebuild,v 1.3 2002/12/03 08:39:05 bcowan Exp $
 
 IUSE="nls build afs"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
-	afs? ( net-fs/openafs )
+	afs? ( net-fs/openafs )"
 RDEPEND="virtual/glibc"
 
 src_compile() {
