@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/coq
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/ChangeLog,v 1.8 2004/08/14 04:42:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/ChangeLog,v 1.9 2004/11/18 22:52:52 mattam Exp $
+
+  18 Nov 2004; Matthieu Sozeau <mattam@gentoo.org>
+  +files/coq-8.0-ocaml-3.08.1.patch, coq-8.0-r1.ebuild:
+  Add patch for ocaml-3.08.1.
 
   13 Aug 2004; Jason Wever <weeve@gentoo.org> coq-8.0-r1.ebuild:
   Added ~sparc keyword.
