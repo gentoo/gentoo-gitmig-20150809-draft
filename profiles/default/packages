@@ -38,8 +38,8 @@
 *sys-apps/groff
 *sys-apps/gzip
 *sys-apps/hdparm
-*sys-apps/ipchains
-*sys-apps/iptables
+*net-firewall/ipchains
+*net-firewall/iptables
 *sys-apps/less
 *virtual/bootloader
 
