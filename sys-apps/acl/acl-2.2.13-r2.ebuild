@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.7 2004/02/27 01:36:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.8 2004/03/01 17:42:16 tgall Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Access control list utilities, libraries and headers"
@@ -21,6 +21,7 @@ src_compile() {
 	DEBUG=-DNDEBUG
 	[ `use sparc` ] && unset PLATFORM
 	[ `use ppc` ] && unset PLATFORM
+	[ `use ppc64` ] && unset PLATFORM
 	autoconf || die
 
 	local myconf
