@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.6.ebuild,v 1.1 2003/04/06 02:26:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.6.ebuild,v 1.2 2003/04/20 01:15:52 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -24,7 +24,7 @@ RESTRICT="nostrip"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${A} ] ; then
-		die "Please download ${A} from or ${HOMEPAGE} or http://www.schneider-digital.de/html/body_download_ati.html (fetch glx1_linux_X4.3.zip an unpack it)"
+		die "Please download ${A} from ${HOMEPAGE} or http://www.schneider-digital.de/html/body_download_ati.html (fetch glx1_linux_X4.3.zip and unpack it)"
 	fi	
     cd ${WORKDIR}
     #unpack  ${A}
