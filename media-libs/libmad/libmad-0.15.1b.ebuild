@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.17 2004/11/29 08:50:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.18 2005/01/01 03:42:40 eradicator Exp $
 
 IUSE="debug"
 
@@ -25,7 +25,7 @@ src_compile() {
 
 	# Fix for b0rked sound on sparc64 (maybe also sparc32?)
 	# default/approx is also possible, uses less cpu but sounds worse
-	[ "$PROFILE_ARCH" = "sparc64" ] && myconf="${myconf} --enable-fpm=64bit"
+	use sparc && myconf="${myconf} --enable-fpm=64bit"
 
 	econf \
 		$(use_enable debug debugging) \
