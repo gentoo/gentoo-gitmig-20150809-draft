@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.20 2004/10/16 17:01:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.21 2004/10/26 14:28:13 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -20,14 +20,14 @@ DEP_APPEND="regexp"
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
 	unzip -q "${P}-src.zip"
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
 	ANT_OPTS="${myc}"
 	CLASSPATH="${CLASSPATH}:`/usr/bin/java-config --classpath=regexp`"
-	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	use jikes && export ANT_OPTS="${ANT_OPTS} -Dbuild.compiler=jikes"
 	ant jar || die "Compile failed during jar target."
