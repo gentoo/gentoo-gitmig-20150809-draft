@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.32 2004/01/06 21:30:19 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.33 2004/01/11 03:54:19 agriffis Exp $
+
+  10 Jan 2004; Aron Griffis <agriffis@gentoo.org> autoconf-2.58.ebuild:
+  stable on alpha and ia64
 
   06 Jan 2004; Brad House <brad_mssw@gentoo.org> autoconf-2.58.ebuild:
   mark stable on amd64. kdelibs won't build without autoconf > 2.57 :/
