@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.2.0.ebuild,v 1.1 2002/11/20 01:54:36 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.2.0.ebuild,v 1.2 2002/11/21 00:46:16 nall Exp $
 
 DESCRIPTION="Ximian Connector (An Evolution Plugin to talk to Exchange Servers)"
 HOMEPAGE="http://www.ximian.com"
 LICENSE="Ximian-Connector"
 SLOT="0"
 KEYWORDS="~ppc -sparc -sparc64 -alpha"
+RESTRICT="fetch nostrip"
 
 XIMIAN_ARCH="blargh"
 XIMIAN_DIST="frobs"
@@ -21,13 +22,30 @@ fi
 
 XIMIAN_REV=$(( `echo ${PR} | sed -e "s/r//"` + 1 ))
 
-SRC_URI="http://www-files.ximian.com/${PN}/${XIMIAN_DIST}/${P}-${XIMIAN_REV}.ximian.${XIMIAN_REV}.${XIMIAN_ARCH}.rpm"
+SRC_URI="${P}-${XIMIAN_REV}.ximian.${XIMIAN_REV}.${XIMIAN_ARCH}.rpm"
 
 DEPEND="app-arch/rpm2targz
         >=net-mail/evolution-1.2.0*"
 RDEPEND=">=net-mail/evolution-1.2.0*"
 
+pkg_setup() {
+        if [ ${ARCH} != "x86" && ${ARCH} != "ppc" ] ; then
+                einfo "This package is only available for x86 and ppc, sorry"
+                die "Not supported on your ARCH"
+        fi
+}
+
 src_unpack() {
+	if [ ! -f ${DISTDIR}/${SRC_URI} ] ; then
+			einfo
+			einfo "Please download ${SRC_URI} from Ximian's redcarpet"
+			einfo "after it downloads, place the rpm in ${DISTDIR}"
+			einfo "NOTE: Ximian connector requires the purchase of a"
+			einfo "key from Ximian to function properly."
+			einfo
+			die
+	fi
+
 	rpm2targz ${DISTDIR}/${A}
 	mv ${WORKDIR}/${P}-${XIMIAN_REV}.ximian.${XIMIAN_REV}.${XIMIAN_ARCH}.tar.gz ${DISTDIR}
 	unpack ${P}-${XIMIAN_REV}.ximian.${XIMIAN_REV}.${XIMIAN_ARCH}.tar.gz
