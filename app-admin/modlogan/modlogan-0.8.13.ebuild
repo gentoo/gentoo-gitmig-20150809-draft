@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.7 2005/01/01 11:12:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.8 2005/01/16 14:02:29 gmsoft Exp $
 
 MY_FILESDIR="${FILESDIR}/${PV}"
 THEMES_VERSION="0.0.7"
@@ -12,7 +12,7 @@ SRC_URI="http://jan.kneschke.de/projects/modlogan/download/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ia64 amd64 ~ppc sparc alpha ~hppa"
+KEYWORDS="x86 ~ia64 amd64 ~ppc sparc alpha hppa"
 IUSE="nls mysql"
 
 RDEPEND="dev-libs/libxml
