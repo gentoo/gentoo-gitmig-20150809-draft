@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.2.ebuild,v 1.7 2003/03/31 05:04:28 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.2.ebuild,v 1.8 2003/06/06 20:12:37 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
-SRC_URI="ftp://ftp.us.postgresql.org/source/v${PV}/${P}.tar.gz"
+SRC_URI="ftp://ftp.postgresql.org/pub/source/v${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.postgresql.org/"
 
 LICENSE="POSTGRESQL"
@@ -52,7 +52,18 @@ pkg_setup() {
 	fi
 }
 
+check_java_config() {
+	JDKHOME="`java-config --jdk-home`"
+	if [ -z "${JDKHOME}" ] || [ ! -d "${JDKHOME}" ]; then
+		NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
+		eerror "${NOJDKERROR}"
+		die "${NOJDKERROR}"
+	fi
+}
+
 src_compile() {
+	use java && check_java_config
+
 	local myconf
 	use tcltk && myconf="--with-tcl"
 	use python && myconf="$myconf --with-python"
