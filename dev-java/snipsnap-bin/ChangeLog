@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/snipsnap-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap-bin/ChangeLog,v 1.3 2004/09/05 07:18:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap-bin/ChangeLog,v 1.4 2004/09/15 23:00:06 axxo Exp $
+
+*snipsnap-bin-1.0_beta1 (16 Sep 2004)
+
+  16 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +files/1.0_beta1-run.sh,
+  +files/1.0_beta1-snipsnap, +snipsnap-bin-1.0_beta1.ebuild:
+  version bump, 64154
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

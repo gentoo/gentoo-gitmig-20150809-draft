@@ -1,16 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 f7470283de7a71d9c1c305966c6eedad snipsnap-bin-0.5.1a-r1.ebuild 704
-MD5 c230fe6eca428fadf54475f3164ce80d ChangeLog 1123
-MD5 ab4b8d9f503c24fb0b5f16479e373aca files/0.5.1a-run.sh 1763
+MD5 488766003edc55e4b0697c7e224d457d snipsnap-bin-1.0_beta1.ebuild 748
+MD5 69a079c18d64494a5b6a8b256ef34670 ChangeLog 1316
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 15866d709d69a4cf374d2de5469ef2ef files/1.0_beta1-snipsnap 571
+MD5 ab4b8d9f503c24fb0b5f16479e373aca files/1.0_beta1-run.sh 1763
+MD5 7b387820adfdc4f5164a0388738aa520 files/digest-snipsnap-bin-1.0_beta1 84
 MD5 3277b2bd71b9b75a519d72b099cc03cf files/0.5.1a-snipsnap 568
+MD5 ab4b8d9f503c24fb0b5f16479e373aca files/0.5.1a-run.sh 1763
 MD5 5b47f6680b38ea95f097319cab50a00a files/digest-snipsnap-bin-0.5.1a-r1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOr3jI1lqEGTUzyQRAsRsAKCWGMT9MR8weQJJWdp7xyT5lZlBkACgtHFu
-Jd+69ysZXgaox3BDPCBA+44=
-=4mrG
------END PGP SIGNATURE-----
