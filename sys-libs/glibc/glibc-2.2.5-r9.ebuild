@@ -1,16 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r9.ebuild,v 1.5 2004/06/24 23:04:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r9.ebuild,v 1.6 2004/06/25 15:27:54 vapier Exp $
 
-IUSE="nls pic build debug"
-
-inherit flag-o-matic gcc
-
-filter-flags "-fomit-frame-pointer -malign-double"
-
-# Sparc support
-replace-flags "-mcpu=ultrasparc" "-mcpu=v8 -mtune=ultrasparc"
-replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
+inherit flag-o-matic gcc eutils
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -32,17 +24,29 @@ replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
 # problems.
 #
 # <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
+do_filter_flags() {
+	strip-flags
 
-S="${WORKDIR}/${P}"
+	filter-flags -fomit-frame-pointer -malign-double
+
+	# Sparc support
+	replace-flags "-mcpu=ultrasparc" "-mcpu=v8 -mtune=ultrasparc"
+	replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
+
+	# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
+	filter-flags -O?
+	append-flags -O2
+}
+
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
+HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
-HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 ppc sparc alpha"
-SLOT="2.2"
 LICENSE="LGPL-2"
+SLOT="2.2"
+KEYWORDS="x86 ppc sparc alpha"
+IUSE="nls pic build debug"
 
 # Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 # drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
@@ -52,12 +56,7 @@ RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )
 	build? ( >=sys-apps/portage-1.9.0 )"
-
-PROVIDE="virtual/glibc"
-
-# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
-export CFLAGS="${CFLAGS//-O?} -O2"
-export CXXFLAGS="${CFLAGS}"
+PROVIDE="virtual/glibc virtual/libc"
 
 src_unpack() {
 	unpack glibc-${PV}.tar.bz2 || die
@@ -65,8 +64,8 @@ src_unpack() {
 
 	# Security
 	# Fix for http://www.cert.org/advisories/CA-2003-10.html
-	einfo "Applying glibc-xdr_security.patch"
-	patch -p1 < ${FILESDIR}/glibc-xdr_security.patch > /dev/null || die
+	EPATCH_SINGLE_MSG="Applying glibc-xdr_security.patch" \
+		epatch ${FILESDIR}/glibc-xdr_security.patch
 
 	#extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir man; cd man
@@ -77,111 +76,121 @@ src_unpack() {
 	# This patch apparently eliminates compiler warnings for some versions of gcc.
 	# For information about the string2 patch, see:
 	# http://lists.gentoo.org/pipermail/gentoo-dev/2001-June/001559.html
-	einfo "Applying string2.h patch..."
-	cd ${S}; patch -p0 < ${FILESDIR}/glibc-2.2.4-string2.h.diff > /dev/null || die
+	cd ${S}
+	EPATCH_SINGLE_MSG="Applying string2.h patch..." \
+		epatch ${FILESDIR}/glibc-2.2.4-string2.h.diff
 
 	# This next one is a new patch to fix thread signal handling.  See:
 	# http://sources.redhat.com/ml/libc-hacker/2002-02/msg00120.html
 	# (Added by drobbins on 05 Mar 2002)
-	einfo "Applying threadsig patch..."
-	patch -p0 < ${FILESDIR}/${PV}/${P}-threadsig.diff > /dev/null || die
+	EPATCH_SINGLE_MSG="Applying threadsig patch..." \
+		epatch ${FILESDIR}/${PV}/${P}-threadsig.diff
 
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
-	einfo "Applying test-lfs-timeout patch..."
-	cd ${S}/io; patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch > /dev/null || die
+	cd ${S}/io
+	EPATCH_SINGLE_MSG="Applying test-lfs-timeout patch..." \
+		epatch ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
 
 	# A buffer overflow vulnerability exists in multiple implementations of DNS
 	# resolver libraries.  This affects glibc-2.2.5 and earlier. See bug #4923
 	# and:
 	#
 	#   http://www.cert.org/advisories/CA-2002-19.html
-	einfo "Applying dns-network-overflow patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-dns-network-overflow.diff >	/dev/null || die
+	cd ${S}
+	EPATCH_SINGLE_MSG="Applying dns-network-overflow patch..." \
+		epatch ${FILESDIR}/${PV}/${P}-dns-network-overflow.diff
 
 	# Security update for sunrpc
 	# <aliz@gentoo.org>
-	einfo "Applying sunrpc-overflow patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sunrpc-overflow.diff > /dev/null || die
+	cd ${S}
+	EPATCH_SINGLE_MSG="Applying sunrpc-overflow patch..." \
+		epatch ${FILESDIR}/${PV}/${P}-sunrpc-overflow.diff
 
 	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" ]; then
 		# This patch fixes the nvidia-glx probs, openoffice and vmware probs and such..
 		# http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
-		einfo "Applying divdi3 patch..."
-		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-divdi3.diff > /dev/null || die
+		cd ${S}
+		EPATCH_SINGLE_MSG="Applying divdi3 patch..." \
+			epatch ${FILESDIR}/${PV}/${P}-divdi3.diff
 	fi
 
 	# A bug in the getgrouplist function can cause a buffer overflow if
 	# the size of the group list is too small to hold all the user's groups.
 	#
 	#  https://rhn.redhat.com/errata/RHSA-2003-325.html
-	einfo "Applying getgrouplist patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-getgrouplist.patch > /dev/null || die
+	cd ${S}
+	EPATCH_SINGLE_MSG="Applying getgrouplist patch..." \
+		epatch ${FILESDIR}/${PV}/${P}-getgrouplist.patch
 
 	if [ "${ARCH}" = "ppc" ]; then
-	        # This patch fixes the absence of sqrtl on PPC
-	        # http://sources.redhat.com/ml/libc-hacker/2002-05/msg00012.html
-	        einfo "Applying ppc-sqrtl patch..."
-	        cd ${S}; patch -p0 < ${FILESDIR}/${PV}/${P}-ppc-sqrtl.diff > /dev/null || die
+		# This patch fixes the absence of sqrtl on PPC
+		# http://sources.redhat.com/ml/libc-hacker/2002-05/msg00012.html
+		cd ${S}
+		EPATCH_SINGLE_MSG="Applying ppc-sqrtl patch..."
+			epatch ${FILESDIR}/${PV}/${P}-ppc-sqrtl.diff
 	fi
 
 	# Some gcc-3.1.1 fixes.  This works fine for other versions of gcc as well,
 	# and should generally be ok, as it just fixes define order that causes scope
 	# problems with gcc-3.1.1.
 	# (Azarah, 14 Jul 2002)
-	einfo "Applying gcc311 patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-gcc311.patch > /dev/null || die
+	cd ${S}
+	EPATCH_SINGLE_MSG="Applying gcc311 patch..." \
+		epatch ${FILESDIR}/${PV}/${P}-gcc311.patch
 
 	if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -ge "2" ]; then
 		cd ${S}
 		# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0228.html
 		# <azarah@gentoo.org> (13 Oct 2002)
-		einfo "Applying divbyzero patch..."
-		patch -p1 < ${FILESDIR}/${PV}/${P}.divbyzero.patch > /dev/null || die
+		EPATCH_SINGLE_MSG="Applying divbyzero patch..." \
+			epatch ${FILESDIR}/${PV}/${P}.divbyzero.patch
 		einfo "Applying restrict_arr patch..."
-		patch -p1 < ${FILESDIR}/${PV}/${P}.restrict_arr.patch > /dev/null || die
+			epatch ${FILESDIR}/${PV}/${P}.restrict_arr.patch
 	fi
 
 	# Some patches to fixup build on alpha
 	if [ "${ARCH}" = "alpha" ]; then
 		cd ${S}
-		einfo "Applying alpha-gcc3-fix patch..."
-		patch -p1 < ${FILESDIR}/${PV}/${P}-alpha-gcc3-fix.diff > /dev/null || die
-		einfo "Applying alpha-pcdyn-fix patch..."
-		patch -p1 < ${FILESDIR}/${PV}/${P}-alpha-pcdyn-fix.diff > /dev/null || die
+		EPATCH_SINGLE_MSG="Applying alpha-gcc3-fix patch..." \
+			epatch ${FILESDIR}/${PV}/${P}-alpha-gcc3-fix.diff
+		EPATCH_SINGLE_MSG="Applying alpha-pcdyn-fix patch..." \
+			epatch ${FILESDIR}/${PV}/${P}-alpha-pcdyn-fix.diff
 	fi
 
 	# Some patches to fixup build on sparc
-
-	if use sparc > /dev/null
+	if use sparc
 	then
-		einfo "Applying sparc-mathinline patch..."
-		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-mathinline.patch > /dev/null || die
+		cd ${S}
 
-		einfo "Applying sparc-misc patch..."
-		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-misc.diff > /dev/null || die
+		EPATCH_SINGLE_MSG="Applying sparc-mathinline patch..." \
+			epatch ${FILESDIR}/${PV}/${P}-sparc-mathinline.patch
+
+		EPATCH_SINGLE_MSG="Applying sparc-misc patch..." \
+			epatch ${FILESDIR}/${PV}/${P}-sparc-misc.diff
 
 		if [ "${PROFILE_ARCH}" = "sparc64" ]
 		then
-			einfo "Applying seemant's -fixups patch..."
-			cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc64-fixups.diff > /dev/null || die
+			EPATCH_SINGLE_MSG="Applying seemant's -fixups patch..." \
+				epatch ${FILESDIR}/${PV}/${P}-sparc64-fixups.diff
 		fi
 
-		einfo "Applying nall's sparc32-semctl patch..."
-		cd ${S}
-		patch -p1 < ${FILESDIR}/${PV}/${P}-sparc32-semctl.patch > /dev/null || die
+		EPATCH_SINGLE_MSG="Applying nall's sparc32-semctl patch..." \
+			epatch ${FILESDIR}/${PV}/${P}-sparc32-semctl.patch
 	fi
 
 	# Some patches to fixup build on arm
 	if [ "${ARCH}" = "arm" ]; then
 		cd ${S}
-		einfo "Applying ARM sysdep patch..."
-		patch -p0 < ${FILESDIR}/${PV}/${P}-arm-sysdeps-fix.diff || die
-		einfo "Applying ARM errlist patch..."
-		patch -p0 < ${FILESDIR}/${PV}/${P}-arm-errlist-fix.diff || die
+		EPATCH_SINGLE_MSG="Applying ARM sysdep patch..." \
+			epatch ${FILESDIR}/${PV}/${P}-arm-sysdeps-fix.diff
+		EPATCH_SINGLE_MSG="Applying ARM errlist patch..." \
+			epatch ${FILESDIR}/${PV}/${P}-arm-errlist-fix.diff
 	fi
 }
 
 src_compile() {
+	do_filter_flags
+
 	local myconf=""
 
 	# If we build for the build system we use the kernel headers from the target
@@ -193,7 +202,8 @@ src_compile() {
 	rm -rf buildhere
 	mkdir buildhere
 	cd buildhere
-	../configure --host=${CHOST} \
+	../configure \
+		--host=${CHOST} \
 		--with-gd=no \
 		--without-cvs \
 		--enable-add-ons=linuxthreads \
@@ -221,7 +231,7 @@ src_install() {
 		install_root=${D} \
 		install -C buildhere || die
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		einfo "Installing Info pages..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
@@ -248,7 +258,7 @@ src_install() {
 		rm -rf ${D}/usr/share ${D}/usr/lib/gconv
 	fi
 
-	if [ "`use pic`" ]
+	if use pic
 	then
 		find ${S}/buildhere -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
 		find ${S}/buildhere -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
@@ -291,4 +301,3 @@ pkg_postinst() {
 		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime
 	fi
 }
-
