@@ -315,30 +315,6 @@ dev-lisp/cmucl-bin
 # Produces broken code. See bug 28875.
 =sys-devel/gcc-3.3.1-r2
 
-# <caleb@gentoo.org> (18 Jan 2004 Update)
-# new kde versions mask - will clean up shortly
-# these will all be removed very soon (02-02-04)
-
-=kde-base/kde-3.2.0
-=kde-base/kde-i18n-3.2.0
-=kde-base/kdeaccessibility-3.2.0
-=kde-base/kdeadmin-3.2.0
-=kde-base/kdeaddons-3.2.0
-=kde-base/kdeartwork-3.2.0
-=kde-base/kdebindings-3.2.0
-=kde-base/kdeedu-3.2.0
-=kde-base/kdegames-3.2.0
-=kde-base/kdegraphics-3.2.0
-=kde-base/kdesdk-3.2.0
-=kde-base/kdetoys-3.2.0
-=kde-base/kdeutils-3.2.0
-=kde-base/kdemultimedia-3.2.0
-=kde-base/kdepim-3.2.0
-=kde-base/kdenetwork-3.2.0
-=kde-base/kdelibs-3.2.0
-=kde-base/kdebase-3.2.0
-=kde-base/arts-1.2.0
-
 # <liquidx@gentoo.org> (29 Aug 2003)
 # initial testing for python 2.3.x. do not unmask unless you
 # are prepared for a non-working portage.
