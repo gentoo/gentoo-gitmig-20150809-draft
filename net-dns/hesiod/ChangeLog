@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.6 2003/06/15 11:33:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.7 2003/09/07 16:30:26 iggy Exp $
+
+  07 Sep 2003; <iggy@gentoo.org> hesiod-3.0.2.ebuild:
+  added filter-flags -fstack-protector, fixes bug #26332, thanks to kloeri
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
