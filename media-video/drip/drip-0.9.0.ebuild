@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.3 2005/03/13 01:51:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.4 2005/03/30 21:05:16 luckyduck Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -11,13 +11,13 @@ SRC_URI="http://drip.sourceforge.net/files/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="nls"
 
+	#>=media-libs/divx4linux-20020418
 RDEPEND="gnome-base/gnome-libs
 	>=media-video/avifile-0.7.34
 	>=media-libs/a52dec-0.7.3
-	>=media-libs/divx4linux-20020418
 	>=media-libs/libdvdcss-1.2.2
 	>=media-libs/libdvdread-0.9.3
 	>=media-libs/libmpeg2-0.4.0
@@ -52,6 +52,9 @@ src_unpack() {
 	# Honor user CFLAGS
 	epatch ${FILESDIR}/${P}-cflags.patch
 
+	# enable gcc3.4.x compilation 
+	epatch ${FILESDIR}/${P}-gcc34.patch
+
 	# Remove stale script ... "automake --add-missing" will add it again
 	einfo "Rerunnig autoconf/automake..."
 	cd ${S} ; rm -f ${S}/missing
@@ -59,7 +62,7 @@ src_unpack() {
 	aclocal -I macros
 	automake --add-missing
 	autoconf
-	elibtoolize
+	libtoolize --copy --force
 }
 
 src_compile() {

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/drip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.18 2005/03/13 01:51:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.19 2005/03/30 21:05:16 luckyduck Exp $
+
+  30 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/drip-0.9.0-gcc34.patch, drip-0.9.0.ebuild:
+  added a patch for version 0.9.0 to enable successful gcc3.4.x compilation.
+  fixes #67675
 
   13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> drip-0.8.1-r5.ebuild:
   added libtoolize call, fixes #80904

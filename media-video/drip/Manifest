@@ -2,9 +2,10 @@
 Hash: SHA1
 
 MD5 82306868b6a6fb63db8c971fc0b52a9d drip-0.8.1-r5.ebuild 3091
-MD5 3e152d922c3f8e9bd7fc271c27dfd730 drip-0.9.0.ebuild 2645
-MD5 11944ebf56ca80d2e0675cf54ddbb3df ChangeLog 3461
+MD5 8f2486c07d4fe53a0daba51cf3d5db86 drip-0.9.0.ebuild 2737
+MD5 04db1378aaba6ce943a39829e61042a0 ChangeLog 3658
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 6a8907bd9031fcf440cba36e784faff6 files/drip-0.9.0-gcc34.patch 2795
 MD5 7f9daf1e0ac3dae373c1c892c46d1476 files/digest-drip-0.9.0 137
 MD5 636fd81a0bb66385faca9b7c72cb1cbc files/drip-0.8.1-fix-dvd-symlink.patch 1305
 MD5 030a52bd54594455f9d77f959575036d files/drip-0.8.1-missing-stdio.patch 567
@@ -17,7 +18,7 @@ MD5 5a5df6046a26634c3fc453c01d52db4b files/drip-0.9.0-cflags.patch 712
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCM5yg06ebR+OMO78RArmTAJ0ebIQatPyyCF83QbtPGk3c3yJ9qwCfXKZW
-ZHxVKBf1OwgzE1TNfc4hYMI=
-=bjYf
+iD8DBQFCSxSW06ebR+OMO78RAptdAKCSTTxfGZ9N2CYaoJFC4cxqyUwYHwCfVYxO
+RH5MvdVyxPwvFTbgAbdRDP8=
+=HQvd
 -----END PGP SIGNATURE-----

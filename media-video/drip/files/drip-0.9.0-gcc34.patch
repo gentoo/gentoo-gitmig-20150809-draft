@@ -1,0 +1,58 @@
+diff -uprN encoder.orig/encoder.cpp encoder/encoder.cpp
+--- encoder.orig/encoder.cpp	2005-03-30 22:51:40.909946272 +0200
++++ encoder/encoder.cpp	2005-03-30 23:00:48.853646168 +0200
+@@ -762,7 +762,7 @@ void allocate_buffers(void) {
+     framebuffer = (guchar*)malloc(Config.in_width*Config.in_height*3);
+     /* Allocate video buffers */
+     extrabuffer = (guchar*)malloc(Config.in_width*BYTES_PER_COLOUR_OUTPOUT+4);
+-    rowptr = new (guchar*)[Config.in_height];
++    rowptr = new guchar*[Config.in_height];
+     for (gint i=0; i<Config.in_height; i++) {
+         if(i==Config.in_height-1) {
+             rowptr[i]=extrabuffer;
+diff -uprN encoder.orig/external.cpp encoder/external.cpp
+--- encoder.orig/external.cpp	2005-03-30 22:51:40.910946120 +0200
++++ encoder/external.cpp	2005-03-30 22:52:35.373666528 +0200
+@@ -222,7 +222,7 @@ extern "C" {
+                     list[codec_nr]->cdescription = g_string_new(list[codec_nr]->ctype->str);
+                     list[codec_nr]->cdescription = g_string_append(list[codec_nr]->cdescription,": ");
+                     list[codec_nr]->cdescription = g_string_append(list[codec_nr]->cdescription,it->GetName());
+-                    list[codec_nr]->cav = (enum codecT)0;
++                    list[codec_nr]->cav = (codecT)0;
+                     list[codec_nr]->ci = (gpointer)it;
+                     codec_nr++;
+                     #ifndef STANDALONE
+@@ -248,7 +248,7 @@ extern "C" {
+                     list[codec_nr]->ccodec = *ia;
+                     list[codec_nr]->cmodule = g_string_new(it->privatename.c_str());
+                     list[codec_nr]->cdescription = g_string_new(it->GetName());
+-                    list[codec_nr]->cav = (enum codecT)1;
++                    list[codec_nr]->cav = (codecT)1;
+                     list[codec_nr]->ci = (gpointer)it;
+                     codec_nr++;
+                     #ifndef STANDALONE
+diff -uprN encoder.orig/fast_memcpy.cpp encoder/fast_memcpy.cpp
+--- encoder.orig/fast_memcpy.cpp	2005-03-30 22:51:40.910946120 +0200
++++ encoder/fast_memcpy.cpp	2005-03-30 22:58:27.649112520 +0200
+@@ -188,8 +188,8 @@ inline void *_fast_memcpy(void *to, cons
+ 		MOVNTQ" %%mm6, 48(%1)\n"
+ 		MOVNTQ" %%mm7, 56(%1)\n"
+ 		: : "r" (from), "r" (to) : "memory");
+-		((const unsigned char *)from)+=64;
+-		((unsigned char *)to)+=64;
++		from = ((const unsigned char *)from) + 64;
++		to = ((unsigned char *)to) + 64;
+ 	}
+ 
+ //	printf(" %d %d\n", (int)from&1023, (int)to&1023);
+@@ -277,8 +277,8 @@ inline void *_fast_memcpy(void *to, cons
+ 		MOVNTQ" %%mm6, 48(%1)\n"
+ 		MOVNTQ" %%mm7, 56(%1)\n"
+ 		: : "r" (from), "r" (to) : "memory");
+-		((const unsigned char *)from)+=64;
+-		((unsigned char *)to)+=64;
++		from = ((const unsigned char *)from) + 64;
++		to = ((unsigned char *)to) + 64;
+ 	}
+ 
+ #endif /* Have SSE */
