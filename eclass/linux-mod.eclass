@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.30 2005/03/08 21:41:31 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.31 2005/03/11 23:11:05 kingtaco Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -134,8 +134,8 @@ update_depmod() {
 }
 
 update_modules() {
-	if [ -x /sbin/modules-update -a \
-		 -n "$(grep -v -e "^#" -e "^$" ${D}/etc/modules.d/*)" ] ; then
+	if [ -x /sbin/modules-update ] && \
+		grep -v -e "^#" -e "^$" ${D}/etc/modules.d/* >/dev/null 2>&1; then
 		ebegin "Updating modules.conf"
 		/sbin/modules-update
 		eend $?
