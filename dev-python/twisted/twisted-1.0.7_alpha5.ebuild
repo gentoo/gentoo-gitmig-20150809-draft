@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.7_alpha4.ebuild,v 1.1 2003/08/20 13:02:07 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.7_alpha5.ebuild,v 1.1 2003/08/21 17:07:45 lordvan Exp $
 
 IUSE="gtk2 doc"
 
-MY_PV="1.0.7alpha4"
+MY_PV="1.0.7alpha5"
 S=${WORKDIR}/Twisted-${MY_PV}
 DESCRIPTION="Twisted is a collection of servers and clients, which can be used either by developers of new applications or directly. Documentation included." 
 SRC_URI="http://twisted.sourceforge.net/Twisted-${MY_PV}.tar.bz2"
