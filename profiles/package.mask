@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2926 2004/06/10 03:34:04 absinthe Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2927 2004/06/10 16:27:18 karltk Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -22,6 +22,16 @@
 ##   End example
 ##
 
+# <karltk@gentoo.org> (10 Jun 2004)
+# 3.0 is nearing release upstream, we seem to be in good shape,
+# but it need some more build testing before it's unmasked.
+>=dev-util/eclipse-sdk-2.9
+dev-util/eclipse-cbg-editor
+dev-util/eclipse-emf-bin
+dev-util/eclipse-ve-bin
+dev-util/eclipse-gef-bin
+dev-util/ecletex
+
 # <robbat2@gentoo.org> (05 June 2004)
 # Mask until I have it working, it fails several tests presently.
 =dev-php/mod_php-4.3.7
@@ -40,13 +50,6 @@ net-misc/sitecopy
 # Mask until some brokenness with --with-qde is resolved
 # bug #52944
 =app-admin/amanda-2.4.4_p2-r1
-
-# <mr_bones_@gentoo.org> (04 June 2004)
-# until =dev-util/eclipse-sdk-3.0* is unmasked
-dev-util/eclipse-emf-bin
-dev-util/eclipse-ve-bin
-dev-util/eclipse-gef-bin
-dev-util/ecletex
 
 # <klieber@gentoo.org> (01 June 2004)
 # security masked due to issue described in #51586
@@ -358,12 +361,6 @@ net-misc/zebra
 # <karltk@gentoo.org> (09 Jan 2004)
 # Placeholder to remind people it's deprecated.
 >=dev-util/eclipse-sdk-bin-1.0
-
-# <karltk@gentoo.org> (07 Jan 2004)
-# under disruptive development. will put back into ~arch when
-# both gtk and motif builds cleanly again.
-# see bug 36471
->=dev-util/eclipse-sdk-2.9
 
 # <genone@gentoo.org> (07 Jan 2004)
 # unmaintained and currently doesn't even build anymore. Masking until
