@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.11.08.ebuild,v 1.1 2002/11/16 10:16:18 hanno Exp $
-
-IUSE="nls perl"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.11.08.ebuild,v 1.2 2002/11/30 21:56:57 vapier Exp $
 
 MY_PV=`echo ${PV} | sed -e 's/\./-/g'`
 S=${WORKDIR}/${PN}-gtk2
 DESCRIPTION="Bluefish is a GTK HTML editor for the experienced web designer or programmer."
 SRC_URI="http://pkedu.fbt.eitn.wau.nl/~olivier/snapshots/${PN}-gtk2port-${MY_PV}.tgz"
 HOMEPAGE="http://bluefish.openoffice.nl/"
+
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 SLOT="0"
+IUSE="nls perl"
 
 DEPEND=">=x11-libs/gtk+-2.0.5
 	>=media-libs/freetype-2.0.9
@@ -19,29 +19,19 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 	perl? ( sys-devel/perl )
 	nls? ( sys-devel/gettext )"
 
-
 src_compile() {
-
-	local myconf
+	local myconf="--with-autocomplet"
 	use perl && myconf="${myconf} --with-perl"
 	use nls  || myconf="${myconf} --disable-nls"
-	
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--host=${CHOST} \
-		--with-autocomplet \
-		${myconf} || die
+	econf ${myconf}
 		
 	emake || die
-
 }
 
-src_install () {
-	
+src_install() {
 	makefiles=`find . -name Makefile`
 	for f in $makefiles; do
-	    mv $f $f.orig
+		mv $f $f.orig
 		sed -e 's#$(prefix)#$(DESTDIR)$(prefix)#' \
 			-e 's#${prefix}#$(DESTDIR)${prefix}#' \
 			-e 's#/usr/share/pixmaps#$(DESTDIR)$(prefix)/share/pixmaps#' \
@@ -52,5 +42,4 @@ src_install () {
 		DESTDIR=${D} \
 		mandir=${D}/usr/share/man \
 		install || die
-
 }
