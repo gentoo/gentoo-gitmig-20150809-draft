@@ -1,5 +1,5 @@
+MD5 65b074a028bc34aa93a151882b4d9917 files/chipcardd 505
+MD5 604d568a90ef59070dc8955956f898f7 files/digest-libchipcard-0.9.1-r1 69
 MD5 62fffc08c6ff902733c81b474f8d9f79 ChangeLog 1583
 MD5 af11a3175235a17fe2560ed75f38324e libchipcard-0.9.1-r1.ebuild 1034
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
-MD5 604d568a90ef59070dc8955956f898f7 files/digest-libchipcard-0.9.1-r1 69
-MD5 da653eabc25fa87a8f1346fd864f14d4 files/chipcardd 514
