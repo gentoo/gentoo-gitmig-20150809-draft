@@ -1,8 +1,12 @@
 # ChangeLog for app-misc/rox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.13 2003/03/25 05:45:17 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.14 2003/04/12 00:18:41 vladimir Exp $
 
 *rox-1.3.7 (24 Mar 2003)
+
+  11 Apr 2003; Graham Forest <vladimir@gentoo.org> rox-1.3.7.ebuild:
+  set ~ppc in keywords
+
   24 Mar 2003; Brad Cowan <bcowan@gentoo.org> rox-1.3.7.ebuild,
   files/digest-rox-1.3.7:
   Version bump.
