@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r8.ebuild,v 1.1 2004/10/13 08:55:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r8.ebuild,v 1.2 2004/10/14 16:54:50 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac"
 
@@ -8,15 +8,14 @@ inherit flag-o-matic eutils libtool gnuconfig
 
 PATCHVER="2.0"
 
-MY_P="${P/_pre/-pre}"
-S="${WORKDIR}/${MY_P}"
 PATCHDIR="${WORKDIR}/patches"
 
 DESCRIPTION="X MultiMedia System"
 HOMEPAGE="http://www.xmms.org/"
-SRC_URI="http://www.xmms.org/files/1.2.x/${MY_P}.tar.bz2
+SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 	mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2
-	http://dev.gentoo.org/~eradicator/xmms/${P}-gentoo-patches-${PATCHVER}.tar.bz2"
+	http://dev.gentoo.org/~eradicator/xmms/${P}-gentoo-patches-${PATCHVER}.tar.bz2
+	http://dev.gentoo.org/~eradicator/xmms/gnomexmms.xpm"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,12 +34,12 @@ DEPEND="=x11-libs/gtk+-1.2*
 
 RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
-	sys-devel/gettext
 	app-arch/unzip"
 
 #We want these things in DEPEND only
 DEPEND="${DEPEND}
-	nls? ( dev-util/intltool )"
+	nls? ( dev-util/intltool 
+	       sys-devel/gettext )"
 
 # USE flags pull in xmms plugins
 PDEPEND="!alpha? ( !hppa? ( !ia64? ( !mips? ( !ppc64? ( jack? ( media-plugins/xmms-jack ) ) ) ) ) )
@@ -102,7 +101,7 @@ src_install() {
 
 	keepdir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
-	donewins xmms/xmms_logo.xpm xmms.xpm
+	newins ${DISTDIR}/gnomexmms.xpm xmms.xpm
 	doins xmms/xmms_logo.xpm
 	insinto /usr/share/pixmaps/mini
 	doins xmms/xmms_mini.xpm
