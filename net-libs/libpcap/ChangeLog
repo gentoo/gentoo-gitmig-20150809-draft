@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.20 2004/03/01 20:42:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.21 2004/03/30 21:05:34 solar Exp $
+
+  30 Mar 2004; <solar@gentoo.org> :
+  bumping libpcap to 0.8.3 for tcpdump Bugzilla Bug 46258
 
 *libpcap-0.7.2-r1 (15 Feb 2004)
 *libpcap-0.8.1-r1 (15 Feb 2004)
