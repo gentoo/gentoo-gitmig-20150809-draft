@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0.ebuild,v 1.3 2004/11/29 12:50:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0.ebuild,v 1.4 2004/11/30 16:19:25 iggy Exp $
 
-inherit eutils kernel-mod
+inherit eutils linux-mod
 
 DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
 	signals of many (but not all) commonly used remote controls."
@@ -49,22 +49,12 @@ DEPEND="virtual/linux-sources"
 SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2
 	http://www.hardeman.nu/~david/lirc/broken-out/01-add-2.6-devfs-and-sysfs-to-lirc_dev.patch"
 
-pkg_setup() {
-	kernel-mod_check_modules_supported
-}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use streamzap && epatch ${FILESDIR}/lirc-0.7.0-streamzap.patch.bz2
 	#epatch ${FILESDIR}/${P}-configure.in.patch
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
-
-	kernel-mod_getversion
-	if [ ${KV_MINOR} -gt 5 ] && [ ${KV_PATCH} -gt 5 ]
-	then
-		sed -i 's:SUBDIRS=:M=:g' ${S}/Makefile
-	fi
 }
 
 src_compile() {
@@ -81,8 +71,8 @@ src_compile() {
 	sed -si "s|/usr/src/kernel\-source\-\`uname \-r\` /usr/src/linux\-\`uname \-r\` ||" \
 		acinclude.m4 aclocal.m4 configure || die "/usr/src/linux sed failed"
 
-	kernel-mod_getversion
-	sed -si "s|\`uname \-r\`|${KV_VERSION_FULL}|" configure configure.in setup.sh || \
+	get_version
+	sed -si "s|\`uname \-r\`|${KV_FULL}|" configure configure.in setup.sh || \
 		die "/lib/modules sed failed"
 
 	unset ARCH
@@ -94,6 +84,7 @@ src_compile() {
 		`use_enable debug` \
 		${LIRC_OPTS} || die "./configure failed"
 
+	convert_to_m ${S}/Makefile
 	emake || die
 
 }
@@ -131,7 +122,5 @@ pkg_postinst() {
 	einfo "variable to your needs."
 	einfo
 
-	einfo "Checking kernel module dependencies"
-	test -r "${ROOT}/usr/src/linux/System.map" && \
-		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
+	update_depmod
 }

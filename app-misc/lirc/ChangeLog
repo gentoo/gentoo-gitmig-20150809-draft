@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.50 2004/11/29 12:53:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.51 2004/11/30 16:19:25 iggy Exp $
+
+  30 Nov 2004; Brian Jackson <iggy@gentoo.org> metadata.xml,
+  lirc-0.7.0.ebuild:
+  update lirc-0.7.0 to use linux-mod, added lanius as maintainer
 
   29 Nov 2004; lanius@gentoo.org files/lircd.conf:
   fix default path of lirc device, bug #71618
