@@ -1,14 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2.ebuild,v 1.5 2003/02/13 09:07:23 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2.ebuild,v 1.6 2003/08/06 07:56:27 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A cat (or dog) which chases the mouse around the screen"
-SRC_URI="http://agtoys.sourceforge.net/oneko/${P}.tar.gz"
 HOMEPAGE="http://agtoys.sourceforge.net"
+SRC_URI="http://agtoys.sourceforge.net/oneko/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="x11-base/xfree"
