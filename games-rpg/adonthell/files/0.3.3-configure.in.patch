@@ -1,11 +1,74 @@
---- configure.in.orig	2003-03-10 19:34:50.000000000 -0800
-+++ configure.in	2003-03-10 19:35:31.000000000 -0800
-@@ -216,7 +216,7 @@
+--- configure.in.orig	2005-03-12 18:01:25.000000000 -0500
++++ configure.in	2005-03-13 00:12:26.000000000 -0500
+@@ -159,10 +159,8 @@
  
-    if test x$haveldd != x ; then
-        changequote(<<, >>)
--       py_deps=`ldd $PYPACKAGE | sed 's/\( *lib\([^\/]*\)\.so.*=.*$\)/-l\2/p; d'`
-+       py_deps=`ldd $PYPACKAGE | sed 's/\( *.*lib\([^\/]*\)\.so.*=.*$\)/-l\2/p; d' | grep -v sandbox`
-        for py_lib in $py_deps ; do
-          if test "$py_lib" != "-lm" && test "$py_lib" != "-lc" ; then
-             PY_DEPS="$PY_DEPS $py_lib"
+    dnl Extract the version using Python, check against 1.5+
+ 
+-   changequote(<<, >>)
+-   PYTHON_VERSION=`$PYPACKAGE -c 'import sys ; print (int(sys.version[0]) * 10 + int(sys.version[2]))'`
+-   PY_VERSION=`$PYPACKAGE -c 'import sys ; print sys.version[0:3]'`
+-   changequote([, ])
++   PYTHON_VERSION=`$PYPACKAGE -c 'import sys ; print (int(sys.version@<:@0@:>@) * 10 + int(sys.version@<:@2@:>@))'`
++   PY_VERSION=`$PYPACKAGE -c 'import sys ; print sys.version@<:@0:3@:>@'`
+ 
+    if test $PYTHON_VERSION -lt 15; then
+ 	echo "Sorry, you need to have Python 1.5+ installed - update your version!"
+@@ -172,9 +170,7 @@
+    dnl Find the Python.h header file
+ 
+    AC_MSG_CHECKING(for Python header files)
+-   changequote(<<, >>)
+-   PYINCLUDE=`$PYPACKAGE -c 'import sys ; print "%s/include/python%s" % (sys.prefix, sys.version[:3])'`
+-   changequote([, ])
++   PYINCLUDE=`$PYPACKAGE -c 'import sys ; print "%s/include/python%s" % (sys.prefix, sys.version@<:@:3@:>@)'`
+ 
+    if test -r "$PYINCLUDE/Python.h"; then
+       PY_CFLAGS="-I$PYINCLUDE"
+@@ -188,10 +184,8 @@
+ 
+    AC_MSG_CHECKING(for Python library)
+    PYLIB=""
+-   changequote(<<, >>)
+    PYPREFIX=`$PYPACKAGE -c 'import sys; print sys.prefix'`
+-   PYLIBVER=`$PYPACKAGE -c 'import sys; print sys.version[:3]'`
+-   changequote([, ])
++   PYLIBVER=`$PYPACKAGE -c 'import sys; print sys.version@<:@:3@:>@'`
+ 
+    py_paths="$PYPREFIX/lib/python$PYLIBVER/config $PYPREFIX/lib"
+    py_suffix="$PYLIBVER.so $PYLIBVER.a .so .a"
+@@ -220,19 +214,9 @@
+ 
+    dnl Get the libraries that python depends on
+ 
+-   AC_PATH_PROG(haveldd, ldd)
+    AC_MSG_CHECKING(for Python's dependencies)
+ 
+-   if test x$haveldd != x ; then
+-       changequote(<<, >>)
+-       py_deps=`ldd $PYPACKAGE | sed 's/\( *.*lib\([^\/]*\)\.so.*=.*$\)/-l\2/p; d' | grep -v 'stdc++'`
+-       for py_lib in $py_deps ; do
+-         if test "$py_lib" != "-lm" && test "$py_lib" != "-lc" ; then
+-            PY_DEPS="$PY_DEPS $py_lib"
+-         fi
+-      done
+-      changequote([, ])
+-   fi
++   PY_DEPS="$PY_DEPS `python-config --libs`"
+ 
+    case $target in
+        *-sun-solaris*)
+@@ -280,11 +264,9 @@
+ if test "$P_SWIG" != "no" ; then
+     $P_SWIG -version &> swig.ver
+ 
+-    changequote(<<, >>)
+-    swig_major_ver=`more swig.ver | sed 's/.* \([0-9]*\)\.[0-9]*\.[0-9]*.*/\1/p; d'`
+-    swig_minor_ver=`more swig.ver | sed 's/.* [0-9]*\.\([0-9]*\)\.[0-9]*.*/\1/p; d'`
+-    swig_micro_ver=`more swig.ver | sed 's/.* [0-9]*\.[0-9]*\.\([0-9]*\).*/\1/p; d'`
+-    changequote([, ])
++    swig_major_ver=`more swig.ver | sed 's/.* \(@<:@0-9@:>@*\)\.@<:@0-9@:>@*\.@<:@0-9@:>@*.*/\1/p; d'`
++    swig_minor_ver=`more swig.ver | sed 's/.* @<:@0-9@:>@*\.\(@<:@0-9@:>@*\)\.@<:@0-9@:>@*.*/\1/p; d'`
++    swig_micro_ver=`more swig.ver | sed 's/.* @<:@0-9@:>@*\.@<:@0-9@:>@*\.\(@<:@0-9@:>@*\).*/\1/p; d'`
+ 
+     rm -f swig.ver
+ 
