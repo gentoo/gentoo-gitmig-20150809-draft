@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0.ebuild,v 1.11 2004/09/20 01:59:39 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0.ebuild,v 1.12 2004/09/20 02:56:31 caleb Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.3
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/3.3/src/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
 KEYWORDS="x86 amd64 ppc64 ~mips sparc ppc"
-IUSE="alsa arts cups doc ipv6 ldap ssl tiff"
+IUSE="alsa arts cups doc ipv6 kerberos ldap ssl tiff"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -28,6 +28,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 	cups? ( >=net-print/cups-1.1.19 )
 	ldap? ( >=net-nds/openldap-2.1.26 )
 	tiff? ( media-libs/tiff )
+	kerberos? ( virtual/krb5 )
 	>=app-admin/fam-2.7.0
 	virtual/ghostscript
 	media-libs/libart_lgpl
@@ -53,6 +54,8 @@ src_compile() {
 	use ssl		&& myconf="$myconf --with-ssl-dir=/usr"	|| myconf="$myconf --without-ssl"
 	use alsa	&& myconf="$myconf --with-alsa" || myconf="$myconf --without-alsa"
 	use cups	&& myconf="$myconf --enable-cups" || myconf="$myconf --disable-cups"
+
+	use kerberos || myconf="$myconf --with-gssapi=no"
 
 	use x86 && myconf="$myconf --enable-fast-malloc=full"
 	use ppc64 && append-flags -mminimal-toc
