@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca-tls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.27 2005/03/26 20:04:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.28 2005/04/01 21:04:02 pylon Exp $
+
+  01 Apr 2005; Lars Weiler <pylon@gentoo.org> qca-tls-1.0-r2.ebuild:
+  Stable on ppc.
 
   26 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> qca-tls-1.0-r2.ebuild:
   Stable on alpha.
