@@ -1,6 +1,6 @@
 MD5 f50cf37c6ca1e7ca829724fa02d0835a djbfft-0.76.ebuild 1597
 MD5 4829d97e5f5c90886d0f39a85437c9b1 ChangeLog 932
-MD5 2016f4d1bccc34822d1ab22ae53769ce metadata.xml 181
+MD5 927e1f57b0bbae197566f1d4ed3ee706 metadata.xml 175
 MD5 5fbb1af38ac1b0acf9b9e0e08124e371 files/djbfft-0.76-gcc3.patch 1176
 MD5 1f0a753178eb680993ea0bcae7a7fbd2 files/djbfft-0.76-shared.patch 3691
 MD5 b29c07feb993d4b8bec1813dbf1dc75a files/digest-djbfft-0.76 62
