@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.19.ebuild,v 1.2 2002/08/21 01:19:47 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.19.ebuild,v 1.3 2002/09/14 18:29:46 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Syslog-ng is a syslog replacement with advanced filtering features"
@@ -24,7 +24,9 @@ src_compile() {
 	# configure script braindamage?
     cd ${S}/src
 	mv Makefile Makefile.orig
-	sed -e "s|-lnsl|-lwrap|" Makefile.orig > Makefile  || die
+
+	use tcpd && ( sed -e "s|-lnsl|-lwrap|" Makefile.orig > Makefile  || die "sed failure" )
+	use tcpd || ( sed -e "s|-lnsl||" Makefile.orig > Makefile  || die "sed failure" )
 
 	emake prefix=${D}/usr all || die "compile problem"
 }
