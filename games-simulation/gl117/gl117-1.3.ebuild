@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.ebuild,v 1.1 2004/06/13 02:32:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.ebuild,v 1.2 2004/06/13 19:52:51 vapier Exp $
 
-inherit games
+inherit games eutils
 
 MY_P="gl-117-${PV}-src"
 DESCRIPTION="An action flight simulator"
@@ -22,6 +22,12 @@ DEPEND="virtual/x11
 	virtual/glut"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc-3.4-gentoo.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
