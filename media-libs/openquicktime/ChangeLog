@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/openquicktime
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.7 2003/03/06 21:23:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.8 2003/04/14 18:29:18 mholzer Exp $
+
+*openquicktime-1.0-r1 (14 Apr 2003)
+
+  14 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  openquicktime-1.0-r1.ebuild:
+  Just added a dodir in ebuild. Now all binaries are installed. Fixes #19298.
 
 *openquicktime-1.0 (25 Apr 2002)
 
