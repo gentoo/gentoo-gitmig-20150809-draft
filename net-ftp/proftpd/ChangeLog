@@ -1,8 +1,12 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.25 2003/03/23 08:06:56 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.26 2003/04/17 17:17:32 mholzer Exp $
 
 *proftpd-1.2.8 (17 Mar 2003)
+
+  17 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  proftpd-1.2.7.ebuild, proftpd-1.2.8.ebuild:
+  Adding info about config file
 
   17 Mar 2003; Martin Holzer <mholzer@gentoo.org> proftpd-1.2.8.ebuild:
   Version bumped. Ebuild submitted in #17666 by bugsubmit@snerk.org
