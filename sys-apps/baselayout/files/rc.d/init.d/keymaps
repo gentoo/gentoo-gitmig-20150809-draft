@@ -12,7 +12,8 @@ fi
 LOADKEY=/usr/bin/loadkeys
 
 ebegin "Loading keymap"
-${LOADKEY} ${KEYMAP} 1>&2
+${LOADKEY} ${KEYMAP} 1>&2 && \
+${LOADKEY} windowkeys.inc 1>&2
 eend $? "Error loading keymap!"
 
 
