@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-0.9.1.ebuild,v 1.5 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-0.9.1.ebuild,v 1.6 2003/12/18 21:38:05 mholzer Exp $
 
 DESCRIPTION="Digital DJ tool using QT 3.x"
 HOMEPAGE="http://mixxx.sourceforge.net"
 SRC_URI="mirror://sourceforge/mixxx/${P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 KEYWORDS="x86"
