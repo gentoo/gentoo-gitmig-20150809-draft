@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qtella
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.17 2004/06/25 00:36:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.18 2004/06/29 00:25:31 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> qtella-0.5.3-r2.ebuild,
+  qtella-0.6.4.ebuild, qtella-0.7.0.ebuild:
+  QA: inherit kde-base -> inherit kde
 
 *qtella-0.7.0 (18 Jun 2004)
 
