@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mbuffer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mbuffer/ChangeLog,v 1.4 2004/06/24 22:14:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mbuffer/ChangeLog,v 1.5 2004/06/30 18:57:51 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> mbuffer-20011008.ebuild:
+  glibc -> libc
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> mbuffer-20011008.ebuild:
   Add die following econf for bug 48950
