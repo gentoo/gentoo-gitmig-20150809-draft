@@ -2,12 +2,14 @@
 Hash: SHA1
 
 MD5 dd2cd8c98523ad8deda5a3faafd6f5d6 webcomics-collector-0.7.2.ebuild 772
-MD5 ae5ed7e07e07aac9beb259b7006f5d23 ChangeLog 1678
+MD5 07354506640db429f57fa583b2cbfd73 ChangeLog 1854
+MD5 f9a21124c395c252ab6d2623dae6036f webcomics-collector-0.7.3.ebuild 772
 MD5 cece795f90ea0103e33c21b3bcfaa0d5 files/digest-webcomics-collector-0.7.2 67
+MD5 c92da2db0b8f6ef6461cfae81b36945b files/digest-webcomics-collector-0.7.3 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBoVsDHTu7gpaalycRAjtVAJ90X2Zl5r+iN8vmBzzzfE1WxWoQ0gCguBfs
-lRGEqtJjw9hIS/tUpAyO5xk=
-=fy+z
+iD8DBQFBoV3FHTu7gpaalycRAiiOAKDlBKnKdxmUpvoP0vVE0SyTcYTb+QCggUL8
+fHK/Glm9MvOqJSc1oprmYfk=
+=Kpie
 -----END PGP SIGNATURE-----
