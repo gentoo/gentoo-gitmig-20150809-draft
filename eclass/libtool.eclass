@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.32 2004/09/25 06:35:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.33 2004/09/25 06:37:30 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -282,6 +282,7 @@ uclibctoolize() {
 		ltconfig)
 			local ver="$(grep '^VERSION=' ${x})"
 			ver="${ver/VERSION=}"
+			[ "${ver:0:3}" == "1.4" ] && ver="1.3"   # 1.4 and 1.3 are compat
 			ebegin " Fixing \${S}${x/${S}}"
 			patch -p0 "${x}" "${ELT_PATCH_DIR}/uclibc/ltconfig-${ver:0:3}.patch" > /dev/null
 			eend $? "PLEASE CHECK ${x}"
