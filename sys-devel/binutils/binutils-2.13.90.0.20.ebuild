@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.20.ebuild,v 1.1 2003/03/22 16:34:31 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.20.ebuild,v 1.2 2003/03/23 15:39:41 azarah Exp $
 
 IUSE="nls bootstrap build"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2|LGPL-2"
-KEYWORDS="-x86 -ppc -alpha -sparc ~mips -hppa -arm"
+KEYWORDS="~x86 -ppc -alpha -sparc ~mips -hppa -arm"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
@@ -47,6 +47,7 @@ src_unpack() {
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-glibc21.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-x86_64-testsuite.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-x86_64-gotpcrel.patch
+	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-sparc-nonpic.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-eh-frame-ro.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-ltconfig-multilib.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-testsuite-Wall-fixes.patch
@@ -54,7 +55,7 @@ src_unpack() {
 		&& epatch ${FILESDIR}/2.13/${P}-array-sects-compat.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-s390-file-loc.patch
 
- 	# Add patches for mips
+	# Add patches for mips
 	if [ "${ARCH}" = "mips" ]
 	then
 		epatch ${FILESDIR}/2.13/${P}-gas-mips-gprel.patch
