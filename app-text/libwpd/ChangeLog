@@ -1,0 +1,9 @@
+# ChangeLog for app-text/libwpd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.1 2003/08/24 19:44:13 foser Exp $
+
+*libwpd-0.5.0 (24 Aug 2003)
+
+  24 Aug 2003; foser <foser@gentoo.org> libwpd-0.5.0.ebuild, ChangeLog, metadat.xml :
+  Initial commit, ebuild adapted from the one submitted by mg <markgilbert@hotpop.com> in #23557
+  Added to gnome herd for now, because abiword is the only app using it atm
