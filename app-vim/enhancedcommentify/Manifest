@@ -1,6 +1,16 @@
-MD5 4b4bf46b15c707133278ed1d2b9ed1a2 enhancedcommentify-2.1-r1.ebuild 488
-MD5 f0f8e2272d13a52a3de17569adad0202 enhancedcommentify-2.0.ebuild 441
-MD5 44106e59aa2cf75c9f7a8370c7a4d85e ChangeLog 1276
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd5a6caa9d190d4123a5fdafd3f73bef enhancedcommentify-2.1-r1.ebuild 530
+MD5 f9433a3724d7a3940d8f0c06379824be ChangeLog 1390
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 f0f8e2272d13a52a3de17569adad0202 enhancedcommentify-2.0.ebuild 441
 MD5 f2d600efa7f260157605511cf3d72dce files/digest-enhancedcommentify-2.0 74
 MD5 dc6810e2bc0248b2c6c4da46dbf3d276 files/digest-enhancedcommentify-2.1-r1 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBN88HLLFUmVNQ7rkRAuWhAKCBqYqojBkYuI4zo9AJnYQ1YRXQMQCgun3i
+fftTqT5WkypGkCqZcDuxPxw=
+=JRQ7
+-----END PGP SIGNATURE-----
