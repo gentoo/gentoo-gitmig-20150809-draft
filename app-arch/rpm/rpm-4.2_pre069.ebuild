@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.1 2003/04/14 15:54:05 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.2 2003/04/14 18:27:00 cretin Exp $
 
-inherit flag-o-matic libtool
+inherit flag-o-matic libtool eutils
 
 DESCRIPTION="Red Hat Package Management Utils"
 SRC_URI="mirror://gentoo/rpm-4.2-0.69.tar.gz"
@@ -23,6 +23,12 @@ RDEPEND="=sys-libs/db-3.2*
 S=${WORKDIR}/rpm-4.2
 
 strip-flags
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/rpm-4.2-system-popt.diff
+}
 
 src_compile() {
 	elibtoolize

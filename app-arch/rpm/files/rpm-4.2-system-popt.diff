@@ -1,0 +1,398 @@
+diff -ur rpm-4.2/Makefile.am rpm-4.2.new/Makefile.am
+--- rpm-4.2/Makefile.am	2003-01-23 20:26:30.000000000 +0000
++++ rpm-4.2.new/Makefile.am	2003-04-14 20:08:50.000000000 +0100
+@@ -14,7 +14,7 @@
+ 	po/*.in po/*.po po/rpm.pot \
+ 	rpm.magic rpmpopt-$(VERSION) rpmqv.c rpm.c
+ 
+-SUBDIRS = intl po @WITH_ZLIB_SUBDIR@ @WITH_ELFUTILS_SUBDIR@  file @WITH_DB_SUBDIR@ popt beecrypt rpmio rpmdb lib build misc @WITH_PYTHON_SUBDIR@ tools scripts tests doc .
++SUBDIRS = intl po @WITH_ZLIB_SUBDIR@ @WITH_ELFUTILS_SUBDIR@  file @WITH_DB_SUBDIR@ beecrypt rpmio rpmdb lib build misc @WITH_PYTHON_SUBDIR@ tools scripts tests doc .
+ 
+ INCLUDES = \
+ 	-I$(top_srcdir)/build \
+@@ -22,7 +22,6 @@
+ 	-I$(top_srcdir)/rpmdb \
+ 	-I$(top_srcdir)/rpmio \
+ 	-I$(top_srcdir)/beecrypt \
+-	-I$(top_srcdir)/popt \
+ 	@WITH_LIBELF_INCLUDE@ \
+ 	@INCPATH@
+ 
+@@ -34,7 +33,7 @@
+ 	$(top_builddir)/lib/librpm.la \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+ 	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la \
++	/usr/lib/libpopt.la \
+ 	@WITH_ZLIB_LIB@ \
+ 	@INTLLIBS@ \
+ 	@LIBMISC@
+diff -ur rpm-4.2/Makefile.in rpm-4.2.new/Makefile.in
+--- rpm-4.2/Makefile.in	2003-02-24 22:11:41.000000000 +0000
++++ rpm-4.2.new/Makefile.in	2003-04-14 20:10:45.000000000 +0100
+@@ -219,7 +219,7 @@
+ 	rpm.magic rpmpopt-$(VERSION) rpmqv.c rpm.c
+ 
+ 
+-SUBDIRS = intl po @WITH_ZLIB_SUBDIR@ @WITH_ELFUTILS_SUBDIR@  file @WITH_DB_SUBDIR@ popt beecrypt rpmio rpmdb lib build misc @WITH_PYTHON_SUBDIR@ tools scripts tests doc .
++SUBDIRS = intl po @WITH_ZLIB_SUBDIR@ @WITH_ELFUTILS_SUBDIR@  file @WITH_DB_SUBDIR@ beecrypt rpmio rpmdb lib build misc @WITH_PYTHON_SUBDIR@ tools scripts tests doc .
+ 
+ INCLUDES = \
+ 	-I$(top_srcdir)/build \
+@@ -227,7 +227,6 @@
+ 	-I$(top_srcdir)/rpmdb \
+ 	-I$(top_srcdir)/rpmio \
+ 	-I$(top_srcdir)/beecrypt \
+-	-I$(top_srcdir)/popt \
+ 	@WITH_LIBELF_INCLUDE@ \
+ 	@INCPATH@
+ 
+@@ -240,7 +239,7 @@
+ 	$(top_builddir)/lib/librpm.la \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+ 	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la \
++	/usr/lib/libpopt.la \
+ 	@WITH_ZLIB_LIB@ \
+ 	@INTLLIBS@ \
+ 	@LIBMISC@
+@@ -306,44 +305,37 @@
+ rpm_OBJECTS = $(am_rpm_OBJECTS)
+ rpm_DEPENDENCIES = rpm.o $(top_builddir)/build/.libs/librpmbuild.a \
+ 	$(top_builddir)/lib/librpm.la $(top_builddir)/rpmdb/librpmdb.la \
+-	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la
++	$(top_builddir)/rpmio/librpmio.la /usr/lib/libpopt.la
+ am_rpm2cpio_OBJECTS = rpm2cpio.$(OBJEXT)
+ rpm2cpio_OBJECTS = $(am_rpm2cpio_OBJECTS)
+ rpm2cpio_DEPENDENCIES = $(top_builddir)/lib/librpm.la \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+-	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la
++	$(top_builddir)/rpmio/librpmio.la /usr/lib/libpopt.la
+ am_rpmb_OBJECTS = build.$(OBJEXT)
+ rpmb_OBJECTS = $(am_rpmb_OBJECTS)
+ rpmb_DEPENDENCIES = rpmb.o $(top_builddir)/build/librpmbuild.la \
+ 	$(top_builddir)/lib/librpm.la $(top_builddir)/rpmdb/librpmdb.la \
+-	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la
++	$(top_builddir)/rpmio/librpmio.la /usr/lib/libpopt.la
+ am_rpmd_OBJECTS =
+ rpmd_OBJECTS = $(am_rpmd_OBJECTS)
+ rpmd_DEPENDENCIES = rpmd.o $(top_builddir)/lib/librpm.la \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+-	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la
++	$(top_builddir)/rpmio/librpmio.la /usr/lib/libpopt.la
+ am_rpmi_OBJECTS =
+ rpmi_OBJECTS = $(am_rpmi_OBJECTS)
+ rpmi_DEPENDENCIES = rpmi.o $(top_builddir)/lib/librpm.la \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+-	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la
++	$(top_builddir)/rpmio/librpmio.la /usr/lib/libpopt.la
+ am_rpmk_OBJECTS =
+ rpmk_OBJECTS = $(am_rpmk_OBJECTS)
+ rpmk_DEPENDENCIES = rpmk.o $(top_builddir)/lib/librpm.la \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+-	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la
++	$(top_builddir)/rpmio/librpmio.la /usr/lib/libpopt.la
+ am_rpmq_OBJECTS =
+ rpmq_OBJECTS = $(am_rpmq_OBJECTS)
+ rpmq_DEPENDENCIES = rpmq.o $(top_builddir)/build/librpmbuild.la \
+ 	$(top_builddir)/lib/librpm.la $(top_builddir)/rpmdb/librpmdb.la \
+-	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la
++	$(top_builddir)/rpmio/librpmio.la /usr/lib/libpopt.la
+ SCRIPTS = $(bin_SCRIPTS) $(pkglib_SCRIPTS)
+ 
+ 
+diff -ur rpm-4.2/build/Makefile.am rpm-4.2.new/build/Makefile.am
+--- rpm-4.2/build/Makefile.am	2003-01-01 17:46:54.000000000 +0000
++++ rpm-4.2.new/build/Makefile.am	2003-04-14 20:08:50.000000000 +0100
+@@ -9,7 +9,6 @@
+ 	-I$(top_srcdir)/lib \
+ 	-I$(top_srcdir)/rpmdb \
+ 	-I$(top_srcdir)/rpmio \
+-	-I$(top_srcdir)/popt \
+ 	@WITH_LIBELF_INCLUDE@ \
+ 	@INCPATH@
+ 
+diff -ur rpm-4.2/build/Makefile.in rpm-4.2.new/build/Makefile.in
+--- rpm-4.2/build/Makefile.in	2003-02-24 22:11:42.000000000 +0000
++++ rpm-4.2.new/build/Makefile.in	2003-04-14 20:10:45.000000000 +0100
+@@ -212,7 +212,6 @@
+ 	-I$(top_srcdir)/lib \
+ 	-I$(top_srcdir)/rpmdb \
+ 	-I$(top_srcdir)/rpmio \
+-	-I$(top_srcdir)/popt \
+ 	@WITH_LIBELF_INCLUDE@ \
+ 	@INCPATH@
+ 
+diff -ur rpm-4.2/lib/Makefile.am rpm-4.2.new/lib/Makefile.am
+--- rpm-4.2/lib/Makefile.am	2003-01-01 17:46:14.000000000 +0000
++++ rpm-4.2.new/lib/Makefile.am	2003-04-14 20:08:50.000000000 +0100
+@@ -9,7 +9,6 @@
+ 	-I$(top_srcdir)/build \
+ 	-I$(top_srcdir)/rpmdb \
+ 	-I$(top_srcdir)/rpmio \
+-	-I$(top_srcdir)/popt \
+ 	@INCPATH@
+ 
+ EXTRA_DIST = getdate.y
+@@ -37,7 +36,7 @@
+ librpm_la_LDFLAGS = -release @VERSION@ \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+ 	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la
++	/usr/lib/libpopt.la
+ 
+ getdate.c: getdate.y
+ 	@echo expect 10 shift/reduce conflicts
+diff -ur rpm-4.2/lib/Makefile.in rpm-4.2.new/lib/Makefile.in
+--- rpm-4.2/lib/Makefile.in	2003-02-24 22:11:45.000000000 +0000
++++ rpm-4.2.new/lib/Makefile.in	2003-04-14 20:10:46.000000000 +0100
+@@ -212,7 +212,6 @@
+ 	-I$(top_srcdir)/build \
+ 	-I$(top_srcdir)/rpmdb \
+ 	-I$(top_srcdir)/rpmio \
+-	-I$(top_srcdir)/popt \
+ 	@INCPATH@
+ 
+ 
+@@ -244,7 +243,7 @@
+ librpm_la_LDFLAGS = -release @VERSION@ \
+ 	$(top_builddir)/rpmdb/librpmdb.la \
+ 	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la
++	/usr/lib/libpopt.la
+ 
+ 
+ BUILT_SOURCES = getdate.c # rpmlib.lcd
+diff -ur rpm-4.2/python/Makefile.am rpm-4.2.new/python/Makefile.am
+--- rpm-4.2/python/Makefile.am	2003-01-08 22:33:12.000000000 +0000
++++ rpm-4.2.new/python/Makefile.am	2003-04-14 20:10:11.000000000 +0100
+@@ -18,7 +18,6 @@
+ 	-I$(top_srcdir)/rpmdb \
+ 	-I$(top_srcdir)/rpmio \
+ 	-I$(top_srcdir)/beecrypt \
+-	-I$(top_srcdir)/popt \
+ 	-I$(pyincdir) \
+ 	@WITH_LIBELF_INCLUDE@ \
+ 	@INCPATH@
+@@ -31,7 +30,7 @@
+ 	$(top_builddir)/lib/.libs/librpm.so \
+ 	$(top_builddir)/rpmdb/.libs/librpmdb.so \
+ 	$(top_builddir)/rpmio/.libs/librpmio.so \
+-	$(top_builddir)/popt/.libs/libpopt.so \
++	/usr/lib/libpopt.so \
+ 	@WITH_LIBELF_LIB@
+ 
+ LDADD =
+diff -ur rpm-4.2/python/Makefile.in rpm-4.2.new/python/Makefile.in
+--- rpm-4.2/python/Makefile.in	2003-02-24 22:11:45.000000000 +0000
++++ rpm-4.2.new/python/Makefile.in	2003-04-14 20:10:46.000000000 +0100
+@@ -221,7 +221,6 @@
+ 	-I$(top_srcdir)/rpmdb \
+ 	-I$(top_srcdir)/rpmio \
+ 	-I$(top_srcdir)/beecrypt \
+-	-I$(top_srcdir)/popt \
+ 	-I$(pyincdir) \
+ 	@WITH_LIBELF_INCLUDE@ \
+ 	@INCPATH@
+@@ -236,7 +235,7 @@
+ 	$(top_builddir)/lib/.libs/librpm.so \
+ 	$(top_builddir)/rpmdb/.libs/librpmdb.so \
+ 	$(top_builddir)/rpmio/.libs/librpmio.so \
+-	$(top_builddir)/popt/.libs/libpopt.so \
++	/usr/lib/libpopt.so \
+ 	@WITH_LIBELF_LIB@
+ 
+ 
+diff -ur rpm-4.2/rpmdb/Makefile.am rpm-4.2.new/rpmdb/Makefile.am
+--- rpm-4.2/rpmdb/Makefile.am	2002-12-21 16:20:12.000000000 +0000
++++ rpm-4.2.new/rpmdb/Makefile.am	2003-04-14 20:08:50.000000000 +0100
+@@ -9,7 +9,6 @@
+ 	-I$(top_srcdir)/lib \
+ 	-I$(top_srcdir)/rpmio \
+ 	-I$(top_srcdir)/beecrypt \
+-	-I$(top_srcdir)/popt \
+ 	@WITH_LIBELF_INCLUDE@ \
+ 	@INCPATH@
+ 
+@@ -47,7 +46,7 @@
+ 	tagname.c tagtbl.c
+ librpmdb_la_LDFLAGS = -release @VERSION@ \
+ 	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la \
++	/usr/lib/libpopt.la \
+ 	@WITH_LIBELF_LIB@ \
+ 	@libdb3@
+ librpmdb_la_LIBADD = $(DBLIBOBJS) $(DB3LOBJS)
+diff -ur rpm-4.2/rpmdb/Makefile.in rpm-4.2.new/rpmdb/Makefile.in
+--- rpm-4.2/rpmdb/Makefile.in	2003-02-24 22:11:47.000000000 +0000
++++ rpm-4.2.new/rpmdb/Makefile.in	2003-04-14 20:10:47.000000000 +0100
+@@ -212,7 +212,6 @@
+ 	-I$(top_srcdir)/lib \
+ 	-I$(top_srcdir)/rpmio \
+ 	-I$(top_srcdir)/beecrypt \
+-	-I$(top_srcdir)/popt \
+ 	@WITH_LIBELF_INCLUDE@ \
+ 	@INCPATH@
+ 
+@@ -254,7 +253,7 @@
+ 
+ librpmdb_la_LDFLAGS = -release @VERSION@ \
+ 	$(top_builddir)/rpmio/librpmio.la \
+-	$(top_builddir)/popt/libpopt.la \
++	/usr/lib/libpopt.la \
+ 	@WITH_LIBELF_LIB@ \
+ 	@libdb3@
+ 
+diff -ur rpm-4.2/rpmio/Makefile.am rpm-4.2.new/rpmio/Makefile.am
+--- rpm-4.2/rpmio/Makefile.am	2002-12-24 15:47:25.000000000 +0000
++++ rpm-4.2.new/rpmio/Makefile.am	2003-04-14 20:08:50.000000000 +0100
+@@ -10,7 +10,6 @@
+ 
+ INCLUDES = -I. \
+ 	-I$(top_srcdir) \
+-	-I$(top_srcdir)/popt \
+ 	@INCPATH@
+ 
+ pkgincdir = $(pkgincludedir)
+@@ -61,34 +60,34 @@
+ 	$(LINT) $(DEFS) $(INCLUDES) $(librpmio_la_SOURCES)
+ 
+ tdigest_SOURCES = tdigest.c
+-tdigest_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tdigest_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tdir_SOURCES = tdir.c
+ tdir_LDFLAGS = -all-static
+-tdir_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tdir_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tfts_SOURCES = tfts.c
+ tfts_LDFLAGS = -all-static
+-tfts_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tfts_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tglob_SOURCES = tglob.c
+ tglob_LDFLAGS = -all-static
+-tglob_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tglob_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tinv_SOURCES = tinv.c
+ tinv_LDFLAGS = -all-static
+-tinv_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tinv_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tkey_SOURCES = tkey.c
+ tkey_LDFLAGS = -all-static
+-tkey_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tkey_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tring_SOURCES = tring.c
+ tring_LDFLAGS = -all-static
+-tring_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tring_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ trpmio_SOURCES = trpmio.c
+-trpmio_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++trpmio_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ dumpasn1_SOURCES = dumpasn1.c
+ 
+diff -ur rpm-4.2/rpmio/Makefile.in rpm-4.2.new/rpmio/Makefile.in
+--- rpm-4.2/rpmio/Makefile.in	2003-02-24 22:11:47.000000000 +0000
++++ rpm-4.2.new/rpmio/Makefile.in	2003-04-14 20:10:47.000000000 +0100
+@@ -213,7 +213,6 @@
+ 
+ INCLUDES = -I. \
+ 	-I$(top_srcdir) \
+-	-I$(top_srcdir)/popt \
+ 	@INCPATH@
+ 
+ 
+@@ -243,34 +242,34 @@
+ librpmio_la_DEPENDENCIES = .created
+ 
+ tdigest_SOURCES = tdigest.c
+-tdigest_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tdigest_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tdir_SOURCES = tdir.c
+ tdir_LDFLAGS = -all-static
+-tdir_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tdir_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tfts_SOURCES = tfts.c
+ tfts_LDFLAGS = -all-static
+-tfts_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tfts_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tglob_SOURCES = tglob.c
+ tglob_LDFLAGS = -all-static
+-tglob_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tglob_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tinv_SOURCES = tinv.c
+ tinv_LDFLAGS = -all-static
+-tinv_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tinv_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tkey_SOURCES = tkey.c
+ tkey_LDFLAGS = -all-static
+-tkey_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tkey_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ tring_SOURCES = tring.c
+ tring_LDFLAGS = -all-static
+-tring_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++tring_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ trpmio_SOURCES = trpmio.c
+-trpmio_LDADD = librpmio.la $(top_builddir)/popt/libpopt.la
++trpmio_LDADD = librpmio.la /usr/lib/libpopt.la
+ 
+ dumpasn1_SOURCES = dumpasn1.c
+ subdir = rpmio
+@@ -293,29 +292,29 @@
+ dumpasn1_LDFLAGS =
+ am_tdigest_OBJECTS = tdigest.$(OBJEXT)
+ tdigest_OBJECTS = $(am_tdigest_OBJECTS)
+-tdigest_DEPENDENCIES = librpmio.la $(top_builddir)/popt/libpopt.la
++tdigest_DEPENDENCIES = librpmio.la /usr/lib/libpopt.la
+ tdigest_LDFLAGS =
+ am_tdir_OBJECTS = tdir.$(OBJEXT)
+ tdir_OBJECTS = $(am_tdir_OBJECTS)
+-tdir_DEPENDENCIES = librpmio.la $(top_builddir)/popt/libpopt.la
++tdir_DEPENDENCIES = librpmio.la /usr/lib/libpopt.la
+ am_tfts_OBJECTS = tfts.$(OBJEXT)
+ tfts_OBJECTS = $(am_tfts_OBJECTS)
+-tfts_DEPENDENCIES = librpmio.la $(top_builddir)/popt/libpopt.la
++tfts_DEPENDENCIES = librpmio.la /usr/lib/libpopt.la
+ am_tglob_OBJECTS = tglob.$(OBJEXT)
+ tglob_OBJECTS = $(am_tglob_OBJECTS)
+-tglob_DEPENDENCIES = librpmio.la $(top_builddir)/popt/libpopt.la
++tglob_DEPENDENCIES = librpmio.la /usr/lib/libpopt.la
+ am_tinv_OBJECTS = tinv.$(OBJEXT)
+ tinv_OBJECTS = $(am_tinv_OBJECTS)
+-tinv_DEPENDENCIES = librpmio.la $(top_builddir)/popt/libpopt.la
++tinv_DEPENDENCIES = librpmio.la /usr/lib/libpopt.la
+ am_tkey_OBJECTS = tkey.$(OBJEXT)
+ tkey_OBJECTS = $(am_tkey_OBJECTS)
+-tkey_DEPENDENCIES = librpmio.la $(top_builddir)/popt/libpopt.la
++tkey_DEPENDENCIES = librpmio.la /usr/lib/libpopt.la
+ am_tring_OBJECTS = tring.$(OBJEXT)
+ tring_OBJECTS = $(am_tring_OBJECTS)
+-tring_DEPENDENCIES = librpmio.la $(top_builddir)/popt/libpopt.la
++tring_DEPENDENCIES = librpmio.la /usr/lib/libpopt.la
+ am_trpmio_OBJECTS = trpmio.$(OBJEXT)
+ trpmio_OBJECTS = $(am_trpmio_OBJECTS)
+-trpmio_DEPENDENCIES = librpmio.la $(top_builddir)/popt/libpopt.la
++trpmio_DEPENDENCIES = librpmio.la /usr/lib/libpopt.la
+ trpmio_LDFLAGS =
+ 
+ DEFS = @DEFS@
