@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.6_rc2.ebuild,v 1.1 2004/04/05 20:56:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.6_rc2.ebuild,v 1.2 2004/04/08 19:34:06 stuart Exp $
 
 PHPSAPI="cgi"
 SRC_URI_BASE="http://downloads.php.net/ilia/"
@@ -8,7 +8,7 @@ inherit php-sapi eutils
 
 DESCRIPTION="PHP CGI"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
 
 src_compile() {
 	# CLI needed to build stuff
