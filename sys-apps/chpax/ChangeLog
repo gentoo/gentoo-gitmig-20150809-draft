@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.29 2004/10/13 13:56:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.30 2004/10/28 20:31:27 solar Exp $
+
+  28 Oct 2004; <solar@gentoo.org> -chpax-0.5.ebuild, chpax-0.6.1.ebuild,
+  chpax-0.7.ebuild:
+  fixed CC usage to use new toolchain-funcs.eclass. bug 69286
 
   13 Oct 2004; Guy Martin <gmsoft@gentoo.org> chpax-0.7.ebuild:
   Stable on hppa.
