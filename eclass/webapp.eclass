@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.17 2004/05/11 19:31:29 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.18 2004/05/17 22:44:35 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -11,8 +11,11 @@
 #
 # ------------------------------------------------------------------------
 #
-# Please do not make modifications to this file without checking with a
-# member of the web-apps herd first!
+# The master copy of this eclass is held in Stu's subversion repository.
+#
+# If you make changes to this file and don't tell Stu, chances are that
+# your changes will be overwritten the next time Stu releases a new version
+# of webapp-config.
 #
 # ------------------------------------------------------------------------
 
@@ -20,9 +23,9 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-DEPEND="$DEPEND >=net-www/webapp-config-1.8"
+DEPEND="$DEPEND >=net-www/webapp-config-1.9 app-portage/gentoolkit"
 
-EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
+EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install pkg_prerm
 
 INSTALL_DIR="/$PN"
 IS_UPGRADE=0
@@ -123,6 +126,24 @@ function webapp_configfile ()
 # ------------------------------------------------------------------------
 # EXPORTED FUNCTION - FOR USE IN EBUILDS
 #
+# Install a script that will run after a virtual copy is created, and
+# before a virtual copy has been removed
+#
+# @param	$1 - the script to run
+# ------------------------------------------------------------------------
+
+function webapp_hook_script ()
+{
+	webapp_checkfileexists "$2"
+
+	einfo "(hook) $1"
+	cp "$1" "${D}${MY_HOOKSCRIPTSDIR}/`basename $1`" || die "Unable to install $1 into ${D}${MY_HOOKSCRIPTSDIR}/"
+	chmod 555 "${D}${MY_HOOKSCRIPTSDIR}/`basename $1`"
+}
+
+# ------------------------------------------------------------------------
+# EXPORTED FUNCTION - FOR USE IN EBUILDS
+#
 # Install a text file containing post-installation instructions.
 #
 # @param	$1 - language code (use 'en' for now)
@@ -185,6 +206,42 @@ function webapp_serverowned ()
 # ------------------------------------------------------------------------
 # EXPORTED FUNCTION - FOR USE IN EBUILDS
 #
+# @param	$1 - the webserver to install the config file for
+#			     (one of apache1, apache2, cherokee)
+# @param	$2 - the config file to install
+# @param	$3 - new name for the config file (default is `basename $2`)
+#				 this is an optional parameter
+#
+# NOTE:
+#	this function will automagically prepend $1 to the front of your
+#	config file's name
+# ------------------------------------------------------------------------
+
+function webapp_server_config ()
+{
+	webapp_checkfileexists "$2"
+
+	# sort out what the name will be of the config file
+
+	local my_file
+
+	if [ -z "$3" ]; then
+		$my_file="$1-`basename $2`"
+	else
+		$my_file="$1-$3"
+	fi
+
+	# warning:
+	#
+	# do NOT change the naming convention used here without changing all
+	# the other scripts that also rely upon these names
+ 
+	einfo "($1) config file '$my_file'"
+	cp "$2" "${D}${MY_SERVERCONFIGDIR}/${my_file}"
+}
+
+# ------------------------------------------------------------------------
+# EXPORTED FUNCTION - FOR USE IN EBUILDS
 #
 # @param	$1 - the db engine that the script is for
 #				 (one of: mysql|postgres)
@@ -236,7 +293,7 @@ function webapp_sqlscript ()
 
 function webapp_src_install ()
 {
-	chown -R root:root ${D}/
+	chown -R ${VHOST_DEFAULT_UID}:${VHOST_DEFAULT_GID} ${D}/
 	chmod -R u-s ${D}/
 	chmod -R g-s ${D}/
 
@@ -265,10 +322,51 @@ function webapp_pkg_setup ()
 
 	# pull in the shared configuration file
 
+	G_HOSTNAME="localhost"
 	. /etc/vhosts/webapp-config || die "Unable to open /etc/vhosts/webapp-config file"
+
+	# are we installing a webapp-config solution over the top of a 
+	# non-webapp-config solution?
+
+	if ! use vhosts ; then
+		local my_dir="$VHOST_ROOT/$MY_HTDOCSBASE/$PN"
+		local my_output
+
+		if [ -d "$my_dir" ] ; then
+			einfo "You already have something installed in $my_dir"
+			einfo "Are you trying to install over the top of something I cannot upgrade?"
+
+			my_output="`webapp_check_installedat`"
+
+			if [ "$?" != "0" ]; then
+
+				# okay, whatever is there, it isn't webapp-config-compatible
+				ewarn
+				ewarn "Whatever is in $my_dir, it's not"
+				ewarn "compatible with webapp-config."
+				ewarn
+
+				my_output="`qpkg -nc -v -f $my_dir`"
+				if [ -n "$my_output" ]; then
+					eerror "Please remove $my_output and re-emerge."
+				else
+					eerror "Please remove the contents of $my_dir, and then re-emerge."
+				fi
+				die "Cannot upgrade contents of $my_dir"
+			elif [ "`echo $my_output | awk '{ print $1 }'`" != "$PN" ]; then
+				eerror "$my_dir contains $my_output"
+				eerror "I cannot upgrade that"
+				die "Cannot upgrade contents of $my_dir"
+			else
+				einfo
+				einfo "I can upgrade the contents of $my_dir"
+				einfo
+			fi
+		fi
+	fi
 }
 
-function webapp_getinstalltype ()
+function webapp_someunusedfunction ()
 {
 	# are we emerging something that is already installed?
 
@@ -277,7 +375,10 @@ function webapp_getinstalltype ()
 		ewarn "Removing existing copy of ${PN}-${PVR}"
 		rm -rf "${D}${MY_APPROOT}/${MY_APPSUFFIX}"
 	fi
+}
 
+function webapp_getinstalltype ()
+{
 	# or are we upgrading?
 
 	if ! use vhosts ; then
@@ -305,7 +406,11 @@ function webapp_getinstalltype ()
 					einfo "This is a re-installation"
 					IS_REPLACE=1
 				fi
+			else
+				einfo "$my_ouptut is installed there"
 			fi
+		else
+			einfo "This is an installation"
 		fi
 	fi
 }
@@ -381,9 +486,67 @@ function webapp_pkg_postinst ()
 		if [ "$IS_UPGRADE" = "1" ] ; then
 			einfo "Removing old version $REMOVE_PKG"
 
-			echo emerge -C $CATEGORY/$REMOVE_PKG
+			emerge -C $CATEGORY/$REMOVE_PKG
 		fi
+	else
+		# vhosts flag is on
+		#
+		# let's tell the administrator what to do next
+
+		einfo
+		einfo "The 'vhosts' USE flag is switched ON"
+		einfo "This means that Portage will not automatically run webapp-config to"
+		einfo "complete the installation."
+		einfo
+		einfo "To install $PN-$PVR into a virtual host, run the following command:"
+		einfo
+		einfo "    webapp-config -I -h <host> -d $PN $PN $PVR"
+		einfo
+		einfo "For more details, see the webapp-config(8) man page"
 	fi
 
 	return 0
+}
+
+function webapp_pkg_prerm ()
+{
+	# remove any virtual installs that there are
+
+	local my_output
+	local x
+
+	my_output="`webapp-config --list-installs $PN $PVR`"
+
+	if [ "$?" != "0" ]; then
+		return
+	fi
+
+	# the changes to IFS here are necessary to ensure that we can cope
+	# with directories that contain spaces in the file names
+
+	# OLD_IFS="$IFS"
+	# IFS=""
+
+	for x in $my_output ; do
+		# IFS="$OLD_IFS"
+
+		[ -f $x/.webapp ] && . $x/.webapp || ewarn "Cannot find file $x/.webapp"
+
+		if [ -z "WEB_HOSTNAME" -o -z "WEB_INSTALLDIR" ]; then
+			ewarn "Don't forget to use webapp-config to remove the copy of"
+			ewarn "${PN}-${PVR} installed in"
+			ewarn
+			ewarn "    $x"
+			ewarn
+		else
+			# we have enough information to remove the virtual copy ourself
+
+			webapp-config -C -h ${WEB_HOSTNAME} -d ${WEB_INSTALLDIR}
+
+			# if the removal fails - we carry on anyway!
+		fi
+		# IFS=""
+	done
+
+	# IFS="$OLD_IFS"
 }
