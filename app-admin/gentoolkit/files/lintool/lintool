@@ -400,7 +400,7 @@ def parse_opts(argv):
       args = lines + args
     elif option in [ '--tests' ]:
       options['desiredTests'] = value.split(",")
-    elif option in [ '--listTests' ]:
+    elif option in [ '--list-tests' ]:
       options['listTests'] = 1
     elif option in [ '-h', '-?', '--help' ]:
       usage(opts)

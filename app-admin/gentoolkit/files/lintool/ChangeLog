@@ -1,3 +1,6 @@
+2002-05-13 Karl Trygve Kalleberg <karltk@gentoo.org>
+	* Fixed --list-tests which was incorrectly --listTests
+
 2002-04-30 Karl Trygve Kalleberg <karltk@gentoo.org>
 	* Added <jnelson@gentoo.org>'s cleanups
 	* Improved error reporting; now separates into errors and
