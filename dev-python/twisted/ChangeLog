@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.38 2004/07/04 09:46:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.39 2004/07/16 23:47:22 kloeri Exp $
+
+  17 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> twisted-1.1.1.ebuild,
+  twisted-1.2.0.ebuild, twisted-1.2.1_alpha2.ebuild, twisted-1.3.0.ebuild:
+  Fix pyopenssl dependencies.
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> twisted-1.2.0.ebuild:
   Stable on alpha.
