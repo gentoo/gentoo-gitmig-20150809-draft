@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20.ebuild,v 1.11 2004/07/16 20:12:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20.ebuild,v 1.12 2004/08/22 01:13:21 robbat2 Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 #to accomodate -laadeedah releases
 NEWP=${P}
 
@@ -91,6 +91,7 @@ src_unpack() {
 	cd ${S}
 	autoconf
 	#WANT_AUTOMAKE=1.7 automake
+	gnuconfig_update
 }
 
 src_compile() {

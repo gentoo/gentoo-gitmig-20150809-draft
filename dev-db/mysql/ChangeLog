@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.115 2004/07/17 21:57:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.116 2004/08/22 01:13:21 robbat2 Exp $
+
+  21 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.20.ebuild:
+  Bug #60869, gnuconfig.
 
   16 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.20.ebuild:
   Stable on sparc and hppa
