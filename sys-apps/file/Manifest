@@ -1,32 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7693a0ec04f0e9f623d50c907057fc7b ChangeLog 6958
-MD5 5caf71c1f9916efe3f78ab1d997e5790 file-3.41.ebuild 990
-MD5 8f858dfea47aab9ea90e6bd4f73f6a15 file-4.02.ebuild 993
-MD5 4c1ad6489f70d7b0afa6862d168e48c0 file-4.06.ebuild 1688
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 9c5fd95250de42bbaa735ae349ba2020 file-4.07-r1.ebuild 1609
-MD5 f30f77bdfa94fff1bec8a40c1f1512a4 file-4.07.ebuild 1557
-MD5 2a87708a73f7b72307a3247777bcbaf0 file-4.08.ebuild 1540
+MD5 c710b5a9e0d43592b6076e41894fecf2 file-4.07-r1.ebuild 1616
+MD5 cb23301c27d4a9fd31c6b5100e41a18c file-3.41.ebuild 997
+MD5 605c72d3a6c8eb460232237356134a72 file-4.07.ebuild 1564
+MD5 720ff71d900c2c319fdc992a6abf8474 file-4.02.ebuild 1000
 MD5 73fb7c0d1831e107ee38bb6ca329aed6 file-4.09.ebuild 1727
+MD5 a5c87f7115785296946c86229f165385 file-4.06.ebuild 1696
+MD5 f35afb5d10fe6aec67647e16713200de ChangeLog 7155
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 f2f8fb9aa51be0048b8f32c9a9a51fbc file-4.08.ebuild 1536
+MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07-r1 61
+MD5 2cd6110e84c85c183c7b8dcd0be814e7 files/ltconfig-uclibc.patch 1167
+MD5 aff834708f034a4995abba4192e79583 files/file-3.39-gentoo.diff 4673
+MD5 2b50afc88e81450f52a964b98b7d0ef8 files/file-4.08-uclibc.patch 816
+MD5 8153e3726c4dad50b53c76eaf32b4833 files/file-4.07-gentoo.diff 648
+MD5 aff834708f034a4995abba4192e79583 files/file-3.41-mips-gentoo.diff 4673
 MD5 eabc698678353b52ea7d9bfb724d4e1e files/digest-file-3.41 268
 MD5 fd38ae2f761ce496f7caedf3226166ae files/digest-file-4.02 61
 MD5 50700bf6bff49778fd8c6083466a0813 files/digest-file-4.06 61
-MD5 aff834708f034a4995abba4192e79583 files/file-3.39-gentoo.diff 4673
-MD5 aff834708f034a4995abba4192e79583 files/file-3.41-mips-gentoo.diff 4673
-MD5 8f6cec8c0754678a2817139182637eac files/file-4.xx-mips-gentoo.diff 13035
 MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07 61
-MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07-r1 61
-MD5 8153e3726c4dad50b53c76eaf32b4833 files/file-4.07-gentoo.diff 648
 MD5 9ab14ea35a2db2864bb6e92d1ca87f17 files/digest-file-4.08 61
 MD5 655e5c463709e244970b23b64aaf8bf7 files/digest-file-4.09 61
-MD5 2b50afc88e81450f52a964b98b7d0ef8 files/file-4.08-uclibc.patch 816
-MD5 2cd6110e84c85c183c7b8dcd0be814e7 files/ltconfig-uclibc.patch 1167
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4EJCHTu7gpaalycRAszcAJ0fqhd1KmUz9/Y6jJME+fzz1x1YvQCg2IIR
-cJZyvv+gQ9UAU7i/oMn3IGM=
-=CBpr
------END PGP SIGNATURE-----
+MD5 8f6cec8c0754678a2817139182637eac files/file-4.xx-mips-gentoo.diff 13035
