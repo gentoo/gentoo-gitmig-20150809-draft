@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.5 2004/07/23 11:10:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.6 2004/07/23 15:56:56 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mythtv nas network nls oggvorbis opengl oss rtc samba sdl sse svga tga theora truetype v4l v4l2 X xinerama xmms xvid"
+IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mythtv nas network nls oggvorbis opengl oss rtc samba sdl sse svga tga theora truetype v4l v4l2 X xinerama xmms xvid"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -57,8 +57,9 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	samba? ( >=net-fs/samba-2.2.8a )
 	sdl? ( media-libs/libsdl )
 	svga? ( media-libs/svgalib )
-	!ia64? ( theora? ( media-libs/libtheora )
-		live? ( >=media-plugins/live-2004.03.27 )
+	!ia64? ( 
+		theora? ( media-libs/libtheora )
+		live? ( =media-plugins/live-2004.03.27 )
 		)
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
@@ -151,15 +152,7 @@ src_compile() {
 	###############
 	myconf="${myconf} $(use_enable bidi fribidi)"
 	myconf="${myconf} $(use_enable cdparanoia)"
-	if use dvd; then
-		if use dvdread; then
-			myconf="${myconf} --enable-dvdread --disable-mpdvdkit"
-		else
-			myconf="${myconf} --disable-dvdread --enable-mpdvdkit"
-		fi
-	else
-			myconf="${myconf} --disable-dvdread --disable-mpdvdkit"
-	fi
+	myconf="${myconf} $(use_enable dvd mpdvdkit)"
 	myconf="${myconf} $(use_enable edl)"
 	myconf="${myconf} $(use_enable encode mencoder)"
 	myconf="${myconf} $(use_enable gtk gui) $(use_enable gtk x11) $(use_enable gtk xv) $(use_enable gtk vm)"

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.171 2004/07/23 09:56:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.172 2004/07/23 15:56:56 chriswhite Exp $
+
+  23 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r6.ebuild,
+  mplayer-1.0_pre5-r1.ebuild:
+  Fixes some strange issue with the .20 live plugins being pulled in, despite
+  .27 being coded in. Re-Removed dvdread stuff.
 
   23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mplayer-1.0_pre5-r1.ebuild:
@@ -13,6 +18,10 @@
   23 Jul 2004; Brian Harring <ferringb@gentoo.org> mplayer-1.0_pre4-r6.ebuild,
   mplayer-1.0_pre5-r1.ebuild, files/cachefill.patch:
   Slipping eradicators cachefill patch in, bug #55936
+
+  23 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r6.ebuild,
+  mplayer-1.0_pre5-r1.ebuild:
+  Fixed an ia64 dependancy error.
 
 *mplayer-1.0_pre5-r1 (23 Jul 2004)
 
