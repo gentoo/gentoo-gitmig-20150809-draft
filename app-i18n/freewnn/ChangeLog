@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.13 2004/06/24 21:45:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.14 2004/07/01 22:14:12 matsuu Exp $
+
+*freewnn-1.1.1_alpha20-r1 (02 Jul 2004)
+
+  02 Jul 2004; <matsuu@gentoo.org> +files/freewnn-1.1.1_alpha20-gentoo.diff,
+  +freewnn-1.1.1_alpha20-r1.ebuild:
+  Fixed compile issue. Bug#46021.
 
   23 May 2004; Mamoru KOMACHI <usata@gentoo.org> freewnn-1.1.1_alpha20.ebuild:
   Stable on ppc
