@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.3 2003/08/04 00:35:30 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.4 2003/08/04 01:01:56 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -23,9 +23,6 @@ EXPORT_FUNCTIONS pkg_preinst
 
 function webapp-apache-detect ()
 {
-	local domsg=
-	[ -n "$1" ] && domsg=1
-
 	APACHEVER=
 	has_version '=net-www/apache-1*' && APACHEVER=1
 	has_version '=net-www/apache-2*' && use apache2 && APACHEVER=2
@@ -33,8 +30,7 @@ function webapp-apache-detect ()
 
 	if [ "${APACHEVER}+" = "+" ]; then
 		# no apache version detected
-		eerror "I can't find a copy of Apache on your machine"
-		die 1
+		return 1
 	fi
 
 	APACHECONF="/etc/apache${APACHEVER}/conf/apache${APACHEVER}.conf"
@@ -43,15 +39,10 @@ function webapp-apache-detect ()
 
 # run the function, so we know which version of apache we are using
 
-function webapp-apache_pkg_preinst () {
-	webapp-apache-detect
+function webapp-detect () {
+	webapp-apache-detect || return 1
 	webapp-determine-installowner
 	webapp-determine-htdocsdir
-}
-
-function webapp_pkg_preinst ()
-{
-	webapp-apache_pkg_preinst
 }
 
 function webapp-determine-htdocsdir ()
@@ -69,5 +60,14 @@ function webapp-determine-installowner ()
 {
 	HTTPD_USER="apache"
 	HTTPD_GROUP="apache"
+}
+
+function webapp-pkg_setup ()
+{
+	if [ "$1" == "1" ]; then
+		msg="I couldn't find an installation of Apache"
+		eerror "${msg}"
+		die "${msg}"
+	fi
 }
 
