@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.46 2004/08/11 07:59:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.47 2004/08/16 22:56:43 solar Exp $
+
+*hdparm-5.6 (16 Aug 2004)
+
+  16 Aug 2004; <solar@gentoo.org> +hdparm-5.6.ebuild:
+  This release removed Major number restrictions in preparation for adding HDIO
+  ioctl support to Linux 2.6 SATA/SCsi drivers. There are other minor changes
+  and fixes.
 
   11 Aug 2004; Heinrich Wendel <lanius@gentoo.org> hdparm-5.5-r4.ebuild:
   fix installation of rc.d file, bug #60000
