@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/corefonts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.9 2004/07/27 19:57:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.10 2004/08/06 13:49:26 gustavoz Exp $
+
+  06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> corefonts-1-r1.ebuild:
+  Stable on sparc
 
   27 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; corefonts-1-r1.ebuild:
   stable on x86, since xorg-x11 is stable and lots of people want these.

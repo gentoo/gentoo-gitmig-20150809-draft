@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/aquafont
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.9 2004/08/03 16:58:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.10 2004/08/06 13:50:32 gustavoz Exp $
+
+  06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> aquafont-2.7-r2.ebuild:
+  Stable on sparc
 
   04 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> aquafont-2.7-r2.ebuild,
   aquafont-2.7.ebuild:
