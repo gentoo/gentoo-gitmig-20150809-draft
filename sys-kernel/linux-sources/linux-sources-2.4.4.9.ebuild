@@ -175,14 +175,19 @@ src_unpack() {
     cd ${S}
     #sometimes we have icky kernel symbols; this seems to get rid of them
     try make mrproper
-    if [ "${PN}" = "linux" ]
+
+    #linux-sources needs to be fully configured, too.  Not just linux
+    if [ "${PN}" != "linux-extras" ]
     then
 	#this is the configuration for the default kernel
 	try cp ${FILESDIR}/${KV}/config.bootcomp .config
 	try yes \"\" \| make oldconfig
 	echo "Ignore any errors from the yes command above."
 	try make include/linux/version.h
+	try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
+	try make symlinks
     fi
+    
     #fix silly permissions in tarball
     cd ${WORKDIR}
     chown -R 0.0 ${S}
@@ -193,20 +198,18 @@ src_unpack() {
 
 src_compile() {
 
-    if [ ! "${PN}" = "linux-sources" ] ; then
-    if [ $PN = "linux-extras" ] ; then
-        KS=/usr/src/linux
-    else
-        KS=${S}
-    fi
-	if [ "$PN" = "linux" ] ; then
-	    try make symlinks
-	fi
-	
-	if [ "`use lvm`" ]
+    if [ "${PN}" != "linux-sources" ]
 	then
-	    #LVM tools are included in the linux and linux-extras pakcages
-	    cd ${KS}/extras/LVM/${LVMV}
+    	if [ $PN = "linux-extras" ]
+		then
+        	KS=/usr/src/linux
+    	else
+        	KS=${S}
+    	fi
+		if [ "`use lvm`" ]
+		then
+			#LVM tools are included in the linux and linux-extras pakcages
+				cd ${KS}/extras/LVM/${LVMV}
 
 	    # This is needed for linux-extras
 	    if [ -f "Makefile" ] ; then
@@ -237,7 +240,6 @@ src_compile() {
 	
 	if [ "$PN" == "linux" ]
 	then
-	    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
 	    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
 		#LEX=\""flex -l"\" bzImage
 	    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
@@ -378,7 +380,9 @@ src_install() {
 		echo ">>> Copying sources..."
 		cp -ax ${S} ${D}/usr/src
 	fi
-	
+    fi	
+    if [ "$PN" != "linux-extras" ]
+    then
 	#don't overwrite existing .config if present
 	cd ${D}/usr/src/linux-${KV}
 	if [ -e .config ]
@@ -399,9 +403,3 @@ pkg_postinst() {
 	cp -a .config.eg .config
     fi
 }
-
-#pkg_postrm() {
-#
-#    rm -f ${ROOT}/usr/src/linux
-#    rm -rf ${ROOT}/usr/src/linux-${KV}
-#}
