@@ -1,0 +1,13 @@
+--- xine-ui-0.9.12/configure.in	Sun Jun 23 04:00:40 2002
++++ xine-ui-0.9.12/configure.in.new	Wed Jul 31 10:34:49 2002
+@@ -514,10 +514,6 @@
+ 		archopt_val=athlon ;;
+ 	    esac
+ 
+-	    if test x"$archopt_val" != x; then
+-		CFLAGS="$CFLAGS $sarchopt=$archopt_val"
+-		DEBUG_CFLAGS="$DEBUG_CFLAGS $sarchopt=$archopt_val"
+-	    fi
+ 	]
+ 	fi
+ 
