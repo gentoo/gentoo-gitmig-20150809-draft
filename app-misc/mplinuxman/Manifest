@@ -1,4 +1,14 @@
-MD5 3a7d8c3d7ff9d8aeb6e51da547cfce36 ChangeLog 798
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 55cd251e131186f09b5e394eced512a9 ChangeLog 902
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3c1e59b7c1ac848134d425c41619a638 mplinuxman-1.4.ebuild 1254
+MD5 57e2cf8bbaa3fbac0a4ad01042198d13 mplinuxman-1.4.ebuild 1258
 MD5 42127f98c4194df34f0925f654180090 files/digest-mplinuxman-1.4 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBizdfArHZZzCEUG0RAs+/AJ0TW4RVa937Siz0zkMiGVMRPuZC9ACfXEQK
+XeBqTCtoHeGJNIwxGHOAfo8=
+=lzt5
+-----END PGP SIGNATURE-----
