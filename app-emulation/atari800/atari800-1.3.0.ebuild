@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.3.0.ebuild,v 1.1 2003/06/25 04:22:03 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.3.0.ebuild,v 1.2 2003/06/27 06:08:24 msterret Exp $
 
 IUSE="sdl"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 # Haven't tested other architectures, but is reported to work on non-x86
 # platforms
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/x11
 	app-arch/unzip
@@ -22,7 +22,6 @@ DEPEND="virtual/x11
 
 RDEPEND="virtual/x11
 	sdl? ( >=media-libs/libsdl-1.2.0 )"
-
 
 # The configure script in 1.2.5 changed syntax, but the change wasn't
 # updated in the atari800.spec file as in the previous versions.
