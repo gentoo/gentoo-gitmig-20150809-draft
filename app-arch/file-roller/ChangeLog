@@ -1,7 +1,15 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.16 2002/10/27 13:55:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.17 2002/11/05 03:43:54 spider Exp $
 
+
+*file-roller-2.0.4 (04 Nov 2002)
+  
+  04 Nov 2002; Spider <spider@gentoo.org> file-roller-2.0.4.ebuild :
+  new stable release, removed SRC_URI as it is now avaiable on gnome.org. 
+  changed KEYWORDS accordingly
+  
+    
 *file-roller-2.1.2 (27 Oct 2002)
 
   27 Oct 2002; foser <foser@gentoo.org> file-roller-2.1.2.ebuild :
