@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/whatmask-1.2.ebuild,v 1.3 2004/07/01 22:10:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/whatmask-1.2.ebuild,v 1.4 2004/08/28 18:10:29 dholm Exp $
 
 IUSE=""
 DESCRIPTION="little C program to compute different subnet mask notations"
@@ -9,7 +9,7 @@ SRC_URI="http://downloads.laffeycomputer.com/current_builds/whatmask/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPEND="virtual/libc"
 
