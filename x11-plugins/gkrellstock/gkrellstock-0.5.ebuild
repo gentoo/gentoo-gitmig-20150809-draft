@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.5.ebuild,v 1.9 2004/06/24 22:59:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.5.ebuild,v 1.10 2004/07/09 23:44:54 slarti Exp $
 
 IUSE=""
 S=${WORKDIR}/${P/s/S}
@@ -14,7 +14,7 @@ DEPEND=">=app-admin/gkrellm-2*
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 sparc ppc ~amd64"
 
 src_compile() {
 	emake || die

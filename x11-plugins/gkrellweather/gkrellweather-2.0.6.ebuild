@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.6.ebuild,v 1.9 2004/06/24 23:00:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.6.ebuild,v 1.10 2004/07/09 23:50:16 slarti Exp $
 
 IUSE=""
 DESCRIPTION="GKrellM2 Plugin that monitors a METAR station and displays weather
@@ -10,7 +10,7 @@ HOMEPAGE="http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ~amd64"
 
 DEPEND="=app-admin/gkrellm-2*
 	>=sys-apps/sed-4.0.5
