@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2-r1.ebuild,v 1.8 2004/06/24 23:06:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2-r1.ebuild,v 1.9 2004/07/08 21:18:55 swegener Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.kvirc.net/kvirc/${MYPV}/source/${MYP}.tar.gz"
 LICENSE="kvirc"
 SLOT="3"
 KEYWORDS="x86 ~amd64"
-IUSE="kde esd ipv6 ssl debug"
+IUSE="kde esd oss ipv6 ssl debug"
 
 DEPEND="esd? ( media-sound/esound )
 	ssl? ( dev-libs/openssl )
