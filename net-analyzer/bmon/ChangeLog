@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.7 2004/06/24 21:57:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.8 2004/07/08 16:39:32 eldad Exp $
+
+  08 Jul 2004; Eldad Zack <eldad@gentoo.org> bmon-1.2.0.ebuild,
+  bmon-1.2.1.ebuild:
+  Added missing IUSE
 
   06 Feb 2004; Markus Nigbur <pyrania@gentoo.org> bmon-1.2.0.ebuild,
   bmon-1.2.1.ebuild:

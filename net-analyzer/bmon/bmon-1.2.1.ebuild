@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-1.2.1.ebuild,v 1.3 2004/06/24 21:57:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-1.2.1.ebuild,v 1.4 2004/07/08 16:39:32 eldad Exp $
 
 DESCRIPTION="bmon is an interface bandwidth monitor."
 HOMEPAGE="http://trash.net/~reeler/bmon"
@@ -10,8 +10,6 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc"
 IUSE=""
 DEPEND=">=sys-libs/ncurses-5.3-r2" # not sure but
-#RDEPEND=""
-S=${WORKDIR}/${P}
 
 src_install() {
 	einstall || die
