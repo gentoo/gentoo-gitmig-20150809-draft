@@ -1,4 +1,14 @@
-MD5 9c271374010324bda3826b5255977a75 transcalc-0.14.ebuild 653
-MD5 9c3c800c8e4ac259147cfd4988757685 ChangeLog 438
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 04da8562997e2c20dd870edfc5430670 transcalc-0.14.ebuild 661
+MD5 79782345ce23a82e2fc3c39ce47ac374 ChangeLog 641
 MD5 17a7ac27d0c2688f1be20dfd8f26ad88 metadata.xml 1111
 MD5 8fd1a35e8693e026690a3c8cc57c1104 files/digest-transcalc-0.14 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHdgI1lqEGTUzyQRAvApAKCw2h8ZbuA10Zcrht+w5vr9wFD+jwCfYFXu
+Ga3eou8hHYxbLFYbw4Etwm8=
+=SHSx
+-----END PGP SIGNATURE-----

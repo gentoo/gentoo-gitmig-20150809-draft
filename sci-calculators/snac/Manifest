@@ -1,4 +1,14 @@
-MD5 0ab10f740b6d6df76ceb8856476415cd snac-0.3.ebuild 810
-MD5 e7426d5856a4b60358dde754fd63080e ChangeLog 764
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8739ace1b51cf5b5c3673d5c9902a7d0 snac-0.3.ebuild 818
+MD5 01a97234cf0311a6a478b260bbbb14ac ChangeLog 945
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 a5ac9b4ba2b26e703d14cd2400782249 files/digest-snac-0.3 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHcNI1lqEGTUzyQRAskPAKDVAUadxIDf+zEoSvgviYuKOtRyrACfWRPr
+ylH7S2UgaxFiGwnfPuRqACA=
+=54HI
+-----END PGP SIGNATURE-----

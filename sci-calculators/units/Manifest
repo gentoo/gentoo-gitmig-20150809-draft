@@ -1,6 +1,16 @@
-MD5 996c6f831d28ef0abb3d85796f3bab57 units-1.80-r1.ebuild 871
-MD5 648b67c8ccbcaeb50f9fcc247e87b5e5 ChangeLog 2082
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f32388f3e29d04d550f8142241fea670 units-1.80-r1.ebuild 879
+MD5 f1b2ec0e9220fe7b7e467e705122353c ChangeLog 2335
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 d8b827b670ceb40f2a8806b195aab0b8 files/digest-units-1.80-r1 62
 MD5 ce4f8d039c68178019ae4759d4735512 files/astronomicalunit.patch 583
 MD5 454866fde7edeaf67e6e6db4956c7953 files/remove-script.patch 460
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHeBI1lqEGTUzyQRAleiAKC5hW9IYxh5rvuypBrX318Uzm1/YwCfebKW
+mm4nDWcURVIC0HOiOFzeAAk=
+=fEvb
+-----END PGP SIGNATURE-----

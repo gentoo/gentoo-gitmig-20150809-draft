@@ -1,4 +1,14 @@
-MD5 0f822b3305e989b20f356c481a2dd848 ChangeLog 960
-MD5 fc52aafae12880ca78769d53eb4e3b74 calcoo-1.3.15.ebuild 649
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 242cedad3b0b0f2eb313b10bea9e6b9e calcoo-1.3.15.ebuild 660
+MD5 84581146c73630ea0f6de133afcd400d ChangeLog 1158
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 8be06989f127dc928ca35177dfef05a5 files/digest-calcoo-1.3.15 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHWmI1lqEGTUzyQRAuJLAJ9qlHSiAYmjnj3ZDlugkk2FN7aoNACgjwVf
++6MxTgzIfiVa7wqh4JxXffU=
+=N99E
+-----END PGP SIGNATURE-----
