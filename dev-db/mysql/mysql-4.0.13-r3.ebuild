@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r3.ebuild,v 1.4 2003/07/03 08:26:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r3.ebuild,v 1.5 2003/07/12 11:34:57 robbat2 Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -28,8 +28,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	perl? ( dev-lang/perl )
 	>=sys-libs/zlib-1.1.3
 	sys-apps/procps
-	>=sys-apps/sed-4
-	app-admin/gentoolkit"
+	>=sys-apps/sed-4"
 PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
 
 warning() {
@@ -37,8 +36,7 @@ warning() {
 	ewarn "If you're upgrading from MySQL-3.x, you must recompile the other"
 	ewarn "packages on your system that link with libmysqlclient after the"
 	ewarn "upgrade completes.  To obtain such a list of packages for your"
-	ewarn "system, you may use the: ${FILESDIR}/rebuilder.sh"
-	ewarn "script."
+	ewarn "system, you may use 'revdep-rebuild' from app-admin/gentoolkit."
 	ewarn
 	sleep 5
 }

@@ -5,8 +5,8 @@ MD5 0819a9eff62aada70d80a774ffa440b1 mysql-4.0.13-r2.ebuild 6504
 MD5 de7d782cf333be7d5c70b7231dca5d8b mysql-3.23.57.ebuild 6627
 MD5 19a3358517a96512485e9303036706ad mysql-4.0.13.ebuild 6683
 MD5 19b75b0d4e2168fa0a84b8bb814e1601 mysql-4.0.13-r1.ebuild 6517
-MD5 5730d63cc6482e96dd9bd8799e070e6c ChangeLog 9266
-MD5 6c82bcd5077c7c8994d6298e772eaab6 mysql-4.0.13-r3.ebuild 7182
+MD5 913157495e951818095056d7b7d85753 ChangeLog 9413
+MD5 771aa0a5b0ece5a2a0308bb6e94e38d0 mysql-4.0.13-r3.ebuild 7182
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
 MD5 707d18c98dd9d86533b53330a2daadd2 files/mysql-4.0.rc6 951
