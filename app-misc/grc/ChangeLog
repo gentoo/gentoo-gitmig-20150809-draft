@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/grc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/ChangeLog,v 1.1 2002/07/19 14:44:58 g2boojum Exp $
+
+*grc-1.0.2 (19 Jul 2002)
+
+  19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  new ebuild; thanks to Eivind Tagseth
