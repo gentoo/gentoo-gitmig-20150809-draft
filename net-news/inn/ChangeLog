@@ -1,8 +1,14 @@
 # ChangeLog for net-news/inn
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.1 2002/06/13 17:17:53 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.2 2002/08/27 04:10:58 seemant Exp $
 
 *inn-2.3.3 (13 Jun 2002)
+
+  26 Aug 2002; Seemant Kulleen <seemant@gentoo.org> inn-2.3.3.ebuild :
+
+  The compile process does not like parallel make (emake).  Thanks to:
+  psi-jack@myrealbox.com (Eric Renfro) in bug #7021 for finding and
+  reporting.
 
   13 Jun 2002; Preston A. Elder <prez@gentoo.org> inn-2.3.3.ebuild,
   files/digest-inn-2.3.3, files/innd, ChangeLog :

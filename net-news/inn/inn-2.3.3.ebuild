@@ -39,7 +39,7 @@ src_compile() {
 
 	OLD_P=${P}
 	unset P
-	emake || die
+	make || die
 	P=${OLD_P}
 }
 
