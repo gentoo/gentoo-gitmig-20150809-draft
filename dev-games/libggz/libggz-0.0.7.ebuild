@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.7.ebuild,v 1.5 2004/06/24 22:12:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.7.ebuild,v 1.6 2004/06/29 15:05:20 vapier Exp $
 
 DESCRIPTION="The GGZ library, used by GGZ Gameing Zone"
 HOMEPAGE="http://ggz.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="crypt ssl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	crypt? ( >=dev-libs/libgcrypt-1.1.8 )
 	ssl? ( dev-libs/openssl )"
 

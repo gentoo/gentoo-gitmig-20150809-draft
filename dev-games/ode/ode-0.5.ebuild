@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5.ebuild,v 1.2 2004/06/24 22:13:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5.ebuild,v 1.3 2004/06/29 15:06:59 vapier Exp $
 
 DESCRIPTION="Open Dynamics Engine SDK"
 HOMEPAGE="http://ode.org"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	virtual/glu
 	virtual/opengl"

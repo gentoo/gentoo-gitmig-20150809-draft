@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation, 2004 Richard Garand <richard@garandnet.net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68.ebuild,v 1.9 2004/06/24 22:11:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68.ebuild,v 1.10 2004/06/29 15:04:47 vapier Exp $
 
 inherit gcc
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc hppa amd64"
 IUSE="doc"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -33,13 +33,13 @@ src_unpack() {
 		|| die "sed src/makefile.linux failed"
 }
 
-src_compile () {
+src_compile() {
 	emake \
 		CC="$(gcc-getCC)" \
 		OPTFLAGS="${CFLAGS} -D_GNU_SOURCE -D_REENTRANT" || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	local reallib
 
 	dodir /usr/{include,lib}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.12 2004/06/24 22:10:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.13 2004/06/29 15:03:50 vapier Exp $
 
 inherit cvs
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/crystal"
@@ -9,12 +9,13 @@ ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
 S=${WORKDIR}/${ECVS_MODULE}
 
 DESCRIPTION="portable 3D Game Development Kit written in C++"
-SRC_URI=""
 HOMEPAGE="http://crystal.sourceforge.net/"
+SRC_URI=""
 
-SLOT="0"
 LICENSE="LGPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 
 RDEPEND=">=media-libs/libpng-1.2.1
 	>=media-libs/jpeg-6b

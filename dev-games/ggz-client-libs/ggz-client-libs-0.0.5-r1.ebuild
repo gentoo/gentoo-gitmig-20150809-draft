@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.5-r1.ebuild,v 1.8 2004/06/24 22:10:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.5-r1.ebuild,v 1.9 2004/06/29 15:04:11 vapier Exp $
 
 inherit eutils
 
@@ -17,17 +17,12 @@ DEPEND=">=dev-games/libggz-0.0.5
 	dev-libs/expat"
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/ggz-client-libs-0.0.5-gcc32.diff
-}
-
-src_compile() {
-	econf || die "./configure failed"
-	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog HACKING NEWS Quick* README* TODO
+	dodoc AUTHORS ChangeLog HACKING NEWS Quick* README* TODO
 }

@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.7.0.ebuild,v 1.2 2004/06/24 22:13:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.7.0.ebuild,v 1.3 2004/06/29 15:06:43 vapier Exp $
 
 DESCRIPTION="Various development tools for NeoEngine"
-SRC_URI="mirror://sourceforge/neoengine/${P}.tar.bz2"
 HOMEPAGE="http://www.neoengine.org/"
+SRC_URI="mirror://sourceforge/neoengine/${P}.tar.bz2"
+
 LICENSE="MPL-1.1"
-DEPEND=">=dev-games/neoengine-0.7.0"
-KEYWORDS="~ppc ~x86"
 SLOT="0"
+KEYWORDS="~ppc ~x86"
 IUSE=""
-RESTRICT="nomirror"
+
+DEPEND=">=dev-games/neoengine-0.7.0"
 
 src_unpack() {
 	unpack ${A}
@@ -23,8 +24,7 @@ src_unpack() {
 	done
 }
 
-src_install () {
+src_install() {
 	einstall || die "Installation failed"
-
-	dodoc AUTHORS ChangeLog COPYING INSTALL README TODO
+	dodoc AUTHORS ChangeLog INSTALL README TODO
 }
