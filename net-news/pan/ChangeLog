@@ -1,6 +1,11 @@
 # ChangeLog for net-news/pan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.40 2004/07/10 21:28:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.41 2004/07/15 00:26:15 swegener Exp $
+
+*pan-0.14.2.91 (15 Jul 2004)
+
+  15 Jul 2004; Sven Wegener <swegener@gentoo.org> +pan-0.14.2.91.ebuild:
+  Version bump, contains fixes for amd64 and various other issues.
 
   10 Jul 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Added package to the net-news herd.
