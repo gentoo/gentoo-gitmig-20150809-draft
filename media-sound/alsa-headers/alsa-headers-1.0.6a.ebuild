@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.6a.ebuild,v 1.6 2004/10/08 19:07:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.6a.ebuild,v 1.7 2004/11/04 01:45:18 geoman Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2 LGPL-2.1"
 DEPEND=""
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc amd64 ~alpha ia64 ~ppc64 hppa"
+KEYWORDS="x86 ~ppc ~sparc amd64 ~alpha ia64 ~ppc64 hppa ~mips"
 
 SRC_URI="mirror://alsaproject/driver/${MY_P}.tar.bz2"
 
