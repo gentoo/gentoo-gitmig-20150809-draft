@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.38 2003/12/10 23:59:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.39 2003/12/14 03:23:57 gmsoft Exp $
+
+  14 Dec 2003; root <root@gentoo.org> ncurses-5.3-r2.ebuild:
+  Marked stable on hppa.
 
   10 Dec 2003; Aron Griffis <agriffis@gentoo.org> ncurses-5.3-r4.ebuild:
   Use the brand-spanking-new 64-bit eclass for -fPIC
