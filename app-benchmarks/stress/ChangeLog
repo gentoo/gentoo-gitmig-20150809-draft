@@ -1,9 +1,9 @@
-# ChangeLog for app-benchmark/stress
+# ChangeLog for app-benchmarks/stress
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.1 2002/12/08 17:58:15 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.2 2002/12/17 15:46:56 vapier Exp $
 
-*stress-0.17pre7 (08 DEC 2002))
+*stress-0.17pre7 (08 Dec 2002)
 
-  08 DEC 2002; Joshua Brindle <method@gentoo.org> stress-0.17pre7.ebuild:
+  08 Dec 2002; Joshua Brindle <method@gentoo.org> stress-0.17pre7.ebuild:
   Initial import.  Ebuild submitted by Donald Giuliano <guido@ou.edu> 
   free, so the best we can hope (and expect!) to receive is credit.
