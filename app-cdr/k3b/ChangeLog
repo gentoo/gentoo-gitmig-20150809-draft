@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.25 2003/10/31 17:37:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.26 2003/11/02 02:11:30 caleb Exp $
+
+  01 Nov 2003; Caleb Tennis <caleb@gentoo.org> k3b-0.10.1.ebuild:
+  Add in Azarah's patch for gcc 2.95 compatibility
 
 *k3b-0.10.1 (31 Oct 2003)
 

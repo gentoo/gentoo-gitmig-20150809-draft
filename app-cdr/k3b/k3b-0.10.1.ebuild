@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.1.ebuild,v 1.1 2003/10/31 17:37:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.1.ebuild,v 1.2 2003/11/02 02:11:30 caleb Exp $
 
 inherit kde
 need-kde 3.1
@@ -47,6 +47,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	base_src_unpack unpack
+	epatch ${FILESDIR}/${P}-include-limits.patch
 }
 
 src_compile() {
