@@ -1,49 +1,42 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.34.ebuild,v 1.6 2002/10/05 05:39:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.75.ebuild,v 1.1 2002/10/20 09:05:26 azarah Exp $
 
 IUSE="nls static build"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="A yacc-compatible parser generator"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/bison/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/bison/bison.html"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
-DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
-RDEPEND="virtual/glibc"
+DEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
 
-	local myconf
-	if [ -z "`use nls`" ]
-	then
-		myconf="--disable-nls"
-	fi
+	local myconf=""
+	
+	use nls || myconf="--disable-nls"
 
-	./configure --prefix=/usr \
-		--datadir=/usr/share \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--host=${CHOST} \
-		${myconf} || die
+	econf ${myconf} || die
 
 	if [ -z "`use static`" ]
 	then
-		emake ${MAKEOPTS} || die
+		emake || die
 	else
-		emake ${MAKEOPTS} LDFLAGS=-static || die
+		emake LDFLAGS="-static" || die
 	fi
 }
 
 src_install() {                               
 
-	make prefix=${D}/usr \
-		datadir=${D}/usr/share \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
+	make DESTDIR=${D} \
+		datadir=/usr/share \
+		mandir=/usr/share/man \
+		infodir=/usr/share/info \
 		install || die
 
 	if [ -z "`use build`" ]
