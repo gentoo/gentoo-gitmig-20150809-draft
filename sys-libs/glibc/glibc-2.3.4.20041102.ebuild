@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.42 2005/02/03 05:35:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.43 2005/02/06 13:23:27 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -722,6 +722,12 @@ src_compile() {
 	unset MLTEST
 
 	ABI=${ABI:=default}
+
+	# rsync got an updated ebuild before an updated multilib.eclass
+	# and caused bug #80591... this might help someone...
+	if [ -d /usr/include/gentoo-multilib/default ]; then
+		export CPATH=/usr/include/gentoo-multilib/default
+	fi
 
 	# do the linuxthreads build unless we're using nptlonly
 	if use !nptlonly ; then
