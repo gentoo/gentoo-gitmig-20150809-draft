@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-2.3.1.ebuild,v 1.1 2004/05/14 21:01:57 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-2.3.1.ebuild,v 1.2 2004/06/06 22:24:58 agriffis Exp $
 
 IUSE="doc gnome kde"
 DESCRIPTION="A UML CASE-Tool powered by Java"
@@ -34,19 +34,19 @@ src_install() {
 	into /opt
 	dobin ${PN}
 
-	if [ `use doc` ] ; then
+	if use doc ; then
 		dohtml -r docs/*
 		insinto /usr/share/doc/${P}
 		doins docs/PoseidonUsersGuide.pdf
 	fi
 
-	if [ `use gnome || use kde` ] ; then
+	if use gnome || use kde; then
 		einfo "Adding icons..."
 		insinto /opt/${PN}/lib
 		doins bin/poseidon.ico
 	fi
 
-	if [ `use gnome` ] ; then
+	if use gnome ; then
 
 		einfo "Adding GNOME support..."
 		echo "[Desktop Entry]" > ${PN}.desktop
@@ -61,7 +61,7 @@ src_install() {
 		doins ${PN}.desktop
 	fi
 
-	if [ `use kde` ] ; then
+	if use kde ; then
 		einfo "Adding KDE support..."
 		echo "Name=PoseidonCE" > ${PN}-kde.desktop
 		echo "Exec=/opt/bin/${PN}" >> ${PN}-kde.desktop
