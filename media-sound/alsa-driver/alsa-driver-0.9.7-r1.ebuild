@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.7.ebuild,v 1.2 2003/09/27 15:20:39 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.7-r1.ebuild,v 1.1 2003/10/02 03:33:07 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -28,8 +28,9 @@ PROVIDE="virtual/alsa"
 SLOT="0.9"
 KEYWORDS="~x86 ~ppc"
 
-SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
-S=${WORKDIR}/${P}
+ALSA_REVISION="a"
+SRC_URI="mirror://alsaproject/driver/${P}${ALSA_REVISION}.tar.bz2"
+S=${WORKDIR}/${P}${ALSA_REVISION}
 
 src_unpack() {
 	unpack ${A}
