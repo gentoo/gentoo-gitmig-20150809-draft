@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.5 2003/11/03 20:57:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.6 2003/11/03 22:17:40 drobbins Exp $
 
 inherit flag-o-matic eutils python
 
-IUSE="ncurses readline tcltk berkdb build doc ssl"
+IUSE="ncurses gdbm readline tcltk berkdb build doc ssl"
 
 PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
@@ -16,7 +16,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tgz"
 
 HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64"
+KEYWORDS="~amd64 x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64"
 
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3
@@ -24,7 +24,7 @@ DEPEND="virtual/glibc
 				ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
 				berkdb? ( >=sys-libs/db-3 )
 				dev-libs/expat
-				sys-libs/gdbm
+				gdbm? ( sys-libs/gdbm )
 				ssl? ( dev-libs/openssl )
 				doc? ( =dev-python/python-docs-${PV}* )
 	)"
@@ -49,9 +49,11 @@ src_unpack() {
 src_configure() {
 	# disable extraneous modules with extra dependencies
 	if [ -n "`use build`" ]; then
-		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _socket _curses _curses_panel _tkinter"
+		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _curses _curses_panel _tkinter"
 		export PYTHON_DISABLE_SSL=1
 	else
+		use gdbm \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} gdbm"
 		use berkdb \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
 		use readline \
