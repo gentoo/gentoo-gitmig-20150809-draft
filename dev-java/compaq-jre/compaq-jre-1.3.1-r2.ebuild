@@ -1,34 +1,34 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r2.ebuild,v 1.1 2004/01/13 03:41:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r2.ebuild,v 1.2 2004/01/13 03:47:59 agriffis Exp $
 
 IUSE="doc"
 
 inherit java fixheadtails
 
-S=${WORKDIR}/jre1.3.1
-SRC_URI="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/jre-1.3.1-1-linux-alpha.rpm"
+S=${WORKDIR}/jre${PV}
+SRC_URI="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/jre-${PV}-1-linux-alpha.rpm"
 HOMEPAGE="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/"
-DESCRIPTION="Compaq Java Development Kit 1.3.1 for Alpha/Linux/GNU"
+DESCRIPTION="Compaq Java Development Kit ${PV} for Alpha/Linux/GNU"
 DEPEND="virtual/glibc
 	app-arch/rpm2targz
 	dev-libs/libots
 	dev-libs/libcpml
 	>=dev-java/java-config-0.2.5
 	>=x11-libs/openmotif-2.1.30-r1
-	doc? ( ~dev-java/java-sdk-docs-1.3.1 )"
+	doc? ( ~dev-java/java-sdk-docs-${PV} )"
 RDEPEND="$DEPEND"
-PROVIDE="virtual/jre-1.3.1
+PROVIDE="virtual/jre-${PV}
 	virtual/java-scheme-2"
 LICENSE="compaq-sdla"
 SLOT="1.3"
 KEYWORDS="-* alpha"
 
 src_unpack() {
-	rpm2targz ${DISTDIR}/jre-1.3.1-1-linux-alpha.rpm
-	tar zxf jre-1.3.1-1-linux-alpha.tar.gz >& /dev/null
-	mv usr/java/jre1.3.1 .
-	ht_fix_file jre1.3.1/bin/.java_wrapper
+	rpm2targz ${DISTDIR}/jre-${PV}-1-linux-alpha.rpm
+	tar zxf jre-${PV}-1-linux-alpha.tar.gz >& /dev/null
+	mv usr/java/jre${PV} .
+	ht_fix_file jre${PV}/bin/.java_wrapper
 }
 
 src_install () {
