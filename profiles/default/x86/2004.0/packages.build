@@ -1,33 +1,7 @@
 # Copyright 2001-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/x86/2004.0/packages.build,v 1.2 2004/03/18 00:16:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/x86/2004.0/packages.build,v 1.3 2004/03/18 01:15:28 seemant Exp $
 
-app-arch/bzip2
-app-arch/gzip
-app-arch/tar
-app-editors/nano
-app-shells/bash
-dev-lang/python
-sys-apps/baselayout
-sys-apps/coreutils
-sys-apps/debianutils
-sys-apps/diffutils
-sys-apps/file
-sys-apps/findutils
-sys-apps/gawk
-sys-apps/grep
-sys-apps/less
-sys-apps/net-tools
-sys-apps/portage
-sys-apps/sed
-sys-apps/texinfo
-sys-devel/binutils
-sys-devel/bison
-sys-devel/flex
-sys-devel/gettext
-sys-devel/gcc
-sys-devel/make
-sys-devel/patch
-sys-libs/glibc
-net-misc/rsync
-net-misc/wget
+# This file describes the packages needed to build a stage 1 based on this
+# profile
+
