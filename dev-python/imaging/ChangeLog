@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/imaging
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.4 2004/09/14 07:19:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.5 2004/10/03 23:18:58 kloeri Exp $
+
+  04 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  +files/imaging-1.1.4-ft-2.1.9.patch, imaging-1.1.4.ebuild:
+  Fix bug 66040.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> imaging-1.1.4.ebuild:
   Stable amd64

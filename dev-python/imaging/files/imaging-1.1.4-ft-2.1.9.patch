@@ -1,0 +1,10 @@
+--- work/Imaging-1.1.4/_imagingft.c	2003-04-22 18:11:25.000000000 +0200
++++ work/Imaging-1.1.4/_imagingft.c.new	2004-10-01 18:30:05.990905256 +0200
+@@ -15,6 +15,7 @@
+ #include "Python.h"
+ #include "Imaging.h"
+ 
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ 
+ #if PY_VERSION_HEX < 0x01060000

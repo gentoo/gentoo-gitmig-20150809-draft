@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.4.ebuild,v 1.3 2004/09/14 07:19:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.4.ebuild,v 1.4 2004/10/03 23:18:58 kloeri Exp $
 
 inherit distutils eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-setup.py.patch
 	epatch ${FILESDIR}/${P}-fPIC.patch
+	epatch ${FILESDIR}/${P}-ft-2.1.9.patch
 }
 
 src_compile() {
