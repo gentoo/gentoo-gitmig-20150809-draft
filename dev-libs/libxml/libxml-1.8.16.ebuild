@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.16.ebuild,v 1.1 2001/10/08 08:26:38 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.16.ebuild,v 1.2 2001/11/02 15:47:41 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libxml"
@@ -29,7 +29,9 @@ src_install() {
 	     sysconfdir=${D}/etc					\
 	     localstatedir=${D}/var/lib					\
 	     install || die
-
+	# This link must be fixed
+	rm ${D}/usr/include/gnome-xml/libxml
+	dosym /usr/include/gnome-xml /usr/include/gnome-xml/libxml
 	dodoc AUTHORS COPYING* ChangeLog NEWS README
 }
 
