@@ -1,19 +1,19 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.42 2003/12/02 19:41:26 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.43 2003/12/02 21:49:05 plasmaroo Exp $
 
 *gentoo-sources-2.4.22-r1 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
   gentoo-sources-2.4.20-r9.ebuild, gentoo-sources-2.4.22-r1.ebuild,
   gentoo-sources-2.4.22.ebuild:
-  version bump for do_brk vuln
+  Version bump for the recent do_brk() vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   gentoo-sources-2.4.19-r10.ebuild, gentoo-sources-2.4.20-r5.ebuild,
   gentoo-sources-2.4.20-r6.ebuild, gentoo-sources-2.4.20-r7.ebuild,
   gentoo-sources-2.4.20-r8.ebuild, gentoo-sources-2.4.22.ebuild:
-  fix do_brk vuln
+  Added a fix for the recent do_brk() vulnerability.
 
 *gentoo-sources-2.4.22 (01 Dec 2003)
 
