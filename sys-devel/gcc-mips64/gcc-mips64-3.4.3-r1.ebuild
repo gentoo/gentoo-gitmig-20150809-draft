@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.3-r1.ebuild,v 1.1 2005/01/09 19:14:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.3-r1.ebuild,v 1.2 2005/02/06 19:15:38 kumba Exp $
 
 
 # Variables 
@@ -22,7 +22,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${TMP_P}/${TMP_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~mips"
+KEYWORDS="mips"
 
 DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.7
