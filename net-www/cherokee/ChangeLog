@@ -1,6 +1,11 @@
 # ChangeLog for net-www/cherokee
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.9 2003/12/06 18:53:51 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.10 2004/02/26 00:04:31 bass Exp $
+
+*cherokee-0.4.10 (26 Feb 2004)
+
+  26 Feb 2004; <bass@gentoo.org> cherokee-0.4.10.ebuild:
+  Bumped version. Changed Url.
 
   06 Dec 2003; <spider@gentoo.org> cherokee-0.4.5.ebuild:
   Fixing the badly broken gnome deps
