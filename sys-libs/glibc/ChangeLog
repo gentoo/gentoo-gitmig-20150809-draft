@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.156 2004/05/27 12:53:39 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.157 2004/05/28 02:29:32 lv Exp $
+
+*glibc-2.3.3_pre20040527 (27 May 2004)
+
+  27 May 2004; Travis Tilley <lv@gentoo.org> +glibc-2.3.3_pre20040527.ebuild:
+  update snapshot
 
   27 May 2004; Travis Tilley <lv@gentoo.org>
   glibc-2.3.3_pre20040420-r1.ebuild:
