@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.35 2003/07/30 18:47:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.36 2003/08/20 15:13:54 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -29,7 +29,7 @@ if [ ${PN} != vim-core ]; then
 	fi
 
 	if [ ${PN} = vim ]; then
-		IUSE="$IUSE vim-with-x"
+		IUSE="$IUSE vim-with-x minimal"
 		newdepend "vim-with-x? ( virtual/x11 )"
 	elif [ ${PN} = gvim ]; then
 		IUSE="$IUSE gnome gtk gtk2 motif"
@@ -145,7 +145,7 @@ src_compile() {
 		addwrite $file
 	done
 
-	if [ ${PN} = vim-core ]; then
+	if [ ${PN} = vim-core ] || ( [ ${PN} = vim ] && use minimal ); then
 		myconf="--with-features=tiny \
 			--enable-gui=no \
 			--without-x \
@@ -188,7 +188,11 @@ src_compile() {
 		fi
 	fi
 
-	myconf="${myconf} `use_enable nls`"
+	if [ ${PN} = vim ] && use minimal; then
+		myconf="${myconf} --disable-nls --disable-multibyte"
+	else
+		myconf="${myconf} `use_enable nls`"
+	fi
 
 	# Note: If USE=gpm, then ncurses will still be required
 	use ncurses \
