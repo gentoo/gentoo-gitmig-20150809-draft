@@ -1,5 +1,15 @@
-MD5 e12e871388dae5471e069432f53e311d ChangeLog 1048
-MD5 0993d95c62f38a4ce83f3aa2a21265e2 ed2k_hash-0.4.0.ebuild 673
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ab5d310f7f604d1464098b4647d0113f ed2k_hash-0.4.0.ebuild 678
+MD5 51788e20c5e4a4f2268ed65dcc7d9a69 ChangeLog 1182
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 6a36cd5e707bd0c09e7d8129e2f03c9e files/ed2k_64bit.patch 537
 MD5 9362f41d0eead52766959dfcfe40dedd files/digest-ed2k_hash-0.4.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm+B9cAgAdbxYsnERAnjoAJ9GEKIy/7cSnro8TQYPWs/QukFw7gCgg0pp
+c/drJAnqnj9SgKRaTolsQNw=
+=4PcQ
+-----END PGP SIGNATURE-----

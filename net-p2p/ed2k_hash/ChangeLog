@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ed2k_hash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.8 2004/09/03 00:29:22 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.9 2004/11/17 23:36:17 squinky86 Exp $
+
+  17 Nov 2004; Jon Hood <squinky86@gentoo.org> ed2k_hash-0.4.0.ebuild:
+  Move "inherit eutils" to front, #71476, thanks SpanKY.
 
   02 Sep 2004; Malcolm Lashley <malc@gentoo.org> ed2k_hash-0.4.0.ebuild:
   Fixed hashing on 64bit (amd64) and keyworded - closes bug #62587
