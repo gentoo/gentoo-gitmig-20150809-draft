@@ -1,6 +1,6 @@
-# Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/e1000-5.1.11.ebuild,v 1.1 2003/06/25 22:03:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/e1000-5.1.11.ebuild,v 1.2 2003/09/29 21:04:11 mholzer Exp $
 
 DESCRIPTION="Kernel driver for Intel Pro/1000 ethernet adapters."
 HOMEPAGE="http://support.intel.com/support/network/adapter/1000/index.htm"
