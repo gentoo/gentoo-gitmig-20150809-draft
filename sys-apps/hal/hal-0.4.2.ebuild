@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.2.ebuild,v 1.1 2004/12/02 21:35:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.2.ebuild,v 1.2 2004/12/02 21:45:07 foser Exp $
 
 inherit eutils python
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64"
 IUSE="debug pcmcia"
 
-RDEPEND=">=dev-libs/glib-2.2.2
+RDEPEND=">=dev-libs/glib-2.4
 	>=sys-apps/dbus-0.22-r1
 	dev-libs/expat
 	sys-fs/udev
