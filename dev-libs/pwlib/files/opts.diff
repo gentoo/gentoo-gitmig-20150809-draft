@@ -1,0 +1,21 @@
+diff -urN pwlib/make/unix.mak pwlib-modified/make/unix.mak
+--- pwlib/make/unix.mak	Thu Jun 20 00:49:04 2002
++++ pwlib-modified/make/unix.mak	Tue Jul 23 00:56:39 2002
+@@ -636,7 +636,7 @@
+ STDCCFLAGS	+= -fomit-frame-pointer -fno-strict-aliasing -fno-common -pipe -mpreferred-stack-boundary=2 -march=i686 -malign-functions=0 
+ STDCCFLAGS      += -malign-jumps=0 -malign-loops=0
+ else
+-STDCCFLAGS	+= -mcpu=$(CPUTYPE)
++STDCCFLAGS	+=
+ endif
+ endif
+ endif
+@@ -1201,7 +1201,7 @@
+ 
+ else
+ 
+-OPTCCFLAGS	+= -O3 -DNDEBUG
++OPTCCFLAGS	+= -DNDEBUG
+ #OPTCCFLAGS	+= -DP_USE_INLINES=1
+ #OPTCCFLAGS	+= -fconserve-space
+ ifneq ($(OSTYPE),Carbon)
