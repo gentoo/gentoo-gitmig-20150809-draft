@@ -1,10 +1,12 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.58 2002/12/04 19:19:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.59 2002/12/04 20:53:31 azarah Exp $
 
   04 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.ebuild :
 
   Also add Xft2.0 to pango-1.1 check, possibly fixing bug #11576.
+
+  Add inherit flag-o-matic to 1.0-r3 and 1.1-r1, closing bug #11584.
 
   02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.ebuild :
 

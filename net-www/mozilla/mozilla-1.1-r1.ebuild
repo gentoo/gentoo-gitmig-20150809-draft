@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.13 2002/12/04 20:06:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.14 2002/12/04 20:53:31 azarah Exp $
 
 IUSE="moznomail java mozp3p crypt ldap gtk2 mozinterfaceinfo ssl mozaccess mozxmlterm mozctl gnome mozsvg"
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
-inherit makeedit nsplugins
+inherit flag-o-matic makeedit nsplugins
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
