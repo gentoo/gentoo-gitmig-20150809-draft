@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.6.0.ebuild,v 1.11 2004/04/12 18:19:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.6.0.ebuild,v 1.12 2004/06/07 06:18:29 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -11,6 +11,7 @@ SRC_URI="http://plib.sourceforge.net/dist/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 alpha hppa"
+IUSE=""
 
 DEPEND="sys-devel/autoconf"
 RDEPEND="virtual/x11
