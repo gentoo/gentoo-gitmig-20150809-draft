@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/oinkmaster
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.4 2004/06/24 22:14:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.5 2004/07/10 11:45:46 eldad Exp $
+
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> metadata.xml,
+  oinkmaster-0.9.ebuild, oinkmaster-1.0.ebuild:
+  Updated metadata, x86 stable, tidy
 
 *oinkmaster-1.0 (24 May 2004)
 

@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-0.9.ebuild,v 1.3 2004/06/24 22:14:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-0.9.ebuild,v 1.4 2004/07/10 11:45:46 eldad Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Rule management for SNORT"
 SRC_URI="mirror://sourceforge/oinkmaster/${P}.tar.gz"
 HOMEPAGE="http://oinkmaster.sf.net/"
@@ -18,7 +17,8 @@ RDEPEND="dev-lang/perl
 SLOT="0"
 LICENSE="BSD"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
