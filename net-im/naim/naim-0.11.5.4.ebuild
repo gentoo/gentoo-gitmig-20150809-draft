@@ -1,16 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.4.ebuild,v 1.3 2003/02/13 14:12:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.4.ebuild,v 1.4 2003/03/20 13:50:45 seemant Exp $
 
 VA="`echo ${PV}|sed -e 's:^\([0-9]*\)\..*$:\1:'`"
 VB="`echo ${PV}|sed -e 's:^[0-9]*\.\([0-9]*\)\..*$:\1:'`"
 FOLDER="${P}"
 SNAP=""
-SRC_URI="http://128.113.139.111/~n/.${PN}_archive/${VA}/${VB}/${FOLDER}${SNAP}.tar.gz"
+
+MY_P=${P/_/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="An ncurses AOL Instant Messenger."
+SRC_URI="http://128.113.139.111/~n/.${PN}_archive/${VA}/${VB}/${FOLDER}${SNAP}.tar.gz"
 HOMEPAGE="http://site.rpi-acm.org/info/naim/"
 #P="`echo ${P}|sed -e 's:_.*$::'`"
-P="${P/_/}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -19,14 +21,11 @@ KEYWORDS="~x86 ~ppc ~alpha"
 DEPEND=">=sys-libs/ncurses-5.2
 	virtual/glibc"
 
-S="${WORKDIR}/${P}"
 
 src_compile() {
-	einfo "${P}"
 
 	local myconf
 	myconf="--with-gnu-ld --enable-detach"
-	use pic		&&	myconf="${myconf} --with-pic"
 	use static	&&	myconf="${myconf} --enable-static=yes"
 
 	econf ${myconf}	|| die "configure failed"
