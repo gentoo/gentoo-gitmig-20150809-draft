@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3469 2005/01/09 18:45:44 ribosome Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3470 2005/01/09 20:29:15 humpback Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -146,10 +146,6 @@ net-wireless/waproamd
 # 2.4 is no more supported upstream.
 <sys-kernel/hppa-sources-2.6
 sys-kernel/hppa-dev-sources
-
-# <humpback@gentoo.org> (27 Dec 2004)
-# Masked until final release
->=net-im/psi-0.9.3_rc1
 
 # <jhuebel@gentoo.org> (26 Dec 2004)
 # p.masked 5.0 beta, if you want this, then you'll have to
