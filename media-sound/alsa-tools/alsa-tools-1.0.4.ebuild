@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.3.ebuild,v 1.4 2004/04/04 19:11:05 eradicator Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.4.ebuild,v 1.1 2004/04/04 19:11:05 eradicator Exp $
 
 IUSE=""
 
@@ -15,11 +13,11 @@ SRC_URI="mirror://alsaproject/tools/${P}.tar.bz2"
 RESTRICT="nomirror"
 
 SLOT="0.9"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 S=${WORKDIR}/${MY_P}
 
-DEPEND=">=media-libs/alsa-lib-1.0.3
+DEPEND=">=media-libs/alsa-lib-1.0.0
 	virtual/alsa
 	=x11-libs/fltk-1.1*
 	=x11-libs/gtk+-1.2*"
@@ -49,7 +47,6 @@ ALSA_TOOLS="ac3dec as10k1 envy24control hdspconf hdsploader hdspmixer \
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-kernel-2.6.patch
 }
 
 src_compile() {
