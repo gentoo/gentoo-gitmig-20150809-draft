@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.25.ebuild,v 1.7 2004/10/05 18:18:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.26.ebuild,v 1.1 2004/10/05 18:18:07 usata Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gtkmmviewer/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64 ppc64"
+KEYWORDS="~x86 ~ppc ~amd64 ~ppc64"
 # mng, xine, and mplayer are local flags
 IUSE="gnome nls gtk gtk2 imlib wmf mng svg xine mplayer"
 
@@ -37,16 +37,6 @@ src_compile() {
 	else
 		myconf="--disable-imlib"
 	fi
-
-	# workaround for gtk+-2.4
-	sed -i -e "/GTK_DISABLE_DEPRECATED/d" src/dirview2.c || die
-
-	#apply both patches to compile with gcc-3.4.0 closing bug #53693
-	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
-	then
-		epatch ${FILESDIR}/gimv-gcc34.patch
-	fi
-
 
 	econf \
 		$(use_enable nls) \
