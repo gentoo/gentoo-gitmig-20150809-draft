@@ -27,7 +27,13 @@ app-emulation/winex-cvs
 
 # <blizzy@gentoo.org> (01 Sep 2002)
 # masked because there is a freeze and for testing
-net-misc/d4x
+#net-misc/d4x
+# 
+# <azarah@gentoo.org> (01 Sep 2002)
+# we have a ebuild for this already with many more features.
+# havent moved it from net-misc/nt to net-misc/d4x until now,
+# but with new portage "update" feature ....
+net-misc/nt
 
 # <blocke@shivan.org> (31 Aug 2002)
 # Masked out due to the ebuild freeze
