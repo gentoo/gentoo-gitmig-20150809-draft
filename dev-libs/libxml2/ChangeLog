@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.49 2003/09/11 10:16:01 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.50 2003/09/17 20:03:30 liquidx Exp $
+
+  17 Sep 2003; Alastair Tse <liquidx@gentoo.org> libxml2-2.5.11.ebuild,
+  libxml2-2.5.8.ebuild:
+  filter -funroll-loops and -fprefetch-loop-arrays to prevent problems down the
+  line with scrollkeeper and gconf (#26320). filters for all marchs
+  but possibly athlon-xp specific.
 
 *libxml2-2.5.11 (11 Sep 2003)
 
