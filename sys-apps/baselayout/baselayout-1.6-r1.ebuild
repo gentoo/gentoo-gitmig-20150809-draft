@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.3 2001/08/21 02:47:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.4 2001/08/21 02:52:34 drobbins Exp $
 
 SV=1.1.2
 S=${WORKDIR}/rc-scripts-${SV}
@@ -179,7 +179,7 @@ src_install()
 
 	dodir /etc/init.d
 	exeinto /etc/init.d
-	for foo in ${S}/etc/init.d/*
+	for foo in ${S}/init.d/*
 	do
 		[ -f $foo ] && doexe $foo
 	done
