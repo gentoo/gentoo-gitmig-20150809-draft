@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giflib
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.10 2003/12/11 01:17:55 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.11 2004/03/07 15:37:19 geoman Exp $
+
+  07 Mar 2004; Stephen P. Becker <geoman@gentoo.org> giflib-4.1.0-r3.ebuild:
+  Added ~mips keyword.
 
   10 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> giflib-4.1.0-r3.ebuild:
   use use_with; tidy
