@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.15 2003/07/18 18:47:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.16 2003/08/01 01:01:39 gregf Exp $
+
+*epic4-1.1.12 (31 Jul 2003)
+
+  31 Jul 2003; Greg Fitzgerald <gregf@gentoo.org> epic4-1.1.12.ebuild:
+  Version bump. Fixes bug #21809.
 
   18 Jul 2003; Martin Schlemmer <azarah@gentoo.org> epic4-1.0.1-r2.ebuild,
   files/epic4-1.0.1-gcc33.patch:
