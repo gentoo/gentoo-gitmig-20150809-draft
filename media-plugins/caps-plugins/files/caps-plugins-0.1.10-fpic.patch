@@ -1,0 +1,11 @@
+--- Makefile	2004-07-06 19:06:46.606228168 +0100
++++ /home/slarti/Makefile.new	2004-07-06 19:07:42.008805696 +0100
+@@ -38,7 +38,7 @@
+ 	$(CC) $(CFLAGS) -S $<
+ 
+ .cc.o:
+-	$(CC) $(CFLAGS) -I/usr/local/include -c $<
++	$(CC) $(CFLAGS) -fPIC -c $<
+ 
+ tags: $(SOURCES) $(HEADERS)
+ 	@echo making tags
