@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.17 2004/06/25 01:30:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.2.ebuild,v 1.18 2005/03/23 14:27:19 liquidx Exp $
 
 IUSE="gnome opengl"
 
 DESCRIPTION="gnome-python"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/latest/sources/${P}.tar.gz"
-HOMEPAGE="http://www.daa.com.au/~james/gnome/"
+HOMEPAGE="http://www.pygtk.org/"
 
 DEPEND="virtual/python
 	=x11-libs/gtk+-1.2*

@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4.ebuild,v 1.12 2004/09/02 17:51:57 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4.ebuild,v 1.13 2005/03/23 14:27:19 liquidx Exp $
 
 inherit gnome.org
 
 IUSE="gnome opengl"
 
 DESCRIPTION="gnome-python"
-HOMEPAGE="http://www.daa.com.au/~james/gnome/"
+HOMEPAGE="http://www.pygtk.org/"
 
 SLOT="1"
 KEYWORDS="x86 ppc ~sparc ~alpha"

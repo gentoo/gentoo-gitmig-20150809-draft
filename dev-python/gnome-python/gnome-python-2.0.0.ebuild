@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0.ebuild,v 1.10 2004/09/02 17:51:57 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0.ebuild,v 1.11 2005/03/23 14:27:19 liquidx Exp $
 
 # devel version - debug
 inherit gnome2 debug
@@ -8,7 +8,7 @@ inherit gnome2 debug
 IUSE="gtkhtml"
 
 DESCRIPTION="GNOME 2 bindings for Python"
-HOMEPAGE="http://www.daa.com.au/~james/pygtk/"
+HOMEPAGE="http://www.pygtk.org/"
 LICENSE="LGPL-2"
 
 RDEPEND=">=dev-lang/python-2.2
