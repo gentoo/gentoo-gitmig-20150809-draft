@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5-r1.ebuild,v 1.3 2005/02/07 19:54:50 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5-r1.ebuild,v 1.4 2005/02/19 18:30:22 dholm Exp $
 
 inherit mono multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/archive/1.0/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 
 IUSE=""
 
