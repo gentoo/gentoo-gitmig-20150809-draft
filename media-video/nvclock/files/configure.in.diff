@@ -6,8 +6,8 @@
      elif test -r $QTDIR/include/qt.h; then
 -	QT_LIBS=-L$(QTDIR)/lib -L$QTDIR
 -	QT_CFLAGS=-I$(QTDIR)/include
-+	QT_LIBS="${QTDIR}/lib"
-+	QT_CFLAGS="${QTDIR}/include"
++	QT_LIBS=-L${QTDIR}/lib
++	QT_CFLAGS=-I${QTDIR}/include
          HAVE_QT=yes
  	
      else
