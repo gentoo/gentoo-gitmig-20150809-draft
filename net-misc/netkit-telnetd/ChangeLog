@@ -1,6 +1,8 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.8 2002/12/13 11:00:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.9 2002/12/16 16:58:25 woodchip Exp $
+
+  16 Dec 2002; Donny Davies <woodchip@gentoo.org> : #11294.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
