@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngrewrite
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngrewrite/ChangeLog,v 1.1 2003/11/07 01:43:07 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngrewrite/ChangeLog,v 1.2 2004/03/18 14:06:05 ciaranm Exp $
+
+  18 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Stable on sparc
 
 *pngrewrite-1.2.1 (07 Nov 2003)
 
