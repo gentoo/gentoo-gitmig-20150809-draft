@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f8a11fd7a1ce542619d06427ebdf2476 cfv-1.17.ebuild 577
-MD5 274a2966315aebe28dba55fc628a4062 cfv-1.16.ebuild 566
 MD5 608c83b627c49dba4ac337a260cc92e6 cfv-1.18.1.ebuild 646
-MD5 4bc051ffb236ab9e9eb4ecb3125dd417 ChangeLog 1794
+MD5 7476ab8460ede6133943a151a2d60973 cfv-1.17.ebuild 574
 MD5 f5775272cd7e22ae38566107c416c1e4 metadata.xml 275
+MD5 f8cfd1ce4cf35c2c68cbe75830d5df33 ChangeLog 1881
+MD5 274a2966315aebe28dba55fc628a4062 cfv-1.16.ebuild 566
+MD5 1de95a0886530f13fa215f1ca128d338 files/digest-cfv-1.17 59
 MD5 b74768433b41735497a6e99aaf7afe85 files/digest-cfv-1.18.1 61
 MD5 a9073bcc05be189ec3ca7bab5bbe0065 files/digest-cfv-1.16 59
-MD5 1de95a0886530f13fa215f1ca128d338 files/digest-cfv-1.17 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCBizmI1lqEGTUzyQRAqP0AJ4sl/Dk9gtmRmL1MDF7JxYyX3YIMwCfcNPK
-piCfrKMSkXOuOloGR2j94EA=
-=ZfHY
------END PGP SIGNATURE-----
