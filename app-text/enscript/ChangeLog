@@ -1,6 +1,10 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.27 2005/01/28 21:41:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.28 2005/01/30 19:18:38 kloeri Exp $
+
+  30 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
+  enscript-1.6.3-r3.ebuild:
+  Stable on alpha, bug 77408.
 
   28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
   enscript-1.6.3-r3.ebuild:
