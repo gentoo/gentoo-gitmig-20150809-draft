@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/kbarcode-1.7.4.ebuild,v 1.4 2004/07/03 20:34:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/kbarcode-1.8.0.ebuild,v 1.1 2004/08/23 14:09:35 carlo Exp $
 
 inherit kde
 
