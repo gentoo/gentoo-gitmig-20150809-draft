@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r2.ebuild,v 1.7 2003/11/20 16:09:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r2.ebuild,v 1.8 2003/12/06 08:12:27 pyrania Exp $
 
 IUSE="kde gnome nls xinerama truetype cjk"
 
@@ -17,11 +17,8 @@ KEYWORDS="x86 ppc sparc hppa mips amd64 alpha"
 PROVIDE="virtual/blackbox"
 
 mydoc="ChangeLog COPYING NEWS"
-if pkg-config xft
-then
-	CXXFLAGS="${CXXFLAGS} -I/usr/include/freetype2"
-fi
-filter-flags -fno-exceptions
+
+DEPEND=">=dev-util/pkgconfig-0.12.0"
 
 src_unpack() {
 
@@ -44,6 +41,11 @@ src_unpack() {
 }
 
 src_compile() {
+	if pkg-config xft
+	then
+		append-flags "-I/usr/include/freetype2"
+	fi
+	filter-flags -fno-exceptions
 
 	# Allow configure to detect mipslinux systems
 	use mips && gnuconfig_update
@@ -54,7 +56,6 @@ src_compile() {
 	make \
 		pkgdatadir=/usr/share/commonbox init
 }
-
 
 src_install() {
 
