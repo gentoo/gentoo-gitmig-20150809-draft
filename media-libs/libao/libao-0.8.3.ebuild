@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.3.ebuild,v 1.8 2003/02/13 12:46:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.3.ebuild,v 1.9 2003/03/02 14:03:56 liquidx Exp $
 
 IUSE="esd"
 
@@ -10,7 +10,7 @@ SRC_URI="http://fatpipe.vorbis.com/files/1.0/unix/${P}.tar.gz"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/glibc
