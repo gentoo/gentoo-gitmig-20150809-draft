@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.93.ebuild,v 1.5 2004/11/05 21:55:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.93.ebuild,v 1.6 2005/01/25 17:42:28 greg_g Exp $
 
 S="${WORKDIR}/${P/./_}"
 DESCRIPTION="Alvaro's Messenger client for MSN"
@@ -56,9 +56,9 @@ src_install() {
 	then
 		dodir /usr/share/applnk/Internet
 		cp ${D}/usr/share/amsn/amsn.desktop ${D}/usr/share/applnk/Internet/
-		einfo "Installing KDE Icons in default theme"
-		dodir ${KDEDIR}/share/icons/default.kde
-		cp -a ${S}/icons/* ${D}/${KDEDIR}/share/icons/default.kde
+		einfo "Installing KDE Icons"
+		dodir /usr/share/pixmaps
+		cp -a ${S}/icons/32x32/* ${D}/usr/share/pixmaps/
 	fi
 
 	if use imlib
