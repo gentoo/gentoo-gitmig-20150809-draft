@@ -1,6 +1,18 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.6 2003/02/19 19:16:52 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.7 2003/03/08 22:31:15 latexer Exp $
+
+*wireless-tools-25-r1 ( 08 Mar 2003 )
+
+  08 Mar 2003; Peter Johanson <latexer@gentoo.org> wireless-tools-25-r1.ebuild :
+  Revision bump. Wireless tools now compiles against /usr/src/linux/includes, so
+  that it gets the proper wireless extensions version.
+
+  08 Mar 2003; Peter Johanson <latexer@gentoo.org> wireless-tools-25.ebuild :
+  Reverted back, and did a -r1 bump instead.
+
+  08 Mar 2003; Peter Johanson <latexer@gentoo.org> wireless-tools-25.ebuild :
+  Changed to use includes from /usr/src/linux. Should fix wireless extension mismatch errors.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
