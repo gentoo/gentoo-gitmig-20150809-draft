@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6c233d3d5334145f11bd322e6efb9efe boa-0.94.12.ebuild 1580
 MD5 1345fdd7c6a8aa649aaaacb39a350da1 boa-0.94.14_alpha20.ebuild 2012
 MD5 880b03cd0e6ad1ace068dda3e1c37007 boa-0.94.13-r1.ebuild 1950
@@ -14,3 +17,10 @@ MD5 3f6d2bad0652220e834c786c6cb2b0ea files/digest-boa-0.94.12 63
 MD5 98776c2beacab938c843c24830ed81ab files/digest-boa-0.94.13 63
 MD5 de7b84b21c6715dad6eb56ebbd87258b files/boa.rc6 895
 MD5 3e9e1f39e91126bfb472bf3fcdc7fae4 files/mime.types 5488
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCE1fLEZCkKN40op4RAjU2AJ40+tnWq4haVEQcf6GuTogH1hRr2gCgohef
+5nkgPzjWi0jxpQgfhGfWjZM=
+=sTVy
+-----END PGP SIGNATURE-----

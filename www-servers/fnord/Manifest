@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 58ca545f200324fc57faf7a7164e30d5 fnord-1.7.ebuild 1156
 MD5 0e0ffb934fe05ab02497892485ca3efc fnord-1.2.ebuild 805
 MD5 1c73c61388514c81a9b121c0ec601175 fnord-1.6.ebuild 1140
@@ -14,3 +17,10 @@ MD5 425afc9577f40bd59da3670f501397a5 files/digest-fnord-1.6 61
 MD5 21beb01e04084f4563874810ede17c52 files/digest-fnord-1.7 61
 MD5 85428d084958af68c83cb83b276287a4 files/digest-fnord-1.8 125
 MD5 cfe29c85fe244c226c7fb0447dc65f9a files/fnord-1.5-gentoo.diff 1067
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCE1fGEZCkKN40op4RAhwOAJ99jGpdZq9Ek+W2vwCatTNBTGtjvwCeIded
+B0oa1H4wdec/WX6StRfDRSg=
+=72fn
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 697e30fcc7e862d3c2bb5cdbbbc4308b ChangeLog 902
 MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
 MD5 9c25be6301ed3cbaeef1f8f22efe2053 ncsa-httpd-1.5.2a.ebuild 2090
 MD5 3c8fa7efedafecfd7c5c7a2bbdf2b988 files/ncsa-httpd-1.5.2a.patch 8410
 MD5 9f7c216b1e80dd1aa1521ae2a56df73a files/digest-ncsa-httpd-1.5.2a 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCE1e8EZCkKN40op4RAq3gAKCmzAauQFoEAoh5H3ri4dOapNofFACfYrZU
+JViJ9AdT+3krLE4rqkALgqg=
+=jJL8
+-----END PGP SIGNATURE-----
