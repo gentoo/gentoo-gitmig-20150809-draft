@@ -1,8 +1,13 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.5 2002/05/20 00:11:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.6 2002/07/29 02:17:34 cselkirk Exp $
 
 *gpa-0.4.3 (19 May 2002)
+
+  28 Jul 2002; Calum Selkiirk <cselkirk@gentoo.org> gpa-0.4.3.ebuild :
+
+  Added ppc to KEYWORDS.
+  Added RDEPEND.
 
   19 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
 
