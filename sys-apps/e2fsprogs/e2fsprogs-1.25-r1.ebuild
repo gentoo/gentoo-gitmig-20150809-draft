@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r1.ebuild,v 1.1 2001/11/28 23:19:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r1.ebuild,v 1.2 2001/12/12 20:38:13 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 and ext3 filesystem utilities"
@@ -36,13 +36,6 @@ src_install() {
 	then
 		( cd po; make DESTDIR=${D} install || die )
 	fi
-	
-	# The "fsck" program is getting compiled dynamically.  So we need
-	# to recompile it statically:
-
-	cd ${S}/misc/fsck
-	rm -f fsck
-	gcc -static -o fsck fsck.o get_device_by_label.o base_device.o fstype.o ../lib/libext2fs.a ../lib/libcom_err.a
 	
 	dodoc COPYING ChangeLog README RELEASE-NOTES SHLIBS
 	docinto e2fsck
