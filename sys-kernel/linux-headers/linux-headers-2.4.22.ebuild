@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.14 2004/04/07 07:48:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.15 2004/04/09 07:19:50 iggy Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
-KEYWORDS="ppc ~x86 -mips ppc64"
+KEYWORDS="ppc ~x86 -mips ppc64 s390"
 
 
 pkg_setup() {
