@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.6 2003/09/01 05:22:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.7 2003/09/01 19:38:09 robbat2 Exp $
 
 inherit eutils
 
@@ -102,6 +102,7 @@ src_unpack() {
 	# make the qmail 'sendmail' binary behave like sendmail's for -f
 	epatch ${DISTDIR}/sendmail-flagf.patch
 
+	#TODO REDIFF
 	# Reject some bad relaying attempts
 	# gentoo bug #18064 
 	#epatch ${DISTDIR}/qmail-smtpd-relay-reject
@@ -115,8 +116,9 @@ src_unpack() {
 	# Apply patch for local timestamps.
 	# This will make the emails headers be written in localtime rather than GMT
 	# If you really want, uncomment it yourself, as mail really should be in GMT
-	#epatch ${DISTDIR}/qmail-date-localtime.patch.txt
+	epatch ${DISTDIR}/qmail-date-localtime.patch.txt
 
+	#TODO REDIFF
 	# Apply patch to add ESMTP SIZE support to qmail-smtpd
 	# This helps your server to be able to reject excessively large messages
 	# "up front", rather than waiting the whole message to arrive and then
@@ -126,8 +128,9 @@ src_unpack() {
 	
 	# Apply patch to trim large bouncing messages down greatly reduces traffic
 	# when multiple bounces occur (As in with spam)
-	#epatch ${DISTDIR}/qmail-limit-bounce-size.patch.txt
+	epatch ${DISTDIR}/qmail-limit-bounce-size.patch.txt
 	
+	#TODO REDIFF
 	# provide badrcptto support
 	# as per bug #17283
 	# patch re-diffed from original at http://sys.pro.br/files/badrcptto-morebadrcptto-accdias.diff.bz2
@@ -257,6 +260,9 @@ src_install() {
 		newins ${FILESDIR}/${PV}-${PR}/run-qmail${i}log run
 		insinto /etc
 		[ -f ${FILESDIR}/tcp.${i}.sample ] && newins ${FILESDIR}/tcp.${i}.sample /etc/tcp.${i}
+		for i in smtp qmtp qmqp pop3; do
+			[ -f ${D}/etc/tcp.${i} ] && tcprules ${D}/etc/tcp.${i}.cdb ${D}/etc/.tcp.${i}.tmp < ${D}/etc/tcp.${i}
+		done
 	done
 	
 	einfo "Installing the qmail startup file ..."
@@ -342,7 +348,7 @@ pkg_config() {
 	done
 
 	for i in smtp qmtp qmqp pop3; do
-		[ -f ${ROOT}/etc/tcp.${i}.cdb ] && tcprules ${ROOT}/etc/tcp.${i}.cdb ${ROOT}/etc/.tcp.${i}.tmp < ${ROOT}/etc/tcp.${i}
+		[ -f ${ROOT}/etc/tcp.${i} ] && tcprules ${ROOT}/etc/tcp.${i}.cdb ${ROOT}/etc/.tcp.${i}.tmp < ${ROOT}/etc/tcp.${i}
 	done
 
 	if use ssl && [ ! -f ${ROOT}/var/qmail/control/servercert.pem ]; then
