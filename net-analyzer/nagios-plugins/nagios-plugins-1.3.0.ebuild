@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.0.ebuild,v 1.2 2003/09/05 23:40:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.0.ebuild,v 1.3 2003/09/10 21:49:34 msterret Exp $
 DESCRIPTION="Nagios $PV plugins - Pack of plugins to make Nagios work properly"
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagiosplug/nagios-plugins-1.3.0.tar.gz"
@@ -19,7 +19,7 @@ DEPEND=">=bind-tools-9.2.2_rc1
 		>=openssh-3.5_p1
 		mysql? ( >=mysql-3.23.52-r1 )
 		>=autoconf-2.53a
-		>=qstat-25
+		>=games-util/qstat-25
 		postgre? ( >=postgresql-7.2 )"
 
 S="${WORKDIR}/nagios-plugins-1.3.0"
