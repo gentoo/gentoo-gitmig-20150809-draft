@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.0.ebuild,v 1.1 2004/06/30 15:36:58 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-1.0.ebuild,v 1.2 2004/06/30 15:55:45 latexer Exp $
 
 inherit mono
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
-DEPEND=">=dev-dotnet/mono-0.97"
+DEPEND=">=dev-dotnet/mono-1.0"
 
 src_compile() {
 	econf || die "./configure failed!"
