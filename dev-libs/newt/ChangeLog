@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.8 2003/02/12 06:08:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.9 2003/03/28 23:17:43 gmsoft Exp $
 
 *newt-0.50.35-r2 (23 Dec 2002)
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> newt-0.50.35-r2.ebuild :
+  Added hppa to KEYWORDS.
 
   23 Dec 2002; Martin Holzer <mholzer@gentoo.org> newt-0.50.35-r2.ebuild files/digest-newt-0.50.35-r2 Changelog :
   Fixed sandbox error access denied, closes #12615.
