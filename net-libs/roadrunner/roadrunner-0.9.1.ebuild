@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/roadrunner/roadrunner-0.9.1.ebuild,v 1.1 2004/05/07 00:55:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/roadrunner/roadrunner-0.9.1.ebuild,v 1.2 2004/06/15 01:11:33 dragonheart Exp $
 
 
 # EBuild details
@@ -9,7 +9,7 @@ HOMEPAGE="http://rr.codefactory.se"
 SRC_URI="ftp://ftp.codefactory.se/pub/RoadRunner/source/roadrunner/roadrunner-${PV}.tar.gz"
 LICENSE="Roadrunner"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 # static	= also build a static library
 # doc		= include documentation
@@ -21,7 +21,6 @@ use debug && RESTRICT="${RESTRICT} nostrip"
 RDEPEND=">=dev-libs/glib-2.2.1
 	>=dev-libs/libxml2-2.5.11"
 
-# During build we also need pkgconfig and possibly gtk-doc
 DEPEND=">=sys-devel/automake-1.4
 	sys-devel/libtool
 	sys-devel/gcc
@@ -29,7 +28,7 @@ DEPEND=">=sys-devel/automake-1.4
 	>=dev-libs/glib-2.2.1
 	>=dev-libs/libxml2-2.5.11
 	>=dev-util/pkgconfig-0.15.0
-	doc? ( >=dev-util/gtk-doc-1.2 )"
+	doc? ( dev-util/gtk-doc )"
 
 src_compile() {
 	econf \
@@ -44,6 +43,6 @@ src_compile() {
 
 src_install() {
 	# Seems that the Makefiles are OK
-	einstall || die
+	emake DESTDIR=${D} install || die
 }
 
