@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.9 2002/10/12 03:27:51 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.10 2002/11/12 10:57:25 leonardop Exp $
+
+*giftcurs-0.5.4 (12 Nov 2002)
+  12 Nov 2002; L. Boshell <leonardop@gentoo.org> : Version bump.
 
 *giftcurs-0.5.* (25 Sep 2002)
   
