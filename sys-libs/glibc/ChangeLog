@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.272 2004/10/12 04:10:03 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.273 2004/10/12 11:56:25 gmsoft Exp $
+
+  12 Oct 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
+  Stable on hppa.
 
   12 Oct 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20041006.ebuild:
   a portage quirk seems to be installing and then uninstalling libpthread on
