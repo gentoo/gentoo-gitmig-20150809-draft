@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/siefs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.1 2004/11/16 18:29:05 genstef Exp $
+
+*siefs-0.4 (16 Nov 2004)
+
+  16 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +siefs-0.4.ebuild:
+  Initial version thanks to Pawel Maczewski <dziubiak@civ.pl> and Robert
+  Führicht <the_master_of_disaster@gmx.at>, closes bug 38276
+
