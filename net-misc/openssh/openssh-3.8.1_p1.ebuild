@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1.ebuild,v 1.12 2004/07/01 21:41:25 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1.ebuild,v 1.13 2004/09/14 08:02:18 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -44,12 +44,12 @@ PROVIDE="virtual/ssh"
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
 
-	epatch ${FILESDIR}/${P}-resolv_functions.patch
+	epatch ${FILESDIR}/${P}-resolv_functions.patch.bz2
 
-	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
-	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
-	use skey && epatch ${FILESDIR}/${P}-skey.patch
-	use chroot && epatch ${FILESDIR}/${P}-chroot.patch
+	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}.bz2
+	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch.bz2
+	use skey && epatch ${FILESDIR}/${P}-skey.patch.bz2
+	use chroot && epatch ${FILESDIR}/${P}-chroot.patch.bz2
 	use X509 && epatch ${DISTDIR}/${X509_PATCH}
 }
 

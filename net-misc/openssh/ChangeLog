@@ -1,6 +1,43 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.100 2004/08/21 01:50:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.101 2004/09/14 08:02:18 aliz Exp $
+
+  14 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p2-r1.ebuild,
+  openssh-3.7.1_p2-r2.ebuild, openssh-3.8.1_p1-r1.ebuild,
+  openssh-3.8.1_p1-r2.ebuild, openssh-3.8.1_p1.ebuild, openssh-3.8_p1.ebuild,
+  openssh-3.9_p1.ebuild, files/openssh-3.5_p1-gentoo-sshd-gcc3.patch,
+  files/openssh-3.5_p1-gentoo-sshd-gcc3.patch.bz2,
+  files/openssh-3.7.1_p1-selinux.diff,
+  files/openssh-3.7.1_p1-selinux.diff.bz2,
+  files/openssh-3.7.1_p2-chroot.patch,
+  files/openssh-3.7.1_p2-chroot.patch.bz2,
+  files/openssh-3.7.1_p2-kerberos.patch,
+  files/openssh-3.7.1_p2-kerberos.patch.bz2,
+  files/openssh-3.7.1_p2-skey.patch, files/openssh-3.7.1_p2-skey.patch.bz2,
+  files/openssh-3.8.1_p1-chroot.patch,
+  files/openssh-3.8.1_p1-chroot.patch.bz2,
+  files/openssh-3.8.1_p1-kerberos.patch,
+  files/openssh-3.8.1_p1-kerberos.patch.bz2,
+  files/openssh-3.8.1_p1-largekey.patch,
+  files/openssh-3.8.1_p1-largekey.patch.bz2,
+  files/openssh-3.8.1_p1-opensc.patch,
+  files/openssh-3.8.1_p1-opensc.patch.bz2,
+  files/openssh-3.8.1_p1-resolv_functions.patch,
+  files/openssh-3.8.1_p1-resolv_functions.patch.bz2,
+  files/openssh-3.8.1_p1-skey.patch,
+  files/openssh-3.8_p1-resolv_functions.patch.bz2,
+  files/openssh-3.8_p1-skey.patch, files/openssh-3.8_p1-skey.patch.bz2,
+  files/openssh-3.9_p1-chroot.patch, files/openssh-3.9_p1-chroot.patch.bz2,
+  files/openssh-3.9_p1-largekey.patch,
+  files/openssh-3.9_p1-largekey.patch.bz2, files/openssh-3.9_p1-opensc.patch,
+  files/openssh-3.9_p1-opensc.patch.bz2, files/openssh-3.9_p1-selinux.diff,
+  files/openssh-3.9_p1-selinux.diff.bz2,
+  files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch,
+  files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2,
+  files/openssh-3.9_p1-skey.patch, files/openssh-3.9_p1-skey.patch.bz2,
+  files/openssh-skeychallenge-args.diff,
+  files/openssh-skeychallenge-args.diff.bz2:
+  Compressed patches.
 
   20 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   openssh-3.8.1_p1-r1.ebuild:
