@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.53.ebuild,v 1.6 2004/05/07 15:30:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55-r1.ebuild,v 1.1 2004/05/07 15:30:49 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -27,7 +27,8 @@
 #   need to be able to install more than one language pack.
 
 inherit flag-o-matic eutils gcc
-IUSE="gnome kde"
+
+IUSE="gnome kde ooo-kde"
 
 # We want gcc3 if possible!!!!
 export WANT_GCC_3="yes"
@@ -41,30 +42,32 @@ export WANT_GCC_3="yes"
 OO_VER=1.1.1
 PATCHLEVEL=OOO_1_1_1
 ICON_VER=OOO_1_1-9
+KDE_ICON_VER=OOO_1_1-0.1
+KDE_ICON_PATH=documents/159/1785
 INSTDIR="/opt/Ximian-OpenOffice"
 PATCHDIR=${WORKDIR}/ooo-build-${PV}
-ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
 S="${WORKDIR}/oo_${OO_VER}_src"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}p1_source.tar.bz2
 	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
-	http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz"
+	ooo-kde? ( http://kde.openoffice.org/files/${KDE_ICON_PATH}/ooo-KDE_icons-${KDE_ICON_VER}.tar.gz )
+	!ooo-kde? ( http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz )"
 
 HOMEPAGE="http://ooo.ximian.com"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 
 RDEPEND=">=sys-libs/glibc-2.1
 	!=sys-libs/glibc-2.3.1*
 	>=dev-lang/perl-5.0
-	>=x11-libs/gtk+-2.0
-	>=gnome-base/libgnome-2.2
-	>=gnome-base/gnome-vfs-2.0
-	>=net-print/libgnomecups-0.1.4
-	>=net-print/gnome-cups-manager-0.16
-	>=dev-libs/libxml2-2.0
+	!ooo-kde? ( >=x11-libs/gtk+-2.0
+		>=gnome-base/libgnome-2.2
+		>=gnome-base/gnome-vfs-2.0
+		>=net-print/libgnomecups-0.1.4
+		>=net-print/gnome-cups-manager-0.16
+		>=dev-libs/libxml2-2.0 )
 	>=media-libs/libart_lgpl-2.3.13
 	>=x11-libs/startup-notification-0.5
 	media-fonts/ttf-bitstream-vera
@@ -81,7 +84,8 @@ RDEPEND=">=sys-libs/glibc-2.1
 	!app-office/openoffice-ximian-bin
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
 	>=sys-devel/gcc-3.2.1 )
-	>=media-libs/freetype-2.1.4"
+	>=media-libs/freetype-2.1.4
+	ooo-kde? ( kde-base/kdelibs )"
 
 DEPEND="${RDEPEND}
 	app-shells/tcsh
@@ -223,6 +227,10 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${A}
 
+	#Fix Sandbox problems with scale-icons script
+	cd ${PATCHDIR}
+	epatch ${FILESDIR}/${OO_VER}/fixscale.patch
+
 	#Still needed: The STLport patch
 	cd ${S}
 	rm stlport/STLport-4.5.3.patch
@@ -242,7 +250,15 @@ src_unpack() {
 	fi
 
 	einfo "Applying Ximian OO.org Patches"
-	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=Ximian || die "Ximian patches failed"
+	if [ `use ooo-kde` ]; then
+		DISTRO=KDE
+		ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
+	else
+		DISTRO=Ximian
+		ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
+	fi
+
+	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=${DISTRO} || die "Ximian patches failed"
 
 	einfo "Installing / Scaling Icons"
 	${PATCHDIR}/bin/scale-icons ${S}
@@ -312,8 +328,8 @@ src_compile() {
 	cd ${S}/config_office
 	rm -f config.cache
 	autoconf
-	./configure \
-		--enable-libart \
+	local myconf
+	myconf="--enable-libart \
 		--enable-libsn \
 		--enable-crashdump=no \
 		--with-lang=ENUS,${LANGNAME} \
@@ -323,7 +339,9 @@ src_compile() {
 		--with-system-zlib \
 		--with-system-freetype \
 		--with-system-curl \
-		--disable-java || die
+		--disable-java"
+	use ooo-kde && myconf="${myconf} --with-widgetset=kde"
+	./configure ${myconf} || die
 
 	cd ${S}
 	get_EnvSet

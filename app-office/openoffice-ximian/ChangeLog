@@ -1,6 +1,15 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.38 2004/05/06 21:21:54 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.39 2004/05/07 15:30:49 suka Exp $
+
+*openoffice-ximian-1.1.55-r1 (07 May 2004)
+
+  07 May 2004; suka@gentoo.org -files/1.1.1/distro_kde.patch,
+  openoffice-ximian-1.1.53.ebuild, openoffice-ximian-1.1.54.ebuild,
+  +openoffice-ximian-1.1.55-r1.ebuild, openoffice-ximian-1.1.55.ebuild:
+  Back out KDE integration stuff of 1.1.54 and 1.1.55, if you want to try it
+  out, use 1.1.55-r1 which is hard-masked, as there are still some known
+  problems
 
 *openoffice-ximian-1.1.55 (06 May 2004)
 
