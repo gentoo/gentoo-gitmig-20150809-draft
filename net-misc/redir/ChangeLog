@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/redir
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.1 2003/09/19 13:46:58 hhg Exp $
+
+*redir-2.2.1 (19 Sep 2003)
+
+  19 Sep 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org> redir-2.2.1.ebuild:
+  New package -- port redirector submitted by Minati jean michel
+  <magnet@suidzer0.org> in bug #29094
+
