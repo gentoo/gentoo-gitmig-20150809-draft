@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.15 2004/03/07 22:01:38 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.16 2004/03/17 00:50:44 geoman Exp $
+
+  16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> gtkglarea-1.99.0.ebuild:
+  Modifed ebuild with gnuconfig to allow building on mips. Added ~mips keyword.
 
   07 Mar 2004; Jon Portnoy <avenj@gentoo.org> gtkglarea-1.2.3-r1.ebuild :
   AMD64 keywords.
