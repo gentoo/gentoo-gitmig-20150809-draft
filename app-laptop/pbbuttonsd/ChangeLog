@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/pbbuttonsd
+# ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.1 2004/03/16 04:43:28 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.2 2004/03/18 12:29:09 aliz Exp $
 
   15 Mar 2004; Luca Barbato <lu_zero@gentoo.org> pbbuttonsd-0.5.9-r1.ebuild:
   Typo in the CONFIG_PROTECT mask fixed
