@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9.1.ebuild,v 1.3 2004/07/05 02:08:28 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9.1.ebuild,v 1.4 2004/07/19 07:41:57 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -17,7 +17,7 @@ SRC_URI="
 KEYWORDS="~x86 ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
-IUSE="java gtk2 ipv6 gnome moznoxft truetype xinerama"
+IUSE="java gtk2 ipv6 moznoxft truetype xinerama"
 
 RDEPEND="virtual/x11
 	!moznoxft ( virtual/xft )
@@ -228,14 +228,12 @@ src_install() {
 	doins ${S}/build/package/rpm/SOURCES/mozicon50.xpm
 
 	# Install icon and .desktop for menu entry
-	if use gnome; then
-		insinto /usr/share/pixmaps
-		doins ${FILESDIR}/icon/firefox-icon.png
-		# Fix bug 54179: Install .desktop file into /usr/share/applications
-		# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
-		insinto /usr/share/applications
-		doins ${FILESDIR}/icon/mozillafirefox.desktop
-	fi
+	insinto /usr/share/pixmaps
+	doins ${FILESDIR}/icon/firefox-icon.png
+	# Fix bug 54179: Install .desktop file into /usr/share/applications
+	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
+	insinto /usr/share/applications
+	doins ${FILESDIR}/icon/mozillafirefox.desktop
 
 	# Normally firefox-0.9 must be run as root once before it can be
 	# run as a normal user.  Drop in some initialized files to avoid
