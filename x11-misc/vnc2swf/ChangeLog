@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vnc2swf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.5 2004/06/24 22:35:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.6 2004/06/28 20:27:12 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> vnc2swf-0.3.ebuild:
+  glibc -> libc
 
   01 Jun 2004; Brandon Hale <tseng@gentoo.org> vnc2swf-0.3.ebuild:
   Add IUSE=
