@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-1.9.9_beta.ebuild,v 1.2 2005/02/02 12:01:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-1.9.9_beta.ebuild,v 1.3 2005/02/13 19:29:23 hanno Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ IUSE="debug ssl usb"
 
 DEPEND=">=sys-libs/gwenhywfar-1.7.2
 	ssl? ( >=dev-libs/openssl-0.9.6b )
-	usb? ( dev-libs/libusb )"
+	usb? ( dev-libs/libusb )
+	>=sys-fs/sysfsutils-1.2.0 "
 
 
 S=${WORKDIR}/${MY_P}
