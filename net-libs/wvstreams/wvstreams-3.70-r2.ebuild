@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.70-r2.ebuild,v 1.14 2003/09/26 03:40:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.70-r2.ebuild,v 1.15 2003/10/30 05:22:31 vapier Exp $
 
 inherit flag-o-matic
 
@@ -19,14 +19,12 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc3.patch
 	epatch ${FILESDIR}/${PV}-openssl.patch
-	if [ "${ARCH}" = "alpha" -o "${ARCH}" = "hppa" ]; then
-		sed -i "s:CXXOPTS += :CXXOPTS += -fPIC :" Makefile
-	fi
 }
 
 src_compile() {
+	[ "${ARCH}" = "alpha" -o "${ARCH}" = "hppa" ] && append-flags -fPIC
 	append-flags -Wno-deprecated
-	make || die
+	emake -j1 || die
 }
 
 src_install() {
