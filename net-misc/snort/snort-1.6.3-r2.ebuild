@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.6.3-r2.ebuild,v 1.2 2001/02/03 20:10:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.6.3-r2.ebuild,v 1.3 2001/05/09 04:28:00 achim Exp $
 
 #P=
 A="${P}.tar.gz"
@@ -21,7 +21,7 @@ src_compile() {
     try ./configure --prefix=/usr --host=${CHOST} \
          --enable-smbalerts --enable-pthreads \
          --with-mysql-includes=/usr/include/mysql \
-        --with-mysql-libraries=/usr/lib/mysql/lib
+        --with-mysql-libraries=/usr/lib/mysql
     try make
 
 }
