@@ -1,14 +1,14 @@
 --- ltmain.sh	2003-09-24 18:22:17.528129376 +0200
 +++ ltmain.sh	2003-09-24 18:23:17.101072912 +0200
 @@ -1582,6 +1582,8 @@
- 	    convenience="$convenience $ladir/$objdir/$old_library"
- 	    old_convenience="$old_convenience $ladir/$objdir/$old_library"
- 	    tmp_libs=
-+	    # PKGW 
-+	    dependency_libs=
- 	    for deplib in $dependency_libs; do
- 	      deplibs="$deplib $deplibs"
-               if test "X$duplicate_deps" = "Xyes" ; then
+ 	  # Only check for convenience libraries
+ 	  deplibs="$lib $deplibs"
+ 	  tmp_libs=
++	  # PKGW 
++	  dependency_libs=
+ 	  for deplib in $dependency_libs; do
+ 	    #echo "Adding $deplib to \$deplibs"
+ 	    deplibs="$deplib $deplibs"
 @@ -1699,6 +1701,8 @@
  	  fi
  

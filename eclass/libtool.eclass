@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.43 2005/02/27 20:29:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.44 2005/03/23 18:03:21 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -20,7 +20,7 @@ INHERITED="${INHERITED} ${ECLASS}"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
-ELIBTOOL_VERSION="2.0.1"
+ELIBTOOL_VERSION="2.0.2"
 
 ELT_PATCH_DIR="${PORTDIR}/eclass/ELT-patches"
 ELT_APPLIED_PATCHES=
@@ -68,7 +68,8 @@ ELT_walk_patches() {
 	local y=
 	local ret=1
 	local patch_dir=
-	local version=$(eval $(grep -e '^[[:space:]]*VERSION=' $1); echo "${VERSION}")
+	local version=$(eval $(grep -e '^[[:space:]]*VERSION=' $1); \
+					echo "${VERSION}")
 
 	if [[ -n $2 ]] ; then
 		if [[ -d ${ELT_PATCH_DIR}/$2 ]] ; then
@@ -77,50 +78,35 @@ ELT_walk_patches() {
 			return ${ret}
 		fi
 
-		# First check a version specific patch, if not check major.minor*
-		for y in ${version} $(echo "${version}" | cut -d. -f1,2) ; do
-			[[ -z ${y} ]] && continue
-			for x in $(ls -d "${patch_dir}/${y}"* 2> /dev/null) ; do
-				if [[ -n ${x} && -f ${x} ]] ; then
-					# For --remove-internal-dep ...
-					if [[ -n $3 ]] ; then
-						# For replace @REM_INT_DEP@ with what was passed
-						# to --remove-internal-dep
-						sed -e "s|@REM_INT_DEP@|$3|g" ${x} > \
-							${T}/$$.rem_int_deps.patch
-
-						x="${T}/$$.rem_int_deps.patch"
-					fi
-
-					if ELT_try_and_apply_patch "$1" "${x}" ; then
-						ret=0
-						break
-					fi
-				fi
-			done
-		done
-
-		# If still nothing, try the rest.
-		if [[ ${ret} -eq 1 ]]; then
-			for x in $(ls -d "${patch_dir}"/* 2> /dev/null) ; do
-				if [[ -n ${x} && -f ${x} ]] ; then
-					# For --remove-internal-dep ...
-					if [[ -n $3 ]] ; then
-						# For replace @REM_INT_DEP@ with what was passed
-						# to --remove-internal-dep
-						sed -e "s|@REM_INT_DEP@|$3|g" ${x} > \
-							${T}/$$.rem_int_deps.patch
-
-						x="${T}/$$.rem_int_deps.patch"
-					fi
-
-					if ELT_try_and_apply_patch "$1" "${x}" ; then
-						ret=0
-						break
-					fi
-				fi
-			done
+		if [[ -z ${version} ]] ; then
+			eerror "Could not get VERSION for ${1##*/}!"
+			die "Could not get VERSION for ${1##*/}!"
 		fi
+
+		# Go through the patches in reverse order (large to small)
+		for x in $(ls -d "${patch_dir}"/* 2> /dev/null | sort -r) ; do
+			if [[ -n ${x} && -f ${x} ]] ; then
+				local ltver=$(VER_to_int "${version}")
+				local ptver=$(VER_to_int "${x##*/}")
+				
+				# If libtool version smaller than patch version, skip patch.
+				[[ ${ltver} -lt ${ptver} ]] && continue
+				# For --remove-internal-dep ...
+				if [[ -n $3 ]] ; then
+					# For replace @REM_INT_DEP@ with what was passed
+					# to --remove-internal-dep
+					sed -e "s|@REM_INT_DEP@|$3|g" ${x} > \
+						${T}/$$.rem_int_deps.patch
+
+					x="${T}/$$.rem_int_deps.patch"
+				fi
+
+				if ELT_try_and_apply_patch "$1" "${x}" ; then
+					ret=0
+					break
+				fi
+			fi
+		done
 	fi
 
 	return ${ret}
@@ -344,4 +330,63 @@ darwintoolize() {
 			;;
 		esac
 	done
+}
+
+# char *VER_major(string)
+#
+#    Return the Major (X of X.Y.Z) version
+#
+VER_major() {
+	[[ -z $1 ]] && return 1
+
+	local VER=$@
+	echo ${VER%%[^[:digit:]]*}
+}
+
+# char *VER_minor(string)
+#
+#    Return the Minor (Y of X.Y.Z) version
+#
+VER_minor() {
+	[[ -z $1 ]] && return 1
+
+	local VER=$@
+	VER=${VER#*.}
+	echo ${VER%%[^[:digit:]]*}
+}
+
+# char *VER_micro(string)
+#
+#    Return the Micro (Z of X.Y.Z) version.
+#
+VER_micro() {
+	[[ -z $1 ]] && return 1
+
+	local VER=$@
+	VER=${VER#*.*.}
+	echo ${VER%%[^[:digit:]]*}
+}
+
+# int VER_to_int(string)
+#
+#    Convert a string type version (2.4.0) to an int (132096)
+#    for easy compairing or versions ...
+#
+VER_to_int() {
+	[[ -z $1 ]] && return 1
+
+	local VER_MAJOR=$(VER_major "$1")
+	local VER_MINOR=$(VER_minor "$1")
+	local VER_MICRO=$(VER_micro "$1")
+	local VER_int=$(( VER_MAJOR * 65536 + VER_MINOR * 256 + VER_MICRO ))
+
+	# We make version 1.0.0 the minimum version we will handle as
+	# a sanity check ... if its less, we fail ...
+	if [[ ${VER_int} -ge 65536 ]] ; then
+		echo "${VER_int}"
+		return 0
+	fi
+
+	echo 1
+	return 1
 }
