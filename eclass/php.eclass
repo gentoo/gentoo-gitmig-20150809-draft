@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.14 2003/05/14 22:52:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.15 2003/05/14 22:59:56 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -69,6 +69,7 @@ DEPEND="${DEPEND}
     xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.96 dev-libs/expat )
 	zlib? ( sys-libs/zlib )
 	!dev-libs/9libs
+	virtual/mta
 	"
 #9libs causes a configure error
 
@@ -185,6 +186,8 @@ php_src_compile() {
 #		static) myconf="${myconf} --enable-embed=static" ;;
 #		*) myconf="${myconf} --disable-embed" ;;
 #	esac;
+
+	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
 
 	use berkdb && myconf="${myconf} --with-db3=/usr"
 	use cjk && myconf="${myconf} --enable-mbstring --enable-mbregex"
