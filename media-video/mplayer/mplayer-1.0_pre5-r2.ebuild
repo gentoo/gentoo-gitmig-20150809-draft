@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.21 2004/10/31 00:47:14 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.22 2004/11/09 15:07:49 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -228,7 +228,7 @@ src_compile() {
 	# Video Output #
 	#############
 	myconf="${myconf} $(use_enable 3dfx)"
-	if use xvid && use 3dfx; then
+	if use 3dfx; then
 		myconf="${myconf} --enable-tdfxvid"
 	else
 		myconf="${myconf} --disable-tdfxvid"
