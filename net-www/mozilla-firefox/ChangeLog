@@ -1,6 +1,6 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.32 2004/04/26 22:37:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.33 2004/04/27 09:03:59 aliz Exp $
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-0.8-r3.ebuild:
@@ -22,6 +22,8 @@
   - Filter -fno-default-inline for bug 42488 (mozilla-firefox fails to
     link due to incompatible flag)
   - Filter -fstack-protector to fix bug 45671
+
+*mozilla-firefox-0.8-r3 (26 Apr 2004)
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   +mozilla-firefox-0.8-r3.ebuild:
