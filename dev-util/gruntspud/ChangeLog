@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/gruntspud
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gruntspud/ChangeLog,v 1.1 2004/04/11 22:29:16 zx Exp $
+
+*gruntspud-0.4.5_beta (11 Apr 2004)
+
+  11 Apr 2004; Chris Aniszczyk <zx@gentoo.org> gruntspud-0.4.5_beta.ebuild,
+  metadata.xml:
+  Initial Import. Closes #46024
+
