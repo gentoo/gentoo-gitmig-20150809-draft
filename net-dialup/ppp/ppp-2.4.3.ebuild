@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3.ebuild,v 1.1 2004/11/27 10:48:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3.ebuild,v 1.2 2004/11/27 13:34:46 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -9,8 +9,8 @@ IUSE="gtk ipv6 activefilter pam atm mppe-mppc dhcp"
 DESCRIPTION="Point-to-point protocol"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	http://www.polbox.com/h/hs001/ppp-2.4.3-mppe-mppc-1.1.patch.gz
-	http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz"
+	mppe-mppc? ( http://www.polbox.com/h/hs001/ppp-2.4.3-mppe-mppc-1.1.patch.gz )
+	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
@@ -31,8 +31,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/ppp_flags.patch || die "patch failed"
 	epatch ${FILESDIR}/${PV}/mpls.patch || die "patch failed"
 	epatch ${FILESDIR}/${PV}/killaddr-smarter.patch || die "patch failed"
-
-	sed -i "s:pcap-bpf\.h:net/bpf.h:" pppd/sys-linux.c pppd/demand.c pppd/Makefile.linux
 
 	useq mppe-mppc && {
 		einfo "Enabling mppe-mppc support"
