@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.27 2004/07/11 20:20:25 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.28 2004/07/17 15:21:01 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -495,7 +495,7 @@ function webapp_pkg_postinst ()
 		if [ "$IS_UPGRADE" = "1" ] ; then
 			einfo "Removing old version $REMOVE_PKG"
 
-			emerge -C "$CATEGORY/$REMOVE_PKG"
+			emerge -C "$REMOVE_PKG"
 		fi
 	else
 		# vhosts flag is on
