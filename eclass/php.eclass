@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.13 2003/05/14 20:37:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.14 2003/05/14 22:52:35 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -25,8 +25,9 @@ MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 [ -z "$HOMEPAGE" ]	&& HOMEPAGE="http://www.php.net/"
 [ -z "$LICENSE" ]	&& LICENSE="PHP"
-[ -z "$SRC_URI" ] 	&& SRC_URI="http://us3.php.net/distributions/${MY_P}.tar.bz2"
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
+# PHP does automatic mirroring from this URI
+[ -z "$SRC_URI" ] 	&& SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 
 
 IUSE="${IUSE} X berkdb cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
@@ -44,7 +45,7 @@ DEPEND="${DEPEND}
     firebird? ( >=dev-db/firebird-1.0 )
     flash? ( media-libs/libswf >=media-libs/ming-0.2a )
     freetds? ( >=dev-db/freetds-0.53 )
-    gd? ( media-libs/libgd )
+    gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
     gdbm? ( >=sys-libs/gdbm-1.8.0 )
     imap? ( >=net-mail/uw-imap-2001a-r1 )
 	java? ( >=virtual/jdk-1.4 )
@@ -55,7 +56,7 @@ DEPEND="${DEPEND}
     nls? ( sys-devel/gettext )
     odbc? ( >=dev-db/unixODBC-1.8.13 )
     pam? ( >=sys-libs/pam-0.75 )
-    pdflib? ( >=media-libs/pdflib-4.0.3 )
+    pdflib? ( >=media-libs/pdflib-4.0.3 >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
     png? ( >=media-libs/libpng-1.2.5 )
     postgres? ( >=dev-db/postgresql-7.1 )
     qt? ( >=x11-libs/qt-2.3.0 )
