@@ -130,3 +130,4 @@ move net-www/phpwebsite www-apps/phpwebsite
 move net-www/roundup www-apps/roundup
 move net-www/scgi www-apps/scgi
 move net-www/swish-e www-apps/swish-e
+move net-www/tikiwiki www-apps/tikiwiki
