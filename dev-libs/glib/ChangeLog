@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.123 2005/02/06 22:07:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.124 2005/02/11 13:07:39 foser Exp $
+
+*glib-2.6.2-r1 (11 Feb 2005)
+
+  11 Feb 2005; foser <foser@gentoo.org> glib-2.6.2-r1.ebuild :
+  Enable static build by default for pam
+  Add epunt for cxx checks (#79485)
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> glib-2.4.8.ebuild:
   Marked stable on mips.

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.2.ebuild,v 1.1 2005/02/05 06:27:57 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.2-r1.ebuild,v 1.1 2005/02/11 13:07:39 foser Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
-IUSE="doc static"
+IUSE="doc"
 
 DEPEND=">=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
@@ -20,15 +20,16 @@ RDEPEND="virtual/libc"
 
 src_compile() {
 
+	epunt_cxx
+
 	if use ppc-macos; then
 		glibtoolize
-#	else
-#		elibtoolize
 	fi
 
+	# enable static for PAM
 	econf \
 		--with-threads=posix \
-		`use_enable static` \
+		--enable-static \
 		`use_enable doc gtk-doc` \
 		|| die
 
