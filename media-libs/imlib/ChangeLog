@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/imlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.3 2002/03/21 09:26:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.4 2002/04/03 00:29:39 azarah Exp $
+
+  03 Apr 2002; M.Schlemmer <azarah@gentoo.org> imlib-1.9.13-r1.ebuild :
+
+  Remove unneeded aclocal, autoconf and automake.
 
 *imlib-1.9.13-r1 (21 Mar 2002)
 

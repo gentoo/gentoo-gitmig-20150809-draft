@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.13-r1.ebuild,v 1.2 2002/03/24 22:24:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.13-r1.ebuild,v 1.3 2002/04/03 00:29:39 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Imlib is a general Image loading and rendering library."
@@ -23,9 +23,6 @@ src_compile() {
 	
 	#update libtool to fix "relink" bug
 	libtoolize --copy --force
-	aclocal
-	autoconf
-	automake --add-missing
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
