@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/fluxconf-0.9.4.ebuild,v 1.1 2003/06/01 21:30:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/fluxconf-0.9.4.ebuild,v 1.2 2003/06/01 21:33:00 mholzer Exp $
 
 IUSE=""
 
@@ -26,6 +26,7 @@ src_install () {
 
 	dosym /usr/bin/fluxconf /usr/bin/fluxkeys
 	dosym /usr/bin/fluxconf /usr/bin/fluxmenu
+	dosym /usr/bin/fluxconf /usr/bin/fluxbare
 	
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
