@@ -1,3 +1,4 @@
+virtual/w3m             www-client/w3m
 sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/alsa	        media-sound/alsa-driver    
 virtual/antivirus	app-antivirus/clamav
