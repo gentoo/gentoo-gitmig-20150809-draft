@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/memprof
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.5 2003/02/12 06:45:16 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.6 2004/01/30 20:40:52 gustavoz Exp $
+
+  30 Jan 2004; <gustavoz@gentoo.org> memprof-0.5.1.ebuild:
+  marked -sparc, it's b0rked
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
