@@ -1,6 +1,19 @@
 # ChangeLog for app-misc/freemind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.14 2005/01/01 15:02:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.15 2005/01/12 21:55:46 luckyduck Exp $
+
+*freemind-0.7.1-r1 (12 Jan 2005)
+
+  12 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +freemind-0.7.1-r1.ebuild,
+  freemind-0.7.1.ebuild:
+  freemind now generates an menu entry. thanks to Sebastian Roth
+  <sebastian.roth@frm2.tum.de> and Petteri Räty <petteri.raty@welho.com>. fixes
+  bug #76900.
+
+*freemind-0.7.1-r1 12 Jan 2005
+
+  12 Jan 2005;  <> 
+  # INSERT ENTRY HERE
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> freemind-0.7.1.ebuild:
   Stable on sparc.

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.7.1.ebuild,v 1.14 2005/01/12 21:55:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.7.1-r1.ebuild,v 1.1 2005/01/12 21:55:46 luckyduck Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
 DESCRIPTION="Mind-mapping software written in Java"
 HOMEPAGE="http://freemind.sf.net"
@@ -22,7 +22,7 @@ src_compile() {
 	local antflags="jar browser"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} doc"
-	ant ${antflags}
+	ant ${antflags} || die "Compiling failed!"
 }
 
 src_install() {
@@ -40,5 +40,10 @@ src_install() {
 
 	into /opt
 	newbin ${PN}.sh ${PN}
+
+	mv ${S}/images/FreeMindWindowIcon.png ${S}/images/freemind.png
+	doicon ${S}/images/freemind.png
+
+	make_desktop_entry freemind Freemind freemind.png Utility
 }
 
