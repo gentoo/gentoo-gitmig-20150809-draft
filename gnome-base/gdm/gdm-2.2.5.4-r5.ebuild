@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.14 2002/12/09 04:22:37 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.15 2002/12/25 18:59:46 azarah Exp $
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -110,15 +110,19 @@ src_install() {
 
 	cd ${S}
 
-	#support for new session stuff
+	# Support for new session stuff
 	rm -rf ${D}/etc/X11/gdm/Sessions
 	dosym ../Sessions /etc/X11/gdm/Sessions
-	
+
+	# Make sure the users environment are set properly
+	# (bash users only though :( )
+	dosed "s:#!/bin/sh:#!/bin/bash --login:g" /etc/X11/gdm/PreSession/Default
+
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
 }
 
 pkg_preinst() {
-	#support for new session stuff
+	# Support for new session stuff
 	if [ -d /etc/X11/gdm/Sessions -a ! -L ${ROOT}/etc/X11/gdm/Sessions ]
 	then
 		mv -f /etc/X11/gdm/Sessions /etc/X11/gdm/Sessions.old

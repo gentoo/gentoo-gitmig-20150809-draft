@@ -1,17 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.12.ebuild,v 1.5 2002/12/15 12:35:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.12-r2.ebuild,v 1.1 2002/12/25 18:59:46 azarah Exp $
 
+inherit eutils gnome.org
 
-inherit gnome.org
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 IUSE="nls"
-
+SRC_URI="${SRC_URI}
+	http://cvs.gentoo.org/~foser/gentoo-gdm-theme.tar.bz2"
 MY_V="`echo ${PV} |cut -b -5`"
 
 RDEPEND=">=sys-libs/pam-0.72
@@ -28,17 +29,6 @@ RDEPEND=">=sys-libs/pam-0.72
 DEPEND="${RDEPEND}
 	>=x11-base/xfree-4.2.0-r3"
 
-pkg_setup() {
-	# This is not a very good way to do this, but
-	# it saves users the effort of remerging xfree..
-	# See bug #10190
-	cd /etc/X11
-	if patch -p0 --dry-run < ${FILESDIR}/${PN}-startDM.sh.patch &> /dev/null
-	then
-		einfo "Fixing startDM.sh..."
-		patch -p0 < ${FILESDIR}/${PN}-startDM.sh.patch > /dev/null || die
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -52,8 +42,14 @@ src_unpack() {
 	cd ${S}/config
 	cp gdm.conf.in gdm.conf.in.orig
 	sed -e "s:/usr/bin/X11:/usr/X11R6/bin:g" \
+		-e "s:=circles:=gentoo-emergence:" \
+		-e "s:command=/usr/X11R6/bin/X:command=/usr/X11R6/bin/X -nolisten tcp:" \
 		gdm.conf.in.orig > gdm.conf.in
+
 	rm -f gdm.conf.in.orig
+
+	# Make the config use the Gentoo theme
+	
 }
 
 src_compile() {
@@ -135,9 +131,16 @@ src_install() {
 
 	cd ${S}
 
-	#support for new session stuff
+	# Support for new session stuff
 	rm -rf ${D}/etc/X11/gdm/Sessions
 	dosym ../Sessions /etc/X11/gdm/Sessions
+
+	# Make sure the users environment are set properly
+	# (bash users only though :( )
+	dosed "s:#!/bin/sh:#!/bin/bash --login:g" /etc/X11/gdm/PreSession/Default
+
+	# Move Gentoo theme in
+	mv ${WORKDIR}/gentoo-emergence  ${D}/usr/share/gdm/themes
 	
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
 }
@@ -180,7 +183,7 @@ pkg_postinst() {
 		fi
 	fi
 
-	# unmerge nukes sometimes
+	# Unmerge nukes sometimes
 	if [ ! -d ${ROOT}/var/lib/gdm ]
 	then
 		mkdir -p ${ROOT}/var/lib/gdm
@@ -204,3 +207,4 @@ pkg_postrm() {
 	einfo "To remove GDM from startup please execute"
 	einfo "'rc-update del xdm default'"
 }
+

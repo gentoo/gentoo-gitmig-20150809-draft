@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.24 2002/12/13 10:56:53 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.25 2002/12/25 18:59:46 azarah Exp $
+
+*gdm-2.4.0.12-r2 (25 Dec 2002)
+
+  25 Martin Schlemmer <azarah@gentoo.org> gdm-2.4.0.12-r2.ebuild :
+  Change /etc/X11/gdm/PreSession/Default's shell to '/bin/bash --login' to
+  set the users environment properly.  This will mostly only work for bash
+  and sh users :(
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -12,7 +19,6 @@
 *gdm-2.4.0.12 (28 Nov 2002)
   28 Nov 2002; Spider <spider@gentoo.org> : gdm-2.4.0.12.ebuild :
   add the latest version, get the SRC_URI fixed
-
 
 *gdm-2.4.0.11-r1 (07 Nov 2002)
   11 Nov 2002; L. Boshell <leonardop@gentoo.org> : Actually apply the
