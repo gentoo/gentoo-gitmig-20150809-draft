@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.8 2004/06/26 23:01:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.9 2004/06/27 02:13:33 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -42,4 +42,7 @@ src_unpack() {
 	# prevent segv if /proc/bus/usb/devices is missing
 	# http://mail.gnome.org/archives/gnome-pilot-list/2004-February/msg00013.html
 	cd ${S}; epatch ${FILESDIR}/${P}-missing_proc.patch
+
+	# http://bugs.gentoo.org/show_bug.cgi?id=52550 -- add new clie model
+	epatch ${FILESDIR}/${P}-clie.patch
 }
