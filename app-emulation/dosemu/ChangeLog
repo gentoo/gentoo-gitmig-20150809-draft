@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.9 2003/04/16 12:12:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.10 2003/06/07 16:23:28 hanno Exp $
+
+*dosemu-1.1.5 (07 Jun 2003)
+
+  07 Jun 2003; Hanno Boeck <hanno@gentoo.org> dosemu-1.1.5.ebuild:
+  Update to latest versions of dosemu and freedos.
 
 *dosemu-1.1.4.15 (16 Apr 2003)
 
