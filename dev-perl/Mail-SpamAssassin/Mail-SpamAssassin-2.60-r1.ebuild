@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.60-r1.ebuild,v 1.4 2004/04/16 11:29:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.60-r1.ebuild,v 1.5 2004/06/03 17:16:25 agriffis Exp $
 
 inherit perl-module
 
@@ -27,7 +27,7 @@ DEPEND=">=dev-perl/ExtUtils-MakeMaker-6.11-r1
 myconf="CONTACT_ADDRESS=root@localhost RUN_NET_TESTS=0"
 
 # If ssl is enabled, spamc can be built with ssl support
-if [ "`use ssl`" ];
+if use ssl;
 then
 	myconf="${myconf} ENABLE_SSL=yes"
 fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.7 2004/04/15 02:41:25 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.8 2004/06/03 17:13:30 agriffis Exp $
 
 inherit perl-module eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 	cd ${S}
 	#gtk-2 suggested patch
-	if [ "`use gtk2`" ]
+	if use gtk2
 	then
 		epatch ${FILESDIR}/gtk2-patch.diff
 	fi

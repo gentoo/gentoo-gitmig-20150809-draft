@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.17 2004/04/15 02:41:25 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.18 2004/06/03 17:13:30 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> Inline-0.44-r1.ebuild:
+  Fix use invocation
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> Inline-0.44-r1.ebuild:
   Marked stable on mips.
