@@ -1,6 +1,17 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.54 2003/03/30 19:28:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.55 2003/04/09 22:06:21 azarah Exp $
+
+*mplayer-0.90 (09 Apr 2003)
+
+  09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90.ebuild :
+  New version:
+  - Add 'dvb' use flag (bug #13809), thanks to Juri Haberland <juri@koschikode.com>
+  - Fix MPlayer to detect/use altivec on benh kernels (bug #18511), thanks to
+    Stephan van Maris <svmaris@e-village.nl> and Lars Weiler <pylon@gentoo.org>.
+  - Remove dvdnav support as its broken anyhow.  According to lists, no effort
+    will be made soon to get it fixed.
+  This should also close bug #18879.
 
   30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_rc5.ebuild :
   Mark stable for x86.  Fix bug #18211, thanks to Philippe Lafoucri?re
