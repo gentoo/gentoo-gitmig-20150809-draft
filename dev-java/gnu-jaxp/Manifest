@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5f26bfa5513cfc2d33226a6785343a3b ChangeLog 1321
+MD5 4035f3ef3a5f61658a8429075e076a46 gnu-jaxp-1.0_beta1-r1.ebuild 943
 MD5 18423680451ecd38e77c82669cbf4bf7 gnu-jaxp-1.0_beta1.ebuild 756
-MD5 70cbfcbe09c032bb049ec5689c75ca2d ChangeLog 1214
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 f6e04f404df988f30e1ec75577b6aa15 gnu-jaxp-1.0_beta1-r1.ebuild 932
 MD5 ccfb07c99005781e9b7c4c232604b056 files/digest-gnu-jaxp-1.0_beta1 134
 MD5 3d1c4ac4f9e43835b6eef1ddb4f5dcd3 files/digest-gnu-jaxp-1.0_beta1-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVcZ/rLF9B432nYRAnzFAJ0b8aS7N56o73kpXSVCdcew45TCRACgy7tp
-w5zlx104ThfuqTMHIAc4984=
-=Zzyn
------END PGP SIGNATURE-----
