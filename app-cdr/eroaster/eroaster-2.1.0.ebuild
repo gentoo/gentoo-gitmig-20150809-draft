@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.7 2002/08/16 02:31:09 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.8 2002/08/30 03:35:18 naz Exp $
 
 DESCRIPTION="A graphical frontend for cdrecord and mkisofs written in gnome-python"
 HOMEPAGE="http://eroaster.sourceforge.net"
@@ -30,7 +30,7 @@ src_compile() {
 src_install () {
 	make \
 		prefix=${D}/usr \
-		gnorbadir=${D}/usr \
+		gnorbadir=${D}/usr/share/eroaster \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die

@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.4 2002/08/06 20:41:07 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.5 2002/08/30 03:35:18 naz Exp $
 
 *eroaster-2.1.0 (11 July 2002) 
 
@@ -14,6 +14,11 @@
    I removed the dependency on mkisofs since that is now part of the cdrtools
    package, and sys-app/mkisofs has been depreciated.  I also fixed the sandbox
    violation for this version.
+
+   29 Aug 2002; Micheal Nazaroff <naz@gentoo.org> eroaster-2.1.0.ebuild:
+
+   Fixed eroaster.gnorba path since it was getting dropped into /usr, this
+   should fix about everything in this package.
 
 *eroaster-2.0.12 (5 July 2002) Bart Verwilst <verwilst@gentoo.org>
 
