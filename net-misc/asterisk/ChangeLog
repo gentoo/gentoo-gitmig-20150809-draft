@@ -2,6 +2,15 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*asterisk-0.5.0 (04 Jan 2004)
+
+  04 Jan 2004; Stefan Knoblich <stkn@gentoo.org> asterisk-0.2.0.ebuild,
+  asterisk-0.5.0.ebuild, metadata.xml,
+  files/0.5.0/asterisk-0.5.0-Makefile-samples.patch,
+  files/0.5.0/asterisk-0.5.0-makefile-fix.diff, files/0.5.0/asterisk.confd,
+  files/0.5.0/asterisk.rc6:
+  new ebuild asterisk-0.5.0, copyright header updates
+
   30 Nov 2003; Brandy Westcott brandy@gentoo.org asterisk-0.2.0.ebuild:
   Pinned emake to -j1. Closes bug #34642.
 

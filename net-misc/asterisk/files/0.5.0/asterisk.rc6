@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/0.5.0/asterisk.rc6,v 1.1 2004/01/04 00:25:22 stkn Exp $
+
+depend() {
+	need net	
+}
+
+start() {
+	ebegin "Starting asterisk PBX"
+	/usr/sbin/asterisk ${OPTIONS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping asterisk PBX"
+	/usr/sbin/asterisk -r -x "STOP NOW" 2>/dev/null
+	eend $?
+}

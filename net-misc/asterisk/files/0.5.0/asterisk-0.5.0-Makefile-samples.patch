@@ -1,0 +1,45 @@
+--- asterisk/Makefile.orig	2003-10-06 21:47:55.000000000 -0400
++++ asterisk/Makefile	2003-10-06 21:48:40.000000000 -0400
+@@ -150,7 +150,7 @@
+ 	@echo " +               $(MAKE) install                +"  
+ 	@echo " +-------------------------------------------+"  
+ 
+-all: depend asterisk subdirs
++all: depend configs/asterisk.conf.sample asterisk subdirs
+ 
+ editline/config.h:
+ 	cd editline && unset CFLAGS LIBS && ./configure ; \
+@@ -243,6 +243,17 @@
+ 	done
+ 	mkdir -p $(AGI_DIR)
+ 
++# Added for Gentoo to pick up the proper directories.
++configs/asterisk.conf.sample:
++	echo "[directories]" > configs/asterisk.conf.sample
++	echo "astetcdir => $(ASTETCDIR)" >> configs/asterisk.conf.sample
++	echo "astmoddir => $(MODULES_DIR)" >> configs/asterisk.conf.sample
++	echo "astvarlibdir => $(ASTVARLIBDIR)" >> configs/asterisk.conf.sample
++	echo "astagidir => $(AGI_DIR)" >> configs/asterisk.conf.sample
++	echo "astspooldir => $(ASTSPOOLDIR)" >> configs/asterisk.conf.sample
++	echo "astrundir => $(ASTVARRUNDIR)" >> configs/asterisk.conf.sample
++	echo "astlogdir => $(ASTLOGDIR)" >> configs/asterisk.conf.sample	
++
+ update: 
+ 	@if [ -d CVS ]; then \
+ 		echo "Updating from CVS..." ; \
+@@ -326,14 +337,7 @@
+ 		fi ; \
+ 		install $$x $(ASTETCDIR)/`basename $$x .sample` ;\
+ 	done
+-	echo "[directories]" > $(ASTETCDIR)/asterisk.conf
+-	echo "astetcdir => $(ASTETCDIR)" >> $(ASTETCDIR)/asterisk.conf
+-	echo "astmoddir => $(MODULES_DIR)" >> $(ASTETCDIR)/asterisk.conf
+-	echo "astvarlibdir => $(ASTVARLIBDIR)" >> $(ASTETCDIR)/asterisk.conf
+-	echo "astagidir => $(AGI_DIR)" >> $(ASTETCDIR)/asterisk.conf
+-	echo "astspooldir => $(ASTSPOOLDIR)" >> $(ASTETCDIR)/asterisk.conf
+-	echo "astrundir => $(ASTVARRUNDIR)" >> $(ASTETCDIR)/asterisk.conf
+-	echo "astlogdir => $(ASTLOGDIR)" >> $(ASTETCDIR)/asterisk.conf
++
+ 	for x in sounds/demo-*; do \
+ 		if grep -q "^%`basename $$x`%" sounds.txt; then \
+ 			install $$x $(ASTVARLIBDIR)/sounds ; \

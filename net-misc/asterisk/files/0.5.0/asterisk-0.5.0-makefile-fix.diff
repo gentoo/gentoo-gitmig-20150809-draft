@@ -1,0 +1,21 @@
+--- Makefile.orig	2003-11-18 06:23:35.000000000 +0100
++++ Makefile	2003-11-18 06:25:21.000000000 +0100
+@@ -280,15 +280,15 @@
+ 		mkdir -p $(ASTSPOOLDIR)/voicemail/default; \
+ 		rm -f $(ASTSPOOLDIR)/vm; \
+ 	fi
+-	ln -s $(ASTSPOOLDIR)/voicemail/default $(ASTSPOOLDIR)/vm
++	ln -s $(subst $(INSTALL_PREFIX),,$(ASTSPOOLDIR))/voicemail/default $(ASTSPOOLDIR)/vm
+ 	rm -f $(MODULES_DIR)/chan_ixj.so
+ 	rm -f $(MODULES_DIR)/chan_tor.so
+ 	mkdir -p $(ASTVARLIBDIR)/sounds
+ 	mkdir -p $(ASTLOGDIR)/cdr-csv
+ 	mkdir -p $(ASTVARLIBDIR)/keys
+ 	install -m 644 keys/iaxtel.pub $(ASTVARLIBDIR)/keys
+-	( cd $(ASTVARLIBDIR)/sounds  ; ln -s $(ASTSPOOLDIR)/vm . )
+-	( cd $(ASTVARLIBDIR)/sounds  ; ln -s $(ASTSPOOLDIR)/voicemail . )
++	( cd $(ASTVARLIBDIR)/sounds  ; ln -s $(subst $(INSTALL_PREFIX),,$(ASTSPOOLDIR))/vm . )
++	( cd $(ASTVARLIBDIR)/sounds  ; ln -s $(subst $(INSTALL_PREFIX),,$(ASTSPOOLDIR))/voicemail . )
+ 	@echo " +---- Asterisk Installation Complete -------+"  
+ 	@echo " +                                           +"
+ 	@echo " +    YOU MUST READ THE SECURITY DOCUMENT    +"
