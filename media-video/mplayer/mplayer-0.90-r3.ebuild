@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r3.ebuild,v 1.3 2003/07/16 17:00:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r3.ebuild,v 1.4 2003/07/16 17:16:23 lu_zero Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb"
 
@@ -322,10 +322,14 @@ src_install() {
 		fi
 	fi
 
-	# Install the documentation
-	dohtml -r ${S}/DOCS/*
+	# Install the documentation; DOCS is all mixed up not just html
+	mkdir -p ${D}/usr/share/doc/${PF} || die
+	cp -r ${S}/DOCS ${D}/usr/share/doc/${PF}/ || die
+ 	dodoc AUTHORS ChangeLog README
 
-	dodoc AUTHORS ChangeLog README
+	# Copy misc tools to documentation path, as they're not installed
+	# directly
+	cp -r ${S}/TOOLS ${D}/usr/share/doc/${PF} || die
 
 	# Install the default Skin and Gnome menu entry
 	if [ -n "`use gtk`" ]
