@@ -20,6 +20,7 @@ dev-libs
 dev-lisp 
 dev-ml
 dev-perl 
+dev-php
 dev-python 
 dev-ruby 
 dev-tcltk
