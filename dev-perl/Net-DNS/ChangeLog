@@ -1,9 +1,12 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.4 2002/08/01 03:11:40 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.5 2002/09/19 20:42:56 mcummings Exp $
 
 
 *Net-DNS-0.22 (11 Jun 2002)
+
+  19 Sep 2002; <mcummings@gentoo.org> : added missing dependancy for 
+  Test-Simple, which provides Test-More, which is needed
 
   31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Net-DNS-0.22.ebuild :
 
