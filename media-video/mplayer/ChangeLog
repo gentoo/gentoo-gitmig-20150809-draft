@@ -1,8 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.29 2002/09/10 16:55:53 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.30 2002/09/11 20:07:27 gerk Exp $
 
 *mplayer-0.90_pre6-r3 (12 Aug 2002)
+
+  Sep 11 2002; Mark Guertin <gerk@gentoo.org> mplayer-0.90_pre6-63.ebuild :
+  Adjusted divx4linux as x86 only dep (it supplies x86 binary libs), goes along
+  with bug #7796
 
   Sep 10 2002, Mark Guertin <gerk@gentoo.org> :
   adjusted nasm and win32codes to use x86 USE flags (they don't work on 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r3.ebuild,v 1.5 2002/09/10 16:55:53 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r3.ebuild,v 1.6 2002/09/11 20:07:27 gerk Exp $
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 # 'encode' in USE for MEncoder.
 # If 'dvd' in USE, only DEPEND on libdvdnav, as
 # we use libdvdkit that comes with.
-RDEPEND=">=media-libs/divx4linux-20020418
+RDEPEND="x86? ( >=media-libs/divx4linux-20020418 )
 	x86? ( >=media-libs/win32codecs-0.60 )
 	dvd? ( media-libs/libdvdnav )
 	gtk? ( =x11-libs/gtk+-1.2*
