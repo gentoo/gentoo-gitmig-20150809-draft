@@ -1,6 +1,16 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.186 2004/06/09 18:19:20 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.187 2004/06/09 18:53:55 rizzo Exp $
+
+*gaim-0.78-r2 (09 Jun 2004)
+
+  09 Jun 2004; Don Seiler <rizzo@gentoo.org>
+  +files/gaim-0.77-newtrayicon.patch,
+  +files/gaim-0.78-jabber_disconnect.patch,
+  +files/gaim-0.78-log_find_click.patch,
+  +files/gaim-0.78-msn_disconnect_fix.patch,
+  +files/gaim-0.78-paste_html_img_crash.patch, +gaim-0.78-r2.ebuild:
+  Working in patches from Warren Togami's SRPMs.  Also closes Bug #52890
 
   09 Jun 2004; Don Seiler <rizzo@gentoo.org> -gaim-0.78.ebuild:
   Obsolete
