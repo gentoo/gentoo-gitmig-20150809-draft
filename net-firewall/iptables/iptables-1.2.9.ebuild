@@ -1,32 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.5 2004/01/28 13:51:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.6 2004/01/29 23:19:33 vapier Exp $
 
 inherit eutils flag-o-matic
 
-# prevent it from causing ICMP errors.
-# http://bugs.gentoo.org/show_bug.cgi?id=23645
-filter-flags "-fstack-protector"
-
-IUSE="ipv6"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Linux kernel (2.4+) firewall, NAT and packet mangling tools"
-SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 HOMEPAGE="http://www.iptables.org/"
+SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~alpha sparc hppa ~arm ~mips ~ia64 amd64"
-LICENSE="GPL-2"
+IUSE="ipv6"
 
 # iptables is dependent on kernel sources.  Strange but true.
 DEPEND="virtual/os-headers"
 
 src_unpack() {
-	if [ -z $( get-flag O ) ]; then
-		append-flags -O2
-	fi
-
 	replace-flags -O0 -O2
 
 	unpack ${A}
@@ -44,6 +34,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# prevent it from causing ICMP errors.
+	# http://bugs.gentoo.org/show_bug.cgi?id=23645
+	filter-flags "-fstack-protector"
+
 	# iptables and libraries are now installed to /sbin and /lib, so that
 	# systems with remote network-mounted /usr filesystems can get their
 	# network interfaces up and running correctly without /usr.
@@ -91,4 +85,3 @@ pkg_postinst() {
 	einfo "If you are using the iptables initsscript you should save your"
 	einfo "rules using the new iptables version before rebooting."
 }
-

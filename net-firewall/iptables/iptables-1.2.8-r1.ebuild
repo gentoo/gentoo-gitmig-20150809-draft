@@ -1,30 +1,22 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.8-r1.ebuild,v 1.8 2003/09/22 02:06:45 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.8-r1.ebuild,v 1.9 2004/01/29 23:19:33 vapier Exp $
 
 inherit eutils flag-o-matic
 
-filter-flags "-fstack-protector"
-
-IUSE="ipv6"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Kernel 2.4 firewall, NAT and packet mangling tools"
-SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 HOMEPAGE="http://www.iptables.org/"
+SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~alpha sparc hppa ~arm ~mips ia64"
-LICENSE="GPL-2"
+IUSE="ipv6"
 
 # iptables is dependent on kernel sources.  Strange but true.
 DEPEND="virtual/os-headers"
 
 src_unpack() {
-	if [ -z $( get-flag O ) ]; then
-		append-flags -O2
-	fi
-
 	unpack ${A}
 	cd ${S}
 
@@ -36,6 +28,7 @@ src_unpack() {
 
 	chmod +x extensions/.IMQ-test*
 
+	filter-flags -fstack-protector
 	cp Makefile Makefile.new
 	sed -e "s:-O2:${CFLAGS}:g" -e "s:/usr/local::g" Makefile.new > Makefile
 }
