@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.2 2004/02/17 16:47:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.3 2004/03/07 12:34:39 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -34,11 +34,11 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/gconf-2.4.0.1
 
-	>=dev-libs/libIDL-0.8.2
+	>=dev-libs/libIDL-0.8.3
 	>=gnome-base/ORBit2-2.8.3
 
-	>=media-libs/audiofile-0.2.5
-	>=media-sound/esound-0.2.32
+	>=media-libs/audiofile-0.2.6
+	>=media-sound/esound-0.2.33
 	>=gnome-base/gail-1.4.1
 	>=gnome-base/gnome-mime-data-2.4.1
 	>=gnome-base/gnome-vfs-2.4.2-r1
@@ -51,8 +51,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnomecanvas-2.4
 	>=gnome-base/libgnomeui-2.4.0.1
 
-	>=dev-libs/libxml2-2.6.6
-	>=dev-libs/libxslt-1.1.3
+	>=dev-libs/libxml2-2.6.7
+	>=dev-libs/libxslt-1.1.4
 
 	>=gnome-extra/acme-2.4.2-r1
 	>=gnome-extra/bug-buddy-2.4.2
@@ -90,7 +90,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-utils-2.4.1
 	>=media-libs/gstreamer-0.6.4
 	>=media-libs/gst-plugins-0.6.4
-	>=x11-libs/gtksourceview-0.7-r1
+	>=x11-libs/gtksourceview-0.7.1
 	>=gnome-extra/gucharmap-1.2
 	>=gnome-base/libgnomeprint-2.4.2
 	>=gnome-base/libgnomeprintui-2.4.2
