@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/locateopen
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/ChangeLog,v 1.1 2003/12/19 01:35:22 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/ChangeLog,v 1.2 2004/01/16 22:09:29 ciaranm Exp $
+
+*locateopen-0.8.0 (16 Jan 2004)
+
+  16 Jan 2004; Ciaran McCreesh <ciaranm@gentoo.org> locateopen-0.8.0.ebuild:
+  Version bump
 
 *locateopen-0.6.2 (19 Dec 2003)
 
