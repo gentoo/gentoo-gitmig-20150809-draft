@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1.ebuild,v 1.2 2003/07/16 21:32:00 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1.ebuild,v 1.3 2003/09/05 23:18:18 msterret Exp $
 
 IUSE="X svga aalib ggi"
 
@@ -30,7 +30,7 @@ src_compile() {
 	use X     || myconf="--with-x11-driver=no"
 #	use dga   || myconf="${myconf} --with-dga-driver=no"
 # ggi support removed due to upstream bug
-	#use ggi   || 
+	#use ggi   ||
 	myconf="${myconf} --with-ggi-driver=no"
 	use svga  || myconf="${myconf} --with-svga-driver=no"
 #	use aalib || myconf="${myconf} --with-aa-driver=no"
@@ -50,7 +50,7 @@ src_install() {
 		prefix=${D}/usr \
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
- 		LOCALEDIR=${D}/usr/share/locale \
+		LOCALEDIR=${D}/usr/share/locale \
 	install || die
 
 	use nls || rm -r ${D}/usr/share/locale

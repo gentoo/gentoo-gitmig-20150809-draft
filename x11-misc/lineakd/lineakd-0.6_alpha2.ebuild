@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.6_alpha2.ebuild,v 1.1 2003/04/09 03:18:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.6_alpha2.ebuild,v 1.2 2003/09/05 23:18:18 msterret Exp $
 
 IUSE="nls xosd"
 
@@ -18,13 +18,13 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 	virtual/x11
 	xosd? ( x11-libs/xosd )
 	nls? ( sys-devel/gettext )"
-     
+
 src_compile() {
 	econf `use_enable nls` `use_with xosd` --with-x || die
 	emake || die
 }
 
 src_install () {
-	make DESTDIR=${D} lineakddocdir=/usr/share/doc/${P} install || die 
+	make DESTDIR=${D} lineakddocdir=/usr/share/doc/${P} install || die
 	dodoc AUTHORS COPYING INSTALL README TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.25.ebuild,v 1.1 2003/06/25 04:13:23 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.25.ebuild,v 1.2 2003/09/05 23:18:18 msterret Exp $
 
 IUSE="truetype pam png jpeg gif tiff"
 
@@ -25,7 +25,7 @@ src_compile() {
 	use jpeg || myconf="${myconf} --disable-jpeg"
 	use gif || myconf="${myconf} --disable-gif"
 	use tiff || myconf="${myconf} --disable-tiff"
-	
+
 	econf \
 		--exec-prefix=/usr \
 		--with-wdmdir=/etc/X11/wdm \
@@ -37,6 +37,6 @@ src_install() {
 	rm ${D}/etc/pam.d/wdm
 	insinto /etc/pam.d
 	doins ${FILESDIR}/wdm
-	
+
 	make DESTDIR=${D} install || die
 }

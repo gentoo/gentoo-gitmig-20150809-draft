@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1_pre5.ebuild,v 1.5 2003/07/16 21:32:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1_pre5.ebuild,v 1.6 2003/09/05 23:18:18 msterret Exp $
 
 IUSE="X svga aalib"
 
@@ -49,7 +49,7 @@ src_install() {
 		prefix=${D}/usr \
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
- 		LOCALEDIR=${D}/usr/share/locale \
+		LOCALEDIR=${D}/usr/share/locale \
 	install || die
 
 	use nls || rm -r ${D}/usr/share/locale

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.0.1.ebuild,v 1.2 2003/05/05 21:33:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.0.1.ebuild,v 1.3 2003/09/05 23:18:18 msterret Exp $
 
 IUSE="gif jpeg X opengl truetype tiff png"
 
@@ -45,11 +45,11 @@ src_compile() {
 	use gif \
 		&& myconf="$myconf --with-gif" \
 		|| myconf="$myconf --with-gif=no"
-	
+
 	use jpeg \
 		&& myconf="${myconf} --with-jpeg" \
 		|| myconf="${myconf} --with-jpeg=no"
-	
+
 	use tiff \
 		&& myconf="${myconf} --with-tiff" \
 		|| myconf="${myconf} --with-tiff=no"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ami-1.0.11-r1.ebuild,v 1.2 2003/02/13 17:05:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ami-1.0.11-r1.ebuild,v 1.3 2003/09/05 23:18:18 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean IMS Ami"
@@ -24,7 +24,7 @@ src_compile() {
 	local config
 
 	use gnome && config="--enable-gnome-applet"
-	
+
 	econf --with-hangul-keyboard=2
 
 	emake || die

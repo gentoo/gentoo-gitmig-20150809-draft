@@ -15,7 +15,7 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	virtual/x11"
 
 src_install() {
-	
+
 	dobin lavaps
 	doman lavaps.1
 	dodoc COPYING README

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/wayv-0.2.ebuild,v 1.2 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/wayv-0.2.ebuild,v 1.3 2003/09/05 23:18:18 msterret Exp $
 
 PKG=${P/-0.2/.0.2}
 MY_P=${P/-0.2}
@@ -19,7 +19,7 @@ RDEPEND=""
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	
+
 	econf || die
 	emake || die
 }

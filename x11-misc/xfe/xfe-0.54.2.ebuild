@@ -19,7 +19,7 @@ src_compile() {
 
 	econf `use_enable nls` || die
 	emake || die
-	
+
 }
 
 src_install () {

@@ -28,7 +28,7 @@ src_install () {
 	dobin ${S}/util/bsetbg ${S}/util/bsetroot ${S}/util/commonbox-menugen ${S}/util/commonbox-imagebgmenugen
 	dodoc README.commonbox-utils AUTHORS COPYING
 	doman bsetroot.1 bsetbg.1
-	
+
 	insinto /usr/share/commonbox
 	doins ${S}/solidbgmenu
 }

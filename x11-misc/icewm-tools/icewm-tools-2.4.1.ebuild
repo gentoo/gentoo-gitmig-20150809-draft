@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewm-tools/icewm-tools-2.4.1.ebuild,v 1.2 2003/08/25 09:04:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewm-tools/icewm-tools-2.4.1.ebuild,v 1.3 2003/09/05 23:18:18 msterret Exp $
 
 DESCRIPTION="Convenience package for IceWM control center and tools"
 SRC_URI=""
@@ -12,7 +12,7 @@ DEPEND=">=x11-misc/icebgset-1.0
 		>=x11-misc/icecc-2.4
 		>=x11-misc/icecursorscfg-0.6
 		>=x11-misc/iceiconcvt-1.0
-        >=x11-misc/iceked-1.3
+		>=x11-misc/iceked-1.3
 		>=x11-misc/icemc-1.5
 		>=x11-misc/icesndcfg-1.1
 		>=x11-misc/icets-1.1

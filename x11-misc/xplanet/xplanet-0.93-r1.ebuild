@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.93-r1.ebuild,v 1.9 2003/02/13 17:20:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.93-r1.ebuild,v 1.10 2003/09/05 23:18:18 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A program to render images of the earth into the X root window"
@@ -21,7 +21,7 @@ src_compile() {
 	use gif \
 		&& myconf="${myconf} --with-gif" \
 		|| myconf="${myconf} --with-gif=no"
-	
+
 	use X \
 		&& myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --with-x=no"

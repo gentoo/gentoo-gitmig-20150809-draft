@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.4.11.ebuild,v 1.3 2003/02/13 17:17:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.4.11.ebuild,v 1.4 2003/09/05 23:18:18 msterret Exp $
 
 inherit debug
 
@@ -28,7 +28,7 @@ DEPEND="
 		>=dev-libs/libxml-1.8.16 "
 
 
-# the tabulated section is only needed if Gnome is in USE, but their disable-gnome doesn't work for now.  
+# the tabulated section is only needed if Gnome is in USE, but their disable-gnome doesn't work for now.
 
 #RDEPEND=""
 
@@ -36,10 +36,10 @@ S="${WORKDIR}/${P}"
 
 src_compile() {
 	local myconf="--enable-debug --enable-test --enable-crash-debug"
-	## Theres an upstream bug (filed) that disables this. when the next version is out, uncomment theese lines and it should work 
+	## Theres an upstream bug (filed) that disables this. when the next version is out, uncomment theese lines and it should work
 
-	
-#	use gnome && myconf="${myconf} --enable-gnometext-builtin --enable-shell-builtin" 
+
+#	use gnome && myconf="${myconf} --enable-gnometext-builtin --enable-shell-builtin"
 # 	use gnome || myconf="${myconf} --without-gnome --without-gnome-libs --disable-gnometext-builtin --disable-shell-builtin"
 
 	myconf="${myconf} --enable-gnometext --enable-shell"
@@ -48,7 +48,7 @@ src_compile() {
 	myconf="${myconf} --enable-networkload --enable-remote --enable-roottext"
 	myconf="${myconf} --enable-systemload --enable-consoledump"
 	econf ${myconf}  || die "configure failure. please file a bugreport"
-	
+
 	emake || die "compile failure. please file a bugreport"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1.ebuild,v 1.4 2003/08/01 13:51:43 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1.ebuild,v 1.5 2003/09/05 23:18:18 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Make use of extra buttons on newer keyboards."
@@ -29,7 +29,7 @@ src_compile() {
 	local myconf="--with-xosd"
 
 	use gtk2 \
-                && myconf="${myconf} --with-gtk"
+		&& myconf="${myconf} --with-gtk"
 
 	econf ${myconf} || die "./configure failed"
 

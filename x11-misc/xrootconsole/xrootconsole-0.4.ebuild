@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4.ebuild,v 1.6 2003/03/27 05:28:19 vladimir Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4.ebuild,v 1.7 2003/09/05 23:18:18 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -20,7 +20,7 @@ src_compile() {
 	emake || die "emake failed"
 }
 src_install () {
-	
+
 	dodir /usr
 	dodir /usr/bin
 	make BINDIR=${D}usr/bin/ install || die "install failed"

@@ -24,5 +24,5 @@ src_install () {
 
 	make DESTDIR=${D} install || die
 	dodoc README AUTHORS COPYING TODO NEWS Changelog
-	
+
 }

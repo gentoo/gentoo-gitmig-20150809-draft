@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/fluxconf-0.8.5.ebuild,v 1.6 2003/02/13 17:12:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/fluxconf-0.8.5.ebuild,v 1.7 2003/09/05 23:18:18 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Configuration editor for fluxbox"
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc "
 DEPEND="=x11-libs/gtk+-1.2*"
 
 src_compile() {
-	
+
 	econf || die
 	emake || die
 }
@@ -22,12 +22,12 @@ src_compile() {
 src_install () {
 
 	einstall || die
-	
+
 
 	rm ${D}/usr/bin/fluxkeys ${D}/usr/bin/fluxmenu
 
 	dosym /usr/bin/fluxconf /usr/bin/fluxkeys
 	dosym /usr/bin/fluxconf /usr/bin/fluxmenu
-	
+
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }

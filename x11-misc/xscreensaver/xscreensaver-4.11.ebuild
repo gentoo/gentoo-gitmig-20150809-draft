@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.11.ebuild,v 1.2 2003/07/20 00:27:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.11.ebuild,v 1.3 2003/09/05 23:18:18 msterret Exp $
 
 IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama"
 
@@ -63,7 +63,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	# disable rpm -q checking, otherwise it breaks sandbox if rpm is installed
 	epatch ${FILESDIR}/xscreensaver-4.10-norpm.patch
@@ -71,13 +71,13 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	
+
 	myconf="--with-fortune=/usr/bin/fortune"
-	
+
 	use gtk \
 		&& myconf="${myconf} --without-motif --with-gtk --with-xml" \
 		|| myconf="${myconf} --with-motif --without-gtk"
-		
+
 	use xinerama \
 		&& myconf="${myconf} --with-xinerama-ext" \
 		|| myconf="${myconf} --without-xinerama-ext"
@@ -106,8 +106,8 @@ src_compile() {
 		if [ -n "`use gnome`" ]; then
 			myconf="${myconf} --with-gnome --with-pixbuf"
 		fi
-	fi		
-		
+	fi
+
 	#export C_INCLUDE_PATH="/usr/include/libxml2/"
 	econf \
 		--enable-hackdir=/usr/lib/xscreensaver \
@@ -123,22 +123,22 @@ src_compile() {
 		--with-xdbe-ext \
 		--enable-locking \
 		${myconf} || die
-		
+
 	emake || die
 }
 
 src_install() {
 	[ -n "${KDEDIR}" ] && dodir ${KDEDIR}/bin
-	
+
 	make install_prefix="${D}" install || die
-	
-	# install correctly in gnome2 
+
+	# install correctly in gnome2
 	use gnome && ( \
 		dodir /usr/share/gnome/capplets
 		insinto /usr/share/gnome/capplets
 		doins driver/screensaver-properties.desktop
 	)
-	
+
 	# install symlink to satisfy kde
 	use kde && dosym /usr/share/control-center/screensavers /usr/lib/xscreensaver/config
 

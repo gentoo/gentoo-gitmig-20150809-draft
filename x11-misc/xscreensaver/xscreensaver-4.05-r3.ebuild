@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.13 2003/06/15 19:37:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.14 2003/09/05 23:18:18 msterret Exp $
 
 IUSE="pam gtk motif gnome opengl"
 
@@ -78,16 +78,16 @@ src_compile() {
 		--with-xdbe-ext \
 		--enable-locking \
 		${myconf} || die
-		
+
 	emake || die
 }
 
 src_install() {
 
 	[ -n "$KDEDIR" ] && dodir "$KDEDIR/bin"
-	
+
 	make install_prefix="${D}" install || die
-	# install correctly in gnome2 
+	# install correctly in gnome2
 	use gnome && ( \
 		dodir /usr/share/gnome/capplets
 		insinto /usr/share/gnome/capplets

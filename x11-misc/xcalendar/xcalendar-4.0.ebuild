@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.2 2003/02/13 17:19:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.3 2003/09/05 23:18:18 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A simple interactive calendar program with a notebook capability"
@@ -28,10 +28,10 @@ src_compile() {
 src_install () {
 
 	dobin xcalendar
-    newman xcalendar.man xcalendar.1
+	newman xcalendar.man xcalendar.1
 
 	dodir /etc/X11/app-defaults
-	sed 's;%%XCALENDAR_LIBDIR%%;/usr/lib/xcalendar; 
+	sed 's;%%XCALENDAR_LIBDIR%%;/usr/lib/xcalendar;
 	     s;/usr/local/X11R5/lib/X11/;/usr/lib/;' \
 		< XCalendar.sed > ${D}/etc/X11/app-defaults/XCalendar || die
 

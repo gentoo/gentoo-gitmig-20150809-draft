@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1-r1.ebuild,v 1.9 2003/07/28 11:29:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1-r1.ebuild,v 1.10 2003/09/05 23:18:18 msterret Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	# Do not define errno extern, but rather include errno.h
 	# <azarah@gentoo.org> (1 Jan 2003)
 	epatch ${FILESDIR}/${P}-include-errno_h.patch
-	
+
 	sed -i "s:OPT_FLAGS=:OPT_FLAGS=$CFLAGS:" Make.conf
 
 	chmod +x ${S}/configure

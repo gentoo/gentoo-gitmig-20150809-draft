@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/yawmppp/yawmppp-2.0.2.ebuild,v 1.6 2002/12/09 04:41:55 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/yawmppp/yawmppp-2.0.2.ebuild,v 1.7 2003/09/05 23:18:18 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -28,10 +28,10 @@ src_install () {
 	dodoc README COPYING CHANGELOG INSTALL FAQ
 
 	cd src
-	
+
 	insinto /usr/share/icons/
 	doins stepphone.xpm gtksetup/pppdoc.xpm
-	
+
 	doman yawmppp.1x
 
 	dobin dockapp/yawmppp

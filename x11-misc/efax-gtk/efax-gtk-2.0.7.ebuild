@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-2.0.7.ebuild,v 1.2 2003/07/13 12:52:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-2.0.7.ebuild,v 1.3 2003/09/05 23:18:18 msterret Exp $
 
 DESCRIPTION="GTK+2 frontend for the efax program."
 
@@ -23,24 +23,24 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	# The binaries
 	dobin efax-gtk efax-gtk-send
 
 	# The man page
 	doman efax-gtk.1.gz
-	
+
 	# The spool directory and print filter
 	dodir /var/spool/fax
 	fowners lp:lp /var/spool/fax
 	insinto /var/spool/fax
 	insopts -m755 -oroot -groot
 	doins efax-gtk-faxfilter
-	
+
 	# Config file
 	insinto /etc
 	doins efax-gtkrc
-	
+
 	# Docs
-	dodoc BUGS COPYRIGHT HISTORY README 
+	dodoc BUGS COPYRIGHT HISTORY README
 }

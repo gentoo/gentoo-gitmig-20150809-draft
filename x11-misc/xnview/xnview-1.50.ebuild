@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.5 2003/08/25 09:06:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.6 2003/09/05 23:18:18 msterret Exp $
 
 MY_P=XnView-static
 S=${WORKDIR}/usr
@@ -17,7 +17,7 @@ DEPEND="app-arch/rpm2targz"
 
 src_unpack() {
 	rpm2targz ${DISTDIR}/${A}
-	
+
 	use x86 && MY_P=${MY_P}.i386
 	use ppc && MY_P=${MY_P}.ppc
 
@@ -42,7 +42,7 @@ src_install() {
 	fperms 444 /usr/lib/X11/app-defaults/XnView
 
 	doman local/man/man1/*.1
-	
+
 	dodoc doc/XnView-${PV}/*.txt
 
 	insinto ${BASE_DIR}/Filters/
