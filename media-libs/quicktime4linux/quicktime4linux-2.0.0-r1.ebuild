@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.0-r1.ebuild,v 1.8 2004/07/14 20:24:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.0-r1.ebuild,v 1.9 2005/01/16 16:57:57 luckyduck Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 -ppc ~sparc ~amd64"
+KEYWORDS="~x86 -ppc ~amd64"
 IUSE=""
 
 DEPEND="media-libs/jpeg
@@ -23,7 +23,8 @@ DEPEND="media-libs/jpeg
 	>=media-libs/libvorbis-1.0
 	x86? ( media-libs/divx4linux )
 	media-libs/a52dec
-	!virtual/quicktime"
+	!virtual/quicktime
+	dev-lang/nasm"
 PROVIDE="virtual/quicktime"
 
 src_unpack() {

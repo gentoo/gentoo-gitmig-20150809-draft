@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/quicktime4linux
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.22 2004/06/24 23:20:26 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.23 2005/01/16 16:57:57 luckyduck Exp $
+
+  16 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  quicktime4linux-2.0.0-r1.ebuild:
+  added missing nasm dependency to close bug #59910. removed sparc keyword
+  because nasm isnt available for sparc.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   quicktime4linux-1.5.5-r1.ebuild, quicktime4linux-1.6.2.ebuild,
