@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.7 2003/03/02 14:03:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.8 2003/04/12 06:22:59 jje Exp $
+
+*libao-0.8.3-r1 (12 Apr 2003)
+
+  12 Apr 2003; jje libao-0.8.3-r1.ebuild, libao-0.8.3.ebuild,
+  files/libao-0.8.3-r1.patch:
+  Added patch to fix 14341. ALSA output now clean.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

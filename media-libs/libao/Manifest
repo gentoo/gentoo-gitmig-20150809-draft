@@ -1,0 +1,6 @@
+MD5 2d196c3b68fa0e3b39f18d294646ab74 ChangeLog 1278
+MD5 e781346f287a534944898a6ec2a727b3 libao-0.8.3.ebuild 857
+MD5 c3bb21291ee2165869a610080724e9d0 libao-0.8.3-r1.ebuild 842
+MD5 5d49f3e442bd95b0fe757ce978db12f9 files/digest-libao-0.8.3 63
+MD5 5f642fcbb8941a2f070cce0697f218fd files/libao-0.8.3-r1.patch 720
+MD5 5d49f3e442bd95b0fe757ce978db12f9 files/digest-libao-0.8.3-r1 63
