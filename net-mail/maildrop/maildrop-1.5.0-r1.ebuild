@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0-r1.ebuild,v 1.1 2002/11/09 03:08:09 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0-r1.ebuild,v 1.2 2002/11/11 12:54:29 nitro Exp $
 
 IUSE="mysql ldap"
 
@@ -44,7 +44,7 @@ src_compile() {
 		--enable-maildirquota \
 		--enable-use-dotlock=1 \
 		--enable-restrict-trusted=1 \
-		--enable-trusted-users='vmail' \
+		--enable-trusted-users='root mail daemon postmaster qmaild mmdf vmail' \
 		--mandir=/usr/share/man \
 		--with-etcdir=/etc \
 		--with-default-maildrop=./.maildir/ \
@@ -76,6 +76,12 @@ src_install() {
 	insinto /etc/maildrop
 	doins ${FILESDIR}/maildroprc
 	
-	use mysql && newins ${S}/maildropmysql.config maildropmysql.cf
+	if [ -n "`use mysql`" ]
+	then
+		cp ${S}/maildropmysql.config ${S}/maildropmysql.cf
+		sed -e "s:/var/lib/mysql/mysql.sock:/var/run/mysqld/mysqld.sock:" \
+		 	${S}/maildropmysql.config > ${S}/maildropmysql.cf
+		newins ${S}/maildropmysql.cf maildropmysql.cf
+	fi
 	#use ldap && newins ${S}/maildropldap.config maildropldap.cf
 }
