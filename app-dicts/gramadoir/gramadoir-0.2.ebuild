@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gramadoir/gramadoir-0.2.ebuild,v 1.1 2003/09/04 18:04:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gramadoir/gramadoir-0.2.ebuild,v 1.2 2003/10/20 21:30:21 taviso Exp $
 
 DESCRIPTION="An Irish language grammar checker"
 HOMEPAGE="http://borel.slu.edu/gramadoir/"
@@ -8,7 +8,7 @@ SRC_URI="http://borel.slu.edu/gramadoir/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 IUSE=""
 
 DEPEND=">=sys-apps/gawk-3.1.3
