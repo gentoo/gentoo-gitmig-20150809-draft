@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/pegasos-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/ChangeLog,v 1.18 2004/11/15 12:11:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-dev-sources/ChangeLog,v 1.19 2004/11/25 22:49:38 dsd Exp $
+
+  26 Nov 2004; Daniel Drake <dsd@gentoo.org>
+  pegasos-dev-sources-2.6.8.1-r2.ebuild, pegasos-dev-sources-2.6.9-r1.ebuild,
+  pegasos-dev-sources-2.6.9-r2.ebuild, pegasos-dev-sources-2.6.9.ebuild:
+  Clean up and remove redundant detect_version calls
 
 *pegasos-dev-sources-2.6.9-r2 (15 Nov 2004)
 
