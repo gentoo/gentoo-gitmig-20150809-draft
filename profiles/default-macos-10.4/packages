@@ -4,4 +4,5 @@
 
 # Things we want emerge system to install
 
+*net-misc/wget
 *virtual/editor
