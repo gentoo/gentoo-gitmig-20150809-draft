@@ -1,8 +1,13 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.1 2002/07/28 12:18:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.2 2002/09/14 21:12:53 seemant Exp $
 
 *muttprint-0.62b.ebuild (28 Jul 2002)
+
+  14 Sep 2002; Seemant Kulleen <seemant@gentoo.org> muttprint-0.62b.ebuild :
+
+  fixed location of docs installation, thanks to: rladams@kelsey-seybold.com
+  (Russell Adams) in bug #7884
 
   28 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> muttprint-0.62b.ebuild : 
   Initial import. Ebuild submitted by huz <marc.reynes@tuxfamily.org>.  
