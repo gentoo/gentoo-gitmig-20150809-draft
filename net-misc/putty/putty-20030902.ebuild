@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030902.ebuild,v 1.2 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030902.ebuild,v 1.3 2003/09/13 20:24:10 taviso Exp $
 
 DESCRIPTION="UNIX port of the famous Windows Telnet and SSH client"
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/putty-cvs-${PV}.tar.gz"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 IUSE="doc"
 
 RDEPEND="=x11-libs/gtk+-1.2*
