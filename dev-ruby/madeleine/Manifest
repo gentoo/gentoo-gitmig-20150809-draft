@@ -1,6 +1,16 @@
-MD5 24f2220b2dc01c2a08743717884bf337 madeleine-0.3.ebuild 712
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9f206b560343ba6c75cb27d79a25557b madeleine-0.6.1.ebuild 747
-MD5 6879c6367efad864b00a51d9899dc694 ChangeLog 614
+MD5 5e5d5997dbf27be1a5f24e2e6d93a963 ChangeLog 761
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 a9e3a266129459379c4736ff23ee05df files/digest-madeleine-0.3 64
+MD5 1e4903b0dfc7cdd48fecb702e1550492 madeleine-0.7.1.ebuild 753
 MD5 b13744a2c91b553131343c0203bec082 files/digest-madeleine-0.6.1 66
+MD5 4650d39e5e129ddf5b96085001b616a5 files/digest-madeleine-0.7.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBlzHpVWNWqTUmv+0RAmqtAJ9/b4+pxW/m5YG1vboSPmzbLRIEdQCgm6C0
+wpfvRHpAydZ7r+0CN8DCn+o=
+=qBEx
+-----END PGP SIGNATURE-----
