@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 07f9802daceb1d3593dbc9c92d74a93f subversion-1.0.1.ebuild 8707
 MD5 6be599117174a63a1810de08ab2a068d subversion-1.0.2.ebuild 9223
-MD5 5c06165ef035686c0472b683a17449b1 ChangeLog 16162
-MD5 6d782eebdb1eb7b3296fd8f7b9c3f98e subversion-1.0.4-r1.ebuild 9541
-MD5 11edc2e84a30096642ba71e234b20108 subversion-1.0.4.ebuild 9381
 MD5 50b381d130b73e50c2cddbf95cf8ad42 subversion-1.0.3.ebuild 9229
-MD5 8fbcd267012fd1eef74d5161888cc7b8 metadata.xml 222
-MD5 91e10ceb13f0dd81b23587de67771ed4 subversion-1.1.0_rc2.ebuild 9030
-MD5 682fb327869fafeda7a079491c6393dd subversion-1.0.6.ebuild 9625
 MD5 1b9acc042ae6c0b58071cf9ea8adc57a subversion-0.27.0.ebuild 7880
 MD5 5cff2e6d2191553c86d931e5240ba23a subversion-0.32.1.ebuild 8136
-MD5 6a166a8172b53473986039399e2e32d1 files/digest-subversion-1.1.0_rc2 74
+MD5 6d782eebdb1eb7b3296fd8f7b9c3f98e subversion-1.0.4-r1.ebuild 9541
+MD5 5c23fb9e89ba23ca5974f9dde821774e ChangeLog 16288
+MD5 8fbcd267012fd1eef74d5161888cc7b8 metadata.xml 222
+MD5 11edc2e84a30096642ba71e234b20108 subversion-1.0.4.ebuild 9381
+MD5 477868a5a577d64402abbbe07dc32bcc subversion-1.0.6.ebuild 9724
+MD5 91e10ceb13f0dd81b23587de67771ed4 subversion-1.1.0_rc2.ebuild 9030
+MD5 e232822bee0a8ed00f6b9d7805b83307 files/digest-subversion-0.27.0 132
+MD5 44e762d79cdf7048a3300c29c77f0e81 files/digest-subversion-1.0.1 70
+MD5 a92dea7d8f92e84faf8e695b2bd93d42 files/digest-subversion-1.0.2 70
+MD5 69cf99186dd88a6b26c6c121fc4c16a9 files/digest-subversion-0.32.1 132
+MD5 13e74109573f8771bd51e54f3f7ece95 files/digest-subversion-1.0.3 70
+MD5 8cfa170f6a78d0d7a1ab27cd35753efd files/digest-subversion-1.0.4 70
+MD5 ea9382a1d5e2df9bc52c79d886a602ad files/digest-subversion-1.0.6 70
 MD5 4fd39b311d09602c93a9ff0aceaf8596 files/70svn-gentoo.el 136
 MD5 ce6f3698724b55cf49e647727207cca5 files/subversion-db4.patch 563
 MD5 8cfa170f6a78d0d7a1ab27cd35753efd files/digest-subversion-1.0.4-r1 70
-MD5 44e762d79cdf7048a3300c29c77f0e81 files/digest-subversion-1.0.1 70
-MD5 a92dea7d8f92e84faf8e695b2bd93d42 files/digest-subversion-1.0.2 70
-MD5 8cfa170f6a78d0d7a1ab27cd35753efd files/digest-subversion-1.0.4 70
-MD5 f3e0d5ef77de21c20c17dad5c1c5ce04 files/subversion-1.1.0-rc2-build.patch 1208
-MD5 69cf99186dd88a6b26c6c121fc4c16a9 files/digest-subversion-0.32.1 132
 MD5 5246b9044c4d5fbd25d9e15268495fc2 files/subversion-pre-1.0.5.patch 3268
-MD5 e232822bee0a8ed00f6b9d7805b83307 files/digest-subversion-0.27.0 132
-MD5 ea9382a1d5e2df9bc52c79d886a602ad files/digest-subversion-1.0.6 70
-MD5 13e74109573f8771bd51e54f3f7ece95 files/digest-subversion-1.0.3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBPLIYLLFUmVNQ7rkRAli0AJ0SitohTlCwXfrbe8hCoenVKV3N7wCeNU6O
-ylbhwQFukOD9DaVa8wa57sU=
-=GQeR
------END PGP SIGNATURE-----
+MD5 6a166a8172b53473986039399e2e32d1 files/digest-subversion-1.1.0_rc2 74
+MD5 f3e0d5ef77de21c20c17dad5c1c5ce04 files/subversion-1.1.0-rc2-build.patch 1208

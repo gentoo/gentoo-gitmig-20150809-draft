@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.6.ebuild,v 1.9 2004/09/05 19:00:40 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.6.ebuild,v 1.10 2004/09/21 08:25:31 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -212,6 +212,8 @@ src_install () {
 		if use java; then
 			cd ${S}/subversion/bindings/java/javahl
 			make DESTDIR="${D}" install || die "installation failed"
+			mkdir -p ${D}/usr/lib/svn-javahl/
+			mv ${D}/usr/share/svn-javahl.jar ${D}/usr/lib/svn-javahl/
 			cd ${S}
 		fi
 	fi
