@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a8e499633482ddf617bc1a8850178716 ChangeLog 1125
+MD5 8c5e41a3f5c6acafb4462be9b828217e ChangeLog 1313
 MD5 2e99188b8a29403fb25d1f94c7a1f3bf gpsim-0.20.14-r1.ebuild 1007
 MD5 41eb8503ff796096eb1e628f2af1ebb7 gpsim-0.20.14.ebuild 722
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+MD5 49f301c87f63f918594f84a3f62e9604 gpsim-0.21.2.ebuild 1058
 MD5 d19aef867a58fe25de6dbcbf6dfc32d9 files/digest-gpsim-0.20.14 65
 MD5 d19aef867a58fe25de6dbcbf6dfc32d9 files/digest-gpsim-0.20.14-r1 65
 MD5 aad12da70389a0c7871624aadadeaa58 files/gpsim-0.20.14-gcc2_fix.patch 407
 MD5 47fc63d545998cd4b05786a4cc0cfb2c files/gpsim-0.20.14-gcc3.2.patch 18376
 MD5 0cc5e44b9c088cc61934f34811234921 files/gpsim-0.20.14-gcc33.patch 124609
+MD5 936707e2f6868120b029358522a740df files/digest-gpsim-0.21.2 134
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA4W1JHTu7gpaalycRAqQvAJ9RV92LAxMLQlFfpC4CPj7smBr10ACg7gSN
-CzZkZg6EYtxKcJQM1sHA5q4=
-=FAkI
+iD8DBQFA+iSdmdTrptrqvGERAhHZAJwJcK22mr08h/wJSezMyDpIyZ4QRQCdFki8
+uT95aCCQkZMDHJ2I2NhHKIA=
+=dvwF
 -----END PGP SIGNATURE-----
