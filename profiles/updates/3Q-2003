@@ -500,3 +500,4 @@ move sys-apps/xfsprogs sys-fs/xfsprogs
 move app-admin/dosfstools sys-fs/dosfstools
 move app-admin/mtools sys-fs/mtools
 move app-misc/mtoolsfm sys-fs/mtoolsfm
+move sys-fs/mtoolsfm app-misc/mtoolsfm
