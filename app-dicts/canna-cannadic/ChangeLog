@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/canna-cannadic
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.1 2003/05/17 19:27:13 nakano Exp $
+
+*canna-cannadic-0.94h (18 May 2003)
+
+  18 May 2003; <masatomo@gentoo.org> canna-cannadic-0.94h.ebuild,
+  files/01cannadic.dics.dir:
+  Initial import. #21060 Thanks to Sadayuki Kobayashi <desperado@s17.xrea.com>
+
