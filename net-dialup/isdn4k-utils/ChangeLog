@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/isdn4k-utils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.13 2003/12/23 12:58:41 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.14 2004/02/18 19:03:35 azarah Exp $
+
+  18 Feb 2004; Martin Schlemmer <azarah@gentoo.org>
+  isdn4k-utils-3.2_p1-r4.ebuild:
+  Run aclocal and then automake --add-missing to properly install 'compile'.
+  Also add proper automake --add-missing for capiinfo.  This closes bug #41667.
 
 *isdn4k-utils-3.2_p1-r4 (23 Dec 2003)
 

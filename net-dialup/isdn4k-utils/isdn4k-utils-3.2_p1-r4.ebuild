@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r4.ebuild,v 1.1 2003/12/23 12:58:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r4.ebuild,v 1.2 2004/02/18 19:03:35 azarah Exp $
 
 IUSE="X"
 VBOX_V=0.1.9
@@ -67,8 +67,15 @@ src_unpack() {
 
 	epatch ${FILESDIR}/gcc33-multiline.patch
 
-	(cd capi20; libtoolize --force)
-	(cd capiinfo; ln -s /usr/share/automake-1.6/depcomp)
+	for x in capi20 capiinfo capiinit
+	do
+		cd ${S}/${x}
+		[ -f ltmain.sh ] && libtoolize --force
+		rm -f missing
+		aclocal
+		automake --add-missing
+		autoconf
+	done
 }
 
 src_compile() {
