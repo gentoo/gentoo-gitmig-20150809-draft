@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.20041221.ebuild,v 1.3 2005/01/05 17:47:13 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2_beta20041230.ebuild,v 1.1 2005/01/05 23:39:41 langthang Exp $
 
 inherit eutils ssl-cert toolchain-funcs
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux"
 
-MY_PV=${PV%.*}-${PV##*.}
+MY_PV=${PV/_beta/-}
 PROD_PV=${MY_PV}
 TLS_SRC=${PN}-${MY_PV}+tls-nonprod
 PROD_SRC=${PN}-${PROD_PV}
