@@ -32,7 +32,7 @@
 # wacky version.
 
 *>=sys-apps/baselayout-1.7.3
-*>=sys-apps/portage-1.8.9
+*>=sys-apps/portage-1.8.9_pre25
 *~sys-devel/binutils-2.11.92.0.12.3
 *=sys-devel/gcc-2.95.3-r5
 *~sys-libs/glibc-2.2.5
@@ -108,7 +108,7 @@
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
-*>=dev-lang/python-2.2
+*>=dev-lang/python-2.2-r5
 *sys-libs/db
 *sys-libs/gdbm  
 *sys-libs/ncurses     

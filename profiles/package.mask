@@ -44,14 +44,9 @@
 # Gnumeric needs 0.0.17, and most other stuff should work with this version
 >gnome-extra/gb-0.0.17
 
-# 14-Feb-2002, if it works it works, if it dies, it dies silently and
-# people end up with a broken 
->=sys-libs/glibc-2.2.5
-
 # PHP < 4.1.2 has major security flaws and should not be used
 # blocke, March 7, 2002
 <=dev-lang/php-4.1.2-r1
-
 
 # Won't compile yet for me..<Verwilst, 10 feb 2002>
 =net-misc/tightvnc-1.2.2
