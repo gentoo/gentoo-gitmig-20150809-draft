@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.41 2005/04/01 17:02:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.42 2005/04/02 06:44:50 usata Exp $
+
+  02 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> ptex-3.1.8.1.ebuild,
+  ptex-3.1.8.1_p20050325.ebuild:
+  Fixed xdvi toolkit dependency; bug #87375.
 
   01 Apr 2005; <blubb@gentoo.org> ptex-3.1.5.ebuild:
   stable on amd64

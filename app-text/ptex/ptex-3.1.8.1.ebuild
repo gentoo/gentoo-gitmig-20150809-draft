@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1.ebuild,v 1.1 2005/03/16 09:22:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1.ebuild,v 1.2 2005/04/02 06:44:50 usata Exp $
 
 TETEX_PV=3.0
 TEXMF_PATH=/var/lib/texmf
@@ -113,7 +113,7 @@ src_compile() {
 			toolkit="xaw"
 		fi
 
-		TETEX_ECONF="--with-vflib=vf2ft --enable-freetype --with-x-toolkit=${toolkit}"
+		TETEX_ECONF="--with-vflib=vf2ft --enable-freetype --with-xdvi-x-toolkit=${toolkit}"
 	fi
 
 	tetex_src_compile
