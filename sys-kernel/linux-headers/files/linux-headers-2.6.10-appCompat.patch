@@ -2249,3 +2249,14 @@ diff -urp linux-2.6.10/include/linux/if_fddi.h linux-2.6.10-gentoo/include/linux
  #define SPARC_FLAG_KTHREAD      0x1    /* task is a kernel thread */
  #define SPARC_FLAG_UNALIGNED    0x2    /* is allowed to do unaligned accesses */
  
+diff -urp linux-2.6.10/include/linux/usb_ch9.h linux-2.6.10-gentoo/include/linux/usb_ch9.h
+--- linux-2.6.10/include/linux/usb_ch9.h	2004-11-20 16:54:35.000000000 +0000
++++ linux-2.6.10-gentoo/include/linux/usb_ch9.h	2005-02-13 23:42:55.629530192 +0000
+@@ -17,6 +17,7 @@
+ #define __LINUX_USB_CH9_H
+ 
+ #include <asm/types.h>		/* __u8 etc */
++#include <linux/types.h>	/* __le16 */
+ 
+ /*-------------------------------------------------------------------------*/
+ 
