@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.6 2003/11/21 20:11:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.7 2003/12/13 17:29:54 brad_mssw Exp $
+
+  13 Dec 2003; Brad House <brad_mssw@gentoo.org> gnome-pilot-2.0.10-r1.ebuild:
+  mark stable on amd64
 
   21 Nov 2003; Jason Wever <weeve@gentoo.org> gnome-pilot-2.0.10-r1.ebuild:
   Marked stable on sparc.
