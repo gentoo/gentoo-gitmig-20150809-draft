@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.9.ebuild,v 1.2 2003/10/21 15:27:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.9.ebuild,v 1.3 2003/10/22 17:08:16 hanno Exp $
 
 inherit gnome2 debug libtool
 
@@ -48,7 +48,7 @@ src_compile() {
 	local moz_ver="`pkg-config --modversion mozilla-xpcom | cut -d. -f1,2 2>/dev/null`"
 	local myconf="--disable-werror"
 
-	myconf="${myconf} --with-mozilla-snapshot=${moz_ver}"
+	myconf="${myconf} --with-mozilla-snapshot=${moz_ver/1.5/1.5b}"
 
 	econf ${myconf} || die "configure failed"
 	make || die "compile failed"
