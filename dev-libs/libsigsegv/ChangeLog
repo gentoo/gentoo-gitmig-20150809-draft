@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/libsigsegv
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.1 2003/09/04 04:08:24 mkennedy Exp $
+
+*libsigsegv-2.0 (03 Sep 2002)
+
+  03 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.
