@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/utempter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.5 2003/10/19 00:33:36 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.6 2004/01/18 01:57:38 seemant Exp $
+
+*utempter-0.5.3.2 (17 Jan 2004)
+
+  17 Jan 2004; Seemant Kulleen <seemant@gentoo.org> utempter-0.5.3.2.ebuild :
+
+  Using the rpm eclass for this version.
 
   19 Oct 2003; Sven Blumenstein <bazik@gentoo.org> utempter-0.5.2.ebuild:
   Added sparc keyword.
