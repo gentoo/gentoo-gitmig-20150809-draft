@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.8-r1.ebuild,v 1.7 2000/12/19 00:21:38 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.8-r1.ebuild,v 1.8 2001/01/14 05:36:51 drobbins Exp $
 
 # also, this script now has pre/post inst/rm support
 
@@ -30,7 +30,9 @@ src_install() {
   dodoc glib.html glib_toc.html
 }
 
-
+pkg_postinst() {
+	/usr/sbin/env-update
+}
 
 
 
