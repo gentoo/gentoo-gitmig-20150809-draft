@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.5 2004/08/30 20:57:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.6 2004/10/22 23:48:43 liquidx Exp $
 
 inherit gnome2
 
@@ -27,7 +27,7 @@ DOCS="AUTHORS COPYING ChangeLog README NEWS TODO"
 src_unpack () {
 	unpack ${A}
 	cd ${S}
-	intltoolize -f
+	intltoolize -f && aclocal && autoconf && automake -a || die 
 
 	sed -i s/OrigTree/Tree/ ${S}/intltool-merge.in
 }
