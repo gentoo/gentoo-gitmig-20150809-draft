@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PhpDocumentor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/ChangeLog,v 1.5 2004/08/03 20:10:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/ChangeLog,v 1.6 2004/12/18 11:42:27 blubb Exp $
+
+  18 Dec 2004; Simon Stelling <blubb@gentoo.org>
+  PEAR-PhpDocumentor-1.2.3.ebuild, PEAR-PhpDocumentor-1.3.0_rc3.ebuild:
+  added ~amd64
 
   03 Aug 2004; <agriffis@gentoo.org> PEAR-PhpDocumentor-1.2.3.ebuild:
   add ~ia64 #56295
