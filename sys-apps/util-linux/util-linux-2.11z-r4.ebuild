@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r4.ebuild,v 1.8 2003/06/30 02:30:26 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r4.ebuild,v 1.9 2003/07/05 17:09:41 lu_zero Exp $
 
 IUSE="crypt nls static pam"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.bz2
 	crypt? ( mirror://gentoo/${CRYPT_PATCH_P}.patch.bz2 )"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
-KEYWORDS="x86 amd64 ~ppc sparc alpha ~arm mips"
+KEYWORDS="x86 amd64 ppc sparc alpha ~arm mips"
 SLOT="0"
 LICENSE="GPL-2"
 
