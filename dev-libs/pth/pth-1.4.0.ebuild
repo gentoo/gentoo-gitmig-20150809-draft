@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.0.ebuild,v 1.22 2005/01/22 09:41:13 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.0.ebuild,v 1.23 2005/03/25 14:31:43 vanquirius Exp $
 
 inherit gnuconfig libtool
 
@@ -19,6 +19,9 @@ src_unpack() {
 	unpack ${A}
 	gnuconfig_update
 	use ppc-macos && darwintoolize
+	#fix warnings
+	sed -i "s:pow10:math_pow10:g" ${S}/pth_string.c
+	sed -i "s:round:math_round:g" ${S}/pth_string.c
 }
 
 src_install() {

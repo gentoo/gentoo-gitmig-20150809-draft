@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.1.ebuild,v 1.20 2005/01/22 09:41:13 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.1.ebuild,v 1.21 2005/03/25 14:31:43 vanquirius Exp $
 
 inherit gnuconfig
 
@@ -21,6 +21,9 @@ src_unpack() {
 
 	# update GNU config files
 	gnuconfig_update
+	#fix warnings
+	sed -i "s:pow10:math_pow10:g" pth_string.c
+	sed -i "s:round:math_round:g" pth_string.c
 }
 
 src_install() {

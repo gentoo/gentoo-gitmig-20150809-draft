@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.28 2005/02/09 10:19:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.29 2005/03/25 14:31:43 vanquirius Exp $
+
+  25 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> pth-1.4.0.ebuild,
+  pth-1.4.1.ebuild:
+  Replacing pow10 with math_pow10 and round with math_round in pth_string.c to
+  fix warnings.
 
   09 Feb 2005; Daniel Black <dragonheart@gentoo.org> pth-2.0.3.ebuild:
   gawk problem fixed enabling full locale
