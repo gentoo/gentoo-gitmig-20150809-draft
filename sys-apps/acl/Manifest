@@ -1,8 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cec4a3f0224670760af9981f5542608c acl-2.2.13-r1.ebuild 1444
-MD5 a91371a440cba1b59628e274fdb0bc7d acl-2.2.13-r3.ebuild 1876
-MD5 5f2b2005fc93724f202e1aa44289321f ChangeLog 4618
+MD5 bba710aec2f2525967795e3203cf16a3 acl-2.2.13-r3.ebuild 1413
+MD5 b87cfce212e471cca9bb8f22a56725a1 ChangeLog 4788
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 99b291a8aea56b7924a4e14fc791655c acl-2.2.13-r2.ebuild 1779
 MD5 ebb544ef383bcd9ab77497e414a31528 files/digest-acl-2.2.13-r1 66
 MD5 ebb544ef383bcd9ab77497e414a31528 files/digest-acl-2.2.13-r2 66
 MD5 ebb544ef383bcd9ab77497e414a31528 files/digest-acl-2.2.13-r3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBNFKmPpIsIjIzwiwRAqZxAJ9LVEByYUpnwVv1k57UMSJ2656g/QCePqn5
+MkwGuXXJ1tAU6z/NSd+HQ+k=
+=ZhKd
+-----END PGP SIGNATURE-----
