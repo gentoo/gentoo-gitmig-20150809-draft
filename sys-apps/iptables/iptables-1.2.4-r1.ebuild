@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.4-r1.ebuild,v 1.1 2001/12/22 15:55:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.4-r1.ebuild,v 1.2 2001/12/23 14:08:22 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Kernel 2.4 routing and traffic control utilities"
@@ -13,7 +13,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	mv Makefile Makefile.orig
-	sed -e "s/-O2/${CFLAGS}/g" -e "s:/usr/local:/usr:g" Makefile.orig > Makefile
+	sed -e "s/-O2/${CFLAGS}/g" -e "s:/usr/local::g" Makefile.orig > Makefile
 }
 
 src_compile() {
@@ -29,6 +29,7 @@ src_install() {
 	make LIBDIR=${D}/lib \
 		BINDIR=${D}/sbin \
 		MANDIR=${D}/usr/share/man \
+		INCDIR=${D}/usr/include \
 		install || die
 	dodoc COPYING KNOWN_BUGS
 }
