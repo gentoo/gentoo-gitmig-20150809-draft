@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.77.1.ebuild,v 1.1 2003/11/30 05:48:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.77.1.ebuild,v 1.2 2003/12/12 17:32:33 vapier Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-glx-fix.patch
+	epatch ${FILESDIR}/${PV}-alsa-1.0.0.patch
 
 	ln -s makefile.unix Makefile
 	case "${ARCH}" in
