@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r1.ebuild,v 1.3 2002/04/26 16:09:10 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r2.ebuild,v 1.1 2002/05/04 23:22:49 woodchip Exp $
 
 mod_ssl_ver=2.8.8-${PV}
 HARD_SERVER_LIMIT=512
@@ -21,6 +20,8 @@ RDEPEND="virtual/glibc
 	>=sys-libs/gdbm-1.8
 	>=dev-libs/expat-1.95.2"
 DEPEND="${RDEPEND} sys-devel/perl"
+LICENSE="Apache-1.1"
+SLOT="1"
 
 pkg_setup() {
 	# these are in baselayout now; it will not hurt to leave them here though..

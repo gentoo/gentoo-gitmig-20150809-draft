@@ -1,3 +1,4 @@
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/robots.txt,v 1.2 2002/05/04 23:23:01 woodchip Exp $
 # exclude help system from robots
 User-agent: *
 Disallow: /manual/ 

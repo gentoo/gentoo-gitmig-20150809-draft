@@ -1,6 +1,12 @@
 # ChangeLog for net-www/squid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.4 2002/03/21 01:23:36 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.5 2002/05/04 23:23:02 woodchip Exp $
+
+*squid-2.4.6-r1 (4 May 2002)
+  
+  4 May 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Added LICENSE, SLOT, $Headers, pam_stack aware pam.d/ file.
 
 *squid-2.4.6 (20 Mar 2002)
 

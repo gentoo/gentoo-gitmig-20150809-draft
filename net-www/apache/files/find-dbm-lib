@@ -3,6 +3,7 @@
 # So unless we protect ourselves with the found_dbm variable
 # we'd end up having to do the work twice... and we'd end up putting
 # two -ldbm -ldbm into the LIBS variable.
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/find-dbm-lib,v 1.2 2002/05/04 23:23:01 woodchip Exp $
 
 if [ "x$found_dbm" = "x" ]; then
 	found_dbm=0

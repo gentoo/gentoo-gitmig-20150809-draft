@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8.ebuild,v 1.1 2002/04/09 23:57:52 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8-r1.ebuild,v 1.1 2002/05/04 23:23:01 woodchip Exp $
 
 # The mod_layout and mod_random that come in the archive are really old,
 # so I've replaced them with more current versions.
@@ -17,6 +16,8 @@ SRC_URI="http://www.apache.org/dist/httpd/contrib/modules/1.3/apache-contrib-${P
 	http://software.tangent.org/download/mod_random-${mod_random_ver}.tar.gz"
 
 DEPEND="virtual/glibc >=net-www/apache-1.3.24"
+LICENSE="Apache-1.1"
+SLOT="0"
 
 MY_MODS="mod_allowdev mod_auth_system mod_disallow_id mod_lock mod_random
 	mod_auth_cookie mod_bandwidth mod_eaccess mod_macro mod_roaming
@@ -80,7 +81,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Execute ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo "Execute \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
 	einfo "to have your apache.conf auto-updated for use with these modules."
 	einfo "You should then edit your /etc/conf.d/apache file to suit."
 	einfo

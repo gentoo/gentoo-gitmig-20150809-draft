@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.8.ebuild,v 1.1 2002/04/09 23:57:52 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.8-r1.ebuild,v 1.1 2002/05/04 23:23:02 woodchip Exp $
 
 MY_P=${P}-1.3.24
 
@@ -12,6 +11,8 @@ S=${WORKDIR}/${MY_P}
 SRC_URI="http://www.modssl.org/source/${MY_P}.tar.gz"
 
 DEPEND="virtual/glibc >=net-www/apache-1.3.24 >=dev-libs/openssl-0.9.6c"
+LICENSE="as-is"
+SLOT="0"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -50,7 +51,7 @@ pkg_postinst() {
 	install -d -o root -g root -m0755 ${ROOT}/etc/apache/conf/ssl
 
 	einfo
-	einfo "Execute ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo "Execute \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
 	einfo "to have your apache.conf auto-updated for use with this module."
 	einfo "You should then edit your /etc/conf.d/apache file to suit."
 	einfo

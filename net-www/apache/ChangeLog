@@ -1,8 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.7 2002/04/26 16:09:10 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.8 2002/05/04 23:22:49 woodchip Exp $
 
-  26 Apr 2002; Donny Davies <woodchip@gentoo.org> apache-1.3.24-r1.ebuild :
+*apache-1.3.24-r2 (4 May 2002)
+
+  4 May 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Added LICENSE, SLOT, $Headers.
+
+  26 Apr 2002; Donny Davies <woodchip@gentoo.org> :
 
   o Made the user/group id's 81 in pkg_setup after thusly adding them to
     Gentoo's baselayout.  No need to upgrade folks; cosmetic-only fix.

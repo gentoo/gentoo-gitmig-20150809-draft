@@ -1,3 +1,7 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/files/squid.confd,v 1.3 2002/05/04 23:23:02 woodchip Exp $
+
 # Config file for /etc/init.d/squid
 
 SQUID_OPTS="-DYC"
