@@ -1,8 +1,18 @@
-MD5 02f2ec1c6f480110a95055eb6499732a ChangeLog 1427
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26fd7eec926971993151e14fa5406f07 ChangeLog 1429
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 0fbac810c77a873bf42d89e7d7e41911 xview-3.2-r1.ebuild 2598
-MD5 5df59d2f1c14918faf54f49fe92920e1 xview-3.2-r2.ebuild 2606
-MD5 5f07e3668029ca00564ba32a0aa0f732 xview-3.2.ebuild 2283
+MD5 d87709e16fca935a377b34c6ff14e754 xview-3.2-r1.ebuild 2600
+MD5 0e99d750cbc4a74877a1c0762b147c94 xview-3.2-r2.ebuild 2608
+MD5 b1c37b2caa7f1d2968c3cbd84c77af2e xview-3.2.ebuild 2283
 MD5 6de3c812dee458777db24502d252984f files/digest-xview-3.2 138
 MD5 48636f5ace70cc3f5033a87188e4e7bf files/digest-xview-3.2-r1 138
 MD5 cd3869ae1beab1d2ac84fe48cc35d358 files/digest-xview-3.2-r2 144
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCFILr8zY1VwezZiERAtlbAJ9Gq0+fYU5nrsmUHHPXRtNq38E1ngCgnzrr
+TYUxO4rzEchVO+D14kNxa5M=
+=H+9L
+-----END PGP SIGNATURE-----
