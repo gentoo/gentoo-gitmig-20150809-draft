@@ -5,5 +5,9 @@
 		The app-portage category contains software which works with portage or
 		ebuilds.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-portage enthält Programme für das Arbeiten mit Portage
+		oder Ebuilds.
+	</longdescription>
 </catmetadata>
 
