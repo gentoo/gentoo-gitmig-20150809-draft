@@ -3,7 +3,8 @@ MD5 20fe4a0c8938a7d63bef94149ee8f797 zsh-4.0.6-r1.ebuild 1361
 MD5 ffc94926659f33268966535c421a0cfa zsh-4.0.6-r3.ebuild 1509
 MD5 366f440161ef1f5755ebf7bdaa201b61 zsh-4.0.6-r4.ebuild 1800
 MD5 468e9d22071e69b977927a2ec680c14e zsh-4.1.0_pre7.ebuild 1782
-MD5 b1d615994dc0362b42c0b9c673b178da zsh-4.0.7.ebuild 1915
+MD5 81dec0a6a05600fdaff9994bb4f1f06b zsh-4.0.7.ebuild 2223
+MD5 d39d9319d7353de03dc77d73bb7dc567 zsh-4.1.1.ebuild 2264
 MD5 30a6361dbaeb57ce5449160c620c5daf files/digest-zsh-4.0.6-r1 62
 MD5 28e464ce201f3343debf24cced1bcfcb files/digest-zsh-4.0.6-r3 187
 MD5 28e464ce201f3343debf24cced1bcfcb files/digest-zsh-4.0.6-r4 187
@@ -11,3 +12,4 @@ MD5 9363aaf4c5e5abc23ff6f07a80a52acc files/digest-zsh-4.1.0_pre7 136
 MD5 de0db046f0f40cb1cc3cd3f6e6b2645a files/zshenv 318
 MD5 64023b41a9987655e0e014d32562cfad files/zprofile 404
 MD5 3cfc9cf73dcfb2ab86002ea2e246d1fd files/digest-zsh-4.0.7 202
+MD5 5daa3fdd46a82a22c8ff9f2c5ad0d4d5 files/digest-zsh-4.1.1 209

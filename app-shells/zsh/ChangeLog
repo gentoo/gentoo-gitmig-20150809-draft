@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.20 2003/07/23 17:48:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.21 2003/07/23 20:21:36 usata Exp $
+
+*zsh-4.1.1 (24 Jul 2003)
+
+  24 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.1.ebuild:
+  New development version. Added cjk support, based on the ebuild
+  submitted by Wayne Davison <gentoo@blorf.net> in bug #23114
 
 *zsh-4.0.7 (24 Jul 2003)
 
@@ -9,6 +15,8 @@
   New version. Added maildir flag to IUSE. Changed Zsh startup file
   from /etc/zsh/zshenv to /etc/zsh/zprofile suggested by James
   Michael Fults <jmf@gtcom.net> in bug #19924.
+  Added pkg_preinst() function to help migration of /etc/zsh/zshenv
+  to /etc/zsh/zprofile discussed in #23114
 
 *zsh-4.0.6-r4 (17 Apr 2003)
 
