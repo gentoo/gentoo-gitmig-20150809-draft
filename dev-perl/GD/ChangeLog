@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.21 2004/03/25 09:19:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.22 2004/05/09 20:02:00 esammer Exp $
+
+*GD-2.12 (09 May 2004)
+
+  09 May 2004; Eric Sammer <esammer@gentoo.org> +files/2.12-gif-support.patch,
+  +files/2.12-makefile-opts.patch, +GD-2.12.ebuild:
+  Revision bump. Fixed makefile patch for new version. Closes bug #50303.
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> GD-2.07.ebuild:
   Added ~mips to KEYWORDS.
