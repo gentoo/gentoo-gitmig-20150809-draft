@@ -1,6 +1,12 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.40 2003/11/26 16:07:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.41 2003/12/29 12:41:20 mholzer Exp $
+
+*xine-ui-0.9.23 (29 Dec 2003)
+
+  29 Dec 2003; Martin Holzer <mholzer@gentoo.org> xine-ui-0.9.23.ebuild,
+  files/preserve-CFLAGS-0.9.23.diff:
+  Version bumped.
 
   26 Nov 2003; Martin Holzer <mholzer@gentoo.org> xine-ui-0.9.22.ebuild:
   marking x86 stable
