@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/bbmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/ChangeLog,v 1.6 2003/02/12 09:26:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/ChangeLog,v 1.7 2003/06/19 17:22:42 mkeadle Exp $
+
+*bbmail-0.8.3 (19 Jun 2003)
+
+  19 Jun 2003; mkeadle <mkeadle@gentoo.org> bbmail-0.8.3.ebuild:
+  bump to latest upstream stable
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
