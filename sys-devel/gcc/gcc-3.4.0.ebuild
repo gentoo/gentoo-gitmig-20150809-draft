@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.5 2004/04/27 02:23:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.6 2004/04/27 02:28:01 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -386,11 +386,11 @@ src_compile() {
 
 	# Default arch support
 	use amd64 && myconf="${myconf} --with-cpu=k8 --with-arch=k8"
-	use ppc64 && myconf="${myconf} --with-arch=powerpc64"
-	use s390 && myconf="${myconf} --with-arch=g5"
+	#use ppc64 && myconf="${myconf} --with-arch=powerpc64"
+	#use s390 && myconf="${myconf} --with-arch=nofreakingclue"
 	use x86 && myconf="${myconf} --with-cpu=pentium4 --with-arch=i586"
-	use mips && myconf="${myconf} --with-arch=mips3"
-	use ppc && myconf="${myconf} --with-arch=g3"
+	#use mips && myconf="${myconf} --with-arch=mips3"
+	#use ppc && myconf="${myconf} --with-arch=g3"
 
 	# In general gcc does not like optimization, and add -O2 where
 	# it is safe.  This is especially true for gcc 3.3 + 3.4
