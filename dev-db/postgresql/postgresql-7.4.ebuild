@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.ebuild,v 1.1 2003/11/20 15:24:13 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.ebuild,v 1.2 2003/11/20 15:51:22 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
@@ -144,9 +144,6 @@ src_install() {
 
 	insinto /etc/conf.d/
 	newins ${FILESDIR}/postgresql.conf-${PV} postgresql || die
-
-	insinto /etc/env.d/
-	newins ${FILESDIR}/postgresql.env-${PV} 70postgresql || die
 }
 
 pkg_postinst() {

@@ -1,8 +1,12 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.66 2003/11/20 15:29:38 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.67 2003/11/20 15:51:22 nakano Exp $
 
 *postgresql-7.4 (20 Nov 2003)
+
+  20 Nov 2003; Masatomo Nakano <nakano@gentoo.org> postgresql-7.4.ebuild,
+  files/postgresql.env-7.4:
+  Removed postgresql.env file.
 
   20 Nov 2003; Masatomo Nakano <nakano@gentoo.org> postgresql-7.4.ebuild:
   files/postgresql.conf-7.4, files/postgresql.init-7.4,
