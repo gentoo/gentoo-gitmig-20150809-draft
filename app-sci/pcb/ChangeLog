@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/pcb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/ChangeLog,v 1.4 2004/03/25 09:59:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/ChangeLog,v 1.5 2004/03/30 19:40:47 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; pcb-20030815.ebuild,
+  pcb-20031113-r1.ebuild, pcb-20031113.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   25 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> pcb-20031113-r1.ebuild:
   Adding tk build dependency, declaring stable.

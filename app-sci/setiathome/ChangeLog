@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.20 2004/03/30 06:44:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.21 2004/03/30 19:43:30 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  setiathome-3.03-r1.ebuild, setiathome-3.08-r1.ebuild,
+  setiathome-3.08-r2.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   30 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
   setiathome-3.08-r2.ebuild, files/seti-init.d-r1:
