@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.4 2003/05/02 18:58:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.5 2003/06/01 14:36:15 mholzer Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
 
-inherit libtool flag-o-matic base
+inherit gcc libtool flag-o-matic base
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Tools for MJPEG video"
@@ -46,11 +46,13 @@ src_unpack() {
 		sed -i "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h
 		sed -i "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h
 
+		if [ "`gcc-major-version`" -eq "3" ] ; then
 		# Don't remove this!!!
 		# Contact phoen][x <phoenix@gentoo.org> if you have problems with it.
 		cd ${S}/lavtools
 		sed -i "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_common.c
 		sed -i "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_io.c
+		fi
 	fi
 }
 
