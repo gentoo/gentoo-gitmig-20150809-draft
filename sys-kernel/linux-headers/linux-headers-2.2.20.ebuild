@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.20.ebuild,v 1.12 2003/03/24 23:21:30 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.20.ebuild,v 1.13 2003/03/24 23:34:01 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -38,7 +38,7 @@ then
 	# with them, so they stay.
 	#console-tools is needed to solve the loadkeys fiasco.
 	#binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-	DEPEND=">=sys-devel/binutils-2.11.90.0.31 sys-apps/console-tools sys-apps/modutils dev-lang/perl"
+	DEPEND=">=sys-devel/binutils-2.11.90.0.31 sys-apps/console-tools virtual/modutils dev-lang/perl"
 	
 	RDEPEND=">=sys-libs/ncurses-5.2 >=sys-apps/baselayout-1.7.4"
 fi

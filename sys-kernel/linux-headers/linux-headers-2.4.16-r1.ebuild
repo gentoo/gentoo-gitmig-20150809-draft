@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r1.ebuild,v 1.11 2003/03/24 23:21:30 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r1.ebuild,v 1.12 2003/03/24 23:34:01 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -40,7 +40,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.namesys.com http://www.sistina.com/l
 if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco.
-	DEPEND="sys-apps/console-tools sys-apps/modutils dev-lang/perl"
+	DEPEND="sys-apps/console-tools virtual/modutils dev-lang/perl"
 	RDEPEND=">=sys-libs/ncurses-5.2"
 fi
 

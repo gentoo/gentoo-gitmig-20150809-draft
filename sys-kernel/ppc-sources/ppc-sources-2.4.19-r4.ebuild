@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ppc-sources-2.4.19-r4.ebuild,v 1.10 2003/03/24 23:21:32 drobbins Exp $ 
+# $Id: ppc-sources-2.4.19-r4.ebuild,v 1.11 2003/03/24 23:34:01 drobbins Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -41,7 +41,7 @@ if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl sys-apps/modutils sys-devel/make"
+	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
 fi
 
 GENTOOPATCH=${DISTDIR}/linux-gentoo-ppc-${KV}.patch.bz2

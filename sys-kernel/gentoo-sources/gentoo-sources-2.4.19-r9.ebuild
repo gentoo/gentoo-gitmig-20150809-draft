@@ -30,7 +30,7 @@ then
 	RDEPEND="${RDEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
 			   dev-lang/perl
-			   sys-apps/modutils
+			   virtual/modutils
 			   sys-devel/make )"
 fi
 
