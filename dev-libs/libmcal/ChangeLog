@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.7 2004/04/26 01:02:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.8 2004/05/12 03:18:44 randy Exp $
+
+  11 May 2004; Michael McCabe <randy@gentoo.org> libmcal-0.7-r1.ebuild:
+  Added s390 keywords
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libmcal-0.7.ebuild:
   Add die following econf for bug 48950
