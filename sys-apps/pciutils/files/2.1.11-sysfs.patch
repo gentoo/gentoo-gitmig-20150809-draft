@@ -72,9 +72,9 @@ unchanged:
 unchanged:
 --- pciutils-2.1.11.orig/lib/sysfs.c
 +++ pciutils-2.1.11/lib/sysfs.c
-@@ -0,0 +1,281 @@
+@@ -0,0 +1,292 @@
 +/*
-+ *	$Id: 2.1.11-sysfs.patch,v 1.1 2004/01/19 04:44:03 vapier Exp $
++ *	$Id: 2.1.11-sysfs.patch,v 1.2 2004/01/24 18:25:47 plasmaroo Exp $
 + *
 + *	The PCI Library -- Configuration Access via /sys/bus/pci
 + *
@@ -94,6 +94,7 @@ unchanged:
 +#include <dirent.h>
 +#include <fcntl.h>
 +#include <sys/types.h>
++#include <sys/utsname.h>
 +
 +#include "internal.h"
 +
@@ -169,6 +170,16 @@ unchanged:
 +
 +static int sysfs_detect(struct pci_access *a)
 +{
++	struct utsname buf;
++	int major, minor, patch;
++	if(uname(&buf) != 0 || sscanf(buf.release, "%d.%d.%d", &major, &minor, &patch) < 3)
++	{
++		a->warning("Cannot determine kernel version; attempting sysfs support...");
++		return 1;
++	}
++	if(major < 2 || (( major == 2 ) && ( minor < 6 )))
++		return 0;
++
 +	if (access(SYSFS_PATH_ROOT, R_OK))
 +		return 0;
 +	if (access(SYSFS_PATH, R_OK)) {
