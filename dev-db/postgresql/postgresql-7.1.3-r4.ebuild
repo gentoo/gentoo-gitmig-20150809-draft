@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.3-r3.ebuild,v 1.1 2002/01/31 14:46:07 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.3-r4.ebuild,v 1.1 2002/02/05 10:35:51 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -27,6 +27,8 @@ RDEPEND="virtual/glibc
 		python? ( ~dev-lang/python-2.1.1 )
 		java? ( >=virtual/jdk-1.3 )
 		ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
+
+SLOT="0"
 
 src_unpack() {
 
@@ -153,16 +155,16 @@ src_install () {
 pkg_config() {
 
 	einfo ">>> Creating data directory ..."
-	mkdir -p /var/db/${PN}/data
-	chown -Rf postgres.postgres /var/db/${PN}
-	chmod 700 /var/db/${PN}/data
+	mkdir -p /var/db/postgresql/data
+	chown -Rf postgres.postgres /var/db/postgresql
+	chmod 700 /var/db/postgresql/data
 
 	einfo ">>> Initializing the database ..."
-	if [ -f /var/db/${PN}/data/PG_VERSION ] ; then
-		echo -n "A postgres data directory already exists from version "; cat /var/db/${PN}/data/PG_VERSION
+	if [ -f /var/db/postgresql/data/PG_VERSION ] ; then
+		echo -n "A postgres data directory already exists from version "; cat /var/db/postgresql/data/PG_VERSION
 		echo "Read the documentation to check how to upgrade to version ${PV}."
 	else
-		su - postgres -c "/usr/bin/initdb --pgdata /var/db/${PN}/data"
+		su - postgres -c "/usr/bin/initdb --pgdata /var/db/postgresql/data"
 	fi
 
 }
