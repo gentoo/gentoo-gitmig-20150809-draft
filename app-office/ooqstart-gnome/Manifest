@@ -1,0 +1,6 @@
+MD5 34d36a1f62d06ad8b85cd169750d3973 ChangeLog 423
+MD5 6e27642eb774b668fe48a47e475f2495 metadata.xml 400
+MD5 9904d9708aab588e2a66aa1d28103847 ooqstart-gnome-0.8.3.ebuild 1118
+MD5 0cfd93a44ae5d8dac0041e60de7caec5 files/gnome2update.patch 30265
+MD5 b8e5e4d8a4016a754ab52481fc66a00d files/gnome-ooqstart.png 3962
+MD5 d262aad066c0dd58486d7a8a095b598d files/digest-ooqstart-gnome-0.8.3 62

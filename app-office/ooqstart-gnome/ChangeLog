@@ -1,0 +1,9 @@
+# ChangeLog for app-office/ooqstart-gnome
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooqstart-gnome/ChangeLog,v 1.1 2005/01/16 15:05:34 suka Exp $
+
+  16 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/gnome-ooqstart.png, +files/gnome2update.patch:
+  Initial commit, ebuild and patch done by myself, based on the work of Debian
+  and Novell
+
