@@ -1,6 +1,14 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.10 2002/05/22 19:50:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.11 2002/05/24 07:16:44 rphillips Exp $
+
+*galeon-1.2.2 (23 May 2002)
+
+  22 May 2002; Ryan Phillips <rphillips@gentoo.org>
+
+  Added shell for 1.2.2.  The gcc 3/3.1 patches do not apply
+  to this source base.  I don't have the newer versions of GCC installed
+  yet, and have masked this release until a stable version is verified.
 
 *galeon-1.2.1-r2 (22 May 2002)
 
