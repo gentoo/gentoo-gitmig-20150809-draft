@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snmpy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/ChangeLog,v 1.6 2003/04/04 01:22:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/ChangeLog,v 1.7 2003/09/02 23:36:15 liquidx Exp $
+
+  03 Sep 2003; Alastair Tse <liquidx@gentoo.org> snmpy-1.0_alpha4.ebuild:
+  changed dep to virtual/snmp to allow using net-snmp or ucd-snmp (#27316)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
