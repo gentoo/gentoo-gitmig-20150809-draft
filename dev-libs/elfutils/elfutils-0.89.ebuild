@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.89.ebuild,v 1.3 2003/11/11 12:57:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.89.ebuild,v 1.4 2003/11/14 15:58:02 brad_mssw Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~mips"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~mips ~amd64"
 IUSE="nls"
 
 DEPEND=">=sys-libs/glibc-2.3.2
