@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.209 2004/04/22 02:51:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.210 2004/04/22 02:56:39 vapier Exp $
 
   21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.2-r5 gcc-3.1-r8:
   These were never released so lets prune them.
@@ -13,7 +13,7 @@
   Clean up ebuilds (filter-flags and similar) and bump r8 to stable for ppc/sparc/alpha
   so we can trim out r7 in the future.
 
-  21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.0.4:
+  21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.0.4 gcc-3.1.1-r1:
   Clean up the ebuild (filter-flags and similar).
 
   20 Apr 2004; <solar@gentoo.org> gcc-3.3.3-r2.ebuild:

@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r1.ebuild,v 1.13 2004/02/26 20:36:49 pappy Exp $
-
-IUSE="static nls bootstrap java build"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r1.ebuild,v 1.14 2004/04/22 02:56:39 vapier Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -13,8 +11,14 @@ IUSE="static nls bootstrap java build"
 
 inherit flag-o-matic libtool
 
-# Compile problems with these ...
-filter-flags "-fno-exceptions"
+do_filter_flags() {
+	# Compile problems with these ...
+	filter-flags -fno-exceptions
+
+	# In general gcc does not like optimization, and add -O2 where
+	# it is safe.
+	filter-flags -O?
+}
 
 MY_PV="`echo ${PV} | cut -d. -f1,2`"
 GCC_SUFFIX=-${MY_PV}
@@ -22,20 +26,20 @@ LOC="/usr"
 # dont install in /usr/include/g++-v3/, as it will nuke gcc-3.0.x installs
 STDCXX_INCDIR="${LOC}/include/g++-v${MY_PV/\./}"
 PATCHES="${WORKDIR}/patches"
-S=${WORKDIR}/${P}
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
-	http://www.ibiblio.org/gentoo/distfiles/${P}_final-patches-1.0.tbz2"
+
 DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
+	http://www.ibiblio.org/gentoo/distfiles/${P}_final-patches-1.0.tbz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="${MY_PV}"
 KEYWORDS="x86 sparc -ppc"
+IUSE="static nls bootstrap java build"
 
 DEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
-
 RDEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -109,20 +113,20 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	local gcc_lang=""
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		myconf="${myconf} --enable-shared"
 		gcc_lang="c,c++,f77,objc"
 	else
 		gcc_lang="c"
 	fi
-	if [ -z "`use nls`" ] || [ "`use build`" ]
+	if ! use nls || use build
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
-	if [ -n "`use java`" ] && [ -z "`use build`" ]
+	if use java && ! use build
 	then
 		gcc_lang="${gcc_lang},java"
 	fi
@@ -137,11 +141,6 @@ src_compile() {
 	then
 		myconf="${myconf} --program-suffix=${GCC_SUFFIX}"
 	fi
-
-	# gcc does not like optimization
-
-	export CFLAGS="${CFLAGS/-O?/}"
-	export CXXFLAGS="${CXXFLAGS/-O?/}"
 
 	#build in a separate build tree
 	mkdir -p ${WORKDIR}/build
@@ -169,7 +168,7 @@ src_compile() {
 
 	touch ${S}/gcc/c-gperf.h
 
-	if [ -z "`use static`" ]
+	if ! use static
 	then
 		#fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
@@ -225,7 +224,7 @@ src_install() {
 
 	#make sure we dont have stuff lying around that
 	#can nuke multiple versions of gcc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${FULLPATH_D}
 
@@ -290,11 +289,11 @@ src_install() {
 	fi
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		docinto /
-		dodoc COPYING COPYING.LIB ChangeLog LAST_UPDATED README MAINTAINERS
+		dodoc ChangeLog LAST_UPDATED README MAINTAINERS
 		cd ${S}/boehm-gc
 		docinto boehm-gc
 		dodoc ChangeLog doc/{README*,barrett_diagram}
@@ -302,7 +301,7 @@ src_install() {
 		dohtml doc/*.html
 		cd ${S}/gcc
 		docinto gcc
-		dodoc ChangeLog* COPYING* FSFChangeLog* LANGUAGES NEWS ONEWS \
+		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS \
 			README* SERVICE
 		cd ${S}/libf2c
 	    docinto libf2c
@@ -310,10 +309,10 @@ src_install() {
 			permission.netlib readme.netlib
 		cd ${S}/libffi
 	    docinto libffi
-	    dodoc ChangeLog* LICENSE README
+	    dodoc ChangeLog* README
 	    cd ${S}/libiberty
 	    docinto libiberty
-	    dodoc ChangeLog COPYING.LIB README
+	    dodoc ChangeLog README
 	    cd ${S}/libobjc
 	    docinto libobjc
 	    dodoc ChangeLog README* THREADS*
@@ -321,14 +320,14 @@ src_install() {
 		docinto libstdc++-v3
 		dodoc ChangeLog* README
 
-		if [ -n "`use java`" ]
+		if use java
 		then
 			cd ${S}/fastjar
 			docinto fastjar
-			dodoc AUTHORS CHANGES COPYING ChangeLog NEWS README
+			dodoc AUTHORS CHANGES ChangeLog NEWS README
 			cd ${S}/libjava
 			docinto libjava
-			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
+			dodoc ChangeLog* HACKING NEWS README THANKS
 		fi
 	else
 		rm -rf ${D}/usr/share/{man,info}
@@ -351,4 +350,3 @@ pkg_postrm() {
 	# Fix ncurses b0rking (if r5 isn't unmerged)
 	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }
-
