@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/swatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.10 2004/08/18 14:27:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.11 2004/11/12 16:34:26 blubb Exp $
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> swatch-3.1.1.ebuild:
+  added ~amd64
 
 *swatch-3.1.1 (18 Aug 2004)
 
