@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-3.36-r2.ebuild,v 1.6 2002/10/04 06:07:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-3.36-r2.ebuild,v 1.7 2002/10/05 05:39:22 drobbins Exp $
+
+IUSE="mta-tls mta-mysql tcpd mta-ldap mta pam"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"

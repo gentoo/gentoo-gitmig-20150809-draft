@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.7 2002/10/04 06:07:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.8 2002/10/05 05:39:23 drobbins Exp $
+
+IUSE="tcpd ssl postgres mysql ldap pam"
 
 S=${WORKDIR}/${P}
 

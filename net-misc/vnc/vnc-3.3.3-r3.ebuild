@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r3.ebuild,v 1.4 2002/10/04 06:15:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r3.ebuild,v 1.5 2002/10/05 05:39:23 drobbins Exp $
+
+IUSE="ppc java tcpd"
 
 inherit flag-o-matic
 

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
+IUSE="tcpd"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="A free socks4,5 and msproxy implemetation"
 SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"

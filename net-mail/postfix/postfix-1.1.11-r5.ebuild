@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.8 2002/10/04 06:09:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.9 2002/10/05 05:39:23 drobbins Exp $
+
+IUSE="sasl mysql ssl ldap"
 
 POSTFIX_TLS_VER="0.8.11a-${PV}-0.9.6g"
 S=${WORKDIR}/${P}

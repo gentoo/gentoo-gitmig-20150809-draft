@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.2_beta7.ebuild,v 1.1 2002/10/02 05:12:35 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.2_beta7.ebuild,v 1.2 2002/10/05 05:39:23 drobbins Exp $
+
+IUSE="nls"
 
 P=`echo ${P} | sed s/_beta/test/g`
 S=${WORKDIR}/${P}

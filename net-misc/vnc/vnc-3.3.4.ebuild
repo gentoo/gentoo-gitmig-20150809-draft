@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.4.ebuild,v 1.1 2002/09/27 02:22:55 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.4.ebuild,v 1.2 2002/10/05 05:39:23 drobbins Exp $
+
+IUSE="java tcpd"
 
 MY_P="${P}-unixsrc"
 
