@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.0.ebuild,v 1.5 2004/08/07 23:17:22 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.0.ebuild,v 1.6 2004/08/18 10:59:32 eradicator Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:
@@ -12,7 +12,6 @@
 # dr-xr-xr-x    2 nobody   cdrom        2048 Apr 13 11:09 License_Support
 # -r--r--r--    1 nobody   cdrom    96007715 Apr 13 11:08 Maya6_0-6.0-116.i686.rpm
 # -r--r--r--    1 nobody   cdrom       28232 Apr 13 11:09 README.html
-# dr-xr-xr-x    2 nobody   cdrom        2048 May 12 07:58 crack
 # dr-xr-xr-x    3 nobody   cdrom        2048 Apr 13 11:09 documentation
 # -r-xr-xr-x    1 nobody   cdrom        2425 Apr 13 11:08 installDocs.sh
 # dr-xr-xr-x    3 nobody   cdrom        2048 Apr 13 11:09 support
