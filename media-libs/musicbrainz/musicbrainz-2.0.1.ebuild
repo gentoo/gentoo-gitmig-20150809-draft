@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.2 2003/03/30 17:32:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.3 2003/04/16 14:15:57 mholzer Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.musicbrainz.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc  ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 
 DEPEND="virtual/glibc"
 
@@ -31,6 +31,7 @@ src_unpack() {
 	# remove .. if there are any issues, let me know.
 	# <azarah@gentoo.org> (30 Mar 2003)
 	einfo "Reconfiguring..."
+	export WANT_AUTOCONF_2_5=1
 	aclocal
 	autoconf
 	automake
