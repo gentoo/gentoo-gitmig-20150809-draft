@@ -1,8 +1,26 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.27 2002/12/24 16:46:04 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.28 2002/12/24 18:58:10 lostlogic Exp $
 
-*lolo-sources-2.4.20.1_pre6 (20 Dec 2002)
+*lolo-sources-2.4.20.1_pre8 (24 Dec 2002)
+
+  24 Dec 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre8.ebuild :
+  Changes from _pre7:
+  * Officially drop the iptables-ROUTE
+  * fix NTFS modular and highmem support (I hope)
+  * Fix the FreeS/WAN patch so it doesn't make ~ files
+  * add i2c-2.7.0
+
+  TODO before _rc/final:
+  * Documentation
+  * Make sure hardware support is synched with xfs-sources
+  * Test away
+  * Possibly switch encrypted loopback patches?
+  * Possibly make the elevator.c changes a configurable option
+  * Possibly KT400 pci.ids
+  * Whatever else I'm forgetting
+
+*lolo-sources-2.4.20.1_pre7 (24 Dec 2002)
 
   24 Dec 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre7.ebuild :
   Changed last minute:
