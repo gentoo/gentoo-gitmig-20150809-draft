@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.244 2003/11/23 22:07:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.245 2003/11/23 22:22:44 spyderous Exp $
+
+  23 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.14.ebuild:
+  Pulling old snapshot.
 
 *xfree-4.3.99.16 (23 Nov 2003)
 
