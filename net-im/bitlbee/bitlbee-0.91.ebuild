@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91.ebuild,v 1.4 2004/10/13 18:05:15 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91.ebuild,v 1.5 2004/10/31 23:34:03 kloeri Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc sparc alpha ~ia64 ~amd64"
 IUSE="debug jabber msn oscar yahoo flood ssl"
 
 DEPEND="virtual/libc
