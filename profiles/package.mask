@@ -827,15 +827,6 @@ app-cdr/cddump
 # ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01%3A48.tcpdump.asc
 <net-analyzer/tcpdump-3.6.2-r1
 
-# mkennedy@gentoo.org 12 May 2002
-# will be renames to app-editors/xemacs-gtk (so we'll have xemacs,
-# xemacs-gtk, xemacs-motif)
-app-editors/gtk-xemacs
-
-# mkennedy@gentoo.org 20 May 2002
-# replaced (see app-editors/xemacs)
-app-editors/xemacs-gamma
-
 # spider@gentoo.org 18 May 2002
 # Why did this get installed by profiles? its broken.
 # should be updated to 4.2
