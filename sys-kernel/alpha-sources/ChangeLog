@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/alpha-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.36 2004/11/12 18:31:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.37 2004/11/19 21:09:47 plasmaroo Exp $
+
+*alpha-sources-2.4.21-r15 (19 Nov 2004)
+
+  19 Nov 2004; <plasmaroo@gentoo.org> -alpha-sources-2.4.21-r14.ebuild,
+  +alpha-sources-2.4.21-r15.ebuild, files/alpha-sources.binfmt_elf.patch,
+  +files/alpha-sources.smbfs.patch:
+  Version bump; updates binfmt_elf patch (bug #70681) and adds the smbfs
+  security patch (bug #65877).
 
 *alpha-sources-2.4.21-r14 (12 Nov 2004)
 

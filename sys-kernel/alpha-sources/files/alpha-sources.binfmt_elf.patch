@@ -1,6 +1,6 @@
-diff -ur linux-2.4.21/fs/binfmt_elf.c linux-2.4.21-plasmaroo/fs/binfmt_elf.c
+diff -ur linux-2.4.21/fs/binfmt_elf.c linux-2.4.21.plasmaroo/fs/binfmt_elf.c
 --- linux-2.4.21/fs/binfmt_elf.c	2004-08-14 18:15:42.000000000 +0100
-+++ linux-2.4.21-plasmaroo/fs/binfmt_elf.c	2004-11-12 18:09:38.000000000 +0000
++++ linux-2.4.21.plasmaroo/fs/binfmt_elf.c	2004-11-19 20:48:27.314422552 +0000
 @@ -299,9 +299,12 @@
  		goto out;
  
@@ -29,7 +29,17 @@ diff -ur linux-2.4.21/fs/binfmt_elf.c linux-2.4.21-plasmaroo/fs/binfmt_elf.c
  
  	retval = get_unused_fd();
  	if (retval < 0)
-@@ -509,8 +515,14 @@
+@@ -499,7 +505,8 @@
+ 			 */
+ 
+ 			retval = -ENOMEM;
+-			if (elf_ppnt->p_filesz > PATH_MAX)
++			if (elf_ppnt->p_filesz > PATH_MAX || 
++			    elf_ppnt->p_filesz == 0)
+ 				goto out_free_file;
+ 			elf_interpreter = (char *) kmalloc(elf_ppnt->p_filesz,
+ 							   GFP_KERNEL);
+@@ -509,8 +516,16 @@
  			retval = kernel_read(bprm->file, elf_ppnt->p_offset,
  					   elf_interpreter,
  					   elf_ppnt->p_filesz);
@@ -37,15 +47,17 @@ diff -ur linux-2.4.21/fs/binfmt_elf.c linux-2.4.21-plasmaroo/fs/binfmt_elf.c
 +			if (retval != elf_ppnt->p_filesz) {
 +				if (retval >= 0)
 +					retval = -EIO;
- 				goto out_free_interp;
++				goto out_free_interp;
 +			}
 +			/* make sure path is NULL terminated */
-+			elf_interpreter[elf_ppnt->p_filesz - 1] = '\0';
++			retval = -EINVAL;
++			if (elf_interpreter[elf_ppnt->p_filesz - 1] != '\0')
+ 				goto out_free_interp;
 +
  			/* If the program interpreter is one of these two,
  			 * then assume an iBCS2 image. Otherwise assume
  			 * a native linux image.
-@@ -529,8 +541,11 @@
+@@ -529,8 +544,11 @@
  			if (IS_ERR(interpreter))
  				goto out_free_interp;
  			retval = kernel_read(interpreter, 0, bprm->buf, BINPRM_BUF_SIZE);
@@ -82,4 +94,3 @@ diff -ur linux-2.4.21/fs/binfmt_elf.c linux-2.4.21-plasmaroo/fs/binfmt_elf.c
  		}
  
  		if (!load_addr_set) {
-

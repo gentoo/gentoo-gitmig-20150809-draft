@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r14.ebuild,v 1.1 2004/11/12 18:31:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r15.ebuild,v 1.1 2004/11/19 21:09:47 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Linux Alpha kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	mirror://gentoo/patches-${KV/14/3}.tar.bz2
+	mirror://gentoo/patches-${KV/15/3}.tar.bz2
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
 SLOT="${KV}"
@@ -25,7 +25,7 @@ KEYWORDS="alpha -sparc -x86 -ppc -hppa -mips"
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-	cd ${WORKDIR}/${KV/14/1}
+	cd ${WORKDIR}/${KV/15/1}
 
 	# This is the crypt USE flag, keeps {USAGI/superfreeswan/patch-int/loop-jari}
 	if ! use crypt; then
@@ -81,6 +81,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 	epatch ${FILESDIR}/${PN}.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR fix!"
 	epatch ${FILESDIR}/${PN}.binfmt_elf.patch || die "Failed to apply the binfmt_elf fix!"
+	epatch ${FILESDIR}/${PN}.smbfs.patch || die "Failed to apply the SMBFS fix!"
 
 	# Fix multi-line literal in include/asm-alpha/xor.h -- see bug 38354
 	# If this script "dies" then that means it's no longer applicable.
