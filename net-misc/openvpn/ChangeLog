@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.22 2004/12/29 20:02:56 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.23 2005/01/22 22:59:23 dragonheart Exp $
+
+  23 Jan 2005; Daniel Black <dragonheart@gentoo.org> openvpn-1.5.0-r1.ebuild,
+  openvpn-1.6.0.ebuild:
+  threads is now a global use flags. Changed pthreads to threads.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.6.0.ebuild,v 1.5 2004/12/18 11:50:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.6.0.ebuild,v 1.6 2005/01/22 22:59:23 dragonheart Exp $
 
 inherit gnuconfig
 
-IUSE="ssl pthreads"
+IUSE="ssl threads"
 
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application compatible with many OSes."
 SRC_URI="mirror://sourceforge/openvpn/${P}.tar.gz"
@@ -26,7 +26,7 @@ src_compile() {
 	econf \
 		`use_enable ssl` \
 		`use_enable ssl crypto` \
-		`use_enable pthreads pthread` \
+		`use_enable threads pthread` \
 		|| die
 	emake || die
 }
