@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/snes9x
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/ChangeLog,v 1.4 2002/07/27 16:04:24 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/ChangeLog,v 1.5 2002/08/06 19:05:05 gerk Exp $
 
 *snes-139-r1 (27 Jul 2002) 
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added -ppc to keywords
 
   27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> snes-139-r1.ebuild,
   snes-139.ebuild:
