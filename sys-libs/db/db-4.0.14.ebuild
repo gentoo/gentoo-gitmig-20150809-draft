@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.2 2002/02/10 17:53:52 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14.ebuild,v 1.3 2002/07/07 13:00:35 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Berkeley DB"
@@ -9,6 +9,7 @@ DESCRIPTION="Berkeley DB"
 SRC_URI="http://www.sleepycat.com/update/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.sleepycat.com"
 SLOT="4"
+LICENSE="DB"
 
 DEPEND="virtual/glibc"
 

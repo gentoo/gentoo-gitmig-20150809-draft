@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9.ebuild,v 1.4 2002/07/04 08:12:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9.ebuild,v 1.5 2002/07/07 13:00:35 aliz Exp $
 
 S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.sleepycat.com/"
 SLOT="3"
 RDEPEND="virtual/glibc"
 DEPEND="$RDEPEND =sys-libs/db-1.85-r1"
+LICENSE="DB"
 
 src_unpack() {
 	unpack ${A}

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2-r1.ebuild,v 1.1 2001/02/07 16:10:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2-r1.ebuild,v 1.2 2002/07/07 13:00:35 aliz Exp $
 
 A=nss_db-${PV}.tar.gz
 S=${WORKDIR}/nss_db-${PV}
@@ -9,7 +9,7 @@ DESCRIPTION="Allows important system files to be stored in a fast database file 
 SRC_URI="ftp://ftp.gnu.org/gnu/glibc/${A}"
 HOMEPAGE="http://www.gnu.org"
 #now db needs to move to the base install, that's ok.
-
+LICENSE="GPL-2"
 DEPEND=">=sys-libs/db-3.2.3-r1
         sys-devel/gettext"
 
