@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/cronolog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.9 2004/10/05 02:58:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.10 2004/12/31 02:16:13 chriswhite Exp $
+
+  31 Dec 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Adding a metadata.xml file.  This should probably go to apache people.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   cronolog-1.6.2-r1.ebuild, cronolog-1.6.2.ebuild:
