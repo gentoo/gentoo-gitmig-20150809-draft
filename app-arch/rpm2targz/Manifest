@@ -1,5 +1,5 @@
-MD5 66dcb2587415e43f0d530fddcec13890 ChangeLog 1175
+MD5 9696b44a1147b681361c0dfa1d7f2c19 ChangeLog 1543
 MD5 00179eb24b8e3f49d583d10b22b6b68e rpm2targz-8.0.ebuild 1003
-MD5 a3611601a8a1063fe6f3f5d56d721291 rpm2targz-9.0.ebuild 653
+MD5 804e407ffc054d56b4b2320853c93e5a rpm2targz-9.0.ebuild 799
 MD5 242377a7ef1b45e246460cbbf4bb6984 files/digest-rpm2targz-8.0 163
 MD5 d0f2d521642a49ec038e441268ab6480 files/digest-rpm2targz-9.0 63
