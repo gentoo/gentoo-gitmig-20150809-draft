@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.2.ebuild,v 1.3 2004/02/19 18:49:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.2.ebuild,v 1.4 2004/02/22 06:29:58 mr_bones_ Exp $
 
 IUSE=""
 
@@ -33,7 +33,7 @@ DEPEND=">=media-libs/alsa-lib-1.0.2
 #
 #   env ALSA_TOOLS='as10k1 ac3dec' emerge alsa-tools
 #
-[ x"${ALSA_TOOLS}" = x ] && 
+[ x"${ALSA_TOOLS}" = x ] &&
 ALSA_TOOLS="ac3dec as10k1 envy24control hdspconf hdsploader hdspmixer \
 	mixartloader rmedigicontrol sb16_csp seq/sbiload sscape_ctl \
 	us428control usx2yloader vxloader"
