@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.5 2002/11/05 03:02:45 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.6 2002/11/25 01:12:58 strider Exp $
 
 *commons-collections-2.1-r1 (02 Nov 2002)
+
+  24 Nov 2002; Adrian Almenar <strider@gentoo.org> 
+  Releasing it, since it has been tested a lot and works very well. 
 
   04 Nov 2002; Adrian Almenar <strider@gentoo.org> commons-collections-2.1-r1.ebuild:
   Changed KEYWORDS, removed other arch's cause i have not tested it

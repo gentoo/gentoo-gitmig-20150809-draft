@@ -1,9 +1,16 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.2 2002/11/02 21:50:44 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.3 2002/11/25 01:14:49 strider Exp $
+
+*commons-lang-1.0-r1 (24 Nov 2002)
+
+  24 Nov 2002; Adrian Almenar <strider@gentoo.org> commons-lang-1.0-r1.ebuild files/digest-commons-lang-1.0-r1
+  Changed KEYWORDS, Eliminating all but "x86" since i dont know if they work.
+  Releasing it, since it has been tested a lot and works very well.
+  Changed Generated Jar Filename to be according all commons-* packages.
 
 *commons-lang-1.0 (02 Nov 2002)
-
+  
   02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> commons-lang-1.0.ebuild files/digest-commons-lang-1.0 :
   Initial import.  Ebuild submitted by the ever-übercool Adrian Almenar 
   <aalmenar@conectium.com>.
