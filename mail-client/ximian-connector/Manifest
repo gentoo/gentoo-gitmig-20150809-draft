@@ -1,13 +1,23 @@
-MD5 81ffd1e0279bea9e793e0883d7d33b9a ChangeLog 5883
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b77d4d4160912977c63d70ffc80a13d0 ChangeLog 6110
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d2116d58ad25ce6b7f4d6c960edc49f9 ximian-connector-1.2.2_p1.ebuild 1883
-MD5 601ef639b777bdd0cde42a5c9414164c ximian-connector-2.0.0.ebuild 911
-MD5 ca29ae7c8513780b1ed3ac94eb6a0421 ximian-connector-2.0.1.ebuild 999
-MD5 9907dbf85d08fb60277c5f1626114e1f ximian-connector-1.4.7.2.ebuild 969
-MD5 4a7dd3079911e2a0db65a1690814c6a0 ximian-connector-2.0.2.ebuild 921
+MD5 7d1011e7aed9deb24a6fc1433700e40c ximian-connector-2.0.0.ebuild 896
+MD5 d5d4638760f932e0fead2e6e8391ee08 ximian-connector-2.0.1.ebuild 985
+MD5 279f3c12bf43cc57e6a1fcef3ba9bd8d ximian-connector-1.4.7.2.ebuild 957
+MD5 7bb73411d73be4455883998ca83fd56d ximian-connector-2.0.2.ebuild 907
 MD5 9dfb89cf8aa1ed2f2530cf73c0c6c478 files/digest-ximian-connector-1.2.2_p1 173
 MD5 7d1775fcd3f66e7fb5a1631fc9db5fcc files/digest-ximian-connector-1.4.7.2 76
 MD5 e9d7f494208fffcff73379ac9e7f12c8 files/digest-ximian-connector-2.0.0 76
 MD5 6d2437fbb82a87aa651c1c9b25ab4c3e files/digest-ximian-connector-2.0.1 76
 MD5 c54395967f9527952a219a01253770c9 files/ximian-connector-2.0.1-exchange2003.patch 625
 MD5 26036add2c9eea8522d465fa529fc43f files/digest-ximian-connector-2.0.2 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBeYvYRkyva5PS18kRAogCAJ429Rh/31Vxspb7nZKPtxqvbJVwkACeI4Sn
+X7XTXPDABpM7rUCMH29co/M=
+=e7D+
+-----END PGP SIGNATURE-----

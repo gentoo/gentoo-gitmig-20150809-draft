@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/ximian-connector
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.12 2004/10/16 20:48:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.13 2004/10/22 22:37:46 liquidx Exp $
+
+  22 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  ximian-connector-1.4.7.2.ebuild, ximian-connector-2.0.0.ebuild,
+  ximian-connector-2.0.1.ebuild, ximian-connector-2.0.2.ebuild:
+  replaced mit-krb5 with virtual/krb5 (#68523)
 
 *ximian-connector-2.0.2 (16 Oct 2004)
 
