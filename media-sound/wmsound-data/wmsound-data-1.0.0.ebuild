@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wmsound-data/wmsound-data-1.0.0.ebuild,v 1.4 2004/09/03 21:07:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wmsound-data/wmsound-data-1.0.0.ebuild,v 1.5 2004/09/15 17:46:40 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ DEPEND=">=x11-wm/windowmaker-0.80.2-r2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 
 S1=${WORKDIR}/Sounds
 S2=${WORKDIR}/SoundSets

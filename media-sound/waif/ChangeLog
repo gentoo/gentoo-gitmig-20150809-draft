@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/waif
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.17 2004/07/20 01:53:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.18 2004/09/15 17:43:09 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> waif-0.59.7.ebuild:
+  Stable amd64, sparc.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> waif-0.59.7.ebuild:
   ~sparc ~amd64

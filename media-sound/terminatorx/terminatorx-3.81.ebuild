@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.11 2004/07/14 09:09:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.12 2004/09/15 17:40:09 eradicator Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.terminatorx.cx/dist/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS="x86 amd64 sparc"
 IUSE="3dnow alsa mpeg oggvorbis oss sox"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
