@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/coda-client-5.3.19.ebuild,v 1.1 2002/10/23 21:23:01 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/coda-client-5.3.19.ebuild,v 1.2 2002/10/24 20:52:19 lostlogic Exp $
 
 IUSE=""
 PN="coda"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/lwp-1.9
 	>=net-libs/rpc2-1.13
 	>=sys-libs/rvm-1.6
-	>=sys-libs/db-4
+	>=sys-libs/db-3
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
 	>=sys-kernel/linux-headers-2.4"
