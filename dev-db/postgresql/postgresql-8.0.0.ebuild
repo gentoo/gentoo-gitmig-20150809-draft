@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0.ebuild,v 1.1 2005/01/19 13:47:14 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0.ebuild,v 1.2 2005/01/23 05:03:22 eradicator Exp $
 
-inherit eutils gnuconfig flag-o-matic
+inherit eutils gnuconfig flag-o-matic multilib
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 HOMEPAGE="http://www.postgresql.org/"
@@ -91,7 +91,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--host=${CHOST} \
 		--with-docdir=/usr/share/doc/${PF} \
-		--libdir=/usr/lib \
+		--libdir=/usr/$(get_libdir) \
 		--enable-depend \
 		--with-gnu-ld \
 		--with-maxbackends=${MAX_CONNECTIONS} \

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.6.ebuild,v 1.10 2005/01/07 06:38:35 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.6.ebuild,v 1.11 2005/01/23 05:03:22 eradicator Exp $
 
-inherit eutils gnuconfig flag-o-matic java-pkg
+inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 HOMEPAGE="http://www.postgresql.org/"
@@ -125,7 +125,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--host=${CHOST} \
 		--docdir=/usr/share/doc/${PF} \
-		--libdir=/usr/lib \
+		--libdir=/usr/$(get_libdir) \
 		--includedir=/usr/include/postgresql/pgsql \
 		--enable-depend \
 		--with-gnu-ld \

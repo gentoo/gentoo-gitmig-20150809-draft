@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.171 2005/01/21 14:26:13 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.172 2005/01/23 05:03:22 eradicator Exp $
+
+  22 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  postgresql-7.4.6.ebuild, postgresql-8.0.0.ebuild:
+  Multilib fixes
 
   21 Jan 2005; Masatomo Nakano <nakano@gentoo.org>
   -files/pg_autovacuum.conf-8.0.0_rc4, -files/pg_autovacuum.conf-8.0.0_rc5,
