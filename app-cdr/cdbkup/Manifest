@@ -1,5 +1,15 @@
-MD5 0cfdf59ec14122174cbfd91c529b2865 cdbkup-1.0.ebuild 1011
-MD5 96c1d805befb85b463b0b05db547b99b cdbkup-1.0-r1.ebuild 964
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 80376aa283f87dc85da267f639dacfb6 ChangeLog 1017
-MD5 8101d99e5f13c0e2a9c90e1e7e6293b6 files/digest-cdbkup-1.0-r1 61
+MD5 7f94604af6e5f220d0bb2a3830aecaa5 cdbkup-1.0.ebuild 994
+MD5 61ace61ce5d823e53a46545a4cb50432 cdbkup-1.0-r1.ebuild 947
 MD5 8101d99e5f13c0e2a9c90e1e7e6293b6 files/digest-cdbkup-1.0 61
+MD5 8101d99e5f13c0e2a9c90e1e7e6293b6 files/digest-cdbkup-1.0-r1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3zgkHTu7gpaalycRAuPGAJ9wJiOjpPAmYDPvtrcOdH/NP84uJACgpPU7
+x5He1v2hzrGwgY2VVNr68YI=
+=z3NE
+-----END PGP SIGNATURE-----

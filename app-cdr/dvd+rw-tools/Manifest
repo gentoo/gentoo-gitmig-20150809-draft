@@ -1,5 +1,15 @@
-MD5 8395dec142369fd593354ea2d7a9f48c dvd+rw-tools-5.17.4.8.6.ebuild 857
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 98475d7e809a5c7a90eae8a72040f072 ChangeLog 2239
-MD5 941fbbc393d16c9c5af18908edb5b9ee dvd+rw-tools-5.13.4.7.4.ebuild 842
-MD5 954e341db551af19f64f07dc914f9ff8 files/digest-dvd+rw-tools-5.17.4.8.6 74
+MD5 bb399d8165267a9e298e3b4063e2f4a8 dvd+rw-tools-5.13.4.7.4.ebuild 824
+MD5 50f913eb93026ecdecb2c3c64c050ecb dvd+rw-tools-5.17.4.8.6.ebuild 837
 MD5 8c599332ca6e74059baa66a8fad8ca08 files/digest-dvd+rw-tools-5.13.4.7.4 74
+MD5 954e341db551af19f64f07dc914f9ff8 files/digest-dvd+rw-tools-5.17.4.8.6 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3zjLHTu7gpaalycRArmQAKCL2ExA5r4b6U70kPuVN2Pmp4Z82ACeOBqT
+LomxzklQXX1+KqyVmmuQEak=
+=wBlN
+-----END PGP SIGNATURE-----

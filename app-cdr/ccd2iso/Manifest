@@ -1,4 +1,14 @@
-MD5 061d9f2e37edf8a8aa382621e264f28b ccd2iso-0.1.ebuild 585
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 09779321b4066a83e02f4b7f5263e2ac ccd2iso-0.1.ebuild 582
 MD5 acc27a5f3d89c9daf615171ff44ed401 ChangeLog 432
 MD5 0524a6dd3bbef425769cea01bad9ebd5 metadata.xml 301
 MD5 49059d8ec3e9b7da09015859d86fddae files/digest-ccd2iso-0.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3zgHHTu7gpaalycRAkgBAKChJDIJGo2/oCxdNNZO4on1PsOkjACg9NQ2
+q5DmsjJduVn7EqaxqvBLzq4=
+=A91O
+-----END PGP SIGNATURE-----
