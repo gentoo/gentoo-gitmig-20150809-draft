@@ -1,11 +1,16 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.11 2002/12/13 10:59:36 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.12 2002/12/16 09:29:30 seemant Exp $
+
+*pdflib-4.0.3 (09 Nov 2002)
+
+  16 Dec 2002; Seemant Kulleen <seemant@gentoo.org> pdflib-4.0.3.ebuild :
+
+  Moved to stable, as the previous version caused to much havoc with mod_php
+  and friends.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*pdflib-4.0.3 (09 Nov 2002)
-
   10 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   Links libpng against zlib and libstdc++ to fix #10517
 
