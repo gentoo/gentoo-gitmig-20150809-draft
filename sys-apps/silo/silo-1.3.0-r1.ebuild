@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/silo-1.3.0-r1.ebuild,v 1.3 2003/09/15 18:02:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/silo-1.3.0-r1.ebuild,v 1.4 2003/10/10 21:52:26 pappy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
@@ -17,6 +17,15 @@ DEPEND="sys-fs/e2fsprogs
 	sys-apps/sparc-utils"
 
 src_compile() {
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	if has_version "sys-devel/hardened-gcc"
+	then
+		einfo "adding hardened-gcc exclusion flags for building boot loader"
+		export CC="${CC} -yet_exec -yno_propolice"
+		find ${WORKDIR} -name "Makefile" -o -name "Rules.make" \
+			 -exec sed -i "s:CC=gcc:CC=gcc -yet_exec -yno_propolice:g" {} \;
+	fi
+
 	make ${MAKEOPTS} || die
 }
 
