@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kpopup
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kpopup/ChangeLog,v 1.5 2004/07/31 15:25:19 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kpopup/ChangeLog,v 1.6 2004/09/04 17:10:32 axxo Exp $
+
+  04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> kpopup-0.9.6_pre1.ebuild:
+  fix depend syntax 58347
 
   31 Jul 2004; Dominik Stadler <centic@gentoo.org> kpopup-0.9.7.ebuild:
   Add einfo and create missing dir, reported in Bug 56633, thanks.
