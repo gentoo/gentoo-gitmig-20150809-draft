@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.31.ebuild,v 1.3 2004/05/12 04:32:10 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.31.ebuild,v 1.4 2004/05/12 19:26:28 mr_bones_ Exp $
 
 inherit eutils fixheadtails
 
@@ -54,7 +54,7 @@ src_unpack() {
 
 	# set a reasonable MM_CORE_PATH location..
 	sed -i -e 's:logs/mm:/var/cache/apache-mm/mm:' \
- 		src/include/httpd.h
+		src/include/httpd.h
 }
 
 src_compile() {
