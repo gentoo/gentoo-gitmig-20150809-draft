@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.2.ebuild,v 1.3 2004/06/24 23:28:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.2.ebuild,v 1.4 2004/08/31 07:46:25 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -8,9 +8,9 @@ DESCRIPTION="unique multiplayer wargame"
 HOMEPAGE="http://www.ufoot.org/liquidwar/"
 SRC_URI="http://liquidwar.sunsite.dk/archive/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
 RDEPEND=">media-libs/allegro-4.0"
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e 's:/games::' \
 		-e '/^MANDIR/ s:=.*:= $(mandir)/man6:' \
@@ -29,12 +29,12 @@ src_unpack() {
 		-e '/^GAMEDIR/ s/exec_prefix/bindir/' \
 		-e 's:$(DOCDIR)/txt:$(DOCDIR):g' \
 		-e 's:$(GMAKE):$(MAKE):' \
-		-e '/^DOCDIR/ s:=.*:= /usr/share/doc/$(P):' Makefile.in \
-			|| die 'sed Makefile.in failed'
+		-e '/^DOCDIR/ s:=.*:= /usr/share/doc/$(PF):' Makefile.in \
+		|| die 'sed Makefile.in failed'
 	sed -i \
 		-e '/^GAMEDIR/ s/$(exec_prefix)/@bindir@/' \
 		-e 's:/games::' src/Makefile.in \
-			|| die "sed src/Makefile.in failed"
+		|| die "sed src/Makefile.in failed"
 }
 
 src_compile() {
@@ -48,6 +48,6 @@ src_install() {
 	make DESTDIR="${D}" install_nolink || die "make install failed"
 	rm -f "${D}/usr/share/doc/${P}/COPYING"
 	use nls || rm -f "${D}/usr/share/doc/${P}/README.*"
-	gzip -9 "${D}/usr/share/doc/${P}/"{[A-Z]*,*txt}
+	gzip -9 "${D}/usr/share/doc/${PF}/"{[A-Z]*,*txt}
 	prepgamesdirs
 }
