@@ -1,0 +1,9 @@
+# ChangeLog for app-text/xlhtml
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.1 2003/04/17 21:00:32 chouser Exp $
+
+*xlhtml-0.5 (17 Apr 2003)
+
+  17 Apr 2003; <chouser@gentoo.org> xlhtml-0.5.ebuild:
+  Initial ebuild -- alpha only
+
