@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.0.1.ebuild,v 1.1 2003/03/18 07:05:15 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.0.1.ebuild,v 1.2 2003/05/05 21:33:28 foser Exp $
 
 IUSE="gif jpeg X opengl truetype tiff png"
 
@@ -18,6 +18,7 @@ RDEPEND="virtual/x11
 	tiff? ( media-libs/tiff )
 	png? ( media-libs/libpng )
 	truetype? ( =media-libs/freetype-2* )"
+
 DEPEND="${RDEPEND}"
 
 SLOT="0"
@@ -57,11 +58,9 @@ src_compile() {
 		&& myconf="${myconf} --with-png --with-pnm" \
 		|| myconf="${myconf} --with-png=no --with-pnm=no"
 
-# Compilation fails with freetype enabled, checking upstream
-#	use truetype \
-#		&& myconf="${myconf} --with-freetype" \
-#		|| myconf="${myconf} --with-freetype=no"
-	myconf="${myconf} --with-freetype=no"
+	use truetype \
+		&& myconf="${myconf} --with-freetype" \
+		|| myconf="${myconf} --with-freetype=no"
 
 	econf ${myconf} || die
 
