@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.1 2004/08/08 17:14:24 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.2 2004/09/06 08:09:39 axxo Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/jboss/${MY_P}.tar.bz2"
 RESTRICT="nomirror"
 HOMEPAGE="http://www.jboss.org"
 LICENSE="LGPL-2"
-IUSE="doc"
+IUSE=""
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
