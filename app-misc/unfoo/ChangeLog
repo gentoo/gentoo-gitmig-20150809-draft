@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.1 2003/04/01 17:38:40 vladimir Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.2 2004/04/18 01:57:05 randy Exp $
+
+  17 Apr 2004; Michael McCabe <randy@gentoo.org> unfoo-1.0.4.ebuild:
+  added s390 keywords
 
 *unfoo-1.0.4 (01 Apr 2003)
 
