@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audio-entropyd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.1 2004/03/31 09:58:00 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.2 2004/03/31 10:14:35 method Exp $
+
+  31 Mar 2004; Joshua Brindle <method@gentoo.org> audio-entropyd-0.0.6.ebuild,
+  files/audio-entropyd.init:
+  updated init file and ebuild courtesy of Cory Visi <cory@visi.name>
 
 *audio-entropyd-0.0.6 (31 Mar 2004)
 
