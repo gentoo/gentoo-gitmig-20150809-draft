@@ -1,5 +1,5 @@
+MD5 4f05643ee9eae2c7916be06892680f18 pppoed-0.48_beta1-r1.ebuild 822
 MD5 39a0effb5e5f8aef4ffd5f4f1c755e6f ChangeLog 1224
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 b44763ba608cde5d87dbf920aa6ffffd pppoed-0.48_beta1-r1.ebuild 816
-MD5 5e19973ce403b09666cafc987176d7e9 files/digest-pppoed-0.48_beta1-r1 62
 MD5 a943a082b47d10b696fc4ae6fffd66a0 files/pppoed-0.48_beta1-gcc-3.3.patch 1073
+MD5 5e19973ce403b09666cafc987176d7e9 files/digest-pppoed-0.48_beta1-r1 62
