@@ -1,5 +1,5 @@
-MD5 50b93a4c3b5ea64b57217f2c78dadca7 ChangeLog 536
-MD5 629d90a9f65d4a1bff83c1c8c696def5 powernowd-0.90.ebuild 932
+MD5 9998d1f166c067d359df29a651f0ee95 ChangeLog 623
+MD5 2a83518d67d690bbb520e2b5e0bc1018 powernowd-0.90.ebuild 931
 MD5 d40f461cccd3d7b56d395fc6cca0a5b3 files/digest-powernowd-0.90 69
 MD5 659b06eb0ad9bae85d51f6fd165d19cb files/powernowd.confd 285
 MD5 f6fbb1db8952c2ed729d9f95a60d51a3 files/powernowd.rc 485
