@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.09.ebuild,v 1.1 2003/05/07 18:25:36 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.09.ebuild,v 1.2 2003/06/08 04:21:54 rac Exp $
 
 inherit perl-module
 
 DESCRIPTION="The Template Toolkit"
 SRC_URI="http://www.template-toolkit.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.template-toolkit.org"
-
+IUSE=""
 SLOT="0"
 LICENSE="Artistic GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
