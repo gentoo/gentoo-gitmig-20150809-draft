@@ -1,9 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.1 2003/09/24 15:32:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.2 2003/09/24 20:14:58 liquidx Exp $
 
-inherit flag-o-matic virtualx gnome2 kde
+inherit flag-o-matic virtualx gnome2
+use kde && inherit kde
 
+# problems with -O3 on gcc-3.3.1
 replace-flags -O3 -O2
 
 DB3="db-3.1.17"
