@@ -1,47 +1,59 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.26.7-r3.ebuild,v 1.1 2004/12/12 22:14:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.26.7-r3.ebuild,v 1.2 2004/12/22 23:22:27 mrness Exp $
 
-inherit kernel-mod rpm eutils
-
-S="${WORKDIR}/usr/src/kernel-modules/fritzcapi"
+inherit linux-mod rpm eutils
 
 DESCRIPTION="SuSE's 2.6 AVM kernel modules for fcclassic, fcpci, fcpcmcia, fcpnp, fcusb, fcusb2, fxusb_CZ and fxusb"
 HOMEPAGE="http://www.avm.de/"
 SRC_URI="ftp://ftp.suse.com/pub/suse/i386/update/9.1/rpm/i586/km_${P/2.6./2.6-}.i586.rpm
-	mirror://gentoo/fcusb2-firmware-3.11.04.tar.bz2"
+	ftp://ftp.suse.com/pub/suse/i386/9.1/suse/i586/capi4linux-2004.4.5-0.i586.rpm"
 
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="pcmcia usb"
 
-RDEPEND=">=net-dialup/capi4k-utils-20040810"
-DEPEND="${RDEPEND}
-	virtual/linux-sources"
+DEPEND=">=net-dialup/capi4k-utils-20040810"
+
+S="${WORKDIR}/usr/src/kernel-modules/fritzcapi"
 
 FRITZCAPI_MODULES=("fcclassic" "fcpci" "fcpcmcia" "fcpnp" "fcusb" "fcusb2" "fxusb_CZ" "fxusb")
 FRITZCAPI_TARGETS=("fritz.classic" "fritz.pci" "fritz.pcmcia" "fritz.pnp" "fritz.usb" "fritz.usb2" "fritz.xusb_CZ" "fritz.xusb")
 
+BUILD_PARAMS="KDIR=${KV_DIR}"
+BUILD_TARGETS="all"
+
+get_card_module_name() {
+	local CARD=$1
+	echo "${FRITZCAPI_MODULES[CARD]}(extra:${S}/${FRITZCAPI_TARGETS[CARD]}/src)"
+	if [ "${FRITZCAPI_MODULES[CARD]/pcmcia/}" != ${FRITZCAPI_MODULES[CARD]} ]; then
+		#PCMCIA have also a *_cs module
+		echo "${FRITZCAPI_MODULES[CARD]}_cs(extra:${S}/${FRITZCAPI_TARGETS[CARD]}/src)"
+	fi
+}
+
 pkg_setup() {
-	if ! kernel-mod_is_2_6_kernel; then
+	linux-mod_pkg_setup
+	if ! kernel_is 2 6; then
 		die "This package works only with 2.6 kernel!"
 	fi
-	if ! kernel-mod_configoption_present ISDN_CAPI_CAPI20; then
+	if ! linux_chkconfig_present ISDN_CAPI_CAPI20; then
 		die "For using the driver you need a kernel with enabled CAPI support."
 	fi
-	kernel-mod_check_modules_supported
 
 	local USERCARD CARD
 	FRITZCAPI_BUILD_CARDS=""
 	FRITZCAPI_BUILD_TARGETS=""
+	MODULE_NAMES=""
 	if [ -n "${FRITZCAPI_CARDS}" ]; then
 		#Check existence of user selected cards
 		for USERCARD in ${FRITZCAPI_CARDS} ; do
 			for ((CARD=0; CARD < ${#FRITZCAPI_MODULES[*]}; CARD++)); do
-				if [ "$USERCARD" = "${FRITZCAPI_MODULES[CARD]}" ]; then
+				if [ "${USERCARD}" = "${FRITZCAPI_MODULES[CARD]}" ]; then
 					FRITZCAPI_BUILD_CARDS="${FRITZCAPI_BUILD_CARDS} ${FRITZCAPI_MODULES[CARD]}"
 					FRITZCAPI_BUILD_TARGETS="${FRITZCAPI_BUILD_TARGETS} ${FRITZCAPI_TARGETS[CARD]}"
+					MODULE_NAMES="${MODULE_NAMES} `get_card_module_name ${CARD}`"
 					continue 2
 				fi
 			done
@@ -68,45 +80,28 @@ pkg_setup() {
 			fi
 			FRITZCAPI_BUILD_CARDS="${FRITZCAPI_BUILD_CARDS} ${FRITZCAPI_MODULES[CARD]}"
 			FRITZCAPI_BUILD_TARGETS="${FRITZCAPI_BUILD_TARGETS} ${FRITZCAPI_TARGETS[CARD]}"
+			MODULE_NAMES="${MODULE_NAMES} `get_card_module_name ${CARD}`"
 		done
 	fi
 
 	einfo "Selected cards: ${FRITZCAPI_BUILD_CARDS}"
 }
 
-src_unpack() {
-	rpm_src_unpack ${A} || die "Could not unpack RPM package."
-}
-
-src_compile() {
-	(
-		unset ARCH
-		emake KERNEL_SOURCE="${ROOT}/usr/src/linux" TARGETS="${FRITZCAPI_BUILD_TARGETS}" modules || \
-			die "emake modules failed"
-	)
-}
-
 src_install() {
+	linux-mod_src_install
+
 	dodir /lib/firmware /etc
-	insinto /lib/modules/${KV_VERSION_FULL}/extra
-	doins fritz.*/src/*.ko
 
 	echo -e "# card\tfile\tproto\tio\tirq\tmem\tcardnr\toptions" >${D}/etc/capi.conf
 	echo "#" >>${D}/etc/capi.conf
 
 	[ "${FRITZCAPI_BUILD_TARGETS/xusb_CZ/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && \
-		dodoc fritz.xusb_CZ/README.fxusb_CZ
+		dodoc ${S}/fritz.xusb_CZ/README.fxusb_CZ
 
 	[ "${FRITZCAPI_BUILD_TARGETS/usb2/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && (
-		dodir /etc/hotplug/usb
-		cd ${WORKDIR}/fcusb2
-		insopts -m0755
-		insinto /etc/hotplug/usb
-		doins hotplug/usb/*
-
 		insinto /lib/firmware
 		insopts -m0644
-		doins firmware/*
+		doins ${WORKDIR}/usr/lib/isdn/*
 		echo -e "#fcusb2\tput_here_your_firmware\t-\t-\t-\t-\t-" >>${D}/etc/capi.conf
 	)
 
@@ -116,11 +111,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Checking kernel module dependencies"
-	[ -r "${ROOT}/usr/src/linux/System.map" ] && \
-		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
+	linux-mod_pkg_postinst
 
-	einfo "If your device need a firmware, you should edit copy the firmware files"
+	einfo "If your device needs a firmware, you should edit copy the firmware files"
 	einfo "in /lib/firmware and edit /etc/capi.conf."
 	einfo
 	[ "${FRITZCAPI_BUILD_TARGETS/usb2/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && (
