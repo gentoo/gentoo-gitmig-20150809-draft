@@ -19,3 +19,4 @@ move app-misc/kgraphspace kde-misc/kgraphspace
 move app-misc/krename kde-misc/krename
 move app-misc/kdiff3 kde-misc/kdiff3
 move app-misc/krusader kde-misc/krusader
+move sys-apps/filelight kde-misc/filelight
