@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.17.0.ebuild,v 1.1 2002/08/27 00:56:08 gaarde Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.17.0.ebuild,v 1.2 2002/10/04 05:53:36 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="front end to various audio players, including mpg123"

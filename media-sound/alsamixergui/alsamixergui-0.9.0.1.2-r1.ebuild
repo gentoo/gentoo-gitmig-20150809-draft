@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r1.ebuild,v 1.2 2002/09/21 18:20:39 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r1.ebuild,v 1.3 2002/10/04 05:52:18 vapier Exp $
 
 NATIVE_VER=0.9.0rc1-2
 S=${WORKDIR}/${PN}-${NATIVE_VER}

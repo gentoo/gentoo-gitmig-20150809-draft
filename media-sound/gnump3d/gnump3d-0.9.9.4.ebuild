@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-0.9.9.4.ebuild,v 1.5 2002/08/01 11:59:02 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-0.9.9.4.ebuild,v 1.6 2002/10/04 05:53:26 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A streaming server for MP3, OGG vorbis and other streamable files"
