@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.8 2004/04/27 02:10:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.9 2004/04/27 03:17:50 vapier Exp $
 
 IUSE="nls pic build nptl"
 
@@ -427,7 +427,7 @@ setup_flags() {
 	use ppc || append-flags "-freorder-blocks"
 
 	# Sparc/Sparc64 support
-	if [ -n "`use sparc`" ]
+	if use sparc
 	then
 
 		# Both sparc and sparc64 can use -fcall-used-g6.  -g7 is bad, though.
@@ -447,7 +447,8 @@ setup_flags() {
 
 			# Setup the CHOST properly to insure "sparcv9"
 			# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
-			export CHOST="${CHOST/sparc/sparcv9}"
+			[ "${CHOST}" == "sparc-unknown-linux-gnu" ] && \
+				export CHOST="sparcv9-unknown-linux-gnu"
 		fi
 	fi
 }
