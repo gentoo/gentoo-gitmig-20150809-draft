@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.4 2003/06/24 14:56:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.5 2003/07/03 21:44:13 gmsoft Exp $
 
 IUSE="opengl"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/PDL/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic as-is"
-KEYWORDS="x86 amd64 ~ppc ~sparc alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc alpha hppa"
 
 DEPEND="${DEPEND}
 	>=sys-libs/ncurses-5.2
@@ -40,6 +40,12 @@ src_unpack() {
 	else
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
 			${FILESDIR}/perldl.conf > ${S}/perldl.conf
+	fi
+	if [ "`use hppa`" ]
+	then 
+	 cd ${S}/Lib/Slatec
+	 cp Makefile.PL Makefile.PL.orig
+	 sed -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL.orig > Makefile.PL
 	fi
 }
 
