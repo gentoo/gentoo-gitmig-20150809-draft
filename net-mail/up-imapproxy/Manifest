@@ -1,3 +1,5 @@
-MD5 c3caf42f5986a3f7d2762798d3aaf121 up-imapproxy-1.2.1.ebuild 411
-MD5 2cb9d39b8bc7ddee6c04ceea255ee64f .up-imapproxy-1.2.1.ebuild.swp 12288
+MD5 e7ff3a672b16d25326ee3d8a2fea01d7 up-imapproxy-1.2.1.ebuild 1248
+MD5 b1e8165b903b1f3f0792823711772ea5 ChangeLog 375
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 ee2fd39ec911915225c61fdec088ad97 files/digest-up-imapproxy-1.2.1 70
+MD5 50f2a7021cac31321edd6b974edc93e2 files/imapproxy.rc6 509
