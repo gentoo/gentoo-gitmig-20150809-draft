@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.4.0.ebuild,v 1.11 2004/06/24 22:00:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.4.0.ebuild,v 1.12 2004/07/14 15:16:50 agriffis Exp $
 
 inherit gnome2
 
@@ -21,4 +21,3 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.10 )"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
-
