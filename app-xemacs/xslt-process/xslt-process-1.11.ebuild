@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xslt-process/xslt-process-1.11.ebuild,v 1.8 2004/06/24 23:26:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xslt-process/xslt-process-1.11.ebuild,v 1.9 2004/10/03 06:10:03 rac Exp $
 
 SLOT="0"
 IUSE=""
@@ -13,7 +13,7 @@ app-xemacs/semantic
 app-xemacs/debug
 app-xemacs/speedbar
 app-xemacs/edit-utils
-app-xemacs/eterm
+app-xemacs/xemacs-eterm
 app-xemacs/mail-lib
 app-xemacs/xemacs-base
 app-xemacs/elib

@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/psgml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/ChangeLog,v 1.6 2004/06/24 23:19:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/ChangeLog,v 1.7 2004/10/03 06:07:16 rac Exp $
+
+  02 Oct 2004; Robert Coie <rac@gentoo.org> psgml-1.35.ebuild,
+  psgml-1.38.ebuild:
+  eterm -> xemacs-eterm renaming
 
   16 Mar 2004; <rac@gentoo.org> metadata.xml, psgml-1.38.ebuild:
   keyword amd64

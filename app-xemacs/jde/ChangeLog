@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/jde
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/jde/ChangeLog,v 1.5 2004/06/24 23:14:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/jde/ChangeLog,v 1.6 2004/10/03 06:01:25 rac Exp $
+
+  02 Oct 2004; Robert Coie <rac@gentoo.org> +metadata.xml, jde-1.38.ebuild,
+  jde-1.43.ebuild:
+  eterm -> xemacs-eterm renaming
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> jde-1.43.ebuild:
   Stable on alpha

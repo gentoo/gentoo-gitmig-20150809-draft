@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/ilisp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ilisp/ChangeLog,v 1.6 2004/08/10 02:15:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ilisp/ChangeLog,v 1.7 2004/10/03 05:58:05 rac Exp $
+
+  02 Oct 2004; Robert Coie <rac@gentoo.org> +metadata.xml, ilisp-1.28.ebuild,
+  ilisp-1.29.ebuild:
+  eterm -> xemacs-eterm renaming
 
   09 Aug 2004; Tom Gall <tgall@gentoo.org> ilisp-1.29.ebuild:
   stable on ppc64, bug #57174

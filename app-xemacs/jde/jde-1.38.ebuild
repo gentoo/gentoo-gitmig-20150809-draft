@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/jde/jde-1.38.ebuild,v 1.6 2004/06/24 23:14:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/jde/jde-1.38.ebuild,v 1.7 2004/10/03 06:01:25 rac Exp $
 
 SLOT="0"
 IUSE=""
@@ -12,7 +12,7 @@ app-xemacs/semantic
 app-xemacs/debug
 app-xemacs/speedbar
 app-xemacs/edit-utils
-app-xemacs/eterm
+app-xemacs/xemacs-eterm
 app-xemacs/mail-lib
 app-xemacs/xemacs-base
 app-xemacs/xemacs-devel
