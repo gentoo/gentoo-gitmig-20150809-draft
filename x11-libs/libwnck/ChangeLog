@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.22 2003/07/04 21:01:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.23 2003/07/15 12:58:48 todd Exp $
+
+  15 Jul 2003; Todd Sunderlin <todd@gentoo.org> libwnck-2.2.1.ebuild:
+  Marked stable on sparc
 
   10 Feb 2003; Aron Griffis <agriffis@gentoo.org> libwnck-2.2.1.ebuild :
   Add ~alpha to KEYWORDS
