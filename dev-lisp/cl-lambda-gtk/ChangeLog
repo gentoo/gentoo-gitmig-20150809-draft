@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-lambda-gtk
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lambda-gtk/ChangeLog,v 1.1 2005/03/07 11:05:24 mkennedy Exp $
+
+*cl-lambda-gtk-0.1 (07 Mar 2005)
+
+  07 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.1-gentoo.patch, +files/README.Gentoo, +cl-lambda-gtk-0.1.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
