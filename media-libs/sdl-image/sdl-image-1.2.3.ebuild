@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.3.ebuild,v 1.2 2003/09/15 08:57:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.3.ebuild,v 1.3 2003/10/06 18:50:41 agriffis Exp $
 
 MY_P="${P/sdl-/SDL_}"
 S=${WORKDIR}/${MY_P}
@@ -8,7 +8,7 @@ DESCRIPTION="image file loading library"
 SRC_URI="http://www.libsdl.org/projects/SDL_image/release/${MY_P}.tar.gz"
 HOMEPAGE="http://www.libsdl.org/projects/SDL_image/index.html"
 
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64 alpha"
 LICENSE="LGPL-2"
 SLOT="0"
 
