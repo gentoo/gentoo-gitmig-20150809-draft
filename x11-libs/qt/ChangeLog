@@ -1,6 +1,20 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.108 2004/01/07 00:04:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.109 2004/01/07 13:06:48 caleb Exp $
+
+*qt-3.2.3-r1 (07 Jan 2004)
+
+  07 Jan 2004; Caleb Tennis <caleb@gentoo.org> qt-3.2.3-r1.ebuild:
+  Bumping 3.2.3 to 3.2.3-r1.  I've made many changes to 3.2.3 and
+  at this point they warrant a rev bump.  I wanted to avoid this
+  so people didn't have to rebuild Qt, but it's now necessary for
+  the proper dependencies to be set up.
+  
+  Nothing has changed fundamentally that it will mess up on any
+  other architectures.
+
+  If your current Qt is working, you don't have to do this upgrade
+  unless you want to.
 
   06 Jan 2004; <agriffis@gentoo.org> qt-2.3.2-r1.ebuild, qt-3.0.5-r2.ebuild,
   qt-3.1.2-r3.ebuild, qt-3.1.2-r4.ebuild, qt-3.2.1.ebuild, qt-3.2.2-r1.ebuild,
