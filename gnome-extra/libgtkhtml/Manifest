@@ -6,7 +6,7 @@ MD5 4e12417cd487cc2755a296a5e679ccf3 libgtkhtml-2.6.1.ebuild 935
 MD5 8eb7d73f7ddc4b82bf6f9a25dab630d4 libgtkhtml-2.6.0.ebuild 933
 MD5 b8553abb72b97f7ad8017b89b2b69632 libgtkhtml-2.4.0.ebuild 836
 MD5 cef56458cfff6875b7b8c92ffd6f6228 libgtkhtml-2.4.1.ebuild 847
-MD5 af279acf8b1e94e269561bdd7b8eebdb libgtkhtml-3.0.10-r1.ebuild 1334
+MD5 f3487bdb72bee3833a8644c8bcc26374 libgtkhtml-3.0.10-r1.ebuild 1334
 MD5 4412eea3538c99bfb62745bdf47850ae libgtkhtml-2.6.2.ebuild 947
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 0c37e3ffa931ead9868867fe88b9499f libgtkhtml-3.0.10.ebuild 1199
@@ -31,7 +31,7 @@ MD5 11d0e80cc10335bb6025b2b270cb8bc4 files/digest-libgtkhtml-3.2.2 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB7vYnroRuSHgZdywRAoXLAJ9W1SPKgR+Z7wFkkNpFeLLwd0x1FACfRQUm
-t48wzU6BbVfFuMecabE1uK8=
-=2vE7
+iD8DBQFB8fJzroRuSHgZdywRAg7mAJwKJCQG8qPS4Mk7hNNjbmZKbr02aQCfZQoA
+zIAWXhOOyESyN6dgpjCOSaM=
+=t/bM
 -----END PGP SIGNATURE-----
