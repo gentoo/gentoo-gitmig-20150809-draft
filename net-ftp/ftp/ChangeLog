@@ -1,6 +1,19 @@
 # ChangeLog for net-ftp/ftp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.16 2004/06/24 22:45:04 agriffis Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.17 2005/02/12 00:18:41 vapier Exp $
+
+*ftp-0.17-r4 (11 Feb 2005)
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/netkit-ftp-0.17-acct.patch,
+  +files/netkit-ftp-0.17-custom-cflags.patch,
+  +files/netkit-ftp-0.17-ipv6.patch, +files/netkit-ftp-0.17-locale.patch,
+  +files/netkit-ftp-0.17-runique_mget.patch,
+  +files/netkit-ftp-0.17-security.patch,
+  +files/netkit-ftp-0.17-ssl-0.2.patch, +ftp-0.17-r4.ebuild:
+  Add a bunch of misc patches from Fedora.  Add a tweaked ipv6 patch #47507 by
+  Jasmin Buchert.  Touchup the ssl patch and include -z option fix by Andreas
+  Kling #81586.
 
   20 Feb 2004; Aron Griffis <agriffis@gentoo.org> ftp-0.17-r3.ebuild:
   stable on alpha
