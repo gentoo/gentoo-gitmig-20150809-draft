@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Chouser <chouser@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.31.ebuild,v 1.1 2002/01/11 01:32:28 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.31.ebuild,v 1.2 2002/07/11 06:30:27 drobbins Exp $
 
 # nonstandard archive name and source dir
 A=${P//[-.]/_}.zip

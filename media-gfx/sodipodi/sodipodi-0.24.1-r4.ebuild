@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.24.1-r4.ebuild,v 1.2 2002/05/27 17:27:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.24.1-r4.ebuild,v 1.3 2002/07/11 06:30:38 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Vector illustrating application for GNOME"

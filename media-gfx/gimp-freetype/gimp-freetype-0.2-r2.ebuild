@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Joshua Pierre <joshua@swool.com> 
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/gimp-freetype-0.2-r2.ebuild,v 1.1 2002/03/12 22:50:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/gimp-freetype-0.2-r2.ebuild,v 1.2 2002/07/11 06:30:27 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GIMP freetype text plugin"

@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Desktop Team <desktop@gentoo.org>
-# Author Jens Blaesche <mr.big@pc-trouble.de>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-0.9.5.ebuild,v 1.3 2002/04/28 04:50:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-0.9.5.ebuild,v 1.4 2002/07/11 06:30:27 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gthumb is an Image Viewer and Browser for Gnome."

@@ -1,6 +1,5 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
 
 MY_P="${PN}-`echo ${PV} |sed -e 's:_:-:' -e 's:eta::'`"
 S=${WORKDIR}/${MY_P}

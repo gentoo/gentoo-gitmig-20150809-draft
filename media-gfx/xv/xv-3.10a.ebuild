@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a.ebuild,v 1.3 2002/04/25 21:38:42 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a.ebuild,v 1.4 2002/07/11 06:30:38 drobbins Exp $
 S=${WORKDIR}/${P}
 DESCRIPTION="xv - image viewer for X"
 SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz"
