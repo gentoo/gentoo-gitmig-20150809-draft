@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.2.1.ebuild,v 1.1 2004/09/22 23:36:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.2.1.ebuild,v 1.2 2004/09/24 02:40:17 lv Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,7 +25,9 @@ src_unpack() {
 
 src_compile() {
 	replace-flags -O? -O2
-	econf `use_enable nls` || die
+	econf \
+		`use_enable nls` \
+		--libdir=/usr/$(get_libdir) || die
 	make || die
 }
 
@@ -33,6 +35,7 @@ src_install() {
 	 make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
+		libdir=${D}/usr/$(get_libdir) \
 		infodir=${D}/usr/share/info \
 		install || die
 
