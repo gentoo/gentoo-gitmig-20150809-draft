@@ -1,0 +1,12 @@
+diff -urN mailman-2.1.5-orig/bin/check_perms mailman-2.1.5/bin/check_perms
+--- mailman-2.1.5-orig/bin/check_perms	2003-03-31 14:07:55.000000000 -0600
++++ mailman-2.1.5/bin/check_perms	2004-07-21 17:24:34.810274976 -0500
+@@ -313,6 +313,8 @@
+         print _('checking permissions on list data')
+     # BAW: This needs to be converted to the Site module abstraction
+     for dir in os.listdir(mm_cfg.LIST_DATA_DIR):
++        if not S_ISDIR(statmode(os.path.join(mm_cfg.LIST_DATA_DIR,dir))):
++            continue
+         for file in checkfiles:
+             path = os.path.join(mm_cfg.LIST_DATA_DIR, dir, file)
+             if STATE.VERBOSE:

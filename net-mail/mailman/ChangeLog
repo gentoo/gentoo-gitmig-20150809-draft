@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.39 2004/07/10 15:53:22 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.40 2004/07/22 00:31:23 langthang Exp $
+
+*mailman-2.1.5-r1 (21 Jul 2004)
+
+  21 Jul 2004; Tuan Van <langthang@gentoo.org>
+  +files/mailman-2.1.5-directory-check.patch, +mailman-2.1.5-r1.ebuild:
+  Revision bump to resolve bug #53533, #56250. Thanks to Jim Ramsay
+  <i.am@jimramsay.com> and Brian Harring <ferringb@gentoo.org>.
 
   10 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> mailman-2.1.5.ebuild:
   Marked ~amd64.
