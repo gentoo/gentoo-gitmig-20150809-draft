@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3.ebuild,v 1.6 2002/07/18 23:22:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3.ebuild,v 1.7 2002/07/21 20:30:50 owen Exp $
 
 
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ DEPEND="net-libs/libpcap"
 
 SLOT="0"
 LICENSE="GPL-2 | FDL-1.1"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 

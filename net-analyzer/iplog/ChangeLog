@@ -1,8 +1,12 @@
 # ChangeLog for net-analyzer/iplog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.2 2002/07/21 20:30:50 owen Exp $
 
 *iplog-2.2.3 (1 Feb 2002)
+
+  21 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Tested and Added PPC to KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
