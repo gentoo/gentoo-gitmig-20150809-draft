@@ -1,0 +1,24 @@
+# ChangeLog for app-sci/xfoil
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/ChangeLog,v 1.1 2004/12/27 21:08:20 ribosome Exp $
+
+*xfoil-6.94-r1 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +xfoil-6.94-r1.ebuild, +xfoil-6.94.ebuild:
+  Moved from app-sci/xfoil to sci-misc/xfoil.
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; xfoil-6.94-r1.ebuild,
+  xfoil-6.94.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
+
+*xfoil-6.94-r1 (03 Feb 2004)
+
+  03 Feb 2004; George Shapovalov <george@gentoo.org> xfoil-6.94-r1.ebuild :
+  adjusted ebuild for the new blas virtuals, masked for now (until blas reorg is complete)
+
+*xfoil-6.94 (03 Dec 2003)
+
+  03 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> xfoil-6.94.ebuild:
+  initial ebuild by robbat2@gentoo.org
+
