@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.706 2004/11/02 01:42:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.707 2004/11/02 15:44:51 hattya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -51,6 +51,7 @@ app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/uade:beepmp - Support for Beep Media Player
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
+app-i18n/anthy:ucs4 - Enable ucs4 support
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
