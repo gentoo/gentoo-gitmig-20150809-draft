@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-1.31.18.ebuild,v 1.7 2004/08/05 22:01:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-1.31.18.ebuild,v 1.8 2004/08/19 01:42:28 usata Exp $
 
 inherit eutils
 
@@ -41,6 +41,16 @@ src_compile() {
 
 	cd Documentation
 	make info || die "make info failed"
+	ed out/yodl.info <<-EOM >/dev/null 2>&1
+	3a
+	INFO-DIR-SECTION Miscellaneous
+	START-INFO-DIR-ENTRY
+	* yodl: (yodl).         High level document preparation system.
+	END-INFO-DIR-ENTRY
+
+	.
+	wq
+	EOM
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/yodl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.7 2004/08/05 22:01:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.8 2004/08/19 01:42:28 usata Exp $
+
+  19 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> yodl-1.31.18.ebuild:
+  Fixed an error during info directory index regeneration.
+  This closes bug #59369.
 
   05 Aug 2004; Tom Martin <slarti@gentoo.org> yodl-1.31.18.ebuild:
   Marked ~amd64.
@@ -8,7 +12,7 @@
   29 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> yodl-1.31.18.ebuild:
   Added ~mips
 
-  13 May 2004; Bryan Østergaard <kloeri@gentoo.org> yodl-1.31.18.ebuild:
+  13 May 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> yodl-1.31.18.ebuild:
   Stable on alpha.
 
   26 Apr 2004; Mike Gardiner <obz@gentoo.org> yodl-1.31.18.ebuild:
