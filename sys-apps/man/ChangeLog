@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.44 2004/04/17 07:51:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.45 2004/05/01 21:07:52 kloeri Exp $
+
+*man-1.5m-r1 (01 May 2004)
+
+  01 May 2004; Bryan Østergaard <kloeri@gentoo.org> +man-1.5m-r1.ebuild:
+  Add posix sections to MANSECT, bug #47806.
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> man-1.5m.ebuild:
   added missing ~amd64 keyword
