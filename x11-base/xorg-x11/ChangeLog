@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.324 2005/02/05 08:57:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.325 2005/02/05 17:43:32 cryos Exp $
+
+  05 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> xorg-x11-6.8.0-r4.ebuild:
+  Marked stable on amd64.
 
   05 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.903.ebuild, xorg-x11-6.8.1.904.ebuild:
