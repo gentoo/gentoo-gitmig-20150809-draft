@@ -1,0 +1,10 @@
+# ChangeLog for net-www/opera-static
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/ChangeLog,v 1.1 2002/05/20 07:01:52 agenkin Exp $
+
+*opera-6.0 (20 May 2002)
+
+  20 May 2002; Arcady Genkin <agenkin@thpoon.com> opera-static-6.0.ebuild:
+
+  Initial version of the ebuild, adapted from the dynamically linked
+  package.
