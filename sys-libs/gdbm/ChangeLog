@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.9 2003/02/20 22:00:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.10 2003/02/27 01:48:19 zwelch Exp $
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> gdbm-1.8.0-r5.ebuild :
   Added arm to keywords. Add gnuconfig_update fix in unpack.
@@ -9,6 +9,9 @@
   Added hppa to keywords.
 
 *gdbm-1.8.0-r5 (20 Dec 2002)
+
+  26 Feb 2003; Zach Welch <zwelch@gentoo.org> gdbm-1.8.0-r5.ebuild:
+  add arm keyword
 
   20 Dec 2002; Jan Seidel <tuxus@gentoo.org> : gdbm-1.8.0-r5
   Added mips to keywords
