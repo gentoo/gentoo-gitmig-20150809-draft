@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r1.ebuild,v 1.5 2002/01/01 22:35:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r1.ebuild,v 1.6 2002/01/17 18:44:57 azarah Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
 DESCRIPTION="Standard commands to read man pages"
-SRC_URI="http://www.kernel.org/pub/linux/utils/man/man-${NV}.tar.bz2"
+SRC_URI="http://www.kernel.org/pub/linux/utils/man/man-${NV}.tar.gz"
 
 DEPEND="virtual/glibc"
 
