@@ -25,10 +25,6 @@
 # Masked until the freeze is over. This new version fixes bug #8127 so I committed it.
 >=app-editors/kile-1.2
 
-# <satai@gentoo.org> (04 Oct 2002)
-# testing this out!
-=app-text/openjade-1.3.1-r5
-
 # <mkeadle@gentoo.org> (03 Oct 2002)
 # masking pending testing/unfreeze/salmon
 x11-themes/commonbox-styles-extra
