@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2904 2004/06/02 17:36:41 klieber Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2905 2004/06/02 19:33:11 rizzo Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -797,3 +797,7 @@ dev-util/arch
 # weeve@gentoo.org 02 Mar 2004
 # mask slib-3.1.1 until gnucash can get a fix for it
 =dev-libs/slib-3.1.1
+
+# rizzo@gentoo.org 02 Jun 2004
+# mask gaim-0.78-r1 until silc-toolkit is added to all other arches
+=net-im/gaim-0.78-r1
