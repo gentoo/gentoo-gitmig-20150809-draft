@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.05.ebuild,v 1.3 2003/11/11 13:05:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.05.ebuild,v 1.4 2004/01/06 11:59:20 robbat2 Exp $
 
 inherit perl-module
 
@@ -20,24 +20,24 @@ DEPEND="dev-lang/perl
 
 DOCS="ChangeLog COPYING README* doc/*"
 
-if [ `use apache2` ] ; then
-	#In case of Apache
-	HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache2/conf/apache2.conf | cut -d\  -f2`" \
-	HTTPD_USER="`grep '^User' /etc/apache2/conf/commonapache2.conf | cut -d \  -f2`" \
-	HTTPD_GROUP="`grep '^Group' /etc/apache2/conf/commonapache2.conf | cut -d \  -f2`"
-else
-	#In case of Apache2
-	HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`" \
-	HTTPD_USER="`grep '^User' /etc/apache/conf/commonapache.conf | cut -d \  -f2`" \
-	HTTPD_GROUP="`grep '^Group' /etc/apache/conf/commonapache.conf | cut -d \  -f2`"
-fi
-
-# Else use defaults
-[ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="/home/httpd/htdocs"
-[ -z "${HTTPD_USER}" ] && HTTPD_USER="apache"
-[ -z "${HTTPD_GROUP}" ] && HTTPD_GROUP="apache"
-
 src_install() {
+	if [ `use apache2` ] ; then
+		#In case of Apache
+		HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache2/conf/apache2.conf | cut -d\  -f2`" \
+		HTTPD_USER="`grep '^User' /etc/apache2/conf/commonapache2.conf | cut -d \  -f2`" \
+		HTTPD_GROUP="`grep '^Group' /etc/apache2/conf/commonapache2.conf | cut -d \  -f2`"
+	else
+		#In case of Apache2
+		HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`" \
+		HTTPD_USER="`grep '^User' /etc/apache/conf/commonapache.conf | cut -d \  -f2`" \
+		HTTPD_GROUP="`grep '^Group' /etc/apache/conf/commonapache.conf | cut -d \  -f2`"
+	fi
+
+	# Else use defaults
+	[ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="/home/httpd/htdocs"
+	[ -z "${HTTPD_USER}" ] && HTTPD_USER="apache"
+	[ -z "${HTTPD_GROUP}" ] && HTTPD_GROUP="apache"
+
 	perl-module_src_install
 
 	dodoc ${DOCS}

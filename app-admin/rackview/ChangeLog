@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rackview
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.4 2003/10/12 19:26:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.5 2004/01/06 11:59:20 robbat2 Exp $
+
+  06 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> rackview-0.04-r1.ebuild,
+  rackview-0.05.ebuild:
+  grep stuff and those variables should NOT be global
 
 *rackview-0.05 (13 Oct 2003)
 
