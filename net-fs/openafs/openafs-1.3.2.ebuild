@@ -12,15 +12,17 @@ an architecture geared towards system management, along with the tools
 to perform important management tasks. For a user, AFS is a familiar yet
 extensive UNIX environment for accessing files easily and quickly."
 
-SRC_URI="http://www.openafs.org/dl/openafs/${PV}/openafs-${PV}-src.tar.gz"
+SRC_URI="http://www.openafs.org/dl/${PN}/${PV}/${P}-src.tar.gz"
 HOMEPAGE="http://www.openafs.org/"
 
 SLOT="0"
 LICENSE="IPL-1"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="-* x86"
+
 SANDBOX_DISABLED="1"
 
-DEPEND=">=sys-libs/ncurses-5.2
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.75"
 
 ARCH=i386_linux24
@@ -30,9 +32,7 @@ src_unpack() {
 
 	cd ${S}/src/config
 	cp Makefile.in Makefile.in.old
-	sed -e "s|/usr/lib/libncurses.so|-lncurses|g" \
-		Makefile.in.old > Makefile.in
-	rm Makefile.in.old
+	sed -i "s|/usr/lib/libncurses.so|-lncurses|g" Makefile.in
 }
 
 src_compile() {
