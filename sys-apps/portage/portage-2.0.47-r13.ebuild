@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r13.ebuild,v 1.1 2003/04/02 08:23:24 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r13.ebuild,v 1.2 2003/04/02 08:47:04 carpaski Exp $
 
 IUSE="build"
 
@@ -15,7 +15,25 @@ HOMEPAGE="http://www.gentoo.org"
 KEYWORDS="alpha arm hppa mips ppc sparc x86"
 #KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
-RDEPEND="!build? ( >=sys-apps/sed-4.0.5 >=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a )"
+RDEPEND="!build? ( >=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a )"
+
+get_portver() {
+	python -c "import portage,string; print string.join(portage.pkgsplit(portage.best(portage.db[\"${ROOT}\"][\"vartree\"].dbapi.match(\"sys-apps/portage\"))))"
+}
+
+compare_pver() {
+	if python -c "import portage,string,sys; sys.exit(portage.pkgcmp(string.split(\"$1\"),string.split(\"$2\"))>=0)"; then
+		return 0
+	fi
+	return 1
+}
+
+src_unpack() {
+	cd ${WORKDIR}
+	echo tar xjf ${DISTDIR}/${PF}.tar.bz2
+	tar xjf ${DISTDIR}/${PF}.tar.bz2 || die "No portage tarball in distfiles."
+	#get_portver > ${WORKDIR}/previous-version
+}
 
 src_compile() {
 	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
@@ -25,7 +43,6 @@ src_compile() {
 	else
 		make || die
 	fi
-	cd ${S}/bin
 }
 
 src_install() {
@@ -93,11 +110,11 @@ src_install() {
 	dosym ../lib/portage/bin/ebuild.sh /usr/sbin/ebuild.sh
 	dosym ../lib/portage/bin/etc-update /usr/sbin/etc-update
 	
+	#dosym /usr/lib/portage/bin/portage-maintain /usr/sbin/portage-maintain
 	dosym ../lib/portage/bin/env-update /usr/sbin/env-update
 	dosym ../lib/portage/bin/xpak /usr/bin/xpak
 	dosym ../lib/portage/bin/repoman /usr/bin/repoman
 	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
-	dosym ../lib/portage/bin/portageq /usr/bin/portageq
 
 	dosym ../lib/portage/bin/g-cpan.pl /usr/bin/g-cpan.pl
 	dosym ../lib/portage/bin/quickpkg /usr/bin/quickpkg
@@ -144,11 +161,11 @@ pkg_postinst() {
 	fi
 
 	echo
-	eerror "NOTICE: PLEASE update your make.globals. All user changes to variables"
-	eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
+	einfo "NOTICE: PLEASE update your make.globals. All user changes to variables"
+	einfo "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
 	echo
-	eerror "NOTICE: The wheel group requirement for non-root users has been changed to"
-	eerror "group portage. Group portage must be a valid group for user to use portage."
+	einfo "NOTICE: The wheel group requirement for non-root users has been changed to"
+	einfo "group portage. Group portage must be a valid group for user to use portage."
 	echo
 	einfo "Feature additions are noted in help and make.conf descriptions. Update"
 	einfo "them using 'etc-update' please. Maintaining current configs for portage"
@@ -159,19 +176,16 @@ pkg_postinst() {
 	einfo "should be in your worldfile but were removed by a recently discovered"
 	einfo "'-e bug' or if you deleted it: run 'regenworld' as root."
 	echo
-	eerror "The late 2.0.47 portages contains enhanced digests which contain all"
-	eerror "the files and ebuilds used, not just the archives extracted. This is to"
-	eerror "help discovering corruption and increasing security and should require"
-	eerror "no extra work from end-users. If portage reports a bad file that is not"
-	eerror "in the distfiles directory, after you've deleted it an re-sync'd, report it."
+	einfo "The 2.0.47 line of portages contains an optional userpriv mode that"
+	einfo "enables portage to drop root privleges and run as a normal user. It is"
+	einfo "enabled via FEATURES by adding userpriv."
+	echo
+	einfo "Please 'emerge sync' after merging portage to update some permissions."
 	echo
 	if [ -z $PORTAGE_TEST ]; then
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
-		sleep 8
+		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+		sleep 5
 
 		# Kill the existing counter and generate a new one.
 		echo -n "Recalculating the counter... "
@@ -238,5 +252,3 @@ pkg_postinst() {
 		chmod -R g+rws /var/tmp/ccache &>/dev/null
 	fi
 }
-
-
