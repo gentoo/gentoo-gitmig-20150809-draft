@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/gmorgan
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.9 2004/06/25 00:01:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.10 2004/07/02 23:08:25 fvdpol Exp $
+
+*gmorgan-0.23 (03 Jul 2004)
+
+  03 Jul 2004; Frank van de Pol <fvdpol@gentoo.org> metadata.xml,
+  +gmorgan-0.23.ebuild:
+  Version bump to new upstream release. Closes bug #54699.
 
   28 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gmorgan-0.22-r1.ebuild:
