@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.1 2004/03/19 17:51:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.2 2004/03/20 02:09:17 eradicator Exp $
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -63,7 +63,7 @@ src_compile() {
 	use nas && audios="${audios},nas"
 	use kde && audios="${audios},arts"
 	use sparc || (use jack && audios="${audios},jack")
-	use x86 use portaudio && audios="${audios},portaudio"
+	use x86 && use portaudio && audios="${audios},portaudio"
 
 	use alsa \
 		&& audios="${audios},alsa" \
