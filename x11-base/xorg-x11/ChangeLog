@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.6 2004/04/07 21:54:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.7 2004/04/07 22:49:42 spyderous Exp $
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
+  Change blocker on xfree to blocker on other virtual/x11.
 
   07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
   FILES_VER 0.2. Fix libGL.la path -- #47100.
