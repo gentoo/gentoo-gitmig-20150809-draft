@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.3.ebuild,v 1.3 2003/08/12 01:48:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.3.ebuild,v 1.4 2003/08/12 15:32:34 caleb Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -40,10 +40,15 @@ use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$m
 
 PATCHES=""
 
+src_unpack() {
+	kde_src_unpack
+	cd ${S} && aclocal
+}	
+
 src_compile() {
 	rm -f configure configure.in # to make sure the fontconfig patch takes effect
 	kde_src_compile myconf
-	kde_fix_head_instances acinclude.m4 aclocal.m4 admin/cvs.sh admin/libtool.m4.in configure 
+	kde_fix_head_instances acinclude.m4 aclocal.m4 admin/cvs.sh admin/libtool.m4.in
 	kde_src_compile configure
 	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
 	kde_fix_head_instances klipper/klipperrc.desktop
