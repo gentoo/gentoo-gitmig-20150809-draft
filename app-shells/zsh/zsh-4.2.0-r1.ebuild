@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0.ebuild,v 1.2 2004/05/03 18:46:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0-r1.ebuild,v 1.1 2004/05/03 18:46:32 usata Exp $
+
+inherit eutils
 
 IUSE="maildir ncurses static doc pcre cap"
 
@@ -11,11 +13,12 @@ MYDATE="20040204"
 MY_P="${P/_pre/-pre-}"
 
 SRC_URI="ftp://ftp.zsh.org/pub/${MY_P}.tar.bz2
+	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )
 	doc? ( ftp://ftp.zsh.org/pub/${MY_P}-doc.tar.bz2 )"
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="x86 alpha ~ppc ~sparc ~amd64 ~hppa"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~hppa"
 
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
@@ -29,6 +32,8 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	use doc && unpack ${MY_P}-doc.tar.bz2
+	cd ${S}
+	use cjk && epatch ${DISTDIR}/${P}-euc-0.2.patch.gz
 	cd ${S}/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
