@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/xpde
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.6 2003/08/15 08:06:02 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.7 2004/03/28 04:47:05 mr_bones_ Exp $
+
+  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> xpde-0.3.5.ebuild,
+  xpde-0.4.0.ebuild:
+  don't assign default to S; tidy
 
 *xpde-0.4.0 (15 Aug 2003)
 
