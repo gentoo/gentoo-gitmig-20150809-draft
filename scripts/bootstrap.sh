@@ -7,6 +7,7 @@ myPORTAGE=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep
 myGETTEXT=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep sys-devel/gettext | sed 's:^\*::'`
 myBINUTILS=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep sys-devel/binutils | sed 's:^\*::'`
 myGCC=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep sys-devel/gcc | sed 's:^\*::'`
+myGLIBC=`cat /usr/portage/profiles/${MYPROFILE}/packages | grep -v '^#' | grep sys-libs/glibc | sed 's:^\*::'`
 
 echo "Using $myBASELAYOUT"
 echo "Using $myPORTAGE"
