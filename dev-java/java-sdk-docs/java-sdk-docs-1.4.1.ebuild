@@ -8,7 +8,7 @@ DESCRIPTION="Javadoc for Java SDK version 1.4.1"
 HOMEPAGE="http://java.sun.com/j2se/1.4.1/download.html"
 LICENSE="sun-j2sl"
 SLOT="1.4.1"
-KEYWORDS="x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc sparc "
 
 DEPEND="app-arch/unzip"
 	
