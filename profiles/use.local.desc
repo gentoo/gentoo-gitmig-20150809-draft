@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.405 2004/05/31 04:55:03 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.406 2004/05/31 16:45:46 rizzo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -263,6 +263,7 @@ net-fs/shfs:amd - Enable automounter support
 net-im/bitlbee:flood - Enable flood protection support
 net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gaim:noaudio - Allow users to disable audio support
+net-im/gaim:silc - Enable SILC protocol support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:kadu-modules - Enables modules in kadu
 net-im/kadu:kadu-voice - Enables voice chat in kadu
