@@ -1,0 +1,7 @@
+--- qsa.pro.orig	2003-07-02 12:16:55.000000000 +0200
++++ qsa.pro	2003-07-03 13:42:53.000000000 +0200
+@@ -1,3 +1,3 @@
+ TEMPLATE	= subdirs
+ CONFIG		= ordered
+-SUBDIRS 	= src examples configure2
++SUBDIRS 	= src configure2
