@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.1.ebuild,v 1.4 2004/06/01 21:49:35 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.1.ebuild,v 1.5 2004/06/02 22:32:28 vapier Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~hppa amd64 ~ia64 s390 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha arm ~hppa amd64 ~ia64 ~ppc64 s390"
 IUSE="doc"
 
 DEPEND=">=dev-util/pkgconfig-0.14
@@ -20,19 +20,17 @@ DEPEND=">=dev-util/pkgconfig-0.14
 RDEPEND="virtual/glibc"
 
 src_compile() {
-
 	elibtoolize
 
-	econf --with-threads=posix \
+	econf \
+		--with-threads=posix \
 		`use_enable doc gtk-doc` \
 		|| die
 
 	emake || die
-
 }
 
 src_install() {
-
 	einstall || die
 
 	# Consider invalid UTF-8 filenames as locale-specific.
@@ -41,5 +39,4 @@ src_install() {
 	echo "G_BROKEN_FILENAMES=1" > ${D}/etc/env.d/50glib2
 
 	dodoc AUTHORS ChangeLog* README* INSTALL NEWS*
-
 }
