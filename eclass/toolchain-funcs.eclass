@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.27 2005/01/23 20:47:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.28 2005/01/24 04:32:55 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -106,16 +106,15 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 		powerpc64*)	echo ppc64;;
 		powerpc*)	echo ppc;;
 		sparc64*)	ninj sparc64 sparc;;
-		sparc*)		if [[ "${PROFILE_ARCH}" == "sparc64" ]]; then
-					ninj sparc64 sparc
-				else
-					 echo sparc
-				fi;;
+		sparc*)		[[ ${PROFILE_ARCH} == "sparc64" ]] \
+						&& ninj sparc64 sparc \
+						|| echo sparc
+					;;
 		s390*)		echo s390;;
 		sh64*)		ninj sh64 sh;;
 		sh*)		echo sh;;
 		i?86*)		ninj i386 x86;;
-		*)			echo wtf;;
+		*)			echo ${ARCH};;
 	esac
 }
 tc-arch-kernel() {
