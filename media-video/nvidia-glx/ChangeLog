@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.51 2004/07/02 06:17:00 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.52 2004/07/13 16:06:09 lv Exp $
+
+  13 Jul 2004; Travis Tilley <lv@gentoo.org> nvidia-glx-1.0.6106.ebuild:
+  the previous amd64 nvidia drivers arent exactly what i would call stable, but
+  this release seems to be rock solid. marking stable on amd64
 
 *nvidia-glx-1.0.6106 (02 Jul 2004)
 
