@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-1.1.3-r1.ebuild,v 1.2 2004/05/22 11:21:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-1.1.3-r1.ebuild,v 1.3 2004/06/08 21:41:47 agriffis Exp $
 
 MY_P=mod_ruby-${PV}
 DESCRIPTION="Embeds the Ruby interpreter into Apache"
@@ -16,11 +16,7 @@ DEPEND=">=net-www/apache-1.3.3
 S=${WORKDIR}/${MY_P}
 
 apache2-detect() {
-	if [ "`has_version '=net-www/apache-1*'`" != 1 -o "`use apache2`" ]; then
-		true
-	else
-		false
-	fi
+	use apache2 || ! has_version '=net-www/apache-1*'
 }
 
 src_compile() {
@@ -39,7 +35,7 @@ src_compile() {
 
 	emake || die
 
-	if [ "`use doc`" ]; then
+	if use doc; then
 		cd doc
 		emake
 	fi
@@ -59,7 +55,7 @@ src_install() {
 
 	dodoc ChangeLog COPYING README.*
 
-	if [ "`use doc`" ]; then
+	if use doc; then
 		dohtml doc/*.css doc/*.html
 	fi
 
