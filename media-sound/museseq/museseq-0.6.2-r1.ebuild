@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.1 2004/07/11 22:21:52 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.2 2004/09/08 11:21:41 usata Exp $
 
 inherit virtualx eutils kde-functions
 need-qt 3
@@ -15,14 +15,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-IUSE="jack fluidsynth ladcca"
+IUSE="jack fluidsynth ladcca doc"
 
 DEPEND="media-libs/alsa-lib \
 	>=media-libs/libsndfile-1.0.4 \
 	>=x11-libs/qt-3.1.0
 	ladcca? ( >=media-libs/ladcca-0.4.0 ) \
 	jack? ( media-sound/jack-audio-connection-kit ) \
-	fluidsynth? ( media-sound/fluidsynth )"
+	fluidsynth? ( media-sound/fluidsynth )
+	doc? ( app-text/openjade
+		app-text/docbook-dsssl-stylesheets )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -44,6 +46,11 @@ src_compile() {
 	use ladcca || myconf="${myconf} --disable-ladcca"
 	use jack || myconf="${myconf} --disable-jack"
 	use fluidsynth || myconf="${myconf} --disable-fluidsynth"
+	if use doc ; then
+		# bug 49381
+		local stylesheets="$(echo /usr/share/sgml/docbook/dsssl-stylesheets-*)"
+		myconf="${myconf} --with-docbook-stylesheets=${stylesheets}"
+	fi
 	Xeconf ${myconf} || die "configure failed"
 
 	### borrowed from kde.eclass #
@@ -67,11 +74,16 @@ src_compile() {
 	addpredict /dev/dri/card*
 
 	emake || die
+	use doc && ( cd doc ; make manual )
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc COPYING INSTALL README README.softsynth SECURITY TODO
+
+	mv ${D}/usr/share/muse/html ${D}/usr/share/doc/${PF}/html
+	dosym /usr/share/doc/${PF}/html /usr/share/muse/html
+	use doc && dohtml doc/*
 
 	# Name conflict with media-sound/muse.  See bug #34973
 	mv ${D}/usr/bin/muse ${D}/usr/bin/lmuse
