@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.06-r2.ebuild,v 1.4 2002/10/27 16:21:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.06-r2.ebuild,v 1.5 2002/10/30 09:18:38 azarah Exp $
 
 IUSE="pam kerberos gtk motif gnome opengl jpeg xml"
 
@@ -73,8 +73,9 @@ src_compile() {
 		|| myconf="${myconf} --without-jpeg"
 
 	use xml2 \
-		&& myconf="${myconf} --with-xml" \
-		|| myconf="${myconf} --without-xml"
+		&& myconf="${myconf} --with-xml"
+# Do not specifically disable xml, as gtk use it
+#		|| myconf="${myconf} --without-xml"
 	
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
