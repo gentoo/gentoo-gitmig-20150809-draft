@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/jdbc2-stdext-2.0.ebuild,v 1.6 2004/09/08 13:09:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/jdbc2-stdext-2.0.ebuild,v 1.7 2004/10/20 11:32:45 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://java.sun.com/products/jdbc"
 SRC_URI="jdbc2_0-stdext.jar"
 LICENSE="sun-csl"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 RESTRICT="fetch"
 
