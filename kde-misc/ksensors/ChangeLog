@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/ksensors
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.4 2004/12/18 11:05:20 hansmi Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.5 2005/01/14 23:39:13 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> ksensors-0.7.2-r1.ebuild,
+  ksensors-0.7.2.ebuild, ksensors-0.7.3.ebuild:
+  Changed dep on kdebase to accept kdebase-meta, the split 'meta' package.
+  This dep will be narrowed down in the future to the precise split packages
+  required.
 
   18 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
   ksensors-0.7.2-r1.ebuild:
