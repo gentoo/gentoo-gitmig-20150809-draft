@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.11 2004/07/27 10:46:48 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.12 2004/10/18 21:04:09 slarti Exp $
+
+  18 Oct 2004; Tom Martin <slarti@gentoo.org> pycurl-7.12.ebuild:
+  Marked ~amd64, bug 68027.
 
 *pycurl-7.12 (27 Jul 2004)
 
