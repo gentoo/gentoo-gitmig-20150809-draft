@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/captive
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.1 2004/12/02 19:46:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.2 2004/12/03 13:56:42 genstef Exp $
+
+  03 Dec 2004; Stefan Schweizer <genstef@gentoo.org>
+  +files/do-not-check-for-lufsd.patch:
+  Adding missing patch
 
 *captive-1.1.5 (02 Dec 2004)
 

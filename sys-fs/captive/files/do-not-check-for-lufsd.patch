@@ -1,0 +1,25 @@
+--- captive-1.1.5/configure.orig	2004-11-14 16:49:01.508382408 +0100
++++ captive-1.1.5/configure	2004-11-14 16:50:55.054120832 +0100
+@@ -21798,21 +21798,10 @@
+ 
+   test -n "$PATH_LUFSD" && break
+ done
+-
+-	if test x$PATH_LUFSD = x;then
+-		if test x$enable_lufs = xyes;then
+-			{ { echo "$as_me:$LINENO: error: LUFS client was requested (--enable-lufs) but no lufsd(1) binary was found. Install 'lufs-*-*captive*' package." >&5
+-echo "$as_me: error: LUFS client was requested (--enable-lufs) but no lufsd(1) binary was found. Install 'lufs-*-*captive*' package." >&2;}
+-   { (exit 1); exit 1; }; }
+-		else
+-			{ echo "$as_me:$LINENO: WARNING: LUFS client not being compiled as no lufsd(1) binary was found. Install 'lufs-*-*captive*' package." >&5
+-echo "$as_me: WARNING: LUFS client not being compiled as no lufsd(1) binary was found. Install 'lufs-*-*captive*' package." >&2;}
+-		fi
+-	fi
+ fi
+ 
+ 
+-if  $have_lufs_includes && test x$PATH_LUFSD != x -a x$enable_lufs != no ; then
++if  $have_lufs_includes && test x$enable_lufs != xno ; then
+   ENABLE_LUFS_TRUE=
+   ENABLE_LUFS_FALSE='#'
+ else
