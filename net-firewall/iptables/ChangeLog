@@ -1,6 +1,6 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.12 2003/05/06 10:57:22 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.13 2003/07/02 20:28:03 gmsoft Exp $
 
   06 May 2003; Christian Birchinger <joker@gentoo.org>
   iptables-1.2.8-r1.ebuild:
@@ -10,6 +10,10 @@
   Unmasked on x86.
 
 *iptables-1.2.8-r1 (04 May 2003)
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org>  files/1.2.8-files/03_hppa_gentoo.patch.bz2,
+  iptables-1.2.8-r1.ebuild :
+  Bzipped 03_hppa_gentoo.patch.bz2 which was not. Marked stable for hppa.
 
   04 May 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.8-r1.ebuild, files/iptables.init 
 							files/iptables.confd, files/ip6tables.init

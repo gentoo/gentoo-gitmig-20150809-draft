@@ -1,7 +1,7 @@
-MD5 65b867b3f4ed8f2b353ab8cb5fdd6ca2 ChangeLog 7867
+MD5 9c8b821c78afc5d39814951574a64ff6 ChangeLog 8063
 MD5 611eccaed05cd06e19488b1a14d78747 iptables-1.2.7a-r3.ebuild 1993
 MD5 ceb03819b44784147104358fa559ba1d iptables-1.2.7a-r4.ebuild 2105
-MD5 6659f4d1db758cce9ff8abdc8ef17255 iptables-1.2.8-r1.ebuild 2565
+MD5 9c80e47f1050e3567f40d4d382357044 iptables-1.2.8-r1.ebuild 2565
 MD5 e39bb53d533c0313bec3f5a09792c5d4 iptables-1.2.8.ebuild 2103
 MD5 183ec92f9fee7f072d9edb36917b4f9e files/digest-iptables-1.2.7a-r3 68
 MD5 183ec92f9fee7f072d9edb36917b4f9e files/digest-iptables-1.2.7a-r4 68
@@ -19,4 +19,4 @@ MD5 0b7b54af1ab69e8e10ddcaab93fd62ff files/1.2.7a-files/03_all_mac_fix.patch.bz2
 MD5 76d3e579f6be5bc9d4f22f7cdbfd8c71 files/1.2.7a-files/04_all_no_optimize_fix.patch.bz2 549
 MD5 d0e0fa48b2181f3cf1fe8d145d202dc6 files/1.2.8-files/01_all_grsecurity.patch.bz2 1180
 MD5 c4f9d5d795f4ab2c221681e55ebac8dd files/1.2.8-files/02_all_imq.patch.bz2 2936
-MD5 b4abd6e2518af2b4a14ba14c0392fe02 files/1.2.8-files/03_hppa_gentoo.patch.bz2 345
+MD5 23c4c7ee1b86cd191e7b17b046289c91 files/1.2.8-files/03_hppa_gentoo.patch.bz2 278
