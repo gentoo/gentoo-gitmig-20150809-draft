@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.32 2004/04/19 19:03:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.33 2004/04/19 19:34:41 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -60,9 +60,8 @@ inherit eutils flag-o-matic gcc xfree
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
-# IUSE="sse mmx 3dnow" were disabled in favor of autodetection
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx cjk debug doc hardened ipv6 nls pam sdk static pie"
+IUSE="3dfx 3dnow cjk debug doc hardened ipv6 mmx nls pam pie sdk sse static"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.25 2004/04/19 19:04:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.26 2004/04/19 19:33:19 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -25,8 +25,7 @@ inherit eutils flag-o-matic gcc xfree
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
-# IUSE="sse mmx 3dnow" were disabled in favor of autodetection
-IUSE="3dfx truetype nls cjk doc ipv6 debug static sdk gatos pam pie"
+IUSE="3dfx truetype nls cjk doc ipv6 debug static sdk gatos pam pie sse mmx 3dnow"
 IUSE_INPUT_DEVICES="synaptics wacom"
 
 PATCH_VER="2.1.26.16"
