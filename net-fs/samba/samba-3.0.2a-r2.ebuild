@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.9 2004/05/12 05:18:38 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.10 2004/05/28 03:08:00 vapier Exp $
 
 inherit eutils
-
-IUSE="kerberos mysql xml acl cups ldap pam readline python"
-IUSE="${IUSE} oav"
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org/
@@ -23,25 +20,27 @@ SRC_URI="mirror://samba/${PN}${_CVS}.tar.bz2
 	oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2
 	ldap? http://samba.idealx.org/dist/smbldap-tools-${SMBLDAP_TOOLS_VER}.tgz"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ~ia64 s390"
+IUSE="kerberos mysql xml acl cups ldap pam readline python"
+IUSE="${IUSE} oav"
+
 _COMMON_DEPS="dev-libs/popt
-	readline? sys-libs/readline
-	ldap? ( kerberos? ( app-crypt/mit-krb5 ) )
+	readline? ( sys-libs/readline )
+	!arm? ( ldap? ( kerberos? ( app-crypt/mit-krb5 ) ) )
 	mysql? ( dev-db/mysql sys-libs/zlib )
 	xml? ( dev-libs/libxml2 sys-libs/zlib )
-	acl? sys-apps/acl
-	cups? net-print/cups
-	ldap? net-nds/openldap
-	pam? sys-libs/pam
+	acl? ( sys-apps/acl )
+	cups? ( net-print/cups )
+	!arm? ( ldap? ( net-nds/openldap ) )
+	pam? ( sys-libs/pam )
 	python? dev-lang/python"
 DEPEND="sys-devel/autoconf
 	>=sys-apps/sed-4
 	${_COMMON_DEPS}"
 #IDEALX scripts are now using Net::LDAP
-RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}"
-
-KEYWORDS="x86 ppc sparc mips hppa amd64 ~ia64 alpha s390"
-LICENSE="GPL-2"
-SLOT="0"
+RDEPEND="ldap? ( dev-perl/perl-ldap ) ${_COMMON_DEPS}"
 
 src_unpack() {
 	local i
