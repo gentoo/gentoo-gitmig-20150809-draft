@@ -1,16 +1,26 @@
-MD5 849811dba8b5ac18ce1041d6ad994e43 gconf-editor-2.8.0.ebuild 708
-MD5 dd169995c69c19a9a9fa15dfaa9bf32e gconf-editor-2.4.0.ebuild 694
-MD5 0e491d300cb46de0592ea885fe13fb3b gconf-editor-2.6.1.ebuild 629
-MD5 ac8c0c9dd4e69bc5045411fa839e8549 gconf-editor-2.8.2.ebuild 692
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7e13eeb91bde779a6b2470648a213239 ChangeLog 5230
 MD5 2bd2d557c2a9dcc663eb8102547b1b9f gconf-editor-2.6.0.ebuild 861
-MD5 435227d80a16247ada1b96a524c2f76f gconf-editor-2.6.2.ebuild 626
-MD5 0d2bc0453dc0de13a00581e309bc0325 ChangeLog 5125
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 37d0c602679587424d11f7b6363421a8 files/gconf-editor-2.4.0-gtk+-2.4.patch 1528
-MD5 a2b72e9cea80bfd300183397a4487a72 files/digest-gconf-editor-2.4.0 71
-MD5 e1005344b4be9e39de4829d91f0c2aba files/digest-gconf-editor-2.6.0 71
-MD5 8866f71c7c4162fc9ed59f0f60bdfe6c files/digest-gconf-editor-2.6.1 71
-MD5 6b1fcd04a46411dda1c62bd9df47e431 files/digest-gconf-editor-2.6.2 71
-MD5 dc5bba44c0b64bae5537992930ccd9d0 files/digest-gconf-editor-2.8.0 71
-MD5 1a02c71e7fe8df4aeb8b35a48667c2b9 files/digest-gconf-editor-2.8.2 71
+MD5 ceaa83da79c90966c8126983cad74dbe gconf-editor-2.8.0.ebuild 705
+MD5 435227d80a16247ada1b96a524c2f76f gconf-editor-2.6.2.ebuild 626
+MD5 ac8c0c9dd4e69bc5045411fa839e8549 gconf-editor-2.8.2.ebuild 692
+MD5 0e491d300cb46de0592ea885fe13fb3b gconf-editor-2.6.1.ebuild 629
+MD5 dd169995c69c19a9a9fa15dfaa9bf32e gconf-editor-2.4.0.ebuild 694
 MD5 d82811e98599090bb20b4e7173356556 files/gconf-editor-2.6.0-revert_escape_cjk.patch 3887
+MD5 37d0c602679587424d11f7b6363421a8 files/gconf-editor-2.4.0-gtk+-2.4.patch 1528
+MD5 dc5bba44c0b64bae5537992930ccd9d0 files/digest-gconf-editor-2.8.0 71
+MD5 e1005344b4be9e39de4829d91f0c2aba files/digest-gconf-editor-2.6.0 71
+MD5 6b1fcd04a46411dda1c62bd9df47e431 files/digest-gconf-editor-2.6.2 71
+MD5 1a02c71e7fe8df4aeb8b35a48667c2b9 files/digest-gconf-editor-2.8.2 71
+MD5 a2b72e9cea80bfd300183397a4487a72 files/digest-gconf-editor-2.4.0 71
+MD5 8866f71c7c4162fc9ed59f0f60bdfe6c files/digest-gconf-editor-2.6.1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBurpTugEuf3OQ0akRAsMYAJwIpgu7TlptFbha15DUeu3hFigf8QCghVxs
+kwwaXMuBXMAGLrTwtUuhiGc=
+=J332
+-----END PGP SIGNATURE-----
