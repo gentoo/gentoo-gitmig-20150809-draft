@@ -21,6 +21,27 @@
 ##   End example
 ##
 
+# <hannes@gentoo.org> (04 Nov 2002)
+# kde 3.1 rc2: masked permanently
+~x11-libs/qt-3.1.0_pre20021104
+~kde-base/arts-1.1.0.2
+~kde-base/kde-3.1_rc2
+~kde-base/kdeaddons-3.1_rc2
+~kde-base/kdeadmin-3.1_rc2
+~kde-base/kdeartwork-3.1_rc2
+~kde-base/kdebase-3.1_rc2
+~kde-base/kdebindings-3.1_rc2
+~kde-base/kdeedu-3.1_rc2
+~kde-base/kdegames-3.1_rc2
+~kde-base/kdegraphics-3.1_rc2
+~kde-base/kdelibs-3.1_rc2
+~kde-base/kdemultimedia-3.1_rc2
+~kde-base/kdenetwork-3.1_rc2
+~kde-base/kdepim-3.1_rc2
+~kde-base/kdesdk-3.1_rc2
+~kde-base/kdetoys-3.1_rc2
+~kde-base/kdeutils-3.1_rc2
+
 # <strider@gentoo.org> (4 Nov 2002)
 # Masked since all jakarta projects dont have jakarta- preffix
 # Moved to dev-java/regexp
