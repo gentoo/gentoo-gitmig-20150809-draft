@@ -92,7 +92,7 @@
 		list( $team ) = mysql_fetch_row( $team );
 	}
 
-	$team = team_num_name( $team );
+	$team = team_num_name( $todo['team'] );
 
 	if ( $action != 'new_todo' ) {
 		$developer = mysql_query( 'select username from users where uid='.$todo['owner'] );
