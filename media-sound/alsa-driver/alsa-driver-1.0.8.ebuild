@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.8 2005/03/01 20:51:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.9 2005/03/02 07:41:51 eradicator Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -129,7 +129,7 @@ src_install() {
 	if kernel_is 2 6; then
 		# mv the drivers somewhere they won't be killed by the kernel's make modules_install
 		mv ${D}/lib/modules/${KV_FULL}/kernel/sound ${D}/lib/modules/${KV_FULL}/${PN}
-		rmdir ${D}/lib/modules/${KV_FULL}/kernel
+		rmdir ${D}/lib/modules/${KV_FULL}/kernel &> /dev/null
 	fi
 }
 
