@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.3 2004/05/03 09:14:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.4 2004/05/04 03:00:35 solar Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc debug"
 
@@ -49,7 +49,7 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # PIE support
-PIE_VER="8.6.4"
+PIE_VER="8.7.0"
 
 # ProPolice version
 PP_VER="3_3"
@@ -98,19 +98,18 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-manpages.tar.bz2"
 
 # bug #6148 - the bounds checking patch interferes with gcc.c
-# PaX Team, Peter S. Mazinger, pappy, solar, swtaylor, tseng.
 PIE_BASE_URI="mirror://gentoo/"
+PIE_CORE_PATCH="gcc-3.3.3-v${PIE_VER}-pie-corrections.patch.bz2"
 PIE_SSP_PATCH="gcc-3.3.3-v${PIE_VER}-nodefault-pie-ssp.patch.bz2"
-PIE_EXCLUSION_PATCH="gcc-3.3.3-v${PIE_VER}-gcc-pie-exclusion.patch.bz2"
 SSP_EXCLUSION_PATCH="gcc-3.3.3-v${PIE_VER}-gcc-ssp-exclusion.patch.bz2"
-SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_SSP_PATCH} ${PIE_BASE_URI}${PIE_EXCLUSION_PATCH} ${PIE_BASE_URI}${SSP_EXCLUSION_PATCH}"
+SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_CORE_PATCH} ${PIE_BASE_URI}${PIE_SSP_PATCH} ${PIE_BASE_URI}${SSP_EXCLUSION_PATCH}"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extentions"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-#KEYWORDS="~x86 ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+#KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64 ~ppc64 ~s390"
 KEYWORDS="-*"
 
 # Ok, this is a hairy one again, but lets assume that we
@@ -142,7 +141,7 @@ DEPEND="virtual/glibc
 	!amd64? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.6-r1
-	hardened? ( >=sys-devel/binutils-2.15.90.0.3-r1 )
+	hardened? ( x86? ( >=sys-devel/binutils-2.15.90.0.3-r1 ) )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
@@ -311,7 +310,8 @@ src_unpack() {
 #		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
 		mv -f ${WORKDIR}/patch/41* ${WORKDIR}/patch/exclude/
 
-		#use uclibc || mv -f ${WORKDIR}/patch/8?_* ${WORKDIR}/patch/exclude/
+		# conflicts with the pie-correction patch
+		use uclibc || mv -f ${WORKDIR}/patch/8?_* ${WORKDIR}/patch/exclude/
 
 		if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
 		then
@@ -321,6 +321,7 @@ src_unpack() {
 		fi
 
 		epatch ${WORKDIR}/patch
+		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch
 	fi
 
 	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
@@ -355,22 +356,22 @@ src_unpack() {
 	fi
 
 	cd ${WORKDIR}/${P}
+	epatch ${DISTDIR}/${PIE_CORE_PATCH}
+	epatch ${DISTDIR}/${PIE_SSP_PATCH}
 
-	# ARM is having issues with static linking as the spec file
+	# ARM was having issues with static linking as the spec file
 	# calls for crtbeginT.o vs crtbeginS.o. SpanKY looked through
 	# the gcc/config/arm/t-* files, it's appears that it's not meant
 	# to build crtbeginT.o (May 2 2004)
-	if [ "${ARCH}" != "arm" ]
-	then
-		# This patch enables improved PIE and SSP behaviour but does not
-		# enable it by default ...
-		epatch ${DISTDIR}/${PIE_SSP_PATCH}
-		use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
-		use uclibc || epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
-		release_version="${release_version}, pie-${PIE_VER}"
-	fi
+	# Testing arm again (May 3 2004)
 
-	if [ -n "`use hardened`" -a "${ARCH}" != "arm" ]
+	use uclibc && epatch ${FILESDIR]/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
+	#use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
+	use uclibc || epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
+
+	release_version="${release_version}, pie-${PIE_VER}"
+
+	if [ -n "`use hardened`" -a "${ARCH}" != "sparc" -a "${ARCH}" != "ppc64" -a "${ARCH}" != "s390" ]
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP|' \
@@ -394,6 +395,14 @@ src_unpack() {
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+
+	# disable --as-needed from being compiled into gcc specs
+	# natively when using >=sys-devel/binutils-2.15.90.0.3 this is
+	# done to keep our gcc backwards compatible with binutils. 
+	# gcc 3.4.1 cvs has patches that need back porting.. 
+	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
+	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+	sed -i -e 's|^#define HAVE_LD_AS_NEEDED 1.*$|/* #undef HAVE_LD_AS_NEEDED */|' -i gcc/auto-host.h
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }

@@ -1,6 +1,6 @@
-MD5 b070a6473b9b6721cecb43e9b76397b7 gcc-3.3.3-r3.ebuild 24259
-MD5 86fd4e59e35d85c6ab2c938139c1426c ChangeLog 47412
-MD5 a60fe93c8f0852edd5c1c0b872e62692 gcc-3.3.3-r4.ebuild 24776
+MD5 f688b2de404af86d1f1af7d77108d854 gcc-3.3.3-r3.ebuild 24320
+MD5 7fc4b586ba9026462f879177ff985b6c ChangeLog 47740
+MD5 91efde8d2258113767d71a1bfa5d6ea8 gcc-3.3.3-r4.ebuild 25351
 MD5 4bc0ae0e0e19f54dc1ea7a075745b063 gcc-2.95.3-r7.ebuild 5396
 MD5 c7e55fc7f4bfd637f45786c0c5fbb365 gcc-2.95.3-r8.ebuild 9095
 MD5 b6a375116a668edbe10b2ac2e1f9fc6d gcc-3.0.4-r6.ebuild 8577
@@ -40,7 +40,7 @@ MD5 d17e2c6ba913d1c1d5cb135acf853f02 files/digest-gcc-3.4.0 297
 MD5 3853f5e3fdf34c40e6f45ae35a845c99 files/digest-gcc-3.2.1-r7 223
 MD5 cd99b576d23043d02ee0b47a63c0c95e files/digest-gcc-3.2.2 64
 MD5 a71b08c7e35abe2526586874801de12e files/digest-gcc-3.2.2-r2 226
-MD5 e29cf4c303fb62e38358ea0a78b3f9fb files/digest-gcc-3.3.3-r4 620
+MD5 9c179ab5b9f8ff0473c6347b95138d62 files/digest-gcc-3.3.3-r4 619
 MD5 f57a9900e4d0edcae7b1e327e263d2f7 files/digest-gcc-3.3 294
 MD5 12d4b0c4fc49fad52850ab007c3c7371 files/digest-gcc-3.3-r1 353
 MD5 b56b1fa94f82e5c569de7677b8a485e0 files/fix_libtool_files.sh 1738
@@ -143,6 +143,7 @@ MD5 3210d5fd70806c44d4426c3dceebd480 files/3.3.3/gcc333_pre20040408-stack-size.p
 MD5 43c60f04779324d74d3aac52224bed95 files/3.3.3/gcc333_pre20040426-gentoo-branding.patch 820
 MD5 9ba0bd0b103cf9535927ad7c482fe780 files/3.3.3/gcc333-debian-arm-getoff.patch 3501
 MD5 25eda9981106a55c413d1df3d3a87db5 files/3.3.3/gcc333-debian-arm-ldm.patch 3383
+MD5 ff6d7b5082c5e39fab8a5d8932c1a8b7 files/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch 461
 MD5 d9ae122db2768f8e504dfef256d4991f files/3.3.2/gcc332-gentoo-branding.patch 874
 MD5 9e7ed6184a1cdcb69db29f1de26c2d18 files/3.3.2/gcc332-altivec-fix.patch 1607
 MD5 c89b605fe512439cf492c1c378226c7c files/3.4.0/gcc-3.4.0-fno-for-scope.patch 1604
