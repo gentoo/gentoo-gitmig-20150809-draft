@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.125 2005/03/18 17:28:40 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.126 2005/03/24 17:55:57 greg_g Exp $
+
+  24 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> kdeedu-3.4.0.ebuild:
+  Use local flag 'kig-scripting' instead of 'python' to enable scripting
+  support, disabling it by default (#85925).
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kdeedu-3.4.0.ebuild:
   Added to ~ppc
