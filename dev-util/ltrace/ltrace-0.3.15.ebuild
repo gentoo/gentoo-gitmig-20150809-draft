@@ -23,9 +23,6 @@ src_install() {
 
   try make DESTDIR=${D} install
 
-  # man page
-  gzip ${D}usr/share/man/man1/ltrace.1
-
   # docs
   rm -rvf ${D}usr/doc/
   dodoc BUGS COPYING debian/changelog README TODO
