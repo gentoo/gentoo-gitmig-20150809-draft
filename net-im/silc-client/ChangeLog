@@ -1,8 +1,12 @@
 # ChangeLog for net-im/silc-client
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.7 2003/01/08 19:21:26 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.8 2003/01/08 19:26:51 sunflare Exp $
 
 *silc-client-0.9.11 (08 Jan 2003)
+
+  08 Jan 2002; Phil Bordelon <sunflare@gentoo.org> silc-client-0.9.11.ebuild :
+  ppc -> ~ppc flags since I haven't tested it on ppc, but I have no reason to believe
+  that it won't build on the PPC platform.
 
   08 Jan 2003; Phil Bordelon <sunflare@gentoo.org> silc-client-0.9.11.ebuild :
   Version bump.  New fixes had to be added for documentation locations.
