@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netpipe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/ChangeLog,v 1.3 2004/06/24 23:59:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/ChangeLog,v 1.4 2004/07/01 21:37:18 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> netpipe-1.0.0_beta2.ebuild:
+  change virtual/glibc to virtual/libc, fix header
+  ebuild created by Matthias Schwarzott <zzam@gmx.de>
 
 *netpipe-1.0.0_beta2 (13 Feb 2003)
  
