@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-0.4.ebuild,v 1.1 2004/08/17 02:54:46 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-0.4.ebuild,v 1.2 2004/08/17 03:31:17 jbms Exp $
 
 inherit kernel-mod eutils
 
@@ -21,10 +21,18 @@ DEPEND=""
 RDEPEND=">=sys-apps/hotplug-20030805-r2"
 
 src_unpack() {
+
+	if ! egrep "^CONFIG_CRYPTO_ARC4=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
+	then
+		eerror ""
+		eerror "This version of ${PN} requires the ARC4 CryptoAPI module from"
+		eerror "the kernel."
+		die "ARC4 Crypto support not detected."
+	fi
 	if ! egrep "^CONFIG_FW_LOADER=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
 	then
 		eerror ""
-		eerror "New versions of ${PN} require firmware loader support from"
+		eerror "This version of ${PN} require firmware loader support from"
 		eerror "your kernel. This can be found in Device Drivers --> Generic"
 		eerror "Driver Support on 2.6 or in Library Routines on 2.4 kernels."
 		die "Firmware loading support not detected."
@@ -33,7 +41,7 @@ src_unpack() {
 	if ! egrep "^CONFIG_CRC32=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
 	then
 		eerror ""
-		eerror "New versions of ${PN} require support for CRC32 in"
+		eerror "This version of ${PN} requires support for CRC32 in"
 		eerror "your kernel. This can be found in Library Routines in"
 		eerror "kernel configs."
 		die "CRC32 function support not detected."
