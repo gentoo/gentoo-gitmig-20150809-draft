@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.3 2004/03/22 11:23:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.4 2004/04/01 09:43:28 phosphan Exp $
 
 IUSE="atlas X tcltk gnome"
 
@@ -19,7 +19,9 @@ DEPEND="virtual/glibc
 		>=sys-libs/zlib-1.1.3-r2
 		>=media-libs/jpeg-6b-r2
 		>=media-libs/libpng-1.2.1
-		atlas? ( dev-libs/atlas )
+		x86? ( atlas? ( dev-libs/atlas ) )
+		sparc? ( atlas? ( dev-libs/atlas ) )
+		~amd64? ( atlas? ( dev-libs/atlas ) )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.4
@@ -34,7 +36,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 sparc ppc amd64"
 
 src_unpack() {
 	unpack ${A}
