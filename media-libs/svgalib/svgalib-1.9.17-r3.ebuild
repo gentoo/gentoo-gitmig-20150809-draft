@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.3 2003/09/06 17:06:33 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.4 2003/09/06 22:57:44 pappy Exp $
 
 inherit eutils
 
@@ -33,10 +33,11 @@ src_unpack() {
 
 src_compile() {
 
-    # http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-    if has_version 'sys-devel/hardened-gcc' && [ ${CC}="gcc" ] ; then
-        CC="${CC} -yet_exec"
-    fi
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
+	then
+		CC="${CC} -yet_exec"
+	fi
 
 	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils || \
 		die "Failed to build libraries and utils!"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.6 2003/09/06 17:06:33 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.7 2003/09/06 22:57:44 pappy Exp $
 
 inherit eutils
 
@@ -29,7 +29,8 @@ src_unpack() {
 src_compile() {
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if has_version 'sys-devel/hardened-gcc' && [ ${CC}="gcc" ] ; then
+	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
+	then
 		CFLAGS="${CFLAGS} -yet_exec"
 	fi
 
