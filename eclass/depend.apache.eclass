@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.12 2005/03/04 12:39:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.13 2005/03/14 10:42:28 stuart Exp $
 ECLASS=depend.apache
 INHERITED="$INHERITED $ECLASS"
 
@@ -136,7 +136,6 @@ need_apache2() {
 	APACHE_VERSION='2'
 }
 
-
 ####
 ## DO NOT CHANGE THIS FUNCTION UNLESS YOU UNDERSTAND THE CONSEQUENCES IT 
 ## WILL HAVE ON THE CACHE! There MUST be a apache2? () block in DEPEND for
@@ -150,7 +149,23 @@ need_apache() {
 	RDEPEND="${RDEPEND} ${APACHE_DEPEND}"
 	if useq apache2; then
 		APACHE_VERSION='2'
+		USE_APACHE2=2
+		APXS="$APXS2"
+		APACHECTL="${APACHECTL2}"
+		APACHE_BASEDIR="${APACHE2_BASEDIR}"
+		APACHE_CONFDIR="${APACHE2_CONFDIR}"
+		APACHE_MODULES_CONFDIR="${APACHE2_MODULES_CONFDIR}"
+		APACHE_VHOSTSDIR="${APACHE2_VHOSTSDIR}"
+		APACHE_MODULESDIR="${APACHE2_MODULESDIR}"
 	else
 		APACHE_VERSION='1'
+		APXS="$APXS1"
+		USE_APACHE2=
+		APACHECTL="${APACHECTL1}"
+		APACHE_BASEDIR="${APACHE1_BASEDIR}"
+		APACHE_CONFDIR="${APACHE1_CONFDIR}"
+		APACHE_MODULES_CONFDIR="${APACHE1_MODULES_CONFDIR}"
+		APACHE_VHOSTSDIR="${APACHE1_VHOSTSDIR}"
+		APACHE_MODULESDIR="${APACHE1_MODULESDIR}"
 	fi
 }
