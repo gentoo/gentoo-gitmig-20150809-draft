@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.01.ebuild,v 1.1 2002/09/09 21:53:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.01.ebuild,v 1.2 2002/09/10 01:55:54 mcummings Exp $
 
 inherit perl-module
 
@@ -18,6 +18,8 @@ DEPEND="${DEPEND}
 	>=media-libs/libgd-2.0.1
 	X? ( virtual/x11 )"
 
+
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -30,7 +32,21 @@ src_unpack() {
 		cp Makefile.PL Makefile.PL.orig
 		sed -e "s:my \$XPM.*:my \$XPM='y';:" \
 			Makefile.PL.orig > Makefile.PL
+	) ||  ( \
+	        cp Makefile.PL Makefile.PL.orig
+			sed -e "s:my \$XPM.*:my \$XPM='n';:"\
+				Makefile.PL.orig > Makefile.PL
 	)
+	use truetype && ( \
+		cp Makefile.PL Makefile.PL.orig
+		sed -e "s:my \$FT.*:my \$FT='y';:"\
+			Makefile.PL.orig > Makefile.PL
+	) ||  ( \
+	        cp Makefile.PL Makefile.PL.orig
+			sed -e "s:my \$FT.*:my \$FT='n';:"\
+				Makefile.PL.orig > Makefile.PL
+	)
+							
 }
 
 src_install () {
