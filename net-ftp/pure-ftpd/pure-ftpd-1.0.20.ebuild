@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.20.ebuild,v 1.2 2004/08/09 17:51:01 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.20.ebuild,v 1.3 2004/09/01 17:45:57 humpback Exp $
 
 inherit eutils
 
@@ -30,6 +30,10 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-tls"
 	use caps && myconf="${myconf} --with-capabilities"
 	!(use caps) && myconf="${myconf} --without-capabilities"
+
+	# adjust max user length to something more appropriate
+	# for virtual hosts.  See bug #62472 for details.
+	sed -e "s:# define MAX_USER_LENGTH 32U:# define MAX_USER_LENGTH 127U:" -i ${S}/src/ftpd.h
 
 	econf \
 		--with-altlog --with-extauth \
