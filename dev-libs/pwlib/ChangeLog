@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.5 2002/07/05 17:41:07 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.6 2002/07/05 19:40:49 raker Exp $
+
+*pwlib-1.2.19 (05 Jul 2002)
+
+  05 Jul 2002; Nick Hadaway <raker@gentoo.org> pwlib-1.2.19.ebuild:
+  openh323.org no longer has 1.2.x series available for download.
+  This is a download from gnomemeeting.org.  The patch for 1.2.20
+  has also been used for this build and seems to work fine.
 
 #pwlib-1.3.2 (05 Jul 2002)
 
