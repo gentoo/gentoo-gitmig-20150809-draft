@@ -1,0 +1,16 @@
+diff -Naur linux-2.4.24.orig/arch/ppc/platforms/pmac_nvram.c linux-2.4.24/arch/ppc/platforms/pmac_nvram.c
+--- linux-2.4.24.orig/arch/ppc/platforms/pmac_nvram.c	2004-02-15 19:28:33.000000000 +0100
++++ linux-2.4.24/arch/ppc/platforms/pmac_nvram.c	2004-02-15 19:29:56.000000000 +0100
+@@ -526,10 +526,12 @@
+ 		nvram_data = ioremap(dp->addrs[1].address, dp->addrs[1].size);
+ 		ppc_md.nvram_read_val	= indirect_nvram_read_byte;
+ 		ppc_md.nvram_write_val	= indirect_nvram_write_byte;
++#ifdef CONFIG_ADB_PMU
+ 	} else if (nvram_naddrs == 0 && sys_ctrler == SYS_CTRLER_PMU) {
+ 		nvram_naddrs = -1;
+ 		ppc_md.nvram_read_val	= pmu_nvram_read_byte;
+ 		ppc_md.nvram_write_val	= pmu_nvram_write_byte;
++#endif
+ 	} else {
+ 		printk(KERN_ERR "Don't know how to access NVRAM with %d addresses\n",
+ 		       nvram_naddrs);

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.24-r1.ebuild,v 1.1 2004/02/15 11:12:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.24-r1.ebuild,v 1.2 2004/02/15 18:37:17 dholm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 # Included patches:
@@ -48,6 +48,8 @@ src_unpack() {
 	mv linux-${OKV} ${PF}
 	cd ${PF}
 	bzcat ${DISTDIR}/patch-${KV}.patch.bz2 | patch -p1 || die "patch failed"
+	patch -p1 < ${FILESDIR}/${P}.pmac_pmu.patch || \
+		die "Failed to apply pmac_pmu fix"
 	find . -iname "*~" | xargs rm 2> /dev/null
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
@@ -64,7 +66,6 @@ src_unpack() {
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die "make mrproper died"
 	ARCH=${MY_ARCH}
-
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ppc-sources-dev
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.18 2004/02/15 11:12:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.19 2004/02/15 18:37:17 dholm Exp $
+
+  15 Feb 2004; David Holm <dholm@gentoo.org> ppc-sources-dev-2.4.24-r1.ebuild,
+  files/ppc-sources-dev-2.4.24.pmac_pmu.patch:
+  Added patch from Maciej J. Woloszyk, closing bug #41668.
 
 *ppc-sources-dev-2.4.24-r1 (15 Feb 2004)
 
