@@ -1,11 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.15 2003/01/12 23:51:47 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.16 2003/01/20 21:34:02 lostlogic Exp $
 
 *gentoo-sources-2.4.20-r1 (12 Jan 2003)
 
   Ebuild Changes
-  * Dropped the *3c509-fix patches.
+  * Dropped the *3c509-fix
+  * Dropped the *tcp-window-tracking
   * Drop gcc-3.1 patch if not on gcc3
   * Also make prettier output for the USE var controlled
     patches

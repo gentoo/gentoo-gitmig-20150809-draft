@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r1.ebuild,v 1.3 2003/01/12 23:51:47 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r1.ebuild,v 1.4 2003/01/20 21:34:02 lostlogic Exp $
 
 IUSE="build crypt xfs"
 
@@ -74,6 +74,7 @@ src_unpack() {
 	fi
 
 	rm -f *3c509-fix
+	rm -f *tcp-window-tracking
 
 	kernel_src_unpack
 }
