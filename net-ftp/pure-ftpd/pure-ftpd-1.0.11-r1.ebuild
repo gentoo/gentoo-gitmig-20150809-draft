@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
 # Maintainer: Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.11.ebuild,v 1.1 2002/04/13 23:31:25 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.11-r1.ebuild,v 1.1 2002/04/20 18:47:10 verwilst Exp $
 
 S="${WORKDIR}/${P}"
 SRC_URI="http://prdownloads.sourceforge.net/pureftpd/${P}.tar.bz2"
@@ -42,13 +42,16 @@ src_install() {
 	install || die
 	dodoc AUTHORS CONTACT COPYING ChangeLog
 	dodoc FAQ HISTORY INSTALL README* NEWS
-	insinto /etc/ ; doins ${FILESDIR}/ftpusers
-	newdoc ${FILESDIR}/pure-ftpd.conf_d pure-ftpd.conf.sample
+	mkdir -p ${D}/etc
+        cp ${FILESDIR}/ftpusers ${D}/etc/ftpusers
+        mkdir -p ${D}/etc/conf.d
+        cp ${FILESDIR}/pure-ftpd.conf_d ${D}/etc/conf.d/pure-ftpd
 	if [ "`use pam`" ] ; then
 	insinto /etc/pam.d ; doins pam/{ftplockout,pure-ftpd}
 	fi
-	exeinto /etc/init.d 
-	newexe ${FILESDIR}/pure-ftpd.rc6 pure-ftpd
+	mkdir -p ${D}/etc/init.d
+        cp ${FILESDIR}/pure-ftpd.rc6 ${D}/etc/init.d/pure-ftpd
+        chmod 755 ${D}/etc/init.d/pure-ftpd
 
 }
 
