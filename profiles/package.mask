@@ -93,10 +93,6 @@ dev-lisp/cl-db-sockets
 x11-libs/eprog
 x11-misc/med
 
-# <spyderous@gentoo.org> (13 Oct 2003)
-# Masked until xfree stops installing the same files
-x11-misc/synaptics
-
 # <tseng@gentoo.org> (11 Oct 2003)
 # Mask pending a solution to bsetroot
 =x11-misc/commonbox-utils-0.5
