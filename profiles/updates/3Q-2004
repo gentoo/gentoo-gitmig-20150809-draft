@@ -15,3 +15,4 @@ move dev-lisp/gauche-gl dev-scheme/gauche-gl
 move dev-lisp/gauche dev-lang/gauche
 move app-laptop/wmbatppc x11-plugins/wmbatppc
 move app-admin/wasabi app-admin/tenshi
+move dev-python/pyOpenSSL dev-python/pyopenssl
