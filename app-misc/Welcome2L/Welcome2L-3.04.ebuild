@@ -1,23 +1,23 @@
 # Copyright 2002 Niek van der Maas
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/Welcome2L/Welcome2L-3.04.ebuild,v 1.4 2003/07/16 17:03:25 pvdabeel Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/Welcome2L/Welcome2L-3.04.ebuild,v 1.5 2003/08/06 07:53:16 vapier Exp $
 
+inherit eutils
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Welcome to Linux, ANSI login logo for Linux."
-SRC_URI="http://www.chez.com/littleigloo/files/${P}.src.tar.gz"
+DESCRIPTION="Welcome to Linux, ANSI login logo for Linux"
 HOMEPAGE="http://www.littleigloo.org/" 
+SRC_URI="http://www.chez.com/littleigloo/files/${P}.src.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
 
 src_unpack() { 
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/Welcome2L-3.04-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
