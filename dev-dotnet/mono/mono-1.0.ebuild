@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.ebuild,v 1.1 2004/06/30 15:34:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.ebuild,v 1.2 2004/07/10 06:05:17 latexer Exp $
 
-inherit eutils mono flag-o-matic
+inherit eutils mono flag-o-matic debug
 
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.go-mono.com/"
@@ -22,6 +22,14 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxml2"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# Fix for amd64
+	epatch ${FILESDIR}/${P}-segv.diff
+}
 
 src_compile() {
 	strip-flags
