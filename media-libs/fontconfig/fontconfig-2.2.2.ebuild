@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.4 2004/04/28 22:41:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.5 2004/06/02 12:44:03 foser Exp $
 
 inherit eutils
 
@@ -11,14 +11,14 @@ SRC_URI="http://freedesktop.org/~fontconfig/release/${P}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="1.0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha arm hppa amd64 ~ia64 ~ppc64"
 
 DEPEND=">=sys-apps/sed-4
 	>=media-libs/freetype-2.1.4
-	>=dev-libs/expat-1.95.3
-	>=sys-apps/ed-0.2"
+	>=dev-libs/expat-1.95.3"
 
 src_unpack() {
+
 	unpack ${A}
 	cd ${S}
 
@@ -42,7 +42,7 @@ src_compile() {
 		die "Dont compile fontconfig with ccc, it doesnt work very well"
 
 	# disable docs only disables docs generation (!)
-	econf  --disable-docs \
+	econf --disable-docs \
 		--with-docdir=${D}/usr/share/doc/${PF} \
 		--x-includes=/usr/X11R6/include \
 		--x-libraries=/usr/X11R6/lib \
@@ -92,6 +92,6 @@ pkg_postinst() {
 	then
 		echo
 		einfo "Creating font cache..."
-		HOME="/root" /usr/bin/fc-cache -f
+		HOME="/root" /usr/bin/fc-cache
 	fi
 }

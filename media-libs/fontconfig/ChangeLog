@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.46 2004/04/17 07:16:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.47 2004/06/02 12:44:03 foser Exp $
+
+  02 Jun 2004; foser <foser@gentoo.org> fontconfig-2.2* :
+  Don't force fc-cache update, it breaks portage removal of fonts (#13808)
+  2.2.2 : remove ed dep (#42805)
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> fontconfig-2.2.1.ebuild,
   fontconfig-2.2.2.ebuild:
