@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.ebuild,v 1.4 2003/10/16 16:10:23 drobbins Exp $
-
-S="${WORKDIR}/${P}"
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/wmsmixer-0.5.ebuild,v 1.5 2003/10/18 01:41:37 raker Exp $
 
 DESCRIPTION="fork of wmmixer adding scrollwheel support and other features"
 HOMEPAGE="http://www.hibernaculum.net/wmsmixer.html"
@@ -16,25 +14,20 @@ DEPEND="virtual/glibc
 	virtual/x11"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/gcc3.diff || die "patch failed"
-
+	epatch ${FILESDIR}/gcc3.diff
 }
 
 src_compile() {
-
-	xmkmf || die "xmkmf failed"
-
-	patch -p0 < ${FILESDIR}/makefile.diff
-
-	make || die "parallel make failed"
-
+	g++ -m32 ${CFLAGS} -I/usr/X11R6/include -c -o wmsmixer.o wmsmixer.cc
+	rm -f wmsmixer
+	g++ -o wmsmixer ${CFLAGS} -L/usr/X11R6/lib wmsmixer.o -lXpm -lXext -lX11
 }
 
 src_install() {
+	insinto /usr/X11R6/bin
+	doins wmsmixer
 
-	make DESTDIR=${D} install || die "make install failed"
-
+	dodoc README README.wmmixer
 }
