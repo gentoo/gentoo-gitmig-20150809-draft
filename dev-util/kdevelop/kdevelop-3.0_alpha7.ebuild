@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha5.ebuild,v 1.2 2003/09/06 20:28:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha7.ebuild,v 1.1 2003/09/26 03:20:17 caleb Exp $
 
 inherit kde-base
 need-kde 3
 
-IUSE=""
-MY_P="kdevelop-3.0a5"
+IUSE="doc java python"
+MY_P="kdevelop-3.0.0a7"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="KDevelop is an easy to use C/C++ IDE for Unix. It supports KDE/Qt, GNOME, plain C and C++ projects."
-SRC_URI="mirror://kde/unstable/kdevelop-3.0-alpha5/src/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/unstable/3.1.92/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.kdevelop.org"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
@@ -20,8 +20,8 @@ export MAKEOPTS="$MAKEOPTS -j1"
 newdepend ">=dev-lang/perl-5.0.4
 	sys-devel/flex
 	app-text/sgmltools-lite
-	app-doc/qt-docs
-	app-doc/kdelibs-apidocs
+	doc? ( app-doc/qt-docs )
+	doc? ( app-doc/kdelibs-apidocs )
 	sys-devel/gdb
 	java? ( virtual/jdk )
 	python? ( dev-lang/python )"
