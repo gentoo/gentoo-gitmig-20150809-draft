@@ -1,11 +1,19 @@
 # ChangeLog for net-misc/rdate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.7 2003/02/12 08:31:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.8 2003/03/13 23:30:01 seemant Exp $
+
+*rdate-990821-r1 (13 Mar 2003)
+
+  13 Mar 2003; Seemant Kulleen <seemant@gentoo.org> rdate-990821-r1.ebuild
+  :
+
+  Changed supsersed to sed dependency, closing bug #17278 by Eric Hustvedt
+  <ehustvedt@hotmail.com>
+
+*rdate-990821 (20 Oct 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*rdate-990821 (20 Oct 2002)
-
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> rdate-990821.ebuild :
   Add alpha to KEYWORDS
 

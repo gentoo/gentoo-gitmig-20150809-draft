@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/net-misc/rdate,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821-r1.ebuild,v 1.4 2003/02/13 15:05:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-990821-r1.ebuild,v 1.5 2003/03/13 23:30:02 seemant Exp $
 
 inherit flag-o-matic
 
@@ -15,12 +15,12 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 LICENSE="GPL-2"
 
-DEPEND="sys-apps/supersed"
+DEPEND=">=sys-apps/sed-4.0.5"
 
 src_install(){
 	use ipv6 && append-flags "-DINET6"
 
-	ssed -i "s/^\(CFLAGS = \).*/\1${CFLAGS}/" Makefile
+	sed -i "s/^\(CFLAGS = \).*/\1${CFLAGS}/" Makefile
 
 	dodir /usr/{bin,share/man/man1}
 	make DESTDIR=${D} install || die "Failed to install rdate"
