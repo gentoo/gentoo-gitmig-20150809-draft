@@ -1,20 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7c725fb89306ffa6ca2ac4036c873ec0 ChangeLog 2239
-MD5 1924234843274adb43c505dc7057cd27 alternate-2.4.ebuild 436
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 6acf609b226b3ef777d84fc92937b24b alternate-2.7.ebuild 442
-MD5 c3198091b7daca263da34ee776853a4b alternate-2.6a.ebuild 446
+MD5 d650cdcc0bd585a35667ebba39174e04 ChangeLog 2364
 MD5 8a4fdf289426768f6e0d75970648505b alternate-2.8.ebuild 640
-MD5 3da12cdf98706416763bcc465a90dce1 files/digest-alternate-2.4 64
-MD5 ad241b7ecbc46d9f722cc1f74f9abbd3 files/digest-alternate-2.7 64
-MD5 05581db8fef9b3a6a435f1ce632aa7f1 files/digest-alternate-2.6a 65
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 4e7361e887c76c32db726568dab6b2e3 files/digest-alternate-2.8 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZfs0HTu7gpaalycRAoq7AJ9Vz1jAnHJh+t6zCVFTnKqjS9SiQQCfT79m
-kIxRie4OcOksm7EuaZJjah8=
-=I0oF
+iD8DBQFBhQAVLLFUmVNQ7rkRAo6rAKCc4BXV/oL7Ov1gWQYzTfggPMKALgCgio2G
+/H23TyYpfB8/fi56ORH5rxw=
+=ffAg
 -----END PGP SIGNATURE-----
