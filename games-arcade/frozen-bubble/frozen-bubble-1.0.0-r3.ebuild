@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.17 2004/07/16 22:36:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.18 2004/07/21 02:12:53 mr_bones_ Exp $
 
-inherit perl-module games
+inherit eutils perl-module games
 
 NET_CLIENT_P=frozen-bubble-client-0.0.3
 NET_SERVER_P=frozen-bubble-server-0.0.3
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch "${FILESDIR}/fb-sdlperl-deb.patch"
 	sed -i \
 		-e 's:INSTALLDIRS=.*:PREFIX=${D}/usr:' \
 		c_stuff/Makefile \
