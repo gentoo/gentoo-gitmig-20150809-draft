@@ -1,15 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 987a158c8db975f87465e843efb8a660 ChangeLog 10213
 MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
 MD5 cea4d249dc349ebac9cbfdf4ac04fc48 sparc-sources-2.4.26-r4.ebuild 2595
 MD5 d7bbecff78077ee6dc480a0f50afd6a6 sparc-sources-2.4.26-r3.ebuild 2520
-MD5 95708646470a95668e8789cd415844ed files/2.4-attr-fix.patch 846
+MD5 935f3a9c9a5209ad79a0cdbf9ca4b610 files/U1-hme-lockup.patch 263
+MD5 387e70ce7c98618810dea0f521df76eb files/generate-asm-sparc 1661
+MD5 ba77a729e0d363d7d5e9b483bb41f231 files/digest-sparc-sources-2.4.26-r4 140
 MD5 3dac23b6e285462a7cda41505cc698e1 files/2.4.26-CAN-2004-0394.patch 319
+MD5 95708646470a95668e8789cd415844ed files/2.4-attr-fix.patch 846
 MD5 dc18e982f8149588a291956481885a8c files/2.4.26-CAN-2004-0495.patch 17549
 MD5 0f66013f643c79c97fda489618a4e2fd files/2.4.CAN-2004-0535.patch 476
-MD5 935f3a9c9a5209ad79a0cdbf9ca4b610 files/U1-hme-lockup.patch 263
-MD5 ba77a729e0d363d7d5e9b483bb41f231 files/digest-sparc-sources-2.4.26-r4 140
-MD5 c60b688d897721383811a1418d079ef4 files/2.4.26-use-pte_alloc_one_fast.patch 609
 MD5 ba77a729e0d363d7d5e9b483bb41f231 files/digest-sparc-sources-2.4.26-r3 140
-MD5 318e24a959f5ba3112a6fb73d84d6d93 files/generate-asm-sparc 1655
+MD5 c60b688d897721383811a1418d079ef4 files/2.4.26-use-pte_alloc_one_fast.patch 609
 MD5 13f20ae89e814fb87621b471e4d2ca68 files/2.4.19/sparc-asm_offsets.h 23156
 MD5 89fb52efc9018f970ceeeaadac9c0f9e files/2.4.19/sparc64-asm_offsets.h 35521
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+gL4mdTrptrqvGERApB+AJ9c2XqyH6KxbWw4/yFA738v7RwqjACfWN8H
+cKyX7cszMc1Jw2TPR2lZGBs=
+=A3iI
+-----END PGP SIGNATURE-----

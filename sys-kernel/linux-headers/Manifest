@@ -1,23 +1,33 @@
-MD5 6b83f7aa542efd2300f1118e7b538dd7 linux-headers-2.4.21-r1.ebuild 3897
-MD5 a805f1bef77a70342a93ff7f3e22a3a2 linux-headers-2.4.26.ebuild 3430
-MD5 a54c368d10a7f8c5d828b1342385d83a linux-headers-2.4.21.ebuild 3683
-MD5 35118ba67519a422ed91c7e961e0dc96 linux-headers-2.4.23.ebuild 3435
-MD5 94a5edd73b3846f6cee5fc5e5ac8528a linux-headers-2.6.99.ebuild 547
-MD5 518df1e040f4e16a400374d9b4cfacdc linux-headers-2.4.25.ebuild 3424
-MD5 826425b4c4432a47d6686d294271748e linux-headers-2.2.26.ebuild 2511
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8e5935c3810b1924dc28e648fc86bde1 ChangeLog 20434
-MD5 608fe99985244b0445f76cee44c9ae14 metadata.xml 290
-MD5 140781a4e077aa6a54fc1508cdf15928 linux-headers-2.0.40.ebuild 1822
+MD5 826425b4c4432a47d6686d294271748e linux-headers-2.2.26.ebuild 2511
+MD5 94a5edd73b3846f6cee5fc5e5ac8528a linux-headers-2.6.99.ebuild 547
+MD5 a805f1bef77a70342a93ff7f3e22a3a2 linux-headers-2.4.26.ebuild 3430
+MD5 6b83f7aa542efd2300f1118e7b538dd7 linux-headers-2.4.21-r1.ebuild 3897
+MD5 a54c368d10a7f8c5d828b1342385d83a linux-headers-2.4.21.ebuild 3683
 MD5 88b03bd3833c3cc1d47ad67dccf1a65c linux-headers-2.4.22.ebuild 3964
-MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21-r1 67
-MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-linux-headers-2.0.40 66
+MD5 35118ba67519a422ed91c7e961e0dc96 linux-headers-2.4.23.ebuild 3435
+MD5 608fe99985244b0445f76cee44c9ae14 metadata.xml 290
+MD5 518df1e040f4e16a400374d9b4cfacdc linux-headers-2.4.25.ebuild 3424
+MD5 140781a4e077aa6a54fc1508cdf15928 linux-headers-2.0.40.ebuild 1822
+MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 556c7008fbfdf81750bbd4ab2beb111e files/digest-linux-headers-2.2.26 67
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-headers-2.6.99 0
+MD5 2574d3f1b776f2df365737f456bfe435 files/digest-linux-headers-2.4.26 67
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21 67
+MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21-r1 67
 MD5 6ef3887ee4018c06c18e8726767189c7 files/digest-linux-headers-2.4.22 67
 MD5 79ee1ad9f4629595cd8d0cd20ca56dc1 files/digest-linux-headers-2.4.23 67
-MD5 df6b4c19f4a4cb2b3d3a2a0107d7853d files/digest-linux-headers-2.4.25 67
-MD5 2574d3f1b776f2df365737f456bfe435 files/digest-linux-headers-2.4.26 67
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-headers-2.6.99 0
-MD5 86ab1f9187d3b8289ac55c0651e16d47 files/generate-asm-sparc 1655
+MD5 45ff5cde07cfe93ecbb514226def606f files/generate-asm-sparc 1661
 MD5 459bc20c4015796630e3a9f3dc9125e6 files/linux-headers-strict-ansi-fix.patch 1486
-MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
+MD5 df6b4c19f4a4cb2b3d3a2a0107d7853d files/digest-linux-headers-2.4.25 67
+MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-linux-headers-2.0.40 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+gKomdTrptrqvGERAu81AJoCg6FzbfUbR+CNLJmWaur/Kqm81ACfcYxg
+wHOxTnsEmdNUI+XBzVsaC1k=
+=uLkO
+-----END PGP SIGNATURE-----
