@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r1.ebuild,v 1.5 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r1.ebuild,v 1.6 2002/07/12 00:26:53 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ispell is a fast screen-oriented spelling checker"
@@ -15,7 +15,7 @@ src_compile() {
 
 	#This is easier and cleaner than sed'ing.
 	#Also allows user to edit local.h.gentoo for language preference
-	cp ${FILESDIR}/local.h.gentoo ${S}/local.h
+	#cp ${FILESDIR}/local.h.gentoo ${S}/local.h
 
 	make || die
 }
