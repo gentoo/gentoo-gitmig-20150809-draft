@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.1.ebuild,v 1.1 2003/03/16 18:00:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.1.ebuild,v 1.2 2003/03/24 11:38:36 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -55,7 +55,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=dev-libs/atk-1.2.2
 	>=dev-libs/glib-2.2.1
 	>=gnome-base/gconf-2.2
-	>=gnome-base/gnome-panel-2.2.0.1-r1
+	>=gnome-base/gnome-panel-2.2.1
 	>=gnome-base/gnome-desktop-2.2.1
 	>=gnome-base/gnome-vfs-2.2.3
 	>=gnome-base/libbonobo-2.2.1

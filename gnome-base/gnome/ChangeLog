@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.63 2003/03/16 18:00:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.64 2003/03/24 11:38:35 foser Exp $
 
 *gnome-2.2.1 (16 Mar 2003)
+
+  24 Mar 2003; foser <foser@gentoo.org> gnome-2.2.1.ebuild :
+  upped gnome-panel dep to the correct version (#18087)
 
   16 Mar 2003; foser <foser@gentoo.org> gnome-2.2.1.ebuild :
   New release
