@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.29 2005/02/16 04:02:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.1 2005/02/16 04:02:40 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -12,10 +12,17 @@ GLIBC_MANPAGE_VERSION="2.3.4-r1"
 # From manual
 GLIBC_INFOPAGE_VERSION="2.3.4-r1"
 
+# Gentoo patchset
 PATCH_VER="1.2"
 
+# Libidn addon - http://www.gnu.org/software/libidn/
+IDN_VER="0.5.13"
+IDN_TARBALL="libidn-${IDN_VER}.tar.gz"
+IDN_URI="http://josefsson.org/libidn/releases/${IDN_TARBALL}"
+
 # (Recent snapshots fails with 2.6.5 and earlier)
-MIN_KERNEL_VERSION="2.6.6"
+LT_KERNEL_VERSION="2.4.1"
+NPTL_KERNEL_VERSION="2.6.6"
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~eradicator/glibc"
 
@@ -43,7 +50,8 @@ GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
 BRANCH_UPDATE=${BRANCH_UPDATE-$(get_version_component_range 4)}
 
 # (Recent snapshots fails with 2.6.5 and earlier with NPTL)
-MIN_KERNEL_VERSION=${MIN_KERNEL_VERSION:-"2.6.6"}
+NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.6"}
+LT_KERNEL_VERSION=${LT_KERNEL_VERSION:-"2.4.1"}
 
 ### SRC_URI ###
 
@@ -117,6 +125,10 @@ get_glibc_src_uri() {
 			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
 	fi
 
+	if [[ -n "${IDN_URI}" ]]; then
+		GLIBC_SRC_URI="${GLIBC_SRC_URI} ${IDN_URI}"
+	fi
+
 	echo "${GLIBC_SRC_URI}"
 }
 
@@ -132,6 +144,11 @@ toolchain-glibc_src_unpack() {
 
 	cd ${S}
 	unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
+
+	if [[ -n "${IDN_TARBALL}" ]]; then
+		unpack ${IDN_TARBALL}
+		mv libidn-${IDN_VER} libidn
+	fi
 
 	if [[ -n ${PATCH_VER} ]]; then
 		cd ${WORKDIR}
@@ -479,7 +496,7 @@ toolchain-glibc_pkg_postinst() {
 	if use nptl && use !nptlonly; then
 		einfo "The default behavior of glibc on your system is to use NPTL.  If"
 		einfo "you want to use linuxthreads for a particular program, start it"
-		einfo "by executing 'LD_ASSUME_KERNEL=2.4.1 <program> [<options>]'"
+		einfo "by executing 'LD_ASSUME_KERNEL=${LT_KERNEL_VERSION} <program> [<options>]'"
 		echo
 	fi
 }
@@ -621,7 +638,7 @@ check_kheader_version() {
 }
 
 check_nptl_support() {
-	local min_kernel_version="$(KV_to_int "${MIN_KERNEL_VERSION}")"
+	local min_kernel_version="$(KV_to_int "${NPTL_KERNEL_VERSION}")"
 
 	echo
 
@@ -637,11 +654,11 @@ check_nptl_support() {
 	fi
 
 	# Building fails on an non-supporting kernel
-	einfon "Checking kernel version (>=${MIN_KERNEL_VERSION}) ... "
+	einfon "Checking kernel version (>=${NPTL_KERNEL_VERSION}) ... "
 	if [ "`get_KV`" -lt "${min_kernel_version}" ]; then
 		echo "no"
 		echo
-		eerror "You need a kernel of at least version ${MIN_KERNEL_VERSION}"
+		eerror "You need a kernel of at least version ${NPTL_KERNEL_VERSION}"
 		eerror "for NPTL support!"
 		die "Kernel version too low!"
 	else
@@ -649,11 +666,11 @@ check_nptl_support() {
 	fi
 
 	# Building fails with too low linux-headers
-	einfon "Checking linux-headers version (>=${MIN_KERNEL_VERSION}) ... "
+	einfon "Checking linux-headers version (>=${NPTL_KERNEL_VERSION}) ... "
 	if ! check_kheader_version "${min_kernel_version}"; then
 		echo "no"
 		echo
-		eerror "You need linux-headers of at least version ${MIN_KERNEL_VERSION}"
+		eerror "You need linux-headers of at least version ${NPTL_KERNEL_VERSION}"
 		eerror "for NPTL support!"
 		die "linux-headers version too low!"
 	else
@@ -753,11 +770,11 @@ glibc_do_configure() {
 		want_tls && myconf="${myconf} --with-tls --without-__thread"
 		want_tls || myconf="${myconf} --without-tls --without-__thread"
 		myconf="${myconf} --enable-add-ons=linuxthreads${ADDONS}"
-		myconf="${myconf} --enable-kernel=2.4.1"
+		myconf="${myconf} --enable-kernel=${LT_KERNEL_VERSION}"
 	elif [ "$1" == "nptl" ] ; then
 		want_nptl && myconf="${myconf} --with-tls --with-__thread"
 		myconf="${myconf} --enable-add-ons=nptl${ADDONS}"
-		myconf="${myconf} --enable-kernel=${MIN_KERNEL_VERSION}"
+		myconf="${myconf} --enable-kernel=${NPTL_KERNEL_VERSION}"
 	else
 		die "invalid pthread option"
 	fi
@@ -1026,9 +1043,6 @@ src_unpack() {
 	esac
 
 	use nomalloccheck || GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5020_all_nomalloccheck.patch"
-
-	{ has_hardened && want_nptl; } || \
-		GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} glibc-2.3.4-hardened-sysdep-shared.patch"
 
 	toolchain-glibc_src_unpack
 

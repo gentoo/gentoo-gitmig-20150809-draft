@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.317 2005/02/13 03:38:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.318 2005/02/16 04:02:39 eradicator Exp $
+
+*glibc-2.3.4.20050125-r1 (15 Feb 2005)
+
+  15 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +glibc-2.3.4.20050125-r1.ebuild, glibc-2.3.4.20050125.ebuild:
+  package.mask'd version bump to fix bugs that cropped up after release. Added
+  hardened patch that got left out of the patch tarball. -r1 unconditionally
+  applies it, and also readds the libidn addon.
 
   12 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20050125.ebuild:
