@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.39 2004/07/11 19:05:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.40 2004/07/11 20:38:24 spock Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -93,7 +93,7 @@ then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
 		>=sys-devel/binutils-2.11.90.0.31 )
-		doc? ( app-text/docbook-sgml-utils )"
+		doc? ( !arm? ( !s390? ( app-text/docbook-sgml-utils ) ) )"
 
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
@@ -241,7 +241,7 @@ install_sources() {
 		docs="${docs} ${S}/patches.txt"
 	fi
 
-	if use doc; then
+	if use doc && ! use arm && ! use s390; then
 		install_manpages
 	fi
 	
@@ -642,7 +642,7 @@ kernel-2_src_unpack() {
 
 kernel-2_src_compile() {
 	[ "${ETYPE}" == "headers" ] && compile_headers
-	[ "${ETYPE}" == "sources" ] && use doc && compile_manpages
+	[ "${ETYPE}" == "sources" ] && use doc && ! use arm && ! use s390 && compile_manpages
 }
 
 kernel-2_pkg_preinst() {
