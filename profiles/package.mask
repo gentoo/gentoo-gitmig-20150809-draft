@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# <mcummings@gentoo.org> (18 Aug 2002)
+# The following are masked for testing
+=dev-perl/AxKit-1.6
 * <seemant@gentoo.org> (17 Aug 2002)
 # Masked for testing and until new aspell is released
 =app-text-gnome-spell-0.4.1-r3
