@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.18 2005/01/22 02:21:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.19 2005/01/22 16:11:46 corsair Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -448,18 +448,7 @@ pkg_postinst() {
 		chmod 1777 ${x}
 	done
 
-	if use ppc64; then
-		relink_dlloader_files
-	fi
-
 	print_info
-}
-
-pkg_prerm() {
-
-	if use ppc64; then
-		restore_original_dlloader_files
-	fi
 }
 
 pkg_postrm() {
@@ -1624,28 +1613,6 @@ remove_old_compose_files() {
 	done
 }
 
-relink_dlloader_files() {
-	#The problem about display driver is fixed.
-	cd ${ROOT}/usr/$(get_libdir)/modules/drivers
-	mv fbdev_drv.so fbdev_drv.so.orig
-	mv ati_drv.so ati_drv.so.orig
-	mv nv_drv.so nv_drv.so.orig
-
-	ld -shared -o ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so.orig ${ROOT}/usr/$(get_libdir)/modules/linux/libfbdevhw.so ${ROOT}/usr/$(get_libdir)/modules/libshadow.so ${ROOT}/usr/$(get_libdir)/modules/libshadowfb.so ${ROOT}/usr/$(get_libdir)/modules/libfb.so
-	ld -rpath /usr/$(get_libdir)/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
-	ld -rpath /usr/$(get_libdir)/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
-
-	if use opengl; then
-		#The problem about DRI module and GLX module is fixed.
-		cd ${ROOT}/usr/$(get_libdir)/modules/extensions
-		mv libglx.so libglx.so.orig
-		mv libdri.so libdri.so.orig
-
-		ld -rpath /usr/$(get_libdir)/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
-		ld -rpath /usr/$(get_libdir)/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
-	fi
-}
-
 print_info() {
 	echo
 	einfo "Please note that the xcursors are in /usr/share/cursors/${PN}"
@@ -1674,20 +1641,4 @@ print_info() {
 	# Try to get people to read /usr/X11R6/libdir move
 	ebeep 5
 	epause 10
-}
-
-###############
-# pkg_prerm() #
-###############
-
-restore_original_dlloader_files() {
-		cd ${ROOT}/usr/$(get_libdir)/modules/drivers
-		mv fbdev_drv.so.orig fbdev_drv.so
-		mv ati_drv.so.orig ati_drv.so
-		mv nv_drv.so.orig nv_drv.so
-		cd ${ROOT}/usr/$(get_libdir)/modules/extensions
-		if use opengl; then
-			mv libglx.so.orig libglx.so
-			mv libdri.so.orig libdri.so
-		fi
 }
