@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.3.ebuild,v 1.2 2003/09/08 05:10:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.3.ebuild,v 1.3 2003/09/08 19:11:03 liquidx Exp $
 
 inherit eutils flag-o-matic libtool gnome.org
 
@@ -24,8 +24,15 @@ RDEPEND=">=dev-libs/glib-2.0.4
 	x86? ( >=dev-lang/nasm-0.90 )
 	>=sys-libs/zlib-1.1.4"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 #	doc? ( dev-util/gtk-doc )"
+
+src_unpack() {
+	unpack ${A}
+	# temporary workaround for gcc-3.3.1 that produces warnings about aliasing
+	cd ${S}; sed -i -e "s:GST_ERROR -Werror:GST_ERROR:" configure || die "failed removing -Werror"
+}
 
 src_compile() {
 	elibtoolize
