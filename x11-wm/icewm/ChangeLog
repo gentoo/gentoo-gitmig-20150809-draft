@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.6 2002/07/01 18:14:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.7 2002/07/02 10:10:03 seemant Exp $
+
+*icewm-1.2.0_pre3-r1 (02 Jul 2002)
+
+  02 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  icewm-1.2.0_pre3-r1.ebuild files/digest-icewm-1.2.0_pre3-r1 :
+
+  icewm binary in /etc/X11/Sessions was not being created properly.  Fixed.
+  Reported in bug #4410 by charles_hood@yahoo.com (Charles Hood)
 
 *icewm-1.2.0_pre3 (01 Jul 2002)
 
