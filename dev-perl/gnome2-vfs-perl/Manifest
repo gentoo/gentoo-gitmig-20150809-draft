@@ -1,2 +1,5 @@
-MD5 33fae8ea9cc05989c1266edfc0e2bd4c gnome2-vfs-perl-0.05.ebuild 541
+MD5 83bab3edf8fd598c3203e4dd43c7b3cc gnome2-vfs-perl-0.05.ebuild 758
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 c14c6202f36e8d1a91709038d5948f22 ChangeLog 600
 MD5 1f6ccdb29823a60f52a6d860dba45a64 files/digest-gnome2-vfs-perl-0.05 66
+MD5 e1e4aaad0f99f8c88b4a71311bcdfda1 files/vfs.typemap 417
