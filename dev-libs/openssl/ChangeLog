@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.75 2004/03/17 17:19:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.76 2004/03/30 14:25:29 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7d.ebuild:
+  + use gcc eclass instead of gcc-dumpversion.
+  + filter -funroll-loops, closing #45600.
+  + use emake of 0.9.7, closing #45002.
 
 *openssl-0.9.6m (17 Mar 2004)
 *openssl-0.9.7d (17 Mar 2004)

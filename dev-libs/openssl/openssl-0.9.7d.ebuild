@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.3 2004/03/17 23:27:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.4 2004/03/30 14:25:29 aliz Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gcc
 
 OLD_096_P="${PN}-0.9.6m"
 
@@ -15,7 +15,8 @@ HOMEPAGE="http://www.openssl.org/"
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	sys-devel/bc"
 LICENSE="as-is"
 SLOT="0"
 
@@ -44,12 +45,13 @@ src_unpack() {
 		sed -i -e \
 			's!CC=ccc!CC=gcc!' config
 	fi
-
-	local gcc_version=$(gcc -dumpversion | cut -d. -f1,2)
-	if [ "${gcc_version}" == "3.3" ] || [ "${gcc_version}" == "3.2" ] ; then
-		filter-flags -fprefetch-loop-arrays -freduce-all-givs
-	fi
-
+set -x
+	case $( gcc-version ) in
+		3.3 | 3.2 )
+			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
+		;;
+	esac
+set +x
 	# replace CFLAGS
 	OLDIFS=$IFS
 	IFS="
@@ -129,7 +131,7 @@ src_compile() {
 	fi
 
 	einfo "Compiling ${P}"
-	make all || die
+	emake all || die
 	if [ "`use !ppc64`" ]; then
 		make test || die
 	fi
