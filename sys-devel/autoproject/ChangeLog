@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autoproject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoproject/ChangeLog,v 1.2 2003/02/12 09:13:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoproject/ChangeLog,v 1.3 2003/09/06 08:21:04 msterret Exp $
+
+*autoproject-0.17 (06 Sep 2003)
+
+  06 Sep 2003; Michael Sterrett <msterret@gentoo.org> autoproject-0.17.ebuild:
+  rewrote ebuild so I could fix the header; also version bump
 
 *autoproject-0.16 (23 Oct 2002)
 
