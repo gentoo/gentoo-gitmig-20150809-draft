@@ -1,0 +1,18 @@
+--- cmucl-18e.orig.orig/src/code/save.lisp	2003-09-23 15:57:49.993364656 -0500
++++ cmucl-18e.orig/src/code/save.lisp	2003-09-23 15:56:31.261333744 -0500
+@@ -289,12 +289,9 @@
+ 	))
+ 
+ (setf (getf *herald-items* :bugs)
+-      '("For support see http://www.cons.org/cmucl/support.html Send bug reports to the debian BTS."
+-        terpri
+-	"or to "
+-	"pvaneynd@debian.org" terpri
+-       "type (help) for help, (quit) to exit, and (demo) to see the demos" terpri
+-        terpri
++      '("For support see http://www.cons.org/cmucl/support.html" terpri
++	"Send bug reports to the Gentoo Bugzilla http://bugs.gentoo.org" terpri
++	"Type (help) for help, (quit) to exit, and (demo) to see the demos" terpri
+ 	"Loaded subsystems:"))
+ 
+ ;;; PRINT-HERALD  --  Public
