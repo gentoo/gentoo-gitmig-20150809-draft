@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.16 2003/02/04 18:08:33 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.17 2003/02/08 12:09:36 weeve Exp $
+
+  08 Feb 2003; Jason Wever <weeve@gentoo.org> fontconfig-2.1-r1.ebuild :
+  Changed ~sparc keyword to sparc
 
   04 Feb 2003; Olivier Reisch <doctomoe@gentoo.org> fontconfig-2.1-r1.ebuild :
   Putting back to ~ppc. Warn ppl to recompile qt and kdelibs after install...
