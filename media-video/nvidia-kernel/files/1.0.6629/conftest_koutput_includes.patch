@@ -1,0 +1,22 @@
+--- conftest.sh.old	2004-11-07 12:20:02.776660256 +1100
++++ conftest.sh	2004-11-07 12:23:32.432787680 +1100
+@@ -17,7 +17,7 @@
+ 
+ if [ "$OUTPUT" != "$SOURCES" ]; then
+     CFLAGS="$CFLAGS -I$OUTPUT/include2 -I$OUTPUT/include \
+--I$HEADERS -I$HEADERS/asm/mach-default"
++-I$HEADERS -I$OUTPUT/include2/asm/mach-default"
+ else
+     CFLAGS="$CFLAGS -I$HEADERS -I$HEADERS/asm/mach-default"
+ fi
+@@ -260,8 +260,8 @@
+             echo "installed on your system. If you specified a separate";
+             echo "output directory using either the \"KBUILD_OUTPUT\" or";
+             echo "the \"O\" KBUILD parameter, make sure to specify this";
+-            echo "directory with the SYSOUT environment variable or with";
+-            echo "the appropriate nvidia-installer command line option.";
++            echo "directorys _PARENT_ with the KBUILD_OUTPUT_PREFIX";
++            echo "environment variable, (or see /etc/env.d/05kernel)";
+             echo "";
+             if [ "$VERBOSE" = "full_output" ]; then
+                 echo "*** Unable to determine the target kernel version. ***";

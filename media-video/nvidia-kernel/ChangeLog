@@ -1,6 +1,15 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.92 2004/11/06 05:05:34 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.93 2004/11/07 01:52:46 cyfred Exp $
+
+*nvidia-kernel-1.0.6111-r3 (07 Nov 2004)
+
+  07 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
+  +files/1.0.6111/conftest_koutput_includes.patch,
+  +files/1.0.6629/conftest_koutput_includes.patch,
+  +nvidia-kernel-1.0.6111-r3.ebuild, +nvidia-kernel-1.0.6629.ebuild:
+  New version 1.0.6629! Also marking 1.0.6111 stable in -r3 (others to be
+  keyword masked in following commit).
 
   06 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>;
   files/1.0.6111/power-suspend-2.6.9-changes.patch:
