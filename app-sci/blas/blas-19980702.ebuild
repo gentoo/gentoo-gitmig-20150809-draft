@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/blas-19980702.ebuild,v 1.6 2004/04/16 20:45:58 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/blas-19980702.ebuild,v 1.7 2004/04/19 09:31:46 phosphan Exp $
 
 DESCRIPTION="Basic Linear Algebra Subprograms"
 HOMEPAGE="http://www.netlib.org/blas/"
 SRC_URI="http://www.netlib.org/blas/${PN}.tgz"
 
 LICENSE="public-domain"
+IUSE=""
 SLOT="0"
 KEYWORDS="x86 amd64 s390"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/ChangeLog,v 1.5 2004/04/16 20:45:58 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/ChangeLog,v 1.6 2004/04/19 09:31:46 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> blas-19980702.ebuild:
+  Adding IUSE
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> blas-19980702.ebuild:
   adding s390 keywords
