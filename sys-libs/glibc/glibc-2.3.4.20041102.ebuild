@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.4 2004/11/10 09:20:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.5 2004/11/10 11:28:12 kumba Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -359,7 +359,6 @@ do_arch_mips_patches() {
 	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-mips-prot_grows-undefined.patch
 	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-mips-rtld_deepbind-undefined.patch
 	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-mips-add-missing-sgidefs_h.patch
-	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-mips-add-glibc_2.0-to-librt.patch
 
 	# Need to install into /lib for n32-only userland for now.
 	# Propper solution is to make all userland /lib{32|64}-aware.

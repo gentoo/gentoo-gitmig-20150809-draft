@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.290 2004/11/10 11:16:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.291 2004/11/10 11:28:12 kumba Exp $
+
+  10 Nov 2004; Joshua Kinard <kumba@gentoo.org> glibc-2.3.4.20041102.ebuild:
+  Removed line referencing a uneeded patch for mips.
 
   10 Nov 2004; Joshua Kinard <kumba@gentoo.org>
   glibc-2.3.4.20040808-r1.ebuild:
