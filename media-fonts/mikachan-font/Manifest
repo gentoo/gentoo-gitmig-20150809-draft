@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c3ebc95bfd691909f26ec1873a25562 ChangeLog 1793
+MD5 b23de5881b3b826b55eb1cface6ba084 ChangeLog 1900
 MD5 34743f0c67c84649c0e23daca2f0144b metadata.xml 192
 MD5 cdcb8a425904128b2640eb24602b4653 mikachan-font-8.9.ebuild 1623
-MD5 25e122db3cc0f291e7d39d84732f7190 mikachan-font-8.9-r1.ebuild 1127
+MD5 30ddd1f6515bc0b7277cc59805a9b1c5 mikachan-font-8.9-r1.ebuild 1129
 MD5 723d3ddf0b4dfd9b9e14e1d46bf48ef9 files/digest-mikachan-font-8.9 285
 MD5 723d3ddf0b4dfd9b9e14e1d46bf48ef9 files/digest-mikachan-font-8.9-r1 285
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD4DBQFBWlOdVWNWqTUmv+0RApttAJihiKqQRhzXg9tu9Ol9o0N0kl39AJ9UJqtZ
-Ug4Eqj62+OPsRiKQfHXzxw==
-=h4HI
------END PGP SIGNATURE-----
