@@ -1,66 +1,65 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.27 2002/08/30 19:09:34 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.28 2002/09/16 01:10:17 murphy Exp $
 
 *xmms-1.2.7-r13 (23 Aug 2002)
 
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> xmms-1.2.7-r13.ebuild : Added
+  sparc/sparc64 keywords. Revamped ChangeLog layout.
+
   23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r13.ebuild
-  files/digest-xmms-1.2.7-r13 :
+  files/digest-xmms-1.2.7-r13 : Removed all avi stuff from xmms ebuild,
+  since the xmms folks have updated the avi-xmms plugin to be statically
+  compiled against avifile.
 
-  Removed all avi stuff from xmms ebuild, since the xmms folks have updated
-  the avi-xmms plugin to be statically compiled against avifile.
-
-  30 Aug 2002; Bart Verwilst <verwilst@gentoo.org>:
- 
-  Filtered out -fforce-addr out of xmms, segfaults when trying to play a 
-  song otherwise
+  30 Aug 2002; Bart Verwilst <verwilst@gentoo.org>: Filtered out -fforce-addr
+  out of xmms, segfaults when trying to play a song otherwise
 
 *xmms-1.2.7-r12 (18 Jul 2002)
+
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> xmms-1.2.7-r12.ebuild : Added
+  sparc/sparc64 keywords.
+
   31 Jul 2002; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r12.ebuild :
   Minor form fixes.
 
-  20 Jul 2002; Spider <spider@gentoo.org> xmms-1.2.7-r12.ebuild :
-  Minor dep change to kill bug #4317.
+  20 Jul 2002; Spider <spider@gentoo.org> xmms-1.2.7-r12.ebuild : Minor dep
+  change to kill bug #4317.
 
-  19 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xmms-1.2.7-r12.ebuild :
-  Closes #5208.
+  19 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xmms-1.2.7-r12.ebuild : Closes
+  #5208.
 
-  18 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xmms-1.2.7-r12.ebuild :
-  Cleaned up ebuild. Made mikmod optional through USE setting.
-
-  
+  18 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xmms-1.2.7-r12.ebuild : Cleaned
+  up ebuild. Made mikmod optional through USE setting.
 
 *xmms-1.2.7-r11 (30 Jun 2002)
 
-  30 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
-  This revision tries to fix all the automake/autoconf warning, etc.
+  30 Jun 2002; Martin Schlemmer <azarah@gentoo.org> : This revision tries to fix
+  all the automake/autoconf warning, etc.
   I have tested it with gcc-2.95.3 and gcc-3.1, so hopefully it will
   be the last revision for some time.
 
-xmms-1.2.7-r10 (28 Jun 2002)
-  28 Jun 2002; Spider <spider@gentoo.org> xmms-1.2.7-r9.ebuild :
-  removed gnome-core dep in favour of gnome-panel-1.4.1 
+*xmms-1.2.7-r10 (28 Jun 2002)
+
+  28 Jun 2002; Spider <spider@gentoo.org> xmms-1.2.7-r9.ebuild : Removed
+  gnome-core dep in favour of gnome-panel-1.4.1 
  
 *xmms-1.2.7-r9 (06 June 2002)
 
-  06 June 2002; Brandon Low <lostlogic@gentoo.org> xmms-1.2.7-r9.ebuild files/xmms-1.2.7-gentoo.patch:
+  06 June 2002; Brandon Low <lostlogic@gentoo.org> xmms-1.2.7-r9.ebuild,
+  files/xmms-1.2.7-gentoo.patch: New revision with a generated patch to fix a
+  bunch of error output which was happening at compile time, also hopefully
+  closes 3431, but waiting on confirmation of that.
 
-  New revision with a generated patch to fix a bunch of error output which 
-  was happening at compile time, also hopefully closes 3431, but waiting on
-  confirmation of that.
-
-  06 June 2002; Bruce A. Locke <blocke@shivan.org> xmms-1.2.7-r9.ebuild files/xmms-1.2.7-gentoo.patch:
-
-  Removed due to automake/autoconf issues.
+  06 June 2002; Bruce A. Locke <blocke@shivan.org> xmms-1.2.7-r9.ebuild,
+  files/xmms-1.2.7-gentoo.patch: Removed due to automake/autoconf issues.
 
 *xmms-1.2.7-r8 (02 June 2002)
 
   02 June 2002; Gabriele Giorgetti <stroke@gentoo.org> xmms-1.2.7-r8.ebuild:
-
-  digest-xmms-1.2.7-r8 added. fiexes bug #3325
+  digest-xmms-1.2.7-r8 added. fixes bug #3325
 
   02 June 2002; Olivier Reisch <doctomoe@gentoo.org> xmms-1.2.7-r8.ebuild:
-
   xmms-1.2.7 r6 and r7 are broken on PPC. The src_unpack function fails on the
   3dnow/mmx patch inclusion check. Included an arch check to exclude the code
   from being executed on PPC.
@@ -68,27 +67,22 @@ xmms-1.2.7-r10 (28 Jun 2002)
 *xmms-1.2.7-r7 (30 May 2002)
 
   30 May 2002; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r7.ebuild
-  files/digest-xmms-1.2.7-r7 :
-
-  Added a patch to optimise for 3dnow and mmx.  Thanks to aliz@telia.com
-  (Daniel Ahlberg) in bug #2630.  Fixed use avi && patch syntax per Daniel
-  Sabo in bug #3086
+  files/digest-xmms-1.2.7-r7 : Added a patch to optimise for 3dnow and mmx. 
+  Thanks to aliz@telia.com (Daniel Ahlberg) in bug #2630.  Fixed use avi && patch
+  syntax per Daniel Sabo in bug #3086
 
 *xmms-1.2.7-r6 (19 May 2002)
 
   26 May 2002; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r6.ebuild :
-
   Change it to depend on latest avifile, and drop the suffix patch
   for avifile-config.
 
 *xmms-1.2.7-r5 (19 May 2002)
 
   19 May 2002; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r5.ebuild :
-
   Fix things to actually compile the plugin when "avi" is in USE, and made
   it compadible with the latest avifile (0.7.4) which use an suffix ( this
   having /usr/bin/avifile-config0.7 and not /usr/bin/avifile-config).
-
   I am not too sure with this suffix thing .. we need to decide if we are
   going to keep it, or just fix the broken stuff .. personally I think we
   should rather fix broken build, and drop the suffix from avifile.
@@ -142,4 +136,3 @@ xmms-1.2.7-r10 (28 Jun 2002)
   22 Feb 2002; Bruce A. Locke <blocke@shivan.org> xmms-1.2.6-r2.ebuild :
   spider.gentoo@darkmere.wanfear.com (Spider) contributed additional
   USE keyword checks
-
