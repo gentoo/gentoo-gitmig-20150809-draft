@@ -1,8 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.2 2002/08/30 06:15:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.3 2002/09/11 20:41:52 raker Exp $
 
 inherit virtualx
+
+S="${WORKDIR}/${P}"
 
 DESCRIPTION="Python OpenGL bindings"
 HOMEPAGE="http://pyopengl.sourceforge.net/"
@@ -13,10 +15,10 @@ SLOT="0"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 
 DEPEND="virtual/python
+	>=media-libs/glut-3.7-r2
 	x11-base/xfree
 	virtual/opengl"
-
-S="${WORKDIR}/${P}"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 
