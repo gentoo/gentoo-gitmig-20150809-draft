@@ -7,5 +7,9 @@
 	<longdescription lang="es">
 		La categoría x11-libs contiene varias librerías para X11.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie x11-libs enthält verschiedene Bibliotheken für
+		die X11-Programmierung.
+	</longdescription>
 </catmetadata>
 
