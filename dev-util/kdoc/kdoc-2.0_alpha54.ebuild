@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdoc/kdoc-2.0_alpha54.ebuild,v 1.7 2003/02/13 11:57:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdoc/kdoc-2.0_alpha54.ebuild,v 1.8 2003/02/15 07:30:00 gerk Exp $
 
 MY_P=${P/_alph/}
 S=${WORKDIR}/${MY_P}
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc  ppc"
 
 DEPEND="sys-devel/perl"
 

@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.9 2003/02/12 06:45:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.10 2003/02/15 07:31:23 gerk Exp $
 
 *netbeans-3.4.1 (23 Jan 2003)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> netbeans-3.4.1.ebuild :
+  set ppc in keywords
 
   23 Jan 2003; Matthew Kennedy <mkennedy@gentoo.org>
   netbeans-3.4.1.ebuild, file/digest-netbeans-3.4.1, ChangeLog:
