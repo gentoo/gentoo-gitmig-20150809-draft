@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.39 2003/06/10 12:51:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.40 2003/07/13 00:23:01 foser Exp $
+
+*balsa-2.0.12 (13 Jul 2003)
+
+  13 Jul 2003; foser <foser@gentoo.org> balsa-2.0.12.ebuild :
+  New version, move scrollkeeper to RDEPEND, add USE crypt gpgme support
 
   10 Jun 2003; Alastair Tse <liquidx@gentoo.org> balsa-2.0.10.ebuild,
   balsa-2.0.11.ebuild:
