@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.2.ebuild,v 1.1 2002/09/25 16:34:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.2.ebuild,v 1.2 2002/09/30 03:46:16 raker Exp $
 
 inherit libtool
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND=">=media-gfx/gimp-1.2.1
+DEPEND="=media-gfx/gimp-1.2*
 	app-text/ghostscript
 	doc? ( app-text/texi2html )
 	gtk? ( =x11-libs/gtk+-1.2* )

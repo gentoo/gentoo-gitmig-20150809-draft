@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.4 2002/09/25 16:34:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.5 2002/09/30 03:46:16 raker Exp $
 
 *gimp-print-4.2.2 (25 Sep 2002)
+
+  29 Sep 2002; Nick Hadaway <raker@gentoo.org> gimp-print-4.2.2.ebuild :
+  Tightened gimp dependancy to the 1.2* series.
 
   25 Sep 2002; Nick Hadaway <raker@gentoo.org> gimp-print-4.2.2.ebuild,
   files/digest-gimp-pring-4.2.2 :
@@ -12,16 +15,17 @@
 
 *gimp-print-4.2.1 (29 Apr 2002)
 
+  29 Sep 2002; Nick Hadaway <raker@gentoo.org> gimp-print-4.2.1.ebuild :
+  Tightened gimp dependancy to the 1.2* series.
+
 *gimp-print-4.1.99_beta4-r1 (2 Apr 2002)
 
   2 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gimp-print-4.1.99_beta4-r1.ebuild :
-
   Fixed sandbox violations and some dependency issues as well.
 
 *gimp-print-4.1.99_beta4 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
