@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r3.ebuild,v 1.2 2002/07/13 21:33:14 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r3.ebuild,v 1.3 2002/07/22 21:12:13 raker Exp $
 
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/"
@@ -9,7 +9,7 @@ S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 DEPEND="virtual/glibc >=sys-libs/db-3.2 >=sys-libs/pam-0.75"
 LICENSE="as-is"
-SLOT="1"
+SLOT="0"
 KEYWORDS="x86"
 
 src_unpack() {
