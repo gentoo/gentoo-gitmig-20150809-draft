@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.26 2004/09/03 22:31:01 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.27 2004/10/14 14:40:48 usata Exp $
+
+*mew-4.1_rc3 (14 Oct 2004)
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -mew-3.1.ebuild,
+  -mew-4.0.64.ebuild, -mew-4.0.67.ebuild, +mew-4.1_rc3.ebuild:
+  Added RC3. Removed old development versions.
 
   03 Sep 2004; Tom Martin <slarti@gentoo.org> mew-4.0.67.ebuild:
   Marked ~amd64, resolves #58523. Thanks to Gabriel Ebner <ge@gabrielebner.at>
