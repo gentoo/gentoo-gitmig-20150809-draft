@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pstotext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.7 2004/09/29 23:46:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.8 2004/10/12 04:08:29 tgall Exp $
+
+  11 Oct 2004; Tom Gall <tgall@gentoo.org> pstotext-1.8g.ebuild:
+  stable on ppc64, bug#64275
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> pstotext-1.8g.ebuild:
   changed app-text/ghostscript to virtual/ghostscript
