@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.1 2003/09/26 04:55:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.2 2004/02/10 13:22:02 mr_bones_ Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="A multi-player game of strategy and coordination"
 HOMEPAGE="http://cns-web.bu.edu/pub/xpip/html/xbattle.html"
 SRC_URI="ftp://cns-ftp.bu.edu/pub/xbattle/${P}.tar.gz"
 
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
 LICENSE="xbattle"
 SLOT="0"
 IUSE=""
