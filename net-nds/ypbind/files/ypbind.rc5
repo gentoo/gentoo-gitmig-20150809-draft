@@ -29,6 +29,8 @@ start() {
 			if [ $notfound -eq 1 ] 
 			then
 				eend 1 "No NIS server found"
+			else
+				eend 0
 			fi
 		else
 			eend $? "Error starting ${SERVICE}."
