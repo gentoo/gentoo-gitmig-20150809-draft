@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/silva
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/silva/ChangeLog,v 1.6 2004/10/08 13:13:18 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/silva/ChangeLog,v 1.7 2004/10/11 18:00:39 radek Exp $
+
+  11 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org> :
+  Added dependency to SilvaDocument.
 
 *silva-1.1 (08 Oct 2004)
 
