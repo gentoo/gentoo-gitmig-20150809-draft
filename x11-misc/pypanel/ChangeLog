@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pypanel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.17 2004/11/06 02:08:04 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.18 2004/12/17 14:29:19 slarti Exp $
+
+  17 Dec 2004; Tom Martin <slarti@gentoo.org> pypanel-2.0.ebuild:
+  Marked ~amd64, resolves bug 47300.
 
 *pypanel-1.3 (06 Nov 2004)
 
@@ -55,7 +58,7 @@
 
   11 Dec 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
   pypanel-0.9.ebuild: Fixed an insidious bug with inherit distutils,
-  #35599, thanks to Tor Håkon Haugen <torh@boblycat.org>.
+  #35599, thanks to Tor HÃ¥kon Haugen <torh@boblycat.org>.
   
 *pypanel-0.9 (13 Nov 2003) 
 
