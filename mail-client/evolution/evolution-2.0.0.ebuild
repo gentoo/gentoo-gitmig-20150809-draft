@@ -1,18 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.0.ebuild,v 1.5 2004/09/30 19:12:52 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.0.ebuild,v 1.6 2004/10/11 13:15:11 vapier Exp $
 
 inherit eutils virtualx gnome2 flag-o-matic
-
-# problems with -O3 on gcc-3.3.1
-replace-flags -O3 -O2
 
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 HOMEPAGE="http://ximian.com/products/evolution/"
 
 LICENSE="GPL-2"
 SLOT="2.0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~mips"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~mips ~hppa"
 IUSE="ssl mozilla ldap doc spell ipv6 kerberos crypt nntp debug pda"
 
 # Top stanza are ximian deps
@@ -72,6 +69,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# problems with -O3 on gcc-3.3.1
+	replace-flags -O3 -O2
+
 	elibtoolize
 
 	if [ "${ARCH}" = "hppa" ]; then
