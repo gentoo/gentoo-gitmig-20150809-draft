@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.4.ebuild,v 1.6 2002/03/07 15:07:23 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.5.ebuild,v 1.1 2002/04/01 23:25:58 verwilst Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://www.affinix.com/~justin/programs/psi/${P}.tar.bz2"
@@ -18,7 +18,7 @@ src_compile() {
 	export QMAKESPEC="linux-g++"
 	cd ${S}/src
 	mv common.cpp common.cpp.orig
-	sed -e 's:PATH_BASE = "/usr/local/psi":PATH_BASE = "/usr/share/psi":' common.cpp.orig | cat > common.cpp
+	sed -e 's:return "/usr/local/psi":return "/usr/share/psi":' common.cpp.orig | cat > common.cpp
 	/usr/qt/3/bin/qmake psi.pro || die
 	emake || die
 	mv psi ${S}
@@ -29,18 +29,17 @@ src_compile() {
 src_install() {
 
 	# We do not use the ./install method, we do it manually ##
+	
+	export PSIDIR=/usr/share/psi
+	
 	mkdir -p ${D}/usr/bin
-	mkdir -p ${D}/usr/share/psi/image
-	mkdir -p ${D}/usr/share/psi/iconsets
-	mkdir -p ${D}/usr/share/psi/iconsets/cosmic
-	mkdir -p ${D}/usr/share/psi/iconsets/icq2
-	mkdir -p ${D}/usr/share/psi/iconsets/licq
+	mkdir -p ${D}/usr/share/psi
+	#mkdir -p ${D}/usr/share/psi/iconsets
 
 	cd ${S}
-	cp image/*.png ${D}/usr/share/psi/image/
-	cp iconsets/cosmic/* ${D}/usr/share/psi/iconsets/cosmic/
-	cp iconsets/icq2/* ${D}/usr/share/psi/iconsets/icq2/
-	cp iconsets/licq/* ${D}/usr/share/psi/iconsets/licq/
+	cp -rf ./image ${D}/usr/share/psi/
+	cp -rf ./iconsets ${D}/usr/share/psi/
+	cp -rf ./sound ${D}/usr/share/psi/
 	cp psi ${D}/usr/share/psi/
 	cp README ${D}/usr/share/psi/
 	cp COPYING ${D}/usr/share/psi/
