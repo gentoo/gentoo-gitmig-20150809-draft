@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xpdf
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.22 2003/12/09 17:40:22 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.23 2004/01/11 13:42:02 lanius Exp $
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> xpdf-2.02.1.ebuild,
+  xpdf-2.02.ebuild, xpdf-2.03.ebuild:
+  fixed motif dep
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> xpdf-2.02.1.ebuild,
   xpdf-2.02.ebuild, xpdf-2.03.ebuild:

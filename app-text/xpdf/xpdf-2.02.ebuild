@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.ebuild,v 1.6 2003/12/09 17:40:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.ebuild,v 1.7 2004/01/11 13:42:02 lanius Exp $
 
 IUSE="motif"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha ~mips ~hppa ~arm"
 
 DEPEND="motif? ( virtual/x11
-		virtual/motif )
+		x11-libs/openmotif )
 	>=media-libs/freetype-2.0.5
 	>=media-libs/t1lib-1.3
 	virtual/ghostscript"
