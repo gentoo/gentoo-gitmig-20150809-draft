@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors: Preston A. Elder <prez@goth.net>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641d.ebuild,v 1.4 2002/04/24 22:41:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641d-r1.ebuild,v 1.1 2002/05/03 22:55:20 azarah Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -28,7 +28,8 @@ S="${WORKDIR}/oo_${PV}_src"
 DESCRIPTION="OpenOffice productivity suite"
 SRC_URI="http://ny1.mirror.openoffice.org/${PV}/oo_${PV}_src.tar.bz2
 	http://sf1.mirror.openoffice.org/${PV}/oo_${PV}_src.tar.bz2
-	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z"
+	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
+	http://www.ibiblio.org/gentoo/distfiles/${PN}-${PV}-registry.tbz2"
 HOMEPAGE="http://www.openoffice.org"
 
 COMMONDEPEND=">=sys-libs/glibc-2.1
@@ -71,7 +72,7 @@ export LS_COLORS=""
 
 src_unpack() {
 	cd ${WORKDIR}
-	unpack ${A}
+	unpack oo_${PV}_src.tar.bz2 gpc231.tar.Z
 	cd ${WORKDIR}/gpc231
 	cp gpc.* ${S}/external/gpc
 	cd ${S}
@@ -266,7 +267,7 @@ src_install() {
 	# Install binary with "./setup -net" to generate.
 	cd ${D}${LOC}/OpenOffice-${PV}/share/config/registry
 	rm -rf *
-	tar -jxpf ${FILESDIR}/${PV}/registry-${PV}.tbz2 || \
+	tar -jxpf ${DISTDIR}/${PN}-${PV}-registry.tbz2 || \
 		die "Could not unpack registry!"
 	# Fix paths
 	cd ${D}${LOC}/OpenOffice-${PV}/share/config/registry/instance/org/openoffice/Office
