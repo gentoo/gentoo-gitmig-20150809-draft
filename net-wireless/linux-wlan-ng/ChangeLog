@@ -1,6 +1,6 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.26 2003/06/13 15:13:48 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.27 2003/07/13 20:56:55 aliz Exp $
 
 *linux-wlan-ng-0.2.1_pre8 (13 Jun 2003)
 
@@ -97,7 +97,12 @@
   Revision bump, plus major overhaul of how things are done. Please test.
   bugzilla is down for now. Will thanks submitter soon as i figure out who it was.
 
-*linux-wlan-ng-0.1.16-pre6 (11 Nov 2002)
+*linux-wlan-ng-0.1.16_pre7 (09 Apr 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*linux-wlan-ng-0.1.16_pre6 (11 Nov 2002)
 
   11 Nov 2002; Chad Huneycutt <chadh@gentoo.org> linux-wlan-ng-0.1.16_pre6.ebuild :
 
