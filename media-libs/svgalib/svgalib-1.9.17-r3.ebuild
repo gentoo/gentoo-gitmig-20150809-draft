@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.9 2004/01/18 04:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.10 2004/01/18 04:10:40 vapier Exp $
 
 inherit eutils
 
@@ -109,5 +109,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	 [ "${ROOT}" = "/" ] && /sbin/modules-update &> /dev/null
+	[ "${ROOT}" = "/" ] && /sbin/modules-update &> /dev/null
+	einfo "When upgrading your kernel you'll need to rebuild the kernel module."
 }
