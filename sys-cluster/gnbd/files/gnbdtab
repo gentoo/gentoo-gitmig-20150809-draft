@@ -1,0 +1,9 @@
+#
+# GNBD filesystem import/export configuration
+#
+
+# type		host		name		device			
+
+# Samples:
+# export	srv1		export1		/dev/data/export1
+# import	srv3		export1		/dev/gnbd/export1

@@ -1,0 +1,21 @@
+#
+# GNBD
+#
+
+#LOOKUP     ^gnbd.*      MODLOAD
+
+#
+# gnbd needs crx------- on /dev/gnbd_ctl
+#
+
+REGISTER   ^gnbd_ctl    PERMISSIONS root.root 600
+
+#
+# create old style device for /dev/gnbd/.*
+#
+
+#REGISTER   ^gnbd/.*     MKOLDCOMPAT
+#UNREGISTER ^gnbd/.*     RMOLDCOMPAT
+
+#REGISTER   ^gnbd.*       IGNORE
+#REGISTER   ^gnbd/.*      IGNORE

@@ -1,0 +1,11 @@
+# ChangeLog for sys-cluster/gnbd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/ChangeLog,v 1.1 2005/03/23 02:34:44 xmerlin Exp $
+
+*gnbd-1.0_pre13 (23 Mar 2005)
+
+  23 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
+  +files/gnbd-client.rc, +files/gnbd-srv.rc, +files/gnbd.devfs, +files/gnbdtab,
+  +gnbd-1.0_pre13.ebuild:
+  new in portage
+

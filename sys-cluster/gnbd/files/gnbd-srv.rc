@@ -1,0 +1,81 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/files/gnbd-srv.rc,v 1.1 2005/03/23 02:34:44 xmerlin Exp $
+
+depend() {
+	use dns logger
+	need net
+	need fenced
+}
+
+GNBD_SRV_TIMEOUT=5
+
+start() {
+	local GNBD
+	
+	if [ ! -f /etc/gnbdtab ] ; then
+		eerror "Please create /etc/gnbdtab"
+		eerror "Sample conf: /etc/gnbdtab"
+		return 1
+	fi
+	
+	ebegin "Loading needed kernel modules for gnbd"
+	modprobe gnbd
+	eend $? "Failed to load needed kernel modules for gnbd"
+
+	ebegin "Starting gnbd_serv"
+	start-stop-daemon --start --quiet --exec /sbin/gnbd_serv -- -q
+	eend $? "Failed to start gnbd_serv"	
+	
+	GNBD=`cat /etc/gnbdtab | egrep '^export'`
+	if [ -n "$GNBD" ] ; then
+		ebegin "Exporting gnbd devices"
+		einfo "$(awk '/^export/ { print "--> device:", $4, "as", $3 }' /etc/gnbdtab )"
+		cat /etc/gnbdtab | awk '/^export/ { print "-d", $4, "-e", $3 }' | xargs gnbd_export > /dev/null
+		eend $? "Failed to export gnbd devices"
+	fi
+}
+
+stop() {
+
+	local GNBD_SRV_PROCS GNBD_CLUSTERD_PROC
+
+	ebegin "Unexporting all gnbd devices"
+	gnbd_export -q -R &> /dev/null
+	eend $?
+
+	if [ "$?" -ne 0 ]
+	then
+		ewend 1 "Failed to unexport all gnbd devices"
+	else
+		eend 0
+		
+	fi
+	
+	ebegin "Stopping gnbd_serv"
+
+	GNBD_SRV_PROCS="$(pgrep gnbd_serv)"
+	while [ -n "${GNBD_SRV_PROCS}" ] && [ ${GNBD_SRV_TIMEOUT} -gt 0 ] ; do
+		gnbd_serv -k &> /dev/null
+		sleep 1
+		GNBD_SRV_TIMEOUT=$(( ${GNBD_SRV_TIMEOUT}-1 ))
+		GNBD_SRV_PROCS="$(pgrep gnbd_serv)"
+	done
+	
+	if [ -n "${GNBD_SRV_PROCS}" ]; then
+		gnbd_serv -K &> /dev/null
+	fi
+	eend $? "Failed to stop gnbd_serv"
+	
+	GNBD_CLUSTERD_PROC="$(pgrep gnbd_clusterd)"
+	if [ -n "${GNBD_CLUSTERD_PROC}" ]; then
+		ebegin "Stopping gnbd_clusterd"
+		killall gnbd_clusterd &> /dev/null
+		eend $?
+	fi
+	
+	ebegin "Unloading gnbd kernel module"
+	modprobe -r gnbd
+	eend $? "Failed to unload gnbd kernel module"
+}

@@ -1,0 +1,50 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/files/gnbd-client.rc,v 1.1 2005/03/23 02:34:44 xmerlin Exp $
+
+depend() {
+	use dns logger
+	need net
+	need fenced
+}
+
+start() {
+	if [ ! -f /etc/gnbdtab ] ; then
+		eerror "Please create /etc/gnbdtab"
+		eerror "Sample conf: /etc/gnbdtab"
+		return 1
+	fi
+
+	ebegin "Loading needed kernel modules for gnbd"
+	modprobe gnbd
+	eend $? "Failed to load needed kernel modules for gnbd"
+	
+	GNBD=`cat /etc/gnbdtab | egrep '^import'`
+	if [ -n "$GNBD" ] ; then
+		ebegin "Importing all GNBDs devices"
+		einfo "$(awk '/^import/ { print "--> server:", $2 }' /etc/gnbdtab )"
+		cat /etc/gnbdtab | awk '/^import/ { print "-i", $2 }' | xargs gnbd_import  > /dev/null
+		eend $? "Failed to import gnbd devices"
+	fi
+}
+
+stop() {
+
+	local GNBD_MONITOR_PROC
+
+	ebegin "Unimporting all GNBDs devices"
+	gnbd_import -q -R &> /dev/null
+	eend $?
+
+	GNBD_MONITOR_PROC="$(pgrep gnbd_clusterd)"
+	if [ -n "${GNBD_MONITOR_PROC}" ]; then
+		ebegin "Stopping gnbd_monitor"
+		killall gnbd_monitor &> /dev/null
+		eend $?
+	fi
+
+	ebegin "Unloading gnbd kernel module"
+	modprobe -r gnbd
+	eend $? "Failed to unload gnbd kernel module"	
+}
