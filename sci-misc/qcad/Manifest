@@ -1,18 +1,28 @@
-MD5 7ba95a37ee00ae6e24707e3ae3f58c34 qcad-2.0.3.1.ebuild 2124
-MD5 a0403369d5ab831d747ada7773fe1406 qcad-2.0.2.0.ebuild 1564
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 1ca566a8219245feec9c0e019e5b77ac ChangeLog 4998
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8e0ed4f204ffe736352228cfb33b6f00 qcad-2.0.3.1-r1.ebuild 2570
+MD5 a0403369d5ab831d747ada7773fe1406 qcad-2.0.2.0.ebuild 1564
 MD5 b30481181673c4348337dc45f3f71068 qcad-2.0.4.0.ebuild 2769
-MD5 002e2231fcaf2aaf64be33cd5b9aa9c1 qcad-2.0.4.0-r1.ebuild 2460
+MD5 9c261fcbcda2b7563992c0db0a264dff qcad-2.0.4.0-r1.ebuild 2502
+MD5 7ba95a37ee00ae6e24707e3ae3f58c34 qcad-2.0.3.1.ebuild 2124
+MD5 2b3f3d5c1b3d127f54dc379a884b293a ChangeLog 5141
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 03a389a58ed129eda4567585a4094a33 files/qcad-2.0.3.1-1.src-gentoo.patch 2177
-MD5 48b9ef97369159a131b93e1392af5add files/digest-qcad-2.0.3.1 71
-MD5 ec141f17f0419be4c51b80ed330f4d35 files/qcad-2.0.2.0-1.src-gentoo.patch 2409
+MD5 c79cda60b6383bbd7cd5c59e5975444e files/manual.patch-r1 841
 MD5 03a389a58ed129eda4567585a4094a33 files/qcad-2.0.4.0-1.src-gentoo.patch 2177
+MD5 2e380c8a9e9dc284ddd73ef3378d9591 files/qcad-2.0.3.1-gcc34.patch 374
+MD5 5aab9950cd320093d39df3b09256dddf files/digest-qcad-2.0.2.0 71
+MD5 48b9ef97369159a131b93e1392af5add files/digest-qcad-2.0.3.1 71
+MD5 e7233e9c5228abc9cb54e3705bdf9707 files/digest-qcad-2.0.4.0 71
+MD5 f6b59499dd0213d34c3d983a7fd7481c files/manual.patch 754
+MD5 ec141f17f0419be4c51b80ed330f4d35 files/qcad-2.0.2.0-1.src-gentoo.patch 2409
 MD5 48b9ef97369159a131b93e1392af5add files/digest-qcad-2.0.3.1-r1 71
 MD5 4d37f63dec6f0a0937438c9308f232a7 files/digest-qcad-2.0.4.0-r1 143
-MD5 c79cda60b6383bbd7cd5c59e5975444e files/manual.patch-r1 841
-MD5 2e380c8a9e9dc284ddd73ef3378d9591 files/qcad-2.0.3.1-gcc34.patch 374
-MD5 f6b59499dd0213d34c3d983a7fd7481c files/manual.patch 754
-MD5 e7233e9c5228abc9cb54e3705bdf9707 files/digest-qcad-2.0.4.0 71
-MD5 5aab9950cd320093d39df3b09256dddf files/digest-qcad-2.0.2.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCOO46ntT9W3vfTuoRAsaaAKCy3c82N7vKrxizQ9bOB/j8zKT0OQCdHE2H
+54Yyj8woctqcSg8Owi8zs/0=
+=Jopr
+-----END PGP SIGNATURE-----
