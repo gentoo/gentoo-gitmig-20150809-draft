@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/aspectj4emacs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/ChangeLog,v 1.1 2004/04/20 15:30:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/ChangeLog,v 1.2 2004/04/27 19:26:34 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  aspectj4emacs-1.1_beta2.ebuild:
+  Add inherit eutils
 
 *aspectj4emacs-1.1_beta2 (20 Apr 2004)
 
