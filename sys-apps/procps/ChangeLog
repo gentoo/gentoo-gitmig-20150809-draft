@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.79 2004/08/19 02:46:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.80 2004/08/20 06:09:16 kumba Exp $
+
+  20 Aug 2004; Joshua Kinard <kumba@gentoo.org>
+  files/procps-mips-define-pagesize.patch:
+  Found an instance of PAGE_SIZE being defined in minimal.c to a set value if it
+  wasn't previously defined in asm/page.h; changed to use sysconf() to fetch the
+  size if not defined instead.
 
   18 Aug 2004; Aron Griffis <agriffis@gentoo.org> procps-3.2.2-r1.ebuild:
   stable on alpha and ia64
