@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.32 2005/01/30 10:07:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.33 2005/02/03 21:21:03 tgall Exp $
 
 inherit gnuconfig eutils
 
@@ -14,22 +14,17 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
 IUSE="X gif"
 
-DEPEND="X? ( virtual/x11 )"
+DEPEND="X? ( virtual/x11 )
+		>=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	gnuconfig_update
-	# The library it tries to create is like 12 bytes, which is obviously bogus,
-	# updating libtool/autoconf fixes this!
-	if [ "${ARCH}" = "ppc64" ] ; then
-		libtoolize -c -f
-		aclocal
-		autoconf
-	fi
 }
 
 src_compile() {
+	export WANT_AUTOCONF=2.5
 	econf `use_with X x` || die
 	emake || die "emake failed"
 }
