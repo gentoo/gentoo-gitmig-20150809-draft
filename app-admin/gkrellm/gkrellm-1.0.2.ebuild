@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.0.1.ebuild,v 1.2 2000/11/05 15:44:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.0.2.ebuild,v 1.1 2000/11/21 04:15:56 jerry Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -19,12 +19,9 @@ src_compile() {
 
 src_install () {
     cd ${S}/src
-    insopts -o root -g root -m 755
-    insinto /usr/bin
-    doins gkrellm
+    dobin gkrellm
 
     insinto /usr/include/gkrellm
-    insopts -o root -g root -m 644
     for i in gkrellm.h gkrellm_private_proto.h gkrellm_public_proto.h
     do
       doins $i
