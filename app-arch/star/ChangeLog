@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.15 2004/09/06 18:02:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.16 2004/10/05 10:59:23 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  star-1.5_alpha14.ebuild:
+  Masked star-1.5_alpha14.ebuild stable for ppc
 
   06 Sep 2004; <plasmaroo@gentoo.org> star-1.5_alpha46.ebuild:
   Marked stable on IA64, bug #61797.

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.25 2004/06/24 21:35:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.26 2004/10/05 10:59:23 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  rpm2targz-9.0.ebuild:
+  Masked rpm2targz-9.0.ebuild stable for ppc
 
   03 Mar 2004; Tom Gall <tgall@gentoo.org> rpm2targz-9.0-r2.ebuild:
   mark ppc64 stable

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/advancecomp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.15 2004/10/02 13:20:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.16 2004/10/05 10:59:23 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  advancecomp-1.10.ebuild:
+  Masked advancecomp-1.10.ebuild stable for ppc
 
   02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> advancecomp-1.11.ebuild:
   Stable on alpha.

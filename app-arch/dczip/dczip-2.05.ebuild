@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/dczip-2.05.ebuild,v 1.3 2004/08/24 02:20:19 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/dczip-2.05.ebuild,v 1.4 2004/10/05 10:59:23 pvdabeel Exp $
 
 DESCRIPTION="dcZip is an archiving program for managing various compression file formats"
 HOMEPAGE="http://www.davidcampaign.net/dczip.html"
 SRC_URI="http://www.davidcampaign.net/files/${PN}.jar"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 IUSE=""
 DEPEND="virtual/x11
 	>=virtual/jdk-1.3"

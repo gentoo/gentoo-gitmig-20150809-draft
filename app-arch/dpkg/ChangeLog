@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.20 2004/08/24 10:54:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.21 2004/10/05 10:59:23 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  dpkg-1.10.18.1.ebuild:
+  Masked dpkg-1.10.18.1.ebuild stable for ppc
 
 *dpkg-1.10.23 (24 Aug 2004)
 

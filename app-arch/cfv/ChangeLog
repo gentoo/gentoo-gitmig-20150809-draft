@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cfv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.13 2004/09/21 23:50:21 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.14 2004/10/05 10:59:23 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> cfv-1.16.ebuild:
+  Masked cfv-1.16.ebuild stable for ppc
 
   21 Sep 2004; kito@gentoo.org cfv-1.17.ebuild:
   added ~ppc-macos keyword

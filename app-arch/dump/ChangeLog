@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.31 2004/07/23 18:52:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.32 2004/10/05 10:59:23 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dump-0.4.32.ebuild,
+  dump-0.4.36.ebuild:
+  Masked dump-0.4.36.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dump-0.4.32.ebuild:
+  Masked dump-0.4.32.ebuild stable for ppc
 
 *dump-0.4.37 (23 Jul 2004)
 

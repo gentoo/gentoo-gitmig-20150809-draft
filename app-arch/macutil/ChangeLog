@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/macutil
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.4 2004/06/24 21:32:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.5 2004/10/05 10:59:23 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  macutil-2.0_beta3.ebuild:
+  Masked macutil-2.0_beta3.ebuild stable for ppc
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
   macutil-2.0_beta3.ebuild:

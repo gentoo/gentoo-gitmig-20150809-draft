@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.ebuild,v 1.12 2004/08/05 04:15:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.ebuild,v 1.13 2004/10/05 10:59:24 pvdabeel Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.gnu.org/gnu/tar/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64 ~s390"
 IUSE="nls static build"
 
 DEPEND="virtual/libc

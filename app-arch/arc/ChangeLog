@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.13 2004/07/23 23:23:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.14 2004/10/05 10:59:23 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> arc-5.21j.ebuild:
+  Masked arc-5.21j.ebuild stable for ppc
 
   24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> arc-5.21j.ebuild:
   Stable on alpha.

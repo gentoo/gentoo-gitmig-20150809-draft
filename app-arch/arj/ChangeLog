@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.9 2004/08/12 21:18:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.10 2004/10/05 10:59:23 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> arj-3.10.18.ebuild,
+  arj-3.10g.ebuild:
+  Masked arj-3.10g.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> arj-3.10.18.ebuild:
+  Masked arj-3.10.18.ebuild stable for ppc
 
 *arj-3.10.21 (12 Aug 2004)
 
