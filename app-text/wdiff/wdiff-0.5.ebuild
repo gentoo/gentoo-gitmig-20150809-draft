@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5.ebuild,v 1.4 2004/03/12 08:51:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5.ebuild,v 1.5 2004/06/02 16:07:31 agriffis Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		dodoc COPYING ChangeLog NEWS README
 	else
