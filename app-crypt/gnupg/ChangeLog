@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.42 2003/12/26 18:03:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.43 2003/12/26 18:17:03 taviso Exp $
+
+  26 Dec 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.4.ebuild:
+  updating LICENSE
 
 *gnupg-1.2.4 (26 Dec 2003)
 
