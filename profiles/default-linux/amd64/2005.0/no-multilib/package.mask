@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.10 2005/04/01 19:53:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.11 2005/04/04 19:04:24 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -33,6 +33,7 @@ media-sound/teamspeak2-client-bin
 media-sound/teamspeak2-server-bin
 media-sound/ventrilo-server-bin
 net-im/skype
+net-www/netscape-flash
 sys-boot/grub
 www-client/opera
 www-client/mozilla-bin
