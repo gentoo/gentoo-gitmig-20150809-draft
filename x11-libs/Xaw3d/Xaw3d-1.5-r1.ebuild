@@ -1,6 +1,5 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Authors Dan Armak <danarmak@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
