@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.24.1.ebuild,v 1.4 2003/06/26 20:07:58 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.24.1.ebuild,v 1.5 2003/06/26 20:17:17 pauldv Exp $
 
 inherit libtool
 
@@ -14,6 +14,13 @@ SLOT="0"
 LICENSE="Apache-1.1"
 KEYWORDS="~x86 ~ppc"
 IUSE="ssl apache2 berkdb python"
+
+#
+#
+# Note that to disable the server part of subversion you need to specify
+# USE="-berkdb" emerge subversion.
+#
+#
 
 S_DB="${WORKDIR}/db-${DB_VERSION}/build_unix"
 
