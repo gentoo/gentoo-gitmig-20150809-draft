@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/juk
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/juk/ChangeLog,v 1.3 2003/04/05 22:21:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/juk/ChangeLog,v 1.4 2003/08/26 14:23:26 caleb Exp $
+
+*juk-2.0_beta1 (26 Aug 2003)
+
+  26 Aug 2003; Caleb Tennis <caleb@gentoo.org> juk-2.0_beta1.ebuild:
+  New version, ~x86 unstable.
 
 *juk-1.1 (27 Mar 2003)
 
