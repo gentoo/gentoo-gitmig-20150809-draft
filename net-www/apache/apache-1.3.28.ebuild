@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.28.ebuild,v 1.6 2003/09/29 13:31:40 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.28.ebuild,v 1.7 2003/09/29 23:24:22 woodchip Exp $
 
 #IUSE="ipv6 pam"
 IUSE="pam"
@@ -200,7 +200,7 @@ src_install() {
 	#this ebuild doesnt use /var/www/localhost but the config templates
 	#in CVS now do, so just roll those changes back here; #29843
 	perl -pi -e 's|var/www/localhost|home/httpd|;' \
-		${D}/etc/apache/conf/apache.conf \   
+		${D}/etc/apache/conf/apache.conf \
 		${D}/etc/apache/conf/commonapache.conf
 
 	# Added by Jason Wever <weeve@gentoo.org>
