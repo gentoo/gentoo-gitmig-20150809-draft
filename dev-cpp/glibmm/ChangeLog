@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.18 2005/03/17 01:29:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.19 2005/03/17 02:23:02 cryos Exp $
+
+*glibmm-2.4.7 (17 Mar 2005)
+
+  17 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> +glibmm-2.4.7.ebuild:
+  Version bump, closes bug 79888.
 
   16 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> glibmm-2.4.4.ebuild:
   Stable on sparc
