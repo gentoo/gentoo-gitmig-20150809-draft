@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.41 2005/01/05 19:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.42 2005/03/22 13:15:56 gustavoz Exp $
+
+  22 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> tar-1.15.1.ebuild:
+  Stable on sparc
 
   05 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   +files/1.15.1-flex-arg.patch, tar-1.15.1.ebuild:
