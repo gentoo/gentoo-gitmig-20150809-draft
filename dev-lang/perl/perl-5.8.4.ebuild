@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.13 2004/06/25 14:21:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.14 2004/06/29 17:56:01 agriffis Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -158,10 +158,6 @@ src_compile() {
 		myconf="${myconf} -Dd_u32align"
 	fi
 	if use sparc
-	then
-		myconf="${myconf} -Ud_longdbl"
-	fi
-	if use sparc64
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi

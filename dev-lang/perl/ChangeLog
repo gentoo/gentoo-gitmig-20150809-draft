@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.68 2004/06/25 14:21:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.69 2004/06/29 17:56:01 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> perl-5.8.2-r1.ebuild,
+  perl-5.8.3.ebuild, perl-5.8.4.ebuild:
+  kill sparc64 use flag
 
   25 Jun 2004; <solar@gentoo.org> perl-5.8.4.ebuild:
   uclibc update
