@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.132 2004/08/14 18:35:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.133 2004/08/18 19:58:51 spock Exp $
+
+  18 Aug 2004; Michal Januszewski <spock@gentoo.org>
+  development-sources-2.6.8.1.ebuild:
+  Fixed extraversion (bug #60512), marked stable on x86.
 
 *development-sources-2.6.8.1 (14 Aug 2004)
 
