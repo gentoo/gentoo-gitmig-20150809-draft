@@ -33,3 +33,6 @@ apm
 # alpha doesn't have java support other than compaq-j*, which isn't a
 # current version.  must mask this to keep things sane
 java
+
+# firebird appears to be x86-only (the db, not the browser)
+firebird
