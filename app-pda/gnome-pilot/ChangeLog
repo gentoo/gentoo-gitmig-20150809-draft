@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.3 2003/08/30 11:12:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.4 2003/09/12 19:31:11 liquidx Exp $
+
+  12 Sep 2003; Alastair Tse <liquidx@gentoo.org> gnome-pilot-2.0.10.ebuild,
+  gnome-pilot-2.0.9.ebuild:
+  removed bonobo-activation dep
 
   30 Aug 2003; Alastair Tse <liquidx@gentoo.org> gnome-pilot-0.1.65-r5.ebuild,
   gnome-pilot-0.1.71.ebuild, gnome-pilot-2.0.10.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10.ebuild,v 1.3 2003/09/10 01:43:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10.ebuild,v 1.4 2003/09/12 19:31:11 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -17,7 +17,6 @@ RDEPEND=">=gnome-base/libgnome-2.0.0
 	>=gnome-base/libglade-2.0.0
 	>=gnome-base/ORBit2-2.6.0
 	>=gnome-base/libbonobo-2.0.0
-	>=gnome-base/bonobo-activation-1.0.3
 	>=gnome-base/gnome-panel-2.0
 	>=gnome-base/gconf-2.0
 	>=dev-util/gob-2.0.5
