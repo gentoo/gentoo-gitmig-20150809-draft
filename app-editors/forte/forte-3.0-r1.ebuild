@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/forte/forte-3.0-r1.ebuild,v 1.3 2002/08/02 05:05:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/forte/forte-3.0-r1.ebuild,v 1.4 2002/08/06 16:33:05 gerk Exp $
 
 S=${WORKDIR}/usr/local
 DESCRIPTION="Forte/Sun ONE Studio Developer"
@@ -13,7 +13,7 @@ RESTRICT="fetch"
 
 SLOT="0"
 LICENSE="forte"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 dyn_fetch() {
 	for y in ${A} 
