@@ -1,4 +1,6 @@
 MD5 2640707c1a1085f9934c9b88e6b39caa perforce-cli-2003.1.ebuild 765
 MD5 aa26950c78457ef41bf51028a8d244a9 ChangeLog 460
 MD5 71da003bb2109fed15aff6635287c6a6 metadata.xml 222
+MD5 fdd11cc82c6aa59dca6718a28978dc96 perforce-cli-2003.2.ebuild 766
 MD5 6984906489f77b818b0f948c178f919a files/digest-perforce-cli-2003.1 95
+MD5 5e08d3845ea7e12dddeb66f5dca7bc60 files/digest-perforce-cli-2003.2 95

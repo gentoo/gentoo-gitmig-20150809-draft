@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/perforce-gui
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-gui/ChangeLog,v 1.1 2003/12/14 09:19:48 stuart Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-gui/ChangeLog,v 1.2 2004/04/18 18:39:38 stuart Exp $
+
+  18 Apr 2004; Stuart Herbert <stuart@gentoo.org> :
+  Version bump
+
+  18 Apr 2004; Stuart Herbert <stuart@gentoo.org> :
+  Version bump
 
 *perforce-gui-2003.1 (14 Dec 2003)
 
