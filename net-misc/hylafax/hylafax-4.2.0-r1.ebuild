@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r1.ebuild,v 1.3 2004/11/16 13:12:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r1.ebuild,v 1.4 2004/12/04 08:46:37 nerdboy Exp $
 
 inherit eutils
 
@@ -30,7 +30,6 @@ export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-dso.patch
 	epatch ${FILESDIR}/${P}-faxcron_uid.patch
 	epatch ${FILESDIR}/${P}-tiff_version.patch
 	epatch ${FILESDIR}/configure-gcc-3.4.patch
@@ -54,7 +53,8 @@ src_compile() {
 		--with-PATH_IMPRIP=\"\"
 		--with-SYSVINIT=no
 		--with-LIBTIFF=\"-ltiff -ljpeg -lz\"
-		--with-OPTIMIZER=\"${CFLAGS}\""
+		--with-OPTIMIZER=\"${CFLAGS}\"
+		--with-DSO=auto"
 
 	if [ -h /etc/localtime ]; then
 		local continent=$(readlink /etc/localtime | cut -d / -f 5)
