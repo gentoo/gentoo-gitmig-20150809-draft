@@ -1,0 +1,12 @@
+diff -N -u -w -r --unidirectional-new-file config/configure config2/configure
+--- config/configure	2004-03-08 00:03:54.000000000 +0100
++++ config/configure	2004-04-02 22:38:04.000000000 +0200
+@@ -10509,7 +10509,7 @@
+ fi
+ 
+ echo "Building dependencies"
+-$GNU_MAKE depend 2> /dev/null > /dev/null || echo "Building dependencies fails: try: 'make depend' or 'gmake depend'"
++$GNU_MAKE depend || echo "Building dependencies fails: try: 'make depend' or 'gmake depend'"
+ 
+ 
+ echo "The following modules will not be compiled: {" $BAD_TARGETS "}"

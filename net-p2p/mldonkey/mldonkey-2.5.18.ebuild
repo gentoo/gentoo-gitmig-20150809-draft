@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r2.ebuild,v 1.4 2004/04/17 10:21:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.18.ebuild,v 1.1 2004/04/17 10:21:19 mholzer Exp $
 
 inherit eutils
 
@@ -28,8 +28,6 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-configure.patch
-	#Don't change this, unless you know what you are doing
-	patch -p0 < ${FILESDIR}/${P}-16g.patch || die
 }
 
 
@@ -44,7 +42,7 @@ src_compile() {
 		--localstatedir=/var/mldonkey \
 		--enable-batch \
 		--enable-checks \
-		--enable-pthread
+		--enable-pthread || die
 
 	emake || die
 }
