@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.2a.ebuild,v 1.1 2004/09/13 02:41:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.2a.ebuild,v 1.2 2004/09/13 02:42:26 eradicator Exp $
 
 IUSE="oggvorbis"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 RDEPEND="=dev-db/sqlite-3*
- 	media-sound/xmms
+	media-sound/xmms
 	>=media-libs/taglib-1.1
 	>=dev-libs/libpcre-4.3
 	=dev-libs/fftw-3*

@@ -2,7 +2,7 @@ MD5 bd29532657702135a854a0c182f2fb46 ChangeLog 2802
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 d8aedc8def65e7126c9585381f4b79cb xmms-imms-1.0.1.ebuild 1108
 MD5 084fdba68177736fab2bff88d18d1812 xmms-imms-1.1.ebuild 1118
-MD5 0f1da39700269ed2105f7dcf17b144cc xmms-imms-1.2a.ebuild 1162
+MD5 645f0878eb98d29ad99667dbdef0f8b1 xmms-imms-1.2a.ebuild 1161
 MD5 de370ccf262cc471d299d6e6b6c90ea3 files/digest-xmms-imms-1.0.1 62
 MD5 5b150539965e8d54fbd01a73a683bff0 files/digest-xmms-imms-1.1 60
 MD5 9fb82a2c977bec8a2596cd4b5c04c004 files/xmms-imms-1.0.1-makefile.patch 2451
