@@ -1,6 +1,31 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.11 2002/12/24 02:13:30 viz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.12 2003/01/06 04:20:16 viz Exp $
+
+*xfs-sources-2.4.20_pre3 (6 Jan 2003)
+
+  6 Jan 2003; Tobias Eichert <viz@gentoo.org> xfs-sources-2.4.20_pre3.ebuild:
+
+  New Version.
+
+  Thanks to sethbc <sethbc@gentoo.org> who helped me getting along with
+  a cryptoloop issue. If Loop IV hack is enabled it causes
+  the compilation to break with an error; changing that to a #warning
+  will fix it. More information on that in the docs file.
+  
+  New from xfs-sources-2.4.20_pre2:
+
+  - Add supermount support
+  - Add usbdnet support
+  - Add futexes support
+  - Add i2c support (recent patch for lm-sensors)
+  - Add KT400 AGP / pci.ids support (should close bug #12600)
+  - Add ECC support
+  - Add v4l2 (Video for Linux 2) support
+  - Add SuperFreeS/WAN Support
+  
+  Enjoy and test :)
+
 
 *xfs-sources-2.4.29_pre2 (24 Dec 2002)
 
