@@ -1,7 +1,15 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.13 2004/11/30 21:50:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.14 2005/02/11 18:15:49 mkennedy Exp $
 
+*cmucl-19a (10 Feb 2005)
+
+  10 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> cmucl-19a-r1.ebuild:
+  Support for Common Lisp Controller v4; Build CMUCL with CMUCL-CLX
+  and CMUCL-GRAYSTREAM system defnitions by default -- this removes
+  the ugly dependency some packages previously had on
+  dev-lisp/cmucl-sources (which is now obsolete).
+  
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> cmucl-18e-r4.ebuild,
   cmucl-19a.ebuild:
   Fixed invalid atoms in *DEPEND.
