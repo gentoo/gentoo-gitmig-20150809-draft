@@ -1,5 +1,5 @@
-MD5 87c9c52963cacba618b863f8f01cca38 c-jdbc-1.0.4.ebuild 3756
-MD5 d8812af612325ff1cf4014b7881a4829 ChangeLog 469
+MD5 09fbc7a049cfd655f9709920953cd6c0 c-jdbc-1.0.4.ebuild 3735
+MD5 7f66aace14955900085c9cf377bf1a12 ChangeLog 622
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 62ac24f25532a4183e3ed1e1480878e7 files/console.sh 606
 MD5 a8d6fd20a9ab0d2f3d6b8c626cf6cf8b files/controller.sh 1118

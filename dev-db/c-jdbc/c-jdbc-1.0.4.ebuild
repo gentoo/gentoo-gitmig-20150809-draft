@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4.ebuild,v 1.1 2005/01/22 18:39:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4.ebuild,v 1.2 2005/03/04 11:23:02 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -30,7 +30,7 @@ RDEPEND=">=virtual/jre-1.3
 	=dev-java/mx4j-2.1*
 	>=dev-java/regexp-1.3
 	>=dev-java/xalan-2.5.2
-	>=dev-java/xml-commons-1.0_beta2
+	~dev-java/xerces-2.6.2
 	=dev-db/octopus-3.0*"
 
 S=${WORKDIR}/${P}-src
@@ -39,7 +39,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/c-jdbc-1.0.4-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	cd ${S}/lib
 	for i in `find . -name "*.jar"`
@@ -64,7 +64,7 @@ src_unpack() {
 	cd ${S}/lib/jmx
 	java-pkg_jar-from mx4j-2.1
 	java-pkg_jar-from xalan
-	java-pkg_jar-from xml-commons xml-apis.jar
+	java-pkg_jar-from xerces-2 xml-apis.jar
 
 	cd ${S}/lib/other
 	java-pkg_jar-from jdepend

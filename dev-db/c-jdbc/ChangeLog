@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/c-jdbc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/ChangeLog,v 1.1 2005/01/22 18:39:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/ChangeLog,v 1.2 2005/03/04 11:23:02 luckyduck Exp $
+
+  04 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> c-jdbc-1.0.4.ebuild:
+  changed xml-commons dependency to xerces-2 dependency in order to fix #82561
 
 *c-jdbc-1.0.4 (22 Jan 2005)
 
