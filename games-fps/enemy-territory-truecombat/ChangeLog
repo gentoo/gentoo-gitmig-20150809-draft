@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/enemy-territory-truecombat
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/ChangeLog,v 1.1 2004/12/10 01:56:38 wolf31o2 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/ChangeLog,v 1.2 2005/01/01 22:25:56 vapier Exp $
+
+*enemy-territory-truecombat-1.0_alpha2 (01 Jan 2005)
+
+  01 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  -enemy-territory-truecombat-1.0_alpha.ebuild,
+  +enemy-territory-truecombat-1.0_alpha2.ebuild:
+  Version bump #76250 by float.
 
 *enemy-territory-truecombat-1.0_alpha (09 Dec 2004)
 
