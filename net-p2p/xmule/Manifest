@@ -1,3 +1,5 @@
-MD5 844f888790e264015c8c6f7d0469bdea ChangeLog 751
+MD5 046d0dabd52fb984c3ea43fc9d64dcb0 ChangeLog 859
 MD5 ddf9913f683cb89dcc3e0fbf4adc242e xmule-1.5.1.ebuild 631
+MD5 fc8365e0abb2a96575aa985fcc66c5fd xmule-1.5.2.ebuild 645
 MD5 f4e17c95e202d9ebf39a57db3202b354 files/digest-xmule-1.5.1 64
+MD5 a2b53d66e9fc3c75cd770828359f0f21 files/digest-xmule-1.5.2 65
