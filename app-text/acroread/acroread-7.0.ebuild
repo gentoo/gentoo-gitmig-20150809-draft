@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.1 2005/03/14 21:27:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.2 2005/03/14 21:33:29 genstef Exp $
 
 inherit nsplugins eutils
 
@@ -67,4 +67,6 @@ src_install() {
 pkg_postinst () {
 	# fix wrong directory permissions (bug #25931)
 	find ${INSTALLDIR} -type d | xargs chmod 755 || die
+
+	einfo "The browser plugin does not work on firefox 1.0.1 (yet)"
 }
