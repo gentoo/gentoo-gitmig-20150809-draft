@@ -1,7 +1,17 @@
-MD5 addfd054b628b98bac461263109953c2 janus-0.4.5.ebuild 720
-MD5 2c1b122cbee947a90d4b00b030016ea6 janus-0.4.2.ebuild 693
-MD5 cdbc01bd99d588b763b89d8d55c1d024 janus-0.4.6.ebuild 763
-MD5 383e433bf00ce642990a6410bb2827b9 ChangeLog 646
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0e0556c2cb7f77f2b2cb89ecee762ea9 ChangeLog 813
+MD5 658c466973251e1aa94fcd197834f25a janus-0.4.2.ebuild 693
+MD5 f0ad353f13a4d0e7575175033a2c4d98 janus-0.4.5.ebuild 727
+MD5 851057e0b1c975b4692143c9d77fe789 janus-0.4.6.ebuild 770
 MD5 4eb66bf971e08f637add32dd937a3c15 files/digest-janus-0.4.2 64
 MD5 257e2949d6edac3f8536988a6e4c0e56 files/digest-janus-0.4.5 63
 MD5 8183d389c905b8d3431c204007892daa files/digest-janus-0.4.6 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBybzkKRy60XGEcJIRApJtAKCiozJ7HLXka3EJ6GOIlJfekXUrxQCglA2s
+2BkoMfMng/CByBBNawmKJ3w=
+=VrWp
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuta
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/ChangeLog,v 1.7 2004/06/24 23:15:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/ChangeLog,v 1.8 2004/12/22 18:26:12 gustavoz Exp $
+
+  22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> libuta-0.4.1-r1.ebuild,
+  libuta-0.4.3.ebuild, libuta-0.4.4.ebuild:
+  Keyworded -sparc, doesn't work, no use
 
 *libuta-0.4.4 (08 May 2003)
 
