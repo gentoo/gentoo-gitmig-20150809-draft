@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.5.ebuild,v 1.3 2002/10/04 06:43:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.5.ebuild,v 1.4 2002/10/19 07:04:21 seemant Exp $
 
 NAME="hotkeys"
 S=${WORKDIR}/${P}
@@ -13,10 +13,9 @@ SLOT="0"
 KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/x11
-	virtual/glibc
 	dev-libs/libxml2
 	>=sys-libs/db-3.2.3
-	=x11-libs/xosd-0.7.0"
+	>x11-libs/xosd-0.7.0"
 
 RDEPEND="${DEPEND}"
 
@@ -27,12 +26,10 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
 		--with-xosd-lib=/usr/lib/xosd-0.7.0 \
 		--with-xosd-inc=/usr/include/xosd-0.7.0 \
-		--sysconfdir=/etc || die "./configure failed"
+		|| die "./configure failed"
 	emake || die
 }
 
@@ -40,4 +37,3 @@ src_install () {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS BUGS ChangeLog COPYING README TODO
 }
-
