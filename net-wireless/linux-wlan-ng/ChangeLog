@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.31 2004/02/01 23:33:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.32 2004/02/04 00:14:28 latexer Exp $
+
+*linux-wlan-ng-0.2.1_pre17 (03 Feb 2004)
+
+  03 Feb 2004; Peter Johanson <latexer@gentoo.org>
+  linux-wlan-ng-0.2.1_pre17.ebuild:
+  Added 0.2.1_pre17 which is ready for pcmcia-cs 3.2.7, unsets ARCH and tells
+  people to not bother with symlinks for 2.6 kernsl, and includes
+  module-init-tools fix for pcmcia-cs configure stage.
 
 *linux-wlan-ng-0.2.0-r3 (01 Feb 2004)
 
