@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.14 2003/02/12 08:24:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.15 2003/09/21 04:19:53 nerdboy Exp $
+
+*hylafax-4.1.7 (20 Sep 2003)
+
+  20 Sep 2003; <sarnold@gentoo.org> hylafax-4.1.7.ebuild:
+  version bump with ebuild from Stephane LOEUILLET, re Bug 28574
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
