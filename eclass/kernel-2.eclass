@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.85 2005/01/16 19:36:27 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.86 2005/01/24 04:46:36 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -238,7 +238,7 @@ compile_headers() {
 	HOSTCFLAGS=${HOSTCFLAGS:--Wall -Wstrict-prototypes -O2 -fomit-frame-pointer}
 
 	# Kernel ARCH != portage ARCH
-	local KARCH=$(tc-arch-kernel ${CTARGET})
+	local KARCH=$(tc-arch-kernel)
 
 	# When cross-compiling, we need to set the ARCH/CROSS_COMPILE 
 	# variables properly or bad things happen !
@@ -249,14 +249,12 @@ compile_headers() {
 		xmakeopts="${xmakeopts} CROSS_COMPILE=${CHOST}-"
 	fi
 
-	if kernel_is 2 4
-	then
+	if kernel_is 2 4 ; then
 		yes "" | make oldconfig ${xmakeopts}
 		echo ">>> make oldconfig complete"
 		use sparc && make dep ${xmakeopts}
 
-	elif kernel_is 2 6
-	then
+	elif kernel_is 2 6 ; then
 		# autoconf.h isnt generated unless it already exists. plus, we have
 		# no guarantee that any headers are installed on the system...
 		[[ -f ${ROOT}/usr/include/linux/autoconf.h ]] \
@@ -295,7 +293,7 @@ install_headers() {
 	rm -rf ${D}/${ddir}/linux/modules
 	dodir ${ddir}/asm
 
-	if [ "${PROFILE_ARCH}" = "sparc64" -o "${PROFILE_ARCH}" = "sparc64-multilib" ] ; then
+	if [[ $(tc-arch-kernel) == "sparc64" ]] ; then
 		rm -Rf ${D}/${ddir}/asm
 		dodir ${ddir}/asm-sparc
 		dodir ${ddir}/asm-sparc64
@@ -303,7 +301,7 @@ install_headers() {
 		cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
 		#generate_sparc_asm ${D}/usr/include
 		create_ml_includes /usr/include/asm __sparc__:/usr/include/asm-sparc __sparc64__:/usr/include/asm-sparc64
-	elif [ "${ARCH}" = "amd64" ]; then
+	elif [[ $(tc-arch-kernel) == "x86_64" ]] ; then
 		rm -Rf ${D}/${ddir}/asm
 		dodir ${ddir}/asm-i386
 		dodir ${ddir}/asm-x86_64
@@ -315,8 +313,7 @@ install_headers() {
 		cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
 	fi
 
-	if kernel_is 2 6
-	then
+	if kernel_is 2 6 ; then
 		dodir ${ddir}/asm-generic
 		cp -ax ${S}/include/asm-generic/* ${D}/${ddir}/asm-generic
 	fi
@@ -458,14 +455,12 @@ postinst_headers() {
 # pkg_setup functions
 #==============================================================
 setup_headers() {
-	[ -z "${H_SUPPORTEDARCH}" ] && H_SUPPORTEDARCH="${PN/-*/}"
-	for i in ${H_SUPPORTEDARCH}
-	do
-		[ "${ARCH}" == "${i}" ] && H_ACCEPT_ARCH="yes"
+	[[ -z ${H_SUPPORTEDARCH} ]] && H_SUPPORTEDARCH=${PN/-*/}
+	for i in ${H_SUPPORTEDARCH} ; do
+		[[ $(tc-arch-kernel) == "${i}" ]] && H_ACCEPT_ARCH="yes"
 	done
 
-	if [ "${H_ACCEPT_ARCH}" != "yes" ]
-	then
+	if [[ ${H_ACCEPT_ARCH} != "yes" ]] ; then
 		echo
 		eerror "This version of ${PN} does not support ${ARCH}."
 		eerror "Please merge the appropriate sources, in most cases"
@@ -681,7 +676,7 @@ local	ERROR workingdir basefname basedname xarch
 		workingdir=${PWD}
 		basefname=$(basename ${2})
 		basedname=$(dirname ${2})
-		xarch=${ARCH}
+		xarch=$(tc-arch-kernel)
 		unset ARCH
 		
 		cd ${basedname}
@@ -810,10 +805,10 @@ detect_arch() {
 		COMPAT_URI="${LOOP_ARCH}_URI"
 		COMPAT_URI="${!COMPAT_URI}"
 
-		[ -n "${COMPAT_URI}" ] && \
+		[[ -n ${COMPAT_URI} ]] && \
 			ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr '[:upper:]' '[:lower:]')? ( ${COMPAT_URI} )"
 
-		if [ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr '[:lower:]' '[:upper:]')" ]
+		if [[ ${LOOP_ARCH} == "$(echo $(tc-arch-kernel) | tr '[:lower:]' '[:upper:]')" ]]
 		then
 			for i in ${COMPAT_URI}
 			do
