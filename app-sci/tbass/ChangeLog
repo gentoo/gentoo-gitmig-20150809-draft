@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/tbass
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.10 2003/07/31 04:24:21 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.11 2004/04/19 12:33:51 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> tbass-20020729.ebuild,
+  tbass-20030204.ebuild, tbass-20030318.ebuild, tbass-20030725.3.3.ebuild:
+  Cleanup, moving patch -> epatch
 
 *tbass-20030725.3.3 (30 Jul 2003)
 

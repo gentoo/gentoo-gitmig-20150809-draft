@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.5 2004/02/24 08:52:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.6 2004/04/19 12:33:51 phosphan Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -47,9 +49,9 @@ src_unpack() {
 	unpack ${A}
 	if [ $TECH_AMS ]; then unpack balsa-tech-ams-20030506.tar.gz; fi
 	cd ${WORKDIR}
-	patch -p0 < ${FILESDIR}/${P}-tech-verilog-configure.patch || die
-	patch -p0 < ${FILESDIR}/${P}-tech-xilinx-configure.patch || die
-	patch -p0 < ${FILESDIR}/${P}-tech-example-configure.patch || die
+	epatch ${FILESDIR}/${P}-tech-verilog-configure.patch
+	epatch ${FILESDIR}/${P}-tech-xilinx-configure.patch
+	epatch ${FILESDIR}/${P}-tech-example-configure.patch
 	#patch -p0 < ${FILESDIR}/${P}-balsa-lard-configure.patch || die
 	#echo "patching file balsa-lard-${PV}/bin/Makefile.in"
 	#sed -i -e "s: \$(bindir): \$(DESTDIR)\$(bindir):g" ${WORKDIR}/balsa-lard-${PV}/bin/Makefile.in
