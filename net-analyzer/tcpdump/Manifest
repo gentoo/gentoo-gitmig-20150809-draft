@@ -1,26 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9412904a188238acf9ffd589129d917 ChangeLog 4249
-MD5 231504862158dcc9074bcd74b7c1c79a tcpdump-3.6.2-r1.ebuild 963
-MD5 dad1b1847598dee2a110791899790e47 tcpdump-3.7.1.ebuild 831
-MD5 12fa085d03eeb8234c25815c40110c0a tcpdump-3.7.2.ebuild 972
-MD5 248b3b7e5e1114f413a0ec8105724b32 tcpdump-3.8.1.ebuild 898
-MD5 a7afd4d5e3fb58d0fce6f19571cefae2 metadata.xml 379
 MD5 452ac0110b0c669f25a448683831d748 tcpdump-3.8.3-r1.ebuild 1098
-MD5 f176862eb77f0f5e2352b870903c95d2 tcpdump-3.8.3.ebuild 901
-MD5 f5295cc511894293cef91f09dd9d9d43 files/digest-tcpdump-3.6.2-r1 65
-MD5 ad3cc121211e6bbf52b9e6b882396856 files/digest-tcpdump-3.7.1 65
-MD5 e70e627b145b5d2aa274d4c955a2f8fe files/digest-tcpdump-3.7.2 65
-MD5 6d4855db9dad2f6ec699ba953e1447fa files/digest-tcpdump-3.8.1 65
-MD5 973b29d820ecdbfd8b6720b30008e90a files/tcpdump-3.6.2-afsprinting.patch 1828
-MD5 5e02cff127175efbe4fc3be1f3321508 files/tcpdump-3.7.2-sctp.patch 352
-MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3 65
+MD5 4ff65faa16d5a56c3d5230aa6e6b4f5a ChangeLog 4502
+MD5 a7afd4d5e3fb58d0fce6f19571cefae2 metadata.xml 379
 MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3-r1 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFA+fT3mdTrptrqvGERArqzAJ9UoyrHhQZxfF7GLHRTZQCsq5a1igCeL0n/
-nps0oQ+7JYuM2urFYnE/Wl4=
-=fEnJ
+iD8DBQFBg74pT+MN7JbqCpMRAlRfAJ9VUTYkgs4b8bSnxSAnCL/IJiqtLwCeLcUl
+iXAC4wmksd/qQGD3oWq1wQ4=
+=slnT
 -----END PGP SIGNATURE-----
