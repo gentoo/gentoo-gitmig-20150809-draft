@@ -1,0 +1,19 @@
+diff -u slmodem-2.9.10.orig/drivers/st7554.c slmodem-2.9.10/drivers/st7554.c
+--- slmodem-2.9.10.orig/drivers/st7554.c	2004-12-10 14:22:05.017025448 +0100
++++ slmodem-2.9.10/drivers/st7554.c	2004-12-10 14:22:48.679387760 +0100
+@@ -1080,11 +1080,14 @@
+ 
+ #define SET_REG(s,reg,val) { ret = s->set_reg(s,reg,val); if (ret < 0) { USB_ERR("st7554: failed to set reg %x.\n", reg); ; return ret;} }
+ 
++#if (LINUX_VERSION_CODE > KERNEL_VERSION(2,6,8))
++#define CLEAR_ENDPOINT(s,pipe)
++#else
+ #define CLEAR_ENDPOINT(s,pipe) { \
+      if (usb_endpoint_halted(s->usbdev, usb_pipeendpoint(pipe), usb_pipeout(pipe))) {   \
+        USB_DBG("st7554_init: pipe %d is halted. clear...\n", usb_pipeendpoint(pipe));  \
+        if (!(ret=usb_clear_halt(s->usbdev, pipe))) return ret;}}
+-
++#endif
+ 
+ 
+ static int st7554_init  (struct st7554_state *s)

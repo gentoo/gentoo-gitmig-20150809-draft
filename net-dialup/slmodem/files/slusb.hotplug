@@ -1,0 +1,13 @@
+#!/bin/sh
+
+RC_NOCOLOR="yes"
+source /sbin/functions.sh
+source /etc/conf.d/slmodem
+if [ -z "${USBMOD}" ];then 
+	MODULE="slusb"
+else 
+	MODULE=${USBMOD}
+fi
+source /etc/init.d/slmodem
+source "${svclib}/sh/rc-services.sh"
+start && source "${svclib}/sh/rc-services.sh"

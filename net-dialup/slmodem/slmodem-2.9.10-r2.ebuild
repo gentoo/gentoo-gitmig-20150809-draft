@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r2.ebuild,v 1.1 2004/12/14 18:15:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r2.ebuild,v 1.2 2004/12/14 18:21:06 mrness Exp $
 
 inherit eutils linux-info
 
