@@ -11,7 +11,7 @@ ECLASS=flag-o-matic
 #### append-flags <flag> ####
 # Add extra flags to your current C[XX]FLAGS
 #
-#### change-flags <orig.flag> <new.flag> ###
+#### replace-flags <orig.flag> <new.flag> ###
 # Replace a flag by another one
 #
 
@@ -33,7 +33,7 @@ append-flags () {
 
 }
 
-change-flags () {
+replace-flags () {
 
 	CFLAGS="${CFLAGS/${1}/${2}"
 	CXXFLAGS="${CXXFLAGS/${1}/${2}"
