@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r5.ebuild,v 1.5 2004/02/24 18:01:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r5.ebuild,v 1.6 2004/05/12 13:25:11 pappy Exp $
 
 IUSE="nls pic build"
 
@@ -212,9 +212,6 @@ src_compile() {
 
 	# This should not be done for: ia64 s390 s390x
 #	use x86 && CFLAGS="${CFLAGS} -freorder-blocks"
-
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
-	has_version "sys-devel/hardened-gcc" && CC="${CC} -yet_exec"
 
 	einfo "Configuring GLIBC..."
 	rm -rf buildhere

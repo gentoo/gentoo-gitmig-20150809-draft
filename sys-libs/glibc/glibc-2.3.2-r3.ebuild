@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.17 2004/04/27 03:17:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.18 2004/05/12 13:25:11 pappy Exp $
 
 IUSE="nls pic build nptl"
 
@@ -420,8 +420,6 @@ src_compile() {
 			myconf="${myconf} --enable-kernel=2.2.5"
 		fi
 	fi
-
-	has_version "sys-devel/hardened-gcc" && CC="${CC} -yet_exec"
 
 	einfo "Configuring GLIBC..."
 	rm -rf ${S}/buildhere
