@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/keychain
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.33 2004/09/30 18:52:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.34 2004/11/18 19:01:49 agriffis Exp $
+
+*keychain-2.4.2.1 (18 Nov 2004)
+
+  18 Nov 2004; Aron Griffis <agriffis@gentoo.org> -keychain-2.4.2.1.ebuild,
+  +keychain-2.4.3.ebuild:
+  Update to 2.4.3 which fixes ps issues on BSD
 
   30 Sep 2004; Aron Griffis <agriffis@gentoo.org> -keychain-2.4.2.ebuild:
   Update to 2.4.2.1 which fixes some minor issues with gpg
