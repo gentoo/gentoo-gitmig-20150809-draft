@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-1.1.ebuild,v 1.1 2004/03/06 18:46:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-1.1.ebuild,v 1.2 2004/04/03 06:11:11 pylon Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pypanel.sourceforge.net"
 SRC_URI="mirror://sourceforge/pypanel/PyPanel-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 IUSE=""
 DEPEND=">=x11-base/xfree-4.3.0-r2
 	>=dev-lang/python-2.2.3-r1
