@@ -1,6 +1,29 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.39 2002/08/25 14:38:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.40 2002/09/08 20:02:04 azarah Exp $
+
+*xfree-4.2.1 (8 Sep 2002):
+
+  8 Sep 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild :
+
+  New version.  Lots of cleanups.  Freetype-2.1.2 added.
+  
+  Fix security issue with xterms; bug #2618 and #7630.
+
+  Fix compile issues for the tdfx driver.  This should fix bug #3735, thanks
+  to ideas from Ron Simpkin <ron@doobedoobedo.f2s.com>
+
+  Use buildin zlib to fix segfaults, thanks to Brad Laue <brad@brad-x.com>.
+  This closes bug #4777.
+
+  Integrate MS corefonts the right way (tm), thanks to great work from
+  Santiago Tabares <santi___@softhome.net>.  This should close bug #6980,
+  and maybe also bug #6968 and #5722.
+
+  Do not update the Wacom driver if kernel version 2.2 is in use.  This
+  should fix bug #4152.
+
+  Update the Savaga driver to try and fix bug #3531.
 
   25 Aug 2002; Dan Armak <danarmak@gentoo.org> files/4.2.0-r12/Xsetup_0  :
 
