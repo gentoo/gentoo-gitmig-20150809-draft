@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.3.ebuild,v 1.1 2005/02/13 23:00:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.3.ebuild,v 1.2 2005/02/25 01:54:35 weeve Exp $
 
 inherit kde
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/krename/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="doc"
 
 need-kde 3.1

@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kkbswitch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkbswitch/ChangeLog,v 1.1 2005/01/28 20:29:07 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkbswitch/ChangeLog,v 1.2 2005/02/25 01:50:56 weeve Exp $
+
+  24 Feb 2005; Jason Wever <weeve@gentoo.org> kkbswitch-1.4.3.ebuild:
+  Added ~sparc keyword.
 
 *kkbswitch-1.4.3 (28 Jan 2005)
 
