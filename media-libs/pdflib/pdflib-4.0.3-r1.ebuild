@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3-r1.ebuild,v 1.12 2003/09/24 23:55:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3-r1.ebuild,v 1.13 2004/01/10 17:57:27 agriffis Exp $
 
 PYVER="$(/usr/bin/python -V 2>&1 | cut -d ' ' -f 2 | cut -d '.' -f 1,2)"
 DESCRIPTION="A library for generating PDF on the fly"
@@ -10,7 +10,7 @@ SRC_URI="http://www.pdflib.com/pdflib/download/${P}.tar.gz
 
 LICENSE="Aladdin"
 SLOT="4"
-KEYWORDS="x86 ~ppc sparc hppa ~alpha amd64"
+KEYWORDS="x86 ~ppc sparc hppa alpha amd64 ia64"
 IUSE="tcltk perl python java"
 
 DEPEND="tcltk? ( >=dev-lang/tk-8.2 )
