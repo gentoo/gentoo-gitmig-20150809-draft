@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/wasabi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/wasabi/ChangeLog,v 1.4 2004/06/16 14:26:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/wasabi/ChangeLog,v 1.5 2004/06/17 23:02:21 g2boojum Exp $
+
+*wasabi-0.1-r1 (17 Jun 2004)
+
+  17 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> files/wasabi.init,
+  +wasabi-0.1-r1.ebuild, -wasabi-0.1.ebuild:
+  It seems that the init file kills all perl processes when shutdown.
+  Added new version from lcars.
 
   16 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> wasabi-0.1.ebuild:
   Added ~sparc

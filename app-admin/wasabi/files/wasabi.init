@@ -6,12 +6,12 @@ depend() {
 
 start() {
 	ebegin "Starting wasabi"
-	start-stop-daemon --start --quiet --exec /usr/sbin/wasabi
+	start-stop-daemon --start --quiet --exec /usr/sbin/wasabi -- -c /etc/wasabi/wasabi.conf
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping wasabi"
-	start-stop-daemon --stop --quiet --exec /usr/bin/perl /usr/sbin/wasabi
+	start-stop-daemon --stop --quiet --name wasabi
 	eend $?
 }
