@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.9.1.ebuild,v 1.6 2004/07/26 22:37:02 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.9.1.ebuild,v 1.7 2004/09/06 00:50:54 ciaranm Exp $
 
 inherit eutils
 
@@ -53,11 +53,11 @@ pkg_setup() {
 
 		echo
 		einfo "Sleeping 30 Seconds..."
-		sleep 30
+		epause 30
 	else
 		echo
 		einfo "Sleeping 10 Seconds..."
-		sleep 10
+		epause 10
 	fi
 
 }
