@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.71 2004/08/14 19:58:47 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.72 2004/08/19 20:56:01 lv Exp $
+
+*pango-1.4.1-r1 (19 Aug 2004)
+
+  19 Aug 2004; Travis Tilley <lv@gentoo.org> +files/pango-1.2.5-lib64.patch,
+  +pango-1.4.1-r1.ebuild:
+  added a patch that changes the pango config file location to
+  /etc/pango/${CHOST} on amd64 to help the 64bit and 32bit pango co-exist in a
+  multilib environment.
 
   14 Aug 2004; Stephen P. Becker <geoman@gentoo.org> pango-1.4.1.ebuild:
   Stable on mips - bug 59692
