@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/star
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.13 2003/06/11 17:59:44 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.14 2003/06/26 16:06:22 agriffis Exp $
+
+  26 Jun 2003; Aron Griffis <agriffis@gentoo.org> star-1.5_alpha14.ebuild:
+  Add ~alpha to KEYWORDS
 
 *star-1.4.3 (11 Jun 2003)
 
