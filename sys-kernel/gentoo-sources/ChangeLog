@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.100 2005/01/08 21:29:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.101 2005/01/11 17:08:58 johnm Exp $
+
+*gentoo-sources-2.6.9-r13 (11 Jan 2005)
+
+  11 Jan 2005; John Mylchreest <johnm@gentoo.org>
+  +gentoo-sources-2.6.1-r2.ebuild, +gentoo-sources-2.6.10-r1.ebuild,
+  +gentoo-sources-2.6.10-r2.ebuild, +gentoo-sources-2.6.10-r4.ebuild,
+  +gentoo-sources-2.6.8-r3.ebuild, +gentoo-sources-2.6.9-r12.ebuild,
+  +gentoo-sources-2.6.9-r13.ebuild, +gentoo-sources-2.6.9-r14.ebuild,
+  +gentoo-sources-2.6.9-r9.ebuild:
+  The big amalgamation of 2.6->2.4. Oh, and before I forget, check out
+  ${FILESDIR}/Changelog-2.4.bz2 for the old changelog
 
 *gentoo-sources-2.4.28-r5 (08 Jan 2005)
 
