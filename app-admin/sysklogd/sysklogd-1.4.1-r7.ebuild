@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r7.ebuild,v 1.4 2004/02/08 00:42:56 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r7.ebuild,v 1.5 2004/02/22 05:45:09 mr_bones_ Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard log daemons"
@@ -9,7 +9,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha hppa arm mips"
+KEYWORDS="x86 ppc sparc alpha hppa mips"
 
 DEPEND="virtual/glibc"
 RDEPEND="dev-lang/perl sys-apps/debianutils"
