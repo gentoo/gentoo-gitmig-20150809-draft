@@ -1,0 +1,13 @@
+# ChangeLog for x11-plugins/desklet-psidisplays
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/ChangeLog,v 1.1 2003/10/26 12:25:10 obz Exp $
+
+*desklet-psidisplays-20031024 (26 Oct 2003)
+
+  26 Oct 2003; Mike Gardiner <obz@gentoo.org>
+  desklet-psidisplays-20031024.ebuild:
+  First version of the desklet-psidisplays package. Like it's corresponding
+  sensors package (desklet-psisensors) this provides Psi's displays including
+  Theme support and obsolete the desklet-{cpu,disk,mem,network}info displays
+  which will be removed soon.
+
