@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.316 2004/04/25 15:28:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.317 2004/04/25 20:20:50 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -301,7 +301,6 @@ sys-devel/gcc-config:hardened - enable environment aware wrapper for comfortable
 sys-devel/gcc-config:debug - activate verbose commandline output of the wrapper in gcc-config
 sys-devel/hardened-gcc:debug - activate verbose commandline output of the default PIE SSP hardened-gcc wrapper
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
-sys-devel/gcc:ada - Build support for the ada language
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Do not build gcj (java compiler included with gcc package)
 sys-devel/gdb:objc - Build support for the Objective C code language
