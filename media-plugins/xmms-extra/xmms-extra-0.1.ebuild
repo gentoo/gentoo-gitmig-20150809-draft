@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-extra/xmms-extra-0.1.ebuild,v 1.6 2004/04/23 23:55:10 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-extra/xmms-extra-0.1.ebuild,v 1.7 2004/05/10 21:13:19 lv Exp $
+
+inherit eutils gnuconfig
 
 IUSE=""
 
@@ -15,6 +17,7 @@ KEYWORDS="x86 ~ppc ~amd64"
 RDEPEND=">=media-sound/xmms-1.2.7"
 
 src_compile() {
+	gnuconfig_update
 	econf || die
 	emake || die
 }
