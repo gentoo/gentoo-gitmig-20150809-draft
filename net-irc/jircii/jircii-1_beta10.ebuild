@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/jircii-1_beta10.ebuild,v 1.1 2004/07/12 20:34:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/jircii-1_beta10.ebuild,v 1.2 2004/07/12 22:10:57 swegener Exp $
 
 DESCRIPTION="jIRCii - IRC client written in Java"
 HOMEPAGE="http://jirc.hick.org/"
@@ -25,7 +25,7 @@ src_install() {
 
 	cat >${T}/jircii <<EOF
 #!/bin/bash
-java -jar /usr/share/jircii/jerk.jar
+exec java -jar /usr/share/jircii/jerk.jar
 EOF
 	dobin ${T}/jircii
 
