@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/bmon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.9 2004/07/13 18:00:59 aliz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.10 2005/01/09 06:41:21 dragonheart Exp $
+
+*bmon-2.0.1 (09 Jan 2005)
+
+  09 Jan 2005; Daniel Black <dragonheart@gentoo.org> bmon-1.2.1.ebuild,
+  +bmon-2.0.1.ebuild:
+  Version bump with added library. Version bump in bug #74954 by 
+  Vanquirius <marcelogoes@gmail.com>
 
   13 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> bmon-1.2.1.ebuild:
   Added amd64 keyword, closing #56849.
