@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.5.ebuild,v 1.3 2003/10/05 10:40:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.6.ebuild,v 1.1 2003/11/28 22:30:51 foser Exp $
 
-inherit eutils
+inherit flag-o-matic
 
 DESCRIPTION="Graphical IRC client"
 SRC_URI="http://www.xchat.org/files/source/2.0/${P}.tar.bz2"
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7"
 
 src_compile() {
+
 	# xchat's configure script uses sys.path to find library path
 	# instead of python-config (#25943)
 	unset PYTHONPATH
@@ -58,9 +59,11 @@ src_compile() {
 		|| die "Configure failed"
 
 	MAKEOPTS="-j1" emake || die "Compile failed"
+
 }
 
 src_install() {
+
 	# some magic to create a menu entry for xchat 2
 	mv xchat.desktop xchat.desktop.old
 	sed -e "s:Exec=xchat:Exec=xchat-2:" -e "s:Name=XChat IRC:Name=XChat 2 IRC:" xchat.desktop.old > xchat.desktop
@@ -72,4 +75,5 @@ src_install() {
 	doins src/common/xchat-plugin.h
 
 	dodoc AUTHORS COPYING ChangeLog README*
+
 }
