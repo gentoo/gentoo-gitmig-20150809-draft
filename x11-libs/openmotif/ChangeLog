@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.58 2004/11/18 08:57:15 mr_bones_ Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.59 2005/01/15 13:47:49 eradicator Exp $
+
+  15 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  openmotif-2.1.30-r4.ebuild, openmotif-2.1.30-r5.ebuild:
+  Make openmotif friendly with multilib includes...
 
 *openmotif-2.1.30-r4 (18 Nov 2004)
 
