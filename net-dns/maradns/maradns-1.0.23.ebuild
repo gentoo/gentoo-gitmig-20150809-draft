@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.0.23.ebuild,v 1.1 2004/06/23 03:44:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.0.23.ebuild,v 1.2 2004/06/23 20:44:04 dholm Exp $
 
 DESCRIPTION="Proxy DNS server with permanent caching"
 HOMEPAGE="http://www.maradns.org"
@@ -8,7 +8,7 @@ SRC_URI="http://www.maradns.org/download/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 IUSE=""
 
 DEPEND="virtual/glibc"
