@@ -1,6 +1,10 @@
 # ChangeLog for app-text/lv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.10 2003/11/18 15:47:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.11 2004/01/05 06:19:56 nakano Exp $
+
+  05 Jan 2004; Masatomo Nakano <nakano@gentoo.org> lv-4.49.4.ebuild,
+  lv-4.49.5-r1.ebuild, lv-4.49.5.ebuild, lv-4.50.ebuild, metadata.xml:
+  Markded as stable and removed old versions.
 
 *lv-4.50 (19 Nov 2003)
 
