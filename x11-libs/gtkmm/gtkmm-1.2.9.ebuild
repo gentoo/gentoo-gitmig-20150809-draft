@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.2.9.ebuild,v 1.9 2002/10/17 16:22:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.2.9.ebuild,v 1.10 2002/11/12 07:19:40 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="C++ interface for GTK+"
 SRC_URI="http://download.sourceforge.net/gtkmm/${P}.tar.gz"
 #	 ftp://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
 #	 http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
+
 LICENSE="GPL-2"
 SLOT="1.2"
 KEYWORDS="x86 ppc sparc sparc64"
@@ -16,41 +16,23 @@ DEPEND="virtual/glibc
 	=x11-libs/gtk+-1.2*
 	>=dev-libs/libsigc++-1.0.4"
 
-RDEPEND=${DEPEND}
-
 src_compile() {
-
 	local myconf
 	
-	if [ "${DEBUG}" ]
-	then
+	if [ "${DEBUGBUILD}" ] ; then
 		myconf="--enable-debug=yes"
 	else
 		myconf="--enable-debug=no"
 	fi
 	
-  	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--sysconfdir=/etc/X11 \
-		--with-xinput=xfree \
+	econf --with-xinput=xfree \
 		--with-x \
-		${myconf} || die
-		
+		${myconf}
+
 	make || die
 }
 
 src_install() {
-
-	make DESTDIR=${D} \
-		install || die
-
-
-	dodoc AUTHORS COPYING ChangeLog* HACKING
-	dodoc NEWS* README* TODO
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS COPYING ChangeLog* HACKING NEWS* README* TODO
 }
-
-
-
-
