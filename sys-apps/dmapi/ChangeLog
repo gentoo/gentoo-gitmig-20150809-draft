@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.22 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.23 2004/10/08 13:24:11 vapier Exp $
+
+*dmapi-2.2.1 (08 Oct 2004)
+
+  08 Oct 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *dmapi-2.2.0 (03 Sep 2004)
 
