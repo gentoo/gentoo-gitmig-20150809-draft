@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.1.ebuild,v 1.6 2004/07/27 22:22:46 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.1.ebuild,v 1.7 2004/11/21 09:45:56 eldad Exp $
 
 DESCRIPTION="neat graphical traceroute displaying route on the globe"
 SRC_URI="http://www.dtek.chalmers.se/~d3august/xt/dl/${P}.tar.gz
@@ -21,6 +21,10 @@ DEPEND="virtual/x11
 	net-misc/host"
 
 src_compile() {
+
+	# Fix 'head' problem, Bug #63019 (21 Nov 2004 eldad)
+	sed -i -e 's/head -1/head -n 1/' share/xtraceroute-resolve-location.sh.in
+
 	# specify --from-code to fix bug 25395 (01 Aug 2003 agriffis)
 	XGETTEXT='/usr/bin/xgettext --from-code=ISO-8859-1' \
 	./configure \
