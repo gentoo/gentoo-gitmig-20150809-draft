@@ -25,6 +25,7 @@
 # mask for severe testing
 =x11-base/xfree-4.3.0-r2
 
+
 # <hannes@gentoo.org> (08 Apr 2003)
 # mask until released
 =kde-base/arts-1.0.5b
@@ -47,6 +48,11 @@
 
 # <danarmak@gentoo.org> (08 Apr 2003)
 # mask until released. see -core message(s).
+=kde-base/kdelibs-3.1.1a  
+=app-doc/kdelibs-apidocs-3.1.1a  
+=kde-base/kdebase-3.1.1a  
+=kde-base/kdegraphics-3.1.1a  
+=kde-base/kde-3.1.1a  
 
 # <zwelch@gentoo.org> (06 Apr 2003)
 # New versions of packages that have new cross-compiling support
