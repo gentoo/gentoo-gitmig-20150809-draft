@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9262093b929f8a390e7ff810c0f631f4 dclib-0.2.20.ebuild 729
-MD5 2e1d821167fce29801e45393d7e5d9e9 dclib-0.3.3.ebuild 720
-MD5 bc25662abd32b9749d08dad2f1444eb5 dclib-0.3.5.ebuild 724
 MD5 a37f97c9184a4434a266ed4b0f10934a dclib-0.3.0.ebuild 720
-MD5 a9f6612ed7f7cfa667f8941a26275991 dclib-0.2.21.ebuild 730
-MD5 a9d42edcfa22db492eb853bd7baabad5 ChangeLog 7021
-MD5 ca19ec7ae9394c416d227e455dc76292 dclib-0.3.3-r1.ebuild 761
+MD5 e4f7cf581756fa2f5a7bcfe0bf74be69 ChangeLog 7114
+MD5 2e1d821167fce29801e45393d7e5d9e9 dclib-0.3.3.ebuild 720
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.0-gcc2.patch 318
-MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.3-gcc2.patch 318
-MD5 6d7f9ee5723f2c699934aa8a6b5dae29 files/digest-dclib-0.2.20 65
-MD5 0e80e3d1905179f858af0d704dfcee8e files/digest-dclib-0.2.21 65
-MD5 c973c56c5bf413e3d4421444ae796b01 files/digest-dclib-0.3.3-r1 64
-MD5 8b059e4d4cd57a793b4f0836d4cce14d files/dclib-0.3.3-xml.patch 828
-MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.20-gcc2.patch 318
-MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.5-gcc2.patch 318
-MD5 baa8778c127486a1084a097e98405a9a files/digest-dclib-0.3.0 64
-MD5 c973c56c5bf413e3d4421444ae796b01 files/digest-dclib-0.3.3 64
-MD5 0528caf4ae1a9e3a4621da6b7bf73fcc files/digest-dclib-0.3.5 64
+MD5 bc25662abd32b9749d08dad2f1444eb5 dclib-0.3.5.ebuild 724
+MD5 a9f6612ed7f7cfa667f8941a26275991 dclib-0.2.21.ebuild 730
+MD5 dfb421d9cf8481f48ba435c549bf5dc9 dclib-0.3.3-r1.ebuild 757
+MD5 9262093b929f8a390e7ff810c0f631f4 dclib-0.2.20.ebuild 729
 MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.21-gcc2.patch 318
+MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.3-gcc2.patch 318
+MD5 c973c56c5bf413e3d4421444ae796b01 files/digest-dclib-0.3.3 64
+MD5 6d7f9ee5723f2c699934aa8a6b5dae29 files/digest-dclib-0.2.20 65
+MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.20-gcc2.patch 318
+MD5 0e80e3d1905179f858af0d704dfcee8e files/digest-dclib-0.2.21 65
+MD5 baa8778c127486a1084a097e98405a9a files/digest-dclib-0.3.0 64
+MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.0-gcc2.patch 318
+MD5 8b059e4d4cd57a793b4f0836d4cce14d files/dclib-0.3.3-xml.patch 828
+MD5 0528caf4ae1a9e3a4621da6b7bf73fcc files/digest-dclib-0.3.5 64
+MD5 c973c56c5bf413e3d4421444ae796b01 files/digest-dclib-0.3.3-r1 64
+MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.5-gcc2.patch 318
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB/GaocAgAdbxYsnERAgDBAJ9Vj6S5hYnyPU391kaqVWfBvLn4sQCfQh1U
-nOysVRX4PYDU19uA++9WaVQ=
-=leY9
+iD8DBQFCPFEtugEuf3OQ0akRAlr/AJ9XEo8yUlg7u9HgaH1FJ4NWAPF1uwCfcIqV
+B4SGTc1Nhf1gIXHP8TeJOUk=
+=UXSS
 -----END PGP SIGNATURE-----
