@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.2 2004/01/21 05:24:30 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.3 2004/03/19 01:28:07 zx Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/commons-collections-2.0"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc amd64"
+KEYWORDS="x86 ~ppc ~sparc amd64"
 IUSE="jikes junit doc"
 
 src_compile() {
