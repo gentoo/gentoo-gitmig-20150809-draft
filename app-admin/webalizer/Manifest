@@ -1,6 +1,7 @@
 MD5 ccf13d9985e24554803d2d716669d2f9 webalizer-2.01.10-r3.ebuild 1797
 MD5 f3b2ef74726177318f4a4631bcd869eb webalizer-2.01.10-r2.ebuild 1561
 MD5 4e4b00b1c06cc55d557edb8789e6f96a ChangeLog 2033
+MD5 cd5669e6c31097d0a6d68c8e9f74f4c3 metadata.xml 397
 MD5 243a553aac1ac7c50842856ce779c0d0 files/apache.webalizer 345
 MD5 99b845afaf9f7417f82f508992e4a5ab files/digest-webalizer-2.01.10-r2 74
 MD5 99b845afaf9f7417f82f508992e4a5ab files/digest-webalizer-2.01.10-r3 74
