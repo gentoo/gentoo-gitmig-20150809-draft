@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg2vidcodec
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/ChangeLog,v 1.15 2004/08/12 20:55:06 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/ChangeLog,v 1.16 2005/01/21 00:39:15 gongloo Exp $
+
+  20 Jan 2005; <gongloo@gentoo.org> mpeg2vidcodec-12-r1.ebuild:
+  Keyworded ~ppc-macos.
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml.
