@@ -1,0 +1,6 @@
+MD5 3536dd18446f4842699bc1b1b6bce2be ChangeLog 1098
+MD5 3175433fdf671d716aedcb7a20b94881 ftpfs-0.6.2-r2.ebuild 933
+MD5 84017ff3911ba4108cd016f849cb9a9e ftpfs-0.6.2-r3.ebuild 1125
+MD5 2643f9e57bcdce35e882a6946aaf3a45 files/digest-ftpfs-0.6.2-r2 67
+MD5 2643f9e57bcdce35e882a6946aaf3a45 files/digest-ftpfs-0.6.2-r3 67
+MD5 71f501f320e9682df08f31e663bc53de files/ftpfs-0.6.2-makefile-fix.patch 841
