@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.1 2002/03/31 20:53:16 spider Exp $
+
+*povray-3.1g-r1 (31 Mar 2002)
+  31 Mar 2002; Spider <spider@gentoo.org>
+  Initial ebuild + patch now adheres to USE flags for svgalib X and tty versions.
+
