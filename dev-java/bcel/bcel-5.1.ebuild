@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.22 2004/10/29 12:37:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.23 2004/10/29 17:21:46 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -16,6 +16,7 @@ DEPEND=">=virtual/jdk-1.2
 	dev-java/ant-core
 	jikes? ( dev-java/jikes )"
 DEP_APPEND="regexp"
+RESTRICT="nomirror"
 
 src_unpack() {
 	unpack ${A}
