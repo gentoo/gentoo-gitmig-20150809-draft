@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mysql-python
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.16 2004/12/30 22:36:05 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.17 2005/01/25 14:31:50 fserb Exp $
+
+*mysql-python-1.1.9 (25 Jan 2005)
+
+  25 Jan 2005; Fernando Serboncini <fserb@gentoo.org>
+  mysql-python-1.1.7.ebuild, +mysql-python-1.1.9.ebuild:
+  Version bump, added ssl USE flag
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
