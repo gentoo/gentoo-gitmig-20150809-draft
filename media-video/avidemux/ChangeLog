@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.11 2003/03/10 21:38:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.12 2003/03/12 21:57:52 mholzer Exp $
+
+*avidemux-0.9_rc2 (12 Mar 2003)
+
+  12 Mar 2003; Martin Holzer <mholzer@gentoo.org> avidemux-0.9_rc2.ebuild
+  files/digest-avidemux-0.9_rc2 ChangeLog :
+  Version bumped. Thx for ebuild to marc.hildebrand@t-online.de submitted
+  in #17292.
 
 *avidemux-0.9-rc1 (10 Mar 2003)
 
