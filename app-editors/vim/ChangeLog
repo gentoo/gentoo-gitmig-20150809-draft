@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.117 2004/06/24 22:03:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.118 2004/06/25 16:31:13 tgall Exp $
+
+  25 Jun 2004; Tom Gall <tgall@gentoo.org> vim-6.3.ebuild:
+  stable on ppc64
 
   22 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> vim-6.3.ebuild:
   Stable on hppa
