@@ -1,27 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.20041116.ebuild,v 1.3 2004/11/27 06:22:43 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.0_rc1.ebuild,v 1.1 2004/12/11 07:10:46 langthang Exp $
 
 inherit eutils gnuconfig
+IUSE="fam berkdb gdbm debug ipv6 nls selinux"
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 HOMEPAGE="http://www.courier-mta.org/"
 #SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
-SRC_URI=""http://www.courier-mta.org/beta/imap/${P}.tar.bz2""
+MY_PV=${PV/_rc*/}
+SRC_URI=""http://www.courier-mta.org/beta/imap/${PN}-${MY_PV}.tar.bz2""
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-KEYWORDS="-*"
-IUSE="fam berkdb gdbm debug ipv6 nls selinux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 #userpriv breaks linking against vpopmail
-RESTRICT="nouserpriv"
+#do not mirror beta release.
+RESTRICT="nouserpriv nomirror"
 
 RDEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	>=dev-tcltk/expect-5.33.0
 	fam? ( virtual/fam )
 	selinux? ( sec-policy/selinux-courier-imap )"
 DEPEND="${RDEPEND}
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 	!virtual/imapd"
 PROVIDE="virtual/imapd"
 
+S=${WORKDIR}/${PN}-${MY_PV}
 pkg_setup() {
 	if ! use berkdb && ! use gdbm; then
 		echo
@@ -299,7 +300,8 @@ src_install() {
 	# bug #45953, more docs
 	cd ${S}
 	dohtml -r ${S}/*
-	dodoc ${S}/{00README.NOW.OR.SUFFER,AUTHORS,INSTALL,NEWS,README,ChangeLog}
+	dodoc ${S}/{00README.NOW.OR.SUFFER,AUTHORS,INSTALL,NEWS,README,ChangeLog} \
+		${FILESDIR}/courier-imap-gentoo.readme
 	docinto imap
 	dodoc ${S}/imap/{ChangeLog,BUGS,BUGS.html,README}
 	docinto maildir
@@ -309,11 +311,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	# rebuild init deps to include deps on authdaemond
-	/etc/init.d/depscan.sh
-	einfo "Make sure to change /etc/courier-imap/authdaemond.conf if"
-	einfo "you would like to use something other than the"
-	einfo "authdaemond.plain authenticator"
+	einfo "Authdaemond is no longer provided this package."
+	einfo "athentication libraries are from courier-authlib"
+	einfo "for a quick start please refer to"
+	einfo "/usr/share/doc/${P}/courier-imap-gentoo.readme.gz"
 }
 
 src_test() {

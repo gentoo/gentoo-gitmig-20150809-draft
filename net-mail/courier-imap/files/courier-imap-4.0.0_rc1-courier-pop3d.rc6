@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-imap-3.0.8.20041116-courier-pop3d.rc6,v 1.1 2004/11/19 06:26:17 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-imap-4.0.0_rc1-courier-pop3d.rc6,v 1.1 2004/12/11 07:10:46 langthang Exp $
 
 depend() {
 	need net authdaemond
