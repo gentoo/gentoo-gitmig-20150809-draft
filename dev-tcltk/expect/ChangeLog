@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.22 2004/08/12 00:33:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.23 2004/09/21 15:30:47 cardoe Exp $
+
+*expect-5.40.0-r2 (21 Sep 2004)
+
+  21 Sep 2004; Doug Goldstein <cardoe@gentoo.org> +expect-5.40.0-r2.ebuild:
+  autoexpect and autopasswd into /usr/bin instead of doc's
 
   11 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   expect-5.40.0-r1.ebuild, expect-5.40.0.ebuild:
