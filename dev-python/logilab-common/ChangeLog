@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/logilab-common
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.1 2003/10/14 18:21:54 liquidx Exp $
+
+*logilab-common-0.3.4 (14 Oct 2003)
+
+  14 Oct 2003; Alastair Tse <liquidx@gentoo.org> logilab-common-0.3.4.ebuild,
+  metadata.xml:
+  initial ebuild. dependency for pylint
+
