@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amphetadesk/amphetadesk-0.93.1.ebuild,v 1.3 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amphetadesk/amphetadesk-0.93.1.ebuild,v 1.4 2003/09/07 16:21:07 iggy Exp $
 
 DESCRIPTION="AmphetaDesk is a free syndicated news aggregator"
 HOMEPAGE="http://www.disobey.com/amphetadesk/"
@@ -29,6 +29,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	# fixes bug #25066 thanks to kloeri
+	/etc/init.d/depscan.sh
+
 	einfo "AmphetaDesk should be started and stopped with the runscript located at "
 	einfo "'/etc/init.d/amphetadesk'. You can access AmphetaDesk after it has been"
 	einfo "started in your browser of choice on port 8888."
