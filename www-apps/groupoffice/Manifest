@@ -1,23 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ac0e82ab6328f923074bc64959c11e8 ChangeLog 3223
+MD5 dbac98c02910da76e996c5706546414c ChangeLog 3350
 MD5 ae576b66c10472bc5e92a49e7b4b3dff groupoffice-2.02.ebuild 1865
 MD5 d5887028f16d5737be76f401ad8816fa groupoffice-2.04.ebuild 1864
 MD5 1df003ee90bf2aaa55b272cc00a9038c groupoffice-2.05.ebuild 1054
 MD5 e04b46590a772834a61e0d62376b5ac5 groupoffice-2.06.ebuild 1054
 MD5 20b6e97a56a01b9e06fa9c5fd24e0705 groupoffice-2.07.ebuild 955
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+MD5 0d592f51635cf14445ce98b97eb2af98 groupoffice-2.09.ebuild 955
 MD5 56c18997ce16cb2efd35f0cdfb679b67 files/digest-groupoffice-2.02 146
 MD5 0699a14fa9aca95a209915564dc81cd1 files/digest-groupoffice-2.04 146
 MD5 f97b1d800d135c8cf64b6ce982b21e56 files/digest-groupoffice-2.05 146
 MD5 25de94b493244adff1a2a706f44ff5d3 files/digest-groupoffice-2.06 146
 MD5 03b0875f9af980cbeea34ed8a18f919b files/digest-groupoffice-2.07 146
 MD5 252288f5d0f5b81c836d57317005d1b7 files/postinstall-en.txt 403
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBl2bCI1lqEGTUzyQRAjiSAKCcP0Rfn/usOkQPW0QNON4O/yUg9gCg1bGA
-Dq3bN/f2LqXa9jHY1ZBmt3E=
-=rUuT
------END PGP SIGNATURE-----
+MD5 4de08382716b125fc1a27a1d5f6bb70b files/digest-groupoffice-2.09 73
