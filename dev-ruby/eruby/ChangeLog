@@ -1,8 +1,12 @@
 # ChangeLog for dev-ruby/eruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.14 2004/07/04 10:24:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.15 2004/07/07 00:25:10 usata Exp $
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> eruby-1.0.5.ebuild:
+  07 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  eruby-1.0.4.ebuild, eruby-1.0.5.ebuild:
+  Moved maintainer description out to metadata.xml
+
+  04 Jul 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> eruby-1.0.5.ebuild:
   Stable on alpha.
 
   09 Jun 2004; Guy Martin <gmsoft@gentoo.org> eruby-1.0.5.ebuild:
