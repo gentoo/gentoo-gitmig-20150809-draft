@@ -1,7 +1,12 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.21 2003/02/04 15:36:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.22 2003/02/06 12:28:54 foser Exp $
+
+*gst-plugins-0.6.0-r1 (06 Feb 2003)
+
+  06 Feb 2003; foser <foser@gentoo.org> gst-plugins-0.6.0-r1.ebuild :
+  bump to include an ffmpeg patch to link to vorbis libs
 
 *gst-plugins-0.6.0 (04 feb 2003)
 
