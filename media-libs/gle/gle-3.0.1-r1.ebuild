@@ -1,26 +1,25 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r1.ebuild,v 1.1 2001/02/01 19:38:09 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r1.ebuild,v 1.2 2001/02/13 14:29:40 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GL extrusion library"
 SRC_URI="http://www.linas.org/gle/gle-3.0.1.tar.gz"
 HOMEPAGE="http://www.linas.org/gle"
 
-DEPEND=">=sys-libs/glibc-2.1.3 >=x11-base/xfree-4.0.1 >=media-libs/glut-3.7"
+DEPEND="virtual/glibc
+        >=media-libs/mesa-2.4
+        >=x11-base/xfree-4.0.2"
 
 src_compile() {
-    cd ${S}
-	try ./configure --with-x --prefix=/usr/X11R6
+
+	try ./configure --with-x --prefix=/usr
 	try make
 }
 
 src_install () {
-	try make prefix=${D}/usr/X11R6 install
+	try make prefix=${D}/usr install
 }
 
-pkg_postinst() {
-	/usr/sbin/env-update
-}
 
