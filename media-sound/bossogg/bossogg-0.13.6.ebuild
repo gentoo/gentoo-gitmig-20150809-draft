@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6.ebuild,v 1.8 2004/09/14 07:24:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6.ebuild,v 1.9 2004/10/10 19:42:01 eradicator Exp $
 
 inherit eutils
 
@@ -51,11 +51,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	# einstall || die
+	make DESTDIR="${D}" install || die
 	dodoc README TODO INSTALL COPYING API
 
-	exeinto /etc/init.d; newexe ${FILESDIR}/bossogg.initd bossogg
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/bossogg.initd bossogg
 }
 
 pkg_postinst() {
