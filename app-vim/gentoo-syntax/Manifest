@@ -1,8 +1,18 @@
-MD5 9d258ee84b4329213c9d92d3b3e21bbf ChangeLog 7699
-MD5 dc82ecdf2c3e8b0b94ca44a36b24516c gentoo-syntax-20041227.ebuild 1852
-MD5 72cae7a52aedea2e794c2fec03661002 gentoo-syntax-20050211-r1.ebuild 1938
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 209ae7fa4e0b4f463c3ca63180f28232 gentoo-syntax-20050211-r1.ebuild 1936
+MD5 bd441c6b13d570f59d82683f1f36daa2 ChangeLog 7813
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 c8e3ac5d8a31716f27516db1f6d138c9 files/digest-gentoo-syntax-20041227 74
-MD5 2ebb63d791d0b453712e27584f1b1c67 files/gentoo-syntax-20050211-fix-escapes.patch 558
+MD5 dc82ecdf2c3e8b0b94ca44a36b24516c gentoo-syntax-20041227.ebuild 1852
 MD5 4f56c7de174c5e2aef4d6217acbc46a3 files/digest-gentoo-syntax-20050211-r1 74
 MD5 298bb984862016f9d7de0f6861c3fd73 files/gentoo-syntax-20050211-fix-xml.patch 2149
+MD5 2ebb63d791d0b453712e27584f1b1c67 files/gentoo-syntax-20050211-fix-escapes.patch 558
+MD5 c8e3ac5d8a31716f27516db1f6d138c9 files/digest-gentoo-syntax-20041227 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCKvcMntT9W3vfTuoRAtzmAJ0YyZdmXm408maNs5L/czQy+o67NwCfScEW
+NS/O0lyon+zCgPcrsea2UGQ=
+=cVsm
+-----END PGP SIGNATURE-----
