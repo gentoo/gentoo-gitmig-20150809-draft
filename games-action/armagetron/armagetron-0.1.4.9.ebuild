@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.1.4.9.ebuild,v 1.3 2004/02/20 06:13:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.1.4.9.ebuild,v 1.4 2004/02/21 02:21:36 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,6 +13,7 @@ SRC_URI="mirror://sourceforge/armagetron/armagetron_src_${PV}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 RDEPEND="virtual/x11
 	virtual/opengl
