@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r1.ebuild,v 1.6 2004/11/27 09:56:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r1.ebuild,v 1.7 2004/11/27 12:17:30 eradicator Exp $
 
 IUSE="oss doc"
 
@@ -110,13 +110,9 @@ src_install() {
 }
 
 pkg_setup() {
+	CONFIG_CHECK="CONFIG_SOUND !CONFIG_SND"
+
 	linux-mod_pkg_setup
-	if getfilevar_isset CONFIG_SND ${KV_DIR}/.config || 
-	   ! getfilevar_isset CONFIG_SOUND ${KV_DIR}/.config; then
-		eerror "Your kernel is improperly configured.  Unable to continue."
-		eerror "You must enable sound support, but not ALSA in the kernel."
-		die Kernel improperly configured.
-	fi
 
 	# By default, drivers for all supported cards will be compiled.
 	# If you want to only compile for specific card(s), set ALSA_CARDS
