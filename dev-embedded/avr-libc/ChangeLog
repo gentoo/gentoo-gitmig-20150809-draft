@@ -1,0 +1,11 @@
+# ChangeLog for dev-embedded/avr-libc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.1 2004/03/07 19:29:04 pappy Exp $
+
+*avr-libc-1.0.2-r1 (07 Mar 2004)
+
+  07 Mar 2004; Alexander Gabert <pappy@gentoo.org> avr-libc-1.0.2-r1.ebuild,
+  metadata.xml:
+  initial import, ebuild created by Scott L. Price from Dragonfly Technologies
+  (dflytech.com), according to bug 8799
+
