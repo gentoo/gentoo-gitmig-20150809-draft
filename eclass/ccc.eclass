@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.4 2003/05/26 20:33:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.5 2003/05/26 21:07:00 taviso Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -98,17 +98,22 @@ ccc-fixup()
 	# and show differences when debugging                                                         
 	#
 	# store the backup suffix.
-	local files="`cat`" suffix=ccc-fixup-${$} 
-	sed --in-place=.${suffix} ${1} ${files} || return 1
+	local files list suffix=ccc-fixup-${$} 
+	
+	while read files
+	do
+		sed --in-place=.${suffix} ${1} ${files} || return 1
+		list="${list} ${files}"
+	done
+	
 	[ ! "$DEBUG_CCC_ECLASS" ] && return 0	
-
 	# if theres a backup, diff it.
-	for i in ${files}
+	for i in ${list}
 	do
 		einfo "Checking for changes to `basename ${i}`..."
 		if [ -e "${i}.${suffix}" ]; then
 			diff -u ${i}.${suffix} ${i}
-			sleep 1
+#			sleep 1
 		fi
 	done
 }
@@ -123,7 +128,7 @@ hide-restrict-arr()
 	#           
 
 	find ${WORKDIR} -iname '*.h' | \
-		xargs | ccc-fixup 's/\(\[__restrict\)_arr\]/\1\]/g'
+		xargs | ccc-fixup 's#\(\[__restrict\)_arr\]#\1\]#g'
 }
 
 replace-cc-hardcode()
@@ -132,7 +137,7 @@ replace-cc-hardcode()
 	# Makefiles. Try and fix these.
 	#
 	find ${WORKDIR} -iname Makefile | \
-		xargs | ccc-fixup "s/^\(CC.*=\).*g*cc/\1${CC:-gcc}/g"
+		xargs | ccc-fixup "s#^\(CC.*=\).*g*cc#\1${CC:-gcc}#g"
 }
 
 replace-cxx-hardcode()
@@ -140,7 +145,7 @@ replace-cxx-hardcode()
 	# lots of developers hardcode g++ into thier
 	# Makefiles. Try and fix these.
 	find ${WORKDIR} -iname Makefile | \
-		xargs | ccc-fixup "s/^\(CXX.*=\).*[gc]*++/\1${CXX:-g++}/g"
+		xargs | ccc-fixup "s#^\(CXX.*=\).*[gc]*++#\1${CXX:-g++}#g"
 }
 
 is-ccc()
@@ -160,7 +165,7 @@ replace-ccc-g()
 	# -g will stop ccc/cxx performing optimisation
 	# replacing it with -g3 will let them co-exist.
 	find ${WORKDIR} -iname Makefile | \
-		xargs | ccc-fixup "s/\(^\CX*FLAGS=.*[\'\" \t]\)-g\([\'\" \t]\)/\1-g3\2/g"
+		xargs | ccc-fixup "s#\(^\CX*FLAGS=.*[\'\" \t]\)-g\([\'\" \t]\)#\1-g3\2#g"
 }
 
 ccc-elf-check()
