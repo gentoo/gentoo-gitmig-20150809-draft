@@ -11,10 +11,27 @@ app-editors/gtk-xemacs
 >=app-text/aspell-0.33
 app-text/sgml2x
 >=net-nds/openldap-2.0
+
+#OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
+
 =sys-kernel/linux-sources-2.4.4-r5
 =sys-kernel/linux-extras-2.4.4-r5
 =sys-kernel/linux-2.4.4-r5
+
+#OK, this one (2.4.5) is missing the reiserfs umount patch
+
 =sys-kernel/linux-sources-2.4.5
+=sys-kernel/linux-2.4.5
+=sys-kernel/linux-extras-2.4.5
+
+#I (drobbins) added this one; 2.4.5.5 locks up regularly, even from console
+#All I need to to is extract a bzip2'd tarball of the kernel sources, and 
+#the system semi-locks up.  I assume no one else should be using it either.
+
+=sys-kernel/linux-sources-2.4.5.5
+=sys-kernel/linux-2.4.5.5
+=sys-kernel/linux-extras-2.4.5.5
+
 >=media-libs/pdflib-4.0.0
 >=net-dialup/isdn4k-utils-3.1_p1-r2
 >=net-news/knews-1.0.1b
