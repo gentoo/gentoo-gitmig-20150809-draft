@@ -1,25 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.2.ebuild,v 1.4 2004/02/14 21:20:44 brad_mssw Exp $
-
-#version of gentoo patchset
-GPV=2.18
-GPV_SRC="mirror://gentoo/genpatches-2.6-${GPV}.tar.bz2"
-#GPV_SRC="http://dev.gentoo.org/~johnm/files/genpatches-2.6-${GPV}.tar.bz2"
-
-#RESTRICT="nomirror"
-KEYWORDS="amd64 ~x86"
-
-UNIPATCH_LIST="${DISTDIR}/genpatches-2.6-${GPV}.tar.bz2"
-UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}/README"
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.3_rc4.ebuild,v 1.1 2004/02/17 18:36:27 johnm Exp $
 
 ETYPE="sources"
 inherit kernel-2
 detect_version
 
+#version of gentoo patchset
+GPV=3.22
+GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}.tar.bz2"
+
+KEYWORDS="~x86"
+
+UNIPATCH_LIST="${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}.tar.bz2"
+UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}/README"
+
 DESCRIPTION="Full sources including the gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} ${GPV_SRC}"
-DEPEND="${DEPEND} dev-libs/ucl"
+
+DEPEND="${DEPEND} >=dev-libs/ucl-1"
 
 pkg_postinst() {
 	postinst_sources
@@ -31,8 +30,7 @@ pkg_postinst() {
 	ewarn "    Device Drivers -> Character devices  -> Unix98 PTY Support"
 	ewarn "    File systems   -> Pseudo filesystems -> /dev/pts filesystem."
 	echo
-	ewarn "If you choose to use UCL/gcloop please ensure you also"
-	ewarn "emerge ucl as well as it currently depends on this library."
-	ewarn "Also please ensure that you compile gcloop without -fstack-protector."
+	ewarn "If you choose to use UCL/gcloop please ensure you compile gcloop"
+	ewarn "without -fstack-protector."
 	echo
 }

@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.41 2004/02/15 18:12:49 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.42 2004/02/17 18:36:27 johnm Exp $
+
+*gentoo-dev-sources-2.6.3_rc4 (17 Feb 2004)
+
+  17 Feb 2004; John Mylchreest <johnm@gentoo.org>
+  gentoo-dev-sources-2.6.2.ebuild, gentoo-dev-sources-2.6.3_rc2.ebuild,
+  gentoo-dev-sources-2.6.3_rc4.ebuild:
+  bump to 2.6.3-rc4, should fix all ieee issues and bootsplash
 
 *gentoo-dev-sources-2.6.2-r1 (15 Feb 2004)
 
