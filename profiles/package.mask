@@ -817,4 +817,9 @@ x11-libs/gdkxft
 # mkennedy@gentoo.org 2 June 2002
 # Includes GCC3.1 suport -- masked because it needs testing by 2.95.3
 # users.
-x=net-www/lynx-2.8.4a-r4
+=net-www/lynx-2.8.4a-r4
+
+# mkennedy@gentoo.org 2 June 2002
+# Includes GCC3.1 support -- masked until tested for GCC2.95.3
+# compatibility.
+=sys-apps/pciutils-2.1.9-r2
