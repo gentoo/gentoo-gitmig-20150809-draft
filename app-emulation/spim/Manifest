@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 8f978e1e6db75a44d29ba8fde9d6f83b ChangeLog 1854
 MD5 5115fec7f89c8809e9b8ca85851d8378 spim-7.0.ebuild 1381
-MD5 73d40f3042d9dff2d6c0e019efe126d0 ChangeLog 1746
-MD5 7ef309c7fc5faed7e9bc4d773ae76212 spim-6.5.ebuild 1327
 MD5 61bd06678ab1e9df4ac12a33763643e0 spim-6.5-r1.ebuild 1329
-MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5 60
+MD5 7ef309c7fc5faed7e9bc4d773ae76212 spim-6.5.ebuild 1327
 MD5 e2af6a0e5ca4267cfad9f1bf5e954655 files/digest-spim-7.0 60
-MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5-r1 60
 MD5 d71d66b98121e4e42ca59fa94310ed1e files/6.5-parser.patch 266
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxfMFugEuf3OQ0akRAr7oAJ92yo6HrWVwTwbOI9eyB6ZyKUJ3TQCfWsiB
-OO1bz0VuIzk5PKoXqKEFSHI=
-=zYUo
------END PGP SIGNATURE-----
+MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5 60
+MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5-r1 60

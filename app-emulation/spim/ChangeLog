@@ -1,16 +1,19 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.13 2004/12/19 21:30:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.14 2004/12/28 21:47:26 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> spim-7.0.ebuild:
   x86 stable.
 
-  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> spim-7.0.ebuild:
+  06 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> spim-7.0.ebuild:
   Oops, fix wrong src_uri.
 
 *spim-7.0 (06 Sep 2004)
 
-  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> +spim-7.0.ebuild:
+  06 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +spim-7.0.ebuild:
   Version bump, ebuild by mickn in #gentoo-bugs.
 
 *spim-6.5-r1 (10 Apr 2004)
