@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/avp-cvs-20031110.ebuild,v 1.8 2004/06/24 22:40:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/avp-cvs-20031110.ebuild,v 1.9 2004/07/14 14:42:07 agriffis Exp $
 
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_PASS="anonymous"
@@ -14,6 +14,7 @@ SRC_URI="mirror://gentoo/avp-${PV}.tar.bz2"
 LICENSE="AvP"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="virtual/x11
 	media-libs/openal
