@@ -1,24 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.1.5.1.ebuild,v 1.2 2003/02/13 14:16:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.1.5.1.ebuild,v 1.3 2003/03/25 22:47:03 seemant Exp $
 
-inherit eutils
+IUSE="ssl"
 
 MY_P="Unreal${PV}"
+
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="aimed to be an advanced, not an easy IRCd"
 HOMEPAGE="http://www.unrealircd.com/"
 SRC_URI="http://www.gower.net/unrealircd/${MY_P}-Valek.tar.gz
 	ftp://unreal.secure-tech.net/${MY_P}-Valek.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="~x86"
-IUSE="openssl"
 
-DEPEND="virtual/glibc
-	openssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
 
-S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A} && cd ${S}
