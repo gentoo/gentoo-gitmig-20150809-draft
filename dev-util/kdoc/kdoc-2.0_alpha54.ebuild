@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdoc/kdoc-2.0_alpha54.ebuild,v 1.12 2004/03/13 01:49:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdoc/kdoc-2.0_alpha54.ebuild,v 1.13 2004/04/28 18:56:35 agriffis Exp $
 
 IUSE=""
 MY_P=${P/_alph/}
@@ -18,7 +18,7 @@ DEPEND="dev-lang/perl"
 src_compile() {
 	export KDEDIR=""
 	export QTDIR=""
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 
