@@ -6,33 +6,18 @@
 
 SERVICE=dcron
 EXE="/usr/sbin/crond"
-SVCDIR=/etc/supervise/dcron
 opts="start stop"
 
 start() {
-		ebegin "Starting ${SERVICE}"
-		start-stop-daemon --start --quiet --exec $EXE 1>&2
-		eend $? "Error starting ${SERVICE}."
+	ebegin "Starting ${SERVICE}"
+	start-stop-daemon --start --quiet --exec $EXE 1>&2
+	eend $?
 }
 
 stop() {
-		ebegin "Stopping ${SERVICE}"
-		start-stop-daemon --stop --quiet -u root -n $SERVICE 1>&2
-		eend $? "Error stopping ${SERVICE}."
-}
-
-supervise_start() {
-		ebegin "Starting supervised ${SERVICE}"
-		/usr/bin/svc -u ${SVCDIR} 
-		/usr/bin/svc -u ${SVCDIR}/log
-		eend $? "Error starting ${SERVICE} supervised."
-}
-
-supervise_stop() {
-		ebegin "Stopping supervised ${SERVICE}"
-		/usr/bin/svc -d ${SVCDIR}
-		/usr/bin/svc -d ${SVCDIR}/log
-		eend $? "Error stopping ${SERVICE} supervised"
+	ebegin "Stopping ${SERVICE}"
+	start-stop-daemon --stop --quiet -u root -n $SERVICE 1>&2
+	eend $?
 }
 
 doservice ${@}

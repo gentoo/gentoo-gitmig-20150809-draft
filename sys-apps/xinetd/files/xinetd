@@ -1,58 +1,40 @@
 #!/bin/sh
 #RCUPDATE:3 4:72:This line is required for script management
 
-. /etc/rc.d/config/basic
 . /etc/rc.d/config/functions
 
 SERVICE=xinetd
 EXE="/usr/sbin/xinetd"
-opts="start stop reconfig"
+opts="start stop"
 
 prepconfig() {
-		if [ ! -e /etc/xinetd.conf ] ; then
-		   einfo "Creating new config from inetd..."
-		   /usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
-		fi
-		if [ /etc/inetd.conf -nt /etc/xinetd.conf ] ; then
-		   einfo "Creating new config from inetd..."
-		   /usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
-		fi
-		if [ ! -e /etc/xinetd.conf ]
-		then
-			eerror "Xinetd not started.  Config file not found."
-			exit 1
-		fi
+	if [ ! -e /etc/xinetd.conf ] ; then
+		einfo "Creating new config from inetd..."
+		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
+	fi
+	if [ /etc/inetd.conf -nt /etc/xinetd.conf ] ; then
+		einfo "Creating new config from inetd..."
+		/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
+	fi
+	if [ ! -e /etc/xinetd.conf ]
+	then
+		eerror "Xinetd not started.  Config file not found."
+		exit 1
+	fi
 }
 
 start() {
-		prepconfig
-
-		ebegin "Starting ${SERVICE}"
-		start-stop-daemon --start --quiet --exec $EXE 1>&2
-		eend $? "Error starting ${SERVICE}."
+	prepconfig
+	ebegin "Starting ${SERVICE}"
+	start-stop-daemon --start --quiet --exec $EXE 1>&2
+	eend $? 
 }
 
 stop() {
-		ebegin "Stopping ${SERVICE}"
-		start-stop-daemon --stop --quiet -u root -n $SERVICE 1>&2
-		eend $? "Error stopping ${SERVICE}."
+	ebegin "Stopping ${SERVICE}"
+	start-stop-daemon --stop --quiet -u root -n $SERVICE 1>&2
+	eend $? 
 }
-
-supervise_start() {
-
-		prepconfig
-
-		ebegin "Starting ${SERVICE} supervised"
-		/usr/bin/svc -u /etc/supervise/xinetd
-		eend $? "Error starting ${SERVICE} supervised."
-}
-
-supervise_stop() {
-		ebegin "Stopping ${SERVICE} supervised"
-		/usr/bin/svc -d /etc/supervise/xinetd
-		eend $? "Error stopping ${SERVICE}. supervised"
-}
-
 
 doservice ${@}
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7.ebuild,v 1.6 2000/12/25 16:17:42 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r1.ebuild,v 1.1 2001/01/10 07:05:03 drobbins Exp $
 
 A=dcron27.tgz
 S=${WORKDIR}/dcron
@@ -30,18 +30,16 @@ src_install() {
 	dodoc CHANGELOG README
 
 	#set up supervise support
-	dodir /var/supervise/dcron /etc/supervise
-	exeinto /var/supervise/dcron
+	exeinto /var/lib/supervise/services/dcron 
 	newexe ${FILESDIR}/dcron-run run
 	#this next line tells svcan to start the log process too (and set up a pipe)
-	chmod +t ${D}/var/supervise/dcron
-	exeinto /var/supervise/dcron/log
+	chmod +t ${D}/var/lib/supervise/services/dcron
+	exeinto /var/lib/supervise/services/dcron/log
 	newexe ${FILESDIR}/log-run run
-	dosym /var/supervise/dcron /etc/supervise/dcron 	
 
 	#install rc script
 	exeinto /etc/rc.d/init.d
-	doexe ${FILESDIR}/dcron
+	doexe ${FILESDIR}/dcron ${FILESDIR}/svc-dcron
 
 	insinto /etc
 	doins ${FILESDIR}/crontab
