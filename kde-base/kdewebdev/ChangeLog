@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.5 2004/07/23 12:09:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.6 2004/08/10 15:13:14 caleb Exp $
+
+*kdewebdev-3.3.0_rc2 (10 Aug 2004)
+
+  10 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdewebdev-3.3.0_beta1.ebuild,
+  kdewebdev-3.3.0_rc2.ebuild:
+  remove _beta1, add _rc2
 
 *kdewebdev-3.3.0_beta2 (23 Jul 2004)
 
