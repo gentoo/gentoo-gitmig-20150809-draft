@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.42 2004/05/29 18:58:03 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.43 2004/06/01 06:21:19 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -436,8 +436,14 @@ fi
 
 			if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -le "2" ]
 			then
-				replace-flags "-march=pentium4" "-march=pentium3"
-				replace-flags "-march=athlon-tbird" "-march=athlon"
+				replace-cpu-flags "pentium4" "pentium3"
+				replace-cpu-flags "athlon-tbird" "athlon"
+			fi
+
+			# Try a fix for #49310, see #50931 for more info. <spyderous>
+			if [ "`is-flag -fomit-frame-pointer`" ]
+			then
+				replace-cpu-flags "i586" "k6" "k6-2" "k6-3"
 			fi
 
 			# Without this, modules breaks with gcc3
