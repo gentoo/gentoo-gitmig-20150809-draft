@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircii
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.4 2003/10/01 23:27:13 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.5 2003/10/28 13:08:09 todd Exp $
+
+  28 Oct 2003; Todd Sunderlin <todd@gentoo.org> ircii-20030709-r2.ebuild:
+  added ~sparc keyword
 
   01 Oct 2003; Chuck Short <zul@gentoo.org> ircii-20030709-r1.ebuild,
   ircii-20030709-r2.ebuild, ircii-20030709.ebuild:
