@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/grdesktop
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.14 2004/06/24 23:46:14 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.15 2005/02/03 04:45:49 pylon Exp $
+
+  03 Feb 2005; Lars Weiler <pylon@gentoo.org> grdesktop-0.23.ebuild:
+  Added ~ppc.
 
 *grdesktop-0.23 (09 Jun 2004)
 
