@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.34 2004/07/09 00:42:58 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.35 2004/08/03 19:07:16 agriffis Exp $
+
+  03 Aug 2004; <agriffis@gentoo.org> sqlite-2.8.14.ebuild:
+  stable on ia64
 
   08 Jul 2004; Travis Tilley <lv@gentoo.org> sqlite-2.8.14.ebuild:
   adding back missing ~amd64 keyword
