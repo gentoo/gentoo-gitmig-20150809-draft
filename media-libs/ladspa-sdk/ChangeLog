@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/ladspa-sdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.4 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.5 2002/12/25 15:40:22 viz Exp $
+
+*ladspa-sdk-1.12 (25 Dec 2002)
+
+  25 Dec 2002; Tobias Eichert <viz@gentoo.org> ladspa-sdk-1.12.ebuild
+  files/digest-ladspa-sdk-1.12 :
+
+  Version bump.
+  Did a few ebuild cleanups.
+  Thanks to vaino.jarvela@pp.inet.fi (Vaino Jarvela) for bug report
+  and jkraut1@nyc.rr.com (Jonathan Kraut) for pointing to this update.
+  
+  Closes bug #11072.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
