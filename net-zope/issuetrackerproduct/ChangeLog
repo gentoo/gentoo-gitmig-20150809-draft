@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/issuetrackerproduct
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/issuetrackerproduct/ChangeLog,v 1.1 2003/04/08 08:34:41 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/issuetrackerproduct/ChangeLog,v 1.2 2003/06/23 02:54:10 kutsuya Exp $
+
+  22 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org>
+  issuetrackerproduct-0.5.0b.ebuild: ~x86 ~ppc -> x86 ppc
 
 *issuetrackerproduct-0.5.0b (08 Apr 2003)
 
