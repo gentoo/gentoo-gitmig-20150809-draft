@@ -1,5 +1,8 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.5 2002/04/27 21:19:32 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.6 2002/05/13 03:04:21 agenkin Exp $
+#
+# Gentoo users: add this script to 'boot' run level.
+# ==================================================
 #
 # alsasound     This shell script takes care of starting and stopping
 #               the ALSA sound driver.
@@ -31,7 +34,8 @@ aconnect=/usr/bin/aconnect
 alsascrdir=/etc/alsa.d
 
 depend() {
-  need modules
+  need bootmisc localmount
+  before modules
   provide alsa-modules
 }
 
