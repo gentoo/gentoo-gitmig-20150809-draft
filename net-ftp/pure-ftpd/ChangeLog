@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.31 2004/06/24 22:47:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.32 2004/06/24 23:24:34 agriffis Exp $
+
+  24 Jun 2004; Aron Griffis <agriffis@gentoo.org> pure-ftpd-1.0.18-r1.ebuild:
+  stable on ia64 #54590
 
   23 Jun 2004; Jason Wever <weeve@gentoo.org> pure-ftpd-1.0.18-r1.ebuild:
   Marked stable on sparc wrt bug #54590.
