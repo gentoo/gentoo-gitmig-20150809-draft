@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.25 2004/01/30 04:19:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.26 2004/05/14 03:25:50 robbat2 Exp $
 
-inherit eutils
+inherit gcc eutils
 
 IUSE="ssl"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"

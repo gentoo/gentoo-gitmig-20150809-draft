@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r15.ebuild,v 1.9 2004/04/10 04:45:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r15.ebuild,v 1.10 2004/05/14 03:25:50 robbat2 Exp $
 
-inherit eutils fixheadtails
+inherit gcc eutils fixheadtails
 
 IUSE="ssl noauthcram notlsbeforeauth"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
@@ -196,7 +196,7 @@ src_unpack() {
 	EPATCH_SINGLE_MSG="qmail-pop3d fix for top output so Evolution doesn't barf" \
 	epatch ${FILESDIR}/${PVR}/qmail-pop3d-top-outputfix.patch
 
-	echo -n "${CC} ${CFLAGS}" >${S}/conf-cc
+	echo -n "$(gcc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
 		einfo "Enabling SSL/TLS functionality"
 		echo -n ' -DTLS ' >>${S}/conf-cc
@@ -219,7 +219,7 @@ src_unpack() {
 		einfo "Enabling AUTHCRAM support"
 	fi
 
-	echo -n "${CC} ${LDFLAGS}" > ${S}/conf-ld
+	echo -n "$(gcc-getCC) ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
 
 	# fix coreutils messup
