@@ -1,7 +1,12 @@
 # ChangeLog for dev-util/eclipse-cdt-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.8 2003/09/06 17:28:13 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt-bin/ChangeLog,v 1.9 2004/06/03 21:01:25 karltk Exp $
 
+*eclipse-cdt-bin-1.2.0 (03 Jun 2004)
+
+  03 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-cdt-bin-1.2.0.ebuild: New upstream ebuild.
+ 
   06 Sep 2003; Karl Trygve Kalleberg <karltk@gentoo.org> 
   eclipse-cdt-bin-20030501.ebuild, eclipse-cdt-bin-20020704.ebuild:
   Improved DESCRIPTION.
