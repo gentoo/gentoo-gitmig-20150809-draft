@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.2 2004/03/03 17:12:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.3 2004/05/30 08:29:50 robbat2 Exp $
 
 DESCRIPTION="An extensible POP3 server with vmail-sql/MySQL support."
 HOMEPAGE="http://www.ex-parrot.com/~chris/tpop3d/"
@@ -54,7 +54,7 @@ src_compile() {
 	if [ ! -z $BE_NICE ]; then
 		myconf="${myconf} --disable-snide-comments"
 	fi
-	# Install net-mail/drac for integration with tpop3d
+	# Install mail-client/drac for integration with tpop3d
 	if [ ! -a $ENABLE_DRAC ]; then
 		myconf="${myconf} --enable-drac"
 	fi

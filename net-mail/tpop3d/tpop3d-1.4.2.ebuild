@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.10 2004/04/27 21:15:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.11 2004/05/30 08:29:50 robbat2 Exp $
 
 inherit eutils
 
@@ -58,7 +58,7 @@ src_compile() {
 	if [ ! -z $BE_NICE ]; then
 		myconf="${myconf} --disable-snide-comments"
 	fi
-	# Install net-mail/drac for integration with tpop3d
+	# Install mail-client/drac for integration with tpop3d
 	if [ ! -a $ENABLE_DRAC ]; then
 		myconf="${myconf} --enable-drac"
 	fi
