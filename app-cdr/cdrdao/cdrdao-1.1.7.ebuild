@@ -1,6 +1,6 @@
 # Copyright 1999 - 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.4 2002/10/24 14:34:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.5 2002/11/02 05:06:06 agenkin Exp $
 
 inherit flag-o-matic
 
@@ -73,15 +73,7 @@ src_install() {
 		
 		# pixmaps for gcdmaster in /usr/share/pixmaps/gcdmaster
 		insinto /usr/share/pixmaps/gcdmaster
-		doins xdao/pixmap_copycd.png 
-		doins xdao/pixmap_audiocd.png
-		doins xdao/pixmap_datacd.png
-		doins xdao/pixmap_open.png 
-		doins xdao/pixmap_mixedcd.png 
-		doins xdao/pixmap_cd.png
-		doins xdao/pixmap_help.png 
-		doins xdao/pixmap_dumpcd.png
-		doins xdao/gcdmaster.png
+		doins xdao/*.png xdao/*.xpm
 		
 		# application links
 		# gcdmaster.desktop in /usr/share/gnome/apps/Applications
