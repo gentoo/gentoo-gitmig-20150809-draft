@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.3 2004/06/08 05:38:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.4 2004/06/20 07:28:56 dragonheart Exp $
 
 depend() {
-    need logger
+	need logger
 }
 
 
@@ -17,7 +17,29 @@ checkconfig() {
 
 start() {
 	ebegin "Starting slmodemd for ${DEV}"
-	modprobe ${MODULE}
+
+	modprobe ${MODULE};
+	if [ "$?" -gt 0 ]
+	then
+		eerror "Missing ${MODULE}. Please set up /etc/conf.d/slmodem"
+		eend 1;
+	fi
+
+	#sleep as per http://bugs.gentoo.org/show_bug.cgi?id=47947#c59
+	local COUNT=0
+	while [ ! -c ${DEV} -a ${COUNT} -lt 4 ];
+	do
+		sleep 0.25
+		einfo "Waiting for driver initialisation"
+		COUNT=`expr ${COUNT} + 1`
+	done
+
+	if [ ! -c ${DEV} ];
+	then
+		eerror "Module - ${MODULE} failed to initialise device ${DEVICE}"
+		eend 1
+	fi
+
 	start-stop-daemon --start --background --nicelevel=${NICE} --make-pidfile \
 		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
 		-- -country=${COUNTRY} -g=${GROUP} ${DEV}
