@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5f81f309c3ee3e4d1825ad199dc0d0aa ChangeLog 7837
+MD5 1b8a006954990ced9b9a1ad88b853501 ChangeLog 8122
 MD5 3e1f2a62b125bc976d086e9f6c596aa0 isdn4k-utils-3.2_p1-r2.ebuild 2932
 MD5 bab835f739889e139f5acaf397d3d875 metadata.xml 215
-MD5 d21e8fc9ea7f4cdbbb0e3f87ff714ea7 isdn4k-utils-3.5_pre20041110-r1.ebuild 6718
+MD5 0b704691c6a6d9d8ef3d9238a3d89117 isdn4k-utils-3.5_pre20041110-r2.ebuild 6590
 MD5 e2cc85397eb8ff285f383213ab00cdad files/digest-isdn4k-utils-3.2_p1-r2 73
 MD5 2dbc97316fbe5d721b9701347464e22c files/gcc33-multiline.patch 1977
-MD5 8de88f6cf872f012abe1e320b3fb4336 files/digest-isdn4k-utils-3.5_pre20041110-r1 81
-MD5 7ce4e9c2bb9dee4d231ae8da54a06b9f files/3.2_p1-r2/gentoo.patch 2383
+MD5 8de88f6cf872f012abe1e320b3fb4336 files/digest-isdn4k-utils-3.5_pre20041110-r2 81
 MD5 2f4c186b729606b475e17a0ea54189c9 files/3.2_p1-r2/config 2405
+MD5 7ce4e9c2bb9dee4d231ae8da54a06b9f files/3.2_p1-r2/gentoo.patch 2383
 MD5 92412760dfacc81cfac908d522ac8e39 files/3.2_p1-r2/ioptions 86
 MD5 49ffb48689897498866cc14687831e08 files/3.2_p1-r2/ip-down.ippp0 228
 MD5 6ed9643d1d6b7e57adadee4dd28ea81a files/3.2_p1-r2/ip-up 115
@@ -17,21 +17,21 @@ MD5 115bcf317b18a9c362ef37acf5cd4c4b files/3.2_p1-r2/isdn4linux.conf 105
 MD5 875eb1dbe150bbae5bcdd6ae554f20c5 files/3.2_p1-r2/isdn4linux.init 718
 MD5 5d46112f6ebccecdb14e2812d2e348f2 files/3.2_p1-r2/net.ippp0 2426
 MD5 48266d44ebe70519d3fc67a6b0e260ff files/3.2_p1-r2/options.ippp0 443
+MD5 98b8b7e16fd9a5a7f33ebd09d112a637 files/3.5_pre20041110/net.ippp0 2410
 MD5 cd0fb0c848a80ea2f686b351f73b96b0 files/3.5_pre20041110/config 2693
-MD5 b49a72df686b7a94d7ac291a91f20fc5 files/3.5_pre20041110/ioptions 323
-MD5 b75b68506a43d3d897d7b32eb280b42e files/3.5_pre20041110/ip-down 956
-MD5 38984b8cf470784c9052f566b4faa5d8 files/3.5_pre20041110/ip-up 1105
+MD5 b729cb8e840e3d8d19aa8628f04cf948 files/3.5_pre20041110/isdnlog.init 1046
 MD5 6db07967fecf59be29521a38d433da1f files/3.5_pre20041110/isdn.conf 698
 MD5 2c3d7ec38577340f0bbf130c15e62ff6 files/3.5_pre20041110/isdn.init 1684
 MD5 02eb09752af937202a4dc000bcb1caf0 files/3.5_pre20041110/isdnlog.conf 414
-MD5 b729cb8e840e3d8d19aa8628f04cf948 files/3.5_pre20041110/isdnlog.init 1046
 MD5 077c13d881acae71e88763ffc42b7015 files/3.5_pre20041110/isdnlog.logrotated 439
-MD5 f4dd44c758ead761b337771b9244ae81 files/3.5_pre20041110/net.ippp0 2406
+MD5 b49a72df686b7a94d7ac291a91f20fc5 files/3.5_pre20041110/ioptions 323
+MD5 b75b68506a43d3d897d7b32eb280b42e files/3.5_pre20041110/ip-down 956
+MD5 38984b8cf470784c9052f566b4faa5d8 files/3.5_pre20041110/ip-up 1105
 MD5 02118ba89fc41144086224482bff7422 files/3.5_pre20041110/options.ippp0 685
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBrxuxmdTrptrqvGERAnrkAJ9AYOOr7d06/pnhBrKl23hXzsLaUQCcDE8F
-Xbdkw3Cq9Xce5NWh8D0lAU0=
-=zXKf
+iD8DBQFBsJkBjtv59x0+BrURAu0CAJ9868fscjyZvdQ2Xs7HjHptL7QEwwCgw6HX
+zgvJs/hGCDYUMaSRgn7RsTs=
+=iohk
 -----END PGP SIGNATURE-----

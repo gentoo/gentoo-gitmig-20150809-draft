@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/3.5_pre20041110/net.ippp0,v 1.1 2004/11/22 20:05:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/3.5_pre20041110/net.ippp0,v 1.2 2004/12/03 16:48:55 mrness Exp $
 
 #NB: Config is in /etc/conf.d/net
 
@@ -24,7 +24,7 @@ start() {
 
 	ebegin "Starting ipppd for ${IFACE}"
 	[ -n "${gateway}" ] && [ "${gateway%/*}" = "${IFACE}" ] && ipppd_opts='defaultroute'
-	/sbin/ipppd ${ipppd_opts} pidfile /var/run/ipppd.${IFACE}.pid file /etc/ppp/options.${IFACE} || {
+	/usr/sbin/ipppd ${ipppd_opts} pidfile /var/run/ipppd.${IFACE}.pid file /etc/ppp/options.${IFACE} || {
 		local retval=$?
 		eend ${retval} "Failed to start ipppd"
 		return ${retval}
