@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-1.00.ebuild,v 1.3 2005/01/01 14:18:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-1.00.ebuild,v 1.4 2005/01/11 03:25:09 malc Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://uade.ton.tut.fi/uade/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc amd64"
 IUSE="xmms sdl alsa oss perl beepmp"
 
 RDEPEND="virtual/libc
