@@ -110,3 +110,4 @@ move net-www/horde-imp www-apps/horde-imp
 move net-www/horde-kronolith www-apps/horde-kronolith
 move net-www/horde-mnemo www-apps/horde-mnemo
 move net-www/horde-nag www-apps/horde-nag
+move net-www/horde-passwd www-apps/horde-passwd
