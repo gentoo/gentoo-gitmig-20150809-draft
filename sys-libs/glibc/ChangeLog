@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.329 2005/03/21 16:20:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.330 2005/03/23 21:18:24 azarah Exp $
+
+  23 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
+  glibc-2.3.4.20041102-r1.ebuild, glibc-2.3.4.20050125-r1.ebuild:
+  Fixup copy operations to not replace symlinks with files. Add a fix ala
+  vapier for bug #85555 (more a abort if this glibc is going to kill / than a
+  fix).
 
   21 Mar 2005; Aron Griffis <agriffis@gentoo.org>
   glibc-2.3.4.20041102-r1.ebuild:

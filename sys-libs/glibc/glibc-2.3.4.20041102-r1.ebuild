@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.2 2005/03/21 16:20:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.3 2005/03/23 21:18:24 azarah Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -899,13 +899,13 @@ src_install() {
 
 	# now, strip everything but the thread libs #46186
 	mkdir -p ${T}/thread-backup
-	mv ${D}/$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
+	mv -f ${D}/$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
 	if use !nptlonly && want_nptl ; then
 		mkdir -p ${T}/thread-backup/tls
-		mv ${D}/$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
+		mv -f ${D}/$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
 	fi
 	env -uRESTRICT CHOST=${CTARGET} prepallstrip
-	cp -R -- ${T}/thread-backup/* ${D}/$(alt_libdir)/ || die
+	cp -a -- ${T}/thread-backup/* ${D}/$(alt_libdir)/ || die
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/$(get_libdir)/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
@@ -1002,6 +1002,11 @@ EOF
 	doins ${FILESDIR}/locales.build
 	# example host.conf with multicast dns disabled by default
 	doins ${FILESDIR}/2.3.4/host.conf
+
+	for x in ls ps date ; do
+		env LD_LIBRARY_PATH="${D}/$(get_libdir)" ${x} > /dev/null \
+			|| die "simple run test (${x}) failed"
+	done
 }
 
 must_exist() {

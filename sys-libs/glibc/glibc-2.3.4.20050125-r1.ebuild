@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.29 2005/03/19 22:57:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.30 2005/03/23 21:18:24 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -383,13 +383,13 @@ toolchain-glibc_src_install() {
 
 	# now, strip everything but the thread libs #46186
 	mkdir -p ${T}/thread-backup
-	mv ${D}$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
+	mv -f ${D}$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
 	if want_linuxthreads && want_nptl ; then
 		mkdir -p ${T}/thread-backup/tls
-		mv ${D}$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
+		mv -f ${D}$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
 	fi
 	env -uRESTRICT CHOST=${CTARGET} prepallstrip
-	cp -R -- ${T}/thread-backup/* ${D}$(alt_libdir)/ || die
+	cp -a -- ${T}/thread-backup/* ${D}$(alt_libdir)/ || die
 
 	if use pic && [[ $(tc-arch) != "amd64" ]] ; then
 		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}$(alt_libdir)/soinit.o \;
@@ -483,6 +483,11 @@ toolchain-glibc_src_install() {
 	doins ${FILESDIR}/locales.build
 	# example host.conf with multicast dns disabled by default
 	doins ${FILESDIR}/2.3.4/host.conf
+
+	for x in ls ps date ; do
+		env LD_LIBRARY_PATH="${D}/$(get_libdir)" ${x} > /dev/null \
+			|| die "simple run test (${x}) failed"
+	done
 }
 
 toolchain-glibc_pkg_postinst() {
