@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.16 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.17 2003/07/28 21:06:07 wwoods Exp $
 
 IUSE="nls"
 
@@ -42,7 +42,7 @@ src_unpack() {
 	unpack ${P2}.tar.gz
 
 	use amd64 && gnuconfig_update
-		
+	use alpha && gnuconfig_update
 }
 
 src_compile() {
