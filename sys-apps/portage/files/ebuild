@@ -926,11 +926,11 @@ dyn_package() {
 	echo '!!! Package format '${PACKAGE}' not recognized.  Please correct /etc/make.conf'
 	exit 1
     fi
-    if [ ! -e ${PKGDIR}/${CATEGORY} ]
-    then
-        mkdir ${PKGDIR}/${CATEGORY}
-    fi
-    ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
+#    if [ ! -e ${PKGDIR}/${CATEGORY} ]
+#    then
+#        mkdir ${PKGDIR}/${CATEGORY}
+#    fi
+#    ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
     echo ">>> Done."
     cd ${BUILDDIR}
     touch .packaged
@@ -1180,7 +1180,7 @@ fi
 
 if [ ! -z ${BUILD_PREFIX} ]
 then
-    export BUILDDIR=${BUILD_PREFIX}/${CATEGORY}/${P}
+    export BUILDDIR=${BUILD_PREFIX}/${P}
 else
     export BUILDDIR=${O}
 fi
