@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0.ebuild,v 1.4 2004/10/29 12:52:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0.ebuild,v 1.5 2004/12/18 21:40:41 karltk Exp $
 
 inherit java-pkg
 
@@ -24,7 +24,7 @@ src_compile() {
 	export CLASSPATH=${CLASSPATH}:/usr/share/classpath/glibj.zip
 
 	# Must check later that this actually works
-	econf --with-java-target=1.4 || die
+	econf --with-java-target=1.4 --disable-awt || die
 	make || die
 	if use doc ; then
 		emake apidoc
