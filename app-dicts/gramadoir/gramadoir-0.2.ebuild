@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gramadoir/gramadoir-0.2.ebuild,v 1.3 2003/11/14 21:22:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gramadoir/gramadoir-0.2.ebuild,v 1.4 2004/04/07 10:36:30 taviso Exp $
 
 DESCRIPTION="An Irish language grammar checker"
 HOMEPAGE="http://borel.slu.edu/gramadoir/"
@@ -21,8 +21,6 @@ DEPEND=">=sys-apps/gawk-3.1.3
 RDEPEND=">=app-shells/bash-2.05b
 		>=dev-lang/perl-5.8.0
 		>=sys-apps/grep-2.5.1"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
