@@ -199,3 +199,4 @@ move app-admin/chkrootkit app-forensics/chkrootkit
 move app-admin/rkhunter app-forensics/rkhunter
 move app-admin/aide app-forensics/aide
 
+move app-admin/autopsy app-forensics/autopsy
