@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.13 2003/11/15 21:12:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.14 2003/11/15 21:25:51 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -39,6 +39,10 @@ if has_version '=dev-lang/ruby-1.6*' && [[ "${USE_RUBY/1.6/}" != "${USE_RUBY}" ]
 fi
 if has_version '=dev-lang/ruby-1.8*' && [[ "${USE_RUBY/1.8/}" != "${USE_RUBY}" ]] ; then
 	WITH_RUBY="${WITH_RUBY} 1.8"
+fi
+if has_version '=dev-lang/ruby-1.6*' && has_version '=dev-lang/ruby-1.8*' \
+	[[ "${USE_RUBY/0/}" != "${USE_RUBY}" ]] ; then
+	WITH_RUBY="0"
 fi
 
 ruby_src_unpack() {
@@ -174,7 +178,7 @@ ruby_einstall() {
 		erubyinstall ruby18 $@
 		S=${MY_S}
 		#cd -
-	elif [[ "${USE_RUBY/0/}" != "${USE_RUBY}" ]] ; then
+	elif [[ "${WITH_RUBY/0/}" != "${WITH_RUBY}" ]] ; then
 		if [ -n "`use ruby18`" ] ; then
 			erubyinstall ruby18 $@
 			if [ -d ${D}${siteruby}/../1.8 ] ; then
