@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-I18N
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18N/ChangeLog,v 1.1 2003/12/23 21:53:56 coredumb Exp $
+
+*PEAR-I18N-0.8.6 (23 Dec 2003)
+
+  23 Dec 2003; Tal Peer <coredumb@gentoo.org> PEAR-I18N-0.8.6.ebuild,
+  metadata.xml:
+  Initial commit, needed for PEAR-HTML_Select_Common.
+
