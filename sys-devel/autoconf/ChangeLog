@@ -1,9 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.20 2003/02/20 00:12:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.21 2003/02/24 20:35:36 dragon Exp $
 
   20 Feb 2003; Martin Schlemmer <azarah@gentoo.org> autoconf-2.57.ebuild :
-  Run autom4te-2.5x if called without setting WANT_AUTOMAKE_2_5=1 ...
+  Run autom4te-2.5x if called without setting WANT_AUTOMAKE_2_5=1.
 
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords
@@ -15,6 +15,9 @@
   Added hppa to keywords.
 
 autoconf-2.57 (21 Jan 2003)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> autoconf-2.57.ebuild :
+  Marked testing for mips.
 
   21 Jan 2003; Martin Schlemmer <azarah@gentoo.org> autoconf-2.57.ebuild :
   New version.

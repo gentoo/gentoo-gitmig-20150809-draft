@@ -1,13 +1,21 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.72 2003/02/24 02:11:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.73 2003/02/24 20:35:36 dragon Exp $
 
 *gcc-3.2.2-r1 (23 Feb 2003)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> gcc-3.2.2-r1.ebuild :
+  Mark testing for mips.  Changed DEPENDS to a lower binutils *only* for mips,
+  since .18 generates really b0rked asm and tests prove that .16 works just fine.
 
   23 Feb 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.2-r1.ebuild :
   Update from cvs to add __thread support.
 
 *gcc-3.2.2 (06 Feb 2003)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> gcc-3.2.2.ebuild :
+  Mark stable for mips.  Changed DEPENDS to a lower binutils *only* for mips,
+  since .18 generates really b0rked asm and tests prove that .16 works just fine.
 
   24 Feb 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.2.ebuild :
   Mark stable for x86.

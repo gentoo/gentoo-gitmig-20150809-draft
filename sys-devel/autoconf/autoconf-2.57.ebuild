@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57.ebuild,v 1.4 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57.ebuild,v 1.5 2003/02/24 20:35:36 dragon Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 
 LICENSE="GPL-2"
 SLOT="2.5"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips arm"
 
 DEPEND=">=sys-apps/texinfo-4.3
 	>=sys-devel/m4-1.4p
