@@ -1,0 +1,23 @@
+# ChangeLog for dev-lang/mmix
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.1 2002/05/04 00:53:07 karltk Exp $
+
+*mmix-20020216 (04 May 2002)
+
+  04 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> mmix-20020216.ebuild files/digest-mmix-20020216 :
+  
+  From Knuth's page:
+
+  MMIX is a machine that operates primarily on 64-bit words. It has 256 
+  general-purpose 64-bit registers that each can hold either fixed-point or 
+  floating-point numbers. Most instructions have the 4-byte form `OP X Y Z', 
+  where each of OP, X, Y, and Z is a single 8-bit byte. For example, if OP is 
+  the code for ADD the meaning is ``X=Y+Z''; i.e., ``Set register X to the 
+  contents of register Y plus the contents of register Z.'' The 256 possible 
+  OP codes fall into a dozen or so easily remembered categories.
+
+  The designers of important real-world processor chips (e.g., MIPS and 
+  ALPHA) have helped me with the design of MMIX. So I'm excited about the 
+  prospects. 
+
+  Ebuild provided by Hanno Boeck <hanno@gmx.de>.
