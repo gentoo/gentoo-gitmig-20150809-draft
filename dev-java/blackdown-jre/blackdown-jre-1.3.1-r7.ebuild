@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.11 2002/09/07 13:20:01 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.12 2002/09/07 13:30:00 karltk Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -25,7 +25,7 @@ src_unpack () {
 	if (use ppc) || (use sparc) || (use sparc64) ; then 
 		tail +422 ${DISTDIR}/${A} | tar xjf -
 	else
-		unpack ${MY_P}
+		unpack ${A}
 	fi
 	if (use sparc) || (use sparc64) ; then
 		# The files are owned by 1000.100, for some reason.
