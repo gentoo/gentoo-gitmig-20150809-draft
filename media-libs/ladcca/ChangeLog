@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladcca
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.9 2004/03/26 16:25:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.10 2004/04/03 06:00:14 pylon Exp $
+
+  03 Apr 2004; Lars Weiler <pylon@gentoo.org> ladcca-0.4.0.ebuild:
+  stable on ppc
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> ladcca-0.4.0.ebuild:
   Stable x86.
