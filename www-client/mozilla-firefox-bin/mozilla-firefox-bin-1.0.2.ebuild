@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.2.ebuild,v 1.2 2005/03/25 10:57:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.2.ebuild,v 1.3 2005/03/26 23:37:58 kugelfang Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -28,6 +28,11 @@ RDEPEND="virtual/x11
 	>=www-client/mozilla-launcher-1.28"
 
 S=${WORKDIR}/firefox
+
+# This is a binary x86 package => ABI=x86
+# Please keep this in future versions
+# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+has_multilib_profile && ABI="x86"
 
 src_install() {
 	# Install firefox in /opt
