@@ -1,20 +1,32 @@
-MD5 e9d74c855b7a54c3041bbe1025ab35e3 libxml2-2.6.17.ebuild 1726
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 206735e38def8100e1edf0d631cb20d8 ChangeLog 13064
+MD5 68188201e3bb40b622a32d291a6c2fbe libxml2-2.6.11.ebuild 1661
 MD5 fd5c4829b374de7478ad8f71d9266ca4 libxml2-2.6.12.ebuild 1668
 MD5 4afb16d8cb0b1a2206bb115b129c819c libxml2-2.6.15-r1.ebuild 1805
-MD5 57aa74726020ca14a295679cf8be6259 libxml2-2.6.7.ebuild 1886
 MD5 5bdd410e5474f1af0f02b326c0e95131 libxml2-2.6.16.ebuild 1772
-MD5 68188201e3bb40b622a32d291a6c2fbe libxml2-2.6.11.ebuild 1661
-MD5 c1428b305a81205bc7f99d81cbbe35bc libxml2-2.6.9.ebuild 1947
 MD5 864297613eab841b3e6896145930ed4d libxml2-2.6.6.ebuild 1890
-MD5 bc4c01f5f3610fb13670c2f0f57bbba3 ChangeLog 12949
+MD5 57aa74726020ca14a295679cf8be6259 libxml2-2.6.7.ebuild 1886
+MD5 c1428b305a81205bc7f99d81cbbe35bc libxml2-2.6.9.ebuild 1947
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 e9d74c855b7a54c3041bbe1025ab35e3 libxml2-2.6.17.ebuild 1726
+MD5 b604cb22c56997ea68f41a2878171f06 libxml2-2.6.18.ebuild 1724
+MD5 58ae52ba5b2d6b7aed29f8a08b324d2c files/digest-libxml2-2.6.11 68
+MD5 fa747ea5704458d21c71742d5bd870d4 files/digest-libxml2-2.6.12 68
+MD5 e7fb4717d64a8f4b7c4f35a6924bdbd4 files/digest-libxml2-2.6.15-r1 68
+MD5 ff7efcdcc2a364b0eeca271ef52566f8 files/digest-libxml2-2.6.16 68
 MD5 df8aa422d2ef75d0fbb2dfd7e3691d2c files/digest-libxml2-2.6.6 67
 MD5 e1d3673ddc47844934e0894da13d7c31 files/digest-libxml2-2.6.7 67
 MD5 02c6697e95e4ac68f27f42bc47bd211b files/digest-libxml2-2.6.9 67
 MD5 6f985801b3703cf758165d018cad9132 files/libxml2-2.6.15-reverse_error.patch 670
-MD5 e7fb4717d64a8f4b7c4f35a6924bdbd4 files/digest-libxml2-2.6.15-r1 68
 MD5 3451360f628f1e2dc20813a52fbaa404 files/libxml2-2.6.16-xlattable.patch 537
-MD5 58ae52ba5b2d6b7aed29f8a08b324d2c files/digest-libxml2-2.6.11 68
-MD5 fa747ea5704458d21c71742d5bd870d4 files/digest-libxml2-2.6.12 68
-MD5 ff7efcdcc2a364b0eeca271ef52566f8 files/digest-libxml2-2.6.16 68
 MD5 8409491d7d4c895c3a509a3c1c121e02 files/digest-libxml2-2.6.17 68
+MD5 bf6bcb2188d6caf2b35ba1a6aaa7d94f files/digest-libxml2-2.6.18 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCPgxVXjcVihsel0ERAswtAKCQhtON/LKJyaAq2RGSo/4rgANLSACgju0g
+m60YA3oo0mTAXx0RoJ5LneQ=
+=fz/k
+-----END PGP SIGNATURE-----
