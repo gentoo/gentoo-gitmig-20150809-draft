@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3280 2004/10/25 13:56:56 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3281 2004/10/26 12:59:26 phosphan Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -152,9 +152,7 @@ sys-fs/submount
 
 # Patrick Kursawe <phosphan@gentoo.org> (04 Oct 2004)
 # necessary gcc version not yet there
-=dev-lang/maude-2.1.1-r1
-# same problem, better patch
-=dev-lang/maude-2.1.1-r2
+>=dev-lang/maude-2.1.1-r2
 
 # <mr_bones_@gentoo.org> (30 Sep 2004)
 # Until www-apps/midcom is worked out
