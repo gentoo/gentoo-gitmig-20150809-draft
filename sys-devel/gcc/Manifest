@@ -1,4 +1,4 @@
-MD5 39e0420dbd06e22660453294c393d22e ChangeLog 34486
+MD5 4e3d3830eae83b2540ff34792cadf25c ChangeLog 34629
 MD5 6d0d6b9214ecb88e26a54b70901c50b4 gcc-2.95.3-r7.ebuild 5436
 MD5 079abbc45c914fdad6c90540fe82302c gcc-2.95.3-r8.ebuild 9213
 MD5 459fe070924cbfd485139f84f2dd47ff gcc-3.0.4-r6.ebuild 8738
@@ -115,7 +115,7 @@ MD5 d6ee829d1712436361f5f1daf7b14e83 files/3.3/gcc33-gentoo-branding.patch 890
 MD5 088e0807e677010cafe4e590e8711be1 files/3.3/gcc33-no-multilib-amd64.patch 343
 MD5 453122edf63d75cca3a6c56a6dac45b0 files/3.3/gcc33-propolice-version.patch 570
 MD5 5f465144ef81f1b7c7f6d6abe6e4c59f files/awk/fixlafiles.awk 6285
-MD5 e74b6edd726018114d850716ecddebcc files/awk/scanforssp.awk 5249
+MD5 f4a810fc3b0f565c2e63e43c2dfe46ae files/awk/scanforssp.awk 5248
 MD5 d3e53318166d71a05d2b51bd44502270 files/3.3.1/gcc331-gentoo-branding.patch 874
 MD5 b398b7415b93423ff04952c6e69bdb4d files/3.3.1/gcc331-pp-fixup.patch 407
 MD5 d9ae122db2768f8e504dfef256d4991f files/3.3.2/gcc332-gentoo-branding.patch 874

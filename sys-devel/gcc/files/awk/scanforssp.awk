@@ -2,7 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Contributor: Ned Ludd <solar@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.4 2003/12/29 21:08:02 azarah Exp $
+# Contributor: Natanael Copa  <nat@c2i.net>
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.5 2003/12/31 18:21:42 solar Exp $
 
 
 # Does not seem to be used in this script.
@@ -55,7 +56,10 @@ BEGIN {
 		auto_etcat = 1
 	else
 		auto_etcat = 0
-	
+
+	# Fix bug that causes script to fail when pipe is not closed. Closes bug #36792
+	close(pipe)
+
 	DIRCOUNT = 0
 	# Add the two default library paths
 	DIRLIST[1] = "/lib"
