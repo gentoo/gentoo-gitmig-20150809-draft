@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/xsmbrowser
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsmbrowser/ChangeLog,v 1.2 2003/05/26 19:31:43 pebenito Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsmbrowser/ChangeLog,v 1.3 2004/03/23 22:37:07 weeve Exp $
+
+  23 Mar 2004; Jason Wever <weeve@gentoo.org> xsmbrowser-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   26 May 2003; Chris PeBenito <pebenito@gentoo.org> xsmbrowser-3.4.0.ebuild:
   Mark stable for x86. This probably will work on any arch that has a working

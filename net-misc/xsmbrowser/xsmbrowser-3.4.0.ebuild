@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsmbrowser/xsmbrowser-3.4.0.ebuild,v 1.4 2003/09/05 22:13:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsmbrowser/xsmbrowser-3.4.0.ebuild,v 1.5 2004/03/23 22:37:07 weeve Exp $
 
 DESCRIPTION="GUI SMB browser with preview written in expect"
 HOMEPAGE="http://www.public.iastate.edu/~chadspen/xsmbrowser.html"
@@ -8,7 +8,7 @@ LICENSE="GPL-2"
 RDEPEND="virtual/x11
 	 net-fs/samba
 	 dev-tcltk/expect"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 SLOT="0"
 SRC_URI="http://www.public.iastate.edu/~chadspen/${P}.tar.gz"
 S=${WORKDIR}/${P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20040313.ebuild,v 1.2 2004/03/14 00:02:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20040313.ebuild,v 1.3 2004/03/23 22:32:41 weeve Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/putty-cvs-${PV}.tar.bz2"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 IUSE="doc"
 
 RDEPEND="=x11-libs/gtk+-1.2* virtual/x11"
