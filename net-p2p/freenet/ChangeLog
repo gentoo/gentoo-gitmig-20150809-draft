@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.30 2003/09/03 20:58:39 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.31 2003/09/08 22:02:11 lostlogic Exp $
+
+*freenet-0.5.2.1-r6 (08 Sep 2003)
+
+  08 Sep 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r6.ebuild,
+  files/rc.freenet4:
+  Fix bug 28020 thanks a lot to Guaka on IRC for his help and patience
 
   03 Sep 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r5.ebuild:
   x86 keyword
