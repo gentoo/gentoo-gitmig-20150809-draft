@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.47 2003/12/14 08:31:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.48 2003/12/16 06:26:50 spyderous Exp $
+
+  16 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r7.ebuild:
+  PATCH_VER 0.3. Update to 004_all_radeon-rage128-pci-id-updates-v2.patch, which
+  adds IGP cards and fixes a small typo in the naming of another card.
 
   14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-drm-4.3.0-r7.ebuild:
