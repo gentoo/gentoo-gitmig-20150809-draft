@@ -1,11 +1,16 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.17 2003/07/24 00:24:01 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.18 2003/09/13 21:07:32 vapier Exp $
+
+*dc-gui-0.75 (23 Jul 2003)
+
+  13 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added a perl script to split up the interface file.  The current one
+  seems to take like 500+megs of ram to compile.  Thanks go out to
+  Michal 'Spock' Januszewski <spock@o2.pl> for the script #28209.
 
   25 Jun 2003; Martin Holzer <mholzer@gentoo.org> dc-gui-0.74.ebuild:
   Fixed DEPEND. Closes #23473.
-
-*dc-gui-0.75 (23 Jul 2003)
 
   23 Jul 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bumped.

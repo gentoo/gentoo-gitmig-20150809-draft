@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.75.ebuild,v 1.1 2003/07/24 00:24:01 agenkin Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.75.ebuild,v 1.2 2003/09/13 21:07:32 vapier Exp $
 
 MY_P=${PN/-/_}2-${PV}
 S=${WORKDIR}/${MY_P}
@@ -13,6 +11,7 @@ HOMEPAGE="http://ac2i.tzo.com/dctc/"
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
+IUSE="nls"
 
 DEPEND="=dev-libs/glib-2*
 	=x11-libs/gtk+-2*
@@ -20,6 +19,13 @@ DEPEND="=dev-libs/glib-2*
 	>=sys-libs/db-3.2*
 	>=net-p2p/dctc-0.85.4"
 RDEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/src
+	cp ${FILESDIR}/split_interface_fast.pl .
+	perl split_interface_fast.pl || die "could not split interface up"
+}
 
 src_compile() {
 	econf `use_enable nls` || die
