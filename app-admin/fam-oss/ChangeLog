@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/fam-oss
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.7 2002/07/25 12:57:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.8 2002/08/16 15:39:48 aliz Exp $
+
+*fam-oss-2.6.9 (16 Aug 2002)
+
+  16 Aug 2002; Daniel Ahlberg <aliz@gentoo.org>
+  Version bump. Ebuild submitted by Felix Kurth <felix@fkurth.de>.
 
 *fam-oss-2.6.7-r1 (25 Jul 2002)
 
