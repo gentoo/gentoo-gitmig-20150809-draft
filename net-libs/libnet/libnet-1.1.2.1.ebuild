@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.2.1.ebuild,v 1.5 2004/06/24 23:13:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.2.1.ebuild,v 1.6 2004/07/15 00:55:35 agriffis Exp $
 
 inherit gnuconfig
 
@@ -19,7 +19,7 @@ src_compile() {
 	cd ${S}
 
 	# Detect mips systems properly
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	econf || die "Failed to run econf!"
 	emake || die "Failed to run emake!"
