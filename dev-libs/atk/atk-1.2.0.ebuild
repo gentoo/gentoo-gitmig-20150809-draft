@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.2.0.ebuild,v 1.3 2003/01/05 01:13:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.2.0.ebuild,v 1.4 2003/01/06 11:32:19 mholzer Exp $
 
 inherit libtool gnome2
 
@@ -13,7 +13,7 @@ SLOT="1"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~ppc ~alpha"
 
-RDEPEND=">=dev-libs/glib-2"
+RDEPEND=">=dev-libs/glib-2.0.6-r1"
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )

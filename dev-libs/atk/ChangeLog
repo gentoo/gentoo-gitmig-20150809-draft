@@ -1,11 +1,15 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.13 2003/01/01 18:58:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.14 2003/01/06 11:32:19 mholzer Exp $
+
+*atk-1.2.0 (22 Dec 2002)
+
+  06 Jan 2003; Martin Holzer <mholzer@gentoo.org> atk-1.2.0.ebuild :
+  Changed RDEPEND=">=dev-libs/glib-2" to RDEPEND=">=dev-libs/glib-2.0.6-r1"
+  cause it doesn't work.
 
   01 Jan 2003; Aron Griffis <agriffis@gentoo.org> atk-1.2.0.ebuild :
   Add ~alpha to KEYWORDS
-
-*atk-1.2.0 (22 Dec 2002)
 
   22 Dec 2002; foser <foser@gentoo.org> atk-1.2.0.ebuild :
   New version
