@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3374 2004/12/03 18:13:44 slarti Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3375 2004/12/03 20:47:09 humpback Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <humpback@gentoo.org> (03 Dec 2004)
+# This needs testing
+app-crypt/qca
 
 # <klieber@gentoo.org> (03 Dec 2004)
 # The following packages contains a security vulnerability and has been
