@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.18.ebuild,v 1.1 2005/02/19 16:45:21 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.18.ebuild,v 1.2 2005/02/20 17:40:02 azarah Exp $
 
 inherit eutils flag-o-matic gnuconfig toolchain-funcs
 
@@ -37,6 +37,10 @@ src_unpack() {
 	# which is a secure version of locate.  See bug 18729
 	sed -i '/^SUBDIRS/s/locate//' Makefile.in
 
+	# Fix variable definition to be gcc-2.95.3 compatible
+	epatch ${FILESDIR}/${P}-gcc295.patch
+
+	# Patches for selinux
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 }
 
