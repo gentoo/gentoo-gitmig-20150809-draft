@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Class-Accessor
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/ChangeLog,v 1.1 2004/03/31 11:40:43 mcummings Exp $
+
+*Class-Accessor-0.19 (31 Mar 2004)
+
+  31 Mar 2004; Michael Cummings <mcummings@gentoo.org>
+  Class-Accessor-0.19.ebuild, metadata.xml:
+  Dep for Class-DBI
+
