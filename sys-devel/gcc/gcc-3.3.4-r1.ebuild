@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.5 2004/07/22 13:11:32 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.6 2004/07/29 08:55:35 pappy Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -131,6 +131,7 @@ DEPEND="virtual/libc
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.6
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
+	sparc? ( hardened? ( >=sys-libs/glibc-2.3.3.20040420 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
