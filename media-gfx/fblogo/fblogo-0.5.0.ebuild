@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/fblogo-0.5.0.ebuild,v 1.2 2003/08/17 04:59:34 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/fblogo-0.5.0.ebuild,v 1.3 2003/09/05 20:40:50 mholzer Exp $
 
 DESCRIPTION="Creates images to substitute Linux boot logo"
 HOMEPAGE="http://freakzone.net/gordon/#fblogo"
@@ -17,21 +17,21 @@ RDEPEND="sys-apps/sed"
 S=${WORKDIR}/${P}
 
 src_unpack() {
-  unpack ${A}
-  cd ${S}
-  mv -f Makefile Makefile.orig
-  sed -e "s:/usr/local:/usr:g" -e "s:^install\:$:install\:\n\
-	mkdir -p \${DESTDIR}\${PREFIX}\n\
-	mkdir -p \${DESTDIR}\${BINDIR}\n\
-	mkdir -p \${DESTDIR}\${MANDIR}/man1:" Makefile.orig > Makefile
-  rm -f Makefile.orig
+	unpack ${A}
+	cd ${S}
+	mv -f Makefile Makefile.orig
+	sed -e "s:/usr/local:/usr:g" -e "s:^install\:$:install\:\n\
+		mkdir -p \${DESTDIR}\${PREFIX}\n\
+		mkdir -p \${DESTDIR}\${BINDIR}\n\
+		mkdir -p \${DESTDIR}\${MANDIR}/man1:" Makefile.orig > Makefile
+	rm -f Makefile.orig
 }
 
 src_compile() {
-  emake || die
+	emake || die
 }
 
 src_install() {
-  make install DESTDIR=${D} || die
-  dodoc README CHANGES COPYING
+	make install DESTDIR=${D} || die
+	dodoc README CHANGES COPYING
 }
