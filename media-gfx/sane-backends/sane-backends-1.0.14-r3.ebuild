@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r3.ebuild,v 1.12 2004/10/19 10:31:38 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r3.ebuild,v 1.13 2004/11/24 22:43:34 centic Exp $
 
 inherit eutils
 
 IUSE="usb gphoto2"
 
 DESCRIPTION="Scanner Access Now Easy - Backends"
-HOMEPAGE="http://www.mostang.com/sane/"
+HOMEPAGE="http://www.sane-project.org/"
 
 DEPEND=">=media-libs/jpeg-6b
 	x86? ( sys-libs/libieee1284 )
