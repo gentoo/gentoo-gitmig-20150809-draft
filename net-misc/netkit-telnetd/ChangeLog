@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.21 2004/10/02 15:45:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.22 2004/10/02 16:29:16 weeve Exp $
+
+  02 Oct 2004; Jason Wever <weeve@gentoo.org> netkit-telnetd-0.17-r4.ebuild:
+  Stable on sparc wrt bug #64632.
 
   02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   netkit-telnetd-0.17-r4.ebuild:
