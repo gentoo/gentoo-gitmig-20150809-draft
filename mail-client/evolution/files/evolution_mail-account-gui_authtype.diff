@@ -1,0 +1,17 @@
+===================================================================
+RCS file: /cvs/gnome/evolution/mail/Attic/mail-account-gui.c,v
+retrieving revision 1.171.14.10
+retrieving revision 1.171.14.11
+diff -u -r1.171.14.10 -r1.171.14.11
+--- mail/mail-account-gui.c	2004/12/02 04:11:04	1.171.14.10
++++ mail/mail-account-gui.c	2005/01/21 04:58:37	1.171.14.11
+@@ -2306,7 +2306,7 @@
+ 	}
+ 	
+ 	if (CAMEL_PROVIDER_ALLOWS (gsvc->provider, CAMEL_URL_PART_AUTH) && url->user) {
+-		if (gsvc->needs_auth && gtk_toggle_button_get_active(gsvc->needs_auth)) {
++		if (gsvc->needs_auth == NULL || gtk_toggle_button_get_active(gsvc->needs_auth)) {
+ 			CamelServiceAuthType *authtype;
+ 		
+ 			authtype = g_object_get_data(G_OBJECT(gsvc->authitem), "authtype");
+
