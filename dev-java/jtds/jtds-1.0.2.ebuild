@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.0.2.ebuild,v 1.1 2005/02/18 16:01:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/jtds-1.0.2.ebuild,v 1.2 2005/03/16 17:10:21 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -47,7 +47,6 @@ src_compile() {
 	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	use source && antflags="${antflags} sourcezip"
 	ant ${antflags} || die "failed to build"
 }
 
@@ -60,7 +59,6 @@ src_install() {
 	fi
 
 	if use source; then
-	    dodir /usr/share/doc/${PF}/source
-		cp dist/${PN}-src.zip ${D}usr/share/doc/${PF}/source
-	fi
+	    java-pkg_dosrc ${S}/src/main/*
+fi
 }
