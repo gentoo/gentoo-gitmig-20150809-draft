@@ -4,8 +4,11 @@ MD5 a39c43058b48dc22f1b19f31aa9602b7 icecc-2.3.ebuild 949
 MD5 6beb3d1bb7021baceb3c4c8f3268cccd icecc-2.0.ebuild 951
 MD5 3c3583ea36b707b668c345847986a904 icecc-2.2.ebuild 949
 MD5 5c314250791c53902f1740abbc6a08af ChangeLog 1700
+MD5 a39c43058b48dc22f1b19f31aa9602b7 icecc-2.4.ebuild 949
+MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
 MD5 8ffdf6aa0e2ce02cd060a956279b0f1d icecc-0.5.ebuild 725
 MD5 f255bba4b714e8448420f1fee95f89bf files/icecc-2.3.patch 357
+MD5 f255bba4b714e8448420f1fee95f89bf files/icecc-2.4.patch 357
 MD5 f255bba4b714e8448420f1fee95f89bf files/icecc-2.0.patch 357
 MD5 f255bba4b714e8448420f1fee95f89bf files/icecc-2.1.patch 357
 MD5 f255bba4b714e8448420f1fee95f89bf files/icecc-2.2.patch 357
@@ -15,3 +18,4 @@ MD5 386c86dda906b8079a792ea611fc390b files/digest-icecc-2.0 62
 MD5 7abecd7cef81f784a9cc4655223c6c35 files/digest-icecc-2.1 62
 MD5 8a95d6a4b3aa51ce494b266b8dc1b10f files/digest-icecc-2.2 62
 MD5 1d9eb8cdbbee707d8c7eb179673107c0 files/digest-icecc-2.3 62
+MD5 eae671be233f56af57649fd4ee86e961 files/digest-icecc-2.4 62
