@@ -1,4 +1,0 @@
-default-hppa-2004.0
-# cd /etc/
-# rm make.profile
-# ln -s ../usr/portage/profiles/default-hppa-2004.0 make.profile
