@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3028 2004/07/30 11:59:24 karltk Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3029 2004/07/30 20:38:08 genone Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -52,11 +52,6 @@ dev-libs/elfsh
 # super-untested and is, therefore, masked.
 =dev-perl/DBD-mysql-2.9004
 
-# <genone@gentoo.org> (17 July 2004)
-# two more victims to the app-portage cleanup
-app-portage/lintool
-app-portage/generate-use
-
 # <eldad@gentoo.org> (16 July 2004)
 # Nessus 2.1.x is the development branch, not for production use.
 =net-analyzer/libnasl-2.1*
@@ -65,10 +60,6 @@ app-portage/generate-use
 =net-analyzer/nessus-2.1*
 =net-analyzer/nessus-core-2.1*
 
-# <genone@gentoo.org> (13 July 2004)
-# upstream is dead, ferringb is working on a replacement
-app-portage/deltup
-
 # <pylon@gentoo.org> (11 July 2004)
 # Does not compile with gcc-3.4 in the USE=gnome dependencies
 >=app-cdr/cdrdao-1.1.9
@@ -76,10 +67,6 @@ app-portage/deltup
 # <lucass@gentoo.org> (10 July 2004)
 # unstable branch of pygtk.
 =dev-python/pygtk-2.3*
-
-# <genone@gentoo.org> (7 July 2004)
-# broken with current portage versions, no upstream available.
-app-portage/rmerge2
 
 # <langthang@gentoo.org> (4 July 2004)
 # mask in preparing to remove from tree.
@@ -93,12 +80,6 @@ app-portage/rmerge2
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
 # is imcomplete. info directory handling should be reconsidered.
 >=app-editors/emacs-cvs-22
-
-# <genone@gentoo.org> (30 June 2004)
-# This wasn't a very good release, it unsets markers and segfaults when
-# you rebuild the tree, probably other problems as well. I have to 
-# figure this out before unmasking.
-=mail-client/sylpheed-claws-0.9.12
 
 # <mr_bones_@gentoo.org> (25 June 2004)
 # No worky for me.  Needs some love from Spanky.
@@ -393,11 +374,6 @@ net-misc/zebra
 # <karltk@gentoo.org> (09 Jan 2004)
 # Placeholder to remind people it's deprecated.
 >=dev-util/eclipse-sdk-bin-1.0
-
-# <genone@gentoo.org> (07 Jan 2004)
-# unmaintained and currently doesn't even build anymore. Masking until
-# plasmaroo makes a new version.
-app-portage/kportage
 
 # <lu_zero@gentoo.org> (06 Jan 2004)
 # Has memory leak issue
