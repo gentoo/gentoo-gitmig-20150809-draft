@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.6-r1.ebuild,v 1.2 2002/07/12 12:40:18 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.7.ebuild,v 1.1 2002/07/12 12:40:18 blocke Exp $
 
 # this could be cleaner..
-MY_P=${PN}-2.4.STABLE6
+MY_P=${PN}-2.4.STABLE7
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A caching web proxy, with advanced features"
 SRC_URI="ftp://ftp.squid-cache.org/pub/squid-2/STABLE/${MY_P}-src.tar.gz
