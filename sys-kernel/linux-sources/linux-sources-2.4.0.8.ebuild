@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0.8.ebuild,v 1.2 2001/01/16 06:59:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0.8.ebuild,v 1.3 2001/01/19 21:34:51 drobbins Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac8
@@ -94,7 +94,7 @@ src_compile() {
 		try ./configure --prefix=/
 		try make
 
-		cd ${S}/extras/alsa-driver-0.5.10
+		cd ${S}/extras/alsa-driver-0.5.10a
 			try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes \
 			--with-cards=all
 		#	--with-cards=share,dummy,virmidi,interwave,interwave-stb,gusmax,gusextreme,gusclassic,es1688,es18xx,sb8,sb16,sbawe,emu10k1,opl3sa2,mozart,sonicvibes,ens1370,ens1371,ad1816a,ad1848,als100,als4000,azt2320,cs4231,cs4232,cs4236,cs4281,cs461x,cs4281,es968,dt0197h,fm801,es1938,es1968,opti92x-ad1848,opti92x-cs4231,opti93x,serial,trident,sgalaxy,hal2,cmi8330,mtpav,rme96,rme9652,ice1712,intel8x0,via686a,cmipci,ymfpci,maestro3
