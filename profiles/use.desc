@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.147 2004/03/26 08:04:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.148 2004/03/26 08:05:56 eradicator Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -17,7 +17,7 @@ apache2 - Chooses Apache2 support when a package supports both Apache1 and Apach
 apm - Adds APM (Advanced Power Management) support
 arts - Adds support for aRts: the KDE sound daemon
 atlas - Adds support for atlas instead of blas in dev-lang/R 
-media - Adds support for libaudiofile where applicable
+audiofile - Adds support for libaudiofile where applicable
 avi - Adds Win32 AVI support and also adds avifile (Library for avi) support
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
 bidi - Enables bidirectional language support
