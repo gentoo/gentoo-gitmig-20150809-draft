@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/gkrellm-mailwatch-2.4.1.ebuild,v 1.1 2003/05/19 20:27:23 mholzer Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/gkrellm-mailwatch-2.4.1.ebuild,v 1.2 2003/06/24 23:00:34 mholzer Exp $ 
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A GKrellM2 plugin that shows the status of additional mail boxes"
@@ -12,7 +12,7 @@ DEPEND="=app-admin/gkrellm-2*
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 
 src_compile() {
 	emake || die
