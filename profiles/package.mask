@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3131 2004/09/05 17:01:21 carlo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3132 2004/09/06 14:05:59 suka Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <suka@gentoo.org> (06 Sep 2004)
+# A few big changes, needs more testing
+=app-office/openoffice-ximian-1.3.3-r1
 
 # <carlo@gentoo.org> (04 Sep 2004)
 # stupid /me added broken patch
