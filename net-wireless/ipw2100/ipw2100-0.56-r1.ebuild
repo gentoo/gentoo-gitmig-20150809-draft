@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.56-r1.ebuild,v 1.3 2004/10/24 14:08:22 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.56-r1.ebuild,v 1.4 2004/10/29 12:13:49 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="Driver for the Intel PRO/Wireless 2100 3B miniPCI adapter"
 HOMEPAGE="http://ipw2100.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
 		mirror://gentoo/${PN}-fw-${FW_VERSION}.tgz
-		mirror://gentoo/${P}-2.4-v1.patch.gz"
+		mirror://gentoo/${P}-2.4-v7.patch.gz"
 
 LICENSE="GPL-2 ipw2100-fw"
 SLOT="0"
@@ -90,12 +90,13 @@ src_unpack() {
 	if kernel-mod_is_2_4_kernel
 	then
 		cd ${S}
-		epatch ${WORKDIR}/${P}-2.4-v1.patch
+		epatch ${WORKDIR}/${P}-2.4-v7.patch
 	fi
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-wpa_eapol_fix.patch
 	epatch ${FILESDIR}/${P}-ieee80211_scan_age.2.patch
+	epatch ${FILESDIR}/${P}-2.6.10-susp.patch
 
 	einfo "Patching Makefile to enable WPA"
 	sed -i "s:^# CONFIG_IEEE80211_WPA=:CONFIG_IEEE80211_WPA=:" \

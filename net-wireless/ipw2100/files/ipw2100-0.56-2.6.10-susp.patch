@@ -1,0 +1,47 @@
+diff -urp ipw2100-0.56/ipw2100.c ipw2100-0.56/ipw2100.c
+--- ipw2100-0.56/ipw2100.c	2004-10-14 03:06:57.000000000 +0800
++++ ipw2100-0.56/ipw2100.c	2004-10-28 15:57:10.000000000 +0800
+@@ -6475,7 +6475,6 @@ static int ipw2100_pci_init_one(struct p
+ 		pci_write_config_dword(pdev, 0x40, val & 0xffff00ff);
+ 
+ 	pci_set_power_state(pdev, 0);
+-	pci_restore_state(pdev, NULL);
+ 
+ 	if (!ipw2100_hw_is_adapter_in_system(dev)) {
+ 		err = -ENODEV;
+@@ -6666,8 +6665,9 @@ static int ipw2100_suspend(struct pci_de
+ 	/* Remove the PRESENT state of the device */
+ 	netif_device_detach(dev);
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,10)
+ 	pci_save_state(pdev, priv->pm_state);
+-	pci_disable_device(pdev);       // needed?
++#endif
+ 	pci_set_power_state(pdev, state);
+ 	
+ 	return 0;
+@@ -6686,7 +6686,11 @@ static int ipw2100_resume(struct pci_dev
+ 	       dev->name);
+ 
+ 	pci_set_power_state(pdev, 0);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,10)
+ 	pci_restore_state(pdev, priv->pm_state);
++#else
++	pci_restore_state(pdev);
++#endif
+ 
+ 	/*
+ 	 * Suspend/Resume resets the PCI configuration space, so we have to
+diff -urp ipw2100-0.56/ipw2100.h ipw2100-0.56/ipw2100.h
+--- ipw2100-0.56/ipw2100.h	2004-10-14 03:06:57.000000000 +0800
++++ ipw2100-0.56/ipw2100.h	2004-10-27 11:16:36.000000000 +0800
+@@ -608,7 +608,9 @@ struct ipw2100_priv {
+ 	spinlock_t low_lock;
+ 
+ 	wait_queue_head_t wait_command_queue;
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,10)
+ 	u32 pm_state[PM_STATE_SIZE];
++#endif
+ };
+ 
+ 
