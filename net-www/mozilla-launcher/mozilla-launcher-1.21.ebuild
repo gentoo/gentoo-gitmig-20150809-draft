@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/mozilla-launcher-1.21.ebuild,v 1.3 2004/10/02 06:49:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/mozilla-launcher-1.21.ebuild,v 1.4 2004/10/03 04:42:43 vapier Exp $
 
 DESCRIPTION="Script that launches mozilla or firefox"
 HOMEPAGE=""
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86 ~mips ~ppc64"
+KEYWORDS="~alpha amd64 ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND=""
@@ -19,7 +19,7 @@ S=${WORKDIR}
 
 src_install() {
 	exeinto /usr/libexec
-	newexe ${P} mozilla-launcher
+	newexe ${P} mozilla-launcher || die
 }
 
 pkg_postinst() {
