@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p8.ebuild,v 1.2 2004/03/10 17:57:49 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p8.ebuild,v 1.3 2004/03/15 17:51:41 max Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${PV/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="x86 ~amd64 ~sparc"
 IUSE="ldap mysql postgres milter"
 
 DEPEND=">=sys-apps/sed-4"
@@ -49,7 +49,7 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${PN}-${PV/_*/}"
 
 src_compile() {
-	if [ "`use milter`" ] ; then
+	if use milter ; then
 		cd "${S}/helper-progs"
 
 		econf --with-runtime-dir=/var/run/amavis \
@@ -94,7 +94,7 @@ src_install() {
 	dodoc AAAREADME.first INSTALL LDAP.schema LICENSE MANIFEST RELEASE_NOTES \
 		README_FILES/* test-messages/sample-*
 
-	if [ "`use milter`" ] ; then
+	if use milter ; then
 		cd "${S}/helper-progs"
 		einstall
 	fi
