@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/jircii-1_beta10.ebuild,v 1.2 2004/07/12 22:10:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/jircii-1_beta10.ebuild,v 1.3 2004/07/17 09:25:16 dholm Exp $
 
 DESCRIPTION="jIRCii - IRC client written in Java"
 HOMEPAGE="http://jirc.hick.org/"
 SRC_URI="http://jirc.hick.org/download/jerkb10.tgz"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/jre"
