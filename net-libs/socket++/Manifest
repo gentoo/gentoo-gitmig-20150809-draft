@@ -1,4 +1,15 @@
-MD5 16c1c0c7a19930f9baceb8e84fad9cd7 socket++-1.12.10.ebuild 781
-MD5 70a2595bf7995adcbcbf2c59f52f2ba2 ChangeLog 441
-MD5 a69c2dd3522dfb6a77cf803655524100 metadata.xml 494
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5e7e134f845417cec165f0e91e2ba7d3 socket++-1.12.10.ebuild 948
+MD5 48df88adb2fc05e9457e5a28faf8a01d ChangeLog 699
+MD5 2b3e89005c19886504e6ca523a0659f9 metadata.xml 459
+MD5 a683e58943d8de77b00a47d269d3cdac files/1.12.10-gcc34.patch 1987
 MD5 e65d70ec3026971e3da1033b7d747c2f files/digest-socket++-1.12.10 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBwQkwI1lqEGTUzyQRAscfAJ4q/oAo1Tuai5NsiwDEob2B2ixpVwCfRtFA
+rfDXAzM31ZW3ZH+W2s1vNFc=
+=hocv
+-----END PGP SIGNATURE-----

@@ -1,0 +1,47 @@
+--- socket++/sig.cpp.orig	2003-03-14 11:02:40.000000000 -0700
++++ socket++/sig.cpp	2004-12-15 20:13:52.758514376 -0700
+@@ -49,7 +49,7 @@
+   if (v.empty ()) {
+     struct sigaction sa;
+     if (sigaction (signo, 0, &sa) == -1) throw sigerr();
+-    if (sa.sa_handler != sighnd_type (&sighandler)) {
++    if (sa.sa_handler != (void(*)(int)) sighnd_type (&sighandler)) {
+       // setting for the first time
+       sa.sa_handler = (void(*)(int)) sighnd_type (&sighandler);
+       if (sigemptyset (&sa.sa_mask) == -1) throw sigerr();
+@@ -90,7 +90,7 @@
+   
+   struct sigaction sa;
+   if (sigaction (signo, 0, &sa) == -1) throw sigerr();
+-  if (sa.sa_handler == sighnd_type (&sighandler)) {
++  if (sa.sa_handler == (void(*)(int)) sighnd_type (&sighandler)) {
+     sa.sa_handler = (void(*)(int)) sighnd_type (SIG_DFL);
+     if (sigemptyset (&sa.sa_mask) == -1) throw sigerr();
+     sa.sa_flags = 0;
+@@ -120,7 +120,7 @@
+ {
+   struct sigaction sa;
+   if (sigaction (siga, 0, &sa) == -1) throw sigerr();
+-  if (sa.sa_handler != sighnd_type (&sighandler)) {
++  if (sa.sa_handler != (void(*)(int))sighnd_type (&sighandler)) {
+     sa.sa_handler = (void(*)(int)) sighnd_type (&sighandler);
+     if (sigemptyset (&sa.sa_mask) == -1) throw sigerr();
+     sa.sa_flags = 0;
+@@ -133,7 +133,7 @@
+ {
+   struct sigaction sa;
+   if (sigaction (siga, 0, &sa) == -1) throw sigerr();
+-  if (sa.sa_handler != sighnd_type (&sighandler)) {
++  if (sa.sa_handler != (void(*)(int))sighnd_type (&sighandler)) {
+     sa.sa_handler = (void(*)(int)) sighnd_type (&sighandler);
+     if (sigemptyset (&sa.sa_mask) == -1) throw sigerr();
+     sa.sa_flags = 0;
+@@ -147,7 +147,7 @@
+ {
+   struct sigaction sa;
+   if (sigaction (signo, 0, &sa) == -1) throw sigerr();
+-  if (sa.sa_handler != sighnd_type (&sighandler)) {
++  if (sa.sa_handler != (void(*)(int))sighnd_type (&sighandler)) {
+     sa.sa_handler = (void(*)(int)) sighnd_type (&sighandler);
+     if (sigemptyset (&sa.sa_mask) == -1) throw sigerr();
+     sa.sa_flags = 0;
