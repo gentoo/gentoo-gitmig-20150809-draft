@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2245e8c50057fcf5f95227c90bb4ed6a evoak-0.0.1.20040710.ebuild 464
+MD5 b2988c3929fe975023afe40a24c9378c ChangeLog 326
+MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+MD5 e85d3cf4c1862309a2f45f8c40246e46 files/digest-evoak-0.0.1.20040710 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA90kQHTu7gpaalycRAkhsAJ9mfN9R8c/DEDdBv1TnGHonZNyRhgCgq9FB
+xwsbpbyc/avN+J6yFFdEOJM=
+=SgRQ
+-----END PGP SIGNATURE-----
