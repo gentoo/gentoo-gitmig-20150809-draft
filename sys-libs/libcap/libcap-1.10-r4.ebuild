@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.2 2004/04/26 02:06:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.3 2004/05/28 18:01:27 vapier Exp $
 
-inherit base flag-o-matic eutils
+inherit flag-o-matic eutils
 
 DEB_PVER=14
 DESCRIPTION="POSIX 1003.1e capabilities"
@@ -30,7 +30,6 @@ src_unpack() {
 	epatch ${FILESDIR}/libcap-1.10-r4-staticfix.diff
 	sed -i 's|WARNINGS=-ansi|WARNINGS=|' Make.Rules
 }
-
 
 src_compile() {
 	local PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
