@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.10 2004/07/16 01:44:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.11 2004/07/30 14:22:09 coredumb Exp $
+
+*PEAR-Date-1.4.3 (30 Jul 2004)
+
+  30 Jul 2004; Tal Peer <coredumb@gentoo.org> +PEAR-Date-1.4.3.ebuild:
+  Version bump.
 
   15 Jul 2004; Jason Wever <weeve@gentoo.org> PEAR-Date-1.4.ebuild:
   Stable on sparc wrt bug #56295.
