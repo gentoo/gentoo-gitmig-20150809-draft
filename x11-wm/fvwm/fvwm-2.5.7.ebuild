@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.13 2003/07/31 15:41:01 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.14 2003/07/31 16:02:09 taviso Exp $
 
 inherit gnuconfig
 
-IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi doc"
+IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi doc imlib"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an extremely powerful ICCCM-compliant multiple virtual desktop window manager"
@@ -19,6 +19,8 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 				ncurses? ( >=sys-libs/ncurses-5.3-r1 )
 				!ncurses? ( >=sys-libs/libtermcap-compat-1.2.3 ) )
 		gtk? ( =x11-libs/gtk+-1.2* )
+		imlib? ( >=media-libs/gdk-pixbuf-0.21.0 
+			>=media-libs/imlib-1.9.14-r1 )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 		rplay? ( >=media-sound/rplay-3.3.2 )
 		perl? ( >=dev-lang/perl-5.6.1-r10 )	
@@ -69,6 +71,10 @@ src_compile() {
 	# required libraries are found, this hides them from the script.
 	if ! use gtk; then 
 		myconf="${myconf} --with-gtk-prefix=${T} --with-imlib-prefix=${T}"
+	else
+		if ! use imlib; then
+			myconf="${myconf} --with-imlib-prefix=${T}"
+		fi
 	fi
 	
 	# link with the gnome libraries, for better integration with the gnome desktop.
@@ -182,7 +188,8 @@ pkg_postinst() {
 	use png			|| ewarn "	PNG Support [png]"
 	use bidi		|| ewarn "	Bidirectional Language Support [bidi]"
 	use rplay		|| ewarn "	RPlay Support in FvwmEvent [rplay]"
-	use gtk			|| ewarn "	FvwmGTK (gtk+ support) (previously didnt honour USE flag) [gtk]"
+	use gtk			|| ewarn "	FvwmGTK (gtk+ support) [gtk]"
+	use imlib		|| ewarn "	FvwmGTK (GDK image support) [imlib]"
 	ewarn
 	ewarn "If you require any of the features listed above, you should remerge"
 	ewarn "FVWM with the appropriate USE flags. Use this command to see the flags"
