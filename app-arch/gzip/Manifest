@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 87b03fef12348ce60a1bc2cdd0dcf07b ChangeLog 7059
+MD5 5f5d290312704cc722cfdc3ba510c864 ChangeLog 7151
+MD5 5265c9a1649688266398d7a57500dd59 gzip-1.3.5-r4.ebuild 2151
 MD5 0fa25135499054da183a5438768815ee gzip-1.3.5-r3.ebuild 2136
-MD5 968e89feb625772e86a60ca141a123ea gzip-1.3.5-r4.ebuild 2155
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a3bbaab6aec4b44161509caf1883e5d8 files/digest-gzip-1.3.5-r3 134
 MD5 a3bbaab6aec4b44161509caf1883e5d8 files/digest-gzip-1.3.5-r4 134
+MD5 a3bbaab6aec4b44161509caf1883e5d8 files/digest-gzip-1.3.5-r3 134
 MD5 f4727ba4030d08645aff9e1957453ecf files/gzip-1.3.5-zdiff-tempfile.patch 939
 MD5 5e7967bad14d0fd7e1e3d4f6086831b9 files/gzip-1.3.5-znew-tempfile.patch 615
 MD5 fece8c9d7f666a4831b914a61176bc16 files/gzip-1.3.5-zdiff-tempfile-2.patch 715
@@ -14,7 +14,7 @@ MD5 17f0be7717f949fc0acd0ef316982cd6 files/gzip-1.3.5-znew-tempfile-2.patch 1931
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBvXrKmdTrptrqvGERAhKYAJ9Xfk7IM66Ss1Wwqo1UIWS5+v09DQCcCYOu
-U787q6S34hn0NsbVpPdyQgo=
-=hT7j
+iD8DBQFBvZFGKRy60XGEcJIRAhnEAJ4mHKTxi3TiD4Lg7mYA1IAkmb08+wCaAibM
+IJuYLjgB24w8KK11S2NfXO8=
+=qbxr
 -----END PGP SIGNATURE-----
