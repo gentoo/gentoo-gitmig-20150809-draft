@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.11.ebuild,v 1.7 2004/12/25 17:24:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.14.ebuild,v 1.1 2004/12/25 17:24:52 ticho Exp $
 
 DESCRIPTION="SIP Express Router"
 
@@ -91,7 +91,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "WARNING: If you upgraded from a previous Ser version"
+	einfo "WARNING: If you upgraded from Ser version 0.8.10 and lower,"
 	einfo "please read the README, NEWS and INSTALL files in the"
 	einfo "documentation directory because the database and the"
 	einfo "configuration file of old Ser versions are incompatible"

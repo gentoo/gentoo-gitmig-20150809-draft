@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ser
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.8 2004/10/02 15:30:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.9 2004/12/25 17:24:52 ticho Exp $
+
+*ser-0.8.14 (25 Dec 2004)
+
+  25 Dec 2004; Andrej Kacian <ticho@gentoo.org> ser-0.8.10.ebuild,
+  ser-0.8.11.ebuild, +ser-0.8.14.ebuild, ser-0.8.9.ebuild:
+  Version bump. Closes #75627, reported by Daniel Webert
+  <rockoo@rockoo.homelinux.org>. Also changed SRC_URI in all ebuilds to use
+  ${PV}.
 
   11 Jun 2004; Aron Griffis <agriffis@gentoo.org> ser-0.8.10.ebuild,
   ser-0.8.11.ebuild, ser-0.8.9.ebuild:
