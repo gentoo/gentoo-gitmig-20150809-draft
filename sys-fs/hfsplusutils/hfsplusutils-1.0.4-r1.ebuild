@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.7 2004/07/03 00:21:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.8 2005/02/16 09:59:37 lu_zero Exp $
 
 inherit eutils libtool
 
@@ -33,13 +33,11 @@ src_unpack() {
 	autoconf
 	autoheader
 	automake -a
-	libtoolize
+	libtoolize --force --copy
 	elibtoolize
 }
 
 src_compile() {
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.6
 	econf || die
 	emake || die
 }
@@ -48,6 +46,7 @@ src_install() {
 	dodir /usr/bin /usr/lib /usr/share/man
 	make \
 		prefix=${D}/usr \
+		libdir=${D}/usr/lib \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
