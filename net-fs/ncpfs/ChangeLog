@@ -1,14 +1,14 @@
 # ChangeLog for net-fs/ncpfs 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Heiko Helmle <helman@gmx.net>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.4 2003/03/23 19:19:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.5 2003/07/13 11:51:18 aliz Exp $
 
 *ncpfs-2.2.0.19-r2 (23 Mar 2003)
 
   23 Mar 2003; Martin Holzer <mholzer@gentoo.org> ncpfs-2.2.0.19-r2.ebuild:
   Fixed ebuild that mount.* would be installed. Closes #17823.
 
-*ncpfs-2.2.0.19 (20 Oct 2002)
+*ncpfs-2.2.0.19-r1 (20 Oct 2002)
 
   20 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ncpfs-2.2.0.19-r1.ebuild
   files/digest-ncpfs-2.2.0.19-r1 :

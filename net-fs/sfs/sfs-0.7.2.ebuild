@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.3 2003/06/18 07:53:23 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.4 2003/07/13 11:51:18 aliz Exp $
 
 DESCRIPTION="SFS (Self-certifying File System) client and server daemons"
 HOMEPAGE="http://www.fs.net/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="ssl"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 		>=dev-libs/gmp-4.1
