@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lsof
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.31 2005/01/27 18:20:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.32 2005/02/05 11:17:31 hansmi Exp $
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> lsof-4.73.ebuild:
+  Stable on ppc.
 
   27 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> lsof-4.73.ebuild:
   Stable on sparc
