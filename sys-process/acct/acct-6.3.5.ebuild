@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5.ebuild,v 1.3 2005/03/04 14:40:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5.ebuild,v 1.4 2005/03/09 00:34:53 vapier Exp $
 
 inherit eutils
 
@@ -20,14 +20,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.diff
-	rm -f ansi2knr.1 last.1 #84046
 }
 
 src_install() {
 	dobin ac last lastcomm || die "dobin failed"
 	dosbin dump-utmp dump-acct accton sa || die "dosbin failed"
 	doinfo accounting.info
-	doman *.[18]
+	doman {ac,lastcomm}.1 {accton,sa}.8
 	dodoc AUTHORS ChangeLog INSTALL NEWS README ToDo
 	keepdir /var/account
 	newinitd "${FILESDIR}"/acct.rc6 acct
