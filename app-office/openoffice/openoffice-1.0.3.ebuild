@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.1 2003/04/10 20:44:12 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.2 2003/04/10 20:52:59 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -23,14 +23,66 @@
 #
 # Todo:
 #
-#   Get support going for installing a custom language pack.  Also
-#   need to be able to install more than one language pack.
+#  Support for installing more than one language pack.
+#  Support for installing native-dictionaries. (maybe ooodi is enough?)
+
+# Language Check
+[ -z ${LANGUAGE} ] && LANGUAGE=01
+
+case ${LANGUAGE} in
+	01|07|33|34|35|39|42|46|49|81|82|86|88)
+		LHELP=${LANGUAGE}
+		;;
+	*)
+		LHELP=01
+		HSUPPORT=false
+		;;
+esac
+case ${LANGUAGE} in
+	01|03|07|30|31|33|34|35|34c|37|39|45|46|48|49|55|66|81|82|86|88|90|91|96|97)
+		LANGUAGE=${LANGUAGE}
+		;;
+	*)
+		LANGUAGE=01
+		LSUPPORT=false
+		;;
+esac
+case $LANGUAGE in
+	# ENUS is always set
+	# 01) LENV="RES_ENUS";;
+	03) LENV="RES_PORT";;
+	07) LENV="RES_RUSS";;
+	30) LENV="RES_GREEK";;
+	33) LENV="RES_FREN";;
+	34) LENV="RES_SPAN";;
+	35) LENV="RES_FINN";;
+	34c|37) LENV="RES_CAT";;
+	39) LENV="RES_ITAL";;
+	45) LENV="RES_DAN";;
+	46) LENV="RES_SWED";;
+	48) LENV="RES_POL";;
+	49) LENV="RES_GER";;
+	55) LENV="RES_PORTBR";;
+	66) LENV="RES_THAI";;
+	81) LENV="RES_JAPN";;
+	82) LENV="RES_KOREAAN";;
+	86) LENV="RES_CHINSIM";;
+	88) LENV="RES_CHINTRAD";;
+	90) LENV="RES_TURK";;
+	91) LENV="RES_HINDI";;
+	96) LENV="RES_ARAB";;
+	97) LENV="RES_HEBREW";;
+esac
 
 inherit flag-o-matic eutils
 # Compile problems with these ...
+
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
 replace-flags "-O3" "-O2"
+
+ALLOWED_FLAGS="-O -O1 -O2 -Os -mcpu -march -pipe"
+strip-flags
 
 # Enable Bytecode Interpreter for freetype ...
 append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
@@ -59,7 +111,9 @@ SRC_URI="http://ny1.mirror.openoffice.org/stable/${PV}/OOo_${PV}_source.tar.bz2
 	http://sf1.mirror.openoffice.org/stable/${PV}/OOo_${PV}_source.tar.bz2
 	http://www.stlport.org/archive/STLport-${STLP_VER}.tar.gz
 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
-	mirror://sourceforge/freetype/freetype-${FT_VER}.tar.bz2"
+	mirror://sourceforge/freetype/freetype-${FT_VER}.tar.bz2
+	ftp://ftp.services.openoffice.org/pub/OpenOffice.org/contrib/helpcontent/helpcontent_${LHELP}_unix.tgz"
+
 HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
@@ -86,7 +140,6 @@ DEPEND="${RDEPEND}
 #
 # Azarah -- 10 April 2002
 export LS_COLORS=""
-
 
 pkg_setup() {
 
@@ -145,12 +198,39 @@ pkg_setup() {
 	ewarn " package and use agressive CFLAGS, lower the CFLAGS and try to  "
 	ewarn " merge again.					               "
 	ewarn "****************************************************************"
+
+	ewarn "****************************************************************"
+	ewarn " Selected Lanuage: ${LANGUAGE}                                  "
+	ewarn "                                                                "
+	ewarn " To build Openoffice in your native language start emerge with  "
+	ewarn "                LANGUAGE=XX emerge openoffice                   "
+	ewarn " XX is the telephon-code of your country. To see all supported  "
+	ewarn " languages visit                                                "
+	ewarn "   http://l10n.openoffice.org/all_supported_languages.html      "
+	ewarn "                                                                "
+	ewarn " To install language specified dictionaries emerge ooodi        "
+	ewarn "****************************************************************"
+
+	if [ "${LSUPPORT}" = "false" ];
+	then
+		ewarn "****************************************************************"
+		ewarn "         Your language is not supported by OpenOffice,          "
+		ewarn "             falling back to default value !!!                  "
+		ewarn "****************************************************************"
+	elif [ "${HSUPPORT}" = "false" ];
+	then
+		ewarn "****************************************************************"
+		ewarn "      There are no helpfiles available for your language,       "
+		ewarn "             falling back to default value !!!                  "
+		ewarn "****************************************************************"
+	fi
+	
 }
 
 oo_setup() {
 
-	unset LANGUAGE
-	unset LANG
+#	unset LANGUAGE
+#	unset LANG
 
 	export NEW_GCC="0"
 
@@ -293,8 +373,8 @@ src_compile() {
 	then
 		# Build uses its own env with $PATH, etc, so
 		# we take the easy way out. (Az)
-		export CC="/usr/bin/ccache/ccache ${CC}"
-		export CXX="/usr/bin/ccache/ccache ${CXX}"
+		export CC="/usr/bin/ccache ${CC}"
+		export CXX="/usr/bin/ccache ${CXX}"
 	fi
     
 	# Enable distcc for this build (Az)
@@ -319,11 +399,13 @@ src_compile() {
 	rm -f config.cache
 	./configure --enable-gcc3 \
 		--with-jdk-home=${JAVA_HOME} \
-		--with-lang=ALL\
 		--with-x || die
 	
 	cd ${S}
 	get_EnvSet
+
+	# Set language
+	[ ${LENV} ] && echo "setenv ${LENV} \"true\"" >> ${S}/${LinuxEnvSet}
 	
 	# Do not include /usr/include in header search path, and
 	# same thing for internal gcc include dir, as gcc3 handles
@@ -389,6 +471,12 @@ src_compile() {
 		cd ${S}
 	fi
 
+	# unpack help files
+	mkdir -p ${S}/solver/641/unxlngi4.pro/pck
+	cd ${S}/solver/641/unxlngi4.pro/pck
+	tar -xzf ${DISTDIR}/helpcontent_${LHELP}_unix.tgz
+	cd ${S}
+
 	einfo "Building OpenOffice.org..."
 	# Setup virtualmake
 	export maketype="tcsh"
@@ -405,16 +493,6 @@ src_install() {
 	addpredict "/user"
 	addpredict "/share"
 	addpredict "/dev/dri"
-	# This allows us to change languages without editing the ebuild.
-	#
-	#   languages1="ENUS,FREN,GERM,SPAN,ITAL,DTCH,PORT,SWED,POL,RUSS"
-	#   languages2="DAN,GREEK,TURK,CHINSIM,CHINTRAD,JAPN,KOREAN,CZECH,CAT"
-	#
-	# Supported languages for localized help files
-	#
-	#   helplangs="ENUS,FREN,GERM,SPAN,ITAL,SWED"
-	#
-	[ -z "${LANGUAGE}" ] && LANGUAGE=01
 
 	get_EnvSet
 	
