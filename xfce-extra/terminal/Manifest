@@ -1,4 +1,6 @@
 MD5 d6aa3a9313b02126a0699c5a492d0753 terminal-0.2.0_pre2.ebuild 827
-MD5 9525b926edb246c863270f49a9ee251b ChangeLog 404
+MD5 6f279d4505b85177cf25aabb75b96283 terminal-0.2.0.ebuild 874
+MD5 c87b597e824730adbfe0144cd77cb7d2 ChangeLog 522
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 fbe5312dfbaa7dc57b4e6dce5fe4296a files/digest-terminal-0.2.0 67
 MD5 9a3b35ca7110998b046a6c2476cf5caa files/digest-terminal-0.2.0_pre2 71
