@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/kanjipad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.3 2003/02/12 04:22:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.4 2003/07/21 17:23:58 mholzer Exp $
+
+  22 Jul 2003; Martin Holzer <mholzer@gentoo.org> kanjipad-1.2.3.ebuild:
+  Fixed DEPEND. Closes #24969.
 
 *kanjipad-1.2.3 (10 Jul 2002)
 
