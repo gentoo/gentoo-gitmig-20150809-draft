@@ -1,20 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26afb2bed9be3302511fc2d31edc0e99 ksensors-0.7.3.ebuild 614
-MD5 f08a6fcb13771c9a44c72bbb63ddea04 ksensors-0.7.2-r1.ebuild 668
-MD5 26c1b7ffcb4dc7c74e457154ad4fa152 ksensors-0.7.2.ebuild 614
-MD5 dfebc9bddbac37669b88af11fd303d92 ChangeLog 2969
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 5735dac5885bda1ec14e3015ad47f87a files/startupcrash.diff 618
-MD5 7e219e54436163ee72f99d92a157215a files/digest-ksensors-0.7.2 66
+MD5 dfebc9bddbac37669b88af11fd303d92 ChangeLog 2969
+MD5 26afb2bed9be3302511fc2d31edc0e99 ksensors-0.7.3.ebuild 614
 MD5 5fd4df1755f6106cd51487b5399f82ee files/digest-ksensors-0.7.3 66
-MD5 8c18772cb6400af497858e0c7f9658ec files/ksensors-0.7.2-scaling.diff 2085
-MD5 7e219e54436163ee72f99d92a157215a files/digest-ksensors-0.7.2-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIeGRI1lqEGTUzyQRAk3BAJwLkDLdvqG6ZuhiMzR/vcPMoHlOSwCdFFZE
-ssDbPouaqpDGPuAfYf33UZk=
-=rloB
------END PGP SIGNATURE-----
