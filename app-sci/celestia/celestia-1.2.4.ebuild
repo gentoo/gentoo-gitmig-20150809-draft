@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.2.4.ebuild,v 1.2 2004/06/24 21:54:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.2.4.ebuild,v 1.3 2004/07/14 01:50:00 agriffis Exp $
 
 inherit flag-o-matic
 
 IUSE="gtk gnome"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Celestia is a free real-time space simulation that lets you experience our universe in three dimensions"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.shatters.net/celestia"
