@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/lgeneral
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.7 2004/07/24 02:45:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.8 2004/12/29 13:40:57 slarti Exp $
+
+  29 Dec 2004; Tom Martin <slarti@gentoo.org> lgeneral-1.2_beta2.ebuild:
+  Marked ~amd64.
 
   23 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   lgeneral-1.2_beta2.ebuild:
