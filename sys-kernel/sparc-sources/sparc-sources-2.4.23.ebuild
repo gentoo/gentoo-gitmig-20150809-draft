@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.23.ebuild,v 1.1 2003/12/01 17:23:07 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.23.ebuild,v 1.2 2003/12/01 20:03:56 mr_bones_ Exp $
 
 IUSE="build ultra1"
 
@@ -48,7 +48,7 @@ src_unpack() {
 pkg_postinst() {
 
 	kernel_pkg_postinst
-	
+
 	# Display SUN Ultra 1 HME warning if it can be detected or if the machinetype is unknown.
 	if [ ! -r "/proc/openprom/name" -o "`cat /proc/openprom/name 2>/dev/null`" = "'SUNW,Ultra-1'" ]; then
 		einfo
