@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.340 2004/06/11 08:43:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.341 2004/06/11 09:24:03 spyderous Exp $
+
+  11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  PATCH_VER 2.1.25.5. Security update:
+  9920_all_4.3.0-xdm-open-chooserfd-CAN-2004-0419.patch and
+  9921_all_4.3.0-xdm-open-chooserfd-CAN-2004-0419-ipv6.patch. They stop xdm from
+  ignoring its \DisplayManager.requestPort" setting. xdm opens its "chooserFd"
+  TCP socket on all network interfaces without this patch (xf86 #1376). The two
+  patches are mutually exclusive; 9921 applies in conjunction with patch 2000.
 
 *xfree-4.3.0-r7 (11 Jun 2004)
 
