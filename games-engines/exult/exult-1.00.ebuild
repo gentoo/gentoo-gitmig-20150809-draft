@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.00.ebuild,v 1.3 2004/02/03 01:08:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.00.ebuild,v 1.4 2004/02/29 10:32:28 vapier Exp $
 
 inherit games
 
 DESCRIPTION="an Ultima 7 game engine that runs on modern operating systems"
-SRC_URI="mirror://sourceforge/exult/${P}.tar.gz"
 HOMEPAGE="http://exult.sourceforge.net/"
+SRC_URI="mirror://sourceforge/exult/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc ~sparc"
 
 RDEPEND=">=media-libs/libsdl-1.2*
@@ -25,7 +25,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	egamesconf
+	egamesconf || die
 	emake || die
 }
 
