@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gplcver/gplcver-1.10j.ebuild,v 1.2 2004/07/26 17:47:43 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gplcver/gplcver-1.10j.ebuild,v 1.3 2004/07/27 00:43:58 chrb Exp $
 
 MY_PN=gpl-cver
 
@@ -20,10 +20,10 @@ src_unpack() {
 }
 
 src_compile(){
-	cd ${S}/src 
+	cd ${S}/src
 	emake -f makefile.lnx || die
-	cd ${S}/vcddiff.dir/src 
-	emake -f makefile.lnx || die 
+	cd ${S}/vcddiff.dir/src
+	emake -f makefile.lnx || die
 }
 
 src_install() {
