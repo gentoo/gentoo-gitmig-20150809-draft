@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-volnorm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/ChangeLog,v 1.6 2004/05/10 21:11:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/ChangeLog,v 1.7 2004/06/18 06:33:54 eradicator Exp $
+
+  17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-volnorm-0.4.1-r1.ebuild:
+  Stable amd64.
 
   10 May 2004; Travis Tilley <lv@gentoo.org> xmms-volnorm-0.4.1-r1.ebuild:
   added gnuconfig_update and ~amd64 keyword

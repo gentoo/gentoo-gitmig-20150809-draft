@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.4.1-r1.ebuild,v 1.8 2004/05/10 21:11:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.4.1-r1.ebuild,v 1.9 2004/06/18 06:33:54 eradicator Exp $
 
 inherit gnuconfig eutils
 
@@ -15,14 +15,14 @@ HOMEPAGE="http://volnorm.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha ~amd64"
+KEYWORDS="x86 ppc alpha amd64"
 
 DEPEND="media-sound/xmms"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	gnuconfig_update
-	econf || die
-	emake || die
 }
 
 src_install() {

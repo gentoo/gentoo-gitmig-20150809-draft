@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-sndfile
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/ChangeLog,v 1.3 2004/03/26 22:27:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/ChangeLog,v 1.4 2004/06/18 06:33:18 eradicator Exp $
+
+  17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-sndfile-1.2.ebuild:
+  Stable amd64.
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-sndfile-1.1.ebuild, xmms-sndfile-1.2.ebuild:

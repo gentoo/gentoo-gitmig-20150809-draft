@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dscope/xmms-dscope-1.3.1.ebuild,v 1.7 2004/04/22 06:20:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dscope/xmms-dscope-1.3.1.ebuild,v 1.8 2004/06/18 06:20:07 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.shell.linux.se/bm/f/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	media-sound/xmms"
