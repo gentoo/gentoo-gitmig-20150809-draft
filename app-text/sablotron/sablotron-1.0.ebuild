@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.ebuild,v 1.2 2003/09/13 03:39:00 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.ebuild,v 1.3 2004/01/02 22:02:15 azarah Exp $
+
+inherit libtool
 
 MY_PN="Sablot"
 MY_P="${MY_PN}-${PV}"
@@ -23,7 +25,11 @@ DOCS="INSTALL README README_JS RELEASE src/TODO"
 
 src_compile() {
 
-	local myconf=""
+	local myconf=
+
+	# Please do not remove, else we get references to PORTAGE_TMPDIR
+	# in /usr/lib/libsablot.la ...
+	elibtoolize
 
 	use perl \
 		&& myconf="${myconf} --enable-perlconnect"

@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.12 2003/12/30 17:51:22 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.13 2004/01/02 22:02:15 azarah Exp $
 
-S=${WORKDIR}/Sablot-${PV}
+inherit libtool
+
+S="${WORKDIR}/Sablot-${PV}"
 DESCRIPTION="An XSLT Parser in C++"
 SRC_URI="http://download-2.gingerall.cz/download/sablot/Sablot-${PV}.tar.gz"
 HOMEPAGE="http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act"
@@ -15,7 +17,12 @@ DEPEND=">=dev-libs/expat-1.95.6-r1
 	dev-perl/XML-Parser"
 
 src_compile() {
-	local myconf
+	local myconf=
+
+	# Please do not remove, else we get references to PORTAGE_TMPDIR
+	# in /usr/lib/libsablot.la ...
+	elibtoolize
+
 	use perl && myconf="--enable-perlconnect"
 
 	# rphillips
