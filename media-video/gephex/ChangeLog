@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gephex
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.3 2004/04/19 18:03:59 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.4 2004/04/27 20:53:09 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gephex-0.0.4-r1.ebuild,
+  gephex-0.0.4.ebuild:
+  Add inherit eutils
 
 *gephex-0.0.4 (14 Dec 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.15 2004/04/13 17:28:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.16 2004/04/27 20:54:20 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> kino-0.6.4.ebuild:
+  Add inherit eutils
 
   13 Apr 2004; Martin Holzer <mholzer@gentoo.org> :
   updating digest. closes 47534

@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1.ebuild,v 1.3 2003/10/12 16:37:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1.ebuild,v 1.4 2004/04/27 20:52:02 agriffis Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A streaming video server."

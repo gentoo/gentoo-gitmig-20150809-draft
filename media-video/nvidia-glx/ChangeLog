@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.45 2004/04/20 01:53:54 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.46 2004/04/27 21:01:01 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> nvidia-glx-1.0.4363.ebuild,
+  nvidia-glx-1.0.4496-r1.ebuild, nvidia-glx-1.0.4496.ebuild,
+  nvidia-glx-1.0.4499.ebuild, nvidia-glx-1.0.5328-r1.ebuild,
+  nvidia-glx-1.0.5332-r1.ebuild, nvidia-glx-1.0.5332-r2.ebuild,
+  nvidia-glx-1.0.5336-r2.ebuild:
+  Add inherit eutils
 
   19 Apr 2004; Travis Tilley <lv@gentoo.org> nvidia-glx-1.0.5332-r2.ebuild:
   marking stable on amd64 to close bug #48409

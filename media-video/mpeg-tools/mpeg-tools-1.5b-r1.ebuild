@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r1.ebuild,v 1.2 2004/02/25 15:14:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r1.ebuild,v 1.3 2004/04/27 20:59:53 agriffis Exp $
+
+inherit eutils
 
 MY_PN=mpeg_encode
 S=${WORKDIR}/${MY_PN}

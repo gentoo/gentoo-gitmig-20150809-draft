@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/mgavideo-0.1.0.ebuild,v 1.6 2003/07/13 02:39:37 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/mgavideo-0.1.0.ebuild,v 1.7 2004/04/27 20:57:08 agriffis Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}/driver
 DESCRIPTION="Matrox Marvel G200/G400/Rainbow Runner G-series V4L I and II

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/spca50x
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca50x/ChangeLog,v 1.1 2004/02/23 08:02:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca50x/ChangeLog,v 1.2 2004/04/27 21:02:47 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> spca50x-0.30.ebuild:
+  Add inherit eutils
 
 *spca50x-0.30 (23 Feb 2004)
 

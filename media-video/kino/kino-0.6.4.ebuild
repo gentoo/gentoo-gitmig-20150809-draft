@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.6.4.ebuild,v 1.5 2004/01/29 18:22:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.6.4.ebuild,v 1.6 2004/04/27 20:54:20 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"

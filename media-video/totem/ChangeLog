@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.29 2004/04/03 01:04:47 foser Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.30 2004/04/27 21:03:34 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> totem-0.99.8-r2.ebuild:
+  Add inherit eutils
 
   03 Apr 2004; foser <foser@gentoo.org> totem-0.99.*.ebuild :
   Fix gst deps to 0.6
