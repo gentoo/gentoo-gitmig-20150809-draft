@@ -1,8 +1,8 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.25 2003/12/14 01:22:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.26 2003/12/14 03:49:16 gmsoft Exp $
 
-  14 Dec 2003; root <root@gentoo.org> elfutils-0.84.ebuild:
+  14 Dec 2003; Guy Martin <gmsoft@gentoo.org> elfutils-0.84.ebuild:
   Marked stable on hppa.
 
   14 Nov 2003; Brad House <brad_mssw@gentoo.org> elfutils-0.89.ebuild:
