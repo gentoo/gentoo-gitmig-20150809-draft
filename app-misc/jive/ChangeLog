@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jive
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.5 2004/06/24 22:17:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.6 2004/07/10 12:55:06 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> jive-1.1.ebuild:
+  Marked ~amd64.
 
   06 Apr 2004; Jason Wever <weeve@gentoo.org> jive-1.1.ebuild:
   Added ~sparc keyword wrt bug #46840.

@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a18f472cd94f17974156d4e7e0d5f0a5 ChangeLog 650
-MD5 a5760d1f15df418676045b2c056a0e0d jive-1.1.ebuild 592
+MD5 2b8282005ef6cc91b49f597edcdaa8c5 jive-1.1.ebuild 599
+MD5 6f0cb107903ff8d81e3b10f3a18e5c04 ChangeLog 729
 MD5 a18e40bb9b11ee8968b3b50cde5c6e13 files/digest-jive-1.1 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35R4HTu7gpaalycRAmLbAJ4z5RbeP8SJoBwGvCzPPzLN934aQQCgnYtF
-R0Ohrg73GNbVfPaeJ/UlLUU=
-=EtvN
------END PGP SIGNATURE-----
