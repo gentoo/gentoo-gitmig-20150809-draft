@@ -5,5 +5,9 @@
 	<name>Chris PeBenito</name>
 	<description>Primary Maintainer</description>
 </maintainer>
-<longdescription>Base required libraries for SELinux userland</longdescription>
+<longdescription>
+Libselinux provides an API for SELinux applications to get and set
+process and file security contexts and to obtain security policy
+decisions.  Required for any applications that use the SELinux API.
+</longdescription>
 </pkgmetadata>
