@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.83 2004/12/11 23:44:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.84 2004/12/18 22:13:13 spb Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -124,10 +124,13 @@ apply_vim_patches() {
 
 	# Scan the patches, applying them only to files that either
 	# already exist or that will be created by the patch
+	#
+	# Changed awk to gawk in the below; BSD's awk chokes on it
+	# --spb, 2004/12/18
 	einfo "Filtering vim patches ..."
 	p=${WORKDIR}/${VIM_ORG_PATCHES%.tar*}.patch
 	ls ${WORKDIR}/vimpatches | sort | \
-	while read f; do gzip -dc ${WORKDIR}/vimpatches/${f}; done | awk '
+	while read f; do gzip -dc ${WORKDIR}/vimpatches/${f}; done | gawk '
 		/^Subject: Patch/ {
 			if (patchnum) {printf "\n" >"/dev/stderr"}
 			patchnum = $3
