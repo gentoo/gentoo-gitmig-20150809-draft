@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/jefferson
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/jefferson/ChangeLog,v 1.6 2004/06/24 23:32:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/jefferson/ChangeLog,v 1.7 2004/06/29 00:30:17 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> jefferson-3.1.ebuild,
+  jefferson-3.2.ebuild:
+  QA: IUSE, kde-base -> kde, newdepend -> DEPEND, need-kde after R/DEPEND
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> jefferson-3.1.ebuild,
   jefferson-3.2.ebuild:
