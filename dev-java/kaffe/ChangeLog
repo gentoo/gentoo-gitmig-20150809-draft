@@ -1,12 +1,18 @@
 # ChangeLog for dev-lang/kaffe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.2 2002/04/12 21:23:59 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.3 2002/05/04 15:24:21 karltk Exp $
 
 
 *kaffe-1.0.6-r2 (12 Apr 2002)
-  12 Apr 2002; Spider <spider@gentoo.org>:
-  update with new libpng version
 
+  12 Apr 2002; Spider <spider@gentoo.org> kaffe-1.0.6-r2.ebuild :
+
+  Updated with new libpng version.
+
+  04 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> kaffe-1.0.6-r2.ebuild :
+
+  Now applies the 1.0.6 gentoo-specific patch again, so that this thing 
+  compiles with newer auto-tools.
 
 *kaffe-1.0.6-r1 (1 Feb 2002)
 
