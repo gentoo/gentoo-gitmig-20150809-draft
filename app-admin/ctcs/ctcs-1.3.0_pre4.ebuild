@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.12 2003/03/11 21:11:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.13 2003/03/24 23:36:14 drobbins Exp $
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -19,7 +19,7 @@ RDEPEND="dev-util/dialog
 	sys-apps/e2fsprogs
 	sys-apps/fileutils
 	sys-apps/grep
-	sys-apps/modutils
+	virtual/modutils
 	sys-apps/psmisc
 	sys-apps/sed
 	sys-apps/sh-utils
