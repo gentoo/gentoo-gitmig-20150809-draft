@@ -1,0 +1,25 @@
+--- licq.cpp	2003-01-18 02:29:32.000000000 +0100
++++ licq.cpp.patched	2003-02-07 14:29:22.000000000 +0100
+@@ -355,9 +355,19 @@
+     }
+     else  // If no plugins, try qt-gui
+     {
+-      if (LoadPlugin("qt-gui", argc, argv) == NULL)
+-        if (LoadPlugin("kde-gui", argc, argv) == NULL)
+-          return false;
++      if (LoadPlugin("qt-gui", argc, argv) == NULL) {
++				printf("no qt-gui");
++        if (LoadPlugin("kde-gui", argc, argv) == NULL) {
++					printf("no kde-gui");
++					if (LoadPlugin("jons-gtk-gui", argc, argv) == NULL) {
++						printf("no jons-gtk-gui");
++						if (LoadPlugin("console", argc, argv) == NULL) {
++							printf("no console-gui");
++							return false;
++						} //console
++					} // jons-gtk-gui
++				} // kde-gui
++			} // qt-gui
+     }
+   }
+ 

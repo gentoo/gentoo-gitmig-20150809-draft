@@ -1,6 +1,6 @@
 # ChangeLog for net-im/licq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.15 2003/02/07 12:18:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.16 2003/02/07 13:37:54 lordvan Exp $
 
 *licq-1.2.4-r2 (07 Feb 2003)
 
@@ -13,6 +13,13 @@
   portage(!!).  Qt and GTK are USE dependent, and the console, remote
   management and auto-respond are built by default now.  Closes bug #15084
   by Bruno Lustosa <bruno@lustosa.net>
+
+  07 Feb 2003; Thomas Raschbacher <lordvan@gentoo.org> licq-1.2.4-r2.ebuild
+  files/licq.cpp-plugins.patch :
+
+  Console plugin only gets installed if ncurses is in USE.
+  Patch for src/licq.cpp to check for gtk and console plugin too if there
+  is no qt or kde plugin.
 
 *licq-1.2.4-r1 (31 Jan 2003)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r2.ebuild,v 1.2 2003/02/07 12:06:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r2.ebuild,v 1.3 2003/02/07 13:37:54 lordvan Exp $
 
-IUSE="ssl socks5 qt kde"
+IUSE="ssl socks5 qt kde ncurses"
 
 use kde && inherit kde-base
 use kde && need-kde 3.0
@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 DEPEND="${DEPEND}
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	qt?  ( >=x11-libs/qt-3.0.0 )
-	gtk? ( =x11-libs/gtk+-1.2* )"
+	gtk? ( =x11-libs/gtk+-1.2* )
+	ncurses? ( >=sys-libs/ncurses-5.3 )"
 
 SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 SLOT="2"
@@ -25,7 +26,11 @@ src_compile() {
 	local first_conf
 	use ssl		|| first_conf="${first_conf} --disable-openssl"
 	use socks5	&& first_conf="${first_conf} --enable-socks5"
-	
+
+	# check for other plugins than qt or kde by default too
+	patch -p0 ${S}/src/licq.cpp < ${FILESDIR}/licq.cpp-plugins.patch
+	einfo "Patched licq.cpp"
+		
 	econf ${first_conf} || die
 	emake || die
 
@@ -65,10 +70,13 @@ src_compile() {
 	fi
 
 	# Now the console plug-in
-	cd ${S}/plugins/console
-	einfo "Compiling the Console plug-in"
-	econf || die
-	emake || die
+	if [ "`use ncurses `" ]
+	then
+	    cd ${S}/plugins/console
+	    einfo "Compiling the Console plug-in"
+	    econf || die
+	    emake || die
+	fi
 
 	# The Auto-Responder plug-in
 	cd ${S}/plugins/auto-reply
@@ -114,10 +122,13 @@ src_install() {
 		dodoc TODO
 	fi
 
-	cd ${S}/plugins/console
-	make DESTDIR=${D} install || die
-	docinto plugins/console
-	dodoc README
+	if [ "`use ncurses`" ]
+	then
+	    cd ${S}/plugins/console
+	    make DESTDIR=${D} install || die
+	    docinto plugins/console
+	    dodoc README
+	fi
 
 
 	cd ${S}/plugins/auto-reply
