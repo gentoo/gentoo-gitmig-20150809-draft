@@ -1,6 +1,6 @@
 diff -urN ebview-0.3.2.ORIG/configure.in ebview-0.3.2/configure.in
 --- ebview-0.3.2.ORIG/configure.in	2003-12-26 20:52:09.000000000 +0900
-+++ ebview-0.3.2/configure.in	2004-01-04 01:43:06.219379952 +0900
++++ ebview-0.3.2/configure.in	2004-01-07 16:37:57.047564424 +0900
 @@ -21,8 +21,6 @@
  AC_SUBST(GTK_CFLAGS)
  AC_SUBST(GTK_LIBS)
@@ -18,10 +18,12 @@ diff -urN ebview-0.3.2.ORIG/configure.in ebview-0.3.2/configure.in
  AC_TYPE_PID_T
  AC_HEADER_TIME
  AC_TYPE_OFF_T
-@@ -57,5 +56,6 @@
- AC_SUBST(RES_FILE)
- AC_SUBST(EXTRA_LIBS)
+@@ -42,6 +41,8 @@
+ dnl Checks for library functions.
+ AC_CHECK_FUNCS(mkdir select strdup strtol)
  
 +eb_LIB_EB3
++
+ AC_DEFINE_UNQUOTED(LOCALEDIR, "${PREFIX}/share/locale", Where .mo file is.)
+ AC_DEFINE_UNQUOTED(PACKAGEDIR, "${PREFIX}/share/${PACKAGE}", Where EBView data goes.)
  
- AC_OUTPUT(po/Makefile.in src/Makefile Makefile m4/Makefile data/Makefile doc/Makefile data/about.jp data/about.en)
