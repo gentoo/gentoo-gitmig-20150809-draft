@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.14 2004/11/22 19:25:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.15 2004/11/23 07:33:53 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -144,13 +144,6 @@ DESCRIPTION="An X11 implementation maintained by the X.Org Foundation"
 HOSTCONF="config/cf/host.def"
 
 pkg_setup() {
-	#################################################
-	### GET RID OF THIS ONCE THIS EBUILD IS READY ###
-	#################################################
-	if [ -z "${BREAKME}" ]; then
-		die "Set the BREAKME variable to emerge this. It's in development. Stop using it."
-	fi
-
 	FILES_DIR="${WORKDIR}/files"
 	PATCHDIR="${WORKDIR}/patch"
 	EXCLUDED="${PATCHDIR}/excluded"
