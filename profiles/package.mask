@@ -24,7 +24,8 @@
 
 # sunflare@gentoo.org (09 Jul 2002)
 # Masked because readline-4.2 is masked in default-1.0.
-net-p2p/mutella-0.4
+# typo fix by drobbins:
+=net-p2p/mutella-0.4
 
 # lostlogic@gentoo.org (09 Jul 2002)
 # Masked for testing md5 support
