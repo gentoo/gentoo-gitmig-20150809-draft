@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.3 2003/06/17 19:14:02 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.4 2003/06/17 19:33:18 latexer Exp $
+
+  17 Jun 2003; Peter Johanson <latexer@gentoo.org> dhcpv6-0.8.ebuild,
+  files/negative-iaid-patch-0.8:
+  Patch to fix negative iaid printing, and minor issue with 2.5.x kernels
+  http://sourceforge.net/mailarchive/forum.php?thread_id=2581877&forum_id=28420
 
   17 Jun 2003; Peter Johanson <latexer@gentoo.org> dhcpv6-0.7.ebuild,
   dhcpv6-0.8.ebuild:

@@ -1,5 +1,6 @@
 MD5 a17f7fbf498be12669ebd2e0f7bbf6a9 dhcpv6-0.7.ebuild 887
-MD5 588ceaae0e5021f9ec1dbb269a527217 dhcpv6-0.8.ebuild 897
+MD5 9fc2e2ce18ec7216e20e969e586de0de dhcpv6-0.8.ebuild 981
 MD5 4e2797adaab2fc3696e92cfa71bd3954 ChangeLog 652
+MD5 3ccbf593dfca962e8b6490e2f792b429 files/negative-iaid-patch-0.8 17822
 MD5 d464c5bf3482796ca4a459eea6c5d7ef files/digest-dhcpv6-0.7 58
 MD5 6801b43613971e5a4afed325ed34368e files/digest-dhcpv6-0.8 58
