@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1561e69d0ad9558b143eb0736529017e canny-0.1.0.ebuild 796
+MD5 ebd2e45000c1bb76618f45e29b3c532a ChangeLog 354
+MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
+MD5 b5c80d49f9702f332ac9c41904ad1e0e files/digest-canny-0.1.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2oQV/UDVUK2NELYRAlckAJ9uXSRAnXYnn5Auzo9SUPPtFhjrqwCfUxyU
+mx/NJuoKAkoHrcETM1pzLkM=
+=NnjS
+-----END PGP SIGNATURE-----
