@@ -1,5 +1,5 @@
-MD5 725d844aa70e24d67cd931d50af6f725 Config-Tiny-1.6.ebuild 596
-MD5 b23ff35241f5eedb0dc573417c0fea04 Config-Tiny-1.ebuild 576
+MD5 6d00e28abe2eba471f389a320b597507 Config-Tiny-1.6.ebuild 585
+MD5 ae2671d17f9a48345d17da42a6598fe9 Config-Tiny-1.ebuild 565
 MD5 fa61c4ed46da156aa119c0e8eb5d89aa ChangeLog 569
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 35dd30e1c005ae74ac7336866bf66758 files/digest-Config-Tiny-1.6 66
