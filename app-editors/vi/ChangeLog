@@ -1,8 +1,13 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.5 2002/08/07 17:54:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.6 2002/09/05 07:37:22 azarah Exp $
 
-*vi-3.7-r1 (06 Aug 2002)
+*vi-3.7-r3 (05 Sep 2002)
+
+  05 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add libtermcap-compat to DEPEND.
+
+*vi-3.7-r2 (06 Aug 2002)
 
   06 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
   Change it to use the buildin termlib instead of ncurses.  This should
