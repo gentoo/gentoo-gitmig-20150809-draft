@@ -26,7 +26,7 @@
 #define Freetype2LibDir        /usr/lib
 /* #define BuildFreetype2Library  YES */
 #define UseFontconfig          YES
-#define HasFontconfig          YES
+/* #define HasFontconfig          YES */
 #define SharedLibXft           NO
 #define SharedLibXft1          YES
 
