@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.30 2003/09/17 22:45:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.31 2003/09/26 23:36:30 robbat2 Exp $
+
+  26 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> cracklib-2.7-r7.ebuild:
+  inherit eutil for older portages
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> cracklib-2.7-r7.ebuild :
   ia64 keywords.

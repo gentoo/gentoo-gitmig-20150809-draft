@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.18 2003/09/17 22:45:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.19 2003/09/26 23:36:30 robbat2 Exp $
 
 IUSE=""
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 filter-flags "-fstack-protector"
 
