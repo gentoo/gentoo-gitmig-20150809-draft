@@ -1,0 +1,27 @@
+# ChangeLog for app-accessibility/dasher
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.1 2004/03/17 22:23:13 leonardop Exp $
+
+  13 Mar 2004; foser <foser@gentoo.org> metadata.xml :
+  Maintainership to gnome-accessibility
+
+*dasher-3.2.4 (10 Mar 2004)
+
+  10 Mar 2004; L. Boshell <leonardop@gentoo.org> dasher-3.2.4.ebuild:
+  New release. Misc ebuild cleanups.
+
+*dasher-3.2.1 (14 Dec 2003)
+
+  14 Dec 2003; Mike Gardiner <obz@gentoo.org> dasher-3.0.0.ebuild,
+  dasher-3.2.1.ebuild:
+  New version, removed keyword ~alpha from old version as its dependency (gtkmm)
+  isnt available for alpha
+
+*dasher-3.0.0 (16 Mar 2003)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> dasher-3.0.0.ebuild:
+  lock dep at gtkmm-1
+
+  16 Mar 2003; Seth Chandler <sethbc@gentoo.org>; dasher-3.0.0.ebuild:
+  added dasher to portage thanks to Gustavo Felisberto <gustavo@felisberto.net>
+
