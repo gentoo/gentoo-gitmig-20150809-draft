@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.44 2005/04/01 04:41:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.45 2005/04/02 18:14:38 mcummings Exp $
+
+  02 Apr 2005; Michael Cummings <mcummings@gentoo.org> -CGI-2.81.ebuild,
+  -CGI-2.93.ebuild, -CGI-2.97.ebuild, -CGI-2.98.ebuild, -CGI-2.99.ebuild:
+  Cleaning out old versions. Perl 5.8.2, our bottom base, came with CGI-3.00 -
+  any ebuilds for older versions are therefor suspect.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> CGI-3.05.ebuild:
   stable on ia64
