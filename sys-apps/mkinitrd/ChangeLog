@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mkinitrd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.10 2004/04/27 21:19:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.11 2004/06/20 20:33:07 kugelfang Exp $
+
+  20 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> mkinitrd-3.5.7-r2.ebuild:
+  Marked ~amd64.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> mkinitrd-3.5.7.ebuild:
   Add inherit eutils
