@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmium
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.8 2004/07/03 15:30:50 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.9 2004/07/14 21:05:06 dragonheart Exp $
+
+  15 Jul 2004; Daniel Black <dragonheart@gentoo.org> wmium-1.0.9.ebuild:
+  fixed S= dir according to bug #56012. Thanks to Michael Knight
+  <jedimike@gmail.com>
 
 *wmium-1.0.9 (03 Jul 2004)
 
