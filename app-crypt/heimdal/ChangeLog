@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.48 2004/09/13 22:44:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.49 2004/09/14 12:01:23 aliz Exp $
+
+  14 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> heimdal-0.6.3.ebuild:
+  Fixed fpic issues. Stable on amd64.
 
   13 Sep 2004; <solar@gentoo.org> files/heimdal-kadmind,
   files/heimdal-kpasswdd, heimdal-0.6.3.ebuild:

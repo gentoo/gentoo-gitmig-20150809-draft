@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.3.ebuild,v 1.2 2004/09/13 22:44:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.3.ebuild,v 1.3 2004/09/14 12:01:23 aliz Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~ia64 ~amd64 ~hppa ~mips"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~ia64 amd64 ~hppa ~mips"
 IUSE="ssl berkdb ipv6 krb4 ldap"
 PROVIDE="virtual/krb5"
 
@@ -39,6 +39,12 @@ src_unpack() {
 }
 
 src_compile() {
+	elibtoolize
+
+	aclocal -I cf || die "configure problem"
+	autoheader || die "configure problem"
+	automake -a || die "configure problem"
+	autoconf || die "configure problem"
 
 	local myconf="
 		$(use_with ipv6)
