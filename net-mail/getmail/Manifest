@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c25263504a2a5d454f9ce6ebc0ea355b ChangeLog 7705
-MD5 9110745bc603bae97aa52bbe6803a8bc getmail-4.2.5-r1.ebuild 1574
+MD5 158c49ae00742359b54005f3b53d235d getmail-4.2.5-r1.ebuild 1550
+MD5 8aadda0e6052196c4664f0e46e0da8f7 ChangeLog 7983
+MD5 234e12db615f55a592e6f968f0cbfb69 getmail-4.2.5.ebuild 1433
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 a1f7c1993dac5138f8ceec3fbbeac2d1 getmail-4.3.1-r1.ebuild 1567
-MD5 d936f63beeea1b70901d5f248b598471 getmail-4.3.2.ebuild 1564
-MD5 53e888d9078fe21bb7612c93f503dac6 getmail-4.2.5.ebuild 1457
-MD5 64f980c00906ae660682fe04ee5a112b getmail-4.2.6.ebuild 1460
-MD5 0db14d6ef935f5869b86b7eb91053398 getmail-4.3.0.ebuild 1460
-MD5 d270c361bfb5180314495e4f7f5a0483 getmail-4.3.1.ebuild 1462
-MD5 94d0d625767272d78892b2cde0e7b41d files/digest-getmail-4.2.5-r1 65
+MD5 3c80ce57eb3b93c3922c3426a76d5c74 getmail-4.3.2.ebuild 1540
+MD5 1cb8ff1565540d618b350013e1dc2d7e getmail-4.3.1-r1.ebuild 1543
+MD5 1d8f8855b6b97280fba307c218f8f3d7 getmail-4.3.0.ebuild 1436
+MD5 8d3f05527d005eefb0f7c3c48b366b50 getmail-4.2.6.ebuild 1436
+MD5 a1864fdae5245e3313610bd83d486fb5 getmail-4.3.1.ebuild 1435
+MD5 a76ebc67214c74977c6a6191b3c4362a files/python2.4-fix.patch 3119
 MD5 7e6a2b6fbe17c42e8eb34c370f432661 files/digest-getmail-4.3.1-r1 65
-MD5 96d91afcf030231acb461620cd8a638f files/digest-getmail-4.3.2 65
-MD5 94d0d625767272d78892b2cde0e7b41d files/digest-getmail-4.2.5 65
+MD5 94d0d625767272d78892b2cde0e7b41d files/digest-getmail-4.2.5-r1 65
 MD5 ff8ffca20907f92c1560cd57fc63bcce files/digest-getmail-4.2.6 65
+MD5 96d91afcf030231acb461620cd8a638f files/digest-getmail-4.3.2 65
 MD5 479383244ba9dcf857062301ec83d5d8 files/digest-getmail-4.3.0 65
 MD5 7e6a2b6fbe17c42e8eb34c370f432661 files/digest-getmail-4.3.1 65
-MD5 a76ebc67214c74977c6a6191b3c4362a files/python2.4-fix.patch 3119
+MD5 94d0d625767272d78892b2cde0e7b41d files/digest-getmail-4.2.5 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCENrcKRy60XGEcJIRAnkBAJoD/y9+lZrF38W4VFMVVmTPFhmTygCgs+IV
-uemGTPa9h7ocUrkRF7kB0Es=
-=eM5F
+iD8DBQFCFN+uQlM6RnzZP+IRAmt+AJ40+4TG4FrxnZfpygmQp7qPQLCgVQCeLFIW
+FXP3PgChhtjVUytNeBCRpXc=
+=6TwZ
 -----END PGP SIGNATURE-----
