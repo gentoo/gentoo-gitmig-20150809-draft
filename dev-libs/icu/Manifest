@@ -1,8 +1,11 @@
-MD5 a3b2692762746db4f5c71132f8f77229 ChangeLog 2215
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a9a64b372091e27282c0fcb03e880f57 ChangeLog 2311
 MD5 4935aa39bd9dfb68e60d2ed056f17eb3 icu-2.0.ebuild 681
 MD5 a4968d0015dbed503fcaf1efec1920f3 icu-2.2.ebuild 680
 MD5 d0f918340afdc0526684e23eccc7d298 icu-2.6.ebuild 687
-MD5 aad6dc4c69c62b61da8dab3cb30a4ed1 icu-2.8.ebuild 700
+MD5 63ec2cf865c94af039fd28b440cc8db5 icu-2.8.ebuild 710
 MD5 38e99cb876e48493df1684c2fadb56ac icu-2.6.2.ebuild 690
 MD5 b5865f551fa6dd21658e0f8349638c9f metadata.xml 223
 MD5 4866f088b0207e279913eb90e844d167 files/digest-icu-2.0 57
@@ -10,3 +13,10 @@ MD5 546320d3c303321e334f6d6203329c58 files/digest-icu-2.2 57
 MD5 01217bc604a5468b718ba3bb6dc35609 files/digest-icu-2.6 57
 MD5 baca077f88ee8644f9b8852926aa2013 files/digest-icu-2.8 57
 MD5 3b3b2d007397ef47733e105388d0f391 files/digest-icu-2.6.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsZlRArHZZzCEUG0RAsiuAKCKRuICjvXTadKaX/Gu09hHqzK+tACfT8HW
+5ahInYYzIqNzdE+CH08Ik5s=
+=8fEN
+-----END PGP SIGNATURE-----
