@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.363 2004/05/09 21:11:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.364 2004/05/10 01:20:51 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -266,6 +266,7 @@ net-misc/openssh:skey - Enable S/Key (Single use password) authentication suppor
 net-misc/openvpn:pthreads - Enable threading support for better performance of tls
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
+net-misc/zaptel:devfs26 - Devfs support for Linux-2.6
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
 net-p2p/bittorrent-theshadow:nopsyco - Disable PSYCO usage even if psyco is installed
 net-p2p/bittorrent-theshadow:psyco - Depend on PSYCO
