@@ -181,3 +181,4 @@ move sys-apps/tmpreaper app-admin/tmpreaper
 move sys-apps/tic98 media-gfx/tic98
 move sys-apps/buffer sys-block/buffer
 move sys-apps/disktype sys-block/disktype
+move sys-apps/tw_cli sys-block/tw_cli
