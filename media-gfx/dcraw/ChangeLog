@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.14 2005/03/12 23:36:36 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.15 2005/03/12 23:40:02 wschlich Exp $
+
+  13 Mar 2005; Wolfram Schlich <wschlich@gentoo.org> dcraw-6.08.ebuild,
+  dcraw-6.09.ebuild, dcraw-6.19.ebuild, dcraw-6.25.ebuild,
+  dcraw-6.31.ebuild, dcraw-6.35.ebuild:
+  fix wrong LICENSE
 
 *dcraw-7.02 (13 Mar 2005)
 
