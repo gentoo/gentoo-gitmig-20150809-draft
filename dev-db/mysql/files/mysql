@@ -1,5 +1,4 @@
-#!/bin/sh
-#RCUPDATE:3 4:71: Required for rc-update
+#!/sbin/runscript
 # Copyright Abandoned 1996 TCX DataKonsult AB & Monty Program KB & Detron HB
 # This file is public domain and comes with NO WARRANTY of any kind
 
@@ -10,13 +9,9 @@
 # the mysql server will be started when the machine is started.
 
 # Comments to support chkconfig on RedHat Linux
-# chkconfig: 2345 90 90
 # description: A very fast and reliable SQL database engine.
 
-.  /etc/rc.d/config/functions
-
 SERVICE="MySQL server"
-opts="start stop restart"
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 basedir=/usr
@@ -73,6 +68,9 @@ fi
 # Safeguard (relative paths, core dumps..)
 cd $basedir
 
+#depend() {
+#}
+
 start() {
     # Create db on first start
     if [ ! -d /var/mysql/mysql ]
@@ -113,8 +111,4 @@ restart () {
 	stop
 	start
 }
-
-doservice ${@}
-
-
 
