@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.28 2005/03/21 14:31:54 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.29 2005/04/03 14:24:40 greg_g Exp $
+
+*kaffeine-0.6-r1 (03 Apr 2005)
+
+  03 Apr 2005; Gregorio Guidi <greg_g@gentoo.org> +kaffeine-0.6-r1.ebuild:
+  Fix X threading issue (#86797).
 
 *kaffeine-0.6 (21 Mar 2005)
 
