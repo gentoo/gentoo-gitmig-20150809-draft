@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.16 2004/10/13 13:45:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.17 2004/10/17 09:48:00 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> kdewebdev-3.3.0-r1.ebuild:
+  stable on amd64.
 
 *kdewebdev-3.3.1 (13 Oct 2004)
 
