@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r11.ebuild,v 1.19 2005/01/01 15:13:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r13.ebuild,v 1.1 2005/02/12 12:24:13 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/managers/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="gpm nls samba ncurses X slang unicode"
 
 PROVIDE="virtual/editor"
@@ -19,12 +19,12 @@ PROVIDE="virtual/editor"
 DEPEND=">=sys-fs/e2fsprogs-1.19
 	ncurses? ( >=sys-libs/ncurses-5.2-r5 )
 	=dev-libs/glib-2*
+	dev-util/pkgconfig
 	pam? ( >=sys-libs/pam-0.72 )
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	slang? ( >=sys-libs/slang-1.4.9-r1 )
 	samba? ( >=net-fs/samba-3.0.0 )
 	unicode? ( >=sys-libs/slang-1.4.9-r1 )
-	dev-util/pkgconfig
 	X? ( virtual/x11 )"
 
 src_unpack() {
@@ -36,9 +36,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-find.patch
 	epatch ${FILESDIR}/${P}-cpan-2003-1023.patch
 	epatch ${FILESDIR}/${P}-can-2004-0226-0231-0232.patch.bz2
+	epatch ${FILESDIR}/${P}-can-2004-1004-1005-1092-1176.patch.bz2
 	epatch ${FILESDIR}/${P}-vfs.patch
 	epatch ${FILESDIR}/${P}-ftp.patch
 	epatch ${FILESDIR}/${P}-largefile.patch
+	epatch ${FILESDIR}/${P}-key.c.patch
 
 	if use unicode && use slang; then
 		epatch ${FILESDIR}/${P}-utf8.patch.bz2
@@ -101,6 +103,9 @@ src_install() {
 	doins ${FILESDIR}/ebuild.syntax
 	cd ${D}/usr/share/mc/syntax
 	epatch ${FILESDIR}/${P}-ebuild-syntax.patch
+
+	# http://bugs.gentoo.org/show_bug.cgi?id=71275
+	rm -f ${D}/usr/share/locale/locale.alias
 }
 
 pkg_postinst() {
