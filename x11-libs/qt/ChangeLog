@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.66 2003/05/22 02:08:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.67 2003/05/30 01:57:39 caleb Exp $
+
+  28 May 2003: Caleb Tennis <caleb@gentoo.org>
+  Removed the following old ebuilds:
+  qt-3.0.5, qt-3.0.5-r1
+  qt-3.1.0, qt-3.1.0-r1, qt-3.1.0-r2
+  qt-3.1.1, qt-3.1.1-r1
+  qt-3.1.2, qt-3.1.2-r1, qt-3.1.2-r2
+  This should leave "stable and unstable" ebuilds for all archs
 
   21 May 2003; Jason Wever <weeve@gentoo.org> qt-3.1.2-r3.ebuild:
   Changed ~sparc keyword to sparc.
