@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-monitor-core/ganglia-monitor-core-2.5.5.ebuild,v 1.1 2003/11/19 02:14:46 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-monitor-core/ganglia-monitor-core-2.5.5.ebuild,v 1.2 2004/01/13 05:28:17 spyderous Exp $
 
 DESCRIPTION="Ganglia is a scalable distributed monitoring system for high-performance computing systems such as clusters and Grids"
 HOMEPAGE="http://ganglia.sourceforge.net/"
@@ -39,7 +39,7 @@ src_install() {
 	doman mans/{gmetad.1,gmetric.1,gmond.1,gstat.1}
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 	dodir /var/lib/ganglia/rrds
-	fowners nobody.nobody /var/lib/ganglia/rrds
+	fowners nobody:nobody /var/lib/ganglia/rrds
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/gmond.rc gmond
 	newexe ${FILESDIR}/gmetad.rc gmetad
