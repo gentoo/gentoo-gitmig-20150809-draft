@@ -1,0 +1,34 @@
+--- build.py.orig	2002-12-13 23:43:10.000000000 +0100
++++ build.py	2002-12-13 23:43:23.000000000 +0100
+@@ -646,31 +646,6 @@
+         licType = "GPL"
+         licname = "GNU General Public License"
+ 
+-    inform("This is the %s version of PyQt and is licensed under the %s." % (licType,licname),0)
+-
+-    print
+-    print "Type 'L' to view the license."
+-    print "Type 'yes' to accept the terms of the license."
+-    print "Type 'no' to decline the terms of the license."
+-    print
+-
+-    while 1:
+-        try:
+-            resp = raw_input("Do you accept the terms of the license? ")
+-        except:
+-            resp = ""
+-
+-        resp = resp.strip().lower()
+-
+-        if resp == "yes":
+-            break
+-
+-        if resp == "no":
+-            sys.exit(0)
+-
+-        if resp == "l":
+-            os.system("more LICENSE")
+-
+     inform("Building the %s version of PyQt 3.5 for Python %s on %s." % (licType,pyFullVers,sys.platform))
+ 
+     if licType != "GPL":
