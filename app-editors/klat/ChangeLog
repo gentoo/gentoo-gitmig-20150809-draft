@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/klat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/klat/ChangeLog,v 1.7 2004/06/07 03:54:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/klat/ChangeLog,v 1.8 2004/06/19 08:18:16 weeve Exp $
+
+  19 Jun 2004; Jason Wever <weeve@gentoo.org> klat-0.4.0.ebuild:
+  Stable on sparc.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   klat-0.4.0.ebuild:
