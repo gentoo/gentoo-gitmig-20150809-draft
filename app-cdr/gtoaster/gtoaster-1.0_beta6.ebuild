@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.4 2002/10/16 23:05:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.5 2002/10/28 23:54:36 seemant Exp $
 
 IUSE="nls esd gnome oss oggvorbis"
 
@@ -22,13 +22,14 @@ DEPEND="=x11-libs/gtk+-1.2*
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	>=app-cdr/cdrtools-1.11
+	app-cdr/cdrdao
 	>=media-sound/sox-12
 	>=media-sound/mpg123-0.59
 	>=media-sound/mp3info-0.8.4
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	oggvorbis? ( >=media-sound/vorbis-tools-1.0_rc2
-	             >=media-sound/oggtst-0.0 )"
+		>=media-sound/oggtst-0.0 )"
 
 
 src_compile() {
@@ -56,12 +57,7 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		localstatedir=${D}/var/lib \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		install || die
+	einstall || die
 
 	dodoc ABOUT-NLS AUTHORS ChangeLog* COPYING INSTALL NEWS README TODO
 
@@ -73,5 +69,3 @@ src_install() {
 		doins ${FILESDIR}/gtoaster.desktop
 	fi
 }
-
-
