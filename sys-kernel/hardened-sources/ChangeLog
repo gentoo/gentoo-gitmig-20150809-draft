@@ -1,8 +1,30 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.6 2003/04/13 02:57:26 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.7 2003/04/23 19:57:13 frogger Exp $
 
 *hardened-sources-2.4.20-r1 (09 Apr 2003)
+
+  23 Apr 2003; Matthew Rickard <frogger@gentoo.org> Manifest:
+  Initial import of hardened-sources-r2.  This new
+  ebuild includes many new performance and security
+  related patches.  As in -r1, it will patch in
+  LSM/SELinux if "selinux" is in USE, otherwise it
+  will patch in GRSecurity.  The following patches
+  are included in this revision:
+    - O(1) Scheduler, Low Latency, and Preempt
+  	(pulled from the base CK patch)
+    - ptrace exploit patch for the LSM kernel
+  	(the GRSec patch already fixes this)
+    - LSM 2.4-2003040709
+    - SELinux 2.4-2003040709
+    - Systrace v1.2
+    - IPTables patch-o-matic base patches - 20030107
+    - CryptoAPI 2.4.20.1 w/ loop-jari patch
+    - Super FreeS/WAN 1.99.6.1
+    - GRSecurity 1.9.9g
+    - MPPE
+    - EXT3 data journal fix
+    - CIPE 1.5.4
 
   12 Apr 2003; Matthew Rickard <frogger@gentoo.org>
   hardened-sources-2.4.20-r1.ebuild, manifest:
