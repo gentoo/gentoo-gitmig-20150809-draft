@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.33 2005/02/05 10:27:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.34 2005/02/11 22:14:53 ciaranm Exp $
+
+*gentoo-syntax-20050211 (11 Feb 2005)
+
+  11 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20050211.ebuild:
+  New release, mostly bugfixes. Arch detection code is now faster thanks to a
+  cache, and should work properly on non-Linux. The thirdpartymirrors file
+  should now be detected. ASFLAGS and ARCH are now shown as errors in
+  make.conf. The runscript line in init.d files will now be created properly.
 
   05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
   gentoo-syntax-20041227.ebuild:
