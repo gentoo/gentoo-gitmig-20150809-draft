@@ -22,6 +22,10 @@
 ##
 
 
+# <drobbins@gentoo.org> (29 Aug 2002)
+# IMQ stuff needs more testing
+=sys-apps/iptables-1.2.6-r2
+
 # <george@gentoo.org> (28 Aug 2002)
 # masked for testing
 =app-emulation/pose-3.5-r1
