@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.4.ebuild,v 1.1 2001/11/14 04:28:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.4.ebuild,v 1.2 2001/11/14 05:08:12 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -9,10 +9,18 @@ SRC_URI="http://skyblade.homeip.net/xine/XINE-${PV}/source.TAR.BZ2s/xine-ui-${PV
 HOMEPAGE="http://xine.sourceforge.net/"
 
 DEPEND="virtual/glibc
-	>=media-libs/xine-lib-0.9.4
+	>=media-video/xine-lib-0.9.4
 	X? ( virtual/x11 )
 	aalib? ( media-libs/aalib )"
 
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	patch -p1 <${FILESDIR}/xine-ui-gentoo.diff || die
+}
 
 src_compile() {
 
@@ -32,23 +40,10 @@ src_compile() {
 
 src_install() {
 	
-	make prefix=${D}/usr						\
-	     mandir=${D}/usr/share/man					\
-	     infodir=${D}/usr/share/info				\
-	     sysconfdir=${D}/etc					\
-	     install || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 	cd ${S}/doc
 	dodoc bug_report_form FAQ* README*
-
-	# Install Gnome menu entry
-	if [ "`use gnome`" ] ; then
-
-		insinto /usr/share/gnome/apps/Applications
-		doins misc/desktops/xine.desktop
-		insinto /usr/share/pixmaps
-		doins misc/desktops/xine.xpm
-	fi
 }
 
