@@ -4,7 +4,7 @@ MD5 dff94c6ca4e9d37395677d8d6701341e xmame-0.78.1.ebuild 6232
 MD5 292d0da4c6620f35a0e7ac862894d3bb xmame-0.79.1.ebuild 6575
 MD5 0f37473c837794387aabfa2fa0fc2c48 xmame-0.80.1.ebuild 6592
 MD5 0234d9024c471faf92bb1219242614ef metadata.xml 1566
-MD5 3dbfb8036aea99667085bef7bb0f79b4 xmame-0.82.1.ebuild 6444
+MD5 fc84cea3a8050aa0c157e97c12d61ca9 xmame-0.82.1.ebuild 6446
 MD5 93b9c4a740015eb7262b223c7b8b7bbf files/0.77.1-icc.patch 584
 MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.77.1-glx-fix.patch 597
 MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.78.1-glx-fix.patch 597

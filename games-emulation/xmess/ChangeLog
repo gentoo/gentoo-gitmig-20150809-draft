@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmess
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.14 2004/06/06 22:31:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.15 2004/06/07 03:17:13 mr_bones_ Exp $
+
+  06 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> xmess-0.82.1.ebuild:
+  use flag fixing
 
 *xmess-0.82.1 (06 Jun 2004)
 

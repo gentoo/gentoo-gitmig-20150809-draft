@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.82.1.ebuild,v 1.1 2004/06/06 22:31:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.82.1.ebuild,v 1.2 2004/06/07 03:17:13 mr_bones_ Exp $
 
-inherit flag-o-matic eutils gcc games
+inherit flag-o-matic gcc eutils games
 
 TARGET="${PN}"
 
@@ -39,7 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}-glx-fix.patch"
 	sed -i \
 		-e 's:JOY_BUTTONS 16:JOY_BUTTONS 32:' src/unix/devices.h \
-		|| die "setting joybuttons failed" #36818
+			|| die "setting joybuttons failed" #36818
 
 	case "${ARCH}" in
 	x86)
@@ -172,7 +172,7 @@ src_compile() {
 		emake DISPLAY_METHOD=xgl || die "emake failed (xgl)"
 		disp=1
 	fi
-	if  [ ${disp} -eq 0 ] || [ ! -z "`use X``use dga``use xv`" ] ; then
+	if  [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
 		emake DISPLAY_METHOD=x11 || die "emake failed (x11)"
 	fi
 }
@@ -183,14 +183,14 @@ src_install() {
 	sed -i \
 		-e "s:Xmame:${TARGET}:g" \
 		-e "s:xmame:${TARGET}:g" doc/*.6 \
-			|| die "sed man pages failed"
+		|| die "sed man pages failed"
 	sed -i \
 		-e "s:^PREFIX.*:PREFIX=${D}/usr:" \
 		-e "s:^BINDIR.*:BINDIR=${D}/${GAMES_BINDIR}:" \
 		-e "s:^MANDIR.*:MANDIR=${D}/usr/share/man/man6:" \
 		-e "s:^XMAMEROOT.*:XMAMEROOT=${D}/${GAMES_DATADIR}/${TARGET}:" \
 			Makefile \
-				|| die "sed Makefile failed"
+			|| die "sed Makefile failed"
 
 	if use sdl ; then
 		make DISPLAY_METHOD=SDL install || die "install failed (sdl)"
@@ -208,7 +208,7 @@ src_install() {
 		make DISPLAY_METHOD=xgl install || die "install failed (xgl)"
 		disp=1
 	fi
-	if [ ${disp} -eq 0 ] || [ ! -z "`use X``use dga``use xv`" ] ; then
+	if [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
 		make DISPLAY_METHOD=x11 install || die "install failed (x11)"
 	fi
 
@@ -220,7 +220,7 @@ src_install() {
 
 	if use opengl ; then
 		dosym "${TARGET}.xgl" "${GAMES_BINDIR}/${TARGET}"
-	elif [ ! -z "`use X``use dga``use xv`" -o ${disp} -eq 0 ] ; then
+	elif [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
 		dosym "${TARGET}.x11" "${GAMES_BINDIR}/${TARGET}"
 	elif use sdl ; then
 		dosym "${TARGET}.SDL" "${GAMES_BINDIR}/${TARGET}"
@@ -235,7 +235,9 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	einfo "Your available MAME binaries are: ${TARGET}"
-	[ ! -z "`use X``use dga``use xv`" ] && einfo " ${TARGET}.x11"
+	if use X || use dga || use xv ; then
+		einfo " ${TARGET}.x11"
+	fi
 	use sdl > /dev/null                 && einfo " ${TARGET}.SDL"
 	use ggi > /dev/null                 && einfo " ${TARGET}.ggi"
 	use svga > /dev/null                && einfo " ${TARGET}.svgalib"
