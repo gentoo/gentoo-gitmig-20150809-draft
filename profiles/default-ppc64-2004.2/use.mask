@@ -12,6 +12,7 @@ icc
 icc-pgo
 krb4
 mmx
+pda
 ruby
 svga
 sse
