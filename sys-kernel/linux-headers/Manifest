@@ -1,4 +1,4 @@
-MD5 892568edc509bddf781dd1f8ed3af1e4 ChangeLog 4086
+MD5 fb79aa8de346050ae70572d7d6b3a7db ChangeLog 4258
 MD5 b9af1cb075cfc831ee459bf4b63233ba linux-headers-2.2.20.ebuild 3926
 MD5 f1eefd853d7d82cbef1e15cd5b82dcc5 linux-headers-2.2.21_pre3.ebuild 4097
 MD5 a2b862284e2f96d47833fbcb72ab6420 linux-headers-2.4.16-r1.ebuild 5054
@@ -12,8 +12,8 @@ MD5 98f6ffa842cf19c0429258928cef9d44 linux-headers-2.4.18-r2.ebuild 4557
 MD5 e79542243a915839844c1b87deb1157d linux-headers-2.4.18.ebuild 3178
 MD5 b5c15ff6fe9006c2bf2875ec5e6e7d48 linux-headers-2.4.19-r1.ebuild 4796
 MD5 cfbb61552be5d9809c66cd109841bdcc linux-headers-2.4.19.ebuild 4627
-MD5 4220b6d1536aea815cf2631c889d248a linux-headers-2.4.21.ebuild 3198
-MD5 8440d26677954a9ff75e190d0d233287 linux-headers-2.4.22.ebuild 3185
+MD5 33973ad61c4f75ba6a2a26ed5e235af1 linux-headers-2.4.21.ebuild 3242
+MD5 02d9874cf54846bc22165832cedfed25 linux-headers-2.4.22.ebuild 3229
 MD5 07aeae7e5036a3ec3e06d29fd68e9cce files/digest-linux-headers-2.2.20 216
 MD5 167e790d7861e0ed3a31577b31a92968 files/digest-linux-headers-2.2.21_pre3 281
 MD5 ac116e74551067f3bd3a2a3c85ba0b0b files/digest-linux-headers-2.4.16 281
