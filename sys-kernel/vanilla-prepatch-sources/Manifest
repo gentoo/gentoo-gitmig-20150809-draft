@@ -1,4 +1,4 @@
-MD5 00ab83123aa542d729367d6c00a69ec2 files/digest-vanilla-prepatch-sources-2.4.24_pre1 133
-MD5 bbabe2b03214272c53ea965016c8dc97 vanilla-prepatch-sources-2.4.24_pre1.ebuild 1533
-MD5 c485b5138171f399cc748b67e6fb39d7 ChangeLog 4073
+MD5 be49c7581597c4360cda5c12e3931846 ChangeLog 4336
 MD5 17ded3e049cc5ea4571a590f031fd463 metadata.xml 449
+MD5 ca14f5feba0a4d3cc9a338646228299f vanilla-prepatch-sources-2.4.25_pre4.ebuild 1537
+MD5 479773235a39a3898d1bb75ebf80c6ed files/digest-vanilla-prepatch-sources-2.4.25_pre4 134

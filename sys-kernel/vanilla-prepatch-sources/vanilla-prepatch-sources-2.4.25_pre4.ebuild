@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.24_pre1.ebuild,v 1.2 2003/12/10 17:12:40 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.25_pre4.ebuild,v 1.1 2004/01/07 16:07:18 plasmaroo Exp $
 
 IUSE="build"
 
@@ -8,7 +8,8 @@ ETYPE="sources"
 inherit kernel
 
 # OKV=original kernel version, KV=patched kernel version.  
-OKV="2.4.23"
+
+OKV=2.4.24
 KV="${PV/_/-}"
 S=${WORKDIR}/linux-${KV}
 
@@ -31,8 +32,7 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 
 	cd linux-${KV}
-
-	bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "-marcelo patch failed"
+	bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "Failed to apply patch!"
 
 	kernel_universal_unpack
 }
