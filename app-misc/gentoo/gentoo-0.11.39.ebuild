@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.38.ebuild,v 1.1 2003/10/28 19:24:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.39.ebuild,v 1.1 2003/10/30 18:42:17 seemant Exp $
 
 IUSE="nls gnome"
 
