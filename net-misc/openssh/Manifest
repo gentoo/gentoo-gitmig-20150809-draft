@@ -7,7 +7,7 @@ MD5 9da5e02603f79633fe36e2337d4ae626 openssh-3.6.1_p2-r3.ebuild 4488
 MD5 b95ca58a06be4f68640911f9e64a8c95 openssh-3.7_p1.ebuild 4479
 MD5 6f9d1a7a3d8d84a099f9e8ae724cd750 openssh-3.7.1_p1.ebuild 4665
 MD5 baa93c0bb81792f293041775106cda3d openssh-3.7.1_p1-r1.ebuild 4279
-MD5 2fff7b27a9c14d1ae9752afc6b06ad18 openssh-3.7.1_p2.ebuild 4165
+MD5 f5e05460d48dbfd326489d60a9618dd9 openssh-3.7.1_p2.ebuild 4161
 MD5 f2472f97f00f203eee538d04a25acac5 files/digest-openssh-3.5_p1-r1 136
 MD5 3d26d49ccd595bca906f540f5d8b8c31 files/digest-openssh-3.6.1_p2 139
 MD5 3d5afb85b45dafdd05258d53f19a0b61 files/digest-openssh-3.6.1_p2-r1 213
