@@ -1,8 +1,12 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.17 2004/07/04 00:14:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.18 2004/07/06 09:57:00 kang Exp $
 
 *bittornado-0.3.4 (04 Jul 2004)
+
+  06 Jul 2004; Guillaume Destuynder <kang@gentoo.org>
+  +files/bittornado-wxpython-pre2.5-fix.patch
+  Fixed #56120. Fixed repoman issues in all ebuilds (not listed.)
 
   04 Jul 2004; Martin Holzer <mholzer@gentoo.org> +bittornado-0.3.4.ebuild:
   Version bumped.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.4.ebuild,v 1.1 2004/07/04 00:14:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.4.ebuild,v 1.2 2004/07/06 09:57:00 kang Exp $
 
 inherit distutils eutils
 
@@ -17,12 +17,11 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="X"
 
 RDEPEND="X? ( >=dev-python/wxpython-2.2 )
-	 >=dev-lang/python-2.0
-	 !virtual/bittorrent"
-
+	>=dev-lang/python-2.1
+	!virtual/bittorrent"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	>=sys-apps/sed-4.0.5"
-
 PROVIDE="virtual/bittorrent"
 
 S="${WORKDIR}/${MY_PN}-CVS"
@@ -34,6 +33,8 @@ src_unpack() {
 
 	# fixes wrong icons path
 	sed -i "s:os.path.abspath(os.path.dirname(os.path.realpath(sys.argv\[0\]))):\"${PIXMAPLOC}/\":" btdownloadgui.py
+	# fixes a bug with < wxpython-2.5 which is not yet available in portage
+	epatch ${FILESDIR}/${PN}-wxpython-pre2.5-fix.patch
 }
 
 src_install() {
