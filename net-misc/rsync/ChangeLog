@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.52 2004/05/08 10:37:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.53 2004/06/23 01:16:46 vapier Exp $
+
+*rsync-2.6.1 (22 Jun 2004)
+
+  22 Jun 2004; Mike Frysinger <vapier@gentoo.org> +rsync-2.6.1.ebuild:
+  Try to fix security bug #49534 without pissing off #49933.
 
 *rsync-2.6.2-r3 (08 May 2004)
 
