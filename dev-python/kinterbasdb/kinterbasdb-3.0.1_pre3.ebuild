@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.0.1_pre3.ebuild,v 1.15 2004/02/19 14:19:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.0.1_pre3.ebuild,v 1.16 2004/05/07 20:25:39 kloeri Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="kinterbasdb - firebird/interbase interface for Python."
 SRC_URI="mirror://sourceforge/kinterbasdb/${P}.tar.gz"
 HOMEPAGE="http://kinterbasdb.sourceforge.net"
 LICENSE="kinterbasdb"
 SLOT="0"
 KEYWORDS="x86 -sparc"
+IUSE=""
 
 DEPEND="virtual/python
 	>=dev-db/firebird-1.0_rc1

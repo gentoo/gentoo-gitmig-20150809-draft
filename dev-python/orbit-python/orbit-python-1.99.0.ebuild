@@ -1,11 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/orbit-python-1.99.0.ebuild,v 1.5 2003/07/12 12:49:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/orbit-python-1.99.0.ebuild,v 1.6 2004/05/07 20:30:11 kloeri Exp $
 
 inherit gnome2 debug
 
 IUSE=""
-S=${WORKDIR}/${P}
 DESCRIPTION="Orbit bindings for Python"
 HOMEPAGE="http://orbit-python.sault.org/"
 
