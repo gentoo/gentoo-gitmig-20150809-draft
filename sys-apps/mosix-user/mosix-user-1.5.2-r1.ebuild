@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.2-r1.ebuild,v 1.4 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.2-r1.ebuild,v 1.5 2002/07/17 01:20:05 seemant Exp $
 
 S=${WORKDIR}/user
 DESCRIPTION="User-land utilities for MOSIX process migration (clustering) software"
@@ -8,8 +8,8 @@ SRC_URI="http://www.mosix.cs.huji.ac.il/ftps/MOSIX-${PV}.tar.gz"
 HOMEPAGE="http://www.mosix.org"
 KEYWORDS="x86"
 SLOT="0"
-LICENSE=""
-DEPEND="virtual/glibc >=sys-libs/ncurses-5.2"
+LICENSE="as-is"
+DEPEND=">=sys-libs/ncurses-5.2"
 
 src_unpack() {
 	mkdir ${S}; cd ${S}

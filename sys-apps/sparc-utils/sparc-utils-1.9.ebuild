@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 
-A=`echo ${P}|sed 's/sparc-utils-/sparc-utils_/'`.orig.tar.gz
 S=${WORKDIR}/${P}.orig
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
-SRC_URI="http://http.us.debian.org/debian/pool/main/s/sparc-utils/${A}"
+SRC_URI=" http://http.us.debian.org/debian/pool/main/s/${PN}/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://www.debian.org"
-KEYWORDS=""
+KEYWORDS="sparc sparc64 -x86 -ppc"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="sys-kernel/linux-headers"
