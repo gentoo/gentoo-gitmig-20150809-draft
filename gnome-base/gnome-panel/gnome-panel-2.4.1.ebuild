@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.1.ebuild,v 1.2 2003/10/31 14:57:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.1.ebuild,v 1.3 2003/11/10 00:01:35 spider Exp $
 
 inherit gnome2 eutils
 
@@ -63,6 +63,6 @@ pkg_postinst() {
 
 	einfo "setting panel gconf defaults..."
 	GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
-	${ROOT}/usr/bin/gconftool-2 --direct --config-source ${GCONF_CONFIG_SOURCE} --load=${S}/gnome-panel/panel-default-setup.entries
+	${ROOT}/usr/bin/gconftool-2 --direct --config-source ${GCONF_CONFIG_SOURCE} --load=/etc/gconf/schemas/panel-default-setup.entries
 
 }
