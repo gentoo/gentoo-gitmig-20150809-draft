@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.154 2004/05/11 15:31:59 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.155 2004/05/17 00:28:07 george Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -82,6 +82,7 @@ hardened - activate default security enhancements for toolchain (gcc, glibc, bin
 icc - Add support for the Intel C++ Compiler (does _not_ set $CC)
 icc-pgo - Enable PGO data generation or use when use icc.
 icq - Enable ICQ IM protocol support
+ifc - use ifc instead of g77 to build
 imap - Adds support for IMAP
 imagemagick - Enables support for Imagemagick (image converter)
 imlib - Adds support for media-libs/imlib (Image loading and rendering library)
