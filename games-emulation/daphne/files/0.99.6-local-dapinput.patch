@@ -15,7 +15,7 @@
  	char thisChar = 0;
  
 +	chdir(getenv("HOME"));
-+	mkdir(".daphne", 0600);
++	mkdir(".daphne", 0700);
 +	chdir(".daphne");
  	F = fopen("dapinput.ini", "rt");
  
