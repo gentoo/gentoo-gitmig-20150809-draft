@@ -1,12 +1,12 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.67 2004/09/02 21:09:59 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.68 2004/09/02 21:26:02 kugelfang Exp $
 
   02 Sep 2004; Danny van Dyk <kugelfang@gentoo.org>
   ghostscript-7.07.1-r1.ebuild, ghostscript-7.07.1-r2.ebuild,
   ghostscript-7.07.1-r3.ebuild, ghostscript-7.07.1-r4.ebuild,
   ghostscript-7.07.1-r5.ebuild:
-  Made ghostscript $\(get_libdir\) aware.
+  Made ghostscript $(get_libdir) aware.
 
   18 Aug 2004; Aron Griffis <agriffis@gentoo.org>
   ghostscript-7.07.1-r3.ebuild:
