@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.6.0.ebuild,v 1.1 2004/10/07 20:32:29 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.6.0.ebuild,v 1.2 2004/10/14 06:26:43 mr_bones_ Exp $
 
 IUSE="ssl pthreads"
 
@@ -16,11 +16,11 @@ DEPEND=">=dev-libs/lzo-1.07
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_unpack() {
-        unpack ${A}
-        
-        # an updated config.sub for the uclibc env
-        gnuconfig_update
-}                                             
+	unpack ${A}
+
+	# an updated config.sub for the uclibc env
+	gnuconfig_update
+}
 
 src_compile() {
 	econf \
@@ -32,7 +32,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	dodoc COPYING ChangeLog INSTALL PORTS README
