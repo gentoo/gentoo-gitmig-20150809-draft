@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a-r1.ebuild,v 1.1 2004/08/17 09:55:11 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a-r1.ebuild,v 1.2 2004/08/17 14:36:48 eldad Exp $
 
 inherit eutils webapp-apache
 
@@ -49,6 +49,9 @@ src_install() {
 	rm docs/{README,CHANGELOG,CONTRIB}
 	rm LICENSE README
 
+	#Don't overwrite old config
+	mv include/config.php include/config-sample.php
+
 	#mv docs/manual .
 	rm -rf docs
 	rm -rf cactid
@@ -66,7 +69,7 @@ pkg_postinst() {
 	if [[ ${ver_installed} != ${PV} ]]
 	then
 		einfo
-		einfo "The cacti has been installed to ${INSTALL_DEST}"
+		einfo "The cacti has been installed to ${HTTPD_ROOT}${PN}"
 		einfo
 		einfo "Before cacti works you must upgrade the cacti database:"
 		einfo "1. Backup the old cacti database:"
@@ -76,8 +79,8 @@ pkg_postinst() {
 		einfo "3. Create the new cacti database"
 		einfo "  shell> mysqladmin --user=root create cacti"
 		einfo "4. Import the default cacti database:"
-		einfo "  shell> mysql cacti < ${INSTALL_DEST}/cacti.sql"
-		einfo "5. Edit ${INSTALL_DEST}/include/config.php."
+		einfo "  shell> mysql cacti < ${HTTPD_ROOT}${PN}/cacti.sql"
+		einfo "5. Edit ${HTTPD_ROOT}${PN}/include/config.php."
 		einfo " + Modify the MySQL user, password and database for your"
 		einfo "   cacti configuration."
 		einfo "		\$database_default = \"cacti\";"
@@ -101,18 +104,18 @@ pkg_postinst() {
 		einfo
 	else
 		einfo
-		einfo "The cacti has been copied to ${INSTALL_DEST}"
+		einfo "The cacti has been copied to ${HTTPD_ROOT}${PN}"
 		einfo
 		einfo "Before cacti works you must:"
 		einfo "1. Create the new cacti database"
 		einfo "  shell> mysqladmin --user=root create cacti"
 		einfo "2. Import the default cacti database:"
-		einfo "  shell> mysql cacti < ${INSTALL_DEST}/cacti.sql"
+		einfo "  shell> mysql cacti < ${HTTPD_ROOT}${PN}/cacti.sql"
 		einfo "3. Optional: Create a MySQL username and password for cacti."
 		einfo "  shell> mysql --user=root mysql"
 		einfo "  mysql> GRANT ALL ON cacti.* TO cactiuser@localhost IDENTIFIED BY 'somepassword';"
 		einfo "  mysql> flush privileges;"
-		einfo "4. Edit ${INSTALL_DEST}/include/config.php."
+		einfo "4. Copy ${HTTPD_ROOT}${PN}/include/config-sample.php to config.php."
 		einfo " + Modify the MySQL user, password and database for your"
 		einfo "   cacti configuration."
 		einfo "		\$database_default = \"cacti\";"
