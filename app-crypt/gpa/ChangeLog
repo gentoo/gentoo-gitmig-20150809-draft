@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gpa
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.8 2002/12/13 10:56:01 blizzy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.9 2003/02/07 14:22:55 jrray Exp $
+
+*gpa-0.6.1 (07 Feb 2003)
+
+  07 Feb 2003; J Robert Ray <jrray@gentoo.org> gpa-0.6.1.ebuild : Version bump,
+  thanks to Erinn Looney-Triggs <erinnlooneytriggs@ekno.com> and Jacob Perkins
+  <jap1@users.sourceforge.net>.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
