@@ -8,7 +8,8 @@ MD5 6608f2e001475b478625ae49004e5153 mplus-fonts-2.0.5.ebuild 1120
 MD5 1489e14c89e8d5d46b3629b1a5244a8a mplus-fonts-2.0.6.ebuild 1124
 MD5 db463a98fa5ece82eb35260a81a6c932 mplus-fonts-2.0.7.ebuild 1128
 MD5 2702c210ff83fb1332bf6e75749e6263 mplus-fonts-2.0.8.ebuild 1128
-MD5 1f26d3346263e3cbaf9505dba0c337eb mplus-fonts-2.1.0.ebuild 1120
+MD5 ef1a30d6c4f2a109c72c382b99f9b0b4 mplus-fonts-2.1.0.ebuild 1118
+MD5 1f26d3346263e3cbaf9505dba0c337eb mplus-fonts-2.1.1.ebuild 1120
 MD5 19c022a4d037ea8be8724203aead1918 files/digest-mplus-fonts-2.0.1 76
 MD5 399f7fca1a01bdbb46ad5d78f5627917 files/digest-mplus-fonts-2.0.2 76
 MD5 f36ef177d46dfc497c07fbc67714db96 files/digest-mplus-fonts-2.0.3 76
@@ -18,3 +19,4 @@ MD5 366f31f2097e5b5982cb7aa50a819a16 files/digest-mplus-fonts-2.0.6 76
 MD5 977b8ac731cd1b40056dc33c2bbd6365 files/digest-mplus-fonts-2.0.7 76
 MD5 b53f0b27ed77678bbca94e7829747776 files/digest-mplus-fonts-2.0.8 76
 MD5 9dc285e29a7998c98b922e9137a2292a files/digest-mplus-fonts-2.1.0 76
+MD5 a0a262cea019d746f6c032f0d4d5a945 files/digest-mplus-fonts-2.1.1 76
