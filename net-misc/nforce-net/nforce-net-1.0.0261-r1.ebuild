@@ -1,31 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r1.ebuild,v 1.2 2003/06/13 00:12:28 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r1.ebuild,v 1.3 2003/08/03 03:57:32 vapier Exp $
 
 inherit gcc
-
-# Make sure Portage does _NOT_ strip symbols.  Need both lines for
-# Portage 1.8.9+
-DEBUG="yes"
-RESTRICT="nostrip"
 
 NV_V="${PV/1.0./1.0-}"
 NV_PACKAGE="NVIDIA_nforce-${NV_V}"
 S="${WORKDIR}/nforce"
 DESCRIPTION="Linux kernel module for the NVIDIA's nForce network chip"
-SRC_URI="http://download.nvidia.com/XFree86/nforce/${NV_V}/${NV_PACKAGE}.tar.gz"
 HOMEPAGE="http://www.nvidia.com/"
+SRC_URI="http://download.nvidia.com/XFree86/nforce/${NV_V}/${NV_PACKAGE}.tar.gz"
 
-# The slow needs to be set to $KV to prevent unmerges of
-# modules for other kernels.
+# The SLOT needs to be set to $KV to prevent unmerges of modules for other kernels
 LICENSE="NVIDIA"
 SLOT="${KV}"
 KEYWORDS="-* x86"
+RESTRICT="nostrip"
 
-DEPEND="virtual/linux-sources >=sys-apps/portage-1.9.10"
+DEPEND="virtual/linux-sources"
 
 src_compile() {
-	# Portage should determine the version of the kernel sources
 	check_KV
 	cd ${S}/nvnet
 	make KERNSRC="/usr/src/linux" || die
@@ -85,4 +79,3 @@ pkg_postinst() {
 	einfo "the \"nvnet\" driver for throughput optimization the next time it"
 	einfo "is loaded."
 }
-
