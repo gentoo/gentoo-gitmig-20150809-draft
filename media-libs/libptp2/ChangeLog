@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libptp2
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.1 2004/08/15 10:41:17 dragonheart Exp $
+
+*libptp2-1.0.1 (15 Aug 2004)
+
+  15 Aug 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +libptp2-1.0.1.ebuild:
+  Initial import. Ebuild by Enrico Morelli <morelli@cerm.unifi.it> in bug
+  #52956. Currently parallel make fails. Bug lodged upstream
+
