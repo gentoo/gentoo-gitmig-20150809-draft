@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r1.ebuild,v 1.5 2003/09/26 05:42:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.65.0-r2.ebuild,v 1.1 2003/10/09 17:17:40 tseng Exp $
 
 IUSE="nls"
 
@@ -19,7 +19,8 @@ mydoc="AUTHORS LICENSE README ChangeLog* TODO* data/README*"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	patch -p0 < ${FILESDIR}/blackbox-0.65.0-mousewheel_focus-workspace.patch
+	epatch ${FILESDIR}/blackbox-0.65.0-mousewheel_focus-workspace.patch
+	epatch ${FILESDIR}/blackbox-gcc.patch
 	cd ${S}/data
 	mv README README.data
 }
@@ -28,7 +29,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "This build of Blackbox makes use of the mousewheel patch, allowing you"
 	ewarn "to use the mousewheel chage workspace or application focus."
-	ewarn "It is known to have a few issues. For a default install of Blackbox"
+	ewarn "It is known to have a few issues. For a  install of Blackbox"
 	ewarn "you may emerge ${PN}-${PV}."
 	ewarn
 }
