@@ -1,0 +1,12 @@
+diff -urN hsfmodem-7.18.00.03full/nvm/makefile hsfmodem-7.18.00.03full-nvminstall/nvm/makefile
+--- hsfmodem-7.18.00.03full/nvm/makefile	2004-12-14 02:52:49.000000000 -0500
++++ hsfmodem-7.18.00.03full-nvminstall/nvm/makefile	2005-03-16 05:19:28.009765480 -0500
+@@ -68,7 +68,7 @@
+ 	touch $(NVMCVTDIR)/.linksame
+ 
+ install: all $(CNXTNVMDIR)
+-	cd $(NVMCVTDIR) && (find $(patsubst %, $(CNXTTARGET)%, $(NVMDIRS)) | cpio -pdmu $(CNXTNVMDIR))
++	cp -ra $(NVMCVTDIR)/* $(CNXTNVMDIR)
+ 
+ $(NVMCVTDIR) $(CNXTNVMDIR):
+ 	$(MKDIR) -p $@

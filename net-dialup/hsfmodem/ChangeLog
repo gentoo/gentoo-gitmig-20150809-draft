@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.6 2005/03/08 05:42:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.7 2005/03/16 21:02:59 mrness Exp $
+
+*hsfmodem-7.18.00.03-r1 (16 Mar 2005)
+
+  16 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  +files/hsfmodem-7.18.00.03-export_symbol.patch,
+  +files/hsfmodem-7.18.00.03-nvminstall.patch, -hsfmodem-7.18.00.03.ebuild,
+  +hsfmodem-7.18.00.03-r1.ebuild:
+  Fix missing region files (#84927) and replace deprecated
+  EXPORT_SYMBOL_NOVERS (#84926).
 
   08 Mar 2005; Alin Nastac <mrness@gentoo.org> hsfmodem-7.18.00.02.ebuild,
   hsfmodem-7.18.00.03.ebuild:
