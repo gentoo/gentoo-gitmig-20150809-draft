@@ -56,8 +56,8 @@ src_install() {
    newdoc jpilot-syncmal_0.62/ChangeLog ChangeLog.jpilot-syncmal
 	newdoc jpilot-syncmal_0.62/README.1st README.1st.jpilot-syncmal
    newdoc jpilot-syncmal_0.62/README README.jpilot-syncmal
-	dodoc pilot-syncmal_0.62/malsync/doc/README_AvantGo 
-   dodoc pilot-syncmal_0.62/malsync/doc/README_malsync
+	dodoc jpilot-syncmal_0.62/malsync/Doc/README_AvantGo 
+   dodoc jpilot-syncmal_0.62/malsync/Doc/README_malsync
 
 
 }
