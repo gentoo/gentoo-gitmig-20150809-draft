@@ -1,3 +1,4 @@
-MD5 e2cdf34402e5a2590c2c21dc68438ecf libraw1394-0.9.0.ebuild 776
-MD5 b0c9b2030a0d817bee2ed46e254ffc16 ChangeLog 1194
+MD5 626fa5ce13fd1affc5ba732f3ecb246a ChangeLog 1309
+MD5 e8479f3327d6edc0e398879951e03b95 libraw1394-0.9.0.ebuild 849
+MD5 805344f2108b517b175204d657f88fcb files/libraw_gcc33_fix 1060
 MD5 6bc52708d033490062bf8c735077bd74 files/digest-libraw1394-0.9.0 68
