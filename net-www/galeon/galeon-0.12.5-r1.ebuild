@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.5-r1.ebuild,v 1.1 2001/10/23 15:16:10 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.5-r1.ebuild,v 1.2 2001/10/24 14:17:09 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small webbrowser for gnome that uses mozillas render engine"
@@ -34,6 +34,7 @@ src_compile() {
 	            --with-mozilla-includes=${MOZILLA_FIVE_HOME}/include \
 		    --with-gnome					 \
 		    --without-debug					 \
+		    --disable-applet					 \
 		    --enable-gnome-file-selector			 \
 		    $myconf || die
 
