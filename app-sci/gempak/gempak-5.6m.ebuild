@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gempak/gempak-5.6m.ebuild,v 1.1 2004/02/29 00:01:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gempak/gempak-5.6m.ebuild,v 1.2 2004/04/19 09:42:48 phosphan Exp $
 
 inherit gcc eutils
 
@@ -18,6 +18,7 @@ RDEPEND="${DEPEND}
 	x11-libs/openmotif
 	!x11-libs/lesstif"
 SLOT="0"
+IUSE=""
 KEYWORDS="~x86"
 RESTRICT="fetch"
 S="${WORKDIR}"
