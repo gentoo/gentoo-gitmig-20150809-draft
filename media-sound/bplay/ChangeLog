@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bplay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bplay/ChangeLog,v 1.9 2004/09/14 07:24:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bplay/ChangeLog,v 1.10 2004/11/23 03:44:15 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> bplay-0.991.ebuild:
+  Added to ~sparc.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> bplay-0.991.ebuild:
   Stable amd64.
