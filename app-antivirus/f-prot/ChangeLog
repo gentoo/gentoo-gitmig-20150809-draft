@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.28 2005/02/03 08:32:46 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.29 2005/02/07 06:47:43 ticho Exp $
+
+  07 Feb 2005; Andrej Kacian <ticho@gentoo.org> f-prot-4.5.3.ebuild:
+  Stable on x86.
 
   03 Feb 2005; Andrej Kacian <ticho@gentoo.org> f-prot-4.5.3.ebuild:
   Fix path to update script in post installation einfo message. Closes #80538,
