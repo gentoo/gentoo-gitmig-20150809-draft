@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.70 2004/08/22 11:30:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.71 2004/08/24 17:31:32 squinky86 Exp $
+
+  24 Aug 2004; Jon Hood <squinky86@gentoo.org> +files/2.5.28-config.patch,
+  mldonkey-2.5.28.ebuild:
+  Add configure patch to not install lablgtk if it is not available, #61425.
 
   22 Aug 2004; Travis Tilley <lv@gentoo.org> mldonkey-2.5.28.ebuild:
   added ~amd64 keyword

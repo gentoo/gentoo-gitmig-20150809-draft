@@ -1,0 +1,14 @@
+--- ./config/configure.in	2004-08-24 12:12:07.384416608 -0500
++++ ./config/configure.in	2004-08-24 12:11:02.455287336 -0500
+@@ -626,9 +626,8 @@
+      echo "probably forgot to call 'make opt' before 'make install'."
+      echo "--------------------------------"
+    else
+-     echo "Do you want this script to try to download and install lablgtk"
+-     echo "LOCALLY in mldonkey directory ?"
+-     if test "$BATCH" = "no"; then read i; else i=yes; fi
++     echo "Disabling lablgtk support."
++     if test "$BATCH" = "no"; then read i; else i=no; fi
+      case "$i" in
+       y* | Y*) 
+ 

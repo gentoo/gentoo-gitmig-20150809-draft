@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.28.ebuild,v 1.3 2004/08/24 03:34:44 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.28.ebuild,v 1.4 2004/08/24 17:31:32 squinky86 Exp $
 
 inherit eutils
 
@@ -17,11 +17,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64"
 
-#remove !gtk? line as soon as gui is optional
 RDEPEND=">=dev-lang/ocaml-3.08
 	dev-lang/perl
 	net-misc/wget
-	!gtk? ( =dev-ml/lablgtk-1.2.7* )
 	gtk? ( !gtk2? ( =dev-ml/lablgtk-1.2.7* ) )
 	gtk? ( gtk2? ( >=dev-ml/lablgtk-2.4 ) )"
 
@@ -34,6 +32,7 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
 #	epatch ${DISTDIR}/${PATCHPACK}
+	use gtk || epatch ${FILESDIR}/${PV}-config.patch
 	export WANT_AUTOCONF=2.5
 	cd config; autoconf; cd ..
 }
