@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sonar
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/ChangeLog,v 1.9 2004/06/24 22:19:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/ChangeLog,v 1.10 2004/07/01 20:21:08 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> sonar-1.2.1.ebuild,
+  sonar-1.2.2-r1.ebuild, sonar-1.2.2.ebuild:
+  change virtual/glibc to virtual/libc, add IUSE
 
 *sonar-1.2.2-r1 (08 Jun 2004)
 
