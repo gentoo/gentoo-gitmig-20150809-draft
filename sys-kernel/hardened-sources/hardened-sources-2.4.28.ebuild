@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.28.ebuild,v 1.8 2005/01/14 12:48:10 tocharian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.28.ebuild,v 1.9 2005/01/24 01:56:13 solar Exp $
 
 IUSE="selinux"
 ETYPE="sources"
 inherit kernel-2
 detect_version
-
+RDEPEND=""
 HGPV=28.1
 HGPV_SRC="mirror://gentoo/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2 \
 	  mirror://gentoo/${PN}-grsec-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-CAN-2004-0814.patch.gz \
