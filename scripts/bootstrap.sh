@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.68 2005/01/08 05:48:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.69 2005/01/14 02:30:51 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -17,6 +17,9 @@ if [ -e /etc/init.d/functions.sh ] ; then
 	esyslog() {
 		echo &> /dev/null
 	}
+else
+	eerror() { echo "!!! $*"; }
+	einfo() { echo "* $*"; }
 fi
 show_status() {
 	local num=$1
@@ -30,9 +33,14 @@ progressfile=/var/run/bootstrap-progress
 [[ -e ${progressfile} ]] && source ${progressfile}
 export BOOTSTRAP_STAGE="${BOOTSTRAP_STAGE:-1}"
 set_bootstrap_stage() {
-	[[ -z "${STRAP_RUN}" ]] && return 0
+	[[ -z ${STRAP_RUN} ]] && return 0
 	export BOOTSTRAP_STAGE=$1
 	echo "BOOTSTRAP_STAGE=$1" > ${progressfile}
+}
+
+v_echo() {
+	einfo "Executing: $*"
+	env "$@"
 }
 
 usage() {
@@ -45,13 +53,14 @@ usage() {
 	echo -e "  ${GOOD}--resume (-r)${NORMAL}    Build/use binary packages"
 }
 
-unset STRAP_EMERGE_OPTS 
+unset STRAP_EMERGE_OPTS
 STRAP_RUN=1
+V_ECHO=env
 DEBUG=0
 GENTOO_VERS=2004.3 # Mostly for fluff ;)
 
 for opt in "$@" ; do
-	case "${opt}" in
+	case ${opt} in
 		--fetchonly|-f)
 			echo "Running in fetch-only mode ..."
 			STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -f"
@@ -64,9 +73,15 @@ for opt in "$@" ; do
 		--pretend|-p) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p" ; unset STRAP_RUN ;;
 		--tree|-t)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p -t"; unset STRAP_RUN ;;
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
-		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v";;
+		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
+		--version)
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.69 2005/01/14 02:30:51 vapier Exp $"
+			cvsver=${cvsver##*,v }
+			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
+			exit 0
+			;;
 		*)
-			echo -e "Unknown option '${opt}'"
+			eerror "Unknown option '${opt}'"
 			usage
 			exit 1;;
 	esac
@@ -81,21 +96,23 @@ if [[ -n ${STRAP_RUN} ]]  ; then
 		einfo "Press enter to continue or CTRL+C to abort ..."
 		read
 		set_bootstrap_stage 1
+	else
+		einfo "Resuming bootstrap at internal stage #${BOOTSTRAP_STAGE} ..."
 	fi
 else
 	export BOOTSTRAP_STAGE=0
 fi
 
-MYPROFILEDIR="$(readlink -f /etc/make.profile)"
+MYPROFILEDIR=$(readlink -f /etc/make.profile)
 if [[ ! -d ${MYPROFILEDIR} ]] ; then
-	echo "!!! Error:  '${MYPROFILEDIR}' does not exist. Exiting."
+	eerror "Error:  '${MYPROFILEDIR}' does not exist.  Exiting."
 	exit 1
 fi
 
 [[ -e /etc/profile ]] && source /etc/profile
 
 echo -e "\n${GOOD}Gentoo Linux ${GENTOO_VERS}; ${BRACKET}http://www.gentoo.org/${NORMAL}"
-echo -e "Copyright 1999-2004 Gentoo Foundation; Distributed under the GPLv2"
+echo -e "Copyright 1999-2005 Gentoo Foundation; Distributed under the GPLv2"
 if [[ ${STRAP_EMERGE_OPTS:0:2} = "-f" ]] ; then
 	echo "Fetching all bootstrap-related archives ..."
 elif [[ -n ${STRAP_RUN} ]] ; then
@@ -256,7 +273,7 @@ export FEATURES="${FEATURES} -collision-protect"
 
 if [ ${BOOTSTRAP_STAGE} -le 1 ] ; then
 	show_status 2 Updating portage
-	USE="-* build bootstrap ${STAGE1_USE}" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
+	${V_ECHO} USE="-* build bootstrap ${STAGE1_USE}" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 2
 fi
@@ -268,7 +285,7 @@ export USE="${ORIGUSE} bootstrap ${STAGE1_USE}"
 if [ ${BOOTSTRAP_STAGE} -le 2 ] ; then
 	show_status 3 Emerging headers/binutils
 	#emerge ${STRAP_EMERGE_OPTS} -C virtual/os-headers || cleanup 1
-	emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
+	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 3
 fi
@@ -304,7 +321,7 @@ fi
 
 if [ ${BOOTSTRAP_STAGE} -le 3 ] ; then
 	show_status 4 Emerging gcc
-	emerge ${STRAP_EMERGE_OPTS} ${myGCC} || cleanup 1
+	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myGCC} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 4
 fi
@@ -322,7 +339,7 @@ fi
 
 if [ ${BOOTSTRAP_STAGE} -le 4 ] ; then
 	show_status 5 Emerging libc/baselayout
-	emerge ${STRAP_EMERGE_OPTS} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
+	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 5
 fi
@@ -331,7 +348,7 @@ fi
 export USE="${ORIGUSE}"
 if [ ${BOOTSTRAP_STAGE} -le 5 ] ; then
 	show_status 6 Re-Emerging C++ apps
-	emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
+	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 6
 fi
