@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre/sun-jre-1.4.2.03.ebuild,v 1.2 2004/02/22 19:52:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre/sun-jre-1.4.2.04.ebuild,v 1.1 2004/03/12 01:06:07 zx Exp $
 
 IUSE="doc gnome kde mozilla"
 
 inherit java nsplugins
 
-At="j2re-1_4_2_03-linux-i586.bin"
-S="${WORKDIR}/j2re1.4.2_03"
-DESCRIPTION="Sun's J2SE Platform, version 1.4.2_03"
+At="j2re-1_4_2_04-linux-i586.bin"
+S="${WORKDIR}/j2re1.4.2_04"
+DESCRIPTION="Sun's J2SE Platform, version 1.4.2_04"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/download.html"
 SRC_URI=${At}
 SLOT="1.4"
