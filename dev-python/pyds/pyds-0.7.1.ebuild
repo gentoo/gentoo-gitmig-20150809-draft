@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.1.ebuild,v 1.2 2004/04/18 08:51:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.1.ebuild,v 1.3 2004/04/26 08:32:18 liquidx Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://simon.bofh.ms/~gb/${MY_P}.tar.gz"
 
 KEYWORDS="~x86 ~ppc"
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="MIT"
 IUSE=""
 
 RDEPEND="media-libs/jpeg

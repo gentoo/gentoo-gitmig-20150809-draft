@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyds
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.7 2004/04/19 05:39:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.8 2004/04/26 08:32:18 liquidx Exp $
+
+  26 Apr 2004; Alastair Tse <liquidx@gentoo.org> pyds-0.6.5.ebuild,
+  pyds-0.7.0.ebuild, pyds-0.7.1.ebuild:
+  fix license (#48982)
 
   18 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> pyds-0.7.0.ebuild:
   need all stable deps before marking stable for x86
