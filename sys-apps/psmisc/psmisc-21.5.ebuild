@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.5.ebuild,v 1.1 2005/01/01 22:07:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.5.ebuild,v 1.2 2005/01/05 03:51:55 pebenito Exp $
 
 inherit eutils
 
@@ -24,17 +24,18 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
+	if use selinux; then
+		epatch ${FILESDIR}/${SELINUX_PATCH}
+		libtoolize --copy --force
+	fi
 	epunt_cxx #73632
 }
 
 src_compile() {
-	local myconf=""
-	use selinux && myconf="${myconf} --enable-flask"
 	econf \
 		--bindir=/bin \
+		$(use_enable selinux) \
 		$(use_enable nls) \
-		${myconf} \
 		|| die
 	emake || die
 }
