@@ -1,0 +1,10 @@
+# ChangeLog for app-games/tornado
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/ChangeLog,v 1.1 2003/09/12 01:53:52 msterret Exp $
+
+*tornado-1.2.1a (05 Sep 2003)
+
+  05 Sep 2003; Michael Sterrett <msterret@gentoo.org> tornado-1.2.1a.ebuild:
+  initial commit. ebuild based off the one submitted by Jan Brinkmann via bug
+  28030
+
