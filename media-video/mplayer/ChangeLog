@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.151 2004/06/29 10:03:52 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.152 2004/07/11 00:42:01 weeve Exp $
+
+  10 Jul 2004; Jason Wever <weeve@gentoo.org> mplayer-1.0_pre4.ebuild:
+  Stable on sparc.
 
   29 Jun 2004; Brian Harring <ferringb@gentoo.org> mplayer-1.0_pre4-r1.ebuild,
   mplayer-1.0_pre4-r2.ebuild, mplayer-1.0_pre4-r3.ebuild,
