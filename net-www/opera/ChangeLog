@@ -1,6 +1,9 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.92 2005/02/14 12:29:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.93 2005/02/14 23:05:31 swegener Exp $
+
+  15 Feb 2005; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest entries.
 
 *opera-7.54-r3 (14 Feb 2005)
 
