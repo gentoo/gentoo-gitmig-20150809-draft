@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.9 2003/08/07 09:29:56 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.10 2003/09/22 02:48:45 seemant Exp $
+
+*pwgen-2.03-r1 (21 Sep 2003)
+
+  21 Sep 2003; Seemant Kulleen <seemant@gentoo.org> pwgen-2.03-r1.ebuild:
+  patch to revert pwgen's behaviour to its predecesor's -- now, non
+  alpha-numeric characters will not be forbidden with the --secure option.
+  thanks to: Gontran Zepeda <gontran@gontran.net> in bug #28727
 
   07 Aug 2003; Tavis Ormandy <taviso@gentoo.org> pwgen-2.03.ebuild:
   alpha keyword
