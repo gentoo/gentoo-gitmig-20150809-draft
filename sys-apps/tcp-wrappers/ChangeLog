@@ -1,7 +1,15 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.2 2002/04/06 06:39:56 gbevin Exp $
 
+*tcp-wrappers-7.6-r4 (06 Apr 2002)
+
+  06 Apr 2002; G.Bevin <gbevin@gentoo.org> tcp-wrappers-7.6-r4.ebuild,
+  files/tcp_wrappers_7.6-stdc.diff files/digest-tcp-wrappers-7.6-r4 :
+  
+  Patches to make the tcp-wrappers header by stdc compliant and work without
+  problems with gcc 3.
+  
 *tcp-wrappers-7.6-r3 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
