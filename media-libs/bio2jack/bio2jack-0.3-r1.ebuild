@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/bio2jack-0.3-r1.ebuild,v 1.3 2004/09/28 18:16:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/bio2jack-0.3-r1.ebuild,v 1.4 2004/10/17 02:07:35 kloeri Exp $
 
 IUSE="static"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bio2jack/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~alpha"
 RDEPEND=">=media-sound/jack-audio-connection-kit-0.80"
 
 DEPEND="${RDEPEND}

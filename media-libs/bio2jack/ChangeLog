@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/bio2jack
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.5 2004/09/28 18:16:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.6 2004/10/17 02:07:35 kloeri Exp $
+
+  17 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> bio2jack-0.3-r1.ebuild:
+  Add ~alpha keyword, bug 66571.
 
   28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   bio2jack-0.3-r1.ebuild:
