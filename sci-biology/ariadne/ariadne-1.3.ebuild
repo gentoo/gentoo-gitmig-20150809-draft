@@ -1,0 +1,41 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3.ebuild,v 1.1 2005/03/05 21:24:53 ribosome Exp $
+
+inherit toolchain-funcs
+
+DESCRIPTION="Protein sequences and profiles comparison"
+LICENSE="as-is"
+HOMEPAGE="http://www.well.ox.ac.uk/ariadne/"
+SRC_URI="http://www.well.ox.ac.uk/ariadne/ariadne-1.3.tar.Z"
+
+SLOT="0"
+IUSE=""
+KEYWORDS="~x86"
+
+DEPEND="virtual/libc
+	sci-biology/ncbi-tools"
+
+S=${WORKDIR}/SRC-${PV}
+
+src_unpack(){
+	unpack ${A}
+	cd ${S}
+	sed -e "s/CC = gcc/CC = $(tc-getCC)/" \
+		-e "s/OPTIMISE = -O2/OPTIMISE = ${CFLAGS}/" \
+		-i Makefile || die
+	sed -e "s/blosum62/BLOSUM62/" -i prospero.c || die
+}
+
+src_compile() {
+	emake || die
+}
+
+src_install() {
+	dobin Linux/{ariadne,prospero}
+	dolib Linux/libseq.a
+	insinto /usr/include/${PN}
+	doins Include/*.h
+	newenvd ${FILESDIR}/${PN}-env 22ariadne
+	dodoc README
+}

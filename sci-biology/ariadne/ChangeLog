@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/ariadne
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ChangeLog,v 1.1 2005/03/05 21:24:53 ribosome Exp $
+
+*ariadne-1.3 (05 Mar 2005)
+
+  05 Mar 2005; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/ariadne-env, +ariadne-1.3.ebuild:
+  Initial import.
+
