@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdcover/xmms-cdcover-0.2.ebuild,v 1.3 2004/03/29 23:20:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdcover/xmms-cdcover-0.2.ebuild,v 1.4 2004/04/26 01:29:45 dragonheart Exp $
 
 IUSE=""
 
 DESCRIPTION="An XMMS plugin for viewing album covers"
-HOMEPAGE="http://http://ducts.27b-6.de/cdcover/"
+HOMEPAGE="http://ducts.27b-6.de/cdcover/"
 SRC_URI="http://ducts.27b-6.de/cdcover/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
