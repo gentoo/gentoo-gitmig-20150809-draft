@@ -1,0 +1,26 @@
+2002-04-19  Bruno Haible  <bruno@clisp.org>
+
+	* posix/Versions: Move back __libc_wait to GLIBC_2.0 section.
+
+--- glibc-20020408/posix/Versions.bak	2002-02-04 12:42:40.000000000 +0100
++++ glibc-20020408/posix/Versions	2002-04-19 01:01:00.000000000 +0200
+@@ -14,6 +14,9 @@
+     # functions used by libstdc++ 2.7.2
+     __waitpid;
+ 
++    # functions used by SunJava2-1.3.1/jre/lib/i386/libjava.so
++    __libc_wait;
++
+     # global variables
+     __environ; _environ;
+ 
+@@ -108,7 +111,7 @@
+   GLIBC_PRIVATE {
+     # functions which have an additional interface since they are
+     # are cancelable.
+-    __libc_wait; __libc_waitpid; __libc_pause; __libc_nanosleep; __libc_fork;
++    __libc_waitpid; __libc_pause; __libc_nanosleep; __libc_fork;
+     __libc_pread; __libc_pread64; __libc_pwrite; __libc_pwrite64;
+   }
+ }
+

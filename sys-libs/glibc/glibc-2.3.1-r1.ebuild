@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r1.ebuild,v 1.1 2002/10/26 00:53:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r1.ebuild,v 1.2 2002/10/31 18:02:24 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -87,9 +87,22 @@ src_unpack() {
 	#
 	# We should think about remoing it in the future after things have settled.
 	#
+	# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
+	#
 	# <azarah@gentoo.org> (26 Oct 2002).
 	einfo "Applying ctype-compat patch..."
 	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-ctype-compat.patch > /dev/null || die
+
+	# One more compat issue which breaks sun-jdk-1.3.1.  See bug #8766 for more
+	# info, and also:
+	#
+	#   http://sources.redhat.com/ml/libc-alpha/2002-04/msg00143.html
+	#
+	# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
+	#
+	# <azarah@gentoo.org> (30 Oct 2002).
+	einfo "Applying libc_wait-compat patch..."
+	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-libc_wait-compat.patch > /dev/null || die
 }
 
 src_compile() {
