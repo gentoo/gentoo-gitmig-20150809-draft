@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040907.ebuild,v 1.2 2004/09/23 15:16:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040907.ebuild,v 1.3 2004/09/25 07:26:28 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="arm ppc x86"
+KEYWORDS="arm hppa ppc x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
@@ -26,11 +26,12 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -j1 || die
+	emake -j1 .depend || die "depend"
+	emake || die "make"
 }
 
 src_install() {
-	dolib.so libedit.so || die
-	dolib.a libedit.a || die
+	dolib.so libedit.so || die "dolib.so"
+	dolib.a libedit.a || die "dolib.a"
 	doman *.[35]
 }
