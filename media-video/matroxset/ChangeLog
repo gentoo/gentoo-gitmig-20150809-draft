@@ -1,6 +1,9 @@
 # ChangeLog for media-video/matroxset
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.5 2004/06/25 00:44:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/matroxset/ChangeLog,v 1.6 2004/07/01 08:40:09 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> matroxset-0.3.ebuild:
+  virtual/glibc -> virtual/libc
 
   30 May 2004; David Holm <dholm@gentoo.org> matroxset-0.3.ebuild:
   Added to ~ppc.

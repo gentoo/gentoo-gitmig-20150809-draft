@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5328-r1.ebuild,v 1.6 2004/06/25 00:47:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5328-r1.ebuild,v 1.7 2004/07/01 08:41:20 eradicator Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="-* ~x86"
 RESTRICT="nostrip"
 
 # We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=x11-base/xfree-4.2.0-r9
 	>=x11-base/opengl-update-1.3
 	~media-video/nvidia-kernel-${PV}"

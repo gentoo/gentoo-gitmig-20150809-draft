@@ -1,6 +1,9 @@
 # ChangeLog for media-video/w3cam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/ChangeLog,v 1.4 2004/06/25 00:53:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/ChangeLog,v 1.5 2004/07/01 08:43:05 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> w3cam-0.7.2.ebuild:
+  virtual/glibc -> virtual/libc
 
 *w3cam-0.7.2-r1 (23 Oct 2002)
   

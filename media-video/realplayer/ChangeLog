@@ -1,6 +1,10 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.25 2004/06/25 00:49:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.26 2004/07/01 08:41:47 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  realplayer-8-r6.ebuild, realplayer-8-r7.ebuild:
+  virtual/glibc -> virtual/libc
 
   15 Mar 2004; Seemant Kulleen <seemant@gentoo.org> realplayer-8-r5.ebuild:
   remove -r5 as it was unstable on all arches, which -r7 will be, plus it

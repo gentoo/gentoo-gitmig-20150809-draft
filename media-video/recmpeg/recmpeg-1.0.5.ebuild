@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recmpeg/recmpeg-1.0.5.ebuild,v 1.6 2004/06/25 00:49:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/recmpeg/recmpeg-1.0.5.ebuild,v 1.7 2004/07/01 08:42:05 eradicator Exp $
 
 DESCRIPTION="recmpeg is a simple video encoder, based on libfame, which compresses raw video sequences to MPEG video"
 HOMEPAGE="http://fame.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="mmx sse"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=media-libs/libfame-0.9.0"
 
 src_compile() {

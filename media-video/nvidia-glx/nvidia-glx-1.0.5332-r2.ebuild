@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5332-r2.ebuild,v 1.7 2004/06/25 00:47:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5332-r2.ebuild,v 1.8 2004/07/01 08:41:20 eradicator Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="-* amd64"
 RESTRICT="nostrip"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	>=x11-base/opengl-update-1.3
 	~media-video/nvidia-kernel-${PV}"

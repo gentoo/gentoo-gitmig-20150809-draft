@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.49 2004/06/25 00:47:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.50 2004/07/01 08:41:20 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  nvidia-glx-1.0.4363.ebuild, nvidia-glx-1.0.4496-r1.ebuild,
+  nvidia-glx-1.0.4496.ebuild, nvidia-glx-1.0.4499.ebuild,
+  nvidia-glx-1.0.5328-r1.ebuild, nvidia-glx-1.0.5332-r2.ebuild,
+  nvidia-glx-1.0.5336-r2.ebuild:
+  virtual/glibc -> virtual/libc
 
   10 May 2004; Andrew Bevitt <cyfred@gentoo.org>;
   -nvidia-glx-1.0.5332-r1.ebuild:

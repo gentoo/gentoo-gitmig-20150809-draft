@@ -1,6 +1,10 @@
 # ChangeLog for media-video/asfrecorder
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/ChangeLog,v 1.3 2004/06/25 00:35:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/ChangeLog,v 1.4 2004/07/01 08:38:59 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  asfrecorder-1.1.ebuild:
+  virtual/glibc -> virtual/libc
 
 *asfrecorder-1.1 (16 Nov 2002)
 

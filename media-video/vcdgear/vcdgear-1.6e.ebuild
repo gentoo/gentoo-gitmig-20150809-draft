@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.6e.ebuild,v 1.9 2004/06/25 00:51:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.6e.ebuild,v 1.10 2004/07/01 08:42:52 eradicator Exp $
 
 MY_V="16"
 MY_VR="e"
@@ -15,7 +15,7 @@ KEYWORDS="-* x86"
 IUSE="static"
 
 DEPEND=""
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}/${PN}
 

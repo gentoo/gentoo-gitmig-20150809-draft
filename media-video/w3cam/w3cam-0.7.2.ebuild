@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.7 2004/06/25 00:53:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.8 2004/07/01 08:43:05 eradicator Exp $
 
 #
 # You can set the default device that vidcat and w3camd use by setting
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="truetype"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/zlib
 	media-libs/jpeg
 	media-libs/libpng

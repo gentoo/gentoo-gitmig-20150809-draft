@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8.ebuild,v 1.4 2004/06/27 21:20:55 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8.ebuild,v 1.5 2004/07/01 08:41:33 eradicator Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 -ppc -mips ~amd64"
 IUSE=""
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-lang/python-2.2
 	>=x11-libs/qt-3.1
 	>=dev-python/PyQt-3.5-r1

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r7.ebuild,v 1.4 2004/06/25 00:49:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r7.ebuild,v 1.5 2004/07/01 08:41:47 eradicator Exp $
 
 inherit nsplugins
 
@@ -20,7 +20,7 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha"
 IUSE="kde gnome"
 
 # Fix for bug 15314
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sparc? ( sys-libs/lib-compat )"
 RDEPEND="virtual/x11"
 PDEPEND="x86? ( >=media-plugins/realvideo-codecs-9 )"
