@@ -1,6 +1,6 @@
-diff -r -u mysql-3.23.36.orig/Docs/Makefile.in mysql-3.23.36/Docs/Makefile.in
+diff -u -r mysql-3.23.36.orig/Docs/Makefile.in mysql-3.23.36/Docs/Makefile.in
 --- mysql-3.23.36.orig/Docs/Makefile.in	Tue Mar 27 10:19:49 2001
-+++ mysql-3.23.36/Docs/Makefile.in	Fri Apr 13 16:23:24 2001
++++ mysql-3.23.36/Docs/Makefile.in	Fri Apr 13 17:17:03 2001
 @@ -195,15 +195,15 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -38,9 +38,9 @@ diff -r -u mysql-3.23.36.orig/Docs/Makefile.in mysql-3.23.36/Docs/Makefile.in
  	  else \
  	    test -f $(distdir)/$$file \
  	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-diff -r -u mysql-3.23.36.orig/Makefile.in mysql-3.23.36/Makefile.in
+diff -u -r mysql-3.23.36.orig/Makefile.in mysql-3.23.36/Makefile.in
 --- mysql-3.23.36.orig/Makefile.in	Tue Mar 27 10:19:47 2001
-+++ mysql-3.23.36/Makefile.in	Fri Apr 13 16:23:19 2001
++++ mysql-3.23.36/Makefile.in	Fri Apr 13 17:16:58 2001
 @@ -200,9 +200,9 @@
  all: all-redirect
  .SUFFIXES:
@@ -70,9 +70,60 @@ diff -r -u mysql-3.23.36.orig/Makefile.in mysql-3.23.36/Makefile.in
  	  else \
  	    test -f $(distdir)/$$file \
  	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-diff -r -u mysql-3.23.36.orig/aclocal.m4 mysql-3.23.36/aclocal.m4
+diff -u -r mysql-3.23.36.orig/acinclude.m4 mysql-3.23.36/acinclude.m4
+--- mysql-3.23.36.orig/acinclude.m4	Tue Mar 27 10:11:01 2001
++++ mysql-3.23.36/acinclude.m4	Fri Apr 13 17:16:52 2001
+@@ -742,12 +742,12 @@
+     if test X"$bdb_version_ok" = Xyes; then
+       save_LDFLAGS="$LDFLAGS"
+       LDFLAGS="-L$lib $LDFLAGS"
+-      AC_CHECK_LIB(db,db_env_create, [
++      AC_CHECK_LIB(db-3.2,db_env_create, [
+         bdb_dir_ok=installed
+         MYSQL_TOP_BUILDDIR([inc])
+         MYSQL_TOP_BUILDDIR([lib])
+         bdb_includes="-I$inc"
+-        bdb_libs="-L$lib -ldb"
++        bdb_libs="-L$lib -ldb-3.2"
+       ])
+       LDFLAGS="$save_LDFLAGS"
+     else
+@@ -775,7 +775,7 @@
+         bdb="$dir"
+         MYSQL_TOP_BUILDDIR([dir])
+         bdb_includes="-I$dir/build_unix"
+-        bdb_libs="-L$dir/build_unix -ldb"
++        bdb_libs="-L$dir/build_unix -ldb-3.2"
+       else
+         bdb_dir_ok="$bdb_version_ok"
+       fi
+diff -u -r mysql-3.23.36.orig/aclocal.m4 mysql-3.23.36/aclocal.m4
 --- mysql-3.23.36.orig/aclocal.m4	Tue Mar 27 10:11:11 2001
-+++ mysql-3.23.36/aclocal.m4	Fri Apr 13 16:23:15 2001
++++ mysql-3.23.36/aclocal.m4	Fri Apr 13 17:16:54 2001
+@@ -754,12 +754,12 @@
+     if test X"$bdb_version_ok" = Xyes; then
+       save_LDFLAGS="$LDFLAGS"
+       LDFLAGS="-L$lib $LDFLAGS"
+-      AC_CHECK_LIB(db,db_env_create, [
++      AC_CHECK_LIB(db-3.2,db_env_create, [
+         bdb_dir_ok=installed
+         MYSQL_TOP_BUILDDIR([inc])
+         MYSQL_TOP_BUILDDIR([lib])
+         bdb_includes="-I$inc"
+-        bdb_libs="-L$lib -ldb"
++        bdb_libs="-L$lib -ldb-3.2"
+       ])
+       LDFLAGS="$save_LDFLAGS"
+     else
+@@ -787,7 +787,7 @@
+         bdb="$dir"
+         MYSQL_TOP_BUILDDIR([dir])
+         bdb_includes="-I$dir/build_unix"
+-        bdb_libs="-L$dir/build_unix -ldb"
++        bdb_libs="-L$dir/build_unix -ldb-3.2"
+       else
+         bdb_dir_ok="$bdb_version_ok"
+       fi
 @@ -1286,12 +1286,7 @@
  esac
  
@@ -150,9 +201,9 @@ diff -r -u mysql-3.23.36.orig/aclocal.m4 mysql-3.23.36/aclocal.m4
    else
      ac_configure_args="$ac_configure_args --enable-ltdl-install=no"
      LIBLTDL="-lltdl"
-diff -r -u mysql-3.23.36.orig/client/Makefile.in mysql-3.23.36/client/Makefile.in
+diff -u -r mysql-3.23.36.orig/client/Makefile.in mysql-3.23.36/client/Makefile.in
 --- mysql-3.23.36.orig/client/Makefile.in	Tue Mar 27 10:19:54 2001
-+++ mysql-3.23.36/client/Makefile.in	Fri Apr 13 16:23:22 2001
++++ mysql-3.23.36/client/Makefile.in	Fri Apr 13 17:17:01 2001
 @@ -251,8 +251,12 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -390,9 +441,9 @@ diff -r -u mysql-3.23.36.orig/client/Makefile.in mysql-3.23.36/client/Makefile.i
  
  
  thread_test.o:		thread_test.c
-diff -r -u mysql-3.23.36.orig/configure mysql-3.23.36/configure
+diff -u -r mysql-3.23.36.orig/configure mysql-3.23.36/configure
 --- mysql-3.23.36.orig/configure	Tue Mar 27 10:11:17 2001
-+++ mysql-3.23.36/configure	Fri Apr 13 16:23:28 2001
++++ mysql-3.23.36/configure	Fri Apr 13 17:17:06 2001
 @@ -116,23 +116,27 @@
  
  
@@ -4077,18 +4128,22 @@ diff -r -u mysql-3.23.36.orig/configure mysql-3.23.36/configure
  
    have_berkeley_db=no
    case "$bdb" in
-@@ -9693,7 +9692,7 @@
+@@ -9692,16 +9691,16 @@
+     if test X"$bdb_version_ok" = Xyes; then
        save_LDFLAGS="$LDFLAGS"
        LDFLAGS="-L$lib $LDFLAGS"
-       echo $ac_n "checking for db_env_create in -ldb""... $ac_c" 1>&6
+-      echo $ac_n "checking for db_env_create in -ldb""... $ac_c" 1>&6
 -echo "configure:9697: checking for db_env_create in -ldb" >&5
-+echo "configure:9696: checking for db_env_create in -ldb" >&5
- ac_lib_var=`echo db'_'db_env_create | sed 'y%./+-%__p_%'`
+-ac_lib_var=`echo db'_'db_env_create | sed 'y%./+-%__p_%'`
++      echo $ac_n "checking for db_env_create in -ldb-3.2""... $ac_c" 1>&6
++echo "configure:9696: checking for db_env_create in -ldb-3.2" >&5
++ac_lib_var=`echo db-3.2'_'db_env_create | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -9701,7 +9700,7 @@
+ else
    ac_save_LIBS="$LIBS"
- LIBS="-ldb  $LIBS"
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3.2  $LIBS"
  cat > conftest.$ac_ext <<EOF
 -#line 9705 "configure"
 +#line 9704 "configure"
@@ -4104,18 +4159,31 @@ diff -r -u mysql-3.23.36.orig/configure mysql-3.23.36/configure
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -9829,7 +9828,7 @@
+@@ -9768,7 +9767,7 @@
+   fi
+ 
+         bdb_includes="-I$inc"
+-        bdb_libs="-L$lib -ldb"
++        bdb_libs="-L$lib -ldb-3.2"
+       
+ else
+   echo "$ac_t""no" 1>&6
+@@ -9828,16 +9827,16 @@
+     if test X"$bdb_version_ok" = Xyes; then
        save_LDFLAGS="$LDFLAGS"
        LDFLAGS="-L$lib $LDFLAGS"
-       echo $ac_n "checking for db_env_create in -ldb""... $ac_c" 1>&6
+-      echo $ac_n "checking for db_env_create in -ldb""... $ac_c" 1>&6
 -echo "configure:9833: checking for db_env_create in -ldb" >&5
-+echo "configure:9832: checking for db_env_create in -ldb" >&5
- ac_lib_var=`echo db'_'db_env_create | sed 'y%./+-%__p_%'`
+-ac_lib_var=`echo db'_'db_env_create | sed 'y%./+-%__p_%'`
++      echo $ac_n "checking for db_env_create in -ldb-3.2""... $ac_c" 1>&6
++echo "configure:9832: checking for db_env_create in -ldb-3.2" >&5
++ac_lib_var=`echo db-3.2'_'db_env_create | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -9837,7 +9836,7 @@
+ else
    ac_save_LIBS="$LIBS"
- LIBS="-ldb  $LIBS"
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3.2  $LIBS"
  cat > conftest.$ac_ext <<EOF
 -#line 9841 "configure"
 +#line 9840 "configure"
@@ -4131,18 +4199,40 @@ diff -r -u mysql-3.23.36.orig/configure mysql-3.23.36/configure
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
-@@ -10035,7 +10034,7 @@
+@@ -9904,7 +9903,7 @@
+   fi
+ 
+         bdb_includes="-I$inc"
+-        bdb_libs="-L$lib -ldb"
++        bdb_libs="-L$lib -ldb-3.2"
+       
+ else
+   echo "$ac_t""no" 1>&6
+@@ -9974,7 +9973,7 @@
+   fi
+ 
+         bdb_includes="-I$dir/build_unix"
+-        bdb_libs="-L$dir/build_unix -ldb"
++        bdb_libs="-L$dir/build_unix -ldb-3.2"
+       else
+         bdb_dir_ok="$bdb_version_ok"
+       fi
+@@ -10034,16 +10033,16 @@
+     if test X"$bdb_version_ok" = Xyes; then
        save_LDFLAGS="$LDFLAGS"
        LDFLAGS="-L$lib $LDFLAGS"
-       echo $ac_n "checking for db_env_create in -ldb""... $ac_c" 1>&6
+-      echo $ac_n "checking for db_env_create in -ldb""... $ac_c" 1>&6
 -echo "configure:10039: checking for db_env_create in -ldb" >&5
-+echo "configure:10038: checking for db_env_create in -ldb" >&5
- ac_lib_var=`echo db'_'db_env_create | sed 'y%./+-%__p_%'`
+-ac_lib_var=`echo db'_'db_env_create | sed 'y%./+-%__p_%'`
++      echo $ac_n "checking for db_env_create in -ldb-3.2""... $ac_c" 1>&6
++echo "configure:10038: checking for db_env_create in -ldb-3.2" >&5
++ac_lib_var=`echo db-3.2'_'db_env_create | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -10043,7 +10042,7 @@
+ else
    ac_save_LIBS="$LIBS"
- LIBS="-ldb  $LIBS"
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb-3.2  $LIBS"
  cat > conftest.$ac_ext <<EOF
 -#line 10047 "configure"
 +#line 10046 "configure"
@@ -4158,6 +4248,24 @@ diff -r -u mysql-3.23.36.orig/configure mysql-3.23.36/configure
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
  else
+@@ -10110,7 +10109,7 @@
+   fi
+ 
+         bdb_includes="-I$inc"
+-        bdb_libs="-L$lib -ldb"
++        bdb_libs="-L$lib -ldb-3.2"
+       
+ else
+   echo "$ac_t""no" 1>&6
+@@ -10180,7 +10179,7 @@
+   fi
+ 
+         bdb_includes="-I$dir/build_unix"
+-        bdb_libs="-L$dir/build_unix -ldb"
++        bdb_libs="-L$dir/build_unix -ldb-3.2"
+       else
+         bdb_dir_ok="$bdb_version_ok"
+       fi
 @@ -10247,7 +10246,7 @@
  
  
@@ -4203,9 +4311,9 @@ diff -r -u mysql-3.23.36.orig/configure mysql-3.23.36/configure
  
    have_gemini_db=no
    gemini_includes=
-diff -r -u mysql-3.23.36.orig/dbug/Makefile.in mysql-3.23.36/dbug/Makefile.in
+diff -u -r mysql-3.23.36.orig/dbug/Makefile.in mysql-3.23.36/dbug/Makefile.in
 --- mysql-3.23.36.orig/dbug/Makefile.in	Tue Mar 27 10:20:14 2001
-+++ mysql-3.23.36/dbug/Makefile.in	Fri Apr 13 16:23:23 2001
++++ mysql-3.23.36/dbug/Makefile.in	Fri Apr 13 17:17:02 2001
 @@ -207,8 +207,9 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -4367,9 +4475,9 @@ diff -r -u mysql-3.23.36.orig/dbug/Makefile.in mysql-3.23.36/dbug/Makefile.in
  
  
  # Must be linked with libs thta are not compiled yet
-diff -r -u mysql-3.23.36.orig/extra/Makefile.in mysql-3.23.36/extra/Makefile.in
+diff -u -r mysql-3.23.36.orig/extra/Makefile.in mysql-3.23.36/extra/Makefile.in
 --- mysql-3.23.36.orig/extra/Makefile.in	Tue Mar 27 10:20:17 2001
-+++ mysql-3.23.36/extra/Makefile.in	Fri Apr 13 16:23:19 2001
++++ mysql-3.23.36/extra/Makefile.in	Fri Apr 13 17:16:59 2001
 @@ -235,8 +235,10 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -4576,9 +4684,9 @@ diff -r -u mysql-3.23.36.orig/extra/Makefile.in mysql-3.23.36/extra/Makefile.in
  
  
  # Don't update the files from bitkeeper
-diff -r -u mysql-3.23.36.orig/heap/Makefile.in mysql-3.23.36/heap/Makefile.in
+diff -u -r mysql-3.23.36.orig/heap/Makefile.in mysql-3.23.36/heap/Makefile.in
 --- mysql-3.23.36.orig/heap/Makefile.in	Tue Mar 27 10:20:25 2001
-+++ mysql-3.23.36/heap/Makefile.in	Fri Apr 13 16:23:20 2001
++++ mysql-3.23.36/heap/Makefile.in	Fri Apr 13 17:17:00 2001
 @@ -225,8 +225,15 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -4964,9 +5072,9 @@ diff -r -u mysql-3.23.36.orig/heap/Makefile.in mysql-3.23.36/heap/Makefile.in
  
  
  # Don't update the files from bitkeeper
-diff -r -u mysql-3.23.36.orig/include/Makefile.in mysql-3.23.36/include/Makefile.in
+diff -u -r mysql-3.23.36.orig/include/Makefile.in mysql-3.23.36/include/Makefile.in
 --- mysql-3.23.36.orig/include/Makefile.in	Tue Mar 27 10:19:48 2001
-+++ mysql-3.23.36/include/Makefile.in	Fri Apr 13 16:23:23 2001
++++ mysql-3.23.36/include/Makefile.in	Fri Apr 13 17:17:02 2001
 @@ -198,14 +198,14 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -5002,9 +5110,9 @@ diff -r -u mysql-3.23.36.orig/include/Makefile.in mysql-3.23.36/include/Makefile
  	  else \
  	    test -f $(distdir)/$$file \
  	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-diff -r -u mysql-3.23.36.orig/isam/Makefile.in mysql-3.23.36/isam/Makefile.in
+diff -u -r mysql-3.23.36.orig/isam/Makefile.in mysql-3.23.36/isam/Makefile.in
 --- mysql-3.23.36.orig/isam/Makefile.in	Tue Mar 27 10:20:19 2001
-+++ mysql-3.23.36/isam/Makefile.in	Fri Apr 13 16:23:20 2001
++++ mysql-3.23.36/isam/Makefile.in	Fri Apr 13 17:16:59 2001
 @@ -245,8 +245,17 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -5497,9 +5605,9 @@ diff -r -u mysql-3.23.36.orig/isam/Makefile.in mysql-3.23.36/isam/Makefile.in
  
  
  # Move to automake rules ?
-diff -r -u mysql-3.23.36.orig/libmysql/Makefile.in mysql-3.23.36/libmysql/Makefile.in
+diff -u -r mysql-3.23.36.orig/libmysql/Makefile.in mysql-3.23.36/libmysql/Makefile.in
 --- mysql-3.23.36.orig/libmysql/Makefile.in	Tue Mar 27 10:19:53 2001
-+++ mysql-3.23.36/libmysql/Makefile.in	Fri Apr 13 16:23:22 2001
++++ mysql-3.23.36/libmysql/Makefile.in	Fri Apr 13 17:17:01 2001
 @@ -269,8 +269,10 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -5925,9 +6033,9 @@ diff -r -u mysql-3.23.36.orig/libmysql/Makefile.in mysql-3.23.36/libmysql/Makefi
  
  
  # The automatic dependencies miss this
-diff -r -u mysql-3.23.36.orig/libmysql_r/Makefile.in mysql-3.23.36/libmysql_r/Makefile.in
+diff -u -r mysql-3.23.36.orig/libmysql_r/Makefile.in mysql-3.23.36/libmysql_r/Makefile.in
 --- mysql-3.23.36.orig/libmysql_r/Makefile.in	Tue Mar 27 10:19:52 2001
-+++ mysql-3.23.36/libmysql_r/Makefile.in	Fri Apr 13 16:23:21 2001
++++ mysql-3.23.36/libmysql_r/Makefile.in	Fri Apr 13 17:17:01 2001
 @@ -259,8 +259,10 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -6555,9 +6663,9 @@ diff -r -u mysql-3.23.36.orig/libmysql_r/Makefile.in mysql-3.23.36/libmysql_r/Ma
  
  
  # The automatic dependencies miss this
-diff -r -u mysql-3.23.36.orig/man/Makefile.in mysql-3.23.36/man/Makefile.in
+diff -u -r mysql-3.23.36.orig/man/Makefile.in mysql-3.23.36/man/Makefile.in
 --- mysql-3.23.36.orig/man/Makefile.in	Tue Mar 27 10:20:30 2001
-+++ mysql-3.23.36/man/Makefile.in	Fri Apr 13 16:23:21 2001
++++ mysql-3.23.36/man/Makefile.in	Fri Apr 13 17:17:00 2001
 @@ -189,14 +189,14 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -6593,9 +6701,9 @@ diff -r -u mysql-3.23.36.orig/man/Makefile.in mysql-3.23.36/man/Makefile.in
  	  else \
  	    test -f $(distdir)/$$file \
  	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-diff -r -u mysql-3.23.36.orig/merge/Makefile.in mysql-3.23.36/merge/Makefile.in
+diff -u -r mysql-3.23.36.orig/merge/Makefile.in mysql-3.23.36/merge/Makefile.in
 --- mysql-3.23.36.orig/merge/Makefile.in	Tue Mar 27 10:20:20 2001
-+++ mysql-3.23.36/merge/Makefile.in	Fri Apr 13 16:23:23 2001
++++ mysql-3.23.36/merge/Makefile.in	Fri Apr 13 17:17:02 2001
 @@ -205,8 +205,11 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -6858,9 +6966,9 @@ diff -r -u mysql-3.23.36.orig/merge/Makefile.in mysql-3.23.36/merge/Makefile.in
  
  
  # Don't update the files from bitkeeper
-diff -r -u mysql-3.23.36.orig/myisam/Makefile.in mysql-3.23.36/myisam/Makefile.in
+diff -u -r mysql-3.23.36.orig/myisam/Makefile.in mysql-3.23.36/myisam/Makefile.in
 --- mysql-3.23.36.orig/myisam/Makefile.in	Tue Mar 27 10:20:22 2001
-+++ mysql-3.23.36/myisam/Makefile.in	Fri Apr 13 16:23:21 2001
++++ mysql-3.23.36/myisam/Makefile.in	Fri Apr 13 17:17:00 2001
 @@ -265,8 +265,22 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -7518,9 +7626,9 @@ diff -r -u mysql-3.23.36.orig/myisam/Makefile.in mysql-3.23.36/myisam/Makefile.i
  
  
  # Move to automake rules ?
-diff -r -u mysql-3.23.36.orig/myisammrg/Makefile.in mysql-3.23.36/myisammrg/Makefile.in
+diff -u -r mysql-3.23.36.orig/myisammrg/Makefile.in mysql-3.23.36/myisammrg/Makefile.in
 --- mysql-3.23.36.orig/myisammrg/Makefile.in	Tue Mar 27 10:20:23 2001
-+++ mysql-3.23.36/myisammrg/Makefile.in	Fri Apr 13 16:23:21 2001
++++ mysql-3.23.36/myisammrg/Makefile.in	Fri Apr 13 17:17:00 2001
 @@ -206,8 +206,14 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -7858,9 +7966,9 @@ diff -r -u mysql-3.23.36.orig/myisammrg/Makefile.in mysql-3.23.36/myisammrg/Make
  
  
  # Don't update the files from bitkeeper
-diff -r -u mysql-3.23.36.orig/mysql-test/Makefile.in mysql-3.23.36/mysql-test/Makefile.in
+diff -u -r mysql-3.23.36.orig/mysql-test/Makefile.in mysql-3.23.36/mysql-test/Makefile.in
 --- mysql-3.23.36.orig/mysql-test/Makefile.in	Tue Mar 27 10:20:32 2001
-+++ mysql-3.23.36/mysql-test/Makefile.in	Fri Apr 13 16:23:24 2001
++++ mysql-3.23.36/mysql-test/Makefile.in	Fri Apr 13 17:17:03 2001
 @@ -191,15 +191,15 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -7897,9 +8005,9 @@ diff -r -u mysql-3.23.36.orig/mysql-test/Makefile.in mysql-3.23.36/mysql-test/Ma
  	  else \
  	    test -f $(distdir)/$$file \
  	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-diff -r -u mysql-3.23.36.orig/mysys/Makefile.in mysql-3.23.36/mysys/Makefile.in
+diff -u -r mysql-3.23.36.orig/mysys/Makefile.in mysql-3.23.36/mysys/Makefile.in
 --- mysql-3.23.36.orig/mysys/Makefile.in	Tue Mar 27 10:20:16 2001
-+++ mysql-3.23.36/mysys/Makefile.in	Fri Apr 13 16:23:19 2001
++++ mysql-3.23.36/mysys/Makefile.in	Fri Apr 13 17:16:59 2001
 @@ -249,8 +249,31 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -8711,9 +8819,9 @@ diff -r -u mysql-3.23.36.orig/mysys/Makefile.in mysql-3.23.36/mysys/Makefile.in
  
  
  #
-diff -r -u mysql-3.23.36.orig/readline/Makefile.in mysql-3.23.36/readline/Makefile.in
+diff -u -r mysql-3.23.36.orig/readline/Makefile.in mysql-3.23.36/readline/Makefile.in
 --- mysql-3.23.36.orig/readline/Makefile.in	Tue Mar 27 10:19:50 2001
-+++ mysql-3.23.36/readline/Makefile.in	Fri Apr 13 16:23:21 2001
++++ mysql-3.23.36/readline/Makefile.in	Fri Apr 13 17:17:01 2001
 @@ -200,8 +200,15 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -8927,9 +9035,9 @@ diff -r -u mysql-3.23.36.orig/readline/Makefile.in mysql-3.23.36/readline/Makefi
  
  
  # Don't update the files from bitkeeper
-diff -r -u mysql-3.23.36.orig/regex/Makefile.in mysql-3.23.36/regex/Makefile.in
+diff -u -r mysql-3.23.36.orig/regex/Makefile.in mysql-3.23.36/regex/Makefile.in
 --- mysql-3.23.36.orig/regex/Makefile.in	Tue Mar 27 10:20:18 2001
-+++ mysql-3.23.36/regex/Makefile.in	Fri Apr 13 16:23:20 2001
++++ mysql-3.23.36/regex/Makefile.in	Fri Apr 13 17:17:00 2001
 @@ -215,8 +215,10 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -9117,9 +9225,9 @@ diff -r -u mysql-3.23.36.orig/regex/Makefile.in mysql-3.23.36/regex/Makefile.in
  
  
  test: re tests
-diff -r -u mysql-3.23.36.orig/scripts/Makefile.in mysql-3.23.36/scripts/Makefile.in
+diff -u -r mysql-3.23.36.orig/scripts/Makefile.in mysql-3.23.36/scripts/Makefile.in
 --- mysql-3.23.36.orig/scripts/Makefile.in	Tue Mar 27 10:20:29 2001
-+++ mysql-3.23.36/scripts/Makefile.in	Fri Apr 13 16:23:23 2001
++++ mysql-3.23.36/scripts/Makefile.in	Fri Apr 13 17:17:02 2001
 @@ -203,15 +203,15 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -9156,9 +9264,9 @@ diff -r -u mysql-3.23.36.orig/scripts/Makefile.in mysql-3.23.36/scripts/Makefile
  	  else \
  	    test -f $(distdir)/$$file \
  	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-diff -r -u mysql-3.23.36.orig/sql/Makefile.in mysql-3.23.36/sql/Makefile.in
+diff -u -r mysql-3.23.36.orig/sql/Makefile.in mysql-3.23.36/sql/Makefile.in
 --- mysql-3.23.36.orig/sql/Makefile.in	Tue Mar 27 10:20:27 2001
-+++ mysql-3.23.36/sql/Makefile.in	Fri Apr 13 16:23:22 2001
++++ mysql-3.23.36/sql/Makefile.in	Fri Apr 13 17:17:02 2001
 @@ -260,8 +260,30 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -10627,9 +10735,9 @@ diff -r -u mysql-3.23.36.orig/sql/Makefile.in mysql-3.23.36/sql/Makefile.in
  
  
  link_sources:
-diff -r -u mysql-3.23.36.orig/sql/share/Makefile.in mysql-3.23.36/sql/share/Makefile.in
+diff -u -r mysql-3.23.36.orig/sql/share/Makefile.in mysql-3.23.36/sql/share/Makefile.in
 --- mysql-3.23.36.orig/sql/share/Makefile.in	Tue Mar 27 10:20:28 2001
-+++ mysql-3.23.36/sql/share/Makefile.in	Fri Apr 13 16:23:22 2001
++++ mysql-3.23.36/sql/share/Makefile.in	Fri Apr 13 17:17:02 2001
 @@ -163,14 +163,14 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -10665,9 +10773,9 @@ diff -r -u mysql-3.23.36.orig/sql/share/Makefile.in mysql-3.23.36/sql/share/Make
  	  else \
  	    test -f $(distdir)/$$file \
  	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-diff -r -u mysql-3.23.36.orig/sql-bench/Makefile.in mysql-3.23.36/sql-bench/Makefile.in
+diff -u -r mysql-3.23.36.orig/sql-bench/Makefile.in mysql-3.23.36/sql-bench/Makefile.in
 --- mysql-3.23.36.orig/sql-bench/Makefile.in	Tue Mar 27 10:20:31 2001
-+++ mysql-3.23.36/sql-bench/Makefile.in	Fri Apr 13 16:23:23 2001
++++ mysql-3.23.36/sql-bench/Makefile.in	Fri Apr 13 17:17:02 2001
 @@ -193,15 +193,15 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -10704,9 +10812,9 @@ diff -r -u mysql-3.23.36.orig/sql-bench/Makefile.in mysql-3.23.36/sql-bench/Make
  	  else \
  	    test -f $(distdir)/$$file \
  	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-diff -r -u mysql-3.23.36.orig/strings/Makefile.in mysql-3.23.36/strings/Makefile.in
+diff -u -r mysql-3.23.36.orig/strings/Makefile.in mysql-3.23.36/strings/Makefile.in
 --- mysql-3.23.36.orig/strings/Makefile.in	Tue Mar 27 10:20:13 2001
-+++ mysql-3.23.36/strings/Makefile.in	Fri Apr 13 16:23:20 2001
++++ mysql-3.23.36/strings/Makefile.in	Fri Apr 13 17:16:59 2001
 @@ -210,22 +210,6 @@
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
@@ -11043,9 +11151,9 @@ diff -r -u mysql-3.23.36.orig/strings/Makefile.in mysql-3.23.36/strings/Makefile
  
  ctype.o:		ctype_extra_sources.c
  
-diff -r -u mysql-3.23.36.orig/support-files/Makefile.in mysql-3.23.36/support-files/Makefile.in
+diff -u -r mysql-3.23.36.orig/support-files/Makefile.in mysql-3.23.36/support-files/Makefile.in
 --- mysql-3.23.36.orig/support-files/Makefile.in	Tue Mar 27 10:20:33 2001
-+++ mysql-3.23.36/support-files/Makefile.in	Fri Apr 13 16:23:24 2001
++++ mysql-3.23.36/support-files/Makefile.in	Fri Apr 13 17:17:03 2001
 @@ -197,15 +197,15 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
@@ -11082,9 +11190,9 @@ diff -r -u mysql-3.23.36.orig/support-files/Makefile.in mysql-3.23.36/support-fi
  	  else \
  	    test -f $(distdir)/$$file \
  	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
-diff -r -u mysql-3.23.36.orig/tests/Makefile.in mysql-3.23.36/tests/Makefile.in
+diff -u -r mysql-3.23.36.orig/tests/Makefile.in mysql-3.23.36/tests/Makefile.in
 --- mysql-3.23.36.orig/tests/Makefile.in	Tue Mar 27 10:20:29 2001
-+++ mysql-3.23.36/tests/Makefile.in	Fri Apr 13 16:23:23 2001
++++ mysql-3.23.36/tests/Makefile.in	Fri Apr 13 17:17:02 2001
 @@ -183,14 +183,14 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)

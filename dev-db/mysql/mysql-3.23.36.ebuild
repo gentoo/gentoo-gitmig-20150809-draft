@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.36.ebuild,v 1.1 2001/04/13 14:53:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.36.ebuild,v 1.2 2001/04/13 15:48:50 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -46,13 +46,11 @@ src_compile() {
     then
       # Means use system readline
       myconf="$myconf --without-readline"
-    else
-      myconf="$myconf --with-readline"
     fi
 
     if [ "`use berkdb`" ]
     then
-      myconf="$myconf --with-berkdb-includes=/usr/include/db3 --with-berkdb-libs=/usr/lib"
+      myconf="$myconf --with-berkeley-db --with-berkeley-db-includes=/usr/include/db3 --with-berkeley-db-libs=/usr/lib"
     else
       myconf="$myconf --without-berkdb"
     fi
@@ -63,7 +61,7 @@ src_compile() {
     else
       myconf="$myconf --without-debug"
     fi
-
+    echo $myconf
 	try CXX=gcc ./configure --prefix=/usr --host=${CHOST} \
 	--enable-shared \
 	--enable-static \
