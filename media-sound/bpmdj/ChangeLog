@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/bpmdj
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.6 2003/08/21 12:23:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.7 2003/09/29 02:21:13 jje Exp $
+
+*bpmdj-2.0.1 (29 Sep 2003)
+
+  29 Sep 2003; jje <jje@gentoo.org> bpmdj-2.0.1.ebuild, files/gcc.patch:
+  Version bump. Includes patch for gcc 3.3.
+  
+  Submitted by: Wade Brown <wandy@nmt.edu>
 
 *bpmdj-1.9 (15 Jul 2003)
 
