@@ -1,4 +1,4 @@
-MD5 ef0c77b1256e74cf1fb0cd9730af3d30 ChangeLog 3046
+MD5 a24c0e56c0e098df88266906b5b22fb2 ChangeLog 3164
 MD5 505373f2589febccf63cfd0e072558d2 metadata.xml 179
 MD5 f3d1725d8a5959d9796d1ee0a1f25fbf mod_mono-1.0.2-r1.ebuild 1320
 MD5 a592e506b1abb139e4daa52508d8c195 mod_mono-1.0.2.ebuild 1112
@@ -11,5 +11,5 @@ MD5 59e6cca34b5758dea676e2bd312a1bff files/digest-mod_mono-1.0.2-r1 66
 MD5 77cda919ba03a77058f8ba4ddd144d67 files/digest-mod_mono-1.0.4 66
 MD5 c53ec7880bda0510f3d1aeccd179474f files/digest-mod_mono-1.0.5 66
 MD5 3c40535ec688be1562b0571ea0fe7da2 files/mod_mono-1.0.2-70_mod_mono.conf 614
-MD5 e32606284f3105802f7912506e13e693 files/mod_mono-1.0.5-70_mod_mono.conf 620
+MD5 400c665327bc6a93a470c6d190d4a610 files/mod_mono-1.0.5-70_mod_mono.conf 619
 MD5 c53ec7880bda0510f3d1aeccd179474f files/digest-mod_mono-1.0.5-r1 66
