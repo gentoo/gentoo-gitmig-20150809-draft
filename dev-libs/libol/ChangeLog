@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libol
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.47 2004/10/13 23:01:31 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/ChangeLog,v 1.48 2004/11/18 20:14:03 corsair Exp $
+
+  18 Nov 2004; Markus Rothe <corsair@gentoo.org> libol-0.3.14.ebuild:
+  Stable on ppc64; bug #71613
 
   13 Oct 2004; Travis Tilley <lv@gentoo.org> libol-0.3.14.ebuild:
   stable on amd64
