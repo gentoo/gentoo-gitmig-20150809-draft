@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.7 2001/04/28 12:36:04 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml2x/sgml2x-0.11-r1.ebuild,v 1.8 2001/05/29 17:28:19 achim Exp $
 
 P=sgml2x-0.11
 A=${P}.tar.gz
@@ -12,18 +12,12 @@ HOMEPAGE="http://sgml2x.sourceforge.net/"
 
 DEPEND=">=sys-devel/perl-5"
 
-src_unpack() {
-  unpack ${A}
-  cd ${S}
-}
 
-src_compile() {                           
-  cd ${S}
+src_compile() {
   try make
 }
 
-src_install() {                               
-  cd ${S}
+src_install() {
   dodir /usr/bin
   dodir /etc
   make PREFIX=${D}/usr prefix=${D}/usr sysconfdir=${D}/etc install

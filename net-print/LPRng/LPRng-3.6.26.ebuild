@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.4 2001/05/28 05:24:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.5 2001/05/29 17:28:19 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -11,20 +11,24 @@ HOMEPAGE="http://www.astart.com/LPRng/LPRng.html"
 
 PROVIDE="virtual/lpr"
 
-DEPEND="virtual/glibc >=sys-libs/ncurses-5.2 >=sys-apps/procps-2.0.6"
+DEPEND="virtual/glibc >=sys-libs/ncurses-5.2 >=sys-apps/procps-2.0.6 nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc >=sys-libs/ncurses-5.2"
 src_unpack() {
   unpack ${A}
   cd ${S}/po
   rm Makefile.in.in
   cp /usr/share/gettext/po/Makefile.in.in .
-  rm -rf ${S}/intl
+  #rm -rf ${S}/intl
 }
 
 src_compile() {
-  cd ${S}
+  local myconf
+  if [ "`use nls`" ] ; then
+    myconf="--enable-nls"
+  fi
   try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/lprng \
-	--enable-nls --with-included-gettext
+	$myconf
+
   try make
 }
 
@@ -35,9 +39,11 @@ src_install() {
 		sysconfdir=${D}/etc/lprng \
 		POSTINSTALL="NO" install
 
-#  rm -rf ${D}/usr/share/locale
-#  MOPREFIX=LPRng
-#  domo po/fr.po
+  # Fixing buggy mo installation
+  rm -rf ${D}/usr/share/locale
+  MOPREFIX=LPRng
+  domo po/fr.po
+
   cd ${D}/usr/bin
   chgrp lp lpr lprm
   chmod g+s lpr lprm

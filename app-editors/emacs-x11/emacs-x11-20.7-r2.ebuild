@@ -17,6 +17,8 @@ DEPEND=">=sys-libs/ncurses-5.2
         virtual/x11
         >=sys-devel/gettext-0.10.35"
 
+PROVIDE="virtual/emacs"
+
 src_compile() {
 
     try ./configure --prefix=/usr --libexecdir=/usr/lib --host=${CHOST} \

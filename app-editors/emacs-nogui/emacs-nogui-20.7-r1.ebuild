@@ -15,6 +15,8 @@ RDEPEND=">=sys-libs/ncurses-5.2
 DEPEND=">=sys-libs/ncurses-5.2
         >=sys-devel/gettext-0.10.35"
 
+PROVIDE="virtual/emacs"
+
 src_compile() {
 
     try ./configure --prefix=/usr --libexecdir=/usr/lib --host=${CHOST} \

@@ -5,7 +5,7 @@
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="The Gnome Application Libraries"
+DESCRIPTION="Gnome XML i18n tools"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
          ftp://gnome.eazel.com/pub/gnome/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
@@ -13,13 +13,13 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND=">=sys-devel/perl-5.6.0"
 
 src_compile() {                           
-  cd ${S}
+
   try ./configure --host=${CHOST} --prefix=/usr
   try make
 }
 
 src_install() {
-  cd ${S}
+
   try make DESTDIR=${D} install
   dodoc AUTHORS ChangeLog NEWS README
 }

@@ -9,11 +9,12 @@ DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/${A}"
 HOMEPAGE="http://www.exim.org/"
 
-DEPEND=">=net-mail/mailbase-0.00
-        >=sys-libs/glibc-2.1.3
-        >=sys-devel/perl-5.6.0"
 
-RDEPEND="!virtual/mta"
+DEPEND="virtual/glibc
+        perl? ( >=sys-devel/perl-5.6.0 )
+        pam? ( >=sys-libs/pam-0.75 )
+        >=sys-libs/db-3.2"
+
 
 TLS_DEP=">=dev-libs/openssl-0.9.6"
 LDAP_DEP=">=net-nds/openldap-2.0.7"
@@ -30,6 +31,10 @@ fi
 if [ -n "`use mta-mysql`" ]; then
     DEPEND="${DEPEND} ${MYSQL_DEP}"
 fi
+RDEPEND="$DEPEND !virtual/mta >=net-mail/mailbase-0.00"
+
+DEPEND="$DEPEND tcpd? ( sys-apps/tcp-wrappers )"
+
 
 PROVIDE="virtual/mta"
 
@@ -51,8 +56,27 @@ src_unpack() {
         -e "s:# PID_FILE_PATH=/var/lock/exim%s.pid:PID_FILE_PATH=/var/run/exim%s.pid:" \
         -e "s:# SPOOL_DIRECTORY=/var/spool/exim:SPOOL_DIRECTORY=/var/spool/exim:" \
         -e "s:# SUPPORT_MAILDIR=yes:SUPPORT_MAILDIR=yes:" \
-        -e "s:# SUPPORT_PAM=yes:SUPPORT_PAM=yes:" \
-        -e "s:# USE_TCP_WRAPPERS=yes:USE_TCP_WRAPPERS=yes\n\EXTRALIBS=-lpam -lwrap:" src/EDITME > Local/Makefile
+        src/EDITME > Local/Makefile
+
+    cd Local
+    local myconf
+    if [ "`use pam`" ] ; then
+        cp Makefile Makefile.orig
+        sed -e "s:# SUPPORT_PAM=yes:SUPPORT_PAM=yes:" \
+        Makefile.orig > Makefile
+        myconf="-lpam"
+    fi
+    if [ "`use tcpd`" ] ; then
+        cp Makefile Makefile.orig
+        sed -e "s:# USE_TCP_WRAPPERS=yes:USE_TCP_WRAPPERS=yes:" \
+        Makefile.orig > Makefile
+        myconf="$myconf -lwrap"
+    fi
+    if [ "$myconf" ] ; then
+      echo "EXTRALIBS=$myconf" >> Makefile
+    fi
+
+    cd ..
     try make
 
     if [ -n "`use mta-tls`" ]; then

@@ -1,15 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.2.ebuild,v 1.1 2001/01/24 04:38:59 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.2.ebuild,v 1.2 2001/05/29 17:28:19 achim Exp $
 
 A=whois_4.5.2.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Whois Client"
 SRC_URI="http://www.linux.it/~md/software/${A}"
 
-DEPEND=">=sys-devel/perl-5
-	>=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc >=sys-devel/perl-5"
+RDEPEND="virtual/glibc"
 
 src_unpack() {
   unpack ${A}
@@ -22,13 +22,13 @@ src_unpack() {
 
 }
 src_compile() {                           
-  cd ${S}
+
   try make
   try make mkpasswd
 }
 
-src_install() {                               
-  cd ${S}
+src_install() {
+  
   dodir /usr/bin
   dodir /usr/man/man1
   dodir /usr/share/locale

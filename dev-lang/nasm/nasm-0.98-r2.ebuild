@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r2.ebuild,v 1.1 2001/03/06 06:20:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r2.ebuild,v 1.2 2001/05/29 17:28:19 achim Exp $
 
 P=nasm-0.98
 A=${P}.tar.bz2
@@ -12,7 +12,8 @@ SRC_URI="ftp://ftp.kernel.org/pub/software/devel/nasm/source/${A}
 	 ftp://ftp.uk.kernel.org/pub/software/devel/nasm/source/${A}"
 HOMEPAGE="http://nasm.sourceforge.net/"
 
-DEPEND="virtual/glibc sys-devel/perl"
+DEPEND="virtual/glibc sys-devel/perl sys-apps/texinfo"
+RDEPEND="virtual/glibc"
 
 src_compile() {                           
 

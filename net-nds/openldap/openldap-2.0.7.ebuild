@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.7.ebuild,v 1.1 2000/11/26 22:48:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.7.ebuild,v 1.2 2001/05/29 17:28:19 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -9,11 +9,26 @@ DESCRIPTION="LDAP suite of application and development tools"
 SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/"${A}
 HOMEPAGE="http://www.OpenLDAP.org/"
 
+DEPEND="virtual/glibc
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+        ssl? ( >=dev-libs/openssl-0.9.6 )
+        readline? ( >=sys-libs/readline-4.1 )
+	>=sys-libs/ncurses-5.1
+	>=sys-libs/gdbm-1.8.0"
+
+RDEPEND="virtual/glibc
+	>=sys-libs/ncurses-5.1
+	>=sys-libs/gdbm-1.8.0
+        readline? ( >=sys-libs/readline-4.1 )"
+
 src_compile() { 
-  cd ${S}
-  try ./configure --host=${CHOST} --enable-wrappers --enable-passwd \
-	      --enable-shell --enable-shared --enable-static \
-	      --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state
+  local myconf
+  if [ "`use tcpd`" ] ; then
+    myconf="--enable-wrappers"
+  fi
+  try ./configure --host=${CHOST} --enable-passwd \
+	      --enable-shell --enable-shared --enable-static --with-ldbm-api=gdbm \
+	      --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state $myconf
   try make depend
   try make
   cd tests

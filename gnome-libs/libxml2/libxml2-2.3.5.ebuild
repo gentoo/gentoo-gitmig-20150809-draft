@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-libs/libxml2/libxml2-2.3.5.ebuild,v 1.1 2001/04/26 22:19:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-libs/libxml2/libxml2-2.3.5.ebuild,v 1.2 2001/05/29 17:28:19 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,8 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/libxml/${A}
          ftp://gnome.eazel.com/pub/gnome/stable/sources/libxml/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=sys-libs/ncurses-5.2
+DEPEND="virtual/glibc
+        >=sys-libs/ncurses-5.2
         >=sys-libs/readline-4.1
         gnome-base/gnome-env"
 
