@@ -1,0 +1,5 @@
+auth       required   pam_pwdb.so
+auth       required   pam_nologin.so
+account    required   pam_pwdb.so
+session    required   pam_pwdb.so
+session    required   pam_limits.so

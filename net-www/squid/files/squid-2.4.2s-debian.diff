@@ -1,0 +1,375 @@
+These patches comes from Debian.  Heres the original README for
+them, but they're not all necessarily included here.. I made
+some changes.
+---
+
+Upstream patches against the release, that will be integrated into
+the next stable release (http://www.squid-cache.org/Versions/v2/2.4/bugs/)
+
+squid-2.4.stable2-aio_close_fix.patch
+squid-2.4.stable2-fix_mkdir-only_put_requests.patch
+
+Debian specific patches:
+All patches that were in the debian squid-2.2.5 and squid-2.3.4 have been
+applied to squid-2.4.2 as well, if they hadn't been integrated yet.
+
+cf.data.debian.patch	Debian specific squid.conf patches
+dfl-error-dir.patch	Default error dir is under /usr/lib/squid for Debian
+htcp-off.patch		Makes it possible to turn htcp off in squid.conf
+icp_hit_stale.patch	Don't return 504 on cache-only requests for
+			stale objects if icp_hit_stale is on.
+linux-increase-fds.patch
+			A hack to squid.h so that FD_SETSIZE can be
+			redefined on Linux for more open filedescriptors.
+no_append_domain_localhost.patch
+			Don't apply "append_domain" setting to "localhost"
+			in unqualified URLs.
+pipeline-shutup.patch	Lower priority of some debug msgs of pipelining code
+smb_auth.sh.patch	Read password with '-r' so backslashes work
+syslog.patch		Log to daemon.log instead of local4.log
+unlinkd.patch		Compile in unlinkd support even with async io
+
+Not applied (yet?):
+
+vms-ftp.patch.NOT-YET	Not finished and not working
+
+Dropped patches:
+
+pipeline.patch.NOMORE	Perhaps pipelining is stable in squid-2.4. If
+			not, there's a new configuration directive to
+			turn it off: pipeline_prefetch in squid.conf
+
+diff -ruN squid-2.4.1.orig/src/cf.data.pre squid-2.4.1/src/cf.data.pre
+--- squid-2.4.1.orig/src/cf.data.pre	Thu Mar  1 22:49:25 2001
++++ squid-2.4.1/src/cf.data.pre	Thu Mar 22 21:23:51 2001
+@@ -98,12 +98,12 @@
+ NAME: htcp_port
+ IFDEF: USE_HTCP
+ TYPE: ushort
+-DEFAULT: 4827
++DEFAULT: 0
+ LOC: Config.Port.htcp
+ DOC_START
+ 	The port number where Squid sends and receives HTCP queries to
+-	and from neighbor caches.  Default is 4827.  To disable use
+-	"0".
++	and from neighbor caches.  To turn it on you want to set it 4827.
++	By default it is set to "0" (disabled).
+ 
+ 	To enable this option, you must use --enable-htcp with the
+ 	configure script.
+@@ -1721,6 +1721,7 @@
+ acl Safe_ports port 488		# gss-http
+ acl Safe_ports port 591		# filemaker
+ acl Safe_ports port 777		# multiling http
++acl purge method PURGE
+ acl CONNECT method CONNECT
+ NOCOMMENT_END
+ DOC_END
+@@ -1754,6 +1755,9 @@
+ # Only allow cachemgr access from localhost
+ http_access allow manager localhost
+ http_access deny manager
++# Only allow purge requests from localhost
++http_access allow purge localhost
++http_access deny purge
+ # Deny requests to unknown ports
+ http_access deny !Safe_ports
+ # Deny CONNECT to other than SSL ports
+@@ -2648,12 +2655,15 @@
+ NAME: snmp_port
+ TYPE: ushort
+ LOC: Config.Port.snmp
+-DEFAULT: 3401
++DEFAULT: 0
+ IFDEF: SQUID_SNMP
+ DOC_START
+ 	Squid can now serve statistics and status information via SNMP.
+ 	By default it listens to port 3401 on the machine. If you don't
+ 	wish to use SNMP, set this to "0".
++
++	Note: on Debian/Linux, the default is zero - you need to
++	set it to 3401 to enable it. Also on Gentoo.
+ 
+ 	NOTE: SNMP support requires use the --enable-snmp configure
+ 	command line option.
+--- squid-2.4.2.orig/src/htcp.c	Sun Apr  1 18:52:45 2001
++++ squid-2.4.2/src/htcp.c	Mon Oct  1 14:03:25 2001
+@@ -843,6 +843,18 @@
+ void
+ htcpInit(void)
+ {
++    if (Config.Port.htcp <= 0) {
++	/*
++	 *      Need to allocate a bit of memory anyway, otherwise
++	 *      mem.c::memCheckInit() will bail out.
++	 */
++	memDataInit(MEM_HTCP_SPECIFIER, "htcpSpecifier",
++		sizeof(htcpSpecifier), 0);
++	memDataInit(MEM_HTCP_DETAIL, "htcpDetail", sizeof(htcpDetail), 0);
++	htcpInSocket = -1;
++	debug(31, 1) ("HTCP Disabled.\n");
++	return;
++    }
+     enter_suid();
+     htcpInSocket = comm_open(SOCK_DGRAM,
+ 	0,
+@@ -890,6 +902,8 @@
+     Packer pa;
+     MemBuf mb;
+     http_state_flags flags;
++
++    if (htcpInSocket < 0) return;
+     memset(&flags, '\0', sizeof(flags));
+     snprintf(vbuf, sizeof(vbuf), "%d/%d",
+ 	req->http_ver.major, req->http_ver.minor);
+Date: Sat, 15 Jul 2000 10:42:59 +1000
+Message-Id: <200007150042.e6F0gwU25807@gondor.apana.org.au>
+From: <herbert@gondor.apana.org.au>
+Subject: squid: [PATCH] Make icp_hit_stale useful again
+To: submit@bugs.debian.org
+X-Mailer: bug 3.3.4
+Delivered-To: submit@bugs.debian.org
+
+Package: squid
+Version: 2.2.5-3
+Severity: normal
+
+Recent versions of squid will return 504 when a client makes a cache-only
+request and the object happens to be stale.
+
+This effectively makes icp_hit_stale because in that case the object is
+almost guaranteed to be stale and if the client is a sibling squid, it will
+always be cache-only.
+
+The follow patch addresses this by check for icp_hit_stale in this case.
+
+
+diff -ruN squid-2.4.1.orig/src/client_side.c squid-2.4.1/src/client_side.c
+--- squid-2.4.1.orig/src/client_side.c	Sun Mar  4 01:55:10 2001
++++ squid-2.4.1/src/client_side.c	Thu Mar 22 21:05:08 2001
+@@ -352,7 +352,7 @@
+      * @?@: Instead of a 504 (Gateway Timeout) reply, we may want to return 
+      *      a stale entry *if* it matches client requirements
+      */
+-    if (clientOnlyIfCached(http)) {
++    if (clientOnlyIfCached(http) && !Config.onoff.icp_hit_stale) {
+ 	clientProcessOnlyIfCachedMiss(http);
+ 	return;
+     }
+--- squid-2.4.1.orig/src/squid.h	Thu Feb 22 22:39:14 2001
++++ squid-2.4.1/src/squid.h	Thu Jun 28 15:20:47 2001
+@@ -45,10 +45,24 @@
+  */
+ #define CHANGE_FD_SETSIZE 1
+ 
+-/* Cannot increase FD_SETSIZE on Linux */
++/*
++ * Cannot increase FD_SETSIZE on Linux, but we can increase __FD_SETSIZE
++ * with glibc 2.2 (or later? remains to be seen). We do this by including
++ * bits/types.h which defines __FD_SETSIZE first, then we redefine
++ * FD_SETSIZE. Ofcourse a user program may NEVER include bits/whatever.h
++ * directly, so this is a dirty hack!
++ */
+ #if defined(_SQUID_LINUX_)
+-#undef CHANGE_FD_SETSIZE
+-#define CHANGE_FD_SETSIZE 0
++#  undef CHANGE_FD_SETSIZE
++#  define CHANGE_FD_SETSIZE 0
++#  include <features.h>
++#  if (__GLIBC__ > 2) || (__GLIBC__ == 2 && __GLIBC_MINOR__ >= 2)
++#    if SQUID_MAXFD > DEFAULT_FD_SETSIZE
++#      include <bits/types.h>
++#      undef __FD_SETSIZE
++#      define __FD_SETSIZE SQUID_MAXFD
++#    endif
++#  endif
+ #endif
+ 
+ /*
+
+Ignore append_domain setting for the string "localhost".
+
+diff -ruN squid-2.4.1.orig/src/url.c squid-2.4.1/src/url.c
+--- squid-2.4.1.orig/src/url.c	Fri Jan 12 01:51:54 2001
++++ squid-2.4.1/src/url.c	Thu Mar 22 21:06:07 2001
+@@ -308,7 +308,7 @@
+     /* remove duplicate dots */
+     while ((t = strstr(host, "..")))
+ 	xmemmove(t, t + 1, strlen(t));
+-    if (Config.appendDomain && !strchr(host, '.'))
++    if (Config.appendDomain && !strchr(host, '.') && strcasecmp(host, "localhost") != 0)
+ 	strncat(host, Config.appendDomain, SQUIDHOSTNAMELEN);
+     if (port == 0) {
+ 	debug(23, 3) ("urlParse: Invalid port == 0\n");
+--- squid-2.4.1/src/client_side.c.orig	Thu Mar 22 21:05:08 2001
++++ squid-2.4.1/src/client_side.c	Tue Mar 27 17:14:05 2001
+@@ -1699,7 +1699,7 @@
+ 	fd, storeUrl(entry), (int) http->out.offset);
+     if (conn->chr != http) {
+ 	/* there is another object in progress, defer this one */
+-	debug(33, 1) ("clientSendMoreData: Deferring %s\n", storeUrl(entry));
++	debug(33, 3) ("clientSendMoreData: Deferring %s\n", storeUrl(entry));
+ 	memFree(buf, MEM_CLIENT_SOCK_BUF);
+ 	return;
+     } else if (entry && EBIT_TEST(entry->flags, ENTRY_ABORTED)) {
+@@ -1873,7 +1873,7 @@
+ 	 * execution will resume after the operation completes.
+ 	 */
+     } else {
+-	debug(33, 1) ("clientKeepaliveNextRequest: FD %d Sending next\n",
++	debug(33, 3) ("clientKeepaliveNextRequest: FD %d Sending next\n",
+ 	    conn->fd);
+ 	assert(entry);
+ 	if (0 == storeClientCopyPending(http->sc, entry, http)) {
+From: Jeff Licquia <jlicquia@scinet.springfieldclinic.com>
+Subject: squid: SMB auth proxy has problems with some passwords
+To: submit@bugs.debian.org
+X-Mailer: bug 3.2.7
+Message-Id: <20000718174501.0B4A132915@scinet.springfieldclinic.com>
+Date: Tue, 18 Jul 2000 12:45:01 -0500 (CDT)
+
+Package: squid
+Version: 2.2.5-2
+Severity: normal
+
+
+The SMB authenticator doesn't handle passwords with backslashes in them
+correctly.  The fix appears to be easy; just put a -r in the "read SMBPASS"
+line in smb_auth.sh.
+
+diff -ruN squid-2.4.1.orig/auth_modules/SMB/smb_auth.sh squid-2.4.1/auth_modules/SMB/smb_auth.sh
+--- squid-2.4.1.orig/auth_modules/SMB/smb_auth.sh	Thu Dec 30 18:35:54 1999
++++ squid-2.4.1/auth_modules/SMB/smb_auth.sh	Thu Mar 22 21:08:13 2001
+@@ -24,7 +24,7 @@
+ read AUTHSHARE
+ read AUTHFILE
+ read SMBUSER
+-read SMBPASS
++read -r SMBPASS
+ 
+ # Find domain controller
+ echo "Domain name: $DOMAINNAME"
+
+This patch wasn't announced anywhere, but it's in the current squid-2.4
+CVS series and together with the "fix_mkdir-only_put_requests" patch
+they are the only serious fixes I could find -- miquels
+
+diff -ruN squid-2.4.STABLE2/src/fs/aufs/store_io_aufs.c squid-2.4-200109302300/src/fs/aufs/store_io_aufs.c
+--- squid-2.4.STABLE2/src/fs/aufs/store_io_aufs.c	Fri Jan  5 01:30:39 2001
++++ squid-2.4-200109302300/src/fs/aufs/store_io_aufs.c	Fri Sep  7 02:51:49 2001
+@@ -296,6 +296,8 @@
+ 	storeAufsKickWriteQueue(sio);
+     else if (sio->mode == O_RDONLY)
+ 	storeAufsKickReadQueue(sio);
++    if (aiostate->flags.close_request)
++	storeAufsIOCallback(sio, errflag);
+     debug(78, 3) ("storeAufsOpenDone: exiting\n");
+ }
+ 
+
+http://www.squid-cache.org/bugs/show_bug.cgi?id=233
+
+Squid crashes on Fix "mkdir-only" PUT requests
+
+--- squid-2.4.1/src/ftp.c	2001/01/12 00:51:47	1.298.2.4
++++ squid-2.4.1/src/ftp.c	2001/09/18 13:51:25
+@@ -2450,8 +2450,10 @@
+ 	err->ftp.request = xstrdup(ftpState->ctrl.last_command);
+     if (ftpState->old_reply)
+ 	err->ftp.reply = xstrdup(ftpState->old_reply);
+-    else
++    else if (ftpState->ctrl.last_reply)
+ 	err->ftp.reply = xstrdup(ftpState->ctrl.last_reply);
++    else
++	err->ftp.reply = xstrdup("");
+     errorAppendEntry(ftpState->entry, err);
+     storeBufferFlush(ftpState->entry);
+     ftpSendQuit(ftpState);
+diff -ruN squid-2.4.1.orig/src/debug.c squid-2.4.1/src/debug.c
+--- squid-2.4.1.orig/src/debug.c	Fri Jan 12 01:51:46 2001
++++ squid-2.4.1/src/debug.c	Thu Mar 22 21:10:38 2001
+@@ -180,9 +180,9 @@
+     }
+     debugOpenLog(logfile);
+ 
+-#if HAVE_SYSLOG && defined(LOG_LOCAL4)
++#if HAVE_SYSLOG
+     if (opt_syslog_enable)
+-	openlog(appname, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++	openlog(appname, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+ #endif /* HAVE_SYSLOG */
+ 
+ }
+diff -ruN squid-2.4.1.orig/src/main.c squid-2.4.1/src/main.c
+--- squid-2.4.1.orig/src/main.c	Fri Jan 12 01:51:50 2001
++++ squid-2.4.1/src/main.c	Thu Mar 22 21:17:28 2001
+@@ -835,7 +855,7 @@
+     int nullfd;
+     if (*(argv[0]) == '(')
+ 	return;
+-    openlog(appname, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++    openlog(appname, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+     if ((pid = fork()) < 0)
+ 	syslog(LOG_ALERT, "fork failed: %s", xstrerror());
+     else if (pid > 0)
+
+When async io is compiled in, unlinkd support is not compiled in. This
+patch makes sure that unlinkd is always compiled in, but only starts
+it if there is at least one cache_dir of type "ufs".
+
+        Miquel van Smoorenburg 06-Nov-2000
+
+diff -ruN squid-2.4.1.orig/src/main.c squid-2.4.1/src/main.c
+--- squid-2.4.1.orig/src/main.c	Fri Jan 12 01:51:50 2001
++++ squid-2.4.1/src/main.c	Thu Mar 22 21:17:28 2001
+@@ -320,6 +320,20 @@
+     asnFreeMemory();
+ }
+ 
++#if USE_UNLINKD
++static int
++needUnlinkd(void)
++{
++    int i;
++    int r = 0;
++    for (i = 0; i < Config.cacheSwap.n_configured; i++) {
++	if (strcmp(Config.cacheSwap.swapDirs[i].type, "ufs") == 0)
++	   r++;
++    }
++    return r;
++}
++#endif
++
+ static void
+ mainReconfigure(void)
+ {
+@@ -344,6 +358,9 @@
+ #endif
+     redirectShutdown();
+     authenticateShutdown();
++#if USE_UNLINKD
++    unlinkdClose();
++#endif
+     storeDirCloseSwapLogs();
+     errorClean();
+     mimeFreeMemory();
+@@ -362,6 +379,9 @@
+ #if USE_WCCP
+     wccpInit();
+ #endif
++#if USE_UNLINKD
++    if (needUnlinkd()) unlinkdInit();
++#endif
+     serverConnectionsOpen();
+     if (theOutIcpConnection >= 0) {
+ 	if (!Config2.Accel.on || Config.onoff.accel_with_proxy)
+@@ -507,7 +527,7 @@
+ 
+     if (!configured_once) {
+ #if USE_UNLINKD
+-	unlinkdInit();
++	if (needUnlinkd()) unlinkdInit();
+ #endif
+ 	urlInitialize();
+ 	cachemgrInit();
