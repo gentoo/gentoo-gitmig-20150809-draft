@@ -20,8 +20,8 @@ DEPEND="virtual/glibc
 
 src_compile() {
 
-    KERNELVERSION=`grep "UTS_RELEASE" /usr/src/linux/include/linux/version.h | awk '{print $3}'`
-    KERNELSHORT=`echo $KERNELVERSION | cut -c1-3 | sed "s/\.//"`
+    export KERNELVERSION=`grep "UTS_RELEASE" /usr/src/linux/include/linux/version.h | awk '{print $3}'`
+    KERNELSHORT="24"
     SYSTEM="linux"
     SYSARCH="i386"
     CELLNAME=`cat ${FILESDIR}/ThisCell`
