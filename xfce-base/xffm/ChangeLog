@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xffm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.13 2004/01/16 21:16:07 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.14 2004/01/17 06:29:32 darkspecter Exp $
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
+  manifest fix
 
   16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> xffm-4.0.1.ebuild:
   set ppc in keywords
