@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.4.ebuild,v 1.10 2004/04/20 17:17:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.4.ebuild,v 1.11 2004/04/22 08:17:31 eradicator Exp $
 
 IUSE=""
 
 inherit eutils gnuconfig
 
-S=${WORKDIR}/${P}
 DESCRIPTION="a simple yet powerful command line cd player"
 SRC_URI="mirror://sourceforge/libcdaudio/${P}.tar.gz"
 HOMEPAGE="http://cdcd.undergrid.net/"
@@ -22,16 +21,12 @@ KEYWORDS="x86 sparc ~amd64"
 src_unpack() {
 	unpack ${P}.tar.gz
 	epatch ${FILESDIR}/cdcd-0.6.4-gentoo.patch
-}
 
-src_compile() {
+	cd ${S}
 	gnuconfig_update
-	econf || die
-	make || die
 }
 
 src_install () {
-	cd ${S}
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }

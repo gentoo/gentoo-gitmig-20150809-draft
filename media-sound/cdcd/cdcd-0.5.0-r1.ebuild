@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.5.0-r1.ebuild,v 1.7 2004/04/20 17:17:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.5.0-r1.ebuild,v 1.8 2004/04/22 08:17:31 eradicator Exp $
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="a simple yet powerful command line cd player"
 SRC_URI="http://cdcd.undergrid.net/source_archive/${P}.tar.gz"
 HOMEPAGE="http://cdcd.undergrid.net/"
@@ -23,12 +22,6 @@ src_unpack() {
 
 	patch < ${FILESDIR}/${P}-r1-gentoo.patch
 
-}
-
-src_compile() {
-
-	econf || die
-	make || die
 }
 
 src_install () {

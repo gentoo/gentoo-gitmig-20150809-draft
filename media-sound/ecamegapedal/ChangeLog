@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ecamegapedal
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ChangeLog,v 1.5 2004/03/11 19:16:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ChangeLog,v 1.6 2004/04/22 08:18:58 eradicator Exp $
+
+  22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ecamegapedal-0.4.2.ebuild, ecamegapedal-0.4.3.ebuild:
+  Removed explicit S=.
 
   11 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ecamegapedal-0.4.2.ebuild, ecamegapedal-0.4.3.ebuild:
