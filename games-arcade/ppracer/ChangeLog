@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/ppracer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ChangeLog,v 1.5 2005/01/27 15:32:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ChangeLog,v 1.6 2005/02/04 01:01:27 mr_bones_ Exp $
+
+*ppracer-0.3 (03 Feb 2005)
+
+  03 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +ppracer-0.3.ebuild:
+  version bump
 
   27 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> ppracer-0.2.3.ebuild:
   added ~amd64 to KEYWORDS. fixes #79698
