@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.222 2004/04/27 12:27:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.223 2004/04/27 14:30:45 randy Exp $
 
 *gcc-3.3.3_pre20040426 (27 Apr 2004)
 
@@ -14,6 +14,9 @@
 
   26 Apr 2004; Tom Gall <tgall@gentoo.org> gcc-3.4.0.ebuild:
   fix bug 49111, appears to work quite well on ppc64
+
+  27 Apr 2004; Michael McCabe <randy@gentoo.org> gcc-3.3.3-r3.ebuild:
+  Marked stable on s390
 
   26 Apr 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0.ebuild:
   fix bug where the ebuild tries to nuke libiberty from outside the sandbox
