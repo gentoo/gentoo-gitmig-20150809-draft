@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sound</herd>
+<maintainer>
+        <email>dsd@gentoo.org</email>
+</maintainer>
 <longdescription>a utility for viewing and editing tags for MP3, MP2, FLAC
 and OGG files. It features a simple and attractive GTK+
 interface</longdescription>
