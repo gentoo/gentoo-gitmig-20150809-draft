@@ -1,4 +1,3 @@
-MD5 c7180669466cfb104040460a6477ea21 odsclient-1.02.ebuild 519
-MD5 001a8451490df0e7f22fd127ad01f40a ChangeLog 856
+MD5 e868ff0fafb7036648ff3c0b8919356d odsclient-1.02.ebuild 622
+MD5 4feaaaef72c79ff35ff1b36351022572 ChangeLog 384
 MD5 541f91a96cced23275357854c5b97e22 files/digest-odsclient-1.02 121
-MD5 ac5ece4665ea02b97c49f0cfb8e249aa files/1.02/Makefile.patch 223
