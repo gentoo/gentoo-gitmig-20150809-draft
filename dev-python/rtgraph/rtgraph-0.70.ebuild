@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/rtgraph-0.70.ebuild,v 1.2 2004/04/04 09:33:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/rtgraph-0.70.ebuild,v 1.3 2004/05/09 23:24:39 kloeri Exp $
 
 inherit distutils
 
@@ -13,7 +13,6 @@ IUSE=""
 KEYWORDS="~x86 ~ppc"
 DEPEND="virtual/python
 	>=dev-python/pygtk-2"
-RDEPEND=${DEPEND}
 
 src_install() {
 	distutils_src_install
