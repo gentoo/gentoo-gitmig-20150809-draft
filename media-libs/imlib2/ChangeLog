@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.32 2004/08/10 03:42:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.33 2004/08/22 07:41:35 hardave Exp $
+
+  22 Aug 2004; Hardave Riar <hardave@gentoo.org> imlib2-1.1.0.ebuild:
+  Added ~mips keyword.
 
 *imlib2-1.1.1 (09 Aug 2004)
 
