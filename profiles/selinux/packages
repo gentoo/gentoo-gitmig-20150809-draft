@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.17 2005/03/05 21:00:48 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.18 2005/03/26 15:18:06 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -25,23 +25,24 @@
 *>=net-misc/openssh-3.7.1_p2
 *>=sys-apps/coreutils-5.0.91
 *>=sys-apps/findutils-4.1.20-r1
-*>=sys-process/procps-3.1.15
-*>=sys-process/psmisc-21.2-r4
 *>=sys-apps/pam-login-3.14
 *>=sys-apps/shadow-4.0.3-r7
 *>=sys-apps/util-linux-2.12
 *>=sys-libs/pam-0.77
+*>=sys-process/procps-3.1.15
+*>=sys-process/psmisc-21.2-r4
 
 # optional SELinux-patched programs:
 >=app-admin/logrotate-3.6.5-r1
 >=gnome-base/gdm-2.4.4.7
 >=sys-apps/fcron-2.9.4
->=sys-process/vixie-cron-3.0.1-r2
+>=sys-fs/udev-055
 >=sys-libs/pwdb-0.61-r4
+>=sys-process/vixie-cron-3.0.1-r2
 
 # New API SELinux kernels
->=sys-kernel/development-sources-2.6.0
->=sys-kernel/mm-sources-2.6.0
+>=sys-kernel/gentoo-sources-2.6.0
+>=sys-kernel/hardened-sources-2.6.0
 >=sys-kernel/vanilla-sources-2.6.0
 ##############################################################################
 
