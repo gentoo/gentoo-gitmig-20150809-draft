@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 71c30af6d76bcfa75d38c3baa5f0797c ChangeLog 713
+MD5 0749c1d144346ab07c515d5dd882183d h5utils-1.7.2.ebuild 627
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 68582ef0ca181f569ea15f38c3a8eda7 files/digest-h5utils-1.7.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXsQrI1lqEGTUzyQRAt1kAKCoCTJIPEFlcYcnhNn6XpgickZinQCfbnNz
+WyTg84bCZOOdx06mI6QX234=
+=o6DO
+-----END PGP SIGNATURE-----
