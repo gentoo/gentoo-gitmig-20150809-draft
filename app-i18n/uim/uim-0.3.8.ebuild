@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.8.ebuild,v 1.2 2004/06/04 21:13:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.8.ebuild,v 1.3 2004/06/13 16:36:57 matsuu Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/Software/UimDownload/${P}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
 SLOT="0"
-KEYWORDS="x86 alpha ppc"
+KEYWORDS="x86 alpha ppc ~amd64"
 IUSE="gtk nls debug"
 
 RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
