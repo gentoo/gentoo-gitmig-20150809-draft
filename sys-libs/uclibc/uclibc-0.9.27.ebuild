@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.11 2005/03/03 23:31:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.12 2005/03/10 19:51:02 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -135,6 +135,7 @@ src_unpack() {
 	local target config_target
 	case $(tc-arch) in
 		arm)  target="arm";     config_target="GENERIC_ARM";;
+		m68k) target="m68k";    config_target="no cpu-specific options";;
 		mips) target="mips";    config_target="MIPS_ISA_1";;
 		ppc)  target="powerpc"; config_target="no cpu-specific options";;
 		sh)   target="sh";      config_target="SH4";;
