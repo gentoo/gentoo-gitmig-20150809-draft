@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/yiff-2.14.2.ebuild,v 1.4 2004/04/27 22:03:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/yiff-2.14.2.ebuild,v 1.5 2004/06/07 22:25:56 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -24,8 +24,8 @@ src_unpack() {
 
 src_compile() {
 	local pkgs="libY2 yiff yiffutils"
-	[ `use gtk` ] && pkgs="${pkgs} yiffconfig" && append-flags `gtk-config --cflags`
-	[ `use mikmod` ] && append-flags -DHAVE_LIBKMID
+	use gtk && pkgs="${pkgs} yiffconfig" && append-flags `gtk-config --cflags`
+	use mikmod && append-flags -DHAVE_LIBKMID
 	append-flags -DALSA_RUN_CONFORM -DOSS -DOSS_BUFFRAG -DYSHM_SUPPORT -D__USE_BSD
 	make linux \
 		CFLAGS="${CFLAGS}" \
