@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.1 2003/07/16 14:44:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.2 2003/07/18 12:15:20 lanius Exp $
+
+*foomatic-db-20030716 (18 Jul 2003)
+
+  18 Jul 2003; lanius@gentoo.org foomatic-db-20030716.ebuild:
+  fixed bug 24726
 
   16 Jul 2003; Heinrich Wendel <lanius@gentoo.org> files/perl-module.diff:
   initial release
