@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia/nvidia-1.0.1541.ebuild,v 1.3 2001/11/18 16:36:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia/nvidia-1.0.1541.ebuild,v 1.4 2001/11/26 00:45:28 drobbins Exp $
 
 MYV=1.0-1541
 DEVPATCH=nvidia_devfs-patch_1.0-1512.patch
@@ -56,9 +56,13 @@ pkg_preinst() {
 	rm -f ${ROOT}/usr/lib/libGLcore.*
 	rm -f ${ROOT}/usr/X11R6/lib/modules/extensions/libGLcore.*
 	rm -f ${ROOT}/usr/X11R6/lib/modules/extensions/libglx.*
+	einfo "Moving old libGL stuff in ${ROOT}/usr/X11R6/lib into an \"old\" directory."	
+	cd ${ROOT}/usr/X11R6/lib
+	[ ! -d old ] && mkdir old
+	mv libGL.* old
 }
 
 pkg_postinst() {
 	#fix first time load
-	depmod -a
+	[ "$ROOT" = "/" ] && depmod -a
 }
