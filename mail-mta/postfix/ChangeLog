@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.22 2004/09/06 19:53:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.23 2004/09/11 19:50:36 slarti Exp $
+
+  11 Sep 2004; Tom Martin <slarti@gentoo.org> postfix-2.1.3.ebuild:
+  Stable on amd64.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> postfix-2.0.20.ebuild,
   postfix-2.1.3.ebuild, postfix-2.1.4.ebuild:
