@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.32-r2.ebuild,v 1.1 2001/11/14 17:42:35 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.32-r3.ebuild,v 1.1 2001/11/15 09:24:44 hallski Exp $
 
 
 S=${WORKDIR}/${P}
@@ -16,6 +16,7 @@ RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
 DEPEND="${RDEPEND}
 	sys-devel/gettext
         sys-devel/perl
+	tex? ( app-text/tetex )
         >=app-text/ghostscript-6.50-r2"
 
 src_compile() {
