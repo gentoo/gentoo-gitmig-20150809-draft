@@ -1,0 +1,28 @@
+# ChangeLog for net-ftp/atftp
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/ChangeLog,v 1.3 2003/08/28 22:58:27 mholzer Exp $
+
+*atftp-0.6-r1 (29 Aug 2003)
+
+  29 Aug 2003; Martin Holzer <mholzer@gentoo.org> atftp-0.6-r1.ebuild,
+  atftp-0.6-r2.ebuild, atftp-0.6.ebuild, files/atftp-0.6-security.patch:
+  move net-ftp/atftp net-misc
+
+  18 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> files/atftp-0.6-security.patch :
+  Updated patch to a more proper one.
+
+*atftp-0.6-r2 (08 Jun 2003)
+
+  08 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
+
+*atftp-0.6-r1 (29 Oct 2002)
+
+  29 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Updated ebuild with tcpd support. Ebuild contributed by Cory Visi <cory@visi.name> in #9797.
+
+*atftp-0.6 (16 Aug 2002)
+
+  16 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> atftp-0.6.ebuild:
+  Initial import. Ebuild submitted by Francisco Gimeno 
+  <kikov@fco-gimeno.com>.
