@@ -79,7 +79,7 @@
 *sys-apps/modutils
 *sys-apps/net-tools
 *sys-apps/netkit-base
-*sys-apps/portage
+*>=sys-apps/portage-1.6.1
 *sys-apps/procps
 *sys-apps/psmisc
 *sys-apps/raidtools
