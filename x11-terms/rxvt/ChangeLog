@@ -1,6 +1,17 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.14 2003/03/21 19:53:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.15 2003/03/31 19:47:25 dragon Exp $
+
+*rxvt-2.7.10 (31 Mar 2003)
+
+  31 Mar 2003; Nicholas Wourms <dragon@gentoo.org> rxvt-2.7.10.ebuild,
+  files/digest-rxvt-2.7.10, files/rxvt-2.7.10-azz4.diff:
+  Bumped rxvt to 2.7.10 to fix the compiler error.  Updated ebuild with
+  changes from 2.7.8's ebuild.  Rediffed the motif patch to apply correctly
+  to the new rxvt.  Added new flags --enable-everything & --enable-256-color
+  for a more robust with more color support rxvt.  No errors found during
+  testing.  The ebuild is ~arch masked for now until it is tested further.
+  This fixes bug #16742, as well.
 
 *rxvt-2.7.8-r6 (20 Mar 2003)
 
@@ -12,6 +23,10 @@
   Security update. Added Redhat patch.
 
 *rxvt-2.7.9 (03 Mar 2003)
+
+  31 Mar 2003; Nicholas Wourms <dragon@gentoo.org> rxvt-2.7.9.ebuild,
+  files/digest-rxvt-2.7.9, files/rxvt-2.7.9-azz4.diff:
+  Removed defective rxvt version and associated files.
 
   03 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.

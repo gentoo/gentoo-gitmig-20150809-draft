@@ -1,6 +1,6 @@
-diff -Naur rxvt-2.7.8/AZZ-ChangeLog rxvt-2.7.8-azz4/AZZ-ChangeLog
---- rxvt-2.7.8/AZZ-ChangeLog	Thu Jan  1 01:00:00 1970
-+++ rxvt-2.7.8-azz4/AZZ-ChangeLog	Mon May 20 23:10:36 2002
+diff -Naurp rxvt-2.7.10.orig/AZZ-ChangeLog rxvt-2.7.10/AZZ-ChangeLog
+--- rxvt-2.7.10.orig/AZZ-ChangeLog	1969-12-31 19:00:00.000000000 -0500
++++ rxvt-2.7.10/AZZ-ChangeLog	2003-03-31 14:11:43.000000000 -0500
 @@ -0,0 +1,7 @@
 +- Modified to support borderlessness with -nb and override-redirect with
 +  -or (or resources borderless and overrideRedirect).
@@ -9,10 +9,10 @@ diff -Naur rxvt-2.7.8/AZZ-ChangeLog rxvt-2.7.8-azz4/AZZ-ChangeLog
 +- Fixed buffer overflow in command.c (not that you should install this suid
 +  root anyway)
 +
-diff -Naur rxvt-2.7.8/src/command.c rxvt-2.7.8-azz4/src/command.c
---- rxvt-2.7.8/src/command.c	Thu Nov 29 06:53:58 2001
-+++ rxvt-2.7.8-azz4/src/command.c	Mon May 20 23:11:21 2002
-@@ -2930,7 +2930,7 @@
+diff -Naurp rxvt-2.7.10.orig/src/command.c rxvt-2.7.10/src/command.c
+--- rxvt-2.7.10.orig/src/command.c	2003-03-26 01:01:23.000000000 -0500
++++ rxvt-2.7.10/src/command.c	2003-03-31 14:11:43.000000000 -0500
+@@ -3098,7 +3098,7 @@ rxvt_tt_printf(rxvt_t *r, const char *fm
      unsigned char   buf[256];
  
      va_start(arg_ptr, fmt);
@@ -21,9 +21,9 @@ diff -Naur rxvt-2.7.8/src/command.c rxvt-2.7.8-azz4/src/command.c
      va_end(arg_ptr);
      rxvt_tt_write(r, buf, (unsigned int)STRLEN(buf));
  }
-diff -Naur rxvt-2.7.8/src/init.c rxvt-2.7.8-azz4/src/init.c
---- rxvt-2.7.8/src/init.c	Thu Nov 29 06:38:07 2001
-+++ rxvt-2.7.8-azz4/src/init.c	Mon May 20 23:22:45 2002
+diff -Naurp rxvt-2.7.10.orig/src/init.c rxvt-2.7.10/src/init.c
+--- rxvt-2.7.10.orig/src/init.c	2002-12-04 00:21:39.000000000 -0500
++++ rxvt-2.7.10/src/init.c	2003-03-31 14:11:43.000000000 -0500
 @@ -34,6 +34,7 @@
  #include "../config.h"		/* NECESSARY */
  #include "rxvt.h"		/* NECESSARY */
@@ -32,7 +32,7 @@ diff -Naur rxvt-2.7.8/src/init.c rxvt-2.7.8-azz4/src/init.c
  
  #include <signal.h>
  
-@@ -917,6 +918,24 @@
+@@ -1126,6 +1127,24 @@ rxvt_Create_Windows(rxvt_t *r, int argc,
  					       r->PixColors[Color_border],
  					       r->PixColors[Color_fg]);
  #endif
@@ -57,10 +57,10 @@ diff -Naur rxvt-2.7.8/src/init.c rxvt-2.7.8-azz4/src/init.c
      rxvt_xterm_seq(r, XTerm_title, r->h->rs[Rs_title], CHAR_ST);
      rxvt_xterm_seq(r, XTerm_iconName, r->h->rs[Rs_iconName], CHAR_ST);
  
-diff -Naur rxvt-2.7.8/src/rxvt.h rxvt-2.7.8-azz4/src/rxvt.h
---- rxvt-2.7.8/src/rxvt.h	Thu Nov 29 06:38:07 2001
-+++ rxvt-2.7.8-azz4/src/rxvt.h	Mon May 20 23:30:20 2002
-@@ -556,6 +556,9 @@
+diff -Naurp rxvt-2.7.10.orig/src/rxvt.h rxvt-2.7.10/src/rxvt.h
+--- rxvt-2.7.10.orig/src/rxvt.h	2003-03-06 20:17:18.000000000 -0500
++++ rxvt-2.7.10/src/rxvt.h	2003-03-31 14:11:43.000000000 -0500
+@@ -581,6 +581,9 @@ enum {
      Rs_modifier,
      Rs_answerbackstring,
      Rs_tripleclickwords,
@@ -70,21 +70,21 @@ diff -Naur rxvt-2.7.8/src/rxvt.h rxvt-2.7.8-azz4/src/rxvt.h
      NUM_RESOURCES
  } ;
  
-diff -Naur rxvt-2.7.8/src/rxvtlib.h.in rxvt-2.7.8-azz4/src/rxvtlib.h.in
---- rxvt-2.7.8/src/rxvtlib.h.in	Tue Nov 27 12:51:15 2001
-+++ rxvt-2.7.8-azz4/src/rxvtlib.h.in	Mon May 20 23:15:31 2002
-@@ -189,6 +189,8 @@
- #define Opt_tripleclickwords	(1LU<<16)
+diff -Naurp rxvt-2.7.10.orig/src/rxvtlib.h.in rxvt-2.7.10/src/rxvtlib.h.in
+--- rxvt-2.7.10.orig/src/rxvtlib.h.in	2003-02-27 20:03:16.000000000 -0500
++++ rxvt-2.7.10/src/rxvtlib.h.in	2003-03-31 14:12:59.000000000 -0500
+@@ -218,6 +218,8 @@ typedef enum {
  #define Opt_scrollWithBuffer	(1LU<<17)
  #define Opt_jumpScroll		(1LU<<18)
-+#define Opt_borderless          (1LU<<19)
-+#define Opt_overrideredirect    (1LU<<20)
+ #define Opt_mouseWheelScrollPage (1LU<<19)
++#define Opt_borderless		(1LU<<20)
++#define Opt_overrideredirect	(1LU<<21)
  /* place holder used for parsing command-line options */
  #define Opt_Reverse		(1LU<<30)
  #define Opt_Boolean		(1LU<<31)
-diff -Naur rxvt-2.7.8/src/screen.c rxvt-2.7.8-azz4/src/screen.c
---- rxvt-2.7.8/src/screen.c	Wed Nov 28 11:58:12 2001
-+++ rxvt-2.7.8-azz4/src/screen.c	Mon May 20 23:28:19 2002
+diff -Naurp rxvt-2.7.10.orig/src/screen.c rxvt-2.7.10/src/screen.c
+--- rxvt-2.7.10.orig/src/screen.c	2003-03-23 11:56:06.000000000 -0500
++++ rxvt-2.7.10/src/screen.c	2003-03-31 14:11:43.000000000 -0500
 @@ -29,6 +29,7 @@
  #include "screen.intpro"	/* PROTOS for internal routines */
  
@@ -93,7 +93,7 @@ diff -Naur rxvt-2.7.8/src/screen.c rxvt-2.7.8-azz4/src/screen.c
  
  /* ------------------------------------------------------------------------- */
  #ifdef MULTICHAR_SET
-@@ -1829,6 +1830,9 @@
+@@ -1832,6 +1833,9 @@ rxvt_scr_changeview(rxvt_t *r, u_int16_t
  void
  rxvt_scr_bell(rxvt_t *r)
  {
@@ -103,7 +103,7 @@ diff -Naur rxvt-2.7.8/src/screen.c rxvt-2.7.8-azz4/src/screen.c
  #ifndef NO_BELL
  # ifndef NO_MAPALERT
  #  ifdef MAPALERT_OPTION
-@@ -1842,6 +1846,7 @@
+@@ -1845,6 +1849,7 @@ rxvt_scr_bell(rxvt_t *r)
      } else
  	XBell(r->Xdisplay, 0);
  #endif
@@ -111,10 +111,10 @@ diff -Naur rxvt-2.7.8/src/screen.c rxvt-2.7.8-azz4/src/screen.c
  }
  
  /* ------------------------------------------------------------------------- */
-diff -Naur rxvt-2.7.8/src/xdefaults.c rxvt-2.7.8-azz4/src/xdefaults.c
---- rxvt-2.7.8/src/xdefaults.c	Thu Nov 29 07:22:51 2001
-+++ rxvt-2.7.8-azz4/src/xdefaults.c	Mon May 20 23:29:42 2002
-@@ -108,6 +108,9 @@
+diff -Naurp rxvt-2.7.10.orig/src/xdefaults.c rxvt-2.7.10/src/xdefaults.c
+--- rxvt-2.7.10.orig/src/xdefaults.c	2003-02-27 20:03:18.000000000 -0500
++++ rxvt-2.7.10/src/xdefaults.c	2003-03-31 14:11:43.000000000 -0500
+@@ -108,6 +108,9 @@ static const struct {
  	 "scroll-on-tty-output inhibit"),
      BOOL(Rs_scrollTtyKeypress, "scrollTtyKeypress", "sk", Opt_scrollTtyKeypress,
  	 "scroll-on-keypress"),

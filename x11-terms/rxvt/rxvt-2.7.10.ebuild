@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.9.ebuild,v 1.2 2003/03/07 08:09:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10.ebuild,v 1.1 2003/03/31 19:47:25 dragon Exp $
 
 inherit eutils
 
@@ -10,10 +10,7 @@ DESCRIPTION="rxvt -- nice small x11 terminal"
 SRC_URI="ftp://ftp.rxvt.org/pub/rxvt/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-#This ebuild has problems compiling, and die doesn't detect the error.
-#some UTMP issue, and rxvt doesn't compile. So zapping this for now (drobbins, 07 Mar 2003)
-KEYWORDS="-*"
-#KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~mips"
 
 HOMEPAGE="http://www.rxvt.org"
 
@@ -30,11 +27,11 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
+		--enable-everything \
 		--enable-rxvt-scroll \
+		--enable-next-scroll \
+		--enable-xterm-scroll \
 		--enable-transparency \
 		--enable-xpm-background \
 		--enable-utmp \
@@ -42,6 +39,7 @@ src_compile() {
 		--enable-mousewheel \
 		--enable-slipwheeling \
 		--enable-smart-resize \
+		--enable-256-color \
 		--enable-menubar \
 		--enable-languages \
 		--enable-xim \
@@ -53,10 +51,8 @@ src_compile() {
 
 src_install() {
 
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man/man1 \
-	install || die
+	einstall \
+		mandir=${D}/usr/share/man/man1 || die
 	
 	cd ${S}/doc
 	dodoc README* *.txt BUGS FAQ
