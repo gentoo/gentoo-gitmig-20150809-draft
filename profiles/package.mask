@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# drobbins@gentoo.org (15 Jul 2002)
+# needs testing by developers
+=sys-apps/portage-2.0.14
+
 # lamer@gentoo.org (15 Jul 2002)
 # Needs socks testing
 =net-irc/irssi-0.8.5-r1
