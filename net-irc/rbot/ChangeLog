@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.5 2004/07/17 14:32:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.6 2004/10/11 01:52:07 weeve Exp $
+
+  10 Oct 2004; Jason Wever <weeve@gentoo.org> rbot-0.9.7.ebuild:
+  Added ~sparc keyword.
 
 *rbot-0.9.7 (17 Jul 2004)
 
