@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.106 2005/02/11 01:19:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.107 2005/02/11 01:21:44 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1730,7 +1730,27 @@ fix_libtool_libdir_paths() {
 
 use_multilib() {
 	case $(tc-arch) in
-		amd64|mips|sparc|ppc64)
+		sparc)
+			case ${CTARGET} in
+				sparc64*)
+					is_crosscompile || has_multilib_profile || use multilib
+					;;
+				*)
+					false
+					;;
+			esac
+		;;
+		mips)
+			case ${CTARGET} in
+				mips64*)
+					is_crosscompile || has_multilib_profile || use multilib
+					;;
+				*)
+					false
+					;;
+			esac
+		;;
+		amd64|ppc64)
 			is_crosscompile || has_multilib_profile || use multilib
 		;;
 		*)
