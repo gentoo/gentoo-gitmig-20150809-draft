@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7.ebuild,v 1.8 2004/08/05 10:22:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7.ebuild,v 1.9 2004/10/26 14:27:59 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -42,16 +42,9 @@ src_unpack() {
 }
 
 src_compile() {
-	# this conflict's with cross compiling as CBUILD would of
-	# already been defined to the CCHOST. -solar
-	use cross || myconf="--build=${CHOST}"
-	econf ${myconf} `use_enable nls` || die "econf"
-
-	if use static ; then
-		emake LDFLAGS=-static || die
-	else
-		emake || die
-	fi
+	econf $(use_enable nls) || die "econf"
+	use static && append-ldflags -static
+	emake LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
