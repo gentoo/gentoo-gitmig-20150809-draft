@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.5 2004/03/16 01:17:28 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1.ebuild,v 1.6 2004/03/29 01:01:02 vapier Exp $
 
 inherit gcc flag-o-matic
 
@@ -15,19 +15,17 @@ IUSE="nls flac"
 
 RDEPEND=">=media-libs/libvorbis-1.0
 	>=media-libs/libao-0.8.2
-	>=net-ftp/curl-7.9
+	>=net-misc/curl-7.9
 	flac? ( media-libs/flac )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	[ `use hppa` ] && [ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0
-
-	local myconf
-	use nls || myconf="${myconf} --disable-nls"
-	use flac || myconf="${myconf} --without-flac"
-
-	econf ${myconf} || die
+	use hppa && [ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0
+	econf \
+		`use_enable nls` \
+		`use_with flac` \
+		|| die
 	emake || die
 }
 
@@ -35,7 +33,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	rm -rf ${D}/usr/share/doc
-	dodoc AUTHORS COPYING README
+	dodoc AUTHORS README
 	docinto ogg123
 	dodoc ogg123/ogg123rc-example
 }
