@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.5 2002/03/28 23:06:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.6 2002/04/12 23:58:38 seemant Exp $
+
+*mplayer-0.60-r4 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> mplayer-0.60-r4.ebuild :
+
+  Added png USE flag and removed css USE flag for dvd flag instead. And, 
+  compile against newest libpng
 
 *mplayer-0.60-r3 (28 Mar 2002)
 
