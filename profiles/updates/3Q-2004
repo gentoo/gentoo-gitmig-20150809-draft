@@ -89,3 +89,4 @@ move net-www/plb www-servers/plb
 move net-www/pound www-servers/pound
 move net-www/privoxy www-proxy/privoxy
 move net-www/publicfile www-servers/publicfile
+move net-www/resin www-servers/resin
