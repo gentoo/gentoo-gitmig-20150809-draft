@@ -1,0 +1,34 @@
+# ChangeLog for net-mail/drac
+# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/ChangeLog,v 1.1 2004/05/30 03:09:23 seemant Exp $
+
+*drac-1.12-r1 (29 May 2004)
+
+  29 May 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +files/drac_rotate, +files/dracd.rc6, +drac-1.12-r1.ebuild,
+  +drac-1.12.ebuild:
+  Moved from net-mail/drac to mail-client/drac.
+
+  23 May 2004; Jason Wever <weeve@gentoo.org> drac-1.12-r1.ebuild:
+  Added ~sparc keyword.
+
+  31 Oct 2003; Max Kalika <max@gentoo.org> drac-1.12-r1.ebuild:
+  Bump to stable x86.
+
+*drac-1.12-r1 (17 Sep 2003)
+
+  17 Sep 2003; Max Kalika <max@gentoo.org> drac-1.12-r1.ebuild,
+  files/drac_rotate, files/dracd.rc6:
+  Major cleanup/rewrite: quote variables where possible; whitespace consistancy;
+  depend on virtual/mta instead of hard-coded sendmail; depend on >=sed-4
+  because of inlinedd sed usage; drop eutils inheritance because nothing from
+  here is being used; simpify Makefile sed command; install binary as dracd
+  instead of rpc.dracd; install libdrac.a (needed for compiling imap servers
+  with drac support); add rc6 file; create new drac_rotate script and install
+  it; change $DEBUGBUILD to `use debug`. Die on sed failure.
+
+*drac-1.12 (19 Jan 2003)
+
+  19 Jan 2003; Nick Hadaway <raker@gentoo.org> drac-1.12.ebuild,
+  files/digest-drac-1.12 : 
+  New ebuild added for a more robust tpop3d build.
