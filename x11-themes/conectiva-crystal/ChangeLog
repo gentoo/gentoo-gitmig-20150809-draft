@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/conectiva-crystal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.1 2002/07/03 16:37:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.2 2002/07/29 14:38:58 danarmak Exp $
+
+*conectiva-crystal-3.1_beta37-r1 (29 Jul 2002)
+
+  29 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #5259 - now it will install into the correct location in accordance
+  with the latest eclasses (it didn't use the eclasses before). Note that
+  kde 3.1 already has this icon theme.
 
 02 Jul 2002; Seemant Kulleen <seemant@gentoo.org> :
 
