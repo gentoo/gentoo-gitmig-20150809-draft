@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.263 2003/12/14 10:39:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.264 2003/12/20 02:23:07 spyderous Exp $
+
+*xfree-4.3.99.902 (19 Dec 2003)
+
+  19 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-4.3.99.902.ebuild:
+  4.4 RC2. Added 0124_all_4.3.0-XF86Config-xfs-example.patch, which will also be
+  in 4.3.0 PATCH_VER 2.1.26 for bug #21417.
 
   14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r2.ebuild,
   xfree-4.3.0-r3.ebuild, xfree-4.3.99.16.ebuild, xfree-4.3.99.901.ebuild:
