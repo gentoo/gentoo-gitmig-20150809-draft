@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/abeni/abeni-0.0.9.ebuild,v 1.2 2003/09/11 01:47:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/abeni/abeni-0.0.9.ebuild,v 1.3 2003/09/14 14:04:25 liquidx Exp $
 
 inherit distutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/python
 
 pkg_setup() {
 	if [ ! -f "/usr/bin/wxgtk-2.4-config" ]; then
-		eerror "You MUST emerge this package, wxGTK, and wxPython without gtk2 support! Do:"
+		eerror "You MUST emerge wxGTK, and wxPython without gtk2 support! Do:"
 		eerror "USE='-gtk2' emerge wxGTK wxPython"
 		die "gtk2 not supported"
 	fi

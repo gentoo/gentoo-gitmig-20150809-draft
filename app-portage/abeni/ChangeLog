@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/abeni
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/abeni/ChangeLog,v 1.1 2003/09/02 13:45:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/abeni/ChangeLog,v 1.2 2003/09/14 14:04:25 liquidx Exp $
+
+  14 Sep 2003; Alastair Tse <liquidx@gentoo.org> abeni-0.0.9.ebuild:
+  slight fix to error msg
 
 *abeni-0.0.9 (02 Sep 2003)
 
