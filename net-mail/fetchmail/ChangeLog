@@ -1,8 +1,11 @@
 # ChangeLog for net-mailfetchmailChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.4 2002/09/11 22:16:48 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.5 2002/09/28 18:55:58 owen Exp $
 
 *fetchmail-5.9.14 (11 Sep 2002)
+
+  28 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
 
   11 Sep 2002; Nick Hadaway <raker@gentoo.org> fetchmail-5.9.14.ebuild,
   files/digest-fetchmail-5.9.14, files/configure-5.9.14.diff :
