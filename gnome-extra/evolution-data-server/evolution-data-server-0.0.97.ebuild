@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-0.0.97.ebuild,v 1.1 2004/08/06 19:31:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-0.0.97.ebuild,v 1.2 2004/08/07 10:16:19 mr_bones_ Exp $
 
 inherit debug gnome2 libtool
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 		   >=dev-util/gtk-doc-1 )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
-USE_DESTDIR=1
 G2CONF="${G2CONF} \
 		`use_enable doc gtk-doc` \
 		`use_with ldap openldap`"
+USE_DESTDIR=1
