@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.7.ebuild,v 1.8 2003/07/16 14:02:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.7.ebuild,v 1.9 2003/09/07 01:14:54 msterret Exp $
 
 DESCRIPTION="Super-useful stream editor"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/sed/${P}.tar.gz"
@@ -20,7 +20,7 @@ src_compile() {
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
-	
+
 	econf ${myconf} || die "Configure failed"
 	if [ -z `use static` ] ; then
 		emake || die "Shared build failed"
@@ -42,7 +42,7 @@ src_install() {
 	else
 		dodir /usr/bin
 	fi
-	
+
 	rm -f ${D}/usr/bin/sed
 	dosym ../../bin/sed /usr/bin/sed
 }

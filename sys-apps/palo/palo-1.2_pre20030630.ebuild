@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/palo/palo-1.2_pre20030630.ebuild,v 1.1 2003/07/01 21:52:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/palo/palo-1.2_pre20030630.ebuild,v 1.2 2003/09/07 01:22:44 msterret Exp $
 
 MY_V=${PV/_pre/-CVS}
 DESCRIPTION="PALO : PArisc Linux Loader"
@@ -34,7 +34,7 @@ src_install() {
 	dodoc palo.conf
 
 	insinto /etc
-	doins ${FILESDIR}/palo.conf	
+	doins ${FILESDIR}/palo.conf
 
 	insinto /usr/share/palo
 	doins iplboot

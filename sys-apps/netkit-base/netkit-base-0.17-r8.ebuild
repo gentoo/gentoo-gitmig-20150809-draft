@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r8.ebuild,v 1.6 2003/08/12 12:38:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r8.ebuild,v 1.7 2003/09/07 01:17:55 msterret Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ PROVIDE="virtual/inetd"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	# Note that epatch will intelligently patch architecture specific
 	# patches as well
 	epatch ${FILESDIR}
@@ -59,7 +59,7 @@ src_install() {
 		dosbin inetd/inetd
 		doman inetd/inetd.8 inetd/daemon.3
 #		doman inetd/inetd.8 inetd/daemon.3 ping/ping.8
-		
+
 		dodoc BUGS ChangeLog README
 		docinto samples ; dodoc etc.sample/*
 		exeinto /etc/init.d ; newexe ${FILESDIR}/inetd.rc6 inetd

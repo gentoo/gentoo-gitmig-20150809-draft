@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.14 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.15 2003/09/07 01:21:33 msterret Exp $
 
 IUSE="nls static build"
 
@@ -25,9 +25,9 @@ src_unpack() {
 	# note: this patch is b0rked on hppa and arm  -- gm and ztw
 	use hppa || use arm || patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
 
-	# This next line prevents our patched (and updated-mtime) uname.c 
-	# from forcing a uname.1 man page regeneration, which requires perl 
-	# (not available when creating a new build image... and we don't want 
+	# This next line prevents our patched (and updated-mtime) uname.c
+	# from forcing a uname.1 man page regeneration, which requires perl
+	# (not available when creating a new build image... and we don't want
 	# this package dependent on perl anyway.
 	#This problem can be fixed by fixing our patch at a future date.
 	touch -d "20 Aug 1999" src/uname.c
@@ -36,12 +36,12 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
-	
+
 	CFLAGS="${CFLAGS}" \
 		econf \
 			--without-included-regex \
 			${myconf} || die
-	
+
 	if [ -z "`use static`" ]
 	then
 		emake || die
@@ -52,7 +52,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-		
+
 	rm -rf ${D}/usr/lib
 	dodir /bin
 	cd ${D}/usr/bin

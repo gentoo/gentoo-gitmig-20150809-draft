@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.4.ebuild,v 1.2 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.4.ebuild,v 1.3 2003/09/07 01:16:48 msterret Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="User-mode filesystem implementation"
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_install () {
 	dodoc AUTHORS COPYING ChangeLog Contributors INSTALL \
-		NEWS README THANKS TODO 
+		NEWS README THANKS TODO
 	dohtml docs/lufs.html
 	make DESTDIR=${D} install
 

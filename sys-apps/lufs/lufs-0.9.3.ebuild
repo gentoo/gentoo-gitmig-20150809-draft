@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.3.ebuild,v 1.5 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.3.ebuild,v 1.6 2003/09/07 01:16:48 msterret Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="User-mode filesystem implementation"
@@ -34,7 +34,7 @@ src_install () {
 	newexe ${FILESDIR}/${P}-init lufs
 
 	dodoc AUTHORS COPYING ChangeLog Contributors INSTALL \
-		NEWS README THANKS TODO 
+		NEWS README THANKS TODO
 	dohtml docs/lufs.html
 	make DESTDIR=${D} install
 
@@ -42,7 +42,7 @@ src_install () {
 	dosym /usr/bin/auto.ftpfs /etc/auto.ftpfs
 	dodir /sbin
 	dosym /usr/bin/lufsd /sbin/mount.lufs
-	
+
 }
 
 pkg_postinst() {

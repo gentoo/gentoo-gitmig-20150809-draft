@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k-r1.ebuild,v 1.11 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k-r1.ebuild,v 1.12 2003/09/07 01:19:07 msterret Exp $
 
 IUSE=""
 
@@ -23,13 +23,13 @@ LICENSE="GPL-2"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	cp configure configure.orig
 	sed	-e 's:/usr/lib/locale:$(prefix)/usr/lib/locale:g' \
 		-e 's!/usr/bin:/usr/ucb:!/usr/bin:!' \
 		configure.orig > configure
-	
+
 	local x=""
 	for x in / src/ man2html/ msgs/
 	do
@@ -79,7 +79,7 @@ src_compile() {
 	./configure -confdir=/etc \
 		+sgid +fhs \
 		${myconf} || die
-		
+
 	make || die
 }
 
@@ -93,19 +93,19 @@ src_install() {
 		cd ${S}/msgs
 		./inst.sh ?? ${D}/usr/share/locale/%L/%N
 	fi
-	
+
 	chmod 2555 ${D}/usr/bin/man
 	chown root.man ${D}/usr/bin/man
 
 	# Needed for makewhatis
 	keepdir /var/cache/man
-	
+
 	insinto /etc
 	cd ${S}
 	doins src/man.conf
-	
+
 	dodoc COPYING LSM README* TODO
-	
+
 	exeinto /etc/cron.daily
 	doexe ${FILESDIR}/makewhatis.cron
 }

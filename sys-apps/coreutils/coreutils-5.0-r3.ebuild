@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r3.ebuild,v 1.2 2003/08/28 13:54:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r3.ebuild,v 1.3 2003/09/07 01:16:18 msterret Exp $
 
 inherit eutils
 
@@ -53,11 +53,11 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
-	
+
 	econf \
 		--bindir=/bin \
 		${myconf} || die
-	
+
 	if [ "`use static`" ]
 	then
 		emake LDFLAGS=-static || die
@@ -86,7 +86,7 @@ src_install() {
 	rm -rf usr/lib
 	cd usr/bin
 	ln -s ../../bin/* .
-	
+
 	if [ -z "`use build`" ]
 	then
 		cd ${S}

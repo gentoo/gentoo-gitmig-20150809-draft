@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.5_alpha14.ebuild,v 1.5 2003/08/13 15:33:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.5_alpha14.ebuild,v 1.6 2003/09/07 01:19:21 msterret Exp $
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
@@ -40,7 +40,7 @@ src_install() {
 	einstall INS_BASE=${D}/usr || die
 	insinto /etc/default
 	newins ${S}/rmt/rmt.dfl rmt
-	
+
 	# install mt as mt.star to not conflict with other packages
 	mv ${D}/usr/bin/mt ${D}/usr/bin/mt.star
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.6 2003/07/23 19:13:48 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.7 2003/09/07 01:22:03 msterret Exp $
 
 MY_P=${P/_/-}
 DESCRIPTION="Client side programs for SAL, the Secure Auditing for Linux project."
@@ -32,7 +32,7 @@ src_install() {
 
 
 	exeinto /etc/init.d; newexe ${FILESDIR}/sal-client-init auditd
-	insinto /etc/conf.d; newins ${FILESDIR}/auditd.confd auditd 
+	insinto /etc/conf.d; newins ${FILESDIR}/auditd.confd auditd
 
 	mv ${S}/patches/README ${S}/patches/README.patches
 	mv ${S}/patches/README.todo ${S}/patches/README.todo.patches
@@ -47,7 +47,7 @@ pkg_postinst() {
 	echo
 	einfo "To create the necessary secure directory to hold your buffered logs,"
 	einfo "please remember to configure using the following line:"
-	echo 
+	echo
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	echo
 	ewarn "Please note that using the above method is NOT secure. You will need to explore"
@@ -63,5 +63,5 @@ pkg_config() {
 	/bin/chown root:root ${ROOT}/var/lib/auditd
 	/bin/chmod 0600 ${ROOT}/var/lib/auditd
 }
-	
+
 
