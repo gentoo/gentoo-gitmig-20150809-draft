@@ -4,6 +4,7 @@
 *>=sys-devel/binutils-2.14.90.0.8-r1
 *>=sys-devel/gcc-3.3.3
 *>=sys-libs/glibc-2.3.4.20040605
+-<sys-libs/glibc-2.3.4
 *virtual/modutils
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
