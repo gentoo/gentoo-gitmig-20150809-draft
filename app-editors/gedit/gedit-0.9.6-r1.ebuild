@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.6 2002/10/05 05:39:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.7 2002/10/16 23:18:05 vapier Exp $
 
 IUSE="nls"
 
@@ -30,8 +30,8 @@ src_compile() {
 
 	CFLAGS="${CFLAGS} `gnome-config --cflags libglade vfs`"
 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
+	./configure --host=${CHOST} \
+		    --prefix=/usr \
 		    ${myconf} || die
 	
 	emake || die

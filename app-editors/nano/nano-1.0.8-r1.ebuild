@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.10 2002/10/05 05:39:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.11 2002/10/16 23:21:49 vapier Exp $
 
 IUSE="nls build slang"
 
@@ -13,6 +13,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	slang? ( >=sys-libs/slang-1.4.4-r1 )
 	nls? ( sys-devel/gettext )"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -40,8 +41,8 @@ src_compile() {
 }
 
 src_install () {
-	make 	\
-		DESTDIR=${D} 	\
+	make \
+		DESTDIR=${D} \
 		install || die
 
 	if use bootcd || use build; then

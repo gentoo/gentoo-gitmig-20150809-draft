@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.8.ebuild,v 1.9 2002/10/05 05:39:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.8.ebuild,v 1.10 2002/10/16 23:28:06 vapier Exp $
 
 IUSE="gpm motif postgres xface tiff gtk jpeg mule nas esd X png gnome"
 
@@ -44,6 +44,7 @@ DEPEND=">=sys-libs/gdbm-1.8.0
 	jpeg? ( media-libs/jpeg )
 
 	X? ( virtual/x11 )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	cd ${WORKDIR}

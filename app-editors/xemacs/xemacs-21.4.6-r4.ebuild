@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.6-r4.ebuild,v 1.7 2002/10/05 05:39:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.6-r4.ebuild,v 1.8 2002/10/16 23:26:30 vapier Exp $
 
 IUSE="nas esd motif gpm X"
 
@@ -41,35 +41,35 @@ src_unpack() {
 }
 
 src_compile() {                           
-local myopts
-local soundopts
-	
+	local myopts
+	local soundopts
+
 	if [ "`use X`" ]
 	then
-		myopts="--with-x	\
-			--with-jpeg	\
-			--with-png	\
-			--with-tiff	\
-			--with-xface	\
-			--with-menubars=lucid	\
+		myopts="--with-x \
+			--with-jpeg \
+			--with-png \
+			--with-tiff \
+			--with-xface \
+			--with-menubars=lucid \
 			--with-scrollbars=lucid"
 
-		use motif	\
-			&& myopts="${myopts} --with-dialogs=motif --with-widgets=motif"	\
+		use motif \
+			&& myopts="${myopts} --with-dialogs=motif --with-widgets=motif" \
 			|| myopts="${myopts} --with-dialogs=lucid --with-widgets=lucid"
 	else
 		myopts="--without-x"
 	fi
 	
-	use gpm	\
-		&& myopts="${myopts} --with-gpm"	\
+	use gpm \
+		&& myopts="${myopts} --with-gpm" \
 		|| myopts="${myopts} --without-gpm"
 	
 	soundopts="native"
-	use nas	\
+	use nas \
 		&& soundopts="$soundopts,nas"
 	
-	use esd	\
+	use esd \
 		&& soundopts="$soundopts,esd"
 	
 	myopts="${myopts} --with-sound=$soundopts"

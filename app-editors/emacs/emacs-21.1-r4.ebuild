@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.11 2002/10/05 05:39:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.12 2002/10/16 23:17:19 vapier Exp $
 
 IUSE="X nls motif"
 
@@ -64,23 +64,23 @@ src_compile() {
 	local myconf
 
 
-	use nls	\
+	use nls \
 		|| myconf="${myconf} --disable-nls"
 
-	use X	\
+	use X \
 		&& myconf="${myconf} \
 			--with-x \
 			--with-xpm \
 			--with-jpeg \
 			--with-tiff \
 			--with-gif \
-			--with-png"	\
+			--with-png" \
 		|| myconf="${myconf} --without-x"
 
-	use motif	\
+	use motif \
 		&& myconf="${myconf} --with-x-toolkit=motif"
 
-	./configure		\
+	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
@@ -92,7 +92,7 @@ src_compile() {
 }
 
 src_install () {
-	make 	\
+	make \
 		prefix=${D}/usr \
 		libexecdir=${D}/usr/lib \
 		mandir=${D}/usr/share/man \
