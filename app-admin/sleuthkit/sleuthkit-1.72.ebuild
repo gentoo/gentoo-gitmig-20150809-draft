@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/sleuthkit-1.70.ebuild,v 1.2 2004/09/11 14:51:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/sleuthkit-1.72.ebuild,v 1.1 2004/09/11 14:51:01 dragonheart Exp $
 
 DESCRIPTION="A collection of file system and media management forensic analysis tools"
 HOMEPAGE="http://www.sleuthkit.org/sleuthkit/"
 SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz"
-RESTRICT="nomirror"
 LICENSE="GPL-2 IBM"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~hppa ~s390"
@@ -40,6 +39,9 @@ src_compile() {
 #
 #src_test() {
 #	./check-install || die "test failed"
+#	if ! hasq userpriv FEATURES
+#		icat $(ls -i README.txt | cut -f1 -d ' ') (mount point of README.txt) | diff - README.txt || die "icat test failed"
+#	fi #TODO more work on later
 #}
 
 src_install() {
