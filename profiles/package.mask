@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <rac@gentoo.org> (24 Jun 2003)
+# needs testing - fairly radical reconfiguring
+=dev-perl/mod_perl-1.27-r3
+
 # <foser@gentoo.org> (24 Jun 2003)
 # New GNOME cups stuff needs proper testing
 net-print/libgnomecups
