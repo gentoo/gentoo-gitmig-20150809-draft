@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.1.ebuild,v 1.2 2005/02/12 14:37:37 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.3.ebuild,v 1.1 2005/02/12 14:37:37 g2boojum Exp $
+
+inherit eutils
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -9,7 +11,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 LICENSE="Sendmail"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~ia64 ~s390 ~amd64 ~ppc64"
-IUSE="ssl ldap sasl tcpd mbox milter mailwrapper"
+IUSE="ssl ldap sasl tcpd mbox milter mailwrapper ipv6"
 
 DEPEND="net-mail/mailbase
 	sys-devel/m4
@@ -18,6 +20,7 @@ DEPEND="net-mail/mailbase
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
 	>=sys-libs/db-3.2
+	!net-mail/vacation
 	"
 RDEPEND="${DEPEND}
 		>=net-mail/mailbase-0.00
@@ -30,28 +33,28 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	epatch ${FILESDIR}/sendmail-delivered_hdr.patch || die
+
 	confCCOPTS="${CFLAGS}"
 	confMAPDEF="-DMAP_REGEX"
 	conf_sendmail_LIBS=""
 	use sasl && confLIBS="${confLIBS} -lsasl2"  \
 		&& confENVDEF="${confENVDEF} -DSASL=2" \
 		&& confCCOPTS="${confCCOPTS} -I/usr/include/sasl" \
-		&& conf_sendmail_ENVDEF="${conf_sendmail_ENVDEF} -DSASL=2"  \
 		&& conf_sendmail_LIBS="${conf_sendmail_LIBS} -lsasl2"
 	use tcpd && confENVDEF="${confENVDEF} -DTCPWRAPPERS" \
 		&& confLIBS="${confLIBS} -lwrap"
-	use ssl && confENVDEF="${confENVDEF} -DSTARTTLS" \
+	use ssl && confENVDEF="${confENVDEF} -DSTARTTLS -D_FFR_DEAL_WITH_ERROR_SSL" \
 		&& confLIBS="${confLIBS} -lssl -lcrypto" \
-		&& conf_sendmail_ENVDEF="${conf_sendmail_ENVDEF} -DSTARTTLS" \
 		&& conf_sendmail_LIBS="${conf_sendmail_LIBS} -lssl -lcrypto"
 	use ldap && confMAPDEF="${confMAPDEF} -DLDAPMAP" \
 		&& confLIBS="${confLIBS} -lldap -llber"
 	use milter && confENVDEF="${confENVDEF} -DMILTER"
+	use ipv6 && confENVDEF="${confENVDEF} -DNETINET6"
 	sed -e "s:@@confCCOPTS@@:${confCCOPTS}:" \
 		-e "s/@@confMAPDEF@@/${confMAPDEF}/" \
 		-e "s/@@confENVDEF@@/${confENVDEF}/" \
 		-e "s/@@confLIBS@@/${confLIBS}/" \
-		-e "s/@@conf_sendmail_ENVDEF@@/${conf_sendmail_ENVDEF}/" \
 		-e "s/@@conf_sendmail_LIBS@@/${conf_sendmail_LIBS}/" \
 		${FILESDIR}/site.config.m4 > ${S}/devtools/Site/site.config.m4
 }
@@ -130,11 +133,11 @@ src_install () {
 	insinto /etc/mail
 	if use mbox
 	then
-		doins ${FILESDIR}/{sendmail.cf,sendmail.mc}
+		doins ${FILESDIR}/sendmail.mc
 	else
-		newins ${FILESDIR}/sendmail-procmail.cf sendmail.cf
 		newins ${FILESDIR}/sendmail-procmail.mc sendmail.mc
 	fi
+	m4 ${D}/etc/mail/sendmail.mc > ${D}/etc/mail/sendmail.cf
 	echo "# local-host-names - include all aliases for your machine here" \
 		> ${D}/etc/mail/local-host-names
 	cat << EOF > ${D}/etc/mail/trusted-users
@@ -169,6 +172,12 @@ EOF
 		dosed 's/} sendmail/} sendmail.sendmail/' /etc/init.d/sendmail
 	fi
 
+}
+
+pkg_preinst() {
+	if ! groupmod smmsp; then
+		groupadd smmsp || die "problem adding group smmsp"
+	fi
 }
 
 pkg_postinst() {
