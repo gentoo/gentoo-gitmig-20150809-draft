@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.86 2004/11/01 11:54:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.87 2004/11/05 11:50:16 hardave Exp $
+
+  05 Nov 2004; Hardave Riar <hardave@gentoo.org> ppp-2.4.2-r7.ebuild:
+  Stable on mips, bug #69152.
 
   01 Nov 2004; Daniel Black <dragonheart@gentoo.org> files/net.ppp0:
   Permissions changed from 640 to 644 on ip-up/down scripts as per bug #37886
