@@ -1,8 +1,12 @@
 # ChangeLog for media-libs/libswf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.2 2002/08/06 22:05:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.3 2002/11/02 22:32:35 cselkirk Exp $
 
 *libswf-0.99 (1 Feb 2002)
+
+  02 Nov 2002; Calum Selkirk <cselkirk@gentoo.org> libswf-0.99.ebuild :
+
+  Added ppc to KEYWORDS.
 
   06 Aug 2002; Seemant Kulleen <seemant@gentoo.org> libswf-0.99.ebuild :
 
