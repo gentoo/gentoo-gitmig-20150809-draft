@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cpdvd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.5 2004/11/30 22:12:08 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.6 2005/03/29 04:26:20 chriswhite Exp $
+
+  29 Mar 2005; Chris White <chriswhite@gentoo.org> cpdvd-1.10.ebuild:
+  Fix bug #86966.  Add a built_with_use check for transcode and dvdread.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> cpdvd-1.10.ebuild:
   Fixed invalid atoms in *DEPEND.

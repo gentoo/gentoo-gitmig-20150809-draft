@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4cc7602f2162fceca9cbb58e0ea3cb6f ChangeLog 628
+MD5 32e040171d85606286d8fcef9b46d351 ChangeLog 774
+MD5 869157b6eafa97d2a15691bce4d7b1e2 cpdvd-1.10.ebuild 804
 MD5 446c2ccebfd17f0cf3aa8e8d8b815635 metadata.xml 233
-MD5 214e4e5a818eed2b46c863b5729eca5a cpdvd-1.10.ebuild 660
 MD5 85d0ed9827e48584fda4aec1d45ec0a8 files/digest-cpdvd-1.10 56
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBrPBCI1lqEGTUzyQRAtHqAKCepK4XM2KbHiDsu0D82CkqJKUUIgCeOU7X
-+1V8a0TAz7TiS7XndqcjUAA=
-=TqOQ
+iD8DBQFCSNFUFdQwWVoAgN4RAqP2AKC/GP0Wj1IN8n8BDIlrQadBSSioJACg+8m5
+jjt+uozBVGTEqg1MyA1eO3k=
+=owUL
 -----END PGP SIGNATURE-----
