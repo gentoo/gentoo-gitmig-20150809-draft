@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.60 2005/02/02 20:46:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.61 2005/02/03 16:47:41 azarah Exp $
+
+*pam-0.77-r6 (03 Feb 2005)
+
+  03 Feb 2005; Martin Schlemmer <azarah@gentoo.org> +pam-0.77-r6.ebuild:
+  Fix missing '|| die' at the patch section.  Fix patch not applying.
 
 *pam-0.77-r5 (02 Feb 2005)
 
