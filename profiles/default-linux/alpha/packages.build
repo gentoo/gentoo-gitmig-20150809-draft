@@ -1,0 +1,36 @@
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/packages.build,v 1.1 2004/03/23 23:04:04 jmaynard Exp $
+
+# This file describes the packages needed to build a stage 1 based on this
+# profile
+
+app-arch/bzip2
+app-arch/gzip
+app-arch/tar
+app-editors/nano
+app-shells/bash
+dev-lang/python
+net-misc/rsync
+net-misc/wget
+sys-apps/baselayout
+sys-apps/coreutils
+sys-apps/debianutils
+sys-apps/diffutils
+sys-apps/file
+sys-apps/findutils
+sys-apps/gawk
+sys-apps/grep
+sys-apps/less
+sys-apps/net-tools
+sys-apps/portage
+sys-apps/sed
+sys-apps/texinfo
+sys-devel/binutils
+sys-devel/bison
+sys-devel/flex
+sys-devel/gcc
+sys-devel/gettext
+sys-devel/make
+sys-devel/patch
+sys-libs/glibc

@@ -1,0 +1,26 @@
+# Copyright 2001-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /home/cvsroot/gentoo-x86/profiles/default/x86/2004.0/packages,v
+# 1.2 2004/03/18 00:16:43 seemant Exp $
+
+# For instructions on how this file works (as an inclusion mask, primarily),
+# please refer to ${PORTDIR}/profiles/base/packages
+
+# Use this file to lock down specific versions of packages ONLY TO THIS
+# SPECIFIC ARCHITECTURE!!
+
+# You can also add files to the base system itself if you prefix them with a
+# *
+
+
+*sys-libs/pwdb
+
+>=app-admin/sysklogd-1.4.1
+<sys-apps/shadow-5
+>=sys-apps/texinfo-4.2-r5
+>=sys-devel/automake-1.6.1-r6
+>=sys-devel/binutils-2.13.90.0.4
+>=sys-devel/libtool-1.4.1-r9
+>=sys-libs/ncurses-5.2.20020112a
+>=sys-libs/pam-0.75-r9
+>=x11-base/xfree-4.2.1

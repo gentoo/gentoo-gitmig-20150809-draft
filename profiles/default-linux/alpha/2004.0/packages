@@ -1,0 +1,16 @@
+# Copyright 2001-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2004.0/packages,v 1.1 2004/03/23 23:04:04 jmaynard Exp $
+
+# For instructions on how this file works (as an inclusion mask, primarily),
+# please refer to ${PORTDIR}/profiles/base/packages
+
+# Use this file to lock down specific versions of packages ONLY TO THIS
+# SPECIFIC PROFILE!
+
+# You can also add files to the base system itself if you prefix them with a
+# *
+
+>=sys-apps/baselayout-1.8.3
+>=sys-devel/gcc-3.2
+>=sys-libs/glibc-2.2.5-r7
