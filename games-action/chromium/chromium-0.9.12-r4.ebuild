@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r4.ebuild,v 1.2 2003/10/04 13:55:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r4.ebuild,v 1.3 2003/10/14 07:28:08 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.reptilelabour.com/software/files/chromium/chromium-src-${PV}
 	 http://www.reptilelabour.com/software/files/chromium/chromium-data-${PV}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha amd64"
 LICENSE="Artistic"
 IUSE="arts esd qt sdl svga oggvorbis alsa"
 
