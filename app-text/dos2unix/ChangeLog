@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.4 2003/06/24 08:56:52 taviso Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.5 2004/01/20 06:56:20 avenj Exp $
+
+  20 Jan 2004; Jon Portnoy <avenj@gentoo.org> dos2unix-3.1.ebuild :
+  AMD64 keywords.
 
   24 Jun 2003; Tavis Ormandy <taviso@gentoo.org> dos2unix-3.1.ebuild:
   marking alpha
