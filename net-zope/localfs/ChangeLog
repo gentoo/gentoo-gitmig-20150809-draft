@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/localfs
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/localfs/ChangeLog,v 1.4 2003/06/21 04:41:34 kutsuya Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/localfs/ChangeLog,v 1.5 2004/04/05 08:30:11 mr_bones_ Exp $
+
+  05 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> localfs-1.0.0.ebuild:
+  down to ~ppc until deps are stable
 
   20 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> localfs-1.0.0.ebuild:
   ~ppc -> ppc. Use bash to construct PV_NEW instead of sed.
