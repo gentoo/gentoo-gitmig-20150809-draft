@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmountains
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.7 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.8 2004/09/27 07:44:46 mr_bones_ Exp $
+
+  27 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> xmountains-2.7.ebuild:
+  fix HOMEPAGE; use emake; install into /usr/bin; use newman
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   xmountains-2.6.ebuild, xmountains-2.7.ebuild:
