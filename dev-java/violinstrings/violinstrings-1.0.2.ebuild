@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/violinstrings-1.0.2.ebuild,v 1.3 2004/06/24 22:45:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/violinstrings-1.0.2.ebuild,v 1.4 2004/06/27 18:08:05 zx Exp $
 
 inherit java-pkg
 
@@ -10,6 +10,7 @@ HOMEPAGE="http://vigna.dsi.unimi.it/ViolinStrings/"
 LICENSE="X11"
 SLOT="0"
 KEYWORDS="x86"
+IUSE="jikes doc"
 RDEPEND=">=virtual/jdk-1.4"
 DEPEND=">=virtual/jre-1.4"
 
