@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.6.ebuild,v 1.1 2002/11/16 20:52:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.6.ebuild,v 1.2 2002/11/18 14:08:49 foser Exp $
 
 IUSE="nls gnome"
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
-RDEPEND=">=gnome-extra/gal-0.20
+RDEPEND=">=gnome-extra/gal-0.21
 	<gnome-base/control-center-1.99.0
 	>=gnome-base/libghttp-1.0.9-r1
 	>=dev-libs/libunicode-0.4-r1
