@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.32 2003/05/25 03:38:34 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.33 2003/05/25 07:23:15 seemant Exp $
+
+  25 May 2003; Seemant Kulleen <seemant@gentoo.org>
+  util-linux-2.11z-r3.ebuild:
+  pam fix
 
 *util-linux-2.11z-r3 (24 May 2003)
 

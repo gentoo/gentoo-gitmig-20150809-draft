@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r3.ebuild,v 1.2 2003/05/25 06:10:29 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r3.ebuild,v 1.3 2003/05/25 07:23:16 seemant Exp $
 
 IUSE="crypt nls selinux static pam"
 
@@ -54,7 +54,7 @@ src_unpack() {
 	fi
 
 	#enable pam only if we use it
-	use pam && myconf = "-e \"s:HAVE_PAM=no:HAVE_PAM=yes:\""
+	use pam && myconf = sed -i \"s:HAVE_PAM=no:HAVE_PAM=yes:\" MYCONFIG
 
 	sed -i \
 		-e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
