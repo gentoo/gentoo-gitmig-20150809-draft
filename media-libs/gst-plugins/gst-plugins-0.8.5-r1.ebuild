@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.5.ebuild,v 1.1 2004/10/21 22:57:37 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.5-r1.ebuild,v 1.1 2004/10/22 10:39:20 foser Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins gnome2 eutils flag-o-matic libtool
@@ -32,6 +32,10 @@ GST_PLUGINS_BUILD="x xshm"
 src_unpack() {
 
 	unpack ${A}
+
+	cd ${S}
+	# fix for tcp (needed for flumotion)
+	epatch ${FILESDIR}/${P}-tcp.patch
 
 }
 

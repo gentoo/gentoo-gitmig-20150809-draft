@@ -1,0 +1,26 @@
+===================================================================
+RCS file: /cvs/gstreamer/gst-plugins/gst/tcp/gsttcpserversink.c,v
+retrieving revision 1.16
+retrieving revision 1.17
+diff -u -r1.16 -r1.17
+--- gst-plugins/gst/tcp/gsttcpserversink.c	2004/09/17 10:06:52	1.16
++++ gst-plugins/gst/tcp/gsttcpserversink.c	2004/10/21 10:53:20	1.17
+@@ -157,12 +157,18 @@
+   struct sockaddr_in client_address;
+   int client_address_len;
+ 
++  /* For some stupid reason, client_address and client_address_len has to be
++   * zeroed */
++  memset (&client_address, 0, sizeof (client_address));
++  client_address_len = 0;
++
+   client_sock_fd =
+       accept (sink->server_sock.fd, (struct sockaddr *) &client_address,
+       &client_address_len);
+   if (client_sock_fd == -1) {
+     GST_ELEMENT_ERROR (sink, RESOURCE, OPEN_WRITE, (NULL),
+-        ("Could not accept client on server socket: %s", g_strerror (errno)));
++        ("Could not accept client on server socket %d: %s (%d)",
++            sink->server_sock.fd, g_strerror (errno), errno));
+     return FALSE;
+   }
