@@ -8,7 +8,7 @@
 +$vncClasses = "/usr/share/tightvnc/classes";
  $vncUserDir = "$ENV{HOME}/.vnc";
 -$fontPath = "unix/:7100";
-+# $fontPath = "unix/:7100";
++$fontPath = "unix/:-1";
  
  # Here is another example of setting the font path:
 -# $fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.24 2003/11/27 11:14:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.25 2004/01/15 15:27:35 aliz Exp $
+
+  15 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/tightvnc-1.2.9-gentoo.diff:
+  Change fontpath, closing #22024.
 
 *tightvnc-4.0_beta20031113 (27 Nov 2003)
 
