@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.3.ebuild,v 1.3 2005/03/22 00:04:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.3.ebuild,v 1.4 2005/03/22 00:17:10 foser Exp $
 
 inherit eutils fdo-mime
 
@@ -59,7 +59,10 @@ src_compile() {
 		--disable-scripting \
 		--with-sys-wv || die
 
-	emake all-recursive || die
+
+	CFLAGS="${CFLAGS} -DHAVE_NAUTILUS=0" \
+	CXXFLAGS="${CXXFLAGS} -DHAVE_NAUTILUS=0" \
+		emake all-recursive || die
 
 	# Build plugins
 
@@ -79,7 +82,7 @@ src_install() {
 
 	dodir /usr/{bin,lib}
 
-	CFLAGS="${CFLAGS} -DHAVE_NAUTILUS=0" make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 
 	dosed "s:Exec=abiword:Exec=abiword-2.2:" /usr/share/applications/abiword.desktop
 
