@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/xmms-themes
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.7 2003/12/13 17:47:51 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.8 2004/02/12 11:28:28 eradicator Exp $
+
+  12 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-themes-0.0.3.ebuild:
+  Added Plastik theme to close bug #29122.
+  stable on x86
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> xmms-themes-0.0.3.ebuild:
   mark stable on amd64
