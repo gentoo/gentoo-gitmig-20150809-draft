@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4-r2.ebuild,v 1.1 2002/06/27 16:29:56 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4-r2.ebuild,v 1.2 2002/06/29 12:36:37 seemant Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)."
 HOMEPAGE="http://www.sendmail.org"
@@ -8,14 +8,13 @@ LICENSE="Sendmail"
 SLOT="0"
 
 PROVIDE="virtual/mta"
-DEPEND="virtual/glibc
-		net-misc/hesiod
-		sys-libs/gdbm
-		sys-devel/m4
-		sasl? ( dev-libs/cyrus-sasl )
-		tcpd? ( sys-apps/tcp-wrappers )
-		ssl? ( dev-libs/openssl )
-		ldap? ( net-nds/openldap )"
+DEPEND="net-dns/hesiod
+	sys-libs/gdbm
+	sys-devel/m4
+	sasl? ( dev-libs/cyrus-sasl )
+	tcpd? ( sys-apps/tcp-wrappers )
+	ssl? ( dev-libs/openssl )
+	ldap? ( net-nds/openldap )"
 
 # We need some db; pick gdbm if none in USE
 if [ -n "`use gdbm`" ]
