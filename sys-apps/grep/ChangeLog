@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.13 2003/04/25 02:14:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.14 2003/05/20 04:37:35 kumba Exp $
+
 
 *grep-2.5.1-r1 (27 Feb 2003)
+
+  20 May 2003; Joshua Kinard <kumba@gentoo.org> grep-2.5.1-r1.ebuild:
+  Added gnuconfig eclass support to properly detect linux-mips systems
 
   27 Feb 2003; Aron Griffis <agriffis@gentoo.org> grep-2.5.1-r1.ebuild:
   Close bug #16495 by installing in /bin instead of /usr/bin.  I introduced
