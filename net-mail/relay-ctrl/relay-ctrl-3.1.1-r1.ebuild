@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r1.ebuild,v 1.1 2003/08/01 04:21:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r1.ebuild,v 1.2 2003/11/29 02:50:23 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SMTP Relaying Control designed for qmail & tcpserver."
@@ -20,10 +20,17 @@ RELAYCTRL_STORAGE="allow"
 RELAYCTRL_CONFDIR="/etc/relay-ctrl"
 RELAYCTRL_BINDIR="/usr/bin"
 
-src_compile() {
+inherit fixheadtails
+
+src_unpack() {
+	unpack ${A}
 	cd ${S}
+	ht_fix_file Makefile
+}
+
+src_compile() {
 	echo "${CC} ${CFLAGS}" > conf-cc
-	echo "${CC}" > conf-ld
+	echo "${CC} ${LDFLAGS}" > conf-ld
 	emake || die
 }
 
