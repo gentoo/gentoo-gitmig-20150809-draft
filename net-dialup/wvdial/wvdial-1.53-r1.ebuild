@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.12 2004/07/14 23:12:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.13 2004/12/08 18:01:44 mrness Exp $
 
 inherit eutils
 
@@ -8,7 +8,8 @@ DESCRIPTION="Excellent program which automatically configures your PPP session"
 SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
 HOMEPAGE="http://open.nit.ca/"
 
-DEPEND=">=sys-apps/sed-4
+DEPEND="virtual/libc
+	>=sys-apps/sed-4
 	net-libs/wvstreams"
 
 RDEPEND="${DEPEND}
