@@ -1,7 +1,7 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Copyright 2002 Jordan Armstrong <jordan@papercrane.net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.2.ebuild,v 1.1 2002/11/04 19:55:40 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.2.ebuild,v 1.2 2003/02/13 10:22:27 vapier Exp $
 
 S=${WORKDIR}/jakarta-regexp-${PV}
 DESCRIPTION="Regexp is a 100% Pure Java Regular Expression package"
