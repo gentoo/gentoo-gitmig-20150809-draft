@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020804.ebuild,v 1.5 2002/10/24 23:23:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020804.ebuild,v 1.6 2002/11/29 23:31:23 vapier Exp $
 
 IUSE="opengl arts cups alsa"
 
@@ -25,8 +25,6 @@ DEPEND="virtual/x11
 	opengl? ( virtual/opengl )"
 
 src_compile() {
-	
-	cd ${S}
 	local myconf
 
 	# Fix GetProcessHeap missing symbol as in http://cvs.winehq.com/cvsweb/wine/programs/winhelp/hlp2sgml.c.diff?r1=1.6&r2=1.7
@@ -67,13 +65,13 @@ src_install () {
 	
 	# Creates /usr/lib/wine/.data with fake_windows in it
 	# This is needed for our wine wrapper script
-	mkdir ${D}/usr/lib/wine/.data
+	dodir /usr/lib/wine/.data
 	cp -R ${WORKDIR}/fake_windows ${D}/usr/lib/wine/.data
 	cp ${FILESDIR}/${P}-config ${D}/usr/lib/wine/.data/config
 	cp ${WORKDIR}/${P}/winedefault.reg ${D}/usr/lib/wine/.data/winedefault.reg
 
 	# Install the wrapper script
-	mkdir ${D}/usr/bin
+	dodir /usr/bin
 	cp ${FILESDIR}/${P}-wine ${D}/usr/bin/wine
 	cp ${FILESDIR}/${P}-regedit ${D}/usr/bin/regedit-wine
 

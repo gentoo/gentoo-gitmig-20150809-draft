@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020904.ebuild,v 1.3 2002/10/24 23:23:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020904.ebuild,v 1.4 2002/11/29 23:36:35 vapier Exp $
 
 IUSE="nas arts cups opengl alsa"
 
@@ -26,7 +26,6 @@ DEPEND="virtual/x11
 	opengl? ( virtual/opengl )"
 
 src_compile() {	
-	cd ${S}
 	local myconf
 
 	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
@@ -53,24 +52,22 @@ src_compile() {
 	
 }
 
-src_install () {
-
+src_install() {
 	local WINEMAKEOPTS="prefix=${D}/usr/lib/wine"
 	
-	cd ${S}
 	make ${WINEMAKEOPTS} install || die
 	cd ${S}/programs
 	make ${WINEMAKEOPTS} install || die
 	
 	# Creates /usr/lib/wine/.data with fake_windows in it
 	# This is needed for our wine wrapper script
-	mkdir ${D}/usr/lib/wine/.data
+	dodir /usr/lib/wine/.data
 	cp -R ${WORKDIR}/fake_windows ${D}/usr/lib/wine/.data
 	cp ${FILESDIR}/${P}-config ${D}/usr/lib/wine/.data/config
 	cp ${WORKDIR}/${P}/winedefault.reg ${D}/usr/lib/wine/.data/winedefault.reg
 
 	# Install the wrapper script
-	mkdir ${D}/usr/bin
+	dodir /usr/bin
 	cp ${FILESDIR}/${P}-wine ${D}/usr/bin/wine
 	cp ${FILESDIR}/${P}-regedit ${D}/usr/bin/regedit-wine
 

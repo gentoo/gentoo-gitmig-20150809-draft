@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021011.ebuild,v 1.5 2002/11/23 14:22:02 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021011.ebuild,v 1.6 2002/11/29 23:49:49 vapier Exp $
 
 IUSE="cups opengl"
 
@@ -24,12 +24,10 @@ DEPEND="virtual/x11
 	>=media-libs/freetype-2.0.0
 	dev-lang/tcl dev-lang/tk"
 
-
 src_compile() {
 	# Azarah's patches
 	#patch -p0 < ${FILESDIR}/${P}-opengl.patch || die "opengl-patch failed"
     
-	cd ${S}
 	local myconf
 
 	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
@@ -64,12 +62,10 @@ src_compile() {
 	#######################################################################
 }
 
-src_install () {
-
+src_install() {
 	local WINEXMAKEOPTS="prefix=${D}/usr/lib/${PN}"
-	
+
 	# Installs winex to ${D}/usr/lib/${PN}
-	cd ${S}
 	make ${WINEXMAKEOPTS} install || die "make install failed"
 	
 	##### borked really bad ###############################################
@@ -77,11 +73,10 @@ src_install () {
 	# make ${WINEXMAKEOPTS} install || die "make install failed"          #
 	#######################################################################
 
-
 	# Creates /usr/lib/${PN}/.data with fake_windows in it
 	# This is needed for ~/.${PN} initialization by our 
 	# winex wrapper script
-	mkdir ${D}/usr/lib/${PN}/.data
+	dodir /usr/lib/${PN}/.data
 	cp -R ${WORKDIR}/fake_windows ${D}/usr/lib/${PN}/.data
 	cp ${FILESDIR}/${P}-config ${D}/usr/lib/${PN}/.data/config
 
@@ -89,7 +84,7 @@ src_install () {
 	cp ${WORKDIR}/wine/winedefault.reg ${D}/usr/lib/${PN}/.data/winedefault.reg
 
 	# Install the wrapper script
-	mkdir ${D}/usr/bin
+	dodir /usr/bin
 	cp ${FILESDIR}/${P}-winex ${D}/usr/bin/winex
 	cp ${FILESDIR}/${P}-regedit ${D}/usr/bin/regedit-winex
 
@@ -121,4 +116,3 @@ pkg_postinst() {
 	einfo "Manpage has been installed to the system."
 	einfo "\"man winex\" should show it."
 }
-
