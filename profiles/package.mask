@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <prez@gentoo.org> (01 Dec 2002)
+# New ebuild, should be tested.
+=dev-db/postgresql-7.3
+
 # <foser@gentoo.org> (01 Dec 2002)
 # mask xft2 enabled control-center
 =gnome-base/control-center-2.0.3-r1
