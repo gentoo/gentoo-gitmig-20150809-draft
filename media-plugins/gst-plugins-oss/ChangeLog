@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-oss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.34 2004/12/23 20:25:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.35 2004/12/29 01:06:41 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> gst-plugins-oss-0.8.5.ebuild:
   Stable on hppa.
@@ -31,7 +34,7 @@
   27 Aug 2004; Tom Gall <tgall@gentoo.org> gst-plugins-oss-0.8.2.ebuild:
   stable on ppc64, bug #59368
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gst-plugins-oss-0.8.2.ebuild:
   Stable on alpha.
 
@@ -45,7 +48,7 @@
   31 Jul 2004; <spider@gentoo.org> gst-plugins-oss-0.8.2.ebuild:
   stable on x86 for gnome 2.6.2
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gst-plugins-oss-0.8.1.ebuild:
   Stable on alpha.
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.41 2004/12/18 23:38:15 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.42 2004/12/29 01:07:50 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Dec 2004; Dylan Carlson <absinthe@gentoo.org> live-2004.07.20.ebuild:
   Stable on amd64.
@@ -11,7 +14,7 @@
   14 Nov 2004; Markus Rothe <corsair@gentoo.org> live-2004.09.30.ebuild:
   Marked ~ppc64; bug #68112
 
-  24 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> live-2004.07.20.ebuild:
+  24 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> live-2004.07.20.ebuild:
   Stable on alpha.
 
   12 Oct 2004; Guy Martin <gmsoft@gentoo.org> live-2004.07.20.ebuild:
@@ -74,7 +77,7 @@
   04 May 2004; Michael Sterrett <mr_bones_@gentoo.org> live-2004.03.27.ebuild:
   inherit flag-o-matic
 
-  02 May 2004; Bryan Østergaard <kloeri@gentoo.org> live-2004.03.27.ebuild:
+  02 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> live-2004.03.27.ebuild:
   Stable on alpha.
 
   01 May 2004; Jason Wever <weeve@gentoo.org> live-2004.03.27.ebuild:

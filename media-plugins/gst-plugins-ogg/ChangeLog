@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-ogg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.23 2004/12/16 05:41:52 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.24 2004/12/29 01:06:02 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   gst-plugins-ogg-0.8.5.ebuild:
@@ -22,7 +25,7 @@
 
 *gst-plugins-ogg-0.8.3 (22 Oct 2004)
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gst-plugins-ogg-0.8.2.ebuild:
   Stable on alpha.
 
@@ -41,7 +44,7 @@
   01 Aug 2004; <spider@gentoo.org> gst-plugins-ogg-0.8.2.ebuild:
   stable on x86
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gst-plugins-ogg-0.8.1.ebuild:
   Stable on alpha.
 
