@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/amavis-0.3.12.ebuild,v 1.1 2004/06/03 06:44:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/amavis-0.3.12.ebuild,v 1.2 2004/06/04 04:05:30 seemant Exp $
 
 inherit eutils
 
@@ -58,7 +58,7 @@ pkg_setup() {
 
 }
 
-mymta=`grep "^virtual/mta net-mail\/\(exim\|postfix\|qmail\|sendmail\)" /var/cache/edb/virtuals | awk -F/ '{print $3}'`
+mymta=`grep "^virtual/mta mail-mta\/\(exim\|postfix\|qmail\|sendmail\)" /var/cache/edb/virtuals | awk -F/ '{print $3}'`
 
 src_unpack() {
 

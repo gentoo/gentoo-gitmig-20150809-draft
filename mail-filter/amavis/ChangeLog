@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/amavis
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/ChangeLog,v 1.2 2004/06/03 07:17:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/ChangeLog,v 1.3 2004/06/04 04:05:30 seemant Exp $
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org> amavis-0.3.12.ebuild:
+  change net-mail/stuff to mail-mta stuff in the mymta grep statement
 
   03 Jun 2004; Seemant Kulleen <seemant@gentoo.org> amavis-0.2.1-r3.ebuild:
   Change DEPENDency from net-mail/maildrop to mail-filter/maildrop
