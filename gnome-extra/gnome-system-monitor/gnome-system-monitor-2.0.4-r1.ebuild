@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.0.4-r1.ebuild,v 1.8 2003/03/01 14:45:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.0.4-r1.ebuild,v 1.9 2003/05/30 00:38:34 lu_zero Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Procman - The Gnome System Monitor"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc alpha ~sparc"
+KEYWORDS="x86 ppc alpha ~sparc"
 
 RDEPEND=">=x11-libs/gtk+-2.2
 	>=gnome-base/libgnomeui-2.2

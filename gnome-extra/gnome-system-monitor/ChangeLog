@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.17 2003/03/01 14:45:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.18 2003/05/30 00:38:34 lu_zero Exp $
+
+  30 May 2003; Luca Barbato <weeve@gentoo.org>
+  gnome-system-monitor-2.0.4-r1.ebuild:
+  Added ppc to keywords.
 
 *gnome-system-monitor-2.0.4-r1 (1 Feb 2003)
 
