@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/smet2html
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/smet2html/ChangeLog,v 1.1 2004/04/30 21:30:15 squinky86 Exp $
+
+*smet2html-0.1 (30 Apr 2004)
+
+  30 Apr 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +smet2html-0.1.ebuild:
+  initial commit irt #31862
+
