@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.4 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.5 2003/04/27 12:18:11 azarah Exp $
 
 IUSE=""
 
 inherit eutils
 EPATCH_SOURCE="${FILESDIR}"
+EPATCH_SUFFIX="patch"
 
 MY_P="${PN}_${PV}-11"
 S="${WORKDIR}/${P}"
@@ -25,8 +26,11 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
+	
 	cd ${S}
-	epatch 
+	# We do not want all patches in ${FILESDIR}, as 01_all_groffpatch.patch is
+	# not longer valid for this version.
+	epatch ${FILESDIR}/02_all_mktemp.patch
 	
 	mv Makefile.boot Makefile.bootorig
 	sed 's/MACHINE=sun/MACHINE=gentoo/g' Makefile.bootorig > Makefile.bootor

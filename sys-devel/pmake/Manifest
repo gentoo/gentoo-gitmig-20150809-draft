@@ -1,5 +1,5 @@
-MD5 a4bd5f631334e4b2a73791994227c7c1 ChangeLog 725
-MD5 0d58319188cd425ab1e38f7512585dc1 pmake-1.45-r2.ebuild 1569
+MD5 8f9fe1d8b3bca210f490c24fd48c535b ChangeLog 723
+MD5 ee503ec732d8d302fef31c88aa4af742 pmake-1.45-r2.ebuild 1567
 MD5 56b250e5c99455640556fcb776b9bd7e files/01_all_groffpatch.patch 485
 MD5 1095ca9c07bda375bf9674fe20d79ba6 files/02_all_mktemp.patch 406
 MD5 aa2eb71443dc4352bdf910fcbaf9f05e files/digest-pmake-1.45-r2 65
