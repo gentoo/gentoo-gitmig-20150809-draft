@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.17 2001/07/07 18:20:51 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.18 2001/07/09 17:59:37 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -42,7 +42,7 @@ src_install()
 	dosym share/doc /usr/doc
 	dosym share/info /usr/info
 #end FHS 2.1 stuff
-	dosym ../tmp /usr/tmp
+	dosym /var/tmp /usr/tmp
 	doman ${FILESDIR}/MAKEDEV.8
 
 	dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
@@ -52,6 +52,7 @@ src_install()
 	touch ${D}/var/run/utmp
 	touch ${D}/var/log/wtmp
 	dodir /var/db/pkg /var/spool /var/tmp /var/lib/misc
+	chmod 1777 ${D}/var/tmp
 
 #supervise stuff
 	dodir /var/lib/supervise
