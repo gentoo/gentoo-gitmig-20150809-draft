@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.42 2004/10/19 09:33:13 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.43 2004/10/19 17:39:34 kloeri Exp $
+
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> emacs-21.3-r4.ebuild:
+  ~alpha keyword.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> emacs-21.3-r3.ebuild:
   Stable on amd64.
