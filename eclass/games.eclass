@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.6 2002/11/17 21:58:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.7 2002/11/17 21:59:56 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -70,7 +70,9 @@ dogamelib.so() { gameswrapper lib.so $@; }
 gameowners() { chown ${GAMES_USER}.${GAMES_ROOT} $@; }
 gameperms() { chmod ug+r,o-rwx $@; }
 
-games_pkg_postinst() {
+gamesenv() {
 	echo "LDPATH=\"${GAMES_LIBDIR}\"" > /etc/env.d/${GAMES_ENVD}
 	echo "PATH=\"${GAMES_BINDIR}\"" >> /etc/env.d/${GAMES_ENVD}
 }
+
+games_pkg_postinst() { gamesenv; }
