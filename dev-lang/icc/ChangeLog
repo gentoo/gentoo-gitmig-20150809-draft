@@ -1,23 +1,30 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.9 2002/12/13 10:56:25 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.10 2002/12/20 22:53:51 avenj Exp $
+
+*icc-7.0.065-r2 (20 Dec 2002)
+
+  20 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065-r2.ebuild :
+
+  Fixed 05icc-ifc to include INTEL_LICENSE_FILE.
 
 *icc-7.0.065-r1 (11 Dec 2002)
 
-  11 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065-r1.ebuild
+  11 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065-r1.ebuild :
 
   Changed the "icc" wrapper script to properly translate gcc CFLAGS into
   icc CFLAGS.
 
 *icc-7.0.065 (10 Dec 2002)
 
-  10 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065.ebuild:
+  10 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065.ebuild :
 
   Changed the naming to more accurately reflect the current ICC
   version number. Also fixed the primary executable and added a warning
   about compiling important applications with icc.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
 
 *icc-7.0 (8 Dec 2002)
 
