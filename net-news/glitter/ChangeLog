@@ -1,6 +1,13 @@
 # ChangeLog for net-news/glitter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/glitter/ChangeLog,v 1.3 2003/02/12 08:36:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/glitter/ChangeLog,v 1.4 2003/06/01 22:14:56 rac Exp $
+
+*glitter-1.0-r1 (01 Jun 2003)
+
+  01 Jun 2003; <rac@gentoo.org> glitter-1.0-r1.ebuild, glitter-1.0.ebuild,
+  files/glitter-1.0-gary-perl58.patch:
+  Add perl 5.8.0 compatibility patch from bug 14001 - thanks to Pascal Roussel
+  <p.roussel@easyconnect.fr> for detective work
 
 *glitter-1.0 (Jun 18 2002)
 
