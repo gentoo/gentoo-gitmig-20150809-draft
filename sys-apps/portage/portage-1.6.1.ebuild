@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.6.1.ebuild,v 1.2 2001/08/27 05:32:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.6.1.ebuild,v 1.3 2001/08/27 05:35:38 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -63,14 +63,15 @@ src_install() {
 	fi
 	dodir /var/tmp
 	chmod 1777 ${D}/var/tmp
-}
-
-pkg_postinst() {
 	if [ "`use build`" ] || [ "`use bootcd`" ]
 	then
 		#convenience; overwrite existing symlink
-		ln -sf ../usr/portage/profiles/default-1.0_rc6 ${ROOT}/etc/make.profile
-	elif [ ! -e ${ROOT}/etc/make.profile ]
+		ln -sf ../usr/portage/profiles/default-1.0_rc6 ${D}/etc/make.profile
+	fi
+}
+
+pkg_postinst() {
+	if [ ! -e ${ROOT}/etc/make.profile ]
 	then
 		cd ${ROOT}/etc
 		ln -s ../usr/portage/profiles/default-1.0_rc6 make.profile
