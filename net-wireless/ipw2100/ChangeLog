@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.4 2004/03/12 21:48:21 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.5 2004/03/13 00:06:01 latexer Exp $
+
+*ipw2100-0.32 (12 Mar 2004)
+
+  12 Mar 2004; Peter Johanson <latexer@gentoo.org> ipw2100-0.32.ebuild:
+  Bump. Adds support for RF swithc, and fixes nickname setting oops.
 
 *ipw2100-0.31 (12 Mar 2004)
 
