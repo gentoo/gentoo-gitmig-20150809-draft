@@ -1,13 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-#IUSE="nls"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="a small stealth network autoconfigure software."
 SRC_URI="mirror://sourceforge/selfdhcp/${P}.tar.bz2"
 HOMEPAGE="http://selfdhcp.sourceforge.net"
 KEYWORDS="~x86 ~sparc ~ppc"
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 
