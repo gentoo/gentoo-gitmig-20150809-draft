@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/pine-maildir
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/ChangeLog,v 1.5 2003/02/12 08:14:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/ChangeLog,v 1.6 2003/04/21 23:33:53 mholzer Exp $
 
 *pine-maildir-4.50 (13 Jan 2003)
+
+  22 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  pine-maildir-4.33.ebuild, pine-maildir-4.50.ebuild,
+  files/pine-4.50-maildir.patch:
+  Moving maildir-patch to distfiles
 
   13 Jan 2003; Nick Hadaway <raker@gentoo.org> pine-maildir-4.50.ebuild,
   files/digest-pine-maildir-4.50, files/{lots o' diffs} :
