@@ -1,5 +1,5 @@
+MD5 87b0da0defb28b266c76135425fafdc2 mips32-1.0.ebuild 626
+MD5 e8a45e71e413e5334761b8ca6a2f3346 ChangeLog 447
 MD5 4826e2b8c0e9daba29345b97411414d5 metadata.xml 416
-MD5 79ecdf22e06011c43700c1f1fa1be159 mips32-1.0.ebuild 632
-MD5 ea6c778878763a95bef3eb44c625e79a ChangeLog 453
 MD5 1f8a13f362cfb02255037057e5d7abab files/mips32-1.0-no-kern-headers.patch 579
 MD5 fdeb67748be855f61d2434ade029d86c files/digest-mips32-1.0 60
