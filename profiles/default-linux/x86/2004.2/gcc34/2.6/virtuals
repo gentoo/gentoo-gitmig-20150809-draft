@@ -1,0 +1,4 @@
+virtual/kernel			sys-kernel/linux26-headers
+virtual/os-headers              sys-kernel/linux26-headers
+virtual/linux-sources		sys-kernel/gentoo-dev-sources
+virtual/modutils		sys-apps/module-init-tools
