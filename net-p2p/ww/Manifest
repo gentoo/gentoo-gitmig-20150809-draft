@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3b6084cf4923bf70b6723433e1083a9a ww-2.26.ebuild 776
-MD5 e8facf61d1a7cf3174ef2e3e5775da74 ChangeLog 396
+MD5 a089ace7abb725a05e2f5bd21733f92c ww-2.26.ebuild 775
+MD5 774a95af33077c0f5e84a804e3a9cead ChangeLog 477
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 46595625648ee3834e54ff1fd6bfd52a files/digest-ww-2.26 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYtiScAgAdbxYsnERAsCkAJwJk6az14ZLr0DvbzE2hEfOWkKenwCglwpM
-EYUFPpePtCHFaeo4YYg6uJY=
-=cwMv
+iD8DBQFBo6SScAgAdbxYsnERAnN4AJ4jEIMsmsRuazm5dtfzC1hE0JTOYgCfWBve
+tvArsogLHrWD4mMa/NJ5y5M=
+=7se5
 -----END PGP SIGNATURE-----
