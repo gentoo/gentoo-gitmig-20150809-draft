@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 870919778a6e44174df947a83a9619d0 rnaview-1.ebuild 927
-MD5 e82e20851fcec7098a31748235da428e ChangeLog 516
+MD5 c3ed7fcf72357c4720b66c7211bd4ffa rnaview-1.ebuild 926
+MD5 e27a551e639f5deaf22552f468f5b1ec ChangeLog 604
 MD5 683a4745e6be4f5ae83f3250fcad1502 metadata.xml 659
 MD5 df467fedf575ec68666db53ab00bf26b files/digest-rnaview-1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy4BnI1lqEGTUzyQRAgpjAJ4rqtR4qJU2DkPXHEVzkSiaeSC9hQCgiXrU
-asplyTHW1UphcTKySggiWe0=
-=NZNe
------END PGP SIGNATURE-----
