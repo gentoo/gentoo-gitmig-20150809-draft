@@ -1,6 +1,9 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.36 2003/10/07 15:05:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.37 2003/10/11 20:18:39 lanius Exp $
+
+  11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> opera-7.21_pre2.ebuild:
+  bug #10610
 
 *opera-7.21_pre2 (07 Oct 2003)
 

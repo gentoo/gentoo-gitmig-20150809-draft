@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.21_pre2.ebuild,v 1.1 2003/10/07 15:05:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.21_pre2.ebuild,v 1.2 2003/10/11 20:18:39 lanius Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
@@ -93,4 +93,9 @@ src_install() {
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera
+}
+
+pkg_postinst() {
+	einfo "For localized language files take a look at:"
+	einfo "http://www.opera.com/download/languagefiles/index.dml?platform=linux"
 }
