@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3087 2004/08/22 05:48:33 carpaski Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3088 2004/08/22 07:30:33 chriswhite Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <chriswhite@gentoo.org> (21 Apr 2004)
+# MPlayer with custom CFLAGS
+# Masking until I see what breakage it may have
+>=media-video/mplayer-1.0_pre5-r4
 
 # <chriswhite@gentoo.org> (21 Apr 2004)
 # CVS snapshot source testing version
