@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22-r1.ebuild,v 1.1 2003/10/12 23:42:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22-r1.ebuild,v 1.2 2003/10/29 02:21:41 robbat2 Exp $
 
 inherit eutils
 
@@ -15,17 +15,23 @@ IUSE="ssl tcpd readline ipv6 gdbm sasl kerberos odbc perl slp berkdb debug samba
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-apps/sed-4
-	berkdb? ( >=sys-libs/db-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.7-r3 )
 	kerberos? ( >=app-crypt/mit-krb5-1.2.6 )
 	odbc? ( dev-db/unixODBC )
 	slp? ( >=net-libs/openslp-1.0 )
 	perl? ( >=dev-lang/perl-5.6 )
 	samba? ( >=dev-libs/openssl-0.9.6 )"
+
+# if USE=berkdb
+#	pull in sys-libs/db
+# else if USE=gdbm
+#	pull in sys-libs/gdbm
+# else
+#	pull in sys-libs/db
+DEPEND="berkdb? ( >=sys-libs/db-4.1 ) : ( gdbm? ( >=sys-libs/gdbm-1.8.0 ) : ( >=sys-libs/db-4.1 ) )"
 
 pkg_preinst() {
 	enewgroup ldap 439
@@ -69,13 +75,20 @@ src_compile() {
 	myconf="${myconf} `use_enable perl`"
 	myconf="${myconf} `use_enable slp`"
 
-	use berkdb \
-		&& myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley"
-
-	# only turn off bdb if berkdb is not in USE
-	use gdbm && [ ! `use berkdb` ] \
-		&& myconf="${myconf} --enable-ldbm --disable-bdb --with-ldbm-api=gdbm" \
-		|| myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley"
+	myconf="${myconf} --enable-ldbm"
+	myconf_berkdb='--enable-bdb --with-ldbm-api=berkeley'
+	myconf_gdbm='--disable-bdb --with-ldbm-api=gdbm'
+	if use berkdb; then
+		einfo "Using Berkeley DB for local backend"
+		myconf="${myconf} ${myconf_berkdb}"
+	elif use gdbm; then
+		einfo "Using GDBM for local backend"
+		myconf="${myconf} ${myconf_gdbm}"
+	else
+		ewarn "Neither gdbm or berkdb USE flags present, falling back to"
+		ewarn "Berkeley DB for local backend"
+		myconf="${myconf} ${myconf_berkdb}"
+	fi
 
 	# alas, for BSD only
 	#myconf="${myconf} --with-fetch"
@@ -89,7 +102,7 @@ src_compile() {
 	myconf="${myconf} --enable-local --enable-proctitle"
 
 	# disabled options
-	# --enable-bdb --with-bdb-module=dynamic
+	# --with-bdb-module=dynamic
 	# --enable-dnsserv --with-dnsserv-module=dynamic
 
 	econf \
