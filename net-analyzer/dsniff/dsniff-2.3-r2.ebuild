@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r2.ebuild,v 1.5 2004/07/12 11:19:06 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r2.ebuild,v 1.6 2004/09/28 02:56:12 vapier Exp $
 
 inherit eutils
 
@@ -27,11 +27,10 @@ RDEPEND=">=net-libs/libpcap-0.7.1
 	>=net-libs/libnet-1.0.2a-r3
 	>=net-libs/libnids-1.18
 	>=dev-libs/openssl-0.9.6e"
-
 # dependencies only for building our own sys-libs/db
 DEPEND="${RDEPEND}
 	virtual/libc
-	=sys-libs/db-1.85-r1
+	=sys-libs/db-1*
 	sys-devel/libtool
 	sys-devel/m4"
 
