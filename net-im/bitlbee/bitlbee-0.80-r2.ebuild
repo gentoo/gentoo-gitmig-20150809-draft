@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.80-r2.ebuild,v 1.1 2003/10/05 21:08:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.80-r2.ebuild,v 1.2 2003/10/16 09:05:22 weeve Exp $
 
 inherit eutils
 
@@ -40,6 +40,7 @@ src_compile() {
 src_install() {
 	mkdir -p ${D}/var/lib/bitlbee
 	make install DESTDIR=${D} || die "install failed"
+	keepdir /var/lib/bitlbee
 
 	dodoc COPYING
 	dodoc doc/{AUTHORS,CHANGES,CREDITS,FAQ,README,TODO}
@@ -56,6 +57,10 @@ src_install() {
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/bitlbeed.confd bitlbeed || die
+
+	dodir /var/run/bitlbeed
+	keepdir /var/run/bitlbeed
+
 }
 
 pkg_postinst() {

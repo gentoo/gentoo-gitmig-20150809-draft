@@ -1,3 +1,6 @@
+# location of bitlbeed executable
+BITLBEED_EXEC=/usr/bin/bitlbeed
+#
 # output from bitlbeed -h
 #
 # Usage: bitlbeed [-i <interface>] [-p <port>] [-n <num>] <command> <args...>
