@@ -12,6 +12,8 @@
 #                Modify to support $RUNARGS, as we dont want one script to
 #                do all the work.
 #
+#   21 Apr 2002: Make use of NetDir for getting a value for $dir.
+#
 #                NOTE: as I dont know any perl to start with, things may not
 #                      be done by the book ... feel free to fix .. =)
 
@@ -170,7 +172,16 @@ while (<FH>)
 		{
 			$package = $1;
 		}
+		# Only use Dir if not $dir is not set, as otherwise
+		# $dir will contain a valid NetDir.
 		elsif (/^\s*Dir\s*=\s*([^;]+);/)
+		{
+			if (!length($dir))
+			{
+				$dir = $1;
+			}
+		}
+		elsif (/^\s*NetDir\s*=\s*([^;]+);/)
 		{
 			$dir = $1;
 		}
