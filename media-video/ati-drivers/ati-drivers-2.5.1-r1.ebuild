@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1.ebuild,v 1.2 2003/01/15 05:32:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.1 2003/01/15 05:32:13 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -27,10 +27,12 @@ src_unpack() {
 }
 
 src_compile() {
-    einfo "building the glx module"
+
+	einfo "building the glx module"
 
     cd ${WORKDIR}/lib/modules/fglrx/build_mod
-    ./make.sh
+    ./make.sh || ewarn "glx module not built" 
+	
 
     einfo "building the fgl_glxgears sample"
 
@@ -88,7 +90,7 @@ src_install() {
     dosym libGL.so.1.2 ${ATI_ROOT}/lib/libGL.so
     dosym libGL.so.1.2 ${ATI_ROOT}/lib/libMesaGL.so
     #that is the same as in the xfree
-    dosym ../xfree/lib/libGL.la ${ATI_ROOT}/lib/libGL.la
+    dosym ../../xfree/lib/libGL.la ${ATI_ROOT}/lib/libGL.la
 
 #same as in xfree
     exeinto ${ATI_ROOT}/
