@@ -4,13 +4,13 @@ MD5 17ed20caf9b257a875031de4532e34fc gaim-0.70-r1.ebuild 2211
 MD5 c8d30850b6d67308ab0ebc7b38985bb1 gaim-0.67-r1.ebuild 2160
 MD5 732ec4a141392279f7984b5e2dc73fc3 gaim-0.66-r4.ebuild 1971
 MD5 d0e86a7e30272d53c1ae434ebf0d2592 gaim-0.69.ebuild 2226
-MD5 56bbba59cbc2a450dd45cba4b04832a3 gaim-0.71-r2.ebuild 2639
+MD5 222cc5f359f2178b1e20ed5feb214b3c gaim-0.71-r2.ebuild 2639
 MD5 836e337188a5f0b1fe7e0de396bec8b9 gaim-0.70.ebuild 2338
 MD5 a08cec351051cad09f7b16f12adf5a3a gaim-0.68-r2.ebuild 2395
 MD5 b2ac9eb41db9100a22760f81282f388b gaim-0.66-r3.ebuild 1968
 MD5 1b1f0e40e56bf6064faa118255be51bc gaim-0.70-r2.ebuild 2488
 MD5 7d3ee2452a2e73637d63b709a7de6e33 gaim-0.71-r1.ebuild 2588
-MD5 b447477ef913b83ea51813fa42df4cd0 ChangeLog 14233
+MD5 b1d69f66b02d8710522af7d06ca321b6 ChangeLog 14449
 MD5 dc9ef26d3efea7cbe38cbe534cdeaa53 metadata.xml 510
 MD5 5993641de8d56c2c433f252997c3c39c files/digest-gaim-0.67 135
 MD5 dd643cd5d3960ea86bc0107cb9bdbb50 files/digest-gaim-0.69 135
