@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.4 2003/09/18 10:44:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r2.ebuild,v 1.5 2003/09/20 20:14:41 dholm Exp $
 
 DESCRIPTION="The GNU Ada Toolkit"
 DEPEND="x86? ( >=app-shells/tcsh-6.0 )"
@@ -9,7 +9,7 @@ SRC_URI="http://gd.tuwien.ac.at/languages/ada/gnat/${PV}/${P}-src.tgz
 	http://gd.tuwien.ac.at/languages/ada/gnat/${PV}/${P}-unx-docs.tar.gz
 	ftp://gcc.gnu.org/pub/gcc/old-releases/gcc-2/gcc-2.8.1.tar.bz2
 	x86? ( http://gd.tuwien.ac.at/languages/ada/gnat/${PV}/${P}-i686-pc-redhat71-gnu-bin.tar.gz )
-	ppc? ( mirror://gentoo/${P}-powerpc-unknown-linux-gnu.tar.bz2 )"
+	ppc? ( http://dev.gentoo.org/~dholm/files/${P}-powerpc-unknown-linux-gnu.tar.bz2 )"
 HOMEPAGE="http://www.gnat.com/"
 
 SLOT="0"
