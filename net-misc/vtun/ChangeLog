@@ -2,6 +2,9 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
 
+  31 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> :
+  Marked ~amd64.
+
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> vtun-2.5.ebuild,
   vtun-2.6.ebuild:
   change virtual/glibc to virtual/libc
