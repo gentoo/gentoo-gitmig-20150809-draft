@@ -1,11 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6-r1.ebuild,v 1.3 2004/03/07 01:48:34 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.6-r1.ebuild,v 1.4 2004/03/07 08:19:24 seemant Exp $
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
-SRC_URI="mirror://gentoo/${P}.tar.gz
-	mirror://gnu/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
+	mirror://gentoo/${P}.tar.gz
+	mirror://gentoo/${PF}-gentoo.tar.bz2
+	http://dev.gentoo.org/~seemant/extras/${PF}-gentoo.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,25 +18,25 @@ DEPEND=">=sys-fs/e2fsprogs-1.27
 	>=sys-libs/ncurses-5.2
 	nls? ( sys-devel/gettext )
 	readline? ( >=sys-libs/readline-4.1-r4 )"
+
 RDEPEND="${DEPEND}
 	!noreiserfs? ( =sys-fs/progsreiserfs-0.3.0* )"
+
+PATCHDIR=${WORKDIR}/patches
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-assert.patch
-	epatch ${FILESDIR}/${P}-hfs-9.patch
-	epatch ${FILESDIR}/${P}-gcc-3.3.patch
-	epatch ${FILESDIR}/${P}-2-6headers.patch
+	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 }
 
 src_compile() {
-	local myconf
-	use nls || myconf="${myconf} --disable-nls"
-	use readline || myconf="${myconf} --without-readline"
-	use debug || myconf="${myconf} --disable-debug"
-	use static && myconf="${myconf} --enable-all-static"
-	econf --target=${CHOST} ${myconf} || die "Configure failed"
+	econf \
+		`use_with readline` \
+		`use_enable nls` \
+		`use_enable debug` \
+		`use_enable static all-static` \
+		--target=${CHOST} ${myconf} || die "Configure failed"
 	emake || die "Make failed"
 }
 

@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.28 2004/03/07 01:48:34 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.29 2004/03/07 08:19:24 seemant Exp $
+
+  07 Mar 2004; Seemant Kulleen <seemant@gentoo.org> parted-1.6.5-r1.ebuild,
+  parted-1.6.5.ebuild, parted-1.6.6-r1.ebuild, parted-1.6.6.ebuild,
+  files/parted-1.6.5-gcc-3.3.patch, files/parted-1.6.5-hfs-8.patch,
+  files/parted-1.6.6-2-6headers.patch, files/parted-1.6.6-assert.patch,
+  files/parted-1.6.6-gcc-3.3.patch, files/parted-1.6.6-hfs-8.patch,
+  files/parted-1.6.6-hfs-9.patch:
+  move patches to tarballs on gentoo mirrors. Also switch to the use_enable and
+  use_with syntax in econf
 
   06 Mar 2004; Ilya A. Volynets-Evenbakh <ilya@total-knowledge.com>
   parted-1.6.6-r1.ebuild:
