@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.6.ebuild,v 1.1 2004/02/04 01:23:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.6.ebuild,v 1.2 2004/02/05 00:44:13 lu_zero Exp $
+
+inherit gcc
 
 DESCRIPTION="Yet Another Free Raytracer"
 HOMEPAGE="http://www.yafray.org"
@@ -12,12 +14,15 @@ SLOT="0"
 
 RDEPEND="media-libs/jpeg
 		sys-libs/zlib"
+
 DEPEND="${RDEPEND}
+		=sys-devel/gcc-3*
 		>=sys-apps/sed-4
 		>=sys-devel/automake-1.7.2"
 
 IUSE=""
 
+export WANT_GCC_3="yes"
 export WANT_AUTOMAKE="1.7"
 
 src_unpack() {
@@ -32,7 +37,7 @@ aclocal
 }
 
 src_install() {
-	einstall            || die
-	dodoc AUTHORS       || die "dodoc failed"
+	einstall 			|| die
+	dodoc AUTHORS 		|| die "dodoc failed"
 	dohtml doc/doc.html || die "dohtml failed"
 }
