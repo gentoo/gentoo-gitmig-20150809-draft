@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.189 2004/11/07 07:44:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.190 2004/11/22 01:44:25 eradicator Exp $
+
+  21 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mod_php-5.0.2.ebuild:
+  Removing amd64 keyword as it's not quite ready yet...
 
   07 Nov 2004; Markus Rothe <corsair@gentoo.org> mod_php-5.0.2.ebuild:
   Marked ~ppc64
