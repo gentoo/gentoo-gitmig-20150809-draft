@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/superkaramba
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.23 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.24 2004/11/02 19:22:16 motaboy Exp $
+
+  02 Nov 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +files/superkaramba-0.34-configure.patch, superkaramba-0.34.ebuild:
+  Added a patch to the configure script to honor the "arts" USE flag. Fixes bug
+  #69681. Stable on x86
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   superkaramba-0.34.ebuild:
