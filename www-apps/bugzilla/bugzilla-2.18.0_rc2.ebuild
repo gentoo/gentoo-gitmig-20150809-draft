@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc2.ebuild,v 1.1 2004/08/17 22:23:09 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc2.ebuild,v 1.2 2004/08/30 19:07:12 rl03 Exp $
 
 inherit webapp
 MY_P=${P/.0_/}
@@ -19,7 +19,6 @@ IUSE="apache2"
 # updated list of deps: http://www.bugzilla.org/releases/2.18/release-notes.html
 # removed deps:	dev-perl/MIME-tools
 # dev-perl/Data-Dumper is back
-DEPEND="$DEPEND"
 RDEPEND=">=dev-db/mysql-3.23.41
 	>=dev-lang/perl-5.6.0
 	>=dev-perl/AppConfig-1.52

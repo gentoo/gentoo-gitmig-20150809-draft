@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc1.ebuild,v 1.1 2004/08/15 09:44:27 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc1.ebuild,v 1.2 2004/08/30 19:07:12 rl03 Exp $
 
 inherit webapp
 MY_P=${P/.0_/}
@@ -16,7 +16,6 @@ KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="apache2"
 
 # See http://www.bugzilla.org/docs216/html/stepbystep.html to verify dependancies
-DEPEND="$DEPEND"
 RDEPEND=">=dev-db/mysql-3.22.5
 	>=dev-lang/perl-5.01
 	dev-perl/Template-Toolkit
