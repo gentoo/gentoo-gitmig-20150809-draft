@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r3.ebuild,v 1.1 2001/01/10 06:05:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r3.ebuild,v 1.2 2001/01/10 07:04:53 drobbins Exp $
 
 P=samba-2.0.7
 A=${P}.tar.gz
@@ -19,7 +19,7 @@ DEPEND=">=sys-apps/bash-2.04
 
 src_compile() { 
   cd ${S}/source
-  CFLAGS="$CFLAGS -I/usr/include/openssl" try ./configure --prefix=/usr \
+  try ./configure --prefix=/usr \
 	--sysconfdir=/etc/smb --localstatedir=/var/log --libdir=/etc/smb --sbindir=/usr/sbin \
 	--with-automount --with-utmp --without-sambabook --with-netatalk --with-smbmount --with-pam \
 	--with-privatedir=/etc/smb/private --with-lockdir=/var/lock --with-swatdir=/usr/share/swat
