@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.9 2004/07/01 21:20:31 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.10 2004/07/22 22:27:49 tgall Exp $
 
 S=${WORKDIR}/${P/-utils}
 IUSE=""
@@ -10,7 +10,7 @@ SRC_URI="ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ncpfs/${P/-utils}.ta
 
 LICENSE="Caldera"
 SLOT="0"
-KEYWORDS="x86 sparc s390"
+KEYWORDS="x86 sparc s390 ppc64"
 
 DEPEND="virtual/libc"
 
