@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.4 2004/06/24 22:36:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.5 2004/07/18 04:32:13 pylon Exp $
+
+  18 Jul 2004; Lars Weiler <pylon@gentoo.org> libidn-0.3.7.ebuild:
+  Stable on ppc.
 
   16 Jun 2004; Jason Wever <weeve@gentoo.org> libidn-0.3.7.ebuild:
   Added ~sparc keyword.

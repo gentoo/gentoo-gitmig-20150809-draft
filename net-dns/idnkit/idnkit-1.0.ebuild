@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nic.ad.jp/ja/idn/idnkit/download/"
 SRC_URI="http://www.nic.ad.jp/ja/idn/idnkit/download/sources/${P}-src.tar.gz"
 LICENSE="JNIC"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 DEPEND="libidn"
 
