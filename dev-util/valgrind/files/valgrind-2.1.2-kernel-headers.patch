@@ -1,0 +1,17 @@
+diff -ruN valgrind-2.1.2.orig/coregrind/vg_unsafe.h valgrind-2.1.2/coregrind/vg_unsafe.h
+--- valgrind-2.1.2.orig/coregrind/vg_unsafe.h	2004-07-21 23:44:53.146503216 +0200
++++ valgrind-2.1.2/coregrind/vg_unsafe.h	2004-07-21 23:48:04.156465288 +0200
+@@ -47,11 +47,12 @@
+ #include <sys/socket.h>   /* for struct msghdr */
+ #include <linux/sockios.h>/* for SIOCOUTQ */
+ #include <sys/un.h>       /* for sockaddr_un */
+-#include <net/if.h>       /* for struct ifreq et al */
+ #include <net/if_arp.h>   /* for struct arpreq */
+ #include <net/route.h>    /* for struct rtentry */
+ #ifdef KERNEL_2_6
+ #include <linux/compiler.h> /* for __user definition */
++#else
++#include <net/if.h>       /* for struct ifreq et al */
+ #endif
+ #include <asm/ipc.h>      /* for struct ipc_kludge */
+ #include <linux/msg.h>    /* for struct msgbuf */

@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.31 2004/07/10 17:23:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.32 2004/07/21 22:52:31 lu_zero Exp $
+
+*valgrind-2.1.2 (22 Jul 2004)
+
+  22 Jul 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/valgrind-2.1.2-kernel-headers.patch, +valgrind-2.1.2.ebuild:
+  New version, thanks to Olaf Freyer <aaron@cs.tu-berlin.de> for the 
+  early patch.
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> valgrind-2.1.1-r1.ebuild:
   Marking -amd64, valgrind is ix86 specific.
