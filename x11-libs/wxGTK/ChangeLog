@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.4 2002/04/14 08:29:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.5 2002/06/13 11:38:59 verwilst Exp $
+
+*wxGTK-2.3.2-r2 (13 Jun 2002) 
+ 
+  13 Jun 2002; Bart Verwilst <verwilst@gentoo.org> wxGTK-2.3.2-r2.ebuild : 
+ 
+  Apply a little patch to let GCC-3.1 compile this. ( src/gtk/joystick.cpp ), thanks to Francisco Gimeno <kikov@fco-gimeno.com>.
+  Closes bug # 3660
 
 *wxGTK-2.3.2-r1 (14 Apr 2002)
 
