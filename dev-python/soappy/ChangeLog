@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/soappy
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.1 2004/01/03 03:08:03 kloeri Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.2 2004/04/10 16:43:33 kloeri Exp $
+
+*soappy-0.11.3 (10 Apr 2004)
+
+  10 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> soappy-0.11.1.ebuild,
+  soappy-0.11.3.ebuild:
+  Mark 0.11.1 stable on x86, add 0.11.3 to portage.
 
 *soappy-0.11.1 (03 Jan 2004)
 
