@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/trayer-1.0.ebuild,v 1.3 2005/03/08 01:17:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/trayer-1.0.ebuild,v 1.4 2005/03/13 19:44:57 lucass Exp $
 
 DESCRIPTION="Lightweight GTK2-based systray for UNIX desktop"
 HOMEPAGE="http://fvwm-crystal.berlios.de/"
@@ -12,7 +12,7 @@ IUSE=""
 DEPEND=">=x11-libs/gtk+-2"
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die "emake failed"
+	emake -j1 CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
