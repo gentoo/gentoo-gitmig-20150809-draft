@@ -1,8 +1,13 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.4 2002/07/15 21:37:01 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.5 2002/07/26 22:59:16 cselkirk Exp $
 
 *metalog-0.6-r10 (15 Jul 2002)
+
+  26 Jul 2002; Calum Selkirk <cselkirk@gentoo.org metalog-0.6-r10.ebuild :
+
+  Added ppc to KEYWORDS
+  Added RDEPEND
 
   15 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
 
