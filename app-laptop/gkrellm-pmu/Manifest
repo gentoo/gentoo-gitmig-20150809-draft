@@ -1,6 +1,18 @@
-MD5 bcd753f591cd62da11d377a13603bbcb ChangeLog 743
-MD5 4912a9269660004d8099712ab285c22c gkrellm-pmu-2.0.ebuild 684
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 87c9de266c6f25b245a28357657e9b89 ChangeLog 1003
+MD5 16a85ca0f6c795102d180179b77b283a gkrellm-pmu-2.0.ebuild 661
 MD5 4b51fbb7e1263dbedfab200b1f34275d metadata.xml 284
-MD5 14331d7b0924e5fc20e3f3be4b4ba827 gkrellm-pmu-2.2.ebuild 685
+MD5 dc1a2787918b68b9fc9fde3f6f071258 gkrellm-pmu-2.2.ebuild 668
+MD5 b727a3530460cc04b87ef3313e35f813 gkrellm-pmu-2.3.ebuild 696
 MD5 c70ee0987431b03d783dd7add124c71a files/digest-gkrellm-pmu-2.0 66
 MD5 11c33e137c036e6d62853d87325919e4 files/digest-gkrellm-pmu-2.2 67
+MD5 c295418637755f0dc50cc1d79e02652c files/digest-gkrellm-pmu-2.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBqGa9mdTrptrqvGERAkuwAJ9RUL56b8MKpPASOG50ozCyOWqjnQCdEXW4
+ndEnmPnE6ZbYUtlKCrwQsT8=
+=9SUU
+-----END PGP SIGNATURE-----

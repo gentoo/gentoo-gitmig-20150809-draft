@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/gkrellm-pmu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/gkrellm-pmu/ChangeLog,v 1.4 2004/07/03 16:07:06 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/gkrellm-pmu/ChangeLog,v 1.5 2004/11/27 11:36:22 dragonheart Exp $
+
+*gkrellm-pmu-2.3 (27 Nov 2004)
+
+  27 Nov 2004; Daniel Black <dragonheart@gentoo.org> gkrellm-pmu-2.0.ebuild,
+  gkrellm-pmu-2.2.ebuild, +gkrellm-pmu-2.3.ebuild:
+  Version bump. Homepage change. QA fix removing einstall as per bug #72177.
+  Thanks SpanKY
 
 *gkrellm-pmu-2.2 (03 Jul 2004)
 
