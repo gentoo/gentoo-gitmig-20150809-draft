@@ -1,0 +1,13 @@
+# ChangeLog for dev-ada/adadoc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adadoc/ChangeLog,v 1.1 2003/08/14 01:57:09 dholm Exp $
+
+*adadoc-2.01 (14 Aug 2003)
+
+  14 Aug 2003; David Holm <avatar@gentoo.org> adadoc-2.01.ebuild,
+  metadata.xml:
+  Initial release, bug #25102. Documentation system for Ada similar to doxygen
+  or javadoc. ebuild submitted by Timo Warns
+  <timo.warns@informatik.uni-oldenburg.de> with some minor updates by me
+  (documentation).
+
