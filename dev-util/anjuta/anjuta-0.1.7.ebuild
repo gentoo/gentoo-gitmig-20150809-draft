@@ -36,6 +36,7 @@ src_compile() {
 	use nls || myconf="--disable-nls"
 
 	./configure --host=${CHOST} --prefix=/usr  --mandir=/usr/share/man \
+	        --localstatedir=/var/lib \
 		--infodir=/usr/share/info --with-sysconfdir=/etc \
 		$myconf || die
 	emake || die
@@ -43,8 +44,11 @@ src_compile() {
 
 src_install () {
 	
-	make  DESTDIR=${D}  anjutadocdir=/usr/share/doc/${PF} \
-		anjuta_docdir=/usr/share/doc/${PF} install || die
+	make  prefix=${D}/usr						\
+	      infodir=${D}/etc 						\
+	      localstatedir=${D}/var/lib 				\
+	      anjutadocdir=/usr/share/doc/${PF} 			\
+	      anjuta_docdir=/usr/share/doc/${PF} install || die
 
 }
 
