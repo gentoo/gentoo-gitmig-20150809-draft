@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.5 2003/12/02 06:02:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.6 2004/02/22 16:26:22 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Qmail Queue Repair Application with support for big-todo"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.netmeridian.com/e-huss/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 alpha ~arm ~hppa ~mips ppc sparc amd64 ia64"
+KEYWORDS="x86 alpha ~hppa ~mips ppc sparc amd64 ia64"
 IUSE=""
 DEPEND="sys-devel/gcc-config"
 RDEPEND="|| ( net-mail/qmail

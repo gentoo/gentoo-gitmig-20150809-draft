@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.3.0.4.ebuild,v 1.1 2003/07/20 06:35:33 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.3.0.4.ebuild,v 1.2 2004/02/22 16:27:50 agriffis Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="ripMIME extracts attachment files out of a MIME-encoded email pack"
@@ -9,7 +9,7 @@ HOMEPAGE="http://pldaniels.com/ripmime/"
 
 SLOT="0"
 LICENSE="Sendmail"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 src_compile() {
 	emake || die

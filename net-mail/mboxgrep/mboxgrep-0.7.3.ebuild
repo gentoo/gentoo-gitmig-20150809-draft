@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/mboxgrep-0.7.3.ebuild,v 1.10 2003/02/13 14:34:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/mboxgrep-0.7.3.ebuild,v 1.11 2004/02/22 16:21:28 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Grep for mbox files"
@@ -12,7 +12,7 @@ RDEPEND="$DEPEND"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 src_compile() {
 	./configure \

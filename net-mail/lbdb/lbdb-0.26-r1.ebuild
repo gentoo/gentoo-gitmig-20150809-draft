@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.26-r1.ebuild,v 1.8 2003/09/05 09:12:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.26-r1.ebuild,v 1.9 2004/02/22 16:19:57 agriffis Exp $
 
 IUSE="pda"
 
@@ -14,7 +14,7 @@ DEPEND=">=net-mail/mutt-1.2.5"
 
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 LICENSE="GPL-2"
 
 RDEPEND="pda? ( dev-perl/p5-Palm )"

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.41 2004/02/22 10:32:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.42 2004/02/22 16:17:41 agriffis Exp $
+
+  22 Feb 2004; Aron Griffis <agriffis@gentoo.org> fetchmail-5.9.14.ebuild:
+  Remove arm keywords
 
   22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> fetchmail-6.2.5.ebuild:
   Fix kerberos5 support. Closing #28113.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/nail-9.30.ebuild,v 1.10 2003/09/05 02:45:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nail/nail-9.30.ebuild,v 1.11 2004/02/22 16:22:03 agriffis Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 src_compile() {
 	econf \
