@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.2 2002/11/03 18:32:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.3 2002/11/06 15:34:18 vapier Exp $
 
-S=${WORKDIR}/${PN/-rescue/}-${PV}_20021020
 DESCRIPTION="a nice backup tool"
 SRC_URI="http://www.microwerks.net/~hugo/download/daily/${PN/-rescue/}-${PV}_20021020.tgz"
 HOMEPAGE="http://www.microwerks.net/~hugo/download.html"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
@@ -21,15 +21,14 @@ DEPEND=">=app-arch/afio-2.4.7
 	>=dev-libs/newt-0.50
 	>=sys-apps/buffer-1.19
 	>=sys-apps/syslinux-1.7"
-
-RDEPEND="${DEPEND}"
+S=${WORKDIR}/${PN/-rescue/}-${PV}_20021020
 
 src_compile() {
-	econf || die "configure failed"
+	econf
 	emake || die "make failed"
 }
 
-src_install () {
+src_install() {
 	einstall || die "make install failed"
 }
 
