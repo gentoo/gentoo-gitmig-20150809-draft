@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r3.ebuild,v 1.4 2003/10/30 09:22:21 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r3.ebuild,v 1.5 2003/10/30 12:39:11 brandy Exp $
 
 IUSE="X cjk"
 
@@ -50,7 +50,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-man-UTF-8.diff
 
 	# Fix syntax error in pic2graph. Closes #32300.
-	sed -i -e "s:groffpic_opts=\"-U\":groffpic_opts=\"-U\";;:" contrib/pic2graph/pic2graph
+	sed -i -e "s:groffpic_opts=\"-U\":groffpic_opts=\"-U\";;:" contrib/pic2graph/pic2graph.sh
 }
 
 src_compile() {
