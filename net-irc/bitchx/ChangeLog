@@ -1,9 +1,13 @@
 # ChangeLog for net-ircbitchxChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.10 2002/10/21 13:09:35 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.11 2002/10/25 21:53:53 jmorgan Exp $
 
 *bitchx-1.0.19-r2 (26 Jun 2002)
 
+  26 Oct 2002; Jack Morgan <jmorgan@gentoo.org> bitchx-1.0.19-r2.ebuild :
+
+  Added Sparc/sparc64 keywords
+  
   21 Oct 2002; phoen][x <phoenix@gentoo.org> bitchx-1.0.19-r2.ebuild :
 
   Fixed the flag-o-matic setting. It explicitely replaced -O3 with -O2,
