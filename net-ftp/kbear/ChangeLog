@@ -1,6 +1,12 @@
-# ChangeLog for net-ftp/lftp
+# ChangeLog for net-ftp/kbear
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/ChangeLog,v 1.1 2002/03/15 15:32:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/ChangeLog,v 1.2 2002/06/18 10:21:03 bangert Exp $
+
+*kbear-2.0_alpha1 (18 Jun 2002)
+
+  18 Jun 2002; Thilo Bangert <bangert@gentoo.org> kbear-2.0_alpha1.ebuild:
+
+  Added KDE3 port of kbear - alpha software!
 
 *-kbear-1.2.1-r2 (15 Mar 2002)
 
