@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.729 2004/11/11 09:45:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.730 2004/11/11 12:55:16 mglauche Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -475,6 +475,9 @@ net-dns/djbdns:semanticfix - makes tinydns-data handle more semantic errors
 net-dns/pdnsd:isdn - enable isdn features
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
+net-fs/samba:quotas - Add support for user quotas
+net-fs/samba:winbind - Add support for the winbind auth daemon
+net-fs/samba:libclamav - Enable clamav as virus scanner
 net-fs/shfs:amd - Enable automounter support
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
