@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.4 2004/09/15 14:40:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.5 2005/01/18 09:45:34 cardoe Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
 
 ECLASS=myth
 INHERITED="${INHERITED} ${ECLASS}"
+IUSE="${IUSE} nls debug"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
 
