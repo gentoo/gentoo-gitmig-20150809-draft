@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.6 2004/07/01 10:59:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.7 2004/07/19 20:07:52 eradicator Exp $
 
 inherit webapp-apache eutils
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 LICENSE="mserv"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE="oggvorbis"
 
 DEPEND="virtual/libc"
