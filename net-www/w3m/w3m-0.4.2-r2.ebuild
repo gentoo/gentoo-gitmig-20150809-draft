@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r2.ebuild,v 1.2 2003/11/04 19:56:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r2.ebuild,v 1.3 2003/11/12 20:22:11 usata Exp $
 
 IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk"
 
@@ -49,7 +49,17 @@ pkg_setup() {
 	fi
 }
 
-w3m_src_compile() {
+src_unpack() {
+
+	unpack ${W3M_CVS_P}.tar.gz
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
+}
+
+src_compile() {
+
+	export WANT_AUTOCONF_2_5=1
+	#autoconf || die "autoconf failed"
 
 	local myconf migemo_command imagelib
 
@@ -81,8 +91,14 @@ w3m_src_compile() {
 		migemo_command="no"
 	fi
 
-	# You can't disable nls at the moment(w3mhelper hangs)
-	# `use_enable nls`
+	if [ -n "`use cjk`" ] ; then
+		myconf="${myconf}
+			--enable-japanese=E
+			--with-charset=EUC-JP"
+	fi
+
+	# You can't disable cjk and nls at the moment(w3mhelper hangs)
+	# `use_enable nls` `use_enable cjk`
 	econf --enable-keymap=w3m \
 		--with-editor=/usr/bin/nano \
 		--with-mailer=/bin/mail \
@@ -90,7 +106,7 @@ w3m_src_compile() {
 		--with-termlib=ncurses \
 		--with-imagelib="${imagelib}" \
 		--with-migemo="${migemo_command}" \
-		`use_enable cjk m17n` \
+		--enable-m17n \
 		`use_enable gpm mouse` \
 		`use_enable ssl digest-auth` \
 		`use_with ssl` \
@@ -100,58 +116,9 @@ w3m_src_compile() {
 	make all || make all || die "make failed"
 }
 
-src_unpack() {
-
-	unpack ${W3M_CVS_P}.tar.gz
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
-}
-
-src_compile() {
-
-	export WANT_AUTOCONF_2_5=1
-	#autoconf || die "autoconf failed"
-
-	if [ -n "`use cjk`" ] ; then
-
-		w3m_src_compile \
-			--enable-japanese=E \
-			--with-charset=EUC-JP \
-			--enable-messagel10n
-
-		mv w3mhelperpanel ${T}/w3mhelperpanel-ja
-		mv w3mbookmark ${T}/w3mbookmark-ja
-		mv w3m ${T}/w3m-ja
-
-		sed -e "s%@cgibindir@%/usr/libexec/w3m/cgi-bin%" \
-			${FILESDIR}/w3mhelperpanel.sh.in \
-			> ${T}/w3mhelperpanel.sh
-		sed -e "s%@cgibindir@%/usr/libexec/w3m/cgi-bin%" \
-			${FILESDIR}/w3mbookmark.sh.in \
-			> ${T}/w3mbookmark.sh
-
-		make clean
-	fi
-
-	w3m_src_compile --disable-japanese
-}
-
 src_install() {
 
 	make DESTDIR=${D} install || die "make install failed"
-
-	if [ -n "`use cjk`" ] ; then
-		mv ${D}/usr/bin/w3m{,-en}
-		mv ${D}/usr/libexec/w3m/cgi-bin/w3mhelperpanel{,-en}
-		mv ${D}/usr/libexec/w3m/cgi-bin/w3mbookmark{,-en}
-		dobin ${T}/w3m-ja
-		newbin ${FILESDIR}/w3m.sh w3m
-		exeinto /usr/libexec/w3m/cgi-bin
-		doexe ${T}/w3mhelperpanel-ja
-		doexe ${T}/w3mbookmark-ja
-		newexe ${T}/w3mhelperpanel.sh w3mhelperpanel
-		newexe ${T}/w3mbookmark.sh w3mbookmark
-	fi
 
 	insinto /usr/share/${PN}/Bonus
 	doins Bonus/*
