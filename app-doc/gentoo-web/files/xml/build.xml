@@ -266,9 +266,12 @@ and the last step before we can grab the Portage tree and bootstrap is to config
 <p>
 Network configuration is simple with DHCP; If your ISP is not using
 DHCP, skip down to the static configuration section below.
+(DHCP does not configure the localhost interface, so we add it
+by hand here.)
 </p>
 <pre caption="Network configuration with DHCP">
 # <i>dhcpcd eth0</i> 
+# <i>/sbin/ifconfig lo 127.0.0.1 up</i>
 </pre>
 <note>
 Some ISPs require you to provide a hostname.  To do that,
@@ -423,12 +426,11 @@ you have to install it yourself.  Here are the steps to compile and configure
 your own custom kernel:
 </p>
 <pre>
-# <i>cd /usr/portage/sys-kernel/linux-sources</i>
-# <i>emerge linux-sources-2.4.8.8.ebuild</i>
+# <i>emerge sys-kernel/linux-sources</i>
 # <i>cd /usr/src/linux</i>
 # <i>make menuconfig</i>
 # <i>make dep; make clean; make bzImage; make modules; make modules_install</i>
-# <i>mv /boot/bzImage /boot/bzImage.orig</i> <comment>[if bzImage already exists]</comment>
+# <i>mv bzImage bzImage.orig</i> <comment>[if bzImage already exists]</comment>
 # <i>cp /usr/src/linux/arch/i386/boot/bzImage /boot</i>
 </pre>
 <impo>For your kernel to function properly, there are several options that you will
@@ -452,11 +454,21 @@ To merge your logger of choice, type <e>one</e> of the next three lines:
 
 <pre>
 # <i>emerge sys-apps/sysklogd</i>
+# <i>rc-update add sysklogd default</i>
 <comment>or</comment>
 # <i>emerge app-admin/syslog-ng</i>
+# <i>rc-update syslog-ng default</i>
 <comment>or</comment>
 # <i>emerge app-admin/metalog</i>
+# <i>rc-update add metalog default</i>
 </pre>
+<warn>
+In the case of syslog-ng and metalog, you need to create 
+<path>/etc/syslog-ng/syslog-ng.conf</path> or
+<path>/etc/metalog/metalog.conf</path>, respectively.
+See <path>/etc/syslog-ng</path> or <path>/etc/metalog</path>
+for sample configuration files.
+</warn>
 </body>
 </section>
 </chapter>
@@ -466,7 +478,7 @@ To merge your logger of choice, type <e>one</e> of the next three lines:
 <body>
 <p>
 To install any additional packages in the Portage tree
-you can just <c>emerge</c> any packages in <path>/usr/portage/</path>
+you can just <c>emerge</c> any packages in <path>/usr/portage/</path> 
 that you'd
 like to install, for example:</p>
 <pre>
