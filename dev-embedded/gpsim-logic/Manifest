@@ -1,4 +1,4 @@
-MD5 1def94390083fb4cb1a5f92d993d2082 gpsim-logic-0.0.2.ebuild 889
-MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 d455df1bb45dfac02dbd85a35fdf7405 ChangeLog 361
 MD5 71e6a715430ba22511d42de29d598d18 files/digest-gpsim-logic-0.0.2 63
+MD5 2fc61b408ce4c0511d8350d1351582f0 ChangeLog 362
+MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+MD5 c7245c3aaaab3629bc6aca4bc09ae49e gpsim-logic-0.0.2.ebuild 890
