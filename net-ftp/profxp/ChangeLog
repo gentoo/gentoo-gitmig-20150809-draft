@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/profxp
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/ChangeLog,v 1.2 2004/06/24 22:47:34 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/ChangeLog,v 1.3 2005/01/25 18:56:45 luckyduck Exp $
+
+  25 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> profxp-3_pre2.ebuild:
+  added ~amd64 to KEYWORDS.
 
 *profxp-3_pre2 (08 Dec 2003)
 
