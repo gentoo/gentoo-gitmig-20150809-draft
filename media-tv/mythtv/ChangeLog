@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.9 2003/10/28 16:08:38 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.10 2003/12/04 23:16:40 mr_bones_ Exp $
+
+  04 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> mythtv-0.10.ebuild:
+  clean old version per max
 
   28 Oct 2003; Max Kalika <max@gentoo.org> mythtv-0.12.ebuild:
   Disable DVB for now. Extend CPU detection. Fix potential portage bug in
