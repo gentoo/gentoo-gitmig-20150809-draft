@@ -1,18 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.8 2003/12/17 00:40:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.9 2004/01/17 13:47:41 mr_bones_ Exp $
 
 inherit eutils
 
+S="${WORKDIR}/Libnet-${PV}"
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
 HOMEPAGE="http://www.packetfactory.net/libnet/"
-SRC_URI="http://www.packetfactory.net/libnet/dist/${PN}.tar.gz"
+SRC_URI="http://www.packetfactory.net/libnet/dist/deprecated/${P}.tar.gz"
 
+KEYWORDS="x86 ppc sparc arm alpha amd64"
 LICENSE="LGPL-2"
 SLOT="1.0"
-KEYWORDS="x86 ppc sparc arm alpha amd64"
-
-S=${WORKDIR}/Libnet-${PV}
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
@@ -38,12 +38,12 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc VERSION doc/{README,TODO*,CHANGELOG*,COPYING}
-	newdoc README README.1st
-	docinto example ; dodoc example/libnet*
-	docinto Ancillary ; dodoc doc/Ancillary/*
+	dodoc VERSION doc/{README,TODO*,CHANGELOG*} || die "dodoc failed"
+	newdoc README README.1st || die "newdoc failed"
+	docinto example ; dodoc example/libnet* || die "dodoc failed (example)"
+	docinto Ancillary ; dodoc doc/Ancillary/* || die "dodoc failed (Ancillary)"
 }
 
 pkg_postinst(){
