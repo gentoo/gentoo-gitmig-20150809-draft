@@ -1,11 +1,14 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.18 2003/02/12 03:07:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.19 2003/04/06 19:34:59 zwelch Exp $
 
   26 Dec 2002; Maik Schreiber <blizzy@gentoo.org> gnupg-1.2.1-r1.ebuild:
   Changed "~x86" to "x86" in KEYWORDS.
 
 *gnupg-1.2.1-r1 (16 Dec 2002)
+
+  06 Apr 2003; Zach Welch <zwelch@gentoo.org> gnupg-1.2.1-r1.ebuild:
+  add arm keyword
 
   16 Dec 2002; J Robert Ray <jrray@gentoo.org> gnupg-1.2.1-r1.ebuild :
   Don't specify fixed photo viewer, defaults to using xloadimage anyway, but
