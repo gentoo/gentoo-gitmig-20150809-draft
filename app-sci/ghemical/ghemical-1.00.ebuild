@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ghemical-1.00.ebuild,v 1.4 2003/01/03 16:32:09 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ghemical-1.00.ebuild,v 1.5 2003/01/03 16:33:05 satai Exp $
 
 DEPEND="gnome-base/gnome-libs
 	dev-libs/libf2c
@@ -22,12 +22,12 @@ HOMEPAGE="http://www.uku.fi/~thassine/ghemical/"
 SRC_URI="http://www.uku.fi/~thassine/ghemical/download/${P}.tgz"
 
 src_compile() {
-	./configure --prefix=/usr --enable-mpqc
-	emake
+	./configure --prefix=/usr --enable-mpqc ||die
+	emake ||die
 }
 
 src_install() {
 	sed -e "s:^prefix=.*:prefix=${D}/usr:" Makefile > Makefile.foo
 	mv Makefile.foo Makefile
-	make install
+	make install||die
 }
