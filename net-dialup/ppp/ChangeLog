@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.7 2002/08/03 16:19:50 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.8 2002/08/28 15:37:20 phoenix Exp $
+
+*ppp-2.4.1-r11 (28 Aug 2002)
+  
+  3 Aug 2002; phoen][x <phoenix@gentoo.org> ppp-2.4.1-r11.ebuild :
+
+  Added ipv6 useflag support.
+  This closes bug 6972.
 
 *ppp-2.4.1-r10 (31 Jul 2002)
   
