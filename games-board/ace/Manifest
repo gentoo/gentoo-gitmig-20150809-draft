@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 96189bee666347283fe0b250a796f327 ChangeLog 1270
-MD5 425e96c65fc88694730509582fd05649 ace-1.2-r1.ebuild 845
+MD5 c0d68084453a6066757bb0fd81a0c13a ace-1.2-r1.ebuild 851
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 0db35cac674353398197d9ae9feb9fc3 files/digest-ace-1.2-r1 59
 MD5 1dbc44808235a583afa1158ba19cb5a6 files/ace-1.2-check_for_end_of_game.patch 262
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2LkmroRuSHgZdywRAu3ZAJ9xtH5eh/Oc8I/RJ9UJr9+82xcYNQCbByOR
-0BOIEpvU1arCgCszQgyEoAw=
-=yDo4
+iD8DBQFB2LuvroRuSHgZdywRAnEfAKCKJirZ9d+S6HfNydIR9PGobd9y6QCfXU5+
+tNn6z2y+NvTblqJ8obgT38M=
+=SgQ5
 -----END PGP SIGNATURE-----
