@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.44 2004/04/08 21:53:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.45 2004/04/09 22:21:35 tseng Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -270,7 +270,7 @@ get-flag() {
 has_pic() {
 	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpic}" != "${CFLAGS}" ] && return 0
-	[ has_version sys-devel/hardened-gcc ] && return 0
+	has_version sys-devel/hardened-gcc && return 0
 	[ ! -z "`${CC/ .*/} --version| grep pie`" ] && return 0
 	return 1
 }
@@ -278,14 +278,14 @@ has_pic() {
 has_pie() { 
 	[ "${CFLAGS/-fPIE}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpie}" != "${CFLAGS}" ] && return 0
-	[ has_version sys-devel/hardened-gcc ] && return 0
+	has_version sys-devel/hardened-gcc && return 0
 	[ ! -z "`${CC/ .*/} --version| grep pie`" ] && return 0
 	return 1
 }
 	
 has_ssp() {
 	[ "${CFLAGS/-fstack-protector}" != "${CFLAGS}" ] && return 0
-	[ has_version sys-devel/hardened-gcc ] && return 0
+	has_version sys-devel/hardened-gcc && return 0
 	[ ! -z "`${CC/ .*/} --version| grep ssp`" ] && return 0
 	return 1
 }
