@@ -1,5 +1,4 @@
 #!/usr/bin/env spython
-
 import os
 import sys
 
@@ -57,10 +56,14 @@ class depgraph:
 				print "!!! emerge aborting."
 				sys.exit(1)
 		mydep={}	
-		if portage.root=="/":
+		#if portage.root=="/":
+		#	mydep["/"]=edepend[0]+" "+edepend[1]
+		#else:
+		#	mydep["/"],mydep[portage.root]=edepend
+		if myroot=="/":
 			mydep["/"]=edepend[0]+" "+edepend[1]
 		else:
-			mydep["/"],mydep[portage.root]=edepend
+			mydep["/"],mydep[myroot]=edepend
 		self.digraph.addnode(mybigkey,myparent)
 		for dep in mydep.keys():
 			mycheck=self.db[dep]["vartree"].depcheck(mydep[dep])
