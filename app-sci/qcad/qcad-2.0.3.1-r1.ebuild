@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.3.1-r1.ebuild,v 1.3 2004/06/24 22:15:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.3.1-r1.ebuild,v 1.4 2004/09/21 11:19:34 kugelfang Exp $
 
 inherit kde-functions eutils
 
@@ -39,6 +39,11 @@ src_unpack() {
 		|| die "sed failed on assistant path"
 	sed -i -e "s:QCADDOCPATH:/usr/share/doc/${PF}/html:" \
 		qc_applicationwindow.cpp  || die "sed failed on manual path"
+
+	cd ${S}
+
+	# This patch allows compilation with gcc-3.4
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 
