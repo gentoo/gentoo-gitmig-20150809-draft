@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ad8aa4a0e2109e602af1738a802b1d3d ChangeLog 2066
 MD5 80f93bb2250a9cf8dc305144bf270a97 tcptraceroute-1.4-r3.ebuild 964
-MD5 f87a16fb335a66ce292cb7f367bb4abd tcptraceroute-1.5_beta5.ebuild 870
-MD5 23f16b156ded79be356d7671188ae10d ChangeLog 1968
 MD5 b11a70e1b7569dd6b3fa230a0e889d04 metadata.xml 227
+MD5 088891e5cbcac9498ae7302da8d3afc0 tcptraceroute-1.5_beta5.ebuild 869
+MD5 e2e5f7d3c6b35572d8e83f49c56e950e files/1.4-libnet-1.0.patch 730
+MD5 c269183b39d0a5ece16f5f4b41cd8f62 files/digest-tcptraceroute-1.4-r3 68
 MD5 2868a09f7c4911e6274c13519349cd51 files/tcptraceroute-1.4-gentoo.patch 1116
 MD5 08795adf41e7d24d33a369f072f3c0c3 files/digest-tcptraceroute-1.5_beta5 74
-MD5 c269183b39d0a5ece16f5f4b41cd8f62 files/digest-tcptraceroute-1.4-r3 68
-MD5 e2e5f7d3c6b35572d8e83f49c56e950e files/1.4-libnet-1.0.patch 730
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBIJnVT+MN7JbqCpMRAgzRAKCKHOxuUfJ7T50dH1xyn5RBziAFGwCdFo1P
-bD25QJ3yPtKJ8TfF0jLyUL8=
-=cSoN
------END PGP SIGNATURE-----
