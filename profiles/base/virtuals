@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.31 2004/09/21 15:07:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.32 2004/09/22 04:16:13 vapier Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -25,7 +25,7 @@ virtual/glibc				sys-libs/glibc
 virtual/gnustep-back		gnustep-base/gnustep-back-xlib
 virtual/lapack				app-sci/lapack-atlas
 virtual/libc				sys-libs/glibc
-virtual/glu					x11-base/xfree
+virtual/glu					x11-base/xorg-x11
 virtual/glut				media-libs/glut
 virtual/gnustep-back		gnustep-base/gnustep-back-xlib
 virtual/gzip				app-arch/gzip
@@ -44,7 +44,7 @@ virtual/mda					mail-filter/procmail
 virtual/modutils			sys-apps/module-init-tools
 virtual/mpg123				media-sound/mpg123
 virtual/mta					mail-mta/ssmtp
-virtual/opengl				x11-base/xfree
+virtual/opengl				x11-base/xorg-x11
 virtual/php					dev-php/mod_php
 virtual/httpd-php			dev-php/mod_php
 virtual/python				dev-lang/python
@@ -60,6 +60,6 @@ virtual/tetex				app-text/tetex
 virtual/textbrowser			net-www/links
 virtual/tftp				net-misc/tftp-hpa
 virtual/w3m					www-client/w3m
-virtual/x11					x11-base/xfree
+virtual/x11					x11-base/xorg-x11
 virtual/xemacs				app-editors/xemacs
-virtual/xft					x11-base/xfree
+virtual/xft					x11-base/xorg-x11
