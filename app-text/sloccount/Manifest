@@ -1,22 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 071f50f8aa800d89651cd5b5ededa635 ChangeLog 1552
 MD5 67f5888814e9597410fb0d6079a19e75 sloccount-2.22.ebuild 1060
 MD5 44c598128595dc35479bbb20b3451379 sloccount-2.26.ebuild 1025
-MD5 b0ea482ee3f7adb1f93b836b03e1786e sloccount-2.26-r1.ebuild 1043
-MD5 3e69559c5c2dfc9a54977fd3c639e85e ChangeLog 1331
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
-MD5 e4438da83f662b58c33e01f759570ff7 files/sloccount-2.26-libexec.patch 2293
-MD5 3c5bea5f23bc794e2a74524bd76d2b64 files/sloccount-2.26-coreutils-tail-n-fix.patch 468
-MD5 437c0513b3ee1b6f8c4baca3f77d001c files/digest-sloccount-2.26-r1 66
-MD5 2662f30ed5969d9f7cedd6b0addf196b files/sloccount-2.22-libexec.patch 2324
+MD5 0486e8ff43d489f8686a17ef4bac9432 sloccount-2.26-r1.ebuild 1041
 MD5 f0620a7ad11d6c60a8098c7d253c434f files/digest-sloccount-2.22 66
+MD5 2662f30ed5969d9f7cedd6b0addf196b files/sloccount-2.22-libexec.patch 2324
 MD5 437c0513b3ee1b6f8c4baca3f77d001c files/digest-sloccount-2.26 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFCIVF3snuUTjSIToURAgVbAJ4+j5AXU1TxECHTyPxLl3/1pmx01QCePEP2
-rYTj2gwmxm161CteELrjoGQ=
-=xTB/
------END PGP SIGNATURE-----
+MD5 e4438da83f662b58c33e01f759570ff7 files/sloccount-2.26-libexec.patch 2293
+MD5 437c0513b3ee1b6f8c4baca3f77d001c files/digest-sloccount-2.26-r1 66
+MD5 3c5bea5f23bc794e2a74524bd76d2b64 files/sloccount-2.26-coreutils-tail-n-fix.patch 468
