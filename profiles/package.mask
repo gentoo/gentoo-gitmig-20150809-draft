@@ -157,6 +157,7 @@ app-i18n/aspell-en
 =app-i18n/aspell-fr-0.50.1
 =app-i18n/aspell-nl-0.50.1
 =app-text/pspell-0.12.2-r4
+=app-office/abiword-1.0.2-r1
 
 
 # <styx@gentoo.org> (13 Aug 2002)
