@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.31 2004/06/11 23:02:57 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.32 2004/06/12 03:55:41 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -556,11 +556,13 @@ php-sapi_src_install() {
 	# A patch for PHP for security. PHP-CLI interface is exempt, as it cannot be
 	# fed bad data from outside.
 	if [ "${PHPSAPI}" != "cli" ]; then
+		einfo "Securing fopen wrappers"
 		patch ${phpinisrc} <${DISTDIR}/php-4.3.2-fopen-url-secure.patch
 	fi
 
 	# Patch for bug 50991, 49420 
 	# Make sure the correct include_path is used.
+	einfo "Setting correct include_path"
 	patch ${phpinisrc} <${DISTDIR}/php-4.3.6-includepath.diff
 
 	# A lot of ini file funkiness
