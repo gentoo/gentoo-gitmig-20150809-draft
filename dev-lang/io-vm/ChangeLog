@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/io-vm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io-vm/ChangeLog,v 1.1 2003/08/16 01:19:09 avenj Exp $
+
+*io-vm-20030810 (15 Aug 2003)
+
+  15 Aug 2003; Jon Portnoy <avenj@gentoo.org> io-vm-20030810.ebuild  :
+  Initial import. Submitted in bug 23227 by Jeffrey Palmer
+  <jeffrey.palmer@acm.org>.
