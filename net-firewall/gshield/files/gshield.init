@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/files/gshield.init,v 1.1 2003/03/31 17:09:14 mholzer Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/files/gshield.init,v 1.2 2004/03/04 19:20:00 vapier Exp $
 
 depend() {
 	need logger net
@@ -20,8 +20,8 @@ stop() {
 	/usr/share/gshield/gShield.rc stop > /dev/null
 	# check that it unloaded
 	if iptables -L DMZ > /dev/null 2>&1 ; then
-	    eend 1
+		eend 1
 	else
-	    eend 0;
+		eend 0;
 	fi
 }
