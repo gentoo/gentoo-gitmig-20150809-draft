@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.9 2004/11/06 02:55:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.10 2004/11/06 03:18:29 lv Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="MPL-1.1 LGPL-2 GPL-2 LGPL-2.1 BSD UCL MPEG4"
 
 SLOT="0"
 
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 IUSE="ipv6 mmx gtk v4l2 xvid nas alsa esd arts"
 
@@ -73,6 +73,6 @@ src_compile() {
 src_install () {
 
 	cd ${S}
-	einstall || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 
 }
