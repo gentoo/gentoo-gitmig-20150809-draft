@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-451.ebuild,v 1.3 2004/02/08 21:28:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-451.ebuild,v 1.4 2004/03/02 16:19:23 vapier Exp $
 
 inherit games eutils
 
@@ -62,20 +62,20 @@ src_install() {
 	###########
 	### CD1 ###
 	# Help, Logs, Music, Sounds, Textures, Web
-	cp -rf ${CDROM_ROOT}/{Help,Logs,Music,Textures,Web} ${Ddir}/ || die "copy Help, Logs, Music, Textures, Web CD1"
+	cp -rf "${CDROM_ROOT}"/{Help,Logs,Music,Textures,Web} ${Ddir}/ || die "copy Help, Logs, Music, Textures, Web CD1"
 	dodir ${dir}/Sounds
 	if [ `use nls` ] ; then
-		cp -rf ${CDROM_ROOT}/Sounds/* ${Ddir}/Sounds/ || die "copy Sounds CD1"
+		cp -rf "${CDROM_ROOT}"/Sounds/* ${Ddir}/Sounds/ || die "copy Sounds CD1"
 	else
-		cp -rf ${CDROM_ROOT}/Sounds/*.uax ${Ddir}/Sounds/ || die "copy Sounds CD1"
+		cp -rf "${CDROM_ROOT}"/Sounds/*.uax ${Ddir}/Sounds/ || die "copy Sounds CD1"
 	fi
 
 	# System
 	dodir ${dir}/System
 	if [ `use nls` ] ; then
-		cp ${CDROM_ROOT}/System/*.{est,frt,itt,int,u} ${Ddir}/System/ || die "copy System data CD1"
+		cp "${CDROM_ROOT}"/System/*.{est,frt,itt,int,u} ${Ddir}/System/ || die "copy System data CD1"
 	else
-		cp ${CDROM_ROOT}/System/*.{int,u} ${Ddir}/System/ || die "copy System data CD1"
+		cp "${CDROM_ROOT}"/System/*.{int,u} ${Ddir}/System/ || die "copy System data CD1"
 	fi
 
 	# now we uncompress the maps
@@ -84,8 +84,8 @@ src_install() {
 	cd ${Ddir}
 	export HOME=${T}
 	export UT_DATA_PATH=${Ddir}/System
-	for f in `find ${CDROM_ROOT}/Maps/ -name '*.uz' -printf '%f '` ; do
-		./ucc decompress ${CDROM_ROOT}/Maps/${f} -nohomedir || die "uncompressing map CD1 ${f}"
+	for f in `find "${CDROM_ROOT}"/Maps/ -name '*.uz' -printf '%f '` ; do
+		./ucc decompress "${CDROM_ROOT}"/Maps/${f} -nohomedir || die "uncompressing map CD1 ${f}"
 		mv System/${f:0:${#f}-3} Maps/ || die "copy map CD1 ${f}"
 	done
 	### CD1 ###
@@ -97,17 +97,17 @@ src_install() {
 	###########
 	### CD2 ###
 	# Help, Sounds
-	cp -rf ${CDROM_ROOT}/{Help,Sounds} ${Ddir}/ || die "copy Help, Sounds CD2"
+	cp -rf "${CDROM_ROOT}"/{Help,Sounds} ${Ddir}/ || die "copy Help, Sounds CD2"
 
 	# S3TC Textures
 	if [ `use S3TC` ] ; then
-		cp -rf ${CDROM_ROOT}/Textures ${Ddir}/ || die "copy S3TC Textures CD2"
+		cp -rf "${CDROM_ROOT}"/Textures ${Ddir}/ || die "copy S3TC Textures CD2"
 	else
-		cp -rf ${CDROM_ROOT}/Textures/{JezzTex,Jezztex2,SnowDog,chaostex{,2}}.utx ${Ddir}/Textures/ || die "copy Textures CD2"
+		cp -rf "${CDROM_ROOT}"/Textures/{JezzTex,Jezztex2,SnowDog,chaostex{,2}}.utx ${Ddir}/Textures/ || die "copy Textures CD2"
 	fi
 
 	# System
-	cp -rf ${CDROM_ROOT}/System/*.{u,int} ${Ddir}/System/ || die "copy System CD2"
+	cp -rf "${CDROM_ROOT}"/System/*.{u,int} ${Ddir}/System/ || die "copy System CD2"
 
 	# now we uncompress the maps
 	einfo "Uncompressing CD2 Maps ... this may take some time"
@@ -115,8 +115,8 @@ src_install() {
 	cd ${Ddir}
 	export HOME=${T}
 	export UT_DATA_PATH=${Ddir}/System
-	for f in `find ${CDROM_ROOT}/maps/ -name '*.uz' -printf '%f '` ; do
-		./ucc decompress ${CDROM_ROOT}/maps/${f} -nohomedir || die "uncompressing map CD2 ${f}"
+	for f in `find "${CDROM_ROOT}"/maps/ -name '*.uz' -printf '%f '` ; do
+		./ucc decompress "${CDROM_ROOT}"/maps/${f} -nohomedir || die "uncompressing map CD2 ${f}"
 		mv System/${f:0:${#f}-3} Maps/ || die "copy map CD2 ${f}"
 	done
 	### CD2 ###
