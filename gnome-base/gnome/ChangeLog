@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.142 2005/01/08 23:58:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.143 2005/01/20 10:06:44 obz Exp $
+
+*gnome-2.8.2 (20 Jan 2005)
+
+  20 Jan 2005; Mike Gardiner <obz@gentoo.org> +gnome-2.8.2.ebuild:
+  New meta version - 2.8.2 in ~arch
 
   08 Jan 2005; Tom Martin <slarti@gentoo.org> gnome-2.8.1-r1.ebuild:
   Stable on amd64.

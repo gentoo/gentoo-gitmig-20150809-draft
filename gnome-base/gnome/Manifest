@@ -1,26 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea389cfce11daf9a5f017436583a984b ChangeLog 20607
-MD5 e33bd455e6281ced4e912771bfcdfbcc gnome-2.4.2.ebuild 3760
-MD5 481ad58b5efc4813e61fb48fe01e47bc gnome-2.8.0-r1.ebuild 3641
-MD5 b09ac2c1f9d01f4679ecc08b38d48481 gnome-1.4-r3.ebuild 545
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 bbcad8e9111c379c49493c5de542bb9b gnome-2.8.2_pre0.ebuild 3855
-MD5 d24f162111b009c90e069a2867ef706e gnome-2.8.1-r1.ebuild 3857
-MD5 3351cb877e35db059cee9e728036150f gnome-2.6.ebuild 3765
 MD5 c55062c78cdf2e2072178cbdefafcae5 gnome-2.6.2-r1.ebuild 4220
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6.2-r1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.2_pre0 0
+MD5 481ad58b5efc4813e61fb48fe01e47bc gnome-2.8.0-r1.ebuild 3641
+MD5 bbcad8e9111c379c49493c5de542bb9b gnome-2.8.2_pre0.ebuild 3855
+MD5 3351cb877e35db059cee9e728036150f gnome-2.6.ebuild 3765
+MD5 b09ac2c1f9d01f4679ecc08b38d48481 gnome-1.4-r3.ebuild 545
+MD5 a4ef829ef94c1b4d40cffbd544e7ee7e ChangeLog 20736
+MD5 d24f162111b009c90e069a2867ef706e gnome-2.8.1-r1.ebuild 3857
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 f2f5b5e3264403da965bd12ab7c33bac gnome-2.8.2.ebuild 3847
+MD5 e33bd455e6281ced4e912771bfcdfbcc gnome-2.4.2.ebuild 3760
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.0-r1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-1.4-r3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.1-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.2_pre0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.4.2 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB4HQvCHk4+ZoBpvsRAvNKAJ9P2Pg3ShBQ6PQrntYk9mpDZi3XxQCgmL0a
-OYPdtp+yokAwKBHdF+zuVYw=
-=mBao
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-1.4-r3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6.2-r1 0
