@@ -1,5 +1,5 @@
-MD5 3399ffe2e4deeb4b757bdd0259bb6514 jfbterm-0.3.12.ebuild 1150
-MD5 5fec1a91d6b5f36b81c89fc829ba78aa ChangeLog 425
+MD5 3ac0bf7a8b52e19a4bbe5d35a97567c6 jfbterm-0.3.12.ebuild 1159
+MD5 bcaf26c1c3a508d057d4ca51fd5f2462 ChangeLog 540
 MD5 38d6ce7897140c1258cfeed5ebd30bc2 files/jfbterm.conf.extra 3899
 MD5 e4b59496f2d92bde0401211a5a935c5c files/jfbterm.conf.xfree 3803
 MD5 9e93ac5a5ce5371fe60243ba3278701a files/digest-jfbterm-0.3.12 65
