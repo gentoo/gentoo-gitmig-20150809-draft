@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.12 2004/10/05 10:27:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.13 2004/12/03 22:46:57 slarti Exp $
+
+  03 Dec 2004; Tom Martin <slarti@gentoo.org> xaos-3.1.ebuild:
+  Stable on amd64, resolves bug 72495.
 
   05 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> +files/gcc3.4.patch,
   xaos-3.1.ebuild:
