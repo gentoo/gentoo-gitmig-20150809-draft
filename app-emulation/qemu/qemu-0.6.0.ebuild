@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.5 2004/11/01 18:14:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.6 2004/11/02 09:08:33 lu_zero Exp $
 
 inherit eutils
 
@@ -52,9 +52,9 @@ src_install() {
 		prefix=${D}/usr \
 		bindir=${D}/usr/bin \
 		datadir=${D}/usr/share/qemu \
-		docdir=${D}/usr/share/doc \
+		docdir=${D}/usr/share/doc/${P}-${PR} \
 		mandir=${D}/usr/share/man || die
-	chmod -x ${D}/usr/share/man/*
+	chmod -x ${D}/usr/share/man/*/*
 }
 
 pkg_postinst() {
