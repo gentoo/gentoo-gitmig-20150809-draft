@@ -48,7 +48,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1146 2002/08/01 12:44:00 seemant Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1147 2002/08/01 14:08:32 agenkin Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -911,6 +911,10 @@ app-cdr/cddump
 # http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=49294
 # ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01%3A48.tcpdump.asc
 <net-analyzer/tcpdump-3.6.2-r1
+
+# agenkin@gentoo.org 1 Aug 2002
+# This version breaks pretty-print (see bug #5560).
+app-editors/xemacs-packages-sumo-2002.07.20
 
 # mkennedy@gentoo.org 12 May 2002 
 # will be renames to app-editors/xemacs-gtk (so we'll have xemacs,
