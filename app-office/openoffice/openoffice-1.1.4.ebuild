@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.9 2005/01/17 12:51:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.10 2005/01/17 15:05:25 suka Exp $
 
 # Notes:
 #
@@ -348,6 +348,13 @@ src_compile() {
 
 	cd ${S}
 	get_EnvSet
+
+	# unpack help files if present
+	if [ -f ${DISTDIR}/helpcontent_${LANGNO}_unix.tgz ]; then
+		einfo "Using helpcontent for ${LFULLNAME}"
+		mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/pck
+		tar -xzf ${DISTDIR}/helpcontent_${LANGNO}_unix.tgz -C ${S}/solver/${SOLVER}/${SOLPATH}/pck
+	fi
 
 	# Set $ECPUS to amount of processes multiprocessing build should use.
 	# NOTE:  Setting this too high might cause dmake to segfault!!
