@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.11.1.ebuild,v 1.1 2004/11/17 05:45:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.11.1.ebuild,v 1.2 2004/12/19 06:53:58 eradicator Exp $
 
 IUSE="oggvorbis mp3"
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 #-sparc: 0.10 doesn't browse files properly
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND=">=x11-libs/gtk+-2.4.0-r1
 	>=gnome-base/libglade-2.4.0

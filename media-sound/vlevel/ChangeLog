@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vlevel
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/ChangeLog,v 1.4 2004/10/07 02:33:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/ChangeLog,v 1.5 2004/12/19 06:55:32 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> vlevel-0.5.ebuild:
+  Stable amd64, x86.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> vlevel-0.5.ebuild:
   get_libdir fixes.  Added to ~amd64.

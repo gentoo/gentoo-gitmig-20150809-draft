@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/tagtool
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.9 2004/11/17 05:45:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.10 2004/12/19 06:53:58 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  tagtool-0.11.1.ebuild:
+  Stable amd64, x86.
 
 *tagtool-0.11.1 (16 Nov 2004)
 
