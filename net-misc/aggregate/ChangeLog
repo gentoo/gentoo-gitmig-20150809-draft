@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aggregate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.5 2004/06/24 23:34:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.6 2004/07/20 03:08:48 robbat2 Exp $
+
+  19 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> aggregate-1.6.ebuild:
+  ebuild cleanup.
 
   07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> aggregate-1.6.ebuild:
   Stable on alpha.
