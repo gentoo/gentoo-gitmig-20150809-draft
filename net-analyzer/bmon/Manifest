@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4e494cf2ee47359ea6c7c2e87716fd20 bmon-2.0.1.ebuild 1072
+MD5 8b64c95eb0011915c21066623bd0f856 ChangeLog 1339
 MD5 f0906a046b1f08ff7837cb67aff150ff bmon-1.2.1.ebuild 577
-MD5 aed3f8f48652596ae3f0d27afd665029 ChangeLog 1246
 MD5 5fbd67ef2e49ca1d630675f7c46fae5c metadata.xml 233
+MD5 bedf2e7719959d739a4f2f99098698c4 bmon-2.0.1.ebuild 1072
 MD5 ccdbe348c628eefd2e16b38df6723360 files/digest-bmon-1.2.1 62
 MD5 6755b6df3b2000346e02ae235b497470 files/digest-bmon-2.0.1 125
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCHxn0EZCkKN40op4RAgMEAJ9odvGyGM9tXu+zO86BSgMyU4aGbACeNZt/
-yoJakAo85b54elRTTKcoBr0=
-=I1nF
+iD8DBQFCLJU2KRy60XGEcJIRAqM9AJ9/p1rD2EPdkBpkFFRUen2AsgKnYACgn9tk
+VCaZLm9lVka9hwxWfVxo6SA=
+=Y4Ro
 -----END PGP SIGNATURE-----
