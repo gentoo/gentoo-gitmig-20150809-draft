@@ -1,8 +1,17 @@
-MD5 53f6978b26051cf744bbf60284643324 proj-4.4.7-r1.ebuild 1014
-MD5 a2fe0ceb7d541d1957b40ae1e38d197d proj-4.4.7.ebuild 616
-MD5 c76c70b479ce1e5e49df5d9597ed1d50 ChangeLog 1931
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3737967f4e21916038e2085904fce9ef ChangeLog 2013
 MD5 0673e088d6627cb1d2a6ed2c53f8b491 metadata.xml 426
+MD5 53f6978b26051cf744bbf60284643324 proj-4.4.7-r1.ebuild 1014
 MD5 02e72f9c066ae1ad71bfe767a1df04c8 proj-4.4.8.ebuild 1014
 MD5 ac50ff8c7d1e1aee4f500e2046eb3ac4 files/digest-proj-4.4.7-r1 129
 MD5 a057c46d8075728c0cfd3e97917c633c files/proj-4.4.7-gentoo.patch 914
 MD5 f177b03c8438b1a5e59e70358c91b269 files/digest-proj-4.4.8 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBYxMeI1lqEGTUzyQRArwIAJ9fpYQQY6igK+LtfjmwMwtEPdlezACg1tBW
+UtMUQDLyKbYXRNXOOYCwXM0=
+=Dzxd
+-----END PGP SIGNATURE-----
