@@ -1,6 +1,15 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.90 2004/09/21 00:09:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.91 2004/10/04 11:03:24 cyfred Exp $
+
+*nvidia-kernel-1.0.6111-r2 (04 Oct 2004)
+
+  04 Oct 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  files/1.0.6111/nv-pci_find_class.patch,
+  +files/1.0.6111/nv-remap-range.patch, +files/1.0.6111/vmalloc-reserve.patch,
+  +nvidia-kernel-1.0.6111-r2.ebuild:
+  Multiple patch updates. Namely those for __VMALLOC_RESERVE, pci_get_class()
+  and remap_pfn_range()
 
   21 Sep 2004; Martin Schlemmer <azarah@gentoo.org>
   nvidia-kernel-1.0.6111-r1.ebuild:
