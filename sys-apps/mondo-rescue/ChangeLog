@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/mondo-rescue
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.4 2003/01/14 09:01:46 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.5 2003/01/17 17:06:44 lostlogic Exp $
+
+*mondo-rescue-1.61 (17 Jan 2003)
+
+  17 Jan 2003; Brandon Low <lostlogic@gentoo.org> mondo-rescue-1.61:
+  Bump to latest version, still instable.
+
+  Changes: Various minor bugs were fixed. Mondo is now better at finding
+  and mounting the correct CD-ROM drive when verifying CD-based 
+  archives, in  the event that your PC has more than one CD-ROM drive.
 
 *mondo-rescue-1.60 (14 Jan 2003)
 
