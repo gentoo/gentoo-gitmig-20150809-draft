@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2942 2004/06/17 23:31:02 agriffis Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2943 2004/06/19 13:54:07 method Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <method@gentoo.org> (19 June 2004)
+# number of outstanding security vulnerabilities
+sys-kernel/hardened-sources
 
 # <mr_bones_@gentoo.org> (15 June 2004)
 # http://bugs.gentoo.org/show_bug.cgi?id=54059
