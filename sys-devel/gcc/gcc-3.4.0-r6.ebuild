@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.4 2004/06/02 11:01:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.5 2004/06/02 21:21:02 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc n32 n64"
 
@@ -179,6 +179,12 @@ RDEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 PDEPEND="sys-devel/gcc-config"
+
+has_lib64() {
+	use amd64 && return 0
+	use ppc64 && return 0
+	return 1
+}
 
 chk_gcc_version() {
 	# This next bit is for updating libtool linker scripts ...
@@ -850,7 +856,7 @@ src_install() {
 	exeinto /sbin
 	doexe ${FILESDIR}/fix_libtool_files.sh
 
-	if [ "${ARCH}" = "amd64" ]
+	if has_lib64
 	then
 		# GCC 3.4 tries to place libgcc_s in lib64, where it will never be
 		# found. When multilib is enabled, it also places the 32bit version in
