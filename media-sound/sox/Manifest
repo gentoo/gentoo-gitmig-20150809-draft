@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d1e0a856213de7658588b2b723287e31 ChangeLog 5070
+MD5 6143de81425fa3b93812bacb3ae9e1e3 ChangeLog 5202
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 bed3d88f07d84824e45c7baf1231fc5d sox-12.17.3-r3.ebuild 1042
 MD5 cee6945888ca075bc242cf5d9bc636ff sox-12.17.5-r1.ebuild 2037
 MD5 58d48629a7a079e4b351cf17c1cf7ebf sox-12.17.4-r2.ebuild 1586
 MD5 eb4891dba9f383c5ae21e3813e275490 sox-12.17.6.ebuild 1891
-MD5 2c269b3ad92a2782df989dc8de46537e sox-12.17.6-r1.ebuild 1486
+MD5 20ba512afe489bd181bacabb2554f7e7 sox-12.17.6-r1.ebuild 1520
 MD5 a27f4560530e1dcd5ee4ff1bc4a6f921 files/digest-sox-12.17.3-r3 63
 MD5 55b945c4cad98947d37be88cf3c5ef7e files/sox-soundcard.patch 275
 MD5 64aef0b430e70836aae794f8e91ea8dc files/digest-sox-12.17.4-r2 63
@@ -21,7 +21,7 @@ MD5 a4a1bf246929c73d663a66a97acfd5cc files/sox-12.17.6-destdir.patch 4327
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB1donArHZZzCEUG0RAoxYAJ91dHe/M9IiveX0SUlZ7//Y+hGnTwCghJ/i
-ll5cz0c7mUmwH2/p4WMXbmI=
-=P2yF
+iD8DBQFB1dzGArHZZzCEUG0RAuvZAJ9SOGn7ooLZXRAX39uEMpysUvwLpACffIss
+TIXcayutjdzb1tVQfIdoVeQ=
+=aK2F
 -----END PGP SIGNATURE-----

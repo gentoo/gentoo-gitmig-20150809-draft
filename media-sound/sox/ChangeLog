@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.39 2004/12/31 23:00:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.40 2004/12/31 23:11:54 eradicator Exp $
+
+  31 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  sox-12.17.6-r1.ebuild:
+  Still force oss on as alsa isn't 100% working.
 
 *sox-12.17.6-r1 (31 Dec 2004)
 

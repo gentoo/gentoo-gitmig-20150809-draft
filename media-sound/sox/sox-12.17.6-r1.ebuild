@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.6-r1.ebuild,v 1.1 2004/12/31 23:00:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.6-r1.ebuild,v 1.2 2004/12/31 23:11:54 eradicator Exp $
 
-IUSE="oggvorbis mad encode alsa oss"
+IUSE="oggvorbis mad encode alsa"
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -42,7 +42,8 @@ src_compile () {
 	myconf="${myconf} `use_enable oggvorbis ogg-vorbis`"
 	myconf="${myconf} `use_enable mad`"
 	myconf="${myconf} `use_enable encode lame`"
-	myconf="${myconf} `use_enable oss oss-dsp`"
+#	myconf="${myconf} `use_enable oss oss-dsp`"
+	myconf="${myconf} --enable-oss-dsp"
 	myconf="${myconf} `use_enable alsa alsa-dsp`"
 
 	econf ${myconf} \
