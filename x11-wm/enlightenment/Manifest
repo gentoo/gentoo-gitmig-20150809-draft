@@ -5,7 +5,7 @@ MD5 adbc47609c12a311576647c9c8e0440a ChangeLog 5038
 MD5 3c130b69103b3a2336fc7a652b86339a enlightenment-0.16.5-r4.ebuild 1604
 MD5 4538ee1f0243022e74f0376c56006e3c enlightenment-0.16.6.ebuild 1852
 MD5 7ed1cbab645402fbf7666ed95588542d metadata.xml 1572
-MD5 68a2755a9ca152f239f8c79d527b1940 enlightenment-0.16.9999.ebuild 1879
+MD5 4db087247e1ab99d5c3efc78b6838861 enlightenment-0.16.9999.ebuild 1839
 MD5 27ac078b9f081283b2212bf1b825df7d enlightenment-0.16.7.1.ebuild 1104
 MD5 fbe59612181a2fb8c213b815a2f45ebd files/0.16.6-edox.patch 2775
 MD5 c0e73afcafa0fbb90610eef266a75c82 files/0.16.6-kde-menu.patch 454
@@ -18,7 +18,7 @@ MD5 a14032af79e61036a0a14c903b11b774 files/digest-enlightenment-0.16.7.1 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBP70wHTu7gpaalycRAtPgAJ9WUkwdXtjar3kwgnfDfBZkcb0KZgCfW6lQ
-vTwDFHh5BKqMvDD/+Eulujw=
-=YLA2
+iD8DBQFBhKDaHTu7gpaalycRAiHAAKD41Mi/WIWUF/t3Ut4J4uWuPdVFIQCg2OZ7
+sGJY5SfiCZRQ9+E3su7LJdA=
+=kgyZ
 -----END PGP SIGNATURE-----
