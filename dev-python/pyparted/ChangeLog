@@ -1,0 +1,7 @@
+# ChangeLog for dev-python/pyparted
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.1 2004/04/23 05:44:32 npmccallum Exp $
+
+  23 Apr 2004; Nathaniel McCallum <npmccallum@gentoo.org> :
+  new ebuild
+
