@@ -2,7 +2,7 @@ MD5 4d583085233e6f72382afa58085224a7 ChangeLog 1519
 MD5 daa5b5804d181bac157ac3a6939bb152 metadata.xml 221
 MD5 45840f8744af894231eb1a9748da43e1 meanwhile-0.3-r3.ebuild 753
 MD5 4f847ea02787e364d93d1ea4b6f4db81 meanwhile-0.3-r2.ebuild 593
-MD5 889150e2ed125cda81d23e924f2b6f19 meanwhile-0.4.0.ebuild 670
+MD5 9eac0dadebfe492990bf3e1349d28359 meanwhile-0.4.0.ebuild 558
 MD5 1e608d7c9f446aca8fec518e6e09c98c files/digest-meanwhile-0.3-r2 65
 MD5 54a68b70aac85bd876ebba642621ea12 files/mw_debug_glib.diff 388
 MD5 1e608d7c9f446aca8fec518e6e09c98c files/digest-meanwhile-0.3-r3 65
