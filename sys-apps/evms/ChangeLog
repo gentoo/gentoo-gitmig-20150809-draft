@@ -1,12 +1,11 @@
 # ChangeLog for sys-apps/evms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.11 2002/11/09 08:14:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.12 2002/12/27 07:37:21 sethbc Exp $
 
-*evms-1.2.0-r1 (10 Nov 2002)
+*evms-1.2.1 (27 Dec 2002)
 
-  09 Nov 2002; Martin Schlemmer <azarah@gentoo.org>: Update to generate
-  ldscripts for dynamic libs in /lib in /usr/lib.  This is part of fixes
-  for bug #4411.
+  27 Dec 2002; Seth Chandler <sethbc@gentoo.org>: added evms 1.2.1 to 
+  portage ~masked
 
 *evms-1.2.0 (02 Oct 2002)
 
