@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.5 2004/08/14 21:55:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.6 2004/08/20 23:27:44 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -819,7 +819,7 @@ setup_config_files() {
 			if [ "${FILE}" = "/etc/X11/xorg.conf" ]
 			then
 				# "keyboard" driver is deprecated and will be removed, switch to "kbd"
-				sed -i "s:^.*Driver.*\"keyboard\".*$:^.*Driver.*\"kbd\":g" \
+				sed -i 's~^\([ \t]*Driver[ \t]\+\)"keyboard"~\1"kbd"~' \
 					${T}${FILE}
 				# Work around upgrade problem where people have
 				# Option "XkbRules" "xfree86" in their config file
