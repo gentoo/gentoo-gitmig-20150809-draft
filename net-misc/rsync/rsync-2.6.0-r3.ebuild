@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r2.ebuild,v 1.12 2004/08/14 15:32:34 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r3.ebuild,v 1.1 2004/08/14 15:32:34 squinky86 Exp $
 
 inherit eutils flag-o-matic gcc gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="http://rsync.samba.org/ftp/rsync/old-versions/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="build static acl"
 
 RDEPEND="virtual/libc
@@ -37,6 +37,9 @@ src_unpack() {
 	sed -i \
 		-e 's|/etc/rsyncd|/etc/rsync/rsyncd|g' rsyncd.conf.5 \
 			|| die "sed rsyncd.conf.5 failed"
+
+	# apply security patch from bug #60309
+	epatch ${FILESDIR}/${PN}-pathsanitize.patch
 
 	gnuconfig_update
 }
