@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/pycurl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pycurl/ChangeLog,v 1.4 2003/02/12 07:59:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pycurl/ChangeLog,v 1.5 2003/02/28 23:09:42 liquidx Exp $
+
+*pycurl-7.10.3 (28 Feb 2003)
+
+  28 Feb 2003; Alastair Tse <liquidx@gentoo.org> pycurl-7.10.3.ebuild files/digest-pycurl-7.10.3 :
+  Version Bump. Fixes #11932.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
