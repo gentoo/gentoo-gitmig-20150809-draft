@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+	<email>swtaylor@gentoo.org</email>
+	<name>Scott W. Taylor</name>
+	<description>Primary maintainer</description>
+</maintainer>
+<longdescription>
+Utility to extract thumbnails and information from Canon raw (CRW) files.
+</longdescription>
+</pkgmetadata>
