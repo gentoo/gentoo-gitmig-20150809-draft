@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.1 2004/07/30 12:45:34 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.2 2004/07/30 13:41:19 sejo Exp $
 
 inherit eutils java-utils
 
@@ -230,7 +230,13 @@ src_compile() {
 	addwrite "/proc/cpuinfo"
 
 	# Figure out correct boot classpath
-	ant_extra_opts="-Dbootclasspath=$(java-config --classpath)"
+	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then
+		# IBM JRE
+		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/core.jar:$(java-config --jdk-home)/jre/lib/xml.jar"
+	else
+		# Sun derived JREs (Blackdown, Sun)
+		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/rt.jar"
+	fi
 
 	# karltk: jikes doesn't work as a compiler for Eclipse currently.
 #	if use jikes ; then
