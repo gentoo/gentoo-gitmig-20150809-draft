@@ -21,8 +21,6 @@ DEPEND=">=sys-devel/gcc-2.95.2  sys-devel/perl
 	>=dev-libs/libpcre-3.4
 	>=gnome-libs/libxml2-2.4.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	mysql? ( >=dev-db/mysql-3.23.30 )
-	postgres? ( >=dev-db/postgresql-7.0.3 )
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	cups? ( net-print/cups )
 	sys-devel/autoconf"
@@ -56,16 +54,6 @@ src_compile() {
       myopts="--with-ssl-dir=/usr"
     else
       myopts="--without-ssl"
-    fi
-    if [ "`use mysql`" ] ; then
-      myopts="$myopts --enable-mysql "
-    else
-      myopts="$myopts --disable-mysql"
-    fi
-    if [ "`use postgres`" ] ; then
-      myopts="$myopts --enable-pgsql"
-    else
-      myopts="$myopts --disable-pgsql"
     fi
     if [ "`use alsa`" ] ; then
       myopts="$myopts --with-alsa"
