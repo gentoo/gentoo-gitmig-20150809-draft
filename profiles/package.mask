@@ -66,6 +66,10 @@ dev-perl/perl-ldap
 # Needed for lolo-sources-2.4.19.10*
 =sys-apps/jfsutils-1.0.22
 
+# <bcowan@gentoo.org> (27 Sep 2002)
+# new version of jfsutils not linked to any gentoo sources
+=sys-apps/jfsutils-1.0.23
+
 # <agenkin@gentoo.org> (21 Sep 2002)
 # Masking pending unfreeze.
 >=media-video/ogle-0.8.5
