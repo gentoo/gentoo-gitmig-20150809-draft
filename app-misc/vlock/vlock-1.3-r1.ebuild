@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/vlock-1.3-r1.ebuild,v 1.10 2003/09/19 01:25:01 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/vlock-1.3-r1.ebuild,v 1.11 2003/11/14 15:45:47 brad_mssw Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A console screen locker"
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.ibiblio.org/pub/Linux/utils/console/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha ia64"
+KEYWORDS="x86 ppc alpha ia64 amd64"
 
 DEPEND="virtual/glibc"
 
