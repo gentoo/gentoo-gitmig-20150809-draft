@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.24 2004/04/19 19:10:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.25 2004/06/06 22:01:50 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -108,7 +108,7 @@ src_compile() {
 	cd ${WORKDIR}/${P}
 
 	# Build correctly for mips, mips64, & mipsel
-	if [ "`use mips`" ]; then
+	if use mips; then
 		if [ "`echo ${CHOST} | grep "mipsel"`" ]; then
 			mipsarch="linux-mipsel"
 		else
@@ -132,7 +132,7 @@ src_compile() {
 
 	einfo "Compiling ${P}"
 	make all || die
-	if [ "`use !ppc64`" ]; then
+	if ! use ppc64; then
 		make test || die
 	fi
 
@@ -145,7 +145,7 @@ src_compile() {
 			SSH_TARGET="linux-sparcv8"
 		elif [ "`uname -m`" = "parisc" -o "`uname -m`" = "parisc64" ]; then
 			SSH_TARGET="linux-parisc"
-		elif [ "`use mips`" ]; then
+		elif use mips; then
 			if [ "`echo ${CHOST} | grep "mipsel"`" ]; then
 				SSH_TARGET="linux-mipsel"
 			else
