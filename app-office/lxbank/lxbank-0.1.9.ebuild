@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/lxbank-0.1.9.ebuild,v 1.3 2004/06/24 22:42:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/lxbank-0.1.9.ebuild,v 1.4 2004/06/27 07:40:57 hanno Exp $
 
 DESCRIPTION="Graphical HBCI online banking tool"
 HOMEPAGE="http://lxbank.sourceforge.net/"
@@ -13,6 +13,11 @@ DEPEND=">=net-libs/openhbci-0.9.11
 	>=x11-libs/qt-3.0.5
 	>=sys-libs/libchipcard-0.9
 	app-misc/ktoblzcheck"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/lxbank_gcc34.gz
+}
 
 src_compile() {
 	econf --with-qt-includes=/usr/qt/3/include/ || die

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lxbank
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/ChangeLog,v 1.7 2004/06/24 22:42:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/ChangeLog,v 1.8 2004/06/27 07:40:57 hanno Exp $
+
+  27 Jun 2004; Hanno Boeck <hanno@gentoo.org> +files/lxbank_gcc34.gz,
+  lxbank-0.1.9.ebuild:
+  Fix for gcc 3.4.
 
   11 Mar 2004; Hanno Boeck <hanno@gentoo.org> lxbank-0.1.9.ebuild:
   Marked stable on x86.
