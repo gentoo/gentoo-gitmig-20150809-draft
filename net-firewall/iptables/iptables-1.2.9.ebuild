@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.16 2004/08/19 21:59:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.17 2004/08/23 07:49:40 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -89,6 +89,6 @@ pkg_postinst() {
 	einfo "If you are using the iptables initsscript you should save your"
 	einfo "rules using the new iptables version before rebooting."
 	einfo ""
-	einfo "If you are uprading to a >=2.4.21 kernel you may need to rebuild"
+	einfo "If you are upgrading to a >=2.4.21 kernel you may need to rebuild"
 	einfo "iptables."
 }

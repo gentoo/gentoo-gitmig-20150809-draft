@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.8 2004/08/22 21:06:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.9 2004/08/23 07:49:40 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -162,7 +162,7 @@ pkg_postinst() {
 	einfo "If you are using the iptables initsscript you should save your"
 	einfo "rules using the new iptables version before rebooting."
 	einfo ""
-	einfo "If you are uprading to a >=2.4.21 kernel you may need to rebuild"
+	einfo "If you are upgrading to a >=2.4.21 kernel you may need to rebuild"
 	einfo "iptables."
 	einfo ""
 	ewarn "!!! ipforwarding is now not a part of the iptables initscripts."
