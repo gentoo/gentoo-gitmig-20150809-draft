@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9003.481.ebuild,v 1.3 2003/05/06 08:39:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9003.481.ebuild,v 1.4 2003/05/29 20:46:33 taviso Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -10,10 +10,11 @@ HOMEPAGE="http://www.distributed.net"
 SRC_URI="ppc? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-ppc.tar.gz )
 	arm? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-arm-elf.tar.gz )
 	x86? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-x86-elf.tar.gz )
-	sparc? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-sparc.tar.gz )"
+	sparc? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-sparc.tar.gz )
+	alpha? ( ftp://ftp.distributed.net/pub/dcti/prerelease/rc/dnetc${MIN_PV}-linux-alpha5-static.tar.gz )"
 LICENSE="distributed.net"
 SLOT="0"
-KEYWORDS="x86 ppc ~arm ~sparc -alpha"
+KEYWORDS="x86 ppc ~arm ~sparc ~alpha"
 IUSE=""
 DEPEND=""
 RDEPEND="net-misc/host"
@@ -25,6 +26,8 @@ elif [ `use sparc` ]; then
 	S="${WORKDIR}/dnetc${MIN_PV}-linux-sparc"
 elif [ `use arm` ]; then
 	S="${WORKDIR}/dnetc${MIN_PV}-linux-arm-elf"
+elif [ `use alpha` ]; then 
+	S="${WORKDIR}/dnetc${MIN_PV}-linux-alpha5-static"
 fi
 
 RESTRICT="nomirror"
