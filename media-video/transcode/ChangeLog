@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.45 2003/07/22 13:07:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.46 2003/08/04 21:33:17 mholzer Exp $
+
+  05 Aug 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.ebuild,
+  transcode-0.6.6.ebuild, transcode-0.6.7.ebuild, transcode-0.6.8.ebuild:
+  Changed quicktime to virtual/quicktime
 
   22 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> transcode-*.ebuild :
   Changed flags alteration.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.6.ebuild,v 1.3 2003/07/22 13:07:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.6.ebuild,v 1.4 2003/08/04 21:33:17 mholzer Exp $
 
 inherit libtool flag-o-matic
 
@@ -35,7 +35,7 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.89 )
 	sdl? ( media-libs/libsdl )
-	quicktime? ( media-libs/quicktime4linux media-libs/openquicktime )"
+	quicktime? ( virtual/quicktime media-libs/openquicktime )"
 
 src_unpack() {
 	unpack ${A}
