@@ -1,0 +1,12 @@
+virtual/kde-i18n	 	kde-base/kde-i18n
+virtual/lpr			net-print/LPRng
+virtual/python			dev-lang/python
+virtual/x11-web-browser		net-www/netscape
+virtual/mta			net-mail/exim
+virtual/alsa			sys-kernel/linux
+virtual/bash			sys-apps/bash
+virtual/kernel			sys-kernel/linux
+virtual/flex			sys-devel/flex
+virtual/bison			sys-devel/bison
+virtual/glibc 			sys-libs/glibc
+
