@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-1.4.3-r1.ebuild,v 1.1 2004/11/23 02:47:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/lsh-1.4.3-r1.ebuild,v 1.2 2005/01/07 06:04:33 vapier Exp $
 
 inherit eutils
 
@@ -29,7 +29,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc34.patch
 	epatch ${FILESDIR}/${PV}-configure.patch
-	autoconf || die
 }
 
 src_compile() {
