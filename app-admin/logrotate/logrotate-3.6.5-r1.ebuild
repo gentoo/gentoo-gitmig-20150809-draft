@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.1 2003/05/14 03:31:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.2 2003/05/14 08:28:07 msterret Exp $
 
 IUSE="selinux"
 
@@ -36,7 +36,7 @@ src_install() {
 	doman logrotate.8
 	dodoc examples/logrotate*
 
-	exeinto /etc
+	exeinto /etc/cron.daily
 	doexe ${FILESDIR}/logrotate.cron
 
 	insinto /etc
