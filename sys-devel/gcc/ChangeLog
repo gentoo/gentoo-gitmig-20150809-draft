@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.153 2003/12/08 22:32:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.154 2003/12/11 14:58:49 gmsoft Exp $
 
   30 Nov 2003; Alexander Gabert <pappy@gentoo.org> gcc-3.2.3-r3.ebuild,
   gcc-3.3.2-r3.ebuild:
@@ -15,6 +15,10 @@
   added logic for false positives hitting gcc library with guard in it
 
 *gcc-3.2.3-r3 (27 Nov 2003)
+
+  10 Dec 2003; Guy Martin <gmsoft@gentoo.org> gcc-3.3.2-r3.ebuild,
+  gcc-3.3.2.ebuild :
+  Fixed little type unkown -> unknown.
 
   08 Dec 2003; Guy Martin <gmsoft@gentoo.org> gcc-3.3.2-r3.ebuild,
   gcc-3.3.2.ebuild :
