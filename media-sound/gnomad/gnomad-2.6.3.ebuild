@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.6.3.ebuild,v 1.1 2005/02/11 00:31:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.6.3.ebuild,v 1.2 2005/02/11 23:20:09 mr_bones_ Exp $
 
 IUSE=""
 
@@ -31,7 +31,7 @@ DEPEND=">=dev-libs/glib-2.6.0
 RDEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.21"
-	
+
 src_compile() {
 	replace-flags -O3 -O2
 	gnome2_src_compile
