@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0ccc1c3ba39f5d51cd1382c0a24d8c6f mythtv-0.17.ebuild 5937
+MD5 80da9cab7cfe1e4208f77373596672a5 mythtv-0.17.ebuild 6020
 MD5 f5e313e37938a6988e60395716056801 mythtv-0.16.ebuild 5794
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 328db34683c99e4c1e73a792c524e938 ChangeLog 8794
@@ -14,7 +14,7 @@ MD5 8d46f5508de5d412db9e4a757db00e26 files/mythtv-0.16-cx88.patch 674
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCDNh+5+pdB4IBr0URApoVAKCmNfnKqMCu0fX+ilXvOfTXVGGy1wCfWTS1
-f9NDu+aZx9yM2PEV9yeufag=
-=nXAP
+iD8DBQFCDNyG5+pdB4IBr0URAnRUAKCARfvX0mM+k2VthyeWnKIUmyAD4gCeMZti
+TZrh4pJqy5aGLBbRai++yGM=
+=uPxX
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17.ebuild,v 1.2 2005/02/11 16:08:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17.ebuild,v 1.3 2005/02/11 16:25:31 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
@@ -44,8 +44,8 @@ pkg_setup() {
 
 setup_pro() {
 	if [ "${ARCH}" == "amd64" ] || ! use mmx; then
-		sed -i settings.pro \
-			-e "s:DEFINES += MMX:DEFINES -= MMX:"
+		sed -e "s:DEFINES += MMX:DEFINES -= MMX:" \
+			-i 'settings.pro' || "Removal of MMX failed"
 	fi
 
 	if ! use xv ; then
@@ -140,7 +140,7 @@ src_unpack() {
 	# fix bug 67832, fix can be removed for 0.17 when its released
 	is-flag "-march=pentium4" && replace-flags "-O3" "-O2"
 
-	myth_src_unpack
+	myth_src_unpack || die "unpack failed"
 }
 
 src_compile() {
@@ -158,12 +158,12 @@ src_compile() {
 	emake -C libs/libmythmpeg2 || die
 	emake -C libs/libmyth || die
 	emake -C libs/libmythtv || die
-	emake -C libs
+	emake -C libs || die
 	emake || die
 }
 
 src_install() {
-	myth_src_install
+	myth_src_install || die "install failed"
 	newbin "setup/setup" "mythsetup"
 
 	dodir /etc/mythtv
