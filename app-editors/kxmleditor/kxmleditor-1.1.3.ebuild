@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/kxmleditor-1.1.3.ebuild,v 1.4 2004/10/21 21:38:43 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/kxmleditor-1.1.3.ebuild,v 1.5 2004/12/07 20:18:28 carlo Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="KDE XML Editor to display and edit contents of XML files"
 HOMEPAGE="http://kxmleditor.sourceforge.net"
