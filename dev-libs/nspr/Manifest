@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a3674d97865c527479a79332113c1772 ChangeLog 3408
 MD5 cee0bd3a864ab0f7c990d3d51b5d45db nspr-4.1.2.ebuild 1160
 MD5 0598e8cd704060328f76cf8744c302ef nspr-4.3.ebuild 1011
 MD5 0d6964f5c129a3c22f8dabc6c7088a68 nspr-4.4.1.ebuild 1142
-MD5 d23d7db0f66b1fc2eaf606d1e7cfabdb nspr-4.4.1-r2.ebuild 1807
+MD5 3f4f23fbc4579299d410eab752c9095e nspr-4.4.1-r2.ebuild 1811
 MD5 10437559f8044e78299742d18180760e files/digest-nspr-4.1.2 63
 MD5 6cbbac8e2a77405ce2ab861405896548 files/digest-nspr-4.3 61
 MD5 0a10b7414a160ead09dbd743e3128364 files/digest-nspr-4.4.1 63
 MD5 b12990968c289b9e7f8fbb2174ec827c files/nspr-4.3-amd64.patch 7713
 MD5 1a031c0f4c5de0e38a0df0b5308c3453 files/nspr-4.4.1-hppa.patch 4046
 MD5 0a10b7414a160ead09dbd743e3128364 files/digest-nspr-4.4.1-r2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBveAERkyva5PS18kRAnFrAJ9/I/YRDBpQjteViRmbHwoOgZowJACeMwTo
+Xx0buru1dabqBf/kBd+hhHk=
+=hhGV
+-----END PGP SIGNATURE-----
