@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/realpath
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.7 2004/10/05 02:58:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.8 2004/11/15 19:37:27 corsair Exp $
+
+  15 Nov 2004; Markus Rothe <corsair@gentoo.org> realpath-1.9.10.ebuild:
+  Marked ~ppc64; bug #71163
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   realpath-1.9.10.ebuild, realpath-1.9.3.ebuild:
