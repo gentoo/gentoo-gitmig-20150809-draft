@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.1.ebuild,v 1.4 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.1.ebuild,v 1.5 2003/06/22 04:57:28 seemant Exp $
 
 IUSE="ncurses"
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 
-DEPEND="sys-kernel/rsbac-sources
+DEPEND="
 	dev-util/dialog"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
