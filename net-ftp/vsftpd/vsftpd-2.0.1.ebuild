@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.1.ebuild,v 1.4 2004/09/24 23:32:59 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.1.ebuild,v 1.5 2005/01/17 16:03:04 jforman Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,15 +25,14 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.0.1-gentoo.diff || die
 	use tcpd && echo '#define VSF_BUILD_TCPWRAPPERS' >> builddefs.h
 	use ssl && echo '#define VSF_BUILD_SSL' >> builddefs.h
+	if ! use pam; then
+		echo '#undef VSF_BUILD_PAM' >> builddefs.h
+	fi
+
 }
 
 src_compile() {
-	if use pam; then
-		emake CFLAGS="${CFLAGS} -DUSE_PAM" || die
-	else
-		emake CFLAGS="${CFLAGS}" \
-		LIBS='`./vsf_findlibs.sh | sed "/[/-]\<.*pam.*\>/d"`' || die
-	fi
+	echo "PAM support is DISABLED"
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.46 2004/12/29 03:10:56 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.47 2005/01/17 16:03:03 jforman Exp $
+
+  17 Jan 2005; Jeffrey Forman <jforman@gentoo.org> vsftpd-2.0.1.ebuild:
+  Add support to build vsftpd without pam, bug 65981, thanks Rob!
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
