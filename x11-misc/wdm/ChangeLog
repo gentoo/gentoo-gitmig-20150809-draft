@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wdm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.8 2004/06/24 22:36:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.9 2004/08/17 19:40:58 agriffis Exp $
+
+  17 Aug 2004; Aron Griffis <agriffis@gentoo.org> wdm-1.26.ebuild:
+  add ~alpha #60071
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> wdm-1.26.ebuild:
   Marked stable.

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imwheel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/ChangeLog,v 1.10 2004/06/28 19:56:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/ChangeLog,v 1.11 2004/08/17 19:40:20 agriffis Exp $
+
+  17 Aug 2004; Aron Griffis <agriffis@gentoo.org> imwheel-1.0.0_pre11.ebuild:
+  add ~alpha #60071
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> imwheel-1.0.0_pre11.ebuild:
   add sed-4 dep
