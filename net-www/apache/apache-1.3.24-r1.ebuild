@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r1.ebuild,v 1.2 2002/04/10 17:04:09 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24-r1.ebuild,v 1.3 2002/04/26 16:09:10 woodchip Exp $
 
 mod_ssl_ver=2.8.8-${PV}
 HARD_SERVER_LIMIT=512
@@ -23,13 +23,13 @@ RDEPEND="virtual/glibc
 DEPEND="${RDEPEND} sys-devel/perl"
 
 pkg_setup() {
-	# might want to add these into baselayout eventually..
+	# these are in baselayout now; it will not hurt to leave them here though..
 	if ! grep -q ^apache: /etc/group ; then
-		groupadd apache || die "problem adding group apache"
+		groupadd -g 81 apache || die "problem adding group apache"
 	fi
 
 	if ! grep -q ^apache: /etc/passwd ; then
-		useradd -g apache -s /bin/false -d /home/httpd -c "apache" apache
+		useradd -u 81 -g apache -s /bin/false -d /home/httpd -c "apache" apache
 		assert "problem adding user apache"
 	fi
 
