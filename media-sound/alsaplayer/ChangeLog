@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.30 2005/03/06 02:00:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.31 2005/03/12 15:00:11 luckyduck Exp $
+
+*alsaplayer-0.99.76-r1 (12 Mar 2005)
+
+  12 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +alsaplayer-0.99.76-r1.ebuild:
+  applied a cleanup patch which was suggested by Diego Pettenò
+  <dgp85@users.sourceforge.net>. Fixes #82744
 
   06 Mar 2005; Joseph Jezak <josejx@gentoo.org>
   +files/alsaplayer-endian.patch, alsaplayer-0.99.76.ebuild:

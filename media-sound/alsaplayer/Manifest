@@ -1,8 +1,20 @@
-MD5 ae4836d1ccf5dd6edd99722a2aa5b717 ChangeLog 5185
-MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c8a8374f76b1e15270d8e67ca4bbbd5d alsaplayer-0.99.76-r1.ebuild 1993
 MD5 d41e2deaa8aef46712f1ede969a217d4 alsaplayer-0.99.75-r1.ebuild 2285
+MD5 fecbec475efa4c387b612ac2a311e2b1 ChangeLog 5422
+MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
 MD5 c5f31cdad93bab7eef654e895149a993 alsaplayer-0.99.76.ebuild 1587
-MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76 71
 MD5 4d1180a1109044fb119335839a357f95 files/alsaplayer-endian.patch 1143
-MD5 5c35a3140250067b9e24fea110bde6c4 files/gcc.patch 805
 MD5 d7c5048a47693b7a9ba603a3fadd8cd1 files/digest-alsaplayer-0.99.75-r1 71
+MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76-r1 71
+MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76 71
+MD5 5c35a3140250067b9e24fea110bde6c4 files/gcc.patch 805
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMwQI06ebR+OMO78RAqUQAKCMlXIdKLlKFWSP8v1fxFCrOTMofACfVqrh
+6gYtwCl9YbMddE29QPXru7o=
+=fIIn
+-----END PGP SIGNATURE-----
