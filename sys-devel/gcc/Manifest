@@ -20,7 +20,7 @@ MD5 bdaadd8732e58e8c60242fcddc6cfaa5 gcc-3.3.ebuild 16663
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 2fe002966aa18fc1abe6f3ad08f643dd gcc-3.3.2-r5.ebuild 21463
 MD5 9fb6a5505f97c736a3f40f84ea9c71da gcc-3.3.2-r6.ebuild 21217
-MD5 f2080fddad1b2c6d25a7d8341718cd83 gcc-3.2.3-r4.ebuild 20072
+MD5 266937f2b252a7eb23365c4ab57b8784 gcc-3.2.3-r4.ebuild 19686
 MD5 1aabd842d43a507ea8d2e988f6f88707 gcc-3.3.2-r7.ebuild 21865
 MD5 a6dd62d4bac8bd5630f21e56dbe5919c gcc-3.3.3_pre20040130.ebuild 21520
 MD5 6f4b970b6e64b99a49d7c2ac35817d38 gcc-3.3.3.ebuild 22398
@@ -71,26 +71,6 @@ MD5 33df162e1767e168f4f39442785071af files/3.0/texinfo-4.0-no-ncurses-gentoo.dif
 MD5 9c13e6b0d5770979430b76c578afa22c files/3.0/gcc3-program-transform.patch 9771
 MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
 MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
-MD5 aa7a1e8bbe618c0d88368e69caeb7653 files/3.1/gcc31-attr-visibility.patch.bz2 3671
-MD5 8b4c6af1c730dcdd843a77e8095d312b files/3.1/gcc31-attr-visibility2.patch.bz2 2341
-MD5 98f539e65ab7e21994e5d378537a5506 files/3.1/gcc31-boehm-gc-libs.patch.bz2 1921
-MD5 9495fab2aa4388693856b2c52f5ac363 files/3.1/gcc31-c++-diagnostic-no-line-wrapping.patch.bz2 562
-MD5 ea61b0ff2db11805fb0778c63b51f43b files/3.1/gcc31-c++-null-pm-init.patch.bz2 4434
-MD5 24642b902b9937cdebeb14063859135f files/3.1/gcc31-c++-tsubst-asm.patch.bz2 703
-MD5 f7274feec78a2dc4ce9233880804ed0f files/3.1/gcc31-dwarf2-pr6381.patch.bz2 1059
-MD5 87f7be372b23072220fbceed8a127474 files/3.1/gcc31-dwarf2-pr6436-test.patch.bz2 336
-MD5 9ea8c34a980997a0d89744cb2ddf941a files/3.1/gcc31-fdata-sections.patch.bz2 2676
-MD5 d3250673494682fa71cb3760e6de257b files/3.1/gcc31-fde-merge-compat.patch.bz2 634
-MD5 a235188ad8a8ac2bb3dc8fcd51603225 files/3.1/gcc31-fold-const.patch.bz2 1867
-MD5 637b53059fa127746952cbffe1e8d403 files/3.1/gcc31-fold-const2.patch.bz2 368
-MD5 734e98009983615eff4814f671d83679 files/3.1/gcc31-i386-expand-clrstr.patch.bz2 527
-MD5 2aadf0591cbf8a4e04235f5fb415f974 files/3.1/gcc31-i386-malign-double-doc.patch.bz2 526
-MD5 f3818c997439d173ac11322c08f2f2c8 files/3.1/gcc31-libstdc++-pr6594.patch.bz2 635
-MD5 981171de6a3f8d53741f77c12c221469 files/3.1/gcc31-libstdc++-pr6648.patch.bz2 770
-MD5 2f1d2c02b99aa182f1fd9b6328c8b77a files/3.1/gcc31-libstdc++-setrlim.patch.bz2 584
-MD5 df404bbcc95193a2591895758915e74e files/3.1/gcc31-pr6643.patch.bz2 421
-MD5 386ffd7fc3ca4a8af55155fe57871dc4 files/3.1/gcc31-test-rotate.patch.bz2 1060
-MD5 7f4bc242692c8e5a2ea0e3e865433d94 files/3.1/gcc31-trunc_int_for_mode.patch.bz2 826
 MD5 2b3b3b8637dc17eedce3b1ca1b68f1f1 files/3.2/gcc-3.2-glibc-2.3-compat.diff 5511
 MD5 a97a78f90c372855823b9facf1ba57b6 files/3.2/gcc-3.2.ctype.patch 3500
 MD5 7f884a426afe182c10d2a5fad94c73cc files/3.2/gcc-3.2.fix-copy.patch 2185
@@ -157,7 +137,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/reiser4-why-do-you-hate-me.patc
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFAxQFoHTu7gpaalycRAqWtAKC7YnGiVjaqUJiaTc4H6DljmmWlrACcDUmJ
-yziUbR8+/7jSfk6Go9CFqZs=
-=2MeR
+iD8DBQFAxRYlHTu7gpaalycRAuj+AKDaQjIwTa5060oxhIlayeKSCPGFigCgjuVd
+IqhdlSaA3jn/n5Xl1yPcJYY=
+=tl42
 -----END PGP SIGNATURE-----

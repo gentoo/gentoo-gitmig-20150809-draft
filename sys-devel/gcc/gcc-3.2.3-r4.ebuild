@@ -1,14 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.7 2004/05/27 06:12:08 vapier Exp $
-
-IUSE="static nls bootstrap java build"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.8 2004/06/08 01:26:53 vapier Exp $
 
 inherit eutils flag-o-matic libtool
-
-# Compile problems with these (bug #6641 among others)...
-# We don't need these since we strip-flags below -- Joshua
-#filter-flags "-fno-exceptions -fomit-frame-pointer"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -30,7 +24,13 @@ inherit eutils flag-o-matic libtool
 # problems.
 #
 # <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
+do_filter_flags() {
+	strip-flags
+
+	# In general gcc does not like optimization, and add -O2 where
+	# it is safe.
+	filter-flags -O?
+}
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -93,11 +93,11 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-
 # this is a glibc-propolice forced bump to a gcc without guard 
 # when no binary on the system has references to guard@@libgcc
 # hppa has no dependency on propolice for gcc - skip this arch
 KEYWORDS="x86 ppc sparc mips alpha -hppa ia64 s390"
+IUSE="static nls bootstrap java build"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -329,29 +329,25 @@ src_compile() {
 	local myconf=""
 	local gcc_lang=""
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		myconf="${myconf} --enable-shared"
 		gcc_lang="c,c++,f77,objc"
 	else
 		gcc_lang="c"
 	fi
-	if [ -z "`use nls`" ] || [ "`use build`" ]
+	if ! use nls || use build
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
-	if [ -n "`use java`" ] && [ -z "`use build`" ]
+	if use java && ! use build
 	then
 		gcc_lang="${gcc_lang},java"
 	fi
 
-	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.
-	# These aren't needed since we strip-flags above -- Joshua
-	#export CFLAGS="${CFLAGS//-O?}"
-	#export CXXFLAGS="${CXXFLAGS//-O?}"
+	do_filter_flags
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
@@ -395,7 +391,7 @@ src_compile() {
 	einfo "Building GCC..."
 	# Only build it static if we are just building the C frontend, else
 	# a lot of things break because there are not libstdc++.so ....
-	if [ -n "`use static`" -a "${gcc_lang}" = "c" ]
+	if use static && [ "${gcc_lang}" = "c" ]
 	then
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
@@ -470,7 +466,7 @@ src_install() {
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${D}${LIBPATH}
 
@@ -535,11 +531,11 @@ src_install() {
 	fi
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		docinto /${CCHOST}
-		dodoc COPYING COPYING.LIB ChangeLog FAQ GNATS MAINTAINERS README
+		dodoc ChangeLog FAQ GNATS MAINTAINERS README
 		docinto ${CCHOST}/html
 		dohtml *.html
 		cd ${S}/boehm-gc
@@ -555,10 +551,10 @@ src_install() {
 		dodoc ChangeLog README TODO *.netlib
 		cd ${S}/libffi
 		docinto ${CCHOST}/libffi
-		dodoc ChangeLog* LICENSE README
+		dodoc ChangeLog* README
 		cd ${S}/libiberty
 		docinto ${CCHOST}/libiberty
-		dodoc ChangeLog COPYING.LIB README
+		dodoc ChangeLog README
 		cd ${S}/libobjc
 		docinto ${CCHOST}/libobjc
 		dodoc ChangeLog README* THREADS*
@@ -570,14 +566,14 @@ src_install() {
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
 
-		if [ -n "`use java`" ]
+		if use java
 		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar
-			dodoc AUTHORS CHANGES COPYING ChangeLog NEWS README
+			dodoc AUTHORS CHANGES ChangeLog NEWS README
 			cd ${S}/libjava
 			docinto ${CCHOST}/libjava
-			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
+			dodoc ChangeLog* HACKING LIBGCJ_LICENSE NEWS README THANKS
 		fi
 
 		prepman ${DATAPATH}
@@ -599,7 +595,6 @@ src_install() {
 }
 
 pkg_preinst() {
-
 	if [ ! -f "${WORKDIR}/.chkgccversion" ]
 	then
 		chk_gcc_version
@@ -612,7 +607,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
 	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 
 	if [ "${ROOT}" = "/" -a "${COMPILER}" = "gcc3" -a "${CHOST}" = "${CCHOST}" ]
@@ -653,4 +647,3 @@ pkg_postinst() {
 		[ "${ROOT}" = "/" ] && hardened-gcc -A
 	fi
 }
-
