@@ -1,9 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/files/rskkserv.initd,v 1.1 2003/09/20 08:48:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/files/rskkserv.initd,v 1.2 2004/04/03 23:42:57 usata Exp $
 
 opts="${opts} reload"
+
+depend() {
+	need net
+}
 
 start() {
 	ebegin "Starting rskkserv"
