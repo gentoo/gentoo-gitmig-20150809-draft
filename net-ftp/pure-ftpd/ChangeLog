@@ -1,12 +1,13 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.23 2004/04/07 03:45:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.24 2004/04/07 03:54:03 raker Exp $
 
 *pure-ftpd-1.0.18 (06 Apr 2004)
 
   06 Apr 2004; Nick Hadaway <raker@gentoo.org> pure-ftpd-1.0.18.ebuild:
-  Version bump.  Adjusted pam-related stuff.  No other significant 
-  ebuild changes.
+  Version bump.  Adjusted pam-related stuff.  Added support for files
+  larger than 2GB.  Thanks to cvo on bug #45796 for noticing this 
+  missing option.
 
   01 Feb 2004; Jon Portnoy <avenj@gentoo.org> pure-ftpd-1.0.17a.ebuild :
   AMD64 keywords.
