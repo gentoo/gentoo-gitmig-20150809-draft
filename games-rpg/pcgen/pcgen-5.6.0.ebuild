@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-5.6.0.ebuild,v 1.4 2004/06/24 23:16:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-5.6.0.ebuild,v 1.5 2004/07/01 11:22:34 eradicator Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ~amd64"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	|| (
 		>=virtual/jdk-1.3.1
 		>=virtual/jre-1.3.1 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.10 2004/06/24 23:15:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.11 2004/07/01 11:22:21 eradicator Exp $
 
 inherit eutils flag-o-matic games gcc
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="-* x86 ppc"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	virtual/x11
 	virtual/opengl
 	virtual/glu
