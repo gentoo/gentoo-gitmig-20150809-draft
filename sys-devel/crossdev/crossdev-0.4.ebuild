@@ -1,20 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-0.4.ebuild,v 1.1 2004/01/30 09:07:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-0.4.ebuild,v 1.2 2004/02/12 16:05:26 vapier Exp $
 
 DESCRIPTION="Gentoo Cross-toolchain generator"
-HOMEPAGE="http://www.gentoo.org"
+HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips"
-IUSE=""
+KEYWORDS="~x86 ~ppc ~sparc ~mips"
 
 DEPEND="sys-apps/portage
 	app-shells/bash
 	sys-apps/coreutils"
-
-S=${WORKDIR}/${P}
 
 
 src_install() {
