@@ -48,11 +48,11 @@ MD5 971013ca1ccc5a25acffdb3ff9edff4e files/2.4.2/pppoatm.diff.gz 3567
 MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/2.4.2/pppoe.html 7605
 MD5 9d798912edc0a47727afcd7aac100957 files/2.4.2/stdopt-mppe-mppc-0.82.patch.gz 10108
 MD5 bd6bee3df13537a8550d2f39131eab0d files/2.4.2/pppoatm-2.diff.gz 3489
-MD5 d278ed14e1cd65a9d44a91ec23a108d7 files/2.4.2/cbcp-dosfix.patch 3416
+MD5 47ea37f2133f54835d1b731e99b2624f files/2.4.2/cbcp-dosfix.patch 3325
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBg4tjmdTrptrqvGERApCRAJ9K2hlFbM/m7REVqgioPGbpQLR26wCgiqnn
-TzEi55XOqpr1mmQw9e8BPa8=
-=OhxZ
+iD8DBQFBg5vumdTrptrqvGERAg8rAJ9R4wN1r5w5H+dxjw5ZwpHR+n/HUgCbBRhT
+nl2w9JLWKne462b+Eoh5DzY=
+=A3Ng
 -----END PGP SIGNATURE-----
