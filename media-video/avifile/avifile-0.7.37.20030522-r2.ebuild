@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.15 2004/11/30 20:00:50 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.37.20030522-r2.ebuild,v 1.16 2005/01/20 10:07:51 cryos Exp $
 
 inherit eutils
 
