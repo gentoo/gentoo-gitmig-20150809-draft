@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.35 2004/06/06 15:22:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.36 2004/06/07 15:52:06 fmccor Exp $
+
+  07 Jun 2004; Ferris McCormick <fmccor@gentoo.org>
+  eclipse-sdk-2.1.3-r3.ebuild:
+  Marked stable on sparc.
 
 *eclipse-sdk-3.0.0_rc1 (06 Jun 2004)
 
