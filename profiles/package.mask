@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <strider@gentoo.org> (29 Jul 2003)
+# Alpha Ebuild, it breaks dev-java/ant
+# Also its not working very well
+=dev-java/sun-jdk-1.4.2
+
 # brad@gentoo.org 29 Jul 2003
 # Build testing
 =net-www/mozilla-firebird-0.6.1
