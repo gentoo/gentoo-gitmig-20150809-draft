@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.2 2003/12/30 06:54:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.3 2003/12/30 18:33:28 brad_mssw Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -98,7 +98,17 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~mips ~sparc ~amd64 ~hppa ~alpha ~ia64"
+
+# It appears as though while you're still in a chroot during a fresh
+# install of gentoo (on amd64 at least), that the check_glibc_ssp()
+# function (or whatever it calls internally) does not return the proper
+# result code, so gcc will fail to emerge.  This was not a problem with
+# the stack-protector check from 3.3.2-r4, so it is due to the new
+# routines.  Marking -amd64, but I'd bet other arches are affected too.
+# It seems to work if you upgrade from another GCC version on a system
+# that's been up a while though.
+# Brad House <brad_mssw@gentoo.org> 12/30/03
+KEYWORDS="~x86 ~mips ~sparc -amd64 ~hppa ~alpha ~ia64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
