@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.93.0526.ebuild,v 1.1 2003/06/19 18:42:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.93.0526.ebuild,v 1.2 2003/06/19 20:06:10 vapier Exp $
 
 DESCRIPTION="Erlang bindings for the SDL library"
 SRC_URI="mirror://sourceforge/esdl/${P}.src.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://esdl.sourceforge.net/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=dev-lang/erlang-9b
 	>=media-libs/libsdl-1.2.4"
