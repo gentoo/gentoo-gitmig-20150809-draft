@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsnow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.10 2004/06/24 22:45:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.11 2004/08/28 15:59:23 tgall Exp $
+
+  28 Aug 2004; Tom Gall <tgall@gentoo.org> xsnow-1.42.ebuild:
+  stable on ppc64, bug #59389
 
   14 Jun 2004; <pyrania@gentoo.org> xsnow-1.42.ebuild:
   Added IUSE.
