@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.6.1.ebuild,v 1.1 2004/04/20 23:10:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.6.1.ebuild,v 1.2 2004/04/22 20:25:19 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 MY_PN=GConf
 MY_P=${MY_PN}-${PV}
@@ -31,6 +31,14 @@ DEPEND="${RDEPEND}
 # FIXME : consider merging the tree (?)
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Remove invalid C syntax. See bug #48670.
+	epatch ${FILESDIR}/${MY_P}-gcc2_fix.patch
+}
 
 src_install() {
 
