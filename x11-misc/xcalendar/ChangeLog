@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.13 2004/08/24 02:00:26 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.14 2005/02/03 11:39:12 dholm Exp $
+
+  03 Feb 2005; <avatar@gentoo.org> xcalendar-4.0.ebuild:
+  Added to ~ppc.
 
   22 Aug 2004; Tom Gall <tgall@gentoo.org> xcalendar-4.0.ebuild:
   stable on ppc64, bug #58695
