@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/basc-1.3.9-r1.ebuild,v 1.1 2004/12/23 09:09:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/basc-1.3.9-r1.ebuild,v 1.2 2004/12/23 09:14:04 pvdabeel Exp $
 
 # ebuild contributed by Alexander Mieland and Daniel Herzog
 
@@ -8,7 +8,7 @@ inherit eutils gcc
 
 DESCRIPTION="Buildtime And Statistics Client for http://www.gentoo-stats.org"
 HOMEPAGE="http://www.gentoo-stats.org"
-SRC_URI="http://www.gentoo-stats.org/download/${P}-r1.tar.gz"
+SRC_URI="http://www.gentoo-stats.org/download/${P}.tar.gz"
 
 KEYWORDS="x86 ~sparc ~mips ~hppa ppc ~amd64"
 SLOT="0"
