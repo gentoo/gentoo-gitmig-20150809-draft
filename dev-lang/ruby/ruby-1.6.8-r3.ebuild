@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r3.ebuild,v 1.1 2003/11/14 23:48:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r3.ebuild,v 1.2 2003/12/05 19:29:59 usata Exp $
 
 IUSE="ruby18"
 
@@ -63,7 +63,9 @@ src_install() {
 	dosym /usr/lib/libruby16.so.${PV} /usr/lib/libruby.so.${PV%.*}
 	dosym /usr/lib/libruby16.so.${PV} /usr/lib/libruby.so.${PV}
 
-	dobin ${FILESDIR}/ruby-config
+	if has_version '>=dev-lang/ruby-1.8.0-r1'; then
+		dobin ${FILESDIR}/ruby-config
+	fi
 
 	dodoc COPYING* ChangeLog MANIFEST README* ToDo
 }

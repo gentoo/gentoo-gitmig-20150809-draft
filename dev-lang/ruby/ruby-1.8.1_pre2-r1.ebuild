@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1_pre2-r1.ebuild,v 1.1 2003/11/14 23:48:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1_pre2-r1.ebuild,v 1.2 2003/12/05 19:29:59 usata Exp $
 
 inherit flag-o-matic alternatives eutils gnuconfig
 filter-flags -fomit-frame-pointer
@@ -85,9 +85,10 @@ src_install() {
 
 	dosym /usr/lib/libruby18.so.${PV} /usr/lib/libruby.so.${PV%.*}
 	dosym /usr/lib/libruby18.so.${PV} /usr/lib/libruby.so.${PV}
-	dosym /usr/bin/erb18 /usr/bin/erb
 
-	dobin ${FILESDIR}/ruby-config
+	if has_version '=dev-lang/ruby-1.6.8*' ; then
+		dobin ${FILESDIR}/ruby-config
+	fi
 
 	dodoc COPYING* ChangeLog MANIFEST README* ToDo
 }
@@ -96,6 +97,7 @@ ruby_alternatives() {
 	if [ -n "`use ruby18`" ] ; then
 		alternatives_makesym /usr/bin/ruby /usr/bin/ruby{18,16}
 		alternatives_makesym /usr/bin/irb /usr/bin/irb{18,16}
+		alternatives_makesym /usr/bin/erb /usr/bin/erb{18,16}
 		alternatives_makesym /usr/lib/libruby.so \
 			/usr/lib/libruby{18,16}.so
 		alternatives_makesym /usr/share/man/man1/ruby.1.gz \
@@ -103,6 +105,7 @@ ruby_alternatives() {
 	else
 		alternatives_makesym /usr/bin/ruby /usr/bin/ruby{16,18}
 		alternatives_makesym /usr/bin/irb /usr/bin/irb{16,18}
+		alternatives_makesym /usr/bin/erb /usr/bin/erb{16,18}
 		alternatives_makesym /usr/lib/libruby.so \
 			/usr/lib/libruby{16,18}.so
 		alternatives_makesym /usr/share/man/man1/ruby.1.gz \
