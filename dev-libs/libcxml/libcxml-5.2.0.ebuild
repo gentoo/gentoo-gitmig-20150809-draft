@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.1 2003/04/16 23:02:01 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.2 2003/05/25 19:25:23 taviso Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -53,7 +53,7 @@ src_compile () {
 	cd ${WORKDIR}/usr/lib/compaq/cxml-${RELEASE%*-2}
 
     # http://h18000.www1.hp.com/math/faq/cxml.html#EmptySharedLib
-	ld -shared -o libcxml_${EV}.so -soname libcxml.so \ 
+	ld -shared -o libcxml_${EV}.so -soname libcxml.so \
 		-whole-archive libcxml_${EV}.a -no-whole-archive -lots -lcpml
 }
 
