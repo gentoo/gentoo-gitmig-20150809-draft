@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/corefonts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.15 2004/11/04 11:46:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.16 2004/11/04 18:38:12 gustavoz Exp $
+
+  04 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> corefonts-1-r2.ebuild:
+  Stable on sparc
 
   04 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> corefonts-1-r2.ebuild,
   corefonts-1.ebuild:
