@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.6 2004/04/03 06:04:34 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.7 2004/05/10 16:47:11 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -33,6 +33,7 @@
 # optional SELinux-patched programs:
 >=app-admin/logrotate-3.6.5-r1
 >=gnome-base/gdm-2.4.4.7
+>=sys-apps/fcron-2.9.4
 >=sys-apps/vixie-cron-3.0.1-r2
 >=sys-libs/pwdb-0.61-r4
 
