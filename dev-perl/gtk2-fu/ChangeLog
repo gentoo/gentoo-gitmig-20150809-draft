@@ -1,9 +1,14 @@
 # ChangeLog for dev-perl/gtk2-fu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.7 2005/03/07 16:36:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.8 2005/03/08 13:30:09 dams Exp $
 
   07 Mar 2005; Markus Rothe <corsair@gentoo.org> gtk2-fu-0.05.ebuild:
   Stable on ppc64
+
+*gtk2-fu-0.05-r1 (08 Mar 2005)
+
+  08 Mar 2005; <dams@gentoo.org> +gtk2-fu-0.05-r1.ebuild:
+  switching to cpan ebuild
 
   15 Jan 2005; Markus Rothe <corsair@gentoo.org> gtk2-fu-0.05.ebuild:
   Added ~ppc64 to KEYWORDS
