@@ -74,3 +74,5 @@ sybase-ct
 # media-sound/beep-media-player and remove if
 bmp
 
+# Need to mask since no evolution-data-server support
+eds
