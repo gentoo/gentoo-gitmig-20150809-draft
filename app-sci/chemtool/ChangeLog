@@ -1,0 +1,12 @@
+# ChangeLog for app-sci/chemtool
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.1 2002/11/28 06:09:24 george Exp $
+
+*chemtool-1.5 (27 Nov 2002)
+  
+  27 Nov 2002; George Shapovalov <george@gentoo.org> chemtool-1.5.ebuild, files/{Makefile.in-chemtool-1.5-gentoo.diff,digest-chemtool-1.5,config.h.in-chemtool-1.5-gentoo.diff,src-cht-Makefile.in-chemtool-1.5-gentoo.diff,configure.in-chemtool-1.5-gentoo.diff} :
+
+  initial release. 
+
+  Chemtool is a program for drawing organic molecules
+  ebuild submitted by 
