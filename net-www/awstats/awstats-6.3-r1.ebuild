@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.3-r1.ebuild,v 1.1 2005/02/12 21:55:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.3-r1.ebuild,v 1.2 2005/02/13 01:51:26 ka0ttic Exp $
 
 inherit eutils webapp
 
@@ -12,11 +12,12 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ppc ~mips ~sparc x86 ~amd64"
 IUSE=""
 
-DEPEND=">=dev-lang/perl-5.6.1
+RDEPEND=">=dev-lang/perl-5.6.1
 	>=media-libs/libpng-1.2
 	dev-perl/Time-Local
 	net-www/apache"
-RDEPEND=""
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -49,9 +50,10 @@ src_unpack() {
 	    -e "s#DataDir=.*#DataDir=\"${MY_HOSTROOTDIR}/awstats/datadir\"#" \
 	${S}/wwwroot/cgi-bin/awstats.model.conf || die "sed failed"
 
+	# set version in postinst-en.txt
+	sed -e "s/PVR/${PVR}/g" \
+		${FILESDIR}/postinst-en.txt > ${WORKDIR}/postinst-en.txt || die
 }
-
-
 
 src_install() {
 	webapp_src_preinst
@@ -67,7 +69,7 @@ src_install() {
 	docinto xslt
 	dodoc tools/xslt/*
 
-	webapp_postinst_txt en ${FILESDIR}/postinst-en.txt
+	webapp_postinst_txt en ${WORKDIR}/postinst-en.txt
 
 	keepdir /var/lib/awstats
 

@@ -1,9 +1,9 @@
-Alias /awstats/classes "/usr/share/webapps/awstats/6.3/htdocs/classes/"
-Alias /awstats/css "/usr/share/webapps/awstats/6.3/htdocs/css/"
-Alias /awstats/icons "/usr/share/webapps/awstats/6.3/htdocs/icon/"
-ScriptAlias /awstats/ "/usr/share/webapps/awstats/6.3/hostroot/cgi-bin/"
+Alias /awstats/classes "/usr/share/webapps/awstats/PVR/htdocs/classes/"
+Alias /awstats/css "/usr/share/webapps/awstats/PVR/htdocs/css/"
+Alias /awstats/icons "/usr/share/webapps/awstats/PVR/htdocs/icon/"
+ScriptAlias /awstats/ "/usr/share/webapps/awstats/PVR/hostroot/cgi-bin/"
 
-<Directory "/usr/share/webapps/awstats/6.3/htdocs">
+<Directory "/usr/share/webapps/awstats/PVR/htdocs">
     Options None
     AllowOverride None
     <IfModule mod_access.c>
@@ -12,7 +12,7 @@ ScriptAlias /awstats/ "/usr/share/webapps/awstats/6.3/hostroot/cgi-bin/"
     </IfModule>
 </Directory>
 
-<Directory "/usr/share/webapps/6.3/hostroot/cgi-bin">
+<Directory "/usr/share/webapps/awstats/PVR/hostroot/cgi-bin">
     Options ExecCGI
     AllowOverride None
     <IfModule mod_access.c>
