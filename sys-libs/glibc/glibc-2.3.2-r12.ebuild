@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.3 2004/12/07 15:17:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.4 2005/01/03 22:42:26 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -40,7 +40,7 @@ LICENSE="LGPL-2"
 	&& SLOT="${CTARGET}-2.2" \
 	|| SLOT="2.2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86"
-IUSE="nls pic build nptl debug"
+IUSE="nls pic build nptl debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -139,6 +139,35 @@ use_nptl() {
 	fi
 
 	return 1
+}
+
+install_locales() {
+	einfo "Installing Locale data..."
+	make PARALLELMFLAGS="${MAKEOPTS}" \
+		install_root=${D} \
+		localedata/install-locales -C ${buildtarget} || die
+	keepdir /usr/lib/locale/ru_RU/LC_MESSAGES
+}
+
+setup_locales() {
+	if ! use userlocales ; then
+		einfo "userlocales not enabled, installing -ALL- locales..."
+	elif [ -e /etc/locales.build ]; then
+		einfo "Installing locales in /etc/locales.build..."
+		echo 'SUPPORTED-LOCALES=\' > SUPPORTED.locales
+		cat /etc/locales.build | grep -v -e ^$ -e ^\# | sed 's/$/\ \\/g' \
+			>> SUPPORTED.locales
+		cat SUPPORTED.locales > ${S}/localedata/SUPPORTED || die
+	elif [ -e ${FILESDIR}/locales.build ]; then
+		einfo "Installing locales in ${FILESDIR}/locales.build..."
+		echo 'SUPPORTED-LOCALES=\' > SUPPORTED.locales
+		cat ${FILESDIR}/locales.build | grep -v -e ^$ -e ^\# | sed 's/$/\ \\/g' \
+			>> SUPPORTED.locales
+		cat SUPPORTED.locales > ${S}/localedata/SUPPORTED || die
+	else
+		einfo "Installing -ALL- locales..."
+	fi
+	install_locales || die
 }
 
 glibc_setup() {
@@ -373,6 +402,9 @@ src_unpack() {
 		# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
 		epatch ${FILESDIR}/2.3.2/${P}-alpha-pwrite.patch
 		epatch ${FILESDIR}/2.3.2/${P}-alpha-crti.patch
+
+		# Fix building with 2.6 headers #52764
+		epatch ${FILESDIR}/2.3.2/${P}-alpha-sysdeps.patch
 	fi
 
 	if [ "${ARCH}" = "amd64" ]
@@ -606,14 +638,7 @@ EOF
 				info -C ${buildtarget} || die
 		fi
 
-		einfo "Installing Locale data..."
-		make PARALLELMFLAGS="${MAKEOPTS}" \
-			install_root=${D} \
-			localedata/install-locales -C ${buildtarget} || die
-
-		# Compatibility hack: this locale has vanished from glibc,
-		# but some other programs are still using it.
-		keepdir /usr/lib/locale/ru_RU/LC_MESSAGES
+		setup_locales
 
 		einfo "Installing man pages and docs..."
 		# Install linuxthreads man pages
@@ -636,6 +661,9 @@ EOF
 			install_root=${D} \
 			timezone/install-others -C ${buildtarget} || die
 	fi
+	insinto /etc
+	# This is our new config file for building locales
+	doins ${FILESDIR}/locales.build
 
 	if use pic
 	then

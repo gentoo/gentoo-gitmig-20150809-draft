@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.298 2004/12/23 20:16:59 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.299 2005/01/03 22:42:26 vapier Exp $
+
+  03 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/2.3.2/glibc-2.3.2-alpha-sysdeps.patch, glibc-2.3.2-r12.ebuild:
+  Backport USE=userlocale support.  Fix building on alpha with 2.6 headers with 
+  patch from upstream #52764 by 0g.
 
   23 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20040808-r1.ebuild, glibc-2.3.4.20041102.ebuild:
