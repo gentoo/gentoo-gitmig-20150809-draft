@@ -1,0 +1,11 @@
+# ChangeLog for games-roguelike/fargoal
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/ChangeLog,v 1.1 2004/01/24 09:36:11 mr_bones_ Exp $
+
+*fargoal-20030731b (24 Jan 2004)
+
+  24 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  fargoal-20030731b.ebuild, metadata.xml, files/gentoo-home-write.patch:
+  initial commit; ebuild based on the one provided by Minati jean michel via bug
+  38905
+
