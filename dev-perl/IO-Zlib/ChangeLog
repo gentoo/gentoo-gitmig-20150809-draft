@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Zlib
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Zlib/ChangeLog,v 1.1 2003/06/05 15:07:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Zlib/ChangeLog,v 1.2 2003/12/16 19:16:03 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> IO-Zlib-1.01.ebuild:
+  Marked stable on sparc to fix broken dependencies of dev-perl/Archive-Tar.
 
 *IO-Zlib-1.01 (05 Jun 2003)
 
