@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.38 2004/10/24 17:12:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.39 2004/11/01 06:58:40 kumba Exp $
+
+  01 Nov 2004; Joshua Kinard <kumba@gentoo.org> dialog-1.0.20040731.ebuild:
+  Marked stable on mips.
 
   24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> dialog-1.0.20040731.ebuild:
   fix installation of docs, bug #68680
