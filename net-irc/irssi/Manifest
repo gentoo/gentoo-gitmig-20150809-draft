@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0e9c6285ca20f2f7801ce0c14b50bac1 ChangeLog 7243
+MD5 5df51585c14e61c7e40db33cdfdffdfd ChangeLog 7322
+MD5 9c3d68f7146b55ad7ccea3dfcfe3b14f irssi-0.8.10_rc5.ebuild 1997
 MD5 22b77e2f75756985697b817a369f2697 irssi-0.8.6-r6.ebuild 2132
 MD5 1d55ebaf9f7b6fcad8cb00b0eeb237fc irssi-0.8.9-r1.ebuild 2269
 MD5 82e5b1bf65384d412b91882279abd6cb irssi-0.8.9.ebuild 2086
 MD5 66fbf3744370d75438e10d4d8b6a3900 metadata.xml 250
-MD5 127d1f7378d7c2bdbd28bf50a7c10496 irssi-0.8.10_rc5.ebuild 1990
+MD5 1b0da69f92d8e06e2fd61f684ce55e89 files/digest-irssi-0.8.10_rc5 69
 MD5 cb17857da5af4446fef7e94d553277de files/digest-irssi-0.8.6-r6 64
 MD5 d8d32d5f69fd1bccf2928c4bad648cd6 files/digest-irssi-0.8.9 64
 MD5 d8d32d5f69fd1bccf2928c4bad648cd6 files/digest-irssi-0.8.9-r1 64
 MD5 e75d250d81ec4a41f6bff2130b4d6a0b files/irssi-0.8.6-configure.patch 976
 MD5 fdac3a93d9b1589031a28d5a36029e6d files/irssi-0.8.8-configure.patch 531
 MD5 6613882c525a6f1db208af7fe5905336 files/irssi-0.8.9-64bit-exec-fix.patch 499
-MD5 1b0da69f92d8e06e2fd61f684ce55e89 files/digest-irssi-0.8.10_rc5 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBQ7aoI1lqEGTUzyQRAmjHAJ9JdSawa3zNuOKR82ikk84hHgPwngCePSsJ
-mt2arKejmd78qTtxM3IMdag=
-=mbvG
------END PGP SIGNATURE-----
