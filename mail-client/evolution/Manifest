@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0ab5398889f117303279fd2bfbdc589b ChangeLog 19621
+MD5 919fd20197888316397761125efd6bd1 ChangeLog 19772
 MD5 dad6657ce9376178fb561002aa40f5e0 evolution-1.2.4.ebuild 6251
 MD5 a30d8d424a2ad9eb49940d78310542ca evolution-1.4.6.ebuild 5570
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
-MD5 187528b6143f774152bf33b0d577635c evolution-2.0.1.ebuild 3792
-MD5 2153f523bb3295cf639e910bea45a182 evolution-2.0.2.ebuild 3892
+MD5 3fbacd029191e78ebc38dc54dd921fec evolution-2.0.1.ebuild 3778
+MD5 d83ebfe31ee67b6c65a04bf55e5fb1c9 evolution-2.0.2.ebuild 3878
 MD5 3137288dd17e357d0972dab00e4f6b6d files/digest-evolution-1.2.4 1230
 MD5 fe0cafc4040da525377526f4a1fa297f files/digest-evolution-1.4.6 132
 MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
@@ -23,7 +23,7 @@ MD5 8a4178ab2571a9be24e1c27cfedf20bb files/evolution-2.0.2-camel_typo.patch 298
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcopMRkyva5PS18kRAlWmAKCHxSxrahQ9RhABFeAaeuYYRf839ACdE02z
-ydYqnzkfK14wee54Di/Bwf8=
-=bnzN
+iD8DBQFBdBnvRkyva5PS18kRAqHTAKCsQifKt15MrMSezUhwz+cYec8QwwCfbpFW
+8KV4TiNqj5itafHBP11E9zI=
+=sQ0C
 -----END PGP SIGNATURE-----
