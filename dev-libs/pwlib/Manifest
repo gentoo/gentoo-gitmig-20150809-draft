@@ -1,40 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b165d3dab2c13782ff4c738cd7f60d9 pwlib-1.5.0-r1.ebuild 2403
-MD5 8dbc8816810f569b5bec54514e1177d8 pwlib-1.5.2.ebuild 2596
-MD5 a296ccbbfc11727eaf0b808d5136ad74 ChangeLog 10160
-MD5 1e445af737490687247c95904ad89f24 pwlib-1.3.11-r1.ebuild 1834
 MD5 0a7cb3a48c160df6883e6d0c53b3d38b pwlib-1.5.2-r3.ebuild 2997
-MD5 e7e31f6f265883cdf48d812f42a9f856 metadata.xml 235
-MD5 d269c9360d97e70bb97c3bad3b93f3fc pwlib-1.4.11.ebuild 2159
-MD5 ad68150136005ec2407691456e990fa3 pwlib-1.6.3-r1.ebuild 3980
-MD5 11fdff875833c3f2d42f94517d1b4774 pwlib-1.6.3-r2.ebuild 3948
-MD5 5031238591ce3de615c5e0bf256103cf pwlib-1.6.6.ebuild 4088
-MD5 36ce467ec9ddfceb3ab08750dde508c2 pwlib-1.5.2-r1.ebuild 2760
-MD5 21199978809de871ebcfbedc9bdedca8 pwlib-1.6.3.ebuild 3806
-MD5 bbcfc0106fe98eae9b5a6327850ea97f pwlib-1.5.0.ebuild 2308
+MD5 8b70577b20889bedf2ac29783444d4ba pwlib-1.6.6-r1.ebuild 4171
+MD5 8dbc8816810f569b5bec54514e1177d8 pwlib-1.5.2.ebuild 2596
 MD5 0c85c6b3395f056fd849c9ae7eb71ed2 pwlib-1.5.2-r2.ebuild 2955
-MD5 0a9a8c5a1417127269e2e0f24ded1b2c files/pwlib-1.5.0-r1-gentoo.diff 391
+MD5 ad68150136005ec2407691456e990fa3 pwlib-1.6.3-r1.ebuild 3980
+MD5 e7e31f6f265883cdf48d812f42a9f856 metadata.xml 235
+MD5 1e445af737490687247c95904ad89f24 pwlib-1.3.11-r1.ebuild 1834
+MD5 5031238591ce3de615c5e0bf256103cf pwlib-1.6.6.ebuild 4088
+MD5 ad3bfe53d49207f0f6b1e29473002e4d ChangeLog 10440
+MD5 bbcfc0106fe98eae9b5a6327850ea97f pwlib-1.5.0.ebuild 2308
+MD5 d269c9360d97e70bb97c3bad3b93f3fc pwlib-1.4.11.ebuild 2159
+MD5 36ce467ec9ddfceb3ab08750dde508c2 pwlib-1.5.2-r1.ebuild 2760
+MD5 11fdff875833c3f2d42f94517d1b4774 pwlib-1.6.3-r2.ebuild 3948
+MD5 0b165d3dab2c13782ff4c738cd7f60d9 pwlib-1.5.0-r1.ebuild 2403
+MD5 21199978809de871ebcfbedc9bdedca8 pwlib-1.6.3.ebuild 3806
 MD5 6702f9a296ccf661275cf6a2284bf6bf files/digest-pwlib-1.6.3-r1 64
-MD5 6702f9a296ccf661275cf6a2284bf6bf files/digest-pwlib-1.6.3 64
-MD5 8c6469f000dea2a13869631fcedbe0ff files/pwlib-1.5.2-asnparser-secfix.diff 1299
-MD5 0c5d290a2ad15d1e8b2ae85365a83bd6 files/digest-pwlib-1.3.11-r1 64
-MD5 91035c6391e112595e0003cebda275f6 files/pwlib-1.3.11-r1.diff 2260
-MD5 4fc6a7891d23db3dc2837f825afa2324 files/digest-pwlib-1.5.2-r1 64
-MD5 4fc6a7891d23db3dc2837f825afa2324 files/digest-pwlib-1.5.2-r3 64
-MD5 67bcec54ffa82d8da3b0c0e2f23daf7e files/digest-pwlib-1.5.0 64
 MD5 ef62669acbbbc63a30d475ca9865adb6 files/pwlib-1.6.6-ieee1394dc-fix.diff 7207
-MD5 4fc6a7891d23db3dc2837f825afa2324 files/digest-pwlib-1.5.2 64
-MD5 c1a54c4c742e40812c02bea08e570604 files/digest-pwlib-1.4.11 64
+MD5 4fc6a7891d23db3dc2837f825afa2324 files/digest-pwlib-1.5.2-r3 64
 MD5 67bcec54ffa82d8da3b0c0e2f23daf7e files/digest-pwlib-1.5.0-r1 64
-MD5 3057a7e05b6e701041865f26fd1fb8c3 files/digest-pwlib-1.6.6 69
-MD5 6702f9a296ccf661275cf6a2284bf6bf files/digest-pwlib-1.6.3-r2 64
 MD5 4fc6a7891d23db3dc2837f825afa2324 files/digest-pwlib-1.5.2-r2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkJz0ugEuf3OQ0akRAuKuAJ4ygcxlkk5wN8lZRI/qNktcB0V0RQCgnmdI
-9n1ocMGFemRag5uz7R7lpr0=
-=DkGY
------END PGP SIGNATURE-----
+MD5 6702f9a296ccf661275cf6a2284bf6bf files/digest-pwlib-1.6.3 64
+MD5 0c5d290a2ad15d1e8b2ae85365a83bd6 files/digest-pwlib-1.3.11-r1 64
+MD5 0a9a8c5a1417127269e2e0f24ded1b2c files/pwlib-1.5.0-r1-gentoo.diff 391
+MD5 c1a54c4c742e40812c02bea08e570604 files/digest-pwlib-1.4.11 64
+MD5 4fc6a7891d23db3dc2837f825afa2324 files/digest-pwlib-1.5.2-r1 64
+MD5 3057a7e05b6e701041865f26fd1fb8c3 files/digest-pwlib-1.6.6-r1 69
+MD5 67bcec54ffa82d8da3b0c0e2f23daf7e files/digest-pwlib-1.5.0 64
+MD5 3057a7e05b6e701041865f26fd1fb8c3 files/digest-pwlib-1.6.6 69
+MD5 91035c6391e112595e0003cebda275f6 files/pwlib-1.3.11-r1.diff 2260
+MD5 6702f9a296ccf661275cf6a2284bf6bf files/digest-pwlib-1.6.3-r2 64
+MD5 8c6469f000dea2a13869631fcedbe0ff files/pwlib-1.5.2-asnparser-secfix.diff 1299
+MD5 ca45f803b5a998565dd29d6b845d73d3 files/pwlib-1.6.6-alsa_dmix.diff 7613
+MD5 4fc6a7891d23db3dc2837f825afa2324 files/digest-pwlib-1.5.2 64
