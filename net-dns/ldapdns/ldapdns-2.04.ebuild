@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.04.ebuild,v 1.8 2004/07/14 23:26:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.04.ebuild,v 1.9 2005/03/03 18:20:11 ciaranm Exp $
 
 DESCRIPTION="A tiny, fast authoritative nameserver that queries LDAP and can be updated instantly"
 SRC_URI="http://www.nimh.org/dl/${P}.tar.gz"
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 DEPEND="virtual/libc
 	>=net-nds/openldap-2"
 RDEPEND="${DEPEND}
-	>=sys-apps/daemontools-0.70
+	>=sys-process/daemontools-0.70
 	sys-apps/ucspi-tcp"
 
 src_compile() {
