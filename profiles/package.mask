@@ -197,7 +197,7 @@ app-editors/kvim
 # 08/13/02 fixed more hardcoded values 
 # in default Makefile
 =dev-perl/SGMLSpm-1.03-r2
-=dev-perl/SGMLSpm-1.03-r3
+#=dev-perl/SGMLSpm-1.03-r3
 
 # <seemant@gentoo.org> (05 Aug 2002)
 # masked for testing
