@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-19-r3.ebuild,v 1.10 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-19-r3.ebuild,v 1.11 2002/10/23 19:38:26 vapier Exp $
 
 S=${WORKDIR}/psmisc
 DESCRIPTION="Handy process-related utilities from Debian"
@@ -26,19 +26,13 @@ src_compile() {
 }
 
 src_install() {
-	if [ "`use bootcd`" ]
-	then
-		into /
-	fi
+	into /
 	dobin killall pstree
 	dosym killall /usr/bin/pidof
 	
 	into /
 	dobin fuser
 	
-	if [ -z "`use bootcd`" ]
-	then
-		doman *.1
-		dodoc CHANGES COPYING README VERSION psmisc-19.lsm
-	fi
+	doman *.1
+	dodoc CHANGES COPYING README VERSION psmisc-19.lsm
 }

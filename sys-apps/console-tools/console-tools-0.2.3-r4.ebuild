@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.11 2002/10/19 01:52:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.12 2002/10/23 19:33:44 vapier Exp $
 
-IUSE="nls bootcd"
+IUSE="nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console and font utilities"
@@ -45,21 +45,16 @@ src_install() {
 	# DESTDIR does not work correct
 	make DESTDIR=${D} install || die
 
-	if [ -z "`use bootcd`" ]
-	then
-		dodoc BUGS COPYING* CREDITS ChangeLog NEWS README RELEASE TODO
-		docinto txt
-		dodoc doc/*.txt doc/README.*
-		docinto sgml
-		dodoc doc/*.sgml
-		docinto txt/contrib
-		dodoc doc/contrib/*
-		docinto txt/dvorak
-		dodoc doc/dvorak/*
-		docinto txt/file-formats
-		dodoc doc/file-formats/*
-		doman doc/man/*.[1-8]
-	else
-		rm -rf ${D}/usr/share ${D}/usr/include ${D}/usr/lib/lib*.{a,la}
-	fi
+	dodoc BUGS COPYING* CREDITS ChangeLog NEWS README RELEASE TODO
+	docinto txt
+	dodoc doc/*.txt doc/README.*
+	docinto sgml
+	dodoc doc/*.sgml
+	docinto txt/contrib
+	dodoc doc/contrib/*
+	docinto txt/dvorak
+	dodoc doc/dvorak/*
+	docinto txt/file-formats
+	dodoc doc/file-formats/*
+	doman doc/man/*.[1-8]
 }

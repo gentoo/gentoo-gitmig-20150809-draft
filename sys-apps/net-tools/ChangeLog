@@ -1,14 +1,19 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.6 2002/07/16 17:17:05 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.7 2002/10/23 19:37:34 vapier Exp $
 
 *net-tools-1.60-r5 (16 Jul 2002)
 
-  16 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
+  16 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
   added some RH patches
 
 *net-tools-1.60-r4 (21 Jun 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> net-tools-1.60-r4.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
@@ -18,23 +23,23 @@
 
 *net-tools-1.60-r3 (20 Mar 2002)
 
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
+
   14 Jul 2002; phoen][x <phoenix@gentoo.org> net-tools-1.60-r3.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   20 Mar 2002; Seemant Kulleen <seemant@gentoo.org> net-tools-1.60-r3 :
-
   Alternate implementation of USE dependent nls compilation.
 
 *net-tools-1.60-r2 (12 Mar 2002)
   
   12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> net-tools-1.60-r2 :
-
   Added USE dependent nls compilation
 
 *net-tools-1.60-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

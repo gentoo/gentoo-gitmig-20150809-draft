@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.3.ebuild,v 1.5 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.3.ebuild,v 1.6 2002/10/23 19:35:24 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A selection of tools from Debian"
@@ -10,6 +10,7 @@ HOMEPAGE="http://packages.debian.org/unstable/base/debianutils.html"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
 LICENSE="GPL-2 BSD SMAIL"
+IUSE="static build"
 
 DEPEND="virtual/glibc"
 
@@ -47,14 +48,11 @@ src_install() {
 		into /usr
 		dosbin mkboot
 		
-		if [ -z "`use bootcd`" ]
-		then
-			into /usr
-			doman mktemp.1 readlink.1 tempfile.1 run-parts.8 savelog.8 \
-				installkernel.8 mkboot.8
+		into /usr
+		doman mktemp.1 readlink.1 tempfile.1 run-parts.8 savelog.8 \
+			installkernel.8 mkboot.8
 			
-			cd debian
-			dodoc changelog control copyright
-		fi
+		cd debian
+		dodoc changelog control copyright
 	fi
 }

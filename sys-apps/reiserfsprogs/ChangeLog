@@ -1,14 +1,19 @@
 # ChangeLog for sys-apps/reiserfsprogs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.4 2002/09/03 03:26:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.5 2002/10/23 19:39:31 vapier Exp $
 
 *reiserfsprogs-3.6.3 (02 Sep 2002)
 
-  02 Sep 2002; Brandon Low <lostlogic@@gentoo.org> reiserfsprogs-3.6.3.ebuild :
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
+  02 Sep 2002; Brandon Low <lostlogic@@gentoo.org> reiserfsprogs-3.6.3.ebuild :
   Critical fixes from upstream.
 
 *reiserfsprogs-3.6.2 (10 Jul 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> reiserfsprogs-3.6.2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
@@ -20,6 +25,9 @@
   website says.
 
 *reiserfsprogs-3.1c (06 Mar 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> reiserfsprogs-3.1c.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
