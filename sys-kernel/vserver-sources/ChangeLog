@@ -1,6 +1,6 @@
-# ChangeLog for sys-kernel/gentoo-dev-sources
+# ChangeLog for sys-kernel/vserver-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.17 2005/01/14 12:48:42 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.18 2005/01/14 13:29:38 swegener Exp $
 
 *vserver-sources-1.9.3.17 (14 Jan 2005)
 
