@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.4 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.5 2002/07/29 14:58:58 azarah Exp $
+
+*man-1.5k (29 Jul 2002)
+
+  29 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Update version; cleanups.
 
   24 Apr 2002; t.bangert <bangert@gentoo.org> :
   
