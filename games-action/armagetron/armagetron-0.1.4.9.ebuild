@@ -1,41 +1,45 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.1.4.9.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.1.4.9.ebuild,v 1.2 2003/10/28 14:10:22 vapier Exp $
 
-S=${WORKDIR}/${PN}
+inherit eutils flag-o-matic
+
 DESCRIPTION="armagetron: 3d tron lightcycles, just like the movie"
+HOMEPAGE="http://armagetron.sourceforge.net/"
 SRC_URI="mirror://sourceforge/armagetron/armagetron_src_${PV}.tar.gz
 	http://armagetron.sourceforge.net/addons/moviesounds_fq.zip
 	http://armagetron.sourceforge.net/addons/moviepack.zip"
-HOMEPAGE="http://armagetron.sourceforge.net/"
-KEYWORDS="x86 ppc"
+
 LICENSE="GPL-2"
 SLOT="0"
-CXXFLAGS=${CXXFLAGS/-fno-exceptions/}
+KEYWORDS="x86 ppc"
+
 RDEPEND="virtual/x11
 	virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-image
 	sys-libs/zlib
 	media-libs/libpng"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
-DEPEND="$RDEPEND app-arch/unzip"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack armagetron_src_${PV}.tar.gz
 	unpack moviesounds_fq.zip
 	unpack moviepack.zip
-	set > /tmp/emerge-env.txt
 	cd ${S}
 	# Doesn't find libs in /usr/X11R6/lib for some reason...patched
-	patch < ${FILESDIR}/${P}-configure.patch || die "Patch 1 Failed"
+	epatch ${FILESDIR}/${P}-configure.patch
 	# Uses $SYNC which which conflicts with emerge
-	patch < ${FILESDIR}/${P}-Makefile.global.in.patch || dir "Patch 2 Failed"
+	epatch ${FILESDIR}/${P}-Makefile.global.in.patch
 }
 
 src_compile() {
-	CXXFLAGS="$CXXFLAGS" ./configure --prefix=/usr --host="${CHOST}" || die "config failed"
-	make  all || die "Make Failed"
+	filter-flags -fno-exceptions
+	econf || die "config failed"
+	emake all || die "Make Failed"
 }
 
 src_install () {

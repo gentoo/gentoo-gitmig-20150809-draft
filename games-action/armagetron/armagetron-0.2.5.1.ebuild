@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.5.1.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.5.1.ebuild,v 1.2 2003/10/28 14:10:22 vapier Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/armagetron/${P}.tar.bz2
 	http://armagetron.sourceforge.net/addons/moviesounds_fq.zip
 	http://armagetron.sourceforge.net/addons/moviepack.zip"
 HOMEPAGE="http://armagetron.sourceforge.net/"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="0"
 CXXFLAGS=${CXXFLAGS/-fno-exceptions/}
