@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0_rc1.ebuild,v 1.2 2002/04/24 22:26:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0_rc1.ebuild,v 1.3 2002/04/24 22:48:52 azarah Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -103,19 +103,19 @@ src_compile() {
 	CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer}"
 
 	./configure  --prefix=/usr/lib/mozilla \
-		     --disable-tests \
-		     --disable-pedantic \
-		     --disable-svg \
-		     --enable-xsl \
-		     --enable-crypto \
-		     --enable-detect-webshell-leaks \
-		     --enable-xinerama \
-		     --with-java-supplement \
-			 --with-pthreads \
-		     --with-extensions="${myext}" \
-		     --enable-optimize=-O3 \
-		     --with-default-mozilla-five-home=/usr/lib/mozilla \
-		     ${myconf} || die
+		--disable-tests \
+		--disable-pedantic \
+		--disable-svg \
+		--enable-xsl \
+		--enable-crypto \
+		--enable-detect-webshell-leaks \
+		--enable-xinerama \
+		--with-java-supplement \
+		--with-pthreads \
+		--with-extensions="${myext}" \
+		--enable-optimize=-O3 \
+		--with-default-mozilla-five-home=/usr/lib/mozilla \
+		${myconf} || die
 
 #	make depend || die
 	make || die
