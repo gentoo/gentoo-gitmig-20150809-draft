@@ -1,7 +1,9 @@
 # ChangeLog for gnome-base/libglade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.14 2002/09/06 03:32:52 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.15 2002/09/30 23:59:46 azarah Exp $
 
+  01 Oct 2002; Martin Schlemmer <azarah@gentoo.org> libglade-0.17-r6.ebuild :
+  Libtoolize in hopes of fixing bug #7915.
 
 *libglade-2.0.1 (06 Sep 2002)
   06 Sep 2002 ; Spider <spider@gentoo.org> libglade-2.0.1.ebuild :

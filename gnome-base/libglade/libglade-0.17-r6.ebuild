@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.6 2002/08/16 04:09:24 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.7 2002/09/30 23:59:46 azarah Exp $
 
 #provide Xmake and Xemake
 
-inherit virtualx
+inherit libtool virtualx
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libglade allows programs to load their UIs from an XMLS description at tuntime."
@@ -25,8 +25,10 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	local myconf=""
+	elibtoolize
 
+	local myconf=""
+	
 	use bonobo && myconf="${myconf} --enable-bonobo"
 	use bonobo || myconf="${myconf} --disable-bonobo --disable-bonobotest"
 
