@@ -1,9 +1,7 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: 
+
 ### Gentoo for Mac OS X profile ###
 
-# Maintained by Pieter Van den Abeele <pvdabeel@gentoo.org> 
-
-# Things we want emerge system to install
-
-*net-misc/wget
-*virtual/editor
-*sys-apps/sed
+# Packages we want emerge system to install in addition to default-darwin/packages

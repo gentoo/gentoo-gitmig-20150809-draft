@@ -2,17 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
-# Use this virtuals file to either override the base profile's defined
-# virtuals, or add virtuals that are specific to this family of profiles
+# Use this virtuals file to either override the Darwin base profile's defined
+# virtuals, or add virtuals that are specific to the Mac OS X profiles
 
-virtual/bootloader	sys-boot/bootx
 virtual/commonlisp	dev-lisp/sbcl
-virtual/kernel		sys-libs/libsystem
-virtual/libc	   	sys-libs/libsystem
-virtual/logger		app-admin/sysklogd
 virtual/mta	     	mail-mta/postfix
-virtual/glu		x11-base/apple-xfree
-virtual/x11		x11-base/apple-xfree
-virtual/xft		x11-base/apple-xfree
+virtual/glu			x11-base/apple-xfree
+virtual/x11			x11-base/apple-xfree
+virtual/xft			x11-base/apple-xfree
 virtual/opengl		x11-base/apple-xfree
 virtual/blackbox	x11-wm/fluxbox

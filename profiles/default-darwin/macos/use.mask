@@ -1,73 +1,11 @@
 # Add USE flags that don't work on Mac OS X here
 
-# these will more than likely never work on os x
-3dnow
-3dnowex
-alsa
-gpm
-jack-tmpfs
-mmx
-mmx2
-oss
-rtc
-v4l
-v4l2
-
-# these are still a ways off
-acl
-arts
-kde
-gnome
-
-# mach does not need caps
-caps
-
-# Skipping docs for now
-doc
-
-# tcl ebuild overwrites Apple's tcl, so we mask it (dev-lang/ruby)
-tcltk
-
 # gtk+ pulls in XML-Parser with USE="nls xml", so Perl issue should
 # be resolved first before keywording them
 gtk
 gtk2
 
-# masking these until we get deps sorted out
-mikmod
-xmms
-
-# net-misc/dante fails to compile, so we mask it until we succeed
-# (dev-lang/ruby, net-misc/lftp)
-socks5
-
-# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
-# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
-# all of these are binary-only, and not presently available on this
-# architecture.
-adabas
-birdstep
-cpdflib
-db2
-dbmaker
-directfb
-empress
-empress-bcs
-esoob
-fbcon
-filepro
-frontbase
-hyperwave
-informix
-ingres
-oci8
-oracle7
-pfpro
-selinux
-solid
-svga
-sybase
-sybase-ct
-
-djbfft
 perl
+
+# tcl ebuild overwrites Apple's tcl, so we mask it (dev-lang/ruby)
+tcltk

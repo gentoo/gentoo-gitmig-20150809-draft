@@ -2,6 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
+# virtual/kernel and virtual/os-headers should actually be sys-kernel/xnu
+# but we have to wait until its in the tree
+
 virtual/bootloader	sys-boot/bootx
 virtual/kernel		sys-libs/libsystem
 virtual/libc	   	sys-libs/libsystem

@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: 
 
-### Gentoo for Darwin profile ###
+### Gentoo/Darwin profile ###
 
-# Things we want emerge system to install
+# Things we want emerge system to install for all Darwin profiles
 
 *net-misc/wget
 *virtual/editor

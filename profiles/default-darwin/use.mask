@@ -1,4 +1,4 @@
-# Add USE flags that don't work on Darwin here
+# Add USE flags that don't work on Darwin/OpenDarwin/OS X here
 
 # these will more than likely never work on darwin
 3dfx
@@ -13,6 +13,7 @@ divx4linux
 djbfft
 fbcon
 fdftk
+fmod
 gpm
 hardened
 icc
@@ -40,10 +41,7 @@ acl
 arts
 doc
 firebird
-fmod
 gnome
-gtk
-gtk2
 jack-tmpfs
 kde
 mikmod

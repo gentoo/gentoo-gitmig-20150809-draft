@@ -1,0 +1,39 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: 
+
+# This file describes the packages needed to build an OpenDarwin stage 1
+
+app-arch/bzip2
+app-arch/gzip
+app-arch/tar
+app-editors/nano
+app-shells/bash
+dev-lang/python
+net-misc/rsync
+net-misc/wget
+sys-apps/baselayout-darwin
+sys-apps/bootstrap_cmds
+sys-apps/coreutils
+sys-apps/debianutils
+sys-apps/diffutils
+sys-apps/file
+sys-apps/findutils
+sys-apps/gawk
+sys-apps/grep
+sys-apps/less
+sys-apps/net-tools
+sys-apps/portage
+sys-apps/sed
+sys-apps/texinfo
+sys-devel/binutils
+sys-devel/bison
+sys-devel/cctools
+sys-devel/cctools-extras
+sys-devel/flex
+sys-devel/gcc
+sys-devel/gettext
+sys-devel/make
+sys-devel/patch
+sys-libs/glibc
+sys-libs/libstreams
