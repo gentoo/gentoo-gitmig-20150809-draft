@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.15 2004/08/07 19:27:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.16 2004/08/07 20:05:48 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -72,7 +72,8 @@ DEPEND="$DEPEND
 	xsl? ( dev-libs/libxslt )
 	zlib? ( sys-libs/zlib )"
 
-# this would be xml2? 
+# this would be xml2?, but PEAR requires XML support
+# and we always want to build PEAR.
 DEPEND="$DEPEND
 		dev-libs/libxml2"
 
@@ -157,13 +158,13 @@ php5-sapi_check_awkward_uses () {
 
 	if useq dbx ; then
 		confutils_use_depend_any "dbx" "frontbase" "mssql" "odbc" "postgres" "sybase-ct" "oci8" "sqlite"
-		enable_extension_enable		"dbx"			"dbx"			1
+		enable_extension_enable		"dbx"	"dbx"		1
 	fi
 
 	if useq gd-external ; then
-		enable_extension_with "gd" "gd-external" 1 "/usr"
-		enable_extension_enable	"gd-jis-conf"	"nls" 0
-		enable_extension_enable	"gd-native-ttf"	"truetype" 0
+		enable_extension_with 	"gd" 			"gd-external" 1 "/usr"
+		enable_extension_enable	"gd-jis-conf"	"nls" 		0
+		enable_extension_enable	"gd-native-ttf"	"truetype" 	0
 	else
 		enable_extension_with	"freetype-dir"	"truetype"	0 "/usr"
 		enable_extension_with	"t1lib"			"truetype"	0 "/usr"
@@ -174,18 +175,18 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_with 	"tiff-dir" 		"tiff" 		0 "/usr"
 		enable_extension_with 	"xpm-dir" 		"xpm" 		0 "/usr/X11R6/lib"
 		# enable gd last, so configure can pick up the previous settings
-		enable_extension_with "gd" "gd" 0
+		enable_extension_with 	"gd" 			"gd" 		0
 	fi
 
 	if useq imap ; then
-		enable_extension_with "imap" "imap" 1
+		enable_extension_with 	"imap" 			"imap" 		1
 		# the IMAP-SSL arg doesn't parse 'shared,/usr/lib' right
-		enable_extension_with "imap-ssl" "ssl" 0
+		enable_extension_with 	"imap-ssl" 		"ssl" 		0
 	fi
 
 	if useq ldap ; then
-		enable_extension_with "ldap" "ldap" 1
-		enable_extension_with "ldap-sasl" "sasl" 1
+		enable_extension_with 		"ldap" 			"ldap" 			1
+		enable_extension_with 		"ldap-sasl" 	"sasl" 			1
 	fi
 
 	if useq odbc ; then
@@ -242,6 +243,7 @@ php5-sapi_check_awkward_uses () {
 	confutils_use_depend_all "inifile"	"dba"
 	confutils_use_depend_all "qdbm"		"dba"
 
+	# build EXIF support if we support a file format that uses it
 	confutils_use_depend_any "exif" "jpeg" "tiff"
 
 	# GD library support
