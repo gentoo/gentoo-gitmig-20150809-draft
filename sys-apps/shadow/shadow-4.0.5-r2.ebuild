@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5-r2.ebuild,v 1.7 2005/01/16 12:34:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5-r2.ebuild,v 1.8 2005/02/07 22:06:11 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND=">=sys-libs/cracklib-2.7-r3
 	!pam? ( !sys-apps/pam-login )
 	skey? ( app-admin/skey )
 	selinux? ( sys-libs/libselinux )"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51-r2
 	nls? ( sys-devel/gettext )"
 
