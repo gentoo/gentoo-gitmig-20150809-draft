@@ -2,7 +2,7 @@
 
 import os
 from commands import *
-import string
+import string,md5
 
 mystart=os.path.normpath(os.environ["D"])
 mypackage=os.environ["PF"]
@@ -23,9 +23,33 @@ def prepare_db():
     if not os.path.isdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage):
 	os.mkdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
 
-def md5(x):
-    myresult=getstatusoutput("/usr/bin/md5sum "+x)
-    return string.split(myresult[1]," ")[0]
+def movefile(srcfile,destfile):
+    try:
+        shutil.copyfile(src,dest)
+    except:
+        return 0
+    shutil.copystat(src,dest)
+    mystat=os.stat(src)
+    os.chown(dest,mystat[4],mystat[5]) 
+    os.unlink(srcfile)
+    return 1
+
+def md5digest(x):
+    hexmap=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+    m=md5.new()
+    mydata=""
+    myfile=open(x)
+    while (1):
+        #do 256K reads for enhanced performance
+        mydata=myfile.read(262144)
+        if mydata=="":
+            break
+        m.update(mydata)
+    myfile.close()
+    asciidigest=""
+    for mydigit in m.digest():
+        asciidigest=asciidigest+hexmap[((ord(mydigit) & 0xf0) >> 4)]+hexmap[(ord(mydigit) & 0xf)]
+    return asciidigest
 
 def getmtime(x):
 	 return `os.lstat(x)[-2]`
@@ -41,16 +65,20 @@ def mergefiles():
 	floc=pathstrip(os.path.normpath(mycurpath+"/"+x))
 	if os.path.islink(x):
 	    myto=os.readlink(x)
-	    mycom=getstatusoutput("/bin/ln -sf "+myto+" "+floc[0])
-	    if mycom[0]==0:
+            if os.path.exists(floc[0]):
+                if os.path.isdir(floc[0]):
+                    print "!!!",floc[0],"->",myto
+                else:
+                    os.unlink(floc[0])
+            try:
+                os.symlink(myto,floc[0])
 		print "<<<",floc[0],"->",myto
 		outfile.write("sym "+floc[1]+" -> "+myto+" "+getmtime(floc[0])+"\n")
-	    else:
+            except:
 		print "!!!",floc[0],"->",myto
 	elif os.path.isfile(x):
-	    mymd5=md5(mycurpath+"/"+x)
-	    mystatus=getstatusoutput("/bin/mv "+x+" "+pathstrip(mycurpath)[0])
-	    if mystatus[0]==0:
+	    mymd5=md5digest(mycurpath+"/"+x)
+            if movefile(x,pathstrip(mycurpath)[0]):
 		zing="<<<"
 	    else:
 		zing="!!!"
