@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r1.ebuild,v 1.4 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r1.ebuild,v 1.5 2004/03/18 04:37:03 zx Exp $
 
 At=j2sdkee-1_3_1-linux.tar.gz
 S=${WORKDIR}/j2sdkee1.3.1
@@ -31,13 +31,20 @@ src_install () {
 		cp -a $i ${D}/opt/${P}/
 	done
 
+	# Setup env vars
+	addwrite /etc/env.d/29${P}
+	j2eeenv=/etc/env.d/29${P}
+	echo "CLASSPATH=/opt/${P}/lib/j2ee.jar" > $j2eeenv
+	echo "PATH=/opt/${P}/bin" >> $j2eeenv
+	echo "J2EE_HOME=/opt/${P}" >> $j2eeenv
 	dodoc LICENSE README
+
 	if [ -n "`use doc`" ] ; then
 		dohtml -r doc/*
 	fi
 }
 
-src_postinst() {
+pkg_postinst() {
 	einfo "Remember to set JAVA_HOME before running /opt/${P}/bin/j2ee"
 	einfo "A set of sample configuration files (that work) can be found in /opt/${P}/conf and /opt/${P}/config"
 }
