@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.9 2003/09/12 03:46:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.10 2003/09/12 11:18:02 weeve Exp $
+
+  12 Sep 2003; Jason Wever <weeve@gentoo.org> lzo-1.08-r1.ebuild:
+  Fixed dependencies for non-x86 arches as nasm is an x86 assembler and not
+  keyworded for anything other than x86.
 
 *lzo-1.08-r1 (11 Sep 2003)
 

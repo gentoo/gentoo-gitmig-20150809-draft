@@ -1,3 +1,6 @@
+MD5 4c3344dafadc50cbb717c9a551d5a6f7 ChangeLog 1039
 MD5 e6f77b98c6eb345e72c410843b3d3fcd lzo-1.08.ebuild 770
-MD5 397b0cae685a96cb02724c3d0fd5aceb ChangeLog 816
+MD5 a96edca5a1ad16f6b9603df1ccc68bdf lzo-1.08-r1.ebuild 871
 MD5 b40c71f87f862f9f4491fd165379f23b files/digest-lzo-1.08 60
+MD5 43fb13762383b572d22152f8815ea4a5 files/1.08-gcc3.patch 738
+MD5 b40c71f87f862f9f4491fd165379f23b files/digest-lzo-1.08-r1 60
