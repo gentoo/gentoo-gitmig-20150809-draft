@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.49-r1.ebuild,v 1.2 2003/02/13 17:44:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.65.ebuild,v 1.1 2003/02/22 02:16:16 blocke Exp $
 
-RH_EXTRAVERSION="3"
+RH_EXTRAVERSION="1"
 
 DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE3, GDM, Metacity and Nautilus"
 HOMEPAGE="http://www.redhat.com"
-SRC_URI="http://distro.ibiblio.org/pub/Linux/distributions/redhat/rawhide/SRPMS/SRPMS/${P}-${RH_EXTRAVERSION}.src.rpm"
+SRC_URI="ftp://ftp.redhat.com/pub/redhat/linux/beta/phoebe/en/os/i386/SRPMS/${P}-${RH_EXTRAVERSION}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~alpha"
 IUSE="kde gtk"
 
 # Needed to build...
@@ -44,11 +44,13 @@ _replace() {
 src_unpack() {
 	cd ${WORKDIR}
 	rpm2targz ${DISTDIR}/${A}
-	tar xvzf ${P}*.src.tar.gz
-	tar xvzf ${P}.tar.gz
+	tar xzf ${P}*.src.tar.gz
+	tar xzf ${P}.tar.gz
 }
 
 src_compile() {
+
+	export WANT_AUTOCONF_2_5=1
 
 	# disable qt and kde support if kde use keyword is not set
 	# note: qt and kde support seem to be tied together... maybe someone with
@@ -77,10 +79,6 @@ src_compile() {
 
 	autoconf
 	automake
-
-	# clear out old moc files for qt 3.1.0
-	rm ${S}/art/qt/Bluecurve/*.moc
-	rm ${S}/art/kde/kwin/Bluecurve/redhatclient.moc
 
 	)
 
@@ -117,17 +115,16 @@ src_compile() {
 	_replace "/usr/lib/kde3"         "${KDEDIR}/lib"
 	_replace '${libdir}/kde3'        "${KDEDIR}/lib"
 	_replace "/usr/lib/kwin.la"      "${KDEDIR}/lib/kwin.la"
-
 	chmod +x configure
 
 	)
 
-	econf || die
-	emake || die
+	./configure || die
+        emake || die
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr install || die
 
 	use kde && (
 		dodir ${KDEDIR}/share/apps
