@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.4.0-r1.ebuild,v 1.5 2002/11/09 02:19:10 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.4.0-r1.ebuild,v 1.6 2002/11/09 03:07:34 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -21,10 +21,6 @@ src_compile() {
 	# CFLAGS or CXXFLAGS maildrop will not compile :-( <lamer@gentoo.org>
 	export CFLAGS="${CFLAGS/-funroll-loops/}"
 	export CXXFLAGS="${CXXFLAGS/-funroll-loops/}"
-	
-	unset CFLAGS
-	unset CXXFLAGS
-	
 	./configure \
 		--prefix=/usr \
 		--with-devel \
