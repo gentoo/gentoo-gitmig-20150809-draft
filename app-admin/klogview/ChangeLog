@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/klogview
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.1 2005/02/24 17:38:46 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.2 2005/02/27 18:09:36 weeve Exp $
+
+  27 Feb 2005; Jason Wever <weeve@gentoo.org> klogview-0.6.ebuild:
+  Added ~sparc keyword.
 
 *klogview-0.6 (24 Feb 2005)
 
