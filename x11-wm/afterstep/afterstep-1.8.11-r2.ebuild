@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.11-r2.ebuild,v 1.20 2004/07/24 01:35:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.11-r2.ebuild,v 1.21 2004/09/24 23:40:20 fafhrd Exp $
 
 S=${WORKDIR}/AfterStep-${PV}
 DESCRIPTION="A window manager based on the NeXTStep interface."
@@ -13,8 +13,7 @@ IUSE="nls"
 
 DEPEND="virtual/libc virtual/x11
 	>=media-libs/jpeg-6b
-	>=media-libs/libpng-1.2.1
-	gnustep-base/gnustep-env"
+	>=media-libs/libpng-1.2.1"
 ## >=media-libs/xpm-3.4k
 
 RDEPEND="${DEPEND}

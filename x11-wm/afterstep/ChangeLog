@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.23 2004/07/24 01:35:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.24 2004/09/24 23:40:20 fafhrd Exp $
+
+  24 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  afterstep-1.8.11-r2.ebuild:
+  Removed needless DEPEND on gnustep-base/gnustep-env.
 
   23 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   afterstep-1.8.11-r2.ebuild:
