@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.38 2004/07/22 02:30:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.39 2004/07/28 13:49:09 agriffis Exp $
+
+*bash-3.0 (28 Jul 2004)
+
+  28 Jul 2004; <agriffis@gentoo.org> +bash-3.0.ebuild:
+  Bump to version 3.0. All patches from files/ have been either integrated into
+  gentoo patch or dropped appropriately
 
 *bash-2.05b-r10 (21 Jul 2004)
 
