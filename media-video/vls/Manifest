@@ -3,6 +3,7 @@ MD5 6c0b65e06bb4920984f5f400e339958d vls-0.3.3.ebuild 755
 MD5 9e61d7c0b3bba478ceb781aba7f9f6fe vls-0.5.0.ebuild 758
 MD5 dd05b330042819a1a41924e1b35b740b vls-0.5.3.ebuild 804
 MD5 cb253b07a69f007291ba7d6ed25af3b8 vls-0.5.4.ebuild 807
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 54f9c3e62321c2533fd32bf9d5fe257f files/digest-vls-0.5.4 61
 MD5 130fc7900cb9f9979ce25fa080a8c637 files/digest-vls-0.3.3 62
 MD5 9f8b2f38b4d3e7b4362749a894334a10 files/digest-vls-0.5.0 61
