@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.7.ebuild,v 1.2 2005/01/22 06:37:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.7.ebuild,v 1.3 2005/01/23 08:51:47 mr_bones_ Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins gnome2 eutils flag-o-matic libtool
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 # override eclass
-src_instal() {
+src_install() {
 
 	gnome2_src_install
 
