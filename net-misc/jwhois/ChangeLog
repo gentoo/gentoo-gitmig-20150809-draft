@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/jwhois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.7 2003/02/24 19:42:04 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.8 2003/05/22 22:39:51 mholzer Exp $
+
+*jwhois-3.2.1 (23 May 2003)
+
+  23 May 2003; Martin Holzer <mholzer@gentoo.org> jwhois-3.2.1.ebuild:
+  Version bumped. Ebuild submitted by Nick Fish <ennui@alcatraz.triton.net> in
+  #16040.
 
   11 Feb 2003; Rajiv Manglani <rajiv@gentoo.org> : jwhois-3.2.0.ebuild :
 
