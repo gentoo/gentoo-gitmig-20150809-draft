@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>karltk@gentoo.org</email>
+  <description>Primary maintainer</description>
+</maintainer>
+<longdescription>
+Issue-Tracker is a support issue tracking system written in PHP, with
+option of either a PostgreSQL of MySQL backend. The system is designed
+to be user friendly, and uses a simple modular API to make addition of
+new modules or features very easy.
+
+Issue-Tracker also includes many features that will allow
+customer/technical support organizations to take care of customer issues
+quickly and easy. Some of these features include things like file
+uploads, email parsing, email and sms notifications, unlimited users and
+groups, and much more. 
+</longdescription>
+</pkgmetadata>

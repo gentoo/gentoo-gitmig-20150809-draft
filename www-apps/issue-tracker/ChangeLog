@@ -1,0 +1,18 @@
+# ChangeLog for net-www/issue-tracker
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/ChangeLog,v 1.1 2004/08/15 15:06:14 stuart Exp $
+
+*issue-tracker-4.0.3 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +issue-tracker-4.0.3.ebuild:
+  Moved from net-www/issue-tracker to www-apps/issue-tracker.
+
+  29 Apr 2004; David Holm <dholm@gentoo.org> issue-tracker-4.0.3.ebuild:
+  Added to ~ppc.
+
+*issue-tracker-4.0.3 (28 Mar 2004)
+
+  28 Mar 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  issue-tracker-4.0.3.ebuild:
+  Initial import.  Ebuild submitted by myself.
