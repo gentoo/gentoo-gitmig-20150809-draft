@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/uisp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.3 2004/03/23 02:31:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.4 2004/03/23 18:41:40 dragonheart Exp $
+
+  24 Mar 2004; Daniel Black <dragonheart@gentoo.org> uisp-20030618.ebuild:
+  Removed surperflous S assignment
 
 *uisp-20040311 (23 Mar 2004)
 
