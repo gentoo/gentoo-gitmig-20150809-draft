@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.6 2003/10/17 08:48:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.7 2003/11/16 17:07:00 brad_mssw Exp $
+
+  16 Nov 2003; Brad House <brad_mssw@gentoo.org> libmatroska-0.5.2.ebuild:
+  add amd64 flag
 
   17 Oct 2003; Nick Hadaway <raker@getoo.org> libmatroska-0.5.2.ebuild:
   Marked stable for x86.
