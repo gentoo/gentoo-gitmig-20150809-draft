@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.31 2005/03/24 23:21:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.32 2005/03/25 06:17:28 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -484,9 +484,15 @@ toolchain-glibc_src_install() {
 	# example host.conf with multicast dns disabled by default
 	doins ${FILESDIR}/2.3.4/host.conf
 
-	for x in ls ps date ; do
-		[[ -z $(type -p ${x}) ]] && continue
-		env LD_LIBRARY_PATH="${D}/$(get_libdir)" ${x} > /dev/null \
+	# simple test to make sure our new glibc isnt completely broken.
+	# for now, skip the multilib scenario.
+	[[ $(get_libdir) != "lib" ]] && return 0
+	for x in date env ls true uname ; do
+		x=$(type -p ${x})
+		[[ -z ${x} ]] && continue
+		"${D}"/$(get_libdir)/ld-*.so \
+			--library-path "${D}"/$(get_libdir) \
+			${x} > /dev/null \
 			|| die "simple run test (${x}) failed"
 	done
 }
