@@ -4,8 +4,8 @@ z=`find ${D} -name "man?" -type d`
 echo "man:"
 for x in ${z} 
 do
-	w=`echo ${x}/*.?`
-	if [ "${w}" != "${x}"'/*.?' ]
+	w=`echo ${x}/*.[0-9nm]*`
+	if [ "${w}" != "${x}"'/*.[0-9nm]*' ]
 	then
 	for y in ${w}
 	do
