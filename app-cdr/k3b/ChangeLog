@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.22 2003/09/08 02:00:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.23 2003/10/02 15:41:15 caleb Exp $
+
+*k3b-0.9-r1 (02 Oct 2003)
+
+  02 Oct 2003; Caleb Tennis <caleb@gentoo.org> k3b-0.9-r1.ebuild,
+  files/mp3decoder_fix.diff:
+  add a fix for compilation problems
 
   07 Sep 2003; Caleb Tennis <caleb@gentoo.org> k3b-0.9.ebuild:
   Mark as x86 stable
