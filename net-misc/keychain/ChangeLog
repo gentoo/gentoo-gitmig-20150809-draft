@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/keychain
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.38 2005/01/15 22:16:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.39 2005/03/07 14:25:41 agriffis Exp $
+
+*keychain-2.5.2 (07 Mar 2005)
+
+  07 Mar 2005; Aron Griffis <agriffis@gentoo.org> -keychain-2.4.3.ebuild,
+  +keychain-2.5.2.ebuild:
+  Update to 2.5.2
 
   15 Jan 2005; Aron Griffis <agriffis@gentoo.org> keychain-2.5.1.ebuild:
   keychain-2.5.1 stable everywhere
