@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.10 2004/06/17 02:03:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.11 2004/06/23 01:51:56 wolf31o2 Exp $
+
+  22 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> -ut2004-3204.ebuild,
+  ut2004-3236.ebuild:
+  Moving 3204 to stable on x86 due to security vulnerability in Unreal Engine.
+  See bug #54726 for more information.
 
 *ut2004-3236 (16 Jun 2004)
 

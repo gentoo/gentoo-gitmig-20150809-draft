@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3236.ebuild,v 1.1 2004/06/17 02:03:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3236.ebuild,v 1.2 2004/06/23 01:51:56 wolf31o2 Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ SRC_URI="http://mirror1.icculus.org/${PN}/${PN}-lnxpatch${PV}.tar.bz2
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 RESTRICT="nostrip"
 IUSE="opengl dedicated"
 
