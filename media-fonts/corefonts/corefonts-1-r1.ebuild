@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r1.ebuild,v 1.9 2004/08/22 19:01:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r1.ebuild,v 1.10 2004/09/29 07:11:40 usata Exp $
 
 DESCRIPTION="Microsoft's TrueType core fonts"
 HOMEPAGE="http://corefonts.sourceforge.net/"
@@ -19,10 +19,11 @@ SRC_URI="mirror://sourceforge/corefonts/andale32.exe
 LICENSE="MSttfEULA"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha ~mips ~hppa ~ia64 amd64"
-IUSE=""
+IUSE="X"
 
 DEPEND="app-arch/cabextract
 	virtual/x11"
+RDEPEND="X? ( virtual/x11 )"
 
 S=${WORKDIR}
 FONTDIR="/usr/share/fonts/${PN}"
