@@ -1,4 +1,6 @@
 MD5 c48f5e35c6e7b1c6596eefac56a99f44 pilot-mailsync-0.8.0.2.ebuild 759
+MD5 23a2a7482fbf14ec51060cd0624997ea pilot-mailsync-0.8.1.ebuild 756
 MD5 b00e9fdad7c7efdc62075fed9f439c18 ChangeLog 428
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 6f4db2e33b85320840d9490d4408773a files/digest-pilot-mailsync-0.8.0.2 75
+MD5 c40b06dccab65e88a6d81d42dcea483b files/digest-pilot-mailsync-0.8.1 73
