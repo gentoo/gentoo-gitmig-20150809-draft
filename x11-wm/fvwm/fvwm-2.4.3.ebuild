@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Prakash Shetty <crux@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.3.ebuild,v 1.3 2001/11/27 08:14:23 jerrya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.3.ebuild,v 1.4 2002/05/23 06:50:20 seemant Exp $
 
 
 S=${WORKDIR}/${P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.fvwm.org/"
 
 DEPEND="virtual/glibc
 	>=sys-libs/readline-4.1
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	>=dev-libs/libstroke-0.4
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 

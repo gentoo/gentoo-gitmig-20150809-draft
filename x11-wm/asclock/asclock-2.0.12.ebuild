@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/asclock/asclock-2.0.12.ebuild,v 1.3 2002/04/14 08:43:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/asclock/asclock-2.0.12.ebuild,v 1.4 2002/05/23 06:50:20 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -21,25 +21,25 @@ src_compile() {
 	local x
 	for x in asclock parser symbols config
 	do
-		gcc 	\
-			${CFLAGS} 	\
-			-I/usr/X11R6/include 	\
-			-Dlinux -D__i386__	\
-			-D_POSIX_C_SOURCE=199309L 	\
-			-D_POSIX_SOURCE	\
-			-D_XOPEN_SOURCE	\
-			-D_BSD_SOURCE	\
-			-D_SVID_SOURCE	\
-			-DFUNCPROTO=15	\
-			-DNARROWPROTO	\
+		gcc \
+			${CFLAGS} \
+			-I/usr/X11R6/include \
+			-Dlinux -D__i386__ \
+			-D_POSIX_C_SOURCE=199309L \
+			-D_POSIX_SOURCE \
+			-D_XOPEN_SOURCE \
+			-D_BSD_SOURCE \
+			-D_SVID_SOURCE \
+			-DFUNCPROTO=15 \
+			-DNARROWPROTO \
 			-c -o ${x}.o ${x}.c || die
 	done
-	gcc 	\
-		${CFLAGS}	\
-		-o asclock	\
-		asclock.o parser.o symbols.o config.o	\
-		-L/usr/X11R6/lib	\
-		-L/usr/lib/X11	\
+	gcc \
+		${CFLAGS} \
+		-o asclock \
+		asclock.o parser.o symbols.o config.o \
+		-L/usr/X11R6/lib \
+		-L/usr/lib/X11 \
 		-lXpm -lXext -lX11 || die  
 }
 
