@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.04.1.ebuild,v 1.3 2005/03/11 17:35:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.05.ebuild,v 1.1 2005/03/11 17:35:25 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,6 @@ S="${WORKDIR}/${MY_SP}"
 DESCRIPTION="Perl module for Class::MethodMaker"
 HOMEPAGE="http://search.cpan.org/~fluffy/${MY_P}"
 SRC_URI="mirror://cpan/authors/id/F/FL/FLUFFY/${MY_P}.tar.gz"
-style="builder"
 
 
 LICENSE="Artistic"
@@ -24,4 +23,8 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-perl/module-build"
+# Despite including a Build script, this module dies in tests
+# if built with it. Go figure.
+#DEPEND="dev-perl/module-build"
+
+
