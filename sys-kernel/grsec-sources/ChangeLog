@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.41 2005/01/08 05:21:39 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.42 2005/01/08 16:35:44 solar Exp $
+
+  08 Jan 2005; <solar@gentoo.org> :
+  - digest update from plasmaroo for new CAN-2004-0814 patch
 
 *grsec-sources-2.4.28.2.1.0 (08 Jan 2005)
 
