@@ -17,7 +17,6 @@ ifc
 informix
 firebird
 lirc
-mbrola
 mmx
 mmx2
 oci8
