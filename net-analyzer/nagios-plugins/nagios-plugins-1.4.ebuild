@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.3 2005/03/10 10:40:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.ebuild,v 1.4 2005/03/17 12:13:01 ka0ttic Exp $
 
 inherit eutils
 
@@ -72,8 +72,8 @@ src_install() {
 	chmod +x ${S}/contrib/*.pl
 
 	sed -i -e '1s;#!.*;#!/usr/bin/perl -w;' ${S}/contrib/*.pl || die "sed failed"
-	sed -i -e '30s/use lib utils.pm;/use utils;/' ${S}/contrib/check_file_age.pl \
-		|| die "sed failed"
+	sed -i -e '30s/use lib utils.pm;/use utils;/' \
+		${S}/plugins-scripts/check_file_age.pl || die "sed failed"
 
 	dodoc ABOUT-NLS ACKNOWLEDGEMENTS AUTHORS BUGS CHANGES CODING COPYING \
 		Changelog FAQ INSTALL LEGAL NEWS README REQUIREMENTS SUPPORT
