@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r4.ebuild,v 1.3 2002/04/07 05:52:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r4.ebuild,v 1.4 2002/04/07 13:33:00 gbevin Exp $
 
 PYVER="`echo ${PV} | cut -d '.' -f 1,2`"
 S=${WORKDIR}/Python-${PV}
@@ -21,6 +21,8 @@ DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 
 RDEPEND="$DEPEND"
 PROVIDE="virtual/python"
+
+SLOT="2.2"
 
 src_unpack() {
 	# unpack python

@@ -3,7 +3,7 @@
 # Author Daniel Robbins <drobbins@gentoo.org>
 # Modified Tod M. Neidt <tneidt@fidnet.com>
 # /home/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r4.ebuild,v 1.1 2001/06/04 19:49:02 drobbins Exp
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r5.ebuild,v 1.1 2001/10/20 16:08:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r5.ebuild,v 1.2 2002/04/07 13:32:59 gbevin Exp $
 
 
 S=${WORKDIR}/Python-2.0
@@ -22,6 +22,8 @@ DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 
 RDEPEND="$DEPEND"
 PROVIDE="virtual/python-2.0"
+
+SLOT="2"
 
 src_unpack() {
     local mylibs
