@@ -1,6 +1,10 @@
 # ChangeLog for dev-perlSGMLSpmChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.5 2002/10/30 07:20:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.6 2002/11/03 04:32:55 nall Exp $
+
+  02 Nov 2002; Jon Nall <nall@gentoo.org> SGMLSpm-1.03-r4.ebuild :
+
+  added ppc to KEYWORDS
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
