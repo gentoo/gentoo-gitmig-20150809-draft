@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.7.ebuild,v 1.5 2003/09/11 01:03:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.7.ebuild,v 1.6 2003/09/21 13:00:37 aliz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.zsh.org/"
 
 MYPATCH="${P/-/_}-5.diff"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz
-	 http://ftp.debian.org/debian/pool/main/z/${PN}/${MYPATCH}.gz"
+	 mirror://debian/pool/main/z/${PN}/${MYPATCH}.gz"
 
 SLOT="0"
 LICENSE="ZSH"
