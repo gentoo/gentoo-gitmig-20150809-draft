@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9.ebuild,v 1.1 2004/10/21 22:42:11 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9-r1.ebuild,v 1.1 2004/10/29 13:55:22 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20041021"			# Date of diff between kernel.org and lmo CVS
+CVSDATE="20041022"			# Date of diff between kernel.org and lmo CVS
 #IP30DATE=""				# Date of diff for IP30 (Octane) patches - XXX - Not Implemented Yet
 COBALTPATCHVER="1.8"			# Tarball version for cobalt patches
-SECPATCHVER="1.2"			# Tarball version for security patches
-GENPATCHVER="1.1"			# Tarball version for generic patches
+SECPATCHVER="1.3"			# Tarball version for security patches
+GENPATCHVER="1.2"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 
@@ -33,7 +33,7 @@ HOMEPAGE="http://www.linux-mips.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources"
 KEYWORDS="-*"
-IUSE="cobalt"
+IUSE="cobalt livecd"
 #IUSE="cobalt ip30 ip27"
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -88,11 +88,18 @@ src_unpack() {
 		# IP32 Patches
 		epatch ${WORKDIR}/mips-patches/misc-2.6-ip32-onion2-gbefb-fixes-old.patch
 		epatch ${WORKDIR}/mips-patches/misc-2.6.9-ths-ip32-misc.patch
+		epatch ${WORKDIR}/mips-patches/misc-2.6-ip32-tweak-makefile.patch
+		epatch ${WORKDIR}/mips-patches/misc-2.6-gbefb-compile-fix.patch
 
 		# Generic
-		epatch ${WORKDIR}/mips-patches/misc-2.6-force_mouse_detection.patch
 		epatch ${WORKDIR}/mips-patches/misc-2.6-fix-prologue-error.patch
 	eend
+
+
+	# Patches used in building LiveCDs /* EXPERIMENTAL */
+	if use livecd; then
+		epatch ${WORKDIR}/mips-patches/misc-2.6-livecd-partitioned-cdroms.patch
+	fi
 
 
 #	# Security Fixes
