@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.21 2003/05/19 08:48:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.22 2003/05/19 16:48:39 mholzer Exp $
+
+  19 May 2003; Martin Holzer <mholzer@gentoo.org> xinetd-2.3.10.ebuild,
+  xinetd-2.3.10.ebuild, xinetd-2.3.11.ebuild, xinetd-2.3.7.ebuild,
+  xinetd-2.3.7.ebuild, xinetd-2.3.9.ebuild, xinetd-2.3.9.ebuild,
+  files/xinetd.rc6, files/2.3.9/xinetd.conf, files/2.3.9/xinetd.confd,
+  files/2.3.9/xinetd.rc6, files/2.3.9/etc.xinetd.d/README.services,
+  files/2.3.9/etc.xinetd.d/chargen-tcp, files/2.3.9/etc.xinetd.d/chargen-udp,
+  files/2.3.9/etc.xinetd.d/daytime-tcp, files/2.3.9/etc.xinetd.d/daytime-udp,
+  files/2.3.9/etc.xinetd.d/echo-tcp, files/2.3.9/etc.xinetd.d/echo-udp,
+  files/2.3.9/etc.xinetd.d/time-tcp, files/2.3.9/etc.xinetd.d/time-udp:
+  Cleanup
 
   18 May 2003; Daniel Ahlberg <aliz@gentoo.org> xinetd-2.3.11.ebuild :
   Unmasked on all archs. Security update.

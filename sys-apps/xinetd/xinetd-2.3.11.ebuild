@@ -1,10 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.11.ebuild,v 1.2 2003/05/19 12:13:11 aliz Exp $
-
-
-#SPV=the directory in files/ to grab the goodies from
-SPV=2.3.9
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.11.ebuild,v 1.3 2003/05/19 16:48:39 mholzer Exp $
 
 DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
 HOMEPAGE="http://www.xinetd.org"
@@ -45,13 +41,13 @@ src_install() {
 	doman xinetd/itox.8
 	
 	newdoc xinetd/sample.conf xinetd.conf.dist.sample
-	newdoc ${FILESDIR}/${SPV}/xinetd.conf xinetd.conf.default || die
+	newdoc ${FILESDIR}/xinetd.conf xinetd.conf.default || die
 	dodoc AUDIT INSTALL README TODO CHANGELOG COPYRIGHT
 
-	insinto /etc/xinetd.d ; doins ${FILESDIR}/${SPV}/etc.xinetd.d/* || die
-	exeinto /etc/init.d ; newexe ${FILESDIR}/${SPV}/xinetd.rc6 xinetd || die
-	insinto /etc/conf.d ; newins ${FILESDIR}/${SPV}/xinetd.confd xinetd || die
-	insinto /etc ; doins ${FILESDIR}/${SPV}/xinetd.conf || die
+	insinto /etc/xinetd.d ; doins ${FILESDIR}/etc.xinetd.d/* || die
+	exeinto /etc/init.d ; newexe ${FILESDIR}/xinetd.rc6 xinetd || die
+	insinto /etc/conf.d ; newins ${FILESDIR}/xinetd.confd xinetd || die
+	insinto /etc ; doins ${FILESDIR}/xinetd.conf || die
 }
 
 pkg_postinst(){

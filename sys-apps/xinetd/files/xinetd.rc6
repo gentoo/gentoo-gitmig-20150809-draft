@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/xinetd.rc6,v 1.12 2003/02/14 23:27:20 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/xinetd.rc6,v 1.13 2003/05/19 16:48:39 mholzer Exp $
+
+opts="start stop reload restart dump check"
 
 depend() {
 	need net
@@ -17,5 +19,23 @@ start() {
 stop() {
 	ebegin "Stopping xinetd"
 	start-stop-daemon --stop --quiet --pidfile /var/run/xinetd.pid
+	eend $?
+}
+
+reload(){
+	ebegin "Reloading configuration"
+	killall -HUP xinetd &>/dev/null
+	eend $?
+}
+
+dump(){
+	ebegin "Dumping configuration"
+	killall -USR1 xinetd &>/dev/null
+	eend $?
+}
+
+check(){
+	ebegin "Performing Consistency Check"
+	killall -IOT xinetd &>/dev/null
 	eend $?
 }
