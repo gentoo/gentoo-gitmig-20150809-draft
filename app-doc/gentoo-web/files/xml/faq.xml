@@ -30,7 +30,7 @@
 	<section>
 		<title>What is the differenence between the sys and build tarballs?</title>
 		<body><p>The <e>build</e> tarball is a minimal system capable of connecting to the internet and rebuilding itself, whereas <e>sys</e> is a complete comfortable system.</p>
-		<note>If you need a minimal system for recovery, you might want to try the bootable <uri link="http://www.ibiblio.org/gentoo/gentoo-x86-distro/gentoo-1.0_rc4/images/">rescue disk images</uri> instead.</note></body>
+		<note>If you need a minimal system for recovery, you might want to try the bootable <uri link="http://www.ibiblio.org/gentoo/snapshots/disks/">rescue disk images</uri> instead.</note></body>
 	</section>
 
 	<section>
@@ -209,7 +209,7 @@ the various configuration files is as follows (highest first):
 		ReiserFS filesystems with a 2.4.4+ kernel and a recent version of
 		<path>reiserfsutils</path>.  If this isn't possible, try using a recent
 		Gentoo Linux <uri
-		path="http://www.gentoo.org/doc/portage-user.html">boot/rootdisk</uri>
+		path="http://www.ibiblio.org/gentoo/snapshots/disks/">boot/rootdisk</uri>
 		to boot your system, and then run <c>reiserfsck --rebuild-tree</c> on
 		the corrupted filesystem.  This should make the filesystem consistent
 		again, although you may have lost some files or directories due to
