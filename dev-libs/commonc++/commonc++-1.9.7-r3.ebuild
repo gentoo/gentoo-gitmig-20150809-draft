@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r3.ebuild,v 1.12 2004/05/04 19:23:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r3.ebuild,v 1.13 2004/06/03 16:23:12 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.1.patch || die "patch1 failed"
-	if [ `use ppc` ]; then
+	if use ppc; then
 		epatch ${DISTDIR}/${P}-1.diff.gz || die "patch2 failed"
 	fi
 }
