@@ -1,69 +1,59 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.11 2003/02/13 10:26:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.12 2003/03/01 04:54:41 vapier Exp $
 
+MY_PV=${PV/./}
+SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon.v${MY_PV}src.tgz"
+HOMEPAGE="http://www.cs.arizona.edu/icon/"
+DESCRIPTION="very high level language"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86 sparc"
 IUSE="X"
 
-S=${WORKDIR}/icon.v940src
-SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon.v940src.tgz"
-
-HOMEPAGE="http://www.cs.arizona.edu/icon/"
-DESCRIPTION="icon is a v. high level language"
+S=${WORKDIR}/icon.v${MY_PV}src
 
 DEPEND="X? ( virtual/x11 )
 	sys-devel/gcc"
 
-LICENSE="as-is"
-SLOT="0"
-KEYWORDS="x86 sparc "
-
 src_unpack() {
-	
-	cd ${WORKDIR}
 	unpack ${A}
 	cd ${S}/config/unix/intel_linux
 	patch -p0 <${FILESDIR}/${P}-gentoo.diff
-	
 }
 
 src_compile() {
-	
-	cd ${S}
-
 	if [ "`use X`" ]; then
-	make X-Configure name=intel_linux || die
+		make X-Configure name=intel_linux || die
 	else
-	make Configure name=intel_linux || die
+		make Configure name=intel_linux || die
 	fi
 	
 	make || die
-	
+
 	# small builtin test
 	make Samples || die
 	# large builtin test
 	make Test || die
-
 }
 
-src_install () {
-	
+src_install() {
 	#make Install dest=${D}/opt/icon || die
 	# fhs-problems, manual rectify
-	
 	into /usr
-	
+
 	cd ${S}/bin
 	rm .placeholder libXpm.a rt.h
 	dobin *
-	
+
 	cd ${S}/lib
 	rm .placeholder
 	dolib *
-	
+
 	cd ${S}/man/man1
 	doman icont.1
-	
+
 	cd ${S}/doc
 	dodoc * ../README
-	
 }
