@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.2 2002/12/03 17:13:04 agriffis Exp $
+
+*lilypond-1.6.6 (03 Dec 2002)
+
+  03 Dec 2002; Aron Griffis <agriffis@gentoo.org> lilypond-1.6.6.ebuild :
+
+  Update to version 1.6.6 which compiles with at least gcc-2.95.3 and
+  gcc-3.2.1.  I put clauses in the ebuild to help compile for gcc-3.[01] but
+  haven't been able to test them.  It shouldn't matter (much) since Gentoo 1.2
+  is using gcc-2.95.3 and Gentoo 1.4 is using gcc-3.2.  This fixes BUG #4682.
 
 *lilypond-1.5.15 (1 Feb 2002)
 
