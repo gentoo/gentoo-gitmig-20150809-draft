@@ -1,0 +1,42 @@
+--- bash-completion-config.in.r50	2004-11-05 11:44:07.534197154 -0500
++++ bash-completion-config.in	2004-11-05 11:44:14.908265230 -0500
+@@ -1,7 +1,7 @@
+ #!%BASH%
+ # Copyright 1999-2004 Gentoo Foundation
+ # Distributed under the terms of the GNU General Public License v2
+-# $Id: 0.4-r1_fix-relative-path-install.diff,v 1.1 2004/11/05 18:45:54 ka0ttic Exp $
++# $Id: 0.4-r1_fix-relative-path-install.diff,v 1.1 2004/11/05 18:45:54 ka0ttic Exp $
+ #
+ # Author: Aaron Walker <ka0ttic@gentoo.org>
+ 
+@@ -275,10 +275,26 @@
+     header
+     for bashcomp in "$@" ; do
+         [[ "${bashcomp}" == -* ]] && continue;
+-        
+-        file="$BASHCOMP_DIR/${bashcomp##*/}"
+-        [[ "${bashcomp}" == */* ]] && file=$bashcomp # a path was given
+-        
++
++        # what form is the argument in?
++        case "${bashcomp}" in
++            /*)     # absolute path
++                file="$bashcomp"        ;;
++                
++            */*)    # relative path
++                file="$PWD/$bashcomp"   ;;
++                
++            *)      # just the name
++                # CWD
++                if [ -f "${bashcomp}" ] ; then
++                    file="$PWD/$bashcomp"
++                # assume BASHCOMP_DIR
++                else
++                    file="$BASHCOMP_DIR/$bashcomp"
++                fi
++                ;;
++        esac
++                
+         if [ ! -e "${file}" ] ; then
+             ewarn "${file##*/} doesn't seem to exist"
+             continue
