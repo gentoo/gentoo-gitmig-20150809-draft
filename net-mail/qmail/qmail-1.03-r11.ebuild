@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r11.ebuild,v 1.2 2003/08/06 07:48:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r11.ebuild,v 1.3 2003/08/06 08:44:49 robbat2 Exp $
 
 inherit eutils
 
@@ -309,6 +309,9 @@ pkg_postinst() {
 	einfo "Additionally, the QMTP and QMQP protocols are supported, and can be started as:"
 	einfo "ln -s /var/qmail/supervise/qmail-qmtpd /service/qmail-qmtpd"
 	einfo "ln -s /var/qmail/supervise/qmail-qmqpd /service/qmail-qmqpd"
+	echo 
+	einfo "Additionally, if you wish to run qmail right now, you should run:"
+	einfo "source /etc/profile"
 }
 
 pkg_config() {
