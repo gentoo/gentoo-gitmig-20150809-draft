@@ -53,8 +53,10 @@ src_unpack() {
 	unpack ${A}
 
 	# Fix bug with the default Skin
-	cd ${WORKDIR}/default
-	patch <${FILESDIR}/default-skin.diff
+	if [ "`use gtk`" ] ; then
+		cd ${WORKDIR}/default
+		patch <${FILESDIR}/default-skin.diff
+	fi
 
 	if [ "`use mga`" ] ; then
 		cd ${S}/drivers;
