@@ -15,7 +15,7 @@
 DESCRIPTION="This is a sample skeleton ebuild file"
 
 # Homepage, not used by Portage directly but handy for developer reference
-HOMEPAGE="http://foo.bar.com"
+HOMEPAGE="http://foo.bar.com/"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
@@ -73,7 +73,6 @@ DEPEND=""
 # Source directory; the dir where the sources can be found (automatically
 # unpacked) inside ${WORKDIR}.  S will get a default setting of ${WORKDIR}/${P}
 # if you omit this line.
-
 S="${WORKDIR}/${P}"
 
 src_compile() {
