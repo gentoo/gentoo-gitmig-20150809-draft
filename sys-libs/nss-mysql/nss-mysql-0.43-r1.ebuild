@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.43-r1.ebuild,v 1.1 2003/09/17 08:30:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.43-r1.ebuild,v 1.2 2003/09/17 20:56:26 max Exp $
 
 DESCRIPTION="NSS MySQL Module"
 HOMEPAGE="http://savannah.gnu.org/projects/${PN}"
@@ -14,8 +14,9 @@ IUSE="static"
 DEPEND="virtual/glibc
 	>=dev-db/mysql-3.23.51-r1"
 RDEPEND="${DEPEND}
-		sys-apps/gzip
-		sys-apps/sed"
+	sys-apps/gzip
+	sys-apps/sed
+	!sys-libs/libnss-mysql"
 
 src_compile() {
 	use static && myconf="--enable-static"
