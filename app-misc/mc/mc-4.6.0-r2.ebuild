@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r2.ebuild,v 1.6 2003/12/26 13:57:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r2.ebuild,v 1.7 2004/02/22 19:40:34 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -22,7 +22,7 @@ DEPEND=">=sys-fs/e2fsprogs-1.19
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 
 filter-flags -malign-double
 

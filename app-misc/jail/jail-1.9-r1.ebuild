@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.6 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.7 2004/02/22 19:39:37 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gsyc.inf.uc3m.es/~assman/jail/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc"
 
 DEPEND="virtual/glibc"
 RDEPEND="dev-lang/perl
