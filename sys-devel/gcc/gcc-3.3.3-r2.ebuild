@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r2.ebuild,v 1.2 2004/04/20 20:29:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r2.ebuild,v 1.3 2004/04/20 22:41:08 solar Exp $
 
-IUSE="static nls bootstrap java build X multilib nogcj hardened uclibc"
+IUSE="static nls bootstrap java build X multilib nogcj hardened uclibc f77 objc"
+KEYWORDS="~x86 ~mips ~sparc amd64 -hppa ~alpha ~ia64 ~ppc64 s390"
 
 inherit eutils flag-o-matic libtool
 
@@ -57,7 +58,7 @@ PP_FVER="${PP_VER//_/.}-7"
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 
 # Snapshot support ...
 #SNAPSHOT="2002-08-12"
@@ -109,8 +110,6 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="~x86 ~mips ~sparc amd64 -hppa ~alpha ~ia64 ~ppc64"
-
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
 # $PV, as people upgrading to new gcc layout will not have
@@ -148,7 +147,7 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	hardened? ( >=sys-libs/glibc-2.3.3_pre20040207 )
+	hardened? ( !amd64? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -295,8 +294,6 @@ src_unpack() {
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
 
-	echo
-
 	# Branch update ...
 	if [ -n "${BRANCH_UPDATE}" ]
 	then
@@ -390,7 +387,11 @@ src_compile() {
 	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
-		gcc_lang="c,c++,f77,objc"
+		gcc_lang="c,c++"
+		use f77  && gcc_lang="${gcc_lang},f77"
+		use objc && gcc_lang="${gcc_lang},objc"
+		[ -n "`use java`" -a -z "`use nogcj`" ] && gcc_lang="${gcc_lang},java"
+		# use ada  && gcc_lang="${gcc_lang},ada"
 	else
 		gcc_lang="c"
 	fi
@@ -399,10 +400,6 @@ src_compile() {
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
-	fi
-	if [ -n "`use java`" -a -z "`use nogcj`" -a -z "`use build`" ]
-	then
-		gcc_lang="${gcc_lang},java"
 	fi
 
 	# Enable building of the gcj Java AWT & Swing X11 backend
@@ -673,9 +670,12 @@ src_install() {
 		cd ${S}/libiberty
 		docinto ${CCHOST}/libiberty
 		dodoc ChangeLog* COPYING.LIB README
+		if [ -z "`use objc`" ]
+		then
 		cd ${S}/libobjc
 		docinto ${CCHOST}/libobjc
 		dodoc ChangeLog* README* THREADS*
+		fi
 		cd ${S}/libstdc++-v3
 		docinto ${CCHOST}/libstdc++-v3
 		dodoc ChangeLog* README
