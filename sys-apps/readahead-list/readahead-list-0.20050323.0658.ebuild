@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050323.0658.ebuild,v 1.2 2005/03/23 08:33:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050323.0658.ebuild,v 1.3 2005/03/23 08:37:02 robbat2 Exp $
 
-DESCRIPTION="Perform readahead(2) to pre-cache files."
-HOMEPAGE="http://tirpitz.iat.sfu.ca/"
+DESCRIPTION="Preloads files into the page cache to accelerate program loading."
+
+HOMEPAGE="http://www.orbis-terrarum.net"
 SRC_URI="${HOMEPAGE}/custom-software/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
@@ -12,7 +13,9 @@ IUSE="doc"
 
 # I'm not entirely certain about this
 # need to check if other libc variants provide readahead(2)
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
+		virtual/os-headers"
 
 src_compile() {
 	econf --sbindir=/sbin || die "econf failed"
