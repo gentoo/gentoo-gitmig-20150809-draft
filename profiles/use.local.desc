@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.934 2005/02/05 19:02:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.935 2005/02/06 00:43:22 spock Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -733,6 +733,7 @@ x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
 x11-misc/xscreensaver:offensive - Adds screensavers that are not-safe-for-work.
 x11-plugins/wmhdplop:gkrellm - Enable build of gkrellm module
 x11-plugins/wmsysmon:high-ints - Enable support for monitoring 24 interrupts, useful on SMP machines
+x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/eterm:escreen - enable built in screen support
 x11-terms/eterm:etwin - enable twin support
 x11-terms/mlterm:uim - Enable uim support
