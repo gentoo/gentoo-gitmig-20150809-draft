@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.45 2003/07/29 06:01:42 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.46 2003/07/30 05:31:03 strider Exp $
+
+*sun-jdk-1.4.1_04 (30 Jul 2003)
+
+  30 Jul 2003; Adrian Almenar <strider@gentoo.org> sun-jdk-1.4.1.04.ebuild files/digest-sun-jdk-1.4.1.04 files/sun-jdk-1.4.1.04:
+  Version Bump Maintenance Release for 1.4.1 Tree.
 
 *sun-jdk-1.4.2 (29 Jul 2003)
 
