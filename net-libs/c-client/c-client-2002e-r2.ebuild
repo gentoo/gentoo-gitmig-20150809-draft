@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e-r2.ebuild,v 1.5 2004/06/24 23:10:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e-r2.ebuild,v 1.6 2004/08/19 03:38:56 tgall Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 s390"
+KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 s390 ppc64"
 IUSE="ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
