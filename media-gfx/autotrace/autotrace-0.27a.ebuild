@@ -1,10 +1,11 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.27a.ebuild,v 1.2 2002/04/28 04:50:25 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts Bitmaps to vector-grahics"
-SRC_URI="http://prdownloads.sourceforge.net/autotrace/autotrace-${PV}.tar.gz"
+SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://autotrace.sourceforge.net/"
 
 DEPEND="virtual/glibc
@@ -14,11 +15,11 @@ DEPEND="virtual/glibc
 
 src_compile() {
 
-	./configure --host=${CHOST}				\
-		    --prefix=/usr || die
+	./configure --host=${CHOST} \
+		--prefix=/usr || die
 		    
-#	cp Makefile Makefile.orig
-#	sed -e "s:\$(LINK):\$(LINK) -lXt:" Makefile.orig > Makefile
+	#	cp Makefile Makefile.orig
+	#	sed -e "s:\$(LINK):\$(LINK) -lXt:" Makefile.orig > Makefile
 
 	make || die
 }

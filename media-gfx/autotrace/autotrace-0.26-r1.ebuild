@@ -1,12 +1,11 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.26-r1.ebuild,v 1.1 2001/10/06 10:38:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.26-r1.ebuild,v 1.2 2002/04/28 04:50:25 seemant Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts Bitmaps to vector-grahics"
-SRC_URI="http://homepages.go.com/homepages/m/a/r/martweb/${A}"
+SRC_URI="http://homepages.go.com/homepages/m/a/r/martweb/${P}.tar.gz"
 HOMEPAGE="http://homepages.go.com/homepages/m/a/r/martweb/AutoTrace.htm"
 
 DEPEND="virtual/glibc
@@ -16,17 +15,16 @@ DEPEND="virtual/glibc
 
 src_compile() {
 
-    try ./configure --prefix=/usr --host=${CHOST}
-#    cp Makefile Makefile.orig
-#    sed -e "s:\$(LINK):\$(LINK) -lXt:" Makefile.orig > Makefile
-    try make
+	./configure --prefix=/usr || die
+	#	cp Makefile Makefile.orig
+	#	sed -e "s:\$(LINK):\$(LINK) -lXt:" Makefile.orig > Makefile
+	make || die
 
 }
 
 src_install () {
 
-    cd ${S}
-    try make DESTDIR=${D} install
-    dodoc AUTHORS COPYING ChangeLog NEWS README 
+	cd ${S}
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS COPYING ChangeLog NEWS README 
 }
-

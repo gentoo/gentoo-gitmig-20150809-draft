@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Chouser <chouser@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.31-r1.ebuild,v 1.1 2002/04/13 00:20:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.31-r1.ebuild,v 1.2 2002/04/28 04:50:25 seemant Exp $
 
 # nonstandard archive name and source dir
-A=${P//[-.]/_}.zip
+MY_P=${P//[-.]/_}
 S=${WORKDIR}/${P/-/_}
 
 DESCRIPTION="translates PostScript and PDF graphics into other vector formats"
-SRC_URI="http://home.t-online.de/home/helga.glunz/wglunz/${PN}/${A}"
+SRC_URI="http://home.t-online.de/home/helga.glunz/wglunz/${PN}/${MY_P}.zip"
 HOMEPAGE="http://www.pstoedit.net/pstoedit"
 
 DEPEND="media-libs/libpng

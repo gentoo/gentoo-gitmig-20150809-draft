@@ -1,13 +1,12 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/gphoto-0.4.3-r1.ebuild,v 1.1 2001/10/06 17:22:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/gphoto-0.4.3-r1.ebuild,v 1.2 2002/04/28 04:50:25 seemant Exp $
 
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="free, redistributable digital camera software application"
-SRC_URI="http://www.gphoto.net/dist/${A}"
+SRC_URI="http://www.gphoto.net/dist/${P}.tar.gz"
 HOMEPAGE="http://www.gphoto.org"
 
 DEPEND="virtual/glibc
@@ -17,16 +16,16 @@ DEPEND="virtual/glibc
 
 src_compile() {
 
-   # -pipe does no work
-   CFLAGS="${CFLAGS/-pipe}"
-   try ./configure --prefix=/usr --sysconfdir=/etc/gnome
-   try make clean
-   try pmake
+	# -pipe does no work
+	CFLAGS="${CFLAGS/-pipe}"
+	./configure --prefix=/usr --sysconfdir=/etc/gnome || die
+	make clean || die
+	pmake || die
 }
 
 src_install() {
-    try make prefix=${D}/usr sysconfdir=${D}/etc/gnome  install
-    dodoc AUTHORS CONTACTS COPYING ChangeLog FAQ MANUAL NEWS* PROGRAMMERS \
-	 README THANKS THEMES TODO
+	 make prefix=${D}/usr sysconfdir=${D}/etc/gnome  install || die
+	 dodoc AUTHORS CONTACTS COPYING ChangeLog FAQ MANUAL NEWS* PROGRAMMERS \
+		 README THANKS THEMES TODO
 }
 
