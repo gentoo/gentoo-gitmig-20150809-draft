@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.20 2004/09/13 07:27:24 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.21 2004/10/16 11:12:04 s4t4n Exp $
+
+*wmnd-0.4.10 (16 Oct 2004)
+
+  16 Oct 2004; Michele Noberasco <s4t4n@gentoo.org> wmnd-0.4.10.ebuild:
+  Version bump.
+  wmnd-0.4.9.ebuild:
+  Remove unnecessary eutils inheritance from ebuild...
 
   13 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> wmnd-0.4.7.ebuild:
   Remove older ebuilds...
