@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.7 2004/06/24 21:53:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.8 2004/09/06 00:01:02 ciaranm Exp $
+
+inherit eutils
 
 Name="blas"
 DESCRIPTION="FORTRAN reference implementation of the BLAS (linear algebra lib)"
@@ -36,7 +38,7 @@ ifc_info() {
 		einfo "Beware that ifc's -O3 is very aggressive, sometimes resulting in"
 		einfo "significantly worse performance."
 		einfo
-		sleep 5
+		epause 5
 	fi
 }
 

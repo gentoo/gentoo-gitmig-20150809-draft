@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/lapack-reference-3.0.ebuild,v 1.4 2004/07/13 20:39:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/lapack-reference-3.0.ebuild,v 1.5 2004/09/06 00:02:22 ciaranm Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ ifc_info() {
 		einfo "Beware that ifc's -O3 is very aggressive, sometimes resulting in"
 		einfo "significantly worse performance."
 		einfo
-		sleep 5
+		epause 5
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/blas-reference
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.8 2004/06/24 21:53:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.9 2004/09/06 00:01:02 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  blas-reference-19940131.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   09 Jun 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild :
   added ~amd64 keyword (ifc masked in use.mask for amd64 profiles until we get 64bit ifc)

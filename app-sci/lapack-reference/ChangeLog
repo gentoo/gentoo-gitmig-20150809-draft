@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/lapack-reference
 # Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/ChangeLog,v 1.3 2004/06/24 22:07:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/ChangeLog,v 1.4 2004/09/06 00:02:22 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  lapack-reference-3.0.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   18 Jun 2004; Aron Griffis <agriffis@gentoo.org> lapack-reference-3.0.ebuild:
   Fix use invocation
