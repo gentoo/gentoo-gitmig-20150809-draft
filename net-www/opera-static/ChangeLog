@@ -1,15 +1,21 @@
 # ChangeLog for net-www/opera-static
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/ChangeLog,v 1.2 2002/07/04 16:52:42 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/ChangeLog,v 1.3 2002/07/05 02:07:03 agenkin Exp $
 
-*opera-6.0-r1 (4 Jul 2002)
+*opera-static-6.02 (4 Jul 2002)
+
+  4 Jul 2002; Arcady Genkin <agenkin@thpoon.com> opera-static-6.02.ebuild:
+
+  Version 6.02 is out.
+
+*opera-static-6.0-r1 (4 Jul 2002)
 
   4 Jul 2002; Arcady Genkin <agenkin@thpoon.com> opera-static-6.0-r1.ebuild:
 
   Fixed the wrapper /opt/opera/share/bin/opera to not have $D in lots of
   places.
 
-*opera-6.0 (20 May 2002)
+*opera-static-6.0 (20 May 2002)
 
   20 May 2002; Arcady Genkin <agenkin@thpoon.com> opera-static-6.0.ebuild:
 
