@@ -1,0 +1,11 @@
+diff -Naur kon2-0.3.9b.orig/src/term.c kon2-0.3.9b/src/term.c
+--- kon2-0.3.9b.orig/src/term.c	2004-11-20 00:15:35.000000000 +0100
++++ kon2-0.3.9b/src/term.c	2004-11-20 00:16:21.888163632 +0100
+@@ -89,6 +89,7 @@
+ };
+ 
+ static struct initInfo init;
++static void ChangeNewConsole();
+ 
+ static void	CleanUp(void)
+ {
