@@ -1,5 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
+# Author Jano (default3) <your email>
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wmix/wmix-3.0.ebuild,v 1.2 2001/07/18 23:56:57 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Dockapp mixer for OSS or ALSA"
