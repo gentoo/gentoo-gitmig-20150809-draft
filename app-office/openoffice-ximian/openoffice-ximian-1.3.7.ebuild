@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.10 2005/01/18 18:12:22 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.11 2005/01/18 19:34:51 suka Exp $
 
 # Notes:
 #
@@ -252,6 +252,11 @@ src_unpack() {
 		epatch ${FILESDIR}/${OO_VER}/STLport-vector.patch
 	fi
 
+	#Fixes for nptl
+	if use nptl; then
+		epatch ${FILESDIR}/${OO_VER}/nptl.patch
+	fi
+
 	#Add our own splash screen
 	epatch ${FILESDIR}/${OO_VER}/gentoo-splash.diff
 
@@ -284,16 +289,14 @@ src_unpack() {
 		epatch ${FILESDIR}/${OO_VER}/gcc34_2.patch.bz2
 		epatch ${FILESDIR}/${OO_VER}/gcc34-sal-link-to-libsupc++.diff
 		use !java && epatch ${FILESDIR}/${OO_VER}/gcc34-nojava-fix.patch
-		use nptl && epatch ${FILESDIR}/${OO_VER}/gcc34-nptl-fix.patch
 		use gnome && epatch ${FILESDIR}/${OO_VER}/gcc34-gnome.patch
 	fi
 
-	#phtread-fix
-	epatch ${FILESDIR}/${OO_VER}/pthreadlink-fix.patch
-
 	#Fix for hardened
 	if use hardened; then
+		epatch ${FILESDIR}/${OO_VER}/pthreadlink-fix.patch
 		epatch ${FILESDIR}/${OO_VER}/hardened-link.patch
+		epatch ${FILESDIR}/${OO_VER}/pyunolink-fix.patch
 	fi
 
 	einfo "Installing / Scaling Icons"
