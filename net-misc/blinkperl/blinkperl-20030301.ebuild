@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/blinkperl-20030301.ebuild,v 1.2 2003/06/07 01:18:57 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blinkperl/blinkperl-20030301.ebuild,v 1.3 2003/06/08 01:12:13 rac Exp $
 
 MY_P="${PN}-2003-02-08"
 S=${WORKDIR}/${PN}
@@ -12,7 +12,7 @@ HOMEPAGE="http://blinkserv.sourceforge.net/"
 SLOT="0"
 KEYWORDS="~x86"
 LICENSE="GPL-2"
-
+IUSE=""
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="dev-lang/perl dev-perl/Term-ANSIScreen"
 
