@@ -137,7 +137,8 @@ log in, go ahead and type <c>root</c> and hit Enter.  You won't be prompted for 
 <p>In case you can't use a bootable cd for some reason (i.e. no burner, we
 haven't made isos, your cat ate all your blank cds etc.) you can use the boot
 floppies. You'll need  bootdisk.img and rescue.img. You can find them <uri
-link="http://www.ibiblio.org/gentoo/gentoo-x86">here</uri> (look in the latest
+link="http://www.ibiblio.org/gentoo/snapshots/disks/">here</uri> 
+(look in the latest
 rc dir).
 </p>
 <p>Once you've downloaded them you need to run <c>dd if=bootdisk.img of=/dev/fd0
