@@ -1,0 +1,16 @@
+Index: kmmainwin.h
+===================================================================
+RCS file: /home/kde/kdenetwork/kmail/kmmainwin.h,v
+retrieving revision 1.145
+retrieving revision 1.146
+diff -u -p -r1.145 -r1.146
+--- kmail/kmmainwin.h	26 Oct 2002 09:45:36 -0000	1.145
++++ kmail/kmmainwin.h	28 Oct 2002 21:43:36 -0000	1.146
+@@ -350,6 +350,7 @@ protected:
+   KURL          mUrlCurrent;
+   QPopupMenu	*actMenu;
+   QPopupMenu	*fileMenu;
++  QString	mStartupFolder;
+ 
+   int mWindowLayout;
+   int mShowMIMETreeMode;
