@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/colo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.6 2004/06/26 01:02:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.7 2004/06/28 09:24:44 kumba Exp $
+
+  28 Jun 2004; Joshua Kinard <kumba@gentoo.org> colo-1.4.ebuild,
+  colo-1.6.ebuild, colo-1.8.ebuild:
+  Marked stable on mips.
 
   25 Jun 2004; Joshua Kinard <kumba@gentoo.org> :
   Long-overdue revision bump. There may be issues in building w/ gcc-3.4.x, but
