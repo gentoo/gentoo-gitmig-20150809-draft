@@ -1,0 +1,88 @@
+diff -aur samba-2.2.2/source/configure.in samba-2.2.2-xfs/source/configure.in
+--- samba-2.2.2/source/configure.in	Sat Oct 13 23:09:16 2001
++++ samba-2.2.2-xfs/source/configure.in	Fri Oct 26 00:17:49 2001
+@@ -383,6 +383,9 @@
+ # For quotas on Veritas VxFS filesystems
+ AC_CHECK_HEADERS(sys/fs/vx_quota.h)
+ 
++# For quotas on Linux XFS filesystems
++AC_CHECK_HEADERS(xfs/xqm.h)
++
+ AC_CHECK_SIZEOF(int,cross)
+ AC_CHECK_SIZEOF(long,cross)
+ AC_CHECK_SIZEOF(short,cross)
+diff -aur samba-2.2.2/source/include/config.h.in samba-2.2.2-xfs/source/include/config.h.in
+--- samba-2.2.2/source/include/config.h.in	Sat Oct 13 23:09:21 2001
++++ samba-2.2.2-xfs/source/include/config.h.in	Fri Oct 26 00:17:49 2001
+@@ -903,6 +903,9 @@
+ /* Define if you have the <sys/fs/vx_quota.h> header file.  */
+ #undef HAVE_SYS_FS_VX_QUOTA_H
+ 
++/* Define if you have the <xfs/xqm.h> header file.  */
++#undef HAVE_LINUX_XQM_H
++
+ /* Define if you have the <sys/id.h> header file.  */
+ #undef HAVE_SYS_ID_H
+ 
+diff -aur samba-2.2.2/source/smbd/quotas.c samba-2.2.2-xfs/source/smbd/quotas.c
+--- samba-2.2.2/source/smbd/quotas.c	Sat Oct 13 23:09:41 2001
++++ samba-2.2.2-xfs/source/smbd/quotas.c	Fri Oct 26 00:21:18 2001
+@@ -57,6 +57,9 @@
+  */
+ 
+ #include <linux/quota.h>
++#ifdef HAVE_LINUX_XQM_H
++#include <xfs/xqm.h>
++#endif
+ 
+ #include <mntent.h>
+ #include <linux/unistd.h>
+@@ -75,10 +78,35 @@
+ } LINUX_SMB_DISK_QUOTA;
+ 
+ /****************************************************************************
++ Abstract out the XFS Quota Manager quota get call.
++****************************************************************************/
++
++static int get_smb_linux_xfs_quota(char *path, uid_t euser_id, LINUX_SMB_DISK_QUOTA *dp)
++{
++       int ret = -1;
++#ifdef HAVE_LINUX_XQM_H
++       struct fs_disk_quota D;
++       ZERO_STRUCT(D);
++
++       if ((ret = quotactl(QCMD(Q_XGETQUOTA,USRQUOTA), path, euser_id, (caddr_t)&D)))
++               return ret;
++
++       dp->bsize = (SMB_BIG_UINT)512;
++       dp->softlimit = (SMB_BIG_UINT)D.d_blk_softlimit;
++       dp->hardlimit = (SMB_BIG_UINT)D.d_blk_hardlimit;
++       dp->ihardlimit = (SMB_BIG_UINT)D.d_ino_hardlimit;
++       dp->isoftlimit = (SMB_BIG_UINT)D.d_ino_softlimit;
++       dp->curinodes = (SMB_BIG_UINT)D.d_icount;
++       dp->curblocks = (SMB_BIG_UINT)D.d_bcount;
++#endif
++       return ret;
++}
++
++/****************************************************************************
+  Abstract out the old and new Linux quota get calls.
+ ****************************************************************************/
+ 
+-static int get_smb_linux_quota(char *path, uid_t euser_id, LINUX_SMB_DISK_QUOTA *dp)
++static int get_smb_linux_vfs_quota(char *path, uid_t euser_id, LINUX_SMB_DISK_QUOTA *dp)
+ {
+ 	int ret;
+ #ifdef LINUX_QUOTAS_1
+@@ -156,7 +184,10 @@
+ 
+ 	save_re_uid();
+ 	set_effective_uid(0);  
+-	r=get_smb_linux_quota(mnt->mnt_fsname, euser_id, &D);
++	if (strcmp(mnt->mnt_type, "xfs") == 0)
++		r=get_smb_linux_xfs_quota(mnt->mnt_fsname, euser_id, &D);
++	else
++		r=get_smb_linux_vfs_quota(mnt->mnt_fsname, euser_id, &D);
+ 	restore_re_uid();
+ 
+ 	/* Use softlimit to determine disk space, except when it has been exceeded */
