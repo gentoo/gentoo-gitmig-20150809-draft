@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.4 2004/02/03 01:28:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.5 2004/02/09 17:04:27 vapier Exp $
 
 inherit games perl-module
 
@@ -39,10 +39,10 @@ src_compile() {
 		BINDIR=${GAMES_BINDIR} \
 		DATADIR=${GAMES_DATADIR} \
 		MANDIR=/usr/share/man \
-			|| die "make failed"
+		|| die "make game failed"
 
 	cd ${WORKDIR}/${NET_SERVER_P}
-	./bootstrap.sh || die
+	./bootstrap.sh || die "bootstrap failed"
 	egamesconf || die
 }
 
@@ -53,7 +53,7 @@ src_install() {
 		DATADIR=${D}/${GAMES_DATADIR} \
 		MANDIR=${D}/usr/share/man \
 		install \
-			|| die "make install failed"
+		|| die "make install failed"
 	dosed /usr/games/bin/frozen-bubble
 	dodoc AUTHORS CHANGES README
 
@@ -64,11 +64,14 @@ src_install() {
 		DATADIR=${D}/${GAMES_DATADIR} \
 		MANDIR=${D}/usr/share/man \
 		install \
-			|| die "make install failed"
+		|| die "make install client failed"
 
 	cd ${WORKDIR}/${NET_SERVER_P}
-	make DESTDIR=${D} sbindir=${GAMES_BINDIR} install \
-		|| die "make install failed"
+	make \
+		DESTDIR=${D} \
+		sbindir=${GAMES_BINDIR} \
+		install \
+		|| die "make install server failed"
 	dodoc TODO
 	newdoc README README.server
 
