@@ -2,15 +2,11 @@ MD5 8b7cab278204bb6c90903c2c11d99151 ChangeLog 8239
 MD5 522facdb5a107e1ea2a3d5b7e7a3d863 imagemagick-5.4.7.4-r1.ebuild 2061
 MD5 dbd3aedd443e1f68d813c05561a4342f imagemagick-5.5.3.2.ebuild 3203
 MD5 d8befa9c2743118a238545d8aee96379 imagemagick-5.5.4.4.ebuild 3198
-MD5 75e0a743c4a0df767b6909df7ff396ab imagemagick-5.5.6-r1.ebuild 2439
-MD5 c317888195fdaf807a6859fe9eab4325 imagemagick-5.5.6.ebuild 2368
-MD5 64bd3eb547ea164ee21f8a2cefa56245 imagemagick-5.5.7.ebuild 2432
+MD5 4071c9db6a21e1ed68e8b9144df73718 imagemagick-5.5.6-r1.ebuild 2437
 MD5 1ce73f05f7c916a1cb2fe29a51b7f728 imagemagick-5.5.7-r1.ebuild 2283
 MD5 f83c498eca8fc6a0cbd227182619f38e files/digest-imagemagick-5.4.7.4-r1 72
-MD5 4cd3e2742fa943129dca5d63d0109a42 files/digest-imagemagick-5.5.6-r1 71
 MD5 f9ff3fba47b4d61edd32eea1aee94731 files/digest-imagemagick-5.5.3.2 72
 MD5 69be221b82f76ec46d241c5e4bff0f12 files/digest-imagemagick-5.5.4.4 72
-MD5 5b59068817b5f99f424910fe322b1587 files/digest-imagemagick-5.5.7 71
+MD5 4cd3e2742fa943129dca5d63d0109a42 files/digest-imagemagick-5.5.6-r1 71
 MD5 edbc2be86318f2676c55ce64e47ea2f6 files/perlpatch.diff 1598
-MD5 4cd3e2742fa943129dca5d63d0109a42 files/digest-imagemagick-5.5.6 71
 MD5 ee6745eeb054f767a003c8d78675f9a1 files/digest-imagemagick-5.5.7-r1 74
