@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.26 2004/10/05 03:32:36 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.27 2004/10/06 13:57:39 pappy Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -23,7 +23,8 @@ if [ "${ETYPE}" == "gcc-library" ] ; then
 		fi
 	fi
 else
-	IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
+	IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64 boundschecking"
+
 	if [ "${CHOST}" == "${CCHOST}" ] ; then
 		SLOT="${PV%.*}"
 	else
@@ -231,8 +232,8 @@ get_gcc_src_uri() {
 
 	# propolice aka stack smashing protection
 	if [ -n "${PP_VER}" ] ; then
-	GCC_SRC_URI="${GCC_SRC_URI}
-		http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
+		GCC_SRC_URI="${GCC_SRC_URI}
+			http://www.research.ibm.com/trl/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
 	fi
 
 	# PERL cannot be present at bootstrap, and is used to build the man pages.
@@ -248,10 +249,15 @@ get_gcc_src_uri() {
 			${GENTOO_TOOLCHAIN_BASE_URI}/${P}-patches-${PATCH_VER}.tar.bz2"
 	fi
 
-	# mmm... PIE =D
+	# strawberry pie, Cappuccino and a Gauloises
 	if [ -n "${PIE_CORE}" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
 			${GENTOO_TOOLCHAIN_BASE_URI}${PIE_CORE}"
+	fi
+
+	if [ -n "${HTB_VER}" ] ; then
+		GCC_SRC_URI="${GCC_SRC_URI}
+					http://web.inter.nl.net/hcc/Haj.Ten.Brugge/bounds-checking-${PN}-${PV}-${HTB_VER}.patch.bz2"
 	fi
 
 	echo "${GCC_SRC_URI}"
@@ -320,6 +326,12 @@ gcc_quick_unpack() {
 		unpack ${PIE_CORE}
 	fi
 
+	# pappy@gentoo.org - Fri Oct  1 23:24:39 CEST 2004
+	if use boundschecking
+	then
+		unpack "bounds-checking-${PN}-${PV}-${HTB_VER}.patch.bz2"
+	fi
+
 	popd > /dev/null
 }
 
@@ -350,6 +362,14 @@ exclude_gcc_patches() {
 	done
 }
 
+do_gcc_HTB_boundschecking_patches() {
+	# only works for 3.4.2 at the moment
+	if [ "${GCCMAJOR}" -eq 3 -a "${GCCMINOR}" -eq 4 -a "${GCCMICRO}" -eq 2 ] ; then
+		# modify the bounds checking patch with a regression patch
+		epatch "${WORKDIR}/bounds-checking-${PN}-${PV}-${HTB_VER}.patch"
+		release_version="${release_version}, HTB-${HTB_VER}"
+	fi
+}
 
 # patch in ProPolice Stack Smashing protection
 do_gcc_SSP_patches() {
@@ -643,9 +663,11 @@ gcc-compiler-src_unpack() {
 	# the necessary support
 	[ -n "${PIE_VER}" ] && use hardened && glibc_have_pie
 
-	if use hardened && hardened_gcc_works ; then
-		einfo "updating configuration to build hardened GCC"
-		make_gcc_hard || die "failed to make gcc hard"
+	if ! use boundschecking ; then
+		if use hardened && hardened_gcc_works ; then
+			einfo "updating configuration to build hardened GCC"
+			make_gcc_hard || die "failed to make gcc hard"
+		fi
 	fi
 }
 gcc-library-src_unpack() {
@@ -662,11 +684,19 @@ gcc_src_unpack() {
 	if [ -n "${PATCH_VER}" ] ; then
 		epatch ${WORKDIR}/patch
 	fi
-	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ] ; then
-		do_gcc_SSP_patches
-	fi
-	if [ -n "${PIE_VER}" ] ; then
-		do_gcc_PIE_patches
+
+	if ! use boundschecking ; then
+		if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ] ; then
+			do_gcc_SSP_patches
+		fi
+
+		if [ -n "${PIE_VER}" ] ; then
+			do_gcc_PIE_patches
+		fi
+	else
+		if [ -n "${HTB_VER}" ] ; then
+			do_gcc_HTB_boundschecking_patches
+		fi
 	fi
 
 	${ETYPE}-src_unpack || die "failed to ${ETYPE}-src_unpack"
