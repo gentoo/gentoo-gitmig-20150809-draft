@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.2.ebuild,v 1.2 2000/12/21 08:22:29 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.2.ebuild,v 1.3 2000/12/21 11:22:10 achim Exp $
 
 A="X402src-1.tgz X402src-2.tgz X402src-3.tgz"
 S=${WORKDIR}/xc
@@ -12,6 +12,7 @@ SRC_URI="$SRC_PATH0/X402src-1.tgz $SRC_PATH0/X402src-2.tgz $SRC_PATH0/X402src-3.
 	 $SRC_PATH1/X402src-1.tgz $SRC_PATH1/X402src-2.tgz $SRC_PATH1/X402src-3.tgz"
 
 DEPEND=">=sys-apps/bash-2.04
+	>=media-libs/freetype-2.0.1
 	>=sys-libs/glibc-2.1.3
 	>=sys-libs/gpm-1.19.3
 	>=sys-libs/ncurses-5.1"
@@ -30,6 +31,8 @@ src_compile() {
 src_install() {                               
     try make install DESTDIR=${D}
     try make install.man DESTDIR=${D}
+    insinto /usr/X11R6/lib/X11
+    doins ${FILESDIR}/${PV}/XftConfig
     preplib /usr/X11R6
 }
 
