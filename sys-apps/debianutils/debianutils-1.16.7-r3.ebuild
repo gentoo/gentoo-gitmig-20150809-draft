@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r3.ebuild,v 1.1 2003/08/02 13:34:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r3.ebuild,v 1.2 2003/08/03 09:30:36 seemant Exp $
 
 IUSE="static build"
 
@@ -15,7 +15,8 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="virtual/glibc"
 
-RDEPEND="sys-apps/bzip2"
+RDEPEND="sys-apps/bzip2
+	sys-apps/coreutils"
 
 src_unpack() {
 	unpack ${A}
@@ -35,11 +36,11 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ -z "`use static`" ]
+	if use static
 	then
-		pmake || die
-	else
 		pmake LDFLAGS=-static || die
+	else
+		pmake || die
 	fi
 }
 

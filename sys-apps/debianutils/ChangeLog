@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.23 2003/08/02 13:34:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.24 2003/08/03 09:30:36 seemant Exp $
+
+  03 Aug 2003; Seemant Kulleen <seemant@gentoo.org>
+  debianutils-1.16.7-r3.ebuild:
+  added coreutils to dependency
 
 *debianutils-1.16.7-r3 (02 Aug 2003)
 
