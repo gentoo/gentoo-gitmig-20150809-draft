@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.29 2004/02/25 18:43:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.30 2004/03/06 13:23:43 liquidx Exp $
+
+*rhythmbox-0.6.7 (06 Mar 2004)
+
+  06 Mar 2004; Alastair Tse <liquidx@gentoo.org> rhythmbox-0.6.7.ebuild:
+  version bump (#43158)
 
   25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> rhythmbox-0.6.5.ebuild:
   Adding patch from upstream submitted by Benjamin Schindler <config@gmx.ch> in
