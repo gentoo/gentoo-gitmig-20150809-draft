@@ -27,7 +27,6 @@ net-misc/rsync
 app-editors/nano
 sys-apps/net-tools
 sys-apps/less
-sys-apps/attr
 sys-libs/libselinux
 sec-policy/selinux-base-policy
 sys-apps/policycoreutils
