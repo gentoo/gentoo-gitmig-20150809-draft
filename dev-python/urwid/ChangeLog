@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.3 2005/02/21 12:37:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.4 2005/02/27 10:31:50 lucass Exp $
+
+  27 Feb 2005; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
+  urwid-0.8.6.ebuild:
+  Some cleanup. Added description to metadata.
 
   21 Feb 2005; David Holm <dholm@gentoo.org> urwid-0.8.6.ebuild:
   Added to ~ppc.
