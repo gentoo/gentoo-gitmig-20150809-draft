@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.10 2004/10/12 03:21:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.11 2004/10/20 15:40:56 lu_zero Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -109,8 +109,8 @@ src_compile() {
 	use amd64 \
 		&& myconf="${myconf} --with-xv-path=/usr/X11R6/$(get_libdir)"
 
-	# Fix compilation-errors on PowerPC #45393 & #55460
-	if use ppc ; then
+	# Fix compilation-errors on PowerPC #45393 & #55460 & #68251
+	if use ppc || use ppc64 ; then
 		append-flags -U__ALTIVEC__
 		myconf="${myconf} `use_enable altivec`"
 	fi

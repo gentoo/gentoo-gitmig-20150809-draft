@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.151 2004/10/12 03:21:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.152 2004/10/20 15:40:56 lu_zero Exp $
+
+  20 Oct 2004; Luca Barbato <lu_zero@gentoo.org> xine-lib-1_rc6.ebuild:
+  Made sure the ppc workaround is applied on ppc64 too
 
   11 Oct 2004; Tom Gall <tgall@gentoo.org> xine-lib-1_rc6.ebuild:
   stable on ppc64, bug #64348
