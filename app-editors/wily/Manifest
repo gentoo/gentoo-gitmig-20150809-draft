@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0f7acf6dba5496e8cf045762d2cf2c26 ChangeLog 956
 MD5 d4b5817240bb0c31499aaa8c1ac2f19a wily-1.0.ebuild 711
-MD5 f77485df5843ed768240414dba358b9a files/digest-wily-1.0 120
+MD5 ac1d989779c3d7f524fb5470d2b48e1b files/digest-wily-1.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpLXXI1lqEGTUzyQRAvEyAKCzpdbgxoTJe0XYqCtmnIsNQXTaXACaAodK
+v2/70enk2/twPl9mJ9yHpJY=
+=Yxn0
+-----END PGP SIGNATURE-----
