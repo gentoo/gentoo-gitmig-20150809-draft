@@ -20,5 +20,5 @@ BOOTSTRAP="1"
 
 src_unpack() {
    unpack ${P}.tar.gz
-   ssed -i "s:xftlsfonts::" ${S}/util/Makefile.am
+   sed -i "s:xftlsfonts::" ${S}/util/Makefile.am
 }

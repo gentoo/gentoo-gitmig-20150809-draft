@@ -22,7 +22,7 @@ BOOTSTRAP="1"
 
 src_unpack() {
 	unpack ${A}
-	ssed -i "s:XftValueList:FcValueList:" \
+	sed -i "s:XftValueList:FcValueList:" \
 	${S}/util/xftlsfonts.cc
 }
 

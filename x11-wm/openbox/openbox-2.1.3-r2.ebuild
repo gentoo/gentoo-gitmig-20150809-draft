@@ -13,7 +13,7 @@ SLOT="1"
 LICENSE="BSD"
 KEYWORDS="x86 sparc "
 
-DEPEND="sys-apps/supersed"
+DEPEND="=sys-apps/sed-4*"
 
 MYBIN="${PN}"
 mydoc="CHANGE* TODO LICENSE data/README*"
@@ -22,7 +22,7 @@ BOOTSTRAP="1"
 
 src_unpack() {
    unpack ${A}
-   ssed -i "s:XftValueList:FcValueList:" \
+   sed -i "s:XftValueList:FcValueList:" \
 		${S}/util/xftlsfonts.cc
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.2.2.ebuild,v 1.3 2003/02/13 17:53:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.2.2.ebuild,v 1.4 2003/04/23 00:05:16 lostlogic Exp $
 
 IUSE="nls"
 
@@ -15,7 +15,7 @@ SLOT="2"
 LICENSE="BSD"
 KEYWORDS="~x86 ppc"
 
-DEPEND="sys-apps/supersed
+DEPEND="=sys-apps/sed-4*
 		dev-util/pkgconfig"
 
 MYBIN="${PN}-dev"
@@ -26,7 +26,7 @@ myconf="--enable-xinerama"
 src_unpack() {
 
 	unpack ${A}
-	ssed -i "s:XftValueList:FcValueList:" \
+	sed -i "s:XftValueList:FcValueList:" \
 		${S}/util/xftlsfonts.cc
 
 }
