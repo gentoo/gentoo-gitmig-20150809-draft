@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xemacs-packages-sumo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/ChangeLog,v 1.14 2003/07/03 17:57:16 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/ChangeLog,v 1.15 2003/09/09 20:15:00 agenkin Exp $
+
+*xemacs-packages-sumo-2003.08.31 (Sep 09, 2003)
+
+  Sep 09 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
 
 *xemacs-packages-sumo-2003.06.29 (Jul 03, 2003)
 
