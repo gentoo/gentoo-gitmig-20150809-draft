@@ -1,6 +1,6 @@
 /*
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/files/0.9.26/ssp.c,v 1.3 2004/10/12 18:48:24 solar Exp $
+ * $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/files/0.9.26/ssp.c,v 1.4 2004/10/13 14:40:10 solar Exp $
  *
  * This is a modified version of Hiroaki Etoh's stack smashing routines
  * implemented for glibc.
@@ -46,16 +46,6 @@
 
 unsigned long __guard = 0UL;
 
-#if 1
- #define SSP_open  open
- #define SSP_close close
- #define SSP_write write
-#else
- #define SSP_open  __libc_open
- #define SSP_close __libc_close
- #define SSP_write __libc_write
-#endif
-
 void
 __guard_setup (void)
 {
@@ -86,13 +76,13 @@ __guard_setup (void)
   {
     int fd;
 #ifdef HAVE_DEV_ERANDOM
-    if ((fd = SSP_open ("/dev/erandom", O_RDONLY)) == (-1))
+    if ((fd = open ("/dev/erandom", O_RDONLY)) == (-1))
 #endif
-      fd = SSP_open ("/dev/urandom", O_RDONLY);
+      fd = open ("/dev/urandom", O_RDONLY);
     if (fd != (-1))
       {
-	size = SSP_read (fd, (char *) &__guard, sizeof (__guard));
-	SSP_close (fd);
+	size = read (fd, (char *) &__guard, sizeof (__guard));
+	close (fd);
 	if (size == sizeof (__guard))
 	  return;
       }
@@ -147,8 +137,8 @@ __stack_smash_handler (char func[], int damaged)
     }
 
   /* print error message */
-  SSP_write (STDERR_FILENO, buf + 3, len - 3);
-  SSP_write (STDERR_FILENO, "()\n", 3);
+  write (STDERR_FILENO, buf + 3, len - 3);
+  write (STDERR_FILENO, "()\n", 3);
   if ((log = socket (AF_UNIX, SOCK_DGRAM, 0)) != -1)
     {
       /* Send "found" message to the "/dev/log" path */
