@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.4.ebuild,v 1.3 2003/07/12 13:03:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.4.ebuild,v 1.4 2004/02/22 22:26:54 agriffis Exp $
 
 DESCRIPTION="A Ruby interface to termios"
 HOMEPAGE="http://arika.org/ruby/termios/"
 SRC_URI="http://arika.org/archive/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~alpha ~arm ~hppa ~mips ~sparc x86"
+KEYWORDS="~alpha ~hppa ~mips ~sparc x86"
 DEPEND=">=dev-lang/ruby-1.6"
 
 src_compile() {

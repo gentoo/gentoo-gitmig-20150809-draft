@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ruby-gtk2-0.5.0.ebuild,v 1.3 2003/07/28 09:50:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ruby-gtk2-0.5.0.ebuild,v 1.4 2004/02/22 22:25:24 agriffis Exp $
 
 DESCRIPTION="Ruby gtk+-2 bindings"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 SRC_URI="mirror://sourceforge/ruby-gnome2/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc x86"
+KEYWORDS="~alpha ~hppa ~mips ~ppc ~sparc x86"
 
 DEPEND=">=dev-lang/ruby-1.6
 	>=dev-libs/glib-2
