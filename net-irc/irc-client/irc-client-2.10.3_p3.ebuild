@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p3.ebuild,v 1.4 2004/05/29 16:16:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p3.ebuild,v 1.5 2004/06/21 00:58:50 swegener Exp $
 
 MY_P=irc
 MY_PV=2.10.3p3
@@ -17,8 +17,6 @@ IUSE="ipv6"
 DEPEND="virtual/glibc
 		sys-libs/ncurses
 		sys-libs/zlib"
-
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}${MY_PV}
 
