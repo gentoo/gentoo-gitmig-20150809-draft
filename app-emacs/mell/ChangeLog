@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/mell
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/ChangeLog,v 1.1 2003/12/05 09:27:33 usata Exp $
+
+*mell-1.0.0 (05 Dec 2003)
+
+  05 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> mell-1.0.0.ebuild,
+  metadata.xml, files/50mell-gentoo.el:
+  Initial import. Ebuild submitted by Hattya <hattya@inter7.jp>
+  Closing bug #31501
+
