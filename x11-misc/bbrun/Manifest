@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ddb176a776aa87d293837e6c9ac42045 ChangeLog 2691
-MD5 e34bfb865b860a6272c198ac1a006944 bbrun-1.6.ebuild 742
-MD5 8c3309c572fee38196b4a813cb868a62 bbrun-1.4.ebuild 795
 MD5 6d984fdc3a2bfe09ec7cb86b38267de3 metadata.xml 256
+MD5 d92daa7bbcde709d5224a754d3af868e ChangeLog 2779
+MD5 8c3309c572fee38196b4a813cb868a62 bbrun-1.4.ebuild 795
+MD5 679e673e1f019929d6119e2f8c724769 bbrun-1.6.ebuild 739
 MD5 06a0a7096e93b02ded875028969d8cb9 files/digest-bbrun-1.6 60
 MD5 b94011cb198e7e8080531bc1ab4533e4 files/digest-bbrun-1.4 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCCPwXKRy60XGEcJIRAiIhAKCPbR/YTLazcZ9CAi+3FhTpo1QKbgCfVFsK
-yw/Z/TQCHwgytEhDm9suocQ=
-=gxyf
------END PGP SIGNATURE-----
