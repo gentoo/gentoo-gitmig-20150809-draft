@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-1.30.ebuild,v 1.1 2002/01/05 00:03:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-1.30.ebuild,v 1.2 2002/01/05 00:09:29 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK based download manager for X."
@@ -41,7 +41,7 @@ src_install () {
 	insinto /usr/share/pixmaps
 	doins *.png *.xpm
 
-	if [ "use gnome" ] ; then
+	if [ "`use gnome`" ] ; then
 		insinto /usr/share/gnome/apps/Internet
 		doins nt.desktop
 	fi
