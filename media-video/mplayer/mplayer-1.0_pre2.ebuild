@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2.ebuild,v 1.12 2003/10/30 12:38:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2.ebuild,v 1.13 2003/11/16 17:11:20 brad_mssw Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick"
 
@@ -24,6 +24,7 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
 RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
+	amd64? ( >=media-libs/xvid-0.9.0 )
 	x86? ( >=media-libs/xvid-0.9.0
 	       >=media-libs/divx4linux-20030428
 	       >=media-libs/win32codecs-0.60 )
@@ -68,7 +69,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc amd64"
 
 
 pkg_setup() {
