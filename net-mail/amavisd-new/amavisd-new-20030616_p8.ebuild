@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p8.ebuild,v 1.3 2004/03/15 17:51:41 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p8.ebuild,v 1.4 2004/04/26 12:14:56 agriffis Exp $
 
 inherit eutils
 
@@ -54,7 +54,7 @@ src_compile() {
 
 		econf --with-runtime-dir=/var/run/amavis \
 			--with-sockname=/var/run/amavis/amavisd.sock \
-			--with-user=amavis
+			--with-user=amavis || die "econf failed"
 		emake || die "compile problem"
 
 		cd "${S}"

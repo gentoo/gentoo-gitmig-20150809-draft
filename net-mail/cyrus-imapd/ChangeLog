@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.37 2004/02/25 04:27:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.38 2004/04/26 12:20:45 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> cyrus-imapd-2.1.12.ebuild,
+  cyrus-imapd-2.1.13.ebuild, cyrus-imapd-2.1.14.ebuild,
+  cyrus-imapd-2.1.15-r1.ebuild, cyrus-imapd-2.1.15.ebuild:
+  Add die following econf for bug 48950
 
   24 Feb 2004; Jason Wever <weeve@gentoo.org> cyrus-imapd-2.1.15-r1.ebuild:
   Added ~sparc keyword.  Thanks to gsdali from the sparc forum for testing :)

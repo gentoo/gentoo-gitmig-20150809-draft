@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r9.ebuild,v 1.3 2004/03/08 22:52:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r9.ebuild,v 1.4 2004/04/26 12:28:26 agriffis Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -122,7 +122,7 @@ src_compile() {
 		--enable-roaming-users=y --enable-relay-clear-minutes=60 \
 		--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \
 		--enable-logging=y \
-		--enable-log-name=vpopmail
+		--enable-log-name=vpopmail || die "econf failed"
 
 	use mysql && echo '#define MYSQL_PASSWORD_FILE "/etc/vpopmail.conf"' >> config.h
 

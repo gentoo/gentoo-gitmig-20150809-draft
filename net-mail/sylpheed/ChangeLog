@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.56 2004/04/06 19:04:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.57 2004/04/26 12:26:24 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> sylpheed-0.9.4-r1.ebuild,
+  sylpheed-0.9.4.ebuild, sylpheed-0.9.5-r1.ebuild, sylpheed-0.9.7.ebuild,
+  sylpheed-0.9.8-r2.ebuild, sylpheed-0.9.9-r1.ebuild:
+  Add die following econf for bug 48950
 
   06 Apr 2004; Aron Griffis <agriffis@gentoo.org> sylpheed-0.9.9-r1.ebuild,
   sylpheed-0.9.10.ebuild:

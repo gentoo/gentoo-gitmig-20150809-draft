@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.7.ebuild,v 1.6 2004/03/25 10:07:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.7.ebuild,v 1.7 2004/04/26 12:26:24 agriffis Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda"
 
@@ -52,7 +52,7 @@ src_compile() {
 
 	use xface || myconf="${myconf} --disable-compface"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	emake || die
 }

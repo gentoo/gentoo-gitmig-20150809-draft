@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0_rc1.ebuild,v 1.4 2004/02/15 22:56:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0_rc1.ebuild,v 1.5 2004/04/26 12:28:26 agriffis Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -119,7 +119,7 @@ src_compile() {
 		--enable-log-name=vpopmail \
 		--enable-qmail-ext \
 		--enable-domainquotas \
-		--disable-tcp-rules-prog --disable-tcpserver-file --disable-roaming-users
+		--disable-tcp-rules-prog --disable-tcpserver-file --disable-roaming-users || die "econf failed"
 
 	# TCPRULES for relaying is now considered obsolete, use relay-ctrl instead
 	#--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \

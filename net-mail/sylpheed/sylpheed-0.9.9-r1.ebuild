@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.9-r1.ebuild,v 1.2 2004/04/06 18:58:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.9-r1.ebuild,v 1.3 2004/04/26 12:26:24 agriffis Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda gtk2"
 
@@ -70,7 +70,7 @@ src_compile() {
 	# build fails if this is done normally. dunno why and didn't bother to find out. : )
 # 	use gtk2 && ./autogen.sh
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	emake || die
 }

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.65 2004/04/24 02:13:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.66 2004/04/26 12:19:12 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  courier-imap-2.1.2-r1.ebuild, courier-imap-2.1.2-r2.ebuild,
+  courier-imap-3.0.2-r1.ebuild, courier-imap-3.0.2.ebuild:
+  Add die following econf for bug 48950
 
 *courier-imap-3.0.2-r1 (23 Apr 2004)
 

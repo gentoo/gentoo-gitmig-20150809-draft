@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.2-r1.ebuild,v 1.1 2004/04/24 02:13:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.2-r1.ebuild,v 1.2 2004/04/26 12:19:12 agriffis Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -149,7 +149,7 @@ src_compile() {
 		--enable-workarounds-for-imap-client-bugs \
 		--with-authdaemonvar=/var/lib/courier-imap/authdaemon \
 		--cache-file=${cachefile} \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	# change the pem file location..
 	cp imap/imapd-ssl.dist imap/imapd-ssl.dist.old
