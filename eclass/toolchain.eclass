@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.56 2004/12/01 15:38:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.57 2004/12/02 16:51:27 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -596,9 +596,6 @@ create_gcc_env_entry() {
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
-	# Also set CC and CXX
-	echo "CC=\"gcc\"" >> ${gcc_envd_file}
-	echo "CXX=\"g++\"" >> ${gcc_envd_file}
 	# Set which specs file to use
 	[ -n "${gcc_specs_file}" ] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
 }
