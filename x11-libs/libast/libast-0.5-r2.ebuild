@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r2.ebuild,v 1.5 2004/07/09 19:45:26 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r2.ebuild,v 1.6 2004/08/27 02:16:43 vapier Exp $
 
 inherit 64-bit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.eterm.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="X imlib mmx perl"
 
 DEPEND="virtual/x11
