@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.17.ebuild,v 1.9 2005/01/01 12:15:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.17.ebuild,v 1.10 2005/01/07 23:11:45 pylon Exp $
 
 inherit kde eutils
 
@@ -32,7 +32,7 @@ RDEPEND="kde? ( >=kde-base/kdebase-3.1 )
 	dvdr? ( app-cdr/dvd+rw-tools )
 	encode? ( media-sound/lame
 		  media-sound/sox
-		  !amd64? ( <media-video/transcode-0.6.12 )
+		  media-video/transcode
 		  media-video/vcdimager )"
 need-kde 3.1
 
