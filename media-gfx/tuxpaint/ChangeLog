@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.12 2005/03/20 21:26:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.13 2005/03/21 01:35:10 leonardop Exp $
+
+  20 Mar 2005; Leonardo Boshell <leonardop@gentoo.org>
+  tuxpaint-0.9.13-r1.ebuild,
+  files/tuxpaint-0.9.13-fix_error_directives.patch:
+  Added a patch to remove a few useless #error directives that were breaking
+  compilation. Resolves bug #82598.
 
 *tuxpaint-0.9.14 (20 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.13-r1.ebuild,v 1.3 2005/03/20 21:26:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.13-r1.ebuild,v 1.4 2005/03/21 01:35:10 leonardop Exp $
 
 inherit eutils
 
@@ -30,6 +30,8 @@ src_unpack() {
 
 	# Sanitize the hack that is its Makefile
 	epatch ${DISTDIR}/${P}-makefile.patch
+	# Remove outdated error directives that break compilation. See bug #82598.
+	epatch ${FILESDIR}/${P}-fix_error_directives.patch
 }
 
 src_compile() {
