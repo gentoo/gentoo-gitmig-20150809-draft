@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kcmpureftpd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kcmpureftpd/ChangeLog,v 1.6 2003/09/17 03:10:18 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kcmpureftpd/ChangeLog,v 1.7 2004/04/14 00:16:41 weeve Exp $
+
+  13 Apr 2004; Jason Wever <weeve@gentoo.org> kcmpureftpd-0.8.ebuild:
+  Added ~sparc keyword.
 
 *kcmpureftpd-0.8 (16 Sep 2003)
 
