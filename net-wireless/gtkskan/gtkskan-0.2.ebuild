@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gtkskan/gtkskan-0.2.ebuild,v 1.1 2002/10/31 22:11:30 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gtkskan/gtkskan-0.2.ebuild,v 1.2 2002/12/09 04:33:20 manson Exp $
 
 IUSE="gnome"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-based ESSID scanner"
 SRC_URI="mirror://sourceforge/wavelan-tools/${P}.tgz"
 HOMEPAGE="http://wavelan-tools.sf.net"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="GPL-3"
 SLOT="0"
 
