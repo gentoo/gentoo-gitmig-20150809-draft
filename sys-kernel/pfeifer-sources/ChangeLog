@@ -1,20 +1,44 @@
-# ChangeLog for sys-kernel/lolo-sources
+# ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.1 2003/03/19 06:42:49 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.2 2003/04/15 20:56:14 pfeifer Exp $
 
   TODO:
-  * Keep grabbing hardware stuff from xfs-sources
-  * Update iptables a few more times (just for good measure)
-  * Updated chipset support (including new ide-core)
-  * Update SuperFreeS/WAN
-  * Maybe:
-    RSBAC
-    Win4Lin
-    Optional RMAP
-    skas
-    Re-add XFS
     ht support
-    new O(1) sched stuff from linus & mingo
+    better ide chipset support (ie. CSB6)
+    fix remaining usagi issues
+    add additional netfilter patches from latest pom
+  * Maybe:
+    Re-add XFS (extremely doubtful)
+    RSBAC
+    NPTL (doubtful)
+    skas
+
+*pfeifer-sources-2.4.20.1_pre7 (15 Apr 2003)
+
+ Changes:
+ * Added latest ck (12Apr2003) - thank you Con Kolivas! 
+ * Added support for either rmap(default) or aavm (your choice)
+ * Added support for evms 2.0 (user selects 1.2.1 or 2.0). evms 1.2.1 default.
+ * Added support for nforce2 ide & audio... (thanks alron & alain)
+ * ext3 fixes
+ * jfs fixes - 1.1.1 + xattr & acl
+ * update ntfs to 2.1.2a
+ * grsecurity bumped to 1.9.9f (this contains the ptrace fix)
+ * SuperFreeS/WAN up to 1.9.6.1
+ * updated to ea+acl+nfsacl 0.8.56
+ * Readded missing ciphers from patch-int
+ * Removed safe serial driver from usbdnet
+ * Added bootsplash 3.0.7 
+ * Fixed a number of USAGI issues (but some still remain).
+ * Updated adaptec 79xx to 18Mar2003 version (thanks livewire)
+ * Added backported bluetooth support from MH
+ * Added bootsplash 3.0.7
+ * Other things I am forgetting to mention
+ 
+*pfeifer-sources-2.4.20.1_pre2-pre6 (20 Mar - 10 Apr 2003)
+
+ Changes:
+ * pre2 through pre6 were internal use builds and never released beyond beta tests and experimentation.
 
 *pfeifer-sources-2.4.20.1_pre1 (19 Mar 2003)
 
