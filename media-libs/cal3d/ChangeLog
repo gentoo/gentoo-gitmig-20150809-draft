@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/cal3d
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.8 2004/12/29 00:40:13 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.9 2005/02/09 23:26:54 kloeri Exp $
+
+*cal3d-0.10.0 (10 Feb 2005)
+
+  10 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> +cal3d-0.10.0.ebuild:
+  Version bump.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
