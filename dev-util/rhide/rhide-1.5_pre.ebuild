@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5_pre.ebuild,v 1.1 2002/08/21 04:52:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5_pre.ebuild,v 1.2 2002/08/21 12:23:34 azarah Exp $
 
 SNAPSHOT="20020726"
 TVISIONVER="1.1.4"
@@ -134,13 +134,19 @@ src_install() {
 		mv ${file} ${file}o
 	done
 
-	doman ${WORKDIR}/setedit/doc/{infview.1,setedit.1}
+	# Install the manpages
+	cd ${WORKDIR}/setedit/doc
+	doman infview.1 setedit.1
 
 	# Install default CFG file and fix the paths
 	cd ${D}/usr/share/rhide
 	sed -e 's:/usr/local/share:/usr/share:g' \
 		rhide_.env >rhide.env
 	echo 'INFOPATH=/usr/share/info' >> rhide.env
+
+	# Install the terminfo file
+	tic -o ${D}/usr/share/terminfo \
+		${WORKDIR}/tvision/extra/eterm/xterm-eterm-tv
 
 	# Install env file
 	insinto /etc/env.d
