@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1.ebuild,v 1.3 2000/11/02 08:31:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1.ebuild,v 1.4 2000/12/19 00:10:44 achim Exp $
 
 P=nut-0.44.1
 A=${P}.tar.gz
@@ -29,7 +29,8 @@ src_compile() {
 
 src_install() {                               
   cd ${S}
-  try make BASEPATH=${D}/usr CONFPATH=${D}/etc/nut STATEPATH=${D}/var/state/ups \
+  dodir /usr/bin
+  try make INSTALLROOT=${D} STATEPATH=${D}/var/state/ups \
 	install
   cd clients
   exeinto /usr/local/httpd/cgi-bin/nut
@@ -58,5 +59,6 @@ pkg_config() {
   ${ROOT}/usr/sbin/rc-update add upsd
 
 }
+
 
 
