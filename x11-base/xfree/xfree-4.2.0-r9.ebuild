@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r9.ebuild,v 1.1 2002/04/07 05:41:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r9.ebuild,v 1.2 2002/04/07 15:08:11 azarah Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -120,6 +120,8 @@ src_install() {
 	dodir /usr/bin
 	dosym /usr/X11R6/bin /usr/bin/X11
 
+	dosym libGL.so.1.2 /usr/X11R6/lib/libGL.so
+	dosym libGL.so.1.2 /usr/X11R6/lib/libGL.so.1
 	dosym libGL.so.1.2 /usr/X11R6/lib/libMesaGL.so
 	dosym ../X11R6/lib/libGLU.so.1.3 /usr/lib/libMesaGLU.so
 
@@ -153,7 +155,6 @@ src_install() {
 	dodir /usr/lib/opengl/xfree/{lib,extensions,include}
 	mv ${D}/usr/X11R6/lib/libGL.so* ${D}/usr/lib/opengl/xfree/lib
 	mv ${D}/usr/X11R6/lib/libGL.la ${D}/usr/lib/opengl/xfree/lib
-	dosym libGL.so
 	mv ${D}/usr/X11R6/lib/libMesaGL.so ${D}/usr/lib/opengl/xfree/lib
 	mv ${D}/usr/X11R6/lib/modules/extensions/libglx* \
 		${D}/usr/lib/opengl/xfree/extensions
