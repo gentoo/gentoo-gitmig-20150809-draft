@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boxes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.10 2004/09/20 02:38:57 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.11 2004/10/21 13:34:06 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
+  update metadata (no-herd => shell-tools)
 
   19 Sept 2004; Tom Gall <tgall@gentoo.org> boxes-1.0.1.ebuild:
   stable on ppc64, bug #63659

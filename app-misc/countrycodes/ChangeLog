@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/countrycodes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.9 2004/10/05 13:34:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.10 2004/10/21 13:38:39 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
+  update metadata (no-herd => shell-tools)
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   countrycodes-1.0.5.ebuild:
