@@ -1,11 +1,13 @@
-# ChangeLog for dev-perl/ExtUtils-MakeMaker
+# ChangeLog for dev-perl/Crypt-OpenSSL-RSA
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.2 2002/08/21 19:50:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.3 2002/08/21 20:07:37 mcummings Exp $
 
 *Crypt-OpenSSL-RSA-0.13 (18 Aug 2002)
 
-  21 Aug 2002; <mcummings@gentoo.org> :
-  Corrected keywords, slot
+  21 Aug 2002; <mcummings@gentoo.org> : Corrected keywords, slot;
+  no rev bump
 
   18 Aug 2002; Michael Cummings <mcummings@gentoo.org> :
   Initial ebuild checkin
+
+  18 Aug 2002;  Navid Golpayegani <golpa@atmos.umd.edu>
