@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.109 2004/04/27 19:38:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.110 2004/04/29 21:40:11 tseng Exp $
+
+*xine-lib-1_rc4 (29 Apr 2004)
+
+  29 Apr 2004; Brandon Hale <tseng@gentoo.org> +xine-lib-1_rc4.ebuild:
+  Version bump fixes vulnerabilites in Real Media streaming code, bug #49387.
 
   27 Apr 2004; Travis Tilley <lv@gentoo.org> +files/xine-lib-gcc34.patch,
   xine-lib-1_rc3-r3.ebuild:
