@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eggdrop
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.33 2004/11/22 22:39:21 sekretarz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.34 2005/01/01 08:19:42 swegener Exp $
+
+  01 Jan 2005; Sven Wegener <swegener@gentoo.org> eggdrop-1.6.15-r1.ebuild,
+  eggdrop-1.6.17.ebuild:
+  Changed SRC_URI to use mirror://gentoo/ for the patchset.
 
   22 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> eggdrop-1.6.17.ebuild:
   Stable on amd64, bug #71997
