@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.ebuild,v 1.5 2003/09/05 23:58:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.ebuild,v 1.6 2003/10/21 00:56:16 luke-jr Exp $
 inherit kde-functions
 
 IUSE="ssl crypt"
@@ -25,8 +25,6 @@ src_unpack() {
 
 	unpack ${P}.tar.bz2
 	unpack qssl-${QV}.tar.bz2
-	cd ${S}/src
-	patch -p0 < ${FILESDIR}/gen2-branding-0.9.patch
 }
 
 src_compile() {
