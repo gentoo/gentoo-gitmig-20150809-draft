@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/base64/base64-1.3.ebuild,v 1.10 2004/07/01 22:28:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/base64/base64-1.3.ebuild,v 1.11 2004/07/15 01:30:16 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Command line program that encodes/decodes files in base64"
@@ -10,7 +10,6 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc alpha ~ia64 ~ppc ~amd64"
 DEPEND="virtual/libc"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die "econf failed"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.6.1-r1.ebuild,v 1.3 2004/06/24 23:19:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.6.1-r1.ebuild,v 1.4 2004/07/15 01:29:33 agriffis Exp $
 
 DESCRIPTION="Tool written in Python for archiving and compressing old email in mailboxes."
 HOMEPAGE="http://archivemail.sourceforge.net/"
@@ -11,8 +11,6 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE=""
 DEPEND=">=dev-lang/python-2.0"
-
-S=${WORKDIR}/${P}
 
 inherit distutils
 
