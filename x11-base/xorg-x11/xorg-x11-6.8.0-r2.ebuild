@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.2 2004/10/11 08:15:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.3 2004/10/11 08:18:05 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -76,8 +76,7 @@ SLOT="0"
 KEYWORDS="arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc sparc ~x86"
 
 # Need portage-2.0.50_pre9 for `use !foo`
-DEPEND=">=sys-apps/baselayout-1.8.3
-	>=sys-libs/ncurses-5.1
+DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
 	>=dev-libs/expat-1.95.3
@@ -94,6 +93,19 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	!virtual/xft
 	!virtual/x11"
 # x11-libs/xft -- blocked because of interference with xorg's
+
+RDEPEND="virtual/baselayout
+		>=sys-libs/zlib-1.1.3-r2
+		>=sys-devel/flex-2.5.4a-r5
+		>=dev-libs/expat-1.95.3
+		>=media-libs/freetype-2.1.4
+		>=media-libs/fontconfig-2.1-r1
+		>=x11-base/opengl-update-1.7.2
+		media-libs/libpng
+		>=sys-libs/ncurses-5.1
+		!x11-base/xfree
+		!virtual/xft
+		!virtual/x11"
 
 PDEPEND="x86? (
 			3dfx? ( >=media-libs/glide-v3-3.10 )
