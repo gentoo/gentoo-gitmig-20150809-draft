@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r1.ebuild,v 1.11 2002/12/08 22:38:53 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r1.ebuild,v 1.12 2002/12/10 00:45:03 blauwers Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -94,7 +94,7 @@ pkg_setup() {
 		eerror "settings, it cannot DEPEND on it, so please merge it"
 		eerror "manually:"
 		eerror
-		eerror " #  ebuild /usr/portage/sys-devel/gcc/gcc-3.2-r1.ebuild merge"
+		eerror " #  ebuild ${PORTDIR}/sys-devel/gcc/gcc-3.2-r1.ebuild merge"
 		eerror
 		eerror "Please make sure that you use the latest availible revision of"
 		eerror "gcc-3.2.  Thus if there is already a gcc-3.2-r2 out, use this"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.5 2002/11/30 00:29:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.6 2002/12/10 00:45:03 blauwers Exp $
 
 inherit virtualx
 
@@ -321,10 +321,10 @@ pkg_setup() {
 		eerror "settings, it cannot DEPEND on it, so please merge it"
 		eerror "manually:"
 		eerror
-		eerror " #  ebuild /usr/portage/sys-devel/gcc/gcc-<version>.ebuild merge"
+		eerror " #  ebuild ${PORTDIR}/sys-devel/gcc/gcc-<version>.ebuild merge"
 		eerror
 		eerror "Where <version> is the version and revision of the ebuild you"
-		eerror "want to use.  Have a look in /usr/portage/sys-devel/gcc/ for"
+		eerror "want to use.  Have a look in ${PORTDIR}/sys-devel/gcc/ for"
 		eerror "available ebuilds."
 		eerror
 		eerror "As of writing, gcc-3.0.4 seemed to create the most stable"
