@@ -1,8 +1,14 @@
 # ChangeLog for media-gfx/truevision
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.1 2003/03/16 22:09:16 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/ChangeLog,v 1.2 2003/06/10 22:09:30 liquidx Exp $
 
-*truevision-0.4.10 (16 Mar 2003)
+*truevision-0.3.10 (10 Jun 2003)
 
-  16 Mar 2003; Philip Walls <malverian@gentoo.org
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> truevision-0.3.10.ebuild,
+  files/truevision-0.3.10-gentoo2.patch,
+  files/truevision-0.3.10-gentoo3.patch:
+  added gtkglarea dep, deuglified build process, added more sensible patch,
+  added docs and examples
+
+  16 Mar 2003; Philip Walls <malverian@gentoo.org>
   Initial import.
