@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.107 2004/12/29 00:34:43 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.108 2005/01/10 19:37:30 sekretarz Exp $
+
+  10 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  imagemagick-6.1.3.4.ebuild:
+  Added info about possibility of broken libtool, specially for sparc guys,
+  bug #71953
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

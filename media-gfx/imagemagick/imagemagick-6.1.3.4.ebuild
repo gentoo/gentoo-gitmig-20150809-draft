@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.3.4.ebuild,v 1.9 2004/12/05 17:30:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.3.4.ebuild,v 1.10 2005/01/10 19:37:30 sekretarz Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -39,6 +39,15 @@ DEPEND=">=sys-apps/sed-4
 
 RDEPEND="${DEPEND}
 		>=sys-devel/libtool-1.5.2-r6"
+
+pkg_setup() {
+		ewarn ""
+		ewarn "If this is an upgrade of Imagemagick, it may broke your"
+		ewarn "libtool. If you experience any problems with libtld* files,"
+		ewarn "please reemerge sys-devel/libtool."
+		ewarn ""
+		epause 10
+}
 
 src_unpack() {
 	unpack ${A}
