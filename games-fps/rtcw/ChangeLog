@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/rtcw
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.5 2003/12/06 22:13:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/ChangeLog,v 1.6 2003/12/10 15:04:03 wolf31o2 Exp $
+
+  10 Dec 2003; Chris Gianelloni <wolf31o2@gentoo.org> rtcw-1.41.ebuild:
+  Fixed ebuild for dedicated USE flag and also changed icon name.
 
   06 Dec 2003; Chris Gianelloni <wolf31o2@gentoo.org> rtcw-1.41.ebuild:
   Added RESTRICT=nomirror.  Closing Bug #35223.

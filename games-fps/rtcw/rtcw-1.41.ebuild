@@ -42,15 +42,27 @@ src_install() {
 	cp -r main Docs pb ${D}/${dir}/
 
 	exeinto ${dir}
-	doexe bin/x86/*.x86 ${FILESDIR}/wolf-ded openurl.sh
-	dosed "s:GENTOO_DIR:${dir}:" ${dir}/wolf-ded
-	dogamesbin ${FILESDIR}/wolf ${FILESDIR}/wolf-ded
+	doexe bin/x86/*.x86 openurl.sh
+	if [ "`use dedicated`" ];
+	then
+		doexe ${FILESDIR}/wolf-ded
+		dosed "s:GENTOO_DIR:${dir}:" ${dir}/wolf-ded
+		dogamesbin ${FILESDIR}/wolf-ded
+		dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf-ded
+	fi
+	dogamesbin ${FILESDIR}/wolf
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf
-	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf-ded
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/wolf-ded.rc wolf-ded
-	dosed "s:GENTOO_DIR:${dir}:" /etc/init.d/wolf-ded
+	if [ "`use dedicated`" ];
+	then
+		doexe ${FILESDIR}/wolf-ded
+		dosed "s:GENTOO_DIR:${dir}:" ${dir}/wolf-ded
+		dogamesbin ${FILESDIR}/wolf-ded
+		dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf-ded
+		exeinto /etc/init.d
+		newexe ${FILESDIR}/wolf-ded.rc wolf-ded
+		dosed "s:GENTOO_DIR:${dir}:" /etc/init.d/wolf-ded
+	fi
 
 	insinto ${dir}
 	doins WolfMP.xpm WolfSP.xpm INSTALL QUICKSTART CHANGES RTCW-README-1.4.txt
@@ -58,7 +70,7 @@ src_install() {
 	doins WolfMP.xpm
 
 	prepgamesdirs
-	make_desktop_entry wolf "RtCW" WolfMP.xpm
+	make_desktop_entry wolf "Return to Castle Wolfenstein" WolfMP.xpm
 }
 
 pkg_postinst() {
