@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.18 2004/12/08 22:51:29 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.19 2004/12/17 06:15:48 vapier Exp $
 
 inherit eutils gnuconfig toolchain-funcs mono libtool
 
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
-	mirror://gentoo/${P}-bootstrap.patch.bz2"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ppc-macos ~s390 ~sh ~sparc ~x86"
-IUSE="bootstrap emacs nls"
+IUSE="emacs nls"
 
 DEPEND="virtual/libc"
 
@@ -20,8 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# remove C++ requirements while bootstrapping
-	use bootstrap && epatch ${WORKDIR}/${P}-bootstrap.patch
+	epunt_cxx
 
 	# java sucks
 	epatch ${FILESDIR}/${P}-without_java.patch

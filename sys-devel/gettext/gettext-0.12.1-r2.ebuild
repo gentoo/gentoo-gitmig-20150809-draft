@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.15 2004/12/13 04:44:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.16 2004/12/17 06:15:48 vapier Exp $
 
 inherit eutils gnuconfig toolchain-funcs libtool
 
@@ -11,14 +11,14 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
-IUSE="bootstrap emacs nls"
+IUSE="emacs nls"
 
 DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use bootstrap && epatch ${FILESDIR}/${P}-bootstrap.patch
+	epunt_cxx
 	epatch ${FILESDIR}/${P}-tempfile.patch #66355
 	use ppc-macos || elibtoolize --reverse-deps
 	gnuconfig_update
