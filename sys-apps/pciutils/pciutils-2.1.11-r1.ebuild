@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r1.ebuild,v 1.14 2004/06/24 22:20:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r1.ebuild,v 1.15 2004/06/30 23:02:19 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha arm mips hppa amd64 ~ia64 ppc64"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	net-misc/wget"
 
 src_unpack() {
