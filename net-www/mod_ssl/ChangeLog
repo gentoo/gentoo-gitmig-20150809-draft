@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.22 2004/04/04 01:42:43 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.23 2004/04/05 01:08:32 zul Exp $
+
+  04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml:
+  Updated metadata.xml
 
   03 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
   mod_ssl-2.8.14.ebuild, mod_ssl-2.8.15.ebuild, mod_ssl-2.8.16.ebuild,
