@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3.ebuild,v 1.2 2003/06/17 16:19:40 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3.ebuild,v 1.3 2003/06/17 16:55:00 twp Exp $
 
 DESCRIPTION="A SQL-based mp3-player frontend designed to work with Grip"
 HOMEPAGE="http://www.nostatic.org/ddj/"
@@ -32,9 +32,11 @@ pkg_postinst() {
 
 pkg_config() {
 	local sql=`mktemp digitaldj.XXXXXXXXXX` || die "mktemp failed"
-	echo "CREATE DATABASE IF NOT EXISTS ddj_mp3;" >> ${sql}
-	echo "USE ddj_mp3;" >> ${sql}
-	cat ${ROOT}/usr/share/digitaldj/0-2.sql >> ${sql}
+	echo 'CREATE DATABASE IF NOT EXISTS ddj_mp3;' >> ${sql}
+	echo 'GRANT SELECT, INSERT, UPDATE, DELETE ON ddj_mp3.* TO ddj@localhost;' >> ${sql}
+	echo 'USE ddj_mp3;' >> ${sql}
+	sed -e 's/^\(CREATE TABLE\)/\1 IF NOT EXISTS/g' ${ROOT}/usr/share/digitaldj/0-2.sql >> ${sql}
+	less ${sql}
 	echo "Type in your MySQL root password:"
 	mysql -u root -p < ${sql}
 	rm -f ${sql}
