@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.8 2004/08/03 11:51:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.9 2004/08/15 08:53:17 vapier Exp $
 
-inherit games
+inherit games flag-o-matic
 
 DESCRIPTION="Port from an old amiga game"
 HOMEPAGE="http://www.methane.fsnet.co.uk/"
@@ -18,10 +18,6 @@ RDEPEND="=dev-games/clanlib-0.6.5*
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-pkg_setup() {
-	clanlib-config 0.6.5
-}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}/source/linux
@@ -29,11 +25,13 @@ src_unpack() {
 		sed -i \
 			-e 's/^\(MIKMOD_LIBS\)/#\1/g' \
 			-e 's/^\(METHANE_FLAGS\)/#\1/g' makefile \
-				|| die "mikmod sed failed"
+			|| die "mikmod sed failed"
 	fi
+	sed -i "s:-lclanCore:-lclanCore -L${ROOT}/usr/lib/clanlib-0.6.5:" makefile
 }
 
 src_compile() {
+	append-flags -I${ROOT}/usr/include/clanlib-0.6.5
 	cd source/linux
 	emake -j1 || die "emake failed"
 }
@@ -42,7 +40,7 @@ src_install() {
 	dogamesbin source/linux/methane || die "dogamesbin failed"
 	dodir "${GAMES_STATEDIR}"
 	touch "${D}/${GAMES_STATEDIR}/methanescores"
-	dodoc authors copying history install todo
+	dodoc authors history install todo
 	dohtml ${S}/docs/*
 	prepgamesdirs
 	fperms g+w "${GAMES_STATEDIR}/methanescores"

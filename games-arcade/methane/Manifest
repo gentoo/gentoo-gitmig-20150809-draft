@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9cfcd3866bd1de703cb840d72b395690 methane-1.4.6.ebuild 1238
 MD5 05277b6b5413ddac4619ecce2120354f ChangeLog 660
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 b722cba7b798f8e3cb9599e49c973257 methane-1.4.6.ebuild 1146
 MD5 ffdf672029ba0ed33a110bfb664f21c0 files/digest-methane-1.4.6 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBHyS5HTu7gpaalycRAgPlAJ0fls7ik0ImDMelhWTXgbsLW/F/XwCfaKxj
+S9uJvzNnSGi0EElfBYvzjYw=
+=RtG8
+-----END PGP SIGNATURE-----
