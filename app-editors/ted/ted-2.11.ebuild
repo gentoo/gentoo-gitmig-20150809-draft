@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.11.ebuild,v 1.8 2003/02/13 06:59:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.11.ebuild,v 1.9 2003/02/28 23:11:40 vapier Exp $
 
-DESCRIPTION="ted is an X-based rich text editor."
+DESCRIPTION="X-based rich text editor"
 HOMEPAGE="http://www.nllgg.nl/Ted"
 SRC_URI="ftp://ftp.nluug.nl/pub/editors/ted/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 DEPEND=">=x11-libs/openmotif-2.1.30
 	>=media-libs/tiff-3.5.7
@@ -26,8 +26,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S} || die "where are we? `pwd`"
-
 	for dir in Ted tedPackage appFrame appUtil ind bitmap libreg; do
 		cd ${dir}
 		econf --cache-file=../config.cache

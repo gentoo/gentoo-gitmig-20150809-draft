@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.2 2003/02/16 00:14:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.3 2003/02/28 23:10:17 vapier Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${PN}
-DESCRIPTION="NEdit is a multi-purpose text editor for the X Window System"
+DESCRIPTION="multi-purpose text editor for the X Window System"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://nedit.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
+IUSE="spell"
 
 RDEPEND="spell? ( app-text/aspell )"
-
 DEPEND="${RDEPEND}
 	dev-util/yacc
 	virtual/motif"
@@ -33,7 +33,7 @@ src_compile() {
 	make CC=${CC} linux || die
 }
 
-src_install () {
+src_install() {
 	into /usr
 	dobin source/nedit
 	exeinto /usr/bin

@@ -1,19 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r1.ebuild,v 1.4 2003/02/13 06:57:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r1.ebuild,v 1.5 2003/02/28 23:10:17 vapier Exp $
 
-S=${WORKDIR}/${P}
 MY_PV=${PV/./_}
-DESCRIPTION="NEdit is a multi-purpose Motif-based text editor for the X Window System"
+DESCRIPTION="multi-purpose Motif-based text editor for the X Window System"
 SRC_URI="http://www.nedit.org/ftp/v${MY_PV}/${P}-source.tar.gz"
 HOMEPAGE="http://nedit.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 RDEPEND=">=x11-libs/openmotif-2.1.30"
-
 DEPEND="${RDEPEND}
 	dev-util/yacc"
 
@@ -29,7 +27,7 @@ src_compile() {
 	make linux || die
 }
 
-src_install () {
+src_install() {
 	into /usr
 	dobin source/nedit
 	exeinto /usr/bin
