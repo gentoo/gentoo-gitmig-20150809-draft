@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.5-r1.ebuild,v 1.1 2002/06/01 19:56:38 danarmak Exp
 
+IUSE="oggvorbis"
+
 inherit kde-base
 
 need-kde 3

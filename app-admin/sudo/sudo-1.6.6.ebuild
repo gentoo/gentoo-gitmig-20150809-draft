@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.6.ebuild,v 1.7 2002/08/16 02:21:27 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.6.ebuild,v 1.8 2002/10/05 05:39:05 drobbins Exp $
+
+IUSE="pam"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Allows certain users/groups to run commands as root"

@@ -3,6 +3,8 @@
 # $Header: /home/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.0.4.ebuild,v 1.0
 # 2001/04/21 12:45 CST blutgens  Exp $
 
+IUSE="nls"
+
 S="${WORKDIR}/${P}"
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
