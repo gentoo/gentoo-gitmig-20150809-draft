@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0_alpha24-r1.ebuild,v 1.1 2003/05/29 03:28:36 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0_alpha24-r1.ebuild,v 1.2 2003/05/29 09:07:12 woodchip Exp $
 
 inherit eutils
 
@@ -44,6 +44,15 @@ src_unpack() {
 	find . -name .cvsignore | xargs rm -f
 	find . -name CVS | xargs rm -rf
 	cd source; epatch ${FILESDIR}/samba-pdb_ldap-exop.patch; cd ..
+
+	#HACK!! else get linker errors starting with vfstest
+	#and then the build will fail.  not sure whats going on
+	#with this yet.
+	if use ldap || use kerberos; then
+		cd source; cp Makefile.in Makefile.in.orig
+		sed -e "s%^\(LIBS=.*\)%\1 -llber -lldap%" Makefile.in.orig >Makefile.in
+		cd ..
+	fi
 
 
 	# For clean docs packaging sake.
