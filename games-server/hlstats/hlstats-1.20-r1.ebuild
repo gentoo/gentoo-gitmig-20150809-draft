@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/hlstats-1.20-r1.ebuild,v 1.2 2004/06/25 03:02:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/hlstats-1.20-r1.ebuild,v 1.3 2005/02/12 01:14:38 mr_bones_ Exp $
 
 inherit games webapp
 
@@ -54,6 +54,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "To setup:"
 	einfo " 1. \`mysqladmin create hlstats\`"
 	einfo " 2. \`mysql hlstats < ${GAMES_DATADIR}/${PN}/hlstats.sql\`"
