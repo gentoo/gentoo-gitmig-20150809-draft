@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.14 2005/01/28 22:51:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.15 2005/02/05 20:43:09 kloeri Exp $
+
+  05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> apr-0.9.5.ebuild:
+  ~alpha keyword, bug 77455.
 
   28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> apr-0.9.5.ebuild:
   Added to ~ppc.
