@@ -1,5 +1,15 @@
-MD5 f2a445b3dd95146fde5f893411d1a0df ezbounce-1.04a.ebuild 772
-MD5 98f7222c899b2899c04d4f6e668712a1 ChangeLog 775
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6f851d845e72186a1bcd2c916feb8907 ChangeLog 925
+MD5 76896e5070f62fda4201255663b9c7d2 ezbounce-1.04a.ebuild 803
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 77781fdeabcd004ae4478c14971a9644 files/digest-ezbounce-1.04a 66
 MD5 2c41dd7703df2b1d7c993f8665105122 files/ezbounce-1.04a-crash-fix.patch 945
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBRIH8I1lqEGTUzyQRAj9dAJ9qPVQRlzVgW5im+ujWGAvFgPERjgCfZ1WR
+zxiw9z7MQo7LfWeBxcavKMQ=
+=LqsF
+-----END PGP SIGNATURE-----
