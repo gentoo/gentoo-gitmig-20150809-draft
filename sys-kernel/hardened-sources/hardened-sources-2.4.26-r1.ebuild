@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.26-r1.ebuild,v 1.1 2004/06/22 21:31:44 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.26-r1.ebuild,v 1.2 2004/06/23 22:42:05 agriffis Exp $
 
 IUSE="selinux"
 ETYPE="sources"
@@ -15,7 +15,7 @@ UNIPATCH_STRICTORDER="yes"
 # According to the patchset numbering scheme, 12xx patches are grsec related
 # while 13xx are SELinux related.
 
-if [ "`use selinux`" ]; then
+if use selinux; then
 	UNIPATCH_EXCLUDE="12"
 else
 	UNIPATCH_EXCLUDE="13"

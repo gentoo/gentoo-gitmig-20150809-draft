@@ -1,5 +1,5 @@
-MD5 290f1a921e56084d4dc67f256facfe1c hardened-sources-2.4.26-r1.ebuild 1039
-MD5 2ad88b078c94c23df0f1e5661db37162 ChangeLog 7799
+MD5 47683622a5d37833b4d1983be30a4ab2 hardened-sources-2.4.26-r1.ebuild 1035
+MD5 79d121491157089267423c26c9ddd148 ChangeLog 7916
 MD5 0a473e60c059cb41c96a6bbcbff84769 metadata.xml 459
 MD5 5fd02bd0257e7bad717354021bcba268 files/2.4.26-signal-race.patch 469
 MD5 8850fb5244d9d10736d95a85f3c5b3f1 files/2.4.26-CAN-2004-0394.patch 448
