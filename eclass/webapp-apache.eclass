@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.7 2003/08/05 18:54:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.8 2003/08/18 13:00:01 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -34,6 +34,8 @@ function webapp-apache-detect ()
 	fi
 
 	APACHECONF="/etc/apache${CONFVER}/conf/apache${CONFVER}.conf"
+    APACHECONF_COMMON="/etc/apache${CONFVER}/conf/commonapache${CONFVER}.conf"
+    APACHECONF_DIR="/etc/apache${CONFVER}/conf/"
 	WEBAPP_SERVER="Apache v${APACHEVER}"
 }
 
@@ -43,6 +45,7 @@ function webapp-detect () {
 	webapp-apache-detect || return 1
 	webapp-determine-installowner
 	webapp-determine-htdocsdir
+    webapp-determine-cgibindir
 }
 
 function webapp-determine-htdocsdir ()
@@ -50,10 +53,16 @@ function webapp-determine-htdocsdir ()
 	webapp-determine-installowner
 
 	HTTPD_ROOT="`grep '^DocumentRoot' ${APACHECONF} | cut -d ' ' -f 2`"
-	[ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="/home/httpd/htdocs"
+    [ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="/home/httpd/htdocs/"
 	keepdir "$HTTPD_ROOT"
 	fowners "$HTTPD_USER"."$HTTPD_GROUP" "$HTTPD_ROOT"
 	fperms 755 "$HTTPD_ROOT"
+}
+
+function webapp-determine-cgibindir ()
+{
+    HTTPD_CGIBIN="`grep 'ScriptAlias /cgi-bin/' ${APACHECONF_COMMON} | cut -d ' ' -f 7`"
+    [ -z "${HTTPD_CGIBIN}" ] && HTTPD_CGIBIN="/home/httpd/cgi-bin/"
 }
 
 function webapp-determine-installowner ()
