@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.6.0.ebuild,v 1.1 2003/03/12 02:46:33 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.6.0.ebuild,v 1.2 2003/05/14 13:41:17 darkspecter Exp $
 
 IUSE="ssl zlib"
 
@@ -14,10 +14,17 @@ KEYWORDS="~x86 ~sparc "
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=gnome-base/gnome-2.0.2
+DEPEND=">=gnome-base/libgnome-2.0.2
+	>=gnome/base/libgnomeui-2.0.2
 	>=dev-libs/libxml2-2.4.3
 	>=gnome-base/libglade-1.99.2
+	>=gnome-base/gconf-1.2.1
 	>=gnome-base/gnome-vfs-2.0
+	>=x11-libs/gtk+-2.0
+	>=dev-libs/glib-2.0
+	>=gnome-base/libbonobo-2.0
+	>=gnome-base/libbonoboui-2.0
+	>=gnome-extra/libgtkhtml-2.0
 	>=gnome-base/libgnomeprint-1.110.0
 	>=gnome-base/libgnomeprintui-1.110.0
 	ssl? ( dev-libs/openssl )
