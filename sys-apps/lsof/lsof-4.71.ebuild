@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.71.ebuild,v 1.8 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.71.ebuild,v 1.9 2004/11/05 23:23:02 vapier Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64 s390 ppc64"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sparc x86"
 IUSE="static"
 
 DEPEND="virtual/libc"
