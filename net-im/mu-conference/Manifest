@@ -8,5 +8,5 @@ MD5 f88abce484cd1607dc473ea266ea57f9 files/digest-mu-conference-0.6.0-r1 70
 MD5 34c298326722258d9f0ad798afb32cb1 files/mu-conference-makefile.patch 430
 MD5 34f38216da5355bb7d24145b50d39bfd files/muc-transport.init 529
 MD5 5d92cc782339ac08100c8a4068f24b92 files/muctrans.xml 908
-MD5 b132b3227fe085268b06caf7c26095ab files/mu-conference-conf.d 436
+MD5 fe7a249c39d9046180aee62459ed6c82 files/mu-conference-conf.d 435
 MD5 f88abce484cd1607dc473ea266ea57f9 files/digest-mu-conference-0.6.0-r2 70
