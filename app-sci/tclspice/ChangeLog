@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/tclspice
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.7 2004/06/24 22:19:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.8 2004/06/25 23:05:32 plasmaroo Exp $
+
+*tclspice-0.2.17 (26 Jun 2004)
+
+  26 Jun 2004; <plasmaroo@gentoo.org> +tclspice-0.2.17.ebuild:
+  Version bump.
 
   05 Jun 2004; David Holm <dholm@gentoo.org> tclspice-0.2.15.ebuild:
   Added to ~ppc.
