@@ -1,6 +1,6 @@
 # Copyright 2003 Sascha Rusch
 # Distributed under the terms of the GNU General Public License v2
-inherit kde-base || die
+inherit kde-base
 
 DESCRIPTION="KDE 3.x frontend for httrack"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/stable.pkg/${PV}/${P}.tar.bz2"
