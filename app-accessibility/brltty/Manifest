@@ -2,7 +2,7 @@ MD5 39db1a22ff4962947470ddf89825ff91 brltty-3.5.ebuild 752
 MD5 99ec20c38a29c5e0c51e302ebf79dc38 brltty-3.5.0_pre3.ebuild 799
 MD5 cab5c4d0aa8f2e025aafca77c5ee7189 ChangeLog 1243
 MD5 a3decf847af0138ea85ccbf4d1b44f27 brltty-3.4.1.ebuild 822
-MD5 702807ad5545aa7253071dcf32daf513 metadata.xml 261
+MD5 400cd2fad2e2bd56b1920c9cdd5d1420 metadata.xml 259
 MD5 01fdfd93bce0191b5ac98a81f9bf7416 files/digest-brltty-3.4.1 65
 MD5 29fbe3751f3fbe867cde655bf661e197 files/digest-brltty-3.5.0_pre3 66
 MD5 7d93e814d84d01d5a05daab69875e2f9 files/digest-brltty-3.5 62
