@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.23 2004/07/09 13:26:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.24 2004/08/23 18:54:22 s4t4n Exp $
+
+*fox-1.2.6-r1 (07 Jul 2004)
+
+  23 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> fox-1.2.6-r1.ebuild:
+  New revision which adds support for freetype library, thus allowing for
+  antialiased fonts...
 
   09 Jul 2004; Ferris McCormick <fmccor@gentoo.org> fox-1.2.6.ebuild:
   Add ~sparc keyword.
