@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xemacs-packages.eclass,v 1.1 2002/12/16 09:54:23 rendhalver Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xemacs-packages.eclass,v 1.2 2003/01/01 11:29:33 rendhalver Exp $
 
 # xemacs-packages eclass inherited by all xemacs packages
 # $PKG_CAT need's to be set before inheriting xemacs-packages
@@ -8,6 +8,8 @@
 ECLASS=xemacs-packages
 INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS src_unpack src_install
+
+DEPENDS="virtual/xemacs"
 
 [ -z "$HOMEPAGE" ]    && HOMEPAGE="http://xemacs.org/"
 [ -z "$LICENSE" ]     && LICENSE="GPL-2"
@@ -24,13 +26,13 @@ case "${PKG_CAT}" in
 esac
 [ -n "$DEBUG" ] && einfo "MY_INSTALL_DIR is ${MY_INSTALL_DIR}"
 
-KEYWORDS="~x86 ~ppc ~alpha"
-
 if [ -n "$EXPERIMENTAL" ]
 then
 	[ -z "$SRC_URI" ] && SRC_URI="ftp://ftp.xemacs.org/beta/experimental/packages/${P}-pkg.tar.gz"
+	KEYWORDS="x86 -ppc alpha sparc"
 else
 	[ -z "$SRC_URI" ] && SRC_URI="ftp://ftp.xemacs.org/packages/${P}-pkg.tar.gz"
+	KEYWORDS="~x86 -ppc ~alpha ~sparc"
 fi
 [ -n "$DEBUG" ] && einfo "SRC_URI is ${SRC_URI}"
 
@@ -46,5 +48,4 @@ xemacs-packages_src_install() {
 	dodir ${MY_INSTALL_DIR}
 	cd ${D}${MY_INSTALL_DIR}
 	unpack ${A}
-#	chmod -R ugo=rX *
 }
