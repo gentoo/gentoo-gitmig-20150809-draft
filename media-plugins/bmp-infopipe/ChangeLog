@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/bmp-infopipe
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-infopipe/ChangeLog,v 1.2 2004/12/05 19:33:09 chainsaw Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-infopipe/ChangeLog,v 1.3 2005/01/17 22:04:38 eradicator Exp $
+
+  17 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  bmp-infopipe-1.3.ebuild:
+  Added to ~amd64.
 
   05 Dec 2004; Tony Vroon <chainsaw@gentoo.org> bmp-infopipe-1.3.ebuild:
   Stable on x86.
