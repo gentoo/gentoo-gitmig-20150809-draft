@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.142 2005/01/15 11:35:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.143 2005/01/21 22:29:57 ciaranm Exp $
+
+*vim-6.3-r4 (21 Jan 2005)
+
+  21 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> +vim-6.3-r4.ebuild:
+  New version, using -r4 to keep in sync with vim-core. Includes upstream
+  patches up to 6.3.058.
 
   15 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> -vim-6.2-r9.ebuild,
   -vim-6.3-r1.ebuild, vim-6.3-r2.ebuild, -vim-6.3.ebuild:
