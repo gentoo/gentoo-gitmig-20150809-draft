@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20030413-r2.ebuild,v 1.9 2004/02/29 21:11:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20030413-r2.ebuild,v 1.10 2004/03/26 10:33:15 mr_bones_ Exp $
 
 inherit eutils
 
@@ -11,10 +11,13 @@ SRC_URI="mirror://gentoo/distfiles/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
-DEPEND="dev-games/crystalspace
+RDEPEND="dev-games/crystalspace
 	dev-util/jam
 	!dev-games/cel-cvs"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 S=${WORKDIR}/${PN}
 
