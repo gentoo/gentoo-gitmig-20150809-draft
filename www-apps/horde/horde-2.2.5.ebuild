@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-2.2.5.ebuild,v 1.1 2004/08/15 10:04:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-2.2.5.ebuild,v 1.2 2004/08/15 18:23:21 stuart Exp $
 
 HORDE_PHP_FEATURES="nls session"
 inherit horde
@@ -14,7 +14,7 @@ DEPEND=""
 RDEPEND=">=dev-php/mod_php-4.1.0
 	>=sys-devel/gettext-0.10.40
 	>=dev-libs/libxml2-2.4.21
-	>=net-www/horde-pear-1.3"
+	>=www-apps/horde-pear-1.3"
 
 src_install() {
 	horde_src_install
