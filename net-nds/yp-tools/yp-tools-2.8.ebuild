@@ -29,7 +29,7 @@ src_compile() {
 				${i}.orig > ${i}
 		done
 	fi
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	make || die
 }
 
