@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
-inherit libtool
+inherit libtool motif
 
 DESCRIPTION="An OSF/Motif(R) clone"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -16,6 +16,11 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	elibtoolize
+
+	einfo "Fixing Mwm app-defaults path"
+	sed -i -e 's:$(libdir)/X11/app-defaults:$(sysconfdir)/X11/app-defaults:' clients/Motif-1.2/mwm/Makefile.in
+	sed -i -e 's:$(libdir)/X11/app-defaults:$(sysconfdir)/X11/app-defaults:' clients/Motif-1.2/mwm/Makefile.am
+	sed -i -e 's:usr/X11R6/lib/X11/app-defaults/Mwm:etc/X11/app-defaults/Mwm' doc/lessdox/clients/mwm.1
 
 	econf \
 	  --enable-build-12 \
@@ -34,25 +39,19 @@ src_install() {
 	make DESTDIR=${D} install || die "make install"
 
 
-	# bin
+	einfo "Fixing binaries"
 	for file in `ls ${D}/usr/bin`
 	do
 		mv ${D}/usr/bin/${file} ${D}/usr/bin/${file}-1.2
 	done
 
 
-	# docs
+	einfo "Fixing docs"
 	dodir /usr/share/doc/
 	mv ${D}/usr/LessTif ${D}/usr/share/doc/${P}
 
 
-	# garbage
-	rm -fR ${D}/usr/lib/LessTif
-	rm -fR ${D}/usr/lib/X11
-	rm -f  ${D}/bin/mxmkmf
-
-
-	# libs
+	einfo "Fixing libraries"
 	dodir /usr/lib/motif/1.2
 	mv ${D}/usr/lib/lib* ${D}/usr/lib/motif/1.2
 
@@ -65,7 +64,7 @@ src_install() {
 	done
 
 
-	# includes
+	einfo "Fixing includes"
 	dodir /usr/include/Mrm/1.2/Mrm
 	dodir /usr/include/Xm/1.2/Xm
 	dodir /usr/include/uil/1.2/uil
@@ -74,8 +73,11 @@ src_install() {
 	mv ${D}/usr/include/Xm/*.h ${D}/usr/include/Xm/1.2/Xm
 	mv ${D}/usr/include/uil/*.{h,uil} ${D}/usr/include/uil/1.2/uil
 
+	cd ${D}/usr/include
+	motif_fix_headers 1.2
 
-	# man pages
+
+	einfo "Fixing man pages"
 	for file in `ls ${D}/usr/share/man/man1`
 	do
 		file=${file/.1/}
@@ -91,4 +93,11 @@ src_install() {
 		file=${file/.5/}
 		mv ${D}/usr/share/man/man5/${file}.5 ${D}/usr/share/man/man5/${file}-12.5
 	done
+
+	einfo "Cleaning up"
+	rm -fR ${D}/usr/lib/LessTif
+	rm -fR ${D}/usr/lib/X11
+	rm -f  ${D}/bin/mxmkmf-1.2
+
+
 }
