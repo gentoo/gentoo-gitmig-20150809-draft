@@ -1,45 +1,37 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.4 2004/01/16 22:38:19 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.5 2004/01/25 23:34:57 vapier Exp $
 
 inherit libtool eutils
 
-
 DESCRIPTION="FAM, the File Alteration Monitor"
-SRC_URI="ftp://oss.sgi.com/projects/fam/download/stable/${P}.tar.gz"
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
+SRC_URI="ftp://oss.sgi.com/projects/fam/download/stable/${P}.tar.gz"
 
-KEYWORDS="~x86 ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
-SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-IUSE=""
+SLOT="0"
+KEYWORDS="~x86 ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
 
 DEPEND=">=net-nds/portmap-5b-r6"
 
 src_unpack() {
-
 	unpack ${A}
-
 	# fix permission problems with user* in FEATURES (#35307)
 	chmod u+w ${S}/configure
-
 }
 
 src_install() {
-
 	einstall || die
 
-	dosed -i -e "s:local_only = false:local_only = true:g" conf/fam.conf
+	dosed "s:local_only = false:local_only = true:g" conf/fam.conf
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/famd
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS TODO README
-
 }
 
 pkg_postinst() {
-
 	einfo "To enable fam on  boot you will have to add it to the"
 	einfo "default profile, issue the following command as root to do so."
 	echo
@@ -62,5 +54,4 @@ pkg_postinst() {
 	einfo "rm /etc/init.d/fam"
 	echo
 	einfo "The last command removes the old init script."
-
 }

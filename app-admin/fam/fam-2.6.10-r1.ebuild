@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.6.10-r1.ebuild,v 1.1 2003/12/07 23:19:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.6.10-r1.ebuild,v 1.2 2004/01/25 23:34:57 vapier Exp $
 
 IUSE=""
 
@@ -38,8 +38,8 @@ src_unpack() {
 	# This one is old, and automake will install new one
 	rm -rf ${S}/missing
 
-	export WANT_AUTOCONF_2_5=1
-	export WANT_AUTOMAKE_1_5=1
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.5
 	aclocal
 	autoconf
 	automake --add-missing
@@ -53,5 +53,5 @@ src_install() {
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/fam
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS TODO README*
+	dodoc AUTHORS ChangeLog INSTALL NEWS TODO README*
 }
