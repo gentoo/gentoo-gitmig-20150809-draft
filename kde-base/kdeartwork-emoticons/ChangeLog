@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kdeartwork-emoticons
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/ChangeLog,v 1.1 2005/02/05 18:43:37 danarmak Exp $
+
+*kdeartwork-emoticons-3.4.0_beta2 (05 Feb 2005)
+
+  05 Feb 2005; Dan Armak <danarmak@gentoo.org> +metadata.xml,
+  +kdeartwork-emoticons-3.4.0_beta2.ebuild:
+  New in 3.4.0_beta2: emotional icons from the kdeartwork package.
+
