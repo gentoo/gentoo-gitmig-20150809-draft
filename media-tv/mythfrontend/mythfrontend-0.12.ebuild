@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.12.ebuild,v 1.1 2003/10/20 03:07:33 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.12.ebuild,v 1.2 2003/10/28 16:15:15 max Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,6 @@ DEPEND="virtual/x11
 	>=media-libs/freetype-2.0
 	>=sys-apps/sed-4
 	alsa? ( media-libs/alsa-lib )
-	dvb? ( media-libs/libdvb )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	nvidia? ( media-video/nvidia-glx )"
@@ -36,6 +35,8 @@ pkg_setup() {
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
 		die "Qt needs mysql support"
 	fi
+
+	return 0
 }
 
 src_unpack() {
@@ -47,7 +48,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local cpu="`get-flag march`"
+	local cpu="`get-flag march || get-flag mcpu`"
 	if [ "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
 	fi

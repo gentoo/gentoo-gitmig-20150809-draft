@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.6 2003/10/20 03:07:33 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.7 2003/10/28 16:15:15 max Exp $
+
+  28 Oct 2003; Max Kalika <max@gentoo.org> mythfrontend-0.12.ebuild:
+  Remove DVB depend. Extend CPU detection. Fix potential portage bug in
+  pkg_setup().
 
 *mythfrontend-0.12 (19 Oct 2003)
 
