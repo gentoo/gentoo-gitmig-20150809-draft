@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.2 2003/12/24 20:45:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.3 2003/12/26 16:39:53 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -27,7 +27,7 @@ DEPEND="virtual/x11
 	odbc? ( dev-db/unixODBC )
 	mysql? ( dev-db/mysql )
 	sqlite? ( dev-db/sqlite )
-	firdbird? ( dev-db/firebird )
+	firebird? ( dev-db/firebird )
 	postgres? ( dev-db/postgresql )
 	opengl? ( virtual/opengl virtual/glu )"
 
