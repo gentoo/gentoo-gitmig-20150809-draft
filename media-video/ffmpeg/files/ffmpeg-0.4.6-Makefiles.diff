@@ -1,0 +1,93 @@
+diff -urN ../ffmpeg-0.4.6.orig/Makefile ./Makefile
+--- ../ffmpeg-0.4.6.orig/Makefile	2002-12-27 15:35:45.000000000 +0100
++++ ./Makefile	2002-12-29 09:15:33.000000000 +0100
+@@ -78,20 +78,16 @@
+ 	$(MAKE) -C vhook all
+ 
+ install: all $(INSTALLVHOOK)
+-	$(MAKE) -C libavcodec install
+-	install -d $(prefix)/bin
+-	install -s -m 755 $(PROG) $(prefix)/bin
+-	ln -sf ffmpeg $(prefix)/bin/ffplay 
++	$(MAKE) -C libavcodec DESTDIR=$(DESTDIR) install
++	install -d $(DESTDIR)$(prefix)/bin
++	install -s -m 755 $(PROG) $(DESTDIR)$(prefix)/bin 
+ 
+-install-vhook: $(prefix)/lib/vhook
+-	$(MAKE) -C vhook install INSTDIR=$(prefix)/lib/vhook
+-
+-$(prefix)/lib/vhook:
+-	install -d $@
++install-vhook:
++	$(MAKE) -C vhook install INSTDIR=$(DESTDIR)$(prefix)/lib/vhook
+ 
+ installlib:
+-	$(MAKE) -C libavcodec installlib
+-	$(MAKE) -C libavformat installlib
++	$(MAKE) -C libavcodec DESTDIR=$(DESTDIR) installlib
++	$(MAKE) -C libavformat DESTDIR=$(DESTDIR) installlib
+ 
+ dep:	depend
+ 
+diff -urN ../ffmpeg-0.4.6.orig/libavcodec/Makefile ./libavcodec/Makefile
+--- ../ffmpeg-0.4.6.orig/libavcodec/Makefile	2002-12-27 15:35:45.000000000 +0100
++++ ./libavcodec/Makefile	2002-12-29 09:17:08.000000000 +0100
+@@ -179,20 +179,18 @@
+ 
+ install: all
+ ifeq ($(BUILD_SHARED),yes)
+-	install -d $(prefix)/lib
+-	install -s -m 755 $(SLIB) $(prefix)/lib/libavcodec-$(VERSION).so
+-	ln -sf libavcodec-$(VERSION).so $(prefix)/lib/libavcodec.so
+-	ldconfig || true
+-	mkdir -p $(prefix)/include/ffmpeg
+-	install -m 644 $(VPATH)/avcodec.h $(prefix)/include/ffmpeg/avcodec.h
+-	install -m 644 $(VPATH)/common.h $(prefix)/include/ffmpeg/common.h
++	install -d $(DESTDIR)$(prefix)/lib
++	install -s -m 755 $(SLIB) $(DESTDIR)$(prefix)/lib/libavcodec-$(VERSION).so
++	install -d $(DESTDIR)$(prefix)/include/ffmpeg
++	install -m 644 $(VPATH)/avcodec.h $(DESTDIR)$(prefix)/include/ffmpeg/avcodec.h
++	install -m 644 $(VPATH)/common.h $(DESTDIR)$(prefix)/include/ffmpeg/common.h
+ endif
+ 
+ installlib: all
+-	install -m 644 $(LIB) $(prefix)/lib
+-	mkdir -p $(prefix)/include/ffmpeg
++	install -m 644 $(LIB) $(DESTDIR)$(prefix)/lib
++	install -d $(DESTDIR)$(prefix)/include/ffmpeg
+ 	install -m 644 $(SRC_PATH)/libavcodec/avcodec.h $(SRC_PATH)/libavcodec/common.h \
+-                $(prefix)/include/ffmpeg
++                $(DESTDIR)$(prefix)/include/ffmpeg
+ 
+ #
+ # include dependency files if they exist
+diff -urN ../ffmpeg-0.4.6.orig/libavformat/Makefile ./libavformat/Makefile
+--- ../ffmpeg-0.4.6.orig/libavformat/Makefile	2002-12-27 15:35:47.000000000 +0100
++++ ./libavformat/Makefile	2002-12-29 07:54:08.000000000 +0100
+@@ -54,12 +54,12 @@
+ 	$(RANLIB) $@
+ 
+ installlib: all
+-	install -m 644 $(LIB) $(prefix)/lib
+-	mkdir -p $(prefix)/include/ffmpeg
++	install -m 644 $(LIB) $(DESTDIR)$(prefix)/lib
++	install -d $(DESTDIR)$(prefix)/include/ffmpeg
+ 	install -m 644 $(SRC_PATH)/libav/avformat.h $(SRC_PATH)/libav/avio.h \
+                 $(SRC_PATH)/libav/rtp.h $(SRC_PATH)/libav/rtsp.h \
+                 $(SRC_PATH)/libav/rtspcodes.h \
+-                $(prefix)/include/ffmpeg
++                $(DESTDIR)$(prefix)/include/ffmpeg
+ 
+ %.o: %.c
+ 	$(CC) $(CFLAGS) -c -o $@ $< 
+diff -urN ../ffmpeg-0.4.6.orig/vhook/Makefile ./vhook/Makefile
+--- ../ffmpeg-0.4.6.orig/vhook/Makefile	2002-12-27 15:35:47.000000000 +0100
++++ ./vhook/Makefile	2002-12-29 08:25:17.000000000 +0100
+@@ -16,6 +16,7 @@
+ all: $(HOOKS) 
+ 
+ install:
++	install -d $(INSTDIR)
+ 	install -s -m 755 $(HOOKS) $(INSTDIR)
+ 
+ imlib2.so: imlib2.o
