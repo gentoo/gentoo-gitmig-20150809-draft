@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.12 2004/12/14 15:17:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.13 2004/12/14 15:36:28 axxo Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://xml.apache.org/fop/"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc ~sparc"
-IUSE="doc"
+IUSE="doc jai jimi"
 DEPEND=">=virtual/jdk-1.4
 	jai? ( dev-java/jai-bin )
 	jimi? ( dev-java/jimi )
