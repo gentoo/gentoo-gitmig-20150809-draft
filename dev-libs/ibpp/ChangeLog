@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ibpp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.10 2004/06/24 23:12:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.11 2004/10/25 23:15:48 sekretarz Exp $
+
+*ibpp-2.3.4.0 (26 Oct 2004)
+
+  26 Oct 2004; Karol Wojtaszek <sekretarz@gentoo.org> +metadata.xml,
+  +ibpp-2.3.4.0.ebuild:
+  Version bump, bug #68464. Added ~amd64 and metadata.xml
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ibpp-1.0.5.2-r1.ebuild:
   Don't assign default to S; header fix
