@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r4.ebuild,v 1.1 2003/10/22 12:21:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r4.ebuild,v 1.2 2003/10/26 15:58:01 pythonhead Exp $
 
 inherit flag-o-matic eutils python
 
@@ -101,7 +101,7 @@ src_install() {
 	if [ -n "`use tcltk`" ]; then
 		dodir /usr/lib/python${PYVER}/tools
 		cp -r "${S}/Tools/idle" "${D}/usr/lib/python${PYVER}/tools/"
-		dosym /usr/bin/idle.py /usr/lib/python${PYVER}/tools/idle/idle.py
+		dosym /usr/lib/python${PYVER}/tools/idle/idle.py /usr/bin/idle.py
 	fi
 }
 
