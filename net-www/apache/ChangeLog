@@ -1,12 +1,15 @@
 # ChangeLog for net-www/apache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.5 2002/04/10 17:04:09 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.6 2002/04/11 04:27:31 woodchip Exp $
 
   10 Apr 2002; Donny Davies <woodchip@gentoo.org> apache-1.3.24-r1.ebuild,
   files/conf/commonapache.conf :
 
-  Corrected the apache user's home directory (/var/www -> /home/httpd).  Corrected
-  the icons directory in the conf file (/var/www/icons -> /home/httpd/icons).
+  o Corrected the apache user's home directory (/var/www -> /home/httpd).
+  o Corrected the icons directory (/var/www/icons -> /home/httpd/icons).
+  o Ripped the php mime types from the commonapache.conf file.  I moved
+    them to the php package, as an addon config snippet.
+    (/etc/apache/conf/mod_php.conf)
 
 *apache-1.3.24-r1 (9 Apr 2002)
 
