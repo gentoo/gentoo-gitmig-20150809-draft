@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.6-r1.ebuild,v 1.3 2005/02/18 16:51:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.7.ebuild,v 1.1 2005/02/18 16:51:57 luckyduck Exp $
 
 IUSE="oggvorbis mad encode alsa"
 
@@ -28,7 +28,7 @@ src_unpack() {
 	# Needed on mips and probablly others
 	gnuconfig_update
 
-	epatch ${FILESDIR}/sox-12.17.6-destdir.patch
+	epatch ${FILESDIR}/${P}-destdir.patch
 }
 
 src_compile () {
