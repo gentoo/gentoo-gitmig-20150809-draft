@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-sork/horde-sork-0.ebuild,v 1.1 2004/08/15 12:38:35 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-sork/horde-sork-0.ebuild,v 1.2 2004/08/15 16:38:52 stuart Exp $
 
 inherit horde
 
@@ -10,10 +10,10 @@ SRC_URI=""
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 DEPEND=""
-RDEPEND="net-www/horde-accounts
-	net-www/horde-forwards
-	net-www/horde-passwd
-	net-www/horde-vacation"
+RDEPEND="www-apps/horde-accounts
+	www-apps/horde-forwards
+	www-apps/horde-passwd
+	www-apps/horde-vacation"
 
 # this is just a meta package
 pkg_setup() { :;}
