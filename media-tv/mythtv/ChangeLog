@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.10 2003/12/04 23:16:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.11 2003/12/11 21:22:50 aliz Exp $
+
+*mythtv-0.13 (11 Dec 2003)
+
+  11 Dec 2003; Daniel Ahlberg <aliz@gentoo.org> mythtv-0.13.ebuild:
+  Version bump.
 
   04 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> mythtv-0.10.ebuild:
   clean old version per max
