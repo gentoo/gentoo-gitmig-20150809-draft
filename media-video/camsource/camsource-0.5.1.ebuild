@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.5.1.ebuild,v 1.4 2002/11/26 14:00:54 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.5.1.ebuild,v 1.5 2002/11/27 03:04:43 zhen Exp $
 
 DESCRIPTION="Camsource grabs images from a video4linux device and makes them available
 			to various plugins for processing or handling. Camsource can also be used 
 			as a streaming webcam server."
 
 HOMEPAGE="http://camsource.sourceforge.net/"
-SRC_URI="ftp://ftp.sf.net/pub/sourceforge/camsource/${P}.tar.gz"
+SRC_URI="http://umn.dl.sourceforge.net/sourceforge/camsource/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~sparc64 ~ppc ~alpha"
