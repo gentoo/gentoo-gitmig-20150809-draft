@@ -1,6 +1,13 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.50 2005/03/14 02:39:50 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.51 2005/03/28 14:02:39 mrness Exp $
+
+*squid-2.5.9-r2 (28 Mar 2005)
+
+  28 Mar 2005; Alin Nastac <mrness@gentoo.org> -squid-2.5.9-r1.ebuild,
+  +squid-2.5.9-r2.ebuild:
+  Add customlog local USE flag which decides whether or not customlog patch is
+  applied (#85740).
 
   13 Mar 2005; Hardave Riar <hardave@gentoo.org> squid-2.5.9.ebuild:
   Stable on mips, bug #83955.

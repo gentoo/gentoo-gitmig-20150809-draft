@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.9-r1.ebuild,v 1.1 2005/03/06 20:52:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.9-r2.ebuild,v 1.1 2005/03/28 14:02:39 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs
 S_PV=${PV%.*}
 S_PL=${PV##*.}
 S_PP=${PN}-${S_PV}.STABLE${S_PL}
-PATCH_VERSION="20050304"
+PATCH_VERSION="20050326"
 
 DESCRIPTION="A caching web proxy, with advanced features"
 HOMEPAGE="http://www.squid-cache.org/"
@@ -20,7 +20,7 @@ SRC_URI="ftp://ftp.squid-cache.org/pub/squid-2/STABLE/${S_PP}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~mips"
-IUSE="pam ldap ssl sasl snmp debug uclibc selinux underscores logrotate"
+IUSE="pam ldap ssl sasl snmp debug uclibc selinux underscores logrotate customlog"
 
 RDEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -36,7 +36,9 @@ src_unpack() {
 	cd ${S} || die "dir ${S} not found"
 
 	# Do bulk patching from squids bug fix list as well as our patches
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patch
+	useq customlog || rm ${WORKDIR}/patch/9*customlog*
+	EPATCH_SUFFIX="patch"
+	epatch ${WORKDIR}/patch
 
 	#hmm #10865
 	cd helpers/external_acl/ldap_group
@@ -117,6 +119,7 @@ src_compile() {
 		--enable-truncate \
 		--enable-arp-acl \
 		--with-pthreads \
+		--with-large-files \
 		--enable-htcp \
 		--enable-carp \
 		--enable-poll \
