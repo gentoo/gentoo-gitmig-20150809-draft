@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the term of the GNU General Public License v2
 # Author: Zachary T Welch
-# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.3 2003/04/17 22:55:13 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.4 2003/05/08 01:03:51 zwelch Exp $
 
 ECLASS=crosscompile
 INHERITED="$INHERITED $ECLASS"
@@ -69,7 +69,13 @@ cross-target() {
 # cross-setslot sets the SLOT for a cross-targetable ebuild
 #  this prevents portage from unmerging the native version
 cross-setslot() {
-	cross-target && SLOT="${CCHOST}-${1}" || SLOT="${1}"
+	# IMPORTANT, this only works because cross-compiling uses
+	#  arch-CCHOST categories in the portage overlay to fake
+	#  portage into thinking it sees a new CATEGORY/PACKAGE 
+	SLOT="${1}"
+	# in the future, we should be able to do the following:
+	# cross-target && SLOT="${1}-${CCHOST}" || SLOT="${1}"
+
 }
 
 # The compiler will need to be able to find the header files
