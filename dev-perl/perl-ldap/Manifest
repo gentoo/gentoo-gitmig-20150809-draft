@@ -4,7 +4,9 @@ MD5 b3046542674cdd0efe14bd558333957f perl-ldap-0.25-r1.ebuild 560
 MD5 82b7d4cf4a453f45f6380da3ba7248c5 perl-ldap-0.25-r2.ebuild 560
 MD5 29e4de8abccbde88c1f8c58eb9b92ed7 perl-ldap-0.25.ebuild 545
 MD5 142bdb729266a1eae30eb58d86ef219d perl-ldap-0.29.ebuild 725
+MD5 9cc15e830536806bca56c16db78e75dc perl-ldap-0.31.ebuild 645
 MD5 bde0960a7e99a225892f45d8a52cb982 files/digest-perl-ldap-0.25 66
 MD5 bde0960a7e99a225892f45d8a52cb982 files/digest-perl-ldap-0.25-r1 66
 MD5 bde0960a7e99a225892f45d8a52cb982 files/digest-perl-ldap-0.25-r2 66
 MD5 6257085208c646146fc471e4eec96257 files/digest-perl-ldap-0.29 66
+MD5 0de1cb7ea657ce28770d95aa7832827b files/digest-perl-ldap-0.31 66
