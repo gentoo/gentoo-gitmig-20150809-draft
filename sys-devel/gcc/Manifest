@@ -26,7 +26,7 @@ MD5 7b9e1f5167f95ef12201d256c1540273 gcc-3.4.1.ebuild 30210
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 fe69ea54e78acb7a7bc97251a092aa48 gcc-3.4.2-r2.ebuild 13999
 MD5 29101392d0713e27c3186bab17fa17c2 gcc-3.3.4-r2.ebuild 24802
-MD5 e98871b93e4f9d627d40dc2ebf1f657b gcc-3.4.1-r3.ebuild 31216
+MD5 4c8089842474ecc3068677a19c7d5438 gcc-3.4.1-r3.ebuild 31195
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
 MD5 0d683280daf95e6bb9712549352a200c files/digest-gcc-3.1.1-r2 140
@@ -126,7 +126,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBUj3SHTu7gpaalycRAuEXAJ4uwIfWQiFihRfUWhJRt0ht1EYHrQCfeS9k
-s8eBe4UHakwOfh3/biScHWM=
-=vpws
+iD8DBQFBU2sJHTu7gpaalycRAm+eAKDXML7zZbW0dOA/+Szx0ZJbKIplOACfVcM3
+gGHQZ/mIzcJa6spQnZRAv+o=
+=8ZJ/
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.2 2004/09/23 03:06:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.3 2004/09/24 00:31:57 vapier Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -22,22 +22,29 @@ KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa ppc s390"
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
 DEPEND="virtual/libc
-	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
-	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
-	( !sys-devel/hardened-gcc )
+	!s390? ( !uclibc? (
+		>=sys-libs/glibc-2.3.3_pre20040420-r1
+		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
+	) )
+	!sys-devel/hardened-gcc
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
-	!build? ( gcj? ( gtk? ( >=x11-libs/gtk+-2.2 ) ) )
-	!build? ( gcj? ( >=media-libs/libart_lgpl-2.1 ) )
-	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
-
+	!build? (
+		gcj? (
+			gtk? ( >=x11-libs/gtk+-2.2 )
+			>=media-libs/libart_lgpl-2.1
+		)
+		>=sys-libs/ncurses-5.2-r2
+		nls? ( sys-devel/gettext )
+	)"
 RDEPEND="virtual/libc
-	!uclibc? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
-	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 ) )
+	!s390? ( !uclibc? (
+		>=sys-libs/glibc-2.3.3_pre20040420-r1
+		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
+	) )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -45,7 +52,7 @@ RDEPEND="virtual/libc
 
 PDEPEND="sys-devel/gcc-config"
 [ "${ABI}" != "n32" ] && [ "${ABI}" != "n64" ] && PDEPEND="${PDEPEND}
-	!n32? ( !n64? ( !uclibc? ( sys-libs/libstdc++-v3 ) ) )"
+	!n32? ( !n64? ( !s390? ( !uclibc? ( sys-libs/libstdc++-v3 ) ) ) )"
 
 
 # <<--------------------SRC_URI variables-------------------->>
