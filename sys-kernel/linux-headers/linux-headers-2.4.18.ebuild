@@ -1,24 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19.ebuild,v 1.1 2002/04/04 05:36:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.18.ebuild,v 1.1 2002/04/09 05:29:08 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=2.4.18
-KV=2.4.19
+KV=2.4.18
 S=${WORKDIR}/linux-${KV}
 
-# What's in this kernel?
-
-# INCLUDED:
-#   2.4.19-pre2 stock kernel, plus:
-#   2.4.19-pre2-ac4 patch, plus:
-#   SGI XFS (28 Mar 2002 CVS)
+#These are *stock* 2.4.18 headers, for niceness.
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 
@@ -36,7 +31,6 @@ src_unpack() {
 	unpack linux-${OKV}.tar.bz2
 	mv linux linux-${KV} || die
 	cd ${S}
-	cat ${DISTDIR}/linux-gentoo-${KV}.patch.bz2 | bzip2 -d | patch -p1 || die
 	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
