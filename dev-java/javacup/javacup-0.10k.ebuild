@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.10k.ebuild,v 1.2 2004/10/17 09:49:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.10k.ebuild,v 1.3 2004/10/20 09:06:08 absinthe Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cs.princeton.edu/~appel/modern/java/CUP/"
 SRC_URI="http://www.cs.princeton.edu/~appel/modern/java/CUP/java_cup_v10k.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 DEPEND="virtual/jdk"
 RDEPEND="virtual/jre"
