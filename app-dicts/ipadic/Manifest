@@ -1,6 +1,6 @@
 MD5 30e09ec6f562f6406ebc1bd89882bc72 ChangeLog 551
 MD5 53d61bbf625b61a119e14f7f723e120b ipadic-2.6.0.ebuild 707
-MD5 1bdbba85c8f29f4aff500d90f144cdb4 ipadic-2.6.1.ebuild 720
+MD5 09ca5236dba5c30056d21230e36d0ec6 ipadic-2.6.1.ebuild 722
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 4189a9d22ed54da49df9a42eb1f2fd7c files/digest-ipadic-2.6.0 65
 MD5 4afb27bed8feaa85ed28a3a53f0c26de files/digest-ipadic-2.6.1 65
