@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.61 2004/12/03 23:45:40 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.62 2004/12/26 14:34:40 lu_zero Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -20,12 +20,12 @@
 #						  automatically set within the kernel Makefile
 # K_NOUSENAME			- if this is set then EXTRAVERSION will not include the
 #						  first part of ${PN} in EXTRAVERSION
-# K_PREPATCHED			- if the patchset is prepatched (ie: mm-sources, 
-#						  ck-sources, ac-sources) it will use PR (ie: -r5) as 
-#						  the patchset version for 
+# K_PREPATCHED			- if the patchset is prepatched (ie: mm-sources,
+#						  ck-sources, ac-sources) it will use PR (ie: -r5) as
+#						  the patchset version for
 #						- and not use it as a true package revision
 # K_EXTRAEINFO			- this is a new-line seperated list of einfo displays in
-#						  postinst and can be used to carry additional postinst 
+#						  postinst and can be used to carry additional postinst
 #						  messages
 # K_EXTRAEWARN			- same as K_EXTRAEINFO except ewarn's instead of einfo's
 
@@ -36,11 +36,11 @@
 #						  kernel
 # UNIPATCH_EXCLUDE		- an addition var to support exlusion based completely
 #						  on "<passedstring>*" and not "<passedno#>_*"
-#						- this should _NOT_ be used from the ebuild as this is 
+#						- this should _NOT_ be used from the ebuild as this is
 #						  reserved for end users passing excludes from the cli
-# UNIPATCH_DOCS			- space delimemeted list of docs to be installed to 
+# UNIPATCH_DOCS			- space delimemeted list of docs to be installed to
 #						  the doc dir
-# UNIPATCH_STRICTORDER	- if this is set places patches into directories of 
+# UNIPATCH_STRICTORDER	- if this is set places patches into directories of
 #						  order, so they are applied in the order passed
 
 ECLASS="kernel-2"
@@ -49,7 +49,7 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_po
 
 export CTARGET="${CTARGET:-${CHOST}}"
 
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 IUSE="${IUSE} build doc"
 SLOT="${PVR}"
@@ -62,18 +62,18 @@ SLOT="${PVR}"
 kernel_is() {
 	local RESULT
 	RESULT=1
-	
+
 	if [ -n "${1}" ]
 	then
 		[ "${1}" = "${KV_MAJOR}" ] && RESULT=0
 	fi
-	
+
 	if [ -n "${2}" ]
 	then
 		RESULT=1
 		[ "${2}" = "${KV_MINOR}" ] && RESULT=0
 	fi
-	
+
 	if [ -n "${3}" ]
 	then
 		RESULT=1
@@ -111,7 +111,7 @@ then
 			 dev-lang/perl
 			 sys-apps/module-init-tools
 			 sys-devel/make )"
-		
+
 	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" \
 		|| PROVIDE="virtual/linux-sources virtual/alsa"
 
@@ -127,7 +127,7 @@ fi
 #==============================================================
 unpack_2_4() {
 	cd ${S}
-	# this file is required for other things to build properly, 
+	# this file is required for other things to build properly,
 	# so we autogenerate it
 	make mrproper || die "make mrproper died"
 	make include/linux/version.h || die "make include/linux/version.h failed"
@@ -145,10 +145,10 @@ universal_unpack() {
 			|| die "Unable to move source tree to ${KV_FULL}."
 	fi
 	cd ${S}
-	
+
 	# change incorrect install path
 	sed	-ie 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' Makefile
-		
+
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
 
@@ -159,6 +159,10 @@ universal_unpack() {
 			&& mv Makefile.new Makefile
 		cd ${S}
 	fi
+	# fix a problem on ppc
+	use ppc && \
+	sed -ie 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
+	${S}/arch/ppc/Makefile
 }
 
 unpack_set_extraversion() {
@@ -170,12 +174,12 @@ unpack_set_extraversion() {
 #==============================================================
 compile_headers() {
 	local MY_ARCH
-	
+
 	MY_ARCH=${ARCH}
 	unset ${ARCH}
 	yes "" | make oldconfig
 	echo ">>> make oldconfig complete"
-	ARCH=${MY_ARCH}	
+	ARCH=${MY_ARCH}
 }
 
 compile_manpages() {
@@ -206,10 +210,10 @@ install_headers() {
 	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
 	cp -ax ${S}/include/linux/* ${D}/${ddir}/linux
 	rm -rf ${D}/${ddir}/linux/modules
-	
+
 	dodir ${ddir}/asm
 	cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
-	
+
 	if [ $(kernel_is_2_6) $? == 0 ]
 	then
 		dodir ${ddir}/asm-generic
@@ -301,7 +305,7 @@ postinst_sources() {
 	einfo "For example, this kernel will require:"
 	einfo "/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
 	echo
-	
+
 	# if K_EXTRAEINFO is set then lets display it now
 	if [ -n "${K_EXTRAEINFO}" ]
 	then
@@ -354,13 +358,13 @@ setup_headers() {
 	ARCH=$(uname -m | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ \
 	-e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/)
 	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH="sparc64"
-	
+
 	[ -z "${H_SUPPORTEDARCH}" ] && H_SUPPORTEDARCH="${PN/-*/}"
 	for i in ${H_SUPPORTEDARCH}
 	do
 		[ "${ARCH}" == "${i}" ] && H_ACCEPT_ARCH="yes"
 	done
-	
+
 	if [ "${H_ACCEPT_ARCH}" != "yes" ]
 	then
 		echo
@@ -448,7 +452,7 @@ unipatch() {
 			i=${i/:*/}
 			x=${i/*\//}
 			x=${x/\.${extention}/}
-	
+
 			if [ -n "${PIPE_CMD}" ]
 			then
 				if [ ! -r "${i}" ]
@@ -460,7 +464,7 @@ unipatch() {
 					eerror "or does not exist."
 					die Unable to locate ${i}
 				fi
-			
+
 				if [ -n "${UNIPATCH_STRICTORDER}" ]
 				then
 					STRICT_COUNT=$((${STRICT_COUNT} + 1))
@@ -502,8 +506,8 @@ unipatch() {
 			STDERR_T="${T}/${i/*\//}"
 			STDERR_T="${STDERR_T/.patch*/.err}"
 
-			[ -z ${i/*.patch*/} ] && PATCH_DEPTH=${i/*.patch/} 
-			[ -z ${i/*.diff*/} ]  && PATCH_DEPTH=${i/*.diff/} 
+			[ -z ${i/*.patch*/} ] && PATCH_DEPTH=${i/*.patch/}
+			[ -z ${i/*.diff*/} ]  && PATCH_DEPTH=${i/*.diff/}
 
 			if [ -z "${PATCH_DEPTH}" ]; then
 				PATCH_DEPTH=0
@@ -559,29 +563,29 @@ detect_version() {
 	# - OKV: Original Kernel Version (2.6.0/2.6.0-test11)
 	# - KV: Kernel Version (2.6.0-gentoo/2.6.0-test11-gentoo-r1)
 	# - EXTRAVERSION: The additional version appended to OKV (-gentoo/-gentoo-r1)
-	
+
 	if [ -n "${KV_FULL}" ] ;
 	then
 		# we will set this for backwards compatibility.
 		KV=${KV_FULL}
-		
+
 		# we know KV_FULL so lets stop here. but not without resetting S
 		S=${WORKDIR}/linux-${KV_FULL}
 		return
 	fi
-	
+
 	OKV=${PV/_beta/-test}
 	OKV=${OKV/_rc/-rc}
 	OKV=${OKV/_pre*/}
 	OKV=${OKV/-r*/}
-	
+
 	KV_MAJOR=$(echo ${OKV} | cut -d. -f1)
 	KV_MINOR=$(echo ${OKV} | cut -d. -f2)
 	KV_PATCH=$(echo ${OKV} | cut -d. -f3-)
-	KV_PATCH=${KV_PATCH/[-_]*/}	
-	
+	KV_PATCH=${KV_PATCH/[-_]*/}
+
 	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-	
+
 	RELEASE=${PV/${OKV}/}
 	RELEASE=${RELEASE/_beta/}
 	RELEASE=${RELEASE/_rc/-rc}
@@ -593,7 +597,7 @@ detect_version() {
 	fi
 	RELEASETYPE=${RELEASE//[0-9]/}
 	EXTRAVERSION="${RELEASE}"
-	
+
 	if [ -n "${K_PREPATCHED}" ]
 	then
 		EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}${PR/r/}"
@@ -601,13 +605,13 @@ detect_version() {
 		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
 		[ "${PR}" != "r0" ] 	&& EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
-	
+
 	KV_FULL=${OKV}${EXTRAVERSION}
-	
+
 	# -rcXX-bkXX pulls are *IMPOSSIBLE* to support within the portage naming convention
 	# these cannot be supported, but the code here can handle it up until this point
 	# and theoretically thereafter.
-	
+
 	if [ "${RELEASETYPE}" == "-rc" -o "${RELEASETYPE}" == "-pre" ]
 	then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$([ $((${KV_PATCH} - 1)) -lt 0 ] && echo ${KV_PATCH} || echo $((${KV_PATCH} - 1)))"
@@ -616,7 +620,7 @@ detect_version() {
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${PV//_/-}.bz2"
 		KV_FULL=${PV/[-_]*/}${EXTRAVERSION}
 	fi
-	
+
 	if [ "${RELEASETYPE}" == "-bk" ]
 	then
 		OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
@@ -625,18 +629,18 @@ detect_version() {
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 		KV_FULL=${PV/[-_]*/}${EXTRAVERSION}
 	fi
-	
+
 	if [ "${RELEASETYPE}" == "-rc-bk" ]
 	then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))-${RELEASE/-bk*}"
 		EXTRAVERSION="$([ -n "${RELEASE}" ] && echo ${RELEASE/*-bk/-bk})$([ -n "${K_USENAME}" ] && echo -${PN/-*/})$([ ! "${PR}" == "r0" ] && echo -${PR})"
-		
+
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 		KV_FULL=${PV/[-_]*/}${EXTRAVERSION}
 	fi
-	
+
 	S=${WORKDIR}/linux-${KV_FULL}
 	# we will set this for backwards compatibility.
 	KV=${KV_FULL}
@@ -646,7 +650,7 @@ detect_arch() {
 	# This function sets ARCH_URI and ARCH_PATCH
 	# with the neccessary info for the arch sepecific compatibility
 	# patchsets.
-	
+
 	local ALL_ARCH
 	local LOOP_ARCH
 	local COMPAT_URI
@@ -664,10 +668,10 @@ detect_arch() {
 	do
 		COMPAT_URI="${LOOP_ARCH}_URI"
 		COMPAT_URI="${!COMPAT_URI}"
-		
+
 		[ -n "${COMPAT_URI}" ] && \
 			ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr '[:upper:]' '[:lower:]')? ( ${COMPAT_URI} )"
-		
+
 		if [ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr '[:lower:]' '[:upper:]')" ]
 		then
 			for i in ${COMPAT_URI}
@@ -684,10 +688,10 @@ detect_arch() {
 kernel-2_src_unpack() {
 	detect_version
 	universal_unpack
-	
+
 	[ -n "${UNIPATCH_LIST}" -o -n "${UNIPATCH_LIST_DEFAULT}" ] && \
 		unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST}"
-		
+
 	[ -z "${K_NOSETEXTRAVERSION}" ] && \
 		unpack_set_extraversion
 
