@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.17 2004/08/11 02:35:25 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.18 2004/08/12 00:19:45 mr_bones_ Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -31,12 +31,10 @@ src_unpack() {
 	sed -i \
 		-e '/^libsmpeg_la_LIBADD =/s:$: -lsupc++:' Makefile.in \
 		|| die "sed Makefile.in failed"
+	gnuconfig_update
 }
 
 src_compile() {
-
-	use ppc64 && gnuconfig_update
-
 	# --enable-mmx causes test apps to crash on startup #470
 	#	$(use_enable mmx) \
 	econf \
