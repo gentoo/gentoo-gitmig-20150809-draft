@@ -1,67 +1,45 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.9.0.ebuild,v 1.3 2003/02/13 14:11:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.9.0.ebuild,v 1.4 2003/03/20 14:00:12 seemant Exp $
 
-IUSE="doc nls pic xv alsa"
+IUSE="doc gtk nls xv alsa"
 
 # AUTHOR: Paul Belt <gaarde@gentoo.org>
 
 DESCRIPTION="Linphone is a Web phone with a GNOME interface. It let you make two-party calls over IP networks such as the Internet. It uses the IETF protocols SIP (Session Initiation Protocol) and RTP (Realtime Transport Protocol) to make calls, so it should be able to communicate with other SIP-based Web phones. With several codecs available, it can be used with high speed connections as well as 28k modems."
-
-# In french
-# if use french; then \
-#    HOMEPAGE="http://www.linphone.org/" \
-# elsif use english; then \
-#    HOMEPAGE="http://www.linphone.org/?lang=us"
-# fi
-
-# In english
 HOMEPAGE="http://www.linphone.org/?lang=us"
-
 SRC_URI="http://www.linphone.org/download/${P}.tar.gz"
 
-LICENSE="GPL-2"
-
 SLOT="1"
+LICENSE="GPL-2"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
-KEYWORDS="x86"
-
-RDEPEND="=net-libs/libosip-0.8.8
-	   =gnome-base/gnome-panel-1.4.1
-       alsa? ( >media-sound/alsa-driver-0.5 )
-	   xv? ( dev-lang/nasm )
-	   dev-libs/glib"
-
-DEPEND="${RDEPEND}"
+DEPEND="dev-libs/glib
+	=net-libs/libosip-0.8.8
+	=gnome-base/gnome-panel-1.4.1
+	xv? ( dev-lang/nasm )
+	gtk? ( =x11-libs/gtk-1.2* )
+	alsa? ( >media-sound/alsa-driver-0.5 )"
 
 src_compile() {
 
-   if use pic; \
-      then EXTRA_FLAGS="${EXTRA_FLAGS} --with-pic"; \
-      else EXTRA_FLAGS="${EXTRA_FLAGS} --without-pic"; fi
+	local myconf
 
-   if use alsa; \
-      then EXTRA_FLAGS="${EXTRA_FLAGS} --enable-alsa"; \
-      else EXTRA_FLAGS="${EXTRA_FLAGS} --disable-alsa"; fi
+	if use gtk && use doc
+	then
+		myconf="--enable-gtk-doc"
+	else
+		myconf="${myconf} --disable-gtk-doc"
+	fi
 
-# Not functional at the moment
-#   if use xv; \
-#      then EXTRA_FLAGS="${EXTRA_FLAGS} --enable-video"; \
-#      else EXTRA_FLAGS="${EXTRA_FLAGS} --disable-video"; fi
-
-   if use nls; \
-      then EXTRA_FLAGS="${EXTRA_FLAGS} --enable-nls"; \
-      else EXTRA_FLAGS="${EXTRA_FLAGS} --disable-nls"; fi
-
-   if use gtk && use doc; \
-      then EXTRA_FLAGS="${EXTRA_FLAGS} --enable-gtk-doc"; \
-      else EXTRA_FLAGS="${EXTRA_FLAGS} --disable-gtk-doc"; fi
-
-	econf || die
-    emake || die
+	econf \
+		`use_enable alsa` \
+		`use_enable nls` \
+		${myconf} || die
+	emake || die
 }
 
 src_install () {
-    dodoc ABOUT-NLS COPYING README AUTHORS BUGS INSTALL NEWS ChangeLog TODO
+	dodoc ABOUT-NLS COPYING README AUTHORS BUGS INSTALL NEWS ChangeLog TODO
 	einstall PIXDESTDIR=${D} || die
 }
