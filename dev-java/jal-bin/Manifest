@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4fa073ca24138e69ee09cd0baa31165 jal-bin-20031117.ebuild 671
-MD5 871930742af2ef7ad9be54b47da2737b jal-bin-20031117-r1.ebuild 706
-MD5 fd492b996a4d8fb19357a758579f76c9 ChangeLog 1246
+MD5 65dc55fbe3a969197ba7904bab80a2ed ChangeLog 1376
+MD5 ff4075578da3e0065cf113a6e156579d jal-bin-20031117-r1.ebuild 717
+MD5 caed211bbd77b2e8d06b0fb06be74373 jal-bin-20031117.ebuild 682
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 97da6bc4d37e0d5227b1f3b97822ed32 files/digest-jal-bin-20031117 68
 MD5 97da6bc4d37e0d5227b1f3b97822ed32 files/digest-jal-bin-20031117-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVft/rLF9B432nYRAmcWAJ4iJDv+dqQpAjp0OzYyA3bVzczpMwCfcRMs
-0cd2hSVo7c+vV/OdV2SjPI0=
-=cZHI
------END PGP SIGNATURE-----

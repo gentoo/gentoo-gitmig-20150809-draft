@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a53718316e94596482aed48235ad03a mg4j-bin-0.8.2.ebuild 865
-MD5 7fce32e53e0fa8ab6bb9a5ebbd0da9ce mg4j-bin-0.8.2-r1.ebuild 900
-MD5 2f422847927b4f04447c124de59484a4 ChangeLog 1192
+MD5 202260fdd67943b82bb1d8f08f42f504 ChangeLog 1318
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 39ccd7046da3c7d051b2873946d98c88 mg4j-bin-0.8.2-r1.ebuild 911
+MD5 6257705030322f3c71159fd22422ca96 mg4j-bin-0.8.2.ebuild 876
 MD5 78ad42fc9f0ed323d12fb27a10e30ac1 files/digest-mg4j-bin-0.8.2 66
 MD5 78ad42fc9f0ed323d12fb27a10e30ac1 files/digest-mg4j-bin-0.8.2-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVqy/rLF9B432nYRAm97AJ4owBH/UAaG1bNXaukOcnBUt6cvDgCePKn9
-6i++P9efFwRmJIx9TEsYBYs=
-=UQrB
------END PGP SIGNATURE-----
