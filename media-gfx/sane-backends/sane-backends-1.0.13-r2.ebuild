@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.13-r2.ebuild,v 1.1 2003/12/11 10:24:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.13-r2.ebuild,v 1.2 2003/12/11 15:13:10 phosphan Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 src_unpack() {
 	unpack ${A}
-	unpack ${BROTHERMFCDRIVER}.bz2
+	use usb && unpack ${BROTHERMFCDRIVER}.bz2
 	cp ${FILESDIR}/linux_sg3_err.h ${S}/sanei
 
 	cd ${S}
