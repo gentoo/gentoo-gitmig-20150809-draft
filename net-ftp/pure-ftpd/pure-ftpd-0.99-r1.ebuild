@@ -3,7 +3,7 @@
 # Author Parag Mehta <pm@gentoo.org>
 #$HEADER$
 
-A=${P}.tar.gz
+A=pure-ftpd-0.99.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A Fast Production Quality FTP Server - Bug fixes backported from 0.99 . No new feature. Use this version on production servers."
 SRC_URI="http://prdownloads.sourceforge.net/pureftpd/${A}"
@@ -17,7 +17,7 @@ src_compile() {
     cd ${S}
     try ./configure --prefix=/usr  --with-throttling --with-virtualhosts \
 	--with-ratios --with-largefile --with-cookie --with-welcomemsg \
-	--with-altlog --with-ftpwho 
+	--with-altlog --with-ftpwho --with-uploadscript
     try make
 
 }
@@ -35,9 +35,19 @@ src_install () {
     cp ${FILESDIR}/ftpusers ${D}/etc
     cp ${FILESDIR}/pure-ftpwho_html.py ${D}/usr/sbin/
     cp ${FILESDIR}/pure-ftp_xml_python.py ${D}/usr/sbin/
+    dodir /home/ftp	
+    dodir /home/ftp/pub
+    dodir /home/ftp/incoming
+    chown ftp.bin /home/ftp
+    chown ftp.bin /home/ftp/incoming
+    chmod 757 /home/ftp/incoming
+    chown -R root.root /home/ftp/pub
+    dosym /dev/null /etc/pure-ftpd/127.0.0.1
+    cp ${FILESDIR}/welcome.msg /home/ftp/
     echo -e "\033[1;42m\033[1;33m Please do no forget to run, the following syntax : \033[0m"
-    echo -e "\033[1;42m\033[1;33m ebuild pure-ftpd-0.99.ebuild config \033[0m"
+    echo -e "\033[1;42m\033[1;33m ebuild pure-ftpd-0.99-r1.ebuild config \033[0m"
     echo -e "\033[1;42m\033[1;33m This will add the necessary post install config to your system. \033[0m"
+    read
 }
 
 pkg_config() {
@@ -45,8 +55,7 @@ pkg_config() {
 	echo "Press control-C to abort now OR hit Enter to continue."
 	echo
 	read
-	cat ${FILESDIR}/pftpd.inetd >> ${ROOT}etc/inetd.conf
-	ln -s /dev/null /etc/pure-ftpd/127.0.0.1
+	cat ${FILESDIR}/pftpd.inetd >> ${ROOT}/etc/inetd.conf
 	/etc/rc.d/init.d/svc-xinetd restart
 	echo "Modifications applied."
 }
