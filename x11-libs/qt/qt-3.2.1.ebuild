@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.2 2003/08/28 03:26:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.3 2003/08/28 13:30:15 caleb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -27,7 +27,7 @@ DEPEND="virtual/x11
 RDEPEND="${DEPEND}"
 	#doc? ( ~app-doc/qt-docs- )"
 
-S=${WORKDIR}/${PV}
+S=${WORKDIR}/qt-x11-free-${PV}
 	
 QTBASE=/usr/qt/3
 export QTDIR=${S}
