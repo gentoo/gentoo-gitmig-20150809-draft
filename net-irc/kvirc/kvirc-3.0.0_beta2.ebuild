@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2.ebuild,v 1.2 2003/02/13 14:15:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2.ebuild,v 1.3 2003/04/30 18:36:48 caleb Exp $
 IUSE="kde esd ipv6 ssl"
 inherit kde-base
 
@@ -24,13 +24,13 @@ use kde || newdepend "arts? ( kde-base/arts )"
 
 [ -n "$DEBUG" ]		&& myconf="$myconf --with-debug-symbols"
 [ "$ARCH" == "x86" ]	&& myconf="$myconf --with-ix86-asm"
-use ipv6		&& myconf="$myconf --with-ipv6-support" \
-			|| myconf="$myconf --without-ipv6-support"
+#use ipv6		&& myconf="$myconf --with-ipv6-support" \
+use ipv6		|| myconf="$myconf --without-ipv6-support"
 # arts support without kde support isn't liked by the configure script
 # possibly it could be made to work but i didn't want to spend time on it
 # also, explicitly passing --with-kde-support seems to break configure's logic, so just
 # let it autodetect in that case
-#use kde			&& myconf="$myconf --with-kde-support --with-arts-support" \
+#use kde		&& myconf="$myconf --with-kde-support --with-arts-support" \
 use kde			|| myconf="$myconf --without-kde-support --without-arts-support" 
 #use esd		&& myconf="$myconf --with-esd-support" \
 use esd			|| myconf="$myconf --without-esd-support" 
