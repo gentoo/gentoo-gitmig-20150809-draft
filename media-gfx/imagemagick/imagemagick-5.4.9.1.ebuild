@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.9.1.ebuild,v 1.1 2002/10/22 09:21:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.9.1.ebuild,v 1.2 2002/10/27 18:45:10 mcummings Exp $
 
 IUSE="perl X cups xml2 lcms"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.imagemagick.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc64"
+KEYWORDS="x86 ~ppc ~sparc64"
 
 DEPEND="media-libs/libpng
 	>=sys-apps/bzip2-1
