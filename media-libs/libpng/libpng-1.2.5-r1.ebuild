@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5.ebuild,v 1.5 2002/12/15 10:44:20 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r1.ebuild,v 1.1 2002/12/20 23:34:52 foser Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Portable Network Graphics library"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.libpng.org/"
 
 SLOT="1.2"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="sys-libs/zlib"
 
@@ -18,6 +18,7 @@ src_compile() {
 		-e "s:ZLIBINC=.*:ZLIBINC=/usr/include:" \
 		-e "s/-O3/${CFLAGS}/" \
 		-e "s:prefix=/usr/local:prefix=/usr:" \
+		-e "s:OBJSDLL = :OBJSDLL = -lz -lm :" \
 			scripts/makefile.linux > Makefile
 
 	einfo "${LDFLAGS}"
@@ -31,12 +32,7 @@ src_install() {
 		DESTDIR=${D} \
 		MANPATH=/usr/share/man \
 		install || die
-	
-#	rm ${D}/usr/lib/libpng.so
-#	rm ${D}/usr/lib/libpng.a
-#	rm ${D}/usr/include/png.h
-#	rm ${D}/usr/include/pngconf.h
-	
+
 	doman *.[35]
 	dodoc ANNOUNCE CHANGES KNOWNBUG LICENSE README TODO Y2KINFO
 }

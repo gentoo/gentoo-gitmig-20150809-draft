@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.13 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.14 2002/12/20 23:34:52 foser Exp $
+
+*libpng-1.2.5 (21 Dec 2002)
+
+  21 Dec 2002; foser <foser@gentoo.org> libpng-1.2.5-r1.ebuild :
+  Add fix for linker issues (bug #9792), revision bump to make sure everybody gets it
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
