@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.15 2003/03/11 19:26:41 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.16 2003/03/11 22:09:15 mholzer Exp $
 
 *mol-0.9.68-r3 (11 Mar 2003)
 
@@ -18,6 +18,11 @@
   ejectable cdroms and more. Thanks to Lars Weiler for the build and testing.
 
 *mol-0.9.68 (06 Feb 2003)
+
+  11 Mar 2003; Martin Holzer <mholzer@gentoo.org> mol-0.9.68-r2.ebuild,
+  mol-0.9.68-r3.ebuild, mol-0.9.68.ebuild:
+  changed sys-apps/iptables to net-firewall/iptables
+
   06 Feb 2003; Mark Guertin <gerk@gentoo.org> mol-0.9.68.ebuild :
   Added new build from stable cvs snapshot.  Added iptables and
   dhcpd as dependancies (required for automatic networking setup).
