@@ -363,3 +363,15 @@ move app-games/uglygs games-util/uglygs
 move app-games/umodpack games-util/umodpack
 move app-games/xboxgw games-util/xboxgw
 move app-games/xqf games-util/xqf
+move app-games/gMOO games-mud/gMOO
+move app-games/gmudix games-mud/gmudix
+move app-games/gnome-mud games-mud/gnome-mud
+move app-games/kmc games-mud/kmc
+move app-games/kmuddy games-mud/kmuddy
+move app-games/mcl games-mud/mcl
+move app-games/mudix games-mud/mudix
+move app-games/panache games-mud/panache
+move app-games/tf games-mud/tf
+move app-games/tintin games-mud/tintin
+move app-games/tkMOO-light games-mud/tkMOO-light
+move app-games/ytin games-mud/ytin
