@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.3 2003/11/03 13:40:40 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.4 2003/11/03 13:52:24 taviso Exp $
 
 inherit eutils
 
@@ -58,11 +58,13 @@ src_unpack() {
 	# according to a post to fvwm-workers mailing list, Mikhael Goikhman
 	# planned on disabling these debug statements before the release, but
 	# never got around to it.
-	cd ${S}; epatch ${FILESDIR}/disable-debug-statements.diff
+	if ! use debug; then
+		cd ${S}; epatch ${FILESDIR}/disable-debug-statements.diff
+	fi
 }
 
 src_compile() {
-	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm"
+	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm --enable-package-subdirs"
 
 	# ImagePath should include /usr/share/icons/fvwm (x11-themes/fvwm_icons)
 	#
@@ -176,6 +178,9 @@ src_compile() {
 	if use noxpm; then
 		myconf="${myconf} --without-xpm-library"
 	fi
+
+	# set the local maintainer for fvwm-bug.
+	export FVWM_BUGADDR="taviso@gentoo.org"
 
 	econf ${myconf} || die
 	emake || die
