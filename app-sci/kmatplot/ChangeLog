@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/kmatplot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kmatplot/ChangeLog,v 1.8 2003/09/16 02:43:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kmatplot/ChangeLog,v 1.9 2003/09/27 18:01:33 lanius Exp $
+
+  27 Sep 2003; Heinrich Wendel <lanius@gentoo.org> kmatplot-0.4-r2.ebuild:
+  changed octave dep to any version, 2.0 does only compile with gcc2.x
 
 *kmatplot-0.4-r2 (15 Sep 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kmatplot/kmatplot-0.4-r2.ebuild,v 1.1 2003/09/16 02:43:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kmatplot/kmatplot-0.4-r2.ebuild,v 1.2 2003/09/27 18:01:33 lanius Exp $
 
 PATCHES="${FILESDIR}/${P}-gentoo.patch
 	${FILESDIR}/${P}-inline.patch
@@ -17,5 +17,5 @@ SRC_URI="http://kmatplot.sourceforge.net/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="=app-sci/octave-2.0*
+DEPEND="app-sci/octave*
 	>=app-sci/scilab-2.6"
