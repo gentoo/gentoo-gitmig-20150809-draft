@@ -1,47 +1,45 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.11 2002/07/25 15:39:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.12 2002/07/27 18:38:14 blizzy Exp $
 
-  5 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
-  bash-completion-20020624.ebuild :
+*bash-completion-20020727 (27 Jul 2002)
 
-  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> bash-completion-20020624.ebuild :
+  27 Jul 2002; Maik Schreiber <blizzy@gentoo.org> : new version
+
+  05 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  bash-completion-20020624.ebuild: typo fix in S= assignment.  Closes bug #4564
+  by yurkjes@iit.edu
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> bash-completion-20020624.ebuild:
   Added KEYWORDS.
 
-  typo fix in S= assignment.  Closes bug #4564 by  yurkjes@iit.edu
-
-  24 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020624.ebuild :
+  24 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020624.ebuild:
   fixed SLOT
 
 *bash-completion-20020624 (24 Jun 2002)
 
-  24 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020624.ebuild :
-  version bump
+  24 Jun 2002; Thilo Bangert <bangert@gentoo.org> : version bump
 
 *bash-completion-20020621 (19 Jun 2002)
 
-  21 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020621.ebuild :
-  version bump
+  21 Jun 2002; Thilo Bangert <bangert@gentoo.org> : version bump
 
-  20 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020619.ebuild :
+  20 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020619.ebuild:
   added support for /etc/profile.d/bash-completion
   
 *bash-completion-20020619 (19 Jun 2002)
 
-  19 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020619.ebuild :
-  version bump
+  19 Jun 2002; Thilo Bangert <bangert@gentoo.org> : version bump
 
 *bash-completion-20020521 (21 May 2002)
 
-  21 May 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020521.ebuild :
+  21 May 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020521.ebuild:
   version bump - LICENSE & minor fixor
 
 *bash-completion-20020427 (27 Apr 2002)
 
-  27 Apr 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020427.ebuild :
-  version bump
+  27 Apr 2002; Thilo Bangert <bangert@gentoo.org> : version bump
 
 *bash-completion-20020422 (23 Apr 2002)
 
-  23 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog :
-  initial release ;-)
+  23 Apr 2002; Thilo Bangert <bangert@gentoo.org> : initial release
