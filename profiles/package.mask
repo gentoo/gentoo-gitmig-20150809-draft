@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3680 2005/03/02 17:22:51 mr_bones_ Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3681 2005/03/02 20:21:26 solar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# solar <solar@gentoo> (01 Mar 2005)
+# security masked by request of bug #79720
+x11-misc/xfontselector
 
 # foser <foser@gentoo.org> (02 Mar 2005)
 # does not work with most available kernels
