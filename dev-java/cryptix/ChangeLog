@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/cryptix
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix/ChangeLog,v 1.1 2004/12/04 19:23:23 karltk Exp $
+
+*cryptix-3.2.0 (04 Dec 2004)
+
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> cryptix-3.2.0.ebuild:
+  Initial import. Ebuild submitted by the magnanimous Jan Brinkmann 
+  <lucky@the-luckyduck.de>. Fixes #72946.
