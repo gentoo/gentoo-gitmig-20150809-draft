@@ -1,8 +1,20 @@
-MD5 8f6bed3ca6a02429269422e115f19d72 ChangeLog 1753
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c3ce03479b4e88ca1d314ed86a8208d5 efax-gtk-2.0.7.ebuild 983
+MD5 7043a2a399b455de84325b185e142cbd ChangeLog 1860
 MD5 5480eeeb27391f070df6068008939912 efax-gtk-2.2.4.ebuild 990
-MD5 2e060f2eb313952bcaa3b61fafbced9a efax-gtk-2.2.5a.ebuild 1082
+MD5 e00cfee6d3b8e86d2f24beef5b9b838f efax-gtk-2.2.9.ebuild 1058
 MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
-MD5 ca201a77315e930e87f9e10c8819271d files/digest-efax-gtk-2.0.7 67
-MD5 527e24ebb9836c8cc12916c62ca0d6b9 files/digest-efax-gtk-2.2.4 67
+MD5 2e060f2eb313952bcaa3b61fafbced9a efax-gtk-2.2.5a.ebuild 1082
 MD5 d44e2b70be27af6a791f1fd73ff1f9dd files/digest-efax-gtk-2.2.5a 68
+MD5 e799221f76945140d3ae466da84ad5db files/digest-efax-gtk-2.2.9 67
+MD5 527e24ebb9836c8cc12916c62ca0d6b9 files/digest-efax-gtk-2.2.4 67
+MD5 ca201a77315e930e87f9e10c8819271d files/digest-efax-gtk-2.0.7 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjiKJI7fK2cqeyXkRAv1fAJ4kofro9/hQeL+8z35DRmH38bvGmACfcQ4B
+9Fy6qlwHNizc0pcPPNI35cg=
+=aPo8
+-----END PGP SIGNATURE-----
