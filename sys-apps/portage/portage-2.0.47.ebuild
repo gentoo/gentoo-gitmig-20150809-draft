@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r5.ebuild,v 1.1 2002/12/30 15:15:29 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47.ebuild,v 1.1 2003/01/07 13:44:51 carpaski Exp $
 
 IUSE="build"
 
@@ -13,7 +13,7 @@ SLOT="0"
 DESCRIPTION="Portage ports system"
 SRC_URI="mirror://gentoo/${PF}.tar.bz2 http://gentoo.twobit.net/portage/${PF}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=sys-apps/bash-2.05a )"
 
@@ -50,6 +50,10 @@ src_install() {
 		alpha )
 		newins make.globals.alpha make.globals
 		newins make.conf.alpha make.conf
+		;;
+		mips )
+		newins make.globals.mips make.globals
+		newins make.conf.mips make.conf
 		;;
 		* )
 		doins make.globals make.conf
