@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.5-r3.ebuild,v 1.1 2004/04/19 01:40:21 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.5-r3.ebuild,v 1.2 2004/04/24 20:50:35 pebenito Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -23,7 +23,7 @@ DESCRIPTION="Hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
 SRC_URI="${KERNEL_URI} ${HGPV_SRC} ${GPV_SRC}"
 #KEYWORDS="~x86 ~ppc ~sparc ~alpha -hppa"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 pkg_postinst() {
 	postinst_sources

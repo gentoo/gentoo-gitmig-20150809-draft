@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.14 2004/04/19 01:43:48 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.15 2004/04/24 20:50:35 pebenito Exp $
+
+  24 Apr 2004; Chris PeBenito <pebenito@gentoo.org>
+  hardened-dev-sources-2.6.5-r3.ebuild:
+  Mark ~ppc.
 
   18 Apr 2004; Joshua Brindle <method@gentoo.org>
   hardened-dev-sources-2.6.4-r1.ebuild, hardened-dev-sources-2.6.4-r2.ebuild,
