@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.42 2004/08/30 15:29:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.43 2004/08/31 19:38:45 kloeri Exp $
+
+*sip-3.8-r1 (31 Aug 2004)
+
+  31 Aug 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  +files/license-3.8.diff, +sip-3.8-r1.ebuild:
+  Add back sip-3.8* as it's needed by PyQt-3.8.1.
 
   30 Aug 2004; Carsten Lohrke <carlo@gentoo.org> -files/license-3.8.diff,
   -sip-3.8-r1.ebuild, sip-4.0.1.ebuild, -sip-4.0.ebuild, -sip-4.0_rc2.ebuild,
