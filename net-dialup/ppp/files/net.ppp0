@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/net.ppp0,v 1.7 2005/02/06 09:22:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/net.ppp0,v 1.8 2005/03/18 06:08:27 mrness Exp $
 
 # Misc internal variables
 CMD_LINE=""
@@ -36,7 +36,7 @@ start() {
 		fi
 		# Added hide-password here, can't be too sure...
 		/usr/sbin/pppd ${CMD_LINE} ${MODEMPORT} ${LINESPEED} \
-			ipparam ${IFACE} linkname ${IFACE} call ${PEER} \
+			ipparam ${PEER} linkname ${IFACE} call ${PEER} \
 			noauth ${PPPOPTIONS} hide-password
 	fi
 	eend
