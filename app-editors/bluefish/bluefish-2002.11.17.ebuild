@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.11.17.ebuild,v 1.3 2002/12/09 04:17:38 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.11.17.ebuild,v 1.4 2002/12/09 09:30:15 seemant Exp $
 
 MY_PV=`echo ${PV} | sed -e 's/\./-/g'`
 S=${WORKDIR}/${PN}-gtk2
@@ -30,18 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	makefiles=`find . -name Makefile`
-	for f in $makefiles; do
-	    mv $f $f.orig
-		sed -e 's#$(prefix)#$(DESTDIR)$(prefix)#' \
-			-e 's#${prefix}#$(DESTDIR)${prefix}#' \
-			-e 's#/usr/share/pixmaps#$(DESTDIR)$(prefix)/share/pixmaps#' \
-			$f.orig > $f
-	done
-
-	make \
-		DESTDIR=${D} \
-		mandir=${D}/usr/share/man \
-		install || die
-
+	einstall \
+		datadir=${D}/usr/share \
+		pkgdatadir=${D}/usr/share/bluefish
 }
