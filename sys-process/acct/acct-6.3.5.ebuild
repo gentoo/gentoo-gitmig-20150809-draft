@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5.ebuild,v 1.2 2005/03/03 23:35:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.3.5.ebuild,v 1.3 2005/03/04 14:40:47 vapier Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.diff
-	rm -f ansi2knr.1
+	rm -f ansi2knr.1 last.1 #84046
 }
 
 src_install() {
