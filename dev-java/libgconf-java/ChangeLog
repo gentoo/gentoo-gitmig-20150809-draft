@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/libgconf-java
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/ChangeLog,v 1.4 2004/12/28 12:55:12 axxo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/ChangeLog,v 1.5 2005/03/12 19:25:34 luckyduck Exp $
+
+*libgconf-java-2.8.3.1 (12 Mar 2005)
+
+  12 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/libgconf-java-2.8.3.1_gentoo-PN-SLOT.patch,
+  +libgconf-java-2.8.3.1.ebuild:
+  new upstream version, partially closes #83366. added ~amd64 to KEYWORDS.
+  ebuilds and patches contributed by Andrew Cowie
+  <andrew@operationaldynamics.com>.
 
   28 Dec 2004; Thomas Matthijs <axxo@gentoo.org> libgconf-java-2.8.2.ebuild:
   make it find jni.h
