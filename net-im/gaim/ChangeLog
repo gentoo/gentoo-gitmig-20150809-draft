@@ -2,6 +2,13 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $ Header: $
 
+*gaim-0.59 (26 Jun 2002)
+
+  26 Jun 2002; Seemant Kulleen <seemant@gentoo.org> gaim-0.59.ebuild
+  files/digest-gaim-0.59 :
+
+  Version bump.
+
 *gaim-0.58-r3 (26 June 2002)
 
  26 June 2002; Stuart Bouyer <stubear@gentoo.org> gaim-0.58-r3.ebuild :

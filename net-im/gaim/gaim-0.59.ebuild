@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.58-r2.ebuild,v 1.1 2002/06/14 09:25:20 jayskwak Exp $
+# /space/gentoo/cvsroot/gentoo-x86/net-im/gaim/gaim-0.58-r2.ebuild,v 1.1 2002/06/14 09:25:20 jayskwak Exp
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk Instant Messenger client"
@@ -32,7 +32,8 @@ src_unpack() {
 	
 	# patch for korean encoding
 	# It should be ok with other languages
-	patch -p0 < ${DISTDIR}/${P}-korean.patch || die
+	# the patch only works with nls 
+	use nls && patch -p0 < ${DISTDIR}/${P}-korean.patch
 
 }
 
