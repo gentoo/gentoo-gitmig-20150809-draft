@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.10.2.ebuild,v 1.4 2003/09/05 23:58:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.10.2.ebuild,v 1.5 2003/09/25 18:27:02 mholzer Exp $
 
-IUSE="doc gtk nls xv alsa"
+IUSE="doc gnome gtk2 gtk nls xv alsa"
 
 DESCRIPTION="Linphone is a Web phone with a GNOME interface. It let you make two-party calls over IP networks such as the Internet. It uses the IETF protocols SIP (Session Initiation Protocol) and RTP (Realtime Transport Protocol) to make calls, so it should be able to communicate with other SIP-based Web phones. With several codecs available, it can be used with high speed connections as well as 28k modems."
 HOMEPAGE="http://www.linphone.org/?lang=us"
