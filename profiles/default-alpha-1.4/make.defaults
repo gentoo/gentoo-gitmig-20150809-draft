@@ -5,7 +5,7 @@ ARCH="alpha"
 
 # Host-type
 
-CHOST=alphaev5-unknown-linux-gnu
+CHOST=alpha-unknown-linux-gnu
 PLATFORM=$CHOST
 
 # Options passed to make during the build process

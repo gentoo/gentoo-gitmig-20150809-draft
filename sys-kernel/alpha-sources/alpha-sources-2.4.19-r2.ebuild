@@ -25,7 +25,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha"
+KEYWORDS="alpha"
 
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
