@@ -4,7 +4,7 @@ MD5 f47c4c717069b1543c5c8207724849e1 gnome-panel-1.4.2-r2.ebuild 2021
 MD5 d004297b7c3cb5cb005fa94cd96d1144 gnome-panel-2.4.0-r1.ebuild 1617
 MD5 d327e216eac270f85dccca930b54646b gnome-panel-2.4.0-r2.ebuild 1875
 MD5 be5a4394cce5405549468e73cd56a186 gnome-panel-2.4.1.ebuild 1754
-MD5 efef5ca6333f2f2822cf261c71d2cd72 gnome-panel-2.4.2.ebuild 1591
+MD5 63bde3a9d5a5918d40c386f14a9a71b7 gnome-panel-2.4.2.ebuild 1596
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 fae3355b5d711fc7eb4d3e3428a6b2ae files/digest-gnome-panel-1.4.1 70
 MD5 30ed8bbd528d5b284c0b489cd8c52210 files/digest-gnome-panel-1.4.2-r2 70

@@ -1,4 +1,4 @@
-MD5 c15f71a94b805833b3c7d21fbe4c9260 ChangeLog 14336
+MD5 ccb4c921ff65e2df749e87a52b18af18 ChangeLog 14455
 MD5 62587f12a4bf9171c69dda499286c525 gnome-1.4-r3.ebuild 546
 MD5 6c88b8de6fd0ddc5e9e2ed0dcc5a1042 gnome-2.0.2-r1.ebuild 2508
 MD5 8f82155cd8e32aa46906ea912c14b021 gnome-2.2-r2.ebuild 3250
@@ -7,6 +7,7 @@ MD5 71dfac7255f7183c2e6dc2a6786e07af gnome-2.2.2-r1.ebuild 3461
 MD5 231ae9c363ee5da1eccf51bb17426bfa gnome-2.4.1.ebuild 3568
 MD5 9116adc6091ae80cd7c51b0a0a263f70 gnome-2.4.1_p1.ebuild 3725
 MD5 d1683d8d7f8fe209f713e588827c72d4 gnome-2.4.2.ebuild 3721
+MD5 8da459ec6116c73ef0ffc9eddf49c5b3 gnome-2.4.2_p1.ebuild 3733
 MD5 a884c8a07bc7dad2edfe1e1bd6168032 gnome-2.4.ebuild 3403
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-1.4-r3 0
@@ -18,3 +19,4 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.4.1_p1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.4.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.4.2_p1 0
