@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.8.10-r1.ebuild,v 1.2 2003/03/07 11:29:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.8.10-r1.ebuild,v 1.3 2003/03/09 19:47:23 rac Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MyCC/$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="X qt"
 
 DEPEND="virtual/glibc
