@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.7 2004/10/31 21:53:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.8 2004/11/20 08:16:02 mr_bones_ Exp $
 
 inherit eutils gcc games
 
-DATA_DIR="${GAMES_DATADIR}/${PN}"
 DESCRIPTION="Worms and Scorched Earth-like game"
 HOMEPAGE="http://atanks.sourceforge.net/"
 SRC_URI="mirror://sourceforge/atanks/${P}.tar.gz"
@@ -28,7 +27,9 @@ src_unpack() {
 	then
 		epatch "${FILESDIR}/atanks-gcc34.patch"
 	fi
+	epatch "${FILESDIR}/${PV}-gentoo.patch"
 
+	DATA_DIR="${GAMES_DATADIR}/${PN}"
 	sed -i \
 		-e "s:DATA_DIR=.*:DATA_DIR=\\\\\"${DATA_DIR}\\\\\":" \
 		src/Makefile \

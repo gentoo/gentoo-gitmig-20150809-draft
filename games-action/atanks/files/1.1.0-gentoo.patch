@@ -1,0 +1,107 @@
+Index: src/explosion.cc
+===================================================================
+RCS file: /cvsroot/atanks/atanks/src/explosion.cc,v
+retrieving revision 1.12
+diff -u -r1.12 explosion.cc
+--- src/explosion.cc	1 Feb 2004 23:29:28 -0000	1.12
++++ src/explosion.cc	10 Oct 2004 20:14:03 -0000
+@@ -159,7 +159,7 @@
+ 				}
+ 				if (distance <= (radius + TANKHEIGHT/2) && tank->l > 0) {
+ 					_global->updateMenu = 1;
+-					tank->damage = (int) ((float) damage * ((float) 1 - ((fabs (distance) / (float)radius) / 2)) * player->damageMultiplier);
++					tank->damage = (int) ((player ? (float) damage * player->damageMultiplier : (float) damage) * ((float) 1 - ((fabs (distance) / (float)radius) / 2)));
+ 
+ 					tank->creditTo = player;
+ 					tank->applyDamage ();
+@@ -253,7 +253,7 @@
+ 		if (a > 1 && a <= EXPLODEFRAMES + 1) {
+ 			int startCirc = (radius / EXPLODEFRAMES) * a;
+ 			circlefill (_env->terrain, (int)x, (int)y, startCirc, PINK);
+-			circle (dest, (int)x, (int)y, startCirc, player->color);
++			circle (dest, (int)x, (int)y, startCirc, player ? player->color : WHITE);
+ 			setUpdateArea ((int)x - (radius + 1), (int)y - (radius + 1), (radius + 1) * 2, (radius + 1) * 2);
+ 		}
+ 	} else if ((type >= RIOT_CHARGE) && (type <= RIOT_BLAST)) {
+@@ -261,7 +261,7 @@
+ 			double sx = x - _global->slope[angle][0] * 15;
+ 			double sy = y - _global->slope[angle][1] * 15;
+ 			int startCirc = (radius / EXPLODEFRAMES) * a;
+-			triangle (dest, (int)sx, (int)sy, (int)(sx + _global->slope[(angle + 45) % 360][0] * startCirc), (int)(sy + _global->slope[(angle + 45) % 360][1] * startCirc),(int)(sx + _global->slope[(angle + 315) % 360][0] * startCirc),(int)(sy + _global->slope[(angle + 315) % 360][1] * startCirc), player->color);
++			triangle (dest, (int)sx, (int)sy, (int)(sx + _global->slope[(angle + 45) % 360][0] * startCirc), (int)(sy + _global->slope[(angle + 45) % 360][1] * startCirc),(int)(sx + _global->slope[(angle + 315) % 360][0] * startCirc),(int)(sy + _global->slope[(angle + 315) % 360][1] * startCirc), player ? player->color : WHITE);
+ 			setUpdateArea ((int)sx - (startCirc + 1), (int)sy - (startCirc + 1), (startCirc + 1) * 2, (startCirc + 1) * 2);
+ 		}
+ 	} else {
+Index: src/beam.cc
+===================================================================
+RCS file: /cvsroot/atanks/atanks/src/beam.cc,v
+retrieving revision 1.6
+diff -u -r1.6 beam.cc
+--- src/beam.cc	4 Feb 2004 23:34:33 -0000	1.6
++++ src/beam.cc	10 Oct 2004 20:14:03 -0000
+@@ -167,7 +167,7 @@
+ 		if (targetX > ltank->x - TANKWIDTH - radius && targetX < ltank->x + TANKWIDTH + radius && targetY > ltank->y - radius && targetY < ltank->y + TANKHEIGHT + radius && ltank->l > 0) {
+ 			//hitSomething = 1;
+ 			ltank->requireUpdate ();
+-			ltank->damage += damage * player->damageMultiplier;
++			ltank->damage += player ? damage * player->damageMultiplier : damage;
+ 			ltank->creditTo = player;
+ 			if (destroy)
+ 				ltank->applyDamage ();
+Index: src/tank.cc
+===================================================================
+RCS file: /cvsroot/atanks/atanks/src/tank.cc,v
+retrieving revision 1.20
+diff -u -r1.20 tank.cc
+--- src/tank.cc	1 Feb 2004 23:29:28 -0000	1.20
++++ src/tank.cc	10 Oct 2004 20:13:18 -0000
+@@ -171,7 +171,8 @@
+ 	sh -= (int)damage;
+ 	if (creditTo) {
+ 		if (player != creditTo) {	//enemy hit ++
+-			creditTo->money += (int)(damage * _global->scoreHitUnit);
++			double money =  damage * _global->scoreHitUnit;
++			creditTo->money += (money < LONG_MAX ? (int)money : LONG_MAX);
+ 			if ((int)player->type != HUMAN_PLAYER) {
+ 				if (player->revenge == creditTo) {
+ 					player->annoyanceFactor += damage;
+Index: src/atanks.cc
+===================================================================
+RCS file: /cvsroot/atanks/atanks/src/atanks.cc,v
+retrieving revision 1.57
+diff -u -r1.57 atanks.cc
+--- src/atanks.cc	4 Feb 2004 23:34:33 -0000	1.57
++++ src/atanks.cc	10 Oct 2004 20:13:18 -0000
+@@ -1574,7 +1574,8 @@
+ 	fi = global->stopwindow = updatename = scroll = 1;
+ 	if (global->currentround != global->rounds) {
+ 		for (z = 0; z < global->numPlayers; z++) {
+-			global->players[z]->money = (long int) (global->players[z]->money * global->interest);
++			double money = global->players[z]->money * global->interest;
++			global->players[z]->money = (money < LONG_MAX ? (long int) money : LONG_MAX);
+ 		}
+ 	}
+ 
+@@ -2764,9 +2765,11 @@
+ 						ltank->explode ();
+ 						if (ltank->creditTo) {
+ 							if (ltank->player != ltank->creditTo) {	//enemy destroyed
+-								ltank->creditTo->money += (int)global->scoreUnitDestroyBonus;
++								double money = ltank->creditTo->money + global->scoreUnitDestroyBonus;
++								ltank->creditTo->money = (money < LONG_MAX ? (long int)money : LONG_MAX);
+ 							} else {	//self destroy - ugh foolish one :))
+ 								ltank->creditTo->money -= (int)global->scoreUnitSelfDestroy;
++								if (ltank->creditTo->money < 0) ltank->creditTo->money = 0;
+ 							}
+ 							ltank->creditTo = NULL;
+ 						}
+@@ -2808,7 +2811,8 @@
+ 								if (winner >= 0) {
+ 									global->players[winner]->score++;
+ 									global->players[winner]->won++;
+-									global->players[winner]->money += (long int)global->scoreRoundWinBonus;
++									double money = global->players[winner]->money + global->scoreRoundWinBonus;
++									global->players[winner]->money = (money < LONG_MAX ? (long int) money : LONG_MAX);
+ 								}
+ 								bCount = 0;
+ 								global->updateMenu = 1;

@@ -1,6 +1,10 @@
 # ChangeLog for games-action/atanks
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.10 2004/10/31 21:53:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.11 2004/11/20 08:16:02 mr_bones_ Exp $
+
+  20 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/1.1.0-gentoo.patch, atanks-1.1.0.ebuild:
+  add two patches from basic (bug #66718)
 
   01 Nov 2004; Joseph Jezak <josejx@gentoo.org> atanks-1.1.0.ebuild:
   Marked ~ppc
