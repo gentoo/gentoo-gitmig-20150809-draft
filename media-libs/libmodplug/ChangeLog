@@ -1,9 +1,6 @@
 # ChangeLog for media-libs/libmodplug
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.5 2005/03/13 14:59:03 luckyduck Exp $
-
-  13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> libmodplug-0.7.ebuild:
-  updated LICENSE to reflect the license change, partially fixes #84922
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.6 2005/03/13 15:01:52 luckyduck Exp $
 
   11 Mar 2005; David Holm <dholm@gentoo.org> libmodplug-0.7.ebuild:
   Added to ~ppc.
