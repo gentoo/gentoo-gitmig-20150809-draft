@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.15.ebuild,v 1.1 2005/03/08 15:33:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.15.ebuild,v 1.2 2005/03/08 23:42:20 mr_bones_ Exp $
 
 IUSE="gtk alsa cups pcmcia"
 
@@ -38,7 +38,7 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	econf \
 		$(use_enable cups) \
 		$(use_enable alsa) \
@@ -49,7 +49,7 @@ src_compile() {
 		--disable-initscripts \
 		--enable-obex \
 		--enable-hid2hci \
-		--enable-bcm203x 
+		--enable-bcm203x
 	emake || die "make failed"
 }
 
