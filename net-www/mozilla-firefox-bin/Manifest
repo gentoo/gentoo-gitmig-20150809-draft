@@ -1,21 +1,31 @@
-MD5 324f0f83cd1c2bbae2492ebbfc28ef9d mozilla-firefox-bin-1.0_pre.ebuild 2551
-MD5 1a2518acd130f0668ae70d6c9f7177ae mozilla-firefox-bin-0.8-r1.ebuild 1849
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5bf449b3d908b1da4a4f513549bfec5f mozilla-firefox-bin-0.9.3.ebuild 2525
+MD5 23f7b4820ed0a60abfa771e12e256104 ChangeLog 4173
+MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 5b6290a445c1c4eb4a51e3b09ee7ee0d mozilla-firefox-bin-0.8.ebuild 1762
 MD5 acda7c5615bf85ec7b673ef954003c4e mozilla-firefox-bin-0.9.1.ebuild 2525
-MD5 5bf449b3d908b1da4a4f513549bfec5f mozilla-firefox-bin-0.9.3.ebuild 2525
-MD5 c66891daa37d2abde1a752f8f3de1b5a ChangeLog 4044
-MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 5008fba39a07c9d867ecf0edd5f4deed mozilla-firefox-bin-0.9-r1.ebuild 2534
-MD5 7b6378c14fc0f9bd858c2ac9abbca109 files/firefox-bin-0.9-init.tar.bz2 3327
-MD5 5327e9cd9d6e7d2fc1de431c1a969636 files/firefox 573
-MD5 daaa9b3ade69ebafff522b92b7dbad05 files/digest-mozilla-firefox-bin-1.0_pre 86
+MD5 51a053ced320acc70a21d1654c8c9b6f mozilla-firefox-bin-1.0_pre.ebuild 2552
+MD5 1a2518acd130f0668ae70d6c9f7177ae mozilla-firefox-bin-0.8-r1.ebuild 1849
 MD5 48924e6ea5eeccdde41276f2231a8630 files/firebird-0.7-antialiasing-patch 1253
-MD5 88b802a6af934b23e5a4511ecac88d68 files/digest-mozilla-firefox-bin-0.9.1 86
+MD5 daaa9b3ade69ebafff522b92b7dbad05 files/digest-mozilla-firefox-bin-1.0_pre 86
+MD5 8e71183312ac3031eca6d2327bc2a09c files/digest-mozilla-firefox-bin-0.9-r1 84
 MD5 4682d7ab300858b026579a39eb1c4b4e files/digest-mozilla-firefox-bin-0.9.3 86
 MD5 cfa48a263b4274cfb989f3140d843ede files/digest-mozilla-firefox-bin-0.8-r1 84
-MD5 8e71183312ac3031eca6d2327bc2a09c files/digest-mozilla-firefox-bin-0.9-r1 84
+MD5 7b6378c14fc0f9bd858c2ac9abbca109 files/firefox-bin-0.9-init.tar.bz2 3327
+MD5 88b802a6af934b23e5a4511ecac88d68 files/digest-mozilla-firefox-bin-0.9.1 86
+MD5 5327e9cd9d6e7d2fc1de431c1a969636 files/firefox 573
 MD5 cfa48a263b4274cfb989f3140d843ede files/digest-mozilla-firefox-bin-0.8 84
-MD5 1336c4a7b24e96ae255fdf2330fac6fc files/icon/mozillafirefox.desktop 129
 MD5 dc62e3f15845b0343d1513abada402d7 files/icon/mozillafirefox-bin.desktop 203
-MD5 bff260036c5dcca45da3218517fb33d8 files/icon/mozillafirefox-bin-icon.png 3979
 MD5 bff260036c5dcca45da3218517fb33d8 files/icon/firefox-icon.png 3979
+MD5 bff260036c5dcca45da3218517fb33d8 files/icon/mozillafirefox-bin-icon.png 3979
+MD5 1336c4a7b24e96ae255fdf2330fac6fc files/icon/mozillafirefox.desktop 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBSL82wDHaUUJ0mYMRAmEiAKCW37lrvml2z6XkTcf4fq137C409ACeLYSd
+3lg5ZXSzILnmw4WFJWmCtsY=
+=I4Wu
+-----END PGP SIGNATURE-----
