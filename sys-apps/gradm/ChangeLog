@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.24 2003/10/27 05:53:01 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.25 2003/12/01 22:56:00 solar Exp $
+
+*gradm-1.9.13 (01 Dec 2003)
+
+  01 Dec 2003; <solar@gentoo.org> gradm-1.9.13.ebuild:
+  New gradm stable series to go with 2.4.23.1.9.13
 
   27 Oct 2003; <solar@gentoo.org> gradm-1.9.10.ebuild, gradm-1.9.9h-r1.ebuild,
   files/gradm_parse.c-1.9.9h.patch:
