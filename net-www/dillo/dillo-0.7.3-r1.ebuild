@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3.ebuild,v 1.2 2003/08/08 01:32:34 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r1.ebuild,v 1.1 2003/08/08 01:32:34 bcowan Exp $
 
 inherit flag-o-matic
 
-IUSE="ipv6"
+IUSE="ipv6 kde gnome mozilla"
 
 S=${WORKDIR}/${P}
-S2=${WORKDIR}/gentoo-dillo-extras-patch
+S2=${WORKDIR}/dillo-gentoo-extras-patch3
 
 DESCRIPTION="Lean GTK+-based web browser"
 HOMEPAGE="http://dillo.auriga.wearlab.de/"
 SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
-	mirror://gentoo/dillo-gentoo-extras-patch.tar.bz2"
+	mirror://gentoo/dillo-gentoo-extras-patch3.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -66,11 +66,14 @@ src_compile() {
 }
 
 src_install() {
-	dodir /etc
+	dodir /etc  /usr/share/icons/${PN}
 	einstall
+	
 	dodoc AUTHORS COPYING ChangeLog* INSTALL README NEWS
 	docinto doc
 	dodoc doc/*.txt doc/README
+	
+	cp ${S2}/icons/*.png ${D}/usr/share/icons/${PN}
 }
 
 pkg_postinst() {

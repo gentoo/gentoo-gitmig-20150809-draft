@@ -1,6 +1,12 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.20 2003/08/07 20:07:57 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.21 2003/08/08 01:32:34 bcowan Exp $
+
+*dillo-0.7.3-r1 (07 Aug 2003)
+
+  07 Aug 2003; Brad Cowan <bcowan@gentoo.org> dillo-0.7.3-r1.ebuild,
+  dillo-0.7.3.ebuild:
+  Fixed titlebar icons and added desktop icons.
 
 *dillo-0.7.3 (07 Aug 2003)
 
