@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.2-r1.ebuild,v 1.5 2001/05/12 12:13:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.2-r1.ebuild,v 1.6 2001/05/15 10:19:33 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -34,9 +34,11 @@ src_compile() {
     then
       myconf="${myconf} --disable-opengl-player"
     fi
-    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf} 
+    if [ "`use nas`" ] ; then
+	LDFLAGS="-L/usr/X11R6/lib -lXt"
+    fi
+    try LDFLAGS=\"$LDFLAGS\" ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf} --disable-sdltest
     try make
-
 }
 
 src_install () {
