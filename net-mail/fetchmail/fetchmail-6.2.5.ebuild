@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.11 2004/03/30 14:54:38 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.12 2004/05/12 04:06:53 randy Exp $
 
 IUSE="ssl nls ipv6 kerberos krb4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.catb.org/~esr/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="x86 alpha sparc ppc amd64"
+KEYWORDS="x86 alpha sparc ppc amd64 s390"
 
 DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -33,6 +33,7 @@ src_compile() {
 	autoconf
 
 	use amd64 && gnuconfig_update
+	use s390 && gnuconfig_update
 
 	local myconf
 
