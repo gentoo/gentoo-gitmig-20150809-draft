@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.93.0.3.ebuild,v 1.1 2004/12/26 21:06:17 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.93.0.3-r2.ebuild,v 1.1 2004/12/30 11:33:31 humpback Exp $
 
 inherit eutils
 
 
 #If you want to know when this package will be marked stable please see the Changelog
 RESTRICT="nomirror"
+AVATARV="1.0"
 DESCRIPTION="${PN} is a P2P-VoiceIP client."
 HOMEPAGE="http://www.${PN}.com/"
-SRC_URI="
+SRC_URI="http://www.gentoo-pt.org/~humpback/skype-avatars-${AVATARV}.tgz
 		!static? ( http://download.skype.com/linux/${P}.tar.bz2 )
 		static? ( http://download.skype.com/linux/${PN}_staticQT-${PV}.tar.bz2 )"
 LICENSE="skype-eula"
@@ -34,6 +35,8 @@ src_unpack() {
 	else
 		unpack ${P}.tar.bz2
 	fi
+	cd ${P}
+	unpack skype-avatars-${AVATARV}.tgz
 }
 
 src_install() {
@@ -51,16 +54,18 @@ src_install() {
 	#must be changed and the older ebuilds removed first
 	insinto /opt/skype/sound
 	doins sound/*.wav
-	insinto /usr/share/skype/lang
-	doins lang/*.qm
-	# install only en and LINGUAS langpacks
-	insinto /opt/skype/lang
-	for i in ${LINGUAS}; do
-		if [ -f lang/${PN}_${i}.qm ]; then
-			doins lang/${PN}_${i}.qm
-		fi;
-	done;
 
+	insinto /opt/skype/lang
+	doins lang/*.qm
+	#Skype still shows ALL languagues no matter what were installed
+	#for i in ${LINGUAS}; do
+	#	if [ -f lang/${PN}_${i}.qm ]; then
+	#		doins lang/${PN}_${i}.qm
+	#	fi;
+	#done;
+
+	insinto /opt/skype/avatars
+	doins avatars/*.jpg
 
 	insinto /opt/skype
 	make_desktop_entry skype "Skype VoIP" ../icons/hicolor/48x48/apps/skype.png
