@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.0-r1.ebuild,v 1.4 2002/12/09 04:20:57 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.0-r1.ebuild,v 1.5 2002/12/12 11:35:34 strider Exp $
 
 IUSE="doc"
 
@@ -19,7 +19,7 @@ PROVIDE="virtual/jre-1.4.0
 	virtual/jdk-1.4.0
 	virtual/java-scheme-2"
 LICENSE="IBM-ILNWP"
-SLOT="0"
+SLOT="1.4"
 KEYWORDS="~x86 -ppc -sparc  -alpha"
 
 src_unpack() {
