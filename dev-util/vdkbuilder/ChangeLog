@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/vdkbuilder
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.14 2004/10/13 21:00:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.15 2004/10/14 01:55:26 chriswhite Exp $
+
+*vdkbuilder-2.4.0 (14 Oct 2004)
+
+  14 Oct 2004; Chris White <chriswhite@gentoo.org> +vdkbuilder-2.4.0.ebuild:
+  Bumped to 2.4.0.  Part of fixing bug #67460.
 
   13 Oct 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Taking over as maintainer of this package.
