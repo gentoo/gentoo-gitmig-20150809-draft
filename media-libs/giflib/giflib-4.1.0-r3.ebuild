@@ -1,7 +1,7 @@
 ## Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated by AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.5 2002/07/11 06:30:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.6 2002/07/16 11:36:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="giflib"
@@ -11,6 +11,10 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/libs/giflib/${P}.tar.gz
 HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
 
 DEPEND="X? ( virtual/x11 )"
+
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 

@@ -11,6 +11,10 @@ HOMEPAGE="http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib/t1l
 DEPEND="X? ( virtual/x11 )
 	tetex? ( >=app-text/tetex-1.0.7 )"
 
+SLOT="0"
+LICENSE="LGPL-2 GPL-2"
+KEYWORDS="x86 ppc"
+
 src_unpack() {
 	unpack "${P}.tar.gz"
 

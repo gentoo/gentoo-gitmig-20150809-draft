@@ -1,15 +1,20 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc2.ebuild,v 1.2 2002/07/11 06:30:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc2.ebuild,v 1.3 2002/07/16 11:36:46 seemant Exp $
 
+MY_P=${P/_rc/rc}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
 
-SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${P/_rc/rc}.tar.bz2"
-S=${WORKDIR}/${P/_rc/rc}
+SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${MY_P}.tar.bz2"
 
 DEPEND="virtual/glibc 
 	~media-sound/alsa-driver-0.9.0_rc2"
+
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86 ppc"
 
 src_compile() {                           
 	./configure \

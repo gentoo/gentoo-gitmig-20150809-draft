@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.3 2002/07/11 06:30:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.4 2002/07/16 11:36:46 seemant Exp $
 
 MESA_VER="4.0.1"
 S=${WORKDIR}/Mesa-${MESA_VER}
@@ -12,9 +12,12 @@ HOMEPAGE="http://www.opengl.org/developers/documentation/glut/"
 DEPEND="virtual/glibc
 	virtual/opengl
 	virtual/glu"
-	
 
 PROVIDE="virtual/glut"
+
+SLOT="0"
+LICENSE="X11 | GPL-2"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 
@@ -39,6 +42,6 @@ src_install() {
 	insinto /usr/include/GL
 	doins ${S}/include/GL/glut*
 
-	dodoc ${S}/docs/COPYRIGHT
+	dodoc ${S}/docs/COPY*
 }
 

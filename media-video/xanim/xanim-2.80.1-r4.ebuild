@@ -1,9 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Revision: 1.1 $
+# $Revision: 1.2 $
 
 LICENSE="XAnim"
-SLOT=""
+SLOT="0"
+KEYWORDS="x86 ppc"
 
 _XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
 _XA_CVID_SPARC=xa2.0_cvid_sparcELF.o

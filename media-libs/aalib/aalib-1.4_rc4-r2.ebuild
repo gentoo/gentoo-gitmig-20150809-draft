@@ -1,6 +1,6 @@
 ## Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.1 2002/06/21 14:06:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.2 2002/07/16 11:36:46 seemant Exp $
 
 inherit libtool
 
@@ -15,8 +15,9 @@ DEPEND=">=sys-libs/ncurses-5.1
 	X?	 ( virtual/x11 )
 	gpm?   ( sys-libs/gpm )"
 
-SLOT=""
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 

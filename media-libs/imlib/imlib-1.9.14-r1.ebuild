@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.2 2002/07/11 06:30:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.3 2002/07/16 11:36:47 seemant Exp $
+
+inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Imlib is a general Image loading and rendering library."
@@ -16,10 +18,13 @@ DEPEND="virtual/x11
 	>=media-libs/libpng-1.2.1
 	 >=media-libs/jpeg-6b"
 
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86 ppc"
+
 src_compile() {
 	
-	#update libtool to fix "relink" bug
-	libtoolize --copy --force
+	elibtoolize
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \

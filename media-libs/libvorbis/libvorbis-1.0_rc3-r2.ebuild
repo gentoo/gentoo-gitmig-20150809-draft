@@ -1,15 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0_rc3-r2.ebuild,v 1.2 2002/07/11 06:30:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0_rc3-r2.ebuild,v 1.3 2002/07/16 11:36:48 seemant Exp $
 
 inherit libtool
 
-S=${WORKDIR}/${PN}-1.0rc3
+MY_P=${P/_/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="the Ogg Vorbis sound file format library"
-SRC_URI="http://www.vorbis.com/files/rc3/unix/${PN}-1.0rc3.tar.gz"
+SRC_URI="http://www.vorbis.com/files/rc3/unix/${MY_P}.tar.gz"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
 
 DEPEND=">=media-libs/libogg-1.0_rc2"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0.1_beta10.ebuild,v 1.3 2002/07/11 06:30:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0.1_beta10.ebuild,v 1.4 2002/07/16 11:36:46 seemant Exp $
 
 ######################## Begin version munge #########################
 #This alsa version appends a alphabetic character to the beta version.
@@ -31,12 +31,14 @@ MYP="${PN}-${MYPV}"
 ######################## End version Munge ##########################
 
 S=${WORKDIR}/${MYP}
-
 DESCRIPTION="Advanced Linux Sound Architecture Library"
-
 SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${MYP}.tar.bz2"
-
 HOMEPAGE="http://www.alsa-project.org/"
+
+
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc 
 	=media-sound/alsa-driver-0.9.0_beta10"

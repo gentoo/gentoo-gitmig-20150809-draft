@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0-r1.ebuild,v 1.4 2002/07/11 06:30:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0-r1.ebuild,v 1.5 2002/07/16 11:36:48 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for reading and writing gif images without LZW compression"
@@ -8,7 +8,11 @@ SRC_URI="ftp://prtr-13.ucsc.edu/pub/libungif/${P}.tar.gz"
 HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
 
 DEPEND="X? ( virtual/x11 )"
-	
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86 ppc"
+
 src_compile() {
 
 	local myconf

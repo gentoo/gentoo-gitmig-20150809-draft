@@ -16,6 +16,10 @@ use mmx || use 3dnow \
 SRC_URI="${SOURCE_HTTP}"
 HOMEPAGE="http://www.xmms.org/"
 
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86 ppc"
+
 RDEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*
 	>=media-libs/libmikmod-3.1.9

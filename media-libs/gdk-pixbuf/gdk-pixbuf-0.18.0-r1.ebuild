@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.18.0-r1.ebuild,v 1.1 2002/06/24 02:13:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.18.0-r1.ebuild,v 1.2 2002/07/16 11:36:46 seemant Exp $
 
 inherit virtualx libtool
 
@@ -18,6 +18,8 @@ DEPEND=">=media-libs/imlib-1.9.14-r1
 # gdk-pixbuf (the GnomeCanvasPixbuf library )
 
 SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 

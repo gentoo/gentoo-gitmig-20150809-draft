@@ -1,17 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.3.ebuild,v 1.3 2002/07/11 06:30:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.3.ebuild,v 1.4 2002/07/16 11:36:53 seemant Exp $
 
-PN=ripperX
-A=${PN}-${PV}.tar.gz
-S=${WORKDIR}/${PN}-${PV}
+MY_P=${P/x/X}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="RipperX is a program to rip CD and enconde mp3s"
 HOMEPAGE="http://ripperx.sf.net/"
-SRC_URI="http://telia.dl.sourceforge.net/ripperx/${A}"
+SRC_URI="http://telia.dl.sourceforge.net/ripperx/${MY_P}.tar.gz"
 DEPEND="=x11-libs/gtk+-1.2*
-		media-sound/lame
-		media-sound/cdparanoia
-		media-libs/id3lib"
+	media-sound/lame
+	media-sound/cdparanoia
+	media-libs/id3lib"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
+
 
 src_unpack () {
 	unpack ${A}
@@ -35,4 +39,6 @@ src_install () {
 	ripperX_plugin-cdparanoia ripperX_plugin-encode ripperX_plugin-gogo \
 	ripperX_plugin-l3enc ripperX_plugin-lame ripperX_plugin-mp3enc \
 	ripperX_plugin-oggenc ripperX_plugin-xingmp3enc ripperX_plugin_tester
+
+	dodoc README AUTHORS COPYING BUGS CHANGES FAQ TODO
 }

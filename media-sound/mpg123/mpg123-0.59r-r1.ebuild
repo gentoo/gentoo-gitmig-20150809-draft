@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r1.ebuild,v 1.5 2002/07/11 06:30:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r1.ebuild,v 1.6 2002/07/16 11:36:53 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -9,6 +9,10 @@ SRC_URI="http://www.mpg123.de/mpg123/${P}.tar.gz"
 HOMEPAGE="http://www.mpg123.de/"
 
 DEPEND="virtual/glibc"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86 ppc"
 
 src_unpack () {
 	unpack ${A}

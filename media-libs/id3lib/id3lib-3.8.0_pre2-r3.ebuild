@@ -1,13 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.0_pre2-r3.ebuild,v 1.1 2002/06/07 03:25:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.0_pre2-r3.ebuild,v 1.2 2002/07/16 11:36:46 seemant Exp $
 
-A=${PN}-3.8.0pre2.tar.gz
-S=${WORKDIR}/${PN}-3.8.0pre2
+MY_P=${P/_/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Id3 library for C/C++"
-SRC_URI="mirror://sourceforge/id3lib/${A}"
+SRC_URI="mirror://sourceforge/id3lib/${MY_P}.tar.gz"
 HOMEPAGE="http://id3lib.sourceforge.net/"
-LICENSE=GPL
+
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
@@ -32,9 +35,9 @@ src_unpack() {
 src_compile() {
 
 	CPPFLAGS="${CPPFLAGS} -Wno-deprecated" \
-		 ./configure \
-		 --host=${CHOST} \
-		 --prefix=/usr || die
+		./configure \
+			--host=${CHOST} \
+			--prefix=/usr || die
 
 	emake || die
 }
