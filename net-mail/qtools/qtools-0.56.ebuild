@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/qtools-0.56.ebuild,v 1.1 2003/04/05 23:29:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/qtools-0.56.ebuild,v 1.2 2003/05/14 03:00:45 robbat2 Exp $
 
 inherit eutils
 
@@ -14,9 +14,9 @@ LICENSE="as-is"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86 ~mips ~arm ~hppa ~alpha ~ppc ~sparc"
 
-DEPEND=""
+DEPEND="sys-devel/gcc-config"
 
 S=${WORKDIR}/${P}
 
@@ -27,10 +27,9 @@ src_unpack() {
 }
 
 src_compile() {
-    LDFLAGS=
-    use static && LDFLAGS="-static"
-    echo "gcc ${CFLAGS}" > conf-cc
-    echo "gcc ${LDFLAGS}" > conf-ld
+    use static && LDFLAGS="${LDFLAGS} -static"
+    echo "${CC} ${CFLAGS}" > conf-cc
+    echo "${CC} ${LDFLAGS}" > conf-ld
     echo "/usr" > conf-home
     emake || die "emake failed"
 }

@@ -1,5 +1,4 @@
-MD5 e96978f8d673b00929cf03c4bf108c32 qtools-0.56.ebuild~ 1146
-MD5 8ff9eee42c06c51c3e13eaed7f3ebdd8 ChangeLog 394
-MD5 e96978f8d673b00929cf03c4bf108c32 qtools-0.56.ebuild 1146
+MD5 b0abc4a12cea1999014b4ddeca74c791 ChangeLog 525
+MD5 5e37fbf87c270d02a00b8cd17d1a882c qtools-0.56.ebuild 1166
 MD5 d397de4ad57b3e6d89294df49fa4f3b1 files/digest-qtools-0.56 62
 MD5 04a4c35d8c9cdf362be4a58d25a9aa4d files/qtools-0.56-errno.patch 291
