@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2765 2004/03/22 07:38:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2766 2004/03/22 21:28:43 rizzo Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -861,3 +861,9 @@ dev-libs/libsqlora8
 # mask pbbuttonsd-0.5.9 until kdeutils gets updated to reflect the new tags,
 # in favour of patched 0.5.9-r1
 =sys-apps/pbbuttonsd-0.5.9
+
+# rizzo@gentoo.org 22 Mar 2004
+# mask Oracle 10g instantclient builds
+dev-db/oracle-instantclient-basic
+dev-db/oracle-instantclient-jdbc
+dev-db/oracle-instantclient-sqlplus
