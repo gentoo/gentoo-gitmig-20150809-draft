@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.13 2003/06/24 14:35:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.14 2003/08/09 17:27:54 pappy Exp $
 
 IUSE=""
 
 inherit flag-o-matic
-filter-flags "-fstack-protector"
+
+# filter-flags "-fstack-protector"
 
 MY_P=${P/-/,}
 S=${WORKDIR}/${MY_P}
@@ -30,6 +31,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo-new.diff
 	[ "$ARCH" == "alpha" -a "${CC}" == "ccc" ] && \
 		epatch ${FILESDIR}/cracklib-${PV}-dec-alpha-compiler.diff
+
+	# do not need to filter-flags any more
+	# propolice -fstack-protector might need this one
+	einfo "adding libgcc for __guard symbol to cracklib"
+	sed -i "s:= ld:= ld $(gcc-config -L)/libgcc_s.so:" \
+			${S}/cracklib/Makefile
 }
 
 src_compile() {
