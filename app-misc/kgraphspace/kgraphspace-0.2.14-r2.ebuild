@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kgraphspace/kgraphspace-0.2.14-r2.ebuild,v 1.10 2003/02/13 09:03:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kgraphspace/kgraphspace-0.2.14-r2.ebuild,v 1.11 2003/07/22 20:09:58 vapier Exp $
 
-inherit kde-base || die
+inherit kde-base
 
 DESCRIPTION="A Disk space utility "
 SRC_URI="mirror://sourceforge/kgraphspace/${P}.tar.bz2"
