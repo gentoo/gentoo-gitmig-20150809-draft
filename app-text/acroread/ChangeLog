@@ -1,6 +1,11 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.35 2004/08/29 23:43:24 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.36 2004/09/22 12:29:55 lanius Exp $
+
+*acroread-5.09-r1 (22 Sep 2004)
+
+  22 Sep 2004; Heinrich Wendel <lanius@gentoo.org> +acroread-5.09-r1.ebuild:
+  add browser plugin
 
   30 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> acroread-5.09.ebuild:
   Fixed BUG #62110. Many thx to Evgeny Strambulchik.
