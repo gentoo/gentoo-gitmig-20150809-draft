@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.1.ebuild,v 1.3 2004/12/08 00:14:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.1.ebuild,v 1.4 2005/01/05 05:20:52 vapier Exp $
 
 inherit eutils
 
@@ -9,10 +9,9 @@ HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 		http://dev.gentoo.org/~wolf31o2/sources/catalyst/${P}.tar.bz2"
 
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sparc x86"
 IUSE="doc cdr"
 
 DEPEND=""
