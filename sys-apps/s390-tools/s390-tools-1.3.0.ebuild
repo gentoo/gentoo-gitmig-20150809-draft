@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.3.0.ebuild,v 1.3 2004/06/24 22:24:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.3.0.ebuild,v 1.4 2004/07/01 21:37:50 eradicator Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/linux390/april20
 LICENSE="GPL-2"
 KEYWORDS="~s390"
 SLOT="0"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	net-analyzer/ucd-snmp
 	app-admin/genromfs
 	dev-util/indent"

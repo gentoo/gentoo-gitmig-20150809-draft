@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3-r7.ebuild,v 1.7 2004/06/24 22:22:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3-r7.ebuild,v 1.8 2004/07/01 21:36:41 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DEBRV=7
@@ -10,7 +10,7 @@ SRC_URI="http://http.us.debian.org/debian/pool/main/p/powerpc-utils/${MY_P}.orig
 	http://http.us.debian.org/debian/pool/main/p/powerpc-utils/${MY_P}-${DEBRV}.diff.gz"
 HOMEPAGE="http://http.us.debian.org/debian/pool/main/p/powerpc-utils/"
 KEYWORDS="ppc -x86 -amd64 -alpha -hppa -mips -sparc ppc64"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=""
 SLOT="0"
 LICENSE="GPL-2"

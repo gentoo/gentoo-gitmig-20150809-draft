@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.15 2004/06/30 17:22:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.16 2004/07/01 21:40:57 eradicator Exp $
 
 DESCRIPTION="The GNU info program and utilities"
 HOMEPAGE="http://www.gnu.org/software/texinfo/"
@@ -11,12 +11,12 @@ SLOT="0"
 KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="nls build"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	!build? ( >=sys-libs/ncurses-5.2-r2
 		>=sys-apps/sed-4.0.5
 		nls? ( sys-devel/gettext ) )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 src_unpack() {

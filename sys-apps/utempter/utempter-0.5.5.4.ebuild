@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.4.ebuild,v 1.11 2004/06/30 14:37:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.4.ebuild,v 1.12 2004/07/01 21:43:39 eradicator Exp $
 
 inherit rpm eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64 ~ppc64"
 IUSE=""
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 pkg_setup() {
 	enewgroup utmp 406

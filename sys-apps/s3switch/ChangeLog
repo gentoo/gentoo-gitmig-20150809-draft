@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/s3switch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/ChangeLog,v 1.7 2004/06/24 22:25:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s3switch/ChangeLog,v 1.8 2004/07/01 21:38:04 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  s3switch-19990826.ebuild:
+  virtual/glibc -> virtual/libc
 
   23 Mar 2004; Martin Holzer <mholzer@gentoo.org> s3switch-19990826.ebuild:
   fixing depend qa issue. see 45343.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.8 2004/06/24 22:25:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.9 2004/07/01 21:38:13 eradicator Exp $
 
 MY_P=${P/_/-}
 DESCRIPTION="Client side programs for SAL, the Secure Auditing for Linux project."
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-libs/openssl"
 
 RDEPEND="${DEPEND}"

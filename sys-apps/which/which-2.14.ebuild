@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.14.ebuild,v 1.17 2004/06/24 22:32:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.14.ebuild,v 1.18 2004/07/01 21:44:33 eradicator Exp $
 
 DESCRIPTION="Prints out location of specified executables that are in your path"
 HOMEPAGE="http://www.xs4all.nl/~carlo17/which/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc sparc alpha mips hppa "
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sys-apps/texinfo"
 
 S="${WORKDIR}/${P}"

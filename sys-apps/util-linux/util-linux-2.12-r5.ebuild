@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r5.ebuild,v 1.13 2004/06/30 17:36:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r5.ebuild,v 1.14 2004/07/01 21:44:07 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc mips alpha arm ~hppa amd64 ia64 ~ppc64"
 IUSE="crypt nls static pam selinux uclibc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2-r2
 	selinux? ( sys-libs/libselinux )

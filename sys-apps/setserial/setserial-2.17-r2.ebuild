@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r2.ebuild,v 1.23 2004/06/24 22:26:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r2.ebuild,v 1.24 2004/07/01 21:39:10 eradicator Exp $
 
 DESCRIPTION="Configure your serial ports with it"
 HOMEPAGE="http://setserial.sourceforge.net/"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	econf || die

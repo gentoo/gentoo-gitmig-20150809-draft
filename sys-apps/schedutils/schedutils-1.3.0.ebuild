@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/schedutils-1.3.0.ebuild,v 1.3 2004/06/24 22:25:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/schedutils-1.3.0.ebuild,v 1.4 2004/07/01 21:38:29 eradicator Exp $
 
 DESCRIPTION="Utilities for manipulating kernel schedular parameters"
 HOMEPAGE="http://tech9.net/rml/schedutils"
 KEYWORDS="~x86 ~amd64 ~ppc"
 LICENSE="GPL-2"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="$RDEPEND
 	>=sys-apps/sed-4"
 SLOT="0"

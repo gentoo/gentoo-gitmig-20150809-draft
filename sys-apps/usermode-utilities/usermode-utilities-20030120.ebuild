@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20030120.ebuild,v 1.8 2004/06/24 22:31:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20030120.ebuild,v 1.9 2004/07/01 21:43:15 eradicator Exp $
 
 S=${WORKDIR}/tools
 DESCRIPTION="Tools for use with Usermode Linux virtual machines"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 -ppc -sparc -alpha"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	emake CFLAGS="${CFLAGS} -D_LARGEFILE64_SOURCE -g -Wall" all

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.24 2004/06/24 22:29:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.25 2004/07/01 21:40:36 eradicator Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="freedist"
 KEYWORDS="x86 amd64 ppc sparc alpha mips hppa "
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

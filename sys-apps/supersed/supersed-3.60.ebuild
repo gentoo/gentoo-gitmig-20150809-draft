@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.6 2004/06/24 22:27:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.7 2004/07/01 21:39:53 eradicator Exp $
 
 IUSE="nls static"
 
@@ -14,11 +14,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 mips sparc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.45-r3
 	nls? ( sys-devel/gettext )"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A} && cd ${S}/doc
