@@ -134,3 +134,4 @@ move app-sci/gromacs sci-chemistry/gromacs
 move app-sci/kemistry sci-chemistry/kemistry
 move app-sci/molden sci-chemistry/molden
 move app-sci/moldy sci-chemistry/moldy
+move app-sci/mpqc sci-chemistry/mpqc
