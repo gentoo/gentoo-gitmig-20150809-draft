@@ -10,5 +10,9 @@
 		rendimiento incluyendo herramientas para cambio de frecuencia de algunos
 		microprocesadores.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sys-power enthält Software für das Powermanagement, wie 
+		beispielsweise Programme zur Änderung der CPU-Frequenz.
+	</longdescription>
 </catmetadata>
 
