@@ -1,10 +1,13 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.5 2003/02/12 08:06:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.6 2003/04/14 19:56:42 agriffis Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *liblockfile-1.03 (1 Feb 2002)
+
+  14 Apr 2003; Aron Griffis <agriffis@gentoo.org> liblockfile-1.03.ebuild:
+  Mark stable on alpha
 
   28 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
