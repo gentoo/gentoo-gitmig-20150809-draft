@@ -1,4 +1,14 @@
-MD5 4d44ae3a0a53fec1e4d23084988a4741 sus-2.0.2.ebuild 1279
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a022dfc64e37f286ba94f96ce6e58bdd ChangeLog 735
-MD5 e551ecc3164caa7ab831c58f5f7244a5 files/susers.cpp 988
+MD5 c344b044f5b66d586304b4c00eb53762 sus-2.0.2.ebuild 1256
 MD5 37ab627480600ea8a18055974761eb3c files/digest-sus-2.0.2 60
+MD5 e551ecc3164caa7ab831c58f5f7244a5 files/susers.cpp 988
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3K6mHTu7gpaalycRAqsfAKC8AQj4GCAncmlJpLrgYgky8GSeNgCgxm3V
+X8ggh2Umc4qvry5K74WV45g=
+=4K6c
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 f9f4f56aa65fe1bd9800e1f181d0d3e3 xstow-0.4.6.ebuild 751
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3bbc4193d3e9c625003c829e1e90b844 ChangeLog 397
-MD5 49825a24ed2a22d7f3c4f72daa0af9f1 files/xstow-0.4.6-configure-ncurses.diff 2211
+MD5 af362a78e00801e3fb7c075bd2ca5a39 xstow-0.4.6.ebuild 748
 MD5 3e6e841329de70b113d46828506780d8 files/digest-xstow-0.4.6 63
+MD5 49825a24ed2a22d7f3c4f72daa0af9f1 files/xstow-0.4.6-configure-ncurses.diff 2211
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3LAsHTu7gpaalycRAihSAJsFniIbRu7QCHBaQw+AYtrz/booiwCgyy/p
+Gddj8t2QTykosGA1/PcMhPg=
+=g92Z
+-----END PGP SIGNATURE-----

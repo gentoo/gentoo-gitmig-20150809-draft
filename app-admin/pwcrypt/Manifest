@@ -1,4 +1,14 @@
-MD5 0274656d5dee0a76a232a8ca0bb8e807 pwcrypt-1.2.2.ebuild 585
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 11c329b5de2547ff78bfc0936220c017 ChangeLog 595
 MD5 c9f54ac0eadf3d14a44e5dc692f0df73 metadata.xml 230
+MD5 aa5c945fb1313e3461cbf4386e4d9f7f pwcrypt-1.2.2.ebuild 537
 MD5 34b10549f1dc3f052b100ba79d652a6f files/digest-pwcrypt-1.2.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3K8dHTu7gpaalycRAmXbAKCV+q+ufmKl/z1DaY4QVjp+/AHwUwCg0/dA
+cluFjgFCDh5hTFB0ROC/FGc=
+=5lk3
+-----END PGP SIGNATURE-----

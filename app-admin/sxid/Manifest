@@ -1,6 +1,16 @@
-MD5 2ba13511396e2d0df8c058abd078de17 sxid-4.0.2.ebuild 965
-MD5 bba5f05d77d2956dad88940cf424a229 sxid-4.0.4.ebuild 1014
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 36c371fee33723f1fed68d3c478be4af ChangeLog 1162
+MD5 e44794d4c093e9cba3a03b5e4d75fce9 sxid-4.0.2.ebuild 961
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 ceb0de837048f98c6169cb79b3303e5a sxid-4.0.4.ebuild 1009
 MD5 d6f1819b2a932dded8bf8054cd14a7ff files/digest-sxid-4.0.2 61
 MD5 c073a3f719de056034b9b96ce775a3c3 files/digest-sxid-4.0.4 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3K7CHTu7gpaalycRAsH7AJ0SF677tT7ZXyOt84pYHKUiyCp32QCdFF2A
+rmJ108cI4id8sOL4K2tPGDs=
+=JLa9
+-----END PGP SIGNATURE-----
