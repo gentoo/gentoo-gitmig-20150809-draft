@@ -118,7 +118,7 @@ net-www/galeon-cvs
 >=gnome-base/gnome-panel-2.0.8
 =gnome-base/gnome-session-2.0.7
 =gnome-base/gnome-desktop-2.0.8
-=gnome-base/gnome-vfs-2.0.4
+>=gnome-base/gnome-vfs-2.0.4
 =gnome-extra/gnome-utils-2.0.5
 =gnome-base/libgnomecanvas-2.0.4
 >=gnome-base/libgnome-2.0.4
