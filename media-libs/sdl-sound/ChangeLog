@@ -1,10 +1,17 @@
 # ChangeLog for media-libs/sdl-sound
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.7 2003/02/12 07:16:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.8 2003/03/21 04:47:30 malverian Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*sdl-sound-1.0.0 (19 Mar 2003)
+
+  19 Mar 2003; Philip Walls <malverian@gentoo.org> sdl-sound-1.0.0.ebuild
+  files/digest-sdl-sound-1.0.0 :
+
+  Version bump
  
 *sdl-sound-0.1.5 (6 May 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   12 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
