@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sysinfo/desklet-sysinfo-0.21.2-r1.ebuild,v 1.1 2003/11/12 11:18:21 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sysinfo/desklet-sysinfo-0.21.2-r1.ebuild,v 1.2 2003/11/20 20:31:19 dholm Exp $
 
 DESKLET_NAME="SysInfo"
 
@@ -14,7 +14,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.22"
 

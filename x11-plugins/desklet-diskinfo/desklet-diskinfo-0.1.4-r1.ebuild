@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/desklet-diskinfo-0.1.4-r1.ebuild,v 1.1 2003/09/28 05:29:13 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/desklet-diskinfo-0.1.4-r1.ebuild,v 1.2 2003/11/20 20:37:12 dholm Exp $
 
 SENS_NAME="Disk"
 DISP_NAME="diskinfo"
@@ -16,7 +16,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.22"
 
