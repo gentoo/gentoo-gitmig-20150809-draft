@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3info
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.11 2004/11/15 20:08:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.12 2004/12/17 21:32:37 corsair Exp $
+
+  17 Dec 2004; Markus Rothe <corsair@gentoo.org> mp3info-0.8.4-r1.ebuild:
+  Stable on ppc64
 
   15 Nov 2004; Markus Rothe <corsair@gentoo.org> mp3info-0.8.4-r1.ebuild:
   Marked ~ppc64; bug #71290
