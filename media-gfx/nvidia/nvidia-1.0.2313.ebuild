@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia/nvidia-1.0.2313.ebuild,v 1.5 2001/12/07 02:12:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia/nvidia-1.0.2313.ebuild,v 1.6 2002/01/23 18:55:20 azarah Exp $
 
 #NOTE: devfs support is already included, so we dont have to patch the
 #      kernel modules's source anymore !
@@ -52,8 +52,8 @@ src_install () {
 }
 
 pkg_preinst() {
-	rm -f ${ROOT}/usr/lib/libGL.*
-	rm -f ${ROOT}/usr/lib/libGLcore.*
+	rm -f ${ROOT}/usr/lib/libGL.so*
+	rm -f ${ROOT}/usr/lib/libGLcore.so*
 	rm -f ${ROOT}/usr/X11R6/lib/modules/extensions/libGLcore.*
 	rm -f ${ROOT}/usr/X11R6/lib/modules/extensions/libglx.*
 	einfo "Moving old libGL stuff in ${ROOT}/usr/X11R6/lib into an \"old\" directory."	
