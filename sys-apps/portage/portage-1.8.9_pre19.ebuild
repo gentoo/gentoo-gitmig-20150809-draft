@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre19.ebuild,v 1.1 2002/03/05 20:35:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.9_pre19.ebuild,v 1.2 2002/03/06 00:47:11 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -13,6 +12,8 @@ HOMEPAGE="http://www.gentoo.org"
 if [ -z "`use build`" ] ; then
   RDEPEND=">=dev-lang/python-2.2 sys-apps/debianutils"
 fi
+# note, the above three lines can eventually be replaced with:
+# RDEPEND=" !build? ( >=dev-lang/python-2.2 sys-apps/debianutils )"
 
 src_unpack() {
 	#We are including the Portage bzipped tarball on CVS now, so that if a person's
@@ -51,8 +52,8 @@ src_install() {
 	doins xpak.py portage.py output.py
 
 	# we gotta compile these modules
-	spython -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
-	spython -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
+	python -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
+	python -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
 	
 	#binaries, libraries and scripts
 	dodir /usr/lib/portage/bin
