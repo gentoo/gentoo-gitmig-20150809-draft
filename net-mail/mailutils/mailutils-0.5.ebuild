@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.5.ebuild,v 1.3 2004/07/14 20:55:53 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.5.ebuild,v 1.4 2004/07/27 00:39:13 langthang Exp $
 
 inherit eutils
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
@@ -10,7 +10,8 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="mailwrapper nls pam mysql postgres gdbm"
-DEPEND="!mail-client/mailx
+PROVIDE="virtual/mailx"
+DEPEND="!virtual/mailx
 	!mail-client/nmh
 	dev-util/guile
 	gdbm? ( sys-libs/gdbm )
@@ -19,6 +20,21 @@ DEPEND="!mail-client/mailx
 	nls? ( sys-devel/gettext )
 	virtual/mta"
 
+pkg_setup() {
+	# Default to MySQL if USE="mysql postgres', bug #58162.
+	if use mysql && use postgres; then
+		echo
+		ewarn "You have both 'mysql' and 'postgres' in your USE flags."
+		ewarn "Portage will build this package with MySQL support."
+		echo
+		ewarn "If this is not what you want; please hit Control-C now;"
+		ewarn "change you USE flags then emerge this package again."
+		echo
+		ewarn "Waiting 30 seconds before continuing..."
+		ewarn "(Control-C to abort)..."
+		sleep 30
+	fi
+}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -27,31 +43,26 @@ src_unpack() {
 }
 
 src_compile() {
-	# Shamelessly stolen from nagios-core
-	if use mysql && use postgres; then
-		eerror "Unfortunatly you can't have both MySQL and PostgreSQL enabled at the same time."
-		eerror "You have to remove either 'mysql' or 'postgres' from your USE flags before emerging this."
-
-		has_version ">=sys-apps/portage-2.0.50" && (
-			einfo "You can alternatively add"
-			einfo "net-mail/mailutils [use flags]"
-			einfo "to the file:"
-			einfo "/etc/portage/package.use"
-			einfo "to permamently set this package's USE flags"
-		)
-
-		exit 1
-	fi
 
 	local myconf="--localstatedir=/var --sharedstatedir=/var --enable-mh-utils"
 
 	# bug in autoconf logic treats both --with and --without as set,
 	# so we cannot do use_with
-	use mysql && myconf="${myconf} --with-mysql"
-	use postgres && myconf="${myconf} --with-postgres"
+	# use mysql && myconf="${myconf} --with-mysql"
+	# use postgres && myconf="${myconf} --with-postgres"
+	if use mysql && use postgres; then
+		einfo "build with MySQL support."
+		myconf="${myconf} --with-mysql"
+	elif use mysql; then
+		einfo "build with MySQL support."
+		myconf="${myconf} --with-mysql"
+	elif use postgres; then
+		einfo "build with PotsgreSQL support."
+		myconf="${myconf} --with-postgres"
+	fi
 
 	# do not disable-sendmail for postfix user w/o mailwrapper, bug #44249.
-	mymta=$(portageq best_version / virtual/mta)
+	mymta=$(best_version virtual/mta)
 	mymta=${mymta%-[0-9]*}
 	mymta=${mymta##*\/}
 	if ! use mailwrapper && [ "$mymta" == "postfix" ]; then
