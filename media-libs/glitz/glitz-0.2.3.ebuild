@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/glitz-0.2.3.ebuild,v 1.3 2004/12/21 12:50:09 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/glitz-0.2.3.ebuild,v 1.4 2004/12/23 08:43:03 twp Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_compile() {
 								   --infodir=/usr/share/info \
 								   --datadir=/usr/share \
 								   --sysconfdir=/etc \
-								   --localstatedir=/var/lib
+								   --localstatedir=/var/lib \
 								   ${EXTRA_ECONF} || die "autogen.sh failed"
 	emake || die "emake failed"
 }
