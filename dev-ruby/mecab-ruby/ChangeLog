@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mecab-ruby
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.1 2004/07/23 22:55:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.2 2004/08/03 11:35:59 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> mecab-ruby-0.78.ebuild:
+  Added to ~ppc.
 
 *mecab-ruby-0.78 (24 Jul 2004)
 
