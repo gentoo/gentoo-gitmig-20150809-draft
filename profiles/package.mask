@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3401 2004/12/19 02:18:45 spyderous Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3402 2004/12/19 02:35:24 dragonheart Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <dragonheart@gentoo.org> (19 Dec 2004)
+# Masked for testing
+=app-crypt/gnupg-1.4.0*
 
 # <spyderous@gentoo.org> (18 Dec 2004)
 # Development release series
