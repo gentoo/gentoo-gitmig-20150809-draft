@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.5.6.ebuild,v 1.3 2003/08/13 02:41:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.5.6.ebuild,v 1.4 2003/09/07 00:17:34 msterret Exp $
 
 MY_P="giFTcurs-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -18,17 +18,17 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	local myconf=""
-	
+
 	use gpm || myconf="${myconf} --disable-mouse --disable-libgpm"
-	use nls || myconf="${myconf} --disable-nls" 
+	use nls || myconf="${myconf} --disable-nls"
 
 	econf $myconf || die "./configure failed"
-	
+
 	emake || die "Compilation failed"
 }
 
 src_install() {
 	einstall || die "Installation failed"
-	
+
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog NEWS README THANKS TODO
 }

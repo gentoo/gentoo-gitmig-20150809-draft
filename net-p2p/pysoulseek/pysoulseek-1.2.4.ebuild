@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.4.ebuild,v 1.1 2003/08/29 18:24:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.4.ebuild,v 1.2 2003/09/07 00:17:35 msterret Exp $
 
 IUSE="oggvorbis hyriand"
 inherit eutils distutils
@@ -10,7 +10,7 @@ MY_PV="${PV/_/}"
 MY_P=${MY_PN}-${MY_PV}
 
 DESCRIPTION="client for SoulSeek filesharing"
-HOMEPAGE="http://www.sensi.org/~ak/pyslsk/ 
+HOMEPAGE="http://www.sensi.org/~ak/pyslsk/
 	http://thegraveyard.org/pyslsk/index.html"
 SRC_URI="http://www.sensi.org/~ak/pyslsk/${MY_P}.tar.gz "
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.6 2003/07/30 16:08:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.7 2003/09/07 00:17:34 msterret Exp $
 
 IUSE=""
 
@@ -103,7 +103,7 @@ pkg_config() {
 			echo "no random in shell, enter a FNP port number + <ENTER>"
 			read DEFLP
 		fi
-	
+
 		cat << EOF > freenet.conf
 ipAddress=${IP}
 listenPort=${DEFLP}
@@ -114,7 +114,7 @@ diagnosticsPath=/var/freenet/stats
 routingDir=/var/freenet
 nodeFile=/var/freenet/node
 EOF
-	
+
 		CLASSPATH="/usr/lib/freenet/freenet.jar:/usr/lib/freenet/freenet-ext.jar:${CLASSPATH}"
 		$(java-config --java) freenet.node.Main --config
 		mv freenet.conf /etc

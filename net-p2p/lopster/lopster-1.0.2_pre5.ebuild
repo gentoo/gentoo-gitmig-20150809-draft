@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.0.2_pre5.ebuild,v 1.4 2003/07/13 20:28:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.0.2_pre5.ebuild,v 1.5 2003/09/07 00:17:35 msterret Exp $
 
 IUSE="nls"
 
@@ -29,7 +29,7 @@ src_compile() {
 #	sed -e "s:^intl/Makefile::" \
 #		-e "s:AM_GNU_GETTEXT::" \
 #		configure.in.orig > configure.in
-	
+
 #	cp Makefile.am Makefile.am.orig
 #	sed "s:SUBDIR.*:SUBDIRS = m4 src:" \
 #		Makefile.am.orig > Makefile.am

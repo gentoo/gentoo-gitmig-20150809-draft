@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnapster/gnapster-1.5.0-r2.ebuild,v 1.8 2003/02/13 15:19:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnapster/gnapster-1.5.0-r2.ebuild,v 1.9 2003/09/07 00:17:34 msterret Exp $
 
 IUSE="nls gtk gnome"
 
@@ -25,7 +25,7 @@ src_compile() {
 	use gnome 	\
 		&& myconf="${myconf} --with-gnome"	\
 		|| myconf="${myconf} --disable-gnome"
-	
+
 	use gtk	|| myconf="${myconf} --disable-gdk-pixbuf --disable-gtktest"
 
 

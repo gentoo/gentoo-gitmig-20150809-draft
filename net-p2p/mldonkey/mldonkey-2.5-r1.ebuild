@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5-r1.ebuild,v 1.1 2003/06/02 18:51:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5-r1.ebuild,v 1.2 2003/09/07 00:17:35 msterret Exp $
 
 IUSE="gtk"
 
@@ -39,7 +39,7 @@ src_install() {
 	dobin ${FILESDIR}/mldonkey
 
 	dodoc Developers.txt
-	
+
 	cd ${S}/distrib
 	dodoc AUTHORS BUGS COPYING ChangeLog ed2k_links.txt TODO
 	dohtml FAQ.html
@@ -59,7 +59,7 @@ src_install() {
 	cd ${S}/docs/networks
 	dodoc *.txt *.pdf
 	dohtml *.html
-	
+
 	docinto Gnutella
 	dodoc Gnutella/*
 

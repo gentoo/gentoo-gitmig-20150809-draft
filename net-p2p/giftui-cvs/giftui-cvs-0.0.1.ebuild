@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui-cvs/giftui-cvs-0.0.1.ebuild,v 1.3 2003/07/25 20:25:59 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui-cvs/giftui-cvs-0.0.1.ebuild,v 1.4 2003/09/07 00:17:34 msterret Exp $
 
 ECVS_SERVER="cvs.tuxfamily.org:/cvsroot/giftui"
 ECVS_MODULE="giFTui"
@@ -8,7 +8,7 @@ ECVS_MODULE="giFTui"
 inherit cvs
 
 S=${WORKDIR}/${ECVS_MODULE}
-	
+
 DESCRIPTION="A GTK+2 giFT frontend (sources from CVS)."
 HOMEPAGE="http://giftui.tuxfamily.org/"
 

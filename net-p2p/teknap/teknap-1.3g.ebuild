@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.8 2003/02/13 15:23:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.9 2003/09/07 00:17:35 msterret Exp $
 
 IUSE="xmms gtk ipv6 tcpd"
 
@@ -22,11 +22,11 @@ DEPEND="virtual/glibc >=sys-libs/ncurses-5.2
 src_compile() {
 	local myconf
 	use gtk && myconf="--with-gtk"
-	
+
 	use tcpd && myconf="${myconf} --enable-wrap"
-	
+
 	use xmms && myconf="${myconf} --enable-xmms"
-	
+
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 	myconf="${myconf} --enable-cdrom"
 

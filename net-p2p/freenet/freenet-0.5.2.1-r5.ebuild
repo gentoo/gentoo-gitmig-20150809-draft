@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r5.ebuild,v 1.5 2003/09/03 20:58:39 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r5.ebuild,v 1.6 2003/09/07 00:17:34 msterret Exp $
 
 IUSE=""
 
@@ -111,7 +111,7 @@ pkg_config() {
 				echo "no random in shell, enter a FNP port number + <ENTER>"
 				read DEFLP
 			fi
-		
+
 			cat << EOF > freenet.conf
 ipAddress=${IP}
 listenPort=${DEFLP}

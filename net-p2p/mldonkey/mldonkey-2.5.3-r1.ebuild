@@ -24,7 +24,7 @@ RDEPEND="net-misc/wget"
 MLUSER="p2p"
 
 pkg_setup() {
-	# add user 
+	# add user
 	if [ ! `getent passwd ${MLUSER} | cut -d: -f1` ]
 	then
 		useradd -s /bin/bash ${MLUSER} &>/dev/null
@@ -32,9 +32,9 @@ pkg_setup() {
 	fi
 	if [ ! -d `getent passwd ${MLUSER} | cut -d: -f6` ]
 	then
-		einfo Creating directory... 
-		mkdir `getent passwd ${MLUSER} | cut -d: -f6` 
-		chown ${MLUSER} `getent passwd ${MLUSER} | cut -d: -f6` 
+		einfo Creating directory...
+		mkdir `getent passwd ${MLUSER} | cut -d: -f6`
+		chown ${MLUSER} `getent passwd ${MLUSER} | cut -d: -f6`
 	else
 		einfo User already configured.
 	fi

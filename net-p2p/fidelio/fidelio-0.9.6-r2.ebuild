@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fidelio/fidelio-0.9.6-r2.ebuild,v 1.5 2003/02/13 15:18:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fidelio/fidelio-0.9.6-r2.ebuild,v 1.6 2003/09/07 00:17:34 msterret Exp $
 
 IUSE="nls esd"
 
@@ -19,7 +19,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	esd? ( >=media-sound/esound-0.2.23 )"
 
 src_compile() {
-	
+
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml"
 	CXXFLAGS="${CXXFLAGS} -I/usr/include/libxml2/libxml"
 	export CPPFLAGS="-I/usr/include/libxml2"
@@ -28,7 +28,7 @@ src_compile() {
 	local myconf
 
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	econf ${myconf} || die
 	emake || die
 
@@ -37,6 +37,6 @@ src_compile() {
 src_install () {
 
 	einstall || die
-	
+
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.92.ebuild,v 1.1 2003/06/23 18:13:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.92.ebuild,v 1.2 2003/09/07 00:17:35 msterret Exp $
 
 IUSE="gnome"
 
@@ -20,7 +20,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*"
 
 src_compile() {
-	
+
 #	econf `use_enable gtk2`|| die "Configure failed"
 	econf || die "Configure failed"
 	emake || die "Make failed"
