@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.7 2004/06/24 23:25:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.8 2004/08/09 11:34:25 slarti Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ KEYWORDS="x86 ppc alpha ~ia64 sparc s390 ~amd64 ~hppa"
 DEPEND="sys-libs/ncurses
 	app-arch/sharutils
 	net-mail/mailbase"
+RDEPEND="app-misc/mime-types"
 
 src_unpack() {
 	unpack ${A}
@@ -39,7 +40,5 @@ src_install () {
 	rm man/mmencode.1
 	doman man/*
 	doman debian/mimencode.1 debian/mimeit.1
-	insinto /etc
-	doins ${FILESDIR}/mime.types
 }
 
