@@ -80,9 +80,8 @@
 	</tr>
 	<tr>
 		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=on">Outstanding Neither:</a></td>
-		<td><?=$on;?></td>
+		<td><?=$on;?><br></td>
 	</tr>
-	<br>
 	<tr>
 		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Total Unassigned:</a></td>
 		<td><?=$unassigned;?></td>

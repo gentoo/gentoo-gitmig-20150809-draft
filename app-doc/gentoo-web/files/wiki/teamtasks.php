@@ -11,10 +11,10 @@ if ( !$q || !$team ) {
 	exit;
 } elseif ( $team == 6 ) {
 	if ( $q == 'u' ) {
-		$unassigned = mysql_query( "select * from todos where public=1 and team=$team" );
+		$result = mysql_query( "select * from todos where public=1 and team=$team" );
 		?><p style="font-size:medium;font-weight:bold;">Unassigned Tasks for <?=$teamname;?> Team</p><?php
 	} elseif ( $q == 'o' ) {
-		$outstanding = mysql_query( "select * from todos where priority!=0 and team=$team" );
+		$result = mysql_query( "select * from todos where priority!=0 and team=$team" );
 		?><p style="font-size:medium;font-weight:bold;">Outstanding Tasks for <?=$teamname;?> Team</p><?php
 	}
 } elseif ( $q == 'u' ) {
