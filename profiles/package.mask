@@ -840,10 +840,6 @@ x11-libs/gdkxft
 # Masked because installs headers in wrong location
 =media-libs/id3lib-3.8.0_pre2-r2
 
-# g2boojum@gentoo.org 10 June 2002
-# masking because I can't test it.
-net-mail/qmail-scanner
-
 # g2boojum@gentoo.org 11 June 2002
 # masking dev-perl/Mail-SpamAssassin because we already have it in net-mail
 dev-perl/Mail-SpamAssassin
