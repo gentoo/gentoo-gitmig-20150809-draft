@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.28 2005/01/24 04:32:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.29 2005/02/01 23:50:15 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -125,7 +125,7 @@ tc-arch() {
 }
 tc-endian() {
 	local host=$1
-	[[ -z ${host} ]] && host=${CHOST}
+	[[ -z ${host} ]] && host=${CTARGET:-${CHOST}}
 
 	case ${host} in
 		alpha*)		echo big;;
