@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/openmosix-user
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.10 2003/05/02 09:41:05 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.11 2003/05/07 21:26:31 tantive Exp $
+
+* openmosix-user-0.3.-r3 (07 May 2003)
+
+  07 May 2003; Michael Imhof <tantive@gentoo.org>
+  Changed the openmosixcollector init script. Should close #20481
 
 * openmosix-user-0.3.-r2 (02 May 2003)
 
