@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dgs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.12 2004/03/07 19:31:20 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.13 2004/04/03 14:52:23 usata Exp $
+
+  03 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> dgs-0.5.10-r1.ebuild:
+  Added tcpd IUSE flag check. Thanks to Cory Visi <cory@visi.name> for the
+  suggestion. Closing bug #34016
 
   07 Mar 2004; Bret Curtis <psi29a@gentoo.org> dgs-0.5.10-r1.ebuild:
   Added ~mips to KEYWORDS
