@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0.ebuild,v 1.2 2004/10/16 17:35:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0.ebuild,v 1.3 2004/10/17 07:31:05 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://saxpath.sourceforge.net/"
 SRC_URI="mirror://sourceforge/saxpath/${P}.tar.gz"
 LICENSE="saxpath"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="doc junit"
 DEPEND="dev-java/ant
 	junit? ( dev-java/junit )
