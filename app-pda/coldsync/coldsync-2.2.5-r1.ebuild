@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.3 2004/06/24 21:40:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.4 2004/07/02 19:00:36 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A command-line tool to synchronize PalmOS PDAs with Unix workstations"
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.coldsync.org/"
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 sparc"
+IUSE="nls perl"
 
 src_compile() {
 	cd ${S}
