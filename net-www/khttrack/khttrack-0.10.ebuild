@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/khttrack-0.10.ebuild,v 1.12 2005/02/27 22:59:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/khttrack-0.10.ebuild,v 1.13 2005/03/18 14:46:28 seemant Exp $
 
 inherit kde eutils
 
@@ -13,8 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc"
 IUSE=""
 
-DEPEND="net-www/httrack"
-RDEPEND="net-www/httrack"
+DEPEND="www-client/httrack"
+RDEPEND="www-client/httrack"
 need-kde 3
 
 src_unpack() {

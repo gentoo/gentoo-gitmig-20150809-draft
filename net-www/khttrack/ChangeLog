@@ -1,6 +1,9 @@
 # ChangeLog for net-www/khttrack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/ChangeLog,v 1.9 2005/02/27 22:59:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/ChangeLog,v 1.10 2005/03/18 14:46:28 seemant Exp $
+
+  18 Mar 2005; Seemant Kulleen <seemant@gentoo.org> khttrack-0.10.ebuild:
+  Dependency update: net-www/httrack -> www-client/httrack.
 
   27 Feb 2005; Jason Wever <weeve@gentoo.org> khttrack-0.10.ebuild:
   Added ~sparc keyword.
