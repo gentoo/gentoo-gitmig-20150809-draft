@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_beta1.ebuild,v 1.1 2002/08/22 21:13:57 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_beta1.ebuild,v 1.2 2002/08/24 11:45:55 danarmak Exp $
 inherit kde-dist flag-o-matic 
 
 DESCRIPTION="KDE $PV - multimedia apps"
@@ -19,8 +19,8 @@ newdepend ">=sys-libs/ncurses-5.2
 	>=media-sound/mpg123-0.59r
 	tcltk? ( >=dev-lang/tk-8.0.5-r2 )
 	>=dev-libs/glib-1.3.3
-	>=media-libs/xine-lib-0.9.9
 	oggvorbis? ( media-libs/libvorbis )"
+	#>=media-libs/xine-lib-0.9.14"
 	#gtk? ( =x11-libs/gtk+-1.2* )
 #	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
 
@@ -42,6 +42,8 @@ use motif	&& myinterface="$myinterface,motif" && myconf="$myconf --enable-motif"
 use slang	&& myinterface="$myinterface,slang" && myconf="$myconf --enable-slang"
 use tcltk	&& myinterface="$myinterface,tcltk" && myconf="$myconf --enable-tcltk"
 use oggvorbis	&& myconf="$myconf --with-vorbis=/usr"		|| myconf="$myconf --without-vorbis"
+
+export DO_NOT_COMPILE="xine_artsplugin"
 
 myconf="$myconf $myaudio $myinterface"
 
