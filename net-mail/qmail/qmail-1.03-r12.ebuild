@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.10 2003/09/12 00:55:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.11 2003/09/20 23:58:09 robbat2 Exp $
 
 inherit eutils
 
@@ -233,9 +233,9 @@ src_install() {
 	einfo "Setting up maildirs by default in the account skeleton ..."
 	diropts -m 755 -o root -g root
 	insinto /etc/skel
+	newins ${FILESDIR}/${PV}-${PR}/dot_qmail .qmail.sample
+	fperms 644 /etc/skel/.qmail.sample
 	${MAILDIRMAKE} ${D}/etc/skel/.maildir
-	newins ${FILESDIR}/${PV}-${PR}/dot_qmail .qmail
-	fperms 644 /etc/skel/.qmail
 	# for good measure
 	keepdir /etc/skel/.maildir/{cur,new,tmp}
 
