@@ -26,7 +26,7 @@ app-editors/emacs-motif
 app-editors/joe
 app-editors/nedit
 app-editors/vile
-app-editors/vim-gtk
+app-editors/vim
 app-emulation/wine
 app-misc/ckermit
 app-misc/figlet
