@@ -19,3 +19,4 @@ move net-www/mozilla-firebird net-www/mozilla-firefox
 move media-libs/libebml dev-libs/libebml
 slotmove <=dev-lisp/gauche-gl-0.3.1 0.1 0
 move app-misc/celestia app-sci/celestia
+move net-nds/directory_administrator net-nds/directoryadministrator

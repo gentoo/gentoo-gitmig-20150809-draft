@@ -24,4 +24,3 @@ move net-misc/gshield net-firewall/gshield
 move dev-util/uml dev-util/umbrello
 move app-text/fribidi dev-libs/fribidi
 move dev-python/PyKDE dev-python/pykde
-move net-nds/directory_administrator net-nds/directoryadministrator
