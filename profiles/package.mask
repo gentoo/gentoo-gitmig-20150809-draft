@@ -19,6 +19,7 @@
 >=kde-base/kdesdk-3.0.2
 >=kde-base/kdetoys-3.0.2
 >=kde-base/kdeutils-3.0.2
+>=dev-util/kdevelop-2.1.2
 
 #testing only (drobbins, 25 Jun 2002)
 =sys-apps/portage-2.0.8
