@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/libgtk-java
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.1 2004/11/16 18:40:33 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.2 2004/11/29 15:35:33 axxo Exp $
+
+  29 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
+  +files/libgtk-java-2.4.6_find_jni.patch, libgtk-java-2.4.6-r1.ebuild:
+  added a patch to set JAVA_INCLUDES when not using gcj, so it can find jni.h
+  & familiy, #72128
 
 *libgtk-java-2.4.6-r1 (16 Nov 2004)
 
