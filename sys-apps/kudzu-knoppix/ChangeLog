@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kudzu-knoppix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/ChangeLog,v 1.12 2004/09/30 13:23:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/ChangeLog,v 1.13 2004/10/16 14:51:44 wolf31o2 Exp $
+
+*kudzu-knoppix-1.1.36-r1 (16 Oct 2004)
+
+  16 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +kudzu-knoppix-1.1.36-r1.ebuild, -kudzu-knoppix-1.1.36.ebuild:
+  Adding USE=livecd to make kudzu-knoppix only build libkudzu for LiveCD and
+  embedded. Blame Koon. Closing bug #67764.
 
   30 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   kudzu-knoppix-1.1.36.ebuild:

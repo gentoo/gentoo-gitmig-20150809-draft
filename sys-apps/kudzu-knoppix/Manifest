@@ -1,4 +1,4 @@
-MD5 129adaa5f4ed2489f4596d7e8c6f81ad kudzu-knoppix-1.1.36.ebuild 1041
-MD5 b535d52d3b2c37dfd296ccbe6c49794b ChangeLog 1623
+MD5 3087e78317a57dc1fd5bef1578e5332d kudzu-knoppix-1.1.36-r1.ebuild 1304
+MD5 b5d13bd7ab6f461d7c4f8d07c9b379ed ChangeLog 1904
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
-MD5 5310a8dffb3e81e7c81fccd43d0ce18d files/digest-kudzu-knoppix-1.1.36 74
+MD5 5310a8dffb3e81e7c81fccd43d0ce18d files/digest-kudzu-knoppix-1.1.36-r1 74

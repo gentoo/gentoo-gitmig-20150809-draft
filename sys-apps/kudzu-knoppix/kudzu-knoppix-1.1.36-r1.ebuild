@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.14 2004/09/30 13:23:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r1.ebuild,v 1.1 2004/10/16 14:51:44 wolf31o2 Exp $
 
 MY_PV=${PV}-2
 S=${WORKDIR}/kudzu-${PV}
@@ -11,18 +11,22 @@ SRC_URI="http://developer.linuxtag.net/knoppix/sources/${PN}_${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc alpha -sparc -mips"
-IUSE=""
+IUSE="livecd"
 
-RDEPEND="dev-libs/newt"
+RDEPEND="!livecd? ( dev-libs/newt )"
 DEPEND="$RDEPEND
-	sys-devel/gettext
-	sys-libs/slang
+	!livecd? ( sys-devel/gettext )
+	!livecd? ( sys-libs/slang )
 	sys-apps/pciutils
-	>=dev-libs/dietlibc-0.20
+	!livecd? ( >=dev-libs/dietlibc-0.20 )
 	!sys-apps/kudzu"
 
 src_compile() {
-	emake || die
+	if use livecd; then
+		emake libkudzu.a || die
+	else
+		emake || die
+	fi
 
 	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" ]
 	then
@@ -32,8 +36,16 @@ src_compile() {
 }
 
 src_install() {
-	einstall install-program DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man \
-		|| die "Install failed"
+	if use livecd; then
+		dodir /etc/sysconfig
+		dodir /usr/include/kudzu
+		insinto /usr/include/kudzu
+		doins *.h
+		dolib.a libkudzu.a
+	else
+		einstall install-program DESTDIR=${D} PREFIX=/usr \
+			MANDIR=/usr/share/man || die "Install failed"
+	fi
 
 	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" ]
 	then
