@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4.ebuild,v 1.4 2003/06/21 18:33:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4.ebuild,v 1.5 2004/01/11 13:52:22 lanius Exp $
 
 DESCRIPTION="Marc Lehmann's improved X Cut Buffers"
 HOMEPAGE="http://www.goof.com/pcg/marc/xcb.html"
@@ -11,7 +11,7 @@ KEYWORDS="alpha x86"
 IUSE="motif"
 
 DEPEND="virtual/x11
-	motif? ( virtual/motif )"
+	motif? ( x11-libs/openmotif )"
 
 src_unpack() {
 	unpack ${A}
