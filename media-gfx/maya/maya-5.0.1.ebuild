@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1.ebuild,v 1.3 2004/04/27 08:51:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1.ebuild,v 1.4 2004/04/27 09:48:02 eradicator Exp $
 
 inherit rpm
 
-IUSE="maya5-bundled-runtime"
+IUSE="bundled-libs"
 S="${WORKDIR}"
 
 DESCRIPTION="Alias Wavefront's Maya.  Comercial modeling and animation package."
@@ -26,9 +26,9 @@ KEYWORDS="~x86"
 DEPEND="app-arch/unzip"
 
 RDEPEND=">=sys-libs/lib-compat-1.3
-	 !maya5-bundled-runtime ( =x11-libs/qt-3*
-	                          >=sys-devel/gcc-3*
-				  >=x11-libs/openmotif-2.1.30 )
+	 !bundled-libs ( =x11-libs/qt-3*
+	                 >=sys-devel/gcc-3*
+	                 >=x11-libs/openmotif-2.1.30 )
 	 virtual/opengl"
 
 pkg_nofetch() {
@@ -62,7 +62,7 @@ src_unpack() {
 	rm -rf etc
 
 	# Remove unneeded libs (provided by DEPEND).
-	if ! use maya5-bundled-runtime; then
+	if ! use bundled-libs; then
 		rm -f ${S}/insroot/usr/aw/COM/lib/libXm.so.2.1
 		rm -f ${S}/insroot/usr/aw/maya5.0/lib/libgcc_s.so.1
 		rm -f ${S}/insroot/usr/aw/maya5.0/lib/libstdc++.so.5.0.2
@@ -90,8 +90,8 @@ src_install() {
 		dosym lmutil /usr/aw/COM/bin/${lmexec}
 	done
 
-	# We use our own Motif runtime unless USE=maya5-bundled-runtime
-	if use maya5-bundled-runtime; then
+	# We use our own Motif runtime unless USE=bundled-libs
+	if use bundled-libs; then
 		dosym libXm.so.2.1 libXm.so
 		dosym libXm.so.2.1 libXm.so.2
 	fi
@@ -114,8 +114,8 @@ src_install() {
 
 	dosym Mayatomr.so /usr/aw/maya5.0/bin/plug-ins/Mayatomr.sog
 
-	# We use our own gcc3 runtime unless USE=maya5-bundled-runtime
-	if use maya5-bundled-runtime; then
+	# We use our own gcc3 runtime unless USE=bundled-libs
+	if use bundled-libs; then
 		dosym libgcc_s.so.1 /usr/aw/maya5.0/lib/libgcc_s.so
 		dosym libstdc++.so.5.0.2 /usr/aw/maya5.0/lib/libstdc++.so.5
 		dosym libstdc++.so.5.0.2 /usr/aw/maya5.0/lib/libstdc++.so
