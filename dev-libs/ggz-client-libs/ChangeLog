@@ -1,13 +1,15 @@
 # ChangeLog for dev-libs/ggz-client-libs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ggz-client-libs/ChangeLog,v 1.6 2003/02/12 06:03:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ggz-client-libs/ChangeLog,v 1.7 2003/07/10 18:48:04 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*ggz-client-libs-0.0.7 (10 Jul 2003)
+
+  10 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage #24165.
+
 *ggz-client-libs-0.0.5-r1 (23 Oct 2002)
 
   23 Oct 2002; J Robert Ray <jrray@gentoo.org> :
-
   Patch to prevent -I/usr/include being put in $CPPFLAGS, which was
   generating a compiler warning with gcc 3.2, causing the configure
   phase to fail.  Closes bug 9413.
@@ -15,6 +17,5 @@
 *ggz-client-libs-0.0.5 (13 Apr 2002)
 
   13 Apr 2002; T.Kvernes <terjekv@math.uio.no> ChangeLog :
-
   Initial ebuild.  This is the client library for games developed at GGZ
   Gameing Zone.
