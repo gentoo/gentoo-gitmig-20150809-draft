@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3820da50494be6224f36b0f4f1da9b6a ChangeLog 2354
+MD5 19666c7a0aa4be23bce0502427ddca73 ChangeLog 2483
 MD5 9e2a054a1c88817613efae9564a60cf4 metadata.xml 530
 MD5 15542c97adcfe3e3a1eb6140c31ec0d5 cpuspeedy-0.4.1.ebuild 927
-MD5 c944124fbf0c208418fc7c72faefb5c8 cpuspeedy-0.3.0.ebuild 924
-MD5 7df97933b6374b317ead0490c3e4e7e6 cpuspeedy-0.4.0.ebuild 924
 MD5 8ca6a625ab62f6e8be057d0fe2453953 files/digest-cpuspeedy-0.4.1 66
-MD5 5534ac90adaed8c4f9c7bcb022148145 files/digest-cpuspeedy-0.3.0 66
-MD5 ff3c31e2076476affd26718df8fbb460 files/digest-cpuspeedy-0.4.0 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBQx4SmdTrptrqvGERAoHeAJwI8hsFJtxZ9p9XUulVuW0CKvADPACdGp5r
-UsRsJhkaSyGNjD9Bh+Cs2C0=
-=qLVt
+iD8DBQFBqGtFmdTrptrqvGERAg42AJ4ncg9NBGjU1+XWgV3LDr5LH/LyQgCffzYM
+bkj/r/vqcXQT/vBbJpSSzaw=
+=XHmh
 -----END PGP SIGNATURE-----

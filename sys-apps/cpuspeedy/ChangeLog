@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/cpuspeedy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/ChangeLog,v 1.13 2004/09/11 15:44:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuspeedy/ChangeLog,v 1.14 2004/11/27 11:55:43 dragonheart Exp $
+
+  27 Nov 2004; Daniel Black <dragonheart@gentoo.org> -cpuspeedy-0.3.0.ebuild,
+  -cpuspeedy-0.4.0.ebuild:
+  old version cleanout
 
   12 Sep 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.4.1.ebuild:
   x86 stable
