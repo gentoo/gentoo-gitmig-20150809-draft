@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.2.ebuild,v 1.1 2002/08/28 14:24:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.2.ebuild,v 1.2 2002/08/29 02:09:40 seemant Exp $
 
 
 MY_P="sylpheed-${PV}claws"
 S=${WORKDIR}/${MY_P}
 S2=${WORKDIR}/gentoo-extra
 DESCRIPTION="Bleeding edge version of Sylpheed"
-SRC_URI="mirror://sourceforge/sylpheed-claws/${MY_P}.tar.gz
+SRC_URI="mirror://sourceforge/sylpheed-claws/${MY_P}.tar.bz2
 	mirror://gentoo/sylpheed-gentoo-extra.tar.bz2"
 HOMEPAGE="http://sylpheed-claws.sf.net"
 
