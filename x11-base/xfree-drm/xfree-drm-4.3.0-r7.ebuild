@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.10 2004/02/21 21:33:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.11 2004/02/21 22:37:57 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -214,6 +214,7 @@ patch_prepare() {
 	# 100-199: Standard-only patches
 	# 200-299: Mach64 patches
 	# 300-399: Gatos patches
+	# Convention for excluding is to use the full patch number, or * for groups
 
 	# if [ ! "`is_kernel 2 6`" ]
 	# then
@@ -224,18 +225,15 @@ patch_prepare() {
 	then
 		einfo "Updating for mach64 build..."
 		# Exclude all non-mach64 patches
-		mv -f ${PATCHDIR}/004* ${EXCLUDED}
-		mv -f ${PATCHDIR}/3* ${EXCLUDED}
+		patch_exclude 004 3*
 	elif use gatos
 	then
 		einfo "Updating for gatos build..."
 		# Exclude all non-gatos patches
-		mv -f ${PATCHDIR}/004* ${EXCLUDED}
-		mv -f ${PATCHDIR}/2* ${EXCLUDED}
+		patch_exclude 004 2*
 	else # standard case
 		einfo "Updating for standard build..."
 		# Exclude all gatos or mach64 patches
-		mv -f ${PATCHDIR}/2* ${EXCLUDED}
-		mv -f ${PATCHDIR}/3* ${EXCLUDED}
+		patch_exclude 2* 3*
 	fi
 }
