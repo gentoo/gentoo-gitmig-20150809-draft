@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.2 2003/07/31 12:47:41 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.3 2003/09/05 18:30:42 taviso Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -10,7 +10,7 @@ SRC_URI="http://cvs.gentoo.org/~taviso/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 IUSE="static doc"
 
 DEPEND="virtual/glibc
@@ -24,7 +24,7 @@ S=${WORKDIR}/src/bin/csh
 src_unpack() {
 	# unpack the source tarball
 	unpack ${A}
-	
+
 	# hide some BSDisms, mostly my work, got some hints from the
 	# debian project (they use an older OpenBSD csh, though).
 	cd ${S}; epatch ${FILESDIR}/linux-vs-bsd.diff || die "patching failed."
@@ -33,7 +33,7 @@ src_unpack() {
 	# patch contributed by splite <splite-gentoo@sigint.cs.purdue.edu>
 	# #24290
 	epatch ${FILESDIR}/retype-input.diff || die "patching failed."
-	
+
 	# copy some required files over, from NetBSD
 
 	cd ${S}; cp ${WORKDIR}/printf.c \
@@ -41,8 +41,8 @@ src_unpack() {
 				${WORKDIR}/vis.c \
 				${FILESDIR}/dot.login \
 				${FILESDIR}/dot.cshrc \
-				${S} 
-				
+				${S}
+
 	# this parses the output of the bash builtin `kill`
 	# and creates an array of signal names for csh.
 
@@ -53,16 +53,16 @@ src_unpack() {
 	printf "/* automatically generated during %s build */\n\n" ${PF} > ${S}/signames.h
 	printf "const char *const sys_signame[NSIG + 3] = {\n" >> ${S}/signames.h
 	printf "\t\"EXIT\",\t\n" >> ${S}/signames.h
-	
+
 	let cnt++
-	
+
 	for i in `kill -l`
 	do
 		let $((cnt++))%2 && continue
 		einfo "	Adding ${i}..."
 		printf "\t\"%s\",\n" ${i} >> ${S}/signames.h
 	done
-	
+
 	printf "\t\"DEBUG\",\n\t\"ERR\",\n\t(char *)0x0\n};\n\n" >> ${S}/signames.h
 
 	einfo "Making some final tweaks..."
@@ -85,20 +85,20 @@ src_compile() {
 
 	# maybe they dont warn on BSD, but _damn_.
 	export NOGCCERROR=1
-	
+
 	# if csh is a users preferred shell, they may want
 	# a static binary to help on the event of fs emergency.
 	use static && append-ldflags -static
-	
+
 	# pmake is a portage binary as well, so specify full path.
 	# if yours isnt in /usr/bin, you can set PMAKE_PATH.
 	einfo "Starting build..."
 	${PMAKE_PATH:-/usr/bin/}pmake || die "compile failed."
-	
+
 	echo
-	size csh 
+	size csh
 	echo
-	
+
 	# make the c shell guide
 	use doc && {
 		einfo "Making documentation..."
@@ -108,7 +108,7 @@ src_compile() {
 	cd ${S}
 
 	einfo "Making empty configuration files.."
-	printf "#\n# System-wide .cshrc file for csh(1).\n\n" >	csh.cshrc 
+	printf "#\n# System-wide .cshrc file for csh(1).\n\n" >	csh.cshrc
 	printf "#\n# System-wide .login file for csh(1).\n\n" > csh.login
 	printf "if ( -f /etc/csh.env ) source /etc/csh.env\n" >> csh.login
 	printf "#\n# System-wide .logout file for csh(1).\n\n" > csh.logout
@@ -117,12 +117,12 @@ src_compile() {
 src_install() {
 	exeinto /bin
 	doexe csh
-	
+
 	doman csh.1
-	
+
 	use doc && dodoc USD.doc/paper.ps
 	dodoc dot.cshrc dot.login
-	
+
 	insinto /etc
 	doins csh.cshrc csh.login csh.logout
 }
