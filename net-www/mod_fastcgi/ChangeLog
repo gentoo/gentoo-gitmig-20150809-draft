@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_fastcgi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/ChangeLog,v 1.5 2004/08/04 00:04:58 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/ChangeLog,v 1.6 2004/08/25 12:56:43 rl03 Exp $
+
+  25 Aug 2004; Renat Lumpau <rl03@gentoo.org> mod_fastcgi-2.4.2.ebuild:
+  Fix for repoman warnings: moved IUSE="apache" above detectapache.
 
   05 Aug 2004; Chuck Short <zul@gentoo.org> files/mod_fastcgi.conf:
   Added .fcgi. Closes #59033.

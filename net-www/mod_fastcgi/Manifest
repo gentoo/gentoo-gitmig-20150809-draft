@@ -1,5 +1,5 @@
-MD5 978f38879f00acd9e21db4f1d70c8adf mod_fastcgi-2.4.2.ebuild 2970
-MD5 54db92ab1ad10e0957c065973bc9d8e6 ChangeLog 801
+MD5 79952373226093a10275e3784ed44026 mod_fastcgi-2.4.2.ebuild 2966
+MD5 f3e32408588b769d4ee1a08713069b4f ChangeLog 943
 MD5 0c1ffc3eff281366ee07df94a66166e6 metadata.xml 160
 MD5 c28c5986e00f82855ecbd1887f1cd72b files/digest-mod_fastcgi-2.4.2 68
 MD5 f91641961f208de56af9e453c8cf414c files/20_mod_fastcgi.conf 221
