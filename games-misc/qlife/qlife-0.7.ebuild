@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.7.ebuild,v 1.1 2004/09/13 06:22:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.7.ebuild,v 1.2 2004/10/17 10:00:54 dholm Exp $
 
 inherit kde
 need-qt 3
@@ -11,7 +11,7 @@ SRC_URI="http://freshmeat.net/redir/qlife/50265/url_tgz/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 src_compile() {
