@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/optparse
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/optparse/ChangeLog,v 1.6 2003/02/12 06:35:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/optparse/ChangeLog,v 1.7 2003/06/10 19:26:30 twp Exp $
+
+*optparse-0.12 (10 Jun 2003)
+
+  10 Jun 2003; Tom Payne <twp@gentoo.org> optparse-0.12.ebuild :
+  Version bump. Ebuild tidy. Bug # 22487. Needs testing.
 
 *optparse-0.10.1 (26 Oct 2002)
 
