@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.4 2003/11/17 09:56:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.5 2003/11/25 00:55:39 gmsoft Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -34,9 +34,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	if [ "${ARCH}" = "hppa" ]; then
-	sed -i -e \
-	's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
+		# Tells to compile a static version of openssl
+		sed -i -e \
+		's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
 		Configure
+		# Fix detection of parisc running 64 bit kernel
+		sed -i -e 's/parisc-\*-linux2/parisc\*-\*-linux2/' config
 	fi
 	if [ "${ARCH}" = "alpha" -a "${CC}" != "ccc" ]; then
 	# ccc compiled openssl will break things linked against
@@ -65,9 +68,12 @@ src_unpack() {
 				Configure
 		;;
 		hppa)
+			# Tells to compile a static version of openssl
 			sed -i -e \
 				's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
 				Configure
+			# Fix detection of parisc running 64 bit kernel
+			sed -i -e 's/parisc-\*-linux2/parisc\*-\*-linux2/' config
 		esac
 
 		sed -i -e "s/-O3/$CFLAGS/" -e "s/-m486//" Configure

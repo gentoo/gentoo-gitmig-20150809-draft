@@ -1,10 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.59 2003/11/17 09:56:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.60 2003/11/25 00:55:39 gmsoft Exp $
 
 
 *openssl-0.9.6l (04 Nov 2003)
 *openssl-0.9.7c-r1 (04 Nov 2003)
+
+  25 Nov 2003; Guy Martin <gmsoft@gentoo.org> openssl-0.9.7c-r1.ebuild :
+  Fix detection of parisc64 boxes.
 
   17 Nov 2003; Joshua Kinard <kumba@gentoo.org> openssl-0.9.7c-r1.ebuild:
   Made a tweak to allow openssl to build on mips64 platforms (64-bit kernel,
