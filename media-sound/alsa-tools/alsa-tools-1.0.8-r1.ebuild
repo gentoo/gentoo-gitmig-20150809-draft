@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.8-r1.ebuild,v 1.1 2005/01/25 16:04:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.8-r1.ebuild,v 1.2 2005/01/26 06:52:41 chriswhite Exp $
 
 IUSE="X"
 
@@ -43,8 +43,8 @@ if [ -z "${ALSA_TOOLS}" ]; then
 					sscape_ctl us428control usx2yloader vxloader"
 	fi
 
-	# sb16_csp won't build on ppc64 (and is not needed)
-	if ! use ppc64; then
+	# sb16_csp won't build on ppc64 _AND_ ppc (and is not needed)
+	if  use !ppc64 && use !ppc; then
 		ALSA_TOOLS="${ALSA_TOOLS} sb16_csp"
 	fi
 
