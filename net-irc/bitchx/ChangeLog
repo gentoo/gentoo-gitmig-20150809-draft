@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.4 2002/04/16 13:46:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.5 2002/04/23 13:40:46 verwilst Exp $
+
+*bitchx-1.0.19-r1 (23 April 2002)
+
+  23 April 2002; Bart Verwilst <verwilst@gentoo.org> Changelog:
+
+  Quick revision bump, fixed symlink bug..
 
 *bitchx-1.0.19 (16 Apr 2002)
 

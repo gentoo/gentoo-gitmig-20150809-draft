@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19.ebuild,v 1.1 2002/04/16 13:46:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r1.ebuild,v 1.1 2002/04/23 13:40:46 verwilst Exp $
 
 MY_P=ircii-pana-${PV/.0./.0c}
 S=${WORKDIR}/BitchX
@@ -76,11 +76,11 @@ src_install () {
 
 	use gnome && ( \
 		exeinto /usr/bin
-		newexe ${S}/source/BitchX BitchX-1.0c18
-		dosym gtkBitchX-1.0c18 /usr/bin/gtkBitchX
+		newexe ${S}/source/BitchX BitchX-1.0c19
+		dosym gtkBitchX-1.0c19 /usr/bin/gtkBitchX
 	)
 
-	dosym BitchX-1.0c18 /usr/bin/BitchX
+	dosym BitchX-1.0c19 /usr/bin/BitchX
 
 	chmod -x ${D}/usr/lib/bx/plugins/BitchX.hints
 
