@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/gkrellm-vaiobright
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-vaiobright/ChangeLog,v 1.1 2003/03/16 19:20:27 liquidx Exp $
+
+*gkrellm-vaiobright-2.5 (16 Mar 2003)
+
+  16 Mar 2003; Alastair Tse <liquidx@gentoo.org>
+  gkrellm-vaiobright-2.5.ebuild:
+  initial commit.
+
