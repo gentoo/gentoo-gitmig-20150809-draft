@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.6.ebuild,v 1.1 2003/06/03 15:15:48 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.6.1.ebuild,v 1.1 2003/07/29 05:04:45 brad Exp $
 
 inherit nsplugins eutils
 
@@ -32,16 +32,16 @@ src_install() {
 
 	dodir /opt
 
-	mv ${S} ${D}/opt/${MY_PN}
+	mv ${S} ${D}/opt/MozillaFirebird
 
 	# Plugin path setup (rescuing the existent plugins)
-	src_mv_plugins /opt/${MY_PN}/plugins
+	src_mv_plugins /opt/MozillaFirebird/plugins
 
 	# Fixing permissions
-	chown -R root.root ${D}/opt/${MY_PN}
+	chown -R root.root ${D}/opt/MozillaFirebird
 
 	# Truetype fonts
-	cd ${D}/opt/${MY_PN}/defaults/pref
+	cd ${D}/opt/MozillaFirebird/defaults/pref
 	einfo "Enabling truetype fonts. Filesdir is ${FILESDIR}"
 	epatch ${FILESDIR}/firebird-0.6-antialiasing-patch
 
@@ -51,11 +51,10 @@ src_install() {
 
 pkg_preinst() {
 	# Remove the old plugins dir
-	pkg_mv_plugins /opt/${MY_PN}/plugins
+	pkg_mv_plugins /opt/MozillaFirebird/plugins
 }
 
 pkg_postinst() {
-	einfo "This binary of Mozilla Firebird was compiled with GCC 2.96."
-	einfo "It will not work with the GCC 3.x compiled version of any JDK;"
-	einfo "to use java with this binary, please use blackdown-jdk 1.3.1."
+	einfo "Previous versions were built with GCC 2.96, but are now built"
+	einfo "with GCC 3. Java and other plugins will now work."
 }
