@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.10 2002/04/08 00:00:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.11 2002/04/08 14:50:50 azarah Exp $
 
   8 Apr 2002; M.Schlemmer <azarah@gentoo.org>
+
+  Removed /bin/login in favour of the one in util-linux, as the one
+  included here have a root exploit if pam_limits is in use.
 
   Libtoolized to fix .la files.  Build is pretty broken if libtoolized, so had
   to put a unortodox LIBS= and LDFLAGS= there.
