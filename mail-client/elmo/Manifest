@@ -15,10 +15,11 @@ MD5 eac6978f5d09308fe2a5363f92aeb520 files/digest-elmo-0.5 118
 MD5 87f647529d55e01dcfc9554b3932c1fc files/digest-elmo-0.6 60
 MD5 0d662e42a7373a07a363f75e07e1b428 files/digest-elmo-1.3.1-r1 62
 MD5 ae516ca333aa45e8df3b9964414f04ff files/digest-elmo-1.3.2-r1 62
+MD5 030a20e67a5eb594c5aa4216043285d0 files/configure.in.patch 1991
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBeLSL/UDVUK2NELYRAsUbAKDPPqOY3xzlTmWozifUvgXfAGkr1ACgvEYJ
-v95+TMF0HGLRI0MQiA30AGg=
-=3Zup
+iD8DBQFBeLUA/UDVUK2NELYRAlS5AJ0eryjE/PZ/LjWUDCJIL/kCP6eTvwCgjrqZ
+ZhGG1tle1B52Yv7IOcjmKYw=
+=9hoq
 -----END PGP SIGNATURE-----
