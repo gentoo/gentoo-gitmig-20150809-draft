@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Matthew Kennedy <mbkennedy@ieee.com>
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.7.6.ebuild,v 1.1 2002/05/01 06:03:48 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.7.6.ebuild,v 1.2 2002/05/23 06:50:17 seemant Exp $
 
 LICENSE="GPL-2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www4.infi.net/~cpinkham/gyach/code/${P}.tar.gz"
 HOMEPAGE="http://www4.infi.net/~cpinkham/gyach/"
 
 DEPEND="virtual/glibc
-	>=x11-libs/gtk+-1.2.0"
+	=x11-libs/gtk+-1.2*"
 
 RDEPEND="${DEPEND}"
 

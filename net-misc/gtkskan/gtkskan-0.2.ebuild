@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkskan/gtkskan-0.2.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkskan/gtkskan-0.2.ebuild,v 1.3 2002/05/23 06:50:17 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-based ESSID scanner"
@@ -11,7 +11,7 @@ HOMEPAGE="http://wavelan-tools.sf.net"
 
 DEPEND="virtual/glibc
 	=sys-libs/db-1.85*
-	>=x11-libs/gtk+-1.2.10
+	=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4 >=gnome-base/gnome-core-1.4 )"
 #RDEPEND=""
 

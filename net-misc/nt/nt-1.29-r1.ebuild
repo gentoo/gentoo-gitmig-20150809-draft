@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-1.29-r1.ebuild,v 1.2 2001/10/28 14:46:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-1.29-r1.ebuild,v 1.3 2002/05/23 06:50:18 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK based download manager for X (Sorta like GetRight(tm) for doze, works well with galeon."
@@ -10,11 +10,11 @@ HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
 
 DEPEND="virtual/glibc
 	virtual/x11
-	>=x11-libs/gtk+-1.2.10-r4"
+	=x11-libs/gtk+-1.2*"
 
 RDEPEND="virtual/glibc
 	virtual/x11
-	>=x11-libs/gtk+-1.2.10-r4"
+	=x11-libs/gtk+-1.2*"
 
 
 src_compile() {

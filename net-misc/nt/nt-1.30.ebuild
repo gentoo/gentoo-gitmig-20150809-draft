@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-1.30.ebuild,v 1.2 2002/01/05 00:09:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nt/nt-1.30.ebuild,v 1.3 2002/05/23 06:50:18 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK based download manager for X."
@@ -10,11 +10,11 @@ HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
 
 DEPEND="virtual/glibc
 	virtual/x11
-	>=x11-libs/gtk+-1.2.10-r4"
+	=x11-libs/gtk+-1.2*"
 
 RDEPEND="virtual/glibc
 	virtual/x11
-	>=x11-libs/gtk+-1.2.10-r4"
+	=x11-libs/gtk+-1.2*"
 
 
 src_compile() {

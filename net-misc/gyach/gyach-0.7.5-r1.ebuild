@@ -8,7 +8,7 @@ DESCRIPTION="GTK+-based Yahoo! chat client"
 SRC_URI="http://www4.infi.net/~cpinkham/gyach/code/${P}.tar.gz"
 HOMEPAGE="http://www4.infi.net/~cpinkham/gyach/"
 
-DEPEND=">=x11-libs/gtk+-1.2.0"
+DEPEND="=x11-libs/gtk+-1.2*"
 
 src_compile() {
 	./configure --host=${CHOST} --prefix=/usr || die
