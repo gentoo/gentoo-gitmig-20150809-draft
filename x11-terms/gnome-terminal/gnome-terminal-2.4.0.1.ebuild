@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.3.2.ebuild,v 1.1 2003/09/07 22:23:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.4.0.1.ebuild,v 1.1 2003/09/10 23:09:42 foser Exp $
 
 inherit gnome2 eutils
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 # gnome-core overwrite /usr/bin/gnome-terminal
 
 src_unpack() {
+
 	unpack ${A}
 
 	cd ${S}
@@ -33,22 +34,7 @@ src_unpack() {
 	# terminal enhancement, inserts a space after a DND URL
 	# patch by Zach Bagnall <yem@y3m.net> in #13801
 	epatch ${FILESDIR}/${PN}-2-dnd_url_add_space.patch
+
 }
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
-
-# FIXME hackish, couldnt get it to work any other way
-#
-#src_compile() {
-#
-#	econf || die
-#
-#	cd ${S}/src
-#
-#	mv Makefile Makefile.old
-#	sed -e "s:LDFLAGS = :LDFLAGS = /${DEVDIR}/usr/lib/libvte.so :" Makefile.old > Makefile
-#
-#	cd ${S}
-#	emake || die
-#
-#}
