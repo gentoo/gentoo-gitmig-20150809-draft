@@ -8,7 +8,7 @@
 
 set $*
 source /etc/conf.d/speedfreq
-[ "${SPEEDFREQ_SPEED}" == "auto" ] && exit 0
+[ "${SPEEDFREQ_SPEED}" != "auto" ] && exit 0
 
 case "$2" in
 	BAT1)
