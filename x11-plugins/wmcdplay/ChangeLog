@@ -1,0 +1,8 @@
+# ChangeLog for x11-plugins/wmcdplay
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/ChangeLog,v 1.1 2004/07/17 22:07:32 s4t4n Exp $
+
+*wmcdplay-1.0_beta1 (17 Jul 2004)
+
+  17 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmcdplay-1.0_beta1.ebuild:
+  Initial import. Thanks to Przemyslaw Maciag. Closes #54550.
