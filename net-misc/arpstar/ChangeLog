@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/arpstar
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/ChangeLog,v 1.1 2005/03/04 13:32:32 genstef Exp $
+
+*arpstar-0.5.0 (04 Mar 2005)
+
+  04 Mar 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +arpstar-0.5.0.ebuild:
+  New ebuild thanks to John Shaw <jtshaw@jtshaw.com> and RockCrusha
+  <stonebraker@hotmail.com> in bug 82757, works only for kernels 2.6.9 and
+  2.6.10
+
