@@ -11,9 +11,9 @@ fi
 
 if [ -e /usr/bin/consolechars ]
 then
-	/usr/bin/consolechars -f ${CONSOLEFONT}
+	/usr/bin/consolechars --font=${CONSOLEFONT}
 fi
-einfo "Booting Gentoo Linux 1.0 (Release Candidate 3)"
+einfo "Booting Gentoo Linux 1.0 (Release Candidate 4)"
 einfo "(All boot info logged to /var/log/boot)"
 echo
 sleep 1

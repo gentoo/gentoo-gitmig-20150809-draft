@@ -142,6 +142,7 @@ mkbootimg() {
 
 	cp /sbin/rpc.statd .
         ln -s insmod modprobe
+	ln -s insmod rmmod
         ln -s mkraid raid0run
         ln -s raidstart raidhotadd
         ln -s raidstart raidhotremove
