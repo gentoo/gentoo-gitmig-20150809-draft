@@ -1,5 +1,5 @@
 MD5 6bb319db9fdf7098486ca2d5ab78494e ChangeLog 6309
-MD5 8f1c1fcc94fdfa27482ff8544519c11a debianutils-1.16.7-r4.ebuild 1485
+MD5 8593ae675e51191ef50061bcb8fba51a debianutils-1.16.7-r4.ebuild 1457
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a497960da56a8ef8cb07158e15407c18 files/debianutils-1.16.7-gcc33.patch 2588
 MD5 61f8a46fc4a88304676eb068580fe842 files/debianutils-1.16.7-gentoo.patch 3274
