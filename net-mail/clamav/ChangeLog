@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.1 2003/02/03 08:21:07 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.2 2003/04/19 06:15:11 prez Exp $
+
+*clamav-0.54-r1 (19 Apr 2003)
+
+  19 Apr 2003; Preston A. Elder <prez@gentoo.org> clamav-0.54-r1.ebuild,
+  files/digest-clamav-0.54 files/clamd.rc files/clamd.conf:
 
 *clamav-0.54 (03 Feb 2003)
 
@@ -8,3 +13,4 @@
   files/digest-clamav-0.54 :
   Ebuild suggested by Pavel Tcholakov on bug #14580.  I have a funny
   feeling we are going to need an app-virus category soon.
+

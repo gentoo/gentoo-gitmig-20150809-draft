@@ -1,0 +1,44 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+depend() {
+	need net
+}
+
+start() {
+	if [ "${START_CLAMD}" = "yes" ]; then
+		if [ -n "${CLAMD_LOG}" -a ! -f "${CLAMD_LOG}" ]; then
+			touch "${CLAMD_LOG}"
+			chown clamav.clamav "${CLAMD_LOG}"
+		fi
+		ebegin "Starting clamd"
+		start-stop-daemon --start --quiet \
+			--exec /usr/sbin/clamd -- ${CLAMD_OPTS}
+		eend $? "Failed to start clamd"
+	fi
+	if [ "${START_FRESHCLAM}" = "yes" ]; then
+		if [ -n "${FRESHCLAM_LOG}" -a ! -f "${FRESHCLAM_LOG}" ]; then
+			touch "${FRESHCLAM_LOG}"
+			chown clamav.clamav "${FRESHCLAM_LOG}"
+			FRESHCLAM_OPTS="${FRESHCLAM_OPTS} -l ${FRESHCLAM_LOG}"
+		fi
+		ebegin "Starting freshclam"
+		start-stop-daemon --start --quiet \
+		 --exec /usr/bin/freshclam -- ${FRESHCLAM_OPTS} -l ${FRESHCLAM_LOG}
+		eend $? "Failed to start freshclam"
+	fi
+}
+
+stop() {
+	if [ "${START_CLAMD}" = "yes" ]; then
+		ebegin "Stopping clamd"
+		start-stop-daemon --stop --quiet --pidfile /var/run/clamd.pid
+		eend $? "Failed to stop clamd"
+	fi
+	if [ "${START_FRESHCLAM}" = "yes" ]; then
+		ebegin "Stopping freshclam"
+		start-stop-daemon --stop --quiet --name freshclam
+		eend $? "Failed to stop freshclam"
+	fi
+}
