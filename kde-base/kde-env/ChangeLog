@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.24 2004/10/17 09:43:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.25 2004/12/11 23:17:11 kloeri Exp $
+
+  12 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> kde-env-3-r3.ebuild:
+  Stable on alpha.
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> kde-env-3-r3.ebuild:
   stable on amd64.
