@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r2.ebuild,v 1.2 2001/05/17 13:25:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r3.ebuild,v 1.1 2001/05/17 13:25:34 achim Exp $
 
 P=squid-2.3.STABLE4
 
