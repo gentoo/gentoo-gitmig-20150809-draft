@@ -170,3 +170,4 @@ move app-sci/vbs sci-electronics/vbs
 move app-sci/vstgl sci-electronics/vstgl
 move app-sci/xcircuit sci-electronics/xcircuit
 move app-sci/chessbrain sci-misc/chessbrain
+move app-sci/gt-itm sci-misc/gt-itm
