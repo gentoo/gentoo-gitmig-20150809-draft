@@ -1,12 +1,18 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.2 2002/11/15 20:26:20 chouser Exp $
 
-*jpeg-6b-r2 (1 Feb 2002)
+*jpeg-6b-r3 (15 Nov 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
+  15 Nov 2002; Chris Houser <chouser@gentoo.org> files/digest-jpeg-6b-r3,
+  jpeg-6b-r3.ebuild, ChangeLog: Minor bug fix to build process.  The bug was
+  observed on an alpha-ev6 system.  NOTE: There is no benefit to upgrading if
+  jpeg-6b-r2 built successfully for you.
+
+*jpeg-6b-r2 (01 Feb 2002)
+
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog: Added initial ChangeLog
+  which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
