@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.5 2002/02/17 01:24:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.6 2002/02/17 01:39:07 woodchip Exp $
+
+*cups-1.1.14 (16 Feb 2002)
+
+  16 Feb 2002; Donny Davies <woodchip@gentoo.org>: Update to latest release.
+  See http://www.cups.org/news.php?V66 for the changes.  Security fixes in
+  this one, upgrade reccomended.
 
   17 Feb 2002; Martin Schlemmer <azarah@gentoo.org>: added samba to the 'use'
   dependancy type of cups.  Modified files/cupsd.rc6
