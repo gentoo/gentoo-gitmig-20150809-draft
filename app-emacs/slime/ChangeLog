@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.1 2004/05/11 05:23:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.2 2004/05/12 15:12:14 dholm Exp $
+
+  12 May 2004; David Holm <dholm@gentoo.org> slime-0.13.ebuild:
+  Added to ~ppc.
 
 *slime-0.13 (11 May 2004)
 
