@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.130 2004/12/07 17:10:33 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.131 2004/12/07 17:35:12 slarti Exp $
+
+  07 Dec 2004; Tom Martin <slarti@gentoo.org> fluxbox-0.9.11.ebuild:
+  Added disablexmb local USE flag at the request of Ciaran
+  <ciaranm@gentoo.org>. This flag acts as a workaround for bug 65186. Thanks
+  to ak|ra in #fluxbox for the way out.
 
   07 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> fluxbox-0.9.11.ebuild:
   Install ChangeLog/NEWS.
@@ -13,7 +18,7 @@
   02 Nov 2004; Markus Rothe <corsair@gentoo.org> fluxbox-0.9.10-r4.ebuild:
   Stable on ppc64
 
-  31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  31 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   fluxbox-0.9.10-r3.ebuild:
   Stable on alpha.
 
@@ -107,7 +112,7 @@
   01 Jul 2004; Tom Gall <tgall@gentoo.org> fluxbox-0.9.9.ebuild:
   add ~ppc64, bug #55012
 
-  20 Jun 2004; Bryan �stergaard <kloeri@gentoo.org> fluxbox-0.9.9.ebuild:
+  20 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> fluxbox-0.9.9.ebuild:
   Stable on alpha.
 
   24 May 2004; Guy Martin <gmsoft@gentoo.org> fluxbox-0.9.9.ebuild:

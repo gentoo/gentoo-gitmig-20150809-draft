@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.2 2004/12/07 17:10:33 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.3 2004/12/07 17:35:12 slarti Exp $
 
 inherit eutils
 
-IUSE="nls xinerama truetype kde gnome bigger-fonts"
+IUSE="nls xinerama truetype kde gnome bigger-fonts disablexmb"
 
 DESCRIPTION="Fluxbox is an X11 window manager featuring tabs and an iconbar"
 SRC_URI="mirror://sourceforge/fluxbox/${P}.tar.bz2"
@@ -79,11 +79,12 @@ src_compile() {
 	export PKG_CONFIG_PATH=/usr/X11R6/lib/pkgconfig:/usr/lib/pkgconfig
 
 	econf \
-		`use_enable nls` \
-		`use_enable xinerama` \
-		`use_enable truetype xft` \
-		`use_enable kde` \
-		`use_enable gnome` \
+		$(use_enable nls) \
+		$(use_enable xinerama) \
+		$(use_enable truetype xft) \
+		$(use_enable kde) \
+		$(use_enable gnome) \
+		$(use_enable disablexmb) \
 		--sysconfdir=/etc/X11/${PN} \
 		${myconf} || die "configure failed"
 
