@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 123fb1181faac35e79fba67179dd6dfe knowit-0.10.ebuild 490
-MD5 752f6d14787873a3f2d6f5d268f0371a ChangeLog 1334
-MD5 5112759166babe063301d06e810f544a knowit-0.10_beta3.ebuild 530
+MD5 ff90ebaffc5195d1681960765f12b384 ChangeLog 1438
+MD5 1f6857027b1b30f3cf1319485dd2c638 knowit-0.10_beta3.ebuild 538
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 513729e4c96abce46aad24b610468693 knowit-0.9.ebuild 487
 MD5 96059d7a50f0bddaa3909c6a1025958c files/digest-knowit-0.10_beta3 69
 MD5 0575eb071c9e46ad8200df56c65c59f5 files/digest-knowit-0.10 64
 MD5 6676636e9ae515b3d8132108741e1c43 files/digest-knowit-0.9 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnnuhZ/iYVBmujdURArftAJ0eBMeQLMzlDa9chrCZ6aLpYEHr0gCg1dFm
+IqAPt6LttuGfGH8QQQkbO0I=
+=nKvC
+-----END PGP SIGNATURE-----
