@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.4 2003/06/17 19:33:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.5 2003/06/18 02:30:28 latexer Exp $
+
+  17 Jun 2003; Peter Johanson <latexer@gentoo.org> dhcpv6-0.7.ebuild,
+  dhcpv6-0.8.ebuild, files/dhcp6s.rc:
+  Added dhcp6s init script
 
   17 Jun 2003; Peter Johanson <latexer@gentoo.org> dhcpv6-0.8.ebuild,
   files/negative-iaid-patch-0.8:
