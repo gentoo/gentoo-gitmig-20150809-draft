@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/bash
+# ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.1 2003/03/03 05:07:03 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.2 2003/04/22 10:26:03 vapier Exp $
 
 *hwsetup-1.0 (02 March 2003)
 
