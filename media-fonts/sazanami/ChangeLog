@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sazanami
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/ChangeLog,v 1.10 2004/10/18 04:01:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sazanami/ChangeLog,v 1.11 2004/12/20 13:40:44 nigoro Exp $
+
+  20 Dec 2004; Yuta SATOH <nigoro@gentoo.org> sazanami-20040629.ebuild:
+  Stable on ppc64
 
   18 Oct 2004; MATSUU Takuto <matsuu@gentoo.org> sazanami-20040629.ebuild:
   Stable on sparc and amd64.
