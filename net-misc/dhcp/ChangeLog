@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.43 2004/09/07 14:28:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.44 2004/10/02 16:51:15 kloeri Exp $
+
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> dhcp-3.0.1.ebuild:
+  Keyword ~alpha, bug 65840.
 
   07 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> dhcp-3.0.1.ebuild:
   Stable on sparc
