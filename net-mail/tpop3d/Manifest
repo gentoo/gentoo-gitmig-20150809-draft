@@ -3,16 +3,17 @@ Hash: SHA1
 
 MD5 fdee8ea25743becb983807795ea997d3 metadata.xml 222
 MD5 26f7920178cfc03fb9e25afb1aa7594e tpop3d-1.4.2.ebuild 2513
-MD5 0fcbf2308939e1913a743bdd7aebc534 tpop3d-1.5.3.ebuild 2535
-MD5 447975ac8153f78fa018837346a7c18c ChangeLog 2277
+MD5 4fc64b2126a69f448d76b2894909f3d3 tpop3d-1.5.3.ebuild 2696
+MD5 b5dedd34de31e20b232caf5241547f80 ChangeLog 2554
 MD5 70073dfbe2bd93a7922b97c4f4cd3af2 files/digest-tpop3d-1.4.2 145
 MD5 4a64dc0452c80fd14ebdfe21d889d235 files/digest-tpop3d-1.5.3 64
 MD5 723ad41d7f5485e972db927a7e43ee6c files/tpop3d-init 688
 MD5 b4b77ee1eecb8a83a5edeaea1be8fc89 files/tpop3d-1.5.3-invalid-user-message.patch 1098
+MD5 248f2db7e7a34de9f006bafae84c36de files/tpop3d-1.5.3-variable-name-clash.patch 2215
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBLequMGnpIbeahxwRAu4HAJ4uWG/Mf0YMZmjgfwuZ4s8jKRjDfwCgq0HV
-ZP7mFekKwpiIoGHiePIHFag=
-=oioS
+iD8DBQFBeAU1MGnpIbeahxwRAsEhAJ4iVKezaw20gl3ZrD1oF3qP2CQz4wCeLJWb
+Tt6I0xPRPeAV/s90mR91kPY=
+=45S6
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.8 2004/08/26 13:50:28 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.9 2004/10/21 18:51:22 griffon26 Exp $
 
 inherit eutils
 
@@ -11,25 +11,28 @@ SRC_URI="http://www.ex-parrot.com/~chris/tpop3d/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="ssl ldap mysql perl pam tcpd maildir debug"
+IUSE="ssl ldap mysql perl pam tcpd maildir debug postgres"
 
 DEPEND="virtual/libc
-	ssl?	( >=dev-libs/openssl-0.9.6 )
-	ldap? 	( >=net-nds/openldap-2.0.7 )
-	mysql? 	( >=dev-db/mysql-3.23.28 )
-	perl?	( >=dev-lang/perl-5.6.1 )
-	pam?	( >=sys-libs/pam-0.75 )
-	tcpd?	( >=sys-apps/tcp-wrappers-7.6 )"
+	ssl?		( >=dev-libs/openssl-0.9.6 )
+	ldap? 		( >=net-nds/openldap-2.0.7 )
+	mysql? 		( >=dev-db/mysql-3.23.28 )
+	postgres?	( >=dev-db/postgresql-7.3 )
+	perl?		( >=dev-lang/perl-5.6.1 )
+	pam?		( >=sys-libs/pam-0.75 )
+	tcpd?		( >=sys-apps/tcp-wrappers-7.6 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/${P}-invalid-user-message.patch
+	epatch ${FILESDIR}/${P}-variable-name-clash.patch
 }
 
 src_compile() {
 	local myconf
 	use mysql		&& myconf="--enable-auth-mysql"
+	use postgres	&& myconf="${myconf} --enable-auth-pgsql"
 	use ldap		&& myconf="${myconf} --enable-auth-ldap"
 	use perl		&& myconf="${myconf} --enable-auth-perl"
 	use tcpd		&& myconf="${myconf} --enable-tcp-wrappers"
