@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.1 2003/08/07 15:33:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.2 2003/09/11 00:56:11 msterret Exp $
 
 inherit elisp eutils
 
@@ -8,7 +8,7 @@ IUSE="canna"
 
 DESCRIPTION="Emacs Backend for Sj3 Ver.2, FreeWnn, Wnn6 and Canna"
 SRC_URI="ftp://ftp.m17n.org/pub/tamago/${P}.tar.gz
-         http://cgi18.plala.or.jp/nyy/canna/canna-20011204.diff.gz"
+	http://cgi18.plala.or.jp/nyy/canna/canna-20011204.diff.gz"
 HOMEPAGE="http://www.m17n.org/tamago/"
 
 SLOT="0"
@@ -55,7 +55,7 @@ src_install() {
 		EOF
 	fi
 
- 	elisp-site-file-install ${SITEFILE} || die
+	elisp-site-file-install ${SITEFILE} || die
 
 	dodoc README.ja.txt COPYING AUTHORS PROBLEMS TODO ChangeLog
 }

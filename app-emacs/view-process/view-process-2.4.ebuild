@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/view-process/view-process-2.4.ebuild,v 1.3 2003/09/06 22:01:26 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/view-process/view-process-2.4.ebuild,v 1.4 2003/09/11 00:56:11 msterret Exp $
 
 inherit elisp
 
@@ -20,8 +20,8 @@ S="${WORKDIR}/view-process-mode"
 SITEFILE=50hm--view-process-gentoo.el
 
 src_install() {
- 	elisp-install ${PN} *.el
- 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp-install ${PN} *.el
+	elisp-site-file-install ${FILESDIR}/${SITEFILE}
 
 	dodoc ANNOUNCEMENT INSTALL LSM README
 }

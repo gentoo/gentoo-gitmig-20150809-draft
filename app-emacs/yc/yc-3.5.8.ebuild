@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-3.5.8.ebuild,v 1.2 2003/06/16 18:35:07 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-3.5.8.ebuild,v 1.3 2003/09/11 00:56:12 msterret Exp $
 
 inherit elisp
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/emacs
-        >=app-i18n/canna-3.6"
+	>=app-i18n/canna-3.6"
 
 S="${WORKDIR}/${P}"
 SITEFILE="50yc-gentoo.el"

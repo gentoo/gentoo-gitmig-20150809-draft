@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenirc/zenirc-2.112.ebuild,v 1.2 2003/02/13 07:11:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenirc/zenirc-2.112.ebuild,v 1.3 2003/09/11 00:56:12 msterret Exp $
 
 inherit elisp
 
@@ -30,8 +30,8 @@ src_install() {
 		elispdir=${D}/${SITELISP}/${PN} \
 		etcdir=${D}/usr/share/${PN}  install || die
 
-  	elisp-install ${PN} src/*.el || die
-  	elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
+	elisp-install ${PN} src/*.el || die
+	elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
 
 	doinfo doc/zenirc.info
 	dodoc BUGS COPYING INSTALL NEWS README TODO
