@@ -95,5 +95,6 @@ move sys-apps/squashfs-tools sys-fs/squashfs-tools
 move app-admin/fwanalog net-firewall/fwanalog
 move app-misc/lphdisk app-laptop/lphdisk
 move app-misc/proxyper net-misc/proxyper
-
 move app-misc/mutt-vc-query mail-client/mutt-vc-query
+move sys-apps/mac-fdisk sys-fs/mac-fdisk
+move sys-apps/amiga-fdisk sys-fs/amiga-fdisk
