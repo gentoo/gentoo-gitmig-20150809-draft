@@ -25,10 +25,6 @@
 # Long waiting submitted ebuild added but masked due to freeze
 dev-util/ctmkit
 
-# <styx@gentoo.org> (8 Sep 2002)
-# Masking for b0rkage... again :-/
->dev-util/glimmer-1.2.1-r3
-
 # <karltk@gentoo.org> (08 Sep 2002)
 # This fixes a few problems, but should not be unmasked 
 # before it's properly tested, probably not before 1.4
@@ -371,10 +367,6 @@ net-www/apache2
 # <blizzy@gentoo.org> (13 Aug 2002)
 # new package, masked for testing
 net-mail/pinepgp
-
-# <styx@gentoo.org> (13 Aug 2002)
-# masked for b0rkage, removing them soon
-<dev-util/glimmer-1.2.1-r3
 
 # <blizzy@gentoo.org> (13 Aug 2002)
 # masked for testing, might pose security problems!
