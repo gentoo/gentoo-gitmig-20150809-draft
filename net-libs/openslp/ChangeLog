@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.9 2003/03/19 18:07:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.10 2003/03/26 22:02:54 liquidx Exp $
+
+*openslp-1.0.11 (26 Mar 2003)
+
+  26 Mar 2003; Alastair Tse <liquidx@gentoo.org> openslp-1.0.11.ebuild:
+  version bumpage
 
   19 Mar 2003; Guy Martin <gmsoft@gentoo.org> openslp-1.0.9a.ebuild :
   Added hppa to keywords.
