@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.215 2004/08/11 20:06:55 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.216 2004/08/12 11:44:29 sejo Exp $
+
+  12 Aug 2004; <SeJo@gentoo.org> gaim-0.81-r1.ebuild:
+  added ppc
 
   11 Aug 2004; Travis Tilley <lv@gentoo.org> gaim-0.81-r1.ebuild:
   stable on amd64 for security fix (bug 60034)
