@@ -1,8 +1,12 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.87 2003/06/30 10:05:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.88 2003/07/01 18:02:47 robbat2 Exp $
 
 *mod_php-4.3.2-r3 (30 Jun 2003)
+
+  1 July 2003; 30 June 2003; Robin H. Johnson <robbat2@gentoo.org>
+  files/70_mod_php.conf: 
+  Fix typo in Apache2 conf file.
 
   30 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r3.ebuild,
   files/digest-mod_php-4.3.2-r3:
