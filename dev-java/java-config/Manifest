@@ -2,10 +2,12 @@ MD5 5b29bd485d8533329abe653db05a1220 java-config-1.1.5.ebuild 665
 MD5 76a8f841a160a467eb7f4cd342907bad java-config-0.2.8-r2.ebuild 637
 MD5 75386a8c4a28663202a4bef06df85c8b java-config-0.2.7.ebuild 609
 MD5 fee752fa717706cdba83f891d5300243 ChangeLog 6658
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 2cac85ffef89c283f8db1b4048693253 metadata.xml 659
+MD5 5b29bd485d8533329abe653db05a1220 java-config-1.1.6.ebuild 665
 MD5 8ec5f854ccc670f86e446febd4a99541 java-config-0.2.8-r1.ebuild 629
 MD5 1d29f10fe97368050d96259c565f70ef files/digest-java-config-0.2.7 489
 MD5 aba83541547f68873ac391359b455646 files/digest-java-config-1.1.5 68
+MD5 917e33e844a6d8e35cda64cdea73cbf2 files/digest-java-config-1.1.6 69
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-java-config-0.2.8-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-java-config-0.2.8-r2 0
 MD5 ef44d82252644dde2d143335820e30d9 files/0.2.7/java-config 8416
