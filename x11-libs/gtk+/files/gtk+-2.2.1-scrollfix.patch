@@ -1,0 +1,12 @@
+--- gtk+-2.2.1/gtk/gtktreeview.c.scrollfix	2003-02-20 20:23:15.000000000 -0500
++++ gtk+-2.2.1/gtk/gtktreeview.c	2003-02-20 20:24:52.000000000 -0500
+@@ -4166,8 +4166,7 @@
+       need_redraw = TRUE;
+     }
+ 
+-  if (tree_view->priv->scroll_to_path &&
+-      ! GTK_RBNODE_FLAG_SET (tree_view->priv->tree->root, GTK_RBNODE_DESCENDANTS_INVALID))
++  if (tree_view->priv->scroll_to_path)
+     {
+       gtk_tree_row_reference_free (tree_view->priv->scroll_to_path);
+       tree_view->priv->scroll_to_path = NULL;
