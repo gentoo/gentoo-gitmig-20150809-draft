@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-albums/karamba-albums-1.5a.ebuild,v 1.1 2003/05/04 05:16:27 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-albums/karamba-albums-1.5a.ebuild,v 1.2 2003/05/04 06:01:50 prez Exp $
 
-DESCRIPTION="BOFH bar plugin for Karamba"
+DESCRIPTION="Image albums plugin for Karamba"
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=5692"
 SRC_URI="http://www.kdelook.org/content/files/5692-albums_${PV}.tgz"
 LICENSE="GPL-2"
