@@ -1,6 +1,10 @@
 # ChangeLog for net-www/middleman
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.1 2003/07/25 21:24:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.2 2003/07/26 05:28:17 solar Exp $
+
+  26 Jul 2003; <solar@gentoo.org> middleman-1.8.1.ebuild:
+  Added missing support for pam and zlib, next version will have better
+  sysloging features
 
 *middleman-1.8.1 (25 Jul 2003)
 
