@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.8.5.ebuild,v 1.1 2003/08/18 10:29:31 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.8.7.ebuild,v 1.1 2003/09/21 02:17:12 jje Exp $
 
 IUSE="oggvorbis mad"
 
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	dobin mpd
-
+	doman mpd.1
 	dodoc mpdconf.example COMMANDS ChangeLog INSTALL README TODO UPGRADING
 }
 

@@ -1,5 +1,3 @@
-MD5 c9b7a7aad5697336d94ca1c0fec6e0db ChangeLog 869
-MD5 c9679b948dd6a1e7609862f36b057090 mpd-0.8.7.ebuild 1111
-MD5 2f7cb1cdc4d331c61047f1d7db53105c mpd-0.8.5.ebuild 1099
+MD5 36b0b4e5989fd29d656f738151c774ce ChangeLog 1015
+MD5 fec2bd71cbde59bd5f0232513e74bf6d mpd-0.8.7.ebuild 1106
 MD5 88a28930c8cdfa9864f50dc50505cb84 files/digest-mpd-0.8.7 61
-MD5 539bb2bf8ca735aad7c70580ef1bf3f0 files/digest-mpd-0.8.5 61
