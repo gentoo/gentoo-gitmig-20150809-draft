@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r17.ebuild,v 1.1 2004/11/20 15:11:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r18.ebuild,v 1.1 2004/11/27 18:57:28 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -98,6 +98,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR patch!"
 	epatch ${FILESDIR}/${PN}.binfmt_elf.patch || die "Failed to apply the binfmt_elf patch!"
 	epatch ${FILESDIR}/${PN}.smbfs.patch || die "Failed to apply the SMBFS patch!"
+	epatch ${FILESDIR}/${PN}.AF_UNIX.patch || die "Failed to apply the AF_UNIX patch!"
+	epatch ${FILESDIR}/${PN}.binfmt_a.out.patch || die "Failed to apply the binfmt_a.out patch!"
 
 	kernel_universal_unpack
 }

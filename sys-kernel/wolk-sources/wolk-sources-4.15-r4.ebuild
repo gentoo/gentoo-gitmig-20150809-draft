@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.15-r3.ebuild,v 1.1 2004/11/20 15:11:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.15-r4.ebuild,v 1.1 2004/11/27 18:57:28 plasmaroo Exp $
 
 # Ramereth's contributed WOLK ebuild - thanks! (you didn't think you'd
 # go blameless, did you?)
@@ -11,7 +11,10 @@ UNIPATCH_LIST="
 	${FILESDIR}/binfmt_elf.patch
 	${FILESDIR}/${PN}.XDRWrapFix.patch
 	${FILESDIR}/${PN}.binfmt_elf.patch
-	${FILESDIR}/${PN}.smbfs.patch"
+	${FILESDIR}/${PN}.smbfs.patch
+	${FILESDIR}/${PN}.AF_UNIX.patch
+	${FILESDIR}/${PN}.binfmt_a.out.patch"
+
 UNIPATCH_STRICTORDER="yes"
 
 OKV="2.4.20"
