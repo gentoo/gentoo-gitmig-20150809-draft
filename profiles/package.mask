@@ -30,6 +30,8 @@
 
 #waiting for new portage dep format
 >=x11-libs/qt-x11-3
+>=x11-libs/qt-3
+>=app-docs/qt-docs-3
 
 #untested, author mentions an error
 media-libs/id3lib-docs
