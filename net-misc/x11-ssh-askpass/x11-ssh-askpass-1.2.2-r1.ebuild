@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.2-r1.ebuild,v 1.17 2004/06/25 00:20:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.2-r1.ebuild,v 1.18 2004/07/01 22:12:37 squinky86 Exp $
 
 inherit eutils
 
+IUSE=""
 DESCRIPTION="X11-based passphrase dialog for use with OpenSSH"
 HOMEPAGE="http://www.liquidmeme.net/software/x11-ssh-askpass/"
 SRC_URI="http://www.liquidmeme.net/software/${PN}/${P}.tar.gz"
@@ -12,7 +13,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc ~alpha ppc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11"
 RDEPEND="virtual/ssh
 	virtual/x11"

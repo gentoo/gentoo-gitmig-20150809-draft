@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.8 2004/06/25 00:17:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.9 2004/07/01 22:06:12 squinky86 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~mips ~alpha arm hppa amd64 ~ia64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 PROVIDE="virtual/dhcpc"
 
 pkg_setup() {

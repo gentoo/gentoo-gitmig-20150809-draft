@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsproxyd/tlsproxyd-0.0.2.ebuild,v 1.5 2004/06/25 00:15:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsproxyd/tlsproxyd-0.0.2.ebuild,v 1.6 2004/07/01 22:04:38 squinky86 Exp $
 
 S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="An TLS Tunneling Tool."
 SRC_URI="http://www.ex-parrot.com/~chris/tlsproxyd/${P}.tar.gz"
 HOMEPAGE="http://www.ex-parrot.com/~chris/tlsproxyd/"
@@ -10,7 +11,7 @@ KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6"
 
 src_compile() {
