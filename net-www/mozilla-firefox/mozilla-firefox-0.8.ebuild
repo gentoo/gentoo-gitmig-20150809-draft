@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.11 2004/06/02 00:28:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.12 2004/06/16 14:26:44 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -91,7 +91,7 @@ src_compile() {
 		--disable-toolkit-xlib \
 		--enable-extensions=default,-inspector,-irc,-venkman,-content-packs,-help"
 
-	if [ -n "`use gtk2`" ] ; then
+	if use gtk2 ; then
 		myconf="${myconf} --enable-toolkit-gtk2 \
 							--enable-default-toolkit=gtk2 \
 							--disable-toolkit-gtk"
@@ -101,9 +101,9 @@ src_compile() {
 							--disable-toolkit-gtk2"
 	fi
 
-	if [ -z "`use moznoxft`" ]
+	if ! use moznoxft
 	then
-		if [ -n "`use gtk2`" ]
+		if use gtk2
 		then
 			local pango_version=""
 
@@ -137,7 +137,7 @@ src_compile() {
 		myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
 	fi
 
-	if [ -n "`use ipv6`" ] ; then
+	if use ipv6 ; then
 		myconf="${myconf} --enable-ipv6"
 	fi
 
@@ -226,7 +226,7 @@ src_install() {
 	doins ${S}/build/package/rpm/SOURCES/mozicon50.xpm
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/firefox-icon.png
