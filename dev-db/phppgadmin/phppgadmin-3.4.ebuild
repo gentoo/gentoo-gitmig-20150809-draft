@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.4.ebuild,v 1.3 2004/06/24 22:00:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.4.ebuild,v 1.4 2004/06/27 03:44:14 nakano Exp $
 
 inherit eutils webapp
 
@@ -17,7 +17,7 @@ RESTRICT="nomirror"
 HOMEPAGE="http://phppgadmin.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~hppa"
 
 DEPEND=">=dev-db/postgresql-7.0.0
 	>=dev-php/mod_php-4.1"
