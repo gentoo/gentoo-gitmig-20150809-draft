@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.45 2004/06/04 17:53:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.46 2004/06/06 19:21:44 nerdboy Exp $
+
+  06 Jun 2004; Steve Arnold <nerdboy@gentoo.org> wolk-sources-4.14-r1.ebuild:
+  fixed bug 53093 (no change to KEYWORDS yet)
 
 *wolk-sources-4.11-r4 (04 Jun 2004)
 
