@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.49 2003/12/07 04:35:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.50 2003/12/08 11:55:12 seemant Exp $
+
+*coreutils-5.0-r6 (08 Dec 2003)
+
+  08 Dec 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r3.ebuild,
+  coreutils-5.0-r4.ebuild, coreutils-5.0-r5.ebuild, coreutils-5.0-r6.ebuild,
+  coreutils-5.0.91-r1.ebuild, coreutils-5.0.91-r2.ebuild,
+  coreutils-5.0.91.ebuild:
+  coreutils will now not compile the following: su, groups (both from shadow),
+  uptime, kill (both from procps), and hostname (from net-tools). This
+  closes bug #18181 by Jon Portnoy <avenj@gentoo.org>
 
   06 Dec 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r1.ebuild,
   coreutils-5.0-r2.ebuild, coreutils-5.0-r3.ebuild:
