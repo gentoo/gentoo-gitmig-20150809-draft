@@ -3,18 +3,14 @@ Hash: SHA1
 
 MD5 c5682a4f615fba37513c2bf221169adf ChangeLog 1031
 MD5 e6d5170f9013aa4dea3c6fa6b2f28303 libggz-0.0.5.ebuild 568
-MD5 698d03aaa3fee1fe5a780b9aeecda010 libggz-0.0.7.ebuild 811
-MD5 665c31fd905d36415b61c101784ff673 metadata.xml 428
-MD5 ef803c81ce5b37fb2258eb02a44e4f0a libggz-0.0.8.ebuild 860
 MD5 44ad7d8f3f9ff59f133c3f74e97b217e libggz-0.0.9.ebuild 863
+MD5 665c31fd905d36415b61c101784ff673 metadata.xml 428
 MD5 b1ddcfdc5b91e28c37244742f4682f7a files/digest-libggz-0.0.5 64
-MD5 2d43ae518fd60b091dca4e18ea6da1d3 files/digest-libggz-0.0.7 64
-MD5 c76dbaa49e941ce94ccd043f814350cb files/digest-libggz-0.0.8 64
 MD5 8dcac2e2a6caf2112b72d169cfbaaa92 files/digest-libggz-0.0.9 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBIYJFHTu7gpaalycRAhxOAKD81Ya4AcxjvNKQNoJ0cvgMEEg2fgCePrTO
-9xHvP8gFQRX6F3xRkSCVd9w=
-=4Xy2
+iD8DBQFBz0BNroRuSHgZdywRAmSMAJ94v6ojVhU5UcKjxv0lZJBYdryXEgCdFE8A
+w1K7IomwgamE0F1v11QXL1U=
+=+7J2
 -----END PGP SIGNATURE-----
