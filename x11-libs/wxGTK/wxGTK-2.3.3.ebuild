@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.3.ebuild,v 1.1 2002/10/26 19:20:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.3.ebuild,v 1.2 2002/10/29 06:29:44 vapier Exp $
 
-IUSE="nls odbc jpeg png opengl"
+IUSE="nls odbc jpeg png opengl motif gif tiff zlib gtk X"
 
 S=${WORKDIR}/${P}
 
@@ -16,13 +16,16 @@ KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="dev-libs/libunicode
 	media-libs/netpbm
-	media-libs/giflib
+	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
-	media-libs/tiff
+	tiff? ( media-libs/tiff )
+	zlib? ( sys-libs/zlib )
 	odbc? ( dev-db/unixODBC  )
 	opengl? ( virtual/opengl )
-	=x11-libs/gtk+-1.2*"
+	motif? ( x11-libs/openmotif )
+	gtk? ( =x11-libs/gtk+-1.2* )
+	X? ( virtual/x11 )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 pkg_setup() {
@@ -34,12 +37,6 @@ pkg_setup() {
 src_compile() {
 	local myconf
 
-	# Build static library too, shared library is enabled by default.
-	# Enable useful config options that don't have USE flags
-	# motif is not a supported build environment.  forcing gtk
-	myconf="${myconf} --enable-static --with-zlib --with-unicode \
-		--with-libtiff --with-gtk --enable-gif"
-	
 	#Note: pcx image support enabled by default if found.
 	#Also, all wxWindows gui features are enabled by default. If you
 	#want to build a smaller library you can disable features by adding
@@ -49,7 +46,27 @@ src_compile() {
 	#seem to be implemented in the source yet.
 	
 	#confiure options that have corresponding USE variable.
-	
+
+	use static \
+		&& myconf="${myconf} --enable-static" \
+		|| myconf="${myconf} --disable-static"
+
+	use nls \
+		&& myconf="${myconf} --with-unicode" \
+		|| myconf="${myconf} --without-unicode"
+
+	use gif \
+		&& myconf="${myconf} --enable-gif" \
+		|| myconf="${myconf} --disable-gif"
+
+	use tiff \
+		&& myconf="${myconf} --with-libtiff" \
+		|| myconf="${myconf} --without-libtiff"
+
+	use zlib \
+		&& myconf="${myconf} --with-zlib" \
+		|| myconf="${myconf} --without-zlib"
+
 	use odbc \
 		&& myconf="${myconf} --with-odbc" \
 		|| myconf="${myconf} --without-odbc"
@@ -59,19 +76,34 @@ src_compile() {
 		|| myconf="${myconf} --without-opengl"
 
 	use png \
-		&& myconf="${myconf} --with-libpng --enable-pnm" \
-		|| myconf="${myconf} --without-libpng --disable-pnm"
+		&& myconf="${myconf} --with-libpng --enable-png" \
+		|| myconf="${myconf} --without-libpng --disable-png"
 	
 	use jpeg \
 		&& myconf="${myconf} --with-libjpeg" \
 		|| myconf="${myconf} --without-libjpeg"
 
-	econf ${myconf} || die "configuration failed"
-	
+	use X && myconf="${myconf} --with-x"
+
+	# here we specify our own preference of which toolkit to build ...
+	# but only gtk seems to work atm ...
+#	if [ `use gtk` ] ; then
+		myconf="${myconf} --with-gtk"
+#	elif [ `use X` ] ; then
+#		myconf="${myconf} --with-x11"
+#	elif [ `use motif` ] ; then
+#		myconf="${myconf} --with-motif"
+#	else
+#		eerror "You must have either gtk, X, or motif in your USE variable"
+#		die "could not specify toolkit"
+#	fi
+#	use gtk2 && myconf="${myconf} --enable-gtk2"
+
+	econf ${myconf}
 	make || die "make failed"
 }
 
 src_install() {
-	einstall || die
+	einstall
 	dodoc *.txt
 }
