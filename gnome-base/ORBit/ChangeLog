@@ -1,7 +1,12 @@
 # ChangeLog for gnome-base/ORBit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ChangeLog,v 1.9 2002/05/27 18:43:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ChangeLog,v 1.10 2002/08/06 00:07:37 spider Exp $
 
+
+*ORBit-0.5.17 (05 Aug 2002)
+  05 Aug 2002; Spider <spider@gentoo.org> ORBit-0.5.17.ebuild: 
+  new version, change libtoolize --copy --force to elibtoolize
+  
 *ORBit-0.5.16 (27 May 2002)
 
   27 May 2002; MartinSchlemmer <azarah@gentoo.org> ORBit-0.5.16.ebuild :
