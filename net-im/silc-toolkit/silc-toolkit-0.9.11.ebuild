@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11.ebuild,v 1.1 2004/02/14 17:56:01 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.11.ebuild,v 1.2 2004/02/17 23:48:42 zul Exp $
 
 IUSE="client server debug ipv6"
 
@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+		!net-im/silc-client"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
@@ -25,6 +26,7 @@ src_compile() {
 	myconf="--prefix=${D}/usr \
 		--datadir=${D}/usr/share/silc \
 		--mandir=${D}/usr/man \
+		--includedir=${D}/usr/include/${PN} \
 		--sysconfdir=${D}/usr/share/silc/etc \
 		--with-etcdir=${D}/etc/silc \
 		--with-simdir=${D}/usr/share/silc/modules \
