@@ -1,10 +1,15 @@
 # ChangeLog for dev-java/jad
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jad/ChangeLog,v 1.1 2002/04/13 13:59:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jad/ChangeLog,v 1.2 2002/08/01 17:39:23 karltk Exp $
 
 *jad-1.5.8d (13 Apr 2002)
 
-  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  01 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> jad-1.5.8d.ebuild :
+
+  Added LICENSE, SLOT and KEYWORDS. Note: The package doesn't include a proper
+  license, and is assumed to be "Freely Distributable".
+
+  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> jad-1.5.8d.ebuild files/digest-jad-1.5.8d :
   
   Jad is a Java decompiler, i.e. program that reads one or more Java class 
   files and converts them into Java source files which can be compiled again.
