@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.11.ebuild,v 1.1 2004/10/12 21:25:14 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.11.ebuild,v 1.2 2004/11/24 20:29:56 axxo Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.gentoo.org/~karltk/projects/java/distfiles/java-config-${PV}
 LICENSE="GPL-2"
 SLOT="0"
 RDEPEND="virtual/python"
-KEYWORDS="~x86 ~alpha ~ia64 ~amd64 ~sparc ~ppc ~hppa ~ppc64"
+KEYWORDS="x86 ~alpha ~ia64 ~amd64 ~sparc ~ppc ~hppa ~ppc64"
 IUSE=""
 
 src_install() {

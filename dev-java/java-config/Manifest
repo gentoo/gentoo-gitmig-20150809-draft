@@ -1,10 +1,20 @@
-MD5 1462f979d7a355cf98e90cad509f81ce ChangeLog 11883
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c643e1b2445b270a48281c60d97574fe java-config-1.2.6.ebuild 642
+MD5 1e2d23361377785e6a203aa1fdc162d6 java-config-1.2.11.ebuild 739
+MD5 29405e424c0caec2e4bc5a24d1fa50f2 java-config-1.2.10.ebuild 648
+MD5 9c5535776c9e4e9565b27ca9aee188c1 ChangeLog 11970
 MD5 0ec9ceb7267bc8fcf7ec04c3dfc8fa5c metadata.xml 770
 MD5 61793a54a70b288161ce16d01c5187e7 java-config-1.2.9.ebuild 648
-MD5 6b812b4046bbeae953c1bb8aee9cea93 java-config-1.2.11.ebuild 742
-MD5 29405e424c0caec2e4bc5a24d1fa50f2 java-config-1.2.10.ebuild 648
 MD5 ad67cc60d7ac3f5053637bfdd519e004 files/digest-java-config-1.2.6 69
 MD5 331da9a2c9211fda3cb94f0fa682c432 files/digest-java-config-1.2.9 69
 MD5 49e2b6b8988b1dcb838716e5463256f5 files/digest-java-config-1.2.10 70
 MD5 78909db2dd94f5ed1060036b0dfced48 files/digest-java-config-1.2.11 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpO9g/rLF9B432nYRAiJhAKDEAtjscmNvdkd8CeCCQGcnhpO1DwCggVYm
+K8hyCA32CB2gcdpgbnFfeOQ=
+=JLNs
+-----END PGP SIGNATURE-----
