@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.24 2005/01/08 03:10:33 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.25 2005/02/14 00:29:22 pebenito Exp $
+
+  13 Feb 2005; Chris PeBenito <pebenito@gentoo.org> checkpolicy-1.20.ebuild:
+  Mark stable.
 
 *checkpolicy-1.20 (07 Jan 2005)
 
