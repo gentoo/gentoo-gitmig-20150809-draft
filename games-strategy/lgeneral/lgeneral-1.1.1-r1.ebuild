@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.1.1-r1.ebuild,v 1.3 2004/03/20 10:14:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.1.1-r1.ebuild,v 1.4 2004/04/06 06:59:17 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DATA=lgeneral-data-1.1.3
 
@@ -18,6 +18,12 @@ IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-mixer-1.2.3"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${PV}-netbsd-audio.patch"
+}
 
 src_compile() {
 	egamesconf --datadir=${GAMES_DATADIR}/../
