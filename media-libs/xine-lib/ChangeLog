@@ -1,8 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.5 2002/04/29 00:00:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.6 2002/04/30 02:08:57 agenkin Exp $
 
-*xine-lib-0.9.9 (29 Apr 2002)
+*xine-lib-0.9.9-r1 (29 Apr 2002)
+
+  29 Apr 2002; Arcady Genkin <agenkin@thpoon.com> xine-lib-0.9.9-r1.ebuld :
+
+  Disable drx3 support because it breaks build on some systems.
 
 *xine-lib-0.9.7-r2 (12 Apr 2002)
 
