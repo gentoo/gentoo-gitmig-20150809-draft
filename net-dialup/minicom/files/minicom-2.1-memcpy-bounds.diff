@@ -1,0 +1,14 @@
+--- src/window.c.orig	2004-02-26 23:47:07.000000000 -0500
++++ src/window.c	2004-02-26 23:46:24.000000000 -0500
+@@ -1583,7 +1583,11 @@ int move;
+   x = w->x1 + w->curx;
+   oldx = w->curx;
+   len = w->xs - w->curx;
++#ifdef NO_BOUNDS_CHECKING
+   memcpy(buf, gmap + COLS * y + x, sizeof(ELM) * len);
++#else
++  memcpy(buf, gmap + COLS * y + x, ((sizeof(ELM) * len) < sizeof(buf)) ? (sizeof(ELM) * len) : sizeof(buf) );
++#endif
+ 
+   /* Now, put the new character on screen. */
+   wputc(w, c);
