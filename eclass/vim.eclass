@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.88 2005/01/13 21:03:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.89 2005/01/13 21:59:59 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -498,6 +498,10 @@ src_install() {
 			keep_syntax="${keep_syntax}|syntax|nosyntax|synload"
 			ignore=$(rm -fr ${vimfiles}/syntax/!(${keep_syntax}).vim )
 		fi
+
+		# These files might have slight security issues, so we won't
+		# install them. See bug #77841.
+		rm ${D}/usr/share/vim/vim${VIM_VERSION/.}/tools/{vimspell.sh,tcltags}
 
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		dobin src/gvim
