@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.8.1-r2.ebuild,v 1.17 2004/06/24 22:36:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.8.1-r2.ebuild,v 1.18 2004/07/06 20:25:31 kugelfang Exp $
 
 IUSE="nls gnome imlib perl"
 
@@ -9,7 +9,7 @@ SRC_URI="http://wmaker.orcon.net.nz/current/${P}.tar.gz"
 HOMEPAGE="http://ulli.on.openave.net/wmakerconf/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~amd64"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	x11-wm/windowmaker
