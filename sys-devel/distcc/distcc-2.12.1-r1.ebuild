@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1-r1.ebuild,v 1.4 2004/08/27 11:05:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1-r1.ebuild,v 1.5 2004/09/06 19:50:54 ciaranm Exp $
 
 inherit eutils gcc flag-o-matic
 
@@ -57,7 +57,7 @@ src_compile() {
 		ewarn "To use IPV6 you must have IPV6 compiled into your kernel"
 		ewarn "either via a module or compiled code"
 		myconf=" ${myconf} --enable-rfc2553 "
-		sleep 2s
+		epause 5
 	fi
 
 	econf ${myconf} || die "econf ${myconf} failed"
@@ -143,5 +143,5 @@ pkg_postinst() {
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
 	einfo "      DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
 	use gnome || use gtk && einfo "Or:   DISTCC_DIR=/var/tmp/portage/.distcc distccmon-gnome"
-	sleep 3s
+	epause 5
 }

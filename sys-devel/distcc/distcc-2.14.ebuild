@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.14.ebuild,v 1.8 2004/08/27 11:05:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.14.ebuild,v 1.9 2004/09/06 19:50:54 ciaranm Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -59,7 +59,7 @@ src_compile() {
 		ewarn "To use IPV6 you must have IPV6 compiled into your kernel"
 		ewarn "either via a module or compiled code"
 		myconf=" ${myconf} --enable-rfc2553 "
-		sleep 4s
+		epause 5
 	fi
 
 	econf ${myconf} || die "econf ${myconf} failed"
@@ -145,5 +145,5 @@ pkg_postinst() {
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
 	einfo "      DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
 	use gnome || use gtk && einfo "Or:   DISTCC_DIR=/var/tmp/portage/.distcc distccmon-gnome"
-	sleep 3s
+	epause 5
 }

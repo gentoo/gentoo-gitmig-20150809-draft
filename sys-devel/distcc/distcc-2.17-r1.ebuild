@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17-r1.ebuild,v 1.2 2004/08/27 11:05:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17-r1.ebuild,v 1.3 2004/09/06 19:50:54 ciaranm Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -71,7 +71,7 @@ src_compile() {
 		ewarn "either via a module or compiled code"
 		ewarn "You can recompile without ipv6 with: USE='-ipv6' emerge distcc"
 		myconf=" ${myconf} --enable-rfc2553 "
-		sleep 4s
+		epause 5
 	fi
 
 	econf ${myconf} || die "econf ${myconf} failed"
@@ -155,5 +155,5 @@ pkg_postinst() {
 	einfo "      DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
 	use gnome || use gtk && einfo "Or:   DISTCC_DIR=/var/tmp/portage/.distcc distccmon-gnome"
 	ewarn "Don't forget to run etc-update and restart distccd!"
-	sleep 5s
+	epause 5
 }

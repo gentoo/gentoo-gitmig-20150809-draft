@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.114 2004/08/27 11:05:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.115 2004/09/06 19:50:54 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> distcc-2.12.1-r1.ebuild,
+  distcc-2.13-r1.ebuild, distcc-2.14.ebuild, distcc-2.16.ebuild,
+  distcc-2.17-r1.ebuild, distcc-2.17.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   27 Aug 2004; <pyrania@gentoo.org> +files/distcc-config,
   -files/2.11.1p/distcc-config, -files/2.17/distcc-config,
