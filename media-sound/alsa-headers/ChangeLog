@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/alsa-headers
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.1 2004/07/19 19:05:41 eradicator Exp $
+
+*alsa-headers-1.0.5a (19 Jul 2004)
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +alsa-headers-1.0.5a.ebuild:
+  Initial commit to deal with alsa-headers not being installed with 2.6 kernels.
+  See bug #55994.
+
