@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.63 2004/03/23 15:11:14 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.64 2004/04/15 09:36:08 kumba Exp $
+
+  15 Apr 2004; Joshua Kinard <kumba@gentoo.org> samba-3.0.2a.ebuild:
+  mips needs the statfs patch too, it seems.
 
   23 Mar 2004; Jon Portnoy <avenj@gentoo.org> samba-3.0.0-r1.ebuild,
   samba-3.0.1-r1.ebuild, samba-3.0.1.ebuild, samba-3.0.2a.ebuild :
