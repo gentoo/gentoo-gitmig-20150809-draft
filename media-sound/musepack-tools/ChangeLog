@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.5 2004/06/25 00:14:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.6 2004/07/07 09:49:14 eradicator Exp $
+
+*musepack-tools-1.15r-r1 (07 Jul 2004)
+
+  07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/musepack-tools-1.15r-r1-Makefile.patch,
+  +musepack-tools-1.15r-r1.ebuild:
+  prelink bug fix thanks to 4nykey@nm.ru closes bug #49821. -* because of nasm
+  dep.
 
   16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   musepack-tools-1.15r.ebuild:
