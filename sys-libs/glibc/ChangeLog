@@ -1,6 +1,19 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.172 2004/06/05 01:47:46 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.173 2004/06/05 15:54:29 tseng Exp $
+
+*glibc-2.3.2-r11 (05 Jun 2004)
+
+  05 Jun 2004; Brandon Hale <tseng@gentoo.org>
+  +files/2.3.2/glibc-2.3.2-frandom-detect.patch,
+  +files/2.3.2/glibc-2.3.2-got-fix.diff,
+  +files/2.3.2/glibc-2.3.2-owl-malloc-unlink-sanity-check.diff,
+  +files/2.3.2/glibc-2.3.2-propolice-guard-functions-v3.patch,
+  +files/2.3.2/glibc-2.3.2-pt_pax.diff,
+  +files/2.3.2/glibc-2.3.2-signal-ssp.diff, +files/2.3.2/ssp.c,
+  +glibc-2.3.2-r11.ebuild:
+  Create an -r11 (-*) with backported patches from 2.3.3_pre, namely owl-unlink
+  checking and updated SSP.
 
   04 Jun 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
   +files/2.3.4/mips-sysdep-cancel.diff, glibc-2.3.4.20040602.ebuild:
