@@ -1,9 +1,14 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.13 2003/02/12 07:40:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.14 2003/03/16 14:27:37 liquidx Exp $
 
 
 *realplayer-8-r5 (09 Feb 2003)
+
+  16 Mar 2003; Alastair Tse <liquidx@gentoo.org> realplayer-8-r5.ebuild,
+  files/realplayer.desktop:
+  tested and gnome2-ified menu entry. changed pixmap installation dir
+  and fixed icon in menu entry.
 
   09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> realplayer-8-r5.ebuild
   files/digest-realplayer-8-r5 :

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r5.ebuild,v 1.4 2003/02/13 13:33:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r5.ebuild,v 1.5 2003/03/16 14:27:37 liquidx Exp $
 
 inherit nsplugins kde
 
@@ -115,14 +115,13 @@ src_install () {
 		doins ${FILESDIR}/realplayer.desktop
 	fi
 	if use gnome ; then
-		# Needs to be tested by someone who actually *has* gnome
-		insinto /usr/share/gnome/apps/Multimedia
+		insinto /usr/share/applications
 		doins ${FILESDIR}/realplayer.desktop
 	fi
 
-	cp rp7mini.xpm realplayer.xpm
-	insinto /usr/share/pixmaps/mini
-	doins realplayer.xpm
+	cp rp7.xpm realplayer8.xpm
+	insinto /usr/share/pixmaps
+	doins realplayer8.xpm
 
 	# Mimetypes - Intentionally left blank (for now)
 	# Better not use the provided scripts from Real, they are outdated 
