@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.22 2004/11/06 15:43:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.23 2004/11/06 16:20:18 tester Exp $
+
+  06 Nov 2004; Olivier Crete <tester@gentoo.org> gxine-0.3.3-r1.ebuild:
+  Stable on x86 for #70055
 
 *gxine-0.3.3-r1 (07 Nov 2004)
 
