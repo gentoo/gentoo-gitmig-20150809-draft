@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.19 2003/04/03 20:12:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.20 2003/06/13 07:00:48 msterret Exp $
+
+*strace-4.4.98 (12 Jun 2003)
+
+  12 Jun 2003; <msterret@gentoo.org> strace-4.4.98.ebuild:
+  version bump as per Bug 22718
 
 *strace-4.4.94 (03 Apr 2003)
 
