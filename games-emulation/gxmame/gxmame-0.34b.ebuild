@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.34b.ebuild,v 1.2 2004/02/03 21:47:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.34b.ebuild,v 1.3 2004/02/10 13:25:09 mr_bones_ Exp $
 
 DESCRIPTION="frontend for XMame using the GTK library"
 HOMEPAGE="http://gxmame.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="nls joystick"
 
 DEPEND="virtual/x11
