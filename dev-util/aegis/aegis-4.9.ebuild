@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.9.ebuild,v 1.9 2004/06/25 02:18:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.9.ebuild,v 1.10 2004/07/14 22:31:59 agriffis Exp $
 
 IUSE="tcltk"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A transaction based revision control system"
 SRC_URI="http://aegis.sourceforge.net/${P}.tar.gz"
 HOMEPAGE="http://aegis.sourceforge.net"

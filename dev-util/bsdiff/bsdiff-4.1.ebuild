@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/bsdiff-4.1.ebuild,v 1.8 2004/06/25 02:21:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/bsdiff-4.1.ebuild,v 1.9 2004/07/14 22:36:34 agriffis Exp $
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="bsdiff: Binary Differencer using a suffix alg"
 HOMEPAGE="http://www.daemonlogy.net/bsdiff/"
 SRC_URI="http://www.daemonology.net/bsdiff/${P}.tar.gz"
