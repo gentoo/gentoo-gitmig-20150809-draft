@@ -1,6 +1,6 @@
 MD5 f33d86266389c80f7f24467eef8552e7 metadata.xml 232
 MD5 ffa649b405edb406f016c6a16fdf2712 xorg-x11-6.7.0-r1.ebuild 41875
 MD5 57d650b50258d39fdd00dbff747d7a04 xorg-x11-6.7.0-r2.ebuild 38110
-MD5 3138cede2b3266ed74279cdf027bd904 ChangeLog 21199
+MD5 ed31e9f12440f681a7755f919d3a74e6 ChangeLog 21304
 MD5 51c9e80b73eced56c98721ff90648866 files/digest-xorg-x11-6.7.0-r2 904
 MD5 d2be7dc9989b9f7c3e2ccb84e5297eeb files/digest-xorg-x11-6.7.0-r1 906
