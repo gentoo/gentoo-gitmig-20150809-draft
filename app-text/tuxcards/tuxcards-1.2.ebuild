@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.2 2004/11/30 21:28:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.3 2004/12/03 21:25:31 ticho Exp $
+
+inherit kde-functions
 
 DESCRIPTION="A heirarchical text editor"
 HOMEPAGE="http://www.tuxcards.de"
@@ -12,7 +14,9 @@ SLOT="0"
 
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=x11-libs/qt-3.1.1"
+DEPEND="sys-apps/sed"
+
+need-qt 3.1
 
 src_compile() {
 	sed -e 's:/usr/local:/usr:g' \
