@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.35 2004/11/01 11:19:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.36 2004/11/02 03:05:16 weeve Exp $
+
+  01 Nov 2004; Jason Wever <weeve@gentoo.org> libmatroska-0.7.4.ebuild:
+  Added ~sparc keyword as it mysteriously disappeared in the version bump.
 
   01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   libmatroska-0.6.3.ebuild:
