@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0_pre-r2.ebuild,v 1.3 2004/10/02 07:12:51 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0_pre-r2.ebuild,v 1.4 2004/10/02 10:29:22 lv Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla mozilla-launcher
 
@@ -12,7 +12,7 @@ MY_PV=${PV/_pre/PR.1}
 SRC_URI="mirror://gentoo/firefox-${MY_PV}-source.tar.bz2 \
 	http://dev.gentoo.org/~brad/firefox-${MY_PV}-source.tar.bz2"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="java gtk2 ipv6 moznoxft truetype xinerama"
@@ -68,6 +68,11 @@ src_compile() {
 	myconf="${myconf} \
 		--with-default-mozilla-five-home=/usr/lib/MozillaFirefox \
 		--enable-single-profile"
+
+	# hardened GCC uses -fstack-protector-all by default, and this breaks
+	# firefox.
+	has_hardened && append-flags -fno-stack-protector-all
+	replace-flags -fstack-protector-all -fstack-protector
 
 	####################################
 	#
