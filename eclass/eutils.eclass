@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.37 2003/06/28 02:09:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.38 2003/06/28 02:50:46 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -568,6 +568,7 @@ enewuser() {
 		einfo " - Creating ${ehome} in ${D}"
 		dodir ${ehome}
 		fowners ${euser} ${ehome}
+		fperms 755 ${ehome}
 	fi
 }
 
