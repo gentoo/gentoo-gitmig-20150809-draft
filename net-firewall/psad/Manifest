@@ -1,6 +1,6 @@
 MD5 14bed7b61f9658ff2078ac38bf2d1ef4 ChangeLog 3374
 MD5 ac85ccaacab6bf7a9dd356b8c92b3bac metadata.xml 326
 MD5 117a5092208ecc0a348e9b0fc731b70c psad-1.3.1.ebuild 2815
-MD5 5afeb023f48cbbc8bf4c4c121f04ad62 psad-1.3.2.ebuild 2930
+MD5 5f79b49cb9b572366ddb5e1028202340 psad-1.3.2.ebuild 2922
 MD5 0685c8a54fb4c35dbc920b79c2bea80e files/digest-psad-1.3.1 63
 MD5 d5b2c82c2615fcf24e2f599706e35ade files/digest-psad-1.3.2 63
