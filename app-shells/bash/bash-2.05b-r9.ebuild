@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.2 2003/12/30 04:43:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.3 2004/01/21 01:03:22 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -8,14 +8,14 @@ inherit eutils flag-o-matic gnuconfig
 PLEVEL="x002 x003 x004 x005 x006 x007"
 
 DESCRIPTION="The standard GNU Bourne again shell"
+HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 SRC_URI="mirror://gnu/bash/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
 	${PLEVEL//x/mirror://gnu/bash/bash-${PV}-patches/bash${PV/\.}-}"
-HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64 ~ppc64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~mips arm ~amd64 ~ia64 ~ppc64"
 IUSE="nls build"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -98,8 +98,6 @@ src_install() {
 			dodoc README NEWS AUTHORS CHANGES COMPAT COPYING Y2K
 			dodoc doc/FAQ doc/INTRO
 
-			ebegin "creating info symlink"
 			dosym bash.info.gz /usr/share/info/bashref.info.gz
-			eend $?
 	)
 }
