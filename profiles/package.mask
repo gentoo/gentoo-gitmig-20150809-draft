@@ -53,6 +53,27 @@ sys-devel/prelink
 =net-im/jabber-server-1.4.2-r2
 
 # <hannes@gentoo.org> (12 Nov 2002)
+# kde 3.1 final; masked because the tarballs are not yet generaly available
+~kde-base/arts-1.1.0.4
+~kde-base/kde-3.1
+~kde-base/kdeaddons-3.1
+~kde-base/kdeadmin-3.1
+~kde-base/kdeartwork-3.1
+~kde-base/kdebase-3.1
+~kde-base/kdebindings-3.1
+~kde-base/kdeedu-3.1
+~kde-base/kdegames-3.1
+~kde-base/kdegraphics-3.1
+~kde-base/kdelibs-3.1
+~kde-base/kdemultimedia-3.1
+~kde-base/kdenetwork-3.1
+~kde-base/kdepim-3.1
+~kde-base/kdesdk-3.1
+~kde-base/kdetoys-3.1
+~kde-base/kdeutils-3.1
+~app-editors/quanta-3.1
+
+# <hannes@gentoo.org> (12 Nov 2002)
 # kde 3.1 rc3: masked permanently
 ~kde-base/arts-1.1.0.3
 ~kde-base/kde-3.1_rc3
