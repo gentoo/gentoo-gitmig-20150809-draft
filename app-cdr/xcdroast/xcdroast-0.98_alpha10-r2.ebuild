@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha10-r2.ebuild,v 1.7 2002/10/21 13:57:19 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha10-r2.ebuild,v 1.8 2002/11/28 17:10:02 gerk Exp $
 
 S=${WORKDIR}/xcdroast-0.98alpha10
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
 SRC_URI="http://www.xcdroast.org/download/${PN}-0.98alpha10.tar.gz"
 HOMEPAGE="http://www.xcdroast.org/"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 
 # WARNING: cdrtools and mkisofs versions hard coded, see below

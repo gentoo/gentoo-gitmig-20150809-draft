@@ -2,6 +2,9 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
+  Nov 28 2002; Mark Guertin <gerk@gentoo.org> xcdroast-0.98_alpha-r2.ebuild:
+  set x86 and ppc in keywords, was set to *
+
 *xcdroast-0.98_alpha10 (16 Jun 2002)
   
   21 Oct 2002; Arcady Genkin <agenkin@gentoo.org> xcdroast-0.98_alpha10-r2 :
