@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.3 2004/04/11 05:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.4 2004/06/23 22:08:30 mr_bones_ Exp $
 
 # pcmcia.eclass - This eclass facilities writing ebuilds for driver packages 
 # that may need to build against the pcmcia-cs drivers, depending on kernel
@@ -54,7 +54,7 @@ pcmcia_src_unpack()
 {
 	cd ${WORKDIR}
 
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia ; then
 		if egrep '^CONFIG_PCMCIA=[ym]' /usr/src/linux/.config >&/dev/null
 		then
 			# Sadly, we still need to download these sources in SRC_URI
@@ -96,7 +96,7 @@ pcmcia_src_unpack()
 # Call this if you need the package configured for building to work
 pcmcia_configure()
 {
-	if [ -n "`use pcmcia`" ]; then
+	if use pcmcia ; then
 		if ! egrep '^CONFIG_PCMCIA=[ym]' /usr/src/linux/.config >&/dev/null
 		then
 			cd ${PCMCIA_SOURCE_DIR}

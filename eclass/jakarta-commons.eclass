@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.12 2004/05/17 00:02:47 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.13 2004/06/23 22:07:11 mr_bones_ Exp $
 
 inherit base java-pkg
 ECLASS=jakarta-commons
@@ -54,7 +54,7 @@ jakarta-commons_src_compile() {
 				;;
             		maketest)
 				debug-print-section maketest
-                		if [ -n "`use junit`" ]; then
+                		if use junit ; then
                     			if [ -n $(echo "$target" | grep "test") ]; then
                         			ANT_OPTS=${myconf} ant test || die "Building Testing Classes Failed"
                     			else

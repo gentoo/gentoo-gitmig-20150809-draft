@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.34 2004/06/23 05:33:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.35 2004/06/23 22:12:26 mr_bones_ Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -266,7 +266,7 @@ php-sapi_src_unpack() {
 	# bug 47498
 	[ "${PV//4.3.6}" != "${PV}" ] && EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/php-4.3.6-pcrealloc.patch
 
-	[ `use hardenedphp` ] && [ -n "$HARDENEDPHP_PATCH" ] && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
+	use hardenedphp && [ -n "$HARDENEDPHP_PATCH" ] && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
 }
 
 
