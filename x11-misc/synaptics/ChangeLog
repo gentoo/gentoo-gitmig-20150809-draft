@@ -1,10 +1,10 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.32 2004/10/24 04:25:56 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.33 2004/10/24 05:45:54 battousai Exp $
 
 *synaptics-0.13.6 (24 Oct 2004)
 
-  24 Oct 2004; <bryan@gentoo.org> synaptics-0.13.4.ebuild,
+  24 Oct 2004; Bryan Stine <battousai@gentoo.org> synaptics-0.13.4.ebuild,
   synaptics-0.13.5.ebuild, +synaptics-0.13.6.ebuild:
   Bump to 0.13.6. Changed the ebuilds to use new gcc-config logic for the
   Makefile substitution. The new logic fixes bug #67687. The version bump
