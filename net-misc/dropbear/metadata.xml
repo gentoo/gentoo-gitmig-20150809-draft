@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>vapier@gentoo.org</email>
+</maintainer>
+<longdescription>
+I was looking for a small and secure SSH server to fit on a laptop with 4 megs ram and no hard 
+disk, and couldn't find one which was satisfactory. I decided to write my own, and Dropbear is 
+the result. It implements most required features of the SSH 2 protocol, and other features such 
+as X11, TCP and Authentication Agent forwarding. Dropbear is Open Source software, distributed 
+under a MIT-style license.
+</longdescription>
+</pkgmetadata>
