@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.17.ebuild,v 1.1 2004/04/01 18:51:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.17.ebuild,v 1.2 2004/06/09 21:43:23 agriffis Exp $
 
 DESCRIPTION="Gnome based FTP Client"
 SRC_URI="http://www.gftp.org/${P}.tar.bz2"
@@ -31,7 +31,7 @@ src_compile() {
 
 	# do not use enable-{gtk20,gtkport} they are not recognized
 	# and will disable building the gtkport alltogether
-	if [ -n "`use gtk`" ]
+	if use gtk
 	then
 		einfo "gtk+ enabled"
 		use gtk2 \
