@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.17 2004/01/19 01:09:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.18 2004/03/30 01:00:08 mr_bones_ Exp $
+
+  29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> nvi-1.81.4.ebuild,
+  nvi-1.81.5-r1.ebuild, nvi-1.81.5-r2.ebuild, nvi-1.81.5.ebuild:
+  inherit eutils for epatch; tidy
 
   19 Jan 2004; Ciaran McCreesh <ciaranm@gentoo.org> nvi-1.81.5-r2.ebuild:
   Stable on sparc
