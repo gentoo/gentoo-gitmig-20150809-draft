@@ -9,7 +9,6 @@ SRC_URI="http://www.nano-editor.org/dist/v1.0/${A}"
 HOMEPAGE="http://www.nano-editor.org"
 
 DEPEND=">=sys-libs/glibc-2.1.3
-	>=sys-libs/pam-0.75
 	>=sys-libs/ncurses-5.2"
 
 src_compile() {
