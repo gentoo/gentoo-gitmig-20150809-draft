@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-7.0.25.ebuild,v 1.5 2005/03/26 23:25:03 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-7.0.25.ebuild,v 1.6 2005/03/26 23:50:30 kugelfang Exp $
 
 inherit nsplugins
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://macromedia/flash-plugin-${PV}.tar.gz
 HOMEPAGE="http://www.macromedia.com/"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 -ppc -sparc"
+KEYWORDS="x86 amd64 -ppc -sparc"
 LICENSE="Macromedia"
 
 DEPEND="!net-www/gplflash
