@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237.ebuild,v 1.2 2003/07/26 00:05:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237.ebuild,v 1.3 2003/07/28 00:46:47 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware. The agreeing to a licence is part of the configure step
@@ -33,7 +33,7 @@ RESTRICT="nostrip"
 
 src_install() {
 	# lets make gcc happy regardless of what version we're using
-	patch -p0 < ${FILESDIR}/${PVR}/vmware-config.pl-gcc-generalized.patch
+	patch -p0 < ${FILESDIR}/${PV}/vmware-config.pl-gcc-generalized.patch
 
 	dodir /opt/vmware/bin
 	cp -a bin/* ${D}/opt/vmware/bin/
@@ -55,11 +55,11 @@ src_install() {
 
 	# vmware service loader
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PVR}/vmware vmware
+	newexe ${FILESDIR}/${PV}/vmware vmware
 
 	# vmware enviroment
 	insinto /etc/env.d
-	doins ${FILESDIR}/${PVR}/90vmware
+	doins ${FILESDIR}/${PV}/90vmware
 
 	dodir /etc/vmware/
 	cp -a etc/* ${D}/etc/vmware/
@@ -82,12 +82,12 @@ src_install() {
 	# A simple icon I made
 	dodir /opt/vmware/lib/icon
 	insinto /opt/vmware/lib/icon
-	doins ${FILESDIR}/${PVR}/vmware.png
+	doins ${FILESDIR}/${PV}/vmware.png
 
 	if [ "`use kde`" ] ; then
 		dodir /usr/share/applnk/Applications
 		insinto /usr/share/applnk/Applications
-		doins "${FILESDIR}/${PVR}/VMwareWorkstation.desktop"
+		doins "${FILESDIR}/${PV}/VMwareWorkstation.desktop"
 	fi
 
 	# Questions: 

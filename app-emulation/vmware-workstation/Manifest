@@ -11,7 +11,7 @@ MD5 3bfb39f5e96f60db67c7246f74c21501 files/3.2.1.2237/vmware-config.pl-gcc-gener
 MD5 7ca1ec14670b51d8cf824a58bc8d6621 files/3.2.1.2237/vmware.png 470
 MD5 b95a250f31a6d2005176b27b8d48c182 files/3.2.1.2237/vmware-glibc-2.3.2-compat.c 1039
 MD5 89b17c422f51ea8f65d1e03fc03d7640 files/digest-vmware-workstation-4.0.4460-r1 158
-MD5 18836b39073dafa47b09c9ad6b1bfdac vmware-workstation-3.2.1.2237-r1.ebuild 6560
+MD5 33e594e0baf61729129bf896c4f79506 vmware-workstation-3.2.1.2237-r1.ebuild 6554
 MD5 f965a778d50945a1639caf9658b285b6 ChangeLog 5557
-MD5 36ecd310052a6f90dafa6f4b15635a6d vmware-workstation-3.2.1.2237.ebuild 5563
+MD5 927ba7f7ee2ad8e17feda7c21f864111 vmware-workstation-3.2.1.2237.ebuild 5558
 MD5 2b8d89053d695a71bd9bddae4ad9a2cc vmware-workstation-4.0.4460-r1.ebuild 6310
