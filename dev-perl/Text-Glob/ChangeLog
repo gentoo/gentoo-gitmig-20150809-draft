@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Glob
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.8 2004/12/30 00:42:04 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.9 2005/03/16 16:12:29 mcummings Exp $
+
+  16 Mar 2005; Michael Cummings <mcummings@gentoo.org> Text-Glob-0.06.ebuild:
+  module-build dep
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
