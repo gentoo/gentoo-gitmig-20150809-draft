@@ -1,27 +1,27 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e.ebuild,v 1.2 2003/12/23 01:20:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e.ebuild,v 1.3 2004/04/16 05:38:57 vapier Exp $
+
+inherit flag-o-matic
 
 MY_PN=imap
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="UW IMAP c-client library"
-SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 HOMEPAGE="http://www.washington.edu/imap/"
+SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~hppa ~alpha"
 IUSE="ssl pic"
 
-PROVIDE="virtual/imap-c-client"
 RDEPEND="ssl? ( dev-libs/openssl )
-		 !virtual/imap-c-client"
+	 !virtual/imap-c-client"
 DEPEND="${RDEPEND}
-		>=sys-libs/pam-0.72"
-
-inherit flag-o-matic
+	>=sys-libs/pam-0.72"
+PROVIDE="virtual/imap-c-client"
 
 src_unpack() {
 	unpack ${A}

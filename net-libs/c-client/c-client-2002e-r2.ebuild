@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e-r2.ebuild,v 1.1 2004/02/06 05:53:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002e-r2.ebuild,v 1.2 2004/04/16 05:38:57 vapier Exp $
+
+inherit flag-o-matic eutils
 
 MY_PN=imap
 MY_P=${MY_PN}-${PV}
@@ -15,13 +17,11 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc hppa alpha ia64 amd64"
 IUSE="ssl"
 
-PROVIDE="virtual/imap-c-client"
 RDEPEND="ssl? ( dev-libs/openssl )
-		 !virtual/imap-c-client"
+	 !virtual/imap-c-client"
 DEPEND="${RDEPEND}
-		>=sys-libs/pam-0.72"
-
-inherit flag-o-matic eutils
+	>=sys-libs/pam-0.72"
+PROVIDE="virtual/imap-c-client"
 
 src_unpack() {
 	unpack ${A}
