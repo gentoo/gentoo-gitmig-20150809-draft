@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3016 2004/07/22 22:20:45 solar Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3017 2004/07/24 00:25:01 swegener Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <swegener@gentoo.org> (Jul 24 2004)
+# Masked the development versions of net-irc/xchat
+>=net-irc/xchat-2.1.0
+
 # <solar@gentoo> (Jul 22 2004)
 # I no longer wish to maintain this problematic package.
 dev-libs/elfsh
