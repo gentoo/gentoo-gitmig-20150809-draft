@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20040901.ebuild,v 1.2 2004/09/03 00:57:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20040901.ebuild,v 1.3 2004/09/03 02:43:58 ciaranm Exp $
 
 inherit vim-plugin
 
@@ -9,3 +9,6 @@ HOMEPAGE="http://dev.gentoo.org/~ciaranm/"
 LICENSE="vim"
 KEYWORDS="~x86 ~sparc ~mips ~amd64 ~ppc"
 IUSE=""
+
+VIM_PLUGIN_HELPFILES="gentoo-syntax"
+
