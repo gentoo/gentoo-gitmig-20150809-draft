@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.6 2004/06/24 22:53:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.7 2005/02/01 17:18:46 kito Exp $
 
 DESCRIPTION="configurable talking ASCII cow (and other characters)"
 HOMEPAGE="http://www.nog.net/~tony/warez/cowsay.shtml"
@@ -8,7 +8,7 @@ SRC_URI="http://www.nog.net/~tony/warez/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 hppa"
+KEYWORDS="x86 ppc sparc amd64 hppa ~ppc-macos"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
