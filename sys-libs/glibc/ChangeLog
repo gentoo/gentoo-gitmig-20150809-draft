@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.331 2005/03/31 12:57:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.332 2005/04/01 03:17:14 josejx Exp $
+
+  01 Apr 2005; Joseph Jezak <josejx@gentoo.org> glibc-2.3.4.20050125.ebuild,
+  glibc-2.3.4.20050125-r1.ebuild:
+  Added ~ppc for bug #87452.
 
   31 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
   glibc-2.3.4.20050125-r1.ebuild:
