@@ -1,50 +1,45 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.7 2002/09/07 13:58:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.8 2002/09/16 00:42:32 murphy Exp $
 
 *rpm-4.0.4-r3 (23 Jul 2002)
 
-  07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild :
+  14 Sep 2002; Maarten Thibaut <murphy@gentoo.org> ChangeLog rpm-4.0.4-r3.ebuild: This
+  package can not compile on sparc64 without a --host option to configure, so I added
+  that flag. Revamped ChangeLog layout according to new guidelines.
 
-  This package can not compile with autoconf-2.53a, so autoconf-2.1 is
-  forced.  Thanks to: garion@garion.mnbsyr.com (John Sutherland) in bug
-  #7595
+  07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild: This package
+  can not compile with autoconf-2.53a, so autoconf-2.1 is forced.  Thanks to:
+  garion@garion.mnbsyr.com (John Sutherland) in bug #7595
 
-  23 Jul 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild :
-
-  In keeping with RH tradition, this package requires bloat.  As such,
-  gettext is not optional, it is _required_.  Go figure.  Takes care of part
-  of bug #5425, as reported by: Balaji Rangaswamy <krab@rediffmail.com>
+  23 Jul 2002; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r3.ebuild: In keeping
+  with RH tradition, this package requires bloat.  As such, gettext is not optional,
+  it is _required_.  Go figure.  Takes care of part of bug #5425, as reported by:
+  Balaji Rangaswamy <krab@rediffmail.com>
 
 *rpm-4.0.4-r2 (29 Jun 2002)
 
-  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> rpm-4.0.4-r2.ebuild: Added PPC to
+  KEYWORDS.
 
-  Added PPC to KEYWORDS.
-
-  29 May 2002; Jon Nelson <jnelson@gentoo.org> rpm-4.0.4-r2.ebuild:
-
-  Fix bug #4070 - db dependency too strict
+  29 May 2002; Jon Nelson <jnelson@gentoo.org> rpm-4.0.4-r2.ebuild: Fix bug #4070 -
+  db dependency too strict
 
 *rpm-4.0.4-r1 (13 May 2002)
 
-  13 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
-  
-  Fix bug #1893 - make rpm use the system libpopt (dev-libs/popt) instead of
-  installing its own.
+  13 May 2002; Dan Armak <danarmak@gentoo.org> ChangeLog: Fix bug #1893 - make rpm
+  use the system libpopt (dev-libs/popt) instead of installing its own.
 
 *rpm-4.0.4 (23 April 2002)
 
-  23 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
-
-  New up-to-date version, keeping the previous one for now..
+  23 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog: New up-to-date
+  version, keeping the previous one for now..
 
 *rpm-3.0.6-r1 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog: Added initial ChangeLog
+  which should be updated whenever the package is updated in any way. This
+  changelog is targetted to users. This means that the comments should well
+  explained and written in clean English. The details about writing correct
+  changelogs are explained in the skel.ChangeLog file which you can find in
+  the root directory of the portage repository.
