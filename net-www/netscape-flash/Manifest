@@ -1,7 +1,17 @@
-MD5 b108df6597f93412a57c1cb87b711889 netscape-flash-6.0.81.ebuild 1351
-MD5 b7987a11bf41aa318fbd70b18164a354 netscape-flash-6.0.79.ebuild 1196
-MD5 9d0103e8aabc6a82c7063364f851d9b1 netscape-flash-7.0.25.ebuild 1378
-MD5 01555f822c5b16061d852d83e6240194 ChangeLog 3832
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 45dd0b2c81e08a7c81affbec243b82ca netscape-flash-6.0.81.ebuild 1347
+MD5 8115e80eb6be76b5add14e23635ecd97 netscape-flash-6.0.79.ebuild 1192
+MD5 6809a23bc8bd85b0ad6d3b45a8aae46f netscape-flash-7.0.25.ebuild 1374
+MD5 d14a6029c79f1e743444dda43417b8eb ChangeLog 4033
 MD5 49a191691f09c2436f41c87d3ca8b276 files/digest-netscape-flash-6.0.79 144
 MD5 553a045f5175d5cb331b737777e17cc0 files/digest-netscape-flash-6.0.81 144
 MD5 12d4887a4d1906a8d8a558f6607ad579 files/digest-netscape-flash-7.0.25 142
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB4ReqI1lqEGTUzyQRAmsdAJ9pJo/e566TlDdqcrEpsSvwKeIgWACfZqYg
+s54i7DYZxQzBXBaEYSn8dkE=
+=hdUO
+-----END PGP SIGNATURE-----
