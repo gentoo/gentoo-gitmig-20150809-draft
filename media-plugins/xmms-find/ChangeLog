@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-find
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/ChangeLog,v 1.9 2004/09/02 23:32:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-find/ChangeLog,v 1.10 2004/11/08 21:33:00 eradicator Exp $
+
+*xmms-find-0.5.2 (08 Nov 2004)
+
+  08 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +xmms-find-0.5.2.ebuild:
+  Version bump closes bug #70054.
 
   02 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-find-0.5.1.ebuild:
