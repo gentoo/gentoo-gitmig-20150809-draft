@@ -1,6 +1,9 @@
 # ChangeLog for net-www/boa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.10 2003/02/12 08:46:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.11 2003/10/28 14:52:49 mholzer Exp $
+
+  28 Oct 2003; Martin Holzer <mholzer@gentoo.org> boa-0.94.13.ebuild:
+  adding gcc3 fix. Closes #31364.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

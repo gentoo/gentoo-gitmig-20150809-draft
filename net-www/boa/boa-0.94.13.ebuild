@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.7 2003/02/13 15:32:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.8 2003/10/28 14:52:49 mholzer Exp $
 
-DESCRIPTION="Boa - A very small and very fast http daemon."
+DESCRIPTION="Boa - A very small and very fast http daemon"
 SRC_URI="http://www.boa.org/${P}.tar.gz"
 HOMEPAGE="http://www.boa.org/"
 
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="tetex"
@@ -18,6 +18,12 @@ DEPEND="virtual/glibc
 	tetex? ( app-text/tetex )"
 
 RDEPEND="virtual/glibc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc3.patch || die
+}
 
 src_compile() {
 	cd src
