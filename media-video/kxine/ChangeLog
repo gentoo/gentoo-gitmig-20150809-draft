@@ -1,0 +1,10 @@
+# ChangeLog for media-video/kxine
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-video/kxine/ChangeLog,v 1.1 2002/07/30 13:39:30 danarmak Exp $
+
+*kxine-0.4 (31 Jul 2002)
+
+  31 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Initial ebuild. Submission by qerub (?) - #5412. kxine is a KDE xine
+  interface.
