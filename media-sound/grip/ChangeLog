@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.5 2002/04/19 18:35:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.6 2002/04/26 04:47:33 seemant Exp $
+
+*grip-3.0.0-r1 (25 Apr 2002)
+
+  25 Apr 2002; Seemant Kulleen <seemant@gentoo.org> grip-3.0.0-r1.ebuild
+  files/digest-grip-3.0.0 :
+
+  Added db1 to the DEPEND list. Thanks to: ivar_k@hotmail.com (Ivar Kvalvik)
+  in bug #1980
 
 *grip-3.0.0 (19 Apr 2002)
 
