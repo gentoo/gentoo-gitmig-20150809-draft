@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.0.6-r2.ebuild,v 1.1 2004/08/24 17:21:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.0.6-r2.ebuild,v 1.2 2004/08/24 17:29:56 azarah Exp $
 
 inherit eutils
 
@@ -41,6 +41,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-runtime-backend-select.patch
 	# Sources is using wrong DEFINE to check if INotify should be enabled ...
 	epatch ${FILESDIR}/${P}-actually-enable-inotify-support.patch
+	# Only complain about failing to open inotify node if debug is enabled.
+	epatch ${FILESDIR}/${P}-quiet-inotify-warning.patch
 }
 
 src_compile() {
