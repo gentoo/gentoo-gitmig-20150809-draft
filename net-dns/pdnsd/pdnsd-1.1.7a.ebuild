@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.7a.ebuild,v 1.11 2004/07/01 22:13:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.7a.ebuild,v 1.12 2004/07/14 23:38:03 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Proxy DNS server with permanent caching"
 SRC_URI="http://home.t-online.de/home/Moestl/${P}.tar.bz2"
 HOMEPAGE="http://home.t-online.de/home/Moestl/"
@@ -12,6 +11,7 @@ DEPEND="virtual/libc"
 SLOT="0"
 LICENSE="BSD | GPL-2"
 KEYWORDS="x86 ppc sparc "
+IUSE=""
 
 src_compile() {
 	econf \
@@ -33,4 +33,3 @@ src_install() {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/pdnsd.rc6 pdnsd
 }
-
