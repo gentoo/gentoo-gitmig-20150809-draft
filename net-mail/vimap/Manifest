@@ -1,5 +1,5 @@
 MD5 e5c150eb76b7716b5536b069559d0849 ChangeLog 922
-MD5 44904576632fe1a64ceace6e41fab883 vimap-2002c.ebuild 2698
+MD5 f578fae4c055e6d3c128b59ca3056755 vimap-2002c.ebuild 2699
 MD5 ff493c5938360a4411843914673d4a05 files/digest-vimap-2002c 63
 MD5 0ec3cd52bf3e7064a3d9e60a5ac16291 files/imap-2002c-virtual.patch.bz2 10394
 MD5 2ea01084955d1baee1120d142734f18f files/uw-imap.pam-system-auth 339

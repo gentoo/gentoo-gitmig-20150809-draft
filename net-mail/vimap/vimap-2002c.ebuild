@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c.ebuild,v 1.1 2003/05/28 22:12:10 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c.ebuild,v 1.2 2003/05/28 22:40:58 alron Exp $
 
 S=${WORKDIR}/imap-2002c1
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.washington.edu/imap/ http://vimap.sf.net/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~hppa ~alpha"
 IUSE="ssl mbox"
 
 PROVIDE="virtual/imapd"
