@@ -1,0 +1,97 @@
+#!/bin/sh
+#RCUPDATE:3 4:69:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=pcmcia
+opts="start stop restart"
+
+    # Slackware startup options go right here:
+    # Should be either i82365 or tcic
+    PCIC=i82365
+    # Put socket driver timing parameters here
+    PCIC_OPTS=
+    # Put pcmcia_core options here
+    CORE_OPTS=
+    # Put cardmgr options here
+    CARDMGR_OPTS=
+    # To set the PCMCIA scheme at startup...
+    SCHEME=
+
+cleanup()
+{
+    while read SN CLASS MOD INST DEV EXTRA ; do
+        if [ "$SN" != "Socket" ] ; then
+            /etc/pcmcia/$CLASS stop $DEV 2> /dev/null
+        fi
+    done
+}
+
+start() {
+        if [ -d /var/lib/pcmcia ] ; then
+            SC=/var/lib/pcmcia/scheme
+            RUN=/var/lib/pcmcia
+        else
+            SC=/var/run/pcmcia-scheme
+            RUN=/var/run
+        fi
+        if [ -L $SC -o ! -O $SC ] ; then rm -f $SC ; fi
+        if [ ! -f $SC ] ; then umask 022 ; touch $SC ; fi
+        if [ "$SCHEME" ] ; then umask 022 ; echo $SCHEME > $SC ; fi
+        fgrep -q pcmcia /proc/devices
+        if [ $? -ne 0 ] ; then
+            if [ -d /lib/modules/preferred ] ; then
+                PC=/lib/modules/preferred/pcmcia
+            else
+                PC=/lib/modules/`uname -r`/pcmcia
+            fi
+            if [ -d $PC ] ; then
+                echo -n " modules"
+                /sbin/insmod $PC/pcmcia_core.o $CORE_OPTS 2>&1 > /dev/null
+                /sbin/insmod $PC/$PCIC.o $PCIC_OPTS 2>&1 > /dev/null
+                /sbin/insmod $PC/ds.o 2>&1 > /dev/null
+            else
+                echo " module directory $PC not found."
+                break
+            fi
+        fi
+        if [ -s /var/run/cardmgr.pid ] && \
+            kill -0 `cat /var/run/cardmgr.pid` 2>/dev/null ; then
+            echo " cardmgr is already running."
+        else
+            if [ -r $RUN/stab ] ; then
+                cat $RUN/stab | cleanup
+            fi
+            /sbin/cardmgr $CARDMGR_OPTS 2>&1 > /dev/null
+        fi
+        touch /var/lock/subsys/pcmcia 2>&1 > /dev/null
+}
+
+stop() {
+        if [ -s /var/run/cardmgr.pid ] ; then
+            PID=`cat /var/run/cardmgr.pid`
+            kill $PID
+            echo -n " cardmgr"
+            # Give cardmgr a few seconds to handle the signal
+            kill -0 $PID 2>/dev/null && sleep 2 && \
+            kill -0 $PID 2>/dev/null && sleep 2 && \
+            kill -0 $PID 2>/dev/null && sleep 2 && \
+            kill -0 $PID 2>/dev/null
+        fi
+        killall -q "CardBus Watcher"
+        if fgrep -q "ds  " /proc/modules ; then
+            echo -n " modules"
+            /sbin/rmmod ds
+            /sbin/rmmod $PCIC
+            /sbin/rmmod pcmcia_core
+        fi
+        rm -f /var/lock/subsys/pcmcia
+}
+
+restart() {
+	stop
+	start
+}
+
+doservice ${@}
+
