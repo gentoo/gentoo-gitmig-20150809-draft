@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jasmin-sable
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/ChangeLog,v 1.1 2004/06/03 11:32:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/ChangeLog,v 1.2 2004/06/04 17:42:30 dholm Exp $
+
+  04 Jun 2004; David Holm <dholm@gentoo.org> jasmin-sable-1.2.7.ebuild:
+  Compile fix, and added to ~ppc.
 
 *jasmin-sable-1.2.7 (03 Jun 2004)
 
