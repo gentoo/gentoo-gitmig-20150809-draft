@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r4.ebuild,v 1.2 2004/10/24 13:49:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r4.ebuild,v 1.3 2004/10/24 23:38:39 lanius Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ IUSE="motif nodrm"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/xpdf-3.00-truetype.diff.gz
+	epatch ${FILESDIR}/xpdf-3.00-truetype-new.diff.gz
 	epatch ${FILESDIR}/xpdf-3.00-freetype-2.1.7.patch
 	epatch ${FILESDIR}/xpdf-3.00-empty-bookmark.patch
 	epatch ${FILESDIR}/xpdf-3.00-core.patch.bz2
