@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-embedded
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.15 2005/02/23 11:12:01 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.16 2005/03/07 10:17:38 greg_g Exp $
+
+  07 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> -files/47qt-embedded3,
+  -files/50qt-embeddeddir3, -files/tools-Makefile, -qt-embedded-3.0.5.ebuild,
+  -qt-embedded-3.1.2.ebuild, -qt-embedded-3.3.2-r1.ebuild,
+  -qt-embedded-3.3.2.ebuild, qt-embedded-3.3.4.ebuild:
+  Stable on x86. Remove old ebuilds.
 
 *qt-embedded-3.3.4 (23 Feb 2005)
 
