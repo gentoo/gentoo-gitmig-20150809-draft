@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspell-ispell/pspell-ispell-0.12-r1.ebuild,v 1.4 2002/07/11 06:30:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspell-ispell/pspell-ispell-0.12-r1.ebuild,v 1.5 2002/07/29 16:24:33 seemant Exp $
+
+inherit libtool
 
 #Remove '-ispell' from name for download subdirectory
 MYPN=${PN/-ispell//}
@@ -13,13 +15,17 @@ DESCRIPTION="Ispell module for pspell"
 SRC_URI="mirror://sourceforge/${MYPN}/${PN}-${MYPV}.tar.gz"
 HOMEPAGE="http://pspell.sourceforge.net"
 
+SLOT="0"
+LICENSE="LGPL-2"
+KEYWORDS="x86"
+
 DEPEND=">=app-text/pspell-0.12.2-r2
 	>=app-text/ispell-3.2.06-r1"
 
 
 src_compile() {
 
-	libtoolize --copy --force
+	elibtoolize
 
 	./configure \
 		--disable-static \
@@ -36,4 +42,3 @@ src_install () {
     
 	dodoc README
 }
-
