@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.2.0_alpha1.ebuild,v 1.1 2003/09/16 03:35:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.2.0_alpha1.ebuild,v 1.2 2003/09/24 19:09:24 caleb Exp $
 inherit kde-dist
 
 IUSE="pda"
@@ -10,7 +10,7 @@ KEYWORDS="x86"
 newdepend "pda? ( >=app-pda/pilot-link-0.11.1-r1
 		>=dev-libs/libmal-0.31 )
 	dev-lang/perl
-	=kde-base/kdebase-${PV}*
+	=kde-base/kdebase-${PV}
 	~kde-base/kdenetwork-${PV}" # mimelib is needed for support of some stuff with exchange servers
 
 use pda && myconf="$myconf --with-extra-includes=/usr/include/libpisock"
