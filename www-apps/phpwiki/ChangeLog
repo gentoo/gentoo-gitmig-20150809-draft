@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpwiki
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.1 2004/08/19 15:38:53 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.2 2004/08/30 19:38:42 rl03 Exp $
+
+  30 Aug 2004; Renat Lumpau <rl03@gentoo.org> phpwiki-1.2.4.ebuild:
+  Fixed DEPEND/RDEPEND
 
 *phpwiki-1.2.4 (19 Aug 2004)
 
