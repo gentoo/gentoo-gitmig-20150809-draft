@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.0.2.ebuild,v 1.7 2003/10/02 14:01:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.0.2.ebuild,v 1.8 2003/12/25 21:51:56 weeve Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://kinterbasdb.sourceforge.net"
 IUSE=""
 LICENSE="kinterbasdb"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~alpha"
+KEYWORDS="x86 -sparc ~alpha"
 
 DEPEND="dev-lang/python
 	>=dev-db/firebird-1.0_rc1

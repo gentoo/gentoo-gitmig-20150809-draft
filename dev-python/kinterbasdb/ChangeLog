@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kinterbasdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.6 2003/10/02 13:59:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.7 2003/12/25 21:51:56 weeve Exp $
+
+  25 Dec 2003; Jason Wever <weeve@gentoo.org> kinterbasdb-3.0.1_pre3.ebuild,
+  kinterbasdb-3.0.2.ebuild:
+  As the dependency dev-db/firebird can only be emerged on x86, this is being
+  masked on sparc.
 
   02 Oct 2003; Alastair Tse <liquidx@gentoo.org>
   kinterbasdb-3.0.1_pre3.ebuild, kinterbasdb-3.0.2.ebuild,
