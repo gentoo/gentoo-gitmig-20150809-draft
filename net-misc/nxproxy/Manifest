@@ -1,4 +1,6 @@
 MD5 fe79333f414352ed26ee0431b5c0e5c4 nxproxy-1.2.2.ebuild 953
 MD5 04bed8894387221a43a9884386a2f64c ChangeLog 401
+MD5 0900fc29ba41dd4ac151b9572cea4e20 nxproxy-1.2.2-r1.ebuild 953
 MD5 0738e13fa3f4d0504c8419991333f8d3 files/digest-nxproxy-1.2.2 66
 MD5 d7c92d02795ad3ecf951731efaac6b03 files/1.2.2-Makefile.in.patch 421
+MD5 3a6e47c8c627da5f53608c28eb48277a files/digest-nxproxy-1.2.2-r1 66
