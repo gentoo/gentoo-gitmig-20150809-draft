@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2-r3.ebuild,v 1.3 2003/11/30 22:22:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2-r3.ebuild,v 1.4 2003/12/17 04:29:35 brad_mssw Exp $
 
 IUSE="ssl ipv6 doc"
 
@@ -8,7 +8,7 @@ DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz ftp://ftp.isc.org/isc/bind9/${PV}/patch.${PV}-P1"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 
-KEYWORDS="~x86 ppc ~sparc ~alpha ~arm ~hppa ~amd64"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~arm ~hppa ~amd64 ppc64"
 LICENSE="as-is"
 SLOT="0"
 
