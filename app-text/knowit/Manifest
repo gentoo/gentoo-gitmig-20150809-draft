@@ -2,6 +2,8 @@ MD5 c2348747ad456afebf3cf154462f9460 knowit-0.8.ebuild 633
 MD5 53980acd9d2ea4dd6c7a8915db09b79f knowit-0.9_beta3.ebuild 520
 MD5 c6bd28124573297d03a80c36520acb08 knowit-0.7.ebuild 633
 MD5 7608e7561d0a96900786e3a46326f282 ChangeLog 622
+MD5 e7299273f0d4f2e015427b4d161c60b2 knowit-0.9.ebuild 487
 MD5 58be6cd29482e487dd5d8006e8a44744 files/digest-knowit-0.7 63
 MD5 527d3fc72ccfa7edf00b7f4a067bb6a9 files/digest-knowit-0.8 63
+MD5 6676636e9ae515b3d8132108741e1c43 files/digest-knowit-0.9 63
 MD5 3873c4812cb04c16ce39a0e383b4ace6 files/digest-knowit-0.9_beta3 68
