@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.1 2003/12/04 09:31:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.2 2003/12/24 04:59:17 kumba Exp $
 
+  23 Dec 2003; Joshua Kinard <kumba@gentoo.org> metadata.xml:
+  New revision, adds toolchain support for several new archs and other minor
+  fixes
 
 *crossdev-0.2 (04 Dec 2003)
 
