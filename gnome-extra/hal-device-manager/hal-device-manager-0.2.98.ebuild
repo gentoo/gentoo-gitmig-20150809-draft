@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/hal-device-manager-0.2.98.ebuild,v 1.1 2004/10/02 15:49:29 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/hal-device-manager-0.2.98.ebuild,v 1.2 2004/11/08 08:49:36 mr_bones_ Exp $
 
 DESCRIPTION="HAL device viewer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
-
 SRC_URI=""
-LICENSE="GPL-2 | AFL-2.0"
 
+LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
