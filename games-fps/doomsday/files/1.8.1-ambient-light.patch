@@ -1,0 +1,18 @@
+--- deng-1.8.1/Src/r_world.c.orig	2004-06-28 00:26:38.000000000 +0530
++++ deng-1.8.1/Src/r_world.c	2004-08-21 01:21:25.000000000 +0530
+@@ -1447,13 +1447,13 @@
+ 	if(mapinfo)
+ 	{
+ 		mapgravity = mapinfo->gravity * FRACUNIT;
+-		r_ambient = mapinfo->ambient * 255;
++		if (r_ambient<200) { r_ambient = 200; }
+ 	}
+ 	else
+ 	{
+ 		// No map info found, set some basic stuff.
+ 		mapgravity = FRACUNIT;
+-		r_ambient = 0;
++		if (r_ambient<200) { r_ambient = 200; }
+ 	}
+ 
+ 	// Invalidate old cmds.
