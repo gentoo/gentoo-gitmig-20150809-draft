@@ -1,13 +1,14 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.4 2002/04/02 04:06:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.5 2002/04/02 22:23:39 seemant Exp $
 
 *sawfish-1.0.1-r3 (2 April 2002)
 
   2 April 2002; Seemant Kulleen <seemant@gentoo.org> sawfish-1.0.1-r3.ebuild :
 
   Slight nls fix in the install stage -- removed empty ${D}/usr/share/locale
-  directory.
+  directory.  And returned imlib to being a required dependency, instead of
+  optional.
 
 *sawfish-1.0.1-r3 (28 Mar 2002)
 
