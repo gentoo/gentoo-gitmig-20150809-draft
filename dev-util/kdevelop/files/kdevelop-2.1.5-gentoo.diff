@@ -79,3 +79,13 @@
  
    m_pInstallState->make	 = CToolClass::searchInstProgram("make");
    m_pInstallState->gmake = CToolClass::searchInstProgram("gmake");
+--- kdevelop/doctreeview.cpp.orig	2003-12-29 16:26:45.000000000 +0100
++++ kdevelop/doctreeview.cpp	2003-12-29 16:27:00.000000000 +0100
+@@ -826,7 +826,7 @@
+     void changePathes();
+     virtual void refresh();
+     #if KDE_QTVER >= 3
+-    void DocTreeKDELibsFolder::appendBooks(QDir dir);
++    void appendBooks(QDir dir);
+     #endif
+ };
