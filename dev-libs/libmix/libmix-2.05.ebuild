@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.7 2005/01/29 20:53:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.8 2005/04/06 03:32:05 vapier Exp $
 
 DESCRIPTION="Programs Crypto/Network/Multipurpose Library"
 HOMEPAGE="http://mixter.void.ru/"
@@ -22,15 +22,15 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_with no-net2` || die
+	econf $(use_with no-net2) || die
 	emake || die
 }
 
 src_install() {
 	make \
-		INSTALL_INCLUDES_IN=${D}/usr/include \
-		INSTALL_LIBRARY_IN=${D}/usr/lib \
-		INSTALL_MANPAGE_IN=${D}/usr/share/man \
+		INSTALL_INCLUDES_IN="${D}"/usr/include \
+		INSTALL_LIBRARY_IN="${D}"/usr/$(get_libdir) \
+		INSTALL_MANPAGE_IN="${D}"/usr/share/man \
 		install || die
 	dodoc CHANGES
 }
