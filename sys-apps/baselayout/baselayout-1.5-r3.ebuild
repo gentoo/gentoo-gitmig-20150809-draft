@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.18 2001/07/09 17:59:37 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.19 2001/07/13 19:48:13 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -69,9 +69,11 @@ src_install()
 	chmod 775 ${D}/var/lock
 	insopts -m0644
 	insinto /etc
+	ln -s /proc/filesystems /etc/filesystems
+	#makes things always up-to-date ^
 	for foo in services passwd shadow nsswitch.conf \
 	           inetd.conf ld.so.conf protocols fstab \
-		   hosts syslog.conf pwdb.conf filesystems \
+		   hosts syslog.conf pwdb.conf \
 		   group profile crontab inputrc networks
 	do
 		doins ${FILESDIR}/${foo}
