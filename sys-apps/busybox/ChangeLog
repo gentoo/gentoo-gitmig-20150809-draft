@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.2 2002/04/24 21:28:49 woodchip Exp $
+
+  24 Feb 2002; Donny Davies <woodchip@gentoo.org>
+  files/Config.h-0.60.2-cd :
+
+  Comment out #define BB_MT since we're including the 'real' mt-st on the
+  boot CD now.
 
 *busybox-0.60.2 (1 Feb 2002)
 
