@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/cmfquickinstallertool
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/ChangeLog,v 1.5 2004/06/25 01:19:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/ChangeLog,v 1.6 2004/07/27 19:24:37 batlogg Exp $
+
+*cmfquickinstallertool-1.5.0 (27 Jul 2004)
+
+  27 Jul 2004; Jodok Batlogg <batlogg@gentoo.org>;
+  -cmfquickinstallertool-1.0.ebuild, -cmfquickinstallertool-1.1.ebuild,
+  cmfquickinstallertool-1.4.ebuild, +cmfquickinstallertool-1.5.0.ebuild:
+  version bump, removed old ebuilds, added IUSE
 
   26 Mar 2004; Jodok Batlogg <batlogg@gentoo.org>;
   cmfquickinstallertool-1.0.ebuild, cmfquickinstallertool-1.1.ebuild,
