@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.2a.ebuild,v 1.3 2004/09/13 09:34:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.2a.ebuild,v 1.4 2004/09/14 07:05:56 eradicator Exp $
 
-IUSE="oggvorbis"
+IUSE=""
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/imms/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-# ~ppc ~sparc: Need to add sqlite-3* to ~arch first...
+# ~sparc: Need to add sqlite-3* to ~arch first...
 KEYWORDS="~x86 ~amd64 ~ppc"
 
 RDEPEND="=dev-db/sqlite-3*
