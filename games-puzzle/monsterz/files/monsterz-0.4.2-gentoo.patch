@@ -1,8 +1,16 @@
-Touchup the paths so that the default isn't $PWD.
-
---- monsterz.py
-+++ monsterz.py
-@@ -1225,7 +1225,7 @@
+--- monsterz.py.orig	2005-03-23 19:06:37.000000000 -0500
++++ monsterz.py	2005-03-24 00:20:44.000000000 -0500
+@@ -23,8 +23,7 @@
+ VERSION = '0.4.2'
+ COPYRIGHT = 'MONSTERZ - COPYRIGHT 2005 SAM HOCEVAR - MONSTERZ IS ' \
+             'FREE SOFTWARE, YOU CAN REDISTRIBUTE IT AND/OR MODIFY IT ' \
+-            'UNDER THE TERMS OF THE DO WHAT THE FUCK YOU WANT TO ' \
+-            'PUBLIC LICENSE, VERSION 2 - '
++            'UNDER THE TERMS OF THE WTFPL, Version 2 - '
+ 
+ # Constants
+ HAVE_AI = False # broken
+@@ -1381,7 +1380,7 @@
      print '          (C) 2002 Castles Music Productions <info@castlesmusic.co.nz>'
      print '          (C) 1998 MenTaLguY <mental@rydia.net>'
      print 'This is free software; you can redistribute it and/or modify it under the terms'
@@ -11,7 +19,7 @@ Touchup the paths so that the default isn't $PWD.
      print 'by Sam Hocevar. See http://sam.zoy.org/projects/COPYING.WTFPL for more details.'
  
  def usage():
-@@ -1247,8 +1247,8 @@
+@@ -1403,8 +1402,8 @@
      from getopt import getopt, GetoptError
      global system, data, hiscores, fonter, monsterz
      global FLAG_FULLSCREEN, FLAG_MUSIC, FLAG_SFX
