@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6.ebuild,v 1.6 2003/04/30 22:55:01 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6.ebuild,v 1.7 2003/05/01 20:58:06 nitro Exp $
 
 IUSE="ssl kerberos ipv6 tcpd"
 
@@ -25,8 +25,6 @@ src_unpack() {
 
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
-r
-r
 }
 
 src_compile() {
