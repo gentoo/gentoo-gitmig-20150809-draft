@@ -271,8 +271,7 @@ of your sale will go towards further Gentoo Linux development.</p>
 						</xsl:otherwise>
 					</xsl:choose>
 					<a class="menulink" href="/doc/build.html">Download/Install</a> |
-					</xsl:choose>
-						<xsl:choose>
+					<xsl:choose>
 						<xsl:when test="/mainpage/@id='changelog'">
 							<a class="highlight" href="/index-changelog.html">CVS Changelog</a> |
 						</xsl:when>
