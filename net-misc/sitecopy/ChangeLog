@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.22 2004/08/14 05:21:58 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.23 2004/09/16 22:17:26 chriswhite Exp $
+
+*sitecopy-0.14.1 (16 Sep 2004)
+
+  16 Sep 2004; Chris White <chriswhite@gentoo.org>
+  +files/sitecopy-0.14.1-nls.patch, +sitecopy-0.14.1.ebuild:
+  Updated to version 0.14.1 as per bug #63855. Cleaned the ebuild logic up some
+  (use_with and use_enable). Removed some of the gnome fixes that are no longer
+  required. Crunched down the xsitecopy and sitecopy build decision to one or
+  the other. Fixed an nls issue while I was at it.
 
   14 Aug 2004; Chris White <chriswhite@gentoo.org> sitecopy-0.13.4-r2.ebuild:
   Marked stable on x86.  Closes stable marking for bug #51585.
