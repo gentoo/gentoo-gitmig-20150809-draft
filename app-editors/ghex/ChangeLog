@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.5 2002/12/13 10:56:05 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.6 2003/01/07 01:20:27 foser Exp $
+
+*ghex-2.0.0 (06 Jan 2003)
+
+  06 Jan 2003; foser <foser@gentoo.org> ghex-2.0.0.ebuild :
+  New version for gnome2, slotified it
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-1.2.1.ebuild,v 1.10 2002/12/09 04:17:39 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-1.2.1.ebuild,v 1.11 2003/01/07 01:20:30 foser Exp $
 
 IUSE="nls"
 
@@ -21,7 +21,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-SLOT="0"
+SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc "
 
