@@ -1,0 +1,10 @@
+# ChangeLog for net-www/pears
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/pears/ChangeLog,v 1.1 2004/07/23 01:00:49 pythonhead Exp $
+
+*pears-1.7 (22 Jul 2004)
+
+  22 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +pears-1.7.ebuild:
+  New package. Thanks Shane Hathaway for the ebuild. bug# 27833
+
