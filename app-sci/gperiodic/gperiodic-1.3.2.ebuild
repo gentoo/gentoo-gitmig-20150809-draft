@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/gperiodic-1.3.2.ebuild,v 1.8 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/gperiodic-1.3.2.ebuild,v 1.9 2002/10/17 14:26:47 vapier Exp $
 
 IUSE="nls"
 
@@ -19,7 +19,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 PROVIDE="app-misc/gperiodic"
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${A}
 	cd ${S}
 
  	#Fix version number,comment out non-working lex inquiry
@@ -36,23 +36,23 @@ src_compile() {
 		myconf="--disable-nls"
 	fi
 
-	./configure --host=${CHOST}					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-	    	    --infodir=/usr/share/info 				\
-		    --mandir=/usr/share/man 				\
+	./configure --host=${CHOST} \
+		    --prefix=/usr \
+		    --sysconfdir=/etc \
+		    --localstatedir=/var/lib \
+	    	    --infodir=/usr/share/info \
+		    --mandir=/usr/share/man \
 		    ${myconf} || die
 	
 	emake || die
 }
 
 src_install () {
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-	     infodir=${D}/usr/share/info				\
-	     mandir=${D}/usr/share/man					\
+	make prefix=${D}/usr \
+	     sysconfdir=${D}/etc \
+	     localstatedir=${D}/var/lib \
+	     infodir=${D}/usr/share/info \
+	     mandir=${D}/usr/share/man \
 	     install || die
 	
 	doman man/gperiodic.1

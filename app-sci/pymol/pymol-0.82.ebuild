@@ -1,11 +1,11 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.82.ebuild,v 1.2 2002/10/04 05:01:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.82.ebuild,v 1.3 2002/10/17 14:26:47 vapier Exp $
 
-A="pymol-0_82-src.tgz"
+MY_P="pymol-0_82-src.tgz"
 S="$WORKDIR/${P}"
 DESCRIPTION="A Python-extensible molecular graphics system."
-SRC_URI="http://download.sourceforge.net/pymol/${A}"
+SRC_URI="http://download.sourceforge.net/pymol/${MY_P}"
 HOMEPAGE="http://pymol.sf.net"
 LICENSE="PSF-2.2"
 SLOT="0"
@@ -17,8 +17,7 @@ DEPEND="dev-lang/python
 	dev-lang/tk
 	media-libs/libpng
 	sys-libs/zlib
-	media-libs/glut
-	"
+	media-libs/glut"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -34,8 +33,7 @@ src_compile() {
 }
 
 
-src_install() 
-{
+src_install() {
 	local PYMOL_PATH=/usr/lib/pymol/${PV}
 	mkdir -p ${D}/usr/lib/pymol/${PV}
 	cp -a modules ${D}/usr/lib/pymol/${PV}

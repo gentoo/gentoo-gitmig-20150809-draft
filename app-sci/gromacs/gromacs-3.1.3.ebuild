@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/gromacs-3.1.3.ebuild,v 1.6 2002/10/17 14:26:47 vapier Exp $
 
 DESCRIPTION="The ultimate Molecular Dynamics simulation package"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.6.ebuild,v 1.5 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.6.ebuild,v 1.6 2002/10/17 14:26:47 vapier Exp $
 
 IUSE="tcltk"
 
@@ -20,22 +20,19 @@ DEPEND="virtual/x11
 src_compile() {
 	local myopts
 
-	if [ "`use tcltk`" ]
-	then
-		myopts="--with-tk"
-	fi
+	use tcltk && myopts="--with-tk"
 
 	./configure \
-			--host=${CHOST} \
-			--prefix=/usr \
-			--infodir=/usr/share/info \
-			--mandir=/usr/share/man \
-			--sysconfdir=/etc \
-			--localstatedir=/var \
-			${myopts} || die "./configure failed"
+		--host=${CHOST} \
+		--prefix=/usr \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		${myopts} || die "./configure failed"
 	# HOME must be set to prevent writing to /root directory
-	export HOME=/var/tmp/portage/${P}/work        
-    make all || die
+	export HOME=/var/tmp/portage/${P}/work
+	make all || die
 }
 
 src_install () {

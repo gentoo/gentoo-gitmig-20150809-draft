@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /home/cvsroot/gentoo-x86/skel.build,v 1.7 2001/08/25 21:15:08 chadh Exp
+# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/moldy-2.16e.ebuild,v 1.7 2002/10/17 14:26:47 vapier Exp $
 
 IUSE="X"
 
@@ -15,15 +15,12 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc
-                X? ( x11-base/xfree )"
+	X? ( x11-base/xfree )"
 
 src_compile() {
+	local myconf
 
-        local myconf
-        if [ -z "`use X`" ]
-        then
-                myconf="--without-x"
-        fi
+	use X || myconf="--without-x"
 
 #Individuals may want to edit the OPT* variables below.
 #From the READ.ME:
@@ -35,27 +32,23 @@ src_compile() {
 #function arguments as restricted pointers which are not aliased to
 #any other object".  OPT is used for less preformance-critical modules
 #and may be set to a lower level of optimization than OPT2. 
-    
-        OPT=${CFLAGS} OPT2=${CFLAGS} \
-        ./configure --prefix=/usr \
-                                --host=${CHOST} \
-                                ${myconf} || die
-        
-        emake || die
+
+	OPT=${CFLAGS} OPT2=${CFLAGS} \
+	./configure --prefix=/usr \
+		--host=${CHOST} \
+		${myconf} || die
+
+	emake || die
 	make moldy.pdf || die
 }
 
-src_install () {
-        
+src_install() {
 	dodir /usr/bin
-        make prefix=${D}/usr install || die
-        rm Makefile.in configure.in config.h.in
-        insinto /usr/share/${PN}/examples/
-        doins *.in *.out control.*
-        dodoc BENCHMARK COPYING READ.ME RELNOTES
+	make prefix=${D}/usr install || die
+	rm Makefile.in configure.in config.h.in
+	insinto /usr/share/${PN}/examples/
+	doins *.in *.out control.*
+	dodoc BENCHMARK COPYING READ.ME RELNOTES
 	insinto /usr/share/doc/${P}/pdf
 	newins moldy.pdf moldy-manual.pdf
-        
 }
-
-
