@@ -1,7 +1,7 @@
 # ChangeLog for sys-apps/schedtool
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedtool/ChangeLog,v 1.1 2004/04/02 08:26:01 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedtool/ChangeLog,v 1.2 2004/04/02 08:28:52 steel300 Exp $
 
   02 Apr 2004; Jason Cox <steel300@gentoo.org> :
-  Initial entry for schedtool, closes BUG 25786
+  Initial entry for schedtool, closes BUG 41939
 
