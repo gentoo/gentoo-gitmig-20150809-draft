@@ -1,11 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.5 2003/09/04 04:52:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.6 2003/09/24 08:39:47 seemant Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
 #	theora - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
+
+
+inherit gcc
 
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi
@@ -69,8 +72,6 @@ if [ -n "`use kde`" -o -n "`use arts`" ]; then
 	set-kdedir 3
 	# $KDEDIR is now set to arts/kdelibs location
 fi
-
-inherit gcc
 
 src_unpack() {
 	unpack ${A}
