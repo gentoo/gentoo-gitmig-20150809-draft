@@ -2,7 +2,7 @@ MD5 2040447ee9c5d221fb0ec342afa1085c files/digest-xfig-3.2.3d-r1 139
 MD5 410ddf8ebcca6c2714f820d737f136c0 files/digest-xfig-3.2.4-r1 137
 MD5 410ddf8ebcca6c2714f820d737f136c0 files/digest-xfig-3.2.4 137
 MD5 1d27cd35de86081aa824a8f837f14745 files/xfig-3.2.4-xaw3d.diff 465
-MD5 9dc76e4ef80b5fada21ebe765eb3becc xfig-3.2.3d-r1.ebuild 999
+MD5 0a417a1582f437da13619e4506c1a0b2 xfig-3.2.3d-r1.ebuild 979
 MD5 e76292633806b43c5f16759b03dbc015 ChangeLog 1817
-MD5 b29a3ab2fd738fb7e23d1ba6dc7507d0 xfig-3.2.4.ebuild 1011
-MD5 c2d0bb0b8eefa3344a5a245a28df51af xfig-3.2.4-r1.ebuild 1076
+MD5 463ee2b71e6fe98f0f035f16cf654410 xfig-3.2.4.ebuild 992
+MD5 322419b8cc389b22e9572ff195da4c26 xfig-3.2.4-r1.ebuild 1057
