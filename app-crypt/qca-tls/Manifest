@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e3e2588c6c051793efb01a42b62e2007 qca-tls-1.0.ebuild 848
 MD5 8045a9e81f29595e1b361ae2857fd786 ChangeLog 1360
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 3671d5dd5ee844893a26a145f8702c4d qca-tls-1.0.ebuild 915
 MD5 5398cdc5d090333de8881b20f3d10f8e files/digest-qca-tls-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdSJVHTu7gpaalycRAvfkAJ9cidhrlXOOGet1o9O3CNITwGRc9QCffO98
+3WbJ2wOHs4TynduB9PvLcMQ=
+=GFKn
+-----END PGP SIGNATURE-----
