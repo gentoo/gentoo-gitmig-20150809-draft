@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.9 2004/07/26 22:38:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.10 2004/09/01 07:00:11 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -91,6 +91,15 @@ src_unpack() {
 		sed -i "${LINE}s/$CUR_CFLAGS/$NEW_CFLAGS/" Configure
 	done
 	IFS=$OLDIFS
+
+	if [ "$(get_libdir)" != "lib" ] ; then
+		# using a library directory other than lib requires some magic
+		sed -e 	"s+\(\$(INSTALL_PREFIX)\$(INSTALLTOP)\)/lib+\1/$(get_libdir)+g" \
+		-e	"s+libdir=\$\${exec_prefix}/lib+libdir=\$\${exec_prefix}/$(get_libdir)+g" \
+		Makefile.org > Makefile.new
+		mv Makefile.new Makefile.org
+		./config --test-sanity || die
+	fi
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
@@ -249,7 +258,7 @@ src_install() {
 		dolib.so ${WORKDIR}/${OLD_096_P}/libssl.so.0.9.6|| die "libssl.so.0.9.6 not found"
 	}
 
-	fperms a+x /usr/lib/pkgconfig #34088
+	fperms a+x /usr/$(get_libdir)/pkgconfig #34088
 }
 
 pkg_postinst() {
