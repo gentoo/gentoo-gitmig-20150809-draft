@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3423 2004/12/27 14:27:14 gmsoft Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3424 2004/12/28 09:31:17 mr_bones_ Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -37,6 +37,7 @@ sys-kernel/hppa-dev-sources
 # can give us a non insecure shoutcast
 # package >:|
 media-sound/shoutcast-server-bin
+media-sound/shoutcast-trans-bin
 
 # <dholm@gentoo.org> (26 Dec 2004)
 # masked 2.6.10 since the asfs patch needs to be updated
