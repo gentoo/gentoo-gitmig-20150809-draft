@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladcca
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.10 2004/04/03 06:00:14 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ChangeLog,v 1.11 2004/04/16 01:09:39 lv Exp $
+
+  15 Apr 2004; Travis Tilley <lv@gentoo.org> ladcca-0.4.0.ebuild:
+  added ~amd64 keyword
 
   03 Apr 2004; Lars Weiler <pylon@gentoo.org> ladcca-0.4.0.ebuild:
   stable on ppc
