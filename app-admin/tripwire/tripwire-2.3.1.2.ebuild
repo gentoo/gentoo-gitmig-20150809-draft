@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.7 2003/10/09 14:29:06 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.8 2003/11/04 23:45:47 taviso Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 TW_VER="2.3.1-2"
 DESCRIPTION="Open Source File Integrity Checker and IDS"
@@ -13,9 +13,6 @@ SRC_URI="mirror://sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -alpha"
-#NOTE:  im working on integrating debians portability fixes, alpha support (at least)
-#		will be working soon.
-
 DEPEND="virtual/glibc
 	dev-util/patchutils
 	sys-devel/automake
@@ -41,8 +38,7 @@ src_unpack() {
 	epatch ${FILESDIR}/tripwire-mkstemp.patch.bz2
 
 	# pull out the interesting debian patches
-	filterdiff  -i '*/man/man8/twadmin.8' \
-		-z  --strip=1	\
+	filterdiff  -i '*/man/man8/twadmin.8' -z  --strip=1	\
 		${DISTDIR}/tripwire_2.3.1.2-6.1.diff.gz > ${T}/debian-patch.diff
 	epatch ${T}/debian-patch.diff
 
@@ -53,6 +49,11 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}/src
+
+	# tripwire no like -Os #32613
+	# (04 Nov 2003) taviso@gentoo.org
+	replace-flags -Os -O2
+
 	emake release RPM_OPT_FLAGS="${CXXFLAGS}"
 }
 
