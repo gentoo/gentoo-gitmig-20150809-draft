@@ -2,7 +2,7 @@
 # Gentoo Zope Instance configure tool.
 # Copyright 2003 Jason Shoemaker <kutsuya@gentoo.org>
 # Distributed under GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.1/zope-config,v 1.4 2003/04/04 22:05:04 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.1/zope-config,v 1.5 2004/07/18 02:26:33 dragonheart Exp $
 
 VERSION="0.1"
 ZUID=zope
