@@ -1,0 +1,8 @@
+# ChangeLog for net-analyzer/ftester
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ChangeLog,v 1.1 2003/01/30 21:10:27 jhhudso Exp $
+
+*ftester-0.8 (30 Jan 2003)
+
+  30 Jan 2003; Jared Hudson <jhhudso@gentoo.org> : Initial import. Credit goes
+  to Andrea Barisani <lcars@infis.univ.trieste.it>.
