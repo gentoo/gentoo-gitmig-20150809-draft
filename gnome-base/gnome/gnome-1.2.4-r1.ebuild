@@ -5,10 +5,10 @@
 
 A=""
 S=${WORKDIR}
-DESCRIPTION="GNOME 1.2.4 -- This package depends on everything you need."
+DESCRIPTION="GNOME 1.2.4 -- Install this package first, it sets up the environment and depends on everything else"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND="
+RDEPEND="
 	=gnome-base/mc-4.5.51
 	=gnome-base/gal-0.2.2
 	=gnome-base/oaf-0.6.1
@@ -30,3 +30,9 @@ DEPEND="
 	=gnome-base/libghttp-1.0.7
 	=gnome-base/libglade-0.15
 "
+src_install() {
+	insinto /etc/env.d
+	doins ${FILESDIR}/90gnome
+	#this file adds /opt/gnome stuff to the path
+}
+

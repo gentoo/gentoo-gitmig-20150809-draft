@@ -1,0 +1,4 @@
+PATH=/opt/kde2/bin
+ROOTPATH=/opt/kde2/bin
+LDPATH=/opt/kde2/lib
+KDEDIR=/opt/kde2
