@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/gtk-engines-flat-2.0-r1.ebuild,v 1.8 2004/07/09 21:33:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/gtk-engines-flat-2.0-r1.ebuild,v 1.9 2004/08/18 15:27:04 kugelfang Exp $
 
-inherit gtk-engines2
+inherit gtk-engines2 gnuconfig
 
 MY_PN=${PN/gtk-engines-flat/gtk-flat-theme}
 
@@ -18,3 +18,10 @@ SLOT="2"
 
 GTK1_S=${WORKDIR}/${MY_PN}-0.1
 GTK2_S=${WORKDIR}/${MY_PN}-2.0
+
+src_unpack() {
+	unpack ${A}
+	if [[ ${ARCH} == "amd64" ]]; then
+		gnuconfig_update ${WORKDIR}
+	fi
+}
