@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r1.ebuild,v 1.4 2002/12/24 15:05:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r1.ebuild,v 1.5 2002/12/29 01:57:29 drobbins Exp $
 
 MY_P="${P/-/-v}"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.sourceforge.net/projects/emu10k1/"
 DEPEND="virtual/linux-sources"
 RDEPEND="media-sound/aumix"
 
-KEYWORDS="x86 -ppc -sparc  -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 SLOT="${KV}"
 LICENSE="GPL-2"
 
