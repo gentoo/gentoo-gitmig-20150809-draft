@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmxkb
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/ChangeLog,v 1.1 2004/01/04 05:05:07 port001 Exp $
+
+*wmxkb-1.2.0 (04 Jan 2004)
+
+  04 Jan 2004; Ian Leitch <port001@gentoo.org> wmxkb-1.2.0.ebuild:
+  Initial commit; #32568
+
