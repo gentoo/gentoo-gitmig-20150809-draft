@@ -1,13 +1,17 @@
 # ChangeLog for net-mail/teapop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.3 2002/05/09 17:02:59 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.4 2002/11/05 02:05:01 seemant Exp $
+
+*teapop-0.3.3 (23 Mar 2002)
+
+  04 Nov 2002; Seemant Kulleen <seemant@gentoo.org> teapop-0.3.3.ebuild :
+
+  Fixed mis-spelling of "spool" in configure command, and changed it to
+  econf anyway.  Thanks to: ptlame@core.com (Joe) in bug #10222
 
   09 May 2002; Thilo Bangert <bangert@gentoo.org> files/tpop.xinetd
   
   fixed path for teapop - closes bug #2612
-
-
-*teapop-0.3.3 (23 Mar 2002)
 
   23 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/tpop.xinetd teapop-0.3.3 :
  
