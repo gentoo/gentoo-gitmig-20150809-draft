@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/autotrace
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.6 2003/12/03 15:53:55 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.7 2004/02/02 21:13:59 mholzer Exp $
+
+  02 Feb 2004; Martin Holzer <mholzer@gentoo.org> autotrace-0.31.1-r1.ebuild,
+  autotrace-0.31.1.ebuild:
+  adding media-libs/libexif to depend. Closes 39695
 
   03 Dec 2003; Aron Griffis <agriffis@gentoo.org> autotrace-0.31.1-r1.ebuild:
   Stable on alpha to support lilypond-1.8.2
