@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2_pre20030131.ebuild,v 1.1 2003/02/02 01:57:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2.ebuild,v 1.1 2003/02/05 23:54:47 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -54,9 +54,9 @@ PATCH_VER=""
 SNAPSHOT=""
 
 # Branch update support ...
-MAIN_BRANCH="3.2.1"  # Tarball, etc used ...
+MAIN_BRANCH="${PV}"  # Tarball, etc used ...
 #BRANCH_UPDATE="20021208"
-BRANCH_UPDATE="20030131"
+BRANCH_UPDATE=""
 
 if [ -z "${SNAPSHOT}" ]
 then
@@ -80,7 +80,7 @@ else
 fi
 #SRC_URI="${SRC_URI} mirror://gentoo/${P}-manpages.tar.bz2"
 
-DESCRIPTION="Modern C/C++ compiler written by the GNU people"
+DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
@@ -98,12 +98,13 @@ else
 fi
 
 DEPEND="virtual/glibc
-	>=sys-devel/gcc-config-1.2
+	>=sys-devel/binutils-2.13.90.0.18
+	>=sys-devel/gcc-config-1.3.1
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 			  
 RDEPEND="virtual/glibc
-	>=sys-devel/gcc-config-1.3.0
+	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
@@ -131,6 +132,8 @@ src_unpack() {
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
 
+	echo
+
 	# Branch update ...
 	if [ -n "${BRANCH_UPDATE}" ]
 	then
@@ -144,16 +147,15 @@ src_unpack() {
 	fi
 
 	# Patches from Redhat ...
-	epatch ${FILESDIR}/${MAIN_BRANCH}/gcc32-ada-make.patch
-	epatch ${FILESDIR}/${MAIN_BRANCH}/gcc32-shared-pthread.patch
-	use sparc && epatch ${FILESDIR}/${MAIN_BRANCH}/gcc32-sparc32-hack.patch
+	epatch ${FILESDIR}/3.2.1/gcc32-ada-make.patch
+	epatch ${FILESDIR}/3.2.1/gcc32-shared-pthread.patch
+	use sparc && epatch ${FILESDIR}/3.2.1/gcc32-sparc32-hack.patch
 
 	# Patches from Mandrake/Suse ...
-	epatch ${FILESDIR}/${MAIN_BRANCH}/gcc31-loop-load-final-value.patch
-	epatch ${FILESDIR}/${MAIN_BRANCH}/gcc32-fix-sixtrack.patch
-	epatch ${FILESDIR}/${MAIN_BRANCH}/gcc32-pr8213.patch
-	epatch ${FILESDIR}/${MAIN_BRANCH}/gcc32-strip-dotdot.patch
-	epatch ${FILESDIR}/${MAIN_BRANCH}/gcc32-athlon-alignment.patch
+	epatch ${FILESDIR}/3.2.1/gcc31-loop-load-final-value.patch
+	epatch ${FILESDIR}/3.2.1/gcc32-pr8213.patch
+	epatch ${FILESDIR}/3.2.1/gcc32-strip-dotdot.patch
+	epatch ${FILESDIR}/3.2.1/gcc32-athlon-alignment.patch
 
 	# Install our pre generated manpages if we do not have perl ...
 #	if [ ! -x /usr/bin/perl ]
