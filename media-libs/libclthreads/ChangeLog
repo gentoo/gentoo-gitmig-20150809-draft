@@ -1,10 +1,11 @@
 # ChangeLog for media-libs/libclthreads
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/ChangeLog,v 1.1 2004/10/09 21:44:12 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/ChangeLog,v 1.2 2004/10/09 21:46:00 trapni Exp $
 
 *libclthreads-1.0.0 (09 Oct 2004)
 
   09 Oct 2004; Christian Parpart <trapni@gentoo.org> +metadata.xml,
   +files/libclthreads-1.0.0-makefile.patch, +libclthreads-1.0.0.ebuild:
-  Initial import - as a dependency ongoing media-sound/jaaa (bug #66620)
+  Initial import. ebuild submitted by ron widler <ron@einfach.org>
+  as a dependency ongoing media-sound/jaaa (bug #66620)
 
