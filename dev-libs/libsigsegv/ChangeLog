@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libsigsegv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.7 2004/07/04 11:36:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.8 2004/10/16 05:47:27 ndimiduk Exp $
+
+  16 Oct 2004; Nick Dimiduk <ndimiduk@gentoo.org> libsigsegv-2.1.ebuild, 
+  +libsigsegv-2.1-darwin-7.x.patch:
+  Added patch to support macos.  The unpatched version should work with 
+  darwin versions through 5.5.  The patch fixes it for 7.x series darwin 
+  (Mac OS 10.3.x).  Added keyword ~ppc-macos.
 
   04 Jul 2004; David Holm <dholm@gentoo.org> libsigsegv-2.1.ebuild:
   Added to ~ppc.
