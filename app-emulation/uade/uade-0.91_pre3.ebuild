@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-0.91_pre3.ebuild,v 1.1 2004/07/21 00:14:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-0.91_pre3.ebuild,v 1.2 2004/07/21 11:56:32 spock Exp $
 
 DESCRIPTION="Unix Amiga Delitracker Emulator - plays old Amiga tunes through UAE emulation and cloned m68k-assembler Eagleplayer API"
 HOMEPAGE="http://uade.ton.tut.fi/"
@@ -23,9 +23,9 @@ src_compile() {
 	cd ${S}
 
 	./configure \
-		--prefix=${D}/usr \
-		--xmms-plugin-dir=${D}/usr/lib/xmms/Input \
-		--docdir=${D}/usr/share/doc/${PF} \
+		--prefix=/usr \
+		--package-prefix=${D} \
+		--docdir=/usr/share/doc/${PF} \
 		--without-bmp \
 		`use_with oss` \
 		`use_with sdl` \

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/uade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.8 2004/07/21 00:14:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.9 2004/07/21 11:56:32 spock Exp $
+
+  21 Jul 2004; Michal Januszewski <spock@gentoo.org> uade-0.91_pre3.ebuild:
+  Fixed a problem with configure that would make UADE totally useless.
 
 *uade-0.91_pre3 (21 Jul 2004)
 
