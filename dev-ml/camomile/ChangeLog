@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/camomile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.5 2004/09/05 07:24:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.6 2004/09/10 18:02:38 mattam Exp $
+
+*camomile-0.6.0 (10 Sep 2004)
+
+  10 Sep 2004; Matthieu Sozeau <mattam@gentoo.org> +camomile-0.5.3-r1.ebuild,
+  -camomile-0.5.3.ebuild, +camomile-0.6.0.ebuild:
+  Fix bug #63560 issues, add new version released yesterday.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
