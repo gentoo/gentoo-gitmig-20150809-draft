@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-1.5.ebuild,v 1.5 2004/07/15 01:58:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-1.5.ebuild,v 1.6 2004/09/29 13:26:29 ticho Exp $
 
 DESCRIPTION="qmail-queue multi-filter front end"
 SRC_URI="http://untroubled.org/qmail-qfilter/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://untroubled.org/qmail-qfilter/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc"
