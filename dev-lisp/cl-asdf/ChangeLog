@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-asdf
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.6 2003/10/17 00:08:04 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.7 2004/01/28 09:34:42 mkennedy Exp $
+
+*cl-asdf-1.81 (27 Jan 2004)
+
+  27 Jan 2004; <mkennedy@gentoo.org> cl-asdf-1.81.ebuild:
+  New upstream.
 
 *cl-asdf-1.78 (16 Oct 2003)
 
