@@ -1,0 +1,61 @@
+
+# You can associate an extension to a player
+assoc .mpg SMPEG
+assoc .asf AVIDEV
+
+# You can associate a key to a function
+  binding q quit
+  binding Q quit
+  binding Escape swap_resolution
+  binding s snapshot
+  binding S snapshot
+  binding p pause
+  binding P pause
+  binding b begin
+  binding B begin
+  binding E end
+  binding e end
+  binding plus volume_up
+  binding KP_Add volume_up
+  binding minus volume_down
+  binding KP_Substract volume_down
+  binding slash mute
+  binding Right forward
+  binding Left backward
+  binding B begin
+
+# Load some renderers
+#loadg since shm_renderer is used by dga_renderer
+loadg shm_renderer
+load dga_renderer 
+
+# Load some players
+load avifile_player begin
+# Add some FOURCC codes
+# This was not included in avifile ...
+ fourcc CRAM msvidc32.dll
+ fourcc MSVC msvidc32.dll
+# And the path to look for dlls
+  path /usr/libexec/avifiles/win32
+end
+
+load avidev_player
+
+# load these with no global symbols
+load smpeg_player
+load mpeg3_player
+load mpeg2_player
+
+loadg xanim_player begin
+ path /usr/libexec/xanim/mods
+end
+
+# These libraries are needed by quicktime plugin
+lib_path /lib:/usr/lib:/usr/local/lib:/usr/X11R6/lib
+
+lib libjpeg.so
+lib libpng.so
+load quicktime_player
+
+
+
