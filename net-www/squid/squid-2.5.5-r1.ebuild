@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r1.ebuild,v 1.2 2004/05/01 02:24:02 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r1.ebuild,v 1.3 2004/05/12 12:23:30 randy Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/glibc
 	selinux? ( sec-policy/selinux-squid )"
 DEPEND="${RDEPEND} dev-lang/perl"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 s390"
 SLOT="0"
 
 src_unpack() {
