@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/utempter
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.8 2004/04/08 03:07:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.9 2004/04/09 19:14:44 spyderous Exp $
+
+  09 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; utempter-0.5.2.ebuild:
+  Fix incorrect x86, sparc and amd64 keywords to ~arch.
 
   07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
   utempter-0.5.3.2-r1.ebuild,
