@@ -1,3 +1,4 @@
+MD5 83082ef210443e41dc3ded9b15f2465b libnasl-2.1.0.ebuild 865
 MD5 a2e4498b07224f4fdc6e064d6c9bea43 libnasl-2.0.9.ebuild 924
 MD5 2a13df5fe9d0f2c01628860e442122ab libnasl-2.0.10a.ebuild 863
 MD5 0bc2b4ced0f08e80644f9552f633dc4b libnasl-2.0.8a.ebuild 934
@@ -7,6 +8,7 @@ MD5 440ec4b3920ede90f7bf5b79dcb5edc3 libnasl-2.0.7.ebuild 931
 MD5 66f66f3e28aba3711a59ab98581aafce files/libnasl-2.0.8a-gentoo.patch 534
 MD5 50f3046911a43f777da050b859d85c1e files/digest-libnasl-2.0.7 65
 MD5 da45246123e6334239214c0f820f73e0 files/digest-libnasl-2.0.9 65
+MD5 2d8a0937f9876d1b9c649f7a83262ed3 files/digest-libnasl-2.1.0 65
 MD5 66f66f3e28aba3711a59ab98581aafce files/libnasl.patch 534
 MD5 8599520c5115f9f3538972c99ce0b090 files/digest-libnasl-2.0.8a 66
 MD5 eb45974f93480339e1a71c55e38d9ee9 files/digest-libnasl-2.0.10a 67
