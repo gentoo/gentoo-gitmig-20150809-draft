@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.11-r4.ebuild,v 1.1 2002/11/07 08:53:36 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.11-r4.ebuild,v 1.2 2002/11/11 20:30:23 naz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION=" Screen is a full-screen window manager that multiplexes a
@@ -19,7 +19,7 @@ src_unpack() {
 	cd ${S}
 }
 src_compile() {
-	addpredict "tty"
+	addpredict "`tty`"
 	addpredict "${SSH_TTY}"
 
 	econf \
