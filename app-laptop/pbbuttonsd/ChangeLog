@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.13 2004/09/15 08:08:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.14 2004/10/06 02:25:05 pylon Exp $
+
+  06 Oct 2004; Lars Weiler,,, <lars@gentoo.org>
+  +files/pbbuttonsd-0.6.5-backlight.patch, pbbuttonsd-0.6.5.ebuild:
+  Added upstream patch from bug #64591 as long as it is not fixed upstream.
 
 *pbbuttonsd-0.6.5 (15 Sep 2004)
 
