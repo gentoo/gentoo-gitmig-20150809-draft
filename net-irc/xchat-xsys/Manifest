@@ -5,14 +5,14 @@ MD5 ba951ba554514d3e53a5dbd319dad3d5 ChangeLog 904
 MD5 42cef2da59c81f792584c3f9048a1930 metadata.xml 250
 MD5 a5f4dd9b255c8dbe5ab46f6dac13a68e xchat-xsys-1.0.6.ebuild 982
 MD5 e9341f9089bb5c3425f9d9b391c65d8f xchat-xsys-1.9.0.ebuild 690
-MD5 5430095b92f2513ddf8f11ebfc2c04cb xchat-xsys-1.9.1.ebuild 695
+MD5 a847f331c64fbf3e3dd1b4cf2fa15c9f xchat-xsys-1.9.1.ebuild 703
 MD5 d17f93776f6856c326d07b3ac7526e14 files/digest-xchat-xsys-1.0.6 62
 MD5 4e2a8543fa153a78874311b727f4dde3 files/digest-xchat-xsys-1.9.0 61
 MD5 f9d3eedf5907d949b6f52bfdbc580bd7 files/digest-xchat-xsys-1.9.1 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBz3pmArHZZzCEUG0RAhFsAJ0W3vKRVO9Do/kCIhPayoTPF0HkRQCbBhFf
-CbeLaNp4RNfEOA14nEM6OVk=
-=8ngr
+iD8DBQFBz3r+ArHZZzCEUG0RAre+AJ4wra0AyASzyvHBQpzVlAgNVtdOIgCfQV+w
+9TM5HRqBYSTd9aPCc04Arn4=
+=aKRg
 -----END PGP SIGNATURE-----

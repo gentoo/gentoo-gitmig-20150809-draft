@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.12.ebuild,v 1.6 2004/12/04 23:17:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.12.ebuild,v 1.7 2004/12/27 02:59:51 eradicator Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/lib/xchat/plugins
+	exeinto /usr/$(get_libdir)/xchat/plugins
 	doexe xchatosd.so || die "doexe failed"
 	dodoc ChangeLog README || die "dodoc failed"
 }
