@@ -1,7 +1,7 @@
 # default: off
 # description: A chargen server. This is the udp version.
 
-service chargen-udp
+service chargen
 {
 	type        = INTERNAL UNLISTED
 	id          = chargen-dgram

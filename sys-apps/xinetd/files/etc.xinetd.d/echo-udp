@@ -1,7 +1,7 @@
 # default: off
 # description: An echo server. This is the udp version.
 
-service echo-udp
+service echo
 {
 	type        = INTERNAL UNLISTED
 	id          = echo-dgram
