@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.19 2004/03/21 07:43:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.20 2004/04/15 23:25:01 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org>
+  sgml-common-0.6.3-r4.ebuild:
+  adding s390 keywords
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> sgml-common-0.6.3-r4.ebuild:
   Marked Stable on mips.
