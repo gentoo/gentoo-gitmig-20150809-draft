@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r2.ebuild,v 1.6 2004/06/24 23:21:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r2.ebuild,v 1.7 2004/10/14 10:08:03 usata Exp $
 
 inherit eutils
 
@@ -14,11 +14,9 @@ SRC_URI="ftp://ftp.x.org/contrib/applications/${P}.tar.gz
 HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="x86 ~sparc -alpha ppc"
+KEYWORDS="x86 ~sparc -alpha ppc ~ppc-macos"
 
-DEPEND="${RDEPEND}
-	app-i18n/nkf"
-RDEPEND="virtual/x11
+DEPEND="virtual/x11
 	sys-libs/ncurses
 	Xaw3d? ( x11-libs/Xaw3d )"
 
@@ -49,7 +47,7 @@ src_install(){
 	# install man pages
 	newman kterm.man kterm.1
 	insinto /usr/share/man/ja/man1
-	nkf -e kterm.jman > kterm.ja.1
+	iconv -f ISO-2022-JP -t EUC-JP kterm.jman > kterm.ja.1
 	newins kterm.ja.1 kterm.1
 
 	dodoc README.kt
