@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.49 2004/01/19 02:28:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.50 2004/02/01 23:19:26 latexer Exp $
+
+*pcmcia-cs-3.2.5-r1 (01 Feb 2004)
+
+  01 Feb 2004; Peter Johanson <latexer@gentoo.org> pcmcia-cs-3.2.5-r1.ebuild,
+  pcmcia-cs-3.2.5.ebuild:
+  Added a fix for module-init-tools systems
 
   19 Jan 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   pcmcia-cs-3.1.34-r8.ebuild, pcmcia-cs-3.2.4.ebuild, pcmcia-cs-3.2.5.ebuild:
