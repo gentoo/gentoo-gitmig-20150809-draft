@@ -1,3 +1,5 @@
 MD5 d18cc34dc520e877707e55b24dfa9760 catalyst-1.0.ebuild 1039
-MD5 4fc93b911531d9a3888f9e5abc5e4c9e ChangeLog 329
+MD5 5bf2d35898ceb3149147f75bfe5cdb68 ChangeLog 461
+MD5 cdda1875414b1f39f2bac8bd6045c6e2 catalyst-1.0.1.ebuild 1152
 MD5 d7d9dd2f5db3807b1b3026072bd7b67f files/digest-catalyst-1.0 65
+MD5 4e9cfe411cd8c2ad25ad93e0485a6a1e files/digest-catalyst-1.0.1 67
