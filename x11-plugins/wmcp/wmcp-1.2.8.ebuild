@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.12 2004/06/28 20:41:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.13 2005/04/01 19:19:33 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.dockapps.com/file.php/id/158"
 SRC_URI="http://linux-sea.tucows.webusenet.com/files/x11/dock/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ia64 ppc ~sparc alpha hppa ~mips"
+KEYWORDS="x86 amd64 ia64 ppc ~sparc alpha hppa ~mips"
 
 DEPEND="virtual/libc
 	virtual/x11"
