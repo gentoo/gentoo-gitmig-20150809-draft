@@ -1,0 +1,173 @@
+--- bin/setclasspath.sh.orig	2004-01-15 12:24:32.000000000 -0500
++++ bin/setclasspath.sh	2004-02-11 18:12:57.586170211 -0500
+@@ -6,31 +6,25 @@
+ 
+ # Make sure prerequisite environment variables are set
+ if [ -z "$JAVA_HOME" ]; then
+-  echo "The JAVA_HOME environment variable is not defined"
+-  echo "This environment variable is needed to run this program"
++  echo "The JAVA_HOME environment variable is not defined!"
++  echo "This environment variable is needed to run this program."
++  echo "See the /etc/conf.d/tomcat file for details."
+   exit 1
+ fi
+-if $os400; then
+-  if [ ! -r "$JAVA_HOME"/bin/java -o ! -r "$JAVA_HOME"/bin/javac ]; then
+-    echo "The JAVA_HOME environment variable is not defined correctly"
+-    echo "This environment variable is needed to run this program"
+-    exit 1
+-  fi
+-else
+-  if [ ! -r "$JAVA_HOME"/bin/java -o ! -r "$JAVA_HOME"/bin/jdb -o ! -r "$JAVA_HOME"/bin/javac ]; then
+-    echo "The JAVA_HOME environment variable is not defined correctly"
+-    echo "This environment variable is needed to run this program"
+-    exit 1
+-  fi
++if [ ! -r "$JAVA_HOME"/bin/java -o ! -r "$JAVA_HOME"/bin/jdb -o ! -r "$JAVA_HOME"/bin/javac ]; then
++  echo "The JAVA_HOME environment variable is not defined correctly!"
++  echo "This environment variable is needed to run this program."
++  echo "See the /etc/conf.d/tomcat file for details."
++  exit 1
+ fi
+ if [ -z "$BASEDIR" ]; then
+-  echo "The BASEDIR environment variable is not defined"
+-  echo "This environment variable is needed to run this program"
++  echo "The BASEDIR environment variable is not defined!"
++  echo "This environment variable is needed to run this program."
+   exit 1
+ fi
+ if [ ! -r "$BASEDIR"/bin/setclasspath.sh ]; then
+-  echo "The BASEDIR environment variable is not defined correctly"
+-  echo "This environment variable is needed to run this program"
++  echo "The BASEDIR environment variable is not defined correctly!"
++  echo "This environment variable is needed to run this program."
+   exit 1
+ fi
+ 
+@@ -38,22 +32,9 @@
+ JAVA_ENDORSED_DIRS="$BASEDIR"/common/endorsed
+ 
+ # Set standard CLASSPATH
+-CLASSPATH="$JAVA_HOME"/lib/tools.jar
+-
+-# OSX hack to CLASSPATH
+-JIKESPATH=
+-if [ `uname -s` = "Darwin" ]; then
+-  OSXHACK="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Classes"
+-  if [ -d "$OSXHACK" ]; then
+-    for i in "$OSXHACK"/*.jar; do
+-      JIKESPATH="$JIKESPATH":"$i"
+-    done
+-  fi
+-fi
++CLASSPATH="$CLASSPATH":"$JAVA_HOME"/lib/tools.jar
+ 
+ # Set standard commands for invoking Java.
+ _RUNJAVA="$JAVA_HOME"/bin/java
+-if [ $os400 = false ]; then
+-  _RUNJDB="$JAVA_HOME"/bin/jdb
+-fi
++_RUNJDB="$JAVA_HOME"/bin/jdb
+ _RUNJAVAC="$JAVA_HOME"/bin/javac
+--- bin/catalina.sh.orig	2004-01-15 12:24:32.000000000 -0500
++++ bin/catalina.sh	2004-02-11 16:11:49.000000000 -0500
+@@ -41,10 +41,6 @@
+ # OS specific support.  $var _must_ be set to either true or false.
+ cygwin=false
+ os400=false
+-case "`uname`" in
+-CYGWIN*) cygwin=true;;
+-OS400*) os400=true;;
+-esac
+ 
+ # resolve links - $0 may be a softlink
+ PRG="$0"
+@@ -66,26 +62,8 @@
+   . "$CATALINA_HOME"/bin/setenv.sh
+ fi
+ 
+-# For Cygwin, ensure paths are in UNIX format before anything is touched
+-if $cygwin; then
+-  [ -n "$JAVA_HOME" ] && JAVA_HOME=`cygpath --unix "$JAVA_HOME"`
+-  [ -n "$CATALINA_HOME" ] && CATALINA_HOME=`cygpath --unix "$CATALINA_HOME"`
+-  [ -n "$CATALINA_BASE" ] && CATALINA_BASE=`cygpath --unix "$CATALINA_BASE"`
+-  [ -n "$CLASSPATH" ] && CLASSPATH=`cygpath --path --unix "$CLASSPATH"`
+-  [ -n "$JSSE_HOME" ] && JSSE_HOME=`cygpath --path --unix "$JSSE_HOME"`
+-fi
+-
+-# For OS400
+-if $os400; then
+-  # Set job priority to standard for interactive (interactive - 6) by using
+-  # the interactive priority - 6, the helper threads that respond to requests
+-  # will be running at the same priority as interactive jobs.
+-  COMMAND='chgjob job('$JOBNAME') runpty(6)'
+-  system $COMMAND
+-
+-  # Enable multi threading
+-  export QIBM_MULTI_THREADED=Y
+-fi
++source /etc/profile
++source /etc/conf.d/tomcat
+ 
+ # Get standard Java environment variables
+ if [ -r "$CATALINA_HOME"/bin/setclasspath.sh ]; then
+@@ -112,16 +90,6 @@
+   CATALINA_TMPDIR="$CATALINA_BASE"/temp
+ fi
+ 
+-# For Cygwin, switch paths to Windows format before running java
+-if $cygwin; then
+-  JAVA_HOME=`cygpath --path --windows "$JAVA_HOME"`
+-  CATALINA_HOME=`cygpath --path --windows "$CATALINA_HOME"`
+-  CATALINA_BASE=`cygpath --path --windows "$CATALINA_BASE"`
+-  CATALINA_TMPDIR=`cygpath --path --windows "$CATALINA_TMPDIR"`
+-  CLASSPATH=`cygpath --path --windows "$CLASSPATH"`
+-  JSSE_HOME=`cygpath --path --windows "$JSSE_HOME"`
+-fi
+-
+ # ----- Execute The Requested Command -----------------------------------------
+ 
+ echo "Using CATALINA_BASE:   $CATALINA_BASE"
+@@ -199,7 +167,7 @@
+ elif [ "$1" = "start" ] ; then
+ 
+   shift
+-  touch "$CATALINA_BASE"/logs/catalina.out
++  touch "$CATALINA_OUT"
+   if [ "$1" = "-security" ] ; then
+     echo "Using Security Manager"
+     shift
+@@ -211,7 +179,7 @@
+       -Dcatalina.home="$CATALINA_HOME" \
+       -Djava.io.tmpdir="$CATALINA_TMPDIR" \
+       org.apache.catalina.startup.Bootstrap "$@" start \
+-      >> "$CATALINA_BASE"/logs/catalina.out 2>&1 &
++      >> "$CATALINA_OUT" 2>&1 &
+ 
+       if [ ! -z "$CATALINA_PID" ]; then
+         echo $! > $CATALINA_PID
+@@ -223,7 +191,7 @@
+       -Dcatalina.home="$CATALINA_HOME" \
+       -Djava.io.tmpdir="$CATALINA_TMPDIR" \
+       org.apache.catalina.startup.Bootstrap "$@" start \
+-      >> "$CATALINA_BASE"/logs/catalina.out 2>&1 &
++      >> "$CATALINA_OUT" 2>&1 &
+ 
+       if [ ! -z "$CATALINA_PID" ]; then
+         echo $! > $CATALINA_PID
+@@ -252,13 +220,8 @@
+ 
+   echo "Usage: catalina.sh ( commands ... )"
+   echo "commands:"
+-  if $os400; then
+-    echo "  debug             Start Catalina in a debugger (not available on OS400)"
+-    echo "  debug -security   Debug Catalina with a security manager (not available on OS400)"
+-  else
+-    echo "  debug             Start Catalina in a debugger"
+-    echo "  debug -security   Debug Catalina with a security manager"
+-  fi
++  echo "  debug             Start Catalina in a debugger"
++  echo "  debug -security   Debug Catalina with a security manager"
+   echo "  jpda start        Start Catalina under JPDA debugger"
+   echo "  run               Start Catalina in the current window"
+   echo "  run -security     Start in the current window with security manager"
