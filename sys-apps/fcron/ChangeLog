@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.30 2004/10/09 07:53:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.31 2004/10/11 14:19:17 ka0ttic Exp $
+
+  11 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  -files/2.9.4-braindead-configure-check.patch,
+  +files/fcron-2.0.0-configure.diff, -files/fcron-2.0.0-gentoo.diff,
+  -files/fcron-2.9.5-configure.diff, +files/fcron.conf-2.9.5,
+  fcron-2.0.0-r4.ebuild, fcron-2.0.1.ebuild, fcron-2.9.4.ebuild,
+  fcron-2.9.5.ebuild:
+  All versions now respect LDFLAGS, which leads to all versions now appending
+  -Wl,-z,now for the setuid QA notice. Removed duplicate patches. Added missing
+  sample config for 2.9.5. Also, updated metadata to reflect new cron herd.
 
 *fcron-2.9.5 (09 Oct 2004)
 

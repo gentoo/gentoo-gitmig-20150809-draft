@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r4.ebuild,v 1.7 2004/09/04 21:31:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r4.ebuild,v 1.8 2004/10/11 14:19:17 ka0ttic Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
@@ -22,14 +22,20 @@ PROVIDE="virtual/cron"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-configure.diff
 	epatch ${FILESDIR}/${P}-gcc34.diff
 	# fix LIBOBJS vs AC_LIBOBJ problem
 	sed -i -e 's|LIBOBJS|AC_LIBOBJ|g' configure.in
+	# respect LDFLAGS
+	sed -i "s:\(@LIBS@\):\$(LDFLAGS) \1:" Makefile.in || die "sed failed"
 	autoconf || die "autoconf problem"
 }
 
 src_compile() {
+	# QA security notice fix; see "[gentoo-core] Heads up changes in suid
+	# handing with portage >=51_pre21" for more details.
+	append-ldflags -Wl,-z,now
+
 	econf \
 		--with-username=cron \
 		--with-groupname=cron \

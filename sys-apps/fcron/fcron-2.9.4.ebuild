@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.4.ebuild,v 1.4 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.4.ebuild,v 1.5 2004/10/11 14:19:17 ka0ttic Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
@@ -25,21 +25,28 @@ PROVIDE="virtual/cron"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-braindead-configure-check.patch
-	use selinux && epatch ${FILESDIR}/fcron-2.9.4-selinuxupdate.diff
+
+	epatch ${FILESDIR}/${PN}-2.0.0-configure.diff
+	use selinux && epatch ${FILESDIR}/${P}-selinuxupdate.diff
+
+	# respect LDFLAGS
+	sed -i "s:\(@LIBS@\):\$(LDFLAGS) \1:" Makefile.in || die "sed failed"
+
 	autoconf || die "autoconf failed"
 }
 
 src_compile() {
 	local myconf=
-	use pam \
-		&& myconf="${myconf} --with-pam=yes" \
-		|| myconf="${myconf} --with-pam=no"
-	use doc && myconf="${myconf} --with-dsssl-dir=/usr/share/sgml/stylesheets/dsssl/docbook"
-	use selinux \
-		&& myconf="${myconf} --with-selinux=yes" \
-		|| myconf="${myconf} --with-selinux=no"
+	use doc && \
+		myconf="--with-dsssl-dir=/usr/share/sgml/stylesheets/dsssl/docbook"
+
+	# QA security notice fix; see "[gentoo-core] Heads up changes in suid
+	# handing with portage >=51_pre21" for more details.
+	append-ldflags -Wl,-z,now
+
 	econf \
+		$(use_with pam) \
+		$(use_with selinux) \
 		--with-username=cron \
 		--with-groupname=cron \
 		--with-piddir=/var/run \

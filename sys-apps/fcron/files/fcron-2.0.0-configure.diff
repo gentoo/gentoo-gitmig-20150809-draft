@@ -1,12 +1,12 @@
---- configure.in.orig	2004-04-18 18:14:37.944027760 -0400
-+++ configure.in	2004-04-18 18:14:57.447062848 -0400
-@@ -254,13 +254,8 @@
+--- fcron-2.0.0.orig/configure.in	2004-10-11 08:37:50.840101374 -0400
++++ fcron-2.0.0/configure.in	2004-10-11 09:47:14.310439574 -0400
+@@ -202,13 +202,7 @@
      fi
      ;;
    *)
 -    if test -d "$withval"; then
        etcdir="$withval"
-       AC_MSG_RESULT($withval)
+-      AC_MSG_RESULT($withval)
 -    else
 -      AC_MSG_ERROR([
 -Directory $withval does not exist])
