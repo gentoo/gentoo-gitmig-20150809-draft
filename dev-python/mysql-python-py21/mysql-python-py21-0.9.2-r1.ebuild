@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python-py21/mysql-python-py21-0.9.2-r1.ebuild,v 1.10 2004/06/25 01:34:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python-py21/mysql-python-py21-0.9.2-r1.ebuild,v 1.11 2004/07/02 05:01:31 eradicator Exp $
 
 PYTHON_SLOT_VERSION="2.1"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-db/mysql-3.22.19"
 
 src_compile() {
