@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/tpb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/ChangeLog,v 1.2 2004/03/15 15:21:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/ChangeLog,v 1.3 2004/03/31 01:10:52 latexer Exp $
+
+*tpb-0.6.1 (30 Mar 2004)
+
+  30 Mar 2004; Peter Johanson <latexer@gentoo.org> metadata.xml,
+  tpb-0.6.1.ebuild:
+  Bump. Changed herd to mobile. Thanks to Thomas Eckert <eckert.thomas@gmx.net>
+  for the bump info.
 
 *tpb-0.5.1 (08 Mar 2004)
 
