@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.5 2004/11/24 19:55:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.6 2004/11/27 14:12:32 genstef Exp $
+
+  27 Nov 2004; Stefan Schweizer <genstef@gentoo.org>
+  +files/davfs2.nokernelsrc.patch, davfs2-0.2.3.ebuild:
+  Kernel header fix, closes bug 62502, thank2 to Tobias Klauser
+  <tklauser@nuerscht.ch>
 
 *davfs2-0.2.3 (24 Nov 2004)
 

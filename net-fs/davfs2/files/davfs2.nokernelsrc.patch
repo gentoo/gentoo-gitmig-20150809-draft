@@ -1,0 +1,89 @@
+diff -urN davfs2-0.2.3-orig/configure davfs2-0.2.3/configure
+--- davfs2-0.2.3-orig/configure	2004-11-02 05:45:26.000000000 +0000
++++ davfs2-0.2.3/configure	2004-11-27 13:16:21.962753349 +0000
+@@ -310,7 +310,7 @@
+ # include <unistd.h>
+ #endif"
+ 
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT SET_MAKE INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA top_builddir CPP EGREP NEON_CONFIG LIBOBJS PKG_CONFIG NEON_SUPPORTS_SSL KRB5_CONFIG NEON_CFLAGS NEON_LIBS NEON_BUILD_BUNDLED AR ac_pt_AR RANLIB ac_pt_RANLIB NEON_TARGET NEON_OBJEXT NEONOBJS NEON_EXTRAOBJS NEON_LINK_FLAGS NEON_SUPPORTS_DAV XML2_CONFIG DAV_DEBUG KERNEL_SRC LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT SET_MAKE INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA top_builddir CPP EGREP NEON_CONFIG LIBOBJS PKG_CONFIG NEON_SUPPORTS_SSL KRB5_CONFIG NEON_CFLAGS NEON_LIBS NEON_BUILD_BUNDLED AR ac_pt_AR RANLIB ac_pt_RANLIB NEON_TARGET NEON_OBJEXT NEONOBJS NEON_EXTRAOBJS NEON_LINK_FLAGS NEON_SUPPORTS_DAV XML2_CONFIG DAV_DEBUG LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -858,7 +858,6 @@
+   --with-expat            force use of expat
+   --with-included-expat   use bundled expat sources
+   --with-debug        Set DEBUG
+-  --with-kernel-src        Set kernel source directory
+ 
+ Some influential environment variables:
+   CC          C compiler command
+@@ -13119,21 +13118,6 @@
+ 
+ 
+ 
+-# Check whether --with-kernel-src or --without-kernel-src was given.
+-if test "${with_kernel_src+set}" = set; then
+-  withval="$with_kernel_src"
+-  KERNEL="$withval"
+-else
+-  KERNEL="no"
+-fi;
+-
+-if test "$KERNEL" = "no"; then
+-	KERNEL_SRC=/usr/src/linux
+-else
+-	KERNEL_SRC="$KERNEL"
+-fi
+-CFLAGS="-I$KERNEL_SRC/include $CFLAGS"
+-
+ 
+ 	echo "$as_me:$LINENO: checking for ViceFid" >&5
+ echo $ECHO_N "checking for ViceFid... $ECHO_C" >&6
+@@ -15739,7 +15723,6 @@
+ s,@NEON_SUPPORTS_DAV@,$NEON_SUPPORTS_DAV,;t t
+ s,@XML2_CONFIG@,$XML2_CONFIG,;t t
+ s,@DAV_DEBUG@,$DAV_DEBUG,;t t
+-s,@KERNEL_SRC@,$KERNEL_SRC,;t t
+ s,@LTLIBOBJS@,$LTLIBOBJS,;t t
+ CEOF
+ 
+diff -urN davfs2-0.2.3-orig/configure.in davfs2-0.2.3/configure.in
+--- davfs2-0.2.3-orig/configure.in	2004-11-02 05:45:26.000000000 +0000
++++ davfs2-0.2.3/configure.in	2004-11-27 13:11:52.887371005 +0000
+@@ -40,23 +40,6 @@
+ ])
+ 
+ 
+-AC_DEFUN([DAV_CHECK_KERNEL],[
+-AC_ARG_WITH(kernel-src,
+-        [  --with-kernel-src        Set kernel source directory],
+-	[KERNEL="$withval"],
+-        [KERNEL="no"])
+-
+-if test "$KERNEL" = "no"; then
+-dnl #FIXME
+-dnl Kernel include and /usr/include dismatch problem
+-dnl 
+-	KERNEL_SRC=/usr/src/linux
+-else
+-	KERNEL_SRC="$KERNEL"
+-fi
+-CFLAGS="-I$KERNEL_SRC/include $CFLAGS"
+-])
+-
+ dnl Check for ViceFid in linux/coda.h
+ AC_DEFUN([DAV_CHECK_CODA_VICEFID], [
+ 	AC_CHECK_TYPE([ViceFid], [
+diff -urN davfs2-0.2.3-orig/Makefile.in davfs2-0.2.3/Makefile.in
+--- davfs2-0.2.3-orig/Makefile.in	2004-11-02 05:45:26.000000000 +0000
++++ davfs2-0.2.3/Makefile.in	2004-11-27 13:11:52.888371047 +0000
+@@ -14,7 +14,7 @@
+ # Toolchain settings
+ CC = @CC@
+ CFLAGS = @CFLAGS@
+-CPPFLAGS = @DEFS@ @CPPFLAGS@ @DAV_DEBUG@ -I@KERNEL_SRC@/include -I$(top_srcdir)/src 
++CPPFLAGS = @DEFS@ @CPPFLAGS@ @DAV_DEBUG@ -I$(top_srcdir)/src 
+ 
+ LDFLAGS = @LDFLAGS@
+ LIBS = @NEON_LIBS@ @LIBS@ 
