@@ -1,6 +1,6 @@
 diff -aur tomboy-0.3.1-orig/Tomboy/Applet.cs tomboy-0.3.1/Tomboy/Applet.cs
 --- tomboy-0.3.1-orig/Tomboy/Applet.cs	2005-01-18 06:32:37.000000000 -0500
-+++ tomboy-0.3.1/Tomboy/Applet.cs	2005-02-15 10:48:16.823646424 -0500
++++ tomboy-0.3.1/Tomboy/Applet.cs	2005-02-18 09:15:39.636662296 -0500
 @@ -7,7 +7,7 @@
  
  namespace Tomboy
@@ -17,7 +17,7 @@ diff -aur tomboy-0.3.1-orig/Tomboy/Applet.cs tomboy-0.3.1/Tomboy/Applet.cs
 +			
 +			// This is needed as on mono-1.1.4, the whole
 +			// applet gets reaped, including needed menu_verbs
-+			GLib.Timeout.Add(1000, ImALIVE);
++			GLib.Timeout.Add(1000, new GLib.TimeoutHandler(ImALIVE));
  		}
  
  		void ShowPreferencesVerb ()
@@ -35,7 +35,7 @@ diff -aur tomboy-0.3.1-orig/Tomboy/Applet.cs tomboy-0.3.1/Tomboy/Applet.cs
  			// This is needed to support transparent panel
 diff -aur tomboy-0.3.1-orig/Tomboy/panelapplet/generated/ChangeBackgroundHandler.cs tomboy-0.3.1/Tomboy/panelapplet/generated/ChangeBackgroundHandler.cs
 --- tomboy-0.3.1-orig/Tomboy/panelapplet/generated/ChangeBackgroundHandler.cs	2004-10-23 14:21:58.000000000 -0400
-+++ tomboy-0.3.1/Tomboy/panelapplet/generated/ChangeBackgroundHandler.cs	2005-02-15 10:48:16.824646272 -0500
++++ tomboy-0.3.1/Tomboy/panelapplet/generated/ChangeBackgroundHandler.cs	2005-02-18 07:51:37.000000000 -0500
 @@ -8,9 +8,9 @@
  	public delegate void ChangeBackgroundHandler(object o, ChangeBackgroundArgs args);
  
@@ -50,7 +50,7 @@ diff -aur tomboy-0.3.1-orig/Tomboy/panelapplet/generated/ChangeBackgroundHandler
  
 diff -aur tomboy-0.3.1-orig/Tomboy/panelapplet/generated/FactoryCallback.cs tomboy-0.3.1/Tomboy/panelapplet/generated/FactoryCallback.cs
 --- tomboy-0.3.1-orig/Tomboy/panelapplet/generated/FactoryCallback.cs	2004-10-23 14:21:58.000000000 -0400
-+++ tomboy-0.3.1/Tomboy/panelapplet/generated/FactoryCallback.cs	2005-02-15 10:48:16.824646272 -0500
++++ tomboy-0.3.1/Tomboy/panelapplet/generated/FactoryCallback.cs	2005-02-18 07:51:38.000000000 -0500
 @@ -5,6 +5,6 @@
  
  	using System;
@@ -61,7 +61,7 @@ diff -aur tomboy-0.3.1-orig/Tomboy/panelapplet/generated/FactoryCallback.cs tomb
  }
 diff -aur tomboy-0.3.1-orig/Tomboy/panelapplet/generated/PanelApplet.cs tomboy-0.3.1/Tomboy/panelapplet/generated/PanelApplet.cs
 --- tomboy-0.3.1-orig/Tomboy/panelapplet/generated/PanelApplet.cs	2004-10-31 21:55:25.000000000 -0500
-+++ tomboy-0.3.1/Tomboy/panelapplet/generated/PanelApplet.cs	2005-02-15 10:48:16.826645968 -0500
++++ tomboy-0.3.1/Tomboy/panelapplet/generated/PanelApplet.cs	2005-02-18 07:51:38.000000000 -0500
 @@ -37,7 +37,7 @@
  		static void changebackground_cb (IntPtr applet, int type, ref Gdk.Color color, IntPtr pixmap)
  		{
