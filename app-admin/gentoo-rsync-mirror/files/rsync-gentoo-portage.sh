@@ -6,7 +6,7 @@ OPTS="--quiet --recursive --links --perms --times --devices --delete --timeout=3
 #SRC="rsync://rsync1.us.gentoo.org/gentoo-portage"
 #If you are waiting for access to our master mirror, select one of our mirrors to mirror from:
 SRC="rsync://rsync.gentoo.org/gentoo-portage"
-DST="/space/gentoo/rsync/"
+DST="/opt/gentoo-rsync/portage/"
 
 echo "Started update at" `date` >> $0.log 2>&1
 logger -t rsync "re-rsyncing the gentoo-portage tree"
