@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/libdsp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/ChangeLog,v 1.1 2004/08/19 22:46:18 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/ChangeLog,v 1.2 2004/08/19 23:01:08 chriswhite Exp $
+
+*libdsp-4.9.2-r1 (20 Aug 2004)
+
+  20 Aug 2004; Chris White <chriswhite@gentoo.org> +libdsp-4.9.2-r1.ebuild:
+  Bumped to -r1 and added user posted doc flags and INLINES install fix. Thanks
+  to Ed Wildgoose <gentoo@wildgooses.com> for reporting.
 
 *libdsp-4.9.2 (20 Aug 2004)
 
