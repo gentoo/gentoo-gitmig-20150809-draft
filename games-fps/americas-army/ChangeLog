@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/americas-army
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.5 2004/01/09 16:16:21 wolf31o2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.6 2004/02/08 22:15:24 wolf31o2 Exp $
+
+  08 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-200.ebuild, americas-army-200a.ebuild:
+  Removing 2.0.0 version and updating 2.0.0a to fix broken mirrors. Closing bug
+  #40598.
 
 *americas-army-200a (09 Jan 2004)
 
