@@ -144,10 +144,6 @@ app-admin/logsentry
 #not compadible with 1.0, or at least not out of the box
 =gnome-extra/gtkhtml-1.1.2
 
-# <agenkin@gentoo.org> (26 Sep 2002)
-# Masking pending portage tree unfreeze.
->=media-sound/grip-3.0.3
-
 # <raker@gentoo.org> (25 Sep 2002)
 # version bump.  ssl and other fixes
 =net-mail/courier-imap-1.5.3
@@ -175,11 +171,6 @@ dev-perl/perl-ldap
 # <bcowan@gentoo.org> (27 Sep 2002)
 # new version of jfsutils for gentoo-sources-2.4.19-r10
 =sys-apps/jfsutils-1.0.23
-
-# <agenkin@gentoo.org> (21 Sep 2002)
-# Masking pending unfreeze.
->=media-video/ogle-0.8.5
->=media-video/ogle-gui-0.8.5
 
 # <satai@gentoo.org> (20 Sep 2002)
 # Too many problems.  Masking to fix.
