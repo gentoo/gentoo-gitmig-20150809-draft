@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.40 2003/11/18 01:08:15 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.41 2003/12/08 11:53:55 seemant Exp $
+
+*shadow-4.0.3-r9 (06 Dec 2003)
+
+  06 Dec 2003; Seemant Kulleen <seemant@gentoo.org> shadow-4.0.3-r9.ebuild:
+  version bump to force /bin/groups to be on the system -- /bin/groups has been
+  removed from coreutils, and now only shadow will provide it. Note that
+  coreutils used to compile su and not install it.  This behaviour was
+  changed in the bumped coreutils as well (not that that has any effect on
+  this, but thought I'd mention it anyway)
 
 *shadow-4.0.3-r8 (17 Nov 2003)
 
