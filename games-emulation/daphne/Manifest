@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 33dda2b9e3db204b5ee2b6f28baad36e ChangeLog 1053
-MD5 8fde2c78b448caeb2922dda3c6010a53 daphne-0.99.6-r2.ebuild 1956
+MD5 eb416c113d4423b6f9e89ef9c837c77e daphne-0.99.6-r2.ebuild 1956
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 b8108296fd1d844b69546291e958bb4c files/0.99.6-local-dapinput.patch 669
 MD5 8c819c5ceafbe235dfa7fb2a35bf84ce files/digest-daphne-0.99.6-r2 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBJs/OHTu7gpaalycRAgcoAKCdwI4oy8h9CmeDQG+rtH2abZ/arwCgx9vW
-MrHIX59nyvEn5JlsKvHZWV0=
-=0vJe
+iD8DBQFBVSEVHTu7gpaalycRArNGAJ9yhWahjjorEg99aWpcU+syM5mSSgCbB0Gf
+8ZGfgZqOdi5nXdem/Ohe3xo=
+=t76Z
 -----END PGP SIGNATURE-----
