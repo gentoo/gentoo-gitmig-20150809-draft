@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/wipe
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.1 2002/10/29 18:06:37 blizzy Exp $
+
+*wipe-2.1.0 (29 Oct 2002)
+
+  29 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import. ebuild
+  submitted by Cory Visi <cory@visi.name>
