@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.5 2005/01/24 09:56:58 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.6 2005/01/28 16:28:57 luckyduck Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -44,7 +44,7 @@ pkg_setup() {
 	SND_ERROR="ALSA is already compiled into the kernel."
 	SOUND_ERROR="Your kernel doesn't have sound support enabled."
 	SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.  Please disable them and re-emerge alsa-driver."
-	PNP_ERROR="Some of the drivers youu selected require PNP in your kernel.  Either enable PNP in your kernel or trim which drivers get compiled using ALSA_DRIVERS in /etc/make.conf."
+	PNP_ERROR="Some of the drivers you selected require PNP in your kernel (${PNP_DRIVERS}).  Either enable PNP in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 
 	if [[ "${ALSA_CARDS}" == "all" ]]; then
 		CONFIG_CHECK="${CONFIG_CHECK} PNP"
@@ -78,15 +78,9 @@ src_compile() {
 
 	# linux-mod_src_compile doesn't work well with alsa
 
-	local myconf
-	if [ -n "${PNP_DRIVERS}" ]
-	then
-		myconf=$(echo ${PNP_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
-	fi
-
 	# -j1 : see bug #71028
 	set_arch_to_kernel
-	emake -j1  ${myconf} || die "Make Failed"
+	emake -j1 || die "Make Failed"
 	set_arch_to_portage
 
 	if use doc;
@@ -105,13 +99,7 @@ src_compile() {
 src_install() {
 	dodir /usr/include/sound
 
-	local myconf
-	if [ -n "${PNP_DRIVERS}" ]
-	then
-		myconf=$(echo ${PNP_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
-	fi
-
-	make DESTDIR=${D} ${myconf} install || die
+	make DESTDIR=${D} install || die
 
 	# Provided by alsa-headers now
 	rm -rf ${D}/usr/include/sound
@@ -148,10 +136,6 @@ pkg_postinst() {
 	einfo
 
 
-	if [ -n "${PNP_DRIVERS}" ]
-	then
-		einfo "some drivers haven't been built due to them requiring CONFIG_PNP in the kernel: ${PNP_DRIVERS}"
-	fi
 	linux-mod_pkg_postinst
 
 	einfo "Check out the ALSA installation guide availible at the following URL:"
