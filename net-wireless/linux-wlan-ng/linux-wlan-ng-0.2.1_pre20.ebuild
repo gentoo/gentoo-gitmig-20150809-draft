@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre20.ebuild,v 1.5 2004/08/19 23:04:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre20.ebuild,v 1.6 2005/01/23 20:49:04 blubb Exp $
 
 inherit pcmcia
 
@@ -21,7 +21,7 @@ DEPEND="virtual/os-headers
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 src_unpack() {
 	check_KV
