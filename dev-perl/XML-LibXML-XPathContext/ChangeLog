@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/XML-LibXML-XPathContext
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-XPathContext/ChangeLog,v 1.1 2003/10/03 11:14:22 mcummings Exp $
+
+*XML-LibXML-XPathContext-0.05 (03 Oct 2003)
+
+  03 Oct 2003; Michael Cummings <mcummings@gentoo.org>
+  XML-LibXML-XPathContext-0.05.ebuild, metadata.xml:
+  Original ebuild submitted by Kris Verbeeck <airborne@advalvas.be> in bug 28339
+  as a dependancy for the new XML-XSH. Added support for XML-GDOME.
+
