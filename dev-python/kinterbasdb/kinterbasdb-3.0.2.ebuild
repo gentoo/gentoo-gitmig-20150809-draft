@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.0.2.ebuild,v 1.11 2004/06/25 01:32:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/kinterbasdb-3.0.2.ebuild,v 1.12 2005/01/21 16:24:13 carlo Exp $
 
 inherit distutils eutils
 
