@@ -17,7 +17,8 @@ DEPEND="virtual/glibc
 src_compile() {
 
    # -pipe does no work
-   try CFLAGS="${CFLAGS/-pipe/}" ./configure --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome
+   CFLAGS="${CFLAGS/-pipe}"
+   try ./configure --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome
    try make clean
    try pmake
 }
