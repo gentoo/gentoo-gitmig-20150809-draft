@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/libmatroska
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.1 2003/07/20 07:11:26 raker Exp $
+
+*libmatroska-0.4.4 (19 Jul 2003)
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org> libmatroska-0.4.4.ebuild:
+  New ebuild.  Let's hear it for new codecs.  w00t.
