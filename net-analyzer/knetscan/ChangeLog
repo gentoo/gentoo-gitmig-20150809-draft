@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/knetscan
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.4 2003/02/15 07:46:29 gerk Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.5 2004/03/14 17:24:40 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> knetscan-1.0.ebuild:
+  inherit kde instead of deprecated kde-base
 
   02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> knetscan-1.0.ebuild:
   marked stable for x86
