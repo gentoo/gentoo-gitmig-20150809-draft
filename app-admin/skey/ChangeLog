@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/skey
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.10 2003/12/07 17:54:17 taviso Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.11 2004/02/25 10:23:34 aliz Exp $
+
+  25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> skey-1.1.5-r1.ebuild:
+  Fix fPIC issues.
 
   07 Dec 2003; Tavis Ormandy <taviso@gentoo.org> skey-1.1.5-r1.ebuild:
   stable

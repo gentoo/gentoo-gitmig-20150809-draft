@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.9 2004/02/17 08:41:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.10 2004/02/25 10:23:34 aliz Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -24,26 +24,22 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${P}
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A} ; cd ${S}
 
 	# porting some updates to this skey implementation from the
 	# NetBSD project, some other updates and fixes, and the addition
 	# of some new features like shadow password and cracklib support.
 	# 	(05 Nov 2003) -taviso@gentoo.org
-	cd ${S}; epatch ${FILESDIR}/skey-1.1.5-gentoo.diff.gz
+	epatch ${FILESDIR}/skey-1.1.5-gentoo.diff.gz
 
 	# glibc 2.2.x does not define LOGIN_NAME_MAX #33315
 	# 	(12 Nov 2003) -taviso@gentoo.org
-	cd ${S}; epatch ${FILESDIR}/skey-login_name_max.diff
+	epatch ${FILESDIR}/skey-login_name_max.diff
+
+	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {
-
-	if use alpha; then
-		append-flags -fPIC
-		append-ldflags -fPIC
-	fi
-
 	# skeyprune wont honour @sysconfdir@
 	sed -i 's#/etc/skeykeys#/etc/skey/skeyskeys#g' skeyprune.pl skeyprune.8
 
