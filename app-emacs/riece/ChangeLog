@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/riece
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.12 2003/12/10 21:09:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.13 2003/12/25 12:20:17 usata Exp $
+
+*riece-0.1.7 (25 Dec 2003)
+
+  25 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> riece-0.1.7.ebuild:
+  Version bumped
 
 *riece-0.1.6 (12 Nov 2003)
 

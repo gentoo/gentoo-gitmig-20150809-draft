@@ -2,8 +2,10 @@ MD5 8392060353e6f7dd5a440e21f076d732 riece-0.1.6.ebuild 807
 MD5 cdab858c87d7322263a9004b40db203d metadata.xml 270
 MD5 f11bd49a523f39f7bbf046941fbb5187 ChangeLog 2062
 MD5 583aa8c94346a2c9605c017a06da9fa7 riece-0.1.4.ebuild 817
+MD5 8392060353e6f7dd5a440e21f076d732 riece-0.1.7.ebuild 807
 MD5 08ed4c65da48fe190ddc75984ccde7fa riece-0.1.5a.ebuild 818
 MD5 bac5b7d5667951eb43049ca1ae13a07c files/50riece-gentoo.el 117
 MD5 a94644e7387efd1f23e5df9209d5d12f files/digest-riece-0.1.6 63
+MD5 12bbad081624dc6fb0c618e056bcb754 files/digest-riece-0.1.7 63
 MD5 6f2203bbdfa549c10deaaf756540af9d files/digest-riece-0.1.4 63
 MD5 ef05d5b1f4d36bf4d88b9641a14ac82d files/digest-riece-0.1.5a 64
