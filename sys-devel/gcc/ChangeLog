@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.311 2004/08/26 03:45:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.312 2004/08/26 05:13:21 solar Exp $
+
+  26 Aug 2004; <solar@gentoo.org> -gcc-3.3.2-r6.ebuild, -gcc-3.3.3-r1.ebuild,
+  -gcc-3.3.4.ebuild, -gcc-3.4.0-r6.ebuild:
+  pruned a few more ebuilds
 
   25 Aug 2004; <solar@gentoo.org> -gcc-3.3-r1.ebuild, -gcc-3.3.3-r4.ebuild,
   -gcc-3.3.3_pre20040130.ebuild, -gcc-3.3.3_pre20040215.ebuild,
