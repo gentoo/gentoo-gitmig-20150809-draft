@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.170 2005/01/19 13:47:14 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.171 2005/01/21 14:26:13 nakano Exp $
+
+  21 Jan 2005; Masatomo Nakano <nakano@gentoo.org>
+  -files/pg_autovacuum.conf-8.0.0_rc4, -files/pg_autovacuum.conf-8.0.0_rc5,
+  -files/pg_autovacuum.init-8.0.0_rc4, -files/pg_autovacuum.init-8.0.0_rc5,
+  -files/postgresql-8.0.0_rc4-gentoo.patch,
+  -files/postgresql-8.0.0_rc5-gentoo.patch, -postgresql-8.0.0_rc4.ebuild,
+  -postgresql-8.0.0_rc5.ebuild:
+  removed old ebuilds.
 
 *postgresql-8.0.0 (19 Jan 2005)
 
