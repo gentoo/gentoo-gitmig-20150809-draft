@@ -1,0 +1,23 @@
+This patch was introduced by me, to make "mount -t captive-ntfs" working with lufis.
+
+--- captive-1.1.5/src/client/lufs/mount.captive.in.orig	2004-12-05 21:59:19.561715008 +0100
++++ captive-1.1.5/src/client/lufs/mount.captive.in	2004-12-05 22:00:49.549034856 +0100
+@@ -28,8 +28,7 @@
+ my $vardir='@localstatedir@/lib/captive';
+ $vardir=~s#\$\Q{prefix}\E#'@prefix@';#ge;
+ $vardir="/var/lib/captive" if $vardir=~/^@/;
+-my $lufsd_bin='@PATH_LUFSD@';
+-$lufsd_bin="/usr/bin/lufsd" if $lufsd_bin=~/^@/;
++my $lufsd_bin="/usr/bin/lufis";
+ my $captive_sandbox_server_bin='@sbindir@/captive-sandbox-server';
+ $captive_sandbox_server_bin=~s#\$\Q{exec_prefix}\E#'@exec_prefix@';#ge;
+ $captive_sandbox_server_bin=~s#\$\Q{prefix}\E#'@prefix@';#ge;
+@@ -129,7 +128,7 @@
+ warn "$0: '-n' not supported - ignored" if $nomtab;
+ 
+ # Use "'$oo'" to permit another expansion by bash(1) during lufsmnt(8) execution.
+-my @argv=($lufsd_bin,"none",$dir,"-o",$oo);
++my @argv=($lufsd_bin,$oo,$dir,"-s");
+ 
+ print STDERR "$0: @argv\n" if $verbose;
+ exec $lufsd_bin @argv;

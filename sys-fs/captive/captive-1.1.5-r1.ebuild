@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.5.ebuild,v 1.1 2004/12/02 19:46:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.5-r1.ebuild,v 1.1 2004/12/05 22:01:49 genstef Exp $
 
 inherit eutils
 
@@ -48,6 +48,7 @@ src_unpack() {
 	# if it breaks, use the virtualx eclass and Xeconf
 	cd ${S}
 	epatch ${FILESDIR}/do-not-check-for-lufsd.patch
+	epatch ${FILESDIR}/use-lufis-for-mount-t-captive.patch
 	cp -f configure configure.orig
 	grep -v 'sh ./macros/glade-w' configure.orig > configure
 }
@@ -88,11 +89,8 @@ pkg_postinst() {
 		einfo "Use /usr/sbin/captive-install-acquire to search for and"
 		einfo "install the needed drivers for captive NTFS."
 		einfo ""
-		einfo "Use /usr/sbin/captive-install-fstab to install captive"
-		einfo "entries into your /etc/fstab."
 	fi
-	einfo "Please emerge lufis and use it to mount captive, e.g.:"
-	einfo 'lufis "fs=captivefs,dir_cache_entries=0,image=/dev/hda1,captive_options=--rw;--load-module=/var/lib/captive/ntoskrnl.exe;--filesystem=/var/lib/captive/ntfs.sys;--sandbox-server=/usr/sbin/captive-sandbox-server;" /mnt/ntfs -s'
+	einfo "Please use \"mount -t captive-ntfs /dev/hda1 /mnt/ntfs\" to mount ntfs partitions."
 }
 
 pkg_postrm() {
