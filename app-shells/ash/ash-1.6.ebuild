@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.5 2004/02/20 22:17:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.6 2004/02/26 05:49:06 weeve Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/tar_files/src/bin.ta
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 
 DEPEND="sys-devel/pmake
 	sys-apps/sed
