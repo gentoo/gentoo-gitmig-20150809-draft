@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.2 2004/04/27 21:40:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.3 2004/06/05 16:08:03 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://alioth.debian.org/projects/minicom"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~hppa ~sparc ~mips ~amd64"
+KEYWORDS="~x86 ~ppc alpha ~hppa ~sparc ~mips ~amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3"
 
