@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.47 2003/10/05 15:48:53 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.48 2003/10/10 18:51:28 pappy Exp $
+
+  10 Oct 2003; Alexander Gabert <pappy@gentoo.org> libgtkhtml-3.0.7.ebuild,
+  libgtkhtml-3.0.8-r2.ebuild, libgtkhtml-3.0.9.ebuild:
+  changed hardened-gcc flags
 
   05 Oct 2003; Mike Gardiner <obz@gentoo.org> libgtkhtml-2.4.0.ebuild:
   Marked stable on x86
