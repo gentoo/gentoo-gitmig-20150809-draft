@@ -1,9 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.25 2002/11/07 15:21:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.26 2002/11/10 21:42:03 cretin Exp $
 
 *glibc-2.3.1-r2 (7 Nov 2002)
 
+  10 Nov 2002: Stefan Jones <cretin@gentoo.org> glibc-2.3.1-r2.ebuild :
+
+  Made sparc64's always use the system linux headers instead of the kernel 
+  headers. This fixes the 64bit sparc compile errors, see bug #10470.
+  
   7 Nov 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r2.ebuild :
 
   Second try at ctype-compat.patch.  Add stack_end-compat patch for missing
