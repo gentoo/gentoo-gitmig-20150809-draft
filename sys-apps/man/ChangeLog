@@ -1,12 +1,12 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.9 2002/12/26 04:51:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.10 2002/12/26 04:56:01 azarah Exp $
 
 *man-1.5k-r1 (26 Dec 2002)
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> man-1.5k-r1.ebuild :
 
-  Did the following updates and fixes:
+  Did the following updates and fixes (bug #12496 mostly):
   - Add man-1.5k-redhat-patches.patch submited by Nicholas Wourms <dragon@gentoo.org>
     that fixes various security issues.
   - Add man-1.5k-search-order.patch submited by Nicholas Wourms <dragon@gentoo.org>
@@ -15,7 +15,7 @@
     Nicholas Wourms <dragon@gentoo.org> 's hack to make man work with groff-1.18
     and later.
   - Add man-1.5k-wrong-quotes.patch to fix a rare problem where gcc drops
-    the ' in a -D switch.
+    the ' in a -D switch.  This closes bug #5887.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
