@@ -1,5 +1,7 @@
 MD5 0a7e0938ede77432d28dee84c77e73ce ghostscript-afpl-8.11.ebuild 3273
+MD5 caa45b440bdfcc49a55afc75603034ca ghostscript-afpl-8.12.ebuild 3272
 MD5 2a71ac8887d59d7a361d77f817d281bb ChangeLog 567
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 c2ae99630b9c6264495d16e128e82fd8 files/digest-ghostscript-afpl-8.11 359
+MD5 ef5e54302a5fecbf8f98a390add46ef7 files/digest-ghostscript-afpl-8.12 359
 MD5 dbdb3cd0aea8f9032baa11bc335d181a files/gs-8.11-ijs.patch 757
