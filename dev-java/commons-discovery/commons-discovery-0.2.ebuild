@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.2.ebuild,v 1.1 2003/04/23 02:14:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.2.ebuild,v 1.2 2003/04/26 05:36:58 strider Exp $
 
 inherit jakarta-commons
 
 S="${WORKDIR}/${P}-src/discovery"
 DESCRIPTION="The Discovery component is about discovering, or finding, implementations for pluggable interfaces."
 HOMEPAGE="http://jakarta.apache.org/commons/discovery.html"
-SRC_URI="http://www.apache.org/dist/jakarta/commons/discovery/source/${PN}-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/commons/discovery/source/${PN}-${PV}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/commons-logging-1.0
 	>=dev-java/ant-1.4"

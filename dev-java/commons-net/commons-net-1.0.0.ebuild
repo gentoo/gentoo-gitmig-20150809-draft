@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.0.0.ebuild,v 1.2 2003/04/06 07:45:12 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.0.0.ebuild,v 1.3 2003/04/26 05:36:58 strider Exp $
 
 inherit jakarta-commons
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="The purpose of the library is to provide fundamental protocol access, not higher-level abstractions."
 HOMEPAGE="http://jakarta.apache.org/commons/net/index.html"
-SRC_URI="http://www.apache.org/dist/jakarta/commons/net/source/${P}-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/commons/net/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4"
 RDEPEND=">=virtual/jdk-1.3"

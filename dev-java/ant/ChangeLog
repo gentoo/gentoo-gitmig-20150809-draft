@@ -1,9 +1,12 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.31 2003/04/23 11:09:08 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.32 2003/04/26 05:36:58 strider Exp $
 
 *ant-1.5.3-r2 (23 Apr 2003)
 
+  26 Apr 2003; Adrian Almenar <strider@gentoo.org> ant-1.5.3-r2.ebuild:
+  Updated SRC_URI so this ebuild uses apache mirrors.
+  
   23 Apr 2003; Dylan Carlson <absinthe@gentoo.org> ant-1.5.3-r2.ebuild:
   Many fixes, improvements:
    - ant now builds from source instead of using the binaries
@@ -13,6 +16,9 @@
    - improved DESCRIPTION
 
 *ant-1.5.3-r1 (18 Apr 2003)
+
+  26 Apr 2003; Adrian Almenar <strider@gentoo.org> ant-1.5.3-r1.ebuild:
+  Updated SRC_URI so this ebuild uses apache mirrors. Updated Homepage.
 
   18 Apr 2003; Dylan Carlson <absinthe@gentoo.org> ant-1.5.3-r1.ebuild,
   ant-1.5.3.ebuild, ant-1.5.3.ebuild:
@@ -25,6 +31,9 @@
   Version bump.  Closes # 17097.
 
 *ant-1.5.2 (21 Mar 2003)
+
+  26 Apr 2003; Adrian Almenar <strider@gentoo.org> ant-1.5.2.ebuild:
+  Updated SRC_URI so this ebuild uses apache mirrors. Updated Homepage.
 
   06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> ant-1.5.2.ebuild:
   ppc sparc moved to stable.

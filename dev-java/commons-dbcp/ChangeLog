@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.6 2003/04/07 16:02:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.7 2003/04/26 05:36:58 strider Exp $
 
 *commons-dbcp-1.0-r2 (06 Apr 2003)
+
+  26 Apr 2003; Adrian Almenar <strider@gentoo.org> commons-dbcp-1.0-r2.ebuild:
+  Updated SRC_URI so this ebuild uses apache mirrors.
 
   07 Apr 2003; Dylan Carlson <absinthe@gentoo.org> commons-dbcp-1.0-r2.ebuild,
   files/commons-dbcp-1.0-gentoo.diff:

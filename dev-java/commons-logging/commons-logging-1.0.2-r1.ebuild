@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.2-r1.ebuild,v 1.7 2003/02/13 10:08:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.2-r1.ebuild,v 1.8 2003/04/26 05:36:58 strider Exp $
 
 S="${WORKDIR}/${P}-src"
 DESCRIPTION="The Jakarta-Commons Logging package is an ultra-thin bridge between different logging libraries."
@@ -17,7 +17,7 @@ IUSE="jikes junit"
 
 src_compile() {
 	local myc
-	
+
 	cd logging
 	cp LICENSE.txt ../LICENSE
 

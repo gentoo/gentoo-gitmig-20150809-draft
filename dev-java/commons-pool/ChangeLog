@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/commons-pool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.8 2003/04/06 08:04:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.9 2003/04/26 05:36:58 strider Exp $
 
 *commons-pool-1.0.1-r3 (22 Mar 2003)
+
+  26 Apr 2003; Adrian Almenar <strider@gentoo.org> commons-pool-1.0.1-r3.ebuild:
+  Updated SRC_URI so this ebuild uses apache mirrors.
 
   06 Apr 2003; Dylan Carlson <absinthe@gentoo.org>
   commons-pool-1.0.1-r2.ebuild, commons-pool-1.0.1-r2.ebuild,

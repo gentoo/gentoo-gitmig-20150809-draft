@@ -1,13 +1,16 @@
 # ChangeLog for dev-java/regexp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/ChangeLog,v 1.2 2003/02/12 05:54:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/ChangeLog,v 1.3 2003/04/26 05:36:58 strider Exp $
 
 *regexp-1.2 (04 Nov 2002)
+
+  26 Apr 2003; Adrian Almenar <strider@gentoo.org> regexp-1.2.ebuild:
+  Updated SRC_URI so this ebuild uses apache mirrors.
 
   04 Nov 2002; Adrian Almenar <strider@gentoo.org> regexp-1.2.ebuild ChangeLog files/digest-regexp-1.2:
   Changed from jakarta-regexp to regexp since all jakarta projects dont have 
   jakarta- preffix. Renamed final jar from jakarta-regexp-${PV}.jar to 
-  regexp-${PV}.jar. Also added $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/ChangeLog,v 1.2 2003/02/12 05:54:27 vapier Exp $ to the ebuild. Removed superfluous 
+  regexp-${PV}.jar. Also added $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/ChangeLog,v 1.3 2003/04/26 05:36:58 strider Exp $ to the ebuild. Removed superfluous 
   A=${P}.tar.gz
 
 *jakarta-regexp-1.2 (03 Jun 2002)
