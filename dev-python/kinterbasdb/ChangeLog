@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kinterbasdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.5 2003/04/04 21:54:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.6 2003/10/02 13:59:26 liquidx Exp $
+
+  02 Oct 2003; Alastair Tse <liquidx@gentoo.org>
+  kinterbasdb-3.0.1_pre3.ebuild, kinterbasdb-3.0.2.ebuild,
+  files/kinterbasdb-3.0.2-py23.patch:
+  add patch for python2.3 support
 
 *kinterbasdb-3.0.2 (04 Apr 2003)
 
