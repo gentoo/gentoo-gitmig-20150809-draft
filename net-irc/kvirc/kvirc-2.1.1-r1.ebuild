@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-2.1.1-r1.ebuild,v 1.7 2002/07/17 07:36:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-2.1.1-r1.ebuild,v 1.8 2002/07/27 13:55:29 danarmak Exp $
 use kde && 
 use kde && inherit kde-base
 
@@ -14,7 +14,7 @@ DEPEND="$DEPEND virtual/glibc
 
 use kde && need-kde 2.1
 
-SLOT="0"
+SLOT="2"
 LICENSE="kvirc"
 KEYWORDS="x86"
 
