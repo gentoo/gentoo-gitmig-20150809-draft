@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.63 2005/01/17 03:28:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.64 2005/02/17 16:27:38 lu_zero Exp $
+
+  17 Feb 2005; Luca Barbato <lu_zero@gentoo.org> freetype-2.1.9-r1.ebuild:
+  Marked ppc
 
   16 Jan 2005; Mike Frysinger <vapier@gentoo.org> freetype-2.1.5-r1.ebuild,
   freetype-2.1.9-r1.ebuild:
