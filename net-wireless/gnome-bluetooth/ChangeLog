@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.13 2004/10/16 20:40:47 liquidx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.14 2005/01/05 19:20:00 hansmi Exp $
+
+  05 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gnome-bluetooth-0.5.1.ebuild:
+  Added to ~ppc.
 
   16 Oct 2004; Alastair Tse <liquidx@gentoo.org>
   gnome-bluetooth-0.4.1.ebuild:
