@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/mboxgrep-0.7.9.ebuild,v 1.6 2004/10/03 15:32:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/mboxgrep-0.7.9.ebuild,v 1.7 2004/10/04 22:20:59 pvdabeel Exp $
 
 DESCRIPTION="Grep for mbox files"
 SRC_URI="mirror://sourceforge/mboxgrep/${P}.tar.gz"
@@ -10,7 +10,7 @@ DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ppc sparc"
 IUSE=""
 
 src_compile() {

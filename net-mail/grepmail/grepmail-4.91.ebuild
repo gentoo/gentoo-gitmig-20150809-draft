@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.91.ebuild,v 1.7 2004/07/15 01:49:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.91.ebuild,v 1.8 2004/10/04 22:22:13 pvdabeel Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ppc sparc"
 IUSE=""
 
 DEPEND="${DEPEND}
