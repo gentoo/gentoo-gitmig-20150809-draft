@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.58 2004/04/17 08:21:49 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.59 2004/04/17 19:22:07 usata Exp $
+
+  18 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.6.8-r7.ebuild,
+  ruby-1.8.0-r5.ebuild, ruby-1.8.0-r6.ebuild, ruby-1.8.1-r3.ebuild:
+  Marked stable to fix rdoc (see bug #48127). Removed old ebuilds.
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> ruby-1.8.1-r3.ebuild:
   added missing ~amd64 keyword
