@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlXML-CatalogChangeLog/dev-perlXML-XPathChangeLog
+# ChangeLog for dev-perl/XML-XPath
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.6 2002/12/13 10:56:40 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.7 2002/12/17 19:35:34 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
