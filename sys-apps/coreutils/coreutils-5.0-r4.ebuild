@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.6 2003/09/15 05:59:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.7 2003/09/17 18:40:51 avenj Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc alpha hppa ~arm ~mips"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc alpha hppa ~arm ~mips ia64"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.49
