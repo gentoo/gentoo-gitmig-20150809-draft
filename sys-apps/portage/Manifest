@@ -1,3 +1,4 @@
+MD5 aa66cd56ab4e7ed92eaf2976aa1a4743 portage-2.0.51_pre6.ebuild 13278
 MD5 e453628fc1b0bacd4bab14140e8d4dfb portage-2.0.50-r6.ebuild 10854
 MD5 51cbe7060e0d9f8a2ad9e613dad9bb47 portage-2.0.51_pre3.ebuild 11096
 MD5 c325f19a0e791d8b4882aa2ff718405a portage-2.0.51_pre5.ebuild 13232
@@ -12,6 +13,7 @@ MD5 9a91134712cb65d3c91ba74542e74474 files/digest-portage-2.0.51_pre2 72
 MD5 bf7c79234106b8ac85cb4205f3287006 files/digest-portage-2.0.51_pre3 72
 MD5 9b9a18fc40c63b3cc9902883d30cd362 files/digest-portage-2.0.51_pre4 72
 MD5 7974f2e3523dd577d9b806a3069e4b73 files/digest-portage-2.0.51_pre5 72
+MD5 5e3f3478ab2a45686a39a9737e27879e files/digest-portage-2.0.51_pre6 72
 MD5 607910baea1a744afc2e828b34d6d1b2 files/digest-portage-2.0.50-r5 70
 MD5 3b35eb55c2810fa539f29b4242b4d18a files/digest-portage-2.0.50-r6 70
 MD5 73094a2d75dca36817b40611589ea226 files/portage-rescue-2.0.44-ppc.tbz2 168027
