@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.56 2004/02/27 18:48:46 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.57 2004/03/02 18:37:04 iggy Exp $
+
+  02 Mar 2004; Brian Jackson <iggy@gentoo.org>
+  bash-completion-20040210-r1.ebuild:
+  s390 keywords
 
 *bash-completion-20040210-r1 (27 Feb 2004)
 
