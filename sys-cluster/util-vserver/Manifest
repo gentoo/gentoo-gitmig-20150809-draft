@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 bc6c8255f9375fc18e1a6520b0a50ba2 ChangeLog 1471
 MD5 71d963ee6718e6ef0d32b98ed714b0be util-vserver-0.30.ebuild 1338
-MD5 95154cdbceaa2d2ac9362297cbbcca3f util-vserver-0.29_p214.ebuild 2242
-MD5 7f147ec6ddc340f546070e3045f75edc util-vserver-0.29.5.ebuild 1345
 MD5 db37aff1e6c2f62af0035ea8615d7a33 util-vserver-0.29_p196-r1.ebuild 1389
+MD5 7f147ec6ddc340f546070e3045f75edc util-vserver-0.29.5.ebuild 1345
+MD5 e9ce3ebab93b61e6aec608d5deb49d6f util-vserver-0.29_p214.ebuild 2115
+MD5 b2b8518d47de9e56f0ddbe7c724c5153 files/configure.patch 588
 MD5 de373141d8d3eeffd74dccdd3b7e7196 files/digest-util-vserver-0.30 70
 MD5 af1503bee29c51dd40f8a675c89c47d8 files/digest-util-vserver-0.29_p196-r1 74
-MD5 1cb2a7908a23ba002862f1885b136418 files/vservers.initd 2501
 MD5 3fb961ce171c0f04c695c76f698daa94 files/rebootmgr.initd 966
-MD5 b2b8518d47de9e56f0ddbe7c724c5153 files/configure.patch 588
-MD5 e9e0e5d1c6b7b26a7a2f2dbd27f9ce1d files/vprocunhide 779
-MD5 bb2e87b9dec28f87c0f884a6bdb97777 files/vservers-init 1442
-MD5 d594dbc3171e5b45319a01d12c7e6d7e files/digest-util-vserver-0.29_p214 74
-MD5 42078263eccf1f9d58f0e74ddff51bdb files/vservers-conf.d 908
-MD5 9c223495a65c74f9819c5ee880a428bf files/vserver-build-029p214.patch 864
+MD5 1cb2a7908a23ba002862f1885b136418 files/vservers.initd 2501
 MD5 f1ba37a847314029535da6bb7f620e17 files/digest-util-vserver-0.29.5 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBLKg9KtJO8LeSoosRArniAJ4zAh6FH7Q1y9PRBXx/6p9DAvz86ACaA7Y9
-ERH9fDtSKwdOUq2dCJ4LxY0=
-=Wapn
------END PGP SIGNATURE-----
+MD5 d594dbc3171e5b45319a01d12c7e6d7e files/digest-util-vserver-0.29_p214 74
+MD5 e9e0e5d1c6b7b26a7a2f2dbd27f9ce1d files/vprocunhide 779
+MD5 9c223495a65c74f9819c5ee880a428bf files/vserver-build-029p214.patch 864
+MD5 42078263eccf1f9d58f0e74ddff51bdb files/vservers-conf.d 908
+MD5 bb2e87b9dec28f87c0f884a6bdb97777 files/vservers-init 1442
