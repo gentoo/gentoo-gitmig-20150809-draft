@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a7504f5e5bf0c3f1c68983480213a9b Archive-Zip-1.05-r1.ebuild 582
+MD5 cd765dd682123e12c5eb6fc4db3ab6a7 ChangeLog 2183
 MD5 078c6907afbe9d3685ad46f3fe709ef1 Archive-Zip-1.05.ebuild 573
-MD5 fd61f9238f3f5cecbd352915aa6c0881 Archive-Zip-1.06.ebuild 580
-MD5 ca6ed6e0ca7fa2dca5f413d3bbad8e5c Archive-Zip-1.10.ebuild 597
+MD5 fc0a6175e2e35887984797a010af1186 Archive-Zip-1.14.ebuild 564
 MD5 3b12214e336ae6e342f32a70c1cce322 Archive-Zip-1.12.ebuild 581
-MD5 6a61c1b226b75afe01b15fa4a1aec974 ChangeLog 2078
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0e82b5e76e08d6ab3b75d19803bdefa7 Archive-Zip-1.14.ebuild 561
-MD5 0028ec63dd29512330ad2167159d2ba7 files/digest-Archive-Zip-1.05 67
-MD5 0028ec63dd29512330ad2167159d2ba7 files/digest-Archive-Zip-1.05-r1 67
+MD5 fd61f9238f3f5cecbd352915aa6c0881 Archive-Zip-1.06.ebuild 580
+MD5 3a7504f5e5bf0c3f1c68983480213a9b Archive-Zip-1.05-r1.ebuild 582
+MD5 ca6ed6e0ca7fa2dca5f413d3bbad8e5c Archive-Zip-1.10.ebuild 597
 MD5 bf27a75d5e9bfc79fb9ffd60113a4e31 files/digest-Archive-Zip-1.06 67
+MD5 0028ec63dd29512330ad2167159d2ba7 files/digest-Archive-Zip-1.05-r1 67
+MD5 20fc9467fcd9cb2979e16e5683ac05d8 files/digest-Archive-Zip-1.14 68
 MD5 9635312d6573ea10a490368941937bda files/digest-Archive-Zip-1.10 68
 MD5 ecc14ce5fe8696e90cca25f25d2f072c files/digest-Archive-Zip-1.12 68
-MD5 20fc9467fcd9cb2979e16e5683ac05d8 files/digest-Archive-Zip-1.14 68
+MD5 0028ec63dd29512330ad2167159d2ba7 files/digest-Archive-Zip-1.05 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBewnMtG5z4I8BtQoRAuG2AJwOI6SjoFPdGLA8Sky+D9cdwaeBKACfRc60
-qIupT1u4Z3sevKRIn1DuLdo=
-=Jxar
+iD8DBQFBe8r3ugEuf3OQ0akRAtYTAJ9Nl4PpDWKLih3uySILhyTTGD5ddwCbBw0M
+EDCRXkJA4RmHrEWoeEgqagc=
+=+DNc
 -----END PGP SIGNATURE-----
