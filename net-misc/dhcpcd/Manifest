@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c58c830dd7574a9790e3adfff2fc126a ChangeLog 6225
+MD5 fe80c3aee0021c110ed23b4d0804d6c7 ChangeLog 6417
+MD5 1e047633de90aa61af62c58f294be932 dhcpcd-1.3.22_p4-r7.ebuild 1882
 MD5 72ed97191f3c741e2050bb69fc2edc55 dhcpcd-1.3.22_p4-r5.ebuild 1942
-MD5 a18fe86dffefd7d5c2d7ae8c89f3f5b3 dhcpcd-1.3.22_p4-r6.ebuild 1871
 MD5 e5580d4472c718a772f6e1c700757968 files/dhcpcd-1.3.22_p4-no-iface-down.diff 2606
+MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r7 224
 MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r5 224
-MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r6 224
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBiaNvHTu7gpaalycRApWIAKDcXl/V3kED1PR4dYQaGAHMlxmsBQCfTLI4
-WflxRmFecj7fNLPfN6lLhyE=
-=6tC2
+iD8DBQFBim/6HTu7gpaalycRAuVtAJ9gESuqEk6Yh2bRfZ+dJcW/LERjaACeOw1F
+7boJ9Od8DoXRhmsYlHYL2e8=
+=z7A1
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r6.ebuild,v 1.1 2004/11/04 03:24:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r7.ebuild,v 1.1 2004/11/04 18:06:39 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 
 src_compile() {
 	use static && append-flags -static
-	econf || die
+	econf --prefix=/ || die
 	emake || die
 }
 
