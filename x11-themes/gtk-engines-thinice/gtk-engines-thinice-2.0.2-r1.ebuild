@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/gtk-engines-thinice-2.0.2-r1.ebuild,v 1.9 2004/01/29 04:49:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/gtk-engines-thinice-2.0.2-r1.ebuild,v 1.10 2004/02/25 18:03:21 aliz Exp $
 
 inherit gtk-engines2
 
@@ -27,7 +27,7 @@ src_unpack() {
 		cd ${GTK1_S}
 		aclocal
 		autoheader
-		automake -a -c
+		WANT_AUTOMAKE=1.4 automake -a -c
 		autoconf
 		libtoolize -c -f
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-thinice
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.12 2004/01/29 04:49:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.13 2004/02/25 18:03:20 aliz Exp $
+
+  25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org>
+  gtk-engines-thinice-2.0.2-r1.ebuild:
+  Force automake-1.4. Closing #41590.
 
   28 Jan 2004; Aron Griffis <agriffis@gentoo.org>
   gtk-engines-thinice-2.0.2-r1.ebuild:
