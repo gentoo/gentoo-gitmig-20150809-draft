@@ -1,6 +1,18 @@
 # ChangeLog for x11-plugins/wmbattery
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.9 2004/06/24 23:05:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.10 2004/07/16 23:09:32 s4t4n Exp $
+
+*wmbattery-2.19-r1 (17 Jul 2004)
+
+  17 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmbattery-2.19-r1.ebuild:
+  New revision, install man file in /usr/share/man/man1, let wmbattery know that
+  its pixmaps are installed in /usr/share/pixmaps/wmbattery, closing #39436.
+
+*wmbattery-1.2.1-r2 (17 Jul 2004)
+
+  17 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmbattery-1.2.1-r2.ebuild:
+  New revision, install man file in /usr/share/man/man1, let wmbattery know that
+  its pixmaps are installed in /usr/share/pixmaps/wmbattery, closing #39436.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> wmbattery-2.19.ebuild:
   Unmask on amd64.
