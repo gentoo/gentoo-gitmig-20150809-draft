@@ -11,9 +11,9 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-db/${A}
 HOMEPAGE="http://www.gnome.org/gnome-db"
 
 RDEPEND="virtual/glibc
-        >=gnome-base/gconf-0.11
-	>=gnome-base/oaf-0.5.0
-	>=gnome-base/bonobo-1.0.8
+        >=gnome-base/gconf-1.0.4-r2
+	>=gnome-base/oaf-0.6.6-r1
+	>=gnome-base/bonobo-1.0.9-r1
         >=sys-libs/gdbm-1.8.0
         >=sys-libs/readline-4.1
 	>=dev-perl/CORBA-ORBit-0.4.3
@@ -54,10 +54,8 @@ src_compile() {
 	myconf="$myconf --disable-bonobotest"
   
 	./configure --host=${CHOST} 					\
-		    --prefix=/opt/gnome 				\
-		    --sysconfdir=/etc/opt/gnome 			\
-		    --mandir=/opt/gnome/man				\
-		    --with-bonobo-prefix=/opt/gnome			\
+		    --prefix=/usr	 				\
+		    --sysconfdir=/etc		 			\
 		    $myconf || die
 
 	# Wierd hack I had to do to get it to compile (seems the buildin sqlite
@@ -73,7 +71,7 @@ src_compile() {
 src_install() {
 	make  DESTDIR=${D} PREFIX=${D}/usr 				\
 	      INSTALLMAN3DIR=${D}/usr/share/man/man3 			\
-	      GDA_oafinfodir=${D}/opt/gnome/share/oaf install || die
+	      GDA_oafinfodir=${D}/usr/share/oaf install || die
 
 	into /usr
 	dobin providers/gda-default-server/build_sqlite/{lemon,sqlite}

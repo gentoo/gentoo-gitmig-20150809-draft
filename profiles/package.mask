@@ -131,6 +131,18 @@ gnome-libs/libxml2
 gnome-libs/libxslt
 gnome-base/libxml
 gnome-libs/libole2
+gnome-libs/eel
+gnome-base/gal
+gnome-libs/gb
+gnome-libs/gnomemm
+gnome-base/gtkhtml
+gnome-libs/libgda
+gnome-libs/libole2
+gnome-libs/librsvg
+gnome-base/libunicode
+gnome-libs/medusa
+gnome-apps/nautilus
+gnome-base/scrollkeeper
 
 # Don't use these.
 # These are the old locations. Will be removed when new locations are tested.
@@ -143,11 +155,8 @@ gnome-extra/bonobo-conf
 gnome-extra/bug-buddy
 app-office/dia
 media-gfx/ee
-gnome-base/eel
 app-office/evolution
 net-im/gabber
-gnome-extra/gal
-gnome-extra/gb
 app-editors/gedit
 app-misc/gentoo
 app-text/ggv
@@ -164,36 +173,24 @@ gnome-extra/gnome-pilot
 gnome-extra/gnome-pilot-conduits
 gnome-extra/gnome-pim
 gnome-extra/gnome-utils
-gnome-extra/gnomemm
 app-arch/gnorpm
 app-office/gnucash
 app-office/gnumeric
 media-gfx/gthumb
 app-misc/gtkdiff
-gnome-extra/gtkhtml
 app-misc/gtktalog
 gnome-extra/gtop
 gnome-extra/guppi
 net-misc/gupsc
 app-admin/gwcc
-gnome-extra/libgda
-gnome-extra/libole2
-gnome-base/librsvg
-dev-libs/libunicode
-dev-libs/libxml
-dev-libs/libxml2
-dev-libs/libxslt
 gnome-extra/mc
-gnome-extra/medusa
 dev-util/memprof
 app-office/mrproject
-gnome-base/nautilus
 net-analyzer/netleds_applet
 net-news/pan
 x11-terms/powershell
 gnome-extra/procman
 net-www/screem
-app-text/scrollkeeper
 app-crypt/seahorse
 media-gfx/sodipodi
 gnome-extra/users-guide

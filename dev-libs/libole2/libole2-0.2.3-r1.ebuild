@@ -11,8 +11,9 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=dev-libs/glib-1.2.8"
 
-src_compile() {                           
-	./configure --host=${CHOST} --prefix=/opt/gnome || die
+src_compile() {
+	./configure --host=${CHOST} 					\
+		    --prefix=/usr || die
 
 	emake || die
 }
