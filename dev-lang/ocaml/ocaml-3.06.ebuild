@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06.ebuild,v 1.9 2003/08/05 16:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06.ebuild,v 1.10 2003/09/07 02:48:39 weeve Exp $
 
 inherit flag-o-matic
 filter-flags "-fstack-protector"
@@ -20,6 +20,16 @@ DEPEND="virtual/glibc
 src_compile() {
 	local myconf
 	use tcltk || myconf="-no-tk"
+
+	# Fix for bug #23767
+	if [ "${ARCH}" = "sparc" ]
+	then
+		# We need a patch and to make sure it builds
+		# for the right host type
+		epatch ${FILESDIR}/ocaml-3.06-sparc-configure.patch
+		myconf="${myconfg} -host sparc-unknown-linux-gnu"
+	fi
+
 
 	./configure -prefix /usr \
 		-bindir /usr/bin \
