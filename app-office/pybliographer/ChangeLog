@@ -1,6 +1,9 @@
 # ChangeLog for app-office/pybliographer
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.1 2004/10/17 10:50:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.2 2004/10/21 03:19:32 usata Exp $
+
+  21 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> pybliographer-1.2.4.ebuild:
+  Uses gnome2.eclass.
 
 *pybliographer-1.2.4 (17 Oct 2004)
 
