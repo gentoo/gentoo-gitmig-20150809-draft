@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/acpid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.7 2003/02/12 08:54:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.8 2003/05/14 18:35:04 hanno Exp $
+
+*acpid-1.0.2 (14 May 2003)
+
+  14 May 2003; Hanno Boeck <hanno@gentoo.org> acpid-1.0.2.ebuild:
+  New version. Resolves #20852.
 
 *acpid-1.0.1-r1 (16 Oct 2002)
 
