@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-musepack
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.1 2003/03/15 09:24:50 jje Exp $
+
+*xmms-musepack-0.94 (15 Mar 2003)
+
+  15 Mar 2003; jje <jje@gentoo.org> xmms-musepack-0.94.ebuild:
+  Initial revision.
+  
+  Submitted by: Erik Swanson
+
