@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 56dca41e2af0c107de83d29f4270177a ChangeLog 681
+MD5 84e8c5d515200b772d1ecaccd3139741 ChangeLog 794
 MD5 ded249fda8e8c4f9093fe7f17dee9130 gwenhywfar-1.3.ebuild 1116
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+MD5 9ffdfdaa41b5a37119fa329941f93af0 gwenhywfar-1.4.ebuild 1111
 MD5 db1374385ede30f3b9d88a9d2583647e files/digest-gwenhywfar-1.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2DnkFdQwWVoAgN4RAr/VAKDAhMkJD4L5LA3OqhbgQTEXYbNqwgCeLYqF
-Z8al245hGNZzktdFeT7oK5c=
-=g+42
------END PGP SIGNATURE-----
+MD5 ad327e2079036331945989008173110d files/digest-gwenhywfar-1.4 66
