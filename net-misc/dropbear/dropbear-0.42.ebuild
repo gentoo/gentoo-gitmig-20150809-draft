@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.42.ebuild,v 1.4 2004/07/27 00:59:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.42.ebuild,v 1.5 2004/07/27 03:44:36 vapier Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ppc mips arm"
+KEYWORDS="x86 ppc mips arm amd64"
 IUSE="zlib multicall static"
 
 DEPEND="zlib? ( sys-libs/zlib )"
