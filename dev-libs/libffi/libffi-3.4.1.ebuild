@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.5 2004/08/27 20:21:47 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.6 2004/11/23 20:33:20 eradicator Exp $
 
 IUSE="nls"
 SLOT="0"
@@ -86,7 +86,7 @@ HOMEPAGE="http://gcc.gnu.org/"
 #  and is, different
 LICENSE="libffi"
 
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 
 DEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
