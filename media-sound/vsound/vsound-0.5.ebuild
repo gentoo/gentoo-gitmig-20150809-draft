@@ -1,12 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/vsound-0.5.ebuild,v 1.5 2003/10/27 09:49:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/vsound-0.5.ebuild,v 1.6 2004/02/27 06:55:18 eradicator Exp $
 
 DESCRIPTION="Sort a virtual audio loopback cable for RealAudio to wave convertions."
 HOMEPAGE="http://www.zip.com.au/~erikd/vsound/"
 LICENSE="GPL-2"
-DEPEND=">=media-sound/sox-12.17.1
-	>=media-video/realplayer-8-r1"
+DEPEND=">=media-sound/sox-12.17.1"
 
 KEYWORDS="x86"
 SLOT="0"
