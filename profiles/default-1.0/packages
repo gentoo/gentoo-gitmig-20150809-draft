@@ -183,3 +183,6 @@
 # Needs gcc-3
 ~dev-libs/elfutils-0.5
 ~sys-devel/prelink
+
+# Needs >=readline-4.2
+<media-sound/cdcd-0.6.4

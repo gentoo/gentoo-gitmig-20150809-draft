@@ -168,3 +168,6 @@
 >=net-dialup/ppp-2.4.1-r6
 <=sys-apps/tcp-wrappers-7.6-r3
 ~media-video/cinelerra
+
+# requires >=readline-4.2
+<media-sound/cdcd-0.6.4
