@@ -1,0 +1,43 @@
+# ChangeLog for dev-lang/fpc
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-bin/ChangeLog,v 1.1 2005/01/20 22:18:04 chriswhite Exp $
+
+*fpc-bin-1.0.10 (21 Jan 2005)
+
+  21 Jan 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +fpc-bin-1.0.10.ebuild, +fpc-bin-1.9.4.ebuild:
+  Fix part moved fpc to fpc-bin per bug #71677.
+
+  19 Jan 2005; Chris White <chriswhite@gentoo.org> fpc-1.9.4.ebuild:
+  Part 2, Fixes Bug #78273.
+
+  19 Jan 2005; Chris White <chriswhite@gentoo.org> fpc-1.0.10.ebuild:
+  Fixed part 1 of bug #78273 for fpc-1.0.10. Also fixed bug #45768 while I was
+  there.
+
+*fpc-1.9.4 (08 Sep 2004)
+
+  08 Sep 2004; Chris White <chriswhite@gentoo.org> +fpc-1.9.4.ebuild:
+  Bumped to 1.9.4. Thanks to Boris Wachtmeister <sirro@nurfuerspam.de> for
+  posting the modified ebuild. Uses rpm eclass instead of rpm2tgz.
+
+  22 Aug 2004; Chris White <chriswhite@gentoo.org> fpc-1.0.10.ebuild:
+  Added fpc-source block.
+
+  20 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Taking over as maintainer.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> fpc-1.0.10.ebuild:
+  virtual/glibc -> virtual/libc
+
+  15 Dec 2003; Bart Lauwers <blauwers@gentoo.org> fpc-1.0.10.ebuild:
+  Fixed doc paths.
+
+  19 Oct 2003; Markus Nigbur <pyrania@gentoo.org> fpc-1.0.10.ebuild:
+  Fixed man paths. Thanks to Tomasz Olszewski (#30281).
+
+*fpc-1.0.10 (26 Aug 2003)
+
+  26 Aug 2003; Hanno Boeck <hanno@gentoo.org> fpc-1.0.10.ebuild:
+  The Free Pascal Compiler.
+
