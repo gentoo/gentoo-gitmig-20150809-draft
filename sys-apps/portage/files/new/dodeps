@@ -48,7 +48,7 @@ for x in sys.argv[1:]:
 		print ">>> Picking newest file: ",myebuilds[0]
 		print
 	print myebuilds
-	myout=os.system("/usr/bin/ebuild "+mypath+"/"+myebuilds[0]+" merge")
+	myout=os.system("/usr/sbin/ebuild "+mypath+"/"+myebuilds[0]+" merge")
 	if myout != 0:
 		print
 		print "!!! Error: Autobuild of",mypath+"/"+myebuilds[0],"failed."
