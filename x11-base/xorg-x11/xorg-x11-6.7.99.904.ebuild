@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.904.ebuild,v 1.4 2004/09/04 04:25:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.904.ebuild,v 1.5 2004/09/04 17:25:26 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -72,7 +72,7 @@ LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
 	MIT SGI-B BSD FTL | GPL-2"
 SLOT="0"
-KEYWORDS="-x86 -ppc64 -amd64 -ppc -mips"
+KEYWORDS="~x86 ~ppc64 ~amd64 ~ppc ~mips"
 
 # Need portage-2.0.50_pre9 for `use !foo`
 DEPEND=">=sys-apps/baselayout-1.8.3
@@ -83,7 +83,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=media-libs/freetype-2.1.4
 	>=media-libs/fontconfig-2.1-r1
 	>=x11-base/opengl-update-1.7.2
-	>=x11-misc/ttmkfdir-3.0.4
+	>=x11-misc/ttmkfdir-3.0.9-r2
 	>=sys-apps/sed-4
 	sys-apps/util-linux
 	dev-lang/perl
