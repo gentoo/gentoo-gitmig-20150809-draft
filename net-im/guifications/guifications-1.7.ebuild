@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/guifications/guifications-1.7.ebuild,v 1.1 2004/04/26 01:41:00 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/guifications/guifications-1.7.ebuild,v 1.2 2004/04/26 09:35:41 dholm Exp $
 
 DESCRIPTION="Guifications are graphical notification plugin for the open source instant message client gaim"
 HOMEPAGE="http://guifications.sourceforge.net"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="debug"
 
 DEPEND=">=net-im/gaim-0.77"
