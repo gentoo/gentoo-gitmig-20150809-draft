@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a-r1.ebuild,v 1.5 2004/07/01 11:16:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a-r1.ebuild,v 1.6 2004/07/14 14:41:39 agriffis Exp $
 
 inherit games
 
@@ -20,7 +20,7 @@ RESTRICT="nostrip nomirror"
 
 # dedicated is unused at this time until I can find some good generic dedicated
 # server scripts to include.
-IUSE="opengl dedicated"
+IUSE="opengl"
 
 DEPEND="virtual/libc
 	app-arch/unzip"
