@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/smlnj
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.1 2003/04/03 10:38:52 george Exp $
+
+*smlnj-110.42.ebuild (03 Apr 2003)
+
+  03 Apr 2003; George Shapovalov <george@gentoo.org> smlnj-110.42.ebuild, files/digest-smlnj-110.42 :
+  initial release (#9989)
+  Standard ML of New Jersey compiler and libraries
+  ebuild submitted by Vadim Berezniker <vadim@berezniker.com> and updated by Ivan Raikov <raikov@cc.gatech.edu>
