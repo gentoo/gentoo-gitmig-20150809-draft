@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.39 2004/02/09 09:05:13 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.40 2004/02/21 20:04:28 usata Exp $
+
+*lyx-1.3.4 (22 Feb 2004)
+
+  22 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> lyx-1.3.4.ebuild:
+  Version bumped.
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> lyx-1.3.3.ebuild:
   added amd64 keyword.
