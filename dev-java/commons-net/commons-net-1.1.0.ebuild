@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.1.0.ebuild,v 1.6 2004/06/24 22:23:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.1.0.ebuild,v 1.7 2004/07/14 01:48:38 agriffis Exp $
 
 inherit eutils java-pkg
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="The purpose of the library is to provide fundamental protocol access, not higher-level abstractions."
 HOMEPAGE="http://jakarta.apache.org/commons/net/index.html"
 SRC_URI="mirror://apache/jakarta/commons/net/source/${P}-src.tar.gz"
