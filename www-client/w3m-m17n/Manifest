@@ -1,6 +1,0 @@
-MD5 f194034689237a16a1891c5389fca9c0 ChangeLog 3599
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 e7238b0e1b89ad316e35b3b2598ee855 w3m-m17n-0.4.2.ebuild 3894
-MD5 84a4529fdf4d9541fb3a111080687261 files/digest-w3m-m17n-0.4.2 210
-MD5 f91cc75929689839efc1a8dfb0dcbd83 files/w3m-m17n-0.4.2-imglib-gentoo.diff 5019
-MD5 0fd075401455ce9205836b4267202e22 files/w3m-w3mman-gentoo.diff 1059
