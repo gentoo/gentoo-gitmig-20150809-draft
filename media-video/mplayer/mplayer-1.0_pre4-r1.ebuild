@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r1.ebuild,v 1.4 2004/05/12 13:51:58 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r1.ebuild,v 1.5 2004/05/27 05:08:14 ferringb Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live mad bidi divx4linux xvid"
 
 inherit eutils flag-o-matic
 
@@ -23,11 +23,13 @@ DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
-RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
-	amd64? ( >=media-libs/xvid-0.9.0 )
-	x86? ( >=media-libs/xvid-0.9.0
-	       >=media-libs/divx4linux-20030428
-	       >=media-libs/win32codecs-0.60 )
+RDEPEND="xvid? (
+		ppc? ( >=media-libs/xvid-0.9.0 )
+		amd64? ( >=media-libs/xvid-0.9.0 )
+		x86? ( >=media-libs/xvid-0.9.0 )
+	)
+	x86? ( >=media-libs/win32codecs-0.60
+		divx4linux? ( >=media-libs/divx4linux-20030428 ) )
 	gtk? ( media-libs/libpng
 	       virtual/x11
 			=x11-libs/gtk+-1.2*
@@ -58,6 +60,8 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	samba? ( >=net-fs/samba-2.2.8a )
 	theora? ( media-libs/libtheora )
 	live? ( >=media-plugins/live-2004.01.05 )
+	mad? ( media-libs/libmad )
+	bidi? ( dev-libs/fribidi )
 	>=sys-apps/portage-2.0.36"
 #	dvd? ( media-libs/libdvdnav )
 # Hardcode paranoia support for now, as there is no
@@ -157,6 +161,11 @@ src_compile() {
 		&& myconf="${myconf} --enable-gui --enable-x11 \
 		                     --enable-xv --enable-vm --enable-png"
 
+	myconf="${myconf} `use_enable xvid`"
+	( use xvid && use 3dfx ) \
+		&& myconf="${myconf} --enable-tdfxvid" \
+		|| myconf="${myconf} --disable-tdfxvid"
+
 	use encode \
 		&& myconf="${myconf} --enable-mencoder --enable-tv" \
 		|| myconf="${myconf} --disable-mencoder"
@@ -244,6 +253,9 @@ src_compile() {
 		`use_enable xmms` \
 		`use_enable ipv6 inet6` \
 		`use_enable live` \
+		`use_enable bidi fribidi` \
+		`use_enable mad` \
+		`use_enable divx4linux` \
 		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:
 	#  --enable-shared-pp \

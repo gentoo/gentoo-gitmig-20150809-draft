@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r2.ebuild,v 1.1 2004/05/19 06:34:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r2.ebuild,v 1.2 2004/05/27 05:08:14 ferringb Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live mad bidi xvid divx4linux"
 
 inherit eutils flag-o-matic check-kernel
 
@@ -23,11 +23,14 @@ DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
-RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
-	amd64? ( >=media-libs/xvid-0.9.0 )
-	x86? ( >=media-libs/xvid-0.9.0
-	       >=media-libs/divx4linux-20030428
-	       >=media-libs/win32codecs-0.60 )
+RDEPEND="xvid? ( ppc?  ( >=media-libs/xvid-0.9.0 )
+		amd64? ( >=media-libs/xvid-0.9.0 )
+		x86?   ( >=media-libs/xvid-0.9.0 )
+	)
+	x86? ( >=media-libs/win32codecs-0.60
+		divx4linux? ( >=media-libs/divx4linux-20030428 )
+	)
+
 	gtk? ( media-libs/libpng
 	       virtual/x11
 			=x11-libs/gtk+-1.2*
@@ -58,6 +61,8 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	samba? ( >=net-fs/samba-2.2.8a )
 	theora? ( media-libs/libtheora )
 	live? ( >=media-plugins/live-2004.01.05 )
+	mad? ( media-libs/libmad )
+	bidi? ( dev-libs/fribidi )
 	>=sys-apps/portage-2.0.36"
 #	dvd? ( media-libs/libdvdnav )
 # Hardcode paranoia support for now, as there is no
@@ -150,11 +155,6 @@ src_compile() {
 	use X || use gtk \
 		|| myconf="${myconf} --disable-gui --disable-x11 --disable-xv \
 				--disable-xmga --disable-png"
-	use jpeg \
-		|| myconf="${myconf} --disable-jpeg"
-
-	use gif \
-		|| myconf="${myconf} --disable-gif"
 
 	( use matrox && use X ) \
 		&& myconf="${myconf} --enable-xmga" \
@@ -163,22 +163,19 @@ src_compile() {
 	use gtk \
 		&& myconf="${myconf} --enable-gui --enable-x11 \
 		                     --enable-xv --enable-vm --enable-png"
+	use gif \
+		|| myconf="${myconf} --disable-gif"
 
-	use encode \
-		&& myconf="${myconf} --enable-mencoder --enable-tv" \
-		|| myconf="${myconf} --disable-mencoder"
+	myconf="${myconf} `use_enable xvid`"
+	( use xvid && use 3dfx ) \
+		&& myconf="${myconf} --enable-tdfxvid" \
+		|| myconf="${myconf} --disable-tdfxvid"
 
-	use v4l \
-		&& myconf="${myconf} --enable-tv-v4l" \
-		|| myconf="${myconf} --disable-tv-v4l"
+	myconf="${myconf} `use_enable encode mencoder`"
+	use encode && myconf="${myconf} --enable-tv"
 
-	use v4l2 \
-		&& myconf="${myconf} --enable-tv-v4l2" \
-		|| myconf="${myconf} --disable-tv-v4l2"
-
-	use dvd \
-		&& myconf="${myconf} --enable-mpdvdkit" \
-		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread"
+	myconf="${myconf} `use_enable dvd mpdvdkit`"
+	use dvd || myconf="${myconf} `use_enable dvdread`"
 	# Disable dvdnav support as its not considered to be
 	# functional anyhow, and will be removed.
 
@@ -186,9 +183,8 @@ src_compile() {
 		&& myconf="${myconf} --enable-external-faad" \
 		|| myconf="${myconf} --disable-external-faad"
 
-	use dvb \
-		&& myconf="${myconf} --enable-dvb" \
-		|| myconf="${myconf} --disable-dvb --disable-dvbhead"
+	myconf="${myconf} `use dvb`"
+	use dvb || myconf="${myconf} --disable-dvbhead"
 
 	use debug \
 		&& myconf="${myconf} --enable-debug"
@@ -251,6 +247,11 @@ src_compile() {
 		`use_enable xmms` \
 		`use_enable ipv6 inet6` \
 		`use_enable live` \
+		`use_enable mpeg external-faad` \
+		`use_enable v4l tv-v4l` \
+		`use_enable v4l2 tv-v4l2` \
+		`use_enable divx4linux` \
+		`use_enable jpeg` \
 		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:
 	#  --enable-shared-pp \
