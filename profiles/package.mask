@@ -34,9 +34,6 @@ kde-apps/kuickshow
 kde-apps/kvirc
 kde-apps/quanta
 kde-apps/webconfig
-gnome-base/gdk-pixbuf
-gnome-base/glibwww
-gnome-apps/gphoto
 
 # conflict with linux-sources, to be resolved soon
 sys-kernel/linux-sources-vanilla
@@ -177,6 +174,13 @@ app-admin/procman
 gnome-apps/glade
 gnome-apps/glademm
 gnome-apps/anjuta
+gnome-base/gdk-pixbuf
+gnome-base/glibwww
+gnome-apps/gphoto
+gnome-apps/pan
+gnome-apps/powershell
+gnome-apps/gnucash
+gnome-apps/gnorpm
 
 # Don't use these.
 # These are the old locations. Will be removed when new locations are tested.
@@ -186,15 +190,9 @@ net-im/gabber
 app-misc/gentoo
 dev-util/glimmer
 app-office/gnofin
-app-arch/gnorpm
-app-office/gnucash
 net-misc/gupsc
 app-admin/gwcc
 net-analyzer/netleds_applet
-net-news/pan
-x11-terms/powershell
 net-www/screem
 gnome-extra/users-guide
 media-video/zapping
-
-
