@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.65 2005/02/02 10:16:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.66 2005/02/02 17:10:58 corsair Exp $
+
+  02 Feb 2005; Markus Rothe <corsair@gentoo.org> openmotif-2.2.3.ebuild:
+  Stable on ppc64; bug #78111
 
   02 Feb 2005; Heinrich Wendel <lanius@gentoo.org> openmotif-2.2.3.ebuild:
   stable on amd64 and x86
