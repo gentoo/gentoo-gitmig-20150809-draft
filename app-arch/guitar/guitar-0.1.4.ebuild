@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.21 2004/03/12 11:11:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.22 2004/04/25 21:46:21 agriffis Exp $
 
 MY_P=guiTAR-${PV}
 S=${WORKDIR}/${MY_P}
@@ -27,7 +27,7 @@ DEPEND="x11-libs/gtk+
 src_compile() {
 	local myconf
 	use gnome || myconf="${myconf} --disable-gnome"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die
 }
 

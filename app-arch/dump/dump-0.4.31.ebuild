@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.31.ebuild,v 1.18 2004/02/23 14:04:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.31.ebuild,v 1.19 2004/04/25 21:45:40 agriffis Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -48,7 +48,7 @@ src_compile() {
 		--with-binowner=root \
 		--with-bingroup=root \
 		--enable-largefile \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die
 }
