@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.7 2004/03/02 10:27:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.8 2004/03/24 06:42:15 mr_bones_ Exp $
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  visualboyadvance-1.6a.ebuild:
+  clean older ebuild
 
   02 Mar 2004; David Holm <dholm@gentoo.org> visualboyadvance-1.7.1.ebuild:
   Added to ~ppc.
