@@ -16,6 +16,7 @@ app-pda
 app-sci
 app-shells 
 app-text 
+app-xemacs
 dev-db 
 dev-java 
 dev-lang 
