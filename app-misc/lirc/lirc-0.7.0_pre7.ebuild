@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.4 2004/08/03 18:42:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7.ebuild,v 1.5 2004/08/03 19:32:52 mr_bones_ Exp $
 
 inherit eutils kmod
 
@@ -101,7 +101,7 @@ src_install() {
 		newins ${FILESDIR}/xbox-lircd.conf lircd.conf
 	fi
 
-	if [ `use doc` ]; then
+	if use doc ; then
 		dohtml doc/html/*.html
 		insinto /usr/share/doc/${PF}/images
 		doins doc/images/*
