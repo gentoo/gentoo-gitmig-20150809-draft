@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/patch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.10 2003/05/14 22:40:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.11 2003/05/15 22:12:00 msterret Exp $
+
+  01 May 2003; <msterret@gentoo.org> patch-2.5.4-r5.ebuild:
+  added IUSE
+  some suggested changes from agriffis:
+  	don't export CFLAGS; that's done automatically
+  	use emake
+  	use einstall
+  other small cleanups
 
 *patch-2.5.4-r5 (01 May 2003)
 
