@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsse/jsse-1.0.2-r1.ebuild,v 1.2 2001/12/16 23:51:25 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsse/jsse-1.0.2-r1.ebuild,v 1.3 2001/12/16 23:57:00 karltk Exp $
 
 At=jsse-1_0_2-gl.zip
 S=${WORKDIR}/jsse1.0.2
@@ -17,7 +17,7 @@ src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
 		die "Please download ${At} from ${HOMEPAGE} into ${DISTDIR}"
 	fi
-	${JAVA_HOME}/bin/jar -xf ${DISTDIR}/${At}
+	${JAVA_HOME}/bin/jar -xf ${DISTDIR}/${At} || die
 }
 
 src_install() {                               
