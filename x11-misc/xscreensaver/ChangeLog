@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.7 2002/10/24 17:26:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.8 2002/10/26 00:11:50 azarah Exp $
+
+xscreensaver-4.06-r1 (26 Oct 2002)
+
+  26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xscreensaver-4.06-r1.ebuild :
+
+  Change "xml" flag to "xml2".  Remove "gnome" USE flag.  Change "gtk" in USE
+  to depend on gtk+2, and also add libglade2.  If gtk+ is not in USE, make it
+  depend on gdk-pixbuf.  This should close bug #9619.
 
 xscreensaver-4.06 (24 Oct 2002)
 
