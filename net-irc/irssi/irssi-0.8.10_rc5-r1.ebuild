@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.3 2005/02/28 23:41:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.4 2005/03/08 05:10:08 swegener Exp $
 
 inherit perl-module eutils
 
@@ -9,8 +9,7 @@ MY_P="${P//_/-}"
 DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
 SRC_URI="http://irssi.org/files/${MY_P}.tar.gz
-	mirror://gentoo/${P}-CVS-20050121.patch.bz2
-	http://dev.gentoo.org/~swegener/distfiles/${P}-CVS-20050121.patch.bz2"
+	mirror://gentoo/${P}-CVS-20050121.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
