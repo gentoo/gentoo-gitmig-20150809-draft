@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.7.ebuild,v 1.2 2004/10/17 03:19:29 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.6-r3.ebuild,v 1.1 2004/10/17 03:19:29 cyfred Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.squid-cache.org/"
 
 S=${WORKDIR}/${S_PP}
 SRC_URI="ftp://ftp.squid-cache.org/pub/squid-2/STABLE/${S_PP}.tar.bz2
-	http://dev.gentoo.org/~cyfred/distfiles/squid-2.5.STABLE7-patches-${PATCH_VERSION}.tar.gz"
+	http://dev.gentoo.org/~cyfred/distfiles/squid-2.5.STABLE6-patches-${PATCH_VERSION}.tar.gz"
 
 RDEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -36,7 +36,7 @@ src_unpack() {
 
 	#do NOT just remove this patch.  yes, it's here for a reason.
 	#woodchip@gentoo.org (07 Nov 2002)
-	patch -p1 <${FILESDIR}/squid-2.5.7-gentoo.diff || die
+	patch -p1 <${FILESDIR}/squid-2.5.3-gentoo.diff || die
 
 	# Do bulk patching from squids bug fix list for stable 6 see #57081
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patch
