@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.36 2003/05/30 12:47:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.37 2003/05/30 13:14:19 seemant Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -11,7 +11,8 @@ ECLASS=perl-module
 INHERITED="${INHERITED} ${ECLASS}"
 
 EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
-	src_compile src_install src_test
+	src_compile src_install src_test \
+	perlinfo updatepod
 
 eval `perl '-V:version'`
 DEPEND="dev-lang/perl
