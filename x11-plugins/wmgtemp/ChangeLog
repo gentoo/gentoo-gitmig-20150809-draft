@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmgtemp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.8 2005/02/27 12:25:19 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.9 2005/02/27 12:25:47 brix Exp $
+
+  27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org> wmgtemp-0.7.ebuild:
+  Dependency update: sys-apps/lm-sensors -> sys-apps/lm_sensors.
 
   27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org> wmgtemp-0.6.ebuild:
   Dependency update: sys-apps/lm-sensors -> sys-apps/lm_sensors.
