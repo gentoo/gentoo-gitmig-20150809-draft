@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre09.ebuild,v 1.1 2004/09/07 15:49:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre09.ebuild,v 1.2 2004/09/08 14:51:54 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.2"
 GENTOOSPLASH="splashutils-gentoo-0.1.1"
@@ -50,7 +50,7 @@ src_unpack() {
 		else
 			t2=$(readlink ${KBUILD_OUTPUT_PREFIX}/${t/linux-}/include/asm)
 			ln -s /usr/src/linux/include/${t2} ${T}/asm
-			sed -e "s@#CHANGEME#@${T}/@" -i ${S}/libs/klibc-0.159/klibc/makeerrlist.pl
+			sed -e "s@#CHANGEME#@${T}/@" -i ${S}/libs/klibc-0.172/klibc/makeerrlist.pl
 		fi
 	fi
 }
