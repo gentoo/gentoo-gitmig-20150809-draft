@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1.3.ebuild,v 1.1 2003/07/29 12:44:28 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1.3.ebuild,v 1.2 2003/08/03 19:15:27 pauldv Exp $
 inherit kde-dist 
 
 IUSE="pda"
@@ -13,14 +13,13 @@ newdepend "pda? ( >=dev-libs/pilot-link-0.11.1-r1
 	=kde-base/kdebase-${PV}*
 	~kde-base/kdenetwork-${PV}" # mimelib is needed for support of some stuff with exchange servers
 
-use pda && myconf="$myconf --with-extra-includes=/usr/include/libpisock" && PATCHES="${FILESDIR}/kdepim-3.1.2-libmal-support.diff"
+use pda && myconf="$myconf --with-extra-includes=/usr/include/libpisock"
 
 # reported by doctomoe on ppc
 MAKEOPTS="$MAKEOPTS -j1"
 src_compile() {
-        use pda && rm -f configure configure.in
-		kde_src_compile myconf configure
-		kde_src_compile make
+	kde_src_compile myconf configure
+	kde_src_compile make
 }
 								
 src_install() {
