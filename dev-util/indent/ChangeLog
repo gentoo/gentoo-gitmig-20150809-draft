@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/indent
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.4 2002/12/16 22:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.5 2003/02/04 22:04:30 agriffis Exp $
+
+  04 Feb 2003; Aron Griffis <agriffis@gentoo.org> indent-2.2.6.ebuild :
+  Mark stable on alpha
 
   16 Dec 2002; Aron Griffis <agriffis@gentoo.org> indent-2.2.6.ebuild :
   Added ~alpha to KEYWORDS
