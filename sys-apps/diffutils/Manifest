@@ -5,7 +5,7 @@ MD5 20e600529f44f58d20e0a0655b52d64e ChangeLog 5389
 MD5 2b8888ea3c1b05e81e1bbf61b1f2b945 diffutils-2.8.4-r4.ebuild 1933
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8368feedcf16cc9bf0e90e5bd14e843d diffutils-2.8.7.ebuild 1406
-MD5 f4c7a071aea75f7d67d614b5ed0b2bcd diffutils-2.8.7-r1.ebuild 1535
+MD5 08d6e2491177bfab8aff3fba8dccb4ba diffutils-2.8.7-r1.ebuild 1594
 MD5 88eef724512016e5400a58e4057ef235 files/diffutils-2.8.4-Makefile-fix-typeo.patch 1158
 MD5 bb27bd30edca169156e905ebe7dab570 files/diffutils-2.8.4-no-manpage.patch 1168
 MD5 fcb3554acdf9074aad98b90af6cb915d files/diffutils-2.8.4-sdiff-no-waitpid.patch 525
@@ -16,7 +16,7 @@ MD5 28aba2261ffb7634265a612938df28f5 files/digest-diffutils-2.8.7 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2hDyroRuSHgZdywRApPMAJ0ZcdBXWdaq8YScQjd9TMkRMPNxCQCeIFiU
-ErpuVdPKoGlr4fyQ6KOFVN0=
-=x00i
+iD8DBQFB2u+EroRuSHgZdywRArvtAJ9iHY8HCm7ccx1LGQPoMyU9wfjQKQCghmLK
+x0/Ji8HSZMyBbebleWRWSus=
+=iGsJ
 -----END PGP SIGNATURE-----
