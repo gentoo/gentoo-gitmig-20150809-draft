@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.5 2004/04/27 21:31:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.6 2004/06/12 00:46:53 gmsoft Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dhcpv6/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 hppa"
 IUSE="static"
 
 DEPEND=""
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/patch-iaid-dhcp6-${PV}
+	epatch ${FILESDIR}/${PN}-bison-fix.patch
 }
 
 src_compile() {

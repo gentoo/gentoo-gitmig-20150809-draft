@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.8.ebuild,v 1.8 2004/04/27 21:31:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.8.ebuild,v 1.9 2004/06/12 00:46:53 gmsoft Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/negative-iaid-patch-0.8
+	epatch ${FILESDIR}/${PN}-bison-fix.patch
 }
 
 src_install() {
