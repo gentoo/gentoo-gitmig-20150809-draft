@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xclip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.5 2004/08/04 20:06:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/ChangeLog,v 1.6 2004/08/05 17:44:47 slarti Exp $
+
+  05 Aug 2004; Tom Martin <slarti@gentoo.org> :
+  Marked ~amd64; resolves bug 58436. Thanks to Marc-Éric Dupuis
+  <baal@megaoctet.net> for reporting.
 
   04 Aug 2004; Travis Tilley <lv@gentoo.org> xclip-0.08.ebuild:
   added ~amd64 keyword
