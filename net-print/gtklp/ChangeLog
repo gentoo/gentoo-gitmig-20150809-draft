@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gtklp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.2 2002/07/14 20:41:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.3 2002/07/25 22:53:34 spider Exp $
+
+*gtklp-0.9k (25 Jul 2002)
+  25 Jul 2002; Spider <spider@gentoo.org> gtklp-0.9k.ebuild:
+  thanks to  Luca Barbato <lu_zero@psxfanatics.com> for a new version ebuild
 
 *gtklp-0.6g-r1 (1 Feb 2002)
 
