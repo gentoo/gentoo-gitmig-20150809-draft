@@ -1,12 +1,16 @@
 # ChangeLog for net-www/cherokee
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.11 2004/03/10 20:50:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.12 2004/03/18 18:33:23 bass Exp $
 
-  10 Mar 2004; Martin Holzer <mholzer@gentoo.org> cherokee-0.4.1.ebuild,
-  files/cherokee-0.4.1-gcc3.patch:
-  adding gcc3 fix. closes 41744
+*cherokee-0.4.14 (18 Mar 2004)
+
+  18 Mar 2004; <bass@gentoo.org> cherokee-0.4.14.ebuild:
+  Bumped version.
 
 *cherokee-0.4.10 (26 Feb 2004)
+
+  18 Mar 2004; <bass@gentoo.org> cherokee-0.4.10.ebuild:
+  Marked as stable in x86
 
   26 Feb 2004; <bass@gentoo.org> cherokee-0.4.10.ebuild:
   Bumped version. Changed Url.
@@ -48,6 +52,10 @@
   Added missing changelog entry.
 
 *cherokee-0.4.1 (16 Mar 2003)
+
+  10 Mar 2004; Martin Holzer <mholzer@gentoo.org> cherokee-0.4.1.ebuild,
+  files/cherokee-0.4.1-gcc3.patch:
+  adding gcc3 fix. closes 41744
  
   13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
