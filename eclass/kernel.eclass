@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.24 2003/03/24 23:22:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.25 2003/03/24 23:34:31 drobbins Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -28,7 +28,7 @@ then
 		 !build? ( >=sys-libs/ncurses-5.2
 			   tcltk? dev-lang/tk
 			   dev-lang/perl
-			   sys-apps/modutils
+			   virtual/modutils
 			   sys-devel/make )"
 	PROVIDE="virtual/linux-sources"
 
