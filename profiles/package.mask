@@ -351,4 +351,4 @@ dev-lang/tcl-tk
 
 # 1 Feb 2002; Bevin <gbeivn@gentoo.org> : seems not to work for a number
 # of people, should be investigated
-=perl-5.6.1-r2
+=sys-devel/perl-5.6.1-r2
