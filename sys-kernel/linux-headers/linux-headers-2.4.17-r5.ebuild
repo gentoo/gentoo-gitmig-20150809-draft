@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r5.ebuild,v 1.16 2003/09/29 18:30:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r5.ebuild,v 1.17 2003/10/29 23:38:22 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -9,7 +9,7 @@ OKV=${PV}
 KV=${PVR}
 S=${WORKDIR}/linux-${KV}
 LICENSE="GPL-2"
-SLOT="${KV}"
+SLOT="0"
 KEYWORDS="x86 -ppc"
 
 # What's in this kernel?

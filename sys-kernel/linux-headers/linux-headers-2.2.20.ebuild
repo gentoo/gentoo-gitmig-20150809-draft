@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.20.ebuild,v 1.15 2003/09/29 18:30:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.20.ebuild,v 1.16 2003/10/29 23:38:22 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.kernel.org/
 	http://www.atnf.csiro.au/~rgooch/linux/kernel-patches.html/
 	http://www.namesys.com"
 LICENSE="GPL-2"
-SLOT="${KV}"
+SLOT="0"
 KEYWORDS="x86"
 
 if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
