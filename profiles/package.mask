@@ -42,9 +42,6 @@
 #we no longer use sysvinit (rolled into baselayout)
 sys-apps/sysvinit
 
-# testing
->=app-admin/metalog-0.6-r8
-
 # broken
 app-admin/webconfig
 
