@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.20 2005/02/11 06:15:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r6.ebuild,v 1.1 2005/02/11 06:15:03 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/bc/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="readline static"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1
@@ -25,6 +25,8 @@ src_unpack() {
 
 	epatch ${FILESDIR}/bc-1.06-info-fix.diff
 	epatch ${FILESDIR}/bc-1.06-readline42.diff
+	epatch ${FILESDIR}/bc-1.06-longopts.patch #51525
+	epatch ${FILESDIR}/bc-1.06-static-save.patch
 	sed -i -e '/^AR =/s:.*::' lib/Makefile.in
 
 	# Command line arguments for flex changed from the old

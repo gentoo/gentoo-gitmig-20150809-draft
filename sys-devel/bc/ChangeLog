@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/bc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.16 2004/11/08 06:09:01 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.17 2005/02/11 06:15:03 vapier Exp $
+
+*bc-1.06-r6 (11 Feb 2005)
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bc-1.06-longopts.patch, +files/bc-1.06-static-save.patch,
+  +bc-1.06-r6.ebuild:
+  Add patch to fix longopts handling #51525 and a patch from fedora to fix
+  saved register handling.
 
   08 Nov 2004; Mike Frysinger <vapier@gentoo.org> bc-1.06-r5.ebuild:
   USE=static support #70276 by Sascha Silbe.
