@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/uqm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.9 2004/11/24 21:40:47 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.10 2005/02/09 07:34:37 mr_bones_ Exp $
+
+  09 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> uqm-0.3-r2.ebuild:
+  more use flag knobs to support specific content install (bug #67045) -
+  ebuild mods from John Croisant
 
   25 Nov 2004; Joseph Jezak <josejx@gentoo.org> uqm-0.3-r2.ebuild:
   Markked ppc stable.

@@ -1,22 +1,23 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.3-r2.ebuild,v 1.4 2004/11/24 21:40:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.3-r2.ebuild,v 1.5 2005/02/09 07:34:37 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="The Ur-Quan Masters: Port of Star Control 2"
 HOMEPAGE="http://sc2.sourceforge.net/"
-SRC_URI="mirror://sourceforge/sc2/${P}-3domusic.zip
+SRC_URI="mirror://sourceforge/sc2/${P}-source.tgz
 	mirror://sourceforge/sc2/${P}-content.zip
-	mirror://sourceforge/sc2/${P}-voice.zip
-	mirror://sourceforge/sc2/${P}-source.tgz
-	mirror://sourceforge/sc2/${PN}-remix-pack1.zip
-	mirror://sourceforge/sc2/${PN}-remix-pack2.zip"
+	music? ( mirror://sourceforge/sc2/${P}-3domusic.zip )
+	voice? ( mirror://sourceforge/sc2/${P}-voice.zip )
+	remix? ( mirror://sourceforge/sc2/${PN}-remix-pack1.zip \
+		mirror://sourceforge/sc2/${PN}-remix-pack2.zip \
+		mirror://sourceforge/sc2/${PN}-remix-pack3.zip )"
 
-KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
-IUSE="opengl"
 SLOT="0"
+KEYWORDS="x86 ppc"
+IUSE="opengl music voice remix"
 
 RDEPEND="virtual/libc
 	virtual/x11
@@ -54,13 +55,13 @@ src_unpack() {
 
 	# Take out the read so we can be non-interactive.
 	sed -i \
-		-e '/read CHOICE/d' build/unix/menu_functions || \
-		die "sed menu_functions failed"
+		-e '/read CHOICE/d' build/unix/menu_functions \
+		|| die "sed menu_functions failed"
 
 	# support the user's CFLAGS.
 	sed -i \
-		-e "s/-O3/${CFLAGS}/" build/unix/build.config || \
-		die "sed build.config failed"
+		-e "s/-O3/${CFLAGS}/" build/unix/build.config \
+		|| die "sed build.config failed"
 	cat > ${T}/uqm <<-EOF
 	#!/bin/sh
 	# Wrapper script for starting The Ur-Quan Masters
@@ -69,7 +70,7 @@ EOF
 }
 
 src_compile() {
-	./build.sh uqm || die
+	./build.sh uqm || die "build failed"
 }
 
 src_install() {
@@ -83,14 +84,29 @@ src_install() {
 	dodir "${GAMES_DATADIR}/${PN}/content/packages/content"
 	cp content/version "${D}${GAMES_DATADIR}/${PN}/content" \
 		|| die "cp version failed"
-	cp ${DISTDIR}/${P}-{3domusic,content,voice}.zip \
-		"${D}${GAMES_DATADIR}/${PN}/content/packages" \
-			|| die "cp media archives failed"
 
-	dodir "${GAMES_DATADIR}/${PN}/content/packages/addons/uqmremix"
-	cp ${DISTDIR}/${PN}-remix-pack{1,2}.zip \
-		"${D}${GAMES_DATADIR}/${PN}/content/packages/addons/uqmremix" \
-			|| die "cp media archives addons failed"
+	cp ${DISTDIR}/${P}-content.zip\
+		 "${D}${GAMES_DATADIR}/${PN}/content/packages"\
+		|| die "cp failed"
+
+	if use music; then
+		cp ${DISTDIR}/${P}-3domusic.zip \
+			"${D}${GAMES_DATADIR}/${PN}/content/packages" \
+			|| die "cp failed"
+	fi
+
+	if use voice; then
+		cp ${DISTDIR}/${P}-voice.zip \
+			"${D}${GAMES_DATADIR}/${PN}/content/packages" \
+			|| die "cp failed"
+	fi
+
+	if use remix; then
+		dodir "${GAMES_DATADIR}/${PN}/content/packages/addons/uqmremix"
+		cp ${DISTDIR}/${PN}-remix-pack{1,2,3}.zip \
+			"${D}${GAMES_DATADIR}/${PN}/content/packages/addons/uqmremix" \
+			|| die "cp failed"
+	fi
 
 	dodoc AUTHORS ChangeLog Contributing README TODO WhatsNew \
 		doc/users/manual.txt
@@ -102,12 +118,12 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	echo
-	einfo "To hear all the remixed music made by the The Ur-Quan Masters"
-	einfo "project's Precursors Team instead of the original ones,"
-	einfo "start the game with:"
-	einfo
-	einfo "    --addon uqmremix"
-	einfo
-	echo
+	if use remix ; then
+		echo
+		einfo "To hear all the remixed music made by the The Ur-Quan Masters"
+		einfo "project's Precursors Team instead of the original ones,"
+		einfo "start the game with:"
+		einfo "    --addon uqmremix"
+		echo
+	fi
 }
