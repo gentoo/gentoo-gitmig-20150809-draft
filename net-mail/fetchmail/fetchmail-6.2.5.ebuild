@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.4 2003/11/22 01:40:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.5 2004/02/22 10:32:00 aliz Exp $
 
 IUSE="ssl nls ipv6 kerberos krb4"
 
@@ -18,16 +18,20 @@ DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	nls? ( sys-devel/gettext )
 	kerberos? ( virtual/krb5 )
-	krb4? ( app-crypt/kth-krb )"
+	krb4? ( app-crypt/kth-krb )
+	sys-devel/autoconf"
 
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-6.2.0-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-kerberos.patch
 }
 
 src_compile() {
+	autoconf
+
 	use amd64 && gnuconfig_update
 
 	local myconf

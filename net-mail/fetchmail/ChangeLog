@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.40 2004/01/18 22:59:02 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.41 2004/02/22 10:32:00 aliz Exp $
+
+  22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> fetchmail-6.2.5.ebuild:
+  Fix kerberos5 support. Closing #28113.
 
   18 Jan 2004; <tuxus@gentoo.org> fetchmail-6.2.3.ebuild:
   Added ~mips to KEYWORDS.
