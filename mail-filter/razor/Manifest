@@ -6,7 +6,7 @@ MD5 75c5d3ad1bc48ae038b747d8f104c1c6 razor-2.40-r1.ebuild 2735
 MD5 1739456d96ab6c4384fefc08c437fe6d razor-2.66.ebuild 2735
 MD5 7ca5dc039abf88fcb6cb36870cd2e173 razor-2.61.ebuild 2730
 MD5 62a7a9b802be97ee06119074f0d844ad razor-2.36-r1.ebuild 2851
-MD5 949bc64f98d861d8746e03e1cbb5af99 ChangeLog 3657
+MD5 e3fb4dc6c141950109c889435ae17b03 ChangeLog 3764
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 d3e9a49fe82b4c304cafaadb03eedb08 files/razor-taint.patch 2125
 MD5 eb86375c84c8a7db9512ca1943fd5a7a files/no-install-razor-agents.patch 292
@@ -19,7 +19,7 @@ MD5 cf27167873572ac8be99c5195762d630 files/razor_uninstall.patch 1765
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBwOGShVOnUoxP5pwRAp/xAKCl9tpLQbxXdOqwLMpiIVDosBevnwCgyGMi
-q1goz+SdfizDl9uJnK/5JXE=
-=3G2T
+iD8DBQFBwvZIhVOnUoxP5pwRAkRwAJ9h9ZllMuCXZL0hyz5dhkts656SYACdE3+F
+6ItJZDw9IoDhITBmzcS9gTc=
+=Cc/U
 -----END PGP SIGNATURE-----
