@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1.ebuild,v 1.1 2001/08/07 16:08:16 csjoly Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1.ebuild,v 1.2 2001/08/07 16:18:10 csjoly Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SCREEM (Site CReating and Editing EnvironmenMent) is an
@@ -28,7 +28,7 @@ src_compile() {
 		myopts="$myopts --with-ssl"
 	fi
 
-	cp $${FILESDIR}/Makefile.in intl/Makefile.in
+	cp ${FILESDIR}/Makefile.in intl/Makefile.in
 
     try ./configure --prefix=/opt/gnome --host=${CHOST} ${myopts}
     try emake
