@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.28 2004/03/11 22:25:12 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.29 2004/03/15 02:58:36 lu_zero Exp $
+
+  15 Mar 2004; Luca Barbato <lu_zero@gentoo.org> ffmpeg-0.4.8.20040222.ebuild:
+  Marked -ppc pending a fix for misbuild.
 
 *ffmpeg-0.4.8.20040222 (11 Mar 2004)
 
