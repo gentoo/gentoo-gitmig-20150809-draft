@@ -1,14 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.21.1.ebuild,v 1.2 2002/07/09 09:19:46 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.21.3.ebuild,v 1.1 2002/07/16 21:37:24 karltk Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="HTTP and WebDAV client library"
 
 SRC_URI="http://www.webdav.org/${PN}/${P}.tar.gz"
-KEYWORDS="x86"
-SLOT="0"
+
 HOMEPAGE="http://www.webdav.org/neon"
 LICENSE="GPL-2"
 DEPEND="dev-libs/libxml2
