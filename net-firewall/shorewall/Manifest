@@ -1,4 +1,6 @@
 MD5 bed831472fcbb66cb0242d5682bcb4b5 ChangeLog 3014
+MD5 87242c0f88c6d39f99eea082212006d5 shorewall-1.4.6.ebuild 887
 MD5 87242c0f88c6d39f99eea082212006d5 shorewall-1.4.5-r1.ebuild 887
 MD5 7c8660b2d2395b8c9b6cc7f5902170f4 files/digest-shorewall-1.4.5-r1 65
-MD5 2bb788dc55a65a1daee4a13ca9240fab files/shorewall 433
+MD5 7aff60ae2f567399852afcf3c06f7003 files/shorewall 460
+MD5 c38ef41455fb3bcac28054cfcbf0ae3d files/digest-shorewall-1.4.6 65
