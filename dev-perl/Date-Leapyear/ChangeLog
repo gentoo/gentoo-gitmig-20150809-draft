@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlDBD-PgChangeLog/dev-perlDate-LeapyearChangeLog
+# ChangeLog for dev-perl/Date-Leapyear
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.5 2002/12/13 10:56:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.6 2002/12/17 19:22:18 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
