@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0.2.ebuild,v 1.3 2004/09/28 15:34:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0.2.ebuild,v 1.4 2004/09/29 16:03:00 vapier Exp $
 
 PHPSAPI="cli"
 MY_P="${PN}-${PV}"
@@ -8,7 +8,7 @@ inherit php5-sapi eutils
 
 DESCRIPTION="PHP Shell Interpreter"
 LICENSE="PHP"
-KEYWORDS="~ia64 ~hppa ~ppc ~x86"
+KEYWORDS="~arm ~hppa ~ia64 ~ppc ~x86"
 DEPEND="$DEPEND"
 RDEPEND="$RDEPEND"
 SLOT="0"

@@ -9,7 +9,7 @@ MD5 159ad5dc930e19ed38c8377ef7a8eb06 php-4.3.9_rc1.ebuild 1137
 MD5 abf5f97a49422c509b77b8077d714153 php-5.0.0-r1.ebuild 540
 MD5 48aa6f4b37fb2c3cc4fa6ad0527f4378 php-5.0.0.ebuild 521
 MD5 0413eca1cec9d3896cfe3634fd3e6806 php-5.0.1.ebuild 540
-MD5 03e77de335ab01a2d6dea40f084cf875 php-5.0.2.ebuild 553
+MD5 66457079ee99ec81625f60af44bcda9c php-5.0.2.ebuild 558
 MD5 3d9b5ebf0a273b87c7a9355fa0d0676d files/digest-php-4.3.9_rc1 134
 MD5 11f305b98b753ee023da8503a360762a files/digest-php-5.0.0-r1 63
 MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-php-5.0.1 63
@@ -23,7 +23,7 @@ MD5 4792b645fe6b66cd3f1b1ec88d4d20e8 files/digest-php-5.0.2 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWap7HTu7gpaalycRAg3mAKCAjBoZk8cif+0VJtnzV9Nm5pbW3ACdHPhp
-V0ISfhZ07+4IOnN6koCzrD0=
-=IjDV
+iD8DBQFBWtzQHTu7gpaalycRAq0dAKCwqyZU6Bys7L43/oyLAxdkYgSYKwCgsKXx
+z701XCjagSywEjHCzNfSPbo=
+=bGj2
 -----END PGP SIGNATURE-----
