@@ -1,0 +1,44 @@
+# ChangeLog for app-emulation/vmware-workstation
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.1 2002/02/21 04:18:48 drobbins Exp $
+
+*vmware-workstation-3.0.0.1455-r1 (2002/2/20)
+
+  20 Feb 2002; William McArthur <leknor@leknor.com> vmware-workstation-3.0.0.1455-r1.ebuild :
+
+  If you had an existing vmware install there was a problem where the file 
+  /etc/vmware/not_configured would have a mtime different from what was in the locations
+  file. This is fixed by not having a mtime in the locations file for the not_configured
+  file.
+
+  At the end of the merge the new locations file is appended to the existing locations.
+  This plus the above should solve any problems that people with manual vmware installs
+  have.
+
+  If the user was to merge vmware twice without running vmware-config.pl the rc#.d dirs
+  in /etc/vmware/init.d/ would be remove despite config protection. To keep them around
+  I added .keep files in each of them.
+  
+*vmware-workstation-3.0.0.1455 (2002/2/10)
+
+  10 Feb 2002; William McArthur <leknor@leknor.com> vmware-workstation-3.0.0.1455.ebuild :
+
+  I don't remember the details but the following was written:
+
+  The ebuild bypassed the official install because it doesn't all a install prefix.
+  Basicly the files from the work dir are copyied to the image dir.
+
+  DEBUG=true is set because the strip command line tool dumps core on the vmware
+  executable and setting DEBUG will disable it.
+
+  After the files have had their mtime updated we scan the image dir and collect the
+  mtimes and add the info to the /etc/vmware/locations file. This file is used by vmware
+  to track config choices and it is used in upgrading. By creating this file we make sure
+  the vmware config tools work and I think you could do a non gentoo package install of
+  vmware and it would work.
+
+  The vmware-config tool insists on a set of init dirs named rc#.d so they are created in
+  /etc/vmware/init.d/ . The other option was edit vmware-config.pl .
+
+  VMWare needs some modules loaded so at boot an init script is run that is really just
+  glue to start the init script supplied from vmware which is at /etc/vmware/init.d/vmware
