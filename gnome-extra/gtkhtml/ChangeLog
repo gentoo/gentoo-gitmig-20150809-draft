@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.2 2002/04/01 07:50:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.3 2002/04/11 14:03:56 seemant Exp $
+
+*gtkhtml-1.0.2-r1 (11 Apr 2002)
+
+  11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gtkhtml-1.0.2-r1.ebuild
+  files/digest-gtkhtml-1.0.2-r1
+
+  bonobo support has been added back in.
 
 *gtkhtml-1.0.2 (1 Apr 2002)
 
