@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.20 2004/07/01 22:09:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.21 2004/09/24 00:23:07 dragonheart Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 	use crypt && {
 		#I took the liberty of combining the two crypto patches
 		einfo "Applying ppp-crypto-fix.patch..."
-		bzcat ${FILESDIR}/ppp-crypto-fix.patch.bz2 | patch -p1
+		bzcat ${DISTDIR}/ppp-crypto-fix.patch.bz2 | patch -p1
 
 	}
 
