@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.17 2003/07/23 17:18:30 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.18 2003/07/25 20:27:08 lanius Exp $
+
+  25 Jul 2003; lanius@gentoo.org files/dhcp.rc6, files/dhcp.rc7:
+  added "use named" to rc scripts (bug #25239)
 
 *dhcp-3.0_p2-r1 (23 Jul 2003)
 
