@@ -208,6 +208,8 @@ net-www/zope
 
 # Security fix (reported by M0rpheus)
 <=net-mail/exim-3.33
+# Needs more testing (lamer@gentoo.org)
+=net-mail/exim-4.04
 
 #previous versions had a security hole (bug #212)
 <net-misc/stunnel-3.22
