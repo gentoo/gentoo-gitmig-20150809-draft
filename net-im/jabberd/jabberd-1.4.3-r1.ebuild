@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.2 2004/01/23 19:20:39 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.3 2004/01/26 17:34:44 humpback Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
@@ -153,6 +153,6 @@ pkg_postinst() {
 		einfo "StartTLS or run in ldaps mode."
 	fi
 	einfo
-	einfo "Please read /usr/share/doc/${P}/README.Gentoo.gz"
+	einfo "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
 	einfo
 }
