@@ -1,11 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/users-guide/users-guide-1.2-r1.ebuild,v 1.3 2002/07/11 06:30:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/users-guide/users-guide-1.2-r1.ebuild,v 1.4 2002/07/25 04:33:30 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-users-guide"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
+SLOT="0"
+KEYWORDS="x86 ppc"
+LICENSE="GPL-2"
 
 DEPEND="gnome-base/gnome-core"
 
