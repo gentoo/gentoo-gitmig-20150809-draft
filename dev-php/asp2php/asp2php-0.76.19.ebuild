@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/asp2php-0.76.19.ebuild,v 1.2 2004/03/15 13:55:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/asp2php-0.76.19.ebuild,v 1.3 2004/03/19 10:16:26 aliz Exp $
+
+inherit eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="ASP to PHP translator"

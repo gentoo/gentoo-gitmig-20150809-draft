@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpsysinfo
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.7 2003/12/16 12:17:27 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.8 2004/03/19 10:16:26 aliz Exp $
+
+  19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> phpsysinfo-2.1-r1.ebuild:
+  Inherit eutils and amd64 unmask.
 
   16 Dec 2003; Guy Martin <gmsoft@gentoo.org> phpsysinfo-2.1-r1.ebuild:
   Marked stable on hppa.

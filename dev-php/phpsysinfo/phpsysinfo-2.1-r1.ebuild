@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r1.ebuild,v 1.8 2004/02/05 03:52:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r1.ebuild,v 1.9 2004/03/19 10:16:26 aliz Exp $
+
+inherit eutils
 
 MY_PN="phpSysInfo"
 MY_P="${MY_PN}-${PV}"
@@ -11,7 +13,7 @@ SRC_URI="mirror://sourceforge/phpsysinfo/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha hppa ~sparc ~amd64"
+KEYWORDS="x86 ppc ~alpha hppa ~sparc amd64"
 
 DEPEND=">=net-www/apache-1.3.27-r1
 	>=dev-php/mod_php-4.2.3-r2"
