@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.17 2004/02/05 22:12:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.18 2004/03/17 22:47:52 leonardop Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -117,10 +117,10 @@ RDEPEND="!gnome-base/gnome-core
 
 	accessibility? ( >=gnome-extra/libgail-gnome-1.0.2
 		>=gnome-extra/at-spi-1.3.9
-		>=gnome-extra/gnome-speech-0.2.8
-		>=gnome-extra/gnome-mag-0.10.4
-		>=gnome-extra/gok-0.8.4
-		>=gnome-extra/gnopernicus-0.7.1 )
+		>=app-accessibility/gnome-speech-0.2.8
+		>=app-accessibility/gnome-mag-0.10.4
+		>=app-accessibility/gok-0.8.4
+		>=app-accessibility/gnopernicus-0.7.1 )
 
 	samba? ( >=gnome-extra/gnome-vfs-extras-0.99.11 )"
 
