@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.10 2004/10/22 17:25:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.11 2004/10/24 05:26:02 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sparc x86"
 IUSE="nls uclibc"
 
 # This pkg does not actually seem to compile currently in a uClibc
