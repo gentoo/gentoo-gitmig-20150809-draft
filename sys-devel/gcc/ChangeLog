@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.151 2003/11/30 15:49:53 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.152 2003/12/08 16:32:07 gmsoft Exp $
 
   30 Nov 2003; Alexander Gabert <pappy@gentoo.org> gcc-3.2.3-r3.ebuild,
   gcc-3.3.2-r3.ebuild:
@@ -15,6 +15,10 @@
   added logic for false positives hitting gcc library with guard in it
 
 *gcc-3.2.3-r3 (27 Nov 2003)
+
+  08 Dec 2003; Guy Martin <gmsoft@gentoo.org> gcc-3.3.2-r3.ebuild,
+  gcc-3.3.2.ebuild :
+  Force CHOST="hppa-unknown-linux-gnu" on hppa for stability.
 
   27 Nov 2003; Alexander Gabert <pappy@gentoo.org> gcc-3.2.3-r3.ebuild,
   gcc-3.3.2-r3.ebuild, files/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch:

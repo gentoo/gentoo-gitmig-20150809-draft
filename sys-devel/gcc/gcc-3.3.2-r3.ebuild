@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r3.ebuild,v 1.3 2003/11/30 15:49:54 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r3.ebuild,v 1.4 2003/12/08 16:32:07 gmsoft Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -30,6 +30,9 @@ inherit eutils flag-o-matic libtool
 #
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
+
+# gcc produce unstable binaries if compiled with a different CHOST.
+[ "${ARCH}" = "hppa" ] && export CHOST="hppa-unkown-linux-gnu"
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
