@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r5.ebuild,v 1.6 2002/08/14 03:06:54 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r5.ebuild,v 1.7 2002/08/16 01:22:43 murphy Exp $
 inherit flag-o-matic
 
 filter-flags "-fomit-frame-pointer -malign-double"
@@ -93,6 +93,12 @@ src_unpack() {
 	# problems with gcc-3.1.1.
 	# (Azarah, 14 Jul 2002)
 	patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311.patch || die
+
+	# Avoid "Error: illegal instruction" when compiling on sparc with gcc 3.1.1
+	if [ ${ARCH} == "sparc" -o ${ARCH} == "sparc64" ]; then
+		patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311-sparc.patch || die
+	fi
+
 }
 
 src_compile() {
