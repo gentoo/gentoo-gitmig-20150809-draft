@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/netboot-base
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netboot-base/ChangeLog,v 1.3 2004/10/07 21:00:08 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netboot-base/ChangeLog,v 1.4 2005/01/10 23:40:02 gmsoft Exp $
+
+*netboot-base-20050110 (11 Jan 2005)
+
+  11 Jan 2005; Guy Martin <gmsoft@gentoo.org> +netboot-base-20050110.ebuild:
+  Fix syntax errors in functions.sh and fix kill of syslogd and devfsd.
 
 *netboot-base-* (06 Oct 2004)
 
