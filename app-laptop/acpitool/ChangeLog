@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/acpitool
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpitool/ChangeLog,v 1.3 2004/11/18 21:18:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpitool/ChangeLog,v 1.4 2004/12/08 10:39:13 sekretarz Exp $
+
+*acpitool-0.2.6 (08 Dec 2004)
+
+  08 Dec 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +acpitool-0.2.6.ebuild:
+  Version bump, bug #73614. Now using make install instead of einstall, bug
+  #72178
 
   18 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> :
   Added proper digest
