@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/mdadm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.4 2003/04/29 08:30:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.5 2003/05/09 20:14:35 mholzer Exp $
 
 *mdadm-1.2.0 (29 Apr 2003)
+
+  09 May 2003; Martin Holzer <mholzer@gentoo.org> mdadm-1.2.0.ebuild:
+  Removing the kernel mirror since there's a .tar.gz
 
   29 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump. Submitted by Jeremy Huddleston <jeremyhu@cory.eecs.berkeley.edu> in #19794.
