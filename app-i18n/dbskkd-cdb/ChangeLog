@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/dbskkd-cdb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.1 2003/05/05 09:29:38 phosphan Exp $
+
+*dbskkd-cdb-1.01 (05 May 2003)
+
+  05 May 2003; Patrick Kursawe <phosphan@gentoo.org> dbskkd-cdb-1.01.ebuild,
+  files/dbskkd-cdb.xinetd:
+  Initial version, submitted by Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp>
+  in bug 20456
