@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.14 2002/12/20 23:34:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.15 2002/12/22 21:21:37 mholzer Exp $
 
-*libpng-1.2.5 (21 Dec 2002)
+*libpng-1.2.5-r1 (21 Dec 2002)
+
+  22 Dec 2002; Martin Holzer <mholzer@gentoo.org> libpng-1.2.5-r1.ebuild files/digest-libpng-1.2.5-r1 Changelog :       
+  Changed SRC_URI to sf and .tar.gz to tar.bz2 
 
   21 Dec 2002; foser <foser@gentoo.org> libpng-1.2.5-r1.ebuild :
   Add fix for linker issues (bug #9792), revision bump to make sure everybody gets it
@@ -15,6 +18,9 @@
   Version bump per #9651
 
 *libpng-1.2.4 libpng-1.2.3-r1 (09 Jul 2002)
+
+  22 Dec 2002; Martin Holzer <mholzer@gentoo.org> libpng-1.2.4.ebuild files/digest-libpng-1.2.4 Changelog : 
+  Changed SRC_URI to sf and .tar.gz to tar.bz2 
 
   09 Jul 2002; Seemant Kulleen <seemant@gentoo.org> libpng-1.2.4.ebuild,
   libpng-1.2.3-r1.ebuild files/digest-libpng-1.2.3-r1 :
@@ -55,6 +61,9 @@
   in src_install()
 
 *libpng-1.0.12-r1 and libpng-1.2.1-r1 (13 April 2002)
+
+  22 Dec 2002; Martin Holzer <mholzer@gentoo.org> libpng-1.0.12-r1.ebuild files/digest-libpng-1.0.12-r1 Changelog :
+  Changed SRC_URI to sf and .tar.gz to tar.bz2 
 
   13 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
 
