@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/fceultra
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/ChangeLog,v 1.7 2002/11/22 16:48:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/ChangeLog,v 1.8 2002/12/01 16:54:57 vapier Exp $
 
 *fceultra-081-r1 (22 Nov 2002)
+
+  01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a check that if the compiler is gcc3.x, the ebuild fails #11426
 
   22 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   Added support for sdl version #11089

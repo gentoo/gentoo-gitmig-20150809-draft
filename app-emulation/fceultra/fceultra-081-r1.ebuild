@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-081-r1.ebuild,v 1.1 2002/11/22 16:48:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-081-r1.ebuild,v 1.2 2002/12/01 16:54:57 vapier Exp $
+
+inherit gcc
 
 MY_P=fceu
 S=${WORKDIR}/${MY_P}
@@ -16,6 +18,13 @@ DEPEND="svga? ( media-libs/svgalib )
 	sdl? ( media-libs/libsdl )"
 
 pkg_setup() {
+	if [ `gcc-major-version` == 3 ] && [ `gcc-minor-version` == 2 ] && [ ${ARCH} == "x86" ] ; then
+		eerror "Do not use gcc 3.2.x to compile the source code"
+		eerror "on 80x86/IA32 platforms. It has a code generation"
+		eerror "bug in it that will cause FCE Ultra to not work."
+		die "cant compile on x86 with gcc-3.2.x"
+	fi
+
 	use sdl && return 0
 	use svga && return 0
 
