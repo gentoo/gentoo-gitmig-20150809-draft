@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.7-r1.ebuild,v 1.1 2002/11/05 23:43:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.7-r1.ebuild,v 1.2 2002/11/09 16:57:35 foser Exp $
 
 IUSE="tiff doc jpeg"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gtk.org/"
 LICENSE="LGPL-2.1"
 
 RDEPEND="virtual/x11
-	>=dev-libs/glib-2.0.7
+	>=dev-libs/glib-2.0.6
 	>=dev-libs/atk-1.0.3-r1
 	>=x11-libs/pango-1.0.4-r1
 	>=media-libs/libpng-1.2.1
@@ -26,7 +26,8 @@ RDEPEND="virtual/x11
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
-	 doc? ( >=dev-util/gtk-doc-0.9 )"
+	 doc? ( >=dev-util/gtk-doc-0.9 
+		app-text/sgmltools-lite )"
 
 src_unpack() {
 	unpack ${A}
