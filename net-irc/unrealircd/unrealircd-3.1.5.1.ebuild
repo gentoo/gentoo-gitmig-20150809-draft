@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.1.5.1.ebuild,v 1.4 2003/07/02 19:26:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.1.5.1.ebuild,v 1.5 2003/07/09 18:46:05 vapier Exp $
 
 MY_P=Unreal${PV}-Valek
 DESCRIPTION="aimed to be an advanced, not an easy IRCd"
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE="ssl"
 
-DEPEND="ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )
+	>=sys-apps/sed-4"
 
 S=${WORKDIR}/Unreal${PV}
 
@@ -21,7 +22,7 @@ src_unpack() {
 	unpack ${A} && cd ${S}
 	rm -f .CHANGES.NEW .RELEASE.NOTES
 	epatch ${FILESDIR}/${PV}-Config.patch
-	epatch ${FILESDIR}/${PV}-new-glibc-res.patch
+	sed -i 's:^ID_CVS.*::' src/res_mkquery.c
 
 	cp Config{,.orig}
 	sed -e "s:GENTOO_CFLAGS:${CFLAGS}:" \
