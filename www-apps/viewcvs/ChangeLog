@@ -1,6 +1,13 @@
 # ChangeLog for net-www/viewcvs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.4 2004/08/30 19:45:27 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.5 2004/09/01 10:56:15 pauldv Exp $
+
+*viewcvs-0.9.2_p20040831 (01 Sep 2004)
+
+  01 Sep 2004; <pauldv@gentoo.org> -viewcvs-0.9.2-r1.ebuild,
+  -viewcvs-0.9.2-r2.ebuild, +viewcvs-0.9.2_p20040831.ebuild:
+  Remove some stale versions and get a new version from the viewcvs cvs. 
+  The old snapshot is more than a year old now.
 
   30 Aug 2004; Renat Lumpau <rl03@gentoo.org>
   viewcvs-0.9.2_p20030430-r2.ebuild:
