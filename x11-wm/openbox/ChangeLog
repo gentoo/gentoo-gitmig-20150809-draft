@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.39 2003/06/24 08:57:05 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.40 2003/07/18 14:16:54 seemant Exp $
+
+  18 Jul 2003; Seemant Kulleen <seemant@gentoo.org> openbox-2.3.0.ebuild:
+  hacky fix to disable NLS being built in this version -- use the MYCONF to
+  override. commonbox.eclass adjusted to accept this variable
 
   24 Jun 2003; Tavis Ormandy <taviso@gentoo.org> openbox-2.3.1.ebuild:
   marking ~alpha

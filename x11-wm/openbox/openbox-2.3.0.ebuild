@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.0.ebuild,v 1.8 2003/06/19 13:39:34 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.0.ebuild,v 1.9 2003/07/18 14:16:54 seemant Exp $
 
-IUSE="gnome kde nls xinerama truetype"
+IUSE="gnome kde xinerama truetype"
 
 inherit commonbox eutils
 
@@ -19,6 +19,9 @@ DEPEND="$DEPEND
 	virtual/xft"
 
 mydoc="CHANGE* TODO LICENSE data/README*"
+
+# NLS support is broken in this version
+MYCONF="--disable-nls"
 
 src_unpack() {
 
