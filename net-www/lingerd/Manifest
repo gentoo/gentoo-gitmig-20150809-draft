@@ -1,5 +1,5 @@
-MD5 ea9385467aaacdca578cdcee06c60869 ChangeLog 920
-MD5 c686ed54e81bf9c4e9c74ba4bb9bc0c8 lingerd-0.94.ebuild 1083
+MD5 8f0cc1168b0110aca5c613d08b87daba ChangeLog 1016
+MD5 724bb5eacd0239adb7d24ae018eeab11 lingerd-0.94.ebuild 1091
 MD5 0455f43eb00baba59d88914dde12edb9 metadata.xml 443
 MD5 78caf28086b76c0e6708c31bbad10ade files/digest-lingerd-0.94 63
 MD5 e6acfa29750c53c7c2191ffa4c0047b8 files/lingerd.rc 610
