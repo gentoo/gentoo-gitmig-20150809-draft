@@ -5,7 +5,6 @@ MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 c30d4be87d6cd003258ffe41314a6f3a avidemux-2.0.20.ebuild 2347
 MD5 c235b3c2a9d464d8729ec6698895866e files/alsa.patch 607
 MD5 09aa754d6dec1bcd2694695ed63b45a4 files/avidemux-0.9-libxml2.5.7.patch 717
-MD5 e2ad26556058864a7ca0eb97a34b5471 files/avidemux-2.0.16-ppc-configure.patch 926
 MD5 6be6f74f2af672e3571d3a450af4aeb3 files/digest-avidemux-0.9-r1 62
 MD5 7f9945862f4c68c59549897fe020eb2c files/digest-avidemux-2.0.18 68
 MD5 bc99c120921cdbc84402a1ac014f0786 files/gcc2.patch 1044
