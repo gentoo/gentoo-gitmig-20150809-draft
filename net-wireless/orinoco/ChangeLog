@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/orinoco
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.2 2005/01/04 00:05:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/ChangeLog,v 1.3 2005/01/04 10:05:58 brix Exp $
+
+  04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  orinoco-0.15_rc2-r1.ebuild:
+  Use MODULESD_ORINOCO_DOCS for installing README.orinoco.
 
 *orinoco-0.15_rc2-r1 (04 Jan 2005)
 

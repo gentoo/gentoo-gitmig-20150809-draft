@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc2-r1.ebuild,v 1.1 2005/01/04 00:05:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco/orinoco-0.15_rc2-r1.ebuild,v 1.2 2005/01/04 10:05:58 brix Exp $
 
 inherit pcmcia linux-mod
 
@@ -19,6 +19,8 @@ SLOT="0"
 RDEPEND="net-wireless/wireless-tools"
 
 BUILD_TARGETS="all"
+
+MODULESD_ORINOCO_DOCS="README.orinoco"
 
 CONFIG_CHECK="NET_RADIO !HERMES"
 NET_RADIO_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
@@ -66,8 +68,6 @@ src_install() {
 		insinto /etc/pcmcia
 		doins hermes.conf
 	fi
-
-	dodoc README.orinoco
 
 	linux-mod_src_install
 }
