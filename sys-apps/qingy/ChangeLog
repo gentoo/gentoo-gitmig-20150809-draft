@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.15 2004/08/16 23:59:43 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.16 2004/08/18 11:41:45 s4t4n Exp $
+
+*qingy-0.5.1 (18 August 2004)
+
+  18 August 2004; Michele Noberasco <s4t4n@gentoo.org> qingy-0.5.1.ebuild:
+  Version bump. This fixes minor issues introduced by 0.5.0...
+  qingy-0.2.1.ebuild, qingy-0.2.2.ebuild, qingy-0.2.3.ebuild,
+  qingy-0.3.0.ebuild, qingy-0.4.0.ebuild, qingy-0.4.1.ebuild, 
+  qingy-0.5.0.ebuild and their digests:
+  Wipe out all older versions: I want as much feedback as possible
+  on this release, plus it should be the best version ever
+  (unless other bugs come out...).
 
 *qingy-0.5.0 (17 August 2004)
 
