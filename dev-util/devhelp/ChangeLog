@@ -1,9 +1,13 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.4 2002/07/04 14:45:29 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.5 2002/09/01 18:19:20 seemant Exp $
 
 *devhelp-0.4-r1 (04 Jul 2002)
-  
+ 
+  01 Sep 2002; Seemant Kulleen <seemant@gentoo.org> devhelp-0.4-r1.ebuild :
+
+  typo fix submitted by ska-fan in #gentoo-dev
+ 
   04 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> devhelp-0.4-r1.ebuild :
   
   Updated and modified dependencies to match with Gnome1 libs avoiding Gnome2

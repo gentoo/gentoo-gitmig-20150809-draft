@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.4-r1.ebuild,v 1.5 2002/08/16 04:04:41 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.4-r1.ebuild,v 1.6 2002/09/01 18:19:20 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Developer help browser"
@@ -54,5 +54,5 @@ pkg_postinst() {
 	SOURCE=xml::/etc/gconf/gconf.xml.defaults
 	GCONF_CONFIG_SOURCE=$SOURCE \
 		gconftool-1 --makefile-install-rule \
-		/etc/gconf/schemas/devhelp.schemas \ 
+		/etc/gconf/schemas/devhelp.schemas
 }
