@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.2 2002/04/20 12:07:13 azarah Exp $
+
+  20 April 2002; Martin Schlemmer <azarah@gentoo.org> files/vcron.rc6 :
+
+  Update to NEED "logger"
 
 *vcron-3.0.1 (1 Feb 2002)
 
