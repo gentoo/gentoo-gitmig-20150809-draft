@@ -1,9 +1,16 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.13 2002/07/25 21:56:56 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.14 2002/09/30 23:52:36 spider Exp $
+
+*gdk-pixbuf-0.20.0 (01 Oct 2002)
+
+  01 Oct 2002; Spider <spider@gentoo.org> gdk-pixbuf-0.20.0.ebuild : uodated 
+  to the latest version, added fixes for the -config script. hopefully 
+  this solves the bugs with missing include dirs.
 
 *gdk-pixbuf-0.18.0-r1 (24 Jun 2002)
-  25 Jul 2002; Spider <spider@gentoo.org> :
+
+25 Jul 2002; Spider <spider@gentoo.org> :
   seems this needs db-1.85 or it will fail to build.
   added dependency. per bug #5382
 
