@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.32 2005/02/14 06:13:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.33 2005/02/14 12:49:19 robbat2 Exp $
+
+  14 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/0.88-rblsmtpd-ignore-on-RELAYCLIENT.patch:
+  Bug #80071. rblsmtpd-ignore-on-RELAYCLIENT.patch.
 
 *ucspi-tcp-0.88-r10 (13 Feb 2005)
 

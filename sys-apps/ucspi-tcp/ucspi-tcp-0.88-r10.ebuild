@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r10.ebuild,v 1.1 2005/02/14 06:13:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r10.ebuild,v 1.2 2005/02/14 12:49:19 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -47,9 +47,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-errno.patch
 	epatch ${DISTDIR}/ucspi-rss.diff
 	epatch ${FILESDIR}/${PV}-head-1.patch
+	epatch ${FILESDIR}/${PV}-rblsmtpd-ignore-on-RELAYCLIENT.patch
 
-	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
+	tc-export CC
+	echo "${CC} ${CFLAGS}" > conf-cc
+	echo "${CC} ${LDFLAGS}" > conf-ld
 	echo "/usr/" > conf-home
 
 	# allow larger responses
