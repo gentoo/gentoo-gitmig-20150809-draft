@@ -105,6 +105,7 @@ net-misc/rsync
 *sys-apps/diffutils
 *sys-apps/e2fsprogs
 *sys-apps/ed
+*sys-apps/eject
 *sys-apps/fbset
 *sys-apps/file
 *sys-apps/fileutils
@@ -116,7 +117,6 @@ net-misc/rsync
 *sys-apps/hdparm
 *sys-apps/iptables
 *sys-apps/less
-
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/modutils
