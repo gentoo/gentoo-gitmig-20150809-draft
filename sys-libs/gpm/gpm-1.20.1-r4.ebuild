@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r3.ebuild,v 1.2 2005/02/07 19:32:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r4.ebuild,v 1.1 2005/02/13 04:52:25 vapier Exp $
 
 inherit eutils toolchain-funcs
 
-PATCH_VER="1.2"
+PATCH_VER="1.3"
 DESCRIPTION="Console-based mouse driver"
 HOMEPAGE="ftp://arcana.linux.it/pub/gpm/"
 SRC_URI="ftp://arcana.linux.it/pub/gpm/${P}.tar.bz2
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux"
 
-DEPEND=">=sys-libs/ncurses-5.2"
+DEPEND="sys-libs/ncurses"
 RDEPEND="selinux? ( sec-policy/selinux-gpm )"
 
 src_unpack() {
