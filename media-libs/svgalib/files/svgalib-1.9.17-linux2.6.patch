@@ -598,3 +598,517 @@ diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/main.c svgalib-1.9.17.kernel2.6
  }
  
  #ifdef MODULE_LICENSE
+diff -ur svgalib-1.9.17/include/vga.h svgalib-1.9.17.kernel2.6/include/vga.h
+--- svgalib-1.9.17/include/vga.h	2002-08-04 10:31:07.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/include/vga.h	2004-02-01 21:08:09.000000000 +0000
+@@ -534,6 +534,11 @@
+ #define BLITS_SYNC			0
+ #define BLITS_IN_BACKGROUND		0x1
+ 
++/* 2.6 Framebuffer code defines this; we don't need it */
++#ifdef ROP_XOR
++# undef ROP_XOR
++#endif
++
+ /* Raster ops. */
+ #define ROP_COPY			0	/* Straight copy. */
+ #define ROP_OR				1	/* Source OR destination. */
+diff -ur svgalib-1.9.17/src/drivers/ali.c svgalib-1.9.17.kernel2.6/src/drivers/ali.c
+--- svgalib-1.9.17/src/drivers/ali.c	2002-04-20 22:48:20.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/ali.c	2004-02-01 21:08:08.000000000 +0000
+@@ -186,7 +186,7 @@
+ static int ali_modeavailable(int mode)
+ {
+     const unsigned char *regs;
+-    struct info *info;
++    struct vgainfo *info;
+ 
+     regs = LOOKUPMODE(ali_modes, mode);
+     if (regs == NULL || mode == GPLANE16) {
+diff -ur svgalib-1.9.17/src/drivers/apm.c svgalib-1.9.17.kernel2.6/src/drivers/apm.c
+--- svgalib-1.9.17/src/drivers/apm.c	2002-08-04 14:25:51.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/apm.c	2004-02-01 21:08:08.000000000 +0000
+@@ -193,7 +193,7 @@
+ 
+ static int apm_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/ark.c svgalib-1.9.17.kernel2.6/src/drivers/ark.c
+--- svgalib-1.9.17/src/drivers/ark.c	2002-08-04 11:28:35.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/ark.c	2004-02-01 21:08:08.000000000 +0000
+@@ -154,7 +154,7 @@
+ 
+ static int ark_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeInfo *modeinfo;
+     ModeTiming *modetiming;
+ 
+diff -ur svgalib-1.9.17/src/drivers/banshee.c svgalib-1.9.17.kernel2.6/src/drivers/banshee.c
+--- svgalib-1.9.17/src/drivers/banshee.c	2002-08-04 11:14:50.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/banshee.c	2004-02-01 21:08:08.000000000 +0000
+@@ -134,7 +134,7 @@
+ 
+ static int banshee_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/chips.c svgalib-1.9.17.kernel2.6/src/drivers/chips.c
+--- svgalib-1.9.17/src/drivers/chips.c	2002-07-25 14:01:11.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/chips.c	2004-02-01 21:08:08.000000000 +0000
+@@ -1035,7 +1035,7 @@
+ /*----------------------------------------------------------------------*/
+ static int CHIPS_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/cirrus.c svgalib-1.9.17.kernel2.6/src/drivers/cirrus.c
+--- svgalib-1.9.17/src/drivers/cirrus.c	2002-08-04 11:31:14.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/cirrus.c	2004-02-01 21:08:08.000000000 +0000
+@@ -387,7 +387,7 @@
+ 
+ static int cirrus_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/et3000.c svgalib-1.9.17.kernel2.6/src/drivers/et3000.c
+--- svgalib-1.9.17/src/drivers/et3000.c	2002-04-20 22:47:53.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/et3000.c	2004-02-01 21:08:08.000000000 +0000
+@@ -151,7 +151,7 @@
+ static int et3000_modeavailable(int mode)
+ {
+     const unsigned char *regs;
+-    struct info *info;
++    struct vgainfo *info;
+ 
+     regs = LOOKUPMODE(et3000_modes, mode);
+     if (regs == NULL || mode == GPLANE16)
+diff -ur svgalib-1.9.17/src/drivers/et4000.c svgalib-1.9.17.kernel2.6/src/drivers/et4000.c
+--- svgalib-1.9.17/src/drivers/et4000.c	2002-07-25 14:04:57.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/et4000.c	2004-02-01 21:08:08.000000000 +0000
+@@ -561,7 +561,7 @@
+ static int et4000_modeavailable(int mode)
+ {
+     const unsigned char *regs;
+-    struct info *info;
++    struct vgainfo *info;
+ 
+     regs = LOOKUPMODE(et4000_modes, mode);
+     if (regs == NULL || mode == GPLANE16)
+diff -ur svgalib-1.9.17/src/drivers/et6000.c svgalib-1.9.17.kernel2.6/src/drivers/et6000.c
+--- svgalib-1.9.17/src/drivers/et6000.c	2002-06-14 21:54:33.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/et6000.c	2004-02-01 21:08:08.000000000 +0000
+@@ -708,7 +708,7 @@
+ static int  et6000_modeavailable(int mode)
+ {
+   int rtn;
+-  struct info *info;
++  struct vgainfo *info;
+   ModeTiming *modetiming;
+   ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/g400.c svgalib-1.9.17.kernel2.6/src/drivers/g400.c
+--- svgalib-1.9.17/src/drivers/g400.c	2002-08-08 12:14:52.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/g400.c	2004-02-01 21:08:08.000000000 +0000
+@@ -198,7 +198,7 @@
+ 
+ static int g400_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/g450c2.c svgalib-1.9.17.kernel2.6/src/drivers/g450c2.c
+--- svgalib-1.9.17/src/drivers/g450c2.c	2002-04-30 08:36:18.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/g450c2.c	2004-02-01 21:08:08.000000000 +0000
+@@ -153,7 +153,7 @@
+ 
+ static int modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/i740.c svgalib-1.9.17.kernel2.6/src/drivers/i740.c
+--- svgalib-1.9.17/src/drivers/i740.c	2002-08-04 11:23:11.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/i740.c	2004-02-01 21:08:08.000000000 +0000
+@@ -284,7 +284,7 @@
+ 
+ static int i740_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/i810.c svgalib-1.9.17.kernel2.6/src/drivers/i810.c
+--- svgalib-1.9.17/src/drivers/i810.c	2002-08-04 11:23:51.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/i810.c	2004-02-01 21:08:08.000000000 +0000
+@@ -270,7 +270,7 @@
+ 
+ static int modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/laguna.c svgalib-1.9.17.kernel2.6/src/drivers/laguna.c
+--- svgalib-1.9.17/src/drivers/laguna.c	2002-08-04 11:15:55.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/laguna.c	2004-02-01 21:08:08.000000000 +0000
+@@ -184,7 +184,7 @@
+ 
+ static int laguna_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/mach32.c svgalib-1.9.17.kernel2.6/src/drivers/mach32.c
+--- svgalib-1.9.17/src/drivers/mach32.c	2002-07-25 14:03:11.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/mach32.c	2004-02-01 21:08:08.000000000 +0000
+@@ -1837,7 +1837,7 @@
+     return 0;
+ }
+ 
+-static inline int col2msk(struct info *iptr)
++static inline int col2msk(struct vgainfo *iptr)
+ {
+     switch (iptr->colors) {
+     case 1 << 24:
+@@ -1864,12 +1864,12 @@
+     return 0;
+ }
+ 
+-static inline int col2bypp(struct info *iptr)
++static inline int col2bypp(struct vgainfo *iptr)
+ {
+     return iptr->bytesperpixel;
+ }
+ 
+-static int mach32_log2(struct info *iptr)
++static int mach32_log2(struct vgainfo *iptr)
+ {
+     int res = -1, n = iptr->colors;
+ 
+@@ -1885,7 +1885,7 @@
+ static void mach32_modfill(const mode_entry * mode, int modemask, int forcein)
+ {
+     register int i;
+-    register struct info *iptr;
++    register struct vgainfo *iptr;
+     register unsigned wid, hei;
+ 
+     float horz, vert, n_horz, n_vert, cmpvert;
+@@ -3061,7 +3061,7 @@
+ }
+ 
+ static char *
+- colstr(struct info *mode)
++ colstr(struct vgainfo *mode)
+ {
+     static char str[4];
+     if (mode->colors <= 256) {
+diff -ur svgalib-1.9.17/src/drivers/millennium.c svgalib-1.9.17.kernel2.6/src/drivers/millennium.c
+--- svgalib-1.9.17/src/drivers/millennium.c	2002-08-04 11:24:30.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/millennium.c	2004-02-01 21:08:08.000000000 +0000
+@@ -628,7 +628,7 @@
+ 
+ static int mil_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/mx.c svgalib-1.9.17.kernel2.6/src/drivers/mx.c
+--- svgalib-1.9.17/src/drivers/mx.c	2002-08-04 11:21:05.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/mx.c	2004-02-01 21:08:08.000000000 +0000
+@@ -181,7 +181,7 @@
+ 
+ static int mx_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/neo.c svgalib-1.9.17.kernel2.6/src/drivers/neo.c
+--- svgalib-1.9.17/src/drivers/neo.c	2002-08-04 11:32:20.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/neo.c	2004-02-01 21:08:08.000000000 +0000
+@@ -442,7 +442,7 @@
+ 
+ static int neo_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/nv3.c svgalib-1.9.17.kernel2.6/src/drivers/nv3.c
+--- svgalib-1.9.17/src/drivers/nv3.c	2002-08-04 10:35:40.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/nv3.c	2004-02-01 21:08:08.000000000 +0000
+@@ -152,7 +152,7 @@
+ 
+ static int nv3_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/oak.c svgalib-1.9.17.kernel2.6/src/drivers/oak.c
+--- svgalib-1.9.17/src/drivers/oak.c	2002-08-04 11:33:29.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/oak.c	2004-02-01 21:08:08.000000000 +0000
+@@ -275,7 +275,7 @@
+ static int oak_modeavailable(int mode)
+ {
+     const unsigned char *regs;
+-    struct info *info;
++    struct vgainfo *info;
+ 
+     regs = LOOKUPMODE(oak_modes, mode);
+     if (regs == NULL || mode == GPLANE16) {
+diff -ur svgalib-1.9.17/src/drivers/paradise.c svgalib-1.9.17.kernel2.6/src/drivers/paradise.c
+--- svgalib-1.9.17/src/drivers/paradise.c	2002-04-20 22:47:27.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/paradise.c	2004-02-01 21:08:08.000000000 +0000
+@@ -224,7 +224,7 @@
+ static int paradise_modeavailable(int mode)
+ {
+     const unsigned char *regs;
+-    struct info *info;
++    struct vgainfo *info;
+ #ifdef DEBUG
+  fprintf(stderr,"paradise_modeavailable\n");
+ #endif
+diff -ur svgalib-1.9.17/src/drivers/pm2.c svgalib-1.9.17.kernel2.6/src/drivers/pm2.c
+--- svgalib-1.9.17/src/drivers/pm2.c	2002-10-15 14:14:40.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/pm2.c	2004-02-01 21:08:08.000000000 +0000
+@@ -214,7 +214,7 @@
+ 
+ static int modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/r128.c svgalib-1.9.17.kernel2.6/src/drivers/r128.c
+--- svgalib-1.9.17/src/drivers/r128.c	2002-09-04 16:28:10.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/r128.c	2004-02-01 21:08:08.000000000 +0000
+@@ -1024,7 +1024,7 @@
+ 
+ static int r128_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/rage.c svgalib-1.9.17.kernel2.6/src/drivers/rage.c
+--- svgalib-1.9.17/src/drivers/rage.c	2002-08-04 11:20:27.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/rage.c	2004-02-01 21:08:08.000000000 +0000
+@@ -611,7 +611,7 @@
+ 
+ static int rage_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/rendition.c svgalib-1.9.17.kernel2.6/src/drivers/rendition.c
+--- svgalib-1.9.17/src/drivers/rendition.c	2002-08-04 11:22:18.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/rendition.c	2004-02-01 21:08:08.000000000 +0000
+@@ -142,7 +142,7 @@
+ 
+ static int modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/s3.c svgalib-1.9.17.kernel2.6/src/drivers/s3.c
+--- svgalib-1.9.17/src/drivers/s3.c	2002-08-04 11:33:05.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/s3.c	2004-02-01 21:08:08.000000000 +0000
+@@ -484,7 +484,7 @@
+ 
+ static int s3_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeInfo *modeinfo;
+     ModeTiming *modetiming;
+ 
+diff -ur svgalib-1.9.17/src/drivers/savage.c svgalib-1.9.17.kernel2.6/src/drivers/savage.c
+--- svgalib-1.9.17/src/drivers/savage.c	2002-10-15 18:06:30.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/savage.c	2004-02-01 21:08:08.000000000 +0000
+@@ -415,7 +415,7 @@
+ 
+ static int modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/sis.c svgalib-1.9.17.kernel2.6/src/drivers/sis.c
+--- svgalib-1.9.17/src/drivers/sis.c	2002-08-04 11:44:41.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/sis.c	2004-02-01 21:08:08.000000000 +0000
+@@ -212,7 +212,7 @@
+ 
+ static int sis_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/skeleton.h svgalib-1.9.17.kernel2.6/src/drivers/skeleton.h
+--- svgalib-1.9.17/src/drivers/skeleton.h	2002-05-17 20:00:00.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/skeleton.h	2004-02-01 21:08:08.000000000 +0000
+@@ -80,7 +80,7 @@
+ 
+ static int modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/trident.c svgalib-1.9.17.kernel2.6/src/drivers/trident.c
+--- svgalib-1.9.17/src/drivers/trident.c	2002-12-10 10:42:52.000000000 +0000
++++ svgalib-1.9.17.kernel2.6/src/drivers/trident.c	2004-02-01 21:08:08.000000000 +0000
+@@ -290,7 +290,7 @@
+ 
+ static int modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/drivers/tvga8900.c svgalib-1.9.17.kernel2.6/src/drivers/tvga8900.c
+--- svgalib-1.9.17/src/drivers/tvga8900.c	2002-07-25 14:00:31.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/tvga8900.c	2004-02-01 21:08:08.000000000 +0000
+@@ -498,7 +498,7 @@
+ static int tvga8900_modeavailable(int mode)
+ {
+     const unsigned char *regs;
+-    struct info *info;
++    struct vgainfo *info;
+ 
+     regs = LOOKUPMODE(tvga_modes, mode);
+     if (regs == NULL || mode == GPLANE16)
+diff -ur svgalib-1.9.17/src/drivers/vesa.c svgalib-1.9.17.kernel2.6/src/drivers/vesa.c
+--- svgalib-1.9.17/src/drivers/vesa.c	2002-08-04 11:32:48.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/drivers/vesa.c	2004-02-01 21:08:08.000000000 +0000
+@@ -139,7 +139,7 @@
+ 
+ static int vesa_modeavailable(int mode)
+ {
+-    struct info *info;
++    struct vgainfo *info;
+     ModeTiming *modetiming;
+     ModeInfo *modeinfo;
+ 
+diff -ur svgalib-1.9.17/src/libvga.h svgalib-1.9.17.kernel2.6/src/libvga.h
+--- svgalib-1.9.17/src/libvga.h	2002-08-01 10:33:32.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/libvga.h	2004-02-01 21:08:08.000000000 +0000
+@@ -103,7 +103,7 @@
+ #define GPLANE16   G640x350x16
+ 
+ /* graphics mode information */
+-struct info {
++struct vgainfo {
+     int xdim;
+     int ydim;
+     int colors;
+@@ -127,10 +127,10 @@
+ extern unsigned long __svgalib_mmio_base, __svgalib_mmio_size;
+ extern unsigned long __svgalib_linear_mem_base, __svgalib_linear_mem_size;
+ extern unsigned long __svgalib_mmio_base, __svgalib_mmio_size;
+-extern struct info CI;		/* current video parameters */
++extern struct vgainfo CI;		/* current video parameters */
+ extern int COL;			/* current color            */
+ extern int CM;			/* current video mode       */
+-extern struct info infotable[];
++extern struct vgainfo infotable[];
+ extern int SCREENON;		/* screen visible if != 0 */
+ extern unsigned long __svgalib_graph_base;
+ extern unsigned char *GM;	/* graphics memory frame */
+diff -ur svgalib-1.9.17/src/vga.c svgalib-1.9.17.kernel2.6/src/vga.c
+--- svgalib-1.9.17/src/vga.c	2002-09-05 11:58:24.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/vga.c	2004-02-01 21:08:08.000000000 +0000
+@@ -87,7 +87,7 @@
+ /* If == 0 then nothing is defined by the user... */
+ int __svgalib_default_mode = 10;
+ 
+-struct info infotable[] =
++struct vgainfo infotable[] =
+ {
+     {80, 25, 16, 160, 0},	/* VGAlib VGA modes */
+     {320, 200, 16, 40, 0},
+@@ -280,7 +280,7 @@
+     {0, 0, 0, 0, 0}
+ };
+ 
+-#define MAX_MODES (sizeof(infotable) / sizeof(struct info))
++#define MAX_MODES (sizeof(infotable) / sizeof(struct vgainfo))
+ 
+ void (*__svgalib_go_to_background) (void) = 0;
+ void (*__svgalib_come_from_background) (void) = 0;
+@@ -372,7 +372,7 @@
+ static int flip_mode = TEXT;	/* flipped video mode       */
+ 
+ int CM = TEXT;			/* current video mode       */
+-struct info CI;			/* current video parameters */
++struct vgainfo CI;			/* current video parameters */
+ int COL;			/* current color            */
+ 
+ static int initialized = 0;	/* flag: initialize() called ?  */
+diff -ur svgalib-1.9.17/src/vga.h svgalib-1.9.17.kernel2.6/src/vga.h
+--- svgalib-1.9.17/src/vga.h	2002-08-04 10:31:07.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/src/vga.h	2004-02-01 21:08:08.000000000 +0000
+@@ -534,6 +534,11 @@
+ #define BLITS_SYNC			0
+ #define BLITS_IN_BACKGROUND		0x1
+ 
++/* 2.6 Framebuffer code defines this; we don't need it */
++#ifdef ROP_XOR
++# undef ROP_XOR
++#endif
++
+ /* Raster ops. */
+ #define ROP_COPY			0	/* Straight copy. */
+ #define ROP_OR				1	/* Source OR destination. */
+diff -ur svgalib-1.9.17/svpmi/svpmi.c svgalib-1.9.17.kernel2.6/svpmi/svpmi.c
+--- svgalib-1.9.17/svpmi/svpmi.c	1995-09-30 15:50:30.000000000 +0100
++++ svgalib-1.9.17.kernel2.6/svpmi/svpmi.c	2004-02-01 21:08:08.000000000 +0000
+@@ -62,7 +62,7 @@
+ static int
+ svpmi_modeavailable (int mode)
+ {
+-  struct info *info;
++  struct vgainfo *info;
+   svpmi_modeentry *sm;
+ 
+   if (mode < 10)

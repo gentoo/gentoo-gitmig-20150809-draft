@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.24 2004/01/18 04:09:09 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.25 2004/02/01 22:16:00 plasmaroo Exp $
+
+  01 Feb 2004; <plasmaroo@gentoo.org> files/svgalib-1.9.17-linux2.6.patch:
+  Updated the 2.6 patch to solve compilation issues on 2.6 headers. Closes bug
+  #37812.
 
   17 Jan 2004; Mike Frysinger <vapier@gentoo.org>
   Add build to IUSE to control building of kernel module in stages #38403.
