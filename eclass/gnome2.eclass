@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.24 2002/09/23 02:50:26 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.25 2002/09/23 16:08:41 spider Exp $
 
-inherit libtool
+inherit libtool gnome.org
 
 if [ -n "$DEBUG" ]
 then
@@ -24,9 +24,6 @@ fi
 
 ELTCONF=""
 SCROLLKEEPER_UPDATE="1"
-
-PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
-SRC_URI="mirror://gnome/sources/${PN}/${PVP[0]}.${PVP[1]}/${P}.tar.bz2"
 
 
 gnome2_src_configure() {
