@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.19.ebuild,v 1.1 2004/05/30 09:38:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.19.ebuild,v 1.2 2004/06/07 20:54:05 agriffis Exp $
 
 inherit eutils ssl-cert
 
@@ -69,17 +69,17 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
-	if [ "`use ssl`" ] ; then
-		if [ "`use ipv6`" ] ; then
+	if use ssl ; then
+		if use ipv6 ; then
 			epatch "${WORKDIR}/${IPV6_TLS_P}.patch"
 		else
 			epatch "${WORKDIR}/${TLS_P}/pfixtls.diff"
 		fi
-	elif [ "`use ipv6`" ]; then
+	elif use ipv6; then
 		epatch "${WORKDIR}/${IPV6_P}.patch"
 	fi
 
-	if [ "`use postgres`" ] ; then
+	if use postgres ; then
 		epatch "${DISTDIR}/${PGSQL_P}.patch"
 	fi
 
@@ -97,18 +97,18 @@ src_unpack() {
 src_compile() {
 	local mycc="-DHAS_PCRE" mylibs="-L/usr/lib -lpcre -ldl -lcrypt -lpthread"
 
-	if [ "`use pam`" ] ; then
+	if use pam ; then
 		mylibs="${mylibs} -lpam"
 	fi
-	if [ "`use ldap`" ] ; then
+	if use ldap ; then
 		mycc="${mycc} -DHAS_LDAP"
 		mylibs="${mylibs} -lldap -llber"
 	fi
-	if [ "`use mysql`" ] ; then
+	if use mysql ; then
 		mycc="${mycc} -DHAS_MYSQL -I/usr/include/mysql"
 		mylibs="${mylibs} -lmysqlclient -lm -lz"
 	fi
-	if [ "`use postgres`" ] ; then
+	if use postgres ; then
 		if [ "`best_version '=dev-db/postgresql-7.3*'`" ] ; then
 			mycc="${mycc} -DHAS_PGSQL -I/usr/include/postgresql"
 		else
@@ -116,11 +116,11 @@ src_compile() {
 		fi
 		mylibs="${mylibs} -lpq"
 	fi
-	if [ "`use ssl`" ] ; then
+	if use ssl ; then
 		mycc="${mycc} -DUSE_SSL"
 		mylibs="${mylibs} -lssl -lcrypto"
 	fi
-	if [ "`use sasl`" ] ; then
+	if use sasl ; then
 		mycc="${mycc} -DUSE_SASL_AUTH -I/usr/include/sasl"
 		mylibs="${mylibs} -lsasl2"
 	fi
@@ -166,9 +166,9 @@ src_install () {
 
 	keepdir /etc/postfix
 	mv "${D}/usr/share/doc/${PF}/defaults/"{*.cf,post*-*} "${D}/etc/postfix"
-	if [ "`use maildir`" ] ; then
+	if use maildir ; then
 		mypostconf="home_mailbox=.maildir/"
-	elif [ "`use mbox`" ] ; then
+	elif use mbox ; then
 		mypostconf="mail_spool_directory=/var/spool/mail"
 	fi
 	"${D}/usr/sbin/postconf" -c "${D}/etc/postfix" -e \
@@ -188,17 +188,17 @@ src_install () {
 	dodoc *README COMPATIBILITY HISTORY INSTALL LICENSE PORTING RELEASE_NOTES*
 	dohtml html/*
 
-	if [ "`use pam`" ] ; then
+	if use pam ; then
 		insinto /etc/pam.d
 		newins "${FILESDIR}/smtp.pam" smtp
 	fi
-	if [ "`use ssl`" ] ; then
+	if use ssl ; then
 		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Postfix SMTP Server}"
 		insinto /etc/ssl/postfix
 		docert server
 		fowners postfix:mail /etc/ssl/postfix/server.{key,pem}
 	fi
-	if [ "`use sasl`" ] ; then
+	if use sasl ; then
 		insinto /etc/sasl2
 		newins "${FILESDIR}/smtp.sasl" smtpd.conf
 	fi

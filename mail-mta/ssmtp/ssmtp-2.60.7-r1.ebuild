@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7-r1.ebuild,v 1.4 2004/05/30 23:12:09 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7-r1.ebuild,v 1.5 2004/06/07 20:52:05 agriffis Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_install() {
 	# See bug #7448
 	#dosym /usr/sbin/ssmtp /usr/bin/mail
 	#The sendmail symlink is now handled by mailwrapper if used
-	! use mailwrapper && \
+	use mailwrapper || \
 		dosym /usr/sbin/ssmtp /usr/sbin/sendmail
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
 	doman ssmtp.8
@@ -79,7 +79,7 @@ src_install() {
 	#        -e "s:_HOSTNAME_:${hostname}:" \
 	#        -e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
 	#        ${conffile}.orig > ${conffile}.pre
-	#if [ `use ssl` ];
+	#if use ssl;
 	#then
 	#        sed -e "s:^#UseTLS=YES:UseTLS=YES:g" \
 	#                ${conffile}.pre > ${conffile}

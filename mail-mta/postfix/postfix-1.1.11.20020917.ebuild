@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-1.1.11.20020917.ebuild,v 1.1 2004/05/30 09:38:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-1.1.11.20020917.ebuild,v 1.2 2004/06/07 20:54:05 agriffis Exp $
 
 IUSE="ssl mysql sasl ldap"
 
@@ -51,13 +51,13 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${DISTFILES}/${PF_P}.tar.gz
 
-	if [ `use ssl` ] && [ `use ipv6` ]
+	if use ssl && use ipv6
 	then
 		cd ${S}
 		bzcat ${FILESDIR}/${IPV6_P}.patch.bz2 | patch -p1 || die "patch failed"
 		CCARGS="${CCARGS} -DHAS_SSL"
 		AUXLIBS="${AUXLIBS} -lssl -lcrypto"
-	elif [ `use ssl` ]
+	elif use ssl
 	then
 		unpack ${DISTFILES}/${TLS_P}.tar.gz
 		cd ${S}
@@ -70,7 +70,7 @@ src_unpack() {
 	cp main.cf main.cf.orig
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" main.cf.orig > main.cf
 
-	if [ "`use sasl`" ]
+	if use sasl
 	then
 			if [ -e /usr/include/sasl/sasl.h ]
 			then
@@ -151,7 +151,7 @@ src_install () {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/postfix.rc6 postfix
 	insinto /etc/pam.d ; newins ${FILESDIR}/smtp.pam smtp
 
-	if [ "`use sasl`" ]
+	if use sasl
 	then
 			if [ -e /usr/include/sasl.h ]
 			then

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r9.ebuild,v 1.1 2004/05/30 10:50:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r9.ebuild,v 1.2 2004/06/07 20:47:53 agriffis Exp $
 
 IUSE="ssl ldap"
 
@@ -56,7 +56,7 @@ src_unpack() {
 	echo "Applying QMAILQUEUE patch..."
 	patch < ${FILESDIR}/${PV}-${PR}/qmail-queue.patch || die "qmail queue patch failed"
 
-	if [ `use ldap` ]; then
+	if use ldap; then
 		echo "Applying ldap patches..."
 		patch -p1 < ${WORKDIR}/qmail-ldap-1.03-20020901.patch || die "ldap patch failed"
 		#patch -p1 < ${FILESDIR}/${PV}-${PR}/ldap-config.diff || die "ldap config patch failed"
@@ -70,7 +70,7 @@ src_unpack() {
 		use ssl && patch < ${FILESDIR}/${PV}-${PR}/qmail-1.03-starttls-smtp-auth.patch || die "tls+auth patch failed"
 	fi
 
-	if [ `use ssl` ]; then
+	if use ssl; then
 		echo "gcc ${CFLAGS} -DTLS" > conf-cc
 	else
 		echo "gcc ${CFLAGS}" > conf-cc

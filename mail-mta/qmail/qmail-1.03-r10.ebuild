@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r10.ebuild,v 1.1 2004/05/30 10:50:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r10.ebuild,v 1.2 2004/06/07 20:47:53 agriffis Exp $
 
 inherit gcc eutils
 
@@ -79,7 +79,7 @@ src_unpack() {
 	# Let the system decide how to define errno
 	epatch ${FILESDIR}/${PV}-${PR}/errno.patch
 
-	if [ `use ssl` ]; then
+	if use ssl; then
 		echo "gcc ${CFLAGS} -DTLS" > conf-cc
 	else
 		echo "gcc ${CFLAGS}" > conf-cc
@@ -321,7 +321,7 @@ export qhost=`hostname --fqdn`
 
 	tcprules /etc/tcp.smtp.cdb /etc/tcp.smtp.tmp < /etc/tcp.smtp
 
-	if [ `use ssl` ]; then
+	if use ssl; then
 	if [ ! -f /var/qmail/control/servercert.pem ]; then
 		echo "Creating a self-signed ssl-cert:"
 		/usr/bin/openssl req -new -x509 -nodes -out /var/qmail/control/servercert.pem -days 366 -keyout /var/qmail/control/servercert.pem

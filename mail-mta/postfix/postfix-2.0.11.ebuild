@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.11.ebuild,v 1.1 2004/05/30 09:38:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.11.ebuild,v 1.2 2004/06/07 20:54:05 agriffis Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
 
@@ -90,8 +90,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
-	if [ "`use ssl`" ]; then
-		if [ "`use ipv6`" ]; then
+	if use ssl; then
+		if use ipv6; then
 			epatch ${DISTDIR}/${IPV6_TLS_P}.patch.gz
 		else
 			unpack ${TLS_P}.tar.gz
@@ -99,13 +99,13 @@ src_unpack() {
 		fi
 		CCARGS="${CCARGS} -DHAS_SSL"
 		AUXLIBS="${AUXLIBS} -lssl -lcrypto"
-	elif [ "`use ipv6`" ]; then
+	elif use ipv6; then
 		epatch ${DISTDIR}/${IPV6_P}.patch.gz
 	fi
 	cd ${S}/conf
 	sed -i -e "s:/usr/libexec/postfix:/usr/lib/postfix:" main.cf
 
-	if [ "`use sasl`" ] ; then
+	if use sasl ; then
 		# sasl 2
 		if [ -f /usr/include/sasl/sasl.h ]; then
 			AUXLIBS="${AUXLIBS} -lsasl2"
@@ -120,17 +120,17 @@ src_unpack() {
 	cd ${S}/src/global
 	sed -i -e "s:/usr/libexec/postfix:/usr/lib/postfix:" mail_params.h
 
-	if [ "`use mysql`" ] ; then
+	if use mysql ; then
 		CCARGS="${CCARGS} -DHAS_MYSQL -I/usr/include/mysql"
 		AUXLIBS="${AUXLIBS} -lmysqlclient -lm -lz"
 	fi
 
-	if [ "`use ldap`" ] ; then
+	if use ldap ; then
 		CCARGS="${CCARGS} -DHAS_LDAP"
 		AUXLIBS="${AUXLIBS} -lldap -llber"
 	fi
 
-	if [ "`use pam`" ] ; then
+	if use pam ; then
 		AUXLIBS="${AUXLIBS} -lpam"
 	fi
 
@@ -206,15 +206,15 @@ src_install () {
 
 	insinto /etc/sasl2
 	doins ${FILESDIR}/smtpd.conf
-	if [ "`use sasl`" ] ; then
+	if use sasl ; then
 		dodir /usr/lib/sasl2
 		dosym ../../../etc/sasl2/smtpd.conf /usr/lib/sasl2/smtpd.conf
 	fi
 
 	cd ${D}/etc/postfix
-	if [ "`use maildir`" ]; then
+	if use maildir; then
 		sed -i -e "s:^#\(home_mailbox = \)Maildir/:\1.maildir/:" main.cf
-	elif [ "`use mbox`" ]; then
+	elif use mbox; then
 		sed -i -e "s:^#\(mail_spool_directory = /var/spool/mail\):\1:" main.cf
 	fi
 

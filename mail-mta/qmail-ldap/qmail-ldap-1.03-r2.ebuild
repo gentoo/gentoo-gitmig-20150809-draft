@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r2.ebuild,v 1.1 2004/05/30 10:52:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r2.ebuild,v 1.2 2004/06/07 20:52:11 agriffis Exp $
 
 IUSE="ssl"
 
@@ -73,7 +73,7 @@ src_unpack() {
 	# If you really want, uncomment it yourself, as mail really should be in GMT
 	#epatch ${DISTDIR}/qmail-date-localtime.patch.txt
 
-	if [ `use ssl` ]; then
+	if use ssl; then
 		epatch ${DISTDIR}/${P}-r2-tls.patch.bz2 || die "tls+auth patch failed"
 	fi
 
@@ -315,7 +315,7 @@ pkg_postinst() {
 	echo -e "\e[32;01m slapd.conf. For sample ldifs, please check \033[0m"
 	echo -e "\e[32;01m /usr/share/doc/${PN}-${PV}-${PR}/samples.ldif.gz \033[0m"
 
-	if  [ `use ssl` ]; then
+	if  use ssl; then
 		echo "Creating a self-signed ssl-cert:"
 		/usr/bin/openssl req -new -x509 -nodes -out /var/qmail/control/servercert.pem -days 366 -keyout /var/qmail/control/servercert.pem
 		chmod 640 /var/qmail/control/servercert.pem

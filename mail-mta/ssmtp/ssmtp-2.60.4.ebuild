@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.4.ebuild,v 1.1 2004/05/30 09:56:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.4.ebuild,v 1.2 2004/06/07 20:52:05 agriffis Exp $
 
 inherit eutils
 
@@ -72,7 +72,7 @@ src_install() {
 	#        -e "s:_HOSTNAME_:${hostname}:" \
 	#        -e "s:^mailhub=mail:mailhub=mail.${domainname}:g" \
 	#        ${conffile}.orig > ${conffile}.pre
-	#if [ `use ssl` ];
+	#if use ssl;
 	#then
 	#        sed -e "s:^#UseTLS=YES:UseTLS=YES:g" \
 	#                ${conffile}.pre > ${conffile}
