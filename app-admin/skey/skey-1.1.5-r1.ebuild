@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.4 2003/11/05 21:10:34 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.5 2003/11/06 14:32:47 taviso Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -17,10 +17,14 @@ IUSE="doc"
 RDEPEND=">=dev-lang/perl-5.8.0
 		virtual/mta
 		net-mail/mailx
-		virtual/glibc"
+		virtual/glibc
+		sys-apps/shadow
+		sys-libs/cracklib"
 DEPEND=">=dev-lang/perl-5.8.0
 	virtual/mta
-	virtual/glibc"
+	virtual/glibc
+	sys-apps/shadow
+	sys-libs/cracklib"
 
 S=${WORKDIR}/${P}
 
@@ -39,6 +43,7 @@ src_unpack() {
 	#	- be a little bit more reasonable about password security..do we really have
 	#		to force people to have digits in there?
 	#	- hacked in support for shadow passwords.
+	#	- added friendly warnings from cracklib.
 	#	- some other misc. stuff.
 	# (05 Nov 2003) -taviso@gentoo.org
 	unpack ${A}
