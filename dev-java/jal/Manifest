@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6e2be1dec7a61e61846cd8734113c56d jal-20031117.ebuild 1365
-MD5 f83614b983e9fc514f66aaf7e82f3387 ChangeLog 389
+MD5 153115021ed401320d1e093e1639521b ChangeLog 384
 MD5 ed9b72dfb2203fb6dde74050a33a92fa metadata.xml 477
 MD5 9b77e4f20dadfbe6d50c82470c8a5599 files/buildxml.patch 482
 MD5 6dc56919a415fcf91bbeae37322eada8 files/digest-jal-20031117 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBsd1/I1lqEGTUzyQRAuzeAJ0aZiExf3okRVmQ3ZvT5rDnXVLY0gCgxzZA
+CWe6NK+NisgiwK6a1J/RfcE=
+=g0+N
+-----END PGP SIGNATURE-----
