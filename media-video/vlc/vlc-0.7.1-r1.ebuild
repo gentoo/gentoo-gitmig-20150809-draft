@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1-r1.ebuild,v 1.1 2004/03/25 15:41:32 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1-r1.ebuild,v 1.2 2004/03/26 13:49:48 dholm Exp $
 
 inherit libtool gcc eutils
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.videolan.org/vlc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2
@@ -115,6 +115,13 @@ src_compile() {
 		MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config \
 		XPIDL=/usr/bin/xpidl"
 
+	if [ "${ARCH}" = "ppc" ]; then
+		# Please post a bugreport on the next version bump
+		# to have a ppc dev test if AltiVec has been fixed!
+		ewarn "AltiVec is broken in this version of VLC"
+		myconf="${myconf} --disable-altivec"
+	fi
+
 	# vlc uses its own ultraoptimizaed CXXFLAGS
 	# and forcing custom ones generally fails building
 	export CXXFLAGS=""
@@ -130,6 +137,7 @@ src_compile() {
 	touch $(find . -name Makefile.in)
 
 #		$(use_enable dvb satellite) \
+#		$(use_enable altivec) \
 	econf \
 		$(use_enable nls) \
 		$(use_enable slp) \
@@ -164,7 +172,6 @@ src_compile() {
 		$(use_enable xv xvideo) \
 		$(use_enable X x11) \
 		$(use_enable 3dfx glide) \
-		$(use_enable altivec) \
 		${myconf} || die "configure of VLC failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.45 2004/03/25 15:41:32 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.46 2004/03/26 13:49:48 dholm Exp $
+
+*vlc-0.7.1-r1 (26 Mar 2004)
+
+  26 Mar 2004; David Holm <dholm@gentoo.org> vlc-0.7.1-r1.ebuild:
+  Added to ~ppc. AltiVec is broken in 0.7.1, disabled.
 
   20 Mar 2004; Joel Martin <kanaka@gentoo.org> :
   Changed to live.com ebuild rather than importing source. Disabled qt and kde
