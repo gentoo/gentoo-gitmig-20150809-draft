@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.2 2004/06/28 08:39:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.3 2004/06/28 21:59:52 agriffis Exp $
 
 inherit webapp
 
@@ -35,14 +35,14 @@ DEPEND=">=dev-lang/perl-5.8.4
 	samba? ( net-fs/samba )"
 
 pkg_setup() {
-	if [ `use apache2` ]
+	if use apache2
 	then
 		webapp_pkg_setup
 	fi
 }
 
 src_install() {
-	if [ `use apache2` ]
+	if use apache2
 	then
 		webapp_src_preinst
 	fi
@@ -54,7 +54,7 @@ src_install() {
 	doins table.struct
 	dodoc README ChangeLog
 
-	if [ `use apache2` ]
+	if use apache2
 	then
 		cp ../was-${WAS_VER}/docs/README README.WAS
 		dodoc README.WAS
@@ -78,13 +78,13 @@ src_install() {
 
 pkg_postinst() {
 
-	if [ `use mysql` ]
+	if use mysql
 	then
 		echo
 		einfo "To create and enable the mysql database, please run: "
 		einfo "ebuild /var/db/pkg/net-analyzer/${P}/${P}.ebuild config"
 
-		if [ `use apache2` ]
+		if use apache2
 		then
 			echo "To create and enable the mysql database, please run:
 			ebuild /var/db/pkg/net-analyzer/${P}/${P}.ebuild config" > apache-postinst
@@ -92,7 +92,7 @@ pkg_postinst() {
 		fi
 	fi
 
-	if [ `use apache2` ]
+	if use apache2
 	then
 		echo
 		einfo "Go to http://${HOSTNAME}/was/admin.php to configure WAS."
