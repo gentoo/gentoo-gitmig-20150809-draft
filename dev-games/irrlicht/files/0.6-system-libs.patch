@@ -1,0 +1,18 @@
+--- Makefile.orig	2004-01-02 00:15:41.810748736 -0500
++++ Makefile	2004-01-02 00:17:02.681454520 -0500
+@@ -6,14 +6,10 @@
+ LIBS =  -L"/usr/X11R6/lib" -L"jpeglib" -L"zlib" --no-export-all-symbols --add-stdcall-alias -lGL -lXxf86vm -lz -ljpeg
+ CXXINCS = -I"include/"
+ BIN  = libIrrlicht.a
+-CXXFLAGS = $(CXXINCS) -DIRRLICHT_EXPORTS=1
++CXXFLAGS += $(CXXINCS) -DIRRLICHT_EXPORTS=1
+ 
+ all: $(LINKOBJ) $(BIN)
+-	make -C jpeglib -f makefile.ansi libjpeg.a
+-	make -C zlib -f Makefile
+ 	cp libIrrlicht.a ../lib/Linux/
+-	cp zlib/libz.a ../lib/Linux
+-	cp jpeglib/libjpeg.a ../lib/Linux
+ 
+ clean:
+ 	rm -f $(LINKOBJ) $(BIN)
