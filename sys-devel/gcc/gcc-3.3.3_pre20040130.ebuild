@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040130.ebuild,v 1.1 2004/02/09 05:06:14 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040130.ebuild,v 1.2 2004/02/10 13:12:33 mr_bones_ Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -101,7 +101,7 @@ LICENSE="GPL-2 LGPL-2.1"
 
 # this is based on the hammer branch which unless you're a ppc64 type
 # you're probably not interested in it. This branch will only be interesting
-# until alan modra and friends are done with their current 3.3.x efforts 
+# until alan modra and friends are done with their current 3.3.x efforts
 # for ppc64
 KEYWORDS="-* ppc64"
 #KEYWORDS="-*  ~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64"
@@ -280,12 +280,12 @@ src_unpack() {
 		epatch ${WORKDIR}/patch
 	fi
 
- 	if [ "${ARCH}" = "ppc" ]
- 	then
- 	 
+	if [ "${ARCH}" = "ppc" ]
+	then
+
 #  in the base now
- 		epatch ${FILESDIR}/3.3.2/gcc332-altivec-fix.patch
- 	fi
+		epatch ${FILESDIR}/3.3.2/gcc332-altivec-fix.patch
+	fi
 
 	if [ -z "${PP_VER}" ]
 	then

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.1 2004/02/08 15:29:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.2 2004/02/10 13:12:33 mr_bones_ Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -181,7 +181,7 @@ glibc_have_ssp() {
 			my_libc="${ROOT}/lib64/libc.so.?"
 			;;
 	esac
-	
+
 	# Check for the glibc to have the __guard symbols
 	if  [ "$(readelf -s "${my_libc}" 2>/dev/null | \
 	         grep GLOBAL | grep OBJECT | grep '__guard')" ] && \
