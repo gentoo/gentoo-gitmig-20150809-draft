@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 c9b14dda87df95939826223f65fc2637 metadata.xml 253
-MD5 50fbcc96da503073c142b0f3304854f5 ChangeLog 1013
+MD5 4a3d8bac0e2299592736733a6850111a ChangeLog 1015
 MD5 4e9f62acb449bc9fef0b8140f2bb81fd tipptrainer-0.5.0a.ebuild 650
-MD5 0b7f7c37ab03fa178a01d6e4651e9ceb tipptrainer-0.6.0.ebuild 540
+MD5 b9ff1d48e2b7e9b6333625bc360512b3 tipptrainer-0.6.0.ebuild 651
 MD5 af08955ce1a4c442226aa52e41c7569f files/digest-tipptrainer-0.5.0a 71
 MD5 7565a48254ede241d91373db9e45fac2 files/digest-tipptrainer-0.6.0 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBuLPhz2gxt1z4IGYRAqUXAKCoi2KUYX+yGwNHDcnI3yua/QXm3QCgu+7Z
-TPg2SWjRzPqorkH630hwinQ=
-=ZYBW
+iD8DBQFBuLSxz2gxt1z4IGYRAhf9AJ9+rnmeQhoIIFUwwMXqb3klIQ+9BQCggNJW
+ir08/87aIIAxPOFPSPdafw0=
+=kvA1
 -----END PGP SIGNATURE-----
