@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-0.1.9.ebuild,v 1.3 2002/07/11 06:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-0.1.9.ebuild,v 1.4 2002/07/23 10:38:06 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."
 SRC_URI="http://anjuta.sourceforge.net/packages/anjuta-${PV}.tar.gz"
 HOMEPAGE="http://anjuta.sourceforge.net/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	=x11-libs/gtk+-1.2*
@@ -21,11 +25,7 @@ RDEPEND="dev-util/glade
 	 =x11-libs/gtk+-1.2*
 	 media-libs/audiofile
 	 media-sound/esound
-	 sys-apps/bash
 	 dev-util/ctags
-	 sys-devel/autoconf
-	 sys-devel/automake
-	 sys-devel/gcc
 	 sys-devel/gdb
 	 sys-apps/grep
 	 >=sys-libs/db-3.2.3
@@ -37,24 +37,16 @@ src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
 
-	./configure --host=${CHOST} --prefix=/usr  			\
-		--mandir=/usr/share/man 				\
-	        --localstatedir=/var/lib 				\
-		--infodir=/usr/share/info 				\
-		--sysconfdir=/etc 					\
-		$myconf || die
-		
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install () {
 	
-	make  prefix=${D}/usr						\
-	      sysconfdir=${D}/etc					\
-	      infodir=${D}/usr/share/info				\
-	      localstatedir=${D}/var/lib 				\
-	      anjutadocdir=${D}/usr/share/doc/${PF} 			\
-	      anjuta_docdir=${D}/usr/share/doc/${PF} 			\
-	      install || die
-}
+	make \
+		anjutadocdir=${D}/usr/share/doc/${PF} \
+		anjuta_docdir=${D}/usr/share/doc/${PF} \
+		install || die
 
+	dodoc AUTHORS COPYING ChangeLog FUTURE NEWS README THANKS TODO
+}

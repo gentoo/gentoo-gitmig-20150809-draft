@@ -1,13 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2.
- 
+# $Header: /var/cvsroot/gentoo-x86/dev-util/arch/arch-1.0_pre15.ebuild,v 1.3 2002/07/23 10:38:06 seemant Exp $
 
 MY_P="${P//_/}"
 S="${WORKDIR}/${MY_P}/src/=build"
 DESCRIPTION="revision control system ideal for widely distributed development"
 SRC_URI="ftp://regexps.com/pub/src/arch/${MY_P}.tar.gz"
-HOMEPAGE="http://www.regexps.com/#arch"
+HOMEPAGE="http://www.regexps.com/arch.html"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="sys-apps/diffutils
 	sys-apps/fileutils
@@ -36,8 +39,8 @@ src_unpack() {
 }
 
 src_compile() {
-	# configure
-	../configure --prefix="/usr" \
+	../configure \
+		--prefix="/usr" \
 		--with-posix-shell="/bin/bash" \
 		--with-sendmail="/usr/sbin/sendmail" || die "configure failed"
 
@@ -48,11 +51,9 @@ src_compile() {
 src_install () {
 	local name
 
-	# install
 	make install prefix="${D}/usr" \
 		|| die "make install failed"
 
-	# make symlinks relative instead of absolute
 	for name in ${D}/usr/share/arch/arch/*; do
 		name="`readlink ${name} | sed 's:^.*/usr/share/arch/::'`"
 		if [ "${name}" ]; then
@@ -64,7 +65,7 @@ src_install () {
 	# get some docs
 	cd ${WORKDIR}/${MY_P}
 	dodoc =NEWS =README COPYING
-	dohtml docs/html/*
+	dohtml -r docs
 }
 
 pkg_postinst() {

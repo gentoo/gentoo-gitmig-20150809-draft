@@ -1,46 +1,35 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/david/david-0.99.2.ebuild,v 1.3 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/david/david-0.99.2.ebuild,v 1.4 2002/07/23 10:38:07 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The C/C++ Code editor for Gnome"
 SRC_URI="http://david.es.gnome.org/downloads/${P}.tar.gz"
 HOMEPAGE="http://david.es.gnome.org"
-SLOT="0"
 
-DEPEND="virtual/glibc
-	>=dev-libs/libxml-1.8.16
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND=">=dev-libs/libxml-1.8.16
 	=x11-libs/gtk+-1.2*
 	>=gnome-base/gnome-libs-1.4.1.5
 	>=media-libs/audiofile-0.2.3
 	>=media-sound/esound-0.2.23
-	=dev-libs/glib-1.2*
-	nls? ( sys-devel/gettext )"
+	=dev-libs/glib-1.2*"
+
+RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-        local myconf=""
+	local myconf=""
 
-        use nls || myconf="${myconf} --disable-nls"
+	use nls || myconf="${myconf} --disable-nls"
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		${myconf} || die "./configure failed"
-
+	econf ${myconf} || die "./configure failed"
 	emake || die "emake failed"
 }
 
 src_install () {
 	make DESTDIR=${D} install || die "installation failed"
-
-
-	#make \
-	#	prefix=${D}/usr \
-	#	mandir=${D}/usr/share/man \
-	#	infodir=${D}/usr/share/info \
-	#	install || die
-
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 }
