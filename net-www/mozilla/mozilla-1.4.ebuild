@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.9 2003/07/12 18:41:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.10 2003/07/12 22:52:21 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -58,7 +58,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-sou
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -248,7 +248,7 @@ src_compile() {
 	#     cookie, wallet, content-packs, xml-rpc, xmlextras, help, pref, transformiix,
 	#     venkman, inspector, irc, universalchardet, typeaheadfind
 	# Non-defaults are:
-	#     xmlterm access-builtin p3p interfaceinfo datetime finger cview
+	#     xmlterm access-builtin p3p datetime finger cview
 	local myext="default"
 	if [ -n "`use mozxmlterm`" ]
 	then
@@ -262,12 +262,6 @@ src_compile() {
 	then
 		myext="${myext},p3p"
 	fi
-	# interfaceinfo has become part of the webservices extension, and is
-	# enabled by default - Brad
-#	if [ -n "`use mozinterfaceinfo`" ]
-#	then
-#		myext="${myext},interfaceinfo"
-#	fi
 	if [ -n "`use moznoirc`" ]
 	then
 		myext="${myext},-irc"
