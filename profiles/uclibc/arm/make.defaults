@@ -1,0 +1,9 @@
+USE="arm berkdb ncurses python readline zlib uclibc"
+GRP_STAGE23_USE="arm berkdb ncurses python readline zlib uclibc"
+
+ARCH="arm"
+COMPILER="gcc3"
+ACCEPT_KEYWORDS="arm"
+
+FEATURES="sandbox sfperms strict"
+#FEATURES="sandbox sfperms strict userpriv usersandbox"
