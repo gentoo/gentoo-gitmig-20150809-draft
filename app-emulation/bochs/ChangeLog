@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.13 2003/09/30 08:20:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.14 2003/10/01 11:41:19 aliz Exp $
 
   29 Sep 2003; Martin Holzer <mholzer@gentoo.org> bochs-2.0.2.ebuild,
   files/bochs-2.0.2-gcc3.patch:
@@ -37,7 +37,9 @@
   7 may 2002; Spider <spider@gentoo.org> bochs-1.4.ebuild: 
   fix sourceforge mirror
 
-*bochs-1.4 (2 Apr 2002) Dan Armak <danarmak@gentoo.org>: new upstream version
+*bochs-1.4 (2 Apr 2002) 
+
+  02 Apr 2003; Dan Armak <danarmak@gentoo.org>: new upstream version
 
 *bochs-1.3 (12 Feb 2002)
 
