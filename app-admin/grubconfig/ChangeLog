@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/grubconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.6 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.7 2003/07/01 22:27:30 mholzer Exp $
+
+*grubconfig-1.19 (02 Jul 2003)
+
+  02 Jul 2003; Martin Holzer <mholzer@gentoo.org> grubconfig-1.19.ebuild:
+  Version bumped.
 
 *grubconfig-1.17 (24 May 2003)
 

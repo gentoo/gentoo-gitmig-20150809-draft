@@ -1,3 +1,5 @@
-MD5 cfc7d9b5f998216edd55df50d4f90b2a ChangeLog 703
-MD5 59537b1710234ecff5fd332b909166a0 grubconfig-1.17.ebuild 586
+MD5 7403341fdff9d9dbfbba603ce06cbc59 ChangeLog 816
+MD5 c0a5dbf7b271ef536c94e3388ce7bd1c grubconfig-1.17.ebuild 582
+MD5 c0a5dbf7b271ef536c94e3388ce7bd1c grubconfig-1.19.ebuild 582
 MD5 b1ee281695dac0acfc4a2d8baf6e2bce files/digest-grubconfig-1.17 66
+MD5 d1f49759b244ead5510b4d4bba6f5d50 files/digest-grubconfig-1.19 66
