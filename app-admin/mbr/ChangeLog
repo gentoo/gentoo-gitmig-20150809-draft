@@ -1,0 +1,8 @@
+# ChangeLog for app-admin/mbr
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/ChangeLog,v 1.1 2002/10/25 10:43:26 woodchip Exp $
+
+*mbr-1.1.5 (25 Oct 2002)
+
+  25 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Initial import; thank you S.Harmsma@student.rug.nl.

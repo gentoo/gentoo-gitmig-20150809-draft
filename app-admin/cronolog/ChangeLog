@@ -1,0 +1,8 @@
+# ChangeLog for app-admin/cronolog
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.1 2002/10/25 10:43:26 woodchip Exp $
+
+*cronolog-1.6.2 (25 Oct 2002)
+
+  25 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Initial import; thank you mg@connection-net.de.

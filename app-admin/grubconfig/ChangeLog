@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/grubconfig
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.1 2002/10/25 10:43:26 woodchip Exp $
+
+*grubconfig-1.16 (25 Oct 2002)
+
+  25 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Initial import; thanks mr.big@pc-trouble.de.  This script probably
+  needs to have some tweaks made for even easier Gentoo integration.
+  Use at your own peril ;) Send any patches to me; thanks.
