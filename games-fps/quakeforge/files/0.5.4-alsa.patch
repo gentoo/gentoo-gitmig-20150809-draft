@@ -1,0 +1,27 @@
+diff -ur quakeforge-0.5.4/configure quakeforge-0.5.4-fixed/configure
+--- quakeforge-0.5.4/configure	2003-07-17 21:25:53.000000000 -0500
++++ quakeforge-0.5.4-fixed/configure	2004-01-22 23:20:32.000000000 -0600
+@@ -17032,7 +17032,7 @@
+ 
+ #include <sys/asoundlib.h>
+ #if defined(SND_LIB_MAJOR) && defined(SND_LIB_MINOR)
+-#if SND_LIB_MAJOR > 0 || (SND_LIB_MAJOR == 0 && SND_LIB_MINOR == 5)
++#if SND_LIB_MAJOR == 0 && SND_LIB_MINOR == 5
+ QF_maGiC_VALUE
+ #endif
+ #endif
+diff -ur quakeforge-0.5.4/libs/audio/targets/snd_alsa_0_9.c quakeforge-0.5.4-fixed/libs/audio/targets/snd_alsa_0_9.c
+--- quakeforge-0.5.4/libs/audio/targets/snd_alsa_0_9.c	2003-04-14 21:34:17.000000000 -0500
++++ quakeforge-0.5.4-fixed/libs/audio/targets/snd_alsa_0_9.c	2004-01-22 23:18:36.000000000 -0600
+@@ -34,6 +34,11 @@
+ 
+ #include <stdio.h>
+ #include <dlfcn.h>
++#include <alsa/version.h>
++#if SND_LIB_MAJOR==1
++#define ALSA_PCM_OLD_HW_PARAMS_API
++#define ALSA_PCM_NEW_HW_PARAMS_API
++#endif
+ #include <alsa/asoundlib.h>
+ 
+ #include "QF/cvar.h"

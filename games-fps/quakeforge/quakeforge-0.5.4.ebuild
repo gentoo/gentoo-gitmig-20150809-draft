@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.4 2003/10/27 23:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.5 2004/01/29 09:24:46 vapier Exp $
 
 inherit games
 
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-com-parse.patch
+	epatch ${FILESDIR}/${PV}-alsa.patch
 #	sed -i \
 #		-e 's:heavy=.*:heavy=:' \
 #		-e 's:light=.*:light=:' \
