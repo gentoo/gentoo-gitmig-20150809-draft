@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.16 2004/10/23 10:05:39 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.17 2005/01/20 09:51:17 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -102,7 +102,7 @@ ESVN_STORE_DIR="${DISTDIR}/svn-src"
 
 ## -- subversion_svn_fetch() ------------------------------------------------- #
 
-subversion_svn_fetch() {
+function subversion_svn_fetch() {
 
 	# ESVN_REPO_URI is empty.
 	[ -z "${ESVN_REPO_URI}" ] && die "${ESVN}: ESVN_REPO_URI is empty."
@@ -117,32 +117,27 @@ subversion_svn_fetch() {
 			;;
 	esac
 
+	if [ ! -d "${ESVN_STORE_IR}" ]; then
+		debug-print "${FUNCNAME}: initial checkout. creating subversion directory"
+
+		addwrite /
+		mkdir -p "${ESVN_STORE_DIR}"      || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
+		chmod -f o+rw "${ESVN_STORE_DIR}" || die "${ESVN}: can't chmod ${ESVN_STORE_DIR}."
+		export SANDBOX_WRITE="${SANDBOX_WRITE%%:/}"
+	fi
+
+	cd -P "${ESVN_STORE_DIR}" || die "${ESVN}: can't chdir to ${ESVN_STORE_DIR}"
+	ESVN_STORE_DIR=${PWD}
+
 	# every time
-	addwrite "${ESVN_STORE_DIR}"
 	addwrite "/etc/subversion"
+	addwrite "${ESVN_STORE_DIR}"
 
 	# -userpriv
 	! has userpriv ${FEATURE} && addwrite "/root/.subversion"
 
-	if [ ! -d "${ESVN_STORE_DIR}" ]; then
-		mkdir -p "${ESVN_STORE_DIR}"      || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
-		chmod -f o+rw "${ESVN_STORE_DIR}" || die "${ESVN}: can't chmod ${ESVN_STORE_DIR}."
-
-		einfo "created store directory: ${ESVN_STORE_DIR}"
-		einfo
-	fi
-
-	cd "${ESVN_STORE_DIR}"
-
-	if [ -z "${ESVN_REPO_URI##*/}" ]; then
-		ESVN_REPO_FIX="${ESVN_REPO_URI%/}"
-
-	else
-		ESVN_REPO_FIX="${ESVN_REPO_URI}"
-
-	fi
-
-	ESVN_CO_DIR="${ESVN_PROJECT}/${ESVN_REPO_FIX##*/}"
+	[ -z "${ESVN_REPO_URI##*/}" ] && ESVN_REPO_URI="${ESVN_REPO_URI%/}"
+	ESVN_CO_DIR="${ESVN_PROJECT}/${ESVN_REPO_URI##*/}"
 
 	if [ ! -d "${ESVN_CO_DIR}/.svn" ]; then
 		# first check out
@@ -175,9 +170,6 @@ subversion_svn_fetch() {
 
 	fi
 
-	# permission fix for NFS (root_squash) with -userpriv
-	find ! -perm -o+rw -exec chmod o+rw {} \; 2>/dev/null
-
 	# copy to the ${WORKDIR}
 	cp -Rf "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't copy to ${S}."
 	einfo "     copied to: ${S}"
@@ -188,24 +180,26 @@ subversion_svn_fetch() {
 
 ## -- subversion_bootstrap() ------------------------------------------------ #
 
-subversion_bootstrap() {
+function subversion_bootstrap() {
+
+	local patch lpatch
 
 	cd "${S}"
 
 	if [ "${ESVN_PATCHES}" ]; then
 		einfo "apply patches -->"
 
-		for PATCH in ${ESVN_PATCHES}; do
-			if [ -f "${PATCH}" ]; then
-				epatch ${PATCH}
+		for patch in ${ESVN_PATCHES}; do
+			if [ -f "${patch}" ]; then
+				epatch ${patch}
 
 			else
-				for fPATCH in ${FILESDIR}/${PATCH}; do
-					if [ -f "${fPATCH}" ]; then
-						epatch ${fPATCH}
+				for lpatch in ${FILESDIR}/${patch}; do
+					if [ -f "${lpatch}" ]; then
+						epatch ${lpatch}
 
 					else
-						die "${ESVN}; ${PATCH} is not found"
+						die "${ESVN}; ${patch} is not found"
 
 					fi
 				done
@@ -233,7 +227,7 @@ subversion_bootstrap() {
 
 ## -- subversion_src_unpack() ------------------------------------------------ #
 
-subversion_src_unpack() {
+function subversion_src_unpack() {
 
 	subversion_svn_fetch || die "${ESVN}: unknown problem in subversion_svn_fetch()."
 	subversion_bootstrap || die "${ESVN}: unknown problem in subversion_bootstrap()."
