@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.22 2003/10/28 14:44:27 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.23 2003/11/24 10:44:39 aliz Exp $
+
+*snort-2.0.5 (24 Nov 2003)
+
+  24 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> snort-2.0.5.ebuild :
+  Version bump. Closing #29609 and #32950.
 
   28 Oct 2003; Martin Holzer <mholzer@gentoo.org> snort-2.0.2.ebuild:
   adding gcc3 patch. Closes #30540.
