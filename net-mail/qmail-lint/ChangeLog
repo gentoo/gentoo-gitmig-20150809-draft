@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/qmail-lint
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-lint/ChangeLog,v 1.1 2003/08/05 06:48:33 robbat2 Exp $
+
+*qmail-lint-0.55 (04 Aug 2003)
+
+  04 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  qmail-lint-0.55.ebuild:
+  Initial Commit
+
