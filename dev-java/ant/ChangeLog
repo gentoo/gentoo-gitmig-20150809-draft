@@ -1,11 +1,13 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.8 2002/09/08 15:26:27 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.9 2002/10/14 18:21:21 karltk Exp $
 
 *ant-1.5 (26 Jul 2002)
 
-  26 Jul 2002; William McArthur <sandymac@gentoo.org> ant-1.5.ebuild files/gent$
+  14 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/1.5/ant :
+  Fixed bugs with script as reported in #7732. Marked for testing. 
 
+  26 Jul 2002; William McArthur <sandymac@gentoo.org> ant-1.5.ebuild files/1.5/ant files/digest-ant-1.5 :
   Upgraded to Ant 1.5, rewrote the Gentoo specific ant script to take
   avantage of java-config. It also looked like the Gentoo ant-1.4.1
   script was based an older version of ant.

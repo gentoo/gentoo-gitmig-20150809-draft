@@ -5,14 +5,18 @@
 #   Edited for Gentoo Linux
 
 if [ -f $HOME/.gentoo/java-env ] ; then
-  envfile=$HOME/.gentoo/java-env
-elif [ -f /etc/env.d/20java ] ; then
-  envfile=/etc/env.d/20java
+  source $HOME/.gentoo/java-env
 else
-  echo "!!! /etc/env.d/20java not found, please configure your system VM with java-config"
+  JAVA_HOME=`java-config --jdk-home`
+  if [ -z $JAVA_HOME ] ; then
+    JAVA_HOME=`java-config --jre-home`
+  CLASSPATH=`java-config --classpath`
 fi
 
-JAVA_HOME=`java-config --jdk-home`
+if [ -z $JAVA_HOME ] ; then
+  echo "Error: No JDK/JRE found!"
+  exit 1
+fi
 
 # load system-wide ant configuration
 if [ -f "/etc/ant.conf" ] ; then 
@@ -33,7 +37,7 @@ ANT_HOME=/usr/share/ant
 # set ANT_LIB location
 ANT_LIB=${ANT_HOME}/lib
 
-JAVACMD=`java-config --java`
+JAVACMD="${JAVA_HOME}/java"
  
 if [ ! -x "$JAVACMD" ] ; then
   echo "Error: We cannot execute $JAVACMD "
@@ -46,7 +50,7 @@ if [ -n "$CLASSPATH" ] ; then
 fi
 
 # add in the dependency .jar files
-LOCALCLASSPATH=`java-config --classpath=ant`
+LOCALCLASSPATH=`${LOCALCLASSPATH}:java-config --classpath=ant`
 
 if [ -n "$JAVA_HOME" ] ; then
   if [ -f "$JAVA_HOME/lib/tools.jar" ] ; then
