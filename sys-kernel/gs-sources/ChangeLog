@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.14 2003/05/02 00:18:48 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.15 2003/05/16 01:09:08 livewire Exp $
+
+gs-sources-2.4.21_rc2 (15 May 2003)
+
+  15 May 2003; Bob Johnson <livewire@gentoo.org>
+
+	- updated to rc2
+	- added 5-13-2003 XFS (may be temporary addition)
+	- updated acpi 20030512
+	- updated ecc 20030225
+	- updated vl42-api-2.4.20
+	- updated super-freeswan 1.99.7
+	- added nforce2 agp patch
+	- added lm_sensors 2.7.0
+	- added highmem vesa framebuffer fix
+	- removed proconfig until i can fix vanilla's broken xconfig
 
 gs-sources-2.4.21_rc1 (01 May 2003)
 
