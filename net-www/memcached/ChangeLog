@@ -1,7 +1,13 @@
 # ChangeLog for net-www/memcached
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/memcached/ChangeLog,v 1.1 2003/07/26 22:52:16 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/memcached/ChangeLog,v 1.2 2003/07/30 01:43:39 lisa Exp $
 
+
+* net-www/memcached-1.1.7
+29 Jul 2003; Lisa Seelye <lisa@gentoo.org>
+  Version bump.  This package separated the APIs - and so did I.
+  dev-libs/memcached-api-perl and dev-libs/memcached-api-php both use flags (perl and php) respectivly
+  Also fixed the init script
 
 * net-www/memcached-1.1.6
 
