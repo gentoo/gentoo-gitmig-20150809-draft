@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.2 2003/12/08 00:02:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.3 2003/12/08 15:40:54 caleb Exp $
 inherit kde
 
 MY_PV=3.1.94
 S=${WORKDIR}/${PN}-${MY_PV}
 
-IUSE="alsa cups ipv6 ssl"
+IUSE="alsa cups ipv6 ssl doc"
 DESCRIPTION="KDE libraries needed by all kde programs"
 KEYWORDS="~x86"
 HOMEPAGE="http//www.kde.org/"
