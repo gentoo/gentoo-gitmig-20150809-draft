@@ -1,23 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.8.1.ebuild,v 1.18 2004/07/29 03:25:22 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.8.1.ebuild,v 1.19 2004/11/08 15:21:10 vapier Exp $
 
 inherit eutils
 
-IUSE="X"
-
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
-SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.0/${P}.tar.bz2"
 HOMEPAGE="http://www.ggi-project.org/"
+SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.0/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
+IUSE="X"
 
 DEPEND="X? ( virtual/x11 )"
 
 src_compile() {
-
 	local myconf
 
 	use X || myconf="--without-x --disable-x --disable-xwin"
@@ -28,8 +26,7 @@ src_compile() {
 
 }
 
-src_install () {
-
+src_install() {
 	make DESTDIR=${D} install || die
 
 	cd ${D}/usr/share/man/man3
@@ -44,5 +41,4 @@ src_install () {
 	dodoc doc/*.txt
 	docinto docbook
 	dodoc doc/docbook/*.sgml
-
 }
