@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.14.1.ebuild,v 1.2 2004/07/07 19:09:33 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.14.1.ebuild,v 1.3 2004/10/21 23:40:43 mr_bones_ Exp $
 
-use debug && inherit debug
+inherit debug
 
 IUSE="kde oracle debug"
 DESCRIPTION="TOra - Toolkit For Oracle"
