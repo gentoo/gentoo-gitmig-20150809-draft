@@ -1,4 +1,4 @@
-MD5 6db23c44cdcb87be0d6ad256f26eb1ba ChangeLog 561
+MD5 64b7c40e29fce7bd92aac8caed498168 omake-0.9.3.ebuild 904
+MD5 984e1293d51aed2f70b49bda79ffbbbb ChangeLog 716
 MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
-MD5 cc9e125f2917583cab1aff9da3e6e23d omake-0.9.2.ebuild 907
-MD5 4a414886f18cae9c04067fc322114648 files/digest-omake-0.9.2 65
+MD5 7ed9138efd0d44273d5ceeb1ed6b5fa4 files/digest-omake-0.9.3 65
