@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.15.ebuild,v 1.1 2003/12/24 19:12:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.15.ebuild,v 1.2 2003/12/24 20:50:36 pebenito Exp $
 
 inherit flag-o-matic
 
@@ -19,6 +19,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/procps-3.1.15-fix_attr.diff
 
 	# Use the CFLAGS from /etc/make.conf.
 	replace-flags "-O3" "-O2"
