@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kmobiletools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kmobiletools/ChangeLog,v 1.3 2005/01/02 17:01:34 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kmobiletools/ChangeLog,v 1.4 2005/02/04 17:00:04 greg_g Exp $
+
+*kmobiletools-0.4.2 (04 Feb 2005)
+
+  04 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> +kmobiletools-0.4.2.ebuild:
+  Version bump (#80644).
 
 *kmobiletools-0.4.1 (02 Feb 2005)
 
