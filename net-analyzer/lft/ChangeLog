@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.5 2005/01/30 14:24:51 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.6 2005/02/06 08:15:04 kito Exp $
+
+  06 Feb 2005; Kito <kito@gentoo.org> lft-2.2.ebuild:
+  keyword ~ppc-macos closes bug 68499
 
   30 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> lft-2.2.ebuild:
   added ~amd64 to KEYWORDS. fixes #79783
