@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 19771e6360388d7eb9d5b9d774423e68 ChangeLog 3488
 MD5 fe99b5183d46846f6b3dea9c63fe328e mtr-0.54-r2.ebuild 1158
+MD5 52f26b42be8f809259ad1fce5152b5e3 ChangeLog 3596
 MD5 d5a12b294214f1ccd2d9e2ec8c6a000a mtr-0.64.ebuild 1090
-MD5 720bffd73acf542e859034ca9d443c19 metadata.xml 244
 MD5 9a74746f955bbd978da64e5b3fa9bdd7 mtr-0.67.ebuild 1093
+MD5 720bffd73acf542e859034ca9d443c19 metadata.xml 244
 MD5 cf3436006255ff4c602431f3a3eca98e files/digest-mtr-0.54-r2 131
+MD5 f809e2209338aeea9e409e8a7c17bc05 files/digest-mtr-0.64 60
 MD5 0bbdffc84e47f22daaf46c76e941a02a files/mtr-ac-res_mkquery.patch 510
 MD5 ed7a57f974bbb8a86b2fc02be7277c94 files/digest-mtr-0.67 60
-MD5 f809e2209338aeea9e409e8a7c17bc05 files/digest-mtr-0.64 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxWHqugEuf3OQ0akRAjs3AJ4mY8EPi2CVC17AwyQv0/F0LrEzlwCgpLPC
-QjJTX2cyhNdBRN3fm3tigOw=
-=hyvh
------END PGP SIGNATURE-----
