@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.18 2002/12/16 02:36:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.19 2002/12/28 18:17:05 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 
@@ -154,8 +154,18 @@ elibtoolize() {
 				eval ${y} $>${T}/elibtool.log
 			elif [ "${portage}" = "no" ] && [ "${reversedeps}" = "no" ] && [ "${removeinternaldep}" = "no" ]
 			then
+				# Sometimes ltmain.sh is in a subdirectory ...
+				if [ ! -f ${x}/configure.in -a ! -f ${x}/configure.ac ]
+				then
+					if [ -f ${x}/../configure.in -o -f ${x}/../configure.ac ]
+					then
+						cd ${x}/../
+					fi
+				fi
+
 				ewarn "Cannot apply any patch, running libtoolize..."
 				libtoolize --copy --force
+				cd ${x}
 				break
 			fi
 		done
