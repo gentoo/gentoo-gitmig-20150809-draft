@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.32 2004/08/30 18:46:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.33 2004/09/18 02:52:41 tgall Exp $
+
+  17 Sep 2004; Tom Gall <tgall@gentoo.org> libxfce4util-4.0.6.ebuild:
+  stable on ppc64, bug #57744
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   libxfce4util-4.0.6.ebuild:
