@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.16 2004/04/20 20:19:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.17 2004/04/25 20:17:16 vapier Exp $
 
 inherit gcc flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/bison/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~ppc sparc alpha mips hppa ia64 ppc64 s390"
+KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="nls static"
 
 DEPEND="sys-devel/m4

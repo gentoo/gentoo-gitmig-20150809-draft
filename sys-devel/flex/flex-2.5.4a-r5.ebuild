@@ -1,15 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.17 2004/03/02 16:41:07 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.18 2004/04/25 20:16:43 vapier Exp $
+
+inherit eutils
 
 S="${WORKDIR}/${P/a/}"
 DESCRIPTION="GNU lexical analyser generator"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://lex.sourceforge.net/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="FLEX"
 SLOT="0"
-KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE=""
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc"
@@ -19,17 +22,19 @@ src_unpack() {
 
 	cd ${S}
 	# Some Redhat patches to fix various problems
-	patch -p1 < ${FILESDIR}/flex-2.5.4-glibc22.patch || die
-	patch -p1 < ${FILESDIR}/flex-2.5.4a-gcc3.patch || die
-	patch -p1 < ${FILESDIR}/flex-2.5.4a-gcc31.patch || die
-	patch -p1 < ${FILESDIR}/flex-2.5.4a-skel.patch || die
+	epatch ${FILESDIR}/flex-2.5.4-glibc22.patch
+	epatch ${FILESDIR}/flex-2.5.4a-gcc3.patch
+	epatch ${FILESDIR}/flex-2.5.4a-gcc31.patch
+	epatch ${FILESDIR}/flex-2.5.4a-skel.patch
 }
 
 src_compile() {
-	./configure --prefix=/usr \
-		--host=${CHOST} || die
+	./configure \
+		--prefix=/usr \
+		--host=${CHOST} \
+		|| die
 
-	if [ -z "`use static`" ]
+	if ! use static
 	then
 		emake || make || die
 	else
@@ -42,13 +47,12 @@ src_install() {
 		mandir=${D}/usr/share/man/man1 \
 		install || die
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
-		dodoc COPYING NEWS README
+		dodoc NEWS README
 	else
 		rm -rf ${D}/usr/share ${D}/usr/include ${D}/usr/lib
 	fi
 
 	dosym flex /usr/bin/lex
 }
-

@@ -1,29 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.14 2004/03/02 16:58:24 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.15 2004/04/25 20:14:48 vapier Exp $
 
-IUSE="readline"
+inherit eutils flag-o-matic
 
-inherit flag-o-matic
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Handy console-based calculator utility"
 HOMEPAGE="http://www.gnu.org/software/bc/bc.html"
 SRC_URI="mirror://gnu/bc/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64 ppc64 s390"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa mips amd64 ia64 ppc64 s390"
+IUSE="readline"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2 )"
-DEPEND="$RDEPEND
+DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.47-r10
 	sys-devel/flex"
 
 src_unpack() {
-
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd ${S}
 
 	epatch ${FILESDIR}/bc-1.06-info-fix.diff
 	epatch ${FILESDIR}/bc-1.06-readline42.diff
@@ -47,31 +45,23 @@ src_unpack() {
 }
 
 src_compile() {
-
-	# -O2 causes segafults on ppc with zero backtrace :/
-	use ppc && filter-flags "-O2"
-
-	# -Os causes segfaults on x86
-	use x86 && replace-flags "-Os" "-O2"
-
-	# >= -O2 crashes bc -l and -O1 produces no output
-	use amd64 && replace-flags "-O[1-9]" "-O0"
+	case ${ARCH} in
+		ppc) filter-flags -O2;;
+		x86) replace-flags -Os -O2;;
+		amd64) replace-flags -O? -O0;;
+	esac
 
 	local myconf=""
 	use readline && myconf="--with-readline"
-
 	econf ${myconf} || die
-
 	emake || die
 }
 
 src_install() {
-
 	into /usr
-	dobin bc/bc dc/dc
+	dobin bc/bc dc/dc || die
 
 	doinfo doc/*.info
 	doman doc/*.1
-	dodoc AUTHORS COPYING* FAQ NEWS README ChangeLog
+	dodoc AUTHORS FAQ NEWS README ChangeLog
 }
-
