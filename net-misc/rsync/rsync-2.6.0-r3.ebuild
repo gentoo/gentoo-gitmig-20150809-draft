@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r3.ebuild,v 1.9 2004/11/22 03:40:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.0-r3.ebuild,v 1.10 2005/01/19 13:03:33 kumba Exp $
 
 inherit eutils flag-o-matic gcc gnuconfig
 
