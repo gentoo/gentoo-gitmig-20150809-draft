@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.87 2005/02/18 19:55:15 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.88 2005/02/25 04:10:37 marineam Exp $
+
+*ck-sources-2.6.10-r6 (24 Feb 2005)
+
+  24 Feb 2005; Micheal Marineau <marineam@gentoo.org>
+  -files/ck-sources-2.6.10-77666.patch, -files/ck-sources-2.6.10-82141.patch,
+  -files/ck-sources-2.6.10-smbfs-dos-fix.patch, -ck-sources-2.6.10-r5.ebuild,
+  +ck-sources-2.6.10-r6.ebuild:
+  Version bump to ck6. Nothing big, it's just a security/bugfix release.
 
   18 Feb 2005; <plasmaroo@gentoo.org> ck-sources-2.4.28-r3.ebuild,
   +files/ck-sources-2.4.28.81106.patch:
