@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.6 2004/07/15 07:52:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.7 2004/07/16 16:48:36 kloeri Exp $
+
+  16 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mtools-3.9.9.ebuild:
+  Stable on alpha.
 
   15 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> mtools-3.9.9.ebuild:
   use emake; tidy; stablize for x86
