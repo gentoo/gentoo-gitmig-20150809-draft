@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r1.ebuild,v 1.4 2000/10/03 16:02:04 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r1.ebuild,v 1.5 2000/10/09 16:02:50 achim Exp $
 
 P=gzip-1.2.4a      
 A=${P}.tar.gz
@@ -35,7 +35,8 @@ src_install() {
 	dosym gzip /usr/bin/gunzip
 	dosym gzip /usr/bin/zcat
 	dosym zdiff /usr/bin/zcmp
-	dodoc ChangeLog COPYING NEWS README THANKS TODO algorithm.doc 
+	dodoc ChangeLog COPYING NEWS README THANKS TODO 
+	dodoc algorithm.doc gzip.doc
 }
 
 

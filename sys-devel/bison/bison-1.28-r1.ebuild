@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.28-r1.ebuild,v 1.4 2000/10/03 16:02:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.28-r1.ebuild,v 1.5 2000/10/09 16:02:50 achim Exp $
 
 P=bison-1.28      
 A=${P}.tar.gz
@@ -20,8 +20,9 @@ src_install() {
     cd ${S}
     try make prefix=${D}/usr install
     dodoc COPYING AUTHORS NEWS ChangeLog README REFERENCES OChangeLog doc/FAQ
-    prepman
-    prepinfo
+    prepallstrip
+    prepallman
+    prepallinfo
 }
 
 

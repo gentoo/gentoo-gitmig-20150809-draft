@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.6 2000/10/04 22:53:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.0-r1.ebuild,v 1.7 2000/10/09 16:02:50 achim Exp $
 
 P=perl-5.6.0
 A=${P}.tar.gz
@@ -89,8 +89,7 @@ EOF
 #man pages
     
     ./perl installman --man1dir=${D}/usr/man/man1 --man1ext=1 --man3dir=${D}/usr/man/man3 --man3ext=3
-    gzip -9 ${D}/usr/man/man[13]/*.[13]
-
+    prepman
 
 # DOCUMENTATION
 

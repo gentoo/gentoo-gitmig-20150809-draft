@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.19.ebuild,v 1.3 2000/09/15 20:09:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.19.ebuild,v 1.4 2000/10/09 16:02:50 achim Exp $
 
 P=e2fsprogs-1.19
 A=${P}.tar.gz
@@ -29,7 +29,7 @@ src_install() {
 		strip --strip-unneeded ${D}/lib/*.so*
 		strip --strip-unneeded ${D}/usr/lib/*.so*
 	fi
-	dodoc COPYING ChangeLog README RELEASE-NOTES 
+	dodoc COPYING ChangeLog README RELEASE-NOTES SHLIBS
 }
 
 

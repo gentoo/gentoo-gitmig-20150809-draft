@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.3-r1.ebuild,v 1.3 2000/09/15 20:09:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.3-r1.ebuild,v 1.4 2000/10/09 16:02:50 achim Exp $
 
 P=zlib-1.1.3
 A=${P}.tar.gz
@@ -25,8 +25,9 @@ src_install() {
     doins zconf.h zlib.h
     dolib libz.so.1.1.3
     dolib libz.a
-    dosym libz.so.1.1.3 /usr/lib/libz.so
-    dosym libz.so.1.1.3 /usr/lib/libz.so.1
+#    dosym libz.so.1.1.3 /usr/lib/libz.so
+#    dosym libz.so.1.1.3 /usr/lib/libz.so.1
+    preplib
     dodoc FAQ README algorithm.txt ChangeLog
 }
 

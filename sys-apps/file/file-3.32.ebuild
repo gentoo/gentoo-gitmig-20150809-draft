@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.32.ebuild,v 1.2 2000/09/15 20:09:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.32.ebuild,v 1.3 2000/10/09 16:02:50 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ DESCRIPTION="Program to identify a file's format by scanning binary data for pat
 SRC_URI="ftp://ftp.astron.com/pub/file/${A}"
 
 src_compile() {                           
-    try ./configure --prefix=/usr --host=${CHOST}
+    try ./configure --prefix=/usr --datadir=/etc --host=${CHOST}
     try make
 }
 
@@ -20,8 +20,7 @@ src_install() {
 	into /usr
 	dobin file
 	doman file.1 magic.4
-	dodir /usr/share
-	insinto /usr/share
+	insinto /etc
 	doins magic magic.mime
 	dodoc LEGAL.NOTICE MAINT README
 }
