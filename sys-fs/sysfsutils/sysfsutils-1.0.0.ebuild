@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.0.0.ebuild,v 1.5 2004/07/01 21:51:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.0.0.ebuild,v 1.6 2004/07/15 03:42:55 agriffis Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	# Detect mips systems properly
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	econf || die "./configure failed"
 
