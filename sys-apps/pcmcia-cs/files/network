@@ -1,0 +1,15 @@
+#! /bin/sh
+
+action=$1
+device=$2
+
+case "${action:?}" in
+	"start" | "resume" )
+		/etc/init.d/net.$2 start
+		;;
+	"stop")
+		/sbin/ifconfig $2 stop
+		;;
+	"check")
+		;;
+esac
