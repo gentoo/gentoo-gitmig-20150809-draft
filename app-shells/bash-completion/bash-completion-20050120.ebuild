@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050120.ebuild,v 1.1 2005/01/20 11:51:15 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050120.ebuild,v 1.2 2005/01/21 14:49:16 ka0ttic Exp $
 
 inherit eutils
 
@@ -38,8 +38,8 @@ src_install() {
 	exeinto /etc/profile.d
 	doexe ${FILESDIR}/bash-completion || die "failed to install profile.d"
 
-	# >=dev-util/subversion-1.1.1-r3 provides extremely superior completions
-	has_version ">=dev-util/subversion-1.1.1-r3" && rm contrib/subversion
+	# dev-util/subversion provides an extremely superior completion
+	rm contrib/subversion
 	insinto /usr/share/bash-completion
 	doins contrib/* || die "failed to install contrib completions"
 

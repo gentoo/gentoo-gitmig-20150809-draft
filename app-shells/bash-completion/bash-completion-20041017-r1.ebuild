@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r1.ebuild,v 1.8 2005/01/01 15:56:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r1.ebuild,v 1.9 2005/01/21 14:49:16 ka0ttic Exp $
 
 GENCOMP_VERS="1.0_beta2"
 
@@ -24,8 +24,8 @@ src_install() {
 	insinto /etc
 	doins bash_completion
 
-	# >=dev-util/subversion-1.1.1-r3 provides extremely superior completions
-	has_version ">=dev-util/subversion-1.1.1-r3" && rm contrib/subversion
+	# dev-util/subversion provides an extremely superior completion
+	rm contrib/subversion
 
 	insinto /usr/share/bash-completion
 	doins contrib/*
