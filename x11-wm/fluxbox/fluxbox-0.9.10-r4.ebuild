@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.10-r4.ebuild,v 1.1 2004/10/04 21:35:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.10-r4.ebuild,v 1.2 2004/10/07 18:19:42 ciaranm Exp $
 
 inherit eutils
 
@@ -34,6 +34,9 @@ src_unpack() {
 
 	# Branch update from upstream CVS
 	epatch ${WORKDIR}/${PN}-${PV}-biiiiig-update.patch
+
+	# Fix locales, see discussion in bug 65803.
+	epatch ${FILESDIR}/${PV}/${PN}-${PV}-eat-this-setlocale.patch
 
 	# Some fluxbox-generate_menu things. These are ciaranm's fault...
 	epatch ${FILESDIR}/${PV}/${PN}-${PV}-posix-on-toast.patch
