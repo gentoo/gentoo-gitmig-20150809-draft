@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.7 2004/10/26 19:44:20 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.8 2004/10/26 21:15:48 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -209,13 +209,13 @@ src_install() {
 	# to fix compared to this simple mv and symlink).
 	mv ${D}/${PREFIX}/lib/gcc ${D}/${PREFIX}/lib/gcc-lib
 	ln -s gcc-lib ${D}/${PREFIX}/lib/gcc
-	LIBPATH=${LIBPATH/lib\/gcc/lib\/gcc-lib}
+	#LIBPATH=${LIBPATH/lib\/gcc/lib\/gcc-lib}
 
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry
 
-	if [ "${SPLIT_SPECS}" == "true" ] ; then
+	if [ "${SPLIT_SPECS}" == "true" ] && use !boundschecking ; then
 		if use hardened ; then
 			create_gcc_env_entry vanilla
 		else
