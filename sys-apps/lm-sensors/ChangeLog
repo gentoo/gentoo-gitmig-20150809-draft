@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.42 2004/11/30 18:45:57 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.43 2004/12/17 20:26:46 hansmi Exp $
+
+  17 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
+  lm-sensors-2.6.5.ebuild:
+  Removed from ppc, because we no longer have 2.4-kernels.
 
   30 Nov 2004; <plasmaroo@gentoo.org> lm-sensors-2.8.1.ebuild,
   lm-sensors-2.8.2.ebuild, lm-sensors-2.8.3.ebuild, lm-sensors-2.8.4.ebuild,
