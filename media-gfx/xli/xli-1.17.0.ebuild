@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.18 2005/02/06 11:25:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.19 2005/03/16 20:22:50 corsair Exp $
 
 inherit alternatives
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/${P}.tar.gz"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ~ppc-macos ~sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ~ppc-macos ~sparc x86 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/x11
