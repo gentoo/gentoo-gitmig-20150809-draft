@@ -1,35 +1,32 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r3.ebuild,v 1.12 2004/02/22 22:42:35 agriffis Exp $
-
-IUSE="ssl"
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r3.ebuild,v 1.13 2004/05/23 23:14:41 vapier Exp $
 
 inherit eutils
 
 MY_P=netkit-${P}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Standard Linux FTP client with optional SSL support"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
+SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64 ppc64"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
+IUSE="ssl"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	ssl? ( dev-libs/openssl )"
-
-DEPEND=">=sys-apps/sed-4
-	${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if [ "`use ssl`" ]; then
-		epatch ${FILESDIR}/${MY_P}+ssl-0.2.diff
-		epatch ${FILESDIR}/${MY_P}+ssl-0.2+auth.diff
-	fi
+	use ssl \
+		&& epatch ${FILESDIR}/${MY_P}+ssl-0.2.diff \
+		&& epatch ${FILESDIR}/${MY_P}+ssl-0.2+auth.diff
 }
 
 src_compile() {
@@ -39,8 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	into /usr
-	dobin ftp/ftp
+	dobin ftp/ftp || die
 	doman ftp/ftp.1 ftp/netrc.5
 	dodoc ChangeLog README BUGS
 }
