@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.20 2003/10/19 11:40:25 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.21 2003/10/23 23:15:57 liquidx Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -68,7 +68,7 @@ distutils_pkg_postrm() {
 		ebegin "Performing Python Module Cleanup .."
 		if [ -n "${PYTHON_MODNAME}" ]; then
 			for pymod in "${PYTHON_MODNAME}"; do
-				for moddir in "`ls -d --color=none -1 ${ROOT}usr/lib/python*/site-packages/${pymod}`"; do
+				for moddir in "`ls -d --color=none -1 ${ROOT}usr/lib/python*/site-packages/${pymod} 2> /dev/null`"; do
 					python_mod_cleanup ${moddir}
 				done
 			done

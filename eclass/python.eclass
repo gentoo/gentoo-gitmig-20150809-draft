@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.5 2003/10/17 07:14:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.6 2003/10/23 23:15:57 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -17,7 +17,7 @@
 #                           orphaned *.pyc *.pyo
 # python_makesym()        - Makes /usr/bin/python symlinks
 
-inherit alternatives
+inherit alternatives virtualx
 
 ECLASS="python"
 INHERITED="$INHERITED $ECLASS"
@@ -87,13 +87,19 @@ python_tkinter_exists() {
 #         python module is installed and loadable. it will return
 #         TRUE(0) if the module exists, and FALSE(1) if the module does
 #         not exist.
+#
+# note:   we use virtualmake from virtualx.eclass to get around 
+#         when people build without X available. some packages like
+#         pygtk need X avaiable when being imported.
+#
 # exam:   
 #         if python_mod_exists gtk; then
 #             echo "gtk support enabled
 #         fi
 #
 python_mod_exists() {
-	if ! python -c "import $1" >/dev/null 2>&1; then
+	export maketype="python"
+	if ! virtualmake -c "import $1" >/dev/null 2>&1; then
 		return 1
 	fi
 	return 0
@@ -180,11 +186,16 @@ python_mod_cleanup() {
 	
 	for path in ${SEARCH_PATH}; do
 		einfo "Searching ${path} .."
-		for obj in $(find ${path} -name *.pyc); do
+		for obj in $(find ${path} -name *.pyc | sort -r); do
 			src_py="$(echo $obj | sed 's:c$::')"
 			if [ ! -f "${src_py}" ]; then
 				einfo "Purging ${src_py}[co]"
 				rm -f ${src_py}[co]
+				# clean up directory if it is empty
+				current_dir="`dirname ${obj}`"
+				if [ `ls -1 --color=none $current_dir | wc -l 2> /dev/null` -lt 1 ]; then
+					rmdir -f ${current_dir}
+				fi
 			fi
 		done
 	done		
