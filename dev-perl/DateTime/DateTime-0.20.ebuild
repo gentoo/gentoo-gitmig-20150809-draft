@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/DateTime-0.20.ebuild,v 1.1 2004/03/04 13:34:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/DateTime-0.20.ebuild,v 1.2 2004/03/05 01:00:30 mr_bones_ Exp $
 
 inherit perl-module
 
@@ -17,4 +17,4 @@ DEPEND=">=dev-perl/Params-Validate-0.72
 		dev-perl/DateTime-TimeZone
 		dev-perl/DateTime-Locale
 		dev-perl/Class-Factory-Util"
-		
+
