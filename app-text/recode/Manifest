@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b526957a024db926cc04c71b6c819f08 ChangeLog 2848
-MD5 82f6bbecf41634537fea489ba096d95e recode-3.6-r1.ebuild 1011
+MD5 681e1e914c41521c739cdad7731ff3bf recode-3.6-r1.ebuild 1015
 MD5 6d0ba2283055f0ad0f91ff4dfd0acfd9 files/digest-recode-3.6-r1 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBUvUtHTu7gpaalycRAqKzAKCij4kG4kV+ksbgOGLdSxlJgYGR3ACgteX3
+43+lTEdA/SpLzjKxxnoufm4=
+=Ob4d
+-----END PGP SIGNATURE-----
