@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.13 2003/12/06 03:52:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.14 2003/12/09 09:28:55 mr_bones_ Exp $
 
 inherit distutils virtualx
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc alpha"
 
 DEPEND="virtual/python
-      >=media-libs/glut-3.7-r2
+	>=media-libs/glut-3.7-r2
 	x11-base/xfree
 	virtual/opengl"
 
