@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.28 2003/12/29 18:23:10 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.29 2004/01/13 15:33:48 agriffis Exp $
+
+  13 Jan 2004; Aron Griffis <agriffis@gentoo.org> libdvdcss-1.2.8.ebuild:
+  stable on alpha
 
   29 Dec 2003; Sven Blumenstein <bazik@gentoo.org> libdvdcss-1.2.8.ebuild:
   Marked stable on sparc to fix xine-lib depend.

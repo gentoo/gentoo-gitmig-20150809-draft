@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.7 2003/12/31 02:26:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.8 2004/01/13 15:38:02 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,7 +34,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="x86 ~ppc hppa ~sparc amd64"
+KEYWORDS="x86 ~ppc hppa ~sparc amd64 alpha"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
