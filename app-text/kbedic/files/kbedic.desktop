@@ -1,0 +1,11 @@
+[KDE Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Exec=kbedic
+Icon=/usr/share/kbedic/kbedic_icon_mini.xpm
+Name=KBEDic
+GenericName=English - Bulgarian Dictionary
+GenericName[bg]=Българско-Английски Речник
+Comment=An English - Bulgarian Dictionary
+Comment[bg]=Българско-Английски Речник
+Categories=Qt;KDE;Utility
