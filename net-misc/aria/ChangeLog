@@ -1,7 +1,13 @@
 # ChangeLog for net-misc/aria
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.8 2003/02/12 08:18:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.9 2003/05/15 20:47:36 jhhudso Exp $
 
+*aria-1.0.0.ebuild (15 May 2003)
+
+  15 May 2003; Jared Hudson <jhhudso@gentoo.org> : Updated ebuild to version
+  1.0.0. Credit goes to Nicolas Grandclaude <ngclaude@netcourrier.com>. Bug
+  ID: 20784
+	
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *aria-0.10.2_beta7.ebuild (02 Oct 2002)
