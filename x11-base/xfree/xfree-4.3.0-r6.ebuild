@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.1 2004/03/14 22:25:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.2 2004/03/15 00:02:13 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -86,7 +86,7 @@ strip-flags
 USE_SNAPSHOT="no"
 
 PATCH_VER="2.1.26.14"
-FILES_VER="0.1.4"
+FILES_VER="0.1.5"
 # Whether to drop in external render, xrender and xft from freedesktop.org
 EXT_XFT_XRENDER="yes"
 RENDER_VER="0.8"
@@ -1263,11 +1263,6 @@ pkg_postinst() {
 		einfo "  # emerge media-libs/glide-v3"
 		echo
 	fi
-
-	echo
-	einfo "If you experience font corruption on OpenOffice.org or similar"
-	einfo "glitches please remake your XF86Config"
-	echo
 
 	einfo "Please note that the xcursors are in /usr/share/cursors/xfree"
 	einfo "Any custom cursor sets should be placed in that directory."
