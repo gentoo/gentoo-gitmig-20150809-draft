@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.165 2003/07/31 09:27:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.166 2003/08/03 08:55:27 spyderous Exp $
+
+*xfree-4.3.99.9 (03 Aug 2003)
+
+  03 Aug 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.9.ebuild:
+  Bump. Moved filesdir stuff to a downloaded tarball to save the tree.
 
   31 Jul 2003; foser <foser@gentoo.org> xfree-4.3.0-r2.ebuild, xfree-4.3.0-r3.ebuild, xfree-4.3.99.8.ebuild :
   Changed virtual/xft block to x11-libs/xft to actually work (#24111)
