@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-nag
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.4 2004/12/24 08:00:10 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-nag/ChangeLog,v 1.5 2005/01/16 11:08:33 vapier Exp $
+
+*horde-nag-1.1.2 (16 Jan 2005)
+
+  16 Jan 2005; Mike Frysinger <vapier@gentoo.org> -horde-nag-1.1.1.ebuild,
+  +horde-nag-1.1.2.ebuild:
+  Version bump.
 
 *horde-nag-2.0 (24 Dec 2004)
 
