@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/net-tools
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.25 2003/10/19 11:39:59 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.26 2004/03/05 18:15:13 iggy Exp $
+
+  02 Mar 2004; Brian Jackson <iggy@gentoo.org> net-tools-1.60-r7.ebuild:
+  adding initial s390 support
 
   19 Oct 2003; <plasmaroo@gentoo.org> net-tools-1.60-r7.ebuild,
   files/net-tools-1.60-2.6-compilefix.patch:

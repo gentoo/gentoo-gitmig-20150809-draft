@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/which
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.18 2004/01/15 05:07:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.19 2004/03/05 18:16:20 iggy Exp $
+
+  02 Mar 2004; Brian Jackson <iggy@gentoo.org> which-2.16.ebuild:
+  adding initial s390 support
 
   15 Jan 2004; Jon Portnoy <avenj@gentoo.org> which-2.16.ebuild :
   Stable on AMD64.

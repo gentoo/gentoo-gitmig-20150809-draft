@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.9 2003/02/21 02:34:19 zwelch Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.10 2004/03/05 18:12:26 iggy Exp $
+
+  02 Mar 2004; Brian Jackson <iggy@gentoo.org> ed-0.2-r3.ebuild:
+  adding initial s390 support
 
   20 Feb 2003; Zach Welch <gmsoft@gentoo.org> ed-0.2-r3.ebuild :
   Added arm to keywords.

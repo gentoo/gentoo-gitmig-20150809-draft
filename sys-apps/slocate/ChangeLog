@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.36 2004/03/01 20:05:40 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.37 2004/03/05 18:16:04 iggy Exp $
+
+  02 Mar 2004; Brian Jackson <iggy@gentoo.org> slocate-2.7-r5.ebuild:
+  adding initial s390 support
 
   01 Mar 2004; Tom Gall <tgall@gentoo.org> slocate-2.7-r5.ebuild:
   ppc64 needs sys-devel/automake
