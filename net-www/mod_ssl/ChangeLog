@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.14 2003/03/25 08:42:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.15 2003/07/23 18:01:56 woodchip Exp $
+
+*mod_ssl-2.8.15 (23 Jul 2003)
+
+  23 Jul 2003; Donny Davies <woodchip@gentoo.org> mod_ssl-2.8.15.ebuild:
+  Bump for Apache-1.3.28.
 
 *mod_ssl-2.8.14 (25 Mar 2003)
 
@@ -39,7 +44,6 @@
   Added KEYWORDS.
 
   24 Jun 2002; Nicholas Jones <carpaski@gentoo.org> mod_ssl-2.8.10.ebuild
-
   o Version bump. Overflow fix.
 
 *mod_ssl-2.8.9-r1 (21 Jun 2002)
@@ -51,18 +55,15 @@
   Added KEYWORDS.
 
   21 Jun 2002; Nicholas Jones <carpaski@gentoo.org> mod_ssl-2.8.9-r1.ebuild
-
   o Changed depend line to allow for revisions of apache without
     new ebuilds for mod_ssl.
 
 *mod_ssl-2.8.9 (20 Jun 2002)
 
   20 Jun 2002; Thilo Bangert <bangert@gentoo.org> mod_ssl-2.8.9.ebuild
-  
   version bump - for apache 1.3.26
 
 *mod_ssl-2.8.8 (9 Apr 2002)
 
   9 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
   New package to go along with the rewritten apache ebuild.
