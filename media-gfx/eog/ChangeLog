@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.30 2003/03/16 19:15:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.31 2003/05/18 09:47:07 liquidx Exp $
+
+  18 May 2003; Alastair Tse <liquidx@gentoo.org> eog-2.2.1.ebuild:
+  added omf fix to stop excessive scrollkeeping
 
 *eog-2.2.1 (10 Mar 2003)
 
