@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.12 2003/07/16 13:34:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.13 2003/10/13 19:32:25 plasmaroo Exp $
 
 inherit eutils
 
@@ -38,8 +38,12 @@ src_unpack() {
 			Makefile.orig > Makefile
 	fi
 
-	#This closes bug #1472: fixes compilation with recent 2.4 kernels
+	# This closes bug #1472: fixes compilation with recent 2.4 kernels
 	epatch ${FILESDIR}/apmsleep.c.diff
+
+	# This closes bug #29636: needs 2.6 patching [plasmaroo@gentoo.org]
+	epatch ${FILESDIR}/apmd.kernel26x.patch
+
 }
 
 src_compile() {

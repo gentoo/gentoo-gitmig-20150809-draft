@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.9 2003/07/16 13:34:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.10 2003/10/13 19:32:25 plasmaroo Exp $
+
+  13 Oct 2003; <plasmaroo@gentoo.org> apmd-3.0.2-r3.ebuild,
+  files/apmd.kernel26x.patch: Added a patch to get apmd to compile on 
+  2.6x kernels: Bug #29636.
 
 *apmd-3.0.2-r3 (12 July 2002)
 
