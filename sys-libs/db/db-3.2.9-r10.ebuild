@@ -1,24 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.6 2004/04/24 19:21:53 tgall Exp $
-
-IUSE="doc java"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.7 2004/05/02 17:47:05 vapier Exp $
 
 inherit gnuconfig
 inherit libtool
 inherit eutils
 inherit db
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
-SRC_URI="http://www.sleepycat.com/update/snapshot/${P}.tar.gz"
 HOMEPAGE="http://www.sleepycat.com/"
+SRC_URI="http://www.sleepycat.com/update/snapshot/${P}.tar.gz"
 
-SLOT="3"
 LICENSE="DB"
+SLOT="3"
 # This ebuild is to be the compatibility ebuild for when db4 is put
 # in the tree.
-KEYWORDS="~x86 ~ppc ~sparc alpha ~mips ~hppa ia64 ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm ~hppa ia64 ppc64 s390"
+IUSE="doc java"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
