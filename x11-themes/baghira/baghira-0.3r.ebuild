@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc. 
-# Distributed under the terms of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.3r.ebuild,v 1.1 2004/06/12 14:58:30 carlo Exp $ 
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.3r.ebuild,v 1.2 2004/06/12 21:58:20 mr_bones_ Exp $
 
-inherit kde
+inherit eutils kde
 
 S=${WORKDIR}/${PN}
 
