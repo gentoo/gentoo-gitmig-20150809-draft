@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.17 2004/06/29 12:22:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.18 2005/01/29 17:50:50 greg_g Exp $
 
-inherit eutils
+inherit eutils kde-functions
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
@@ -64,13 +64,9 @@ src_compile() {
 	# First, the Qt plug-in
 	if use qt
 	then
-		# A hack to build against the latest QT:
-		local v
-		for v in /usr/qt/[0-9]
-		do
-			[ -d "${v}" ] && export QTDIR="${v}"
-		done
-		use kde && kde_src_compile myconf
+		set-qtdir 3
+		set-kdedir 3
+
 		use kde && myconf="${myconf} --with-kde"
 
 		# note! watch the --prefix=/usr placement;
