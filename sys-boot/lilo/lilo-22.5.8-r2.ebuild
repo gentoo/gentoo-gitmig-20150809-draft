@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r2.ebuild,v 1.1 2004/04/13 09:40:59 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r2.ebuild,v 1.2 2004/04/21 02:13:49 eradicator Exp $
 
 inherit mount-boot eutils
 
@@ -58,6 +58,9 @@ src_compile() {
 		export CC="${CC:=gcc} -yet_exec"
 		find ${W} -type f -name "Makefile" -exec sed -i "s:CC=cc:CC=${CC}:" {} \;
 	fi
+
+	# Fixes borkage with hardened gccs and people who have -fPIC, etc in their specs.
+	has_pic && CC="${CC} `test_flag -nopie` `test_flag -yet_exec`"
 
 	# Do not use custom CFLAGS for stability reasons
 	emake CC="${CC:=gcc}" lilo || die
