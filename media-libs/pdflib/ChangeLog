@@ -1,8 +1,19 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.2 2002/04/04 06:04:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.3 2002/08/07 08:47:37 rphillips Exp $
 
 *pdflib-4.0.1-r3 (3 Apr 2002)
+
+  7 Aug 2002; Ryan Phillips <rphillips@gentoo.org> : 
+
+  Changed package to use system libpng. PHP doesn't like being
+  linked to two separate places.
+  
+  Edward Roper states, "php.net indicates it's a conflict of 
+  pdflib's png support and libpng... if pdflib is compiled to use 
+  system libpng and not internal libpng it will supposedly work..."
+
+  Which he then verified.
 
   3 Apr 2002; Daniel Robbins <drobbins@gentoo.org> : New revision -- we dodir
   /usr/bin (required for make install), closing bug 1498.  Also, now some

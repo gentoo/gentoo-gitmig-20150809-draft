@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.3 2002/07/23 00:12:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.4 2002/08/07 08:47:37 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
@@ -47,10 +47,11 @@ src_compile() {
 	use java \
 		&& myconf="${myconf} --with-java=${JAVA_HOME}" \
 		|| myconf="${myconf} --with-java=no"
-	
+		
 	econf \
 		--enable-cxx \
 		--disable-php \
+		--with-pnglib \
 		${myconf} || die
 		
 	emake || die
