@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmcalc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.11 2004/10/19 08:52:43 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.12 2004/11/12 22:54:34 s4t4n Exp $
+
+  12 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> wmcalc-0.4.ebuild:
+  Changed HOMEPAGE to www.dockapps.org as the original one no longer
+  exists. Changed SRC_URI to point to the gentoo mirrors...
+  wmcalc-0.4.ebuild:
+  Removed older ebuild.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmcalc-0.4.ebuild:
   Stable on amd64.
