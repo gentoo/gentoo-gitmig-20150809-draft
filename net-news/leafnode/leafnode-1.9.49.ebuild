@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.49.ebuild,v 1.1 2004/02/14 21:28:11 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.49.ebuild,v 1.2 2004/02/17 06:07:35 blkdeath Exp $
 
 S=${WORKDIR}/${P}.rel
 DESCRIPTION="leafnode - A USENET software package designed for small sites"
@@ -57,5 +57,8 @@ pkg_postinst() {
 	chown -R news:news /var/spool/news
 	mkdir -p /var/lib/news
 	chown -R news:news /var/lib/news
-	cat ${S}/README.FIRST
+	zcat ${ROOT}/usr/share/doc/${P}/README_FIRST.gz | while read line ;
+	do
+		einfo $line
+	done
 }

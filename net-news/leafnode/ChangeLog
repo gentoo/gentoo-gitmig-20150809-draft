@@ -1,6 +1,12 @@
 # ChangeLog for net-news/leafnode
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.20 2003/11/20 06:55:26 blkdeath Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.21 2004/02/17 06:07:35 blkdeath Exp $
+
+*leafnode-1.9.49 (17 Feb 2004)
+
+  17 Feb 2004; Stewart Honsberger <blkdeath@gentoo.org>
+  leafnode-1.9.49.ebuild:
+  pkg_postinst ${S} mis-use corrected.
 
 *leafnode-2.0.0_alpha20031028 (20 Nov 2003)
 
