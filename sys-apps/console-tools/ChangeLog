@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/console-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/ChangeLog,v 1.10 2003/03/09 05:26:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/ChangeLog,v 1.11 2003/04/02 20:16:13 mholzer Exp $
 
 *console-tools-0.3.2 (07 Mar 2003)
 
@@ -16,6 +16,10 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *console-tools-0.2.3-r4 (1 Feb 2002)
+
+  02 Apr 2003; Martin Holzer <mholzer@gentoo.org> console-tools-0.2.3-r4.ebuild
+  console-tools-0.2.3-r3.ebuild ChangeLog:
+  Corrected SRC_URI and Homepage. Closes #18653.
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> console-tools-0.2.3-r4.ebuild :
   Marked as stable for mips.
