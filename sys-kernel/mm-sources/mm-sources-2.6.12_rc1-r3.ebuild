@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.11_rc2-r2.ebuild,v 1.1 2005/01/30 03:46:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.12_rc1-r3.ebuild,v 1.1 2005/03/27 22:50:35 chainsaw Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"

@@ -1,32 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9094c73233e53a393a6a7bede0756b33 mm-sources-2.6.11_rc5-r1.ebuild 1017
 MD5 cac9c1545aeb6c06fd7fbbbb6dc097e3 mm-sources-2.6.11-r4.ebuild 1012
-MD5 a442f8702c51ebf5b30650435fb354f4 mm-sources-2.6.11_rc2-r1.ebuild 1015
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
-MD5 7acc46f504e0a76b298f90019433733a mm-sources-2.6.11_rc2-r2.ebuild 1015
-MD5 94aa50cbf5f3d2b5ec8c80dbd2816253 ChangeLog 38820
-MD5 1a49d670b46e130c338b16719d080b74 mm-sources-2.6.10-r1.ebuild 1007
-MD5 9d7ab05d58db3cd7c479828f0fe5718c mm-sources-2.6.11_rc1-r1.ebuild 1015
+MD5 d7ebd32a84af0382be14043697e63d58 ChangeLog 39222
+MD5 23eb379787374c62efdd265efd6a6e07 mm-sources-2.6.12_rc1-r3.ebuild 1016
 MD5 ddff9dc90892423dec4e6d8e3b34fe2c mm-sources-2.6.11-r3.ebuild 1012
 MD5 8ede9980fafb35fd21413b66a6b9db88 mm-sources-2.6.11-r2.ebuild 1013
-MD5 88b99505a42aa711afea2ce073b9dc71 mm-sources-2.6.10-r2.ebuild 1007
-MD5 90648fde3b3462b485549772240e3e4d mm-sources-2.6.11_rc4-r1.ebuild 1017
 MD5 1efcf2745c51b350d3d99d6d0d9f22ec files/digest-mm-sources-2.6.11-r3 127
 MD5 45444c176e9e9224a66be0ff5055d9b7 files/digest-mm-sources-2.6.11-r4 127
-MD5 bf95843da30acd9d5c14cbad9db67145 files/digest-mm-sources-2.6.11_rc5-r1 197
-MD5 3b6acae8f91b097d8122a43974bc8ccb files/digest-mm-sources-2.6.10-r1 127
-MD5 fec3b5e5d268f7dc9480a34d6e9d26ac files/digest-mm-sources-2.6.11_rc2-r1 197
+MD5 435a7e608680ebfe2bc63e33f5ab92b4 files/digest-mm-sources-2.6.12_rc1-r3 197
 MD5 352b87022e85a81108ad35f34203550b files/digest-mm-sources-2.6.11-r2 127
-MD5 6fa2f7c46f9625a94c3428d5ddcdc4b1 files/digest-mm-sources-2.6.11_rc4-r1 197
-MD5 a28496ae5bc0af3db54a58640de43c24 files/digest-mm-sources-2.6.10-r2 127
-MD5 1e3a4b8edcb446efabe29789994fd387 files/digest-mm-sources-2.6.11_rc2-r2 197
-MD5 d28b486988bb37903549ffa6433afda3 files/digest-mm-sources-2.6.11_rc1-r1 197
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCOLr9p5vW4rUFj5oRAvSlAJ9G9kSLpBjs1WV1IFZiAbCa6cBQ9ACfWm7M
-Yju6L45xO70tnnO/jEsFCZg=
-=6B0H
+iD8DBQFCRzmJp5vW4rUFj5oRAmNOAKCKAbxQw7fBEyW263Qkmra3DZNDVACfTg14
+ZMhGZwKb+ns6KCpLtvkdMP4=
+=06eG
 -----END PGP SIGNATURE-----
