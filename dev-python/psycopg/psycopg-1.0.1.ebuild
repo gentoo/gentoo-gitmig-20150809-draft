@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.0.1.ebuild,v 1.6 2002/07/11 06:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.0.1.ebuild,v 1.7 2002/07/30 00:50:10 george Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,6 +14,11 @@ DEPEND="
 	>=dev-lang/python-2.0
 	>=dev-python/egenix-mx-base-2.0.3
 	>=dev-db/postgresql-7.1.3"
+RDEPEND="${DEPEND}"
+
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="GPL-2"
 
 src_compile() {
 	./configure \

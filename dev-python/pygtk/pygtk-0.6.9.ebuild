@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.9.ebuild,v 1.1 2002/06/19 22:08:13 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.9.ebuild,v 1.2 2002/07/30 00:50:11 george Exp $
 
 S=${WORKDIR}/${P}
 
@@ -16,8 +16,12 @@ DEPEND="virtual/python
 	>=media-libs/gdk-pixbuf-0.9.0
         ( >=x11-libs/gtk+-1.2.10
 	<x11-libs/gtk+-2.0.0 )"
+RDEPEND="${DEPEND}"
 
+KEYWORDS="x86"
+LICENSE="LGPL-2.1"
 SLOT="1.2"
+
 src_compile() {
 
 	./configure --infodir=/usr/share/info \
