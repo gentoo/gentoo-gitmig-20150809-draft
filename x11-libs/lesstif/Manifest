@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 80b4a2a2722775de4a4a5f2fa7babbb2 lesstif-0.94.0.ebuild 2031
 MD5 e779e239b046dbc81e4cb75b0a6cc126 ChangeLog 5797
 MD5 fa5d70bc071b28f95c686985ce837400 lesstif-0.93.94.ebuild 2183
 MD5 217fc493f31fef3b4ebe2e11a1dd99eb lesstif-0.93.97.ebuild 2031
-MD5 cf603d2475a3b4d966782632a256789f lesstif-0.94.0-r1.ebuild 1206
+MD5 0dbb830fb677aa1dcddd6e1e8788a1b1 lesstif-0.94.0-r1.ebuild 1209
+MD5 02d292c6923224be8fe37a2ca609a29b lesstif-0.94.0.ebuild 2032
+MD5 b7dab7983555719dd200f3a69e61653d files/digest-lesstif-0.93.94 69
 MD5 3ee965f1f5603a167f6335a66b03b292 files/digest-lesstif-0.93.97 69
 MD5 50f3abd88dd0c45de68a1cec931c4909 files/digest-lesstif-0.94.0 68
-MD5 b7dab7983555719dd200f3a69e61653d files/digest-lesstif-0.93.94 69
 MD5 50f3abd88dd0c45de68a1cec931c4909 files/digest-lesstif-0.94.0-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCCp+wugEuf3OQ0akRAqaKAJ9fC4Aru7KqEWGOHkWCSja7tpjV5wCfeqm1
-fRovNJqN7/gut1OzCyvVqic=
-=e5SF
------END PGP SIGNATURE-----
