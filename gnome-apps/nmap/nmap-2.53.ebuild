@@ -10,6 +10,8 @@ DESCRIPTION="Portscanner"
 SRC_URI="http://www.insecure.org/nmap/dist/"${A}
 HOMEPAGE="http://www.insecure.org/nmap/"
 
+DEPEND=">=x11-libs/gtk+-1.2.8"
+
 src_compile() {                           
   cd ${S}
   try ./configure --host=${CHOST} --prefix=/opt/gnome

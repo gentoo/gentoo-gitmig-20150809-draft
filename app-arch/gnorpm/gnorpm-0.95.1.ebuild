@@ -9,6 +9,11 @@ DESCRIPTION="A Gnome RPM Frontend"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
+DEPEND=">=gnome-base/gnome-libs-1.2.4
+	>=gnome-base/libghttp-1.0.7
+	>=gnome-base/libxml-1.8.10
+	>=app-arch/rpm-3.0.5"
+
 src_unpack() {
   unpack ${A}
 }
@@ -22,9 +27,8 @@ src_compile() {
 src_install() {                               
   cd ${S}
   try make prefix=${D}/opt/gnome install
-  prepman /opt/gnome
 
-  dodoc AUTHORS COPYING ChangeLog NEWS README THANKS TODO
+  dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
 
 

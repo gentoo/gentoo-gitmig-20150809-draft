@@ -10,6 +10,8 @@ DESCRIPTION="Terminal emulator, supports multiple terminals in a single window"
 SRC_URI="http://powershell.pdq.net/download/"${A}
 HOMEPAGE="http://powershell.pdq.net"
 
+DEPEND=">=gnome-base/gnome-libs-1.2.4"
+
 src_unpack() {
   unpack ${A}
 }
