@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/tux_aqfh-1.0.14.ebuild,v 1.2 2004/07/17 19:04:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/tux_aqfh-1.0.14.ebuild,v 1.3 2004/08/01 11:45:37 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A puzzle game starring Tux, the linux penguin"
 HOMEPAGE="http://tuxaqfh.sourceforge.net/"
