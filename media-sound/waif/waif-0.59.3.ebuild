@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.3.ebuild,v 1.2 2003/02/08 08:45:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.3.ebuild,v 1.3 2003/02/09 01:14:40 seemant Exp $
 
 IUSE="X gnome"
 
@@ -21,6 +21,7 @@ DEPEND="dev-lang/tcl
 RDEPEND="dev-tcltk/expect
 	media-sound/takcd
 	media-sound/aumix
+	media-sound/id3ed
 	xmms? ( media-sound/xmms )
 	oggvorbis? ( media-sound/vorbis-tools )"
 
