@@ -1,11 +1,13 @@
 # ChangeLog for media-video/camserv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.1 2002/06/18 20:34:39 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.2 2002/09/17 22:24:17 raker Exp $
 
 *camserv-0.5.0 (18 Jun 2002)
 
+  17 Sep 2002; Nick Hadaway <raker@gentoo.org> camserv-0.5.0.ebuild :
+  Updated ebuild as suggested on bug #8033
+
   18 Jun 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
