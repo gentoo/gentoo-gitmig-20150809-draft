@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.47 2003/11/15 16:18:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.48 2003/12/04 22:19:48 agriffis Exp $
+
+  04 Dec 2003; <agriffis@gentoo.org> gvim-6.2-r5.ebuild:
+  Stable on alpha, ia64, x86
 
   15 Nov 2003; Aron Griffis <agriffis@gentoo.org> files/gvimrc:
   Add shift-insert mapping for bug 33327, thanks to Max Kalika for the idea
