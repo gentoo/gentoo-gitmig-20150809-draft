@@ -1,13 +1,14 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.17 2003/05/12 18:24:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.18 2003/05/12 18:39:12 robbat2 Exp $
 
 *cracklib-2.7-r7 (12 May 2002)
  
   12 May 2002; Robin Johnson <robbat@gentoo.org> cracklib-2.7-r7.ebuild:
   Version bump to get the original packer.h bug (#12441) gaurenteed to be
-  resolved for the rollout of the new PHP eclass. No other changes to ebuild
-  made. In unstable only presently waiting for QA approval.
+  resolved for the rollout of the new PHP eclass. I also noticed that packer.h
+  is installed with incorrect permissions in some cases with sandboxes, so I
+  use fperms 644 on it.  In unstable only presently waiting for QA approval.
 
 *cracklib-2.7-r6 (25 Oct 2002)
 

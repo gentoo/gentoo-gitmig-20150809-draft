@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.1 2003/05/12 18:24:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.2 2003/05/12 18:39:12 robbat2 Exp $
 
 IUSE=""
 
@@ -46,6 +46,8 @@ src_install() {
 	cd ${S}
 
 	cp ${S}/cracklib/packer.h ${D}/usr/include
+	#fix the permissions on it as they may be wrong in some cases
+	fperms 644 usr/include/packer.h
 
 	preplib /usr/lib
 
