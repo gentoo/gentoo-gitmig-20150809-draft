@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.27 2004/10/07 19:17:19 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.28 2004/11/09 21:32:58 robmoss Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 
 src_test() {
 	cd ${S}
-	make bigtest
+	make bigcheck || die "Test phase failed"
 }
 
 src_install() {

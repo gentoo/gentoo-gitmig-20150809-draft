@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.24 2004/10/07 19:17:19 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.25 2004/11/09 21:32:58 robmoss Exp $
+
+  09 Nov 2004; <robmoss@gentoo.org> flex-2.5.4a-r5.ebuild:
+  Fixing a very silly typo. I meant "bigcheck", not "bigtest". Sorry. Fixes
+  bug #63697.
 
   07 Oct 2004; Lina Pezzella <j4rg0n@gentoo.org> flex-2.5.4a-r5.ebuild:
   Removed ~macos keyword Bug #65763
