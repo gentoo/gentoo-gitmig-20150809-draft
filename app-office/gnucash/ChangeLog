@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.63 2005/01/13 12:20:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.64 2005/01/21 21:59:52 kloeri Exp $
+
+  21 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> gnucash-1.8.9.ebuild:
+  Stable on alpha.
 
   13 Jan 2005; Hanno Boeck <hanno@gentoo.org> gnucash-1.8.10.ebuild:
   Change dep from aqhbci-wizard-kde to aqhbci-qt-wizard.
