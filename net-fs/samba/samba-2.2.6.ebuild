@@ -1,14 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6.ebuild,v 1.1 2002/10/24 22:26:41 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6.ebuild,v 1.2 2002/10/26 00:11:05 woodchip Exp $
 
 IUSE="tcpd ldap cups ssl acl vscan"
 
 inherit perl-module
 
 # please test/report your experiences with these new VFS plugins.
-# you should add vscan to USE to do this...
-# 
 VSCAN_VER=0.2.5e
 VSCAN_MODS="fprot mks openantivirus" #kaspersky sophos symantec trend
 #need libs/headers/extra support for these ones^^
@@ -23,7 +21,7 @@ SRC_URI="vscan? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.
 DEPEND=">=sys-libs/pam-0.72
 	acl? ( sys-apps/acl )
 	cups? ( net-print/cups )
-	ldap? ( =net-nds/openldap-2* )
+	ldap? ( >=net-nds/openldap-2.1.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	vscan? ( >=dev-libs/popt-1.6.3 )"
@@ -36,6 +34,7 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 
+	patch -p0 < ${FILESDIR}/samba-2.2.2-smbmount.diff || die
 	patch -p0 < ${FILESDIR}/samba-2.2.2-smbmount.diff || die
 	patch -p1 < ${FILESDIR}/samba-2.2.5-gp-reloc-fix.patch || die
 	cd source/client; patch -p0 < ${FILESDIR}/samba-2.2.6-smbumount_lazy.patch || die
