@@ -1,11 +1,17 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.10 2003/02/12 07:06:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.11 2003/03/03 16:29:02 agenkin Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*alsa-oss-0.9.0_rc8 (03 Mar 2003)
+
+  03 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Quick update to rc8.
+
 *alsa-oss-0.9.0_rc1 (27 Apr 2002)
    
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc
+	keywords
+
   20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> alsa-oss-0.9.0_rc1.ebuild :
 
   Added ppc to KEYWORDS.
