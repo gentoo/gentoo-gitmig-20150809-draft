@@ -1,6 +1,9 @@
 # ChangeLog for media-video/usb-pwcx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.8 2004/02/18 10:35:31 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.9 2004/02/18 16:20:48 phosphan Exp $
+
+  18 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> usb-pwcx-8.4.ebuild:
+  Now _really_ using check-kernel
 
   18 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> usb-pwcx-8.4.ebuild:
   Uses check-kernel eclass now
