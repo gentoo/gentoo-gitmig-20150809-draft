@@ -33,16 +33,3 @@ diff -ru src.old/gp/gp_rl.c src/gp/gp_rl.c
  
    Defun("short-help", rl_short_help, -1);
    Defun("long-help", rl_long_help, -1);
-diff -ru src-old/basemath/buch2.c src/basemath/buch2.c
---- src-old/basemath/buch2.c	2001-11-04 15:09:54.000000000 +0100
-+++ src/basemath/buch2.c	2005-01-07 10:08:25.442785391 +0100
-@@ -2922,7 +2922,8 @@
- 
-   /* random relations */
-   if (cglob == KCCO) /* enough relations, initialize nevertheless */
--    ((void(*)(long))random_relation)(-1);
-+     random_relation(-1,0,0,0,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-+
-   else
-   {
-     GEN maarch;

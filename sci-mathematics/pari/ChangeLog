@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.4 2005/01/06 10:34:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.5 2005/01/07 09:40:26 phosphan Exp $
+
+*pari-2.1.5-r4 (07 Jan 2005)
+
+  07 Jan 2005; Patrick Kursawe <phosphan@gentoo.org>
+  +files/wrong_functype-r1.patch, files/wrong_functype.patch,
+  -pari-2.1.5-r3.ebuild, +pari-2.1.5-r4.ebuild, pari-2.1.6.ebuild:
+  Function call patch was missing one line of 2.1.5. Bumping revision,
+  modified patch, removed old version.
 
 *pari-2.1.6 (06 Jan 2005)
 
