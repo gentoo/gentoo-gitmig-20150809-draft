@@ -13,7 +13,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/release-${MY_PV}/official/${M
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc"
 
 
 DEPEND="gtk? ( >=lablgtk-1.2.4 )
