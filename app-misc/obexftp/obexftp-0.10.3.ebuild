@@ -1,23 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/obexftp-0.10.3.ebuild,v 1.4 2004/03/19 09:45:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/obexftp-0.10.3.ebuild,v 1.5 2004/06/07 07:23:44 dragonheart Exp $
 
 DESCRIPTION="File transfer over OBEX for Siemens mobile phones"
-SRC_URI="http://triq.net/obexftp/${P}.tar.gz"
-HOMEPAGE="http://triq.net/obexftp.html"
+SRC_URI="mirror://sourceforge/openobex/${P}.tar.gz"
+HOMEPAGE="http://triq.net/obex"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND="media-sound/gsm
+RDEPEND="media-sound/gsm
 	>=dev-libs/glib-1.2
 	>=dev-libs/openobex-1.0.0"
 
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
 src_compile() {
 	econf || die
-	sed -i 's:apps vmo doc:apps vmo:' Makefile
+	sed -i -e 's:apps vmo doc:apps vmo:' Makefile
 	emake || die
 }
 
