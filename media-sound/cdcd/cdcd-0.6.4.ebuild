@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.4.ebuild,v 1.5 2002/12/07 06:47:21 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.4.ebuild,v 1.6 2003/02/02 12:42:17 cretin Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a simple yet powerful command line cd player"
@@ -14,6 +16,11 @@ DEPEND="virtual/glibc
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	epatch ${FILESDIR}/cdcd-0.6.4-gentoo.patch
+}
 
 src_compile() {
 
