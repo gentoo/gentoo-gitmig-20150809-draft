@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libungif
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.15 2004/06/24 23:15:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.16 2004/07/13 04:57:33 seemant Exp $
+
+  12 Jul 2004; Seemant Kulleen <seemant@gentoo.org> libungif-4.1.0.1b.ebuild:
+  better fix for the previous bug -- as reported and fixed in bug #55065 by
+  #gentoo.pl Team - sekretarz <sekretarz@dukato.net>
 
   24 Jun 2004; Seemant Kulleen <seemant@gentoo.org> libungif-4.1.0.1b.ebuild:
   libungif only works with automake-1.4 -- thanks to sedat in #gentoo for

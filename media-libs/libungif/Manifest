@@ -1,5 +1,5 @@
-MD5 98eca22b0331f20efda81a582dcb1573 libungif-4.1.0.1b.ebuild 1772
-MD5 f0075c24deb031f3e1a56dca16363a20 ChangeLog 2231
+MD5 856cb55c5b0203cced4ba2840c8f2136 libungif-4.1.0.1b.ebuild 1744
+MD5 0dd86108a4a5ed630183649006921baf ChangeLog 2438
 MD5 934f005d68b860ad80eff92ecf9e0273 files/libungif-CVS.patch 4542
 MD5 f71b3a2bf523f503987501c602a1c1e9 files/digest-libungif-4.1.0.1b 69
 MD5 4dce5cb6bb39518676e2056624963e1a files/libungif-4.1.0-stdarg.patch 655

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.13 2004/06/24 23:15:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.14 2004/07/13 04:57:33 seemant Exp $
 
 inherit eutils libtool
 
@@ -25,12 +25,12 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/libungif-CVS.patch
 	epatch ${FILESDIR}/libungif-4.1.0-stdarg.patch
+
+	automake --add-missing
 }
 
 src_compile() {
 	elibtoolize || die
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.4
 
 	local myconf
 	use alpha && myconf="${myconf} --host=alpha-unknown-linux-gnu"
