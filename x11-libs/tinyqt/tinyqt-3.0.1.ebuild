@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tinyqt/tinyqt-3.0.1.ebuild,v 1.2 2002/02/22 08:10:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tinyqt/tinyqt-3.0.1.ebuild,v 1.3 2002/02/22 20:31:16 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -26,6 +26,11 @@ src_unpack() {
     cd ${S}
 	patch -p0 < ${FILESDIR}/configure.patch
 	cp -a ${FILESDIR}/tinyqt ${S}/src
+	
+	mv src/kernel/qurl.cpp src/kernel/qurl.cpp_orig
+	sed -e "s#extern bool qt_resolve_symlinks;#bool qt_resolve_symlinks = TRUE;#" \
+		src/kernel/qurl.cpp_orig > src/kernel/qurl.cpp
+	rm src/kernel/qurl.cpp_orig
 }
 
 src_compile() {
@@ -37,15 +42,15 @@ src_compile() {
 	
 	cd ${S}/src/moc
 	../../bin/qmake moc.pro
-	emake
+	emake || die
 	
 	cd ${S}/src/tinyqt
 	../../bin/qmake tinyqt.pro
-	emake
+	emake || die
 	cp tinyqt.pro tinyqt.pro_copy
 	sed -e "s# staticlib##" tinyqt.pro_copy > tinyqt.pro
 	../../bin/qmake tinyqt.pro
-	emake
+	emake || die
 }
 
 src_install() {
@@ -57,7 +62,7 @@ src_install() {
     dobin bin/*
 
     # libraries
-	strip lib/libtinyqt.a
+#	strip lib/libtinyqt.a
     dolib lib/libtinyqt.a
     dolib lib/libtinyqt.so.3.0.1
     cd ${D}$QTBASE/lib
@@ -78,4 +83,12 @@ src_install() {
     # misc build reqs
     dodir ${QTBASE}/mkspecs
     cp -R ${S}/mkspecs/linux-g++ ${D}/${QTBASE}/mkspecs/
+	mv ${D}/${QTBASE}/mkspecs/linux-g++/qmake.conf ${D}/${QTBASE}/mkspecs/linux-g++/qmake.conf_orig
+	sed -e "s#-lqt#-ltinyqt#" \
+		-e "s#/usr/X11R6/include##" \
+		-e "s#/usr/X11R6/lib##" \
+		-e "s#-lXext -lX11 -lm##" \
+		-e "s#-lICE -lSM##" \
+		${D}/${QTBASE}/mkspecs/linux-g++/qmake.conf_orig > ${D}/${QTBASE}/mkspecs/linux-g++/qmake.conf
+	rm ${D}/${QTBASE}/mkspecs/linux-g++/qmake.conf_orig
 }

@@ -52,8 +52,6 @@
 
 #define QT_NO_SEMIMODAL
 
-//#define QT_NO_STYLE //will require substantial work...
-
 #define QT_NO_EFFECTS
 #define QT_NO_COP
 
@@ -89,7 +87,13 @@
 #define QT_NO_NETWORKPROTOCOL_HTTP 
 #define QT_NO_PSPRINTER 
 #define QT_NO_WIDGETS 
+#define QT_NO_REMOTE
+#define QT_NO_PALETTE
+#define QT_NO_WHEELEVENT
+#define QT_NO_STYLE
+#define QT_NO_COMPONENT
+
 // from configure
-#define QT_INSTALL_PREFIX "/usr/local/qt"
+#define QT_INSTALL_PREFIX "/usr/qt/tiny"
 #define QT_PRODUCT_LICENSEE "Non-Commercial"
 #define QT_PRODUCT_LICENSE "qt-free"
