@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.11.ebuild,v 1.4 2004/06/24 21:22:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.11.ebuild,v 1.5 2004/07/09 19:42:16 stuart Exp $
 
 DESCRIPTION="A realtime Apache log analyzer"
 HOMEPAGE="http://clueful.shagged.org/apachetop/"
@@ -25,6 +25,7 @@ src_compile() {
 		sed -i 's%DEFAULT_LOGFILE "/var/httpd/apache_log"%DEFAULT_LOGFILE "/var/log/access_log"%' src/apachetop.h
 	fi
 	./configure
+	sed -i 's/-lcurses/-lncurses/' src/Makefile
 	emake || die
 }
 

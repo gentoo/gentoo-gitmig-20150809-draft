@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.15 2004/06/24 21:22:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.16 2004/07/09 19:42:16 stuart Exp $
+
+  09 Jul 2004; Stuart Herbert <stuart@gentoo.org> apachetop-0.11.ebuild,
+  apachetop-0.12.ebuild:
+  Marked 0.12 stable on x86
+
+  09 Jul 2004; Stuart Herbert <stuart@gentoo.org> apachetop-0.11.ebuild:
+  Fix for bug #56510; thanks to tigger^ for the fix
 
   18 Jun 2004; Jason Wever <weeve@gentoo.org> apachetop-0.11.ebuild:
   Stable on sparc.
