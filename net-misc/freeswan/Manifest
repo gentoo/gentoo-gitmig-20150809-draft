@@ -6,10 +6,10 @@ MD5 df1765c50032ca48f169aad5eb31707d freeswan-1.97.ebuild 1481
 MD5 46cd29ad171a822e3845780ed0ac1f54 freeswan-2.01.ebuild 2194
 MD5 18f7ca441593c61f14c297260baf5302 freeswan-1.99.ebuild 1901
 MD5 1ba28649b436a913e536552803af00a2 freeswan-2.03.ebuild 2181
-MD5 bf2a7911f8885b991cd23fb2a7e1d792 ChangeLog 3112
+MD5 20b13a18e2fd6ad963792783c49cc96e ChangeLog 3299
 MD5 54e2141b8a405393a89f1517ab5447f2 freeswan-1.98b-r2.ebuild 2003
 MD5 1ae4ab90e64587c2055c9b9389f868be files/ipsec 1533
-MD5 32321599ccb4291b4055ddd812ad6033 files/freeswan-2.03-gentoo.patch 16814
+MD5 8ed7dfb53e412cadc0f332c2143e06a8 files/freeswan-2.03-gentoo.patch 16814
 MD5 a35108e90a41fe3d5a42541fe6516800 files/digest-freeswan-1.98b-r1 149
 MD5 a35108e90a41fe3d5a42541fe6516800 files/digest-freeswan-1.98b-r2 149
 MD5 81442034bf0d8c29a9d96e0b6f684b0d files/digest-freeswan-1.97 66
@@ -18,8 +18,8 @@ MD5 3b7e703394ae194e1f0c7ab746f391ea files/digest-freeswan-2.01 142
 MD5 7761f694255c92b19949f5b8d8d19907 files/digest-freeswan-2.02 142
 MD5 01cbaea1054d039b91d18400a3756a22 files/digest-freeswan-2.03 142
 MD5 b89bbe7024ffcd92ac0152c194250fa2 files/digest-freeswan-2.04 142
-MD5 32321599ccb4291b4055ddd812ad6033 files/freeswan-2.02-gentoo.patch 16814
+MD5 299c8d6afb74061e8e8e002eb976ac9b files/freeswan-2.02-gentoo.patch 16814
 MD5 8c88161ddee7e0ae7cbb22226dd31e32 files/freeswan-2.01-gentoo.patch 16637
 MD5 a6f751bad152788dfa4d33fab7fa1bb6 files/freeswan-gentoo-cflags.patch 2168
 MD5 7843db1de3399706992045e5e005d52f files/digest-freeswan-1.98b 149
-MD5 32321599ccb4291b4055ddd812ad6033 files/freeswan-2.04-gentoo.patch 16814
+MD5 39de621be455fbe10a4822b217946419 files/freeswan-2.04-gentoo.patch 16814
