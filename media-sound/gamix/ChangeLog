@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gamix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.10 2004/03/18 22:41:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.11 2004/03/25 07:03:51 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  gamix-1.99_p14-r1.ebuild:
+  don't use deprecated ? : use syntax
 
   14 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gamix-1.99_p14-r1.ebuild:
