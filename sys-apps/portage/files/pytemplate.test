@@ -1,0 +1,16 @@
+this is a test
+<!--code
+x=1
+while x<10:
+	print "this is really a test!"
+	x=x+1
+foo="sure I do!"
+-->
+
+Do you like the test?
+
+<!--code
+
+print foo
+
+-->
