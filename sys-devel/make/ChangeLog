@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.14 2004/03/22 03:20:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.15 2004/04/10 07:12:49 kumba Exp $
+
+  10 Apr 2004; Joshua Kinard <kumba@gentoo.org> make-3.79.1-r5.ebuild:
+  Marked stable on mips, and added gnuconfig for mips64 hosts.
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> make-3.80.ebuild:
   Added gnuconfig support for mips64 hosts

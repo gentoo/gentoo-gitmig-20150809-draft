@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r5.ebuild,v 1.7 2003/09/05 02:07:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r5.ebuild,v 1.8 2004/04/10 07:12:49 kumba Exp $
+
+inherit gnuconfig
 
 IUSE="nls static build"
 
@@ -11,12 +13,16 @@ HOMEPAGE="http://www.gnu.org/software/make/make.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"
 
 src_compile() {
+
+	# Detect mips systems properly
+	use mips && gnuconfig_update
+
 	local myconf=""
 	use nls || myconf="--disable-nls"
 
