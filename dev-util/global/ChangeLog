@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.13 2005/02/10 13:24:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.14 2005/03/20 18:51:11 weeve Exp $
+
+  20 Mar 2005; Jason Wever <weeve@gentoo.org> global-4.8.2.ebuild:
+  Added ~sparc keyword as it was dropped in the version bump.
 
 *global-4.8.2 (10 Feb 2005)
 
