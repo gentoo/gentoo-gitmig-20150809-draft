@@ -1,4 +1,6 @@
-MD5 147fd33374cb1a3a6ef6fb50b655a435 ChangeLog 964
+MD5 589c03541fb45124436865eab2a0ac76 ChangeLog 1084
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
+MD5 0b391d5584d5d1ac882701245b3465b7 showmarks-2.1.ebuild 448
 MD5 cc11a74ba22440f7be0b11e1af63ec01 showmarks-2.0.ebuild 444
 MD5 a1ce7406a6cf0c38992d163388cb0551 files/digest-showmarks-2.0 64
+MD5 612e906708b1a1a679f493f93ffd1048 files/digest-showmarks-2.1 64

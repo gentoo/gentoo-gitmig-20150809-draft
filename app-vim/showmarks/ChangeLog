@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/showmarks
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/ChangeLog,v 1.7 2004/02/06 09:46:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/ChangeLog,v 1.8 2004/03/05 23:32:23 ciaranm Exp $
+
+*showmarks-2.1 (05 Mar 2004)
+
+  05 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org> showmarks-2.1.ebuild:
+  Version bump
 
   06 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> showmarks-2.0.ebuild:
   Added ~mips
