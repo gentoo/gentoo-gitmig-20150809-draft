@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.26-r1.ebuild,v 1.5 2004/07/09 13:39:01 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.26-r1.ebuild,v 1.6 2004/08/04 20:39:48 plasmaroo Exp $
 
 IUSE=""
 
@@ -34,11 +34,13 @@ if [ ${PRERC} ]; then
 	OURKERNEL="2.4.${OKVLASTPR}"
 	SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
 		http://www.plumlocosoft.com/kernel/patches/2.4/${PV}/${KV}/patch-${KV}.bz2
-		mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
+		mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2
+		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
 else
 	OURKERNEL="2.4.${OKVLAST}"
 	SRC_URI="mirror://kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
-		http://www.plumlocosoft.com/kernel/patches/2.4/${PV}/${KV}/patch-${KV}.bz2"
+		http://www.plumlocosoft.com/kernel/patches/2.4/${PV}/${KV}/patch-${KV}.bz2
+		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
 fi
 
 DESCRIPTION="Full sources for the Stock Linux kernel Con Kolivas's high performance patchset"
@@ -59,6 +61,7 @@ src_unpack() {
 
 	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-lck patch failed!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${DISTDIR}/linux-${OKV}-CAN-2004-0415.patch || die "Failed to add the CAN-2004-0415 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"

@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.7-r5.ebuild,v 1.2 2004/07/21 10:28:49 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.7-r5.ebuild,v 1.3 2004/08/04 20:39:48 plasmaroo Exp $
 
-UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2 ${FILESDIR}/${P}.CAN-2004-0596.patch"
+UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2 ${FILESDIR}/${P}.CAN-2004-0596.patch
+	${DISTDIR}/linux-${OKV}-CAN-2004-0415.patch"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 
@@ -14,7 +15,8 @@ IUSE=""
 
 DESCRIPTION="Full sources for the Stock Linux kernel and Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
-SRC_URI="${KERNEL_URI} http://ck.kolivas.org/patches/2.6/${KV/-ck*/}/${KV}/patch-${KV}.bz2"
+SRC_URI="${KERNEL_URI} http://ck.kolivas.org/patches/2.6/${KV/-ck*/}/${KV}/patch-${KV}.bz2
+	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
 
 KEYWORDS="~x86"
 

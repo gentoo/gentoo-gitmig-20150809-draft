@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.44 2004/07/21 10:28:49 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.45 2004/08/04 20:39:48 plasmaroo Exp $
+
+  04 Aug 2004; <plasmaroo@gentoo.org> ck-sources-2.4.26-r1.ebuild,
+  -ck-sources-2.6.7-r1.ebuild, -ck-sources-2.6.7-r2.ebuild,
+  ck-sources-2.6.7-r5.ebuild:
+  Added a patch for the CAN-2004-0415 vulnerability, bug #59378. Older
+  2.6.7 revisions removed.
 
   21 Jul 2004; <plasmaroo@gentoo.org> ck-sources-2.6.7-r5.ebuild,
   +files/ck-sources-2.6.7.CAN-2004-0596.patch:
