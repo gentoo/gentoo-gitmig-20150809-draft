@@ -1,36 +1,34 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r5.ebuild,v 1.2 2004/03/03 18:41:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0_pre2.ebuild,v 1.1 2004/03/03 18:41:45 usata Exp $
 
-IUSE="cjk maildir ncurses static doc"
+IUSE="maildir ncurses static doc pcre"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 
 MYDATE="20040204"
+MY_P="${P/_pre/-pre-}"
 
-SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
-	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )
-	doc? ( ftp://ftp.zsh.org/pub/${P}-doc.tar.bz2 )"
+SRC_URI="ftp://ftp.zsh.org/pub/${MY_P}.tar.bz2
+	doc? ( ftp://ftp.zsh.org/pub/${MY_P}-doc.tar.bz2 )"
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="x86 alpha ~ppc ~sparc ~amd64 ~hppa"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~hppa"
 
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
 	${RDEPEND}"
-RDEPEND=">=dev-libs/libpcre-3.9
+RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
 	sys-libs/libcap
 	ncurses? ( >=sys-libs/ncurses-5.1 )"
 
+S="${WORKDIR}/${MY_P}"
+
 src_unpack() {
-	unpack ${P}.tar.bz2
-	use doc && unpack ${P}-doc.tar.bz2
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	use cjk && epatch ${DISTDIR}/${P}-euc-0.2.patch.gz
-	epatch ${FILESDIR}/${PN}-strncmp.diff
+	unpack ${MY_P}.tar.bz2
+	use doc && unpack ${MY_P}-doc.tar.bz2
 	cd ${S}/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
@@ -41,10 +39,11 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	use ncurses && myconf="--with-curses-terminfo"
+	use ncurses && myconf="${myconf} --with-curses-terminfo"
 	use maildir && myconf="${myconf} --enable-maildir-support"
 	use static && myconf="${myconf} --disable-dynamic" \
 		&& LDFLAGS="${LDFLAGS} -static"
+	use pcre && myconf="${myconf} --enable-pcre"
 
 	econf \
 		--bindir=/bin \

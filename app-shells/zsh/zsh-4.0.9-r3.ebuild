@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r3.ebuild,v 1.1 2004/02/04 15:32:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r3.ebuild,v 1.2 2004/03/03 18:41:45 usata Exp $
 
 IUSE="maildir ncurses static doc cjk"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 	sys-apps/groff
