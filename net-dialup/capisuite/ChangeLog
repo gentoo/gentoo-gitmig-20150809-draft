@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.11 2004/11/15 19:18:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.12 2004/11/19 04:10:01 kingtaco Exp $
+
+*capisuite-0.4.4-r2 (18 Nov 2004)
+
+  18 Nov 2004; Mike Doty <kingtaco@gentoo.org>
+  +files/capisuite-fax-compatibility.patch, +capisuite-0.4.4-r2.ebuild:
+  patched src/backend/connection.cpp for bug #69522.
 
   15 Nov 2004; Alin Nastac <mrness@gentoo.org> capisuite-0.4.4-r1.ebuild:
   Solve bug #71187, unblocked by #53889.
