@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-daemontools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.8 2004/11/22 20:32:40 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.9 2004/11/23 17:03:26 kaiowas Exp $
+
+  23 Nov 2004; petre rodan <kaiowas@gentoo.org>
+  selinux-daemontools-20041121.ebuild:
+  mark stable
 
 *selinux-daemontools-20041121 (22 Nov 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-publicfile
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-djbdns/ChangeLog,v 1.4 2004/11/22 20:38:09 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-djbdns/ChangeLog,v 1.5 2004/11/23 17:07:15 kaiowas Exp $
+
+  23 Nov 2004; petre rodan <kaiowas@gentoo.org>
+  selinux-djbdns-20041121.ebuild:
+  mark stable
 
 *selinux-djbdns-20041121 (22 Nov 2004)
 

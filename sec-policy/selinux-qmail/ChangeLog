@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-qmail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-qmail/ChangeLog,v 1.5 2004/11/22 21:04:59 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-qmail/ChangeLog,v 1.6 2004/11/23 17:15:43 kaiowas Exp $
+
+  23 Nov 2004; petre rodan <kaiowas@gentoo.org>
+  selinux-qmail-20041120.ebuild:
+  mark stable
 
 *selinux-qmail-20041120 (22 Nov 2004)
 

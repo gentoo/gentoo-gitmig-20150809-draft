@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-apache
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.6 2004/10/23 13:53:50 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.7 2004/11/23 16:59:37 kaiowas Exp $
+
+  23 Nov 2004; petre rodan <kaiowas@gentoo.org>
+  selinux-apache-20040925.ebuild:
+  mark stable
 
 *selinux-apache-20040925 (23 Oct 2004)
 
