@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.3.1.ebuild,v 1.4 2002/01/20 01:18:50 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.4.ebuild,v 1.1 2002/01/24 22:55:59 verwilst Exp $
 
-S=${WORKDIR}/${P}-src
-SRC_URI="http://www.affinix.com/~justin/programs/psi/${P}-src.tar.bz2"
+S=${WORKDIR}/${P}
+SRC_URI="http://www.affinix.com/~justin/programs/psi/${P}.tar.bz2"
 DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
 HOMEPAGE="http://www.affinix.com/~justin/programs/psi/"
 
