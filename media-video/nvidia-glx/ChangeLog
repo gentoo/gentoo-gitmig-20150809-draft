@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.27 2003/11/01 23:18:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.28 2003/11/02 15:58:16 azarah Exp $
+
+  02 Nov 2003; Martin Schlemmer <azarah@gentoo.org>
+  nvidia-glx-1.0.4496-r1.ebuild:
+  Add PKG_V to make sure updating the package used will not break things again.
 
 *nvidia-glx-1.0.4496-r1 (02 Nov 2003)
 
