@@ -1,6 +1,6 @@
-# ChangeLog for mod_www/mod_auth_pgsql
+# ChangeLog for net-www/mod_auth_pgsql
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.2 2003/03/27 13:52:19 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.3 2003/04/22 10:25:35 vapier Exp $
 
 *mod_auth_pgsql-0.9.12 (17 Mar 2003)
 
