@@ -2,15 +2,13 @@
 Hash: SHA1
 
 MD5 749fe999813adb88457df8d2894f2a52 ChangeLog 538
-MD5 9b08fda51ec325a21c30c76aee88ebef selinux-gpm-20040429.ebuild 387
-MD5 eae75c3f6e1ec171623657255fbe5721 selinux-gpm-20040106.ebuild 387
 MD5 3e6e642d7c225b0a478a79a65f1e3d03 metadata.xml 390
+MD5 a8a570dc7d4217fa797861799e17b95b selinux-gpm-20040429.ebuild 393
 MD5 9c5a6991dc6f69013afcd162dfe1e2b3 files/digest-selinux-gpm-20040429 70
-MD5 31ed3e0ad3f8665aa0a11bf42fb13ed2 files/digest-selinux-gpm-20040106 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFA32JjGFJQsIJWJy4RAlcEAJ4mKQEkaYa/BQ0B+75ruddhzu8C/gCdEhtf
-Gna+aDAfscVacKqMKjleNoc=
-=OUNR
+iD8DBQFBTjj9GFJQsIJWJy4RAt5FAJ9DGgRBMQuc6hMfxp6az/q+TPJOewCfXndP
+0yNiUEqlj6RySlpriglp3+M=
+=tjoM
 -----END PGP SIGNATURE-----

@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 82cd69cc94347f53a95a8b87acd8c1be ChangeLog 427
-MD5 a66f40ecf17e1feae2bac0b4de4ff24f selinux-clockspeed-20031221.ebuild 401
 MD5 3e1ba07ac16b0e48af5fd042ff99db43 metadata.xml 395
+MD5 4f4e3bdd84bc0342fb911c46639cdc89 selinux-clockspeed-20031221.ebuild 407
 MD5 1f5ecf3157af9ae009cc0c5e3d4262b6 files/digest-selinux-clockspeed-20031221 77
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFA32WFGFJQsIJWJy4RAmuoAJ9Elf18jinafGZgAl6Qq/euDcwIUACff8py
-Dxo5Dj28wWE+uhMWJZjFqxY=
-=t8GJ
+iD8DBQFBTjitGFJQsIJWJy4RAkeNAJ4qNP1mTrMzrI0jyp2EANGI9djB+gCfVaVt
+HjTMI/xvDDar+g+d7fIey0s=
+=mrO4
 -----END PGP SIGNATURE-----

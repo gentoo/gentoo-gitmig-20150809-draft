@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 ae67349e411e364a851f568f57c1e0a4 ChangeLog 512
 MD5 b2b30c08468f19aeb7b0ded29eb9b358 metadata.xml 373
-MD5 1d10c7f4c9dccb779ca0f1903545a5df selinux-portmap-20030811.ebuild 386
+MD5 72760e6f83194387ff1eef32c330d4d7 selinux-portmap-20030811.ebuild 392
 MD5 155a50b6ebb64dbce19f7b113544574d files/digest-selinux-portmap-20030811 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFA32JfGFJQsIJWJy4RArbNAJ9cQ0qMlRISZwWxaBtmMCylul23cACeOafe
-VTYBFYIf3oKFGIjRZaTjzj8=
-=1hVR
+iD8DBQFBTjj3GFJQsIJWJy4RAkZzAJ0VVFI9SEkNi05Hikubgb31xjqvRgCfeJMB
+n/WibvU1EJYGD+vn1OATdwo=
+=Bheq
 -----END PGP SIGNATURE-----

@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 d501d84b847339c155dec22bc800f1c9 ChangeLog 423
 MD5 b042e207e5cb57de030bfbe08da5f2b0 metadata.xml 416
-MD5 59539562a262497011bbdf2fcb90565e selinux-ucspi-tcp-20031221.ebuild 396
+MD5 c4bb17ca8371c7fe30e23cb13448b321 selinux-ucspi-tcp-20031221.ebuild 402
 MD5 7fa314114398eb6fec269a6ce4f4718f files/digest-selinux-ucspi-tcp-20031221 76
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFA32WHGFJQsIJWJy4RAqXeAJ414qZh9nVEwNHFPi2KqPf7bCt/eACfa2lw
-V3PTL2X1k6/gwtOdDyp/6W4=
-=Ort5
+iD8DBQFBTjjqGFJQsIJWJy4RAmVLAJ9/WKEqCnLbsYbz00XMV2qX39FiMwCfTH9D
+UPtMDTYlAtIZ1K4fqxbiPcc=
+=17x1
 -----END PGP SIGNATURE-----

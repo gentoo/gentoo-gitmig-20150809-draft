@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 afe4ec1ee32971b56248d94e99f17831 selinux-distcc-20031101.ebuild 373
 MD5 a33bcf2b88d32aff14a3f532e52beb12 ChangeLog 849
 MD5 becef4e6ec7ea0565ebc316990f9c0d0 metadata.xml 405
-MD5 ef644295702e334ab04825e8afcbf8b0 selinux-distcc-20040128.ebuild 381
+MD5 a4cf98d881adeeacd9f68987bce848a4 selinux-distcc-20040128.ebuild 387
 MD5 39a60a51a0fbb3807c79da697f8127b2 files/digest-selinux-distcc-20040128 73
-MD5 929671feb132350625467694ba1bdd46 files/digest-selinux-distcc-20031101 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFA32WIGFJQsIJWJy4RAp5CAJ45llHpRMLwOKWbTh7xq0DDN8E6kQCcDCo/
-M+U4eSFN6cOxHIvZQ6zfjjc=
-=MysI
+iD8DBQFBTjjyGFJQsIJWJy4RAl8GAJoDGV9hVtG4LMLIARnL5hxHbpSZjACfVx3B
+ZmIKLHC+pTye8qjYgrurlzs=
+=WMzZ
 -----END PGP SIGNATURE-----
