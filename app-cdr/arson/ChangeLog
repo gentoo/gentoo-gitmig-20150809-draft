@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.13 2003/03/19 10:43:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.14 2003/03/28 11:14:48 pvdabeel Exp $
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> : arson-0.9.7-r1.ebuild:
+
+  Updated to stable ppc keyword
 
   19 Mar 2003; Dan Armak <danarmak@gentoo.org> : arson-0.9.7-r1.ebuild:
   
