@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.5-r2.ebuild,v 1.1 2002/09/12 22:40:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.5-r2.ebuild,v 1.2 2002/09/14 00:23:16 mcummings Exp $
+
+inherit perl-module
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modular textUI IRC client with IPv6 support."
@@ -56,9 +58,13 @@ src_install () {
 
 	use perl && ( \
 		cd ${S}/src/perl/common
-		mv Makefile Makefile.orig
-		sed "s:^PREFIX:PREFIX = ${D}/usr:" \
-			Makefile.orig > Makefile
+		perl-module_src_prep
+		cd ${S}/src/perl/irc
+		perl-module_src_prep
+		cd ${S}/src/perl/textui
+		perl-module_src_prep
+		cd ${S}/src/perl/ui
+		perl-module_src_prep
 		cd ${S}
 	)
 

@@ -1,8 +1,11 @@
 # ChangeLog for homeblutgensgentoo-x86net-ircirssiChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.7 2002/09/12 22:41:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.8 2002/09/14 00:23:16 mcummings Exp $
 
 *irssi-0.8.5-r2 (12 Sep 2002)
+
+  13 Sep 2002; Michael Cummings <mcummings@gentoo.org>: Corrected perl
+  syntax to use perl eclass for perl Makefile.PL actions, bug 7868.
 
   12 Sep 2002; Daniel Robbins <drobbins@gentoo.org>: new rev bump with
   configuration flag fixes: several use/configure combos were toggled, the
