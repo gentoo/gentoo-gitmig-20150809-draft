@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/aide
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/ChangeLog,v 1.17 2004/03/29 15:09:32 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/ChangeLog,v 1.18 2004/03/29 15:10:57 zul Exp $
+
+  29 Mar 2004; Chuck Short <zul@gentoo.org> aide-0.8.ebuild, aide-0.9.ebuild:
+  Header updates.
 
 *aide-0.10 (29 Mar 2004)
 
