@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.35 2004/10/13 03:51:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.36 2004/10/16 04:15:31 agriffis Exp $
+
+*tar-1.14.90-r1 (16 Oct 2004)
+
+  16 Oct 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/1.14.90-scripts.patch, +tar-1.14.90-r1.ebuild:
+  Install the backup/restore scripts that are described in the tar info pages
+  (as backup-tar and restore-tar so they don't conflict with app-arch/dump).
+  Move cflags manglement to src_compile where it belongs
 
   12 Oct 2004; Mike Frysinger <vapier@gentoo.org> tar-1.14.90.ebuild:
   Add a workaround to handle a bug in tar #67051.
