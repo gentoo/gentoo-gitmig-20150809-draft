@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.28 2004/07/10 23:17:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.29 2004/07/26 17:58:18 chriswhite Exp $
+
+*libmatroska-0.7.1 (26 Jul 2004)
+
+  26 Jul 2004; Chris White <chriswhite@gentoo.org> +libmatroska-0.7.1.ebuild:
+  Version bump to 0.7.1 for mkvtoolnix bump in #58284
 
   10 Jul 2004; Jason Wever <weeve@gentoo.org> libmatroska-0.6.2.ebuild:
   Stable on sparc.

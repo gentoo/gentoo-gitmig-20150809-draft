@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d6daf33a3163e25715f612b783b8d8c ChangeLog 3480
-MD5 2a8911e5cfff712df903d15fa02984a7 libmatroska-0.6.3.ebuild 1053
+MD5 1f2054f6ff77342ee835c0b5d61eb740 ChangeLog 3652
 MD5 dd67452cc7502dee0a6f742598518b89 libmatroska-0.5.2.ebuild 798
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 ab5b69aad34ad0903ff233638e9c0485 libmatroska-0.7.0.ebuild 1266
 MD5 6f7373b6e5601004c3705913ba64c22b libmatroska-0.6.2.ebuild 843
-MD5 5e4b1f66449918a4ae7b7a77a47dcde6 files/digest-libmatroska-0.6.3 68
-MD5 4529e58fa584a5c14c77777cb6b57671 files/digest-libmatroska-0.7.0 69
+MD5 2a8911e5cfff712df903d15fa02984a7 libmatroska-0.6.3.ebuild 1053
+MD5 ab5b69aad34ad0903ff233638e9c0485 libmatroska-0.7.0.ebuild 1266
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 1be73c5b1a49e1afa1a1a05f2d33b981 libmatroska-0.7.1.ebuild 1272
 MD5 a517d15638be5ee91357b70059040e06 files/digest-libmatroska-0.5.2 68
 MD5 a37de967f24a547a9f51018af01ccd30 files/digest-libmatroska-0.6.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA+F9eHTu7gpaalycRAt6SAKDqr9fBCV0N5c5yiPDklwglVXBsqACfR/WC
-zj3BXOsTezgsXpapaap9vOk=
-=DgcU
------END PGP SIGNATURE-----
+MD5 5e4b1f66449918a4ae7b7a77a47dcde6 files/digest-libmatroska-0.6.3 68
+MD5 4529e58fa584a5c14c77777cb6b57671 files/digest-libmatroska-0.7.0 69
+MD5 053bc87332097c45be3866399a4ef3da files/digest-libmatroska-0.7.1 69
