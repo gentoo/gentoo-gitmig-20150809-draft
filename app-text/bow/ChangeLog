@@ -1,0 +1,9 @@
+# ChangeLog for app-text/bow
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bow/ChangeLog,v 1.1 2003/06/19 09:26:36 pvdabeel Exp $
+
+*bow-20020213 (19 Jun 2003)
+
+  19 Jun 2003; root <pvdabeel@gentoo.org> bow-20020213.ebuild:
+  Bow toolkit
+
