@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-1.31.18.ebuild,v 1.1 2003/10/02 14:04:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-1.31.18.ebuild,v 1.2 2003/10/25 18:23:49 usata Exp $
 
 inherit eutils
 
@@ -45,6 +45,8 @@ src_compile() {
 }
 
 src_install() {
+	unset NAME
+
 	make prefix="${D}/usr" \
 		datadir="${D}/usr/share/yodl" \
 		mandir="${D}/usr/share/man" \
