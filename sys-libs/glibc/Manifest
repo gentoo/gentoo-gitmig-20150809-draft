@@ -139,4 +139,3 @@ MD5 ec83f3d86f23243a1fb334b8872d454f files/2.3.3/glibc-2.3.3-localedef-fix-tramp
 MD5 ab91cb5bad07e1e79f990d4933741d42 files/2.3.3/glibc-2.3.3_pre20040420-mips-incl-sgidefs.diff 8287
 MD5 1b5df7c58ad160593192704cece47347 files/2.3.3/glibc-2.3.3-dl_execstack-PaX-support.patch 1791
 MD5 1185022e9a50560d1bf9116a0461e011 files/2.3.4/mips-sysdep-cancel.diff 2402
-MD5 b96f8f3abce7f0b0cb76652a8b9a55e4 files/2.3.4/glibc-execstack-disable.patch 2333
