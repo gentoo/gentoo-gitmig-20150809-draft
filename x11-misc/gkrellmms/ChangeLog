@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/gkrellmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellmms/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellmms/ChangeLog,v 1.2 2002/03/12 12:36:17 seemant Exp $
+
+*gkrellmms-0.5.5-r1 (12 Mar 2002)
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org>
+
+  Gkrellm 1.2.9 changed some things, which caused gkrellmms to not compile
+  against it.  The author has issued a patch for it.  The patch is in files/
+  and this revision of the ebuild applied that patch before compilation.
+
 
 *gkrellmms-0.5.5 (1 Feb 2002)
 
