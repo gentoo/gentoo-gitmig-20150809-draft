@@ -1,7 +1,11 @@
 # ChangeLog for net-print/gimp-print-cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.13 2003/02/12 08:42:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.14 2003/03/05 17:25:39 lordvan Exp $
 
+*gimp-print-cups-4.3.11 (05 Mar 2003)
+  05 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org> gimp-print-cups-4.3.11.ebuild:
+  new version ~arch + package.masked(because it breaks ghostscript)
+	
 *gimp-print-cups-4.3.8 (28 Jan 2003)
   28 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org> gimp-print-cups-4.3.8.ebuild:
   new version (bug #14661) ~arch
