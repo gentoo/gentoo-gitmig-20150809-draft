@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.2.ebuild,v 1.4 2003/09/03 12:45:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.2.ebuild,v 1.5 2003/09/06 10:52:16 lanius Exp $
 
 DESCRIPTION="An open-source GIS with raster and vector functionality."
 HOMEPAGE="http://grass.baylor.edu/"
@@ -34,7 +34,7 @@ DEPEND=">=sys-devel/make-3.80
 	postgres? ( >=dev-db/postgresql-7.3.2 )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	gd? ( >=media-libs/libgd-1.8.3 )
-	motif? ( x11-libs/lesstif )
+	motif? ( virtual/motif )
 	truetype? ( >=media-libs/freetype-2.1.3 )"
 	#nviz? ( >=media-libs/mesa-3.5 )"
 
@@ -73,11 +73,11 @@ src_compile() {
 	|| myconf="${myconf} --without-postgres"
 
 	use motif \
-	&& myconf="${myconf} --with-motif" \
+	&& myconf="${myconf} --with-motif --with-motif-includes=/usr/X11R6/include" \
 	|| myconf="${myconf} --without-motif"
 
 	use truetype \
-	&& myconf="${myconf} --with-freetype" \
+	&& myconf="${myconf} --with-freetype --with-freetype-includes=/usr/include/freetype2" \
 	|| myconf="${myconf} --without-freetype"
 
 	#use nviz \
