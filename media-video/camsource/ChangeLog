@@ -1,6 +1,19 @@
 # ChangeLog for media-video/camsource
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.4 2003/05/05 15:48:16 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.5 2003/06/09 04:27:23 zhen Exp $
+
+*camsource-0.7.0-r1 (09 Jun 2003)
+
+  09 Jun 2003; <zhen@gentoo.org> camsource-0.7.0-r1.ebuild:
+  Initial import, I tagged it as stable because the only change
+  from the 0.7.0 ebuild was that installed the necessary docs
+  that came with it. I don't know why it wasn't done before,
+  must have been an oversight.
+
+*camsource-0.7.0 (09 Jun 2003)
+
+  09 Jun 2003; <zhen@gentoo.org> camsource-0.7.0.ebuild:
+  Marked as stable for x86.
 
 *camsource-0.7.0 (05 May 2003)
 
