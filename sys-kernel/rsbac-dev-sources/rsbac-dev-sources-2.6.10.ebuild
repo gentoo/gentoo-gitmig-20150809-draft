@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.9.ebuild,v 1.4 2005/01/13 23:49:54 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.10.ebuild,v 1.1 2005/01/13 23:49:54 kang Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -8,14 +8,14 @@ inherit kernel-2
 detect_version
 
 # rsbac 
-RSBACV=1.2.4-pre3
+RSBACV=1.2.3
 RSBAC_PRE_SRC="http://www.rsbac.org/download/pre/rsbac-${RSBACV}.tar.gz"
 #RSBAC_SRC="http://rsbac.org/download/code/v${RSBACV}/rsbac-v${RSBACV}.tar.bz2"
-CAN_SRC="http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-2.6.7-CAN-2004-0415.patch"
+CAN_SRC=""
 
 # rsbac kernel patches
-RGPV=9.0
-RGPV_SRC="http://dev.gentoo.org/~kang/rsbac/patches/1.2.4/2.6/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2"
+RGPV=10.0
+RGPV_SRC="http://dev.gentoo.org/~kang/rsbac/patches/1.2.3/2.6/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2"
 
 UNIPATCH_STRICTORDER="yes"
 UNIPATCH_LIST="${DISTDIR}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2"
