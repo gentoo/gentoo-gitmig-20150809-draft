@@ -2,7 +2,7 @@ MD5 e4fe3e886e61b3ef01917ecc2f22f936 ChangeLog 3277
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 5414de7396aa13b76f24d7ea3d2567c8 museseq-0.6.0.ebuild 1669
 MD5 537ef14b3847d7d6c3b287abd84386ff museseq-0.6.2.ebuild 2595
-MD5 2227a281fb83cad7aaba0aa13e4db17d museseq-0.6.2-r1.ebuild 3160
+MD5 6690a31103f9a65dca251e8b57c4091a museseq-0.6.2-r1.ebuild 3165
 MD5 7a7a7eb8d4ba5df4e6abc7802a721d87 museseq-0.7.0-r1.ebuild 2048
 MD5 bb1ba63a5e820acc5f27be5e925398c9 museseq-0.7.0.20040925.ebuild 1626
 MD5 cbc52b356437ff53ced441374a08d178 files/digest-museseq-0.6.0 64

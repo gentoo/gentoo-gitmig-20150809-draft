@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.4 2004/09/28 19:57:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2-r1.ebuild,v 1.5 2004/09/28 19:58:38 eradicator Exp $
+
+IUSE="jack fluidsynth ladcca doc alsa"
 
 inherit virtualx eutils kde-functions
 need-qt 3
@@ -13,8 +15,6 @@ SRC_URI="mirror://sourceforge/lmuse/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~sparc"
-
-IUSE="jack fluidsynth ladcca doc"
 
 DEPEND="alsa? ( media-libs/alsa-lib )
 	>=media-libs/libsndfile-1.0.4
