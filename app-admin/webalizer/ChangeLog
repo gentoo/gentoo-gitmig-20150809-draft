@@ -1,9 +1,14 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.6 2002/05/04 01:22:37 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.7 2002/07/26 23:00:36 cselkirk Exp $
 
 *webalizer-2.01.10-r2 (3 May 2002)
 
+  26 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> webalizer-2.01.10-r2.ebuild :
+
+  Changed DESCRIPTION to something descriptive ;)
+  Added RDEPEND
+  
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
 
   Add LICENSE, SLOT, $Headers.

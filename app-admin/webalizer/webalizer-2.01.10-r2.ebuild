@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r2.ebuild,v 1.3 2002/07/25 13:48:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r2.ebuild,v 1.4 2002/07/26 23:00:37 cselkirk Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="Webalizer"
+DESCRIPTION="Webserver log file analyzer"
 SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2"
 HOMEPAGE="http://www.mrunix.net/webalizer/"
 
@@ -16,6 +16,9 @@ DEPEND="=sys-libs/db-1*
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
 	>=media-libs/libgd-1.8.3"
+
+
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
