@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.1.ebuild,v 1.4 2004/05/22 10:00:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.1.ebuild,v 1.5 2004/06/04 07:43:00 kloeri Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc alpha ~ppc ~amd64"
 SRC_URI="ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
 
 INSIGHTDIR="/opt/insight"
