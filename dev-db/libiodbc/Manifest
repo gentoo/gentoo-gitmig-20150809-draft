@@ -1,5 +1,3 @@
-MD5 105426fee138d5e8fcc326c7daaf9d2b libiodbc-3.51.1.ebuild 844
-MD5 bd94e992924ef776d723e192600266e4 libiodbc-3.51.1-r1.ebuild 1125
-MD5 8237cf87775ebd3ebc43b38d2bf60fe2 ChangeLog 339
-MD5 bf083fadf4e1d7d36a3d0711631089b4 files/digest-libiodbc-3.51.1 67
+MD5 c8a4755991f367d8ad2a49a94b1cfe36 libiodbc-3.51.1-r1.ebuild 1128
+MD5 594c9de40bf7077acde6ee448f5b5548 ChangeLog 512
 MD5 bf083fadf4e1d7d36a3d0711631089b4 files/digest-libiodbc-3.51.1-r1 67
