@@ -1,5 +1,7 @@
+MD5 5a0fc2884ac74dfd4e2404698c9f41ca swfdec-0.2.2-r1.ebuild 1237
 MD5 67fc00365b6ae591126e572c49840546 swfdec-0.2.2.ebuild 950
 MD5 540e948d0e2e99e4e89c55839d94ddac ChangeLog 377
 MD5 970fa1848d327776a795ebe2c7f5e74d metadata.xml 527
+MD5 12bdd91b6d3b97f0fc97d097da17c087 files/digest-swfdec-0.2.2-r1 64
 MD5 12bdd91b6d3b97f0fc97d097da17c087 files/digest-swfdec-0.2.2 64
 MD5 a0b799b2f641cbbf734d8bfae023e3c5 files/swfdec-mozilla.patch 988
