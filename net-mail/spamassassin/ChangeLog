@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/spamassassin
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamassassin/ChangeLog,v 1.1 2002/02/25 01:21:26 blocke Exp $
+
+*spamassassin-2.01 (24 Feb 2002)
+
+  24 Feb 2002; Bruce A. Locke <blocke@shivan.org> spamassassin-2.01.ebuild :
+
+  Ebuild contributed by Marc Soda <marc@aspre.net>
+
