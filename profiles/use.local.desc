@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1006 2005/03/11 16:20:38 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1007 2005/03/12 16:34:28 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -143,6 +143,7 @@ dev-java/avalon-logkit:javamail - Enable support for javamail
 dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
 dev-java/bsf:jython - Enable Jython support
 dev-java/bsf:rhino - Enable Rhino support
+dev-java/commons-logging:avalon - Add optional support for the avalon-framework
 dev-java/fop:jai - Enable jai support
 dev-java/fop:jimi - Enable jimi support
 dev-java/gnu-classpath:native - Compile native .so libraries
