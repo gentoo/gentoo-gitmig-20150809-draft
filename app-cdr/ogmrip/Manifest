@@ -1,4 +1,14 @@
-MD5 d22c3f57f7f62fbbe8d255841603a6da ChangeLog 376
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d76bd31858a4bcaba1e9c780378d4cdd ogmrip-0.6.2.ebuild 1765
+MD5 4c147781e5f4258f9ec6cc87ed23085b ChangeLog 495
 MD5 f6ae03147b33c97f5bb09d5de8690601 metadata.xml 227
-MD5 909dc3ea8a78ff2b1010c3782f55618e ogmrip-0.6.2.ebuild 1758
 MD5 aa7f34882cf21f05139524a800cb1ccb files/digest-ogmrip-0.6.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSq7z06ebR+OMO78RAoEgAKCLeMSg56g36jslWMVztPpJggCdIwCeLiSs
+VXafLHCxm17UiVpfCNTvbSE=
+=OfES
+-----END PGP SIGNATURE-----

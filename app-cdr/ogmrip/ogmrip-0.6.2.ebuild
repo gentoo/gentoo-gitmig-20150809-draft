@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ogmrip-0.6.2.ebuild,v 1.2 2005/01/19 01:19:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ogmrip-0.6.2.ebuild,v 1.3 2005/03/30 13:51:29 luckyduck Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ LICENSE="LGPL-2.1"
 
 SLOT="0"
 IUSE="gnome matroska doc subp"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND=">=dev-libs/glib-2.4.6
 	>=media-libs/libdvdread-0.9.4
