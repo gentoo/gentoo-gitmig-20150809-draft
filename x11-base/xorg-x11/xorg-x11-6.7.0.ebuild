@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.31 2004/04/19 06:16:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.32 2004/04/19 19:03:37 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -506,6 +506,46 @@ fi
 			then
 				echo "#define HasGlide3 YES" >> config/cf/host.def
 			fi
+		fi
+
+		if use x86
+		then
+			# optimize Mesa for architecture
+			if use mmx
+			then
+				echo "#define HasMMXSupport	YES" >> config/cf/host.def
+				echo "#define MesaUseMMX YES" >> config/cf/host.def
+			else
+				echo "#define HasMMXSupport	NO" >> config/cf/host.def
+				echo "#define MesaUseMMX NO" >> config/cf/host.def
+			fi
+
+			if use 3dnow
+			then
+				echo "#define Has3DNowSupport YES" >> config/cf/host.def
+				echo "#define MesaUse3DNow YES" >> config/cf/host.def
+			else
+				echo "#define Has3DNowSupport NO" >> config/cf/host.def
+				echo "#define MesaUse3DNow NO" >> config/cf/host.def
+			fi
+
+			if use sse
+			then
+				echo "#define HasKatmaiSupport YES" >> config/cf/host.def
+				echo "#define MesaUseKatmai YES" >> config/cf/host.def
+			else
+				echo "#define HasKatmaiSupport NO" >> config/cf/host.def
+				echo "#define MesaUseKatmai NO" >> config/cf/host.def
+			fi
+
+			# build with glide3 support? (build the tdfx_dri.o module)
+			if use 3dfx
+			then
+				echo "#define HasGlide3 YES" >> config/cf/host.def
+			fi
+
+			# Compile the VIA driver
+			# echo "#define XF86ExtraCardDrivers via" >> config/cf/host.def
 		fi
 
 		if use hppa
