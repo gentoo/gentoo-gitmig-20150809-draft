@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.12.ebuild,v 1.11 2004/12/13 23:51:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.12.ebuild,v 1.12 2005/02/07 22:03:35 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils distutils libtool toolchain-funcs
 
@@ -31,9 +31,9 @@ src_unpack() {
 	# thing if file was cross compiled ;)
 	tc-is-cross-compiler && epatch ${FILESDIR}/${P}-cross-compile.patch
 
-	# GNU updates
+	# misc updates
+	cat "${FILESDIR}"/*.magic >> magic/magic.mime
 	uclibctoolize
-	gnuconfig_update
 
 	# make sure python links against the current libmagic #54401
 	sed -i "/library_dirs/s:'\.\./src':'../src/.libs':" python/setup.py
@@ -44,7 +44,7 @@ src_unpack() {
 
 src_compile() {
 	# file command segfaults on hppa -  reported by gustavo@zacarias.com.ar
-	[ ${ARCH} = "hppa" ] && filter-flags "-mschedule=8000"
+	[[ ${ARCH} == hppa ]] && filter-flags "-mschedule=8000"
 
 	econf --datadir=/usr/share/misc || die
 
