@@ -1,0 +1,25 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.1 2005/01/08 20:18:53 eradicator Exp $
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# multilib aware versions (install to / look in proper $(get_libdir))
+<app-editors/emacs-21.3-r5
+<dev-lang/tcl-8.4.6-r1
+<dev-lang/tk-8.4.6-r1
+<dev-tcltk/expect-5.42.1
+<net-libs/courier-authlib-0.52
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Force binutils-config versions of binutils
+=sys-devel/binutils-2.15.90.0.3-r3
+=sys-devel/binutils-2.15.91.0.1
+=sys-devel/binutils-2.15.91.0.2
+=sys-devel/binutils-2.15.92.0.2-r1
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Don't use packages which do ugly symlink hackery for lib/lib64
+=x11-libs/qt-2.3.2-r1
+~x11-libs/qt-3.2.3
+~x11-libs/qt-3.3.1
+~x11-libs/qt-3.3.2
+=x11-libs/qt-3.3.3
+=x11-libs/qt-3.3.3-r1

@@ -1,0 +1,25 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/make.defaults,v 1.1 2005/01/08 20:18:53 eradicator Exp $
+
+STAGE1_USE="multilib"
+GRP_STAGE23_USE="${STAGE1_USE} multislot ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java -nptl"
+USE="${GRP_STAGE23_USE} bitmap-fonts truetype-fonts type1-fonts oss alsa crypt fortran f77 jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xrandr xv"
+
+# This profile doesn't fully support multilib portage yet.  We still rely
+# on the emul-* packages.  As such, we have -multilib-pkg here to emphasise
+# that point.
+FEATURES="sandbox autoconfig -multilib-pkg"
+
+MULTILIB_ABIS="amd64 x86"
+DEFAULT_ABI="amd64"
+
+CFLAGS_amd64="-m64"
+LIBDIR_amd64="lib64"
+
+CFLAGS_x86="-m32"
+LIBDIR_x86="lib32"
+
+# In case someone wants to help out by setting FEATURES="multilib-strict"
+MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
+MULTILIB_STRICT_DENY="64-bit.*shared object"

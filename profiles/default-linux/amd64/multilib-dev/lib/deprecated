@@ -1,0 +1,7 @@
+default-linux/amd64/2005.0
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/default-linux/amd64/2005.0 make.profile
+
+This profile will be deleted some time after 2005.01.31
