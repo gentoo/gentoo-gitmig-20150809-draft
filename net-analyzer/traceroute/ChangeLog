@@ -1,12 +1,13 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.4 2002/08/26 11:11:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.5 2002/08/26 11:12:16 aliz Exp $
 
 
 *traceroute-1.4_p12 (1 Feb 2002)
 
   26 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> traceroute-1.4_p12.ebuild:
-  Moved binary from /usr/sbin to /usr/bin. Closes #6526.
+  Moved binary from /usr/sbin to /usr/bin. Closes #6526. Found by
+  Hannes Mehnert <hannes@mehnert.org>.
 
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Added ppc keyword
