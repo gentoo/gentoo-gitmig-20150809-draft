@@ -1,5 +1,5 @@
-MD5 2109ae8beb870ba289297e74196a4940 ChangeLog 1446
-MD5 5b20412209f69d4f9d79f09876b26b70 hesiod-3.0.2.ebuild 1527
+MD5 49a49e085ca6652704b64d86cb8fb3c9 ChangeLog 1521
+MD5 716126e062993fe74a8db6af5e68ac81 hesiod-3.0.2.ebuild 1531
 MD5 6730c597da6926a28d780afaf5c0109d files/digest-hesiod-3.0.2 63
 MD5 f7cf5631651df4137ae6d25e3641160e files/hesiod-3.0.2-env.patch 896
 MD5 ab2c3c431e03ef4d4fb4582e5f8579a2 files/hesiod-3.0.2-shlib.patch 1767

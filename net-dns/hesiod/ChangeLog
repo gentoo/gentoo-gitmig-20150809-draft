@@ -1,10 +1,13 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.5 2003/02/12 07:55:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.6 2003/06/15 11:33:47 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *hesiod-3.0.2 (8 Jun 2002)
+
+  15 Jun 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to KEYWORDS.
 
   21 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
