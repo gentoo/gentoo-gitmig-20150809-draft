@@ -1,6 +1,4 @@
 MD5 0d31781db6234e63c735b1b3908671c1 pykde-3.11.1.ebuild 1285
-MD5 d2a7ec5b2bbd37f9129bf7a32ad22d55 ChangeLog 2333
-MD5 13eeda3dc941b124dd64f2666b532d98 pykde-3.11_rc1.ebuild 1243
+MD5 be93200a9ff18e8166d136015e3931cd ChangeLog 2415
 MD5 8ffc620e0c006abd05da325a3f888251 metadata.xml 182
 MD5 3a2a73f66c31347be4e4e90502c61130 files/digest-pykde-3.11.1 65
-MD5 cae8cffe1658d73c48e616148021259f files/digest-pykde-3.11_rc1 66
