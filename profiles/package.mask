@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3770 2005/03/28 01:39:06 wolf31o2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3771 2005/03/28 15:06:17 seemant Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1341,7 +1341,3 @@ app-text/sgml2x
 
 # broken
 >=media-video/mpeg2-movie-1.5
-
-#seemant@gentoo.org 20 Mar 2002
-# Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
-=gnome-extra/medusa-0.5.1-r4
