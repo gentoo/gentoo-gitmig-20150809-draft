@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.15 2005/02/16 17:43:52 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.16 2005/02/24 00:57:41 mkennedy Exp $
+
+  23 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
+  ecb-2.31.ebuild:
+  Fix missing CEDET make variable binding for case of build against separate
+  CEDET components; Resolves bug 82864
 
 *ecb-2.31 (16 Feb 2005)
 

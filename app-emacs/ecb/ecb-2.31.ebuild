@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.31.ebuild,v 1.1 2005/02/16 17:43:52 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.31.ebuild,v 1.2 2005/02/24 00:57:41 mkennedy Exp $
 
 inherit elisp
 
@@ -34,10 +34,12 @@ src_compile() {
 	fi
 
 	if has_version "app-emacs/cedet"; then
+		einfo "Building with CEDET"
 		make CEDET=${SITELISP}/cedet LOADPATH="${loadpath}" || die
 	else
+		einfo "Building with SEMANTIC, EIEIO and SPEEDBAR"
 		make SEMANTIC=${SITELISP}/semantic EIEIO=${SITELISP}/eieio \
-			SPEEDBAR=${SITELISP}/speedbar LOADPATH="${loadpath}" || die
+			SPEEDBAR=${SITELISP}/speedbar CEDET="" LOADPATH="${loadpath}" || die
 	fi
 }
 
