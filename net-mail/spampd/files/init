@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+# Note: spampd configuration file is /etc/conf.d/spampd
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting spampd"
+	start-stop-daemon --start --quiet \
+		--exec /usr/sbin/spampd -- --pid=/var/run/spampd.pid \
+			${SPAMPD_OPTS}
+	eend $? "Failed to start spampd"
+}
+
+stop() {
+	ebegin "Stopping spampd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/spamd.pid
+	eend $? "Failed to stop spampd"
+}
