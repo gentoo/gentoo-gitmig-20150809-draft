@@ -1,11 +1,16 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.8 2002/11/01 01:10:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.9 2002/12/06 14:24:22 foser Exp $
+
+*libsigc++-1.2.2 (06 Dec 2002)
+
+  06 Dec 2002; foser <foser@gentoo.org> libsigc++-1.2.2.ebuild :
+  New minor version
 
 *libsigc++-1.2.0 (1 Nov 2002)
 
   01 Nov 2002; foser <foser@gentoo.org> libsigc++-1.2.0.ebuild:
-  First stable release in the 2.1 branch
+  First stable release in the 1.2 branch
 
 *libsigc++-1.1.13 (4 Aug 2002)
   04 Aug 2002; Spider <spider@gentoo.org> libsigc++-1.1.13.ebuild :

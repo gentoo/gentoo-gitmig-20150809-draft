@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.0.ebuild,v 1.3 2002/12/06 14:24:22 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.2.ebuild,v 1.1 2002/12/06 14:24:22 foser Exp $
 
 S=${WORKDIR}/${P}
 IUSE=""
@@ -9,7 +9,7 @@ SRC_URI="http://download.sourceforge.net/libsigc/${P}.tar.gz"
 HOMEPAGE="http://libsigc.sourceforge.net/"
 SLOT="1.2"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 DEPEND="virtual/glibc"
 
