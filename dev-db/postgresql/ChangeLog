@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.83 2004/01/18 00:10:32 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.84 2004/02/17 17:12:46 mkennedy Exp $
+
+*postgresql-7.4.1-r4 (17 Feb 2004)
+
+  17 Feb 2004; <mkennedy@gentoo.org> postgresql-7.4.1-r4.ebuild:
+  Update pg-hier URL.  Resolves #39589
 
 *postgresql-7.4.1-r3 (18 Jan 2004)
 
