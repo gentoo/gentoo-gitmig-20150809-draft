@@ -1,22 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.68.ebuild,v 1.7 2003/09/21 17:40:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.68.ebuild,v 1.8 2003/09/21 17:41:20 vapier Exp $
 
 inherit flag-o-matic
 
-IUSE=""
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}/${MY_P}_src
 DESCRIPTION="Lists open files for running Unix processes"
+HOMEPAGE="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README"
 SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.gz
 	ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/${MY_P}.tar.gz"
-HOMEPAGE="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README"
 
 DEPEND="virtual/glibc"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc sparc alpha hppa arm mips ia64"
+IUSE="static"
 
 #This pkg appears to be highly kernel-dependent.
 
@@ -32,6 +32,8 @@ src_compile() {
 	# -taviso (15 Aug 03)
 	use alpha && filter-flags -fstack-protector
 
+	use static && LDFLAGS="${LDFLAGS} -static"
+
 	#interactive script: Enable HASSECURITY, WARNINGSTATE, and HASKERNIDCK
 	#is there a way to avoid the "echo to a file + file read"?
 	#Just piping in the results didn't seem to work.
@@ -40,7 +42,10 @@ src_compile() {
 
 	#simple Makefile hack to insert CFLAGS
 	cp Makefile Makefile.orig
-	sed -e "s/-DLINUXV/${CFLAGS} -DLINUXV/" Makefile.orig > Makefile
+	sed \
+		-e "s/-DLINUXV/${CFLAGS} -DLINUXV/" \
+		-e "/^CFGL=/ s/\$/ ${LDFLAGS}/" \
+		Makefile.orig > Makefile
 
 	make all || die
 }
