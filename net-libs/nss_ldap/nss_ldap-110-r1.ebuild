@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-110-r1.ebuild,v 1.1 2000/08/08 19:27:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-110-r1.ebuild,v 1.2 2000/08/16 04:38:15 drobbins Exp $
 
 P=nss_ldap-110
 A=nss_ldap.tgz
 S=${WORKDIR}/${P}
-CATEGORY="net-libs"
 DESCRIPTION="NSS LDAP Module"
 HOMEPAGE="http://www.padl.com/nss_ldap.html"
 SRC_URI="ftp://ftp.padl.com/pub/"${A}
