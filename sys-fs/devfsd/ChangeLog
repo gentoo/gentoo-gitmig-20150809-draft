@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/devfsd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/ChangeLog,v 1.17 2005/01/10 18:25:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/ChangeLog,v 1.18 2005/01/21 00:26:07 vapier Exp $
+
+  20 Jan 2005; Mike Frysinger <vapier@gentoo.org> devfsd-1.3.25-r8.ebuild:
+  Make sure we keep /etc/devfsd around #78825 by George Henson.
 
   10 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> devfsd-1.3.25-r8.ebuild:
   Added in a message with a link to the Device File System Guide, bug #77326
