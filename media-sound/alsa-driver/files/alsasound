@@ -29,6 +29,10 @@ asoundcfg=/etc/asound.state
 aconnect=/usr/bin/aconnect
 alsascrdir=/etc/alsa.d
 
+function depend() {
+  provide alsa-modules
+}
+
 function start() {
 
   # Start driver if it isn't already up.
