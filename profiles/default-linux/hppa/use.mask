@@ -56,6 +56,10 @@ usb
 # Many java apps need java => 1.3 and hppa has only 1.1 right now
 java
 
+# 5 Jan 2005 Ciaran McCreesh <ciaranm@gentoo.org>
+# No reliable java, no netbeans. bug 66762
+netbeans
+
 # 19 Mar 2003 Guy Martin <gmsoft@gentoo.org>
 # acl not tested yet
 acl
