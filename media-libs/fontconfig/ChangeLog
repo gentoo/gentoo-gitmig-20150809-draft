@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.5 2002/10/27 16:15:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.6 2002/10/29 21:13:38 azarah Exp $
+
+*fontconfig-2.0-r2 (29 Oct 2002)
+
+  29 Oct 2002; Martin Schlemmer <azarah@gentoo.org> fontconfig-2.0-r2.ebuild :
+  Do not include date in generated /etc/fonts/fonts.conf, as users do not
+  seem to know how to set their timezone, or what to do with 'zic' for that
+  matter.  Bugs #9473, #9705 and #9768.
 
 *fontconfig-2.0-r1 (26 Oct 2002)
 
