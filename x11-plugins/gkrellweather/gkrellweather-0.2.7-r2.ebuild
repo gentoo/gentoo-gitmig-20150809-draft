@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-0.2.7-r2.ebuild,v 1.10 2003/09/03 16:43:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-0.2.7-r2.ebuild,v 1.11 2004/01/04 18:36:48 aliz Exp $
 
 S=${WORKDIR}/${P}
 DEBPATCH=${PN}_${PV}-1.diff.gz
 DESCRIPTION="GKrellM Plugin that monitors a METAR station and displays weather
 info"
 SRC_URI="http://www.cse.unsw.edu.au/~flam/repository/c/gkrellm/${P}.tar.gz
-	http://ftp.debian.org/debian/pool/main/g/${PN}/${DEBPATCH}"
+	mirror://debian/pool/main/g/gkrellweather/${DEBPATCH}"
 HOMEPAGE="http://www.cse.unsw.edu.au/~flam/programs/gkrellweather.html"
 
 SLOT="0"

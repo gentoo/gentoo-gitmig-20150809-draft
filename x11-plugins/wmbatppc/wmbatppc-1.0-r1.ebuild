@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbatppc/wmbatppc-1.0-r1.ebuild,v 1.5 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbatppc/wmbatppc-1.0-r1.ebuild,v 1.6 2004/01/04 18:36:48 aliz Exp $
 
 S=${WORKDIR}/wmbatppc
 DESCRIPTION="wmbatppc is a small battery-monitoring dockapp. It works on G3/G4 Powerbooks and iBooks."
@@ -12,7 +12,7 @@ DEPEND="virtual/x11
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="ppc amd64"
+KEYWORDS="ppc -amd64"
 
 src_compile() {
 	make || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/wmSMPmon-2.2.ebuild,v 1.4 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/wmSMPmon-2.2.ebuild,v 1.5 2004/01/04 18:36:48 aliz Exp $
 
 S="${WORKDIR}/${PN}-2.x"
 
@@ -15,14 +15,15 @@ KEYWORDS="x86 amd64"
 DEPEND="virtual/glibc
 	virtual/x11"
 
-src_compile() {
+src_unpack() {
+	unpack ${A} ; cd ${S}/wmSMPmon
 
-	cd ${S}/${PN}
-	cp Makefile Makefile.orig
-	sed -e "s:-Wall -O3 -m486:${CFLAGS}:" Makefile.orig > Makefile
-	make || die "make failed"
-
+	sed -i -e "s:-Wall -O3 -m486:${CFLAGS}:" Makefile
 }
+
+src_compile() {
+	make || die "make failed"
+	}
 
 src_install() {
 

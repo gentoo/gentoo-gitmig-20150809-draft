@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.84.ebuild,v 1.6 2003/12/14 04:43:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/wmtop-0.84.ebuild,v 1.7 2004/01/04 18:36:48 aliz Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -15,15 +15,15 @@ KEYWORDS="x86 ~sparc amd64 ppc"
 DEPEND="virtual/glibc
 	virtual/x11"
 
+src_unpack() {
+	unpack ${A} ; cd ${S}
+	sed -i -e "s:-O3 -g -Wall:${CFLAGS}:" \
+		-e "s:/local::" Makefile
+
+}
+
 src_compile() {
-
-	cd ${S}
-	cp Makefile Makefile.orig
-	sed -e "s:-O3 -g -Wall:${CFLAGS}:" \
-		-e "s:/local::" Makefile.orig > Makefile
-
 	make linux
-
 }
 
 src_install() {

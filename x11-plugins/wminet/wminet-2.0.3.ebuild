@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/wminet-2.0.3.ebuild,v 1.5 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wminet/wminet-2.0.3.ebuild,v 1.6 2004/01/04 18:36:48 aliz Exp $
 
 S="${WORKDIR}/${PN}.app"
 
@@ -15,24 +15,17 @@ KEYWORDS="x86 ~sparc amd64"
 DEPEND="virtual/x11"
 
 src_unpack() {
-
-	unpack ${A}
-	cd ${S}/wminet
-	cp Makefile Makefile.orig
-	sed -e "s:-O2:$CFLAGS:" Makefile.orig > Makefile
-
+	unpack ${A} ; cd ${S}/wminet
+	sed -i -e "s:-O2:$CFLAGS:" Makefile
 }
 
 src_compile() {
-
 	cd ${S}/wminet
 
 	emake || die "parallel make failed"
-
 }
 
 src_install() {
-
 	cd ${S}/wminet
 
 	dobin wminet
@@ -44,5 +37,4 @@ src_install() {
 	insinto /etc/skel
 	insopts -m 600
 	newins wminetrc .wminetrc
-
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/wmgtemp-0.7.ebuild,v 1.1 2003/11/16 22:50:49 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/wmgtemp-0.7.ebuild,v 1.2 2004/01/04 18:36:48 aliz Exp $
 
 IUSE=""
 
@@ -14,13 +14,12 @@ KEYWORDS="x86 -ppc -sparc amd64"
 
 DEPEND="sys-apps/lm-sensors"
 
-src_compile() {
-	# Set compile optimizations
-	cd ${S}/src
-	cp Makefile Makefile.orig
-	sed -e "s:-Wall -g:\$(CFLAGS):" \
-		Makefile.orig > Makefile
+src_unpack() {
+	unpack ${A} ; cd ${S}/src
+	sed -i -e "s:-Wall -g:\$(CFLAGS):" Makefile
+}
 
+src_compile() {
 	emake || die "parallel make failed"
 }
 

@@ -1,5 +1,5 @@
-MD5 8c70b40c4b65ffe0a46115e5a82fae7b wmnet-1.06.ebuild 808
-MD5 71c40da7fb86d97b70f7a37f042b1434 ChangeLog 1065
+MD5 37ac4990af2404ad5861d013b3ef386b wmnet-1.06.ebuild 802
+MD5 d1af1eef69800dcd257d86b0e00a7bba ChangeLog 1058
 MD5 9c871c5150118eedeea65810da151c07 metadata.xml 696
 MD5 61ea1e57785b3ca20c4bcd8b9fd2bc29 files/wmnet-1.06-nonx86.patch 478
 MD5 0a58ec555971a0da33b5d6b2dde9ad1b files/digest-wmnet-1.06 61
