@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/hanterm-xf
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm-xf/ChangeLog,v 1.1 2004/08/02 16:28:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm-xf/ChangeLog,v 1.2 2004/10/09 19:10:26 usata Exp $
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> hanterm-xf-2.0.5.ebuild:
+  Stable on x86 and ppc.
 
 *hanterm-xf-2.0.5 (03 Aug 2004)
 
