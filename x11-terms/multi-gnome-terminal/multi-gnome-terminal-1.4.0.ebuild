@@ -2,12 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Martin Schlemmer <azarah@gentoo.org>
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.4.0.ebuild,v 1.2 2002/05/23 06:50:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.4.0.ebuild,v 1.3 2002/07/09 08:28:58 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Extended version of the Gnome Terminal."
 SRC_URI="http://multignometerm.sourceforge.net/${P}.tar.bz2"
 HOMEPAGE="http://multignometerm.sourceforge.net/"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/gnome-libs-1.4.1.2-r1
