@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/poseidonCE
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/ChangeLog,v 1.7 2004/06/25 02:44:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/ChangeLog,v 1.8 2004/07/31 21:50:37 axxo Exp $
+
+  31 Jul 2004; Thomas Matthijs <axxo@gentoo.org> poseidonCE-2.4.1.ebuild:
+  add docs symlink, bug 57257
 
 *poseidonCE-2.4.1 (21 Jun 2004)
 

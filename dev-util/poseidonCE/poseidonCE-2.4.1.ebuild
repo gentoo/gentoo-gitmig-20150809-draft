@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-2.4.1.ebuild,v 1.2 2004/06/25 02:44:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-2.4.1.ebuild,v 1.3 2004/07/31 21:50:37 axxo Exp $
 
 IUSE="doc gnome kde"
 DESCRIPTION="A UML CASE-Tool powered by Java"
@@ -33,6 +33,8 @@ src_install() {
 
 	if use doc ; then
 		dohtml -r docs/*
+		dosym /usr/share/doc/${P}/html/ /opt/${PN}/docs
+
 		insinto /usr/share/doc/${P}
 		doins docs/PoseidonUsersGuide.pdf
 	fi

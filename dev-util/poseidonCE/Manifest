@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b97eca14ca8a82788236fc05a1c50375 poseidonCE-2.3.1.ebuild 2165
-MD5 26c1cef4739f9b4206a0702d779a731b poseidonCE-2.4.1.ebuild 2157
-MD5 1c1fc9fed7e6c8425cac8d80385e295d ChangeLog 1072
+MD5 a1f538ca4f04cc8c3f74eeeabb0d1156 poseidonCE-2.4.1.ebuild 2204
+MD5 0d3b13b634aca67b791e44879e7a9390 ChangeLog 1173
 MD5 43293b026ec087097be1c686eb7dfdc0 metadata.xml 1559
 MD5 231f24f3d52937377409dcc695307e81 files/digest-poseidonCE-2.3.1 67
 MD5 d3cc528e08fd53fd8f14b9b4ac103928 files/digest-poseidonCE-2.4.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD4DBQFBDBSY/rLF9B432nYRAnvKAJ9WsRLUJbZFQVjJkHzKKqCsCaiAfQCY2RKp
+IhKYjNsec+YhLJPybqRtXw==
+=q5P7
+-----END PGP SIGNATURE-----
