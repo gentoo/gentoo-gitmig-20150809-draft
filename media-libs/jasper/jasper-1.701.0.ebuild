@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.2 2004/04/01 11:00:32 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.3 2004/05/02 12:19:49 dholm Exp $
 DESCRIPTION="JasPer is a software-based implementation of the codec specified in the emerging JPEG-2000 Part-1 standard"
 HOMEPAGE="http://www.ece.uvic.ca/~mdadams/jasper/"
 SRC_URI="http://www.ece.uvic.ca/~mdadams/jasper/software/jasper-${PV}.zip"
 LICENSE="JasPer"
 SLOT="0"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="opengl jpeg"
 
 DEPEND="jpeg? ( media-libs/jpeg )
