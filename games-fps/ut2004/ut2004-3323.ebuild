@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3270.ebuild,v 1.2 2004/09/02 13:02:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3323.ebuild,v 1.1 2004/09/14 21:41:35 wolf31o2 Exp $
 
 inherit games
 
-MY_P="${PN}-lnxpatch${PV}-1.tar.bz2"
+MY_P="${PN}-lnxpatch${PV}.tar.bz2"
 DESCRIPTION="Unreal Tournament 2004 - follow-up to the 2003  multi-player first-person shooter"
 HOMEPAGE="http://www.unrealtournament2004.com/"
 SRC_URI="http://ftp4.3dgamers.com/pub/3dgamers/games/unrealtourn2k4/${MY_P}
@@ -15,7 +15,7 @@ SRC_URI="http://ftp4.3dgamers.com/pub/3dgamers/games/unrealtourn2k4/${MY_P}
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 RESTRICT="nostrip"
 IUSE="opengl dedicated"
 

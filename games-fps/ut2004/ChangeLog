@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.16 2004/09/02 13:02:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.17 2004/09/14 21:41:35 wolf31o2 Exp $
+
+*ut2004-3323 (14 Sep 2004)
+
+  14 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> -ut2004-3236-r1.ebuild,
+  -ut2004-3270.ebuild, +ut2004-3323.ebuild:
+  Removing old versions, updating to newest patch, and closing bug #63958.
 
   02 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3270.ebuild:
   Fixing ut2004.xml link and closing bug #62532.
