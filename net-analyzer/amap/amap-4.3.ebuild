@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-2.7.ebuild,v 1.3 2003/10/04 15:34:57 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-4.3.ebuild,v 1.1 2003/10/04 15:34:57 iggy Exp $
 
-DESCRIPTION="A next-generation scanning tool for pentesters"
+DESCRIPTION="A network scanning tool for pentesters"
 HOMEPAGE="http://www.thc.org/releases.php"
 SRC_URI="http://packetstormsecurity.nl/groups/thc/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64 ~ia64 ~sparc ~ppc"
 IUSE="ssl"
 DEPEND="virtual/glibc
 	ssl? ( >=openssl-0.9.6j )"
@@ -20,11 +20,13 @@ src_unpack() {
 	cd ${S}
 	# gentoo standard place for templates/configuration files
 	mv amap.h amap.h.orig
-	sed amap.h.orig -e '/archpath/ s:/usr/etc/:/usr/share/amap/:' > amap.h
+	sed amap.h.orig -e 's:/usr/local/bin:/usr/share/amap:' > amap.h
 }
 
-
 src_compile() {
+	./configure
+	#mv Makefile Makefile.orig
+	#sed Makefile.orig -e 's:/usr/local/:/usr/:' > Makefile
 	make || die
 }
 
@@ -43,5 +45,6 @@ src_install() {
 	doins ${files}
 
 	doman ${PN}.1
-	dodoc README BUGS TODO CHANGES
+
+	dodoc README VOTE LICENSE TODO CHANGES
 }
