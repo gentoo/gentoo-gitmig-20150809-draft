@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.137 2004/09/05 17:11:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.138 2004/09/30 23:09:35 eradicator Exp $
+
+*xmms-1.2.10-r6 (30 Sep 2004)
+
+  30 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +xmms-1.2.10-r6.ebuild:
+  Now using unicode patch instead of recode patch as it has been accepted
+  upstream. Added a patch to hide xmms on the task bar if xmms-status-plugin
+  is enabled. Added --show-jump-box command line arg. Added patch to fix
+  libjoy related crash. Closes bugs #55398, #57755, #59863, #63168, #64367.
 
   05 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.10-r5.ebuild, xmms-1.2.8-r4.ebuild:
