@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.9 2003/02/13 06:39:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.10 2003/06/15 17:41:20 foser Exp $
 
 IUSE="nls"
 
@@ -12,10 +12,9 @@ SLOT="O"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
-RDEPEND="( >=gnome-base/libglade-0.17-r1
-	 <gnome-base/libglade-2.0.0 )
+RDEPEND=" <gnome-base/libglade-2
 	 >=gnome-base/gnome-print-0.30
-	 >=gnome-base/gnome-vfs-1.0.2-r1"
+	 =gnome-base/gnome-vfs-1*"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
