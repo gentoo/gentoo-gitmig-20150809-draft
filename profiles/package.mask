@@ -1,6 +1,10 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# this binutils won't install, confessing that it's too buggy.
+# so I guess it should be masked, right?
+=sys-devel/binutils-2.12.90.0.9
+
 # ppc-sources-2.4.19-r6 needs external testing. 
 =sys-kernel/ppc-sources-2.4.19-r6
 
