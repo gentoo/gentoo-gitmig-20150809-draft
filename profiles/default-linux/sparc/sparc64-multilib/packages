@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/packages,v 1.14 2005/01/04 12:28:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/packages,v 1.15 2005/01/07 08:12:39 eradicator Exp $
 
 # Sometimes necessary to trick programs into thinking we're really
 # a sparc32 system.
@@ -29,3 +29,4 @@
 >=dev-lang/tcl-8.4.6-r1
 >=dev-lang/tk-8.4.6-r1
 >=dev-tcltk/expect-5.42.1
+>=net-libs/courier-authlib-0.52

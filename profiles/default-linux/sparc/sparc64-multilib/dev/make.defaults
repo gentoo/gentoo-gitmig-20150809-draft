@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.14 2005/01/05 08:08:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.15 2005/01/07 08:12:39 eradicator Exp $
 
 FEATURES="sandbox ccache autoconfig multilib-pkg multilib-strict"
 
@@ -31,4 +31,4 @@ CFLAGS_sparc32="-m32"
 LIBDIR_sparc32="lib"
 
 MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
-MULTILIB_STRICT_DENY="64-bit"
+MULTILIB_STRICT_DENY="64-bit.*shared object"
