@@ -53,3 +53,4 @@ move net-mail/pine-maildir mail-client/pine-maildir
 move net-mail/pinepgp mail-client/pinepgp
 move net-mail/smtpclient mail-client/smtpclient
 move net-mail/spruce mail-client/spruce
+move net-mail/squirrelmail mail-client/squirrelmail
