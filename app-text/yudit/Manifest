@@ -1,5 +1,5 @@
-MD5 04cf3209f7d50d420e2f062d76a9d880 ChangeLog 1239
+MD5 ac111ea46e06d9c1d325f0afe589e1f7 ChangeLog 1322
 MD5 ef593390403a05ec84d8520c5e5ac24d yudit-2.6.ebuild 559
-MD5 36c014f45ab3bf11c0543ce907bd1b18 yudit-2.7.6.ebuild 562
+MD5 05a6c5ed450f9714ec02657472a032aa yudit-2.7.6.ebuild 557
 MD5 15dcf89324a6d9edc2774ce139d6b2c8 files/digest-yudit-2.6 62
 MD5 8f7a38f02af5d831a2345e6ad5ff5a6d files/digest-yudit-2.7.6 65
