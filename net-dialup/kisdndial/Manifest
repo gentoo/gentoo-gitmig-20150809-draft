@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db633da6a876d67a23a8c33ac79d88da kisdndial-0.1.6.ebuild 894
-MD5 d49c799c37fe5208b8e2f6ec739dcb53 metadata.xml 365
+MD5 11e99d95cc90773aa32b41cb84c91902 metadata.xml 359
 MD5 9c9a49908e8d58d89ff7114b27db6ff6 ChangeLog 416
+MD5 db633da6a876d67a23a8c33ac79d88da kisdndial-0.1.6.ebuild 894
 MD5 4cd26e7446421a0eefb70d1d754990b3 files/digest-kisdndial-0.1.6 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBoFsfjtv59x0+BrURAknkAJ4kmggNvNpTz5dPh31oyG5Rg3B84QCgsKIx
-jr5u8WYnak6E1ohaEcOuk10=
-=y+Zs
------END PGP SIGNATURE-----
