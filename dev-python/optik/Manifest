@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2f739e1d6bee9edcbc90aedb048d5754 ChangeLog 2024
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 6e0dcc9dd604e5d3a64cd198142c3390 optik-1.2.ebuild 616
@@ -8,3 +11,10 @@ MD5 90a11d2a7f6c3f50647b6d155648cf85 files/digest-optik-1.3 60
 MD5 0c72b3003a13ea3464fd47aaf05f0ec3 files/digest-optik-1.4 60
 MD5 bb68abf1eea4219f67c7c24b1505512e files/digest-optik-1.4.1 62
 MD5 b757aba98cf0cbbfe8121044ce96437a files/digest-optik-1.2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhpl1ugEuf3OQ0akRAvUbAJ9MsMtGQyA7jKi8lupXJdhimzAKZwCfdAir
+LwFenvTTeVkRxQUd4HXMPnI=
+=nzUk
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 47829090d3ebd88a5a4da8ad5f1e81c2 stripogram-1.4.ebuild 528
 MD5 4a84587bb4d048f732f2fd97b08b2f28 ChangeLog 537
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 00ea8a0a130b4f4f765f97a848ba1da6 files/digest-stripogram-1.4 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhpo7ugEuf3OQ0akRAplRAJ9c1wJYY9hx/ExzXpkWvTzIw998hQCfatOQ
+bC49ZOoFnMS4TiTIXQhHMvI=
+=Nbwu
+-----END PGP SIGNATURE-----

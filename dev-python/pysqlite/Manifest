@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f5afe78018a5987ed385f8c31286fc78 pysqlite-0.3.1.ebuild 752
 MD5 69bb546faa448435a104177ae6818c0e ChangeLog 2892
 MD5 e87f96fab6577e1f41684f47015ce404 pysqlite-0.4.3.ebuild 758
@@ -12,3 +15,10 @@ MD5 70e932b18b2876df44c7257bf34ab066 files/digest-pysqlite-0.3.1 65
 MD5 0ea822314660e8462fb5eeb937ce2310 files/digest-pysqlite-0.4.3 65
 MD5 c27bf7af6842480285e9a1bc6422480a files/digest-pysqlite-0.5.1 65
 MD5 2358ec1e5d6c50a9b165a50d31c0e5a8 files/digest-pysqlite-0.4.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhpryugEuf3OQ0akRAkhuAJwMJ8O85SKoRjF634g/yJ5LSRje5QCfVALe
+7hz7O+d+TLCfcaBaA3+jQxc=
+=Pw+J
+-----END PGP SIGNATURE-----

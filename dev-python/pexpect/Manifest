@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d4bfccc888aeb844da55aad841dcb772 pexpect-0.999.ebuild 616
 MD5 0d6cd1cabbe51910948328c410131f0c ChangeLog 1778
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
@@ -6,3 +9,10 @@ MD5 e6439acab6fb24f595584134e087ce13 pexpect-0.94.ebuild 824
 MD5 2f70d9ae8e39a6fbbf30b9d0f8166c23 files/digest-pexpect-0.94 60
 MD5 fb41687454b293cdcdf8585270645776 files/digest-pexpect-0.97 60
 MD5 fb352214176fea02a668d398661cfac1 files/digest-pexpect-0.999 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhpqpugEuf3OQ0akRAp2bAKCY1Es/2Zcw37SBokmCxibjyBEd+QCgluvt
+Cus/J9+Or6jdyHZ/vy92UYk=
+=Iw4X
+-----END PGP SIGNATURE-----
