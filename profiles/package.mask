@@ -21,9 +21,9 @@
 ##   End example
 ##
 
-# <carpaski@gentoo.org> (20 Feb 2003)
-# Odd problems on select systems and is breaking some ebuilds.
-=sys-apps/portage-2.0.47-r2
+# <carpaski@gentoo.org> (22 Feb 2003)
+# Testing the fixes.
+=sys-apps/portage-2.0.47-r3
 
 # <lu_zero@gentoo.org> (20 Feb 2003)
 # no more present
