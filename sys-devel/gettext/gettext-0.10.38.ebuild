@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.10.38.ebuild,v 1.1 2001/06/01 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.10.38.ebuild,v 1.2 2001/06/18 12:24:00 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -21,7 +21,7 @@ src_compile() {
         myconf="--disable-nls"
     fi 
     try ./configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man \
-                --with-included-gettext --enable-shared --host=${CHOST} ${myconf}
+                --with-included-gettext --disable-shared --host=${CHOST} ${myconf}
     try make ${MAKEOPTS}
 }
 
