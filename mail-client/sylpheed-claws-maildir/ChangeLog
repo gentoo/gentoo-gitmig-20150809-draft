@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-maildir
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/ChangeLog,v 1.7 2004/12/29 00:18:48 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/ChangeLog,v 1.8 2005/02/13 03:01:11 genone Exp $
+
+  13 Feb 2005; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-maildir-0.7.ebuild:
+  marking stable on x86 and amd64 for sc-1.0.0
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

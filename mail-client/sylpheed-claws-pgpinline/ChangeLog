@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-pgpinline
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/ChangeLog,v 1.6 2004/12/29 00:19:48 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/ChangeLog,v 1.7 2005/02/13 03:01:11 genone Exp $
+
+  13 Feb 2005; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-pgpinline-0.5.ebuild:
+  marking stable on x86 and amd64 for sc-1.0.0
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,10 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.0.ebuild,v 1.3 2005/02/13 03:01:11 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.1.1.ebuild,v 1.1 2005/02/13 03:01:11 genone Exp $
 
-IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir xface"
+IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir xface kde" # mbox
 
 inherit eutils
+
+CVS_VERSION=1.0.1cvs1.3
 
 # setting up plugin related variables
 GS_VERSION="ghostscript-viewer-0.8"
@@ -13,14 +15,16 @@ MAILDIR_VERSION="maildir-0.7"
 
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="http://colin.pclinux.fr/${PN}-gtk2-${CVS_VERSION}.tar.bz2"
 #SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~genone/distfiles/${P}.tar.bz2"
+
+S=${WORKDIR}/${PN}-${CVS_VERSION}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc amd64 ~alpha"
+KEYWORDS="~amd64"
 
-COMMONDEPEND="=x11-libs/gtk+-1.2*
+COMMONDEPEND=">=x11-libs/gtk+-2.4
 	pda? ( >=app-pda/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
@@ -30,6 +34,7 @@ COMMONDEPEND="=x11-libs/gtk+-1.2*
 	imlib? ( >=media-libs/imlib-1.9.10 )
 	spell? ( virtual/aspell-dict )
 	nls? ( >=sys-devel/gettext-0.12 )
+	kde? ( kde-base/kdelibs )
 	x11-libs/startup-notification"
 
 DEPEND="${COMMONDEPEND}
@@ -41,13 +46,25 @@ RDEPEND="${COMMONDEPEND}
 	net-mail/metamail
 	x11-misc/shared-mime-info"
 
-PDEPEND="pdflib? ( =mail-client/${PN}-${GS_VERSION} )
-		 maildir? ( =mail-client/${PN}-${MAILDIR_VERSION} )
-		 crypt? ( =mail-client/${PN}-${PGP_VERSION} )"
-#		 mbox? ( =mail-client/${PN}-${MBOX_VERSION} )
-#		 calendar? ( =mail-client/${PN}-${VCAL_VERSION} )
+#PDEPEND="pdflib? ( =mail-client/${PN}-${GS_VERSION} )
+#		 maildir? ( =mail-client/${PN}-${MAILDIR_VERSION} )
+#		 crypt? ( =mail-client/${PN}-${PGP_VERSION} )"
+#		 mbox? ( =mail-client/${PN}-${MBOX_VERSION} )"
 
 PROVIDE="virtual/sylpheed"
+
+pkg_setup() {
+	einfo "Using the GTK2 branch"
+	echo
+	ewarn "This branch is still a testing version. Some USE flags might not"
+	ewarn "work when used together with gtk2 and could generate compile errors."
+	ewarn "It will most likely have bugs, so please note that it is"
+	ewarn "      COMPLETELY UNSUPPORTED BY GENTOO"
+	echo
+	ewarn "External plugins need specially adjusted versions, see the "
+	ewarn "relevant package.mask entry for the available gtk2 versions."
+	echo
+}
 
 src_unpack() {
 	unpack ${A}
@@ -78,6 +95,7 @@ src_compile() {
 	econf \
 		--program-suffix=-claws \
 		--enable-spamassassin-plugin \
+		--with-config-dir=.sylpheed-claws \
 		${myconf} || die "./configure failed"
 
 	emake || die
@@ -108,15 +126,33 @@ src_install() {
 	# install the extra tools
 	cd ${S}/tools
 	exeinto /usr/lib/${PN}/tools
-	doexe *.pl *.py *.rc *.conf *.sh gpg-sign-syl
-	doexe tb2sylpheed update-po uudec
+	doexe *.pl *.py *.rc *.conf *.sh
+	doexe tb2sylpheed update-po uudec gpg-sign-syl
+
+	if use kde; then
+		local kdeprefix="$(kde-config --prefix)"
+		local servicescript="sylpheed-kdeservicemenu.pl"
+		cd ${S}/tools/kdeservicemenu
+		for f in sylpheed-attach-files.desktop sylpheed-compress-attach.desktop; do
+			sed -e "s:SCRIPT_PATH:${kdeprefix}/bin/${servicescript}:g" template_$f > $f
+			install -m 0644 $f ${D}/${kdeprefix}/share/apps/konqueror/servicemenus/$f
+		done
+		insinto ${kdeprefix}/bin
+		doexe ${servicescript}
+	fi
 }
 
 pkg_postinst() {
+	ewarn "The GTK2 branch is still a testing version. Some USE flags might not"
+	ewarn "work when used together with gtk2 and could generate compile errors."
+	ewarn "It will most likely have bugs, so please note that it is"
+	ewarn "      COMPLETELY UNSUPPORTED BY GENTOO"
+	echo
+	einfo "For safety reasons this version will use the alternate configuration"
+	einfo "directory ~/.sylpheed-claws instead of ~/.sylpheed, so you have to"
+	einfo "copy your configuration manually or create a new one."
 	ewarn
 	ewarn "You have to re-emerge or update all external plugins"
-	use mbox && ewarn "There is no updated version of the mailmbox plugin available yet."
-	use calendar && ewarn "There is no updated version of the calendar plugin available yet."
 	ewarn
 	epause 5
 	ebeep 3

@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.33 2005/02/13 00:52:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.34 2005/02/13 03:01:11 genone Exp $
+
+*sylpheed-claws-1.0.1.1 (13 Feb 2005)
+
+  13 Feb 2005; Marius Mauch <genone@gentoo.org> sylpheed-claws-1.0.0.ebuild,
+  +sylpheed-claws-1.0.1.1.ebuild:
+  marking 1.0.0 stable, adding new gtk2 snapshot based on the tarball from
+  Colin Leroy.
 
 *sylpheed-claws-1.0.1 (13 Feb 2005)
 
