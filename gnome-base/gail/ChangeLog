@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gail
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.57 2004/11/12 10:51:33 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.58 2004/11/17 18:04:09 leonardop Exp $
+
+  18 Nov 2004; Leonardo Boshell <leonardop@gentoo.org> gail-1.6.6.ebuild,
+  gail-1.8.0.ebuild:
+  Use USE_DESTDIR="1". Resolves bug #66065.
 
   12 Nov 2004; Mike Gardiner <obz@gentoo.org> gail-1.8.0.ebuild:
   Keyworded ppc for GNOME 2.8
