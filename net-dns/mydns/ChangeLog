@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/mydns
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.4 2004/03/27 00:35:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.5 2004/04/30 22:18:31 matsuu Exp $
+
+*mydns-0.10.4 (01 May 2004)
+
+  01 May 2004; <matsuu@gentoo.org> -mydns-0.10.2.ebuild, mydns-0.10.3.ebuild,
+  +mydns-0.10.4.ebuild:
+  Version bumped.
 
 *mydns-0.10.3 (27 Mar 2004)
 
