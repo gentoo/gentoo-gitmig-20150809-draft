@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.5 2003/10/21 02:14:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.6 2003/11/21 20:07:04 weeve Exp $
+
+  21 Nov 2003; Jason Wever <weeve@gentoo.org> opencdk-0.5.1.ebuild:
+  Added ~sparc keyword.
 
   20 Oct 2003; Aron Griffis <agriffis@gentoo.org> opencdk-0.4.5.ebuild:
   Stable on alpha
