@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2d2fea75e62e6502e65fc92ce8a6c80a ChangeLog 1764
+MD5 7b8f8d80ba1cb31a24a450e015cab848 ChangeLog 1858
 MD5 e3ca7600b4982d2ef945c3fe6c18beed l2tpd-0.69-r2.ebuild 1865
+MD5 f8e76a3043850d101a9b49749b313c3c l2tpd-0.70_pre20031121.ebuild 1232
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 8431c5073b3e343110799462439126a8 l2tpd-0.70_pre20031121.ebuild 1249
 MD5 8fac6f64a3fa92ee4046a60f1c09dc66 files/digest-l2tpd-0.69-r2 67
+MD5 b77ebcaec769239a75f6715bac6d1bf3 files/digest-l2tpd-0.70_pre20031121 155
 MD5 a89d2270d8abbae0aa7faf07488736f0 files/l2tpd-0.69-can-2004-0649.patch 700
 MD5 acfec4f77489a740550c83d5d275477d files/l2tpd-init 473
-MD5 b77ebcaec769239a75f6715bac6d1bf3 files/digest-l2tpd-0.70_pre20031121 155
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXsi0I1lqEGTUzyQRAjgiAJ9YbgR4wp2X48e36ML+rsNOwUOy4gCeMOFZ
-3wcrAo+LUAouI1Mxsxk3+XM=
-=4Zsm
+iD8DBQFBsthHjtv59x0+BrURAhmCAKCYuGrJ7AYddc99SNe540EvhRE6PACdEP/A
+4RsVsArm6Tu8Gt5hgfpzOqs=
+=9GA2
 -----END PGP SIGNATURE-----
