@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.3 2004/04/22 22:47:31 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.4 2004/04/27 19:23:58 agriffis Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 # NOTE: Even though the *.dict.dz are the same as dictd/freedict's files,
 #       their indexes seem to be in a different format. So we'll keep them
