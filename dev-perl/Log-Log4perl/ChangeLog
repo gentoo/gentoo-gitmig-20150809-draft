@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Log-Log4perl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.1 2005/01/03 17:36:25 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.2 2005/03/20 16:23:53 luckyduck Exp $
+
+  20 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> Log-Log4perl-0.50.ebuild:
+  added ~amd64 to KEYWORDS, fixes #85204
 
 *Log-Log4perl-0.50 (03 Jan 2005)
 

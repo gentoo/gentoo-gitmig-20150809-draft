@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/Log-Log4perl-0.50.ebuild,v 1.2 2005/01/23 02:37:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/Log-Log4perl-0.50.ebuild,v 1.3 2005/03/20 16:23:53 luckyduck Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ HOMEPAGE="http://log4perl.sourceforge.net/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""

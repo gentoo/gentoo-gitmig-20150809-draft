@@ -1,4 +1,14 @@
-MD5 5d3abab8777c39e281a2a200bfbdf686 ChangeLog 390
-MD5 5a65ade2ff1743f9be7b783c6560d7b9 Log-Log4perl-0.50.ebuild 496
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 96ec6f1dbcea3ef68eb099f312086b22 Log-Log4perl-0.50.ebuild 503
+MD5 29c19481fa0cd21f4aba0a82da4d5b5d ChangeLog 514
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
 MD5 4bc25ab66a7eaabdddd469e6f5002719 files/digest-Log-Log4perl-0.50 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCPaOg06ebR+OMO78RAgB0AJ9ybYqNRy8cTVJpN52e4nxm3I/rxQCfdAyV
++bAndIwTqqomVwbL4iJ7lAk=
+=g+zi
+-----END PGP SIGNATURE-----
