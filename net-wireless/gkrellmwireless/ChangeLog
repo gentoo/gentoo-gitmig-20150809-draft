@@ -1,12 +1,18 @@
 # ChangeLog for x11-plugins/gkrellmwireless
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkrellmwireless/ChangeLog,v 1.3 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkrellmwireless/ChangeLog,v 1.4 2002/12/11 15:01:19 seemant Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 
 *gkrellmwireless-2.0.0 (16 Oct 2002) 
+
+  11 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
+  gkrellmwireless-2.0.0.ebuild : 
+
+  Moved to stable x86.  Tom Prado among others have been testing since
+  release.
 
   03 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
   gkrellmwireless-2.0.0.ebuild :
