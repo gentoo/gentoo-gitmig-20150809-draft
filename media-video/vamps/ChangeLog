@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vamps
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.2 2004/09/05 15:18:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.3 2004/10/26 14:33:47 chriswhite Exp $
+
+  26 Oct 2004; Chris White <chriswhite@gentoo.org> vamps-0.95.ebuild:
+  Switch over to toolchain getCC from CC.
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> vamps-0.95.ebuild:
   Added amd64 keyword, closing #58517.

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.95.ebuild,v 1.3 2004/09/05 15:18:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.95.ebuild,v 1.4 2004/10/26 14:33:47 chriswhite Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Very fast requantisizing tool for backup DVDs"
 HOMEPAGE="http://www.heise.de/ct/ftp/04/01/094/"
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="$CC" CFLAGS="$CFLAGS" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="$CFLAGS" || die "emake failed"
 	mv -fv lsdvd lsdvd-vamps # rename to avoid conflict with media-video/lsdvd
 }
 
