@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.3.2-r2.ebuild,v 1.1 2004/08/06 14:35:02 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.3.2-r2.ebuild,v 1.2 2004/08/06 17:12:43 axxo Exp $
 
 inherit eutils
 
@@ -62,7 +62,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	#due to previous ebuild bloopers make sure everything is correct
-	chown -R root:root /usr/share/doc/${TOMCAT_NAME}
+	chown -R root:root /usr/share/doc/${PF}
 	chown root:root /etc/init.d/${TOMCAT_NAME}
 	chown root:root /etc/conf.d/${TOMCAT_NAME}
 
