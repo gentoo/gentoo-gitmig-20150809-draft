@@ -1,0 +1,54 @@
+# Copyright 2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.1 2004/08/02 13:12:26 karltk Exp $
+
+inherit java-pkg
+
+DESCRIPTION="The Scala Programming Language"
+HOMEPAGE="http://scala.epfl.ch/"
+SRC_URI="http://scala.epfl.ch/downloads/distrib/files/scala-1.2.0.1.tar.bz2"
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="~x86"
+IUSE="doc jikes"
+DEPEND=">=virtual/jdk-1.4"
+RDEPEND=">=virtual/jre-1.4"
+S=${WORKDIR}/scala-${PV}
+
+src_compile() {
+
+	jars=/usr/share/${PN}/lib
+
+	sed -e "s§RUNTIME_SOURCES=.*§RUNTIME_SOURCES=\"/usr/share/${PF}/src\";§" \
+		-e "s§RUNTIME_CLASSES=.*§RUNTIME_CLASSES=\"${jars}/scala.jar\";§" \
+		-e "s§TOOLS_CLASSES=.*§TOOLS_CLASSES=\"${jars}/tools.jar\";§" \
+		-e "s§FJBG_CLASSES=.*§FJBG_CLASSES=\"${jars}/fjbg.jar\";§" \
+		-e "s§MSIL_CLASSES=.*§MSIL_CLASSES=\"${jars}/msil.jar\";§" \
+		< bin/.scala_wrapper \
+		> scala_wrapper
+
+:; }
+
+src_install() {
+
+	exeinto /usr/lib/${PN}
+	doexe scala_wrapper
+
+	dodir /usr/bin
+
+	for x in dtd2scala scalac scala-debug scaladoc-debug scalaint scalap scalarun-debug \
+		scala scalac-debug scaladoc scala-info scalaint-debug scalarun scalatest ; do
+		dosym /usr/lib/${PN}/scala_wrapper /usr/bin/$x
+	done
+
+	java-pkg_dojar lib/*.jar
+
+	dohtml -r doc/api
+	cp -r examples ${D}/usr/share/doc/${PF}
+	dodoc doc/*.pdf
+	dodoc LICENSE README VERSION
+
+	dodir /usr/share/${PF}
+	cp -r src support ${D}/usr/share/${PF}
+
+}
