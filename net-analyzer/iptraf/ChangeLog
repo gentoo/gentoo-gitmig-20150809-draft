@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.9 2003/02/12 07:45:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.10 2003/02/18 22:56:44 gmsoft Exp $
+
+  18 Feb 2003; Guy Martin <gmsoft@gentoo.org> iptraf-2.7.0.ebuild :
+  Added hppa to keywords.
 
   02 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> iptraf-2.7.0.ebuild :
   Closes #14654.
