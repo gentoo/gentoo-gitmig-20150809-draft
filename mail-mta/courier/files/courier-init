@@ -19,6 +19,7 @@ datadir="/usr/share/courier"
 depend() {
 	need net
 	[ -d /etc/courier/authlib ] && need courier-authlib
+	grep -q "^IMAPDSTART=.*[Yy].*" /etc/courier/imapd && need famd
 }
 
 checkconfig() {
@@ -48,14 +49,6 @@ checkconfig() {
 	[ -f ${sysconfdir}/${ACCESSFILE}.dat ] || ${sbindir}/makesmtpaccess
 
 	[ -f ${sysconfdir}/${ACCESSFILE}.dat ] || ${sbindir}/makesmtpaccess-msa
-
-	# we need this for now to check for the old init scripts
-	if [ -f /etc/init.d/courier-authdaemond ] ; then
-		einfo "As of courier-0.42.2-r2, there is only one init script used"
-		einfo "you can remove /etc/init.d/courier-*. /etc/init.d/courier is"
-		einfo "the only one you need."
-	fi
-
 }
 
 start() {
@@ -189,11 +182,3 @@ stop() {
 
 	eend $?
 }
-
-
-
-# restart() {
-# 	ebegin "Restarting courier filterd"
-# 	/usr/sbin/courierfilter restart
-# 	eend $?
-# }

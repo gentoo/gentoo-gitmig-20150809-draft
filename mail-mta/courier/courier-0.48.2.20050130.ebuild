@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.2.20050130.ebuild,v 1.2 2005/01/31 00:35:56 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.2.20050130.ebuild,v 1.3 2005/02/01 04:43:50 swtaylor Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 [ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
 KEYWORDS="~x86 ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc"
-IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite uclibc mailwrapper"
+IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite uclibc mailwrapper fam"
 
 PROVIDE="virtual/mta
 	 virtual/mda
@@ -32,11 +32,11 @@ DEPEND="virtual/libc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1.3 )
 	spell? ( virtual/aspell-dict )
+	fam? ( virtual/fam )
 	!mailwrapper? ( !virtual/mta )
 	!virtual/imapd"
 
 RDEPEND="${DEPEND}
-	virtual/fam
 	dev-lang/perl
 	sys-apps/procps"
 
@@ -44,6 +44,12 @@ PDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	crypt? ( >=app-crypt/gnupg-1.0.4 )"
 
 src_unpack() {
+	use fam || (
+		ewarn "File Alteration Monitor (FAM) is disabled"
+		einfo "courier-imap will fall back to 60 second polls."
+		einfo 'add "fam" to your USE flags to build as usual'
+		ebeep 4
+		epause 4 )
 	unpack ${A}
 	cd ${S}
 	use norewrite && epatch ${FILESDIR}/norewrite.patch
@@ -64,8 +70,21 @@ src_compile() {
 	[ -e /etc/mime.types ] && \
 		myconf="${myconf} --enable-mimetypes=/etc/mime.types"
 
+	use fam || (
+		epatch ${FILESDIR}/fam-disable-check.patch
+		export WANT_AUTOCONF="2.5"
+		gnuconfig_update
+		cd ${S}/maildir
+		libtoolize --copy --force
+		ebegin "Recreating maildir without fam"
+		autoconf ||  die "recreate maildir failed"
+		eend $?
+		myconf="${myconf} --without-fam"
+	)
+
 	einfo "Configuring courier: `echo ${myconf} | xargs echo`"
-	./configure \
+
+	econf \
 		--prefix=/usr \
 		--disable-root-check \
 		--mandir=/usr/share/man \
@@ -118,28 +137,22 @@ set_maildir() {
 src_install() {
 	local f
 	dodir /etc/pam.d
+
+	einfo "Setting up maildirs in the account skeleton ..."
+	diropts -m 755 -o root -g root
+	dodir /etc/skel
+	${S}/maildir/maildirmake ${D}/etc/skel/.maildir
+	keepdir /etc/skel/.maildir
+
+	diropts -o mail -g mail
 	dodir /var/lib/courier
 	dodir /var/run/courier
 	make install DESTDIR=${D} || die "install"
 	make install-configure || die "install-configure"
-	diropts -o mail -g mail
-	for dir2keep in `(cd ${D} && find . -type d)` ; do
-		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
-	done
-
-	einfo "Setting up maildirs in the account skeleton ..."
-	diropts -m 755 -o root -g root
-	keepdir /etc/skel
-	${D}/usr/bin/maildirmake ${D}/etc/skel/.maildir
-	keepdir /etc/skel/.maildir
-	keepdir /var/spool/mail
-	${D}/usr/bin/maildirmake ${D}/var/spool/mail/.maildir
-	keepdir /var/spool/mail/.maildir
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/courier-init courier
-	`grep DAEMONLIST /etc/init.d/courier >&/dev/null` && \
-		newexe ${FILESDIR}/courier courier-old
+	use fam || sed -i -e's|^.*need famd$||g' ${D}/etc/init.d/courier
 
 	cd ${D}/etc/courier
 	insinto /etc/courier
@@ -147,7 +160,7 @@ src_install() {
 	mv imapd.authpam imap.authpam ; mv pop3d.authpam pop3.authpam
 	for f in *.authpam ; do mv "${f}" "${D}/etc/pam.d/${f%%.authpam}" ; done
 	for f in *.dist ; do cp ${f} ${f%%.dist} ; done
-	[ -e ldapaliasrc ] && chown mail:root ldapaliasrc
+	[ -e ldapaliasrc ] &&  ( chown root:root ldapaliasrc ; chmod 400 ldapaliasrc )
 	set_maildir courierd imapd imapd-ssl pop3d pop3d-ssl sqwebmaild *.dist
 
 	( [ -e /etc/courier/sizelimit ] && cat /etc/courier/sizelimit || echo 0 ) \
@@ -189,7 +202,7 @@ src_install() {
 		>> ${D}/usr/share/doc/${P}/README.htmldocs
 
 	insinto /usr/$(get_libdir)/courier/courier
-	insopts -m  755 -o mail -g mail
+	insopts -m 755 -o mail -g mail
 	doins ${S}/courier/webmaild
 	insinto /etc/courier/webadmin
 	insopts -m 400 -o mail -g mail
@@ -215,6 +228,11 @@ src_install() {
 	else
 		dosym /usr/bin/sendmail /usr/sbin/sendmail
 	fi
+}
+
+pkg_postinst() {
+	use fam && einfo "fam daemon is needed for courier-imapd" \
+		|| ewarn "courier was built without fam support"
 }
 
 pkg_config() {

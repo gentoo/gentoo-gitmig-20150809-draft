@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1.ebuild,v 1.3 2005/01/31 01:54:20 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1.ebuild,v 1.4 2005/02/01 04:43:50 swtaylor Exp $
 
 inherit eutils
 
@@ -65,7 +65,7 @@ src_compile() {
 		myconf="${myconf} --enable-mimetypes=/etc/mime.types"
 
 	einfo "Configuring courier: `echo ${myconf} | xargs echo`"
-	./configure \
+	econf \
 		--prefix=/usr \
 		--disable-root-check \
 		--mandir=/usr/share/man \
@@ -117,28 +117,21 @@ set_maildir() {
 src_install() {
 	local f
 	dodir /etc/pam.d
+
+	einfo "Setting up maildirs in the account skeleton ..."
+	diropts -m 755 -o root -g root
+	dodir /etc/skel
+	${S}/maildir/maildirmake ${D}/etc/skel/.maildir
+	keepdir /etc/skel/.maildir
+
+	diropts -o mail -g mail
 	dodir /var/lib/courier
 	dodir /var/run/courier
 	make install DESTDIR=${D} || die "install"
 	make install-configure || die "install-configure"
-	diropts -o mail -g mail
-	for dir2keep in `(cd ${D} && find . -type d)` ; do
-		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
-	done
-
-	einfo "Setting up maildirs in the account skeleton ..."
-	diropts -m 755 -o root -g root
-	keepdir /etc/skel
-	${D}/usr/bin/maildirmake ${D}/etc/skel/.maildir
-	keepdir /etc/skel/.maildir
-	keepdir /var/spool/mail
-	${D}/usr/bin/maildirmake ${D}/var/spool/mail/.maildir
-	keepdir /var/spool/mail/.maildir
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/courier-init courier
-	`grep DAEMONLIST /etc/init.d/courier >&/dev/null` && \
-		newexe ${FILESDIR}/courier courier-old
 
 	cd ${D}/etc/courier
 	insinto /etc/courier
@@ -182,7 +175,7 @@ src_install() {
 		>> ${D}/usr/share/doc/${P}/README.htmldocs
 
 	insinto /usr/$(get_libdir)/courier/courier
-	insopts -m  755 -o mail -g mail
+	insopts -m 755 -o mail -g mail
 	doins ${S}/courier/webmaild
 	insinto /etc/courier/webadmin
 	insopts -m 400 -o mail -g mail
