@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/tribes2
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/ChangeLog,v 1.1 2004/02/11 22:19:29 wolf31o2 Exp $
+
+*tribes2-25034 (11 Feb 2004)
+
+  11 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
+  tribes2-25034.ebuild:
+  Initial import into portage. Ebuild subitted by Adam Mondl
+  <tocharian@trilug.org> and modified by me. Closing bug #36276.
+
