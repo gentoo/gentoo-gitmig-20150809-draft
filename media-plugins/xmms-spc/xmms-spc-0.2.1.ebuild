@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1.ebuild,v 1.8 2004/03/29 23:57:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1.ebuild,v 1.9 2004/04/17 16:25:50 eradicator Exp $
+
+inherit eutils
+
+IUSE=""
 
 MY_P=spcxmms-${PV}
 S=${WORKDIR}/${MY_P}
@@ -30,7 +34,7 @@ src_unpack() {
 	sed -e '417a\
 	((((int64) hertz * FIXED_POINT) / so.playback_rate) * .980);' soundux.cpp.bak > soundux.cpp
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}.patch || die
+	epatch ${FILESDIR}/${P}.patch
 }
 
 src_install() {
