@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.3 2003/10/01 12:17:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.4 2003/10/31 19:12:34 gmsoft Exp $
 
   23 Sep 2003; Todd Sunderlin <todd@gentoo.org> linux-logo-4.07.ebuild:
   added ~sparc keyword
@@ -17,6 +17,9 @@
   and report.
 
 *linux-logo-4.07-r1 (07 Jun 2003)
+
+  31 Oct 2003; Guy Martin <gmsoft@gentoo.org> linux_logo-4.07-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   07 Jun 2003; Seemant Kulleen <seemant@gentoo.org> linux_logo-4.07-r1.ebuild:
   The -r1 release adds nls support (thanks to Rach Holmes), and also a
