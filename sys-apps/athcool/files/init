@@ -1,0 +1,19 @@
+#!/sbin/runscript
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/files/init,v 1.1 2003/08/09 21:56:13 lisa Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting Athcool"
+	/usr/sbin/athcool on &>/dev/null || return 1
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Athcool"
+	/usr/sbin/athcool off &>/dev/null || return 1
+	eend $?
+}
+
