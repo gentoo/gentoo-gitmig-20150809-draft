@@ -1,7 +1,17 @@
-MD5 b564dcb7051fc3e2f94d05c557933166 ChangeLog 1788
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 15439fc98e53b9f45bd5cd9041d64b9d ChangeLog 1787
 MD5 5870111cb4cb45ae7b80dfe76b15647e jwhois-3.2.0.ebuild 869
 MD5 3f1ed76882b0fb4a57601b99b4853f01 jwhois-3.2.1.ebuild 826
-MD5 7f2a05f39705bacbc38d884cadebe538 jwhois-3.2.2.ebuild 723
+MD5 fdcdee1dcee39923d35c7d2d4138eca8 jwhois-3.2.2.ebuild 726
 MD5 a3be5e722f33856d6bf281f4251e8b03 files/digest-jwhois-3.2.0 64
 MD5 8cbb8abe6a191a786d5b46109cda625d files/digest-jwhois-3.2.1 64
 MD5 7411f47db9ecd1d63caf18c87ef5c9db files/digest-jwhois-3.2.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAx+fhHTu7gpaalycRAtMqAKDxCpnQuFfnZxVO0v5ttXv4uJKRGgCgjl/P
+jthfoCJH/KU4sohLFH/rChg=
+=kBvn
+-----END PGP SIGNATURE-----
