@@ -5,6 +5,7 @@
 #we use this next variable to avoid duplicating stuff on cvs
 OKV=2.4.19
 KV=${PV}
+EXTRAVERSION="`echo ${KV}|sed -e 's:.*\(\.[^\.]*\):\1:'`"
 S=${WORKDIR}/linux-${KV}
 [ -z "${ETYPE}" ] && ETYPE="sources"
 
@@ -59,8 +60,8 @@ src_unpack() {
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	cd ${S}
 	mv Makefile Makefile.orig
-	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:'
-	    -e "s:^\(EXTRAVERSION =\).*:\1 ${KV}:" \
+	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
+	    -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 }
