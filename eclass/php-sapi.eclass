@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.5 2004/01/28 23:04:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.6 2004/02/05 01:48:11 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -49,7 +49,7 @@ RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1.*
 
 # Everything is in this list is dynamically linked agaist or needed at runtime
 # in some other way
-RDEPEND="
+RDEPEND="${RDEPEND}
    >=sys-libs/cracklib-2.7-r7
    app-arch/bzip2
    X? ( virtual/x11 )
