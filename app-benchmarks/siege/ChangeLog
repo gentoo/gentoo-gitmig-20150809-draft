@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.21 2004/12/19 02:23:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.22 2004/12/28 21:14:39 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> siege-2.61.ebuild:
   Marked stable on x86.
@@ -45,7 +48,7 @@
 
 *siege-2.60 (21 Aug 2004)
 
-  21 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> +siege-2.60.ebuild:
+  21 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +siege-2.60.ebuild:
   Version bump, requested by Ka0ttic.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> siege-2.55.ebuild,
