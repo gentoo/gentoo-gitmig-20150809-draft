@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.73 2003/08/11 17:00:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.74 2003/08/11 20:52:52 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -23,14 +23,19 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_preinst
 function runningunstable() { has ~${ARCH} ${ACCEPT_KEYWORDS} > /dev/null ; }
 
 [ -z "${MY_PN}" ] && MY_PN=php
-[ -z "${MY_P}" ] && MY_P=${MY_PN}-${PV}
+if [ -z "${MY_PV}" ]; then
+	MY_PV=${PV/_rc/RC}
+	# maybe do stuff for beta/alpha/pre here too?
+fi
+[ -z "${MY_P}" ] && MY_P=${MY_PN}-${MY_PV}
 [ -z "${MY_PF}" ] && MY_PF=${MY_P}-${PR}
 [ -z "${HOMEPAGE}" ]	&& HOMEPAGE="http://www.php.net/"
 [ -z "${LICENSE}" ]	&& LICENSE="PHP"
 [ -z "${PROVIDE}" ]	&& PROVIDE="virtual/php"
 # PHP.net does automatic mirroring from this URI
+[ -z "${SRC_URI_BASE}" ] && SRC_URI_BASE="http://www.php.net/distributions"
 if [ -z "${SRC_URI}" ]; then
-	SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
+	SRC_URI="${SRC_URI_BASE}/${MY_P}.tar.bz2"
 	#Remove the DB4 stuff temporarily
 	#mirror://gentoo/${MY_P}-db4.diff.gz 
 fi
@@ -145,7 +150,7 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules install-pear install-b
 #overall recommended order
 #install-cli install-sapi install-modules install-pear install-build install-headers install-programs
 
-PHPMAJORVER=${PV//\.*}
+PHPMAJORVER=${MY_PV//\.*}
 
 # These are quick fixups for older ebuilds that didn't have PHPSAPI defined.
 [ -z "${PHPSAPI}" ] && [ "${PN}" -eq "php" ] && PHPSAPI="cli"
