@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tftp-hpa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/ChangeLog,v 1.9 2004/07/01 22:03:27 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/ChangeLog,v 1.10 2004/12/09 20:50:31 squinky86 Exp $
+
+*tftp-hpa-0.40 (09 Dec 2004)
+
+  09 Dec 2004; Jon Hood <squinky86@gentoo.org> +tftp-hpa-0.40.ebuild:
+  Version bump, #69600; thanks lison <bugzilla.gentoo@lison.com>.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> tftp-hpa-0.33.ebuild,
   tftp-hpa-0.34-r1.ebuild:
