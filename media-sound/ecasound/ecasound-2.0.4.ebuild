@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Michael Nazaroff <naz@themoonsofjupiter.net>
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.0.4.ebuild,v 1.2 2002/10/02 10:06:05 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A package for multitrack audio processing"
