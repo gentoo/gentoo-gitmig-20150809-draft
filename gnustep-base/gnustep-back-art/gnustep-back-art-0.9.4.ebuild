@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.4.ebuild,v 1.6 2004/12/13 23:07:58 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.4.ebuild,v 1.7 2005/01/07 00:27:40 fafhrd Exp $
 
 inherit gnustep
 
@@ -20,6 +20,8 @@ IUSE="${IUSE} opengl xim doc"
 DEPEND="${GNUSTEP_GUI_DEPEND}
 	~gnustep-base/gnustep-gui-0.9.4
 	virtual/xft
+	>=media-libs/freetype-2.1.5
+	<media-libs/freetype-2.1.8
 	opengl? ( virtual/opengl virtual/glu )
 	gnustep-libs/artresources
 	>=gnustep-base/mknfonts-0.5

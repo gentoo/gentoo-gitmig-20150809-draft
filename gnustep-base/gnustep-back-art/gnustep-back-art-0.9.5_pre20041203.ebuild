@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.5_pre20041203.ebuild,v 1.1 2004/12/04 20:19:25 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.5_pre20041203.ebuild,v 1.2 2005/01/07 00:27:40 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -26,6 +26,8 @@ PROVIDE="virtual/gnustep-back"
 IUSE="${IUSE} opengl xim doc"
 DEPEND="${GNUSTEP_GUI_DEPEND}
 	virtual/xft
+	>=media-libs/freetype-2.1.5
+	<media-libs/freetype-2.1.8
 	=gnustep-base/gnustep-gui-${PV}*
 	opengl? ( virtual/opengl virtual/glu )
 	gnustep-libs/artresources
