@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>fafhrd@gentoo.org</email>
+</maintainer>
+<longdescription>
+from the webpage...
+
+For PowerPC laptops such as the iBooks and PowerBooks a special daemon named pbbuttonsd can handle the special "multi-media" keys to dim the display and regulate the audio volume accordingly.
+
+However I find the example Gtk+ application gtkpbbuttons not that pretty.
+
+So I implemented a more On-Screen-Display like variant. Currently it can utilize the XOSD library.
+
+Although recently that other program got some pixmap theming support, it is still written in "handling every bit manually C" and still uses Gtk+.
+
+The latest MacOSD deos now utilze the anti-aliasing and real alpha blending canvas library Evas. It does utilize gtkpbbuttons themes just fine - and comes with a slightly cleaned-up version CleanOSX
+
+MacOSD is licensed under the terms of the GPL v2.
+</longdescription>
+</pkgmetadata>
