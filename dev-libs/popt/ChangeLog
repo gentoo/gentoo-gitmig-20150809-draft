@@ -1,29 +1,29 @@
 # ChangeLog for dev-libs/popt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.5 2002/10/04 03:44:00 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.6 2002/11/19 19:10:39 vapier Exp $
 
+*popt-1.7 (19 Nov 2002)
 
-popt-1.6.3 (29 May 2002)
-  
+  19 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump/added pic support
+
+*popt-1.6.3 (03 Mar 2002)
+
   03 Oct 2002; Brad Cowan <bcowan@gentoo.org> popt-1.6.3.ebuild :
-  
   fixed nls compile problems per bug #8731
-  
+
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> libxml2-2.4.23.ebuild :
   Added ppc to keywords
 
   29 May 2002; Spider <spider@gentoo.org> popt-1.6.3.ebuild popt-1.5.ebuild :
   fix bogus DESCRIPTION
 
-*popt-1.6.3 (3 March 2002)
-
-*popt-1.5 (1 Feb 2002)
+*popt-1.5 (01 Feb 2002)
 
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> libxml2-2.4.23.ebuild :
   Added ppc to keywords
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
