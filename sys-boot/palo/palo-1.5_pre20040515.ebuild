@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.5_pre20040515.ebuild,v 1.6 2004/07/01 21:46:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.5_pre20040515.ebuild,v 1.7 2004/07/29 08:18:50 gmsoft Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.parisc-linux.org/cvs/palo-${MY_V}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~hppa"
+KEYWORDS="-* hppa"
 IUSE=""
 
 DEPEND="virtual/libc"
