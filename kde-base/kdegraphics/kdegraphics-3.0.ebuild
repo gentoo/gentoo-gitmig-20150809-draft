@@ -1,7 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.ebuild,v 1.3 2002/04/06 16:32:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.ebuild,v 1.4 2002/04/12 17:01:59 seemant Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -9,7 +9,7 @@ DESCRIPTION="${DESCRIPTION}Graphics"
 
 DEPEND="$DEPEND sys-devel/perl
 	media-gfx/sane-backends
-	tex? ( >=app-text/tetex-1.0.7 )
+	tetex? ( >=app-text/tetex-1.0.7 )
 	media-libs/imlib"
 
 
@@ -21,7 +21,7 @@ src_compile() {
 	kde_src_compile myconf
 
 	use gphoto2	&& myconf="$myconf --with-kamera --with-gphoto2-includes=/usr/include/gphoto2 --with-gphoto2-libraries=/usr/lib/gphoto2" 	|| myconf="$myconf --without-kamera"
-	use tex		&& myconf="$myconf --with-system-kpathsea --with-tex-datadir=/usr/share"
+	use tetex && myconf="$myconf --with-system-kpathsea --with-tex-datadir=/usr/share"
 	myconf="$myconf --with-imlib --with-imlib-config=/usr/bin --with-gpio --with-gpio-includes=/usr/include --with-gpio-libraries=/usr/lib"
 
 	kde_src_compile configure make
