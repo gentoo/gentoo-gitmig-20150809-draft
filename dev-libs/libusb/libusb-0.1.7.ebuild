@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.7.ebuild,v 1.12 2004/07/14 14:49:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.7.ebuild,v 1.13 2004/10/18 16:49:28 usata Exp $
 
 DESCRIPTION="Userspace access to USB devices"
 HOMEPAGE="http://libusb.sourceforge.net/"
@@ -12,7 +12,7 @@ KEYWORDS="x86 sparc ppc alpha"
 IUSE="debug doc"
 
 DEPEND="virtual/libc
-	doc? ( app-text/openjade =app-text/docbook-sgml-dtd-3.1-r1 )"
+	doc? ( app-text/openjade ~app-text/docbook-sgml-dtd-3.1 )"
 
 src_compile() {
 	local myconf

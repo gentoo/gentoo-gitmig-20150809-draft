@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.14 2004/10/17 11:27:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.15 2004/10/18 16:49:28 usata Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="debug doc"
 
 DEPEND="sys-devel/libtool
 	doc? ( app-text/openjade
-		=app-text/docbook-sgml-dtd-3.1-r1 )"
+		~app-text/docbook-sgml-dtd-3.1 )"
 
 src_unpack(){
 	unpack ${A}
