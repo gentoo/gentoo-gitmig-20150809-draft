@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.7 2004/02/14 12:45:22 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.8 2004/04/26 01:31:28 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> pygtkglext-1.0.0.ebuild:
+  Add die following econf for bug 48950
 
   14 Feb 2004; Alastair Tse <liquidx@gentoo.org> pygtkglext-1.0.1.ebuild,
   files/pygtkglext-1.0.1-gentoo.diff:
