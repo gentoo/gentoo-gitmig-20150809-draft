@@ -1,0 +1,11 @@
+--- rss_glx-0.7.4/reallyslick/cpp_src/Makefile.in	2003-06-02 15:38:07.000000000 +0100
++++ rss_glx-0.7.4/reallyslick/cpp_src/Makefile.in	2003-06-02 15:38:34.000000000 +0100
+@@ -139,7 +139,7 @@
+ 
+ @INSTALL_XSCREENSAVER_CONFIG_FILES_TRUE@dist_config_DATA = cyclone.xml fieldlines.xml flocks.xml flux.xml helios.xml plasma.xml skyrocket.xml solarwinds.xml
+ 
+-@INSTALL_XSCREENSAVER_CONFIG_FILES_TRUE@dist_kdessconfig_DATA = cyclone.desktop fieldlines.desktop flocks.desktop flux.desktop helios.desktop plasma.desktop skyrocket.desktop solarwinds.desktop
++@INSTALL_KDE_CONFIG_FILES_TRUE@dist_kdessconfig_DATA = cyclone.desktop fieldlines.desktop flocks.desktop flux.desktop helios.desktop plasma.desktop skyrocket.desktop solarwinds.desktop
+ 
+ man_MANS = cyclone.1 fieldlines.1 flocks.1 flux.1 helios.1 plasma.1 skyrocket.1 solarwinds.1
+ 
