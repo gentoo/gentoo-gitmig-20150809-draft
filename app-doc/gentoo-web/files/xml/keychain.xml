@@ -64,7 +64,7 @@ link="http://www.ibm.com/developerworks">IBM developerWorks</uri> articles.
 <b><uri link="http://www-106.ibm.com/developerworks/library/l-keyc.html">The first
 keychain article</uri></b> introduces the concepts behind RSA/DSA key
 authentication and shows you how to set up primitive (with passphrase) RSA/DSA
-authentication, while the <b>second article</b> (<e>coming soon!</e>) shows you how to
+authentication, while the <b><uri link="http://www-106.ibm.com/developerworks/linux/library/l-keyc2/">second article</uri></b> shows you how to
 use <c>keychain</c> to set up secure, <e>passwordless</e> <c>ssh</c> access in an
 extremely convenient way.  <c>keychain</c> also provides a clean, secure way for
 <c>cron</c> jobs to take advantage of RSA/DSA keys without having to use insecure
