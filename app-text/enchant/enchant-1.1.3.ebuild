@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.9 2004/07/03 21:19:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.10 2004/07/13 23:02:59 agriffis Exp $
 
 inherit gnome2 gnuconfig
 
@@ -27,6 +27,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 #allow to build on mipslinux systems
-use mips && gnuconfig_update
+gnuconfig_update
 
 DOCS="AUTHORS BUGS COPYING.LIB ChangeLog HACKING MAINTAINERS NEWS README TODO"
