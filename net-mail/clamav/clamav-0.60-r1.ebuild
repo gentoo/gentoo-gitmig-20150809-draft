@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.60-r1.ebuild,v 1.2 2003/10/27 10:32:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.60-r1.ebuild,v 1.3 2003/11/26 11:14:57 aliz Exp $
 
 IUSE="milter"
 
@@ -13,7 +13,7 @@ SRC_URI="http://prdownloads.sourceforge.net/clamav/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64"
 
 DEPEND="virtual/glibc"
 PROVIDE="virtual/antivirus"
