@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.13 2002/11/15 09:55:38 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.14 2002/11/15 14:08:50 verwilst Exp $
 
 IUSE="ssl"
 
@@ -51,7 +51,7 @@ src_compile() {
 	use ssl && myconf="--enable-ssl"
 
 	mv jabberd/jabberd.c jabberd/jabberd.c.orig
-	sed 's:pstrdup(jabberd__runtime,HOME):"/usr/bin":' jabberd/jabberd.c.orig > jabberd/jabberd.c
+	sed 's:pstrdup(jabberd__runtime,HOME):"/var/spool/jabber":' jabberd/jabberd.c.orig > jabberd/jabberd.c
 	rm -f jabberd/jabberd.c.orig
 	./configure ${myconf} || die 
 	make || die
@@ -131,6 +131,7 @@ pkg_postinst() {
 	chmod o-rwx /usr/sbin/jabberd
 	chmod o-rwx /var/log/jabber -R
 	chmod o-rwx /var/spool/jabber -R
+	chmod u+rwx /usr/sbin/jabberd
 	chmod g-x /etc/jabber 
 	chmod g-x /usr/sbin/jabberd
 	chmod g-x /var/log/jabber -R
