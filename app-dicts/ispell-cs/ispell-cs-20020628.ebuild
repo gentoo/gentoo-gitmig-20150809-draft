@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ispell-cs-20020628.ebuild,v 1.10 2004/06/06 23:55:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ispell-cs-20020628.ebuild,v 1.11 2004/06/24 21:41:24 agriffis Exp $
 
 MY_P=${PN/cs/czech}
 S=${WORKDIR}/${MY_P}

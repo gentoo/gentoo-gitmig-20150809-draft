@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-web1913/dictd-web1913-1.4-r1.ebuild,v 1.9 2004/06/06 15:40:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-web1913/dictd-web1913-1.4-r1.ebuild,v 1.10 2004/06/24 21:39:06 agriffis Exp $
 
 MY_P=${P/td/t}-pre
 DESCRIPTION="Webster's Revised Unabridged Dictionary (1913) for dict"

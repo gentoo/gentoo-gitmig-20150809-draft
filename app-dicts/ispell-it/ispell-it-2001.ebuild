@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-it/ispell-it-2001.ebuild,v 1.8 2004/06/07 00:02:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-it/ispell-it-2001.ebuild,v 1.9 2004/06/24 21:43:06 agriffis Exp $
 
 DESCRIPTION="Loris Palmerini - Italian dictionary for ispell"
 HOMEPAGE="http://members.xoom.virgilio.it/trasforma/ispell/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/dictd-foldoc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-foldoc/ChangeLog,v 1.7 2004/06/06 15:36:11 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-foldoc/ChangeLog,v 1.8 2004/06/24 21:38:08 agriffis Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   dictd-foldoc-2001.03.13-r1.ebuild:

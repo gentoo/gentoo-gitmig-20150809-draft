@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-uk/aspell-uk-0.51.0.ebuild,v 1.1 2004/05/17 02:05:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-uk/aspell-uk-0.51.0.ebuild,v 1.2 2004/06/24 21:36:04 agriffis Exp $
 
 ASPELL_LANG="Ukrainian"
 

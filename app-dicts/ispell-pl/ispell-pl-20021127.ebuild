@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pl/ispell-pl-20021127.ebuild,v 1.3 2004/06/15 08:02:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pl/ispell-pl-20021127.ebuild,v 1.4 2004/06/24 21:43:32 agriffis Exp $
 
 DESCRIPTION="Polish dictionary for ispell"
 SRC_URI="mirror://sourceforge/ispell-pl/${P}.tar.gz"

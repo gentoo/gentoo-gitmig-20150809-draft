@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/canna-zipcode
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/ChangeLog,v 1.4 2003/09/30 13:21:03 usata Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/ChangeLog,v 1.5 2004/06/24 21:37:16 agriffis Exp $
 
   30 Sep 2003; Mamoru KOMACHI <usata@gentoo.org>
   canna-zipcode-20021021-r1.ebuild, canna-zipcode-20021021-r2.ebuild,

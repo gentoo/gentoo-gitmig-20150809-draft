@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ispell-lt-0.5.ebuild,v 1.10 2004/05/31 18:17:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ispell-lt-0.5.ebuild,v 1.11 2004/06/24 21:43:16 agriffis Exp $
 
 DESCRIPTION="Lithuanian dictionary for ispell"
 HOMEPAGE="http://ieva.mif.vu.lt/~alga/lt/ispell/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ispell-es-1.7.ebuild,v 1.6 2004/06/06 23:57:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ispell-es-1.7.ebuild,v 1.7 2004/06/24 21:42:06 agriffis Exp $
 
 MY_P="espanol-"${PV}
 S=${WORKDIR}/${MY_P/n/~n}

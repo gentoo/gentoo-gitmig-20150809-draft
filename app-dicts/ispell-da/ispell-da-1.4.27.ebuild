@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.4.27.ebuild,v 1.3 2004/05/31 18:17:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.4.27.ebuild,v 1.4 2004/06/24 21:41:39 agriffis Exp $
 
 DESCRIPTION="A danish dictionary for ispell"
 HOMEPAGE="http://da.speling.org/"

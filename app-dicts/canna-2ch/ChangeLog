@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/canna-2ch
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/ChangeLog,v 1.6 2003/11/12 20:28:35 usata Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/ChangeLog,v 1.7 2004/06/24 21:36:24 agriffis Exp $
 
   13 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> canna-2ch-20030827.ebuild:
   stable on ppc and sparc
