@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.13 2004/01/09 23:26:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.14 2004/01/11 22:34:54 weeve Exp $
 
 IUSE="crypt"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${PN}${PV/./}.tar.gz
 
 SLOT="0"
 LICENSE="Info-ZIP"
-KEYWORDS="x86 ~ppc ~sparc alpha amd64 ia64 hppa"
+KEYWORDS="x86 ~ppc sparc alpha amd64 ia64 hppa"
 
 DEPEND="crypt? ( app-arch/unzip )"
 
