@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ispell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.4 2002/06/08 21:48:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.5 2002/07/11 09:04:06 seemant Exp $
+
+*ispell-3.2.06-r2 (11 Jul 2002)
+
+  11 Jul 2002; Seemant Kulleen <seemant@gentoo.org> ispell-3.2.06-r2.ebuild
+  files/digest-ispell-3.2.06-r2 :
+
+  Applied many Mandrake patches, including one to build sq and unsq.
 
 *ispell-allversions (8 Jun 2002)
 

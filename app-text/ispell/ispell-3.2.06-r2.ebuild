@@ -1,26 +1,34 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06.ebuild,v 1.4 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r2.ebuild,v 1.1 2002/07/11 09:04:06 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ispell is a fast screen-oriented spelling checker"
-SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz"
+SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz
+	http://www.ibibilio.org/pub/Linux/distributions/gentoo/distfiles/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://fmg-www.cs.ucla.edu/geoff/ispell.html"
 
-DEPEND="virtual/glibc
-		>=sys-libs/ncurses-5.2"
+DEPEND="sys-devel/bison
+	>=sys-libs/ncurses-5.2"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
+
+src_unpack() {
+	
+	unpack ${P}.tar.gz
+
+	cd ${S}
+	bzcat ${DISTDIR}/${P}-gentoo.diff.bz2 | patch || die
+}
 
 src_compile() {
 
-	#This is easier and cleaner than sed'ing.
-	#Also allows user to edit local.h.gentoo for language preference
-	cp ${FILESDIR}/local.h.gentoo ${S}/local.h
-
-	make  all || die "Compile failed"
-``
+	make || die
 }
 
-src_install () {
+src_install() {
 
 	#Fix config.sh to install to ${D}
 	cp config.sh config.sh.orig
@@ -37,8 +45,8 @@ src_install () {
 	dodir /usr/bin /usr/lib/ispell /usr/share/info \
 		/usr/share/man/man1 /usr/share/man/man5
 
-	make install || die "Installation Failed"
+	make \
+		install || die "Installation Failed"
 
 	dodoc Contributors README WISHES
-
 }
