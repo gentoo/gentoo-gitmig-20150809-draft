@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.46 2004/06/02 22:29:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.47 2004/06/03 03:34:20 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -729,18 +729,19 @@ src_install() {
 	# once they do
 	# Generate xrender.pc using 'EOF' style here document with no expansion
 	# (adapted from Red Hat)
-	cat <<-'EOF' > ${D}/usr/X11R6/lib/pkgconfig/xrender.pc
-prefix=/usr/X11R6
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-includedir=${prefix}/include
-
-Name: Xrender
-Description: X Render Library
-Version: ${XRENDER_VER}
-Cflags: -I${includedir} -I/usr/X11R6/include
-Libs: -L${libdir} -lXrender  -L/usr/X11R6/lib -lX11
-EOF
+	local XRENDER_PC="${D}/usr/X11R6/lib/pkgconfig/xrender.pc"
+	# Note the single quotes, necessary to keep variables unresolved
+	echo 'prefix=/usr/X11R6' >> ${XRENDER_PC}
+	echo 'exec_prefix=${prefix}' >> ${XRENDER_PC}
+	echo 'libdir=${exec_prefix}/lib' >> ${XRENDER_PC}
+	echo 'includedir=${prefix}/includ' >> ${XRENDER_PC}
+	echo '' >> ${XRENDER_PC}
+	echo 'Name: Xrender' >> ${XRENDER_PC}
+	echo 'Description: X Render Library' >> ${XRENDER_PC}
+	# Note the DOUBLE quotes here, necessary to resolve this variable
+	echo "Version: ${XRENDER_VER}" >> ${XRENDER_PC}
+	echo 'Cflags: -I${includedir} -I/usr/X11R6/include' >> ${XRENDER_PC}
+	echo 'Libs: -L${libdir} -lXrender  -L/usr/X11R6/lib -lX11' >> ${XRENDER_PC}
 
 	fperms 0644 /usr/X11R6/lib/pkgconfig/xrender.pc
 
