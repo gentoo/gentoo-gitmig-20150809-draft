@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.49 2004/11/04 11:26:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.50 2004/11/04 13:37:07 gustavoz Exp $
+
+  04 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> groff-1.19.1-r2.ebuild:
+  Stable on sparc wrt #68404
 
   04 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> groff-1.19.1-r2.ebuild:
   Stable on alpha, bug 68404.
