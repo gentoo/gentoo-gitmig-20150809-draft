@@ -1,0 +1,12 @@
+diff -Naur gnusound-0.6.2.orig/play.c gnusound-0.6.2/play.c
+--- gnusound-0.6.2.orig/play.c	2003-01-14 21:11:36.000000000 -0800
++++ gnusound-0.6.2/play.c	2004-11-22 18:19:47.000000000 -0800
+@@ -817,7 +817,7 @@
+ 
+     DEBUG("player.draws_requested: %d, player.draws_prevented: %d\n",
+           shl->player.draws_requested, shl->player.draws_prevented);
+- cleanup:
++ cleanup:;
+     pthread_cleanup_pop(1);
+     return NULL;
+ }

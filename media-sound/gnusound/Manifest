@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 79a13a8864a89d8f3fab583d8ff86384 ChangeLog 895
-MD5 f22ab421f3602aa20e1768dcf5f09e1b gnusound-0.6.1.ebuild 1107
-MD5 8bf9bd9a9456d4d2df3029d68181bc0f gnusound-0.6.2.ebuild 1208
+MD5 b90084eb1a5d48a1853a92e37c2fae36 ChangeLog 1118
+MD5 9d6d43b5b85167ed1bd1fd5b03a70c57 gnusound-0.6.2.ebuild 1360
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 144ea19f7fb52c88a88e39c3abe72dba files/digest-gnusound-0.6.1 67
+MD5 f9d51bdd31b53726a453e8107f952c06 files/gnusound-0.6.2-destdir.patch 1524
 MD5 2fc6416b1d46e2e4b4cd98881e3b6ca6 files/digest-gnusound-0.6.2 67
 MD5 7664f0269c796f265829b3d0fc5690c8 files/gnusound-0.6.2-gtkdep.patch 1673
+MD5 ea52d3ae47017d356eddec26a196bd51 files/gnusound-0.6.2-gcc34.patch 425
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZj5UArHZZzCEUG0RAkC+AJ9ZHLKjgH5kcCdhkSAT5Ey0jqmPvACfUhWy
-GtpHndZNBRfJFSRWMeOir84=
-=4qkV
+iD8DBQFBoqaqArHZZzCEUG0RAnTeAJ9/e4pQoS9C8HxhmNPTNMQJZwWqbACfTTCN
+6wWi6gB1jDfjQejZryv2rZc=
+=3R/+
 -----END PGP SIGNATURE-----

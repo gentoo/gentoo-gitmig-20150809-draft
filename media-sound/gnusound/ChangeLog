@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnusound
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.6 2004/10/08 07:14:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.7 2004/11/23 02:55:21 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/gnusound-0.6.2-destdir.patch, +files/gnusound-0.6.2-gcc34.patch,
+  -gnusound-0.6.1.ebuild, gnusound-0.6.2.ebuild:
+  Cleaned up and added to -amd64, -sparc.
 
   08 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
   gnusound-0.6.2.ebuild, +files/gnusound-0.6.2-gtkdep.patch:
