@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/wmdrawer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.7 2004/06/24 23:08:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.8 2004/07/31 22:41:36 s4t4n Exp $
+
+*wmdrawer-0.10.5 (01 Aug 2004)
+
+  01 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmdrawer-0.10.5.ebuild:
+  Version bump.
+  wmdrawer-0.10.4.1.ebuild:
+  Add gzip to DEPEND. Stable on x86.
+  wmdrawer-0.10.2.ebuild:
+  Remove older ebuild.
 
   15 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmdrawer-0.10.4.1.ebuild:
   Stable on amd64.
