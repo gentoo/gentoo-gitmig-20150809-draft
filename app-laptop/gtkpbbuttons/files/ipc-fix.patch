@@ -1,0 +1,11 @@
+--- src/gtkpbbinit.c	2005-04-01 22:23:43.000000000 +1000
++++ src/gtkpbbinit.c.new	2005-04-01 22:23:33.000000000 +1000
+@@ -63,7 +63,7 @@
+ 	if ((md->window = popup_create_window(md->themedata)) == NULL)
+ 		return 1;
+ 	
+-	if ((err = ipc_init (LIBMODE_CLIENT, 1)) != 0) {        /* setup IPC subsystem for clients */
++	if ((err = ipc_init ("gtkpbbuttonsd", LIBMODE_CLIENT, 1)) != 0) {        /* setup IPC subsystem for clients */
+ 		if (err == E_NOSERVER)
+ 			print_error (_("ERROR: Server message port not found. Server isn't running.\n"));
+ 		else if (err == E_REGISTER)
