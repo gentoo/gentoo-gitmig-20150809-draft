@@ -1,6 +1,18 @@
 # ChangeLog for media-tv/linuxtv-dvb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.9 2004/08/07 18:27:10 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.10 2004/11/11 18:36:36 lordvan Exp $
+
+*linuxtv-dvb-1.1.1-r1 (11 Nov 2004)
+
+  11 Nov 2004; Thomas Raschbacher <lordvan@gentoo.org>
+  linuxtv-dvb-1.0.0_pre2-r1.ebuild, linuxtv-dvb-1.0.0_pre2-r2.ebuild,
+  linuxtv-dvb-1.1.1-r1.ebuild:
+  cleanup (removed 1.0.0_pre2-r[12])
+
+  using kernel-mod instead of kmod fixes bug #68441 (thanks to Stefan Schweizer
+  <sschweizer@gmail.com>) does NOT compile modules for kernel 2.6 anymore
+  because the modules in newer kernels are more up to date than the ones in the
+  release. installs firmware for dvb-ttpci
 
   08 Aug 2004; Chris White <chriswhite@gentoo.org> linuxtv-dvb-1.1.1.ebuild:
   Added header file installation, this was preventing libdvb from installing.
