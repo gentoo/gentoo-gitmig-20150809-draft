@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Copyright 2002 Jordan Armstrong <jordan@papercrane.net>
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 
 A="jakarta-regexp-${PV}.tar.gz"
 S=${WORKDIR}/jakarta-regexp-${PV}

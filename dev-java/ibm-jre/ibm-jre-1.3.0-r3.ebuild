@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.0-r3.ebuild,v 1.6 2002/09/07 13:14:10 karltk Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.0-r3.ebuild,v 1.7 2002/10/04 05:10:44 vapier Exp $
 
 At=IBMJava2-JRE-13.tgz
 S=${WORKDIR}/IBMJava2-13

@@ -1,8 +1,8 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Daniel Mettler <mettlerd@icu.unizh.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0.ebuild,v 1.3 2002/09/08 00:29:32 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0.ebuild,v 1.4 2002/10/04 05:11:43 vapier Exp $
 
 P=sun-jdk-1.4.0
 S=${WORKDIR}/j2sdk
