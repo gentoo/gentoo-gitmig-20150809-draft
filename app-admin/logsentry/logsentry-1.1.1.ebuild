@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.15 2004/06/24 21:30:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.16 2004/10/14 11:59:31 ka0ttic Exp $
 
 DESCRIPTION="automatically monitor system logs and mail security violations on a periodic basis"
 
@@ -22,7 +22,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin /etc/logcheck/tmp /etc/cron.hourly
+	dodir /usr/bin /etc/logcheck/tmp
 	cp systems/linux/logcheck.sh{,.orig}
 	sed -i \
 		-e 's:/usr/local/bin:/usr/bin:' \
@@ -38,7 +38,7 @@ src_install() {
 	dodoc README* CHANGES CREDITS
 	dodoc systems/linux/README.*
 
-	cat << EOF > ${D}/etc/cron.hourly/logsentry.cron
+	cat << EOF > ${S}/logsentry.cron
 #!/bin/sh
 #
 # Uncomment the following if you want
@@ -50,6 +50,9 @@ src_install() {
 
 #/bin/sh /etc/logcheck/logcheck.sh
 EOF
+
+	exeinto /etc/cron.hourly
+	doexe logsentry.cron
 }
 
 pkg_postinst() {
