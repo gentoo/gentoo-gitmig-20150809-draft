@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/boson
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.3 2003/11/04 09:04:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.4 2003/11/17 04:33:07 vapier Exp $
+
+*boson-0.9.1 (16 Nov 2003)
+
+  16 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *boson-0.9 (04 Nov 2003)
 
