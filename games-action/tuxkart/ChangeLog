@@ -1,6 +1,6 @@
-# ChangeLog for app-games/tuxkart
+# ChangeLog for games-action/tuxkart
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/ChangeLog,v 1.2 2003/09/10 20:29:53 vapier Exp $
 
   02 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> tuxkart-0.2.0.ebuild:
   Fixed to use mirror://sourceforge
