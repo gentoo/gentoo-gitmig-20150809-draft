@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-0.7.ebuild,v 1.1 2005/02/13 17:45:12 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-0.7b.ebuild,v 1.1 2005/02/14 14:35:42 greg_g Exp $
 
 inherit kde
 
@@ -30,9 +30,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	use sqlite || myconf="${myconf} --disable-sqlite"
-	use mysql || myconf="${myconf} --disable-mysql"
-	use postgres || myconf="${myconf} --disable-postgresql"
+	myconf="$(use_with sqlite) $(use_with mysql) $(use_with postgres postgresql)"
 
 	kde_src_compile
 }

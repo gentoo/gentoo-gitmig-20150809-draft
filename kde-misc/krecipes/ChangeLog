@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/krecipes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.8 2005/02/13 17:45:12 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.9 2005/02/14 14:35:42 greg_g Exp $
+
+*krecipes-0.7b (14 Feb 2005)
+
+  14 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> -krecipes-0.7.ebuild,
+  +krecipes-0.7b.ebuild:
+  Version bump.
 
 *krecipes-0.7 (13 Feb 2005)
 
