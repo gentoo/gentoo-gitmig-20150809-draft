@@ -1,22 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2f650ea6cb64556c586dc21277b13c5f clisp-2.33-r2.ebuild 4119
-MD5 7fbe736b19c5a723e49951309d082ac0 clisp-2.33.1.ebuild 4122
-MD5 a728f8364a969e22a4a59e74f44601bf clisp-2.32.ebuild 3788
-MD5 d30c58eb606d1697ee9a7cd018f53037 clisp-2.28.ebuild 1195
-MD5 06c63b00df414c368ae3467766a18719 clisp-2.30-r1.ebuild 2158
-MD5 de46df1ab30e6391089f0e24380e5690 clisp-2.33-r1.ebuild 4219
-MD5 49e5eb654b722e6b01af89db9664528e clisp-2.31.ebuild 2904
-MD5 02bad54136a782a49b1ebea18e55cc1b clisp-2.32-r1.ebuild 3699
-MD5 00c823917b6a3897235602ebc5fd8aee clisp-2.33.2.ebuild 4122
-MD5 17fb50c17071dc190e13cb47508b55c0 clisp-2.33.ebuild 4060
-MD5 a657b7ad6a59b8db8a3b1ea37dfda24c clisp-2.29.ebuild 1267
-MD5 173acfe603594bffe9eccd8af8206f07 clisp-2.33.2-r1.ebuild 4253
-MD5 4fe3bc3e7ee45b7769a61b366f6019a3 ChangeLog 6805
+MD5 3f294055463e083e33425b6d9ce37967 clisp-2.33-r2.ebuild 4119
+MD5 cee53486da634e2b42d05df3a739debe clisp-2.33.1.ebuild 4122
+MD5 64ee112fcf022c28db7210ad8c6b29c2 clisp-2.32.ebuild 3788
+MD5 94152d9adb0b60ecd513f25bbe9e4d14 clisp-2.28.ebuild 1195
+MD5 5093bd6dbde0710888a726f3083e9fb0 clisp-2.30-r1.ebuild 2158
+MD5 5da5b9362188fa35964d7f1e04a38bf8 clisp-2.33-r1.ebuild 4219
+MD5 1c38a6b724eda2afbdb63638003f81c2 clisp-2.31.ebuild 2905
+MD5 131f74d8795dd7414f19d27b2318bafd clisp-2.32-r1.ebuild 3699
+MD5 a1155a77af75427f79658be5be6a681d clisp-2.33.2.ebuild 4122
+MD5 c9853b2eb1a4fcb5c699c58c8bcae3a6 clisp-2.33.ebuild 4060
+MD5 2e79fffa9a0c7a442b42af56518b8afa clisp-2.29.ebuild 1268
+MD5 4c3509add0db876b3fbc79f551f9031c clisp-2.33.2-r1.ebuild 4283
+MD5 13d073646f76432f8d20b06d3737d63c ChangeLog 6933
 MD5 485cde76397408cf913fc6d4c7a45a67 metadata.xml 882
-MD5 fc1b329239b46272f593df766e201888 clisp-2.31-r1.ebuild 3825
-MD5 36d396e39520f0d4bedae13307b86eee clisp-2.30.ebuild 1405
+MD5 fb4f5c80b73960122377f19cf8af5032 clisp-2.31-r1.ebuild 3825
+MD5 ef15c056159f83d73406cf5c447b35c0 clisp-2.30.ebuild 1405
 MD5 bf978d68f0161bacd6772c07dfade6fa files/install-clc.lisp 484
 MD5 c112ebf612bf8e262c4285fd4c7e9553 files/clisp-2.30-gentoo.patch 1301
 MD5 2ce1383673bccf5309622a0c11c0aca0 files/digest-clisp-2.28 64
@@ -46,10 +43,3 @@ MD5 e4c6fe13416cfc355e04ae4fc2a01d50 files/2.33/berkely-db-configure-gentoo.patc
 MD5 2e3ac08aeb220af54163a8b41026e355 files/2.33.1/fastcgi-Makefile.in-gentoo.patch 670
 MD5 a9325cfeff703a21e63dbd2b3aad34c1 files/2.33.2/fastcgi-Makefile.in-gentoo.patch 670
 MD5 3eb393d2fbfe2e395744f45ce0d3e4f0 files/2.33.2/glibc-linux.lisp-sigpause-gentoo.patch 622
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBrOqJI1lqEGTUzyQRAs+pAKCuXAQ23bpberGnhhDA+csZs+5rSwCdGzeL
-zcuV7AAS2+f8eOzHmI0rbDU=
-=VFIW
------END PGP SIGNATURE-----
