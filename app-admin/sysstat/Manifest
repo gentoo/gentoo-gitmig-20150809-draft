@@ -1,6 +1,6 @@
 MD5 37fa0c46bf87f51e3437fbb03ef7e53c ChangeLog 3373
 MD5 80bd4b3bd40da60d3de4aeb5d630fbf3 sysstat-5.0.4.ebuild 957
-MD5 6b6e46b8fa8204dd349f7eca28e5078b sysstat-5.0.5-r1.ebuild 1151
+MD5 ab392d5d74ad4ab780c74a6722a9b701 sysstat-5.0.5-r1.ebuild 1118
 MD5 d6b32aec3673fc89ac5823d110ebda11 sysstat-5.0.2.ebuild 957
 MD5 fb5bff216a55ef8704f4946af00ed172 files/digest-sysstat-5.0.2 65
 MD5 53d6bd1111ffa77e7b53d51b96b5d812 files/digest-sysstat-5.0.4 65

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-5.0.5-r1.ebuild,v 1.2 2004/11/15 16:30:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-5.0.5-r1.ebuild,v 1.3 2004/11/16 16:40:12 plasmaroo Exp $
 
 DESCRIPTION="System performance tools for Linux"
 HOMEPAGE="http://perso.wanadoo.fr/sebastien.godard/"
@@ -34,7 +34,6 @@ src_install() {
 	keepdir /var/log/sa
 	dodir /etc/cron.d
 	cp ./crontab.sample ${D}/etc/cron.d/sysstat
-	fperms 0755 /etc/cron.d/sysstat
 
 	make \
 		DESTDIR=${D} \
