@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2-r1.ebuild,v 1.3 2004/08/24 23:23:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2-r1.ebuild,v 1.4 2004/09/04 01:05:27 kloeri Exp $
 
 IUSE="nls slp"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~alpha ~ppc amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 sparc alpha ~ppc amd64 ~ia64 ~ppc64"
 
 DEPEND="net-nds/yp-tools
 	slp? ( net-libs/openslp )
