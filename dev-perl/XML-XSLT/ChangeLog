@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-XSLT
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XSLT/ChangeLog,v 1.13 2004/03/30 00:37:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XSLT/ChangeLog,v 1.14 2004/04/18 23:49:29 weeve Exp $
+
+  18 Apr 2004; Jason Wever <weeve@gentoo.org> XML-XSLT-0.45.ebuild:
+  Stable on sparc.
 
   30 Mar 2004; Lars Weiler <pylon@gentoo.org> XML-XSLT-0.45.ebuild:
   stable on ppc
