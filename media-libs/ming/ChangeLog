@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.8 2003/11/27 20:13:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.9 2003/12/03 15:50:11 agriffis Exp $
+
+  03 Dec 2003; Aron Griffis <agriffis@gentoo.org> ming-0.2a.ebuild:
+  Stable on alpha to support lilypond-1.8.2
 
   27 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> ming-0.2a.ebuild:
   Fixed -fPIC compilation. Closing #32951.
