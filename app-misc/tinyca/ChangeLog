@@ -1,0 +1,9 @@
+# ChangeLog for home/tinyca
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.1 2002/06/24 17:48:47 lamer Exp $
+
+*tinyca-tinyca-0.3.4.ebuild (24 Jun 2002)
+
+  24 Jun 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+
+  Initial version added to tree this fine day ;-)
