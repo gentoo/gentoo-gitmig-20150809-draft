@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/guppi
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.11 2003/10/17 08:05:59 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.12 2004/01/09 23:23:01 agriffis Exp $
+
+  09 Jan 2004; Aron Griffis <agriffis@gentoo.org> guppi-0.40.3-r2.ebuild:
+  stable on alpha
 
   17 Oct 2003; Alastair Tse <liquidx@gentoo.org> guppi-0.40.3-r1.ebuild,
   guppi-0.40.3-r2.ebuild:
