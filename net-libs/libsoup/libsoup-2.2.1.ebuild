@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.1.ebuild,v 1.7 2004/11/12 02:00:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.1.ebuild,v 1.8 2004/11/26 21:16:18 slarti Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc sparc ~ppc64"
+KEYWORDS="x86 ~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc sparc ~ppc64"
 IUSE="ssl doc ipv6"
 
 RDEPEND=">=dev-libs/glib-2
