@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/dwun-0.96e.ebuild,v 1.3 2004/07/01 22:05:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/dwun-0.96e.ebuild,v 1.4 2004/11/17 18:22:12 mrness Exp $
 
 DESCRIPTION="Dialer Without a Useful Name (DWUN)"
 HOMEPAGE="http://dwun.sourceforge.net/"
-SRC_URI="http://download.sourceforge.net/dwun/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/libc"

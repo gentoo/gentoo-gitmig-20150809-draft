@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/dial
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dial/ChangeLog,v 1.4 2004/07/01 22:05:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dial/ChangeLog,v 1.5 2004/11/17 18:23:22 mrness Exp $
+
+  17 Nov 2004; Alin Nastac <mrness@gentoo.org> dial-1.2.ebuild:
+  Marked stable on x86
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dial-1.2.ebuild:
   virtual/glibc -> virtual/libc
