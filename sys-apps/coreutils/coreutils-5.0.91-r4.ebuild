@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r4.ebuild,v 1.4 2004/01/11 06:09:46 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r4.ebuild,v 1.5 2004/01/12 02:33:09 seemant Exp $
 
 inherit eutils flag-o-matic
 
 IUSE="nls build acl selinux static"
 
-PATCH_VER=1.4.6
+PATCH_VER=1.4.7
 I18N_PATCH=i18n-0.2
 PATCHDIR=${WORKDIR}/patch
 
@@ -22,12 +22,10 @@ SRC_URI="mirror://gnu/coreutils/${P}.tar.bz2
 SLOT="0"
 LICENSE="GPL-2"
 
-# Ok Seemant, you're making ls segfault on certain directories like
-# it did with -r3 before you fixed it.  Please fix this again!!!!
-# Marking -amd6   Brad House <brad_mssw@gentoo.org> 01/10/2004
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ~ia64 ~amd64 ~ppc64"
 
 DEPEND="virtual/glibc
+	>=sys-libs/ncurses-5.3-r5
 	>=sys-apps/portage-2.0.49
 	>=sys-devel/automake-1.7.6
 	>=sys-devel/autoconf-2.57
@@ -39,7 +37,7 @@ DEPEND="virtual/glibc
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( !hppa? ( sys-apps/acl ) )
 	nls? ( sys-devel/gettext )
-	>=sys-libs/libtermcap-compat-2.0.8"
+	>=sys-libs/ncurses-5.3-r5"
 
 src_unpack() {
 	unpack ${A}
