@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.5.ebuild,v 1.1 2004/11/17 13:23:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.5.ebuild,v 1.2 2004/11/17 21:21:36 mr_bones_ Exp $
 
 inherit eutils python
 
@@ -47,7 +47,7 @@ src_install() {
 		mk/beforeauto.mk
 
 	# won't work without these really very ugly hack... 
-    # maybe someone can do better..
+	# maybe someone can do better..
 
 	mv python/omniORB/dir.mk python/omniORB/dir.mk_orig
 	awk -v STR="ir\\\.idl" '{ if (/^[[:space:]]*$/) flag = 0; tmpstr = $0; if (gsub(STR, "", tmpstr)) flag = 1; if (flag) print "#" $0; else print $0; }' python/omniORB/dir.mk_orig > python/omniORB/dir.mk
