@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.7 2004/09/07 17:38:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.8 2004/09/08 21:01:38 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -10,7 +10,7 @@ ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
 EXPORT_FUNCTIONS src_unpack pkg_setup
-IUSE="nls uclibc hardened multilib"
+IUSE="nls uclibc hardened nomultilib"
 
 if [ "${ETYPE}" == "" ] ; then
 	ETYPE="gcc"
@@ -379,7 +379,7 @@ gcc_src_unpack() {
 		einfo "updating configuration to build hardened GCC"
 		make_gcc_hard || die "failed to make gcc hard"
 	fi
-	if use multilib && use amd64 && [ -z "${SKIP_MULTILIB_HACK}" ] ; then
+	if use !nomultilib && use amd64 && [ -z "${SKIP_MULTILIB_HACK}" ] ; then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
 	fi
 	einfo "patching gcc version: ${BRANCH_UPDATE} (${release_version})"
@@ -573,7 +573,7 @@ gcc_do_configure() {
 	fi
 
 	# multilib support
-	if use multilib && [ -z "${GCC_TARGET_NO_MULTILIB}" ] ; then
+	if use !nomultilib && [ -z "${GCC_TARGET_NO_MULTILIB}" ] ; then
 		confgcc="${confgcc} --enable-multilib"
 	else
 		confgcc="${confgcc} --disable-multilib"
@@ -733,20 +733,20 @@ gcc_do_make() {
 
 
 create_gcc_multilib_scripts() {
-	mkdir -p ${D}/${BINPATH}
+	mkdir -p ${D}/usr/bin/
 	if has_m32 ; then
-cat > ${D}/${BINPATH}/gcc32 <<EOF
+cat > ${D}/usr/bin/gcc32 <<EOF
 #!/bin/sh
 exec /usr/bin/gcc -m32 "$@"
 EOF
-chmod +x ${D}/${BINPATH}/gcc32
+chmod +x ${D}/usr/bin/gcc32
 	fi
 	if has_m64 ; then
-cat > ${D}/${BINPATH}/gcc64 <<EOF
+cat > ${D}/usr/bin/gcc64 <<EOF
 #!/bin/sh
 exec /usr/bin/gcc -m64 "$@"
 EOF
-chmod +x ${D}/${BINPATH}/gcc64
+chmod +x ${D}/usr/bin/gcc64
 	fi
 }
 
