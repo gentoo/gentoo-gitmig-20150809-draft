@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.1.ebuild,v 1.2 2003/10/05 12:23:08 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.1.ebuild,v 1.3 2003/10/18 11:18:41 sergey Exp $
 
 DESCRIPTION="The giFT OpenFT plugin"
 HOMEPAGE="http://gift.sf.net/"
@@ -30,6 +30,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo "Before you can use the new plugin,"
+	einfo "you should counfigure it with gift-setup command."
+	echo
 	einfo "To run giFT with OpenFT support, run:"
 	einfo "giFT -p /usr/lib/giFT/libOpenFT.so"
 	echo
