@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f7363d9dd41c6a55a1545eb3ccc467fb ChangeLog 385
 MD5 ed1780b85dcde3dfcccd0f49c962660a linux-gazette-01.ebuild 607
 MD5 0b2a28f66d359f08caffcf4368d4c7a0 linux-gazette-02.ebuild 460
@@ -201,7 +204,7 @@ MD5 987167fe972bfb28d35d0f51d32e5a47 files/digest-linux-gazette-94 62
 MD5 b71dd821eeb6a512ef0130c8c05fbc8d files/digest-linux-gazette-95 62
 MD5 2fb14e772924e9acc18615c96d92d40b files/digest-linux-gazette-96 62
 MD5 bc498ecf2aacc96bc02da418fc152bf9 files/digest-linux-gazette-97 62
-MD5 c4f595227bd2082a7f38c3d37c6a500f files/digest-linux-gazette-98 62
+MD5 15881308f403ccdbe1e229164a95ea37 files/digest-linux-gazette-98 62
 MD5 6c38bf1085e0fb232f3c7ba30e34beca files/digest-linux-gazette-99 62
 MD5 5b0825c165dc935b6c0ba98bb548fb8d files/digest-linux-gazette-100 58
 MD5 ff33ddf703b95f3c52286aa50ab46195 files/digest-linux-gazette-101 58
@@ -209,3 +212,10 @@ MD5 e20bacba53aa0d3b6e0b0ea09a545b5f files/digest-linux-gazette-102 59
 MD5 39ffe71997e59b10afb8dcf5ec1be6ea files/digest-linux-gazette-103 58
 MD5 37c3d1f5b0e9c011b70605bc9a89267c files/digest-linux-gazette-104 59
 MD5 5d93b4c839789be794c2cfc097f2aa94 files/digest-linux-gazette-105 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB2hXZroRuSHgZdywRAo7wAJ0dK/b3YrwJT2ccOosaqI4vmKDpNwCfeKVq
+mSkaT+cCLlzJ6EmlmcB+6Ss=
+=jPdV
+-----END PGP SIGNATURE-----
