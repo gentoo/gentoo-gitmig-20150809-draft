@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.9 2004/04/27 03:17:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.10 2004/04/27 04:46:58 vapier Exp $
 
 IUSE="nls pic build nptl"
 
@@ -412,10 +412,16 @@ src_unpack() {
 
 	if [ "${ARCH}" == "arm" ]
 	then
-		# sjlj exceptions can cause issues with undefined frame variables.
-		# this patch has been ported from current glibc cvs.
-		cd ${S}/sysdeps/generic
-		epatch ${FILESDIR}/glibc-framestate-USING_SJLJ_EXCEPTIONS.patch
+		cd ${S}
+		# sjlj exceptions causes undefined frame variables (ported from cvs)
+		epatch ${FILESDIR}/2.3.2/${P}-framestate-USING_SJLJ_EXCEPTIONS.patch
+		# BUS_ISA is needed in ioperm.c but is defined in linux/input.h
+		epatch ${FILESDIR}/2.3.2/${P}-arm-bus-defines.patch
+		# these patches are taken from netwinder.org glibc rpm
+		# armformat fixes the linker script creation
+		# arm-doargs creates certain defines only when pic is used
+		epatch ${FILESDIR}/2.3.2/${P}-armformat.patch
+		epatch ${FILESDIR}/2.3.2/${P}-arm-doargs.patch
 	fi
 
 	# Fix permissions on some of the scripts

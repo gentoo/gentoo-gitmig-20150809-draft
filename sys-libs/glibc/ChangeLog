@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.144 2004/04/25 21:50:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.145 2004/04/27 04:48:18 vapier Exp $
+
+  27 Apr 2004; Mike Frysinger <vapier@gentoo.org> 
+  +files/2.3.2/glibc-2.3.2-arm-bus-defines.patch,
+  +files/2.3.2/glibc-2.3.2-armformat.patch,
+  +files/2.3.2/glibc-2.3.2-arm-doargs.patch,
+  +files/2.3.2/glibc-2.3.2-framestate-USING_SJLJ_EXCEPTIONS.patch,
+  glibc-2.3.2-r10.ebuild:
+  Add a few patches to make glibc compile cleanly on arm.
 
 *glibc-2.3.3_pre20040420 (25 Apr 2004)
 
