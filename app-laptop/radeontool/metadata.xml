@@ -4,5 +4,6 @@
 <herd>mobile</herd>
 <maintainer>
   <email>brix@gentoo.org</email>
+  <name>Henrik Brix Andersen</name>
 </maintainer>
 </pkgmetadata>
