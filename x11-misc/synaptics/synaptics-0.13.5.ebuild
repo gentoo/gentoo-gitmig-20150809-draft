@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.5.ebuild,v 1.3 2004/10/04 06:07:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.5.ebuild,v 1.4 2004/10/24 04:25:56 battousai Exp $
 
-inherit eutils
+inherit gcc eutils
 
 # This ebuild overwrites synaptics files installed by <= xfree-4.3.0-r6
 # and xfree-4.3.99.14 >= X >= xfree-4.3.99.8.
@@ -24,7 +24,7 @@ src_unpack() {
 
 	# Put stuff into /usr/X11R6, also switch up the CC and CFLAGS stuff.
 	sed -i -e "s:BINDIR = \\\$(DESTDIR)/usr/local/bin:BINDIR = ${D}/usr/X11R6/bin:g" ${S}/Makefile
-	sed -i -e "s:CC = gcc:CC = ${CC}:g" ${S}/Makefile
+	sed -i -e "s:CC = gcc:CC = $(gcc-getCC):g" ${S}/Makefile
 	sed -i -e "s:CDEBUGFLAGS = -O2:CDEBUGFLAGS = ${CFLAGS}:g" ${S}/Makefile
 	sed -i -e "s:MANDIR = .*:MANDIR = \\\$(DESTDIR)/usr/man/man1:" ${S}/Makefile
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.4.ebuild,v 1.3 2004/10/24 04:25:56 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.6.ebuild,v 1.1 2004/10/24 04:25:56 battousai Exp $
 
 inherit gcc eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://w1.894.telia.com/~u89404340/touchpad/"
 SRC_URI="http://w1.894.telia.com/~u89404340/touchpad/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 RDEPEND="virtual/x11"
 DEPEND=">=sys-apps/sed-4"
@@ -21,12 +21,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	# Fixes runtime brokenness with amd64 (bug 50384)
-	if [ "${ARCH}" == "amd64" ]
-	then
-		einfo "Patching for amd64 arch..."
-		epatch ${FILESDIR}/${P}-amd64.patch
-	fi
 
 	# Put stuff into /usr/X11R6, also switch up the CC and CFLAGS stuff.
 	sed -i -e "s:BINDIR = \\\$(DESTDIR)/usr/local/bin:BINDIR = ${D}/usr/X11R6/bin:g" ${S}/Makefile

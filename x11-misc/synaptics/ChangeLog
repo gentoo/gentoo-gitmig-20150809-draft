@@ -1,6 +1,16 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.31 2004/10/04 06:07:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.32 2004/10/24 04:25:56 battousai Exp $
+
+*synaptics-0.13.6 (24 Oct 2004)
+
+  24 Oct 2004; <bryan@gentoo.org> synaptics-0.13.4.ebuild,
+  synaptics-0.13.5.ebuild, +synaptics-0.13.6.ebuild:
+  Bump to 0.13.6. Changed the ebuilds to use new gcc-config logic for the
+  Makefile substitution. The new logic fixes bug #67687. The version bump
+  should fix bug #56850 (broken ALPS patch). Thanks to Ben Taitelbaum
+  <btaitelb@cs.oberlin.edu> for feedback on the ALPS patch. Thanks to Donnie
+  Berkholz <spyderous@gentoo.org> for the new gcc-config stuff.
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   synaptics-0.13.4.ebuild, synaptics-0.13.5.ebuild:
