@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.1.1.ebuild,v 1.1 2004/04/12 21:12:20 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.1.1.ebuild,v 1.2 2004/04/12 21:23:10 mkennedy Exp $
 
 inherit java-pkg
 
@@ -18,12 +18,19 @@ IUSE="doc"
 # available directly.  The AspectJ source .tar.bz2 snapshot is taken
 # from CVS with the following command:
 #
-#    cvs -z3 -d:pserver:anonymous@dev.eclipse.org:/home/technology \
-#        co -rV1_1_1 org.aspectj/modules
+#	 cvs -z3 -d:pserver:anonymous@dev.eclipse.org:/home/technology \
+#		 co -rV1_1_1 org.aspectj/modules
 #
 # The source is then patched so that the installed binaries have
-# version information which reflects the tagged source release.  The
+# version information which reflects the tagged source release.	 The
 # AspectJ build system does not do this automatically.
+#
+# Useful documentation for this port:
+#
+#	 http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.aspectj/modules/build/readme-build-and-test-aspectj.html?rev=HEAD&content-type=text/html&cvsroot=Technology_Project
+#
+#	 http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.aspectj/modules/build/release-checklist.txt?rev=HEAD&content-type=text/plain&cvsroot=Technology_Project
+#
 
 S=${WORKDIR}/org.aspectj/modules
 
