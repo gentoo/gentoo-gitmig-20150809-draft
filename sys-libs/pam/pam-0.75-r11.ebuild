@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.19 2003/10/08 06:13:19 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.20 2003/10/08 06:27:59 pappy Exp $
 
 IUSE="berkdb"
 
@@ -78,8 +78,6 @@ src_compile() {
 		fi
 	fi
 
-	has_version "sys-devel/hardened-gcc" && sed -i "s:-lpwdb:-lpwdb -lcrypt -L/lib -L/usr/lib:" ./configure
-
 	./configure --host=${CHOST} \
 		--prefix=/ \
 		--sbindir=/usr/sbin \
@@ -111,6 +109,10 @@ src_compile() {
 			Make.Rules.orig > Make.Rules
 		rm -f Make.Rules.orig
 	fi
+
+	# work/Linux-PAM-0.75/modules/pam_pwdb/Makefile:    $(CC) -o $(CHKPWD) $^ -lpwdb
+	has_version "sys-devel/hardened-gcc" && \
+		sed -i "s:-lpwdb:-lpwdb -lcrypt:g" ${WORKDIR}/Linux-PAM-0.75/modules/pam_pwdb/Makefile
 
 	make || die "Failed to build"
 }
