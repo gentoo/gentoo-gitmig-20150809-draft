@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/mpfc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.1 2004/09/29 21:18:45 pkdawson Exp $
+
+*mpfc-1.3.2 (29 Sep 2004)
+
+  29 Sep 2004; Patrick Dawson <pkdawson@gentoo.org> :
+  Initial import. Closes bug #64939
+
