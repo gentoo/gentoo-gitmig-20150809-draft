@@ -1,6 +1,12 @@
 # ChangeLog for net-www/wordpress
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wordpress/ChangeLog,v 1.6 2004/07/20 22:19:20 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wordpress/ChangeLog,v 1.7 2004/08/08 10:46:37 stuart Exp $
+
+*wordpress-1.2-r1 (08 Aug 2004)
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org> files/1.2/login-patch.diff,
+  +wordpress-1.2-r1.ebuild:
+  Improved login patch; thanks to Kai Groner <kai@ubergeeks.com>
 
   20 Jul 2004; Stuart Herbert <stuart@gentoo.org> files/1.2/login-patch.diff:
   New login patch; this one works for me on Konquerer and Mozilla
