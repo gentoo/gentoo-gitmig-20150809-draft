@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4-r1.ebuild,v 1.4 2003/02/14 11:19:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4-r1.ebuild,v 1.5 2003/03/22 22:53:43 zwelch Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -18,11 +18,20 @@ HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa arm"
 IUSE="static"
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if [ "${ARCH}" = "arm" ]; then
+		epatch ${FILESDIR}/${P}-arm.patch
+		epatch ${FILESDIR}/${P}-arm-configure.patch
+	fi
+}
 
 src_compile() {
 	# Compile fails with -O3 on  but works on x86, sparc untested

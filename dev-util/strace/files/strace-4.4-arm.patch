@@ -1,0 +1,297 @@
+List-Archive: <http://lists.arm.linux.org.uk/pipermail/linux-arm/>
+
+Date: Sat, 15 Jun 2002 19:40:57 +0100
+From: Russell King - ARM Linux <linux@arm.linux.org.uk>
+To: linux-arm@lists.arm.linux.org.uk, Wichert Akkerman <wichert@wiggy.net>
+Subject: strace 4.4 ARM patches
+
+The following patch correctly implements strace support for ARM.  After
+trying to get several people to look at my old strace 3.0 patch over the
+years, I've finally updated the patch and fixed the "mess" which is
+current ARM support.
+
+This patch is against strace 4.4.
+
+Features:
+
+- follow fork()s on ARM reliably.
+- knows the ARM registers for PTRACE_PEEKUSR/POKEUSR
+- knows precisely when we're entering or exiting a syscall on ARM
+- reads all CPU registers using PTRACE_GETREGS for efficiency
+- tracing Thumb-mode syscalls.
+
+Things that we don't do:
+
+- follow vforks
+- follow fork()s on Thumb
+- support 26-bit ARM CPUs
+
+diff -ur strace-4.4-orig/process.c strace-4.4/process.c
+--- strace-4.4-orig/process.c	Fri Aug  3 12:51:28 2001
++++ strace-4.4/process.c	Sat Jun 15 17:46:17 2002
+@@ -1732,6 +1732,12 @@
+ 	{ PTRACE_SINGLESTEP,	"PTRACE_SINGLESTEP"	},
+ 	{ PTRACE_ATTACH,	"PTRACE_ATTACH"		},
+ 	{ PTRACE_DETACH,	"PTRACE_DETACH"		},
++#ifdef ARM
++	{ PTRACE_GETREGS,	"PTRACE_GETREGS"	},
++	{ PTRACE_SETREGS,	"PTRACE_SETREGS"	},
++	{ PTRACE_GETFPREGS,	"PTRACE_GETFPREGS",	},
++	{ PTRACE_SETFPREGS,	"PTRACE_SETFPREGS",	},
++#endif
+ #ifdef SUNOS4
+ 	{ PTRACE_GETREGS,	"PTRACE_GETREGS"	},
+ 	{ PTRACE_SETREGS,	"PTRACE_SETREGS"	},
+@@ -2067,6 +2073,24 @@
+ 	{ 4*EFL,		"4*EFL"					},
+ 	{ 4*UESP,		"4*UESP"				},
+ 	{ 4*SS,			"4*SS"					},
++#elif defined(ARM)
++	{ uoff(regs.ARM_r0),	"r0"					},
++	{ uoff(regs.ARM_r1),	"r1"					},
++	{ uoff(regs.ARM_r2),	"r2"					},
++	{ uoff(regs.ARM_r3),	"r3"					},
++	{ uoff(regs.ARM_r4),	"r4"					},
++	{ uoff(regs.ARM_r5),	"r5"					},
++	{ uoff(regs.ARM_r6),	"r6"					},
++	{ uoff(regs.ARM_r7),	"r7"					},
++	{ uoff(regs.ARM_r8),	"r8"					},
++	{ uoff(regs.ARM_r9),	"r9"					},
++	{ uoff(regs.ARM_r10),	"r10"					},
++	{ uoff(regs.ARM_fp),	"fp"					},
++	{ uoff(regs.ARM_ip),	"ip"					},
++	{ uoff(regs.ARM_sp),	"sp"					},
++	{ uoff(regs.ARM_lr),	"lr"					},
++	{ uoff(regs.ARM_pc),	"pc"					},
++	{ uoff(regs.ARM_cpsr),	"cpsr"					},
+ #else /* !I386 */
+ #ifdef M68K
+ 	{ 4*PT_D1,		"4*PT_D1"				},
+diff -ur strace-4.4-orig/syscall.c strace-4.4/syscall.c
+--- strace-4.4-orig/syscall.c	Fri Jul 13 23:07:45 2001
++++ strace-4.4/syscall.c	Sat Jun 15 18:11:45 2002
+@@ -658,7 +658,7 @@
+ #elif defined (M68K)
+ 	static int d0;
+ #elif defined (ARM)
+-	static int r0;
++	static struct pt_regs regs; /* should be in tcb */
+ #elif defined (ALPHA)
+ 	static long r0;
+ 	static long a3;
+@@ -729,11 +729,54 @@
+ 			return -1;
+ 	}
+ #elif defined (ARM)
+-	{ 
+-	    long pc;
+-	    upeek(pid, 4*15, &pc);
+-	    umoven(tcp, pc-4, 4, (char *)&scno);
+-	    scno &= 0x000fffff;
++	/*
++	 * Read complete register set in one go.
++	 */
++	if (ptrace(PTRACE_GETREGS, pid, 0, (void *)&regs) < 0)
++		return -1;
++
++	/*
++	 * We only need to grab the syscall number on syscall entry.
++	 */
++	if (regs.ARM_ip == 0) {
++		/*
++		 * Note: we only deal with only 32-bit CPUs here.
++		 */
++		if (regs.ARM_cpsr & 0x20) {
++			/*
++			 * Get the Thumb-mode system call number
++			 */
++			scno = regs.ARM_r7;
++		} else {
++			/*
++			 * Get the ARM-mode system call number
++			 */
++			errno = 0;
++			scno = ptrace(PTRACE_PEEKTEXT, pid, regs.ARM_pc - 4, 0);
++			if (errno)
++				return -1;
++
++			if ((scno & 0x0ff00000) != 0x0f900000) {
++				fprintf(stderr, "syscall: unknown syscall trap 0x%08lx\n",
++					scno);
++				return -1;
++			}
++
++			/*
++			 * Fixup the syscall number
++			 */
++			scno &= 0x000fffff;
++		}
++
++		if (tcp->flags & TCB_INSYSCALL) {
++			fprintf(stderr, "pid %d stray syscall entry\n", tcp->pid);
++			tcp->flags &= ~TCB_INSYSCALL;
++		}
++	} else {
++		if (!(tcp->flags & TCB_INSYSCALL)) {
++			fprintf(stderr, "pid %d stray syscall exit\n", tcp->pid);
++			tcp->flags |= TCB_INSYSCALL;
++		}
+ 	}
+ #elif defined (M68K)
+ 	if (upeek(pid, 4*PT_ORIG_D0, &scno) < 0)
+@@ -993,13 +1036,9 @@
+ 		return 0;
+ 	}
+ #elif defined (ARM)
+-	if (upeek(pid, 4*0, (long *)&r0) < 0)
+-		return -1;
+-	if ( 0 && r0 != -ENOSYS && !(tcp->flags & TCB_INSYSCALL)) {
+-		if (debug)
+-			fprintf(stderr, "stray syscall exit: d0 = %ld\n", r0);
+-		return 0;
+-	}
++	/*
++	 * Nothing required
++	 */
+ #elif defined (HPPA)
+ 	if (upeek(pid, PT_GR28, &r28) < 0)
+ 		return -1;
+@@ -1087,12 +1126,12 @@
+ 		}
+ #else /* !M68K */
+ #ifdef ARM
+-		if (r0 && (unsigned) -r0 < nerrnos) {
++		if (regs.ARM_r0 && (unsigned) -regs.ARM_r0 < nerrnos) {
+ 			tcp->u_rval = -1;
+-			u_error = -r0;
++			u_error = -regs.ARM_r0;
+ 		}
+ 		else {
+-			tcp->u_rval = r0;
++			tcp->u_rval = regs.ARM_r0;
+ 			u_error = 0;
+ 		}
+ #else /* !ARM */
+@@ -1316,6 +1355,17 @@
+ 			if (upeek(pid, PT_GR26-4*i, &tcp->u_arg[i]) < 0)
+ 				return -1;
+ 		}
++	}
++#elif defined(ARM)
++	{
++		int i;
++
++		if (tcp->scno >= 0 && tcp->scno < nsyscalls && sysent[tcp->scno].nargs != -1)
++			tcp->u_nargs = sysent[tcp->scno].nargs;
++		else
++			tcp->u_nargs = MAX_ARGS;
++		for (i = 0; i < tcp->u_nargs; i++)
++			tcp->u_arg[i] = regs.uregs[i];
+ 	}
+ #else /* Other architecture (like i386) (32bits specific) */
+ 	{
+diff -ur strace-4.4-orig/util.c strace-4.4/util.c
+--- strace-4.4-orig/util.c	Fri Jul 13 23:07:45 2001
++++ strace-4.4/util.c	Sat Jun 15 17:40:26 2002
+@@ -1169,6 +1169,47 @@
+ 		}
+ 		tcp->flags |= TCB_BPTSET;
+ 	}
++#elif defined(ARM)
++	struct pt_regs regs;
++
++#define ARM_LOOP	0xeafffffe
++
++	if (tcp->flags & TCB_BPTSET) {
++		fprintf(stderr, "PANIC: TCB already set in pid %u\n", tcp->pid);
++		return -1;
++	}
++
++	if (ptrace(PTRACE_GETREGS, tcp->pid, 0, &regs) < 0) {
++		perror("setbpt: ptrace(PTRACE_GETREGS, ...)");
++		return -1;
++	}
++
++	/*
++	 * Again, we only support 32-bit CPUs
++	 */
++	tcp->baddr = regs.ARM_pc;
++
++	if (debug)
++		fprintf(stderr, "[%d] setting bpt at %lx\n", tcp->pid, tcp->baddr);
++
++	if (regs.ARM_cpsr & 0x20) {
++		fprintf(stderr, "PANIC: can't handle thumb mode\n");
++		return -1;
++	} else {
++		errno = 0;
++		tcp->inst[0] = ptrace(PTRACE_PEEKTEXT, tcp->pid, (char *)tcp->baddr, 0);
++		if (errno) {
++			perror("setbpt: ptrace(PTRACE_PEEKTEXT, ...)");
++			return -1;
++		}
++
++		ptrace(PTRACE_POKETEXT, tcp->pid, (char *)tcp->baddr, ARM_LOOP);
++		if (errno) {
++			perror("setbpt: ptrace(PTRACE_POKETEXT, ...)");
++			return -1;
++		}
++		tcp->flags |= TCB_BPTSET;
++	}
+ #else /* !IA64 */
+ 
+ #if defined (I386)
+@@ -1179,8 +1220,6 @@
+ #define LOOP	0xc3ffffff
+ #elif defined (POWERPC)
+ #define LOOP	0x0000feeb
+-#elif defined(ARM)
+-#define LOOP	0xEAFFFFFE
+ #elif defined(MIPS)
+ #define LOOP	0x1000ffff
+ #elif defined(S390)
+@@ -1203,8 +1242,6 @@
+ 	  return -1;
+ #elif defined (ALPHA)
+ 	return -1;
+-#elif defined (ARM)
+-	return -1;
+ #elif defined (MIPS)
+ 	return -1;		/* FIXME: I do not know what i do - Flo */
+ #elif defined (POWERPC)
+@@ -1310,6 +1347,22 @@
+ 
+ #ifdef SPARC
+ 	/* Again, we borrow the SunOS breakpoint code. */
++	if (!(tcp->flags & TCB_BPTSET)) {
++		fprintf(stderr, "PANIC: TCB not set in pid %u\n", tcp->pid);
++		return -1;
++	}
++	errno = 0;
++	ptrace(PTRACE_POKETEXT, tcp->pid, (char *) tcp->baddr, tcp->inst[0]);
++	if(errno) {
++		perror("clearbtp: ptrace(PTRACE_POKETEXT, ...)");
++		return -1;
++	}
++	tcp->flags &= ~TCB_BPTSET;
++#elif defined(ARM)
++	/*
++	 * Gratuitously copied from SPARC.  Replace the breakpoint
++	 * instruction with the original instruction we saved earlier.
++	 */
+ 	if (!(tcp->flags & TCB_BPTSET)) {
+ 		fprintf(stderr, "PANIC: TCB not set in pid %u\n", tcp->pid);
+ 		return -1;
+
+
+
+
+--__--__--
+
+_______________________________________________
+Linux-arm mailing list
+Linux-arm@lists.arm.linux.org.uk
+http://lists.arm.linux.org.uk/mailman/listinfo/linux-arm
+
+
+End of Linux-arm Digest
