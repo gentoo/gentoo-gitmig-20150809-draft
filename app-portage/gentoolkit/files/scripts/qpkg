@@ -9,8 +9,8 @@
 # Additional code thanks to:
 #	      Josh Goebel <dreamer@firesedge.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.4 2003/09/30 19:35:07 mholzer Exp $
-ID='$Id: qpkg,v 1.4 2003/09/30 19:35:07 mholzer Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.5 2003/10/16 18:18:42 mholzer Exp $
+ID='$Id: qpkg,v 1.5 2003/10/16 18:18:42 mholzer Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -376,6 +376,21 @@ for p in ${ipak} ${upak} -;do
 		home=`grep HOMEPAGE ${p}| cut -d\" -f2`
 		desc=`grep DESCRIPTION ${p}| cut -d\" -f2`
 		echo -e "${T}${BL}${desc}${NO} [ ${YL}${home}${NO} ]"
+		if [ ${verb} -gt 0 ]; then
+			pdir=${p/$(basename ${p})/}
+			if [[ -r ${pdir}/USE && -r ${pdir}/IUSE ]]; then
+				echo -n "Compiled with USE Flags: "
+				for flag in $(<${pdir}/IUSE)
+				do
+					use=$(grep -o ${flag} ${pdir}/USE | tr -d '\n')
+					if [[ "${use}" == "" ]]; then
+						echo -n "-"
+					fi
+					echo -n "${flag} "
+				done
+				echo
+			fi
+		fi
 	fi
 	
 	if [ "${query}" ]; then
@@ -386,9 +401,27 @@ for p in ${ipak} ${upak} -;do
 					-e 's:^uuu ::'`"
 		place="`echo ${n}|cut -f1 -d' '`"
 		[[ "${place}" == "iii" ]] && color="${GR}" || color="${RD}"
-		grep -R "${package}" /var/db/pkg/*/*/RDEPEND | \
-		cut -f5,6 -d"/" | sed -e "s:^:\t${color}:;s:$:${NO}:" | sort -u 
-#		gawk -F "/" '{printf("${place}\n\t%s/%s${NO}",$5,$6)}' | sort -u 
+
+		if [[ ${place} == "iii" ]]; then
+			for deppkg in $(grep -R "${package}" /var/db/pkg/*/*/RDEPEND | sed 's/RDEPEND.*$//')
+			do
+				rdepend=$(< ${deppkg}/RDEPEND)
+
+				for flag in $(< ${deppkg}/USE)
+				do
+					if [[ "${flag:0:1}" == "-" ]]; then
+						rdepend=$(echo ${rdepend} | sed "s/${flag:1}? ( [[:alnum:][:punct:]]* )//")
+					fi
+				done
+
+				if [[ $(echo ${rdepend} | grep -o ${package}) == ${package} ]]; then
+					echo $'\t'$(< ${deppkg}/PF)
+				fi
+			done
+		else
+			grep -R "${package}" /var/db/pkg/*/*/RDEPEND | \
+			cut -f5,6 -d"/" | sed -e "s:^:\t${color}:;s:$:${NO}:" | sort -u
+		fi
 	fi
 
 	# cat package content, remove obj/sym/dir, md5 and mtime when not verbose
