@@ -1,16 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta1-r1.ebuild,v 1.1 2003/07/16 12:14:53 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta1-r1.ebuild,v 1.2 2003/07/16 17:40:44 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
-inherit eutils 
-
-MY_PV=${PV/_beta/-test}
-MY_PVR=${PVR/_beta/-test}
-OKV=${MY_PV}
-KV=${MY_PVR/r/mm}
-S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
+
+OKV=${PV/_beta/-test}
+
+EXTRAVERSION="`echo ${OKV}-${PR/r/mm} | \
+	sed -e 's/[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\)/\1/'`"
+
+KV=${OKV}-${PR/r/mm}
+
+inherit kernel
 
 # What's in this kernel?
 
@@ -18,24 +20,10 @@ ETYPE="sources"
 # The development branch of the linux kernel with Andrew Morton's patch
 
 DESCRIPTION="Full sources for the development linux kernel with Andrew Morton's patchset"
-SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 ${PATCH_URI}
-mirror://kernel/linux/kernel/people/akpm/patches/2.6/${MY_PV}/${MY_PVR/r/mm}/${MY_PVR/r/mm}.bz2"
-PROVIDE="virtual/linux-sources"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
-LICENSE="GPL-2"
-SLOT="${KV}"
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${PV/_beta/-test}.tar.bz2
+mirror://kernel/linux/kernel/people/akpm/patches/2.6/${PV/_beta/-test}/${KV}/${KV}.bz2"
 KEYWORDS="x86 ppc"
-
-if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
-then
-	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-	DEPEND=">=sys-devel/binutils-2.11.90.0.31
-			>=sys-apps/sed-4"
-	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl
-		 sys-devel/make"
-fi
-
-[ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include"
+SLOT=${KV}
 
 src_unpack() {
 	cd ${WORKDIR}
@@ -43,59 +31,9 @@ src_unpack() {
 
 	mv linux-${OKV} linux-${KV}
 	cd ${S}
-	bzcat ${DISTDIR}/${MY_PVR/r/mm}.bz2 | patch -p1 || die "mm patch failed"
-	sed -i -e "s:^EXTRAVERSION.*$:EXTRAVERSION = -${PR/r/mm}:" Makefile
+	bzcat ${DISTDIR}/${KV}.bz2 | patch -p1 || die "mm patch failed"
 
-	#sometimes we have icky kernel symbols; this seems to get rid of them
-	# ARCH is used differently in the makefiles now, and this seems to fix things
 	unset ARCH
-	make mrproper || die
+	kernel_universal_unpack
 
-	#fix silly permissions in tarball
-	cd ${WORKDIR}
-	chown -R 0.0 *
-	chmod -R a+r-w+X,u+w *
-
-}
-
-src_compile() {
-	if [ "$ETYPE" = "headers" ]
-	then
-		yes "" | make oldconfig		
-		echo "Ignore any errors from the yes command above."
-	fi
-}
-
-src_install() {
-	if [ "$ETYPE" = "sources" ]
-	then
-		dodir /usr/src
-		echo ">>> Copying sources..."
-		mv ${WORKDIR}/* ${D}/usr/src
-	else
-		#linux-headers
-		dodir /usr/include/linux
-		cp -ax ${S}/include/linux/* ${D}/usr/include/linux
-		rm -rf ${D}/usr/include/linux/modules
-		dodir /usr/include/asm
-		cp -ax ${S}/include/asm-i386/* ${D}/usr/include/asm
-	fi
-}
-
-pkg_preinst() {
-	if [ "$ETYPE" = "headers" ] 
-	then
-		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
-		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
-		true
-	fi
-}
-
-pkg_postinst() {
-	[ "$ETYPE" = "headers" ] && return
-	if [ ! -e ${ROOT}usr/src/linux-beta ]
-	then
-
-		ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
-	fi
 }
