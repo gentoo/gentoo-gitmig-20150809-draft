@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gramofile
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.8 2004/06/25 00:03:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.9 2004/07/13 07:30:11 eradicator Exp $
+
+  13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gramofile-1.6.ebuild:
+  Added ~sparc and ~amd64
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> gramofile-1.6.ebuild:
   QA fix.
