@@ -1,36 +1,37 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.96-r1.ebuild,v 1.3 2002/07/10 00:18:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.96-r1.ebuild,v 1.4 2002/07/16 04:54:33 seemant Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://artax.karlin.mff.cuni.cz/~mikulas/links/download/${P}.tar.gz"
 HOMEPAGE="http://artax.karlin.mff.cuni.cz/~mikulas/links"
 DESCRIPTION="A console-based web browser"
-DEPEND="virtual/glibc >=sys-libs/ncurses-5.1 gpm? ( >=sys-libs/gpm-1.19.3 ) ssl? ( >=dev-libs/openssl-0.9.6 )"
+DEPEND=">=sys-libs/ncurses-5.1
+	gpm? ( >=sys-libs/gpm-1.19.3 )
+	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="*"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	local myconf
-	if [ "`use ssl` " ]
-	then
-		myconf="--enable-ssl"
-	else
-		myconf="--disable-ssl"
-	fi
-	./configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man ${myconf} || die
-	# links doesn't respect a --without-gpm option; the only way to fix it is to edit the 
+	use ssl \
+		&& myconf="--enable-ssl" \
+		|| myconf="--disable-ssl"
+
+	econf ${myconf} || die
+
+	# links doesn't respect a --without-gpm option; 
+	# the only way to fix it is to edit the 
 	# 'config.h' file afterwads. Luckily for us, sed exists. ;)
-	if [ "`use gpm`" ]
-	then
+	use gpm && ( \
 		echo "Leaving LibGPM enabled."
-    else
+    ) || ( \
 		echo "Disabling LibGPM."
 		cat config.h | sed 's/.*LIBGPM 1/#undef HAVE_LIBGPM/g' > tmp~
 		mv tmp~ config.h
-	fi
+	)
 	emake || die
 }
 
