@@ -1,9 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.ebuild,v 1.2 2004/04/20 16:18:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.1 2004/04/20 16:18:09 foser Exp $
+
+# UPDATE TRACKER : GNOME TEAM ONLY
 
 S=${WORKDIR}
-DESCRIPTION="Meta package for the GNOME desktop."
+DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="as-is"
 SLOT="2.0"
@@ -24,13 +26,13 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=dev-libs/glib-2.4
 	>=dev-libs/atk-1.6
-	>=x11-libs/gtk+-2.4
+	>=x11-libs/gtk+-2.4.0-r1
 	>=x11-libs/pango-1.4
 
 	>=dev-libs/libxml2-2.6.7
 	>=dev-libs/libxslt-1.1.4
 
-	>=x11-libs/libxklavier-1
+	>=x11-libs/libxklavier-1.02
 	>=media-libs/audiofile-0.2.5
 	>=media-sound/esound-0.2.34
 	>=gnome-base/gnome-mime-data-2.4.0
@@ -40,8 +42,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/ORBit2-2.10
 
 	>=gnome-base/gconf-2.6
-	>=gnome-base/gnome-keyring-0.2
-	>=gnome-base/gnome-vfs-2.6
+	>=gnome-base/gnome-keyring-0.2.1
+	>=gnome-base/gnome-vfs-2.6.1.1
 
 	>=gnome-base/libbonobo-2.6
 	>=gnome-base/libbonoboui-2.6
@@ -51,7 +53,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libglade-2.3.6
 
 	>=gnome-extra/bug-buddy-2.6
-	>=gnome-base/control-center-2.6.0.3
+	>=gnome-base/control-center-2.6.1
 
 	>=gnome-base/eel-2.6
 	>=gnome-base/nautilus-2.6
@@ -62,10 +64,10 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/nautilus-media-0.8
 
 	>=media-gfx/eog-2.6
-	>=net-www/epiphany-1.2.2
+	>=net-www/epiphany-1.2.3
 	>=app-arch/file-roller-2.6
 	>=gnome-extra/gcalctool-4.3.51
-	>=gnome-extra/gconf-editor-2.6
+	>=gnome-extra/gconf-editor-2.6.1
 	>=gnome-base/gdm-2.4.4.7-r1
 	>=app-editors/gedit-2.6
 
@@ -80,7 +82,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-themes/gnome-icon-theme-1.2
 	>=x11-themes/gnome-themes-2.6
 
-	>=x11-terms/gnome-terminal-2.6
+	>=x11-terms/gnome-terminal-2.6.1
 	>=gnome-extra/gnome2-user-docs-2.6.0.1
 
 	>=x11-libs/gtksourceview-1
@@ -102,7 +104,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-libs/startup-notification-0.5
 
 	>=gnome-extra/yelp-2.6
-	>=x11-libs/vte-0.11.10
+	>=x11-libs/vte-0.11.10-r1
 	>=gnome-extra/zenity-2.6.0
 	>=net-analyzer/gnome-netstatus-2.6.0.1
 
@@ -137,7 +139,7 @@ pkg_postinst () {
 	einfo "To have nautilus and gnome-vfs monitor file changes, you should"
 	einfo "start the FAM daemon. You can do this to by issueing the"
 	einfo "'/etc/init.d/famd start' command."
-	einfo "'rc-update add famd default' will make FAM start on every boot."
+	einfo "'rc-update add fam default' will make FAM start on every boot."
 	echo
 
 }
