@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.7.ebuild,v 1.1 2002/02/15 05:02:04 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.7.ebuild,v 1.2 2002/02/27 02:19:55 agenkin Exp $
 
 DESCRIPTION="Fetchmail is a full-featured remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://www.tuxedo.org/~esr/fetchmail/"
@@ -45,7 +45,7 @@ src_install() {
 }
 
 pkg_postinst() {
-        if python -c "import tkinter" >/dev/null 2>&1
+        if python -c "import Tkinter" >/dev/null 2>&1
         then
             true
         else
