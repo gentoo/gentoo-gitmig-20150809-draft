@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2_pre1.ebuild,v 1.2 2003/03/01 08:36:49 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2.ebuild,v 1.1 2003/03/05 20:37:40 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -34,7 +34,7 @@ strip-flags
 export CFLAGS="${CFLAGS//-O?} -O2"
 export CXXFLAGS="${CFLAGS}"
 
-NPTL_VER="0.24"
+NPTL_VER="0.28"
 
 # Minimum kernel version for --enable-kernel
 export MIN_KV="2.4.1"
@@ -234,7 +234,7 @@ src_unpack() {
 	
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
-#	tar xjf ${FILESDIR}/glibc-manpages-${MY_PV}.tar.bz2
+	use_nptl || tar xjf ${FILESDIR}/glibc-manpages-${MY_PV}.tar.bz2
 	
 	cd ${S}
 	# Extract our threads package ...
@@ -408,8 +408,10 @@ EOF
 
 		einfo "Installing man pages and docs..."
 		# Install linuxthreads man pages
-		dodir /usr/share/man/man3
-		doman ${S}/man/*.3thr
+		use_nptl || {
+			dodir /usr/share/man/man3
+			doman ${S}/man/*.3thr
+		}
 		
 		# Install nscd config file
 		insinto /etc
