@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.28 2004/11/09 21:32:58 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.29 2004/11/12 15:51:55 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="GNU lexical analyser generator"
 HOMEPAGE="http://lex.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="FLEX"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="build static"
 
 DEPEND="virtual/libc"
@@ -29,18 +29,13 @@ src_unpack() {
 }
 
 src_compile() {
-
 	./configure \
 		--prefix=/usr \
 		--host=${CHOST} \
 		|| die
 
-	if use static
-	then
-		emake -j1 LDFLAGS=-static || die "emake failed"
-	else
-		emake -j1 || die "emake failed"
-	fi
+	use static && append-ldflags -static
+	emake -j1 LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_test() {
