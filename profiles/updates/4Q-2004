@@ -249,3 +249,4 @@ move dev-libs/fftw sci-libs/fftw
 move app-sci/gempak sci-geosciences/gempak
 move app-sci/gmt sci-geosciences/gmt
 move app-sci/vis5d+ sci-geosciences/vis5d+
+move app-misc/grass sci-geosciences/grass
