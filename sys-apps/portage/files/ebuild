@@ -571,15 +571,6 @@ dyn_install() {
 
 dyn_merge() {
     trap "" SIGINT SIGQUIT
-    #not interruptible, so that the db doesn't get garbled
-    if [ -d ${ROOT}var/db/pkg/${CATEGORY}/${PF} ]
-    then
-	echo 
-	echo '!!!' "${PF} already merged in ${ROOT} -- unmerge first" 
-	echo
-	exit 1
-    fi
-    echo
     pkg_preinst
     #/usr/sbin/portage-merge
 	dopython portage.merge "$CATEGORY" "$PF" "$D"
@@ -770,8 +761,14 @@ src_menu() {
 		;;
 
 	qmerge)
-	    dyn_merge
-	    ;;
+		#this is meant to merge over an existing version even if it exists
+		dyn_check
+		dyn_fetch
+		dyn_unpack
+		dyn_compile
+		dyn_install
+		dyn_merge
+		;;
 
  	merge)
 		merge_check

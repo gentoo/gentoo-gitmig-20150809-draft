@@ -221,7 +221,10 @@ def merge(mycategory,mypackage,mystart):
 		os.mkdir(root+"var/db/pkg/"+mycategory,0755)
 	if not os.path.isdir(root+"var/db/pkg/"+mycategory+"/"+mypackage):
 		os.mkdir(root+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
-	outfile=open(root+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS","w")
+	contentsfile=root+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS"
+	if os.path.exists(contentsfile):
+		os.unlink(contentsfile)
+	outfile=open(contentsfile,"w")
 	mergefiles(outfile,mystart)
 	outfile.close()
 	print
