@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.1.19-r2.ebuild,v 1.1 2001/02/21 07:31:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.1.19-r2.ebuild,v 1.2 2001/02/21 07:39:50 achim Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -25,8 +25,8 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
          http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz 
          http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-${JFSV}-patch.tar.gz
          ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
-	 ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-2.4.2-pre4-reiserfs-20010220.patch.gz"
-#         ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz
+	 ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-2.4.2-pre4-reiserfs-20010220.patch.gz
+         ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
