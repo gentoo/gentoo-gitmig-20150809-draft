@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.44 2005/03/09 06:17:04 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.45 2005/03/10 04:42:33 morfic Exp $
+
+  09 Mar 2005; Daniel Goller <morfic@gentoo.org> boost-1.32.0-r1.ebuild:
+  set paths for icc to properly build all boost targets
+  special thanks to steveb
 
   08 Mar 2005; Daniel Goller <morfic@gentoo.org> boost-1.32.0-r1.ebuild:
   adding -sINTEL_PATH="/opt/intel/compiler80/" for them icc users
