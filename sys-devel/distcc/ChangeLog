@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.95 2004/02/23 01:20:01 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.96 2004/02/23 01:53:12 lisa Exp $
+
+  22 Feb 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.11.1.ebuild,
+  distcc-2.11.2-r1.ebuild, distcc-2.11.2.ebuild, distcc-2.8-r2.ebuild,
+  distcc-2.9.ebuild:
+  Removing old stuff since everyone is now stable on 2.12.1. (cool huh)
 
   22 Feb 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.12.1.ebuild:
   Move 2.12.1 to stable on ppc. Directory cleanup in this dir to follow
