@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.133 2005/03/21 06:01:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.134 2005/03/22 10:30:26 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -613,7 +613,7 @@ create_gcc_env_entry() {
 
 		local abi=${DEFAULT_ABI}
 		local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-		if [[ ${MULTIDIR} != "." ]] ; then
+		if [[ ${MULTIDIR} == "." ]] ; then
 			LDPATH="${LIBPATH}"
 		else
 			LDPATH="${LIBPATH}/${MULTIDIR}"
@@ -622,7 +622,8 @@ create_gcc_env_entry() {
 		for abi in $(get_all_abis) ; do
 			[[ ${abi} == ${DEFAULT_ABI} ]] && continue
 
-			if [[ ${MULTIDIR} != "." ]] ; then
+			MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)			
+			if [[ ${MULTIDIR} == "." ]] ; then
 				LDPATH="${LDPATH}:${LIBPATH}"
 			else
 				LDPATH="${LDPATH}:${LIBPATH}/${MULTIDIR}"
