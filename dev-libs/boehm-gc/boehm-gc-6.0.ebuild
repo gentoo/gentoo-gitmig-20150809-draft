@@ -1,15 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.0.ebuild,v 1.8 2003/02/13 10:34:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.0.ebuild,v 1.9 2003/08/05 19:02:13 vapier Exp $
 
-S=${WORKDIR}/gc6.0
+S=${WORKDIR}/gc${PV}
+
 DESCRIPTION="The Boehm-Demers-Weiser conservative garbage collector can be used as a garbage collecting replacement for C malloc or C++ new. It is also used by a number of programming language implementations that use C as intermediate code."
-SRC_URI="http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/gc6.0.tar.gz"
 HOMEPAGE="http://www.hpl.hp.com/personal/Hans_Boehm/gc/"
+SRC_URI="http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/gc6.0.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc "
+SLOT="0"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc"
 
@@ -17,7 +18,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	dodir /usr/include/gc
 	insinto /usr/include/gc
 	doins include/*.h 

@@ -1,21 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/atlas-3.4.1.ebuild,v 1.2 2003/04/06 07:39:47 george Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/atlas-3.4.1.ebuild,v 1.3 2003/08/05 19:01:24 vapier Exp $
 
-IUSE=""
+DESCRIPTION="Automatically Tuned Linear Algebra Software (BLAS implementation)"
+HOMEPAGE="http://math-atlas.sourceforge.net/"
+SRC_URI="mirror://sourceforge/math-atlas/${PN}${PV}.tar.bz2"
 
-S="${WORKDIR}/ATLAS"
-DESCRIPTION="automatically tuned linear algebra software"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/math-atlas/${PN}${PV}.tar.bz2"
-HOMEPAGE="http://math-atlas.sourceforge.net"
-
-KEYWORDS="x86 sparc"
 LICENSE="BSD"
-#not sure if this is a best choice, as this is a lib,
-#but setting SLOT to 0, following previous version
 SLOT="0"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc"
+
+S=${WORKDIR}/ATLAS
 
 src_compile() {
 	# create a file answer to be redirected to make

@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/atlas-3.2.1.ebuild,v 1.7 2003/02/13 10:33:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/atlas-3.2.1.ebuild,v 1.8 2003/08/05 19:01:24 vapier Exp $
 
-S=${WORKDIR}/ATLAS
-DESCRIPTION="Automatically Tuned Linear Algebra Software (BLAS implementation)."
-SRC_URI="http://www.netlib.org/atlas/${PN}${PV}.tgz"
+DESCRIPTION="Automatically Tuned Linear Algebra Software (BLAS implementation)"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
+SRC_URI="http://www.netlib.org/atlas/${PN}${PV}.tgz"
 
-SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc "
+SLOT="0"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc"
+
+S=${WORKDIR}/ATLAS
 
 src_compile() {
  
