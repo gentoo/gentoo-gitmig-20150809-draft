@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.6.ebuild,v 1.4 2002/10/05 05:39:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.6.ebuild,v 1.5 2002/10/16 09:23:46 azarah Exp $
 
 IUSE="nls"
 
@@ -9,6 +9,7 @@ DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 	 mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://galeon.sourceforge.net"
+
 LICENSE="GPL-2"
 KEYWORDS="x86"
 SLOT="0"
@@ -25,7 +26,6 @@ DEPEND=">=net-www/mozilla-1.0.1
 	>=media-libs/gdk-pixbuf-0.16.0-r1
 	nls? ( sys-devel/gettext
 	>=dev-util/intltool-0.11 )"
-
 	# bonobo? ( >=gnome-base/bonobo-1.0.19-r1 )
 
 pkg_setup() {
@@ -47,7 +47,7 @@ pkg_setup() {
 src_unpack () {
 	unpack ${A} 
 	cd ${S}
-	patch -p1 < ${FILESDIR}/galeon-1.2.6-to-printpreview.patch	
+	patch -p1 < ${FILESDIR}/galeon-1.2.6-to-printpreview.patch || die
 }
 
 
