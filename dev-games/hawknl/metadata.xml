@@ -14,7 +14,7 @@ for multiple network transports. NL has been tested on Windows
 MacOS X. There are also the two high level APIs, HawkNLU(tm) (NLU) 
 and HawkVoice(tm), which are built on top of NL. It is NLU and 
 HawkVoice(tm) that are most exciting, since they give developers 
-portable, easy to use alternatives to Microsoft®'s DirectPlay® and 
-DirectPlay® Voice.
+portable, easy to use alternatives to MicrosoftÂ®'s DirectPlayÂ® and 
+DirectPlayÂ® Voice.
 </longdescription>
 </pkgmetadata>
