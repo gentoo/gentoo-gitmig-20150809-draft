@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvutil
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.13 2004/10/11 15:45:07 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.14 2004/11/17 04:42:13 mr_bones_ Exp $
+
+  16 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> -dvutil-0.12.10.ebuild:
+  clean old ebuild
 
   11 Oct 2004; <dams@gentoo.org> dvutil-0.13.13.ebuild:
   added die error messages
