@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.64 2003/11/15 02:49:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.65 2003/11/16 16:04:11 spider Exp $
+
+
+*nautilus-2.4.1-r1 (16 Nov 2003)
+
+  16 Nov 2003; Spider <spider@gentoo.org> nautilus-2.4.1-r1.ebuild,
+  files/nautilus-2-disable-cdda.patch:
+  Add a fix to disable random linking to cdparanoia without telling maintainers
+  or developers. This should hopefully go into stable ASAP.
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> nautilus-2.4.0.ebuild:
   Stable on ia64
