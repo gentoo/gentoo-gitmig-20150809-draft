@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.99.4.ebuild,v 1.1 2003/08/15 18:25:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.99.4-r1.ebuild,v 1.1 2003/08/15 19:06:49 spider Exp $
 
 inherit eutils debug
 
@@ -46,9 +46,13 @@ DEPEND="${RDEPEND}
 # switches do not work by the looks of it
 
 src_compile() {
-
 	./autogen.sh
 
+	# this is a hack since I don't want to go hack in the gnome-vfs headerfiles.
+	# The issue is about gnome-vfs containing "long long" which makes gcc 3.3.1 balk
+	cp configure configure.old
+	cat configure.old |sed s:-pedantic::g >configure	
+	rm -f configure.old 
 	econf \
 		`use_enable gnome` \
 		`use_with xml2 libxml2` \
