@@ -1,4 +1,4 @@
-MD5 6b27e4825717c5c441904be704bbd5f4 ChangeLog 5109
+MD5 9b9941774a5d3438c19f437e777496bf ChangeLog 5197
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 bfb9cdc72acb74032ddf255b4d1a5a2e mod_perl-1.27-r1.ebuild 1423
 MD5 8a0d2f0c7b7d8c36e2ddb832c504ed9f mod_perl-1.27-r2.ebuild 1817
@@ -9,7 +9,7 @@ MD5 e48765f4129ef6e27824df62a47fd14a mod_perl-1.29.ebuild 2470
 MD5 a1141c430c0b7356ce812dd1bfd8854a mod_perl-1.99.08.ebuild 1237
 MD5 b101308b1017072f3d62def1ed834ab1 mod_perl-1.99.09.ebuild 3673
 MD5 a366c1cb1f861c8f0041d9ce4e210698 mod_perl-1.99.10.ebuild 3824
-MD5 b0ea6e6ee452ec46d1fde6c52be555ef mod_perl-1.99.11.ebuild 3778
+MD5 0525b089ad91f31dffd83c0d1300ffc4 mod_perl-1.99.11.ebuild 3783
 MD5 2415e6be73ba155382b34b5e2fad4951 files/75_mod_perl.conf 247
 MD5 39a4d91d1d90d32f90dea3c00a1680d7 files/apache2-mod_perl-startup.pl 483
 MD5 05455750ba5b64e18dbcfd113193e7cd files/digest-mod_perl-1.27 65

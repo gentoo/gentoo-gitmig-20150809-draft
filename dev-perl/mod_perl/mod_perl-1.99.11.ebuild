@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.11.ebuild,v 1.7 2004/08/08 02:21:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.11.ebuild,v 1.8 2004/08/28 15:34:28 dholm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://perl.apache.org/dist/${MY_P}.tar.gz"
 HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 amd64 alpha ~ia64 ~sparc"
+KEYWORDS="~x86 amd64 alpha ~ia64 ~sparc ~ppc"
 IUSE=""
 SLOT="1"
 
