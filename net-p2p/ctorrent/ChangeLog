@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ctorrent
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.4 2004/11/29 03:22:27 squinky86 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.5 2005/02/05 21:07:52 luckyduck Exp $
+
+  05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> ctorrent-1.3.4-r1.ebuild:
+  added ~amd64 to KEYWORDS. fixes #80897
 
 *ctorrent-1.3.4-r1 (28 Nov 2004)
 
