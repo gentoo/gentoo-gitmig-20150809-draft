@@ -1,6 +1,37 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.7 2002/09/19 21:32:30 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.8 2002/09/21 22:32:58 lostlogic Exp $
+
+*lolo-sources-2.4.19.10_pre2 (21 Sep 2002)
+
+  21 Sep 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.19.10_pre2.ebuild:
+
+  Due to difficulties in getting updates, we had to drop the planned
+  fixes for amd74xx (amd760mpx), hpt366 (hpt370+), and radeonfb...
+
+  I also haven't been having luck finding fixes for sim710.c or i810_dma.c
+
+  However, I think that the other things that have gone into this kernel
+  warrant it's release as -r10 with only the additional work noted below.
+
+  New this version:
+  - Add and re-arrange VIA bugfixes
+  - LVcool AMD Athlon/Duron Cooling
+  - Update grsecurity
+  - Switch to latest release IPSEC Free S/WAN
+  - Add usbdnet support for Zaurus handhelds
+  - Change versioning again, now I can use a consistant method to create
+    versions for all the kernels that I do the ebuilds for.  This kernel
+    is now 2.4.19-lolo-r10_pre2
+
+  Coming before gentoo-sources-2.4.19-r10:
+  - Add a method for users to turn off patches with a shell var
+  - updated defconfig patch with better defaults for i386
+  - updated and improved patches.txt documentation
+  - incorporate ACPI from acpi.sourceforge.net (this is now debatible,
+    mjc says that it can still physically break machines, this may
+    become an optional patch maybe I'll do the merge and leave it to
+    users to use it if they want to.)
 
 *lolo-sources-2.4.19.10_pre1 (19 Sep 2002)
 

@@ -3,11 +3,12 @@
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
-OKV=2.4.19
-KV=${PV}
-EXTRAVERSION="`echo ${KV}|sed -e 's:.*\(\.[^\.]*\):\1:'`"
+OKV="`echo ${PV}|sed -e 's:\(^.*\)\.[^\.]*:\1:'`"
+EXTRAVERSION="`echo ${P} | \
+	sed -e 's:^\(.*\)-sources-[0-9]\+\.[0-9]\+\.[0-9]\+.r*\([0-9]*\)\(.*$\):-\1-r\2\3:'`"
+KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
-[ -z "${ETYPE}" ] && ETYPE="sources"
+ETYPE="sources"
 
 #Documentation on the patches contained in this kernel will be installed
 #to /usr/share/doc/lolo-sources-${PV}/patches.txt.gz
@@ -21,18 +22,17 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 
-if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
+if [ $ETYPE = "sources" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-	RDEPEND="${RDEPEND}
-		 >=sys-libs/ncurses-5.2
-		 sys-devel/perl
-		 >=sys-apps/modutils-2.4.2
-		 sys-devel/make"
+	DEPEND="!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 )"
+	RDEPEND="${DEPEND}
+		 !build? ( >=sys-libs/ncurses-5.2
+			   sys-devel/perl
+			   >=sys-apps/modutils-2.4.2
+			   sys-devel/make )"
 fi
 
-DEPEND="${DEPEND} app-admin/addpatches"
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
 
 src_unpack() {
@@ -42,15 +42,12 @@ src_unpack() {
 	# Now we need to deal with the tarball of patches.
 	cd ${KV}
 	[ `use crypt` ] || rm 8*
-	addpatches . ${WORKDIR}/linux-${KV}
+	#Thers is some anti-grsecurity sentiment, so I'll
+	#make it easy not to patch it in.
+	#Uncomment the following line to not patch grsecurity.
+	#rm 14*
 
-	cd ../linux-${KV}
-	
-	#sometimes we have icky kernel symbols; this seems to get rid of them
-	make distclean || die
-
-	#this file is required for other things to build properly, so we autogenerate it
-	make include/linux/version.h || die
+	./addpatches . ${WORKDIR}/linux-${KV} || die
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
@@ -58,12 +55,19 @@ src_unpack() {
 	chmod -R a+r-w+X,u+w *
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
+	# also fix the EXTRAVERSION
 	cd ${S}
 	mv Makefile Makefile.orig
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
 	    -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
+	
+	#sometimes we have icky kernel symbols; this seems to get rid of them
+	make distclean || die
+
+	#this file is required for other things to build properly, so we autogenerate it
+	make include/linux/version.h || die
 }
 
 src_compile() {
