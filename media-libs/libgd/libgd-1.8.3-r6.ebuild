@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.3-r6.ebuild,v 1.3 2003/02/08 06:29:33 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.3-r6.ebuild,v 1.4 2003/02/08 06:41:46 lostlogic Exp $
 
 IUSE="X"
 
@@ -43,17 +43,17 @@ src_unpack() {
 		&& compopts="${compopts} -DHAVE_LIBTTF" \
 		&& libsopts="${libsopts} -lttf"
 	
-	cp Makefile Makefile.old
-	if use truetype
+	mv Makefile Makefile.old || die
+	if [ `use truetype` ]
 	then
 		sed -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
 			-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
 			-e "s:^\(INCLUDEDIRS\)=:\1=-I/usr/include/freetype :" \
-		Makefile.old > Makefile
+		Makefile.old > Makefile || die
 	else
-		sed -i -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
+		sed -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
 		-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
-		Makefile.old > Makefile
+		Makefile.old > Makefile || die
 	fi
 
 }
