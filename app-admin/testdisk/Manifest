@@ -1,6 +1,18 @@
-MD5 b6208535a3e0af3983f94a9cbe6bf40d ChangeLog 806
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 99e1f3dd845f583ad01cfaf40f94f46f ChangeLog 979
 MD5 9686c8002b3424dcdf6593002043f3a5 testdisk-5.2.ebuild 846
 MD5 a5818ffbec80e52fcf6d5f3931cbdc74 testdisk-5.3.ebuild 852
-MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
+MD5 e18eb10540dc80dac5f436b82cd48528 metadata.xml 398
+MD5 55b0b9e794aa632c8ad5a2e2b8199095 testdisk-5.5.ebuild 794
 MD5 c20ec4c0b429ad420cd79fa49b334e24 files/digest-testdisk-5.2 64
 MD5 ae3fa6940aea5b018c3377fbcdae2981 files/digest-testdisk-5.3 64
+MD5 2bc23dc07ae34d8c00f3f33a0be0968e files/digest-testdisk-5.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB9xxXmdTrptrqvGERAiUkAKCWggy1WAfCwSN8HU9cy7Jto7o2+wCeJbrt
+10ATCa9dDgvqkcyno0J+sV8=
+=Ll9t
+-----END PGP SIGNATURE-----
