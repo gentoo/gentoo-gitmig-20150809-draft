@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnu-netcat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.4 2004/07/25 02:04:51 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.5 2004/07/26 04:14:56 j4rg0n Exp $
+
+  25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org>
+  Fixed Manifest.
 
   24 Jul 2004; Lina Pezzella <burgundy@gentoo.org> :
   gnu-netcat-0.7.1:
