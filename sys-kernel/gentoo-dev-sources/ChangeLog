@@ -1,15 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.10 2003/12/07 17:58:40 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.11 2003/12/10 22:14:10 plasmaroo Exp $
 
 *gentoo-dev-sources-2.6.0_beta11-r2 (07 Dec 2003)
 
   07 Dec 2003; Brad House <brad_mssw@gentoo.org>
   gentoo-dev-sources-2.6.0_beta11-r2.ebuild:
-  bump alsa-driver version to 1.0.0rc2 in-kernel. agpgart updates from dave
-  jones. ieee1394 updates Please see
+  Bump alsa-driver version to 1.0.0rc2 in-kernel. Added agpgart updates 
+  from Dave jones. IEEE1394 updates also added. Please see
   http://dev.gentoo.org/~brad_mssw/kernel_patches/2.6.0/genpatches-0.8/README
-  for more info
+  for more info...
 
 *gentoo-dev-sources-2.6.0_beta11-r1 (01 Dec 2003)
 

@@ -1,12 +1,12 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.19 2003/12/05 20:26:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.20 2003/12/10 22:12:20 plasmaroo Exp $
 
   05 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
   usermode-sources-2.4.19-r51.ebuild, usermode-sources-2.4.20-r1.ebuild,
   usermode-sources-2.4.21.ebuild, usermode-sources-2.4.22-r1.ebuild,
   usermode-sources-2.4.22.ebuild:
-  fixed chown syntax
+  Fixed the "chown" syntax to comply with the new POSIX standards.
 
 *usermode-sources-2.4.22-r1 (02 Dec 2003)
 
@@ -70,7 +70,7 @@
 
   23 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
   usermode-sources-2.4.18-r2 : Ulf.Bartelt@t-online.de (Ulf Bartelt) 
-  submitted this new ebuild, which basically patches with a newer patch.
+  submitted this new ebuild, which basically patches with a newer patchset.
 
 *usermode-kernel-2.4.18 (4 March 2002)
 
