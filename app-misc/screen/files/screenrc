@@ -43,8 +43,8 @@
 # VARIABLES
 # ===============================================================
 # No annoying audible bell, using "visual bell"
-  vbell on				# default: off
-  vbell_msg "   -- Bell,Bell!! --   "	# default: "Wuff,Wuff!!"
+# vbell on				# default: off
+# vbell_msg "   -- Bell,Bell!! --   "	# default: "Wuff,Wuff!!"
 
 # Automatically detach on hangup. 
   autodetach on				# default: on
