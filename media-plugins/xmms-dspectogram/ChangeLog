@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-dspectogram
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/ChangeLog,v 1.6 2004/04/20 17:50:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/ChangeLog,v 1.7 2004/04/22 06:21:15 eradicator Exp $
+
+  21 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-dspectogram-1.2.1.ebuild:
+  Inherit eutils.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-dspectogram-1.2.1.ebuild, xmms-dspectogram-1.2.ebuild:

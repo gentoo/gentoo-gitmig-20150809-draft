@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-dspectral
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectral/ChangeLog,v 1.8 2004/04/20 17:51:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectral/ChangeLog,v 1.9 2004/04/22 06:21:03 eradicator Exp $
+
+  21 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-dspectral-1.2.1.ebuild:
+  Inherit eutils.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-dspectral-1.2.1.ebuild, xmms-dspectral-1.2.ebuild:
