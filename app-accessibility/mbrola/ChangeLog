@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.9 2004/10/05 10:33:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.10 2004/10/19 05:42:09 eradicator Exp $
+
+  18 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mbrola-3.0.1h-r1.ebuild:
+  Stable sparc.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   mbrola-3.0.1h-r1.ebuild:

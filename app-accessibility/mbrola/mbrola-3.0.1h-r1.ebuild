@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.10 2004/10/05 10:33:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.11 2004/10/19 05:42:09 eradicator Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ DEPEND=">=app-accessibility/festival-1.4.2
 
 SLOT="0"
 LICENSE="MBROLA"
-KEYWORDS="x86 ~sparc amd64 ppc"
+KEYWORDS="x86 sparc amd64 ppc"
 
 src_compile() {
 	case ${ARCH} in
