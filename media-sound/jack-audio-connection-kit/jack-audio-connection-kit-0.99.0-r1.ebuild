@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r1.ebuild,v 1.1 2004/12/06 07:33:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0-r1.ebuild,v 1.2 2004/12/06 07:34:06 eradicator Exp $
 
 IUSE="altivec alsa caps doc debug jack-tmpfs oss portaudio"
 
@@ -67,7 +67,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} \
 		datadir=${D}/usr/share \
-		program_transform_name="s,x,x," \
 		install || die
 
 	if ! use jack-tmpfs; then

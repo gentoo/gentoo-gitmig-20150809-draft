@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.49 2004/12/06 07:33:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.50 2004/12/06 07:34:06 eradicator Exp $
 
 *jack-audio-connection-kit-0.99.0-r1 (05 Dec 2004)
 
@@ -9,11 +9,6 @@
   -jack-audio-connection-kit-0.99.0.ebuild:
   Don't assume optimized... let users set CFLAGS... --enable-optimize breaks
   sometimes. Closes bug #73406.
-
-  04 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  jack-audio-connection-kit-0.99.0.ebuild:
-  Fixed install under certain circumstances where the Makefile insisted on
-  prefixing the binaries with CHOST.
 
   12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   jack-audio-connection-kit-0.99.0.ebuild:
