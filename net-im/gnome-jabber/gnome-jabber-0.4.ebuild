@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.10 2005/01/15 12:33:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.11 2005/03/05 10:49:57 josejx Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://gnome-jabber.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64 ~ppc"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0.4
