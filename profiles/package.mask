@@ -619,10 +619,5 @@ app-cdr/cddump
 =net-misc/ntp-4.1.72*
 
 # seemant@gentoo.org 1 May 2002
-# masking xine-ui with directfb support until the requisite extra files tarball
-# appears on the ibiblio mirror
-=media-video/xine-ui-0.9.9-r1
-
-# seemant@gentoo.org 1 May 2002
 # libpng-1.2.2 -- coz users don't --clean rsync like they should
 =media-libs/libpng-1.2.2
