@@ -1,4 +1,4 @@
-MD5 31fe1df6dade4cce068f8429aae09008 ChangeLog 24160
+MD5 a55f4660a9049ceb5c31ae68bfffdae0 ChangeLog 24270
 MD5 ad25a2a0b6ade60c13ad8040f3c319c6 metadata.xml 378
 MD5 893517a6e0ac0aacc24a86edd1b1a30a mips-sources-2.4.25-r9.ebuild 3541
 MD5 934e335d3e0c5b3db9d0eedb85939a08 mips-sources-2.4.26-r9.ebuild 2826
@@ -15,4 +15,4 @@ MD5 9702a71d858fa96d68bf98b60777b6ff files/digest-mips-sources-2.6.4-r9 468
 MD5 504a5c390970d4da0c25c1eefa6a3958 files/digest-mips-sources-2.6.6-r9 468
 MD5 ec15aeb9b5f17b470c6080185ccf7dba files/digest-mips-sources-2.6.7-r7 468
 MD5 666046b65f46134e19982a15ea560454 files/digest-mips-sources-2.6.8.1-r1 389
-MD5 b7138e183ab91405dfb41f27e5d0a4a9 files/digest-mips-sources-2.6.9-r1 385
+MD5 a7dc31c1652055f320252220b9804e78 files/digest-mips-sources-2.6.9-r1 385
