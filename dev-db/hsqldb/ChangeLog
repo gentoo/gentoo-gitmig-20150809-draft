@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.3 2005/01/01 17:33:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.4 2005/01/18 16:47:50 luckyduck Exp $
+
+  18 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> hsqldb-1.7.2.4.ebuild:
+  minor dependency issue and a typo in pkg_postinst removed. fixes bug #78414.
 
 *hsqldb-1.7.2.4 (03 Nov 2004)
 
