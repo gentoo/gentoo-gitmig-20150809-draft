@@ -1,3 +1,5 @@
-MD5 6f3fe6a2bdc32d8a1a754f8f0f3f9adc ChangeLog 540
+MD5 2ace1ca0ae2b9f4b4ef6bceb2e475312 ChangeLog 680
 MD5 427e3c72507c51e95488def4596b2f31 ladspa-cmt-1.14.ebuild 873
-MD5 6bb9c3395445920cba1b45b6149943b6 files/digest-ladspa-cmt-1.14 55
+MD5 63068baf5ef1c7c87d89a8fe0dd8e0c8 ladspa-cmt-1.15.ebuild 879
+MD5 0da9dde7734a7551fbed8825e5e3ceea files/digest-ladspa-cmt-1.15 60
+MD5 1aee6b7e6153ea1ba4b62f44163fa81b files/digest-ladspa-cmt-1.14 55
