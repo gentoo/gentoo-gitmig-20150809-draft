@@ -1,6 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r11.ebuild,v 1.6 2005/03/21 21:50:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r12.ebuild,v 1.1 2005/03/23 18:44:11 lanius Exp $
+
+# disable sandbox, needed for motif-config
+SANDBOX_DISABLED="1"
 
 inherit eutils flag-o-matic multilib
 
@@ -155,27 +158,21 @@ src_install() {
 
 	dodoc README COPYRIGHT.MOTIF RELEASE RELNOTES
 	dodoc BUGREPORT OPENBUGS CLOSEDBUGS
+
+	# profile stuff
+	motif-config --finish-install
 }
 
 # Profile stuff
 pkg_setup() {
 	motif-config --start-install
+	if has_version =x11-libs/openmotif-2.1*; then touch $T/upgrade; fi
 }
 
 pkg_postinst() {
-	motif-config --finish-install
 	motif-config --install openmotif-2.1
 }
 
-is_upgrade() {
-	vdb_path=`portageq vdb_path`
-	if [ "`grep -r SLOT $vdb_path/${CATEGORY}/${PN}* | grep $SLOT`" ]; then
-		return 0
-	else
-		return 1
-	fi
-}
-
 pkg_postrm() {
-	is_upgrade || motif-config --uninstall openmotif-2.1
+	[ -f $T/upgrade ] || motif-config --uninstall openmotif-2.1
 }

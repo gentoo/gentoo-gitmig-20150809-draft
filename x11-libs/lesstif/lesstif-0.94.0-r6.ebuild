@@ -1,6 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r5.ebuild,v 1.4 2005/03/14 13:57:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r6.ebuild,v 1.1 2005/03/23 18:43:43 lanius Exp $
+
+# disable sandbox, needed for motif-config
+SANDBOX_DISABLED="1"
 
 inherit libtool flag-o-matic multilib
 
@@ -83,27 +86,20 @@ src_install() {
 	rm -fR ${D}/usr/$(get_libdir)/lesstif-2.1/X11/
 	rm -fR ${D}/usr/$(get_libdir)/X11/
 
+	# profile stuff
+	motif-config --finish-install
 }
 
 # Profile stuff
 pkg_setup() {
 	motif-config --start-install
+	if has_version ">=x11-libs/lesstif-0.94.0"; then touch $T/upgrade; fi
 }
 
 pkg_postinst() {
-	motif-config --finish-install
 	motif-config --install lesstif-2.1
 }
 
-is_upgrade() {
-	vdb_path=`portageq vdb_path`
-	if [ "`grep -r SLOT $vdb_path/${CATEGORY}/${PN}* | grep $SLOT`" ]; then
-		return 0
-	else
-		return 1
-	fi
-}
-
 pkg_postrm() {
-	is_upgrade || motif-config --uninstall lesstif-2.1
+	[ -f $T/upgrade ] || motif-config --uninstall lesstif-2.1
 }

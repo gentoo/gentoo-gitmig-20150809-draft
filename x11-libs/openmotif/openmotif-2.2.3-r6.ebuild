@@ -1,6 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r5.ebuild,v 1.5 2005/03/14 13:57:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r6.ebuild,v 1.1 2005/03/23 18:44:11 lanius Exp $
+
+# disable sandbox, needed for motif-config
+SANDBOX_DISABLED="1"
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -19,10 +22,10 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	!ppc-macos? ( =sys-devel/automake-1.4* )
 	=sys-devel/autoconf-2.5*
-	>=x11-libs/motif-config-0.5"
+	>=x11-libs/motif-config-0.6"
 RDEPEND="virtual/libc
 	virtual/x11
-	>=x11-libs/motif-config-0.5"
+	>=x11-libs/motif-config-0.6"
 
 PROVIDE="virtual/motif"
 SLOT="2.2"
@@ -30,6 +33,10 @@ SLOT="2.2"
 pkg_setup() {
 	# multilib includes don't work right in this package...
 	[ -n "${ABI}" ] && append-flags "-I/usr/include/gentoo-multilib/${ABI}"
+
+	# profile stuff
+	motif-config --start-install
+	if has_version =x11-libs/openmotif-2.2*; then touch $T/upgrade; fi
 }
 
 src_unpack() {
@@ -126,27 +133,16 @@ src_install() {
 	dodoc COPYRIGHT.MOTIF LICENSE
 	dodoc README RELEASE RELNOTES
 	dodoc BUGREPORT TODO
+
+	# finish installation
+	motif-config --finish-install
 }
 
 # Profile stuff
-pkg_setup() {
-	motif-config --start-install
-}
-
 pkg_postinst() {
-	motif-config --finish-install
 	motif-config --install openmotif-2.2
 }
 
-is_upgrade() {
-	vdb_path=`portageq vdb_path`
-	if [ "`grep -r SLOT $vdb_path/${CATEGORY}/${PN}* | grep $SLOT`" ]; then
-		return 0
-	else
-		return 1
-	fi
-}
-
 pkg_postrm() {
-	is_upgrade || motif-config --uninstall openmotif-2.2
+	[ -f $T/upgrade ] || motif-config --uninstall openmotif-2.2
 }

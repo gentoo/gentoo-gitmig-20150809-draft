@@ -1,13 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r2.ebuild,v 1.4 2005/03/14 13:57:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r3.ebuild,v 1.1 2005/03/23 18:43:43 lanius Exp $
+
+# disable sandbox, needed for motif-config
+SANDBOX_DISABLED="1"
 
 inherit libtool flag-o-matic multilib
 
 DESCRIPTION="An OSF/Motif(R) clone"
 HOMEPAGE="http://www.lesstif.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-	mirror://debian/pool/main/l/lesstif1-1/lesstif1-1_0.93.94-11.diff.gz"
+	mirror://debian/pool/main/l/lesstif1-1/lesstif1-1_0.93.94-11.1.diff.gz"
 
 LICENSE="LGPL-2"
 SLOT="1.2"
@@ -16,14 +19,14 @@ IUSE="static"
 
 DEPEND="virtual/libc
 	virtual/x11
-	>=x11-libs/motif-config-0.5"
+	>=x11-libs/motif-config-0.6"
 
 PROVIDE="virtual/motif"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${DISTDIR}/lesstif1-1_0.93.94-11.diff.gz
+	epatch ${DISTDIR}/lesstif1-1_0.93.94-11.1.diff.gz
 }
 
 src_compile() {
@@ -87,27 +90,20 @@ src_install() {
 	rm -fR ${D}/usr/$(get_libdir)/lesstif-1.2/X11/
 	rm -fR ${D}/usr/$(get_libdir)/X11/
 
+	# profile stuff
+	motif-config --finish-install
 }
 
 # Profile stuff
 pkg_setup() {
 	motif-config --start-install
+	if has_version =x11-libs/lesstif-0.93.94*; then touch $T/upgrade; fi
 }
 
 pkg_postinst() {
-	motif-config --finish-install
 	motif-config --install lesstif-1.2
 }
 
-is_upgrade() {
-	vdb_path=`portageq vdb_path`
-	if [ "`grep -r SLOT $vdb_path/${CATEGORY}/${PN}* | grep $SLOT`" ]; then
-		return 0
-	else
-		return 1
-	fi
-}
-
 pkg_postrm() {
-	is_upgrade || motif-config --uninstall lesstif-1.2
+	[ -f $T/upgrade ] || motif-config --uninstall lesstif-1.2
 }
