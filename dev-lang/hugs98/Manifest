@@ -1,18 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6d2a663977f8149681bce53df81e785 ChangeLog 3646
-MD5 50b209165d0f91988c32ebffa62d87ee hugs98-2002.11-r1.ebuild 1130
-MD5 e9e9352e129646bd141ed316037c09db hugs98-2002.11.ebuild 1142
+MD5 215844c8b9e395e0ed39d622dc1a38c3 hugs98-2003.11.ebuild 2180
+MD5 cdfddb4be3f52df941beffa28cff41b1 ChangeLog 3887
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 5416349e8bac79ae9af1c6359478f209 hugs98-2003.11.ebuild 2072
 MD5 eb7ae57bb23e867135381cbd99c5c1c0 files/digest-hugs98-2003.11 67
-MD5 e34344bfc901d89daf1e5350ec13926d files/digest-hugs98-2002.11 67
-MD5 e34344bfc901d89daf1e5350ec13926d files/digest-hugs98-2002.11-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBc/PNVWNWqTUmv+0RAqDgAJ9HVYMngz3eQxiqfUZFSSrr3X2A4QCfahGS
-rYKmZ8/p+2WsPQtu/hknDfo=
-=z2VM
------END PGP SIGNATURE-----
+MD5 4c6e27fe15252dea9f141e0f6b06ed36 files/hugs98-2003.11-gcc34.patch 303
