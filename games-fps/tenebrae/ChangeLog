@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tenebrae
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/ChangeLog,v 1.4 2004/06/24 22:47:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/ChangeLog,v 1.5 2004/12/25 05:39:35 vapier Exp $
+
+  25 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/1.04-glhax.patch,
+  -files/1.04-nvidia-opengl.patch, tenebrae-1.04.ebuild:
+  Update the opengl patch #75526.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> tenebrae-1.04.ebuild:
   Fix use invocation

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.6 2004/11/03 00:28:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.7 2004/12/25 05:39:35 vapier Exp $
 
 #ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
 #ECVS_MODULE="tenebrae_0"
@@ -28,13 +28,15 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}
 
 src_unpack() {
-	unpack ${A}
-	#cvs_src_unpack
+	if [[ -z ${ECVS_MODULE} ]] ; then
+		unpack ${A}
+	else
+		cvs_src_unpack
+	fi
 	cd tenebrae_0
-	local gl="`ls -al /usr/include/GL/gl.h  | awk '{print $NF}' | cut -d/ -f5`"
-	[ "${gl}" == "nvidia" ] && epatch ${FILESDIR}/${PV}-nvidia-opengl.patch
+	epatch ${FILESDIR}/${PV}-glhax.patch
 	cd linux
-	sed "s:-mpentiumpro:${CFLAGS}:" Makefile.i386linux > Makefile
+	sed "s:-mpentiumpro -O6:${CFLAGS}:" Makefile.i386linux > Makefile
 	#if use sdl ; then
 	#	cd ../sdl
 	#	./autogen.sh
@@ -52,9 +54,9 @@ src_compile() {
 }
 
 src_install() {
-	newgamesbin tenebrae_0/linux/release*/bin/tenebrae.run tenebrae
+	newgamesbin tenebrae_0/linux/release*/bin/tenebrae.run tenebrae || die "newgamesbin"
 	insinto ${GAMES_DATADIR}/quake-data/tenebrae
-	doins ${WORKDIR}/tenebrae/*
+	doins ${WORKDIR}/tenebrae/* || die "doins data"
 	dodoc tenebrae_0/linux/README ${WORKDIR}/Tenebrae_Readme.txt
 	prepgamesdirs
 }
