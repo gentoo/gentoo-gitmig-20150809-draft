@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/gcc-hppa64
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.1 2004/01/03 18:49:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.2 2004/01/07 21:23:52 gmsoft Exp $
 
 *gcc-hppa64-3.3.2 (03 Jan 2004)
 
-  03 Jan 2004; Guy Martin <gmsoft@gentoo.org> gcc-hppa64-3.3.2 :
+  07 Jan 2004; Guy Martin <gmsoft@gentoo.org> gcc-hppa64-3.3.2.ebuild :
+  Added DEPEND >=binutils-hppa64-2.14.90.0.7.
+
+  03 Jan 2004; Guy Martin <gmsoft@gentoo.org> gcc-hppa64-3.3.2.ebuild :
   First commit of gcc for hppa64. This one will compile 64 bit kernels.
