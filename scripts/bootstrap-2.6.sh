@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.1 2004/01/01 20:45:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.2 2004/04/06 06:43:10 vapier Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -61,7 +61,7 @@ fi
 
 echo
 echo -e "${GOOD}Gentoo Linux${GENTOO_VERS}; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
-echo -e "Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL"
+echo -e "Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL"
 if [ "${STRAP_EMERGE_OPTS}" = "-f" ]
 then
 	echo "Fetching all bootstrap-related archives..."
