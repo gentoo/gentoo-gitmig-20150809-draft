@@ -1,6 +1,11 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.19 2003/02/16 12:15:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.20 2003/06/18 20:01:08 msterret Exp $
+
+*acroread-5.07 (18 Jun 2003)
+
+  18 Jun 2003; <msterret@gentoo.org> acroread-5.07.ebuild:
+  version bump to address Bug 23054
 
 *acroread-5.06-r3 (16 Feb 2003)
 
