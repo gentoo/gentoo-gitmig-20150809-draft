@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.22 2004/07/30 03:40:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.23 2004/11/08 19:31:15 vapier Exp $
 
 inherit gnome2 gnuconfig
 
 DESCRIPTION="GL extensions for gtk+"
 HOMEPAGE="http://www.gnome.org/"
-IUSE=""
-SLOT="2"
+
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64"
+SLOT="2"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+IUSE=""
 
 DEPEND="virtual/libc
 	>=x11-libs/gtk+-2.0.3
@@ -17,11 +18,10 @@ DEPEND="virtual/libc
 	virtual/opengl"
 
 src_compile() {
-
 	gnuconfig_update
 	econf || die
 	emake || die
 
 }
 
-DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README* docs/*.txt"
+DOCS="AUTHORS ChangeLog INSTALL NEWS README* docs/*.txt"
