@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20040616.ebuild,v 1.1 2004/12/23 18:47:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20040616.ebuild,v 1.2 2005/01/03 02:10:22 ribosome Exp $
 
-inherit flag-o-matic gcc
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Development toolkit and applications (BLAST, entrez, ddv, udv, sequin...) for computational biology"
 LICENSE="public-domain"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	doc? ( mirror://gentoo/${PN}-sdk-doc.tar.bz2 )"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ppc-macos"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~ppc-macos"
 IUSE="doc X"
 
 DEPEND="app-shells/tcsh
@@ -77,15 +77,15 @@ src_unpack() {
 
 	# Set C compiler...
 	# ... on x86...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" linux-x86.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" linux-x86.ncbi.mk
 	# ... on alpha...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" linux-alpha.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" linux-alpha.ncbi.mk
 	# ... on hppa...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" hppalinux.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" hppalinux.ncbi.mk
 	# ... on ppc...
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" ppclinux.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" ppclinux.ncbi.mk
 	# ... on generic Linux.
-	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(gcc-getCC)/" linux.ncbi.mk
+	sed -i -e "s/NCBI_CC = gcc/NCBI_CC = $(tc-getCC)/" linux.ncbi.mk
 }
 
 src_compile() {
