@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lufis
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufis/ChangeLog,v 1.1 2004/11/14 15:17:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufis/ChangeLog,v 1.2 2004/12/14 18:00:55 genstef Exp $
+
+  14 Dec 2004; Stefan Schweizer <genstef@gentoo.org> lufis-0.2.ebuild:
+  Changing to allow latest lufs installed parallel.
 
 *lufis-0.2 (14 Nov 2004)
 
