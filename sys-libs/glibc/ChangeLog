@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.173 2004/06/05 15:54:29 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.174 2004/06/05 17:16:30 lv Exp $
+
+*glibc-2.3.4.20040605 (05 Jun 2004)
+
+  05 Jun 2004; Travis Tilley <lv@gentoo.org>
+  +files/2.3.4/glibc-execstack-disable.patch, -glibc-2.3.4.20040602.ebuild,
+  +glibc-2.3.4.20040605.ebuild:
+  new snapshot. it seems i caught Ulrich Drepper in the middle of a commit with
+  my last snapshot, breaking nptl on x86 and possibly elsewhere.
 
 *glibc-2.3.2-r11 (05 Jun 2004)
 

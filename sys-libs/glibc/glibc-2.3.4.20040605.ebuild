@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.12 2004/06/05 01:47:46 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.1 2004/06/05 17:16:30 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -42,7 +42,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${P}.tar.bz2"
 HOMEPAGE="http://sources.redhat.com/glibc/"
 
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
-KEYWORDS="-* ~amd64 ~mips"
+KEYWORDS="-* amd64 ~mips"
 
 SLOT="2.2"
 LICENSE="LGPL-2"
@@ -221,7 +221,8 @@ src_unpack() {
 
 	# version patch
 	cd ${S}
-	sed -i -e "s/stable/2004-06-02/" -e "s/2\.3\.3/2.3.4/" version.h
+	einfo "patching version to display snapshot date"
+	sed -i -e "s/stable/2004-06-05/" -e "s/2\.3\.3/2.3.4/" version.h
 
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
@@ -262,7 +263,9 @@ src_unpack() {
 	# This is due to PaX 'exec-protecting' the stack, and ld.so then trying
 	# to make the stack executable due to some libraries not containing the
 	# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
-	use mips || ( cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch )
+	#use mips || ( cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch )
+
+	epatch ${FILESDIR}/2.3.4/glibc-execstack-disable.patch
 
 	# Program header support for PaX.
 	cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-pt_pax.diff
@@ -277,7 +280,7 @@ src_unpack() {
 
 	# We do not want name_insert() in iconvconfig.c to be defined inside
 	# write_output() as it causes issues with trampolines/PaX.
-	cd ${S}; epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-iconvconfig-name_insert.patch
+	#cd ${S}; epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-iconvconfig-name_insert.patch
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
 	# do can be found in the patch headers.
