@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/riece-0.0.4.ebuild,v 1.2 2003/08/25 13:55:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/riece-0.1.0.ebuild,v 1.1 2003/08/25 13:55:12 usata Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ SRC_URI="http://wiliki.designflaw.org/riece/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="virtual/emacs"
 
@@ -31,5 +31,5 @@ src_install () {
 	elisp-site-file-install ${FILESDIR}/${SITEFILE} || \
 		die "elisp-site-file-install failed"
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
