@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3482 2005/01/12 06:17:43 lisa Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3483 2005/01/12 07:09:18 spyderous Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -183,9 +183,6 @@ sys-kernel/hppa-dev-sources
 # <lu_zero@gentoo.org> (22 Dec 2004)
 # Not ready yet
 =media-gfx/gimp-2.2.0
-
-# <spyderous@gentoo.org> (18 Dec 2004)
-# Development release series
 
 # <trapni@gentoo.org> (18 Dec 2004)
 # Contains a security vulnerability. See #74272.
