@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.5 2004/09/16 06:30:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.6 2004/10/05 15:27:30 aliz Exp $
+
+  05 Oct 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.16.ebuild:
+  Install .htacess file
 
   16 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.16.ebuild:
   Fix creation of some dirs.
