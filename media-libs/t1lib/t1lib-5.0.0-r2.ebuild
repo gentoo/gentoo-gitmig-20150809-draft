@@ -1,21 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.6 2003/10/30 08:14:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.7 2003/11/25 22:22:35 vapier Exp $
 
 inherit gnuconfig flag-o-matic
 
+DESCRIPTION="A Type 1 Font Rasterizer Library for UNIX/X11"
+HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/libs/graphics"
+SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
+
+LICENSE="LGPL-2 GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~amd64"
 IUSE="X doc"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="A Type 1 Font Rasterizer Library for UNIX/X11"
-SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
-HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/libs/graphics"
-
 DEPEND="X? ( virtual/x11 )"
-
-SLOT="0"
-LICENSE="LGPL-2 GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 src_unpack() {
 	unpack ${A}
@@ -26,11 +24,9 @@ src_unpack() {
 	cd ${S}/doc
 	mv Makefile.in Makefile.in-orig
 	sed -e "s:dvips:#dvips:" Makefile.in-orig>Makefile.in
-
 }
 
 src_compile() {
-
 	local myconf
 	local myopt
 
@@ -50,7 +46,6 @@ src_compile() {
 }
 
 src_install() {
-
 	cd lib
 	insinto /usr/include
 	doins t1lib.h
@@ -79,8 +74,7 @@ src_install() {
 	fi
 }
 
-pkg_postinst () {
-
+pkg_postinst() {
 	ewarn
 	ewarn "You must rebuild other packages depending on t1lib."
 	ewarn "You may use revdep-rebuild (from app-portage/gentoolkit)"
