@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.6 2004/04/22 02:45:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.7 2004/05/27 06:12:08 vapier Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -110,20 +110,20 @@ else
 	SLOT="${CCHOST}-${MY_PV}"
 fi
 
-DEPEND="!arm? ( >=sys-libs/glibc-2.3.2-r3 )
+DEPEND=">=sys-libs/glibc-2.3.2-r3
 	mips? ( >=sys-devel/binutils-2.13.90.0.16 )
 	!mips? ( >=sys-devel/binutils-2.13.90.0.18 )
 	>=sys-devel/gcc-config-1.3.1
-	!build? ( !arm? ( >=sys-libs/ncurses-5.2-r2 )
+	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
 # this glibc has the glibc guard symbols which are needed for the propolice functions to get moved to glibc
 # out of the libgcc in this gcc release, however, the propolice patch itself is not defused by this removal
-RDEPEND="!arm? ( >=sys-libs/glibc-2.3.2-r3 )
+RDEPEND=">=sys-libs/glibc-2.3.2-r3
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
-	!build? ( !arm? ( >=sys-libs/ncurses-5.2-r2 ) )"
+	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 PDEPEND="sys-devel/gcc-config"
 
