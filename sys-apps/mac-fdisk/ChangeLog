@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/mac-fdisk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.8 2004/05/29 02:49:41 tgall Exp $
+# $Id: ChangeLog,v 1.9 2004/06/01 20:31:46 pvdabeel Exp $
+
+*mac-fdisk-0.1-r2 (01 Jun 2004)
+
+  01 Jun 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> 
+  mac-fdisk-0.1-r2.ebuild, files/mac-fdisk-ppc.patch:
+  patched macfdisk for 2.6 headers on ppc, ppc64 -r1 patches 
+  is not applied by default on ppc
 
   28 May 2004; Tom Gall <tgall@gentoo.org> mac-fdisk-0.1-r1.ebuild:
   fix a number of 64 bit problems

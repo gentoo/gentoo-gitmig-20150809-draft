@@ -1,8 +1,20 @@
-MD5 d95ac8cbc92ddd4a9e401455d79571f7 files/digest-chpax-0.5 59
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c0adbdf0edc9b770ffcc11e036f748de ChangeLog 2931
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 7473d1cf44e5219c027ab7b882817fda chpax-0.5.ebuild 954
+MD5 ca02d338bf2a6ec01d41689482c61749 chpax-0.6.1.ebuild 1062
 MD5 2b490b5e194b831376794358060fe618 files/pax-conf.d 1767
+MD5 d95ac8cbc92ddd4a9e401455d79571f7 files/digest-chpax-0.5 59
 MD5 10acb7639b93302287f5c1b3f06bdb0d files/pax-init.d 1740
 MD5 1ae95ccec87f81057389495cbc6bb641 files/digest-chpax-0.6.1 62
-MD5 c0adbdf0edc9b770ffcc11e036f748de ChangeLog 2931
-MD5 7473d1cf44e5219c027ab7b882817fda chpax-0.5.ebuild 954
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0cb2e7836dd08761db8cdc354caa7807 chpax-0.6.1.ebuild 1064
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iQCVAwUBQLzneJ4WFLgrx1GWAQIEKAQAoRkd6MOGSDrmogTfILNUXfq09xehalja
+kzQVp3ROt+LKqrw0VsiILS3qUeeiBhQgxjdfG0mc5lv116ZdLrV/B6bx+AYWARyF
+yLhKJo4k0Dori1UPQO7r34ucdEhVKZhxOWFLZHQF1YURtUYcze/bHmPuVoHOcTVH
+c/UEBQ0ddU4=
+=Sjo1
+-----END PGP SIGNATURE-----
