@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 92cde49eaa20936717dd628c5b85ce62 acerhk-0.5.18-r1.ebuild 1118
-MD5 dbfd7d7c9eaaec5ca511222f262efd32 acerhk-0.5.14.ebuild 1295
-MD5 68055f4ce99f180a6272627b21732c4d ChangeLog 1069
+MD5 bb2bfb14bd9eb5ae5ea218dfa7d93880 acerhk-0.5.14.ebuild 1295
+MD5 713129a09a93a1454f15497989960c99 ChangeLog 1206
 MD5 5cb0503040fe79660f0fbbc6773fd9d7 metadata.xml 259
-MD5 11099670b3c1caf4130626c06d8eeb17 acerhk-0.5.18.ebuild 1295
+MD5 bd94fba6c6054c7bfcd8d625181b9755 acerhk-0.5.18.ebuild 1295
 MD5 ffca9b53bdd343a0206d4bed9290df38 files/digest-acerhk-0.5.18-r1 65
 MD5 8abbedc4f60d0f73813a5aec0ff94c36 files/digest-acerhk-0.5.14 65
 MD5 ffca9b53bdd343a0206d4bed9290df38 files/digest-acerhk-0.5.18 65
 MD5 7329ff74633cb9478acf3ba9f535d52c files/acerhk-0.5.18-redef-wireless.patch 911
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2FYHiJcSIUGNthERAhBaAKDPsJ48sGh7Gspw4f325MfrisZptACfURzr
+C4wIEg0lGPdaepLR2bNvGSc=
+=0Nc3
+-----END PGP SIGNATURE-----
