@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.5 2003/08/03 04:44:34 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.6 2003/11/20 01:01:02 gregf Exp $
+
+*tpop3d-1.5.2 (19 Nov 2003)
+
+  19 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> tpop3d-1.5.2.ebuild:
+  Version bump. Closes bug #31792 by Michael C. Ferguson <mcf@augustmail.com>
 
   02 Aug 2003; <iggy@gentoo.org> tpop3d-1.4.2.ebuild, files/tpop3d-init:
   added Gentoo init script, fixes bug # 23401, thanks to Michael C. Ferguson
