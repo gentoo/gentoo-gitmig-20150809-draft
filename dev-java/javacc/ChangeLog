@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/javacc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.1 2004/02/27 15:24:24 zx Exp $
+
+*javacc-3.2 (29 Feb 2004)
+
+  29 Feb 2004; Chris Aniszczyk <zx@gentoo.org> javacc-3.2.ebuild,
+  metadata.xml:
+  Initial Import. Thanks to Dominik Diesch <dominik@dominik.homeunix.org> for
+  the initial ebuild. Closes #20419
+
