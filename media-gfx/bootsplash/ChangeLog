@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.21 2004/02/17 23:49:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.22 2004/02/18 20:24:40 spock Exp $
+
+*bootsplash-0.6-r8 (18 Feb 2004)
+
+  18 Feb 2004; Michal Januszewski <spock@gentoo.org> bootsplash-0.6-r8.ebuild:
+  Yes, they broke it, again! ;) The new 2.6.3_rc4 kernel introduces some new
+  patches, which make the system freeze during boot-time when Bootsplash is
+  used. This revision of the Bootsplash package fixes this issue.
 
   18 Feb 2004; Michal Januszewski <spock@gentoo.org> bootsplash-0.6-r5.ebuild,
   bootsplash-0.6-r6.ebuild, bootsplash-0.6-r7.ebuild:
