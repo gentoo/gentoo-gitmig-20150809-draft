@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achime Gottinger <achim@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-de/ispell-de-20011124.ebuild,v 1.1 2002/04/17 18:46:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-de/ispell-de-20011124.ebuild,v 1.2 2002/04/17 18:47:50 seemant Exp $
 
 MY_P=igerman98-${PV}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="A german dictionary for ispell"
+DESCRIPTION="German and Swiss dictionaries for ispell"
 SRC_URI="http://lisa.goe.net/~bjacke/igerman98/dict/${MY_P}.tar.bz2"
 HOMEPAGE="http://lisa.goe.net/~bjacke/igerman98/dict"
 
