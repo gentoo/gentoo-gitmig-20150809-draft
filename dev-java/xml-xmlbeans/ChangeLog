@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-xmlbeans
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.1 2004/12/19 00:16:11 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.2 2004/12/24 12:46:25 axxo Exp $
+
+  24 Dec 2004; Thomas Matthijs <axxo@gentoo.org>
+  files/xml-xmlbeans-gentoo.patch, xml-xmlbeans-20041217.ebuild:
+  fix #75528
 
 *xml-xmlbeans-20041217 (19 Dec 2004)
 

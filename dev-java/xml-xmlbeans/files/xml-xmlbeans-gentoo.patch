@@ -1,6 +1,6 @@
 diff -uprN xml-xmlbeans-20041217.orig/v1/build.xml xml-xmlbeans-20041217/v1/build.xml
---- xml-xmlbeans-20041217.orig/v1/build.xml	2004-07-23 01:19:05.000000000 +0200
-+++ xml-xmlbeans-20041217/v1/build.xml	2004-12-18 11:53:13.120355176 +0100
+--- xml-xmlbeans-20041217.orig/v1/build.xml	2004-12-24 13:27:42.347587336 +0100
++++ xml-xmlbeans-20041217/v1/build.xml	2004-12-24 13:35:28.859666720 +0100
 @@ -340,7 +340,7 @@
         srcdir="test/src/drt"
         destdir="build/private/classes/drt"
@@ -51,7 +51,7 @@ diff -uprN xml-xmlbeans-20041217.orig/v1/build.xml xml-xmlbeans-20041217/v1/buil
      <delete dir="${docs.dir}"/>
      <mkdir dir="${docs.dir}"/>
 -    <javadoc packagenames="*" sourcepath="src/xmlpublic" classpath="${javadoc.path}" destdir="${docs.dir}/reference" windowtitle="XMLBeans Documentation" source="1.4" stylesheetfile="docs/stylesheet.css">
-+    <javadoc packagenames="*" sourcepath="src/xmlpublic" classpath="${javadoc.path}" destdir="${docs.dir}/reference" windowtitle="XMLBeans Documentation" source="1.4" target="1.4" stylesheetfile="docs/stylesheet.css">
++    <javadoc packagenames="*" sourcepath="src/xmlpublic" classpath="${javadoc.path}" source="1.4" destdir="${docs.dir}/reference" windowtitle="XMLBeans Documentation" stylesheetfile="docs/stylesheet.css">
        <link href="http://xml.apache.org/xmlbeans/docs/reference/index.html"/>
        <link href="http://java.sun.com/j2se/1.4.2/docs/api/"/>
        <link href="http://java.sun.com/j2ee/1.4/docs/api/"/>

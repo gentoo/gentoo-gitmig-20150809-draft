@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.1 2004/12/19 00:16:11 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.2 2004/12/24 12:46:25 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jre-1.4
 
 S=${WORKDIR}/${P}/v1
 
-src_unpack(){
+src_unpack() {
 	unpack ${A}
 
 	cd ${S}
@@ -43,7 +43,7 @@ src_compile() {
 	ant ${antflags} || die "compile failed"
 }
 
-src_install () {
+src_install() {
 	java-pkg_dojar build/lib/xbean*.jar
 
 	dodoc CHANGES.txt LICENSE.txt NOTICE.txt README.txt
