@@ -1,10 +1,10 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.4.2.ebuild,v 1.3 2001/10/27 14:18:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.4.2.ebuild,v 1.4 2002/04/27 11:41:02 seemant Exp $
 
-P=Mesa-${PV}
-S=${WORKDIR}/${P}
+MY_P=Mesa-${PV}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="OpenGL like graphic library for Linux"
 SRC_URI="http://download.sourceforge.net/mesa3d/MesaLib-${PV}.tar.bz2
          http://download.sourceforge.net/mesa3d/MesaDemos-${PV}.tar.bz2"

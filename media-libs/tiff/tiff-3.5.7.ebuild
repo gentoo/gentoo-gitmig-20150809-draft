@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7.ebuild,v 1.2 2001/12/11 02:18:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7.ebuild,v 1.3 2002/04/27 11:51:24 seemant Exp $
 
 MY_P=${P/tiff-/tiff-v}
 S=${WORKDIR}/${MY_P}
