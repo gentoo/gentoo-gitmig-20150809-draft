@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-bluefw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/ChangeLog,v 1.7 2004/02/15 12:34:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/ChangeLog,v 1.8 2004/03/29 02:10:44 liquidx Exp $
+
+*bluez-bluefw-1.0 (29 Mar 2004)
+
+  29 Mar 2004; Alastair Tse <liquidx@gentoo.org> bluez-bluefw-1.0.ebuild:
+  version bump
 
   15 Feb 2004; David Holm <dholm@gentoo.org> bluez-bluefw-0.9-r1.ebuild:
   Added to ~ppc.
