@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.1-r3.ebuild,v 1.1 2002/06/30 20:30:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.1-r3.ebuild,v 1.2 2002/06/30 20:42:50 azarah Exp $
 
 inherit libtool
 
@@ -19,16 +19,20 @@ src_unpack() {
 
 	unpack ${A}
 
-	elibtoolize
+	cd ${S}
+	rm -rf ${S}/libltdl
+	rm -f ${S}/config.{guess,status,sub}
+	libtoolize --ltdl --copy --force
 
 	# Try to fix some wierd build problems.
 	for x in $(find ${S} -name configure)
 	do
+		cd ${x%/*}
 		export WANT_AUTOMAKE_1_6=1
 		export WANT_AUTOCONF_2_5=1
 		aclocal
-		automake --add-missing --include-deps &>${T}/foo
-		autoconf &>${T}/foo
+		automake --gnu --add-missing --include-deps
+		autoconf
 	done
 }
 
