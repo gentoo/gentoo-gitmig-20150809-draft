@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.3 2003/02/13 16:10:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.4 2003/06/11 01:41:21 msterret Exp $
 
 P=${P/-drivers/}
 S=${WORKDIR}/${P}
@@ -9,7 +9,8 @@ SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
 	http://ozlabs.org/people/dgibson/dldwd/orinoco-0.13a.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
-DEPEND="sys-kernel/linux-headers"
+DEPEND="sys-kernel/linux-headers
+	>=sys-apps/sed-4"
 RDEPEND=""
 SLOT="0"
 IUSE="trusted apm pnp nocardbus build"
@@ -88,7 +89,7 @@ src_compile() {
 	# patch version.h so that they won't complain that Card Services is wrong.
 	if [ -n "`grep -E '^CONFIG_PCMCIA\=y' config.mk`" ]; then
 		cd ${S}/include/pcmcia
-			
+
 		# get kernel CS_RELEASE :
 		if [ -f /usr/src/linux/include/pcmcia/version.h ]; then
 			KERNEL_RELEASE=`grep -E '^#define CS_RELEASE ' /usr/src/linux/include/pcmcia/version.h | awk '{print $3}'`
