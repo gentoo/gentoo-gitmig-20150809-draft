@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Emil Skoldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.16 2003/11/30 22:24:11 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.17 2003/12/01 18:00:06 scandium Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic fixheadtails
 
 # -fomit-frame-pointer breaks the compilation
 filter-flags -fomit-frame-pointer
@@ -23,6 +23,17 @@ DEPEND="dev-libs/gmp
 	sys-devel/make
 	sys-apps/sed
 	sys-devel/bc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# ht_fix_all kills autoheader stuff, so we use ht_fix_file
+	find . -iname "*.sh" -or -iname "Makefile*" | \
+	while read i; do
+		ht_fix_file $i
+	done
+}
 
 src_compile() {
 	local myconf

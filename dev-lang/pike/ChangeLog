@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/pike
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.4 2003/11/08 18:20:13 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.5 2003/12/01 18:00:06 scandium Exp $
+
+  01 Dec 2003; Rainer Groesslinger <scandium@gentoo.org> pike-7.4.20.ebuild,
+  pike-7.4.28-r1.ebuild, pike-7.4.28.ebuild:
+  fixed head/tail syntax, see bug #32973
 
   08 Nov 2003; Rainer Groesslinger <scandium@gentoo.org>
   pike-7.4.28-r1.ebuild:
