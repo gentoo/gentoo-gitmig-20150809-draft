@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gecko-sharp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.7 2004/06/02 16:06:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.8 2004/06/02 16:46:50 latexer Exp $
+
+  02 Jun 2004; Peter Johanson <latexer@gentoo.org> gecko-sharp-0.1.ebuild:
+  Removing all pre-Beta1 mono stuff.
 
 *gecko-sharp-0.4 (02 Jun 2004)
 
