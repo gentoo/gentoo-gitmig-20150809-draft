@@ -3,20 +3,19 @@
 #   Copyright (c) 2001-2003 The Apache Software Foundation.  All rights
 #   reserved.
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.5.4/ant,v 1.1 2003/09/22 03:44:49 strider Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.5.4/ant,v 1.2 2003/09/22 04:01:22 strider Exp $
 
 if [ -f $HOME/.gentoo/java-env ] ; then
   source $HOME/.gentoo/java-env
 else
   JAVA_HOME=`java-config --jdk-home`
-  if [ -z $JAVA_HOME ] ; then
-    JAVA_HOME=`java-config --jre-home`
-  fi
   CLASSPATH=`java-config --classpath`:${CLASSPATH}
 fi
 
 if [ -z $JAVA_HOME ] ; then
-  echo "Error: No JDK/JRE found!"
+  echo "Error: No JDK found!"
+  echo "Try using java-config script to set your JDK"
+  echo "Remember that you need a JDK not a JRE"
   exit 1
 fi
 
@@ -72,6 +71,7 @@ else
   echo "  If build fails because sun.* classes could not be found"
   echo "  you will need to set the JAVA_HOME environment variable"
   echo "  to the installation directory of java."
+  echo "  Try using java-config script"
 fi
 
 # Allow Jikes support (off by default)

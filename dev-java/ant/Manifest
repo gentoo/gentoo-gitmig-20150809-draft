@@ -9,4 +9,4 @@ MD5 0bf5f1d0dfa292c160318e00bb085a3e files/digest-ant-1.5.3-r4 76
 MD5 0bf5f1d0dfa292c160318e00bb085a3e files/digest-ant-1.5.3-r5 76
 MD5 6e22e7d1b121a847e107b6498f48e0a4 files/1.5.3/ant 2207
 MD5 9cb067e9b0997856af50e7e117263596 files/1.5.3/1_6_backport-jdk142.patch.gz 916
-MD5 2830ac0751b72ce17c065a8a52571112 files/1.5.4/ant 2206
+MD5 42d14e6ea90cdb790e61fb8a044aa091 files/1.5.4/ant 2270
