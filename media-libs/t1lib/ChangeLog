@@ -2,6 +2,12 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.2 2002/04/16 01:14:04 seemant Exp
 
+*t1lib-5.0.0-r2 (09 Aug 2003)
+
+  09 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> t1lib-5.0.0-r2.ebuild:
+  Fixed incorrect doc location.  Added doc IUSE flag.  Thanks to
+  Tristan Henderson <T.Henderson@cs.ucl.ac.uk>.  This closes #26226
+
 *t1lib-5.0.0-r1 (03 Aug 2003)
 
   05 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> t1lib-5.0.0-r1.ebuild,
