@@ -1,5 +1,4 @@
 MD5 6dd4db69399ea021171a0c490a2cd8c5 xpdf-3.00-r1.ebuild 978
-MD5 a963c62f4ceb26c3bf0f9859d9871d6b xpdf-3.00-r3.ebuild 3061
 MD5 9f80037668ee21ff1e8772317ca8f6a0 xpdf-2.03.ebuild 1154
 MD5 8c4208d1f9710df3e8a4354f6f65e5ca xpdf-3.00-r4.ebuild 3212
 MD5 be96efb6e64c3af690a4b2fee11e2a57 ChangeLog 6235
@@ -16,5 +15,4 @@ MD5 3df9058a9971c09627e71dad6b056244 files/xpdf-3.00-core.patch.bz2 271
 MD5 c3d50c3fb232fe51c2ae06ff1f530d49 files/xpdf-3.00-overflow.patch.bz2 2097
 MD5 41c050cd5c7ccdcf1676a6852c7a35ed files/xpdf-3.00-PathScanner.patch.bz2 1003
 MD5 fd6eaa6f4bb5d94506718515cf20ac26 files/digest-xpdf-3.00-r1 61
-MD5 36b521d0408d11075c1e6536e91265f2 files/digest-xpdf-3.00-r3 767
 MD5 36b521d0408d11075c1e6536e91265f2 files/digest-xpdf-3.00-r4 767
