@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.624 2004/09/17 20:04:36 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.625 2004/09/17 21:37:32 plasmaroo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -510,6 +510,7 @@ sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
+sys-apps/lm-sensors:rrdtool - Builds sensord (Needs RRDTool).
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/iproute2:minimal - Builds and installs only the traffic control util.
 sys-apps/memtest86+:serial - Compile with serial console support
