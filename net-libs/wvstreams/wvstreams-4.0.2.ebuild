@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.3 2005/04/03 05:48:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.4 2005/04/04 21:05:26 mrness Exp $
 
 inherit eutils
 
@@ -39,6 +39,7 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 
 	epatch ${FILESDIR}/${P}-linux-serial.patch
+	epatch ${FILESDIR}/${P}-wireless-user.patch
 	epatch ${FILESDIR}/${P}-speex-const.patch
 
 	if useq tcltk; then

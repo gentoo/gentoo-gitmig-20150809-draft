@@ -1,0 +1,11 @@
+diff -Nru wvstreams-4.0.2.orig/linuxstreams/wvinterface.cc wvstreams-4.0.2/linuxstreams/wvinterface.cc
+--- wvstreams-4.0.2.orig/linuxstreams/wvinterface.cc	2005-03-24 04:01:23.000000000 +0200
++++ wvstreams-4.0.2/linuxstreams/wvinterface.cc	2005-04-04 23:06:23.927608040 +0300
+@@ -21,6 +21,7 @@
+ #include <errno.h>
+ #include <linux/sockios.h>
+ 
++#include <linux/compiler.h>
+ #define _LINUX_IF_H /* Hack to prevent loading linux/if.h */
+ #include <linux/wireless.h>
+ 
