@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/saru-0.0.1.ebuild,v 1.5 2004/09/04 18:08:02 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/saru-0.0.1.ebuild,v 1.6 2004/09/20 20:59:49 tantive Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 	>=net-libs/vanessa-socket-0.0.7
 	>=dev-libs/vanessa-adt-0.0.6
 	>=dev-libs/libip_vs_user_sync-1.0.0
-	=sys-cluster/heartbeat-1.0.4
+	>=sys-cluster/heartbeat-1.0.4
 	net-firewall/iptables"
 
 src_compile() {
