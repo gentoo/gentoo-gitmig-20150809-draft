@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.5 2004/03/15 00:36:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.6 2004/03/15 22:13:17 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -698,6 +698,7 @@ EOF
 	# after installing fonts to /usr/share/fonts
 	# if XF86Config is not edited
 	# This provides the 'fixed' font
+	dodir /usr/X11R6/lib/X11/fonts/
 	dosym ${ROOT}/usr/share/fonts/misc /usr/X11R6/lib/X11/fonts/misc
 
 	# Fix default config files after installing fonts to /usr/share/fonts
