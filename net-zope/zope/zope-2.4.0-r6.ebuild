@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.4.0-r6.ebuild,v 1.1 2003/03/03 23:43:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.4.0-r6.ebuild,v 1.2 2003/09/07 00:21:34 msterret Exp $
 
 A="Zope-${PV}-src.tgz ZEO-1.0b3.tgz"
 S=${WORKDIR}/Zope-${PV}-src
@@ -9,7 +9,7 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz
          http://www.zope.org/Products/ZEO/ZEO-1.0b3.tgz"
 HOMEPAGE="http://www.zope.org"
 
-DEPEND="virtual/glibc 
+DEPEND="virtual/glibc
         =dev-lang/python-2.1*"
 RDEPEND="=dev-lang/python-2.1*"
 KEYWORDS="x86 ppc sparc "
@@ -19,7 +19,7 @@ LICENSE="as-is"
 src_unpack() {
 
     unpack Zope-${PV}-src.tgz
- 
+
     if [ "`use zeo`" ]; then
        cd ${S}/lib/python
        unpack ZEO-1.0b3.tgz
@@ -36,12 +36,12 @@ src_install () {
 
     ZDIR=/usr/share/zope
     ZVAR=/var/lib/zope
-    
-    
+
+
     dodir ${ZDIR}/var
     insinto ${ZDIR}
-    doins w_pcgi.py wo_pcgi.py 
-     
+    doins w_pcgi.py wo_pcgi.py
+
     dodir ${ZDIR}/lib
     cp -a lib/* ${D}${ZDIR}/lib/
     cp -a ZServer utilities ${D}${ZDIR}
@@ -54,9 +54,9 @@ src_install () {
 
     dodir ${ZDIR}/pcgi
     cp -a pcgi/* ${D}${ZDIR}/pcgi
-    
+
     cd ${S}
-    fperms a+x ${ZDIR}/lib/python/zdaemon.py 
+    fperms a+x ${ZDIR}/lib/python/zdaemon.py
     fperms a+x	${ZDIR}/lib/python/StructuredText/StructuredText.py
     fperms a+x	${ZDIR}/lib/python/ZPublisher/Client.py
 
@@ -77,13 +77,13 @@ src_install () {
 
     exeinto ${ZDIR}
     doexe zpasswd.py Zope.cgi
-    
+
     cd ${D}${ZDIR}
     sed -e "s:${WORKDIR}:${ZDIR}:g" Zope.cgi > Zope.cgi.tmp
     mv Zope.cgi.tmp Zope.cgi
     sed -e "s:${WORKDIR}:${ZVAR}:g" stop > stop.tmp
     mv stop.tmp stop
-    
+
     dodir /etc/init.d
     exeinto /etc/init.d
     newexe ${FILESDIR}/zope.rc6 zope

@@ -1,6 +1,6 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.0-r2.ebuild,v 1.1 2003/03/03 23:43:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.0-r2.ebuild,v 1.2 2003/09/07 00:21:34 msterret Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -26,7 +26,7 @@ CONFDIR="/etc/conf.d/"
 
 # Narrow the scope of ownership/permissions.
 # Security plan:
-# * ZUID is the superuser for all zope instances. 
+# * ZUID is the superuser for all zope instances.
 # * ZGID is for a single instance's administration.
 # * Other's should not have any access to ${ZSERVDIR},
 #   because they can work through the Zope web interface.
@@ -36,7 +36,7 @@ CONFDIR="/etc/conf.d/"
 # $1 = instance directory
 # $2 = group
 
-setup_security() 
+setup_security()
 {
     chown -R ${ZUID}:${2} ${1}
     chmod -R g+u ${1}
@@ -110,7 +110,7 @@ src_install() {
 	setup_security ${D}${ZSERVDIR} ${ZGID}
 }
 
-pkg_postinst() 
+pkg_postinst()
 {
 	# Here we add our default zope instance.
 	/usr/sbin/zope-config --zserv=${ZSERVDIR} --zinst=${ZINSTDIR} \
@@ -118,7 +118,7 @@ pkg_postinst()
 	install_help
 }
 
-pkg_config() 
-{	
+pkg_config()
+{
 	install_help
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.0.ebuild,v 1.1 2003/03/03 23:43:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.0.ebuild,v 1.2 2003/09/07 00:21:34 msterret Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -46,7 +46,7 @@ src_install() {
 	chmod 755 Zope.cgi  # restoring permissions
 
 	# using '/etc/init.d/zope' instead
-	rm -f start stop   
+	rm -f start stop
 
 	# Keep others from overwritting PID files
 	chmod o+t var/
@@ -66,8 +66,8 @@ src_install() {
 	# Fill in an env.d variable.
 	sed -e "/ZOPE_HOME/ c\\ZOPE_HOME=${ZOPEDIR}\\" ${D}${ENVD_DIR}zope.envd \
 	> ${D}${ENVD_DIR}zope.tmp
-	mv ${D}${ENVD_DIR}zope.tmp ${D}${ENVD_DIR}50zope    
-    
+	mv ${D}${ENVD_DIR}zope.tmp ${D}${ENVD_DIR}50zope
+
 	# Add a conf.d script.
 	dodir ${CONFD_DIR}
 	echo -e "ZOPE_OPTS='-u root'\nZOPE_HOME=${ZOPEDIR}" > ${D}${CONFD_DIR}zope
@@ -78,7 +78,7 @@ pkg_postinst() {
 	einfo "\tebuild /var/db/pkg/net-www/${PF}/${P}.ebuild config"
 }
 
-pkg_config() {	
+pkg_config() {
 	einfo ">>> Create inital user...${ROOT}\n"
 	python ${ROOT}${ZOPEDIR}zpasswd.py ${ROOT}${ZOPEDIR}inituser
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.1.ebuild,v 1.3 2003/04/04 22:01:54 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.1.ebuild,v 1.4 2003/09/07 00:21:34 msterret Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -25,7 +25,7 @@ else
 	RDEPEND="=dev-lang/python-2.1.3*"
 	python='python2.1'
 fi
-	
+
 DEPEND="virtual/glibc
 		>=sys-apps/sed-4.0.5
 	   ${RDEPEND}"
@@ -44,7 +44,7 @@ RCNAME=zope.initd
 
 # Narrow the scope of ownership/permissions.
 # Security plan:
-# * ZUID is the superuser for all zope instances. 
+# * ZUID is the superuser for all zope instances.
 # * ZGID is for a single instance's administration.
 # * Other's should not have any access to ${ZSERVDIR},
 #   because they can work through the Zope web interface.
@@ -54,7 +54,7 @@ RCNAME=zope.initd
 # $1 = instance directory
 # $2 = group
 
-setup_security() 
+setup_security()
 {
     chown -R ${ZUID}:${2} ${1}
     chmod -R g+u ${1}
@@ -73,14 +73,14 @@ install_help()
 
 #
 
-pkg_setup() 
+pkg_setup()
 {
 	if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
 		ewarn "WARNING: You set PYTHON_SLOT_VERSION=VIRTUAL. So this ebuild will"
 		ewarn "use python-2.2*. Zope Corp. only recommends using python-2.1.3 "
 		ewarn "with this version of zope. Emerge at your own risk."
 		sleep 12
-	fi	
+	fi
     if ! groupmod ${ZGID} > /dev/null 2>&1 ; then
 		groupadd ${ZGID} || die "Can not add ${ZGID} group!"
     fi
@@ -113,7 +113,7 @@ src_install() {
 	cp import/README.txt .templates/import/
 	mv -f Extensions/ .templates/
 	mv -f var/ .templates/
-	
+
     # Add conf.d script.
     dodir /etc/conf.d
     echo "ZOPE_OPTS=\"-u zope\"" | \
@@ -138,7 +138,7 @@ src_install() {
 
 #
 
-pkg_postinst() 
+pkg_postinst()
 {
 	# Here we add our default zope instance.
 	/usr/sbin/zope-config --zserv=${ZSERVDIR} --zinst=${ZINSTDIR} \
@@ -162,7 +162,7 @@ pkg_postrm()
 
 #
 
-pkg_config() 
-{	
+pkg_config()
+{
 	install_help
 }

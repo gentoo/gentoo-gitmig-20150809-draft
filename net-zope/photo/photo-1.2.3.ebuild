@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/photo-1.2.3.ebuild,v 1.3 2003/06/22 21:37:53 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/photo-1.2.3.ebuild,v 1.4 2003/09/07 00:21:34 msterret Exp $
 
 inherit zproduct
 
@@ -17,4 +17,4 @@ RDEPEND="dev-python/Imaging-py21
 
 ZPROD_LIST="Photo"
 MYDOC="FAQ.txt THANKS.txt UPGRADE.txt DEPENDENCIES.txt ${MYDOC}"
- 
+
