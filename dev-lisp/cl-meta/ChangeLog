@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-meta
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-meta/ChangeLog,v 1.3 2004/06/24 23:47:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-meta/ChangeLog,v 1.4 2004/08/07 22:03:55 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> cl-meta-0.1.2-r1.ebuild:
+  Typo in DESCRIPTION: Commoon -> Common. Bug 59717.
 
 *cl-meta-0.1.2-r1 (12 Feb 2004)
 
