@@ -1,15 +1,45 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2b8f6fd88f62fb20a31194d782085e0d ChangeLog 1418
+- -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+- - -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+- - - -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30320f4a6ec3333232ee1f8f8b0d6868 time-1.7-r1.ebuild 779
+MD5 a634e734f52b7eb08b61e03f87158340 ChangeLog 1621
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 ef0595e742a6b84a9ab0af135d47b364 time-1.7-r1.ebuild 776
 MD5 57be936571e51a73e7b44f4cd460c4d3 files/digest-time-1.7-r1 60
 MD5 a1dddef27c61d5286b14565321fb2aac files/1.7-info-dir-entry.patch 461
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+- - - -----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBs+CLroRuSHgZdywRAkYhAJ0Q2zcISeZmd/IW5zSaJdeaIJn1iACfdYmk
-nG7Jn61NbJeXFN+FcpfjX7g=
-=7eMJ
+iD8DBQFCJy6zLLFUmVNQ7rkRAsuZAJ4gAcUpPjWH0WYoDYbxaUkkJxee1ACeO4Zt
+u3lKQ/c2GzngcvBHv6eby5w=
+=3o5N
+- - - -----END PGP SIGNATURE-----
+- - -----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJy96LLFUmVNQ7rkRAhW9AKCnOkngsAIvopyw7P3Qt2+v8VHggACgpx7W
+h8MyZXrncvrRTRommMBZ+nA=
+=uyoF
+- - -----END PGP SIGNATURE-----
+- -----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJy+pLLFUmVNQ7rkRAjtvAJ9tZKE3/FoxumvMBKgXpp03VefxZwCgywlz
+R1K7MSPJyKxEfDU5N/HgOUw=
+=rkNY
+- -----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJy/WLLFUmVNQ7rkRAmvjAJ0aYaUTMwlYLok6Wgj27voNiyC60ACgwUEX
+Eywx0NRDMF1KngOP2KL0las=
+=4u99
 -----END PGP SIGNATURE-----
