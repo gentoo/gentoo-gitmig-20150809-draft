@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.4 2003/08/07 23:18:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.4.1.ebuild,v 1.5 2003/08/17 11:38:02 taviso Exp $
 
 DESCRIPTION="Command line To Do List manager"
 HOMEPAGE="http://www.rc0.org.uk/tdl/"
@@ -12,12 +12,12 @@ KEYWORDS="x86 alpha"
 IUSE="readline ncurses doc"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.3 
-					ncurses? ( sys-libs/ncurses )
-					!ncurses? ( sys-libs/libtermcap-compat ) )"
+			ncurses? ( sys-libs/ncurses )
+			!ncurses? ( sys-libs/libtermcap-compat ) )"
 DEPEND="${RDEPEND}
-		sys-apps/texinfo
-		>=sys-apps/sed-4
-		doc? ( app-text/tetex )"
+	sys-apps/texinfo
+	>=sys-apps/sed-4
+	doc? ( app-text/tetex )"
 
 S=${WORKDIR}/${P}
 
