@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.34.ebuild,v 1.1 2004/07/18 15:14:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.34.ebuild,v 1.2 2004/09/02 22:49:41 pvdabeel Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/netdragon/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ppc ~sparc ~amd64"
 IUSE="doc"
 
 need-kde 3

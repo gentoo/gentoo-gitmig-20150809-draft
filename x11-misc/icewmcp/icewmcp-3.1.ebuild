@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/icewmcp-3.1.ebuild,v 1.4 2004/06/24 22:24:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/icewmcp-3.1.ebuild,v 1.5 2004/09/02 22:49:41 pvdabeel Exp $
 
 S=${WORKDIR}/INSTALL-IceWMCP
 MY_PN=IceWMControlPanel
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/icesoundmanager/${MY_PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 DEPEND="x11-wm/icewm
 		>=dev-python/pygtk-1.99

@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.8 2004/06/24 22:42:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.9 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xnview-1.50.ebuild,
+  xnview-1.68.ebuild:
+  Masked xnview-1.68.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xnview-1.50.ebuild:
+  Masked xnview-1.50.ebuild stable for ppc
 
   14 Jun 2004; <pyrania@gentoo.org> xnview-1.68.ebuild:
   Stable on x86.

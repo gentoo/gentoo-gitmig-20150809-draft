@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/mixer_app-1.8.0.ebuild,v 1.7 2004/06/28 20:05:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/mixer_app-1.8.0.ebuild,v 1.8 2004/09/02 22:49:41 pvdabeel Exp $
 
 #need to do some name mangling
 #so that ebuild name adheres to "standart"
@@ -13,7 +13,7 @@ SRC_URI="http://www.fukt.bth.se/~per/mixer/${Name}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ppc sparc"
 IUSE=""
 
 DEPEND="virtual/libc virtual/x11"

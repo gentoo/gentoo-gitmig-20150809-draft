@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xstroke
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.13 2004/06/24 22:45:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.14 2004/09/02 22:49:42 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  xstroke-0.5.12-r1.ebuild:
+  Masked xstroke-0.5.12-r1.ebuild stable for ppc
 
   12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xstroke-0.5.12-r1.ebuild:
   Stable on alpha.

@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/wmctrl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.5 2004/06/24 22:36:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.6 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmctrl-1.04.ebuild,
+  wmctrl-1.05.ebuild:
+  Masked wmctrl-1.05.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmctrl-1.04.ebuild:
+  Masked wmctrl-1.04.ebuild stable for ppc
 
   07 May 2004; Brandon Hale <tseng@gentoo.org> wmctrl-1.04.ebuild,
   wmctrl-1.05.ebuild:

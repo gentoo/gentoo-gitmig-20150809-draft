@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gdeskcal
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.5 2004/08/27 21:47:55 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.6 2004/09/02 22:49:40 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gdeskcal-0.57.1.ebuild:
+  Masked gdeskcal-0.57.1.ebuild stable for ppc
 
   27 Aug 2004; Tom Gall <tgall@gentoo.org> gdeskcal-0.57.1.ebuild:
   stable on ppc64, bug #59375

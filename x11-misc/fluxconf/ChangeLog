@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/fluxconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.20 2004/07/19 18:40:26 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.21 2004/09/02 22:49:40 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  fluxconf-0.9.2-r1.ebuild, fluxconf-0.9.4.ebuild:
+  Masked fluxconf-0.9.4.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  fluxconf-0.9.2-r1.ebuild:
+  Masked fluxconf-0.9.2-r1.ebuild stable for ppc
 
   19 Jul 2004; <malc@gentoo.org> fluxconf-0.9.7.ebuild:
   Moving to stable on amd64 in line with x86 - and closing bug #57563

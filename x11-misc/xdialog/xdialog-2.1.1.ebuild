@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.1.1.ebuild,v 1.3 2004/06/24 22:39:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.1.1.ebuild,v 1.4 2004/09/02 22:49:41 pvdabeel Exp $
 
 S=${WORKDIR}/${P/x/X}
 DESCRIPTION="drop-in replacement for cdialog using GTK"
@@ -9,7 +9,7 @@ SRC_URI="http://freshmeat.net/redir/xdialog/11876/url_bz2/Xdialog-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="nls"
 
 DEPEND="virtual/x11

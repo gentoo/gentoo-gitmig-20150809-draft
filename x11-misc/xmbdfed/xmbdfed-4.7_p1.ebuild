@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.3 2004/07/08 01:57:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.4 2004/09/02 22:49:41 pvdabeel Exp $
 
 inherit eutils
 MY_P=${P/_p*}
@@ -12,7 +12,7 @@ HOMEPAGE="http://clr.nmsu.edu/~mleisher/xmbdfed.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 IUSE="truetype"
 
 DEPEND="virtual/x11

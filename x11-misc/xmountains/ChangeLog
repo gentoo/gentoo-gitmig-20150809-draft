@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xmountains
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.6 2004/06/24 22:42:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.7 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  xmountains-2.6.ebuild, xmountains-2.7.ebuild:
+  Masked xmountains-2.7.ebuild testing for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  xmountains-2.6.ebuild:
+  Masked xmountains-2.6.ebuild stable for ppc
 
   21 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> xmountains-2.6.ebuild,
   xmountains-2.7.ebuild:

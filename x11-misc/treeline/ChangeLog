@@ -1,6 +1,18 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.9 2004/08/16 08:49:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.10 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  treeline-0.7.3-r1.ebuild, treeline-0.8.0.ebuild, treeline-0.8.1.ebuild:
+  Masked treeline-0.8.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  treeline-0.7.3-r1.ebuild, treeline-0.8.0.ebuild:
+  Masked treeline-0.8.0.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  treeline-0.7.3-r1.ebuild:
+  Masked treeline-0.7.3-r1.ebuild stable for ppc
 
   16 Aug 2004; Tavis Ormandy <taviso@gentoo.org> treeline-0.8.1.ebuild:
   marking stable on x86

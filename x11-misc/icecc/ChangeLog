@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icecc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.20 2004/08/27 06:28:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.21 2004/09/02 22:49:40 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> icecc-2.7.ebuild:
+  Masked icecc-2.7.ebuild stable for ppc
 
 *icecc-2.9 (27 Aug 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/3dfm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/ChangeLog,v 1.2 2004/07/16 09:14:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/ChangeLog,v 1.3 2004/09/02 22:49:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> 3dfm-1.0.ebuild:
+  Masked 3dfm-1.0.ebuild stable for ppc
 
   16 Jul 2004; David Holm <dholm@gentoo.org> 3dfm-1.0.ebuild:
   Added to ~ppc.

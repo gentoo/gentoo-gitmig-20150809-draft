@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/3dfb
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/ChangeLog,v 1.4 2004/08/14 23:53:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/ChangeLog,v 1.5 2004/09/02 22:49:40 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> 3dfb-0.5.5.ebuild,
+  3dfb-0.6.1.ebuild:
+  Masked 3dfb-0.6.1.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> 3dfb-0.5.5.ebuild:
+  Masked 3dfb-0.5.5.ebuild stable for ppc
 
   15 Aug 2004; Sven Wegener <swegener@gentoo.org> 3dfb-0.5.5.ebuild,
   3dfb-0.6.1.ebuild:

@@ -1,6 +1,25 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.17 2004/08/29 11:40:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.18 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xchm-0.8.11.ebuild,
+  xchm-0.9.1.ebuild, xchm-0.9.2.ebuild, xchm-0.9.3.ebuild, xchm-0.9.ebuild:
+  Masked xchm-0.9.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xchm-0.8.11.ebuild,
+  xchm-0.9.1.ebuild, xchm-0.9.2.ebuild, xchm-0.9.3.ebuild:
+  Masked xchm-0.9.3.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xchm-0.8.11.ebuild,
+  xchm-0.9.1.ebuild, xchm-0.9.2.ebuild:
+  Masked xchm-0.9.2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xchm-0.8.11.ebuild,
+  xchm-0.9.1.ebuild:
+  Masked xchm-0.9.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xchm-0.8.11.ebuild:
+  Masked xchm-0.8.11.ebuild stable for ppc
 
 *xchm-0.9.3 (29 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-3.8-r1.ebuild,v 1.4 2004/08/17 19:37:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-3.8-r1.ebuild,v 1.5 2004/09/02 22:49:40 pvdabeel Exp $
 
 DESCRIPTION="fbpanel is a light-weight X11 desktop panel"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://fbpanel.sourceforge.net/"
 IUSE=""
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~alpha"
+KEYWORDS="~x86 ~amd64 ~alpha ~ppc"
 LICENSE="as-is"
 DEPEND=">=x11-libs/gtk+-2
 	>=sys-apps/sed-4"

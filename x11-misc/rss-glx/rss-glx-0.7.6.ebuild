@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.12 2004/07/24 06:05:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.13 2004/09/02 22:49:41 pvdabeel Exp $
 
 inherit flag-o-matic eutils kde
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc amd64 ~sparc"
+KEYWORDS="~x86 ppc amd64 ~sparc"
 IUSE="kde sse 3dnow openal"
 
 DEPEND="virtual/x11

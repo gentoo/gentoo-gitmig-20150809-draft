@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/icewmcp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.5 2004/08/20 15:53:01 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.6 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> icewmcp-3.1.ebuild,
+  icewmcp-3.2.ebuild:
+  Masked icewmcp-3.2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> icewmcp-3.1.ebuild:
+  Masked icewmcp-3.1.ebuild stable for ppc
 
 *icewmcp-3.2 (20 Aug 2004)
 

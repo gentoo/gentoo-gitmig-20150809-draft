@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/root-portal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.13 2004/08/21 17:09:35 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.14 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  root-portal-0.4.11.ebuild, root-portal-0.5.0.ebuild:
+  Masked root-portal-0.5.0.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  root-portal-0.4.11.ebuild:
+  Masked root-portal-0.4.11.ebuild stable for ppc
 
   21 Aug 2004; <spider@gentoo.org> root-portal-0.4.11.ebuild,
   root-portal-0.5.0.ebuild:

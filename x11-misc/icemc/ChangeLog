@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/icemc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.17 2004/08/27 07:53:41 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.18 2004/09/02 22:49:40 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> icemc-1.9.ebuild,
+  icemc-2.1.ebuild:
+  Masked icemc-2.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> icemc-1.9.ebuild:
+  Masked icemc-1.9.ebuild stable for ppc
 
 *icemc-2.1 (27 Aug 2004)
 

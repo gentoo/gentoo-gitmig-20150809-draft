@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/kflog
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.8 2004/07/03 19:56:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.9 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kflog-2.1.1.ebuild:
+  Masked kflog-2.1.1.ebuild stable for ppc
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kflog-2.1.1.ebuild:
   QA: need-kde after R/DEPEND

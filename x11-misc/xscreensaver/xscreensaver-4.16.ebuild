@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.4 2004/07/27 00:18:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.5 2004/09/02 22:49:41 pvdabeel Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64 ~hppa"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~amd64 ~ia64 ~hppa"
 SLOT="0"
 
 # NOTE: the motif interface is not supported/developed anymore

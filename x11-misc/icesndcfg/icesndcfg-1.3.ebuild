@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-1.3.ebuild,v 1.2 2004/08/27 06:42:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/icesndcfg-1.3.ebuild,v 1.3 2004/09/02 22:49:41 pvdabeel Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ppc"
 
 src_unpack() {
 	unpack ${A}

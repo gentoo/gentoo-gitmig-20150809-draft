@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vnc2swf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.6 2004/06/28 20:27:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.7 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> vnc2swf-0.3.ebuild:
+  Masked vnc2swf-0.3.ebuild stable for ppc
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> vnc2swf-0.3.ebuild:
   glibc -> libc

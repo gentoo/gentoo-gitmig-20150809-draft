@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.5 2004/08/26 11:50:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.6 2004/09/02 22:49:41 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> qterm-0.3.5.ebuild,
+  qterm-0.3.8.ebuild:
+  Masked qterm-0.3.8.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> qterm-0.3.5.ebuild:
+  Masked qterm-0.3.5.ebuild stable for ppc
 
 *qterm-0.3.8 (26 Aug 2004)
 

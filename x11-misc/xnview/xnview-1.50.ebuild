@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.10 2004/06/24 22:42:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.11 2004/09/02 22:49:41 pvdabeel Exp $
 
 inherit rpm
 
@@ -14,7 +14,7 @@ SRC_URI="x86? mirror://gentoo/${MY_P}.i386.rpm
 
 SLOT="0"
 LICENSE="free-noncomm as-is"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="app-arch/rpm2targz"
