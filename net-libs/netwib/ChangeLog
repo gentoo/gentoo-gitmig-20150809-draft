@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/netwib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.2 2003/12/26 13:35:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.3 2004/01/05 21:49:51 robbat2 Exp $
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> :
+  add missing manifest
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> netwib-5.6.0.ebuild:
   Contrary to popular belief, this does not currently compile against libnet,
