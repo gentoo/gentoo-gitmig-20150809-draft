@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.5 2002/07/21 16:36:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.6 2002/11/14 19:32:45 azarah Exp $
+
+*gawk-3.1.1-r1 (14 Nov 2002)
+
+  14 Nov 2002; Martin Schlemmmer <azarah@gentoo.org> :
+  Install gawk headers into /usr/include/awk.
 
 *gawk-3.1.1 (21 Jul 2002)
 
