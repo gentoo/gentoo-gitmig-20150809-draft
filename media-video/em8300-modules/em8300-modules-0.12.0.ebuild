@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Brandon Low <lostlogic@lostlogicx.com>
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.2 2002/04/25 06:56:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.3 2002/04/29 04:22:44 agenkin Exp $
 
-DESCRIPTION="em8300 video decoder card kernel modules"
+DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
 HOMEPAGE="http://dxr3.sourceforge.net"
 
 DEPEND="virtual/linux-sources"
@@ -72,6 +72,10 @@ pkg_postinst() {
 	einfo "the contents of /usr/share/doc/em8300-0.12.0/devfs_symlinks"
 	einfo "to your devfsd.conf so that the em8300 devices will be linked"
 	einfo "correctly."
+	einfo 
+	einfo "You will also need to have the i2c kernel modules compiled for"
+	einfo "this to be happy, no need to patch any kernel though just turn"
+	einfo "all the i2c stuff in kernel config to M and you'll be fine."
 	einfo 
 
 }
