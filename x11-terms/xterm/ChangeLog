@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.31 2004/06/24 23:23:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.32 2004/06/26 08:10:53 seemant Exp $
+
+  26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> xterm-191.ebuild:
+  doh! luit was being always enabled. Fixed now so it's only enabled with the
+  unicode flag. Thanks to: Georgi Georgiev <chutz@gg3.net> in bug #54671
 
   20 Jun 2004; Ian Leitch <port001@gentoo.org> xterm-179.ebuild:
   No need to set S
