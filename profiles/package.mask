@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (14 Aug 2002)
+# masked for b0rkage
+=app-cdr/cdrtools-1.11.29
+
 # <blizzy@gentoo.org> (14 Aug 2002)
 # masked since there doesn't seem to be a download location
 =net-misc/netstat-nat-1.3
