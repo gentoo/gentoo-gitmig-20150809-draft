@@ -1,6 +1,6 @@
 MD5 6f80fc1331a398680342a037f0ae70de ChangeLog 2569
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 3de76fd4330b3c60c68d38554f7f9402 python-fchksum-1.6.1-r1.ebuild 760
-MD5 036519bebe096670346fb98af28a259b python-fchksum-1.7.1.ebuild 798
+MD5 0a4924abac16299f59af0f5715115dd1 python-fchksum-1.7.1.ebuild 792
 MD5 d385f87a09888e9614199dfe5e129862 files/digest-python-fchksum-1.6.1-r1 71
 MD5 71d0d6422a7854aabce965fa4891fa0d files/digest-python-fchksum-1.7.1 71
