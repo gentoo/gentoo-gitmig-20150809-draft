@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.37 2003/10/05 15:02:30 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.38 2003/10/14 03:43:29 obz Exp $
+
+*gnome-terminal-2.4.1 (14 Oct 2003)
+
+  14 Oct 2003; Mike Gardiner <obz@gentoo.org> gnome-terminal-2.4.1.ebuild:
+  New version
 
   05 Oct 2003; Mike Gardiner <obz@gentoo.org> gnome-terminal-2.2.0.ebuild,
   gnome-terminal-2.4.0.1.ebuild:
