@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.12 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.13 2002/10/17 16:22:06 aliz Exp $
 
 IUSE="gif opengl nas"
 
@@ -61,7 +61,7 @@ src_compile() {
 		&& myconf="${myconf} -debug" \
 		|| myconf="${myconf} -release"
 	
-	./configure	\
+	./configure \
 		-sm -thread -system-zlib -system-jpeg ${myconf} \
 		-system-libmng -system-libpng -gif -platform linux-g++ \
 		-ldl -lpthread -no-g++-exceptions || die

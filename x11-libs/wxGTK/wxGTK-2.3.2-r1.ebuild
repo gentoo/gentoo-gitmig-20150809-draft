@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r1.ebuild,v 1.10 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r1.ebuild,v 1.11 2002/10/17 16:22:06 aliz Exp $
 
 IUSE="gif nls png opengl tiff gtk odbc jpeg"
 
@@ -24,8 +24,8 @@ DEPEND="dev-libs/libunicode
 	odbc? ( dev-db/unixODBC  )
 	opengl? ( virtual/opengl )"
 
-use gtk		\
-	&& DEPEND="${DEPEND} =x11-libs/gtk+-1.2*"	\
+use gtk \
+	&& DEPEND="${DEPEND} =x11-libs/gtk+-1.2*" \
 	|| DEPEND="${DEPEND} x11-libs/openmotif"
 
 RDEPEND="nls? ( sys-devel/gettext )"
@@ -40,8 +40,8 @@ src_compile() {
 	#also need openmotif installed.	Unfortunately, the package build tools
 	#only support installation of one currently.
 	
-	use gtk	\
-		&& myconf="--with-gtk"	\
+	use gtk \
+		&& myconf="--with-gtk" \
 		|| myconf="--with-motif --without-gtk"
 
 	
@@ -59,31 +59,31 @@ src_compile() {
 	
 	#confiure options that have corresponding USE variable.
 	
-	use odbc 	\
-		&& myconf="${myconf} --with-odbc"	\
+	use odbc \
+		&& myconf="${myconf} --with-odbc" \
 		|| myconf="${myconf} --without-odbc"
 
-	use opengl 	\
-		&& myconf="${myconf} --with-opengl"	\
+	use opengl \
+		&& myconf="${myconf} --with-opengl" \
 		|| myconf="${myconf} --without-opengl"
 
-	use gif 	\
-		&& myconf="${myconf} --enable-gif"	\
+	use gif \
+		&& myconf="${myconf} --enable-gif" \
 		|| myconf="${myconf} --disable-gif"
 
-	use png 	\
-		&& myconf="${myconf} --with-libpng --enable-pnm"	\
+	use png \
+		&& myconf="${myconf} --with-libpng --enable-pnm" \
 		|| myconf="${myconf} --without-libpng --disable-pnm"
 	
-	use jpeg	\
-		&& myconf="${myconf} --with-libjpeg"	\
+	use jpeg \
+		&& myconf="${myconf} --with-libjpeg" \
 		|| myconf="${myconf} --without-libjpeg"
 
-	use tiff	\
-		&& myconf="${myconf} --with-libtiff"	\
+	use tiff \
+		&& myconf="${myconf} --with-libtiff" \
 		|| myconf="${myconf} --without-libtiff"
     
-	./configure 	\
+	./configure \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--prefix=/usr \
@@ -96,7 +96,7 @@ src_compile() {
 
 src_install () {
 	
-	make 	\
+	make \
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
 		prefix=${D}/usr \

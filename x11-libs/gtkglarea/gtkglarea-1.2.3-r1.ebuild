@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.6 2002/10/04 06:39:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.7 2002/10/17 16:22:06 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GL Extentions for gtk+"
@@ -26,10 +26,10 @@ src_compile() {
 
 src_install() {
 
-    make DESTDIR=${D} \
+	make DESTDIR=${D} \
     	install || die
 	
-    dodoc AUTHORS COPYING ChangeLog NEWS README 
-    docinto txt
-    dodoc docs/*.txt
+	dodoc AUTHORS COPYING ChangeLog NEWS README 
+	docinto txt
+	dodoc docs/*.txt
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.build,v 1.14 2002/02/01 19:50:13 gbevin Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdkxft/gdkxft-1.5.ebuild,v 1.6 2002/10/17 16:22:06 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gdkxft transparently adds anti-aliased font support to gtk+-1.2."

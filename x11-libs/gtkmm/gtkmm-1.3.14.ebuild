@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.3.14.ebuild,v 1.6 2002/10/04 06:39:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.3.14.ebuild,v 1.7 2002/10/17 16:22:06 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ interface for GTK+"
@@ -26,13 +26,13 @@ src_compile() {
 		myconf="--enable-debug=no"
 	fi
 	
-  	./configure --host=${CHOST}			\
-		--prefix=/usr				\
-		--infodir=/usr/share/info		\
-		--mandir=/usr/share/man			\
-		--sysconfdir=/etc/X11			\
-		--with-xinput=xfree			\
-		--with-x				\
+  	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
+		--sysconfdir=/etc/X11 \
+		--with-xinput=xfree \
+		--with-x \
 		${myconf} || die "configure failure"
 		
 	emake || die "emake failure."

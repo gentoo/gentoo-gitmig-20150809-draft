@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.12 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.13 2002/10/17 16:22:06 aliz Exp $
 
 IUSE="nls odbc jpeg png opengl"
 
@@ -47,20 +47,20 @@ src_compile() {
 	
 	#confiure options that have corresponding USE variable.
 	
-	use odbc 	\
-		&& myconf="${myconf} --with-odbc"	\
+	use odbc \
+		&& myconf="${myconf} --with-odbc" \
 		|| myconf="${myconf} --without-odbc"
 
-	use opengl 	\
-		&& myconf="${myconf} --with-opengl"	\
+	use opengl \
+		&& myconf="${myconf} --with-opengl" \
 		|| myconf="${myconf} --without-opengl"
 
-	use png 	\
-		&& myconf="${myconf} --with-libpng --enable-pnm"	\
+	use png \
+		&& myconf="${myconf} --with-libpng --enable-pnm" \
 		|| myconf="${myconf} --without-libpng --disable-pnm"
 	
-	use jpeg	\
-		&& myconf="${myconf} --with-libjpeg"	\
+	use jpeg \
+		&& myconf="${myconf} --with-libjpeg" \
 		|| myconf="${myconf} --without-libjpeg"
 
 	gunzip < ${FILESDIR}/${P}.diff.gz | patch -p1

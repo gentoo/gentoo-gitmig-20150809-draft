@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.0.5.ebuild,v 1.5 2002/10/05 18:19:10 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.0.5.ebuild,v 1.6 2002/10/17 16:22:06 aliz Exp $
 
 IUSE="gif build opengl mysql odbc postgres"
 
@@ -16,18 +16,18 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-embedded-free-${PV}.tar.bz2"
 HOMEPAGE="http://www.trolltech.com/"
 
 if [ -z "`use build`" ]; then
-    DEPEND="media-libs/libpng
-    	    media-libs/lcms
-	    media-libs/jpeg
-    	    >=media-libs/libmng-1.0.0
-	    >=media-libs/freetype-2
-	    odbc? ( >=dev-db/unixODBC-2.0 )
-	    mysql? ( >=dev-db/mysql-3.2.10 )
-	    opengl? ( virtual/opengl virtual/glu )
-	    postgres? ( >=dev-db/postgresql-7.2 )"
+	DEPEND="media-libs/libpng
+		media-libs/lcms
+		media-libs/jpeg
+		>=media-libs/libmng-1.0.0
+		>=media-libs/freetype-2
+		odbc? ( >=dev-db/unixODBC-2.0 )
+		mysql? ( >=dev-db/mysql-3.2.10 )
+		opengl? ( virtual/opengl virtual/glu )
+		postgres? ( >=dev-db/postgresql-7.2 )"
 else
-    DEPEND="media-libs/lcms
-	    >=media-libs/freetype-2"
+	DEPEND="media-libs/lcms
+		>=media-libs/freetype-2"
 fi
 	
 
