@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.1 2003/09/06 22:22:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.2 2003/09/06 22:31:59 azarah Exp $
 
 IUSE="nls static build" # icc"
 
@@ -14,7 +14,7 @@ SLOT="0"
 # do not compile xfree
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
-DEPEND="nls? ( sys-devel/gettext )"
+DEPEND="!build? ( nls? ( sys-devel/gettext ) )"
 #	icc? ( dev-lang/icc )"
 
 
@@ -30,7 +30,7 @@ src_compile() {
 
 #	use icc && CC="iccbin" CXX="iccbin" LD="iccbin"
 	local myconf=
-	
+
 	use nls || myconf="--disable-nls"
 
 	econf ${myconf} || die
@@ -43,7 +43,7 @@ src_compile() {
 	fi
 }
 
-src_install() {                               
+src_install() {
 
 	make DESTDIR=${D} \
 		datadir=/usr/share \

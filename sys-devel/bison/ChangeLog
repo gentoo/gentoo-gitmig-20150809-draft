@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.17 2003/09/06 22:22:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.18 2003/09/06 22:31:59 azarah Exp $
+
+  07 Sep 2003; Martin Schlemmer <azarah@gentoo.org> bison-1.875.ebuild:
+  Fix DEPEND for when we have 'build' in USE.
 
 *bison-1.875 (07 Sep 2003)
 
