@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.22 2004/07/09 19:22:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.23 2004/07/13 21:43:28 agriffis Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -27,6 +27,15 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # config.sub and config.guess (old default behavior), otherwise update the
 # named files.
 gnuconfig_update() {
+	local startdir	# declared here ... used in gnuconfig_do_update
+
+	if [[ $1 == /* ]]; then
+		startdir=$1
+		shift
+	else
+		startdir=${S}
+	fi
+
 	if [ $# -gt 0 ] ; then
 		gnuconfig_do_update "$@"
 	else
@@ -38,15 +47,11 @@ gnuconfig_update() {
 
 # Copy the newest available version of specified files over any old ones in the
 # source dir. This function shouldn't be called directly - use gnuconfig_update
+#
+# Note that since bash using dynamic scoping, startdir is available here from
+# the gnuconfig_update function
 gnuconfig_do_update() {
-	local startdir configsubs_dir target targetlist file
-
-	if [[ ${1} == /* ]]; then
-		startdir=${1%/}		# remove possible trailing slash
-		shift
-	else
-		startdir=${S}
-	fi
+	local configsubs_dir target targetlist file
 
 	[ $# -eq 0 ] && die "do not call gnuconfig_do_update; use gnuconfig_update"
 
