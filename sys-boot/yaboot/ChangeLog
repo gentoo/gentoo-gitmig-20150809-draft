@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/yaboot
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.4 2004/03/22 18:26:46 tgall Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.5 2004/03/31 00:30:54 lu_zero Exp $
+
+*yaboot-1.3.11-r1 (31 Mar 2004)
+
+  31 Mar 2004; Luca Barbato <lu_zero@gentoo.org> yaboot-1.3.11-r1.ebuild,
+  files/yaboot-1.3.11-ofpath-fix.patch:
+  Fix for bug #46023, thanks to Daniel Ostrow <dostrow@britneyangel.com> for
+  pointing the fix
 
   22 Mar 2004; Tom Gall <tgall@gentoo.org> yaboot-1.3.11.ebuild:
   add fix for creation of a proper yaboot on chrp hardware
