@@ -1,30 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r9.ebuild,v 1.4 2004/04/20 03:44:38 lv Exp $
-
-IUSE="crypt nls static pam"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r9.ebuild,v 1.5 2004/04/24 08:46:36 vapier Exp $
 
 inherit eutils flag-o-matic
 
-## see below for details on pic.patch
-case ${ARCH} in
-	"x86"|"hppa"|"sparc64"|"ppc"|"mips"|"amd64")
-		;;
-	*)
-		filter-flags -fPIC
-		;;
-esac
-
-S="${WORKDIR}/${P}"
 CRYPT_PATCH_P="${P}-crypt-gentoo"
 DESCRIPTION="Various useful Linux utilities"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.bz2
 	crypt? ( mirror://gentoo/${CRYPT_PATCH_P}.patch.bz2 )"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha mips ~hppa"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="crypt nls static pam"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4.0.5
@@ -85,6 +74,15 @@ src_unpack() {
 
 	#enable pam only if we use it
 	use pam && sed -i "s:HAVE_PAM=no:HAVE_PAM=yes:" MCONFIG
+
+	## see below for details on pic.patch
+	case ${ARCH} in
+		"x86"|"hppa"|"sparc64"|"ppc"|"mips"|"amd64")
+			;;
+		*)
+			filter-flags -fPIC
+			;;
+	esac
 
 	sed -i \
 		-e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \

@@ -1,31 +1,29 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r8.ebuild,v 1.3 2004/02/27 19:28:37 seemant Exp $
-
-IUSE="crypt nls static pam"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r8.ebuild,v 1.4 2004/04/24 08:46:36 vapier Exp $
 
 inherit eutils flag-o-matic
 
 ## see below for details on pic.patch
 # Added back for now until other archs can be tested.
 
-S="${WORKDIR}/${P}"
 CRYPT_PATCH_P="${P}-crypt-gentoo"
 DESCRIPTION="Various useful Linux utilities"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.bz2
 	crypt? ( mirror://gentoo/${CRYPT_PATCH_P}.patch.bz2 )"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
 KEYWORDS="x86 amd64 ppc sparc alpha mips hppa"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="crypt nls static pam"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2-r2
 	pam? ( sys-apps/pam-login )"
-
-RDEPEND="${DEPEND} dev-lang/perl
+RDEPEND="${DEPEND}
+	dev-lang/perl
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -83,7 +81,7 @@ src_unpack() {
 		-e "s:SUIDMODE=.*4755:SUIDMODE=4711:" \
 		MCONFIG || die "MCONFIG sed"
 
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		sed -i -e 's/DISABLE_NLS=no/DISABLE_NLS=yes/' MCONFIG ||
 			die "MCONFIG nls sed"
 	fi
@@ -115,4 +113,3 @@ src_install() {
 	docinto examples
 	dodoc example.files/*
 }
-
