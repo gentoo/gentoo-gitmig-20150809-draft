@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.26 2004/06/25 02:34:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.27 2004/08/08 15:46:09 foser Exp $
+
+*gob-2.0.9 (08 Aug 2004)
+
+  08 Aug 2004; foser <foser@gentoo.org> gob-2.0.9.ebuild, metadata.xml :
+  New release as requested in (#46324)
+  Added metadata.xml, set the gnome herd as maintainers for now
 
   23 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> gob-1.0.12.ebuild:
   Unmask on amd64.
