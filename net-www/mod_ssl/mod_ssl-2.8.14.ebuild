@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.14.ebuild,v 1.2 2003/07/31 13:59:26 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.14.ebuild,v 1.3 2004/04/04 01:42:43 zul Exp $
 
 MY_P=${P}-1.3.27
 S=${WORKDIR}/${MY_P}

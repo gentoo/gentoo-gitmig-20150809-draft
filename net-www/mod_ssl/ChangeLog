@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_ssl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.21 2003/11/20 00:51:01 drobbins Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.22 2004/04/04 01:42:43 zul Exp $
+
+  03 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  mod_ssl-2.8.14.ebuild, mod_ssl-2.8.15.ebuild, mod_ssl-2.8.16.ebuild,
+  files/ssl.default-vhost.conf:
+  Added metadata.xml
+  Updated headers, turned off ssl for virtualhosts on port 80. Closes #45700.
 
   19 Nov 2003; Daniel Robbins <drobbins@gentoo.org> mod_ssl-2.8.16.ebuild:
   moving to stable on all arches for GLSA 200310-03 (Apache 1.x security fix.)
