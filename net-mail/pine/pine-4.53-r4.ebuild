@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.53-r4.ebuild,v 1.5 2003/04/15 11:27:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.53-r4.ebuild,v 1.6 2003/04/15 16:09:22 mholzer Exp $
 
 inherit eutils
 
@@ -20,7 +20,6 @@ DEPEND="virtual/glibc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
-	net-www/lynx
 	!net-mail/pine-maildir"
 
 S=${WORKDIR}/${PN}${PV}
