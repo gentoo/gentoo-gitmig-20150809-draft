@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.66 2004/12/07 04:07:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.67 2004/12/08 01:28:41 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -424,6 +424,9 @@ libc_has_ssp() {
 	         grep 'FUNC.*GLOBAL.*__stack_smash_handler')" ]
 	then
 		return 0
+	elif [[ ${CTARGET} != ${CHOST} ]]
+	then
+		die "'${my_libc}' was detected w/out ssp, that sucks"
 	else
 		return 1
 	fi
