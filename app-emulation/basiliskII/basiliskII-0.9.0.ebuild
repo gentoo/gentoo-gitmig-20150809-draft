@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.7 2002/10/17 13:18:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.8 2002/10/20 18:37:50 vapier Exp $
 
 IUSE="X gtk xv esd dga"
 
@@ -26,7 +26,6 @@ S=${WORKDIR}/BasiliskII-0.9/src/Unix
 DEPEND="gtk? ( x11-libs/gtk+ )
 	esd? ( media-sound/esound )" 
 
-RDEPEND="${DEPEND}"
 
 SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/BasiliskII_src_31052001.tar.gz"
 

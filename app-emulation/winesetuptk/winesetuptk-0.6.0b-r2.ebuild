@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r2.ebuild,v 1.8 2002/10/16 23:39:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r2.ebuild,v 1.9 2002/10/20 18:37:52 vapier Exp $
 
 MY_P1=tcltk-${P}
 P=${P}
@@ -16,7 +16,6 @@ KEYWORDS="x86 -ppc"
 
 DEPEND="virtual/glibc
 	virtual/x11"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 

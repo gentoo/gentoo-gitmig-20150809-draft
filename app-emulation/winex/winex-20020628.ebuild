@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020628.ebuild,v 1.7 2002/10/16 23:46:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020628.ebuild,v 1.8 2002/10/20 18:37:52 vapier Exp $
 
 IUSE="cups opengl"
 
@@ -22,7 +22,6 @@ DEPEND="virtual/x11
 	cups? ( net-print/cups )
 	>=media-libs/freetype-2.0.0
 	dev-lang/tcl dev-lang/tk"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	

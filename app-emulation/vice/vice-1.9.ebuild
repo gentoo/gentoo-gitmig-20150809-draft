@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.9.ebuild,v 1.3 2002/10/16 23:48:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.9.ebuild,v 1.4 2002/10/20 18:37:51 vapier Exp $
 
 IUSE="sdl nls gnome"
 
@@ -14,7 +14,6 @@ KEYWORDS="x86"
 DEPEND=">=x11-base/xfree-4.0
 	sdl? ( media-libs/libsdl )
 	gnome? ( gnome-base/gnome )"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r2.ebuild,v 1.8 2002/10/16 23:47:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r2.ebuild,v 1.9 2002/10/20 18:37:52 vapier Exp $
 
 IUSE="sdl dga esd"
 
@@ -15,7 +15,6 @@ LICENSE="xmame"
 DEPEND="virtual/x11
 		sdl? ( >=media-libs/libsdl-1.2.0 )
 		>=sys-libs/zlib-1.1.3-r2"
-RDEPEND="${DEPEND}"
 
 # Please note modifications for ppc in this ebuild.  If you update the ebuild,
 # please either test on ppc, or send it to a ppc developer for testing before

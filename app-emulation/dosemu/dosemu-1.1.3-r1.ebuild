@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.3-r1.ebuild,v 1.9 2002/10/19 16:46:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.3-r1.ebuild,v 1.10 2002/10/20 18:37:50 vapier Exp $
 
 IUSE="X svga"
 
@@ -14,7 +14,6 @@ KEYWORDS="x86 -ppc"
 SLOT="0"
 DEPEND="X? ( virtual/x11 )
 	svga? ( media-libs/svgalib )"
-RDEPEND="${DEPEND}"	
 src_compile() {
 
 ### We make base-configure executable here, so that we can pretend its our

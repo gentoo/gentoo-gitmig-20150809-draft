@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.2 2002/10/04 04:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.3 2002/10/20 18:37:50 vapier Exp $
 
 S=${WORKDIR}/Emulator_Src_3.5
 FLTK_PV=1.0.11
@@ -12,7 +12,6 @@ SRC_URI="http://www.palmos.com/dev/tools/emulator/sources/emulator_src_3.5.tar.g
 DESCRIPTION="Palm OS Emulator"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 KEYWORDS="x86"
 LICENSE="GPL-2"

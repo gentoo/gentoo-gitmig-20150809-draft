@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.1.ebuild,v 1.5 2002/10/19 16:46:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopsspu/psemu-peopsspu-1.0.1.ebuild,v 1.6 2002/10/20 18:37:51 vapier Exp $
 
 DESCRIPTION="P.E.Op.S Sound Emulation (SPU) PSEmu Plugin"
 HOMEPAGE="http://peops.sourceforge.net"
@@ -11,7 +11,6 @@ DEPEND="app-arch/unzip
 	app-misc/fixdos
 	x11-libs/gtk+
 	sys-devel/automake"
-RDEPEND="${DEPEND}"
 SRC_URI="mirror://sourceforge/peops/PeopsSpu101.zip"
 S=${WORKDIR}/spuPeopsSound
 

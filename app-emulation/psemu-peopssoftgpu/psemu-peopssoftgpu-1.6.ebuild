@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.6.ebuild,v 1.6 2002/10/19 16:46:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.6.ebuild,v 1.7 2002/10/20 18:37:51 vapier Exp $
 
 IUSE="sdl"
 
@@ -12,7 +12,6 @@ SLOT="0"
 DEPEND="x11-libs/gtk+
 	dev-lang/nasm
 	sdl? ( media-libs/libsdl )"
-RDEPEND="${DEPEND}"
 SRC_URI="mirror://sourceforge/peops/PeopsSoftGpu106.tar.gz"
 S=${WORKDIR}
 
