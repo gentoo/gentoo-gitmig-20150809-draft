@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/reoback
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reoback/ChangeLog,v 1.1 2003/03/16 22:08:16 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reoback/ChangeLog,v 1.2 2003/06/12 22:10:09 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> reoback-1.0-r3.ebuild:
+  fix Header
 
 *reoback-1.0-r3 (16 Mar 2003)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systrace
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/ChangeLog,v 1.3 2003/06/10 21:45:02 natey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/ChangeLog,v 1.4 2003/06/12 22:11:09 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> systrace-1.0-r1.ebuild,
+  systrace-1.0-r2.ebuild, systrace-1.0-r3.ebuild:
+  fix Header
 
 *systrace-1.0-r3 (10 Jun 2003)
 

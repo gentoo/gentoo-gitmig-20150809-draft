@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gtk-systrace
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-systrace/ChangeLog,v 1.1 2003/03/28 23:56:45 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-systrace/ChangeLog,v 1.2 2003/06/12 22:08:48 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> gtk-systrace-0.1-r1.ebuild:
+  fix Header
 
 *gtk-systrace-0.1-r1 (27 Mar 2003)
 

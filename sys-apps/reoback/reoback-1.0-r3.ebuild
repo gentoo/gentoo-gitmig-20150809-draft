@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-#
-# 2003-02-19 tg created ebuild
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reoback/reoback-1.0-r3.ebuild,v 1.2 2003/06/12 22:10:09 msterret Exp $
 
 DESCRIPTION="Reoback Backup Solution"
 SRC_URI="http://switch.dl.sourceforge.net/sourceforge/reoback/reoback-1.0_r3.tar.gz"

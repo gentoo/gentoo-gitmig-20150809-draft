@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/irda-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/ChangeLog,v 1.7 2003/02/12 09:01:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/ChangeLog,v 1.8 2003/06/12 22:09:15 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> irda-utils-0.9.15.ebuild:
+  fix Header
 
 *irda-utils-0.9.15 (15 Dec 2002)
 
