@@ -1,6 +1,9 @@
 # ChangeLog for media-video/asfrecorder
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/ChangeLog,v 1.4 2004/07/01 08:38:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/ChangeLog,v 1.5 2004/08/12 20:05:59 chriswhite Exp $
+
+  13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Adding missing metadata.xml.  Taking over as maintainer.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   asfrecorder-1.1.ebuild:
