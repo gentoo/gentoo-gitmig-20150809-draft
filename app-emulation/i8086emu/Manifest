@@ -1,5 +1,5 @@
-MD5 b398a21acc1bc792298580fc39f3adb4 i8086emu-0.9.1.ebuild 1168
+MD5 bbd34c26031f6668b032102412a98473 i8086emu-0.9.1.ebuild 1167
+MD5 cfaac3ca51aa7c693bc6ed29edd839f2 ChangeLog 579
 MD5 e6f55d61a4d24ff653e5d6fa44fd91b1 metadata.xml 310
-MD5 8ddca32d7cb79374035d56d7d77f5d06 ChangeLog 499
 MD5 f4171beed18f6616f7f66a9bd5ee8972 files/digest-i8086emu-0.9.1 71
 MD5 e00b49e5c64eabf50282aff9bc24975e files/i8086emu-0.9.1.patch 4047

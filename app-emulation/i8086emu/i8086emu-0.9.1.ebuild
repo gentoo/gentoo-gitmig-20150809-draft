@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/i8086emu/i8086emu-0.9.1.ebuild,v 1.1 2004/03/29 08:16:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/i8086emu/i8086emu-0.9.1.ebuild,v 1.2 2004/03/29 13:39:27 dholm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/i8086emu-src-${PV}
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~x86 ~alpha ~amd64"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
