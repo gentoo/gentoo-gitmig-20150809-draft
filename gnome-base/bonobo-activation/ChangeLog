@@ -1,12 +1,14 @@
 # ChangeLog for gnome-base/bonobo-activation
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.8 2002/07/29 02:16:34 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.9 2002/07/29 02:21:59 spider Exp $
 
 
 *bonobo-activation-1.0.3 (19 Jul 2002)
   29 Jul 2002; Spider <spider@gentoo.org> bonobo-activation-1.0.3.ebuild :
   New version, added missing dep on linc
-  
+  Fix: Removed the debugging info here as well
+
+
 *bonobo-activation-1.0.2 (21 Jun 2002)
   21 Jun 2002; Spider <spider@gentoo.org> bonobo-activation-1.0.2.ebuild :
   updated version, some minor dep changes
