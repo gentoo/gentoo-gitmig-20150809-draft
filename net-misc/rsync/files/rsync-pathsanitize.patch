@@ -1,5 +1,7 @@
---- orig/util.c	2004-04-27 12:59:37 -0700
-+++ util.c	2004-08-11 23:37:27 -0700
+http://bugs.gentoo.org/60309
+
+--- util.c
++++ util.c
 @@ -743,7 +743,7 @@
  				allowdotdot = 1;
  			} else {
