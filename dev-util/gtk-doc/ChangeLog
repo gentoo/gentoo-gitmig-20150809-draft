@@ -1,16 +1,19 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.4 2002/11/16 23:12:07 spider Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.5 2002/11/17 01:56:09 vapier Exp $
 
 *gtk-doc-0.10 (16 Nov 2002)
   
+  16 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added dev-libs/libxslt to DEPEND.
+
   16 Nov 2002; Spider <spider@gentoo.org> gtk-doc-0.10.ebuild :
   Added the new version, marked as testing, added DEBUG logic to the build.
   
 *gtk-doc-0.9-r2 (Mar 29 2002)
-	Initial changelog and release of gtk-doc
 
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 
+  29 Mar 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial changelog and release of gtk-doc
