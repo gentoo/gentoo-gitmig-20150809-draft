@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.2.ebuild,v 1.2 2004/02/07 18:34:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.3.ebuild,v 1.1 2004/02/07 18:34:08 foser Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.abisource.com"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-KEYWORDS="x86 ~sparc ~alpha ~ppc"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 LICENSE="GPL-2"
 SLOT="2"
 
@@ -38,13 +38,7 @@ DEPEND="${RDEPEND}
 	sys-devel/automake
 	dev-util/pkgconfig"
 
-#	>=dev-libs/libole2-0.2.4-r1
-#	perl?  ( >=dev-lang/perl-5.6 )
-# perl seems broken
-
 src_compile() {
-
-#	./autogen.sh
 
 	# this is a hack since I don't want to go hack in the gnome-vfs headerfiles.
 	# The issue is about gnome-vfs containing "long long" which makes gcc 3.3.1 balk
@@ -69,7 +63,6 @@ src_compile() {
 
 	cd ${S_P}
 
-#	./nextgen.sh
 	econf \
 		`use_enable debug` \
 		--enable-all \
