@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.11.ebuild,v 1.2 2004/10/01 05:48:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.11.ebuild,v 1.3 2004/11/24 02:46:26 leonardop Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~hppa ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~amd64 ~alpha ~hppa ~mips"
 IUSE="accessibility gnome"
 
 # The package claims to support 'qte', but it hasn't been tested.
@@ -34,8 +34,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-text/scrollkeeper"
 
-G2CONF="${G2CONF} $(use_with gnome)"
-G2CONF="${G2CONF} $(use_with accessibility a11y)"
-G2CONF="${G2CONF} $(use_with accessibility speech)"
+G2CONF="${G2CONF} $(use_with gnome) $(use_with accessibility a11y) \
+$(use_with accessibility speech)"
 
 DOCS="ABOUT-NLS AUTHORS ChangeLog MAINTAINERS NEWS README"
