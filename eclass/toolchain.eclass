@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.79 2005/01/15 09:05:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.80 2005/01/15 09:07:11 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -415,7 +415,7 @@ glibc_have_pie() {
 # smashing protection support.
 libc_has_ssp() {
 	local libc_prefix
-	[[ $(tc-arch ${CTARGET}) == "ppc64" ]] && [[ -z ${ABI} ]] && libc_prefix="/lib64/"
+	[[ $(tc-arch) == "ppc64" ]] && [[ -z ${ABI} ]] && libc_prefix="/lib64/"
 	libc_prefix=${libc_prefix:-/$(get_libdir)/}
 
 	echo 'int main(){}' > "${T}"/libctest.c
@@ -743,7 +743,7 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
-	if [[ $(tc-arch ${CTARGET}) == "amd64" ]] \
+	if [[ $(tc-arch) == "amd64" ]] \
 	   && [[ -z ${SKIP_MULTILIB_HACK} ]] && use multilib
 	then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
@@ -782,7 +782,7 @@ gcc-library-configure() {
 
 gcc-compiler-configure() {
 	# multilib support
-	case $(tc-arch ${CTARGET}) in
+	case $(tc-arch) in
 		amd64|mips|sparc)
 		confgcc="${confgcc} $(use_enable multilib)"
 		;;
@@ -797,7 +797,7 @@ gcc-compiler-configure() {
 	use build || ! use gcj && confgcc="${confgcc} --disable-libgcj"
 
 	# Add --with-abi flags to enable respective MIPS ABIs
-	case $(tc-arch ${CTARGET}) in
+	case $(tc-arch) in
 		mips)
 		use multilib && confgcc="${confgcc} --with-abi=32"
 		use n64 && confgcc="${confgcc} --with-abi=n64"
@@ -887,7 +887,7 @@ gcc_do_configure() {
 
 	# Fix linking problem with c++ apps which where linked
 	# against a 3.2.2 libgcc
-	[[ $(tc-arch ${CTARGET}) == "hppa" ]] && confgcc="${confgcc} --enable-sjlj-exceptions"
+	[[ $(tc-arch) == "hppa" ]] && confgcc="${confgcc} --enable-sjlj-exceptions"
 
 	# Native Language Support
 	if use nls && ! use build ; then
@@ -1080,7 +1080,7 @@ gcc_do_filter_flags() {
 
 	# filter *common* flags that will make other gcc's angry
 	if [[ ${GCC_BRANCH_VER} == "3.3" ]] ; then
-		case $(tc-arch ${CTARGET}) in
+		case $(tc-arch) in
 			x86) filter-flags '-mtune=*';;
 		esac
 	fi
@@ -1558,7 +1558,7 @@ do_gcc_HTB_boundschecking_patches() {
 # patch in ProPolice Stack Smashing protection
 do_gcc_SSP_patches() {
 	# PARISC has no love ... it's our stack :(
-	[[ $(tc-arch ${CTARGET}) == "hppa" ]] && return 0
+	[[ $(tc-arch) == "hppa" ]] && return 0
 
 	local ssppatch
 	local sspdocs
