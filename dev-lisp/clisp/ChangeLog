@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.8 2003/09/05 03:21:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.9 2003/11/26 20:29:29 mkennedy Exp $
+
+  26 Nov 2003; <mkennedy@gentoo.org> clisp-2.31.ebuild, metadata.xml,
+  files/2.31/fastcgi-Makefile.in-gentoo.patch:
+  resolves bug 33425 (treatment of CFLAGS), resolves bug 30591 (-D_LIBC error),
+  fixes for fastcgi support, disable thread USE permanently, filled out
+  metadata.xml, added support for the new common lisp controller recently added
+  to stable, add support for nls and readline USE flags.
 
 *clisp-2.31 (04 Sep 2003)
 

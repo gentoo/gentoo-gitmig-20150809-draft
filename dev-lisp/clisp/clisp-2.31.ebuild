@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.31.ebuild,v 1.2 2003/09/06 22:35:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.31.ebuild,v 1.3 2003/11/26 20:29:29 mkennedy Exp $
 
-IUSE="X threads fastcgi postgres ldap"
+IUSE="X threads fastcgi postgres ldap nls"
 
 DESCRIPTION="A portable, bytecode-compiled implementation of Common Lisp"
 HOMEPAGE="http://clisp.sourceforge.net/"
@@ -13,7 +13,9 @@ DEPEND="dev-libs/libsigsegv
 	fastcgi? ( dev-libs/fcgi )
 	postgres? ( dev-db/postgresql )
 	X? ( x11-base/xfree )
-	ldap? ( net-nds/openldap )"
+	ldap? ( net-nds/openldap )
+	readline? ( sys-libs/readline )
+	nls? ( sys-devel/gettext )"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -21,28 +23,30 @@ KEYWORDS="~x86 ~ppc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	patch -p1 <${FILESDIR}/${PV}/bindings-glibc-linux.lisp-gentoo.patch || die
-	patch -p1 <${FILESDIR}/${PV}/bindings-wildcard-fnmatch.c-gentoo.patch || die
+	epatch ${FILESDIR}/${PV}/bindings-glibc-linux.lisp-gentoo.patch
+	epatch ${FILESDIR}/${PV}/bindings-wildcard-fnmatch.c-gentoo.patch
+	epatch ${FILESDIR}/${PV}/fastcgi-Makefile.in-gentoo.patch
 }
 
 src_compile() {
+	export CC="${CC} ${CFLAGS}"
+	unset CFLAGS CXXFLAGS
 	local myconf="--with-dynamic-ffi
 		--with-unicode
 		--with-module=regexp
 		--with-module=syscalls
-		--with-module=bindings/glibc
 		--with-module=wildcard
-		--with-module=queens"
-#		--with-module=netica (netica is non-free, so there is little point in supporting it)
+		--with-module=bindings/glibc"
+	use readline || myconf="${myconf} --with-noreadline"
+	use nls || myconf="${myconf} --with-nogettext"
 	use X && myconf="${myconf} --with-module=clx/new-clx"
 	use postgres && myconf="${myconf} --with-module=postgresql"
 	use fastcgi && myconf="${myconf} --with-module=fastcgi"
-#	use ldap && myconf="${myconf} --with-module=dirkey" # openldap is currently broken
-	use threads && myconf="${myconf} --with-threads=POSIX_THREADS"
-	unset CFLAGS
-	./configure --prefix=/usr ${myconf} || die "./configure failed"
-	cd src
+	# the following modules are not supported
+#	use ldap && myconf="${myconf} --with-module=dirkey"
+#	use threads && myconf="${myconf} --with-threads=POSIX_THREADS"
+	./configure --prefix=/usr ${myconf} build || die "./configure failed"
+	cd build
 	./makemake ${myconf} >Makefile
 	make config.lisp
 	sed 's,"vi","nano",g' <config.lisp >config.gentoo && mv config.gentoo config.lisp || die
@@ -50,10 +54,11 @@ src_compile() {
 }
 
 src_install() {
-	cd src && make DESTDIR=${D} prefix=/usr install-bin || die
-	doman clisp.1 clreadline.3
+	cd build && make DESTDIR=${D} prefix=/usr install-bin || die
+
+	doman clisp.1
 	dodoc SUMMARY README* NEWS MAGIC.add GNU-GPL COPYRIGHT \
-		ANNOUNCE clisp.dvi clisp.html clreadline.dvi clreadline.html
+		ANNOUNCE clisp.dvi clisp.html
 
 	rm -f ${D}/usr/lib/clisp/base/*
 	(cd ${D}/usr/lib/clisp/base && ln -s ../full/* .)
@@ -64,6 +69,8 @@ src_install() {
 	doexe ${FILESDIR}/clisp.sh
 	insinto /usr/lib/clisp
 	doins ${FILESDIR}/install-clc.lisp
+
+	keepdir /usr/lib/common-lisp/clisp
 }
 
 pkg_preinst() {
@@ -77,10 +84,13 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	chown cl-builder:cl-builder /usr/lib/common-lisp/clisp
+	rm -rf /usr/lib/common-lisp/clisp/*
+	/usr/bin/clc-autobuild-impl clisp yes
 	/usr/sbin/register-common-lisp-implementation clisp
 }
 
 pkg_prerm() {
-	/usr/sbin/unregister-common-lisp-implementation clisp
+	rm -rf /usr/lib/common-lisp/clisp/*
 }
 
