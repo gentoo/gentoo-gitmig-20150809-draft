@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.0-r1.ebuild,v 1.9 2004/06/24 22:06:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.0-r1.ebuild,v 1.10 2004/07/15 00:47:49 agriffis Exp $
 
 inherit debug libtool
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Zed's Virtual Terminal Library"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0.3
 	>=x11-libs/gtk+-2.0.5
@@ -45,8 +45,3 @@ src_install() {
 	docinto libzvt
 	dodoc libzvt/AUTHORS libzvt/BUGS libzvt/README libzvt/TODO
 }
-
-
-
-
-

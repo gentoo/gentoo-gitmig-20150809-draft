@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r1.ebuild,v 1.8 2004/06/24 22:06:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/libzvt-2.0.1-r1.ebuild,v 1.9 2004/07/15 00:47:50 agriffis Exp $
 
 inherit gnome2
 
@@ -22,6 +22,3 @@ DEPEND="${RDEPEND}
 
 
 DOCS="ABOUT* AUTHORS COPY* ChangeLog INSTALL NEWS README"
-
-
-
