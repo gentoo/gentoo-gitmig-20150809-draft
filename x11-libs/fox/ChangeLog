@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/fox
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.8 2003/08/01 18:45:44 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.9 2004/02/07 01:36:55 pyrania Exp $
+
+*fox-1.0.49 (07 Feb 2004)
+
+  07 Feb 2004; Markus Nigbur <pyrania@gentoo.org> fox-1.0.17.ebuild,
+  fox-1.0.26.ebuild, fox-1.0.29.ebuild, fox-1.0.40.ebuild, fox-1.0.43.ebuild,
+  fox-1.0.49.ebuild:
+  Version bump, removed older ebuilds and fixed a DESC typo.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
