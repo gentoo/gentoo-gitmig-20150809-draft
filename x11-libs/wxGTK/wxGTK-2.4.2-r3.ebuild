@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r3.ebuild,v 1.3 2004/11/13 03:32:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r3.ebuild,v 1.4 2004/12/05 20:53:42 pythonhead Exp $
 
 inherit flag-o-matic eutils
 
@@ -32,6 +32,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${PN}-2.4.2-menu.cpp.patch || \
+		die "Failed to patch menu.cpp"
 	# fix xml contrib makefile problems
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.4.1-contrib.patch
 	# disable contrib/src/animate

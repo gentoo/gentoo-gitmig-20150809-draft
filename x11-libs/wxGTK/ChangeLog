@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.66 2004/11/13 17:13:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.67 2004/12/05 20:53:42 pythonhead Exp $
+
+  05 Dec 2004; Rob Cakebread <pythonhead@gentoo.org>
+  +files/wxGTK-2.4.2-menu.cpp.patch, wxGTK-2.4.2-r3.ebuild:
+  Patch to disable three private GTK+ functions. Closes bug# 46737
 
   13 Nov 2004; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.5.3.ebuild:
   Removed monolithic build, fixed gtk1 detection, bug# 71036

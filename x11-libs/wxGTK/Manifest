@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a8eb3171d5c29a993606087ea0c6863 ChangeLog 11161
+MD5 0be2c13cae29ffa2aef6c31fe6864132 ChangeLog 11342
 MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
 MD5 3ada4f33a027c1a1b644ce88588d5046 wxGTK-2.4.2-r2.ebuild 4067
-MD5 28e6685025d1b5be5609b9de0c371cec wxGTK-2.4.2-r3.ebuild 4222
+MD5 d5f9e5cc02b3a229ab1ff6177f0734f2 wxGTK-2.4.2-r3.ebuild 4307
 MD5 270b050e37d18d6af8b63ace9704e708 wxGTK-2.5.3.ebuild 4303
 MD5 5087298be841a84071ea67830f5d6a2b files/digest-wxGTK-2.4.2-r2 65
 MD5 5087298be841a84071ea67830f5d6a2b files/digest-wxGTK-2.4.2-r3 65
@@ -14,10 +14,11 @@ MD5 522f6b3a771ea33a1af7ede9c795ab4c files/wxGTK-2.4.1-wxpython1.patch 1102
 MD5 1e85c1c970da32626580dfef7228b314 files/wxGTK-2.4.1-wxpython2.patch 8459
 MD5 6c8af85a3bfec0c477a778258368de56 files/wxGTK-2.4.2-cleanup.patch 18162
 MD5 798d3d05c7adb28f00834aa4ea1f304b files/wxGTK-2.4.2-contrib_animate.patch 442
+MD5 f3bc3ab73cb31c91683e3ed58f8ffabb files/wxGTK-2.4.2-menu.cpp.patch 2253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBlrHDI1lqEGTUzyQRAuB2AKCbJTX/rRnRXvSY2nlvxBYe46MktwCfbBt9
-Ftns29VuI4/7hnXn+UJ5vVQ=
-=HboU
+iD8DBQFBs3Viz2gxt1z4IGYRAlqIAKDToBGdSpL0SdU+IbAvRk4os3Vd7wCggQlm
+f6YTz/0WA19wcvGQ5bzVND4=
+=QxDC
 -----END PGP SIGNATURE-----
