@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.3.3.1.ebuild,v 1.15 2004/03/30 20:55:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.3.3.1.ebuild,v 1.16 2004/04/27 21:21:38 agriffis Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Media plugins for Nautilus (audio view and info tab)"
 HOMEPAGE="http://www.gstreamer.net"

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-network
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-network/ChangeLog,v 1.6 2004/02/25 17:27:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-network/ChangeLog,v 1.7 2004/04/27 21:16:25 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  gnome-network-1.0.2-r1.ebuild:
+  Add inherit eutils
 
   25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> gnome-network-1.99.5.ebuild:
   Adding amd64 keyword. Closing #42586.

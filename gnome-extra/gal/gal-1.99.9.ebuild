@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.9.ebuild,v 1.5 2003/09/24 14:34:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.9.ebuild,v 1.6 2004/04/27 21:14:16 agriffis Exp $
 
-inherit gnome2 gnome.org libtool
+inherit gnome2 gnome.org libtool eutils
 
 DESCRIPTION="The Gnome Application Libraries"
 HOMEPAGE="http://www.gnome.org/"

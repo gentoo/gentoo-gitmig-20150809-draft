@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.10.ebuild,v 1.3 2004/03/23 10:15:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.10.ebuild,v 1.4 2004/04/27 21:19:18 agriffis Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 MY_P=${P/lib/}
 MY_PN=${PN/lib/}
