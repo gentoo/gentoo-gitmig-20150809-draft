@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Simple
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.18 2004/06/25 01:03:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.19 2004/12/06 07:43:50 mcummings Exp $
+
+*Test-Simple-0.53 (06 Dec 2004)
+
+  06 Dec 2004; Michael Cummings <mcummings@gentoo.org>
+  +Test-Simple-0.53.ebuild:
+  New version on CPAN
 
   16 Apr 2004; Michael Cummings <mcummings@gentoo.org>
   Test-Simple-0.47-r1.ebuild, Test-Simple-0.47.ebuild:
