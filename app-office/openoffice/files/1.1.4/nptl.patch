@@ -11,11 +11,15 @@
  	InfoMemoryTypeAccess( t_short );
 *** sal/osl/unx/process.c.orig
 --- sal/osl/unx/process.c
-@@ -1020,7 +1020,7 @@
- #if defined(LINUX)
-             /* mfe: linux likes to have just one thread when the exec family is called */
-             /*      this np function has this purpose ...                              */
+@@ -1017,11 +1017,6 @@
+ 			for (i = 0; data.m_pszEnv[i] != NULL; i++)
+ 	     		putenv(data.m_pszEnv[i]);
+ 
+-#if defined(LINUX)
+-            /* mfe: linux likes to have just one thread when the exec family is called */
+-            /*      this np function has this purpose ...                              */
 -            pthread_kill_other_threads_np();
-+            /*pthread_kill_other_threads_np();*/
- #endif
+-#endif
              OSL_TRACE("ChildStatusProc : starting '%s'",data.m_pszArgs[0]);
+      
+ 			/* Connect std IO to pipe ends */

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.13 2005/01/18 17:25:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.14 2005/01/18 17:57:09 suka Exp $
 
 # Notes:
 #
@@ -231,6 +231,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/STLport-vector.patch
 	fi
 
+	#Fixes for nptl
 	if use nptl; then
 		epatch ${FILESDIR}/${PV}/nptl.patch
 	fi
@@ -246,15 +247,13 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/gcc34.patch.bz2
 		epatch ${FILESDIR}/${PV}/gcc34-sal-link-to-libsupc++.diff
 		use !java && epatch ${FILESDIR}/${PV}/gcc34-nojava-fix.patch
-		use nptl && epatch ${FILESDIR}/${PV}/gcc34-nptl-fix.patch
 	fi
 
-	#phtread-fix
-	epatch ${FILESDIR}/${PV}/pthreadlink-fix.patch
-
-	#Fix for hardened
+	#Fixes for hardened
 	if use hardened; then
+		epatch ${FILESDIR}/${PV}/pthreadlink-fix.patch
 		epatch ${FILESDIR}/${PV}/hardened-link.patch
+		epatch ${FILESDIR}/${PV}/pyunolink-fix.patch
 	fi
 
 	#Do our own branding by setting gentoo linux as the vendor

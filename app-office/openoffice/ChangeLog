@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.105 2005/01/18 17:25:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.106 2005/01/18 17:57:09 suka Exp $
+
+  18 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-1.1.4.ebuild, -files/1.1.4/gcc34-nptl-fix.patch,
+  files/1.1.4/nptl.patch:
+  Remove gcc34-nptl-fix as this is now incorporated in the regular nptl-patch
 
   18 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-1.1.4.ebuild, +files/1.1.4/nptl.patch:
