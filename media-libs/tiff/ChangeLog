@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.14 2004/03/05 08:03:47 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.15 2004/03/16 03:42:04 geoman Exp $
+
+  15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> tiff-3.6.1.ebuild:
+  Added to stable on mips.
 
   05 Mar 2004; Bret Curtis <psi29a@gentoo.org> tiff-3.5.7-r1.ebuild:
   Added ~mips to tiff-3.5.7-r1.ebuild keywords
