@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33-r2.ebuild,v 1.2 2004/06/24 23:45:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33-r2.ebuild,v 1.3 2004/07/14 15:53:14 agriffis Exp $
 
 inherit flag-o-matic common-lisp-common eutils gcc
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/clisp/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86"
-IUSE="X fastcgi postgres nls pcre"
+IUSE="X fastcgi nls pcre postgres readline"
 
 DEPEND="dev-libs/libsigsegv
 	dev-lisp/common-lisp-controller
