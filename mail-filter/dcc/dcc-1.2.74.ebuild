@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.2.28-r1.ebuild,v 1.3 2005/03/21 17:46:11 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.2.74.ebuild,v 1.1 2005/03/21 17:46:11 swtaylor Exp $
 
 DESCRIPTION="Distributed Checksum Clearinghouse"
 HOMEPAGE="http://www.rhyolite.com/anti-spam/dcc/"
@@ -9,7 +9,7 @@ SRC_URI="${HOMEPAGE}/source/${MY_P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="ipv6"
 
 RDEPEND="dev-lang/perl
@@ -36,6 +36,8 @@ src_compile() {
 		misc/dcc-stats-graph.in
 	sed -i -e "s:^RRDTOOL=/usr/local/bin/rrdtool:RRDTOOL=/usr/bin/rrdtool:" \
 		misc/dcc-stats-collect.in
+	sed -i -e "s:@installroot@:${D}:" \
+		cgi-bin/Makefile.in
 
 	local myconf
 	myconf="${myconf} --homedir=${dcc_homedir}"
@@ -72,7 +74,7 @@ src_install() {
 	dodir /etc/cron.daily ${dcc_homedir} ${dcc_cgibin} /usr/bin /usr/sbin /usr/share/man/man{0,8} /etc/dcc
 	keepdir /var/run/dcc /var/log/dcc
 
-	make DESTDIR=${D} DCC_BINDIR=${D}/usr/bin MANDIR=${D}/usr/share/man/man install || die
+	make DESTDIR=${D} DCC_BINDIR=${D}/usr/bin MANDIR=${D}/usr/share/man/man DCC_HOMEDIR=${D}${dcc_homedir} install || die
 
 	einfo "Branding and setting reasonable defaults"
 	sed -e "s/BRAND=\$/BRAND='Gentoo ${PF}'/;" \
