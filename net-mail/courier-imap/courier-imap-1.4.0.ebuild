@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.4.0.ebuild,v 1.1 2001/12/12 15:57:38 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.4.0.ebuild,v 1.2 2001/12/14 20:30:45 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
@@ -68,7 +68,7 @@ src_install () {
 	rm imapd.rc.orig
 	cd ${D}/etc/courier-imap
 	local x
-	for x in pop3d pop3d-ssl imapd imapd-ssl
+	for x in pop3d pop3d-ssl imapd imapd-ssl authdaemonrc
 	do
 		mv ${x}.dist ${x}
 	done
