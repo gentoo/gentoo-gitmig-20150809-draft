@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <liquidx@gentoo.org> (03 Jul 2003)
+# python with db4 support and threads enabled
+=dev-lang/python-2.2.3-r1
+
 # <brain@gentoo.org> (03 Jul 2003)
 # beta version
 =app-office/koffice-1.3_beta2
@@ -116,10 +120,6 @@ media-libs/gst-plugins-cdparanoia
 # <twp@gentoo.org> 10 Jun 2003
 # Needs testing (I can't test it)
 =dev-ruby/optparse-0.12
-
-# <liquidx@gentoo.org> 10 Jun 2003
-# Obligatory masking before introducing into portage.
-# =net-mail/evolution-1.4.0*
 
 # <pauldv@gentoo.org> 10 Jun 2003
 # Beta version, and testing needed
@@ -244,11 +244,10 @@ net-dialup/hcfusbmodem
 
 # <liquidx@gentoo.org> (13 Mar 2003)
 # evolution beta and friends. may cause breakage!
-=net-mail/evolution-1.3*
-
 # NEVER remove this mask!! We once renamed gtkhtml-3.0 to libgtkhtml-3.0,
 # so if you remove it, gtk+1 apps that use gtkhtml will get the wrong deps
 # - liquidx (10 Jun 2003)
+=net-mail/evolution-1.3*
 >=gnome-extra/gtkhtml-3.0
 
 # <lordvan@gentoo.org> (10 Mar 2003)
