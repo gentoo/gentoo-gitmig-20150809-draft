@@ -1,11 +1,16 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.6 2002/06/10 00:22:58 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.7 2002/07/17 12:06:38 stroke Exp $
 
+*gnome-spell-0.4.1-r2 (17 Jul 2002)
+  17 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-spell-0.4.1-r2.ebuild :
+  Updated dependence to ispell 3.2.06-r5 which added miscfiles to its dependencies.
+  list. (fixed #5142).
+   
 *gnome-spell-1.0pre1 (10 Jun 2002)
- 10 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-spell-1.0_pre1.ebuild :
- Looks like gnome-spell for gnome2 is pretty dead. So according with
- Spider I just removed its gnome2 related ebuilds.
+  10 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-spell-1.0_pre1.ebuild :
+  Looks like gnome-spell for gnome2 is pretty dead. So according with
+  Spider I just removed its gnome2 related ebuilds.
 
 *gnome-spell-1.0_pre1 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org> gnome-spell-1.0_pre1.ebuild : 
