@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.17 2004/08/25 13:55:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.18 2004/09/25 18:51:39 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -298,8 +298,6 @@ src_unpack() {
 	fi
 
 	cd ${S}
-	# Fixup libtool to correctly generate .la files with portage
-	elibtoolize --portage --shallow
 
 	# Branch update ...
 	if [ -n "${BRANCH_UPDATE}" ]
@@ -410,7 +408,11 @@ src_unpack() {
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
 
-	use uclibc && gnuconfig_update
+	cd ${S}
+	# Fixup libtool to correctly generate .la files with portage
+	elibtoolize --portage --shallow
+
+	gnuconfig_update
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }
