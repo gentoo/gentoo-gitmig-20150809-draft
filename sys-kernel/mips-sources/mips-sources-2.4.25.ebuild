@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25.ebuild,v 1.1 2004/02/23 10:48:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25.ebuild,v 1.2 2004/02/23 10:59:14 kumba Exp $
 
 
 # Version Data
@@ -9,7 +9,6 @@ CVSDATE="20040222"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 COBALTPATCHVER="1.1"
-PAXDATE="200402192035"
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
@@ -24,8 +23,7 @@ inherit kernel eutils
 # 2) linux-mips.org CVS snapshot diff from 28 Nov 2003
 # 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
 # 4) patch to fix the mips64 Makefile to allow building of mips64 kernels
-# 5) added PaX patch (http://pax.grsecurity.net)
-# 6) Patches for Cobalt support
+# 5) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -51,9 +49,6 @@ src_unpack() {
 
 	# Patch to fix mips64 Makefile so that -finline-limit=10000 gets added to CFLAGS
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-inlinelimit.patch
-
-	# Add in PaX support to the kernel
-	epatch ${FILESDIR}/pax-linux-${OKV}-${PAXDATE}.patch
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
