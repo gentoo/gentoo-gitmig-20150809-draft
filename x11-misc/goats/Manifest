@@ -1,6 +1,6 @@
 MD5 2b063b2b2e6632afc32564faa25a23df ChangeLog 977
 MD5 0c48ec9bd54955c852e13cdeab53677e goats-2.0.ebuild 1037
-MD5 f181612c5900644cc4180222e6648782 goats-2.2.ebuild 755
+MD5 2a9f7ed3ebdafb5a4ce91502d4408404 goats-2.2.ebuild 763
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3ee3a12ad25d2beda5138e6976850746 files/digest-goats-2.0 61
 MD5 0018739b65061053ba46637f0e2d4a05 files/digest-goats-2.2 61
