@@ -2,7 +2,7 @@ MD5 09619ad03cd84ba4338e576bf5ad2a96 ChangeLog 14077
 MD5 eeb3ec0ae25e9d4f7ce62c32b52d5996 metadata.xml 466
 MD5 a14d55690d52d6770c50855d7fd48efd samba-2.2.8a.ebuild 10853
 MD5 e49613d30093a41ce2883cf670cbe11f samba-3.0.0-r1.ebuild 10860
-MD5 483cb58ee7c9b9a5a3dbf5e0537148b2 samba-3.0.1-r1.ebuild 11356
+MD5 70172eea79bd0ccb6f357d1dba8803a2 samba-3.0.1-r1.ebuild 11339
 MD5 d5164790d64a6f7b353475b65104f1ea samba-3.0.1.ebuild 11320
 MD5 7611c5a39940659e72735aa53860277f samba-3.0.2a.ebuild 11442
 MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
