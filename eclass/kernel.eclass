@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.28 2003/06/26 22:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.29 2003/07/16 17:40:05 lostlogic Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -11,10 +11,13 @@ ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
-OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
-EXTRAVERSION="`echo ${PN}-${PV}-${PR} | \
-	sed -e 's:^\(.*\)-\(.*\)-[0-9]\+\.[0-9]\+\.[0-9]\+.r*\([0-9]\+\)\(_[^-_]\+\)\?\(-r[0-9]\+\)\?$:-\1-r\3\4:'`"
-KV=${OKV}${EXTRAVERSION}
+[ -z "${OKV}" ] && \
+	OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+if [ -z "${EXTRAVERSION}" ]; then
+	EXTRAVERSION="`echo ${PN}-${PV}-${PR} | \
+		sed -e 's:^\(.*\)-\(.*\)-[0-9]\+\.[0-9]\+\.[0-9]\+.r*\([0-9]\+\)\(_[^-_]\+\)\?\(-r[0-9]\+\)\?$:-\1-r\3\4:'`"
+	KV=${OKV}${EXTRAVERSION}
+fi
 S=${WORKDIR}/linux-${KV}
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
@@ -73,12 +76,16 @@ kernel_universal_unpack() {
 			&& mv Makefile.new Makefile
 	cd ${S}
 	
+	#This is needed on > 2.5
+	MY_ARCH=${ARCH}
+	unset ${ARCH}
 	#sometimes we have icky kernel symbols; this seems to get rid of them
-	make distclean || die
+	make mrproper || die "make mrproper died"
+	ARCH=${MY_ARCH}
 
 	# this file is required for other things to build properly, 
 	#  so we autogenerate it
-	make include/linux/version.h || die
+	make include/linux/version.h || die "make include/linux/version.h failed"
 
 }
 
@@ -96,7 +103,11 @@ kernel_src_unpack() {
 kernel_src_compile() {
 	if [ "$ETYPE" = "headers" ]
 	then
+		#This is needed on > 2.5
+		MY_ARCH=${ARCH}
+		unset ${ARCH}
 		yes "" | make oldconfig		
+		ARCH=${MY_ARCH}
 		echo "Ignore any errors from the yes command above."
 	fi
 }
@@ -144,5 +155,8 @@ kernel_pkg_postinst() {
 		rm -f ${ROOT}usr/src/linux
 		ln -sf linux-${KV} ${ROOT}/usr/src/linux
 	fi
+	einfo "After installing a new kernel of any version, it is important"
+	einfo "that you have the appropriate /etc/modules.autoload.d/kernel-X.Y"
+	einfo "created (X.Y is the first 2 parts of your new kernel version)"
 }
 
