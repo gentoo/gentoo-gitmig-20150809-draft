@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.32 2002/12/24 20:41:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.33 2003/01/02 01:42:19 azarah Exp $
+
+*gnome-vfs-2.0.5-r3 (02 Jan 2003)
+
+  02 Jan 2003; Martin Schlemmer <azarah@gentoo.org> gnome-vfs-1.0.5-r3.ebuild :
 
   24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
   Fix >=2.0 to depend on >=dev-libs/glib-2.0.6, as it can also use the new
