@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.71 2003/04/11 00:31:56 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.72 2003/04/11 10:22:51 danarmak Exp $
+
+  11 Apr 2003; Dan Armak <danarmak@gentoo.org> kdebase-3.1.1a.ebuild:
+  Add notice about mtools (bug #4934). See the notice at the end of the ebuild
+  for more info.
 
 *kdebase-2.2.2-r5 (11 Apr 2003)
 

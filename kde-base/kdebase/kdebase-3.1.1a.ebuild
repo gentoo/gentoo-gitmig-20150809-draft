@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.1a.ebuild,v 1.1 2003/04/08 17:57:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.1a.ebuild,v 1.2 2003/04/11 10:22:51 danarmak Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -95,4 +95,10 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
 pkg_postinst() {
 	mkdir -p ${KDEDIR}/share/templates/.source/emptydir
+	
+einfo "If you want to floppy:/ kioslave to work, please emerge the mtools package."
+einfo "This ioslave allows you to use fat/vfat filesystems (not only on floppies)"
+einfo "without mounting them. If you don't know what this is for, you can probably"
+einfo "go with the usual mounting method."
+	
 }
