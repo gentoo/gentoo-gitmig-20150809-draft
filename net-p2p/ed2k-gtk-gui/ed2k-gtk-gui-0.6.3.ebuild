@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ed2k-gtk-gui-0.6.3.ebuild,v 1.2 2004/10/27 15:07:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ed2k-gtk-gui-0.6.3.ebuild,v 1.3 2004/12/09 18:46:32 squinky86 Exp $
 
 inherit libtool
 
@@ -14,8 +14,7 @@ KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0
-	>=net-libs/gnet-1.1
-	dev-util/gtk-doc"
+	>=net-libs/gnet-1.1"
 
 src_compile() {
 	econf || die "configure failed"

@@ -1,6 +1,16 @@
-MD5 2370c9d2183994783079f8558b4cef2d ed2k-gtk-gui-0.6.3.ebuild 1036
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 442a7965579d2f8f0761d5ba43948c5e ed2k-gtk-gui-0.6.3.ebuild 1021
 MD5 09031eceea336cfb4ded59878cb7f392 ed2k-gtk-gui-0.6.2.ebuild 1031
-MD5 d65256e020fa2cc26bb7f2a39609da78 ChangeLog 1165
+MD5 50f82d687cef56e3717cba8d7bb11d4b ChangeLog 1280
 MD5 8abcb326775f027b2e13f23344036e34 metadata.xml 224
 MD5 13e8dc777209f9f417a7864c662ddc9a files/digest-ed2k-gtk-gui-0.6.2 71
 MD5 0915bb19a7400f433dbd5e636aae20e3 files/digest-ed2k-gtk-gui-0.6.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuJ2OcAgAdbxYsnERAiwOAJ4tItWH6U9GURXjF4zN2rdm5jjz9gCbBheT
+IN78CsANvSNETE6GmgLF8Ls=
+=WW2Y
+-----END PGP SIGNATURE-----
