@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83.ebuild,v 1.3 2005/01/30 16:22:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83.ebuild,v 1.4 2005/02/02 21:10:49 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -23,11 +23,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	cp makefile.linux makefile
-	sed -i -e "s/CC	= cc/CC	= $(tc-getCC)/" makefile \
+	sed -e "s/CC	= cc/CC	= $(tc-getCC)/" \
 		-e "s/CFLAGS  = -c -O/CFLAGS  = -c ${CFLAGS}/" \
 		-e "s/LFLAGS	= -O -lm/LFLAGS	= -lm ${CFLAGS}/" \
 		-e "s%-I/usr/bio/src/ncbi/include%-I/usr/include/ncbi%" \
-		-e "s%-L/usr/bio/src/ncbi/lib -L/usr/ccs/lib -L/usr/X11R6/lib%-L/usr/lib -L/usr/X11R6/lib%" makefile || die
+		-e "s%-L/usr/bio/src/ncbi/lib -L/usr/ccs/lib -L/usr/X11R6/lib%-L/usr/lib -L/usr/X11R6/lib%" \
+		-i makefile || die
 	sed -i -e "s%clustalx_help%/usr/share/doc/${PF}/clustalx_help%" clustalx.c || die
 	sed -i -e "s%clustalw.doc%../clustalw.doc%" clustalx.html || die
 }
