@@ -1,0 +1,27 @@
+diff -ruN gnome-applets-2.6.0.orig/configure gnome-applets-2.6.0/configure
+--- gnome-applets-2.6.0.orig/configure	2004-04-05 00:42:13.075488632 +0200
++++ gnome-applets-2.6.0/configure	2004-04-05 18:18:27.738075488 +0200
+@@ -24147,8 +24147,6 @@
+ NEED_LIBAPM=no
+ build_battstat_applet=yes
+ case "${host}" in
+-  powerpc-*-linux*)
+-	;;
+   # list of supported OS cores that use libapm
+   *-*-linux*)
+ 	NEED_LIBAPM=yes
+diff -ruN gnome-applets-2.6.0.orig/configure.in gnome-applets-2.6.0/configure.in
+--- gnome-applets-2.6.0.orig/configure.in	2004-04-05 00:42:10.972808288 +0200
++++ gnome-applets-2.6.0/configure.in	2004-04-05 18:18:13.551232216 +0200
+@@ -208,8 +208,9 @@
+ NEED_LIBAPM=no
+ build_battstat_applet=yes
+ case "${host}" in
+-  powerpc-*-linux*)
+-	;;
++# linux powerpc has apm emulation.
++#  powerpc-*-linux*)
++#	;;
+   # list of supported OS cores that use libapm
+   *-*-linux*)
+ 	NEED_LIBAPM=yes

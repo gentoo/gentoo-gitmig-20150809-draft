@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.59 2004/03/22 01:31:42 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.60 2004/04/05 22:10:04 lu_zero Exp $
+
+  05 Apr 2004; Luca Barbato <lu_zero@gentoo.org> gnome-applets-2.6.0.ebuild,
+  files/gnome-applets-2.6.0-battstat.patch:
+  Reenabled the support for the battstat applet on ppc
+  Refer to bug #45925, thanks to Christopher Sachs <amitofu@mac.com>
 
 *gnome-applets-2.6.0 (21 Mar 2004)
 
