@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ginac/ginac-1.0.9.ebuild,v 1.1 2002/10/30 00:42:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ginac/ginac-1.0.9.ebuild,v 1.2 2002/11/28 01:30:50 george Exp $
+
+IUSE=""
 
 inherit flag-o-matic
 
@@ -13,7 +15,7 @@ HOMEPAGE="http://www.ginac.de/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 ~ppc ~sparc ~sparc64"
 
 DEPEND="dev-libs/cln"
 
