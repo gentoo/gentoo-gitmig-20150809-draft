@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.1 2002/08/01 03:14:35 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.2 2002/08/03 17:49:48 chadh Exp $
 
 DESCRIPTION="Calendar program"
 HOMEPAGE="http://www.fnal.gov/docs/products/tktools/ical.html"
@@ -19,10 +19,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
 
-	patch -p0 < ${P}a-newtcl.patch
-	patch -p0 < ${P}a-hack.patch
-	patch -p0 < ${P}a-glibc22.patch
-	patch -p0 < ${P}a-print.patch
+	patch -p0 < ${P}a-newtcl.patch	|| die
+	patch -p0 < ${P}a-hack.patch	|| die
+	patch -p0 < ${P}a-glibc22.patch	|| die
+	patch -p0 < ${P}a-print.patch	|| die
 
 	D=${S}/ dosed "s: \@TCL_LIBS\@::" Makefile.in
 	D=${S}/ dosed "s:mkdir:mkdir -p:" Makefile.in
@@ -37,7 +37,6 @@ src_compile() {
 
 src_install () {
 	#make DESTDIR=${D} install || die
-	mkdir -p ${D}/usr
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
