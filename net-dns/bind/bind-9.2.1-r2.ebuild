@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.3 2002/08/06 14:33:29 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.4 2002/08/07 03:05:26 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="BIND - Name Server"
@@ -23,12 +23,12 @@ src_compile() {
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
 	./configure \
-		--prefix=/usr \ 
-		--host=${CHOST} \ 
+		--prefix=/usr \
+		--host=${CHOST} \
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--enable-threads \
-		--with-libtool \ 
+		--with-libtool \
 		${myconf} || die "failed to configure bind"
 
 	make || die "failed to compile bind"
