@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/xmltex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.7 2004/10/18 12:31:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.8 2004/11/19 21:57:13 usata Exp $
+
+*xmltex-1.9-r1 (20 Nov 2004)
+
+  20 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +xmltex-1.9-r1.ebuild:
+  Fixed compilation on tetex-3.
 
   18 Oct 2004; David Holm <dholm@gentoo.org> xmltex-1.9.ebuild:
   Added to ~ppc.
