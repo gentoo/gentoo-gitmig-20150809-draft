@@ -1,11 +1,14 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.28 2003/03/01 14:47:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.29 2003/04/09 15:38:55 todd Exp $
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> metacity-2.4.34.ebuild :
   Add ~alpha to KEYWORDS
 
 *metacity-2.4.34 (05 Feb 2003)
+
+  09 Apr 2003; Todd Sunderlin <todd@gentoo.org> metacity-2.4.34.ebuild:
+  Marked stable for sparc.
 
   01 Mar 2003; Jason Wever <weeve@gentoo.org> metacity-2.4.34.ebuild:
   Added ~sparc to keywords.
