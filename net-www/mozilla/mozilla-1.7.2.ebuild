@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.2.ebuild,v 1.7 2004/08/14 22:10:04 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.2.ebuild,v 1.8 2004/08/15 17:56:28 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozilla makeedit
@@ -32,7 +32,7 @@ SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
 RDEPEND="java? ( virtual/jre )
-	crypt? ( !moznomail ( >=app-crypt/gnupg-1.2.1 ) )"
+	crypt? ( !moznomail? ( >=app-crypt/gnupg-1.2.1 ) )"
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )

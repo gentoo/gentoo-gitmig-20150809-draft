@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.13 2004/06/25 16:00:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.14 2004/08/15 17:56:28 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -75,7 +75,7 @@ LICENSE="MPL-1.1 NPL-1.1"
 RDEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/fontconfig-2.1
-	!moznoxft ( virtual/xft )
+	!moznoxft? ( virtual/xft )
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-apps/portage-2.0.14
