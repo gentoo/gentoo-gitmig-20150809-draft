@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r2.ebuild,v 1.8 2004/01/24 10:53:59 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r2.ebuild,v 1.9 2004/03/28 02:24:26 bazik Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -64,7 +64,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
