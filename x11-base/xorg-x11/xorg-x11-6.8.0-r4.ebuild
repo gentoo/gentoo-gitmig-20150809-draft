@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.28 2004/12/11 02:51:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.29 2004/12/13 00:42:05 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -670,7 +670,7 @@ host_def_setup() {
 		fi
 
 		if ( [ -e "${ROOT}/usr/src/linux" ] \
-			&& [ ! $(kernel_is "2" "2") ] ) \
+			&&  !( kernel_is "2" "2" ) ) \
 			|| [ "$(uname -r | cut -d. -f1,2)" != "2.2" ]; then
 			echo "#define HasLinuxInput YES" >> ${HOSTCONF}
 		fi
@@ -794,7 +794,7 @@ host_def_setup() {
 				echo "#define ModuleAsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
 			fi
 			if ( [ -e "${ROOT}/usr/src/linux" ] \
-				&& !( $(kernel_is "2" "6") ) ) \
+				&& !( kernel_is "2" "6" ) ) \
 				|| [ "$(uname -r | cut -d. -f1,2)" != "2.6" ]; then
 				einfo "Building for kernels less than 2.6 requires special treatment"
 				echo "#define UseDeprecatedKeyboardDriver YES" >> ${HOSTCONF}
