@@ -1,6 +1,16 @@
-MD5 8ce1c02fac7bb805fcb25dc570afc835 zoomwin-16.ebuild 879
-MD5 fc42ebe7862ff39151bab65783196747 ChangeLog 1391
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fac5ab7f5661384eb744921d9b1702c2 ChangeLog 1478
+MD5 5a52403b6f0049f733ad51f96677439d zoomwin-17.ebuild 879
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 a2b6b54883c914eca58af0875c888e8a zoomwin-17.ebuild 881
-MD5 6747c0dd76fc64bdf172638ec10aeb2e files/digest-zoomwin-16 61
+MD5 8ce1c02fac7bb805fcb25dc570afc835 zoomwin-16.ebuild 879
 MD5 7d43c85bd87525e1b9a9d1085e789c0a files/digest-zoomwin-17 61
+MD5 6747c0dd76fc64bdf172638ec10aeb2e files/digest-zoomwin-16 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBJi4jLLFUmVNQ7rkRAlZaAKCoCjBZnIAE1EFYzYltrC8cCnf08ACdHNDC
+2bwjZ8qsvQG1LY/XJNKhW6U=
+=yaC7
+-----END PGP SIGNATURE-----
