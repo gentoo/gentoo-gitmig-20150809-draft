@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.2 2002/11/03 14:19:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.3 2002/11/04 11:37:16 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -185,6 +185,12 @@ src_unpack() {
 			# upload to ibiblio ...
 			[ "${x##*/}" = "019_all_4.2.1-ati-radeon-9000-support.patch.bz2" ] \
 				&& popts="${popts} -R"
+
+			# Do not apply this patch for gcc-2.95.3, as it cause compile to fail,
+			# closing bug #10146.
+			[ "`gcc-version`" = "2.95" ] && \
+			[ "${x##*/}" = "107_all_4.2.1-gcc32-internal-compiler-error.patch.bz2" ] && \
+				continue
 		
 			# Most -p differ for these patches ... im lazy, so shoot me :/
 			while [ "${count}" -lt 5 ]
