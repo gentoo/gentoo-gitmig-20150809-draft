@@ -12,12 +12,12 @@ start() {
 
 stop() {
         ebegin "Stopping zetagrid"
-        kill s ax | grep java | grep ZetaClient | sed -e
+        kill ps ax | grep java | grep ZetaClient | sed -e
 's/^\(.\{5\}\).*$/\1/' | tail -1        eend $? "Failed to stop zetagrid"
 }
 
 progress() {
-        if [ s ax | grep java | grep ZetaClient | sed -e
+        if [ ps ax | grep java | grep ZetaClient | sed -e
 's/^\(.\{5\}\).*$/\1/' | tail -1 ]
         then
                 ebegin "Showing zetagrid progress (Cancel with ^C) "
