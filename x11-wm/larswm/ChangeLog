@@ -1,0 +1,9 @@
+# ChangeLog for x11-wm/larswm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/ChangeLog,v 1.1 2003/06/13 09:27:48 robh Exp $
+
+*larswm-7.2.10 (13 Jun 2003)
+
+  13 Jun 2003; robh <robh@gentoo.org> larswm-7.2.10.ebuild:
+  Initial version. Submitted by Tobias Anderberg, closes #20628
+
