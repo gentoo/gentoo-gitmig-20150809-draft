@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.5-r1.ebuild,v 1.3 2003/02/13 11:49:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.5-r1.ebuild,v 1.4 2003/02/24 04:14:56 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
@@ -21,6 +21,8 @@ src_compile() {
 
 src_install() {                               
 	einstall || die
+	insinto /etc/xinetd.d
+	newins ${FILESDIR}/cvspserver.xinetd.d cvspserver
 
 	dodoc BUGS COPYING* ChangeLog* DEVEL* FAQ HACKING 
 	dodoc MINOR* NEWS PROJECTS README* TESTS TODO

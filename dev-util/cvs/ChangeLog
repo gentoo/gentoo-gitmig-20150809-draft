@@ -1,11 +1,11 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.12 2003/02/12 06:40:03 vapier Exp $
-
-  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> cvs-1.11.5-r1.ebuild :
-  Added hppa to keywords.
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.13 2003/02/24 04:14:56 vapier Exp $
 
 *cvs-1.11.5-r1 (21 Jan 2003)
+
+  23 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added xinetd entry for #14512.
 
   21 Jan 2003; J Robert Ray <jrray@gentoo.org> cvs-1.11.5-r1.ebuild : Specify
   a temp dir to use during configure otherwise it auto-detects the
