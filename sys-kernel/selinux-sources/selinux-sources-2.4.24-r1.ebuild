@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.23.ebuild,v 1.2 2004/01/04 01:38:59 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.24-r1.ebuild,v 1.1 2004/01/10 14:39:50 pebenito Exp $
 
 IUSE=""
 
@@ -27,10 +27,3 @@ src_unpack() {
 	cd ${KV}
 	kernel_src_unpack
 }
-
-src_install() {
-	kernel_src_install
-
-	dosed 's:-r0::' /usr/src/linux-${KV}/Makefile
-}
-
