@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/mailfilter-0.6.1.ebuild,v 1.3 2004/09/25 20:45:15 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/mailfilter-0.6.1.ebuild,v 1.4 2004/10/03 22:38:50 weeve Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 sparc ~ppc ~amd64"
 
 src_compile() {
 
