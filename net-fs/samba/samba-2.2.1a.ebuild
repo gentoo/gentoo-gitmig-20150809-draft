@@ -1,31 +1,40 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.0a.ebuild,v 1.1 2001/06/25 16:01:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.1a.ebuild,v 1.1 2001/07/24 20:42:08 lamer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Samba :)"
 SRC_URI="http://us1.samba.org/samba/ftp/${P}.tar.gz"
 HOMEPAGE="http://www.samba.org"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/glibc sys-devel/autoconf
+        cups? ( net-print/cups )
 	pam? ( >=sys-libs/pam-0.72 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
-#ssl support removed -- it doesn't work...
+RDEPEND="virtual/glibc
+        cups? ( net-print/cups )
+		pam? ( >=sys-libs/pam-0.72 )"
+
+
 
 src_compile() { 
   local myconf
   if [ "`use pam`" ]
   then
-    echo "pam support does not work atm!"
-    myconf="--without-pam"
-    #myconf="--with-pam"
+     myconf="--with-pam"
   else
     myconf="--without-pam"
   fi
-  
   cd ${S}/source
+  if [ ! "`use cups`" ] ; then
+    cp configure.in configure.in.orig
+    sed -e "s:AC_CHECK_LIB(cups,httpConnect)::" configure.in.orig > configure.in
+    autoconf
+  fi
+  
+
 
   # Disabled automout support, because it failed
   # Added -lncurses for readline detection
