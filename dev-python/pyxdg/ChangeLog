@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxdg
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.18 2004/12/31 00:14:18 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.19 2005/02/14 17:37:43 lanius Exp $
+
+  14 Feb 2005; Heinrich Wendel <lanius@gentoo.org> -pyxdg-0.6.ebuild,
+  -pyxdg-0.7.ebuild, pyxdg-0.8.ebuild:
+  mark pyxdg-0.8 stable, remove old versions
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
