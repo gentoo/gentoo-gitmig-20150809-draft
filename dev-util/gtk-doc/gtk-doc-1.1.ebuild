@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.1.ebuild,v 1.11 2004/02/14 16:46:46 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.1.ebuild,v 1.12 2004/03/03 02:07:50 iggy Exp $
 
 inherit gnome.org
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ia64 amd64 x86 ppc sparc alpha hppa"
+KEYWORDS="ia64 amd64 x86 ppc sparc alpha hppa s390"
 
 RDEPEND=">=app-text/openjade-1.3.1
 	=app-text/docbook-xml-dtd-4.1*
