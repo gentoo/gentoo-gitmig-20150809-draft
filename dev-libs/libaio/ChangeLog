@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.1 2003/11/30 15:55:45 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.2 2003/11/30 19:58:07 brad_mssw Exp $
+
+*libaio-0.3.15 (30 Nov 2003)
+
+  30 Nov 2003; Brad House <brad_mssw@gentoo.org> libaio-0.3.15.ebuild,
+  libaio-0.3.92.ebuild, files/libaio-0.3.15-2.5-2-Makefile.patch:
+  use patched 0.3.15 instead of 0.3.92
 
 *libaio-0.3.92 (30 Nov 2003)
 
