@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.7.1.ebuild,v 1.1 2004/02/01 19:57:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.7.1.ebuild,v 1.2 2004/02/11 10:55:11 spock Exp $
 
 DESCRIPTION="A transparent low-overhead system-wide profiler"
 HOMEPAGE="http://oprofile.sourceforge.net"
@@ -21,7 +21,19 @@ src_compile() {
 
 	local myconf=""
 
-	use qt ||  myconf="${myconf} --with-qt-dir=/void"
+	if [ `use qt` ]
+	then
+		REALHOME="$HOME"
+		mkdir -p $T/fakehome/.kde
+		mkdir -p $T/fakehome/.qt
+		export HOME="$T/fakehome"
+		addwrite "${QTDIR}/etc/settings"
+
+		# things that should access the real homedir
+		[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"
+	else
+		myconf="${myconf} --with-qt-dir=/void"
+	fi
 
 	myconf="${myconf} --with-x"
 	# note: compilation has only been tested with a 2.4 kernel
