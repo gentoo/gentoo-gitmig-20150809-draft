@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.13 2004/10/25 11:00:14 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.14 2004/11/09 14:18:33 ticho Exp $
+
+  09 Nov 2004; Andrej Kacian <ticho@gentoo.org> :
+  Recreated digest file for 4.4.7, due to virus definitions update in tarball
+  by upstream. See bug #70449, reported by Anthony Metcalf
+  <nevyn@anferny.ath.cx>.
 
   25 Oct 2004; Tom Martin <slarti@gentoo.org> f-prot-4.4.7.ebuild:
   Stable on amd64.
