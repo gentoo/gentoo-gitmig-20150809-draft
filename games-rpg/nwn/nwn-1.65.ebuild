@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65.ebuild,v 1.2 2004/12/30 09:39:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65.ebuild,v 1.3 2004/12/30 22:35:37 vapier Exp $
 
-inherit games
+inherit games eutils
 
 UPDATEVER=${PV//.}
 PATCH_URL_BASE=http://content.bioware.com/neverwinternights/linux/${UPDATEVER}/linuxclientupdate1xxto${UPDATEVER}
@@ -18,12 +18,12 @@ SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/129/nwclient129.
 	!linguas_de? ( !linguas_fr? ( !linguas_es? ( !linguas_it? (
 		${PATCH_URL_BASE}eng.tar.gz ${DIALOG_URL_BASE}/english/NWNEnglish${PV}dialog.zip
 	) ) ) )
-	nowin? ( http://www.tucows.iinet.net/pub/games/neverwinter/linux/nwresources129.tar.gz )"
+	nowin? ( ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwresources129.tar.gz )"
 
 LICENSE="NWN-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="nowin"
+IUSE="nowin nocd"
 RESTRICT="nostrip nomirror"
 
 RDEPEND="virtual/x11
@@ -32,6 +32,16 @@ RDEPEND="virtual/x11
 	amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 S="${WORKDIR}/nwn"
+
+pkg_setup() {
+	use nocd && \
+	cdrom_get_cds \
+		Data_Shared.zip \
+		disk2.zip \
+		disk3.zip \
+		disk4.zip
+	games_pkg_setup
+}
 
 src_unpack() {
 	mkdir ${S}
