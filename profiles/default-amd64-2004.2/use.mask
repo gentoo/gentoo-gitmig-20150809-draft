@@ -1,6 +1,10 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.12 2004/10/13 05:38:41 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.13 2004/11/13 19:46:45 slarti Exp $
 
 # WON'T BUILD - SECTION
+
+# 2004/11/13 - Tom Martin <slarti@gentoo.org>
+# dev-lisp/mzscheme won't build, #65216
+mzscheme
 
 # 2004/10/07 - George Shapovalov <george@gentoo.org>
 # dev-lang/tcc won't build

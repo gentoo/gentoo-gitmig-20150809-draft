@@ -1,12 +1,16 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.9 2004/11/05 22:28:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.10 2004/11/13 19:42:38 slarti Exp $
 
 #unknowns
 afs
 drac
 
 # WON'T BUILD - SECTION
+
+# 2004/11/13 - Tom Martin <slarti@gentoo.org>
+# dev-libs/mzscheme won't build, #65216
+mzscheme
 
 # 2004/10/06 - Jeremy Huddleston <eradicator@gentoo.org>
 # sys-cluster/pvm won't build

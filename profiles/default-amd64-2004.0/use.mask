@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.13 2004/10/13 05:39:20 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.14 2004/11/13 19:50:58 slarti Exp $
 
 #unknowns
 afs
@@ -21,6 +21,10 @@ sse
 sse2
 3dnow
 3dnowex
+
+# 2004/11/13 - Tom Martin <slarti@gentoo.org>
+# dev-lisp/mzscheme won't build, #65216
+mzscheme
 
 # 2004/10/07 - George Shapovalov <george@gentoo.org>
 # dev-lang/tcc won't build
