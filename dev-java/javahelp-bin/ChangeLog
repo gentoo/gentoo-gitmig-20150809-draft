@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/javahelp-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/ChangeLog,v 1.6 2005/03/16 19:54:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/ChangeLog,v 1.7 2005/03/16 20:03:07 luckyduck Exp $
+
+*javahelp-bin-2.0.02-r1 (16 Mar 2005)
+
+  16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +javahelp-bin-2.0.01-r1.ebuild, +javahelp-bin-2.0.02-r1.ebuild:
+  revision bump
 
   16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   javahelp-bin-2.0.01.ebuild, javahelp-bin-2.0.02.ebuild:

@@ -2,15 +2,19 @@
 Hash: SHA1
 
 MD5 0b9aa5266e11bf27eaa121108addeed9 javahelp-bin-2.0.02.ebuild 1268
+MD5 7189146a2f227aaef180874df199765a javahelp-bin-2.0.02-r1.ebuild 1271
+MD5 f7073e9fcd77158c3793cb60172f2796 javahelp-bin-2.0.01-r1.ebuild 1271
 MD5 eeaec56a8f87ce2914b623411574b067 javahelp-bin-2.0.01.ebuild 1268
-MD5 c9c7b4ceb31f1a08ef70844f31fb1b56 ChangeLog 1298
+MD5 e0e0090397771087d5e92cc7ca6c18eb ChangeLog 1472
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 126c9ed6a7f735ccd789704e148f0e47 files/digest-javahelp-bin-2.0.01 65
 MD5 e8d12736da16d20b8179d6405f35c1eb files/digest-javahelp-bin-2.0.02 65
+MD5 126c9ed6a7f735ccd789704e148f0e47 files/digest-javahelp-bin-2.0.01-r1 65
+MD5 e8d12736da16d20b8179d6405f35c1eb files/digest-javahelp-bin-2.0.02-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCOI7106ebR+OMO78RAgF5AJ9sUts4Hg9gZA/n6wr2PfRipT509gCfWv5u
-OZTv8ZHS166EZ/A0kwrICD0=
-=PnI1
+iD8DBQFCOJEA06ebR+OMO78RAlM5AJwOGD6+aGD8S/A9NoxvBqXURs1NcwCfZRHE
+iy14FFAzhLIxwcqNw7b4bv4=
+=T98K
 -----END PGP SIGNATURE-----
