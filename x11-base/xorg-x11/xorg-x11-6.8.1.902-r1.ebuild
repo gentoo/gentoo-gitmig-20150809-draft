@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.3 2005/01/24 09:21:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.4 2005/01/24 09:36:12 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -172,7 +172,7 @@ src_compile() {
 src_install() {
 	install_everything
 
-	backward_compat_setup
+	backward_compat_install
 
 	fix_permissions
 
@@ -191,90 +191,48 @@ src_install() {
 		fix_opengl_symlinks
 	fi
 
-	# Some critical directories
-	if ! use minimal; then
-		keepdir /var/lib/xdm
-		dosym ../../../var/lib/xdm /etc/X11/xdm/authdir
-	fi
+	libtool_archive_install
 
-	# .la files for libtool support
-	insinto /usr/$(get_libdir)
-	# (#67729) Needs to be lib, not $(get_libdir)
-	doins ${FILES_DIR}/lib/*.la
-
-	# Backwards compat, FHS, etc.
-	dosym ../../usr/X11R6/bin/Xorg /etc/X11/X
-
-	# Fix perms
-	if ! use minimal; then
-		fperms 755 /usr/$(get_libdir)/X11/xkb/geometry/sgi /usr/X11R6/bin/dga
-	fi
-
-	compose_files_setup
+	compose_files_install
 
 	if use font-server; then
 		encode_xfsft_files
 	fi
 
 	if use nls; then
-		setup_koi8_fonts
+		koi8_fonts_install
 	fi
 
 	etc_files_install
 
+	# ??? Seems as if this shouldn't have a !
 	# We move libGLU to /usr/lib now
 	if ! use opengl; then
 		dosym libGLU.so.1.3 /usr/$(get_libdir)/libMesaGLU.so
 	fi
 
 	if use opengl; then
-		setup_dynamic_libgl
+		dynamic_libgl_install
 	fi
 
-	# Make the core cursor the default.  People seem not to like whiteglass
-	# for some reason.
-	dosed 's:whiteglass:core:' /usr/share/cursors/${PN}/default/index.theme
+	cursor_install
 
 	strip_execs
 
-	if ! use minimal; then
-		install_extra_cursors
-	fi
-
-	# Get rid of all unnecessary fonts (saves ~5.5 MB)
 	if use minimal; then
-		find ${D}/usr/share/fonts/misc/ -name '*.pcf.gz' \
-			-not -name '*6x13*' -not -name 'cursor.pcf.gz' -exec rm {} \;
+		minimal_install
 	fi
 
-	# Remove xterm app-defaults, since we don't install xterm
-#	rm ${D}/etc/X11/app-defaults/{UXTerm,XTerm,XTerm-color}
-
+	# TEMPORARY hack: should be patched in, if it's not already
 	# For Battoussai's gatos stuffs:
 	if use sdk; then
 		insinto /usr/$(get_libdir)/Server/include
 		doins ${S}/extras/drm/shared/drm.h
 	fi
 
-	# If we want xprint, save the init script before deleting /etc/rc.d/
-	# Requested on #68316
-	if use xprint; then
-		setup_xprint_init
-	else
-		# delete xprint stuff
-		rm -f ${D}/etc/{init,profile}.d/xprint*
-		rmdir --ignore-fail-on-non-empty ${D}/etc/{init,profile}.d
-	fi
+	xprint_install
 
-	# Remove the /etc/rc.d nonsense -- not everyone is RedHat
-	rm -rf ${D}/etc/rc.d
-
-	setup_config_files
-
-	# Woohoo, another 772K
-	if use minimal; then
-		rm -rf ${D}/usr/share/doc
-	fi
+	config_files
 }
 
 pkg_preinst() {
@@ -291,7 +249,7 @@ pkg_preinst() {
 
 	# Run this even for USE=-opengl, to clean out old stuff from possible
 	# USE=opengl build
-	clean_dynamic_libgl
+	dynamic_libgl_preinst
 }
 
 pkg_postinst() {
@@ -965,7 +923,7 @@ install_everything() {
 	fi
 }
 
-backward_compat_setup() {
+backward_compat_install() {
 	# Backwards compatibility for /usr/share move
 	G_FONTDIRS="Speedo TTF Type1 encodings local misc util"
 	if use cjk; then
@@ -1005,6 +963,11 @@ fix_permissions() {
 			fperms 0755 ${x/${D}}
 		fi
 	done
+
+	# Fix perms
+	if ! use minimal; then
+		fperms 755 /usr/$(get_libdir)/X11/xkb/geometry/sgi /usr/X11R6/bin/dga
+	fi
 }
 
 zap_host_def_cflags() {
@@ -1041,9 +1004,25 @@ setup_standard_symlinks() {
 	dosym ../X11R6/include/DPS /usr/include/DPS
 	dosym ../X11R6/include/GL /usr/include/GL
 	dosym ../../usr/$(get_libdir)/X11/xkb /etc/X11/xkb
+
+	# Some critical directories
+	if ! use minimal; then
+		keepdir /var/lib/xdm
+		dosym ../../../var/lib/xdm /etc/X11/xdm/authdir
+	fi
+
+	# Backwards compat, FHS, etc.
+	dosym ../../usr/X11R6/bin/Xorg /etc/X11/X
 }
 
-compose_files_setup() {
+libtool_archive_install() {
+	# .la files for libtool support
+	insinto /usr/$(get_libdir)
+	# (#67729) Needs to be lib, not $(get_libdir)
+	doins ${FILES_DIR}/lib/*.la
+}
+
+compose_files_install() {
 	# Hack from Mandrake (update ours that just created Compose files for
 	# all locales)
 	local x
@@ -1089,7 +1068,7 @@ encode_xfsft_files() {
 	eend 0
 }
 
-setup_koi8_fonts() {
+koi8_fonts_install() {
 	ebegin "gemini-koi8 fonts..."
 		cd ${WORKDIR}/ukr
 		gunzip *.Z || eerror "gunzipping gemini-koi8 fonts failed"
@@ -1141,7 +1120,7 @@ etc_files_install() {
 	fi
 }
 
-setup_dynamic_libgl() {
+dynamic_libgl_install() {
 	# next section is to setup the dynamic libGL stuff
 	ebegin "Moving libGL and friends for dynamic switching"
 		dodir /usr/$(get_libdir)/opengl/${PN}/{lib,extensions,include}
@@ -1170,6 +1149,16 @@ setup_dynamic_libgl() {
 		# Avoids circular opengl-update/xorg-x11 dependency
 		dosym ../../../$(get_libdir)/opengl/${PN}/include/glext.h /usr/X11R6/include/GL/
 	eend 0
+}
+
+cursor_install() {
+	# Make the core cursor the default.  People seem not to like whiteglass
+	# for some reason.
+	dosed 's:whiteglass:core:' /usr/share/cursors/${PN}/default/index.theme
+
+	if ! use minimal; then
+		install_extra_cursors
+	fi
 }
 
 strip_execs() {
@@ -1219,7 +1208,30 @@ install_extra_cursors() {
 	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
 }
 
-setup_xprint_init() {
+minimal_install() {
+		# Get rid of all unnecessary fonts (saves ~5.5 MB)
+		find ${D}/usr/share/fonts/misc/ -name '*.pcf.gz' \
+			-not -name '*6x13*' -not -name 'cursor.pcf.gz' -exec rm {} \;
+		# Woohoo, another 772K
+		rm -rf ${D}/usr/share/doc
+}
+
+xprint_install() {
+	# If we want xprint, save the init script before deleting /etc/rc.d/
+	# Requested on #68316
+	if use xprint; then
+		xprint_init_install
+	else
+		# delete xprint stuff
+		rm -f ${D}/etc/{init,profile}.d/xprint*
+		rmdir --ignore-fail-on-non-empty ${D}/etc/{init,profile}.d
+	fi
+
+	# Remove the /etc/rc.d nonsense -- not everyone is RedHat
+	rm -rf ${D}/etc/rc.d
+}
+
+xprint_init_install() {
 	# RH-style init script, we provide a wrapper
 	exeinto /usr/lib/misc
 	doexe ${D}/etc/init.d/xprint
@@ -1230,7 +1242,7 @@ setup_xprint_init() {
 	sed -i -e "s:/bin/sh.*get_xpserverlist:/usr/lib/misc/xprint get_xpserverlist:g" ${D}/etc/profile.d/xprint*
 }
 
-setup_config_files() {
+config_files_install() {
 
 	# Fix default config files after installing fonts to /usr/share/fonts
 	sed -i -e "s:/usr/X11R6/$(get_libdir)/X11/fonts:/usr/share/fonts:g" \
@@ -1434,7 +1446,7 @@ move_xkb_to_usr() {
 	fi
 }
 
-clean_dynamic_libgl() {
+dynamic_libgl_preinst() {
 	# clean the dynamic libGL stuff's home to ensure
 	# we don't have stale libs floating around
 	if [ -d ${ROOT}/usr/$(get_libdir)/opengl/${PN} ]; then
