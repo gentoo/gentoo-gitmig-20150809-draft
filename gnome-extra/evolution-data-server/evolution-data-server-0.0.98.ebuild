@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-0.0.98.ebuild,v 1.1 2004/08/24 15:04:56 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-0.0.98.ebuild,v 1.2 2004/08/28 22:58:47 dholm Exp $
 
 inherit debug gnome2 libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ximian.com/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc ldap"
 
 RDEPEND=">=dev-libs/glib-2
