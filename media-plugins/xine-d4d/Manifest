@@ -1,0 +1,6 @@
+MD5 1f8c0f0be3ef2ec2802fbe6ee80d29ae files/digest-xine-d4d-0.3.2-r1 55
+MD5 1f8c0f0be3ef2ec2802fbe6ee80d29ae files/digest-xine-d4d-0.3.2-r2 55
+MD5 5aaac22e3e9daec0dd0417cc3a62c172 files/xine-d4d-0.3.2-r2-gentoo.diff 517
+MD5 cf711426b5e183f562c8d93894a31310 xine-d4d-0.3.2-r1.ebuild 871
+MD5 73c55a29f7f6431cf3e58248c83eb0be xine-d4d-0.3.2-r2.ebuild 976
+MD5 5b31e9f992e8d042428a326de7b3f799 ChangeLog 1023
