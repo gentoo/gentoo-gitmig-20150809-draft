@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>gnome</herd>
+<maintainer>
+	<email>liquidx@gentoo.org</email>
+	<description>This is not strictly GNOME but gnomemeeting depends on
+	it. Assign bugs to me.</description>
+</maintainer>
+</pkgmetadata>
