@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5.ebuild,v 1.1 2002/02/10 08:33:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5.ebuild,v 1.2 2002/02/11 17:17:13 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 #Specific Linux headers are now required so that we build from a stable "base"
 #portage-1.8 needed for smart library merging feature (avoids segfaults on glibc upgrade)
-LHV=2.4.16
+LHV=2.4.17
 DEPEND=">=sys-apps/portage-1.8 ~sys-kernel/linux-headers-${LHV} nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
 RDEPEND="~sys-kernel/linux-headers-${LHV}"
 
