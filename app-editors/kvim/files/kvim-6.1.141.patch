@@ -1,0 +1,23 @@
+--- /var/tmp/portage/kvim-6.1.141/work/kvim-6.1.141/src/Makefile.orig	2002-10-01 16:54:21.000000000 +0200
++++ /var/tmp/portage/kvim-6.1.141/work/kvim-6.1.141/src/Makefile	2002-10-18 02:22:52.000000000 +0200
+@@ -1401,13 +1401,13 @@
+ # - Temporarily move the ./configure script to ./configure.save.  Don't
+ #   overwrite it, it's probably the result of an aborted autoconf.
+ # - Use sed to change ./config.log to auto/config.log in the configure script.
+-auto/configure: configure.in
+-	if test ! -f configure.save; then mv configure configure.save; fi
+-	autoconf
+-	sed -e 's+\./config.log+auto/config.log+' configure > auto/configure
+-	chmod 755 auto/configure
+-	mv -f configure.save configure
+-	-rm -f auto/config.status auto/config.cache
++#auto/configure: configure.in
++#	if test ! -f configure.save; then mv configure configure.save; fi
++#	autoconf
++#	sed -e 's+\./config.log+auto/config.log+' configure > auto/configure
++#	chmod 755 auto/configure
++#	mv -f configure.save configure
++#	-rm -f auto/config.status auto/config.cache
+ 
+ # Re-execute this Makefile to include the new auto/config.mk produced by
+ # configure Only used when typing "make" with a fresh auto/config.mk.
