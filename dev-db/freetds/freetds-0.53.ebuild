@@ -2,13 +2,15 @@
 #Distributed under the terms of the GNU General Public License, v2 or later
 #Author <root@station-1.internal.feedbackplusinc.com>
 
-A=${P}.tgz
 S=${WORKDIR}/${P}
 DESCRIPTION="Tabular Datastream Library"
 SRC_URI="http://ibiblio.org/pub/Linux/ALPHA/freetds/${P}.tgz"
 HOMEPAGE="http://ibiblio.org/pub/Linux/ALPHA/freetds/"
 DEPEND="virtual/glibc"
 RDEPEND=${DEPEND}
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 
