@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af7362345fa1ec5902d6676bc12ba5dc wvstreams-4.0.1-r2.ebuild 2208
-MD5 c8e880b3a25402778b3dd6aa63dd400c wvstreams-4.0.2.ebuild 2202
-MD5 88beb02e20267e4fc08543358e899909 wvstreams-4.0-r1.ebuild 1872
-MD5 32ee2acc83f1a45054234f41b36a6b5d ChangeLog 8061
+MD5 81f2b23d7c3b22d8c10216e6025f3dce ChangeLog 8170
 MD5 7c8d69f73480b56621770449d11a2e17 metadata.xml 235
-MD5 16733d2b49133ec4fd75fa7dbca890ea files/wvstreams-4.0.2-MOC-fix.patch 479
-MD5 9c69b24927d041fa398d060e4e5f1bb1 files/wvstreams-4.0.1-linux-serial.patch 7563
-MD5 dbec7770662be21658b4ba9740cf2793 files/wvstreams-4.0.2-wireless-user.patch 466
-MD5 f4e61e52cab6cac5470b77a7bd3358a9 files/digest-wvstreams-4.0.1-r2 68
-MD5 26127f51d3c7e77edb001d4cb33882d0 files/wvstreams-4.0.2-linux-serial.patch 6412
-MD5 f606f86f5ef7d07937128fc8dc043c83 files/wvstreams-4.0-tcl_8_4.patch 822
+MD5 88beb02e20267e4fc08543358e899909 wvstreams-4.0-r1.ebuild 1872
+MD5 cb3ec24f495534c72094c13eaae875d0 wvstreams-4.0.1-r2.ebuild 2206
+MD5 c8e880b3a25402778b3dd6aa63dd400c wvstreams-4.0.2.ebuild 2202
 MD5 7c5ceff9d19db13318a9c8c6de08e7ef files/digest-wvstreams-4.0-r1 66
-MD5 a48902f93ab5425fc59a483df42f3d0a files/wvstreams-4.0.1-without-pam.patch 418
 MD5 722051cdd8d4e8747f83c0d512f3ec2a files/digest-wvstreams-4.0.2 68
-MD5 0cb9b1e5a568cd8f0e5f186a131a74a5 files/wvstreams-4.0.1-wireless-user.patch 466
-MD5 03b73077a83c635ab211f235c7a429bf files/wvstreams-4.0.1-tcl_8_4.patch 822
-MD5 b65b1449a0bc6ff06e8c843b37717f05 files/wvstreams-4.0.2-speex-const.patch 951
-MD5 0b5b1b03e323747aa3ce30492fe18cc1 files/wvstreams-4.0.2-tcl_8_4.patch 1022
+MD5 f4e61e52cab6cac5470b77a7bd3358a9 files/digest-wvstreams-4.0.1-r2 68
+MD5 f606f86f5ef7d07937128fc8dc043c83 files/wvstreams-4.0-tcl_8_4.patch 822
 MD5 16733d2b49133ec4fd75fa7dbca890ea files/wvstreams-4.0.1-MOC-fix.patch 479
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCUawijiC39V7gKu0RAjulAJ4uzQv7uPL9PBv6//sJJPMAhGUfuQCfViYC
-DeZ5MS/s73jGxyDuPPvb7lQ=
-=00x+
------END PGP SIGNATURE-----
+MD5 9c69b24927d041fa398d060e4e5f1bb1 files/wvstreams-4.0.1-linux-serial.patch 7563
+MD5 03b73077a83c635ab211f235c7a429bf files/wvstreams-4.0.1-tcl_8_4.patch 822
+MD5 a48902f93ab5425fc59a483df42f3d0a files/wvstreams-4.0.1-without-pam.patch 418
+MD5 16733d2b49133ec4fd75fa7dbca890ea files/wvstreams-4.0.2-MOC-fix.patch 479
+MD5 26127f51d3c7e77edb001d4cb33882d0 files/wvstreams-4.0.2-linux-serial.patch 6412
+MD5 0b5b1b03e323747aa3ce30492fe18cc1 files/wvstreams-4.0.2-tcl_8_4.patch 1022
+MD5 b65b1449a0bc6ff06e8c843b37717f05 files/wvstreams-4.0.2-speex-const.patch 951
+MD5 0cb9b1e5a568cd8f0e5f186a131a74a5 files/wvstreams-4.0.1-wireless-user.patch 466
+MD5 dbec7770662be21658b4ba9740cf2793 files/wvstreams-4.0.2-wireless-user.patch 466
