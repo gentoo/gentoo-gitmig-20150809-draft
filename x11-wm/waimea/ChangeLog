@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/waimea
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/ChangeLog,v 1.3 2002/05/13 23:34:57 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/ChangeLog,v 1.4 2002/05/23 03:57:22 spider Exp $
+
+*waimea-0.3.2 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> waimea-0.3.2.ebuild 
+  Updated to latest version
 
 *waimea-0.3.1-r1 (13 May 2002)
   13 May 2002; Spider <spider@gentoo.org> waimea-0.3.1-r1.ebuild 
