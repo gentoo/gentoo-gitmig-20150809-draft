@@ -1,6 +1,17 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.258 2004/09/22 02:00:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.259 2004/09/28 13:23:37 lv Exp $
+
+*glibc-2.3.4.20040928 (28 Sep 2004)
+
+  28 Sep 2004; Travis Tilley <lv@gentoo.org>
+  +files/2.3.4/glibc-2.3.4-dl_execstack-PaX-support.patch,
+  +files/2.3.4/glibc-sec-hotfix-20040916.patch, +glibc-2.3.4.20040928.ebuild:
+  new snapshot, masked -*, with fedora-branch patches. made nptl-enabled glibc
+  behave like the glibc in most other distributions, with nptl libs in lib/tls
+  and a fallback linuxthreads version in lib. If the linuxthreads fallback isnt
+  needed/wanted, you can revert to the old behavior by adding nptlonly to USE to
+  save yourself some compile time.
 
   21 Sep 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20040808.ebuild:
   stable on amd64
