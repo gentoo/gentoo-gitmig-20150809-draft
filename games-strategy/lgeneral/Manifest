@@ -1,4 +1,5 @@
-MD5 c1d4873891020bad35d6654ffcdf1d87 ChangeLog 1690
-MD5 0a4d62b07bf43a3606eefe8fcfecd9c3 lgeneral-1.1.1-r1.ebuild 1032
+MD5 01721b4cd7158f9daf766e3a6a61107a ChangeLog 1832
+MD5 1e98431ec2059555c7a53b586a80875b lgeneral-1.1.1-r1.ebuild 1126
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 9bd18133cff27a13ac0c62fe2ebeba33 files/digest-lgeneral-1.1.1-r1 138
+MD5 77fda12a372abfd55040151b84dd2d7b files/1.1.1-netbsd-audio.patch 813
