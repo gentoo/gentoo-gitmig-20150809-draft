@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/freebsd-stat
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/freebsd-stat/ChangeLog,v 1.1 2005/02/02 23:42:13 kito Exp $
+
+*freebsd-stat-5.3_p20050202 (02 Feb 2005)
+
+  02 Feb 2005; Kito <kito@gentoo.org> +freebsd-stat-5.3_p20050202.ebuild:
+  initial import of stat(1) from FreeBSD-5.3
+
