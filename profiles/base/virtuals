@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.15 2004/05/30 07:47:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.16 2004/05/30 09:57:17 robbat2 Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -34,7 +34,7 @@ virtual/logger					app-admin/syslog-ng
 virtual/lpr						net-print/cups
 virtual/mda						net-mail/procmail
 virtual/mpg123					media-sound/mpg123
-virtual/mta						net-mail/ssmtp
+virtual/mta						mail-mta/ssmtp
 virtual/opengl					x11-base/xfree
 virtual/php						dev-php/mod_php
 virtual/python					dev-lang/python

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.402 2004/05/30 09:31:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.403 2004/05/30 09:57:17 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -177,6 +177,7 @@ mail-mta/exim:lmtp - Adds support for lmtp
 mail-mta/exim:wildlsearch - Adds support for Wildcarded Linear searches
 mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
 mail-mta/sendmail:milter - Build sendmail mail filter (milter) support
+mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
 media-gfx/blender:fmod - Adds mod support to blender
 media-gfx/gimageview:mng - Enable mng format support
 media-gfx/gimageview:mplayer - Enable mplayer support
@@ -277,7 +278,6 @@ net-mail/dovecot:nopop3d - Do not build pop3d support
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/qmail:noauthcram - If you do NOT want AUTHCRAM to be available
 net-mail/qmail:notlsbeforeauth - If you do NOT want to require STARTTLS before offering AUTH
-net-mail/ssmtp:md5sum - Enables MD5 summing for ssmtp
 net-mail/vpopmail:clearpasswd - Enables cleartext password storage in the vpasswd files
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-misc/asterisk:noiax - Disable iax (Inter-Asterisk eXchange) support
