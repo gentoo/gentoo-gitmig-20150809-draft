@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/dev-libs/media-sound/knob-1.2.ebuild,v 1.0 25/06/2003
-plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/knob/knob-1.2.ebuild,v 1.2 2003/08/12 03:49:22 caleb Exp $
 
 inherit kde-base
 need-kde 3
