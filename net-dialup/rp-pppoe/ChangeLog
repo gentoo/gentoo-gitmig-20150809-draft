@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.43 2005/02/12 09:54:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.44 2005/02/13 08:43:51 mrness Exp $
+
+*rp-pppoe-3.5-r7 (13 Feb 2005)
+
+  13 Feb 2005; Alin Nastac <mrness@gentoo.org> +rp-pppoe-3.5-r7.ebuild:
+  Fix problem with version of pppd plugin - use rp-pppoe.so from current
+  version of pppd (#81746).
 
   12 Feb 2005; Alin Nastac <mrness@gentoo.org>
   -files/rp-pppoe-3.5-netscripts.patch, -rp-pppoe-3.5-r5.ebuild,
