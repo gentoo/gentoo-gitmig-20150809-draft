@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0.ebuild,v 1.4 2003/09/06 22:07:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0.ebuild,v 1.5 2003/09/16 05:56:11 spyderous Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -9,7 +9,7 @@
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
-IUSE="sse mmx 3dnow ipv6 xinerama type1 truetype fbdev"
+IUSE="sse mmx 3dnow ipv6 xinerama fbdev"
 
 # VIDEO_CARDS="savage trident sis trio ts300 mach64 i810 igs"
 
@@ -157,19 +157,19 @@ src_unpack() {
 	if [ "${ARCH}" = "x86" ]
 	then
 		# optimize for architecture
-		if use mmx &>/dev/null
+		if use mmx
 		then
 			echo "#define HasMMXSupport	YES" >> config/cf/host.def
 		else
 			echo "#define HasMMXSupport	NO" >> config/cf/host.def
 		fi
-		if use 3dnow &>/dev/null
+		if use mmx && use 3dnow
 		then
 			echo "#define Has3DNowSupport YES" >> config/cf/host.def
 		else
 			echo "#define Has3DNowSupport NO" >> config/cf/host.def
 		fi
-		if use sse &>/dev/null
+		if use mmx && use sse
 		then
 			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
 		else
@@ -193,19 +193,19 @@ src_unpack() {
 		fi
 	fi
 
-	if use fbdev &> /dev/null
+	if use fbdev
 	then
 		echo "#define XfbdevServer YES" >> config/cf/host.def
 	else
 		echo "#define XfbdevServer NO" >> config/cf/host.def
 	fi
 
-	if use ipv6 &>/dev/null
+	if use ipv6
 	then
 		echo "#define HasIPv6 YES" >> config/cf/host.def
 	fi
 
-	if use xinerama &>/dev/null
+	if use xinerama
 	then
 		echo "#define BuildXinerama YES" >> config/cf/host.def
 		# Don't know if this is necessary. Probably.
@@ -216,15 +216,15 @@ src_unpack() {
 	# fonts (but support for built-in ``fixed'' and ``cursor'' fonts, and
 	# normal support for bitmap fonts and font-server provided fonts).
 
-	if use type1 &>/dev/null
-	then
-		echo "#define BuildType1 YES" >> config/cf/host.def
-	fi
-
-	if use truetype &>/dev/null
-	then
-		echo "#define BuildFreeType YES" >> config/cf/host.def
-	fi
+#	if use type1
+#	then
+#		echo "#define BuildType1 YES" >> config/cf/host.def
+#	fi
+#
+#	if use truetype
+#	then
+#		echo "#define BuildFreeType YES" >> config/cf/host.def
+#	fi
 
 	if vcards savage &>/dev/null
 	then
@@ -303,7 +303,7 @@ src_install() {
 		fperms 4755 /usr/X11R6/bin/Xvesa
 	fi
 
-	if use fbdev &> /dev/null
+	if use fbdev
 	then
 	doexe programs/Xserver/Xfbdev
 	fperms 4755 /usr/X11R6/bin/Xfbdev
@@ -365,7 +365,7 @@ src_install() {
 
 
 	local M=${WORKDIR}/man
-	if use fbdev &> /dev/null
+	if use fbdev
 	then
 		doman -x11 ${M}/usr/X11R6/man/man1/Xfbdev.1x
 	fi
@@ -383,12 +383,12 @@ pkg_postinst() {
 #	einfo "make a copy of /usr/X11R6/bin/startxvesa and set defaultserver"
 #	einfo "to your Kdrive server."
 #
-#	if use vesa &> /dev/null
+#	if use vesa
 #	then
 #		einfo "Use startxvesa to start the Xvesa Kdrive server."
 #	fi
 #
-#	if use fbdev &> /dev/null
+#	if use fbdev
 #	then
 #		einfo "Use startxfbdev to start the Xfbdev Kdrive server."
 #	fi
