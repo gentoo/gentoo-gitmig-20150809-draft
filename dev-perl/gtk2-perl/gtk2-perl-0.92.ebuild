@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-0.92.ebuild,v 1.1 2003/08/03 11:17:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-0.92.ebuild,v 1.2 2003/08/04 20:22:10 mcummings Exp $
 
 IUSE="gtk2 perl"
 inherit perl-module
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND="${DEPEND}
 	>=x11-libs/gtk+-2*
-	>=dev-perl/glib-${PV}"
+	>=dev-perl/glib-perl-${PV}"
 
 
 

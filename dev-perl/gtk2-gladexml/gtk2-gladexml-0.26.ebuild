@@ -17,5 +17,5 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 DEPEND="${DEPEND}
 	>=x11-libs/gtk+-2*
 	>=gnome-base/libglade-2*
-	=dev-perl/glib-${PV}
+	=dev-perl/glib-perl-${PV}
 	=dev-perl/gtk2-perl-${PV}"

@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 DEPEND="${DEPEND}
 	>=x11-libs/gtk+-2*
 	>=app-text/gtkspell-2*
-	>=dev-perl/glib-0.26
+	>=dev-perl/glib-perl-0.26
 	>=dev-perl/gtk2-perl-0.26"
 
 src_unpack() {
