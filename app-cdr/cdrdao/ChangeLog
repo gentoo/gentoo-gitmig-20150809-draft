@@ -1,13 +1,18 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.3 2002/07/16 01:46:35 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.4 2002/07/18 17:27:47 gerk Exp $
 
-  06 Apr 2002; G.Bevin <gbevin@gentoo.org> files/cdrdao-1.1.5-c++.patch :
-  
+  18 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+ 
+  fixed KEYWORDS, it is ppc not PPC.
+
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 
   Added KEYWORDS.
 
+
+  06 Apr 2002; G.Bevin <gbevin@gentoo.org> files/cdrdao-1.1.5-c++.patch :
+  
   C++ related fixes for gcc 3.
   
 *cdrdao-1.1.5-r1 (1 Feb 2002)
