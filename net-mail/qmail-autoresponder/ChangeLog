@@ -1,0 +1,23 @@
+# ChangeLog for net-mail/qmail-autoresponder
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
+
+*qmail-autoresponder-0.95 ( Apr 2002)
+
+  11 Apr 2002; Thilo Bangert <thilo.bangert@gmx.net> ChangeLog:
+
+  qmail RDEPEND cleanup & a speling eror
+
+
+*qmail-autoresponder-0.95 (25 Mar 2002)
+
+  25 Mar 2002; Gontran <gontran@gontran.net> ChangeLog:
+
+  added qmail RDEPEND - Notice on how to use qmail-autoresponder at the end
+
+
+*qmail-autoresponder-0.95 (13 Mar 2002)
+
+  13 Mar 2002; Thilo Bangert <thilo.bangert@gmx.net> ChangeLog:
+
+  initial release
