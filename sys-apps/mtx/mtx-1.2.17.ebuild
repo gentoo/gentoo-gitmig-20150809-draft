@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtx/mtx-1.2.17.ebuild,v 1.8 2003/11/25 03:30:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtx/mtx-1.2.17.ebuild,v 1.9 2004/01/07 09:01:42 robbat2 Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 SRC_URI="mirror://sourceforge/${PN}/${P}rel.tar.gz"
 S=${WORKDIR}/${P}
-KEYWORDS="x86 amd64 ~sparc alpha"
+KEYWORDS="x86 amd64 ~sparc alpha ~ppc"
 SLOT="0"
 
 src_unpack() {
