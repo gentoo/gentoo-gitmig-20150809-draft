@@ -1,37 +1,56 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1_beta2.ebuild,v 1.1 2005/01/28 19:29:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1.ebuild,v 1.1 2005/03/25 23:15:00 voxus Exp $
 
+inherit eutils gnuconfig libtool
+
+IUSE="ssl ipv6 doc selinux idn caps"
+
+DLZ_VER=0.7.0
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-KEYWORDS="-x86 -ppc -sparc -alpha -hppa -amd64 -ia64"
+
+# this ebuild contains the very untested dlz extension, hard-masking it for now
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64"
+
 LICENSE="as-is"
-IUSE="caps doc ipv6 selinux ssl"
 SLOT="0"
 
-MY_P="${P/_/}"
-MY_PV="${PV/_/}"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz"
-
 DEPEND="sys-apps/groff
+	sys-devel/autoconf
 	>=sys-apps/sed-4
-	ssl? ( >=dev-libs/openssl-0.9.6e )"
+	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
-
-S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A} && cd ${S}
 
 	# Adjusting PATHs in manpages
-	for i in `echo bin/{named/named.8,check/named-checkconf.8,nsupdate/nsupdate.8,rndc/rndc.8}`; do
+	for i in `echo bin/{named/named.8,check/named-checkconf.8,rndc/rndc.8}`; do
 		sed -i -e 's:/etc/named.conf:/etc/bind/named.conf:g' \
 		       -e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
 		       -e 's:/etc/rndc.key:/etc/bind/rndc.key:g' \
 		       ${i}
 	done
+
+	# it should be installed by bind-tools
+	sed "s:nsupdate ::g" ${S}/bin/Makefile.in > ${T}/Makefile
+	mv ${T}/Makefile ${S}/bin/Makefile.in
+
+	if use idn; then
+		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch
+	fi
+
+	cp ${FILESDIR}/named.rc6 ${T}
+	cd ${T} && epatch ${FILESDIR}/named.rc6-pid_fix
+
+	gnuconfig_update
+
+	cd ${S}
+	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 }
 
 src_compile() {
@@ -41,24 +60,29 @@ src_compile() {
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
 	use caps || myconf="${myconf} --disable-linux-caps"
 
-	econf 	--sysconfdir=/etc/bind \
+	econf \
+		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--with-libtool \
-		--enable-threads \
-		--enable-libbind \
-		${myconf} || die "configure failed"
+		${myconf} || die "econf failed"
 
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die "failed to compile bind"
+	emake -j1 || die "failed to compile bind"
+
+	if use idn; then
+		cd ${S}/contrib/idn/idnkit-1.0-src
+		econf || die "idn econf failed"
+		emake || die "idn emake failed"
+	fi
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "failed to install bind"
+	einstall || die "failed to install bind"
 
 	dodoc CHANGES COPYRIGHT FAQ README
 
 	use doc && {
 		docinto misc ; dodoc doc/misc/*
-		docinto html ; dodoc doc/arm/*
+		docinto html ; dohtml doc/arm/*
 		docinto	draft ; dodoc doc/draft/*
 		docinto rfc ; dodoc doc/rfc/*
 		docinto contrib ; dodoc contrib/named-bootconf/named-bootconf.sh \
@@ -80,23 +104,22 @@ src_install() {
 	insinto /var/bind ; doins ${FILESDIR}/named.ca
 	insinto /var/bind/pri ; doins ${FILESDIR}/{127,localhost}.zone
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/named.rc6 named
+	exeinto /etc/init.d ; newexe ${T}/named.rc6 named
 	insinto /etc/conf.d ; newins ${FILESDIR}/named.confd named
 
 	dosym ../../var/bind/named.ca /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri
 	dosym ../../var/bind/sec /etc/bind/sec
 
-	# Fix lib dependancy craziness (Bug #32214)
-	cd ${D}/usr/lib
-	dosym libisc.so.7 /usr/lib/libisc.so.4
-	dosym libdns.so.11.0.2 /usr/lib/libdns.so.10
-	dosym libdns.so.11.0.2 /usr/lib/libdns.so.8
-}
+	if use idn; then
+		cd ${S}/contrib/idn/idnkit-1.0-src
+		einstall || die "failed to install idn kit"
+		docinto idn
+		dodoc ChangeLog INSTALL{,.ja} README{,.ja} NEWS
+	fi
 
-pkg_preinst() {
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
-	rm -f ${D}/usr/share/man/man1/{dig.1.gz,host.1.gz}
+	rm -f ${D}/usr/share/man/man1/{dig.1,host.1,nslookup.1}
 	rm -f ${D}/usr/bin/{dig,host,nslookup}
 }
 
@@ -177,3 +200,4 @@ pkg_config() {
 		einfo
 	fi
 }
+
