@@ -1,7 +1,7 @@
 # Copyrigth 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.8-r1.ebuild,v 1.1 2002/03/30 13:48:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.8-r1.ebuild,v 1.2 2002/04/17 19:29:44 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
@@ -11,8 +11,8 @@ HOMEPAGE="http://www.xchat.org/"
 RDEPEND=">=x11-libs/gtk+-1.2.10-r4
 	python? ( >=dev-lang/python-2.2 )
 	perl?   ( >=sys-devel/perl-5.6.1 )
-	gnome?  ( >=gnome-base/gnome-core-1.4.0.4-r1 ) 
-	gtk?    ( >=media-libs/gdk-pixbuf-0.11.0-r1 )
+	gnome?  ( >=gnome-base/gnome-core-1.4.0.4-r1
+		>=media-libs/gdk-pixbuf-0.11.0-r1 )
 	ssl?    ( >=dev-libs/openssl-0.9.6a )"
 
 DEPEND="${RDEPEND}
@@ -24,47 +24,52 @@ src_unpack() {
 	
 	cd ${S}
 	cp configure configure.orig
-	if [ "`use python`" ]
-	then
+
+	use python && ( \
 		local mylibs=`/usr/bin/python-config`
-		sed -e 's:PY_LIBS=".*":PY_LIBS="'"$mylibs"'":' configure.orig > configure
-	fi
+		sed -e 's:PY_LIBS=".*":PY_LIBS="'"$mylibs"'":' \
+			configure.orig > configure
+	)
 }
 
 src_compile() {
 
 	local myopts myflags
 
-	use gnome 	\
-		&& myopts="${myopts} --enable-gnome --enable-panel"	\
-		|| myopts="${myopts} --enable-gtkfe --disable-gnome --disable-zvt"
+	use gnome \
+		&& myopts="${myopts} --enable-gnome --enable-panel" \
+		|| myopts="${myopts} --enable-gtkfe --disable-gnome --disable-zvt --disable-gdk-pixbuf"
 	
-	use gnome	\
+	use gnome \
 		&& CFLAGS="${CFLAGS} -I/usr/include/orbit-1.0"
 	
-	use gtk	\
-		|| myopts="${myopts} --disable-gdk-pixbuf --disable-gtkfe"
+	use gtk \
+		|| myopts="${myopts} --disable-gtkfe"
 	
-	use ssl	\
+	use ssl \
 		&& myopts="${myopts} --enable-openssl"
 
-	use perl	\
+	use perl \
 		|| myopts="${myopts} --disable-perl"
 
-	use nls 	\
-		&& myopts="${myopts} --enable-hebrew --enable-japanese-conv"	\
+	use nls \
+		&& myopts="${myopts} --enable-hebrew --enable-japanese-conv" \
 		|| myopts="${myopts} --disable-nls"
 
-	use mmx		\
+	use mmx	\
 		&& myopts="${myopts} --enable-mmx"	\
 		|| myopts="${myopts} --disable-mmx"
 	
-	use python 	&& myflags="`python-config`"
-	use python 	&& myopts="${myopts} --enable-python"
+	use ipv6 \
+		&& myopts="${myopts} --enable-ipv6"
 	
-	./configure --prefix=/usr \
+	use python \
+		&& myflags="`python-config`" \
+	 	&& myopts="${myopts} --enable-python"
+	
+	./configure \
+		--prefix=/usr \
 		--host=${CHOST} \
-		--enable-ipv6 \
 		${myopts} || die
 	
 	emake || die
