@@ -1,10 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/Manifest,v 1.12 2004/01/05 04:11:30 robbat2 Exp $
-MD5 dc62ee96a6694f130f2ed089c2b43b51 smarty-2.6.0-r2.ebuild 873
-MD5 09c1e0c892adf1e3383a1ee3bdd0c01b smarty-2.5.0.ebuild 999
-MD5 5a751dd6a13c0c397646859d396962a3 smarty-2.6.0-r1.ebuild 873
-MD5 980bed003fdf73355e4900fe201e0c61 ChangeLog 1079
+MD5 62f1d488232566eb598ca5aeab72174e smarty-2.6.0-r2.ebuild 888
+MD5 b2368829538d2ef1626130de76d68ea2 smarty-2.5.0.ebuild 1003
+MD5 e468930346fc0a3ee889db4242d91b78 smarty-2.6.0-r1.ebuild 877
+MD5 1b9ba619e8c19397c985e7f30b2328c0 ChangeLog 1278
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 9eac0339bb8bfa49fda0d87f6487e7ef smarty-2.6.0.ebuild 999
+MD5 b2d507bf148499384fe07752b91decdd smarty-2.6.0.ebuild 1003
 MD5 74ae938ca9097670a89c5f2ff6ad28f8 files/digest-smarty-2.5.0 133
 MD5 d682d64693190a83f04b9d51ee9d1bfe files/digest-smarty-2.6.0 133
 MD5 cc746919357bf3d40185fb16d4e2be1c files/digest-smarty-2.6.0-r1 64
