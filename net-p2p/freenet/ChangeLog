@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.11 2003/07/10 18:28:21 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.12 2003/07/21 06:50:30 raker Exp $
+
+*freenet-0.5.2.1 (21 Jul 2003)
+
+  21 Jul 2003; Nick Hadaway <raker@gentoo.org> freenet-0.5.2.1.ebuild:
+  Version bump.  Important security fix.
 
 *freenet-0.5.2_rc3 (10 Jul 2003)
 
