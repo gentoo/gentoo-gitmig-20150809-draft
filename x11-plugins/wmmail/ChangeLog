@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/ChangeLog,v 1.2 2002/09/13 17:27:46 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/ChangeLog,v 1.3 2002/09/15 13:54:49 seemant Exp $
+
+*wmmail-0.64-r1 (07-Feb-2002)
+  
+  07 Sept 2002; Brad Cowan <bradlyatc@cowancomputers.com> 
+  wmmail-0.64-r1.ebuild files/digest-wmmail-0.64-r1 ChangeLog :
+
+  reworked ebuild -- symlink, beautification. (into cvs by seemant)
 
 *wmmail-0.64 (19-Feb-2002)
 
