@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/pymol
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.12 2004/07/26 04:51:55 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.13 2004/11/01 02:43:53 ribosome Exp $
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> pymol-0.97.ebuild:
+  Added to x86.
 
 *pymol-0.97 (26 Jul 2004)
 
