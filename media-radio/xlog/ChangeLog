@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xlog
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.1 2004/06/28 01:18:43 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.2 2004/06/28 21:50:46 dholm Exp $
+
+  28 Jun 2004; David Holm <dholm@gentoo.org> xlog-0.9.6.ebuild:
+  Added to ~ppc.
 
 *xlog-0.9.6 (27 Jun 2004)
 
