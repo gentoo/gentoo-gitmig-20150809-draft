@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.6 2004/07/02 09:31:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.7 2004/07/08 20:40:41 pappy Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -59,8 +59,8 @@ src_unpack() {
 }
 
 src_compile() {
-	# Generate borked binaries.  Bug #6730
-	filter-flags "-fomit-frame-pointer -fssa"
+	# Generate borked binaries.  Bug #6730, #27456
+	filter-flags "-fomit-frame-pointer" "-fssa" "-freduce-all-givs"
 
 	use uclibc && gnuconfig_update
 

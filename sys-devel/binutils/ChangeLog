@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.140 2004/07/03 09:13:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.141 2004/07/08 20:40:41 pappy Exp $
+
+  08 Jul 2004; Alexander Gabert <pappy@gentoo.org>
+  binutils-2.14.90.0.8-r2.ebuild:
+  added filter-flags for freduce-all-givs (bug id 27456)
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   binutils-2.14.90.0.8-r1.ebuild:
