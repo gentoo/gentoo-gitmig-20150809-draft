@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-8.0.ebuild,v 1.3 2004/08/08 07:00:05 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-8.0-r1.ebuild,v 1.1 2004/08/08 07:00:05 mattam Exp $
 
 inherit eutils
 
@@ -8,20 +8,22 @@ IUSE="norealanalysis ide debug translator doc"
 
 RESTRICT="nostrip"
 
+MY_PV="8.0pl1"
+MY_P="${PN}-${MY_PV}"
+
 DESCRIPTION="Coq is a proof assistant written in O'Caml"
 HOMEPAGE="http://coq.inria.fr/"
-SRC_URI="ftp://ftp.inria.fr/INRIA/${PN}/V${PV/_/}/${P/_/}.tar.gz
-translator? ( ftp://ftp.inria.fr/INRIA/coq/V8.0/coq-8.0-translator.tar.gz )"
+SRC_URI="ftp://ftp.inria.fr/INRIA/${PN}/V${MY_PV/_/}/${MY_P/_/}.tar.gz
+translator? ( ftp://ftp.inria.fr/INRIA/coq/V${MY_PV}/${MY_P}-translator.tar.gz )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=dev-lang/ocaml-3.06
-!>=dev-lang/ocaml-3.08
 ide? ( >=dev-ml/lablgtk-2.2.0 )"
 
-S="${WORKDIR}/${P/_/}"
+S="${WORKDIR}/${MY_P/_/}"
 
 src_unpack()
 {
@@ -66,7 +68,7 @@ src_install() {
 	dodoc README CREDITS CHANGES LICENSE
 
 	if use translator; then
-		cd ${WORKDIR}/coq-8.0-translator
+		cd ${WORKDIR}/${MY_P}-translator
 		mv translate-v8 coq-translate-v8
 		dobin coq-translate-v8
 		if use doc; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-7.4.ebuild,v 1.5 2004/07/14 01:33:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/coq/coq-7.4.ebuild,v 1.6 2004/08/08 07:00:05 mattam Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 IUSE="norealanalysis"
 
-DEPEND=">=dev-lang/ocaml-3.06"
+DEPEND=">=dev-lang/ocaml-3.06
+!>=dev-lang/ocaml-3.08"
 
 src_compile() {
 	local myconf="--prefix /usr \
