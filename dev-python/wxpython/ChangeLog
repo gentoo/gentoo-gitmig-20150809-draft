@@ -1,0 +1,178 @@
+# ChangeLog for dev-python/wxPython
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.1 2004/07/03 11:46:54 kloeri Exp $
+
+*wxpython-2.4.2.4 (03 Jul 2004)
+
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> +wxpython-2.4.0.7.ebuild,
+  +wxpython-2.4.1.2.ebuild, +wxpython-2.4.2.4.ebuild:
+  Follow naming policy, rename wxPython to wxpython.
+
+  30 Jun 2004; Guy Martin <gmsoft@gentoo.org> wxPython-2.4.2.4.ebuild:
+  Marked stable on hppa.
+
+  22 Jun 2004; Rob Cakebread <pythonhead@gentoo.org> wxPython-2.4.2.4.ebuild:
+  Marked stable on x86
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> wxPython-2.4.0.7.ebuild,
+  wxPython-2.4.1.2.ebuild, wxPython-2.4.2.4.ebuild:
+  Fix use invocation
+
+  25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  wxPython-2.4.0.7.ebuild:
+  don't use deprecated ? : use syntax
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> wxPython-2.4.0.7.ebuild,
+  wxPython-2.4.1.2.ebuild, wxPython-2.4.2.4.ebuild:
+  stable on alpha and ia64
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
+  manifest fix
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> wxPython-2.4.2.4.ebuild:
+  set ppc in keywords
+
+  29 Dec 2003; Guy Martin <gmsoft@gentoo.org> wxPython-2.4.1.2.ebuild:
+  Marked stable on hppa.
+
+  25 Dec 2003; Jason Wever <weeve@gentoo.org> wxPython-2.4.1.2.ebuild:
+  Marked stable on sparc.
+
+  12 Oct 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.2.4.ebuild:
+  add unicode support to match wxGTK-2.4.2 thanks to Vaclav Slavik
+  <vaclav.slavik@matfyz.cz> (#30768)
+
+  08 Oct 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.1.2.ebuild,
+  wxPython-2.4.2.4.ebuild:
+  added debug config wx*-config and stable bumped wxPython-2.4.1.2
+
+  08 Oct 2003; Seemant Kulleen <seemant@gentoo.org> wxPython-2.4.1.2.ebuild,
+  wxPython-2.4.2.4.ebuild:
+  the dependency is tiff, not libtiff
+
+*wxPython-2.4.2.4 (08 Oct 2003)
+
+  08 Oct 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.7.ebuild,
+  wxPython-2.4.1.2.ebuild, wxPython-2.4.2.4.ebuild:
+  version bump. incorporating license changes thanks to Vaclav Slavik
+  <vaclav.slavik@matfyz.cz> (#28697)
+
+  10 Jul 2003; Nick Hadaway <raker@gentoo.org> wxPython-2.4.1.2.ebuild,
+  files/controls2.py.patch:
+  Added a tiny patch to fix a typo in controls2.py
+
+*wxPython-2.4.1.2 (09 Jul 2003)
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.1.2.ebuild:
+  new version. needs wxGTK-2.4.1
+
+  08 Jul 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.2.ebuild:
+  removed non-functional patch from wxWindows-2.4.0.2
+
+  07 Jul 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.7.ebuild:
+  bump to stable
+
+  07 May 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.6.ebuild,
+  wxPython-2.4.0.7.ebuild:
+  Detect non-unicode wxGTK
+
+*wxPython-2.4.0.7 (27 Apr 2003)
+
+  27 Apr 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.7.ebuild:
+  version bump
+
+*wxPython-2.4.0.6 (16 Mar 2003)
+
+  26 Mar 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.6.ebuild:
+  Fixed typo that disallows wxPython from merging. Fixes #18203.
+
+  26 Mar 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.6.ebuild:
+  add check to make sure wxGTK is compiled with the right use flags
+
+  16 Mar 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.6.ebuild:
+  version bump
+
+*wxPython-2.4.0.2 (01 Feb 2003)
+
+  01 Feb 2003; Nick Hadaway <raker@gentoo.org> wxPython-2.4.0.2.ebuild :
+  Version bump.  Bug fixes.
+
+*wxPython-2.4.0.1 (12 Jan 2003)
+
+  15 Jan 2003; Nick Hadaway <raker@gentoo.org> wxPython-2.4.0.1.ebuild :
+  Marked stable for x86.
+
+  13 Jan 2003; Nick Hadaway <raker@gentoo.org> wxPython-2.4.0.1.ebuild :
+  Added gtk2 support based on code submitted  by Jose Fonseca on bug
+  #13860
+
+  12 Jan 2003; Nick Hadaway <raker@gentoo.org> wxPython-2.4.0.1.ebuild,
+  files/digest-wxPython-2.4.0.1 :
+  A much needed upgrade.  Works with the latest wxGTK release.
+  As we have had much problems with the 2.3.4 wxGTK series I am hoping
+  this may actually make into the stable 1.4 release or we need to bump
+  back to to 2.3.3 series of wxGTK.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*wxPython-2.3.3.1-r2 (30 Oct 2002)
+
+  30 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed all the crap put into the first 2.3.3.1 ebuild to build wxGTK and
+  updated the patch to remove glcanvas
+
+*wxPython-2.3.3.1-r1 (29 Oct 2002)
+
+  29 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  added some changes per discussion on #9693
+
+*wxPython-2.3.3.1 (28 Oct 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  This version bump was nasty rough ...
+  They added configure/make scripts to this package now, so mirrored much of
+  the configure setup after wxGTK ...
+
+*wxPython-2.3.2.1-r2 (29 Aug 2002)
+
+  13 Sep 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r2.ebuild :
+  Moved glcanvas patch from -r1 as specifying GLCANVAS=0 doesn't disable
+  the opengl portion of the build fully.  Should fix bug #7777.
+
+  11 Sep 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r2.ebuild :
+  tightened wxGTK dependancy to wxGTK-2.3.2*
+
+  01 Sep 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r2.ebuild :
+  Updated ebuild with missing ${myconf}'s
+
+  29 Aug 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r2.ebuild,
+  file/digest-wxPython-2.3.2.1-r2, files/ledctrl.diff :
+  GLCANVAS and GIZMOS extensions are now re-enabled and we should have a
+  full-featured ebuild of wxPython.
+
+*wxPython-2.3.2.1-r1 (2 Jul 2002)
+
+  22 Aug 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r1.ebuild,
+  files/noglcanvas.diff, files/nogizmos.diff :
+  Ebuild disables glcancas and gizmos extensions as they currently are 
+  not building correctly.
+
+  2 Jul 2002; Jon Nelson <jnelson@gentoo.org> wxPython-2.3.2.1-r1:
+  Make lintool happy
+  expressly don't build GLCANVAS  
+
+*wxPython-2.3.2.1 (11 Apr 2002)
+
+  11 Apr 2002; Spider <spider@gentoo.org>
+  Update all glib dependencies to use glib-1.2*  in preparation of
+  unmasking the glib-2.0.1 packages
+
+*wxPython-2.3.2.1 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
