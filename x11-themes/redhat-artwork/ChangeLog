@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.3 2002/10/17 06:48:43 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.4 2002/11/22 04:33:41 blocke Exp $
+
+*redhat-artwork-0.48 (18 Nov 2002)
+
+  21 Nov 2002; Bruce A. Locke <blocke@shivan.org> redhat-artwork-0.48.ebuild:
+  Version bump (plus possible qt 3.1.0 fix)
 
 *redhat-artwork-0.47 (16 Oct 2002)
 
