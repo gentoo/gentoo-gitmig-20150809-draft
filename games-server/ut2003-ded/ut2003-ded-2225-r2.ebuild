@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r1.ebuild,v 1.2 2004/06/24 23:21:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.1 2004/07/08 17:52:46 wolf31o2 Exp $
 
 inherit games
 
@@ -48,6 +48,10 @@ AccessControlClass=crashfix.iaccesscontrolini
 w
 q
 EOT
+
+	# Here we apply fix for bug #54726
+	dosed "s:UplinkToGamespy=True:UplinkToGamespy=False:" \
+		${dir}/System/Default.ini
 
 	prepgamesdirs
 }
