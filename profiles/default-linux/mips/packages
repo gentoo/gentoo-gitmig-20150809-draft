@@ -1,16 +1,11 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/packages,v 1.8 2005/02/27 17:52:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/packages,v 1.9 2005/02/27 18:24:30 kumba Exp $
 
 # Top-level mips profile
 
 # Not ready for general consumption (except n32)
 *<sys-kernel/mips-headers-2.6.6
-
-# IP22 theoretically works fine with 2.6, but more testing needs to be done before
-# verifying this officially, so we'll mask 2.6 on Indy only and unmask it for all of
-# mips64 and cobalt
-*<sys-kernel/mips-sources-2.6.8.1
 
 # Doesn't build/work on o32 mips - Portage Atoms Broke?
 # Masked by -* instead
