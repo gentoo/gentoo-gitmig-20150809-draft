@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.16 2004/10/05 20:26:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.17 2004/10/23 10:43:36 hattya Exp $
+
+  23 Oct 2004; Akinori Hattori <hattya@gentoo.org> ksh-93.20040229.ebuild:
+  add ~ia64, bug #68321.
 
   05 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> ksh-93.20040229.ebuild:
   Stable on alpha.
