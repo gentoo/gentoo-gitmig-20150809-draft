@@ -1,13 +1,19 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.8 2003/03/09 16:25:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.9 2003/03/30 17:46:30 azarah Exp $
+
+*d4x-2.4.1-r1 (30 Mar 2003)
+
+  30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> d4x-2.4.1-r1.ebuild :
+  Fix a miscompile for me with gcc-3.2.2 and CFLAGS="-O2".  Fix indentation
+  of KDE menu stuff.
 
 *d4x-2.4.1 (08 Mar 2003)
 
-  09 Mar 2003; Alastair Tse <liquidx@gentoo.org> d4x-2.4.1.ebuild:
+  09 Mar 2003; Alastair Tse <liquidx@gentoo.org> d4x-2.4.1.ebuild :
   Installs KDE menu entry. Cleaned deps.
 
-  08 Mar 2003; Alastair Tse <liquidx@gentoo.org> d4x-2.4.1.ebuild:
+  08 Mar 2003; Alastair Tse <liquidx@gentoo.org> d4x-2.4.1.ebuild :
   Version Bump. Marked as unstable. Fixes #17023.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords

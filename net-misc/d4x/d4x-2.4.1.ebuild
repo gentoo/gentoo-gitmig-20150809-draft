@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1.ebuild,v 1.3 2003/03/09 17:20:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1.ebuild,v 1.4 2003/03/30 17:46:30 azarah Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -15,7 +15,7 @@ LICENSE="Artistic"
 
 DEPEND=">=x11-libs/gtk+-2.0.6
 	>=dev-libs/glib-2.0.6
-    >=sys-devel/gettext-0.11.2    
+	>=sys-devel/gettext-0.11.2    
 	esd? ( >=media-sound/esound-0.2.7 )"
 
 src_unpack() {
@@ -61,11 +61,11 @@ src_install () {
 	insinto /usr/share/pixmaps
 	doins share/*.png share/*.xpm
 
-    if [ -n "`use kde`" ]
-    then
-       insinto /usr/share/applnk/Internet
-       newins share/nt.desktop d4x.desktop
-    fi
+	if [ -n "`use kde`" ]
+	then
+		insinto /usr/share/applnk/Internet
+		newins share/nt.desktop d4x.desktop
+	fi
 
 	if [ -n "`use gnome`" ]
 	then
