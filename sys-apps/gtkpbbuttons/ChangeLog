@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gtkpbbuttons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.9 2003/08/17 21:31:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.10 2003/11/26 00:42:36 lu_zero Exp $
+
+*gtkpbbuttons-0.6.1 (26 Nov 2003)
+
+  26 Nov 2003; Luca Barbato <lu_zero@gentoo.org> gtkpbbuttons-0.6.1.ebuild:
+  New version
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
