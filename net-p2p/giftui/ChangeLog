@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/giftui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.2 2003/07/13 19:44:58 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.3 2003/08/13 19:10:46 lostlogic Exp $
+
+*giftui-0.1.1 (13 Aug 2003)
+
+  13 Aug 2003; Brandon Low <lostlogic@gentoo.org> giftui-0.1.1.ebuild:
+  Bump
 
   13 Jul 2003; Jon Portnoy <avenj@gentoo.org> giftui-0.0.1.ebuild :
   Modified ebuild to suggest giftui-cvs if giftui doesn't compile.
