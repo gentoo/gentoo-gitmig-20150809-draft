@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r10.ebuild,v 1.4 2004/08/03 14:38:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r10.ebuild,v 1.5 2004/08/22 00:44:31 spock Exp $
 
 inherit eutils
 
@@ -86,8 +86,12 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo
+	echo ""
 	einfo "Hint: you can copy text from aterm to the clipboard by holding the ALT key"
 	einfo "while highlighting the text."
-	einfo
+	echo ""
+	ewarn "The transparent background will only work if you have the 'real' root wallpaper"
+	ewarn "set. Use Esetroot (x11-terms/eterm) or fbsetbg (x11-wm/fluxbox) if you are"
+	ewarn "experiencing problems with transparency in aterm."
+	echo ""
 }
