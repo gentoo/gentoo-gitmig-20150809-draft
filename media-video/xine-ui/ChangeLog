@@ -1,6 +1,17 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.7 2002/04/29 00:00:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.8 2002/05/02 01:29:13 seemant Exp $
+
+*xine-ui-0.9.9-r1 (1 May 2002)
+
+  1 May 2002; Seemant Kulleen <seemant@gentoo.org> xine-ui-0.9.9-r1.ebuild
+  files/digest-xine-ui-0.9.9-r1 xine-ui-gentoo-extra.tar.bz2 (distfiles) :
+
+  For some reason, upstream forgot to package all the necessary files for
+  DirectFB support.  This would have been one thing if we could have 
+  configured to disable that support, but DirectFB is autodetected.  So, the
+  tarball on the ibiblio mirror contains those files as grabbed from xine-ui's
+  cvs repository (where they have not been altered in months).
 
 *xine-ui-0.9.9 (29 Apr 2002)
 
