@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+ <herd>sound</herd>
+ <longdescription>
+  daaplib is a very tiny and portable C++ library which helps to read
+  and write low-level DAAP streams in memory. the code is
+  straightforward and can mirror the structure of the data fairly well
+ </longdescription>
+</pkgmetadata>

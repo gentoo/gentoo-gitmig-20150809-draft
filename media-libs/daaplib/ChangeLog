@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/daaplib
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/ChangeLog,v 1.1 2004/03/25 06:29:04 eradicator Exp $
+
+*daaplib-0.1.1a (24 Mar 2004)
+
+  24 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  daaplib-0.1.1a.ebuild, metadata.xml:
+  Initial import.  Ebuild submitted by Sandy McArthur <sandymac@gentoo.org>.
+  Closes bug #34297.
