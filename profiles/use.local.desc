@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.404 2004/05/30 10:56:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.405 2004/05/31 04:55:03 iluxa Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -361,6 +361,8 @@ sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:uclibc - Enable uclibc specific patches for gcc
+sys-devel/gcc:n32 - Enable n32 ABI support on mips
+sys-devel/gcc:n64 - Enable n64 support on mips
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
