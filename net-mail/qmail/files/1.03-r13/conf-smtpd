@@ -1,5 +1,5 @@
 # Configuration file for qmail-smtpd
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r13/conf-smtpd,v 1.1 2003/10/27 09:42:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r13/conf-smtpd,v 1.2 2003/11/30 03:00:20 robbat2 Exp $
 
 # Stuff to run before tcpserver
 #QMAIL_TCPSERVER_PRE=""
@@ -18,7 +18,7 @@ TCPSERVER_OPTS="${TCPSERVER_OPTS} -R"
 # If you are interested in providing POP or IMAP before SMTP type relaying,
 # emerge relay-ctrl, then uncomment the next 2 lines
 #QMAIL_TCPSERVER_PRE="${QMAIL_TCPSERVER_PRE} envdir /etc/relay-ctrl relay-ctrl-chdir"
-#QMAIL_SMTP_POST="${QMAIL_SMTP_POST} relay-ctrl-check"
+#QMAIL_SMTP_PRE="${QMAIL_SMTP_PRE} relay-ctrl-check"
 # In /etc/courier-imap/authdaemonrc add the next line to the end:
 #authmodulelist="${authmodulelist} relay-ctrl-allow"
 # Then in /etc/courier-imap/{imapd,imapd-ssl,pop3d,pop3d-ssl}
