@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.3 2000/08/16 04:38:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.4 2000/08/16 15:08:41 achim Exp $
 
 P=mpeg-movie-1.6.0
 A=mpeg_movie-1.6.0.tar.gz
@@ -59,7 +59,7 @@ src_install () {
     cd ${S}
     into /usr
     newbin audio_in/encode mpeg_audio_encode
-    dobin audio_out/plaympeg
+    newbin audio_out/plaympeg mpeg_audio_play
     newbin mplex_in/mplex mpeg_mplex
     newbin mplex_out/dmplex mpeg_dmplex
     newbin video_in/mpeg_encode mpeg_video_encode
@@ -71,6 +71,7 @@ src_install () {
     docinto html/quicktime
     dodoc quicktime4linux/src/docs/*.html
 }
+
 
 
 

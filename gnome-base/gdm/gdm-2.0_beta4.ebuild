@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gdm/gdm-2.0beta4.ebuild,v 1.2 2000/08/16 04:38:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.0_beta4.ebuild,v 1.1 2000/08/16 15:08:41 achim Exp $
 
 P=gdm-2.0beta4
 A=${P}.tar.gz

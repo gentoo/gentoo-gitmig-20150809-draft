@@ -1128,7 +1128,7 @@ src_menu() {
 	prerm|postrm|preinst|postinst)
 	    pkg_${MYfoo}
 	    ;;
-	help|clean|fetch|digest|pkginfo|pkgloc|unmerge)
+	help|clean|fetch|digest|pkginfo|pkgloc|unmerge|install)
 	    dyn_${MYfoo}
 	    ;;
 	package)
@@ -1299,3 +1299,4 @@ then
 fi
 foo=$(( $foo + 1))
 done
+

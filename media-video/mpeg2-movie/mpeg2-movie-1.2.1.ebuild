@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2-movie/mpeg2-movie-1.2.1.ebuild,v 1.2 2000/08/16 04:38:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2-movie/mpeg2-movie-1.2.1.ebuild,v 1.3 2000/08/16 15:08:41 achim Exp $
 
 P=mpeg2-movie-1.2.1
 A=mpeg2_movie-1.2.1.tar.gz
@@ -27,9 +27,10 @@ src_install () {
     newbin audio/encode mpeg2_audio_encode
     newbin mplex/mplex mpeg2_mplex
     dobin libmpeg3/mpeg3cat
-    dodoc video/CHANGES video/TODO
+    dodoc script video/CHANGES video/TODO
     docinto html
     dodoc docs/index.html
 }
+
 
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.1p2-r1.ebuild,v 1.2 2000/08/16 04:37:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.1_p2-r1.ebuild,v 1.1 2000/08/16 15:08:41 achim Exp $
 
 P=php-4.0.1pl2
 A="${P}.tar.gz number4.tar.gz"
@@ -41,18 +41,23 @@ src_install() {
   dodoc MAINTAINERS MODULES_STATUS README.* TODO NEWS
 }
 
-pkg_postinst() {
+pkg_config() {
 
   . ${ROOT}/etc/rc.d/config/functions
 
-  # Activate PHP-Extension in httpd.conf
-  einfo "Activate PHP in httpd.conf..."
-  cp ${ROOT}/etc/httpd/httpd.conf ${ROOT}/etc/httpd/httpd.conf.orig
-  sed -e "s/^#LoadModule php4_module/LoadModule php4_module/" \
+  if [ -f "${ROOT}/etc/httpd/httpd.conf" ]
+  then
+
+    # Activate PHP-Extension in httpd.conf
+    einfo "Activate PHP in httpd.conf..."
+    cp ${ROOT}/etc/httpd/httpd.conf ${ROOT}/etc/httpd/httpd.conf.orig
+    sed -e "s/^#LoadModule php4_module/LoadModule php4_module/" \
       -e "s/^#AddModule mod_php4.c/AddModule mod_php4.c/" \
       -e "s/#AddType application\/x-httpd-php /AddType application\/x-httpd-php /" \
       -e "s/#AddType application\/x-httpd-php-/AddType application\/x-httpd-php-/" \
 	${ROOT}/etc/httpd/httpd.conf.orig > ${ROOT}/etc/httpd/httpd.conf
 
+  fi
 }
+
 
