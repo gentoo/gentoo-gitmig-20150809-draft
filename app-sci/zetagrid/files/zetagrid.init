@@ -1,0 +1,32 @@
+#!/sbin/runscript
+
+opts="${opts} progress"
+ZETADIR=/opt/zetagrid/
+
+start() {
+        ebegin "Starting zetagrid"
+        cd ${ZETADIR}
+        ./zeta.sh >/dev/null
+        eend $? "Failed to start zetagrid"
+}
+
+stop() {
+        ebegin "Stopping zetagrid"
+        kill s ax | grep java | grep ZetaClient | sed -e
+'s/^\(.\{5\}\).*$/\1/' | tail -1        eend $? "Failed to stop zetagrid"
+}
+
+progress() {
+        if [ s ax | grep java | grep ZetaClient | sed -e
+'s/^\(.\{5\}\).*$/\1/' | tail -1 ]
+        then
+                ebegin "Showing zetagrid progress (Cancel with ^C) "
+                cd ${ZETADIR}
+                echo ""
+                ./zeta_progress.sh
+                echo ""
+                echo ""
+        else
+                eend $? "zetagrid is not started"
+        fi
+} 
