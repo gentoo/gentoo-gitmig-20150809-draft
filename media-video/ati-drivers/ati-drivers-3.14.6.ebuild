@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.14.6.ebuild,v 1.2 2004/11/12 00:50:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.14.6.ebuild,v 1.3 2004/12/27 14:11:20 lu_zero Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ati.com"
 SRC_URI="http://www2.ati.com/drivers/linux/fglrx-4.3.0-${PV}.i386.rpm"
 SLOT="${KV}"
 LICENSE="ATI"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 DEPEND=">=virtual/linux-sources-2.4
 	app-arch/rpm2targz
@@ -62,8 +62,14 @@ src_compile() {
 	    addwrite "/usr/src/${FK}"
 	    cp 2.6.x/Makefile .
 		export _POSIX2_VERSION="199209"
-		make -C /usr/src/linux SUBDIRS="`pwd`" modules || \
-			ewarn "DRM module not built"
+		if [ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -gt 5 -a ${KV_PATCH} -gt 5 ] ;
+		then
+			make -C /usr/src/linux M="`pwd`" modules || \
+				ewarn "DRM module not built"
+		else
+			make -C /usr/src/linux SUBDIRS="`pwd`" modules || \
+				ewarn "DRM module not built"
+		fi
 	    ARCH=${GENTOO_ARCH}
 	else
 		export _POSIX2_VERSION="199209"
