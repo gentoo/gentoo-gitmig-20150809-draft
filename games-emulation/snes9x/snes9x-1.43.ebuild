@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.1 2005/01/03 06:48:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.2 2005/01/04 23:43:35 vapier Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.lysator.liu.se/snes9x/${PV}/snes9x-${PV}-src.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="3dfx opengl X joystick zlib"
+IUSE="3dfx opengl X joystick zlib dga"
 
 RDEPEND="zlib? ( sys-libs/zlib )
 	virtual/x11
@@ -29,7 +29,10 @@ src_unpack() {
 	cd "${S}"/snes9x
 	epatch "${FILESDIR}"/nojoy.patch
 	sed -i 's:png_jmpbuf:png_write_info:g' configure
-	sed -i 's:@OPTIMIZE@:@CFLAGS@:' Makefile.in
+	sed -i \
+		-e 's:@OPTIMIZE@:@CFLAGS@:' \
+		-e 's:-lXext -lX11::' \
+		Makefile.in
 }
 
 src_compile() {
@@ -60,6 +63,7 @@ src_compile() {
 			$(use_with debug debugger) \
 			$(use_with zlib) \
 			--with-screenshot \
+			$(use_with dga extensions) \
 			|| die
 		# Makefile doesnt quite support parallel builds
 		emake -j1 offsets || die "making offsets"

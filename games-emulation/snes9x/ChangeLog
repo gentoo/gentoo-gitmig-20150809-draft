@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.14 2005/01/03 06:48:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.15 2005/01/04 23:43:35 vapier Exp $
+
+  04 Jan 2005; Mike Frysinger <vapier@gentoo.org> snes9x-1.43.ebuild:
+  Add support for USE=dga. Also remove forced linking with X libs (let
+  configure script do it) #76538.
 
 *snes9x-1.43 (03 Jan 2005)
 
