@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.29 2005/01/01 22:12:04 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.30 2005/01/03 21:58:44 plasmaroo Exp $
+
+  03 Jan 2005; <plasmaroo@gentoo.org> i2c-2.9.0.ebuild,
+  +files/i2c-2.9.0.fix.patch:
+  Backport upstream CVS fix to allow lm-sensors-2.9.0 to play nice with
+  2.4 kernels.
 
 *i2c-2.9.0 (01 Jan 2005)
 

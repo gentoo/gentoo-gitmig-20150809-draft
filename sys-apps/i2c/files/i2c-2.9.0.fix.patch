@@ -1,0 +1,60 @@
+--- i2c-2.9.0/kernel/Module.mk	8 Dec 2004 21:03:57
++++ i2c-2.9.0.1/kernel/Module.mk	3 Jan 2005 17:08:11
+@@ -26,17 +26,21 @@
+ # We will only include those modules which are not already built into this
+ # kernel.
+ KERNELTARGETS :=
++KERNELINCLUDES :=
+ ifneq ($(shell if grep -q '^CONFIG_I2C=y' $(LINUX)/.config; then echo 1; fi),1)
+ KERNELTARGETS += $(MODULE_DIR)/i2c-core.o
++KERNELINCLUDES += $(MODULE_DIR)/i2c.h $(MODULE_DIR)/i2c-id.h
+ endif
+ ifneq ($(shell if grep -q '^CONFIG_I2C_CHARDEV=y' $(LINUX)/.config; then echo 1; fi),1)
+ KERNELTARGETS += $(MODULE_DIR)/i2c-dev.o
+ endif
+ ifneq ($(shell if grep -q '^CONFIG_I2C_ALGOBIT=y' $(LINUX)/.config; then echo 1; fi),1)
+ KERNELTARGETS += $(MODULE_DIR)/i2c-algo-bit.o
++KERNELINCLUDES += $(MODULE_DIR)/i2c-algo-bit.h
+ endif
+ ifneq ($(shell if grep -q '^CONFIG_I2C_ALGOBITHS=y' $(LINUX)/.config; then echo 1; fi),1)
+ KERNELTARGETS += $(MODULE_DIR)/i2c-algo-biths.o
++KERNELINCLUDES += $(MODULE_DIR)/i2c-algo-biths.h
+ endif
+ ifneq ($(shell if grep -q '^CONFIG_I2C_PHILIPSPAR=y' $(LINUX)/.config; then echo 1; fi),1)
+ ifeq ($(shell if grep -q '^CONFIG_PARPORT=[my]' $(LINUX)/.config; then echo 1; fi),1)
+@@ -51,13 +55,16 @@
+ endif
+ ifneq ($(shell if grep -q '^CONFIG_I2C_ALGOPCF=y' $(LINUX)/.config; then echo 1; fi),1)
+ KERNELTARGETS += $(MODULE_DIR)/i2c-algo-pcf.o
++KERNELINCLUDES += $(MODULE_DIR)/i2c-algo-pcf.h
+ endif
+ # will not build outside kernel tree 
+ ifneq ($(shell if grep -q '^CONFIG_I2C_ELEKTOR=y' $(LINUX)/.config; then echo 1; fi),1)
+ #KERNELTARGETS += $(MODULE_DIR)/i2c-elektor.o
++#KERNELINCLUDES += $(MODULE_DIR)/i2c-pcf8584.h
+ endif
+ ifneq ($(shell if grep -q '^CONFIG_I2C_PROC=y' $(LINUX)/.config; then echo 1; fi),1)
+ KERNELTARGETS += $(MODULE_DIR)/i2c-proc.o
++KERNELINCLUDES += $(MODULE_DIR)/i2c-proc.h
+ endif
+ ifneq ($(shell if grep -q '^CONFIG_I2C_PPORT=y' $(LINUX)/.config; then echo 1; fi),1)
+ KERNELTARGETS += $(MODULE_DIR)/i2c-pport.o
+@@ -75,6 +82,7 @@
+ #
+ #ifneq ($(shell if grep -q '^CONFIG_I2C_ALGO8XX=y' $(LINUX)/.config; then echo 1; fi),1)
+ #KERNELTARGETS += $(MODULE_DIR)/i2c-algo-8xx.o
++#KERNELINCLUDES += $(MODULE_DIR)/i2c-algo-8xx.h
+ #endif
+ #ifneq ($(shell if grep -q '^CONFIG_I2C_RPXLITE=y' $(LINUX)/.config; then echo 1; fi),1)
+ #KERNELTARGETS += $(MODULE_DIR)/i2c-rpx.o
+@@ -103,6 +111,10 @@
+ 	  done ; \
+ 	  $(RMDIR) $(DESTDIR)$(MODPREF)/misc 2> /dev/null || true ; \
+ 	fi
++	if [ -n "$(KERNELINCLUDES)" ] ; then \
++	  $(MKDIR) $(DESTDIR)$(LINUX_INCLUDE_DIR) ; \
++	  $(INSTALL) -m 644 $(KERNELINCLUDES) $(DESTDIR)$(LINUX_INCLUDE_DIR) ; \
++	fi
+ install :: install-kernel
+ 
+ clean-kernel:
