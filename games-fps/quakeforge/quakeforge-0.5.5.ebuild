@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.3 2004/06/24 22:46:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.4 2004/12/29 00:18:40 vapier Exp $
 
 inherit eutils games
 
 DESCRIPTION="A new 3d engine based off of id Softwares's legendary Quake and QuakeWorld game engine"
-HOMEPAGE="http://www.quakeforge.org/"
+HOMEPAGE="http://www.quakeforge.net/"
 SRC_URI="mirror://sourceforge/quake/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug 3dfx fbcon opengl sdl svga X ncurses oggvorbis zlib ipv6 xv dga xmms alsa oss"
 RESTRICT="nouserpriv"
 
