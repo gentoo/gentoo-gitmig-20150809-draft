@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.6 2004/07/28 20:03:44 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.7 2004/09/01 16:23:52 mholzer Exp $
 
 inherit libtool gcc eutils
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
-#	theora - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
 
 DESCRIPTION="VLC media player - Video player and streamer"
@@ -17,9 +16,10 @@ HOMEPAGE="http://www.videolan.org/vlc"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc amd64"
-IUSE="3dfx X aalib alsa arts bidi debug dvb dvd esd faad fbcon ggi gnome gtk
-	imlib joystick lirc mad matroska mozilla ncurses nls oggvorbis oss png sdl slp
-	speex svga truetype v4l wxwindows xosd xv"
+IUSE="arts ncurses dvd gtk nls 3dfx svga fbcon esd X alsa ggi speex
+	oggvorbis gnome xv oss sdl aalib slp bidi truetype v4l lirc
+	wxwindows imlib matroska dvb mozilla debug faad theora
+	xosd png"
 
 RDEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2
@@ -49,6 +49,7 @@ RDEPEND="X? ( virtual/x11 )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
 	slp? ( >=net-libs/openslp-1.0.10 )
 	bidi? ( >=dev-libs/fribidi-0.10.4 )
+	theora? ( media-libs/libtheora )
 	truetype? ( >=media-libs/freetype-2.1.4 )
 	wxwindows? ( >=x11-libs/wxGTK-2.4.1 )
 	xosd? ( >=x11-libs/xosd-2.0 )
@@ -160,6 +161,7 @@ src_compile() {
 		$(use_enable arts) \
 		$(use_enable gtk) $(use_enable gnome) \
 		$(use_enable oggvorbis ogg) $(use_enable oggvorbis vorbis) \
+		$(use_enable theora) \
 		$(use_enable speex) \
 		$(use_enable matroska mkv) \
 		$(use_enable truetype freetype) \
