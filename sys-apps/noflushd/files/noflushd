@@ -1,0 +1,30 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:70:This line is required for script management
+
+. /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
+
+SERVICE="noflushd"
+opts="start stop restart"
+
+PIDFILE=/var/run/noflushd.pid
+EXE=/usr/sbin/noflushd
+
+start() {
+	ebegin "Starting $SERVICE"
+	start-stop-daemon --start --quiet --exec "$EXE" -- -n $NOFLUSHD_TIMEOUT $NOFLUSHD_DISKS
+	eend $? "Started $SERVICE." "Error starting $SERVICE."
+}
+
+stop() {
+	ebegin "Stopping $SERVICE"
+	start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
+	eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
+}
+
+restart() {
+	stop
+	start
+}
+
+doservice ${@}
