@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.2 2003/07/22 20:12:04 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.3 2003/08/03 03:51:40 weeve Exp $ 
 
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
@@ -24,8 +24,8 @@ KEYWORDS="x86 ppc sparc "
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
-	avi? ( >=media-libs/win32codecs-0.50 
-	       media-libs/divx4linux )
+	avi? ( x86? ( >=media-libs/win32codecs-0.50 
+	       media-libs/divx4linux ) )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-0.0.3.3
 	       >=media-libs/libdvdread-0.9.2 )

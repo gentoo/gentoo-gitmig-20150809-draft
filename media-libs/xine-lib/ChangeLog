@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.58 2003/07/14 21:51:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.59 2003/08/03 03:51:40 weeve Exp $
+
+  02 Aug 2003; Jason Wever <weeve@gentoo.org> xine-lib-0.9.13-r3.ebuild,
+  xine-lib-1_beta12-r1.ebuild:
+  keyword and useflag dependency updates.
 
 *xine-lib-1_beta12-r1 (14 Jul 2003)
 
