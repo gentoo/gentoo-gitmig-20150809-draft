@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2.ebuild,v 1.2 2004/06/09 20:59:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2.ebuild,v 1.3 2004/06/15 23:52:04 lv Exp $
 
 inherit flag-o-matic
 filter-flags -mpowerpc-gfxopt -mpowerpc-gpopt
@@ -15,7 +15,7 @@ IUSE="static debug"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~hppa amd64"
 
 DEPEND=""
 RDEPEND=">=net-dialup/ppp-2.4.1"
