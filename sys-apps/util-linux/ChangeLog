@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.46 2003/07/13 17:44:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.47 2003/07/17 21:32:20 azarah Exp $
+
+*util-linux-2.11z-r6 (17 Jul 2003)
+
+  17 Jul 2003; Martin Schlemmer <azarah@gentoo.org>
+  util-linux-2.11z-r6.ebuild,
+  files/util-linux-2.11z-agetty-domainname-option.patch:
+  Add the O option to agetty to display DNS domainname in the issue file, thanks
+  to Marius Mauch <genone@genone.de>, bug #22275.
 
   13 Jul 2003; <solar@gentoo.org> util-linux-2.11z-r5.ebuild:
   verified -fPIC works with this pkg on sparc,ppc and hppa
