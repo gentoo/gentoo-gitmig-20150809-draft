@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.19 2003/01/12 22:30:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.20 2003/01/13 05:38:14 raker Exp $
 
 *pine-4.52 (12 Jan 2003)
+
+  13 Jan 2003; Nick Hadaway <raker@gentoo.org> pine-4.52.ebuild :
+  Now conflicts with net-mail/pine-maildir.
 
   12 Jan 2003; Nick Hadaway <raker@gentoo.org> pine-4.52.ebuild,
   files/digest-pine-4.52 :
