@@ -1,11 +1,20 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.29 2003/06/02 22:45:24 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.30 2003/06/16 18:55:52 raker Exp $
+
+*proftpd-1.2.9_rc1 (16 Jun 2003)
+
+  16 Jun 2003; Nick Hadaway <raker@gentoo.org> proftpd-1.2.9_rc1.ebuild,
+  files/digest-proftpd-1.2.9_rc1:
+  Version bump.  einstall doesn't work in this version.  Added some
+  commented code for the new mod_{radius,ifsession,rewrite} modules.
+  A couple "New & Enhanced" configuration directives as well...
+  AnonRejectPasswords, RootRevoke, SocketOptions, and ListOptions.
+
+*proftpd-1.2.8 (02 June 2003)
 
   03 Jun 2003; Christian Birchinger <joker@gentoo.org> proftpd-1.2.8.ebuild:
   Added sparc stable keyword
-
-*proftpd-1.2.8 (02 June 2003)
 
   02 June 2003; Brad Laue <brad@gentoo.org> proftpd-1.2.8.ebuild:
   Marking stable, it's well tested.
