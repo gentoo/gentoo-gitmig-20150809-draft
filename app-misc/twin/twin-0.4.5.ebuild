@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.5.ebuild,v 1.11 2004/02/17 23:48:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.5.ebuild,v 1.12 2004/02/27 04:25:06 vapier Exp $
 
 DESCRIPTION="A text-mode window environment"
 HOMEPAGE="http://twin.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/twin/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64 hppa alpha ia64"
+KEYWORDS="x86 ppc sparc alpha hppa ia64 ~amd64"
 IUSE="X gtk ggi"
 
 DEPEND="X? ( virtual/x11 )
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	if [ `use X` ] ; then
+	if use X ; then
 		insinto /usr/X11R6/lib/X11/fonts/misc
 		doins fonts/vga.pcf.gz
 	fi
@@ -60,14 +60,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use X` ] ; then
+	if use X ; then
 		/usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
 		/usr/X11R6/bin/xset fp rehash
 	fi
 }
 
 pkg_postrm() {
-	if [ `use X` ] ; then
+	if use X ; then
 		/usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
 		/usr/X11R6/bin/xset fp rehash
 	fi
