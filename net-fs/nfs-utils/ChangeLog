@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.65 2005/01/16 06:22:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.66 2005/02/05 01:43:53 agriffis Exp $
+
+*nfs-utils-1.0.7 (04 Feb 2005)
+
+  04 Feb 2005; Aron Griffis <agriffis@gentoo.org> +nfs-utils-1.0.7.ebuild:
+  Bump to 1.0.7. New local USE-flag nfsv4 since that pulls in mit-krb5 which
+  has its own problems
 
   15 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> :
   Fix digest, bug #78168.
@@ -21,7 +27,7 @@
   07 Dec 2004; Hardave Riar <hardave@gentoo.org> nfs-utils-1.0.6-r6.ebuild:
   Stable on mips, bug #72113
 
-  07 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  07 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   nfs-utils-1.0.6-r6.ebuild:
   Stable on alpha, bug 72113.
 
@@ -42,7 +48,7 @@
   05 Dec 2004; Jason Wever <weeve@gentoo.org> nfs-utils-1.0.6-r5.ebuild:
   Stable on sparc wrt security bug #72113.
 
-  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  05 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   nfs-utils-1.0.6-r5.ebuild:
   Stable on alpha, bug 72113.
 
@@ -64,7 +70,7 @@
   07 Nov 2004; Joshua Kinard <kumba@gentoo.org> nfs-utils-1.0.6-r4.ebuild:
   Marked stable on mips.
 
-  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  01 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   nfs-utils-1.0.6-r4.ebuild:
   Stable on alpha.
 
@@ -137,8 +143,8 @@
   This ebuild is not in stable on any arch, so nfs-team, please let me know
   what you think of these changes.
   
-  15 Jan 2004; Aron Griffis <agriffis@gentoo.org> nfs-utils-1.0.6.ebuild: Fix
-  bug 30486 by refraining from overwriting /var/lib/nfs/*
+  15 Jan 2004; Aron Griffis <agriffis@gentoo.org> nfs-utils-1.0.6.ebuild: 
+  Fix bug 30486 by refraining from overwriting /var/lib/nfs/*
 
   14 Jan 2004; Martin Holzer <mholzer@gentoo.org> files/nfs.confd:
   removing quota entry from conf.d
