@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.11.ebuild,v 1.3 2004/10/29 12:55:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.11.ebuild,v 1.4 2004/12/18 21:46:20 karltk Exp $
 
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the java programming language"
 SRC_URI="ftp://ftp.gnu.org/gnu/classpath/classpath-${PV}.tar.gz"
@@ -10,7 +10,7 @@ RDEPEND=">=virtual/jre-1.4
 	gtk? ( media-libs/gdk-pixbuf >=x11-libs/gtk+-2 >=media-libs/libart_lgpl-2.1 )"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )"
-LICENSE="GPL-2"
+LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 S=${WORKDIR}/classpath-${PV}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.19 2004/10/29 12:55:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.20 2004/12/18 21:46:20 karltk Exp $
+
+  18 Dec 2004; <karltk@gentoo.org> gnu-classpath-0.10-r1.ebuild,
+  gnu-classpath-0.11.ebuild:
+  Changed license to GPL 2 with linking exception. Fixes #69732.
 
   29 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   gnu-classpath-0.10-r1.ebuild, gnu-classpath-0.11.ebuild:
