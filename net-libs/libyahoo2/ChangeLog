@@ -1,0 +1,8 @@
+# ChangeLog for net-libs/libyahoo2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libyahoo2/ChangeLog,v 1.1 2003/10/04 08:01:12 mkennedy Exp $
+
+*libyahoo2-0.7.2 (04 Oct 2003)
+
+  04 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.  Ebuild submitted by submitter_name <mkennedy@gentoo.org>.
