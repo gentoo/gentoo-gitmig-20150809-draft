@@ -1,12 +1,17 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.8 2002/08/01 11:12:30 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.9 2002/08/15 00:07:23 jmorgan Exp $
+
+*xforms-1.0_rc4 (28 Jul 2002)
+
+  15 Aug 2002; Jack Morgan <jmorgan@gentoo.org> xforms-1.0_rc4.ebuild  :
+  Added sparc64 to keywords
 
   01 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
-
   Use custom CFLAGS (fix bug #5741) (1.0_rc4 only).
 
 *xforms-1.0_rc4 (28 Jul 2002)
+
   28 Jul 2002; Owen Stampflee <owen@gentoo.org> xforms-1.0_rc4.ebuild
   files/digest-xforms-1.0_rc4 :
 
