@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.23 2003/02/24 00:07:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.24 2003/03/06 21:14:40 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -191,7 +191,7 @@ src_unpack() {
 
 	# Update the Savage Driver
 	ebegin "Updating Savage driver"
-	cd ${S}/programs/Xserver/hw/xfree86/drivers/savage
+	cd ${S}/programs/Xserver/hw/xfree86/drivers
 	unzip -qo ${DISTDIR}/savage-${SAVDRV_VER}.zip || die
 	eend 0
     
