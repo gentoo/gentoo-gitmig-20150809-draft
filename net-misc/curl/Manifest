@@ -1,3 +1,4 @@
+MD5 c78564ac4b382db782df501d16caf89e curl-7.12.0.ebuild 1029
 MD5 9ef221ccf3d48a21c4ec0ce428dd4677 curl-7.11.1.ebuild 1027
 MD5 6cf6fbc62f5747eb2ea1996a14232fb5 curl-7.10.5-r1.ebuild 1057
 MD5 429c2ec2ee12f471ec8ed45c9d2da140 curl-7.10.7.ebuild 974
@@ -10,5 +11,6 @@ MD5 4bc4b19a5cd9b1bb8be92330189dbecb files/digest-curl-7.10.8-r1 65
 MD5 93b049be221be3a9ce4a61ebd645c6ef files/digest-curl-7.10.7 64
 MD5 3d8968398ac9406fdf47efe23004dcdc files/digest-curl-7.11.0 65
 MD5 960d346648779ac90316a39974aff792 files/digest-curl-7.11.1 65
+MD5 b1be312bb3cb53a17c9ba9683bda165a files/digest-curl-7.12.0 65
 MD5 e2795c792b9a04fd73ca556ce257f39f files/curl-7.10.5-badssl.patch 343
 MD5 05e37478314d224f2ce5840f2e1f31c9 files/curl-7.10.8-transfer-segv.patch 744
