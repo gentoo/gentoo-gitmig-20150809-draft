@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.267 2004/09/21 13:52:19 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.268 2004/09/21 14:10:07 stuart Exp $
+
+  21 Sep 2004; Stuart Herbert <stuart@gentoo.org> apache-2.0.51-r1.ebuild,
+  apache-2.0.51.ebuild:
+  Added dep on autconf-2.59-r4; fixes bug #64365; thanks to Thomas Stein
+  <himbeere@leowol.com> for the fix
 
   21 Sep 2004; <SeJo@gentoo.org> apache-2.0.51-r1.ebuild:
   stable on ppc gsla bug: 64804
