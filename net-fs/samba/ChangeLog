@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.2 2002/03/02 11:20:21 azarah Exp $
+
+*samba-2.2.2-r9 (2 March 2002)
+
+  2 March 2002; M.Schlemmer <azarah@gentoo.org> samba-2.2.2-r9.ebuild :
+
+  Added creation of symlink for supporting cups printing.
 
 *samba-2.2.2-r8 (1 Feb 2002)
 
