@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.20 2005/01/24 05:23:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.21 2005/01/24 09:01:13 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -14,21 +14,25 @@
 # libxkbfile.so, libxkbui.so
 
 # TODO
-# 18 October 2004 <spyderous@gentoo.org>
-#   TARGET: 6.8.0-r2
-#		Add some logic so /usr/X11R6/lib can actually be a symlink
-#			- Move everything inside to /usr/lib while retaining its MD5 so
-#				it will still be uninstalled when portage follows the symlink.
-#				Note: A simple $(mv) does this. Do in pkg_preinst().
+# 24 January 2005 <spyderous@gentoo.org>
+#   TARGET: 6.8.1.902-r1
 #		Combine find loops for "Creating fonts.scale files," "Generating
 #			fonts.dir files and "Generating Xft cache"
-#		Mr_Bones_ the loop in pkg_postinst for removing Compose can probably
+#		<Mr_Bones_> the loop in pkg_postinst for removing Compose can probably
 #			be one line of bash expansion like rm -f ${ROOT}/usr/$(get_libdir)/
 #			X11/locale/{ja*|ko*|zh*}/Compose
-#   TARGET: 6.8.0-r3
-#		Same for /usr/X11R6/include
-#   TARGET: 6.8.0-r4
-#		Same for /usr/X11R6/bin
+#		Move /usr/X11R6/include to /usr/include/X11
+#		Move /usr/X11R6/bin to /usr/bin
+#		Clean up migration function
+#			- generalize to take arguments like:
+#				`migrate /usr/X11R6/lib /usr/lib` so we can use for bin, include
+#			- loop through lib* instead of repetition
+#			- consider alternate to 'mv', which dies when dirs exist in both
+#				- cpio, rsync, tar suggested
+#					- cpio dereferences symlinks, tar wastes time
+#		Fix direction of lib -> libdir symlink
+#		Functionalize ebuild more cleanly -- only call subfunctions in primary
+#			ebuild functions, no direct code
 
 inherit eutils flag-o-matic toolchain-funcs x11 linux-info
 
@@ -46,8 +50,6 @@ IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server hardened
 FILES_VER="0.3"
 PATCH_VER="0.1.2"
 XCUR_VER="0.3.1"
-#MGADRV_VER="1_3_0beta"
-#VIADRV_VER="0.1"
 XFSFT_ENC_VER="0.1"
 
 S=${WORKDIR}/xc
@@ -59,11 +61,6 @@ X_PATCHES="http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-patches-$
 	http://dev.gentoo.org/~cyfred/distfiles/${P}-patches-${PATCH_VER}.tar.bz2
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 
-X_DRIVERS=""
-#	mirror://gentoo/${P}-drivers-via-${VIADRV_VER}.tar.bz2"
-# Latest Savage drivers:  http://www.probo.com/timr/savage40.html
-# Latest SIS drivers:  http://www.winischhofer.net/
-
 GENTOO_FILES="http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-${FILES_VER}.tar.bz2
 	http://dev.gentoo.org/~cyfred/distfiles/${P}-files-${FILES_VER}.tar.bz2
 	mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2"
@@ -73,7 +70,6 @@ SRC_URI="!minimal? ( mirror://gentoo/eurofonts-X11.tar.bz2 )
 	!minimal? ( mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2 )
 	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	${GENTOO_FILES}
-	${X_DRIVERS}
 	${X_PATCHES}
 	http://xorg.freedesktop.org/X11R6.8.2/${P}.tar.bz2"
 #	http://freedesktop.org/~xorg/X11R${PV}/src/X11R${PV}-src1.tar.gz
@@ -728,9 +724,6 @@ host_def_setup() {
 			use_build mmx HasMMXSupport
 			use_build 3dnow Has3DNowSupport
 			use_build sse HasSSESupport
-
-			# Compile the VIA driver
-			# echo "#define XF86ExtraCardDrivers via" >> ${HOSTCONF}
 		fi
 
 		# optimize Mesa for architecture
