@@ -1,4 +1,14 @@
-MD5 c15204b8881e5690a90c0a1d6a972459 ChangeLog 691
-MD5 664dce2db32078028f68790183a3253a Algorithm-Annotate-0.10.ebuild 565
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f9eff6760a4fc632716e60587699de44 Algorithm-Annotate-0.10.ebuild 549
+MD5 63ce1753618d07a6e54afcd6efdd413d ChangeLog 798
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 68917037d7e9a90b085d3bb98f3b09c5 files/digest-Algorithm-Annotate-0.10 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSEk6tG5z4I8BtQoRAlbsAKCRhqCrJS/SseMvlZP/b0nrJStk/gCcCq8J
+K1ikSEJj7nsymC15SiN0A0c=
+=7l73
+-----END PGP SIGNATURE-----
