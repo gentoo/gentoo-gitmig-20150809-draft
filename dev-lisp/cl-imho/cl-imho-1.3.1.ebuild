@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-imho/cl-imho-1.3.1.ebuild,v 1.1 2003/06/25 20:35:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-imho/cl-imho-1.3.1.ebuild,v 1.2 2003/10/16 04:56:37 mkennedy Exp $
 
 inherit common-lisp
 
-DESCRIPTION="UncommonSQL is a database integration kit for Common Lisp. It provides a CommonSQL-compatible interface with a functional SQL syntax and a CLOS integrated Object-to-Relational mapping. You can serialize complete CLOS objects into an RDBMS."
+DESCRIPTION="IMHO is a toolkit that provides facilities for building highly interactive web applications, like WebCheckout. Some of the features that are in a useful state at this point are: session management, componentized document construction, template-based HTML rendering, and Java/Javascript integration. It is a loose functional equivalent of Apple's WebObjects framework."
 HOMEPAGE="http://freesw.onshored.com/wwwdist/imho/
 	http://alpha.onshored.com/lisp-software/"
 SRC_URI="http://alpha.onshored.com/debian/local/${PN}_${PV}.orig.tar.gz"
@@ -43,4 +43,13 @@ src_install() {
 		/usr/share/common-lisp/systems/imho.asd
 	dosym /usr/share/common-lisp/source/imho/imho.system \
 		/usr/share/common-lisp/systems/imho.system
+}
+
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
