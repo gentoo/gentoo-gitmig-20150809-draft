@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191.ebuild,v 1.2 2002/12/11 20:54:36 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191.ebuild,v 1.3 2002/12/11 21:15:56 azarah Exp $
 
 inherit eutils
 
@@ -20,11 +20,40 @@ HOMEPAGE="http://www.nvidia.com/"
 # modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="${KV}"
-KEYWORDS="~x86 -ppc -sparc "
+KEYWORDS="~x86 -ppc -sparc -alpha"
 
 DEPEND="virtual/linux-sources
 	>=sys-apps/portage-1.9.10"
 
+
+src_unpack() {
+	unpack ${A}
+
+	# Next section applies patches for linux-2.5 kernel, or if
+	# linux-2.4, the page_alloc.c patch courtesy of NVIDIA Corporation.
+	# All these are from:
+	#
+	#   http://www.minion.de/nvidia/
+	#
+	# Many thanks to Christian Zander <zander@minion.de> for bringing
+	# these to us, and being so helpful to select which to use.
+	# This should close bug #9704.
+	
+#	local KV_major="`uname -r | cut -d. -f1`"
+#	local KV_minor="`uname -r | cut -d. -f2`"
+#
+#	cd ${S}
+#	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
+#	then
+#		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
+#		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
+#		EPATCH_SINGLE_MSG="Applying page_alloc.c patch..." \
+#		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl-pa.diff
+#	else
+#		EPATCH_SINGLE_MSG="Applying page_alloc.c patch..." \
+#		epatch ${FILESDIR}/${NV_PACKAGE}-pa.diff
+#	fi
+}
 
 src_compile() {
 	# Portage should determine the version of the kernel sources
@@ -44,7 +73,7 @@ src_install() {
     
 	# Add the aliases
 	insinto /etc/modules.d
-	newins ${FILESDIR}/nvidia.${PV} nvidia
+	newins ${FILESDIR}/nvidia-1.1 nvidia
 
 	# Docs
 	dodoc ${S}/README
@@ -65,8 +94,12 @@ pkg_postinst() {
 		fi
 	fi
 
+	echo
 	einfo "If you are not using devfs, loading the module automatically at"
-	einfo "boot up, you need to add \"nvidia.o\" to your /etc/modules.autoload."
-	einfo "Please note this is a different module name than previos versions."
+	einfo "boot up, you need to add \"nvidia\" to your /etc/modules.autoload."
+	echo
+	ewarn "Please note that the driver name changed from \"NVdriver\""
+	ewarn "to \"nvidia.o\"."
+	echo
 }
 
