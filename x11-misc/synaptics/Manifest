@@ -1,4 +1,4 @@
-MD5 407c831b78679bf72d350bb2087c325a ChangeLog 1428
+MD5 65775f4df471049e34528ea12b580037 ChangeLog 1511
 MD5 6d74d543e3f641839881cda58499b797 metadata.xml 250
 MD5 c6c964d83d65687f1422e0ff78552132 synaptics-0.12.0.ebuild 1222
 MD5 abeeb906094c0d4aa2673e059d24f224 synaptics-0.12.1.ebuild 1515
@@ -6,4 +6,4 @@ MD5 3f3218b104c0f1e2a64462e08e8e3651 files/synaptics-0.11.8-makefile-fixup.patch
 MD5 849a8f1a03c90c03b638548cc99f131f files/digest-synaptics-0.12.0 69
 MD5 446e5916a934a2b8c43862d001f0e47c files/digest-synaptics-0.12.1 69
 MD5 8d49e63422d422937e1e5233e699ff91 files/rc.conf 338
-MD5 ff794680ff3ad636bf818bb8d1652ae8 files/rc.init 435
+MD5 208044aedda21f4fd8f475de90dcfe9f files/rc.init 439
