@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r6.ebuild,v 1.7 2004/07/05 06:30:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r6.ebuild,v 1.8 2004/07/05 07:15:07 eradicator Exp $
 
 MY_P="libhttpd-1.3p-f"
 
@@ -18,22 +18,23 @@ S="${WORKDIR}/libhttpd-1.3-persistent-f"
 src_compile() {
 	econf || die
 
-	# This is for versions since libhttpd-1.3p-e until the configure
-	# process properly detects g++
-	sed -i 's:gcc:g++:' Site.mm
-	# end gcc to g++ edits.
-
-	emake || die
-
+	# Package provided compilation is FUBAR
 	cd ${S}/src
+
+	CFILES="protocol.c api.c version.c ip_acl.c select.c"
+	OFILES=${CFILES//.c/.o}
+
+	for FILE in ${CFILES}; do
+		echo g++ ${CFLAGS} -D_OS_UNIX -fPIC -c ${FILE}
+		g++ ${CFLAGS} -D_OS_UNIX -fPIC -c ${FILE} || die
+	done
+
+	echo "linking"	
+	ar rc libhttpd-persistent.a ${OFILES} || die
 	ranlib libhttpd-persistent.a || die
 
-	for FILE in "protocol.c api.c version.c ip_acl.c select.c"; do
-		g++ ${CFLAGS} -D_OS_UNIX -fPIC -c ${FILE}
-	done
 	g++ -shared -Wl,-shared,-soname,libhttpd-persistent.so \
-		protocol.o api.o version.o ip_acl.o select.o \
-		-o libhttpd-persistent.so || die
+		${OFILES} -o libhttpd-persistent.so || die
 }
 
 src_install() {
