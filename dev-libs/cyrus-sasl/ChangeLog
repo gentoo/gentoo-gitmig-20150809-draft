@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.104 2004/11/16 18:23:58 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.105 2004/11/24 18:36:05 gustavoz Exp $
+
+  24 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  cyrus-sasl-2.1.20.ebuild:
+  Stable on sparc
 
   16 Nov 2004; Tuan Van <langthang@gentoo.org> cyrus-sasl-2.1.20.ebuild:
   Add mail-mta/courier as a qualified dep for authdaemond USE.
