@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.24 2003/05/10 03:49:27 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.25 2003/08/08 03:45:46 aliz Exp $
+
+*gentoo-sources-2.4.20-r6 (08 Aug 2003)
+
+  08 Aug 2003; Daniel Ahlberg <aliz@gentoo.org> gentoo-source-2.4.20-r6.ebuid :
+  Apply a bunch of security fixes.
 
 *gentoo-sources-2.4.20-r5 (10 May 2003)
 
