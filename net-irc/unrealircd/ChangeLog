@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.24 2004/10/09 20:36:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.25 2004/10/17 01:21:40 swegener Exp $
+
+  17 Oct 2004; Sven Wegener <swegener@gentoo.org>
+  -files/3.1.5.1-Config.patch, -files/3.1.6-Config.patch,
+  -unrealircd-3.1.5.1.ebuild, -unrealircd-3.1.6.ebuild:
+  Removed old ebuilds and files.
 
   09 Oct 2004; Sven Wegener <swegener@gentoo.org> files/unrealircd.rc:
   Modified to 'use net' not 'need net' in init script. Closes bug #66467.
