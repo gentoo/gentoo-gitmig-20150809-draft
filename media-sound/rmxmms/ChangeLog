@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/rmxmms
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rmxmms/ChangeLog,v 1.1 2002/07/09 08:03:27 aliz Exp $
+
+*rmxmms-0.5.1 (09 Jul 2002)
+
+  09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog, rmxmms-0.5.1.ebuild, digest-rmxmms-0.5.1 :
+
+  Initial import. Thanks to Michal Prihoda for the ebuild.
