@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.943 2005/02/10 13:22:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.944 2005/02/11 06:20:00 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -368,6 +368,7 @@ media-tv/mythfrontend:cle266 - Enable viaslice hardware MPEG decoding support
 media-tv/mythfrontend:lcd - Enable LCD display support using lcdproc
 media-tv/mythfrontend:nvidia - Enable nVidia XvMC decoding support
 media-tv/mythtv:cle266 - Enable viaslice hardware MPEG decoding support
+media-tv/mythtv:ieee1394 - Enable firewire capture support
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
 media-tv/mythtv:nvidia - Enable nVidia XvMC decoding support
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
