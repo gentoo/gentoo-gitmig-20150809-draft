@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.3.5.ebuild,v 1.3 2004/07/01 11:13:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.3.5.ebuild,v 1.4 2004/09/23 09:07:41 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -56,6 +56,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
+	echo
 	einfo "Execute:"
 	einfo "     advmenu -default"
 	einfo "To generate a config file"
