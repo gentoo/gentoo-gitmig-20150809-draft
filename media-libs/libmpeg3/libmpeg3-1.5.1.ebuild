@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.1.ebuild,v 1.6 2004/04/27 21:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.1.ebuild,v 1.7 2004/05/12 12:17:27 pappy Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,8 +36,6 @@ src_compile() {
 	filter-flags -fno-common
 	[ ${ARCH} = alpha ] && append-flags -fPIC
 	[ ${ARCH} = hppa ] && append-flags -fPIC
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	has_version 'sys-devel/hardened-gcc' && append-flags '-yet_exec'
 
 	make || die
 }
