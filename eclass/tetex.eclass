@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.28 2004/11/05 07:15:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.29 2004/11/18 15:24:17 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -215,11 +215,12 @@ tetex_src_install() {
 
 			# move docs to /usr/share/doc/${PF}
 			if useq doc ; then
-				dodir /usr/share/doc
+				dodir /usr/share/doc/${PF}
 				mv ${D}/usr/share/texmf/doc/* \
 					${D}/usr/share/doc/${PF} \
 					|| die "mv doc failed."
 				cd ${D}/usr/share/texmf
+				rmdir doc
 				ln -s ../doc/${PF} doc \
 					|| die "ln -s doc failed."
 				cd -
