@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.0.1.0-r2.ebuild,v 1.6 2004/07/15 02:51:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.0.1.0-r2.ebuild,v 1.7 2004/11/06 03:57:54 dragonheart Exp $
 
-inherit mount-boot
+inherit toolchain-funcs mount-boot
 
 S="${WORKDIR}/quik-2.0"
 HOMEPAGE=""
@@ -25,7 +25,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${MY_P} || die
 	zcat ${DISTDIR}/${DEB_P}.gz | patch -p1 -d ${S}|| die
-	[ -z "${CC}" ] && CC=gcc
+	[ -z "${CC}" ] && CC=$(tc-getCC)
 	GCC_VERSION="`${CC} -dumpversion | cut -d. -f1,2,3`"
 	einfo "GCC_VERSION: ${GCC_VERSION}"
 	if [ "${GCC_VERSION}" != "2.95" ] ; then

@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/quik
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.6 2004/07/01 21:46:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.7 2004/11/06 03:57:54 dragonheart Exp $
+
+  06 Nov 2004; Daniel Black <dragonheart@gentoo.org> quik-2.0.1.0-r1.ebuild,
+  quik-2.0.1.0-r2.ebuild, quik-2.0.1.0-r3.ebuild, quik-2.0.1k.ebuild:
+  Changed to use $(tc-getCC) as per bug 70113. Thanks spanky
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   quik-2.0.1.0-r1.ebuild, quik-2.0.1.0-r2.ebuild, quik-2.0.1.0-r3.ebuild,
@@ -8,7 +12,7 @@
   virtual/glibc -> virtual/libc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> quik-2.0.1k.ebuild:
-  Add inherit eutils
+  Add inherit toolchain-funcs eutils
 
 *quik-2.0.1.0-r3 (08 Dec 2003)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.0.1k.ebuild,v 1.6 2004/07/15 02:51:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/quik-2.0.1k.ebuild,v 1.7 2004/11/06 03:57:54 dragonheart Exp $
 
-inherit mount-boot eutils
+inherit toolchain-funcs mount-boot eutils
 
 S="${WORKDIR}/"
 MY_PV=${PV%.*}-${PV#*.*.}
