@@ -1,16 +1,13 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.31.ebuild,v 1.5 2002/08/14 11:58:50 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.31.ebuild,v 1.6 2002/09/05 10:25:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="groovy little assembler"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/nasm/${P}.tar.bz2
-	http://telia.dl.sourceforge.net/sourceforge/nasm/${P}.tar.bz2
-	http://belnet.dl.sourceforge.net/sourceforge/nasm/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/nasm/${P}.tar.bz2"
 HOMEPAGE="http://nasm.2y.net/"
 
 DEPEND="virtual/glibc sys-apps/texinfo"
-RDEPEND="virtual/glibc"
 
 if [ -z "`use build`" ]; then
 	DEPEND="${DEPEND} sys-devel/perl"
@@ -18,7 +15,7 @@ fi
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 src_compile() {			   
 	./configure --prefix=/usr || die
