@@ -4,10 +4,9 @@
 # $Header: /home/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.0.4.ebuild,v 1.0
 # 2001/04/21 12:45 CST blutgens  Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications."
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/${A}"
+SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/${P}.tar.gz"
 HOMEPAGE="http://www.gnupg.org/gpgme.html"
 
 DEPEND="virtual/glibc

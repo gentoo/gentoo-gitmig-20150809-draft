@@ -4,11 +4,9 @@
 # $Header: /home/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.0.4.ebuild,v 1.0
 # 2001/04/21 12:45 CST blutgens  Exp $
 
-#P=
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
-SRC_URI="ftp://ftp.gnupg.org/pub/gcrypt/gnupg/${A}"
+SRC_URI="ftp://ftp.gnupg.org/pub/gcrypt/gnupg/${P}.tar.gz"
 HOMEPAGE="http://www.gnupg.org/"
 
 DEPEND="virtual/glibc

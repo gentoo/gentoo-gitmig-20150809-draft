@@ -1,13 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@sistina.com>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ssh-multiadd-1.3.1.ebuild,v 1.4 2001/06/23 00:12:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ssh-multiadd-1.3.1.ebuild,v 1.5 2001/11/10 02:40:17 hallski Exp $
 
-#P=
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION=""
-SRC_URI="http://www.azstarnet.com/~donut/programs/ssh-multiadd/${A}"
+SRC_URI="http://www.azstarnet.com/~donut/programs/ssh-multiadd/${P}.tar.gz"
 HOMEPAGE="http://www.azstarnet.com/~donut/programs/"
 
 DEPEND=">=dev-lang/python-2.0-r3
