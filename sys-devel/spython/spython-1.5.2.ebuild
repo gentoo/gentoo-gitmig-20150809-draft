@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-1.5.2.ebuild,v 1.2 2000/12/24 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-1.5.2.ebuild,v 1.3 2000/12/24 14:41:48 achim Exp $
 
 P=spython-1.5.2      
 A="py152.tgz python-fchksum-1.1.tar.gz"
@@ -30,9 +30,6 @@ src_compile() {
     sed -e "s:MODOBJS=:MODOBJS=fchksum.o md5_2.o:" \
     Makefile.orig > Makefile.pre
 
-    echo "fchksum.o: \$(srcdir)/fchksum.c; \$(CC) \$(CFLAGS) -c \$(srcdir)/fchksum.c" >> Makefile.pre
-    echo "md5_2.o: \$(srcdir)/md5_2.c; \$(CC) \$(CFLAGS) -c \$(srcdir)/md5_2.c" >> Makefile.pre
-    echo "fchksum\$(SO):  fchksum.o md5.o; \$(LDSHARED)  fchksum.o md5_2.o  -lz -o fchksum\$(SO)" >> Makefile.pre
     # Parallel make does not work
     cd ${S}
     try make 
@@ -50,6 +47,7 @@ src_unpack() {
 	-e 's:#\*shared\*:\*static\*:' \
 	-e 's:^TKPATH=\:lib-tk:#TKPATH:' \
 	Setup.in > Setup
+	echo "fchksum fchksum.c md5_2.c" >> Setup
 
    cp ${FILESDIR}/pfconfig.h .
    unpack python-fchksum-1.1.tar.gz 
