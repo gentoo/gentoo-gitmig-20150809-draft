@@ -1,6 +1,9 @@
 # ChangeLog for net-www/nvu
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.4 2004/10/16 13:16:31 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.5 2004/10/17 22:27:26 josejx Exp $
+
+  18 Oct 2004; Joseph Jezak <josejx@gentoo.org> nvu-0.50.ebuild:
+  Added ~ppc.
 
   16 Oct 2004; Chris White <chriswhite@gentoo.org> files/mozconfig,
   +files/nvu-0.50-dir.patch, +files/nvu-0.50-nvu.patch, nvu-0.50.ebuild:
