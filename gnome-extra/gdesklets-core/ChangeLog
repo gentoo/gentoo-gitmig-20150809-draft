@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gdesklets-core
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.18 2003/12/28 12:49:14 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.19 2004/03/03 10:08:21 obz Exp $
+
+*gdesklets-core-0.26 (03 Mar 2004)
+
+  03 Mar 2004; Mike Gardiner <obz@gentoo.org> gdesklets-core-0.24.1.ebuild,
+  gdesklets-core-0.24.ebuild, gdesklets-core-0.25.ebuild,
+  gdesklets-core-0.26.ebuild:
+  New version, 0.26 should fix the problems that prevented 0.25.1 from being
+  added. Removed older 0.24.x versions
 
 *gdesklets-core-0.25 (28 Dec 2003)
 

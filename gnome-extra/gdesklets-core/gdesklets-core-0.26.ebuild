@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.24.ebuild,v 1.1 2003/11/09 23:02:36 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.26.ebuild,v 1.1 2004/03/03 10:08:21 obz Exp $
 
 inherit gnome2
 
@@ -15,16 +15,18 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 RDEPEND=">=dev-lang/python-2.2
 	>=gnome-base/gconf-2
 	>=gnome-base/libgtop-2
 	>=dev-python/pygtk-1.99.17
 	>=dev-python/gnome-python-1.99.17
-	>=x11-libs/gtk+-2"
+	>=x11-libs/gtk+-2.2
+	>=gnome-base/libgnomeui-2.2"
 
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	dev-util/pkgconfig
 	dev-util/intltool"
 
@@ -60,10 +62,6 @@ pkg_postinst() {
 	einfo "         /usr/share/gdesklets/Displays"
 	einfo "If you're using GNOME this can be done conveniently"
 	einfo "through Applications->Accessories menu"
-	echo ""
-	ewarn "If you are updating from a previous version of gDesklets"
-	ewarn "you may need to re-emerge Displays that complain on"
-	ewarn "startup"
 	echo ""
 
 }
