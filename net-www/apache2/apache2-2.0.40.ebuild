@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geoffrey Antos <geoffrey@andrews.edu>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache2/apache2-2.0.40.ebuild,v 1.1 2002/08/15 04:46:25 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache2/apache2-2.0.40.ebuild,v 1.2 2002/08/29 04:38:06 drobbins Exp $
 
 S="${WORKDIR}/httpd-${PV}"
 
@@ -18,14 +18,13 @@ HOMEPAGE="http://www.apache.org"
 # docs on gentoo.org for details.
 LICENSE="ASL-1.1"
 
-DEPEND=">=sys-devel/perl-5.6.1
-	${REDEPEND}"
-
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 RDEPEND="virtual/glibc
 	>=dev-libs/mm-1.1.3
 	>=sys-libs/gdbm-1.8
 	>=dev-libs/expat-1.95.2"
+
+DEPEND=">=sys-devel/perl-5.6.1 ${RDEPEND}"
 
 src_compile() {
 	# Most open-source packages use GNU autoconf for configuration.
