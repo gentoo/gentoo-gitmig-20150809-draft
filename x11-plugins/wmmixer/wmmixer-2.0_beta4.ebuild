@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.3 2004/03/27 15:41:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4.ebuild,v 1.4 2004/06/23 22:41:31 agriffis Exp $
 
 IUSE="alsa oss"
 
@@ -28,9 +28,9 @@ src_compile() {
 
 	local myconf=""
 
-	if [ `use alsa` ] ; then
+	if use alsa ; then
 		myconf="${myconf} --enable-alsa"
-	elif [ `use oss` ] ; then
+	elif use oss ; then
 		myconf="${myconf} --disable-alsatest --enable-oss"
 	fi
 
