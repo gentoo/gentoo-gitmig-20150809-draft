@@ -1,16 +1,21 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.7 2003/04/26 00:59:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.8 2003/05/02 00:00:48 drobbins Exp $
+
+  01 May 2003; Daniel Robbins <drobbins@gentoo.org>
+  ati-drivers-2.9.8.ebuild: Tweaked compile process to work even with NVIDIA
+  headers (defined USE_GLU,) moved unpack stuff to src_unpack, and removed
+  automatic calls to "opengl-update" (messed up gamecd.) Also unmasking for
+  x86. And no longer installs app sources. And now auto-downloads and unpacks
+  everthing. And dep fixes :)
 
 *ati-drivers-2.9.8 (26 Apr 2003)
+  
   26 Feb 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.8.ebuild,
-    ChangeLog :
-    New update, should had support to the 9800 serie.
-
+  ChangeLog: New update, should had support to the 9800 serie.
 
   23 Apr 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.6.ebuild,
-    ati-drivers-2.5.1-r1,ChangeLog :
-    Fix some stuff
+  ati-drivers-2.5.1-r1,ChangeLog : Fix some stuff
 
 *ati-drivers-2.9.6 (3 Apr 2003)
   3 Apr 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.9.6.ebuild,
