@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.1.ebuild,v 1.2 2004/03/14 00:55:22 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.1.ebuild,v 1.3 2004/04/08 10:55:00 lanius Exp $
 
 DESCRIPTION="Foomatic wrapper scripts"
 HOMEPAGE="http://www.linuxprinting.org/foomatic"
@@ -11,7 +11,8 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
 IUSE="cups samba"
 
 DEPEND="samba? ( net-fs/samba )
-	cups? ( >=net-print/cups-1.1.19 )"
+	cups? ( >=net-print/cups-1.1.19 )
+	virtual/ghostscript"
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
