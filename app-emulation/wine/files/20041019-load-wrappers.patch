@@ -1,0 +1,44 @@
+--- wine-20041019/loader/preloader.c.orig	2004-09-23 20:25:32.000000000 -0400
++++ wine-20041019/loader/preloader.c	2004-10-27 11:06:46.914656000 -0400
+@@ -69,6 +69,7 @@
+ #include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <sys/param.h>
+ #include <fcntl.h>
+ #ifdef HAVE_SYS_MMAN_H
+ # include <sys/mman.h>
+@@ -495,6 +496,7 @@
+     unsigned char buf[0x800];
+     ElfW(Ehdr) *header = (ElfW(Ehdr)*)buf;
+     ElfW(Phdr) *phdr, *ph;
++    char altname[MAXPATHLEN];
+     /* Scan the program header table, collecting its load commands.  */
+     struct loadcmd
+       {
+@@ -503,9 +505,23 @@
+         int prot;
+       } loadcmds[16], *c;
+     size_t nloadcmds = 0, maplength;
++    int i;
+ 
+-    fd = wld_open( name, O_RDONLY );
+-    if (fd == -1) fatal_error("%s: could not open\n", name );
++    if (strlen(name)+5 >= MAXPATHLEN)
++        fatal_error("%s: path too long\n", name);
++    for (i=0; i<strlen(name); ++i)
++        altname[i] = name[i];
++    altname[i++] = '-';
++    altname[i++] = 'b';
++    altname[i++] = 'i';
++    altname[i++] = 'n';
++    altname[i++] = '\0';
++    fd = wld_open( altname, O_RDONLY );
++    if (fd == -1) {
++        fd = wld_open( name, O_RDONLY );
++        if (fd == -1)
++            fatal_error("%s: could not open\n", name );
++    }
+ 
+     if (wld_read( fd, buf, sizeof(buf) ) != sizeof(buf))
+         fatal_error("%s: failed to read ELF header\n", name);

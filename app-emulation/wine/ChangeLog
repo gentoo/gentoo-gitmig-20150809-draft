@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.78 2004/10/27 12:45:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.79 2004/10/27 19:51:57 vapier Exp $
+
+*wine-20041019-r1 (27 Oct 2004)
+
+  27 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/20041019-load-wrappers.patch, +wine-20041019-r1.ebuild:
+  Version bump to move wine into the normal prefix of things (/usr). The winex
+  ebuilds have long been punted from portage and the prebuilt solutions from
+  transgaming come in nicely bundled formats so there wont be any collisions.
+  Indirectly, we solve #33174 and #43550. Also, update our config files
+  #59134, make sure the default registry is created properly #58976, and clean
+  up our wrappers #63376.
 
 *wine-20041019 (27 Oct 2004)
 
