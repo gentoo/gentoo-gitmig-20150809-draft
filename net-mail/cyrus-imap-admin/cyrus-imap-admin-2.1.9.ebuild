@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.9.ebuild,v 1.1 2002/10/11 14:16:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.9.ebuild,v 1.2 2002/10/11 14:27:14 raker Exp $
 
 inherit perl-module
 
@@ -78,7 +78,6 @@ src_install () {
 	cd ${S}/perl/imap
 		perl-module_src_prep
                 perl-module_src_compile
-                perl-module_src_test
                 perl-module_src_install
         cd ${S}/perl/sieve
 		perl-module_src_prep

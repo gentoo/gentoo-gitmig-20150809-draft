@@ -1,12 +1,13 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.1 2002/10/11 14:16:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.2 2002/10/11 14:27:14 raker Exp $
 
 *cyrus-imap-admin-2.1.9 (01 Oct 2002)
 
   11 Oct 2002; Nick Hadaway <raker@gentoo.org>
   cyrus-imap-admin-2.1.9.ebuild :
-  Working out some perl-module wonkiness.
+  Working out some perl-module.eclass wonkiness.  Removed the make test
+  from the imap modules as it requires manual input.
 
   01 Oct 2002; Alexander Holler <holler@ahsoftware.de>
   Initial checkin of this package.
