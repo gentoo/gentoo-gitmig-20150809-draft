@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r2.ebuild,v 1.1 2004/08/20 19:47:10 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0_pre-r3.ebuild,v 1.1 2004/08/21 19:29:56 voxus Exp $
 
 inherit eutils
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P/_pre/-PRE}.tar.bz2"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -57,6 +56,9 @@ src_unpack() {
 	cd ${S}/plugins/qt-gui && \
 		epatch ${FILESDIR}/1.3.0-no_stupid_koloboks.patch || \
 		ewarn "Fail to kill koloboks, forget it"
+
+	cd src && epatch ${FILESDIR}/1.3.0-gcc3.4.patch || \
+		ewarn "GCC3.4 patch failed.."
 }
 
 src_compile() {

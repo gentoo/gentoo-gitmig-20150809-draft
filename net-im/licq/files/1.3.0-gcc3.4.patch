@@ -1,0 +1,11 @@
+--- mainwin.cpp.orig	2004-08-22 03:16:54.000000000 +0400
++++ mainwin.cpp	2004-08-22 03:13:18.000000000 +0400
+@@ -3960,7 +3960,7 @@
+ 
+    mnuStatus = new QPopupMenu(NULL);
+    mnuPFM = new QPopupMenu(NULL);
+-   mnuPFM->insertItem(tr("Don't Show"), ICQ_PLUGIN_STATUSxINACTIVE);
++   mnuPFM->insertItem(tr("Don't Show"), (int) ICQ_PLUGIN_STATUSxINACTIVE);
+    mnuPFM->insertItem(tr("Available"), ICQ_PLUGIN_STATUSxACTIVE);
+    mnuPFM->insertItem(tr("Busy"), ICQ_PLUGIN_STATUSxBUSY);
+    connect(mnuPFM, SIGNAL(activated(int)), this, SLOT(changePFMStatus(int)));
