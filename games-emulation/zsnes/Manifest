@@ -1,6 +1,6 @@
 MD5 658c1c5cabe7d4bdd5ea5de5f6690cb8 files/zsnes-1.35-cvs.patch 21246
 MD5 b828464647d2d51e3a08b60e05795f1d files/digest-zsnes-1.36 63
 MD5 c0bb3e1383ff9855fac44508a6e55d7a files/digest-zsnes-1.37_pre20041220 64
-MD5 4909e0efe4abb3ad27dfd1089f7c5386 zsnes-1.37_pre20041220.ebuild 1228
+MD5 4f006e595707547c1bbe3930c23addae zsnes-1.37_pre20041220.ebuild 1256
 MD5 fdc0b5e63401ba44f79f07131e5e6a72 zsnes-1.36.ebuild 903
 MD5 e9a3dd6228c52dc2f010de23e674663d ChangeLog 3224

@@ -5,8 +5,8 @@ MD5 c3258fd9a3fa0ee6c568f626c992d4eb files/digest-fceultra-0.93 62
 MD5 989c1ea4e153af3a92e18611f719f4aa files/digest-fceultra-0.81-r1 62
 MD5 da6ce0bfb1f581e29d8a78077da1aafc files/digest-fceultra-0.97.4 67
 MD5 ef07ca0ea89b4e4911e5d579502d2fa4 files/digest-fceultra-0.97.5 67
-MD5 50b406eb50379b5249f5af61684079b1 fceultra-0.81-r1.ebuild 1535
-MD5 686ad3800293c8d965829b086aaa0b29 fceultra-0.97.5.ebuild 2100
+MD5 5a2dd0a954b1945a15713a2820b65189 fceultra-0.81-r1.ebuild 1538
+MD5 922a0fc956c320241fc0e19b3dd2eae0 fceultra-0.97.5.ebuild 2099
 MD5 41f339a20029a821edbe0cd15540caf1 fceultra-0.93.ebuild 1332
 MD5 4b81f7bbb2eaf838d4467297b6d54406 ChangeLog 2674
 MD5 ceb341b1badd855c20e397eea7ab07d8 fceultra-0.97.4.ebuild 1555
