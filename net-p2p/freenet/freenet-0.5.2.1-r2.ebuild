@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r2.ebuild,v 1.1 2003/07/23 19:39:53 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r2.ebuild,v 1.2 2003/07/24 16:15:09 lostlogic Exp $
 
 IUSE=""
 
@@ -52,16 +52,26 @@ pkg_postrm() {
 pkg_config() {
 	YN="X"
 	while [ "${YN}" != "y" -a "${YN}" != "Y" -a "${YN}" != "n" -a "${YN}" != "N" -a "${YN}" != "" ]; do
-		echo "Would you like to update freenet files now? [Y/n]"
+		einfo "Would you like to update freenet files now? [Y/n]"
 		read YN
 	done
 	if [ -z "$(echo ${YN}|sed -e s/y//i)" ];then
-		wget http://freenetproject.org/snapshots/freenet-latest.jar -O /usr/lib/freenet/freenet.jar
+		einfo "Press U within 2 seconds to try an unstable snapshot"
+		read -n 1 -t 2 YN
+		if [ "${YN}" == "U" ] || [ "${YN}" == "u" ]; then
+			wget http://freenetproject.org/snapshots/freenet-exp-latest.jar -O /usr/lib/freenet/freenet.jar
+		else
+			wget http://freenetproject.org/snapshots/freenet-latest.jar -O /usr/lib/freenet/freenet.jar
+		fi
 		wget http://freenetproject.org/snapshots/seednodes.ref -O /var/freenet/seednodes.ref
 		touch -d "1/1/1970" /var/freenet/seednodes.ref
 	fi
 
-	if [ ! -f /etc/freenet.conf ]; then
+	if [ -f /etc/freenet.conf ]; then
+		einfo "Press C within 2 seconds to force reconfiguration of freenet"
+		read -n 1 -t 2 YN
+	fi
+	if [ ! -f /etc/freenet.conf ] || [ "${YN}" == C ] || [ "${YN}" == "c" ]; then
 		einfo "Preparing to configure freenet..."
 		# Pre-determine IP address
 		IP="$(hostname -i)"
@@ -99,4 +109,6 @@ EOF
 	fi
 	einfo "Congratulations, freenet is configured and up to date"
 	einfo "use '/etc/init.d/freenet start' to start it"
+	einfo "You can always re-update/reconfigure  your freenet with:"
+	einfo "# ebuild ${EBUILD} config"
 }
