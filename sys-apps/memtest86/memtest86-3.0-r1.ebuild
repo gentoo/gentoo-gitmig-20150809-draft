@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r1.ebuild,v 1.3 2002/12/09 04:37:26 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r1.ebuild,v 1.4 2003/01/25 01:50:00 woodchip Exp $
 
 inherit mount-boot
 
@@ -21,10 +21,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo '*** memtest.bin has been installed in /boot/memtest86, please remember to'
-	einfo '*** update your boot loader. For example grub :'
-	einfo "*** edit /boot/grub/menu.lst and add the following lines "
+	einfo
+	einfo "*** memtest.bin has been installed in /boot/memtest86."
+	einfo "*** You may wish to update your bootloader configs,"
+	einfo "*** by adding these lines.  For grub:"
 	einfo "***   > title=Memtest86"
 	einfo "***   > root (hd0,0)"
 	einfo "***   > kernel /boot/memtest86/memtest.bin"
+	einfo "*** For lilo:"
+	einfo "***   > image  = /boot/memtest86/memtest.bin"
+	einfo "***   > label  = Memtest86"
+	einfo
 }

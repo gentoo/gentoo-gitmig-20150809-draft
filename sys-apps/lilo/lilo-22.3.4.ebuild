@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.3.4.ebuild,v 1.3 2003/01/06 09:12:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.3.4.ebuild,v 1.4 2003/01/25 01:50:03 woodchip Exp $
 
-inherit mount-boot
+inherit mount-boot eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
@@ -11,7 +11,7 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
 HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
 
 SLOT="0"
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 KEYWORDS="~x86 -ppc -sparc -alpha"
 
 DEPEND="dev-lang/nasm
@@ -22,9 +22,10 @@ PROVIDE="virtual/bootloader"
 src_unpack() {
 	unpack ${P}.tar.gz || die
 	cd ${S} || die
-	#Again, this is my go at SuSE's animated bootlogo patch.
-	#lilo-22.3.4-gentoo.diff; <woodchip@gentoo.org> (03 Jan 2003)
-	bzip2 -dc ${DISTDIR}/${P}-gentoo.diff.bz2 | patch -p1 || die
+	# This bootlogo patch is borrowed from SuSE Linux.
+	# You should see Raphaël Quinet's (quinet@gamers.org) website,
+	# http://www.gamers.org/~quinet/lilo/index.html
+	epatch ${DISTDIR}/${P}-gentoo.diff.bz2
 }
 
 src_compile() {
@@ -47,6 +48,7 @@ src_install() {
 }
 
 pkg_preinst() {
+	mount-boot_mount_boot_partition
 	if [ ! -L $ROOT/boot/boot.b -a -f $ROOT/boot/boot.b ]
 	then
 		einfo "Saving old boot.b..."
@@ -74,10 +76,5 @@ pkg_preinst() {
 
 pkg_postinst() {
 	einfo "Activating boot-menu..."
-	ln -snf boot-menu.b $ROOT/boot/boot.b
-
-	einfo
-	einfo "You can get some animations at:"
-	einfo "http://www.gamers.org/~quinet/lilo/index.html"
-	einfo
+	ln -sf boot-menu.b $ROOT/boot/boot.b
 }

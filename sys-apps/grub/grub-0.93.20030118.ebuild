@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.3 2003/01/18 11:36:17 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.4 2003/01/25 01:50:06 woodchip Exp $
 
-inherit mount-boot
+inherit mount-boot eutils
 
 NEWP=${PN}-${PV%.*}
 S=${WORKDIR}/${NEWP}
@@ -19,7 +19,6 @@ PROVIDE="virtual/bootloader"
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-
 	# grub-0.93.20030118-gentoo.diff; <woodchip@gentoo.org> (18 Jan 2003)
 	# -fixes from grub CVS pulled on 20030118
 	# -vga16 patches; mined from Debian's grub-0.93+cvs20030102-1.diff
@@ -28,7 +27,7 @@ src_unpack() {
 	# -splashimagehelp.patch
 	# -configfile.patch
 	# -installcopyonly.patch
-	bzip2 -dc ${DISTDIR}/${P}-gentoo.diff.bz2 | patch -p1 || die
+	epatch ${DISTDIR}/${P}-gentoo.diff.bz2
 	WANT_AUTOCONF_2_5=1 autoconf || die
 }
 

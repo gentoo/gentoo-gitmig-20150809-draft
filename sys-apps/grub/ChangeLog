@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grub
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.16 2003/01/18 11:31:49 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.17 2003/01/25 01:50:06 woodchip Exp $
+
+  24 Jan 2002; <woodchip@gentoo.org> *.ebuild : Reorder mount-boot.eclass
+  function, clean some fluff.
 
 *grub-0.93.20030118 (18 Jan 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.15 2003/01/06 09:12:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.16 2003/01/25 01:50:03 woodchip Exp $
 
 inherit mount-boot
 
@@ -43,6 +43,7 @@ src_install() {
 }
 
 pkg_preinst() {
+	mount-boot_mount_boot_partition
 	if [ ! -L $ROOT/boot/boot.b -a -f $ROOT/boot/boot.b ]
 	then
 		echo "Saving old boot.b..."
@@ -63,11 +64,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
-	. ${ROOT}/etc/init.d/functions.sh
-
 	einfo "Activating boot-menu..."
-	ln -sf boot-menu.b $ROOT/boot/boot.b;
+	ln -sf boot-menu.b $ROOT/boot/boot.b
 }
-
-
