@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.17 2003/06/05 04:27:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.18 2003/06/05 13:13:49 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -38,12 +38,13 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="2.1.1"
+PATCH_VER="2.1.2"
 FT2_VER="2.1.3"
 XCUR_VER="0.3"
 SISDRV_VER="180403-1"
 SAVDRV_VER="1.1.27t"
 MGADRV_VER="1_3_0beta"
+VIADRV_VER="0.1"
 
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
@@ -58,7 +59,8 @@ X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
-	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz"
+	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz
+	mirror://gentoo/XFree86-4.3.0-drivers-via-${VIADRV_VER}.tar.bz2"
 #	ftp://ftp.matrox.com/pub/mga/archive/linux/2001/beta_1_3_0/mga-${MGADRV_VER}.tgz"
 #	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
 # Updated Wacom driver:  http://people.mandrakesoft.com/~flepied/projects/wacom/
@@ -188,6 +190,12 @@ src_unpack() {
 	cd ${S}
 	eend 0
     
+	ebegin "Adding VIA driver"
+	cd ${WORKDIR}
+	unpack XFree86-${PV}-drivers-via-${VIADRV_VER}.tar.bz2
+	cd ${S}
+	eend 0
+	
 #	ebegin "Updating Matrox HAL driver"
 #	unpack mga-${MGADRV_VER}.tgz
 #	touch ${WORKDIR}/mga/HALlib/mgaHALlib.a
@@ -360,6 +368,9 @@ src_unpack() {
 		then
 			echo "#define HasGlide3 YES" >> config/cf/host.def
 		fi
+
+		# Compile the VIA driver
+		echo "#define XF86ExtraCardDrivers via" >> config/cf/host.def
 	fi
 
 	if [ "${ARCH}" = "hppa" ]
