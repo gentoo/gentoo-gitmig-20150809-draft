@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/gnuplot-mode
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.1 2004/03/13 21:45:55 usata Exp $
+
+*gnuplot-mode-0.6.0 (14 Mar 2004)
+
+  14 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> gnuplot-mode-0.6.0.ebuild,
+  metadata.xml, files/50gnuplot-gentoo.el:
+  Initial import. Thanks to Michal Maruska <mmc@maruska.dyndns.org>
+  for contributing the ebuild. Closing bug #40007
+
