@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypgsql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.7 2004/07/02 04:29:41 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.8 2004/09/11 15:23:39 aliz Exp $
+
+  11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> pypgsql-2.4.ebuild:
+  Added amd64 keyword, closing #63514.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> pypgsql-2.3.ebuild:
   change virtual/glibc to virtual/libc
