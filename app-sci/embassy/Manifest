@@ -1,4 +1,14 @@
-MD5 90da4636117ed11901f1ffe55b2a1b20 ChangeLog 437
-MD5 2945d48b5b699aaa891a9dd09096401b embassy-2.9.0.ebuild 992
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a8a41829f709022f562739a3c1bf6b2b embassy-2.9.0.ebuild 983
+MD5 0b540b721cabfdbbb685df1c9c6de646 ChangeLog 534
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-embassy-2.9.0 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOfZv/rLF9B432nYRAoR9AJ0XZtL5994xBnsbWb4avMFqJ5G3/ACgrY7N
+0/2Cwb9skxOnebh6l3ZRn7w=
+=Y3kL
+-----END PGP SIGNATURE-----
