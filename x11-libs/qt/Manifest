@@ -6,15 +6,17 @@ MD5 0c35ff70fb6ff95611499d6fb69d8afc qt-3.3.1-r2.ebuild 5745
 MD5 54ea3d62bc686b188553260eb91824f1 qt-4.0.0_beta1-r3.ebuild 5909
 MD5 7e97379b94036d9db24b3ca93c21b6e7 qt-3.3.3-r3.ebuild 8737
 MD5 1f95b05c8230a39edeaa207a4fb5e796 qt-3.3.4.ebuild 8434
-MD5 f501109752b0f9524f5b5a32b8974f9b qt-4.0.0_beta1-r2.ebuild 5738
+MD5 e314c16898c0a849bd040c35bd6f12ea qt-3.3.4-r2.ebuild 8470
+MD5 97cce7e6820ad13674f0ef03331fc369 qt-4.0.0_beta1-r2.ebuild 5772
 MD5 3d1cc787b98b33e20bdb4768bd8e8ecc qt-3.3.3-r2.ebuild 8375
 MD5 13c659d1e84ee9edb8e9c64d08fb06a9 qt-4.0.0_beta1.ebuild 4777
-MD5 68c8e897b976fb6776251455a2427c77 ChangeLog 31937
+MD5 a908617dd1cde5331a12c3760db2e716 ChangeLog 32109
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 3f30d4e96664ba2574dfb069b708f4a1 qt-3.3.3.ebuild 6897
 MD5 2a5d402b9d5ceff465069a1651f3b329 qt-2.3.2-r2.ebuild 2765
 MD5 fc48dcb3cc34e5b6161f9e10be094b7c qt-3.3.4-r1.ebuild 8432
 MD5 dd2127b3c7bc12b24621d172b6a075af qt-3.2.3-r1.ebuild 5159
+MD5 74acd4c098f2c4bd70bdea585f0cb096 files/qt-no-rpath.patch 352
 MD5 9ac22fe721162a565a7507763f785ab5 files/qt-3.2.3-qpsprinter-useFreeType2-20031128.patch 9972
 MD5 ad4921b9f10a62c1e211d064f5c7fd9a files/44qt4 121
 MD5 c7f65a0625242eccf159e2b8ee74976d files/45qt3 109
@@ -34,6 +36,7 @@ MD5 77ee6484af384828441336443499ec0e files/digest-qt-3.3.3-r1 238
 MD5 77ee6484af384828441336443499ec0e files/digest-qt-3.3.3-r2 238
 MD5 77ee6484af384828441336443499ec0e files/digest-qt-3.3.3-r3 238
 MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r1 166
+MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r2 166
 MD5 0221c85bc6f785b68812fc7f42110742 files/qt-3.3.3-flickerfree_qscrollview_fixwindowactivate.patch 1540
 MD5 33d20a19eba2cb13a7eb156d4eea10db files/qt-3.3.2-mips-relax-branches.patch 688
 MD5 2df2442dc59faeb8b545a81d2523cf28 files/qt-3.3.3-immodule-r123-event-inversion-20040909.diff 327

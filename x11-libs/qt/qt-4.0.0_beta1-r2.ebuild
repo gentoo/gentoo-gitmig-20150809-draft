@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r2.ebuild,v 1.5 2005/01/30 23:54:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r2.ebuild,v 1.6 2005/02/10 01:49:30 caleb Exp $
 
 inherit eutils flag-o-matic
 
 SRCTYPE="opensource"
-SNAPSHOT="20050127"
+SNAPSHOT="20050129"
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 
@@ -141,6 +141,7 @@ src_install() {
 	dodir ${QTDATADIR}/mkspecs/linux-g++
 	dodir ${QTDATADIR}/mkspecs/features/unix
 
+	install -c ${S}/qt.conf ${D}/qt.conf
 	install -c ${S}/mkspecs/linux-g++/qmake.conf ${D}${QTDATADIR}/mkspecs/linux-g++
 	install -c ${S}/mkspecs/linux-g++/qplatformdefs.h ${D}${QTDATADIR}/mkspecs/linux-g++
 	install -c ${S}/mkspecs/features/unix/*.prf ${D}${QTDATADIR}/mkspecs/features/unix
