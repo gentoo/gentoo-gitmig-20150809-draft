@@ -1,3 +1,7 @@
+# 25 Mar 2005 Guy Martin <gmsoft@gentoo.org>
+# Masking lapck not yet tested
+lapack
+
 # 20 Feb 2005 Guy Martin <gmsoft@gentoo.org>
 # Hardware for asterisk not yet tested
 zaptel

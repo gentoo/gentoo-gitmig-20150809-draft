@@ -1,3 +1,7 @@
+# 25 Mar 2005 Guy Martin <gmsoft@gentoo.org>
+# Masking lapck not yet tested
+lapack
+
 # 10 Mar 2005 Stefan Knoblich <stkn@gentoo.org>
 # This needs zaptel and pri
 bri
