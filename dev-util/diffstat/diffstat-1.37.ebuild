@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.37.ebuild,v 1.2 2004/12/18 01:19:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.37.ebuild,v 1.3 2005/01/25 11:59:46 ka0ttic Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://invisible-island.net/diffstat/diffstat.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~ppc ~mips ~amd64 ~ia64 ~alpha"
+KEYWORDS="x86 ~sparc ~ppc ~mips ~amd64 ~ia64 ~alpha"
 IUSE=""
 
 DEPEND="sys-apps/diffutils"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.34.ebuild,v 1.8 2004/12/18 01:19:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.34.ebuild,v 1.9 2005/01/25 11:59:46 ka0ttic Exp $
 
 inherit eutils
 
