@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r1.ebuild,v 1.13 2005/03/13 10:32:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r1.ebuild,v 1.14 2005/03/13 11:05:12 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard nocxx sftplogging"
 
 RDEPEND="pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
@@ -39,14 +39,15 @@ PROVIDE="virtual/ssh"
 
 src_unpack() {
 	unpack ${PARCH}.tar.gz
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-pamfix.patch.bz2
-	epatch ${FILESDIR}/${P}-largekey.patch.bz2
-	epatch ${FILESDIR}/${P}-fix_suid.patch.bz2
-	epatch ${FILESDIR}/${P}-infoleak.patch #59361
-	epatch ${FILESDIR}/${P}-terminal_restore.patch.bz2
-	epatch ${FILESDIR}/${P}-configure-openct.patch #78730
+	epatch "${FILESDIR}"/${P}-pamfix.patch.bz2
+	epatch "${FILESDIR}"/${P}-largekey.patch.bz2
+	epatch "${FILESDIR}"/${P}-fix_suid.patch.bz2
+	epatch "${FILESDIR}"/${P}-infoleak.patch #59361
+	epatch "${FILESDIR}"/${P}-terminal_restore.patch.bz2
+	epatch "${FILESDIR}"/${P}-configure-openct.patch #78730
+	epatch "${FILESDIR}"/${P}-kerberos-detection.patch #80811
 
 	use sftplogging && epatch ${FILESDIR}/${P}-sftplogging-1.2-gentoo.patch.bz2
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch.bz2
@@ -102,7 +103,7 @@ src_install() {
 	make install-files DESTDIR="${D}" || die
 	fperms 600 /etc/ssh/sshd_config
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
-	newpamd "${FILESDIR}"/sshd.pam sshd 
+	newpamd "${FILESDIR}"/sshd.pam sshd
 	newinitd "${FILESDIR}"/sshd.rc6 sshd
 	keepdir /var/empty
 	dosed "/^#Protocol /s:.*:Protocol 2:" /etc/ssh/sshd_config
