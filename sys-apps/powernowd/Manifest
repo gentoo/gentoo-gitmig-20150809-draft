@@ -1,6 +1,0 @@
-MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
-MD5 b37d71cdb57b6acc47dfafd9907a7082 ChangeLog 617
-MD5 c8fecdfe675d6743cb93aa6385739f16 powernowd-0.90.ebuild 925
-MD5 d40f461cccd3d7b56d395fc6cca0a5b3 files/digest-powernowd-0.90 69
-MD5 77728341ddaaf37d218efa900e8782de files/powernowd.rc 478
-MD5 599114a307cac2652bb7c6d83cd9d442 files/powernowd.confd 278
