@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/rcenter 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/ChangeLog,v 1.1 2003/03/25 21:00:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/ChangeLog,v 1.2 2003/08/10 03:56:29 jje Exp $
 
 # Written By Bowyakka (aka Greg Bowyer)
+
+  10 Aug 2003; jje <jje@gentoo.org> :
+  Version bump.
+
+  Submitted by: Greg Bowyer <bowyakka@hotmail.com>
 
 *rcenter-0.6.1 (10 Nov 2002)
 

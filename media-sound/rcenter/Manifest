@@ -1,3 +1,5 @@
-MD5 d91fc2f2a5b4f78918df0177073b3a67 files/digest-rcenter-0.6.1 61
 MD5 73ce2af73fb906613d901744d707673c ChangeLog 486
 MD5 31c7eadb7361f273e8e48965d1a4af50 rcenter-0.6.1.ebuild 1065
+MD5 3d3318daa9e9d88bb89ef83131c976c8 rcenter-0.6.2.ebuild 1131
+MD5 d91fc2f2a5b4f78918df0177073b3a67 files/digest-rcenter-0.6.1 61
+MD5 6790502f59c4408e720ca91ed8b44353 files/digest-rcenter-0.6.2 61
