@@ -1,0 +1,15 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1 2003/03/18 09:46:13 seemant Exp $
+
+# This file contains descriptions of local USE flags, and the ebuilds which
+# contain them.
+
+gamma:xfree-drm - If you have a matrox video card
+ibm:xfree-drm - If you have an ibm i810 or i830 video card
+rage128:xfree-drm - If you have an ATI Rage128 based video card
+radeon:xfree-drm - If you have an ATI Radeon video card
+sis:xfree-drm - If you have an SiS video card
+moznoirc:mozilla - If you do NOT want the IRC client built with mozilla
+moznomail:mozila - If you do NOT want the mail client built with mozilla
+
