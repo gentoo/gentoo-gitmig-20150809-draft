@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-1.4.1.ebuild,v 1.7 2004/02/20 06:01:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-1.4.1.ebuild,v 1.8 2004/03/30 20:45:14 spyderous Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Bochs is a pc emulator.
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=">=sys-libs/glibc-2.1.3
-	>=x11-base/xfree-4.0.1"
+	virtual/x11"
 
 KEYWORDS="x86 ppc"
 

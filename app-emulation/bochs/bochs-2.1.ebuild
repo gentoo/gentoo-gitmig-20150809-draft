@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.ebuild,v 1.1 2004/01/13 02:50:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.ebuild,v 1.2 2004/03/30 20:45:14 spyderous Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 IUSE="sdl gtk readline"
 
 DEPEND=">=sys-libs/glibc-2.1.3
-	>=x11-base/xfree-4.0.1
+	virtual/x11
 	>=sys-apps/sed-4
 	sdl? media-libs/libsdl
 	gtk?  x11-libs/wxGTK
