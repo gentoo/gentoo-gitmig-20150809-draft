@@ -184,15 +184,16 @@ gnome-apps/gnorpm
 gnome-apps/gnofin
 gnome-apps/gabber
 gnome-apps/users-guide
+gnome-apps/gentoo
+gnome-apps/gupsc
+gnome-apps/gwcc
+gnome-apps/netleds_applet
 
 # Don't use these.
 # These are the old locations. Will be removed when new locations are tested.
 # /Hallski
 
-gnome-apps/screem
-gnome-apps/zapping
-app-misc/gentoo
 dev-util/glimmer
-net-misc/gupsc
-app-admin/gwcc
-net-analyzer/netleds_applet
+net-www/screem
+media-video/zapping
+media-sound/gnapster
