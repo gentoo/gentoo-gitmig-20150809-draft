@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/culmus
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/ChangeLog,v 1.1 2003/04/07 19:44:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/ChangeLog,v 1.2 2003/08/15 18:34:11 coronalvr Exp $
+
+*culmus-0.90 (15 Aug 2003)
+
+  15 Aug 2003; Alex Veber <coronalvr@gentoo.org> culmus-0.90.ebuild:
+  version bump
 
 *culmus-0.8 (07 Apr 2003)
 
