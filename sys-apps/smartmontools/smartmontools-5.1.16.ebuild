@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.1.16.ebuild,v 1.1 2003/08/06 17:40:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.1.16.ebuild,v 1.2 2003/08/20 16:24:16 mholzer Exp $
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:4:6}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="x86 ~amd64 ~sparc"
 
 S=${WORKDIR}/${MY_P}
 
