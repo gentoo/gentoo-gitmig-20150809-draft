@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/edox-data
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/ChangeLog,v 1.8 2005/02/09 00:19:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/ChangeLog,v 1.9 2005/03/30 16:45:51 hansmi Exp $
+
+  30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  edox-data-0.16.7_pre3.ebuild:
+  Stable on ppc.
 
   09 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   edox-data-0.16.7_pre3.ebuild:
