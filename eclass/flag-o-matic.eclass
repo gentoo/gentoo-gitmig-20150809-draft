@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.73 2004/10/13 14:11:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.74 2004/10/21 07:40:47 kugelfang Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -12,7 +12,7 @@ INHERITED="$INHERITED $ECLASS"
 IUSE="${IUSE} debug"
 
 # need access to emktemp()
-inherit eutils
+inherit eutils toolchain-funcs
 
 #
 #### filter-flags <flags> ####
@@ -350,7 +350,8 @@ has_m64() {
 	# clean-up!
 	local temp="$(emktemp)"
 	echo "int main() { return(0); }" > ${temp}.c
-	${CC/ .*/} -m64 -o "$(emktemp)" ${temp}.c > /dev/null 2>&1
+	MY_CC=$(tc-getCC)
+	${MY_CC/ .*/} -m64 -o "$(emktemp)" ${temp}.c > /dev/null 2>&1
 	local ret=$?
 	rm -f ${temp}.c
 	[ "$ret" != "1" ] && return 0
@@ -364,7 +365,8 @@ has_m32() {
 	# clean-up!
 	local temp="$(emktemp)"
 	echo "int main() { return(0); }" > ${temp}.c
-	${CC/ .*/} -m32 -o "$(emktemp)" ${temp}.c > /dev/null 2>&1
+	MY_CC=$(tc-getCC)
+	${MY_CC/ .*/} -m32 -o "$(emktemp)" ${temp}.c > /dev/null 2>&1
 	local ret=$?
 	rm -f ${temp}.c
 	[ "$ret" != "1" ] && return 0
