@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/skkserv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/ChangeLog,v 1.10 2003/08/01 16:32:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/ChangeLog,v 1.11 2003/08/19 00:09:07 matsuu Exp $
 
 *skkserv-9.6-r2 (17 May 2003)
+
+  19 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> skkserv-9.6-r2.ebuild:
+  Stable for sparc
 
   02 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> skkserv-9.6-r2.ebuild,
   files/skkserv-9.6-segfault-gentoo.patch, files/skkserv.initd:
