@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.23 2004/06/28 00:24:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.24 2004/06/30 14:37:12 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> chpax-0.6.1.ebuild:
+  sync IUSE (-static), add sed-4 dep
 
   27 Jun 2004; <solar@gentoo.org> files/pax-conf.d:
   updated conf.d script from bug #40665
