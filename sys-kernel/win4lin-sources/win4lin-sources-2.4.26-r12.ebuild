@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r11.ebuild,v 1.1 2004/12/24 18:53:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r12.ebuild,v 1.1 2005/01/09 13:00:28 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://www.netraverse.com/member/downloads/files/mki-adapter.patch
 	 http://www.netraverse.com/member/downloads/files/Kernel-Win4Lin3-${OKV}.patch
 	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch
-	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0814.patch"
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0814.2.patch"
 HOMEPAGE="http://www.kernel.org/ http://www.netraverse.com/"
 KEYWORDS="x86"
 SLOT="${KV}"
@@ -38,7 +38,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
-	epatch ${DISTDIR}/linux-${OKV}-CAN-2004-0814.patch || die "Failed to add the CAN-2004-0814 patch!"
+	epatch ${DISTDIR}/linux-${OKV}-CAN-2004-0814.2.patch || die "Failed to add the CAN-2004-0814 patch!"
 	epatch ${FILESDIR}/${P}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	epatch ${FILESDIR}/${P}.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 	epatch ${FILESDIR}/${P}.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR patch!"
@@ -50,7 +50,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2004-1016.patch || die "Failed to apply the CAN-2004-1016 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-1137.patch || die "Failed to apply the CAN-2004-1137 patch!"
-
+	epatch ${FILESDIR}/${P}.77094.patch || die "Failed to apply bug #77094 patch!"
+	epatch ${FILESDIR}/${P}.brk-locked.patch || die "Failed to apply do_brk_locked() patch!"
 
 	kernel_universal_unpack
 }

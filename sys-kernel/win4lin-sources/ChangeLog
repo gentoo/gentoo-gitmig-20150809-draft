@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/win4lin-sources
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.48 2004/12/24 18:53:11 plasmaroo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.49 2005/01/09 13:00:28 plasmaroo Exp $
+
+*win4lin-sources-2.6.9-r6 (09 Jan 2005)
+
+  09 Jan 2005; <plasmaroo@gentoo.org> -win4lin-sources-2.4.26-r11.ebuild,
+  +win4lin-sources-2.4.26-r12.ebuild, -win4lin-sources-2.6.9-r5.ebuild,
+  +win4lin-sources-2.6.9-r6.ebuild, +files/win4lin-sources-2.4.26.77094.patch,
+  +files/win4lin-sources-2.4.26.brk-locked.patch,
+  +files/win4lin-sources-2.6.9.75963.patch,
+  +files/win4lin-sources-2.6.9.77094.patch,
+  +files/win4lin-sources-2.6.9.brk-locked.patch:
+  Security bump; fixes bugs #75963, #77025 and #77094.
 
 *win4lin-sources-2.4.26-r11 (24 Dec 2004)
 
