@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.32 2004/11/20 06:40:08 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.33 2005/03/12 22:43:04 agriffis Exp $
+
+  12 Mar 2005; Aron Griffis <agriffis@gentoo.org> usbutils-0.11-r5.ebuild:
+  Stable on alpha, ia64, x86
 
   20 Nov 2004; Daniel Black <dragonheart@gentoo.org> usbutils-0.11-r5.ebuild:
   ppc keyword

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r5.ebuild,v 1.4 2005/01/01 20:21:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r5.ebuild,v 1.5 2005/03/12 22:43:04 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -15,7 +15,7 @@ SRC_URI="http://usb.cs.tum.edu/download/usbutils/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 mips ppc ~ppc64 s390 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc ~ppc64 s390 ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
