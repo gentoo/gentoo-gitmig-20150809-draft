@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/mplay
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/ChangeLog,v 1.1 2004/09/02 22:42:35 chriswhite Exp $
+
+*mplay-0.68 (03 Sep 2004)
+
+  03 Sep 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +mplay-0.68.ebuild:
+  Initial import into portage. Adding myself as maintainer. Thanks to fabian
+  mohren <mohrenfabian@yahoo.de> for posting. Closes Bug #47600.
+
