@@ -60,8 +60,8 @@ app-text/psgml
 
 # <danarmak@gentoo.org> (08 Dec 2002)
 # kde 3.1 rc5: masked permanently
->=kde-base/arts-1.1.0_rc5
-~kde-base/arts-1.1.0_rc5
+=kde-base/arts-1.1.0_rc5
+=kde-base/arts-1.1.0_rc5-r1
 ~kde-base/kde-3.1_rc5
 ~kde-base/kdeaddons-3.1_rc5
 ~kde-base/kdeadmin-3.1_rc5
