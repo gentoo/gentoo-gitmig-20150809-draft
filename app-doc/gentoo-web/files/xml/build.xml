@@ -295,7 +295,7 @@ Have a nice nap.
 # <i>vim /etc/make.conf</i>
 # <i>cd /usr/portage</i>
 # <i>ls files</i>
-# <i>./bootstrap.sh ./files/bootstrap-xxxxxx.packages</i>
+# <i>scripts/bootstrap.sh /files/bootstrap-xxxxxx.packages</i>
 </pre>
 </body>
 </section>
