@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.2 2003/07/24 11:23:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.3 2003/11/27 16:20:51 aliz Exp $
+
+  27 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> libmcal-0.7-r1.ebuild:
+  Added -fPIC patch to add better -fPIC compilation. Closing #32951.
 
 *libmcal-0.7-r1 (24 Jul 2003)
 
