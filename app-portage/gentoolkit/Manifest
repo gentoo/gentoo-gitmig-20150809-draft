@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7b8ce84e5f22d3305631139f82f9c445 gentoolkit-0.2.0_pre9.ebuild 850
-MD5 6c4d39e4dd9b2859f94f8749ffd82d94 gentoolkit-0.2.0_pre10.ebuild 990
 MD5 70f30922eacb00a88fb16fbc99059a5d ChangeLog 25684
-MD5 06dab4cbc3b5d22b98f63f6a10b07a25 gentoolkit-0.2.0_pre8.ebuild 1106
 MD5 c36d3e9465a96d7220228d2ef5457bd3 metadata.xml 451
+MD5 6c4d39e4dd9b2859f94f8749ffd82d94 gentoolkit-0.2.0_pre10.ebuild 990
+MD5 1bc98dbc873369180a0360b470b7d925 gentoolkit-0.2.0_pre8.ebuild 1102
+MD5 6d03c9d28889126d188696352def5d6e gentoolkit-0.2.0_pre9.ebuild 848
 MD5 096ea293c35570bd708ebd8cde10ca6b files/digest-gentoolkit-0.2.0_pre10 73
 MD5 1b132e20e9de1c5163594b2cbd950d34 files/digest-gentoolkit-0.2.0_pre8 72
 MD5 ece108f9a9cf45a6cdd9211bb1b26db5 files/digest-gentoolkit-0.2.0_pre9 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBbbwYVWNWqTUmv+0RAmgyAKCMLwIkqreXTELqd+2NT0a/T2QyiACfRiyh
-5dTe7Rbq2WE3IHG14uToNi8=
-=MC5O
------END PGP SIGNATURE-----
