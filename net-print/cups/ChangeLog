@@ -1,6 +1,15 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.2 2002/02/02 04:27:49 woodchip Exp $
+
+*cups-1.1.13 (1 Feb 2002)
+
+  1 Feb 2002; Donny Davies <woodchip@gentoo.org> /etc/cupsd.conf:
+
+  Updated to the latest release, cups-1.1.13.  Now installing the html docs
+  into /usr/share/cups/docs, which will let people upgrade cups in the
+  future without having to change /etc/cupsd.conf to point to a new
+  directory.  Makes things a little more user friendly.
 
 *cups-1.1.12 (1 Feb 2002)
 
