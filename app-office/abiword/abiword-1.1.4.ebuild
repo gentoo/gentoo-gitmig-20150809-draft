@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.1.4.ebuild,v 1.1 2003/03/31 23:06:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.1.4.ebuild,v 1.2 2003/04/01 16:21:26 foser Exp $
+
+inherit eutils
 
 IUSE="perl build spell jpeg xml2 gnome"
 
@@ -29,6 +31,21 @@ DEPEND="virtual/x11
 		>=gnome-base/libgnomeprintui-2.2.1 
 		>=gnome-extra/gal-1.99 )
 	!app-shells/bash-completion"
+
+src_unpack() {
+	unpack ${A}
+
+	# Patch to make the wv.h tests work 
+	# 
+	# wv wants libole2 which in it's turn wants glib 1.2
+	# glib.h includes glibconfig.h which is in a non-included path
+	# and makes the tests fail, this patch adds those paths to configure.
+	# Compiling without specifying the path anywhere goes fine.
+	#
+	# April 1st 2003 <foser@gentoo.org>
+	cd ${S}
+	epatch ${FILESDIR}/${P}-wv_configure_fooling.patch
+}
 
 src_compile() {
 

@@ -1,0 +1,45 @@
+--- configure.old	2003-04-01 16:33:04.000000000 +0200
++++ configure	2003-04-01 17:47:45.000000000 +0200
+@@ -9168,7 +9168,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lwv $abi_wv_libs $LIBS"
++LIBS="-lwv $abi_wv_libs $LIBS -I/usr/lib/glib/include"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -9287,7 +9287,7 @@
+ #include <wv.h>
+ _ACEOF
+ if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+-  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
++  (eval $ac_cpp -I/usr/lib/glib/include conftest.$ac_ext) 2>conftest.er1
+   ac_status=$?
+   grep -v '^ *+' conftest.er1 >conftest.err
+   rm -f conftest.er1
+@@ -9391,13 +9391,13 @@
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
++  (eval $ac_compile -I/usr/lib/glib/include ) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+          { ac_try='test -s conftest.$ac_objext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
++  (eval $ac_try -I/usr/lib/glib/include ) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+@@ -9425,7 +9425,7 @@
+ #include <wvexporter.h>
+ _ACEOF
+ if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+-  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
++  (eval $ac_cpp -I/usr/lib/glib/include conftest.$ac_ext) 2>conftest.er1
+   ac_status=$?
+   grep -v '^ *+' conftest.er1 >conftest.err
+   rm -f conftest.er1
