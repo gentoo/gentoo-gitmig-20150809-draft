@@ -1,18 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r2.ebuild,v 1.4 2003/02/15 18:21:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.1 2003/02/15 18:21:58 raker Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
-MY_PV=${PV/./_}
+S=${WORKDIR}/${PN}
 DESCRIPTION="NEdit is a multi-purpose text editor for the X Window System"
-SRC_URI="http://www.nedit.org/ftp/v${MY_PV}/${P}-source.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://nedit.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="spell? ( app-text/aspell )"
 
@@ -22,8 +21,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd ${S}
+	epatch ${FILESDIR}/nedit-5.3-gentoo.diff
 
 	cp ${S}/makefiles/Makefile.linux ${T}
 	sed "s:-O:${CFLAGS} -D__LINUX__:" \
