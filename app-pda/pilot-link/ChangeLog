@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.15 2004/09/30 00:07:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.16 2004/11/27 11:12:29 blubb Exp $
+
+  27 Nov 2004; Simon Stelling <blubb@gentoo.org>
+  +files/pilot-link-0.11.8-fPIC.patch, pilot-link-0.11.8-r1.ebuild:
+  fixed bug #63024 with Christian (tmgisi@gmx.at) Aistleitner's patch
 
   30 Sep 2004; Alastair Tse <liquidx@gentoo.org>
   +files/pilot-link-0.11.8-netsync.patch, pilot-link-0.11.8-r1.ebuild:

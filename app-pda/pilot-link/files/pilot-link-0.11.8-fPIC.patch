@@ -1,0 +1,11 @@
+--- pilot-link-0.11.8/bindings/Java/Makefile.in	2004-09-06 11:34:18.074966344 +0200
++++ pilot-link-0.11.8/bindings/Java/Makefile.in	2004-09-06 11:57:42.772419872 +0200
+@@ -233,7 +233,7 @@
+ 	$(JAVAC) -d . $(java_files)
+ 
+ java_lib: libjpisock.c
+-	$(CXX) $(INCLUDES) $(DEFS) -L $(top_builddir)/libpisock/.libs -lpisock -shared -o libjpisock.so $(srcdir)/libjpisock.c
++	$(CXX) $(INCLUDES) -fPIC $(DEFS) -L $(top_builddir)/libpisock/.libs -lpisock -shared -o libjpisock.so $(srcdir)/libjpisock.c
+ 
+ java_jar: $(java_classes)
+ 	$(JAR) cvf pilot-link.jar $(java_classes)
