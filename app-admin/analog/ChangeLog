@@ -1,8 +1,10 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.13 2003/02/12 02:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.14 2003/03/28 09:12:47 pvdabeel Exp $
 
 *analog-5.31 (29 Jan 2003)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> : Moved to stable ppc
 
   29 Jan 2003; Donny Davies <woodchip@gentoo.org> : New testing release.
 
