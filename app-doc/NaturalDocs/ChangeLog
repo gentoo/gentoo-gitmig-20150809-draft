@@ -1,0 +1,10 @@
+# ChangeLog for app-doc/NaturalDocs
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.1 2004/06/12 11:41:05 jmglov Exp $
+
+*NaturalDocs-1.22-r1 (12 Jun 2004)
+
+  12 Jun 2004; Josh Glover <jmglov@gentoo.org> NaturalDocs-1.22-r1.ebuild,
+  metadata.xml:
+  This package was submitted by Josh Glover in bug #47266
+
