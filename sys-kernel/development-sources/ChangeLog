@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.51 2003/10/22 18:17:28 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.52 2003/10/24 18:50:51 johnm Exp $
+
+  24 Oct 2003; John Mylchreest <johnm@gentoo.org>;
+  development-sources-2.6.0_beta8.ebuild:
+  Fixing broken symlink, making alsa virtual explicit
 
 *development-sources-2.6.0_beta5-r11 (22 Oct 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta8.ebuild,v 1.4 2003/10/22 18:17:28 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta8.ebuild,v 1.5 2003/10/24 18:50:51 johnm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #Original Kernel Version before Patches
@@ -23,7 +23,6 @@ GPV=0.1
 S=${WORKDIR}/linux-${OKV}
 ETYPE="sources"
 
-IUSE="alsa"
 DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
 
 [ ! ${GPV} == 0 ] && GPATCH_URI="mirror://gentoo/distfiles/genpatches-2.6-${GPV}.tar.bz2"
@@ -34,9 +33,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="-* x86 ~amd64"
-
-PROVIDE="virtual/linux-sources"
-[ -n "$(use alsa)" ] && PROVIDE="${PROVIDE} virtual/alsa"
+PROVIDE="virtual/linux-sources virtual/alsa"
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
@@ -123,6 +120,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	[ "$ETYPE" = "headers" ] && return
+	[ ! ${GPV} == 0 ] && KV="${KV}-patchset-${GPV}"
 	[ ! -e ${ROOT}usr/src/linux-beta ] && ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
 
 	echo
