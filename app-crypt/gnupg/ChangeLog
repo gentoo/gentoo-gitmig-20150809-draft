@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.10 2002/10/31 21:12:28 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.11 2002/11/10 15:29:29 doctomoe Exp $
+
+
+  10 Nov 2002; Olivier Reisch <doctomoe@gentoo.org> gnupg-1.2.1.ebuild :
+  Added ppc keyword
 
 *gnupg-1.2.1 (31 Oct 2002)
 
