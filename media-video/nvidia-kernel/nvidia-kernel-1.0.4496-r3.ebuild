@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r3.ebuild,v 1.7 2004/04/28 22:19:49 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4496-r3.ebuild,v 1.8 2004/04/29 12:55:53 steel300 Exp $
 
 inherit eutils
 
@@ -55,6 +55,19 @@ get_KV_info() {
 	export KV_major="$(echo "${KV_full}" | cut -d. -f1)"
 	export KV_minor="$(echo "${KV_full}" | cut -d. -f2)"
 	export KV_micro="$(echo "${KV_full}" | cut -d. -f3 | sed -e 's:[^0-9].*::')"
+}
+
+is_kernel() {
+	[ -z "$1" -o -z "$2" ] && return 1
+
+		get_KV_info
+
+		if [ "${KV_major}" -eq "$1" -a "${KV_minor}" -eq "$2" ]
+		then
+				return 0
+		else
+				return 1
+		fi
 }
 
 src_unpack() {

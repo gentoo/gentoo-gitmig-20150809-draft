@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5328-r1.ebuild,v 1.3 2004/01/29 09:55:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5328-r1.ebuild,v 1.4 2004/04/29 12:55:53 steel300 Exp $
 
 inherit eutils
 
@@ -59,32 +59,12 @@ get_KV_info() {
 	export KV_micro="$(echo "${KV_full}" | cut -d. -f3 | sed -e 's:[^0-9].*::')"
 }
 
-is_2_4_kernel() {
+is_kernel() {
+	[ -z "$1" -o -z "$2" ] && return 1
+
 	get_KV_info
 
-	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 4 ]
-	then
-		return 0
-	else
-		return 1
-	fi
-}
-
-is_2_5_kernel() {
-	get_KV_info
-
-	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
-	then
-		return 0
-	else
-		return 1
-	fi
-}
-
-is_2_6_kernel() {
-	get_KV_info
-
-	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 6 ]
+	if [ "${KV_major}" -eq "$1" -a "${KV_minor}" -eq "$2" ]
 	then
 		return 0
 	else
@@ -109,7 +89,7 @@ src_unpack() {
 	cd ${S}
 	einfo "Linux kernel ${KV_major}.${KV_minor}.${KV_micro}"
 
-	if is_2_5_kernel || is_2_6_kernel
+	if is_kernel 2.5 || is_kernel 2.6
 	then
 		EPATCH_SINGLE_MSG="Applying tasklet patch ..." \
 		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-${NV_V}-2.6-20040105.diff
@@ -118,7 +98,7 @@ src_unpack() {
 		ln -snf Makefile.nvidia Makefile
 	fi
 
-	if is_2_4_kernel
+	if is_kernel 2.4
 	then
 		EPATCH_SINGLE_MSG="Applying VIA chipset bugfix patch ..." \
 		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-${NV_V}-2.4-via-chipset-fix.patch
