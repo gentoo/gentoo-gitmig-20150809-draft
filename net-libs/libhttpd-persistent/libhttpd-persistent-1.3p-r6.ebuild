@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r6.ebuild,v 1.8 2004/07/05 07:15:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r6.ebuild,v 1.9 2004/07/05 07:15:32 eradicator Exp $
 
 MY_P="libhttpd-1.3p-f"
 
@@ -29,7 +29,7 @@ src_compile() {
 		g++ ${CFLAGS} -D_OS_UNIX -fPIC -c ${FILE} || die
 	done
 
-	echo "linking"	
+	echo "linking"
 	ar rc libhttpd-persistent.a ${OFILES} || die
 	ranlib libhttpd-persistent.a || die
 
