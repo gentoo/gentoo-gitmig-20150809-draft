@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.5 2003/06/22 16:29:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.6 2003/06/22 16:31:23 liquidx Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
@@ -35,6 +35,7 @@ USE_RPMOFFSET_ONLY=${USE_RPMOFFSET_ONLY-""}
 
 newdepend "app-arch/rpm2targz"
 
+# extracts the contents of the RPM in ${WORKDIR}
 rpm_unpack() {
 	local rpmfile
 	rpmfile=$1
@@ -65,7 +66,6 @@ rpm_src_unpack() {
 			echo ">>> Unpacking ${x}"
 			prefix=${x%.rpm}
 			cd ${WORKDIR}
-			# convert rpm to tar.gz and then extract
 			rpm_unpack ${DISTDIR}/${x} || die "${myfail}"
 			
 			# find all tar.gz files and extract for srpms
