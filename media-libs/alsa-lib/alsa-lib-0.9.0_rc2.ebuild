@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc2.ebuild,v 1.12 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc2.ebuild,v 1.13 2003/12/26 12:20:26 weeve Exp $
 
 MY_P=${P/_rc/rc}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ DEPEND="~media-sound/alsa-driver-0.9.0_rc2"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc -sparc "
 
 src_compile() {
 	./configure \
