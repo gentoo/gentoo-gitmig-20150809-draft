@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/transset
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.5 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.6 2004/09/11 19:25:04 slarti Exp $
+
+  11 Sep 2004; Tom Martin <slarti@gentoo.org> :
+  Marked ~amd64.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   transset-0.1_pre20040821.ebuild:
