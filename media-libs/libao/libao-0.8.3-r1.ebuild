@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.3-r1.ebuild,v 1.4 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.3-r1.ebuild,v 1.5 2003/10/28 13:13:39 mholzer Exp $
 
 IUSE="esd"
 
@@ -31,5 +31,5 @@ src_install () {
 
 	rm -rf ${D}/usr/share/doc
 	dodoc AUTHORS CHANGES COPYING README TODO
-	dodoc doc/API doc/DRIVERS doc/USAGE doc/WANTED
+	dohtml -A c doc/*.html
 }
