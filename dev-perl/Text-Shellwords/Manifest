@@ -1,6 +1,16 @@
-MD5 bf9073d5a6a22439bf9ada73be5830bc Text-Shellwords-1.07.ebuild 694
-MD5 4b3dd30a479b4f0dd96a383ea5205f61 ChangeLog 881
-MD5 473671c4ffd61bb7e1318774f419d5c4 Text-Shellwords-1.00.ebuild 763
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c6acbc8083345b2d7128bd7d8a312a0 ChangeLog 986
+MD5 07784ef6e4b422914b51bd96eaafe398 Text-Shellwords-1.00.ebuild 767
+MD5 0467ff19f75d732c18fbaabd650994b8 Text-Shellwords-1.07.ebuild 699
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 42cc7633a9defc28bf0f42d610bb987e files/digest-Text-Shellwords-1.00 70
 MD5 9f5fdc9ff2b09670e75a64150fbf09e1 files/digest-Text-Shellwords-1.07 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5atTKRy60XGEcJIRAt0DAJ9yqCn0Uh+fArzPD9MhkdXfHvCcoACeKsOw
+8NpN/Zo1Do6nBO5BVgWh20A=
+=0TTL
+-----END PGP SIGNATURE-----
