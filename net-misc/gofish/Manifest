@@ -1,5 +1,5 @@
-MD5 c174bcf8600cd08499fcd9df055d83e8 gofish-0.29.ebuild 1093
-MD5 7af591e2c6b7eb43038ac5c0f2a6ae4d ChangeLog 443
+MD5 8f3b978c27995fa1935abca3da84b595 gofish-0.29.ebuild 1120
+MD5 7eed0258270ac4c2474818b72971fafd ChangeLog 559
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 a4671e7c6f0585c6a7a9c31660facfca files/gofish.rc 606
 MD5 6af9d916a6e6222df07761444fdcdaac files/gofish.confd 429
