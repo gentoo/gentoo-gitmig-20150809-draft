@@ -1,0 +1,11 @@
+--- ocfs-tools-1.1.2/debugocfs/Makefile.chris	2004-05-22 17:54:23.000000000 +0200
++++ ocfs-tools-1.1.2/debugocfs/Makefile	2004-05-22 17:54:46.000000000 +0200
+@@ -16,7 +16,7 @@
+ 
+ CFLAGS = $(OPTS) -fno-strict-aliasing $(WARNINGS)
+ 
+-INCLUDES = -I. -I$(TOPDIR)/libocfs/Common/inc -I$(TOPDIR)/libocfs/Linux/inc -I$(TOPDIR)/libocfs
++INCLUDES = -I. -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I$(TOPDIR)/libocfs/Common/inc -I$(TOPDIR)/libocfs/Linux/inc -I$(TOPDIR)/libocfs
+ DEFINES = -DLINUX -DUSERSPACE_TOOL -DDEBUGOCFS
+ 
+ OPTIMIZE = -O2

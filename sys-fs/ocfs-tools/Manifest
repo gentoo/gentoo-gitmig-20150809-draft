@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4a5aaa58a227248c4b3ca525733c580e ocfs-tools-1.1.2.ebuild 1344
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
+MD5 acc50e16ea2e1d49dcd09a268dc670bc ChangeLog 356
+MD5 cb3f250aaa7bfaabf304acbb1d20dc5b files/ocfs-tools-glib.patch 539
+MD5 78dcbf7f4b00b78a1aabc0926269cf88 files/digest-ocfs-tools-1.1.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCMG1OgMUyd/cdjWsRAiFbAKCIvX2aaPVpb4v2zHUHDJEbvmA2EwCdF8l0
+XlD7MyWgGk3jGRKZY5uWxZs=
+=wddA
+-----END PGP SIGNATURE-----
