@@ -1,4 +1,5 @@
-MD5 683f2eecda0bddc70a939630772c1410 ksambaplugin-0.5f.ebuild 679
-MD5 a67b07497143fa5c946626c8a8ba2d5e ChangeLog 1669
+MD5 a6b51833ca85bd66e6d3b61830550da3 ksambaplugin-0.5f.ebuild 972
+MD5 005cfca834f4ee7b05bfe51c6178bf7b ChangeLog 1882
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 af5d9b6bd72869b5b24774dab62ab74a files/digest-ksambaplugin-0.5f 69
+MD5 1954a2721b5804a606538ca395af0ddc files/ksambaplugin-gcc3.4-fix.patch 732

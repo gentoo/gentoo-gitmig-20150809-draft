@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ksambaplugin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.13 2004/07/03 21:21:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.14 2004/07/12 02:36:33 morfic Exp $
+
+  11 Jul 2004; Daniel Goller <morfic@gentoo.org>
+  +files/ksambaplugin-gcc3.4-fix.patch, ksambaplugin-0.5f.ebuild:
+  Applied patch allowing compiling with gcc-3.4 thanks to Brian S. Stephan
+  closing bug #54391
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> ksambaplugin-0.5f.ebuild:
   QA: need-kde after R/DEPEND

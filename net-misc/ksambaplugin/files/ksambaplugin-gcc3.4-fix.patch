@@ -1,0 +1,22 @@
+--- kcmsambaconf.cpp.orig	2004-07-11 21:03:43.292001112 -0500
++++ kcmsambaconf.cpp	2004-07-11 21:04:37.727725624 -0500
+@@ -193,7 +193,7 @@
+ 
+   slotSpecifySmbConf(smbFile);
+ 
+-};
++}
+ 
+ 
+ KcmSambaConf::~KcmSambaConf() {
+--- ksambapropertiesdialogplugin.cpp.orig	2004-07-11 21:04:12.042630352 -0500
++++ ksambapropertiesdialogplugin.cpp	2004-07-11 21:10:57.705960152 -0500
+@@ -63,7 +63,7 @@
+ typedef KGenericFactory<KSambaPropertiesDialogPlugin, KPropertiesDialog> KSambaPropertiesDialogPluginFactory;
+ 
+ K_EXPORT_COMPONENT_FACTORY( ksambakonqiplugin,
+-                            KSambaPropertiesDialogPluginFactory("ksambakonqiplugin") );
++                            KSambaPropertiesDialogPluginFactory("ksambakonqiplugin") )
+ 
+ 
+ 
