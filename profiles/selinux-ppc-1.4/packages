@@ -25,10 +25,7 @@
 *>=sys-apps/coreutils-5.0.91
 *>=sys-apps/findutils-4.1.20-r1
 *>=sys-apps/pam-login-3.14
-# 3.1.12-r1 has a patch, >=3.1.15 built in
-*>=sys-apps/procps-3.1.12-r1
-!sys-apps/procps-3.1.13*
-!sys-apps/procps-3.1.14*
+*>=sys-apps/procps-3.1.15
 *>=sys-apps/psmisc-21.2-r4
 *>=sys-apps/shadow-4.0.3-r7
 *>=sys-apps/util-linux-2.12
