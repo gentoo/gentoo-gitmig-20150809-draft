@@ -1,14 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.39 2003/02/18 09:59:30 seemant Exp $
-
-  12 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
-  Added hppa to keywords.
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.40 2003/02/18 10:07:08 seemant Exp $
 
 *apache-2.0.44 (21 Jan 2003)
 
-  18 Feb 2003;  <root@gentoo.org> apache-2.0.44.ebuild :
+  18 Feb 2003;  <seemant@gentoo.org> apache-2.0.44.ebuild :
   added yacc as a DEPEND
+
+  12 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
   21 Jan 2003; Donny Davies <woodchip@gentoo.org> apache-2.0.44.ebuild,
   commonapache2.conf :  Version bump, #14300, add fix for #13152, close #13304.
