@@ -1,7 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 59eb990f519fd134080b2995d98ac0d7 ifenslave-1.1.0-r2.ebuild 1473
 MD5 287a01f7e91179b50793b0d41bcc93d4 ifenslave-1.1.0.ebuild 1374
 MD5 0ca8b9b32fa15e6de7d793cd72793faf ifenslave-1.1.0-r1.ebuild 1415
-MD5 a726726f6b3f3c6e1f9ddfe6ca4a0813 ChangeLog 771
+MD5 dd3fd4c4db279b173917dc6a834d21f6 ChangeLog 938
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 6a346d07a88e3a602e0cde43d7b65245 files/digest-ifenslave-1.1.0-r1 146
+MD5 6504ad830370624217962ad470569661 files/digest-ifenslave-1.1.0-r2 146
 MD5 6a346d07a88e3a602e0cde43d7b65245 files/digest-ifenslave-1.1.0 146
 MD5 baa11efd6a70e31bb43a1d09f1b1930a files/modules.d-bond 1153
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBoVo4PpIsIjIzwiwRAuIlAJ9fdqGkh43SAYBkwCaBS1DmpRYRcQCePMCR
+Iq6PrhzN54kNYuW25A2Z0iA=
+=iu0B
+-----END PGP SIGNATURE-----
