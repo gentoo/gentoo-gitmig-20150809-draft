@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.203 2004/11/22 21:33:32 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.204 2004/11/23 16:15:25 ciaranm Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -166,6 +166,7 @@ mikmod - Adds libmikmod support to allow playing of SoundTracker-style music fil
 milter - Adds sendmail mail filter (milter) support
 mime - Adds MIME support
 ming - Adds support for ming library for creating flash format files
+minimal - Install a very minimal build (disables, for example, plugins, fonts, most drivers, non-critical features)
 mmap - Adds mmap support
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 mng - Adds support for libmng (MNG images)

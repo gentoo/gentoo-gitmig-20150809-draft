@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.753 2004/11/23 14:46:01 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.754 2004/11/23 16:15:25 ciaranm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -33,7 +33,6 @@ app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature
 app-editors/scite:lua - Enable Lua scripting support
-app-editors/vim:minimal - Build vim with minimal features, resulting in a ~430K binary
 app-editors/vim:mzscheme - Include support for the mzscheme interpreter
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
@@ -458,7 +457,6 @@ net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
 net-analyzer/nagios-plugins:nagios-ping - installs deps for fancy ping monitoring
 net-analyzer/nagios-plugins:nagios-ssh - installs deps for monitoring ssh
 net-analyzer/net-snmp:lm_sensors - Adds linux lm_sensors mib support
-net-analyzer/net-snmp:minimal - Installs only the libs/daemons needed to be snmp monitored
 net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs after connect
 net-analyzer/nstats:pcap - enable pcap support
 net-analyzer/pmacct:mmap - Enable memory-mapped I/O
@@ -568,7 +566,6 @@ net-wireless/wpa-supplicant:gsm - Add support for EAP-SIM authentication algorit
 net-wireless/wpa-supplicant:pcap - Use external libpcap and libdnet for layer2 packet processing
 net-www/apache:distcache - Enable SSL distcache support
 net-www/apache:threads - Enable thread support
-net-www/drupal:minimal - Disables installing the additional plugins
 net-www/elinks:lua - enable lua support
 net-www/kazehakase:estraier - enable estraier support for full-text search in history.
 net-www/kazehakase:migemo - enable migemo support for Japanese incremental search.
@@ -600,7 +597,6 @@ sys-apps/checkpolicy:mls - Add experimental multi level security policy support
 sys-apps/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
-sys-apps/iproute2:minimal - Builds and installs only the traffic control util.
 sys-apps/lm-sensors:rrdtool - Builds sensord (Needs RRDTool).
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
@@ -697,7 +693,6 @@ x11-base/xorg-x11:dlloader - USE WITH CARE: Enable dynamic module loader (result
 x11-base/xorg-x11:dmx - Build the DMX extension for Xorg
 x11-base/xorg-x11:font-server - Build XFS, the X Font Server
 x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 and savage
-x11-base/xorg-x11:minimal - Build without fonts, clients and some other things
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
 x11-base/xorg-x11:type1-fonts - Build Type1 fonts
