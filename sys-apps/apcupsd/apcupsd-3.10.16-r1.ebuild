@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.16-r1.ebuild,v 1.1 2004/11/23 22:09:23 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.16-r1.ebuild,v 1.2 2004/11/24 06:39:20 swtaylor Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_compile() {
 		--enable-oldnet \
 		--enable-master-slave \
 		--enable-powerflute \
-		--enable-pthreads
+		--enable-pthreads \
 		${myconf} \
 		|| die
 	make || die
