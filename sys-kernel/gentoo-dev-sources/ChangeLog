@@ -1,12 +1,17 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.174 2005/01/15 17:48:06 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.175 2005/01/16 14:56:40 dsd Exp $
 
 *gentoo-dev-sources-2.6.10-r5 (15 Jan 2005)
 
   15 Jan 2005; Michal Januszewski <spock@gentoo.org>
   +gentoo-dev-sources-2.6.10-r5.ebuild:
-  Vesafb-tng and fbsplash updates which should fix a number of bugs.
+  Vesafb-tng and fbsplash updates which should fix a number of bugs. Also: Sidewinder 
+  debug message fix, new smbfs DoS fix (solves bug 72968), vmscan writeback (OOM)
+  fix, ACPI video slab corruption fix, iptables ECN corruption fix. Security: new rlimit
+  memlock fix, SMP stack resize fix, uselib fix update. Hardware support: Readd support
+  for cx24110 DVB, and add storage drivers for: Promise PATA PDC2027x, Promise PATA
+  PDC2037x, ULi5281 SATA, VIA VT6421 SATA, ATI IXP300/IXP400 SATA.
 
   12 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
   gentoo-dev-sources-2.6.10-r4.ebuild:
