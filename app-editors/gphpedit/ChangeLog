@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gphpedit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.6 2004/10/05 12:19:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.7 2004/11/15 20:59:30 liquidx Exp $
+
+*gphpedit-0.9.50 (15 Nov 2004)
+
+  15 Nov 2004; Alastair Tse <liquidx@gentoo.org> +gphpedit-0.9.50.ebuild:
+  version bump (#70969)
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gphpedit-0.4.3.ebuild:
