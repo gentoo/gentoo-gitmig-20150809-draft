@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.1 2003/01/10 06:51:15 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.2 2003/01/10 23:42:44 jrray Exp $
+
+*gpsdrive-1.31-r1 (10 Jan 2003)
+
+  10 Jan 2003; J Robert Ray <jrray@gentoo.org> : Fixing bug 13647,
+  --enable-mysql would disable mysql support.
 
 *gpsdrive-1.31 (09 Jan 2003)
 
