@@ -1,6 +1,16 @@
-MD5 7c4f95b67d24f5531ded6ae9cbc920ec mod_jk2-2.0.4.ebuild 1535
-MD5 d04f24873bdf35c5c4f5cc36f14fbf6c ChangeLog 639
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77b836ab9b05fbdd676906872ae72d99 mod_jk2-2.0.4.ebuild 1556
+MD5 0b87764cb866ead9ee74c0261c7f72b0 ChangeLog 763
 MD5 349d3af72865d1e69d5d48d7c6d8a944 metadata.xml 159
 MD5 c6bcf5cf5fd668fefc072e92dd64ca1c files/89_mod_jk2.conf 588
 MD5 bc2adcea4c36c1955a114a0a22d3d0c9 files/workers2.properties 171
 MD5 248472015ef8fb286a8091498ec14f1a files/digest-mod_jk2-2.0.4 91
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSvZt06ebR+OMO78RAgQKAJ9arBMAyZqhSAIKh+WYN4rRxocqjwCgh3uc
+KC2AkQ1uwM8DS1OOmMBN/jo=
+=6TzX
+-----END PGP SIGNATURE-----
