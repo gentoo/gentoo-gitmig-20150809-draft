@@ -1,0 +1,16 @@
+Index: libgnomeui/gnome-app-helper.h
+===================================================================
+RCS file: /cvs/gnome/libgnomeui/libgnomeui/gnome-app-helper.h,v
+retrieving revision 1.92
+diff -u -r1.92 gnome-app-helper.h
+--- libgnomeui/gnome-app-helper.h	31 May 2002 01:40:30 -0000	1.92
++++ libgnomeui/gnome-app-helper.h	2 Jun 2002 20:49:54 -0000
+@@ -233,7 +233,7 @@
+ 
+ /* Insert all the help topics based on the application's id */
+ #define GNOMEUIINFO_HELP(app_name) \
+-	{ GNOME_APP_UI_HELP, NULL, NULL, app_name, NULL, NULL, \
++	{ GNOME_APP_UI_HELP, NULL, NULL, (void *)app_name, NULL, NULL, \
+ 		(GnomeUIPixmapType) 0, NULL, 0,	(GdkModifierType) 0, NULL }
+ 
+ /* Insert a subtree (submenu) */
