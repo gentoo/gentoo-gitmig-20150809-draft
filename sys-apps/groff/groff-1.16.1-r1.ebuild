@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1-r1.ebuild,v 1.1 2001/02/07 15:51:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1-r1.ebuild,v 1.2 2001/05/11 14:01:40 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,10 +11,6 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/groff/${A}
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 
 DEPEND="virtual/glibc"
-
-RDEPEND="$DEPEND
-	 sys-devel/perl"
-
 
 src_compile() {
 
