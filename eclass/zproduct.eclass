@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.14 2004/09/25 22:45:15 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.15 2004/10/07 19:19:56 radek Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -30,7 +30,7 @@ zproduct_src_install()
 {
 	## Assume that folders or files that shouldn't be installed
 	#  in the zproduct directory have been already been removed.
-    ## Assume $S set to the parent directory of the zproduct(s).
+	## Assume $S set to the parent directory of the zproduct(s).
 
 	debug-print-function ${FUNCNAME} ${*}
 	[ -n "${ZPROD_LIST}" ] || die "ZPROD_LIST isn't defined."
@@ -62,7 +62,7 @@ zproduct_src_install()
 						
 			all)
 				debug-print-section all 
- 				zproduct_src_install do_zpfolders do_docs do_install ;;
+				zproduct_src_install do_zpfolders do_docs do_install ;;
 		esac
 		shift
 	done	
@@ -71,13 +71,13 @@ zproduct_src_install()
 
 docs_move()
 {
-    # if $1 == "/", then this breaks.
+	# if $1 == "/", then this breaks.
 	if [ -n "$1" ] ; then
 		docinto $1
 	else 
 		docinto /
 	fi
-    dodoc $1HISTORY.txt $1README{.txt,} $1INSTALL{.txt,} > /dev/null
+	dodoc $1HISTORY.txt $1README{.txt,} $1INSTALL{.txt,} > /dev/null
 	dodoc $1AUTHORS $1COPYING $1CREDITS.txt $1TODO{.txt,} > /dev/null
 	dodoc $1LICENSE{.GPL,.txt,} $1CHANGES{.txt,} > /dev/null
 	dodoc $1DEPENDENCIES.txt $1FAQ.txt $1UPGRADE.txt > /dev/null
@@ -88,19 +88,19 @@ docs_move()
 
 zproduct_pkg_postinst()
 {
-    #*check for multiple zinstances, if several display install help msg.
+	#*check for multiple zinstances, if several display install help msg.
 
-    #*Use zprod-update to install this zproduct to the default zinstance.
+	#*Use zprod-update to install this zproduct to the default zinstance.
 	debug-print-function ${FUNCNAME} ${*}
-    
-    # this is a shared directory, so root should be owner;
-    # zprod-manager or whatever is used to copy products into the
-    # instances has to take care of setting the right permissions in
-    # the target directory
-    
-    chown -R root:root ${ZP_DIR}/${PF}
-    # make shure there is nothing writable in the new dir, and all is readable
-    chmod -R go-w,a+rX ${ZP_DIR}/${PF}
+
+	# this is a shared directory, so root should be owner;
+	# zprod-manager or whatever is used to copy products into the
+	# instances has to take care of setting the right permissions in
+	# the target directory
+
+	chown -R root:root ${ZP_DIR}/${PF}
+	# make shure there is nothing writable in the new dir, and all is readable
+	chmod -R go-w,a+rX ${ZP_DIR}/${PF}
 	einfo ">>> Installing ${PF} into the \"$(zope-config --zidef-get)\" zinstance..."
 	${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF} 
 }
