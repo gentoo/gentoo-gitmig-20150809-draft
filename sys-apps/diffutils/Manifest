@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d9c4f564369f4baebe9f0139ca23d49d ChangeLog 5584
+MD5 2b60cea5ac8aeca78d61efdc2b026816 ChangeLog 5669
+MD5 2b8888ea3c1b05e81e1bbf61b1f2b945 diffutils-2.8.4-r4.ebuild 1933
+MD5 a0d17afefb8c9eda3c5cf90ee2775ec9 diffutils-2.8.7-r1.ebuild 1603
 MD5 88a4de059e8e49fff9b4aada4824afd7 diffutils-2.8.7.ebuild 1404
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 08d6e2491177bfab8aff3fba8dccb4ba diffutils-2.8.7-r1.ebuild 1594
-MD5 2b8888ea3c1b05e81e1bbf61b1f2b945 diffutils-2.8.4-r4.ebuild 1933
-MD5 fcb3554acdf9074aad98b90af6cb915d files/diffutils-2.8.4-sdiff-no-waitpid.patch 525
-MD5 bb27bd30edca169156e905ebe7dab570 files/diffutils-2.8.4-no-manpage.patch 1168
-MD5 28aba2261ffb7634265a612938df28f5 files/digest-diffutils-2.8.7 68
 MD5 88eef724512016e5400a58e4057ef235 files/diffutils-2.8.4-Makefile-fix-typeo.patch 1158
-MD5 d639850d7ddca0f4a6eb5be82a1c42a2 files/digest-diffutils-2.8.7-r1 141
-MD5 7abb095c2c2ecdbd465a1953cb443289 files/digest-diffutils-2.8.4-r4 67
+MD5 bb27bd30edca169156e905ebe7dab570 files/diffutils-2.8.4-no-manpage.patch 1168
+MD5 fcb3554acdf9074aad98b90af6cb915d files/diffutils-2.8.4-sdiff-no-waitpid.patch 525
 MD5 a571ebf3fcef3b033e33a4f013521e13 files/diffutils-2.8.4-tabsize-dumps-core.diff 804
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB9B8BugEuf3OQ0akRAhiZAJ41unAptcZK+4pYfb5HHlwGwQklegCgnLK+
-6nIdigNabDQRI9wdLfnfGDg=
-=g9j0
------END PGP SIGNATURE-----
+MD5 7abb095c2c2ecdbd465a1953cb443289 files/digest-diffutils-2.8.4-r4 67
+MD5 28aba2261ffb7634265a612938df28f5 files/digest-diffutils-2.8.7 68
+MD5 d639850d7ddca0f4a6eb5be82a1c42a2 files/digest-diffutils-2.8.7-r1 141

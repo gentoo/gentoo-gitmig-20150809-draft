@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.42 2005/01/23 22:02:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.43 2005/02/18 05:16:29 kito Exp $
+
+  17 Feb 2005; Kito <kito@gentoo.org> diffutils-2.8.7-r1.ebuild:
+  ~ppc-macos keyword
 
   23 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> diffutils-2.8.7.ebuild:
   Stable on alpha.
