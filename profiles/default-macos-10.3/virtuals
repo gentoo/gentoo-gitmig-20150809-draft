@@ -29,3 +29,4 @@ virtual/semi		app-emacs/semi
 virtual/ruby		dev-lang/ruby
 virtual/blackbox	x11-wm/fluxbox
 virtual/python		dev-lang/python
+virtual/w3m		www-client/w3m

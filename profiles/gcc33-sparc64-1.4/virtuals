@@ -54,3 +54,4 @@ virtual/ruby		dev-lang/ruby
 virtual/dev-manager	sys-fs/devfsd
 virtual/cdrtools		app-cdr/cdrtools
 virtual/mailx		mail-client/mailx
+virtual/w3m		www-client/w3m
