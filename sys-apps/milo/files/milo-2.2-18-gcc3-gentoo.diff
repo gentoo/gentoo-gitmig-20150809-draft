@@ -110,7 +110,7 @@ diff -u -r --minimal milo-2.2-18.orig/milo.c milo-2.2-18/milo.c
  	while (1) {
  
 -		printk("MILO> ");
-+		printk("GentooMILO> ");
++		printk("MILO > ");
  
  		kbd_gets(command_string, 256);
  		printk_rows = 0;
