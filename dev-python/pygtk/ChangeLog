@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.18 2003/06/12 20:38:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.19 2003/08/01 16:13:39 foser Exp $
+
+*pygtk-1.99.17 (01 Aug 2003)
+
+  01 Aug 2003; foser <foser@gentoo.org> pygtk-1.99.17.ebuild,metadata.xml :
+  New version, added gnome as herd
 
   12 Jun 2003; <msterret@gentoo.org> pygtk-1.99.13-r1.ebuild,
   pygtk-1.99.16.ebuild:
