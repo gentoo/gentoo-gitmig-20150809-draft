@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.9 2004/06/24 22:27:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.10 2004/06/28 04:29:13 agriffis Exp $
 
 inherit eutils gcc games
 
@@ -47,15 +47,17 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--with-gcc=$(gcc-major-version)"
-	local mygui=
+	local mygui myguis
 
 	use x86 \
 		&& myconf="${myconf} --with-raze" \
 		|| myconf="${myconf} --with-cmz80"
 
-	for mygui in `use gtk` `use svga` ; do
-		[ "${mygui}" == "svga" ] && mygui=svgalib
+	use gtk && myguis="gtk"
+	use svga && myguis="svgalib"
+	[ -n "${myguis}" ] || myguis="gtk"
 
+	for mygui in ${myguis}; do
 		if [ -f Makefile ] ; then
 			make clean
 		fi
@@ -65,13 +67,6 @@ src_compile() {
 		emake -j1 || die "building ${mygui}"
 		mv main/generator-${mygui} my-bins/
 	done
-	if [ -z "`use gtk``use svga`" ] ; then
-		egamesconf \
-			${myconf} \
-			--with-gtk || die
-		emake -j1 || die "building ${mygui}"
-		mv main/generator-gtk my-bins/
-	fi
 }
 
 src_install() {
