@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/cmfphoto
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphoto/ChangeLog,v 1.7 2004/04/05 08:42:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphoto/ChangeLog,v 1.8 2004/05/12 19:41:46 batlogg Exp $
+
+*cmfphoto-0.4.2 (12 May 2004)
+
+  12 May 2004; Jodok Batlogg <batlogg@gentoo.org>; cmfphoto-0.2.ebuild,
+  cmfphoto-0.4.2.ebuild:
+  version bump
 
   05 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> cmfphoto-0.2.ebuild:
   down to ~ppc until deps are stable
