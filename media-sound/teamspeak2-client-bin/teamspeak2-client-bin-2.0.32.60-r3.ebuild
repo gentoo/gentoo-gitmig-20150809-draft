@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.6 2004/09/15 17:38:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.7 2004/10/10 23:16:22 eradicator Exp $
 
 MY_PV=rc2_2032
 DESCRIPTION="The TeamSpeak voice communication tool"
@@ -18,8 +18,8 @@ RDEPEND="virtual/x11"
 DEPEND="${DEPEND}
 	kde? ( >=kde-base/kdelibs-3.1.0 )
 	imagemagick? ( media-gfx/imagemagick )
-	amd64? ( =app-emulation/emul-linux-x86-baselibs-1.0
-		=app-emulation/emul-linux-x86-xlibs-1.0 )"
+	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0
+	         >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
 S="${WORKDIR}/ts2_client_${MY_PV}/setup.data/image"
 
