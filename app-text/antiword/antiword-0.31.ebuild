@@ -1,7 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.31.ebuild,v 1.1 2001/06/22 20:08:09 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.31.ebuild,v 1.2 2001/07/30 16:25:29 danarmak Exp $
+# The orig. author didn't write his name. I (danarmak) added the instructions
+# printed from pkg_postinst.
 
 #P=
 A=${P}.tar.gz
@@ -33,3 +35,12 @@ src_install () {
 
 }
 
+pkg_postinst() {
+
+    echo "
+    For word-to-text conversion, create a symlink from ~/.antiword to
+    /usr/share/antiword. Or, copy the directory if you want to customize
+    it per-user. What's accessed under ~/.antiword is encoding definitions.
+"
+
+}
