@@ -50,12 +50,12 @@ egnustepmake() {
 
 	if [ -x configure ] ; then
 		if [ -z "$*" ] ; then
-			./configure
+			./configure \
 				HOME=$TMP/fakehome \
 				GNUSTEP_USER_ROOT=$TMP/fakehome/GNUstep \
 				|| die "configure failed"
 		else
-			./configure
+			./configure \
 				HOME=$TMP/fakehome \
 				GNUSTEP_USER_ROOT=$TMP/fakehome/GNUstep \
 				$* || die "configure failed (options: $*)"
