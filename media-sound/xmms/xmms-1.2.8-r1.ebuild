@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r1.ebuild,v 1.2 2003/09/13 10:12:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r1.ebuild,v 1.3 2003/09/13 19:39:45 vapier Exp $
 
 inherit flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -65,7 +65,7 @@ src_unpack() {
 	export WANT_AUTOCONF_2_5=1
 	for x in . libxmms ; do
 		cd ${S}/${x}
-		automake --gnu --add-missing --include-deps Makefile || die
+		automake --gnu --add-missing --include-deps || die
 	done
 }
 
