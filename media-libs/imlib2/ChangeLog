@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.21 2003/11/08 19:29:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.22 2003/11/29 19:38:33 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> imlib2-1.1.0.20031108.ebuild:
+  amd64 fixes
 
 *imlib2-1.1.0.20031108 (08 Nov 2003)
 

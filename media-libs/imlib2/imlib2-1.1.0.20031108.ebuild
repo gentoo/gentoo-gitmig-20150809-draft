@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.20031108.ebuild,v 1.1 2003/11/08 19:29:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.20031108.ebuild,v 1.2 2003/11/29 19:38:33 brad_mssw Exp $
 
 inherit enlightenment flag-o-matic gcc
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~mips ~arm ~hppa ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~mips ~arm ~hppa ~sparc amd64"
 IUSE="${IUSE} mmx gif png jpeg tiff static X"
 
 DEPEND="${DEPEND}
@@ -30,10 +30,21 @@ src_compile() {
 	replace-flags k6-2 i586
 	replace-flags k6 i586
 
+	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
+
 	if [ "${S}" == "${WORKDIR}/${PN}" ] ; then
 		# cvs only stuff
+
+		# uhh, assumes x86 asm for mmx, doesn't work on amd64
+		if [ "${ARCH}" = "amd64" ]
+		then
+			mmx="--disable-mmx"
+		else
+			mmx=`use_enable mmx`
+		fi
+
 		export MY_ECONF="
-			`use_enable mmx` \
+			${mmx} \
 			`use_with X x` \
 			--sysconfdir=/etc/X11/imlib
 		"
