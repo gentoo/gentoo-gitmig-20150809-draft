@@ -1,13 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 97cbc3645039f4f6e078a4dc9a2316d0 linklint-2.3.4.ebuild 656
-MD5 504c4a7b76039e0be613c34cd7a34aa9 ChangeLog 774
+MD5 b80b57e107eebd5cbd675395a0c89ea5 linklint-2.3.5.ebuild 618
+MD5 49fbb0a4fe1ba044a7b510a1b7239508 linklint-2.3.4.ebuild 617
+MD5 2b15fd35fabfd4c35f5dc534903a36e0 ChangeLog 1017
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 0f498c7e407bf42a5e0a14d31a83d34a files/digest-linklint-2.3.4 66
+MD5 9a09d2e1930c457a17508c3bb2fc7882 files/digest-linklint-2.3.5 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOsT0I1lqEGTUzyQRAqpwAKC4MgJDvOXSyx8VRYlCXy7aDpeh4ACfaiPb
-H1Xj1FkB/2JBiN325CET41E=
-=rRnW
+iD8DBQFBYVR1EZCkKN40op4RAsktAJ43ur2XdSiHEROURII2jiH6yFjfUgCgpxcp
+FOW+tMb+cdeMtZKIerKVniI=
+=Ugo/
 -----END PGP SIGNATURE-----
