@@ -1,0 +1,219 @@
+diff -bBdru -x Makeconf -x TAGS rdesktop-1.2.0/proto.h rdesktop-1.2.0-paste/proto.h
+--- rdesktop-1.2.0/proto.h	Tue Jan 28 12:11:01 2003
++++ rdesktop-1.2.0-paste/proto.h	Wed Apr  2 17:47:56 2003
+@@ -77,6 +77,7 @@
+ void ensure_remote_modifiers(uint32 ev_time, key_translation tr);
+ void reset_modifier_keys(unsigned int state);
+ void rdp_send_scancode(uint32 time, uint16 flags, uint8 scancode);
++void rdp_send_keystring(uint32 time, const unsigned char *string);
+ /* xwin.c */
+ void mwm_hide_decorations(void);
+ BOOL get_key_state(unsigned int state, uint32 keysym);
+diff -bBdru -x Makeconf -x TAGS rdesktop-1.2.0/xkeymap.c rdesktop-1.2.0-paste/xkeymap.c
+--- rdesktop-1.2.0/xkeymap.c	Thu Jan 30 11:04:07 2003
++++ rdesktop-1.2.0-paste/xkeymap.c	Thu Apr  3 13:16:49 2003
+@@ -19,6 +19,7 @@
+ */
+ 
+ #include <X11/Xlib.h>
++#include <X11/Xutil.h>
+ #define XK_MISCELLANY
+ #include <X11/keysymdef.h>
+ #include <ctype.h>
+@@ -41,6 +42,15 @@
+ static int min_keycode;
+ static uint16 remote_modifier_state = 0;
+ 
++typedef struct
++{
++    KeySym       sym;
++    unsigned int keycode;
++    unsigned int state;
++} ascii_map_entry;
++    
++static ascii_map_entry ascii_map[256];
++
+ static void update_modifier_state(uint8 scancode, BOOL pressed);
+ 
+ static void
+@@ -208,6 +218,52 @@
+ 	return True;
+ }
+ 
++static void
++init_ascii_entry(unsigned int keycode, unsigned int state)
++{
++    XKeyEvent       event;
++    unsigned char   buf[4];
++    KeySym          sym;
++    ascii_map_entry *ent;
++    
++    event.type = KeyPress;
++    event.display = display;
++    event.keycode = keycode;
++    event.state = state;
++    if (XLookupString(&event, buf, sizeof(buf), &sym, NULL) == 1)
++    {
++	ent = &ascii_map[*buf];
++	if (ent->sym == NoSymbol)
++	{
++	    ent->sym = sym;
++	    ent->keycode = keycode;
++	    ent->state = state;
++	}
++    }
++}
++    
++static void
++init_ascii_map(unsigned int min_keycode, unsigned int max_keycode)
++{
++    int           ix;
++    unsigned int  key;
++
++    for (ix = 0; ix < 256; ix++)
++	ascii_map[ix].sym = NoSymbol;
++    for (key = min_keycode; key <= max_keycode; key++)
++    {
++	init_ascii_entry(key, 0);
++	init_ascii_entry(key, ShiftMask);
++	init_ascii_entry(key, LockMask);
++	init_ascii_entry(key, ControlMask);
++	init_ascii_entry(key, Mod1Mask);
++	init_ascii_entry(key, Mod2Mask);
++	init_ascii_entry(key, Mod3Mask);
++	init_ascii_entry(key, Mod4Mask);
++	init_ascii_entry(key, Mod5Mask);
++    }
++    ascii_map[10] = ascii_map[13]; /* Make '\n' send the Return key */
++}
+ 
+ /* Before connecting and creating UI */
+ void
+@@ -231,6 +287,7 @@
+ 	}
+ 
+ 	XDisplayKeycodes(display, &min_keycode, (int *) &max_keycode);
++	init_ascii_map(min_keycode, max_keycode);
+ }
+ 
+ /* Handles, for example, multi-scancode keypresses (which is not
+@@ -602,3 +659,26 @@
+ 		rdp_send_input(time, RDP_INPUT_SCANCODE, flags, scancode, 0);
+ 	}
+ }
++
++void
++rdp_send_keystring(uint32 time, const unsigned char *string)
++{
++    unsigned        ch;
++    ascii_map_entry *ent;
++    key_translation tr;
++    
++    while ((ch = *string++))
++    {
++	ent = &ascii_map[ch];
++	if (ent->sym == NoSymbol)
++	    fprintf(stderr, "ascii_map failed for %03o\n", ch);
++	else
++	{
++	    tr = xkeymap_translate_key(ent->sym, ent->keycode, ent->state);
++	    ensure_remote_modifiers(time, tr);	    
++	    rdp_send_scancode(time, tr.modifiers, tr.scancode);
++	    rdp_send_scancode(time, tr.modifiers|RDP_KEYRELEASE, tr.scancode);
++	}
++    }
++}
++    
+diff -bBdru -x Makeconf -x TAGS rdesktop-1.2.0/xwin.c rdesktop-1.2.0-paste/xwin.c
+--- rdesktop-1.2.0/xwin.c	Thu Jan 30 11:27:45 2003
++++ rdesktop-1.2.0-paste/xwin.c	Wed Apr  2 18:06:14 2003
+@@ -20,6 +20,7 @@
+ 
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
++#include <X11/Xatom.h>
+ #include <time.h>
+ #include <errno.h>
+ #include "rdesktop.h"
+@@ -47,7 +48,7 @@
+ static XIC IC;
+ static XModifierKeymap *mod_map;
+ static Cursor current_cursor;
+-static Atom protocol_atom, kill_atom;
++static Atom protocol_atom, kill_atom, selection_atom;
+ 
+ /* endianness */
+ static BOOL host_be;
+@@ -457,6 +458,7 @@
+ 	protocol_atom = XInternAtom(display, "WM_PROTOCOLS", True);
+ 	kill_atom = XInternAtom(display, "WM_DELETE_WINDOW", True);
+ 	XSetWMProtocols(display, wnd, &kill_atom, 1);
++	selection_atom = XInternAtom(display, "RdeskopSelect", False);
+ 
+ 	return True;
+ }
+@@ -495,6 +497,30 @@
+ 	}
+ }
+ 
++static void
++xwin_send_selection(XEvent *xevent)
++{
++    Atom          act_type;
++    int           act_fmt;
++    unsigned long nitems;
++    unsigned long bytes_after;
++    unsigned char *prop;
++    
++    if (xevent->xselection.property == None)
++	fputs("selection conversion failed\n", stderr);
++    else
++    {
++	if (XGetWindowProperty(display, wnd, selection_atom, 0, 256, True,
++			       XA_STRING, &act_type, &act_fmt,
++			       &nitems, &bytes_after, &prop) == 0)
++	{
++	    rdp_send_keystring(xevent->xselection.time, prop);
++	}
++	else
++	    fputs("failed to fetch selection window property\n", stderr);
++    }
++}
++
+ /* Process all events in Xlib queue 
+    Returns 0 after user quit, 1 otherwise */
+ static int
+@@ -594,10 +620,23 @@
+ 				break;
+ 
+ 			case ButtonPress:
++			        if (xevent.xbutton.button == Button2)
++				{
++				    /* request the primary selection */
++				    XConvertSelection(display,
++						      XA_PRIMARY,
++						      XA_STRING,
++						      selection_atom,
++						      wnd,
++						      xevent.xbutton.time);
++				        break;
++				}
+ 				flags = MOUSE_FLAG_DOWN;
+ 				/* fall through */
+ 
+ 			case ButtonRelease:
++			        if (xevent.xbutton.button == Button2)
++				        break;
+ 				button = xkeymap_translate_button(xevent.xbutton.button);
+ 				if (button == 0)
+ 					break;
+@@ -677,6 +716,9 @@
+ 				}
+ 				break;
+ 
++		        case SelectionNotify:
++			    xwin_send_selection(&xevent);
++			    break;
+ 		}
+ 	}
+ 	/* Keep going */
