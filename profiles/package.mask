@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# Hannes Mehnertk <hannes@gentoo.org> (13 sep 2002)
+# masked kvim
+app-editors/kvim
+
 # <carpaski@gentoo.org> (12 Sep 2002)
 # Masked for testing
 >=net-www/apache-2.0.0
@@ -403,10 +407,6 @@ sys-apps/fakeroot
 # <blizzy@gentoo.org> (08 Aug 2002)
 # masked since it's beta
 =dev-java/sun-jdk-1.4.1_beta
-
-# Dan Armak <danarmak@gentoo.org> (06 aug 2002)
-# mask kvim (committing now); the ebuild is ok but conflicts with generic vim
-app-editors/kvim
 
 # <nitro@gentoo.org> (05 Aug 2002)
 # masked for testing -- new features
