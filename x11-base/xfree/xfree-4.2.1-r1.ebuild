@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.5 2002/11/05 12:56:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.6 2002/11/05 20:01:54 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -221,6 +221,10 @@ src_unpack() {
 		patch -p1 < ${FILESDIR}/${PVR}/109_ppc_4.2.1-xterm-eightBitInput-fix.patch \
 			> /dev/null || die
 	fi
+	# Fix unterminated bracket in xf86.h, closing bug #10271
+	einfo "  110_all_4.2.1-xf86_h-missing-bracket-fix.patch.bz2..."
+	patch -p1 < ${FILESDIR}/${PVR}/110_all_4.2.1-xf86_h-missing-bracket-fix.patch \
+		> /dev/null || die
 	ebegin "Done with patching"; eend 0
 
 	# Update the Savage Driver

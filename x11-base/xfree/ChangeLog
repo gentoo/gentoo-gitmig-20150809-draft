@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.58 2002/11/05 12:56:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.59 2002/11/05 20:01:54 azarah Exp $
 
   5 Nov 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r1.ebuild :
 
@@ -10,6 +10,9 @@
   Fix xterm exiting immediately on PPC.  Closes bug #10245.
   Also see http://www.geocrawler.com/archives/3/3/2001/9/100/6633199/
   Added patch 109_ppc_4.2.1-xterm-eightBitInput-fix.patch.
+
+  Fix unterminated bracket in xf86.h, closing bug #10271, thanks Gerk!
+  Added patch 110_all_4.2.1-xf86_h-missing-bracket-fix.patch.
 
   4 Nov 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r1.ebuild :
 
