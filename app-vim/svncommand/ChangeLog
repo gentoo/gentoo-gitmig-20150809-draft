@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/svncommand
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/svncommand/ChangeLog,v 1.1 2005/01/21 21:34:49 ciaranm Exp $
+
+*svncommand-2 (21 Jan 2005)
+
+  21 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +svncommand-2.ebuild:
+  New package. Thanks to Richard Brown in bug #78514.
+
