@@ -1,3 +1,5 @@
 MD5 d09e58c096b1a20bb3ecc32a825c1daf files/digest-noegnud-data-0.7.1 147
+MD5 51b8582db63daf1d9a9aa0845f08b1ef files/digest-noegnud-data-0.8.0 176
 MD5 3ac166848355dbb39797decbf77ca226 noegnud-data-0.7.1.ebuild 881
-MD5 ed3d40a62ad1074836275ce666951006 ChangeLog 416
+MD5 bc2f7975fbbdf3660587d22beb533f4e noegnud-data-0.8.0.ebuild 923
+MD5 36a89bc9e466c5c41965d278452205a9 ChangeLog 527
