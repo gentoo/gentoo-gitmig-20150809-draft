@@ -17,8 +17,8 @@ First, start XEmacs and load the package-ui elisp module.
 
   M-x load-library RET package-ui RET
 
-The first thing to set is the download site (XEmacs' package-ui
-installs via network).
+The first thing to set is the download site (package-ui installs via
+network).
 
   M-x package-get-remote RET
 
