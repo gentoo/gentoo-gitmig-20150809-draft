@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 0ff1cd2bb800c0f0ebbc34ecc330e23b ChangeLog 1162
 MD5 53a9f6613cf74956b8271db813dce1e4 galculator-1.2.1.ebuild 694
-MD5 bd00f14b4abd4003eaa7de9dc0290568 ChangeLog 1050
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 31495c54cb39bd220306e05397ba461c galculator-1.2.3.ebuild 695
-MD5 05438f75d9295d7fb30a0b0993cf12c1 files/digest-galculator-1.2.1 69
+MD5 1148239253a67a2223b7c048499838ff galculator-1.2.3.ebuild 700
 MD5 73dfeb7ae658c5cfddb22474778312a7 files/digest-galculator-1.2.3 69
+MD5 05438f75d9295d7fb30a0b0993cf12c1 files/digest-galculator-1.2.1 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBzHYOI1lqEGTUzyQRAsznAJ4/zHxKH2pyoQhgIIwhmYum5Fo1PQCcDJAO
-z+ZEZy0GQAixh+WkJlWeLl4=
-=vYw0
+iD8DBQFCSwJNugEuf3OQ0akRAkYmAJwPlNwUiJQZPXKW3cLGKS94KKJs8wCgkFTc
++L41W0i3FnpqiA6iFC7ji6k=
+=fHyP
 -----END PGP SIGNATURE-----
