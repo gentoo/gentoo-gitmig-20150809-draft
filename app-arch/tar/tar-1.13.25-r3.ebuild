@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.25-r3.ebuild,v 1.5 2004/01/04 16:54:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.25-r3.ebuild,v 1.6 2004/02/17 08:43:24 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 alpha mips hppa arm ppc ia64 sparc ppc64"
+KEYWORDS="x86 amd64 alpha mips hppa ppc ia64 sparc ppc64"
 
 DEPEND="app-arch/gzip
 	app-arch/bzip2
