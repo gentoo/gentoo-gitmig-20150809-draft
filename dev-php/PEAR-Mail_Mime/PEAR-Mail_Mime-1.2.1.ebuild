@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/PEAR-Mail_Mime-1.2.1.ebuild,v 1.5 2002/12/15 10:44:18 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/PEAR-Mail_Mime-1.2.1.ebuild,v 1.6 2003/02/10 16:51:57 rphillips Exp $
 
 P=${PN/PEAR-//}-${PV}
 DESCRIPTION="Provides classes to deal with creation and manipulation of mime messages."
@@ -14,7 +14,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${P}
 
 src_install () {
-	insinto /usr/lib/php/
+	insinto /usr/lib/php/Mail
 	doins mime.php
 	doins mimeDecode.php
 	doins mimePart.php

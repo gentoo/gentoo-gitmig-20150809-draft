@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/PEAR-Mail_Mime
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.5 2002/12/13 10:56:43 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.6 2003/02/10 16:51:57 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -9,6 +9,9 @@
   Finally had a chance to test this. Unmasking for x86.
 
 *PEAR-Mail_Mime-1.2.1 (18 Nov 2002)
+
+  10 Feb 2003; Ryan Phillips <rphillips@gentoo.org> :
+  Changed install directory to /usr/lib/php/Mail
 
   18 Nov 2002; Michael Cummings <mcummings@gentoo.org> 
   PEAR-Mail_Mime-1.2.1.ebuild ChangeLog :
