@@ -1,6 +1,17 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.17 2003/03/14 11:44:53 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.18 2003/03/26 20:23:07 malverian Exp $
+
+*povray-3.50c (26 Mar 2003)
+
+  26 Mar 2003; Philip Walls <malverian@gentoo.org> povray-3.50c.ebuild :
+  Version bump, fixes bug #18206
+
+*povray-3.5a (05 Oct 2002)
+
+  14 Mar 2003; Stefan Jones <cretin@gentoo.org> povray-3.5a.ebuild :
+  Added pthread to librarys for /usr/X11R6/lib/libX11.a dep
+  Bug 17493
 
   02 March 2003; Jon Portnoy <avenj@gentoo.org> povray-3.5a.ebuild :
   Fixed missing 'else' for GCC CPPFLAGS.
@@ -8,12 +19,6 @@
   02 March 2003; Jon Portnoy <avenj@gentoo.org> files/prob-opt.sh :
   Added script from Klaus-J. Wolf <yanestra@web.de> to optimize
   POV-ray significantly more heavily.
-
-*povray-3.5a (05 Oct 2002)
-
-  14 Mar 2003; Stefan Jones <cretin@gentoo.org> povray-3.5a.ebuild :
-  Added pthread to librarys for /usr/X11R6/lib/libX11.a dep
-  Bug 17493
 
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> povray-3.5a.ebuild :
   Add alpha to KEYWORDS

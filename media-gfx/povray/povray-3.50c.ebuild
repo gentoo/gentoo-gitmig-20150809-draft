@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.16 2003/03/14 11:44:53 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.1 2003/03/26 20:23:07 malverian Exp $
 
 IUSE="icc X svga"
 
