@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.21 2004/07/02 10:03:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.22 2004/07/14 02:29:01 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -13,7 +13,7 @@ SLOT="2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 alpha ia64 hppa mips"
 IUSE="gdbm ldap mysql postgres kerberos static ssl java pam"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-libs/db-3.2
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
@@ -23,7 +23,6 @@ RDEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	kerberos? ( virtual/krb5 )
 	java? ( virtual/jdk )"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	sys-devel/libtool
