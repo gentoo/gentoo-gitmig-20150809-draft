@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmud/pmud-0.10.1-r3.ebuild,v 1.1 2004/03/04 11:19:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmud/pmud-0.10.1-r3.ebuild,v 1.2 2004/03/04 11:21:10 vapier Exp $
 
 inherit eutils
 
@@ -33,18 +33,19 @@ src_compile() {
 
 src_install() {
 	doman pmud.8 snooze.8 fblevel.8
-	exeinto /sbin
-	doexe pmud wakebay snooze fblevel
+	into /
+	dosbin pmud wakebay snooze fblevel || die "dosbin failed"
 	exeinto /etc/power
 	doexe ${FILESDIR}/pwrctl{,-local}
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/pmud.start pmud
 	insinto /etc
 	doins ${FILESDIR}/power.conf
-	use X && ( \
-	doman batmon.8 xmouse.8
-	exeinto /usr/bin
-	doexe Batmon
-	exeinto /usr/X11R6/bin
-	doexe xmouse )
+	if use X ; then
+		doman batmon.8 xmouse.8
+		into /usr
+		dobin Batmon || die "Batmon failed"
+		exeinto /usr/X11R6/bin
+		doexe xmouse || die "xmouse failed"
+	fi
 }
