@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5fbc5654ced81b68bde95d04d47a479a ChangeLog 1787
-MD5 d4626d087d4cc834a4a8571324227ce4 scsh-0.6.1-r1.ebuild 1216
-MD5 01b04a1039ff041c6109dc2f5c16609f scsh-0.6.3.ebuild 976
-MD5 ff87c2de5e64b28d6bf7edaea751cfec scsh-0.6.4.ebuild 975
+MD5 36f7f04c6d825a3bbcf8edb2285fee9f scsh-0.6.1-r1.ebuild 1222
+MD5 639e28ff974a2b300f37e8c6e8561d5c scsh-0.6.3.ebuild 982
+MD5 a5d3e1f0aa0f2294a4721330c72ca660 scsh-0.6.4.ebuild 981
 MD5 8c153b306d4485bac0a7bc7f26dea78f metadata.xml 955
-MD5 22c582814adb24247a905d6f5db33438 scsh-0.6.5.ebuild 824
+MD5 2fd93799d3d749ad03f5f5c3b5b86ce1 scsh-0.6.5.ebuild 830
 MD5 13ee0eae9052df37dccd3543b4f6afb5 files/digest-scsh-0.6.1-r1 63
 MD5 3e98983c5c98b782b38dd6a79c0b223d files/digest-scsh-0.6.3 63
 MD5 a372b30637890116cf31b7ad64a68129 files/digest-scsh-0.6.4 63
 MD5 07af78c1074e544bc9b894bbb10436be files/digest-scsh-0.6.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4OkxHTu7gpaalycRAnorAKCsCx6a10Pawc166PkFgamgr05ARgCgq1AB
-y6EymuOJbPKWHbpn4wUdM2w=
-=ZQa7
------END PGP SIGNATURE-----
