@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.90 2003/04/13 08:59:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.91 2003/04/22 08:24:31 kosmikus Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -86,6 +86,7 @@ mule - Adds multi-language support to XEmacs
 mysql - Adds mySQL support
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
+nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nocardbus - Disables cardbus support in pcmcia-cs
 oav - Adds support for anti-virus from the openantivirus.org project

@@ -18,6 +18,7 @@ app-shells
 app-text 
 app-xemacs
 dev-db 
+dev-haskell 
 dev-java 
 dev-lang 
 dev-libs
