@@ -1,16 +1,17 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.93.ebuild,v 1.2 2001/11/05 12:27:05 achim Exp $
+# Maintainer: Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96.ebuild,v 1.1 2002/06/07 20:43:21 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gda lib"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-db/${P}.tar.gz
-	 ftp://ftp.gnome-db.org/pub/gnome-db/sources/${PV}/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnome-db.org/pub/gnome-db/sources/latest/${P}.tar.gz
+	 ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/gnome-db"
 
 RDEPEND="virtual/glibc
 	 >=gnome-base/gconf-1.0.4-r2
+	 <gnome-base/gconf-1.1
 	 >=gnome-base/oaf-0.6.6-r1
 	 >=gnome-base/bonobo-1.0.9-r1
 	 >=dev-libs/libxslt-1.0.1
@@ -24,6 +25,7 @@ RDEPEND="virtual/glibc
 	 ldap? ( >=net-nds/openldap-1.2.11 )"
 
 DEPEND="${RDEPEND}
+	>=app-text/scrollkeeper-0.2-r3
 	sys-apps/which"
 
 
@@ -36,10 +38,13 @@ src_compile() {
 		myconf="--with-mysql=/usr"
 	fi
 
-  	if [ "`use ldap`" ]
-	then
-    		myconf="$myconf --with-ldap=/usr"
-  	fi
+#  	if [ "`use ldap`" ]
+#	then
+#    		myconf="$myconf --with-ldap=/usr"
+#  	fi
+#
+# LDAP support is currently broken
+	myconf="$myconf --without-ldap"
 
   	if [ "`use odbc`" ]
 	then
@@ -53,32 +58,32 @@ src_compile() {
   
   	# Wierd one, it dont detect bonobo. If someone could have a look
 	# and fix if i havent gotten to it yet.
-	myconf="$myconf --disable-bonobotest"
+#	myconf="$myconf --disable-bonobotest"
 
 	# Do not compile buildin sqlite
 	cp configure configure.orig
 	grep -v sqlite configure.orig >configure
 	chmod +x configure
 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr	 				\
-		    --sysconfdir=/etc		 			\
-		    --localstatedir=/var/lib				\
+	./configure --host=${CHOST} \
+		    --prefix=/usr \
+		    --sysconfdir=/etc \
+		    --localstatedir=/var/lib \
 		    $myconf || die
 
 	# Build and use an external version of sqlite since some versions
 	# of libgda have a bug where the buildin do not compile.
 	# Also cant hurt to use the latest version of sqlite :)
-	mv ${S}/providers/gda-default-server/gda-default.h 		\
+	mv ${S}/providers/gda-default-server/gda-default.h \
 		${S}/gda-default.h.orig
-	sed -e 's/\"build_sqlite\/sqlite\.h\"/<sqlite.h>/'		\
-		${S}/gda-default.h.orig >				\
+	sed -e 's/\"build_sqlite\/sqlite\.h\"/<sqlite.h>/' \
+		${S}/gda-default.h.orig > \
 		${S}/providers/gda-default-server/gda-default.h || die
-	ln -s /usr/lib/libsqlite.a					\
+	ln -s /usr/lib/libsqlite.a \
 		${S}/providers/gda-default-server/sqlite/libsqlite.a
-	mv providers/gda-default-server/Makefile			\
+	mv providers/gda-default-server/Makefile \
 		providers/gda-default-server/Makefile.orig
-	grep -v '= sqlite' providers/gda-default-server/Makefile.orig >	\
+	grep -v '= sqlite' providers/gda-default-server/Makefile.orig > \
 		providers/gda-default-server/Makefile
 
 	# Doesn't work with -j 4 (hallski)
@@ -87,17 +92,32 @@ src_compile() {
 
 src_install() {
 
-	make  prefix=${D}/usr						\
-	      sysconfdir=${D}/etc					\
-	      localstatedir=${D}/var/lib				\
-	      INSTALLMAN3DIR=${D}/usr/share/man/man3 			\
-	      GDA_oafinfodir=${D}/usr/share/oaf				\
-	      install || die
+	cd ${S}/doc
+	cp Makefile Makefile.old
+	sed -e "s:scrollkeeper-update.*::g" Makefile.old > Makefile
+	rm Makefile.old
+	cd ${S}
 
-	into /usr
+	make  prefix=${D}/usr \
+	      sysconfdir=${D}/etc \
+	      localstatedir=${D}/var/lib \
+	      INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+	      GDA_oafinfodir=${D}/usr/share/oaf \
+	      install || die
 
 	# Not needed as we build sqlite seperately
 #	dobin providers/gda-default-server/build_sqlite/{lemon,sqlite}
 
 	dodoc AUTHORS COPYING.* ChangeLog NEWS README
 }
+
+pkg_postinst() {
+	echo ">>> Updating Scrollkeeper database..."
+	scrollkeeper-update >/dev/null 2>&1
+}
+
+pkg_postrm() {
+	echo ">>> Updating Scrollkeeper database..."
+	scrollkeeper-update >/dev/null 2>&1
+}
+
