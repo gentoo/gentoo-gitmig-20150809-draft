@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sketch/sketch-0.6.15.ebuild,v 1.2 2003/02/13 12:38:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sketch/sketch-0.6.15.ebuild,v 1.3 2003/03/19 20:39:57 hanno Exp $
 
 IUSE="nls"
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ DEPEND=">=dev-python/Imaging-1.1.2-r1
 RDEPEND="nls? ( sys-devel/gettext )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 src_compile() {
 	use nls && useopts="${useopts} --with-nls"
