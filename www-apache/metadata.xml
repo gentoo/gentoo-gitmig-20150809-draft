@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The www-apache category contains modules for the Apache webserver.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría www-apache contiene módulos del servidor web Apache.
+	</longdescription>
 </catmetadata>
 
