@@ -1,6 +1,9 @@
 # ChangeLog for games-action/slune
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.7 2004/06/24 21:59:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.8 2004/12/28 22:42:50 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> slune-0.3.1.ebuild,
   slune-0.5.ebuild, slune-0.6.1.ebuild:
@@ -12,12 +15,12 @@
 
 *slune-0.6.1 (21 Dec 2003)
 
-  21 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> slune-0.6.1.ebuild:
+  21 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> slune-0.6.1.ebuild:
   Version bump
 
 *slune-0.5 (05 Dec 2003)
 
-  05 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> slune-0.5.ebuild:
+  05 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> slune-0.5.ebuild:
   Version bump. Also closes bug #34625.
 
 *slune-0.3.1 (10 May 2003)
