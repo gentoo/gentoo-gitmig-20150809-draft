@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.2.7,v 1.1 2002/12/25 21:37:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.2.7,v 1.2 2003/01/02 21:40:41 azarah Exp $
 
 
 source /etc/init.d/functions.sh || {
@@ -12,43 +12,42 @@ source /etc/init.d/functions.sh || {
 
 usage() {
 cat << "USAGE_END"
-Usage: gcc-config [Option] <CHOST>-<gcc version>
+Usage: gcc-config [Option] [GCC Profile]
+Change the current gcc profile, or give info about profiles.
+
 Options:
-	[--use-old]
 
-		Use the old profile if one was selected.
+  --use-old              Use the old profile if one was selected.
 	
-	[--use-portage-chost]
-
-		Only set to given profile if its CHOST is the same as that
-		set for portage in /etc/make.conf (or one of other portage
-		config files...).
+  --use-portage-chost    Only set to given profile if its CHOST is the same
+                         as that set for portage in /etc/make.conf (or one of
+                         other portage config files...).
 	
-	[--get-current-profile]
+  --get-current-profile  Print current used gcc profile.
 
-		Print current used gcc profile.
+  --list-profiles        Print a list of available profiles.
 
-	[--list-profiles]
-
-	    Print a list of available profiles.
-
-	[--print-environ]
-
-	    Print environment that can be used to setup things for current
-		gcc profile, or specified one ...
+  --print-environ        Print environment that can be used to setup things
+                         for current gcc profile, or specified one ...
 	
-	[--get-bin-path]
-
-		Print path where binaries of given/current profile are located.
+  --get-bin-path         Print path where binaries of given/current profile
+                         are located.
 	
-	[--get-lib-path]
+  --get-lib-path         Print path where libraries of given/current profile
+                         are located.
 
-		Print path where libraries of given/current profile are located.
-
-	[--get-stdcxx-incdir]
-
-		Print path to g++ include files of given/current profile.
+  --get-stdcxx-incdir    Print path to g++ include files of given/current
+                         profile.
 	
+The profile name is in the form of:
+
+  <CHOST>-<gcc version>
+
+For example:
+
+  i686-pc-linux-gnu-3.2.1
+
+
 
 USAGE_END
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.12 2002/12/25 21:37:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.13 2003/01/02 21:40:41 azarah Exp $
+
+  02 Jan 2003; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.2.7 :
+
+  Update usage screen to be more compact.  Also should be more consistant
+  with other unix tools.  Bug #13005.
 
 *gcc-config-1.2.7 (25 Dec 2002)
 
