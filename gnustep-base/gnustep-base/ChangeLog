@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.21 2005/03/17 20:52:30 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.22 2005/04/04 20:34:01 gustavoz Exp $
+
+  04 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnustep-base-1.10.1-r1.ebuild:
+  Stable on sparc
 
 *gnustep-base-1.10.2_pre20050312 (17 Mar 2005)
 
