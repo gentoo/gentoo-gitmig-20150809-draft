@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.65-r5.ebuild,v 1.5 2002/12/09 04:22:39 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.65-r5.ebuild,v 1.6 2002/12/11 17:35:55 foser Exp $
 
 IUSE="nls"
 
@@ -15,7 +15,7 @@ DEPEND="sys-devel/perl
 	>=gnome-base/gnome-libs-1.4.1.7
 	=gnome-base/gnome-panel-1.4*
 	>=dev-libs/pilot-link-0.11.0
-	>=dev-util/gob-1.0.12
+	=dev-util/gob-1*
 	>=gnome-base/libglade-0.17"
 
 RDEPEND="nls? ( sys-devel/gettext )"
