@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/mjc-sources-2.4.20-r2.ebuild,v 1.1 2002/10/01 00:37:22 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/mjc-sources-2.4.20-r2.ebuild,v 1.2 2002/10/01 13:05:56 lostlogic Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -23,5 +23,7 @@ src_unpack() {
 	cd linux-${KV}
 	bzcat ${DISTDIR}/patch-2.4.20-pre7.bz2|patch -p1 || die "patch 1 failed"
 	bzcat ${DISTDIR}/patch-${KV}.bz2 | patch -p1 || die "patch 2 failed"
+
+	kernel_universal_unpack
 
 }
