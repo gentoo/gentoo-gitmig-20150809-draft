@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/libreadline-java
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/ChangeLog,v 1.5 2004/07/17 10:04:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/ChangeLog,v 1.6 2004/08/24 03:18:29 zx Exp $
+
+  23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> libreadline-java-0.8.0.ebuild:
+  Marking stable on x86
 
   17 Jul 2004; David Holm <dholm@gentoo.org> libreadline-java-0.8.0.ebuild:
   Added to ~ppc.

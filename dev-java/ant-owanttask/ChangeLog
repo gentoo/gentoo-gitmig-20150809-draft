@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-owanttask
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.4 2004/06/24 22:16:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ChangeLog,v 1.5 2004/08/24 03:21:50 zx Exp $
+
+  23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> ant-owanttask-1.1.ebuild:
+  Marking stable on x86
 
   30 Mar 2004; David Holm <dholm@gentoo.org> ant-owanttask-1.1.ebuild:
   Added to ~ppc.
