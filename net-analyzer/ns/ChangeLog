@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ns
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.14 2005/02/13 22:25:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.15 2005/02/22 02:11:18 robbat2 Exp $
+
+*ns-2.28 (21 Feb 2005)
+
+  21 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/ns-2.28-gentoo.diff, +ns-2.28.ebuild:
+  Bug #82770, version bump.
 
   13 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Add myself to metadata.
