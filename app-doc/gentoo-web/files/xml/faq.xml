@@ -47,7 +47,8 @@
 	<section>
 		<title>How do I get <path>/dev/dsp</path>?</title>
 		<body><p>You can create it by typing the following as root:</p>
-		<pre># <i>MAKEDEV /dev/audio</i></pre></body>
+		<pre># <i>cd /dev</i>
+# <i>./MAKEDEV audio</i></pre></body>
 	</section>
 </chapter>
 
@@ -128,6 +129,30 @@ that you can build apps from sources. We generally only build binaries for relea
 	<section>
 		<title>Can I rsync from another operating system?</title>
 		<body><p>There's a program called unison that works under both UNIX and Win32, available from <uri>http://www.cis.upenn.edu/~bcpierce/unison/</uri>.</p></body>
+	</section>
+</chapter>
+
+<chapter>
+	<title>Usage</title>
+	<section>
+		<title>I can start X applications as root only</title>
+		<body><p>Your <path>/tmp</path> directory has the wrong permissions (it needs the sticky bit set). Type the following as root:</p>
+		<pre># <i>chmod 1777 /tmp</i></pre>
+		</body>
+	</section>
+
+	<section>
+		<title>DNS name resolution works for root only</title>
+		<body><p><path>/etc/resolve.conf</path> has the wrong permissions; ,<c>chmod</c> it as follows:</p>
+		<pre># <i>chmod 644 /etc/resolve.conf</i></pre>
+		</body>
+	</section>
+
+	<section>
+		<title>Why is KDE not reading <path>/etc/profile</path>?</title>
+		<body><p>You need to add <c>--login</c> to the first line in <path>/opt/kde2.1/startkde</path>, so that it reads as follows:</p>
+		<pre>#!/bin/sh --login</pre>
+		</body>
 	</section>
 </chapter>
 
