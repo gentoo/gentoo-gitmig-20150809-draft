@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.21 2004/06/28 17:35:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.22 2004/07/30 03:40:49 tgall Exp $
+
+  29 Jul 2004; Tom Gall <tgall@gentoo.org> gtkglarea-1.99.ebuild:
+  stable on ppc64, bug #57015
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> gtkglarea-1.2.3-r1.ebuild,
   gtkglarea-1.99.0.ebuild:
