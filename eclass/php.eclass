@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.59 2003/06/26 20:24:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.60 2003/06/26 20:35:14 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -35,7 +35,7 @@ if [ -z "$SRC_URI" ]; then
 	#mirror://gentoo/${MY_P}-db4.diff.gz 
 fi
 
-IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gd-external gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit png postgres qt snmp spell ssl tiff truetype"
+IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gd-external gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit png postgres qt snmp spell ssl tiff truetype xml2"
 
 # Berkdb is disabled due to DB4 and changes in PHP4.3.2
 #RDEPEND="${RDEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
