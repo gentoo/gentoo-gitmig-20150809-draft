@@ -1,6 +1,21 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.2 2002/04/14 12:25:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.3 2002/04/15 21:46:16 seemant Exp $
+
+*libmpeg3-1.5-r1 (15 Apr 2002)
+
+  15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> libmpeg3-1.5-r1.ebuild
+  files/digest-libmpeg3-1.5-r1 files/libmpeg3-gentoo-patch-part1
+  files/libmpeg3-gentoo-patch-part2 :
+
+  It seems that the libmpeg3 folks did not design libmpeg3 well for installing
+  the header files.  This is unfortunate because a few applications like
+  transcode and mplayer need those headers in order to build libmpeg3 support.
+  Their src.rpm's however, take care of this problem through patching.  So,
+  to this end, I have patched the Makefile in patch-part1 to actually
+  install the header files.  And I have patched the header files themselves
+  in patch-part2 so that they include one another properly with 
+  #include <blah> instead of #include "../blah"  This works well, so far.
 
 *libmpeg3-1.5 (14 Apr 2002)
 
