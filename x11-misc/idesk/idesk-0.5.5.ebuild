@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2              
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.5.5.ebuild,v 1.3 2003/07/18 08:12:05 pvdabeel Exp $                                                                    
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.5.5.ebuild,v 1.4 2003/09/05 00:57:57 msterret Exp $
 
-DESCRIPTION="Utility to place icons on the root window"                         
-HOMEPAGE="http://idesk.timmfin.net"                           
-SRC_URI="http://idesk.timmfin.net/releases/${P}.tar.gz"                  
-                                                                                
-LICENSE="BSD"                                                                   
-SLOT="0"                                                                        
+DESCRIPTION="Utility to place icons on the root window"
+HOMEPAGE="http://idesk.timmfin.net"
+SRC_URI="http://idesk.timmfin.net/releases/${P}.tar.gz"
+
+LICENSE="BSD"
+SLOT="0"
 KEYWORDS="~x86 ppc"
-                                                                                
+
 DEPEND=">media-libs/imlib-1.9.14
 	virtual/x11
 	media-libs/freetype
@@ -22,7 +22,7 @@ DEPEND=">media-libs/imlib-1.9.14
 	=x11-libs/gtk+-2*
 	media-libs/libart_lgpl"
 
-S="${WORKDIR}"                                                            
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
@@ -35,18 +35,18 @@ src_unpack() {
 
 src_compile() {
 	emake || die
-}	
+}
 
-src_install() {                                                                
+src_install() {
 	exeinto /usr/bin
-	doexe idesk	                                  
+	doexe idesk
 	dodoc README
 	doman ${FILESDIR}/idesk.1 ${FILESDIR}/ideskrc.5
-}                                                                               
+}
 
 pkg_postinst() {
 	einfo
 	einfo "NOTE: Please refer to ${HOMEPAGE}"
 	einfo "NOTE: For info on configuring ${PN}"
 	einfo
-}	
+}

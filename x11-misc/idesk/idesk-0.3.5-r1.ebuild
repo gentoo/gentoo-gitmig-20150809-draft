@@ -1,26 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2              
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.3.5-r1.ebuild,v 1.6 2003/07/18 08:12:05 pvdabeel Exp $                                                                    
-DESCRIPTION="Utility to place icons on the root window"                         
-                                                                                
-HOMEPAGE="http://linuxhelp.hn.org/idesk.php"                           
-SRC_URI="http://linuxhelp.hn.org/${P}.tar.gz"                  
-                                                                                
-LICENSE="BSD"                                                                   
-SLOT="0"                                                                        
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.3.5-r1.ebuild,v 1.7 2003/09/05 00:57:57 msterret Exp $
+DESCRIPTION="Utility to place icons on the root window"
+
+HOMEPAGE="http://linuxhelp.hn.org/idesk.php"
+SRC_URI="http://linuxhelp.hn.org/${P}.tar.gz"
+
+LICENSE="BSD"
+SLOT="0"
 KEYWORDS="x86 ppc"
-                                                                                
+
 DEPEND=">media-libs/imlib-1.9.14
 	virtual/x11
 	media-libs/freetype"
 
-S="${WORKDIR}/${P}"                                                            
+S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# fix for xft2 the ugly way	
+	# fix for xft2 the ugly way
 	CXXFLAGS="${CXXFLAGS} -I/usr/include/freetype2 -U__linux__"
 	#Allow for more robust CXXFLAGS
 	mv Makefile Makefile.orig
@@ -29,17 +29,17 @@ src_unpack() {
 
 src_compile() {
 	emake || die
-}	
+}
 
-src_install() {                                                                
+src_install() {
 	exeinto /usr/bin
-	doexe idesk	                                  
+	doexe idesk
 	dodoc README
-}                                                                               
+}
 
 pkg_postinst() {
 	einfo
 	einfo "NOTE: Please refer to ${HOMEPAGE}"
 	einfo "NOTE: For info on configuring ${PN}"
 	einfo
-}	
+}
