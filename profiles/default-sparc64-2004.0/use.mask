@@ -9,6 +9,7 @@ altivec
 apm
 directfb
 divx4linux
+djbfft
 fdftk
 hal
 icc
