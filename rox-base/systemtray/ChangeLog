@@ -1,0 +1,11 @@
+# ChangeLog for rox-base/systemtray
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtray/ChangeLog,v 1.1 2004/11/27 10:49:17 sergey Exp $
+
+*systemtray-0.2 (27 Nov 2004)
+
+  27 Nov 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +systemtray-0.2.ebuild:
+  First commit of systemtray. Thanks to Alexander Simonov <devil@gentoo.org.ua> 
+  (Bug #51996) for the ebuild.
+
