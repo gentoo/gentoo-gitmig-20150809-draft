@@ -807,3 +807,8 @@ app-arch/gnorpm
 # seemant@gentoo.org 26 May 2002
 # Masked for testing
 =net-www/links-2.0_pre3
+
+# seemant@gentoo.org 26 May 2002
+# masked because there are two ebuilds in two different categories
+=app-crypt/vtun-2.5
+=net-misc/vtun-2.5
