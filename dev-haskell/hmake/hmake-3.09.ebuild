@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.09.ebuild,v 1.1 2005/03/08 23:03:12 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.09.ebuild,v 1.2 2005/03/23 19:52:25 kosmikus Exp $
 
 inherit base fixheadtails
 
@@ -14,6 +14,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="virtual/ghc
+	!>=virtual/ghc-6.4
 	sys-libs/readline"
 RDEPEND="sys-libs/readline
 	virtual/libc

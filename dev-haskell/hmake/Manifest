@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 681f9ada5ec6c3413b3f3995cd6a903b ChangeLog 1860
-MD5 dd301d3b0c4370817c888f5ef010a402 hmake-3.08.ebuild 1387
-MD5 e0ce59fd27b9382896cdb87d5fa48f89 metadata.xml 286
-MD5 cebcfca46a06fcb12daa8329c708b854 hmake-3.09.ebuild 1363
+MD5 f64e2e304b74c40b648b842af64be5ff hmake-3.09.ebuild 1385
 MD5 2be0585b3db5731cb7ba2836d33faa37 hmake-3.10.ebuild 1370
+MD5 8defc6845dd623f634123e761ffb337c hmake-3.08.ebuild 1407
+MD5 21a90fba8a96097ced26dcf2d9fafa1c ChangeLog 2021
+MD5 e0ce59fd27b9382896cdb87d5fa48f89 metadata.xml 286
 MD5 77342bba93c32304e51d32b4894dddf2 files/digest-hmake-3.08 61
 MD5 50a20e8dc3ef16030908acbe85b97f1b files/digest-hmake-3.09 62
 MD5 fdfe8526461bed837798b8d287cc82bb files/digest-hmake-3.10 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCQRzzBQBy/eDH5uERAhuYAJ4xLPsQ/xDetZuzck+J4pEo7nlX/QCgiwfy
-wA9ao5f9TPgXeAlZoVNKkL8=
-=uTAf
+iD8DBQFCQcolOKSBj1ObwosRAlk2AKCRyMCsK3TnaqA+q+lSiaxBhS/wxACdFNHI
+ASV4rkOptazVldzsAgk1FS0=
+=bLYs
 -----END PGP SIGNATURE-----
