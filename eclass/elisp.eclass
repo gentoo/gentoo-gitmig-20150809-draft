@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.2 2003/02/09 09:40:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.3 2003/02/11 22:19:53 mkennedy Exp $
 
 # This eclass sets the site-lisp directory for emacs-related packages.
 
@@ -39,7 +39,7 @@ EOF
 	ls ${SITELISP}/[0-9][0-9]* |sort -n |grep -vE '~$' | \
 	while read sf 
 	do
-		einfo "  Addding $sf..."  
+		einfo "  Adding $sf..."  
 		# Great for debugging, too noisy and slow for users though
 # 		echo "(message \"Loading $sf...\")" >>${SITELISP}/site-start.el
 		cat $sf >>${SITELISP}/site-start.el
