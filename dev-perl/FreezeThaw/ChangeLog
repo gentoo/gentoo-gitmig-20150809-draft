@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FreezeThaw
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.11 2004/02/17 19:52:04 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> FreezeThaw-0.43-r1.ebuild:
+  stable on alpha and ia64
 
 *FreezeThaw-0.43-r1 (21 Jun 2003)
  
