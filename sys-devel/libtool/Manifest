@@ -1,20 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ad4a9a44ac8f7543ac5d638b9eb18e6f ChangeLog 9389
-MD5 7f5ccbcb874cc16fbcb22e109df0090b libtool-1.4.1-r10.ebuild 1747
-MD5 81541a04cb5f25e98a3c787a454437a1 libtool-1.4.3-r3.ebuild 4697
-MD5 62bbcf735380d34f96de32477ec93f75 libtool-1.4.3-r4.ebuild 5009
-MD5 542c4a569ca615c9afa252798590abd1 libtool-1.5.2-r3.ebuild 5354
-MD5 36f9b7c44b951475ac6ccc5ff819ecea libtool-1.5.2-r4.ebuild 5372
-MD5 2799bb13a45fc240046996e10cc12883 libtool-1.5.2-r5.ebuild 5893
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 52842e1a0dc66123d0049371f3e02030 libtool-1.5.6.ebuild 5951
-MD5 cd3779fa4710870bb83597c39736e822 files/digest-libtool-1.4.1-r10 66
-MD5 6e892e6bd1ca4d9babce9f9163f6118e files/digest-libtool-1.4.3-r3 131
-MD5 6e892e6bd1ca4d9babce9f9163f6118e files/digest-libtool-1.4.3-r4 131
-MD5 3b92d43ab25bc1ad32ee87d89660f268 files/digest-libtool-1.5.2-r3 131
-MD5 3b92d43ab25bc1ad32ee87d89660f268 files/digest-libtool-1.5.2-r4 131
-MD5 3b92d43ab25bc1ad32ee87d89660f268 files/digest-libtool-1.5.2-r5 131
-MD5 6e26db6ca2d038bca2ea11f6ba9c2e83 files/digest-libtool-1.5.6 131
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 2799bb13a45fc240046996e10cc12883 libtool-1.5.2-r5.ebuild 5893
 MD5 bd27a462a2a9fe3662d3d34179ed3200 files/libltdl-uclibc.patch 4590
+MD5 6e26db6ca2d038bca2ea11f6ba9c2e83 files/digest-libtool-1.5.6 131
+MD5 3b92d43ab25bc1ad32ee87d89660f268 files/digest-libtool-1.5.2-r5 131
 MD5 2cd6110e84c85c183c7b8dcd0be814e7 files/ltconfig-uclibc.patch 1167
 MD5 be0c4444b82ac7cda7c40165174ef2a7 files/1.4.1/libtool-1.4.1-duplicate-dependency.patch 2895
 MD5 63c00ae5db1e0c5c92e6d2c5fdf47c19 files/1.4.1/libtool-1.4.1-ltmain.sh-hack.patch 680
@@ -58,8 +51,15 @@ MD5 94591cd9fb847704a323c0faf31fdbf2 files/1.4.3/libtool-1.4.3-ltmain-SED.patch 
 MD5 a9be6866b7096092613595ccff0fd773 files/1.4.3/libtool-1.4.3-pass-thread-flags.patch 494
 MD5 c4fd959743953818fe6ab06c7d84e795 files/1.4.3/libtool-1.4.3-quotes.patch 12951
 MD5 5fc838faf61964397b525e579783c190 files/1.4.3/libtool-1.4.3-uclibc.patch 5911
+MD5 5e84c0a07a77ed6408b25453373914ab files/1.5.6/libtool-1.5.6-ltmain-SED.patch 431
 MD5 6ef585a59058c79f3601bbd7787f2683 files/1.5.2/libtool-1.5-libtool.m4-x86_64.patch 466
 MD5 0fb02114fa6b6cd63ea25510f04f346a files/1.5.2/libtool-1.5-testfailure.patch 6448
 MD5 8ac4aa8ff1c680fe44447274d9f3a673 files/1.5.2/libtool-1.5.2-libtool_m4-shared_ext.patch 882
 MD5 d2313fcf3c18603f201627ca94850786 files/1.5.2/libtool-1.5.2-ltmain_sh-max_cmd_len.patch 1153
-MD5 5e84c0a07a77ed6408b25453373914ab files/1.5.6/libtool-1.5.6-ltmain-SED.patch 431
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhY9ZHTu7gpaalycRAtxQAJ9SVWZgtXmg/9pthnvr44D5ygWckACfXjMb
+dw2+mo+MsaHdrX/gEfMLWOc=
+=cIfk
+-----END PGP SIGNATURE-----
