@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.3.ebuild,v 1.9 2004/06/24 22:01:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.3.ebuild,v 1.10 2004/07/05 13:21:19 eldad Exp $
 
 inherit libtool flag-o-matic gcc eutils
 
@@ -37,7 +37,7 @@ src_unpack() {
 	replace-flags -O3 -O
 	replace-flags -O2 -O
 	# Fix gcc-3.4 segfault #49238
-	[ "`gcc-fullversion`" == "3.4" ] && epatch ${FILESDIR}/${PV}-gcc34.patch
+	[ "`gcc-version`" == "3.4" ] && epatch ${FILESDIR}/${PV}-gcc34.patch
 
 	# running a full elibtoolize seems to break things in this
 	# package... see bug 41831 (17 Feb 2004 agriffis)

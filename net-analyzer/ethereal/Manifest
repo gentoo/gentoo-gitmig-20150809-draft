@@ -1,6 +1,6 @@
-MD5 f8140be0e8b1023ccc5741d68bff7a03 ethereal-0.10.3.ebuild 2289
+MD5 5997be2e8aa474fdd1d766cfd0c3ee53 ethereal-0.10.3.ebuild 2283
 MD5 eeaeb7291d5067481b7f1ecdb23df491 ethereal-0.10.2.ebuild 2215
-MD5 a7bd9b4c7bc81da5d66f59adf8189fa6 ethereal-0.10.4.ebuild 2288
+MD5 3b95052150538b81ebbf8778038b299d ethereal-0.10.4.ebuild 2281
 MD5 260c2f391077ed03191ceb0deca8fc67 ethereal-0.9.14.ebuild 2095
 MD5 0fc10a457202800a08bdfb74bbcb6c4f ChangeLog 9634
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
@@ -8,6 +8,7 @@ MD5 2ab5b6f3390280518b4458929486ac29 ethereal-0.9.16.ebuild 2237
 MD5 02b14ac5cd9a9a1f8781632c19b85ae9 ethereal-0.9.16-r1.ebuild 2313
 MD5 3ce13570e210d6dc1669b91936d2f051 files/digest-ethereal-0.9.16-r1 69
 MD5 5a73274ec255373b4e618388cd057275 files/0.10.3-gcc34.patch 458
+MD5 5a73274ec255373b4e618388cd057275 files/0.10.4-gcc34.patch 458
 MD5 653a02c3d271542800810a5cf407af28 files/digest-ethereal-0.10.2 69
 MD5 923bd4108aa5e66d0f86506ef47d5132 files/digest-ethereal-0.10.3 69
 MD5 c972f5f4b83ea84388e31267193e96d7 files/digest-ethereal-0.10.4 69
