@@ -1,0 +1,88 @@
+--- fvwm-2.5.10/fvwm/add_window.c	2004-03-17 14:42:53.000000000 +0000
++++ fvwm/fvwm/add_window.c	2004-03-30 10:05:08.000000000 +0100
+@@ -937,9 +937,10 @@
+ 	size_borders b;
+ 
+ 	XSetWindowAttributes attributes;
+-	int valuemask = CWBackingStore | CWBackPixmap | CWCursor | CWEventMask |
+-		CWSaveUnder;
++	int valuemask;
+ 
++	valuemask = CWBackingStore | CWBackPixmap | CWCursor | CWEventMask |
++		CWSaveUnder;
+ 	attributes.backing_store = NotUseful;
+ 	attributes.background_pixmap = None;
+ 	attributes.cursor = Scr.FvwmCursors[CRS_DEFAULT];
+@@ -1829,7 +1830,6 @@
+ void setup_frame_attributes(
+ 	FvwmWindow *fw, window_style *pstyle)
+ {
+-	int i;
+ 	XSetWindowAttributes xswa;
+ 
+ 	/* Backing_store is controlled on the client, borders, title & buttons
+@@ -1847,36 +1847,18 @@
+ 		xswa.backing_store = NotUseful;
+ 		break;
+ 	}
+-	XChangeWindowAttributes(dpy, FW_W(fw), CWBackingStore, &xswa);
+-	if (pstyle->flags.use_backing_store == BACKINGSTORE_OFF)
+-	{
+-		xswa.backing_store = NotUseful;
+-	}
+-	if (HAS_TITLE(fw))
+-	{
+-		XChangeWindowAttributes(
+-			dpy, FW_W_TITLE(fw), CWBackingStore, &xswa);
+-		for (i = 0; i < NUMBER_OF_BUTTONS; i++)
+-		{
+-			if (FW_W_BUTTON(fw, i))
+-			{
+-				XChangeWindowAttributes(
+-					dpy, FW_W_BUTTON(fw, i),
+-					CWBackingStore, &xswa);
+-			}
+-		}
+-	}
+-
+ 	/* parent_relative is applied to the frame and the parent */
+ 	xswa.background_pixmap = pstyle->flags.use_parent_relative
+ 		? ParentRelative : None;
+-	XChangeWindowAttributes(dpy, FW_W_FRAME(fw), CWBackPixmap, &xswa);
+-	XChangeWindowAttributes(dpy, FW_W_PARENT(fw), CWBackPixmap, &xswa);
+-
+ 	/* Save_under is only useful on the frame */
+ 	xswa.save_under = pstyle->flags.do_save_under
+ 		? Scr.flags.do_save_under : NotUseful;
+-	XChangeWindowAttributes(dpy, FW_W_FRAME(fw), CWSaveUnder, &xswa);
++	XChangeWindowAttributes(dpy, FW_W(fw), CWBackingStore, &xswa);
++	XChangeWindowAttributes(
++		dpy, FW_W_PARENT(fw), CWBackPixmap | CWBackingStore, &xswa);
++	XChangeWindowAttributes(
++		dpy, FW_W_FRAME(fw),
++		CWBackPixmap | CWBackingStore | CWSaveUnder, &xswa);
+ 
+ 	return;
+ }
+--- fvwm-2.5.10/modules/FvwmTaskBar/FvwmTaskBar.c	2004-03-15 13:48:52.000000000 +0000
++++ fvwm/modules/FvwmTaskBar/FvwmTaskBar.c	2004-03-30 10:05:09.000000000 +0100
+@@ -532,7 +532,6 @@
+ 
+ 	win_border = nb;
+ 	win_width = nw;
+-	win_height = nh;
+ 	win_has_title = nht;
+ 	win_title_dir = ntd;
+ 	win_title_height = nth;
+--- fvwm-2.5.10/modules/FvwmButtons/FvwmButtons.1	2002-11-09 15:18:52.000000000 +0000
++++ fvwm/modules/FvwmButtons/FvwmButtons.1	2004-03-30 10:05:08.000000000 +0100
+@@ -1127,7 +1127,8 @@
+ 
+ # Pop up a module menu directly above the button.
+ *FvwmButtons: (9x1+3+0, Padding 0, Title "Modules",   \\
+-  Action `Menu Modulepopup rectangle $wx$h+$l+$t o+50 -100m`)
++  Action `Menu Modulepopup rectangle \\
++  $widthx$height+$lleft+$top o+50 -100m`)
+ 
+ # first row of buttons from left to right:
+ *FvwmButtons: (3x2+0+1, Icon my_lock.xpm, Action `Exec xlock`)

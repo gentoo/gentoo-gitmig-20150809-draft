@@ -1,6 +1,16 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.64 2004/03/20 10:59:48 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.65 2004/03/30 10:19:49 taviso Exp $
+
+*fvwm-2.5.10-r1 (30 Mar 2004)
+
+  30 Mar 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.10-r1.ebuild,
+  files/fvwm-2.5.10-post-release.diff:
+  new release of FvwmTabs, which fixes the tmp file handling problem.
+  extracted some patches from cvs which fix issues reported since the
+  release, including a problem with FvwmTaskBar and multiple rows
+  , inconsistencies in variable names in the FvwmButtons man page,
+  and a problem with the BackingStore style.
 
 *fvwm-2.5.8-r6 (20 Mar 2004)
 

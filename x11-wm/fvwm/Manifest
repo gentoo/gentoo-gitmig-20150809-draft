@@ -2,8 +2,9 @@ MD5 b83bf23f1c96084b79765739613430ac fvwm-2.5.7-r5.ebuild 8757
 MD5 76fde55c6ffece27a13fd976d5fb51b6 fvwm-2.5.8-r4.ebuild 10169
 MD5 2fe250da04e9678631ac0d7f282de875 fvwm-2.5.8-r6.ebuild 10691
 MD5 babbec50812f1dd2af1b76b9afa837af fvwm-2.4.17.ebuild 3961
+MD5 eab7687e1b4ebb2b542f00c7aebceffe fvwm-2.5.10-r1.ebuild 9117
 MD5 60dad7fdef9011540156e68d2ed1f8c4 fvwm-2.5.9.ebuild 9409
-MD5 3533175531d7bdce1c1a9c4511c4fd39 ChangeLog 12142
+MD5 cc3115771fffff184c1c5e20280addcc ChangeLog 12603
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
 MD5 12ef1ce8551fa2c8f989f2b529e29e82 fvwm-2.5.10.ebuild 9433
 MD5 c515838ed1efd6d1f9a60db5b2ff0a5c fvwm-2.4.18.ebuild 3964
@@ -21,6 +22,7 @@ MD5 0fcb3587e80a443304b2e6878b6eab0a files/fvwmtabs-2.8-insecure-tmp-handling.di
 MD5 d15c4e05878e8e2b8a9d5edcf30abdc2 files/fvwm-2.5.9-translucent-menus.diff.gz 58529
 MD5 977c11b7ca7c17cff7a14d1d4a0136f4 files/fvwm-2.5.8-perllib-disconnect.diff 1179
 MD5 5dc401c9f6a50da0bfa85a025749652a files/fvwm-2.5.8-fvwm-menu-directory-security.diff 382
+MD5 083ba66d9e23778a70fe140caf99cb8a files/digest-fvwm-2.5.10-r1 128
 MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
 MD5 2bdb17132f9d7f352002a1fbace7fca1 files/acinclude.m4 61423
 MD5 4f044a8a47c9f8ea61d54dfa4bd79b70 files/fvwm-2.5.8-fvwm-bug-security.diff 327
@@ -31,3 +33,4 @@ MD5 c3ea3b9a8c5d7700913a795096e0b51a files/digest-fvwm-2.5.8-r4 127
 MD5 c3ea3b9a8c5d7700913a795096e0b51a files/digest-fvwm-2.5.8-r6 127
 MD5 97373a30210df0b93c59e2aac76d17e0 files/fvwm-2.5.8-undermouse.diff 2534
 MD5 933ebc841a6eafebaf9d57b7a99c3b10 files/fvwm-2.5.8-flickeringmoveworkaround.diff 726
+MD5 b20e3c8c23286531b549852ecbed4b74 files/fvwm-2.5.10-post-release.diff 2923
