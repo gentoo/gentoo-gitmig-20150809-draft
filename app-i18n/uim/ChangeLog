@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.19 2003/10/25 19:15:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.20 2003/11/02 15:40:23 usata Exp $
+
+*uim-0.1.4.1 (03 Nov 2003)
+
+  03 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> uim-0.1.4.1.ebuild:
+  Version bumped
 
   26 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> uim-0.0.2.1.ebuild,
   uim-0.0.3.ebuild, uim-0.0.4.ebuild, uim-0.0.5.1.ebuild, uim-0.0.6.ebuild,
@@ -13,6 +18,9 @@
   Version bumped
 
 *uim-0.1.2 (15 Oct 2003)
+
+  03 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> uim-0.1.2.ebuild:
+  Marked as stable on x86 and alpha.
 
   23 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> uim-0.1.2.ebuild:
   Added ~alpha and ~ppc keywords.
