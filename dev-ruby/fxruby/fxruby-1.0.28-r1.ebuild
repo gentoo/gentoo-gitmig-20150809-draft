@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.28-r1.ebuild,v 1.1 2004/04/10 10:31:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.28-r1.ebuild,v 1.2 2004/04/10 23:01:20 dholm Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.fxruby.org/"
 SRC_URI="mirror://sourceforge/fxruby/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="-alpha -hppa ~sparc ~x86"
+KEYWORDS="-alpha -hppa ~sparc ~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/ruby
 	>=x11-libs/fox-1.0
