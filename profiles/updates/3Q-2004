@@ -190,4 +190,3 @@ move net-www/raggle www-client/raggle
 move net-www/w3m www-client/w3m
 move net-www/w3m-m17n www-client/w3m-m17n
 move net-www/w3mmee www-client/w3mmee
-move net-www/mozilla www-client/mozilla
