@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 54ddcb47579f9ec11b1aa3884ce923ba datavision-bin-0.8.1.ebuild 1428
 MD5 a3701a978f0fa823c9673c322dbba013 datavision-bin-0.8.1-r1.ebuild 1455
-MD5 99094b1298d497639c07840a4de24a7f ChangeLog 846
+MD5 54ddcb47579f9ec11b1aa3884ce923ba datavision-bin-0.8.1.ebuild 1428
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 04643b8d1cfb9bd9e1ba03b061d1ff01 files/digest-datavision-bin-0.8.1-r1 69
+MD5 ce1ce6816d43904bf118aa2ea3804b41 ChangeLog 933
 MD5 04643b8d1cfb9bd9e1ba03b061d1ff01 files/digest-datavision-bin-0.8.1 69
+MD5 04643b8d1cfb9bd9e1ba03b061d1ff01 files/digest-datavision-bin-0.8.1-r1 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBJy68/rLF9B432nYRAtHAAKDB88Cy+QzKtJSuAo3FazyPK47kXACgo/57
-sIkPQRkQVDn729DK5Pkz/Xo=
-=Xnxa
+iD8DBQFBOrp1I1lqEGTUzyQRAp1SAKCgBUp8w1LZKrRZXkebVcyCUzVfpACgo9u+
+d09vbkdAkoGM5XGOAq3ny1c=
+=OOlr
 -----END PGP SIGNATURE-----

@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 431f359d54dcac668684f77756b2c4e0 jess-bin-6.1.6.ebuild 1154
-MD5 11aa3f7d7d0430ab05110df1df7dfa5d ChangeLog 880
-MD5 84b61e4d0f951e3bc117b54985f19b31 metadata.xml 244
 MD5 ec558fbce600bce79415ec26adb8a739 jess-bin-6.1.7.ebuild 1159
+MD5 84b61e4d0f951e3bc117b54985f19b31 metadata.xml 244
+MD5 5550e3d1e99543b3e306c83454dfe58b ChangeLog 967
 MD5 54be6290010d7a83d2425c84936bac59 files/digest-jess-bin-6.1.6 57
 MD5 acd5600952acaea6b98395509cdb8074 files/digest-jess-bin-6.1.7 57
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBCrNX/rLF9B432nYRAjyeAJ9BGwjgSBoMi60LR6c0dHE1Hh9AKwCgkS58
-GrUizh7r6fJ8/6kr42SyZCs=
-=kCA4
+iD8DBQFBOrvhI1lqEGTUzyQRAoMVAJ0QGVwSE3zjp/NDg+K+orrsPYuOzQCgrsCi
+afxq/WhMCAuFR5DppDt08rA=
+=zdFd
 -----END PGP SIGNATURE-----

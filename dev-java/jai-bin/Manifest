@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 ee9cdc674851a80aaac4ef315c26010e jai-bin-1.1.2-r2.ebuild 1346
-MD5 3935e033d7896054f2f27d98ac2472b3 ChangeLog 1143
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d38e853d676b1ea27e1dadbd5c303c16 jai-bin-1.1.2-r3.ebuild 1069
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 c18cc9c96f01e444fa12f53b74863e15 ChangeLog 1230
 MD5 e60e96e8d350d2e30cf45902dd277268 files/digest-jai-bin-1.1.2-r2 78
 MD5 e60e96e8d350d2e30cf45902dd277268 files/digest-jai-bin-1.1.2-r3 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOJvr/rLF9B432nYRAn9sAKCQxZpSnInK0QxJzJFnuJE3jJ2MBgCeP2/3
-O01hoc9EyBSmeHVT38kEPdQ=
-=r1Jo
+iD8DBQFBOrtkI1lqEGTUzyQRArNAAJ9nIfmAu6xook99S0JHiSE+R+97/wCcDbc0
+wH3rtDynjmXfeGZjR8seI9g=
+=YIVk
 -----END PGP SIGNATURE-----

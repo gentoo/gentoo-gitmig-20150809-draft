@@ -1,5 +1,15 @@
-MD5 eafa1e7064d3fef95b0409e3cbe8a0c1 ChangeLog 1299
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f93aa910da1cf24233b1856384be5841 jrockit-jdk-bin-1.4.2.04.ebuild 1594
 MD5 44f00b9f278d0941a4820ce56f0fefe1 metadata.xml 554
+MD5 035416fedbea51281b9ce0daf88c7378 ChangeLog 1384
 MD5 6fcc930e7c2ac7225a7c57c32ea7510d files/digest-jrockit-jdk-bin-1.4.2.04 165
 MD5 d65eb1cd5fac1963ac29f72ec296ae96 files/jrockit-jdk-bin-1.4.2.04 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOrxYI1lqEGTUzyQRAp23AKC+vBtq+EpYgcxytVbCyfsTaNaYXgCeIC/L
+0NBxeQOW8CyrwAhqgiRvA7Q=
+=WuHi
+-----END PGP SIGNATURE-----

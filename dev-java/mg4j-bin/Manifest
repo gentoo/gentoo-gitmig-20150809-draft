@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fd6380da25087858a5722854a20dfc90 mg4j-bin-0.8.2.ebuild 857
-MD5 e9c1eb5a1c0cff996759cb545d9b13ed mg4j-bin-0.8.2-r1.ebuild 891
-MD5 4803c59b7173c3ee988e62be6fe4e86f ChangeLog 905
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 e9c1eb5a1c0cff996759cb545d9b13ed mg4j-bin-0.8.2-r1.ebuild 891
+MD5 fd6380da25087858a5722854a20dfc90 mg4j-bin-0.8.2.ebuild 857
+MD5 e1bb446e1058d3fdb85831d3668eae6d ChangeLog 992
 MD5 78ad42fc9f0ed323d12fb27a10e30ac1 files/digest-mg4j-bin-0.8.2 66
 MD5 78ad42fc9f0ed323d12fb27a10e30ac1 files/digest-mg4j-bin-0.8.2-r1 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBJzbx/rLF9B432nYRAvy5AKCoA1s/3w3sS+dP2YFrYCxrDardCACgol9T
-0NFnqjzSoFFQNRAebdN8gvM=
-=MXsK
+iD8DBQFBOrzSI1lqEGTUzyQRAioVAJoCoT1IeniWlJ/Id1LsFfq9RqahWwCfY/Gt
+itYdEb0DbX/OuFBvBUS0WqI=
+=ZJFB
 -----END PGP SIGNATURE-----

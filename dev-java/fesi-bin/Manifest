@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 16d35cfdacc665467fab63433948762f fesi-bin-1.1.5.ebuild 713
-MD5 1208e8b98872916d9cbbfccbf5026ee8 ChangeLog 1547
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 a376d84bf1b1b55064226fd42094f171 ChangeLog 1634
 MD5 8c4972f13d4dd1861d006b8738ec4f7c files/digest-fesi-bin-1.1.5 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBCqXm/rLF9B432nYRAkkxAKCnAABhmgEmny4E86hGhpAQ4v44EQCfTpox
-Qqb7FbVk5AryJmpabJZ2wzQ=
-=KY6i
+iD8DBQFBOrruI1lqEGTUzyQRAldOAKC5PMidMHU4g57OIbdVt5IhlzqfvwCg0ICG
+RuzLM9+HJKiKvwOaHDJY96o=
+=GofE
 -----END PGP SIGNATURE-----
