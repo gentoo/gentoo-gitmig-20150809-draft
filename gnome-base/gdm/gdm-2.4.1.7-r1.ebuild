@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.8 2004/04/17 09:18:06 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.9 2004/04/28 12:29:57 foser Exp $
 
 inherit eutils gnome2
 
@@ -50,6 +50,11 @@ src_unpack() {
 		gdm.conf.in.orig > gdm.conf.in
 
 	rm -f gdm.conf.in.orig
+
+	cd ${S}
+	# fix gtk-2.4 build (#49185)
+	epatch ${FILESDIR}/${P}-gtk-2.4.patch
+
 }
 
 src_compile() {
