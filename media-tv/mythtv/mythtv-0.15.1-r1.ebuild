@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.6 2004/07/14 08:59:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.15.1-r1.ebuild,v 1.7 2004/07/14 09:30:22 aliz Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -31,6 +31,8 @@ DEPEND=">=media-libs/freetype-2.0
 
 RDEPEND="${DEPEND}
 	!media-tv/mythfrontend"
+
+use debug && FEATURES="${FEATURES} nostrip"
 
 pkg_setup() {
 	if use X; then QTP=x11-libs/qt; else QTP=x11-libs/qt-embedded; fi
