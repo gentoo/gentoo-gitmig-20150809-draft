@@ -1,6 +1,6 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.9 2004/02/25 22:46:01 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.10 2004/03/01 10:17:13 aliz Exp $
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> kmyfirewall-0.9.6.ebuild:
   Stable and Kbloated on sparc.
@@ -54,7 +54,7 @@
 
   New upstream version.
 
-*kmyfirewall-0.4.5.ebuild (03 Aug 2002)
+*kmyfirewall-0.4.5 (03 Aug 2002)
 
   03 Aug 2002; Nick Hadaway <raker@gentoo.org>
   kmyfirewall-0.4.5.ebuild, files/digest-kmyfirewall-0.4.5 :
