@@ -1,8 +1,6 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/arm/virtuals,v 1.2 2004/10/23 00:13:57 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/arm/virtuals,v 1.3 2005/03/29 01:53:20 vapier Exp $
 
 virtual/bootloader			sys-boot/nettrom
 virtual/dev-manager			sys-fs/udev
-virtual/kernel				sys-kernel/development-sources
-virtual/os-headers			sys-kernel/linux26-headers

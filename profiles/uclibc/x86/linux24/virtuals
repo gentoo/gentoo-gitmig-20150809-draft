@@ -1,3 +1,0 @@
-virtual/modutils		sys-apps/modutils
-virtual/os-headers		sys-kernel/linux-headers
-virtual/hardened-sources	sys-kernel/hardened-sources

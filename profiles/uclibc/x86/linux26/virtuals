@@ -1,3 +1,0 @@
-virtual/modutils		sys-apps/module-init-tools
-virtual/os-headers		sys-kernel/linux26-headers
-virtual/linux-sources		sys-kernel/development-sources
