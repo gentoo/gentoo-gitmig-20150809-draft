@@ -7,7 +7,7 @@
 *<sys-libs/glibc-2.2.4  
 *sys-devel/binutils
 *<sys-apps/baselayout-1.6
-*<=sys-apps/sysklogd-1.4-r2
+*<sys-apps/sysklogd-1.4-r6
 
 *app-editors/nano
 *dev-libs/glib
@@ -130,5 +130,3 @@
 <net-misc/pdnsd-1.1.6-r6
 <net-mail/exim-3.32-r6
 <net-misc/fakeidentd-1.4-r6
-<sys-apps/sysklogd-1.4-r6
-

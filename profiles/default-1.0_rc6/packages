@@ -36,7 +36,7 @@
 *=sys-devel/binutils-2.11.90.0.7
 *=sys-devel/gcc-2.95.3-r5
 *=sys-libs/glibc-2.2.4-r1 
->=sys-apps/sysklogd-1.4-r3
+>=sys-apps/sysklogd-1.4-r6
 
 >=x11-base/xfree-4.1.0-r2
 *app-editors/e3
@@ -152,5 +152,3 @@
 >=net-misc/pdnsd-1.1.6-r6
 >=net-mail/exim-3.32-r6
 >=net-misc/fakeidentd-1.4-r6
->=sys-apps/sysklogd-1.4-r6
-
