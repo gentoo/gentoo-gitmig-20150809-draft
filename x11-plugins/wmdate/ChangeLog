@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmdate
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdate/ChangeLog,v 1.1 2004/07/17 01:31:38 s4t4n Exp $
+
+*wmdate-0.7 (17 Jul 2004)
+
+  17 Jul 2004; Michele Noberasci <s4t4n@gentoo.org> wmdate-0.7.ebuild:
+  Initial import. Thanks to Przemyslaw Maciag. Closes #54551.
+
