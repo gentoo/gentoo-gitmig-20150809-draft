@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Holger Brueckner <darks@fet.org>
 # /home/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.1.1.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp
 
 
@@ -15,14 +14,15 @@ extensive UNIX environment for accessing files easily and quickly."
 
 SRC_URI="http://www.openafs.org/dl/openafs/${PV}/openafs-${PV}-src.tar.gz"
 HOMEPAGE="http://www.openafs.org/"
-KEYWORDS="x86"
+
 SLOT="0"
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2
+LICENSE="IPL-1"
+KEYWORDS="x86 -ppc -sparc -sparc64"
+
+DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.75"
 
 ARCH=i386_linux24
-LICENSE=""
 
 src_unpack() {
 	unpack ${A}
@@ -35,7 +35,9 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure --with-afs-sysname=i386_linux24 --enable-transarc-paths || die
+	./configure \
+		--with-afs-sysname=i386_linux24 \
+		--enable-transarc-paths || die
 	make || die
 	make dest || die
 }
