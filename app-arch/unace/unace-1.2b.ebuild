@@ -1,16 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b.ebuild,v 1.9 2004/06/24 21:37:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-1.2b.ebuild,v 1.10 2004/06/25 23:56:06 vapier Exp $
+
+DESCRIPTION="ACE unarchiver"
+HOMEPAGE="http://www.winace.com/"
+SRC_URI="http://wilma.vub.ac.be/~pdewacht/${P}.tar.gz"
+
+LICENSE="freedist"
+SLOT="1"
+KEYWORDS="x86"
+IUSE=""
+
+DEPEND="virtual/libc"
 
 S="${WORKDIR}/${PN}"
-DESCRIPTION="ACE unarchiver"
-SRC_URI="http://wilma.vub.ac.be/~pdewacht/${P}.tar.gz"
-HOMEPAGE="http://www.winace.com/"
-IUSE=""
-SLOT="1"
-KEYWORDS="x86 -sparc -ppc"
-LICENSE="freedist"
-DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
@@ -24,11 +27,11 @@ src_compile() {
 		-e "s/-DCASEINSENSE//g" \
 		makefile
 
-	emake dep
-	emake
+	emake dep || die
+	emake || die
 }
 
 src_install() {
-	dobin unace
+	dobin unace || die
 	dodoc readme.txt changes.log
 }

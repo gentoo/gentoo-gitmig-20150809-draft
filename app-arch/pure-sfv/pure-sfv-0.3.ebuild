@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/pure-sfv-0.3.ebuild,v 1.6 2004/06/24 21:35:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/pure-sfv-0.3.ebuild,v 1.7 2004/06/25 23:54:04 vapier Exp $
 
 DESCRIPTION="utility to test and create .sfv files and create .par files"
 HOMEPAGE="http://pure-sfv.sourceforge.net/"
@@ -8,10 +8,10 @@ SRC_URI="mirror://sourceforge/pure-sfv/${PN}_${PV}_src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 KEYWORDS="x86 amd64 ~sparc"
+IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}
 
@@ -25,6 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin pure-sfv
+	dobin pure-sfv || die
 	dodoc ReadMe.txt
 }

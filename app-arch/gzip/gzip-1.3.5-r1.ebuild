@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r1.ebuild,v 1.3 2004/06/24 21:31:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r1.ebuild,v 1.4 2004/06/25 23:50:35 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="nls build static"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 PROVIDE="virtual/gzip"

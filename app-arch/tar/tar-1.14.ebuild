@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.ebuild,v 1.4 2004/06/25 14:16:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.ebuild,v 1.5 2004/06/25 23:55:44 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="nls static build"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-arch/gzip
 	app-arch/bzip2
 	app-arch/ncompress"

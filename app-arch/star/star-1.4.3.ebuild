@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.4.3.ebuild,v 1.5 2004/06/24 21:36:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.4.3.ebuild,v 1.6 2004/06/25 23:55:18 vapier Exp $
 
 DESCRIPTION="An enhanced (world's fastest) tar, as well as enhanced mt/rmt"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html"
@@ -14,15 +14,17 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~mips amd64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/DEFAULTS
-	cp Defaults.linux Defaults.linux.orig
-	sed -e 's:/opt/schily:/usr:g' -e 's:bin:root:g' Defaults.linux.orig > Defaults.linux
+	sed -i \
+		-e 's:/opt/schily:/usr:g' \
+		-e 's:bin:root:g' \
+		Defaults.linux
 }
 
 src_compile() {

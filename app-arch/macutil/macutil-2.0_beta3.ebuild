@@ -1,23 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.3 2004/06/24 21:32:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.4 2004/06/25 23:51:53 vapier Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${PN}"
 MY_P=${P/_beta/b}
 DESCRIPTION="A collection of programs to handle Macintosh files/archives on non-Macintosh systems"
-SRC_URI="ftp://ftp.cwi.nl/pub/dik/${MY_P/-/}.shar.Z"
 HOMEPAGE="http://homepages.cwi.nl/~dik/english/ftp.html"
+SRC_URI="ftp://ftp.cwi.nl/pub/dik/${MY_P/-/}.shar.Z"
 
-SLOT="0"
 LICENSE="as-is"
-IUSE=""
+SLOT="0"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	>=sys-apps/sed-4"
+
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}

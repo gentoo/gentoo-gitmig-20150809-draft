@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha14.ebuild,v 1.7 2004/06/24 21:36:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha14.ebuild,v 1.8 2004/06/25 23:55:18 vapier Exp $
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
@@ -16,13 +16,16 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~mips alpha hppa amd64 ia64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/DEFAULTS
-	sed -e 's:/opt/schily:/usr:g' -e 's:bin:root:g' -i Defaults.linux
-	sed -e 's:/usr/src/linux/include:/usr/include:' -i Defaults.linux
+	sed -i \
+		-e 's:/opt/schily:/usr:g' \
+		-e 's:bin:root:g' \
+		-e 's:/usr/src/linux/include:/usr/include:' \
+		Defaults.linux
 
 	if [ "${ARCH}" = "amd64" ]
 	then
