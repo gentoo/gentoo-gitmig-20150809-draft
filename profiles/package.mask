@@ -24,7 +24,7 @@
 
 # <seemant@gentoo.org> (05 Aug 2002)
 # masked for testing custom CFLAGS
-=media-libx/xpm-3.4k-r1
+=media-libs/xpm-3.4k-r1
 
 # <aliz@gentoo.org> (05 Aug 2002)
 # Masked for testing
