@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.4 2004/06/24 23:24:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.5 2004/07/27 04:20:56 gongloo Exp $
 
 MY_S=${P/tiff-/tiff-v}
 MY_P=${PN}-v${PV/_beta/-beta}
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc mips ~alpha arm hppa amd64 ~ia64 s390"
+KEYWORDS="~x86 ~ppc ~sparc mips ~alpha arm hppa amd64 ~ia64 s390 ~macos"
 IUSE="lzw-tiff"
 
 DEPEND=">=media-libs/jpeg-6b
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	dodir /usr/{bin,lib,share/man,share/doc/${PF}/html}
 	dodir /usr/share/doc/${PF}/html
-	make ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" install || die
+	ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" make install || die
 	preplib /usr
 	dodoc README TODO VERSION README-LZW-COMPRESSION
 }

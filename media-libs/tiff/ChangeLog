@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.21 2004/06/24 23:24:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.22 2004/07/27 04:20:56 gongloo Exp $
+
+  26 Jul 2004; Hasan Khalil <gongloo@gentoo.org> tiff-3.6.1-r1.ebuild:
+  Added ~macos keyword, modified install statement for compatibility
 
   11 May 2004; Michael McCabe <randy@gentoo.org> tiff-3.6.1-r1.ebuild:
   Added s390 keywords
