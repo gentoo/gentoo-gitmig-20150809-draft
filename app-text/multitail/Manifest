@@ -3,7 +3,7 @@ MD5 cd66d6660d097edfe610d495c32b9f97 ChangeLog 772
 MD5 c119f774c9420066c458e0700e5ba08c multitail-2.9.1.ebuild 594
 MD5 797f8cab85925872e606e6942f2451b1 multitail-2.9.3.ebuild 600
 MD5 75ed528e33e83ac57ce987793d740b5c metadata.xml 245
-MD5 72a192d19e6ad20129d085c3c441e217 multitail-3.0.0.ebuild 607
+MD5 ceebd1b79370e008ec37f62f47a8f00c multitail-3.0.0.ebuild 606
 MD5 46bbeefea490b5254197cf0a16d6687a files/digest-multitail-2.8 61
 MD5 3ea2ed5be9de1e174f4c7459464ba5a2 files/digest-multitail-2.9.1 63
 MD5 0c12bd194482e655875f5424a061e0da files/digest-multitail-2.9.3 63
