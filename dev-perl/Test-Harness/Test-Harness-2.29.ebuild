@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.29.ebuild,v 1.2 2004/02/22 20:50:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.29.ebuild,v 1.3 2004/02/24 10:39:03 kumba Exp $
 
 inherit perl-module
 

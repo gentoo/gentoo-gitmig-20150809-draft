@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Harness
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.19 2003/08/15 13:08:10 mcummings Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.20 2004/02/24 10:39:03 kumba Exp $
+
+  24 Feb 2004; Joshua Kinard <kumba@gentoo.org> Test-Harness-2.30.ebuild:
+  Added ~mips to satisfy repoman deps.
 
 *Test-Harness-2.30 (15 Aug 2003)
 
