@@ -1,6 +1,6 @@
-diff -Naru postgresql-8.0.0rc2.org/src/bin/initdb/initdb.c postgresql-8.0.0rc2/src/bin/initdb/initdb.c
---- postgresql-8.0.0rc2.org/src/bin/initdb/initdb.c	2004-11-29 03:05:03.000000000 +0000
-+++ postgresql-8.0.0rc2/src/bin/initdb/initdb.c	2004-12-04 18:02:43.757485824 +0000
+diff -Naru postgresql-8.0.0rc4.org/src/bin/initdb/initdb.c postgresql-8.0.0rc4/src/bin/initdb/initdb.c
+--- postgresql-8.0.0rc4.org/src/bin/initdb/initdb.c	2004-11-29 03:05:03.000000000 +0000
++++ postgresql-8.0.0rc4/src/bin/initdb/initdb.c	2004-12-04 18:02:43.757485824 +0000
 @@ -2617,13 +2617,7 @@
  	get_parent_directory(bin_dir);
  	
