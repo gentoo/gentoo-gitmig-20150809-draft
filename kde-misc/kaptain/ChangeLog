@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kaptain
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kaptain/ChangeLog,v 1.3 2004/11/05 03:24:44 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kaptain/ChangeLog,v 1.4 2005/01/20 13:15:51 greg_g Exp $
+
+  20 Jan 2005; Gregorio Guidi <greg@gentoo.org> kaptain-0.71.ebuild:
+  Stable on x86.
 
   04 Nov 2004; Jason Wever <weeve@gentoo.org> kaptain-0.71.ebuild:
   Added ~sparc keyword.
