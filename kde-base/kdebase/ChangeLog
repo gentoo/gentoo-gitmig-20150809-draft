@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.175 2005/01/28 18:49:10 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.176 2005/02/02 11:16:00 lanius Exp $
+
+  02 Feb 2005; Heinrich Wendel <lanius@gentoo.org> kdebase-3.4.0_beta1.ebuild:
+  mark ~amd64
 
   23 Jan 2005; Markus Rothe <corsair@gentoo.org> kdebase-3.3.2-r1.ebuild:
   Stable on ppc64; bug #78619
