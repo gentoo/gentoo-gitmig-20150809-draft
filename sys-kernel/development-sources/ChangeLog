@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.73 2004/02/04 16:04:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.74 2004/02/04 19:22:53 johnm Exp $
+
+  04 Feb 2004; John Mylchreest <johnm@gentoo.org>
+  development-sources-2.6.2_rc2.ebuild, development-sources-2.6.2_rc3.ebuild,
+  metadata.xml:
+  small tidy up
 
 *development-sources-2.6.2 (04 Feb 2004)
 

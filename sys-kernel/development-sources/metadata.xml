@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>x86-kernel</herd>
+<herd>kernel</herd>
 <maintainer>
   <email>johnm@gentoo.org</email>
   <name>John Mylchreest</name>
 </maintainer>
 <longdescription>
 This is the vanilla test kernels.
-These keep up to date with the unstable kernel releases, and the snapshot
-releases if used under a testing mask (~x86)
+These keep up to date with the stable kernel releases, and the snapshot
+releases if used under a testing mask (eg: ~x86)
 </longdescription>
 </pkgmetadata>
