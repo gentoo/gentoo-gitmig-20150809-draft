@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1.ebuild,v 1.13 2004/07/15 02:26:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1.ebuild,v 1.14 2005/02/04 21:48:37 robbat2 Exp $
 
 DESCRIPTION="SMTP Relaying Control for qmail & tcpserver."
 SRC_URI="http://untroubled.org/relay-ctrl/${P}.tar.gz"

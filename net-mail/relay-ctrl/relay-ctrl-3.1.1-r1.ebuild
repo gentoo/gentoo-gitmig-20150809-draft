@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r1.ebuild,v 1.7 2004/07/15 02:26:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r1.ebuild,v 1.8 2005/02/04 21:48:37 robbat2 Exp $
 
 DESCRIPTION="SMTP Relaying Control designed for qmail & tcpserver."
 SRC_URI="http://untroubled.org/relay-ctrl/${P}.tar.gz"
@@ -52,8 +52,9 @@ src_install () {
 	# default to 30 minutes
 	echo "1800" > ${D}${RELAYCTRL_CONFDIR}/RELAY_CTRL_EXPIRY
 
+	dodir /etc/cron.hourly
 	echo "/usr/bin/envdir ${RELAYCTRL_CONFDIR} ${RELAYCTRL_BINDIR}/relay-ctrl-age" >${D}/etc/cron.hourly/relay-ctrl-age
-	chmod +x ${D}/etc/cron.hourly/relay-ctrl-age
+	fperms 755 /etc/cron.hourly/relay-ctrl-age
 }
 
 pkg_postinst() {

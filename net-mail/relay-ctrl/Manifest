@@ -1,9 +1,20 @@
-MD5 747c058ede66ce360ffadf54d4aba627 relay-ctrl-3.1.1.ebuild 929
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1d05b4435969cf8aaba44d5452608a08 relay-ctrl-3.1.1-r2.ebuild 2169
+MD5 44c9f1beebb08584d64b2bcc7e641003 relay-ctrl-3.1.1.ebuild 928
+MD5 8172c4a16a83003806a130b7f2418fd6 relay-ctrl-3.1.1-r1.ebuild 2059
+MD5 aa5c29446c5c6503ed2dba767eefd928 ChangeLog 2092
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
-MD5 539903d0e8401b3c03588115eb111bbd ChangeLog 1950
-MD5 e83e792b46f2cbc812c40a8b25b5b521 relay-ctrl-3.1.1-r2.ebuild 2145
-MD5 998d179ae2acbe1fe7cd4cf1e77486e4 relay-ctrl-3.1.1-r1.ebuild 2038
 MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r1 67
+MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r2 67
 MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1 67
 MD5 8e4e552c2f7216d5303b739cc99e51e9 files/authenticated.c-relayfixup.diff 702
-MD5 f8baeb98e3343a1651c17082460b4bf3 files/digest-relay-ctrl-3.1.1-r2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFCA+2wPpIsIjIzwiwRAqdvAKD9PvdvNEdGBkkNm2Icdynk3hdUVgCgy5Rd
+03MwWwkK8D7llXK9hJU/fGQ=
+=i1pv
+-----END PGP SIGNATURE-----
