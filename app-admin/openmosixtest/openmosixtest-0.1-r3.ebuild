@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r3.ebuild,v 1.2 2002/11/15 19:06:55 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r3.ebuild,v 1.3 2002/11/18 18:59:09 tantive Exp $
 
 S=${WORKDIR}/omtest
 DESCRIPTION="openMosix stress test"
@@ -33,7 +33,6 @@ src_install() {
 	dodir /opt/omtest
 	cp -r * ${WORKDIR}/../image/opt/omtest
 }
-
 
 pkg_postinst() {
 	cd /opt/omtest
