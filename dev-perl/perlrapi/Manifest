@@ -1,4 +1,4 @@
-MD5 0dd012aac057af1415cfac4c0f3ccb62 ChangeLog 528
-MD5 6ceceeb0885c476fc0e0598e716b5c06 perlrapi-0.2.ebuild 589
+MD5 23566fb169dedff4f60434378052850e perlrapi-0.2.ebuild 580
+MD5 6fc891b4bc80e0df18634757fc7352c2 ChangeLog 518
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 b4b8fc9e5f8f3fe7dc82c05270b22a08 files/digest-perlrapi-0.2 125
