@@ -4,6 +4,10 @@
 
 *fdutils-5.4.20020222-r1 (03 Oct 2002)
 
+  12 Apr 2003; Seemant Kulleen <seemant@gentoo.org>
+  fdutils-5.4.20020222-r1.ebuild:
+  better tetex optionality by Paul Thompson <thompson@pobox.com> in bug #19178
+
   12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
   fdutils-5.4.20020222-r1.ebuild:
   tetex is now optional
