@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.8a.ebuild,v 1.1 2003/10/14 05:37:37 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.8a.ebuild,v 1.2 2003/10/22 06:21:59 phosphan Exp $
 
 DESCRIPTION="A remote security scanner for Linux (nessus-core)"
 HOMEPAGE="http://www.nessus.org/"
@@ -39,7 +39,10 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-gtk"
 	fi
-	myconf="${myconf} `use_enable tcpd tcpwrappers`"
+	# no use_enable because of bug 31670
+	if [ `use tcpd` ]; then
+		myconf="${myconf} --enable-tcpwrappers"
+	fi
 	if [ `use debug` ]; then
 		myconf="${myconf} --enable-debug"
 	else
