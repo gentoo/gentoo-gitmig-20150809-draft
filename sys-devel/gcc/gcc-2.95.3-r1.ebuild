@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r1.ebuild,v 1.4 2001/08/13 19:20:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r1.ebuild,v 1.5 2001/08/13 20:47:00 drobbins Exp $
 
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
@@ -101,7 +101,6 @@ src_install() {
 
 	try make install prefix=${D}${T} mandir=${D}${T}/share/man infodir=${D}${T}/share/info
 	[ -e ${D}/usr/bin/gcc ] || die "gcc not found in ${D}"
-	[ -e ${D}/usr/bin/g++ ] || die "g++ not found in ${D}"
     FULLPATH=${D}${T}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
 	dodir /lib

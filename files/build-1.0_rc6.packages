@@ -10,7 +10,7 @@
 ./sys-apps/gawk/gawk-3.0.6-r4.ebuild
 ./sys-apps/grep/grep-2.4.2-r4.ebuild
 ./sys-apps/gzip/gzip-1.2.4a-r5.ebuild
-./sys-apps/portage/portage-1.5.3.ebuild
+./sys-apps/portage/portage-1.5.4.ebuild
 ./sys-apps/sed/sed-3.02.80-r3.ebuild
 ./sys-apps/sh-utils/sh-utils-2.0j-r4.ebuild
 ./sys-apps/tar/tar-1.13.19-r1.ebuild
@@ -22,7 +22,7 @@
 ./sys-devel/make/make-3.79.1-r3.ebuild
 ./sys-devel/patch/patch-2.5.4-r3.ebuild
 ./sys-devel/spython/spython-2.0-r7.ebuild
-./net-misc/wget-1.7-r1.ebuild
+./net-misc/wget/wget-1.7-r1.ebuild
 ./net-misc/rsync/rsync-2.4.6-r4.ebuild
-./sys-kernel/linux-sources/linux-headers-2.4.6-r3.ebuild
-./app-editors/nano-1.0.3-r1.ebuild
+./sys-kernel/linux-headers/linux-headers-2.4.6-r3.ebuild
+./app-editors/nano/nano-1.0.3-r1.ebuild
