@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.24 2004/10/19 07:45:58 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.25 2004/11/01 02:10:35 vapier Exp $
+
+*GD-2.16 (31 Oct 2004)
+
+  31 Oct 2004; Mike Frysinger <vapier@gentoo.org> GD-1.41.ebuild,
+  +GD-2.16.ebuild:
+  Version bump.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> GD-2.07.ebuild:
   Stable on amd64.
