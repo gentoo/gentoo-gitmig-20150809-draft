@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-ldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/ChangeLog,v 1.6 2004/03/01 21:08:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/ChangeLog,v 1.7 2004/03/14 00:40:53 robbat2 Exp $
+
+  13 Mar 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  metadata.xml:
+  fix glitch in metadata.xml
 
 *qmail-ldap-1.03-r3 (10 Jan 2004)
 *qmail-ldap-1.03-r2 (10 Jan 2004)
