@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-DEPEND=">=ladspa-sdk-1.12"
+DEPEND=">=media-libs/ladspa-sdk-1.12"
 
 src_compile() {
 	econf --with-ladspa-prefix=/usr || die
