@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 3ae85a3258e2dfae707f7adf02bc4128 ChangeLog 3974
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 9e9cd0b92b5b0f12f8e0c8055081caaf xmms-arts-0.7.1-r2.ebuild 790
+MD5 b6db7d263eabc95bd502728b375c617e xmms-arts-0.7.1-r2.ebuild 792
 MD5 da0d2fdb80c12fdc4ef6d8db65286d20 xmms-arts-0.7.1-r1.ebuild 753
 MD5 30e324a6c8a02ad73d4b2c1d1603c96e files/digest-xmms-arts-0.7.1-r2 69
 MD5 30e324a6c8a02ad73d4b2c1d1603c96e files/digest-xmms-arts-0.7.1-r1 69
@@ -14,7 +14,7 @@ MD5 53dae4973af0651df719de36647891ae files/xmmsarts-0.4-nocmallocc.patch 1078
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdcQDArHZZzCEUG0RAtmmAJ0YFUQPEYlmFQDRyTV6vnAO8VBHQwCeMoCs
-88PHPSPUNLWPBWtSRX30zEM=
-=T/hl
+iD8DBQFBdz/0ArHZZzCEUG0RAoIqAJ9W6jFCKpWEYky22ZkOP30GtvuIvgCeL+pm
+paEkdb1jqRiJkZVdhpgTJFg=
+=01+b
 -----END PGP SIGNATURE-----
