@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gwenview
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.22 2004/12/31 18:11:29 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.23 2005/01/10 17:35:17 lanius Exp $
+
+*gwenview-1.1.8 (10 Jan 2005)
+
+  10 Jan 2005; Heinrich Wendel <lanius@gentoo.org> -gwenview-1.1.7.ebuild,
+  +gwenview-1.1.8.ebuild:
+  version bump
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> gwenview-1.1.7.ebuild:
   Added ~sparc keyword.
