@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.27 2003/07/18 21:03:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.28 2003/08/04 21:42:32 gmsoft Exp $
 
   01 Jul 2003; Olivier Crete <tester@gentoo.org> ppp-2.4.1-r14.ebuild:
   fix for va_list on amd64 (its like ppc)
@@ -17,6 +17,9 @@
   gcc-3.3 fix and moving the patches in src_unpack.
 
 *ppp-2.4.1-r14 (22 May 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> ppp-2.4.1-r14.ebuild :
+  Marked stable on hppa.
 
   22 May 2003; Chuck Brewer <killian@gentoo.org> ppp-2.4.1-r14.ebuild:
   new testing ebuild, adds pppoatm.so that should work with this build  
