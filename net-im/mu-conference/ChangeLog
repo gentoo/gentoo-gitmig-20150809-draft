@@ -1,0 +1,12 @@
+# ChangeLog for net-im/mu-conference
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.1 2004/01/12 01:59:47 rizzo Exp $
+
+*mu-conference-0.6.0 (11 Jan 2004)
+
+  11 Jan 2004; Don Seiler <rizzo@gentoo.org>; metadata.xml,
+  mu-conference-0.6.0.ebuild, files/README.Gentoo,
+  files/mu-conference-makefile.patch, files/muctrans.xml:
+  Initial check-in of separate mu-conference transport for jabberd. Thanks to
+  Gustavo Felisberto
+
