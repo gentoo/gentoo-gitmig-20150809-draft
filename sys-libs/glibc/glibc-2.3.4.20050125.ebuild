@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.19 2005/02/13 14:33:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.20 2005/02/13 20:26:14 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -488,6 +488,13 @@ toolchain-glibc_pkg_postinst() {
 	einfo "example host.conf. To re-enable this functionality, simply"
 	einfo "remove the line that disables it (mdns off)."
 	echo
+
+	if use nptl && use !nptlonly; then
+		einfo "The default behavior of glibc on your system is to use NPTL.  If"
+		einfo "you want to use linuxthreads for a particular program, start it"
+		einfo "by executing 'LD_ASSUME_KERNEL=2.4.1 <program> [<options>]'"
+		echo
+	fi
 }
 
 ### SUPPORT FUNCTIONS ###
