@@ -220,3 +220,4 @@ move net-www/netscape-communicator www-client/netscape-communicator
 move net-www/netscape-navigator www-client/netscape-navigator
 move net-www/skipstone www-client/skipstone
 move net-www/prozgui www-client/prozgui
+move net-www/elinks www-client/elinks
