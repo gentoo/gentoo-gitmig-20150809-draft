@@ -12,7 +12,7 @@ INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc alpha"
 
 newdepend /c virtual/x11
 
