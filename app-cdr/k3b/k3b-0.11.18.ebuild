@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.18.ebuild,v 1.3 2005/01/07 23:11:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.18.ebuild,v 1.4 2005/01/11 21:58:44 carlo Exp $
 
 inherit kde eutils
 
@@ -9,30 +9,25 @@ HOMEPAGE="http://www.k3b.org/"
 SRC_URI="mirror://sourceforge/k3b/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE="arts dvdr kde oggvorbis mad flac encode"
 
 DEPEND="kde? ( >=kde-base/kdebase-3.1 )
 	>=media-sound/cdparanoia-3.9.8
 	>=media-libs/id3lib-3.8.0_pre2
 	flac? ( media-libs/flac )
-	mad? ( >=media-sound/madplay-0.14.2b )
-	oggvorbis? ( media-libs/libvorbis )
-	arts? ( kde-base/arts )"
-RDEPEND="kde? ( >=kde-base/kdebase-3.1 )
-	>=media-sound/cdparanoia-3.9.8
-	>=media-libs/id3lib-3.8.0_pre2
-	flac? ( media-libs/flac )
-	mad? ( >=media-sound/madplay-0.14.2b )
+	mad? ( media-libs/libmad )
 	oggvorbis? ( media-libs/libvorbis )
 	arts? ( kde-base/arts )
+	media-libs/libsamplerate"
+RDEPEND="${DEPEND}
 	virtual/cdrtools
 	>=app-cdr/cdrdao-1.1.7-r3
 	media-sound/normalize
 	dvdr? ( app-cdr/dvd+rw-tools )
 	encode? ( media-sound/lame
 		  media-sound/sox
-		  media-video/transcode
+		  !amd64? ( <media-video/transcode-0.6.12 )
 		  media-video/vcdimager )"
 need-kde 3.1
 
