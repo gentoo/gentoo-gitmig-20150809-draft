@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.24 2002/12/07 06:38:09 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.25 2002/12/16 13:46:24 vapier Exp $
 
 *imagemagick-5.4.9.1 (05 Nov 2002)
+
+  16 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added dosed's to remove -I/usr/include from the -config scripts. #11649
 
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> imagemagick-5.4.7.4.ebuild,
   imagemagick-5.4.9.1.ebuild, imagemagick-5.4.9.1-r1.ebuild:
