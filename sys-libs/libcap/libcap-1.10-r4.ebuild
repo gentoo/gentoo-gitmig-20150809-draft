@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.9 2004/10/15 01:12:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.10 2005/02/03 17:22:29 solar Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,13 +13,13 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-IUSE="python pic static"
+IUSE="nocxx python static"
 
 #patch is in recent 2.2 kernels so it works there
 DEPEND="virtual/libc
 	virtual/os-headers
-	python? ( >=virtual/python-2.2.1 >=dev-lang/swig-1.3.10 )"
-RDEPEND="python? ( >=virtual/python-2.2.1 )
+	!nocxx? ( python? ( >=virtual/python-2.2.1 >=dev-lang/swig-1.3.10 ) )"
+RDEPEND="!nocxx? ( python? ( >=virtual/python-2.2.1 ) )
 	virtual/libc"
 
 src_unpack() {
@@ -35,7 +35,7 @@ src_compile() {
 	local PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
 	local myflags=""
 	use static && CFLAGS="${CFLAGS} -static" && LDFLAGS="${LDFLAGS} -static"
-	if use python ; then
+	if !use nocxx && use python ; then
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/$(get_libdir)/python${PYTHONVER}/site-packages"
 		append-flags -I/usr/include/python${PYTHONVER}
 	fi
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
 	local PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
 	local myflags=""
-	if use python ; then
+	if !use nocxx && use python ; then
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=${D}/usr/$(get_libdir)/python${PYTHONVER}/site-packages"
 	fi
 	make install FAKEROOT="${D}" man_prefix=/usr/share LIBDIR="${D}/$(get_libdir)" ${myflags} || die

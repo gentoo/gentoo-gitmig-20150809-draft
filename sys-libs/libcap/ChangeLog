@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libcap
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.31 2004/10/16 16:35:44 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.32 2005/02/03 17:22:29 solar Exp $
+
+  03 Feb 2005; <solar@gentoo.org> -libcap-1.10-r3.ebuild,
+  libcap-1.10-r4.ebuild:
+  - removed old -r3 ebuild as -r4 is stable on all arches. removed unused pic
+  USE flag. added support for nocxx to keep swig from getting pulled in via the
+  python use flag for this package - bug #73635
 
   01 Oct 2004; Simon Stelling <blubb@gentoo.org> libcap-1.10-r3.ebuild,
   libcap-1.10-r4.ebuild:
