@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel-cvs/cel-cvs-0.97.ebuild,v 1.4 2003/07/15 23:58:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel-cvs/cel-cvs-0.97.ebuild,v 1.5 2003/09/03 01:28:10 vapier Exp $
 
 inherit cvs
 ECVS_SERVER="cvs.cel.sourceforge.net:/cvsroot/cel"
@@ -34,6 +34,6 @@ src_install() {
 	sed -i -e "s:/usr/local/cel:${CEL_PREFIX}:g" cel.cex
 	# attention don't put a / between ${D} and ${CEL_PREFIX} jam has a bug where
 	# it fails with 3 following slashes.
-	jam -sFILEMODE=0640 -sEXEMODE=0750 -sprefix=${D}${CEL_PREFIX} install || die
+	jam -sFILEMODE=0644 -sEXEMODE=0755 -sprefix=${D}${CEL_PREFIX} install || die
 	dobin cel.cex
 }
