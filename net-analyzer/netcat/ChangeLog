@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.18 2003/08/21 04:03:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.19 2003/09/20 05:40:45 seemant Exp $
+
+  19 Sep 2003; Seemant Kulleen <seemant@gentoo.org> netcat-110-r3.ebuild,
+  netcat-110-r4.ebuild:
+  SRC_URI update, thanks to: Scott Alfter <gentoo@salfter.dyndns.org> in bug
+  #29154
 
 *netcat-110-r4 (21 Aug 2003)
 
