@@ -1,19 +1,22 @@
-MD5 6ec5a269a81fabad227186860f2fb807 mysql-3.23.57-r1.ebuild 6495
-MD5 4c73c57dd1248a57bc024f9bb51e466c mysql-3.23.56.ebuild 6538
-MD5 9ab54b28730577c9c9bd9eeb9e1d3336 mysql-4.0.22-r1.ebuild 8852
-MD5 0111f32a4e92709976dc42423ca6be39 mysql-4.1.7.ebuild 8384
-MD5 d05a8a3d8700660c33c9e172866a41f6 mysql-3.23.58.ebuild 6493
-MD5 541587d5c0aa513cb095d96f2d0bea30 mysql-4.0.23.ebuild 8623
-MD5 e632416f3ff7f2770d60c0900278d7f0 mysql-3.23.52-r1.ebuild 5853
-MD5 1eebb91730e4d3d29e76234924d0a160 mysql-4.0.23-r2.ebuild 8988
-MD5 024302aa6ae49cd85e6f260092e88e39 mysql-4.1.8-r1.ebuild 8795
-MD5 4c0d3d7e2532b9f18a88e3dad4d99e17 mysql-3.23.57.ebuild 6541
-MD5 1c36bcb55938b889ac3be71892d5fc92 mysql-4.0.22.ebuild 8341
-MD5 7ec3cde1d3764070b13ef2a623d6776d mysql-4.0.22-r2.ebuild 9187
-MD5 0219db4e5fbde288779ce0e52573c30a mysql-3.23.58-r1.ebuild 6611
-MD5 5a69114c0e453d991181634c868c6fd7 mysql-4.1.8.ebuild 8670
-MD5 17efb35529e517b5148e764bb98ce433 mysql-4.0.23-r1.ebuild 8740
-MD5 5ad0e1977c250cfecd5c9a69abb5ffab ChangeLog 25309
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e9bafba4746477cce9f475affd3b0bca mysql-3.23.57-r1.ebuild 6493
+MD5 6a5c5d72a3e0aeb26bd254bb21c7aeba mysql-3.23.56.ebuild 6536
+MD5 93c0f51d089a00c5308b002c983ba0ed mysql-4.0.22-r1.ebuild 8850
+MD5 8c6ac9e0f9aa7f13f6a58dfff50bcbfe mysql-4.1.7.ebuild 8382
+MD5 f6a9c88152143c9635b5681d162f873e mysql-3.23.58.ebuild 6491
+MD5 c3b9f6a86d2fabb617d36952ca685ab7 mysql-4.0.23.ebuild 8621
+MD5 27616be443b972185f2e99ec397f3491 mysql-3.23.52-r1.ebuild 5851
+MD5 75b9a69b87e91f407f11817ff9de59f4 mysql-4.0.23-r2.ebuild 8989
+MD5 a546a04b63635b15ea352f9edad84809 mysql-4.1.8-r1.ebuild 8795
+MD5 70d0ffe4d827bbd0fdcd062bc1fc7fb6 mysql-3.23.57.ebuild 6539
+MD5 93a2259302a87c845b96d3beddb9f683 mysql-4.0.22.ebuild 8339
+MD5 df104eb81bd57e3cb9292219cf32dcc4 mysql-4.0.22-r2.ebuild 9188
+MD5 a7671c1d21ac4150252e6a370af2a3d8 mysql-3.23.58-r1.ebuild 6609
+MD5 c42c69bb374ff805945ad9c1dc5d4a81 mysql-4.1.8.ebuild 8668
+MD5 42326d56ef0ec22b6c8c9f2f4d3bc52d mysql-4.0.23-r1.ebuild 8741
+MD5 88694556b24fd5d20e3279d162ea3881 ChangeLog 25733
 MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
@@ -69,3 +72,11 @@ MD5 5c65bc30646d669193798324a56b002a files/digest-mysql-4.0.23-r1 66
 MD5 ce711c0d8387720dbb85de1d756daa75 files/digest-mysql-4.0.23-r2 67
 MD5 152b9a8feef16df47b56c316c5c0601e files/mysql-4.0.13-thrssl.patch 813
 MD5 ad5636b398982a23f6fc58f18a2114fc files/mysql-4.0.18-mysqldmultisecurity.diff 3863
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFB9BAuPpIsIjIzwiwRAlZjAKCGU5eVE3RqoYEIv19NKxXCv3GFvQCfR39O
+DM9pHk1E/P2QBZC6tER96Y4=
+=9ZAb
+-----END PGP SIGNATURE-----

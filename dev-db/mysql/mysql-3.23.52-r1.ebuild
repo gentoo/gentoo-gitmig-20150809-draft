@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.20 2005/01/01 17:37:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.21 2005/01/23 23:38:36 robbat2 Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -148,7 +148,7 @@ pkg_preinst() {
 	fi
 
 	if ! id mysql; then
-		useradd -g mysql -s /dev/null -d /var/lib/mysql -c "mysql" mysql
+		useradd -g mysql -s /bin/false -d /var/lib/mysql -c "mysql" mysql
 		assert "problem adding user mysql"
 	fi
 }

@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.169 2005/01/22 02:47:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.170 2005/01/23 23:38:36 robbat2 Exp $
+
+  23 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
+  mysql-3.23.52-r1.ebuild, mysql-3.23.56.ebuild, mysql-3.23.57-r1.ebuild,
+  mysql-3.23.57.ebuild, mysql-3.23.58-r1.ebuild, mysql-3.23.58.ebuild,
+  mysql-4.0.22-r1.ebuild, mysql-4.0.22-r2.ebuild, mysql-4.0.22.ebuild,
+  mysql-4.0.23-r1.ebuild, mysql-4.0.23-r2.ebuild, mysql-4.0.23.ebuild,
+  mysql-4.1.7.ebuild, mysql-4.1.8-r1.ebuild, mysql-4.1.8.ebuild:
+  Fix bug #79216.
 
   21 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.22-r2.ebuild,
   mysql-4.0.23-r2.ebuild:
