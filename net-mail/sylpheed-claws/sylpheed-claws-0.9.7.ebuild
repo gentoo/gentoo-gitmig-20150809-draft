@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.7.ebuild,v 1.1 2003/11/26 23:24:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.7.ebuild,v 1.2 2003/11/29 04:01:27 genone Exp $
 
 IUSE="nls gnome xface dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
 inherit eutils flag-o-matic
 
 GS_PN=ghostscript-viewer
-GS_PV=0.5
+GS_PV=0.6
 MY_GS=${GS_PN}-${GS_PV}
 MY_P="sylpheed-${PV}claws"
 S=${WORKDIR}/${MY_P}
@@ -58,10 +58,11 @@ src_unpack() {
 	cd ${S}/src
 	epatch ${FILESDIR}/procmime.patch
 
-	# procmime API was changed
+	# procmime API was changed between 0.9.6 and 0.9.7, 
+	# default Makefile uses installed (=old) headers
 	if use pdflib; then
 		cd ${S2}
-		epatch ${FILESDIR}/gv-procmime-0.9.7.diff
+		epatch ${FILESDIR}/gv-procmime-Makefile.in.patch
 	fi
 }
 
@@ -176,10 +177,4 @@ src_install() {
 		docinto ${MY_GS}
 		dodoc AUTHORS ChangeLog INSTALL NEWS README
 	fi
-}
-
-pkg_postinst() {
-	einfo "A new plugin scheme has been implemented and many plugins"
-	einfo "now come with sylpheed-claws. The plugins are located in:"
-	einfo "/usr/lib/sylpheed-claws/plugins and are loaded thru the UI."
 }

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.56 2003/11/26 23:24:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.57 2003/11/29 04:01:27 genone Exp $
+
+  29 Nov 2003; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.7.ebuild,
+  files/gv-procmime-0.9.7.diff, files/gv-procmime-Makefile.in.patch:
+  changing order of include paths, closing bug 34519, thanks to ocastan@noos.fr
+  for the fix. Removing postinst message about plugins (it's old).
 
 *sylpheed-claws-0.9.7 (26 Nov 2003)
 
