@@ -1,6 +1,12 @@
 # ChangeLog for net-im/naim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.32 2003/10/16 15:20:51 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.33 2004/01/08 09:32:38 aether Exp $
+
+*naim-0.11.6.4 (08 Jan 2004)
+
+  08 Jan 2004; Jason A Mobarak <aether@gentoo.org> metadata.xml,
+  naim-0.11.5.9.ebuild, naim-0.11.6.1.ebuild, naim-0.11.6.4.ebuild:
+  Added new naim version 0.11.6.4 and metadata.xml
 
   16 Oct 2003; Nick Hadaway <raker@gentoo.org> naim-0.11.6.1.ebuild:
   Corrected homepage and source URL.
