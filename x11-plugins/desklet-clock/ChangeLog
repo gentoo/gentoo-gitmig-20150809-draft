@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/desklet-clock
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.5 2003/11/01 03:07:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.6 2003/11/12 10:03:55 obz Exp $
+
+*desklet-clock-0.32-r1 (12 Nov 2003)
+
+  12 Nov 2003; Mike Gardiner <obz@gentoo.org> desklet-clock-0.32-r1.ebuild:
+  Fixed up permissions for the Sensor, see bug #32907
 
   01 Nov 2003; Luca Barbato <lu_zero@gentoo.org> desklet-clock-0.31.ebuild,
   desklet-clock-0.32.ebuild:
