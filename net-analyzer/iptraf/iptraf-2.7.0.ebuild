@@ -1,6 +1,6 @@
 # Copyright 2001-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0.ebuild,v 1.3 2002/08/14 12:12:05 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0.ebuild,v 1.4 2002/08/18 01:03:00 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IPTraf is an ncurses-based IP LAN monitor"
@@ -16,11 +16,11 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd src
-	emake TARGET="/usr/bin" WORKDIR="/var/lib/iptraf" \
+	emake TARGET="/usr/sbin" WORKDIR="/var/lib/iptraf" \
 	clean all || die "emake failed"
 }
 src_install() {
-	dobin src/{iptraf,cfconv,rvnamed}
+	dosbin src/{iptraf,cfconv,rvnamed}
 	dodoc  FAQ README* CHANGES RELEASE-NOTES
 	doman Documentation/*.8
 	htmlinto html
