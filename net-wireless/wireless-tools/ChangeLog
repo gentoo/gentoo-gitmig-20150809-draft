@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.12 2003/05/27 17:45:50 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.13 2003/05/28 03:03:31 latexer Exp $
+
+  27 May 2003; Peter Johanson <latexer@gentoo.org> wireless-tools-26_pre9.ebuild:
+  Masking for ppc. Let someone else test and unmask
 
 *wireless-tools-26_pre9 (27 May 2003)
 
