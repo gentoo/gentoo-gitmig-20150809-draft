@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6710d9d4f59520eff6b1b85f9637830a ChangeLog 780
+MD5 cba85d195d7414962520e5d026426b47 ChangeLog 977
 MD5 575889d53fee3ecdceae26f56be4b1d0 pop-before-smtp-1.34.ebuild 1268
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 81b85a3d626ea353d820fc85f9a6af11 pop-before-smtp-1.36.ebuild 1269
 MD5 452b859ad99898ed238063288f64e852 files/pop-before-smtp.init 722
 MD5 d31f4a81475082683b695fbb167186ea files/digest-pop-before-smtp-1.34 71
+MD5 2a85e4c8292815e39ceeb31b55d76752 files/digest-pop-before-smtp-1.36 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBi4YA10xuJSrg3/sRAiZ6AJ9jH5CSn5tbp+sK8IE9WAs3Jf6YHACffn3u
-QfxeYdCBGtOuja8fnyXVyS8=
-=QgeE
+iD8DBQFBi4dJ10xuJSrg3/sRAub9AKCBcY38appwQ1mgrjoNAs0KbL4C1QCfbCm4
+cn+V8X7fEhwiPe6k+GvJsgE=
+=Icqx
 -----END PGP SIGNATURE-----
