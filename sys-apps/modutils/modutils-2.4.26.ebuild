@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.26.ebuild,v 1.11 2004/06/30 02:55:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.26.ebuild,v 1.12 2004/08/19 02:36:54 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/${PN}/v2.4/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~mips ~alpha ~hppa -amd64 ~ia64 ppc64 s390"
+KEYWORDS="~x86 ppc ~sparc ~mips alpha ~hppa -amd64 ia64 ppc64 s390"
 IUSE=""
 
 DEPEND="virtual/libc"
