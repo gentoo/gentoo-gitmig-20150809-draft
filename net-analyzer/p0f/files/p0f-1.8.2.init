@@ -1,16 +1,8 @@
 #!/sbin/runscript
-# Based upon a script copyrighted under LGPL
-# Modified by Ilian Zarov <coder@descom.com>
-# description: p0f - the p0f monitoring program.
-# processname: p0f
-# pidfile: /var/run/p0f.pid
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/files/p0f-1.8.2.init,v 1.2 2002/02/21 23:14:00 m0rpheus Exp $
 
-PATH=/usr/bin:/sbin:/bin:/usr/sbin
-export PATH
-export P0FLOGFILE=/var/log/p0f
-
-# Source function library.
-source /etc/init.d/functions.sh
 
 start() {
 	ebegin "Starting p0f"
@@ -34,7 +26,7 @@ start() {
 	
 	# Start up p0f and filter out all packets originating from any of this machines IP's.
 	einfo "Logfile: ${P0FLOGFILE}"
-	start-stop-daemon --start --quiet --exec /usr/sbin/p0f -- -v "$BpfFilter" >>"$P0FLOGFILE" 2>&1 &
+	start-stop-daemon --start --quiet --exec /usr/sbin/p0f -- -v "$BpfFilter" >>"/var/log/p0f" 2>&1 &
 	eend ${?}
 }
 
