@@ -1,6 +1,4 @@
-MD5 6f3ba6d0d99cde9111b76c16995d4867 kdejava-3.3.1.ebuild 1285
-MD5 9f2aef790a032d801bdfd7c2aecf47dc ChangeLog 1113
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 5b17d9b28be9f8027de2f72777841edb kdejava-3.3.1.ebuild 1147
 MD5 b81fee9818db8eac3afd9cabd5bfdfd6 files/digest-kdejava-3.3.1 299
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 9598e813037e1a6ea89142a23ac4018a files/classpath.diff 460

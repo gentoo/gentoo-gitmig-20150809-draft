@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.3.1.ebuild,v 1.2 2004/12/25 15:48:57 danarmak Exp $
-MAXKDEVER=3.3.1
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.3.2.ebuild,v 1.1 2004/12/25 15:48:57 danarmak Exp $
+MAXKDEVER=3.3.2
 
 inherit kde-functions
 DESCRIPTION="kdebindings - merge this to pull in all kdebase-derived packages"
@@ -13,16 +13,16 @@ KEYWORDS="~x86"
 IUSE=""
 
 RRDEPEND="
-$(deprange $PV $MAXKDEVER kde-base/dcopc)
-$(deprange $PV $MAXKDEVER kde-base/dcopperl)
-$(deprange $PV $MAXKDEVER kde-base/dcoppython)
+$(deprange 3.3.1 $PV kde-base/dcopc)
+$(deprange 3.3.1 $PV kde-base/dcopperl)
+$(deprange 3.3.1 $PV kde-base/dcoppython)
 $(deprange $PV $MAXKDEVER kde-base/kalyptus)
-$(deprange $PV $MAXKDEVER kde-base/kdejava)
-$(deprange $PV $MAXKDEVER kde-base/kjsembed)
+$(deprange 3.3.1 $PV kde-base/kdejava)
+$(deprange 3.3.1 $PV kde-base/kjsembed)
 $(deprange $PV $MAXKDEVER kde-base/korundum)
 $(deprange $PV $MAXKDEVER kde-base/qtjava)
 $(deprange $PV $MAXKDEVER kde-base/qtruby)
-$(deprange $PV $MAXKDEVER kde-base/smoke)"
+$(deprange 3.3.1 $PV kde-base/smoke)"
 
 
 # Omitted: qtsharp, dcopjava, xparts (considered broken by upstream) 

@@ -1,11 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.3.1.ebuild,v 1.4 2004/12/10 20:22:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.3.1.ebuild,v 1.5 2004/12/25 15:52:17 danarmak Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="dcopc"
 KMCOPYLIB="libdcopc dcopc"
 KM_MAKEFILESREV=1
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Allows embedding of generic XParts as KDE KParts (broken)"

@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/dcopc-3.3.1.ebuild,v 1.2 2004/11/07 03:00:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/dcopc-3.3.1.ebuild,v 1.3 2004/12/25 15:46:51 danarmak Exp $
 
 KMNAME=kdebindings
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="C bindings for DCOP"
@@ -12,3 +14,4 @@ DEPEND="=dev-libs/glib-1.2*
 
 # Make sure to compile this
 PATCHES="$FILESDIR/remove-configure.diff"
+
