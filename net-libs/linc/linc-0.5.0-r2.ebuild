@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider  <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.5.0-r2.ebuild,v 1.1 2002/06/28 08:25:59 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.5.0-r2.ebuild,v 1.2 2002/07/04 13:04:37 azarah Exp $
 inherit debug
 inherit libtool
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-RDEPEND=">=dev-libs/glib-2.0.0
+RDEPEND=">=dev-libs/glib-2.0.4-r1
 	>=dev-libs/openssl-0.9.6"
 
 DEPEND="${RDEPEND}
