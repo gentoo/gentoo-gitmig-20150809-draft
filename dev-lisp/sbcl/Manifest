@@ -1,4 +1,5 @@
-MD5 9da0844174b6ce46da3ddaff3191af92 ChangeLog 3693
+MD5 4f65a6088bb383ff5ab855dc7c5bfa60 ChangeLog 3780
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 f67859fbfee204bba3ee73ee8abe994a sbcl-0.6.12.ebuild 1053
 MD5 a6e113337aada357e7aa8b93dce9c82a sbcl-0.7.5.ebuild 1372
 MD5 215c765767ee81f9cbae0696e4fc0c53 sbcl-0.7.6-r1.ebuild 1482
