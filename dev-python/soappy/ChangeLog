@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.4 2004/06/25 01:50:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.5 2004/10/10 08:42:33 blubb Exp $
+
+  10 Oct 2004; Simon Stelling <blubb@gentoo.org> soappy-0.11.3.ebuild:
+  added ~amd64
 
   18 Apr 2004; David Holm <dholm@gentoo.org> soappy-0.11.3.ebuild:
   Added to ~ppc.
