@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.5 2004/02/29 12:16:31 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.6 2004/03/12 15:17:00 aliz Exp $
+
+  12 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> arj-3.10.18.ebuild,
+  arj-3.10g.ebuild:
+  amd64 unmask and inherit eutils for epatch.
 
   29 Feb 2004; <plasmaroo@gentoo.org> arj-3.10.18.ebuild,
   files/arj-3.10.18-2.6.headers.patch:

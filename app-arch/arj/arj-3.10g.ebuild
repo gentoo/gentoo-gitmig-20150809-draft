@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10g.ebuild,v 1.5 2004/03/05 16:24:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10g.ebuild,v 1.6 2004/03/12 15:17:00 aliz Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Utility for opening arj archives."

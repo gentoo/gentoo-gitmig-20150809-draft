@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.2.0.ebuild,v 1.4 2004/01/03 17:04:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.2.0.ebuild,v 1.5 2004/03/12 15:17:01 aliz Exp $
 
 S=${WORKDIR}/${PN}
 MY_P=${PN}linux-${PV}
@@ -10,7 +10,7 @@ SRC_URI="http://www.rarlab.com/rar/${MY_P}.tar.gz"
 
 LICENSE="RAR"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* x86 amd64"
 
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
 

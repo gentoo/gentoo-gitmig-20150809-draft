@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pdumpfs
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/ChangeLog,v 1.1 2003/09/09 01:03:25 matsuu Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/ChangeLog,v 1.2 2004/03/12 15:17:01 aliz Exp $
+
+  12 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> pdumpfs-0.6.ebuild:
+  x86 unmask.
 
 *pdumpfs-0.6 (09 Sep 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.7 2004/03/05 18:09:34 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.8 2004/03/12 15:17:01 aliz Exp $
+
+  12 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> tar-1.13.92-r3.ebuild:
+  amd64 unmask.
 
   02 Mar 2004; Brian Jackson <iggy@gentoo.org> tar-1.13.92-r3.ebuild:
   adding initial s390 support
