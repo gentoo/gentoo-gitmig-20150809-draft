@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.5.ebuild,v 1.3 2003/09/02 19:47:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.5.ebuild,v 1.4 2003/09/04 08:06:05 msterret Exp $
 
 inherit flag-o-matic
 filter-flags -fPIC
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	
+
 	myconf="${myconf} --bindir=/usr/lib/xscreensaver" \
 	myconf="${myconf} --with-configdir=/usr/share/control-center/screensavers/" \
 
@@ -45,7 +45,7 @@ src_compile() {
 			|| die "couldnt sed desktop files"
 		[ -n "${KDEDIR}" ] \
 			&& myconf="${myconf} --with-kdessconfigdir=${KDEDIR}/share/applnk/System/ScreenSavers"
-	fi			
+	fi
 
 	econf \
 		`use_enable sse` \

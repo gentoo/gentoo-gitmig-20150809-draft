@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.5 2003/08/18 23:43:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.6 2003/09/04 08:06:05 msterret Exp $
 
 inherit flag-o-matic
 filter-flags -fPIC
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	
+
 	myconf="${myconf} --bindir=/usr/lib/xscreensaver" \
 	myconf="${myconf} --with-configdir=/usr/share/control-center/screensavers/" \
 
@@ -41,16 +41,16 @@ src_compile() {
 				   -e 's:Exec=kxsconfig \(.*\):Exec=kxsconfig /usr/lib/xscreensaver/\1:g' \
 				   $x
 		done
-	
+
 		[ -n "${KDEDIR}" ] \
 			&& myconf="${myconf} --with-kdessconfigdir=${KDEDIR}/share/applnk/System/ScreenSavers"
-	fi			
+	fi
 
 	econf \
 		`use_enable sse` \
 		`use_enable 3dnow` \
 		${myconf} || die
-		
+
 	emake || die
 }
 
@@ -84,7 +84,7 @@ pkg_postinst() {
     GL:          \"BioF\"  biof --root        \\n\\\
     GL:   \"BusySpheres\"  busyspheres --root \\n\\' \
 	${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver
-	
+
 	else
 		einfo "Unable to add these to XScreenSaver configuration"
 		einfo "Read /usr/share/doc/${PF}/README.xscreensaver.gz for"
@@ -111,7 +111,7 @@ pkg_postrm() {
 			-e '/\"Sundancer2\"  sundancer2/d' \
 			-e '/\"BioF\"  biof/d' \
 			-e '/\"BusySpheres\"  busyspheres/d' -i \
-		${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver			
+		${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver
 	fi
 }
 
