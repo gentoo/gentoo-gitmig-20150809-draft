@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.3 2004/12/13 06:35:06 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.4 2005/03/18 02:47:00 fafhrd Exp $
 
 inherit toolchain-funcs eutils
 
@@ -217,8 +217,10 @@ egnustep_doc() {
 		fi
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} all || die "doc make failed"
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} install || die "doc install failed"
-	else
-		die "no Makefile found"
+#XXX: I have no idea why this is called by ebuilds that don't have 'doc' in the
+#  USE flags, but user has 'doc' in global USE in make.conf
+#	else
+#		die "no Makefile found"
 	fi
 	cd ..
 	return 0
@@ -240,7 +242,7 @@ objc_available() {
  Yen-Ju Chen
  Dennis Leeuw
 
- Copyright � 2003 Yen-Ju Chen, Dennis Leeuw
+ Copyright Â© 2003 Yen-Ju Chen, Dennis Leeuw
 
  Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
  </quote>
