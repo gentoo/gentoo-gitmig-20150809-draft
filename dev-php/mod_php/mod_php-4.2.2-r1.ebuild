@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.10 2002/09/03 20:33:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.11 2002/09/08 19:35:27 rphillips Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -153,7 +153,7 @@ src_compile() {
 	fi
 
 	use xml2 && myconf="${myconf} --with-dom"
-	use crypt && myconf="${myconf} --with-mcrypt --with-mhash"
+	use crypt && myconf="${myconf} --with-mcrypt --with-mhash --disable-posix-threads"
 	#use java && myconf="${myconf} --with-java=${JDK_HOME}"
 
 	LDFLAGS="$LDFLAGS -ltiff -ljpeg"
