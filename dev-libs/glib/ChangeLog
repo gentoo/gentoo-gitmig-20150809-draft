@@ -1,11 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.44 2003/05/30 23:28:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.45 2003/05/30 23:42:21 liquidx Exp $
 
 *glib-2.2.1-r1 (29 May 2003)
 
   30 May 2003; Stanislav Brabec <utx@gentoo.org> glib-2.2.1-r1.ebuild:
-  Package masked, waiting for feedback.
+  Package masked. Needs more testing in ~x86.
 
   29 May 2003; Stanislav Brabec <utx@gentoo.org> glib-2.2.1-r1.ebuild:
   Added env.d file setting G_BROKEN_FILENAMES (improves behavior with non UTF-8
