@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.9.3_p4-r1.ebuild,v 1.4 2004/09/04 00:35:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.9.3_p4-r1.ebuild,v 1.5 2004/09/15 21:35:39 rizzo Exp $
 
 inherit webapp
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-full.tar.gz
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc ~sparc alpha"
 IUSE=""
-RDEPEND="<=virtual/httpd-php-5
+RDEPEND="<virtual/httpd-php-5
 	>=dev-db/mysql-3.23.23"
 
 DEPEND="${DEPEND} ${RDEPEND} >=net-www/webapp-config-1.10-r5"
