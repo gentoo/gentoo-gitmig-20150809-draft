@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/lineak-defaultplugin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/ChangeLog,v 1.1 2004/11/29 20:07:15 genstef Exp $
+
+*lineak-defaultplugin-0.8.2 (29 Nov 2004)
+
+  29 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +lineak-defaultplugin-0.8.2.ebuild:
+  Adding ebuild from bug 72658 thanks to Bernd Westermann
+  <Bernd.Westermann@it-west.de> and Raskasi <raskasi@gmx.net>
+
