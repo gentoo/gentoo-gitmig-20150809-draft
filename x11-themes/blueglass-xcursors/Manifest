@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7691ba0b8731e5dfaeec0c7264947e66 ChangeLog 1538
-MD5 13f9d8a803126d2cfcd7b107d13b30bf blueglass-xcursors-0.3-r1.ebuild 1656
-MD5 e6df55e03ebac2f0cad6b6da08ee249f blueglass-xcursors-0.3.ebuild 1609
-MD5 46270487af0937066bcd3b4cbf7e1a28 blueglass-xcursors-0.4.ebuild 1865
-MD5 cfbe0a169db47e1e023e4374461a8ebb files/digest-blueglass-xcursors-0.3 83
+MD5 97c3a2c8b483650ac9725155d24b3ab7 blueglass-xcursors-0.3.ebuild 1600
+MD5 dcc1acbc55d821446902061fd63ec054 ChangeLog 1529
+MD5 b26090a75b48838a589ace776356a7a6 blueglass-xcursors-0.3-r1.ebuild 1647
+MD5 72e2a68e173961b5daf4fcf33850a20a blueglass-xcursors-0.4.ebuild 1859
 MD5 cfbe0a169db47e1e023e4374461a8ebb files/digest-blueglass-xcursors-0.3-r1 83
+MD5 cfbe0a169db47e1e023e4374461a8ebb files/digest-blueglass-xcursors-0.3 83
 MD5 de0300160ad31c18630f323abbc1a7a2 files/digest-blueglass-xcursors-0.4 83
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAyllPHTu7gpaalycRAjC0AKCrd3hFj+QlWsTG2MvF0eKE+xpiBgCePrDW
-gMcDYnJjjgpjEsVVX4aVumU=
-=HVoD
------END PGP SIGNATURE-----

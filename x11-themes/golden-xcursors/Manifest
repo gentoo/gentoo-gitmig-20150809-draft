@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37a8a83aba627846d6e769a932f009da ChangeLog 1384
-MD5 dd03932914fdd9b2b7a86ea832774a6e golden-xcursors-0.7-r1.ebuild 1543
-MD5 cb9a01a84b2a7edf0a0435486348667d golden-xcursors-0.7.ebuild 1496
-MD5 b42d2b3478d73564a57c3c751f6729d5 golden-xcursors-0.8.ebuild 1748
-MD5 f06d3720f520f9e9c913ca56e134d440 files/digest-golden-xcursors-0.7 80
+MD5 48cbe106a53edc2314a4b931541a7102 golden-xcursors-0.7-r1.ebuild 1534
+MD5 9a8b6c0e8a77cc126df7cf97c6deae54 golden-xcursors-0.7.ebuild 1487
+MD5 97a786238aa9571c8718338fddc1ca11 ChangeLog 1376
+MD5 98c915810a32268f74dd51fa4bd3b85f golden-xcursors-0.8.ebuild 1742
 MD5 f06d3720f520f9e9c913ca56e134d440 files/digest-golden-xcursors-0.7-r1 80
+MD5 f06d3720f520f9e9c913ca56e134d440 files/digest-golden-xcursors-0.7 80
 MD5 da9a3c012a411e68efa6f38d131c5f7e files/digest-golden-xcursors-0.8 80
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAylmjHTu7gpaalycRAqgYAKDD0EI0lFwQjAQRQgPzhrAWEq8b6wCggV0I
-W9lcmbrN4FArO6/bcIJFmEs=
-=G7y8
------END PGP SIGNATURE-----
