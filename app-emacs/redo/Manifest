@@ -1,5 +1,5 @@
-MD5 1c1579f220d4244b926d8971f60f8f02 redo-1.02.ebuild 669
-MD5 025dcd18d34a82273bb461fdb6dd769c ChangeLog 363
+MD5 8640030ce85db4c50b24fd4c23df19c4 redo-1.02.ebuild 672
+MD5 21ba6b7b2b843cb13783c6c298adc307 ChangeLog 465
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 22c371fbf30ceb35888a6ad43273f0f2 files/digest-redo-1.02 59
 MD5 f8f0f727eb9e150240736e0fb1f32c4c files/50redo-gentoo.el 88
