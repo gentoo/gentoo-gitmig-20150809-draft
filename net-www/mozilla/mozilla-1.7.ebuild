@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.2 2004/06/19 20:43:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.3 2004/06/20 18:57:57 kugelfang Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -101,9 +101,11 @@ src_unpack() {
 		if [[ ${ARCH} == alpha ]]; then
 			epatch ${FILESDIR}/${PN}-alpha-xpcom-subs-fix.patch
 		fi
-		if [[ ${ARCH} == amd64 ]]; then
-			epatch ${FILESDIR}/${PN}-1.7-amd64.patch
-		fi
+		# unecessary now, already in the source
+		# Danny van Dyk <kugelfang@gentoo.org> 2004/06/20
+		#if [[ ${ARCH} == amd64 ]]; then
+		#	epatch ${FILESDIR}/${PN}-1.7-amd64.patch
+		#fi
 	fi
 
 	epatch ${FILESDIR}/1.2/${PN}-1.2b-default-plugin-less-annoying.patch.bz2
