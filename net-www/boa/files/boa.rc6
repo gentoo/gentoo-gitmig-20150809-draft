@@ -1,0 +1,26 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ ! -e /etc/boa/boa.conf ] ; then
+        eerror "You need an /etc/boa/boa.conf to run Boa"
+        eerror "There is a sample file in /usr/share/docs/boa"
+        return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting Boa"
+    start-stop-daemon --quiet --start --exec /usr/sbin/boa
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping Boa"
+    start-stop-daemon --quiet --stop --name boa --exec /usr/sbin/boa
+    eend $?
+}
