@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.015.ebuild,v 1.4 2004/06/24 23:45:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.015.ebuild,v 1.5 2004/07/17 15:38:03 zul Exp $
 
 inherit python
 
 MY_P=${P/geekcredit/gc}
 IUSE=""
-DESCRIPTION="Rawdog - RSS Aggregator Without Delusions Of Grandeur"
+DESCRIPTION="Digial complementary currency for internet."
 SRC_URI="http://download.gna.org/geekcredit/${MY_P}.tgz"
 HOMEPAGE="http://www.geekcredit.org/"
 SLOT="0"
