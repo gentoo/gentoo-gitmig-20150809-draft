@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim-modules/naim-modules-0.0.11.6.1_pre20030923.ebuild,v 1.1 2003/10/14 19:05:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim-modules/naim-modules-0.0.11.6.1_pre20030923.ebuild,v 1.2 2004/02/22 22:43:59 agriffis Exp $
 
 MY_PV="${PV/_pre*}-2003-09-23-1113"
 DESCRIPTION="a bunch of modules for the naim im client"
@@ -9,7 +9,7 @@ SRC_URI="http://site.n.ml.org/download/20031011213921/naim/${PN}-${MY_PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~mips ~alpha ~arm ~hppa ia64 ~amd64"
+KEYWORDS="x86 ppc ~sparc ~mips ~alpha ~hppa ia64 ~amd64"
 IUSE="debug"
 
 DEPEND="net-im/naim"
