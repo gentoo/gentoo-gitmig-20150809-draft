@@ -1,6 +1,6 @@
 # Copyright 2002 damien krotkine <dams@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ldetect-0.4.6.ebuild,v 1.1 2002/12/01 19:02:36 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ldetect-0.4.7.ebuild,v 1.1 2002/12/01 21:00:08 dams Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -38,7 +38,7 @@ KEYWORDS="~x86"
 src_compile() {
 	cd ../../ldetect;
 	echo " ------- pwd : $PWD"
-        patch -p1 <${FILESDIR}/ldetect-0.4.6.patch || die
+        patch -p1 <${FILESDIR}/ldetect-0.4.7.patch || die
 	echo "compile in ${PWD}";
 	make clean;
 	make
