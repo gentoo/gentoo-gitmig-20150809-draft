@@ -1,12 +1,15 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.34 2003/06/20 21:55:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.35 2003/07/04 22:58:26 gmsoft Exp $
 
   20 Jun 2003; Alastair Tse <liquidx@gentoo.org> eog-2.2.0.ebuild,
   eog-2.2.1.ebuild, eog-2.2.2.ebuild:
   added eel deps
 
 *eog-2.2.2 (17 Jun 2003)
+
+  05 Jul 2003; Guy Martin <gmsoft@gentoo.org> eog-2.2.2.ebuild :
+  Added ~hppa to KEYWORDS.
 
   17 Jun 2003; <spider@gentoo.org> eog-2.2.2.ebuild:
   Version bump
@@ -19,6 +22,9 @@
   added omf fix to stop excessive scrollkeeping
 
 *eog-2.2.1 (10 Mar 2003)
+
+  05 Jul 2003; Guy Martin <gmsoft@gentoo.org> eog-2.2.1.ebuild :
+  Added hppa to KEYWORDS.
 
   16 Mar 2003; foser <foser@gentoo.org> eog-2.2.1.ebuild :
   Fixed bonobo deps to be on the safe side (#16102)
