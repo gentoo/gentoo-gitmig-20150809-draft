@@ -1,0 +1,12 @@
+# ChangeLog for x11-wm/openbox
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.1 2002/04/29 11:16:22 seemant Exp $
+
+*openbox-0.99.1 (29 Apr 2002)
+
+  29 Apr 2002; Seemant Kulleen <seemant@gentoo.org> openbox-0.99.1.ebuild
+  ChangeLog files/digest-openbox-0.99.1 :
+
+  A window manager that is like blackbox, but more open with respect to 
+  development.  It is, for the most part, compatible with blackbox
+  applications.
