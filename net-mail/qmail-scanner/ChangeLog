@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail-scanner
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/ChangeLog,v 1.12 2004/01/29 05:26:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/ChangeLog,v 1.13 2004/04/24 08:01:49 robbat2 Exp $
+
+  24 Apr 2004; Robin H. Johnson <robbat2@gentoo.org>
+  qmail-scanner-1.16-r2.ebuild, qmail-scanner-1.20.ebuild:
+  bug #48628, accept various other qmail's as well
 
 *qmail-scanner-1.20 (28 Jan 2004)
 
