@@ -1,4 +1,6 @@
-MD5 39a3b5953240a3b78f31a84d4606e6c7 files/digest-ioncube_loaders-2.1 71
-MD5 277450127a47ac8bbff2a03b08824554 ioncube_loaders-2.1.ebuild 1353
-MD5 82bcf949b487d12321102cb42b932e5c ChangeLog 457
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/Manifest,v 1.8 2004/01/05 03:39:20 robbat2 Exp $
+MD5 688dc3faaf62d68b0ee48db097e08b6f ioncube_loaders-2.4.ebuild 1346
+MD5 88491e5cc537fb743fc1567736d8f379 ChangeLog 456
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 39a3b5953240a3b78f31a84d4606e6c7 files/digest-ioncube_loaders-2.1 71
+MD5 029193ee3d6bd54f75a66454dc33bd30 files/digest-ioncube_loaders-2.4 67
