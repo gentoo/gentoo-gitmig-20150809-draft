@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.6.ebuild,v 1.7 2004/11/16 14:47:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.6.ebuild,v 1.8 2004/11/23 08:57:42 usata Exp $
 
 inherit flag-o-matic
 
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install() {
 	dodir /etc /usr/share/fonts/jfbterm
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	dodir /usr/share/terminfo
 	tic terminfo.jfbterm -o${D}/usr/share/terminfo || die
