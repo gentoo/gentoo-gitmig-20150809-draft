@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-1.00.3-r1.ebuild,v 1.4 2003/06/22 22:25:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/raidtools-1.00.3-r1.ebuild,v 1.5 2003/07/02 16:33:05 gmsoft Exp $
 
 DESCRIPTION="Linux RAID 0/1/4/5 utilities"
 SRC_URI="http://people.redhat.com/mingo/raidtools/${P}.tar.gz"
 HOMEPAGE="http://people.redhat.com/mingo/raidtools/"
 
-KEYWORDS="x86 amd64 ~ppc ~sparc ~hppa"
+KEYWORDS="x86 amd64 ~ppc ~sparc hppa"
 SLOT="0"
 LICENSE="GPL-2"
 

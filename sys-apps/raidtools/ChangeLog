@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/raidtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/ChangeLog,v 1.10 2003/03/25 16:06:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidtools/ChangeLog,v 1.11 2003/07/02 16:33:05 gmsoft Exp $
 
 *raidtools-1.00.3-r1 (17 Feb 2003)
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> raidtools-1.00.3-r1.ebuild :
+  Marked stable on hppa.
 
   25 Mar 2003; Guy Martin <gmsoft@gentoo.org> raidtools-1.00.3-r1.ebuild :
   Added ~hppa to KEYWORDS.
