@@ -1,15 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r3.ebuild,v 1.1 2003/12/10 23:03:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1.ebuild,v 1.1 2003/12/25 01:29:25 usata Exp $
 
 IUSE="socks5 tcltk ruby16 cjk"
 
-ONIGURUMA="onigd20031112"
+ONIGURUMA="onigd20031224"
 
 inherit flag-o-matic alternatives eutils gnuconfig
 filter-flags -fomit-frame-pointer
 
-S=${WORKDIR}/${P%_pre*}
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
@@ -27,6 +26,17 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	tcltk?  ( dev-lang/tk )
 	sys-apps/findutils"
 
+S=${WORKDIR}/${P%_pre*}
+
+pkg_setup() {
+
+	einfo
+	einfo "If you want to use ruby-1.6 by default you need to set"
+	einfo "\tUSE=\"ruby16\""
+	einfo "otherwise ruby-1.8 will be used."
+	einfo
+}
+
 src_unpack() {
 	unpack ${A}
 	if [ -n "`use cjk`" ] ; then
@@ -37,7 +47,7 @@ src_unpack() {
 	fi
 
 	# Enable build on alpha EV67
-	if [ "${ARCH}" = "alpha" ] ; then
+	if use alpha; then
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
 }
@@ -105,8 +115,8 @@ pkg_postinst() {
 	ewarn
 
 	if [ -x "/usr/bin/ruby-config" ] ; then
-	einfo
-	einfo "You can switch default ruby by /usr/bin/ruby-config."
+	einfo "If you have both ruby 1.6 and 1.8 installed, you can switch"
+	einfo "default ruby by /usr/bin/ruby-config."
 	einfo
 	fi
 }

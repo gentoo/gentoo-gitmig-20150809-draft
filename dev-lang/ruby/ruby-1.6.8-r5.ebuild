@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r4.ebuild,v 1.1 2003/12/10 23:03:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r5.ebuild,v 1.1 2003/12/25 01:29:25 usata Exp $
 
 IUSE="ruby16 cjk"
 
-ONIGURUMA="onigd20031112"
+ONIGURUMA="onigd20031224"
 
 inherit flag-o-matic alternatives eutils
 filter-flags -fomit-frame-pointer

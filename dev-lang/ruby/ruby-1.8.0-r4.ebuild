@@ -1,6 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1_pre3.ebuild,v 1.2 2003/12/10 23:03:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r4.ebuild,v 1.1 2003/12/25 01:29:25 usata Exp $
+
+IUSE="socks5 tcltk ruby16 cjk"
+
+ONIGURUMA="onigd20031224"
 
 inherit flag-o-matic alternatives eutils gnuconfig
 filter-flags -fomit-frame-pointer
@@ -8,12 +12,12 @@ filter-flags -fomit-frame-pointer
 S=${WORKDIR}/${P%_pre*}
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz"
+SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
+	cjk? ( ftp://ftp.ruby-lang.org/pub/ruby/contrib/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="~alpha ~arm ~hppa ~mips ~sparc ~x86"
-IUSE="socks5 tcltk ruby16"
+KEYWORDS="~alpha ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
@@ -23,21 +27,17 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	tcltk?  ( dev-lang/tk )
 	sys-apps/findutils"
 
-pkg_setup() {
-
-	einfo
-	einfo "If you want to use ruby-1.6 by default you need to set"
-	einfo "\tUSE=\"ruby16\""
-	einfo "otherwise ruby-1.8 will be used."
-	einfo
-}
-
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
+	if [ -n "`use cjk`" ] ; then
+		pushd oniguruma
+		econf --with-rubydir=${S}
+		make 18
+		popd
+	fi
 
 	# Enable build on alpha EV67
-	if use alpha; then
+	if [ "${ARCH}" = "alpha" ] ; then
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
 }
@@ -105,8 +105,8 @@ pkg_postinst() {
 	ewarn
 
 	if [ -x "/usr/bin/ruby-config" ] ; then
-	einfo "If you have both ruby 1.6 and 1.8 installed, you can switch"
-	einfo "default ruby by /usr/bin/ruby-config."
+	einfo
+	einfo "You can switch default ruby by /usr/bin/ruby-config."
 	einfo
 	fi
 }
