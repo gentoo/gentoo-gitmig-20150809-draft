@@ -11,13 +11,17 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 alpha"
 
 src_unpack() {
 
 	unpack ${A}
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-gentoo.patch || die "Patching failed"
+	if [ "${ARCH}" = "alpha" ]; then
+        sed "s:CXXOPTS += :CXXOPTS += -fPIC :" <Makefile >Makefile.sed
+        mv Makefile.sed Makefile
+    fi
 }
 
 src_compile() {
