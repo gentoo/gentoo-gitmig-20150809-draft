@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymad
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.9 2004/12/07 03:14:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.10 2004/12/19 06:36:35 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> pymad-0.5.2.ebuild:
+  Added ~amd64, ~sparc.
 
 *pymad-0.5.2 (07 Dec 2004)
 
