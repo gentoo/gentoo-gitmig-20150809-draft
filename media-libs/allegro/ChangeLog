@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.27 2004/08/12 11:52:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.28 2004/08/20 09:15:04 mr_bones_ Exp $
+
+  20 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> -allegro-4.1.14.ebuild:
+  clean older version
 
   12 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> allegro-4.0.3.ebuild:
   remove the prototype for malloc for gcc34 (bug #58279); error check sed; tidy
