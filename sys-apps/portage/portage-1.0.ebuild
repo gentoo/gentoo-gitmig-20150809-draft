@@ -1,4 +1,7 @@
-#Copyright 2000 Achim Gottinger
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Author Daniel Robbins <drobbins@gentoo.org>
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.0.ebuild,v 1.2 2000/07/31 03:03:20 drobbins Exp $
  
 P=portage-1.0
 A=""
