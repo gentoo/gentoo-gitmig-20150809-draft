@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.46 2005/01/01 11:33:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.47 2005/01/13 13:19:15 eradicator Exp $
+
+  13 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  usermin-1.100-r1.ebuild:
+  Updated ebuild to match webmin's update for security bug #7731. usermin
+  isn't affected, but I'm doing this anyway to be safe if behavior changes in
+  the future.
 
 *usermin-1.100-r1 (31 Dec 2004)
 

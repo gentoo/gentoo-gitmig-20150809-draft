@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100-r1.ebuild,v 1.2 2005/01/01 11:33:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100-r1.ebuild,v 1.3 2005/01/13 13:19:16 eradicator Exp $
 
 IUSE="ssl"
 
@@ -60,7 +60,7 @@ src_install() {
 	autoos=1
 	port=20000
 	login=root
-	crypt=`grep "^root:" ${ROOT}/etc/shadow | cut -f 2 -d :`
+	crypt="XXX"
 	host=`hostname`
 	use ssl && ssl=1 || ssl=0
 	atboot=0
@@ -83,6 +83,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	local crypt=$(grep "^root:" ${ROOT}/etc/shadow | cut -f 2 -d :)
+	dosed "s/root:XXX/root:${crypt}/" /etc/usermin/miniserv.users
 	einfo "To make usermin start at boot time, run: 'rc-update add usermin default'."
 	einfo "Point your web browser to http://localhost:20000 to use usermin."
 }
