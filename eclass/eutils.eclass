@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.105 2004/09/19 21:36:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.106 2004/09/21 17:34:33 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1127,11 +1127,16 @@ check_license() {
 
 	# here is where we check for the licenses the user already
 	# accepted ... if we don't find a match, we make the user accept
+	local shopts=$-
 	local alic
+	set -o noglob #so that bash doesn't expand "*"
 	for alic in ${ACCEPT_LICENSE} ; do
-		[ "${alic}" == "*" ] && return 0
-		[ "${alic}" == "${l}" ] && return 0
+		if [[ ${alic} == * || ${alic} == ${l} ]]; then
+			set +o noglob; set -${shopts} #reset old shell opts
+			return 0
+		fi
 	done
+	set +o noglob; set -$shopts #reset old shell opts
 
 	local licmsg="`mymktemp ${T}`"
 	cat << EOF > ${licmsg}
