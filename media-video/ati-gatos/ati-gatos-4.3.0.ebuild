@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.8 2004/02/14 18:07:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.9 2004/03/21 19:16:04 spyderous Exp $
 
 inherit eutils
 
@@ -18,6 +18,11 @@ DEPEND="${DEPEND}
 	>=x11-base/xfree-4.3.0-r6"
 
 pkg_setup() {
+	if has_version ">=x11-base/xfree-4.3.99"
+	then
+		die "This only works with xfree-4.3.0. Please downgrade."
+	fi
+
 	if [ ! "`grep gatos /var/db/pkg/x11-base/xfree-[0-9]*/USE`" ]
 	then
 		ewarn "This package requires that xfree was merged with the gatos USE flag enabled."
