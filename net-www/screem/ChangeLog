@@ -1,6 +1,12 @@
 # ChangeLog for net-www/screem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.12 2003/07/09 17:40:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.13 2003/09/16 20:35:10 darkspecter Exp $
+
+*screem-0.8.1 (16 Sep 2003)
+
+  16 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> screem-0.8.1.ebuild,
+  files/screem-0.8.1-makefile-fix.patch:
+  version bump to new stable version, ebuild rewritten to use gnome2 eclass
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> screem-0.6.0.ebuild,
   screem-0.6.2.ebuild:
