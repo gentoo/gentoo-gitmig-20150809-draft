@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/bincimap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.26 2004/09/20 20:12:32 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.27 2004/10/19 12:30:54 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> bincimap-1.2.9.ebuild:
+  Stable on amd64.
 
 *bincimap-1.2.10 (20 Sep 2004)
 
