@@ -20,9 +20,10 @@ DEPEND="virtual/glibc
 	alsa? ( media-libs/alsa-lib )
 	mysql? ( dev-db/mysql )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	!noiax ( >=net-libs/iax-0.2.2 )
-	!nopri ( >=net-libs/libpri-0.4 )
-	!nozaptel ( >=net-libs/zapata-0.7 )"
+	!noiax? ( >=net-libs/iax-0.2.2 )
+	!nopri? ( >=net-libs/libpri-0.4 )
+	!nozaptel? ( >=net-misc/zaptel-0.7
+		     >=net-libs/zapata-0.7 )"
 
 webapp-detect || NO_WEBSERVER=1
 
@@ -130,5 +131,12 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Asterisk has been installed"
+	einfo ""
 	einfo "to add new Mailboxes use: /usr/sbin/addmailbox"
+	einfo ""
+	einfo "If you want to know more about asterisk, visit these sites:"
+	einfo "http://www.automated.it/guidetoasterisk.htm"
+	einfo "http://asterisk.xvoip.com/"
+	einfo "http://www.voip-info.org/wiki-Asterisk"
+	einfo "http://ns1.jnetdns.de/jn/relaunch/asterisk/"
 }

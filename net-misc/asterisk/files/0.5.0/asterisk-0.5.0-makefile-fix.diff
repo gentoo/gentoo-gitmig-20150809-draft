@@ -1,6 +1,6 @@
---- Makefile.orig	2003-11-18 06:23:35.000000000 +0100
-+++ Makefile	2003-11-18 06:25:21.000000000 +0100
-@@ -280,15 +280,15 @@
+--- Makefile.orig	2003-09-02 02:33:42.000000000 +0200
++++ Makefile	2004-01-09 03:08:03.490328624 +0100
+@@ -269,15 +280,15 @@
  		mkdir -p $(ASTSPOOLDIR)/voicemail/default; \
  		rm -f $(ASTSPOOLDIR)/vm; \
  	fi
@@ -19,3 +19,21 @@
  	@echo " +---- Asterisk Installation Complete -------+"  
  	@echo " +                                           +"
  	@echo " +    YOU MUST READ THE SECURITY DOCUMENT    +"
+@@ -340,13 +344,13 @@
+ 		install $$x $(ASTVARLIBDIR)/mohmp3 ; \
+ 	done
+ 	mkdir -p $(ASTSPOOLDIR)/voicemail/default/1234/INBOX
+-	:> $(ASTVARLIBDIR)/sounds/voicemail/default/1234/unavail.gsm
++	:> $(ASTSPOOLDIR)/voicemail/default/1234/unavail.gsm
+ 	for x in vm-theperson digits/1 digits/2 digits/3 digits/4 vm-isunavail; do \
+-		cat $(ASTVARLIBDIR)/sounds/$$x.gsm >> $(ASTVARLIBDIR)/sounds/voicemail/default/1234/unavail.gsm ; \
++		cat $(ASTVARLIBDIR)/sounds/$$x.gsm >> $(ASTSPOOLDIR)/voicemail/default/1234/unavail.gsm ; \
+ 	done
+-	:> $(ASTVARLIBDIR)/sounds/voicemail/default/1234/busy.gsm
++	:> $(ASTSPOOLDIR)/voicemail/default/1234/busy.gsm
+ 	for x in vm-theperson digits/1 digits/2 digits/3 digits/4 vm-isonphone; do \
+-		cat $(ASTVARLIBDIR)/sounds/$$x.gsm >> $(ASTVARLIBDIR)/sounds/voicemail/default/1234/busy.gsm ; \
++		cat $(ASTVARLIBDIR)/sounds/$$x.gsm >> $(ASTSPOOLDIR)/voicemail/default/1234/busy.gsm ; \
+ 	done
+ 
+ webvmail:
