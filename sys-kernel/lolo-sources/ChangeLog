@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.46 2003/03/03 03:13:37 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.47 2003/03/03 04:50:08 lostlogic Exp $
 
   TODO:
   * Solve the no priorities issue (pfeifer seems to have this nailed)
@@ -15,12 +15,9 @@
 
 *lolo-sources-2.4.20.2_pre4 (28 Feb 2003)
 
-  This is in progress, just keeping my notes public :)
-
   Changes from _pre3:
   * Update iptables patches
   * EVMS verified against 1.2.1 release files
-  * Update ACPI to latest from sf.net
   * Updated NTFS to 2.1.1a
   * Add USAGI support, drop crypto API as it is included in USAGI
 

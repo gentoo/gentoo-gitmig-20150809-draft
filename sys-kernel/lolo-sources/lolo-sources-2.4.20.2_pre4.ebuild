@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_rc3.ebuild,v 1.3 2003/02/13 16:39:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.2_pre4.ebuild,v 1.1 2003/03/03 04:50:08 lostlogic Exp $
 
 IUSE="build crypt xfs"
 
@@ -51,7 +51,7 @@ src_unpack() {
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
 	if [ -z "`use crypt`" ]; then
 		einfo "No Cryptographic support, dropping patches..."
-		for file in 8*;do
+		for file in 8[7-9]*;do
 			einfo "Dropping ${file}..."
 			rm -f ${file}
 		done
@@ -62,15 +62,15 @@ src_unpack() {
 	# This is the non-ratified xfs USE flag, enables XFS which is not
 	# patched by default because it can cause problems with JFS's
 	# journals.
-	if [ -z "`use xfs`" ]; then
-		einfo "No XFS support, is this on purpose?"
-		for file in 79*;do
-			einfo "Dropping ${file}..."
-			rm -f ${file}
-		done
-	else
-		einfo "Enabling XFS patch, are you sure you want this?"
-	fi
+#	if [ -z "`use xfs`" ]; then
+#		einfo "No XFS support, is this on purpose?"
+#		for file in 79*;do
+#			einfo "Dropping ${file}..."
+#			rm -f ${file}
+#		done
+#	else
+#		einfo "Enabling XFS patch, are you sure you want this?"
+#	fi
 
 	kernel_src_unpack
 }
@@ -79,12 +79,12 @@ pkg_postinst() {
 
 	kernel_pkg_postinst
 
-	einfo "Please be warned, you have just installed a very beta"
+	einfo "Please be warned, you have just installed a beta"
 	einfo "patchset of the linux kernel sources."
 	einfo "If there are problems with it, please report them"
 	einfo "by assigning bugs on bugs.gentoo.org to"
 	einfo "lostlogic@gentoo.org"
-	[ `use xfs` ] && einfo "XFS patches enabled, this may cause JFS problems" || \
-		einfo "XFS not enabled, is that on purpose?  JFS users beware of XFS."
+#	[ `use xfs` ] && ewarn "XFS patches enabled, this may cause JFS problems" || \
+#		einfo "XFS not enabled, is that on purpose?  JFS users beware of XFS."
 
 }
