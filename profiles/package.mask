@@ -22,6 +22,10 @@
 ##
 
 
+# <carpaski@gentoo.org> (25 Feb 2003)
+# Testing more fixes -- It should be fairly solid by now.
+=sys-apps/portage-2.0.47-r4
+
 # <phoenix@gentoo.org> (24 Feb 2003)
 # Masked for forward compatibility
 # ( 0.6.3 < 0.6.3.200* )
@@ -38,10 +42,6 @@
 # <woodchip@gentoo.org> (23 Feb 2003)
 # It is alpha after all.
 >=net-fs/samba-3.0_alpha
-
-# <carpaski@gentoo.org> (22 Feb 2003)
-# Testing the fixes.
-=sys-apps/portage-2.0.47-r3
 
 # <lu_zero@gentoo.org> (20 Feb 2003)
 # no more present
