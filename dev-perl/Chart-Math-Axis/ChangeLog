@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Chart-Math-Axis
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart-Math-Axis/ChangeLog,v 1.5 2004/05/24 00:25:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart-Math-Axis/ChangeLog,v 1.6 2004/06/05 14:47:01 mcummings Exp $
+
+*Chart-Math-Axis-0.3 (05 Jun 2004)
+
+  05 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  Chart-Math-Axis-0.3.ebuild:
+  new version on cpan
 
   24 May 2004; Bryan Østergaard <kloeri@gentoo.org>
   Chart-Math-Axis-0.2.ebuild:
