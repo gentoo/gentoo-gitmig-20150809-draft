@@ -1,0 +1,54 @@
+# ChangeLog for net-www/bookmarksync
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.1 2004/08/15 18:03:24 stuart Exp $
+
+*bookmarksync-0.3.4 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +bookmarksync-0.3.1.ebuild, +bookmarksync-0.3.2.ebuild,
+  +bookmarksync-0.3.3.ebuild, +bookmarksync-0.3.4.ebuild:
+  Moved from net-www/bookmarksync to www-misc/bookmarksync.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  bookmarksync-0.3.1.ebuild, bookmarksync-0.3.2.ebuild,
+  bookmarksync-0.3.3.ebuild, bookmarksync-0.3.4.ebuild:
+  virtual/glibc -> virtual/libc
+
+  23 Jun 2004; David Holm <dholm@gentoo.org> bookmarksync-0.3.4.ebuild:
+  Added to ~ppc.
+
+*bookmarksync-0.3.4 (23 Jun 2004)
+
+  23 Jun 2004; Josh Glover <jmglov@gentoo.org> bookmarksync-0.3.4.ebuild:
+  Version bump; submitted by M3Dlor in bug #47889
+
+*bookmarksync-0.3.3 (22 Jun 2004)
+
+  22 Jun 2004; Josh Glover <jmglov@gentoo.org> bookmarksync-0.3.1.ebuild,
+  bookmarksync-0.3.2.ebuild, bookmarksync-0.3.3.ebuild, metadata.xml:
+  Fixed some QA issues in all three ebuilds and added metadata.xml. Gee, thanks
+  Repoman! :)
+
+*bookmarksync-0.3.3 (22 Jun 2004)
+
+  22 Jun 2004; Josh Glover <jmglov@gentoo.org> bookmarksync-0.3.3.ebuild:
+  Version bump; submitted by Miles Lubin in bug #47889
+
+  23 Nov 2003; Martin Holzer <mholzer@gentoo.org> bookmarksync-0.3.1.ebuild,
+  bookmarksync-0.3.2.ebuild:
+  adding RESTRICT="nomirror"
+
+*bookmarksync-0.3.2 (14 Oct 2003)
+
+  14 Oct 2003; Markus Nigbur <pyrania@gentoo.org> bookmarksync-0.3.2.ebuild:
+  Version bump. Thanks to M3Dlor (bug 31142).
+
+*bookmarksync-0.3.1 (16 Nov 2002)
+  
+  16 Nov 2002; phoen][x <phoenix@gentoo.org> bookmarksync-0.3.1.ebuild,
+  files/digest-bookmarksync-0.3.1, ChangeLog :
+  Initial import. Thanks to Sandhaas Tobias <sourceforge@own.de> for the
+  contribution.
+
+
+ 
