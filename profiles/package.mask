@@ -511,3 +511,8 @@ dev-lang/tcl-tk
 # This is the new version of shadow, needs more beta testing
 >=sys-apps/shadow-4.0.3
 
+# seemant@gentoo.org
+# the vim hack for sandbox violations on /dev/vc/* is dirty,
+# this is here for dirty installs, the ebuild will be removed
+# when the actual bug is resolved
+=app-editors/vim-6.1-r1
