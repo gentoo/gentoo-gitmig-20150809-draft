@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-4.8.2-r1.ebuild,v 1.11 2004/07/02 04:37:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-4.8.2-r1.ebuild,v 1.12 2004/07/14 14:17:20 agriffis Exp $
 
 inherit debug
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A Debug Malloc Library"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://dmalloc.com/"
@@ -12,6 +11,7 @@ HOMEPAGE="http://dmalloc.com/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND="virtual/libc"
 
