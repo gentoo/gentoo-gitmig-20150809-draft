@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/info
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/info/ChangeLog,v 1.11 2004/11/27 18:58:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/info/ChangeLog,v 1.12 2004/12/29 00:35:37 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> -info-1.7.ebuild:
+  Tidy up old versions
 
   27 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> info-1.7-r1.ebuild:
   Add help text, bug #63321

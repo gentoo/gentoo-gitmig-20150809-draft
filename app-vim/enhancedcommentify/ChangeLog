@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/enhancedcommentify
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.15 2004/12/28 21:06:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.16 2004/12/29 00:33:52 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  -enhancedcommentify-2.0.ebuild:
+  Tidy up old versions
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

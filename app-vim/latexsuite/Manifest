@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 348e703b9758b72c7165c0d0b0c20582 ChangeLog 1409
+MD5 0f65866a3490edb51111e12ed1efce2f ChangeLog 1498
 MD5 734805fc11edd65a20d7bff0a15c8e89 latexsuite-1.5_rc1.ebuild 1187
+MD5 5ccfc5c13bf440ab4cbd1ed66dbe929b latexsuite-1.5.ebuild 1170
 MD5 b2178f34672cc286a31f5325fe8732cb metadata.xml 437
-MD5 99edbf2e684ce3c2695235d845aee31b latexsuite-1.5.ebuild 1170
-MD5 c8849f310e180a58ea74d06c7180870d files/digest-latexsuite-1.5_rc1 70
 MD5 23326cf6fa27ac23ff9dbe045fbca8a4 files/digest-latexsuite-1.5 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBZf3iHTu7gpaalycRAuw4AKCzA/B3c+KKLKCu56U+dHrJ1XuZ8QCbBBDF
-FVK0ZO6pacNiVzUfLLESDDA=
-=YSVQ
------END PGP SIGNATURE-----
+MD5 c8849f310e180a58ea74d06c7180870d files/digest-latexsuite-1.5_rc1 70
