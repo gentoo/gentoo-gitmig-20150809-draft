@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_rc1.ebuild,v 1.2 2004/03/22 01:28:36 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_rc1.ebuild,v 1.3 2004/03/22 12:18:18 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -134,9 +134,11 @@ pkg_postinst () {
 	einfo "of course this works for all other window managers as well"
 	echo
 	echo
-	einfo "To have nautilus and gnome-vfs monitor file changes, you have"
-	einfo "to start the fam-daemon. You can do this to by issueing `/etc/init.d/famd start`."
-	einfo "'rc-update add fam default' will make this start on boot every time."
+	einfo "To have nautilus and gnome-vfs monitor file changes, you should"
+	einfo "start the FAM daemon. You can do this to by issueing the"
+	einfo "'/etc/init.d/famd start' command."
+	einfo "'rc-update add fam default' will make FAM start on every boot."
+	echo
 
 }
 
