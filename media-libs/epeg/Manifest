@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 8bb571ede56589258df342c96d60da29 ChangeLog 327
-MD5 1a4737f28afd6cdc411f9d1cdc24167e epeg-0.9.0.ebuild 316
+MD5 5c629adc573125109b33bba05821cad9 epeg-0.9.0.ebuild 364
 MD5 edfdfec4e93ebb0d10eb86b8a8594eba metadata.xml 324
 MD5 ec6db47e042f01aab3935df4a61db99c files/digest-epeg-0.9.0 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBGEIIHTu7gpaalycRAhMlAJ4xLhqL79qV3sYrvAefz9mEu4WSswCg42J8
-ORWltO1KseYthG3kjvLHhLo=
-=flEZ
+iD8DBQFBM3nCHTu7gpaalycRAjiMAKCbDrE4kcV2K4pX/nSGjD+ciZlghwCgsreP
+xAgsmqK5/xYEDurLdavFxkE=
+=gqzn
 -----END PGP SIGNATURE-----
