@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.92-r1.ebuild,v 1.5 2004/06/24 22:34:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.92-r1.ebuild,v 1.6 2004/07/15 02:49:58 agriffis Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
 PATCHVER=0.1
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
@@ -15,6 +14,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -amd64 -ppc -sparc -alpha -mips"
+IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2-r5"
 
