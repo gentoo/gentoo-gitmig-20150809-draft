@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.6 2003/06/16 09:42:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.7 2003/07/01 10:16:11 liquidx Exp $
+
+  28 Jun 2003; Alastair Tse <liquidx@gentoo.org> libgnomedb-0.12.1.ebuild:
+  bumped 0.12.1 to stable
 
 *libgnomedb-0.12.1 (16 Jun 2003)
 
