@@ -1,8 +1,0 @@
-# ChangeLog for app-text/fribidi
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fribidi/ChangeLog,v 1.1 2003/03/31 22:59:03 foser Exp $
-
-*fribidi-0.10.4 (31 Mar 2003)
-
-  31 Mar 2003; foser <foser@gentoo.org> fribidi-0.10.4.ebuild, ChangeLog :
-  Initial commit
