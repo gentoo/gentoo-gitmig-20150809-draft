@@ -4,7 +4,7 @@
 
 
 S=${WORKDIR}/${P}
-DESCRIPTION="The AFS 3 distributed file system  targets the issues  critical to
+DESCRIPTION="The AFS 3 distributed file system targets the issues critical to
 distributed computing environments. AFS performs exceptionally well,
 both within small, local work groups of machines and across wide-area
 configurations in support of large, collaborative efforts. AFS provides
@@ -22,6 +22,7 @@ KEYWORDS="-* x86"
 SANDBOX_DISABLED="1"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=sys-apps/sed-4
 	>=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.75"
 
@@ -31,7 +32,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}/src/config
-	cp Makefile.in Makefile.in.old
 	sed -i "s|/usr/lib/libncurses.so|-lncurses|g" Makefile.in
 
 	cd ${S}
@@ -48,11 +48,10 @@ src_compile() {
 
 src_install () {
 
-
-  # Client
+	# Client
 
 	cd ${S}/${ARCH}/dest/root.client/usr/vice
-	
+
 	insinto /etc/afs/modload
 	doins etc/modload/*
 	insinto /etc/afs/C
@@ -98,7 +97,7 @@ src_install () {
 }
 
 pkg_postinst () {
-	echo ">>> UPDATE CellServDB and ThisCell to your needs !!"
-	echo ">>> FOLLOW THE INSTRUCTIONS IN AFS QUICK BEGINNINGS"
-	echo ">>> PAGE >45 TO DO INITIAL SERVER SETUP"    fi
+	einfo ">>> UPDATE CellServDB and ThisCell to your needs !!"
+	einfo ">>> FOLLOW THE INSTRUCTIONS IN AFS QUICK BEGINNINGS"
+	einfo ">>> PAGE >45 TO DO INITIAL SERVER SETUP"    fi
 }
