@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.173 2004/02/11 20:43:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.174 2004/02/12 17:49:49 azarah Exp $
+
+  12 Feb 2004; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2-r5.ebuild,
+  gcc-3.3.2-r7.ebuild:
+  Add -Os to previous fixup, bug #41322.
 
   11 Feb 2004; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2-r5.ebuild,
   gcc-3.3.2-r7.ebuild:
