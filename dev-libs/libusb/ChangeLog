@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.12 2003/06/19 17:37:59 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.13 2003/09/02 23:21:49 liquidx Exp $
+
+*libusb-0.1.7-r1 (03 Sep 2003)
+
+  03 Sep 2003; Alastair Tse <liquidx@gentoo.org> libusb-0.1.7-r1.ebuild:
+  force new revision to make sure it owns libusb.so (#25571)
 
   19 Jun 2003; Will Woods <wwoods@gentoo.org> libusb-0.1.7.ebuild:
   Added alpha to KEYWORDS
