@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.7 2004/07/03 20:55:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.8 2004/07/20 14:37:48 spock Exp $
 
 inherit gcc
 
-DESCRIPTION="fbi a framebuffer image viewer"
-HOMEPAGE="http://bytesex.org/fbi.html"
-SRC_URI="http://bytesex.org/misc/${P/-/_}.tar.gz"
+DESCRIPTION="A image viewer for the Linux framebuffer console."
+HOMEPAGE="http://linux.bytesex.org/fbida/"
+SRC_URI="http://dl.bytesex.org/releases/fbida/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
