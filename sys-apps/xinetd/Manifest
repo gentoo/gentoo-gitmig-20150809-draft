@@ -5,12 +5,12 @@ MD5 7cd125f6b094bcda08f10bd44995f733 xinetd-2.3.12.ebuild 2043
 MD5 d6b3505bb06798bcb64f849d4c59d01a xinetd-2.3.13.ebuild 2014
 MD5 469ecc467df958570cae2caad4391dd1 files/digest-xinetd-2.3.11 65
 MD5 80bdf9f954db1de9c7956540826c456c files/digest-xinetd-2.3.12 65
-MD5 3b6428878ffb5338d7eaff85ccbe6f6a files/digest-xinetd-2.3.13 65
 MD5 897e24c3c7cc5a08093dfcb3a71fc0ee files/xconv.pl 3030
 MD5 300b0b4bf4741ed50e7978d3361e5666 files/xinetd-run 463
-MD5 8d2e4c58ac55be113ffdeb972b8faaec files/xinetd.conf 241
-MD5 3f783283f84bcbd83ef6a5ea683c8752 files/xinetd.confd 70
-MD5 c8e3cf7c5523bca0cd354197def025a1 files/xinetd.rc6 926
+MD5 e9875870924f9dc3035b8021e70f811a files/xinetd.conf 467
+MD5 76db2cfc2ea5d07a47b8000460f79956 files/xinetd.confd 297
+MD5 5004210c57e64c12b56319749fc6ee28 files/xinetd.rc6 927
+MD5 3b6428878ffb5338d7eaff85ccbe6f6a files/digest-xinetd-2.3.13 65
 MD5 f9591814c08ab763ace5c8969ce6d457 files/etc.xinetd.d/README.services 643
 MD5 7d04f6175ae493c8aa988e3728e959b3 files/etc.xinetd.d/chargen-tcp 246
 MD5 a26dbc5cae6b20e71846bff26600eb89 files/etc.xinetd.d/chargen-udp 266

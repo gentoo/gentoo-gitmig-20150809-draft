@@ -1,3 +1,7 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/xinetd.confd,v 1.2 2004/04/13 17:49:40 mholzer Exp $
+
 # Config file for /etc/init.d/xinetd
 
 XINETD_OPTS="-stayalive -reuse"
