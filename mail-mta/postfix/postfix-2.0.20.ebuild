@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.20.ebuild,v 1.1 2004/07/04 23:50:15 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.20.ebuild,v 1.2 2004/09/06 19:53:08 ciaranm Exp $
 
 inherit eutils ssl-cert
 
@@ -48,7 +48,7 @@ pkg_setup() {
 	ewarn "\`etc/postfix/post-install upgrade-permissions\` to recreate them."
 	ewarn "Waiting 15 seconds before continuing."
 	echo
-	sleep 15
+	epause 15
 	# should not upgrade while postfix-1.x running
 	if [[ -f $(type -p postconf) ]] ; then
 		VER=$(postconf | grep mail_version); VER=${VER/mail_version = }
@@ -66,7 +66,7 @@ pkg_setup() {
 				ewarn "Postfix then emerge again."
 				ewarn "Waiting 30 seconds before continuing."
 				echo
-				sleep 30
+				epause 30
 			fi
 		fi
 	fi

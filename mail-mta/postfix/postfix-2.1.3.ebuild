@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.9 2004/08/31 02:47:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.10 2004/09/06 19:53:08 ciaranm Exp $
 
 inherit eutils ssl-cert
 
@@ -46,7 +46,7 @@ pkg_setup() {
 		ewarn "directory get deleted during unmerge the older version (#45764). Please run"
 		ewarn "\`etc/postfix/post-install upgrade-source\` to recreate them."
 		echo
-	sleep 5
+	epause 5
 	fi
 
 	# logic to fix bug #53324
@@ -64,7 +64,7 @@ pkg_setup() {
 			ewarn "You have been warned!"
 			ewarn "Waiting 10 seconds before continuing."
 			echo
-			sleep 10
+			epause 10
 		fi
 	fi
 }
