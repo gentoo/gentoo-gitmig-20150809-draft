@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4.ebuild,v 1.1 2003/07/31 03:14:22 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4.ebuild,v 1.2 2003/08/06 12:21:57 gmsoft Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.postgresql.org/pub/source/v${PV}/${P}.tar.gz
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.postgresql.org/"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 hppa"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib"
 
 filter-flags -ffast-math 
@@ -153,7 +153,7 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	einfo "Creating data directory ..."
+	einfo "Creating the prout data directory ..."
 	mkdir -p ${PG_DIR}/data
 	chown -Rf postgres.postgres ${PG_DIR}
 	chmod 700 ${PG_DIR}/data
@@ -172,7 +172,35 @@ pkg_config() {
 			einfo "Read the documentation to check how to upgrade to version ${PV}."
 		fi
 	else
+		# On hppa, postgresql need way more than the default sem index and shmmax
+		if [ "${ARCH}" = "hppa" ]; then
+			SEM_IDX_MIN=1024
+			SHMMAX_MIN=100000000
+			SEM_IDX=`sysctl kernel.sem | awk '{ print $6 }'`
+			if [ $SEM_IDX -lt ${SEM_IDX_MIN} ]; then
+				eerror "The last value of /proc/sys/kernel/sem is too low for postgresql to run"
+				eerror "Temporary setting this value to ${SEM_IDX_MIN} while creating the initial database."
+				cat /proc/sys/kernel/sem | sed -e "s/\t${SEM_IDX}/\t${SEM_IDX_MIN}/" > /proc/sys/kernel/sem
+			fi
+		fi
 		sudo -u postgres /usr/bin/initdb --pgdata ${PG_DIR}/data
+
+		if [ "${ARCH}" = "hppa" ]; then
+			if [ ! `sysctl kernel.sem | awk '{ print $6 }'` -eq ${SEM_IDX} ] ; then
+				cat /proc/sys/kernel/sem | sed -e "s/\t${SEM_IDX_MIN}/\t${SEM_IDX}/" > /proc/sys/kernel/sem
+				ewarn "Restoring the sem idx value to the previous value"
+				ewarn "Please edit the last value of kernel.sem in /etc/sysctl.conf"
+				ewarn "and set it to at least ${SEM_IDX_MIN}"
+			fi
+
+			if [ `sysctl kernel.shmmax | awk '{ print $3 }'` -lt ${SHMMAX_MIN} ]; then
+				eerror "The current value of /proc/sys/kernel/shmmax is too low"
+				eerror "for postgresql to run. Please edit /etc/sysctl.conf and set"
+				eerror "this value to at least ${SHMMAX_MIN}."
+
+			fi
+		fi
+
 		einfo "If you are upgrading from a pre-7.3 version of PostgreSQL, please read"
 		einfo "the README.adddepend file for information on how to properly migrate"
 		einfo "all serial columns, unique keys and foreign keys to this version."
