@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.0.0.ebuild,v 1.1 2004/02/22 04:58:34 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.0.0.ebuild,v 1.2 2004/04/21 16:25:24 vapier Exp $
 
 MY_P=${P/_p/_kb}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 	virtual/linux-sources
 	>=dev-libs/gmp-3.1.1
 	net-misc/host
-	sys-apps/iproute"
+	sys-apps/iproute2"
 RDEPEND=""
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,18 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.4.ebuild,v 1.3 2003/09/05 22:01:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.4.ebuild,v 1.4 2004/04/21 16:23:35 vapier Exp $
 
 DESCRIPTION="Sets up Hierachical Token Bucket based traffic control (QoS) with iproute2"
 HOMEPAGE="http://www.sourceforge.net/projects/htbinit"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/htbinit/htb.init-v${PV}"
+SRC_URI="mirror://sourceforge/htbinit/htb.init-v${PV}"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE=""
 
-DEPEND="sys-apps/iproute"
-RDEPEND="${DEPEND}"
+DEPEND="sys-apps/iproute2"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	cp ${DISTDIR}/htb.init-v${PV} ${S}

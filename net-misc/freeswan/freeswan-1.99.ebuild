@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.10 2004/02/21 08:19:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.11 2004/04/21 16:22:46 vapier Exp $
 
 X509_PATCH=0.9.34
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.freeswan.org"
 DEPEND="virtual/glibc
 	virtual/linux-sources
 	>=dev-libs/gmp-3.1.1
-	sys-apps/iproute"
+	sys-apps/iproute2"
 LICENSE="GPL-2"
 RDEPEND=""
 SLOT="0"

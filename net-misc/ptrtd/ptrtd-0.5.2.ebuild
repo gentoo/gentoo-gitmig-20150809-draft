@@ -1,19 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ptrtd/ptrtd-0.5.2.ebuild,v 1.2 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ptrtd/ptrtd-0.5.2.ebuild,v 1.3 2004/04/21 16:26:15 vapier Exp $
 
 DESCRIPTION="Portable Transport Relay Translator Daemon for IPv6"
-
-HOMEPAGE="http://v6web.litech.org/ptrtd"
-
+HOMEPAGE="http://v6web.litech.org/ptrtd/"
 SRC_URI="http://v6web.litech.org/ptrtd/dist/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-
 KEYWORDS="x86"
+IUSE=""
+
 DEPEND=""
-RDEPEND="sys-apps/iproute"
-S=${WORKDIR}/${P}
+RDEPEND="sys-apps/iproute2"
 
 src_unpack() {
 	unpack ${A}
@@ -21,11 +20,6 @@ src_unpack() {
 	mv -f Makefile.in ${T}
 	sed -e "s:-Wall -g:-Wall ${CFLAGS}:" \
 		${T}/Makefile.in > Makefile.in
-}
-
-src_compile() {
-	econf || die
-	emake || die
 }
 
 src_install() {
