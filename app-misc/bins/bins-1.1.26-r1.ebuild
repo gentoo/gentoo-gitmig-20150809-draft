@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.26-r1.ebuild,v 1.1 2004/06/15 10:26:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.26-r1.ebuild,v 1.2 2004/06/20 14:56:39 mcummings Exp $
 
 inherit eutils
 
@@ -48,4 +48,7 @@ src_install() {
 
 	mkdir ${D}/usr/local
 	mv ${D}/usr/share ${D}/usr/local/
+
+	sed -i -e "s:/usr/share:/use/local/share:" ${D}/usr/bin/bins
+
 }
