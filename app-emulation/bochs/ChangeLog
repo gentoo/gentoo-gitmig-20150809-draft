@@ -1,8 +1,12 @@
 # ChangeLog for app-emulation/darcnes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.3 2002/05/08 08:48:20 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.4 2002/07/16 02:52:22 owen Exp $
 
 *bochs-1.4 (7 May 2002): 
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  Added KEYWORDS.
+
   7 may 2002; Spider <spider@gentoo.org> bochs-1.4.ebuild: 
   fix sourceforge mirror
 

@@ -1,8 +1,11 @@
 # ChangeLog for app-games/xmame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/ChangeLog,v 1.5 2002/06/13 15:55:32 daybird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/ChangeLog,v 1.6 2002/07/16 02:56:20 owen Exp $
 
 *xmame-0.60.1-r2 (13 June 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  Added KEYWORDS.
 
   13 June 2002; David Chamberlain <daybird@gentoo.org> xmame-0.60.1-r2.ebuild
 

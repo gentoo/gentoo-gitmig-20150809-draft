@@ -14,6 +14,7 @@ HOMEPAGE="http://bochs.sourceforge.net"
 #build-time dependencies
 DEPEND=">=sys-libs/glibc-2.1.3
         >=x11-base/xfree-4.0.1"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
     

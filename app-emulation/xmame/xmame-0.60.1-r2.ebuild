@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r2.ebuild,v 1.2 2002/07/11 06:30:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r2.ebuild,v 1.3 2002/07/16 02:56:20 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Multiple Arcade Machine Emulator for X11"
@@ -18,6 +18,8 @@ RDEPEND=""
 # Please note modifications for ppc in this ebuild.  If you update the ebuild,
 # please either test on ppc, or send it to a ppc developer for testing before
 # you commit the ebuild.  Thanks :-)
+
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}
