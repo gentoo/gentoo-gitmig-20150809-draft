@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.4 2005/01/02 17:08:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.5 2005/01/04 13:03:54 ciaranm Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -212,9 +212,9 @@ delete_version_separator() {
 }
 
 # Delete all version separators in $1 (defaults to $PV).
-#     '_' 1b.2.3        -> 1b_2_3
+#     1b.2.3        -> 1b23
 delete_all_version_separators() {
-	replace_all_version_separators "${1}"
+	replace_all_version_separators "" "${1}"
 }
 
 # Is $2 (defaults to $PVR) at least version $1? Intended for use in eclasses
