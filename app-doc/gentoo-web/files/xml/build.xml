@@ -13,7 +13,7 @@ will work with any x86-compatible system.
 </abstract>
 
 <version>1.4.2</version>
-<date>18 Oct 2001</date>
+<date>07 Dec 2001</date>
 
 <chapter>
 <title>About the Install</title>
@@ -32,8 +32,8 @@ a base to download and install packages whose sources are downloaded from the In
 least 64 Megabytes of RAM.  
 (Gentoo linux has been successfully built with 64MB of RAM + 64MB of swap space,
 but the build process is awfully slow under those conditions.)
-To begin the install process, first grab the 16Mb
-build CD ISO image (<path>build-ix86-1.0_rc6-r10.iso</path> is the latest at the time this
+To begin the install process, first grab the latest 16Mb
+build CD ISO image (<path>build-ix86-1.0_rc6-r11.iso</path> is the latest at the time this
 article was written) from
 <uri>http://www.ibiblio.org/gentoo/snapshots/build/ix86-linux-gnu/</uri>.  Then, create
 your own CD-ROM using this image and your preferred CD burning software.
@@ -50,7 +50,8 @@ your own CD-ROM using this image and your preferred CD burning software.
 prompt at the bottom of the screen.  At this prompt, hit enter, and Linux will begin to load
 from the CD.</p>
 <p>Next, you'll be greeted with a small list of commands available on the boot CD, including
-<c>nano</c> (a pico editor clone) and the <c>help</c> command.  At this point, you are now in
+<c>nano</c> (a pico editor clone) and instructions for setting up the network.  Then, you'll be
+prompted to select your preferred keymap. After this, you can hit enter to enter 
 the minimal boot CD Linux environment.  You should have a root ("<c>#</c>") prompt on the current
 console, and can also open new consoles by typing alt-f2, alt-f3, 
 etc and then hitting enter.</p>
@@ -91,6 +92,94 @@ would be a good time to do so.</note>
 </section>
 </chapter>
 <chapter>
+<title>Configure installation networking</title>
+<section>
+<body>
+<p>The new -r11+ boot CDs allow you to configure a working network, allowing you to use <c>ssh</c>, <c>scp</c> or <c>wget</c>
+as needed before even beginning the installation process.  Even if you don't need to do these things now,
+you should go ahead and set up networking now.  Once set up, Portage will be able to use your network
+once you are in the chroot environment (required for bootstrapping Gentoo Linux).</p>
+</body>
+</section>
+
+<section>
+<title>DHCP</title>
+<body>
+<p>
+Network configuration is simple with DHCP; If your ISP is not using
+DHCP, skip down to the static configuration section below.
+</p>
+<pre caption="Network configuration with DHCP">
+# <i>dhcpcd eth0</i> 
+</pre>
+<note>
+Some ISPs require you to provide a hostname.  To do that,
+add a <c>-h myhostname</c> flag to the dhcpcd command line above.
+</note>
+</body>
+</section>
+<section>
+<title>Static configuration</title>
+<body>
+<p>
+We need to setup just enough networking so that we can download
+sources for the system build, as well as the required localhost interface.  Type in the following commands, replacing
+$IFACE with your network interface (typically <c>eth0</c>), $IPNUM
+with your IP address, $BCAST with your broadcast address, and $NMASK
+with your network mask.  For the <c>route</c> command, replace 
+$GTWAY with your default gateway.
+</p>
+<pre>
+# <i>/sbin/ifconfig $IFACE $IPNUM broadcast $BCAST netmask $NMASK</i>
+# <i>/sbin/route add -net default gw $GTWAY netmask 0.0.0.0 metric 1</i>
+</pre>
+<p>Now, it's time to create the <path>/etc/resolv.conf</path>
+file so that name resolution (finding Web/FTP sites by name, rather than just by IP address) will work.</p>
+
+<note>At the moment the only editor installed by default is <c>nano</c>, a
+small and very easy-to-use visual editor. 
+</note>
+
+<p>Here's a template to follow for creating your /etc/resolv.conf file:
+</p>
+<pre caption="/etc/resolv.conf template">
+domain mydomain.com
+nameserver 10.0.0.1
+nameserver 10.0.0.2
+</pre>
+<p>Replace <c>10.0.0.1</c> and <c>10.0.0.2</c> with the IP addresses of your
+primary and secondary DNS servers respectively.</p>
+<p>Now that your network has been configured, the <c>/sbin/ifconfig -a</c> command should show (hopefully!) 
+that your network card is working
+(look for <e>UP</e> and <e>RUNNING</e> in the output).
+</p>
+<pre caption="/sbin/ifconfig for a working network card">
+eth0      Link encap:Ethernet  HWaddr 00:50:BA:8F:61:7A
+          inet addr:192.168.0.2  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::50:ba8f:617a/10 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1498792 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1284980 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:1984 txqueuelen:100
+          RX bytes:485691215 (463.1 Mb)  TX bytes:123951388 (118.2 Mb)
+          Interrupt:11
+</pre>
+<!--
+<note>
+If you have a static ppp link, you can !!! do this...!!!
+</note>
+-->
+</body>
+</section>
+<section>
+<title>Networking is go!</title>
+<body>
+<p>Networking should now be configured an useable.  You should be able to use the included
+<c>ssh</c>, <c>scp</c> and <c>wget</c> commands to connect to other machines on your LAN or the Internet.</p>
+</body>
+</section>
+</chapter>
+<chapter>
 <title>Set up partitions</title>
 <section>
 <body>
@@ -110,17 +199,30 @@ of a system crash, preventing the chicken-and-egg problem where GRUB can't read
 your kernel (since your filesystem isn't consistent) but you can't bring your
 filesystem back to a consistent state (since you can't boot!)      </p>
 
+<warning>If you are using the -r11 ISO image, do <i>not</i> create any ext3
+filesystems.  The ext3 patch included with that kernel has some problems with
+Linux's (at that time) brand new VM implementation.  Ext3 itself is solid,
+it's just that 2.4.10's ext3 and VM clashed.  If you want to use ext3 filesystems,
+just install on ext2 filesystems.  Specify a type of <c>auto</c> in your <path>/etc/fstab</path>
+and be sure to compile ext3 support into your kernel (we'll compile a kernel in just
+a bit).  Then, before your reboot, type <c>mke2fs -j /dev/hdXX</c> for all your
+ext3 filesystems -- your filesystems can be mounted or unmounted when you type
+this; it doesn't matter.  Then, when you reboot into your newly bootstrapped
+Gentoo Linux system, you will have working and rock-solid ext3 filesystems!
+This problem will be fixed as soon as I have enough time to roll up a new ISO
+image. --Daniel</warning>
+
 <p>Now, on to filesystem types.  Right now, you have three filesystem options:
-ext2, ext3 (journalling) and ReiserFS.  ext2 is the tried and true Linux
+ext2, ext3 (journaling) and ReiserFS.  ext2 is the tried and true Linux
 filesystem but doesn't have metadata journaling.  ext3 is the new version of
 ext2 with both metadata journaling and ordered data writes, effectively
-providing data journalling as well.  ReiserFS is a B*-tree based filesystem
+providing data journaling as well.  ReiserFS is a B*-tree based filesystem
 with very good small file performance, and greatly outperforms both ext2 and
 ext3 when dealing with small files (files less than 4k), often by a factor of
 10x-15x.  ReiserFS has metadata journaling, but no data journaling.  If
 you're looking for the most standard filesystem, use ext2.  If you're looking
-for the most rugged journaled filesystem, use ext3.  If you're looking for a
-high-performance filesystem with journalling support, use ReiserFS.  Both ext3
+for the most rugged journalled filesystem, use ext3.  If you're looking for a
+high-performance filesystem with journaling support, use ReiserFS.  Both ext3
 and ReiserFS are production-ready.  Here are our basic recommended filesystem
 sizes and types:</p>
 
@@ -173,7 +275,7 @@ the filesystems that will be used to house our data.  Initialize swap as follows
 # <i>mke2fs -j /dev/hda3</i>
 </pre>
 
-<note>You can find out more about using ext3 under Linux 2.4 at <uri>http://www.uow.edu.au/~andrewm/linux/ext3/ext3-usage.html</uri>.</note>
+<note>You can find out more about using ext3 under Linux 2.4 at <uri>http://www.zip.com.au/~akpm/linux/ext3/ext3-usage.html</uri>.</note>
 </body>
 </section>
 </chapter>
@@ -238,11 +340,12 @@ tarball contained on the CD-ROM.  To mount the CD-ROM, one typically types:
 # <i>cd /mnt/gentoo</i>
 # <i>tar -xvjpf /mnt/cdrom/build-*.tbz2</i>
 # <i>mount -o bind /proc /mnt/gentoo/proc</i>
+# <i>cp /etc/resolv.conf /mnt/gentoo/etc/resolv.conf</i>
 # <i>chroot /mnt/gentoo /bin/bash</i>
 # <i>env-update</i>
 Regenerating /etc/ld.so.cache...
 # <i>source /etc/profile</i>
-none / # <comment>ooh!  A new prompt!</comment>
+(none) / # <comment>ooh!  A new prompt!</comment>
 </pre>
 <p>
 We make the <path>/proc</path> filesystem accessible inside the 
@@ -257,82 +360,6 @@ and the last step before we can grab the Portage tree and bootstrap is to config
 </section>
 </chapter>
 
-<chapter>
-<title>Configure installation networking</title>
-<section>
-<title>DHCP</title>
-<body>
-<p>
-Network configuration is simple with DHCP; If your ISP is not using
-DHCP, skip down to the static configuration section below.
-(DHCP does not configure the localhost interface, so we add it
-by hand here.)
-</p>
-<pre caption="Network configuration with DHCP">
-# <i>dhcpcd eth0</i> 
-# <i>/sbin/ifconfig lo 127.0.0.1 up</i>
-</pre>
-<note>
-Some ISPs require you to provide a hostname.  To do that,
-add a <c>-h myhostname</c> flag to the dhcpcd command line above.
-</note>
-</body>
-</section>
-<section>
-<title>Static configuration</title>
-<body>
-<p>
-We need to setup just enough networking so that we can download
-sources for the system build, as well as the required localhost interface.  Type in the following commands, replacing
-$IFACE with your network interface (typically <c>eth0</c>), $IPNUM
-with your IP address, $BCAST with your broadcast address, and $NMASK
-with your network mask.  For the <c>route</c> command, replace 
-$GTWAY with your default gateway.
-</p>
-<pre>
-# <i>/sbin/ifconfig lo 127.0.0.1 up</i>
-# <i>/sbin/ifconfig $IFACE $IPNUM broadcast $BCAST netmask $NMASK</i>
-# <i>/sbin/route add -net default gw $GTWAY netmask 0.0.0.0 metric 1</i>
-</pre>
-<p>Now, it's time to create the <path>/etc/resolv.conf</path>
-file so that name resolution (finding Web/FTP sites by name, rather than just by IP address) will work.</p>
-
-<note>At the moment the only editor installed by default is <c>nano</c>, a
-small and very easy-to-use visual editor. 
-</note>
-
-<p>Here's a template to follow for creating your /etc/resolv.conf file:
-</p>
-<pre caption="/etc/resolv.conf template">
-domain mydomain.com
-nameserver 10.0.0.1
-nameserver 10.0.0.2
-</pre>
-<p>Replace <c>10.0.0.1</c> and <c>10.0.0.2</c> with the IP addresses of your
-primary and secondary DNS servers respectively.</p>
-<p>Now that your network has been configured, the <c>/sbin/ifconfig -a</c> command should show (hopefully!) 
-that your network card is working
-(look for <e>UP</e> and <e>RUNNING</e> in the output).
-</p>
-<pre caption="/sbin/ifconfig for a working network card">
-eth0      Link encap:Ethernet  HWaddr 00:50:BA:8F:61:7A
-          inet addr:192.168.0.2  Bcast:192.168.0.255  Mask:255.255.255.0
-          inet6 addr: fe80::50:ba8f:617a/10 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:1498792 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:1284980 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:1984 txqueuelen:100
-          RX bytes:485691215 (463.1 Mb)  TX bytes:123951388 (118.2 Mb)
-          Interrupt:11
-</pre>
-<!--
-<note>
-If you have a static ppp link, you can !!! do this...!!!
-</note>
--->
-</body>
-</section>
-</chapter>
 <chapter>
 <title>Rsync</title>
 <section>
@@ -358,7 +385,7 @@ would like built into packages; the commented-out defaults are recommended.  You
 CFLAGS</c> and <c>CXXFLAGS</c> settings for the kind of system that you are creating:
 </p>
 <pre>
-# <i>nano /etc/make.conf</i> <comment>(Adjust these settings)</comment>
+# <i>nano -w /etc/make.conf</i> <comment>(Adjust these settings)</comment>
 </pre>
 <p>Now, it's time to start the "bootstrap" process.  This process will last 1-2 hours depending on 
 how zippy your machine is; it takes about 45 minutes on my 900Mhz AMD Athlon system.  During this
@@ -367,7 +394,7 @@ compiler suite will be built, as well as the GNU C library.  These are time cons
 make up the bulk of the bootstrap process:</p>
 <pre>
 # <i>cd /usr/portage</i>
-# <i>scripts/bootstrap.sh files/bootstrap-1.0_rc6.packages</i>
+# <i>scripts/bootstrap.sh</i>
 </pre>
 <p>The "bootstrap" process will now begin.</p>
 <note>
@@ -402,9 +429,8 @@ of the base system:</p>
 	<comment>[lists the packages to be installed]</comment>
 # <i>emerge system</i>
 </pre>
-<note>The Gentoo init scripts have changed fairly radically for rc6, and
-the <c>export CONFIG_PROTECT=""</c> line ensures that the new scripts will
-overwrite the old scripts (stored in <path>sys-apps/baselayout</path>), despite
+<note>The <c>export CONFIG_PROTECT=""</c> line ensures that any new scripts installed to <path>/etc</path> will
+overwrite the old scripts (stored in <path>sys-apps/baselayout</path>), bypassing 
 Portage's new config file management support.  Type <c>emerge --help config</c>
 for more details.</note>
 <p>
@@ -437,11 +463,13 @@ your own custom kernel:
 <impo>For your kernel to function properly, there are several options that you will
 need to ensure are in the kernel proper -- that is, they should <e>be enabled but not
 compiled as modules</e>.
-Under the "File systems" section, be sure to enable the "Device File System",
-but do <e>not</e> tell the kernel to automatically mount devfs at boot time.  You'll also
+Under the "File systems" section, be sure to enable the "Device File System". You'll also
 need to enable the "Virtual Memory Filesystem".  Be sure to enable "ReiserFS" if you have
 any ReiserFS partitions; the same goes for "Ext3".  It's always a good idea to leave ext2
-enabled whether you are using it or not.
+enabled whether you are using it or not.  You will need to enable the "Experimental Features"
+options to see several of these selections.  Also, most people using IDE hard drives will
+want to enable the "USE DMA by default" option; otherwise, your IDE drives may perform
+very poorly.
 </impo>
 
 <p>
@@ -504,33 +532,38 @@ to get your base system booting before merging X. :)
 <p>Your Gentoo Linux system is almost ready for use.  All we need to do now is configure
 a few important system files and install the GRUB boot loader. 
 The first file we need to
-configure is <path>/etc/fstab</path>.  Here's an example file; remember that you should use
+configure is <path>/etc/fstab</path>.  Remember that you should use
 the <c>notail</c> option for your boot partition if you chose to create a ReiserFS filesystem on it.
 Remember to specify <c>ext2</c>, <c>ext3</c> or <c>reiserfs</c> filesystem types as appropriate.</p>
 <pre>
-<comment># /etc/fstab: static file system information.
+<comment>
+# /etc/fstab: static file system information.
 #
 # noatime turns of atimes for increased performance (atimes normally aren't
 # needed; notail increases performance of ReiserFS (at the expense of storage
 # efficiency).  It's safe to drop the noatime options if you want and to 
 # switch between notail and tail freely.
-#
-# &lt;fs&gt;          &lt;mountpoint&gt;    &lt;type&gt;  	&lt;opts&gt;    &lt;dump/pass&gt;
+
+# &lt;fs&gt;          	&lt;mountpoint&gt;    &lt;type&gt;  	&lt;opts&gt;      		&lt;dump/pass&gt;
+
+# NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
 </comment>
-/dev/hda1		/boot		reiserfs	notail,noauto,noatime	0 0
-<comment># use a dump/pass of "2 2" if your boot filesystem is *not* ReiserFS</comment>
-/dev/hda2		none            swap		sw			0 0
+/dev/hda1		/mnt/boot	ext2		noauto,noatime		1 1
 /dev/hda3		/		reiserfs	notail,noatime		0 0
-<comment># use a dump/pass of "1 1" if your root filesystem is *not* ReiserFS</comment>
-/dev/hdc		/mnt/cdrom	iso9660		noauto,ro		0 0
-<comment>
-# /proc should always be enabled
-# no /dev devfs line is needed; mounting /dev is done by our devfs initscript
-# usbdevfs taken care of automatically by initscripts
-</comment>
+/dev/hda2		none            swap		sw			0 0
+/dev/cdroms/cdrom0	/mnt/cdrom	iso9660		noauto,ro		0 0
 proc			/proc           proc		defaults		0 0
 </pre>
 
+</body>
+</section>
+<section>
+<title>Set the root password</title>
+<body>
+<p>Before you forget, set the root password by typing:</p>
+<pre>
+# <i>passwd</i>
+</pre>
 </body>
 </section>
 <section>
@@ -576,17 +609,16 @@ insmod earlier.  When Gentoo Linux boots, this module will be automatically
 loaded:
 </p>
 <pre caption="network config">
-# <i>nano /etc/modules.autoload</i>
 </pre>
 <p>If you have a static IP, use the <c>net.eth0</c> script to get your network
 configured for your first boot:</p>
 <pre>
-# <i>nano /etc/init.d/net.eth0</i>
+# <i>nano -w /etc/init.d/net.eth0</i>
 # <i>rc-update add net.eth0 default</i>
 </pre>
 <p>However, if you have a dynamic IP, do the same thing with <c>net.eth0-dhcp</c>:</p>
 <pre>
-# <i>nano /etc/init.d/net.eth0-dhcp</i>
+# <i>nano -w /etc/init.d/net.eth0-dhcp</i>
 # <i>rc-update add net.eth0-dhcp default</i>
 </pre>
 <p>If you need to set up any additional network interfaces, copy <c>net.eth0</c>
@@ -603,7 +635,7 @@ they are automatically enabled when entering the default runlevel:</impo>
 <title>Configure basic settings</title>
 <body>
 <pre caption="basic configuration">
-# <i>nano /etc/rc.conf</i>
+# <i>nano -w /etc/rc.conf</i>
 </pre>
 <p>
 Follow the directions in the file to configure the basic settings.
@@ -646,7 +678,7 @@ successfully installed, you can type <c>quit</c> to quit GRUB.  Gentoo Linux is
 installed, but we need to create the <path>/boot/grub/menu.lst</path> file so that
 we get a nice GRUB boot menu when the system reboots.  Here's how to do it.</p>
 
-<p>Now, create the menu.lst file (<c>nano /boot/grub/menu.lst</c>), and add the following to it:</p>
+<p>Now, create the menu.lst file (<c>nano -w /boot/grub/menu.lst</c>), and add the following to it:</p>
 <pre>
 default 0
 timeout 30
