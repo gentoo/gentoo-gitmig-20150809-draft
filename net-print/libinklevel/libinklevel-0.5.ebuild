@@ -1,5 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/libinklevel-0.5.ebuild,v 1.2 2003/09/21 15:32:45 lanius Exp $
 
 DESCRIPTION="A library to get the ink level of your printer"
 SRC_URI="http://home.arcor.de/markusheinz/${P}.tar.gz"
