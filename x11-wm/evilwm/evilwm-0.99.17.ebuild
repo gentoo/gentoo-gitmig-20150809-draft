@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.17.ebuild,v 1.7 2004/06/24 23:40:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.17.ebuild,v 1.8 2004/06/26 08:11:22 kugelfang Exp $
 
 MY_P="${PN}_${PV}.orig"
 S=${WORKDIR}/${MY_P/_/-}
@@ -12,7 +12,7 @@ HOMEPAGE="http://evilwm.sourceforge.net"
 IUSE="motif"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc ~alpha ~amd64"
 
 DEPEND="virtual/x11
 	motif? ( x11-libs/openmotif )"

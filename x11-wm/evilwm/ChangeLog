@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.19 2004/06/24 23:40:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.20 2004/06/26 08:11:22 kugelfang Exp $
+
+  26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> evilwm-0.99.17.ebuild:
+  Marked ~amd64.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> evilwm-0.99.17.ebuild:
   Stable on sparc!
