@@ -9,7 +9,7 @@ SRC_URI="http://mkeadle.org/distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64 mips"
 
 DEPEND="media-gfx/xv"
 RDEPEND="virtual/x11"
