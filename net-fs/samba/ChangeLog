@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.157 2005/03/25 11:34:03 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.158 2005/04/04 08:46:30 satya Exp $
+
+  04 Apr 2005; Christian Andreetta <satya@gentoo.org> samba-3.0.12.ebuild:
+  warning on acl and win 9x/Me as per bug #87583
 
 *samba-3.0.13 (25 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.12.ebuild,v 1.1 2005/03/19 17:10:10 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.12.ebuild,v 1.2 2005/04/04 08:46:30 satya Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -53,6 +53,10 @@ pkg_setup() {
 	ewarn "    libclamav: (oav) don't use clamav daemon, just load libraries when needed"
 	ewarn "/etc/samba/private moved to /var/lib/samba/private"
 	ebeep
+	use acl && \
+	ewarn "** this version of samba has severe issues with acl and Win 9x/Me **
+	(see http://bugs.gentoo.org/show_bug.cgi?id=87583 and
+		https://bugzilla.samba.org/show_bug.cgi?id=2521)"
 	epause
 	local PRIVATEDIR=/var/lib/samba/private
 	local PRIVATE_SRC=/etc/samba/private
