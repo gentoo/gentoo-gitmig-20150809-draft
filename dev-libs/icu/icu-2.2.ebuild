@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.2.ebuild,v 1.9 2005/01/21 03:42:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.2.ebuild,v 1.10 2005/02/26 23:09:38 latexer Exp $
 
 S=${WORKDIR}/${PN}/source
 DESCRIPTION="IBM Internationalization Components for Unicode"
 SRC_URI="http://oss.software.ibm.com/icu/download/${PV}/${P}.tgz"
-HOMEPAGE="http://oss.software.ibm.com/icu/"
+HOMEPAGE="http://ibm.com/software/globalization/icu/"
 
 SLOT="0"
 LICENSE="as-is"
