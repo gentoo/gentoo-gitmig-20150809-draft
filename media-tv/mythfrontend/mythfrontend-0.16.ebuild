@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.2 2004/09/10 18:01:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.3 2004/09/11 12:33:00 aliz Exp $
 
 inherit myth
 
@@ -13,14 +13,14 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv oss debug mmx nls"
 
-DEPEND="virtual/x11
-	>=x11-libs/qt-3.1
+DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
-	>=media-libs/freetype-2.0
+	X? ( >=x11-libs/qt-3.1 )
+	directfb? ( dev-libs/DirectFB >=x11-libs/qt-embedded-3.1 )
+	dev-db/mysql
+	alsa? ( >=media-libs/alsa-lib-0.9 )
 	>=sys-apps/sed-4
-	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
-	directfb? ( dev-libs/DirectFB )
 	dvb? ( media-libs/libdvb )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
