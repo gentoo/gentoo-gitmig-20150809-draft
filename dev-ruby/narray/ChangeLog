@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/narray
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.4 2003/07/12 13:03:10 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.5 2004/02/20 17:39:44 usata Exp $
+
+*narray-0.5.7_p2 (21 Feb 2004)
+
+  21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> narray-0.5.7_p2.ebuild:
+  Version bumped. This closes bug #42241
 
 *narray-0.5.7-r1 (23 May 2003)
  
