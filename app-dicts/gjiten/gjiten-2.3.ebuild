@@ -1,14 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.2.ebuild,v 1.4 2004/10/07 18:00:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.3.ebuild,v 1.1 2004/10/07 18:00:32 usata Exp $
+
+inherit gnome2
 
 DESCRIPTION="A Japanese dictionary program for Gnome"
 HOMEPAGE="http://gjiten.sourceforge.net/"
-SRC_URI="http://${PN}.sourceforge.net/${P}.tar.gz"
+SRC_URI="http://gjiten.sourceforge.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
@@ -19,10 +21,11 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.22"
 
-src_install() {
-	einstall || die
-	dodoc AUTHORS Changelog INSTALL NEWS README THANKS TODO
-	dohtml index.html gjiten.xml legal.xml gjiten-doc.ja.html
+DOCS="AUTHORS BUGS ChangeLog INSTALL NEWS README TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}; gnome2_omf_fix help/omf.make
 }
 
 pkg_postinst() {
@@ -41,4 +44,6 @@ pkg_postinst() {
 	einfo "download and convert the dictionary files, but you need"
 	einfo "to put the files in /usr/share/gjiten after running the script."
 	einfo
+
+	gnome2_pkg_postinst
 }
