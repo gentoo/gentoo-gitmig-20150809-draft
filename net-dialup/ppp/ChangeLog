@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.62 2004/06/13 02:29:12 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.63 2004/06/13 19:55:53 lv Exp $
+
+  13 Jun 2004; Travis Tilley <lv@gentoo.org> ppp-2.4.2-r2.ebuild:
+  pushing to stable -way- early to fix bug #53615
 
   12 Jun 2004; Travis Tilley <lv@gentoo.org> ppp-2.4.2-r2.ebuild:
   this version compiles on amd64, re-adding ~amd64 keyword
