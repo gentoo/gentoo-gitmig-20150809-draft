@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.01.ebuild,v 1.4 2004/05/26 19:20:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.01.ebuild,v 1.5 2004/06/20 04:10:23 weeve Exp $
 
 DESCRIPTION="A utility to see if a specific IP address is taken and what MAC address owns it"
 HOMEPAGE="http://www.habets.pp.se/synscan/programs.php?prog=ARPing"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.habets.pp.se/pub/synscan/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc arm amd64"
+KEYWORDS="~x86 ~ppc sparc arm amd64"
 IUSE=""
 
 DEPEND="net-libs/libpcap
