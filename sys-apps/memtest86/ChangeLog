@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.24 2005/01/11 01:50:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.25 2005/01/11 02:44:36 solar Exp $
+
+  10 Jan 2005; <solar@gentoo.org> +files/memtest86-3.2-solar.patch,
+  memtest86-3.2.ebuild:
+  - fixed problem with missing ssp symbols. bug #76495
 
   10 Jan 2005; Mike Frysinger <vapier@gentoo.org> memtest86-3.2.ebuild:
   Disable src_test (since one doesnt exist) #77368 and only add PIC patch if
