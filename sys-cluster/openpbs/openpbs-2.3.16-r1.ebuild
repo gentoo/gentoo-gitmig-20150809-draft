@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.3 2003/09/10 04:37:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.4 2003/09/16 16:20:54 tantive Exp $
 
 NAME=`echo ${P} | sed -e "s|openpbs-|OpenPBS_|; y|.|_|"`
 B=${NAME}.tar.gz
@@ -36,8 +36,8 @@ src_unpack() {
 	cd ${S}
 	# apply a patch I made for gcc3. 
 	# maybe this should be done with sed but I'm too lazy
-	patch -p0 < ${FILESDIR}/makedepend-sh-gcc3.patch
-
+	epatch ${FILESDIR}/makedepend-sh-gcc3.patch
+	epatch ${FILESDIR}/${PF}-errno-fixup.patch
 	# this thing doesn't use make install, but rather it's own install script
 	# fix it here so the install dirs are set to the ${D} directory
 	cd buildutils
