@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.158 2005/03/17 02:45:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.159 2005/03/18 22:50:26 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -944,7 +944,7 @@ make_desktop_entry() {
 				;;
 
 			dev)
-				type=Development
+				type="Development"
 				;;
 
 			games)
@@ -964,11 +964,11 @@ make_desktop_entry() {
 					strategy)   type=StrategyGame;;
 					*)          type=;;
 				esac
-				type=Game;${type}
+				type="Game;${type}"
 				;;
 
 			mail)
-				type=Network;Email
+				type="Network;Email"
 				;;
 
 			media)
@@ -980,7 +980,7 @@ make_desktop_entry() {
 					video) type=Video;;
 					*)     type=;;
 				esac
-				type=AudioVideo;${type}
+				type="AudioVideo;${type}"
 				;;
 
 			net)
@@ -995,7 +995,7 @@ make_desktop_entry() {
 					p2p)    type=FileTransfer;;
 					*)      type=;;
 				esac
-				type=Network;${type}
+				type="Network;${type}"
 				;;
 
 			sci)
@@ -1007,8 +1007,8 @@ make_desktop_entry() {
 					geo*)   type=Geology;;
 					math*)  type=Math;;
 					*)      type=;;
-				esac	
-				type=Science;${type}
+				esac
+				type="Science;${type}"
 				;;
 
 			www)
@@ -1016,7 +1016,7 @@ make_desktop_entry() {
 					client) type=WebBrowser;;
 					*)      type=;;
 				esac
-				type=Network
+				type="Network"
 				;;
 
 			*)
