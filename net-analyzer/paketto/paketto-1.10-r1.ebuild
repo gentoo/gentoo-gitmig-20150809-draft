@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.5 2004/02/27 20:15:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.6 2004/02/27 20:19:19 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Paketto Keiretsu - experimental TCP/IP tools - scanrand, minewt, lc, phentropy, paratrace"
-HOMEPAGE="http://www.doxpara.com/"
+HOMEPAGE="http://www.doxpara.com/paketto/"
 SRC_URI="http://www.doxpara.com/paketto/${P}.tar.gz"
 
 LICENSE="BSD"
