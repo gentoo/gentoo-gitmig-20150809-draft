@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pipeworks/pipeworks-0.4.ebuild,v 1.1 2004/03/28 03:08:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pipeworks/pipeworks-0.4.ebuild,v 1.2 2004/03/28 12:06:06 dholm Exp $
 
 DESCRIPTION="a small utility that measures throughput between stdin and stdout"
 SRC_URI="mirror://sourceforge/pipeworks/${P}.tar.gz"
 HOMEPAGE="http://pipeworks.sourceforge.net/"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
