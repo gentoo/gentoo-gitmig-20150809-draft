@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/connectorj
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/connectorj/ChangeLog,v 1.8 2004/10/22 10:54:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/connectorj/ChangeLog,v 1.9 2004/12/13 09:12:42 s4t4n Exp $
+
+*connectorj-3.0.16 (13 Dec 2004)
+
+  13 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> connectorj-3.0.16.ebuild:
+  Version bump. Use ${PV} in SRC_URI to avoid hard-wiring version info into
+  the ebuild.
+  connectorj-3.0.14.ebuild:
+  Removed older ebuild.
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> connectorj-3.0.14.ebuild,
   connectorj-3.0.15.ebuild:
