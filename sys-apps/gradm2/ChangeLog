@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gradm2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/ChangeLog,v 1.5 2003/07/07 05:24:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/ChangeLog,v 1.6 2003/08/15 04:45:40 solar Exp $
+
+*gradm2-0.0_rc2 (15 Aug 2003)
+
+  15 Aug 2003; <solar@gentoo.org> gradm2-0.0_rc2.ebuild:
+  Added gradm2 rc2 to match kernel version in grsec-sources
 
   07 Jul 2003; <solar@gentoo.org> gradm2-0.0_pre4-r1.ebuild:
   Odd syntaxing handling thing going on which would cause gradm2 not to be built
