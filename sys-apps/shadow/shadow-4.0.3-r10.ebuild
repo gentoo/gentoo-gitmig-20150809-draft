@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.5 2004/02/17 08:23:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.6 2004/03/29 22:05:49 avenj Exp $
 
-IUSE="pam selinux"
+IUSE="pam selinux nls"
 
 inherit eutils libtool gnuconfig flag-o-matic
 

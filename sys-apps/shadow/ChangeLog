@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.50 2004/02/15 22:14:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.51 2004/03/29 22:05:49 avenj Exp $
+
+  29 Mar 2004; Jon Portnoy <avenj@gentoo.org> shadow-4.0.3-r9.ebuild,
+  shadow-4.0.3-r10.ebuild, shadow-4.0.4.1.ebuild :
+  Need nls in IUSE, referenced in DEPEND. Bug #44548.
 
   16 Feb 2004; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r9.ebuild,
   shadow-4.0.4.1.ebuild:
