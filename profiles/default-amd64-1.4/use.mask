@@ -6,3 +6,9 @@ svga
 java
 jikes
 junit
+
+# KDE doesnt build
+kde
+arts
+qt
+
