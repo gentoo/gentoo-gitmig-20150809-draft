@@ -1,11 +1,14 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.16 2003/02/12 08:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.17 2003/02/15 22:45:28 latexer Exp $
 
   11 Feb 2003; Peter Johanson <latexer@gentoo.org> :
   Fixed up some formatting stuff in all the ebuilds . Purely asthetics.
 
 *kismet-2.8.1 (3 Feb 2003)
+
+  15 Feb 2003; Peter Johanson <latexer@gentoo.org> files/digest-kismet-2.8.1 :
+  Fixed digest for 2.8.1
 
   12 Feb 2003; Peter Johanson <latexer@gentoo.org> kismet-2.8.1.ebuild :
   Sed fix and added inits to 2.8.1.ebuild
