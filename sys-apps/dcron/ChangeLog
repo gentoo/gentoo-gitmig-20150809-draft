@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.25 2004/04/07 20:53:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.26 2004/04/07 21:11:53 avenj Exp $
+
+  07 Apr 2004; Jon Portnoy <avenj@gentoo.org> dcron-2.9-r2.ebuild :
+  Stable on AMD64.
 
   07 Apr 2004; <kloeri@gentoo.org> dcron-2.9-r2.ebuild:
   Stable on Alpha.
