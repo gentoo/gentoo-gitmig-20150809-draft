@@ -84,7 +84,7 @@ HOMEPAGE="http://www.kernel.org/
 
 if [ ! $PN = "linux-extras" ] ; then
     RDEPEND=">=sys-apps/reiserfs-utils-3.6.25-r1"
-    DEPEND=">=sys-apps/modutils-2.4.2"
+    DEPEND=">=sys-apps/modutils-2.4.2 sys-devel/perl"
 #else
 #    DEPEND=">=sys-kernel/linux-sources-${PV}_${PR}"
 fi
