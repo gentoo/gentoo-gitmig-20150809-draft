@@ -1,6 +1,6 @@
 #!/bin/sh
 #RCUPDATE:3 4:75:
-# $Id: jakarta,v 1.2 2000/08/28 13:48:48 achim Exp $
+# $Id: jakarta,v 1.3 2000/11/02 08:31:53 achim Exp $
 
 . /etc/rc.d/config/functions
 
@@ -13,7 +13,7 @@ opts="start stop restart"
 # Java2 Platform based runtimes.
 
 JAVA_HOME=/opt/java
-TOMCAT_HOME=/opt/jakarta/tomcat
+TOMCAT_HOME=/opt/tomcat
 
 if [ "$TOMCAT_OPTS" = "" ] ; then
   TOMCAT_OPTS=""
@@ -52,18 +52,18 @@ for i in ${TOMCAT_HOME}/lib/* ; do
   CLASSPATH=${CLASSPATH}:$i
 done
 
-if [ -f /opt/java/lib/tomcat.jar ]; then
-    CLASSPATH=/opt/java/lib/tomcat.jar:${CLASSPATH}
+if [ -f /usr/lib/java/tomcat.jar ]; then
+    CLASSPATH=/usr/lib/java/tomcat.jar:${CLASSPATH}
 fi
 
 # Add support for Cocoon if available
 
-if [ -f /opt/java/lib/cocoon.jar ]; then
-    CLASSPATH=/opt/java/lib/cocoon.jar:${CLASSPATH}
-    CLASSPATH=/opt/java/lib/fop_0_12_1.jar:${CLASSPATH}
-    CLASSPATH=/opt/java/lib/xalan_1_0_1.jar:${CLASSPATH}
-    CLASSPATH=/opt/java/lib/xerces_1_0_3.jar:${CLASSPATH}
-    CLASSPATH=${CLASSPATH}:/opt/java/jndi.jar
+if [ -f /usr/lib/java/cocoon.jar ]; then
+    CLASSPATH=/usr/lib/java/cocoon.jar:${CLASSPATH}
+    CLASSPATH=/usr/lib/java/fop_0_12_1.jar:${CLASSPATH}
+    CLASSPATH=/usr/lib/java/xalan_1_0_1.jar:${CLASSPATH}
+    CLASSPATH=/usr/lib/java/xerces_1_0_3.jar:${CLASSPATH}
+    CLASSPATH=${CLASSPATH}:/usr/lib/java/jndi.jar
 fi
 
 CLASSPATH=${CLASSPATH}:/opt/java/src.jar:/opt/java/lib

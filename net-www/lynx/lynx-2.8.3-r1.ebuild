@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.3-r1.ebuild,v 1.3 2000/09/15 20:09:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.3-r1.ebuild,v 1.4 2000/11/02 08:31:53 achim Exp $
 
 # NOW HAS SSLeay Support (so it will use the SSLeay library if found to
 # do SSL connections :)
@@ -15,6 +15,11 @@ SRC_URI="ftp://lynx.isc.org/lynx-2.8.3/lynx-2.8.3.tar.gz
 HOMEPAGE="http://lynx.browser.org/"
 
 DESCRIPTION="An excellent console-based web browser"
+
+DEPEND=">=sys-libs/glibc-2.1.3
+	>=sys-libs/gpm-1.19.3
+	>=sys-libs/ncurses-5.1
+	>=dev-libs/openssl-0.9.6"
 
 src_compile() {                           
     export CFLAGS="${CFLAGS} -I/usr/include/openssl"

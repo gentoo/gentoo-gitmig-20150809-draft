@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r1.ebuild,v 1.3 2000/08/28 13:48:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r1.ebuild,v 1.4 2000/11/02 08:31:53 achim Exp $
 
 P=jakarta-3.1
 A="jakarta-tomcat.tar.gz jakarta-ant.tar.gz"
@@ -10,6 +10,10 @@ DESCRIPTION="Apache Servlet Engine"
 SRC_URI="http://jakarta.apache.org/builds/tomcat/release/v3.1/src/jakarta-tomcat.tar.gz
 	 http://jakarta.apache.org/builds/tomcat/release/v3.1/src/jakarta-ant.tar.gz"
 HOMEPAGE="http://jakarta.apache.org"
+
+DEPEND=">=sys-apps/bash-2.04
+	>=sys-libs/glibc-2.1.3
+	>=net-www/apache-ssl-1.3"
 
 src_unpack() {
   unpack ${A}
@@ -34,11 +38,10 @@ src_compile() {
 
 src_install() {                               
   dodir /opt/jakarta
-  cp -a ${S}/build/tomcat ${D}/opt/jakarta
-  insinto /opt/java/lib
+  cp -a ${S}/build/tomcat ${D}/opt
+  insinto /usr/lib/java
   doins ${S}/build/tomcat/classes/tomcat.jar
-  rm -rf ${D}/opt/jakarta/tomcat/classes
-  rm ${D}/opt/jakrta/tomcat/bin/*.bat
+  rm -rf ${D}/opt/tomcat/classes
   insinto /usr/lib/apache
   doins ${S}/jakarta-tomcat/src/native/apache/jserv/mod_jserv.so
   insinto /etc/httpd
@@ -46,7 +49,7 @@ src_install() {
   insinto /etc/rc.d/init.d
   insopts -m755
   doins ${O}/files/jakarta
-  insinto /opt/jakarta/tomcat/conf
+  insinto /opt/tomcat/conf
   doins ${O}/files/web.xml
 
   cd ${S}/jakarta-tomcat

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.3 2000/10/05 18:22:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.4 2000/11/02 08:31:53 achim Exp $
 
 P=squid-2.3.STABLE4
 A=${P}-src.tar.gz
@@ -9,6 +9,10 @@ S=${WORKDIR}/${P}
 DESCRIPTION="SQUID - Web Proxy Server"
 SRC_URI="http://www.squid-cache.org/Versions/v2/2.3/"${A}
 HOMEPAGE="http://www.squid-cache.org/"
+
+DEPEND=">=sys-libs/glibc-2.1.3
+	>=sys-libs/pam-0.72
+	>=net-nds/openldap-1.2.11"
 
 src_compile() {                           
  cd ${S}
