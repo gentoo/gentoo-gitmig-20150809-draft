@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.2.98.ebuild,v 1.1 2004/09/20 22:58:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.2.98.ebuild,v 1.2 2004/09/21 14:35:19 foser Exp $
 
 inherit eutils debug python
 
@@ -19,7 +19,8 @@ RDEPEND=">=dev-libs/glib-2.2.2
 	dev-libs/expat
 	sys-fs/udev
 	sys-apps/hotplug
-	sys-libs/libcap"
+	sys-libs/libcap
+	sys-kernel/linux26-headers"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.4 2004/09/20 22:58:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.5 2004/09/21 14:35:19 foser Exp $
+
+  21 Sep 2004; foser <foser@gentoo.org> hal-0.2.98.ebuild :
+  Add kernel26-headers dep, because of several reports (#64851)
 
 *hal-0.2.98 (21 Sep 2004)
 
