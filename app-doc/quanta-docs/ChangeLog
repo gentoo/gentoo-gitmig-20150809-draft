@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/quanta-docs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.10 2004/10/04 14:55:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.11 2004/11/03 19:29:21 kloeri Exp $
+
+  03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  quanta-docs-20030405.ebuild:
+  ~alpha keyword.
 
   04 Oct 2004; Guy Martin <gmsoft@gentoo.org> quanta-docs-20030405.ebuild:
   Stable on hppa.
