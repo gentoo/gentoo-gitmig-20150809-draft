@@ -12,7 +12,7 @@ EXE=/usr/sbin/gpm
 
 start() {
 		ebegin "Starting $SERVICE"
-     		start-stop-daemon --start --quiet --exec "$EXE -- -t $MOUSE"
+     		start-stop-daemon --start --quiet --exec $EXE -- -t $MOUSE
 		eend $? "Started $SERVICE." "Error starting $SERVICE."
 }
 
