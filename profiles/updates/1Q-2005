@@ -178,3 +178,4 @@ move sys-apps/vixie-cron sys-process/vixie-cron
 move sys-apps/subterfugue sys-devel/subterfugue
 move sys-apps/showconsole app-admin/showconsole
 move sys-apps/tmpreaper app-admin/tmpreaper
+move sys-apps/tic98 media-gfx/tic98
