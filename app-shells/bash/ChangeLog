@@ -1,8 +1,8 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.24 2003/12/14 00:09:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.25 2003/12/15 09:19:41 gmsoft Exp $
 
-  13 Dec 2003; root <root@gentoo.org> bash-2.05b-r7.ebuild:
+  13 Dec 2003; Guy Martin <gmsoft@gentoo.org> bash-2.05b-r7.ebuild:
   Marked stable on hppa.
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> bash-2.05b-r7.ebuild:
