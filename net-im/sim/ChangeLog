@@ -1,0 +1,13 @@
+# ChangeLog for net-im/sim
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.1 2002/07/28 18:50:24 danarmak Exp $
+
+*sim-0.6 (28 Jul 2002)
+
+  28 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Initial ebuild. Closes submission #4915 by Julian Scheel.
+  Although sim is capable of running without kde (qt only), I had problems
+  with that and at least
+  for now (and likely until someone asks me to try again) the ebuild always
+  enables KDE support.
