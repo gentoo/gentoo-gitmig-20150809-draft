@@ -29,9 +29,6 @@
 # Won't compile yet for me..<Verwilst, 10 feb 2002>
 =net-misc/tightvnc-1.2.2
 
-#a work in progress (drobbins, 10 Feb 2002)
-app-emulation/vmware-workstation
-
 #per jnelson's request (30 Jan 2002, drobbins)
 =net-www/boa-0.94.12_pre3
 
