@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.16 2004/06/29 01:57:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.17 2004/10/09 15:18:49 solar Exp $
+
+*netatalk-1.6.4-r1 (09 Oct 2004)
+
+  09 Oct 2004; <solar@gentoo.org> +files/netatalk-1.6.4-tempfile.patch,
+  +netatalk-1.6.4-r1.ebuild:
+  security bump. Insecure tempfile handling bug 66370
 
   28 Jun 2004; Tom Gall <tgall@gentoo.org> netatalk-1.6.4.ebuild:
   stable ppc64, bug #54188 
