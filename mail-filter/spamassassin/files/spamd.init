@@ -1,0 +1,27 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/files/spamd.init,v 1.1 2004/06/04 04:26:45 seemant Exp $
+
+# NB: Config is in /etc/conf.d/spamd.conf
+
+depend() {
+	need net
+	before mta
+}
+
+pidfile=/var/run/spamd.pid
+
+start() {
+	ebegin "Starting spamd"
+	start-stop-daemon --start --quiet \
+		--exec /usr/bin/spamd -- -d -r ${pidfile} \
+			${SPAMD_OPTS}
+	eend $? "Failed to start spamd"
+}
+
+stop() {
+	ebegin "Stopping spamd"
+	start-stop-daemon --stop --quiet --pidfile ${pidfile}
+	eend $? "Failed to stop spamd"
+}

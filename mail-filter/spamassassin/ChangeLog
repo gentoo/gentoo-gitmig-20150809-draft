@@ -1,0 +1,247 @@
+# ChangeLog for dev-perl/Mail-SpamAssassin
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.1 2004/06/04 04:26:45 seemant Exp $
+
+*spamassassin-2.63 (03 Jun 2004)
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +files/spamd.conf, +files/spamd.init, +spamassassin-2.63.ebuild:
+  Change category from dev-perl to mail-filter, and change package name from
+  Mail-SpamAssassin to just plain old spamassassin
+
+  16 Apr 2004; Michael Cummings <mcummings@gentoo.org>
+  Mail-SpamAssassin-2.60-r1.ebuild, Mail-SpamAssassin-2.60-r2.ebuild,
+  Mail-SpamAssassin-2.61.ebuild, Mail-SpamAssassin-2.62.ebuild:
+  Syntax fix for newdepend, bug 29064
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org>
+  Mail-SpamAssassin-2.63.ebuild:
+  Stable on sparc, thanks to Josh Grebe <josh@brokedown.net> for testing!
+
+  20 Feb 2004; Aron Griffis <agriffis@gentoo.org>
+  Mail-SpamAssassin-2.63.ebuild:
+  stable on alpha and ia64
+
+  18 Feb 2004; Eric Sammer <esammer@gentoo.org> Mail-SpamAssassin-2.63.ebuild:
+  Mark stable on x86 and amd64. This fixes bug #41801 and bug #40828.
+
+  09 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  Mail-SpamAssassin-2.63.ebuild:
+  set ppc in keywords
+
+*Mail-SpamAssassin-2.63 (23 Jan 2004)
+
+  23 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  Mail-SpamAssassin-2.63.ebuild:
+  bug #38844, version bump
+
+  19 Jan 2004; <tuxus@gentoo.org> Mail-SpamAssassin-2.62.ebuild:
+  Added ~mips to KEYWORDS.
+
+  18 Jan 2004; <tuxus@gentoo.org> Mail-SpamAssassin-2.61.ebuild:
+  Added ~mips to KEYWORDS.
+
+*Mail-SpamAssassin-2.62 (18 Jan 2004)
+
+  18 Jan 2004; Eric Sammer <esammer@gentoo.org> Mail-SpamAssassin-2.62.ebuild:
+  Version bump. Closes bug 38559
+
+  10 Jan 2004; <gustavoz@gentoo.org> Mail-SpamAssassin-2.61.ebuild:
+  marked stable for sparc and hppa
+
+*Mail-SpamAssassin-2.61 (18 Dec 2003)
+
+  18 Dec 2003; <rac@gentoo.org> Mail-SpamAssassin-2.55-r1.ebuild,
+  Mail-SpamAssassin-2.55-r2.ebuild, Mail-SpamAssassin-2.55.ebuild,
+  Mail-SpamAssassin-2.60.ebuild, Mail-SpamAssassin-2.61.ebuild:
+  Add 2.61, clean house. Address bug 35423
+
+*Mail-SpamAssassin-2.60-r2 (28 Oct 2003)
+
+  28 Oct 2003; Robin H. Johnson <robbat2@gentoo.org>
+  Mail-SpamAssassin-2.60-r2.ebuild, files/spamd.init:
+  improve spamd.init as per bug #22833 so it starts in the correct place, and
+  bump revision with slight ebuild cleanup
+
+  15 Oct 2003; Michael Cummings <mcummings@gentoo.org>
+  Mail-SpamAssassin-2.60-r1.ebuild:
+  Unmasking for x86, now stable
+
+*Mail-SpamAssassin-2.60-r1 (26 Sep 2003)
+
+  26 Sep 2003; <rac@gentoo.org> Mail-SpamAssassin-2.60-r1.ebuild:
+  New ebuild that uses final 2.60. Much thanks to Malte S. Stretz in bug 29404
+  and elsewhere.
+
+*Mail-SpamAssassin-2.55-r2 (24 Sep 2003)
+
+  24 Sep 2003; <rac@gentoo.org> Mail-SpamAssassin-2.55-r2.ebuild:
+  Fix sandbox problem with rules files
+
+  12 Sep 2003; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  Mail-SpamAssassin-2.60.ebuild:
+  marked unstable as 2.60 is still changing upstream.
+
+  08 Sep 2003; Michael Cummings <mcummings@gentoo.org> files/spamd.conf:
+  Added note to spamd.conf for running as non root user - thanks to Joe
+  <ptlame@core.com> in bug 24070 for pointing this out
+
+  08 Sep 2003; Michael Cummings <mcummings@gentoo.org>
+  Mail-SpamAssassin-2.60.ebuild:
+  Put forward again upstream
+
+  26 Aug 2003; Michael Cummings <mcummings@gentoo.org>
+  Mail-SpamAssassin-2.60.ebuild:
+  Pulled back upstream. Leaving the ebuild because 2.60 is forthcoming, but it
+  has been pulled back for now.
+
+*Mail-SpamAssassin-2.60 (22 Aug 2003)
+
+  22 Aug 2003; Michael Cummings <mcummings@gentoo.org>
+  Mail-SpamAssassin-2.60.ebuild:
+  New version of spamassasin - bug 27037 by Pol <blenderman@wanadoo.be> brought
+  this to our attention. New ebuild now has better support for ssl, removes
+  legacy call for razor1 (no longer supported by spamassassin), and adds support
+  for DB_File. Also added note for perl 5.8 users to the end regarding
+  localization support in spamassasin.
+
+  18 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Mail-SpamAssassin-2.55-r1.ebuild:
+  New version of the ebuild for 2.55-r1 submitted by Wayne Davison
+  (gentoo@blorf.net) is a cleaner build using the config vars that SpamAssassis
+  is looking for (vs our sed's of the resulting files). This should close bug
+  21349.
+
+*Mail-SpamAssassin-2.55-r1 (18 Jun 2003)
+
+  18 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Mail-SpamAssassin-2.55-r1.ebuild:
+  This update is to address an inacurate DEPEND; bad strips in cf files, etc.
+
+*Mail-SpamAssassin-2.55 (20 May 2003)
+
+  20 May 2003; Daniel Ahlberg <aliz@gentoo.org> Mail-SpamAssassin-2.55.ebuild :
+  Version bump.
+
+*Mail-SpamAssassin-2.54 (12 May 2003)
+
+  12 May 2003; Jon Portnoy <avenj@gentoo.org> Mail-SpamAssassin-2.54.ebuild :
+  Version bump.
+
+*Mail-SpamAssassin-2.53 (10 Apr 2003)
+
+  16 Apr 2003; <rac@gentoo.org> Mail-SpamAssassin-2.53.ebuild:
+  disable razor tests to avoid interactivity in build, again thanks to Wayne
+  Davison <gentoo@blorf.net> in bug #17988
+
+  15 Apr 2003; <rac@gentoo.org> Mail-SpamAssassin-2.53.ebuild:
+  remove TODO from docs list, thanks to Wayne Davison <gentoo@blorf.net> in bug
+  #17988
+
+  10 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> Mail-SpamAssassin-2.53.ebuild :
+  Version bump.
+
+*Mail-SpamAssassin-2.52 (28 Mar 2003)
+
+  28 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> Mail-SpamAssassin-2.52.ebuild :
+  Version bump.
+
+*Mail-SpamAssassin-2.50 (26 Feb 2003)
+
+  26 Feb 2003; Hanno Boeck <hanno@gentoo.org> Mail-SpamAssassin-2.50.ebuild :
+  New version. Just copied the old ebuild.
+
+*Mail-SpamAssassin-2.44 (02 Feb 2003)
+
+  02 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*Mail-SpamAssassin-2.43-r3 (01 Dec 2002)
+
+  02 Jan 2002; Nick Hadaway <raker@gentoo.org>
+  Mail-SpamAssassin-2.43-r3.ebuild :
+  Marked stable.
+
+  01 Dec 2002; Nick Hadaway <raker@gentoo.org>
+  Mail-SpamAssassin-2.43-r3.ebuild,
+  files/digest-Mail-SpamAssassin-2.43-r3 :
+  Version bump with changes suggested in bug #9756
+
+*Mail-SpamAssassin-2.43-r2 (29 Oct 2002)
+
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+  forced version bump to install into correct locations
+
+*Mail-SpamAssassin-2.43-r1 (27 Oct 2002)
+
+  27 Oct 2002; <mcummings@gentoo.org> Mail-SpamAssassin-2.43-r1.ebuild :
+  Adds better options to config to avoid sandbox violations
+  
+*Mail-SpamAssassin-2.43 (24 Oct 2002)
+
+  24 Oct 2002; <mcummings@gentoo.org> Mail-SpamAssassin-2.43.ebuild :
+  corrects problems with mail filtering adding extra chars to the from field
+  
+*Mail-SpamAssassin-2.31-r3 (05 Jul 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org>
+  Mail-SpamAssassin-2.31-r3.ebuild :
+
+  Added ppc to KEYWORDS.
+
+  05 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  Mail-SpamAssassin-2.31-r3.ebuild files/digest-Mail-SpamAssassin-2.31-r3 :
+
+  Fixed the way the install process went for this.
+
+*Mail-SpamAssassin-2.31-r2 (04 Jul 2002)
+
+  04 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  Adding spamd init stuff (thanks to Marcelo Fontenele S Santos); removing
+  old versions
+
+*Mail-SpamAssassin-2.31-r1 (02 Jul 2002)
+
+  02 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  added Time-HiRes dep
+
+*Mail-SpamAssassin-2.31 (28 Jun 2002)
+
+  28 Jun 2002; Bruce A. Locke <blocke@shivan.org> Mail-SpamAssassin-2.31.ebuild:
+  
+  Version Bump
+
+*Mail-SpamAssassin-2.20 (2 Jun 2002)
+
+  2 Jun 2002; Preston A. Elder <prez@gentoo.org> Mail-SpamAssassin-2.20.ebuild:
+
+  new ebuild
+
+*spamassassin-2.20 (21 May 2002)
+
+  21 May 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  Version bump.  Also dodoc'd some useful files.
+
+*spamassassin-2.11-r1 (12 Apr 2002)
+
+  12 Apr 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+  Fixed sandbox violation.
+
+*spamassassin-2.11 (15 Mar 2002)
+
+  15 Mar 2002; Bruce A. Locke <blocke@shivan.org> spamassassin-2.11.ebuild :
+
+  Update to 2.11
+
+*spamassassin-2.01 (24 Feb 2002)
+
+  24 Feb 2002; Bruce A. Locke <blocke@shivan.org> spamassassin-2.01.ebuild :
+
+  Ebuild contributed by Marc Soda <marc@aspre.net>
+
