@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.4 2004/09/07 03:33:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.5 2004/10/09 16:52:58 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://log4c.sourceforge.net/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 sparc ~ppc"
 IUSE="doc"
 
 DEPEND="doc? ( >=app-doc/doxygen-1.2.15
