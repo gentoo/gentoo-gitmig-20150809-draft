@@ -19,7 +19,7 @@ MD5 86d915595372e05d59af797b1bf39ed7 genkernel-3.1.0a.ebuild 865
 MD5 ba05cfd09f57ca1c948d2bdc51d0750e genkernel-3.1.0b.ebuild 821
 MD5 2c3259f869e04ff498e4ba16fd7aad6c files/digest-genkernel-3.1.0c 70
 MD5 5de98bfbc90c4cdd61987859e91b3104 files/digest-genkernel-3.0.2c-r1 154
-MD5 5deb6e1b91eb0d593d286c6c3338ba91 files/digest-genkernel-3.1.0e 70
+MD5 e2145f9cadf0a5c658463d3d4159924b files/digest-genkernel-3.1.0e 70
 MD5 4faaee56c9aa43fb4fba17f1bc1ba792 files/digest-genkernel-3.0.2g 70
 MD5 ac5aa968fb16a108a6536efc2fe94621 files/digest-genkernel-2.1 200
 MD5 1f19fad2f303865b8a247dcdac81fe02 files/digest-genkernel-2.0 195
