@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.6 2004/01/27 05:19:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.7 2004/01/27 05:23:08 vapier Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -26,7 +26,6 @@ DEPEND=">=sys-apps/baselayout-1.8.0"
 RDEPEND="X? ( x11-base/xfree )"
 
 src_unpack () {
-	cd ${WORKDIR}
 	unpack ${A}
 
 	# find real directory ...
