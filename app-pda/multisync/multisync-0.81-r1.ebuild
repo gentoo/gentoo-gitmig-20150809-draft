@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.1 2004/01/14 14:00:09 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.2 2004/01/14 14:26:46 tad Exp $
 
 DESCRIPTION="Client to sync apps with WinCE or mobile devices"
 
@@ -8,7 +8,7 @@ HOMEPAGE="http://multisync.sourceforge.net/"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
-SRC_URI="mirror://sourceforge/multisync/${PN}-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/multisync/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 
@@ -38,7 +38,7 @@ DEPEND="virtual/glibc
 
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 
-S=${WORKDIR}/${PF/-r1/}
+S=${WORKDIR}/${P}
 
 PLUGINS="backup_plugin syncml_plugin"
 
@@ -62,7 +62,7 @@ src_unpack() {
 
 	# Fix the opie Makefile
 	cd ${S}
-	epatch ${FILESDIR}/${PF}-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
