@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.72.ebuild,v 1.5 2004/08/14 15:10:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.72.ebuild,v 1.6 2004/10/14 13:04:17 usata Exp $
 
 inherit elisp eutils
 
@@ -10,13 +10,12 @@ DESCRIPTION="YaTeX: Yet Another TeX mode for Emacs"
 HOMEPAGE="http://www.yatex.org/"
 SRC_URI="http://www.yatex.org/${P/-/}.tar.gz"
 
-KEYWORDS="x86 alpha ppc"
+KEYWORDS="x86 alpha ~sparc ppc ~ppc-macos"
 SLOT="0"
 LICENSE="as-is"
 
-DEPEND="${RDEPEND}
-	cjk? ( app-i18n/nkf )"
-RDEPEND="virtual/emacs"
+# virtual/emacs is from elisp.eclass
+#DEPEND="virtual/emacs"
 
 S=${WORKDIR}/${P/-/}
 
@@ -36,8 +35,8 @@ src_compile() {
 	mv yatexe yatex.info
 	mv yahtmle yahtml.info
 	if use cjk ; then
-		nkf -e yatexj > yatex-ja.info
-		nkf -e yahtmlj > yahtml-ja.info
+		iconv -f ISO-2022-JP -t EUC-JP yatexj > yatex-ja.info
+		iconv -f ISO-2022-JP -t EUC-JP yahtmlj > yahtml-ja.info
 	fi
 }
 

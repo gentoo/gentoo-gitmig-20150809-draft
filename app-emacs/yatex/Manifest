@@ -1,11 +1,21 @@
-MD5 f3fc10dea17f97a64a379c8d7c524197 yatex-1.72.ebuild 1144
-MD5 099ae4007aa032cb6bc4004ed415e1f1 yatex-1.71.ebuild 1151
-MD5 8c96a2fabd3aa1c82cff15958de9cad5 ChangeLog 1588
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 73b8438632d3ec40a9f16e142f48b43a metadata.xml 646
-MD5 920ec551a0bac37b6e5b1142af2df6d0 files/yatex-1.72-gentoo.diff 2634
-MD5 479e2442aa22766f98554501598374d5 files/yatex-1.72-yatexhlp-gentoo.diff 499
+MD5 d4ebc2b0ba05abe55b310fe31bb8cc5f yatex-1.71.ebuild 1186
+MD5 2cfcd64dee14612b0451ce2c9510ec48 yatex-1.72.ebuild 1204
+MD5 2dac8afc9412dba55851572e8221ae52 ChangeLog 1701
 MD5 cea9c48d2281fc63126df7a0dbb1c43b files/digest-yatex-1.71 61
 MD5 3a6ea392a171ac5dafeb13f3971cf86e files/digest-yatex-1.72 61
-MD5 479e2442aa22766f98554501598374d5 files/yatex-1.71-yatexhlp-gentoo.diff 499
 MD5 920ec551a0bac37b6e5b1142af2df6d0 files/yatex-1.71-gentoo.diff 2634
+MD5 479e2442aa22766f98554501598374d5 files/yatex-1.71-yatexhlp-gentoo.diff 499
+MD5 920ec551a0bac37b6e5b1142af2df6d0 files/yatex-1.72-gentoo.diff 2634
 MD5 25efbe9871a1b36669916928339fa1d8 files/50yatex-gentoo.el 532
+MD5 479e2442aa22766f98554501598374d5 files/yatex-1.72-yatexhlp-gentoo.diff 499
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBbnldVWNWqTUmv+0RAklMAKCsl+VEhwC5FcKearMkQBoLqU5HXQCaA3cP
+YoCWznqmPfhlxIZKLA1kqww=
+=HTRQ
+-----END PGP SIGNATURE-----
