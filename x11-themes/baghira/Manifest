@@ -1,23 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2f9f854708b4e2367d6221e8af7106e baghira-0.5h.ebuild 589
+MD5 195695ab63833d88c52da4ae691281a4 ChangeLog 5027
+MD5 35abfff905901cb76fd0f3564e1a470e baghira-0.6b.ebuild 633
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 1e4c94c9d3969c79d36c74850331f50f ChangeLog 4840
-MD5 7722992d5e288343b92c091c4856c893 baghira-0.5h-r1.ebuild 692
-MD5 d7f208eccd3cbfb8b78da4bc86aa8f38 baghira-0.6.ebuild 720
 MD5 25a91b16215abdc1a484c5c48142cf47 baghira-0.6a.ebuild 533
 MD5 acd9d8e7589cbadd9b47c30938650ec0 baghira-0.5a.ebuild 588
+MD5 e2f9f854708b4e2367d6221e8af7106e baghira-0.5h.ebuild 589
+MD5 7722992d5e288343b92c091c4856c893 baghira-0.5h-r1.ebuild 692
+MD5 d7f208eccd3cbfb8b78da4bc86aa8f38 baghira-0.6.ebuild 720
 MD5 b5731b1b1a55c04b91821bbbf39037b3 files/digest-baghira-0.6 64
-MD5 8cb20294cb456e1d964dea305c62d001 files/digest-baghira-0.5a 65
-MD5 eb9cfc658932affe09a33b70035d99fa files/baghira-ximian_fix.patch 1041
+MD5 7aeaf68dc69f1775d8b58913114f14ed files/digest-baghira-0.6b 65
 MD5 80787ea911552a0915fc3cfa6a9ea3c5 files/digest-baghira-0.6a 65
+MD5 e81a1a485bc82e84d638e2c8b25eeb6f files/baghira-0.6b-3.3.patch 7795
+MD5 8cb20294cb456e1d964dea305c62d001 files/digest-baghira-0.5a 65
 MD5 691364364acad0a765bf32167748acb0 files/digest-baghira-0.5h 65
+MD5 eb9cfc658932affe09a33b70035d99fa files/baghira-ximian_fix.patch 1041
 MD5 691364364acad0a765bf32167748acb0 files/digest-baghira-0.5h-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB/6RpKRy60XGEcJIRApknAKCFP3Q/4MNMmGEsiJjlPZVJkLdafACdEh8d
-CN/w1DCdulipljSMdFu4shM=
-=hkt6
------END PGP SIGNATURE-----
