@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.313 2004/04/05 01:38:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.314 2004/04/05 20:26:27 lv Exp $
+
+  05 Apr 2004; Travis Tilley <lv@gentoo.org> xfree-4.3.0-r6.ebuild:
+  masking on amd64 until bug #44274 and related -fPIC issues are resolved
 
   04 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
   Change has_version to best_version for PAM check.
