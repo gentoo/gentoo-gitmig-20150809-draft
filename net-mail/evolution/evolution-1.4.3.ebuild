@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.3.ebuild,v 1.2 2003/07/18 19:19:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.3.ebuild,v 1.3 2003/08/05 09:03:04 gmsoft Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.ximian.com"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc hppa"
 
 # top stanza are ximian deps
 RDEPEND=">=gnome-extra/libgtkhtml-3.0.7
@@ -94,6 +94,11 @@ src_compile_db3() {
 
 src_compile() {
 	elibtoolize
+
+    if [ "${ARCH}" = "hppa" ]; then
+		append-flags "-fPIC -ffunction-sections"
+		export LDFLAGS="-ffunction-sections -Wl,--stub-group-size=25000"
+	fi
 
 	# compile evo specific version of db3
 	src_compile_db3
