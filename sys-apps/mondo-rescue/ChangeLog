@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mondo-rescue
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.9 2004/06/24 22:18:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.10 2004/06/30 21:58:18 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> mondo-rescue-1.47.ebuild,
+  mondo-rescue-1.61.ebuild, mondo-rescue-1.65.ebuild:
+  sync IUSE (missing)
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> mondo-rescue-1.47.ebuild,
   mondo-rescue-1.61.ebuild, mondo-rescue-1.65.ebuild:
