@@ -1,35 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.4 2004/12/14 07:01:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.5 2004/12/17 07:43:59 eradicator Exp $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"
 
 # Used in ebuilds for verifying multilib userland
 PROFILE_ARCH="sparc64-multilib"
-
-# In theory, we should be able to just change this (in make.conf)
-# to choose which of our multilib CHOSTS is default.  This should
-# be sparc-unknown-linux-gnu once the functionality I envision gets
-# encorporated into portage.
-CHOST="sparc64-unknown-linux-gnu"
-
-# This isn't implemented in portage.
-# MULTILIB_CHOSTS lists all the CHOSTS you want to build for when
-# you emerge a package.  The libs that get installed will be for
-# all of these CHOSTs, but the applications will for ${CHOST}.
-
-MULTILIB_CHOSTS="sparc64-unknown-linux-gnu sparc-unknown-linux-gnu"
-
-ARCH_WRAPPER_sparc64-unknown-linux-gnu="sparc64"
-CFLAGS_sparc64-unknown-linux-gnu="-m64"
-CXXFLAGS_sparc64-unknown-linux-gnu="${CFLAGS_sparc64-unknown-linux-gnu}"
-LIBDIR_sparc64-unknown-linux-gnu="lib64"
-
-ARCH_WRAPPER_sparc-unknown-linux-gnu="sparc32"
-CFLAGS_sparc-unknown-linux-gnu="-m32"
-CXXFLAGS_sparc-unknown-linux-gnu="${CFLAGS_sparc-unknown-linux-gnu}"
-LIBDIR_sparc-unknown-linux-gnu="lib"
 
 # We have the sparc64 platform
 PLATFORM="sparc64-unknown-linux-gnu"
@@ -42,13 +19,32 @@ GRP_STAGE23_USE="berkdb gpm ipv6 -java multislot multilib ncurses nls -nptl pam 
 # Sane, minimal USE settings
 USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups fortran f77 fbcon gif jpeg nls png tiff truetype usb xpm xrandr xv"
 
-# This will get removed once the per-chost functionality is in portage
+# This isn't implemented in portage.
+# MULTILIB_ABIS lists all the ABIS you want to build for when
+# you emerge a package.  The libs that get installed will be for
+# all of these ABIs, but the bins will be for ${DEFAULT_ABI}.
+
+MULTILIB_ABIS="sparc32 sparc64"
+DEFAULT_ABI="sparc64"
+MULTILIB_CHOSTS="sparc64-unknown-linux-gnu sparc-unknown-linux-gnu"
+
+ARCH_WRAPPER_sparc64="sparc64"
+CHOST_sparc64="sparc64-unknown-linux-gnu"
+CFLAGS_sparc64="-m64"
+CXXFLAGS_sparc64="${CFLAGS_sparc64}"
+LIBDIR_sparc64="lib64"
+
+ARCH_WRAPPER_sparc32="sparc32"
+CHOST_sparc32="sparc-unknown-linux-gnu"
+CFLAGS_sparc32="-m32"
+CXXFLAGS_sparc32="${CFLAGS_sparc32}"
+LIBDIR_sparc32="lib"
+
+# This will get removed once the per-abi functionality is in portage:
 CONF_LIBDIR="lib64"
 CONF_MULTILIBDIR="lib"
-
-# For compatibility with what I see in other multilib profiles, but this should
-# be removed once portage has a more sane multilib setup
 ARCH_WRAPPER="sparc32"
+CHOST="sparc64-unknown-linux-gnu"
 CHOST32="sparc-unknown-linux-gnu"
 CC32="gcc32"
 CPP32="g++32"
