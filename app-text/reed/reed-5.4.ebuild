@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/reed/reed-5.4.ebuild,v 1.2 2003/10/20 11:13:52 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/reed/reed-5.4.ebuild,v 1.3 2003/11/04 03:18:51 brandy Exp $
 
 
 DESCRIPTION="This is a text pager (text file viewer), used to display etexts."
@@ -27,5 +27,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+	dodoc AUTHORS BUGS NEWS README
 }
 
