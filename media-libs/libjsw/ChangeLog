@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libjsw
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.5 2004/06/28 03:45:53 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.6 2005/03/18 23:27:25 vapier Exp $
+
+*libjsw-1.5.5 (18 Mar 2005)
+
+  18 Mar 2005; Mike Frysinger <vapier@gentoo.org> +libjsw-1.5.5.ebuild:
+  Version bump.
 
 *libjsw-1.5.4 (27 Jun 2004)
 

@@ -1,15 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2edea56370b4b9eb493c473fb1581811 ChangeLog 553
-MD5 89f7655ef1cb56d55e7764f83c52f37e libjsw-1.5.0.ebuild 1364
+MD5 9190492d75ec25e3cb85e908922c9fee ChangeLog 671
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 a2fe9532b71d8c266c17f7c22ccf654b libjsw-1.5.5.ebuild 1382
 MD5 1ad0599c536b63e2ec2aa10a1a7fc77b libjsw-1.5.4.ebuild 1348
-MD5 f5aec4a52116c2058db8f19603fc844b files/digest-libjsw-1.5.0 65
+MD5 31ad1236d527eb6aa9762930554c4239 files/digest-libjsw-1.5.5 65
 MD5 8a17ca47e6e65ae0bf1b82d24c2dd400 files/digest-libjsw-1.5.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35SDHTu7gpaalycRAjL7AKDhujRqAG6ymxPuwNoscTlAfbLsswCfUwal
-tUHxmpjPRkdI4YKyIxi1J3E=
-=M/pf
------END PGP SIGNATURE-----
