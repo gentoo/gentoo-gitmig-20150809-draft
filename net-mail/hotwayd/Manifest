@@ -1,3 +1,4 @@
-MD5 9e38035109bf515948c866a047aa7956 hotwayd-0.5.3.ebuild 1718
-MD5 bde9d43d3e3db4a6b60263b6069f4005 files/hotwayd.xinetd 891
+MD5 ff970b3b5287d50de0c8359fe2718f23 hotwayd-0.5.3.ebuild 1819
+MD5 dca0272e105b047e283209c573f7da37 ChangeLog 334
+MD5 38800a211e0f1f2c9226af9ba80bfef7 files/hotwayd.xinetd 878
 MD5 90c7357229f07f0723820b3b6810420b files/digest-hotwayd-0.5.3 66
