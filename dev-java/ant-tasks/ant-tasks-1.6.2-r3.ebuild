@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r3.ebuild,v 1.1 2004/08/31 06:14:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r3.ebuild,v 1.2 2004/08/31 17:57:04 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -35,10 +35,6 @@ DEPEND="=dev-java/ant-1.6.2-r4
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/apache-ant-${PV}"
-
-calc_packages() {
-	echo ${p}
-}
 
 src_compile() {
 	addwrite "/proc/self/maps"
@@ -93,7 +89,7 @@ src_install() {
 	dodir /usr/share/ant/lib
 	for jar in ${jars}; do
 		java-pkg_dojar build/lib/ant-${jar}.jar
-		dosym /usr/share/ant-optional/lib/ant-${jar}.jar /usr/share/ant/lib/
+		dosym /usr/share/${PN}/lib/ant-${jar}.jar /usr/share/ant/lib/
 	done
 }
 

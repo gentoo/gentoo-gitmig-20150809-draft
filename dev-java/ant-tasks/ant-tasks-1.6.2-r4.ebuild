@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r2.ebuild,v 1.2 2004/08/31 17:57:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r4.ebuild,v 1.1 2004/08/31 17:57:04 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -11,9 +11,9 @@ SRC_URI="mirror://apache/ant/source/apache-ant-${PV}-src.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="javamail noantlr nobcel nobsh nocommonsnet nocommonslogging nojdepend nojsch nojython nolog4j nooro noregexp norhino noxalan noxerces"
+IUSE="javamail noantlr nobcel nobeanutils nobsh nocommonsnet nocommonslogging nojdepend nojsch nojython nolog4j nooro noregexp norhino noxalan noxerces"
 
-DEPEND="=dev-java/ant-1.6.2-r4
+DEPEND="=dev-java/ant-1.6.2-r5
 	>=dev-java/java-config-1.2
 	>=dev-java/junit-3.8
 	!nolog4j? ( >=dev-java/log4j-1.2.8 )
@@ -48,13 +48,15 @@ src_compile() {
 	use noantlr || p="${p},antlr"
 	use nobcel || p="${p},bcel"
 	use nobeanutils || p="${p},commons-beanutils"
+	use nobsh || p="${p},bsh"
 	use nocommonslogging || p="${p},commons-logging"
+	use nocommonsnet || p="${p},commons-net"
 	use nojdepend || p="${p},jdepend"
-	use nojsch || p="${p},nojsch"
-	use nojython || p="${p},nojython"
+	use nojsch || p="${p},jsch"
+	use nojython || p="${p},jython-bin"
 	use nolog4j || p="${p},log4j"
 	use nooro || p="${p},oro"
-	use noregexp || p="${p},regexp"
+	use noregexp || p="${p},regexp-bin"
 	use norhino || p="${p},rhino"
 	use noxalan || p="${p},xalan"
 	use noxerces || p="${p},xerces-2"
@@ -69,22 +71,22 @@ src_compile() {
 
 src_install() {
 
-	local jars="junit vaj weblogic apaache-resolver netrexx  nodeps \
+	local jars="junit vaj weblogic apache-resolver netrexx  nodeps \
 		starteam xslp stylebook icontract jmf swing jai trax"
 
 	use noantlr || jars="${jars} antlr"
 	use nobcel || jars="${jars} apache-bcel"
-	use nobsf || jars="${jars} apache-bsf"
-	use nolog4j || jars="${jars} apache-log4j"
-	use nooro || jars="${jars} apache-oro"
-	use noxalan || jars="${jars} xalan1"
-	use noregexp || jars="${jars} noregexp"
+	use nobeanutils || jars="${jars} commons-beanutils"
+	#use nobsf || jars="${jars} apache-bsf"
 	use nocommonslogging || jars="${jars} commons-logging"
-	use javamail && jars="${jars} javamail"
 	use nocommonsnet || jars="${jars} commons-net"
 	use nojdepend || jars="${jars} jdepend"
 	use nojsch || jars="${jars} jsch"
-
+	use nolog4j || jars="${jars} apache-log4j"
+	use nooro || jars="${jars} apache-oro"
+	use noregexp || jars="${jars} apache-regexp"
+	use noxalan || jars="${jars} xalan1"
+	use javamail && jars="${jars} javamail"
 
 	dodir /usr/share/ant/lib
 	for jar in ${jars}; do
@@ -94,14 +96,13 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	local noset=$(false)
+	local noset=false
 	for x in ${IUSE} ; do
-		if [ ! -z "$(echo ${x} | grep no)" ] ; then
-			use ${x} && noset=$(true)
+		if [ "${x:0:2}" == "no" ] ; then
+			use ${x} && noset=true
 		fi
 	done
-	if ${noset} ; then
+	if [ ${noset} == "true" ]; then
 		ewarn "You have disabled some of the ant tasks. Be advised that this may"
 		ewarn "break building some of the Java packages!!"
 		ewarn ""
