@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.8 2004/04/10 07:15:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.9 2004/04/27 15:52:19 aliz Exp $
+
+  27 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> arc-5.21j.ebuild:
+  Mark stable on amd64.
 
   10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> arc-5.21j.ebuild:
   error check/messages; IUSE; don't assign default to S
