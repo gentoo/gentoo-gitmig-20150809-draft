@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.192 2004/10/22 17:48:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.193 2004/10/22 19:38:55 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -298,9 +298,12 @@ alpha - indicates that architecture is 64-bit Alpha
 amd64 - indicates that architecture is AMD64
 arm - indicates that architecture is ARM
 hppa - indicates that architecture is HP PA-Risc
-macos - indicates that platform is Mac OS (Jaguar, Panther or Tiger)
+ia64 - indicates that architecture is 64-bit Itanium
 mips - indicates that architecture is MIPS based
 ppc - indicates that architecture is PowerPC
 ppc64 - indicates that architecture is PowerPC64
+ppc-macos - indicates that platform is Mac OS (Jaguar, Panther or Tiger)
+s390 - indicates that architecture is zSeries/s390
+sh - indicates that architecture is SuperH
 sparc - indicates that architecture is (32-bit) Sparc
 x86 - indicates that architecture is x86

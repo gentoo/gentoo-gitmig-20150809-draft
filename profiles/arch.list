@@ -3,12 +3,12 @@ amd64
 arm
 hppa
 ia64
-macos
 mips
 ppc
 ppc64
 ppc-macos
 s390
+sh
 sparc
 x86
 x86-obsd
