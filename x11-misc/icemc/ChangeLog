@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/icemc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.18 2004/09/02 22:49:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.19 2004/10/06 20:24:53 phosphan Exp $
+
+*icemc-2.1-r1 (06 Oct 2004)
+
+  06 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> +icemc-2.1-r1.ebuild,
+  -icemc-2.1.ebuild:
+  Didn't install binary (bug #66496)
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> icemc-1.9.ebuild,
   icemc-2.1.ebuild:

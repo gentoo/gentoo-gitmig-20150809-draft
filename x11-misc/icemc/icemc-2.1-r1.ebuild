@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/icemc-2.1.ebuild,v 1.2 2004/09/02 22:49:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/icemc-2.1-r1.ebuild,v 1.1 2004/10/06 20:24:53 phosphan Exp $
 
 DESCRIPTION="IceWM menu/toolbar editor"
 HOMEPAGE="http://icecc.sourceforge.net/"
@@ -14,7 +14,7 @@ DEPEND=">=x11-libs/qt-3.0.0"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -e "s:/usr/local:${D}/usr:" -i ${PN}.pro || die "sed failed"
+	sed -e "s:/usr/local:/usr:" -i ${PN}.pro || die "sed failed"
 	echo >> ${PN}.pro -e "QMAKE_CXXFLAGS_RELEASE += ${CXXFLAGS}\nQMAKE_CFLAGS_RELEASE += ${CFLAGS}"
 }
 
