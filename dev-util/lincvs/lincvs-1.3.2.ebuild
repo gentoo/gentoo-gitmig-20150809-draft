@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.3.2.ebuild,v 1.4 2004/09/15 20:57:08 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.3.2.ebuild,v 1.5 2005/01/11 17:17:13 carlo Exp $
 
 inherit kde-functions eutils gcc
 
