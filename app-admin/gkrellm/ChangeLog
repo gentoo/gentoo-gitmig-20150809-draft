@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.28 2003/02/12 02:21:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.29 2003/02/13 14:16:13 seemant Exp $
 
 *gkrellm-2.1.5 (17 Jan 2003)
+
+  13 Feb 2003;  <root@gentoo.org> gkrellm-2.1.0.ebuild gkrellm-2.1.5.ebuild :
+  themes directory correction thanks to charlton in #gentoo
 
   17 Jan 2003; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.1.5.ebuild
   files/digest-gkrellm-2.1.5 :

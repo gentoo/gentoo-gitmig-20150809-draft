@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.5.ebuild,v 1.3 2003/02/13 05:24:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.5.ebuild,v 1.4 2003/02/13 14:16:13 seemant Exp $
 
 DESCRIPTION="Single process stack of various system monitors"
 SRC_URI="http://web.wt.net/~billw/${PN}/${P}.tar.bz2"
@@ -31,16 +31,13 @@ src_compile() {
 }
 
 src_install() {
-	touch .keep
 	dodir /usr/{bin,include,share/man}
 
 	if use gtk2 || use gtk
 	then
-		insinto /usr/lib/gkrellm2/themes
-		doins .keep
+		keepdir /usr/share/gkrellm2/themes
+		keepdir /usr/lib/gkrellm2/plugins
 
-		insinto /usr/lib/gkrellm2/plugins
-		doins .keep
 		make install \
 			INSTALLDIR=${D}/usr/bin \
 			MANDIR=${D}/usr/share/man/man1 \
