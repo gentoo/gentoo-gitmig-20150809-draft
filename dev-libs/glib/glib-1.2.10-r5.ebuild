@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.33 2004/10/10 17:30:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.34 2004/10/23 06:25:55 mr_bones_ Exp $
 
 inherit libtool gnuconfig flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 ~macos ~ppc-macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 ~ppc-macos"
 IUSE=""
 
 DEPEND="virtual/libc"
