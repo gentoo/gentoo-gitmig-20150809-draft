@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.46 2004/01/30 08:03:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.47 2004/02/07 07:32:12 usata Exp $
+
+*ruby-1.8.1-r2 (07 Feb 2004)
+
+  07 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.1-r2.ebuild,
+  ruby-1.8.1.ebuild, files/oniguruma-20040202.diff:
+  Added CVS snapshot
 
 *ruby-1.6.8-r6 (30 Jan 2004)
 
