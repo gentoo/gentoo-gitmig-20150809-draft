@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.13 2002/11/26 18:05:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.14 2002/12/27 18:55:23 blizzy Exp $
+
+*jedit-4.1_pre7 (27 Dec 2002)
+
+  27 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
 
   26 Nov 2002; Maik Schreiber <blizzy@gentoo.org> jedit-4.1_pre4.ebuild:
   Removed "~ppc ~sparc ~sparc64 ~alpha" from KEYWORDS. It seems there never
