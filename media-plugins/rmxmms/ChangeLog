@@ -1,10 +1,13 @@
 # ChangeLog for media-plugins/rmxmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/ChangeLog,v 1.5 2003/03/28 23:45:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/ChangeLog,v 1.6 2003/03/30 20:51:40 liquidx Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *rmxmms-0.5.1 (09 Jul 2002)
+
+  30 Mar 2003; Alastair Tse <liquidx@gentoo.org> rmxmms-0.5.1.ebuild:
+  explicit pointer to SDK download page. fixes #18476.
 
   28 Mar 2003; Alastair Tse <liquidx@gentoo.org> rmxmms-0.5.1.ebuild:
   block merge if using gcc3. #18132.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.4 2003/03/28 23:45:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.5 2003/03/30 20:51:40 liquidx Exp $
 
 IUSE=""
 
@@ -11,6 +11,7 @@ DESCRIPTION="RealAudio plugin for xmms"
 SRC_URI="ftp://ftp.xmms.org/xmms/plugins/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.xmms.org http://forms.real.com/rnforms/resources/server/realsystemsdk/index.html#download"
 REALSDK="rsg2sdk_r4.tar.gz"
+REALSDK_HOMEPAGE="http://proforma.real.com/rnforms/resources/server/realsystemsdk/index.html"
 
 SLOT="0"
 LICENSE="GPL-2 realsdk"
@@ -22,9 +23,9 @@ DEPEND="media-sound/xmms
 pkg_setup() {
 	if [ `gcc-major-ver` = 3 ]; then
     	eerror "This plugin will not work when compiled with gcc-3.x"
-        eerror "Either install and select a gcc-2.95.x compiler with"
-        eerror  "gcc-config, or give up."
-        die "Doesn't work with gcc-3.xx"
+		eerror "Either install and select a gcc-2.95.x compiler with"
+		eerror  "gcc-config, or give up."
+		die "Doesn't work with gcc-3.xx"
     fi
 }
 
@@ -34,8 +35,8 @@ src_unpack () {
 	if [ ! -f ${DISTDIR}/${REALSDK} ]; then
 		einfo "Please download the Real System SDK file from www.real.com"
 		einfo "and place it in ${DISTDIR}."
-		einfo "The file should be named ${REALSDK} and a good starting point"
-		einfo "is ${REALSDK_HOMEPAGE}."
+		einfo "The file should be named ${REALSDK} and a good starting point is:"
+		einfo "${REALSDK_HOMEPAGE}"
 		einfo "The SDK is needed only to build the plugin, it won't be installed."
 		rm -rf ${WORKDIR}
 		exit 1
