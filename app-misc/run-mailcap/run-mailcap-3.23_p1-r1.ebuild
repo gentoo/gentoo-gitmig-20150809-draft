@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.23_p1-r1.ebuild,v 1.8 2004/06/24 22:32:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.23_p1-r1.ebuild,v 1.9 2004/08/09 21:28:55 slarti Exp $
 
 MY_PV="${PV/_p/-}"
 DESCRIPTION="Execute programs via entries in the mailcap file"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~mips alpha ~hppa amd64"
 IUSE=""
 DEPEND=""
-RDEPEND=">=dev-lang/perl-5.6*"
+RDEPEND=">=dev-lang/perl-5.6*
+	app-misc/mime-types"
 
 S=${WORKDIR}/mime-support
 
@@ -24,8 +25,6 @@ src_compile() {
 src_install() {
 	dobin run-mailcap
 	doman run-mailcap.1 mailcap.5
-	insinto /etc
-	doins mime.types
 	for i in compose edit see print; do
 		( cd ${D}/usr/bin && ln -s run-mailcap $i )
 		( cd ${D}/usr/share/man/man1 && ln -s run-mailcap.1 $i.1 )
