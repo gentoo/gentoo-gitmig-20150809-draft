@@ -1,24 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.7.2.ebuild,v 1.2 2004/01/22 12:02:33 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.7.2.ebuild,v 1.3 2004/03/26 21:31:04 eradicator Exp $
 
 DESCRIPTION="Alsa Modular Software Synthesizer"
 HOMEPAGE="http://alsamodular.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
-DEPEND=" >=media-libs/alsa-lib-0.9
+RDEPEND=" >=media-libs/alsa-lib-0.9
 	virtual/jack
 	>=x11-libs/qt-3.0.0
 	>=dev-libs/fftw-2*
 	media-libs/ladspa-sdk"
 
+DEPEND="${RDEPEND}
+	sys-apps/sed"
+
 
 SRC_URI="http://alsamodular.sourceforge.net/${P}.tar.bz2"
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A} || die
@@ -32,7 +34,6 @@ src_compile() {
 }
 
 src_install() {
-
 	dobin ams
 
 	dodoc README INSTALL THANKS LICENSE
