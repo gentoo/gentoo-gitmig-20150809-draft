@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.5 2004/05/23 16:44:18 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.6 2004/05/25 13:22:19 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -26,7 +26,7 @@ DEPEND="dev-util/yacc
 	gdbm? ( sys-libs/gdbm )
 	doc? ( =app-doc/apache-manual-2.0.49-r1 )
 	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
-IUSE="berkdb gdbm ldap threads ipv6 doc"
+IUSE="berkdb gdbm ldap threads ipv6 doc static"
 
 apache_setup_vars() {
 	# Sets the USERDIR to default.
@@ -119,7 +119,11 @@ src_compile() {
 			sleep 5s
 		else
 			einfo "Enabling LDAP"
-			myconf="--with-ldap --enable-auth-ldap=shared --enable-ldap=shared"
+			if use static;
+			then
+			  myconf="--with-ldap --enable-auth-ldap=static --enable-ldap=static"
+			else
+			  myconf="--with-ldap --enable-auth-ldap=shared --enable-ldap=shared"
 		fi
 	fi
 
