@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4-r1.ebuild,v 1.2 2004/07/19 09:43:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4-r1.ebuild,v 1.3 2005/02/13 03:38:27 robbat2 Exp $
 
 DESCRIPTION="DNS serial number incrementer and reverse zone builder"
 URI_BASE="http://uranus.it.swin.edu.au/~jn/linux/"
