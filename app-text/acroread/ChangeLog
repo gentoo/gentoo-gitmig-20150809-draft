@@ -1,6 +1,13 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.12 2002/08/06 14:47:13 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.13 2002/08/14 03:17:26 seemant Exp $
+
+*acroread-5.06-r1 (13 Aug 2002)
+
+  13 Aug 2002; Seemant Kulleen <seemant@gentoo.org> acroread-5.06-r1.ebuild :
+
+  Major bug fixes now make acroread work as a browser plugin (gasp!).  Many
+  thanks to Mark Hazen <markh@markh.com> in bug #4046.
 
 *acroread-5.06 (25 Jul 2002)
 
