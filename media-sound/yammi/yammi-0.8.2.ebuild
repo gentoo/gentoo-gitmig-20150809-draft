@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.6 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.7 2003/10/23 22:02:33 brandy Exp $
 
 inherit flag-o-matic
 
@@ -28,6 +28,7 @@ DEPEND=">=x11-libs/qt-3.1.0-r1
 
 src_unpack() {
 	unpack ${P}fixed.tar.gz
+	epatch ${FILESDIR}/${P}-qt.patch
 }
 
 src_compile() {
@@ -39,7 +40,7 @@ src_compile() {
 
 	local myconf
 	use xmms || myconf="--disable-xmms"
-	use kde || myconf="--disable-noatun ${myconf}"
+	use kde || myconf="--disable-KDE --disable-noatun ${myconf}"
 
 	if [ -z "`use xmms`" ] && [ -z "`use kde`" ]
 	then
