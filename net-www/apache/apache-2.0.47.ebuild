@@ -1,34 +1,36 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.43-r1.ebuild,v 1.8 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.47.ebuild,v 1.1 2003/07/09 16:49:36 woodchip Exp $
 
-inherit eutils
-
-#IUSE="ldap"
-IUSE=""
-
-S=${WORKDIR}/httpd-${PV}
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"
-SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz
-	mirror://gentoo/${P}-gentoo.diff.bz2"
 
-SLOT="2"
+S="${WORKDIR}/httpd-${PV}"
+SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz"
+KEYWORDS="~x86 ~ppc ~alpha ~hppa ~mips ~sparc"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+SLOT="2"
 
-DEPEND="sys-libs/db
-	dev-lang/perl
-	>=sys-libs/zlib-1.1.4
-	>=sys-libs/gdbm-1.8
-	>=dev-libs/expat-1.95.2
-	>=dev-libs/openssl-0.9.6e"
-#	ldap? =net-nds/openldap-2*
+#dev-util/yacc <- i dont need this.  problems? -- file a bug.
+DEPEND="dev-lang/perl
+	sys-libs/zlib
+	dev-libs/expat
+	dev-libs/openssl
+	berkdb? sys-libs/db
+	gdbm? sys-libs/gdbm
+	ldap? =net-nds/openldap-2*"
+IUSE="berkdb gdbm ldap"
 
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	epatch ../${P}-gentoo.diff
+	patch -p1 <${FILESDIR}/apache-2.0.46-gentoo.diff || die
+
+	#avoid utf-8 charset problems
+	export LC_CTYPE=C
+
+	#The GNU people deprecated the -1 shortcut!
+	perl -pi -e 's|head -1|head -n 1|;' srclib/apr/build/buildcheck.sh
 
 	#give it the stamp
 	perl -pi -e 's|" PLATFORM "|Gentoo/Linux|;' server/core.c
@@ -43,7 +45,7 @@ src_unpack() {
 
 	#allow users to customize their data directory by setting the
 	#home directory of the 'apache' user elsewhere.
-	local datadir=`grep ^apache: /etc/passwd | cut -d: -f6`
+	local datadir=`getent passwd apache | cut -d: -f6`
 	if [ -z "$datadir" ]
 	then
 		datadir="/home/httpd"
@@ -54,8 +56,8 @@ src_unpack() {
 		einfo "$datadir is your Apache2 data directory ..."
 	fi
 
+	#setup the filesystem layout config
 	local prefix=/usr
-	echo "" >>config.layout
 	cat >>config.layout <<-EOF
 	<Layout Gentoo>
 	prefix:          ${prefix}
@@ -82,13 +84,51 @@ src_unpack() {
 	</Layout>
 	EOF
 
-	./buildconf || die
+	#gotta do these next two as well :\
+	cat >>srclib/apr/config.layout <<-EOF
+	<Layout Gentoo>
+	prefix:          ${prefix}
+	exec_prefix:     ${prefix}
+	bindir:          ${prefix}/bin
+	sbindir:         ${prefix}/sbin
+	libdir:          ${prefix}/lib
+	libexecdir:      ${prefix}/lib/apache2
+	mandir:          ${prefix}/share/man
+	sysconfdir:      /etc/apache2/conf
+	datadir:         ${datadir}
+	installbuilddir: ${prefix}/lib/apache2/build
+	includedir:      ${prefix}/include/apache2
+	localstatedir:   /var
+	libsuffix:       -\${APR_MAJOR_VERSION}
+	</Layout>
+	EOF
+
+	cat >>srclib/apr-util/config.layout <<-EOF
+	<Layout Gentoo>
+	prefix:          ${prefix}
+	exec_prefix:     ${prefix}
+	bindir:          ${prefix}/bin
+	sbindir:         ${prefix}/sbin
+	libdir:          ${prefix}/lib
+	libexecdir:      ${prefix}/lib/apache2
+	mandir:          ${prefix}/share/man
+	sysconfdir:      /etc/apache2/conf
+	datadir:         ${datadir}
+	installbuilddir: ${prefix}/lib/apache2/build
+	includedir:      ${prefix}/include/apache2
+	localstatedir:   /var
+	libsuffix:       -\${APRUTIL_MAJOR_VERSION}
+	</Layout>
+	EOF
+
+	./buildconf || die "buildconf failed"
 }
 
 src_compile() {
-#	local myconf
-#	use ldap && myconf="--with-ldap --enable-auth-ldap=shared \
-#		--enable-ldap=shared"
+	local myconf
+	use ldap && \
+		myconf="--with-ldap --enable-auth-ldap=shared --enable-ldap=shared"
+
 	select_modules_config || die "determining modules"
 
 	SSL_BASE="SYSTEM" \
@@ -131,16 +171,15 @@ src_install () {
 	local i
 	make DESTDIR=${D} install || die
 	dodoc ABOUT_APACHE CHANGES INSTALL LAYOUT \
-		LICENSE README* ROADMAP ${FILESDIR}/robots.txt
+		LICENSE README* ${FILESDIR}/robots.txt
 
 	#bogus values pointing at /var/tmp/portage
-	#hmm theres more too.. doesnt appear to hurt anything though...
 	perl -pi -e "s/(APR_SOURCE_DIR=).*/\1\"\"/" ${D}/usr/bin/apr-config
 	perl -pi -e "s/(APU_SOURCE_DIR=).*/\1\"\"/" ${D}/usr/bin/apu-config
 	perl -pi -e "s/(APU_BUILD_DIR=).*/\1\"\"/" ${D}/usr/bin/apu-config
 
 	#protect the suexec binary
-	local gid=`grep ^apache: /etc/group |cut -d: -f3`
+	local gid=`getent group apache |cut -d: -f3`
 	[ -z "${gid}" ] && gid=81
 	fowners root.${gid} /usr/sbin/suexec
 	fperms 4710 /usr/sbin/suexec
@@ -154,7 +193,8 @@ src_install () {
 	ln -sf ../../usr/lib/apache2-extramodules extramodules
 	cd ${S}
 
-	#credits to advx.org people for these scripts
+	#credits to advx.org people for these scripts.  Heck, thanks for
+	#the nice layout and everything else ;-)
 	exeinto /usr/sbin
 	for i in apache2logserverstatus apache2splitlogfile
 	do
@@ -189,11 +229,11 @@ src_install () {
 	use ldap && doins ${FILESDIR}/2.0.40/46_mod_ldap.conf
 
 	#drop in a convenient link to the manual
-	local datadir=`grep ^apache: /etc/passwd | cut -d: -f6`
+	local datadir=`getent passwd apache | cut -d: -f6`
 	[ -z "$datadir" ] && datadir="/home/httpd"
 	dosym /usr/share/doc/${PF}/manual ${datadir}/htdocs/manual
 
-	#SLOT=2! can probably get rid of this junk down the road...
+	#SLOT=2!!!
 	cd ${D}
 	mv -v usr/sbin/apachectl usr/sbin/apache2ctl
 	mv -v usr/sbin/htdigest usr/sbin/htdigest2
@@ -273,14 +313,15 @@ select_modules_config() {
 
 pkg_postinst() {
 	#empty dirs...
-	install -d -m0755 -o root -g root ${ROOT}/var/lib/dav
+	install -d -m0755 -o apache -g apache ${ROOT}/var/lib/dav
 	install -d -m0755 -o root -g root ${ROOT}/var/log/apache2
 	install -d -m0755 -o root -g root ${ROOT}/var/cache/apache2
 	install -d -m0755 -o root -g root ${ROOT}/etc/apache2/conf/ssl
 
 	cd ${ROOT}/etc/apache2/conf/ssl
+	einfo
 	einfo "Generating self-signed test certificate in /etc/apache2/conf/ssl..."
-	einfo "(Ignore any message from the yes command below)"
-	yes "" | ${ROOT}/usr/lib/ssl/apache2-mod_ssl/gentestcrt.sh >/dev/null 2>&1
+#	einfo "(Ignore any message from the yes command below)"
+	yes "" 2>/dev/null | ${ROOT}/usr/lib/ssl/apache2-mod_ssl/gentestcrt.sh >/dev/null 2>&1
 	einfo
 }
