@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1.ebuild,v 1.1 2004/09/13 05:43:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1.ebuild,v 1.2 2004/09/13 07:29:55 solar Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gcc
 
 MB_PATCH="groff_1.18.1-7" #"${P/-/_}-7"
 DESCRIPTION="Text formatter used for man pages"
@@ -45,15 +45,15 @@ src_unpack() {
 
 	# Fix syntax error in pic2graph. Closes #32300.
 	sed -i -e "s:groffpic_opts=\"-U\":groffpic_opts=\"-U\";;:" \
-		contrib/pic2graph/pic2graph.sh
+		contrib/pic2graph/pic2graph.sh || die
 }
 
 src_compile() {
 	local myconf=
 
 	# Fix problems with not finding g++
-	[ -z "${CC}" ] && export CC="gcc"
-	[ -z "${CXX}" ] && export CXX="g++"
+	export CC="$(gcc-getCC)"
+	export CXX="$(gcc-getCXX)"
 
 	case ${ARCH} in
 		alpha)
@@ -76,13 +76,12 @@ src_compile() {
 	# ready for production use."
 	filter-flags -fnew-ra
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=\${inforoot} \
-		${myconf} || die
+	# many fun sandbox errors with econf
+	myconf="${myconf} --host=${CHOST} --prefix=/usr \
+		--mandir=/usr/share/man --infodir=\${inforoot}"
+	./configure ${myconf} || die
 
-	# Parallel build doesn't work
+	# Parallel build doesn't work. Patched wanted.
 	emake -j1 || die
 
 	# Only build X stuff if we have X installed, but do
@@ -119,6 +118,6 @@ src_install() {
 	dosym soelim /usr/bin/zsoelim
 
 	cd ${S}
-	dodoc BUG-REPORT COPYING ChangeLog FDL MORE.STUFF NEWS \
+	dodoc BUG-REPORT ChangeLog FDL MORE.STUFF NEWS \
 		PROBLEMS PROJECTS README REVISION TODO VERSION
 }
