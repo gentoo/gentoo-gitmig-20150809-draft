@@ -1,7 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.16 2003/11/11 20:51:43 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.17 2003/12/08 15:13:57 rizzo Exp $
+
+  08 Dec 2003; Don Seiler <rizzo@gentoo.org>; tora-1.3.12.ebuild:
+  Bumping 1.3.12 to stable x86
 
   11 Nov 2003; Don Seiler <rizzo@gentoo.org>; tora-1.3.11-r2.ebuild:
   Added IUSE var for current stable version

@@ -3,9 +3,9 @@ MD5 13ad2e6e864bc657f770e34b42425987 tora-1.3.11-r2.ebuild 1441
 MD5 38c6e83677ee1ae9da82cb5ac5c009a8 tora-1.3.8.ebuild 1558
 MD5 559ac0cb59d141695d21c579de561bcc tora-1.3.10.ebuild 1279
 MD5 baea8e7f58b9e0535b464a0a712521bc tora-1.3.11-r1.ebuild 1388
-MD5 05ed50fda478ff25f1c2821164393f8d tora-1.3.12.ebuild 1292
+MD5 5e042389bd078bf42362c721a5cdadfa tora-1.3.12.ebuild 1291
 MD5 1af380c10a23559065e455f0cd04f4dc tora-1.3.9.2.ebuild 1283
-MD5 40d20378771fe96a130759dff24eaa69 ChangeLog 2750
+MD5 399b32e7199a4419978777ee59ea8436 ChangeLog 2848
 MD5 bda8803c4adc9cf0b308b71157891f05 metadata.xml 536
 MD5 0cb18bcf00a1bd7ccb4010bba81619ed files/tora-index-segfault.patch 619
 MD5 94ba94945d843ea598f9b63230f31e8d files/digest-tora-1.3.9.2 71
