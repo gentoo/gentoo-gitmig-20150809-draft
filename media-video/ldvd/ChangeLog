@@ -1,0 +1,11 @@
+# ChangeLog for media-video/ldvd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ldvd/ChangeLog,v 1.1 2005/03/29 05:11:26 chriswhite Exp $
+
+*ldvd-1.9.4 (29 Mar 2005)
+
+  29 Mar 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +ldvd-1.9.4.ebuild:
+  Initial import into the tree. Closes bug #53100. Thanks to a whole lot of
+  people in the bug for the ebuild :).
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 040d61015bd501e46a1d5193224c437b ldvd-1.9.4.ebuild 669
+MD5 3b48bbf9061ed96a98fce71b232f9213 metadata.xml 387
+MD5 9dec22cc3605bf4b3814e99fb746df23 ChangeLog 440
+MD5 b0beb8940effade8af0cc5c152d26fbf files/digest-ldvd-1.9.4 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSNvnFdQwWVoAgN4RAsl9AJ9Go+ilG/G+CQjatD6HDndR45sM4QCfUhv2
+n+LFoLx+Ll0a2+m4XWb4Su8=
+=aHSi
+-----END PGP SIGNATURE-----
