@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.7 2005/02/18 23:37:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.8 2005/03/01 20:51:07 eradicator Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -125,6 +125,12 @@ src_install() {
 		docinto Documentation
 		dodoc sound/Documentation/*
 	fi
+
+	if kernel_is 2 6; then
+		# mv the drivers somewhere they won't be killed by the kernel's make modules_install
+		mv ${D}/lib/modules/${KV_FULL}/kernel/sound ${D}/lib/modules/${KV_FULL}/${PN}
+		rmdir ${D}/lib/modules/${KV_FULL}/kernel
+	fi
 }
 
 pkg_postinst() {
@@ -143,5 +149,15 @@ pkg_postinst() {
 
 	einfo "Check out the ALSA installation guide availible at the following URL:"
 	einfo "http://www.gentoo.org/doc/en/alsa-guide.xml"
-}
 
+	if kernel_is 2 6; then
+		# Cleanup if they had older alsa installed
+		for file in $(find ${ROOT}/lib/modules/${KV_FULL}/${PN} -type f); do
+			rm -f ${file//${KV_FULL}\/${PN}/${KV_FULL}\/kernel\/sound}
+		done
+
+		for dir in $(find ${ROOT}/lib/modules/${KV_FULL}/kernel/sound -type d | tac); do
+			rmdir ${dir}
+		done
+	fi
+}

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.134 2005/02/18 23:37:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.135 2005/03/01 20:51:07 eradicator Exp $
+
+  01 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-driver-1.0.8.ebuild:
+  Don't install modules into the kernel subdir. This way, youu don't need to
+  re-emerge alsa-driver every time you do a make modules_install in your
+  kernel.
 
   19 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   +files/1.0.8-msi_audigyls.patch, alsa-driver-1.0.8.ebuild:
