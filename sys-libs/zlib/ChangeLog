@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.15 2003/10/27 20:14:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.16 2003/10/29 21:03:09 azarah Exp $
+
+*zlib-1.1.4-r3 (29 Oct 2003)
+
+  29 Oct 2003; Martin Schlemmer <azarah@gentoo.org> zlib-1.1.4-r3.ebuild,
+  files/zlib-1.1.4-build-fPIC.patch, files/zlib-1.1.4-glibc.patch,
+  files/zlib-1.1.4-gzprintf.patch:
+  Add patches from Mandrake to add -fPIC rather than append-flags, hopefully
+  this will solve bug #32140.  Also add updated security patch.
 
 *zlib-1.1.4-r2 (27 Oct 2003)
 
