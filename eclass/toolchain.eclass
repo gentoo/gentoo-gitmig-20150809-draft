@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.112 2005/03/01 01:46:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.113 2005/03/01 02:32:11 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -67,8 +67,6 @@ GCCMICRO=$(get_version_component_range 3)
 # According to gcc/c-cppbuiltin.c, GCC_CONFIG_VER MUST match this regex.
 # ([^0-9]*-)?[0-9]+[.][0-9]+([.][0-9]+)?([- ].*)?
 GCC_CONFIG_VER=${GCC_CONFIG_VER:-"$(replace_version_separator 3 '-')"}
-
-GCC_MANPAGE_VERSION=${GCC_MANPAGE_VERSION:-${GCC_RELEASE_VER}}
 
 # Pre-release support
 if [ ${PV} != ${PV/_pre/-} ] ; then
@@ -219,7 +217,7 @@ gcc_get_s_dir() {
 #			for an older gcc version with a new gcc, make sure you set
 #			HTB_GCC_VER to that version of gcc.
 #
-#	GCC_MANPAGE_VERSION
+#	MAN_VER
 #			The version of gcc for which we will download manpages. This will
 #			default to ${GCC_RELEASE_VER}, but we may not want to pre-generate man pages
 #			for prerelease test ebuilds for example. This allows you to
@@ -234,6 +232,7 @@ gentoo_urls() {
 }
 get_gcc_src_uri() {
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
+	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 
 	[[ -n ${PIE_VER} ]] && \
 		PIE_CORE=${PIE_CORE:-gcc-${GCC_RELEASE_VER}-piepatches-v${PIE_VER}.tar.bz2}
@@ -263,8 +262,8 @@ get_gcc_src_uri() {
 
 	# PERL cannot be present at bootstrap, and is used to build the man pages.
 	# So... lets include some pre-generated ones, shall we?
-	[[ ${GCC_MANPAGE_VERSION} != "none" ]] && \
-		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2)"
+	[[ -n ${MAN_VER} ]] && \
+		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${MAN_VER}-manpages.tar.bz2)"
 
 	# various gentoo patches
 	[[ -n ${PATCH_VER} ]] && \
@@ -276,7 +275,7 @@ get_gcc_src_uri() {
 
 	# gcc bounds checking patch
 	if [[ -n ${HTB_VER} ]] ; then
-		local HTBFILE="bounds-checking-gcc-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}.patch.bz2"
+		 local HTBFILE="bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
 		GCC_SRC_URI="${GCC_SRC_URI}
 			boundschecking? (
 				mirror://sourceforge/boundschecking/${HTBFILE}
@@ -1168,10 +1167,8 @@ gcc_src_compile() {
 	pushd ${WORKDIR}/build > /dev/null
 
 	# Install our pre generated manpages if we do not have perl ...
-	if [ ! -x /usr/bin/perl -a "${GCC_MANPAGE_VERSION}" != "none" ] ; then
-		unpack gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2 || \
-			die "Failed to unpack man pages"
-	fi
+	[[ ! -x /usr/bin/perl ]] && [[ -n ${MAN_VER} ]] && \
+		unpack gcc-${MAN_VER}-manpages.tar.bz2
 
 	einfo "Configuring ${PN} ..."
 	gcc_do_configure
@@ -1443,6 +1440,7 @@ gcc_movelibs() {
 gcc_quick_unpack() {
 	pushd ${WORKDIR} > /dev/null
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
+	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 
 	if [[ -n ${PRERELEASE} ]] ; then
 		unpack gcc-${PRERELEASE}.tar.bz2
@@ -1475,7 +1473,7 @@ gcc_quick_unpack() {
 
 	# pappy@gentoo.org - Fri Oct  1 23:24:39 CEST 2004
 	want_boundschecking && \
-		unpack "bounds-checking-${PN}-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}.patch.bz2"
+		unpack "bounds-checking-${PN}-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
 
 	popd > /dev/null
 }
@@ -1508,8 +1506,8 @@ exclude_gcc_patches() {
 
 do_gcc_HTB_boundschecking_patches() {
 	# modify the bounds checking patch with a regression patch
-	epatch "${WORKDIR}/bounds-checking-${PN}-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}.patch"
-	release_version="${release_version}, HTB-${HTB_GCC_VER:-${GCC_RELEASE_VER}}-${HTB_VER}"
+	epatch "${WORKDIR}/bounds-checking-${PN}-${HTB_GCC_VER}-${HTB_VER}.patch"
+	release_version="${release_version}, HTB-${HTB_GCC_VER}-${HTB_VER}"
 }
 
 # patch in ProPolice Stack Smashing protection
