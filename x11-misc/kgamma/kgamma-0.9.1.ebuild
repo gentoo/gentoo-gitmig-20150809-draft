@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kgamma/kgamma-0.9.1.ebuild,v 1.10 2002/10/27 11:17:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kgamma/kgamma-0.9.1.ebuild,v 1.11 2002/12/02 19:57:26 danarmak Exp $
 
 inherit kde-base || die
 
@@ -13,4 +13,3 @@ LICENSE="GPL-2"
 
 KEYWORDS="x86 sparc sparc64"
 
-#set_enable_final
