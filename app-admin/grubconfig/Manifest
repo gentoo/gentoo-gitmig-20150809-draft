@@ -1,3 +1,6 @@
-MD5 815e1329d4285adb05096056294ecd6e ChangeLog 944
+MD5 70b5e1269a370a7488fd80c5e8d04008 ChangeLog 1150
 MD5 8243122e28b11346f6b6bf90d89e18c4 grubconfig-1.19.ebuild 587
+MD5 f9834cd6951c7a47b356d5c129cf88dc grubconfig-1.22.ebuild 590
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 d1f49759b244ead5510b4d4bba6f5d50 files/digest-grubconfig-1.19 66
+MD5 ead1d35341e12523ff549ece51b08769 files/digest-grubconfig-1.22 66
