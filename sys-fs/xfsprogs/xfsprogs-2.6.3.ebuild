@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.3.ebuild,v 1.4 2004/04/27 03:21:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.3.ebuild,v 1.5 2004/05/25 01:12:36 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -11,8 +11,11 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
+IUSE=""
 
-DEPEND="sys-fs/e2fsprogs
+RDEPEND="virtual/glibc
+	sys-fs/e2fsprogs"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
@@ -21,7 +24,7 @@ src_unpack() {
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:=.*:= /usr/share/doc/${PF}:" \
 		-e '/^GCFLAGS/s:-O1::' \
-		-e '/^PKG_[A-Z]*_DIR/s:= := $(DESTDIR):' \
+		-e '/^PKG_[[:upper:]]*_DIR/s:= := $(DESTDIR):' \
 		include/builddefs.in \
 		|| die "sed include/builddefs.in failed"
 }
@@ -57,6 +60,8 @@ src_install() {
 	sed \
 		-e 's:installed=no:installed=yes:g' \
 		${S}/libhandle/.libs/libhandle.la \
-		> ${D}/usr/lib/libhandle.la
-	mv ${D}/lib/*.a ${D}/usr/lib/
+		> ${D}/usr/lib/libhandle.la \
+		|| die "sed failed"
+	mv ${D}/lib/*.a ${D}/usr/lib/ || die "mv failed"
+	prepalldocs
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.11 2004/04/25 08:15:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.12 2004/05/25 01:12:36 mr_bones_ Exp $
+
+  24 May 2004; Michael Sterrett <mr_bones_@gentoo.org> xfsprogs-2.6.3.ebuild:
+  IUSE; don't rdepend on sed; use character class in sed; error check disk io;
+  compress docs
 
   25 Apr 2004; Joshua Kinard <kumba@gentoo.org> xfsprogs-2.6.3.ebuild:
   Tweaked the arch check to see if PLATFORM needed to be unset and added mips to
