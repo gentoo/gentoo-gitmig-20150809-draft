@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vorbisgain
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.5 2004/03/18 07:48:30 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.6 2004/03/29 19:23:06 gustavoz Exp $
+
+  29 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  vorbisgain-0.34-r1.ebuild:
+  keyworded ~sparc
 
   18 Mar 2004; Dylan Carlson <absinthe@gentoo.org> vorbisgain-0.34-r1.ebuild:
   Added amd64 to KEYWORDS.
