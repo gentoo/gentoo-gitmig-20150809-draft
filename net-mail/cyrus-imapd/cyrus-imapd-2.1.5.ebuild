@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5.ebuild,v 1.4 2002/08/07 04:19:36 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5.ebuild,v 1.5 2002/08/08 15:29:01 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Cyrus IMAP Server"
@@ -63,6 +63,11 @@ src_compile() {
 		--enable-listext \
 		--disable-cyradm \
 		--without-perl \
+		--with-cyrus-user=cyrus \
+		--with-cyrus-group=mail \
+		--enable-shared \
+		--enable-netscapehack \
+		--with-com_err=yes \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	# make depends break with -f... in CFLAGS
