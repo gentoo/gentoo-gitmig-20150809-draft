@@ -1,6 +1,14 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.17 2004/02/28 20:22:46 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.18 2004/04/08 19:16:54 pebenito Exp $
+
+*selinux-base-policy-20040408 (08 Apr 2004)
+
+  08 Apr 2004; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20040408.ebuild:
+  New update. Users.fc is now deprecated, as the contexts for user directories
+  is now automatically generated. Portage fetching of distfiles now has a
+  subdomain, for dropping priviledges.
 
   28 Feb 2004; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-20040225.ebuild:
