@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3629 2005/02/16 01:44:46 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3630 2005/02/16 13:44:25 lanius Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -162,7 +162,7 @@ dev-lisp/cl-imho
 # ebuilds for SLOTed motif, bug #81829
 =x11-libs/lesstif-0.94.0-r1
 =x11-libs/openmotif-2.1.30-r7
-=x11-libs/openmotif-2.2.3-r1
+=x11-libs/openmotif-2.2.3-r2
 x11-libs/motif-config
 
 # Benedikt Boehm <hollow@gentoo.org> (30 Jan 2005)
