@@ -179,11 +179,12 @@ src_install() {
 
 	einfo "Setting up maildirs by default in the account skeleton ..."
 	diropts -m 755 -o root -g root
-	insinto /etc/skel
+	keepdir /etc/skel
 	${D}/usr/bin/maildirmake ${D}/etc/skel/.maildir
 	# we're going to try this out for a while -20031107
 	#newins ${FILESDIR}/dot_courier .courier
 	#fperms 644 /etc/skel/.courier
+	keepdir /var/spool/mail
 	${D}/usr/bin/maildirmake ${D}/var/spool/mail/.maildir
 	insinto /etc/courier
 	newins ${FILESDIR}/bofh bofh
@@ -207,6 +208,18 @@ src_install() {
 	dosym /usr/bin/sendmail /usr/sbin/sendmail
 
 	echo "MAILDIR=\$HOME/.maildir" >> ${D}/etc/courier/courierd
+
+	# we change the names of the binaries, but webadmin is still looking
+	# for the old names
+	sed -i -e 's:\$sbindir\/imapd:\$sbindir\/courier-imapd:g' \
+		-e 's:\$sbindir\/imapd-ssl:\$sbindir\/courier-imapd-ssl:g' \
+		${D}/usr/share/courier/courierwebadmin/admin-40imap.pl \
+		|| ewarn "failed to fix webadmin"
+	sed -i -e 's:\$sbindir\/pop3d:\$sbindir\/courier-pop3d:g' \
+		-e 's:\$sbindir\/pop3d-ssl:\$sbindir\/courier-pop3d-ssl:g' \
+		${D}/usr/share/courier/courierwebadmin/admin-45pop3.pl \
+		|| ewarn "failed to fix webadmin"
+
 }
 
 pkg_preinst() {
