@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libsamplerate
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.1 2003/01/06 16:23:28 raker Exp $
+
+*libsamplerate-0.0.13 (06 Jan 2003)
+
+  06 Jan 2003; Nick Hadaway <raker@gentoo.org>
+  libsamplerate-0.0.13.ebuild, files/digest-libsamplerate-0.0.13 :
+  New ebuild added as ardour-cvs-0.6 now requires this library.
