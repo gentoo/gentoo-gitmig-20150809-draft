@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/Cache-Cache-1.01.ebuild,v 1.8 2004/06/25 00:09:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/Cache-Cache-1.01.ebuild,v 1.9 2004/07/14 16:43:59 agriffis Exp $
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Class-Container module for perl"
 SRC_URI="http://www.cpan.org/authors/id/D/DC/DCLINTON/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/authors/id/D/DC/DCLINTON/"
@@ -12,6 +11,7 @@ HOMEPAGE="http://www.cpan.org/authors/id/D/DC/DCLINTON/"
 SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha"
+IUSE=""
 
 DEPEND="${DEPEND}
 	>=dev-perl/Digest-SHA1-2.01

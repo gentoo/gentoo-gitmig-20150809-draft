@@ -3,7 +3,6 @@
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Data::Hierarchy - Handle data in a hierarchical structure"
 SRC_URI="http://www.cpan.org/modules/by-module/Data/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Data/${P}.readme"
@@ -11,6 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Data/${P}.readme"
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="~alpha ~mips ~ppc ~sparc x86"
+IUSE=""
 
 DEPEND="${DEPEND}
 	dev-perl/Clone"
