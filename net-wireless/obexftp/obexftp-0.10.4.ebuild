@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/obexftp/obexftp-0.10.4.ebuild,v 1.1 2004/11/12 20:35:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/obexftp/obexftp-0.10.4.ebuild,v 1.2 2004/11/27 02:05:07 ticho Exp $
 
 DESCRIPTION="File transfer over OBEX for mobile phones"
 SRC_URI="mirror://sourceforge/openobex/${P}.tar.gz"
@@ -25,7 +25,7 @@ src_compile() {
 
 src_install() {
 	dohtml doc/*.html doc/*.css doc/*.png doc/*.xml doc/*.xsl
-	doman doc/flexmem.1
+	doman doc/obexftp.1
 	rm -rf doc
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS ChangeLog README* THANKS TODO
