@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.9 2004/02/15 16:32:49 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.10 2004/02/19 05:58:08 brad Exp $
+
+  19 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-0.8.ebuild:
+  Add dependency on pkgconfig, needed by GTK+2 build process.
 
   15 Feb 2004; Brad Laue <brad@gentoo.org> files/firefox:
   Switch the default new browser type to window, as this matches better with
