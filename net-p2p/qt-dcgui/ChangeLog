@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/qt-dcgui
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/ChangeLog,v 1.1 2002/07/11 09:45:58 seemant Exp $
+
+*qt-dcgui-0.1_beta8 (6 Jul 2002)
+
+  06 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  qt-dcgui-0.1_beta8.ebuild files/digest-qt-dcgui-0.1_beta8 :
+
+  New packge -- Qt client for DirectConnect. Submitted by:
+  mikael.grahn@telia.com (Mikael Grahn) in bug #4203
