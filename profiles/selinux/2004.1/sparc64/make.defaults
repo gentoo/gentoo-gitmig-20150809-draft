@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/make.defaults,v 1.8 2004/09/09 13:01:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/make.defaults,v 1.9 2004/11/22 02:11:03 pebenito Exp $
 
 ARCH="sparc"
 
 PROFILE_ARCH="sparc64"
 
 USE="sparc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+STAGE1_USE="selinux"
 GRP_STAGE23_USE="sparc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 
 ACCEPT_KEYWORDS="sparc"
