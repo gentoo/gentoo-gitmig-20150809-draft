@@ -1,0 +1,10 @@
+# ChangeLog for games-board/kcheckers
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.1 2004/12/07 22:26:19 mr_bones_ Exp $
+
+*kcheckers-0.5 (07 Dec 2004)
+
+  07 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +kcheckers-0.5.ebuild:
+  initial commit - ebuild submitted by Greg Watson via bug #69184
+
