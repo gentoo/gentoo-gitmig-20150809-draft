@@ -1,4 +1,6 @@
-MD5 b001406ff70d2fcd26a56adde8d8a24a ChangeLog 1310
+MD5 923caaec2cbf583c94cff63ec3c8b33e mpqc-2.2.2-r1.ebuild 1324
+MD5 807170ffbe44c3270f7554e1b3b11c74 ChangeLog 1543
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 61825968a6fbb6705c8eed9ee80527c9 mpqc-2.2.2.ebuild 1331
+MD5 ef8f7cc3214e84dfd6bec6d38eacb3a6 files/digest-mpqc-2.2.2-r1 129
 MD5 ef8f7cc3214e84dfd6bec6d38eacb3a6 files/digest-mpqc-2.2.2 129
