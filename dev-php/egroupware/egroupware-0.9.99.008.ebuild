@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.008.ebuild,v 1.5 2004/02/22 21:08:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.008.ebuild,v 1.6 2004/03/24 23:32:02 mholzer Exp $
 
 inherit webapp-apache
 
@@ -18,11 +18,9 @@ KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~hppa"
 
 RDEPEND="virtual/php
 	dev-db/mysql"
-DEPEND="${RDEPEND}"
-
-webapp-detect || NO_WEBSERVER=1
 
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	if [ -L ${HTTPD_ROOT}${PN} ] ; then
 		ewarn "You need to unmerge your old ${PN} version first."
@@ -34,6 +32,7 @@ pkg_setup() {
 }
 
 src_install() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}
