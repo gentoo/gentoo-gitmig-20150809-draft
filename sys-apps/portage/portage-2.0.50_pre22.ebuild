@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50_pre16.ebuild,v 1.1 2004/01/13 23:07:50 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50_pre22.ebuild,v 1.1 2004/02/04 23:26:53 carpaski Exp $
 
 IUSE="build"
 
@@ -231,40 +231,10 @@ pkg_postinst() {
 			echo "!!! This is a problem."
 			mv /var/cache/edb/counter.old /var/cache/edb/counter
 		fi
-
-		# Changes in the size of auxdbkeys can cause aux_get() problems.
-		echo -n ">>> Clearing invalid entries in dependency cache..."
-		cd ${ROOT}var/cache/edb/dep
-		#Nick, I changed the following to deal with situations where stderr spits out stuff like: "!!! CANNOT IMPORT FTPLIB:"
-		#which causes an infinite loop. (drobbins)
-		python -c 'import sys; sys.path = ["/usr/lib/portage/pym"]+sys.path; import portage; myf=open("/tmp/auxdbkl","w"); myf.write(str(len(portage.auxdbkeys))); myf.close()'
-		AUXDBKEYLEN=`cat /tmp/auxdbkl`
-		rm -f /tmp/auxdbkl
-		find ${ROOT}var/cache/edb/dep -type f -exec wc -l {} \; | egrep -v "^ *${AUXDBKEYLEN}" | sed 's:^ \+[0-9]\+ \+\([^ ]\+\)$:\1:' 2>/dev/null | xargs -n 50 -r rm -f
-		echo " ...done!"
 	fi # PORTAGE_TESTING
 
-	#fix cache (could contain staleness)
 	if [ ! -d ${ROOT}var/cache/edb/dep ]
 	then
-		#upgrade /var/db/pkg library; conditional required for build image creation
-		if [ -d ${ROOT}var/db/pkg ]
-		then
-			echo ">>> Database upgrade..."
-			cd ${ROOT}var/db/pkg
-			for x in *
-			do
-				[ ! -d "$x" ] && continue
-				#go into each category directory so we don't overload the python command-line
-				cd $x
-				#fix silly output from this command (hack)
-				python ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL` > /dev/null
-			cd ..
-			done
-			echo ">>> Database upgrade complete."
-			#remove old virtual directory to prevent virtual deps from getting messed-up
-			[ -d ${ROOT}var/db/pkg/virtual ] && rm -rf ${ROOT}var/db/pkg/virtual
-		fi
 		install -d -m0755 ${ROOT}var/cache/edb
 		install -d -m2775 -o root -g portage ${ROOT}var/cache/edb/dep
 	fi
