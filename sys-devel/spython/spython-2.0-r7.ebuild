@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.3 2001/08/17 23:41:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.4 2001/08/24 04:45:53 drobbins Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
 DESCRIPTION="A really great language -- minimalist python environment"
-SRC_URI="http://www.python.org/ftp/python/src/BeOpen-Python-2.0.tar.bz2 
+SRC_URI="http://www.python.org/ftp/python/2.0/BeOpen-Python-2.0.tar.bz2 
 	 http://www.azstarnet.com/~donut/programs/fchksum/python-fchksum-1.1.tar.gz"
 
 HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum/"
