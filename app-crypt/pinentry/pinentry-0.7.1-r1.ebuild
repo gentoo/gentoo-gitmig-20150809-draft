@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.1-r1.ebuild,v 1.5 2004/10/05 11:46:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.1-r1.ebuild,v 1.6 2004/12/07 22:44:09 swegener Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="qt gtk ncurses"
 
-DEPEND="gtk? ( x11-libs/gtk+ )
+DEPEND="gtk? ( =x11-libs/gtk+-1* )
 	ncurses? ( sys-libs/ncurses )
 	qt? ( x11-libs/qt )
 	!gtk? ( !qt? ( !ncurses? ( sys-libs/ncurses ) ) )"
