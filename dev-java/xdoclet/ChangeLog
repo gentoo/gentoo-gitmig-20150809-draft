@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xdoclet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.2 2003/02/12 05:55:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.3 2003/08/15 05:21:33 strider Exp $
+
+  15 Aug 2003; Adrian Almenar <strider@gentoo.org> xdoclet-1.2.0_beta1.ebuild:
+  Fixes bug 21887, That makes the ebuild to build with jikes java compiler,
+  Thanks to Jonas Berlin <jberlin@cc.hut.fi> for the patch.
 
 *xdoclet-1.2.0_beta1 (20 Dec 2002)
 
