@@ -1,6 +1,17 @@
 # ChangeLog for x11-wm/wmi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/ChangeLog,v 1.6 2004/08/17 22:46:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/ChangeLog,v 1.7 2004/08/30 19:19:31 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmi-7.ebuild,
+  wmi-8.ebuild, wmi-9.ebuild:
+  Masked wmi-9.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmi-7.ebuild,
+  wmi-8.ebuild:
+  Masked wmi-8.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmi-7.ebuild:
+  Masked wmi-7.ebuild stable for ppc
 
 *wmi-9 (10 Aug 2004)
 
