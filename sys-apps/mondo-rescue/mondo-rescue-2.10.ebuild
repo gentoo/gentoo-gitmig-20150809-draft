@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.10.ebuild,v 1.5 2005/01/22 10:33:42 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.10.ebuild,v 1.6 2005/01/22 10:39:20 wschlich Exp $
 
 inherit libtool
 
 DESCRIPTION="A program which a Linux user can utilize to create a rescue/restore CD/tape."
 HOMEPAGE="http://www.mondorescue.org/"
-SRC_URI="http://www.microwerks.net/~hugo/download/MondoCD/TGZS/${PN/-rescue/}-${PV}.tgz"
+SRC_URI="http://www.mondorescue.org/download/MondoCD/TGZS/${PN/-rescue/}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"

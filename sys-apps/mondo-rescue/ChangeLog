@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mondo-rescue
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.13 2005/01/22 10:33:42 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.14 2005/01/22 10:39:20 wschlich Exp $
+
+  22 Jan 2005; Wolfram Schlich <wschlich@gentoo.org>
+  mondo-rescue-2.10.ebuild:
+  updated SRC_URI, regenerated and verified digest
 
 *mondo-rescue-2.04 (22 Jan 2005)
 
