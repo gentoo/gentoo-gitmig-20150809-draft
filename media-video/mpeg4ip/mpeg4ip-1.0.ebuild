@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0.ebuild,v 1.1 2004/01/04 23:34:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0.ebuild,v 1.2 2004/01/21 18:51:06 tester Exp $
 
 DESCRIPTION="MPEG 4 implementation library"
 
@@ -68,6 +68,13 @@ src_compile() {
 			` use_enable ppc`"
 
 	econf ${myconf} || die "configure failed"
+
+	# making libsdl first to fix bug #38316, it seems like bug #34804
+	cd ${S}/lib/SDL/src
+	emake || die "make private libSDL failed"
+	sed -i "s:-pthread::g" libSDLmpeg4ip.la
+
+	cd ${S}
 	emake || die "make failed"
 
 }
