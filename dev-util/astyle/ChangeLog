@@ -1,11 +1,11 @@
 # ChangeLog for dev-util/astyle
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.7 2004/03/28 21:30:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.8 2004/05/12 08:52:26 aliz Exp $
 
   28 Mar 2004; David Holm <dholm@gentoo.org> astyle-1.15.3-r1.ebuild:
   Added to ~ppc.
 
-*astyle-1.15.3-r1 28 Mar 2004
+*astyle-1.15.3-r1 (28 Mar 2004)
 
   28 Mar 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
   Added patch to fix --force-indent-tab, see #43091, thanks to
