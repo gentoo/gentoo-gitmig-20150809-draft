@@ -1,0 +1,12 @@
+diff -uNr abiword-1.99.5.patched/abi/src/wp/impexp/xp/ie_imp_MsWord_97.cpp abiword-1.99.5/abi/src/wp/impexp/xp/ie_imp_MsWord_97.cpp
+--- abiword-1.99.5.patched/abi/src/wp/impexp/xp/ie_imp_MsWord_97.cpp	2003-08-24 18:00:10.000000000 +0200
++++ abiword-1.99.5/abi/src/wp/impexp/xp/ie_imp_MsWord_97.cpp	2003-08-25 00:40:56.000000000 +0200
+@@ -3402,7 +3402,7 @@
+     comprLen = size;
+     uncomprLen = b->blip.metafile.m_cb;
+     unsigned char *uncompr = new unsigned char[uncomprLen];
+-    int err = uncompress (uncompr, &uncomprLen, data, comprLen);
++    int err = uncompress (uncompr, &uncomprLen, reinterpret_cast<const unsigned char *>(data), comprLen);
+     if (err != Z_OK)
+       {
+ 	UT_DEBUGMSG(("Could not uncompress image\n"));

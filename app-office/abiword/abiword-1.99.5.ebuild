@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.99.5.ebuild,v 1.1 2003/08/27 16:25:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.99.5.ebuild,v 1.2 2003/08/27 16:49:47 foser Exp $
 
 inherit eutils debug
 
@@ -43,6 +43,14 @@ DEPEND="${RDEPEND}
 #	>=dev-libs/libole2-0.2.4-r1
 #	perl?  ( >=dev-lang/perl-5.6 )
 # perl seems broken
+
+src_unpack() {
+
+	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-cast_fix.patch 
+
+}
 
 src_compile() {
 	./autogen.sh
