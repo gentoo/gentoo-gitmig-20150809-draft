@@ -1,6 +1,11 @@
 # ChangeLog for games-board/hexxagon
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.2 2003/09/10 20:21:46 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.3 2004/02/23 23:54:29 mr_bones_ Exp $
+
+*hexxagon-0.3.2 (23 Feb 2004)
+
+  23 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> hexxagon-0.3.2.ebuild:
+  version bump (fixes bug #41736)
 
 *hexxagon-0.3.1 (22 Jun 2003)
 
