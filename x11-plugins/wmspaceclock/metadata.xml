@@ -1,0 +1,13 @@
+ [32;01m*[0m Generated metadata.xml:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>desktop-dock</herd>
+<longdescription>
+wmspaceclock (or spaceclock for short) is an antialiased analog clock for the 
+Window Maker dock to show the current local time. It has configurable 
+background and configurable antialiased hand shapes (vector-based) and comes 
+with more than a dozen themes.
+</longdescription>
+</pkgmetadata>

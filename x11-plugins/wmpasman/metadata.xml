@@ -1,0 +1,14 @@
+ [32;01m*[0m Generated metadata.xml:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>desktop-dock</herd>
+<longdescription>
+wmpasman stores passwords and makes them available
+for pasting (both via the middle-click primary
+selection and the clipboard selection) at the
+click of a button. It also contains a digital
+clock. Access is controlled by a passphrase.
+</longdescription>
+</pkgmetadata>
