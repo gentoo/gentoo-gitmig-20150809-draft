@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.33a.ebuild,v 1.3 2004/07/19 21:57:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.33a.ebuild,v 1.4 2004/07/20 12:19:31 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org/"
 SRC_URI="http://download.blender.org/source/${P}.tar.bz2
-		 http://download.blender.org/source/${P}-gcc34.tar.bz2"
+		 http://download.blender.org/source/${P}-gcc34.patch.bz2"
 
 SLOT="0"
 LICENSE="GPL-2 | BL"
