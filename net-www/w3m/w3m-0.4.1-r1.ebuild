@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.1-r1.ebuild,v 1.1 2003/05/12 08:23:03 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.1-r1.ebuild,v 1.2 2003/06/24 08:24:12 phosphan Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://w3m.sourceforge.net/"
 
 SLOT="0"
 LICENSE="w3m"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~alpha"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
