@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.1-r1.ebuild,v 1.1 2004/09/09 01:34:08 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.1-r1.ebuild,v 1.2 2004/11/06 17:30:01 pythonhead Exp $
 
-inherit eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit."
 HOMEPAGE="http://www.wxwidgets.org/"
@@ -52,7 +52,7 @@ pkg_setup() {
 src_compile() {
 	local myconf
 	export LANG='C'
-
+	filter-flags -fvisibility-inlines-hidden
 	myconf="${myconf} `use_with opengl`"
 	myconf="${myconf} --with-gtk"
 	myconf="${myconf} `use_enable debug`"
