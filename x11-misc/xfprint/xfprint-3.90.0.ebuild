@@ -16,7 +16,9 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 DEPEND=">=x11-libs/gtk+-2.0.6
 	dev-util/pkgconfig
 	dev-libs/libxml2
-        =x11-libs/libxfce4util-3.90.0
+        app-text/a2ps
+	app-text/psutils
+	=x11-libs/libxfce4util-3.90.0
         =x11-libs/libxfcegui4-3.90.0
         =x11-libs/libxfce4mcs-3.90.0
 	=x11-misc/xfce-mcs-manager-3.90.0"
