@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r3.ebuild,v 1.1 2005/02/12 18:18:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r3.ebuild,v 1.2 2005/02/13 13:35:54 swegener Exp $
 
 IUSE="nls gnome mp3 oggvorbis alsa oss esd mmx old-eq"
 
@@ -27,7 +27,7 @@ RDEPEND="app-arch/unzip
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
 	alsa? ( >=media-libs/alsa-lib-1.0 )
 	gnome? ( >=gnome-base/gconf-2.6.0 )
-	mp3? ( >=media-libs/id3lib )"
+	mp3? ( media-libs/id3lib )"
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
