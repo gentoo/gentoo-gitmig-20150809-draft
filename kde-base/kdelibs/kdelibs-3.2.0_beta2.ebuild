@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.13 2004/01/17 11:20:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.14 2004/01/18 16:07:48 caleb Exp $
 inherit kde
 
 need-autoconf 2.5
@@ -19,7 +19,8 @@ SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
-DEPEND=">=app-arch/bzip2-1.0.2
+DEPEND=">=sys-devel/autoconf-2.58
+	>=app-arch/bzip2-1.0.2
 	>=dev-libs/libxslt-1.0.31
 	>=dev-libs/libxml2-2.5.8
 	>=dev-libs/libpcre-3.9
