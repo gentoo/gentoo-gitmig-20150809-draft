@@ -1,11 +1,14 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.11 2004/08/20 21:09:51 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.12 2004/12/30 23:29:59 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> pygtkglext-1.0.1.ebuild:
   Marked stable x86
 
-  20 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pygtkglext-1.0.0.ebuild,
+  20 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pygtkglext-1.0.0.ebuild,
   pygtkglext-1.0.1.ebuild:
   dev-python/PyOpenGL is now dev-python/pyopengl - adjust dependencies
   accordingly.
