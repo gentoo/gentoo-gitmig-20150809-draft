@@ -3,7 +3,7 @@
 
 . /etc/rc.d/config/functions
 
-SERVICE=`basename ${0}`
+SERVICE="svc-dnscache"
 opts="setup start stop"
 
 #this service is designed to *only* run supervised
