@@ -100,27 +100,23 @@ S=${WORKDIR}/${P}
 
 src_compile() {
 	# Most open-source packages use GNU autoconf for configuration.
-	# You should use something similar to the following lines to
+	# The quickest (and preferred) way of running configure is:
+	econf || die "econf failed"
+	#
+	# You could use something similar to the following lines to
 	# configure your package before compilation.  The "|| die" portion
 	# at the end will stop the build process if the command fails.
 	# You should use this at the end of critical commands in the build
 	# process.  (Hint: Most commands are critical, that is, the build
 	# process should abort if they aren't successful.)
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	#./configure \
+	#	--host=${CHOST} \
+	#	--prefix=/usr \
+	#	--infodir=/usr/share/info \
+	#	--mandir=/usr/share/man || die "./configure failed"
 	# Note the use of --infodir and --mandir, above. This is to make
 	# this package FHS 2.2-compliant.  For more information, see
 	#   http://www.pathname.com/fhs/
-
-	# Also note that it is cleaner and easier to use econf, which is the
-	# portage shortcut to the above ./configure statement:
-	#
-	# econf || die
-	# Note that econf will die on failure, but please use econf || die
-	# for consistency.
 
 	# emake (previously known as pmake) is a script that calls the
 	# standard GNU make with parallel building options for speedier
