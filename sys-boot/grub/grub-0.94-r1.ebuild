@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.1 2004/02/26 07:38:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.2 2004/03/17 19:01:21 solar Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
@@ -46,7 +46,7 @@ src_compile() {
 	unset CFLAGS
 
 	filter-flags -fstack-protector
-
+	filter-ldflags -pie
 	append-flags -DNDEBUG
 	[ `gcc-major-version` -eq 3 ] && append-flags -minline-all-stringops
 	use static && append-ldflags -static
