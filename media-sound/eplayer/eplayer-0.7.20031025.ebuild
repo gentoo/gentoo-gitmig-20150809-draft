@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/eplayer/eplayer-0.7.20031018.ebuild,v 1.1 2003/10/18 08:36:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/eplayer/eplayer-0.7.20031025.ebuild,v 1.1 2003/10/25 16:18:54 vapier Exp $
 
 inherit enlightenment
 
