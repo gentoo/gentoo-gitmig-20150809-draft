@@ -1,31 +1,37 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger achim@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.8.3-r1.ebuild,v 1.1 2002/02/09 00:00:40 woodchip Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# Author Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.8.6.ebuild,v 1.1 2002/04/10 12:35:52 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 SRC_URI="http://www.snort.org/releases/${P}.tar.gz"
 HOMEPAGE="http://www.snort.org"
 
-DEPEND="virtual/glibc >=net-libs/libpcap-0.6.2-r1
+DEPEND="virtual/glibc
+	>=net-libs/libpcap-0.6.2-r1
+	>=net-libs/libnet-1.0.2a
+	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
-RDEPEND="virtual/glibc sys-devel/perl
-	>=net-libs/libnet-1.0.2a
+RDEPEND="virtual/glibc 
+	sys-devel/perl
+	>=net-libs/libpcap-0.6.2-r1
+	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 
 src_compile() {
 
 	local myconf
-	use postgres && myconf="${myconf} --with-postgresql"
-	use postgres || myconf="${myconf} --without-postgresql"
-	use mysql && myconf="${myconf} --with-mysql"
-	use mysql || myconf="${myconf} --without-mysql"
-	use ssl && myconf="${myconf} --with-openssl"
-	use ssl || myconf="${myconf} --without-openssl"
+
+	use postgres && myconf="${myconf} --with-postgresql" \
+		|| myconf="${myconf} --without-postgresql"
+	use mysql && myconf="${myconf} --with-mysql" \
+		|| myconf="${myconf} --without-mysql"
+	use ssl && myconf="${myconf} --with-openssl" \
+		|| myconf="${myconf} --without-openssl"
 
 	./configure \
 		--prefix=/usr \
