@@ -2,13 +2,14 @@ MD5 29485590d6033d8cc9ad5e3cb0d88010 ggv-1.1.94.ebuild 1629
 MD5 7fd04730850f52c1faa8259d51c6ec25 ggv-2.4.0.2.ebuild 683
 MD5 9a2b77e6992faac870588576e7f2c1a3 ggv-2.5.99.1.ebuild 692
 MD5 6d0a9e13992cbaf0bc10803ed4f038f6 ggv-2.4.0.1.ebuild 649
-MD5 4f802c50ebb25d370cc0ca3c405bfdc1 ChangeLog 6792
+MD5 ac7dc2c80a7adcd2592d04c962203051 ggv-2.6.0.ebuild 689
+MD5 4d669d1992af16e1cf4ae1f9df6fdff5 ChangeLog 6904
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 c62954dd127b8bb867c857270d5df7fe ggv-2.4.1.ebuild 688
 MD5 f20abfdd041b7578de0617accf27d617 ggv-2.0.1.ebuild 646
-MD5 87ac50da7ffa9087af17231e365aeb76 files/digest-ggv-2.5.99.1 66
 MD5 9839595041edeb9a62751cae70d30ea1 files/digest-ggv-1.1.94 62
 MD5 ab26db64779abda7431d8d0c8c1045af files/digest-ggv-2.4.0.1 65
 MD5 d9763f700891e3270ce421ce320427b0 files/digest-ggv-2.4.0.2 65
 MD5 d7512f10aeb8f218994e94d0b50ef42a files/digest-ggv-2.0.1 62
 MD5 68688e676f5d0f61aeb97e413dfdb041 files/digest-ggv-2.4.1 63
+MD5 d14e7cb9a428e2a46f909b7d1da5cfab files/digest-ggv-2.6.0 63
