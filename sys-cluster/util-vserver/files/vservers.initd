@@ -1,111 +1,80 @@
 #!/sbin/runscript
-##
-## description: The vservers service is used to start and stop all
-##              the virtual servers.
-## to configure see:
-##	- /etc/vservers/*.conf
-##	- /etc/vservers.conf
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/vservers.initd,v 1.2 2005/03/30 11:43:40 hollow Exp $
 
-USR_SBIN=/usr/sbin
+opts="${opts} vstatus"
 
-depend() {
-	need net rebootmgr
+checkconfig() {
+	: ${UTIL_VSERVER_VARS:=/usr/lib/util-vserver/util-vserver-vars}
+	if [[ ! -e ${UTIL_VSERVER_VARS} ]]; then
+		eerror "Cannot find util-vserver installation"
+		eerror "(the file '$UTIL_VSERVER_VARS' would be expected)"
+		exit 1
+	fi
+	. ${UTIL_VSERVER_VARS}
+	
+	: ${MARKS:=default}
+	: ${NUMPARALLEL:=1}
+	: ${LOCKDIR:=/var/lock/vservers}
 }
 
-## we need to call this _before_ starting any vserver!
-proc_security() {
-	## the following does not seem to work (maybe "old-style" only?):
-	### from: http://vserver.strahlungsfrei.de/tiki-index.php?page=VServerGentooNew
-	## enable (parts of) the proc filesystem
-	#vproc -e /proc/cmdline
-	#vproc -e /proc/loadavg
-	#vproc -e /proc/meminfo
-	### invalid ioctl for /proc/mounts!!
-	##vproc -e /proc/mounts
-	#vproc -e /proc/stat
-	#vproc -e /proc/uptime
-	## (vproc -e /proc/version)
-	## (useful and harmless: cpuinfo, slabinfo, interrupts)
-	#vproc -e /proc/cpuinfo
-	#vproc -e /proc/slabinfo
-	#vproc -e /proc/interrupts
-
-	## anyway, we use the following for now:
-	/usr/sbin/setattr -R --~hide /proc/*
-}
-
-# Print the vserver name in priority/alpha order
-sortserver(){
-	(
-	cd /etc/vservers
-	for serv in *.conf
-	do
-	        test -f "$serv" || continue
-
-		PRIORITY=100
-		. $serv
-		test "$ONBOOT" || continue
-		printf "%03d %s\n" $PRIORITY `basename $serv .conf`
-	done
-	) | sort $* | (while read a b; do echo $b; done)
-}
-
-startservers(){
-	echo "Starting the virtual servers"
-	cd /etc/vservers
-	for name in `sortserver`
-	do
-		ONBOOT=
-		. $name.conf
-		if [ "$ONBOOT" = "yes" ] ; then
-			echo; echo
-			echo "*** starting vserver \"$name\" ($(date)) ***"
-			$USR_SBIN/vserver $name start
-		else
-			echo "*** vserver \"$name\" not configured for on boot start ***"
-		fi
-	done
-}
-
-BACKGROUND=off
-if [ -f /etc/vservers.conf ] ; then
-	. /etc/vservers.conf
-fi
-
-
-# See how we were called.
 start() {
-	proc_security
-	if [ "$BACKGROUND" = "yes" ] ; then
-		einfo "asynchronous start of vserver on tty8"
-		echo "vserver startup on $(date)" 2>&1 </dev/tty8 | tee /var/log/vservers.boot >/dev/tty8
-		#startservers >/dev/tty8 </dev/tty8 2>/dev/tty8 &
-		startservers 2>&1 </dev/tty8 | tee /var/log/vservers.boot >/dev/tty8 &
-	else
-		estart "synchronous vserver-start"
-		startservers | tee /var/log/vservers.boot
+	checkconfig
+	
+	if [[ -n ${UNHIDEPROC} ]]; then
+		ebegin "Unhiding /proc entries"
+		${_VPROCUNHIDE}
 		eend $?
+	fi
+	
+	if [[ -n ${STARTALL} ]]; then
+		ebegin "Starting all vservers"
+		${_START_VSERVERS} -j ${NUMPARALLEL} --all --start
+		local rc=$?
+		[[ $rc -eq 0 ]] && touch ${LOCKDIR}/all
+		eend $rc
+	else
+		for MARK in ${MARKS}; do
+			ebegin "Starting vservers of type '${MARK}'"
+			${_START_VSERVERS} -m ${MARK} -j ${NUMPARALLEL} --all --start
+			local rc=$?
+			[[ $rc -eq 0 ]] && touch ${LOCKDIR}/${MARK}
+			eend $rc
+		done
 	fi
 }
 
 stop() {
-	echo "Stopping the virtual servers"
-	cd /etc/vservers
-	for name in `sortserver -r`
-	do
-		$USR_SBIN/vserver $name stop
-	done
+	checkconfig
+	
+	if [[ -n ${STOPALL} ]]; then
+		ebegin "Stopping all vservers"
+		${_START_VSERVERS} -j ${NUMPARALLEL} --all --stop
+		local rc=$?
+		rm -f ${LOCKDIR}/all
+		eend $rc
+	else
+		for MARK in ${MARKS}; do
+			ebegin "Stopping vservers of type '${MARK}'"
+			${_START_VSERVERS} -m ${MARK} -j ${NUMPARALLEL} --all --stop
+			local rc=$?
+			rm ${LOCKDIR}/${MARK}
+			eend $rc
+		done
+	fi
+
 }
 
-## TODO: finish our status()-function
-my_status() {
-	cd /etc/vservers
-	for serv in *.conf
-	do
-		ONBOOT=no
-		name=`basename $serv .conf`
-		. $serv
-		echo -n ONBOOT=$ONBOOT " "
-		$USR_SBIN/vserver $name running
+vstatus() {
+	checkconfig
+	einfo "${LOCKDIR} shows the follwing types of vservers running:"
+	for i in ${LOCKDIR}/*; do
+		einfo "  ${i}"
+		local running="true"
 	done
+	
+	if [[ "${running}" != "true" ]]; then
+		einfo "  none"
+	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/0.30.196/vservers.confd,v 1.2 2005/02/25 07:23:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/vservers.confd,v 1.1 2005/03/30 11:43:40 hollow Exp $
 
 # Should /proc automatically be unhided by vprocunhide?
 # This will be enabled if UNHIDEPROC is set regardless of its content

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.204.ebuild,v 1.4 2005/03/30 11:43:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.205.ebuild,v 1.1 2005/03/30 11:43:40 hollow Exp $
 
 inherit eutils
 
 DESCRIPTION="vserver admin utilities (alpha version)"
-SRC_URI="http://www-user.tu-chemnitz.de/~ensc/util-vserver/alpha/${P}.tar.bz2"
+SRC_URI="http://www.13thfloor.at/~ensc/util-vserver/files/alpha/${P}.tar.bz2"
 HOMEPAGE="http://www-user.tu-chemnitz.de/~ensc/util-vserver/"
 
 LICENSE="GPL-2"

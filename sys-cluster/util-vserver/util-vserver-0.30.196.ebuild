@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.196.ebuild,v 1.4 2005/02/26 09:36:09 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.196.ebuild,v 1.5 2005/03/30 11:43:40 hollow Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www-user.tu-chemnitz.de/~ensc/util-vserver/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 IUSE=""
 DEPEND=">=dev-libs/dietlibc-0.24
@@ -39,11 +39,11 @@ src_install() {
 
 	# and install gentoo'ized ones:
 	exeinto /etc/init.d/
-	newexe ${FILESDIR}/0.30.196/vservers.initd vservers
+	newexe ${FILESDIR}/vservers.initd vservers
 
 	# install conf.d files
 	insinto /etc/conf.d
-	newins ${FILESDIR}/0.30.196/vservers.confd vservers
+	newins ${FILESDIR}/vservers.confd vservers
 
 	dodoc README ChangeLog NEWS AUTHORS INSTALL THANKS util-vserver.spec
 }
