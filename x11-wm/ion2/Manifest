@@ -1,7 +1,17 @@
-MD5 6aebc98f59c20ce9eb69ce4d5eedc5b0 ion2-20040729.ebuild 2051
-MD5 6556faf3ec982705b036d129ed638b27 ChangeLog 2863
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 7057ed0ec950ad5f77b47a32dbcb4fb4 files/ion2-20040601-rename.patch 1720
+MD5 a022a7e36e3f72a7053a97669d580191 ChangeLog 2963
+MD5 e397039837cc6b6c49070d5967742a6d ion2-20040729.ebuild 2053
 MD5 59a0157884665387039b7de882e85f1c files/digest-ion2-20040729 66
 MD5 fece066216c6fcfa1936d068bd6ca998 files/pwm2.desktop 170
+MD5 7057ed0ec950ad5f77b47a32dbcb4fb4 files/ion2-20040601-rename.patch 1720
 MD5 fba46fa26a6acc7159f6eb942abc002d files/ion2.desktop 217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCAkwNKRy60XGEcJIRAkBZAKCW7gcLkWarTX/uaz/fd52NjCqJBgCgnUnZ
+nyyzIvZagkDt0GoV+yFgUQE=
+=oKSp
+-----END PGP SIGNATURE-----
