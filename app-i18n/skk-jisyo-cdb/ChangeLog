@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/skk-jisyo-cdb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/ChangeLog,v 1.13 2004/10/02 06:08:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/ChangeLog,v 1.14 2004/10/19 09:37:13 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  skk-jisyo-cdb-200310.ebuild, skk-jisyo-cdb-200401.ebuild,
+  skk-jisyo-cdb-200404.ebuild, skk-jisyo-cdb-200407.ebuild:
+  Stable on amd64.
 
 *skk-jisyo-cdb-200410 (02 Oct 2004)
 
