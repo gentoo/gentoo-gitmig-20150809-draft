@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.3 2003/07/16 18:00:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.4 2003/07/18 22:48:15 liquidx Exp $
 
 # Author: Alastair Tse <liquidx@gentoo.org>
 # 
@@ -75,9 +75,7 @@ fi
 # --- tell us what DEPEND it wants.
 
 if ! has_version "x11-libs/gtk+"; then
-	use gtk2 \
-		&& newdepend ">=x11-libs/gtk+-2" \
-		|| newdepend "=x11-libs/gtk+-1.2*"
+	newdepend "gtk2? ( >=x11-libs/gtk+-2 ) : ( =x11-libs/gtk+-1.2* )"
 fi		
 
 # --- if GTK1_S and GTK2_S is set, then we do both themes,
