@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.11 2004/11/17 16:47:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.12 2004/11/23 17:35:34 spyderous Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -9,7 +9,8 @@
 # fonts (but support for built-in ``fixed'' and ``cursor'' fonts, and
 # normal support for bitmap fonts and font-server provided fonts).
 
-IUSE="ipv6 xinerama fbdev speedo type1 cjk truetype freetype fs xv debug"
+IUSE="ipv6 xinerama fbdev speedo type1 cjk truetype freetype font-server xv
+	debug"
 
 IUSE_VIDEO_CARDS="savage trident sis530 trio ts300 mach64 i810 igs"
 
@@ -186,7 +187,8 @@ src_unpack() {
 		use cjk && echo "#define BuildCID YES" >> config/cf/host.def
 		use truetype && echo "#define BuildXTrueType YES" >> config/cf/host.def
 		use freetype && echo "#define BuildFreeType YES" >> config/cf/host.def
-		use fs && echo "#define FontServerAccess YES" >> config/cf/host.def
+		use font-server \
+			&& echo "#define FontServerAccess YES" >> config/cf/host.def
 
 		# Video
 		use xv && echo "#define BuildXvExt YES" >> config/cf/host.def
