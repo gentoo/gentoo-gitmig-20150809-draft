@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/ibm-acpi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.9 2004/11/15 18:16:54 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.10 2004/11/15 18:23:37 brix Exp $
+
+  15 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> ibm-acpi-0.4.ebuild,
+  ibm-acpi-0.7.ebuild, ibm-acpi-0.8.ebuild:
+  Use kernel-mod_configoption_present().
 
 *ibm-acpi-0.8 (15 Nov 2004)
 
