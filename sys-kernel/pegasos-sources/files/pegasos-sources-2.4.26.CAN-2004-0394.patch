@@ -1,8 +1,7 @@
-diff -Naur linux-2.4.26-pegasos.orig/kernel/panic.c linux-2.4.26-pegasos/kernel/panic.c
---- linux-2.4.26-pegasos.orig/kernel/panic.c	2004-06-04 22:55:36.000000000 +0000
-+++ linux-2.4.26-pegasos/kernel/panic.c	2004-06-04 22:59:21.000000000 +0000
-@@ -63,7 +63,7 @@
- 	
+--- linux-2.4.22-oM3-orig/kernel/panic.c	Tue Mar 30 15:37:18 2004
++++ linux-2.4.22-oM3-mod/kernel/panic.c	Mon May 17 18:44:01 2004
+@@ -51,7 +51,7 @@
+ 
  	bust_spinlocks(1);
  	va_start(args, fmt);
 -	vsprintf(buf, fmt, args);
