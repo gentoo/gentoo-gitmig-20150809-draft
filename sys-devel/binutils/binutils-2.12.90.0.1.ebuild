@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.1.ebuild,v 1.1 2002/03/21 17:17:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.1.ebuild,v 1.2 2002/03/21 19:31:59 azarah Exp $
 
 # NOTE to Maintainer:  it no longer use perl to build the manpages.
 
@@ -11,7 +11,6 @@ DESCRIPTION="Tools necessary to build programs"
 SRC_URI="http://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
 
 DEPEND="virtual/glibc
-	>=sys-devel/automake-1.6
 	nls? ( sys-devel/gettext )"
 
 
