@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.15 2005/01/27 22:07:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.16 2005/01/31 06:37:31 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -29,7 +29,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # Return a list of the ABIs we want to install for with
 # the last one in the list being the default.
 
-# get_all_libdir:
+# get_all_libdirs:
 # Returns a list of all the libdirs used by this profile.  This includes
 # those that might not be touched by the current ebuild and always includes
 # "lib".
@@ -221,7 +221,7 @@ get_abi_order() {
 	return 0
 }
 
-# get_all_libdir()
+# get_all_libdirs()
 # Returns a list of all the libdirs used by this profile.  This includes
 # those that might not be touched by the current ebuild.
 get_all_libdirs() {
