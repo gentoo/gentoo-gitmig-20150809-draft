@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.48 2003/06/18 13:52:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.49 2003/07/01 12:06:12 karltk Exp $
+
+*distcc-2.7.1 (01 Jul 2003)
+
+  01 Jul 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
+  distcc-2.7.ebuild, files/2.7.1/distcc-config, files/2.7.1/conf,
+  files/2.7.1/init, files/2.7.1/001_fix_tmpdir.patch.gz:
+  New upstream version. Ebuild submitted by Lisa Marie <lisa@thedoh.com>.
+  This version is self-contained, so previous versions may be nuked at 
+  whim.
 
 *distcc-2.7 (16 Jun 2003)
 
