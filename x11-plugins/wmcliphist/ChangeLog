@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmcliphist
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.1 2003/06/05 11:00:24 robh Exp $
+
+*wmcliphist-0.3 (5 June 2003)
+
+  5 June 2003; robh <robh@gentoo.org>
+  wmcliphist-0.3.ebuild:
+  Initial release by <joker@gentoo.org>
