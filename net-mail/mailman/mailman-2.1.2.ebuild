@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.4 2003/07/16 08:11:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.5 2003/07/26 20:01:01 raker Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="GNU Mailman, the mailing list server with webinterface"
+IUSE="apache2"
+
+DESCRIPTION="A python-based mailing list server with an extensive web interface"
 SRC_URI="mirror://gnu/${PN}/${P}.tgz"
 HOMEPAGE="http://www.list.org/"
 
 SLOT="O"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
-
-IUSE="apache apache2"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=dev-lang/python-1.5.2
 	virtual/mta
@@ -19,7 +18,7 @@ DEPEND=">=dev-lang/python-1.5.2
 
 INSTALLDIR="/usr/local/mailman"
 APACHEGID="81"
-MAILGID="daemon"
+MAILGID="280"
 
 pkg_setup() {
         if ! grep -q ^mailman: /etc/group ; then
@@ -51,14 +50,13 @@ src_install () {
         chown -R mailman.mailman ${ID}
         chmod 2775 ${ID}
         make prefix=${ID} var_prefix=${ID} doinstall || die
-	if [ "`use apache`" ]; then
-		dodir /etc/apache/conf/addon-modules
-		insinto /etc/apache/conf/addon-modules
-		doins ${FILESDIR}/mailman.conf
-	fi
 	if [ "`use apache2`" ]; then
 		dodir /etc/apache2/conf/addon-modules
 		insinto /etc/apache2/conf/addon-modules
+		doins ${FILESDIR}/mailman.conf
+	else
+		dodir /etc/apache/conf/addon-modules
+		insinto /etc/apache/conf/addon-modules
 		doins ${FILESDIR}/mailman.conf
 	fi
 	dodoc ${FILESDIR}/README.gentoo
@@ -104,18 +102,17 @@ pkg_postinst() {
 }	
 
 pkg_config() {
-	if [ "`use apache`" ]; then
-		einfo "Updating apache config"
-		einfo "added: \"Include  conf/addon-modules/mailman.conf\""
-		einfo "to ${ROOT}etc/apache/conf/apache.conf"
-        	echo "Include  conf/addon-modules/mailman.conf" \
-			>> ${ROOT}etc/apache/conf/apache.conf
-	fi
 	if [ "`use apache2`" ]; then
 		einfo "Updating apache2 config"
 		einfo "added: \"Include  conf/addon-modules/mailman.conf\""
 		einfo "to ${ROOT}etc/apache2/conf/apache2.conf"
         	echo "Include  conf/addon-modules/mailman.conf" \
 			>> ${ROOT}etc/apache2/conf/apache2.conf
+	else
+		einfo "Updating apache config"
+		einfo "added: \"Include  conf/addon-modules/mailman.conf\""
+		einfo "to ${ROOT}etc/apache/conf/apache.conf"
+        	echo "Include  conf/addon-modules/mailman.conf" \
+			>> ${ROOT}etc/apache/conf/apache.conf
 	fi
 }
