@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1.ebuild,v 1.1 2004/09/27 02:02:27 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1.ebuild,v 1.2 2004/10/01 22:59:35 pyrania Exp $
 
-inherit flag-o-matic gnuconfig gcc
+inherit flag-o-matic gnuconfig gcc eutils
 
 DESCRIPTION="MPEG-1 and MPEG-4 video encoding library"
 SRC_URI="mirror://sourceforge/fame/${P}.tar.gz"

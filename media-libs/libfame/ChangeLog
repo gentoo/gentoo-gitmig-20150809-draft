@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.21 2004/09/27 02:02:27 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.22 2004/10/01 22:59:35 pyrania Exp $
+
+  02 Oct 2004; Markus Nigbur <pyrania@gentoo.org> libfame-0.9.1.ebuild:
+  inherit eutils!
 
 *libfame-0.9.1 (26 Sep 2004)
 
