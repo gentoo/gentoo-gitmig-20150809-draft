@@ -1,22 +1,28 @@
-MD5 738681375bd6f943760911e6dc68eabe mozilla-thunderbird-bin-0.6.ebuild 1854
-MD5 59ed2690d45bb71a6692677f77494491 mozilla-thunderbird-bin-0.8.ebuild 2797
-MD5 4dd5b9512327e9c0845a6d199021871a mozilla-thunderbird-bin-0.7.1.ebuild 2833
-MD5 dad034169abb67bac7e754b8739b3a42 mozilla-thunderbird-bin-0.7.3.ebuild 2833
-MD5 4be842a809651a652a8e3f6958702e70 mozilla-thunderbird-bin-0.7.ebuild 2833
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4527509dd2bb6978d480d73028fa2e96 ChangeLog 4218
 MD5 5dd0418c191830dfcfd74400e3f9608c metadata.xml 182
+MD5 a0ad21b907cd168f42bcee53bec0fa2a mozilla-thunderbird-bin-0.7.1.ebuild 2831
+MD5 6d01ff1927f698edcc1b91d3c63eb291 mozilla-thunderbird-bin-0.7.3.ebuild 2831
+MD5 092e1b53d96858e0dc2080c9f761ef64 mozilla-thunderbird-bin-0.8.ebuild 2799
 MD5 7dd2dac40d6bb1cad39c82742ac7a949 files/MozillaThunderbird 294
-MD5 7dd2dac40d6bb1cad39c82742ac7a949 files/thunderbird 294
-MD5 654ea1f7dbed8ebc5f0de9832c31c349 files/digest-mozilla-thunderbird-bin-0.6 89
-MD5 902a97e83044e3491aa864befdcfd725 files/digest-mozilla-thunderbird-bin-0.7 88
-MD5 fd75b9df64bbf98891a7dbe761f336de files/digest-mozilla-thunderbird-bin-0.8 89
-MD5 409c1fb9a49f402540b3ffa017bb3636 files/thunderbird-0.3-antialiasing-patch 1246
-MD5 552a6947de77bfa4e290acdb23a872a5 files/thunderbird-bin-0.7-init.tar.bz2 3339
 MD5 2d79ae2922a695af8dcdd1185fc12d41 files/digest-mozilla-thunderbird-bin-0.7.1 90
 MD5 b8f757fe427ffab7f570f0cff012b9f8 files/digest-mozilla-thunderbird-bin-0.7.3 90
-MD5 a622df770b03edce7d158cfe97e8e315 files/icon/mozillathunderbird-bin.desktop 205
-MD5 04115f0e204444eac76a092a63c89027 files/icon/thunderbird-icon.png 6499
-MD5 bb431eebb28f85d1c07957846fd3e4d2 files/icon/mozillathunderbird.desktop 148
+MD5 7dd2dac40d6bb1cad39c82742ac7a949 files/thunderbird 294
+MD5 409c1fb9a49f402540b3ffa017bb3636 files/thunderbird-0.3-antialiasing-patch 1246
+MD5 552a6947de77bfa4e290acdb23a872a5 files/thunderbird-bin-0.7-init.tar.bz2 3339
+MD5 fd75b9df64bbf98891a7dbe761f336de files/digest-mozilla-thunderbird-bin-0.8 89
 MD5 04115f0e204444eac76a092a63c89027 files/icon/mozillathunderbird-bin-icon.png 6499
-MD5 2a65eefd9de928054e33268c1d0081e3 files/0.7/icon/mozillathunderbird-bin.desktop 198
+MD5 a622df770b03edce7d158cfe97e8e315 files/icon/mozillathunderbird-bin.desktop 205
+MD5 bb431eebb28f85d1c07957846fd3e4d2 files/icon/mozillathunderbird.desktop 148
+MD5 04115f0e204444eac76a092a63c89027 files/icon/thunderbird-icon.png 6499
 MD5 04115f0e204444eac76a092a63c89027 files/0.7/icon/mozillathunderbird-bin-icon.png 6499
+MD5 2a65eefd9de928054e33268c1d0081e3 files/0.7/icon/mozillathunderbird-bin.desktop 198
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBcv2GI1lqEGTUzyQRAlKsAKCSoIYgjrSay8HaNxxR7f6+1g4wZgCglRdd
+UscrhAapEiAeVJKzKb2iro0=
+=xAVt
+-----END PGP SIGNATURE-----
