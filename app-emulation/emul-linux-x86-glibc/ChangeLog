@@ -1,6 +1,9 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for app-emulation/emul-linux-x86-glibc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/ChangeLog,v 1.4 2004/08/30 15:16:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/ChangeLog,v 1.5 2004/09/05 05:55:21 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   30 Aug 2004; Travis Tilley <lv@gentoo.org> emul-linux-x86-glibc-1.1.ebuild:
   fixed my "lib32 isnt a symlink" fix so that it actually works this time
