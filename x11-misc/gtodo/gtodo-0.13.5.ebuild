@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.13.5.ebuild,v 1.1 2003/11/18 02:32:39 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.13.5.ebuild,v 1.2 2003/12/07 00:22:26 pyrania Exp $
 
 inherit gnome2
 inherit debug flag-o-matic
@@ -14,7 +14,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Gtodo is a Gtk+-2.0 Todo list manager written for use with gnome 2."
 HOMEPAGE="http://gtodo.qballcow.nl/"
 SRC_URI="mirror://sourceforge/gtodo/${P}.tar.gz"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 

@@ -1,4 +1,4 @@
-MD5 bed7bdda997259ea2a0f92edbd892056 files/digest-gtodo-0.13.5 64
-MD5 5554f17504c79bb22bc8453503c1ff6b gtodo-0.13.5.ebuild 652
-MD5 16f75f92b3122bbdaf13519a5cd0bd8a ChangeLog 525
+MD5 8d47d8042508ca874686b7ac79ae5185 gtodo-0.13.5.ebuild 651
+MD5 20632c4e981f95d9995655dc473478c6 ChangeLog 614
 MD5 09ccef8f0c71ece39e0fd0f5c8265ea6 metadata.xml 367
+MD5 bed7bdda997259ea2a0f92edbd892056 files/digest-gtodo-0.13.5 64
