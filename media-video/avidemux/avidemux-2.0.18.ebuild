@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.1 2003/11/01 17:27:18 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.2 2003/11/01 17:32:17 pyrania Exp $
 
 IUSE="debug nls oggvorbis arts truetype alsa"
 filter-flags "-funroll-loops"
@@ -16,7 +16,7 @@ SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11
 	media-sound/mad
