@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.18 2003/10/21 01:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.19 2003/10/22 16:37:19 darkspecter Exp $
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
+  libart_lgpl-2.3.16.ebuild:
+  set ppc in keywords
 
   20 Oct 2003; Aron Griffis <agriffis@gentoo.org> libart_lgpl-2.3.16.ebuild:
   Stable on alpha

@@ -1,7 +1,11 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.45 2003/10/17 12:33:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.46 2003/10/22 16:42:43 darkspecter Exp $
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
+  gst-plugins-0.6.3.ebuild:
+  set ppc in keywords
 
   17 Oct 2003; Aron Griffis <agriffis@gentoo.org> gst-plugins-0.6.3.ebuild:
   Stable on alpha
