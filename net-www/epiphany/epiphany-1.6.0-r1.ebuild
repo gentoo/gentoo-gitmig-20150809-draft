@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.6.0.ebuild,v 1.2 2005/03/12 20:24:43 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.6.0-r1.ebuild,v 1.1 2005/03/12 20:24:43 joem Exp $
 
 inherit eutils gnome2
 
@@ -53,7 +53,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# Fix include paths for our mozilla
-	epatch ${FILESDIR}/${PN}-1.5.5-fix_includes.patch
+	epatch ${FILESDIR}/${P}-fix_includes.patch
+	epatch ${FILESDIR}/${P}-wallet_password.patch
+	epatch ${FILESDIR}/${P}-wallet_fix.patch
 
 }
 USE_DESTDIR="1"

@@ -1,0 +1,25 @@
+diff -ur epiphany-1.6.0/embed/mozilla/Makefile.in epiphany-1.6.0-patched/embed/mozilla/Makefile.in
+--- epiphany-1.6.0/embed/mozilla/Makefile.in
++++ epiphany-1.6.0-patched/embed/mozilla/Makefile.in
+@@ -343,6 +343,7 @@
+ 	docshell		\
+ 	dom			\
+ 	exthandler		\
++	find			\
+ 	helperAppDlg		\
+ 	gfx			\
+ 	history			\
+@@ -355,10 +356,12 @@
+ 	passwordmgr		\
+ 	pipboot			\
+ 	pipnss			\
++	pref			\
+ 	shistory		\
+ 	sidebar			\
+ 	uriloader		\
+ 	uconv			\
++	wallet			\
+ 	webbrowserpersist	\
+ 	webbrwsr		\
+ 	widget			\
+

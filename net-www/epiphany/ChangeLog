@@ -1,6 +1,16 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.89 2005/03/09 05:10:24 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.90 2005/03/12 20:24:43 joem Exp $
+
+*epiphany-1.6.0-r1 (12 Mar 2005)
+
+  12 Mar 2005; Joe McCann <joem@gentoo.org>
+  +files/epiphany-1.6.0-fix_includes.patch,
+  +files/epiphany-1.6.0-wallet_fix.patch,
+  +files/epiphany-1.6.0-wallet_password.patch, +epiphany-1.6.0-r1.ebuild,
+  epiphany-1.6.0.ebuild:
+  Add patch from cvs to fix personaldata/passwords.Also add patch from mailing
+  list to fix problem with mozilla-1.7 wallet code. Remove bogus deps as well
 
 *epiphany-1.6.0 (08 Mar 2005)
 
