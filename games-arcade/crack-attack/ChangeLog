@@ -1,6 +1,15 @@
 # ChangeLog for games-arcade/crack-attack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.11 2004/11/12 19:17:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.12 2004/12/03 02:46:49 vapier Exp $
+
+*crack-attack-1.1.11-r1 (02 Dec 2004)
+
+  02 Dec 2004; Mike Frysinger <vapier@gentoo.org> -files/1.1.10-GL.patch,
+  -files/1.1.10-gcc34.patch, -files/1.1.10-i865g.patch,
+  +files/1.1.11-multi-compat.patch, -crack-attack-1.1.10.ebuild,
+  +crack-attack-1.1.11-r1.ebuild, -crack-attack-1.1.11.ebuild:
+  Version bump to add multiplayer-compat patch from upstream #73102 by Keith
+  Constable.
 
   12 Nov 2004; Simon Stelling <blubb@gentoo.org> crack-attack-1.1.11.ebuild:
   added ~amd64

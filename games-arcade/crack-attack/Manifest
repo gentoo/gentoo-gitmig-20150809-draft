@@ -1,9 +1,15 @@
-MD5 8a3cd304afc3ed9ef9c58193d27037f8 ChangeLog 2146
-MD5 7a0593bbdbf62897c84b4d686dbb3888 crack-attack-1.1.10.ebuild 1159
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 21147ba99441febc1aaed91b45dfd226 ChangeLog 2535
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a5d8570943c01733cdc7e643274b32d5 crack-attack-1.1.11.ebuild 921
-MD5 6a872f69c6993ed8df358581f873b6b2 files/1.1.10-GL.patch 922
-MD5 63bc39c1a6f83860c8091e344e4613fa files/1.1.10-gcc34.patch 4824
-MD5 0f64d6304af0ffe9d461d703d901cee8 files/1.1.10-i865g.patch 543
-MD5 131162585001d8d65c1b8750ca2aa4a7 files/digest-crack-attack-1.1.10 71
-MD5 44a8bc17b38cb5b705e71a989621527c files/digest-crack-attack-1.1.11 71
+MD5 c98f8738e66d9d8a1b57770d28cbce5c crack-attack-1.1.11-r1.ebuild 936
+MD5 493ae0894344cf77ac558084c69df1c4 files/1.1.11-multi-compat.patch 417
+MD5 44a8bc17b38cb5b705e71a989621527c files/digest-crack-attack-1.1.11-r1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBr9OproRuSHgZdywRAr3JAJ9QPsgmicS3aDDRuG0rKvoUG8vcVQCfVC3N
+cpSnOro5ItLZhnqHD9Ipr2g=
+=N5Ku
+-----END PGP SIGNATURE-----
