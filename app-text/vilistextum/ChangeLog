@@ -1,6 +1,11 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.14 2005/01/01 19:31:56 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.15 2005/01/02 19:18:43 ka0ttic Exp $
+
+  02 Jan 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/vilistextum-2.6.7-use-glibc-iconv.diff, vilistextum-2.6.7.ebuild:
+  Updated glibc iconv patch from upstream maintainer to allow
+  --disable-multibyte. Also apply that patch regardless of USE flags.
 
 *vilistextum-2.6.7 (01 Jan 2005)
 

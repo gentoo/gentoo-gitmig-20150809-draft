@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.7.ebuild,v 1.1 2005/01/01 19:31:56 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.7.ebuild,v 1.2 2005/01/02 19:18:43 ka0ttic Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
-	use unicode && epatch ${FILESDIR}/${P}-use-glibc-iconv.diff
+	epatch ${FILESDIR}/${P}-use-glibc-iconv.diff
 }
 
 src_compile() {
