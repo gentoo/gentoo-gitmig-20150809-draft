@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.33 2005/01/26 10:35:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.34 2005/02/25 13:14:33 ka0ttic Exp $
+
+  25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> mrtg-2.11.1.ebuild:
+  Marked stable on x86.
 
   26 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> +files/mrtg.confd,
   files/mrtg.rc, mrtg-2.10.14.ebuild, mrtg-2.10.15.ebuild,
