@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc-mips64
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.9 2004/11/11 09:02:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.10 2004/12/09 09:09:31 kumba Exp $
+
+  09 Dec 2004; Joshua Kinard <kumba@gentoo.org>
+  -files/gcc-3.3.1-gentoo-branding.patch,
+  -files/gcc-3.3.2-gentoo-branding.patch,
+  -files/gcc-3.3.3-gentoo-branding.patch, -gcc-mips64-3.3.1.ebuild,
+  -gcc-mips64-3.3.2.ebuild, -gcc-mips64-3.3.3.ebuild, gcc-mips64-3.3.4.ebuild,
+  gcc-mips64-3.4.3.ebuild:
+  Fix message in postinst to give correct commands for 2.4.x and 2.6.x builds,
+  and remove old versions.
 
 *gcc-mips64-3.4.3 (11 Nov 2004)
 
