@@ -104,3 +104,4 @@ move app-sci/lin-seti sci-astronomy/lin-seti
 move app-sci/maestro sci-astronomy/maestro
 move app-sci/maestro-data sci-astronomy/maestro-data
 move app-sci/orsa sci-astronomy/orsa
+move app-sci/predict sci-astronomy/predict
