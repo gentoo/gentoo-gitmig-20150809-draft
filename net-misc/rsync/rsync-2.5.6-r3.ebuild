@@ -1,32 +1,32 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r1.ebuild,v 1.7 2003/07/16 14:29:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r3.ebuild,v 1.1 2003/08/26 03:45:56 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="File transfer program to keep remote files into sync"
 HOMEPAGE="http://rsync.samba.org/"
-SRC_URI="http://rsync.samba.org/ftp/rsync/${P}.tar.gz"
+SRC_URI="http://rsync.samba.org/ftp/rsync/${P}.tar.gz
+	http://www.imada.sdu.dk/~bardur/personal/patches/${PN}-proxy-auth/${P}-proxy-auth-1.patch"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 hppa arm sparc ~mips ppc"
 SLOT="0"
+KEYWORDS="amd64 x86 ppc hppa arm sparc mips alpha"
 
 DEPEND="virtual/glibc
+	>=sys-apps/sed-4
 	!build? ( >=dev-libs/popt-1.5 )"
 
 src_unpack() {
 	unpack ${A}
+	epatch ${DISTDIR}/${P}-proxy-auth-1.patch
 	cd ${S}
 
 	# change confdir to /etc/rsync rather than just /etc (the --sysconfdir
 	# configure option doesn't work
-	mv rsync.h rsync.h.orig
-	sed <rsync.h.orig >rsync.h \
-		-e 's|/etc/rsyncd.conf|/etc/rsync/rsyncd.conf|g'
-
+	sed	-i 's|/etc/rsyncd.conf|/etc/rsync/rsyncd.conf|g' rsync.h
 	# yes, updating the man page is very important.
-	mv rsyncd.conf.5 rsyncd.conf.5.orig
-	sed <rsyncd.conf.5.orig >rsyncd.conf.5 \
-		-e 's|/etc/rsyncd|/etc/rsync/rsyncd|g'
+	sed -i 's|/etc/rsyncd|/etc/rsync/rsyncd|g' rsyncd.conf.5
 } 
 
 src_compile() {
@@ -46,11 +46,21 @@ src_install() {
 	einstall || die
 	insinto /etc/conf.d && newins ${FILESDIR}/rsyncd.conf.d rsyncd
 	exeinto /etc/init.d && newexe ${FILESDIR}/rsyncd.init.d rsyncd
-	keepdir /etc/rsync
 	if [ -z "`use build`" ] ; then
 		dodir /etc/rsync
 		dodoc COPYING NEWS OLDNEWS README TODO tech_report.tex
+		if [ ! -e /etc/rsync/rsyncd.conf ] ; then
+			insinto /etc/rsync
+			doins ${FILESDIR}/rsyncd.conf
+		fi
 	else
 		rm -rf ${D}/usr/share
 	fi
+}
+
+pkg_postinst() {
+	einfo 'This patch enables usage of user:pass@proxy.foo:port'
+	einfo 'in the RSYNC_PROXY environment variable to support'
+	einfo 'the "Basic" proxy authentication scheme if you are'
+	einfo 'behind a password protected HTTP proxy.'
 }

@@ -1,11 +1,16 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.30 2003/07/23 16:59:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.31 2003/08/26 03:45:56 vapier Exp $
+
+*rsync-2.5.6-r3 (25 Aug 2003)
+
+  25 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add default rsyncd.conf file so that the init.d script will find pid file #27277.
+
+*rsync-2.5.6-r2 (23 May 2003)
 
   23 Jul 2003; Will Woods <wwoods@gentoo.org> rsync-2.5.6-r2.ebuild:
   Marked stable for alpha
-
-*rsync-2.5.6-r2 (23 May 2003)
 
   23 Jul 2003; Guy Martin <gmsoft@gentoo.org> rsync-2.5.6-r2.ebuild :
   Marked stable on hppa.
