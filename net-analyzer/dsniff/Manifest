@@ -1,5 +1,5 @@
-MD5 bf7d1535b7f6205170dee34e43c35583 dsniff-2.3-r2.ebuild 2241
-MD5 ebd72a41a11a363cceb47d948586de7c ChangeLog 1137
+MD5 fe7ad7c2227ec39a8111e3d441b1301e dsniff-2.3-r2.ebuild 2249
+MD5 c5da9fbfe934e88a71451b04054dd01d ChangeLog 1265
 MD5 bb880c49bdffe94226562c9f6b06e0e7 metadata.xml 719
 MD5 5c5bea8cc4846925ba48ba5c9ea83341 files/digest-dsniff-2.3-r2 123
 MD5 9206faea6a9be25f7d1aa0ac0a2ff6e3 files/2.3-libnet-1.0.patch 6110
