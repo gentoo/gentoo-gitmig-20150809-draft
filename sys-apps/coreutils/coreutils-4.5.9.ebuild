@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.9.ebuild,v 1.1 2003/03/05 21:39:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.9.ebuild,v 1.2 2003/03/11 04:43:07 azarah Exp $
 
 inherit eutils
 
@@ -51,9 +51,22 @@ src_compile() {
 }
 
 src_install() {
-	einstall \
-		bindir=${D}/bin || die
+# Do not install all the manpages, etc
+#	einstall \
+#		bindir=${D}/bin || die
+	make DESTDIR=${D} install || die
 	
+    # hostname comes from net-base
+    # hostname does not work with the -f switch, which breaks gnome2
+    #   amongst other things
+    rm -f ${D}/usr/bin/hostname
+
+    # /bin/su comes from sys-apps/shadow
+    rm -f ${D}/bin/su ${D}/usr/share/man/man1/su*
+
+    # /usr/bin/uptime comes from the sys-apps/procps packaga
+    rm -f ${D}/usr/bin/uptime ${D}/usr/share/man/man1/uptime*
+
 	cd ${D}
 	dodir /usr/bin
 	rm -rf usr/lib
@@ -67,17 +80,6 @@ src_install() {
 	else
 		rm -rf ${D}/usr/share
 	fi
-
-	# hostname comes from net-base
-	# hostname does not work with the -f switch, which breaks gnome2
-	# 	amongst other things
-	rm -f ${D}/usr/bin/hostname
-
-	# /bin/su comes from sys-apps/shadow
-	rm -f ${D}/bin/su ${D}/usr/share/man/man1/su
-
-	# /usr/bin/uptime comes from the sys-apps/procps packaga
-	rm -f ${D}/usr/bin/uptime ${D}/usr/share/man/man1/uptime*
 }
 
 pkg_postinst() {
