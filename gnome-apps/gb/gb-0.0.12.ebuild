@@ -9,6 +9,8 @@ DESCRIPTION="GNOME Basic"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
+DEPEND=">=gnome-base/gnome-libs-1.2.4"
+
 src_unpack() {
   unpack ${A}
 }
