@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r1.ebuild,v 1.1 2002/12/31 20:00:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r1.ebuild,v 1.2 2002/12/31 20:31:49 agriffis Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -21,7 +21,7 @@ src_unpack() {
 		die "Please download ${At} from ${HOMEPAGE}"
 	fi
 	rpm2targz ${DISTDIR}/${At}
-	tar zxf cpml_ev5-5.2.0-1.alpha.tar.gz 
+	tar zxf cpml_${EV}-5.2.0-1.alpha.tar.gz 
 	mv usr/doc/cpml-5.2.0/* usr
 }
 
