@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $header$
+
+*autocutsel-0.6.2 (09 Jul 2002)
+
+  09 Jul 2002; Phil Bordelon <sunflare@gentoo.org> autocutsel-0.6.2.ebuild :
+
+  New package.  The original ebuild was by M. J. Gordon
+  <mark.gt@ruddygore.net>--see Bug #3740.  Cleaned up,
+  lintool'd and repoman'd.
