@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r2.ebuild,v 1.6 2002/03/18 20:18:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r2.ebuild,v 1.7 2002/04/13 11:06:40 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -129,10 +129,19 @@ src_install() {
 
 pkg_postinst()
 {
-	if [ ! -L ${ROOT}etc/localtime ]
+	# Correct me if I am wrong here, but my /etc/localtime is a file
+	# created by zic ....
+	# I am thinking that it should only be recreated if no /etc/localtime
+	# exists, or if it is an invalid symlink.
+	#
+	# For invalid symlink:
+	#   -f && -e  will fail
+	#   -L will succeed
+	#
+	if [ ! -e ${ROOT}/etc/localtime ]
 	then
 		echo "Please remember to set your timezone using the zic command."
 		rm -f ${ROOT}/etc/localtime
-		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime	
-	fi	
+		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime
+	fi
 }

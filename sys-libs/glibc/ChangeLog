@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.4 2002/04/03 21:20:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.5 2002/04/13 11:06:40 azarah Exp $
+
+  13 Apr 2002; M.Schlemmer <azarah@gentoo.org> glibc-2.2.5-r2.ebuild :
+
+  Try to fix the pkg_postinst() and /etc/localtime issue sanely.  It just
+  newking my /etc/localtime with a symlink was starting to get irritating.
 
 *glibc-2.2.5-r3 (03 Apr 2002)
 
