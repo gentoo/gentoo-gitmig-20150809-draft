@@ -4,6 +4,7 @@ MD5 7c31ac87bdb27f996db6f0ed40c2ebd9 libzvt-2.0.0.ebuild 1125
 MD5 38b9c6e1ff2e3625828159fb7cd13a60 libzvt-2.0.1-r1.ebuild 667
 MD5 6549c13894d0a0bc219792f78b13266c libzvt-2.0.1-r2.ebuild 810
 MD5 4aee88ffb079ca7f54eb197a1f8b2d44 libzvt-2.0.1.ebuild 1160
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 cceb6479fbaceb1e7c8698fe547a98c3 files/digest-libzvt-2.0.0 65
 MD5 cceb6479fbaceb1e7c8698fe547a98c3 files/digest-libzvt-2.0.0-r1 65
 MD5 c447acdeafe5afe1c8c51337db30ddf9 files/digest-libzvt-2.0.1 65
