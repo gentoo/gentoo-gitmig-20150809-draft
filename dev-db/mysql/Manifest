@@ -21,8 +21,8 @@ MD5 a089b3a2de50fb17b2932f02d3a5a684 mysql-4.0.15.ebuild 7561
 MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
-MD5 085dcaeb7d0d1f0e610e401fce6ed593 files/mysql-4.0.rc6 939
-MD5 1d33254617bd61fd5de350a286cf4fdc files/mysql-4.0.15.rc6 952
+MD5 3e399acddc48f209b53e260eec64938c files/mysql-4.0.rc6 933
+MD5 a0c6a17e87c4bd9353f68851ec473ed9 files/mysql-4.0.15.rc6 946
 MD5 015a823e06d7181373b0601e4a17c284 files/digest-mysql-3.23.52-r1 67
 MD5 dcd899fe185459da4cb9e71c75c3bda3 files/digest-mysql-3.23.57-r1 67
 MD5 8eaeb1372c41d2fef1622dd707a7a9d0 files/mysql-3.23-nisam.h.diff 452
@@ -40,7 +40,7 @@ MD5 577f09c36de46438158d16c2c855ec13 files/digest-mysql-4.0.20 66
 MD5 ee578e3021841ef9dba4175403564136 files/mysql-4.0-db-3.2.1.diff 1047
 MD5 f2905bbcc3f148a2ad689792917bd78d files/mysql-4.0.16-install-db-sh.diff 1429
 MD5 ff80a5d8d87212046e89f2f8ae779af4 files/mysql-4.0-nisam.h.diff 452
-MD5 8874c2bd25093fe5b8f57ce014e4a3be files/mysql.init 892
+MD5 73be6460f548f6f73c70246a4cfd13a0 files/mysql.init 886
 MD5 d20c23adca5b8731ebfab4d1b5771dab files/mysql-4.0.18-mysqld-safe-sh.diff 1307
 MD5 fc80f877fa97f0f3a52ee684ce7f54b2 files/mysql-4.0.16-mysqld-safe-sh.diff 1562
 MD5 f635289f8422fdf26ba3c3dbdf99c4e2 files/mysql-4.0.14-mysqld-safe-sh.diff 1503
