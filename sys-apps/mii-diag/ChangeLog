@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/mii-diag
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/ChangeLog,v 1.1 2002/11/23 13:31:17 agriffis Exp $
+
+*mii-diag-2.07 (23 Nov 2002)
+
+  23 Nov 2002; Aron Griffis <agriffis@gentoo.org> :
+
+  Initial import.
