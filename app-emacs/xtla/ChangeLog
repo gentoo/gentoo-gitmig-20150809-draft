@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/xtla
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/ChangeLog,v 1.1 2004/08/27 06:51:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/ChangeLog,v 1.2 2004/09/03 17:27:14 dholm Exp $
+
+  03 Sep 2004; David Holm <dholm@gentoo.org> xtla-0.1_p82.ebuild:
+  Added to ~ppc.
 
 *xtla-0.1_p82 (27 Aug 2004)
 
