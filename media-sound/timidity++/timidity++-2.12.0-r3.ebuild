@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.7 2003/12/26 23:38:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.8 2004/02/01 13:32:34 ferringb Exp $
 
 MY_P=TiMidity++-${PV}-pre1
 S=${WORKDIR}/${MY_P}
@@ -25,6 +25,12 @@ DEPEND=">=sys-libs/ncurses-5.0
 	tcltk? ( >=dev-lang/tk-8.1 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	sys-devel/autoconf"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-alsalib-fix.patch || die "Alsalib-1.0 patch failed"
+}
 
 src_compile() {
 	local myconf

@@ -1,0 +1,49 @@
+diff -urN interface/alsaseq_c.c interface/alsaseq_c.c
+--- interface/alsaseq_c.c	2002-01-16 04:21:49.000000000 -0600
++++ interface/alsaseq_c.c	2004-01-21 01:46:55.414954936 -0600
+@@ -45,6 +45,7 @@
+ #endif
+ #include <signal.h>
+ 
++#define ALSA_PCM_OLD_HW_PARAMS_API
+ #include <sys/asoundlib.h>
+ 
+ #include "timidity.h"
+@@ -76,7 +77,7 @@
+ 
+ static struct seq_context alsactx;
+ 
+-#if SND_LIB_MINOR >= 6
++#if SND_LIB_MINOR >= 6 || SND_LIB_MAJOR==1
+ /* !! this is a dirty hack.  not sure to work in future !! */
+ static int snd_seq_file_descriptor(snd_seq_t *handle)
+ {
+@@ -536,7 +537,7 @@
+ 			seq_play_event(&ev);
+ 		break;
+ 
+-#if SND_LIB_MINOR >= 6
++#if SND_LIB_MINOR >= 6 || SND_LIB_MAJOR==1
+ #define snd_seq_addr_equal(a,b)	((a)->client == (b)->client && (a)->port == (b)->port)
+ 	case SND_SEQ_EVENT_PORT_SUBSCRIBED:
+ 		if (snd_seq_addr_equal(&aevp->data.connect.dest, &aevp->dest)) {
+diff -urN timidity/alsa_a.c timidity/alsa_a.c
+--- timidity/alsa_a.c	2002-01-16 04:15:20.000000000 -0600
++++ timidity/alsa_a.c	2004-01-21 00:39:51.324709640 -0600
+@@ -41,10 +41,15 @@
+ #endif
+ 
+ /*ALSA header file*/
++#define ALSA_PCM_OLD_HW_PARAMS_API
+ #include <sys/asoundlib.h>
+ 
+ #if defined(SND_LIB_MINOR)
+-#define ALSA_LIB  SND_LIB_MINOR
++# if SND_LIB_MAJOR==1
++# define ALSA_LIB 10
++# else
++# define ALSA_LIB  SND_LIB_MINOR
++# endif
+ #else
+ #define ALSA_LIB  3
+ #endif
