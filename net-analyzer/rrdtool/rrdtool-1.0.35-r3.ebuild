@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.35-r3.ebuild,v 1.3 2002/07/27 21:30:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.35-r3.ebuild,v 1.4 2002/08/05 16:27:00 seemant Exp $
 
 inherit perl-module
 
@@ -26,7 +26,7 @@ pkg_setup() {
 		TCLVER=`awk -F\' '/TCL_VERSION/ {print $2}' /usr/lib/tclConfig.sh`
 
 	use perl && ( \
-		perl_pkg_setup
+		perl-post_pkg_setup
 	)
 }
 
@@ -37,9 +37,7 @@ src_compile() {
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
 		|| myconf="${myconf} --without-tcllib"
 	
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
 		--datadir=/usr/share \
 		--enable-shared \
 		--with-perl-options='INSTALLMAN1DIR=/usr/share/man/man1 INSTALLMAN3DIR=/usr/share/man/man3' \
@@ -93,22 +91,22 @@ src_install () {
 
 pkg_preinst() {
 
-	use perl && perl_pkg_preinst
+	use perl && perl-post_pkg_preinst
 }
 
 pkg_postinst() {
 	
-	use perl && perl_pkg_postinst
+	use perl && perl-post_pkg_postinst
 }
 
 
 pkg_prerm() {
 	
-	use perl && perl_pkg_prerm
+	use perl && perl-post_pkg_prerm
 }
 
 
 pkg_postrm() {
 
-	use perl && perl_pkg_postrm
+	use perl && perl-post_pkg_postrm
 }
