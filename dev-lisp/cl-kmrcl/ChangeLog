@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-kmrcl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/ChangeLog,v 1.12 2004/12/11 18:02:17 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/ChangeLog,v 1.13 2005/03/18 07:39:12 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-kmrcl-1.78.ebuild:
+  Keywording for ~amd64
 
 *cl-kmrcl-1.78 (11 Dec 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-net-telent-date/cl-net-telent-date-0.4.1.ebuild,v 1.2 2004/06/24 23:47:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-net-telent-date/cl-net-telent-date-0.4.1.ebuild,v 1.3 2005/03/18 07:33:18 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-net-telent-date/${PN}_${PV}
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-rt
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rt/ChangeLog,v 1.8 2004/12/11 18:01:48 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rt/ChangeLog,v 1.9 2005/03/18 07:38:00 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-rt-20040621.ebuild:
+  Keywording for ~amd64
 
   11 Dec 2004; Matthew Kennedy <mkennedy@gentoo.org> cl-rt-20040621.ebuild:
   Marking x86 stable

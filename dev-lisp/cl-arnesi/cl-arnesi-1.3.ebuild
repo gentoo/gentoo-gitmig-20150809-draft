@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/cl-arnesi-1.3.ebuild,v 1.1 2005/02/24 07:33:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/cl-arnesi-1.3.ebuild,v 1.2 2005/03/18 07:34:21 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://common-lisp.net/project/bese/arnesi.html"
 SRC_URI="mirror://gentoo/arnesi--dev--${MY_PV}--base-0.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-bayescl
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-bayescl/ChangeLog,v 1.1 2004/11/21 20:28:07 mkennedy Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-bayescl/ChangeLog,v 1.2 2005/03/18 07:40:37 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-bayescl-20041121.ebuild:
+  Keywording for ~amd64
 
 *cl-bayescl-20041121 (21 Nov 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-ppcre
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.34 2005/03/10 00:48:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.35 2005/03/18 07:25:19 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-ppcre-1.2.5.ebuild:
+  Keywording for ~amd64
 
 *cl-ppcre-1.2.5 (09 Mar 2005)
 

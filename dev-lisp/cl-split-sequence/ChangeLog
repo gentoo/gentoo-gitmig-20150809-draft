@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-split-sequence
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-split-sequence/ChangeLog,v 1.6 2005/02/03 05:43:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-split-sequence/ChangeLog,v 1.7 2005/03/18 07:32:29 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-split-sequence-20011114.1-r1.ebuild:
+  Keywording for ~amd64
 
   02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
   cl-split-sequence-20011114.1-r1.ebuild,
