@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/tap-plugins
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.10 2004/07/04 21:37:08 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.11 2004/07/26 07:41:59 eradicator Exp $
+
+  26 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  tap-plugins-0.6.0.ebuild:
+  Stable amd64, x86.
 
 *tap-plugins-0.6.0 (04 Jul 2004)
 
