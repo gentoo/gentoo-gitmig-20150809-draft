@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.2 2002/09/22 01:17:06 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.3 2002/09/22 01:50:34 lostlogic Exp $
 ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 # This eclass contains the common functions to be used by all lostlogic
@@ -33,7 +33,7 @@ fi
 kernel_exclude() {
 	for mask in ${KERNEL_EXCLUDE}; do
 		for patch in *${mask}*; do
-			echo "Excluding: ${patch}"
+			einfo "Excluding: ${patch}"
 			rm ${patch}
 		done
 	done
@@ -44,6 +44,8 @@ kernel_src_unpack() {
 	kernel_exclude
 
 	./addpatches . ${WORKDIR}/linux-${KV} || die "Addpatches failed, bad KERNEL_ExCLUDE?"
+
+	find . -iname "*~" | xargs rm
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
