@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.14.ebuild,v 1.2 2002/07/10 13:45:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.14.ebuild,v 1.3 2002/07/10 16:30:43 aliz Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -16,6 +16,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2|LGPL-2"
 KEYWORDS="x86"
+HOMEPAGE="http://sources.redhat.com/binutils/"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
