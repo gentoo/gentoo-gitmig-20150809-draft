@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r1.ebuild,v 1.1 2001/09/06 21:24:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r1.ebuild,v 1.2 2001/09/08 19:02:56 drobbins Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
@@ -45,7 +45,6 @@ src_install() {
 	make PREFIX=${D} install || die
 	cd ${S}/msgs
 	./inst.sh ?? ${D}/usr/share/locale/%L/%N
-	return	
 	chmod 2555 ${D}/usr/bin/man
 	chown root.man ${D}/usr/bin/man
     insinto /etc
