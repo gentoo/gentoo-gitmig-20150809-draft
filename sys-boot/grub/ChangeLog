@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.34 2005/03/11 05:14:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.35 2005/03/15 23:39:52 eradicator Exp $
+
+  15 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  grub-0.94-r1.ebuild, grub-0.94-r2.ebuild, grub-0.95.20040823.ebuild,
+  grub-0.96.ebuild, grub-0.96-r1.ebuild:
+  Putting ABI stuff inside an 'if use amd64' block.
 
 *grub-0.96-r1 (11 Mar 2005)
 

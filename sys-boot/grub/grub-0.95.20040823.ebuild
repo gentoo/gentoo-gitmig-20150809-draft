@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.14 2005/03/11 04:29:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.15 2005/03/15 23:39:52 eradicator Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
 
@@ -21,10 +21,11 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/bootloader"
 
 pkg_setup() {
-	has_m32 || die "your compiler seems to be unable to compile 32bit code. if you are on amd64, make sure you compile gcc with USE=multilib FEATURES=-sandbox"
-
-	ABI_ALLOW="x86"
-	ABI="x86"
+	if use amd64; then
+		has_m32 || die "your compiler seems to be unable to compile 32bit code. if you are on amd64, make sure you compile gcc with USE=multilib FEATURES=-sandbox"
+		ABI_ALLOW="x86"
+		ABI="x86"
+	fi
 }
 
 src_unpack() {
