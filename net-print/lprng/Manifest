@@ -2,7 +2,7 @@ MD5 ba32fc67123b1a7e50341f5fc4d25a37 ChangeLog 1519
 MD5 f570f936ca9b4b32412aca25443d749d lprng-3.8.10.ebuild 1512
 MD5 e9351f6e05b429a552800d6bff228169 lprng-3.8.12-r1.ebuild 1624
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 870858bf76388d6e7c88a9fb234d86b0 lprng-3.8.21.ebuild 1729
+MD5 a6af1b5ae915f9c77dbbe37e0d2624eb lprng-3.8.21.ebuild 1742
 MD5 5b7344445f7af9c2f85ee41d2c43cef7 files/digest-lprng-3.8.10 62
 MD5 9df0d16a9dbba59d1fa1fb3210b0fdb4 files/digest-lprng-3.8.12-r1 62
 MD5 c49861591859d2599d071d4860179f8b files/lpdomatic 19929
