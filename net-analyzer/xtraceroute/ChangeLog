@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/xtraceroute
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.13 2004/07/21 20:29:11 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.14 2004/07/27 22:22:46 malc Exp $
+
+  27 Jul 2004; <malc@gentoo.org> xtraceroute-0.9.1.ebuild:
+  Add ~amd64, closes bug #57735
 
   21 Jul 2004; Eldad Zack <eldad@gentoo.org> xtraceroute-0.9.1.ebuild:
   Added information about recurring problem with gtkglarea-1.2.3-r1 needing to
