@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.42 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.43 2004/04/27 20:11:43 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> libwnck-2.6.0.1.ebuild:
+  Add inherit eutils
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> libwnck-2.4.0.1-r1.ebuild:
   Inherit eutils.
