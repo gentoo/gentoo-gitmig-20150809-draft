@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netdate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netdate/ChangeLog,v 1.5 2005/01/07 03:57:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netdate/ChangeLog,v 1.6 2005/02/12 11:41:12 jhhudso Exp $
+
+  12 Feb 2005; Jared Hudson <jhhudso@gentoo.org> netdate-1.2.ebuild:
+  Marked netdate-1.2 as stable for all architectures.
 
   06 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> netdate-1.2.ebuild:
   Cleanup the ebuild, and add ~mips because I'm using this on the XXS1500.
