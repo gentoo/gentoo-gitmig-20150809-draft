@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.27 2003/03/28 16:45:30 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.28 2003/06/11 23:01:33 seemant Exp $
+
+*ncurses-5.3-r2 (11 Jun 2003)
+
+  11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> ncurses-5.2-r7.ebuild,
+  ncurses-5.2.20020511-r3.ebuild, ncurses-5.3-r2.ebuild,
+  files/ncurses-5.3-xterm.patch:
+  bartron <bartron@gmx.net> submitted a patch which allows home and end keys to
+  work in things like nano. Thanks to him in bug #21356
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> ncurses-5.3-r1.ebuild :
   Marked ppc stable
