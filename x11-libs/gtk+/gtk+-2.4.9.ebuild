@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.9.ebuild,v 1.2 2004/08/29 13:00:37 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.9.ebuild,v 1.3 2004/09/19 21:48:03 foser Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE="doc tiff jpeg"
 
 RDEPEND="virtual/x11
@@ -33,6 +33,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	# security fixes (#64230)
+	epatch ${FILESDIR}/${P}-xpm_ico_secure.patch
+
 	# Turn of --export-symbols-regex for now, since it removes
 	# the wrong symbols
 	epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
