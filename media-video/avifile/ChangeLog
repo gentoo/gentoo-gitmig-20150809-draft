@@ -1,6 +1,25 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.95 2005/02/14 17:24:21 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.96 2005/03/22 07:01:25 chriswhite Exp $
+
+*avifile-0.7.43.20050224 (22 Mar 2005)
+
+  22 Mar 2005; Chris White <chriswhite@gentoo.org> +files/avifile-mad.patch,
+  +avifile-0.7.43.20050224.ebuild:
+  Changed the following:
+  
+  1) changed SRC_URI since upstream extension is now .tar.bz2 instead of
+  .tar.gz 2) added alsa dep virutal/alsa (helps to have alsa if you're going
+  to use it) 3) removed useless audiofile and ffmpeg depends 4) made qt
+  sed-ing look a little bit cleaner and more explanitory 5) removed throw and
+  gcc2 patches as they no longer apply 6) changed sparc patch to a sed based
+  patch 7) removed avifile.pc.in sed-ing as it no longer applies 8) made the
+  AM_CFLAGS apply to x86 as it should have been (conflicts with sparc patch)
+  9) changed `use_enable`'s to $(use_enable)'s 10) rid of pointless dodir in
+  src_install 10) added a fpm patch to fix FPM_* not being set for use in
+  libmad plugin
+  
+  And that's all.
 
   14 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   avifile-0.7.41.20041001-r1.ebuild:

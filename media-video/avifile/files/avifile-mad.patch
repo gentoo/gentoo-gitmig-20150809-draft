@@ -1,0 +1,80 @@
+--- avifile-0.7-0.7.43-old/configure	2005-02-24 23:25:46.000000000 +0900
++++ avifile-0.7-0.7.43/configure	2005-03-22 15:18:44.000000000 +0900
+@@ -3769,7 +3769,7 @@
+ case "$target" in
+   i?86*)
+     test x$ac_cv_c_compiler_gnu = xyes && DEFAULT_FLAGS="-mcpu=$DEFAULT_FLAGS -march=$DEFAULT_FLAGS -ffast-math -fomit-frame-pointer"
+-
++MAD_FLAGS="-DFPM_INTEL"
+ cat >>confdefs.h <<\_ACEOF
+ #define ARCH_X86 1
+ _ACEOF
+@@ -3781,21 +3781,21 @@
+ 
+     ;;
+   ia64*)
+-
++MAD_FLAGS="-DFPM_64BIT"
+ cat >>confdefs.h <<\_ACEOF
+ #define ARCH_IA64 1
+ _ACEOF
+ 
+     ;;
+   x86_64*)
+-
++MAD_FLAGS="-DFPM_64BIT"
+ cat >>confdefs.h <<\_ACEOF
+ #define ARCH_X86_64 1
+ _ACEOF
+ 
+     ;;
+   alpha*)
+-
++MAD_FLAGS="-DFPM_DEFAULT"
+ cat >>confdefs.h <<\_ACEOF
+ #define ARCH_ALPHA 1
+ _ACEOF
+@@ -3803,7 +3803,7 @@
+     enable_alphaopt=yes
+     ;;
+   arm*)
+-
++MAD_FLAGS="-DFPM_ARM"
+ cat >>confdefs.h <<\_ACEOF
+ #define ARCH_ARM 1
+ _ACEOF
+@@ -3811,14 +3811,14 @@
+     enable_armopt=yes
+     ;;
+   sparc*)
+-
++MAD_FLAGS="-DFPM_SPARC"
+ cat >>confdefs.h <<\_ACEOF
+ #define ARCH_SPARC 1
+ _ACEOF
+ 
+     ;;
+   mips*)
+-
++MAD_FLAGS="-DFPM_MIPS"
+ cat >>confdefs.h <<\_ACEOF
+ #define ARCH_MIPS 1
+ _ACEOF
+@@ -3826,7 +3826,7 @@
+     enable_mipsopt=yes
+     ;;
+   ppc*|powerpc*)
+-
++MAD_FLAGS="-DFPM_PPC"
+ cat >>confdefs.h <<\_ACEOF
+ #define ARCH_POWERPC 1
+ _ACEOF
+@@ -3836,7 +3836,7 @@
+ esac
+ 
+ 
+-DEFAULT_DEFINES="-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 $PTHREAD_CFLAGS"
++DEFAULT_DEFINES="-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 $PTHREAD_CFLAGS $MAD_FLAGS"
+ 
+ 
+     echo "$as_me:$LINENO: checking if you need GNU extensions" >&5
