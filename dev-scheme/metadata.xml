@@ -6,8 +6,12 @@
 		Scheme programming language.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-scheme enthält Bibliotheken und Werkzeuge für die
+		Die Kategorie dev-scheme enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die
 		Programmiersprache Scheme.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-scheme contiene librerías y utilidades referentes al
+		lenguaje de programación Scheme.
 	</longdescription>
 </catmetadata>
 
