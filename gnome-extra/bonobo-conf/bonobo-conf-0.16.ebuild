@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/bonobo-conf-0.16.ebuild,v 1.9 2004/06/24 22:02:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/bonobo-conf-0.16.ebuild,v 1.10 2004/07/14 15:22:18 agriffis Exp $
 
 IUSE="nls"
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org libtool
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Bonobo Configuration System"
 HOMEPAGE="http://www.gnome.org/"
 
@@ -48,4 +47,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog README NEWS TODO
 }
-
