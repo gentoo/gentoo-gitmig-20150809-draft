@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.15 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.16 2003/05/25 15:26:46 mholzer Exp $
 
 inherit eutils
 
@@ -8,8 +8,8 @@ IUSE="nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various useful Linux utilities"
-SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz
-	http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${P}.patch.gz"
+SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
+	mirror://kernel/linux/kernel/people/hvr/util-linux-patch-int/${P}.patch.gz"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 KEYWORDS="x86 ppc sparc mips"
 LICENSE="GPL-2"

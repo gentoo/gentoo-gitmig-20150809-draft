@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r3.ebuild,v 1.4 2003/05/25 07:28:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r3.ebuild,v 1.5 2003/05/25 15:26:46 mholzer Exp $
 
 IUSE="crypt nls selinux static pam"
 
@@ -11,7 +11,7 @@ filter-flags -fPIC
 S=${WORKDIR}/${P}
 CRYPT_PATCH_P="${P}-crypt-gentoo"
 DESCRIPTION="Various useful Linux utilities"
-SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.bz2
+SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.bz2
 	crypt? ( mirror://gentoo/${CRYPT_PATCH_P}.patch.bz2 )"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
