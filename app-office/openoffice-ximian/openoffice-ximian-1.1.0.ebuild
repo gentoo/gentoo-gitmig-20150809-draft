@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0.ebuild,v 1.2 2003/11/04 11:16:19 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0.ebuild,v 1.3 2003/11/04 11:55:54 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -30,7 +30,7 @@ inherit flag-o-matic eutils kernel-mod
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
-filter-flags "-fno-strict-aliasing"
+append-flags "-fno-strict-aliasing"
 replace-flags "-Os" "-O2"
 
 replace-flags "-O3" "-O2"
