@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030512.ebuild,v 1.9 2004/04/26 02:31:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030512.ebuild,v 1.10 2004/05/17 17:26:36 usata Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,8 @@ DEPEND="png? ( >=media-libs/libpng-1.2.4 )
 	gif? ( >=media-libs/libungif-4.1.0-r1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7-r1 )
-	truetype? ( >=media-libs/freetype-2.1.2 )"
+	truetype? ( >=media-libs/freetype-2.1.2 )
+	!media-gfx/fontforge"
 
 S="${WORKDIR}/${PN}"
 
