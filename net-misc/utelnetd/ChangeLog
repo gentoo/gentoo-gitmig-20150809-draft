@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/utelnetd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/ChangeLog,v 1.1 2004/01/23 00:52:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/ChangeLog,v 1.2 2004/04/16 20:02:36 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org> :
+  adding s390 keywords
 
 *utelnetd-0.1.9 (23 Jan 2004)
 
