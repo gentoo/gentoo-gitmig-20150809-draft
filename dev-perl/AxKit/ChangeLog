@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AxKit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.17 2003/06/07 01:34:15 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.18 2003/06/08 03:46:05 rac Exp $
+
+  07 Jun 2003; <rac@gentoo.org> AxKit-1.6.1.ebuild:
+  Add IUSE
 
   06 Jun 2003; <rac@gentoo.org> AxKit-1.6.1.ebuild:
   Add sed-4 dependency for using sed -i

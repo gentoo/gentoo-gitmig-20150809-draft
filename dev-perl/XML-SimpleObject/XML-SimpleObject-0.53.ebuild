@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SimpleObject/XML-SimpleObject-0.53.ebuild,v 1.1 2003/04/24 23:39:08 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SimpleObject/XML-SimpleObject-0.53.ebuild,v 1.2 2003/06/08 03:48:41 rac Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/XML-SimpleObject${VERSION}
 DESCRIPTION="A Perl XML Simple package."
 SRC_URI="http://www.cpan.org/modules/by-module/XML/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/XML/${P}.readme"
-
+IUSE=""
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
