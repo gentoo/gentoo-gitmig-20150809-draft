@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnome-netstatus
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.28 2004/12/29 02:48:26 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.29 2005/01/08 23:28:21 slarti Exp $
+
+  08 Jan 2005; Tom Martin <slarti@gentoo.org> gnome-netstatus-2.8.0.ebuild:
+  Stable on amd64.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
