@@ -1,6 +1,16 @@
-MD5 7de2f9d18a217ffabaabcf5d55db88d8 ChangeLog 764
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7c3b99fc0ca763783f3873a62c194705 jsx-1.0.7.5.ebuild 948
 MD5 c3eb395d969f7efd999810dff84464c9 jsx-1.0.7.4.ebuild 946
-MD5 0fb6b514dbca21dfe8a581aadabf2b9e jsx-1.0.7.5.ebuild 972
+MD5 065c403117dd2885581a5e7fc9a82b7a ChangeLog 849
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 05f988379996cafed89c27930b33f138 files/digest-jsx-1.0.7.4 59
 MD5 fb0f0c99d7b8a13edf30175e04262a87 files/digest-jsx-1.0.7.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBgjle/rLF9B432nYRAo5uAJ9ZEboRyr57pkYeKXDIrk8cGtSiRwCbBUBQ
+CKUSEeYxToOInnqJVleqdt4=
+=AnA1
+-----END PGP SIGNATURE-----
