@@ -1,8 +1,11 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.15 2003/03/28 02:42:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.16 2003/07/06 10:45:01 gmsoft Exp $
 
 *gpgme-0.4.0 (29 Jan 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> gpgme-0.4.0.ebuild :
+  Added hppa to KEYWORDS.
 
   05 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> gpgme-0.4.0.ebuild:
   set ~ppc in keywords
@@ -13,6 +16,9 @@
   to a program that needs gpgme 0.4.0 or later.
 
 *gpgme-0.3.14 (29 Jan 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> gpgme-0.3.14.ebuild :
+  Added hppa to KEYWORDS.
 
   27 Mar 2003; Jason Wever <weeve@gentoo.org> gpgme-0.3.14.ebuild:
   Changed ~sparc keyword to sparc.
