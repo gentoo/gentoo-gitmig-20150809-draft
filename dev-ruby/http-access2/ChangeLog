@@ -1,9 +1,11 @@
 # ChangeLog for dev-ruby/http-access2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.1 2003/04/23 15:41:26 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/ChangeLog,v 1.2 2003/05/23 11:30:45 twp Exp $
 
 *http-access2-0j (23 Apr 2003)
 
-  23 Apr 2003; Tom Payne <twp@gentoo.org> http-access2-0j.ebuild :
+  23 May 2003; Tom Payne <twp@gentoo.org> http-access2-0j.ebuild :
+  Added IUSE.
 
+  23 Apr 2003; Tom Payne <twp@gentoo.org> http-access2-0j.ebuild :
   Initial version.
