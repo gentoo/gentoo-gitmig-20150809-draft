@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <tberman@gentoo.org> (4 Nov 2003)
+# Unsupported temp. upstream, masking for now.
+#
+dev-util/mono-debugger
+
 # <pauldv@gentoo.org> (4 Nov 2003)
 # Testing the ebuild, but not putting it in the tree creates more problems.
 # However I cannot vouch for it actually compiling
