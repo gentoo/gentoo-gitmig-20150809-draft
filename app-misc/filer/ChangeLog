@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/filer
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.1 2004/02/15 03:21:48 esammer Exp $
+
+*filer-0.0.5 (14 Feb 2004)
+
+  14 Feb 2004; Eric Sammer <esammer@gentoo.org> filer-0.0.5.ebuild:
+  Initial import of filer submitted by Sven Wegener
+  <sven.wegener@stealer.net>. Thanks to Sven Wegener. Closes bug #41605.
+
