@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.14 2003/09/12 22:13:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.15 2003/09/21 05:00:15 usata Exp $
 
 ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
@@ -24,7 +24,8 @@ DEPEND=">=sys-libs/ncurses-5.3
 	sys-libs/gdbm
 	dev-util/cvs
 	dev-python/pexpect
-	spell? ( app-text/ispell )
+	spell? ( || ( app-text/ispell
+		app-text/aspell ) )
 	X? ( virtual/x11
 		>=media-libs/libungif-4.1.0.1b
 		>=media-libs/jpeg-6b

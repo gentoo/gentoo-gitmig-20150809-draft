@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.13 2003/09/12 22:13:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.14 2003/09/21 05:00:15 usata Exp $
+
+  21 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> emacs-cvs-21.3.50.ebuild:
+  Emacs can use either ispell or aspell, also suggested in Bug #28527
 
   13 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> emacs-cvs-21.3.50.ebuild:
   Added spell IUSE flag and DEPENDs on ispell iff USE="spell".
