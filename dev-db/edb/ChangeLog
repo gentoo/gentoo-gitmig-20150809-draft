@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/edb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.9 2003/03/20 13:10:58 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.10 2003/04/09 15:51:37 todd Exp $
 
 *edb-1.0.3.20030220-r1 (20 Mar 2003)
 
@@ -17,6 +17,9 @@
   Version bumpage (bug fixes from CVS).
    
 *edb-1.0.3 (3 Jun 2002)
+
+  09 Apr 2003; Todd Sunderlin <todd@gentoo.org> edb-1.0.3.ebuild:
+  Marked stable for sparc.
 
   26 Aug 2002; Ryan Phillips <rphillips@gentoo.org> :
   Removed gtk dependency. Fixes #6998. Submitted by vapier at netzero.com
