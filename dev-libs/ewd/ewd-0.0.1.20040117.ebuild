@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ewd/ewd-0.0.1.20031122.ebuild,v 1.1 2003/11/22 08:52:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ewd/ewd-0.0.1.20040117.ebuild,v 1.1 2004/01/20 02:00:39 vapier Exp $
 
 inherit enlightenment
 
