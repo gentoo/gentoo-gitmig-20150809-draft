@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.52 2002/12/01 00:58:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.53 2002/12/01 09:35:15 azarah Exp $
+
+  01 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.ebuild :
+
+  Do not disable Xft for gtk2, as we depend on gtk+-2.1 (hopefully we
+  can get this into portage real soon).  Comment out calendar stuff
+  for now.
 
 *mozilla-1.2 (30 Nov 2002)
 

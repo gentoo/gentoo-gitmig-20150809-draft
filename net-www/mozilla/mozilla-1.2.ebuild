@@ -1,8 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.ebuild,v 1.1 2002/12/01 00:58:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.ebuild,v 1.2 2002/12/01 09:35:15 azarah Exp $
 
-IUSE="java crypt ipv6 gtk2 ssl ldap gnome mozsvg mozcalendar mozaccess mozinterfaceinfo mozp3p mozxmlterm moznomail moznocompose"
+IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
+# Internal USE flags that I do not really want to advertise ...
+IUSE="${IUSE} mozsvg mozcalendar mozaccess mozinterfaceinfo mozp3p mozxmlterm moznomail moznocompose"
 
 inherit flag-o-matic gcc makeedit eutils nsplugins
 
@@ -152,14 +154,13 @@ src_unpack() {
 	# <azarah@gentoo.org> (30 Nov 2002)
 	epatch ${FILESDIR}/${PV}/${P}-cutnpaste-limit-fix.patch.bz2
 
-	# Get mozilla to link to Xft2.0 that we install in tmp directory
-	# <azarah@gentoo.org> (18 Nov 2002)
 	if [ -z "`use gtk2`" ]; then
-		epatch ${FILESDIR}/1.2/mozilla-1.2b-Xft-includes.patch.bz2
-	fi
-
-	if [ -n "`use gtk2`" ]; then
-		epatch ${FILESDIR}/1.2/mozilla-1.2b-gtk2.patch.bz2
+		# Get mozilla to link to Xft2.0 that we install in tmp directory
+		# <azarah@gentoo.org> (18 Nov 2002)
+		epatch ${FILESDIR}/${PV}/${P}b-Xft-includes.patch.bz2
+	else
+		# Update Gtk+2 bits from CVS
+		epatch ${FILESDIR}/${PV}/${P}b-gtk2.patch.bz2
 	fi
 	
 	cd ${S}
@@ -168,8 +169,7 @@ src_unpack() {
 	unset WANT_AUTOCONF_2_1
 
 	# Unpack the enigmail plugin
-	if [ -n "`use crypt`" -a -z "`use moznomail`" ] && \
-	   [ "${NO_MAIL}" != "YES" -a "${NO_MAIL}" != "yes" ]
+	if [ -n "`use crypt`" -a -z "`use moznomail`" ]
 	then
 		mv ${WORKDIR}/ipc ${S}/extensions/
 		mv ${WORKDIR}/enigmail ${S}/extensions/
@@ -221,7 +221,7 @@ src_compile() {
 		fi
 	fi
 
-	if [ -n "${MOZ_ENABLE_XFT}" -a -z "`use gtk2`" ] ; then
+	if [ -n "${MOZ_ENABLE_XFT}" ] ; then
 		myconf="${myconf} --enable-xft"
 	fi
 
@@ -260,9 +260,11 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-svg"
 	fi
-	if [ -n "`use mozcalendar`" ] ; then
-		myconf="${myconf} --enable-calendar"
-	fi
+# This puppy needs libical, which is not in portage yet.  Also make mozilla
+# depend on swig, so not sure if its the best idea around to enable ...
+#	if [ -n "`use mozcalendar`" ] ; then
+#		myconf="${myconf} --enable-calendar"
+#	fi
 	
 	if [ -n "`use moznomail`" ] ; then
 		myconf="${myconf} --disable-mailnews"
@@ -400,8 +402,7 @@ src_compile() {
 	# *********************************************************************
 
 	# Build the enigmail plugin
-	if [ -n "`use crypt`" -a -z "`use moznomail`" ] && \
-	   [ "${NO_MAIL}" != "YES" -a "${NO_MAIL}" != "yes" ]
+	if [ -n "`use crypt`" -a -z "`use moznomail`" ]
 	then
 		einfo "Building Enigmail plugin..."
 		cd ${S}/extensions/ipc
