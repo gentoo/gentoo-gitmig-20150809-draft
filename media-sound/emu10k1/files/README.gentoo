@@ -1,0 +1,103 @@
+This excellent Linux Audigy FAQ is from
+http://basic-rip.co.uk/tenpin/linux_audigy_faq.html, which is currently
+unreadable so we're adding a cached copy from google to this file for
+safe-keeping. PLEASE NOTE: the current version of the Gentoo Linux emu10k1
+auto-detects emu10k1 or audigy and also uses a fixed audigy-script as described
+in this FAQ. However, the MIDI/LiveWire fix may still be needed for some users.
+
+<audigy-faq>
+
+This page details my experience in getting my Creative Soundblaster Audigy to
+work properly under Linux (Gentoo Linux to be exact) using the Open Sound
+System driver.
+
+If you use Gentoo Linux then grab this package which contains an eBuild I wrote
+to do all the below (last updated 11:53 11th Oct):
+emu10k1-audigy-20020927-rl.tar.gz
+
+The first thing to do is download the driver source archive from
+http://sourceforge.net/projects/emu10k1/.
+
+Extract the archive in a directory you have write access to (your home
+directory): tar xvjf emu10k1-v0.20a.tar.bz2
+
+Enter the extracted directory:  cd emu10k1-v0.20
+
+Next run:
+
+make
+make all
+
+Then run (as root):
+
+make install
+
+If the first make fails then you will need to edit the file config so that the
+line KERNEL_SOURCE := gives the location of your kernel source code.
+
+Ussually this location is: /usr/src/linux
+
+Next run (not as root):
+
+make tools
+
+Then run (as root):
+
+make install-tools
+
+The script audigy-script and the config file emu10k1.conf are both installed to
+/usr/local/etc/.
+
+I have written replacements for these files which fix lots of bugs with the
+default ones. I would advise you to read them and then replace the existing
+ones with my versions:
+
+audigy-script
+emu10k1.conf
+
+audigy-script is used to configure the soundcard so that all the channels are
+setup properly and so that recording works.  emu10k1.conf is used to set some
+options for audigy-script.
+
+audigy-script sets up the following volume controls:
+
+Vol - Front Speaker Volumes
+OGain - Rear Speaker Volumes
+Igain - Center/Subwoofer Volumes
+
+Update: 30.10.02
+
+If you find that you are only getting a particular sound source (eg. CD
+playback) through the 2 front channels, you can mirror them to the rear 2
+channels by adding the following line to audigy-script:
+
+$DSPMGR -a"Pcm:$REAR"
+
+Also thanks to Colin McCambridge for these 2 tips:
+
+1) Don't download and use the 0.9.4 tools package from sourceforge, as it
+appears to contain an old version of the emu-dspmgr program that does *not*
+seem to support stereo input/output routing (Both the included script and yours
+were broken when using that tool, because "Pcm" was not a valid input for the
+route).  The included tools in the driver package work just fine
+
+2) For people with Audigy Platinum cards that have the Audigy Drive and
+InfraRed remote, the fix that took me so long to find to enable the system MIDI
+messages triggered by the infrared remote (and thus enable the remote's
+functionality) is this:
+
+Before compiling the emu10k1 driver, you have to edit the midi.h file and
+uncomment the line #define USE_AUDIGY_DRIVE_MIDI.   The Audigy card has two
+MIDI devices, and since the emu10k1 developers have yet to get both working at
+the same time, uncommenting that line switches support from the first to the
+second on Audigy Platinum cards.
+
+If you find any problems with my scripts or any of my instructions then please
+mail me: tenpin22@blueyonder.co.uk
+
+There are some forums on the driver Sourceforge homepage but I haven't found
+them very active. You can find them here.
+
+I will be updating this page when I remember what else I was going to put on
+it.
+</audigy-faq>
