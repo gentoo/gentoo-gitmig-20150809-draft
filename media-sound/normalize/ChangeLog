@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/normalize
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.5 2003/07/07 18:26:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.6 2003/07/17 22:18:41 raker Exp $
+
+*normalize-0.7.6-r1 (17 Jul 2003)
+
+  17 Jul 2003; Nick Hadaway <raker@gentoo.org> normalize-0.7.6-r1.ebuild:
+  Now depends on media-libs/{libmad,libid3tag} instead of 
+  media-sound/mad
 
   07 Jul 2003; Caleb Tennis <caleb@gentoo.org> normalize-0.7.6.ebuild:
   Made it stable x86
