@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/files/gift.confd,v 1.1 2004/06/26 17:53:01 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/files/gift.confd,v 1.2 2004/06/26 20:12:47 squinky86 Exp $
 
 # /etc/conf.d/gift
 # Config file for gift control script
@@ -11,6 +11,9 @@
 
 # owner of giFTd process (don't change, must be existing)
 USER="p2p"
+
+# where the shared directory is
+SHAREDIR="/usr/share/giFT"
 
 # logfile (/dev/null for nowhere)
 LOG="/var/log/giftd.log"

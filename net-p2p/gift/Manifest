@@ -4,5 +4,5 @@ MD5 3d781ea1f572848a468f6798541375c9 ChangeLog 2159
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
 MD5 64b21cffd79f35db281d077303eb810b files/digest-gift-0.11.6 64
 MD5 64b21cffd79f35db281d077303eb810b files/digest-gift-0.11.6-r1 64
-MD5 e4cd15e154f32874f3f1ef99af79634d files/gift.confd 590
-MD5 0829d07566e8aaf30e49add5d361ac93 files/gift.initd 680
+MD5 457258a18cae5b901615e0f23e28152d files/gift.confd 650
+MD5 7f38a4a8cbe322bfd47eff86c550e613 files/gift.initd 676
