@@ -1,3 +1,6 @@
-MD5 e1001fe9de86660a98a62f9edba9b9a8 ChangeLog 658
 MD5 cebc11b2a1419b708a1af8deefe958ec libdbi-0.7.2.ebuild 806
+MD5 302de64fcd41292708669ce41bcb1bd5 libdbi-0.7.2-r1.ebuild 891
+MD5 e8dd5ead868634aaf06680cf4000883c ChangeLog 818
+MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 4134032b5381a34b9be39bb9bbd17ef8 files/digest-libdbi-0.7.2 64
+MD5 4134032b5381a34b9be39bb9bbd17ef8 files/digest-libdbi-0.7.2-r1 64
