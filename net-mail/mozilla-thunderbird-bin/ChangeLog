@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mozilla-thunderbird-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/ChangeLog,v 1.3 2004/02/12 09:05:20 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/ChangeLog,v 1.4 2004/02/14 06:19:38 brad Exp $
+
+  14 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-thunderbird-bin-0.5.ebuild:
+  Stable on x86
 
 *mozilla-thunderbird-bin-0.5 (12 Feb 2004)
 
