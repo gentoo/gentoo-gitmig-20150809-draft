@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.1 2003/07/16 15:08:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.2 2003/07/22 17:49:50 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,6 +23,8 @@ DEPEND="virtual/glibc
 	usb? ( >=sys-apps/hotplug-20020401-r1 )"
 RDEPEND="${DEPEND} !virtual/lpr"
 
+has_version net-print/foomatic && newdepend ">=net-print/foomatic-3.0.0"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
@@ -30,6 +32,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 filter-flags -fomit-frame-pointer
 
 src_unpack() {
+	echo ${DEPEND}
 	unpack ${A} || die
 	cd ${S} || die
 
@@ -128,7 +131,5 @@ pkg_postinst() {
 	einfo "emerge >=app-text/ghostscript-7.05-r1 if you need to print"
 	einfo "to a non-postscript printer(after cups itself! even if it's"
 	einfo "already installed!)"
-	einfo
-	einfo "You will need foomatic >= 3.0 to work with this version of cups"
 	einfo
 }

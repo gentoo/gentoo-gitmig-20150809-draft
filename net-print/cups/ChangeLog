@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.44 2003/07/20 19:20:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.45 2003/07/22 17:49:50 lanius Exp $
+
+  22 Jul 2003; <heino@gentoo.org> cups-1.1.19-r1.ebuild:
+  added depend on foomatic-3 if foomatic-2 is installed
 
   20 Jul 2003; lanius@gentoo.org files/cupsd.rc6:
   added use vmware to initscript, see bug #23971
