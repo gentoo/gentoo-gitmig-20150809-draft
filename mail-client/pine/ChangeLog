@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.33 2005/01/17 04:14:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.34 2005/01/17 14:08:16 gustavoz Exp $
+
+  17 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> pine-4.61-r5.ebuild:
+  Stable on sparc
 
   17 Jan 2005; Andrej Kacian <ticho@gentoo.org> pine-4.61-r5.ebuild:
   Stable on x86.
