@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.17 2003/01/14 16:10:36 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.18 2003/01/15 18:58:23 raker Exp $
 
 *wxPython-2.4.0.1 (12 Jan 2003)
+
+  15 Jan 2003; Nick Hadaway <raker@gentoo.org> wxPython-2.4.0.1.ebuild :
+  Marked stable for x86.
 
   13 Jan 2003; Nick Hadaway <raker@gentoo.org> wxPython-2.4.0.1.ebuild :
   Added gtk2 support based on code submitted  by Jose Fonseca on bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.1.ebuild,v 1.3 2003/01/14 02:46:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.1.ebuild,v 1.4 2003/01/15 18:58:23 raker Exp $
 
 MY_P="${P/-/Src-}"
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.wxpython.org/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 IUSE="opengl gtk2"
 
 DEPEND=">=dev-lang/python-2.1
