@@ -1,23 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.2.1-r1.ebuild,v 1.6 2003/02/13 09:08:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.2.1-r1.ebuild,v 1.7 2003/03/01 01:12:02 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="ROX-Filer is a fast and powerful graphical file manager"
-HOMEPAGE="http://rox.sourceforge.net"
+DESCRIPTION="fast and powerful graphical file manager"
+HOMEPAGE="http://rox.sourceforge.net/"
 BPN="rox-base"
 BPV="1.0.2"
 BP=${BPN}-${BPV}
 SRC_URI="mirror://sourceforge/rox/${BP}.tgz
 	mirror://sourceforge/rox/${P}.tgz"
 
-DEPEND="=x11-libs/gtk+-1.2*
-	>=media-libs/gdk-pixbuf-0.13
-	dev-libs/libxml2"
-
 SLOT="1.2"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+
+DEPEND="=x11-libs/gtk+-1.2*
+	>=media-libs/gdk-pixbuf-0.13
+	dev-libs/libxml2"
 
 src_install() {
 	# libxml2 header fix

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.5.ebuild,v 1.10 2003/02/13 09:01:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.5.ebuild,v 1.11 2003/03/01 01:10:15 vapier Exp $
 
-DESCRIPTION="GNU Typist (also called gtypist) is a universal typing tutor."
+DESCRIPTION="universal typing tutor"
 SRC_URI="ftp://ftp.gnu.org/gnu/gtypist/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gtypist/gtypist.html"
 
@@ -14,18 +14,11 @@ IUSE="nls"
 DEPEND=">=sys-libs/ncurses-5.2"
 
 src_compile() {
-	local myconf
-
-	# gtypist uses a built in gettext
-	use nls \
-		&& myconf="--enable-nls" \
-		|| myconf="--disable-nls"
-
 	# gtypist also produces some Emacs/XEmacs editing modes if
 	# emacs/xemacs is present. if emacs/xemacs is not present then
 	# these emacs modes are not compiled or installed.
 
-	econf ${myconf}
+	econf `use_enable nls` || die
 	emake || die
 }
 

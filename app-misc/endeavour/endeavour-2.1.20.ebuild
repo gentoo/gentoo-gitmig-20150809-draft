@@ -1,12 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20.ebuild,v 1.3 2003/02/13 08:56:09 vapier Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20.ebuild,v 1.4 2003/03/01 01:06:30 vapier Exp $
 
 M=endeavour2-mimetypes
-S=${WORKDIR}/${P}
-DESCRIPTION="This is a powerful file and image browser"
+DESCRIPTION="powerful file and image browser"
 HOMEPAGE="http://wolfpack.twu.net/Endeavour2/"
 SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2
 	ftp://wolfpack.twu.net/users/wolfpack/${M}.tgz"
@@ -38,7 +35,6 @@ src_compile() {
 
 
 src_install() {
-
 	dodoc AUTHORS HACKING INSTALL README TODO
 
 	cd endeavour2
