@@ -1,14 +1,5 @@
 --- nodeiterator.h.old	2002-02-24 15:37:17.000000000 -0500
-+++ nodeiterator.h	2005-02-20 17:52:21.088923200 -0500
-@@ -20,7 +20,7 @@
-  */
- 
-  // $Id: nodeiterator.h.patch,v 1.3 2005/02/20 23:03:36 ribosome Exp $
-- 
-+
- /**
-  * @file nodeiterator.h
-  *
++++ nodeiterator.h	2005-02-20 19:15:59.968937464 -0500
 @@ -128,15 +128,15 @@
  
  template <class N> N *PreorderIterator<N>::begin ()
