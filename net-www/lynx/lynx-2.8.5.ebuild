@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.5.ebuild,v 1.12 2004/07/13 01:52:09 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.5.ebuild,v 1.13 2004/08/13 12:15:57 tigger Exp $
 
 inherit eutils flag-o-matic
 
 #MY_PV=${PV/.1d/rel.1}
 DESCRIPTION="An excellent console-based web browser with ssl support"
 HOMEPAGE="http://lynx.browser.org/"
-SRC_URI="ftp://lynx.isc.org/lynx/${PN}2.8.5/${PN}${PV}.tar.bz2"
+SRC_URI="ftp://lynx.isc.org/${PN}2.8.5/${PN}${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

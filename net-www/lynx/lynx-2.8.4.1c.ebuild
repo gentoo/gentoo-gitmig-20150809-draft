@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1c.ebuild,v 1.12 2004/06/25 00:58:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1c.ebuild,v 1.13 2004/08/13 12:15:57 tigger Exp $
 
 IUSE="ssl nls ipv6"
 
@@ -8,7 +8,7 @@ MY_PV=${PV/.1c/rel.1}
 S=${WORKDIR}/${PN}2-8-4
 DESCRIPTION="An excellent console-based web browser with ssl support"
 HOMEPAGE="http://lynx.browser.org/"
-SRC_URI="ftp://lynx.isc.org/${PN}/${PN}2.8.4/${PN}${MY_PV}.tar.bz2
+SRC_URI="ftp://lynx.isc.org/${PN}2.8.4/${PN}${MY_PV}.tar.bz2
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}a.patch
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}b.patch
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}c.patch"

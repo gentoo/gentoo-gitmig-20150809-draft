@@ -1,6 +1,10 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.36 2004/06/25 00:58:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.37 2004/08/13 12:15:57 tigger Exp $
+
+  13 Aug 2004; Rob Holland <tigger@gentoo.org> lynx-2.8.4.1c.ebuild,
+  lynx-2.8.4.1d-r1.ebuild, lynx-2.8.4.1d.ebuild, lynx-2.8.5.ebuild:
+  Fix SRC_URIs
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> lynx-2.8.5.ebuild:
   Stable on alpha.
