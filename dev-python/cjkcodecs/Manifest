@@ -1,4 +1,6 @@
 MD5 bb417bfd9466cfb7aad068628de17016 ChangeLog 612
+MD5 179e543d8ec0405736c96e838f05b600 cjkcodecs-1.0.2.ebuild 654
 MD5 08c3092f35a1a7734b20cc7beb7f84a5 cjkcodecs-1.0.ebuild 651
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 fe55aaf14f85bb1bca60f19f40e02e60 files/digest-cjkcodecs-1.0 65
+MD5 ed462808d32026657155f1dff6cdd1e2 files/digest-cjkcodecs-1.0.2 68
