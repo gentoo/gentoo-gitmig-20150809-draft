@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.1 2003/07/21 03:27:05 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.2 2003/07/26 16:53:20 brad Exp $
+
+*mozilla-thunderbird-0.1_alpha20030723 (26 Jul 2003)
+
+  26 Jul 2003; Brad Laue <brad@gentoo.org>
+  mozilla-thunderbird-0.1_alpha20030723.ebuild:
+  New snapshot of thunderbird. Introduces minor folder prefix bug with IMAP.
+  Specify trailing slash if specifying folder prefix.
 
 *mozilla-thunderbird-0.1_alpha20030708 (20 Jul 2003)
 
