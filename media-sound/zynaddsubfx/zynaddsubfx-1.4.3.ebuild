@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-1.4.3.ebuild,v 1.9 2004/12/29 02:57:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-1.4.3.ebuild,v 1.10 2005/01/09 03:43:10 jnc Exp $
 
 inherit eutils
 
