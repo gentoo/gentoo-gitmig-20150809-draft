@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 1a99b4b7943d3b6a2a28c770ed4c5c08 ChangeLog 2912
 MD5 d372d002aa15a2bf938b0921cd0c328f gdbm-1.8.0-r5.ebuild 1179
-MD5 b6d9ffaa0babfa8f63ee5326b87eeec4 gdbm-1.8.3.ebuild 1268
+MD5 2bc013517cccbeb2efe6b6caeb92a240 gdbm-1.8.3.ebuild 1274
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 017b1a2d0ae227d89ee16480e3129a3b files/digest-gdbm-1.8.0-r5 62
 MD5 c7bef9bbd37f161be399c58c61edef94 files/digest-gdbm-1.8.3 62
@@ -11,7 +11,7 @@ MD5 8640084b5d1f0e27de1d1c7da372f00a files/gdbm-1.8.0-r5-gentoo.diff 6093
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBAghXHTu7gpaalycRAkb2AKCO4/qk/KM/RK/aT/pOA+ZTmVpWnACggJmW
-Ipkv8e4enziNOk4Myo+XqqI=
-=UIOX
+iD8DBQFBAgitHTu7gpaalycRAnLQAJ9XH4n4RnvvNEkNSiz+FtkkVl0mfACfQX1L
+Bv4ns+I3KiocYyWuxIsBjow=
+=UBz3
 -----END PGP SIGNATURE-----
