@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-python/streamtuner-python-0.1.2.ebuild,v 1.4 2004/08/16 04:47:51 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-python/streamtuner-python-0.1.2.ebuild,v 1.5 2004/09/22 17:58:58 eradicator Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.nongnu.org/streamtuner/"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 LICENSE="BSD"
 
 DEPEND=">=net-misc/streamtuner-0.12.0
