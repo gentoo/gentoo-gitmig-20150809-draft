@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3.ebuild,v 1.6 2004/04/20 07:06:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3.ebuild,v 1.7 2004/04/25 20:57:15 agriffis Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_compile() {
 	mv config/config.in config/config.in.org
 	cat config/config.in.org | sed 's@EST=$(TOP)/../speech_tools@EST=/usr/lib/speech-tools@' > config/config.in
 
-	econf
+	econf || die "econf failed"
 
 	# testsuite still fails to build under gcc-3.2
 	mv Makefile Makefile.orig
