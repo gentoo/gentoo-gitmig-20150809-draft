@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.17 2004/06/24 22:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.18 2004/07/14 23:02:11 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,6 +17,7 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE="doc"
 
 append-flags "-DAUTO_PPP"
 
@@ -106,4 +107,3 @@ pkg_postinst() {
 		mkdir -p ${ROOT}/var/spool/fax/outgoing/locks
 	fi
 }
-

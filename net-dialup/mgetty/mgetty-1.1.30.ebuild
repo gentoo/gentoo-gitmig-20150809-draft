@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.17 2004/06/24 22:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.18 2004/07/14 23:02:11 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -138,4 +138,3 @@ pkg_postinst() {
 		mkdir -p ${ROOT}/var/spool/fax/outgoing/locks
 	fi
 }
-
