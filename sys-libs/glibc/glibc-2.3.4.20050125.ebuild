@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.27 2005/02/15 09:57:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.28 2005/02/16 01:31:14 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -92,10 +92,10 @@ get_glibc_src_uri() {
 	local devspace_uri="http://dev.gentoo.org/~eradicator/glibc/"
 	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:-${devspace_uri}}
 
-	GLIBC_SRC_URI="http://ftp.gnu.org/gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
-	               http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2"
-#	GLIBC_SRC_URI="mirror://gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
-#	               mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2"
+#	GLIBC_SRC_URI="http://ftp.gnu.org/gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
+#	               http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2"
+	GLIBC_SRC_URI="mirror://gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
+	               mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2"
 
 	if [[ -n ${BRANCH_UPDATE} ]]; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
@@ -704,7 +704,6 @@ install_locales() {
 	cd ${WORKDIR}/${MYMAINBUILDDIR} || die "${WORKDIR}/${MYMAINBUILDDIR}"
 	make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 		install_root=${D} localedata/install-locales || die
-	keepdir /usr/lib/locale/ru_RU/LC_MESSAGES
 }
 
 setup_locales() {
@@ -861,6 +860,7 @@ crosscompile_setup() {
 		fi
 
 		if use_multilib; then
+			[[ -z "${MULTILIB_CROSSCOMPILE}" ]] && die "Crosscompiling for ${CTARGET} is nut supported by the glibc ebuild yet.  Please contact eradicator if you want to help testing/development."
 			case $(tc-arch) in
 				amd64)
 					export CFLAGS_x86="${CFLAGS_x86--m32}"
