@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-net
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.12 2004/06/29 10:31:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.13 2004/08/07 19:10:46 kloeri Exp $
+
+  07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> sdl-net-1.2.5.ebuild:
+  Stable on alpha.
 
   29 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   sdl-net-1.2.5.ebuild:
