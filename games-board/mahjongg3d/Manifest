@@ -1,6 +1,16 @@
-MD5 e5aa00878adef5b12f9c92f17e821087 mahjongg3d-0.96.ebuild 1099
-MD5 84842b23662c852e90b7cd689140b14c mahjongg3d-0.95.ebuild 1184
-MD5 3752aeec199db26f3e2e5b9134286558 ChangeLog 640
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a9b93d03d9e02f79d100cc9605e47a87 mahjongg3d-0.96.ebuild 1108
+MD5 4a55ceb5cefa2857a74d356ca4781360 mahjongg3d-0.95.ebuild 1193
+MD5 dac1c58314449524fc8f7aabc6cb4a0e ChangeLog 775
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 25238a925f8e2204bb9c3e05e3ad3c3f files/digest-mahjongg3d-0.95 69
 MD5 51ea5b85f839726d9bace362ae786b12 files/digest-mahjongg3d-0.96 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrOwJI1lqEGTUzyQRAlLjAKCdtHnzSI2WolBLAauxaMeIMSHJOwCgpE0U
+9fGvoNGtZGtN7TkryZs+/Vc=
+=EEHa
+-----END PGP SIGNATURE-----

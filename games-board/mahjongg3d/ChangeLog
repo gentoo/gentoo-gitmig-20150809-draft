@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mahjongg3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.4 2004/06/24 22:19:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.5 2004/11/30 21:54:09 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> mahjongg3d-0.95.ebuild,
+  mahjongg3d-0.96.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   21 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> mahjongg3d-0.96.ebuild:
   fix typo in SRC_URI

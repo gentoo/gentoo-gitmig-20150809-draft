@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.95.ebuild,v 1.2 2004/06/24 22:19:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.95.ebuild,v 1.3 2004/11/30 21:54:09 swegener Exp $
 
 inherit kde games
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND=">=qt-3.2.0
+RDEPEND=">=x11-libs/qt-3.2.0
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
