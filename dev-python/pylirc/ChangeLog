@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylirc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.7 2004/12/30 23:39:07 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.8 2005/03/22 15:34:15 fserb Exp $
+
+*pylirc-0.0.5 (22 Mar 2005)
+
+  22 Mar 2005; Fernando Serboncini <fserb@gentoo.org> +pylirc-0.0.5.ebuild:
+  Version bump
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
