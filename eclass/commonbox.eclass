@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.25 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.26 2005/01/08 16:42:37 ka0ttic Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -14,6 +14,8 @@ ECLASS=commonbox
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_compile src_install pkg_postinst
+
+IUSE="$IUSE nls kde gnome xinerama truetype"
 
 DEPEND="dev-util/pkgconfig
 	=sys-apps/sed-4*"
