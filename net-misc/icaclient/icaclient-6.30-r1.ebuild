@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-6.30-r1.ebuild,v 1.8 2004/08/01 22:03:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-6.30-r1.ebuild,v 1.9 2004/11/24 21:56:17 swegener Exp $
 
 DESCRIPTION="ICA Client"
 HOMEPAGE="http://www.citrix.com/download/unix-downloads.asp"
-SRC_URI="ICAClient-7.00-1.i386.rpm"
+SRC_URI="ICAClient-6.30-1.i386.rpm"
 
 LICENSE="as-is"
 SLOT="0"
