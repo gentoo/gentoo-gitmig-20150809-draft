@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.21 2004/01/23 07:05:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.22 2004/02/07 00:38:22 genone Exp $
+
+*gentoolkit-0.2.0_pre6 (07 Feb 2004)
+
+  07 Feb 2004; Marius Mauch <genone@gentoo.org> gentoolkit-0.2.0_pre6.ebuild:
+  version bump, fixing several bugs (#40159, #39798, #39652, #39596, #39293)
 
 *gentoolkit-0.2.0_pre5 (23 Jan 2004)
 
