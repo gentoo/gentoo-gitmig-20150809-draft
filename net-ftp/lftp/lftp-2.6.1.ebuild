@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.1.ebuild,v 1.1 2002/08/13 21:15:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.1.ebuild,v 1.2 2002/08/14 19:42:48 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LFTP is a sophisticated ftp/http client, file transfer program."
@@ -32,7 +32,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
-	emake || die "compile problem"
+	make || die "compile problem"
 }
 
 src_install() {

@@ -1,8 +1,11 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.7 2002/08/13 21:15:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.8 2002/08/14 19:42:48 raker Exp $
 
 *lftp-2.6.1 (13 Aug 2002)
+
+  14 Aug 2002; Nick Hadaway <raker@gentoo.org> lftp-2.6.1.ebuild :
+  Changed emake to make.
 
   13 Aug 2002; Nick Hadaway <raker@gentoo.org>
   lftp-2.6.1.ebuild, files/digest-lftp-2.6.1 :
