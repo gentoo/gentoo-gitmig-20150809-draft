@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.2 2004/09/10 21:42:21 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.3 2005/01/01 22:58:14 ciaranm Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -23,10 +23,17 @@
 #     get_after_major_version         ver_str
 #     replace_version_separator       index     newvalue   ver_str
 #     replace_all_version_separators  newvalue  ver_str
+#     delete_version_separator        index ver_str
+#     delete_all_version_separators   ver_str
+#
+# Rather than being a number, the index parameter can be a separator character
+# such as '-', '.' or '_'. In this case, the first separator of this kind is
+# selected.
 #
 # There's also:
 #     version_is_at_least             want      have
-# but it's *really* experimental...
+# but it doesn't work in all cases, so only use it if you know what you're
+# doing.
 
 ECLASS=versionator
 INHERITED="$INHERITED $ECLASS"
@@ -155,18 +162,31 @@ get_after_major_version() {
 #     1 '_' 1.2.3       -> 1_2.3
 #     2 '_' 1.2.3       -> 1.2_3
 #     1 '_' 1b-2.3      -> 1b_2.3
+# Rather than being a number, $1 can be a separator character such as '-', '.'
+# or '_'. In this case, the first separator of this kind is selected.
 replace_version_separator() {
-	local i c found=0 v="${3:-${PV}}"
+	local w i c found=0 v="${3:-${PV}}"
+	w=${1:-1}
 	c=( $(get_all_version_components ${v} ) )
-	for (( i = 0 ; i < ${#c[@]} ; i = $i + 1 )) ; do
-		if [[ -n "${c[${i}]//[^-._]}" ]] ; then
-			found=$(($found + 1))
-			if [[ "$found" == "${1:-1}" ]] ; then
+	if [[ "${w//[[:digit:]]/}" == "${w}" ]] ; then
+		# it's a character, not an index
+		for (( i = 0 ; i < ${#c[@]} ; i = $i + 1 )) ; do
+			if [[ "${c[${i}]}" == "${w}" ]] ; then
 				c[${i}]="${2}"
 				break
 			fi
-		fi
-	done
+		done
+	else
+		for (( i = 0 ; i < ${#c[@]} ; i = $i + 1 )) ; do
+			if [[ -n "${c[${i}]//[^-._]}" ]] ; then
+				found=$(($found + 1))
+				if [[ "$found" == "${w}" ]] ; then
+					c[${i}]="${2}"
+					break
+				fi
+			fi
+		done
+	fi
 	c=${c[@]}
 	echo ${c// }
 }
@@ -178,6 +198,23 @@ replace_all_version_separators() {
 	c=( $(get_all_version_components "${2:-${PV}}" ) )
 	c="${c[@]//[-._]/$1}"
 	echo ${c// }
+}
+
+# Delete the $1th separator in $3 (defaults to $PV if $3 is not supplied). If
+# there are fewer than $1 separators, don't change anything.
+#     1 1.2.3       -> 12.3
+#     2 1.2.3       -> 1.23
+#     1 1b-2.3      -> 1b2.3
+# Rather than being a number, $1 can be a separator character such as '-', '.'
+# or '_'. In this case, the first separator of this kind is deleted.
+delete_version_separator() {
+	replace_version_separator "${1}" "" "${2}"
+}
+
+# Delete all version separators in $1 (defaults to $PV).
+#     '_' 1b.2.3        -> 1b_2_3
+delete_all_version_separators() {
+	replace_all_version_separators "${1}"
 }
 
 # Is $2 (defaults to $PVR) at least version $1? Intended for use in eclasses
