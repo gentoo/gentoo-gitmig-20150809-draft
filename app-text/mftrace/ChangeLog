@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.13 2004/07/03 23:49:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.14 2004/07/19 09:43:38 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mftrace-1.0.33.ebuild:
+  Added to ~sparc.
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mftrace-1.0.31.ebuild:
   Stable on alpha.
