@@ -1,10 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.6 2003/11/18 10:37:29 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.7 2004/01/17 17:15:01 suka Exp $
 
 IUSE="kde gnome"
-
-inherit virtualx
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -87,10 +85,7 @@ src_install() {
 	einfo "Installing OpenOffice.org into build root..."
 	dodir ${INSTDIR}
 	cd ${S}
-	# Setup virtualmake
-	export maketype="./setup"
-	# We need X to install...
-	virtualmake "-v -r:${T}/autoresponse" ||die "The setup program failed"
+	./setup -nogui -v -r:${T}/autoresponse || die "The setup program failed"
 
 	echo
 	einfo "Removing build root from registry..."
@@ -147,8 +142,9 @@ src_install() {
 		# <brad@gentoo.org> (04 Aug 2003)
 		for x in ${D}${INSTDIR}/share/gnome/net/ooo*.desktop
 		do
-			# We have to handle setup differently
+			# We have to handle soffice and setup differently
 			perl -pi -e "s:${INSTDIR}/program/setup:/usr/bin/oosetup:g" ${x}
+			perl -pi -e "s:${INSTDIR}/program/soffice:/usr/bin/ooffice:g" ${x}
 			# Now fix the rest
 			perl -pi -e "s:${INSTDIR}/program/s:/usr/bin/oo:g" ${x}
 			doins ${x}
@@ -169,8 +165,9 @@ src_install() {
 
 		for x in ${kdeloc}/*.desktop
 		do
-			# We have to handle setup differently
+			# We have to handle soffice and setup differently
 			perl -pi -e "s:${INSTDIR}/program/setup:/usr/bin/oosetup:g" ${x}
+			perl -pi -e "s:${INSTDIR}/program/soffice:/usr/bin/ooffice:g" ${x}
 			# Now fix the rest
 			perl -pi -e "s:${INSTDIR}/program/s:/usr/bin/oo:g" ${x}
 			doins ${x}

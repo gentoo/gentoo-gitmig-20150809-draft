@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-bin
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.35 2003/11/14 16:51:58 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.36 2004/01/17 17:15:01 suka Exp $
+
+  17 Jan 2004; <suka@gentoo.org> openoffice-bin-1.1.0.ebuild:
+  Bug fixes for install and desktop entries (bug #32418)
 
   14 Nov 2003; Brad House <brad_mssw@gentoo.org> openoffice-bin-1.1.0.ebuild:
   let openoffice-bin install on amd64 using compat libs
