@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta2.ebuild,v 1.2 2005/02/11 11:43:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta2.ebuild,v 1.3 2005/02/13 02:00:52 greg_g Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -38,14 +38,12 @@ src_compile() {
 	use xine || DO_NOT_COMPILE="$DO_NOT_COMPILE xine_artsplugin"
 
 	myconf="${myconf} --with-cdparanoia --enable-cdparanoia"
+	myconf="${myconf} $(use_with alsa arts-alsa) $(use_with alsa)"
+	myconf="${myconf} $(use_with oggvorbis vorbis) $(use_with encode lame)"
 
 	# make -j2 fails, at least on ppc
 	use ppc && export MAKEOPTS="$MAKEOPTS -j1"
 	use hppa && append-flags -ffunction-sections
-
-	use alsa	&& myconf="$myconf --with-alsa --with-arts-alsa" || myconf="$myconf --without-alsa --disable-alsa"
-	use oggvorbis	&& myconf="$myconf --with-vorbis=/usr" || myconf="$myconf --without-vorbis"
-	use encode	&& myconf="$myconf --with-lame=/usr" || myconf="$myconf --without-lame"
 
 	kde_src_compile
 }
