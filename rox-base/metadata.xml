@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The rox-base category contains core Rox packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie rox-base enthält die Basispakete für den Rox-Desktop.
+	</longdescription>
 </catmetadata>
 
