@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.8 2004/06/24 22:44:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.9 2004/07/30 08:16:53 axxo Exp $
+
+*velocity-1.4 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +velocity-1.4.ebuild:
+  version bump + cleanup
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> velocity-1.3.ebuild:
   Fix use invocation
