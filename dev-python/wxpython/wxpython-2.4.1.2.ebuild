@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.1.2.ebuild,v 1.1 2004/07/03 11:46:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.1.2.ebuild,v 1.2 2004/07/03 12:44:36 kloeri Exp $
 
 inherit eutils
 
@@ -38,14 +38,14 @@ pkg_setup() {
 		if [ ! -f "/usr/bin/wxgtk2u-2.4-config" -a ! -f "/usr/bin/wxgtk2-2.4-config" ]; then
 			eerror "You need x11-libs/wxGTK compiled with GTK+2 support."
 			eerror "Either emerge wxGTK with 'gtk2' in your USE flags or"
-			eerror "emerge wxPython without 'gtk2' in your USE flags."
+			eerror "emerge wxpython without 'gtk2' in your USE flags."
 			die "wxGTK needs to be compiled with gtk2"
 		fi
 	else
 		if [ ! -f "/usr/bin/wxgtk-2.4-config" ]; then
 			eerror "You need x11-libs/wxGTK compiled with GTK+1."
 			eerror "Either emerge wxGTK without 'gtk2' in your USE flags or"
-			eerror "emerge wxPython with 'gtk2' in your USE flags."
+			eerror "emerge wxpython with 'gtk2' in your USE flags."
 			die "wxGTK needs to be compiled without gtk2"
 		fi
 	fi
