@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.1 2003/08/13 20:32:35 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.2 2003/08/14 09:24:49 johnm Exp $
 
 # plasmaroo@plasmaroo.squirrelserver.co.uk, datestamp Tue Aug 12, 11:11 PM
 
@@ -29,6 +29,30 @@ src_compile ()  {
 	einfo
 	einfo "*****************************************************************"
 	echo
+
+        eerror "*****************************************************************"
+        eerror
+        eerror "WARNING: This i2c support is not recommended for things such as "
+	eerror "WARNING: BTTV"
+	eerror
+        eerror "*****************************************************************"
+	eerror
+	eerror "http://www2.lm-sensors.nu/~lm78/cvs/browse.cgi/lm_sensors2/README"
+	eerror
+	eerror "35 ADDITIONALLY, i2c-2.8.0 is not API compatible to earlier i2c"
+   	eerror "36 releases due to struct changes; therefore you must NOT ENABLE"
+	eerror "37 any other i2c drivers (e.g. bttv) in the kernel."
+	eerror "38 Do NOT use lm-sensors 2.8.0 or i2c-2.8.0 if you require bttv."
+	eerror
+	eerror "Please try out http://www.ensicaen.ismra.fr/~delvare/devel/i2c/"
+	eerror "for a kernel patch which will fix this problem. Please note that"
+	eerror "nor the lm_sensors team nor the package maintainers will be able"
+	eerror "to support you if you encounter problems with I2C when using"
+	eerror "other modules with requirements on I2C..."
+        eerror
+        eerror "*****************************************************************"
+        echo
+	sleep 10
 
         if [ "$LINUX" != "" ]; then
                 einfo "Cross-compiling using:- $LINUX"
