@@ -1,10 +1,13 @@
 # ChangeLog for app-doc/selfhtml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.3 2004/06/24 21:50:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.4 2004/07/20 01:19:28 pylon Exp $
+
+  20 Jul 2004; Lars Weiler <pylon@gentoo.org> selfhtml-8.0-r1.ebuild:
+  The HOMEPAGE has changed.
 
 *selfhtml-8.0-r1 (08 Mar 2004)
 
   08 Mar 2004; Lars Weiler <pylon@gentoo.org> metadata.xml,
   selfhtml-8.0-r1.ebuild:
-  sELFHTML 8.0 with errata-pack 1 (therefore the initial ebuild is named -r1)
+  SELFHTML 8.0 with errata-pack 1 (therefore the initial ebuild is named -r1)
 
