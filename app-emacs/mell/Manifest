@@ -1,5 +1,15 @@
-MD5 32f6090af545ebed66d3dd7a3e8c9534 ChangeLog 1102
-MD5 7796c1a3cd9c4b43cd0f6144d5696dfa mell-1.0.0.ebuild 799
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 667c0cbffa6cbcfa0980d6632269230c ChangeLog 1179
+MD5 fbb9201e711c73981807ae1eb6ea491d mell-1.0.0.ebuild 803
 MD5 b5fdfdb443a94c51bb339c56188361e9 metadata.xml 175
 MD5 1c4b6f5f7782234e50b0fb475ebcf40a files/50mell-gentoo.el 57
 MD5 9e98b1904cbaf6e3a8cc555ad5d526e6 files/digest-mell-1.0.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+Jqc60LfUIagIAkRAtg0AJsEZOAJLYgVdxK6OfHhwEkKa3hbEQCfczDg
+qdcO7NDHktS0SXGfi1w3WQE=
+=vHdc
+-----END PGP SIGNATURE-----
