@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 927d99201b4129fb51bc23188200ef34 ChangeLog 611
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 cd8e29792f3c117ed94edabde2528a02 xpilot-ng-4.6.6.ebuild 971
-MD5 8485e36d53f5cf756f6b7ac5fa8de93f ChangeLog 527
+MD5 d8cd4ccc503d01f3174d9b2c409259f5 xpilot-ng-4.6.6.ebuild 973
 MD5 1152a5b20d966d37c1662c9053d79083 files/digest-xpilot-ng-4.6.6 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBTK+uI1lqEGTUzyQRArjWAJ9zFfXL7KSgaZ4BdLP5xVjF5BU8yQCgyOAx
-KW9tXczViE6hOQclydWkWM0=
-=UJ3x
------END PGP SIGNATURE-----
