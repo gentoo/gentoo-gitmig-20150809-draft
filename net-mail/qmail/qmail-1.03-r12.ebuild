@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.1 2003/08/11 07:35:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.2 2003/08/12 05:47:14 robbat2 Exp $
 
 inherit eutils
 
@@ -46,11 +46,12 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 
-	# This makes life easy
-	EPATCH_OPTS="-d ${S}" 
 
 	# unpack the initial stuff
 	unpack ${P}.tar.gz qmail-tls.patch.tbz2 qmail-smtpd-auth-0.31.tar.gz
+	
+	# This makes life easy
+	EPATCH_OPTS="-d ${S}" 
 
 	# SMTP AUTH
 	cp ${WORKDIR}/qmail-smtpd-auth-0.31/{README.auth,base64.c,base64.h} ${S}
@@ -106,6 +107,11 @@ src_unpack() {
 	# Reject some bad relaying attempts
 	# gentoo bug #18064 
 	epatch ${DISTDIR}/qmail-smtpd-relay-reject
+	
+	# provide badrcptto support
+	# as per bug #17283
+	# patch re-diffed from original at http://www.iecc.com/bad-rcpt-noisy-patch.txt
+	epatch ${FILESDIR}/${PV}-${PR}/bad-rcpt-noisy-patch
 
 	cd ${S}
 
@@ -174,7 +180,7 @@ src_install() {
 	qmail-popup qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-smtpd \
 	sendmail tcp-env qreceipt qsmhook qbiff forward preline \
 	condredirect bouncesaying except maildirmake maildir2mbox \
-	maildirwatch qail elq pinq config-fast
+	maildirwatch qail elq pinq config-fast qmail-newbrt
 
 	into /usr
 	einfo "Installing manpages"
@@ -216,7 +222,7 @@ src_install() {
 	newins ${FILESDIR}/${PV}-${PR}/dot_qmail .qmail
 	fperms 644 /etc/skel/.qmail
 	# for good measure
-	keepdir /etc/skel/.maildir/{cur,new,tmp} /root/.maildir/{cur,new,tmp}
+	keepdir /etc/skel/.maildir/{cur,new,tmp} 
 
 	einfo "Setting up all services (send, smtp, qmtp, qmqp, pop3) ..."
 	insopts -o root -g root -m 755
@@ -235,19 +241,27 @@ src_install() {
 		insinto /var/qmail/supervise/qmail-${i}/log
 		newins ${FILESDIR}/${PV}-${PR}/run-qmail${i}log run
 	done
+	
+	einfo "Installing the qmail startup file ..."
+	insinto /var/qmail
+	insopts -o root -g root -m 755
+	doins ${FILESDIR}/${PV}-${PR}/rc
 
 	einfo "Installing the qmail control file ..."
 	exeinto /var/qmail/bin
+	insopts -o root -g root -m 755
 	doexe ${FILESDIR}/${PV}-${PR}/qmail-control
-
-	einfo "Installing the qmail startup file ..."
-	insinto /var/qmail
-	doins ${FILESDIR}/${PV}-${PR}/rc
 
 	einfo "Insalling some stock configuration files"
 	insinto /var/qmail/control
+	insopts -o root -g root -m 644
 	doins ${FILESDIR}/${PV}-${PR}/conf-*
 	newins ${FILESDIR}/${PV}-${PR}/dot_qmail defaultdelivery
+
+	einfo "Configuration sanity checker"
+	into /var/qmail
+	insopts -o root -g root -m 644
+	dobin ${FILESDIR}/${PV}-${PR}/config-sanity-check
 }
 
 pkg_postinst() {
@@ -290,35 +304,38 @@ pkg_postinst() {
 
 pkg_config() {
 
-	export qhost=`hostname --fqdn`			
 	if [ ${ROOT} = "/" ] ; then
 		if [ ! -f ${ROOT}/var/qmail/control/me ] ; then
+			export qhost=`hostname --fqdn`			
 			${ROOT}/var/qmail/bin/config-fast $qhost 
 		fi
 	fi
 
 	einfo "Accepting relaying by default from all ips configured on this machine."
 	LOCALIPS=`/sbin/ifconfig  | grep inet | cut -d' ' -f 12 -s | cut -b 6-20`
+	[ -e ${ROOT}/etc/tcp.smtp ] && TCPSMTP_EXISTS=1 || TCPSMTP_EXISTS=
+	[ -e ${ROOT}/etc/tcp.qmtp ] && TCPQMTP_EXISTS=1 || TCPQMTP_EXISTS=
+	[ -e ${ROOT}/etc/tcp.qmqp ] && TCPQMQP_EXISTS=1 || TCPQMQP_EXISTS=
 	for ip in $LOCALIPS; do
-		echo "$ip:allow,RELAYCLIENT=\"\",RBLSMTPD=\"\"" >> /etc/tcp.smtp
-		echo "$ip:allow,RELAYCLIENT=\"\"" >> /etc/tcp.qmtp
-		echo "$ip:allow,RELAYCLIENT=\"\"" >> /etc/tcp.qmqp
+		[ -z "${TCPSMTP_EXISTS}" ] && echo "$ip:allow,RELAYCLIENT=\"\"" >> ${ROOT}/etc/tcp.smtp
+		[ -z "${TCPQMTP_EXISTS}" ] && echo "$ip:allow,RELAYCLIENT=\"\"" >> ${ROOT}/etc/tcp.qmtp
+		[ -z "${TCPQMQP_EXISTS}" ] && echo "$ip:allow,RELAYCLIENT=\"\"" >> ${ROOT}/etc/tcp.qmqp
 	done
-	echo ":allow" >> /etc/tcp.smtp
-	echo ":allow" >> /etc/tcp.qmtp
-	echo ":deny" >> /etc/tcp.qmqp
+	[ -z "${TCPSMTP_EXISTS}" ] && echo ":allow" >> ${ROOT}/etc/tcp.smtp
+	[ -z "${TCPQMTP_EXISTS}" ] && echo ":allow" >> ${ROOT}/etc/tcp.qmtp
+	[ -z "${TCPQMQP_EXISTS}" ] && echo ":deny" >>  ${ROOT}/etc/tcp.qmqp
 
 	for i in smtp qmtp qmqp; do
-		tcprules /etc/tcp.${i}.cdb /etc/tcp.${i}.tmp < /etc/tcp.${i}
+		tcprules ${ROOT}/etc/tcp.${i}.cdb ${ROOT}/etc/.tcp.${i}.tmp < ${ROOT}/etc/tcp.${i}
 	done
 
 	if [ `use ssl` ]; then
-	if [ ! -f /var/qmail/control/servercert.pem ]; then
+	if [ ! -f ${ROOT}/var/qmail/control/servercert.pem ]; then
 		echo "Creating a self-signed ssl-cert:"
-		/usr/bin/openssl req -new -x509 -nodes -out /var/qmail/control/servercert.pem -days 366 -keyout /var/qmail/control/servercert.pem
-		chmod 640 /var/qmail/control/servercert.pem
-		chown qmaild.qmail /var/qmail/control/servercert.pem
-		ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem
+		/usr/bin/openssl req -new -x509 -nodes -out ${ROOT}/var/qmail/control/servercert.pem -days 366 -keyout ${ROOT}/var/qmail/control/servercert.pem
+		chmod 640 ${ROOT}/var/qmail/control/servercert.pem
+		chown qmaild.qmail ${ROOT}/var/qmail/control/servercert.pem
+		ln -s /var/qmail/control/servercert.pem ${ROOT}/var/qmail/control/clientcert.pem
 
 		einfo "If You want to have a signed cert, do the following:"
 		einfo "openssl req -new -nodes -out req.pem \\"

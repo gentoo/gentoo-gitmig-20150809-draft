@@ -1,16 +1,12 @@
-#!/bin/sh
 # Configuration file for qmail-qmqpd
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r12/conf-qmqpd,v 1.1 2003/08/11 07:35:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r12/conf-qmqpd,v 1.2 2003/08/12 05:47:14 robbat2 Exp $
 
 # Stuff to run before tcpserver
-QMAIL_TCPSERVER_PRE=""
+#QMAIL_TCPSERVER_PRE=""
 # Stuff to run qmail-qmqpd
-QMAIL_QMQP_PRE=""
+#QMAIL_QMQP_PRE=""
 # Stuff to after qmail-qmqpd
-QMAIL_QMQP_POST=""
+#QMAIL_QMQP_POST=""
 
-# We don't have anything to set QMAILQUEUE to at the moment, so we leave it alone
-#QMAILQUEUE=""
-
-# I don't trust /etc/services to have everything...
+# I don't trust /etc/services to have obscure ports
 TCPSERVER_PORT=628
