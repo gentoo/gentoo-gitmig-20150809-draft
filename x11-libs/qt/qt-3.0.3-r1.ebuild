@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3-r1.ebuild,v 1.1 2002/04/13 01:16:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3-r1.ebuild,v 1.2 2002/04/17 05:04:03 seemant Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -11,14 +11,17 @@ SLOT="3"
 SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-free-${PV}.tar.gz"
 HOMEPAGE="http://www.trolltech.com/"
 
-DEPEND="media-libs/libpng
+DEPEND="virtual/x11
+	media-libs/libpng
 	>=media-libs/libmng-1.0.0
-	opengl? ( virtual/opengl virtual/glu )
+	gif? ( media-libs/giflib
+		media-libs/libungif )
 	nas? ( >=media-libs/nas-1.4.1 )
-	mysql? ( >=dev-db/mysql-3.2.10 )
-	postgres? ( =dev-db/postgresql-7.1.3* )
 	odbc? ( >=dev-db/unixODBC-2.0 )
-	virtual/x11"
+	mysql? ( >=dev-db/mysql-3.2.10 )
+	opengl? ( virtual/opengl virtual/glu )
+	postgres? ( =dev-db/postgresql-7.1.3* )"
+	
 
 QTBASE=/usr/qt/3
 export QTDIR=${S}
