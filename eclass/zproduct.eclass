@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.12 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.13 2004/09/18 16:01:22 batlogg Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -92,7 +92,15 @@ zproduct_pkg_postinst()
 
     #*Use zprod-update to install this zproduct to the default zinstance.
 	debug-print-function ${FUNCNAME} ${*}
-	chown -R zope:root ${ZP_DIR}/${PF}
+    
+    # this is a shared directory, so root should be owner;
+    # zprod-manager or whatever is used to copy products into the
+    # instances has to take care of setting the right permissions in
+    # the target directory
+    
+    chown -R root:root ${ZP_DIR}/${PF}
+    # make shure there is nothing writable in the new dir
+    chmod -R go-w ${ZP_DIR}/${PF}
 	einfo ">>> Installing ${PF} into the \"$(zope-config --zidef-get)\" zinstance..."
 	${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF} 
 }
