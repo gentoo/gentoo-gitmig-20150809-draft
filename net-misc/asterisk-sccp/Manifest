@@ -1,5 +1,5 @@
-MD5 d69d727a5b39287835473189045409c7 asterisk-sccp-0.2.ebuild 902
-MD5 8cdec938044be9c840633c825ba2fe29 ChangeLog 597
+MD5 20399dd677a3774384167134c2fd0fbb ChangeLog 723
+MD5 8389a69e430a9e72e4a39326c8762346 asterisk-sccp-0.2.ebuild 927
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
 MD5 02b226ed4084249e98f947a4832b9aba files/asterisk-sccp-0.2-makefile.diff 867
 MD5 743fb0b56579c0c7b6912c9f3c21924a files/digest-asterisk-sccp-0.2 64

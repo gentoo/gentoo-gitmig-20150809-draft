@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/asterisk-sccp-0.2.ebuild,v 1.5 2004/06/24 23:35:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/asterisk-sccp-0.2.ebuild,v 1.6 2004/09/29 17:30:37 stkn Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~x86"
 LICENSE="GPL-2"
 
-DEPEND=">=net-misc/asterisk-0.5.0"
+DEPEND=">=net-misc/asterisk-0.5.0
+	! >=net-misc/asterisk-1.0.0"
 
 src_unpack() {
 	unpack ${A}
