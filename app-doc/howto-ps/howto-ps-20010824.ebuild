@@ -1,14 +1,14 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-ps/howto-ps-20010824.ebuild,v 1.1 2001/08/25 09:14:45 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-ps/howto-ps-20010824.ebuild,v 1.2 2002/04/27 04:45:46 seemant Exp $
 
-P="Linux-ps-HOWTOs"
-S=${WORKDIR}/${P}
+MY_P="Linux-ps-HOWTOs-${PV}"
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="The LDP howtos, postscript format."
 
-SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/gentoo-sources/${P}-${PV}.tar.gz"
+SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/gentoo-sources/${MY_P}.tar.gz"
 
 HOMEPAGE="http://www.linuxdoc.org"
 

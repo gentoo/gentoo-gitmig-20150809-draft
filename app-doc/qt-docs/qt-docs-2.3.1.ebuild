@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-2.3.1.ebuild,v 1.2 2002/02/03 21:39:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-2.3.1.ebuild,v 1.3 2002/04/27 05:00:43 seemant Exp $
 
 S=${WORKDIR}/qt-${PV}
 DESCRIPTION="QT ${PV} docs, manpages, examples and tutorials"
@@ -36,7 +36,7 @@ src_compile() {
     export LDFLAGS="$LDFLAGS -ldl"
     local myconf
 
-    use opengl							|| myconf="$myconf -no-opengl"
+    use opengl							|| myconf="${myconf} -no-opengl"
     use nas	&& myconf="${myconf} -system-nas-sound"		|| myconf="${myconf} -no-nas-sound"
     use gif	&& myconf="${myconf} -gif"
     [ -n "$DEBUG" ]	&& myconf="${myconf} -debug"		|| myconf="${myconf} -release"
