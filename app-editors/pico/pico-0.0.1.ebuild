@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/pico/pico-0.0.1.ebuild,v 1.11 2004/06/24 22:00:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/pico/pico-0.0.1.ebuild,v 1.12 2004/06/27 22:18:15 vapier Exp $
 
-HOMEPAGE="http://www.washington.edu/pine"
 DESCRIPTION="Pico text editor"
+HOMEPAGE="http://www.washington.edu/pine"
 
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
 IUSE=""
-KEYWORDS="x86 ppc sparc "
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 PROVIDE="virtual/editor"
 

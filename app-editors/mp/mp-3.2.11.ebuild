@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.2.11.ebuild,v 1.6 2004/06/24 21:59:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.2.11.ebuild,v 1.7 2004/06/27 22:16:46 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc"
 IUSE="ncurses gtk"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ncurses? ( sys-libs/ncurses )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	!gtk? ( sys-libs/ncurses )"

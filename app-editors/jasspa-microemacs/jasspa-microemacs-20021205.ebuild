@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20021205.ebuild,v 1.4 2004/06/24 21:56:26 agriffis Exp $
-
-IUSE="X"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20021205.ebuild,v 1.5 2004/06/27 22:14:10 vapier Exp $
 
 MY_PV=${PV:2}	# 20021205 -> 021205
 
@@ -22,8 +20,9 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE="X"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/ncurses
 	X? ( virtual/x11 )"
 

@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r1.ebuild,v 1.7 2004/06/24 22:00:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.5-r1.ebuild,v 1.8 2004/06/27 22:17:46 vapier Exp $
 
 DESCRIPTION="Vi clone"
 HOMEPAGE="http://www.bostic.com/vi/"
 SRC_URI="http://www.kotnet.org/~skimo/nvi/devel/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="Sleepycat"
-KEYWORDS="x86 ~ppc ~sparc hppa alpha ~mips"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc ~mips alpha hppa"
 IUSE=""
 
-DEPEND="virtual/glibc
-		=sys-libs/db-3.2*"
+DEPEND="virtual/libc
+	=sys-libs/db-3.2*"
 PROVIDE="virtual/editor"
 
 src_unpack() {
@@ -37,5 +37,5 @@ src_compile() {
 
 src_install() {
 	cd ${S}/build.unix
-	einstall
+	einstall || die
 }

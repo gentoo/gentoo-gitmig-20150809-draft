@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.18 2004/06/24 22:04:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.19 2004/06/27 22:21:35 vapier Exp $
 
 inherit eutils
-
-IUSE="gpm postgres xface tiff gtk jpeg mule nas esd X png gnome"
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -12,20 +10,22 @@ SANDBOX_DISABLED="1"
 REAL_P=${P//-gtk/}
 S="${WORKDIR}/${REAL_P}"
 
-DESCRIPTION="highly customizable text editor and application development system"
-
 EFS=1.29
 BASE=1.66
 MULE=1.42
-
+DESCRIPTION="highly customizable text editor and application development system"
+HOMEPAGE="http://www.xemacs.org/"
 SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${REAL_P}.tar.gz
 	http://ftp.xemacs.org/pub/packages/efs-${EFS}-pkg.tar.gz
 	http://ftp.xemacs.org/pub/packages/xemacs-base-${BASE}-pkg.tar.gz
 	http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz"
 
-HOMEPAGE="http://www.xemacs.org"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 sparc"
+IUSE="gpm postgres xface tiff gtk jpeg mule nas esd X png gnome"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	!virtual/xemacs
 
 	>=sys-libs/gdbm-1.8.0
@@ -48,15 +48,9 @@ RDEPEND="virtual/glibc
 	jpeg? ( media-libs/jpeg )
 
 	X? ( virtual/x11 )"
-
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
-
 PROVIDE="virtual/xemacs"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
 
 src_unpack() {
 	cd ${WORKDIR}

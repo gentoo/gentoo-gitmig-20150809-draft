@@ -1,30 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.16 2004/06/24 22:03:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.17 2004/06/27 22:21:15 vapier Exp $
 
 inherit eutils
-
-IUSE="gpm esd postgres xface nas X jpeg tiff png mule"
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
 
-LICENSE="GPL-2"
-
-DESCRIPTION="XEmacs is a highly customizable open source text editor and application development system."
 EFS=1.29
 BASE=1.68
 MULE=1.42
-
+DESCRIPTION="highly customizable open source text editor and application development system"
+HOMEPAGE="http://www.xemacs.org/"
 SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
 	http://ftp.xemacs.org/packages/efs-${EFS}-pkg.tar.gz
 	http://ftp.xemacs.org/packages/xemacs-base-${BASE}-pkg.tar.gz
 	mule? ( http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz )"
 
-HOMEPAGE="http://www.xemacs.org"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
+IUSE="gpm esd postgres xface nas X jpeg tiff png mule"
 
-
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	!virtual/xemacs
 
 	>=sys-libs/gdbm-1.8.0
@@ -43,16 +41,9 @@ RDEPEND="virtual/glibc
 	tiff? ( media-libs/tiff )
 	png? ( =media-libs/libpng-1.2* )
 	jpeg? ( media-libs/jpeg )"
-
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
-
 PROVIDE="virtual/xemacs virtual/editor"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
-
 
 src_unpack() {
 	unpack ${P}.tar.gz

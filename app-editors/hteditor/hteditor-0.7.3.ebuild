@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.7.3.ebuild,v 1.5 2004/06/24 21:56:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.7.3.ebuild,v 1.6 2004/06/27 22:13:51 vapier Exp $
 
 DESCRIPTION="editor for executable files"
 HOMEPAGE="http://hte.sourceforge.net/"
@@ -11,14 +11,13 @@ SLOT="0"
 KEYWORDS="x86 -alpha"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S="${WORKDIR}/ht-${PV}"
 
 src_compile() {
 	chmod +x configure
-	local myconf="--prefix=/usr --sysconfdir=/etc"
-	./configure ${myconf}  || die
+	./configure --prefix=/usr --sysconfdir=/etc || die
 	emake || die
 }
 

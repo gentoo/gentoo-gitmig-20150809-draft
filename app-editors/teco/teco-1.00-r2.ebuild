@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r2.ebuild,v 1.3 2004/06/24 22:02:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r2.ebuild,v 1.4 2004/06/27 22:19:30 vapier Exp $
 
 inherit ccc
 
@@ -17,10 +17,10 @@ SLOT="0"
 KEYWORDS="alpha x86"
 IUSE="doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/libtermcap-compat
 	>=sys-apps/sed-4"
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sys-libs/libtermcap-compat"
 PROVIDE="virtual/editor"
 

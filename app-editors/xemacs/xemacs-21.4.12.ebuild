@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.17 2004/06/24 22:03:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.18 2004/06/27 22:21:15 vapier Exp $
 
 inherit eutils
 
-IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna  athena neXt Xaw3d"
+DESCRIPTION="highly customizable open source text editor and application development system"
+HOMEPAGE="http://www.xemacs.org/"
+SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
+	http://www.malfunction.de/afterstep/files/NeXT_XEmacs.tar.gz"
 
 LICENSE="GPL-2"
-DESCRIPTION="XEmacs is a highly customizable open source text editor and application development system."
-
-SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
-		 http://www.malfunction.de/afterstep/files/NeXT_XEmacs.tar.gz"
-
-HOMEPAGE="http://www.xemacs.org"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc alpha amd64"
+IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna  athena neXt Xaw3d"
 
 # esound is know to cause problems in XEmacs
 #esd? ( media-sound/esound )
-
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	!virtual/xemacs
 
 	>=sys-libs/gdbm-1.8.0
@@ -46,19 +45,12 @@ RDEPEND="virtual/glibc
 
 	canna? ( app-i18n/canna )
 	!amd64? ( freewnn? ( app-i18n/freewnn ) )"
-
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
-
 PDEPEND="app-xemacs/efs
-		 app-xemacs/xemacs-base
-		 mule? app-xemacs/mule-base"
-
+	app-xemacs/xemacs-base
+	mule? app-xemacs/mule-base"
 PROVIDE="virtual/xemacs virtual/editor"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="amd64 x86 ~ppc alpha sparc"
 
 src_unpack() {
 	unpack ${P}.tar.gz

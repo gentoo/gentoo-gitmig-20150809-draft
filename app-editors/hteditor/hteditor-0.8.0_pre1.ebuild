@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.8.0_pre1.ebuild,v 1.2 2004/06/24 21:56:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.8.0_pre1.ebuild,v 1.3 2004/06/27 22:13:51 vapier Exp $
 
 DESCRIPTION="editor for executable files"
 HOMEPAGE="http://hte.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hte/ht-${PV/_/}.tar.bz2"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc -alpha"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	virtual/x11
 	sys-libs/ncurses"
 
