@@ -1,6 +1,35 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.20 2004/07/20 18:20:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.21 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> i2c-2.7.0.ebuild,
+  i2c-2.8.0.ebuild, i2c-2.8.1.ebuild, i2c-2.8.2.ebuild, i2c-2.8.3.ebuild,
+  i2c-2.8.4.ebuild, i2c-2.8.7.ebuild:
+  Masked i2c-2.8.7.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> i2c-2.7.0.ebuild,
+  i2c-2.8.0.ebuild, i2c-2.8.1.ebuild, i2c-2.8.2.ebuild, i2c-2.8.3.ebuild,
+  i2c-2.8.4.ebuild:
+  Masked i2c-2.8.4.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> i2c-2.7.0.ebuild,
+  i2c-2.8.0.ebuild, i2c-2.8.1.ebuild, i2c-2.8.2.ebuild, i2c-2.8.3.ebuild:
+  Masked i2c-2.8.3.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> i2c-2.7.0.ebuild,
+  i2c-2.8.0.ebuild, i2c-2.8.1.ebuild, i2c-2.8.2.ebuild:
+  Masked i2c-2.8.2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> i2c-2.7.0.ebuild,
+  i2c-2.8.0.ebuild, i2c-2.8.1.ebuild:
+  Masked i2c-2.8.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> i2c-2.7.0.ebuild,
+  i2c-2.8.0.ebuild:
+  Masked i2c-2.8.0.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> i2c-2.7.0.ebuild:
+  Masked i2c-2.7.0.ebuild stable for ppc
 
   20 Jul 2004; <plasmaroo@gentoo.org> i2c-2.8.2.ebuild, i2c-2.8.3.ebuild,
   i2c-2.8.4.ebuild, i2c-2.8.7.ebuild:

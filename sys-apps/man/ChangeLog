@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.55 2004/08/21 21:30:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.56 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> man-1.5m-r1.ebuild,
+  man-1.5m.ebuild:
+  Masked man-1.5m.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> man-1.5m-r1.ebuild:
+  Masked man-1.5m-r1.ebuild stable for ppc
 
   21 Aug 2004; Joshua Kinard <kumba@gentoo.org> man-1.5m-r1.ebuild:
   Added ~mips to KEYWORDS.

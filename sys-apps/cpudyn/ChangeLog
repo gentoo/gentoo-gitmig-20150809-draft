@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/cpudyn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/ChangeLog,v 1.10 2004/06/24 22:01:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/ChangeLog,v 1.11 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpudyn-0.4.7-r1.ebuild, cpudyn-0.5.0.ebuild, cpudyn-0.6.1.ebuild,
+  cpudyn-0.99.0.ebuild:
+  Masked cpudyn-0.99.0.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpudyn-0.4.7-r1.ebuild, cpudyn-0.5.0.ebuild, cpudyn-0.6.1.ebuild:
+  Masked cpudyn-0.6.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpudyn-0.4.7-r1.ebuild, cpudyn-0.5.0.ebuild:
+  Masked cpudyn-0.5.0.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpudyn-0.4.7-r1.ebuild:
+  Masked cpudyn-0.4.7-r1.ebuild stable for ppc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> cpudyn-0.5.0.ebuild,
   cpudyn-0.6.1.ebuild, cpudyn-0.99.0.ebuild:

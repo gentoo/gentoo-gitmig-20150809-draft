@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.46 2004/08/22 22:15:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.47 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  hotplug-20040401.ebuild:
+  Masked hotplug-20040401.ebuild stable for ppc
 
   23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> hotplug-20040401.ebuild:
   Stable on alpha.

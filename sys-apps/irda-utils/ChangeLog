@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/irda-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/ChangeLog,v 1.12 2004/06/27 11:11:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/ChangeLog,v 1.13 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  irda-utils-0.9.15.ebuild:
+  Masked irda-utils-0.9.15.ebuild stable for ppc
 
   27 Jun 2004; David Holm <dholm@gentoo.org> irda-utils-0.9.15.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.12-r1.ebuild,v 1.11 2004/07/15 02:26:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.12-r1.ebuild,v 1.12 2004/09/03 21:03:24 pvdabeel Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://procps.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc sparc alpha ~hppa mips ia64"
+KEYWORDS="x86 amd64 ppc sparc alpha ~hppa mips ia64"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 DEPEND="${RDEPEND}

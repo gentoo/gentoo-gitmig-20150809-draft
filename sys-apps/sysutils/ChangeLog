@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sysutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysutils/ChangeLog,v 1.5 2004/08/24 03:34:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysutils/ChangeLog,v 1.6 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  sysutils-0.1.0.ebuild:
+  Masked sysutils-0.1.0.ebuild stable for ppc
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> sysutils-0.1.0.ebuild:
   Changed SRC_URI to use mirror:// syntax.

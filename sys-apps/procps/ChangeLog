@@ -1,6 +1,28 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.80 2004/08/20 06:09:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.81 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  procps-3.1.12-r1.ebuild, procps-3.2.0.ebuild, procps-3.2.1.ebuild,
+  procps-3.2.2-r1.ebuild, procps-3.2.3.ebuild:
+  Masked procps-3.2.3.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  procps-3.1.12-r1.ebuild, procps-3.2.0.ebuild, procps-3.2.1.ebuild,
+  procps-3.2.2-r1.ebuild:
+  Masked procps-3.2.2-r1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  procps-3.1.12-r1.ebuild, procps-3.2.0.ebuild, procps-3.2.1.ebuild:
+  Masked procps-3.2.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  procps-3.1.12-r1.ebuild, procps-3.2.0.ebuild:
+  Masked procps-3.2.0.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  procps-3.1.12-r1.ebuild:
+  Masked procps-3.1.12-r1.ebuild stable for ppc
 
   20 Aug 2004; Joshua Kinard <kumba@gentoo.org>
   files/procps-mips-define-pagesize.patch:

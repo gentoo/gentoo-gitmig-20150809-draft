@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.7.ebuild,v 1.8 2004/08/30 10:36:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.7.ebuild,v 1.9 2004/09/03 21:03:24 pvdabeel Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="virtual/os-headers
 RDEPEND=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc amd64 ~mips"
+KEYWORDS="~x86 ppc amd64 ~mips"
 
 # Note: To use this ebuild, you should have the usr/src/linux symlink to
 # the kernel directory that pcmcia-cs should use for configuration.

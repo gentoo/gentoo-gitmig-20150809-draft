@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.112 2004/08/26 16:11:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.113 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  coreutils-5.2.1-r1.ebuild, coreutils-5.2.1-r2.ebuild,
+  coreutils-5.2.1.ebuild:
+  Masked coreutils-5.2.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  coreutils-5.2.1-r1.ebuild, coreutils-5.2.1-r2.ebuild:
+  Masked coreutils-5.2.1-r2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  coreutils-5.2.1-r1.ebuild:
+  Masked coreutils-5.2.1-r1.ebuild stable for ppc
 
   26 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> files/DIR_COLORS:
   Added rxvt-unicode to the DIR_COLORS supported terminal list

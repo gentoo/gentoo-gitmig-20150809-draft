@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.21 2004/08/31 10:40:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.22 2004/09/03 21:03:23 pvdabeel Exp $
+
+*dmapi-2.2.0 (03 Sep 2004)
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dmapi-2.2.0.ebuild:
+  Masked dmapi-2.2.0.ebuild stable for ppc
 
   31 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> :
   Cleanup of XFS-related apps: dmapi, acl, xfsdump, attr.

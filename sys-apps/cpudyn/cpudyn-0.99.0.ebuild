@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.99.0.ebuild,v 1.4 2004/06/24 22:01:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.99.0.ebuild,v 1.5 2004/09/03 21:03:23 pvdabeel Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mnm.uib.es/~gallir/${PN}/"
 SRC_URI="http://mnm.uib.es/~gallir/${PN}/download/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc amd64"
+KEYWORDS="~x86 ppc amd64"
 IUSE=""
 S=${WORKDIR}/${PN}
 

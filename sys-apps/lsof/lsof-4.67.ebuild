@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.67.ebuild,v 1.7 2004/06/30 02:49:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.67.ebuild,v 1.8 2004/09/03 21:03:24 pvdabeel Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}/${MY_P}_src
@@ -11,7 +11,7 @@ SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~hppa amd64"
+KEYWORDS="x86 ppc ~sparc alpha ~hppa amd64"
 IUSE=""
 
 DEPEND="virtual/libc"

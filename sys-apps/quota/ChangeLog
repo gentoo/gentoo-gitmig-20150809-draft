@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/quota
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.29 2004/07/01 21:37:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.30 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  quota-3.06-r2.ebuild:
+  Masked quota-3.06-r2.ebuild stable for ppc
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> quota-3.06-r1.ebuild,
   quota-3.06-r2.ebuild, quota-3.06.ebuild, quota-3.09.ebuild,

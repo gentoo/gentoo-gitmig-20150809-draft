@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/htop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/htop/ChangeLog,v 1.9 2004/08/22 12:23:41 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/htop/ChangeLog,v 1.10 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> htop-0.3.1.ebuild,
+  htop-0.3.2.ebuild, htop-0.3.3.ebuild, htop-0.4.ebuild:
+  Masked htop-0.4.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> htop-0.3.1.ebuild,
+  htop-0.3.2.ebuild, htop-0.3.3.ebuild:
+  Masked htop-0.3.3.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> htop-0.3.1.ebuild,
+  htop-0.3.2.ebuild:
+  Masked htop-0.3.2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> htop-0.3.1.ebuild:
+  Masked htop-0.3.1.ebuild stable for ppc
 
 *htop-0.4 (22 Aug 2004)
 

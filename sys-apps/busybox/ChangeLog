@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.40 2004/08/25 01:11:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.41 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  busybox-1.00_pre8.ebuild, busybox-1.00_rc3.ebuild:
+  Masked busybox-1.00_rc3.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  busybox-1.00_pre8.ebuild:
+  Masked busybox-1.00_pre8.ebuild stable for ppc
 
   24 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> busybox-1.00_rc3.ebuild:
   Keyworded ~sparc

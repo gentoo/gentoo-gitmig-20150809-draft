@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/daemontools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/ChangeLog,v 1.22 2004/08/30 03:17:23 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/ChangeLog,v 1.23 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  daemontools-0.76-r4.ebuild:
+  Masked daemontools-0.76-r4.ebuild stable for ppc
 
   29 Aug 2004; Tom Gall <tgall@gentoo.org> daemontools-0.76-r4.ebuild:
   stable on ppc64, bug #61744

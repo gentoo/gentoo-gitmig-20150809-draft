@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acct
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acct/ChangeLog,v 1.7 2004/08/24 02:41:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acct/ChangeLog,v 1.8 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> acct-6.3.5.ebuild:
+  Masked acct-6.3.5.ebuild stable for ppc
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> acct-6.3.5.ebuild:
   Changed SRC_URI to use mirror:// syntax.

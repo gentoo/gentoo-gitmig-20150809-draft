@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/nbench
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/ChangeLog,v 1.9 2004/06/30 22:03:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbench/ChangeLog,v 1.10 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  nbench-2.2.1.ebuild:
+  Masked nbench-2.2.1.ebuild stable for ppc
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> nbench-2.2.1.ebuild:
   glibc -> libc

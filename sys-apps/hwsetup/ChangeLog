@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.13 2004/07/27 12:30:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.14 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  hwsetup-1.0-r1.ebuild, hwsetup-1.0-r2.ebuild:
+  Masked hwsetup-1.0-r2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  hwsetup-1.0-r1.ebuild:
+  Masked hwsetup-1.0-r1.ebuild stable for ppc
 
 *hwsetup-1.0-r2 (27 Jul 2004)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.24.ebuild,v 1.2 2004/06/24 22:11:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.24.ebuild,v 1.3 2004/09/03 21:03:23 pvdabeel Exp $
 
 DESCRIPTION="Brings up/down ethernet ports automatically with cable detection"
 HOMEPAGE="http://0pointer.de/lennart/projects/ifplugd/"
 SRC_URI="http://0pointer.de/lennart/projects/ifplugd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ppc"
 IUSE="doc"
 DEPEND=">=dev-libs/libdaemon-0.5
 	doc? ( app-doc/doxygen net-www/lynx )"

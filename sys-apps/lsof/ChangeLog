@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/lsof
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.23 2004/07/12 02:29:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.24 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lsof-4.67.ebuild,
+  lsof-4.69.ebuild, lsof-4.71.ebuild:
+  Masked lsof-4.71.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lsof-4.67.ebuild,
+  lsof-4.69.ebuild:
+  Masked lsof-4.69.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lsof-4.67.ebuild:
+  Masked lsof-4.67.ebuild stable for ppc
 
   11 Jul 2004; Tom Gall <tgall@gentoo.org> lsof-4.71.ebuild:
   stable on ppc64, bug #56286

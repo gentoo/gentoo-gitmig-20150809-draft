@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/powerpc-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.13 2004/08/25 14:57:02 lu_zero Exp $
+# $Id: ChangeLog,v 1.14 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  powerpc-utils-1.1.3-r10.ebuild:
+  Masked powerpc-utils-1.1.3-r10.ebuild stable for ppc
 
 *powerpc-utils-1.1.3-r10 (25 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r1.ebuild,v 1.12 2004/07/15 02:46:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r1.ebuild,v 1.13 2004/09/03 21:03:24 pvdabeel Exp $
 
 inherit gnuconfig
 
@@ -9,7 +9,7 @@ inherit gnuconfig
 DESCRIPTION="USB enumeration utilities"
 SRC_URI="http://usb.cs.tum.edu/download/usbutils/${P}.tar.gz"
 HOMEPAGE="http://usb.cs.tum.edu/"
-KEYWORDS="x86 amd64 ~ppc ~sparc hppa alpha"
+KEYWORDS="x86 amd64 ppc ~sparc hppa alpha"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"

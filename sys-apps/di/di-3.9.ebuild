@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/di-3.9.ebuild,v 1.9 2004/07/15 01:43:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/di-3.9.ebuild,v 1.10 2004/09/03 21:03:23 pvdabeel Exp $
 
 DESCRIPTION="Disk Information Utility"
 SRC_URI="http://www.gentoo.com/di/${P}.tar.gz"
 HOMEPAGE="http://www.gentoo.com/di/"
-KEYWORDS="x86 amd64 ia64 ~ppc"
+KEYWORDS="x86 amd64 ia64 ppc"
 IUSE=""
 LICENSE="as-is"
 DEPEND=""

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/at
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.17 2004/08/24 02:48:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.18 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  at-3.1.8-r10.ebuild:
+  Masked at-3.1.8-r10.ebuild stable for ppc
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> at-3.1.8-r10.ebuild,
   at-3.1.8-r9.ebuild:

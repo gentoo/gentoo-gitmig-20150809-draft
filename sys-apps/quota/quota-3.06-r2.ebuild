@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06-r2.ebuild,v 1.9 2004/07/01 21:37:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06-r2.ebuild,v 1.10 2004/09/03 21:03:24 pvdabeel Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~mips amd64 ~ia64"
+KEYWORDS="x86 ppc sparc ~alpha ~hppa ~mips amd64 ~ia64"
 
 DEPEND="virtual/libc
 	tcpd? ( sys-apps/tcp-wrappers )"

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/less
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.32 2004/08/21 21:19:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.33 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> less-382-r2.ebuild,
+  less-382.ebuild:
+  Masked less-382.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> less-382-r2.ebuild:
+  Masked less-382-r2.ebuild stable for ppc
 
   21 Aug 2004; Joshua Kinard <kumba@gentoo.org> less-382-r2.ebuild:
   Marked stable on mips.

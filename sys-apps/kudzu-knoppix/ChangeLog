@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kudzu-knoppix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/ChangeLog,v 1.10 2004/06/27 18:28:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/ChangeLog,v 1.11 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  kudzu-knoppix-1.1.36.ebuild:
+  Masked kudzu-knoppix-1.1.36.ebuild stable for ppc
 
   27 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   kudzu-knoppix-1.1.36.ebuild:

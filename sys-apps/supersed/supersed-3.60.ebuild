@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.9 2004/07/22 04:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.10 2004/09/03 21:03:24 pvdabeel Exp $
 
 MY_P=sed-${PV}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://sed.sourceforge.net/grabbag/ssed/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc mips ~alpha amd64"
+KEYWORDS="x86 sparc mips ~alpha amd64 ppc"
 IUSE="nls static"
 
 DEPEND="virtual/libc

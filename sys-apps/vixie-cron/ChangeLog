@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.23 2004/08/28 00:51:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.24 2004/09/03 21:03:24 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  vixie-cron-3.0.1-r4.ebuild, vixie-cron-3.0.1-r5.ebuild:
+  Masked vixie-cron-3.0.1-r5.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  vixie-cron-3.0.1-r4.ebuild:
+  Masked vixie-cron-3.0.1-r4.ebuild stable for ppc
 
   28 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   +files/vixie-cron-4.1-cron.deny, vixie-cron-4.1.ebuild:

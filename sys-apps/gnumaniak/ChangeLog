@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gnumaniak
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnumaniak/ChangeLog,v 1.7 2004/06/30 15:51:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnumaniak/ChangeLog,v 1.8 2004/09/03 21:03:23 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnumaniak-1.8.ebuild:
+  Masked gnumaniak-1.8.ebuild stable for ppc
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> gnumaniak-1.8.ebuild:
   sync IUSE (missing)

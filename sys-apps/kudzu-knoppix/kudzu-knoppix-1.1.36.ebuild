@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.12 2004/06/30 02:42:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.13 2004/09/03 21:03:24 pvdabeel Exp $
 
 MY_PV=${PV}-2
 S=${WORKDIR}/kudzu-${PV}
@@ -10,7 +10,7 @@ SRC_URI="http://developer.linuxtag.net/knoppix/sources/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc alpha -sparc -mips"
+KEYWORDS="x86 amd64 ppc alpha -sparc -mips"
 IUSE=""
 
 RDEPEND="dev-libs/newt"
