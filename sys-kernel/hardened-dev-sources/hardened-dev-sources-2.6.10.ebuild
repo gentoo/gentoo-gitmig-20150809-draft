@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.10.ebuild,v 1.1 2005/01/11 21:15:57 tocharian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/hardened-dev-sources-2.6.10.ebuild,v 1.2 2005/01/14 09:08:19 tocharian Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -19,7 +19,7 @@ UNIPATCH_DOCS="${WORKDIR}/patches/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGP
 DESCRIPTION="Hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
 SRC_URI="${KERNEL_URI} ${HGPV_SRC}"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 pkg_postinst() {
 	postinst_sources
