@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1_pre5.ebuild,v 1.1 2003/03/12 10:01:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1_pre5.ebuild,v 1.2 2003/04/06 07:10:14 george Exp $
 
 IUSE="X svga aalib ggi"
 
@@ -13,7 +13,7 @@ DESCRIPTION="A very fast real-time fractal zoomer"
 HOMEPAGE="http://sourceforge.net/projects/xaos/"
 SRC_URI="mirror://sourceforge/xaos/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
