@@ -1,6 +1,17 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.46 2004/03/08 04:58:22 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.47 2004/03/10 05:08:34 iggy Exp $
+
+*courier-0.45.1 (09 Mar 2004)
+
+  09 Mar 2004; Brian Jackson <iggy@gentoo.org> courier-0.44.0.ebuild,
+  courier-0.44.2.20040201.ebuild, courier-0.44.2.ebuild,
+  courier-0.45.0.ebuild, courier-0.45.1.ebuild, files/courier,
+  files/courier-authdaemond, files/courier-esmtpd, files/courier-esmtpd-msa,
+  files/courier-esmtpd-ssl, files/courier-filterd, files/courier-imapd,
+  files/courier-imapd-ssl, files/courier-ldapaliasd, files/courier-mta,
+  files/courier-pop3d, files/courier-pop3d-ssl, files/gentoo.diff.bz2:
+  version bump, fixes 2 minor bugs only
 
 *courier-0.45.0 (07 Mar 2004)
 
