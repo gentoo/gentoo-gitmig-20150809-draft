@@ -109,6 +109,14 @@ x11-themes/gtk-xfce-engine
 >=gnome-base/gnome-panel-2.0.4
 >=gnome-base/libgnomeprintui-1.116.0
 >=gnome-base/libgnomeprint-1.116.0
+>=gnome-base/gnome-vfs-2.0.2
+>=media-gfx/eog-1.0.2
+>=gnome-base/gconf-1.2.1
+>=x11-libs/libwnck-0.15
+>=x11-terms/gnome-terminal-2.0.1
+>=net-libs/linc-0.5.2
+>=gnome-base/ORBit2-2.4.1
+
 
 # Donny Davies <woodchip@gentoo.org> (03 Aug 2002)
 # Needs to wait for the next baselayout release.
