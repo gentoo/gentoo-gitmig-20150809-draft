@@ -1,13 +1,13 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksplash-ml-themes/ksplash-ml-themes-20020705.ebuild,v 1.2 2002/07/08 14:04:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksplash-ml-themes/ksplash-ml-themes-20020705.ebuild,v 1.3 2002/07/27 10:44:32 seemant Exp $
 inherit kde-functions
 set-kdedir 3
 
 LICENSE="GPL-2"
 HOMEPAGE="http://www.shadowcom.net/Software/ksplash-ml/"
 DESCRIPTION="Extra theme packagse for ksplash-ml"
-SLOT="0"
+
 KEYWORDS="x86"
 
 newdepend "x11-misc/ksplash-ml"
