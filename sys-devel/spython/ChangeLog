@@ -1,11 +1,17 @@
 # ChangeLog for sys-devel/spython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.5 2002/12/13 11:00:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.6 2003/02/10 07:22:01 seemant Exp $
+
+*spython-2.0-r9 (14 Mar 2002)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Formatting changes (try -> || die; also spaces -> tabs). And sed
+  expression delimiters from / to :, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*spython-2.0-r9 (14 Mar 2002)
-
   23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Removed bootcd USE flag
 
