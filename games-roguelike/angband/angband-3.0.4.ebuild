@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.4.ebuild,v 1.1 2004/03/09 07:34:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.4.ebuild,v 1.2 2004/03/10 23:16:12 mr_bones_ Exp $
 
 inherit games
 
@@ -30,6 +30,11 @@ src_unpack() {
 	sed -i \
 		-e "s:/games/:/:" configure \
 			|| die "sed configure failed"
+	# Bah.  silly POSIX (bug #44294)
+	sed -i \
+		-e '/chown/ s/root\./root:/' \
+			lib/{apex,bone,data,save}/Makefile.in \
+				|| die "chown sed failed"
 }
 
 src_compile() {
