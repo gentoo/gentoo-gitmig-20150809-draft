@@ -1,6 +1,10 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.19 2003/09/07 19:21:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.20 2003/09/14 23:01:04 liquidx Exp $
+
+  09 Sep 2003; Alastair Tse <liquidx@gentoo.org> realplayer-8-r2.ebuild,
+  realplayer-8-r3.ebuild, realplayer-8-r4.ebuild, realplayer-8-r6.ebuild:
+  cleanup and bumping -r6 to stable x86
 
   07 Sep 2003; Jason Wever <weeve@gentoo.org> realplayer-8-r6.ebuild:
   Added fix for bug #15314.

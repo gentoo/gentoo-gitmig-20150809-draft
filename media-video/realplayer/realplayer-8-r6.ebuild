@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.7 2003/09/07 19:21:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.8 2003/09/14 23:01:05 liquidx Exp $
 
 inherit nsplugins
 
@@ -33,7 +33,7 @@ SRC_URI="x86? ( http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tg
 
 LICENSE="realplayer8"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 # Fix for bug 15314
 DEPEND="virtual/glibc
@@ -45,7 +45,7 @@ BASE="/opt/RealPlayer8"
 S=${WORKDIR}
 
 pkg_setup() {
-	if [ ! -f ${DISTDIR}/${MY_A} ] ; then
+	if [ ! -f ${DISTDIR}/${MY_A} ]; then
 		eerror "Please go to:"
 		eerror "http://forms.real.com/real/player/unix/unix.html"
 		eerror "And download the appropriate realplayer binary installer"
