@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha ~amd64 ~hppa"
 
 DEPEND="virtual/glibc
-	>=net-dialup/ppp
+	net-dialup/ppp
 	>=net-libs/wvstreams-3.74"
 
 src_unpack() {
