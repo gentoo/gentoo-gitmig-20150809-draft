@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r1.ebuild,v 1.2 2002/12/16 18:12:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r1.ebuild,v 1.3 2002/12/16 18:38:19 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -297,14 +297,14 @@ src_install() {
 	dodir /etc/env.d
 	echo "LDPATH=\"${FULLPATH}\"" > ${D}/etc/env.d/05gcc${GCC_SUFFIX}
 	# Also set CC and CXX
-	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
-	echo "CXX=\"g++\"" >> ${D}/etc/env.d/05gcc
+	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc${GCC_SUFFIX}
+	echo "CXX=\"g++\"" >> ${D}/etc/env.d/05gcc${GCC_SUFFIX}
 	
-	if ! build_multiple
-	then
-		dosym /usr/bin/cpp /lib/cpp
-		dosym gcc /usr/bin/cc
-	fi
+	# Install wrappers
+	exeinto /lib
+	doexe ${FILESDIR}/cpp
+	exeinto /usr/bin
+	doexe ${FILESDIR}/cc
 
 # This is fixed via the linker scripts (bug #4411) ....
 #
