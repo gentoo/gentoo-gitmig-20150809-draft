@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.7.ebuild,v 1.7 2004/07/31 19:09:37 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.7.ebuild,v 1.8 2004/12/04 14:01:42 dsd Exp $
 
 DESCRIPTION="Advanced TFTP implementation client/server"
 HOMEPAGE="ftp://ftp.mamalinux.com/pub/atftp/"
@@ -13,7 +13,7 @@ IUSE="tcpd"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	!virtual/tftp"
-PROVIDE="virtual/tfp"
+PROVIDE="virtual/tftp"
 
 src_compile () {
 	econf `use_enable tcpd libwrap` || die "./configure failed"
