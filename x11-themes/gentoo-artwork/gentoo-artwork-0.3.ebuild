@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.3.ebuild,v 1.1 2003/09/12 14:00:31 tad Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.3.ebuild,v 1.2 2003/09/12 21:38:12 msterret Exp $
 
 DESCRIPTION="A collection of miscellaneous Gentoo Linux logos and artwork"
 SRC_URI="mirror://gentoo/gentoo-artwork-0.2.tar.bz2 mirror://gentoo/gentoo-artwork-0.3.tar.bz2"
