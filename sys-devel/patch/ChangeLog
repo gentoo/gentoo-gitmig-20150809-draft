@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/patch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.14 2003/06/18 01:39:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.15 2003/07/01 15:22:06 todd Exp $
 
 *patch-2.5.9 (17 Jun 2003)
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> patch-2.5.9.ebulid:
+  set stable on sparc
 
   17 Jun 2003; Seemant Kulleen <seemant@gentoo.org> patch-2.5.4-r4.ebuild,
   patch-2.5.4-r5.ebuild, patch-2.5.9.ebuild:

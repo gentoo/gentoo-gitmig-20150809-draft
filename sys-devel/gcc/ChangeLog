@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.104 2003/06/14 18:21:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.105 2003/07/01 15:27:57 todd Exp $
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> gcc-3.2.3-r1.ebuild:
+  set stable on sparc
 
   14 Jun 2003; Joshua Kinard <kumba@gentoo.org> gcc-3.2.3-r1.ebuild:
   Changed ~mips to mips in KEYWORDS
