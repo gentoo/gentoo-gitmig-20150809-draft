@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 DEPEND="sys-devel/gcc"
 RDEPEND=""
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc alpha"
 
 src_unpack() {
 	unpack ${A}

@@ -22,7 +22,7 @@ DEPEND="virtual/python
 	app-text/openjade
 	net-www/lynx"
 
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc alpha"
 
 src_compile() {
 	./configure 	\

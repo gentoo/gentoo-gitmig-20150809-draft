@@ -1,10 +1,13 @@
 # ChangeLog for app-text/noweb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.8 2003/02/12 05:33:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.9 2003/03/10 22:42:19 agriffis Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *noweb-2.9-r2 (30 Apr 2002)
+
+  10 Mar 2003; Aron Griffis <agriffis@gentoo.org> noweb-2.9-r2.ebuild:
+  Mark stable on alpha
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> noweb-2.9-r2.ebuild :
   Added LICENSE, SLOT.
