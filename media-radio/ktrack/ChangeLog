@@ -1,0 +1,9 @@
+# ChangeLog for media-radio/ktrack
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ktrack/ChangeLog,v 1.1 2004/06/29 05:08:01 killsoft Exp $
+
+*ktrack-0.3.0_rc1 (29 Jun 2004)
+
+  29 Jun 2004; Robb Romans <killsoft@gentoo.org> +ktrack-0.3.0_rc1.ebuild:
+  New ebuild.
+
