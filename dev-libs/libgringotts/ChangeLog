@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgringotts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/ChangeLog,v 1.4 2003/03/28 12:20:29 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/ChangeLog,v 1.5 2003/04/28 23:11:05 liquidx Exp $
+
+  29 Apr 2003; Alastair Tse <liquidx@gentoo.org> libgringotts-1.1.2.ebuild:
+  removed X useflag. marked stable for x86.
 
 *libgringotts-1.1.2 (14 Jan 2003)
 
