@@ -1,12 +1,22 @@
-MD5 ecfaf76709c1f04ae85670ed77f90c1d xfce-mcs-manager-4.0.5.ebuild 770
-MD5 36e989514d6804e84cfe7dc1f8913008 xfce-mcs-manager-4.1.91.ebuild 747
-MD5 ab79161b72e858e6c8d46db6d3b6c069 xfce-mcs-manager-4.0.4.ebuild 749
-MD5 8e6f575f6f4575956a9789cda09ce55b xfce-mcs-manager-4.1.90.ebuild 787
-MD5 faf846dfe931da97fd6af235f98da7d0 xfce-mcs-manager-4.0.6.ebuild 833
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d96de9df08205ce2f40170610b8fa1f7 ChangeLog 4726
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 115544cf46a969a1ab06dca7c9f13596 xfce-mcs-manager-4.0.6.ebuild 833
+MD5 84573227ace1340c0adf17ef22b32c1b xfce-mcs-manager-4.0.4.ebuild 751
+MD5 a2553d8f1395bead76f2b90280a0d45c xfce-mcs-manager-4.0.5.ebuild 771
+MD5 ad2f79c2c57c99db7663fa1c5673877d xfce-mcs-manager-4.1.90.ebuild 805
+MD5 3478a85966fac9c561534f7938c22daf xfce-mcs-manager-4.1.91.ebuild 765
+MD5 d69958702a86fd719be9ef272c56278f files/digest-xfce-mcs-manager-4.0.6 74
 MD5 62f0eacdb5de22deb458ca3e1f1ac018 files/digest-xfce-mcs-manager-4.0.4 74
 MD5 54e514ec0f3e74a157e28ed1ab8732ef files/digest-xfce-mcs-manager-4.0.5 74
-MD5 d69958702a86fd719be9ef272c56278f files/digest-xfce-mcs-manager-4.0.6 74
 MD5 cc9cb69dbe8c204a864555af602d08e2 files/digest-xfce-mcs-manager-4.1.90 75
 MD5 1585056a53accd58c5ba7769dfddc5c5 files/digest-xfce-mcs-manager-4.1.91 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBircJHTu7gpaalycRApuuAJ91KejOr0NlDLKRjvhdRr5DnwWFugCg3AOv
+mjDuffvIUdh+FpeSc/VWtl4=
+=Sqyb
+-----END PGP SIGNATURE-----

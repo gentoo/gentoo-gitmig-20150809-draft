@@ -1,12 +1,22 @@
-MD5 1c1973a2596a6419a71c0461dc2f3ad2 xffm-4.0.5.ebuild 1061
-MD5 4c47a60f633d6c24bf970d602824145c xffm-4.1.91.ebuild 1047
-MD5 ae8763089dfcc2e9c7ecd86b2485c27e xffm-4.0.4.ebuild 1040
-MD5 a31ce28a5e19ef275adf1037fcf0b0dd xffm-4.0.6.ebuild 1124
-MD5 0b0f89fbc155f24161e54907f7552291 xffm-4.1.90.ebuild 1081
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ceb0130730c10b26723c521d660e5fa ChangeLog 4099
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 98cba0cd5be9bd024db466cf15b90b0c files/digest-xffm-4.1.90 64
-MD5 0ac44419541aa2183dc784e4680f3542 files/digest-xffm-4.1.91 64
+MD5 ef81dc7151431a7a714317cafda5f7ff xffm-4.0.6.ebuild 1124
+MD5 8e6a5fc61b5fdd7e1193a360583d1e38 xffm-4.0.4.ebuild 1042
+MD5 207c29bb0fd665b77265951496407e01 xffm-4.0.5.ebuild 1062
+MD5 0d02aae99d63a000d83418dc1a07f0f3 xffm-4.1.90.ebuild 1099
+MD5 b8dc39724cc644e73c19489b4352dd3b xffm-4.1.91.ebuild 1065
+MD5 e9150083279d46fe00ba1017f6b6c621 files/digest-xffm-4.0.6 63
 MD5 e1b5fd9d5a7c8f7d64184909a06a1824 files/digest-xffm-4.0.4 63
 MD5 5abf94c721374551c0351dfe23333db8 files/digest-xffm-4.0.5 63
-MD5 e9150083279d46fe00ba1017f6b6c621 files/digest-xffm-4.0.6 63
+MD5 98cba0cd5be9bd024db466cf15b90b0c files/digest-xffm-4.1.90 64
+MD5 0ac44419541aa2183dc784e4680f3542 files/digest-xffm-4.1.91 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBirfMHTu7gpaalycRAlMkAJ9rMV7Z+wXIsiOdPX2OHJKRzDyk/gCdH+z6
+lCWeXdfdFWDLTPz89lXFGAM=
+=uR78
+-----END PGP SIGNATURE-----
