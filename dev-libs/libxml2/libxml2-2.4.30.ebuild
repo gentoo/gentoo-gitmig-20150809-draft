@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.30.ebuild,v 1.1 2003/01/21 14:08:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.30.ebuild,v 1.2 2003/02/12 15:04:18 gmsoft Exp $
 
 inherit eutils libtool gnome.org flag-o-matic
 
@@ -16,7 +16,7 @@ DEPEND="sys-libs/zlib
  
 SLOT="2"
 LICENSE="MIT"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa"
 
 src_compile() {
 	# Fix .la files of python site packages

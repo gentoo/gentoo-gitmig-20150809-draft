@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.28.ebuild,v 1.4 2002/12/15 12:35:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.28.ebuild,v 1.5 2003/02/12 15:04:18 gmsoft Exp $
 
 inherit libtool gnome2
 
@@ -15,7 +15,7 @@ DEPEND="zlib? ( sys-libs/zlib )
  
 SLOT="2"
 LICENSE="MIT"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa"
 
 src_unpack() {
 
