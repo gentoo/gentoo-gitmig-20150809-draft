@@ -517,3 +517,4 @@ move app-doc/mini-howto-text app-doc/howto-text
 move net-misc/magnesium net-im/magnesium
 move net-misc/kpopper net-im/kpopper
 move net-misc/gyach net-im/gyach
+move net-misc/curphoo net-im/curphoo
