@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfishtank
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.1 2004/04/12 20:17:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/ChangeLog,v 1.2 2004/06/14 18:41:36 pyrania Exp $
+
+  14 Jun 2004; <pyrania@gentoo.org> xfishtank-2.1.ebuild:
+  Stable on x86.
 
 *xfishtank-2.1 (12 Apr 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.6 2004/05/07 20:39:27 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.7 2004/06/14 18:44:20 pyrania Exp $
+
+  14 Jun 2004; <pyrania@gentoo.org> xnview-1.68.ebuild:
+  Stable on x86.
 
   07 May 2004; Brandon Hale <tseng@gentoo.org> xnview-1.50.ebuild,
   xnview-1.68.ebuild:
