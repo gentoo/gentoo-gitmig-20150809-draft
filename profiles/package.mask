@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3440 2005/01/02 05:27:11 langthang Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3441 2005/01/02 10:08:50 stuart Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -379,7 +379,6 @@ dev-perl/libapreq2
 net-misc/nxserver-personal
 net-misc/nxserver-business
 net-misc/nxserver-enterprise
-net-misc/nxserver-freenx
 
 # <lucass@gentoo.org> (26 Aug 2004)
 # unstable branch of pygtk
