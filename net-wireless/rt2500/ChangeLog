@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/rt2500
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.2 2005/02/02 14:26:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.3 2005/02/13 20:49:04 genstef Exp $
+
+  13 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
+  rt2500-1.1.0_beta1.ebuild:
+  qt-depend-when-qt-USE-not-set-fix thanks to Marc Ballarin
+  <Ballarin.Marc@gmx.de> in bug 81402
 
   02 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
   rt2500-1.1.0_beta1.ebuild:

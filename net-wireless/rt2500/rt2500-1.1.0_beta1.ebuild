@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta1.ebuild,v 1.3 2005/02/02 14:46:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta1.ebuild,v 1.4 2005/02/13 20:49:04 genstef Exp $
 
-inherit eutils linux-mod kde
-need-qt 3
+inherit eutils linux-mod kde-functions
+set-qtdir 3
 
 MY_P="${P/_beta/-b}"
 DESCRIPTION="Driver for the RaLink RT2500 wireless chipset"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 IUSE="qt"
 DEPEND="net-wireless/wireless-tools
-	qt? ( x11-libs/qt )"
+	qt? ( >=x11-libs/qt-3 )"
 
 S=${WORKDIR}/${MY_P}
 MODULE_NAMES="rt2500(net:${S}/Module)"
