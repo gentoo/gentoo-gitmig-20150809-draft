@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.7 2002/06/20 20:15:52 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.8 2002/07/22 16:45:18 agenkin Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -36,6 +36,7 @@ alsascrdir=/etc/alsa.d
 depend() {
   need bootmisc localmount
   before modules
+  after isapnp
   provide alsa-modules
 }
 
