@@ -1,14 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.2.ebuild,v 1.2 2004/04/21 16:48:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.2.ebuild,v 1.3 2004/04/25 20:34:37 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="command line tool for signing, verifying, encrypting and decrypting XML"
 HOMEPAGE="http://www.aleksey.com/xmlsec"
 SRC_URI="http://www.aleksey.com/xmlsec/download/${PN}1-${PV}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~x86 ~amd64"
 SLOT="0"
+KEYWORDS="~x86 ~amd64"
 IUSE="ssl mozilla"
 
 DEPEND=">=sys-devel/autoconf-2.2

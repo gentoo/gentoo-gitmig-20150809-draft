@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.19 2004/04/21 16:39:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.20 2004/04/25 20:34:04 vapier Exp $
 
-inherit flag-o-matic libtool
+inherit flag-o-matic libtool eutils
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
@@ -17,9 +17,7 @@ DEPEND="~sys-devel/m4-1.4"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
-	if [ $ARCH = "amd64" ] ; then
-	 	epatch ${FILESDIR}/longlong.patch || die
-	fi
+	use amd64 && epatch ${FILESDIR}/longlong.patch
 }
 
 src_compile() {
