@@ -1,13 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.91.1.ebuild,v 1.2 2004/05/05 09:59:07 dholm Exp $
-
-# WARNING
-# All gst-sharp hacks done in this build are nonfunctional
-# Do not try to use them, they don't work. Not for me, not for anybody.
-# They're just here for future reference
-#
-# foser <foser@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.91.1.ebuild,v 1.3 2004/05/07 04:09:12 latexer Exp $
 
 inherit eutils mono
 
@@ -39,9 +32,16 @@ KEYWORDS="~x86 ~ppc"
 src_unpack() {
 	unpack ${A}
 
+	# Sets ${installvendorlib} variable to be used later
+	eval `perl '-V:installvendorlib'`
+
 	# disable building of samples (#16015)
 	cd ${S}
 	sed -i -e "s:sample::" -e "s:doc::" Makefile.in
+
+	# Fix the installation location of the GAPI Metadata perl module
+	cd ${S}/parser/GAPI/
+	sed -i -e "s:\$(datadir)/perl5:${D}/${installvendorlib}:" Makefile.in
 }
 
 src_compile() {
@@ -53,10 +53,6 @@ src_compile() {
 src_install () {
 	# one of the samples require gconf schemas, and it'll violate sandbox
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1" einstall || die
-
-	# gst-sharp install
-	# cd ${S}/gst/
-	# make install || die "Gst-sharp install failed"
 
 	dodoc README* ChangeLog
 }
