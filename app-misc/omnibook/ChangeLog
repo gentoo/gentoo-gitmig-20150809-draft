@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/omnibook
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/ChangeLog,v 1.5 2004/06/24 22:27:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/ChangeLog,v 1.6 2004/07/20 16:56:42 plasmaroo Exp $
+
+*omnibook-20040701 (20 Jul 2004)
+
+  20 Jul 2004; <plasmaroo@gentoo.org> +omnibook-20040701.ebuild:
+  Version bump - closes bug #42858.
 
 *omnibook-20030828 (31 Oct 2003)
 
