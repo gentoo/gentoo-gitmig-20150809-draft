@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/skunkweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.6 2004/07/29 01:35:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.7 2004/09/03 01:28:33 seemant Exp $
+
+  02 Sep 2004; Seemant Kulleen <seemant@gentoo.org> skunkweb-3.4_beta5.ebuild:
+  remove sed from version calculation, it's
+  sooooooooooooooooooooooooooooooooooooo not necessary
 
   28 Jul 2004; Alastair Tse <liquidx@gentoo.org> skunkweb-3.4_beta5.ebuild:
   fix enewuser enewgroup issues (#58526)

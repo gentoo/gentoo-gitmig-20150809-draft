@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.6 2004/07/29 01:35:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.7 2004/09/03 01:28:33 seemant Exp $
 
 inherit eutils
 
 DESCRIPTION="robust Python web application server"
 HOMEPAGE="http://skunkweb.sourceforge.net/"
-NEWP=`echo ${P} | sed -e 's|_beta|b|'`
+#NEWP=`echo ${P} | sed -e 's|_beta|b|'`
+NEWP=${P/_beta/b}
 S=${WORKDIR}/${NEWP}
 SRC_URI="mirror://sourceforge/skunkweb/${NEWP}.tar.gz"
 LICENSE="GPL-2 BSD"
