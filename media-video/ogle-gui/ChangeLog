@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ogle-gui
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ChangeLog,v 1.16 2004/10/23 20:01:55 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ChangeLog,v 1.17 2005/01/27 19:33:05 luckyduck Exp $
+
+  27 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> ogle-gui-0.9.2.ebuild:
+  0.9.2 now stable on x86. fixes #61041.
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> ogle-gui-0.9.2.ebuild:
   Added ~sparc keyword.
