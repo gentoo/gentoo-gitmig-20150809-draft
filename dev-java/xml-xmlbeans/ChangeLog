@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/xml-xmlbeans
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.1 2004/12/19 00:16:11 karltk Exp $
+
+*xml-xmlbeans-20041217 (19 Dec 2004)
+
+  19 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> xml-xmlbeans-20041217.ebuild:
+  Initial import. Ebuild submitted by the wunderbar Jan Brinkmann 
+  <lucky@the-luckyduck.de>. Fixes #74818.
