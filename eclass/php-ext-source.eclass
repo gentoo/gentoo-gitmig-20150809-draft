@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.2 2003/07/25 10:42:59 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.3 2003/07/25 17:44:28 stuart Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -10,7 +10,9 @@
 #
 # To use this eclass, you must add the following to your ebuild:
 #
-# inherit php-ext-source php-ext-base
+# inherit php-ext-source
+
+inherit php-ext-base
 
 ECLASS=php-ext-source
 INHERITED="$INHERITED $ECLASS"
