@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.7.ebuild,v 1.7 2004/10/15 03:36:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.7.ebuild,v 1.8 2004/11/06 21:05:45 mr_bones_ Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -25,7 +25,7 @@ src_unpack() {
 		replace-cpu-flags k6 k6-2 k6-3 i586
 	fi
 
-	if use macos || use ppc-macos ; then
+	if use ppc-macos ; then
 		epatch "${FILESDIR}/macos.patch" # implements strnlen
 		sed \
 			-e "s:ZLIBLIB=.*:ZLIBLIB=/usr/$(get_libdir):" \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r8.ebuild,v 1.11 2004/10/23 07:56:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r8.ebuild,v 1.12 2004/11/06 21:05:45 mr_bones_ Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -21,7 +21,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-security.diff
-	if use macos || use ppc-macos ; then
+	if use ppc-macos ; then
 		epatch ${FILESDIR}/macos.patch # implements strnlen
 	fi
 
@@ -36,7 +36,7 @@ src_unpack() {
 		-e "s:OBJSDLL = :OBJSDLL = -lz -lm :" \
 		scripts/makefile.linux > Makefile
 
-	if use macos || use ppc-macos ; then
+	if use ppc-macos ; then
 		einfo "Patching the source for Mac OS X / Darwin compatibility"
 		sed \
 			-e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \
