@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r2.ebuild,v 1.5 2002/04/24 11:44:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r2.ebuild,v 1.6 2002/04/29 22:05:19 seemant Exp $
 
 MY_P=${P/.200/-200}
 MY_S=${MY_P/avifile-/avifile}
@@ -11,7 +11,7 @@ DESCRIPTION="Library for AVI-Files"
 SRC_URI="http://avifile.sourceforge.net/${MY_P}admin.tgz"
 HOMEPAGE="http://divx.euro.ru/"
 
-DEPEND=">=media-libs/divx4linux-20011025
+DEPEND="=media-libs/divx4linux-20011025*
 	media-libs/jpeg
 	media-libs/win32codecs
 	qt? ( x11-libs/qt )
