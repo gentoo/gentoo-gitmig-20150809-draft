@@ -1,0 +1,2 @@
+# mask 2.6 headers as 2.4 kernels could still be used
+>=sys-kernel/linux-headers-2.6.0
