@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/bluez-hciemu-1.0.ebuild,v 1.3 2003/10/12 02:01:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/bluez-hciemu-1.0.ebuild,v 1.4 2003/10/13 19:24:52 mr_bones_ Exp $
 
 DESCRIPTION="bluetooth HCI emulator"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -17,10 +17,9 @@ DEPEND="=dev-libs/glib-1.2*
 src_compile() {
 	econf || die "configure failed"
 	emake || die "make failed"
-}	
+}
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
 	dodoc README AUTHORS ChangeLog
 }
-
