@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kmymoney2
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.4 2003/06/19 00:43:10 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.5 2004/03/20 21:29:09 centic Exp $
+
+*kmymoney2-0.6_rc3 (20 Mar 2004)
+
+  20 Mar 2004; Dominik Stadler <centic@gentoo.org> kmymoney2-0.6_rc3.ebuild:
+  Add new Version 0.6rc3, may fix Bug 39510
 
   19 Jun 2003; Alastair Tse <liquidx@gentoo.org> kmymoney2-0.5.1.ebuild:
   moved libxml++ to libxmlpp

@@ -1,4 +1,6 @@
+MD5 ccf83338a0b3eeffbb224b1457108d9b ChangeLog 749
 MD5 47e6eb082dfc7be38a7c4877eade6a5a kmymoney2-0.5.1.ebuild 512
-MD5 dc9268b87aeae6288e0b22426a677720 ChangeLog 594
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 4379a14efff0cae16cd9ab18a48c0275 kmymoney2-0.6_rc3.ebuild 541
 MD5 1e021f274fd4522ebc21d1efaa886126 files/digest-kmymoney2-0.5.1 69
+MD5 8d006b203314134a45fc473dd98b50b6 files/digest-kmymoney2-0.6_rc3 70
