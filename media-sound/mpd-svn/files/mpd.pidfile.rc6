@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/files/mpd.pidfile.rc6,v 1.1 2005/03/13 12:03:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/files/mpd.pidfile.rc6,v 1.2 2005/03/13 16:26:45 ticho Exp $
+
+pidfile="/var/run/mpd/mpd.pid"
 
 depend() {
 	need localmount
@@ -11,12 +13,6 @@ checkconfig() {
 	if ! [ -f /etc/mpd.conf ]; then
 		eerror "Configuration file /etc/mpd.conf does not exist."
 		return 1
-	fi
-
-	if ! [ -f /var/run/mpd.pid ]; then
-		touch /var/run/mpd.pid
-		chmod 750 /var/run/mpd.pid
-		chown mpd /var/run/mpd.pid
 	fi
 
 	return 0
@@ -32,6 +28,6 @@ start() {
 
 stop() {
 	ebegin "Stopping Music Player Daemon"
-	start-stop-daemon --stop --pidfile /var/run/mpd.pid
+	start-stop-daemon --stop --pidfile ${pidfile}
 	eend $? 
 }
