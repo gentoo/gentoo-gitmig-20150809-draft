@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.137 2004/11/25 23:37:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.138 2004/11/27 19:17:04 swegener Exp $
+
+  27 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  +files/2.4.1-fe-text.patch, xchat-2.4.1.ebuild:
+  Added backported fix from upstream that fixes compilation of the text
+  frontend. Thanks to Matteo Settenvini <msettenvini@tin.it> in bug #72534.
 
   26 Nov 2004; Sven Wegener <swegener@gentoo.org> -xchat-2.4.0-r1.ebuild,
   xchat-2.4.1.ebuild:

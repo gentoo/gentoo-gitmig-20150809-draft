@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.1.ebuild,v 1.2 2004/11/25 23:37:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.1.ebuild,v 1.3 2004/11/27 19:17:04 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -37,6 +37,7 @@ src_unpack() {
 	cd ${S}
 
 	use xchatdccserver && epatch ${DISTDIR}/xchat-dccserver-0.4.patch
+	epatch ${FILESDIR}/${PV}-fe-text.patch
 }
 
 src_compile() {
