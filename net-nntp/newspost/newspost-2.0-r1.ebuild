@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/newspost-2.0-r1.ebuild,v 1.1 2005/02/01 16:50:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/newspost-2.0-r1.ebuild,v 1.2 2005/02/01 16:55:06 swegener Exp $
 
 inherit eutils
 
@@ -20,12 +20,14 @@ RDEPEND=""
 DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
-	unpack $A
-	cd $S
+	unpack ${A}
+	cd ${S}
 
 	epatch ${FILESDIR}/CAN-2005-0101.patch
 
-	sed -i -e "s:OPT_FLAGS = :OPT_FLAGS = ${CFLAGS}#:" Makefile
+	sed -i \
+		-e "s:OPT_FLAGS = :OPT_FLAGS = ${CFLAGS}#:" Makefile \
+		|| die "sed Makefile failed"
 }
 
 src_compile() {
