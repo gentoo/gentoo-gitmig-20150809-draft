@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.307 2005/01/30 22:44:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.308 2005/02/01 22:04:38 spyderous Exp $
+
+*xorg-x11-6.8.1.903 (01 Feb 2005)
+
+  01 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.8.1.903.ebuild:
+  6.8.2 RC3. As a bonus, also migrates everything out of /usr/X11R6 and turns
+  it into a symlink to /usr. It uses rsync by default, although you can test
+  the probably-broken tar or known-broken mv if you'd like.
 
   30 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r3.ebuild:
