@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta1-r1.ebuild,v 1.6 2005/02/11 18:50:27 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta1-r1.ebuild,v 1.7 2005/02/21 13:45:46 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -42,9 +42,10 @@ $(deprange $PV $MAXKDEVER kde-base/konqueror-uachanger)
 $(deprange $PV $MAXKDEVER kde-base/konqueror-validators)
 $(deprange $PV $MAXKDEVER kde-base/konqueror-webarchiver)
 $(deprange $PV $MAXKDEVER kde-base/renamedlg-audio)
-$(deprange $PV $MAXKDEVER kde-base/renamedlg-images)
-$(deprange $PV $MAXKDEVER kde-base/noatun-plugins)
-"
+$(deprange $PV $MAXKDEVER kde-base/renamedlg-images)"
+
+#$(deprange $PV $MAXKDEVER kde-base/noatun-plugins)
+
 
 # the below are disabled from compialtion by upstream. ebuilds exist, but the software
 # likely just doesn't work.
