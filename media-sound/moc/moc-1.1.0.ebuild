@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-1.1.0.ebuild,v 1.11 2004/11/23 09:39:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-1.1.0.ebuild,v 1.12 2004/12/19 05:55:50 eradicator Exp $
 
 IUSE="oggvorbis mad oss"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 sparc x86"
 
 DEPEND="media-libs/libao
 	sys-libs/ncurses
