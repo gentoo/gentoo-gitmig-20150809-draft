@@ -28,26 +28,23 @@ Gentoo Linux release candidate.
 </para>
 </abstract>
 
-<sect1 label="1">
+<section label="1">
 <title>Getting started</title>
 
-<sect2>
-<title>Install Methods</title>
-<para>
-Rather than provide a special system installer program, we've chosen to provide
-you with a real Linux shell prompt.  From this prompt, you can perform all the
-steps necessary to install Gentoo Linux, and get everything set up exactly as
-you need it.  People often ask whether we're going to provide a fancy install
-program in the future.  Yes, we'd like to do this, but there will always be a
-relatively simple "manual" install method for those who need it.  By having
-a manual install method, we not only cater to Linux experts, but also make it
-easy for people building a special-purpose product out of Gentoo Linux.  Because
-our install process is "out in the open", it's easy for others to customize,
-automate or beautify to their liking.
-</para>
-</sect2>
+<simplesect> <title>Install Methods</title> <para> Rather than provide a
+special system installer program, we've chosen to provide you with a real
+Linux shell prompt.  From this prompt, you can perform all the steps
+necessary to install Gentoo Linux, and get everything set up exactly as you
+need it.  People often ask whether we're going to provide a fancy install
+program in the future.  Yes, we'd like to do this, but there will always be
+a relatively simple "manual" install method for those who need it.  By
+having a manual install method, we not only cater to Linux experts, but also
+make it easy for people building a special-purpose product out of Gentoo
+Linux.  Because our install process is "out in the open", it's easy for
+others to customize, automate or beautify to their liking. </para>
+</simplesect>
 
-<sect2>
+<simplesect>
 <title>Partition layout</title>
 <para>
 Here's a quick overview of the standard Gentoo Linux partition layout.  We're going to create at
@@ -61,9 +58,9 @@ in the event of a system crash, preventing the chicken-and-egg problem where
 GRUB can't read your kernel (since your filesystem is corrupted) but you can't
 run fsck to uncorrupt your filesystem (since you can't boot!)
 </para>
-</sect2>
+</simplesect>
 
-<sect2>
+<simplesect>
 <title>Partition selection</title>
 <para>
 Now, on to filesystem types.  We recommend that you install Gentoo Linux on a
@@ -76,8 +73,7 @@ the near future, as well as XFS -- as soon as it's ready.  Here are our recommen
 filesystem sizes and types:
 </para>
 
-<table>
-
+<table tocentry="0">
 <tgroup cols="3">
     <thead>
         <row><entry>Partition</entry><entry>Size</entry><entry>Type</entry></row>
@@ -103,9 +99,9 @@ filesystem sizes and types:
 
 </table>
 
-</sect2>
+</simplesect>
 
-<sect2>
+<simplesect>
 
 <title>Getting what you need</title>
 
@@ -127,15 +123,15 @@ ext2 filesystems for Gentoo Linux, or alternatively just download and burn our
 CD image, which has all the tools you need for ReiserFS.
 </para>
 
-</sect2>
+</simplesect>
 
-</sect1>
+</section>
 
-<sect1 label="2">
+<section label="2">
 
 <title>Installation</title>
 
-<sect2>
+<simplesect>
 
 <title>Booting the CD</title>
 
@@ -156,9 +152,9 @@ on the CD.  When the boot process is complete, you'll be presented with a login 
 log in, go ahead and type "root" and hit Enter.  You won't be prompted for a password.
 </para>
 
-</sect2>
+</simplesect>
 
-<sect2>
+<simplesect>
 
 <title>Step 1: Create and format your partitions</title>
 
@@ -179,9 +175,9 @@ Once you've created your partitions, remember to write your changes with the
 <graphic fileref="install-fdisk.gif"/>
 </para>
 
-</sect2>
+</simplesect>
 
-<sect2>
+<simplesect>
 
 <title>Step 2: Create and mount filesystems</title>
 
@@ -226,10 +222,10 @@ mountpoint just like I described above.  From this point on, you should be able 
 word.
 </para>
 
-</sect2>
+</simplesect>
 
 
-<sect2>
+<simplesect>
 <title>Step 3: Extract the sys.tbz2 tarball</title>
 <para>
 Now, it's time to extract the sys.tbz2 tarball to /mnt/gentoo.
@@ -248,22 +244,22 @@ pipeline should do the exact same thing:
 <screen>
 # cat /path/to/sys.tbz2 | bzip2 -d | tar -xvf - -C /mnt/gentoo
 </screen>
-</sect2>
+</simplesect>
 
 
-</sect1>
-<sect1 label="3">
+</section>
+<section label="3">
 <title>How to really end</title>
 
-<sect2>
+<simplesect>
 <title>step 3</title>
 <para>
 This is how you really end things.
 </para>
 <para>Really....</para>
 
-</sect2>
-</sect1>
+</simplesect>
+</section>
 
 </article>
 
