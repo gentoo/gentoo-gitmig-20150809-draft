@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.2.ebuild,v 1.4 2005/01/04 03:05:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.2.ebuild,v 1.5 2005/01/06 20:11:21 tester Exp $
 
 inherit eutils
 
@@ -69,8 +69,8 @@ src_compile() {
 			$(use_enable arts)
 			$(use_enable X gtk-glib)
 			$(use_enable X player)
-			$(use_enable X mp4live)"
-	use v4l2 || myconf="${myconf} --disable-v4l2"
+			$(use_enable X mp4live)
+			$(use_enable v4l2)"
 
 	# ffmpeg support doesnt build even on gcc 3.3
 	# and the configure script is broken so --disable doesnt work

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.19 2005/01/04 03:05:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.20 2005/01/06 20:11:21 tester Exp $
+
+  06 Jan 2005; Olivier Crête <tester@gentoo.org> mpeg4ip-1.2.ebuild:
+  enable-v4l2 now works ok too
 
   03 Jan 2005; Olivier Crête <tester@gentoo.org> mpeg4ip-1.2.ebuild:
   Really fix compilation without X, changed use flag from gtk to X

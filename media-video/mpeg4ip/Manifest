@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 70d18ba0532a78593282eb879d3c1274 mpeg4ip-1.1.ebuild 1642
 MD5 1b1b7046bccf0f835f8e3c5b68063d8e metadata.xml 255
-MD5 985a2265fb21cb141a8b726a1515b698 ChangeLog 3613
+MD5 5abef84b75c34fbbd565139eb761ca96 ChangeLog 3715
 MD5 a74537cea5ff250264109426ab1861f4 mpeg4ip-1.0.ebuild 2205
-MD5 4392010baaf5428fcf10f3cbe7bd25a7 mpeg4ip-1.2.ebuild 2664
+MD5 6a6ae818dcd0f220c397d6c57e2f47bd mpeg4ip-1.2.ebuild 2639
 MD5 47b75e71dec24165d7bcf3a5b55d785d files/mpeg4ip-1.1-gentoo-fixes.patch 844
 MD5 e1adf5b673be8f3eede637fc5ea66aa3 files/digest-mpeg4ip-1.2 64
 MD5 bf208b3fef7857814d19fd17e38cbd66 files/digest-mpeg4ip-1.1 64
@@ -15,7 +15,7 @@ MD5 5362a4e7d4ecc6778c030d2de9070f14 files/mpeg4ip-1.2-mp4encode-template-path.p
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB2gg/wDHaUUJ0mYMRAvvOAJsHKDx7qiymdwxkYPfuSw0l2orwLgCfa3Pv
-l31IwJeNaMis0eVzoCWUNwA=
-=YUWo
+iD8DBQFB3ZuSwDHaUUJ0mYMRAt8oAKCCPmlj6D3VSXmPSoJSjLZg5OaWMACfeYTd
+aRVm4NHPksLxr4f3h/jL8jw=
+=e4Cb
 -----END PGP SIGNATURE-----
