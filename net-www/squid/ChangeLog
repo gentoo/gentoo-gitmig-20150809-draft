@@ -1,6 +1,9 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.26 2003/11/02 19:10:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.27 2003/11/05 10:00:22 joker Exp $
+
+  05 Nov 2003; Christian Birchinger <joker@gentoo.org> squid-2.5.4.ebuild:
+  Added sparc stable keyword
 
   02 Nov 2003; Donny Davies <woodchip@gentoo.org> squid-2.5.4.ebuild:
   Mark x86 stable, add metadata.xml.
