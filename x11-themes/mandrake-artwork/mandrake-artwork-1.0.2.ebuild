@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.2.ebuild,v 1.6 2005/01/26 16:12:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.2.ebuild,v 1.7 2005/01/27 20:56:55 greg_g Exp $
 
-inherit eutils kde
+inherit eutils kde-functions
 
 MDK_EXTRAVERSION="1mdk"
 
@@ -22,8 +22,6 @@ RDEPEND=">=x11-libs/gtk+-2.0
 DEPEND="${RDEPEND}
 	app-arch/rpm2targz"
 
-need-kde 3.1
-
 src_unpack() {
 	rpm2targz ${DISTDIR}/${A}
 	tar xz --no-same-owner -f galaxy-${PV}-${MDK_EXTRAVERSION}.src.tar.gz
@@ -37,11 +35,12 @@ src_compile() {
 	#epatch ${FILESDIR}/galaxy-gtk24.patch
 
 	if use kde; then
-		KDE_PLACE_TO_INSTALL=$(echo $KDEDIR | cut -d/ -f4)
+		set-qtdir 3
+		set-kdedir 3
 		mv thememdk/mandrake_client/Makefile.in thememdk/mandrake_client/Makefile.in.orig
-		cat thememdk/mandrake_client/Makefile.in.orig | sed s:\$\{libdir\}\/kwin.la:/usr/kde/$KDE_PLACE_TO_INSTALL/lib/kwin.la:g > thememdk/mandrake_client/Makefile.in
+		cat thememdk/mandrake_client/Makefile.in.orig | sed s:\$\{libdir\}\/kwin.la:${KDEDIR}/lib/kwin.la:g > thememdk/mandrake_client/Makefile.in
 		rm thememdk/mandrake_client/Makefile.in.orig
-		econf --with-qt-dir=/usr/qt/3 || die "econf failed"
+		econf --with-qt-dir=${QTDIR} || die "econf failed"
 	else
 		sed -si s/KDE_CHECK_FINAL// configure.in
 		sed -si s/AC_PATH_KDE// configure.in
