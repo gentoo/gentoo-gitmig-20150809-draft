@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/hawknl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.4 2004/06/24 22:11:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.5 2004/06/29 10:52:33 mr_bones_ Exp $
+
+*hawknl-1.68-r1 (29 Jun 2004)
+
+  29 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> +hawknl-1.68-r1.ebuild:
+  virtual/glibc -> virtual/libc; use preplib to address bug #55349
 
 *hawknl-1.66 (02 Jun 2004)
 
