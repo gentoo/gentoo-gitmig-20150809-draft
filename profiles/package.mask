@@ -28,6 +28,7 @@ app-text/sgml2x
 # unfinished
 >=dev-lang/python-2.1
 >=sys-libs/ncurses-5.2-r4
+>=sys-apps/texinfo-4.0c
 #OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 
 =sys-kernel/linux-sources-2.4.4-r5
