@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3633 2005/02/17 02:25:24 trapni Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3634 2005/02/17 03:35:59 swegener Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1056,10 +1056,6 @@ dev-lisp/cl-rsm-genetic-alg
 # is imcomplete. info directory handling should be reconsidered.
 =app-editors/emacs-cvs-22.0.0*
 =app-editors/emacs-cvs-23.0.0*
-
-# <swegener@gentoo.org> (20 June 2004)
-# alpha software, which is very buggy
-net-irc/epic5
 
 # <rizzo@gentoo.org> (11 Jun 2004)
 # I think this is only for php 5 anyway
