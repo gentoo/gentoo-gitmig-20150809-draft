@@ -1,0 +1,28 @@
+# ChangeLog for app-sci/clustalx
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.1 2004/12/23 21:31:04 ribosome Exp $
+
+*clustalx-1.83 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +clustalx-1.83.ebuild:
+  Moved from app-sci/clustalx to sci-biology/clustalx.
+
+  22 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> clustalx-1.83.ebuild:
+  Added to ~amd64, bug #72084
+
+  18 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> clustalx-1.83.ebuild:
+  needs stable app-sci/ncbi-tools first
+
+  17 Nov 2004; Olivier Fisette <ribosome@gentoo.org> clustalx-1.83.ebuild:
+  Added to x86. Use toolchain-funcs rather than the gcc eclass.
+
+  14 Oct 2004; Olivier Fisette <ribosome@gentoo.org> clustalx-1.83.ebuild:
+  Use gcc.eclass rather than ${CC}.
+
+*clustalx-1.83 (06 Oct 2004)
+
+  06 Oct 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +clustalx-1.83.ebuild:
+  Initial import.
+
