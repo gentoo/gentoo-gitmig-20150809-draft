@@ -1,6 +1,14 @@
 # ChangeLog for net-print/gimp-print-cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.4 2002/06/25 00:12:00 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.5 2002/06/28 23:50:09 lostlogic Exp $
+
+*gimp-print-cups-4.3.0-r1 (28 Jun 2002)
+
+  28 Jun 2002; Brandon Low <lostlogic@gentoo.org> :
+
+  The gimpprint.m4 file gets a duplicate macro defined
+  somewhere in it's creation so we rename it to what it
+  apparently should be named (based on comments)
 
 *gimp-print-cups-4.3.0 (24 Jun 2002)
 
