@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cvsps
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsps/ChangeLog,v 1.1 2003/06/30 22:22:31 seemant Exp $
+
+*cvsps-2.0_rc1 (30 Jun 2003)
+
+  30 Jun 2003; Seemant Kulleen <seemant@gentoo.org> cvsps-2.0_rc1.ebuild:
+  New package -- provides a way to generate BK style changesets for CVS. Thanks
+  to Rach Holmes for showing me this
+
