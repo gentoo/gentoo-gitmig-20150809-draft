@@ -176,8 +176,11 @@ For my example partition layout, I typed in the following:
 # mount /dev/hda3 /mnt/gentoo
 # mkdir /mnt/gentoo/boot
 # mount /dev/hda1 /mnt/gentoo/boot -o notail
-</pre><p>(note: the "notail" option is required if you're installing GRUB as a secondary boot loader.  It also doesn't hurt to include it if you're not.)
-</p>
+</pre>
+
+<note title="The notail option">The "notail" option is required if you're
+installing GRUB as a secondary boot loader.  It also doesn't hurt to include it
+if you're not.</note>
 
 <p>Notice that I had to create the <path>/mnt/gentoo/boot</path> filesystem before mounting <path>/dev/hda1</path>.  If you've created
 additional non-root filesystems (/var, /usr, /home, etc), you'll need to create the appropriate directories under /mnt/gentoo
@@ -382,15 +385,15 @@ default 0
 timeout 30
 
 title=My example Gentoo Linux
-root (hd0,0) <font color="#FF0000">(note: (hd0,0) should point to your "boot" partition (hda1 in my case)</font>
-kernel /boot/bzImage root=/dev/hda3 <font color="#FF0000">(note: /dev/hda3 should point to your "root" filesystem)</font>
+root (hd0,0) 
+kernel /boot/bzImage root=/dev/hda3 
 
 title=Windows NT Workstation
-root (hd0,2) <font color="#FF0000">(note: (hd0,2) contains the NT boot loader)</font>
+root (hd0,2) 
 </pre><p>After saving this file, Gentoo Linux installation is complete.  Selecting the first option will
 tell GRUB to boot Gentoo Linux without a fuss.  The second part of the menu.lst file is optional, and shows you how to
 use GRUB to boot a bootable Windows partition.</p>
-
+<note>Above, <path>(hd0,0)</path> should point to your "boot" partition (<path>/dev/hda1</path> in my case) and <path>/dev/hda3</path> should point to your "root filesystem.  <path>(hd0,2)</path> contains the NT boot loader.</note>
 <p>Also, if you need to pass any options to the kernel, simply add them to the end of the "kernel" command.  We're already
 passing one option "root=/dev/hda3", but you can pass others as well.  There's one in particular that you may be interested
 in.  If you want to enable devfs (a special device filesystem), you can add the "devfs=mount" option at the end of the kernel
@@ -408,7 +411,7 @@ you can remove the .tbz2 from /tmp and continue with the kernel compile step.  I
 linux sources, you can skip the kernel compile step and proceed unmounting your filesystems below.</p>
 <p>To compile your own kernel, perform the following steps:</p><pre>
 # cd /usr/src/linux
-# make menuconfig <font color="#FF0000">(Note: make sure you compile-in support for ReiserFS as well as your boot drive controller)</font>
+# make menuconfig <codenote>make sure you compile-in support for ReiserFS as well as your boot drive controller</codenote>
 # make bzImage
 # make modules
 # make modules_install
@@ -418,7 +421,7 @@ linux sources, you can skip the kernel compile step and proceed unmounting your 
 <p>Now, Gentoo Linux is installed.  The only remaining step is to exit the chrooted shell, safely unmount your partitions
 and reboot the system:</p>
 <pre>
-# exit <font color="#FF0000">(note: this exits the chrooted shell; you can also type <code>^D)</code></font>
+# exit <codenote>This exits the chrooted shell; you can also type <code>^D</code></codenote>
 # umount /mnt/gentoo/boot
 # umount /mnt/gentoo
 # reboot

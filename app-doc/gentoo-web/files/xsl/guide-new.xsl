@@ -72,9 +72,15 @@
 </xsl:template>
 
 <xsl:template match="note">
-	<p class="notehead"><xsl:value-of select="title"/></p>
-	<xsl:apply-templates select="body"/>
+	<p class="note"><b>Note:</b>
+	<xsl:apply-templates />
+	</p>
 </xsl:template>
+
+<xsl:template match="codenote">
+	<br/><span class="codenote">(<b>Note:</b> <xsl:value-of select="." />)</span>
+</xsl:template>
+
 
 <xsl:template match="important">
 	<p class="importanthead"><xsl:value-of select="title"/></p>

@@ -15,11 +15,8 @@ TABLE {
 
 PRE {
 	margin: 0.5em 14% 0.5em 5%; 
-	background: #e0e0e0;
-}
-
-CODE {
-	background: #e0e0e0;
+	background: #ddddff;
+	font-family: Lucida Console, Courier;
 }
 
 /*
@@ -51,10 +48,24 @@ H1 {
 
 .code {
 	font-weight: bold;
+	font-family: Lucida Console, Courier;
 }
 
 .path {
-	font-style: italic;
+	font-family: Lucida Console, Courier;
+}
+
+.note {
+	background: #ffffbb;
+}
+
+.codenote {
+	background: #ffffbb;
+	font-family: Georgia, Verdana, Arial, Helvetica; 
+}
+
+.notehead {
+	font-weight: bold;
 }
 
 /*.secthead { 
