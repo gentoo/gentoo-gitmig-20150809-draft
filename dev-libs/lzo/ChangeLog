@@ -1,10 +1,13 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.7 2003/03/06 21:30:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.8 2003/04/07 00:57:52 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *lzo-1.08 (21 Sep 2002)
+
+  07 Apr 2003; Guy Martin <gmsoft@gentoo.org> lzo-1.08.ebuild :
+  Added hppa to KEYWORDS.
 
   06 Mar 2003; Aron Griffis <agriffis@gentoo.org> lzo-1.08.ebuild:
   Add alpha to KEYWORDS
