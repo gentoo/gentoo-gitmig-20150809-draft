@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.1 2005/01/15 19:34:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.2 2005/02/14 15:17:35 kugelfang Exp $
+
+  14 Feb 2005; Danny van Dyk <kugelfang@gentoo.org> sshfs-fuse-1.0.ebuild:
+  Marked ~amd64.
 
 *sshfs-fuse-1.0 (15 Jan 2005)
 
