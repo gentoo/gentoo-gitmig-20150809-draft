@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/cman.rc,v 1.1 2005/03/19 21:36:45 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/cman.rc,v 1.2 2005/03/19 21:43:15 xmerlin Exp $
 
 depend() {
 	use net
@@ -9,9 +9,6 @@ depend() {
 	need ccsd
 	provide cman
 }
-
-exefile=/sbin/cman_tool
-pidfile=/var/run/cman.pid
 
 start() {
 	if grep -qE "<[[:space:]]*gulm([[:space:]]|[>]|$)" /etc/cluster/cluster.conf
