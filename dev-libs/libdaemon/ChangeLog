@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.3 2003/10/19 22:20:40 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.4 2003/11/15 13:47:28 wmertens Exp $
+
+*libdaemon-0.3 (02 Nov 2003)
+
+  02 Nov 2003; Wout Mertens <wmertens@gentoo.org> libdaemon-0.3.ebuild :
+  Version bump, necessary for ifplugd-0.19.
 
   21 Oct 2003; Wout Mertens <wmertens@gentoo.org> libdaemon-0.2.ebuild :
   Fixed building DEPEND problem for doc, bug #26072. Thanks to 
