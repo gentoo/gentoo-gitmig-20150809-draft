@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Donny Davies <woodchip@gentoo.org>
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.12.ebuild,v 1.3 2002/01/09 01:55:05 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.13-r3.ebuild,v 1.1 2002/02/10 13:22:20 verwilst Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
-
+SLOT="0"
 S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2"
 PROVIDE="virtual/lpr"
@@ -21,10 +21,10 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND} !virtual/lpr"
 
 src_unpack() {
-
 	unpack ${A} ; cd ${S}
 	# make sure libcupsimage gets linked with libjpeg
 	patch -p0 < ${FILESDIR}/configure-jpeg-buildfix.diff
+	# This patch is stillr required for 1.1.13 and closes bug #608
 	assert "bad patchfile"
 	autoconf || die
 }
@@ -37,7 +37,7 @@ src_compile() {
         use slp || myconf="${myconf} --disable-slp"
 
 	./configure --host=${CHOST} ${myconf} --with-cups-user=lp --with-cups-group=lp
-	assert "bad configure"
+	assert "bad ./configure"
 
 	make || die "compile problem"
 }
@@ -49,10 +49,9 @@ src_install() {
 	diropts -m 755 ; dodir /var/log/cups
 	diropts -m 755 ; dodir /etc/cups
 
-	# lets do it this way
 	make \
 	LOCALEDIR=${D}/usr/share/locale \
-	DOCDIR=${D}/usr/share/doc/${PF} \
+	DOCDIR=${D}/usr/share/cups/docs \
 	REQUESTS=${D}/var/spool/cups \
 	SERVERBIN=${D}/usr/lib/cups \
 	DATADIR=${D}/usr/share/cups \
@@ -72,16 +71,14 @@ src_install() {
 	PREFIX=${D} \
 	install || die "install problem"
 
-	# add a few more docs; pdfs and html get inserted for us in DOCDIR above :)
-	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt
-	insinto /usr/share/doc/${PF} ; doins LICENSE.html
+	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt LICENSE.html
 
 	# cleanups and fixups
 	rm -rf ${D}/etc/init.d
 	rm -rf ${D}/etc/pam.d
 	rm -rf ${D}/etc/rc*
 	rm -rf ${D}/usr/share/man/cat*
-	dosed "s:#DocumentRoot /usr/share/doc/cups:DocumentRoot /usr/share/doc/${PF}:" /etc/cups/cupsd.conf
+	dosed "s:#DocumentRoot /usr/share/doc/cups:DocumentRoot /usr/share/cups/docs:" /etc/cups/cupsd.conf
 	dosed "s:#SystemGroup sys:SystemGroup lp:" /etc/cups/cupsd.conf
 	dosed "s:#User lp:User lp:" /etc/cups/cupsd.conf
 	dosed "s:#Group sys:Group lp:" /etc/cups/cupsd.conf
@@ -96,4 +93,18 @@ src_install() {
 	insinto /etc/pam.d ; newins ${FILESDIR}/cups.pam cups
 	exeinto /etc/init.d ; newexe ${FILESDIR}/cupsd.rc6 cupsd
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/cups.xinetd cups-lpd
+
+	# we need to recreate these dirs outside in pkg_postinst() since they're
+	# empty and will get zapped on upgrade otherwise.
+	rm -rf ${D}/etc/cups/{certs,interfaces,ppd}
+	rm -rf ${D}/var
+}
+
+pkg_postinst() {
+	install -d ${ROOT}/var/log/cups
+	install -d ${ROOT}/var/spool
+	install -m0700 -o lp -d ${ROOT}/var/spool/cups
+	install -m1700 -o lp -d ${ROOT}/var/spool/cups/tmp
+	install -m0711 -o lp -d ${ROOT}/etc/cups/certs
+	install -d -m0755 ${ROOT}/etc/cups/{interfaces,ppd}
 }
