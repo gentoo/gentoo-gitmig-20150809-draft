@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/csconv
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.8 2004/10/14 20:10:53 dholm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.9 2005/03/30 17:03:08 usata Exp $
+
+*csconv-12.1_p2002 (30 Mar 2005)
+
+  30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +csconv-12.1_p2002.ebuild:
+  Version bumped.
 
   14 Oct 2004; David Holm <dholm@gentoo.org> csconv-12.0.1_pre1891.ebuild:
   Added to ~ppc.
