@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/darcnes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/ChangeLog,v 1.7 2004/06/24 22:25:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/ChangeLog,v 1.8 2004/09/03 23:50:46 swegener Exp $
+
+  04 Sep 2004; Sven Wegener <swegener@gentoo.org>
+  +files/darcnes-0401-gcc34.patch, darcnes-0401-r1.ebuild,
+  darcnes-0401-r2.ebuild:
+  Fixed compilation errors with gcc-3.4. Thanks to Anthony Mirabella
+  <mirabeaj@notes.udayton.edu> and Bjarke Istrup Pedersen
+  <Bjarke.ip@tekpunkt.dk> in bug #58718.
 
   06 Jun 2004; Aron Griffis <agriffis@gentoo.org> darcnes-0401-r1.ebuild,
   darcnes-0401-r2.ebuild:
