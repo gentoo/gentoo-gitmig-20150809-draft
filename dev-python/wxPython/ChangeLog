@@ -1,8 +1,13 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.9 2002/09/29 22:18:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.10 2002/10/29 07:11:10 vapier Exp $
 
-HEY - wxPython 2.3.3.1 is out - Upgrade after Gentoo 1.4 is released :)
+*wxPython-2.3.3.1 (28 Oct 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  This version bump was nasty rough ...
+  They added configure/make scripts to this package now, so mirrored much of
+  the configure setup after wxGTK ...
 
 *wxPython-2.3.2.1-r2 (29 Aug 2002)
 
