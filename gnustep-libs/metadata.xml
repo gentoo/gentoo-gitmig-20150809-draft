@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The gnustep-libs category contains GNUstep libraries.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie gnustep-libs enthält Bibliotheken für die
+		GNUstep-Umgebung.
+	</longdescription>
 </catmetadata>
 
