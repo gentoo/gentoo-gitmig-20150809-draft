@@ -1,7 +1,15 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.2 2002/04/15 20:52:27 jhhudso Exp $
 
+*man-1.5i-r3 (15 Apr 2002)
+
+  15 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> man-1.5i-r3.ebuild :
+	
+  Changed man to used it's auto-configured man.conf file.
+  man-1.5i-r2's man.conf had paths that didn't exist and options that
+  caused some man pages, like ps to not format correctly.
+	
 *man-1.5i-r2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
