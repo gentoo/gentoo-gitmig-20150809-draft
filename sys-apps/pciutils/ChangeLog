@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.4 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.5 2002/08/01 23:47:25 aliz Exp $
+
+*pciutils-2.1.10 (02 Aug 2002)
+
+  02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> pciutils-2.1.10.ebuild:
+  Version bump. Updates the pci.ids before compiling.
 
 *pciutils-2.1.9-r1.ebuild (14 July 2002)
 
