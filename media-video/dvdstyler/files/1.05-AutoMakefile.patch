@@ -1,6 +1,6 @@
 diff -ru DVDStyler-1.05.orig/Makefile.am DVDStyler-1.05/Makefile.am
 --- DVDStyler-1.05.orig/Makefile.am	2004-07-20 21:14:26.000000000 +0930
-+++ DVDStyler-1.05/Makefile.am	2004-07-30 08:39:40.566063040 +0930
++++ DVDStyler-1.05/Makefile.am	2004-08-05 08:18:54.316885328 +0930
 @@ -3,7 +3,7 @@
  
  ACLOCAL_AMFLAGS=-I.
@@ -12,7 +12,7 @@ diff -ru DVDStyler-1.05.orig/Makefile.am DVDStyler-1.05/Makefile.am
  run: all
 diff -ru DVDStyler-1.05.orig/backgrounds/Makefile.am DVDStyler-1.05/backgrounds/Makefile.am
 --- DVDStyler-1.05.orig/backgrounds/Makefile.am	2004-06-15 20:28:06.000000000 +0930
-+++ DVDStyler-1.05/backgrounds/Makefile.am	2004-07-30 08:37:53.152392400 +0930
++++ DVDStyler-1.05/backgrounds/Makefile.am	2004-08-05 08:18:54.317885176 +0930
 @@ -1,3 +1,3 @@
  
 -dist_pkgdatadir=$(prefix)/backgrounds
@@ -20,7 +20,7 @@ diff -ru DVDStyler-1.05.orig/backgrounds/Makefile.am DVDStyler-1.05/backgrounds/
  dist_pkgdata_DATA = *.jpg
 diff -ru DVDStyler-1.05.orig/buttons/Makefile.am DVDStyler-1.05/buttons/Makefile.am
 --- DVDStyler-1.05.orig/buttons/Makefile.am	2004-06-15 20:28:06.000000000 +0930
-+++ DVDStyler-1.05/buttons/Makefile.am	2004-07-30 08:38:19.326413344 +0930
++++ DVDStyler-1.05/buttons/Makefile.am	2004-08-05 08:18:54.319884872 +0930
 @@ -1,3 +1,3 @@
  
 -dist_pkgdatadir=$(prefix)/buttons
@@ -28,7 +28,7 @@ diff -ru DVDStyler-1.05.orig/buttons/Makefile.am DVDStyler-1.05/buttons/Makefile
  dist_pkgdata_DATA = *.xml
 diff -ru DVDStyler-1.05.orig/configure.in DVDStyler-1.05/configure.in
 --- DVDStyler-1.05.orig/configure.in	2004-06-30 04:58:59.000000000 +0930
-+++ DVDStyler-1.05/configure.in	2004-07-30 08:36:47.052441120 +0930
++++ DVDStyler-1.05/configure.in	2004-08-05 08:18:54.320884720 +0930
 @@ -119,7 +119,6 @@
  
  dnl vars
@@ -39,7 +39,7 @@ diff -ru DVDStyler-1.05.orig/configure.in DVDStyler-1.05/configure.in
  AC_SUBST(CFLAGS)
 diff -ru DVDStyler-1.05.orig/install.win32/Makefile.am DVDStyler-1.05/install.win32/Makefile.am
 --- DVDStyler-1.05.orig/install.win32/Makefile.am	2004-06-11 20:36:10.000000000 +0930
-+++ DVDStyler-1.05/install.win32/Makefile.am	2004-07-30 08:36:36.990970696 +0930
++++ DVDStyler-1.05/install.win32/Makefile.am	2004-08-05 08:18:54.322884416 +0930
 @@ -7,13 +7,13 @@
  
  if USE_KDE
@@ -84,7 +84,7 @@ diff -ru DVDStyler-1.05.orig/install.win32/Makefile.am DVDStyler-1.05/install.wi
  else
 diff -ru DVDStyler-1.05.orig/locale/Makefile.in DVDStyler-1.05/locale/Makefile.in
 --- DVDStyler-1.05.orig/locale/Makefile.in	2004-06-15 19:25:59.000000000 +0930
-+++ DVDStyler-1.05/locale/Makefile.in	2004-07-30 08:42:04.506180816 +0930
++++ DVDStyler-1.05/locale/Makefile.in	2004-08-05 08:18:54.323884264 +0930
 @@ -9,7 +9,7 @@
  LINGUAS=de it ru
  
@@ -114,9 +114,19 @@ diff -ru DVDStyler-1.05.orig/locale/Makefile.in DVDStyler-1.05/locale/Makefile.i
  clean:
 diff -ru DVDStyler-1.05.orig/src/rc/Makefile.am DVDStyler-1.05/src/rc/Makefile.am
 --- DVDStyler-1.05.orig/src/rc/Makefile.am	2004-07-04 01:42:44.000000000 +0930
-+++ DVDStyler-1.05/src/rc/Makefile.am	2004-07-30 08:38:58.600442784 +0930
++++ DVDStyler-1.05/src/rc/Makefile.am	2004-08-05 08:18:54.325883960 +0930
 @@ -1,3 +1,3 @@
  
 -dist_pkgdatadir=@bindir@/rc
 +dist_pkgdatadir=@datadir@/@PACKAGE_NAME@/rc
  dist_pkgdata_DATA = *.png *.cur
+diff -ru DVDStyler-1.05.orig/wxXML/Makefile.am DVDStyler-1.05/wxXML/Makefile.am
+--- DVDStyler-1.05.orig/wxXML/Makefile.am	2004-06-15 20:28:49.000000000 +0930
++++ DVDStyler-1.05/wxXML/Makefile.am	2004-08-05 08:19:14.593802768 +0930
+@@ -1,6 +1,3 @@
+-SUBDIRS = expat
+-
+ noinst_LIBRARIES = libwxxml.a
+ 
+ libwxxml_a_SOURCES = xml.cpp xmlhelpr.cpp
+-libwxxml_a_LIBADD = expat/xmlrole.o expat/xmltok.o expat/xmlparse.o

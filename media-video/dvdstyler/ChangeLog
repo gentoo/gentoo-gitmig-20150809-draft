@@ -1,6 +1,14 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.2 2004/07/30 07:27:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.3 2004/08/05 01:50:43 dragonheart Exp $
+
+*dvdstyler-1.05-r1 (05 Aug 2004)
+
+  05 Aug 2004; Daniel Black <dragonheart@gentoo.org>
+  files/1.05-AutoMakefile.patch, +dvdstyler-1.05-r1.ebuild,
+  -dvdstyler-1.05.ebuild:
+  Changed to use installed dev-libs/expat rather than one that came with the
+  package. Also moved silence.mp2 to the correct directory.
 
 *dvdstyler-1.05 (30 Jul 2004)
 
