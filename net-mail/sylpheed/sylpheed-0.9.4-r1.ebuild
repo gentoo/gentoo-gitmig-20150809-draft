@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.4-r1.ebuild,v 1.2 2003/09/05 02:10:23 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.4-r1.ebuild,v 1.3 2003/09/05 02:17:11 spider Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda gtk2"
 
@@ -12,7 +12,8 @@ DESCRIPTION="A lightweight email client and newsreader"
 SRC_URI="http://sylpheed.good-day.net/${PN}/${P}.tar.bz2
 	gtk2? ( http://www.homa.ne.jp/~ashie/linux/files/${P}-gtk2-${PATCHVER}.diff.gz )"
 
-HOMEPAGE="http://sylpheed.good-day.net"
+HOMEPAGE="http://sylpheed.good-day.net
+http://www.homa.ne.jp/~ashie/linux/sylpheed-gtk2.html.en"
 
 SLOT="0"
 LICENSE="GPL-2"
