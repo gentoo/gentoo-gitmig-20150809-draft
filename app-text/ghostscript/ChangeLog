@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.40 2003/11/13 13:40:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.41 2003/11/15 18:22:17 lanius Exp $
+
+  15 Nov 2003; Heinrich Wendel <lanius@gentoo.org> files/gs7.07.1-ijs.patch,
+  files/gs7.07.1-ps2epsi.patch:
+  version bump, also added new fonts release
 
 *ghostscript-7.05.6-r4 (13 Nov 2003)
 
