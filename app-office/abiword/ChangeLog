@@ -1,8 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.20 2002/11/19 02:07:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.21 2002/12/15 21:34:48 jmorgan Exp $
 
 *abiword-1.0.4_pre1-r1 (19 Nov 2002)
+
+  16 Dec 2002; Jack Morgan <jmorgan@gentoo.org> abiword-1.0.3.ebuild :
+  Added ~sparc keywords
 
   19 Nov 2002; foser <foser@gentoo.org> abiword-1.0.4_pre1-r1.ebuild :
   Disabled all scripting (perl) due to extensive problems
