@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.23 2002/11/01 10:54:42 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.24 2002/11/19 12:54:22 phoenix Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -39,6 +39,12 @@ INHERITED="$INHERITED $ECLASS"
 # Anonymous cvs login?
 # if 'yes' uses :pserver: with empty password, if 'no' uses :ext: with $ECVS_PASS, other values not allowed
 [ -z "$ECVS_ANON" ] && ECVS_ANON="yes"
+
+# Authentication method to use on ECVS_ANON="no" - possible values are "pserver" and "ext"
+[ -z "$ECVS_AUTH" ] && ECVS_AUTH="ext"
+
+# Use su to run cvs as user
+[ -z "$ECVS_RUNAS" ] && ECVS_RUNAS="`whoami`"
 
 # Username to use
 [ -z "$ECVS_USER" ] && ECVS_USER="anonymous"
@@ -129,6 +135,7 @@ DIR=$DIR"
 	# in at the cvs server. we don't want to mess with ~/.cvspass.
 	echo ":pserver:${ECVS_SERVER} A" > ${T}/cvspass
 	export CVS_PASSFILE="${T}/cvspass"
+	chown $ECVS_RUNAS "${T}/cvspass"
 	#export CVSROOT=:pserver:${ECVS_USER}@${ECVS_SERVER}
 	
 	# Note: cvs update and checkout commands are unified.
@@ -137,7 +144,7 @@ DIR=$DIR"
 	
 	[ "${ECVS_ANON}" == "yes" ] && \
 		newserver=":pserver:${ECVS_USER}@${ECVS_SERVER}" || \
-		newserver=":ext:${ECVS_USER}@${ECVS_SERVER}" 
+		newserver=":${ECVS_AUTH}:${ECVS_USER}@${ECVS_SERVER}" 
 		
 	
 	# CVS/Repository files can't (I think) contain two concatenated slashes
@@ -201,6 +208,11 @@ DIR=$DIR"
 	# warning: if we do it this way we get multiple -rX options - harmless i think
 	[ -n "$ECVS_BRANCH" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -r$ECVS_BRANCH"
 
+	# Chowning the directory
+	if [ "${ECVS_RUNAS}" != "root" ]; then
+		chown -R "$ECVS_RUNAS" /$DIR
+	fi
+
 	# finally run the cvs update command
 	debug-print "$FUNCNAME: is in dir `/bin/pwd`"
 	debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS with $ECVS_SERVER for module $ECVS_MODULE subdir $ECVS_SUBDIR"
@@ -220,23 +232,34 @@ DIR=$DIR"
 import pexpect,os
 
 mypasswd  = "${ECVS_PASS}"
+myauth    = "${ECVS_AUTH}"
 mytimeout = 10
 
-mycommand = "${ECVS_CVS_COMMAND} update ${ECVS_CVS_OPTIONS}"
-child = pexpect.spawn(mycommand)
+if myauth == "ext":
+	mycommand = "su ${ECVS_RUNAS} -c \"${ECVS_CVS_COMMAND} update ${ECVS_CVS_OPTIONS}\""
+	child = pexpect.spawn(mycommand)
 
-index = child.expect(['continue connecting','word:'], mytimeout)
-if index == 0:
-	child.sendline('yes')
-	## Added server to ~/.ssh/known_hosts
-	child.expect('word:', mytimeout)
-else:
-	## Server already is in ~/.ssh/known_hosts
-	pass
+	index = child.expect(['continue connecting','word:'], mytimeout)
+	if index == 0:
+		child.sendline('yes')
+		## Added server to ~/.ssh/known_hosts
+		child.expect('word:', mytimeout)
+	else:
+		## Server already is in ~/.ssh/known_hosts
+		pass
 
-child.sendline(mypasswd)
-child.expect(pexpect.EOF)
+	child.sendline(mypasswd)
+	child.expect(pexpect.EOF)	
 
+elif myauth == "pserver":
+	mycommand = "su ${ECVS_RUNAS} -c \"cvs login\""
+	child = pexpect.spawn(mycommand)
+	child.expect("CVS password:",mytimeout)
+	child.sendline(mypasswd)
+	child.expect(pexpect.EOF)
+
+	# Logged in - checking out
+	os.system("su ${ECVS_RUNAS} -c \"${ECVS_CVS_COMMAND} update ${ECVS_CVS_OPTIONS}\" &> /dev/null")
 EndOfFile
 ########################### End of inline-python ##################################
 	else
@@ -244,8 +267,9 @@ EndOfFile
 		$ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS || die "died running cvs update"
 	fi
 
-
-
+	# log out and restore ownership
+	su $ECVS_RUNAS -c "cvs logout" &> /dev/null
+	chown root ${T}/cvspass
 }
 
 cvs_src_unpack() {
