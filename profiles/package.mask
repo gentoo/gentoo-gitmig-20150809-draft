@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (06 July 2002)
+# short-term mask for testing - see core post for details
+=x11-libs/qt-3.0.4.20020606-r2
+
 # <seemant@gentoo.org> (05 Jul 2002)
 # sandbox violation on /proc/sys/kernel/tainted
 =net-dialup/rp-pppoe-3.4
