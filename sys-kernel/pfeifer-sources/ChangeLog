@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.3 2003/05/03 15:19:34 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.4 2003/05/03 21:23:50 pfeifer Exp $
 
   TODO:
     ht support
@@ -11,6 +11,13 @@
     RSBAC
     NPTL (doubtful)
     skas
+
+*pfeifer-sources-2.4.20.1_pre9 (03 Mar 2003)
+
+ Changes:
+ * Added usb scanners update from 16Apr2003
+ * Added some minor grsecurity fixes
+ * Few other minor fixes
 
 *pfeifer-sources-2.4.20.1_pre8 (03 May 2003)
 
