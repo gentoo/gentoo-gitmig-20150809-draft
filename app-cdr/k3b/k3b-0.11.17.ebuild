@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.17.ebuild,v 1.1 2004/09/23 19:58:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.17.ebuild,v 1.2 2004/09/25 15:45:39 lanius Exp $
 
 inherit kde
 
@@ -51,6 +51,11 @@ MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d)
 if [ -n "$MAKE_PO" ] ; then
 	SRC_URI="${SRC_URI} mirror://sourceforge/k3b/${I18N}.tar.bz2"
 fi
+
+src_unpack() {
+	kde_src_unpack
+	epatch ${FILESDIR}/${P}-noarts.patch
+}
 
 src_compile() {
 	local _S=${S}
