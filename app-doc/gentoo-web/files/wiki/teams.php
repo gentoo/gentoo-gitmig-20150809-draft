@@ -151,7 +151,7 @@
 	<?php } ?>
 </div>
 
-<p style="font-size:medium;font-weight:bold;">Team <?=$team;?></p>
+<p style="font-size:medium;font-weight:bold;">The <?=$team;?> Team</p>
 <p><b>Summary</b></p>
 <p style="margin:0 5px 10px 10px;"><?=$summary;?></p>
 <p><b>Status</b></p>

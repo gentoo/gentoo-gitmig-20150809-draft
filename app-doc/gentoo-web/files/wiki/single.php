@@ -213,7 +213,7 @@
 
 <?php if ( $uid && ($action != 'new_todo' || $new_todo_post_success) ) { ?>
 <div style="float:right;padding:10px 0 5px 5px;">
-	<table width=200 border=0 cellpadding=3 cellspacing=0 bgcolor="#46357c"><tr><td>
+	<table width=250 border=0 cellpadding=3 cellspacing=0 bgcolor="#46357c"><tr><td>
 	<table width="100%" border=0 cellpadding=5 cellspacing=0 bgcolor="white"><tr><td>
 		<form method="post" action="single.php?action=post_followup&tid=<?=$tid;?>">
 		<p style="font-weight:bold;">Post a Followup!</p>

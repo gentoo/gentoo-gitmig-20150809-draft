@@ -15,7 +15,7 @@ if ( $action == 'grab_todo' && $tid ) { grabtodo( $tid ); }
 
 if ( $team == 6 ) {
 	if ( $q == 'u' ) {
-		$result = mysql_query( "select * from todos where public=1 and team=$team" );
+		$result = mysql_query( "select * from todos where priority!=0 and public=1 and team=$team" );
 		?><p style="font-size:medium;font-weight:bold;">Unassigned Tasks for <?=$teamname;?> Team</p><?php
 	} elseif ( $q == 'o' ) {
 		$result = mysql_query( "select * from todos where priority!=0 and team=$team" );

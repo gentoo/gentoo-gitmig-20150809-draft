@@ -54,8 +54,12 @@ if ( $submitted ) {
 				if ($tmp) continue; // next group
 
 				// add 'em
-				$newlead[] = $xuid;
-				$newlead = implode( ',', $newlead );
+				if ( sizeof($newlead) == 0 ) {
+					$newlead = $xuid;
+				} else {
+					$newlead[] = $xuid;
+					$newlead = implode( ',', $newlead );
+				}
 				mysql_query( "update teams set leader='$newlead' where gid=".$cur['value'] );
 			}
 		}
@@ -87,7 +91,11 @@ if ( $submitted ) {
 					$newl[] = $each['value'];
 				}
 
-				$newl = implode( ',', $newl ); // compile the new var
+				if ( sizeof($newl) == 0 ) {
+					$newl = '';
+				} else {
+					$newl = implode( ',', $newl ); // compile the new var
+				}
 				mysql_query( "update teams set leader='$newl' where gid=".$ol['value'] );
 			}
 		}
