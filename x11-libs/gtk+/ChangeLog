@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.56 2003/03/08 18:33:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.57 2003/03/09 18:56:31 azarah Exp $
 
 *gtk+-1.2.10-r10 (08 Mar 2003)
+
+  09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gtk+-1.2.10-r10.ebuild :
+  Change to fully use epatch, and also make use of libtool eclass.
 
   08 Mar 2003; foser <foser@gentoo.org> gtk+-1.2.10-r10.ebuild :
   New patch to fix locale problems that have been bugging us for a long time

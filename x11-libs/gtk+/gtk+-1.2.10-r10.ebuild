@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.1 2003/03/08 18:33:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.2 2003/03/09 18:56:31 azarah Exp $
 
 inherit eutils
 
+inherit libtool
+
 IUSE="nls"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="The GIMP Toolkit"
 HOMEPAGE="http://www.gtk.org/"
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
@@ -27,7 +29,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	
 	cd ${S}/..
-	bzcat ${DISTDIR}/gtk+-1.2.10-r8-gentoo.diff.bz2 | patch -p0
+	epatch ${DISTDIR}/gtk+-1.2.10-r8-gentoo.diff.bz2
 
 	# locale fix by sbrabec@suse.cz
 	cd ${S}	
@@ -36,9 +38,9 @@ src_unpack() {
 
 src_compile() {
 
-	libtoolize --copy --force
+	elibtoolize
 
-	local myconf
+	local myconf=
 	use nls || myconf="${myconf} --disable-nls"
 
 	if [ "${DEBUGBUILD}" ]
