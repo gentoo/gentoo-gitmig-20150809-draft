@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-2.0.7-r1.ebuild,v 1.2 2003/09/15 16:57:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-2.0.7-r1.ebuild,v 1.3 2003/10/09 06:39:16 phosphan Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A remote security scanner for Linux"
 HOMEPAGE="http://www.nessus.org/"
-DEPEND="=net-analyzer/nessus-libraries-${PV}
-	=net-analyzer/libnasl-${PV}
+DEPEND=">=net-analyzer/nessus-libraries-${PV}
+	>=net-analyzer/libnasl-${PV}
 	>=net-analyzer/nessus-core-${PV}
-	=net-analyzer/nessus-plugins-${PV}"
+	>=net-analyzer/nessus-plugins-${PV}"
 RDEPEND=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
