@@ -1,11 +1,16 @@
 # ChangeLog for app-emacs/tamago
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/ChangeLog,v 1.6 2003/05/29 11:45:36 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/ChangeLog,v 1.7 2003/08/07 15:33:56 usata Exp $
+
+*tamago-4.0.6-r1 (08 Aug 2003)
+
+  08 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> tamago-4.0.6-r1.ebuild:
+  Added canna IUSE flag and dynamic configuration
+
+*tamago-4.0.6 (06 Nov 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*tamago-4.0.6 (06 Nov 2002)
-
   29 May 2003; <yakina@gentoo.org> tamago-4.0.6.ebuild:
   Added S
 
