@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.4 2002/05/22 23:19:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.5 2002/05/23 02:02:12 spider Exp $
+
+gnome-spell-1.0_pre1 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> gnome-spell-1.0_pre1.ebuild : 
+  removed some faulty deps
 
 *gnome-spell-1.0_pre1 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org> gnome-spell-1.0_pre1.ebuild : 
