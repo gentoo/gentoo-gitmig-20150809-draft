@@ -1,0 +1,8 @@
+# ChangeLog for app-sci/libgdgeda
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/libgdgeda/ChangeLog,v 1.1 2004/02/01 18:21:38 plasmaroo Exp $
+
+*libgdgeda-2.0.15 (01 Feb 2004)
+
+  01 Feb 2004; <plasmaroo@gentoo.org> libgdgeda-2.0.15.ebuild:
+  Initial commit.
