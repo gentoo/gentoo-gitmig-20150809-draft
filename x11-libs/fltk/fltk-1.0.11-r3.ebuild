@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.12 2004/06/24 22:00:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.13 2004/11/01 19:26:54 corsair Exp $
 
 IUSE="opengl"
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.fltk.org/pub/fltk/${PV}/${P}-source.tar.bz2"
 HOMEPAGE="http://www.fltk.org"
 
 SLOT="1.0"
-LICENSE="FLTK | GPL-2"
+LICENSE="FLTK GPL-2"
 KEYWORDS="x86 sparc"
 
 DEPEND="virtual/x11
