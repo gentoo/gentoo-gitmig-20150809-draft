@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.6.5-r1.ebuild,v 1.8 2004/06/30 17:20:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.6.5-r1.ebuild,v 1.9 2004/11/11 23:03:43 dsd Exp $
 
 DESCRIPTION="I2C Bus support"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"
@@ -35,10 +35,8 @@ src_install() {
 pkg_postinst() {
 	[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
 
-	einfo
 	einfo "i2c package installed ..."
-	einfo
+	echo
 	einfo "IMPORTANT ... if you are installing this package you need to either"
 	einfo "IMPORTANT ... *disable* kernel i2c support or *enable it as a module*"
-	einfo
 }

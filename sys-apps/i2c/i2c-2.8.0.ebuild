@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.16 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.17 2004/11/11 23:03:43 dsd Exp $
 
 inherit eutils
 
@@ -17,40 +17,30 @@ DEPEND=""
 
 pkg_setup() {
 	echo
-	einfo "*****************************************************************"
-	einfo
 	einfo "This ebuild assumes your *current* kernel is >=2.4.9 && < 2.5+ "
-	einfo
+	echo
 	einfo "For 2.5+ series kernels, use the support already in the kernel"
 	einfo "under 'Character devices' -> 'I2C support'."
-	einfo
+	echo
 	einfo "To cross-compile, 'export LINUX=\"/lib/modules/<version>/build\"'"
 	einfo "or symlink /usr/src/linux to another kernel."
-	einfo
-	einfo "*****************************************************************"
 	echo
 
-	eerror "*****************************************************************"
-	eerror
 	eerror "WARNING: This i2c support is not recommended for things such as "
 	eerror "WARNING: BTTV"
-	eerror
-	eerror "*****************************************************************"
-	eerror
+	echo
 	eerror "http://www2.lm-sensors.nu/~lm78/cvs/browse.cgi/lm_sensors2/README"
-	eerror
+	echo
 	eerror "35 ADDITIONALLY, i2c-2.8.0 is not API compatible to earlier i2c"
 	eerror "36 releases due to struct changes; therefore you must NOT ENABLE"
 	eerror "37 any other i2c drivers (e.g. bttv) in the kernel."
 	eerror "38 Do NOT use lm-sensors 2.8.0 or i2c-2.8.0 if you require bttv."
-	eerror
+	echo
 	eerror "Please try out http://www.ensicaen.ismra.fr/~delvare/devel/i2c/"
 	eerror "for a kernel patch which will fix this problem. Please note that"
 	eerror "nor the lm_sensors team nor the package maintainers will be able"
 	eerror "to support you if you encounter problems with I2C when using"
 	eerror "other modules with requirements on I2C..."
-	eerror
-	eerror "*****************************************************************"
 	echo
 }
 
@@ -112,12 +102,9 @@ src_install() {
 pkg_postinst() {
 	[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
 
-	einfo
 	einfo "I2C modules installed ..."
-	einfo
+	echo
 	ewarn "IMPORTANT ... if you are installing this package you need to"
 	ewarn "IMPORTANT ... *disable* kernel I2C support OR *modularize it*"
 	ewarn "IMPORTANT ... if your 2.4.x kernel is patched with such support"
-	einfo
-	echo
 }
