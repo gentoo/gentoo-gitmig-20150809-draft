@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3336 2004/11/19 22:06:46 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3337 2004/11/20 16:55:28 solar Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <solar@gentoo.org> (20 Nov 2004)
+# security masked per request of maintainer till 
+# such time as he can fix it. bug 69019
+app-text/pdftohtml
 
 # <lv@gentoo.org> (19 Nov 2004)
 # unfinished
