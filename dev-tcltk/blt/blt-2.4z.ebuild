@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.3 2003/09/04 05:13:00 msterret Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.4 2003/11/29 19:35:29 plasmaroo Exp $
 
 S="${WORKDIR}/${PN}${PV}"
 SRC_URI="mirror://sourceforge/blt/BLT2.4z.tar.gz"
 HOMEPAGE="http://www.sourceforge.net/blt/"
-DESCRIPTION="an extension to the Tk toolkit"
+DESCRIPTION="BLT is an extension to the Tk toolkit adding new widgets, geometry managers, and miscellaneous commands."
 
 DEPEND=">=dev-lang/tk-8.0"
 
@@ -14,12 +13,11 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86"
 
-# hyper-optimizations untested...
-#
-
 src_unpack() {
+
 	unpack ${A}
 	epatch ${FILESDIR}/blt2.4z-install.diff
+
 }
 
 src_compile() {
@@ -32,7 +30,7 @@ src_compile() {
 				--with-x \
 				--with-tcl=/usr/lib || die "./configure failed"
 
-	emake CFLAGS="${CFLAGS}" || die
+	make CFLAGS="${CFLAGS}" || die
 
 }
 
@@ -47,4 +45,5 @@ src_install() {
 			install || die
 
 	dodoc NEWS PROBLEMS README
+
 }
