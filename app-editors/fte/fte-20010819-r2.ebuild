@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r2.ebuild,v 1.1 2002/04/23 10:38:21 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r2.ebuild,v 1.2 2002/04/24 23:04:10 spider Exp $
 
 S=${WORKDIR}/${P}
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://fte.sourceforge.net"
 DEPEND="virtual/glibc 
 	app-arch/unzip 
 	>=sys-libs/ncurses-5.2
-	gpm? ( >=sys-libs/gpm-1.20 )"
+	>=sys-libs/gpm-1.20"
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	gpm? ( >=sys-libs/gpm-1.20 )"
