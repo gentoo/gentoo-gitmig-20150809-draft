@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/dczip
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/ChangeLog,v 1.1 2004/02/18 22:02:26 zx Exp $
+
+*dczip-2.05 (18 Feb 2004)
+
+  18 Feb 2004; Chris Aniszczyk <zx@gentoo.org> dczip-2.05.ebuild,
+  metadata.xml:
+  Initial Import.
+  Thanks to Camille Hout <gentoo@cameuh.net> for the initial ebuild. Bug #19914
+
