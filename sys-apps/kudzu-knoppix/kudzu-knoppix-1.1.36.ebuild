@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.10 2004/06/25 23:45:01 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.11 2004/06/27 18:28:35 kugelfang Exp $
 
 MY_PV=${PV}-2
 S=${WORKDIR}/kudzu-${PV}
@@ -34,7 +34,7 @@ src_install() {
 	einstall install-program DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man \
 		|| die "Install failed"
 
-	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" -o "${ARCH}" = "amd64" ]
+	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" ]
 	then
 		cd ${S}/ddcprobe || die
 		dosbin ddcxinfo ddcprobe || die
