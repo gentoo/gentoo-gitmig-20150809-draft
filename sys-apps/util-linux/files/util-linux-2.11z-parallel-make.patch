@@ -1,0 +1,11 @@
+--- util-linux-2.11y/mount/Makefile.orig	2002-12-16 17:46:29.000000000 +0000
++++ util-linux-2.11y/mount/Makefile	2002-12-16 17:46:59.000000000 +0000
+@@ -78,7 +78,7 @@
+ 
+ sundries.o nfsmount.o nfsmount_xdr.o nfsmount_clnt.o: nfsmount.h
+ 
+-umount.o: mount_constants.h
++umount.o: mount_constants.h nfsmount.h
+ 
+ mount.o mount_by_label.o mount_guess_fstype.o: linux_fs.h
+ 

@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.21 2003/01/18 19:12:38 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.22 2003/02/03 05:44:17 seemant Exp $
+
+*util-linux-2.11z (03 Feb 2003)
+
+  03 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  util-linux-2.11z.ebuild files/util-linux-2.11z-parallel-make.patch
+  files/digest-util-linux-2.11z :
+
+  Version bump.  Closes bug #14955 by lone_iguana@hotmail.com
 
 *util-linux-2.11y (27 Oct 2002)
 
