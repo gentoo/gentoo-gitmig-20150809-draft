@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 f4c26d1da9f489f829dcb2c3fb6eaee5 xxe-2.8_p1.ebuild 1042
 MD5 8b87fac7cac2d57307096c76e9394a41 ChangeLog 2952
-MD5 cba5f21f1e37c6fc886c08c621f8a636 metadata.xml 398
+MD5 41ecb89862cace4da8241f245f406764 metadata.xml 322
 MD5 fcd68b7f1df3f38457f9bb4bb82e8e2c files/digest-xxe-2.8_p1 66
 MD5 c0efedfb73e48162d44f28ff140e07b8 files/xxe.desktop 206
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBwvwRCHk4+ZoBpvsRAhySAJ9qvFn8tkZNC55d5MQzf/OkLjvwsACePdvR
-osc5bRtJl/zlBSa3SnV+KyE=
-=PV8H
+iD8DBQFBw0m6I1lqEGTUzyQRAq+rAJ4tTBQj7c43zWYWjhyO5WQ5VWgTkACgtPpf
+eZRUsnyyQ2gTwZa3/2/kcf0=
+=pNKp
 -----END PGP SIGNATURE-----
