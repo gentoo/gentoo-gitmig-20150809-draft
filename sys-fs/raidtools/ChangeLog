@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/raidtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.6 2004/06/28 01:54:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.7 2004/07/01 21:50:38 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  raidtools-0.90-r2.ebuild, raidtools-1.00.3-r1.ebuild:
+  virtual/glibc -> virtual/libc
 
   27 Jun 2004; Aron Griffis <agriffis@gentoo.org> raidtools-0.90-r2.ebuild,
   raidtools-1.00.3-r1.ebuild:

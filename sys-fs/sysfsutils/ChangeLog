@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.9 2004/06/24 22:53:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.10 2004/07/01 21:51:07 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  sysfsutils-0.2.0.ebuild, sysfsutils-0.3.0.ebuild, sysfsutils-0.4.0.ebuild,
+  sysfsutils-1.0.0.ebuild:
+  virtual/glibc -> virtual/libc
 
   22 Mar 2004; Joshua Kinard <kumba@gentoo.org> sysfsutils-1.0.0.ebuild:
   Added ~mips to KEYWORDS and added gnuconfig support for mips.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r3.ebuild,v 1.6 2004/06/30 17:10:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r3.ebuild,v 1.7 2004/07/01 21:50:17 eradicator Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ppc ~sparc ppc64"
 IUSE="tcltk"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	tcltk? ( dev-lang/tcl dev-lang/tk )"
 RDEPEND=""
 

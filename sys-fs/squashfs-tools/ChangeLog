@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/squashfs-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.4 2004/06/24 22:53:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.5 2004/07/01 21:50:52 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  squashfs-tools-1.3.ebuild, squashfs-tools-2.0_alpha.ebuild:
+  virtual/glibc -> virtual/libc
 
   20 Jun 2004; <solar@gentoo.org> :
   digest fix

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.4 2004/06/24 22:54:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.5 2004/07/01 21:52:09 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs filesystem utilities"
@@ -12,12 +12,12 @@ SLOT="0"
 LICENSE="LGPL-2.1 GPL-2"
 KEYWORDS="x86 amd64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/autoconf
 	sys-devel/make
 	sys-fs/e2fsprogs"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 	cd ${S}
