@@ -5,13 +5,15 @@ inherit games
 
 DESCRIPTION="Return to Castle Wolfenstein: Enemy Territory - standalone multi-player game based on Return to Castle Wolfenstein"
 HOMEPAGE="http://www.idsoftware.com/"
-SRC_URI="et-linux-${PV}-2.x86.run"
+SRC_URI="ftp://3dgamers.in-span.net/pub/3dgamers4/games/wolfensteinet/et-linux-${PV}-2.x86.run
+	http://3dgamers.gameservers.net/pub/3dgamers/games/wolfensteinet/et-linux-${PV}-2.x86.run
+	http://downloadsx-2.planetmirror.com/pub/3dgamers/games/wolfensteinet/et-linux-${PV}-2.x86.run"
 
 LICENSE="RTCW-ETEULA"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="dedicated opengl"
-RESTRICT="fetch nostrip"
+RESTRICT="nomirror nostrip"
 
 DEPEND="virtual/glibc"
 RDEPEND="dedicated? ( app-misc/screen )

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.8 2003/12/09 22:06:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.9 2003/12/10 14:34:48 wolf31o2 Exp $
+
+  10 Dec 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  enemy-territory-2.56-r2.ebuild:
+  Adding mirrors.
 
 *enemy-territory-2.56-r2 (09 Dec 2003)
 
