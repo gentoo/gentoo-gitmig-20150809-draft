@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.17_pre1.ebuild,v 1.2 2004/10/24 23:54:37 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.17_pre1.ebuild,v 1.3 2004/10/25 00:01:58 morfic Exp $
 
 inherit eutils
 
@@ -90,7 +90,7 @@ src_install(){
 	insinto /usr/share/xsessions
 	doins ${FILESDIR}/IceWM.desktop
 
-	if use silversp
+	if use silverxp
 	then
 	einfo "Please use Version 1.2.14-3 of the Silverxp theme"
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.74 2004/10/24 23:54:37 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.75 2004/10/25 00:01:57 morfic Exp $
+
+  24 Oct 2004; Daniel Goller <morfic@gentoo.org> -icewm-1.2.15-r1.ebuild,
+  icewm-1.2.16-r1.ebuild, -icewm-1.2.16.ebuild, icewm-1.2.17_pre1.ebuild:
+  remove old ebuilds + fix small typo in ebuilds
 
   24 Oct 2004; Daniel Goller <morfic@gentoo.org> icewm-1.2.17_pre1.ebuild:
   Cleanup econf
