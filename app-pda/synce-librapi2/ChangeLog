@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/synce-librapi2
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.1 2002/11/28 10:10:51 zwelch Exp $
+
+*synce-librapi2-0.3 (27 Nov 2002)
+
+  27 Nov 2002; Zach Welch <zwelch@gentoo.org> :
+  Split from ebuild submitted in bug 11184 by faune@broadpark.no
+
+
