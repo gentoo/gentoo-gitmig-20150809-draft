@@ -8,8 +8,8 @@ This page contains information about Keychain, an OpenSSH-compatible RSA/DSA key
 application for bash.
 </abstract>
 
-<version>1.7</version>
-<date>22 Oct 2001</date>
+<version>1.8</version>
+<date>29 Nov 2001</date>
 
 <chapter>
 <title>Keychain Intro</title>
@@ -61,10 +61,10 @@ time you really need to reinitialize the long-running <c>ssh-agent</c> process.
 
 <p>
 The most recent release of <c>keychain</c> can be found here:<br/><br/>
-<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.7.tar.bz2</uri>
+<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.8.tar.bz2</uri>
 </p>
 <pre caption="md5sum">
-af62d8d31a73ae6df1d57ff71da22aeb  keychain-1.7.tar.bz2
+a37909a580644d384a21268824931103  keychain-1.8.tar.bz2
 </pre>
 </body>
 </section>
@@ -93,10 +93,46 @@ shortly, which will cover <c>ssh-agent</c> authentication forwarding.</e>
 <title>ChangeLog</title>
 <section>
 <body>
-<pre caption="ChangeLog for KeyChain">
-# ChangeLog for KeyChain; http://www.gentoo.org/projects/keychain
+<pre caption="ChangeLog for Keychain">
+# ChangeLog for Keychain; http://www.gentoo.org/projects/keychain
 # Copyright 2001 Gentoo Technologies, Inc.; Distributed under the GPL
 # Written by Daniel Robbins (drobbins@gentoo.org)
+
+* keychain 1.8 (29 Nov 2001)
+
+  29 Nov 2001; Philip Hallstrom (philip@adhesivemedia.com)
+  Added a "--local" option for removing the ${HOSTNAME} from the various
+  files that keychain creates.  Handy for non-NFS users.
+  
+  29 Nov 2001; Aron Griffis (agriffis@gentoo.org)
+  Using the Bourne shell "type" builtin rather than using the external
+  "which" command.  Should make things a lot more robust and slightly
+  faster.
+  
+  09 Nov 2001; Mike Briseno (mike@radik.com)
+  Solaris' "which" command outputs "no lockfile in..." to stdout rather
+  than stderr.  A one-line fix (test the error condition) has been
+  applied.
+
+  09 Nov 2001; lockfile settings tweak
+
+  09 Nov 2001; Rewrote how keychain detects failed passphrase attempts.
+  If you stop making progress providing valid passphrases, it's three
+  strikes and you're out.
+
+  09 Nov 2001; Constantine P. Sapuntzakis (csapuntz@stanford.edu)
+  Some private keys can't be "ssh-keygen -l -f"'d; this patch causes
+  keychain to look for the corresponding public key if the private
+  key doesn't work.  Thanks Constantine!
+
+  09 Nov 2001; Victor Leitman (vleitman@yahoo.com)
+  CYAN color misdefined; fixed.
+  
+  27 Oct 2001; Brian Wellington (bwelling@xbill.org)
+  A "quiet mode" (--quiet) fix; I missed an "echo".
+  
+  27 Oct 2001; J.A. Neitzel (jan@belvento.org)
+  Missed another "kill -9"; it's now gone.
 
 * keychain 1.7 (21 Oct 2001) 
  
