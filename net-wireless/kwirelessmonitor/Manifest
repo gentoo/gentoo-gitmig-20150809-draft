@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 43fd05373283a548746cd0f24884883a kwirelessmonitor-0.5.4.ebuild 634
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c89d56b24c9d81fdb36132ca0157c330 ChangeLog 687
-MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 43fd05373283a548746cd0f24884883a kwirelessmonitor-0.5.4.ebuild 634
 MD5 dfee642e5ce2c06b4856dead60ed788b files/digest-kwirelessmonitor-0.5.4 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB3ZDdZ/iYVBmujdURAoDlAKD5f96vqqBB/JD6p/DMjOUmFg2B3gCgwG4Y
-Gtpv2y8C9VxtvULJ2EQepI4=
-=zFbB
------END PGP SIGNATURE-----
