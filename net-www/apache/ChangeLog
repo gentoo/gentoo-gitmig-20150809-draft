@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.113 2004/04/02 23:26:52 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.114 2004/04/03 07:23:59 robbat2 Exp $
+
+  02 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> apache-2.0.49.ebuild:
+  fix bug #46585.
 
   02 Apr 2004; Chuck Short <zul@gentoo.org> apache-2.0.49.ebuild,
   files/apache2:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49.ebuild,v 1.8 2004/04/02 23:26:52 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49.ebuild,v 1.9 2004/04/03 07:23:59 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -157,6 +157,11 @@ src_compile() {
 	echo 'ac_cv_sctp=${ac_cv_sctp=no}' >> ${S}/config.cache
 	echo 'ac_cv_header_netinet_sctp_h=${ac_cv_header_netinet_sctp_h=no}' >> ${S}/config.cache
 	echo 'ac_cv_header_netinet_sctp_uio_h=${ac_cv_header_netinet_sctp_uio_h=no}' >> ${S}/config.cache
+
+	# fix bug #46585
+	CFLAGS="`echo ${CFLAGS} | xargs`"
+	CXXFLAGS="`echo ${CXXFLAGS} | xargs`"
+	LDFLAGS="`echo ${LDFLAGS} | xargs`"
 
 	SSL_BASE="SYSTEM" \
 	./configure \
