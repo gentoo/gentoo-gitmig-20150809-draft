@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/ecls
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.4 2003/08/26 00:29:59 mkennedy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.5 2004/06/03 17:05:30 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> ecls-0.2.ebuild:
+  Fix use invocation
 
 *ecls-0.9b (25 Aug 2003)
 

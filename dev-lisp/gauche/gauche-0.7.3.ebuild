@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.3.ebuild,v 1.5 2004/04/01 13:45:27 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.3.ebuild,v 1.6 2004/06/03 17:07:54 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,7 +30,7 @@ src_compile() {
 
 	use ipv6 && myconf="--enable-ipv6"
 
-	if [ "`use nls`" ]; then
+	if use nls; then
 		myconf="$myconf --enable-multibyte=utf-8"
 	else
 		myconf="$myconf --enable-multibyte=euc-jp"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.16 2004/05/12 11:11:10 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.17 2004/06/03 17:04:14 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> gcl-2.5.2.ebuild,
+  gcl-2.5.3.ebuild:
+  Fix use invocation
 
   12 May 2004; Alexander Gabert <pappy@gentoo.org> gcl-2.5.3.ebuild:
   replaced hardened-gcc check with filter-flags logic call

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.10 2003/09/06 22:35:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.11 2004/06/03 17:05:30 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Embeddable Common Lisp 'Spain'"
@@ -17,7 +17,7 @@ src_compile() {
 
 	local myconf
 
-	if [ "`use X`" ]
+	if use X
 	then
 		myconf="${myconf} --with-x"
 	else
