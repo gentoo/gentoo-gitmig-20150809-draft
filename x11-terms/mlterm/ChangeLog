@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.24 2004/02/03 13:17:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.25 2004/02/26 11:44:20 gmsoft Exp $
+
+  26 Feb 2004; Guy Martin <gmsoft@gentoo.org> mlterm-2.8.0_p1-r1.ebuild:
+  Marked stable on hppa.
 
 *mlterm-2.8.1_pre20040203 (03 Feb 2004)
 

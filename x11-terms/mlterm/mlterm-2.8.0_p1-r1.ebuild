@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1-r1.ebuild,v 1.5 2003/12/07 14:22:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1-r1.ebuild,v 1.6 2004/02/26 11:44:20 gmsoft Exp $
 
 IUSE="truetype gtk gtk2 imlib bidi nls"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/mlterm/${MY_P}.tar.gz
 	mirror://sourceforge/mlterm/${PATCH_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc hppa"
 LICENSE="BSD"
 
 # mlterm itself could use either gdk-pixbuf2, gdk-pixbuf1 or imlib but
