@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.11-r3.ebuild,v 1.2 2005/03/14 03:19:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.11-r3.ebuild,v 1.3 2005/03/16 16:50:46 dsd Exp $
 
 ETYPE="sources"
 IUSE="ultra1"
@@ -10,8 +10,8 @@ detect_arch
 
 #version of gentoo patchset
 GPV="11.03"
-GPV_SRC="http://reactivated.net/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
-	http://reactivated.net/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
+GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
+	mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
