@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4.ebuild,v 1.7 2003/09/08 07:40:26 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4.ebuild,v 1.8 2003/09/11 01:39:37 msterret Exp $
 
 S=${WORKDIR}/xfonts-artwiz-2.3/upstream
 DESCRIPTION="Artwiz Fonts"
@@ -15,15 +15,15 @@ DEPEND="virtual/x11
 	x11-misc/ttmkfdir"
 
 src_compile() {
-    cd ${S}
+	cd ${S}
 	for font in *.bdf; do
 		/usr/X11R6/bin/bdftopcf ${font} > `basename $font .bdf`.pcf
-    done
-    gzip *.pcf
+	done
+	gzip *.pcf
 }
 
 src_install() {
-    cd ${S}
+	cd ${S}
 	insopts -m0644
 	insinto /usr/share/fonts/artwiz/
 	doins *.pcf.gz

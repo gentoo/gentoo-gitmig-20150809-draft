@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.0-r1.ebuild,v 1.2 2003/09/06 23:54:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.0-r1.ebuild,v 1.3 2003/09/11 01:39:37 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean Baekmuk Font"
@@ -25,10 +25,10 @@ src_install () {
 }
 
 pkg_postinst() {
-        einfo "You must add the path of Baekmuk fonts in the /etc/X11/XF86Config:"
-        einfo ""
-        einfo "\tSection \"Files\""
-        einfo "\t\tFontPath \"/usr/X11R6/lib/X11/fonts/baekmuk/\""
-        einfo ""
-        einfo "You should restart your X server after that."
+	einfo "You must add the path of Baekmuk fonts in the /etc/X11/XF86Config:"
+	einfo ""
+	einfo "\tSection \"Files\""
+	einfo "\t\tFontPath \"/usr/X11R6/lib/X11/fonts/baekmuk/\""
+	einfo ""
+	einfo "You should restart your X server after that."
 }
