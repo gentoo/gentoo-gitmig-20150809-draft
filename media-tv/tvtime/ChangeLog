@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.9 2003/11/17 03:25:53 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.10 2003/12/03 07:38:58 max Exp $
+
+*tvtime-0.9.12 (02 Dec 2003)
+
+  02 Dec 2003; <max@gentoo.org> tvtime-0.9.11.ebuild, tvtime-0.9.12.ebuild:
+  Bump to version 0.9.12. Drop version 0.9.11 at author's request.
 
   16 Nov 2003; <max@gentoo.org> tvtime-0.9.11.ebuild:
   Final version is now on sourceforge.
