@@ -1,6 +1,16 @@
-MD5 8c73f2522195d1b7c9617055a295a026 qtparted-0.4.4.ebuild 742
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 df2973cfd4895916ead1024634a0badf ChangeLog 1839
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a1875ae5778e5453142b27ddc3e34b79 qtparted-0.4.0.ebuild 627
+MD5 ebac248502d94cd7ee3c927b7b3f9bd4 qtparted-0.4.4.ebuild 738
 MD5 8a5fdca416ff28558d39dab30ce00f26 files/digest-qtparted-0.4.0 67
 MD5 bd75fd4cc142dbf238fdb44969bfb98e files/digest-qtparted-0.4.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBCB4+HTu7gpaalycRAp3tAKCtxLVHTa8JFQi8IOKPlqfX3lnVzwCgp0G+
+Ee7KsNdSfmkiECY3p9RT3JY=
+=nrMc
+-----END PGP SIGNATURE-----
