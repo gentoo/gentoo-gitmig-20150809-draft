@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.1 2003/08/15 04:32:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.2 2003/08/15 06:25:09 robbat2 Exp $
 
 apachedir='1'
 apache=''
@@ -16,9 +16,10 @@ IUSE="apache2"
 
 DEPEND="${DEPEND}
 		net-www/apache
-		apache2? ( >=net-www/apache-2 )"
+		apache2? ( >=net-www/apache-2 )
+		net-www/pcgi"
 #RDEPEND=""
-S=${WORKDIR}/pcgi2
+S=${WORKDIR}/${PN/mod_}
 
 src_compile() {
 	if use apache2; then
