@@ -307,10 +307,19 @@ variable settings. The variables you can set are:</p>
 
 <section>
 <title>Rules for writing an ebuild File</title>
-<body><p>Since ebuild files are really just shell scripts, you should use your editor's
-shell-script mode for editing them. You should use proper indentation, using only tab characters --
-no spaces. Make sure you set up your editor to put tabstops at 4 spaces. Always make sure you use braces around your environment variables; e.g. <c>${P}</c> instead of just <c>$P</c>.</p>
-<p>TODO: add stuff about emacs &amp; vi.</p></body>
+<body><p>Since ebuild files are really just shell scripts, you should
+use your editor's shell-script mode for editing them. You should use
+proper indentation, using only tab characters -- no spaces. Make sure
+you set up your editor to put tabstops at 4 spaces. Always make sure
+you use braces around your environment variables; e.g. <c>${P}</c>
+instead of just <c>$P</c>.</p>
+<p>If you're using Vim, you can put the following snippet at the bottom of your .vimrc to make sure you're using the right settings when editing anything Gentoo-related.</p>
+<pre>
+if (getcwd() =~ 'gentoo-x86\|gentoo-src\|portage')
+	set tabstop=4 shiftwidth=4 noexpandtab
+endif
+</pre>
+<p>TODO: add stuff about emacs.</p></body>
 </section>
 
 <section>
@@ -318,7 +327,7 @@ no spaces. Make sure you set up your editor to put tabstops at 4 spaces. Always 
 
 <body>
 
-<p>The purpose of USE variables is to allow you to configure Portage to gobally
+<p>The purpose of USE variables is to allow you to configure Portage to globally
 and automatically enable or disable certain <e>optional build-time</e>
 features.  Here's an example.  Let's say you're a GNOME fan, and you'd like any
 ebuild that has the option of compiling-in optional GNOME support to do
