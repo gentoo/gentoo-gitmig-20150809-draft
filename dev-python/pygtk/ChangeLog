@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.70 2005/01/09 10:15:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.71 2005/01/25 23:22:41 lucass Exp $
+
+  26 Jan 2005; Lukasz Strzygowski <lucass@gentoo.org> -pygtk-2.3.92.ebuild,
+  -pygtk-2.3.93.ebuild, -pygtk-2.3.94.ebuild, -pygtk-2.3.96.ebuild,
+  -pygtk-2.3.97.ebuild:
+  Removed old unstable branch.
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> pygtk-2.4.1.ebuild:
   Added missing digest entries. Added missing parentheses in SRC_URI.
