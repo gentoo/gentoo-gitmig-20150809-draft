@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cheops-ng
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cheops-ng/ChangeLog,v 1.1 2005/03/31 21:52:56 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cheops-ng/ChangeLog,v 1.2 2005/03/31 22:12:17 vanquirius Exp $
+
+  31 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  cheops-ng-0.1.13.ebuild:
+  Adding metadata.xml.
+  Adding debug USE flag. Thanks again to Michael Zanetta <grimmlin@pentoo.ch>.
 
 *cheops-ng-0.1.13 (31 Mar 2005)
 

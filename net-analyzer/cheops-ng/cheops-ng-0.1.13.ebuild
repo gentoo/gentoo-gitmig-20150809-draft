@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cheops-ng/cheops-ng-0.1.13.ebuild,v 1.1 2005/03/31 21:52:56 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cheops-ng/cheops-ng-0.1.13.ebuild,v 1.2 2005/03/31 22:12:17 vanquirius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cheops-ng/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="debug"
 DEPEND=">=net-analyzer/nmap-3.27-r1
 	=x11-libs/gtk+-1.2*
 	>=dev-libs/libxml-1.8.17-r2
@@ -26,6 +26,17 @@ src_unpack() {
 }
 
 src_compile() {
+	# disable/enable debug
+	if use debug; then
+		sed -i -e 's/^\/\/#define DEBUG/#define DEBUG/g' ./*.c || die "sed failed"
+		sed -i -e 's/^\/\/#define DEBUG/#define DEBUG/g' ./*.h || die "sed failed"
+
+	else
+	# we need to disable the noisy nmap debug and any other
+		sed -i -e 's/^#define DEBUG/\/\/#define DEBUG/g' ./*.c || die "sed failed"
+		sed -i -e 's/^#define DEBUG/\/\/#define DEBUG/g' ./*.h || die "sed failed"
+	fi
+
 	# First we need to configure adns
 	cd adns-1.0
 	econf || die
@@ -44,7 +55,8 @@ src_compile() {
 		-e 's/COPYING/toto/g' \
 		Makefile || die "sed failed"
 	# gcc-3.4 fixes
-	sed -i -e 's/printf(__FUNCTION__/printf(__FUNCTION__\,/g' ./*.c
+	sed -i -e 's/printf(__FUNCTION__/printf(__FUNCTION__\,/g' ./*.c \
+	|| die "sed failed"
 	emake || die
 }
 
