@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.13.ebuild,v 1.6 2004/02/02 23:37:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.13.ebuild,v 1.7 2004/02/10 13:22:59 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xqf/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc hppa amd64"
+KEYWORDS="x86 ~ppc hppa ~amd64"
 IUSE="nls geoip gtk2"
 
 DEPEND=">=games-util/qstat-25
