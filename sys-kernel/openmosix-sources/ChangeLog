@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.73 2004/12/02 19:55:44 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.74 2004/12/04 16:41:12 voxus Exp $
+
+*openmosix-sources-2.4.28 (04 Dec 2004)
+*openmosix-sources-2.4.24-r10 (04 Dec 2004)
+
+  04 Dec 2004; Konstantin Arkhipov <voxus@gentoo.org>:
+  +files/openmosix-sources-binfmt_aout.patch,
+  +openmosix-sources-2.4.28.ebuild,
+  -openmosix-sources-2.4.24-r9.ebuild:
+  Version bump for migshm patchset, preparing to drop old .24 sources.
 
 *openmosix-sources-2.4.24-r10 (02 Dec 2004)
 *openmosix-sources-2.4.27-r7 (02 Dec 2004)

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.27-r7.ebuild,v 1.1 2004/12/02 19:55:44 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.28.ebuild,v 1.1 2004/12/04 16:41:12 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
 inherit kernel eutils
 
-OKV="2.4.27"
-TIMESTAMP="20040914"
+OKV="2.4.28"
+TIMESTAMP="20041204"
 [ "${PR}" == "r0" ] && KV=${PV/_/-}-openmosix || KV=${PV/_/-}-openmosix-${PR}
 S=${WORKDIR}/linux-${KV}
 
@@ -25,10 +25,11 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/
 		http://www.openmosix.org/
+		http://openmosix.snarc.org/
 		http://dev.gentoo.org/~voxus/om/"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="-*"
+KEYWORDS="-* ~x86"
 IUSE=""
 
 src_unpack() {
@@ -36,11 +37,6 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 	cd linux-${KV}
 	epatch ${DISTDIR}/patch-${OKV}-om-migshm-${TIMESTAMP}.bz2 || die "openMosix patch failed."
-	epatch ${DISTDIR}/linux-${PV}-CAN-2004-0814.patch || die "security patch for CAN-2004-0814 failed."
-	epatch ${FILESDIR}/${PN}.CAN-2004-0841-fix_ldisc_switch.patch || die "fix for CAN-2004-0814 patch failed."
-	epatch ${DISTDIR}/linux-${PV}-nfs3-xdr.patch.bz2 || die "security patch for nfs3-xdk failed."
-	epatch ${FILESDIR}/${PN}-binfmt_elf.patch || die "Security patch for binfmt_elf failed."
-	epatch ${FILESDIR}/${PN}-${PV}-smbfs.patch || die "Security aptch for smbfs failed."
-	epatch ${FILESDIR}/${PN}-af_unix.patch || die "Security patch for af_unix failed."
+	epatch ${FILESDIR}/${PN}-binfmt_aout.patch || die "Security patch for binfmt_aout failed."
 	kernel_universal_unpack
 }

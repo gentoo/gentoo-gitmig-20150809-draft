@@ -1,0 +1,67 @@
+diff -urNa fs.orig/binfmt_aout.c fs/binfmt_aout.c
+--- fs.orig/binfmt_aout.c	2004-12-04 18:13:19.000000000 +0300
++++ fs/binfmt_aout.c	2004-12-04 18:43:46.804200744 +0300
+@@ -43,13 +43,18 @@
+ 	NULL, THIS_MODULE, load_aout_binary, load_aout_library, aout_core_dump, PAGE_SIZE
+ };
+ 
+-static void set_brk(unsigned long start, unsigned long end)
++#define BAD_ADDR(x)	((unsigned long)(x) >= TASK_SIZE)
++
++static int set_brk(unsigned long start, unsigned long end)
+ {
+ 	start = PAGE_ALIGN(start);
+ 	end = PAGE_ALIGN(end);
+-	if (end <= start)
+-		return;
+-	do_brk(start, end - start);
++	if (end > start) {
++		unsigned long addr = do_brk(start, end - start);
++		if (BAD_ADDR(addr))
++			return addr;
++	}
++	return 0;
+ }
+ 
+ /*
+@@ -452,9 +457,14 @@
+ 
+ #ifdef CONFIG_MOSIX
+ 	/* if DEPUTY, the REMOTE already did "set_brk" in aout_remote_init_mm */
+-	if(!(current->mosix.dflags & DDEPUTY))
++	if(!(current->mosix.dflags & DDEPUTY)) {
+ #endif /* CONFIG_MOSIX */
+-	set_brk(current->mm->start_brk, current->mm->brk);
++		retval = set_brk(current->mm->start_brk, current->mm->brk);
++		if (retval < 0) {
++			send_sig(SIGKILL, current, 0);
++			return retval;
++		}
++	}
+ 
+ #ifdef CONFIG_MOSIX
+ 	if(current->mosix.dflags & DDEPUTY)
+diff -urNa fs.orig/exec.c fs/exec.c
+--- fs.orig/exec.c	2004-12-04 18:13:19.000000000 +0300
++++ fs/exec.c	2004-12-04 18:41:51.679702328 +0300
+@@ -357,6 +357,7 @@
+ 
+ 	down_write(&current->mm->mmap_sem);
+ 	{
++		struct vm_area_struct *vma;
+ 		mpnt->vm_mm = current->mm;
+ 		mpnt->vm_start = PAGE_MASK & (unsigned long) bprm->p;
+ 		mpnt->vm_end = STACK_TOP;
+@@ -366,6 +367,12 @@
+ 		mpnt->vm_pgoff = 0;
+ 		mpnt->vm_file = NULL;
+ 		mpnt->vm_private_data = (void *) 0;
++		vma = find_vma(current->mm, mpnt->vm_start);
++		if (vma) {
++			up_write(&current->mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return -ENOMEM;
++		}
+ 		insert_vm_struct(current->mm, mpnt);
+ 		current->mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 	}
