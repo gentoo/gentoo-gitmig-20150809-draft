@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0_beta2.ebuild,v 1.4 2003/12/28 03:46:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0_beta2.ebuild,v 1.5 2003/12/28 15:09:40 caleb Exp $
 inherit kde-dist flag-o-matic
 
-IUSE="nas esd motif slang tcltk oggvorbis gtk alsa gstreamer"
+IUSE="nas encode esd motif slang tcltk oggvorbis gtk alsa gstreamer"
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
 KEYWORDS="~x86"
 
@@ -50,10 +50,3 @@ use oggvorbis	&& myconf="$myconf --with-vorbis=/usr"		|| myconf="$myconf --witho
 
 myconf="$myconf $myaudio $myinterface --with-cdda --disable-strict --disable-warnings"
 
-src_unpack() {
-	kde_src_unpack
-}
-
-src_compile() {
-	kde_src_compile
-}
