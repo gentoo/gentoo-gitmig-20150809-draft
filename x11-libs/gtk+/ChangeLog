@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.101 2004/06/29 04:47:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.102 2004/07/02 21:44:02 tgall Exp $
+
+  02 Jul 2004; Tom Gall <tgall@gentoo.org> gtk+-1.2.10-r11.ebuild:
+  fix repoman dep (imlib)
 
   28 Jun 2004; Tom Gall <tgall@gentoo.org> gtk+-2.4.3.ebuild:
   ~ppc64 , bug #54792
