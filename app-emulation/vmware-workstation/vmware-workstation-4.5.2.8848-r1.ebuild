@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r1.ebuild,v 1.6 2004/09/11 19:31:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r1.ebuild,v 1.7 2004/09/12 14:36:37 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -23,7 +23,9 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 	http://vmware.wespe.de/software/wkst/${NP}.tar.gz
 	ftp://vmware.wespe.de/pub/software/wkst/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${N26KernSupport}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/${N26KernSupport}.tar.gz"
+	http://ftp.cvut.cz/vmware/obselete/${N26KernSupport}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/${N26KernSupport}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${N26KernSupport}.tar.gz"
 
 LICENSE="vmware"
 IUSE=""
@@ -35,7 +37,6 @@ DEPEND="virtual/libc
 	virtual/x11
 	virtual/os-headers
 	>=dev-lang/perl-5
-	>=dev-lang/tcl-8.3.3
 	sys-apps/pciutils"
 
 src_unpack() {

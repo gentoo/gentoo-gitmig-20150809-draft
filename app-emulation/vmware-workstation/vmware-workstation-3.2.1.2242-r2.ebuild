@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r2.ebuild,v 1.3 2004/09/11 19:31:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r2.ebuild,v 1.4 2004/09/12 14:36:37 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -21,11 +21,13 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
 	http://vmware.wespe.de/software/${NP}.tar.gz
 	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${N26KernSupport}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/${N26KernSupport}.tar.gz"
+	http://ftp.cvut.cz/vmware/obsolete/${N26KernSupport}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/${N26KernSupport}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${N26KernSupport}.tar.gz"
 
 LICENSE="vmware"
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* x86"
 IUSE=""
 RESTRICT="nostrip"
 
