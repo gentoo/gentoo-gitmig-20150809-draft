@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.157 2005/03/25 03:29:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.158 2005/03/26 19:41:47 ciaranm Exp $
+
+*vim-7.0_alpha20050326 (26 Mar 2005)
+
+  26 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +vim-7.0_alpha20050326.ebuild:
+  New vim7 snapshot, hopefully with working tcltk support (bug #86709)
 
 *vim-6.3.068 (25 Mar 2005)
 
