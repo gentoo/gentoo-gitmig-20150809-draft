@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9_pre1.ebuild,v 1.1 2004/01/25 10:19:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9_pre1.ebuild,v 1.2 2004/01/25 21:58:58 eradicator Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
 inherit flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
-PATCHVER="0.1"
+PATCHVER="0.2"
 
 DESCRIPTION="X MultiMedia System"
 HOMEPAGE="http://www.xmms.org/"
@@ -46,6 +46,9 @@ src_unpack() {
 	# Add dynamic taste detection patch...
 	# goto http://bugs.xmms.org/show_bug.cgi?id=756 to vote for its inclusion in mainline xmms
 	epatch ${PATCHDIR}/${P}-dtd.patch
+
+	# Fix ansi C fubar so that it compiles with less-forgiving gcc2
+	epatch ${PATCHDIR}/${P}-gcc2_fix.patch
 
 	# Patch to allow external programmes to have the "jump to" dialog box
 	epatch ${PATCHDIR}/${P}-jump.patch
