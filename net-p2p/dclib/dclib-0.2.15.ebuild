@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2.15.ebuild,v 1.1 2003/06/16 13:55:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2.15.ebuild,v 1.2 2003/09/08 09:01:12 lanius Exp $
 
 inherit gcc eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-apps/bzip2-1.0.2
-        >=dev-libs/libxml2-2.4.22"
+	>=dev-libs/libxml2-2.4.22"
 
 src_unpack() {
 	unpack ${A}

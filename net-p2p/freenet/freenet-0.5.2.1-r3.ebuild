@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.7 2003/09/07 00:17:34 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.8 2003/09/08 09:04:52 lanius Exp $
 
 IUSE=""
 
@@ -20,28 +20,28 @@ DEPEND="virtual/jre
 src_install() {
 	dodoc README
 
-        dodir /var/freenet/stats /var/freenet/store
+	dodir /var/freenet/stats /var/freenet/store
 	keepdir /var/freenet/stats /var/freenet/store
 
-        insinto /usr/lib/freenet
-        doins freenet.jar freenet-ext.jar
+	insinto /usr/lib/freenet
+	doins freenet.jar freenet-ext.jar
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/conf.freenet freenet
 
-        exeinto /etc/init.d
-        newexe ${FILESDIR}/rc.freenet2 freenet
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/rc.freenet2 freenet
 }
 
 pkg_preinst() {
-        if ! groupmod freenet > dev/null 2>&1; then
-                groupadd freenet 2> /dev/null || \
-                        die "Failed to create freenet group"
-        fi
+	if ! groupmod freenet > dev/null 2>&1; then
+		groupadd freenet 2> /dev/null || \
+			die "Failed to create freenet group"
+	fi
 	if ! usermod freenet > /dev/null 2>&1; then
-	        useradd -g freenet -s /dev/null -d /var/empty \
-			-c "freenet" freenet || \
-        	        die "Failed to create freenet user"
+		useradd -g freenet -s /dev/null -d /var/empty \
+		-c "freenet" freenet || \
+			die "Failed to create freenet user"
 	fi
 }
 
@@ -52,7 +52,7 @@ pkg_postinst() {
 	fi
 	chown -R freenet:freenet /var/freenet
 	einfo "Congratulations on merging freenet, please run"
-        einfo "# ebuild ${EBUILD} config"
+	einfo "# ebuild ${EBUILD} config"
 	einfo "to update freenet to the latest jars and seednodes."
 	einfo "This step is also necessary to configure freenet for"
 	einfo "first use.  You may also run this step again at any time"
@@ -64,8 +64,8 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if [ -z has_version ]; then
-	        einfo "Please remove /var/freenet manually if you are't going to"
-	        einfo "continue to use Freenet on this machine!"
+		einfo "Please remove /var/freenet manually if you are't going to"
+		einfo "continue to use Freenet on this machine!"
 	fi
 }
 

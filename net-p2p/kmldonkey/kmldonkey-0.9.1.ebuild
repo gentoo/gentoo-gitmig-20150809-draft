@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.9.1.ebuild,v 1.1 2003/08/01 01:21:22 caleb Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.9.1.ebuild,v 1.2 2003/09/08 09:07:45 lanius Exp $ 
 
 inherit kde-base
 
@@ -15,12 +15,11 @@ SRC_URI="http://savannah.nongnu.org/download/kmldonkey/unstable.pkg/${PV}/${P}.t
 HOMEPAGE="http://www.gibreel.net/projects/kmldonkey"
 
 pkg_postinst() {
-        echo
-        echo
-        einfo "To configure Kmldonkey use your KDE ControlCenter"
-        einfo "To load the Kmldonkey GUI interface, just add the"
-        einfo "MLDonkeyApplet miniprog to your taskbar"
-        echo
-        echo
+	echo
+	echo
+	einfo "To configure Kmldonkey use your KDE ControlCenter"
+	einfo "To load the Kmldonkey GUI interface, just add the"
+	einfo "MLDonkeyApplet miniprog to your taskbar"
+	echo
+	echo
 }
-
