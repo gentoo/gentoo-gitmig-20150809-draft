@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/freshmeat-submit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/ChangeLog,v 1.4 2004/12/10 14:09:46 ka0ttic Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/ChangeLog,v 1.5 2005/01/12 12:01:15 ka0ttic Exp $
+
+  12 Jan 2005; Aaron Walker <ka0ttic@gentoo.org>
+  freshmeat-submit-1.6.ebuild:
+  Marked stable on x86.
 
 *freshmeat-submit-1.6 (10 Dec 2004)
 
