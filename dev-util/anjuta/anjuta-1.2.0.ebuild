@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.0.ebuild,v 1.1 2003/12/08 17:05:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.0.ebuild,v 1.2 2003/12/12 16:55:40 matsuu Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A versatile IDE for GNOME"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -36,6 +36,13 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING ChangeLog FUTURE NEWS README THANKS TODO"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}_xim.patch
+}
 
 pkg_postinst() {
 
