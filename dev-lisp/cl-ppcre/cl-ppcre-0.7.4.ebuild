@@ -1,35 +1,26 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/cl-ppcre-0.6.1.ebuild,v 1.2 2003/10/16 15:59:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/cl-ppcre-0.7.4.ebuild,v 1.1 2004/02/17 18:32:08 mkennedy Exp $
 
 inherit common-lisp
 
 DESCRIPTION="CL-PPCRE is a portable regular expression library for Common Lisp."
 HOMEPAGE="http://weitz.de/cl-ppcre/
 	http://www.cliki.net/cl-ppcre"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz"
 LICENSE="BSD"
-SLOT="0"
-KEYWORDS="~x86"
-IUSE=""
+KEYWORDS="x86"
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
+SLOT="0"
 
 CLPACKAGE=cl-ppcre
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${PN}
 
 src_install() {
 	common-lisp-install *.lisp *.asd
 	common-lisp-system-symlink
 	dodoc CHANGELOG README doc/benchmarks.2002-12-22.txt
 	dohtml doc/index.html
-}
-
-pkg_preinst() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
-}
-
-pkg_postrm() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
