@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.29 2003/08/11 22:17:21 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.30 2003/08/14 08:28:09 johnm Exp $
+
+  14 Aug 2003; John Mylchreest <johnm@gentoo.org>;
+  development-sources-2.6.0_beta3-r1.ebuild:
+  Linking to linux-beta properly now closes #26590
 
 *development-sources-2.6.0_beta3-r1 (11 Aug 2003)
 

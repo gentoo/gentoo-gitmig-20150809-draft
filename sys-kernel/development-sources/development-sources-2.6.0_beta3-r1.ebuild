@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta3-r1.ebuild,v 1.1 2003/08/11 22:17:21 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta3-r1.ebuild,v 1.2 2003/08/14 08:28:10 johnm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV/_beta/-test}
@@ -92,7 +92,7 @@ pkg_postinst() {
 	if [ ! -e ${ROOT}usr/src/linux-beta ]
 	then
 
-		ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
+		ln -sf linux-${PKV} ${ROOT}/usr/src/linux-beta
 	fi
 
 	echo
