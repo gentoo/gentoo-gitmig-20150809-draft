@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.50 2004/03/15 15:17:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.51 2004/03/25 10:07:19 kumba Exp $
+
+  25 Mar 2004; Joshua Kinard <kumba@gentoo.org> sylpheed-0.9.7.ebuild,
+  sylpheed-0.9.8-r1.ebuild, sylpheed-0.9.8-r2.ebuild, sylpheed-0.9.8.ebuild:
+  Removed ~mips from KEYWORDS until this can be tested on mips properly. Has too
+  many deps to check, and requires someone with X to double check.
 
   08 Mar 2004; Jon Portnoy <avenj@gentoo.org> sylpheed-0.9.8.ebuild :
   Disable nls for amd64. Can't use gettext-0.12 on AMD64 systems.
