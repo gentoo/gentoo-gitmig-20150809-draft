@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4.ebuild,v 1.1 2005/01/30 02:52:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4.ebuild,v 1.2 2005/01/30 20:17:17 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,11 +8,11 @@ SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 
-# IMMQT_P="qt-x11-immodule-unified-qt3.3.3-20040910"
+IMMQT_P="qt-x11-immodule-unified-qt3.3.4-20041203"
 
-SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2"
-#	immqt? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz )
-#	immqt-bc? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz )
+SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
+	immqt? ( http://freedesktop.org/~daisuke/${IMMQT_P}.diff.bz2 )
+	immqt-bc? ( http://freedesktop.org/~daisuke/${IMMQT_P}.diff.bz2 )"
 #	ppc-macos? ( http://dev.gentoo.org/~usata/distfiles/${P}-darwin-fink.patch.gz )"
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
@@ -32,11 +32,6 @@ DEPEND="virtual/x11 virtual/xft
 	postgres? ( dev-db/postgresql )
 	cups? ( net-print/cups )
 	zlib? ( sys-libs/zlib )"
-
-# old immodules may cause segfaults on some qt applications,
-# especially qtconfig
-PDEPEND="!<=app-i18n/scim-qtimm-0.7
-	!<=app-i18n/uim-qt-0.1.7"
 
 S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 

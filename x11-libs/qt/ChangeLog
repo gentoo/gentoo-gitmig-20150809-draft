@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.187 2005/01/30 02:52:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.188 2005/01/30 20:17:17 usata Exp $
+
+  31 Jan 2005; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.4.ebuild:
+  Updated immqt patch; bug #80056.
 
 *qt-3.3.4 (29 Jan 2005)
 
