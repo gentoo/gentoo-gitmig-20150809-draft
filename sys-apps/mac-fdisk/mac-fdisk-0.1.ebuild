@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mac-fdisk/mac-fdisk-0.1.ebuild,v 1.5 2002/10/04 06:47:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mac-fdisk/mac-fdisk-0.1.ebuild,v 1.6 2002/10/19 04:06:04 vapier Exp $
 
 S=${WORKDIR}/${P}
 DEBRV=8
@@ -12,6 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ppc"
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	cd ${WORKDIR}
@@ -28,7 +29,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	mv pdisk.8 pdisk.8.in
 	ln mac-fdisk.8.in mac-fdisk.8 || die
 	ln pmac-fdisk.8.in pmac-fdisk.8 || die

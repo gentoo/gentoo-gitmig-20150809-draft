@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.7.ebuild,v 1.8 2002/10/04 06:27:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.7.ebuild,v 1.9 2002/10/19 04:06:04 vapier Exp $
 
 S=${WORKDIR}/user
 DESCRIPTION="User-land utilities for MOSIX process migration (clustering) software"
@@ -10,6 +10,7 @@ KEYWORDS="x86 -ppc"
 SLOT="0"
 LICENSE="as-is"
 DEPEND=">=sys-libs/ncurses-5.2"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	mkdir ${S}; cd ${S}
@@ -31,7 +32,7 @@ src_compile() {
 	done
 }
 
-src_install () {
+src_install() {
 	cd ${S}
 	make ROOT=${D} PREFIX=${D}/usr install
 	dodir /usr/share	

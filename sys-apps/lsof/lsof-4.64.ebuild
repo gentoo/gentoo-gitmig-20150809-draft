@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.64.ebuild,v 1.7 2002/10/04 06:27:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.64.ebuild,v 1.8 2002/10/19 04:06:04 vapier Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}/${MY_P}_src
@@ -24,7 +24,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	#interactive script: Enable HASSECURITY, WARNINGSTATE, and HASKERNIDCK
 	#is there a way to avoid the "echo to a file + file read"?
 	#Just piping in the results didn't seem to work.
@@ -38,8 +37,7 @@ src_compile() {
 	make all || die
 }
 
-src_install () {
-	
+src_install() {
 	#/usr/sbin is a good location -- drobbins
 	dosbin lsof
 	# .a libs not needed during boot so they go in /usr/lib -- drobbins
@@ -55,4 +53,3 @@ src_install () {
 	cd ${D}/usr/share/doc/${PF}
 	mv .README.FIRST.gz README.FIRST.gz
 }
-

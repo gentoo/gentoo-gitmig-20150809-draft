@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerprefs/powerprefs-0.3.1.ebuild,v 1.1 2002/10/17 08:09:22 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerprefs/powerprefs-0.3.1.ebuild,v 1.2 2002/10/19 04:06:04 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="powerprefs is a program to interface with pbbuttonsd (Powerbook/iBook) keys in Linux"
@@ -11,15 +11,14 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="x11-libs/gtk+ >=sys-apps/pbbuttonsd-0.5" 
+RDEPEND="${DEPEND}"
 
 src_compile() {
-
 	./configure --prefix=/usr || die "sorry, powerprefs configure failed"
 	make || die "sorry, powerprefs compile failed"
 }
 
 src_install() {
-
 	make \
 		prefix=${D}/usr \
 		mandir={D}/usr/share/man \
@@ -27,5 +26,4 @@ src_install() {
 		install || die "sorry, failed to install powerprefs"
 
 	dodoc README COPYING
-
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-ntfs/linux-ntfs-1.5.0-r1.ebuild,v 1.7 2002/10/04 06:26:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-ntfs/linux-ntfs-1.5.0-r1.ebuild,v 1.8 2002/10/19 04:06:04 vapier Exp $
 
 # NB: This project actually requires >=gcc.2.96!  This ebuild installs an
 # rpm binary package into /opt.  Eventually we'll compile it ourselves..
@@ -15,9 +15,9 @@ S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}-${PR/r/}.i386.rpm
 	mirror://sourceforge/${PN}/${PN}-devel-${PV}-${PR/r/}.i386.rpm"
 DEPEND="virtual/glibc app-arch/rpm2targz"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
-
 	local i
 	for i in ${A}
 	do
@@ -28,10 +28,8 @@ src_unpack() {
 }
 
 src_compile() { :; }
- 
 
 src_install() {
-
 	cd ${D}
 	mkdir -p opt/${PN}
 	mv ${WORKDIR}/usr/* opt/${PN}

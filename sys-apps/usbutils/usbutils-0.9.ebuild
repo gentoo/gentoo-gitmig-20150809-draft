@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.9.ebuild,v 1.5 2002/10/04 06:31:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.9.ebuild,v 1.6 2002/10/19 04:06:04 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="USB enumeration utilities"
@@ -11,6 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	# put usb.ids in same place as pci.ids (/usr/share/misc)
@@ -24,6 +25,6 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r2.ebuild,v 1.9 2002/10/04 06:29:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r2.ebuild,v 1.10 2002/10/19 04:06:04 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Configure your serial ports with it"
@@ -12,16 +12,14 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_compile() {						   
-
 	econf || die
 	pmake setserial || die
-
 }
 
 src_install() {	  
-						 
 	doman setserial.8
 	into /
 	dobin setserial

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.3 2002/10/04 06:28:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.4 2002/10/19 04:06:04 vapier Exp $
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -19,10 +19,9 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
 	sys-libs/pam
 	>=sys-apps/shadow-4.0.2-r5"
-	
+RDEPEND="${DEPEND}"
 
 src_compile() {
-        
 	local myconf=""
 	use nls ||myconf="--disable-nls"
 
@@ -32,7 +31,6 @@ src_compile() {
 }
 
 src_install() {
-	
 	einstall rootexecbindir=${D}/bin || die 
 
 	insinto /etc
@@ -46,12 +44,10 @@ src_install() {
 }
 
 pkg_preinst() {
-
 	rm -f ${ROOT}/etc/login.defs.new
 }
 
 pkg_postinst() {
-
 	[ "${FORCE_LOGIN_DEFS}" != "yes" ] && return 0
 
 	ewarn
@@ -75,4 +71,3 @@ pkg_postinst() {
 		rm -f ${ROOT}/etc/login.defs.new
 	fi
 }
-

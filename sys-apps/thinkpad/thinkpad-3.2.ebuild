@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-3.2.ebuild,v 1.7 2002/10/04 06:31:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-3.2.ebuild,v 1.8 2002/10/19 04:06:04 vapier Exp $
 
 #transform P to match tarball versioning
 MYPV=${PV/_beta/beta}
@@ -15,6 +15,7 @@ LICENSE="GPL-2"
 
 #virtual/glibc should depend on specific kernel headers
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	#thinkpad will compile modules for the kernel pointed to by /usr/src/linux
@@ -29,14 +30,11 @@ pkg_setup() {
 	fi
 }
 
-src_compile () {
-
+src_compile() {
 	emake || die "Make failed"
-
 }
 
-src_install () {
-	
+src_install() {
 	dodoc AUTHORS COPYING ChangeLog README SUPPORTED-MODELS TECHNOTES
 	dodir /lib/modules/${KV}/thinkpad
 	cp ${S}/drivers/{thinkpad,smapi,superio,rtcmosram,thinkpadpm}.o \
@@ -48,10 +46,10 @@ src_install () {
 		> ${D}/etc/devfsd.conf
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	/usr/sbin/update-modules || return 0
 }
 
-pkg_prerm () {
+pkg_prerm() {
 	/sbin/modprobe -r smapi superion rtcmosram thinkpadpm thinkpad
 }

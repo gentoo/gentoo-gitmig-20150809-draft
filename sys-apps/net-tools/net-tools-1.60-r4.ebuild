@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r4.ebuild,v 1.8 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r4.ebuild,v 1.9 2002/10/19 04:06:04 vapier Exp $
 
 IUSE="nls build"
 
@@ -13,7 +13,8 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
-		nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -35,7 +36,6 @@ src_unpack() {
 		mv config.make config.make.orig
 		sed 's:I18N=1:I18N=0:' config.make.orig > config.make
 	fi
-	
 }
 
 src_compile() {
@@ -71,4 +71,3 @@ src_install() {
 		rm -f ${D}/bin/{ypdomainname,nisdomainname}
 	fi
 }
-

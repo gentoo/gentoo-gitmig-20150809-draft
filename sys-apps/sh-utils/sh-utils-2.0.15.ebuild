@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.5 2002/10/16 19:10:17 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.6 2002/10/19 04:06:04 vapier Exp $
 
 IUSE="nls static build"
 
@@ -10,6 +10,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/shellutils/shellutils.html"
 
 DEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -49,7 +50,6 @@ src_compile() {
 }
 
 src_install() {
-
 	einstall || die
 		
 	rm -rf ${D}/usr/lib
@@ -83,4 +83,3 @@ pkg_postinst() {
 		rm -f ${ROOT}/usr/bin/hostname
 	fi
 }
-
