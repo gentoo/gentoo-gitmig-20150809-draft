@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.7.ebuild,v 1.7 2002/12/26 02:45:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.7-r1.ebuild,v 1.1 2002/12/26 02:45:40 azarah Exp $
 
 IUSE="nls"
 
-inherit libtool
+inherit eutils libtool
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
@@ -45,6 +45,16 @@ pkg_setup() {
 		eerror
 		die "Need Mozilla compiled with gtk+-1.2!!"
 	fi
+}
+
+src_unpack() {
+
+	unpack ${A}
+
+	# Add UTF8 support to the google smart bookmarks.  Note that
+	# it will probibly only work for a newly created bookmark ...
+	# <azarah@gentoo.org> (26 Dec 2002)
+	cd ${S}; epatch ${FILESDIR}/${P}-google-UTF8.patch
 }
 
 src_compile() {
