@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.160 2004/08/16 14:57:58 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.161 2004/08/16 21:21:00 usata Exp $
+
+  17 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/qt-3.3.3-complemental-patch-for-immodule-20040814.diff,
+  qt-3.3.3.ebuild:
+  Fixed compile error with immodule patch. This closes bug #60576.
 
 *qt-3.3.3 (16 Aug 2004)
 
