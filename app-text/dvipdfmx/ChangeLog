@@ -1,8 +1,17 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.1 2003/08/04 04:25:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.2 2003/08/17 11:07:59 usata Exp $
+
+*dvipdfmx-20030813 (17 Aug 2003)
+
+  17 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> dvipdfmx-20030813.ebuild,
+  files/dvipdfmx-20030813-gentoo.diff:
+  New source snapshot
 
 *dvipdfmx-20030728 (04 Aug 2003)
+
+  17 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> dvipdfmx-20030728.ebuild:
+  Changed SRC_URI, Marked stable on x86, alpha and ppc
 
   04 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> dvipdfmx-20030728.ebuild:
   Initial import.  This closes bug #23126.
