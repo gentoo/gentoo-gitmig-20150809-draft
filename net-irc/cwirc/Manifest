@@ -1,5 +1,5 @@
-MD5 47c72b7ce09a2bc204ec643a09fc9fcb ChangeLog 734
-MD5 a641d5606d73df7547db7d8cf7250c12 cwirc-1.7.1.ebuild 846
+MD5 c4ea67de574196018b988e52250387ac ChangeLog 847
+MD5 1fd5d5f66c791afac872091548f7388f cwirc-1.7.1.ebuild 855
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 7c240ef73cd9a53241026c38c5c8b36f files/cwirc-1.7.1-gentoo.patch 662
 MD5 42f9f7605e7754ec072bcd73b39df99d files/digest-cwirc-1.7.1 63

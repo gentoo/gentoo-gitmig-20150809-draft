@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/cwirc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.5 2004/05/29 16:16:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/ChangeLog,v 1.6 2004/06/17 23:22:00 swegener Exp $
+
+  18 Jun 2004; Sven Wegener <swegener@gentoo.org> cwirc-1.7.1.ebuild:
+  Removed S=${WORKDIR}/${P} and RDEPEND=""
 
   29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> cwirc-1.7.1.ebuild:
   Masked cwirc-1.7.1.ebuild testing for ppc
