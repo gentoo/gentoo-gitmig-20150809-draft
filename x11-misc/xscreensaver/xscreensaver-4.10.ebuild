@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.10 2003/09/05 23:18:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.11 2003/11/08 16:57:15 todd Exp $
 
 IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama"
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc ~sparc ~alpha amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha amd64"
 SLOT="0"
 
 # NOTE: the motif interface is not supported/developed anymore
