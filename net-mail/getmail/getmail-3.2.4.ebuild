@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-3.2.4.ebuild,v 1.1 2004/07/07 20:45:35 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-3.2.4.ebuild,v 1.2 2004/07/15 01:48:50 agriffis Exp $
 
 IUSE=""
-S=${WORKDIR}/${P}
 DESCRIPTION="A POP3 mail retriever with reliable Maildir and mbox delivery"
 HOMEPAGE="http://www.qcc.ca/~charlesc/software/getmail-3.0/"
 SRC_URI="http://www.qcc.ca/~charlesc/software/getmail-3.0/${P}.tar.gz"

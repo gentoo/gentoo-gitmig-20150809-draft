@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.13 2004/06/24 23:26:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/pop3vscan-0.4.ebuild,v 1.14 2004/07/15 01:52:10 agriffis Exp $
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="A transparent POP3-Proxy with virus-scanning capabilities."
 SRC_URI="mirror://sourceforge/pop3vscan/${P}.tar.gz"
 HOMEPAGE="http://pop3vscan.sf.net/"
@@ -13,6 +12,7 @@ RDEPEND="net-firewall/iptables"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
