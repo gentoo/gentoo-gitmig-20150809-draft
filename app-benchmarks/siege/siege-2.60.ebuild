@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.4 2004/09/20 10:55:39 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.5 2004/10/08 14:39:44 ka0ttic Exp $
 
 DESCRIPTION="A HTTP regression testing and benchmarking utility"
 HOMEPAGE="http://www.joedog.org/siege/"
@@ -21,9 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" \
-		SIEGERC="${S}/siegerc-example" \
-		install || die
+	einstall SIEGERC="${S}/siegerc-example" || die
 	dodoc AUTHORS ChangeLog INSTALL MACHINES README \
 		KNOWNBUGS siegerc-example
 	use ssl && dodoc README.https
