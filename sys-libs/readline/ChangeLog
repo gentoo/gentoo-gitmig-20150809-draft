@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.17 2003/02/20 22:00:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.18 2003/02/24 20:57:59 dragon Exp $
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> readline-4.3-r4.ebuild :
   Added arm to keywords.
@@ -13,6 +13,9 @@
   Added mips to keywords.
 
 *readline-4.3-r4 (09 Dec 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> readline-4.3-r4.ebuild :
+  Marked as stable for mips.
 
   09 Dec 2002; Jon Portnoy <avenj@gentoo.org> readline-4.3-r4.ebuild :
 
@@ -27,6 +30,9 @@
 *readline-4.1-r5 (26 Oct 2002)
 *readline-4.2a-r1 (26 Oct 2002)
 *readline-4.3-r3 (26 Oct 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> readline-4.3-r3.ebuild :
+  Marked as stable for mips.
 
   26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> readline*.ebuild :
   Add linker scripts in /usr/lib to fix bug #4411.
