@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.11 2004/03/14 17:25:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.12 2004/03/31 12:11:05 mboman Exp $
+
+*kmyfirewall-0.9.6.2 (31 Mar 2004)
+
+  31 Mar 2004; Michael Boman <mboman@gentoo.org> kmyfirewall-0.9.6.2.ebuild:
+  New upstream version. Closes 46032
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   kmyfirewall-0.4.5.ebuild, kmyfirewall-0.9.4.ebuild,
