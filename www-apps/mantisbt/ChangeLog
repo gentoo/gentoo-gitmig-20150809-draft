@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.1 2004/08/30 09:31:26 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.2 2004/08/30 19:26:47 rl03 Exp $
+
+  30 Aug 2004; Renat Lumpau <rl03@gentoo.org> mantisbt-0.18.3.ebuild:
+  Fixed DEPEND/RDEPEND
 
 *mantisbt-0.18.3 (30 Aug 2004)
 

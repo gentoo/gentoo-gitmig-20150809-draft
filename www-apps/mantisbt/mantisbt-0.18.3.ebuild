@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-0.18.3.ebuild,v 1.1 2004/08/30 09:31:26 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-0.18.3.ebuild,v 1.2 2004/08/30 19:26:47 rl03 Exp $
 
 inherit webapp
 
@@ -12,9 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 KEYWORDS="~x86"
 
-DEPEND="$DEPEND"
 RDEPEND="
-	${DEPEND}
 	>=dev-db/mysql-3.23.32
 	>=net-www/apache-1.3
 	>=dev-php/mod_php-4.0.6
