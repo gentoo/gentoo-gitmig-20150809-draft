@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.41 2003/03/09 19:49:14 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.42 2003/03/11 04:10:54 woodchip Exp $
 
 *mysql-4.0.11a-r1 (09 Mar 2003)
 
@@ -31,7 +31,10 @@
   Version bump.
 
 *mysql-3.23.55 (29 Jan 2003)
-  
+
+  11 Mar 2003; Donny Davies <woodchip@gentoo.org> mysql-3.23.55.ebuild:
+  Fix CXXFLAGS; #16767.  Add the PDEPEND from #16301.
+
   01 Mar 2003; Donny Davies <woodchip@gentoo.org> : mysql-3.23.55.ebuild :
   Add a build fix for glibc-2.3.2_pre.  Fix readline configure flags, sigh.
 

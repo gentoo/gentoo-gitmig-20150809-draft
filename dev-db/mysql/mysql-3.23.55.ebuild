@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.55.ebuild,v 1.6 2003/03/10 10:10:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.55.ebuild,v 1.7 2003/03/11 04:10:54 woodchip Exp $
 
 # bug #11681; get b0rked code when using -march=k6 with this package.
 inherit flag-o-matic
@@ -31,11 +31,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	sys-devel/perl
 	sys-apps/procps"
 
-# HEY!
-# the benchmark stuff in /usr/share/mysql/sql-bench and
-# the /usr/bin/mysql_setpermission script need dev-perl/DBD-mysql.
-# Can't add it here: circ depend.  Emerge it either before or after
-# mysql; easier before, then it pulls in mysql.
+PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
 
 src_unpack() {
 	unpack ${A} || die
@@ -80,7 +76,7 @@ src_compile() {
 
 	#glibc-2.3.2_pre fix; bug #16496
 	export CFLAGS="${CFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"
-	export CXXFLAGS="${CFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"
+	export CXXFLAGS="${CXXFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"
 
 	# the compiler flags are as per their "official" spec ;-)
 	einfo "\$myconf is $myconf"
@@ -110,7 +106,7 @@ src_install() {
 	make install DESTDIR=${D} benchdir_root=/usr/share/mysql || die
 
 	# eeek, not sure whats going on here.. are these needed by anything?
-#	use innodb && insinto /usr/lib/mysql && doins ${WORKDIR}/../libs/*
+	#use innodb && insinto /usr/lib/mysql && doins ${WORKDIR}/../libs/*
 
 	# move client libs, install a couple of missing headers
 	mv ${D}/usr/lib/mysql/libmysqlclient*.so* ${D}/usr/lib
@@ -123,7 +119,7 @@ src_install() {
 	dosym /usr/bin/mysqlcheck /usr/bin/mysqlrepair
 	dosym /usr/bin/mysqlcheck /usr/bin/mysqloptimize
 
-	# while my broom gently sweeps...
+	# various junk
 	rm -f ${D}/usr/share/mysql/binary-configure
 	rm -f ${D}/usr/share/mysql/mysql.server
 	rm -f ${D}/usr/share/mysql/make_binary_distribution
@@ -131,6 +127,12 @@ src_install() {
 	rm -f ${D}/usr/share/mysql/mysql-log-rotate
 	rm -f ${D}/usr/share/mysql/mysql*.spec
 	rm -f ${D}/usr/share/mysql/my-*.cnf
+
+	#hmm what about all the very nice benchmark/test scripts
+	#in /usr/share/mysql/sql-bench
+	if ! use perl; then
+		rm -f ${D}/usr/bin/mysql_setpermission
+	fi
 
 	dodoc README COPYING COPYING.LIB MIRRORS \
 		Docs/{manual.ps,manual.txt}
