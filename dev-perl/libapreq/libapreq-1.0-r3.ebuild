@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-1.0-r3.ebuild,v 1.3 2003/02/13 11:27:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-1.0-r3.ebuild,v 1.4 2003/05/30 13:53:38 seemant Exp $
 
-inherit perl-post
+inherit perl-module
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Apache Request Perl Module"
@@ -11,26 +11,10 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_
 
 SLOT="0"
 LICENSE="Apache-1.1 as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="${DEPEND}
+	>=sys-apps/sed-4
 	<dev-perl/mod_perl-1.99"
 
 mydoc="TODO"
-
-src_compile() {
-        perl Makefile.PL PREFIX=${D}/usr || die
-		cp Cookie/Makefile Cookie/Makefile.bak
-		cp Request/Makefile Request/Makefile.bak
-		sed -e "s|LD_RUN_PATH = /var/tmp/portage/libapreq-1.0-r3/work/libapreq-1.0/Cookie/|LD_RUN_PATH = |" Cookie/Makefile.bak > Cookie/Makefile
-
-
-		sed -e "s|LD_RUN_PATH = /var/tmp/portage/libapreq-1.0-r3/work/libapreq-1.0/Request/|LD_RUN_PATH = |" Request/Makefile.bak > Request/Makefile
-	make
-}
-
-src_install() {
-	make install
-
-}
-		
