@@ -1,0 +1,41 @@
+ripped from Fedora.
+
+cvs log: Fixed s390x BLKGETSIZE problem.
+
+--- raidtools-1.00.3/raid_io.c.s390x	2002-12-11 18:35:14.000000000 +0100
++++ raidtools-1.00.3/raid_io.c	2003-03-25 15:18:50.000000000 +0100
+@@ -363,7 +363,7 @@
+ 	md_raid_info_t *array;
+ 	mdu_disk_info_t *disk;
+ 	struct stat stat_buf;
+-	__u32 nr_blocks;
++	unsigned long nr_blocks;
+ 
+ 	if (!cfg)
+ 		return 1;
+@@ -454,14 +454,14 @@
+ 			}
+ 			nr_blocks >>= 1;
+ 			if (nr_blocks < MD_RESERVED_BLOCKS * 2) {
+-				fprintf(stderr, "%s: device too small (%dkB)\n", cfg->device_name[i], nr_blocks);
++				fprintf(stderr, "%s: device too small (%ldkB)\n", cfg->device_name[i], nr_blocks);
+ 				close(fd);
+ 				return 1;
+ 			}
+ 
+                 	cfg->sb_block_offset[i] = MD_NEW_SIZE_BLOCKS(nr_blocks);
+ 			if (!cfg->array.param.not_persistent) {
+-                		printf("disk %d: %s, %ukB, raid superblock at %dkB\n", i, cfg->device_name[i], nr_blocks, cfg->sb_block_offset[i]);
++                		printf("disk %d: %s, %lukB, raid superblock at %dkB\n", i, cfg->device_name[i], nr_blocks, cfg->sb_block_offset[i]);
+ 	                	if (sanity_checks(cfg->device_name[i], fd,
+ 					 	cfg->sb_block_offset[i], forceSanity,
+ 					 	upgradeArray, cfg, 0)) {
+@@ -495,7 +495,7 @@
+ 			}
+ 			nr_blocks >>= 1;
+ 			if (nr_blocks < MD_RESERVED_BLOCKS * 2) {
+-				fprintf(stderr, "%s: device too small (%dkB)\n", cfg->device_name[i], nr_blocks);
++				fprintf(stderr, "%s: device too small (%ldkB)\n", cfg->device_name[i], nr_blocks);
+ 				close(fd);
+ 				return 1;
+ 			}
