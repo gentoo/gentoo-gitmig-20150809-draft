@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Trigger
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.2 2004/05/02 12:53:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.3 2004/05/06 17:42:18 ciaranm Exp $
+
+  06 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> Class-Trigger-0.08.ebuild:
+  Added ~sparc, #50265
 
   02 May 2004; Michael Cummings <mcummings@gentoo.org>
   Class-Trigger-0.08.ebuild:
