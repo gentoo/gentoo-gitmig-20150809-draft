@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.28-r1.ebuild,v 1.2 2003/10/16 13:15:08 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.28-r1.ebuild,v 1.3 2003/12/26 01:07:37 robbat2 Exp $
 
 #IUSE="ipv6 pam"
 IUSE="pam"
@@ -201,11 +201,7 @@ src_install() {
 	fi
 
 	#empty dirs
-	dodir /var/cache/apache ; touch ${D}/var/cache/apache/.keep
-	dodir /var/cache/apache-mm ; touch ${D}/var/cache/apache-mm/.keep
-	dodir /usr/lib/apache-extramodules ; touch ${D}/usr/lib/apache-extramodules/.keep
-	dodir /etc/apache/conf/addon-modules ; touch ${D}/etc/apache/conf/addon-modules/.keep
-	dodir /var/log/apache ; touch ${D}/var/log/apache/.keep
+	keepdir /var/cache/apache /var/cache/apache-mm /usr/lib/apache-extramodules /etc/apache/conf/addon-modules /var/log/apache
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.6 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.7 2003/12/26 01:07:37 robbat2 Exp $
 
 mod_ssl_ver=2.8.14-${PV}
 
@@ -203,20 +203,7 @@ src_install() {
 			rm ${FILE}.orig
 		done
 	fi
-	dodir /var/cache/apache
-	touch ${D}/var/cache/apache/.keep
-
-	dodir /var/cache/apache-mm
-	touch ${D}/var/cache/apache-mm/.keep
-
-	dodir /usr/lib/apache-extramodules
-	touch ${D}/usr/lib/apache-extramodules/.keep
-
-	dodir /etc/apache/conf/addon-modules
-	touch ${D}/etc/apache/conf/addon-modules/.keep
-
-	dodir /var/log/apache
-	touch ${D}/var/log/apache/.keep
+	keepdir /var/cache/apache /var/cache/apache-mm /usr/lib/apache-extramodules /etc/apache/conf/addon-modules /var/log/apache
 
 }
 
