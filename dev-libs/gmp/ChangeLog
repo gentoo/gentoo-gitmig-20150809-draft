@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.22 2004/01/18 09:12:44 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.23 2004/01/30 22:24:24 agriffis Exp $
+
+  30 Jan 2004; Aron Griffis <agriffis@gentoo.org> gmp-4.1.2.ebuild:
+  stable on x86
 
   18 Jan 2004; Adrian Almenar <strider@gentoo.org> gmp-4.1.2.ebuild:
   Added ia64 keyword.
