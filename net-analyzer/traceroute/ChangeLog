@@ -1,9 +1,13 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.9 2003/04/28 05:46:48 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.10 2003/05/19 01:26:23 taviso Exp $
+
+  19 May 2003; Tavis Ormandy <taviso@gentoo.org> traceroute-1.4_p12.ebuild:
+  Over riding CHOST on Alpha, configure doesnt like processor revision.
+  fixes bug #21122, reported by Paul Moore <pcmoore@engin.umich.edu>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+  
 
 *traceroute-1.4_p12 (1 Feb 2002)
 
