@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.6 2002/08/08 15:57:54 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.7 2002/08/16 09:02:46 seemant Exp $
+
+*bind-9.2.2_rc1 (16 Aug 2002)
+
+  16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> bind-9.2.2_rc1.ebuild
+  files/nslookup.8 files/digest-bind-9.2.2_rc1 :
+
+  Security fix upgrade.  Please see: http://www.kb.cert.org/vuls/id/803539
+  Thanks to kevin@aptbasilicata.it (Maurizio Disimino) in bug #6578.
 
 *bind-9.2.1-r2 (5 Aug 2002)
 
