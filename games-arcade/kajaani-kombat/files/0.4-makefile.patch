@@ -1,0 +1,39 @@
+--- Makefile.orig	2004-04-05 20:07:08.000000000 -0700
++++ Makefile	2004-04-05 20:07:41.000000000 -0700
+@@ -16,21 +16,13 @@
+ #  along with Kajaani Kombat; if not, write to the Free Software
+ #  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ 
+-## DEBIAN RELEASE
+-ifeq ($(sys), DEBIAN)
+-	MEDIA=-D MEDIA_PATH=\"/usr/share/games/kajaanikombat/\"
+-	DEBUG= -O $(MEDIA)
+-endif
++MEDIA=-D MEDIA_PATH=\"/usr/share/games/kajaani-kombat/\"
++DEBUG= -O $(MEDIA)
+ ## WIN RELEASE
+ ifeq ($(sys), WIN)
+ 	MEDIA=-D MEDIA_PATH=\".\\\"
+ 	DEBUG= -O $(MEDIA)
+ endif
+-## UNIX DEBUG
+-ifeq ($(sys),)
+-	MEDIA=-D MEDIA_PATH=\"./\"
+-	DEBUG= -g -DDEBUG $(MEDIA)
+-endif
+ 
+ #debug
+ #release
+@@ -76,7 +68,7 @@
+ 	-rm -f *.o *~ kajaani-kombat kajaani-kombat-server
+ 
+ install: client
+-	$(INS) -o root -g root -m 0755 -s kajaani-kombat debian/tmp/usr/games/kajaani-kombat
+-	$(INS) -o root -g root -m 0644 *.png debian/tmp/usr/share/games/kajaanikombat/
+-	$(INS) -o root -g root -m 0644 *.ttf debian/tmp/usr/share/games/kajaanikombat/
+-	$(INS) -o root -g root -m 0644 kajaani-kombat.6 debian/tmp/usr/share/man/man6/
+\ No newline at end of file
++	$(INS) -o root -g root -m 0755 -s kajaani-kombat $(DESTDIR)/usr/games/bin/kajaani-kombat
++	$(INS) -o root -g root -m 0644 *.png $(DESTDIR)/usr/share/games/kajaani-kombat/
++	$(INS) -o root -g root -m 0644 *.ttf $(DESTDIR)/usr/share/games/kajaani-kombat/
++	$(INS) -o root -g root -m 0644 kajaani-kombat.6 $(DESTDIR)/usr/share/man/man6/
