@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/geekcredit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.3 2004/04/09 16:00:52 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.4 2004/04/09 16:04:46 zul Exp $
+
+*geekcredit-0.016 (09 Apr 2004)
+
+  09 Apr 2004; Chuck Short <zul@gentoo.org> geekcredit-0.016.ebuild:
+  Version bump, closes #46318.
 
   09 Apr 2004; Chuck Short <zul@gentoo.org> geekcredit-0.015.ebuild:
   Marked stable for x86.
