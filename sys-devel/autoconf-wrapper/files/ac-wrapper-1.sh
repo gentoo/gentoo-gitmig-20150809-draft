@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-1.sh,v 1.1 2004/11/14 03:40:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-1.sh,v 1.2 2004/12/05 09:06:57 vapier Exp $
 
 # Based on the ac-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -33,33 +33,30 @@ binary="${binary_new}"
 #
 # autodetect routine
 #
-if [ -f "configure.ac" -o -f "configure.in" ] ; then
-	if [ "${WANT_AUTOCONF}" != "2.5" ] ; then 
-		if [ "${WANT_AUTOCONF}" = "2.1" ] ; then
-			if [ ! -f "configure.ac" ] ; then
-				binary="${binary_old}"
-			else
-				echo "ac-wrapper: Since configure.ac is present, aclocal always use" >&2
-				echo "            autoconf 2.59, which conflicts with your choice and" >&2
-				echo "            causes error. You have two options:" >&2
-				echo "            1. Try execute command again after removing configure.ac" >&2
-				echo "            2. Don't set WANT_AUTOCONF" >&2
-				exit 1
-			fi
+if [ "${WANT_AUTOCONF}" != "2.5" ] ; then 
+	if [ "${WANT_AUTOCONF}" = "2.1" ] ; then
+		if [ ! -f "configure.ac" ] ; then
+			binary="${binary_old}"
 		else
-			if [ -r "configure" ] ; then
-				confversion=$(awk \
-					'{
-					if (match($0,
-					          "^# Generated (by (GNU )?Autoconf|automatically using autoconf version) ([0-9].[0-9])",
-					          res))
-						{ print res[3]; exit }
-					}' configure)
-			fi
-
-			if [ "${confversion}" = "2.1" -a ! -f "configure.ac" ] ; then
-				binary="${binary_old}"
-			fi
+			echo "ac-wrapper: Since configure.ac is present, aclocal always use" >&2
+			echo "            autoconf 2.59, which conflicts with your choice and" >&2
+			echo "            causes error. You have two options:" >&2
+			echo "            1. Try execute command again after removing configure.ac" >&2
+			echo "            2. Don't set WANT_AUTOCONF" >&2
+			exit 1
+		fi
+	else
+		if [ -r "configure" ] ; then
+			confversion=$(awk \
+				'{
+				if (match($0,
+				          "^# Generated (by (GNU )?Autoconf|automatically using autoconf version) ([0-9].[0-9])",
+				          res))
+					{ print res[3]; exit }
+				}' configure)
+		fi
+		if [ "${confversion}" = "2.1" -a ! -f "configure.ac" ] ; then
+			binary="${binary_old}"
 		fi
 	fi
 fi
