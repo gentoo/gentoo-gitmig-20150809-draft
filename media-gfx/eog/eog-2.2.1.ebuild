@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.1.ebuild,v 1.3 2003/03/30 16:11:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.1.ebuild,v 1.4 2003/05/18 09:47:07 liquidx Exp $
 
 inherit gnome2
 
@@ -30,3 +30,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.22"
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS HACKING DEPENDS THANKS  TODO"
+
+src_unpack() {
+	unpack ${A}
+	gnome2_omf_fix
+}
