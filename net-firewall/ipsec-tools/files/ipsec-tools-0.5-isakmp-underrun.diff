@@ -1,0 +1,22 @@
+? configure.lineno
+? src/racoon/kmpstat.lo
+? src/racoon/libracoon.la
+? src/racoon/misc.lo
+? src/racoon/sockmisc.lo
+? src/racoon/vmbuf.lo
+Index: src/racoon/isakmp.c
+===================================================================
+RCS file: /cvsroot/ipsec-tools/ipsec-tools/src/racoon/isakmp.c,v
+retrieving revision 1.36
+diff -u -r1.36 isakmp.c
+--- src/racoon/isakmp.c	7 Mar 2005 00:30:37 -0000	1.36
++++ src/racoon/isakmp.c	7 Mar 2005 16:31:24 -0000
+@@ -1352,7 +1352,7 @@
+ 
+ 		p->type = np;
+ 		p->len = ntohs(gen->len);
+-		if (p->len == 0 || p->len > tlen) {
++		if (p->len < sizeof(struct isakmp_gen) || p->len > tlen) {
+ 			plog(LLV_DEBUG, LOCATION, NULL,
+ 				"invalid length of payload\n");
+ 			vfree(result);
