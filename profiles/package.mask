@@ -21,6 +21,7 @@
 ##   End example
 ##
 
+
 # <phoenix@gentoo.org> (30 Aug 2002)
 # masked for testing
 =net-dialup/speedtouch-1.1
@@ -32,6 +33,11 @@
 # <tantive@gentoo.org> (30 Aug 2002)
 # masked for further testing
 =sys-apps/openmosix-user-0.2.4-r1
+
+# <prez@gentoo.org> (29 Aug 2002)
+# Does not build successfully in an ebuild (but builds just fine outside of one)
+# Needs more investigation as to why.
+dev-java/sun-j2sdk
 
 # <george@gentoo.org> (28 Aug 2002)
 # masked for testing
@@ -1114,10 +1120,6 @@ x11-libs/gdkxft
 # Masked because installs headers in wrong location
 =media-libs/id3lib-3.8.0_pre2-r2
 
-# prez@gentoo.org 13 Jun 2002
-# As per the dev list, we're moving spamassassin to dev-perl
-net-mail/spamassassin
-
 # g2boojum@gentoo.org 14 June 2002
 # works, but can't log in (meaning it really _doesn't_ work)
 =net-mail/courier-imap-1.4.5-r1
@@ -1178,8 +1180,3 @@ app-cdr/eroaster
 # stroke@gentoo.org 19 Aug 2002
 # Anjuta 1.0-beta1 (preview). masked for testing
 >=dev-util/anjuta-0.9.99
-
-# prez@gentoo.org 29 Aug 2002
-# Does not build successfully in an ebuild (but builds just fine outside of one)
-# Needs more investigation as to why.
-dev-java/sun-j2sdk
