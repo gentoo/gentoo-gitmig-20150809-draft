@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.19 2005/02/14 12:36:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.20 2005/02/19 20:52:32 eradicator Exp $
 
 FEATURES="sandbox ccache autoconfig multilib-strict"
 
@@ -16,12 +16,14 @@ DEFAULT_ABI="sparc32"
 CFLAGS_sparc64="-m64"
 LDFLAGS_sparc64="-m elf64-sparc"
 CHOST_sparc64="sparc64-unknown-linux-gnu"
+CTARGET_ALIASES_sparc64="sparc64-linux"
 CDEFINE_sparc64="__arch64__"
 LIBDIR_sparc64="lib64"
 
 CFLAGS_sparc32="-m32"
 LDFLAGS_sparc32="-m elf32-sparc"
-CHOST_sparc32="sparc64-unknown-linux-gnu"
+CHOST_sparc32="sparc-unknown-linux-gnu"
+CTARGET_ALIASES_sparc32="sparcv9-unknown-linux-gnu"
 CDEFINE_sparc64="!__arch64__"
 LIBDIR_sparc32="lib"
 

@@ -4,6 +4,9 @@ Make sure you have the latest gcc-config baselayout and portage:
 Delete the /usr/sparc64-unknown-linux-gnu symlink hackery:
 # rm /usr/sparc64-unknown-linux-gnu
 
+Unmerge the kernel compiler as you don't need it any more
+# emerge unmerge gcc-sparc64
+
 Switch to profile:
 # rm /etc/make.profile
 # ln -s /usr/portage/profiles/default-linux/sparc/sparc64-multilib/dev /etc/make.profile
@@ -21,17 +24,23 @@ Get a sparc64 binutils:
 Use binutils-config to choose sparc64-* binutils:
 # binutils-config -l
 # binutils-config <value>
+# . /etc/profile
 
 Get a stage1 sparc64 gcc:
 # CC="sparc-unknown-linux-gnu-gcc" USE="build static" GCC_MAKE_TARGET="all" emerge -v gcc
 
-Use gcc-config to set your gcc 
+Remove sparc32 gcc compiler and binutils from your system
+# emerge unmerge \=sys-devel/gcc-<version> \=sys-devel/binutils-<version>
+# rm /etc/env.d/gcc/config-sparc-unknown-linux-gnu /etc/env.d/05gcc-sparc-unknown-linux-gnu /etc/env.d/binutils/binutils/config-sparc-unknown-linux-gnu 
+
+Use gcc-config to set your gcc
 Choose the sparc64-unknown-linux-gnu one you just emerged
 # gcc-config -l
 # gcc-config <value>
+# . /etc/profile
 
 Use the stage1 gcc to build bootstrap multilib glibc
-# USE="-nptl" emerge -v glibc
+# USE="-nptl" CBUILD="sparc-unknown-linux-gnu" emerge -v glibc
 
 Now, finally emerge your full glibc and gcc
 # emerge -v glibc gcc
