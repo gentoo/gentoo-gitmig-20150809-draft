@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSun/wmSun-1.03.ebuild,v 1.9 2004/06/24 23:17:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSun/wmSun-1.03.ebuild,v 1.10 2004/11/24 04:48:08 weeve Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://nis-www.lanl.gov/~mgh/WindowMaker/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~mips ppc"
+KEYWORDS="x86 amd64 ~mips ppc ~sparc"
 
 DEPEND="virtual/x11"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmDownload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/ChangeLog,v 1.6 2004/08/08 01:02:10 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/ChangeLog,v 1.7 2004/11/24 04:40:40 weeve Exp $
+
+  23 Nov 2004; Jason Wever <weeve@gentoo.org> wmDownload-0.1.2a.ebuild:
+  Added ~sparc keyword.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> wmDownload-0.1.2a.ebuild:
   Typo in DESCRIPTION: recieve -> receive. Bug 59717.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/wmSpaceWeather-1.04.ebuild,v 1.12 2004/06/24 23:17:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/wmSpaceWeather-1.04.ebuild,v 1.13 2004/11/24 04:45:39 weeve Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://nis-www.lanl.gov/~mgh/WindowMaker/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~mips hppa ppc"
+KEYWORDS="x86 amd64 ~mips hppa ppc ~sparc"
 
 DEPEND="dev-lang/perl
 		virtual/x11"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27.ebuild,v 1.11 2004/06/28 21:26:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmMoonClock/wmMoonClock-1.27.ebuild,v 1.12 2004/11/24 04:43:32 weeve Exp $
 
 IUSE=""
 DESCRIPTION="dockapp that shows lunar ephemeris to a high accuracy."
@@ -13,7 +13,7 @@ DEPEND="virtual/libc
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~mips ppc"
+KEYWORDS="x86 amd64 ~mips ppc ~sparc"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}/Src
