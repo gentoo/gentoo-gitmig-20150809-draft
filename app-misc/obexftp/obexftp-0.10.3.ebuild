@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/obexftp-0.10.3.ebuild,v 1.1 2003/10/01 06:57:49 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/obexftp-0.10.3.ebuild,v 1.2 2003/10/17 20:31:51 mholzer Exp $
 
 IUSE=""
 
@@ -17,11 +17,15 @@ DEPEND="gsm
 	>=dev-libs/openobex-1.0.0"
 
 src_compile() {
-	econf
+	econf || die
+	sed -i 's:apps vmo doc:apps vmo:' Makefile
 	emake || die
 }
 
 src_install() {
+	dohtml doc/*.html doc/*.css doc/*.png doc/*.xml doc/*.xsl
+	doman doc/flexmem.1
+	rm -rf doc
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog README* THANKS TODO
 }
