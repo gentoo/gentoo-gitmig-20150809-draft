@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-ruledujour/spamassassin-ruledujour-20040701.ebuild,v 1.4 2004/09/25 21:28:31 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-ruledujour/spamassassin-ruledujour-20040701.ebuild,v 1.5 2005/01/07 06:13:33 robbat2 Exp $
 
 DESCRIPTION="SpamAssassin - Rules Du Jour & My Rules Du Jour"
 HOMEPAGE="http://www.exit0.us/index.php/RulesDuJour http://www.rulesemporium.com/rules.htm"
@@ -17,7 +17,8 @@ RDEPEND="app-shells/bash
 		 sys-apps/sed
 		 dev-lang/perl
 		 sys-apps/coreutils
-		 virtual/cron"
+		 virtual/cron
+		 mail-client/mailx"
 
 src_install() {
 	SPAMASSASSIN_CONFDIR=/etc/mail/spamassassin
