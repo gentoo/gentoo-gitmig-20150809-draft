@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.15 2003/09/08 06:59:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.16 2003/12/08 22:51:40 spider Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://zipper.paco.net/~igor/oops/oops-1.5.6.tar.gz"
@@ -38,7 +38,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/sbin
-	chown squid.squid ${D}
+	chown squid:squid ${D}
 	make DESTDIR=${D} install || die
 	chmod -R g+srw ${D}/etc/oops
 	chmod -R g+rw ${D}/etc/oops/*
