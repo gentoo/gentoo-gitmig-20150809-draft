@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/e100
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/ChangeLog,v 1.1 2003/05/19 18:22:41 mholzer Exp $
+
+*emirror-2.1.21 (19 May 2003)
+
+  20 Aug 2002; Martin Holzer <mholzer@thpoon.com> emirror-2.1.21.ebuild:
+  Initial Version. Ebuild submitted by Stephane Schitter
+  <stephane.schitter@free.fr> in #21112. 
