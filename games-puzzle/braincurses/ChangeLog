@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/braincurses
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/braincurses/ChangeLog,v 1.1 2004/12/02 10:03:17 mr_bones_ Exp $
+
+*braincurses-0.5a (02 Dec 2004)
+
+  02 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +braincurses-0.5a.ebuild:
+  initial commit - ebuild from Adrian Fruehwirth via bug #72938
+
