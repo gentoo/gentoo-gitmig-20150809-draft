@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/hugs98-graphics
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hugs98-graphics/ChangeLog,v 1.1 2003/07/28 14:21:34 kosmikus Exp $
+
+*hugs98-graphics-2.0.4 (28 Jul 2003)
+
+  28 Jul 2003; Andres Loeh <kosmikus@gentoo.org> hugs98-graphics-2.0.4.ebuild:
+  Initial import. Ebuild submitted by Tim Raedisch <tim.raedisch@udo.edu> (bug
+  #23113).
+
