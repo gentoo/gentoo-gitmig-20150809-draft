@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.3.ebuild,v 1.4 2004/06/20 21:34:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.3.ebuild,v 1.5 2004/06/21 00:07:48 agriffis Exp $
 
 inherit vim
 
@@ -17,7 +17,7 @@ SRC_URI="${SRC_URI}
 
 S=${WORKDIR}/vim${VIM_VERSION/.}
 DESCRIPTION="Graphical Vim"
-KEYWORDS="x86 sparc mips ppc ~alpha ~amd64 ~ia64 ~hppa"
+KEYWORDS="x86 sparc mips ppc alpha ~amd64 ia64 ~hppa"
 PROVIDE="virtual/editor"
 DEPEND="${DEPEND}
 	~app-editors/vim-core-${PV}
