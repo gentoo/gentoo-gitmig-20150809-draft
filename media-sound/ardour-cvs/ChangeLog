@@ -1,8 +1,16 @@
 # ChangeLog for media-sound/ardour-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.2 2003/01/02 10:50:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.3 2003/01/06 16:35:11 raker Exp $
 
-*ardour-cvs-0.5-r1 (02 Jan 2002)
+*ardour-cvs-0.6 (06 Jan 2003)
+
+  06 Jan 2003; Nick Hadaway <raker@gentoo.org> ardour-cvs-0.6.ebuild,
+  files/digest-ardour-cvs-0.6 :
+  Ardour cvs is now in the .6 series.  There are a couple new program
+  requirements including libsamplerate and a newer version of
+  ladspa-sdk.
+
+*ardour-cvs-0.5-r1 (02 Jan 2003)
 
   02 Jan 2002; Nick Hadaway <raker@gentoo.org> ardour-cvs-0.5-r1.ebuild,
   files/digest-ardour-cvs-0.5-r1 :
