@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.2 2003/01/28 23:57:39 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.3 2003/01/29 05:45:32 azarah Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -266,8 +266,8 @@ get_EnvSet() {
 	use alpha && export LinuxEnvSet="LinuxAlphaEnv.Set"
 
 	# Get build specific stuff (Az)
-	export SOLVER="$(awk '/^setenv UPD / {print $3}' ${LinuxEnvSet})"
-	export SOLPATH="$(awk '/^setenv INPATH / {print $3}' ${LinuxEnvSet})"
+	export SOLVER="$(awk '/^setenv UPD / {gsub(/\"/, ""); print $3}' ${LinuxEnvSet})"
+	export SOLPATH="$(awk '/^setenv INPATH / {gsub(/\"/, ""); print $3}' ${LinuxEnvSet})"
 }
 
 src_compile() {
