@@ -1,7 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.22 2002/11/02 06:32:40 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.23 2002/11/28 16:17:40 agenkin Exp $
 
+*xine-lib-1_alpha2 (28 Nov 2002)
+
+  28 Nov 2002; Arcady Genkin <agenkin@gentoo.org> xine-lib-1_alpha2.ebuild :
+  Update to version 1-alpha2.
+  Updated SRC_URI to pull from SF mirrors.
+	
 *xine-lib-0.9.13-r2 (02 Nov 2002)
 
   02 Nov 2002; Arcady Genkin <agenkin@gentoo.org> xine-0.9.13-r2.ebuild :
