@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/liece
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/ChangeLog,v 1.10 2004/06/24 22:16:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/ChangeLog,v 1.11 2004/11/14 10:04:02 usata Exp $
+
+  14 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> -files/delegate.el,
+  -files/liece-1.4.7-gentoo.patch, -liece-1.4.7-r1.ebuild,
+  -liece-2.0.0_alpha20030526.ebuild:
+  Upsteam doesn't support liece anymore. Please use riece instead.
 
   18 Jun 2004; Sven Wegener <swegener@gentoo.org> liece-1.4.10-r1.ebuild,
   liece-1.4.7-r1.ebuild:
