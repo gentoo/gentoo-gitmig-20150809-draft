@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PodParser
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PodParser/ChangeLog,v 1.5 2004/02/20 17:04:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PodParser/ChangeLog,v 1.6 2004/06/06 13:43:26 mcummings Exp $
+
+*PodParser-1.28 (06 Jun 2004)
+
+  06 Jun 2004; Michael Cummings <mcummings@gentoo.org> PodParser-1.28.ebuild:
+  new version on cpan
 
   20 Feb 2004; Aron Griffis <agriffis@gentoo.org> PodParser-1.22.ebuild:
   stable on alpha and ia64
