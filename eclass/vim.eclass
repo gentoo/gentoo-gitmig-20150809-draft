@@ -1,11 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.62 2004/07/21 16:30:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.63 2004/07/31 15:23:08 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
 # 	Seemant Kulleen <seemant@gentoo.org>
 # 	Aron Griffis <agriffis@gentoo.org>
+# 	Ciaran McCreesh <ciaranm@gentoo.org>
 
 inherit eutils vim-doc flag-o-matic
 ECLASS=vim
@@ -386,3 +387,48 @@ pkg_postrm() {
 	# Make convenience symlinks
 	update_vim_symlinks
 }
+
+src_test() {
+
+	if [ "${PN}" == "vim-core" ] ; then
+		einfo "No testing needs to be done for vim-core"
+		return
+	fi
+
+	einfo " "
+	einfo "Starting vim tests. Several error messages will be shown "
+	einfo "whilst the tests run. This is normal behaviour and does not "
+	einfo "indicate a fault."
+	einfo " "
+	ewarn "If the tests fail, your terminal may be left in a strange "
+	ewarn "state. Usually, running 'reset' will fix this."
+	ewarn " "
+	sleep 5
+
+	# Don't let vim talk to X
+	unset DISPLAY
+
+	if [ "${PN}" == "gvim" ] ; then
+		# Make gvim not try to connect to X. See :help gui-x11-start
+		# in vim for how this evil trickery works.
+		ln -s ${S}/src/gvim ${S}/src/testvim
+		testprog="../testvim"
+	else
+		testprog="../vim"
+	fi
+
+	# We've got to call make test from within testdir, since the Makefiles
+	# don't pass through our VIMPROG argument
+	cd ${S}/src/testdir
+
+	# Test 49 won't work inside a portage environment
+	sed -i -e 's~test49.out~~g' Makefile
+
+	# We don't want to rebuild vim before running the tests
+	sed -i -e 's,: \$(VIMPROG),: ,' Makefile
+
+	# Don't try to do the additional GUI test
+	make VIMPROG=${testprog} nongui \
+		|| die "At least one test failed"
+}
+
