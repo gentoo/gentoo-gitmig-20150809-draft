@@ -1,0 +1,12 @@
+diff -Naur drip-0.9.0.orig/Makefile.am drip-0.9.0/Makefile.am
+--- drip-0.9.0.orig/Makefile.am	2004-04-20 13:58:33.000000000 -0700
++++ drip-0.9.0/Makefile.am	2004-10-13 11:21:24.670588437 -0700
+@@ -2,7 +2,7 @@
+ 
+ SUBDIRS = libspu encoder src plug-ins macros doc scripts pixmaps #libvcd
+ drip_pixmapdir = $(DESTDIR)/`$(GNOME_CONFIG) --prefix`/share/pixmaps
+-export COMPILE_OPTIM=-DARCH_X86 -funroll-all-loops -ffast-math -fexpensive-optimizations -fschedule-insns2 -Wno-deprecated  -fomit-frame-pointer -march=athlon -mcpu=athlon
++export COMPILE_OPTIM=@CFLAGS@
+ export COMPILE_DEBUG=-D_REENTRANT -g -ggdb -Wno-deprecated $(MMX_CFLAGS) $(_3DNOW_CFLAGS) $(SSE_CFLAGS) #-DDEBUG
+ export L_DEBUG=-DNONE
+ EXTRA_DIST = \

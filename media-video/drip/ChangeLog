@@ -1,6 +1,15 @@
 # ChangeLog for media-video/drip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.16 2004/06/25 00:38:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.17 2004/10/13 18:25:40 eradicator Exp $
+
+*drip-0.9.0 (13 Oct 2004)
+
+  13 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/drip-0.9.0-cflags.patch, files/drip.desktop, +drip-0.9.0.ebuild,
+  -drip-0.9.0_alpha3.ebuild, -drip-0.9.0_rc1.ebuild:
+  Removed pre-release versions. Version bump to 0.9.0. Added debian patch to
+  fix support for libpeg2-0.4.0b. Honor user CFLAGS. Closes bugs #41880 and
+  #59513.
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> drip-0.8.1-r5.ebuild,
   drip-0.9.0_alpha3.ebuild, drip-0.9.0_rc1.ebuild:
