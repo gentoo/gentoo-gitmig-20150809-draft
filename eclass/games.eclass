@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.40 2003/07/10 02:03:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.41 2003/07/18 15:10:13 wolf31o2 Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -119,13 +119,14 @@ games_pkg_postinst() {
 }
 
 # some games require cdrom's to install datafiles ...
-# $1: directory to check for on cdrom
+# $1: directory or file to check for on cdrom
 # after function call, cdrom should be in ${GAMES_CD}
 games_get_cd() {
 	export GAMES_CD=${GAMES_CDROM}
 	if [ -z "${GAMES_CD}" ] ; then
 		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
-			[ -d ${mline}/${1} ] && GAMES_CD=${mline}
+			[ -d ${mline}/${1} ] && GAMES_CD=${mline} ||
+			[ -f ${mline}/${1} ] && GAMES_CD=${mline}
 		done
 	fi
 	[ ! -z "${GAMES_CD}" ] && einfo "Using ${GAMES_CD} as the data source"
