@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r3.ebuild,v 1.9 2004/08/27 04:57:37 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r3.ebuild,v 1.10 2004/08/29 03:07:07 lv Exp $
 
 inherit eutils flag-o-matic
 
@@ -29,6 +29,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-configure.patch
 	#security fix. bug #61749
 	epatch ${FILESDIR}/${P}-CAN-2004-0797.patch
+	# fix shared library test on -fPIC dependant archs
+	epatch ${FILESDIR}/zlib-1.2.1-fPIC.patch
 }
 
 src_compile() {
