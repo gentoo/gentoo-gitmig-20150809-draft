@@ -1,4 +1,6 @@
 MD5 4c14c580323df1664b577534eef22346 cl-salza-0.4.ebuild 771
-MD5 b06222ff05f63900d496dfeb3276460b ChangeLog 408
+MD5 3d1820ee9005d8ad79648cad82773d54 ChangeLog 537
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 16e244bf1d8f176d9f4264f03cf8811b cl-salza-0.5.ebuild 771
 MD5 c518f5eaf0fbe1f5e26f9f620cd85cb9 files/digest-cl-salza-0.4 60
+MD5 bb5612abfa5cc3291d8ab2d88173bfea files/digest-cl-salza-0.5 60
