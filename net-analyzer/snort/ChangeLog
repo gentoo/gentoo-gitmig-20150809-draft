@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.29 2004/01/06 15:47:09 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.30 2004/01/07 08:23:54 mboman Exp $
+
+  07 Jan 2004; Michael Boman <mboman@gentoo.org> snort-2.1.0.ebuild:
+  Forgot to include the threshold.conf file in the installation process.
 
 *snort-2.1.0 (06 Jan 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.0.ebuild,v 1.1 2004/01/06 15:47:09 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.0.ebuild,v 1.2 2004/01/07 08:23:54 mboman Exp $
 
 inherit eutils
 
@@ -95,7 +95,7 @@ src_install() {
 	docinto contrib ; dodoc contrib/*
 
 	insinto /etc/snort
-	doins etc/reference.config etc/classification.config rules/*.rules etc/*.map
+	doins etc/reference.config etc/classification.config rules/*.rules etc/*.map etc/threshold.conf
 	#use prelude && doins etc/prelude-classification.config
 	doins etc/snort.conf.distrib
 
