@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Attribute-Handlers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/ChangeLog,v 1.6 2003/05/21 21:50:55 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/ChangeLog,v 1.7 2003/06/08 04:30:23 rac Exp $
+
+  07 Jun 2003; <rac@gentoo.org> Attribute-Handlers-0.78-r1.ebuild:
+  Add IUSE, stabilize URL
 
 *Attribute-Handlers-0.78-r1 (21 May 2003)
 
