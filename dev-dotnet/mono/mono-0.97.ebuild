@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.97.ebuild,v 1.1 2004/06/28 00:58:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.97.ebuild,v 1.2 2004/06/28 16:05:06 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -26,6 +26,14 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxml2"
+
+src_unpack() {
+	unpack ${A}
+
+	# Make it use the included mono for installing. Problems with DESTDIR.
+	sed -i -e "s:\$(DESTDIR)\$(bindir)/mono:\$(mono_runtime):g" \
+		${S}/runtime/net_1_1/Makefile.in
+}
 
 src_compile() {
 	local myconf=""

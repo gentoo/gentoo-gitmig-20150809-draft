@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.22 2004/06/28 02:54:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.23 2004/06/28 16:05:06 latexer Exp $
+
+  28 Jun 2004; Peter Johanson <latexer@gentoo.org> mono-0.97.ebuild:
+  Build fix. See bug #55393.
 
   27 Jun 2004; Peter Johanson <latexer@gentoo.org> :
   Fix the digest.
