@@ -1,0 +1,5001 @@
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/am /usr/X11R6/lib/X11/xkb/symbols/am
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/am	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/am	2003-03-20 22:01:42.000000000 -0500
+@@ -1,6 +1,6 @@
+ // $XConsortium: am /main/3 1997/12/18 12:40:12 rch $
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/am,v 1.4 2002/06/04 22:50:58 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/am,v 1.3 2001/11/21 22:28:52 dawes Exp $
+ 
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -12,59 +12,107 @@
+     name[Group2]= "Armenian";
+ 
+     // Alphanumeric section
+-    key <TLDE> {	[ ], [ 0x100055d,  0x100055c ]	};
+-    key <LSGT> {	[ ], [ question,   0x100058a ]	};
+-    key <BKSL> {	[ ], [ guillemotright, guillemotleft ]	};
+-
+-    key <AE01> {	[ ], [ 0x1000586,  0x1000556 ]	};
+-    key <AE02> {	[ ], [ 0x1000571,  0x1000541 ]	};
+-    key <AE03> {	[ ], [ 0x1002013,  0x1002014 ]	};
+-    key <AE04> {	[ ], [ comma,      dollar    ]	};
+-    key <AE05> {	[ ], [ 0x1000589,  0x1002026 ]	};
+-    key <AE06> {	[ ], [ 0x100055e,  percent   ]	};
+-    key <AE07> {	[ ], [ period,     0x1000587 ]	};
+-    key <AE08> {	[ ], [ 0x100055b,  0x10002bc ]	};
+-    key <AE09> {	[ ], [ parenright, parenleft ]	};
+-    key <AE10> {	[ ], [ 0x1000585,  0x1000555 ]	};
+-    key <AE11> {	[ ], [ 0x1000567,  0x1000537 ]	};
+-    key <AE12> {	[ ], [ 0x1000572,  0x1000542 ]	};
+-
+-
+-    key <AD01> {	[ ], [ 0x1000573,  0x1000543 ]	};
+-    key <AD02> {	[ ], [ 0x1000583,  0x1000553 ]	};
+-    key <AD03> {	[ ], [ 0x1000562,  0x1000532 ]	};
+-    key <AD04> {	[ ], [ 0x100057d,  0x100054d ]	};
+-    key <AD05> {	[ ], [ 0x1000574,  0x1000544 ]	};
+-    key <AD06> {	[ ], [ 0x1000578,  0x1000548 ]	};
+-    key <AD07> {	[ ], [ 0x1000582,  0x1000552 ]	};
+-    key <AD08> {	[ ], [ 0x100056f,  0x100053f ]	};
+-    key <AD09> {	[ ], [ 0x1000568,  0x1000538 ]	};
+-    key <AD10> {	[ ], [ 0x1000569,  0x1000539 ]	};
+-    key <AD11> {	[ ], [ 0x100056e,  0x100053e ]	};
+-    key <AD12> {	[ ], [ 0x1000581,  0x1000551 ]	};
+-
+-    key <AC01> {	[ ], [ 0x100057b,  0x100054b ]	};
+-    key <AC02> {	[ ], [ 0x100057e,  0x100054e ]	};
+-    key <AC03> {	[ ], [ 0x1000563,  0x1000533 ]	};
+-    key <AC04> {	[ ], [ 0x1000565,  0x1000535 ]	};
+-    key <AC05> {	[ ], [ 0x1000561,  0x1000531 ]	};
+-    key <AC06> {	[ ], [ 0x1000576,  0x1000546 ]	};
+-    key <AC07> {	[ ], [ 0x100056b,  0x100053b ]	};
+-    key <AC08> {	[ ], [ 0x100057f,  0x100054f ]	};
+-    key <AC09> {	[ ], [ 0x1000570,  0x1000540 ]	};
+-    key <AC10> {	[ ], [ 0x100057a,  0x100054a ]	};
+-    key <AC11> {	[ ], [ 0x1000580,  0x1000550 ]	};
+-
+-    key <AB01> {	[ ], [ 0x100056a,  0x100053a ]	};
+-    key <AB02> {	[ ], [ 0x1000564,  0x1000534 ]	};
+-    key <AB03> {	[ ], [ 0x1000579,  0x1000549 ]	};
+-    key <AB04> {	[ ], [ 0x1000575,  0x1000545 ]	};
+-    key <AB05> {	[ ], [ 0x1000566,  0x1000536 ]	};
+-    key <AB06> {	[ ], [ 0x100056c,  0x100053c ]	};
+-    key <AB07> {	[ ], [ 0x1000584,  0x1000554 ]	};
+-    key <AB08> {	[ ], [ 0x100056d,  0x100053d ]	};
+-    key <AB09> {	[ ], [ 0x1000577,  0x1000547 ]	};
+-    key <AB10> {	[ ], [ 0x100057c,  0x100054c ]	};
++    key <TLDE> {	[    grave,	asciitilde	],
++			[ 0x100055d, 0x100055c	]	};
++    key	<LSGT> {	[ less,   greater	],
++			[  question,  0x100058a	]	};
++    key <BKSL> {        [ backslash,		bar	],
++                        [ guillemotright, guillemotleft ] };
++
++    key <AE01> {	[	  1,	exclam		],
++			[ 0x1000586,  0x1000556	]	};
++    key <AE02> {	[	  2,	at		],
++			[ 0x1000571,  0x1000541	]	};
++    key <AE03> {	[	  3,	numbersign	],
++			[ 0x1002013,  0x1002014 ]	};
++    key <AE04> {	[	  4,	dollar		],
++			[ comma, dollar	]	};
++    key <AE05> {	[         5,	percent		],
++    			[ 0x1000589, 0x1002026	] };
++    key <AE06> {	[	  6,	asciicircum	],
++			[ 0x100055e, percent	]	};
++    key <AE07> {	[	  7,	ampersand	],
++			[ period, 0x1000587 ] };
++    key <AE08> {	[	  8,	asterisk	],
++			[ 0x100055b, 0x10002bc ] };
++    key <AE09> {	[	  9,	parenleft	],
++			[ parenright, parenleft ] };
++    key <AE10> {	[	  0,	parenright	],
++			[ 0x1000585,	0x1000555	]	};
++    key <AE11> {	[     minus,	underscore	],
++			[ 0x1000567,	0x1000537	]	};
++    key <AE12> {	[     equal,	plus      	],
++			[ 0x1000572,	0x1000542	]	};
++
++
++    key <AD01> {        [         q,    Q               ],
++			[ 0x1000573, 0x1000543	]       };
++    key <AD02> {        [         w,    W               ],
++			[ 0x1000583, 0x1000553	]	};
++    key <AD03> {        [         e,    E               ],
++			[ 0x1000562, 0x1000532	]       };
++    key <AD04> {        [         r,    R               ],
++			[ 0x100057d, 0x100054d	]	};
++    key <AD05> {        [         t,    T               ],
++			[ 0x1000574, 0x1000544	]       };
++    key <AD06> {        [         y,    Y               ],
++			[ 0x1000578, 0x1000548	]       };
++    key <AD07> {        [         u,    U               ],
++			[ 0x1000582, 0x1000552	]       };
++    key <AD08> {        [         i,    I               ],
++			[ 0x100056f, 0x100053f	]       };
++    key <AD09> {        [         o,    O               ],
++			[ 0x1000568, 0x1000538	]       };
++    key <AD10> {        [         p,    P               ],
++			[ 0x1000569, 0x1000539	]       };
++    key <AD11> {        [ bracketleft,  braceleft       ],
++			[ 0x100056e, 0x100053e	]       };
++    key <AD12> {        [ bracketright, braceright      ],
++			[ 0x1000581, 0x1000551	]       };
++
++    key <AC01> {        [         a,    A               ],
++			[ 0x100057b, 0x100054b	]       };
++    key <AC02> {        [         s,    S               ],
++			[ 0x100057e, 0x100054e	]	};
++    key <AC03> {        [         d,    D               ],
++			[ 0x1000563, 0x1000533	]       };
++    key <AC04> {        [         f,    F               ],
++			[ 0x1000565, 0x1000535	]       };
++    key <AC05> {        [         g,    G               ],
++			[ 0x1000561, 0x1000531	]       };
++    key <AC06> {        [         h,    H               ],
++			[ 0x1000576, 0x1000546	]	};
++    key <AC07> {        [         j,    J               ],
++			[ 0x100056b, 0x100053b	]       };
++    key <AC08> {        [         k,    K               ],
++			[ 0x100057f, 0x100054f	]       };
++    key <AC09> {        [         l,    L               ],
++			[ 0x1000570, 0x1000540	]       };
++    key <AC10> {        [ semicolon,    colon           ],
++			[ 0x100057a, 0x100054a	]       };
++    key <AC11> {        [ apostrophe,   quotedbl        ], 
++			[ 0x1000580, 0x1000550	]       };
++
++    key <AB01> {        [         z,    Z               ],
++			[ 0x100056a, 0x100053a	]       };
++    key <AB02> {        [         x,    X               ],
++			[ 0x1000564, 0x1000534	]       };
++    key <AB03> {        [         c,    C               ],
++			[ 0x1000579, 0x1000549	]       };
++    key <AB04> {        [         v,    V               ],
++			[ 0x1000575, 0x1000545	]       };
++    key <AB05> {        [         b,    B               ],
++			[ 0x1000566, 0x1000536	]       };
++    key <AB06> {        [         n,    N               ],
++			[ 0x100056c, 0x100053c	]       };
++    key <AB07> {        [         m,    M               ],
++			[ 0x1000584, 0x1000554	]       };
++    key <AB08> {        [     comma,    less            ],
++			[ 0x100056d, 0x100053d	]       };
++    key <AB09> {        [    period,    greater         ],
++			[ 0x1000577, 0x1000547	]       };
++    key <AB10> {        [     slash,    question        ],
++			[ 0x100057c, 0x100054c	]       };
+     
+     // Begin modifier mappings 
+ 
+@@ -74,111 +122,4 @@
+     modifier_map Mod3   { Mode_switch };
+ };
+ 
+-xkb_symbols "old" {
+-    include "am(basic)"
+-	
+-    key <BKSL> {	[ ], [ 0x1002026,  0x1000587 ]	};
+-
+-    key <AE01> {	[ ], [ 0x1000573,  0x1000543 ]	};
+-    key <AE02> {	[ ], [ 0x100057b,  0x100054b ]	};
+-    key <AE03> {	[ ], [ 0x100056a,  0x100053a ]	};
+-    key <AE04> {	[ ], [ 0x1000571,  0x1000541 ]	};
+-    key <AE05> {	[ ], [ 0x1000575,  0x1000545 ]	};
+-    key <AE06> {	[ ], [ 0x100057c,  0x100054c ]	};
+-    key <AE07> {	[ ], [ 0x1000580,  0x1000550 ]	};
+-    key <AE08> {	[ ], [ 0x1000581,  0x1000551 ]	};
+-    key <AE09> {	[ ], [ 0x1000567,  0x1000537 ]	};
+-    key <AE10> {	[ ], [ 0x1000572,  0x1000542 ]	};
+-    key <AE11> {	[ ], [ 0x1002013,  0x1002014 ]	};
+-    key <AE12> {	[ ], [ parenleft,  parenright]	};
+-	
+-    key <AD01> {    [ ], [ 0x1000583,  0x1000553 ]	};
+-    key <AD02> {    [ ], [ 0x1000562,  0x1000532 ]	};
+-    key <AD03> {    [ ], [ 0x100057d,  0x100054d ]	};
+-    key <AD04> {    [ ], [ 0x1000574,  0x1000544 ]	};
+-    key <AD05> {    [ ], [ 0x1000578,  0x1000548 ]	};
+-    key <AD06> {    [ ], [ 0x1000582,  0x1000552 ]	};
+-    key <AD07> {    [ ], [ 0x100056f,  0x100053f ]	};
+-    key <AD08> {    [ ], [ 0x1000568,  0x1000538 ]	};
+-    key <AD09> {    [ ], [ 0x1000569,  0x1000539 ]	};
+-    key <AD10> {    [ ], [ 0x100056e,  0x100053e ]	};
+-    key <AD11> {    [ ], [ 0x1000585,  0x1000555 ]	};
+-    key <AD12> {    [ ], [ 0x1000586,  0x1000556 ]	};
+-
+-    key <AC01> {	[ ], [ 0x100057e,  0x100054e ]	};
+-    key <AC02> {	[ ], [ 0x1000563,  0x1000533 ]	};
+-    key <AC03> {	[ ], [ 0x1000565,  0x1000535 ]	};
+-    key <AC04> {	[ ], [ 0x1000561,  0x1000531 ]	};
+-    key <AC05> {	[ ], [ 0x1000576,  0x1000546 ]	};
+-    key <AC06> {	[ ], [ 0x100056b,  0x100053b ]	};
+-    key <AC07> {	[ ], [ 0x100057f,  0x100054f ]	};
+-    key <AC08> {	[ ], [ 0x1000570,  0x1000540 ]	};
+-    key <AC09> {	[ ], [ 0x100057a,  0x100054a ]	};
+-    key <AC10> {	[ ], [ 0x1000589,  0x100058a ]	};
+-    key <AC11> {	[ ], [ 0x100055b,  0x10002bc ]	};
+-
+-    key <AB01> {	[ ], [ 0x1000564,  0x1000534 ]	};
+-    key <AB02> {	[ ], [ 0x1000579,  0x1000549 ]	};
+-    key <AB03> {	[ ], [ 0x1000566,  0x1000536 ]	};
+-    key <AB04> {	[ ], [ 0x100056c,  0x100053c ]	};
+-    key <AB05> {	[ ], [ 0x1000584,  0x1000554 ]	};
+-    key <AB06> {	[ ], [ 0x100056d,  0x100053d ]	};
+-    key <AB07> {	[ ], [ 0x1000577,  0x1000547 ]	};
+-    key <AB08> {	[ ], [ comma,      guillemotleft ]	};
+-    key <AB09> {	[ ], [ period,     guillemotright ]	};
+-    key <AB10> {	[ ], [ 0x100055e,  0x1000530 ]	};
+-    
+-};
+-
+-xkb_symbols "phonetic" {
+-    include "am(old)"
+-	
+-    key <BKSL> {	[ ], [ 0x1000530,  backslash ]	};
+-	
+-    key <AE01> {	[ ], [ 0x1000567,  0x1000537 ]	};
+-    key <AE02> {	[ ], [ 0x1000569,  0x1000539 ]	};
+-    key <AE03> {	[ ], [ 0x1000583,  0x1000553 ]	};
+-    key <AE05> {	[ ], [ 0x100057b,  0x100054b ]	};
+-    key <AE06> {	[ ], [ parenright, parenleft ]	};
+-    key <AE07> {	[ ], [ 0x1000587,  percent   ]	};
+-    key <AE08> {	[ ], [ 0x100057c,  0x100054c ]	};
+-    key <AE09> {	[ ], [ 0x1000579,  0x1000549 ]	};
+-    key <AE10> {	[ ], [ 0x1000573,  0x1000543 ]	};
+-    key <AE12> {	[ ], [ 0x100056a,  0x100053a ]	};
+-
+-    key <AD01> {    [ ], [ 0x1000584,  0x1000554 ]	};
+-    key <AD02> {    [ ], [ 0x1000578,  0x1000548 ]	};
+-    key <AD03> {    [ ], [ 0x1000565,  0x1000535 ]	};
+-    key <AD04> {    [ ], [ 0x1000580,  0x1000550 ]	};
+-    key <AD05> {    [ ], [ 0x100057f,  0x100054f ]	};
+-    key <AD06> {    [ ], [ 0x1000568,  0x1000538 ]	};
+-    key <AD07> {    [ ], [ 0x1000582,  0x1000552 ]	};
+-    key <AD08> {    [ ], [ 0x100056b,  0x100053b ]	};
+-    key <AD09> {    [ ], [ 0x1000585,  0x1000555 ]	};
+-    key <AD10> {    [ ], [ 0x100057a,  0x100054a ]	};
+-    key <AD11> {    [ ], [ 0x100056d,  0x100053d ]	};
+-    key <AD12> {    [ ], [ 0x100056e,  0x100053e ]	};
+-
+-    key <AC01> {	[ ], [ 0x1000561,  0x1000531 ]	};
+-    key <AC02> {	[ ], [ 0x100057d,  0x100054d ]	};
+-    key <AC03> {	[ ], [ 0x1000564,  0x1000534 ]	};
+-    key <AC04> {	[ ], [ 0x1000586,  0x1000556 ]	};
+-    key <AC05> {	[ ], [ 0x1000563,  0x1000533 ]	};
+-    key <AC06> {	[ ], [ 0x1000570,  0x1000540 ]	};
+-    key <AC07> {	[ ], [ 0x1000575,  0x1000545 ]	};
+-    key <AC08> {	[ ], [ 0x100056f,  0x100053f ]	};
+-    key <AC09> {	[ ], [ 0x100056c,  0x100053c ]	};
+-    key <AC10> {	[ ], [ 0x1000589,  0x1002026 ]	};
+-
+-    key <AB01> {	[ ], [ 0x1000566,  0x1000536 ]	};
+-    key <AB02> {	[ ], [ 0x1000572,  0x1000542 ]	};
+-    key <AB03> {	[ ], [ 0x1000581,  0x1000551 ]	};
+-    key <AB04> {	[ ], [ 0x100057e,  0x100054e ]	};
+-    key <AB05> {	[ ], [ 0x1000562,  0x1000532 ]	};
+-    key <AB06> {	[ ], [ 0x1000576,  0x1000546 ]	};
+-    key <AB07> {	[ ], [ 0x1000574,  0x1000544 ]	};
+-    key <AB10> {	[ ], [ 0x1000577,  0x1000547 ]	};
+-
+-};
+-
+ 
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ar /usr/X11R6/lib/X11/xkb/symbols/ar
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ar	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/ar	2003-03-20 22:01:42.000000000 -0500
+@@ -4,6 +4,217 @@
+ xkb_symbols "basic" {
+     name[Group2]= "Arabic";
+ 
++// Unicode keysyms for all the Arabic letters
++// 0x100060C: ARABIC COMMA
++// 0x100061B: ARABIC SEMICOLON
++// 0x100061F: ARABIC QUESTION MARK
++// 0x1000621: ARABIC LETTER HAMZA
++// 0x1000622: ARABIC LETTER ALEF WITH MADDA ABOVE
++// 0x1000623: ARABIC LETTER ALEF WITH HAMZA ABOVE
++// 0x1000624: ARABIC LETTER WAW WITH HAMZA ABOVE
++// 0x1000625: ARABIC LETTER ALEF WITH HAMZA BELOW
++// 0x1000626: ARABIC LETTER YEH WITH HAMZA ABOVE
++// 0x1000627: ARABIC LETTER ALEF
++// 0x1000628: ARABIC LETTER BEH
++// 0x1000629: ARABIC LETTER TEH MARBUTA
++// 0x100062A: ARABIC LETTER TEH
++// 0x100062B: ARABIC LETTER THEH
++// 0x100062C: ARABIC LETTER JEEM
++// 0x100062D: ARABIC LETTER HAH
++// 0x100062E: ARABIC LETTER KHAH
++// 0x100062F: ARABIC LETTER DAL
++// 0x1000630: ARABIC LETTER THAL
++// 0x1000631: ARABIC LETTER REH
++// 0x1000632: ARABIC LETTER ZAIN
++// 0x1000633: ARABIC LETTER SEEN
++// 0x1000634: ARABIC LETTER SHEEN
++// 0x1000635: ARABIC LETTER SAD
++// 0x1000636: ARABIC LETTER DAD
++// 0x1000637: ARABIC LETTER TAH
++// 0x1000638: ARABIC LETTER ZAH
++// 0x1000639: ARABIC LETTER AIN
++// 0x100063A: ARABIC LETTER GHAIN
++// 0x1000640: ARABIC TATWEEL
++// 0x1000641: ARABIC LETTER FEH
++// 0x1000642: ARABIC LETTER QAF
++// 0x1000643: ARABIC LETTER KAF
++// 0x1000644: ARABIC LETTER LAM
++// 0x1000645: ARABIC LETTER MEEM
++// 0x1000646: ARABIC LETTER NOON
++// 0x1000647: ARABIC LETTER HEH
++// 0x1000648: ARABIC LETTER WAW
++// 0x1000649: ARABIC LETTER ALEF MAKSURA
++// 0x100064A: ARABIC LETTER YEH
++// 0x100064B: ARABIC FATHATAN
++// 0x100064C: ARABIC DAMMATAN
++// 0x100064D: ARABIC KASRATAN
++// 0x100064E: ARABIC FATHA
++// 0x100064F: ARABIC DAMMA
++// 0x1000650: ARABIC KASRA
++// 0x1000651: ARABIC SHADDA
++// 0x1000652: ARABIC SUKUN
++// 0x1000653: ARABIC MADDAH ABOVE
++// 0x1000654: ARABIC HAMZA ABOVE
++// 0x1000655: ARABIC HAMZA BELOW
++// 0x1000660: ARABIC-INDIC DIGIT ZERO
++// 0x1000661: ARABIC-INDIC DIGIT ONE
++// 0x1000662: ARABIC-INDIC DIGIT TWO
++// 0x1000663: ARABIC-INDIC DIGIT THREE
++// 0x1000664: ARABIC-INDIC DIGIT FOUR
++// 0x1000665: ARABIC-INDIC DIGIT FIVE
++// 0x1000666: ARABIC-INDIC DIGIT SIX
++// 0x1000667: ARABIC-INDIC DIGIT SEVEN
++// 0x1000668: ARABIC-INDIC DIGIT EIGHT
++// 0x1000669: ARABIC-INDIC DIGIT NINE
++// 0x100066A: ARABIC PERCENT SIGN
++// 0x100066B: ARABIC DECIMAL SEPARATOR
++// 0x100066C: ARABIC THOUSANDS SEPARATOR
++// 0x100066D: ARABIC FIVE POINTED STAR
++// 0x1000670: ARABIC LETTER SUPERSCRIPT ALEF
++// 0x1000671: ARABIC LETTER ALEF WASLA
++// 0x1000672: ARABIC LETTER ALEF WITH WAVY HAMZA ABOVE
++// 0x1000673: ARABIC LETTER ALEF WITH WAVY HAMZA BELOW
++// 0x1000674: ARABIC LETTER HIGH HAMZA
++// 0x1000675: ARABIC LETTER HIGH HAMZA ALEF
++// 0x1000676: ARABIC LETTER HIGH HAMZA WAW
++// 0x1000677: ARABIC LETTER U WITH HAMZA ABOVE
++// 0x1000678: ARABIC LETTER HIGH HAMZA YEH
++// 0x1000679: ARABIC LETTER TTEH
++// 0x100067A: ARABIC LETTER TTEHEH
++// 0x100067B: ARABIC LETTER BEEH
++// 0x100067C: ARABIC LETTER TEH WITH RING
++// 0x100067D: ARABIC LETTER TEH WITH THREE DOTS ABOVE DOWNWARDS
++// 0x100067E: ARABIC LETTER PEH
++// 0x100067F: ARABIC LETTER TEHEH
++// 0x1000680: ARABIC LETTER BEHEH
++// 0x1000681: ARABIC LETTER HAH WITH HAMZA ABOVE
++// 0x1000682: ARABIC LETTER HAH WITH TWO DOTS VERTICAL ABOVE
++// 0x1000683: ARABIC LETTER NYEH
++// 0x1000684: ARABIC LETTER DYEH
++// 0x1000685: ARABIC LETTER HAH WITH THREE DOTS ABOVE
++// 0x1000686: ARABIC LETTER TCHEH
++// 0x1000687: ARABIC LETTER TCHEHEH
++// 0x1000688: ARABIC LETTER DDAL
++// 0x1000689: ARABIC LETTER DAL WITH RING
++// 0x100068A: ARABIC LETTER DAL WITH DOT BELOW
++// 0x100068B: ARABIC LETTER DAL WITH DOT BELOW AND SMALL TAH
++// 0x100068C: ARABIC LETTER DAHAL
++// 0x100068D: ARABIC LETTER DDAHAL
++// 0x100068E: ARABIC LETTER DUL
++// 0x100068F: ARABIC LETTER DAL WITH THREE DOTS ABOVE DOWNWARDS
++// 0x1000690: ARABIC LETTER DAL WITH FOUR DOTS ABOVE
++// 0x1000691: ARABIC LETTER RREH
++// 0x1000692: ARABIC LETTER REH WITH SMALL V
++// 0x1000693: ARABIC LETTER REH WITH RING
++// 0x1000694: ARABIC LETTER REH WITH DOT BELOW
++// 0x1000695: ARABIC LETTER REH WITH SMALL V BELOW
++// 0x1000696: ARABIC LETTER REH WITH DOT BELOW AND DOT ABOVE
++// 0x1000697: ARABIC LETTER REH WITH TWO DOTS ABOVE
++// 0x1000698: ARABIC LETTER JEH
++// 0x1000699: ARABIC LETTER REH WITH FOUR DOTS ABOVE
++// 0x100069A: ARABIC LETTER SEEN WITH DOT BELOW AND DOT ABOVE
++// 0x100069B: ARABIC LETTER SEEN WITH THREE DOTS BELOW
++// 0x100069C: ARABIC LETTER SEEN WITH THREE DOTS BELOW AND THREE DOTS ABOVE
++// 0x100069D: ARABIC LETTER SAD WITH TWO DOTS BELOW
++// 0x100069E: ARABIC LETTER SAD WITH THREE DOTS ABOVE
++// 0x100069F: ARABIC LETTER TAH WITH THREE DOTS ABOVE
++// 0x10006A0: ARABIC LETTER AIN WITH THREE DOTS ABOVE
++// 0x10006A1: ARABIC LETTER DOTLESS FEH
++// 0x10006A2: ARABIC LETTER FEH WITH DOT MOVED BELOW
++// 0x10006A3: ARABIC LETTER FEH WITH DOT BELOW
++// 0x10006A4: ARABIC LETTER VEH
++// 0x10006A5: ARABIC LETTER FEH WITH THREE DOTS BELOW
++// 0x10006A6: ARABIC LETTER PEHEH
++// 0x10006A7: ARABIC LETTER QAF WITH DOT ABOVE
++// 0x10006A8: ARABIC LETTER QAF WITH THREE DOTS ABOVE
++// 0x10006A9: ARABIC LETTER KEHEH
++// 0x10006AA: ARABIC LETTER SWASH KAF
++// 0x10006AB: ARABIC LETTER KAF WITH RING
++// 0x10006AC: ARABIC LETTER KAF WITH DOT ABOVE
++// 0x10006AD: ARABIC LETTER NG
++// 0x10006AE: ARABIC LETTER KAF WITH THREE DOTS BELOW
++// 0x10006AF: ARABIC LETTER GAF
++// 0x10006B0: ARABIC LETTER GAF WITH RING
++// 0x10006B1: ARABIC LETTER NGOEH
++// 0x10006B2: ARABIC LETTER GAF WITH TWO DOTS BELOW
++// 0x10006B3: ARABIC LETTER GUEH
++// 0x10006B4: ARABIC LETTER GAF WITH THREE DOTS ABOVE
++// 0x10006B5: ARABIC LETTER LAM WITH SMALL V
++// 0x10006B6: ARABIC LETTER LAM WITH DOT ABOVE
++// 0x10006B7: ARABIC LETTER LAM WITH THREE DOTS ABOVE
++// 0x10006B8: ARABIC LETTER LAM WITH THREE DOTS BELOW
++// 0x10006B9: ARABIC LETTER NOON WITH DOT BELOW
++// 0x10006BA: ARABIC LETTER NOON GHUNNA
++// 0x10006BB: ARABIC LETTER RNOON
++// 0x10006BC: ARABIC LETTER NOON WITH RING
++// 0x10006BD: ARABIC LETTER NOON WITH THREE DOTS ABOVE
++// 0x10006BE: ARABIC LETTER HEH DOACHASHMEE
++// 0x10006BF: ARABIC LETTER TCHEH WITH DOT ABOVE
++// 0x10006C0: ARABIC LETTER HEH WITH YEH ABOVE
++// 0x10006C1: ARABIC LETTER HEH GOAL
++// 0x10006C2: ARABIC LETTER HEH GOAL WITH HAMZA ABOVE
++// 0x10006C3: ARABIC LETTER TEH MARBUTA GOAL
++// 0x10006C4: ARABIC LETTER WAW WITH RING
++// 0x10006C5: ARABIC LETTER KIRGHIZ OE
++// 0x10006C6: ARABIC LETTER OE
++// 0x10006C7: ARABIC LETTER U
++// 0x10006C8: ARABIC LETTER YU
++// 0x10006C9: ARABIC LETTER KIRGHIZ YU
++// 0x10006CA: ARABIC LETTER WAW WITH TWO DOTS ABOVE
++// 0x10006CB: ARABIC LETTER VE
++// 0x10006CC: ARABIC LETTER FARSI YEH
++// 0x10006CD: ARABIC LETTER YEH WITH TAIL
++// 0x10006CE: ARABIC LETTER YEH WITH SMALL V
++// 0x10006CF: ARABIC LETTER WAW WITH DOT ABOVE
++// 0x10006D0: ARABIC LETTER E
++// 0x10006D1: ARABIC LETTER YEH WITH THREE DOTS BELOW
++// 0x10006D2: ARABIC LETTER YEH BARREE
++// 0x10006D3: ARABIC LETTER YEH BARREE WITH HAMZA ABOVE
++// 0x10006D4: ARABIC FULL STOP
++// 0x10006D5: ARABIC LETTER AE
++// 0x10006D6: ARABIC SMALL HIGH LIGATURE SAD WITH LAM WITH ALEF MAKSURA
++// 0x10006D7: ARABIC SMALL HIGH LIGATURE QAF WITH LAM WITH ALEF MAKSURA
++// 0x10006D8: ARABIC SMALL HIGH MEEM INITIAL FORM
++// 0x10006D9: ARABIC SMALL HIGH LAM ALEF
++// 0x10006DA: ARABIC SMALL HIGH JEEM
++// 0x10006DB: ARABIC SMALL HIGH THREE DOTS
++// 0x10006DC: ARABIC SMALL HIGH SEEN
++// 0x10006DD: ARABIC END OF AYAH
++// 0x10006DE: ARABIC START OF RUB EL HIZB
++// 0x10006DF: ARABIC SMALL HIGH ROUNDED ZERO
++// 0x10006E0: ARABIC SMALL HIGH UPRIGHT RECTANGULAR ZERO
++// 0x10006E1: ARABIC SMALL HIGH DOTLESS HEAD OF KHAH
++// 0x10006E2: ARABIC SMALL HIGH MEEM ISOLATED FORM
++// 0x10006E3: ARABIC SMALL LOW SEEN
++// 0x10006E4: ARABIC SMALL HIGH MADDA
++// 0x10006E5: ARABIC SMALL WAW
++// 0x10006E6: ARABIC SMALL YEH
++// 0x10006E7: ARABIC SMALL HIGH YEH
++// 0x10006E8: ARABIC SMALL HIGH NOON
++// 0x10006E9: ARABIC PLACE OF SAJDAH
++// 0x10006EA: ARABIC EMPTY CENTRE LOW STOP
++// 0x10006EB: ARABIC EMPTY CENTRE HIGH STOP
++// 0x10006EC: ARABIC ROUNDED HIGH STOP WITH FILLED CENTRE
++// 0x10006ED: ARABIC SMALL LOW MEEM
++// 0x10006F0: EXTENDED ARABIC-INDIC DIGIT ZERO
++// 0x10006F1: EXTENDED ARABIC-INDIC DIGIT ONE
++// 0x10006F2: EXTENDED ARABIC-INDIC DIGIT TWO
++// 0x10006F3: EXTENDED ARABIC-INDIC DIGIT THREE
++// 0x10006F4: EXTENDED ARABIC-INDIC DIGIT FOUR
++// 0x10006F5: EXTENDED ARABIC-INDIC DIGIT FIVE
++// 0x10006F6: EXTENDED ARABIC-INDIC DIGIT SIX
++// 0x10006F7: EXTENDED ARABIC-INDIC DIGIT SEVEN
++// 0x10006F8: EXTENDED ARABIC-INDIC DIGIT EIGHT
++// 0x10006F9: EXTENDED ARABIC-INDIC DIGIT NINE
++// 0x10006FA: ARABIC LETTER SHEEN WITH DOT BELOW
++// 0x10006FB: ARABIC LETTER DAD WITH DOT BELOW
++// 0x10006FC: ARABIC LETTER GHAIN WITH DOT BELOW
++// 0x10006FD: ARABIC SIGN SINDHI AMPERSAND
++// 0x10006FE: ARABIC SIGN SINDHI POSTPOSITION MEN
++//
++// There are more possible Unicode values for particular glyph forms (e.g. isolated, medial, etc.)
++// but most of them are not very useful in a keyboard map.
++
+ // NOTES:
+ //
+ // there is also combined shadda diacritis in AltGr position of simple
+@@ -11,57 +222,58 @@
+ // should a third state be added to Group2 ?
+ //
+ 
+-    key <TLDE> { [  ], [     Arabic_thal,      Arabic_shadda   ]	};
+-    key <AE01> { [  ], [               1,          exclam      ]       };
+-    key <AE02> { [  ], [               2,              at      ]       };
+-    key <AE03> { [  ], [               3,      numbersign      ]       };
+-    key <AE04> { [  ], [               4,          dollar      ]       };
+-    key <AE05> { [  ], [               5,         percent      ]       };
+-    key <AE06> { [  ], [               6,     asciicircum      ]       };
+-    key <AE07> { [  ], [               7,       ampersand      ]       };
+-    key <AE08> { [  ], [               8,        asterisk      ]       };
+-    key <AE09> { [  ], [               9,       parenleft      ]       };
+-    key <AE10> { [  ], [               0,      parenright      ]       };
+-    key <AE11> { [  ], [           minus,      underscore      ]       };
+-    key <AE12> { [  ], [           equal,            plus      ]       };
++
++    key <TLDE> { symbols[Group2] = [       0x1000630,	    0x1000651      ]	};
++    key <AE01> { symbols[Group2] = [               1,          exclam      ]       };
++    key <AE02> { symbols[Group2] = [               2,              at      ]       };
++    key <AE03> { symbols[Group2] = [               3,      numbersign      ]       };
++    key <AE04> { symbols[Group2] = [               4,          dollar      ]       };
++    key <AE05> { symbols[Group2] = [               5,         percent      ]       };
++    key <AE06> { symbols[Group2] = [               6,     asciicircum      ]       };
++    key <AE07> { symbols[Group2] = [               7,       ampersand      ]       };
++    key <AE08> { symbols[Group2] = [               8,        asterisk      ]       };
++    key <AE09> { symbols[Group2] = [               9,       parenleft      ]       };
++    key <AE10> { symbols[Group2] = [               0,      parenright      ]       };
++    key <AE11> { symbols[Group2] = [           minus,      underscore      ]       };
++    key <AE12> { symbols[Group2] = [           equal,            plus      ]       };
+ 						
+-    key <AD01> { [  ], [      Arabic_dad,     Arabic_fatha     ]       };
+-    key <AD02> { [  ], [      Arabic_sad,     Arabic_fathatan  ]       };
+-    key <AD03> { [  ], [     Arabic_theh,     Arabic_damma     ]       };
+-    key <AD04> { [  ], [      Arabic_qaf,     Arabic_dammatan  ]       };
+-    key <AD05> { [  ], [      Arabic_feh,       0x100fef9      ]       };
+-    key <AD06> { [  ], [   Arabic_ghain, Arabic_hamzaunderalef ]       };
+-    key <AD07> { [  ], [      Arabic_ain,         grave        ]       };
+-    key <AD08> { [  ], [       Arabic_ha,        division      ]       };
+-    key <AD09> { [  ], [     Arabic_khah,       multiply       ]       };
+-    key <AD10> { [  ], [      Arabic_hah,    Arabic_semicolon  ]       };
+-    key <AD11> { [  ], [     Arabic_jeem,       braceleft      ]       };
+-    key <AD12> { [  ], [      Arabic_dal,       braceright     ]       };
+-
+-    key <AC01> { [  ], [    Arabic_sheen,       backslash      ]       };
+-    key <AC02> { [  ], [     Arabic_seen,               S      ]       };
+-    key <AC03> { [  ], [      Arabic_yeh,       bracketleft    ]       };
+-    key <AC04> { [  ], [      Arabic_beh,       bracketright   ]       };
+-    key <AC05> { [  ], [      Arabic_lam,       0x100fef7      ]       };
+-    key <AC06> { [  ], [     Arabic_alef,   Arabic_hamzaonalef ]       };
+-    key <AC07> { [  ], [      Arabic_teh,      Arabic_tatweel  ]       };
+-    key <AC08> { [  ], [     Arabic_noon,      Arabic_comma    ]       };
+-    key <AC09> { [  ], [     Arabic_meem,         slash        ]       };
+-    key <AC10> { [  ], [      Arabic_kaf,           colon      ]       };
+-    key <AC11> { [  ], [      Arabic_tah,        quotedbl      ]       };
+-    key <BKSL> { [  ], [            less,         greater      ]       };
+-
+-    key <LSGT> { [  ], [             bar,      brokenbar	   ]       };
+-    key <AB01> { [  ], [Arabic_hamzaonyeh,    asciitilde       ]       };
+-    key <AB02> { [  ], [    Arabic_hamza,      Arabic_sukun    ]       };
+-    key <AB03> { [  ], [Arabic_hamzaonwaw,     Arabic_kasra    ]       };
+-    key <AB04> { [  ], [       Arabic_ra,      Arabic_kasratan ]       };
+-    key <AB05> { [  ], [       0x100fefb,      0x100fef5       ]       };
+-    key <AB06> { [  ], [Arabic_alefmaksura, Arabic_maddaonalef ]       };
+-    key <AB07> { [  ], [Arabic_tehmarbuta,    apostrophe       ]       };
+-    key <AB08> { [  ], [      Arabic_waw,         comma        ]       };
+-    key <AB09> { [  ], [     Arabic_zain,         period       ]       };
+-    key <AB10> { [  ], [      Arabic_zah, Arabic_question_mark ]       };
++    key <AD01> { symbols[Group2] = [       0x1000636,       0x100064e      ]       };
++    key <AD02> { symbols[Group2] = [       0x1000635,       0x100064b      ]       };
++    key <AD03> { symbols[Group2] = [       0x100062b,       0x100064f      ]       };
++    key <AD04> { symbols[Group2] = [       0x1000642,       0x100064c      ]       };
++    key <AD05> { symbols[Group2] = [       0x1000641,       0x100fef9      ]       };
++    key <AD06> { symbols[Group2] = [       0x100063a,       0x1000625      ]       };
++    key <AD07> { symbols[Group2] = [       0x1000639,           grave      ]       };
++    key <AD08> { symbols[Group2] = [       0x1000647,        division      ]       };
++    key <AD09> { symbols[Group2] = [       0x100062e,        multiply      ]       };
++    key <AD10> { symbols[Group2] = [       0x100062d,       0x100061b      ]       };
++    key <AD11> { symbols[Group2] = [       0x100062c,       braceleft      ]       };
++    key <AD12> { symbols[Group2] = [       0x100062f,      braceright      ]       };
++
++    key <AC01> { symbols[Group2] = [       0x1000634,       backslash      ]       };
++    key <AC02> { symbols[Group2] = [       0x1000633,               S      ]       };
++    key <AC03> { symbols[Group2] = [       0x100064a,     bracketleft      ]       };
++    key <AC04> { symbols[Group2] = [       0x1000628,    bracketright      ]       };
++    key <AC05> { symbols[Group2] = [       0x1000644,       0x100fef7      ]       };
++    key <AC06> { symbols[Group2] = [       0x1000627,       0x1000623      ]       };
++    key <AC07> { symbols[Group2] = [       0x100062a,       0x1000640      ]       };
++    key <AC08> { symbols[Group2] = [       0x1000646,       0x100060c      ]       };
++    key <AC09> { symbols[Group2] = [       0x1000645,           slash      ]       };
++    key <AC10> { symbols[Group2] = [       0x1000643,           colon      ]       };
++    key <AC11> { symbols[Group2] = [       0x1000637,        quotedbl      ]       };
++    key <BKSL> { symbols[Group2] = [            less,         greater      ]       };
++
++    key <LSGT> { symbols[Group2] = [             bar,       brokenbar	   ]       };
++    key <AB01> { symbols[Group2] = [	   0x1000626,      asciitilde      ]       };
++    key <AB02> { symbols[Group2] = [       0x1000621,       0x1000652	   ]       };
++    key <AB03> { symbols[Group2] = [       0x1000624,       0x1000650	   ]       };
++    key <AB04> { symbols[Group2] = [       0x1000631,       0x100064d      ]       };
++    key <AB05> { symbols[Group2] = [       0x100fefb,       0x100fef5      ]       };
++    key <AB06> { symbols[Group2] = [	   0x1000649,       0x1000622      ]       };
++    key <AB07> { symbols[Group2] = [	   0x1000629,      apostrophe      ]       };
++    key <AB08> { symbols[Group2] = [	   0x1000648,           comma      ]       };
++    key <AB09> { symbols[Group2] = [	   0x1000632,          period      ]       };
++    key <AB10> { symbols[Group2] = [	   0x1000638,       0x100061f      ]       };
+ 
+     // End alphanumeric section
+     
+@@ -92,17 +304,17 @@
+ 	// other accentuated latin letters. Maybe this is useful only with
+ 	// a French keyboard in Group1 ? Then, shouldn't Group1 be filled ?
+ 
+-    key <AE01> { [  ], [       ampersand,               1      ]       };
+-    key <AE02> { [  ], [          eacute,               2      ]       };
+-    key <AE03> { [  ], [        quotedbl,               3      ]       };
+-    key <AE04> { [  ], [      apostrophe,               4      ]       };
+-    key <AE05> { [  ], [       parenleft,               5      ]       };
+-    key <AE06> { [  ], [           minus,               6      ]       };
+-    key <AE07> { [  ], [          egrave,               7      ]       };
+-    key <AE08> { [  ], [      underscore,               8      ]       };
+-    key <AE09> { [  ], [        ccedilla,               9      ]       };
+-    key <AE10> { [  ], [          agrave,               0      ]       };
+-    key <AE11> { [  ], [      parenright,          degree      ]       };
++    key <AE01> { symbols[Group2] = [       ampersand,               1      ]       };
++    key <AE02> { symbols[Group2] = [          eacute,               2      ]       };
++    key <AE03> { symbols[Group2] = [        quotedbl,               3      ]       };
++    key <AE04> { symbols[Group2] = [      apostrophe,               4      ]       };
++    key <AE05> { symbols[Group2] = [       parenleft,               5      ]       };
++    key <AE06> { symbols[Group2] = [           minus,               6      ]       };
++    key <AE07> { symbols[Group2] = [          egrave,               7      ]       };
++    key <AE08> { symbols[Group2] = [      underscore,               8      ]       };
++    key <AE09> { symbols[Group2] = [        ccedilla,               9      ]       };
++    key <AE10> { symbols[Group2] = [          agrave,               0      ]       };
++    key <AE11> { symbols[Group2] = [      parenright,          degree      ]       };
+ };
+ 
+ partial alphanumeric_keys
+@@ -111,16 +323,16 @@
+ 
+ 	// use arabic script digits
+ 
+-    key <AE01> { [  ], [       0x1000661,          exclam      ]       };
+-    key <AE02> { [  ], [       0x1000662,              at      ]       };
+-    key <AE03> { [  ], [       0x1000663,      numbersign      ]       };
+-    key <AE04> { [  ], [       0x1000664,          dollar      ]       };
+-    key <AE05> { [  ], [       0x1000665,         percent      ]       };
+-    key <AE06> { [  ], [       0x1000666,     asciicircum      ]       };
+-    key <AE07> { [  ], [       0x1000667,       ampersand      ]       };
+-    key <AE08> { [  ], [       0x1000668,        asterisk      ]       };
+-    key <AE09> { [  ], [       0x1000669,       parenleft      ]       };
+-    key <AE10> { [  ], [       0x1000660,      parenright      ]       };
++    key <AE01> { symbols[Group2] = [       0x1000661,          exclam      ]       };
++    key <AE02> { symbols[Group2] = [       0x1000662,              at      ]       };
++    key <AE03> { symbols[Group2] = [       0x1000663,      numbersign      ]       };
++    key <AE04> { symbols[Group2] = [       0x1000664,          dollar      ]       };
++    key <AE05> { symbols[Group2] = [       0x1000665,         percent      ]       };
++    key <AE06> { symbols[Group2] = [       0x1000666,     asciicircum      ]       };
++    key <AE07> { symbols[Group2] = [       0x1000667,       ampersand      ]       };
++    key <AE08> { symbols[Group2] = [       0x1000668,        asterisk      ]       };
++    key <AE09> { symbols[Group2] = [       0x1000669,       parenleft      ]       };
++    key <AE10> { symbols[Group2] = [       0x1000660,      parenright      ]       };
+ };
+ 
+ partial alphanumeric_keys
+@@ -132,15 +344,15 @@
+ xkb_symbols "azerty_digits" {
+     include "ar(azerty)"
+ 	
+-    key <AE01> { [  ], [       ampersand,       0x1000661      ]       };
+-    key <AE02> { [  ], [          eacute,       0x1000662      ]       };
+-    key <AE03> { [  ], [        quotedbl,       0x1000663      ]       };
+-    key <AE04> { [  ], [      apostrophe,       0x1000664      ]       };
+-    key <AE05> { [  ], [       parenleft,       0x1000665      ]       };
+-    key <AE06> { [  ], [           minus,       0x1000666      ]       };
+-    key <AE07> { [  ], [          egrave,       0x1000667      ]       };
+-    key <AE08> { [  ], [      underscore,       0x1000668      ]       };
+-    key <AE09> { [  ], [        ccedilla,       0x1000669      ]       };
+-    key <AE10> { [  ], [          agrave,       0x1000660      ]       };
++    key <AE01> { symbols[Group2] = [       ampersand,       0x1000661      ]       };
++    key <AE02> { symbols[Group2] = [          eacute,       0x1000662      ]       };
++    key <AE03> { symbols[Group2] = [        quotedbl,       0x1000663      ]       };
++    key <AE04> { symbols[Group2] = [      apostrophe,       0x1000664      ]       };
++    key <AE05> { symbols[Group2] = [       parenleft,       0x1000665      ]       };
++    key <AE06> { symbols[Group2] = [           minus,       0x1000666      ]       };
++    key <AE07> { symbols[Group2] = [          egrave,       0x1000667      ]       };
++    key <AE08> { symbols[Group2] = [      underscore,       0x1000668      ]       };
++    key <AE09> { symbols[Group2] = [        ccedilla,       0x1000669      ]       };
++    key <AE10> { symbols[Group2] = [          agrave,       0x1000660      ]       };
+ };
+ 
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ben /usr/X11R6/lib/X11/xkb/symbols/ben
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ben	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/ben	2003-03-20 22:01:42.000000000 -0500
+@@ -1,6 +1,6 @@
+ // $XConsortium: th /main/3 1996/08/31 12:20:18 kaleb $
+-// $XFree86: xc/programs/xkbcomp/symbols/ben,v 1.2 2003/02/04 01:52:08 dawes Exp $
+-partial default alphanumeric_keys
++// $XFree86: xc/programs/xkbcomp/symbols/ben,v 1.1 2001/11/21 22:28:52 dawes Exp $
++partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+     name[Group2]= "Bengali";
+       key <TLDE> {	[], [      		]	};
+@@ -65,77 +65,3 @@
+       key <AB09> {      [], [      period,      0x1000964       ]       };
+       key <AB10> {      [], [      0x10009DF,     0x10009AF         ]       };
+ };
+-
+-xkb_symbols "probhat" {
+- name[Group2]= "Bengali";
+-   key <ESC>  { [], [ Escape ] };
+-
+-// numbers
+-   key <TLDE> { [], [ quoteleft, asciitilde   ] };
+-   key <AE01> { [], [ 0x10009E7, exclam       ] };
+-   key <AE02> { [], [ 0x10009E8, at           ] };
+-   key <AE03> { [], [ 0x10009E9, numbersign   ] };
+-   key <AE04> { [], [ 0x10009EA, 0x10009F3    ] };
+-   key <AE05> { [], [ 0x10009EB, percent      ] };
+-   key <AE06> { [], [ 0x10009EC, asciicircum  ] };
+-   key <AE07> { [], [ 0x10009ED, 0x100099E    ] };
+-   key <AE08> { [], [ 0x10009EE, asterisk     ] };
+-   key <AE09> { [], [ 0x10009EF, parenleft    ] };
+-   key <AE10> { [], [ 0x10009E6, parenright   ] };
+-   key <AE11> { [], [ minus,     0x1000983    ] };
+-   key <AE12> { [], [ 0x100098B, 0x10009C3    ] };
+-   key <BKSP> { [], [ BackSpace               ] };
+-
+-// tab, q to ] 
+-   key <TAB>  { [], [   Tab,  ISO_Left_Tab     ] };
+-   key <AD01> { [], [   0x10009A6,  0x10009A7  ] };
+-   key <AD02> { [], [   0x10009C2,  0x100098A  ] };
+-   key <AD03> { [], [   0x10009C0,  0x1000988  ] };
+-   key <AD04> { [], [   0x10009B0,  0x10009DC  ] };
+-   key <AD05> { [], [   0x100099F,  0x10009A0  ] };
+-   key <AD06> { [], [   0x100098F,  0x1000990  ] };
+-   key <AD07> { [], [   0x10009C1,  0x1000989  ] };
+-   key <AD08> { [], [   0x10009BF,  0x1000987  ] };
+-   key <AD09> { [], [   0x1000993,  0x1000994  ] };
+-   key <AD10> { [], [   0x10009AA,  0x10009AB  ] };
+-   key <AD11> { [], [   0x10009C7,  0x10009C8  ] };
+-   key <AD12> { [], [   0x10009CB,  0x10009CC  ] };
+-   key <RTRN> { [], [   Return                 ] };
+-
+-// caps, a to ' 
+-//   key <CAPS> { [], [   Caps_Lock              ] };
+-   key <AC01> { [], [   0x10009BE,  0x1000985  ] };
+-   key <AC02> { [], [   0x10009B8,  0x10009B7  ] };
+-   key <AC03> { [], [   0x10009A1,  0x10009A2  ] };
+-   key <AC04> { [], [   0x10009A4,  0x10009A5  ] };
+-   key <AC05> { [], [   0x1000997,  0x1000998  ] };
+-   key <AC06> { [], [   0x10009B9,  0x1000983  ] };
+-   key <AC07> { [], [   0x100099C,  0x100099D  ] };
+-   key <AC08> { [], [   0x1000995,  0x1000996  ] };
+-   key <AC09> { [], [   0x10009B2,  0x1000982  ] };
+-   key <AC10> { [], [   semicolon,  colon      ] };
+-   key <AC11> { [], [   quoteright, quotedbl   ] };
+-
+-// shift, z to /
+-//   key <LFSH> { [], [   Shift_L                ] };
+-   key <AB01> { [], [   0x10009DF,  0x10009AF  ] };
+-   key <AB02> { [], [   0x10009B6,  0x10009DD  ] };
+-   key <AB03> { [], [   0x100099A,  0x100099B  ] };
+-   key <AB04> { [], [   0x1000986,  0x100098B  ] };
+-   key <AB05> { [], [   0x10009AC,  0x10009AD  ] };
+-   key <AB06> { [], [   0x10009A8,  0x10009A3  ] };
+-   key <AB07> { [], [   0x10009AE,  0x1000999  ] };
+-   key <AB08> { [], [   comma,      0x10009C3  ] };
+-   key <AB09> { [], [   period,     0x1000981  ] };
+-   key <AB10> { [], [   0x10009CD,  question   ] };
+-   key <BKSL> { [], [   backslash,  bar        ] };
+-
+-//   key <LCTL> { [], [   Control_L              ] };
+-//   key <SPCE> { [], [   space                  ] };
+-
+-//   modifier_map Shift  { Shift_L };
+-//   modifier_map Lock   { Caps_Lock };
+-//   modifier_map Control{ Control_L };
+-
+-};
+-
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/cz /usr/X11R6/lib/X11/xkb/symbols/cz
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/cz	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/cz	2003-03-20 22:01:42.000000000 -0500
+@@ -1,4 +1,4 @@
+-// $XFree86: xc/programs/xkbcomp/symbols/cz,v 1.4 2002/09/16 18:06:21 eich Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/cz,v 1.3 2001/10/01 13:44:16 eich Exp $
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -125,14 +125,10 @@
+     key <SPCE>  { [	space,		space,
+ 			nobreakspace,	nobreakspace ] };
+ 
+-// KP_Separator should produce a comma as KP_Decimal produces a "."
+-// independent of the locale selected.
+-    key <KPDL>  { type="FOUR_LEVEL_KEYPAD", [	KP_Delete,	KP_Separator,
+-    						KP_Delete,	KP_Decimal],
+-			// hack a decimal dot into the second (US) group
+-			// Martin Vidner <mvidner@suse.cz>
+-					    [   KP_Delete,      KP_Decimal,
+-					        KP_Delete,	KP_Separator] };
++    // This certainly shouldn't be 'comma'. Something like KP_DecimalComma
++    // would be better but there's no such definition in keysyms.
++    key <KPDL>  { type="FOUR_LEVEL_KEYPAD", [	KP_Delete,	comma,
++    						KP_Delete,	KP_Decimal] };
+ 
+     key <RALT> {  type="TWO_LEVEL", [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+     modifier_map Mod5   { <RALT> };			
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/czsk /usr/X11R6/lib/X11/xkb/symbols/czsk
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/czsk	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/czsk	2003-03-20 22:01:42.000000000 -0500
+@@ -10,7 +10,7 @@
+ //
+ // This file is distributed without any expressed or implied warranty.
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/czsk,v 1.9 2003/02/04 02:32:48 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/czsk,v 1.7 2001/10/04 13:12:05 alanh Exp $
+ 
+ partial default alphanumeric_keys 
+ xkb_symbols "us_sk_qwerty" {
+@@ -160,17 +160,13 @@
+ xkb_symbols "def_basic" {
+ 
+     include "group(shift_toggle)"
+-    include "srvr_ctrl(xfree86)"
+ 
+     // Alphanumeric keys identical to US
+     key <ESC>  {	[ Escape			],
+                         [ Escape			]       };
+ 
+-    key <BKSP> {
+-	type="CTRL+ALT",
+-	symbols[Group1]= [ BackSpace,	Terminate_Server ]
+-    };
+-
++    key <BKSP> {	[ 	BackSpace		],
++                        [      	BackSpace		]	};
+     key <TLDE> { [           grave,     asciitilde      ],       
+ 	         [           grave,     asciitilde	]	};
+ 
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/de /usr/X11R6/lib/X11/xkb/symbols/de
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/de	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/de	2003-03-20 22:01:42.000000000 -0500
+@@ -3,7 +3,7 @@
+ 
+ 
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/de,v 3.12 2002/11/25 14:05:06 eich Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/de,v 3.10 2001/10/01 14:04:15 eich Exp $
+ 
+ default partial alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -71,9 +71,7 @@
+ 			[ dead_grave			]	};
+     key <RALT> {	[ Mode_switch,	Multi_key	]	};
+ 
+-    // End alphanumeric section, begin "Keypad"
+-    key <KPDL> {	[  KP_Delete,	KP_Separator	]	};
+-    // End "Keypad" section
++    // End alphanumeric section
+ 
+     // begin modifier mappings
+     modifier_map Shift  { Shift_L };
+@@ -88,7 +86,7 @@
+     include "de(basic)"
+     key <TLDE> {	[ asciicircum,	degree		],
+ 			[   notsign 			]	};
+-    key <AE12> {	[ apostrophe,	grave		],
++    key <AE12> {	[ acute,	grave		],
+ 			[ cedilla			]	};
+     key <AD11> {	[ udiaeresis,	Udiaeresis	],
+ 			[ diaeresis 			]	};
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/de_CH /usr/X11R6/lib/X11/xkb/symbols/de_CH
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/de_CH	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/de_CH	2003-03-20 22:01:42.000000000 -0500
+@@ -3,7 +3,7 @@
+ 
+ 
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/de_CH,v 3.6 2002/11/25 14:05:06 eich Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/de_CH,v 3.5 2001/01/17 23:45:58 dawes Exp $
+ 
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -56,10 +56,7 @@
+     key <AB09> {	[    period,	colon		]	};
+     key <AB10> {	[     minus,	underscore	]	};
+ 
+-    // End alphanumeric section, begin "Keypad"
+-    key <KPDL> {	[  KP_Delete,	KP_Decimal	]	};
+-    // End "Keypad" section
+-
++    // End alphanumeric section
+ 
+     // begin modifier mappings
+     modifier_map Shift  { Shift_L };
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/dk /usr/X11R6/lib/X11/xkb/symbols/dk
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/dk	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/dk	2003-03-20 22:01:42.000000000 -0500
+@@ -3,7 +3,7 @@
+ 
+ 
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/dk,v 3.7 2002/12/19 01:07:54 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/dk,v 3.6 2001/01/17 23:45:58 dawes Exp $
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -75,9 +75,7 @@
+                  	[      dead_tilde,      dead_caron      ]};
+ 
+ 
+-    // End alphanumeric section, begin "Keypad"
+-    key <KPDL> {	[  KP_Delete,	KP_Separator	]	};
+-    // End "Keypad" section
++    // End alphanumeric section
+ 
+     // begin modifier mappings
+     
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/dvorak /usr/X11R6/lib/X11/xkb/symbols/dvorak
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/dvorak	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/dvorak	2003-03-20 22:01:42.000000000 -0500
+@@ -6,12 +6,11 @@
+ // uses the punctuation keys configurations common on PC 
+ // keyboards (e.g. key <ABO9> is { [ period greater ] })
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/dvorak,v 3.9 2003/02/04 02:32:48 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/dvorak,v 3.6 2001/04/23 20:31:09 dawes Exp $
+ 
+ partial default alphanumeric_keys
+ xkb_symbols "basic" {
+ 
+-    include "srvr_ctrl(xfree86)"
+ 
+     name[Group1]= "Dvorak";
+     key <ESC>  {	[ Escape			]	};
+@@ -35,10 +34,7 @@
+     key <AE11> {	[ bracketleft,	braceleft	]	};
+     key <AE12> {	[ bracketright,	braceright	],
+ 			[  dead_tilde			]	};
+-    key <BKSP> {
+-	type="CTRL+ALT",
+-	symbols[Group1]= [ BackSpace,	Terminate_Server ]
+-    };
++    key <BKSP> {	[   BackSpace			]	};
+ 
+     key  <TAB> {	[ 	  Tab,	ISO_Left_Tab	]	};
+     key <AD01> {	[  apostrophe,	quotedbl	],
+@@ -176,44 +172,3 @@
+ 			[	   bar,	backslash	]	};
+ 
+ };
+-
+-// Swedish Dvorak
+-partial alphanumeric_keys 
+-xkb_symbols "se" {
+-    include "dvorak(no)"
+-
+-    key <TLDE> {	[     section,	onehalf		]	};
+-
+-    key <AE04> {	[	    4,	currency	],
+-			[      dollar,  onequarter	]	};
+-    key <AE11> {	[        plus,	question	],
+-			[   backslash,  questiondown	]	};
+-    key <AE12> {	[  dead_acute,  dead_grave	],
+-			[  backslash,	grave		]	};
+-
+-    key <AD01> {	[  odiaeresis,  Odiaeresis	],
+-			[  braceright,  bracketright	]	};
+-    key <AD02> {	[       aring,	Aring    	]	};
+-    key <AD03> {	[  adiaeresis,	Adiaeresis	]	};
+-    key <AD11> {	[           q,	Q       	]	};
+-    key <AD12> {	[ dead_diaeresis, dead_circumflex],
+-			[ dead_tilde, asciicircum	]	};
+-
+-    key <AB01> {	[     comma,    semicolon	],
+-			[ dead_cedilla, cedilla		]	};
+-    key <AB02> {	[    period,    colon		],
+-			[ periodcentered		]	};
+-
+-    key <BKSL> {	[      less,	greater		],
+-			[       bar,    brokenbar	]	};
+-
+-    key <LSGT> {	[ apostrophe,   asterisk	],
+-			[       bar,    backslash	]	};
+-
+-};
+-// Swedish Dvorak alias
+-partial alphanumeric_keys 
+-xkb_symbols "sv" {
+-    include "dvorak(se)"
+-};
+-
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/el /usr/X11R6/lib/X11/xkb/symbols/el
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/el	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/el	2003-03-20 22:01:42.000000000 -0500
+@@ -1,17 +1,12 @@
+-// $XFree86: xc/programs/xkbcomp/symbols/el,v 1.3 2002/06/03 22:19:48 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/el,v 1.2 2001/04/06 17:44:58 dawes Exp $
+ //
+-// Hellenic keyboard map for XFree86
+-// Original version:
+-//	Kostas Gewrgiou <gewrgiou@imbc.gr>
+-// Heavily modified by:
+-//	Vasilis Vasaitis <vvas@hal.csd.auth.gr>
+ 
+ default partial alphanumeric_keys alternate_group
+ xkb_symbols "basic" {
+ 
+     include "el(bare)"
+ 
+-    key <TLDE> { [],	[     grave,	asciitilde	]	};
++    key <TLDE> { [],	[ quoteleft,	asciitilde	]	};
+     key <AE01> { [],	[	  1,	exclam 		]	};
+     key <AE02> { [],	[	  2,	at		]	};
+     key <AE03> { [],	[	  3,	numbersign	]	};
+@@ -28,7 +23,7 @@
+     key <AD11> { [],	[ bracketleft,	braceleft	]	};
+     key <AD12> { [],	[ bracketright,	braceright	]	};
+ 
+-    key <AC11> { [],	[ apostrophe,	quotedbl	]	};
++    key <AC11> { [],	[ quoteright,	quotedbl	]	};
+ 
+     key <AB08> { [],	[     comma,	less		]	};
+     key <AB09> { [],	[    period,	greater		]	};
+@@ -42,81 +37,37 @@
+ 
+     name[Group2] = "ISO8859-7";
+ 
+-    key <AD01> { [], [	semicolon,		colon		] };
+-    key <AD02> { [], [	Greek_finalsmallsigma,	Greek_SIGMA	] };
+-    key <AD03> { [], [	Greek_epsilon,		Greek_EPSILON	] };
+-    key <AD04> { [], [	Greek_rho,		Greek_RHO	] };
+-    key <AD05> { [], [	Greek_tau,		Greek_TAU	] };
+-    key <AD06> { [], [	Greek_upsilon,		Greek_UPSILON	] };
+-    key <AD07> { [], [	Greek_theta,		Greek_THETA	] };
+-    key <AD08> { [], [	Greek_iota,		Greek_IOTA	] };
+-    key <AD09> { [], [	Greek_omicron,		Greek_OMICRON	] };
+-    key <AD10> { [], [	Greek_pi,		Greek_PI	] };
+-
+-    key <AC01> { [], [	Greek_alpha,		Greek_ALPHA	] };
+-    key <AC02> { [], [	Greek_sigma,		Greek_SIGMA	] };
+-    key <AC03> { [], [	Greek_delta,		Greek_DELTA	] };
+-    key <AC04> { [], [	Greek_phi,		Greek_PHI	] };
+-    key <AC05> { [], [	Greek_gamma,		Greek_GAMMA	] };
+-    key <AC06> { [], [	Greek_eta,		Greek_ETA	] };
+-    key <AC07> { [], [	Greek_xi,		Greek_XI	] };
+-    key <AC08> { [], [	Greek_kappa,		Greek_KAPPA	] };
+-    key <AC09> { [], [	Greek_lamda,		Greek_LAMDA	] };
+-    key <AC10> { [], [	dead_acute,		dead_diaeresis	] };
+-
+-    key <AB01> { [], [	Greek_zeta,		Greek_ZETA	] };
+-    key <AB02> { [], [	Greek_chi,		Greek_CHI	] };
+-    key <AB03> { [], [	Greek_psi,		Greek_PSI	] };
+-    key <AB04> { [], [	Greek_omega,		Greek_OMEGA	] };
+-    key <AB05> { [], [	Greek_beta,		Greek_BETA	] };
+-    key <AB06> { [], [	Greek_nu,		Greek_NU	] };
+-    key <AB07> { [], [	Greek_mu,		Greek_MU	] };
++    key <AD01> { [], [ semicolon,		colon		] };
++    key <AD02> { [], [ Greek_finalsmallsigma,	Greek_SIGMA	] };
++    key <AD03> { [], [ Greek_epsilon,		Greek_EPSILON	] };
++    key <AD04> { [], [ Greek_rho,		Greek_RHO	] };
++    key <AD05> { [], [ Greek_tau,		Greek_TAU	] };
++    key <AD06> { [], [ Greek_upsilon,		Greek_UPSILON	] };
++    key <AD07> { [], [ Greek_theta,		Greek_THETA	] };
++    key <AD08> { [], [ Greek_iota,		Greek_IOTA	] };
++    key <AD09> { [], [ Greek_omicron,		Greek_OMICRON	] };
++    key <AD10> { [], [ Greek_pi,		Greek_PI	] };
++
++    key <AC01> { [], [ Greek_alpha,		Greek_ALPHA	] };
++    key <AC02> { [], [ Greek_sigma,		Greek_SIGMA	] };
++    key <AC03> { [], [ Greek_delta,		Greek_DELTA	] };
++    key <AC04> { [], [ Greek_phi,		Greek_PHI	] };
++    key <AC05> { [], [ Greek_gamma,		Greek_GAMMA	] };
++    key <AC06> { [], [ Greek_eta,		Greek_ETA	] };
++    key <AC07> { [], [ Greek_xi,		Greek_XI	] };
++    key <AC08> { [], [ Greek_kappa,		Greek_KAPPA	] };
++    key <AC09> { [], [ Greek_lamda,		Greek_LAMDA	] };
++    key <AC10> { [], [ dead_acute,		dead_diaeresis	] };
++
++    key <AB01> { [], [ Greek_zeta,		Greek_ZETA	] };
++    key <AB02> { [], [ Greek_chi,		Greek_CHI	] };
++    key <AB03> { [], [ Greek_psi,		Greek_PSI	] };
++    key <AB04> { [], [ Greek_omega,		Greek_OMEGA	] };
++    key <AB05> { [], [ Greek_beta,		Greek_BETA	] };
++    key <AB06> { [], [ Greek_nu,		Greek_NU	] };
++    key <AB07> { [], [ Greek_mu,		Greek_MU	] };
+ 
+-    key <LSGT> { [], [	guillemotleft,		guillemotright	] };
+-
+-};
+-
+-partial alphanumeric_keys alternate_group
+-xkb_symbols "extended" {
+-
+-    include "el(basic)"
+-
+-    key.type = "THREE_LEVEL";
+-
+-    key <AE05> { [	5,		percent,	EuroSign	],
+-		 [	5,		percent,	EuroSign	] };
+-
+-    key <AD01> { [], [	semicolon,	colon,		periodcentered	] };
+-
+-    key <AD03> { [	e,		E,		EuroSign	],
+-		 [	Greek_epsilon,	Greek_EPSILON,	EuroSign	] };
+-
+-    key <AC10> { [	semicolon,	colon,		periodcentered	] };
+-
+-    key <AB08> { [	comma,		less,		guillemotleft	],
+-		 [	comma,		less,		guillemotleft	] };
+-
+-    key <AB09> { [	period,		greater,	guillemotright	],
+-		 [	period,		greater,	guillemotright	] };
+-
+-    key <RALT> {	[	ISO_Level3_Shift	]	};
+-
+-    modifier_map Mod5 { ISO_Level3_Shift };
+-
+-};
+-
+-partial alphanumeric_keys alternate_group
+-xkb_symbols "polytonic" {
+-
+-    include "el(extended)"
+-
+-    key.type = "THREE_LEVEL";
+-
+-    key <AD11> { [], [ 	dead_tilde,	dead_diaeresis,	dead_macron	] };
+-    key <AD12> { [], [	dead_iota,	VoidSymbol,	dead_breve	] };
+-
+-    key <AC10> { [], [	dead_acute,		dead_horn	] };
+-    key <AC11> { [], [	dead_grave,		dead_ogonek	] };
++    key <LSGT> { [], [ guillemotleft,		guillemotright	] };
+ 
+ };
+ 
+@@ -139,7 +90,7 @@
+ 
+     include "el(basic)"
+ 
+-    key <AC10> { [], [	semicolon,		colon		] };
++    key <AC10> { [], [ semicolon,		colon		] };
+ 
+ };
+ 
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/fi /usr/X11R6/lib/X11/xkb/symbols/fi
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/fi	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/fi	2003-03-20 22:01:42.000000000 -0500
+@@ -1,25 +1,25 @@
+ // $Xorg: fi,v 1.3 2000/08/17 19:54:42 cpqbld Exp $
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/fi,v 3.10 2003/01/26 02:48:28 dawes Exp $
+ 
+ 
++
++// $XFree86: xc/programs/xkbcomp/symbols/fi,v 3.6 2001/01/17 23:45:58 dawes Exp $
++
+ partial alphanumeric_keys 
+  xkb_symbols "basic" {
+  
+-    // Describes the differences between a very simple en_US
++     // Describes the differences between a very simple en_US
+     // keyboard and a Finnish keyboard with dead key support
+-    // and all of ISO-8859-1 and ISO-8859-15 characters available.
++    // and all of ISO-8859-1 characters available.
+  
+-    name[Group1]= "Finnish";
++     name[Group1]= "Finnish";
+  
+     key <TLDE> {	[         section,         onehalf      ],
+-			[      onequarter,   threequarters      ]};
++			[       paragraph,   threequarters      ]};
+     key <LSGT> {	[	     less,	   greater	],
+                  	[             bar,       brokenbar      ]};
+-    // AltGr+<SPCE> is pressed accidentally too often after AltGr+<LSGT>,
+-    // hence AltGr+<SPCE> produces now space, not nobreakspace.
+     key <SPCE> {	[	    space,	     space	],
+-			[	    space,    nobreakspace	]};
++			[    nobreakspace,    nobreakspace	]};
+     key <AE01> {	[               1,          exclam  	],
+ 			[      exclamdown,     onesuperior	]};
+     key <AE02> {	[               2,        quotedbl  	],
+@@ -27,13 +27,13 @@
+     key <AE03> {	[              	3,	numbersign	],
+ 			[	 sterling,   threesuperior	]};
+     key <AE04> {	[               4,        currency     	],
+-			[	   dollar,	      cent	]};
++			[	   dollar,	onequarter	]};
+     key <AE05> {	[               5,         percent     	],
+-			[        EuroSign,	 masculine	]};
++			[        NoSymbol,	      cent	]};
+     key <AE06> {	[               6,       ampersand     	],
+-			[	      yen,     ordfeminine	]};
++			[	      yen,	  NoSymbol	]};
+     key <AE07> {	[               7,           slash     	],
+-			[       braceleft,       plusminus	]};
++			[       braceleft,        division	]};
+     key <AE08> {	[               8,       parenleft     	],
+ 			[     bracketleft,   guillemotleft	]};
+     key <AE09> {	[               9,      parenright     	],
+@@ -43,23 +43,13 @@
+     key <AB08> {	[           comma,       semicolon     	],
+ 			[    dead_cedilla,     dead_ogonek	]};
+     key <AB09> {	[          period,           colon     	],
+-			[  periodcentered,         notsign	]};
+-    key <AB01> {        [               z,               Z      ],
+-                        [	   zcaron,	    Zcaron      ]};
+-    key <AB02> {        [               x,               X      ],
+-                        [	 multiply,	  division      ]};
++			[  periodcentered,   dead_abovedot	]};
+     key <AB03> {        [               c,               C      ],
+-                        [	copyright,	      cent      ]};
+-    key <AB05> {        [               b,               B      ],
+-                        [	   ssharp,	  NoSymbol      ]};
+-    key <AB06> {        [               n,               N      ],
+-                        [	   ntilde,	    Ntilde      ]};
+-    key <AB07> {        [               m,               M      ],
+-                        [	       mu,	  NoSymbol      ]};
++                        [       copyright,        NoSymbol      ]};
+     key <AB10> {	[           minus,      underscore     	],
+ 			[	   hyphen,          macron	]};
+-    key <AC02> {        [               s,               S      ],
+-                        [          scaron,          Scaron      ]};
++    key <AC01> {        [               a,               A      ],
++                        [     ordfeminine,       masculine      ]};
+     key <AC03> {        [               d,               D      ],
+                         [             eth,             ETH      ]};
+     key <AD03> {        [               e,               E      ],
+@@ -68,8 +58,10 @@
+                         [      registered,        NoSymbol      ]};
+     key <AD05> {        [               t,               T      ],
+                         [           thorn,           THORN      ]};
+-    key <AD10> {        [               p,               P      ],
+-                        [       paragraph,        NoSymbol      ]};
++    key <AD08> {        [               i,               I      ],
++                        [        NoSymbol,        NoSymbol      ]};
++    key <AD09> {        [               o,               O      ],
++                        [              oe,              OE      ]};
+     key <AC10> {	[      odiaeresis,      Odiaeresis	],
+ 			[	   oslash,        Ooblique 	]};
+     key <AE11> {	[            plus,        question      ],
+@@ -77,29 +69,27 @@
+     key	<AC11> {	[      adiaeresis,      Adiaeresis	],
+ 			[	       ae,	        AE	]};
+     key <BKSL> {	[      apostrophe,        asterisk	],
+-			[	 NoSymbol,	  NoSymbol	]};
+-    key <AD11> {	[	    aring,           Aring 	],
+-			[	       oe,		OE	]};
++                 	[           acute,        multiply      ]};
++    key <AD11> {	[	    aring,           Aring 	]};
+     key <AE12> {   	[      dead_acute,      dead_grave      ],
+-			[	 NoSymbol,	  NoSymbol	]};
++			[	plusminus,         notsign	]};
+     key <AD12> {   	[  dead_diaeresis, dead_circumflex      ],
+                  	[      dead_tilde,      dead_caron      ]};
+ 
+-    // End alphanumeric section, begin "Keypad"
+-    key <KPDL> {	[  KP_Delete,	KP_Separator	]	};
+-    // End "Keypad" section
+ 
+-    // Begin modifier mappings
++    // End alphanumeric section
++
++    // begin modifier mappings
+     
+-    modifier_map Shift		{ Shift_L };
+-    modifier_map Lock		{ Caps_Lock };
+-    modifier_map Control	{ Control_L };
+-    modifier_map Mod3		{ Mode_switch };
++    modifier_map Shift  { Shift_L };
++    modifier_map Lock   { Caps_Lock };
++    modifier_map Control{ Control_L };
++    modifier_map Mod3   { Mode_switch };
+ };
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "Sundeadkeys" {
+-    include "fi(basic)"		// for consistent naming
++    include "fi(basic)"	// for consistent naming
+ };
+ 
+ partial alphanumeric_keys 
+@@ -109,14 +99,6 @@
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "nodeadkeys" {
+-    // Modifies the basic Finnish layout to eliminate all dead keys
+-
+-    include "fi(basic)"		// for consistent naming
+-
+-    key <AB08> {	[           comma,       semicolon     	],
+-			[         cedilla,          ogonek	]};
+-    key <AE12> {   	[           acute,           grave      ],
+-			[	 NoSymbol,	  NoSymbol	]};
+-    key <AD12> {   	[       diaeresis,     asciicircum      ],
+-                 	[      asciitilde,           caron      ]};
++    include "fi(basic)"	// for consistent naming
+ };
++ 
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/gb /usr/X11R6/lib/X11/xkb/symbols/gb
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/gb	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/gb	2003-03-20 22:01:42.000000000 -0500
+@@ -3,7 +3,7 @@
+ 
+ 
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/gb,v 3.5 2002/12/13 04:18:03 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/gb,v 3.4 2001/01/17 23:45:58 dawes Exp $
+ 
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -22,8 +22,8 @@
+ 			[	      bar,	 brokenbar	]	};
+     key <AE02> {	[               2,        quotedbl     	]	};
+     key <AE03> {	[               3,        sterling     	]	};
+-    key <AE04> {	[               4,	    dollar  	],	
+-			[	  EuroSign	]	};
++    key <AE04> {	[               4,          dollar	],
++    			[        EuroSign,        NoSymbol      ]	};
+     key <AC11> {	[      apostrophe,              at 	]	};
+     key <BKSL> {	[      numbersign,      asciitilde	]	};
+ 
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/group /usr/X11R6/lib/X11/xkb/symbols/group
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/group	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/group	2003-03-20 22:01:42.000000000 -0500
+@@ -2,7 +2,7 @@
+ // using the group(switch) map, the right alt key temporarily chooses 
+ // the second keyboard group (until it is released).
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/group,v 3.8 2003/01/20 03:48:39 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/group,v 3.6 2001/08/17 13:27:58 dawes Exp $
+ partial modifier_keys 
+ xkb_symbols "switch" {
+     key <RALT>	{ 	
+@@ -11,18 +11,6 @@
+     };
+ };
+ 
+-// using the group(lswitch) map, the left alt key temporarily chooses
+-// the second keyboard group (until it is released).
+-//
+-partial modifier_keys 
+-xkb_symbols "lswitch" {
+-    key <LALT>	{ 	
+-	symbols[Group1]= [	Mode_switch, Multi_key 	],
+-	virtualMods= AltGr
+-    };
+-};
+-
+-
+ // using the group(win_switch) map, both Windows'logo keys temporarily
+ // choose the second keyboard group (until release).  If you use this
+ // map, you would declare you keyboard as pc101 or pc102 instead of
+@@ -194,83 +182,3 @@
+     symbols[Group1] = [ ISO_Next_Group ]
+     };
+ };
+-
+-// Both Ctrls pressed together toggle group
+-partial modifier_keys
+-xkb_symbols "ctrls_toggle" {
+-  virtual_modifiers AltGr;
+-    key <LCTL> {
+-	type="PC_BREAK",
+-	symbols[Group1]= [ NoSymbol,	ISO_Next_Group ]
+-    };
+-    key <RCTL> {
+-	type="PC_BREAK",
+-	symbols[Group1]= [ NoSymbol,	ISO_Next_Group ]
+-    };
+-};
+-
+-// Both Alts pressed together toggle group
+-partial modifier_keys
+-xkb_symbols "alts_toggle" {
+-  virtual_modifiers AltGr;
+-    key <LALT> {
+-	type="PC_SYSRQ",
+-	symbols[Group1]= [ NoSymbol,	ISO_Prev_Group ],
+-	virtualMods= Alt
+-    };
+-    key <RALT> {
+-	type="PC_SYSRQ",
+-	symbols[Group1]= [ NoSymbol,	ISO_Next_Group ],
+-	virtualMods= Alt
+-    };
+-};
+-
+-// Left Shift key toggles group
+-partial modifier_keys
+-xkb_symbols "lshift_toggle" {
+-  virtual_modifiers AltGr;
+-    key <LFSH>	{	
+-	symbols[Group1]= [	ISO_Next_Group	],
+-	virtualMods= AltGr
+-    };
+-};
+-
+-// Right Shift key toggles group
+-partial modifier_keys
+-xkb_symbols "rshift_toggle" {
+-  virtual_modifiers AltGr;
+-    key <RTSH>	{	
+-	symbols[Group1]= [	ISO_Next_Group	],
+-	virtualMods= AltGr
+-    };
+-};
+-
+-// Left Alt key toggles group
+-partial modifier_keys
+-xkb_symbols "lalt_toggle" {
+-  virtual_modifiers AltGr;
+-    key <LALT>	{	
+-	symbols[Group1]= [	ISO_Next_Group	],
+-	virtualMods= AltGr
+-    };
+-};
+-
+-// Left Ctrl key toggles group
+-partial modifier_keys
+-xkb_symbols "lctrl_toggle" {
+-  virtual_modifiers AltGr;
+-    key <LCTL>	{	
+-	symbols[Group1]= [	ISO_Next_Group	],
+-	virtualMods= AltGr
+-    };
+-};
+-
+-// Right Ctrl key toggles group
+-partial modifier_keys
+-xkb_symbols "rctrl_toggle" {
+-  virtual_modifiers AltGr;
+-    key <RCTL>	{	
+-	symbols[Group1]= [	ISO_Next_Group	],
+-	virtualMods= AltGr
+-    };
+-};
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/hu /usr/X11R6/lib/X11/xkb/symbols/hu
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/hu	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/hu	2003-03-20 22:01:42.000000000 -0500
+@@ -1,6 +1,6 @@
+ // Hungarian keyboard symbols for XKB and PC keyboard
+ //
+-// (C) 2002 Peter Soos <sp@osb.hu>
++// (C) 2001 Peter Soos <sp@osb.hu>
+ //
+ // Permission is granted to anyone to use, distribute and modify
+ // this file in any way, provided that the above copyright notice
+@@ -13,7 +13,7 @@
+ // layout and some widely used Hungarian keyboard layouts.
+ // Tested on Linux with XFree86 3.3.6
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/hu,v 1.7 2002/12/13 04:18:03 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/hu,v 1.5 2001/04/26 16:23:13 dawes Exp $
+ 
+ 
+ // Default layout
+@@ -260,8 +260,6 @@
+ hidden partial alphanumeric_keys
+ xkb_symbols "def_uni" {
+ 
+-    key <AD07> {        [                u, U                ],
+-                        [         EuroSign                   ]       };
+     key <AC02> {        [                s, S                ],
+                         [          dstroke                   ]       };
+     key <AC03> {        [                d, D                ],
+@@ -307,6 +305,8 @@
+ xkb_symbols "def_102" {
+     key <TLDE> {        [                0, section          ],
+                         [          notsign                   ]       };
++    key <AB07> {        [                m, M                ]       };
++    key <AB09> {        [           period, colon            ]       };
+ };
+ 
+ // def_101:
+@@ -316,6 +316,10 @@
+ xkb_symbols "def_101" {
+     key <TLDE> {        [           iacute, Iacute           ],
+                         [                0, section          ]       };
++    key <AB07> {        [                m, M                ],
++                        [             less                   ]       };
++    key <AB09> {        [           period, colon            ],
++                        [          greater                   ]       };
+ };
+ 
+ // def_qwertz:
+@@ -388,6 +392,8 @@
+                         [        backslash                   ]       };
+     key <AD02> {        [                w, W                ],
+                         [              bar                   ]       };
++    key <AD07> {        [                u, U                ],
++                        [         EuroSign                   ]       };
+     key <AD08> {        [                i, I                ],
+                         [           Iacute                   ]       };
+     key <AD12> {        [           uacute, Uacute           ],
+@@ -416,12 +422,9 @@
+                         [        braceleft                   ]       };
+     key <AB06> {        [                n, N                ],
+                         [       braceright                   ]       };
+-    key <AB07> {        [                m, M                ],
+-                        [             less                   ]       };
+     key <AB08> {        [            comma, question         ],
+                         [        semicolon                   ]       };
+-    key <AB09> {        [           period, colon            ],
+-                        [          greater                   ]       };
++    key <AB09> {        [           period, colon            ]       };
+     key <AB10> {        [            minus, underscore       ],
+                         [         asterisk                   ]       };
+     key <RALT> {        [      Mode_switch, Multi_key        ]       };
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/hu_US /usr/X11R6/lib/X11/xkb/symbols/hu_US
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/hu_US	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/hu_US	2003-03-20 22:01:42.000000000 -0500
+@@ -44,6 +44,8 @@
+     key <AD02> {        [         w,    W               ],
+                         [       bar                     ]       };
+     key <AD06> {        [         z,    Z               ]       };
++    key <AD07> {        [         u,    U               ],
++                        [  EuroSign                     ]       };
+     key <AD08> {        [         i,    I               ],
+                         [    Iacute                     ]       };
+ //    key <AD11> {      [ odoubleacute, Odoubleacute    ],
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/inet /usr/X11R6/lib/X11/xkb/symbols/inet
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/inet	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/inet	2003-03-20 22:01:42.000000000 -0500
+@@ -1,264 +1,270 @@
+- // $XFree86: xc/programs/xkbcomp/symbols/inet,v 1.28 2003/02/26 19:08:43 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/inet,v 1.16 2001/12/28 16:03:30 dawes Exp $
+ 
+-// EAK (Easy Access, Internet, Multimedia, PDA) keyboards
+-// Copyright (C) 2002 Stanislav Brabec <sbrabec@suse.cz>
+-//
+-// Based on LinEAK project
+-// LinEAK - Linux support for Easy Access and Internet Keyboards      
+-// Copyright (C) 2001, 2002 Mark Smulders <Mark@PIRnet.nl>
+-
+-// Usage in XF86Config:
+-// Option "XkbLayout"	"my_kb_layout"
+-// Option "XkbVariant"	"my_kb_variant"
+-// Option "XkbModel"	"my_eak_type"
+-// Option "XkbRules"	"xfree86"
+-// Simple command line usage:
+-// setxkbmap 'my_kb_layout(my_kb_variant)+inet(my_eak_type)'
++partial alphanumeric_keys 
++xkb_symbols "hp" {
+ 
++    // Describes the extra keys on an HP "Internet" keyboard.
+ 
+-// Acer
++    name[Group1]= "HP";
++    key <I12>	{	[ XF86Search		]	};
++    key <I26>	{	[ Help			]	};
++    key <I5F>	{	[ XF86Standby		]	};
++    key <I2E>	{	[ XF86AudioLowerVolume	]	};
++    key <I30>	{	[ XF86AudioRaiseVolume	]	};
++    key <I20>	{	[ XF86AudioMute		]	};
++};
+ 
+-partial alphanumeric_keys
+-xkb_symbols "airkey" {
+-    name[Group1]= "Acer AirKey V";
++partial alphanumeric_keys 
++xkb_symbols "compaq" {
+ 
+-    key <I18>	{	[ XF86AudioPrev		]	};
+-    key <I15>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I31>	{	[ XF86AudioStop, XF86Eject ]	};
+-    key <I13>	{	[ XF86AudioNext		]	};
+-    key <I2D>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I26>	{	[ XF86AudioLowerVolume	]	};
+-    key <I19>	{	[ XF86AudioMute		]	};
+-    key <I24>	{	[ XF86WWW		]	};
+-    key <I16>	{	[ XF86Mail		]	};
+-    key <I2F>	{	[ XF86Terminal		]	};
+-    key <I63>	{	[ XF86Standby		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-};
++    // Describes the extra keys on a Compaq "Internet" keyboard.
+ 
++    name[Group1]= "Compaq";
++    key <I1E>	{	[ XF86Mail		]	};
++    key <I23>	{	[ Help			]	};
++    key <I21>	{	[ XF86Search		]	};
++    key <I25>	{	[ XF86VendorHome	]	};
++    key <I26>	{	[ XF86HomePage		]	};
++    key <I12>	{	[ XF86LightBulb		]	};
++    key <I32>	{	[ XF86Shop		]	};
++};
+ 
+-// ACPI Standard
++partial alphanumeric_keys 
++xkb_symbols "itouch" {
+ 
+-partial alphanumeric_keys
+-xkb_symbols "acpi" {
+-    name[Group1]= "ACPI Standard";
++    // Describes the extra keys on a Logitech iTouch keyboard.
+ 
+-    key <I5E>	{	[ XF86PowerOff		]	};
++    name[Group1]= "iTouch";
+     key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
++    key <I1F>	{	[ XF86AudioMute		]	};
++    key <I2B>	{	[ XF86AudioLowerVolume	]	};
++    key <I2D>	{	[ XF86AudioRaiseVolume	]	};
++    key <I22>	{	[ XF86AudioPlay		]	};
++    key <I24>	{	[ XF86AudioStop		]	};
++    key <I10>	{	[ XF86AudioPrev		]	};
++    key <I19>	{	[ XF86AudioNext		]	};
++    key <I32>	{	[ XF86HomePage		]	};
++    key <I6C>	{	[ XF86Mail		]	};
++    key <I65>	{	[ XF86Search		]	};
++    key <I66>	{	[ XF86Start		]	};
+ };
+ 
++partial alphanumeric_keys 
++xkb_symbols "logiinetnav" {
+ 
+-// Advance
++    // Describes the extra keys on a newer Logitech iTouch keyboard.
+ 
+-partial alphanumeric_keys
+-xkb_symbols "scorpius" {
+-    name[Group1]= "Advance Scorpius KI";
++    name[Group1]= "LogiInternetNavigator";
+ 
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
++    // Media keys
++    key <I20>	{	[ XF86AudioMute		]	};
+     key <I6D>	{	[ XF86AudioMedia	]	};
+-
+     key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+     key <I30>	{	[ XF86AudioRaiseVolume	]	};
++    key <I22>	{	[ XF86AudioPlay		]	};
++    key <I24>	{	[ XF86AudioStop		]	};
++    key <I10>	{	[ XF86AudioPrev		]	};
++    key <I19>	{	[ XF86AudioNext		]	};
+ 
+-    key <I63>	{	[ XF86WakeUp		]	};
++    // Left side
+     key <I5F>	{	[ XF86Standby		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
++    key <I13>	{	[ XF86Finance		]	};
++    key <I14>	{	[ XF86Favorites		]	};
++    key <I15>	{	[ XF86Community		]	};
++    key <I66>	{	[ XF86Start		]	};
+ 
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I6B>	{	[ XF86MyComputer	]	};
++    // Right side
++    key <I12>	{	[ XF86VendorHome	]	};
+     key <I6C>	{	[ XF86Mail		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+     key <I32>	{	[ XF86HomePage		]	};
++    key <I11>	{	[ XF86Shop		]	};
++    key <I65>	{	[ XF86Search		]	};
+ 
++    // Wheel buttons
+     key <I6A>	{	[ XF86Back		]	};
+     key <I69>	{	[ XF86Forward		]	};
+-    key <I68>	{	[ XF86Stop		]	};
+-    key <I67>	{	[ XF86Reload		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-};
+ 
+-
+-// Brother
++};
+ 
+ partial alphanumeric_keys
+-xkb_symbols "brother" {
+-    name[Group1]= "Brother Internet Keyboard";
+-
+-    key <I21>	{	[ XF86WWW		]	};
+-    key <I1E>	{	[ XF86AudioMute		]	};
+-    key <I68>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I18>	{	[ XF86ScrollDown	]	};
+-    key <I10>	{	[ XF86ScrollUp		]	};
+-    key <I17>	{	[ XF86AudioPrev		]	};
+-    key <I12>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I2E>	{	[ XF86AudioNext		]	};
+-    key <I23>	{	[ XF86AudioStop		]	};
+-    key <I19>	{	[ XF86ZoomOut		]	};
+-    key <I32>	{	[ XF86ZoomIn		]	};
+-    key <I24>	{	[ XF86Calculator	]	};
+-    key <I25>	{	[ XF86Xfer		]	};
+-    key <I22>	{	[ Menu			]	};
+-    key <I26>	{	[ XF86Mail		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
++xkb_symbols "logicordless" {
++ 
++    // Describes the extra keys on a Logitech Desktop Pro keyboard.
++ 
++    name[Group1]= "CordLess";
+     key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
++    key <I20>	{	[ XF86AudioMute		]	};
++    key <I2E>	{	[ XF86AudioLowerVolume	]	};
++    key <I30>	{	[ XF86AudioRaiseVolume	]	};
++    key <I22>	{	[ XF86AudioPlay		]	};
++    key <I24>	{	[ XF86AudioStop		]	};
++    key <I10>	{	[ XF86AudioPrev		]	};
++    key <I19>	{	[ XF86AudioNext		]	};
++    key <I32>	{	[ XF86HomePage		]	};
++    key <I6C>	{	[ XF86Mail		]	};
++    key <I65>	{	[ XF86Search		]	};
++    key <I66>	{	[ XF86Start		]	};
+ };
+ 
+-
+-// BTC
+-
+ partial alphanumeric_keys
+-xkb_symbols "btc5113rf" {
+-    name[Group1]= "BTC 5113RF Multimedia";
+-
+-    key <I30>	{	[ XF86WWW		]	};
+-    key <I26>	{	[ XF86Back		]	};
+-    key <I20>	{	[ XF86Favorites		]	};
+-    key <I32>	{	[ XF86Search		]	};
+-    key <I25>	{	[ XF86AudioLowerVolume	]	};
+-    key <I1E>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I12>	{	[ XF86AudioMute		]	};
+-    key <I22>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I10>	{	[ XF86AudioStop		]	};
+-    key <I24>	{	[ XF86AudioNext		]	};
+-    key <I21>	{	[ XF86Eject		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
++xkb_symbols "logiinternet" {
++ 
++    // Describes the extra keys on a Logitech Internet Keyboard
++ 
++    name[Group1]= "LogiInternet";
++    key <I25>	{	[ XF86VendorHome	]	};
++    key <I10>	{	[ XF86Back		]	};
++    key <I22>	{	[ XF86Forward		]	};
++    key <I24>	{	[ XF86Stop		]	};
++    key <I19>	{	[ XF86Refresh		]	};
++    key <I1E>	{	[ XF86Search		]	};
++    key <I18>	{	[ XF86Favorites		]	};
++    key <I30>	{	[ XF86AudioRaiseVolume	]	};
++    key <I2E>	{	[ XF86AudioLowerVolume	]	};
++    key <I23>	{	[ XF86HomePage		]	};
++    key <I7A>	{	[ XF86WWW		]	};
++    key <I32>	{	[ XF86History		]	};
++    key <I21>	{	[ XF86OpenURL		]	};
++    key <I17>	{	[ Print			]	};
++    key <I12>	{	[ Find			]	};
++    key <I26>	{	[ XF86AddFavorite	]	};
++    key <I20>	{	[ XF86HotLinks		]	};
+ };
+ 
+ partial alphanumeric_keys
+-xkb_symbols "btc5126t" {
+-    name[Group1]= "BTC 5126T";
+-
+-    key <I30>	{	[ XF86WWW		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I2B>	{	[ XF86Mail		]	};
++xkb_symbols "geniuscomfy" {
++ 
++    // Describes the extra keys on a Genius Comfy KB-16M
++ 
++    name[Group1]= "GeniusComfy16M";
++    key <I23>	{	[ XF86AudioPrev		]	};
++    key <I22>   {	[ XF86AudioPlay, XF86AudioPause	]	};
++    key <I24>   {	[ XF86AudioStop		]	};
++    key <I21>   {	[ XF86AudioNext		]	};
++    key <I30>   {	[ XF86Eject		]	};
++    key <I19>   {	[ XF86AudioLowerVolume	]	};
++    key <I12>   {	[ XF86AudioRaiseVolume	]	};
++    key <I20>   {	[ XF86AudioMute		]	};
++    key <I26>   {	[ XF86ScreenSaver	]	};
++    key <I17>   {	[ XF86Calculator	]	};
++    key <I2E>   {	[ XF86Mail		]	};
++    key <I25>   {	[ XF86Back		]	};
++    key <I32>   {	[ XF86WWW		]	};
++    key <I1E>   {	[ XF86Forward		]	};
++    key <I5F>   {	[ XF86Sleep		]	};
++    key <I63>   {	[ XF86WakeUp		]	};
+ };
+ 
+-partial alphanumeric_keys
+-xkb_symbols "btc9000" {
+-    name[Group1]= "BTC 9000";
++partial alphanumeric_keys 
++xkb_symbols "microsoftpro" {
+ 
+-    key <I19>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I22>	{	[ XF86AudioPrev		]	};
+-    key <I24>	{	[ XF86AudioNext		]	};
+-    key <I10>	{	[ XF86AudioStop		]	};
+-    key <I21>	{	[ XF86AudioMedia	]	};
++    // Describes the extra keys on a Microsoft Natural Keyboard Pro
+ 
+-    key <I25>	{	[ XF86AudioLowerVolume	]	};
+-    key <I1E>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I12>	{	[ XF86AudioMute		]	};
++    name[Group1]= "MicrosoftPro";
++    key <I6A>	{	[ XF86Back		]	};
++    key <I69>	{	[ XF86Forward		]	};
++    key <I68>	{	[ XF86Stop		]	};
++    key <I67>	{	[ XF86Refresh		]	};
++    key <I65>	{	[ XF86Search		]	};
++    key <I66>	{	[ XF86Favorites		]	};
++    key <I32>	{	[ XF86HomePage		]	};
++    key <I6C>	{	[ XF86Mail		]	};
++    key <I20>	{	[ XF86AudioMute		]	};
++    key <I2E>	{	[ XF86AudioLowerVolume	]	};
++    key <I30>	{	[ XF86AudioRaiseVolume	]	};
++    key <I22>	{	[ XF86AudioPlay, XF86AudioPause		]	};
++    key <I24>	{	[ XF86AudioStop		]	};
++    key <I10>	{	[ XF86AudioPrev		]	};
++    key <I19>	{	[ XF86AudioNext		]	};
++    key <I6D>	{	[ XF86AudioMedia	]	};
++    key <I6B>	{	[ XF86MyComputer	]	};
++    key <I21>	{	[ XF86Calculator	]	};
++    key <I5F>	{	[ XF86Standby		]	};
++};
+ 
+-    key <I30>	{	[ XF86HomePage		]	};
+-    key <I26>	{	[ XF86Reload		]	};
++xkb_symbols "btc9000" {
++    // from <supercava@libero.it>
++    // Describes the extra keys on a BTC model 9000 keyboard
++    // found in many computers sold by Computer Discount 
++    name[Group1]= "btc9000";
++    key <I26>	{	[ XF86Refresh		]	};
+     key <I32>	{	[ XF86Search		]	};
+     key <I20>	{	[ XF86Favorites		]	};
+-
++    key <I30>	{	[ XF86HomePage		]	};
+     key <I2E>	{	[ XF86Mail		]	};
+-    key <I63>   {	[ XF86WakeUp		]	};
++    key <I12>	{	[ XF86AudioMute		]	};
++    key <I25>	{	[ XF86AudioLowerVolume	]	};
++    key <I1E>	{	[ XF86AudioRaiseVolume	]	};
++    key <I19>	{	[ XF86AudioPlay, XF86AudioPause		]	};
++    key <I10>	{	[ XF86AudioStop		]	};
++    key <I22>	{	[ XF86AudioPrev		]	};
++    key <I24>	{	[ XF86AudioNext		]	};
++    key <I21>	{	[ XF86AudioMedia	]	};
+     key <I5F>	{	[ XF86Standby		]	};
+     key <I5E>   {	[ XF86PowerOff		]	};
++    key <I63>   {	[ XF86WakeUp		]	};
+ };
+ 
+-partial alphanumeric_keys
+-xkb_symbols "btc9000a" {
+-    name[Group1]= "BTC 9000A";
+-
+-    key <I19>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I22>	{	[ XF86AudioPrev		]	};
+-    key <I24>	{	[ XF86AudioNext		]	};
+-    key <I10>	{	[ XF86AudioStop		]	};
+-    key <I21>	{	[ XF86Eject		]	};
+ 
+-    key <I1E>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I25>	{	[ XF86AudioLowerVolume	]	};
+-    key <I12>	{	[ XF86AudioMute		]	};
++partial alphanumeric_keys 
++xkb_symbols "rapidaccess" {
+ 
+-    key <I30>	{	[ XF86WWW		]	};
+-    key <I26>	{	[ XF86HomePage		]	};
+-    key <I32>	{	[ XF86Search		]	};
+-    key <I20>	{	[ XF86Favorites		]	};
++    // Describes the extra keys on an IBM Rapid Access keyboard
+ 
+-    key <I2E>	{	[ Help			]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
++    name[Group1]= "RapidAccess";
++    key <I22>	{	[ XF86AudioPause	]	};
++    key <I12>	{	[ XF86AudioMute		]	};
++    key <I1E>	{	[ XF86AudioLowerVolume	]	};
++    key <I20>	{	[ XF86AudioRaiseVolume	]	};
++    key <I19>	{	[ XF86AudioPlay		]	};
++    key <I24>	{	[ XF86AudioStop		]	};
++    key <I23>	{	[ XF86AudioPrev		]	};
++    key <I21>	{	[ XF86AudioNext		]	};
++    key <I25>	{	[ XF86Standby		]	};
++    key <I32>	{	[ XF86Launch1		]	};
++    key <I17>	{	[ XF86Launch2		]	};
++    key <I30>	{	[ XF86Launch3		]	};
++    key <I2E>	{	[ XF86Launch4		]	};
++    key <I26>	{	[ Help			]	};
+ };
+ 
+ 
+-// Cherry Blue Line
+-
+-partial alphanumeric_keys
+-xkb_symbols "cherryblue" {
+-    name[Group1]= "Cherry Blue Line CyBo@rd";
+-
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I68>	{	[ XF86Stop		]	};
+-    key <FK16>	{	[ XF86Reload		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86MyComputer	]	};
+-    key <I02>	{	[ XF86HomePage		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <PRSC>	{	[ XF86Terminal		]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I1E>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I26>	{	[ XF86AudioMute		]	};
+-    key <I25>	{	[ XF86AudioLowerVolume	]	};
+-    key <XFER>	{	[ XF86Go		]	};
+-    key <I24>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioNext		]	};
+-    key <I1F>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I17>	{	[ XF86AudioStop		]	};
+-    key <I63>	{	[ XF86Standby		]	};
+-};
++partial alphanumeric_keys 
++xkb_symbols "rapidaccess2" {
+ 
+-partial alphanumeric_keys
+-xkb_symbols "cherrybluea" {
+-    name[Group1]= "Cherry Blue Line CyBo@rd (alternate option)";
++    // From <patrick@dcruze.org>
++    // Describes the extra keys on an IBM Rapid Access II keyboard
+ 
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I68>	{	[ XF86Stop		]	};
+-    key <I67>	{	[ XF86Reload		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86MyComputer	]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I6B>	{	[ XF86Terminal		]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I6D>	{	[ XF86Go		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
++    name[Group1]= "RapidAccess2";
++    key <I25>	{	[ XF86HomePage		]	};
++    key <I26>	{	[ XF86Shop		]	};
++    key <I32>	{	[ XF86VendorHome	]	};
++    key <I17>	{	[ XF86Favorites		]	};
++    key <I30>	{	[ XF86MyComputer	]	};
++    key <I2E>	{	[ XF86Search		]	};
+     key <I5F>	{	[ XF86Standby		]	};
++    key <I1E>	{	[ XF86AudioMute		]	};
++    key <I21>	{	[ XF86AudioLowerVolume	]	};
++    key <I23>	{	[ XF86AudioRaiseVolume	]	};
++    key <I22>	{	[ XF86AudioPlay, XF86AudioPause	]	};
++    key <I20>	{	[ XF86AudioStop		]	};
++    key <I24>	{	[ XF86AudioPrev		]	};
++    key <I12>	{	[ XF86AudioNext		]	};
+ };
+ 
+ 
+-// Chicony
+-
+ partial alphanumeric_keys 
+ xkb_symbols "chicony" {
+-    name[Group1]= "Chicony Internet Keyboard";
+ 
++    // Describes the extra keys on a Chicony internet keyboard
++
++    name[Group1]= "Chicony";
+     key <I19>	{	[ XF86AudioLowerVolume	]	};
+     key <I12>	{	[ XF86AudioMute		]	};
+     key <I23>	{	[ XF86AudioRaiseVolume	]	};
+     key <I22>	{	[ XF86AudioPrev		]	};
+     key <I24>	{	[ XF86AudioStop		]	};
+-    key <I21>	{	[ XF86AudioPlay, XF86AudioPause ] };
++    key <I21>	{	[ XF86AudioPlay, XF86AudioPause	]	};
+     key <I20>	{	[ XF86AudioNext		]	};
+     key <I5E>	{	[ XF86PowerOff		]	};
+     key <I32>	{	[ XF86HomePage		]	};
+@@ -272,155 +278,14 @@
+     key <I2E>	{	[ XF86LaunchC		]	};
+ };
+ 
++
+ partial alphanumeric_keys
+-xkb_symbols "chicony9885" {
+-    name[Group1]= "Chicony KB-9885";
++xkb_symbols "dell" {
+ 
+-    key <I19>	{	[ XF86AudioLowerVolume	]	};
+-    key <I12>	{	[ XF86AudioMute		]	};
+-    key <I23>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I22>	{	[ XF86AudioPrev		]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I21>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I20>	{	[ XF86AudioNext		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I17>	{	[ XF86Mail		]	};
+-    key <I30>	{	[ XF86LaunchA		]	};
+-    key <I26>	{	[ XF86LaunchB		]	};
+-    key <I2E>	{	[ XF86LaunchC		]	};
+-    key <I25>	{	[ XF86Back		]	};
+-    key <I1E>	{	[ XF86Forward		]	};
+-};
+-
+-
+-// Compaq
+-
+-partial alphanumeric_keys
+-xkb_symbols "compaqeak8" {
+-    name[Group1]= "Compaq Easy Access Keyboard";
+-
+-    key <I23>	{	[ XF86WWW		]	};
+-    key <I1F>	{	[ XF86HomePage		]	};
+-    key <I1A>	{	[ XF86Search		]	};
+-    key <I1E>	{	[ XF86Mail		]	};
+-    key <I13>	{	[ XF86Community		]	};
+-    key <I14>	{	[ XF86Market		]	};
+-    key <I15>	{	[ XF86Meeting		]	};
+-    key <I1B>	{	[ XF86News		]	};
+-};
+-
+-partial alphanumeric_keys 
+-xkb_symbols "compaqik7" {
+-    name[Group1]= "Compaq Internet Keyboard (7 keys)";
+-
+-    key <I1E>	{	[ XF86Mail		]	};
+-    key <I23>	{	[ Help			]	};
+-    key <I21>	{	[ XF86Search		]	};
+-    key <I25>	{	[ XF86VendorHome	]	};
+-    key <I26>	{	[ XF86HomePage		]	};
+-    key <I12>	{	[ XF86LightBulb		]	};
+-    key <I32>	{	[ XF86Shop		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "compaqik13" {
+-    name[Group1]= "Compaq Internet Keyboard (13 keys)";
+-
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I1F>	{	[ XF86Go		]	};
+-    key <I23>	{	[ XF86WWW		]	};
+-    key <I21>	{	[ XF86Search		]	};
+-    key <I1E>	{	[ XF86Mail		]	};
+-    key <I32>	{	[ XF86Shop		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "compaqik18" {
+-    name[Group1]= "Compaq Internet Keyboard (18 keys)";
+-
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I18>	{	[ XF86Eject		]	};
+-
+-    key <I1E>	{	[ XF86Mail		]	};
+-    key <I26>	{	[ XF86Community		]	};
+-    key <I25>	{	[ XF86VendorHome	]	};
+-    key <I23>	{	[ XF86WWW		]	};
+-    key <I21>	{	[ XF86Search		]	};
+-    key <I12>	{	[ XF86LightBulb		]	};
+-    key <I32>	{	[ XF86Shop		]	};
+-
+-    key <I68>	{	[ Print			]	};
+-    key <I1F>	{	[ XF86Go		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-};
+-
+-
+-partial alphanumeric_keys
+-xkb_symbols "armada" {
+-    name[Group1]= "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard";
+-
+-    key <I23>	{	[ XF86WWW		]	};
+-    key <I1F>	{	[ XF86HomePage		]	};
+-    key <I1A>	{	[ XF86Search		]	};
+-    key <I1E>	{	[ XF86Mail		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "presario" {
+-    name[Group1]= "Laptop/notebook Compaq (eg. Presario) Internet Keyboard";
+-
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I1F>	{	[ XF86Launch1		]	};
+-    key <I18>	{	[ XF86Launch2		]	};
+-
+-    key <I75>	{	[ XF86AudioMedia	]	};
+-    key <I23>	{	[ XF86WWW		]	};
+-    key <I14>	{	[ XF86Q			]	};
+-    key <I32>	{	[ XF86Shop		]	};
+-    key <I1E>	{	[ XF86Mail		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "ipaq" {
+-    name[Group1]= "Compaq iPaq Keyboard";
+-
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I69>	{	[ XF86BackForward	]	};
+-    key <I6A>	{	[ XF86Q			]	};
+-    key <I02>	{	[ XF86Standby		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Travel		]	};
+-    key <FK16>	{	[ XF86Shop		]	};
+-};
+-
+-
+-// Dell
++    // From <liblit@acm.org>
++    // Describes the extra keys on a Dell Internet keyboard.
+ 
+-partial alphanumeric_keys
+-xkb_symbols "dell" {
+     name[Group1]= "Dell";
+-
+     key <I12>	{	[ XF86Mail		]	};
+     key <I26>	{	[ XF86HomePage		]	};
+     key <I1E>	{	[ XF86Search		]	};
+@@ -428,1342 +293,3 @@
+ };
+ 
+ 
+-partial alphanumeric_keys
+-xkb_symbols "inspiron" {
+-    name[Group1]= "Laptop/notebook Dell Inspiron 8xxx";
+-
+-    key <XFER>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <NFER>	{	[ XF86AudioPrev		]	};
+-    key <I04>	{	[ XF86AudioNext		]	};
+-    key <I02>	{	[ XF86AudioStop		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-};
+-
+-
+-// Dexxa
+-
+-partial alphanumeric_keys
+-xkb_symbols "dexxa" {
+-    name[Group1]= "Dexxa Wireless Desktop Keyboard";
+-
+-    key <I67>	{	[ XF86Reload		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-};
+-
+-
+-// Diamond
+-
+-partial alphanumeric_keys
+-xkb_symbols "diamond" {
+-    name[Group1]= "Diamond 9801 / 9802 series";
+-
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I68>	{	[ XF86Stop		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I67>	{	[ XF86Reload		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I6D>	{	[ XF86Go		]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I6B>	{	[ XF86MyComputer	]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
+-};
+-
+-// Ennyah
+-
+-partial alphanumeric_keys
+-xkb_symbols "ennyah_dkb1008" {
+-    name[Group1]= "Ennyah DKB-1008";
+-
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I67>	{	[ XF86Refresh		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I68>	{	[ XF86Stop		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>   {	[ XF86AudioMute		]	};
+-    key <I24>   {	[ XF86AudioStop		]	};
+-    key <I10>   {	[ XF86AudioPrev		]	};
+-    key <I22>   {	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I19>   {	[ XF86AudioNext		]	};
+-    key <XFER>  {	[ XF86AudioMedia	]	};
+-    key <I5E>   {	[ XF86PowerOff		]	};
+-    key <I5F>   {	[ XF86Standby		]	};
+-    key <I63>   {	[ XF86WakeUp		]	};
+-};
+-
+-
+-// Genius
+-
+-partial alphanumeric_keys
+-xkb_symbols "genius" {
+-    name[Group1]= "Genius Comfy KB-16M / Genius MM Keyboard KWD-910";
+-
+-    key <I23>	{	[ XF86AudioPrev		]	};
+-    key <I22>   {	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>   {	[ XF86AudioStop		]	};
+-    key <I21>   {	[ XF86AudioNext		]	};
+-    key <I30>   {	[ XF86Eject		]	};
+-    key <I19>   {	[ XF86AudioLowerVolume	]	};
+-    key <I12>   {	[ XF86AudioRaiseVolume	]	};
+-    key <I20>   {	[ XF86AudioMute		]	};
+-    key <I26>   {	[ XF86ScreenSaver	]	};
+-    key <I17>   {	[ XF86Calculator	]	};
+-    key <I2E>   {	[ XF86Mail		]	};
+-    key <I25>   {	[ XF86Back		]	};
+-    key <I32>   {	[ XF86WWW		]	};
+-    key <I1E>   {	[ XF86Forward		]	};
+-    key <I5F>   {	[ XF86Standby		]	};
+-    key <I63>   {	[ XF86WakeUp		]	};
+-};
+-
+-
+-// Hewlett-Packard
+-
+-partial alphanumeric_keys 
+-xkb_symbols "hpi6" {
+-    name[Group1]= "Hewlett-Packard Internet Keyboard";
+-
+-    key <I12>	{	[ XF86Search		]	};
+-    key <I26>	{	[ Help			]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "hp2501" {
+-    name[Group1]= "Hewlett-Packard SK-2501 Multimedia Keyboard";
+-
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I17>	{	[ XF86Search		]	};
+-    key <I12>	{	[ XF86Tools		]	};
+-    key <I1E>	{	[ XF86Mail		]	};
+-    key <I23>	{	[ XF86Launch2		]	};
+-    key <I22>	{	[ XF86Launch3		]	};
+-    key <I24>	{	[ XF86Launch4		]	};
+-    key <I21>	{	[ XF86Launch5		]	};
+-    key <I25>	{	[ XF86Standby		]	};
+-    key <I26>	{	[ Help			]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "hp2505" {
+-    name[Group1]= "Hewlett-Packard SK-2505 Internet Keyboard";
+-
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I18>	{	[ XF86Eject		]	};
+-    key <I1E>	{	[ XF86Mail		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I25>	{	[ XF86Standby		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "hp5181" {
+-    name[Group1]= "Hewlett-Packard 5181 Internet Keyboard";
+-
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I12>	{	[ XF86Search		]	};
+-    key <I14>	{	[ XF86VendorHome	]	};
+-    key <I15>	{	[ XF86Community		]	};
+-    key <I16>	{	[ XF86AudioMedia	]	};
+-    key <I18>	{	[ XF86Eject		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I1E>	{	[ XF86Shop		]	};
+-    key <I1F>	{	[ XF86Launch1		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I22>	{	[ XF86AudioStop		]	};
+-    key <I24>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I26>	{	[ Help			]	};
+-    key <I27>	{	[ XF86Finance		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I39>	{	[ Print			]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-};
+-
+-
+-partial alphanumeric_keys
+-xkb_symbols "hpxe3gc" {
+-
+-    // Describes the OneTouch buttons on HP Omnibook XE3 GC and
+-    // HP Pavilion N52XX models.
+-    // See http://sourceforge.net/projects/omke for details on enabling
+-    // these keys
+-
+-    name[Group1]= "Hewlett-Packard Omnibook XE3 GC, GD, GE and Pavilion N5xxx";
+-    key <I73>	{	[ XF86WWW		]	};
+-    key <I74>	{	[ XF86Mail		]	};
+-    key <I72>	{	[ XF86Launch1		]	};
+-    key <I71>	{	[ Help			]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause	]	};
+-    key <I24>	{	[ XF86AudioStop, XF86Eject	]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "hpxe3gf" {
+-
+-    // Describes the OneTouch buttons on HP Omnibook XE3 GF models.
+-    // See http://sourceforge.net/projects/omke for details on enabling
+-    // these keys
+-
+-    name[Group1]= "Hewlett-Packard Omnibook XE3 GF";
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I74>	{	[ XF86Launch1		]	};
+-    key <I73>	{	[ Help			]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause	]	};
+-    key <I24>	{	[ XF86AudioStop, XF86Eject	]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "hpxt1000" {
+-
+-    // Describes the OneTouch buttons on HP Omnibook XT1000 models.
+-    // See http://sourceforge.net/projects/omke for details on enabling
+-    // these keys
+-
+-    name[Group1]= "Hewlett-Packard Omnibook XT1000";
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I74>	{	[ XF86Launch1		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I73>	{	[ XF86Launch2		]	};
+-    key <I72>	{	[ Help			]	};
+-    key <I71>	{	[ XF86Launch3		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause	]	};
+-    key <I24>	{	[ XF86AudioStop, XF86Eject	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "hpzt11xx" {
+-
+-    // Describes the OneTouch buttons on HP Pavilion ZT11xx models.
+-    // See http://sourceforge.net/projects/omke for details on enabling
+-    // these keys
+-
+-    name[Group1]= "Hewlett-Packard Pavilion ZT11xx";
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I74>	{	[ XF86Launch1		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I73>	{	[ XF86Launch2		]	};
+-    key <I72>	{	[ Help			]	};
+-    key <I71>	{	[ XF86Launch3		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause	]	};
+-    key <I24>	{	[ XF86AudioStop, XF86Eject	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "hpxe4xxx" {
+-
+-    // Describes the OneTouch buttons on HP Omnibook XE4xxx and ZE4xxx
+-    // models.
+-    // See http://sourceforge.net/projects/omke for details on enabling
+-    // these keys
+-
+-    name[Group1]= "Hewlett-Packard Omnibook XE4xxx and ZE4xxx";
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I73>	{	[ XF86Launch1		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I71>	{	[ XF86Launch2		]	};
+-    key <I70>	{	[ Help			]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "hp500fa" {
+-
+-    // Describes the OneTouch buttons on HP Omnibook 500 FA models.
+-    // See http://sourceforge.net/projects/omke for details on enabling
+-    // these keys
+-
+-    name[Group1]= "Hewlett-Packard Omnibook 500 FA";
+-    key <I74>	{	[ XF86Launch1		]	};
+-    key <I73>	{	[ Help			]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "hp5xx" {
+-
+-    // Describes the OneTouch buttons on HP Omnibook 5xx models.
+-    // See http://sourceforge.net/projects/omke for details on enabling
+-    // these keys
+-
+-    name[Group1]= "Hewlett-Packard Omnibook 5xx";
+-    key <I74>	{	[ XF86Launch1		]	};
+-    key <I73>	{	[ Help			]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause	]	};
+-    key <I24>	{	[ XF86AudioStop, XF86Eject	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-};
+-
+-
+-// Honeywell
+-
+-
+-partial alphanumeric_keys
+-xkb_symbols "honeywell_euroboard" {
+-
+-    // Scott Penrose <scottp@dd.com.au>
+-    // January 2002
+-    // http://linux.dd.com.au/quest/linux/keyboard/honeywell/
+-
+-    name[Group1]= "Honeywell Euroboard";
+-    key <I10>	{	[ XF86Game		]	};
+-    key <I12>	{	[ XF86AudioPrev		]	};
+-    key <I17>	{	[ XF86Eject		]	};
+-    key <I18>	{	[ XF86Launch2		]	};
+-    key <I19>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I1E>	{	[ XF86Launch1		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I22>	{	[ XF86AudioNext		]	};
+-    key <I23>	{	[ XF86AudioStop		]	};
+-    key <I24>	{	[ XF86Mail		]	};
+-    key <I25>	{	[ XF86ScreenSaver	]	};
+-    key <I26>	{	[ XF86Calculator	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-};
+-
+-
+-// IBM
+-
+-
+-partial alphanumeric_keys 
+-xkb_symbols "rapidaccess" {
+-    name[Group1]= "IBM Rapid Access";
+-
+-    key <I22>	{	[ XF86AudioPause	]	};
+-    key <I12>	{	[ XF86AudioMute		]	};
+-    key <I1E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I23>	{	[ XF86AudioPrev		]	};
+-    key <I21>	{	[ XF86AudioNext		]	};
+-    key <I25>	{	[ XF86Standby		]	};
+-    key <I32>	{	[ XF86Launch1		]	};
+-    key <I17>	{	[ XF86Launch2		]	};
+-    key <I30>	{	[ XF86Launch3		]	};
+-    key <I2E>	{	[ XF86Launch4		]	};
+-    key <I26>	{	[ Help			]	};
+-};
+-
+-partial alphanumeric_keys 
+-xkb_symbols "rapidaccess2" {
+-    name[Group1]= "IBM Rapid Access II";
+-
+-    key <I25>	{	[ XF86HomePage		]	};
+-    key <I26>	{	[ XF86Shop		]	};
+-    key <I32>	{	[ XF86VendorHome	]	};
+-    key <I17>	{	[ XF86Favorites		]	};
+-    key <I30>	{	[ XF86MyComputer	]	};
+-    key <I2E>	{	[ XF86Search		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I1E>	{	[ XF86AudioMute		]	};
+-    key <I21>	{	[ XF86AudioLowerVolume	]	};
+-    key <I23>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I20>	{	[ XF86AudioStop		]	};
+-    key <I24>	{	[ XF86AudioPrev		]	};
+-    key <I12>	{	[ XF86AudioNext		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "rapidaccess2a" {
+-    name[Group1]= "IBM Rapid Access II (alternate option)";
+-
+-    key <I25>	{	[ XF86WWW		]	};
+-    key <I26>	{	[ XF86Shop		]	};
+-    key <I32>	{	[ XF86VendorHome	]	};
+-    key <I17>	{	[ XF86Favorites		]	};
+-    key <I30>	{	[ XF86Option		]	};
+-    key <I2E>	{	[ Help			]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I1E>	{	[ XF86AudioMute		]	};
+-    key <I20>	{	[ XF86AudioStop		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioPrev		]	};
+-    key <I12>	{	[ XF86AudioNext		]	};
+-    key <I21>	{	[ XF86AudioLowerVolume	]	};
+-    key <I23>	{	[ XF86AudioRaiseVolume	]	};
+-    key <MENU>	{	[ Menu			]	};
+-};
+-
+-
+-// Logitech
+-
+-partial alphanumeric_keys
+-xkb_symbols "ltcd" {
+-    name[Group1]= "Logitech Cordless Desktop";
+-
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I02>	{	[ XF86WWW		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Go		]	};
+-    key <I26>	{	[ XF86AudioMute		]	};
+-    key <I25>	{	[ XF86AudioLowerVolume	]	};
+-    key <I1E>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I1F>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I17>	{	[ XF86AudioStop		]	};
+-    key <I24>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioNext		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logicdit" {
+-    name[Group1]= "Logitech Cordless Desktop iTouch";
+-
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I13>	{	[ XF86Finance		]	};
+-    key <I14>	{	[ XF86MySites		]	};
+-    key <I15>	{	[ XF86Community		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I6D>	{	[ XF86AudioMedia	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I12>	{	[ XF86VendorHome	]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I11>	{	[ XF86Shop		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logicdp" {
+-    name[Group1]= "Logitech Cordless Desktop Pro";
+-
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Go		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I21>	{	[ XF86VendorHome	]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logicdpa" {
+-    name[Group1]= "Logitech Cordless Desktop Pro (alternate option)";
+-
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I02>	{	[ XF86WWW		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Go		]	};
+-    key <I26>	{	[ XF86AudioMute		]	};
+-    key <I25>	{	[ XF86AudioLowerVolume	]	};
+-    key <I1E>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I1F>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I17>	{	[ XF86AudioStop		]	};
+-    key <I24>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioNext		]	};
+-    key <I21>	{	[ XF86VendorHome	]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logicdpa2" {
+-    name[Group1]= "Logitech Cordless Desktop Pro (alternate option2)";
+-
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Start		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logicdo" {
+-    name[Group1]= "Logitech Cordless Desktop Optical";
+-
+-    key <I69>	{	[ XF86Go		]	};
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I16>	{	[ XF86WheelButton	]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I13>	{	[ XF86Finance		]	};
+-    key <I14>	{	[ XF86MySites		]	};
+-    key <I15>	{	[ XF86Community		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I6D>	{	[ XF86AudioMedia	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I12>	{	[ XF86iTouch		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I11>	{	[ XF86Shop		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logicfn" {
+-    name[Group1]= "Logitech Cordless Freedom/Desktop Navigator";
+-
+-    key <I13>	{	[ XF86Finance		]	};
+-    key <I14>	{	[ XF86MySites		]	};
+-    key <I15>	{	[ XF86Community		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I6D>	{	[ XF86AudioMedia	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I12>	{	[ XF86iTouch		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I11>	{	[ XF86Shop		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I69>	{	[ XF86Standby		]	};
+-    key <UP>	{	[ XF86ScrollUp		]	};
+-    key <DOWN>	{	[ XF86ScrollDown	]	};
+-    key <I16>	{	[ XF86ScrollClick	]	};
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-};
+-
+-partial alphanumeric_keys 
+-xkb_symbols "logicdn" {
+-    name[Group1]= "Logitech Cordless Desktop Navigator";
+-
+-    // Media keys
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I6D>	{	[ XF86AudioMedia	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-
+-    // Left side
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I11>	{	[ XF86Messenger		]	};
+-    key <I12>	{	[ XF86WebCam		]	};
+-
+-    // Right side
+-    key <I13>	{	[ XF86VendorHome	]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I14>	{	[ XF86Shop		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-
+-    // Extended function keys
+-    key <I3B>	{	[ XF86New		]	};	// F1
+-    key <I3C>	{	[ XF86Reply		]	};	// F2
+-    key <FK13>	{	[ XF86MailForward	]	};	// F3
+-    key <FK14>	{	[ XF86Send		]	};	// F4
+-    key <FK15>	{	[ Undo			]	};	// F5
+-    key <FK16>	{	[ Redo			]	};	// F6
+-    key <FK17>	{	[ Print			]	};	// F7
+-    key <I42>	{	[ XF86Save		]	};	// F8
+-    key <I43>	{	[ XF86MyComputer	]	};	// F9
+-    key <I44>	{	[ XF86Documents		]	};	// F10
+-    key <I57>	{	[ XF86Pictures		]	};	// F11
+-    key <I58>	{	[ XF86Music		]	};	// F12
+-
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logidak" {
+-    name[Group1]= "Logitech Deluxe Access Keyboard";
+-
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logiik" {
+-    name[Group1]= "Logitech Internet Keyboard";
+-
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-
+-    key <I66>	{	[ XF86Go		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-};
+-
+-partial alphanumeric_keys 
+-xkb_symbols "itouch" {
+-    name[Group1]= "Logitech iTouch";
+-
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I1F>	{	[ XF86AudioMute		]	};
+-    key <I2B>	{	[ XF86AudioLowerVolume	]	};
+-    key <I2D>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Start		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logiitc" {
+-    name[Group1]= "Logitech iTouch Cordless Keyboard (model Y-RB6)";
+-
+-    key <I5F>	{	[ XF86PowerOff		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logiik" {
+-    name[Group1]= "Logitech Internet Keyboard";
+-
+-    key <I25>	{	[ XF86VendorHome	]	};
+-    key <I10>	{	[ XF86Back		]	};
+-    key <I22>	{	[ XF86Forward		]	};
+-    key <I24>	{	[ XF86Stop		]	};
+-    key <I19>	{	[ XF86Reload		]	};
+-    key <I1E>	{	[ XF86Search		]	};
+-    key <I18>	{	[ XF86Favorites		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I23>	{	[ XF86HomePage		]	};
+-    key <I7A>	{	[ XF86WWW		]	};
+-    key <I32>	{	[ XF86History		]	};
+-    key <I21>	{	[ XF86OpenURL		]	};
+-    key <I17>	{	[ Print			]	};
+-    key <I12>	{	[ Find			]	};
+-    key <I26>	{	[ XF86AddFavorite	]	};
+-    key <I20>	{	[ XF86HotLinks		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "logiink" {
+-    name[Group1]= "Logitech Internet Navigator Keyboard";
+-
+-    key <I69>	{	[ XF86Go		]	};
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I13>	{	[ XF86Finance		]	};
+-    key <I14>	{	[ XF86MySites		]	};
+-    key <I15>	{	[ XF86Community		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I6D>	{	[ XF86AudioMedia	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I12>	{	[ XF86VendorHome	]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I11>	{	[ XF86Market		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-};
+-
+-partial alphanumeric_keys 
+-xkb_symbols "itouchin" {
+-    name[Group1]= "Logitech iTouch keyboard Internet Navigator";
+-
+-    // Media keys
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I6D>	{	[ XF86AudioMedia	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-
+-    // Left side
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I13>	{	[ XF86Finance		]	};
+-    key <I14>	{	[ XF86Favorites		]	};
+-    key <I15>	{	[ XF86Community		]	};
+-    key <I66>	{	[ XF86Start		]	};
+-
+-    // Right side
+-    key <I12>	{	[ XF86VendorHome	]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I11>	{	[ XF86Shop		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-
+-    // Wheel buttons
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-};
+-
+-
+-// Memorex
+-
+-partial alphanumeric_keys
+-xkb_symbols "mx1998" {
+-    name[Group1]= "Memorex MX1998";
+-
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I7A>	{	[ XF86ScreenSaver	]	};
+-    key <I57>	{	[ XF86WakeUp		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I25>	{	[ XF86Calculator	]	};
+-    key <I18>	{	[ XF86Xfer		]	};
+-    key <I68>	{	[ XF86DOS		]	};
+-    key <I21>	{	[ XF86Documents		]	};
+-    key <I12>	{	[ XF86AudioRewind	]	};
+-    key <I1E>	{	[ XF86AudioRecord	]	};
+-    key <I23>	{	[ XF86Game		]	};
+-    key <I17>	{	[ XF86Close		]	};
+-    key <I26>	{	[ Menu			]	};
+-    key <UP>	{	[ XF86ScrollUp		]	};
+-    key <DOWN>	{	[ XF86ScrollDown	]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "mx2500" {
+-    name[Group1]= "Memorex MX2500 EZ-Access Keyboard";
+-
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I6B>	{	[ XF86WakeUp		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I14>	{	[ XF86DOS		]	};
+-    key <I1F>	{	[ XF86Documents		]	};
+-    key <I26>	{	[ XF86News		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I18>	{	[ XF86Xfer		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I12>	{	[ XF86Clear		]	};
+-    key <I13>	{	[ XF86Phone		]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I6D>	{	[ XF86RotateWindows	]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I17>	{	[ XF86Close		]	};
+-    key <I1E>	{	[ XF86Eject		]	};
+-    key <LWIN>	{	[ Meta_L		]	};
+-    key <RWIN>	{	[ Meta_R		]	};
+-    key <MENU>	{	[ Menu			]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "mx2750" {
+-    name[Group1]= "Memorex MX2750";
+-
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
+-    key <I32>	{	[ XF86Launch0		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-};
+-
+-
+-// Microsoft
+-
+-partial alphanumeric_keys
+-xkb_symbols "microsoftinet" {
+-    name[Group1]= "Microsoft Internet Keyboard";
+-
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I68>	{	[ XF86AudioStop		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I6B>	{	[ XF86MyComputer	]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-};
+-
+-partial alphanumeric_keys 
+-xkb_symbols "microsoftpro" {
+-    name[Group1]= "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro";
+-
+-//   Multimedia Section -- Right Side
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I6D>	{	[ XF86AudioMedia	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-//   Internet Section -- Left Side
+-    key <I32>	{	[ XF86HomePage		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I68>	{	[ XF86Stop		]	};
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I67>	{	[ XF86Reload		]	};
+-//   My Computer Section -- Far Right
+-    key <I6B>	{	[ XF86MyComputer	]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "microsoftprose" {
+-    name[Group1]= "Microsoft Internet Keyboard Pro, Swedish";
+-
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I68>	{	[ XF86AudioStop		]	};
+-    key <FK16>	{	[ XF86Reload		]	};
+-    key <I65>	{	[ XF86Search		]	};
+-    key <I66>	{	[ XF86Favorites		]	};
+-    key <I02>	{	[ XF86HomePage		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I26>	{	[ XF86AudioMute		]	};
+-    key <I25>	{	[ XF86AudioLowerVolume	]	};
+-    key <I1E>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I1F>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I17>	{	[ XF86AudioStop		]	};
+-    key <I24>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioNext		]	};
+-    key <XFER>	{	[ XF86AudioMedia	]	};
+-    key <PRSC>	{	[ XF86MyComputer	]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I63>	{	[ XF86Standby		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "microsoftoffice" {
+-    name[Group1]= "Microsoft Office Keyboard";
+-
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I3C>	{	[ XF86Cut		]	};
+-    key <I78>	{	[ XF86Copy		]	};
+-    key <RCTL>	{	[ XF86Paste		]	};
+-    key <I54>	{	[ XF86ApplicationLeft	]	};
+-    key <MOAR>	{	[ XF86ApplicationRight	]	};
+-    key <I44>	{	[ XF86Word		]	};
+-    key <I45>	{	[ XF86Excel		]	};
+-    key <I02>	{	[ XF86WWW		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <BRK>	{	[ XF86Calendar		]	};
+-    key <I57>	{	[ XF86HomePage		]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I26>	{	[ XF86AudioMute		]	};
+-    key <I25>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I1E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I4A>	{	[ XF86LogOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I62>	{	[ Help			]	};
+-    key <I6D>	{	[ XF86OfficeHome	]	};
+-    key <I55>	{	[ XF86TaskPane		]	};
+-    key <I58>	{	[ XF86New		]	};
+-    key <I59>	{	[ XF86Open		]	};
+-    key <I5A>	{	[ XF86Close		]	};
+-    key <I71>	{	[ XF86Reply		]	};
+-    key <I72>	{	[ XF86MailForward	]	};
+-    key <I73>	{	[ XF86Send		]	};
+-    key <I56>	{	[ XF86Spell		]	};
+-    key <I64>	{	[ XF86Save		]	};
+-    key <I67>	{	[ Print			]	};
+-    key <END>	{	[ Undo			]	};
+-    key <I70>	{	[ Redo			]	};
+-};
+-
+-
+-// Oretec
+-
+-partial alphanumeric_keys
+-xkb_symbols "oretec" {
+-    name[Group1]= "Oretec MCK-800 MM/Internet keyboard";
+-
+-    key <I21>	{	[ XF86WWW		]	};
+-    key <I1E>	{	[ XF86AudioMute		]	};
+-    key <I68>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I18>	{	[ XF86ScrollDown	]	};
+-    key <I10>	{	[ XF86ScrollUp		]	};
+-    key <I17>	{	[ XF86AudioPrev		]	};
+-    key <I12>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I2E>	{	[ XF86AudioNext		]	};
+-    key <I23>	{	[ XF86AudioStop		]	};
+-    key <I19>	{	[ XF86ZoomOut		]	};
+-    key <I32>	{	[ XF86ZoomIn		]	};
+-    key <I24>	{	[ XF86Calculator	]	};
+-    key <I25>	{	[ XF86Xfer		]	};
+-    key <I22>	{	[ Menu			]	};
+-    key <I26>	{	[ XF86Mail		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
+-};
+-
+-
+-// Propeller
+-
+-partial alphanumeric_keys
+-xkb_symbols "propeller" {
+-    name[Group1]= "Propeller Voyager (KTEZ-1000)";
+-
+-    key <I25>	{	[ XF86Calculator	]	};
+-    key <I18>	{	[ XF86Xfer		]	};
+-
+-    key <I68>	{	[ XF86DOS		]	};
+-    key <I21>	{	[ XF86Documents		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I26>	{	[ Menu			]	};
+-    key <I23>	{	[ XF86Game		]	};
+-
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I12>	{	[ XF86AudioRewind	]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I17>	{	[ XF86Close		]	};
+-    key <I1E>	{	[ XF86AudioRecord	]	};
+-
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I7A>	{	[ XF86Standby		]	};
+-};
+-
+-
+-// QTronix
+-
+-partial alphanumeric_keys
+-xkb_symbols "qtronix" {
+-    name[Group1]= "QTronix Scorpius 98N+";
+-
+-    key <I21>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I23>	{	[ XF86AudioNext		]	};
+-    key <I30>	{	[ XF86AudioRecord	]	};
+-
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I26>	{	[ XF86AudioMute		]	};
+-    key <I20>	{	[ XF86AudioRaiseVolume	]	};
+-
+-    key <I13>	{	[ XF86WakeUp		]	};
+-    key <I18>	{	[ XF86Standby		]	};
+-    key <I31>	{	[ XF86PowerOff		]	};
+-    key <I68>	{	[ XF86Calculator	]	};
+-    key <I1F>	{	[ XF86Reload		]	};
+-
+-    key <I25>	{	[ XF86HomePage		]	};
+-    key <I1E>	{	[ XF86Back		]	};
+-    key <I17>	{	[ XF86Search		]	};
+-    key <I32>	{	[ XF86Stop		]	};
+-    key <I12>	{	[ XF86Forward		]	};
+-
+-    key <I19>	{	[ XF86ScrollUp		]	};
+-    key <I10>	{	[ XF86ScrollDown	]	};
+-};
+-
+-
+-// Samsung
+-
+-partial alphanumeric_keys
+-xkb_symbols "samsung4500" {
+-    name[Group1]= "Samsung SDM 4500P";
+-
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I18>	{	[ XF86Eject		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I26>	{	[ Help			]	};
+-    key <I59>	{	[ XF86Explorer		]	};
+-    key <I09>	{	[ XF86Close		]	};
+-    key <I0A>	{	[ XF86Book		]	};
+-    key <I02>	{	[ XF86Launch1		]	};
+-    key <NFER>	{	[ XF86Launch2		]	};
+-    key <I04>	{	[ XF86Launch3		]	};
+-    key <AE13>	{	[ XF86Launch4		]	};
+-    key <I06>	{	[ XF86Launch5		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "samsung4510" {
+-    name[Group1]= "Samsung SDM 4510P";
+-
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I18>	{	[ XF86Eject		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I02>	{	[ XF86Launch1		]	};
+-    key <NFER>	{	[ XF86Launch2		]	};
+-    key <I04>	{	[ XF86Launch3		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-};
+-
+-
+-// SK
+-
+-partial alphanumeric_keys
+-xkb_symbols "sk1300" {
+-    name[Group1]= "SK-1300";
+-
+-    key <I20>	{	[ XF86WWW		]	};
+-    key <I26>	{	[ XF86Back		]	};
+-    key <I1E>	{	[ XF86Forward		]	};
+-    key <I32>	{	[ XF86Stop		]	};
+-    key <I25>	{	[ XF86Standby		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I12>	{	[ XF86Eject		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "sk2500" {
+-    name[Group1]= "SK-2500";
+-
+-    key <I25>	{	[ XF86PowerOff		]	};
+-    key <I7A>	{	[ XF86ScreenSaver	]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I23>	{	[ XF86Xfer		]	};
+-    key <I17>	{	[ XF86Close		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I1E>	{	[ XF86AudioRecord	]	};
+-    key <I12>	{	[ XF86AudioRewind	]	};
+-    key <I26>	{	[ Menu			]	};
+-    key <I18>	{	[ XF86Eject		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I19>	{	[ XF86Forward		]	};
+-    key <I18>	{	[ XF86Eject		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "sk6200" {
+-    name[Group1]= "SK-6200";
+-
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I23>	{	[ XF86AudioPrev		]	};
+-    key <I21>	{	[ XF86AudioNext		]	};
+-    key <I16>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I14>	{	[ XF86AudioLowerVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I1E>	{	[ XF86WWW		]	};
+-    key <I12>	{	[ XF86Favorites		]	};
+-    key <I32>	{	[ XF86Mail		]	};
+-    key <I17>	{	[ XF86Back		]	};
+-    key <I19>	{	[ XF86Forward		]	};
+-};
+-
+-partial alphanumeric_keys
+-xkb_symbols "sk7100" {
+-    name[Group1]= "SK-7100";
+-
+-    key <I17>	{	[ XF86Close		]	};
+-    key <I25>	{	[ XF86CD		]	};
+-    key <I18>	{	[ XF86Video		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I1E>	{	[ XF86Eject		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I12>	{	[ XF86AudioPause	]	};
+-    key <I22>	{	[ XF86AudioPlay		]	};
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I26>	{	[ XF86Display		]	};
+-};
+-
+-
+-// Sven
+-
+-partial alphanumeric_keys
+-xkb_symbols "sven" {
+-    name[Group1]= "SVEN Ergonomic 2500";
+-
+-    key <I68>	{	[ XF86Back		]	};
+-    key <I12>	{	[ XF86Forward		]	};
+-    key <I23>	{	[ XF86Stop		]	};
+-    key <I29>	{	[ XF86Reload		]	};
+-    key <I2E>	{	[ XF86Search		]	};
+-    key <I30>	{	[ XF86Favorites		]	};
+-    key <I1E>	{	[ XF86HomePage		]	};
+-    key <I19>	{	[ XF86AudioPrev		]	};
+-    key <I1A>	{	[ XF86AudioStop		]	};
+-    key <I10>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I62>	{	[ XF86AudioNext		]	};
+-    key <I26>	{	[ XF86AudioMute		]	};
+-    key <I25>	{	[ XF86AudioLowerVolume	]	};
+-    key <I17>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I18>	{	[ XF86ZoomOut		]	};
+-    key <I21>	{	[ XF86ZoomIn		]	};
+-    key <I32>	{	[ XF86ScrollDown	]	};
+-    key <I31>	{	[ XF86ScrollUp		]	};
+-    key <I20>	{	[ XF86Mail		]	};
+-    key <I22>	{	[ XF86MyComputer	]	};
+-    key <I28>	{	[ XF86Calculator	]	};
+-    key <I24>	{	[ XF86ScreenSaver	]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
+-};
+-
+-
+-// Symplon
+-
+-partial alphanumeric_keys
+-xkb_symbols "symplon" {
+-    name[Group1]= "Symplon PaceBook (tablet PC)";
+-
+-    key <HOME>	{	[ XF86RotationPB	]	};
+-    key <UP>	{	[ XF86MenuPB		]	};
+-    key <PAUS>	{	[ XF86UserPB		]	};
+-    key <I25>	{	[ XF86RotationKB	]	};
+-    key <I26>	{	[ XF86MenuKB		]	};
+-    key <I13>	{	[ XF86SplitScreen	]	};
+-    key <I6B>	{	[ XF86User1KB		]	};
+-    key <I21>	{	[ XF86User2KB		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I17>	{	[ XF86New		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I14>	{	[ XF86Support		]	};
+-};
+-
+-// Toshiba
+-
+-partial alphanumeric_keys
+-xkb_symbols "toshiba_s3000" {
+-
+-    // Describes the Special buttons on Toshiba Satellite 3000 models.
+-    // See http://sourceforge.net/projects/omke for details on enabling
+-    // these keys
+-
+-    name[Group1]= "Toshiba Satellite S3000";
+-    key <I71>	{	[ XF86WWW		]	};
+-    key <I73>	{	[ XF86Mail		]	};
+-    key <I06>	{	[ XF86Launch1		]	};
+-    key <I13>	{	[ XF86Launch2		]	};
+-    key <I24>	{	[ XF86AudioStop, XF86Eject	]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause	]	};
+-    key <I75>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I76>	{	[ XF86AudioLowerVolume	]	};
+-};
+-
+-// Trust
+-
+-partial alphanumeric_keys
+-xkb_symbols "trust" {
+-    name[Group1]= "Trust Wireless Keyboard Classic";
+-
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I6A>	{	[ XF86Back		]	};
+-    key <I69>	{	[ XF86Forward		]	};
+-    key <I6C>	{	[ XF86Mail		]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I1E>	{	[ XF86Eject		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
+-    key <I11>	{	[ XF86ScreenSaver	]	};
+-};
+-
+-
+-partial alphanumeric_keys
+-xkb_symbols "trustda" {
+-    name[Group1]= "Trust Direct Access Keyboard";
+-
+-    key <I7A>	{	[ XF86Away		]	};
+-    key <I32>	{	[ XF86WWW		]	};
+-    key <I21>	{	[ XF86Calculator	]	};
+-    key <I23>	{	[ XF86Xfer		]	};
+-    key <I17>	{	[ XF86Close		]	};
+-    key <I10>	{	[ XF86AudioPrev		]	};
+-    key <I22>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I24>	{	[ XF86AudioStop		]	};
+-    key <I19>	{	[ XF86AudioNext		]	};
+-    key <I1E>	{	[ XF86AudioRecord	]	};
+-    key <I12>	{	[ XF86AudioRewind	]	};
+-    key <I26>	{	[ Help			]	};
+-    key <I18>	{	[ XF86Eject		]	};
+-    key <I20>	{	[ XF86AudioMute		]	};
+-    key <I30>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I2E>	{	[ XF86AudioLowerVolume	]	};
+-    key <I25>	{	[ XF86Standby		]	};
+-};
+-
+-
+-// YaHoo!
+-
+-partial alphanumeric_keys
+-xkb_symbols "yahoo" {
+-    name[Group1]= "Yahoo! Internet Keyboard";
+-
+-    key <I11>	{	[ XF86AudioPrev		]	};
+-    key <I12>	{	[ XF86AudioPlay, XF86AudioPause ] };
+-    key <I1E>	{	[ XF86AudioStop		]	};
+-    key <I1F>	{	[ XF86AudioNext		]	};
+-    key <I20>	{	[ XF86AudioRecord	]	};
+-    key <I21>	{	[ XF86AudioLowerVolume	]	};
+-    key <I22>	{	[ XF86AudioRaiseVolume	]	};
+-    key <I23>	{	[ XF86AudioMute		]	};
+-    key <I24>	{	[ XF86Close		]	};
+-    key <I25>	{	[ XF86Calculator	]	};
+-    key <I26>	{	[ Help			]	};
+-    key <I27>	{	[ XF86Mail		]	};
+-    key <I28>	{	[ XF86WWW		]	};
+-    key <I5E>	{	[ XF86PowerOff		]	};
+-    key <I5F>	{	[ XF86Standby		]	};
+-    key <I63>	{	[ XF86WakeUp		]	};
+-};
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ir /usr/X11R6/lib/X11/xkb/symbols/ir
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ir	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/ir	2003-03-20 22:01:42.000000000 -0500
+@@ -1,27 +1,23 @@
+ // $XConsortium: 
+ // $XFree86: 
+-//
+ // Iranian keymap, by Robert Brady <robert@suse.co.uk>
+-// Data supplied by Roozbeh Pournader <roozbeh@sharif.edu>
+-// Minor changes made by Arash Zeini <a.zeini@farsikde.com>,
+-//   and Roozbeh Pournader.
+-//
+-// Last update: 2002-06-19
+-
++// data supplied by Roozbeh Pournader <roozbeh@Sina.sharif.ac.ir>
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+     name[Group2]= "Iranian";
+-      key <TLDE> {	[], [ 0x100200d	]	};
+-      key <AE01> {	[], [ 0x10006f1, exclam	]	};
+-      key <AE02> {	[], [ 0x10006f2, 0x100066c   	]	};
+-      key <AE03> {	[], [ 0x10006f3, 0x100066b      ]	};
+-      key <AE04> {	[], [ 0x10006f4, 0x100fdfc 	]	};
+-      key <AE05> {	[], [ 0x10006f5, 0x100066a  	]	};
+-      key <AE06> {	[], [ 0x10006f6, multiply 	]	};
+-      key <AE07> {	[], [ 0x10006f7, Arabic_comma         ]	};
+-      key <AE08> {	[], [ 0x10006f8, asterisk		]	};
+-      key <AE09> {	[], [ 0x10006f9, parenright	 	]	};
+-      key <AE10> {	[], [ 0x10006f0, parenleft   	]	};
++      key <TLDE> {	[], [	0x100200d	]	};
++
++      // Mainly numbers.
++      key <AE01> {	[], [ 1, exclam	]	};
++      key <AE02> {	[], [ 2, 0x100066C   	]	};
++      key <AE03> {	[], [ 3, 0x100066B      ]	};
++      key <AE04> {	[], [ 4, currency 	]	};
++      key <AE05> {	[], [ 5, 0x100066A  	]	};
++      key <AE06> {	[], [ 6, 0x10000D7 	]	};
++      key <AE07> {	[], [ 7, Arabic_comma         ]	};
++      key <AE08> {	[], [ 8, asterisk		]	};
++      key <AE09> {	[], [ 9, parenleft	 	]	};
++      key <AE10> {	[], [ 0, parenright   	]	};
+       key <AE11> {	[], [ minus, Arabic_tatweel		]	};
+       key <AE12> {	[], [ equal, plus  	]	};
+ 
+@@ -48,7 +44,7 @@
+       key <AC08> {	[], [  Arabic_noon, guillemotright	]	};
+       key <AC09> {	[], [  Arabic_meem,  guillemotleft 	]	};
+       key <AC10> {	[], [  0x10006a9, colon	]	};
+-      key <AC11> {	[], [  0x10006af, Arabic_semicolon	]	};
++      key <AC11> {	[], [  0x10006af, 0x100061b 	]	};
+ 
+       key <BKSL> {	[], [  backslash, bar    	]	};
+       key <SPCE> {	[], [  space, 0x100200c		]	};
+@@ -56,7 +52,7 @@
+       key <AB01> {	[], [  Arabic_zah, Arabic_kaf   	]	};
+       key <AB02> {	[], [  Arabic_tah 	]	};
+       key <AB03> {	[], [  Arabic_zain, 0x1000698	] };
+-      key <AB04> {	[], [  Arabic_ra 	]	};
++      key <AB04> {	[], [  0x1000631 	]	};
+       key <AB05> {	[], [  Arabic_thal, 0x100200c 	]	};
+       key <AB06> {	[], [  Arabic_dal 	]	};
+       key <AB07> {	[], [  0x100067e, Arabic_hamza         ]	};
+@@ -64,3 +60,23 @@
+       key <AB09> {	[], [  period, less 	]	};
+       key <AB10> {	[], [  slash, Arabic_question_mark 	]	};
+ };
++
++partial alphanumeric_keys
++xkb_symbols "digits" {
++    include "AR(basic)"
++
++	// use arabic script digits
++
++      key <AE01> {	[], [ 0x10006f1, exclam	]	};
++      key <AE02> {	[], [ 0x10006f2, 0x100066C   	]	};
++      key <AE03> {	[], [ 0x10006f3, 0x100066B      ]	};
++      key <AE04> {	[], [ 0x10006f4, currency 	]	};
++      key <AE05> {	[], [ 0x10006f5, 0x100066A  	]	};
++      key <AE06> {	[], [ 0x10006f6, 0x10000D7 	]	};
++      key <AE07> {	[], [ 0x10006f7, Arabic_comma         ]	};
++      key <AE08> {	[], [ 0x10006f8, asterisk		]	};
++      key <AE09> {	[], [ 0x10006f9, parenleft	 	]	};
++      key <AE10> {	[], [ 0x10006f0, parenright    	]	};
++
++};
++
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/is /usr/X11R6/lib/X11/xkb/symbols/is
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/is	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/is	2003-03-20 22:01:42.000000000 -0500
+@@ -1,7 +1,6 @@
+ // $Xorg: is,v 1.3 2000/08/17 19:54:43 cpqbld Exp $
+ // XKB keyboard by Hrafnkell Eiriksson - hkelle@rhi.hi.is
+-//     fixes by Olafur Osvaldsson - oli@isnic.is
+-// $XFree86: xc/programs/xkbcomp/symbols/is,v 3.8 2003/01/20 21:58:55 tsi Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/is,v 3.6 2001/10/01 14:04:15 eich Exp $
+ 
+ default partial alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -51,7 +50,7 @@
+ //    key <AC05> {	[	  g,	G		]	};
+     key <AC10> {	[ ae,			AE	],
+ 			[ asciicircum			]	};
+-    key <AC11> {	[ dead_acute,	dead_diaeresis	],
++    key <AC11> {	[ dead_acute,	Adiaeresis	],
+ 			[ dead_circumflex		]	};
+ 
+     key <LSGT> {	[      less,	greater		],
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/jp /usr/X11R6/lib/X11/xkb/symbols/jp
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/jp	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/jp	2003-03-20 22:01:42.000000000 -0500
+@@ -3,10 +3,10 @@
+ 
+ // symbols for a Japanese 106 keyboard(by tsuka@kawalab.dnj.ynu.ac.jp)
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/jp,v 3.9 2003/02/05 01:48:25 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/jp,v 3.6 2001/01/17 23:45:58 dawes Exp $
+ 
+ default xkb_symbols "jp106" {
+-    include "srvr_ctrl(xfree86)"
++
+     key <ESC>  { [ Escape		]	};
+ 
+     // Alphanumeric section
+@@ -24,10 +24,7 @@
+     key <AE11> { [ minus, equal		], [ kana_HO		]	};
+     key <AE12> { [ asciicircum,	asciitilde], [ kana_HE		]	};
+     key <AE13> { [ backslash, bar 	], [ prolongedsound	]	};
+-    key <BKSP> {
+-	type="CTRL+ALT",
+-	symbols[Group1]= [ BackSpace,	Terminate_Server ]
+-    };
++    key <BKSP> { [ BackSpace		]	};
+ 
+     key  <TAB> { [ Tab,	ISO_Left_Tab	]	};
+     key <AD01> { [ q, Q 		], [ kana_TA		]	};
+@@ -158,8 +155,5 @@
+     modifier_map Shift  { Shift_L,Shift_R };
+     modifier_map Lock   { Caps_Lock };
+     modifier_map Control{ Control_L,Control_R };
+-    modifier_map Mod1   { Alt_L, Alt_R, Meta_L, Meta_R };
+-    modifier_map Mod2   { Num_Lock };
+-    modifier_map Mod5   { Scroll_Lock };
+ };
+ 
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/la /usr/X11R6/lib/X11/xkb/symbols/la
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/la	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/la	2003-03-20 22:01:42.000000000 -0500
+@@ -1,5 +1,5 @@
+ // $XConsortium: es /main/3 1996/08/31 12:19:38 kaleb $
+-// $XFree86: xc/programs/xkbcomp/symbols/la,v 1.2 2002/06/04 22:50:58 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/la,v 1.1 2001/11/21 22:28:52 dawes Exp $
+ // Modified for a real Latin American Keyboard by Fabian Mandelbaum
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -55,7 +55,7 @@
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "Sundeadkeys" {
+-    include "la(basic)"
++    include "es(basic)"
+ 
+     key <AC11> {	[     SunFA_Acute, SunFA_Diaeresis 	],	
+ 			[	braceleft,       braceleft	]	};
+@@ -65,12 +65,12 @@
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "sundeadkeys" {
+-    include "la(Sundeadkeys)"
++    include "es(Sundeadkeys)"
+ };
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "nodeadkeys" {
+-    include "la(basic)"
++    include "es(basic)"
+ 
+     key	<AC10> {	[	   ntilde,          Ntilde  	],	
+ 			[      asciitilde,     doubleacute	]	};
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/level3 /usr/X11R6/lib/X11/xkb/symbols/level3
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/level3	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/level3	2003-03-20 22:01:42.000000000 -0500
+@@ -1,7 +1,7 @@
+ // using the level(switch) map, the right Control key temporarily
+ // chooses the third group level (until it is released).
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/level3,v 1.2 2002/12/17 19:55:15 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/level3,v 1.1 2001/08/17 13:27:58 dawes Exp $
+ //
+ 
+ partial modifier_keys
+@@ -28,8 +28,8 @@
+ // pc105.
+ partial modifier_keys
+ xkb_symbols "win_switch" {
+-  include "level3(lwin_switch)"
+-  include "level3(rwin_switch)"
++  include group(lwin_switch);
++  include group(rwin_switch);
+ };
+ 
+ // using the level(lwin_switch) map, the left Windows' logo key
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/macintosh/us /usr/X11R6/lib/X11/xkb/symbols/macintosh/us
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/macintosh/us	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/macintosh/us	2003-03-20 22:01:42.000000000 -0500
+@@ -1,7 +1,9 @@
+ // $XConsortium: macintosh /main/10 1996/01/29 19:54:54 kaleb $
+-// $XFree86: xc/programs/xkbcomp/symbols/macintosh/us,v 1.7 2002/10/16 01:29:41 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/macintosh/us,v 1.6 2001/10/03 07:44:23 alanh Exp $
+ 
+-// symbols definition for a Macintosh "Extended" keyboard
++
++// some symbols need a special charset, most symbols not added yet
++// /dev/busy
+ 
+ xkb_symbols "extended" {
+ 
+@@ -10,26 +12,40 @@
+ 
+     // Alphanumeric section
+     key <TLDE> {	[ quoteleft,	asciitilde	]	};
+-    key <AE01> {	[	  1,	exclam 		]	};
+-    key <AE02> {	[	  2,	at		]	};
+-    key <AE03> {	[	  3,	numbersign	]	};
+-    key <AE04> {	[	  4,	dollar		]	};
+-    key <AE05> {	[	  5,	percent		]	};
+-    key <AE06> {	[	  6,	asciicircum	]	};
+-    key <AE07> {	[	  7,	ampersand	]	};
+-    key <AE08> {	[	  8,	asterisk	]	};
+-    key <AE09> {	[	  9,	parenleft	]	};
++    key <LSGT> {	[ quoteleft,	asciitilde	]	};
++    key <AE01> {	[	  1,	exclam 		],
++			[exclamdown,    slash		]	};
++    key <AE02> {	[	  2,	at		],
++			[ trademark,    eth		]	};
++    key <AE03> {	[	  3,	numbersign	],
++			[ sterling			]	};
++    key <AE04> {	[	  4,	dollar		],
++			[      cent			]	};
++    key <AE05> {	[	  5,	percent		],
++			[  infinity			]	};
++    key <AE06> {	[	  6,	asciicircum	],
++			[ section			]	};
++    key <AE07> {	[	  7,	ampersand	],
++			[ paragraph			]	};
++    key <AE08> {	[	  8,	asterisk	],
++			[periodcentered			]	};
++    key <AE09> {	[	  9,	parenleft	],
++			[ordfeminine			]	};
+     key <AE10> {	[	  0,	parenright	]	};
+     key <AE11> {	[     minus,	underscore	]	};
+-    key <AE12> {	[     equal,	plus		]	};
++    key <AE12> {	[     equal,	plus		],
++			[  notequal,    plusminus	]	};
+     key <BKSP> {	[ BackSpace			]	};
+ 
+-    key  <TAB> {	[	Tab,	ISO_Left_Tab	]	};
+-    key <AD01> {	[	  q,	Q 		]	};
++    key  <TAB> {	[ 	Tab,	ISO_Left_Tab	]	};
++    key <AD01> {	[	  q,	Q 		],
++			[        oe,	OE		]	};
+     key <AD02> {	[	  w,	W		]	};
+     key <AD03> {	[	  e,	E		]	};
+-    key <AD04> {	[	  r,	R		]	};
+-    key <AD05> {	[	  t,	T		]	};
++    key <AD04> {	[	  r,	R		],
++			[registered			]	};
++    key <AD05> {	[	  t,	T		],
++			[    dagger			]	};
+     key <AD06> {	[	  y,	Y		]	};
+     key <AD07> {	[	  u,	U		]	};
+     key <AD08> {	[	  i,	I		]	};
+@@ -37,29 +53,40 @@
+     key <AD10> {	[	  p,	P		]	};
+     key <AD11> {	[ bracketleft,	braceleft	]	};
+     key <AD12> {	[ bracketright,	braceright	]	};
+-    key <BKSL> {	[ backslash,	bar		]	};
++    key <BKSL> {	[ backslash,	bar		],
++			[guillemotleft,guillemotright	]	};
+ 
+     key <CAPS> {	[	Caps_Lock		]	};
+-    key <AC01> {	[	  a,	A 		]	};
+-    key <AC02> {	[	  s,	S		]	};
+-    key <AC03> {	[	  d,	D		]	};
+-    key <AC04> {	[	  f,	F		]	};
+-    key <AC05> {	[	  g,	G		]	};
++    key <AC01> {	[	  a,	A 		],
++			[     aring,    Aring		]	};
++    key <AC02> {	[	  s,	S		],
++			[    ssharp,    Iacute		]	};
++    key <AC03> {	[	  d,	D		],
++			[       eth,	Icircumflex	]	};
++    key <AC04> {	[	  f,	F		],
++			[		Idiaeresis	]	};
++    key <AC05> {	[	  g,	G		],
++			[ copyright			]	};
+     key <AC06> {	[	  h,	H		]	};
+     key <AC07> {	[	  j,	J		]	};
+     key <AC08> {	[	  k,	K		]	};
+-    key <AC09> {	[	  l,	L		]	};
++    key <AC09> {	[	  l,	L		],
++			[   notsign,    Ograve		]	};
+     key <AC10> {	[ semicolon,	colon		]	};
+-    key <AC11> {	[ quoteright,	quotedbl	]	};
++    key <AC11> {	[ quoteright,	quotedbl	],
++			[        ae,	AE		]	};
+     key <RTRN> {	[ Return			]	};
+ 
+     key <AB01> {	[	  z,	Z 		]	};
+     key <AB02> {	[	  x,	X		]	};
+-    key <AB03> {	[	  c,	C		]	};
++    key <AB03> {	[	  c,	C		],
++			[ ccedilla,	Ccedilla	]	};
+     key <AB04> {	[	  v,	V		]	};
+     key <AB05> {	[	  b,	B		]	};
+-    key <AB06> {	[	  n,	N		]	};
+-    key <AB07> {	[	  m,	M		]	};
++    key <AB06> {	[	  n,	N		],
++			[asciitilde			]	};
++    key <AB07> {	[	  m,	M		],
++			[        mu,	Acircumflex	]	};
+     key <AB08> {	[     comma,	less		]	};
+     key <AB09> {	[    period,	greater		]	};
+     key <AB10> {	[     slash,	question	]	};
+@@ -68,134 +95,87 @@
+     // End alphanumeric section
+ 
+     // Begin "Function" section
+-    key <FK01> {	[  F1		]	};
+-    key <FK02> {	[  F2		]	};
+-    key <FK03> {	[  F3		]	};
+-    key <FK04> {	[  F4		]	};
+-    key <FK05> {	[  F5		]	};
+-    key <FK06> {	[  F6		]	};
+-    key <FK07> {	[  F7		]	};
+-    key <FK08> {	[  F8		]	};
+-    key <FK09> {	[  F9		]	};
+-    key <FK10> {	[  F10		]	};
+-    key <FK11> {	[  F11		]	};
+-    key <FK12> {	[  F12		]	};
+-    key <FK13> {	[  Print	]	};
+-    key <FK14> {	[  Scroll_Lock	]	};
+-    key <FK15> {	[  Pause	]	};
++    key <FK01> {	[  F1			]	};
++    key <FK02> {	[  F2			]	};
++    key <FK03> {	[  F3			]	};
++    key <FK04> {	[  F4			]	};
++    key <FK05> {	[  F5			]	};
++    key <FK06> {	[  F6			]	};
++    key <FK07> {	[  F7			]	};
++    key <FK08> {	[  F8			]	};
++    key <FK09> {	[  F9			]	};
++    key <FK10> {	[  F10			]	};
++    key <FK11> {	[  F11			]	};
++    key <FK12> {	[  F12			]	};
++    key <FK13> {	[  Print		]	};
++    key <FK14> {	[  Scroll_Lock		]	};
++    key <FK15> {	[  Pause		]	};
+     // End "Function" section
+ 
+     // Begin "Editing" section
+-    key  <INS> {	[  Insert	]	};
+-    key <HOME> {	[  Home		]	};
+-    key <PGUP> {	[  Prior	]	};
+-    key <DELE> {	[  Delete	]	};
+-    key  <END> {	[  End		]	};
+-    key <PGDN> {	[  Next		]	};
+-
+-    key   <UP> {	[  Up		]	};
+-    key <LEFT> {	[  Left		]	};
+-    key <DOWN> {	[  Down		]	};
+-    key <RGHT> {	[  Right	]	};
++    key  <INS> {	[  Insert		]	};
++    key <HOME> {	[  Home			]	};
++    key <PGUP> {	[  Prior		]	};
++    key <DELE> {	[  Delete		]	};
++    key  <END> {	[  End			]	};
++    key <PGDN> {	[  Next			]	};
++
++    key   <UP> {	[  Up			]	};
++    key <LEFT> {	[  Left			]	};
++    key <DOWN> {	[  Down			]	};
++    key <RGHT> {	[  Right		]	};
+     // End "Editing" section
+ 
+     // Begin "Keypad" section
+-    key <NMLK> {	[  Num_Lock,	Pointer_EnableKeys	]	};
+-    key <KPEQ> {	[  equal				]	};
+-    key <KPDV> {	[  KP_Divide				]	};
+-    key <KPMU> {	[  KP_Multiply				]	};
+-
+-    key  <KP7> {	[  KP_7,	KP_Home			]	};
+-    key  <KP8> {	[  KP_8,	KP_Up			]	};
+-    key  <KP9> {	[  KP_9,	KP_Prior		]	};
+-    key <KPSU> {	[  KP_Subtract				]	};
+-
+-    key  <KP4> {	[  KP_4,	KP_Left			]	};
+-    key  <KP5> {	[  KP_5,	KP_Begin		]	};
+-    key  <KP6> {	[  KP_6,	KP_Right		]	};
+-    key <KPAD> {	[  KP_Add				]	};
+-
+-    key  <KP1> {	[  KP_1,	KP_End			]	};
+-    key  <KP2> {	[  KP_2,	KP_Down			]	};
+-    key  <KP3> {	[  KP_3,	KP_Next			]	};
+-    key <KPEN> {	[  KP_Enter				]	};
++    key <NMLK> {	[  Num_Lock		]	};
++    key <KPEQ> {	[  equal		]	};
++    key <KPDV> {	[  KP_Divide		]	};
++    key <KPMU> {	[  KP_Multiply		]	};
++
++    key  <KP7> {	[  KP_7	, KP_Home	]	};
++    key  <KP8> {	[  KP_8	, KP_Up		]	};
++    key  <KP9> {	[  KP_9	, KP_Prior	]	};
++    key <KPSU> {	[  KP_Subtract		]	};
++
++    key  <KP4> {	[  KP_4	, KP_Left	]	};
++    key  <KP5> {	[  KP_5	, KP_Begin	]	};
++    key  <KP6> {	[  KP_6	, KP_Right	]	};
++    key <KPAD> {	[  KP_Add		]	};
++
++    key  <KP1> {	[  KP_1	, KP_End	]	};
++    key  <KP2> {	[  KP_2	, KP_Down	]	};
++    key  <KP3> {	[  KP_3	, KP_Next	]	};
++    key <KPEN> {	[  KP_Enter		]	};
+ 
+-    key  <KP0> {	[  KP_0,	KP_Insert		]	};
+-    key <KPDL> { 	[  KP_Decimal,	KP_Delete		]	};
++    key  <KP0> {	[  KP_0	, KP_Insert	]	};
++    key <KPDL> { 	[  KP_Decimal , KP_Delete ]	};
+     // End "Keypad" section
+ 
+-    // Begin "Modifier" section
+-    key <LFSH> {	[  Shift_L	]	};
+-    key <RTSH> {	[  Shift_R	]	};
+-    key <LCTL> {	[  Control_L	]	};
+-    key <RCTL> {	[  Control_R	]	};
+-    key <LALT> {	[  Alt_L	]	};
+-    key <RALT> {	[  Alt_R	]	};
+-    key <LWIN> {	[  Meta_L	]	};
+-    key <WWIN> {	[  Meta_R	]	};
+-    // End "Modifier" section
++    // Begin modifier mappings
++//    key <LMTA> {	[  Meta_L	 	]	};
++    key <LFSH> {	[  Shift_L		]	};
++    key <LCTL> {	[  Control_L		]	};
++    key <LALT> {	[  Alt_L	 	]	};
++    key <RALT> {        [ Mode_switch,  Multi_key       ]       };
++    key <RTSH> {	[  Shift_R		]	};
++    key <RCTL> {	[  Control_R		]	};
+ 
++    // End modifier mappings
+     // begin modifier mappings
+     modifier_map Shift  { Shift_L , Shift_R };
+     modifier_map Lock   { Caps_Lock };
+     modifier_map Control{ Control_L, Control_R };
+-    modifier_map Mod1   { Alt_L, Alt_R };
++//    modifier_map Mod1   { Meta_L, Meta_R };
++//    modifier_map Mod2   { Alt_L, Alt_R };
++//    modifier_map Mod4   { Num_Lock };
++//    modifier_map Mod1   { Alt_L, Alt_R };
+     modifier_map Mod2   { Num_Lock };
+-    modifier_map Mod4   { Meta_L, Meta_R };
+-    modifier_map Mod5   { Scroll_Lock };
++    modifier_map Mod1   { Alt_L, Alt_R };
++//    modifier_map Mod4   { Meta_L, Meta_R };
++    modifier_map Mod3   { Mode_switch };
+     // end modifier mappings
+ 
+-// *** FIXME
+-//    key <LSGT> {	[ quoteleft,	asciitilde	]	};
+-//    key <AE01> {	[	  1,	exclam 		],
+-//			[exclamdown,    slash		]	};
+-//    key <AE02> {	[	  2,	at		],
+-//			[ trademark,    eth		]	};
+-//    key <AE03> {	[	  3,	numbersign	],
+-//			[ sterling			]	};
+-//    key <AE04> {	[	  4,	dollar		],
+-//			[      cent			]	};
+-//    key <AE05> {	[	  5,	percent		],
+-//			[  infinity			]	};
+-//    key <AE06> {	[	  6,	asciicircum	],
+-//			[ section			]	};
+-//    key <AE07> {	[	  7,	ampersand	],
+-//			[ paragraph			]	};
+-//    key <AE08> {	[	  8,	asterisk	],
+-//			[periodcentered			]	};
+-//    key <AE09> {	[	  9,	parenleft	],
+-//			[ordfeminine			]	};
+-//    key <AE12> {	[     equal,	plus		],
+-//			[  notequal,    plusminus	]	};
+-//    key <AD01> {	[	  q,	Q 		],
+-//			[	oe,	OE		]	};
+-//    key <AD04> {	[	  r,	R		],
+-//			[registered			]	};
+-//    key <AD05> {	[	  t,	T		],
+-//			[    dagger			]	};
+-//    key <BKSL> {	[ backslash,	bar		],
+-//			[guillemotleft,guillemotright	]	};
+-//    key <AC01> {	[	  a,	A 		],
+-//			[     aring,    Aring		]	};
+-//    key <AC02> {	[	  s,	S		],
+-//			[    ssharp,    Iacute		]	};
+-//    key <AC03> {	[	  d,	D		],
+-//				eth,	Icircumflex	]	};
+-//    key <AC04> {	[	  f,	F		],
+-//			[		Idiaeresis	]	};
+-//    key <AC05> {	[	  g,	G		],
+-//			[ copyright			]	};
+-//    key <AC09> {	[	  l,	L		],
+-//			[   notsign,    Ograve		]	};
+-//    key <AC11> {	[ quoteright,	quotedbl	],
+-//			[        ae,	AE		]	};
+-//    key <AB03> {	[	  c,	C		],
+-//			[ ccedilla,	Ccedilla	]	};
+-//    key <AB06> {	[	  n,	N		],
+-//			[asciitilde			]	};
+-//    key <AB07> {	[	  m,	M		],
+-//			[	 mu,	Acircumflex	]	};
+-//    key <RALT> {	[ Mode_switch,	Multi_key	]	};
+-//    modifier_map Mod3   { Mode_switch };
++
+ 
+ };
++
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/mt /usr/X11R6/lib/X11/xkb/symbols/mt
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/mt	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/mt	2003-03-20 22:01:42.000000000 -0500
+@@ -1,43 +1,55 @@
+-// Maltese keyboard map (based on MSA Standard DMS100)
++// Maltese keyboard map (for UK-based keyboards)
+ // by Ramon Casha (ramon.casha@linux.org.mt)
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/mt,v 1.3 2002/12/13 04:18:03 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/mt,v 1.2 2001/12/17 20:00:47 dawes Exp $
+ 
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+ 
+-    // Describes the differences between the en_GB
+-    // keyboard and the Maltese keyboard.
+-
++    // Describes the differences between a UK keyboard
++    // and a Maltese layout.
+     include "gb(basic)"
+-    name[Group1]= "Maltese";
+-
+-    // the following four sets are the four additional letters (C. G. H- Z.)
+-    // Group 2 contains the UK equivalents
+-    key <TLDE> {	[	cabovedot,	Cabovedot	],
+-			[	grave,		notsign		] };
+-    key <AD11> {	[	gabovedot,	Gabovedot	],
+-			[	bracketleft,	braceleft	] };
+-    key <AD12> {	[	hstroke,	Hstroke		],
+-			[	bracketright,	braceright	] };
+-    key <LSGT> {	[	zabovedot,	Zabovedot	],
+-			[	backslash,	bar		] };
+-
+-    // Euro symbol
+-    key <AE03> {	[	3,		EuroSign	],
+-    			[	sterling			]	};
+-    // Long accent
+-    key <AE06> { [],	[	dead_circumflex, dead_circumflex ]	};
++    name[Group1]= "Maltese (UK layout)";
+ 
+-    // Normal accented vowels
+-    key <AD03> { [],	[	egrave,		Egrave		]	};
+-    key <AD07> { [],	[	ugrave,		Ugrave		]	};
+-    key <AD08> { [],	[	igrave,		Igrave		]	};
+-    key <AD09> { [],	[	ograve,		Ograve		]	};
+-    key <AC01> { [],	[	agrave,		Agrave		]	};
++    // define the ^ as a deadkey for long accents (â). The use of
++    // long accents was officially dropped recently but there are 
++    // still exists literature using it.
++    key <AE06> {
++        symbols[Group1]= [	6,		dead_circumflex ],
++        symbols[Group2]= [	asciicircum	]
++    };
++    // define the grave accent as a deadkey for the ordinary accent (à).
++    key <TLDE> {
++        symbols[Group1]= [      dead_grave,      notsign ],
++        symbols[Group2]= [           grave,	 bar ]
++    };
++    // the following four sets are the four additional letters Å,Õ,¡,¯ (CGHZ)
++    key <AE12> {
++        symbols[Group1]= [       cabovedot,       Cabovedot ],
++        symbols[Group2]= [           equal,            plus ]
++    };
++    key <AD11> {
++        symbols[Group1]= [       gabovedot,       Gabovedot ],
++        symbols[Group2]= [     bracketleft,       braceleft ]
++    };
++    key <AD12> {
++        symbols[Group1]= [         hstroke,         Hstroke ],
++        symbols[Group2]= [    bracketright,      braceright ]
++    };
++    key <LSGT> {
++	symbols[Group1]= [       zabovedot,	 Zabovedot  	],	
++	symbols[Group2]= [	backslash,	       bar	]
++    };
++    // add Å Õ ¡ and ¯ as AltGr + C G H or Z for convenience.
++    key <AC05> {	[], [	gabovedot,	Gabovedot	]	};
++    key <AC06> {	[], [	hstroke,	Hstroke		]	};
++    key <AB01> {	[], [	zabovedot,	Zabovedot 	]	};
++    key <AB03> {	[], [	cabovedot,	Cabovedot	]	};
++    // and the Euro sign as AltGr-E
++    key <AD03> {	[], [	EuroSign	]	};
+ 
+     // End alphanumeric section
+-
++    
+     // begin modifier mappings
+     
+     modifier_map Shift  { Shift_L };
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/mt_us /usr/X11R6/lib/X11/xkb/symbols/mt_us
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/mt_us	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/mt_us	2003-03-20 22:01:42.000000000 -0500
+@@ -1,40 +1,51 @@
+-// Maltese keyboard map (based on MSA Standard DMS100, annex A)
++// Maltese keyboard map (for US-based keyboards)
+ // by Ramon Casha (ramon.casha@linux.org.mt)
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/mt_us,v 1.2 2002/12/13 04:18:03 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/mt_us,v 1.1 2001/08/17 16:31:25 dawes Exp $
+ 
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+ 
+-    // Describes the differences between the en_US
+-    // keyboard and the Maltese keyboard.
++    // Describes the differences between a very simple en_US
++    // keyboard and the interim Maltese keyboard
+ 
+-    include "us(basic)"
+-    name[Group1]= "Maltese (US layout)";
++    name[Group1]= "Maltese";
+ 
+-    // the following four sets are the four additional letters (C. G. H- Z.)
+-    // Group 2 contains the UK equivalents
+-    key <TLDE> {	[	cabovedot,	Cabovedot	],
+-			[	grave,		asciitilde	] };
+-    key <AD11> {	[	gabovedot,	Gabovedot	],
+-			[	bracketleft,	braceleft	] };
+-    key <AD12> {	[	hstroke,	Hstroke		],
+-			[	bracketright,	braceright	] };
+-    key <BKSL> {	[	zabovedot,	Zabovedot	],
+-			[	backslash,	bar		] };
+-
+-    // Euro symbol
+-    key <AE03> {	[	3,		EuroSign	],
+-    			[	numbersign			]	};
+-    // Long accent
+-    key <AE06> { [],	[	dead_circumflex, dead_circumflex ]	};
+-
+-    // Normal accented vowels
+-    key <AD03> { [],	[	egrave,		Egrave		]	};
+-    key <AD07> { [],	[	ugrave,		Ugrave		]	};
+-    key <AD08> { [],	[	igrave,		Igrave		]	};
+-    key <AD09> { [],	[	ograve,		Ograve		]	};
+-    key <AC01> { [],	[	agrave,		Agrave		]	};
++    // define the ^ as a deadkey for long accents (â). The use of
++    // long accents was officially dropped recently but there are 
++    // still exists literature using it.
++    key <AE06> {
++        symbols[Group1]= [	6,		dead_circumflex ],
++        symbols[Group2]= [	asciicircum	]
++    };
++    // define the grave accent as a deadkey for the ordinary accent (à).
++    key <TLDE> {
++        symbols[Group1]= [	dead_grave,	asciitilde ],
++        symbols[Group2]= [	grave ]
++    };
++    // the following four sets are the four additional letters Å,Õ,¡,¯ (CGHZ)
++    key <AE12> {
++        symbols[Group1]= [	cabovedot,	Cabovedot ],
++        symbols[Group2]= [	equal,		plus ]
++    };
++    key <AD11> {
++        symbols[Group1]= [	gabovedot,	Gabovedot ],
++        symbols[Group2]= [	bracketleft,	braceleft ]
++    };
++    key <AD12> {
++        symbols[Group1]= [	hstroke,	Hstroke ],
++        symbols[Group2]= [	bracketright,	braceright ]
++    };
++    key <BKSL> {
++        symbols[Group1]= [	zabovedot,	Zabovedot ],
++        symbols[Group2]= [	backslash,	bar ]
++    };
++    // add Å Õ ¡ and ¯ as AltGr + C G H or Z for convenience.
++    key <AC05> {	[], [	gabovedot,	Gabovedot	]	};
++    key <AC06> {	[], [	hstroke,	Hstroke		]	};
++    key <AB01> {	[], [	zabovedot,	Zabovedot 	]	};
++    key <AB03> {	[], [	cabovedot,	Cabovedot	]	};
++    key <AD03> {	[], [	EuroSign	]	};
+ 
+     // End alphanumeric section
+ 
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/nl /usr/X11R6/lib/X11/xkb/symbols/nl
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/nl	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/nl	2003-03-20 22:01:42.000000000 -0500
+@@ -22,7 +22,7 @@
+     key <AE04> {	[         4,	dollar   	],
+ 			[ onequarter			]	};
+     key <AE05> {	[         5,	percent  	],
+-			[ EuroSign			]	};
++			[   onehalf			]	};
+     key <AE06> {	[         6,	ampersand	],
+ 			[ threequarters			]	};
+     key <AE07> {	[         7,	underscore	],
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/no /usr/X11R6/lib/X11/xkb/symbols/no
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/no	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/no	2003-03-20 22:01:42.000000000 -0500
+@@ -3,7 +3,7 @@
+ 
+ 
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/no,v 3.10 2002/12/19 01:07:54 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/no,v 3.9 2001/01/17 23:45:59 dawes Exp $
+ 
+ partial alphanumeric_keys 
+  xkb_symbols "basic" {
+@@ -75,9 +75,7 @@
+                  	[      dead_tilde,      dead_caron      ]};
+ 
+  
+-    // End alphanumeric section, begin "Keypad"
+-    key <KPDL> {	[  KP_Delete,	KP_Separator	]	};
+-    // End "Keypad" section
++    // End alphanumeric section
+ 
+     // begin modifier mappings
+     
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/pl /usr/X11R6/lib/X11/xkb/symbols/pl
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/pl	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/pl	2003-03-20 22:01:42.000000000 -0500
+@@ -23,6 +23,8 @@
+ 			[	  lstroke,	   Lstroke	]	};
+     key	<AB06> {	[	                            	],	
+ 			[          nacute,          Nacute	]	};
++    key	<AD07> {	[	                        	],	
++			[        EuroSign               	]	};
+     key	<AD09> {	[	                        	],	
+ 			[          oacute,       Oacute        	]	};
+     key <AC02> {	[	         			],
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/pl2 /usr/X11R6/lib/X11/xkb/symbols/pl2
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/pl2	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/pl2	2003-03-20 22:01:42.000000000 -0500
+@@ -45,7 +45,8 @@
+     key <AD04> { [ r,			R		]	};
+     key <AD05> { [ t,			T		]	};
+     key <AD06> { [ z,			Z		]	};
+-    key <AD07> { [ u,			U		]	};
++    key <AD07> { [ u,			U		],
++                 [ EuroSign             ]   };
+     key <AD08> { [ i,			I		]	};
+     key <AD09> { [ o,			O		]	};
+     key <AD10> { [ p,			P		]	};
+@@ -76,7 +77,7 @@
+ 
+     key <AB01> { [ y,			Y	 	]	};
+     key <AB02> { [ x,			X	 	]	};
+-    key <AB03> { [ c,			C	 	]	};
++    key <AB03> { [ C,			C	 	]	};
+     key <AB04> { [ v,			V	 	],
+ 		 [ at					]	};
+     key <AB05> { [ b,			B	 	],
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ro /usr/X11R6/lib/X11/xkb/symbols/ro
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ro	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/ro	2003-03-20 22:01:42.000000000 -0500
+@@ -7,7 +7,7 @@
+ // Modified by Miºu Moldovan, <dumol@go.ro> (C) 2001
+ // Modified by Marius Andreiana, <mandreiana@yahoo.com> (C) 2001
+ // 
+-// $XFree86: xc/programs/xkbcomp/symbols/ro,v 3.5 2002/06/04 22:50:58 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/ro,v 3.4 2001/12/21 21:03:59 dawes Exp $
+ // Diacriticele se scriu cu ALT-ul din dreapta si q,t,i,a,s (+shift eventual)
+ // 
+ 
+@@ -34,11 +34,3 @@
+     modifier_map Mod3	{ Mode_switch };
+ 
+ };
+-
+-xkb_symbols "comma" {
+-    include "ro(basic)"
+-
+-    key <AC02> { [], [ 0x1000219,	0x1000218	] };
+-    key <AD05> { [], [ 0x100021b,	0x100021a	] };
+-};
+-
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ru /usr/X11R6/lib/X11/xkb/symbols/ru
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ru	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/ru	2003-03-20 22:01:42.000000000 -0500
+@@ -3,7 +3,7 @@
+ // russian standard keyboard
+ // AEN <aen@logic.ru>
+ // Last Changes 2001/12/23 by Leon Kanter <leon@blackcatlinux.com>
+-// $XFree86: xc/programs/xkbcomp/symbols/ru,v 3.10 2003/02/15 22:27:05 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/ru,v 3.9 2002/01/16 18:20:12 dawes Exp $
+ 
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -143,8 +143,6 @@
+                         [               8,        asterisk      ]       };
+     key <AB10> {        [           slash,        question      ],
+                         [          period,           comma      ]       };
+-    key <BKSL> {        [       backslash,             bar      ],
+-                        [       backslash,           slash      ]       };
+ };
+ 
+ partial alphanumeric_keys
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/se /usr/X11R6/lib/X11/xkb/symbols/se
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/se	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/se	2003-03-20 22:01:42.000000000 -0500
+@@ -3,7 +3,7 @@
+ 
+ 
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/se,v 3.10 2002/12/19 01:07:54 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/se,v 3.8 2001/08/17 13:27:58 dawes Exp $
+ 
+ partial alphanumeric_keys 
+  xkb_symbols "basic" {
+@@ -29,7 +29,7 @@
+     key <AE04> {	[               4,        currency     	],
+ 			[	   dollar,	onequarter	]};
+     key <AE05> {	[               5,         percent     	],
+-			[        EuroSign,	      cent	]};
++			[        NoSymbol,	      cent	]};
+     key <AE06> {	[               6,       ampersand     	],
+ 			[	      yen,	  NoSymbol	]};
+     key <AE07> {	[               7,           slash     	],
+@@ -77,9 +77,7 @@
+                  	[      dead_tilde,      dead_caron      ]};
+ 
+  
+-    // End alphanumeric section, begin "Keypad"
+-    key <KPDL> {	[  KP_Delete,	KP_Separator	]	};
+-    // End "Keypad" section
++    // End alphanumeric section
+ 
+     // begin modifier mappings
+     
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/si /usr/X11R6/lib/X11/xkb/symbols/si
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/si	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/si	2003-03-20 22:01:42.000000000 -0500
+@@ -15,7 +15,7 @@
+ // Revision 1.2  2000/01/30 21:33:14  peterlin
+ // Popravil neme znake na stevilcnih tipkah. Obesil "multiply" na Dstroke.
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/si,v 1.2 2003/02/05 01:38:36 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/si,v 1.1 2000/02/08 15:46:35 dawes Exp $
+ 
+ default partial alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -95,7 +95,6 @@
+     key <AB10> {	[     minus,	underscore	]	};
+     key <BKSL> {	[ zcaron,	Zcaron		],
+ 			[ currency			]	};
+-    key <KPDL> {	[ KP_Delete,	KP_Separator	]	};
+     key <RALT> {	[ Mode_switch,	Multi_key	]	};
+ 
+     // End alphanumeric section
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/sk /usr/X11R6/lib/X11/xkb/symbols/sk
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/sk	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/sk	2003-03-20 22:01:42.000000000 -0500
+@@ -1,4 +1,4 @@
+-// $XFree86: xc/programs/xkbcomp/symbols/sk,v 1.4 2002/09/16 18:06:21 eich Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/sk,v 1.3 2001/12/24 22:23:10 dawes Exp $
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -125,14 +125,10 @@
+     key <SPCE>  { [	space,		space,
+ 			nobreakspace,	nobreakspace ] };
+ 
+-// KP_Separator should produce a comma as KP_Decimal produces a "."
+-// independent of the locale selected.
+-    key <KPDL>  { type="FOUR_LEVEL_KEYPAD", [	KP_Delete,	KP_Separator,
+-    						KP_Delete,	KP_Decimal],
+-			// hack a decimal dot into the second (US) group
+-			// Martin Vidner <mvidner@suse.cz>
+-					    [   KP_Delete,      KP_Decimal,
+-					        KP_Delete,	KP_Separator] };
++    // This certainly shouldn't be 'comma'. Something like KP_DecimalComma
++    // would be better but there's no such definition in keysyms.
++    key <KPDL>  { type="FOUR_LEVEL_KEYPAD", [	KP_Delete,	comma,
++    						KP_Delete,	KP_Decimal] };
+ 
+     key <RALT> {  type="TWO_LEVEL", [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+     modifier_map Mod5   { <RALT> };			
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/tr /usr/X11R6/lib/X11/xkb/symbols/tr
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/tr	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/tr	2003-03-20 22:01:42.000000000 -0500
+@@ -37,6 +37,8 @@
+     key <AE11> {	[  asterisk,	question 	],
+ 			[ backslash			]	};
+     key <AE12> {	[     minus,	underscore	]	};
++    key <AD03> {	[         e,	E		],
++			[  EuroSign			]	};
+     key <AD08> {	[  idotless,    I		]	};
+     key <AD11> {	[    gbreve,    Gbreve		]	};
+     key <AD12> {	[ udiaeresis,	Udiaeresis	],
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ua /usr/X11R6/lib/X11/xkb/symbols/ua
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/ua	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/ua	2003-03-20 22:01:42.000000000 -0500
+@@ -1,7 +1,7 @@
+ // ukrainian standard keyboard 
+ // AEN <aen@logic.ru> & Leon Kanter <leon@geon.donetsk.ua>
+ // Last Changes 2001/12/11 by Andriy Rysin <arysin@yahoo.com>
+-// $XFree86: xc/programs/xkbcomp/symbols/ua,v 1.3 2003/02/15 22:27:05 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/ua,v 1.2 2002/01/14 18:30:11 dawes Exp $
+ 
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+@@ -139,8 +139,6 @@
+                         [               8,        asterisk      ]       };
+     key <AB10> {        [           slash,        question      ],
+                         [          period,           comma      ]       };
+-    key <BKSL> {        [       backslash,             bar      ],
+-                        [       backslash,           slash      ]       };
+ 
+ //    key	<AC02> {	[		s,		 S	],
+ //			[     Ukrainian_i,     Ukrainian_I	]	};
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/us /usr/X11R6/lib/X11/xkb/symbols/us
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/us	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/us	2003-03-20 22:01:42.000000000 -0500
+@@ -6,7 +6,7 @@
+ // uses the punctuation keys configurations common on PC 
+ // keyboards (e.g. key <ABO9> is { [ period greater ] })
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/us,v 3.12 2002/11/20 04:49:03 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/us,v 3.11 2001/08/17 13:27:58 dawes Exp $
+ 
+ partial hidden alphanumeric_keys modifier_keys 
+ xkb_symbols "basic" {
+@@ -28,10 +28,7 @@
+     key <AE10> {	[	  0,	parenright	]	};
+     key <AE11> {	[     minus,	underscore	]	};
+     key <AE12> {	[     equal,	plus		]	};
+-    key <BKSP> {
+-	type="CTRL+ALT",
+-	symbols[Group1]= [ BackSpace,	Terminate_Server ]
+-    };
++    key <BKSP> {	[ 	BackSpace		]	};
+ 
+     key  <TAB> {	[ 	Tab,	ISO_Left_Tab	]	};
+     key <AD01> {	[	  q,	Q 		]	};
+@@ -89,7 +86,6 @@
+ // defines the "extra" (right) modifier keys, function keys, cursor,
+ // edit, and keypad keys.
+ xkb_symbols "generic101" {
+-    include "srvr_ctrl(xfree86)"
+     include "us(basic)"
+     key <RTSH> {	[ 	Shift_R		]	};
+     key <LALT> {	[ 	Alt_L	 	]	};
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/us_group2 /usr/X11R6/lib/X11/xkb/symbols/us_group2
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/us_group2	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/us_group2	2003-03-20 22:01:42.000000000 -0500
+@@ -10,7 +10,7 @@
+ // use mainly in cz* and sk* keyboards.
+ // Modified by Jan Holesovsky <kendy@suse.cz>, 2001
+ 
+-// $XFree86: xc/programs/xkbcomp/symbols/us_group2,v 1.3 2002/11/20 04:49:03 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/us_group2,v 1.1 2001/10/01 14:04:16 eich Exp $
+ 
+ partial hidden alphanumeric_keys modifier_keys 
+ xkb_symbols "basic" {
+@@ -32,10 +32,7 @@
+     key <AE10> {   [],	[	  0,	parenright	]	};
+     key <AE11> {   [],	[     minus,	underscore	]	};
+     key <AE12> {   [],	[     equal,	plus		]	};
+-    key <BKSP> {
+-	type="CTRL+ALT",
+-	symbols[Group2]= [ BackSpace,	Terminate_Server ]
+-    };
++    key <BKSP> {   [],	[ 	BackSpace		]	};
+ 
+     key  <TAB> {   [],	[ 	Tab,	ISO_Left_Tab	]	};
+     key <AD01> {   [],	[	  q,	Q 		]	};
+@@ -79,7 +76,7 @@
+     key <BKSL> {   [],	[ backslash,	bar		]	};
+ 
+     key <LCTL> {   [],	[ 	 Control_L		]	};
+-    key <SPCE> {   [],	[     space,    space		]	};
++    key <SPCE> {   [],	[ 	 space			]	};
+     // End alphanumeric section
+ 
+     // begin modifier mappings
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/us_group3 /usr/X11R6/lib/X11/xkb/symbols/us_group3
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/us_group3	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/us_group3	2003-03-20 22:01:42.000000000 -0500
+@@ -4,7 +4,7 @@
+ // so that the US keyboard would show as Group 3 on the keymap.
+ // I am reachable at eric_moreau@compuserve.com
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/us_group3,v 1.4 2002/11/25 14:05:06 eich Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/us_group3,v 1.2 2000/06/15 20:34:15 dawes Exp $
+ //
+ // Original Header follows:
+ //
+@@ -36,10 +36,7 @@
+     key <AE10> {	[], [], [	  0,	parenright	]	};
+     key <AE11> {	[], [], [     minus,	underscore	]	};
+     key <AE12> {	[], [], [     equal,	plus		]	};
+-    key <BKSP> {
+-	type="CTRL+ALT",
+-	symbols[Group3]= [ BackSpace,	Terminate_Server ]
+-    };
++    key <BKSP> {	[], [], [ 	BackSpace		]	};
+ 
+     key  <TAB> {	[], [], [ 	Tab,	ISO_Left_Tab	]	};
+     key <AD01> {	[], [], [	  q,	Q 		]	};
+@@ -281,7 +278,3 @@
+     include "us_group3(pc104compose)"
+     key <LSGT> {	[], [], [      less,    greater		]	};
+ };
+-// Override broken Numlock key on some IBM keyboards 
+-xkb_symbols "ibm_space_saver" { 
+-    key <NMLK> {        [  Num_Lock, Num_Lock   ]       }; 
+-}; 
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/us_intl /usr/X11R6/lib/X11/xkb/symbols/us_intl
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/us_intl	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/us_intl	2003-03-20 22:01:42.000000000 -0500
+@@ -1,5 +1,5 @@
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/us_intl,v 1.5 2002/04/04 14:05:59 eich Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/us_intl,v 1.4.4.1 2002/08/26 21:43:24 paulo Exp $
+ //
+ // Dead-keys definition for a very simple US/ASCII layout.
+ // by Conectiva (http://www.conectiva.com.br)
+@@ -36,6 +36,8 @@
+     // Alphanumeric section
+     key <TLDE> {	[ dead_grave,	dead_tilde	],
+ 			[      grave,	asciitilde	]	};
++    key <AE05> {	[	  5,	percent		],
++			[   EuroSign			]	};
+     key <AE06> {	[	  6,	dead_circumflex	],
+ 			[ asciicircum,	asciicircum	]	};
+     key <AC11> {	[ dead_acute,	dead_diaeresis	],
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/vn /usr/X11R6/lib/X11/xkb/symbols/vn
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols/vn	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols/vn	2003-03-20 22:01:42.000000000 -0500
+@@ -15,7 +15,7 @@
+ // aclark (2000-07-27)
+ // I've modified this to refer to the correct keysyms in the server
+ //
+-// $XFree86: xc/programs/xkbcomp/symbols/vn,v 1.5 2003/02/04 02:32:48 dawes Exp $
++// $XFree86: xc/programs/xkbcomp/symbols/vn,v 1.3 2001/11/21 22:28:52 dawes Exp $
+ 
+ partial modifier_keys
+ xkb_symbols "toggle" {
+@@ -29,8 +29,6 @@
+ partial default alphanumeric_keys  
+ xkb_symbols "basic" {
+ 
+-    include "srvr_ctrl(xfree86)"
+-
+     name[Group1]= "US/ASCII";
+     name[Group2]= "Vietnamese";
+     
+@@ -63,10 +61,8 @@
+ 			[     minus,	underscore	]	};
+     key <AE12> {	[     equal,	plus		],
+ 			[     equal,	plus		]	};
+-    key <BKSP> {
+-	type="CTRL+ALT",
+-	symbols[Group1]= [ BackSpace,	Terminate_Server ]
+-    };
++    key <BKSP> {	[ 	BackSpace		],
++			[	BackSpace		]	};
+ 
+     key  <TAB> {	[ 	Tab,	ISO_Left_Tab	],
+ 			[	Tab,	ISO_Left_Tab	]	};
+diff -urN xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols.dir /usr/X11R6/lib/X11/xkb/symbols.dir
+--- xfree-4.3.0-r1/usr/X11R6/lib/X11/xkb/symbols.dir	2003-03-10 12:31:52.000000000 -0500
++++ /usr/X11R6/lib/X11/xkb/symbols.dir	2003-03-20 22:01:42.000000000 -0500
+@@ -6,8 +6,6 @@
+ --p----- -m------ altwin(hyper_win)
+ --p----- -m------ altwin(menu)
+ -dp----- a------- am(basic)
+--------- -------- am(old)
+--------- -------- am(phonetic)
+ -dp----- a------- ar(basic)
+ --p----- a------- ar(qwerty)
+ --p----- a------- ar(azerty)
+@@ -23,7 +21,6 @@
+ --p----- a------- be(sundeadkeys)
+ --p----- a------- be(nodeadkeys)
+ -dp----- a------- ben(basic)
+--------- -------- ben(probhat)
+ --p----- a------- bg(bds_enhanced)
+ --p----- a------- bg(phonetic_enhanced)
+ -dp----- a------- bg(bds)
+@@ -32,7 +29,6 @@
+ --p----- a------- br(Sundeadkeys)
+ --p----- a------- br(sundeadkeys)
+ --p----- a------- br(nodeadkeys)
+--dp----- a------- bs(basic)
+ -dp----- a------- by(basic)
+ --p----- a------- by(winkeys)
+ -dp----- a------- ca(basic)
+@@ -99,16 +95,12 @@
+ --p----- a------- dk(nodeadkeys)
+ -dp----- a------- dvorak(basic)
+ --p----- a------- dvorak(no)
+---p----- a------- dvorak(se)
+---p----- a------- dvorak(sv)
+ -dp----- a------- ee(basic)
+ --p----- a------- ee(Sundeadkeys)
+ --p----- a------- ee(sundeadkeys)
+ --p----- a------- ee(nodeadkeys)
+ -dp----- a---g--- el(basic)
+ h-p----- a---g--- el(bare)
+---p----- a---g--- el(extended)
+---p----- a---g--- el(polytonic)
+ --p----- a---g--- el(Sundeadkeys)
+ --p----- a---g--- el(sundeadkeys)
+ --p----- a---g--- el(nodeadkeys)
+@@ -151,7 +143,6 @@
+ -dp----- a------- ge_la(basic)
+ -dp----- a------- ge_ru(basic)
+ --p----- -m------ group(switch)
+---p----- -m------ group(lswitch)
+ --p----- -m------ group(win_switch)
+ --p----- -m------ group(lwin_switch)
+ --p----- -m------ group(rwin_switch)
+@@ -164,13 +155,6 @@
+ --p----- -m------ group(menu_toggle)
+ --p----- -m------ group(lwin_toggle)
+ --p----- -m------ group(rwin_toggle)
+---p----- -m------ group(ctrls_toggle)
+---p----- -m------ group(alts_toggle)
+---p----- -m------ group(lshift_toggle)
+---p----- -m------ group(rshift_toggle)
+---p----- -m------ group(lalt_toggle)
+---p----- -m------ group(lctrl_toggle)
+---p----- -m------ group(rctrl_toggle)
+ -dp----- a------- guj(basic)
+ -dp----- a------- gur(basic)
+ -dp----- a------- hr(basic)
+@@ -208,92 +192,23 @@
+ --p----- a------- hu_US(Sundeadkeys)
+ --p----- a------- hu_US(sundeadkeys)
+ --p----- a------- hu_US(nodeadkeys)
+--dp----- -------- hu_qwerty(default)
+--dp----- a------- ie(basic)
+---p----- a------- ie(laptop)
+---p----- a------- ie(CloGaelach)
+---p----- a------- ie(CloGaelachLaptop)
+---p----- a------- ie(UnicodeExpert)
+ -dp----- a------- il(basic)
+ -dp----- a------- il_phonetic(basic)
+---p----- a------- inet(airkey)
+---p----- a------- inet(acpi)
+---p----- a------- inet(scorpius)
+---p----- a------- inet(brother)
+---p----- a------- inet(btc5113rf)
+---p----- a------- inet(btc5126t)
+---p----- a------- inet(btc9000)
+---p----- a------- inet(btc9000a)
+---p----- a------- inet(cherryblue)
+---p----- a------- inet(cherrybluea)
+---p----- a------- inet(chicony)
+---p----- a------- inet(chicony9885)
+---p----- a------- inet(compaqeak8)
+---p----- a------- inet(compaqik7)
+---p----- a------- inet(compaqik13)
+---p----- a------- inet(compaqik18)
+---p----- a------- inet(armada)
+---p----- a------- inet(presario)
+---p----- a------- inet(ipaq)
+---p----- a------- inet(dell)
+---p----- a------- inet(inspiron)
+---p----- a------- inet(dexxa)
+---p----- a------- inet(diamond)
+---p----- a------- inet(ennyah_dkb1008)
+---p----- a------- inet(genius)
+---p----- a------- inet(hpi6)
+---p----- a------- inet(hp2501)
+---p----- a------- inet(hp2505)
+---p----- a------- inet(hp5181)
+---p----- a------- inet(hpxe3gc)
+---p----- a------- inet(hpxe3gf)
+---p----- a------- inet(hpxt1000)
+---p----- a------- inet(hpzt11xx)
+---p----- a------- inet(hpxe4xxx)
+---p----- a------- inet(hp500fa)
+---p----- a------- inet(hp5xx)
+---p----- a------- inet(honeywell_euroboard)
+---p----- a------- inet(rapidaccess)
+---p----- a------- inet(rapidaccess2)
+---p----- a------- inet(rapidaccess2a)
+---p----- a------- inet(ltcd)
+---p----- a------- inet(logicdit)
+---p----- a------- inet(logicdp)
+---p----- a------- inet(logicdpa)
+---p----- a------- inet(logicdpa2)
+---p----- a------- inet(logicdo)
+---p----- a------- inet(logicfn)
+---p----- a------- inet(logicdn)
+---p----- a------- inet(logidak)
+---p----- a------- inet(logiik)
++--p----- a------- inet(hp)
++--p----- a------- inet(compaq)
+ --p----- a------- inet(itouch)
+---p----- a------- inet(logiitc)
+---p----- a------- inet(logiik)
+---p----- a------- inet(logiink)
+---p----- a------- inet(itouchin)
+---p----- a------- inet(mx1998)
+---p----- a------- inet(mx2500)
+---p----- a------- inet(mx2750)
+---p----- a------- inet(microsoftinet)
++--p----- a------- inet(logiinetnav)
++--p----- a------- inet(logicordless)
++--p----- a------- inet(logiinternet)
++--p----- a------- inet(geniuscomfy)
+ --p----- a------- inet(microsoftpro)
+---p----- a------- inet(microsoftprose)
+---p----- a------- inet(microsoftoffice)
+---p----- a------- inet(oretec)
+---p----- a------- inet(propeller)
+---p----- a------- inet(qtronix)
+---p----- a------- inet(samsung4500)
+---p----- a------- inet(samsung4510)
+---p----- a------- inet(sk1300)
+---p----- a------- inet(sk2500)
+---p----- a------- inet(sk6200)
+---p----- a------- inet(sk7100)
+---p----- a------- inet(sven)
+---p----- a------- inet(symplon)
+---p----- a------- inet(toshiba_s3000)
+---p----- a------- inet(trust)
+---p----- a------- inet(trustda)
+---p----- a------- inet(yahoo)
++-------- -------- inet(btc9000)
++--p----- a------- inet(rapidaccess)
++--p----- a------- inet(rapidaccess2)
++--p----- a------- inet(chicony)
++--p----- a------- inet(dell)
+ -dp----- a------- ir(basic)
++--p----- a------- ir(digits)
+ -dp----- a------- is(basic)
+ --p----- a------- is(Sundeadkeys)
+ --p----- a------- is(sundeadkeys)
+@@ -312,7 +227,6 @@
+ --p----- a------- it(nodeadkeys)
+ -dp----- a------- iu(basic)
+ -d------ -------- jp(jp106)
+--dp----- a------- kan(basic)
+ h-p----- --k----- keypad(overlay)
+ h-p----- --k----- keypad(overlay1)
+ h-p----- --k----- keypad(overlay2)
+@@ -320,12 +234,6 @@
+ --p----- a------- la(Sundeadkeys)
+ --p----- a------- la(sundeadkeys)
+ --p----- a------- la(nodeadkeys)
+---p----- -m------ level3(switch)
+---p----- -m------ level3(menu_switch)
+---p----- -m------ level3(win_switch)
+---p----- -m------ level3(lwin_switch)
+---p----- -m------ level3(rwin_switch)
+--dp----- a------- lo(basic)
+ h-p----- -m------ lock(shift)
+ h-p----- -m------ lock(caps)
+ h-p----- -m------ lock(group)
+@@ -359,11 +267,7 @@
+ --p----- a------- mk(group1)
+ --p----- a------- mk(pc104)
+ --p----- a------- mk(win)
+--dp----- a------- ml(basic)
+---p----- a------- ml(mlplusnum)
+ -dp----- a------- mm(basic)
+--dp----- a------- mn(basic)
+---p----- a------- mn(mn(basic))
+ -dp----- a------- mt(basic)
+ -dp----- a------- mt_us(basic)
+ -dp----- a------- nl(basic)
+@@ -371,13 +275,6 @@
+ --p----- a------- no(Sundeadkeys)
+ --p----- a------- no(sundeadkeys)
+ --p----- a------- no(nodeadkeys)
+--dp----- a------- ogham(basic)
+---p----- a------- ogham(laptop)
+---p----- a------- ogham(is434)
+---p----- a------- ogham(IS434)
+---p----- a------- ogham(is434laptop)
+---p----- a------- ogham(IS434laptop)
+--dp----- a------- ori(basic)
+ -dp----- -m------ pc104(altmeta)
+ -------- -------- pc104(compose)
+ --p----- -m------ pc104(menu)
+@@ -395,13 +292,6 @@
+ --p----- a------- pt(nodeadkeys)
+ --p----- a------- ralt(mode_switch)
+ -dp----- a------- ro(basic)
+--------- -------- ro(comma)
+---p----- a------- ro2(basic)
+--d------ -------- ro2(pc101)
+--------- -------- ro2(pc104)
+--------- -------- ro2(pc105)
+--------- -------- ro2(alt_is_meta)
+--------- -------- ro2(comma)
+ -dp----- a------- ru(basic)
+ --p----- a------- ru(winkeys)
+ --p----- a------- ru(typewriter)
+@@ -424,12 +314,6 @@
+ --p----- a------- sk(basic)
+ --p----- a------- sk_qwerty(basic)
+ -dp----- a------- sr(basic)
+---p----- --kf---- srvr_ctrl(xfree86)
+---p----- --k----- srvr_ctrl(stdkeypad)
+---p----- ---f---- srvr_ctrl(fkey2vt)
+--dp----- a------- syr(basic)
+--dp----- a------- syr_phonetic(basic)
+--dp----- a------- tel(basic)
+ -dp----- a------- th(basic)
+ -dp----- a------- tj(basic)
+ --p----- a------- tj(winkeys)
+@@ -473,6 +357,7 @@
+ -------- -------- us_group2(pc_universal)
+ -------- -------- us_group2(pc_universal_euro)
+ -------- -------- us_group2(pc_universal_compose)
++-dp----- a------- us_intl(basic)
+ h-p----- am------ us_group3(basic)
+ -------- -------- us_group3(generic101)
+ -d------ -------- us_group3(pc101)
+@@ -490,8 +375,6 @@
+ -------- -------- us_group3(pc_universal)
+ -------- -------- us_group3(pc105euro)
+ -------- -------- us_group3(pc105compose)
+--------- -------- us_group3(ibm_space_saver)
+--dp----- a------- us_intl(basic)
+ --p----- -m------ vn(toggle)
+ -dp----- a------- vn(basic)
+ -------- -------- vn(generic101)
+@@ -562,165 +445,6 @@
+ --p----- a------- macintosh/se(nodeadkeys)
+ -------- -------- macintosh/us(extended)
+ -d------ -------- nec/jp(pc98)
+--dp----- a------- pc/al(basic)
+--dp----- a------- pc/am(basic)
+--dp----- a------- pc/ar(basic)
+---p----- a------- pc/ar(qwerty)
+---p----- a------- pc/ar(azerty)
+---p----- a------- pc/ar(digits)
+---p----- a------- pc/ar(qwerty_digits)
+---p----- a------- pc/ar(azerty_digits)
+--dp----- a------- pc/be(basic)
+---p----- a------- pc/be(iso-alternate)
+---p----- a------- pc/be(Sundeadkeys)
+---p----- a------- pc/be(sundeadkeys)
+---p----- a------- pc/be(nodeadkeys)
+--dp----- a------- pc/ben(basic)
+--------- -------- pc/ben(probhat)
+--dp----- a------- pc/bg(bds)
+---p----- a------- pc/bg(phonetic)
+--------- -------- pc/br(abnt2)
+---p----- a------- pc/br(nodeadkeys)
+--dp----- a------- pc/by(basic)
+---p----- a------- pc/by(winkeys)
+---p----- a------- pc/cz(basic)
+--------- -------- pc/cz(bksl)
+---p----- a------- pc/cz_qwerty(basic)
+--------- -------- pc/cz_qwerty(bksl)
+--------- -------- pc/de(basic)
+---p----- a------- pc/de(nodeadkeys)
+---p----- a------- pc/de(deadgraveacute)
+---p----- a------- pc/de(deadacute)
+--dp----- a------- pc/dev(basic)
+--dp----- a------- pc/dk(basic)
+---p----- a------- pc/dk(nodeadkeys)
+--dp----- a------- pc/dvorak(basic)
+---p----- a------- pc/dvorak(no)
+---p----- a------- pc/dvorak(se)
+---p----- a------- pc/dvorak(sv)
+--dp----- a------- pc/ee(basic)
+---p----- a------- pc/ee(nodeadkeys)
+--dp----- a---g--- pc/el(basic)
+-h-p----- a---g--- pc/el(bare)
+---p----- a---g--- pc/el(extended)
+---p----- a---g--- pc/el(polytonic)
+---p----- a---g--- pc/el(nodeadkeys)
+--dp----- a------- pc/en_US(basic)
+--------- -------- pc/en_US(nodeadkeys)
+--dp----- a------- pc/es(basic)
+---p----- a------- pc/es(Sundeadkeys)
+---p----- a------- pc/es(sundeadkeys)
+---p----- a------- pc/es(nodeadkeys)
+--dp----- a------- pc/fi(basic)
+---p----- a------- pc/fi(fi)
+---p----- a------- pc/fi(nodeadkeys)
+--dp----- a------- pc/fr(basic)
+---p----- a------- pc/fr(Sundeadkeys)
+---p----- a------- pc/fr(sundeadkeys)
+---p----- a------- pc/fr(nodeadkeys)
+--dp----- a------- pc/fr-latin9(basic)
+---p----- a------- pc/fr-latin9(Sundeadkeys)
+---p----- a------- pc/fr-latin9(sundeadkeys)
+---p----- a------- pc/fr-latin9(nodeadkeys)
+--dp----- a------- pc/gb(basic)
+--dp----- a------- pc/ge_la(basic)
+--dp----- a------- pc/ge_ru(basic)
+--dp----- a------- pc/guj(basic)
+--dp----- a------- pc/gur(basic)
+--dp----- a------- pc/hr(basic)
+--dp----- a------- pc/ie(basic)
+---p----- a------- pc/ie(laptop)
+---p----- a------- pc/ie(CloGaelach)
+---p----- a------- pc/ie(CloGaelachLaptop)
+---p----- a------- pc/ie(UnicodeExpert)
+--dp----- a------- pc/il(basic)
+---p----- a------- pc/il(lyx)
+---p----- a------- pc/il(si1452)
+--dp----- a------- pc/il_phonetic(basic)
+--dp----- a------- pc/ir(basic)
+--dp----- a------- pc/is(basic)
+---p----- a------- pc/is(Sundeadkeys)
+---p----- a------- pc/is(nodeadkeys)
+--dp----- a------- pc/it(basic)
+---p----- a------- pc/it(nodeadkeys)
+--dp----- a------- pc/iu(basic)
+--dp----- a------- pc/kan(basic)
+--dp----- a------- pc/la(basic)
+---p----- a------- pc/la(Sundeadkeys)
+---p----- a------- pc/la(sundeadkeys)
+---p----- a------- pc/la(nodeadkeys)
+--dp----- -------- pc/latin(basic)
+---p----- -------- pc/latin(type2)
+---p----- -------- pc/latin(type3)
+---p----- -------- pc/latin(type4)
+---p----- -------- pc/latin(nodeadkeys)
+---p----- -------- pc/latin(type2_nodeadkeys)
+---p----- -------- pc/latin(type3_nodeadkeys)
+---p----- -------- pc/latin(type4_nodeadkeys)
+--dp----- a------- pc/lo(basic)
+--dp----- am------ pc/lt(basic)
+---p----- am------ pc/lt(lt_us)
+---p----- am------ pc/lt(lt_std)
+--dp----- am------ pc/lv(basic)
+--dp----- a------- pc/mk(basic)
+---p----- a------- pc/mk(pc104)
+--dp----- a------- pc/ml(basic)
+---p----- a------- pc/ml(mlplusnum)
+--dp----- a------- pc/mm(basic)
+--dp----- a------- pc/mt(basic)
+--dp----- a------- pc/mt_us(basic)
+--dp----- a------- pc/nl(basic)
+---p----- a------- pc/no(basic)
+---p----- a------- pc/no(nodeadkeys)
+--dp----- a------- pc/ogham(basic)
+---p----- a------- pc/ogham(laptop)
+---p----- a------- pc/ogham(is434)
+---p----- a------- pc/ogham(IS434)
+---p----- a------- pc/ogham(is434laptop)
+---p----- a------- pc/ogham(IS434laptop)
+--dp----- a------- pc/ori(basic)
+-h-p----- am------ pc/pc(basic)
+--------- -------- pc/pc(pc101)
+--------- -------- pc/pc(pc102)
+--d------ -------- pc/pc(pc104)
+--------- -------- pc/pc(pc105)
+--dp----- a------- pc/pl(basic)
+--dp----- a------- pc/pl2(basic)
+--dp----- a------- pc/pt(basic)
+---p----- a------- pc/pt(Sundeadkeys)
+---p----- a------- pc/pt(sundeadkeys)
+---p----- a------- pc/pt(nodeadkeys)
+--dp----- a------- pc/ro(basic)
+--dp----- a------- pc/ru(basic)
+---p----- a------- pc/ru(winkeys)
+---p----- a------- pc/ru(typewriter)
+---p----- a------- pc/ru(phonetic)
+---p----- a------- pc/sapmi(basic)
+--------- -------- pc/sapmi(sefi)
+---p----- a------- pc/sapmi(nodeadkeys)
+---p----- a------- pc/se(basic)
+---p----- a------- pc/se(se)
+---p----- a------- pc/se(nodeadkeys)
+--dp----- a------- pc/si(basic)
+---p----- a------- pc/sk(basic)
+--------- -------- pc/sk(bksl)
+---p----- a------- pc/sk_qwerty(basic)
+--------- -------- pc/sk_qwerty(bksl)
+--dp----- a------- pc/sr(basic)
+--dp----- a------- pc/syr(basic)
+--dp----- a------- pc/syr_phonetic(basic)
+--dp----- a------- pc/tel(basic)
+--dp----- a------- pc/th(basic)
+--dp----- a------- pc/tj(basic)
+--dp----- a------- pc/tml(basic)
+--dp----- -------- pc/tr(basic)
+---p----- -------- pc/tr(tr_f)
+--dp----- a------- pc/ua(basic)
+---p----- a------- pc/ua(winkeys)
+---p----- a------- pc/ua(typewriter)
+---p----- a------- pc/ua(phonetic)
+-hdp----- am------ pc/us(basic)
+--dp----- a------- pc/yu(basic)
+ -------- -------- sgi/jp(jp106)
+ -------- -------- sgi/jp(alternate106)
+ -------- -------- sony/us(nwp5461)
