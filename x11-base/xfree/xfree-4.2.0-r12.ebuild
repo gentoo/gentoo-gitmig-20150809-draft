@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.3 2002/06/10 17:51:41 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.4 2002/06/26 20:26:41 azarah Exp $
 
 FT2_VER=2.0.9
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
@@ -99,7 +99,15 @@ src_unpack () {
 	cp ${FILESDIR}/${PVR}/site.def config/cf/host.def
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
 		>> config/cf/host.def
-	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
+
+	if [ "`gcc -dumpversion`" != "2.95.3" ]
+	then
+		# should fix bug #4189
+		echo "#define OptimizedCDebugFlags ${CFLAGS} -fno-merge-constants" >> \
+			config/cf/host.def
+	else
+		echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
+	fi
 	echo "#define GccWarningOptions -pipe" >> config/cf/host.def
 
 	if [ "${ARCH}" = "x86" ]

@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.27 2002/06/24 22:12:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.28 2002/06/26 20:26:41 azarah Exp $
+
+  26 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Add "-fno-merge-constants" to OptimizedCDebugFlags if the gcc in use is
+  not version 2.95.3.  This should resolve bug #4189.
 
   25 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
 
