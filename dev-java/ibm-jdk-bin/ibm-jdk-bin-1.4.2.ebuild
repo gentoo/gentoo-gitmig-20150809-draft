@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.13 2004/10/25 15:57:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.14 2004/10/28 03:14:37 tgall Exp $
 
 inherit java eutils
 
@@ -17,7 +17,7 @@ PROVIDE="virtual/jdk-1.4.2
 	virtual/java-scheme-2"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ppc64"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
