@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/psi-themes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.11 2004/06/24 23:36:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.12 2004/12/31 13:28:16 humpback Exp $
+
+  31 Dec 2004; Gustavo Felisberto <humpback@gentoo.org>; :
+  New version of the package. Most of the work and packaging was done by Przemek
+  Maciag. This is my last contribution this year :) Time to go have some fun.
 
   19 Jun 2004; <pyrania@gentoo.org> psi-themes-0.9.1.ebuild:
   Added IUSE.
