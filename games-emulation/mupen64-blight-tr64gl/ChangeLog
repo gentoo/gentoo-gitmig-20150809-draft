@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/mupen64-blight-tr64gl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-tr64gl/ChangeLog,v 1.4 2005/01/23 02:15:23 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-tr64gl/ChangeLog,v 1.5 2005/01/31 07:13:02 mr_bones_ Exp $
+
+*mupen64-blight-tr64gl-0.8.7_pre1 (31 Jan 2005)
+
+  31 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  mupen64-blight-tr64gl-0.8.7_pre1.ebuild:
+  add missing src_unpack function (bug #79960)
 
   22 Jan 2005; Daniel Goller <morfic@gentoo.org> :
   Bump to new version available
