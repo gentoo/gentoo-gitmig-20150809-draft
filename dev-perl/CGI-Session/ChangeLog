@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/CGI-Session
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.1 2005/04/06 18:18:42 mcummings Exp $
+
+*CGI-Session-3.95 (06 Apr 2005)
+
+  06 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +CGI-Session-3.95.ebuild:
+  New ebuild, bug 54025 revisited
+

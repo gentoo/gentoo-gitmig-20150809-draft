@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 77186b79ed95a2282b2d8b504029793a CGI-Session-3.95.ebuild 521
+MD5 b385df5f249e63ccd848bef079704359 ChangeLog 382
+MD5 9b5835c31cdd4ee1a07c9b18914e77f7 files/digest-CGI-Session-3.95 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCVCgXtG5z4I8BtQoRAs4LAJ0f5DNeB3h47s0Qsmf2ht2reivPyQCfRQql
+/hsAheSaYUi9DzyArvFs7ao=
+=/DO0
+-----END PGP SIGNATURE-----
