@@ -203,7 +203,6 @@ if len(sys.argv)>=2:
 		if pretend:
 			mydepgraph.display(mydepgraph.altlist())
 		else:
-			tempclean()
 			mydepgraph.merge(mydepgraph.altlist())
 		sys.exit(0)
 
@@ -224,5 +223,4 @@ for mypkg in sys.argv[1:]:
 	if pretend:
 		mydepgraph.display(mydepgraph.altlist())
 	else:
-		tempclean()
 		mydepgraph.merge(mydepgraph.altlist())
