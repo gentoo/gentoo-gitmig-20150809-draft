@@ -1,0 +1,24 @@
+--- libc/sunrpc/xdr_array.c	2001/08/17 04:48:31	1.5
++++ libc/sunrpc/xdr_array.c	2002/08/02 01:35:39	1.5.2.1
+@@ -45,6 +45,7 @@
+ #include <rpc/types.h>
+ #include <rpc/xdr.h>
+ #include <libintl.h>
++#include <limits.h>
+ 
+ #ifdef USE_IN_LIBIO
+ # include <wchar.h>
+@@ -81,7 +82,11 @@
+       return FALSE;
+     }
+   c = *sizep;
+-  if ((c > maxsize) && (xdrs->x_op != XDR_FREE))
++  /*
++   * XXX: Let the overflow possibly happen with XDR_FREE because mem_free()
++   * doesn't actually use its second argument anyway.
++   */
++  if ((c > maxsize || c > UINT_MAX / elsize) && (xdrs->x_op != XDR_FREE))
+     {
+       return FALSE;
+     }
+

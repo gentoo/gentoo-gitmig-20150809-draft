@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.10 2002/07/16 04:15:00 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.11 2002/08/02 21:25:22 aliz Exp $
+
+*glibc-2.2.5-r6 (02 Aug 2002)
+
+  02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org>
+  Added patch for sunrpc overflow.
 
 *glibc-2.2.5-r5 (14 Jul 2002)
 
