@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.11.ebuild,v 1.5 2003/06/06 23:58:22 rphillips Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.11.ebuild,v 1.6 2003/08/06 08:06:45 vapier Exp $
 
 DESCRIPTION="Developer support for the Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
