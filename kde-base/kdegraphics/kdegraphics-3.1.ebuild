@@ -1,22 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1.ebuild,v 1.5 2003/02/02 16:33:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1.ebuild,v 1.6 2003/02/12 16:57:06 hannes Exp $
 inherit kde-dist 
 
+IUSE="gphoto tetex scanner"
 DESCRIPTION="KDE graphics-related apps"
 
 KEYWORDS="x86 ppc ~sparc"
 
-newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 >=media-libs/libgpio-20010607 )
-	    sys-devel/perl
-	    scanner? ( media-gfx/sane-backends )
-	    tetex? ( >=app-text/tetex-1.0.7 )
-	    media-libs/imlib
-	    app-text/ghostscript
-	    virtual/glut virtual/opengl
-	    media-libs/tiff
-	    !media-gfx/kpovmodeler" # kpovmodeler's old separate ebuild
-#	    x86? ( scanner? sys-libs/libieee1284 )	    
+newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 )
+	sys-devel/perl
+	scanner? ( media-gfx/sane-backends )
+	tetex? ( >=app-text/tetex-1.0.7 )
+	media-libs/imlib
+	app-text/ghostscript
+	virtual/glut virtual/opengl
+	media-libs/tiff
+	!media-gfx/kpovmodeler" # kpovmodeler's old separate ebuild
+#	x86? ( scanner? sys-libs/libieee1284 )	    
 
 RDEPEND="$RDEPEND app-text/xpdf"
 
