@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/wily
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.1 2003/03/11 08:45:23 absinthe Exp $
+
+  11 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
+
+  Initial import.  Ebuild submitted by Burton Samograd
+  <kruhft@kruhft.dyndns.org>, closing bug #16440.  Many thanks!
+  Wily is an emulation of ACME, Plan9's hybrid window system, 
+  shell and editor for programmers.
