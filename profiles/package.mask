@@ -1107,7 +1107,7 @@ gnome-extra/libgnomecanvasmm
 gnome-extra/gconfmm
 gnome-extra/libgnomemm
 gnome-extra/libgnomeuimm
-
+gnome-extra/libglademm
 
 ## Non gnome-core packages, applications, extra libraries and so on
 
