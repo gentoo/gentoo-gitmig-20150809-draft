@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.6 2002/08/13 23:00:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.7 2002/08/15 16:46:57 raker Exp $
 
 *hylafax-4.1.3 (12 Aug 2002)
+
+  15 Aug 2002; Nick Hadaway <raker@gentoo.org> hylafax-4.1.3.ebuild :
+  Added /etc/init.d/hylafax permissions fix.
 
   12 Aug 2002; Nick Hadaway <raker@gentoo.org> hylafax-4.1.3.ebuild,
   files/digest-hylafax-4.1.3 :
