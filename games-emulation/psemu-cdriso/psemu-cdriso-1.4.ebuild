@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.4 2004/05/27 01:44:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.5 2004/06/09 00:28:21 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -39,4 +39,3 @@ src_install() {
 	doexe cfgCdrIso
 	prepgamesdirs
 }
-
