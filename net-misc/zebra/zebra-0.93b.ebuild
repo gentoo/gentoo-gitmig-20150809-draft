@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b.ebuild,v 1.8 2004/07/01 22:16:07 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b.ebuild,v 1.9 2004/07/15 03:45:50 agriffis Exp $
 
-S=${WORKDIR}/${P}
 IUSE="pam snmp ipv6"
 
 DESCRIPTION="Multithreaded TCP/IP Routing Software that supports BGP-4, RIPv1, RIPv2 and OSPFv2"
