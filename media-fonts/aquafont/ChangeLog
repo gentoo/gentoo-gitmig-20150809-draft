@@ -1,8 +1,11 @@
 # ChangeLog for media-fonts/aquafont
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.2 2003/07/30 23:49:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.3 2003/08/14 21:13:29 usata Exp $
 
 *aquafont-2.7 (28 Jul 2003)
+
+  15 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> aquafont-2.7.ebuild:
+  Marked stable on all arch
 
   31 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> aquafont-2.7.ebuild:
   Added ~alpha, ~sparc and ~ppc to KEYWORDS, virtual/x11 to (R)DEPEND.
