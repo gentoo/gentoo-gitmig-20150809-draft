@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.16 2004/09/25 06:05:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.17 2004/11/30 22:08:57 vapier Exp $
+
+*iproute2-2.6.9.20041019 (30 Nov 2004)
+
+  30 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/2.6.9.20041019-esqf.patch, +files/2.6.9.20041019-wrr.patch,
+  +iproute2-2.6.9.20041019.ebuild:
+  Version bump #72961 and include esqf/wrr algorithms #68948.
 
 *iproute2-2.6.9.20040831 (25 Sep 2004)
 
