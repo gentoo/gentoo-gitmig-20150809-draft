@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.40 2004/11/04 12:59:57 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.41 2004/11/11 19:24:14 kloeri Exp $
+
+  11 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> ettercap-0.7.0.ebuild:
+  ~alpha keyword.
 
   04 Nov 2004; Eldad Zack <eldad@gentoo.org> ettercap-0.7.0.ebuild:
   Problem compiling with heavy optimizations: using strip-flags. Closes #63030.
