@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.46 2003/09/03 14:24:45 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.47 2003/09/03 16:13:59 tseng Exp $
+
+  03 Sep 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
+  Added metadata.xml
 
 *openbox-3.0_alpha8 (03 Sep 2003)
 
