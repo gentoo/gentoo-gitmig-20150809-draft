@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.80 2004/02/21 07:48:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.81 2004/02/24 03:53:26 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -698,21 +698,26 @@ make_desktop_entry() {
 	local name="${2:-${PN}}"
 	local icon="${3:-${PN}.png}"
 	local type="${4}"
+	local subdir="${6}"
 	local path="${5:-${GAMES_PREFIX}}"
 	if [ -z "${type}" ]
 	then
 		case ${CATEGORY} in
 			"app-emulation")
 				type=Emulator
+				subdir="Games"
 				;;
 			"games-"*)
 				type=Game
+				subdir="Games"
 				;;
 			"net-"*)
-				type=Network;
+				type=Network
+				subdir="${type}"
 				;;
 			*)
 				type=
+				subdir=
 				;;
 		esac
 	fi
@@ -752,7 +757,7 @@ Categories=Application;${type};" > ${desktop}
 
 	if [ -d "/usr/share/applnk" ]
 	then
-		insinto /usr/share/applnk/${type}
+		insinto /usr/share/applnk/${subdir}
 		doins ${desktop}
 	fi
 
