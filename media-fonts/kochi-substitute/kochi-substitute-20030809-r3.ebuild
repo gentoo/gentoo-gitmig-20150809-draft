@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030809-r3.ebuild,v 1.5 2004/07/29 02:33:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030809-r3.ebuild,v 1.6 2004/09/29 13:04:10 lanius Exp $
 
 inherit font
 
@@ -11,7 +11,7 @@ LICENSE="free-noncomm"
 
 # naga10 has free-noncomm license
 SLOT="0"
-KEYWORDS="~ia64 ~x86 ~alpha ~sparc ~ppc ~hppa ~amd64 ~mips ppc64"
+KEYWORDS="ia64 x86 alpha sparc ppc hppa amd64 mips ppc64"
 IUSE=""
 
 S=${WORKDIR}/${PN}-${PV:0:8}
