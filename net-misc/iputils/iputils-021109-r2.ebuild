@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r2.ebuild,v 1.1 2004/04/07 06:34:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r2.ebuild,v 1.2 2004/04/20 02:39:31 vapier Exp $
 
 inherit flag-o-matic gcc gnuconfig eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 	cp ${FILESDIR}/iputils-021109-pfkey.patch include-glibc/net/pfkeyv2.h
 	use static && append-ldflags -static
 
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 	epatch ${FILESDIR}/${PV}-no-pfkey-search.patch
 	sed -i \
 		-e "/^CCOPT=/s:-O2:${CFLAGS}:" \

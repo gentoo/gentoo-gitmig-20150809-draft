@@ -1,0 +1,6 @@
+--- racoon/kmpstat.c~
++++ racoon/kmpstat.c
+@@ -368,2 +368,3 @@
+ 	default:
++		;
+ 		/* IGNORE */
