@@ -1,6 +1,26 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.291 2004/11/04 08:52:31 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.292 2004/11/05 05:38:30 urilith Exp $
+
+  05 Nov 2004; Michael Tindal <urilith@gentoo.org>
+  -files/2.0.40/40_mod_ssl.conf,
+  -files/2.0.40/41_mod_ssl.default-vhost.conf,
+  -files/2.0.40/45_mod_dav.conf, -files/2.0.40/46_mod_ldap.conf,
+  -files/2.0.40/apache2-builtin-mods, -files/2.0.40/apache2.conf,
+  -files/2.0.40/apache2.confd, -files/2.0.40/apache2.initd,
+  -files/2.0.40/apache2logserverstatus, -files/2.0.40/apache2splitlogfile,
+  -files/2.0.40/commonapache2.conf, -files/2.0.40/dynamic-vhosts.conf,
+  -files/2.0.40/gentestcrt.sh, -files/2.0.40/highperformance.conf,
+  -files/2.0.40/httpd.conf, -files/2.0.40/ssl.conf,
+  -files/2.0.40/vhosts.conf, -files/2.0.40/virtual-homepages.conf,
+  -files/2.0.48-r1/apache2.conf, -files/2.0.48-r1/apache2.confd,
+  -files/2.0.48-r1/apache2.initd, -files/2.0.48-r1/commonapache2.conf,
+  -files/2.0.49/apache2.conf, -files/2.0.49/commonapache2.conf,
+  -files/2.0.49/dynamic-vhosts.conf, -files/2.0.49/vhosts.conf,
+  -files/2.0.49/virtual-homepages.conf:
+  More cleanups to make repoman happy.  Cleaning out some stale files in files/.
+  Configuration has been moved to apache2-conf.tar.bz2 on the mirrors to stop
+  repoman from complaining about file size.  Ill get to 1.3.x later tonight.
 
   04 Nov 2004; Michael Tindal <urilith@gentoo.org>
   -files/httpd-2.0.49-ssl_engine_kernel.patch,
