@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.7 2002/10/25 13:40:04 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.8 2002/11/13 05:17:14 woodchip Exp $
+
+*hpijs-1.3 (13 Nov 2002)
+
+  13 Nov 2002; Donny Davies <woodchip@gentoo.org> : Chase latest; #10319.
 
 *hpijs-1.2.2-r1 (25 Oct 2002)
 
@@ -9,16 +13,13 @@
 
 *hpijs-1.2.2 (02 Oct 2002)
 
-  02 Sep 2002; Donny Davies <woodchip@gentoo.org> :
-  Chase latest; #8536.
+  02 Sep 2002; Donny Davies <woodchip@gentoo.org> : Chase latest; #8536.
 
 *hpijs-1.2.1 (17 Aug 2002)
 
-  08 Sep 2002; Owen Stampflee <owen@gentoo.org> :
-  Added PPC to KEYWORDS.
+  08 Sep 2002; Owen Stampflee <owen@gentoo.org> : Added PPC to KEYWORDS.
 
-  17 Aug 2002; Donny Davies <woodchip@gentoo.org> :
-  Chase latest release, close #5955.
+  17 Aug 2002; Donny Davies <woodchip@gentoo.org> : Chase latest; #5955.
 
 *hpijs-1.1 (06 Jun 2002)
 
