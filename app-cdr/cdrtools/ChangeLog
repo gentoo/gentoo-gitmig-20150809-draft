@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.56 2003/09/11 01:18:53 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.57 2003/09/11 14:43:58 pylon Exp $
+
+  11 Sep 2003; Lars Weiler <pylon@gentoo.org> cdrtools-2.01_alpha18-r1.ebuild:
+  Corrected the patching of the DVDR-patch as described in Bug 28410.
 
 *cdrtools-2.01_alpha18-r1 (11 Sep 2003)
 
