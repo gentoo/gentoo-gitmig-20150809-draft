@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/memcached-api-perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.1 2005/01/05 07:10:20 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.2 2005/01/05 07:16:39 lisa Exp $
+
+  05 Jan 2005; Lisa Seelye <lisa@gentoo.org> -Cache-Memcached-1.0.12.ebuild,
+  Cache-Memcached-1.14.ebuild:
+  bump to x86 and clean up a lil
 
 *Cache-Memcached-1.0.12 (05 Jan 2005)
 
