@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.335 2005/02/13 14:41:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.336 2005/02/13 22:32:15 spyderous Exp $
+
+  13 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2.ebuild:
+  (#81851) Clarify local cursor settings info.
 
   13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> xorg-x11-6.8.2.ebuild:
   ~alpha keyword.

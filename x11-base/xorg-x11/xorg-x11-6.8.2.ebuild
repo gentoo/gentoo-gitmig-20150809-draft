@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.5 2005/02/13 14:41:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.6 2005/02/13 22:32:15 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1926,8 +1926,9 @@ print_info() {
 	einfo "Please note that the xcursors are in /usr/share/cursors/${PN}"
 	einfo "Any custom cursor sets should be placed in that directory"
 	echo
-	einfo "If you wish to set system-wide default cursors, please set"
-	einfo "them in /usr/local/share/cursors/${PN} so that future"
+	einfo "If you wish to set system-wide default cursors, please create"
+	einfo "/usr/local/share/cursors/${PN}/default/index.theme"
+	einfo "with content: \"Inherits=theme_name\" so that future"
 	einfo "emerges will not overwrite those settings"
 	echo
 	einfo "Listening on TCP is disabled by default with startx."
