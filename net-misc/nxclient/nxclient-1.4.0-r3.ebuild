@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.4.0-r3.ebuild,v 1.1 2005/01/02 09:38:31 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.4.0-r3.ebuild,v 1.2 2005/01/28 18:03:51 greg_g Exp $
 
 inherit rpm
 
@@ -52,11 +52,9 @@ src_install() {
 	insinto /etc/env.d
 	doins ${FILESDIR}/1.3.0/50nxclient
 
-	for x in `echo /usr/kde/*` ; do
-		insinto $x/share/applnk/Internet
-		doins "usr/NX/share/applnk/NX Client for Linux/nxclient-admin.desktop"
-		doins "usr/NX/share/applnk/NX Client for Linux/nxclient-help.desktop"
-		doins "usr/NX/share/applnk/NX Client for Linux/nxclient-wizard.desktop"
-		doins "usr/NX/share/applnk/NX Client for Linux/nxclient.desktop"
-	done
+	insinto /usr/share/applnk/Internet
+	doins "usr/NX/share/applnk/NX Client for Linux/nxclient-admin.desktop"
+	doins "usr/NX/share/applnk/NX Client for Linux/nxclient-help.desktop"
+	doins "usr/NX/share/applnk/NX Client for Linux/nxclient-wizard.desktop"
+	doins "usr/NX/share/applnk/NX Client for Linux/nxclient.desktop"
 }
