@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.20 2005/02/11 06:15:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.21 2005/03/09 00:31:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,6 @@ IUSE="readline static"
 RDEPEND="readline? ( >=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/portage-2.0.47-r10
 	sys-devel/flex"
 
 src_unpack() {
