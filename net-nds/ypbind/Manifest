@@ -1,5 +1,5 @@
-MD5 99ed7f321fdbea2c40a71ef01a933793 ChangeLog 1725
-MD5 936970a2f1b2eeb3798a703facb2d2d2 ypbind-1.11-r1.ebuild 934
+MD5 2bac5d40067a0c4f0e9cd969e10e3399 ChangeLog 1727
+MD5 7a865f4547a5ffc35fb05115f73ecaf2 ypbind-1.11-r1.ebuild 935
 MD5 07fdb01e99c0cb8ab5b3e770d83d7449 files/digest-ypbind-1.11-r1 67
 MD5 ece2b93be85a1bf6872c0b7abfe591c2 files/ypbind.confd 113
 MD5 872185d0cbdbf410af0eade7b3f0c1ba files/ypbind.rc5 1020
