@@ -285,6 +285,43 @@ if "--help" in myopts:
 		print "       good idea to do an \"emerge --pretend system\" before an \"emerge"
 		print "       system\", just so you know what emerge is planning to do."
 		print
+	elif "config" in mymode:
+		outstuff="""
+\x1b[32;01mConfig file management support (preliminary)\x1b[0m
+
+By default, Portage will \x1b[32;01mnot\x1b[0m overwrite any files inside the directories listed
+in the CONFIG_PROTECT variable in /etc/make.globals (which is set to /etc and
+/var/qmail/control, typically.)  Instead, if Portage is asked to overwrite a
+file in one of these directories (or a subdirectory inside one of these
+directories), it will install the file with an alternate filename, using a
+._cfgXXXX_ prefix (where XXXX is a four-digit number, starting with 0000) so
+that the original config file is preserved.
+
+The purpose of this feature is to give the administrator the option to review
+any potential changes to files in these directories before they are applied.
+Soon, we will have a special \"emerge config\" system that will step the
+administrator through an interactive process, allowing him/her to review the
+changes and selectively merge these changes into the  production config files.
+But right now, \"emerge config\" doesn't exist, so users will need to scan /etc
+and protected dirs for any ._cfgXXXX_ files, and then manually review them and
+apply any desired changes to their production files:
+
+# find /etc -iname ._cfg????_*
+
+You can disable this feature by setting CONFIG_PROTECT="" in /etc/make.conf.
+Then, Portage will mercilessly auto-update your config files.  Alternatively,
+you can leave Config File Protection on but tell Portage that it can overwrite
+files in certain specific /etc subdirectories.  For example, if you wanted
+Portage to automatically update your rc scripts and your wget configuration,
+but didn't want any other changes made without your explicit approval, you'd
+add this to /etc/make.conf:
+
+CONFIG_PROTECT_MASK="/etc/wget /etc/rc.d"
+
+"""
+
+
+	print outstuff
 	sys.exit(1)
 		
 if "--pretend" in myopts:
