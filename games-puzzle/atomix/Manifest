@@ -1,4 +1,4 @@
-MD5 70d68709641b9b3b8d3e9dc686fb4eea ChangeLog 645
-MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 0951802b48da858a6b8cbfe6f40d45bd atomix-1.0.1.ebuild 977
 MD5 856b6bd13d4c9efac37f882d6eef9425 files/digest-atomix-1.0.1 64
+MD5 70d68709641b9b3b8d3e9dc686fb4eea ChangeLog 645
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 0951802b48da858a6b8cbfe6f40d45bd atomix-1.0.1.ebuild 977

@@ -1,4 +1,4 @@
-MD5 6c65c8352363e0bc5760697a7afb222f ChangeLog 417
-MD5 f337752ae5092eed844d292f03fb7604 wakkabox-1.1.0.ebuild 557
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 aaced81261db10bfe850b3aefe75ea9e files/digest-wakkabox-1.1.0 66
+MD5 6c65c8352363e0bc5760697a7afb222f ChangeLog 417
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 fee7170610a8d850755819e05ef7f105 wakkabox-1.1.0.ebuild 554
