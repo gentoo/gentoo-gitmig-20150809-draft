@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.94 2004/08/13 15:39:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.95 2004/08/15 03:25:19 lv Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -35,11 +35,16 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # <azarah@gentoo.org> (26 Oct 2002)
 #
 gen_usr_ldscript() {
+	# this adds support for installing to lib64/lib32. since only portage
+	# 2.0.51 will have this functionality supported in dolib and friends,
+	# and since it isnt expected that many profiles will define it, we need
+	# to make this variable default to lib.
+	[ -z "${CONF_LIBDIR}" ] && CONF_LIBDIR="lib"
 
 	# Just make sure it exists
-	dodir /usr/lib
+	dodir /usr/${CONF_LIBDIR}
 
-	cat > ${D}/usr/lib/$1 <<"END_LDSCRIPT"
+	cat > ${D}/usr/${CONF_LIBDIR}/$1 <<"END_LDSCRIPT"
 /* GNU ld script
    Because Gentoo have critical dynamic libraries
    in /lib, and the static versions in /usr/lib, we
@@ -47,10 +52,10 @@ gen_usr_ldscript() {
    otherwise we run into linking problems.
    See bug #4411 on http://bugs.gentoo.org/ for
    more info.  */
-GROUP ( /lib/libxxx )
 END_LDSCRIPT
 
-	dosed "s:libxxx:$1:" /usr/lib/$1
+	echo "GROUP ( /${CONF_LIBDIR}/libxxx )" >> ${D}/usr/${CONF_LIBDIR}/$1
+	dosed "s:libxxx:$1:" /usr/${CONF_LIBDIR}/$1
 
 	return 0
 }
