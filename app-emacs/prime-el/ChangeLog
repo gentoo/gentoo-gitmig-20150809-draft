@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/prime-el
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/prime-el/ChangeLog,v 1.1 2003/12/05 10:22:10 usata Exp $
+
+*prime-el-1.2.0 (05 Dec 2003)
+
+  05 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  prime-el-1.2.0.ebuild, files/50prime-el-gentoo.el:
+  Initial import. Ebuild submitted by Hattya <hattya@inter7.jp>
+  This closes bug #31502
+
