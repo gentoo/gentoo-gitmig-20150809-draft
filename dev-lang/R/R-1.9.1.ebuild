@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.1.ebuild,v 1.2 2004/09/09 12:35:17 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.1.ebuild,v 1.3 2004/09/12 20:51:09 kugelfang Exp $
 
-IUSE="blas X tcltk gnome zlib bzlib pcre f2c"
+inherit 64-bit
+
+IUSE="blas lapack X tcltk gnome zlib bzlib pcre f2c"
 
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 
@@ -38,11 +40,16 @@ DEPEND="virtual/libc
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~ppc64 amd64"
 
 pkg_setup() {
 	if [ -z "$(which g77 2>/dev/null)" ]; then
 		einfo "Couldn't find g77 Fortran Compiler."
+		if 64-bit && use f2c; then
+			eerror "You can't use f2c for dev-lang/R on 64-bit arches."
+			eerror "Please remerge gcc with USE=\"g77\""
+			die "dev-lang/R is incompatible with f2c on 64-bit arches."
+		fi
 		if ! use f2c; then
 			eerror "Trying to emerge this packet w/o fortran compiler."
 			eerror "Try again with USE=\"f2c\" emerge dev-lang/R."
