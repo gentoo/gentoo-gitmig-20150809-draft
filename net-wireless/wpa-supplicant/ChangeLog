@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wpa-supplicant
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa-supplicant/ChangeLog,v 1.1 2004/09/16 18:19:40 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa-supplicant/ChangeLog,v 1.2 2004/10/16 15:00:34 brix Exp $
+
+*wpa-supplicant-0.2.5 (16 Oct 2004)
+
+  16 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +files/wpa-supplicant-0.2.5-config, +files/wpa_supplicant-0.2.5-conf.d,
+  +files/wpa_supplicant-0.2.5-init.d, +wpa-supplicant-0.2.5.ebuild:
+  Version bump. Added ipw2100 patch from upstream. Added init script.
 
 *wpa-supplicant-0.2.4 (16 Sep 2004)
 
