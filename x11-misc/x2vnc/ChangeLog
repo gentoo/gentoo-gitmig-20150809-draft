@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2vnc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.19 2004/04/26 14:52:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.20 2004/06/12 17:55:16 kloeri Exp $
+
+  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> x2vnc-1.6.ebuild:
+  Stable on alpha.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> x2vnc-1.5.1-r1.ebuild,
   x2vnc-1.6.ebuild:
