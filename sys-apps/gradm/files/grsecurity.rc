@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/files/grsecurity.rc,v 1.6 2003/05/17 02:33:34 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/files/grsecurity.rc,v 1.7 2003/06/16 18:37:01 solar Exp $
 
 PROCDIR=/proc/sys/kernel/grsecurity
 
@@ -21,13 +21,12 @@ start() {
 
 	ebegin "Starting grsecurity"
 
-	for x in ${ENABLED} ; do
-		if [ -f ${PROCDIR}/${x} ]; then
-			echo 1 >${PROCDIR}/${x}
-		fi
+	for x in ${ENABLED}; do
+		# [ -f ${PROCDIR}/${x} ] && continue
+		# einfo "\tEnabling kernel.grsecurity.${x}"
 		case "${x}" in
 		allow_ptrace_group)
-			echo ${ptrace_gid} >${PROCDIR}/ptrace_gid
+			echo ${ptrace_gid} > ${PROCDIR}/ptrace_gid
 			;;
 		fork_bomb_prot)
 			echo ${fork_bomb_gid} >${PROCDIR}/fork_bomb_gid
@@ -43,36 +42,33 @@ start() {
 		socket_server)
 			echo ${socket_server_gid} >${PROCDIR}/socket_server_gid
 			;;
+		*)
+			[ -f ${PROCDIR}/${x} ] && echo 1 >${PROCDIR}/${x}
+			;;
 		esac
 	done
 
 	for x in ${PAGE_EXEC_EXEMPT} ; do
-		if [ -f ${x} ]; then
-			/sbin/chpax -p ${x}
-		fi
+		[ -f ${x} ] && /sbin/chpax -p ${x}
 	done
 
 	for x in ${TRAMPOLINE_EXEMPT} ; do
-		if [ -f ${x} ]; then
-			/sbin/chpax -e ${x}
-		fi
+		[ -f ${x} ] && /sbin/chpax -e ${x}
 	done
 
 	for x in ${MPROTECT_EXEMPT} ; do
-		if [ -f ${x} ]; then
-			/sbin/chpax -m ${x}
-		fi
+		[ -f ${x} ] && /sbin/chpax -m ${x}
 	done
 
 	for x in ${MMAP_EXEMPT} ; do
-		if [ -f ${x} ]; then
-			/sbin/chpax -r ${x}
-		fi
+		[ -f ${x} ] &&	/sbin/chpax -r ${x}
 	done
 
-	if [ -f ${PROCDIR}/grsec_lock ] ; then
-		echo ${LOCK} >${PROCDIR}/grsec_lock
-	fi
+	for x in ${SEGMENTATION_EXEMPT} ; do
+		[ -f ${x} ] &&	/sbin/chpax -s ${x}
+	done
+
+	[ -f ${PROCDIR}/grsec_lock ] && echo ${LOCK} >${PROCDIR}/grsec_lock
 
 	eend ${?}
 }

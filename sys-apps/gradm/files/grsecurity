@@ -13,6 +13,9 @@ MPROTECT_EXEMPT=""
 # Files we should not randomize mmap for
 MMAP_EXEMPT=""
 
+# Files not to enforce segmentation based non-executable pages
+SEGMENTATION_EXEMPT="${PAGE_EXEC_EXEMPT}"
+
 # 
 # Check your running kernel for valid options.
 # "sysctl -a | grep kernel.grsecurity. | cut -d '.' -f 3  | awk '{print $1}'"
