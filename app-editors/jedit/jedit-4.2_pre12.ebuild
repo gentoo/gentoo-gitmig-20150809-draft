@@ -1,15 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre12.ebuild,v 1.1 2004/05/03 03:06:04 anti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre12.ebuild,v 1.2 2004/05/28 15:40:59 vapier Exp $
+
+inherit eutils
 
 MY_PV="42pre12"
 
 DESCRIPTION="Programmer's editor written in Java"
-HOMEPAGE="http://www.jedit.org"
+HOMEPAGE="http://www.jedit.org/"
 SRC_URI="mirror://sourceforge/jedit/jedit${MY_PV}source.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 SLOT="0"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="jikes"
 
 RDEPEND=">=virtual/jdk-1.3"

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.5.1.ebuild,v 1.2 2004/05/19 04:22:36 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.5.1.ebuild,v 1.3 2004/05/28 15:40:59 vapier Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Gnome2 based GRUB configuration editor"
-HOMEPAGE="http://grubconf.sf.net/"
+HOMEPAGE="http://grubconf.sourceforge.net/"
 SRC_URI="mirror://sourceforge/grubconf/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -17,13 +17,11 @@ RDEPEND=">=app-text/scrollkeeper-0.3.11
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gconf-1.2"
-
 DEPEND="${RDEPEND}
 	sys-boot/grub
 	>=dev-util/pkgconfig-0.12.0"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
 	cd ${S}/po
 	epatch ${FILESDIR}/Makefile.in.in.patch

@@ -1,24 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.3 2004/05/13 18:28:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.4 2004/05/28 15:40:59 vapier Exp $
 
-inherit kde java-pkg
-
-IUSE="jikes"
+inherit kde java-pkg eutils
 
 DESCRIPTION="Library and daemon to give java applications access to the KDE tray"
-HOMEPAGE="http://systray.sourceforge.net"
+HOMEPAGE="http://systray.sourceforge.net/"
 SRC_URI="mirror://sourceforge/systray/${P}-kde3-src.tar.bz2"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64"
+IUSE="jikes"
+
 DEPEND="=kde-base/kdelibs-3*
 	dev-java/java-config
 	>=virtual/jdk-1.3
 	jikes? ( >=dev-java/jikes-1.15 )
 	sys-apps/sed"
-
 RDEPEND="=kde-base/kdelibs-3*
 	 >=virtual/jre-1.3"
 

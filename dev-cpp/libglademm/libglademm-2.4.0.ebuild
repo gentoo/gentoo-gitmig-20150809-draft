@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.0.ebuild,v 1.4 2004/05/22 15:26:31 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.0.ebuild,v 1.5 2004/05/28 15:40:59 vapier Exp $
 
-inherit gnome2
-IUSE=""
+inherit gnome2 eutils
+
 DESCRIPTION="C++ bindings for libglade"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/libglademm/2.4/${P}.tar.bz2"
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/libglademm/2.4/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="2.4"
 KEYWORDS="~x86 ~amd64"
+IUSE=""
 
 RDEPEND=">=gnome-base/libglade-2
 	>=dev-cpp/gtkmm-2.4"
