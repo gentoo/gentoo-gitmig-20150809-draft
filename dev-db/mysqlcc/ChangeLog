@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysqlcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.19 2004/06/29 16:53:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.20 2004/08/19 23:50:14 carlo Exp $
+
+*mysqlcc-0.9.4-r1 (20 Aug 2004)
+
+  20 Aug 2004; Carsten Lohrke <carlo@gentoo.org>
+  -files/mysqlcc-0.9.3-libmysqlclientac.patch,
+  +files/mysqlcc-0.9.4-shutdown.patch, -mysqlcc-0.9.3.ebuild,
+  +mysqlcc-0.9.4-r1.ebuild, -mysqlcc-0.9.4.ebuild:
+  stable on x86, will be package.masked shortly, #60745
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> mysqlcc-0.9.3.ebuild,
   mysqlcc-0.9.4.ebuild:
