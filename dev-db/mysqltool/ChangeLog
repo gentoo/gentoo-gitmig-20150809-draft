@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysqltool
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.8 2002/12/07 05:56:12 jmorgan Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.9 2003/02/12 05:49:05 vapier Exp $
 
 *mysqltool-0.95-r1 (3 May 2002)
 

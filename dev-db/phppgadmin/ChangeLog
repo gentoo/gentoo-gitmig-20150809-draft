@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/phppgadmin
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.4 2002/11/15 00:49:32 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.5 2003/02/12 05:49:17 vapier Exp $
 
 *phppgadmin-2.4.1-r1 (3 May 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/edb
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.5 2003/01/24 15:45:11 weeve Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.6 2003/02/12 05:47:49 vapier Exp $
    
   24 Jan 2003; Jason Wever <weeve@gentoo.org> edb-1.0.3.ebuild :
   Added ~sparc to keywords

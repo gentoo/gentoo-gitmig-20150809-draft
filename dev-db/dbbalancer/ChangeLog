@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/dbbalancer
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.1 2003/01/31 21:33:37 rphillips Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.2 2003/02/12 05:47:43 vapier Exp $
 
 *dbbalancer-0.4.4 (31 Jan 2003)
 
