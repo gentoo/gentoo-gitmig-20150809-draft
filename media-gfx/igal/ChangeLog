@@ -1,6 +1,6 @@
-# ChangeLog for app-miscigalChangeLog/
+# ChangeLog for media-gfx/igal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.3 2002/12/13 10:57:00 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.4 2002/12/17 19:40:35 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
