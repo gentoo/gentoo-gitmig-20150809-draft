@@ -12,4 +12,4 @@ MD5 b901850df9952252974316e78775673b files/openssl-0.9.6-mips.diff 1487
 MD5 cebd09d1819c07b0fab14ad90b0da884 files/openssl-0.9.6m-gentoo.diff 1591
 MD5 7483d6f0412e857e9063dce4aecf2991 files/openssl-0.9.7c-gentoo.diff 936
 MD5 7483d6f0412e857e9063dce4aecf2991 files/openssl-0.9.7d-gentoo.diff 936
-MD5 87c41c3621bb08d1e7798e052e1bf8b6 files/addppc64support.diff 1788
+MD5 24a85e55b672da55e9614b8708a1ceb0 files/addppc64support.diff 1907
