@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/ruby-gconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf/ChangeLog,v 1.3 2002/07/08 02:05:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf/ChangeLog,v 1.4 2002/07/08 02:37:12 agriffis Exp $
 
 *ruby-gconf-0.2 (21 Apr 2002)
 
@@ -22,3 +22,7 @@
 	details about writing correct changelogs are explained in the
 	skel.ChangeLog file which you can find in the root directory of the
 	portage repository.
+
+	07 Jul 2002; Aron Griffis <agriffis@gentoo.org> ruby-gconf-0.1.ebuild:
+
+	Added LICENSE, KEYWORDS, SLOT.
