@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.6_alpha.ebuild,v 1.1 2004/06/03 20:25:32 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.6_alpha.ebuild,v 1.2 2004/06/04 14:52:20 lordvan Exp $
 
 inherit distutils
 
@@ -17,6 +17,14 @@ RDEPEND=">=dev-lang/python-2.2.2
 	>=dev-python/python-xlib-0.12"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	
+	# patch from upstream to make utils useable again	
+	cd ${S}
+	epatch ${FILESDIR}/${P}.patch 
+}
 
 src_install() {
 	distutils_src_install

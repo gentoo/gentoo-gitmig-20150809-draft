@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/plwm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.4 2004/06/03 20:25:32 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.5 2004/06/04 14:52:20 lordvan Exp $
+
+  04 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org>
+  +files/plwm-2.6_alpha.patch, plwm-2.6_alpha.ebuild:
+  added patch(upstream) for utils/inspect_plwm.py and utils/wmm.py so they work
+  again
 
 *plwm-2.6_alpha (03 Jun 2004)
 
