@@ -41,3 +41,6 @@ ifc
 3dfx
 
 uclibc
+
+# altivec is a ppc instruction set.
+altivec
