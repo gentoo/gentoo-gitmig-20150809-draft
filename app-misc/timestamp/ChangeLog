@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/timestamp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/timestamp/ChangeLog,v 1.1 2005/03/19 15:31:28 ka0ttic Exp $
+
+*timestamp-1.1 (19 Mar 2005)
+
+  19 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +timestamp-1.1.ebuild:
+  Initial commit.
+
