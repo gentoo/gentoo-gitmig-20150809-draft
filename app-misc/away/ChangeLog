@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/away
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.5 2004/06/24 22:02:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.6 2004/09/20 02:33:49 tgall Exp $
+
+  19 Sept 2004; Tom Gall <tgall@gentoo.org> away-0.9.5.ebuild:
+  stable on ppc64, bug #63657
 
   12 Jun 2004; <pyrania@gentoo.org> away-0.9.5.ebuild:
   IUSE fixup. Fixed bug #52947.
