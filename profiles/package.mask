@@ -781,6 +781,11 @@ sys-apps/texinfo
 # tests this with gcc2.95.3 and 3.0.4 
 =media-sound/alsaplayer-0.99.70
 
+# mkennedy@gentoo.org 25 May 2002 
+# patch to support gcc3.1 -- masked until someone tests this with
+# gcc2.95.3
+=media-video/avifile-0.7.4.20020426-r1
+
 # ashmodai@gentoo.org 22 May 2002
 # Masked until I can get the 'support' packages/patches merged.
 =net-dialup/pptpd-1.1.2
