@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.02.ebuild,v 1.3 2004/07/14 15:12:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.02.ebuild,v 1.4 2004/07/28 02:49:00 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.oberhumer.com/opensource/ucl/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64 ia64"
 IUSE=""
 
 src_compile() {
