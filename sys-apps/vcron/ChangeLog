@@ -1,10 +1,14 @@
 # ChangeLog for sys-apps/vcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.15 2003/04/20 21:57:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vcron/ChangeLog,v 1.16 2003/05/07 20:29:34 mholzer Exp $
 
 *vcron-3.0.1-r1 (20 Apr 2002)
 
-  21 Apr 2003; Guy Martin <gmsoft@gentoo.org vcron-3.0.1-r1.ebuild :
+  07 May 2003; Martin Holzer <mholzer@gentoo.org> vcron-3.0.1-r1.ebuild :
+  Seems like the packages removed from world. 
+  SRC_URI & Homepage updated. Closes #20387.
+
+  21 Apr 2003; Guy Martin <gmsoft@gentoo.org> vcron-3.0.1-r1.ebuild :
   Added hppa to KEYWORDS.
 
   13 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
@@ -37,28 +41,22 @@
   Added LICENSE, KEYWORDS, SLOT.
 
   20 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/crontab :
-  
   added own crontab
   fixed path to suit /var/spool/cron/lastrun
   added support for /etc/cron.hourly
   
   20 Apr 2002; Thilo Bangert <bangert@gentoo.org> vcron-3.0.1.ebuild :
-  
   added PROVIDE="virtual/cron" && RDEPEND="virtual/cron"
   removed code duplication
   install own version of /etc/crontab
   rdepend on sys-apps/cronbase and virtual/mta
   
   20 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/vcron.rc6 :
-
   added "provide cron"
 
   20 April 2002; Martin Schlemmer <azarah@gentoo.org> files/vcron.rc6 :
-
   Update to NEED "logger"
-
 
 *vcron-3.0.1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
