@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.39 2004/10/26 21:16:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.40 2004/10/27 00:19:41 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -33,6 +33,10 @@ gcc_setup_static_vars() {
 	MY_PV_FULL="$(get_version_component_range 1-3)"
 	MY_PV="$(get_version_component_range 1-2)"
 
+	GCCMAJOR="$(get_version_component_range 1)"
+	GCCMINOR="$(get_version_component_range 2)"
+	GCCMICRO="$(get_version_component_range 3)"
+
 	MAIN_BRANCH="${PV}"  # Tarball, etc used ...
 
 	# Pre-release support
@@ -40,9 +44,13 @@ gcc_setup_static_vars() {
 		PRERELEASE=${PV/_pre/-}
 	fi
 
-	GCCMAJOR="$(get_version_component_range 1)"
-	GCCMINOR="$(get_version_component_range 2)"
-	GCCMICRO="$(get_version_component_range 3)"
+
+	# make _alpha and _beta ebuilds automatically use a snapshot
+	if [ ${PV} != ${PV/_alpha/} ] ; then
+		SNAPSHOT="${MY_PV}-${PV##*_alpha}"
+	elif [ ${PV} != ${PV/_beta/} ] ; then
+		SNAPSHOT="${MY_PV}-${PV##*_beta}"
+	fi
 }
 
 
@@ -213,7 +221,7 @@ get_gcc_src_uri() {
 	if [ -n "${PRERELEASE}" ] ; then
 		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/prerelease-${PRERELEASE}/gcc-${PRERELEASE}.tar.bz2"
 	elif [ -n "${SNAPSHOT}" ] ; then
-		GCC_SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
+		GCC_SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT}.tar.bz2"
 	else
 		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/gcc-${MAIN_BRANCH}.tar.bz2"
 		# we want all branch updates to be against the main release
@@ -268,7 +276,7 @@ gcc_get_s_dir() {
 	if [ -n "${PRERELEASE}" ] ; then
 		GCC_S="${WORKDIR}/gcc-${PRERELEASE}"
 	elif [ -n "${SNAPSHOT}" ] ; then
-		GCC_S="${WORKDIR}/gcc-${SNAPSHOT//-}"
+		GCC_S="${WORKDIR}/gcc-${SNAPSHOT}"
 	else
 		GCC_S="${WORKDIR}/gcc-${MAIN_BRANCH}"
 	fi
@@ -290,7 +298,7 @@ gcc_quick_unpack() {
 	if [ -n "${PRERELEASE}" ] ; then
 		unpack gcc-${PRERELEASE}.tar.bz2
 	elif [ -n "${SNAPSHOT}" ] ; then
-		unpack gcc-${SNAPSHOT//-}.tar.bz2
+		unpack gcc-${SNAPSHOT}.tar.bz2
 	else
 		unpack gcc-${MAIN_BRANCH}.tar.bz2
 		# We want branch updates to be against a release tarball
@@ -775,6 +783,18 @@ libc_has_ssp() {
 }
 
 
+# This is to make sure we don't accidentally try to enable support for a
+# language that doesnt exist. GCC 3.4 supports f77, while 4.0 supports f95, etc.
+#
+# Travis Tilley <lv@gentoo.org> (26 Oct 2004)
+#
+gcc-lang-supported() {
+	grep ^language=\"${1}\" ${S}/gcc/*/config-lang.in > /dev/null && return 0
+	ewarn "The ${1} language is not supported by this release of gcc"
+	return 1
+}
+
+
 gcc-library-configure() {
 	# multilib support
 	if [ "${GCC_TARGET_NO_MULTILIB}" == "true" ]
@@ -817,9 +837,11 @@ gcc-compiler-configure() {
 	if ! use build ; then
 		GCC_LANG="c"
 		use !nocxx && GCC_LANG="${GCC_LANG},c++"
-		use f77 && GCC_LANG="${GCC_LANG},f77"
-		use objc && GCC_LANG="${GCC_LANG},objc"
-		use gcj && GCC_LANG="${GCC_LANG},java"
+		use f77 && gcc-lang-supported f77 && GCC_LANG="${GCC_LANG},f77"
+		#use f95 && gcc-lang-supported f95 && GCC_LANG="${GCC_LANG},f95"
+		#use treelang && gcc-lang-supported treelang && GCC_LANG="${GCC_LANG},treelang"
+		use objc && gcc-lang-supported objc && GCC_LANG="${GCC_LANG},objc"
+		use gcj && gcc-lang-supported java && GCC_LANG="${GCC_LANG},java"
 		# We do NOT want 'ADA support' in here!
 		# use ada  && gcc_lang="${gcc_lang},ada"
 	else
