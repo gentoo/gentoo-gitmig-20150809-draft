@@ -1,5 +1,0 @@
-#!/bin/bash
-    for x in "$@"
-    do
-    	install -d ${DIROPTIONS} ${D}${x}
-    done

@@ -1,3 +1,0 @@
-#!/bin/bash
-# auto-parallel make without the annoying syntax
-exec make ${MAKEOPTS} MAKE="make ${MAKEOPTS}" $*

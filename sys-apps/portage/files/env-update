@@ -1,4 +1,0 @@
-#!/usr/bin/spython
-
-import portage
-portage.env_update()

@@ -1,6 +1,0 @@
-#!/usr/bin/spython
-
-import portage,os
-
-portage.merge(os.environ["CATEGORY"],os.environ["PF"],os.path.normpath(os.environ["D"]))
-

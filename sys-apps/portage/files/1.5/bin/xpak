@@ -1,9 +1,0 @@
-#!/usr/bin/python
-
-import xpak
-import sys
-if len(sys.argv)!=3:
-	print "xpak: expecting three arguments."
-	sys.exit(1)
-xpak.xpak(sys.argv[1],sys.argv[2])
-
