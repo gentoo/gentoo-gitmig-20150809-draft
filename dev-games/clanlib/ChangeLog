@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.4 2003/09/02 16:06:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.5 2003/09/07 14:24:33 karltk Exp $
+
+*clanlib-0.7.3 (07 Sep 2003)
+
+  07 Sep 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
+  clanlib-0.7.3.ebuild: 
+  New upstream version. Reworked clanlib-config slightly. More specific 
+  SLOTing, as upstream is very unstable.
 
 *clanlib-0.7.2-r1 (16 Jul 2003)
 
