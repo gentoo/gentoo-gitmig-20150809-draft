@@ -76,10 +76,6 @@ app-portage/kportage
 >=app-crypt/gnupg-1.9.0
 
 # <robbat2@gentoo.org> (05 Jan 2004)
-# blocked because the package doesn't seem to work properly
-net-mail/vqadmin
-
-# <robbat2@gentoo.org> (05 Jan 2004)
 # This is the new pre-release, block it for the moment
 >=net-mail/vpopmail-5.4*
 
