@@ -1,12 +1,13 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.29 2004/06/16 17:51:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.30 2004/06/16 18:09:52 eradicator Exp $
 
 *usermin-1.080-r1 (16 Jun 2004)
 
   16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> files/init.d.usermin,
   +usermin-1.080-r1.ebuild, -usermin-1.080.ebuild:
   Revbump to fix init script borkage.
+  Fixed port to be usermin default.
 
   16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -files/usermin-1.070-gentoo.patch, -files/patch/setup.sh,

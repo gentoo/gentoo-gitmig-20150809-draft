@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080-r1.ebuild,v 1.1 2004/06/16 17:51:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080-r1.ebuild,v 1.2 2004/06/16 18:09:52 eradicator Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ pkg_postinst() {
 	var_dir=/var/log/usermin
 	perl=/usr/bin/perl
 	autoos=1
-	port=10000
+	port=20000
 	login=root
 	crypt=`grep "^root:" /etc/shadow | cut -f 2 -d :`
 	host=`hostname`
