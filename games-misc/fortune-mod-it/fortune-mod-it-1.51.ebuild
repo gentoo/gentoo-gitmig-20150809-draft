@@ -8,7 +8,7 @@ SRC_URI="http://www.orson.it/~fedeliallalinea/files/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 IUSE="offensive"
 
 DEPEND="games-misc/fortune-mod"
