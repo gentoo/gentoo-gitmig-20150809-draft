@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.26 2005/02/10 16:19:44 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.27 2005/03/24 16:31:04 sebastian Exp $
+
+*smarty-2.6.8 (24 Mar 2005)
+
+  24 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +smarty-2.6.8.ebuild:
+  Version bump WRT bug 86488.
 
 *smarty-2.6.7 (10 Feb 2005)
 
