@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.3.3.ebuild,v 1.3 2004/04/26 15:07:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.3-r1.ebuild,v 1.1 2004/04/26 15:07:19 usata Exp $
 
 inherit flag-o-matic
 
-MY_P=${P/tex/TeX}-src
+MY_P=${P/tex/TeX}-R2-src
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="GNU TeXmacs is a free GUI scientific editor, inspired by TeX and GNU Emacs."

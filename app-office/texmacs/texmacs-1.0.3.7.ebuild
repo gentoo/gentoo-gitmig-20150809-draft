@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.1-r1.ebuild,v 1.6 2004/04/25 22:29:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.3.7.ebuild,v 1.1 2004/04/26 15:07:19 usata Exp $
 
+# although flag-o-matic functions in portage, we should inherit it
 inherit flag-o-matic
 
 MY_P=${P/tex/TeX}-src
@@ -15,11 +16,12 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="spell"
-KEYWORDS="x86 ~ppc"
+# TeXmacs 1.0.X -> stable release, TeXmacs 1.0.X.Y -> development release
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="virtual/tetex
-	>=dev-util/guile-1.3.4
-	=sys-apps/sed-4*
+	>=dev-util/guile-1.4
+	>=sys-apps/sed-4
 	virtual/x11
 	spell? ( >=app-text/ispell-3.2 )"
 
@@ -28,26 +30,32 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 
+	# we're not trusting texmacs optimisations here, so
+	# we only want the following two
 	strip-flags
 	append-flags -fno-default-inline
 	append-flags -fno-inline
 
-	econf || die "econf failed"
+	econf || die
+	# and now replace the detected optimisations with our safer ones
 	sed -i "s:\(^CXXOPTIMIZE = \).*:\1${CXXFLAGS}:" src/common.makefile
+	# emake b0rked
+	emake -j1 || die
 
-	cd ${S}
-	make || die
 }
 
 
 src_install() {
 
 	make DESTDIR=${D} install || die
+	dodoc COMPILE COPYING LICENSE
 
+	insinto /usr/share/applications
+	doins ${FILESDIR}/TeXmacs.desktop
+
+	# now install the fonts
 	cd ${WORKDIR}
 	dodir /usr/share/texmf
 	cp -r fonts ${D}/usr/share/texmf/
 
-	cd ${S}
-	dodoc COMPILE COPYING LICENSE
 }
