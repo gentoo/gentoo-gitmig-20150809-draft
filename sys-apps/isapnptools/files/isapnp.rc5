@@ -9,12 +9,12 @@ CONFFILE=/etc/isapnp.conf
 
 start() {
 if [ -e $CONFFILE ] ; then
-	if [ -e /sbin/isapnp ] ; then
+	if [ -e /usr/sbin/isapnp ] ; then
 		ebegin "Configuring ISA PnP devices"
-		/sbin/isapnp $CONFFILE 1>&2
+		/usr/sbin/isapnp $CONFFILE 1>&2
 		eend $? "Error configuring ISA PnP"
 	else
-		eerror "You're missing /sbin/isapnp. Do emerge sys-apps/isapnptools"
+		eerror "You're missing /usr/sbin/isapnp. Do emerge sys-apps/isapnptools"
 		return 1
 	fi
 else
