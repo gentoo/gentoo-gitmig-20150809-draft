@@ -1,4 +1,14 @@
-MD5 bfb647fe0bae6ee7c6b8b2146d9a48fd rsbac-dev-sources-2.6.5.ebuild 1423
-MD5 f6ade05e8ca1146816258a339abc8003 ChangeLog 318
-MD5 4e800db7dd38c5c3a9b5fa8924c5cddd metadata.xml 473
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6bdf45b96221e671f2dd93a6c94e0759 rsbac-dev-sources-2.6.5.ebuild 1542
+MD5 42af6cf1794d50ee0f5f60cf36d22078 ChangeLog 416
+MD5 fee9abc7797fef753c42454679bae9a7 metadata.xml 456
 MD5 df80f2b0e3e4b832b26e59c30042bb4a files/digest-rsbac-dev-sources-2.6.5 210
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFAyEVWJUNS2Y9cV5ERAtopAJ0eLgPYQCRCbRDVEz9z7yEVBEGcfwCfYfGP
+AAZFLdlO0eQaQ8ieGqkvnlk=
+=0AGM
+-----END PGP SIGNATURE-----
