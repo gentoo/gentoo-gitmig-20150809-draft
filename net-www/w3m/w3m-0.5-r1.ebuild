@@ -1,26 +1,28 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r9.ebuild,v 1.1 2004/02/17 13:40:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5-r1.ebuild,v 1.1 2004/03/24 18:28:42 usata Exp $
 
-W3M_CVS_PV="1.890"
+inherit eutils
+
+W3M_CVS_PV="1.912"
 W3M_CVS_P="${PN}-cvs-${W3M_CVS_PV}"
 
 DESCRIPTION="Text based WWW browser, supports tables and frames"
-HOMEPAGE="http://w3m.sourceforge.net/"
+HOMEPAGE="http://w3m.sourceforge.net/
+	http://www.page.sannet.ne.jp/knabe/w3m/"
 PATCH_PATH="http://www.page.sannet.ne.jp/knabe/w3m/"
-SRC_URI="mirror://gentoo/${W3M_CVS_P}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/${W3M_CVS_P}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/${W3M_CVS_P}-1.896.diff.gz
-	async? ( ${PATCH_PATH}/${W3M_CVS_P}-async-5.diff.gz )
-	${PATCH_PATH}/${W3M_CVS_P}-nls-4.diff"
+SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
+	async? ( ${PATCH_PATH}/${W3M_CVS_P}-async-1.diff.gz )
+	nls? ( ${PATCH_PATH}/${W3M_CVS_P}-nlscharset-1.diff )"
 # w3m color patch:
 #	http://homepage3.nifty.com/slokar/w3m/${P}-cvs-1.895_256-001.patch.gz
 # w3n canna inline patch:
 #	canna? ( http://www.j10n.org/files/${W3M_CVS_P}-canna.patch )
+# w3m bookmark charset patch:
+#	nls? ( ${PATCH_PATH}/${W3M_CVS_P}-bkmknls-1.diff )
 
 LICENSE="w3m"
 SLOT="0"
-# since it is a CVS snapshot, we better not change keywords to stable
 KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk nls async"
 #IUSE="canna unicode"
@@ -45,7 +47,7 @@ PROVIDE="virtual/textbrowser
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${P}
 
 pkg_setup() {
 	if [ -n "`use X`" -a -n "`use nopixbuf`" -a -z "`use imlib2`" -a -z "`use imlib`" ] ; then
@@ -58,18 +60,18 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${W3M_CVS_P}.tar.gz
+	unpack ${P}.tar.gz
 	cd ${S}
-	epatch ${DISTDIR}/${W3M_CVS_P}-1.896.diff.gz
-	epatch ${FILESDIR}/${P}-form.diff
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 	epatch ${FILESDIR}/${PN}-m17n-search-gentoo.diff
 	epatch ${FILESDIR}/${PN}-libwc-gentoo.diff
-	epatch ${DISTDIR}/${W3M_CVS_P}-nls-4.diff
-	#epatch ${DISTDIR}/${W3M_CVS_P}-ja.po.diff
+	if [ -n "`use nls`" ] ; then
+		#epatch ${DISTDIR}/${W3M_CVS_P}-bkmknls-1.diff
+		epatch ${DISTDIR}/${W3M_CVS_P}-nlscharset-1.diff
+	fi
 	if [ -n "`use async`" ] ; then
-		epatch ${DISTDIR}/${W3M_CVS_P}-async-5.diff.gz
-		epatch ${FILESDIR}/${P}-async-m17n-gentoo.diff
+		epatch ${DISTDIR}/${W3M_CVS_P}-async-1.diff.gz
+		epatch ${FILESDIR}/${PN}-0.4.2-async-m17n-gentoo.diff
 	fi
 	#epatch ${DISTDIR}/${P}-cvs-1.895_256-001.patch.gz
 	#use canna && epatch ${DISTDIR}/${W3M_CVS_P}-canna.patch
