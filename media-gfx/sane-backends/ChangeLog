@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.8 2002/08/11 20:46:52 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.9 2002/09/15 19:11:38 murphy Exp $
 
 *sane-backends-1.0.8-r2 (03 Jul 2002)
+
+  15 Sep 2002; Maarten Thibaut <murphy@gentoo.org> sane-backends-1.0.8-r2.ebuild :
+  Added keywords for sparc and sparc64.
 
   11 Aug 2002; Mark Guertin <gerk@gentoo.org> sane-backends-1.0.8-r2.ebuild :
   Adjusted for new arch checks in DEPEND
