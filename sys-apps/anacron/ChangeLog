@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/anacron
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/ChangeLog,v 1.1 2002/08/03 21:01:48 aliz Exp $
+
+*anacron-2.3 (03 Aug 2002)
+
+  03 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> anacron-2.3.ebuild : 
+  Initial import. Ebuild submitted by Jim Liedeka <jliedeka@tds.net>.
