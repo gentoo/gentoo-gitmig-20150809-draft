@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc7.ebuild,v 1.3 2003/02/13 12:40:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc7.ebuild,v 1.4 2003/02/14 08:46:03 vapier Exp $
+
+inherit libtool
 
 DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
-
-inherit libtool
+SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${P/_rc/rc}.tar.bz2"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -13,19 +14,15 @@ LICENSE="GPL-2 LGPL-2.1"
 
 DEPEND="virtual/glibc"
 
-SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${P/_rc/rc}.tar.bz2"
 S=${WORKDIR}/${P/_rc/rc}
 
 src_compile() {                           
 	elibtoolize
 	econf || die "./configure failed"
-
 	make || die "make failed"
-
 }
 
 src_install() {
-
 	einstall || die "Installation Failed"
 
 	#This alsa version does not provide libasound.so.1
