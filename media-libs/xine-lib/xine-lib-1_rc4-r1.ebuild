@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.10 2004/06/23 14:11:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.11 2004/06/23 14:48:35 vapier Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -109,7 +109,7 @@ src_compile() {
 		&& unset CFLAGS
 
 	econf \
-		`use_enable X x11` \
+		`use_enable X x11` `use_with X x` `use_enable X shm` `use_enable X xft` \
 		`use_enable esd` \
 		`use_enable nls` \
 		`use_enable alsa` \
