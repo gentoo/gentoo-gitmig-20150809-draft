@@ -1,9 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.16.ebuild,v 1.1 2003/11/09 21:53:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.16.ebuild,v 1.2 2003/11/10 21:12:04 foser Exp $
 
-IUSE="nls gtk gtk2 ssl"
-S=${WORKDIR}/${P}
 DESCRIPTION="Gnome based FTP Client"
 SRC_URI="http://www.gftp.org/${P}.tar.bz2"
 HOMEPAGE="http://www.gftp.org"
@@ -11,12 +9,13 @@ HOMEPAGE="http://www.gftp.org"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
+IUSE="nls gtk gtk2 ssl"
 
 DEPEND="virtual/x11
 	ssl? ( dev-libs/openssl )
 	gtk? (
 		gtk2? ( >=x11-libs/gtk+-2 ) : ( =x11-libs/gtk+-1.2* ) )
-	!gtk ( sys-libs/readline
+	!gtk? ( sys-libs/readline
 		sys-libs/ncurses
 		=dev-libs/glib-1.2* )"
 

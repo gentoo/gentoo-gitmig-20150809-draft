@@ -1,8 +1,11 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.18 2003/11/09 21:53:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.19 2003/11/10 21:12:04 foser Exp $
 
 *gftp-2.0.16 (09 Nov 2003)
+
+  10 Nov 2003; foser <foser@gentoo.org> gftp-2.0.{15,16}.ebuild :
+  Fixed !gtk -> !gtk?
 
   09 Nov 2003; Alastair Tse <liquidx@gentoo.org> gftp-2.0.13.ebuild,
   gftp-2.0.14_rc1.ebuild, gftp-2.0.16.ebuild, files/gftp-2.0.13-gtk2.2.patch:
