@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.90.1-r1.ebuild,v 1.2 2003/12/18 22:07:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.90.1-r1.ebuild,v 1.3 2004/01/19 07:48:09 torbenh Exp $
 
 inherit flag-o-matic
 
