@@ -1,0 +1,4 @@
+#!/bin/sh
+export MOZILLA_FIVE_HOME="/usr/lib/phoenix"
+/usr/lib/phoenix/phoenix
+

@@ -1,0 +1,10 @@
+# ChangeLog for net-www/phoenix-bin
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.1 2002/10/27 17:17:03 phoenix Exp $
+
+*phoenix-bin-0.3 (27 Oct 2002)
+
+  27 Oct 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-1.03.ebuild :
+
+  Intial import. This package needs quite some testing - i'm not sure
+  if the dosym in src_install () is safe.
