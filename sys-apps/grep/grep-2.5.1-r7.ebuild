@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r7.ebuild,v 1.3 2005/02/25 04:44:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r7.ebuild,v 1.4 2005/03/22 08:06:30 eradicator Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils multilib
 
 DESCRIPTION="GNU regular expression matcher"
 HOMEPAGE="http://www.gnu.org/software/grep/grep.html"
@@ -58,7 +58,7 @@ src_compile() {
 
 	if use pcre && ! use uclibc ; then
 		sed -i \
-			-e 's:-lpcre:/usr/lib/libpcre.a:g' \
+			-e "s:-lpcre:/usr/$(get_libdir)/libpcre.a:g" \
 			{lib,src}/Makefile \
 			|| die "sed Makefile failed"
 	fi

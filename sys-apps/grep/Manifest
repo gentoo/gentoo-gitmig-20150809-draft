@@ -1,15 +1,25 @@
-MD5 072840e91517a387a0335ca140ceed32 ChangeLog 6797
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 537532d9f88524b15e36bafbb2cef058 ChangeLog 6939
+MD5 10af40019a596a9b25064ed2a971ee87 grep-2.5.1-r6.ebuild 2234
+MD5 cde609a59b21366645a1bb84096ab075 grep-2.5.1-r7.ebuild 2122
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d2eb86245d43299474f2c8ed03e66f51 grep-2.5.1-r6.ebuild 2209
-MD5 3de691ed49b45eb599d38691d5fb527c grep-2.5.1-r7.ebuild 2099
+MD5 792f6cb13959979de2b10537067603bb files/2.5.1-manpage-line-buffering.patch 477
 MD5 41f77ef6693dc91a37b5ec51ce5a3e2d files/2.5.1-manpage.patch 283
+MD5 16d6cd54c93041d4f4bef59a9e327d04 files/2.5.1-tests.patch 1786
+MD5 e39e9fd198a2c0a5984f2c7d188b3c49 files/2.5.1-utf8-case.patch 933
+MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r6 62
 MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r7 62
 MD5 b43c763953a7b7d3345fc0dd625f299c files/grep-2.5.1-fgrep.patch.bz2 1678
 MD5 294f8a32ae3036ebbf393610a286d80e files/grep-2.5.1-gofast.patch.bz2 4389
-MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r6 62
-MD5 16d6cd54c93041d4f4bef59a9e327d04 files/2.5.1-tests.patch 1786
 MD5 f2f8cec983dc49b399880ab8eae882cb files/grep-2.5.1-i18n.patch.bz2 2903
 MD5 575345b799197d6c79fe93c757664262 files/grep-2.5.1-oi.patch.bz2 831
 MD5 c723a8ca50e51326608931018be4f06b files/grep-2.5.1-restrict_arr.patch 501
-MD5 e39e9fd198a2c0a5984f2c7d188b3c49 files/2.5.1-utf8-case.patch 933
-MD5 792f6cb13959979de2b10537067603bb files/2.5.1-manpage-line-buffering.patch 477
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCP9IbArHZZzCEUG0RAoo/AJ9ZphUAOpY17YNrkkiEwW64dWfipgCeMLIv
+cyx/gbFcn0kAyrsXoZhunYE=
+=RG8j
+-----END PGP SIGNATURE-----

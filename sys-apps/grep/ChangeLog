@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.43 2005/02/20 01:32:30 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.44 2005/03/22 08:06:30 eradicator Exp $
+
+  22 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  grep-2.5.1-r6.ebuild, grep-2.5.1-r7.ebuild:
+  Set correct path for libpcre.a
 
   19 Feb 2005; <solar@gentoo.org> grep-2.5.1-r7.ebuild:
   - bug 76879 broke maketest on uClibc hosts. for now make the patching
