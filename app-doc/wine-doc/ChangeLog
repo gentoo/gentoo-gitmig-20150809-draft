@@ -1,0 +1,9 @@
+# ChangeLog for app-doc/wine-doc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-doc/wine-doc/ChangeLog,v 1.1 2002/06/14 13:53:33 danarmak Exp $
+
+*wine-doc-20020605 (14 Jun 2002)
+
+  14 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  First version - docs only (split from app-emulation/wine).
