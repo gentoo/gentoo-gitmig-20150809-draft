@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.7 2005/03/25 01:52:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.8 2005/03/25 04:02:38 morfic Exp $
+
+  24 Mar 2005; Daniel Goller <morfic@gentoo.org> kstars-3.4.0.ebuild:
+  remove old patch on ppc and ppc64
 
   25 Mar 2005; Jason Wever <weeve@gentoo.org> kstars-3.4.0.ebuild:
   Added ~sparc keyword.
