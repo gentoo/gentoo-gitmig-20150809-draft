@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1.ebuild,v 1.8 2004/10/26 14:16:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1.ebuild,v 1.9 2004/11/04 03:47:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -31,7 +31,7 @@ src_compile() {
 	# 01/Mar/2003: Fix for bug #11960 by Jason Wever <weeve@gentoo.org>
 	[ "${ARCH}" == "sparc" ] && filter-flags -O3 -O2 -O
 
-	use static && append-flags -static
+	use static && append-ldflags -static
 
 	cat <<-END >> includes/site.h
 	#define _PATH_DHCPD_CONF "/etc/dhcp/dhcpd.conf"
@@ -43,6 +43,7 @@ src_compile() {
 
 	cat <<-END > site.conf
 	CC = $(tc-getCC)
+	LFLAGS = ${LDFLAGS}
 	LIBDIR = /usr/lib
 	INCDIR = /usr/include
 	ETC = /etc/dhcp
