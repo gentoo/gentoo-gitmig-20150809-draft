@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.14 2004/06/24 22:30:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.15 2004/07/14 23:04:28 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Serial Communication Program"
 SRC_URI="http://www.clinet.fi/~walker/${P}.src.tar.gz"
 HOMEPAGE="http://www.clinet.fi/~walker/minicom.html"
@@ -12,6 +11,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r3"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 hppa"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.00.0.ebuild,v 1.15 2004/06/24 22:30:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.00.0.ebuild,v 1.16 2004/07/14 23:04:28 agriffis Exp $
 
 DESCRIPTION="Serial Communication Program"
 SRC_URI="http://www.netsonic.fi/~walker/${P}.src.tar.gz"
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.netsonic.fi/~walker/minicom.html"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc alpha hppa sparc"
+IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2-r3"
 
