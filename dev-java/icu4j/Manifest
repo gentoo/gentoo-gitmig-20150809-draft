@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 16201900a749f19afd7a5053d1010bac icu4j-3.0.ebuild 946
+MD5 98c2083ad1b0fa8e6e8a15ce63cff3af ChangeLog 359
+MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
+MD5 998429fb6f6a9beb6ff4899735f0e32b files/digest-icu4j-3.0 125
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBTZ0N/rLF9B432nYRAqiYAJ9UFmlNpwlBfokKceCxJhs7c4AzUACgt1w6
+cuK/adTG9hQ/rKOFIJqV2hA=
+=UJy/
+-----END PGP SIGNATURE-----

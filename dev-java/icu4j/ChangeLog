@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/icu4j
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.1 2004/09/19 14:51:40 axxo Exp $
+
+*icu4j-3.0 (19 Sep 2004)
+
+  19 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +icu4j-3.0.ebuild:
+  initial import, ebuild created by me as a dep
+
