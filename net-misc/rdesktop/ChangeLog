@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.17 2003/04/28 16:53:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.18 2003/04/28 19:36:36 agriffis Exp $
+
+  28 Apr 2003; Aron Griffis <agriffis@gentoo.org> rdesktop-1.2.0-r1.ebuild:
+  Fix build error where epatch wasn't available due to missing inherit. I don't
+  know why, but it worked fine on my test...
 
 *rdesktop-1.2.0-r1 (28 Apr 2003)
 
