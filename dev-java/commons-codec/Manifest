@@ -1,4 +1,14 @@
-MD5 cfc2bc215170c4e68ea34e78b78fa056 ChangeLog 736
-MD5 bf36cce4627423672699b3c6ba8b7304 commons-codec-1.2.ebuild 1680
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 966b61b09c4d09c3d78c4dd7fa61f028 commons-codec-1.2.ebuild 1686
+MD5 872495a1d81e4c45e8415e697380eab9 ChangeLog 871
 MD5 f2dad337cc9e728840751448669405c9 metadata.xml 1288
 MD5 d1f11eab4f180d78ef009ffeb34f1eea files/digest-commons-codec-1.2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCpe//rLF9B432nYRAjfZAJwLEHkPXAY+IxoTrZvuV+mOKxBEngCdHvT4
++jSZq1yI52tsJ9K73M/PaME=
+=xdx9
+-----END PGP SIGNATURE-----
