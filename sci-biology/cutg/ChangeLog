@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.6 2005/02/02 21:24:46 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.7 2005/02/23 04:04:17 ribosome Exp $
+
+  22 Feb 2005; Olivier Fisette <ribosome@gentoo.org> -cutg-143.ebuild,
+  cutg-144.ebuild:
+  Added support for the "emboss" and "minimal" "USE" flags.
 
   02 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> cutg-144.ebuild:
   Stable ppc-macos

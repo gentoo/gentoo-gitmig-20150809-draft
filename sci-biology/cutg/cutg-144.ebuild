@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-144.ebuild,v 1.5 2005/02/02 21:24:46 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-144.ebuild,v 1.6 2005/02/23 04:04:17 ribosome Exp $
 
 DESCRIPTION="Codon usage tables calculated from GenBank"
 HOMEPAGE="http://www.kazusa.or.jp/codon/"
@@ -9,28 +9,30 @@ LICENSE="public-domain"
 
 SLOT="0"
 KEYWORDS="x86 ~ppc ppc-macos ~ppc64"
-IUSE="no-emboss no-rawdb"
+IUSE="emboss minimal"
+# Minimal build keeps only the indexed files (if applicable) and the documentation.
+# The non-indexed database is not installed.
 
 S=${WORKDIR}
 
 src_compile() {
-	# Index the database for use with emboss if emboss is installed and
-	# the user did not explicitly request not to index the database.
-	if [ -e /usr/bin/cutgextract ] && ! use no-emboss; then
+	if use emboss; then
 		mkdir CODONS
+		echo
 		einfo "Indexing CUTG for usage with EMBOSS."
 		EMBOSS_DATA=. cutgextract -auto -directory ${S} || die \
 			"Indexing CUTG failed."
+		echo
 	fi
 }
 
 src_install() {
-	if ! use no-rawdb; then
+	if ! use minimal; then
 		mkdir -p ${D}/usr/share/${PN}
 		mv *.codon *.spsum ${D}/usr/share/${PN}
 	fi
 	dodoc README
-	if [ -e /usr/bin/cutgextract ] && ! use no-emboss; then
+	if use emboss; then
 		mkdir -p ${D}/usr/share/EMBOSS/data/CODONS
 		cd CODONS
 		for file in *; do

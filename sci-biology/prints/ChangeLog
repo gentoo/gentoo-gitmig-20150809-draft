@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/prints
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.4 2005/02/02 21:32:12 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.5 2005/02/23 04:06:27 ribosome Exp $
+
+  22 Feb 2005; Olivier Fisette <ribosome@gentoo.org> prints-37.0.ebuild:
+  Added support for the "emboss" and "minimal" "USE" flags.
 
   02 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> prints-37.0.ebuild:
   Stable ppc-macos
