@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9-r1.ebuild,v 1.1 2005/03/13 20:51:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9-r2.ebuild,v 1.1 2005/03/30 00:48:59 pylon Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -11,10 +11,10 @@ SRC_URI="mirror://sourceforge/cdrdao/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="gnome debug"
+IUSE="gnome debug encode"
 RESTRICT="nostrip"
 
-RDEPEND=">=media-sound/lame-3.90
+RDEPEND="encode? ( >=media-sound/lame-3.90 )
 	gnome? ( =dev-cpp/gtkmm-2.2*
 		=dev-cpp/libgnomemm-2.0*
 		=dev-cpp/libgnomecanvasmm-2.0*
@@ -56,13 +56,13 @@ src_compile() {
 	# -funroll-loops do not work
 	filter-flags "-funroll-loops"
 
-	./configure --build="${CHOST}"\
-		--host="${CHOST}" \
-		--prefix=/usr \
-		`use_enable debug debug` \
-		`use_with gnome xdao` || die "configure failed"
+	econf \
+		$(use_enable debug) \
+		$(use_with gnome xdao) \
+		$(use_with encode lame) \
+		--disable-dependency-tracking || die "configure failed"
 
-	emake || die
+	make || die "could not compile"
 }
 
 src_install() {
@@ -71,15 +71,12 @@ src_install() {
 	cd ${S}
 
 	# Desktop Icon
-	if use gnome
-	then
-		insinto /usr/share/pixmaps
-		doins xdao/stock/gcdmaster.png
-		insinto /usr/share/gnome/apps/Applications
-		doins ${FILESDIR}/gcdmaster.desktop
+	if use gnome; then
+		insinto /usr/share/icons/hicolor/48x48/apps
+		newins xdao/stock/gcdmaster.png gcdmaster.png
+		make_desktop_entry gcdmaster "Gnome CD Master" gcdmaster "AudioVideo;DiscBurning"
 	fi
 
 	# Documentation
 	dodoc AUTHORS CREDITS ChangeLog NEWS README*
 }
-

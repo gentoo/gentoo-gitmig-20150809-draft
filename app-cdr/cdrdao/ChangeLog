@@ -1,6 +1,16 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.60 2005/03/13 20:52:34 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.61 2005/03/30 00:48:59 pylon Exp $
+
+*cdrdao-1.1.9-r2 (30 Mar 2005)
+
+  30 Mar 2005; Lars Weiler <pylon@gentoo.org> -files/cdrdao-1.1.5-c++.patch,
+  -files/cdrdao-1.1.5-gentoo.diff, -files/cdrdao-1.1.8-cast.patch,
+  metadata.xml, -cdrdao-1.1.8.ebuild, -cdrdao-1.1.8-r1.ebuild,
+  -cdrdao-1.1.9-r1.ebuild, +cdrdao-1.1.9-r2.ebuild:
+  Major cleanup -> bug #81812
+  Change emake into make, so that MAKEOPTS are not used -> bug #85176
+  Add package to the media-optical herd
 
   13 Mar 2005; Markus Rothe <corsair@gentoo.org> metadata.xml:
   Fix typo in metadata.xml: copiing -> copying
