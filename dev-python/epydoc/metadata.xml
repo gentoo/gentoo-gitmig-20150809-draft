@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>python</herd>
+  <herd>python</herd>
+  <maintainer>
+    <email>aether@gentoo.org</email>
+    <name>Jason Mobarak</email>
+    <description>Maintainer</description>
+  </maintainer>
+  <longdescription>
+    Epydoc is a python documentation system without output similar to javadoc. Epydoc 
+    uses python doc-strings, importing modules, and introsepction in order to do
+    its thing -- if your modules are not safe to import, you should look for another
+    tool. Documentation mark-up is done with restructed text (reST).
+  </longdescription>
 </pkgmetadata>
