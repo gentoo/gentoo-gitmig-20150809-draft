@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3.ebuild,v 1.1 2001/03/20 07:19:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3.ebuild,v 1.2 2001/05/01 10:08:50 achim Exp $
 
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -21,10 +21,10 @@ T=/usr
 
 DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
-DEPEND="virtual/glibc
-        nls? ( sys-devel/gettext )"
+if [ -z "`use build`" ] ; then
+  DEPEND="nls? ( sys-devel/gettext )"
+fi
 
-RDEPEND="virtual/glibc"
 
 src_unpack() {
 

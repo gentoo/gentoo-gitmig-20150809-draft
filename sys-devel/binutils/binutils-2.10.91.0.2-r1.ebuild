@@ -1,14 +1,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.91.0.2-r1.ebuild,v 1.2 2001/03/06 05:27:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.91.0.2-r1.ebuild,v 1.3 2001/05/01 10:08:50 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="http://ftp.valinux.com/pub/support/hjl/binutils/${A}"
-DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
-RDEPEND="virtual/glibc"
+
+if [ -z "`use build`" ] ; then
+  DEPEND="nls? ( sys-devel/gettext )"
+fi
 
 src_compile() {
 
