@@ -1245,3 +1245,46 @@ diff -ur linux-2.6.7/include/linux/prefetch.h linux-2.6.7-gentoo/include/linux/p
  		prefetch(cp);
  #endif
  }
+diff -ur linux-2.6.7/include/linux/list.h linux-2.6.7-gentoo/include/linux/list.h
+--- linux-2.6.7/include/linux/list.h	2004-07-18 13:09:36.330803152 +0100
++++ linux-2.6.7-gentoo/include/linux/list.h	2004-07-18 12:48:14.700640552 +0100
+@@ -36,6 +36,8 @@
+ 	(ptr)->next = (ptr); (ptr)->prev = (ptr); \
+ } while (0)
+ 
++#ifdef __KERNEL__
++
+ /*
+  * Insert a new entry between two known consecutive entries.
+  *
+@@ -678,3 +680,4 @@
+ 	     pos = n)
+ 
+ #endif
++#endif
+diff -ur linux-2.6.7/include/asm-i386/processor.h linux-2.6.7-gentoo/include/asm-i386/processor.h
+--- linux-2.6.7/include/asm-i386/processor.h	2004-07-18 13:09:36.191824280 +0100
++++ linux-2.6.7-gentoo/include/asm-i386/processor.h	2004-07-18 13:14:01.627471928 +0100
+@@ -403,8 +403,10 @@
+ 	/*
+ 	 * .. and then another 0x100 bytes for emergency kernel stack
+ 	 */
+-	unsigned long stack[64];
+-} __attribute__((packed));
++	#ifndef stack /* LVM2-Userspace defines this as a function... */
++		unsigned long stack[64];
++	#endif
++}  __attribute__((packed));
+ 
+ #define ARCH_MIN_TASKALIGN	16
+ 
+@@ -491,7 +493,9 @@
+ extern int kernel_thread(int (*fn)(void *), void * arg, unsigned long flags);
+ 
+ extern unsigned long thread_saved_pc(struct task_struct *tsk);
++#ifdef __KERNEL__
+ void show_trace(struct task_struct *task, unsigned long *stack);
++#endif
+ 
+ unsigned long get_wchan(struct task_struct *p);
+ 
