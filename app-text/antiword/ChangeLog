@@ -1,8 +1,11 @@
 # ChangeLog for app-text/antiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.9 2003/03/19 16:45:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.10 2003/04/14 17:03:48 agriffis Exp $
  
 *antiword-0.33 (8 Mar 2003)
+
+  14 Apr 2003; Aron Griffis <agriffis@gentoo.org> antiword-0.33.ebuild:
+  Mark stable on alpha
 
   19 Mar 2003; Aron Griffis <agriffis@gentoo.org> antiword-0.33.ebuild:
   Add ~alpha to KEYWORDS
