@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.13 2003/10/11 20:47:46 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.14 2003/11/10 23:28:20 avenj Exp $
+
+*dnsmasq-1.18 (10 Nov 2003)
+
+  10 Nov 2003; Jon Portnoy <avenj@gentoo.org> dnsmasq-1.18.ebuild :
+  Version bump.
 
 *dnsmasq-1.17 (11 Oct 2003)
 
