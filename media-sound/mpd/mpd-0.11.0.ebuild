@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.0.ebuild,v 1.2 2004/06/27 10:51:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.0.ebuild,v 1.3 2004/06/27 11:01:49 mholzer Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6 flac"
 
@@ -50,7 +50,7 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/mpd.rc6 mpd
 
-	dosed 's:^port.*$:port "2100":' /etc/mpd.conf
+	dosed 's:^port.*$:port "6600":' /etc/mpd.conf
 	dosed 's:^music_directory.*$:music_directory "/usr/share/mpd/music":' /etc/mpd.conf
 	dosed 's:^playlist_directory.*$:playlist_directory "/usr/share/mpd/playlists":' /etc/mpd.conf
 	dosed 's:^log_file.*$:log_file "/var/log/mpd.log":' /etc/mpd.conf
