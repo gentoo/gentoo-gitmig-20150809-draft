@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta11.ebuild,v 1.3 2004/02/22 16:14:34 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta11.ebuild,v 1.4 2004/03/31 14:32:17 aliz Exp $
 
 MY_P=${P/_beta/-beta}
 
@@ -8,7 +8,7 @@ DESCRIPTION="A simple utility to read the temperature of SMART capable hard driv
 HOMEPAGE="http://coredump.free.fr/linux/hddtemp.php"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc -sparc amd64"
+KEYWORDS="x86 ~ppc -sparc amd64"
 DEPEND="virtual/glibc
 	net-misc/wget"
 
