@@ -1,18 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstormdemo/mutantstormdemo-1.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstormdemo/mutantstormdemo-1.33.ebuild,v 1.1 2003/10/07 17:04:01 vapier Exp $
 
 inherit games eutils
 
 DESCRIPTION="shoot through crazy psychedelic 3D environments"
 HOMEPAGE="http://www.pompom.org.uk/"
-SRC_URI="http://www.btinternet.com/%7Ebongpig/${PN}.sh"
+SRC_URI="ftp://ggdev-1.homelan.com/mutantstorm/MutantStormDemo_${PV/./_}.sh.bin"
 
 LICENSE="POMPOM"
 SLOT="0"
 KEYWORDS="-* x86"
 
 S=${WORKDIR}
+
+pkg_setup() {
+	check_license
+	games_pkg_setup
+}
 
 src_unpack() {
 	unpack_makeself
@@ -25,12 +30,11 @@ src_install() {
 	cp -r menu script styles ${D}/${dir}/
 
 	exeinto ${dir}
-	doexe bin/x86/*
-	dosed "s:XYZZY:${dir}:" ${dir}/${PN}
-	dosym ${dir}/${PN} ${GAMES_BINDIR}/${PN}
+	doexe bin/Linux/x86/*
+	dosym ${dir}/mutantstormdemo ${GAMES_BINDIR}/mutantstormdemo
 
 	insinto ${dir}
-	doins pompom README buy_me icon.xpm instructions.htm license.txt
+	doins README.txt buy_me mutant.xpm pompom readme.htm
 
 	prepgamesdirs
 }
