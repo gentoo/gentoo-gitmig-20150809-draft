@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.9-r1.ebuild,v 1.6 2003/12/01 20:13:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.9-r1.ebuild,v 1.7 2004/02/24 02:43:47 eradicator Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
 
 newdepend ">=media-libs/libogg-1.0_rc2
-	>=media-sound/mpg123-0.59
+	virtual/mpg123
 	>=media-sound/cdparanoia-3.9.8
 	>=app-cdr/cdrtools-1.11"
 

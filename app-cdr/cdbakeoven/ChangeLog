@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdbakeoven
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/ChangeLog,v 1.14 2003/12/01 20:13:46 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/ChangeLog,v 1.15 2004/02/24 02:43:47 eradicator Exp $
+
+  23 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  cdbakeoven-1.8.9-r1.ebuild, cdbakeoven-1.8.9.ebuild,
+  cdbakeoven-2.0_beta2.ebuild:
+  mpg123 depend changed to virtual
 
   01 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
   cdbakeoven-1.8.9-r1.ebuild, cdbakeoven-1.8.9.ebuild,
