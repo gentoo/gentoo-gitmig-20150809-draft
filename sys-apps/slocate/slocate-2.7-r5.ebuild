@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.17 2004/08/14 08:01:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.18 2004/08/14 08:10:25 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -37,7 +37,7 @@ src_install() {
 	fperms 0755 /etc/cron.daily/slocate
 	keepdir /var/lib/slocate
 
-	# fix bug 37354: nice updatedb
+	# #37871: nice updatedb
 	sed -i -e 's,^\([[:space:]]*\)\(/usr/bin/updatedb\),\1nice \2,' \
 		"${D}/etc/cron.daily/slocate" \
 		|| die "sed ${D}/etc/cron.daily/slocate failed"
