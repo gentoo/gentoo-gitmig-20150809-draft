@@ -4,7 +4,7 @@ MD5 2d1737f84f7850beca2ebec100547cb1 autoconf-2.57a-r1.ebuild 3350
 MD5 08d9c9b51271a8545700a8d5cda4f53d autoconf-2.58-r1.ebuild 3461
 MD5 fc0263a13002802a60fa6f21253d55c8 autoconf-2.58.ebuild 3459
 MD5 b60a0afb07111a2baa39f64c2a8a7bfd autoconf-2.59-r3.ebuild 3455
-MD5 1ef6474608b16a7202930955db165a55 autoconf-2.59-r4.ebuild 3453
+MD5 b4ed45f2292b018894e626b351d5049c autoconf-2.59-r4.ebuild 3453
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1afb97b888b8302d8083fc7a794b0e39 files/ac-wrapper-2.pl 2527
 MD5 6a3f9163d26cfd51653d90bebda1cb5d files/ac-wrapper-3.pl 2769
