@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/dsx
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dsx/ChangeLog,v 1.1 2003/11/15 02:17:58 abhishek Exp $
+
+*dsx-0.1 (14 Nov 2003)
+
+  14 Nov 2003; Abhishek Amit <abhishek@gentoo.org> dsx-0.1.ebuild,
+  files/dsx-0.1:
+  Inital import. Thanks to Ryan Grange <ryangrange@netscape.net> for porting
+  Xstart. Xtart is (c) 2001 civilme@mandrakesoft, released under GPL v2
+
