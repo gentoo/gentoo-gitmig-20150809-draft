@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/scilab
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.22 2004/09/14 15:51:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.23 2004/11/26 14:18:03 josejx Exp $
+
+  27 Nov 2004; Joseph Jezak <josejx@gentoo.org> scilab-2.7-r3.ebuild:
+  Marked ~ppc for bug #71458.
 
   14 Sep 2004; Olivier Fisette <ribosome@gentoo.org> scilab-3.0.ebuild:
   Added a check for a Fortran compiler (bug #53872).
