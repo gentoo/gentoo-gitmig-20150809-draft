@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.13 2004/03/30 06:03:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.4_pre20030213.ebuild,v 1.14 2004/04/19 07:59:07 vapier Exp $
 
-inherit eutils
+inherit eutils gcc
 
-S=${WORKDIR}/${PN}
 DESCRIPTION="multi-purpose text editor for the X Window System"
 HOMEPAGE="http://nedit.org/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc sparc amd64 ~mips"
 IUSE="spell"
 
@@ -19,6 +18,8 @@ RDEPEND="spell? ( virtual/aspell-dict )
 DEPEND="${RDEPEND}
 	dev-util/yacc
 	x11-libs/openmotif"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make CC=${CC} linux || die
+	make CC=$(gcc-getCC) linux || die
 }
 
 src_install() {
