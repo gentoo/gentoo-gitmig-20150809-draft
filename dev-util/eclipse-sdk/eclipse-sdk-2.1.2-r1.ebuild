@@ -52,6 +52,10 @@ src_compile() {
 	# for KDE.  Apparently the motif build also supports KDE when
 	# this is done - I could be wrong though.
 
+	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then
+		ANT_EXTRA_OPTS="-Dbootclasspath=`java-config --jdk-home`/jre/lib/core.jar"
+	fi
+	
 	gtk_launcher_src_dir="${WORKDIR}/plugins/platform-launcher/library/gtk"
 	motif_launch_src_dir="${WORKDIR}/plugins/platform-launcher/library/motif"
 	gtk_swt_src_dir=${WORKDIR}/plugins/org.eclipse.swt/Eclipse\ SWT\ PI/gtk/library
@@ -94,13 +98,13 @@ src_compile() {
 	override_motif_target=
 	if [ "${gtk}" = "y" ] ; then
 		einfo "Building GTK+ frontend"
-		ant -buildfile build.xml -Dos=linux -Dws=gtk
+		ant -buildfile build.xml -Dos=linux -Dws=gtk ${ANT_EXTRA_OPTS}
 		#only do a compile/install for motif...  Don't do a buildDoc.  This will save time...
 		override_motif_target=compile install
 	fi
 	if [ "${motif}" = "y" ] ; then
 		einfo "Building Motif frontend"
-		ant -buildfile ${override_motif_target} build.xml -Dos=linux -Dws=motif
+		ant -buildfile ${override_motif_target} build.xml -Dos=linux -Dws=motif ${ANT_EXTRA_OPTS}
 	fi
 
 	# remove all .so files shipped with the tarball

@@ -1,11 +1,16 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.7 2003/12/11 19:02:18 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.8 2003/12/22 00:18:18 karltk Exp $
 
+  21 Dec 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-2.1.2-r1.ebuild:
+  Fixed compilation with IBM JDK, tries to fix #37421. Must test it
+  on ppc.
+  
 *eclipse-sdk-3.0.0_pre5 (11 Dec 2003)
 
   11 Dec 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
-  eclipse-sdk-3.0.0_pre5:
+  eclipse-sdk-3.0.0_pre5:	
   Added experimental upstream version, thanks to submission by David
   Love <dlove@nighton.net>. Fixes #35416. Don't use it if you don't mean
   it; this is highly volatile stuff.
