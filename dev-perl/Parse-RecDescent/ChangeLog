@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/Parse-RecDescent
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.9 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.10 2003/05/29 01:15:50 mcummings Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  28 May 2003; Michael Cummings <mcummings@gentoo.org> : corrected 
+  description of module to be a description, not 'Perl Module'
+
+  Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
