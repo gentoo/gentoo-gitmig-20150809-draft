@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/celementtree
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.3 2005/01/27 16:34:54 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.4 2005/03/25 15:02:06 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> celementtree-1.0.ebuild:
+  added ~amd64
 
 *celementtree-1.0 (27 Jan 2005)
 
