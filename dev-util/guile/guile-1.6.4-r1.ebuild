@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.18 2004/08/21 00:24:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.19 2004/10/10 17:22:59 usata Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils libtool
 
 DESCRIPTION="Scheme interpreter"
 HOMEPAGE="http://www.gnu.org/software/guile/"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ~ppc-macos"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
@@ -30,6 +30,13 @@ src_compile() {
 
 	if [ "${ARCH}" = "amd64" ]; then
 		epatch ${FILESDIR}/guile-amd64.patch
+	fi
+
+	if use ppc-macos ; then
+		elibtoolize
+		epatch ${FILESDIR}/guile-macos-posix.patch
+		epatch ${FILESDIR}/guile-macos-relink.patch
+		append-flags -no-cpp-precomp -Dmacosx
 	fi
 
 	econf \
