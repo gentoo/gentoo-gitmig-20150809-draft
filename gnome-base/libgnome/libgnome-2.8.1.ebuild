@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.8.1.ebuild,v 1.1 2005/02/24 06:24:12 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.8.1.ebuild,v 1.2 2005/02/24 10:14:42 obz Exp $
 
 inherit gnome2 eutils
 
@@ -28,4 +28,15 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} --disable-schemas-install "
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
+
+src_unpack() {
+
+	unpack ${A}
+	# patch to revert the behaviour of va_list, to stay
+	# inline with agriffis' previous fix, see:
+	# http://bugs.gentoo.org/show_bug.cgi?id=83153 and
+	# http://bugzilla.gnome.org/show_bug.cgi?id=168110
+	epatch ${FILESDIR}/${P}-va_list.patch
+
+}
 
