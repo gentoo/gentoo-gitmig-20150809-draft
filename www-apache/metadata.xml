@@ -7,5 +7,8 @@
 	<longdescription lang="es">
 		La categoría www-apache contiene módulos del servidor web Apache.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie www-apache enthält Module für den Webserver Apache.
+	</longdescription>
 </catmetadata>
 
