@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/minichinput-0.1.9.ebuild,v 1.1 2003/08/31 02:22:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/minichinput-0.1.9.ebuild,v 1.2 2003/10/08 09:41:35 liquidx Exp $
 
 MY_P=${P/minichinput/miniChinput}
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/minichinput/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
