@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2979 2004/07/02 16:27:32 pebenito Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2980 2004/07/02 23:41:18 pebenito Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <pebenito@gentoo.org> (2 July 2004)
+# eventual use when SELinux kernel headers are updated
+=sec-policy/selinux-base-policy-20040702
 
 # <usata@gentoo.org> (2 July 2004)
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
