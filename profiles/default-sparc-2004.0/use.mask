@@ -1,0 +1,37 @@
+# This file contains a list of useflags that cannot be used on sparc.
+
+3dfx
+3dnow
+acpi
+afs
+alsa
+altivec
+apm
+directfb
+icc
+icc-pgo
+informix
+firebird
+lirc
+mmx
+oci8
+pic
+sse
+svga
+trusted
+voodoo3
+wavelan
+
+
+# And arch keyword flags that don't work
+
+x86
+ppc
+alpha
+mips
+hppa
+arm
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux
