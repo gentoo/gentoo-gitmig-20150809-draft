@@ -1,12 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d660186de46e6d2c1469fdc84ef9eb0a gst-plugins-mad-0.8.5.ebuild 435
 MD5 ab8b2c79222002c7501fdebc68cffd03 gst-plugins-mad-0.8.1.ebuild 440
+MD5 b7ca6fd995c1844069b4e3aedaa89b77 ChangeLog 3784
 MD5 37d2caea2e8471a137017be4f6793236 gst-plugins-mad-0.8.3.ebuild 438
-MD5 53bd2c666c12bd833ff0277fed7d435e gst-plugins-mad-0.6.4.ebuild 357
-MD5 7f0d3ddc1eea764f8e87a343297ac841 gst-plugins-mad-0.8.5.ebuild 435
-MD5 8c081e3e2e819ccc3a88a9926306deeb gst-plugins-mad-0.8.2.ebuild 441
-MD5 ebd9ae4e815175e46cbf738635b83ab1 ChangeLog 3681
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+MD5 8c081e3e2e819ccc3a88a9926306deeb gst-plugins-mad-0.8.2.ebuild 441
+MD5 53bd2c666c12bd833ff0277fed7d435e gst-plugins-mad-0.6.4.ebuild 357
+MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-mad-0.8.5 71
 MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-mad-0.6.4 71
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-mad-0.8.1 71
-MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-mad-0.8.2 71
 MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-mad-0.8.3 71
-MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-mad-0.8.5 71
+MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-mad-0.8.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBl+9yugEuf3OQ0akRAqEhAJ9nNqoZaUdenTIm2/og1urCEiiscgCfbg40
+10lVxQpi8rFCJ2NC/pTBZ/Q=
+=RhKR
+-----END PGP SIGNATURE-----

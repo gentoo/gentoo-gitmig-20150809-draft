@@ -1,12 +1,22 @@
-MD5 bb6f2d5b3d7d155b738851ac2538873d ChangeLog 3006
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c393531d0358bd62c194ef05d5990c4b ChangeLog 3112
 MD5 c25bc41c21771009f89e5ec6ae36f435 gst-plugins-libpng-0.6.4.ebuild 409
-MD5 d7213d91cc9d09b04926fa8ba38a5d2e gst-plugins-libpng-0.8.1.ebuild 413
-MD5 e9da2b307884145346292f2cd47ce889 gst-plugins-libpng-0.8.2.ebuild 410
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+MD5 2e5b42115855ea2f8c9bad84f9d7c08c gst-plugins-libpng-0.8.5.ebuild 411
 MD5 f975aa5c3dbb5f20dc909f1587234c5c gst-plugins-libpng-0.8.3.ebuild 413
-MD5 354d49c77ab022333678bd5551a203ed gst-plugins-libpng-0.8.5.ebuild 414
-MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-libpng-0.6.4 71
-MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-libpng-0.8.1 71
+MD5 e9da2b307884145346292f2cd47ce889 gst-plugins-libpng-0.8.2.ebuild 410
+MD5 d7213d91cc9d09b04926fa8ba38a5d2e gst-plugins-libpng-0.8.1.ebuild 413
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-libpng-0.8.2 71
-MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-libpng-0.8.3 71
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-libpng-0.8.5 71
+MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-libpng-0.6.4 71
+MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-libpng-0.8.3 71
+MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-libpng-0.8.1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBl/BNugEuf3OQ0akRArNLAJ9Wym0TsRI/ZYuG6WU53hAG2nukRACfRX47
+2JzfC+568/OX8F3sBEbrhyM=
+=Swi6
+-----END PGP SIGNATURE-----
