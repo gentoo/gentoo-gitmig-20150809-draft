@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/colorcvs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorcvs/ChangeLog,v 1.1 2004/10/23 21:08:05 slarti Exp $
+
+*colorcvs-1.4 (23 Oct 2004)
+
+  23 Oct 2004; Tom Martin <slarti@gentoo.org> +metadata.xml,
+  +colorcvs-1.4.ebuild:
+  Initial import.
+
