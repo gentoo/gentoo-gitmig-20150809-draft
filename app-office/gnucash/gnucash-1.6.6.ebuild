@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6.ebuild,v 1.2 2002/04/01 04:05:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6.ebuild,v 1.3 2002/04/01 06:21:36 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A personal finance manager"
@@ -10,6 +10,7 @@ HOMEPAGE="http://gnucash.sourceforge.net"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	 >=dev-libs/libxml-1.8.10
+	 gnome-base/control-center
 	 >=gnome-extra/gtkhtml-0.14.0-r1
 	 >=gnome-extra/gal-0.13-r1
 	 >=gnome-extra/guppi-0.35.5-r2
