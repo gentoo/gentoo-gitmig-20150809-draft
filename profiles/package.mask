@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3037 2004/08/01 20:52:18 carlo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3038 2004/08/04 03:37:27 squinky86 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <squinky86@gentoo.org> (Aug 3 2004)
+# gtk2 frontend does not build, #58891
+=net-p2p/mldonkey-2.5.22-r1
 
 # <carlo@gentoo.org> (Aug 1 2004)
 # multiple buffer overflows, known for >3 months...
