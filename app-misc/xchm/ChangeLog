@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/xchm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xchm/ChangeLog,v 1.9 2003/10/26 21:16:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xchm/ChangeLog,v 1.10 2003/11/08 14:57:44 mholzer Exp $
+
+*xchm-0.8.8 (08 Nov 2003)
+
+  08 Nov 2003; Martin Holzer <mholzer@gentoo.org> xchm-0.8.8.ebuild:
+  Version bumped.
 
 *xchm-0.8.7 (26 Oct 2003)
 
