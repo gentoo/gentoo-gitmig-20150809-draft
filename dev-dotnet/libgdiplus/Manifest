@@ -2,13 +2,14 @@ MD5 6d4dd24af57651076712c2751c5569c7 libgdiplus-1.0.6-r1.ebuild 1435
 MD5 3361b26fb496f5f715faf24a8ede5cb5 libgdiplus-1.1.4.ebuild 1450
 MD5 2ef995afdd6fd2e40b55b357d8744104 libgdiplus-1.0.5-r1.ebuild 1344
 MD5 f98083b4e7e5b18649f29637e0070767 libgdiplus-1.0.4-r1.ebuild 1282
-MD5 4ebe54ac45c8b7f0ea3b84c2245d9aa8 libgdiplus-1.1.5.ebuild 1545
+MD5 f71840af3f53a8af204543fc7dba77df libgdiplus-1.1.5.ebuild 1586
 MD5 7a160a8763e6b52ffa74eda1ddcca08f libgdiplus-1.0.5-r2.ebuild 1424
-MD5 16c9188877ce9e7fcd544ff52744d41a ChangeLog 4046
+MD5 48b7a28d15af1aacae2aac2de347d3c9 ChangeLog 4196
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 4734220b46fdf8a1db9b84401c92c9b9 libgdiplus-1.0.6.ebuild 1342
 MD5 19b411b048591ef4b4e015f0dc26cf76 files/libgdiplus-1.1.4-giflib.diff 2297
 MD5 3ef156941c1a08fe328a986a2eb19097 files/libgdiplus-1.0.5-cairo-0.3.0-compat.diff 14182
+MD5 5588de6bd956056e540361d2ca4cbbb5 files/libgdiplus-1.1.5-nogif.diff 432
 MD5 e513a9ab6f55d63191841b053a9f1c4b files/digest-libgdiplus-1.0.6 68
 MD5 8c3dae5b0b5642de968450f13c111900 files/digest-libgdiplus-1.1.4 69
 MD5 4fc6059d4ee42e5ef7b5db1c92fc0628 files/digest-libgdiplus-1.1.5 69

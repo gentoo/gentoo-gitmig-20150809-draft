@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.5.ebuild,v 1.1 2005/03/25 21:43:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.5.ebuild,v 1.2 2005/03/31 18:33:54 latexer Exp $
 
 inherit libtool eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.1.4-included-cairo-fix.diff || die
 	epatch ${FILESDIR}/${PN}-1.1.4-giflib.diff || die
+	epatch ${FILESDIR}/${P}-nogif.diff || die
 	libtoolize --copy --force || die "libtoolize failed"
 	autoheader || die "autoheader failed"
 	aclocal || die "aclocal failed"
@@ -42,7 +43,7 @@ src_unpack() {
 src_compile() {
 	local myconf="--with-cairo=installed"
 	use tiff ||  myconf="--without-libtiff ${myconf}"
-	use gif ||  myconf="--without-libungif ${myconf}"
+	use gif ||  myconf="--without-libgif ${myconf}"
 	use jpeg ||  myconf="--without-libjpeg ${myconf}"
 	use png ||  myconf="--without-libpng ${myconf}"
 

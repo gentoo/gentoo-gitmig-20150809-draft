@@ -1,0 +1,12 @@
+diff -aur libgdiplus-1.1.5-orig/src/gifcodec.c libgdiplus-1.1.5/src/gifcodec.c
+--- libgdiplus-1.1.5-orig/src/gifcodec.c	2005-03-17 13:45:44.000000000 -0500
++++ libgdiplus-1.1.5/src/gifcodec.c	2005-03-30 15:47:51.000000000 -0500
+@@ -511,7 +511,7 @@
+ }
+ 
+ GpStatus 
+-gdip_save_gif_image_to_file (unsigned char *filename, GpImage *image)
++gdip_save_gif_image_to_file (char *filename, GpImage *image)
+ {
+ 	return UnknownImageFormat;
+ }
