@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.13 2003/10/04 09:37:59 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.14 2003/10/06 03:47:05 vapier Exp $
 
 inherit eutils
 
@@ -96,6 +96,8 @@ src_install() {
 
 	dodir /var/lib/ntp
 	fowners ntp:ntp /var/lib/ntp
+	touch ${D}/var/lib/ntp/ntp.drift
+	fowners ntp:ntp /var/lib/ntp/ntp.drift
 }
 
 pkg_postinst() {
