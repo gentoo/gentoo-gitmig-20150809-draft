@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.4 2004/09/01 20:19:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.5 2004/09/04 17:58:04 squinky86 Exp $
 
 IRSSI_PV=0.8.9
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~sparc"
 IUSE="debug pic"
 
 # All necessary dependencies are pulled in by irssi.
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="~net-irc/irssi-0.8.9"
 
 S_SILC="${S}/../silc-client-${PV}"
