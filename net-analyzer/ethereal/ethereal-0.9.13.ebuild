@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.4 2003/06/16 01:34:18 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.5 2003/06/22 18:58:51 pylon Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 
@@ -33,6 +33,9 @@ src_unpack() {
 	mv configure configure.broken
 	sed "s|-I/usr/local/include||" configure.broken > configure
 	chmod +x ./configure
+	mv Makefile.am Makefile.am.orig
+	sed "s|@PCAP_LIBS@ @SOCKET_LIBS@ @NSL_LIBS@|@PCAP_LIBS@ @SOCKET_LIBS@ @NSL_LIBS@ @ADNS_LIBS@|" \
+		Makefile.am.orig > Makefile.am
 }
 
 src_compile() {
@@ -60,7 +63,7 @@ src_compile() {
 		--sysconfdir=/etc/ethereal \
 		--with-plugindir=/usr/lib/ethereal/plugins/${PV} \
 		${myconf} || die "bad ./configure"
-                
+
 	emake || die "compile problem"
 }
 
