@@ -1,0 +1,14 @@
+# Copyright 2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author: Karl Trygve Kalleberg
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/files/kaffe-1.1.3,v 1.1 2004/01/09 09:23:46 karltk Exp $
+
+VERSION="Kaffe @PV@"
+JAVA_HOME=/opt/@P@
+CLASSPATH=/opt/@P@/jre/lib/rt.jar
+JDK_HOME=/opt/@P@
+JAVAC=${JAVA_HOME}/bin/javac
+MANPATH=/opt/@P@/man
+ADDPATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin"
+ADDLDPATH="/opt/@P@/jre/lib/i386/"
+ENV_VARS="JAVA_HOME CLASSPATH JDK_HOME JAVAC ADDPATH ADDLDPATH"
