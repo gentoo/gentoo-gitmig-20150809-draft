@@ -11,6 +11,20 @@
 # will be committed to cvs, the details on that line will be automatically
 # generated to contain the correct data.
 
+# inherit lists eclasses to inherit functions from. Almost all ebuilds should
+# inherit eutils, as a large amount of important functionality has been
+# moved there. For example, the $(get_libdir) mentioned below wont work
+# without the following line:
+inherit eutils
+# A well-used example of an eclass function that needs eutils is epatch. If
+# your source needs patches applied, it's suggested to put your patch in the
+# 'files' directory and use:
+#
+#   epatch ${FILESDIR}/patch-name-here
+#
+# eclasses tend to list descriptions of how to use their functions properly.
+# take a look at /usr/portage/eclasses/ for more examples.
+
 # Short one-line description of this package.
 DESCRIPTION="This is a sample skeleton ebuild file"
 
@@ -134,6 +148,7 @@ src_install() {
 	#	prefix=${D}/usr \
 	#	mandir=${D}/usr/share/man \
 	#	infodir=${D}/usr/share/info \
+	#	libdir=${D}/usr/$(get_libdir) \
 	#	install || die
 	# Again, verify the Makefiles!  We don't want anything falling
 	# outside of ${D}.
