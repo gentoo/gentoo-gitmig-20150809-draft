@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/aqua-data-studio/aqua-data-studio-3.5.ebuild,v 1.2 2004/02/16 20:56:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/aqua-data-studio/aqua-data-studio-3.5.ebuild,v 1.3 2004/05/08 11:01:37 kugelfang Exp $
 
 DESCRIPTION="An SQL editor and developer tool"
 HOMEPAGE="http://www.aquafold.com"
 SRC_URI="http://www.aquafold.net/download/linux/adstudio-novm.tar.gz"
 LICENSE="aqua-data-studio"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 IUSE="gnome kde"
 RDEPEND="virtual/jre"
 
