@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.40 2004/03/21 15:38:01 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.41 2004/03/27 00:27:19 plasmaroo Exp $
+
+*genkernel-3.0.2_rc2 (27 Mar 2004)
+
+  27 Mar 2004; Tim Yamin <plasmaroo@gentoo.org> genkernel-3.0.2_rc2.ebuild,
+  Version bump. Closes bug #45731 and updates the SPARC configuration scripts.
 
   21 Mar 2004; Tim Yamin <plasmaroo@gentoo.org>
   genkernel-3.0.2_rc1.ebuild:
