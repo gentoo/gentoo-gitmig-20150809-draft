@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.7.5.ebuild,v 1.1 2004/09/21 13:33:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.7.5.ebuild,v 1.2 2004/10/06 07:36:48 usata Exp $
 
 DESCRIPTION="Qt immodules input method framework plugin for SCIM"
 HOMEPAGE="http://scim.freedesktop.org/"
@@ -18,7 +18,7 @@ DEPEND=">=app-i18n/scim-0.99.9
 
 pkg_setup() {
 	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
-		die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt or immqt-bc USE flag enabled."
+		die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt-bc(recommended) or immqt USE flag enabled."
 	fi
 }
 
@@ -38,7 +38,7 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "After you emerged ${PN}, use right click to switch immodules for Qt."
-	einfo "If you would like to use scim-qtimm as default instead of XIM, set"
+	einfo "If you would like to use ${PN} as default instead of XIM, set"
 	einfo "	% export QT_IM_MODULE=scim"
 	einfo
 	ewarn
