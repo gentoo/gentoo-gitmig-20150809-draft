@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40.ebuild,v 1.3 2004/02/20 06:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40.ebuild,v 1.4 2004/05/27 22:13:37 mr_bones_ Exp $
 
 inherit games eutils gcc
 
@@ -37,7 +37,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/makefile-path-fixes.patch
 
-	[ `gcc-major-version` -eq 3 ] \
+	[ $(gcc-major-version) -eq 3 ] \
 		&& epatch ${FILESDIR}/makefile-gcc3-cflags.patch \
 		|| epatch ${FILESDIR}/makefile-gcc2-cflags.patch
 	sed -i "s:GENTOO_CFLAGS:${CFLAGS} -DGL_EXT_SHARED=1:" {WinQuake,QW}/Makefile
@@ -45,20 +45,20 @@ src_unpack() {
 	(echo "#define APIENTRY";cat QW/client/glquake.h.orig) > QW/client/glquake.h
 
 	epatch ${FILESDIR}/makefile-sedable.patch
-	if [ ! `use 3dfx` ] ; then
+	if ! use 3dfx ; then
 		sed -i 's:^   $(BUILDDIR)/bin/glquake ::' WinQuake/Makefile
 		sed -i 's:^   $(BUILDDIR)/bin/glquake.3dfxgl ::' WinQuake/Makefile
 		sed -i 's:^   $(BUILDDIR)/glqwcl ::' QW/Makefile
 	fi
-	if [ ! `use X` ] ; then
+	if ! use X ; then
 		sed -i 's:^   $(BUILDDIR)/bin/quake.x11 ::' WinQuake/Makefile
 		sed -i 's:^   $(BUILDDIR)/qwcl.x11 ::' QW/Makefile
 	fi
-	if [ ! `use opengl` ] ; then
+	if ! use opengl ; then
 		sed -i 's:^   $(BUILDDIR)/bin/quake.glx ::' WinQuake/Makefile
 		sed -i 's:^   $(BUILDDIR)/glqwcl.glx ::' QW/Makefile
 	fi
-	if [ ! `use svga` ] ; then
+	if ! use svga ; then
 		sed -i 's:^   $(BUILDDIR)/bin/squake ::' WinQuake/Makefile
 		sed -i 's:^   $(BUILDDIR)/qwcl ::' QW/Makefile
 	fi
