@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.3.ebuild,v 1.1 2004/03/21 18:26:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.3.ebuild,v 1.2 2004/03/22 06:21:16 usata Exp $
 
 IUSE="gtk nls debug"
 
@@ -31,9 +31,6 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gtk-query-immodules-gentoo.diff
-	if has_version '>=x11-libs/gtk+-2.4' ; then
-		epatch ${FILESDIR}/${PN}-gtk24-gentoo.diff
-	fi
 }
 
 src_compile() {
