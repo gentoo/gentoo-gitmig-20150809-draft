@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.2 2003/09/25 06:41:23 msterret Exp $
 
 inherit games eutils
 
@@ -20,7 +20,6 @@ RDEPEND=">=media-libs/allegro-4.0.0
 	>=media-libs/jpgalleg-1.1
 	>=sys-libs/zlib-1.1.4"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	app-arch/unzip"
 
 S=${WORKDIR}/glaunch
@@ -30,18 +29,12 @@ src_unpack() {
 	cd ${S}
 
 	edos2unix `find -regex '.*\.[ch]' -or -name '*.cc'`
-
-	epatch ${FILESDIR}/${PV}-gcc3.patch
-	epatch ${FILESDIR}/${PV}-digi-oss.patch
-
-	sed -i \
-		-e "s/TARGET\(.*\)= MINGW/#TARGET\1= MINGW/" \
-		-e "s/#TARGET\(.*\)= UNIX/TARGET\1= UNIX/" common.mk || \
-			die "sed common.mk failed"
+	epatch ${FILESDIR}/${PV}-gentoo.patch
+	find . -name ".cvsignore" -exec rm -f \{\} \;
 }
 
 src_compile() {
-	emake -j1 CXXFLAGS="${CXXFLAGS}"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
