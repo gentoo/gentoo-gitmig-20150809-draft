@@ -2,7 +2,6 @@
 Hash: SHA1
 
 MD5 cd47482929f03c3733d085d0e1dc7ee7 ChangeLog 22280
-MD5 1ce51fdb0c8a9ce07b454d66413e6d09 coreutils-5.0-r6.ebuild 2656
 MD5 83efa457e8e155248c2ebc6899dc6646 coreutils-5.2.1.ebuild 4149
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a941f375b9afbe7b76fa74277e83ed4f coreutils-5.2.1-r1.ebuild 4145
@@ -10,7 +9,6 @@ MD5 6525136b9f2d5170fdb188ae799a2c31 coreutils-5.2.1-r3.ebuild 4204
 MD5 992f0ec91891e7ddbcf466dfce3dd857 coreutils-5.2.0-r2.ebuild 4172
 MD5 047a27c3aab6f94893d9b67ef7522f90 coreutils-5.2.1-r2.ebuild 4387
 MD5 d3828e48aebb7452db7a8f8b025da0ff files/DIR_COLORS 4041
-MD5 e80d3d87cfbe40bc56636167ae5b4768 files/digest-coreutils-5.0-r6 141
 MD5 36e1cce43ca15be334d54801e1dbb286 files/digest-coreutils-5.2.1 224
 MD5 316d769e60be0f94af3e3c957a664aec files/digest-coreutils-5.2.1-r1 225
 MD5 399c95e89ca6f6c1796782fe031c220e files/digest-coreutils-5.2.1-r3 225
@@ -23,7 +21,7 @@ MD5 569870ec2f958c2a2a716a7f695deb42 files/coreutils-5.2.1-unamefix.patch 485
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFByPicroRuSHgZdywRAqD1AJ4yAJ5VBDGZYJe1d2N1f5yHWmiwyACfS9n3
-loUGTDiga5u/yu0xg0wn9og=
-=Ait3
+iD8DBQFByPkoroRuSHgZdywRAofjAJ9LeqtgoHbidYEyssxanTlMTivHkwCfQzj9
+aaK3xS+oKiw8yARcBL/lFOw=
+=XdWa
 -----END PGP SIGNATURE-----
