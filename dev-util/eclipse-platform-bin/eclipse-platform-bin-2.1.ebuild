@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-platform-bin/eclipse-platform-bin-2.1.ebuild,v 1.1 2003/04/05 00:23:30 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-platform-bin/eclipse-platform-bin-2.1.ebuild,v 1.2 2003/04/27 06:29:40 tberman Exp $
 
 S=${WORKDIR}/eclipse
 DESCRIPTION="Eclipse Tools Platform"
@@ -21,6 +21,9 @@ src_install () {
 		${D}/opt/eclipse/
 
 	dohtml cpl-v10.html notice.html readme/*
+
+	insinto /usr/share/gnome/apps/Development
+	doins ${FILESDIR}/eclipse.desktop
 
 	dodir /etc/env.d
 	echo "LDPATH=/opt/eclipse" > ${D}/etc/env.d/20eclipse
