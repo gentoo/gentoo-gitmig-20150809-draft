@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 673c0d69c6f8c59f4edf466078a45b9f pnetc-0.6.10.ebuild 618
-MD5 be55cdf082d0a79a8e8d5b6275b3709c pnetc-0.6.12.ebuild 625
+MD5 8feea647c2cf412071382a8a53ca1898 pnetc-0.6.12.ebuild 618
 MD5 4958669116867d766d71dde059745a92 ChangeLog 2724
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 7f046c1bf2bed4fea43ebfedb829b13e files/digest-pnetc-0.6.10 64
@@ -10,7 +10,7 @@ MD5 3aaa783e43b35aab8e5bab6280e85a92 files/digest-pnetc-0.6.12 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB6jjjPgS8WLD64cERAvW/AJ9kDLfKZhks3Zn8nsnFCZ5lQs2M6gCcCnlh
-g87b1tSILs30Gmi4I1VK1u8=
-=7jGC
+iD8DBQFB/AL6PgS8WLD64cERAqsqAJ9KvTZ21HitTdzwjC8I1Rm3bamHlQCdEThn
+49zKHntCk67WuLtmAkKzc9U=
+=iaa6
 -----END PGP SIGNATURE-----
