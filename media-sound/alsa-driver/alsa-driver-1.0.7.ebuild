@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.5 2004/11/19 08:45:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.6 2004/11/19 10:59:25 eradicator Exp $
 
 IUSE="oss"
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/modutils
 
 DEPEND="${RDEPEND}
 	virtual/linux-sources
-	sys-devel/autoconf
+	>=sys-devel/autoconf-2.50
 	sys-apps/debianutils"
 
 PROVIDE="virtual/alsa"
@@ -65,6 +65,12 @@ src_unpack() {
 		# SUBDIRS -> M
 		epatch ${FILESDIR}/${PN}-1.0.6a-kbuild.patch
 	fi
+
+	# Fix order of configure operations so the kernel compiler isn't used
+	# for tests.
+	epatch ${FILESDIR}/${PN}-1.0.7-configure.patch
+	export WANT_AUTOCONF=2.5
+	autoconf
 }
 
 src_compile() {

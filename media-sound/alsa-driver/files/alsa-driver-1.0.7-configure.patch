@@ -1,0 +1,1019 @@
+--- configure.in.orig	2004-11-19 02:48:35.682952736 -0800
++++ configure.in	2004-11-19 02:48:39.089434872 -0800
+@@ -734,366 +734,6 @@
+ CONFIG_ISA=probe
+ fi
+ 
+-dnl Check processor type...
+-AC_MSG_CHECKING(for processor type)
+-CONFIG_X86=
+-CONFIG_ALPHA=
+-CONFIG_L3=
+-CONFIG_ARM=
+-CONFIG_PPC=
+-CONFIG_SPARC32=
+-CONFIG_SPARC64=
+-CONFIG_SBUS=
+-CONFIG_SND_BIT32_EMUL=
+-processor=""
+-rm -f processor.id
+-ac_save_CFLAGS="$CFLAGS"
+-CFLAGS="$CFLAGS $KERNEL_INC $HACK_KERNEL_INC"
+-if test -n "$kernelbuild" -a -f "$kernelbuild/include/linux/autoconf.h"; then
+-  KERNDIR=$kernelbuild
+-else
+-  KERNDIR=$CONFIG_SND_KERNELDIR
+-fi
+-AC_TRY_RUN([
+-#include <stdio.h>
+-#include "$KERNDIR/include/linux/autoconf.h"
+-int main(void) {
+-	FILE *file = fopen("processor.id", "w+");
+-	if (file == NULL)
+-		exit(1);
+-#if defined(CONFIG_M386)
+-	fprintf(file, "i386");
+-#elif defined(CONFIG_M486)
+-	fprintf(file, "i486");
+-#elif defined(CONFIG_M586)
+-	fprintf(file, "i586");
+-#elif defined(CONFIG_X86_64) /* this needs to be chcked before K8 */
+-	fprintf(file, "x86_64");
+-#elif defined(CONFIG_M586TSC)
+-	fprintf(file, "i586tsc");
+-#elif defined(CONFIG_M586MMX)
+-	fprintf(file, "i586mmx");
+-#elif defined(CONFIG_M686) || defined(CONFIG_MPENTIUMII) || defined(CONFIG_MPENTIUMIII) || defined(CONFIG_MPENTIUM4) || defined(CONFIG_MPENTIUMM)
+-	fprintf(file, "i686");
+-#elif defined(CONFIG_MK6)
+-	fprintf(file, "k6");
+-#elif defined(CONFIG_MK7)
+-	fprintf(file, "k7");
+-#elif defined(CONFIG_MK8)
+-	fprintf(file, "k8");
+-#elif defined(CONFIG_MCRUSOE)
+-	fprintf(file, "crusoe");
+-#elif defined(CONFIG_MWINCHIPC6) || defined(CONFIG_MWINCHIP2) || defined(CONFIG_MWINCHIP3D)
+-	fprintf(file, "mwinchip");
+-#elif defined(CONFIG_MCYRIXIII)
+-	fprintf(file, "mcyrixiii");
+-#elif defined(CONFIG_IA64)
+-	fprintf(file, "ia64");
+-#elif defined(CONFIG_ALPHA_GENERIC)
+-	fprintf(file, "alpha_generic");
+-#elif defined(CONFIG_ALPHA_SX164)
+-	fprintf(file, "alpha_sx164");
+-#elif defined(CONFIG_ALPHA_PYXIS)
+-	fprintf(file, "alpha_pyxis");
+-#elif defined(CONFIG_ALPHA_POLARIS)
+-	fprintf(file, "alpha_polaris");
+-#elif defined(CONFIG_EV4) || defined(CONFIG_ALPHA_EV4)
+-	fprintf(file, "alpha_ev4");
+-#elif defined(CONFIG_EV5) || defined(CONFIG_ALPHA_EV5)
+-	fprintf(file, "alpha_ev5");
+-#elif defined(CONFIG_EV6) || defined(CONFIG_ALPHA_EV6)
+-	fprintf(file, "alpha_ev6");
+-#elif defined(CONFIG_ALPHA_NONAME) || defined(CONFIG_ALPHA)
+-	fprintf(file, "alpha_noname");
+-#elif defined(CONFIG_PPC64)
+-	fprintf(file, "ppc64");
+-#elif defined(CONFIG_PPC)
+-	fprintf(file, "ppc");
+-#elif defined(CONFIG_CPU_R3000) || defined(CONFIG_CPU_R6000)
+-	fprintf(file, "mips");
+-#elif defined(CONFIG_CPU_R4300) || defined(CONFIG_CPU_R4X00)
+-	fprintf(file, "mips");
+-#elif defined(CONFIG_CPU_R5000) || defined(CONFIG_CPU_NEVADA)
+-	fprintf(file, "mips");
+-#elif defined(CONFIG_CPU_R8000) || defined(CONFIG_CPU_R10000)
+-	fprintf(file, "mips");
+-#elif defined(CONFIG_SPARC32)
+-	fprintf(file, "sparc");
+-#elif defined(CONFIG_SPARC64)
+-	fprintf(file, "sparc64");
+-#elif defined(CONFIG_ARCH_SA1100)
+-	fprintf(file, "sa1100");
+-#elif defined(CONFIG_ARCH_PXA)
+-	fprintf(file, "pxa");
+-#elif defined(CONFIG_PARISC)
+-	fprintf(file, "parisc");
+-#else
+-	fclose(file);
+-	exit(1);
+-#endif
+-	fclose(file);
+-	exit(0);
+-}
+-],
+-  processor=`cat processor.id`;AC_MSG_RESULT($processor),
+-  AC_MSG_RESULT("unknown");processor="",
+-  AC_MSG_RESULT("unknown");processor=""
+-)
+-CFLAGS="$ac_save_CFLAGS"
+-rm -f processor.id
+-c_opts=""
+-LD=ld
+-case "$processor" in
+-  i386*)
+-    c_opts="-march=i386"
+-    ;;
+-  i486*)
+-    c_opts="-march=i486"
+-    ;;
+-  i586* | mwinchip)
+-    c_opts="-march=i586"
+-    ;;
+-  i686*)
+-    c_opts="-march=i686"
+-    ;;
+-  k6)
+-    if $CC -march=k6  -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
+-      c_opts="-march=k6"
+-    else
+-      c_opts="-march=i586"
+-    fi
+-    ;;
+-  k7|k8)
+-    if $CC -march=athlon -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
+-      c_opts="-march=athlon"
+-    else
+-      if $CC -falign-functions=0 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
+-        c_opts="-march=i686 -falign-functions=4"
+-      else
+-	c_opts="-march=i686 -malign-functions=4"
+-      fi
+-    fi
+-    ;;
+-  crusoe)
+-    if $CC -falign-functions=0 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
+-      c_opts="-march=i686 -falign-functions=0 -falign-jumps=0 -falign-loops=0"
+-    else
+-      c_opts="-march=i686 -malign-functions=0 -malign-jumps=0 -malign-loops=0"
+-    fi
+-    ;;
+-  mcyrixiii)
+-    if $CC -march=c3 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
+-      c_opts="-march=c3"
+-    else
+-      c_opts="-march=i486"
+-    fi
+-    if $CC -falign-functions=0 -falign-jumps=0 -falign-loops=0 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
+-      c_opts="$c_opts -falign-functions=0 -falign-jumps=0 -falign-loops=0"
+-    else
+-      c_opts="$c_opts -malign-functions=0 -malign-jumps=0 -malign-loops=0"
+-    fi
+-    ;;
+-  ia64)
+-    c_opts="-Wa,-x -ffixed-r13 -mfixed-range=f10-f15,f32-f127 -funwind-tables -falign-functions=32"
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    CONFIG_IA64=y
+-    ;;
+-  alpha*)
+-    c_opts="-mno-fp-regs -ffixed-8"
+-    if $CC -mcpu=pca56 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
+-      have_pca56=yes
+-    fi
+-    if $CC -mcpu=ev5 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
+-      case "$processor" in
+-      alpha_generic)
+-        c_opts="$c_opts -mcpu=ev5"
+-        ;;
+-      alpha_sx164|alpha_polaris)
+-	if test x$have_pca56 = xyes; then
+-          c_opts="$c_opts -mcpu=pca56"
+-	else
+-          c_opts="$c_opts -mcpu=ev56"
+-        fi
+-	;;
+-      alpha_pyxis)
+-        c_opts="$c_opts -mcpu=ev56"
+-        ;;
+-      alpha_ev4)
+-        c_opts="$c_opts -mcpu=ev4"
+-        ;;
+-      alpha_ev6)
+-        if $CC -mcpu=ev6 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
+-	  c_opts="$c_opts -mcpu=ev6"
+-	elif test x$have_pca56 = xyes; then
+-	  c_opts="$c_opts -mcpu=pca56"
+-        else
+-	  c_opts="$c_opts -mcpu=ev56"
+-        fi
+-        ;;
+-      esac
+-    fi
+-    c_opts="$c_opts -Wa,-mev6"
+-    processor="alpha"
+-    CONFIG_ALPHA=y
+-  cat > $SRCDIR/include/asm/hack-current.h << EOF
+-#ifndef _ALPHA_CURRENT_H
+-#define _ALPHA_CURRENT_H
+-
+-extern struct task_struct *current;
+-
+-#endif /* !(_ALPHA_CURRENT_H) */
+-EOF
+-    HACK_KERNEL_INC="$HACK_KERNEL_INC --include $SRCDIR/include/asm/hack-current.h"
+-    ;;
+-  ppc)
+-    c_opts="-D__powerpc__ -fsigned-char -fno-builtin -msoft-float -ffixed-r2 -Wno-uninitialized -mmultiple -mstring"
+-    CONFIG_PPC=y
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-  ppc64)
+-    c_opts="-D__powerpc__ -fsigned-char -msoft-float -Wno-uninitialized -mminimal-toc -fno-builtin"
+-    CONFIG_SND_BIT32_EMUL=m
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-  mips*)
+-    if $CC -mtune=mips32 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
+-      c_opts="-mtune=mips32"
+-    else
+-      c_opts="-mcpu=r4600"
+-    fi
+-    if $CC -mips32 -mabi=32 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
+-      c_opts="$c_opts -mips32 -mabi=32"
+-    else
+-      c_opts="$_opts -mips2"
+-    fi
+-    c_opts="$c_opts -G 0 -fno-pic -mno-abicalls -mlong-calls"
+-    processor="mips"
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-  sparc)
+-    CONFIG_SPARC32=y
+-    IS_EGCS=n
+-    NEW_GAS=n
+-    test $CC -m32 -S -o /dev/null -xc /dev/null >/dev/null 2>&1 && IS_EGCS=y
+-    test $LD --version 2>&1 | grep 'elf64_sparc' > /dev/null && NEW_GAS=y
+-    if test $NEW_GAS = y; then
+-      LD="$LD -m elf32_sparc"
+-    fi
+-    if test $IS_EGCS = y; then
+-      c_opts="-mno-fpu -fcall-used-g5 -fcall-used-g7"
+-    else
+-      c_opts="-m32 -mno-fpu -fcall-used-g5 -fcall-used-g7"
+-    fi
+-    processor="sparc";
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-  sparc64)
+-    CONFIG_SPARC64=y
+-    CC=gcc
+-    test gcc -m64 -S -o /dev/null -xc /dev/null >/dev/null 2>&1 || CC=sparc64-linux-gcc
+-    NEW_GCC=n
+-    NEW_GAS=n
+-    CC_UNDECL=""
+-    $CC -m64 -mcmodel=medlow -S -o /dev/null -xc /dev/null >/dev/null 2>&1 && NEW_GCC=y
+-    $LD --version 2>&1 | grep 'elf64_sparc' > /dev/null && NEW_GAS=y
+-    $CC -c -x assembler /dev/null -Wa,--help | grep undeclared-regs > /dev/null || CC_UNDECL="-Wa,--undeclared-regs"
+-    if test $NEW_GAS != y; then
+-      LD=sparc64-linux-ld
+-    else
+-      LD="$LD -m elf64_sparc"
+-    fi
+-    if test $NEW_GCC=y; then
+-      c_opts="-m64 -mno-fpu -mcpu=ultrasparc -mcmodel=medlow -ffixed-g4 -fcall-used-g5 -fcall-used-g7 -Wno-sign-compare $CC_UNDECL"
+-    else
+-      c_opts="-mno-fpu -mtune=ultrasparc -mmedlow -ffixed-g4 -fcall-used-g5 -fcall-used-g7 -Wno-sign-compare"
+-    fi
+-    processor="sparc64"
+-    CONFIG_SND_BIT32_EMUL=m
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-  x86_64)
+-    LD="ld -m elf_x86_64 -e stext"
+-    c_opts="-mno-red-zone -mcmodel=kernel -fno-reorder-blocks -fno-strength-reduce -finline-limit=2000"
+-    CONFIG_SND_BIT32_EMUL=m
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-  sa1100)
+-    c_opts="-march=armv4 -mtune=strongarm1100 -msoft-float"
+-    CONFIG_ARM=y
+-    CONFIG_L3=y
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-  pxa)
+-    c_opts="-O2 -mapcs-32 -march=armv4 -Wa,-mxscale -mtune=strongarm -mshort-load-bytes -msoft-float"
+-    CONFIG_ARM=y
+-    CONFIG_L3=y
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-  parisc)
+-    c_opts="-mno-space-regs -mfast-indirect-calls -mschedule=7200 -mdisable-fpregs"
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-  *)
+-    processor="unknown"
+-    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
+-    ;;
+-esac
+-
+-dnl set ia32 (X86)
+-case "$processor" in
+-  i?86*|k?|crusoe|mcyrixiii|mwinchip)
+-    if $CC -mpreferred-stack-boundary=2 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
+-      c_opts="-mpreferred-stack-boundary=2 $c_opts"
+-      CONFIG_X86=y
+-    fi
+-    if test -d $CONFIG_SND_KERNELDIR/include/asm-i386/mach-default; then
+-	AC_MSG_CHECKING(for i386 machine type)
+-	machine="default"
+-	ac_save_CFLAGS="$CFLAGS"
+-	CFLAGS="$CFLAGS -I$CONFIG_SND_KERNELDIR/include"
+-	rm -f machine.id
+-	if test -n "$kernelbuild" -a -f "$kernelbuild/include/linux/autoconf.h"; then
+-	  KERNDIR=$kernelbuild
+-	else
+-	  KERNDIR=$CONFIG_SND_KERNELDIR
+-	fi
+-	AC_TRY_RUN([
+-#include <stdio.h>
+-#include "$KERNDIR/include/linux/autoconf.h"
+-int main(void) {
+-	FILE *file = fopen("machine.id", "w+");
+-	if (file == NULL)
+-		exit(1);
+-#if defined(CONFIG_X86_VOYAGER)
+-	fprintf(file, "voyager");
+-#elif defined(CONFIG_X86_VISWS)
+-	fprintf(file, "visws");
+-#elif defined(CONFIG_X86_NUMAQ)
+-	fprintf(file, "numaq");
+-#elif defined(CONFIG_X86_BIGSMP)
+-	fprintf(file, "bigsmp");
+-#elif defined(CONFIG_X86_SUMMIT)
+-	fprintf(file, "summit");
+-#elif defined(CONFIG_X86_PC9800)
+-	fprintf(file, "pc9800");
+-#else
+-	fprintf(file, "default");
+-#endif
+-	fclose(file);
+-	exit(0);
+-}
+-],      
+-	machine=`cat machine.id`;AC_MSG_RESULT($machine))
+-	CFLAGS="$ac_save_CFLAGS"
+-	rm -f machine.id
+-	KERNEL_INC="$KERNEL_INC -I$CONFIG_SND_KERNELDIR/include/asm-i386/mach-$machine"
+-    fi
+-    ;;
+-esac
+-
+-dnl ia32 and alpha
+-test "$CONFIG_ISA" = "probe" && CONFIG_ISA=y
+-
+ dnl Check for SBUS support for sparc...
+ if test -n "$CONFIG_SPARC32" -o -n "$CONFIG_SPARC64"; then
+   CHECK_KERNEL_CONFIG(CONFIG_SBUS, [SBUS support in kernel])
+@@ -1692,154 +1332,514 @@
+     rm include/linux/pnp.h
+   fi
+ else
+-  if test ! -f include/linux/pnp.h; then
+-    echo "Symlinking <linux/pnp.h>..."
+-    mkdir -p include/linux
+-    ln -sf ../../support/pnp/pnp.h include/linux/pnp.h
++  if test ! -f include/linux/pnp.h; then
++    echo "Symlinking <linux/pnp.h>..."
++    mkdir -p include/linux
++    ln -sf ../../support/pnp/pnp.h include/linux/pnp.h
++  fi
++fi
++
++dnl Check for version...
++AC_MSG_CHECKING(for driver version)
++AC_DEFINE_UNQUOTED(CONFIG_SND_VERSION, "$CONFIG_SND_VERSION")
++AC_SUBST(CONFIG_SND_VERSION)
++CONFIG_SND_DATE=""
++AC_DEFINE_UNQUOTED(CONFIG_SND_DATE, "$CONFIG_SND_DATE")
++AC_SUBST(CONFIG_SND_DATE)
++AC_MSG_RESULT($CONFIG_SND_VERSION)
++
++dnl Check for sequencer support...
++AC_MSG_CHECKING(for sequencer support)
++AC_ARG_WITH(sequencer,
++  [  --with-sequencer=yes,no  driver will (not) be compiled with sequencer support],
++  sequencer="$withval", sequencer="yes")
++CONFIG_SND_SEQUENCER=""
++if test "$sequencer" = "yes"; then
++  CONFIG_SND_SEQUENCER="m"
++fi
++AC_SUBST(CONFIG_SND_SEQUENCER)
++if test "$CONFIG_SND_SEQUENCER" = "m"; then
++  AC_DEFINE(CONFIG_SND_SEQUENCER_MODULE)
++  AC_DEFINE(CONFIG_SND_SEQ_DUMMY_MODULE)
++  AC_MSG_RESULT(yes)
++else
++  AC_MSG_RESULT(no)
++fi
++
++dnl Check for OSS/Free emulation...
++AC_MSG_CHECKING(for OSS/Free emulation)
++AC_ARG_WITH(oss,
++  [  --with-oss=no,yes       driver will (not) be compiled with OSS/Free emulation],
++  ossemul="$withval", ossemul="yes")
++CONFIG_SND_OSSEMUL=""
++if test "$ossemul" = "yes"; then
++  CONFIG_SND_OSSEMUL="y"
++fi
++if test "$CONFIG_SND_OSSEMUL" = "y"; then
++  AC_DEFINE(CONFIG_SND_OSSEMUL)
++  AC_DEFINE(CONFIG_SND_MIXER_OSS_MODULE)
++  AC_DEFINE(CONFIG_SND_PCM_OSS_MODULE)
++  if test "$CONFIG_SND_SEQUENCER" = "m"; then
++    AC_DEFINE(CONFIG_SND_SEQUENCER_OSS)
++  fi
++  AC_MSG_RESULT(yes)
++else
++  AC_MSG_RESULT(no)
++fi
++
++dnl Check for RTC timer support...
++AC_MSG_CHECKING(for RTC callback support in kernel)
++rtcsup="0"
++ac_save_CFLAGS="$CFLAGS"
++CFLAGS="$CFLAGS $KERNEL_INC $HACK_KERNEL_INC -nostdinc -iwithprefix include"
++AC_TRY_RUN([
++#include <linux/autoconf.h>
++#if defined(__alpha__) || (!defined(CONFIG_RTC) && !defined(CONFIG_RTC_MODULE))
++int main(void) { exit(1); }
++#else
++#define __KERNEL__
++#include <linux/version.h>
++#include <linux/config.h>
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 2, 12)	/* FIXME: which 2.2.x kernel? */
++#include <linux/rtc.h>
++#else
++#include <linux/mc146818rtc.h>
++#endif
++int main(void)
++{
++  rtc_task_t *cb = 0;
++  exit(0);
++}
++#endif
++],
++  AC_MSG_RESULT("yes");rtcsup="m",
++  AC_MSG_RESULT("no");rtcsup="",
++  AC_MSG_RESULT("unknown");rtcsup=""
++)
++CFLAGS="$ac_save_CFLAGS"
++CONFIG_SND_RTCTIMER=$rtcsup
++AC_SUBST(CONFIG_SND_RTCTIMER)
++test "$CONFIG_SND_RTCTIMER" = "m" && AC_DEFINE(CONFIG_SND_RTCTIMER_MODULE)
++CONFIG_RTC=$CONFIG_SND_RTCTIMER
++AC_SUBST(CONFIG_RTC)
++
++dnl Check for procfs
++CHECK_KERNEL_CONFIG(CONFIG_PROC_FS, [Procfs support])
++AC_SUBST(CONFIG_PROC_FS)
++
++dnl Check for USB
++CHECK_KERNEL_CONFIG(CONFIG_USB, [USB support])
++if test "$CONFIG_USB" != "y"; then
++  CHECK_KERNEL_CONFIG(CONFIG_USB_MODULE, [USB module support])
++  CONFIG_USB=$CONFIG_USB_MODULE
++fi
++AC_SUBST(CONFIG_USB)
++
++dnl PCMCIA stuff
++AC_ARG_WITH(pcmcia,
++  [  --with-pcmcia=kernel,external   support kernel PCMCIA driver or external PCMCIA driver],
++  pcmcia="$withval", pcmcia="kernel")
++AC_ARG_WITH(pcmcia_root,
++  [  --with-pcmcia-root=dir  specify the root directory of external PCMCIA source-tree],
++  pcmciaroot="$withval", pcmciaroot="")
++EXTRA_INCLUDES=""
++if test "$pcmcia" = "kernel"; then
++  echo "checking for kernel PCMCIA"
++  CHECK_KERNEL_CONFIG(CONFIG_PCMCIA, [PCMCIA support])
++  if test "$CONFIG_PCMCIA" != "y"; then
++    CHECK_KERNEL_CONFIG(CONFIG_PCMCIA_MODULE, [PCMCIA module support])
++    CONFIG_PCMCIA=$CONFIG_PCMCIA_MODULE
++  fi
++else
++  echo "checking for external PCMCIA"
++  if test "$pcmciaroot" = ""; then
++    AC_MSG_ERROR(Please set the PCMCIA root directory via --with-pcmcia-root option)
+   fi
++  if test ! -d "$pcmciaroot"; then
++    AC_MSG_ERROR(PCMCIA root $pcmciaroot is not a directory)
++  fi
++  echo "PCMCIA root directory is $pcmciaroot"
++  EXTRA_INCLUDES="-I$pcmciaroot/include"
++  CONFIG_PCMCIA=y
+ fi
++  
++AC_SUBST(CONFIG_PCMCIA)
+ 
+-dnl Check for version...
+-AC_MSG_CHECKING(for driver version)
+-AC_DEFINE_UNQUOTED(CONFIG_SND_VERSION, "$CONFIG_SND_VERSION")
+-AC_SUBST(CONFIG_SND_VERSION)
+-CONFIG_SND_DATE=""
+-AC_DEFINE_UNQUOTED(CONFIG_SND_DATE, "$CONFIG_SND_DATE")
+-AC_SUBST(CONFIG_SND_DATE)
+-AC_MSG_RESULT($CONFIG_SND_VERSION)
++dnl Check for PC98 architecture support...
++CHECK_KERNEL_CONFIG(CONFIG_X86_PC9800, [PC9800 support in kernel])
++AC_SUBST(CONFIG_X86_PC9800)
+ 
+-dnl Check for sequencer support...
+-AC_MSG_CHECKING(for sequencer support)
+-AC_ARG_WITH(sequencer,
+-  [  --with-sequencer=yes,no  driver will (not) be compiled with sequencer support],
+-  sequencer="$withval", sequencer="yes")
+-CONFIG_SND_SEQUENCER=""
+-if test "$sequencer" = "yes"; then
+-  CONFIG_SND_SEQUENCER="m"
++dnl Check for parallel port support
++if test "$kversion.$kpatchlevel" = "2.2"; then
++  CONFIG_PARPORT=""
++else
++  CHECK_KERNEL_CONFIG(CONFIG_PARPORT, [parallel port support])
++  if test "$CONFIG_PARPORT" != "y"; then
++    CHECK_KERNEL_CONFIG(CONFIG_PARPORT_MODULE, [parallel port module support])
++    CONFIG_PARPORT=$CONFIG_PARPORT_MODULE
++  fi
+ fi
+-AC_SUBST(CONFIG_SND_SEQUENCER)
+-if test "$CONFIG_SND_SEQUENCER" = "m"; then
+-  AC_DEFINE(CONFIG_SND_SEQUENCER_MODULE)
+-  AC_DEFINE(CONFIG_SND_SEQ_DUMMY_MODULE)
+-  AC_MSG_RESULT(yes)
++AC_SUBST(CONFIG_PARPORT)
++
++dnl Check processor type...
++AC_MSG_CHECKING(for processor type)
++CONFIG_X86=
++CONFIG_ALPHA=
++CONFIG_L3=
++CONFIG_ARM=
++CONFIG_PPC=
++CONFIG_SPARC32=
++CONFIG_SPARC64=
++CONFIG_SBUS=
++CONFIG_SND_BIT32_EMUL=
++processor=""
++rm -f processor.id
++ac_save_CFLAGS="$CFLAGS"
++CFLAGS="$CFLAGS $KERNEL_INC $HACK_KERNEL_INC"
++if test -n "$kernelbuild" -a -f "$kernelbuild/include/linux/autoconf.h"; then
++  KERNDIR=$kernelbuild
+ else
+-  AC_MSG_RESULT(no)
++  KERNDIR=$CONFIG_SND_KERNELDIR
+ fi
++AC_TRY_RUN([
++#include <stdio.h>
++#include "$KERNDIR/include/linux/autoconf.h"
++int main(void) {
++	FILE *file = fopen("processor.id", "w+");
++	if (file == NULL)
++		exit(1);
++#if defined(CONFIG_M386)
++	fprintf(file, "i386");
++#elif defined(CONFIG_M486)
++	fprintf(file, "i486");
++#elif defined(CONFIG_M586)
++	fprintf(file, "i586");
++#elif defined(CONFIG_X86_64) /* this needs to be chcked before K8 */
++	fprintf(file, "x86_64");
++#elif defined(CONFIG_M586TSC)
++	fprintf(file, "i586tsc");
++#elif defined(CONFIG_M586MMX)
++	fprintf(file, "i586mmx");
++#elif defined(CONFIG_M686) || defined(CONFIG_MPENTIUMII) || defined(CONFIG_MPENTIUMIII) || defined(CONFIG_MPENTIUM4) || defined(CONFIG_MPENTIUMM)
++	fprintf(file, "i686");
++#elif defined(CONFIG_MK6)
++	fprintf(file, "k6");
++#elif defined(CONFIG_MK7)
++	fprintf(file, "k7");
++#elif defined(CONFIG_MK8)
++	fprintf(file, "k8");
++#elif defined(CONFIG_MCRUSOE)
++	fprintf(file, "crusoe");
++#elif defined(CONFIG_MWINCHIPC6) || defined(CONFIG_MWINCHIP2) || defined(CONFIG_MWINCHIP3D)
++	fprintf(file, "mwinchip");
++#elif defined(CONFIG_MCYRIXIII)
++	fprintf(file, "mcyrixiii");
++#elif defined(CONFIG_IA64)
++	fprintf(file, "ia64");
++#elif defined(CONFIG_ALPHA_GENERIC)
++	fprintf(file, "alpha_generic");
++#elif defined(CONFIG_ALPHA_SX164)
++	fprintf(file, "alpha_sx164");
++#elif defined(CONFIG_ALPHA_PYXIS)
++	fprintf(file, "alpha_pyxis");
++#elif defined(CONFIG_ALPHA_POLARIS)
++	fprintf(file, "alpha_polaris");
++#elif defined(CONFIG_EV4) || defined(CONFIG_ALPHA_EV4)
++	fprintf(file, "alpha_ev4");
++#elif defined(CONFIG_EV5) || defined(CONFIG_ALPHA_EV5)
++	fprintf(file, "alpha_ev5");
++#elif defined(CONFIG_EV6) || defined(CONFIG_ALPHA_EV6)
++	fprintf(file, "alpha_ev6");
++#elif defined(CONFIG_ALPHA_NONAME) || defined(CONFIG_ALPHA)
++	fprintf(file, "alpha_noname");
++#elif defined(CONFIG_PPC64)
++	fprintf(file, "ppc64");
++#elif defined(CONFIG_PPC)
++	fprintf(file, "ppc");
++#elif defined(CONFIG_CPU_R3000) || defined(CONFIG_CPU_R6000)
++	fprintf(file, "mips");
++#elif defined(CONFIG_CPU_R4300) || defined(CONFIG_CPU_R4X00)
++	fprintf(file, "mips");
++#elif defined(CONFIG_CPU_R5000) || defined(CONFIG_CPU_NEVADA)
++	fprintf(file, "mips");
++#elif defined(CONFIG_CPU_R8000) || defined(CONFIG_CPU_R10000)
++	fprintf(file, "mips");
++#elif defined(CONFIG_SPARC32)
++	fprintf(file, "sparc");
++#elif defined(CONFIG_SPARC64)
++	fprintf(file, "sparc64");
++#elif defined(CONFIG_ARCH_SA1100)
++	fprintf(file, "sa1100");
++#elif defined(CONFIG_ARCH_PXA)
++	fprintf(file, "pxa");
++#elif defined(CONFIG_PARISC)
++	fprintf(file, "parisc");
++#else
++	fclose(file);
++	exit(1);
++#endif
++	fclose(file);
++	exit(0);
++}
++],
++  processor=`cat processor.id`;AC_MSG_RESULT($processor),
++  AC_MSG_RESULT("unknown");processor="",
++  AC_MSG_RESULT("unknown");processor=""
++)
++CFLAGS="$ac_save_CFLAGS"
++rm -f processor.id
++c_opts=""
++LD=ld
++case "$processor" in
++  i386*)
++    c_opts="-march=i386"
++    ;;
++  i486*)
++    c_opts="-march=i486"
++    ;;
++  i586* | mwinchip)
++    c_opts="-march=i586"
++    ;;
++  i686*)
++    c_opts="-march=i686"
++    ;;
++  k6)
++    if $CC -march=k6  -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
++      c_opts="-march=k6"
++    else
++      c_opts="-march=i586"
++    fi
++    ;;
++  k7|k8)
++    if $CC -march=athlon -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
++      c_opts="-march=athlon"
++    else
++      if $CC -falign-functions=0 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
++        c_opts="-march=i686 -falign-functions=4"
++      else
++	c_opts="-march=i686 -malign-functions=4"
++      fi
++    fi
++    ;;
++  crusoe)
++    if $CC -falign-functions=0 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
++      c_opts="-march=i686 -falign-functions=0 -falign-jumps=0 -falign-loops=0"
++    else
++      c_opts="-march=i686 -malign-functions=0 -malign-jumps=0 -malign-loops=0"
++    fi
++    ;;
++  mcyrixiii)
++    if $CC -march=c3 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
++      c_opts="-march=c3"
++    else
++      c_opts="-march=i486"
++    fi
++    if $CC -falign-functions=0 -falign-jumps=0 -falign-loops=0 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
++      c_opts="$c_opts -falign-functions=0 -falign-jumps=0 -falign-loops=0"
++    else
++      c_opts="$c_opts -malign-functions=0 -malign-jumps=0 -malign-loops=0"
++    fi
++    ;;
++  ia64)
++    c_opts="-Wa,-x -ffixed-r13 -mfixed-range=f10-f15,f32-f127 -funwind-tables -falign-functions=32"
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    CONFIG_IA64=y
++    ;;
++  alpha*)
++    c_opts="-mno-fp-regs -ffixed-8"
++    if $CC -mcpu=pca56 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
++      have_pca56=yes
++    fi
++    if $CC -mcpu=ev5 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
++      case "$processor" in
++      alpha_generic)
++        c_opts="$c_opts -mcpu=ev5"
++        ;;
++      alpha_sx164|alpha_polaris)
++	if test x$have_pca56 = xyes; then
++          c_opts="$c_opts -mcpu=pca56"
++	else
++          c_opts="$c_opts -mcpu=ev56"
++        fi
++	;;
++      alpha_pyxis)
++        c_opts="$c_opts -mcpu=ev56"
++        ;;
++      alpha_ev4)
++        c_opts="$c_opts -mcpu=ev4"
++        ;;
++      alpha_ev6)
++        if $CC -mcpu=ev6 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
++	  c_opts="$c_opts -mcpu=ev6"
++	elif test x$have_pca56 = xyes; then
++	  c_opts="$c_opts -mcpu=pca56"
++        else
++	  c_opts="$c_opts -mcpu=ev56"
++        fi
++        ;;
++      esac
++    fi
++    c_opts="$c_opts -Wa,-mev6"
++    processor="alpha"
++    CONFIG_ALPHA=y
++  cat > $SRCDIR/include/asm/hack-current.h << EOF
++#ifndef _ALPHA_CURRENT_H
++#define _ALPHA_CURRENT_H
++
++extern struct task_struct *current;
+ 
+-dnl Check for OSS/Free emulation...
+-AC_MSG_CHECKING(for OSS/Free emulation)
+-AC_ARG_WITH(oss,
+-  [  --with-oss=no,yes       driver will (not) be compiled with OSS/Free emulation],
+-  ossemul="$withval", ossemul="yes")
+-CONFIG_SND_OSSEMUL=""
+-if test "$ossemul" = "yes"; then
+-  CONFIG_SND_OSSEMUL="y"
+-fi
+-if test "$CONFIG_SND_OSSEMUL" = "y"; then
+-  AC_DEFINE(CONFIG_SND_OSSEMUL)
+-  AC_DEFINE(CONFIG_SND_MIXER_OSS_MODULE)
+-  AC_DEFINE(CONFIG_SND_PCM_OSS_MODULE)
+-  if test "$CONFIG_SND_SEQUENCER" = "m"; then
+-    AC_DEFINE(CONFIG_SND_SEQUENCER_OSS)
+-  fi
+-  AC_MSG_RESULT(yes)
+-else
+-  AC_MSG_RESULT(no)
+-fi
++#endif /* !(_ALPHA_CURRENT_H) */
++EOF
++    HACK_KERNEL_INC="$HACK_KERNEL_INC --include $SRCDIR/include/asm/hack-current.h"
++    ;;
++  ppc)
++    c_opts="-D__powerpc__ -fsigned-char -fno-builtin -msoft-float -ffixed-r2 -Wno-uninitialized -mmultiple -mstring"
++    CONFIG_PPC=y
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++  ppc64)
++    c_opts="-D__powerpc__ -fsigned-char -msoft-float -Wno-uninitialized -mminimal-toc -fno-builtin"
++    CONFIG_SND_BIT32_EMUL=m
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++  mips*)
++    if $CC -mtune=mips32 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
++      c_opts="-mtune=mips32"
++    else
++      c_opts="-mcpu=r4600"
++    fi
++    if $CC -mips32 -mabi=32 -S -o /dev/null -xc /dev/null > /dev/null 2>&1; then
++      c_opts="$c_opts -mips32 -mabi=32"
++    else
++      c_opts="$_opts -mips2"
++    fi
++    c_opts="$c_opts -G 0 -fno-pic -mno-abicalls -mlong-calls"
++    processor="mips"
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++  sparc)
++    CONFIG_SPARC32=y
++    IS_EGCS=n
++    NEW_GAS=n
++    test $CC -m32 -S -o /dev/null -xc /dev/null >/dev/null 2>&1 && IS_EGCS=y
++    test $LD --version 2>&1 | grep 'elf64_sparc' > /dev/null && NEW_GAS=y
++    if test $NEW_GAS = y; then
++      LD="$LD -m elf32_sparc"
++    fi
++    if test $IS_EGCS = y; then
++      c_opts="-mno-fpu -fcall-used-g5 -fcall-used-g7"
++    else
++      c_opts="-m32 -mno-fpu -fcall-used-g5 -fcall-used-g7"
++    fi
++    processor="sparc";
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++  sparc64)
++    CONFIG_SPARC64=y
++    CC=gcc
++    test gcc -m64 -S -o /dev/null -xc /dev/null >/dev/null 2>&1 || CC=sparc64-linux-gcc
++    NEW_GCC=n
++    NEW_GAS=n
++    CC_UNDECL=""
++    $CC -m64 -mcmodel=medlow -S -o /dev/null -xc /dev/null >/dev/null 2>&1 && NEW_GCC=y
++    $LD --version 2>&1 | grep 'elf64_sparc' > /dev/null && NEW_GAS=y
++    $CC -c -x assembler /dev/null -Wa,--help | grep undeclared-regs > /dev/null || CC_UNDECL="-Wa,--undeclared-regs"
++    if test $NEW_GAS != y; then
++      LD=sparc64-linux-ld
++    else
++      LD="$LD -m elf64_sparc"
++    fi
++    if test $NEW_GCC=y; then
++      c_opts="-m64 -mno-fpu -mcpu=ultrasparc -mcmodel=medlow -ffixed-g4 -fcall-used-g5 -fcall-used-g7 -Wno-sign-compare $CC_UNDECL"
++    else
++      c_opts="-mno-fpu -mtune=ultrasparc -mmedlow -ffixed-g4 -fcall-used-g5 -fcall-used-g7 -Wno-sign-compare"
++    fi
++    processor="sparc64"
++    CONFIG_SND_BIT32_EMUL=m
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++  x86_64)
++    LD="ld -m elf_x86_64 -e stext"
++    c_opts="-mno-red-zone -mcmodel=kernel -fno-reorder-blocks -fno-strength-reduce -finline-limit=2000"
++    CONFIG_SND_BIT32_EMUL=m
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++  sa1100)
++    c_opts="-march=armv4 -mtune=strongarm1100 -msoft-float"
++    CONFIG_ARM=y
++    CONFIG_L3=y
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++  pxa)
++    c_opts="-O2 -mapcs-32 -march=armv4 -Wa,-mxscale -mtune=strongarm -mshort-load-bytes -msoft-float"
++    CONFIG_ARM=y
++    CONFIG_L3=y
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++  parisc)
++    c_opts="-mno-space-regs -mfast-indirect-calls -mschedule=7200 -mdisable-fpregs"
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++  *)
++    processor="unknown"
++    test "$CONFIG_ISA" = "probe" && CONFIG_ISA=
++    ;;
++esac
+ 
+-dnl Check for RTC timer support...
+-AC_MSG_CHECKING(for RTC callback support in kernel)
+-rtcsup="0"
+-ac_save_CFLAGS="$CFLAGS"
+-CFLAGS="$CFLAGS $KERNEL_INC $HACK_KERNEL_INC -nostdinc -iwithprefix include"
+-AC_TRY_RUN([
+-#include <linux/autoconf.h>
+-#if defined(__alpha__) || (!defined(CONFIG_RTC) && !defined(CONFIG_RTC_MODULE))
+-int main(void) { exit(1); }
+-#else
+-#define __KERNEL__
+-#include <linux/version.h>
+-#include <linux/config.h>
+-#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 2, 12)	/* FIXME: which 2.2.x kernel? */
+-#include <linux/rtc.h>
++dnl set ia32 (X86)
++case "$processor" in
++  i?86*|k?|crusoe|mcyrixiii|mwinchip)
++    if $CC -mpreferred-stack-boundary=2 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then
++      c_opts="-mpreferred-stack-boundary=2 $c_opts"
++      CONFIG_X86=y
++    fi
++    if test -d $CONFIG_SND_KERNELDIR/include/asm-i386/mach-default; then
++	AC_MSG_CHECKING(for i386 machine type)
++	machine="default"
++	ac_save_CFLAGS="$CFLAGS"
++	CFLAGS="$CFLAGS -I$CONFIG_SND_KERNELDIR/include"
++	rm -f machine.id
++	if test -n "$kernelbuild" -a -f "$kernelbuild/include/linux/autoconf.h"; then
++	  KERNDIR=$kernelbuild
++	else
++	  KERNDIR=$CONFIG_SND_KERNELDIR
++	fi
++	AC_TRY_RUN([
++#include <stdio.h>
++#include "$KERNDIR/include/linux/autoconf.h"
++int main(void) {
++	FILE *file = fopen("machine.id", "w+");
++	if (file == NULL)
++		exit(1);
++#if defined(CONFIG_X86_VOYAGER)
++	fprintf(file, "voyager");
++#elif defined(CONFIG_X86_VISWS)
++	fprintf(file, "visws");
++#elif defined(CONFIG_X86_NUMAQ)
++	fprintf(file, "numaq");
++#elif defined(CONFIG_X86_BIGSMP)
++	fprintf(file, "bigsmp");
++#elif defined(CONFIG_X86_SUMMIT)
++	fprintf(file, "summit");
++#elif defined(CONFIG_X86_PC9800)
++	fprintf(file, "pc9800");
+ #else
+-#include <linux/mc146818rtc.h>
++	fprintf(file, "default");
+ #endif
+-int main(void)
+-{
+-  rtc_task_t *cb = 0;
+-  exit(0);
++	fclose(file);
++	exit(0);
+ }
+-#endif
+-],
+-  AC_MSG_RESULT("yes");rtcsup="m",
+-  AC_MSG_RESULT("no");rtcsup="",
+-  AC_MSG_RESULT("unknown");rtcsup=""
+-)
+-CFLAGS="$ac_save_CFLAGS"
+-CONFIG_SND_RTCTIMER=$rtcsup
+-AC_SUBST(CONFIG_SND_RTCTIMER)
+-test "$CONFIG_SND_RTCTIMER" = "m" && AC_DEFINE(CONFIG_SND_RTCTIMER_MODULE)
+-CONFIG_RTC=$CONFIG_SND_RTCTIMER
+-AC_SUBST(CONFIG_RTC)
+-
+-dnl Check for procfs
+-CHECK_KERNEL_CONFIG(CONFIG_PROC_FS, [Procfs support])
+-AC_SUBST(CONFIG_PROC_FS)
+-
+-dnl Check for USB
+-CHECK_KERNEL_CONFIG(CONFIG_USB, [USB support])
+-if test "$CONFIG_USB" != "y"; then
+-  CHECK_KERNEL_CONFIG(CONFIG_USB_MODULE, [USB module support])
+-  CONFIG_USB=$CONFIG_USB_MODULE
+-fi
+-AC_SUBST(CONFIG_USB)
+-
+-dnl PCMCIA stuff
+-AC_ARG_WITH(pcmcia,
+-  [  --with-pcmcia=kernel,external   support kernel PCMCIA driver or external PCMCIA driver],
+-  pcmcia="$withval", pcmcia="kernel")
+-AC_ARG_WITH(pcmcia_root,
+-  [  --with-pcmcia-root=dir  specify the root directory of external PCMCIA source-tree],
+-  pcmciaroot="$withval", pcmciaroot="")
+-EXTRA_INCLUDES=""
+-if test "$pcmcia" = "kernel"; then
+-  echo "checking for kernel PCMCIA"
+-  CHECK_KERNEL_CONFIG(CONFIG_PCMCIA, [PCMCIA support])
+-  if test "$CONFIG_PCMCIA" != "y"; then
+-    CHECK_KERNEL_CONFIG(CONFIG_PCMCIA_MODULE, [PCMCIA module support])
+-    CONFIG_PCMCIA=$CONFIG_PCMCIA_MODULE
+-  fi
+-else
+-  echo "checking for external PCMCIA"
+-  if test "$pcmciaroot" = ""; then
+-    AC_MSG_ERROR(Please set the PCMCIA root directory via --with-pcmcia-root option)
+-  fi
+-  if test ! -d "$pcmciaroot"; then
+-    AC_MSG_ERROR(PCMCIA root $pcmciaroot is not a directory)
+-  fi
+-  echo "PCMCIA root directory is $pcmciaroot"
+-  EXTRA_INCLUDES="-I$pcmciaroot/include"
+-  CONFIG_PCMCIA=y
+-fi
+-  
+-AC_SUBST(CONFIG_PCMCIA)
+-
+-dnl Check for PC98 architecture support...
+-CHECK_KERNEL_CONFIG(CONFIG_X86_PC9800, [PC9800 support in kernel])
+-AC_SUBST(CONFIG_X86_PC9800)
++],      
++	machine=`cat machine.id`;AC_MSG_RESULT($machine))
++	CFLAGS="$ac_save_CFLAGS"
++	rm -f machine.id
++	KERNEL_INC="$KERNEL_INC -I$CONFIG_SND_KERNELDIR/include/asm-i386/mach-$machine"
++    fi
++    ;;
++esac
+ 
+-dnl Check for parallel port support
+-if test "$kversion.$kpatchlevel" = "2.2"; then
+-  CONFIG_PARPORT=""
+-else
+-  CHECK_KERNEL_CONFIG(CONFIG_PARPORT, [parallel port support])
+-  if test "$CONFIG_PARPORT" != "y"; then
+-    CHECK_KERNEL_CONFIG(CONFIG_PARPORT_MODULE, [parallel port module support])
+-    CONFIG_PARPORT=$CONFIG_PARPORT_MODULE
+-  fi
+-fi
+-AC_SUBST(CONFIG_PARPORT)
++dnl ia32 and alpha
++test "$CONFIG_ISA" = "probe" && CONFIG_ISA=y
+ 
+ dnl Check for HPK tree (for ASIHPI driver)
+ CONFIG_ASIHPK=""
