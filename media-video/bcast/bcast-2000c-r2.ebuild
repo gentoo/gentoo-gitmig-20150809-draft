@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/bcast-2000c-r2.ebuild,v 1.5 2002/09/05 05:32:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/bcast-2000c-r2.ebuild,v 1.6 2002/09/11 20:51:30 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Realtime audio and video editor"
@@ -15,7 +15,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 src_unpack() {
   unpack ${A}
