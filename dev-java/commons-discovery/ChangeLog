@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-discovery
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.11 2005/01/01 18:16:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.12 2005/01/05 16:46:35 karltk Exp $
+
+*commons-discovery-0.2-r2 (05 Jan 2005)
+
+  05 Jan 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/commons-discovery-0.2-gentoo.diff,
+  +commons-discovery-0.2-r2.ebuild:
+  Updated ebuild by Vibhav Garg <vibhavgarg@gmail.com>. Fixes #70845.
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   commons-discovery-0.2-r1.ebuild:
