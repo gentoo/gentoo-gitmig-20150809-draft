@@ -1,0 +1,52 @@
+--- configure.orig	2003-11-05 01:44:44.000000000 +0100
++++ configure	2003-11-05 01:57:55.000000000 +0100
+@@ -3384,15 +3384,16 @@
+ echo "${ECHO_T}$ac_cv_lib_avcodec_avcodec_open" >&6
+ if test $ac_cv_lib_avcodec_avcodec_open = yes; then
+   H323_AVCODEC=1
++  AVCODECINCLUDEDIR="/usr/include"
+ else
+   H323_AVCODEC=
+ fi
+ 
+ fi
+ 
+-if test "${H323_AVCODEC:-unset}" != "unset" ; then
+-  echo "$as_me:$LINENO: checking for /usr/local/include/ffmpeg/avcodec.h" >&5
+-echo $ECHO_N "checking for /usr/local/include/ffmpeg/avcodec.h... $ECHO_C" >&6
++if test "${H323_AVCODEC:-unset}" = "unset" ; then
++  echo "$as_me:$LINENO: checking for /usr/include/ffmpeg/avcodec.h" >&5
++echo $ECHO_N "checking for /usr/include/ffmpeg/avcodec.h... $ECHO_C" >&6
+ if test "${ac_cv_file__usr_local_include_ffmpeg_avcodec_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+@@ -3400,7 +3401,7 @@
+   { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
+ echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
+    { (exit 1); exit 1; }; }
+-if test -r "/usr/local/include/ffmpeg/avcodec.h"; then
++if test -r "/usr/include/ffmpeg/avcodec.h"; then
+   ac_cv_file__usr_local_include_ffmpeg_avcodec_h=yes
+ else
+   ac_cv_file__usr_local_include_ffmpeg_avcodec_h=no
+@@ -3410,6 +3411,7 @@
+ echo "${ECHO_T}$ac_cv_file__usr_local_include_ffmpeg_avcodec_h" >&6
+ if test $ac_cv_file__usr_local_include_ffmpeg_avcodec_h = yes; then
+   H323_AVCODEC=1
++  AVCODECINCLUDEDIR="/usr/include/ffmpeg"
+ fi
+ 
+ fi
+@@ -3422,9 +3424,10 @@
+ #define H323_AVCODEC 1
+ _ACEOF
+ 
+-  AVCODECINCLUDEDIR=/usr/local/include/ffmpeg
+-  AVCODECLIBDIR=/usr/local/lib
++  AVCODECLIBDIR=/usr/lib
+   STDCCFLAGS="$STDCCFLAGS -I${AVCODECINCLUDEDIR}"
++  LDFLAGS="$LDFLAGS -L${AVCODECLIBDIR}"
++  ENDLDLIBS="-lavcodec $ENDLDLIBS"
+ 
+   echo  "                      H263 codec on FFmpeg library  enabled"
+ fi
