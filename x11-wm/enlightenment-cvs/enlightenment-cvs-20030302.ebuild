@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030302.ebuild,v 1.2 2003/03/10 00:00:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030302.ebuild,v 1.3 2003/03/14 20:44:17 agriffis Exp $
 
 DESCRIPTION="e17 meta ebuild ... emerge this to get all e17 components"
 HOMEPAGE="http://www.enlightenment.org/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 
 RDEPEND="media-gfx/etcher
 	media-gfx/ebony
