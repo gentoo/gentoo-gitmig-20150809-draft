@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.1.ebuild,v 1.4 2004/04/29 09:46:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/cheesetracker-0.9.1.ebuild,v 1.5 2004/05/09 20:36:18 kugelfang Exp $
 
 DESCRIPTION="A clone of Impulse Tracker with some extensions and a built-in sample editor; uses QT"
 HOMEPAGE="http://cheesetronic.sf.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/cheesetronic/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 IUSE="jack"
 
