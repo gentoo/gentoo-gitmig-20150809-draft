@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
-<maintainer>
-	<email>spider@gentoo.org</email>
-</maintainer>
 <longdescription>
 Gossip is a Gnome integrated and HIG compliant jabber messaging client.    
 </longdescription>
