@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.4 2003/05/11 21:06:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.5 2003/05/12 16:02:15 mholzer Exp $
 
 # NB: Config is in /etc/conf.d/sysklogd
 
