@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <lordvan@gentoo.org> (10 Mar 2003)
+# ##changed Version scheme from 305 to 4.0.0
+=net-misc/omniORB-304*
+=net-misc/omniORB-305*
+
 # <liquidx@gentoo.org> (10 Mar 2003)
 # not really stable enough for my tastes. needs testing.
 dev-db/mergeant
@@ -153,11 +158,6 @@ dev-libs/libtomcrypt
 # see dev-db/postgresql #11822, net-im/sim #11654, and net-misc/mico
 # (btw, all the other distros are using 2.5.4a)
 >=sys-devel/flex-2.5.23
-
-# <lordvan@gentoo.org> (14 Dec 2002)
-# ##changed Version scheme from 305 to 4.0.0
-# seems to have bug with gcc 3.x at least!
-#>=net-misc/omniORB-300 #commented cuz of 'freeze' for 1.4
 
 # <mkennedy@gentoo.org> (14 Dec 2002)
 # needs to be assimilated with app-emacs/psgml
