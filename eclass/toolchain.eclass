@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.69 2004/12/15 10:06:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.70 2005/01/07 12:19:26 eradicator Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -930,8 +930,12 @@ gcc_version_patch() {
 # Travis Tilley <lv@gentoo.org> (03 Sep 2004)
 #
 disgusting_gcc_multilib_HACK() {
-	einfo "updating multilib directories to be: $(get_libdir) and $(get_multilibdir)"
-	sed -i -e 's~^MULTILIB_OSDIRNAMES.*~MULTILIB_OSDIRNAMES = ../'$(get_libdir)' ../'$(get_multilibdir)'~' ${S}/gcc/config/i386/t-linux64
+	einfo "updating multilib directories to be: $(get_all_libdirs)"
+	local libdirs
+	for libdir in $(get_all_libdirs); do
+		libdirs="${libdirs} ../${libdir}"
+	done
+	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/i386/t-linux64
 }
 
 disable_multilib_libjava() {
