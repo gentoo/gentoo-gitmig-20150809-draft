@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3.ebuild,v 1.1 2003/11/25 14:13:58 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3.ebuild,v 1.2 2003/12/23 14:18:26 foser Exp $
 
 inherit eutils libtool
 
 HOMEPAGE="http://faac.sourceforge.net/"
-DESCRIPTION="FAAD2 is the fastest ISO AAC audio decoder available. FAAD2 correctly decodes all MPEG-4 and MPEG-2 MAIN, LOW, LTP, LD and ER object type AAC files."
+DESCRIPTION="The fastest ISO AAC audio decoder available, correctly decodes all MPEG-4 and MPEG-2 MAIN, LOW, LTP, LD and ER object type AAC files"
 LICENSE="GPL-2"
 
 SRC_URI="mirror://sourceforge/faac/${PN}-${PV/_/-}.tar.gz"
 IUSE=""
 S=${WORKDIR}/${PN}
 
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 
 DEPEND="virtual/glibc
 	sys-devel/automake
