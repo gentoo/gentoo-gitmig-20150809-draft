@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r2.ebuild,v 1.5 2003/02/28 23:10:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r2.ebuild,v 1.6 2003/04/23 00:43:06 vladimir Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
 IUSE="spell"
 
-RDEPEND="spell? ( app-text/aspell )"
+RDEPEND="spell? ( virtual/aspell-dict )"
 DEPEND="${RDEPEND}
 	dev-util/yacc
 	virtual/motif"
