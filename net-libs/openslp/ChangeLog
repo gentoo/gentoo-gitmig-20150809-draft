@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.12 2003/07/25 05:07:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.13 2003/09/23 16:10:23 darkspecter Exp $
+
+  23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> openslp-1.0.11.ebuild:
+  set ppc in keywords
 
   03 Jul 2003; Nick Hadaway <raker@gentoo.org> openslp-1.0.11.ebuild:
   Marked stable for x86
