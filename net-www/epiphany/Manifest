@@ -2,8 +2,8 @@ MD5 a36ddcd06783d5bd27cd00b97a138120 epiphany-1.2.6.ebuild 1331
 MD5 fa3cf7d91a4f072dba0b5fc4095c843a epiphany-1.0.7.ebuild 1225
 MD5 5fc85b60cb72b58f37a820a0f10685da epiphany-1.2.3.ebuild 1323
 MD5 e1e44a01a23ebc21a287784f91cec9ac epiphany-1.2.5.ebuild 1457
-MD5 548eb3f03d577032e73f0f01a6028fb7 epiphany-1.2.2.ebuild 1321
-MD5 697b77a86c8e903615a63a2020e083b7 ChangeLog 7038
+MD5 7716f725a5a7f9033dadb777ad59c7f7 epiphany-1.2.2.ebuild 1318
+MD5 0bc4600430810db8cf8a6f4f1bb783e7 ChangeLog 7131
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 771a6412c25bf38ed285c69e27f7cdcd files/epiphany-1.2.5-gcc2_fix.patch 539
 MD5 5edb401fcdae44c283b7d8b7fbdeba84 files/digest-epiphany-1.0.7 68
