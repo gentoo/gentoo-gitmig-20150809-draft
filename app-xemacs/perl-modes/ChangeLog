@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/perl-modes
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/perl-modes/ChangeLog,v 1.4 2003/10/03 02:34:06 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/perl-modes/ChangeLog,v 1.5 2004/03/15 21:25:06 rac Exp $
+
+  15 Mar 2004; <rac@gentoo.org> perl-modes-1.04.ebuild:
+  keyword amd64
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> perl-modes-1.04.ebuild:
   Stable on alpha

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ps-print
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ps-print/ChangeLog,v 1.4 2003/10/03 02:34:54 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ps-print/ChangeLog,v 1.5 2004/03/15 21:25:47 rac Exp $
+
+  15 Mar 2004; <rac@gentoo.org> ps-print-1.08.ebuild:
+  keyword amd64
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> ps-print-1.08.ebuild:
   Stable on alpha
