@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaf/jaf-1.0.2.ebuild,v 1.7 2004/01/19 04:48:22 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaf/jaf-1.0.2.ebuild,v 1.8 2004/02/10 07:18:59 strider Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Sun's JavaBeans Activation Framework (JAF)"
 SRC_URI="${At}"
 HOMEPAGE="http://java.sun.com/products/javabeans/glasgow/jaf.html"
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="x86 ppc sparc amd64"
 LICENSE="sun-bcla-jaf"
 SLOT="0"
 DEPEND=">=app-arch/unzip-5.50-r1"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r2.ebuild,v 1.4 2003/09/11 01:07:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/makeme-0.02-r2.ebuild,v 1.5 2004/02/10 07:11:15 strider Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ RDEPEND="virtual/jdk
 	>=dev-java/antlr-2.7.1-r1"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="jikes"
 
 src_unpack() {

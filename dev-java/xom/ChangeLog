@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xom
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.2 2003/06/20 04:14:00 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.3 2004/02/10 07:09:11 strider Exp $
+
+  10 Feb 2004; Adrian Almenar <strider@gentoo.org> xom-1.0.14.ebuild:
+  Removed alpha keyword.
 
 *xom-1.0.14 (19 May 2003)
 
