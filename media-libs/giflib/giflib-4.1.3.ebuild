@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.3.ebuild,v 1.3 2005/02/03 21:21:03 tgall Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.3.ebuild,v 1.4 2005/02/22 23:13:31 vapier Exp $
 
 DESCRIPTION="Library to handle, display and manipulate GIF images"
 HOMEPAGE="http://sourceforge.net/projects/libungif/"
@@ -10,28 +8,21 @@ SRC_URI="mirror://sourceforge/libungif/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~ppc-macos"
+KEYWORDS="~alpha amd64 arm hppa ia64 mips ppc ~ppc64 ~ppc-macos ~sparc x86"
 IUSE="X gif"
 
 DEPEND="X? ( virtual/x11 )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
-
 src_compile() {
-	export WANT_AUTOCONF=2.5
-	econf `use_with X x` || die
+	econf $(use_with X x) || die
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# if gif is not in USE, then ungif is preferred
-	use gif || rm -rf "${D}/usr/bin" "${D}/usr/include/gif_lib.h"
+	use gif || rm -r "${D}"/usr/bin "${D}"/usr/include/gif_lib.h
 
 	dodoc AUTHORS BUGS ChangeLog NEWS ONEWS PATENT_PROBLEMS \
 		README TODO doc/*.txt || die "dodoc failed"
