@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.3 2003/10/13 21:18:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.4 2003/11/29 22:31:05 vapier Exp $
 
 inherit flag-o-matic
 
@@ -35,8 +35,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	replace-flags "-march=pentium4" "-march=pentium3"
-	filter-flags "-mfpmath=sse"
+	append-flags -mno-sse2
 
 	myconf="${myconf} `use_with X x`"
 	myconf="${myconf} `use_with quicktime`"
