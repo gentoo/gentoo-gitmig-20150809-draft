@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r6.ebuild,v 1.18 2004/08/07 01:31:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r6.ebuild,v 1.19 2004/08/16 08:11:45 dragonheart Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ IUSE=""
 DESCRIPTION="Netkit - timed"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
-KEYWORDS="~x86 sparc ppc mips ppc64"
+KEYWORDS="x86 sparc ppc mips ppc64"
 LICENSE="BSD"
 SLOT="0"
 
