@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.48 2004/07/01 19:47:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.49 2004/08/05 13:36:10 liquidx Exp $
+
+*libgda-1.0.4 (05 Aug 2004)
+
+  05 Aug 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/libgda-1.0.4-freetds-0.6x.patch, -libgda-0.12.1.ebuild,
+  -libgda-0.2.95-r1.ebuild, -libgda-1.0.0.ebuild, -libgda-1.0.1.ebuild,
+  +libgda-1.0.4.ebuild:
+  cleanup. new version thanks to Robert Davis <rdavis@unico.com> (#48611)
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libgda-0.2.95-r1.ebuild, libgda-0.2.96-r2.ebuild:

@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.2.ebuild,v 1.4 2004/06/24 22:08:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.4.ebuild,v 1.1 2004/08/05 13:37:46 liquidx Exp $
 
-IUSE="doc"
-
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Library for writing gnome database programs"
 HOMEPAGE="http://www.gnome-db.org/"
-SLOT="0"
+
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86 ppc ~sparc"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64"
+IUSE="doc"
 
 RDEPEND=">=gnome-extra/libgda-1.0.0
 	>=x11-libs/gtk+-2.0
@@ -19,7 +19,6 @@ RDEPEND=">=gnome-extra/libgda-1.0.0
 	>=gnome-base/libbonoboui-2.0
 	>=gnome-base/gconf-2"
 # gtksourceview is maintained now, and configure checks it's presence
-
 DEPEND=">=dev-util/pkgconfig-0.8
 	>=dev-util/intltool-0.22
 	>=sys-devel/gettext-0.11
@@ -28,14 +27,16 @@ DEPEND=">=dev-util/pkgconfig-0.8
 	${RDEPEND}"
 
 src_unpack() {
-
 	unpack ${A}
 	gnome2_omf_fix ${S}/doc/Makefile.in
-
+	cd ${S}; intltoolize --force || die
+	# Avoid documentation problems. See bug #46275.
+	epatch ${FILESDIR}/${PN}-1.0.3-gtkdoc_fix.patch
+	# add extra selector #48611
+	epatch ${FILESDIR}/${PN}-1.0.4-selector.patch
 }
 
 src_install() {
-
 	gnome2_src_install
 
 	# minor cosmetic fix to capplet icon
@@ -45,5 +46,4 @@ src_install() {
 		sed 's,Icon=gnome-db.png,Icon=libgnomedb/gnome-db.png,' ${capplet_link}.orig > ${capplet_link}
 		rm ${capplet_link}.orig
 	fi
-
 }

@@ -1,0 +1,15 @@
+--- providers/freetds/gda-freetds-provider.c.orig      2004-04-18 06:30:42.000000000 -0500
++++ providers/freetds/gda-freetds-provider.c 2004-04-21 12:20:57.523822128 -0500
+@@ -247,7 +247,12 @@
+	if (t_port)
+		tds_set_port(tds_cnc->login, atoi(t_port));
+	
++#ifdef HAVE_FREETDS_VER0_6X
++	tds_set_client_charset(tds_cnc->login, "iso_1");
++#else
+	tds_set_charset(tds_cnc->login, "iso_1");
++#endif
++
+	tds_set_language(tds_cnc->login, "us_english");
+	tds_set_packet(tds_cnc->login, 512);
+
