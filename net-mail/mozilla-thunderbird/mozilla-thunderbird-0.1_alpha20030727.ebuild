@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.1_alpha20030727.ebuild,v 1.2 2003/08/01 08:18:29 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.1_alpha20030727.ebuild,v 1.3 2003/08/01 08:21:04 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -124,6 +124,19 @@ src_compile() {
    edit_makefiles
    emake MOZ_THUNDERBIRD=1 || die
 
+}
+
+src_install() {
+
+   dodir /usr/lib
+   dodir /usr/lib/MozillaThunderbird
+   cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/lib/MozillaThunderbird
+
+   #fix permissions
+   chown -R root.root ${D}/usr/lib/MozillaThunderbird
+   
+   dobin ${FILESDIR}/MozillaThunderbird
+
 #	# Install icon and .desktop for menu entry
 #	if [ "`use gnome`" ]
 #	then
@@ -141,17 +154,5 @@ src_compile() {
 #		doins ${S}/build/package/rpm/SOURCES/mozillathunderbird.desktop
 #	fi
 
-}
-
-src_install() {
-
-   dodir /usr/lib
-   dodir /usr/lib/MozillaThunderbird
-   cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/lib/MozillaThunderbird
-
-   #fix permissions
-   chown -R root.root ${D}/usr/lib/MozillaThunderbird
-   
-   dobin ${FILESDIR}/MozillaThunderbird
 }
 
