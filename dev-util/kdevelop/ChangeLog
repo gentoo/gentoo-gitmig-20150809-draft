@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.30 2003/06/18 15:45:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.31 2003/07/08 13:45:44 caleb Exp $
+
+*kdevelop-3.0_alpha5 (08 Jul 2003)
+
+  08 Jul 2003; Caleb Tennis <caleb@gentoo.org>
+  Version bump
 
   18 Jun 2003; Caleb Tennis <caleb@gentoo.org>
   Added a line in postinstall about using x11-ssh-askpass if SSH based CVS is desired.
