@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.1 2002/12/15 17:22:11 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.2 2003/02/06 01:22:51 hannes Exp $
 
-IUSE="crypt ipv6"
+IUSE="crypt ipv6 activefilter"
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
 SRC_URI="mirror://gentoo/${P}-pppoe4.tgz"
 HOMEPAGE="http://www.samba.org/ppp"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	activefilter? ( net-libs/libpcap )"
+
 PROVIDE="virtual/pppd"
 
 SLOT="0"
@@ -23,6 +25,12 @@ src_compile() {
 	}
 
 	patch -p0 < ${FILESDIR}/${P}-r10.patch
+
+	use activefilter && {
+    		# enable option active-filter
+    		mv pppd/Makefile.linux pppd/Makefile.linux.orig
+    		sed -e 's/^#FILTER=y/FILTER=y/' <pppd/Makefile.linux.orig >pppd/Makefile.linux
+	}
 
 	./configure --prefix=/usr || die
     

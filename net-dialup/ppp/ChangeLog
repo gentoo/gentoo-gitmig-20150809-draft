@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.15 2002/12/15 17:22:11 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.16 2003/02/06 01:22:51 hannes Exp $
+
+  05 Feb 2003; Hannes Mehnert <hannes@gentoo.org> ppp-2.4.1-r12.ebuild:
+  added local activefilter useflag, thanks to Alexander Holler
+  <holler@ahsoftware.de> for his patch
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
