@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc6.ebuild,v 1.2 2002/12/21 06:37:40 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc6.ebuild,v 1.3 2002/12/21 07:11:44 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -40,14 +40,9 @@ src_unpack() {
 	sed -e 's:/etc/rc.d/init.d:/etc/init.d:' < Makefile > Makefile.hacked
 	mv Makefile.hacked Makefile
 
-	# A bug that causes compilation problems in rc3.  See bug #7291 and
-	# http://www.alsa-project.org
-	# Arcady Genkin <agenkin@gentoo.org>
-	# rm include/linux/isapnp.h
-	
-	if [ ${ARCH} = "ppc" ]
-		then patch -p1 < ${FILESDIR}/alsa-driver-0.9.0rc1-ppc.patch || die "Patching failed"
-	fi
+        # See bug http://bugs.gentoo.org/show_bug.cgi?id=11572
+        # http://www.mail-archive.com/alsa-devel@lists.sourceforge.net/msg05318.html
+        patch -p1 < ${FILESDIR}/ice1712-${P}.diff || die
 }
 
 

@@ -1,13 +1,17 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.19 2002/11/20 02:15:27 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.20 2002/12/21 07:11:44 agenkin Exp $
 
 *alsa-driver-0.9.0_rc6 (19 Nov 2002)
 
+  21 Dec 2002; Arcady Genkin <agenkin@gentoo.org> :
+  Added patch for ice1712 cards (bug #11572).
+  Added "options snd cards_limit=1" into the modules.d file (bug #12076).
+	
   19 Nov 2002; Arcady Genkin <agenkin@gentoo.org>
 	alsa-driver-0.9.0_rc6.ebuild :
   Quick update to rc6.  Legwork done by Roman Weber <gentoo@gonzo.ch>.
-	
+
 *alsa-driver-0.9.0_rc5 (24 Oct 2002)
 
   24 Oct 2002; Arcady Genkin <agenkin@gentoo.org>
