@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2.ebuild,v 1.5 2003/06/30 10:05:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2.ebuild,v 1.6 2003/06/30 10:18:21 robbat2 Exp $
 
 use apache2 && PHPSAPI="apache2" || PHPSAPI="apache1"
 inherit php eutils
@@ -81,11 +81,16 @@ apache2msg() {
 		ewarn "This is for the upcoming PHP5 support. The ebuild will attempt"
 		ewarn "to make this update between PHP and PHP4 automatically"
 }
+apache2fix() {
+	einfo "Attemping to update /etc/conf.d/apache2 automatically for the PHP/PHP4 change."
+	local oldfile="/etc/conf.d/apache2.old.`date +%Y%m%d%H%M%S`"
+	cp /etc/conf.d/apache2 ${oldfile}
+	sed -e 's,-D PHP,-D PHP4,g' ${oldfile}  <${oldfile} >/etc/conf.d/apache2
+}
 
 pkg_preinst() {
+	[ "${APACHEVER}" -eq '2' ] && apache2fix
 	php_pkg_preinst
-	einfo "Attemping to update /etc/conf.d/apache2 automatically for the PHP/PHP4 change."
-	dosed 's,-D PHP,-D PHP4,' /etc/conf.d/apache2
 }
 
 pkg_postinst() {

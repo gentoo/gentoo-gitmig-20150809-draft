@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r3.ebuild,v 1.1 2003/06/30 10:05:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r3.ebuild,v 1.2 2003/06/30 10:18:21 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -125,11 +125,18 @@ multiinstwarn() {
 	ewarn "copies."
 }
 
+apache2fix() {
+	einfo "Attemping to update /etc/conf.d/apache2 automatically for the PHP/PHP4 change."
+	local oldfile="/etc/conf.d/apache2.old.`date +%Y%m%d%H%M%S`"
+	cp /etc/conf.d/apache2 ${oldfile}
+	sed -e 's,-D PHP,-D PHP4,g' ${oldfile}  <${oldfile} >/etc/conf.d/apache2
+}
+
+
 pkg_preinst() {
 	multiinstwarn
+	[ "${APACHEVER}" -eq '2' ] && apache2fix
 	php_pkg_preinst
-	einfo "Attemping to update /etc/conf.d/apache2 automatically for the PHP/PHP4 change."
-	dosed 's,-D PHP,-D PHP4,' /etc/conf.d/apache2
 }
 
 pkg_postinst() {
