@@ -1,0 +1,12 @@
+# ChangeLog for media-video/totem
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.1 2002/08/13 19:12:02 stroke Exp $
+
+*totem-0.8.ebuild (13 Aug 2002)
+
+  13 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> totem-0.8.ebuild :
+
+  New package.  
+  Ebuild initially written by Markus Bertheau <twanger@bluetwanger.de>
+  Changed description and corrected deps.
+  
