@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/gtk-engines-smooth-0.5.2.ebuild,v 1.4 2003/10/14 20:30:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/gtk-engines-smooth-0.5.4.ebuild,v 1.1 2003/10/14 20:30:00 liquidx Exp $
 
 inherit gtk-engines2
 
@@ -10,7 +10,7 @@ IUSE=""
 DESCRIPTION="GTK+1 and GTK+2 Smooth Theme Engine"
 HOMEPAGE="http://sourceforge.net/projects/smooth-engine/"
 SRC_URI="mirror://sourceforge/smooth-engine/${MY_P}.tar.gz"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 LICENSE="GPL-2"
 SLOT="2"
 
@@ -30,13 +30,3 @@ src_compile() {
 	gtk-engines2_src_compile ${myconf}
 }
 
-src_install() {
-	gtk-engines2_src_install
-
-	# workaround bug for 0.5.2, apparently will be solved in next ver
-	if [ -n "${HAS_GTK2}" ]; then
-		dodir ${GTK2_ENGINES_DIR}
-		mv ${D}/usr/lib/gtk-2.0/engines/* ${D}${GTK2_ENGINES_DIR}
-		rmdir ${D}/usr/lib/gtk-2.0/engines
-	fi
-}
