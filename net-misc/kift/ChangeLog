@@ -1,12 +1,17 @@
 # ChangeLog for net-misc/kift
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kift/ChangeLog,v 1.2 2002/05/30 20:48:01 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kift/ChangeLog,v 1.3 2002/05/31 14:30:49 verwilst Exp $
 
 *kift-0.8.1 (30 May 2002)
 
   30 May 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
 
   Updated to latest version, KDE 3, uses OpenFT now..
+
+  31 May 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+
+  upped revision, added gift as a dep, made sure that it looks for giFT
+  in /usr/bin instead of /usr/local/bin (patch).
 
 *kift-0.7.0 (1 Feb 2002)
 

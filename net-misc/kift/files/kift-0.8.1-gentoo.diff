@@ -1,0 +1,24 @@
+diff -ru kift.orig/kifftmainForm.ui kift/kifftmainForm.ui
+--- kift.orig/kifftmainForm.ui	Fri May 31 15:48:41 2002
++++ kift/kifftmainForm.ui	Fri May 31 15:49:05 2002
+@@ -1647,7 +1647,7 @@
+                                                                 </property>
+                                                                 <property stdset="1">
+                                                                     <name>text</name>
+-                                                                    <string>/usr/local/bin/giFT</string>
++                                                                    <string>/usr/bin/giFT</string>
+                                                                 </property>
+                                                             </widget>
+                                                             <widget>
+diff -ru kift.orig/kift.cpp kift/kift.cpp
+--- kift.orig/kift.cpp	Fri May 31 15:48:41 2002
++++ kift/kift.cpp	Fri May 31 15:49:14 2002
+@@ -267,7 +267,7 @@
+ {
+   KSimpleConfig conf("kiftrc");
+   conf.setGroup("giFT");
+-  giftExec->setText(conf.readEntry("giFT","/usr/local/bin/giFT"));
++  giftExec->setText(conf.readEntry("giFT","/usr/bin/giFT"));
+   startGiftCombo->setCurrentItem(conf.readEntry("startGift","0").toInt());
+   stopGiftCombo->setCurrentItem(conf.readEntry("stopGift","1").toInt());
+   conf.setGroup("shared");
