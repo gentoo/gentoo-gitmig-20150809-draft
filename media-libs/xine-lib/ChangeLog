@@ -1,13 +1,17 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.38 2003/02/23 03:55:30 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.39 2003/02/23 05:31:57 agenkin Exp $
 
-*xine-lib-1_beta5 (22 Feb 2003)
+*xine-lib-1_beta5-r1 (22 Feb 2003)
 
   22 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump to 1-beta5.
   Added dependency on xvid.
   Added dependency on libfame.
+  Removed hack for installing xine-ui_logo.mpv, since it seems to have
+  moved into xine-ui.
+  Fixed location of the installed fonts (thanks Theofilos Intzoglou
+  <oscar10@yifan.net> bug #16112).
 
 *xine-lib-1_beta4 (28 Jan 2003)
 

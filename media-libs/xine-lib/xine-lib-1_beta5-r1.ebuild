@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta5.ebuild,v 1.1 2003/02/23 03:55:30 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta5-r1.ebuild,v 1.1 2003/02/23 05:31:57 agenkin Exp $ 
 
 DESCRIPTION="Core libraries for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -80,11 +80,9 @@ src_install() {
 	
 	einstall || die
 
-	# Xine's makefiles install some file incorrectly. (Gentoo bug #8583).
-	dodir /usr/share/xine/fonts
-	mv ${D}/usr/share/*.xinefont.gz ${D}/usr/share/xine/fonts/
-	dodir /usr/share/xine/skins
-	mv ${D}/usr/share/xine_logo.mpv ${D}/usr/share/xine/skins/
+	# Xine's makefiles install some file incorrectly. (Gentoo bug #8583, #16112).
+	dodir /usr/share/xine/libxine1/fonts
+	mv ${D}/usr/share/*.xinefont.gz ${D}/usr/share/xine/libxine1/fonts/
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 	cd ${S}/doc
