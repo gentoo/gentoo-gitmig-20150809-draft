@@ -1,19 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.10 2003/06/13 20:51:28 caleb Exp $
-
-IUSE="nas nls postgres opengl mysql odbc gif"
-
-S=${WORKDIR}/qt-x11-free-${PV}
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.11 2003/08/03 05:20:57 vapier Exp $
 
 DESCRIPTION="QT version ${PV}"
-SLOT="3"
-LICENSE="QPL-1.0 | GPL-2"
-KEYWORDS="x86 ppc sparc "
-
+HOMEPAGE="http://www.trolltech.com/"
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.gz"
 
-HOMEPAGE="http://www.trolltech.com/"
+LICENSE="QPL-1.0 | GPL-2"
+SLOT="3"
+KEYWORDS="x86 ppc sparc"
+IUSE="nas nls postgres opengl mysql odbc gif"
 
 DEPEND="virtual/x11
 	media-libs/libpng
@@ -26,20 +22,18 @@ DEPEND="virtual/x11
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( >=dev-db/postgresql-7.2 )"
-	
+
+S=${WORKDIR}/qt-x11-free-${PV}
 
 QTBASE=/usr/qt/3
 export QTDIR=${S}
 
 src_unpack() {
-
-	export QTDIR=${S}
-
 	unpack qt-x11-free-${PV}.tar.gz
 
 	# qt patch - for ami, fixed on the spot bug. 
 	cd ${S}
-	use nls && patch -p1 < ${FILESDIR}/qt-x11-free-3.0.5-ko_input.patch
+	use nls && epatch ${FILESDIR}/qt-x11-free-3.0.5-ko_input.patch
 	
 	cd ${S}
 	cp configure configure.orig
@@ -48,22 +42,18 @@ src_unpack() {
 	cd $S/mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
-	    einfo 'Using environment definition of $CXX'
-	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= g++:= ${CXX}:" qmake.conf.orig > qmake.conf
+		einfo 'Using environment definition of $CXX'
+		cp qmake.conf qmake.conf.orig
+		sed -e "s:= g++:= ${CXX}:" qmake.conf.orig > qmake.conf
 	fi
 	if [ -n "$CC" ]; then
-	    einfo 'Using environment definition of $CC'
-	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= cc:= ${CC}:" qmake.conf.orig > qmake.conf
+		einfo 'Using environment definition of $CC'
+		cp qmake.conf qmake.conf.orig
+		sed -e "s:= cc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
-
 }
 
 src_compile() {
-
-	export QTDIR=${S}
-	
 	export LDFLAGS="-ldl"
 
 	use nas		&& myconf="${myconf} -system-nas-sound"
@@ -71,8 +61,8 @@ src_compile() {
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
-	use opengl  && myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
-	[ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
+	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
+	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 	
 	# avoid wasting time building things we won't install
 	rm -rf tutorial examples
@@ -80,23 +70,15 @@ src_compile() {
 	export YACC='byacc -d'
 	
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -tablet \
-	-system-libmng -system-libpng -ldl -lpthread -xft -platform linux-g++ \
-	-qt-imgfmt-{jpeg,mng,png} -xplatform linux-g++ -prefix ${QTBASE} \
-	${myconf} || die
+		-system-libmng -system-libpng -ldl -lpthread -xft -platform linux-g++ \
+		-qt-imgfmt-{jpeg,mng,png} -xplatform linux-g++ -prefix ${QTBASE} \
+		${myconf} || die
 
 	export QTDIR=${S}
-
 	emake src-qmake src-moc sub-src sub-tools || die
-
 }
 
 src_install() {
-
-
-	export QTDIR=${S}
-
-	cd ${S}
-
 	# binaries
 	into $QTBASE
 	dobin bin/*
@@ -104,11 +86,10 @@ src_install() {
 	# libraries
 	dolib lib/libqt-mt.so.${PV} lib/libqui.so.1.0.0 lib/libeditor.so.1.0.0
 	cd ${D}$QTBASE/lib
-	for x in libqui.so libeditor.so
-	do
-	ln -s $x.1.0.0 $x.1.0
-	ln -s $x.1.0 $x.1
-	ln -s $x.1 $x
+	for x in libqui.so libeditor.so ; do
+		ln -s $x.1.0.0 $x.1.0
+		ln -s $x.1.0 $x.1
+		ln -s $x.1 $x
 	done
 
 	# version symlinks - 3.0.3->3.0->3->.so
@@ -117,10 +98,10 @@ src_install() {
 	ln -s libqt-mt.so.3 libqt-mt.so
 
 	# libqt -> libqt-mt symlinks
-	ln -s libqt-mt.so.${PV} 	libqt.so.${PV}
-	ln -s libqt-mt.so.3.0	libqt.so.3.0
-	ln -s libqt-mt.so.3		libqt.so.3
-	ln -s libqt-mt.so		libqt.so
+	ln -s libqt-mt.so.${PV} libqt.so.${PV}
+	ln -s libqt-mt.so.3.0 libqt.so.3.0
+	ln -s libqt-mt.so.3 libqt.so.3
+	ln -s libqt-mt.so libqt.so
 
 	# includes
 	cd ${S}
@@ -138,27 +119,22 @@ src_install() {
 
 	sed -e "s:${D}::g" \
 		-e "s:qt-x11-free-3.0.1::g" \
-	-e "s:${WORKDIR}:${QTBASE}:" \
-	-e "s:/usr/local/qt:${QTBASE}:" \
-	${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
+		-e "s:${WORKDIR}:${QTBASE}:" \
+		-e "s:/usr/local/qt:${QTBASE}:" \
+		${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
 
 	# plugins
 	cd ${S}
 	plugins=`find plugins -name "lib*.so" -print`
 	for x in $plugins; do
 		insinto ${QTBASE}/`dirname $x`
-	doins $x
+		doins $x
 	done
-
 }
-
 
 pkg_postinst() {
-
-einfo "NOTE: If you are upgrading from an older QT, you must remerge any versions of
-kde-base/kdelibs and x11-themes/mosfet-liquid-widgets, or QT/KDE widget style plugns
-will not work!"
-
+	ewarn "NOTE: If you are upgrading from an older QT,"
+	ewarn "you must remerge any versions of kde-base/kdelibs"
+	ewarn "and x11-themes/mosfet-liquid-widgets, or QT/KDE"
+	ewarn "widget style plugns will not work!"
 }
-
-

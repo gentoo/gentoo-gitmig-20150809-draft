@@ -1,22 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.0.ebuild,v 1.2 2003/07/31 07:41:21 pauldv Exp $
-
-inherit eutils
-
-IUSE="cups nas postgres opengl mysql odbc gif"
-
-S=${WORKDIR}/${PV}
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.0.ebuild,v 1.3 2003/08/03 05:20:57 vapier Exp $
 
 DESCRIPTION="QT version ${PV}"
-SLOT="3"
-LICENSE="QPL-1.0 | GPL-2"
-
-KEYWORDS="~x86"
-
+HOMEPAGE="http://www.trolltech.com/"
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 
-HOMEPAGE="http://www.trolltech.com/"
+LICENSE="QPL-1.0 | GPL-2"
+SLOT="3"
+KEYWORDS="~x86"
+IUSE="cups nas postgres opengl mysql odbc gif"
 
 DEPEND="virtual/x11
 	media-libs/libpng
@@ -31,17 +24,15 @@ DEPEND="virtual/x11
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( >=dev-db/postgresql-7.2 )"
-
-RDEPEND="$DEPEND"
+RDEPEND="${DEPEND}"
 	#doc? ( ~app-doc/qt-docs- )"
+
+S=${WORKDIR}/${PV}
 	
 QTBASE=/usr/qt/3
 export QTDIR=${S}
 
 src_unpack() {
-
-	export QTDIR=${S}
-
 	unpack ${A}
 
 	cd ${S}
@@ -52,14 +43,14 @@ src_unpack() {
 	cd mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
-	    einfo 'Using environment definition of $CXX'
-	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= g++:= ${CXX}:" qmake.conf.orig > qmake.conf
+		einfo 'Using environment definition of $CXX'
+		cp qmake.conf qmake.conf.orig
+		sed -e "s:= g++:= ${CXX}:" qmake.conf.orig > qmake.conf
 	fi
 	if [ -n "$CC" ]; then
-	    einfo 'Using environment definition of $CC'
-	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
+		einfo 'Using environment definition of $CC'
+		cp qmake.conf qmake.conf.orig
+		sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
 	
 	# hppa and alpha people, please review the following
@@ -73,34 +64,29 @@ src_unpack() {
 	
 	# on alpha we need to compile everything with -fPIC
 	if [ ${ARCH} == "alpha" ]; then
-	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= -O2:= -O2 -fPIC:" qmake.conf.orig > qmake.conf
-	    cat >> ${S}/tools/designer/editor/editor.pro <<_EOF_
+		cp qmake.conf qmake.conf.orig
+		sed -e "s:= -O2:= -O2 -fPIC:" qmake.conf.orig > qmake.conf
+		cat >> ${S}/tools/designer/editor/editor.pro <<_EOF_
 QMAKE_CFLAGS += -fPIC
 QMAKE_CXXFLAGS += -fPIC
 _EOF_
 	fi
-
-
 }
 
 src_compile() {
-    
 	# fix #11144; qt wants to create lock files etc. in that directory
 	[ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
 
-	export QTDIR=${S}
-	
 	export LDFLAGS="-ldl"
 
-	use cups || myconf="${myconf} -no-cups"
+	use cups	|| myconf="${myconf} -no-cups"
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
-	[ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
+	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 	
 	# avoid wasting time building things we won't install
 	rm -rf tutorial examples
@@ -113,17 +99,10 @@ src_compile() {
 		linux-g++ -xrender -prefix ${QTBASE} -fast ${myconf} || die
 
 	export QTDIR=${S}
-
 	emake src-qmake src-moc sub-src sub-tools || die
-
 }
 
 src_install() {
-
-	export QTDIR=${S}
-
-	cd ${S}
-
 	# binaries
 	into $QTBASE
 	dobin bin/*
@@ -131,11 +110,10 @@ src_install() {
 	# libraries
 	dolib lib/libqt-mt.so.3.2.0 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a
 	cd ${D}$QTBASE/lib
-	for x in libqui.so
-	do
-	    ln -s $x.1.0.0 $x.1.0
-	    ln -s $x.1.0 $x.1
-	    ln -s $x.1 $x
+	for x in libqui.so ; do
+		ln -s $x.1.0.0 $x.1.0
+		ln -s $x.1.0 $x.1
+		ln -s $x.1 $x
 	done
 	
 	# version symlinks - 3.2.0->3.2->3->.so
@@ -144,10 +122,10 @@ src_install() {
 	ln -s libqt-mt.so.3 libqt-mt.so
 
 	# libqt -> libqt-mt symlinks
-	ln -s libqt-mt.so.3.2.0 	libqt.so.3.2.0
-	ln -s libqt-mt.so.3.2		libqt.so.3.2
-	ln -s libqt-mt.so.3		libqt.so.3
-	ln -s libqt-mt.so		libqt.so
+	ln -s libqt-mt.so.3.2.0 libqt.so.3.2.0
+	ln -s libqt-mt.so.3.2 libqt.so.3.2
+	ln -s libqt-mt.so.3 libqt.so.3
+	ln -s libqt-mt.so libqt.so
 
 	# includes
 	cd ${S}
@@ -164,15 +142,13 @@ src_install() {
 	cp -R ${S}/mkspecs/linux-g++ ${D}/${QTBASE}/mkspecs/
 
 	sed -e "s:${S}:${QTBASE}:g" \
-	    ${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
+		${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
 
 	# plugins
 	cd ${S}
 	plugins=`find plugins -name "lib*.so" -print`
 	for x in $plugins; do
 		insinto ${QTBASE}/`dirname $x`
-	doins $x
+		doins $x
 	done
-
 }
-

@@ -1,23 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r4.ebuild,v 1.3 2003/07/31 02:55:27 caleb Exp $
-
-inherit eutils
-
-IUSE="cups nas postgres opengl mysql odbc gif"
-
-S=${WORKDIR}/qt-x11-free-${PV}
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r4.ebuild,v 1.4 2003/08/03 05:20:57 vapier Exp $
 
 DESCRIPTION="QT version ${PV}"
-SLOT="3"
-LICENSE="QPL-1.0 | GPL-2"
-
-# WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
-
+HOMEPAGE="http://www.trolltech.com/"
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 
-HOMEPAGE="http://www.trolltech.com/"
+LICENSE="QPL-1.0 | GPL-2"
+SLOT="3"
+# WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
+IUSE="cups nas postgres opengl mysql odbc gif debug"
 
 DEPEND="virtual/x11
 	media-libs/libpng
@@ -39,17 +32,15 @@ DEPEND="virtual/x11
 	!=kde-base/kdebase-3.1-r1
 	!=kde-base/kdebase-3.1.1"
 # WARNING: the versions blocked above are known to be buggy. DO NOT use them with this qt	
-
-RDEPEND="$DEPEND
+RDEPEND="${DEPEND}
 	doc? ( ~app-doc/qt-docs-$PV )"
+
+S=${WORKDIR}/qt-x11-free-${PV}
 	
 QTBASE=/usr/qt/3
 export QTDIR=${S}
 
 src_unpack() {
-
-	export QTDIR=${S}
-
 	unpack ${A}
 
 	cd ${S}
@@ -70,18 +61,17 @@ src_unpack() {
 	cd mkspecs/linux-g++
 	# use env's $CC, $CXX
 	if [ -n "$CXX" ]; then
-	    einfo 'Using environment definition of $CXX'
-	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= g++:= ${CXX}:" qmake.conf.orig > qmake.conf
+		einfo 'Using environment definition of $CXX'
+		cp qmake.conf qmake.conf.orig
+		sed -e "s:= g++:= ${CXX}:" qmake.conf.orig > qmake.conf
 	fi
 	if [ -n "$CC" ]; then
-	    einfo 'Using environment definition of $CC'
-	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
+		einfo 'Using environment definition of $CC'
+		cp qmake.conf qmake.conf.orig
+		sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
-	
+
 	# hppa people, please review the following
-	
 	# hppa need some additional flags
 	if [ "${ARCH}" = "hppa" ]; then
 		echo "QMAKE_CFLAGS += -fPIC -ffunction-sections" >> qmake.conf
@@ -91,22 +81,19 @@ src_unpack() {
 }
 
 src_compile() {
-    
 	# fix #11144; qt wants to create lock files etc. in that directory
 	[ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
 
-	export QTDIR=${S}
-	
 	export LDFLAGS="-ldl"
 
-	use cups || myconf="${myconf} -no-cups"
+	use cups	|| myconf="${myconf} -no-cups"
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
-	[ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
+	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 	
 	# avoid wasting time building things we won't install
 	rm -rf tutorial examples
@@ -119,17 +106,10 @@ src_compile() {
 		linux-g++ -xrender -prefix ${QTBASE} -fast ${myconf} || die
 
 	export QTDIR=${S}
-
 	emake src-qmake src-moc sub-src sub-tools || die
-
 }
 
 src_install() {
-
-	export QTDIR=${S}
-
-	cd ${S}
-
 	# binaries
 	into $QTBASE
 	dobin bin/*
@@ -137,11 +117,10 @@ src_install() {
 	# libraries
 	dolib lib/libqt-mt.so.3.1.2 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a lib/*.la lib/*.prl
 	cd ${D}$QTBASE/lib
-	for x in libqui.so
-	do
-	    ln -s $x.1.0.0 $x.1.0
-	    ln -s $x.1.0 $x.1
-	    ln -s $x.1 $x
+	for x in libqui.so ; do
+		ln -s $x.1.0.0 $x.1.0
+		ln -s $x.1.0 $x.1
+		ln -s $x.1 $x
 	done
 	
 	# version symlinks - 3.1.2->3.1->3->.so
@@ -150,10 +129,10 @@ src_install() {
 	ln -s libqt-mt.so.3 libqt-mt.so
 
 	# libqt -> libqt-mt symlinks
-	ln -s libqt-mt.so.3.1.2 	libqt.so.3.1.2
-	ln -s libqt-mt.so.3.1		libqt.so.3.1
-	ln -s libqt-mt.so.3		libqt.so.3
-	ln -s libqt-mt.so		libqt.so
+	ln -s libqt-mt.so.3.1.2 libqt.so.3.1.2
+	ln -s libqt-mt.so.3.1 libqt.so.3.1
+	ln -s libqt-mt.so.3 libqt.so.3
+	ln -s libqt-mt.so libqt.so
 
 	# includes
 	cd ${S}
@@ -170,22 +149,20 @@ src_install() {
 	cp -R ${S}/mkspecs/linux-g++ ${D}/${QTBASE}/mkspecs/
 
 	sed -e "s:${S}:${QTBASE}:g" \
-	    ${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
+		${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
 
 	# plugins
 	cd ${S}
 	plugins=`find plugins -name "lib*.so" -print`
 	for x in $plugins; do
 		insinto ${QTBASE}/`dirname $x`
-	doins $x
+		doins $x
 	done
-
 }
+
 pkg_postinst() {
-
-    ewarn "If you upgraded from QT 3.0.x to 3.1.x, you should remerge any copies"
-    ewarn "of kdelibs you have installed. Otherwise, other kde packages may not"
-    ewarn "compile properly. If you upgraded QT from 3.0.x to 3.1.x in the past"
-    ewarn "but have not remerged kdelib, since then, you should proobably do so now."
-
+	ewarn "If you upgraded from QT 3.0.x to 3.1.x, you should remerge any copies"
+	ewarn "of kdelibs you have installed. Otherwise, other kde packages may not"
+	ewarn "compile properly. If you upgraded QT from 3.0.x to 3.1.x in the past"
+	ewarn "but have not remerged kdelib, since then, you should proobably do so now."
 }

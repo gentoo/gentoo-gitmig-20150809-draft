@@ -1,16 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.22 2003/06/19 17:26:09 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.23 2003/08/03 05:20:57 vapier Exp $
 
-IUSE="gif opengl nas"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="QT ${PV}, an X11 widget set and general library used by KDE et al"
-SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-${PV}.tar.gz"
 HOMEPAGE="http://www.trolltech.com/"
-SLOT="2"
+SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-${PV}.tar.gz"
+
 LICENSE="QPL-1.0 | GPL-2"
+SLOT="2"
 KEYWORDS="x86 ppc sparc hppa alpha"
+IUSE="gif opengl nas"
 
 RDEPEND="virtual/x11
 	media-libs/libpng
@@ -21,16 +20,13 @@ RDEPEND="virtual/x11
 		media-libs/libungif )
 	nas? ( >=media-libs/nas-1.4.1 )
 	opengl? ( virtual/opengl virtual/glu )"
-	
-
-DEPEND="$RDEPEND
+DEPEND="${RDEPEND}
 	sys-devel/gcc"
 
 QTBASE=/usr/qt/2
 export QTDIR=${S}
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}
@@ -43,11 +39,9 @@ src_unpack() {
 	sed -e "s/SYSCONF_CXXFLAGS	/SYSCONF_CXXFLAGS = ${CXXFLAGS} \#/" \
 	-e "s/SYSCONF_CFLAGS	/SYSCONF_CFLAGS = ${CFLAGS} \#/" \
 	linux-g++-shared.orig > linux-g++-shared || die
-
 }
 
 src_compile() {
-
 	export LDFLAGS="$LDFLAGS -ldl"
 	local myconf
 
@@ -58,7 +52,7 @@ src_compile() {
 
 	use gif	&& myconf="${myconf} -gif"
 
-	[ -n "$DEBUG" ] \
+	use debug \
 		&& myconf="${myconf} -debug" \
 		|| myconf="${myconf} -release"
 	
@@ -67,15 +61,10 @@ src_compile() {
 		-system-libmng -system-libpng -gif -platform linux-g++ \
 		-ldl -lpthread -no-g++-exceptions -no-xft || die
 
-	cd ${S}
 	make symlinks src-moc sub-src sub-tools || die
-
 }
 
 src_install() {
-
-	cd ${S}
-
 	# binaries
 	into $QTBASE
 	dobin bin/*
@@ -101,5 +90,4 @@ src_install() {
 	# misc
 	insinto /etc/env.d
 	doins ${FILESDIR}/{50qt2,45qtdir2}
-
 }
