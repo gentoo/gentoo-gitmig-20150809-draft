@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/elem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/elem/ChangeLog,v 1.2 2003/04/01 22:44:20 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/elem/ChangeLog,v 1.3 2003/04/24 13:44:14 phosphan Exp $
+
+  24 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> elem-1.0.1.ebuild :
+  considered stable
 
 *elem-1.0.1 (13 Feb 2003)
 
