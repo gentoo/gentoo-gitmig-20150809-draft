@@ -3,7 +3,7 @@ MD5 dd022a9ce711fa89a564de5fcf659f9a kdesdk-3.0.4.ebuild 318
 MD5 b0ce3ca9ab15a0bbc184cd751093985e kdesdk-3.1.2.ebuild 315
 MD5 6d8b8a053de91feea43bcdf76014498e kdesdk-3.2.0_alpha2.ebuild 316
 MD5 2f5b2d433c812fbd428f2cc16be1ec89 kdesdk-3.1.4.ebuild 308
-MD5 28bae86d36d4bd1b5d5d0eccaef9a1f8 kdesdk-3.2.0_beta1.ebuild 308
+MD5 0a0a5d49bfa59be12304daf4a576dfe1 kdesdk-3.2.0_beta1.ebuild 336
 MD5 f30aeb691a19f6f59fe38b74d2673fb3 kdesdk-3.0.5b.ebuild 328
 MD5 d883cc3e906f04efe14249c705d5aba9 ChangeLog 4452
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
