@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.15 2004/07/14 01:44:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.16 2004/09/21 13:58:18 axxo Exp $
 
 inherit java nsplugins
 
@@ -13,7 +13,7 @@ SRC_URI="x86? ( mirror://blackdown.org/JDK-${PV}/i386/FCS/j2sdk-${PV}-FCS-linux-
 
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 IUSE="doc"
 
 DEPEND="virtual/libc
