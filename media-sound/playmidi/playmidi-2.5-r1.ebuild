@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5.ebuild,v 1.7 2004/09/15 17:18:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5-r1.ebuild,v 1.1 2005/01/18 09:09:19 eradicator Exp $
 
 IUSE="svga X gtk"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc sparc"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 DEPEND="sys-libs/ncurses
 	svga? ( media-libs/svgalib )
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/${P}.patch"
+	epatch "${FILESDIR}/CAN-2005-0020.patch"
 }
 
 src_compile() {
