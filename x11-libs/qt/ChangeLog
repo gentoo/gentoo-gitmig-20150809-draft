@@ -1,10 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.63 2003/04/17 12:25:13 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.64 2003/04/17 12:30:38 danarmak Exp $
+
+  17 Apr 2003; Dan Armak <danarmak@gentoo.org> qt-3.1.2-r2.ebuild:
+  
+  Use the new qsocket patch from r3.
 
 *qt-3.1.2-r3 (17 Apr 2003)
   
-  17 Apr 2003; Michele Balistreri <brain@gentoo.org> qt-3.1.2-r3.ebuild
+  17 Apr 2003; Michele Balistreri <brain@gentoo.org> qt-3.1.2-r3.ebuild,
+  files/qt-3.1.2-r3-qsocket.diff:
   Cleaned the patch, now just the hunk which solve the issue is present,
   Some of the hunks removed reintroduced already fixed bugs. Therefore 
   this is a new revision
