@@ -1,22 +1,28 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.3 2004/11/04 01:54:48 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.4 2004/11/19 00:38:36 latexer Exp $
+
+  18 Nov 2004; Peter Johanson <latexer@gentoo.org> -gtk-sharp-0.91.1.ebuild,
+  -gtk-sharp-0.93.ebuild, -gtk-sharp-0.98.ebuild, -gtk-sharp-0.99.ebuild,
+  gtk-sharp-1.0.2.ebuild, gtk-sharp-1.0.4.ebuild, -gtk-sharp-1.0.ebuild:
+  Remove a bunch of older ebuilds, and move the slot of the current ebuilds from
+  0 -> 1
 
 *gtk-sharp-1.0.4 (03 Nov 2004)
 
-  03 Nov 2004; <peter@gentoo.org> +gtk-sharp-1.0.4.ebuild:
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> +gtk-sharp-1.0.4.ebuild:
   Bump.
 
 *gtk-sharp-0.91.1 (26 Oct 2004)
 
-  26 Oct 2004; <peter@gentoo.org> +metadata.xml, +gtk-sharp-0.91.1.ebuild,
-  +gtk-sharp-0.93.ebuild, +gtk-sharp-0.98.ebuild, +gtk-sharp-0.99.ebuild,
-  +gtk-sharp-1.0.2.ebuild, +gtk-sharp-1.0.ebuild:
+  26 Oct 2004; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +gtk-sharp-0.91.1.ebuild, +gtk-sharp-0.93.ebuild, +gtk-sharp-0.98.ebuild,
+  +gtk-sharp-0.99.ebuild, +gtk-sharp-1.0.2.ebuild, +gtk-sharp-1.0.ebuild:
   Moved from x11-libs -> dev-dotnet
 
 *gtk-sharp-1.0.2 (22 Sep 2004)
 
-  22 Sep 2004; <peter@gentoo.org> +gtk-sharp-1.0.2.ebuild:
+  22 Sep 2004; Peter Johanson <latexer@gentoo.org> +gtk-sharp-1.0.2.ebuild:
   Bump.
 
   21 Aug 2004; <spider@gentoo.org> gtk-sharp-0.91.1.ebuild,
