@@ -1,8 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/shout-0.8.0-r1.ebuild,v 1.13 2004/08/08 14:09:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/shout-0.8.0-r2.ebuild,v 1.1 2004/09/05 22:35:01 eradicator Exp $
 
 IUSE=""
+
+inherit eutils
+
 DESCRIPTION="Shout is a program for creating mp3 stream for use with icecast or shoutcast"
 SRC_URI="http://www.icecast.org/releases/${P}.tar.gz"
 HOMEPAGE="http://www.icecast.org"
@@ -13,16 +16,15 @@ SLOT="0"
 DEPEND="virtual/libc"
 
 src_unpack() {
-
 	unpack ${A}
-	cd ${S}
-	patch -p1 < ${FILESDIR}/variables.diff
-	rm -f sock.o
 
+	cd ${S}
+	epatch ${FILESDIR}/variables.diff
+
+	rm -f sock.o
 }
 
 src_compile() {
-
 	./configure --prefix=/usr \
 		--host=${CHOST} \
 		--sysconfdir=/etc/shout \
@@ -35,5 +37,10 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
+	keepdir /var/log/shout
+	fowners root:audio /var/log/shout
+	fperms 775 /var/log/shout
+	fperms 755 /etc/shout
+	fperms 644 /etc/shout/shout.conf.dist
 	dodoc BUGS CREDITS README.shout TODO
 }
