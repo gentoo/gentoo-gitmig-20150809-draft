@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.1 2003/08/26 13:32:23 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.2 2003/08/26 13:42:45 stuart Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -31,7 +31,7 @@ kernel-mod_getversion ()
 		einfo "${KERNEL_DIR} is a real directory"
 		KV_DIR="`ls -ld ${KERNEL_DIR} | awk '{ print $9 }'`"
 	fi
-	KV_DIR="`basename $KV_FULL_DIR`"
+	KV_DIR="`basename $KV_DIR`"
 
 	# now, we need to break that down into versions
 
