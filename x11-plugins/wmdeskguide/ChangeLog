@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/wmdeskguide
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdeskguide/ChangeLog,v 1.1 2003/06/06 12:48:20 robh Exp $
+
+*wmdeskguide-0.2 (06 Jun 2003)
+
+  06 Jun 2003; robh <robh@gentoo.org> wmdeskguide-0.2.ebuild:
+  Initial version. Ebuild from Hamlet Mun <hamletmun@hotmail.com>
+  with DEPEND and a few other things tweaked by me.
+  Closes #19871.
+
