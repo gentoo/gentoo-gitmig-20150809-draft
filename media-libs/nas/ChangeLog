@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.14 2004/03/15 02:19:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.15 2004/03/26 17:04:51 eradicator Exp $
+
+*nas-1.6c-r1 (26 Mar 2004)
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> nas-1.5.ebuild,
+  nas-1.6.ebuild, nas-1.6c-r1.ebuild, nas-1.6c.ebuild, files/nas.conf.d,
+  files/nas.init.d:
+  Removed explicit S=. Added explicit IUSE=. Added init script provided by
+  Vaclav Slavik <vaclav.slavik@matfyz.cz> in bug #45689.
 
 *nas-1.6c (14 Mar 2004)
 
