@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.15 2004/06/24 22:55:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.16 2004/07/14 13:50:23 agriffis Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 sparc"
+IUSE=""
 
 DEPEND=">=sys-devel/gcc-2.95.3-r5
 	>=dev-libs/boehm-gc-6.0"

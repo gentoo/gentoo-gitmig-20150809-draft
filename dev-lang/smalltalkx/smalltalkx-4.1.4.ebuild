@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smalltalkx/smalltalkx-4.1.4.ebuild,v 1.9 2004/07/02 04:30:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smalltalkx/smalltalkx-4.1.4.ebuild,v 1.10 2004/07/14 13:50:54 agriffis Exp $
 
 MY_PV=${PV//./}
 S=${WORKDIR}/stx
@@ -12,6 +12,7 @@ SRC_URI="mirror://gentoo/${PN}-common-${MY_PV}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/libc
 	virtual/x11"

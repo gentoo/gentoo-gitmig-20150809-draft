@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.16.ebuild,v 1.5 2004/07/02 04:32:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.16.ebuild,v 1.6 2004/07/14 13:59:42 agriffis Exp $
 
 DESCRIPTION="A very small C compiler for ix86"
 HOMEPAGE="http://www.tinycc.org/"
@@ -9,6 +9,7 @@ SRC_URI="http://fabrice.bellard.free.fr/tcc/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -sparc"
+IUSE=""
 
 DEPEND="virtual/libc"
 
