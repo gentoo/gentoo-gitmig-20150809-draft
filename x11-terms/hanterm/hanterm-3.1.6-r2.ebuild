@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.10 2004/06/20 18:44:26 port001 Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.11 2004/06/20 19:41:35 usata Exp $ 
 
 IUSE=""
 
@@ -13,13 +13,15 @@ KEYWORDS="x86 ~ppc"
 LICENSE="X11"
 
 DEPEND="virtual/glibc
-	>=x11-libs/Xaw3d-1.5
 	virtual/x11
+	>=x11-libs/Xaw3d-1.5"
+RDEPEND="${DEPEND}
 	media-fonts/baekmuk-fonts"
 
 src_compile() {
 
 	econf --with-Xaw3d --with-utempter || die
+	perl -i -pe "s/VENDORNAME=(.*?) -/VENDORNAME=\"\1\" -/" Makefile || die
 	emake || die
 }
 
