@@ -4,7 +4,9 @@ MD5 2ed11f627e3beaacb9f92d8949137fb9 ChangeLog 838
 MD5 5f6ea0934b8a7909c8d66ab851f70ced scim-uim-0.0.1_pre20040616.ebuild 1138
 MD5 56e66bf349fd49fe4539c129d825dcb7 scim-uim-0.0.1_pre20040619.ebuild 1271
 MD5 402aeee0a421267a46451b6a93d7ecc6 scim-uim-0.1.0_pre20040620.ebuild 1260
+MD5 9b6b217dab9e3ed1e6a9b6f5df078c7a scim-uim-0.1.0.ebuild 1076
 MD5 4fcacae0314c767be1d4df3e1e97267a files/digest-scim-uim-0.0.1_pre20040614 75
 MD5 42d9c84bea57e39a55e2728277bd0919 files/digest-scim-uim-0.0.1_pre20040616 75
 MD5 e32091391f9e2eb2e3c239bf95d96621 files/digest-scim-uim-0.0.1_pre20040619 75
 MD5 94e5479ad49bdf2c7c2d8887f739e34c files/digest-scim-uim-0.1.0_pre20040620 74
+MD5 c8daff6289c04a0c685386031746cbff files/digest-scim-uim-0.1.0 66

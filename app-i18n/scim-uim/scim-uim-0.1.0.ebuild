@@ -1,28 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.0.1_pre20040619.ebuild,v 1.1 2004/06/19 17:34:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.1.0.ebuild,v 1.1 2004/06/20 17:47:57 usata Exp $
 
 DESCRIPTION="scim-uim is an input module for Smart Common Input Method (SCIM) which uses uim as backend"
 HOMEPAGE="http://freedesktop.org/~suzhe/"
-#SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
-SRC_URI="mirror://gentoo/${P/_pre/-}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/${P/_pre/-}.tar.gz"
-
-S="${WORKDIR}/${P/[0-9]*_pre/}"
+SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND=">=app-i18n/scim-0.99.0_pre20040614
+DEPEND=">=app-i18n/scim-0.99.0_pre20040614
 	>=app-i18n/uim-0.3.8"
-DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/automake"
 
 src_compile() {
-	./bootstrap
 	econf || die
 	emake || die
 }
@@ -30,7 +22,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dodoc AUTHORS THANKS
+	dodoc AUTHORS ChangeLog README THANKS
 }
 
 pkg_postinst() {

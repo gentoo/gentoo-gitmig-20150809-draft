@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/scim-uim
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.4 2004/06/20 14:50:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.5 2004/06/20 17:47:57 usata Exp $
+
+*scim-uim-0.1.0 (21 Jun 2004)
+
+  21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -scim-uim-0.0.1_pre20040614.ebuild, -scim-uim-0.0.1_pre20040616.ebuild,
+  -scim-uim-0.0.1_pre20040619.ebuild, +scim-uim-0.1.0.ebuild,
+  -scim-uim-0.1.0_pre20040620.ebuild:
+  Version bumped. Ebuilds cleanup.
 
 *scim-uim-0.1.0_pre20040620 (20 Jun 2004)
 
