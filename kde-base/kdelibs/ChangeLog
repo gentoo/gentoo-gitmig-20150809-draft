@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.9 2002/05/02 19:43:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.10 2002/05/12 18:11:48 danarmak Exp $
+
+*kdelibs-3.0-r2 (11 May 2002)
+
+  11 May 2002; Dan Armak <danarmak@gentoo.org> Changelog :
+  
+  Make ${KDEDIR}/lib/kde3/plugins (where all style plugins live) a symlink to
+  /usr/qt/3/plugins. That way qt-only apps can use kde styles with the default qtconfig
+  setup. Closes bug #2118, too.
 
   2 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
   
