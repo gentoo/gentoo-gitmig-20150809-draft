@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.ebuild,v 1.6 2004/06/30 03:21:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.ebuild,v 1.7 2004/06/30 03:35:50 mr_bones_ Exp $
 
-inherit eutils gnuconfig
+inherit flag-o-matic eutils gnuconfig
 
 DESCRIPTION="Use this to try make tarballs :)"
 HOMEPAGE="http://www.gnu.org/software/tar/"
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	gnuconfig_update
+	use static && append-ldflags -static
 }
 
 src_compile() {
@@ -32,12 +33,7 @@ src_compile() {
 		--bindir=/bin \
 		--libexecdir=/usr/sbin \
 		$(use_enable nls) || die
-
-	if use static ; then
-		emake LDFLAGS=-static || die "emake failed"
-	else
-		emake || die "emake failed"
-	fi
+	emake || die "emake failed"
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.21 2004/06/30 03:21:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.22 2004/06/30 03:35:50 mr_bones_ Exp $
+
+  29 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> tar-1.14.ebuild:
+  Use append-ldflags for static support instead of overriding LDFLAGS
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> tar-1.14.ebuild:
   stable on x86, alpha, ia64
