@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.22-r1.ebuild,v 1.3 2004/06/24 21:49:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.22-r1.ebuild,v 1.4 2004/06/30 02:03:03 agriffis Exp $
 
 DESCRIPTION="Extensible, multi-language source code documentation generator"
 HOMEPAGE="http://www.naturaldocs.org/"
@@ -23,7 +23,7 @@ src_unpack() {
 
 	# See if we have a patch. If we have more than one, use the highest-
 	# numbered one *only*
-	local patch=`ls -r ${DISTDIR}/${P}-Patch-?.zip | head -1`
+	local patch=`ls -r ${DISTDIR}/${P}-Patch-?.zip | head -n -1`
 
 	# If we have a patch, it is actually a whole new Perl module. Just
 	# unzip it over top of the original one.
