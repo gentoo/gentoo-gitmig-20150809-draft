@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.50.ebuild,v 1.5 2004/07/21 12:52:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.50.ebuild,v 1.6 2004/07/25 21:10:12 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -105,8 +105,8 @@ src_compile() {
 	set_filter_flags
 	apache_setup_vars
 
-	# Detect mips systems properly
-	use mips && gnuconfig_update
+	# Detect mips and uclibc systems properly
+	gnuconfig_update
 
 	local myconf
 	if use ldap; then
