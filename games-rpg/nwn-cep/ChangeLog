@@ -1,0 +1,9 @@
+# ChangeLog for games-rpg/nwn-cep
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.1 2005/01/20 06:48:15 vapier Exp $
+
+*nwn-cep-1.50 (20 Jan 2004)
+
+  20 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Kai Zimmermann #68501 by 
+  dju` / Keri Harris.
