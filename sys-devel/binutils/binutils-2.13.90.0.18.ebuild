@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.1 2003/01/26 15:25:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.2 2003/01/29 16:27:48 dragon Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -43,8 +43,7 @@ src_unpack() {
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-ia64-brl.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-x86_64-testsuite.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-x86_64-gotpcrel.patch
-# This one needs to be ported, but I dont feel like it right now.
-#	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.16-eh-frame-ro.patch
+	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-eh-frame-ro.patch
 	use x86 &> /dev/null \
 		&& epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.16-array-sects-compat.patch
 
