@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.12 2004/02/04 03:16:26 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.13 2004/03/09 23:31:53 agriffis Exp $
+
+  09 Mar 2004; <agriffis@gentoo.org> eggdrop-1.6.15-r1.ebuild:
+  stable on alpha and ia64
 
   03 Feb 2004; Chuck Short <zul@gentoo.org> eggdrop-1.6.15-r2.ebuild,
   files/eggdrop-1.6.15-mysql-use_ssl-fix.patch:
