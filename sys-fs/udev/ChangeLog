@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.11 2003/12/14 19:53:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.12 2003/12/17 19:44:30 azarah Exp $
+
+*udev-009 (17 Dec 2003)
+
+  17 Dec 2003; Martin Schlemmer <azarah@gentoo.org> udev-009.ebuild,
+  files/udev-009-scsi_id-new-sysfs.patch:
+  New version.
 
 *udev-008 (14 Dec 2003)
 

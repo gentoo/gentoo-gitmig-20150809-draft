@@ -1,4 +1,5 @@
 MD5 142756ce2bce094bde709030a54608c5 udev-006.ebuild 2445
+MD5 bb2f3caf9ec4cb1394ae3c94f2ee7a8c udev-009.ebuild 2063
 MD5 2fad854e5a570fd1eebc77af7e4e24b2 ChangeLog 2517
 MD5 bb941a13588f122cda62f71eb5639deb udev-005.ebuild 1732
 MD5 bb2f3caf9ec4cb1394ae3c94f2ee7a8c udev-008.ebuild 2063
@@ -11,6 +12,7 @@ MD5 499720cc5ea49dfc4e02b2f601cf4a8f files/udev.conf 902
 MD5 75eb84a1c3c02f826c30771549a520ce files/udev-004-label-fixes.patch 1895
 MD5 ad8f3d1f8a8ca711cb8c064a260b4541 files/digest-udev-008 61
 MD5 6a2ddd6bc79a92b74b4da57f442504d4 files/digest-udev-003 61
+MD5 336d350d91bd382e036d6178cfddf53d files/digest-udev-009 61
 MD5 1e9ce6f1d2c8f186504ebfa883dbcf4a files/digest-udev-005 61
 MD5 fcb45730f317fcad0c3c577fd16243b2 files/udev-007-check-valid-mode.patch 372
 MD5 915a7c2bcdf0cf3e3526ba49753936ec files/digest-udev-007 61
