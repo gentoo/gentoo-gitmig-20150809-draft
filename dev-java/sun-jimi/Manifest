@@ -1,4 +1,14 @@
-MD5 ac9ce0b4faf297496b2b9160002262bc sun-jimi-bin-1.0.ebuild 1154
-MD5 f4ab6b1762d55c9ae161cdd96e57050a ChangeLog 1065
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7a9d12a8707f3acef35193d01e20c8b8 ChangeLog 1049
+MD5 bd2779b9b7e5fcec836b9ac8ffaf8737 sun-jimi-1.0.ebuild 1146
 MD5 d3368883f3e359f54f63ee8dbf1f5f61 metadata.xml 592
-MD5 8ec838971f780c36dfcd2850a7276f7d files/digest-sun-jimi-bin-1.0 57
+MD5 8ec838971f780c36dfcd2850a7276f7d files/digest-sun-jimi-1.0 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBywytI1lqEGTUzyQRAqHBAJ0fa3ThRsjTZnNUys71LOEzrJRhCQCgpiXQ
+jSQVVwg2mrizZpAWYpC/9PI=
+=WnJq
+-----END PGP SIGNATURE-----
