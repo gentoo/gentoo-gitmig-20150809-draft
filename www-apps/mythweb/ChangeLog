@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.3 2004/09/10 20:47:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.4 2004/09/10 23:27:13 aliz Exp $
+
+  10 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythweb-0.16.ebuild:
+  + Webapp-config support, closing #58382.
+  + Added checks and warning about php5.
 
 *mythweb-0.16 (10 Sep 2004)
 
