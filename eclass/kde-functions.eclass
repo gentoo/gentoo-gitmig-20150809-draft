@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.19 2002/07/26 15:34:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.20 2002/07/26 19:37:19 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -202,7 +202,7 @@ set-kdedir() {
 	esac # $KDEMAJORVER in
 
 	# check that we've set everything
-	[ -z "$PREFIX" ] && die "$ECLASS: Error: could set install prefix, consult log"
+	[ -z "$PREFIX" ] && die "$ECLASS: Error: could not set install prefix, consult log"
 	[ "${INHERITED//kde-dist}" != "${INHERITED}" -a -z "$KDEDIR" ] && die "$ECLASS: Error: could set kdelibs location, consult log"
 
 	debug-print "$FUNCNAME: result: KDEDIR=$KDEDIR, PREFIX=$PREFIX"
