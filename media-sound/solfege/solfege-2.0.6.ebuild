@@ -1,24 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.4.ebuild,v 1.5 2004/07/20 06:33:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.6.ebuild,v 1.1 2004/11/19 22:55:30 eradicator Exp $
 
-inherit python
+IUSE="gtkhtml gnome oss"
 
-IUSE="gtkhtml gnome" # see bug #43889 oss"
+inherit python eutils
+
 DESCRIPTION="GNU Solfege is a program written to help you practice ear training."
-HOMEPAGE="http://solfege.sourceforge.net/"
+HOMEPAGE="http://www.solfege.org"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="-amd64 -sparc ~x86"
 
-RDEPEND=">=dev-lang/python-2.2
+RDEPEND=">=dev-lang/python-2.3
 	>=x11-libs/gtk+-2.0
 	>=dev-python/pygtk-2.0
 	gnome? ( >=dev-python/gnome-python-2.0 )
 	gtkhtml? ( =gnome-extra/libgtkhtml-2*
-	>=dev-python/gnome-python-2.0 )"
+	           >=dev-python/gnome-python-2.0 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -27,7 +28,7 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	dev-libs/libxslt
 	sys-apps/sed
-	=app-text/docbook-xsl-stylesheets-1.62*"
+	=app-text/docbook-xsl-stylesheets-1.6*"
 
 pkg_setup() {
 	# die if user wants gtkhtml but it is not enable in gnome-python
@@ -35,7 +36,7 @@ pkg_setup() {
 	#  which needs X11, and breaks in console)
 	use gtkhtml \
 		&& python_version \
-		&& [ ! -f ${ROOT}usr/lib/python${PYVER}/site-packages/gtk-2.0/gtkhtml2.so ] \
+		&& [ ! -f ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0/gtkhtml2.so ] \
 		&& eerror "Could not find the GTKHtml2 python module, whereas gtkhml is in your flags." \
 		&& eerror "Please re-emerge \"dev-python/gnome-python\" with \"gtkhtml\" USE flag on." \
 		&& die "You will have to re-emerge gnome-python."
@@ -54,26 +55,22 @@ src_unpack() {
 
 src_compile() {
 	# Try to figure out where is this damn stylesheet
-	local xslloc=$( ls /usr/share/sgml/docbook/xsl-stylesheets-1.62*/html/chunk.xsl | tail -n 1 )
+	local xslloc=$( ls /usr/share/sgml/docbook/xsl-stylesheets-1.6*/html/chunk.xsl | tail -n 1 )
 	[ -n "$xslloc" ] || die "XSL stylesheet not found"
 
 	econf --enable-docbook-stylesheet=${xslloc} \
 		`use_with gnome` \
 		`use_with gtkhtml` \
-		--enable-oss-sound \
+		`use_enable oss oss-sound` \
 		|| die "Configuration failed."
-
-		# See bug #43889
-		# `use_enable oss oss-sound` \
-
 
 	emake || die "Compilation failed."
 }
 
 src_install() {
-#borks	make DESTDIR=${D} install || die "Installation failed."
+#	make DESTDIR=${D} install || die "Installation failed."
 	einstall || die "Installation failed."
 	rm -f ${D}usr/bin/${PN}${PV}
-	dodoc AUTHORS changelog COPYING FAQ INSTALL README TODO TRANSLATING
+	dodoc AUTHORS changelog COPYING FAQ INSTALL README TODO
 }
 

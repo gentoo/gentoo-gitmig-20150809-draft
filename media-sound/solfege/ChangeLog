@@ -1,13 +1,25 @@
 # ChangeLog for media-sound/solfege
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.8 2004/10/07 03:30:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.9 2004/11/19 22:55:30 eradicator Exp $
+
+*solfege-2.0.6 (19 Nov 2004)
+
+  19 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -solfege-2.0.4.ebuild, solfege-2.0.5.ebuild, +solfege-2.0.6.ebuild:
+  Moved to -amd64, -sparc as the package compiles but crashes at startup.
+
+*solfege-2.0.6 (19 Nov 2004)
+
+  19 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -solfege-2.0.4.ebuild, solfege-2.0.5.ebuild, +solfege-2.0.6.ebuild:
+  Version bump.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   solfege-2.0.5.ebuild:
   get_libdir fixes.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> solfege-2.0.5.ebuild:
-  Stable amd64, x86.
+  Stable x86.
 
 *solfege-2.0.5 (30 Jul 2004)
 

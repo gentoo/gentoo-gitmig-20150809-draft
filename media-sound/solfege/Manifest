@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a087e42b48eb427ba96ea875b42f663f ChangeLog 1190
+MD5 2768fa4e04b9b077d62d944f4cda8b15 ChangeLog 1589
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 5b2b18d97334608f6a95735d2bf994c3 solfege-2.0.4.ebuild 2393
-MD5 57ac1d95098acbea35a2b2e46c8e627e solfege-2.0.5.ebuild 2328
-MD5 a935b63a600c678e02199cb3e642981f files/digest-solfege-2.0.4 65
+MD5 a6b1e98cdaeff78509ea3f586442cae1 solfege-2.0.5.ebuild 2330
+MD5 c11e0b9d885b71a9a12e0ee8ebb74641 solfege-2.0.6.ebuild 2338
 MD5 4feeb666e6f701c7bb9f30077b9a75bd files/digest-solfege-2.0.5 65
+MD5 1f6fe78cd9b8f64575cfa82ebbb4820f files/digest-solfege-2.0.6 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZOriArHZZzCEUG0RAsx4AJ9ZOt/N3gj0DlIfqw0WDSsbOKfGSwCggxJa
-SgTTv5yrizjsTUYZPwbFcVc=
-=N22j
+iD8DBQFBnnoTArHZZzCEUG0RAoXlAJ9U59FLs2iWFXRyIAGhcWmKlk0a2QCeLBg0
+UKWbeyAYiqNwaroKSA5J2X8=
+=TE4w
 -----END PGP SIGNATURE-----
