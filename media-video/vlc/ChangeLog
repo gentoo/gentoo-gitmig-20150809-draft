@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.18 2003/03/14 07:14:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.19 2003/03/28 23:00:23 mholzer Exp $
+
+*vlc-0.5.2-r1 (29 Mar 2003)
+
+  29 Mar 2003; Martin Holzer <mholzer@gentoo.org> vlc-0.5.2-r1.ebuild:
+  Added some IUSE vars and option flags. Closes #18321.
 
 *vlc-0.5.2 (13 Mar 2003)
 
