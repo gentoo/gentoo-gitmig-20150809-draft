@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.470 2004/07/08 19:09:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.471 2004/07/08 21:24:29 pythonhead Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -24,6 +24,7 @@ app-crypt/johntheripper:skey - Enable S/Key (Single use password) authentication
 app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature
+app-editors/scite:lua - Enable Lua scripting support
 app-editors/vim:minimal - Build vim with minimal features, resulting in a ~430K binary
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
