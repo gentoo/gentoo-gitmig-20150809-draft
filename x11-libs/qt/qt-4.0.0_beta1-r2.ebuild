@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r2.ebuild,v 1.3 2005/01/28 01:29:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r2.ebuild,v 1.4 2005/01/30 02:53:41 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -137,6 +137,7 @@ src_install() {
 
 	# sub-tutorial-install_subtargets-ordered
 
+   dodir /etc/env.d
 	dodir ${QTDATADIR}/mkspecs/linux-g++
 	dodir ${QTDATADIR}/mkspecs/features/unix
 
