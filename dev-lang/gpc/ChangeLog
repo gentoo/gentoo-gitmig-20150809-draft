@@ -1,9 +1,9 @@
 # ChangeLog for dev-lang/gpc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.10 2004/06/15 01:26:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.11 2004/06/15 02:08:36 george Exp $
 
   14 Jun 2004; George Shapovalov <george@gentoo.org> gpc-20040516.ebuild :
-  parallel build fails, fixed to use MAKEOPTS="-j1"
+  parallel build fails, fixed to use "emake -j1"
 
   12 Jun 2004; George Shapovalov <george@gentoo.org> gpc-20040516.ebuild :
   new beta out (this package does not have releases at all :), even betas are one a few years)
