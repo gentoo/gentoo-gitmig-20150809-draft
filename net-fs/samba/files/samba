@@ -19,7 +19,7 @@ start() {
 }
 
 stop() {
-	ebegin "Starting $SERVICE"
+	ebegin "Stopping $SERVICE"
 	start-stop-daemon --stop --quiet --exec $EXE0 
 	result=$?
 	start-stop-daemon --stop --quiet --exec $EXE1 
