@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4.ebuild,v 1.3 2003/09/06 22:19:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4.ebuild,v 1.4 2004/04/26 15:59:20 agriffis Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 
 	make || die "make failed"
 	make data || die "make data failed"
