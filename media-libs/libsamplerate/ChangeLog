@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsamplerate
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.8 2003/11/04 23:31:27 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.9 2004/02/17 20:28:05 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> libsamplerate-0.0.15.ebuild:
+  add ~alpha and ~ia64
 
 *libsamplerate-0.0.15 (04 Nov 2003)
 
