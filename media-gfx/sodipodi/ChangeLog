@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/sodipodi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/ChangeLog,v 1.15 2003/06/21 11:10:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/ChangeLog,v 1.16 2003/09/21 17:42:09 foser Exp $
 
 *sodipodi-0.32 (21 Jun 2003)
+
+  21 Sep 2003; foser <foser@gentoo.org> sodipodi-0.32.ebuild :
+  Fix libgnomeprint switch & dep (#28771)
 
   21 Jun 2003; Alastair Tse <liquidx@gentoo.org> sodipodi-0.32.ebuild:
   version bump and cleanup
