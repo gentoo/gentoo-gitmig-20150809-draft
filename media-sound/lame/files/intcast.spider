@@ -1,0 +1,12 @@
+diff -urN lame-3.95.1/libmp3lame/takehiro.c lame-3.95.1-temp/libmp3lame/takehiro.c
+--- lame-3.95.1/libmp3lame/takehiro.c	2004-01-12 07:02:03.000000000 -0600
++++ lame-3.95.1-temp/libmp3lame/takehiro.c	2004-01-21 12:49:08.545591944 -0600
+@@ -1394,7 +1394,7 @@
+ {
+     int i;
+ 
+-    gfc->choose_table = choose_table_nonMMX;
++    gfc->choose_table = (int)choose_table_nonMMX;
+     
+ #ifdef MMX_choose_table
+     if (gfc->CPU_features.MMX) {

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.25 2004/01/21 10:31:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.26 2004/01/21 18:58:52 raker Exp $
+
+  21 Jan 2004; Nick Hadaway <raker@gentoo.org> lame-3.95.1.ebuild:
+  Added the mlame binary as noted on bug #35978 and added spider's
+  tcc compiler fix as seen on bug #31191.
 
   21 Jan 2004; Nick Hadaway <raker@gentoo.org> lame-3.95.1.ebuild:
   Changed emake to make as it seems to be a little finicky with 

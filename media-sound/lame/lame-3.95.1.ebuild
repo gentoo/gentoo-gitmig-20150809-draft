@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.95.1.ebuild,v 1.3 2004/01/21 10:38:21 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.95.1.ebuild,v 1.4 2004/01/21 18:58:52 raker Exp $
 
 inherit flag-o-matic gcc
 
@@ -17,6 +17,12 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/intcast.spider
+}
 
 src_compile() {
 	# take out -fomit-frame-pointer from CFLAGS if k6-2
@@ -58,4 +64,6 @@ src_install() {
 	dodoc API ChangeLog HACKING PRESETS.draft README* \
 		STYLEGUIDE TODO USAGE
 	dohtml Dll/LameDLLInterface.htm
+
+	cp ${S}/misc/mlame ${D}usr/bin
 }
