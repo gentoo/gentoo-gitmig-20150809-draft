@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.100 2005/02/08 21:40:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.101 2005/03/08 20:46:12 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -486,7 +486,7 @@ src_install() {
 		# default vimrc is installed by vim-core since it applies to
 		# both vim and gvim
 		insinto /etc/vim/
-		doins ${FILESDIR}/vimrc
+		newins ${FILESDIR}/vimrc${VIMRC_FILE_SUFFIX} vimrc
 
 		if use livecd ; then
 			# To save space, install only a subset of the files if we're on a
@@ -524,7 +524,7 @@ src_install() {
 			dosym gvim /usr/bin/rgview
 		fi
 		insinto /etc/vim
-		doins ${FILESDIR}/gvimrc
+		newins ${FILESDIR}/gvimrc${GVIMRC_FILE_SUFFIX} gvimrc
 
 		# as of 6.3-r1, we install a desktop entry. bug #44633, and bug #68622
 		# for the nicer updated version.
