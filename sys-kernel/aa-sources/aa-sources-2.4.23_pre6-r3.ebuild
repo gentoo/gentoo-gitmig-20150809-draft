@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23_pre6-r3.ebuild,v 1.2 2003/11/09 21:03:15 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23_pre6-r3.ebuild,v 1.3 2003/12/02 20:11:19 iggy Exp $
 
 IUSE="build"
 
@@ -43,7 +43,7 @@ fi
 
 
 DESCRIPTION="Full sources for Andrea Arcangeli's Linux kernel"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="${KV}"
 
 src_unpack() {
