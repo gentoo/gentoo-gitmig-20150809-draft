@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r5.ebuild,v 1.1 2001/09/08 09:19:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r5.ebuild,v 1.2 2001/09/30 00:55:57 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console-based mouse driver"
@@ -36,7 +36,9 @@ src_compile() {
 src_install() {
 	make prefix=${D}/usr install || die
 	chmod 755 ${D}/usr/lib/libgpm.so.1.18.0
-	dodoc Announce COPYING ChangeLog FAQ MANIFEST README.*
+	dodoc Announce COPYING ChangeLog FAQ MANIFEST README*
+	doman doc/gpm.8 doc/mev.1 doc/gpm-root.1 doc/gpm-types.7 doc/mouse-test.1
+	doinfo doc/gpm.info
 	docinto txt
 	dodoc doc/gpmdoc.txt
 
