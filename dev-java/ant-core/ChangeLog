@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.10 2005/01/01 18:07:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.11 2005/01/26 20:41:09 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> ant-core-1.6.2.ebuild:
+  Stable on ppc64
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> ant-core-1.6.2.ebuild:
   added ~ppc64 to KEYWORDS
