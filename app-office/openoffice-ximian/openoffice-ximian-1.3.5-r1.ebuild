@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.5-r1.ebuild,v 1.8 2005/01/01 15:39:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.5-r1.ebuild,v 1.9 2005/01/29 12:21:07 suka Exp $
 
 # Notes:
 #
@@ -87,6 +87,8 @@ DEPEND="${RDEPEND}
 	!dev-util/dmake
 	java? ( >=virtual/jdk-1.4.1 )
 	!java? ( dev-libs/libxslt )"
+
+PROVIDE="virtual/ooo"
 
 pkg_setup() {
 
