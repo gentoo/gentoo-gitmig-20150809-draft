@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.8.ebuild,v 1.3 2004/11/15 18:23:37 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.8.ebuild,v 1.4 2004/11/20 11:25:12 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -20,6 +20,11 @@ DEPEND="virtual/linux-sources
 
 pkg_setup() {
 	local DIE=0
+
+	if kernel-mod_is_2_4_kernel
+	then
+		die "${P} does not support kernel 2.4.x"
+	fi
 
 	if kernel-mod_configoption_present ACPI_IBM
 	then
