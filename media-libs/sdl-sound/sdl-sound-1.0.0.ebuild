@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.0.ebuild,v 1.5 2003/09/06 23:59:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.0.ebuild,v 1.6 2003/11/04 08:21:42 vapier Exp $
 
 IUSE="oggvorbis"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://icculus.org/SDL_sound/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc amd64"
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND=">=media-libs/libsdl-1.2.5
 	>=media-libs/smpeg-0.4.4-r1
