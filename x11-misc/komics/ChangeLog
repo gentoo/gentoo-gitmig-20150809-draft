@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/komics
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/ChangeLog,v 1.12 2004/07/06 11:46:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/ChangeLog,v 1.13 2004/08/03 18:15:33 centic Exp $
+
+  03 Aug 2004; Dominik Stadler <centic@gentoo.org> komics-1.0.ebuild,
+  komics-1.2.ebuild:
+  Remove unnecessary RDEPEND=$DEPEND
 
   06 Jul 2004; Carsten Lohrke <carlo@gentoo.org> komics-1.0.ebuild,
   komics-1.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/komics-1.2.ebuild,v 1.8 2004/07/06 11:46:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/komics-1.2.ebuild,v 1.9 2004/08/03 18:15:33 centic Exp $
 
 inherit kde
 
@@ -19,7 +19,6 @@ DEPEND="dev-perl/HTML-Parser
 	dev-perl/libwww-perl
 	dev-perl/URI
 	dev-perl/HTML-Tagset"
-RDEPEND=${DEPEND}
 need-kde 3
 
 src_unpack() {
