@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/net-misc/scanlogd/files/scanlogd.rc,v1.1 2002/02/12  azarah Exp
+
+depend() {
+	need net
+	use logger
+}
+
+start() {
+	ebegin "Starting scanlogd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/scanlogd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping scanlogd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/scanlogd
+	eend $?
+}
