@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.25 2005/01/28 01:31:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.26 2005/01/31 18:09:12 gustavoz Exp $
+
+  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  iproute2-2.6.10.20050112-r1.ebuild:
+  Stable on sparc
 
 *iproute2-2.6.10.20050112-r1 (27 Jan 2005)
 
