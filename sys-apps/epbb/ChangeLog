@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/epbb
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epbb/ChangeLog,v 1.1 2004/01/25 04:19:25 vapier Exp $
+
+*epbb-0.0.5.* (24 Jan 2004)
+
+  24 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial ebuild for epbb.
