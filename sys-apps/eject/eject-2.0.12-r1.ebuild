@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.12-r1.ebuild,v 1.4 2003/07/04 21:58:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.12-r1.ebuild,v 1.5 2003/09/07 02:29:07 msterret Exp $
 
 inherit eutils
 
@@ -36,6 +36,6 @@ src_install() {
 	make DESTDIR=${D} install-man1 || die
 	make DESTDIR=${D} install-man || die
 
-	dodoc ChangeLog COPYING README PORTING TODO 
+	dodoc ChangeLog COPYING README PORTING TODO
 	dodoc AUTHORS NEWS PROBLEMS
 }

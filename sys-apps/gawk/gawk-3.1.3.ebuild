@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3.ebuild,v 1.5 2003/07/23 17:12:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3.ebuild,v 1.6 2003/09/07 02:26:17 msterret Exp $
 
 IUSE="nls build"
 
@@ -71,7 +71,7 @@ src_install() {
 	then
 		mv -f ${D}/bin/gawk ${D}/bin/gawk-${PV}
 	fi
-	
+
 	rm -f ${D}/bin/{awk,gawk}
 	dosym gawk-${PV} /bin/awk
 	dosym gawk-${PV} /bin/gawk
@@ -90,8 +90,8 @@ src_install() {
 			doins ${x}
 		fi
 	done
-	
-	if [ -z "`use build`" ] 
+
+	if [ -z "`use build`" ]
 	then
 		cd ${S}
 		dosym gawk.1.gz /usr/share/man/man1/awk.1.gz

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.2-r3.ebuild,v 1.12 2003/07/22 14:59:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.2-r3.ebuild,v 1.13 2003/09/07 02:26:17 msterret Exp $
 
 IUSE="nls build"
 
@@ -28,7 +28,7 @@ src_unpack() {
 	# Special files like those in /proc, report themselves as regular files
 	# of length 0, when in fact they have data in them if you try to read them.
 	# The new record-reading code wasn't quite smart enough to deal with such
-	# a bizarre case.  The following patch fixes the problem, thanks to 
+	# a bizarre case.  The following patch fixes the problem, thanks to
 	# Arnold D. Robbins (Maintainer of gawk).
 	epatch ${FILESDIR}/${P}-input-filesize.patch
 
@@ -78,7 +78,7 @@ src_install() {
 	then
 		mv -f ${D}/bin/gawk ${D}/bin/gawk-${PV}
 	fi
-	
+
 	rm -f ${D}/bin/{awk,gawk}
 	dosym gawk-${PV} /bin/awk
 	dosym gawk-${PV} /bin/gawk
@@ -97,8 +97,8 @@ src_install() {
 			doins ${x}
 		fi
 	done
-	
-	if [ -z "`use build`" ] 
+
+	if [ -z "`use build`" ]
 	then
 		cd ${S}
 		dosym gawk.1.gz /usr/share/man/man1/awk.1.gz

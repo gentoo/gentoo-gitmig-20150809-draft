@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r1.ebuild,v 1.10 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r1.ebuild,v 1.11 2003/09/07 02:28:11 msterret Exp $
 
 IUSE="nls build"
 
@@ -43,10 +43,10 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	[ -z "`use nls`" ] && myconf="--disable-nls"
-	
+
 	econf --build=${CHOST} \
 		${myconf} || die
-		
+
 	emake || die
 }
 
@@ -56,7 +56,7 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
 		install || die
-		
+
 	if [ -z "`use build`" ]
 	then
 		dodoc COPYING ChangeLog NEWS README

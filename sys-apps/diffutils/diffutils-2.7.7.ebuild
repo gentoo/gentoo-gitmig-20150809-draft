@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.7.7.ebuild,v 1.14 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.7.7.ebuild,v 1.15 2003/09/07 02:28:11 msterret Exp $
 
 IUSE="nls build"
 
@@ -31,7 +31,7 @@ src_compile() {
 	./configure --build=${CHOST} \
 		--prefix=/usr \
 		${myconf} || die
-		
+
 	if [ "`use build`" ]
 	then
 		#disable texinfo building so we can remove the dep
@@ -54,7 +54,7 @@ src_install() {
 	make prefix=${D}/usr \
 		infodir=${D}/usr/share/info \
 		install || die
-		
+
 	if [ -z "`use build`" ]
 	then
 		dodoc COPYING ChangeLog NEWS README

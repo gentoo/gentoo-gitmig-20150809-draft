@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.8 2003/07/16 13:45:00 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.9 2003/09/07 02:23:45 msterret Exp $
 
 
 IUSE="nls build"
@@ -23,11 +23,11 @@ RDEPEND="virtual/glibc"
 src_unpack() {
         unpack ${A}
         echo ${PROFILE_ARCH}
-        if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc" ] 
+        if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc" ]
         then
                 cd ${S}
                 epatch ${FILESDIR}/gentoo-sparc32-dfa.patch || die
-        fi      
+        fi
 }
 
 src_compile() {
@@ -37,7 +37,7 @@ src_compile() {
 
 	local myconf=""
 	use nls || myconf="--disable-nls"
-	
+
 	econf --bindir=/bin \
 		--disable-perl-regexp \
 		${myconf} || die "econf failed"
@@ -47,7 +47,7 @@ src_compile() {
 
 src_install() {
 	einstall bindir=${D}/bin || die "einstall failed"
-		
+
 	if use build; then
 		rm -rf ${D}/usr/share
 	else

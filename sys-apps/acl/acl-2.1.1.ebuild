@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.1.1.ebuild,v 1.3 2003/06/21 21:19:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.1.1.ebuild,v 1.4 2003/09/07 02:29:41 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -18,23 +18,23 @@ DEPEND="sys-apps/attr"
 src_compile() {
 	OPTIMIZER="${CFLAGS}"
 	DEBUG=-DNDEBUG
-	
+
 	autoconf || die
-	
+
 	./configure --prefix=/usr --libexecdir=/lib || die
-	
+
 	cp include/builddefs include/builddefs.orig
 	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
 		-e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" \
 		-e 's:-O1::' \
 		include/builddefs.orig > include/builddefs || die
-	
+
 	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} install install-dev install-lib || die
-	
+
 	dosym /usr/lib/libacl.so /lib/libacl.so
 	dosym /lib/libacl.la /usr/lib/libacl.la
 	dosym /lib/libacl.a /usr/lib/libacl.a

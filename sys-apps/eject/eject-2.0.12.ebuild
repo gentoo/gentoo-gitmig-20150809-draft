@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.12.ebuild,v 1.8 2003/07/16 13:40:36 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.12.ebuild,v 1.9 2003/09/07 02:29:07 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A command to eject a disc from the CD-ROM drive"
@@ -21,6 +21,6 @@ src_install() {
 	make DESTDIR=${D} install-man1 || die
 	make DESTDIR=${D} install-man || die
 
-	dodoc ChangeLog COPYING README PORTING TODO 
+	dodoc ChangeLog COPYING README PORTING TODO
 	dodoc AUTHORS NEWS PROBLEMS
 }
