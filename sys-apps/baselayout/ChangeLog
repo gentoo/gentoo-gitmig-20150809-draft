@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.124 2004/03/17 09:16:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.125 2004/04/07 17:41:57 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.8.7 (07 Apr 2004)
+
+  07 Apr 2004; Aron Griffis <agriffis@gentoo.org> +baselayout-1.8.7.ebuild:
+  Update to rc-scripts-1.4.4 with net.eth0 fixes and sparc fixes
 
   17 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
   baselayout-1.8.6.13-r1.ebuild:

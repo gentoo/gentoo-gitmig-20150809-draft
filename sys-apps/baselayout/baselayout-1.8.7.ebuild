@@ -1,20 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.20 2004/04/07 17:41:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.7.ebuild,v 1.1 2004/04/07 17:41:57 agriffis Exp $
 
-# This ebuild needs to be merged "live".  You can't simply make a package
-# of it and merge it later.
+IUSE="bootstrap build livecd static selinux"
 
-IUSE="bootstrap build static"
-
-SV="1.4.3.8"
-SVREV="p1"
+SV="1.4.4"
+SVREV=
 # SysvInit version
 SVIV="2.84"
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
 S2="${WORKDIR}/sysvinit-${SVIV}/src"
-DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
+DESCRIPTION="Base layout for Gentoo Linux (incl. initscripts and sysvinit)"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
 	ftp://sunsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz
 	mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2"
@@ -22,23 +19,21 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc sparc alpha mips hppa"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~ppc64 ~s390"
 
 DEPEND="virtual/os-headers
-	>=sys-apps/portage-2.0.23"
-# We need at least portage-2.0.23 to handle these DEPEND's properly.
+	selinux? ( sys-libs/libselinux )"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
 RDEPEND="${DEPEND}
-	!build? ( !bootstrap? ( >=sys-apps/gawk-3.1.1-r2 ) )"
+	!build? ( !bootstrap? ( >=sys-apps/gawk-3.1.1-r2 ) )
+	!build? ( !bootstrap? ( >=sys-apps/util-linux-2.11z-r6 ) )"
 
 src_unpack() {
 
 	unpack ${A}
-
-	use static && export LDFLAGS="-static"
 
 	# Fix CFLAGS for sysvinit stuff
 	cd ${S2}
@@ -52,6 +47,8 @@ src_unpack() {
 		sed -e 's:PROGS\t= init halt shutdown killall5 runlevel sulogin:PROGS\t= init halt shutdown killall5 runlevel:g' \
 			Makefile.orig > Makefile || die
 	fi
+	# Selinux
+	use selinux && epatch ${FILESDIR}/sysvinit-${SVIV}-selinux.patch
 
 	cd ${S}/etc
 
@@ -72,23 +69,11 @@ src_unpack() {
 			rm -f inittab.orig
 			;;
 	esac
-
-	if [ -z "`use build`" -a -z "`use bootstrap`" ]
-	then
-		# Sanity check to see if has version works
-		if has_version '>=sys-apps/baselayout-1.8' &> /dev/null
-		then
-			einfo "Checking if we need to tweak CONFIG_PROTECT_MASK"
-			# Make sure user get things updated first time he merge 1.8.6 ...
-			if ! has_version '>=sys-apps/baselayout-1.8.6' &> /dev/null
-			then
-				touch "${WORKDIR}/update_init_d"
-			fi
-		fi
-	fi
 }
 
 src_compile() {
+
+	use static && export LDFLAGS="-static"
 
 	echo "${ROOT}" > ${T}/ROOT
 
@@ -104,26 +89,6 @@ src_compile() {
 		einfo "Building sysvinit..."
 		emake CC="${CC:-gcc}" LD="${CC:-gcc}" \
 			LDFLAGS="${LDFLAGS}" || die "problem compiling sysvinit"
-
-		if [ -z "`use bootstrap`" ]
-		then
-			# We let gawk now install filefuncs.so, and that is as a symlink to a
-			# versioned .so ...
-			if [ -f /usr/include/awk/awk.h -a ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
-			then
-				# Build gawk module
-#				cd ${S}/src/filefuncs
-#				einfo "Building awk module..."
-#				make CC="${CC:-gcc}" LD="${CC:-gcc}" || {
-#					eerror "Failed to build gawk module.  Make sure you have"
-#					eerror "sys-apps/gawk-3.1.1-r1 or later installed"
-#					die "problem compiling gawk module"
-#				}
-
-				eerror "Please install sys-apps/gawk-3.1.1-r2 or later!"
-				die "gawk too old"
-			fi
-		fi
 	fi
 }
 
@@ -133,9 +98,13 @@ defaltmerge() {
 	altmerge=0
 	# Special ${T}/ROOT hack because ROOT gets automatically unset during src_install()
 	# (because it conflicts with some makefiles)
-	local ROOT=""
-	ROOT="`cat ${T}/ROOT`"
-	if [ -e ${ROOT}/dev/.devfsd ]
+	if [ -f "${T}/ROOT" ]
+	then
+#		local ROOT=""
+		ROOT="`cat "${T}/ROOT"`"
+	fi
+	einfo "ROOT=${ROOT}"
+	if [ -e "${ROOT}/dev/.devfsd" ]
 	then
 		# We're installing to a system that has devfs enabled; don't create device
 		# nodes.
@@ -157,18 +126,76 @@ keepdir_mount() {
 	do
 		doit=0
 
+		# Create a list so that we can try verify that they exists
+		# after install ...
+		echo "${Y}" >> "${T}/dirlist.txt"
+
 		for x in $(gawk '{print $2}' /proc/mounts)
 		do
 			[ "${x}" = "${y}" ] && doit=1
 		done
 
-		if [ "${doit}" -eq 0 ]
+		if [ "${doit}" -ne 1 ]
 		then
 			keepdir "${y}"
 		fi
 	done
 
 	return 0
+}
+
+create_dev_nodes() {
+
+	if [ -z "${DEST}" ]; then
+		DEST=${D}
+	fi
+
+	export PATH="${DEST}/sbin:${PATH}"
+
+	case ${ARCH} in
+		amd64)
+			# amd64 must use generic-i386 because amd64/x86_64 does not have
+			# a generic option at this time, and the default 'generic' ends
+			# up erroring out, because MAKEDEV internally doesn't know what
+			# to use
+			einfo "Using generic-i386 to make amd64 device nodes..."
+			${DEST}/sbin/MAKEDEV generic-i386
+			;;
+		x86)
+			einfo "Using generic-i386 to make device nodes..."
+			${DEST}/sbin/MAKEDEV generic-i386
+			;;
+		ppc)
+			einfo "Using generic-powerpc to make device nodes..."
+			${DEST}/sbin/MAKEDEV generic-powerpc
+			;;
+		ppc64)
+			einfo "Using generic-powerpc to make device nodes..."
+			${DEST}/sbin/MAKEDEV generic-powerpc
+			;;
+		sparc)
+			einfo "Using generic-sparc to make device nodes..."
+			${DEST}/sbin/MAKEDEV generic-sparc
+			;;
+		mips)
+			einfo "Using generic-mips to make device nodes..."
+			${DEST}/sbin/MAKEDEV generic-mips
+			;;
+		arm)
+			einfo "Using generic-arm to make device nodes..."
+			${DEST}/sbin/MAKEDEV generic-arm
+			;;
+		hppa)
+			einfo "Using generic-hppa to make device nodes..."
+			${DEST}/sbin/MAKEDEV generic-hppa
+			;;
+		*)
+			einfo "Using generic to make device nodes..."
+			${DEST}/sbin/MAKEDEV generic
+			;;
+	esac
+
+	${DEST}/sbin/MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
 }
 
 src_install() {
@@ -189,7 +216,7 @@ src_install() {
 
 	# Symlinks so that LSB compliant apps work
 	# /lib64 is especially required since its the default place for ld.so
-	if [ "${ARCH}" = "amd64" ]
+	if [ "${ARCH}" = "amd64" -o "${ARCH}" = "ppc64" ]
 	then
 		dosym lib /lib64
 		dosym lib /usr/lib64
@@ -235,24 +262,24 @@ src_install() {
 
 	# The .keep file messes up Portage when looking in /var/db/pkg
 	dodir /var/db/pkg
-	chmod 1777 ${D}/var/tmp
+	fperms 1777 /var/tmp
 	keepdir /root
 
 	# /proc is very likely mounted right now so a keepdir will fail on merge
 	dodir /proc
 
-	chmod go-rx ${D}/root
+	fperms go-rx /root
 	keepdir /tmp /var/lock
-	chmod 1777 ${D}/tmp
-	chmod 1777 ${D}/var/tmp
-	chown root:uucp ${D}/var/lock
-	chmod 775 ${D}/var/lock
+	fperms 1777 /tmp
+	fperms 1777 /var/tmp
+	fowners root:uucp /var/lock
+	fperms 775 /var/lock
 	insopts -m0644
 
 	keepdir /opt /etc/opt
 
 	insinto /etc
-	ln -s ../proc/filesystems ${D}/etc/filesystems
+	dosym  ../proc/filesystems /etc/filesystems
 	for foo in hourly daily weekly monthly
 	do
 		keepdir /etc/cron.${foo}
@@ -260,27 +287,36 @@ src_install() {
 	for foo in ${S}/etc/*
 	do
 		# Install files, not dirs
-		[ -f ${foo} ] && doins ${foo}
+		[ -f "${foo}" ] && doins ${foo}
 	done
-	chmod go-rwx ${D}/etc/shadow
+	fperms go-rwx /etc/shadow
+	# We do not want to overwrite the user's settings during bootstrap ...
+	[ -f "${ROOT}/etc/hosts" ] && rm -f ${D}/etc/hosts
+
+	keepdir /mnt
 	keepdir_mount /mnt/floppy /mnt/cdrom
-	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
+	fperms go-rwx /mnt/floppy /mnt/cdrom
 
 	into /
 	dosbin ${S}/sbin/MAKEDEV
 	dosym ../../sbin/MAKEDEV /usr/sbin/MAKEDEV
-	keepdir /lib/dev-state
+	keepdir /lib/dev-state /lib/udev-state
 	if [ "${altmerge}" -eq "1" ]
 	then
 		# rootfs and devfs
-		dosym ../../sbin/MAKEDEV /lib/dev-state/MAKEDEV
+		#dosym ../../sbin/MAKEDEV /lib/dev-state/MAKEDEV
 		# This is not needed anymore...
 		#keepdir /lib/dev-state/pts /lib/dev-state/shm
+
+		# Commented 07 Apr 2004 by agriffis... Make /dev in
+		# pkg_postinst instead to cope with portage borking when
+		# merging onto a mounted filesystem
+		#keepdir_mount /dev /dev/shm # /dev/pts
+		true
 	else
 		# Normal
-		keepdir /dev
-		keepdir /dev/pts /dev/shm
-		dosym ../sbin/MAKEDEV /dev/MAKEDEV
+		keepdir_mount /dev /dev/pts /dev/shm
+		#dosym ../sbin/MAKEDEV /dev/MAKEDEV
 	fi
 
 	cd ${S}/sbin
@@ -295,14 +331,17 @@ src_install() {
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking
 	dosbin runscript.sh functions.sh
+	use livecd && dosbin livecd-functions.sh
 	exeinto /lib/rcscripts/sh
 	doexe rc-services.sh rc-daemon.sh rc-help.sh
+	cd ${S}/bin
+	dobin rc-status
 
 	dodir /etc/init.d
 	exeinto /etc/init.d
 	for foo in ${S}/init.d/*
 	do
-		[ -f ${foo} ] && doexe ${foo}
+		[ -f "${foo}" ] && doexe ${foo}
 	done
 
 	cd ${S}/sbin
@@ -320,14 +359,8 @@ src_install() {
 		insinto /lib/rcscripts/awk
 		for foo in ${S}/src/awk/*.awk
 		do
-			[ -f ${foo} ] && doins ${foo}
+			[ -f "${foo}" ] && doins ${foo}
 		done
-
-#		if [ ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
-#		then
-#			exeinto /lib/rcscripts
-#			doexe ${S}/src/filefuncs/filefuncs.so
-#		fi
 	fi
 
 	# Compat symlinks (some stuff have hardcoded paths)
@@ -352,12 +385,14 @@ src_install() {
 		dosym halt /sbin/reboot
 		dosym halt /sbin/poweroff
 		dosym last /bin/lastb
-
+		# SysvInit include
+		insinto /usr/include
+		doins initreq.h
 		# SysvInit docs
 		cd ${S2}/../
 		for foo in ${S2}/../man/*.[1-9]
 		do
-			[ -f ${foo} ] && doman ${foo}
+			[ -f "${foo}" ] && doman ${foo}
 		done
 		docinto sysvinit-${SVIV}
 		dodoc COPYRIGHT README doc/*
@@ -365,7 +400,7 @@ src_install() {
 
 	for foo in ${S}/man/*
 	do
-		[ -f ${foo} ] && doman ${foo}
+		[ -f "${foo}" ] && doman ${foo}
 	done
 	docinto /
 	dodoc ${FILESDIR}/copyright
@@ -382,7 +417,7 @@ src_install() {
 	insinto /etc/modules.autoload.d
 	for foo in in ${S}/etc/modules.autoload.d/*
 	do
-		[ -f ${foo} ] && doins ${foo}
+		[ -f "${foo}" ] && doins ${foo}
 	done
 
 	keepdir /etc/modules.d
@@ -393,7 +428,7 @@ src_install() {
 	insinto /etc/conf.d
 	for foo in ${S}/etc/conf.d/*
 	do
-		[ -f ${foo} ] && doins ${foo}
+		[ -f "${foo}" ] && doins ${foo}
 	done
 
 	# Now ships with net-dialup/ppp ...
@@ -403,10 +438,29 @@ src_install() {
 	insinto /etc/skel
 	for foo in $(find ${S}/etc/skel -type f -maxdepth 1)
 	do
-		[ -f ${foo} ] && doins ${foo}
+		[ -f "${foo}" ] && doins ${foo}
 	done
 
 	keepdir ${svcdir} >/dev/null 2>&1
+
+	if [ -n "$(use build)" -o -n "$(use bootstrap)" -o \
+	     ! -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
+	then
+		# Ok, create temp device nodes
+		mkdir -p "${T}/udev-$$"
+		cd "${T}/udev-$$"
+		echo
+		einfo "Making device nodes (this could take a minute or so...)"
+		create_dev_nodes
+		# Now create tarball that can also be used for udev
+		tar -jclpf "${T}/devices-$$.tar.bz2" *
+		insinto /lib/udev-state
+		newins "${T}/devices-$$.tar.bz2" devices.tar.bz2
+	fi
+
+	# Put this where we can get it again ...
+	insinto /usr/share/baselayout
+	doins "${T}/dirlist.txt"
 
 	# Skip this if we are merging to ROOT
 	[ "${ROOT}" = "/" ] && return 0
@@ -417,7 +471,7 @@ src_install() {
 		keepdir /etc/runlevels/${foo}
 		for bar in $(cat ${S}/rc-lists/${foo})
 		do
-			[ -e ${S}/init.d/${bar} ] && \
+			[ -e "${S}/init.d/${bar}" ] && \
 				dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
 		done
 	done
@@ -425,33 +479,6 @@ src_install() {
 }
 
 pkg_preinst() {
-	# Make sure symlinks of these get installed.
-	if [ -e ${ROOT}/etc/init.d/depscan.sh ] && \
-	   [ ! -L ${ROOT}/etc/init.d/depscan.sh ]
-	then
-		rm -f ${ROOT}/etc/init.d/depscan.sh
-	fi
-	if [ -e ${ROOT}/etc/init.d/runscript.sh ] && \
-	   [ ! -L ${ROOT}/etc/init.d/runscript.sh ]
-	then
-		rm -f ${ROOT}/etc/init.d/runscript.sh
-	fi
-	if [ -e ${ROOT}/etc/init.d/functions.sh ] && \
-	   [ ! -L ${ROOT}/etc/init.d/functions.sh ]
-	then
-		rm -f ${ROOT}/etc/init.d/functions.sh
-	fi
-	if [ -e ${ROOT}/etc/init.d/rc-help.sh ]
-	then
-		rm -f ${ROOT}/etc/init.d/rc-help.sh
-	fi
-
-	# This one was borked, so make sure fixed one gets installed.
-	if [ -L ${ROOT}/usr/lib/X11 ]
-	then
-		rm -f ${ROOT}/usr/lib/X11
-	fi
-
 	if [ -f ${ROOT}/etc/modules.autoload -a ! -d ${ROOT}/etc/modules.autoload.d ]
 	then
 		mkdir -p ${ROOT}/etc/modules.autoload.d
@@ -460,85 +487,59 @@ pkg_preinst() {
 		ln -snf modules.autoload.d/kernel-2.4 ${ROOT}/etc/modules.autoload
 	fi
 
-	# Make sure user get things updated first time he merge 1.8.6 ...
-	if [ -f "${WORKDIR}/update_init_d" ]
+	if [ -f "${ROOT}/lib/udev-state/devices.tar.bz2" -a -e "${ROOT}/dev/.udev" ]
 	then
-		# Update CONFIG_PROTECT_MASK to exclude /etc/init.d from
-		# CONFIG_PROTECT ...
-		ewarn "Changing CONFIG_PROTECT_MASK to ensure critical files are updated ..."
-		echo "CONFIG_PROTECT_MASK=\"/etc/init.d\"" \
-			> ${ROOT}/etc/env.d/99foo
-		env-update &> /dev/null
-		export CONFIG_PROTECT_MASK="${CONFIG_PROTECT_MASK}:/etc/init.d"
-
-		if [ -d "${ROOT}/etc/init.d" ]
-		then
-			# Backup /etc/init.d if it exists ...
-			einfo "Backing up /etc/init.d ..."
-			cp -af "${ROOT}/etc/init.d" "${ROOT}/etc/init_d.old"
-		fi
+		mv -f "${ROOT}/lib/udev-state/devices.tar.bz2" \
+			"${ROOT}/lib/udev-state/devices.tar.bz2.old"
 	fi
 }
 
 pkg_postinst() {
+	local x=
 
-	echo
-	# Doing device node creation in pkg_postinst() now so they aren't recorded
-	# in CONTENTS.  Latest CVS-only version of Portage doesn't record device
-	# nodes in CONTENTS at all.
+	# Make sure all needed dirs exist ...
+	for x in $(cat "${ROOT}/usr/share/baselayout/dirlist.txt")
+	do
+		[ ! -d "${x}" ] && mkdir -m0666 -p "${x}" &>/dev/null
+	done
+
+	# Create /dev and /dev/shm (is it okay to leave perms default?)
+	mkdir -p ${ROOT}/dev ${ROOT}/dev/shm
+
+	if [ -f "${ROOT}/lib/udev-state/devices.tar.bz2.old" ]
+	then
+		# Rather use our current device tarball ...
+		mv -f "${ROOT}/lib/udev-state/devices.tar.bz2.old" \
+			"${ROOT}/lib/udev-state/devices.tar.bz2"
+	else
+		# Make sure our tarball do not get removed ...
+		touch -m "${ROOT}/lib/udev-state/devices.tar.bz2"
+	fi
+
 	defaltmerge
 	# We dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
-	if [ "${altmerge}" -eq "0" -a ! -e ${ROOT}/dev/.devfsd ]
+	# ($altmerge will be '1' if '${ROOT}/dev/.devfsd' exists ...)
+	if [ "${altmerge}" -eq "0" -a ! -e "${ROOT}/dev/.udev" -a \
+	     -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
 	then
-		cd ${ROOT}/dev
-		# These devices are also needed by many people and should be included
-		einfo "Making device nodes (this could take a minute or so...)"
-
-		case ${ARCH} in
-			amd64)
-				einfo "Using generic-i386 to make amd64 device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-i386
-				;;
-			x86)
-				einfo "Using generic-i386 to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-i386
-				;;
-			ppc)
-				einfo "Using generic-powerpc to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-powerpc
-				;;
-			sparc)
-				einfo "Using generic-sparc to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-sparc
-				;;
-			mips)
-				einfo "Using generic-mips to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-mips
-				;;
-			arm)
-				einfo "Using generic-arm to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-arm
-				;;
-			hppa)
-				einfo "Using generic-hppa to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-hppa
-				;;
-			*)
-				einfo "Using generic to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic
-				;;
-		esac
-
-		${ROOT}/sbin/MAKEDEV sg
-		${ROOT}/sbin/MAKEDEV scd
-		${ROOT}/sbin/MAKEDEV rtc
-		${ROOT}/sbin/MAKEDEV audio
-		${ROOT}/sbin/MAKEDEV hde
-		${ROOT}/sbin/MAKEDEV hdf
-		${ROOT}/sbin/MAKEDEV hdg
-		${ROOT}/sbin/MAKEDEV hdh
+		if [ -n "$(use build)" -o -n "$(use bootstrap)" ]
+		then
+			einfo "Populating /dev with device nodes..."
+			if [ -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
+			then
+				tar -jxpf "${ROOT}/lib/udev-state/devices.tar.bz2" \
+					-C "${ROOT}/dev" || die
+			else
+				# devices.tar.bz2 will not exist with binary packages ...
+				cd ${ROOT}/dev
+				DEST="${ROOT}" create_dev_nodes
+			fi
+		fi
 	fi
+
+	echo
+
 	# We create the /boot directory here so that /boot doesn't get deleted when a previous
 	# baselayout is unmerged with /boot unmounted.
 	install -d ${ROOT}/boot
@@ -547,11 +548,22 @@ pkg_postinst() {
 	then
 		ln -snf . ${ROOT}/boot/boot
 	fi
+	if [ -d "${ROOT}/dev" ]
+	then
+		ln -snf ../sbin/MAKEDEV ${ROOT}/dev/MAKEDEV
+	fi
 	# We create this here so we don't overwrite an existing /etc/hosts during bootstrap
 	if [ ! -e ${ROOT}/etc/hosts ]
 	then
 		cat << EOF >> ${ROOT}/etc/hosts
 127.0.0.1	localhost
+# IPV6 versions of localhost and co
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
 EOF
 	fi
 	if [ -L ${ROOT}/etc/mtab ]
@@ -565,7 +577,6 @@ EOF
 		fi
 	fi
 	# We should only install empty files if these files don't already exist.
-	local x=""
 	for x in log/lastlog run/utmp log/wtmp
 	do
 		[ -e ${ROOT}/var/${x} ] || touch ${ROOT}/var/${x}
@@ -575,64 +586,6 @@ EOF
 		chgrp utmp ${ROOT}/var/${x}
 		chmod 0664 ${ROOT}/var/${x}
 	done
-
-	# Make sure we get everything ready for $svcdir that moved to
-	# /var/lib/init.d ....
-	if [ -z "`use build`" -a -z "`use bootstrap`" ]
-	then
-		local oldsvcdir="${svcdir}"
-		local rcconfd="/etc/conf.d/rc"
-		local inittab="/etc/inittab"
-
-		# Remove old backup /etc/conf.d/rc files ...
-		rm -f ${ROOT}/etc/conf.d/._cfg????_rc
-		# Remove old backup /etc/inittab files ...
-		rm -f ${ROOT}/etc/._cfg????_inittab
-
-		# Replace and backup /etc/conf.d/rc (unless already in new format)
-		if [ -f "${ROOT}/${rcconfd}" ] && \
-		   ([ -z "$(grep '^svcmount' "${ROOT}/${rcconfd}")" ] || \
-		    [ -z "$(grep '^svcdir=\"\/var\/lib\/init.d\"' "${ROOT}/${rcconfd}")" ])
-			#svcdir="/var/lib/init.d"
-		then
-			ewarn "Backing up your old /etc/conf.d/rc, and replacing with new!"
-			ewarn "This is needed, as \$svcdir moved from /mnt/.init.d to"
-			ewarn "/var/state/init.d"
-			echo
-			cp -f "${ROOT}/${rcconfd}" "${ROOT}/${rcconfd}.old"
-			cp -f "${S}/${rcconfd}" "${ROOT}/${rcconfd}"
-		fi
-
-		# Replace and backup /etc/inittab (unless already in new format)
-		if [ -f "${ROOT}/${inittab}" ] && \
-		   [ -z "$(grep '^si::sysinit:/sbin/rc sysinit' "${ROOT}/${inittab}")" ]
-		then
-			ewarn "Backing up your old /etc/inittab, and replacing with new!"
-			ewarn "This is needed, as there were critical changes to /sbin/rc"
-			echo
-			cp -f "${ROOT}/${inittab}" "${ROOT}/${inittab}.old"
-			cp -f "${S}/${inittab}" "${ROOT}/${inittab}"
-		fi
-
-		source ${ROOT}/etc/conf.d/rc
-
-		# Handle the ${svcdir} that changed in location
-		if [ ! -d "${ROOT}/${svcdir}/started" ]
-		then
-			einfo "Trying to move SVCDIR to new location..."
-			echo
-			mkdir -p "${ROOT}/${svcdir}"
-#			mount -t tmpfs tmpfs ${ROOT}/${svcdir}
-			if [ -d "${ROOT}/${oldsvcdir}/started" ]
-			then
-				cp -ax "${ROOT}/${oldsvcdir}"/* "${ROOT}/${svcdir}"
-
-			elif [ -d "${ROOT}/mnt/.init.d/started" ]
-			then
-				cp -ax "${ROOT}/mnt/.init.d"/* "${ROOT}/${svcdir}"
-			fi
-		fi
-	fi
 
 	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
 	# new users do not update them properly.  thus remove all ._cfg files if
@@ -648,6 +601,7 @@ EOF
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
 	if [ "${ROOT}" = "/" -a -z "`use build`" -a -z "`use bootstrap`" ]
 	then
+		echo
 		# Do not return an error if this fails
 		/sbin/init U &>/dev/null || :
 
@@ -655,11 +609,29 @@ EOF
 
 		# We need to regenerate /etc/modules.conf, else it will fail at next
 		# boot.
+		einfo "Updating module dependencies..."
 		/sbin/modules-update force &> /dev/null
 
-	elif [ -f ${ROOT}/etc/modules.conf ]
+	elif [ -f "${ROOT}/etc/modules.conf" ]
 	then
 		rm -f ${ROOT}/etc/modules.conf
+	fi
+
+	# Enable shadow groups (we need ROOT=/ here, as grpconv only
+	# operate on / ...).
+	if [ "${ROOT}" = "/" -a \
+	     ! -f /etc/gshadow -a -x /usr/sbin/grpck -a -x /usr/sbin/grpconv ]
+	then
+		/usr/sbin/grpck -r &>/dev/null
+		if [ "$?" -eq 0 ]
+		then
+			/usr/sbin/grpconv
+		else
+			echo
+			ewarn "Running 'grpck' returned errors.  Please run it by hand, and then"
+			ewarn "run 'grpconv' afterwards!"
+			echo
+		fi
 	fi
 
 	# Simple Release version for testing of features that *should* be
@@ -673,34 +645,5 @@ EOF
 	echo
 	ewarn "  # etc-update"
 	echo
-
-	if [ -f "${ROOT}/etc/env.d/99foo" ]
-	then
-		echo
-		ewarn "Due to large changes from 1.8.5 to 1.8.6, all your files in /etc/init.d"
-		ewarn "have been updated automatically.  If you did make any changes directly"
-		ewarn "to your old files, they can be found in /etc/init_d.old.  Please just"
-		ewarn "make sure to edit the new files, and not just copy the old over!"
-		echo
-
-		rm -f "${ROOT}/etc/env.d/99foo"
-	fi
-
-	echo
-	einfo "Please note that /sbin/update-modules moved to /sbin/modules-update"
-	einfo "for consistency reasons."
-	echo
-
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	sleep 8
-}
-
-pkg_postrm() {
-
-	# Fix problematic links
-	ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
-	ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
-	ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
 }
 
