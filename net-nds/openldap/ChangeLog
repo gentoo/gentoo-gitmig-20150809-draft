@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.44 2003/07/13 16:48:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.45 2003/07/13 23:35:09 raker Exp $
+
+  13 Jul 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r4.ebuild,
+  openldap-2.1.22.ebuild:
+  Added chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp} to 
+  pkg_postinst.  closes bug #24407
 
   12 Jul 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r4.ebuild:
   Adding support for linking to SASLv1.  (SASL1=yes)  Not putting this

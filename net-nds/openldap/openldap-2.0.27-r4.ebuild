@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.8 2003/07/12 09:33:30 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.9 2003/07/13 23:35:09 raker Exp $
 
 inherit eutils
 
@@ -201,6 +201,7 @@ pkg_postinst() {
 	chmod 0640 /etc/openldap/slapd.conf
 	chown root:ldap /etc/openldap/slapd.conf.default
 	chmod 0640 /etc/openldap/slapd.conf.default
+	chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp}
 
 	if [ "${SASL1}" != "yes" ]; then
 		einfo ""
