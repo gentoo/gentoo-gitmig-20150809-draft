@@ -4,8 +4,10 @@ MD5 19ec1748e5528490a7427dd1334807be ethereal-0.9.14.ebuild 2080
 MD5 1da60f9c2cf08aaa5fca2cf91847c3ff ethereal-0.9.15.ebuild 1989
 MD5 2a7d48724259251f6e59f318777adde6 ethereal-0.9.16-r1.ebuild 2332
 MD5 165b419089a4932faed245b98058a1bf ethereal-0.9.16.ebuild 2260
+MD5 8bb64cf1cf22a10115e9265d62600408 ethereal-0.10.0a.ebuild 2402
 MD5 44dcde01bfc4b986a229fa28dee9f9e7 files/digest-ethereal-0.9.13 69
 MD5 380524e1a6116898080fe64bed810144 files/digest-ethereal-0.9.14 69
 MD5 cd9ac6e867607636581cf2e0c8652210 files/digest-ethereal-0.9.15 69
 MD5 3ce13570e210d6dc1669b91936d2f051 files/digest-ethereal-0.9.16 69
 MD5 3ce13570e210d6dc1669b91936d2f051 files/digest-ethereal-0.9.16-r1 69
+MD5 b419356a5755f8a51b7d2ac12bc5d91a files/digest-ethereal-0.10.0a 70

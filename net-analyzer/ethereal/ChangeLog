@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.45 2004/01/05 13:05:18 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.46 2004/01/18 13:54:13 mholzer Exp $
+
+*ethereal-0.10.0a (18 Jan 2004)
+
+  18 Jan 2004; Martin Holzer <mholzer@gentoo.org> ethereal-0.10.0a.ebuild:
+  Version bumped. Closes 36003 and 38124
 
   05 Jan 2004; Jason Wever <weeve@gentoo.org> ethereal-0.9.13.ebuild,
   ethereal-0.9.14.ebuild, ethereal-0.9.15.ebuild, ethereal-0.9.16-r1.ebuild,
