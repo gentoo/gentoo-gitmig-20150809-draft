@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netspeed_applet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.8 2003/02/12 07:48:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.9 2003/06/29 14:51:42 foser Exp $
+
+*netspeed_applet-0.9 (29 Jun 2003)
+
+  29 Jun 2003; foser <foser@gentoo.org> netspeed_applet-0.9.ebuild :
+  Make use of gnome2 eclass, fix (R)DEPEND
 
 *netspeed_applet-0.8 (30 Jan 2003)
 
