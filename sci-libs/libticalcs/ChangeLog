@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libticalcs
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs/ChangeLog,v 1.2 2004/12/29 00:22:10 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs/ChangeLog,v 1.3 2005/01/09 11:42:58 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org> libticalcs-4.5.5.ebuild:
+  Added missing parentheses in SRC_URI/*DEPEND/LICENSE.
 
 *libticalcs-4.5.5 (28 Dec 2004)
 
