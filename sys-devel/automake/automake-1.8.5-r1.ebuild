@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.13 2004/11/14 03:49:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.14 2004/11/30 22:50:56 vapier Exp $
 
 inherit eutils
 
@@ -88,7 +88,7 @@ src_compile() {
 	# stupid configure script goes and run autoconf in a subdir,
 	# so 'ac-wrapper.pl' do not detect that it should use
 	# autoconf-2.5x
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 
 	cd ${S}
 
@@ -114,7 +114,7 @@ src_compile() {
 	# stupid configure script goes and run autoconf in a subdir,
 	# so 'ac-wrapper.pl' do not detect that it should use
 	# autoconf-2.5x
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 
 	cd ${OLD17_S}
 
@@ -140,7 +140,7 @@ src_compile() {
 	# stupid configure script goes and run autoconf in a subdir,
 	# so 'ac-wrapper.pl' do not detect that it should use
 	# autoconf-2.5x
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 
 	cd ${OLD16_S}
 
@@ -179,7 +179,7 @@ src_compile() {
 		--target=${CHOST} \
 		|| die "configure 1.5x failed"
 	emake || die "emake 1.5x failed"
-	unset WANT_AUTOCONF_2_5
+	unset WANT_AUTOCONF=2.5
 
 	#
 	# ************ automake-1.4-p6 ************
