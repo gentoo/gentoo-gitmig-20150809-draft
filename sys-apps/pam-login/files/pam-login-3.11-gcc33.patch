@@ -1,0 +1,11 @@
+--- configure.orig	2003-05-25 10:06:01.000000000 +1000
++++ configure	2003-05-25 10:43:21.000000000 +1000
+@@ -1689,7 +1689,7 @@
+ fi
+ 
+ 
+-EXTRA_CFLAGS="-W -Wall -Wbad-function-cast -Wcast-align -Wcast-qual -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wshadow -Wstrict-prototypes -Wundef -Werror"
++EXTRA_CFLAGS="-W -Wall -Wbad-function-cast -Wcast-align -Wcast-qual -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wshadow -Wstrict-prototypes -Wundef -Werror"
+ # -Wpointer-arith
+ 
+ ac_ext=c
