@@ -1,15 +1,6 @@
 diff -r -u libgphoto2-2.1.2.orig/camlibs/canon/canon.c libgphoto2-2.1.2/camlibs/canon/canon.c
 --- libgphoto2-2.1.2.orig/camlibs/canon/canon.c	2003-08-10 13:51:13.000000000 -0500
 +++ libgphoto2-2.1.2/camlibs/canon/canon.c	2003-10-12 11:21:10.000000000 -0500
-@@ -15,7 +15,7 @@
-  * and usb.c, keeping the common protocols/busses support in this
-  * file.
-  *
-- * $Id: libgphoto2-2.1.2-canon.patch,v 1.1 2003/10/12 19:41:18 mholzer Exp $
-+ * $Id: libgphoto2-2.1.2-canon.patch,v 1.1 2003/10/12 19:41:18 mholzer Exp $
-  */
- 
- #include "config.h"
 @@ -112,7 +112,7 @@
  	{"Canon:PowerShot A20",		CANON_PS_A20,		0x04A9, 0x304E, CAP_SUP, S10M, S32K, NULL},
  	{"Canon:PowerShot A10",		CANON_PS_A10,		0x04A9, 0x304F, CAP_SUP, S10M, S32K, NULL},
@@ -63,15 +54,6 @@ diff -r -u libgphoto2-2.1.2.orig/camlibs/canon/canon.c libgphoto2-2.1.2/camlibs/
 diff -r -u libgphoto2-2.1.2.orig/camlibs/canon/canon.h libgphoto2-2.1.2/camlibs/canon/canon.h
 --- libgphoto2-2.1.2.orig/camlibs/canon/canon.h	2003-08-10 13:51:13.000000000 -0500
 +++ libgphoto2-2.1.2/camlibs/canon/canon.h	2003-10-12 11:48:40.000000000 -0500
-@@ -3,7 +3,7 @@
-  *
-  * Written 1999 by Wolfgang G. Reissnegger and Werner Almesberger
-  *
-- * $Id: libgphoto2-2.1.2-canon.patch,v 1.1 2003/10/12 19:41:18 mholzer Exp $
-+ * $Id: libgphoto2-2.1.2-canon.patch,v 1.1 2003/10/12 19:41:18 mholzer Exp $
-  *
-  */
- 
 @@ -88,8 +88,14 @@
   * @CANON_PS_G3: PowerShot G3
   * @CANON_PS_S230: PowerShot S230, Digital IXUS v3
