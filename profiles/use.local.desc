@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.691 2004/10/22 05:19:19 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.692 2004/10/22 07:30:25 amir Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -502,6 +502,7 @@ net-misc/openssh:skey - Enable S/Key (Single use password) authentication suppor
 net-misc/openssh:smartcard - Enables smartcard support
 net-misc/openvpn:pthreads - Enable threading support for better performance of tls
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
+net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessing the OSPF link state database
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
 net-misc/strongswan:smartcard - Enables smartcard support
