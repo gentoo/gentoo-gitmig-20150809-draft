@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/freeglut
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.1 2004/08/01 20:39:49 battousai Exp $
+
+*freeglut-2.2.0 (01 Aug 2004)
+
+  01 Aug 2004; Bryan Stine <battousai@gentoo.org>; +metadata.xml,
+  +freeglut-2.2.0.ebuild:
+  Initial import. Thanks to Tamer Fahmy <tamer@tammura.at> for the ebuild
+  submission. This closes bug 36783.
+
