@@ -1,6 +1,18 @@
-MD5 6bc10c78dd96f71f8a4a50f035a8c395 ChangeLog 2420
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3b274a0980356156a3dc9b9a492511d0 ekg-1.4-r1.ebuild 1109
-MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 d2734b8f01bf15545a7ae8a4431ecad0 ekg-1.5.ebuild 1222
+MD5 6953db97d2ded7f90509ee18f2d0deb4 ChangeLog 2539
+MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+MD5 d1a353a6108917961a0431754ca52dad ekg-1.6_rc1.ebuild 1224
 MD5 2bc5f13c9e2cc840a2f8f61fc3a51391 files/digest-ekg-1.4-r1 59
+MD5 811e95299fbf084137ceb9b517843924 files/digest-ekg-1.6_rc1 62
 MD5 fabb312576862c943792eed047bac7a8 files/digest-ekg-1.5 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPbbJchej4aZK9/cRAibzAJ9MnRpFiibakQwUE6djz00uw/dxnwCfdZsQ
+pOVGtxzT1MQ5nRUkeH9SUGQ=
+=dY0F
+-----END PGP SIGNATURE-----
