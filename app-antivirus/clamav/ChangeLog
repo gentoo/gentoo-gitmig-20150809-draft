@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.8 2004/07/23 07:52:38 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.9 2004/07/30 18:12:02 lordvan Exp $
+
+*clamav-0.75.1 (30 Jul 2004)
+
+  30 Jul 2004; root <root@gentoo.org> clamav-0.75.1.ebuild, files/clamd.rc:
+  fixed bug in clamd.rc (thanks to Pavel Riha <Pavel.Riha@trilogic.cz> )
+  new version
+  marked 0.75 stable x86
 
 *clamav-0.75 (23 Jul 2004)
 

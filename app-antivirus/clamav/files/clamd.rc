@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.rc,v 1.2 2004/07/14 21:23:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.rc,v 1.3 2004/07/30 18:12:02 lordvan Exp $
 
 depend() {
 	need net
@@ -12,9 +12,10 @@ start() {
 		if [ -S "/tmp/clamd" ]; then
 			rm -f /tmp/clamd
 		fi
-		if [ -n "${CLAMD_LOG}" -a ! -f "${CLAMD_LOG}" ]; then
+		if [ -n "$CLAMD_LOG}" -a ! -f "${CLAMD_LOG}" ]; then
 			touch "${CLAMD_LOG}"
 			chown clamav:clamav "${CLAMD_LOG}"
+			CLAMD_OPTS="${CLAMD_OPTS}${CLAMD_LOG}"
 		fi
 		ebegin "Starting clamd"
 		start-stop-daemon --start --quiet \
@@ -22,14 +23,16 @@ start() {
 		eend $? "Failed to start clamd"
 	fi
 	if [ "${START_FRESHCLAM}" = "yes" ]; then
-		if [ -n "${FRESHCLAM_LOG}" -a ! -f "${FRESHCLAM_LOG}" ]; then
-			touch "${FRESHCLAM_LOG}"
-			chown clamav:clamav "${FRESHCLAM_LOG}"
+		if [ -n "${FRESHCLAM_LOG}" ]; then
+			if [ ! -f "${FRESHCLAM_LOG}" ]; then
+				touch "${FRESHCLAM_LOG}"
+				chown clamav:clamav "${FRESHCLAM_LOG}"
+			fi
 			FRESHCLAM_OPTS="${FRESHCLAM_OPTS} -l ${FRESHCLAM_LOG}"
 		fi
 		ebegin "Starting freshclam"
 		start-stop-daemon --start --quiet \
-		 --exec /usr/bin/freshclam -- ${FRESHCLAM_OPTS} -l ${FRESHCLAM_LOG}
+		 --exec /usr/bin/freshclam -- ${FRESHCLAM_OPTS} 
 		eend $? "Failed to start freshclam"
 	fi
 }
