@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.1 2002/10/16 20:50:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.2 2002/11/03 03:01:33 drobbins Exp $
+
+*ezmlm-idx-0.40-r1 (02 Nov 2002)
+
+  02 Nov 2002; Daniel Robbins <drobbins@gentoo.org>: Build fixes; rc files
+  now in /etc/ezmlm, and hard-coded ${D} paths removed from binaries.
 
 *ezmlm-idx-0.40 (16 Oct 2002)
 

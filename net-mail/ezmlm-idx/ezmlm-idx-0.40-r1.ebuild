@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40.ebuild,v 1.3 2002/10/16 21:18:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r1.ebuild,v 1.1 2002/11/03 03:01:33 drobbins Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
@@ -37,14 +37,18 @@ src_unpack() {
 	#remove cat-man pages
 	cp MAN MAN.orig
 	cat MAN.orig | grep -v cat > MAN
-}
-
-src_compile() {
-	cd ${S}
 	echo "/usr/bin" > conf-bin
 	echo "/usr/share/man" > conf-man
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld
+	#tweak the install to go to ${D}
+	cp Makefile Makefile.orig
+	sed -e "s:/install.*conf-bin\`\":/install ${D}usr/bin:" \
+	-e "s:/install.*conf-man\`\":/install ${D}usr/share/man:" Makefile.orig > Makefile
+}
+
+src_compile() {
+	cd ${S}
 	if [ "$PN" = "${PB}-pgsql" ]
 	then
 		make pgsql
@@ -56,8 +60,7 @@ src_compile() {
 }
 
 src_install () {
-	install -d ${D}/usr/bin ${D}/usr/share/man
-	echo "${D}/usr/bin" > conf-bin
-	echo "${D}/usr/share/man" > conf-man
+	install -d ${D}/usr/bin ${D}/usr/share/man ${D}/etc/ezmlm
 	make setup || die
+	mv ${D}/usr/bin/ez*rc ${D}/etc/ezmlm
 }
