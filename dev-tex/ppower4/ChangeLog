@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ppower4
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ChangeLog,v 1.6 2004/06/25 02:16:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ChangeLog,v 1.7 2004/10/05 06:54:19 usata Exp $
+
+  05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> ppower4-0.9.6.ebuild:
+  Added app-arch/unzip to DEPEND. Stable on ppc.
 
   16 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> ppower4-0.9.6.ebuild:
   Added ~sparc, bug #53552

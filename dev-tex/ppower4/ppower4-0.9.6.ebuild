@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ppower4-0.9.6.ebuild,v 1.6 2004/06/25 02:16:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ppower4/ppower4-0.9.6.ebuild,v 1.7 2004/10/05 06:54:19 usata Exp $
 
 inherit latex-package eutils
 
@@ -17,10 +17,11 @@ HOMEPAGE="http://www.tex.ac.uk/tex-archive/support/ppower4/index.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 
 IUSE=""
-DEPEND="virtual/tetex"
+DEPEND="virtual/tetex
+	app-arch/unzip"
 RDEPEND="${DEPEND}
 	virtual/jre"
 
