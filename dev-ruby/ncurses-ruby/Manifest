@@ -1,4 +1,14 @@
-MD5 dc92ef75fa7bda6d976497beb8c97954 ncurses-ruby-0.8.ebuild 561
-MD5 7b0c1a67665016148ec5aadd07f4052f ChangeLog 830
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 76aab83c86ea35dcdea64cb59585603f ncurses-ruby-0.8.ebuild 567
+MD5 c86beaec0dfee3687370996fc80427e7 ChangeLog 917
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 c45b544e8fd90d6a8baad8d12bc7efa6 files/digest-ncurses-ruby-0.8 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQshXCHk4+ZoBpvsRAgwJAJ0TrQj/chwCCX88hPo/l21JBFxjXQCfUyk7
+EzE6e3SSwPMwKFZkcA50jNg=
+=bygr
+-----END PGP SIGNATURE-----
