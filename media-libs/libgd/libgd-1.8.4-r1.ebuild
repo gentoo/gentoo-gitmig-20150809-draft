@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r1.ebuild,v 1.1 2003/06/26 18:20:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r1.ebuild,v 1.2 2003/06/26 19:01:11 vapier Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
@@ -11,12 +11,15 @@ HOMEPAGE="http://www.boutell.com/gd/"
 SLOT="0"
 LICENSE="as-is | BSD"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa"
-IUSE="X jpeg truetype"
+IUSE="X jpeg truetype ttf"
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )
 	jpeg? ( media-libs/jpeg )
-	truetype? ( =media-libs/freetype-1.3* )"
+	|| (
+		ttf? ( =media-libs/freetype-1* )
+		truetype? ( =media-libs/freetype-2* )
+	)"
 
 src_unpack() {
 	unpack ${A}
@@ -24,6 +27,7 @@ src_unpack() {
 
 	local compopts
 	local libsopts
+	local incopts
 
 	use alpha \
 		&& [ "${CC}" == "ccc" ] \
@@ -37,25 +41,25 @@ src_unpack() {
 		&& compopts="${compopts} -DHAVE_LIBJPEG" \
 		&& libsopts="${libsopts} -ljpeg"
 
-	compopts="${compopts} -DHAVE_LIBPNG" \
+	compopts="${compopts} -DHAVE_LIBPNG"
 	libsopts="${libsopts} -lpng"
 
-	use truetype \
-		&& compopts="${compopts} -DHAVE_LIBTTF" \
-		&& libsopts="${libsopts} -lttf"
-	
+	if [ `use ttf` ] ; then
+		compopts="${compopts} -DHAVE_LIBTTF"
+		libsopts="${libsopts} -lttf"
+		incopts="-I/usr/include/freetype"
+	elif [ `use truetype` ] ; then
+		compopts="${compopts} -DHAVE_LIBFREETYPE"
+		libsopts="${libsopts} -lfreetype"
+		incopts="-I/usr/include/freetype2"
+	fi
+
 	mv Makefile Makefile.old || die
-	if [ `use truetype` ] ; then
-		sed -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
-			-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
-			-e "s:^\(INCLUDEDIRS\)=:\1=-I/usr/include/freetype :" \
-		Makefile.old > Makefile || die
-	else
-		sed -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
+	sed -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
 		-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
+		-e "s:^\(INCLUDEDIRS\)=:\1=${incopts} :" \
 		-e "s:\(COMPILER=\)gcc:\1${CC:-gcc}:" \
 		Makefile.old > Makefile || die
-	fi
 }
 
 src_compile() {
