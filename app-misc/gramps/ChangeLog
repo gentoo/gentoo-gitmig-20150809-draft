@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.13 2004/02/11 14:01:02 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.14 2004/02/14 13:01:40 liquidx Exp $
+
+*gramps-1.0.0 (14 Feb 2004)
+
+  14 Feb 2004; Alastair Tse <liquidx@gentoo.org> gramps-0.9.2.ebuild,
+  gramps-0.9.3.ebuild, gramps-0.9.4.ebuild, gramps-1.0.0.ebuild:
+  version bump
 
 *gramps-0.99 (11 Feb 2004)
 
