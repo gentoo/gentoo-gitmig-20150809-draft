@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r25.ebuild,v 1.2 2003/08/18 05:29:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r25.ebuild,v 1.3 2003/08/18 05:54:54 kumba Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -115,6 +115,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
+
+	# Allow configure to detect mipslinux systems
+	use mips && gnuconfig_update
 
 	use 3dnow || use mmx \
 		&& myconf="${myconf} --enable-simd" \
