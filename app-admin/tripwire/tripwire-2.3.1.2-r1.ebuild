@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.6 2004/12/18 13:44:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.7 2004/12/18 13:57:23 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -82,9 +82,9 @@ src_install() {
 	dodoc README Release_Notes ChangeLog policy/policyguide.txt TRADEMARK \
 		${FILESDIR}/tripwire.gif ${FILESDIR}/tripwire.txt
 
-	zcat ${FILESDIR}/twcfg.txt > ${T}/twcfg.txt || ewarn "twcfg.txt zcat error"
+	zcat ${FILESDIR}/twpol.txt > ${T}/twpol.txt || ewarn "twcfg.txt zcat error"
 	insinto /etc/tripwire
-	doins ${T}/twcfg.txt ${FILESDIR}/twpol.txt
+	doins ${T}/twpol.txt ${FILESDIR}/twcfg.txt
 
 	exeinto /etc/tripwire
 	doexe ${FILESDIR}/twinstall.sh
