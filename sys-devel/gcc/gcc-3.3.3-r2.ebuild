@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.9 2004/04/04 01:37:59 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r2.ebuild,v 1.1 2004/04/18 23:36:22 solar Exp $
 
-IUSE="static nls bootstrap java build X multilib nogcj hardened"
+IUSE="static nls bootstrap java build X multilib nogcj hardened uclibc"
 
 inherit eutils flag-o-matic libtool
 
@@ -49,7 +49,7 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # PIE support
-PIE_VER="0.9"
+PIE_VER="8.5.3"
 
 # ProPolice version
 PP_VER="3_3"
@@ -97,18 +97,19 @@ fi
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-manpages.tar.bz2"
 
-# remember that this will move to /space/distfiles when the package becomes available via ~arch
-# bug #6148 - the bounds checking patch interferes with gcc.c, so we stick them both together ;-)
-PIE_SSP_BOUNDS_PATCH="pie-ssp-bounds-checking-3.3.3-v7.patch"
-SRC_URI="${SRC_URI}
-	hardened? ( http://dev.gentoo.org/~pappy/gentoo-projects/hardened-gcc/gentoo/distrib/4.0.3.3.2/noarch/${PIE_SSP_BOUNDS_PATCH} )"
+# bug #6148 - the bounds checking patch interferes with gcc.c
+# PaX Team, Peter S. Mazinger, pappy, solar, swtaylor, tseng.
+PIE_BASE_URI="mirror://gentoo/"
+PIE_SSP_PATCH="gcc-3.3.3-v${PIE_VER}-nodefault-pie-ssp.patch"
+PIE_EXCLUSION_PATCH="gcc-3.3.3-v${PIE_VER}-gcc-exclusion.patch"
+SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_SSP_PATCH} ${PIE_BASE_URI}${PIE_EXCLUSION_PATCH}"
 
-DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers and support for hardened PIE and SSP"
+DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extentions"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-*" # "~x86 ~mips ~sparc amd64 -hppa ~alpha ~ia64 ~ppc64"
+KEYWORDS="~x86 ~mips ~sparc amd64 -hppa ~alpha ~ia64 ~ppc64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -324,7 +325,7 @@ src_unpack() {
 		epatch ${FILESDIR}/3.3.2/gcc332-altivec-fix.patch
 	fi
 
-	# non-default SSP and PIE support for the Gentoo Hardened project
+	# non-default SSP and PIE support.
 	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ]
 	then
 		# ProPolice Stack Smashing protection
@@ -347,17 +348,19 @@ src_unpack() {
 	# This patch enables improved PIE and SSP behaviour but does not
 	# enable it by default ...
 
-	cd ${WORKDIR}/${P}; epatch "${DISTDIR}/${PIE_SSP_BOUNDS_PATCH}"
+	cd ${WORKDIR}/${P}
+	epatch ${DISTDIR}/${PIE_SSP_PATCH}
+	use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
 
 	release_version="${release_version}, pie-${PIE_VER}"
 
 	if [ -n "`use hardened`" ]
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
-		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
+		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP -fPIC|' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 
-		# will show if default PIE/SSP building was used - make bug reports easier
+		# rebrand to make bug reports easier
 		release_version="${release_version/Gentoo/Gentoo Hardened}"
 	fi
 
@@ -391,7 +394,7 @@ src_compile() {
 	else
 		gcc_lang="c"
 	fi
-	if [ -z "`use nls`" -o "`use build`" ]
+	if [ -z "`use nls`" -o -z "`use build`" ]
 	then
 		myconf="${myconf} --disable-nls"
 	else
@@ -431,6 +434,8 @@ src_compile() {
 	# Fix linking problem with c++ apps which where linkedi
 	# agains a 3.2.2 libgcc
 	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
+
+	use hardened && append-flags -fPIC
 
 	# In general gcc does not like optimization, and add -O2 where
 	export CFLAGS="$(echo "${CFLAGS}" | sed -e 's|-O[0-9s]\?|-O2|g')"

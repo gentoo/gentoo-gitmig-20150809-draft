@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.202 2004/04/15 16:10:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.203 2004/04/18 23:36:22 solar Exp $
+
+*gcc-3.3.3-r2 (18 Apr 2004)
+
+  18 Apr 2004; <solar@gentoo.org> gcc-3.3.3-r1.ebuild, gcc-3.3.3-r2.ebuild:
+  long awaited piessp functionality in here after alot of local testing.. Many
+  many thanks go to the PaX Team, Peter S. Mazinger (who helped tremendously),
+  and all those who helped getting this version ready.. This gcc-3.3.3-r2.ebuild
+  is currently package.masked but instructions on unmasking can be found in
+  /usr/portage/package.unmask, please test. Note: USE=uclibc might still need a
+  little more work, which we intend to address to before unmasking
 
 *gcc-3.3.3_pre20040408-r1 (15 Apr 2004)
 
