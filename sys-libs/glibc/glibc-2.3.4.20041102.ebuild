@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.6 2004/11/22 16:28:57 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.7 2004/12/03 04:51:54 vapier Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -40,7 +40,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="~amd64 ppc64 -hppa ~ia64 ~ppc ~x86 ~mips -*"
+KEYWORDS="~amd64 ppc64 -hppa ~ia64 ~ppc ~x86 ~mips"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
@@ -64,10 +64,10 @@ PROVIDE="virtual/glibc virtual/libc"
 
 
 # (very) Theoretical cross-compiler support
-[ -z "${CTARGET}" ] && CTARGET="${CHOST}"
+export CTARGET="${CTARGET:-${CHOST}}"
 
-# We need to be able to set alternative headers for compiling for non-native
-# platforms.
+# We need to be able to set alternative headers for
+# compiling for non-native platform
 # Will also become useful for testing kernel-headers without screwing up
 # the whole system.
 # note: intentionally undocumented.
@@ -106,7 +106,7 @@ setup_flags() {
 		fi
 	fi
 
-	if version_is_at_least 3.4.0 ; then
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
 		# broken in 3.4.x
 		replace-flags -march=pentium-m -mtune=pentium3
 	fi
@@ -122,7 +122,6 @@ setup_flags() {
 	# Lock glibc at -O2 -- linuxthreads needs it and we want to be
 	# conservative here
 	append-flags -O2
-	export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 }
 
 
@@ -325,8 +324,6 @@ do_arch_hppa_patches() {
 	unset EPATCH_OPTS
 
 	use hardened && epatch ${FILESDIR}/2.3.4/glibc-2.3.4-hppa-hardened-disable__init_arrays.patch
-
-	einfo "Done with hppa patches."
 
 }
 
@@ -905,4 +902,3 @@ pkg_postinst() {
 	einfo "remove the line that disables it (mdns off)."
 	echo
 }
-

@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.12 2004/11/10 11:16:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.13 2004/12/03 04:51:54 vapier Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic gcc versionator
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
 BRANCH_UPDATE="20040808"
 
-
 # Minimum kernel version we support
 # (Recent snapshots fails with 2.6.5 and earlier)
+# also, we do not have a single 2.4 kernel in the tree with backported
+# support required to enable nptl.
 MIN_KERNEL_VERSION="2.6.5"
 
 
@@ -40,7 +41,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 LICENSE="LGPL-2"
 SLOT="2.2"
 KEYWORDS="x86 amd64 hppa ppc64 ~ppc -mips"
-IUSE="nls pic build nptl erandom hardened makecheck multilib debug userlocales"
+IUSE="nls pic build nptl erandom hardened multilib debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -63,19 +64,21 @@ PROVIDE="virtual/glibc virtual/libc"
 
 
 # (very) Theoretical cross-compiler support
-[ -z "${CCHOST}" ] && CCHOST="${CHOST}"
+export CTARGET="${CTARGET:-${CHOST}}"
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
 # Will also become useful for testing kernel-headers without screwing up
-# whole system
+# the whole system.
+# note: intentionally undocumented.
 [ -z "${ALT_HEADERS}" ] && ALT_HEADERS="${ROOT}/usr/include"
 
 
 setup_flags() {
-	# Over-zealous CFLAGS can often cause problems.  What may work for one person may not
-	# work for another.  To avoid a large influx of bugs relating to failed builds, we
-	# strip most CFLAGS out to ensure as few problems as possible.
+	# Over-zealous CFLAGS can often cause problems.  What may work for one
+	# person may not work for another.  To avoid a large influx of bugs
+	# relating to failed builds, we strip most CFLAGS out to ensure as few
+	# problems as possible.
 	strip-flags
 	strip-unsupported-flags
 
@@ -90,14 +93,15 @@ setup_flags() {
 
 		# Sparc64 Only support...
 		if [ "${PROFILE_ARCH}" = "sparc64" ]; then
-			# Get rid of -mcpu options (the CHOST will fix this up) and flags known to fail
+			# Get rid of -mcpu options (the CHOST will fix this up) and flags
+			# known to fail
 			filter-flags "-mcpu=ultrasparc -mcpu=v9 -mvis"
 
 			# Setup the CHOST properly to insure "sparcv9"
 			# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
 			if [ "${CHOST}" = "sparc-unknown-linux-gnu" ]; then
 				export CHOST="sparcv9-unknown-linux-gnu"
-				export CCHOST="sparcv9-unknown-linux-gnu"
+				export CTARGET="sparcv9-unknown-linux-gnu"
 			fi
 		fi
 	fi
@@ -105,16 +109,19 @@ setup_flags() {
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
 		# broken in 3.4.x
 		replace-flags -march=pentium-m -mtune=pentium3
-		ewarn "-march=pentium-m seems to be broken in gcc 3.4, changing to -mtune=pentium3"
+	fi
+
+	if gcc -v 2>&1 | grep -q 'gcc version 3.[0123]'; then
+		append-flags -finline-limit=2000
 	fi
 
 	# We don't want these flags for glibc
 	filter-flags -fomit-frame-pointer -malign-double
 	filter-ldflags -pie
 
-	# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
+	# Lock glibc at -O2 -- linuxthreads needs it and we want to be
+	# conservative here
 	append-flags -O2
-	export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 }
 
 
@@ -183,7 +190,7 @@ check_nptl_support() {
 want_nptl() {
 	if use nptl; then
 		# Archs that can use NPTL
-		if use amd64 || use alpha || use ia64 || use ppc || \
+		if use amd64 || use ia64 || use ppc || \
 		   use ppc64 || use s390 || use sparc; then
 			return 0
 		fi
@@ -219,24 +226,6 @@ want_tls() {
 }
 
 
-do_makecheck() {
-	ATIME=`mount | awk '{ print $3,$6 }' | grep ^\/\  | grep noatime`
-	if [ "$ATIME" = "" ]; then
-		cd ${WORKDIR}/build
-		make check || die
-	else
-		ewarn "remounting / without noatime option so that make check"
-		ewarn "does not fail!"
-		epause 2
-		mount / -o remount,atime
-		cd ${WORKDIR}/build
-		make check || die
-		einfo "remounting / with noatime"
-		mount / -o remount,noatime
-	fi
-}
-
-
 install_locales() {
 	unset LANGUAGE LANG LC_ALL
 	cd ${WORKDIR}/build
@@ -247,8 +236,8 @@ install_locales() {
 
 
 setup_locales() {
-	if use !userlocales || use makecheck; then
-		einfo "makecheck in USE or userlocales not enabled, installing -ALL- locales..."
+	if use !userlocales; then
+		einfo "userlocales not enabled, installing -ALL- locales..."
 		install_locales || die
 	elif [ -e /etc/locales.build ]; then
 		einfo "Installing locales in /etc/locales.build..."
@@ -280,8 +269,6 @@ pkg_setup() {
 		die "GCC too old"
 	fi
 	echo
-
-	hasq sandbox $FEATURES && use makecheck && die "sandbox breaks make check. either take makecheck out of USE or set FEATURES=-sandbox"
 }
 
 
@@ -496,7 +483,6 @@ src_unpack() {
 	# SSP support in glibc (where it belongs)
 	do_ssp_patches
 
-
 	# PaX-related Patches
 	do_pax_patches
 
@@ -505,7 +491,6 @@ src_unpack() {
 
 	# hardened toolchain/relro/nptl/security/etc fixes
 	do_hardened_fixes
-
 
 	# Arch specific patching
 	use amd64	&& do_arch_amd64_patches
@@ -571,7 +556,7 @@ src_compile() {
 	cd ${WORKDIR}/build
 	${S}/configure \
 		--build=${CHOST} \
-		--host=${CCHOST} \
+		--host=${CTARGET} \
 		--disable-profile \
 		--without-gd \
 		--without-cvs \
@@ -697,17 +682,6 @@ EOF
 	# this test isn't using the correct directory on ppc64
 	# and really it's a worthless test
 	use !ppc64 && must_exist /$(get_libdir)/ libpthread.so.0
-
-	# this whole section is useless, it fails if sandbox is LOADED, not if it's
-	# enabled. but forcing sandbox not to load isnt an option...
-	if use makecheck; then
-		local OLD_SANDBOX_ON="${SANDBOX_ON}"
-		# make check will fail if sandbox is enabled.  Do not do it
-		# globally though, else we might fail to find sandbox violations ...
-		SANDBOX_ON="0"
-		do_makecheck
-		SANDBOX_ON="${OLD_SANDBOX_ON}"
-	fi
 }
 
 fix_lib64_symlinks() {
@@ -795,8 +769,6 @@ pkg_postinst() {
 	fi
 }
 
-
 must_exist() {
 	test -e ${D}/${1}/${2} || die "${1}/${2} was not installed"
 }
-

@@ -7,8 +7,8 @@ MD5 e4f211c5762191a6fce67b15caf38c31 glibc-2.3.2-r12.ebuild 20537
 MD5 d59fdfb3aca88476d792b71922c765a5 glibc-2.3.3.20040420-r2.ebuild 21630
 MD5 48dcbf88afd15efb62b4313337261968 glibc-2.3.4.20040619-r2.ebuild 21077
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 e6a2c77560bb1519bec6fce7b4601bca glibc-2.3.4.20040808-r1.ebuild 23137
-MD5 623c3ff2d1000ed5b9a67ae15c53083a glibc-2.3.4.20041102.ebuild 26978
+MD5 4de3ef52fedc7ed9a8129ebd5f552756 glibc-2.3.4.20040808-r1.ebuild 22266
+MD5 d581e8fe852f6916509363daad57c1fb glibc-2.3.4.20041102.ebuild 26933
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
 MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
 MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
@@ -137,7 +137,7 @@ MD5 039f62650037a4a15cef3066b26d27c9 files/2.3.4/glibc-2.3.4-mips-update-__throw
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBr+0/roRuSHgZdywRAmiHAJ4lBL/N3ibs5M5Z9BlPeZsO1bZIxgCgiiJs
-Z5Ok8g+z68qfo56IP5+XZ1Y=
-=k+1S
+iD8DBQFBr/D6roRuSHgZdywRAlXuAJ4lgUvJ760guYWqkjDgj1le3btpwQCfawj/
+a955a/5VwUiF3gdozTR8GRY=
+=MCya
 -----END PGP SIGNATURE-----
