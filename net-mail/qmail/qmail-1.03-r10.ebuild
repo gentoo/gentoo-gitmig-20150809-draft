@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.12 2003/02/17 08:41:57 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.13 2003/02/22 00:44:28 raker Exp $
 
 inherit eutils
 
@@ -172,8 +172,10 @@ src_install() {
 
 	for i in mailer-daemon postmaster root
 	do
-		touch ${D}/var/qmail/alias/.qmail-${i}
-		fowners alias.qmail /var/qmail/alias/.qmail-${i}
+		if [ ! -f ${ROOT}/var/qmail/alias/.qmail-${i} ]; then
+			touch ${D}/var/qmail/alias/.qmail-${i}
+			fowners alias.qmail /var/qmail/alias/.qmail-${i}
+		fi
 	done
  
 	einfo "Setting up maildirs by default in the account skeleton ..."
