@@ -1,7 +1,10 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.4 2002/05/27 09:54:15 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.5 2002/07/06 23:30:33 spider Exp $
 
+gftp-2.0.12-r2 (06 Jul 2002)
+  06 Jul 2002; Spider <spider@gentoo.org> gftp-2.0.12-r2.ebuild :
+  using the gtk2 USE flag and fixed it up to pass lintool checks
 
 *gftp-2.0.12-r1 (27 May 2002)
   27 May 2002; Spider <spider@gentoo.org> gftp-2.0.12-r1.ebuild :
