@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.490 2004/07/16 23:31:56 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.491 2004/07/17 00:28:19 lu_zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -230,6 +230,7 @@ mail-mta/qmail:notlsbeforeauth - If you do NOT want to require STARTTLS before o
 mail-mta/sendmail:milter - Build sendmail mail filter (milter) support
 mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
+media-gfx/blender:blender-game - Adds game engine support to blender
 media-gfx/blender:fmod - Adds mod support to blender
 media-gfx/gimageview:mng - Enable mng format support
 media-gfx/gimageview:mplayer - Enable mplayer support
