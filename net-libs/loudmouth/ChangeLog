@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.13 2004/02/06 02:01:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.14 2004/02/06 04:10:43 spider Exp $
+
+*loudmouth-0.15.1 (06 Feb 2004)
+
+  06 Feb 2004; <spider@gentoo.org> loudmouth-0.15.1.ebuild:
+  versionbump now that gnutls >1.0 is in the tree.
 
   06 Feb 2004; Alastair Tse <liquidx@gentoo.org> loudmouth-0.15.ebuild,
   files/loudmouth-0.15-gnutls_1.0.patch:
