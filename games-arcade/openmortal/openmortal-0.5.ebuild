@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc., 2003 Freyr Gunnar Ólafsson <gnarlin@utopia.is>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.5.ebuild,v 1.1 2004/02/03 02:17:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.5.ebuild,v 1.2 2004/02/03 19:23:32 mr_bones_ Exp $
 
 inherit games
 
@@ -19,6 +19,7 @@ DEPEND="virtual/x11
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf
+	media-libs/sdl-net
 	>=media-libs/freetype-2.1.0
 	dev-lang/perl"
 
