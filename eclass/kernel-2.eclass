@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.28 2004/02/16 00:40:41 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.29 2004/02/16 18:30:33 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -350,13 +350,26 @@ unipatch() {
 			x=${i/*\//}
 			x=${x/\.${extention}/}
 	
-			if [ -n "${UNIPATCH_STRICTORDER}" -a -n "${PIPE_CMD}" ]
+			if [ -n "${PIPE_CMD}" ]
 			then
-				STRICT_COUNT=$((${STRICT_COUNT} + 1))
-				mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
-				$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch)
-			else
-				$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch)
+				if [ ! -r "${i}" ]
+				then
+					echo
+					eerror "FATAL: unable to locate:"
+					eerror "${i}"
+					eerror "for read-only. The file either has incorrect permissions"
+					eerror "or does not exist."
+					die Unable to locate ${i}
+				fi
+			
+				if [ -n "${UNIPATCH_STRICTORDER}" ]
+				then
+					STRICT_COUNT=$((${STRICT_COUNT} + 1))
+					mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
+					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch)
+				else
+					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch)
+				fi
 			fi
 		fi
 	done
