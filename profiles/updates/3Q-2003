@@ -42,3 +42,5 @@ move dev-libs/pnetc dev-dotnet/pnetc
 move dev-libs/ml-pnet dev-dotnet/ml-pnet
 move sys-apps/selinux-base-policy sec-policy/selinux-base-policy
 move media-video/filmgimp media-video/cinepaint
+move sys-apps/grsecurity-base-policy sec-policy/grsecurity-base-policy
+
