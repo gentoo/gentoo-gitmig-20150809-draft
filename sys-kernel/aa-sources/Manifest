@@ -1,6 +1,6 @@
-MD5 68320c8838883a0dd443194cc801b566 ChangeLog 7635
+MD5 9d1717de0c3539eeaf65d62e5ce6fa88 ChangeLog 7784
 MD5 399eb7607b8f1f3f597e93566b1bda7c metadata.xml 453
-MD5 76f911faea609dec4e59fe62773c43e2 aa-sources-2.6.5-r5.ebuild 979
+MD5 46dd938731300653543e986727d81880 aa-sources-2.6.5-r5.ebuild 1022
 MD5 34270130d0f0c6020cf3083969d52ef4 aa-sources-2.4.23-r2.ebuild 3606
 MD5 eaeda68a619caaddd5b8fdc5e7c39932 files/aa-sources-2.4.23.CAN-2004-0177.patch 384
 MD5 c9da1bc82b906f6abc648c056e7bf662 files/aa-sources-2.4.23.FPULockup-53804.patch 354
@@ -27,6 +27,7 @@ MD5 5674421c7e2c7e50e2509bed7d96c4d4 files/aa-sources-2.6.5.CAN-2004-0427.patch 
 MD5 5bf9836a632a861728d33f9736bb7431 files/aa-sources-2.4.23.CAN-2004-0133.patch 427
 MD5 8204afea1d572b49a4a80d8da4eef0c9 files/aa-sources-2.6.5.CAN-2004-0596.patch 1033
 MD5 21f3a4f186017d925067335e24db36a1 files/aa-sources-2.4.23.CAN-2004-0109.patch 1877
+MD5 eb70acb35ba13daa4b1fda53cb61fc01 files/aa-sources-2.6.5.CAN-2004-0495-0496.patch 23861
 MD5 ac42024b6e6ee1e2165914db4b22a61c files/aa-sources-2.4.23.CAN-2004-0178.patch 424
 MD5 fcfb3fc100621b77d191f86b66dd810a files/aa-sources-2.4.22-ide-scsi-missing-sym-fix.patch 465
 MD5 c460ea130cb4ae84a5063ba044e3ce72 files/aa-sources-2.4.23.CAN-2004-0427.patch 460

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/aa-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.45 2004/07/21 10:23:02 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.46 2004/07/21 22:16:12 plasmaroo Exp $
+
+  21 Jul 2004; <plasmaroo@gentoo.org> aa-sources-2.6.5-r5.ebuild,
+  +files/aa-sources-2.6.5.CAN-2004-0495-0496.patch:
+  Fixes for CAN-2004-049[56].
 
   21 Jul 2004; <plasmaroo@gentoo.org> aa-sources-2.6.5-r5.ebuild,
   +files/aa-sources-2.6.5.CAN-2004-0596.patch:
