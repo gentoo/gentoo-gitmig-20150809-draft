@@ -1,47 +1,45 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ac09c91d22a2e4b8007f9a8b6dca8109 ChangeLog 15383
-MD5 98ff975617b94649165b1789b86b5a99 courier-imap-3.0.5.ebuild 8530
-MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 d6ae1ef53f138017d5584db66b5ccf6d courier-imap-3.0.7.ebuild 9232
-MD5 0e542e651b2a040e97eadefb338a31c7 courier-imap-3.0.8.ebuild 9249
-MD5 f156e5a11ab06f0bee9c0b1e6e2c8887 files/authdaemond.conf 440
-MD5 92cd406de622a1cf2de2ffc0662349bc files/authdaemond.rc6 957
+MD5 ed5a39df227b08d2817976d690070f1f courier-imap-3.0.8.ebuild 9251
+MD5 ab55035065d4ebb8180c973d0c74bc3c ChangeLog 15505
+MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
+MD5 d9d0cf2a19ee5b20039583b7cb4cffcc files/courier-pop3d-ssl.rc6-3.0.5 1204
 MD5 457d7f87a25f4f8f05af321130d846bf files/courier-imap-3.0.7-db4-bdbobj_configure.in.patch 1263
-MD5 c8836ccb71ec53cb7570308b10d9c247 files/courier-imapd-ssl.rc6 1200
-MD5 90bb778616a7c67658b9e78890d4b8fe files/courier-imapd.rc6 945
-MD5 d1bfa2a8019ebac0a33d3ef7a8945eeb files/courier-pop3d-ssl.rc6 1208
-MD5 9f46519bb9780f36b21727a008545b89 files/courier-pop3d.rc6 953
-MD5 5d57e73c7593d5bb37135d3964d6d4c2 files/digest-courier-imap-3.0.7 72
 MD5 5879bfc8c6b847d7ef364b4ca6b40880 files/courier-imapd-ssl.rc6-3.0.5 1196
-MD5 2399f4a660fd7149e3fe19f0bfc230e1 files/gentoo-imapd-1.7.3-r1.rc 1074
-MD5 9e69a26cf7b3bf68338f701fece09a35 files/gentoo-imapd-ssl-1.7.3-r1.rc 1036
-MD5 9626da27b0e11f495ea062e6166e11d3 files/gentoo-imapd-ssl.rc 1013
-MD5 e448df5fdbc088132766b33d27f27073 files/gentoo-imapd.rc 1006
-MD5 1709ef97052398ee74b0d7d7786d398a files/gentoo-pop3d-1.7.3-r1.rc 1020
-MD5 a5029d4de95a9deca6254a889ed7fd0b files/gentoo-pop3d-ssl-1.7.3-r1.rc 1012
-MD5 a2d52d98e3f5b3241e1ed40943d5a4a8 files/gentoo-pop3d-ssl.rc 989
-MD5 70a999ccc2bc13e7df65b72959fa6f7d files/gentoo-pop3d.rc 997
-MD5 40deca440b71ed8d78e39968fb5a30e9 files/mkimapdcert 996
-MD5 7b677e761c000af45fa7a37635b0c5c8 files/mkpop3dcert 996
-MD5 dfe2c230fed9f3be8e27d5d0baeef193 files/courier-imap-3.0.2-db40vs41.patch 585
-MD5 ce975bfaa13118f7fcc463f2e0486277 files/courier-imap-3.0.2-removerpm.patch 4264
-MD5 73fffd635f45ec99ecf6a45a9d0e4516 files/courier-imap-3.0.2-disable-fam.diff 1996
 MD5 71a551a4f772f4299f9752f3d043b8c5 files/authdaemond-3.0.4-r1 1062
 MD5 7d5ddf4fa33c73befa0bd434a17022f9 files/authdaemond.conf-3.0.4-r1 544
-MD5 d9d0cf2a19ee5b20039583b7cb4cffcc files/courier-pop3d-ssl.rc6-3.0.5 1204
-MD5 cf0b34bc53717e49f0f75bd610a0fac9 files/digest-courier-imap-3.0.5 72
-MD5 39e2ec0f1212612a99f443d6e6275139 files/courier-imap-3.0.7-db4-configure.in.patch 1337
+MD5 1709ef97052398ee74b0d7d7786d398a files/gentoo-pop3d-1.7.3-r1.rc 1020
+MD5 e448df5fdbc088132766b33d27f27073 files/gentoo-imapd.rc 1006
 MD5 06c960b3b160106abff0c0d3e84105d0 files/courier-imap-3.0.7-disable-fam-configure.in.patch 654
+MD5 c8836ccb71ec53cb7570308b10d9c247 files/courier-imapd-ssl.rc6 1200
+MD5 90bb778616a7c67658b9e78890d4b8fe files/courier-imapd.rc6 945
+MD5 40deca440b71ed8d78e39968fb5a30e9 files/mkimapdcert 996
+MD5 a5029d4de95a9deca6254a889ed7fd0b files/gentoo-pop3d-ssl-1.7.3-r1.rc 1012
+MD5 a2d52d98e3f5b3241e1ed40943d5a4a8 files/gentoo-pop3d-ssl.rc 989
+MD5 ce975bfaa13118f7fcc463f2e0486277 files/courier-imap-3.0.2-removerpm.patch 4264
+MD5 f156e5a11ab06f0bee9c0b1e6e2c8887 files/authdaemond.conf 440
+MD5 9e69a26cf7b3bf68338f701fece09a35 files/gentoo-imapd-ssl-1.7.3-r1.rc 1036
+MD5 d1bfa2a8019ebac0a33d3ef7a8945eeb files/courier-pop3d-ssl.rc6 1208
+MD5 73fffd635f45ec99ecf6a45a9d0e4516 files/courier-imap-3.0.2-disable-fam.diff 1996
 MD5 457d7f87a25f4f8f05af321130d846bf files/courier-imap-3.0.8-db4-bdbobj_configure.in.patch 1263
-MD5 39e2ec0f1212612a99f443d6e6275139 files/courier-imap-3.0.8-db4-configure.in.patch 1337
 MD5 06c960b3b160106abff0c0d3e84105d0 files/courier-imap-3.0.8-disable-fam-configure.in.patch 654
+MD5 dfe2c230fed9f3be8e27d5d0baeef193 files/courier-imap-3.0.2-db40vs41.patch 585
+MD5 39e2ec0f1212612a99f443d6e6275139 files/courier-imap-3.0.8-db4-configure.in.patch 1337
+MD5 5d57e73c7593d5bb37135d3964d6d4c2 files/digest-courier-imap-3.0.7 72
 MD5 140a2653b4e3e2b7c9967d691da7a9ea files/digest-courier-imap-3.0.8 72
+MD5 39e2ec0f1212612a99f443d6e6275139 files/courier-imap-3.0.7-db4-configure.in.patch 1337
+MD5 2399f4a660fd7149e3fe19f0bfc230e1 files/gentoo-imapd-1.7.3-r1.rc 1074
+MD5 9626da27b0e11f495ea062e6166e11d3 files/gentoo-imapd-ssl.rc 1013
+MD5 70a999ccc2bc13e7df65b72959fa6f7d files/gentoo-pop3d.rc 997
+MD5 92cd406de622a1cf2de2ffc0662349bc files/authdaemond.rc6 957
+MD5 9f46519bb9780f36b21727a008545b89 files/courier-pop3d.rc6 953
+MD5 7b677e761c000af45fa7a37635b0c5c8 files/mkpop3dcert 996
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBX5bWHTu7gpaalycRAsY8AKCgZlsDGd2ti2k0cChB3JQxpdirTgCg4nuS
-EhgaFjyGq7rgmeBNCn9qYaM=
-=UmrO
+iD8DBQFBhr5i5FrxP71izLARAjQdAKC9j7ZzZleFkOywgPjvQjTo+onGXwCgoYca
+byj7Aug87cBUy2R9+6u2HNU=
+=Je7a
 -----END PGP SIGNATURE-----
