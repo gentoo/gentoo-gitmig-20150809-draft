@@ -1,4 +1,4 @@
-MD5 0fa99ba6e99efdc1360e9d4c86572d80 files/digest-bsdiff-4.1 60
-MD5 15b618027e915f44eaaad1d4c8c67855 bsdiff-4.1.ebuild 762
 MD5 874654bf4e0931d6efa05181dd7c0ad3 ChangeLog 552
-MD5 6bfff0e3b710123f064e9f3ac10f82c7 metadata.xml 328
+MD5 775f9ebae8b1afedfe8f4217575e0c32 bsdiff-4.1.ebuild 766
+MD5 56e46532cb9aa08b89639cf3e16f1145 metadata.xml 251
+MD5 0fa99ba6e99efdc1360e9d4c86572d80 files/digest-bsdiff-4.1 60
