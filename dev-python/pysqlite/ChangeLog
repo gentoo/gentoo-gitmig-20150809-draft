@@ -1,0 +1,7 @@
+# ChangeLog for dev-python/pysqlite
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.1 2002/07/30 08:32:24 rphillips Exp $
+
+*pysqlite-0.2.0 (30 Jul 2002)
+
+  30 Jul 2002; Ryan Phillips <rphillips@gentoo.org> pysqlite-0.2.0.ebuild : Initial.  Submitted by me.
