@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cmatrix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.3 2004/03/02 13:43:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.4 2004/03/30 00:22:22 gustavoz Exp $
+
+  29 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> cmatrix-1.2a.ebuild:
+  keyworded sparc, thanks to txromeo
 
   02 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> cmatrix-1.2a.ebuild:
   Add amd64 keyword.
