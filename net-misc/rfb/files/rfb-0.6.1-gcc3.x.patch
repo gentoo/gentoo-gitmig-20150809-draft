@@ -1,5 +1,5 @@
---- ./lib/Framebuffer.cc.orig	2002-09-29 17:27:45.000000000 -0400
-+++ ./lib/Framebuffer.cc	2002-09-29 17:28:37.000000000 -0400
+--- lib/Framebuffer.cc.orig	2002-09-29 17:27:45.000000000 -0400
++++ lib/Framebuffer.cc	2002-09-29 17:28:37.000000000 -0400
 @@ -161,7 +161,7 @@
                              unsigned int r,
                              unsigned int g,
@@ -51,8 +51,8 @@
      if ( width < 0 ) width = fb->width;
      if ( height < 0 ) height = fb->height;
      char tmp[255] = "";
---- ./lib/rfb.cc.orig	2002-09-29 17:34:41.000000000 -0400
-+++ ./lib/rfb.cc	2002-09-29 17:34:51.000000000 -0400
+--- lib/rfb.cc.orig	2002-09-29 17:34:41.000000000 -0400
++++ lib/rfb.cc	2002-09-29 17:34:51.000000000 -0400
 @@ -28,7 +28,7 @@
  /* CARD16                                         */
  /**************************************************/
@@ -71,8 +71,8 @@
  {
    value[3] = _value;
    _value >>= 8;
---- ./lib/rfbServer.cc.orig	2002-09-29 17:37:06.000000000 -0400
-+++ ./lib/rfbServer.cc	2002-09-29 17:41:36.000000000 -0400
+--- lib/rfbServer.cc.orig	2002-09-29 17:37:06.000000000 -0400
++++ lib/rfbServer.cc	2002-09-29 17:41:36.000000000 -0400
 @@ -22,8 +22,12 @@
  #include "rfbServer.h"
  #include <stdlib.h>
@@ -86,8 +86,8 @@
  
  namespace rfb {
  
---- ./include/rfbServer.h.orig	2002-09-29 17:29:06.000000000 -0400
-+++ ./include/rfbServer.h	2002-09-29 17:34:19.000000000 -0400
+--- include/rfbServer.h.orig	2002-09-29 17:29:06.000000000 -0400
++++ include/rfbServer.h	2002-09-29 17:34:19.000000000 -0400
 @@ -26,6 +26,7 @@
  #include "Framebuffer.h"
  
@@ -96,8 +96,8 @@
  
  namespace rfb {
  
---- ./include/rfbClient.h.orig	2002-09-29 17:36:15.000000000 -0400
-+++ ./include/rfbClient.h	2002-09-29 17:36:33.000000000 -0400
+--- include/rfbClient.h.orig	2002-09-29 17:36:15.000000000 -0400
++++ include/rfbClient.h	2002-09-29 17:36:33.000000000 -0400
 @@ -257,7 +257,7 @@
  
   protected:
@@ -107,8 +107,8 @@
  };
  
  
---- ./x0rfbserver/xclass++.h.orig	2002-09-29 17:49:18.000000000 -0400
-+++ ./x0rfbserver/xclass++.h	2002-09-29 17:49:24.000000000 -0400
+--- x0rfbserver/xclass++.h.orig	2002-09-29 17:49:18.000000000 -0400
++++ x0rfbserver/xclass++.h	2002-09-29 17:49:24.000000000 -0400
 @@ -2,7 +2,7 @@
  #define _hexonet_xclass_plusplus_
  
@@ -118,8 +118,8 @@
  
  #define LAYOUT_HINTS map< OXFrame*, OLayoutHints* > layoutHints
  
---- ./x0rfbserver/XUpdateScanner.cc.orig	2002-09-29 17:50:40.000000000 -0400
-+++ ./x0rfbserver/XUpdateScanner.cc	2002-09-29 17:51:12.000000000 -0400
+--- x0rfbserver/XUpdateScanner.cc.orig	2002-09-29 17:50:40.000000000 -0400
++++ x0rfbserver/XUpdateScanner.cc	2002-09-29 17:51:12.000000000 -0400
 @@ -18,6 +18,10 @@
   *  USA.
   */
@@ -131,8 +131,8 @@
  #include <sys/ipc.h>
  #include <sys/shm.h>
  #include <X11/Xlib.h>
---- ./x0rfbserver/x0rfbserver.cc.orig	2002-09-29 17:51:53.000000000 -0400
-+++ ./x0rfbserver/x0rfbserver.cc	2002-09-29 17:52:23.000000000 -0400
+--- x0rfbserver/x0rfbserver.cc.orig	2002-09-29 17:51:53.000000000 -0400
++++ x0rfbserver/x0rfbserver.cc	2002-09-29 17:52:23.000000000 -0400
 @@ -18,6 +18,10 @@
   *  USA.
   */
@@ -144,8 +144,8 @@
  #include "rfbServer.h"
  #include "version.h"
  #include "OXAbout.h"
---- ./xrfbviewer/OXViewerApplet.h.orig	2002-09-29 17:44:49.000000000 -0400
-+++ ./xrfbviewer/OXViewerApplet.h	2002-09-29 17:45:02.000000000 -0400
+--- xrfbviewer/OXViewerApplet.h.orig	2002-09-29 17:44:49.000000000 -0400
++++ xrfbviewer/OXViewerApplet.h	2002-09-29 17:45:02.000000000 -0400
 @@ -31,6 +31,7 @@
  #include "ConnectionInfo.h"
  
@@ -154,8 +154,8 @@
  
  class OXCompositeFrame;
  
---- ./xrfbviewer/xclass++.h.orig	2002-09-29 17:44:53.000000000 -0400
-+++ ./xrfbviewer/xclass++.h	2002-09-29 17:45:10.000000000 -0400
+--- xrfbviewer/xclass++.h.orig	2002-09-29 17:44:53.000000000 -0400
++++ xrfbviewer/xclass++.h	2002-09-29 17:45:10.000000000 -0400
 @@ -2,7 +2,7 @@
  #define _hexonet_xclass_plusplus_
  
@@ -165,8 +165,8 @@
  
  #define LAYOUT_HINTS map< OXFrame*, OLayoutHints* > layoutHints
  
---- ./xrfbviewer/OXViewerApplet.cc.orig	2002-09-29 17:47:01.000000000 -0400
-+++ ./xrfbviewer/OXViewerApplet.cc	2002-09-29 17:47:32.000000000 -0400
+--- xrfbviewer/OXViewerApplet.cc.orig	2002-09-29 17:47:01.000000000 -0400
++++ xrfbviewer/OXViewerApplet.cc	2002-09-29 17:47:32.000000000 -0400
 @@ -25,6 +25,8 @@
  #include "OXConnectionDetails.h"
  
@@ -176,8 +176,8 @@
  
  #include <sys/types.h>
  #include <fcntl.h>
---- ./rfbcat/rfbcat.cc.orig	2002-09-29 17:54:27.000000000 -0400
-+++ ./rfbcat/rfbcat.cc	2002-09-29 17:54:43.000000000 -0400
+--- rfbcat/rfbcat.cc.orig	2002-09-29 17:54:27.000000000 -0400
++++ rfbcat/rfbcat.cc	2002-09-29 17:54:43.000000000 -0400
 @@ -21,6 +21,8 @@
  #include "rfbClient.h"
  
