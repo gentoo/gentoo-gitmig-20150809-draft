@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 4abcaaffe0e2bc00ab3f44ed59ab4b4c ChangeLog 2139
 MD5 536195a889b2b674acae78aa320e2991 ircii-20030709-r2.ebuild 864
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 e3abfffa136ec95250525a3c630ab20b ircii-20040820.ebuild 850
-MD5 2601435741aa2b86d44abde66604f2e2 ChangeLog 2045
+MD5 f3f6d9af505db0f37d299bda7ab1e3b5 ircii-20040820.ebuild 849
 MD5 954a7ad41538e4a5f68b720074da0891 files/digest-ircii-20030709-r2 67
 MD5 d050eac938d29febadf6f5cc939f0f03 files/digest-ircii-20040820 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXLMwI1lqEGTUzyQRArwNAJ9hZR7FqSd62MnL3J4WXUMKb1R2JgCffizD
-orcTG4yDJlwY17QezSd75aM=
-=Laky
------END PGP SIGNATURE-----
