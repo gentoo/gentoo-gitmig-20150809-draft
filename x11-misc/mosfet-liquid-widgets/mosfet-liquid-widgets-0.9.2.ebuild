@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mosfet-liquid-widgets/mosfet-liquid-widgets-0.9.1.ebuild,v 1.1 2002/03/24 14:58:32 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mosfet-liquid-widgets/mosfet-liquid-widgets-0.9.2.ebuild,v 1.1 2002/03/26 12:51:57 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
