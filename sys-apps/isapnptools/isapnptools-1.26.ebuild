@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.26.ebuild,v 1.5 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.26.ebuild,v 1.6 2002/07/21 20:03:17 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools for configuring ISA PnP devices"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/hardware/${P}.tgz"
 HOMEPAGE="http://www.roestock.demon.co.uk/isapnptools/"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
