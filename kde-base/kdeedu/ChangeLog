@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.10 2002/11/12 20:03:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.11 2002/12/04 23:15:36 doctomoe Exp $
+
+  04 Dec 2002; Olivier Reisch <doctomoe@gentoo.org> kdeedu-3.1.ebuild:
+  Added ppc keyword
 
 *kdeedu-3.1_rc3 (12 Nov 2002)
 
