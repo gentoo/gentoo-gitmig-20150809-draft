@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header :$
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/themes
 DESCRIPTION="A set of themes for Openbox3."
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://home.clara.co.uk/dpb/openbox.htm"
@@ -13,12 +13,8 @@ SLOT="0"
 
 DEPEND=">=x11-wm/openbox-3.0_beta2"
 
-src_compile() {
-	local myconf
-	econf ${myconf} || die
-	emake || die
-}
-
 src_install() {
-	make DESTDIR=${D} install || die
+	rm ${S}/*.tar.gz
+	dodir /usr/share/openbox/themes
+	cp -a ${S}/* ${D}/usr/share/openbox/themes
 }
