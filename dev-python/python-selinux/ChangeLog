@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-selinux
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.9 2003/10/29 06:12:35 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.10 2003/11/09 19:07:29 method Exp $
+
+*python-selinux-2.8 (09 Nov 2003)
+
+  09 Nov 2003; Joshua Brindle <method@gentoo.org> python-selinux-2.8.ebuild:
+  fixed getfilecon() error handling
 
   29 Oct 2003; Joshua Brindle <method@gentoo.org> python-selinux-1.2.ebuild,
   python-selinux-1.2.ebuild, python-selinux-2.7.ebuild:
