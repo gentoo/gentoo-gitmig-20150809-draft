@@ -2,6 +2,12 @@
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.2 2002/04/16 01:14:04 seemant Exp
 
+*t1lib-5.0.2 (28 Apr 2004)
+
+  28 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to close #44122 by Michaelian Ennis and gcc-3.4 issues
+  #49237 by Robert Moss.
+
 *t1lib-5.0.1 (22 Feb 2004)
 
   22 Feb 2004; <matsuu@gentoo.org> t1lib-5.0.1.ebuild:
