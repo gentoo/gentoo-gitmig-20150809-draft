@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.5.ebuild,v 1.4 2004/04/24 07:56:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.5.ebuild,v 1.5 2004/05/06 23:01:19 vapier Exp $
 
 W_VER="1.4.2"
 
@@ -61,10 +61,10 @@ src_install() {
 	else
 		newbin ${FILESDIR}/${PN}-${PV} ${PN}
 	fi
+	dosed "s:PORTAGE-VERSION:${PV}:" /usr/bin/${PN}
 }
 
 pkg_postinst() {
-
 	# Do we have a valid multi ver setup ?
 	if ${ROOT}/usr/bin/gcc-config --get-current-profile &> /dev/null
 	then
