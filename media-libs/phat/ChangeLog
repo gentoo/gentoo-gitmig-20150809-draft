@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phat
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.1 2004/10/16 01:55:39 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.2 2004/10/16 10:05:36 hansmi Exp $
+
+  16 Oct 2004; Michael Hanselmann <hansmi@gentoo.org> phat-0.2.3.ebuild:
+  Added to ~ppc.
 
 *phat-0.2.3 (16 Oct 2004)
 
