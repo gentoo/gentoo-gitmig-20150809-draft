@@ -7,12 +7,17 @@ source /etc/rc.d/config/functions
 
 CONFFILE=/etc/isapnp.conf
 
-if [ -e $CONFFILE ]; then
-	if [ -e /sbin/isapnp ]
-	then
+if [ -e $CONFFILE ] ; then
+	if [ -e /sbin/isapnp ] ; then
 		ebegin "Configuring ISA PnP devices"
 		/sbin/isapnp $CONFFILE 1>&2
 		eend $? "Error configuring ISA PnP"
+	else
+		eerror "You're missing /sbin/isapnp. Do emerge sys-apps/isapnptools"
+		return 1
 	fi
+else
+	eerror "You need an /etc/isapnp.conf file first"
+	return 1
 fi
-
+}

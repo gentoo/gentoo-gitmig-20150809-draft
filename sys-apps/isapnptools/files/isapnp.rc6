@@ -6,11 +6,16 @@ depend() {
 
 start() {
 if [ -e /etc/isapnp.conf ]; then
-	if [ -e /sbin/isapnp ]
-	then
+	if [ -e /sbin/isapnp ] ; then
 		ebegin "Configuring ISA PnP devices"
 		/sbin/isapnp /etc/isapnp.conf 1>&2
 		eend $? "Error configuring ISA PnP"
+	else
+		eerror "You're missing /sbin/isapnp. Do emerge sys-apps/isapnptools"
+		return 1
 	fi
+else
+	eerror "You need an /etc/isapnp.conf file first"
+	return 1
 fi
 }
