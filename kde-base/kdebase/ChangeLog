@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.22 2002/08/23 11:48:40 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.23 2002/08/29 14:59:56 danarmak Exp $
+
+  29 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix the sed on kdmrc so that it expands kde- into e.g. kde-3.0.3, and
+  desn't add a literal '' to the session list.
 
   23 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 

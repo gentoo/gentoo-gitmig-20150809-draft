@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.3.ebuild,v 1.2 2002/08/23 11:48:40 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.3.ebuild,v 1.3 2002/08/29 14:59:56 danarmak Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - base packages: the desktop, panel, window manager, konqueror..."
@@ -69,7 +69,7 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
     cd ${D}/${KDEDIR}/share/config/kdm || die
     mv kdmrc kdmrc.orig
-    sed -e 's:SessionTypes=:SessionTypes=kde-3.0,kde-2.2.2,:' kdmrc.orig > kdmrc
+    sed -e "s:SessionTypes=:SessionTypes=kde-$PV,:" kdmrc.orig > kdmrc
     rm kdmrc.orig
 
     #backup splashscreen images, so they can be put back when unmerging 
