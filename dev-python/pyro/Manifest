@@ -1,7 +1,20 @@
-MD5 5edbd7c0c92f1ca6c53684cc27786a18 ChangeLog 770
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aa2296c2b9ecebf6fb1ec9c9cd0f0a3e ChangeLog 922
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 144626f285470a110d00b96a8841cdaf pyro-3.3-r1.ebuild 976
-MD5 db1b122d710e2c26d2e774ffc03ec5d9 pyro-3.3.ebuild 795
+MD5 780c45d551f9f009ed0a4e3d9b818823 pyro-3.3.ebuild 798
+MD5 173250372ca0f05de9bbcb34605848c5 pyro-3.4.ebuild 979
+MD5 bf5ba9d038dd9fdac5b05226f26e411e pyro-3.3-r1.ebuild 981
+MD5 2f6380f548ae4fc0a299f034c247cde0 files/digest-pyro-3.4 60
 MD5 cdae824e917caf8378aaa36510f771b5 files/digest-pyro-3.3 60
-MD5 cdae824e917caf8378aaa36510f771b5 files/digest-pyro-3.3-r1 60
 MD5 8415324a478ba3479fe4422e81739853 files/pyro-3.3-unattend.patch 419
+MD5 cdae824e917caf8378aaa36510f771b5 files/digest-pyro-3.3-r1 60
+MD5 7652e1163c0529b0b4f6c6d0088767c9 files/pyro-3.4-unattend.patch 419
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+nN/z2gxt1z4IGYRAod6AJ9JfCv1vt7Mgd9ZTDJFLXL7JIHUMwCfaAkQ
+odUiOtQedwH/p/So59SS508=
+=dWUm
+-----END PGP SIGNATURE-----
