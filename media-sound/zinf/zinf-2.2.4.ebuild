@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.4.ebuild,v 1.1 2003/08/16 06:34:06 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.4.ebuild,v 1.2 2003/09/04 15:11:50 agriffis Exp $
 
 IUSE="esd X gtk oggvorbis gnome arts"
 
@@ -32,7 +32,7 @@ DEPEND="$RDEPEND x86? ( dev-lang/nasm )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha"
 
 src_unpack() {
     unpack ${A}
