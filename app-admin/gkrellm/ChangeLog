@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.9 2002/07/02 09:23:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.10 2002/07/16 00:43:21 owen Exp $
 
 *gkrellm-1.2.13 (02 Jul 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added PPC to KEYWORDS.
 
   02 Jul 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-1.2.13.ebuild
   files/digest-gkrellm-1.2.13 :
