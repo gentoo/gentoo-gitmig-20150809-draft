@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.45 2003/06/06 06:14:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.46 2003/06/06 06:16:36 drobbins Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -44,16 +44,13 @@ then
 	source /etc/profile
 fi
 
-if [ "$!" = "" ]
-then
-    echo
-    echo -e "${GOOD}Gentoo Linux${GENTOO_VERS}; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
-    echo -e " Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL"
-    echo
-    einfo "Starting Bootstrap of base system ..."
-    echo
-    echo
-fi
+echo
+echo -e "${GOOD}Gentoo Linux${GENTOO_VERS}; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
+echo -e " Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL"
+echo
+einfo "Starting Bootstrap of base system ..."
+echo
+echo
 
 # This should not be set to get glibc to build properly. See bug #7652.
 LD_LIBRARY_PATH=""
@@ -87,7 +84,7 @@ INVALID_USE="`gawk -v ORIGUSE="${ORIGUSE}" '
 	}'`"
 
 # Do not do the check for stage build scripts ...
-if [ "$1" = "" ] && [ "${INVALID_USE}" = "yes" ]
+if [ "${INVALID_USE}" = "yes" ]
 then
 	echo
 	eerror "You have 'build' or 'bootstrap' in your USE flags!  Please"
