@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.12 2003/03/11 17:52:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.13 2003/03/22 23:57:15 malverian Exp $
+
+*vmware-workstation-4.0.4320 (22 Mar 2003)
+
+  22 Mar 2003; Philip Walls <malverian@gentoo.org>
+  vmware-workstation-4.0.4320.ebuild, files/digest-vmware-workstation-4.0.4320,
+  files/4.0.4320/* :
+
+  Version bump. Added symlinks to /usr/bin, made vmware-vmx SUID,
+  Added init scripts and desktop icons for this version (non-existant in
+  4121). Added pciutils to DEPEND as required to run vmware-config.pl
+  Added RDEPEND=${DEPEND} according to policy.
 
 *vmware-workstation-4.0.4121 (11 Mar 2003)
 
