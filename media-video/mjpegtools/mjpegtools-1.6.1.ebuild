@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.2 2003/02/13 13:29:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.3 2003/04/15 02:28:14 seemant Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
 
@@ -25,6 +25,7 @@ RDEPEND="media-libs/jpeg
 	arts? ( kde-base/arts )"
 
 DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.0.5
 	x86? ( media-libs/libmovtar )
 	avi? ( media-video/avifile )
 	quicktime? ( >=media-libs/quicktime4linux-1.5.5-r1 )
@@ -42,17 +43,14 @@ src_unpack() {
 	if [ ! -z "`use quicktime`" ]
 	then
 		cd ${WORKDIR}/quicktime4linux-1.4-patch
-		cp libmjpeg.h libmjpeg.h.orig
-		sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h.orig > libmjpeg.h
-		cp jpeg_old.h jpeg_old.h.orig
-		sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h.orig > jpeg_old.h
+		sed -i "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h
+		sed -i "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h
 
-		# Don't remove this - contact phoen][x <phoenix@gentoo.org> if you have problems with it.
+		# Don't remove this!!!
+		# Contact phoen][x <phoenix@gentoo.org> if you have problems with it.
 		cd ${S}/lavtools
-		mv lav_common.c lav_common.c.old
-		mv lav_io.c lav_io.c.old
-		sed -e "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_common.c.old > lav_common.c
-		sed -e "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_io.c.old > lav_io.c
+		sed -i "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_common.c
+		sed -i "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_io.c
 	fi
 }
 
