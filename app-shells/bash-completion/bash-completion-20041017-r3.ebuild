@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r3.ebuild,v 1.3 2005/01/01 15:56:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r3.ebuild,v 1.4 2005/01/02 16:13:44 ka0ttic Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo.diff
+	epatch ${FILESDIR}/${PV}-rcs.diff
 }
 
 src_install() {
