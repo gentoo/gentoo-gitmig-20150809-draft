@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/logserial
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/ChangeLog,v 1.1 2004/10/26 14:40:54 malverian Exp $
+
+*logserial-0.4.2 (26 Oct 2004)
+
+  26 Oct 2004; Philip Walls <malverian@gentoo.org> +logserial-0.4.2.ebuild:
+  New ebuild
