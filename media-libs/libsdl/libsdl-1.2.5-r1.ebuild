@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.2 2003/01/21 16:39:12 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.3 2003/01/21 19:13:44 styx Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 
@@ -85,7 +85,7 @@ src_compile() {
 
 	#use directfb \
 	#	&& myconf="${myconf} --enable-video-directfb" \
-	#	|| myconf="${myconf} --disable-video-directfb"
+		myconf="${myconf} --disable-video-directfb"
 
 	use x86 \
 		&& myconf="${myconf} --enable-nasm" \
