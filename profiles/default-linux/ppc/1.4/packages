@@ -20,6 +20,8 @@
 *>=sys-fs/devfsd-1.3.20
 *>=sys-libs/pam-0.75-r9
 
+# emerge system profile
+
 *app-arch/bzip2
 *app-arch/cpio
 *app-arch/gzip
