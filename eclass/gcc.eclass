@@ -1,7 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.17 2004/09/15 23:10:21 kugelfang Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.18 2004/10/21 00:51:14 vapier Exp $
+
+
+# STOP USING THIS ECLASS
+# PLEASE TRANSITION TO TOOLCHAIN-FUNCS.ECLASS
+
+
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
 # This eclass contains (or should) functions to get common info about gcc
