@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r2.ebuild,v 1.6 2003/09/11 01:21:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r2.ebuild,v 1.7 2004/01/26 08:33:09 carpaski Exp $
 
 S=${WORKDIR}/${PN}
-T=${WORKDIR}/speech_tools
+TOOLSDIR=${WORKDIR}/speech_tools
 DESCRIPTION="Festival Text to Speech engine"
 GCCPV=`cc -dumpversion`
 IUSE=""
@@ -41,7 +41,7 @@ KEYWORDS="x86 ~ppc"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	cd ${T}
+	cd ${TOOLSDIR}
 	# This came from upstream as a quick fix to compile with gcc-3x
 	patch -p1 < ${FILESDIR}/${P}.patch || die
 
@@ -51,7 +51,7 @@ src_compile() {
 		[ `uname -m` = "ppc" ] \
 	        && ARCHTYPE="powerpc-unknown" \
 	        || ARCHTYPE="`uname -m`-pc"
-		echo "COMPILERLIBS=/usr/lib/gcc-lib/${ARCHTYPE}-linux-gnu/${GCCPV}/libstdc++.a /usr/lib/gcc-lib/${ARCHTYPE}-linux-gnu/${GCCPV}/libgcc_s.so.1" >> ${T}/config/config
+		echo "COMPILERLIBS=/usr/lib/gcc-lib/${ARCHTYPE}-linux-gnu/${GCCPV}/libstdc++.a /usr/lib/gcc-lib/${ARCHTYPE}-linux-gnu/${GCCPV}/libgcc_s.so.1" >> ${TOOLSDIR}/config/config
 	fi
 	# testsuite still fails to build under gcc-3.2
 	mv Makefile Makefile.orig

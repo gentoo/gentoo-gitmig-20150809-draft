@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r3.ebuild,v 1.5 2004/01/08 13:53:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r3.ebuild,v 1.6 2004/01/26 08:33:09 carpaski Exp $
 
 S=${WORKDIR}/${PN}
-T=${WORKDIR}/speech_tools
+TOOLSDIR=${WORKDIR}/speech_tools
 DESCRIPTION="Festival Text to Speech engine"
 GCCPV=`cc -dumpversion`
 IUSE=""
@@ -41,14 +41,14 @@ KEYWORDS="x86 ~ppc sparc"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	cd ${T}
+	cd ${TOOLSDIR}
 	# This came from upstream as a quick fix to compile with gcc-3x
 	patch -p1 < ${FILESDIR}/${P}.patch || die
 
 	econf
 	# static linking seems to work <rigo@home.nl>
 	if [ ${GCCPV} != "2.95.3" ] ; then
-		echo "COMPILERLIBS=/usr/lib/gcc-lib/${CHOST}/${GCCPV}/libstdc++.a /usr/lib/gcc-lib/${CHOST}/${GCCPV}/libgcc_s.so.1" >> ${T}/config/config
+		echo "COMPILERLIBS=/usr/lib/gcc-lib/${CHOST}/${GCCPV}/libstdc++.a /usr/lib/gcc-lib/${CHOST}/${GCCPV}/libgcc_s.so.1" >> ${TOOLSDIR}/config/config
 	fi
 	# testsuite still fails to build under gcc-3.2
 	mv Makefile Makefile.orig

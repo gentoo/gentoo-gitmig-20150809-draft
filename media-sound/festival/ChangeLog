@@ -3,6 +3,10 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+  25 Jan 2004; <carpaski@gentoo.org> festival-1.4.2*: Fixed all references
+	to $T as that is a portage variable and yields AccessViolations when set
+	incorrectly.
+
   08 Jan 2004; <gustavoz@gentoo.org> festival-1.4.2-r3.ebuild:
   the parrot is stable on sparc
 

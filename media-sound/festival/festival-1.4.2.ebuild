@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2.ebuild,v 1.8 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2.ebuild,v 1.9 2004/01/26 08:33:09 carpaski Exp $
 
 S=${WORKDIR}/${PN}
-T=${WORKDIR}/speech_tools
+TOOLSDIR=${WORKDIR}/speech_tools
 DESCRIPTION="Festival Test to Speech engine"
 HOMEPAGE="http://www.cstr.ed.ac.uk/"
 SITE="http://www.speech.cs.cmu.edu/${PN}/cstr/${PN}/${PV}"
@@ -27,7 +27,7 @@ LICENSE="FESTIVAL BSD as-is"
 KEYWORDS="x86 -ppc"
 
 src_compile() {
-	cd ${T}
+	cd ${TOOLSDIR}
 	econf || die
 	patch -p1 < ${WORKDIR}/speech_tools.patch || die
 
