@@ -1,6 +1,6 @@
 MD5 9ad2b680e82f3de8604e38acd03efde1 ChangeLog 7832
 MD5 4df72e65b139d3e4c18bec81f3a561df metadata.xml 227
-MD5 ba137d2445095dbd388fbd7eb0f6eb71 gs-sources-2.4.25_pre7-r6.ebuild 2800
+MD5 24745b26b0d3198541c6d403ef55c036 gs-sources-2.4.25_pre7-r6.ebuild 2804
 MD5 302215db36238af65fd57bd22db6d7ed files/digest-gs-sources-2.4.25_pre7-r6 147
 MD5 517fc1b71501382d041ce0bdfe304511 files/00_3.5-useraddress.patch 7247
 MD5 21f3a4f186017d925067335e24db36a1 files/gs-sources.CAN-2004-0109.patch 1877

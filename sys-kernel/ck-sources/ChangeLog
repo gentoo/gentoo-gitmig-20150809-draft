@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.36 2004/06/13 20:22:57 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.37 2004/06/20 12:32:18 plasmaroo Exp $
+
+*ck-sources-2.6.7-r1 (20 Jun 2004)
+
+  20 Jun 2004; <plasmaroo@gentoo.org> +ck-sources-2.6.7-r1.ebuild:
+  Version bump; closes bug #54155.
 
   13 Jun 2004; <plasmaroo@gentoo.org> ck-sources-2.4.26-r1.ebuild,
   ck-sources-2.6.4-r2.ebuild, +files/ck-sources-2.4.26.FPULockup-53804.patch,
