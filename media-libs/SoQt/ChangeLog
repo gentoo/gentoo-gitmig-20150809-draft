@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/SoQt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.6 2004/02/26 05:35:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.7 2004/03/08 01:12:32 mr_bones_ Exp $
+
+  07 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> :
+  Removed SoQt-20010601-r1.ebuild since it depends on a version of
+  media-libs/coin that is no longer in portage.
 
   25 Feb 2004; Jason Wever <weeve@gentoo.org> SoQt-20010601-r1.ebuild:
   Masked 20010601 on sparc since coin dependency cannot be met.
