@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.85 2004/11/07 23:48:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.86 2004/11/17 11:35:58 kloeri Exp $
+
+  17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kde-3.3.1.ebuild:
+  Stable on alpha.
 
   08 Nov 2004; Lars Weiler <pylon@gentoo.org> kde-3.3.1.ebuild:
   Stable on ppc.

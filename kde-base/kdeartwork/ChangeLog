@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.98 2004/11/07 23:37:17 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.99 2004/11/17 11:27:54 kloeri Exp $
+
+  17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  kdeartwork-3.3.1.ebuild:
+  Stable on alpha.
 
   08 Nov 2004; Lars Weiler <pylon@gentoo.org> kdeartwork-3.3.1.ebuild:
   Stable on ppc.
