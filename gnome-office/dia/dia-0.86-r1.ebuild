@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-office/dia/dia-0.86-r1.ebuild,v 1.1 2000/11/25 13:03:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-office/dia/dia-0.86-r1.ebuild,v 1.2 2000/11/25 14:17:12 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,8 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/gnome-office/dia.shtml"
 
 DEPEND=">=gnome-base/gnome-print-0.24
-	>=app-arch/rpm-3.0.5"
+	>=app-arch/rpm-3.0.5
+	bonobo? ( >=gnome-base/bonobo-0.28 )"
 
 src_compile() {
 
