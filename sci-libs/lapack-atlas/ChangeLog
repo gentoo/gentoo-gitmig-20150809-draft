@@ -1,0 +1,56 @@
+# ChangeLog for app-sci/lapack-atlas
+# Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.1 2004/12/29 18:26:45 ribosome Exp $
+
+*lapack-atlas-3.6.0 (29 Dec 2004)
+
+  29 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/f77-ATLAS, +files/war, +lapack-atlas-3.6.0.ebuild:
+  Moved from app-sci/lapack-atlas to sci-libs/lapack-atlas.
+
+  17 Nov 2004; Markus Rothe <corsair@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  stable on ppc64
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  Use tc-getCC from toolchain-funcs rather than $CC.
+
+  12 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  Marked stable on amd64.
+
+  09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  marked ~ppc64
+
+  12 Jul 2004; George Shapovalov <george@gentoo.org> lapack-atlas-3.6.0.ebuild :
+  added filtering of CFLAGS for g77 (#56265), 
+  thanks to Sourav Mandal <sourav@sourav.net> for suggestion.
+
+  04 Jul 2004; Ferris McCormick <fmccor@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  Add (missed) ~sparc keyword.
+
+  05 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  Marked ~ppc (tested myself) and ~sparc (tested by fmccor).
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  lapack-atlas-3.6.0.ebuild:
+  virtual/glibc -> virtual/libc
+
+  10 Jun 2004; George Shapovalov <george@gentoo.org> lapack-atlas-3.6.0.ebuild, files/{atlas3.6.0-shared-libs.patch.bz2,} pack-20020531-20021004.patch.bz2,lapack-gentoo.patch,digest-lapack-atlas-3.6.0 :
+  moved files shared with lapack-reference to mirrors (one of them was a large patch as well)
+  unmasked in package.mask
+
+  05 Jun 2004; George Shapovalov <george@gentoo.org> lapack-atlas-3.6.0.ebuild :
+  fixed check for g77 - it is always necessary, even if ifc is installed (#30459)
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  Fix use invocation
+
+  12 May 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  lapack-atlas-3.6.0.ebuild:
+  don't use deprecated ? : syntax
+
+*lapack-atlas-3.6.0 (11 May 2004)
+
+  11 May 2004; George Shapovalov <george@gentoo.org> lapack-atlas-3.6.0.ebuild, Manifest, files/{atlas3.6.0-shared-libs.patch.bz2,digest-lapack-atlas-3.6.0,f77-ATLAS,lapack-20020531-20021004.patch.bz2,lapack-gentoo.patch,war} :
+  initial release (#30459)
+  Full LAPACK implementation using available ATLAS routines
+  ebuild submitted by Derek Dolney <dolney@astro.upenn.edu>
