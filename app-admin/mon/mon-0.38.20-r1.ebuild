@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r1.ebuild,v 1.1 2001/04/05 15:56:03 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r1.ebuild,v 1.2 2001/04/30 09:15:53 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Highly configurable service monitoring daemon"
@@ -24,6 +24,7 @@ src_install () {
 
     insinto /etc/mon
     doins etc/*.cf etc/example.monshowrc
+    doins ${FILESDIR}/mon.cf
 
     insinto /usr/lib/mon/utils
     doins utils/*
