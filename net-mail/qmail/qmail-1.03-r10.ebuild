@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.3 2003/02/02 07:37:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.4 2003/02/03 01:08:50 raker Exp $
 
 IUSE="ssl"
 
@@ -129,7 +129,7 @@ src_install() {
 	qmail-popup qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-smtpd \
 	sendmail tcp-env qreceipt qsmhook qbiff forward preline \
 	condredirect bouncesaying except maildirmake maildir2mbox \
-	maildirwatch qail elq pinq config-fast
+	maildirwatch qail elq pinq config-fast qmail-todo
 
 	into /usr
 	for i in *.1 *.5 *.8
