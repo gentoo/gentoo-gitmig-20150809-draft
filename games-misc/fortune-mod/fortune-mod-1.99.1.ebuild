@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1.ebuild,v 1.5 2004/06/25 03:21:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1.ebuild,v 1.6 2004/07/01 11:19:52 eradicator Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~mips amd64"
 IUSE="offensive"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-text/recode"
 
 src_unpack() {
