@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfkickers
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.4 2003/12/26 01:17:24 weeve Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.5 2004/04/25 12:55:50 gmsoft Exp $
+
+  25 Apr 2004; Guy Martin <gmsoft@gentoo.org> elfkickers-2.0a.ebuild:
+  Removed unneeded nasm DEPEND. Marked stable on hppa and sparc.
 
   25 Dec 2003; Jason Wever <weeve@gentoo.org> elfkickers-2.0a.ebuild:
   Removed sparc keyword as this package cannot be emerged due to the dependency
