@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2.ebuild,v 1.1 2002/03/03 08:35:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2.ebuild,v 1.2 2002/03/03 12:37:00 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities to deal with user accounts"
@@ -13,8 +13,7 @@ DEPEND=">=sys-libs/pam-0.75-r4
 RDEPEND=">=sys-libs/pam-0.75-r4"
 
 src_compile() {
-	./configure \
-		--disable-desrpc \
+	./configure	--disable-desrpc \
 		--with-libcrypt \
 		--with-libcrack \
 		--with-libpam \
@@ -41,6 +40,9 @@ src_install() {
 	dosym /usr/sbin/vipw /usr/sbin/vigr
 	# remove dead links
 	rm -f ${D}/bin/{sg,vipw}
+
+	insinto /usr/lib
+	doins ${FILESDIR}/cracklib/cracklib_dict.*
 
 	insinto /etc
 	# Using a securetty with devfs device names added
@@ -73,5 +75,15 @@ src_install() {
 	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
 	docinto txt
 	dodoc HOWTO LSM README.* *.txt
+}
+
+pkg_postinst() {
+	echo
+	echo "****************************************************"
+	echo "  This version of shadow uses CRACKLIB to check"
+	echo "  passwords, and for it to work properly, a reboot"
+	echo "  is needed, sorry."
+	echo "****************************************************"
+	echo
 }
 
