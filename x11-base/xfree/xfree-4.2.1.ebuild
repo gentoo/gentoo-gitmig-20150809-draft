@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.23 2002/10/28 07:46:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.24 2002/10/28 10:07:27 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -514,7 +514,7 @@ pkg_postinst() {
 			# Only generate .scale files if there are truetype
 			# fonts present ...
 			if [ "${x/encodings}" = "${x}" -a \
-			     -n "$(find ${x} -name '*.tt[cf]' -print)"]
+			     -n "$(find ${x} -name '*.tt[cf]' -print)" ]
 			then
 				${ROOT}/usr/X11R6/bin/ttmkfdir \
 					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
