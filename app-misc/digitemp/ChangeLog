@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/digitemp
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.1 2003/09/15 14:06:56 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.2 2004/02/02 20:42:11 mholzer Exp $
+
+*digitemp-3.3.1 (02 Feb 2004)
+
+  02 Feb 2004; Martin Holzer <mholzer@gentoo.org> digitemp-3.3.1.ebuild:
+  Version bumped. Closes 39946
 
 *digitemp-3.2.0 (15 Sep 2003)
 
