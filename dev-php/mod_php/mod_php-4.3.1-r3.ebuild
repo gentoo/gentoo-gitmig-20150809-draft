@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.9 2003/05/26 23:22:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.10 2003/05/26 23:27:34 robbat2 Exp $
 
 inherit php eutils
 
@@ -14,11 +14,11 @@ DEPEND="${DEPEND}
 	|| (
 		apache2? ( >=net-www/apache-2.0.43-r1 )
 		>=net-www/apache-1.3.26-r2
-	)"
+	) "
 
 src_compile() {
 	#no readline on server SAPI
-	myconf="${myconf} --without-readline "
+	myconf="${myconf} --without-readline"
 
 	# Every Apache2 MPM EXCEPT prefork needs Zend Thread Safety
 	if [ "`use apache2`" ]; then
