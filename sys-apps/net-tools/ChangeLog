@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.48 2005/01/10 18:30:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.49 2005/02/12 03:18:08 vapier Exp $
+
+*net-tools-1.60-r11 (11 Feb 2005)
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +net-tools-1.60-r11.ebuild:
+  Move to using a patch tarball, add some updates from Fedora, add ipv6
+  hostname fix by pasi.valminen@hut.fi #42650, and add support for infiniband
+  to ifconfig by Tom Duffy #81180.
 
   10 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   +files/1.60-Makefile.patch, net-tools-1.60-r10.ebuild:
