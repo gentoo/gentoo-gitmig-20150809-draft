@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/dosfstools-2.8-r2.ebuild,v 1.4 2002/08/16 02:21:27 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/dosfstools-2.8-r2.ebuild,v 1.5 2002/09/19 03:17:02 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="dos filesystem tools"
 SRC_URI="ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools/${P}.src.tar.gz"
-HOMEPAGE="ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools"
+HOMEPAGE="ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools"
 
 SLOT="0"
 LICENSE="GPL-2"

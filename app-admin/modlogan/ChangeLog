@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.4 2002/08/16 12:14:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.5 2002/09/19 03:19:06 vapier Exp $
 
 *modlogan-0.7.18 (16 Aug 2002)
 
@@ -11,6 +11,9 @@
   #6486 by vinz@alita.cc (vinz meier)
 
 *modlogan-0.7.4-r1 (12 Apr 2002)
+
+  18 Sept 2002; Mike Frysinger <vapier@gentoo.org> modlogan-0.7.4-r1.ebuild :
+  Fixed HOMEPAGE variable
 
   21 Jul 2002; Seemant Kulleen <seemant@gentoo.org> modlogan-0.7.4-r1.ebuild :
  
