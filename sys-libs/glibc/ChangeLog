@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.254 2004/09/19 04:18:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.255 2004/09/19 07:12:14 kumba Exp $
+
+  19 Sep 2004; Joshua Kinard <kumba@gentoo.org>
+  glibc-2.3.4.20040619-r1.ebuild:
+  QA fix: Added n32/n64 to IUSE.
 
 *glibc-2.3.4.20040918 (19 Sep 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.17 2004/09/13 04:05:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.18 2004/09/19 07:12:14 kumba Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -45,7 +45,7 @@ fi
 LICENSE="LGPL-2"
 SLOT="2.2"
 KEYWORDS="-* ~x86 mips amd64 ~hppa ~ppc ~ia64"
-IUSE="userlocales pic build nptl erandom hardened makecheck multilib debug"
+IUSE="userlocales pic build nptl erandom hardened makecheck multilib debug n32 n64"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
