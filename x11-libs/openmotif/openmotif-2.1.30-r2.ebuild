@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r2.ebuild,v 1.3 2003/12/01 15:26:57 lanius Exp $
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
