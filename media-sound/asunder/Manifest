@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5de843f454b7879de4ccf2c788d3d913 asunder-0.1.0.ebuild 884
+MD5 d0c796b12005fb7f65241dcc521fcb39 ChangeLog 432
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 bf7f18ef1aa5ef5e6bf20f2ada912f73 files/asunder.desktop 210
+MD5 6e4435adf4bcb11a7240fe0c22bb19b8 files/digest-asunder-0.1.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSVHz06ebR+OMO78RAnEwAJ4hWIHi3E9iLIloaW6ENVXx6wy/qgCgj/qT
+PWqZW8qqB4cHv85WuoxM0+I=
+=UPtB
+-----END PGP SIGNATURE-----
