@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 32a232fb46efafb0fdaba5d5246e7572 baselayout-1.11.10-r1.ebuild 16885
-MD5 4babcf8301494aba9191eb7fa841449a ChangeLog 49986
+MD5 9235d9c043b0e87a73a7e89120c7d4ba ChangeLog 50147
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 63fe1de96f6485a4e395d1a9132b8b33 baselayout-1.11.8-r3.ebuild 16828
 MD5 30d111c4ff4ffa5712a71ab4ac7e2c02 baselayout-1.11.9-r1.ebuild 17015
@@ -10,7 +10,7 @@ MD5 a564d6194f6a91d76d572a0f934c4faa baselayout-1.9.4-r7.ebuild 18143
 MD5 7875c929dd71e995da27936c6d859717 baselayout-1.9.4-r6.ebuild 16862
 MD5 d124ceab1208e23c4d2b5ce5eb2a882b baselayout-1.11.10.ebuild 16827
 MD5 090789f9ee35e61ba4c68e048a474e4a baselayout-1.11.10-r2.ebuild 17000
-MD5 d61e4a00085df2dbae64d376613ccd8c baselayout-1.12.0_alpha1-r2.ebuild 17217
+MD5 9f85c4efd4f7184fe238eff95a1c0877 baselayout-1.12.0_alpha1-r2.ebuild 17338
 MD5 9d6be55475cd744a889551d6cc31596b files/digest-baselayout-1.11.10-r1 70
 MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
 MD5 9d6be55475cd744a889551d6cc31596b files/digest-baselayout-1.11.10 70
@@ -36,7 +36,7 @@ MD5 2fdc18068389dc7268dddad2bae82dfe files/baselayout-1.12.0_alpha1-modules-retu
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCN1hr1ZcsMnZjRyIRAmvbAJ9YrNT78rgaowa5mvD/UFwRNQB4hgCfclLy
-JTMq9a6ZorvQknv5KlW7it4=
-=tEDA
+iD8DBQFCN/9+1ZcsMnZjRyIRAkVGAKCnBaeH0juGDhGOa/IVFXWmNriiQQCdGqUL
+sMMCaSzwVoUYThqx8P/5j6M=
+=xr+5
 -----END PGP SIGNATURE-----
