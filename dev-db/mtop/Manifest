@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a3273ee907816a888ecd97a6da8bf594 mtop-0.6.6.ebuild 743
+MD5 0c763a8abd2381c1c429b614357c39bd ChangeLog 372
+MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
+MD5 c6c3f43a75962f05aa2139baeb6a1da5 files/digest-mtop-0.6.6 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+Comment: .//Manifest 1095100151
+
+iD8DBQFBReb+PpIsIjIzwiwRAi0uAJ936qIgylWZvM8Qwi8giXRWpWEVqgCfc7xj
+5wTPoPRworArifihX0TKz7w=
+=s+hf
+-----END PGP SIGNATURE-----

@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/mtop
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mtop/ChangeLog,v 1.1 2004/09/13 18:29:05 robbat2 Exp $
+
+*mtop-0.6.6 (13 Sep 2004)
+
+  13 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> +mtop-0.6.6.ebuild:
+  Bug #7684. Ebuild submitted by Minati jean michel <magnet@suidzer0.org>.
+
