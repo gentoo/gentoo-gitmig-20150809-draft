@@ -1,6 +1,16 @@
-MD5 a8291c2421573da6bd3d557da4f06b7b gmanedit-0.3.3-r3.ebuild 751
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 761daaa2b132e32fa905f3e13d5325ce ChangeLog 2482
 MD5 15b2d724e947afdd00bc6ff9978aa7cb gmanedit-0.3.3-r2.ebuild 688
-MD5 2a51aaf43915eed2865ab32446375715 ChangeLog 2402
+MD5 a8291c2421573da6bd3d557da4f06b7b gmanedit-0.3.3-r3.ebuild 751
 MD5 b5045ec85292bc55da60d60daf5c1821 files/digest-gmanedit-0.3.3-r2 67
 MD5 b5045ec85292bc55da60d60daf5c1821 files/digest-gmanedit-0.3.3-r3 67
 MD5 bd936e55b8a951bb0341f08e7cbe12ee files/gmanedit-0.3.3-xterm.patch 681
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOqoZI1lqEGTUzyQRAuh5AJ0RAZusut9GxedrZH5tS590YZgBqwCgi6oH
+3/wQpbJL/IquecR5fqXQ0lA=
+=xrlq
+-----END PGP SIGNATURE-----
