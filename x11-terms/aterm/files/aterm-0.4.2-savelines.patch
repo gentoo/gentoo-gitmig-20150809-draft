@@ -1,0 +1,121 @@
+diff -Naur aterm-0.4.2/src/main.c aterm-0.4.2-new/src/main.c
+--- aterm-0.4.2/src/main.c	2004-07-12 15:16:50.000000000 +0200
++++ aterm-0.4.2-new/src/main.c	2004-07-12 13:37:52.000000000 +0200
+@@ -1582,6 +1582,7 @@
+     int             saved_argc = argc;
+     char          **saved_argv = (char **)MALLOC((argc + 1) * sizeof(char *));
+ 
++    int           t;
+ 
+     PixColors = &(PixColorsFocused[0]);
+ 
+@@ -1754,12 +1755,21 @@
+ 	rs_title = rs_name;
+     if (!rs_iconName)
+ 	rs_iconName = rs_title;
+-    if (!rs_minBufferWidth || (TermWin.min_bcol = atoi(rs_minBufferWidth)) < 0)
++
++    if (!rs_minBufferWidth || (t = atoi(rs_minBufferWidth)) < 0)
+ 	TermWin.min_bcol = 1;
+-    if (!rs_saveLines || (TermWin.saveLines = atoi(rs_saveLines)) < 0)
+-	TermWin.saveLines = SAVELINES;
+-    if (!rs_borderWidth || (TermWin.borderWidth = atoi(rs_borderWidth)) < 0)
++    else 
++    	TermWin.min_bcol = t;
++
++    if (!rs_saveLines || (t = atoi(rs_saveLines)) < 0)
++    	TermWin.saveLines = SAVELINES;
++    else
++        TermWin.saveLines = t;
++
++    if (!rs_borderWidth || (t = atoi(rs_borderWidth)) < 0)
+         TermWin.borderWidth = BORDERWIDTH;
++    else
++        TermWin.borderWidth = t;
+ 
+ /* no point having a scrollbar without having any scrollback! */
+     if (!TermWin.saveLines)
+diff -Naur aterm-0.4.2/src/rxvt.h aterm-0.4.2-new/src/rxvt.h
+--- aterm-0.4.2/src/rxvt.h	2004-07-12 15:16:50.000000000 +0200
++++ aterm-0.4.2-new/src/rxvt.h	2004-07-12 12:32:09.000000000 +0200
+@@ -259,7 +259,7 @@
+ 
+ 
+ typedef struct {
+-    R_int16_t       width,	/* window width [pixels]                    */
++    R_u_int16_t     width,	/* window width [pixels]                    */
+ 		    height,	/* window height [pixels]                   */
+ 		    fwidth,	/* font width [pixels]                      */
+ 		    fheight,	/* font height [pixels]                     */
+diff -Naur aterm-0.4.2/src/screen.c aterm-0.4.2-new/src/screen.c
+--- aterm-0.4.2/src/screen.c	2004-07-12 15:16:50.000000000 +0200
++++ aterm-0.4.2-new/src/screen.c	2004-07-12 15:20:02.029447392 +0200
+@@ -236,12 +236,13 @@
+ 
+     if (TermWin.bcol == prev_bcol && TermWin.nrow == prev_nrow)
+ 	return;
+-
++#if 0 
+ #ifdef DEBUG_STRICT
+     assert(TermWin.saveLines >= 0);
+ #else				/* drive with your eyes closed */
+     MAX_IT(TermWin.saveLines, 0);
+ #endif
++#endif 
+ 
+     total_rows = TermWin.nrow + TermWin.saveLines;
+     prev_total_rows = prev_nrow + TermWin.saveLines;
+@@ -751,7 +752,10 @@
+ 	return 0;
+ 
+     if ((count > 0) && (row1 == 0) && (current_screen == PRIMARY)) {
+-	TermWin.nscrolled += count;
++	if (TermWin.saveLines - TermWin.nscrolled < count)
++		TermWin.nscrolled += TermWin.saveLines - TermWin.nscrolled;
++	else
++		TermWin.nscrolled += count;
+ 	MIN_IT(TermWin.nscrolled, TermWin.saveLines);
+     } else if (!spec)
+ 	row1 += TermWin.saveLines;
+@@ -1865,15 +1869,17 @@
+ int
+ scr_move_to(int y, int len)
+ {
+-    int             start;
++    int             start, t;
+ 
+     start = TermWin.view_start;
+-    TermWin.view_start = ((len - y) * (TermWin.nrow - 1 + TermWin.nscrolled)
++    t = ((len - y) * (TermWin.nrow - 1 + TermWin.nscrolled)
+ 			  / (len)) - (TermWin.nrow - 1);
+-    D_SCREEN((stderr, "scr_move_to(%d, %d) view_start:%d", y, len, TermWin.view_start));
++    D_SCREEN((stderr, "scr_move_to(%d, %d) view_start:%d", y, len, t));
+ 
+-    MAX_IT(TermWin.view_start, 0);
+-    MIN_IT(TermWin.view_start, TermWin.nscrolled);
++    MAX_IT(t, 0);
++    MIN_IT(t, TermWin.nscrolled);
++  
++    TermWin.view_start = t;
+ 
+     if (Gr_Displayed())
+ 	Gr_scroll(0);
+@@ -1896,8 +1902,16 @@
+     start = TermWin.view_start;
+     MAX_IT(nlines, 1);
+     MIN_IT(nlines, TermWin.nrow);
+-    TermWin.view_start += (nlines * dirn);
+-    MAX_IT(TermWin.view_start, 0);
++
++    if ((dirn == -1 && TermWin.view_start < nlines)) 
++	    TermWin.view_start = 0;	
++    else
++	    TermWin.view_start += (nlines * dirn);
++  
++    if (dirn == 1 && start > TermWin.view_start)
++    	TermWin.view_start = TermWin.nscrolled;    	
++		
++//  MAX_IT(TermWin.view_start, 0);
+     MIN_IT(TermWin.view_start, TermWin.nscrolled);
+ 
+     if (Gr_Displayed())
