@@ -22,6 +22,10 @@
 ##
 
 
+# <g2boojum@gentoo.org> (15 Sep 2002)
+# Masked for testing, 'cause it's not quite done, and 'cause there's a freeze
+x11-misc/chbg
+
 # <verwilst@gentoo.org> (15 Sep 2002)
 # Masked for testing
 =dev-python/sip-3.4
