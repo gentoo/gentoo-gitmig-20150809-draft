@@ -1,7 +1,0 @@
-Make sure that in your XF86Config in "Files" section you add the
-following:
-
-    ModulePath  "/opt/nvidia/modules"
-    ModulePath  "/usr/X11R6/lib/modules"
-
-For more information read the README file.

@@ -1,6 +1,25 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.66 2004/11/10 01:23:54 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.67 2004/11/30 01:33:12 cyfred Exp $
+
+  30 Nov 2004; Andrew Bevitt <cyfred@gentoo.org> -files/README.gentoo,
+  +files/libGL.la, -files/libGL.la.2,
+  -files/nvidia-glx-1.0.4363-defines.patch,
+  -files/nvidia-glx-1.0.4496-defines.patch,
+  -files/nvidia-glx-1.0.4499-defines.patch,
+  -files/nvidia-glx-1.0.5328-defines.patch,
+  -files/nvidia-glx-1.0.5328-glheader.patch,
+  -files/nvidia-glx-1.0.5332-glheader.patch,
+  -files/nvidia-glx-1.0.5336-glheader.patch,
+  -files/1.0.6106/NVIDIA_glx-1.0.6106-defines.patch,
+  -files/1.0.6106/NVIDIA_glx-1.0.6106-glheader.patch,
+  -files/1.0.6106/NVIDIA_glx-1.0.6106-makefile.patch,
+  -nvidia-glx-1.0.4363-r1.ebuild, -nvidia-glx-1.0.4496-r2.ebuild,
+  -nvidia-glx-1.0.4499-r1.ebuild, -nvidia-glx-1.0.5328-r2.ebuild,
+  -nvidia-glx-1.0.5332-r2.ebuild, -nvidia-glx-1.0.5336-r2.ebuild,
+  -nvidia-glx-1.0.6106-r3.ebuild, nvidia-glx-1.0.6111.ebuild,
+  nvidia-glx-1.0.6629.ebuild:
+  Removing all masked (deprecated) versions to match the nvidia-kernel removal.
 
   10 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
   +files/1.0.6629/NVIDIA_glx-1.0.6629-defines.patch,

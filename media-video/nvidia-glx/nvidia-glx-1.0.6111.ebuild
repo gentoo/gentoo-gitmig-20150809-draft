@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6111.ebuild,v 1.3 2004/11/07 01:52:37 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6111.ebuild,v 1.4 2004/11/30 01:33:12 cyfred Exp $
 
 inherit eutils
 
@@ -145,7 +145,7 @@ src_install() {
 		-e "s:\${ver1}:${ver1}:" \
 		-e "s:\${ver2}:${ver2}:" \
 		-e "s:\${ver3}:${ver3}:" \
-		${FILESDIR}/libGL.la.2 > ${D}/${NV_ROOT}/lib/libGL.la
+		${FILESDIR}/libGL.la > ${D}/${NV_ROOT}/lib/libGL.la
 
 	# Should we install the .la for the 32bit libs on amd64? I think not.
 }
