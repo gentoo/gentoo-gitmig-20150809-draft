@@ -1,5 +1,18 @@
-MD5 f094d1d934b42b44ca8a8a3649d223de grsec-sources-2.4.26.2.0-r1.ebuild 3238
-MD5 f44c37721f8e476514e39ee9d1245f8f ChangeLog 4269
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ef9901f47de093f625e405574660c668 ChangeLog 4514
+MD5 29004405785d345e3a269acfa09820b6 grsec-sources-2.4.26.2.0-r2.ebuild 3326
 MD5 140d8af1d66f9f6cd030e7d9902f38d9 metadata.xml 478
 MD5 b293289df61d6f42ff54e4e0ceae53cf files/2.4.24-x86.config 2397
-MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r1 143
+MD5 67eb43cb5340a7a671c2d375c0516888 files/digest-grsec-sources-2.4.26.2.0-r2 143
+MD5 3dac23b6e285462a7cda41505cc698e1 files/2.4.26-CAN-2004-0394.patch 319
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iQCVAwUBQL4CqJ4WFLgrx1GWAQL9zAQAvmsCp4cUv+dpEzhaCxzciDDhjg+q+40K
+RuutU/2o7+i5RX46dnRXf03ZSa5AQ6m4nahzlBAO7ov4R1kzVZWHC59BAkKU//T5
+AUBUm5Xg88uEVe/IzSpuKXbz5aQqNk0OhkncRPOUR1/3IiSAEk3fV7ypjwmXXpkC
+wnwQna5QNzg=
+=EGWi
+-----END PGP SIGNATURE-----

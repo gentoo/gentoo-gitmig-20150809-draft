@@ -1,23 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.25.1.3.8-r2.ebuild,v 1.3 2004/05/30 23:53:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.26.1.3.9.ebuild,v 1.1 2004/06/02 16:35:55 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
-OKV=2.4.25
-KV=2.4.25
+OKV=2.4.26
+KV=2.4.26
 
-## idea: after the kernel-version (2.4.25) we append the vs-version (e.g. 1.3.8) to
-## get 2.4.25.1.3.8 that is globbed out here:
-EXTRAVERSION="-vs${PV#*.*.*.}-${PR}"
+## idea: after the kernel-version (2.4.26) we append the vs-version (e.g. 1.3.9) to
+## get 2.4.25.1.3.9 that is globbed out here:
+EXTRAVERSION="-vs${PV#*.*.*.}"
 VEXTRAVERSION="-vs${PV#*.*.*.}"
+
 
 S=${WORKDIR}/linux-${KV}
 # What's in this kernel?
 
 # INCLUDED:
-# stock 2.4.25 kernel sources (or newer)
-# devel-version of vsever-patch: 1.3.8 (or newer)
+# stock 2.4.26 kernel sources (or newer)
+# devel-version of vsever-patch: 1.3.9 (or newer)
 
 DESCRIPTION="Linux kernel with DEVEL version ctx-/vserver-patch"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
@@ -36,9 +37,7 @@ src_unpack() {
 
 	cd linux-${KV}${EXTRAVERSION}
 	epatch ${WORKDIR}/patch-${KV}${VEXTRAVERSION}.diff
-	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
-	epatch ${FILESDIR}/${P}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
-	epatch ${FILESDIR}/${P}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0178 patch!"
 
 	kernel_universal_unpack
 }
