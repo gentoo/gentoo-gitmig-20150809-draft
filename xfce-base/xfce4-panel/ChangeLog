@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.47 2005/02/08 23:36:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.48 2005/03/17 02:58:59 bcowan Exp $
+
+*xfce4-panel-4.2.1 (17 Mar 2005)
+
+  17 Mar 2005; Brad Cowan <bcowan@gentoo.org> +xfce4-panel-4.2.1.ebuild:
+  Bugfix release of Xfce4.
 
   09 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   xfce4-panel-4.2.0.ebuild:
