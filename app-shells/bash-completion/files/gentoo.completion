@@ -199,21 +199,7 @@ _emerge()
 	else
 		cd "${portagedir}"
 		grepcmd="grep -E ^${cur}.*"
-		sedcmd="sed -e /CVS/d \
-			-e /BUGS-TODO/d \
-			-e /ChangeLog.*/d \
-			-e /header.txt/d \
-			-e /skel.build/d \
-			-e /skel.ebuild/d \
-			-e /distfiles/d \
-			-e /eclass/d \
-			-e /files/d \
-			-e /incoming/d \
-			-e /packages/d \
-			-e /profiles/d \
-			-e /scripts/d \
-			-e /virtual-update/d \
-			-e /current-packages/d"
+		sedcmd="sed -e /^[^-]*$/d"
 
 		if [ ${COMP_CWORD} -eq 1 ]; then
 			# If emerge hasn't been given any args yet, include "rsync"
@@ -303,7 +289,7 @@ complete -o default -F _ebuild ebuild
 #
 # rc-update completion command
 #
-_rc-update()
+_rcupdate()
 {
 	local cur prev initdir runlvdir origdir
 	origdir=${PWD}
@@ -325,12 +311,12 @@ _rc-update()
 	fi
 	return 0
 }
-complete -F _rc-update rc-update
+complete -F _rcupdate rc-update
 
 #
 # gcc-config completion command
 #
-_gcc-config()
+_gccconfig()
 {
 	local cur curword numwords opts
 	COMPREPLY=()
@@ -368,9 +354,9 @@ _gcc-config()
 	COMPREPLY=($(compgen -W "${opts}" | grep ^$cur))
 	return 0
 }
-complete -F _gcc-config gcc-config
+complete -F _gccconfig gcc-config
 
-_java-config()
+_javaconfig()
 {
 	local cur curword numwords opts args arg spec flag sedcmd grepcmd
 	local multiplepkgs pkgs execopts
@@ -528,9 +514,9 @@ _java-config()
 	COMPREPLY=($(compgen -o nospace -W "${opts}" | grep ^${cur}))
 	return 0
 }
-complete -o nospace -F _java-config java-config
+complete -o nospace -F _javaconfig java-config
 
-_opengl-update()
+_openglupdate()
 {
 	local cur opts
 	COMPREPLY=()
@@ -553,4 +539,4 @@ _opengl-update()
 		echo ${COMPREPLY[@]})))
 	return 0
 }
-complete -F _opengl-update opengl-update
+complete -F _openglupdate opengl-update
