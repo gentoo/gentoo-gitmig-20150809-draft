@@ -1,0 +1,84 @@
+--- svgalib-1.9.17/kernel/svgalib_helper/Makefile.orig	2003-08-06 22:05:18.173676000 +0200
++++ svgalib-1.9.17/kernel/svgalib_helper/Makefile	2003-08-06 22:05:30.355824032 +0200
+@@ -1,14 +1,13 @@
+ include ../../Makefile.cfg
+ 
+ ifndef INCLUDEDIR
+-INCLUDEDIR = /lib/modules/$(shell uname -r)/build/include
++ INCLUDEDIR = /lib/modules/$(shell uname -r)/build/include
+ endif
+ 
+ MODVER = $(shell grep CONFIG_MODVERSIONS $(INCLUDEDIR)/linux/autoconf.h 2>/dev/null)
+ 
+ ifeq ($(MODVER),)
+-	@echo INCLUDEDIR is not set up correctly
+-	exit 1
++ $(error INCLUDEDIR is not set up correctly)
+ endif
+ 
+ # Extract version number from headers.
+@@ -16,11 +15,12 @@
+ 
+ # Use version of current running kernel
+ ifeq ($(VER),)
+-	VER = $(shell uname -r)
++ VER = $(shell uname -r)
+ endif
+ 
+ VER_MAJOR = $(shell echo $(VER) | cut -d. -f1)
+ VER_MINOR = $(shell echo $(VER) | cut -d. -f2)
++#VER_MICRO = $(shell echo $(VER) | cut -d. -f3 | sed -e 's:[^0-9].*::')
+ 
+ INCLUDES += -I$(INCLUDEDIR)
+ INCLUDES += -I$(INCLUDEDIR)/asm/mach-default
+@@ -28,23 +28,36 @@
+ #CFLAGS = -O2 -DLINUX -Dlinux -D__KERNEL__ -DMODULE -Wall $(DEBFLAGS)
+ CFLAGS = -O2 -DLINUX -Dlinux -D__KERNEL__ -DMODULE $(DEBFLAGS) -nostdinc -iwithprefix include
+ ifeq (2,$(VER_MAJOR))
+-	ifeq (6,$(VER_MINOR))
+-		CFLAGS += -DKBUILD_MODNAME="svgalib_helper"
+-	endif
++ ifeq (6,$(VER_MINOR))
++  CFLAGS += -DKBUILD_MODNAME="svgalib_helper"
++ endif
+ endif
+ CFLAGS += $(INCLUDES)
+ CFLAGS += -DSVGALIB_HELPER_MAJOR=$(SVGALIB_HELPER_MAJOR)
+                                                                                                                             
+ ifeq (1,$(findstring 1,$(MODVER)))
+-	CFLAGS += -DMODVERSIONS -include $(INCLUDEDIR)/linux/modversions.h
++ MODHEADER1 = $(shell ls -1 $(INCLUDEDIR)/linux/modversions.h 2>/dev/null)
++ MODHEADER2 = $(shell ls -1 $(INCLUDEDIR)/config/modversions.h 2>/dev/null)
++
++ ifneq ($(MODHEADER1),)
++  MODHEADER = $(MODHEADER1)
++ else
++  ifneq ($(MODHEADER2),)
++   MODHEADER = $(MODHEADER2)
++  else
++   $(error Cannot find modversions.h!)
++  endif
++ endif
++
++ CFLAGS += -DMODVERSIONS -include $(MODHEADER)
+ endif
+ 
+ TARGET = svgalib_helper
+ OBJS = $(TARGET).o
+ ifeq (2,$(VER_MAJOR))
+-	ifeq (6,$(VER_MINOR))
+-		OBJS = $(TARGET).ko
+-	endif
++ ifeq (6,$(VER_MINOR))
++  OBJS = $(TARGET).ko
++ endif
+ endif
+ SRC = main.c interrupt.c i810.c
+ 
+@@ -78,5 +91,5 @@
+ 
+ 
+ ifeq (.depend,$(wildcard .depend))
+-include .depend
++ include .depend
+ endif
