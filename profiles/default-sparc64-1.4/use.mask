@@ -18,6 +18,7 @@ oci8
 pic
 sse
 svga
+tcc
 trusted
 voodoo3
 wavelan
