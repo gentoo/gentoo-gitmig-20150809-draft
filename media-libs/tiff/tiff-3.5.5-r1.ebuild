@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.5-r1.ebuild,v 1.1 2000/08/26 20:41:56 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.5-r1.ebuild,v 1.2 2000/09/15 20:09:04 drobbins Exp $
 
 P=tiff-v3.5.5
 A=${P}.tar.gz
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.libtiff.org/"
 
 src_compile() {
     cd ${S}
-    ./configure --noninteractive
+    try ./configure --noninteractive
     cd libtiff
     cp Makefile Makefile.orig
     sed -e "s/-O/${CFLAGS}/" Makefile.orig > Makefile
@@ -20,7 +20,7 @@ src_compile() {
     cp Makefile Makefile.orig
     sed -e "s/-O/${CFLAGS}/" Makefile.orig > Makefile
     cd ..
-    make
+    try make
 }
 
 src_unpack() {
@@ -43,7 +43,7 @@ src_install() {
 	dodir /usr/doc
 	dodoc COPYRIGHT README TODO VERSION
 	dodir /usr/doc/${PF}/html
-	make install
+	try make install
 	prepman
 	gzip ${D}/usr/doc/${PF}/html/*.html
 	gzip ${D}/usr/doc/${PF}/html/images/*

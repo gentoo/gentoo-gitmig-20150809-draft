@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.46.1.ebuild,v 1.3 2000/09/13 14:07:49 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.46.1.ebuild,v 1.4 2000/09/15 20:09:01 drobbins Exp $
 
 A="${P}.tar.gz binaries.zip"
 S=${WORKDIR}/${P}
@@ -43,9 +43,9 @@ src_unpack () {
 src_compile() {
 
     cd ${S}
-    ./configure --prefix=/usr/X11R6 --host=${CHOST} 
+    try ./configure --prefix=/usr/X11R6 --host=${CHOST} 
 
-    make
+    try make
 
 }
 
@@ -53,7 +53,7 @@ src_install () {
 
     cd ${S}
     dodir /usr/X11R6/lib /usr/X11R6/bin
-    make prefix=${D}/usr/X11R6 install
+    try make prefix=${D}/usr/X11R6 install
     dodir /usr/libexec/avifile/win32
     cd ${D}/usr/libexec/avifile/win32
     unzip ${DISTDIR}/binaries.zip

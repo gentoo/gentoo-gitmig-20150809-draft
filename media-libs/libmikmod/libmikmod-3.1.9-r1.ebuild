@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.9-r1.ebuild,v 1.2 2000/08/16 04:38:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.9-r1.ebuild,v 1.3 2000/09/15 20:09:02 drobbins Exp $
 
 P=libmikmod-3.1.9
 A=${P}.tar.gz
@@ -15,13 +15,13 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  ./configure --host=${CHOST} --prefix=/usr
-  make
+  try ./configure --host=${CHOST} --prefix=/usr
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make DESTDIR=${D} install
+  try make DESTDIR=${D} install
   prepman
   prepinfo
   dodoc AUTHORS COPYING* NEWS PROBLEMS README TODO *.lsm

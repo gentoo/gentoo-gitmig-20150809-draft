@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.8-r1.ebuild,v 1.2 2000/08/16 04:38:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.8-r1.ebuild,v 1.3 2000/09/15 20:09:02 drobbins Exp $
 
 P=libpng-1.0.8
 A="${P}.tar.gz"
@@ -22,7 +22,7 @@ src_compile() {
 	-e "s:prefix=/usr:prefix=${D}/usr:" \
 	-e "s/-O3/${CFLAGS}/" \
 	 scripts/makefile.linux > Makefile
-  make
+  try make
 }
 
 
@@ -31,7 +31,7 @@ src_install() {
 	mkdir ${D}/usr
 	mkdir ${D}/usr/include
 	mkdir ${D}/usr/lib
-	make install prefix=${D}/usr
+	try make install prefix=${D}/usr
 	into /usr
  	doman *.3 *.5
 	dodoc ANNOUNCE CHANGES KNOWNBUG LICENSE README TODO Y2KINFO 
