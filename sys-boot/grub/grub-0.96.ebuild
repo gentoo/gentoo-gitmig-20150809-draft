@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.4 2005/03/15 23:39:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.5 2005/04/05 21:41:28 halcy0n Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
 
@@ -47,6 +47,9 @@ src_unpack() {
 
 	# -fwritable-strings is deprecated; testing to see if we need it any more
 	epatch ${FILESDIR}/${PN}-0.95.20040823-warnings.patch
+
+	# patch for GCC4; bug #85016
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.35 2005/03/15 23:39:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.36 2005/04/05 21:41:28 halcy0n Exp $
+
+  05 Apr 2005; Mark Loeser <halcy0n@gentoo.org> +files/grub-0.96-gcc4.patch,
+  grub-0.96.ebuild:
+  Backported fixes for GCC4.  Fixes bug #85016
 
   15 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   grub-0.94-r1.ebuild, grub-0.94-r2.ebuild, grub-0.95.20040823.ebuild,
