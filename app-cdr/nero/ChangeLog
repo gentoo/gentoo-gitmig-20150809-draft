@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/nero
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.1 2005/03/24 23:16:53 wschlich Exp $
+
+*nero-2.0.0.0_p6 (25 Mar 2005)
+
+  25 Mar 2005; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +nero-2.0.0.0_p6.ebuild:
+  initial import
+
