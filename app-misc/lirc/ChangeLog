@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.51 2004/11/30 16:19:25 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.52 2004/12/03 11:52:03 chrb Exp $
+
+*lirc-0.7.0_pre8 (03 Dec 2004)
+
+  03 Dec 2004; Chris Bainbridge <chrb@gentoo.org> +lirc-0.7.0_pre8.ebuild:
+  Version bump, pre8 doesnt appear to need the patches that were applied to pre7
 
   30 Nov 2004; Brian Jackson <iggy@gentoo.org> metadata.xml,
   lirc-0.7.0.ebuild:
