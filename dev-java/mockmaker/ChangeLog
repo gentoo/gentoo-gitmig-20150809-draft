@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/mockmaker
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/ChangeLog,v 1.1 2005/01/04 23:13:33 luckyduck Exp $
+
+*mockmaker-1.12.0_p20050104 (05 Jan 2005)
+
+  05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +mockmaker-1.12.0_p20050104.ebuild:
+  Initial import. Ebuild provided by myself. Dependency of #63290.
+
