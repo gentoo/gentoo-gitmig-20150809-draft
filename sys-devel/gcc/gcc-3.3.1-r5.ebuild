@@ -1,13 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r5.ebuild,v 1.6 2004/01/08 19:53:24 agriffis Exp $
-
-IUSE="static nls bootstrap java build X multilib"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r5.ebuild,v 1.7 2004/06/07 23:37:08 vapier Exp $
 
 inherit eutils flag-o-matic libtool
-
-# Compile problems with these (bug #6641 among others)...
-#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -29,7 +24,13 @@ inherit eutils flag-o-matic libtool
 # problems.
 #
 # <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
+do_filter_flags() {
+	strip-flags
+
+	# In general gcc does not like optimization, and add -O2 where
+	# it is safe.
+	filter-flags -O?
+}
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -95,7 +96,8 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-* ~x86 ~mips ~sparc amd64 ~ia64"
+KEYWORDS="-* ~x86 ~mips ~sparc amd64 ia64"
+IUSE="static nls bootstrap java build X multilib"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -199,14 +201,14 @@ src_unpack() {
 		mkdir -p ${WORKDIR}/patch/exclude
 		# Exclude this as it is fixed in apps according to lu_zero.
 		mv -f ${WORKDIR}/patch/3* ${WORKDIR}/patch/exclude/
-		if [ -n "`use multilib`" -a "$ARCH" = "amd64" ]
+		if use multilib && [ "$ARCH" = "amd64" ]
 		then
 			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
 		fi
 		epatch ${WORKDIR}/patch
 	fi
 
-	if [ -n "`use multilib`" -a "$ARCH" = "amd64" ]
+	if use multilib && [ "$ARCH" = "amd64" ]
 	then
 		epatch ${FILESDIR}/gcc331_use_multilib.amd64.patch
 	fi
@@ -245,24 +247,23 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf=
 	local gcc_lang=
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		myconf="${myconf} --enable-shared"
 		gcc_lang="c,c++,f77,objc"
 	else
 		gcc_lang="c"
 	fi
-	if [ -z "`use nls`" -o "`use build`" ]
+	if ! use nls || use build
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
-	if [ -n "`use java`" -a -z "`use build`" ]
+	if use java && ! use build
 	then
 		gcc_lang="${gcc_lang},java"
 	fi
@@ -272,15 +273,14 @@ src_compile() {
 	# X11 support is still very experimental but enabling it is
 	# quite innocuous...  [No, gcc is *not* linked to X11...]
 	# <dragon@gentoo.org> (15 May 2003)
-	if [ -n "`use java`" -a -n "`use X`" -a -z "`use build`" -a \
-	     -f /usr/X11R6/include/X11/Xlib.h ]
+	if use java && use X && ! use build && -f /usr/X11R6/include/X11/Xlib.h
 	then
 		myconf="${myconf} --x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/lib"
 		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
 	fi
 
 	# Multilib not yet supported
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		einfo "WARNING: Multilib support enabled. This is still experimental."
 		myconf="${myconf} --enable-multilib"
@@ -294,8 +294,7 @@ src_compile() {
 
 	# In general gcc does not like optimization, and add -O2 where
 	# it is safe.  This is especially true for gcc-3.3 ...
-	export CFLAGS="${CFLAGS/-O?/-O2}"
-	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
+	do_filter_flags
 	export GCJFLAGS="${CFLAGS/-O?/-O2}"
 
 	# Build in a separate build tree
@@ -340,7 +339,7 @@ src_compile() {
 	einfo "Building GCC..."
 	# Only build it static if we are just building the C frontend, else
 	# a lot of things break because there are not libstdc++.so ....
-	if [ -n "`use static`" -a "${gcc_lang}" = "c" ]
+	if use static && [ "${gcc_lang}" = "c" ]
 	then
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
@@ -390,7 +389,7 @@ src_install() {
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# amd64 is a bit unique because of multilib.  Add some other paths
 		echo "LDPATH=\"${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
@@ -406,7 +405,7 @@ src_install() {
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${D}${LIBPATH}
 
@@ -483,11 +482,11 @@ src_install() {
 	fi
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		docinto /${CCHOST}
-		dodoc COPYING COPYING.LIB ChangeLog* FAQ MAINTAINERS README
+		dodoc ChangeLog* FAQ MAINTAINERS README
 		docinto ${CCHOST}/html
 		dohtml *.html
 		cd ${S}/boehm-gc
@@ -503,10 +502,10 @@ src_install() {
 		dodoc ChangeLog* README TODO *.netlib
 		cd ${S}/libffi
 		docinto ${CCHOST}/libffi
-		dodoc ChangeLog* LICENSE README
+		dodoc ChangeLog* README
 		cd ${S}/libiberty
 		docinto ${CCHOST}/libiberty
-		dodoc ChangeLog* COPYING.LIB README
+		dodoc ChangeLog* README
 		cd ${S}/libobjc
 		docinto ${CCHOST}/libobjc
 		dodoc ChangeLog* README* THREADS*
@@ -518,14 +517,14 @@ src_install() {
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
 
-		if [ -n "`use java`" ]
+		if use java
 		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar
-			dodoc AUTHORS CHANGES COPYING ChangeLog* NEWS README
+			dodoc AUTHORS CHANGES ChangeLog* NEWS README
 			cd ${S}/libjava
 			docinto ${CCHOST}/libjava
-			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
+			dodoc ChangeLog* HACKING LIBGCJ_LICENSE NEWS README THANKS
 		fi
 
 		prepman ${DATAPATH}
@@ -545,7 +544,7 @@ src_install() {
 	# Fix ncurses b0rking
 	find ${D}/ -name '*curses.h' -exec rm -f {} \;
 
-	if [ -n "`use multilib`" -a "$ARCH" = "amd64" ]
+	if use multilib && [ "$ARCH" = "amd64" ]
 	then
 		# If using multilib, GCC has a bug, where it doesn't know where to find
 		# -lgcc_s when linking while compiling with g++ .  ${LIBPATH} is in
@@ -565,7 +564,7 @@ pkg_preinst() {
 
 	# Make again sure that the linker "should" be able to locate
 	# libstdc++.so ...
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# Can't always find libgcc_s.so.1, make it find it
 		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
@@ -576,8 +575,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# Can't always find libgcc_s.so.1, make it find it
 		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
