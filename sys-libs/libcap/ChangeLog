@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.8 2003/09/27 21:29:41 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.9 2003/09/30 03:20:16 vapier Exp $
+
+*libcap-1.10-r3 (29 Sep 2003)
+
+  29 Sep 2003; Mike Frysinger <vapier@gentoo.org> libcap-1.10-r3.ebuild:
+  Version bump to add deb patch and add full pic support #29958.
+
+  29 Sep 2003; Mike Frysinger <vapier@gentoo.org> libcap-1.10.ebuild:
+  Filtered out -fPIC from CFLAGS #29958.
 
   27 Sep 2003; Alexander Gabert <pappy@gentoo.org> libcap-1.10.ebuild:
   added hcc exclusion for PIC but leave propolice in place
