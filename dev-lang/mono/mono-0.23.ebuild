@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.23.ebuild,v 1.1 2003/03/08 16:40:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.23.ebuild,v 1.2 2003/03/12 13:20:11 foser Exp $
 
 inherit eutils mono
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.go-mono.com/"
 LICENSE="LGPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 
 DEPEND="virtual/glibc
 	>=dev-libs/glib-2.0
@@ -35,7 +35,7 @@ src_unpack() {
 
 src_compile() {
 	econf --with-gc=boehm || die
-	MAKEOPTS="-j1" emake || die "MONO compilation failure"
+	MAKEOPTS="${MAKEOPTS} -j1" emake || die "MONO compilation failure"
 
 	cd ${MCS_S}
 	PATH=${PATH}:${S}/runtime:${S}/mono/jit MONO_PATH=${MONO_PATH}:${S}/runtime emake -f makefile.gnu || die "MCS compilation failure"
@@ -52,6 +52,11 @@ src_install () {
 	# now install our own compiled dlls
 	cd ${MCS_S}
 	einstall || die
+
+	# install mono's logo
+	insopts -m0644
+	insinto /usr/share/pixmaps/mono
+	doins MonoIcon.png ScalableMonoIcon.svg
 
 	docinto mcs
 	dodoc AUTHORS COPYING README* ChangeLog INSTALL.txt
