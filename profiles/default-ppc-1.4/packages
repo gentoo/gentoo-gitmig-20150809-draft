@@ -72,7 +72,7 @@ sys-fs/reiserfsprogs
 *>=sys-apps/sharutils-4.2.1-r6
 *sys-apps/slocate
 >=sys-apps/sysklogd-1.4.1
-*sys-apps/tar
+*app-arch/tar
 *sys-apps/texinfo
 *sys-apps/textutils
 *sys-apps/util-linux

@@ -78,7 +78,7 @@ virtual/os-headers
 *<sys-apps/shadow-5
 *sys-apps/pam-login
 *sys-apps/sharutils
-*sys-apps/tar
+*app-arch/tar
 *>=sys-apps/texinfo-4.2-r5
 *sys-apps/util-linux
 *sys-apps/which

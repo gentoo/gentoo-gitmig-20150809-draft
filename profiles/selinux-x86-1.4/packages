@@ -28,7 +28,7 @@
 *=sys-apps/procps-3.1.12
 *>=sys-apps/psmisc-21.2-r4
 *>=sys-apps/pam-login-3.14
-*sys-apps/tar
+*app-arch/tar
 *>=sys-apps/util-linux-2.12
 *>=sys-libs/pam-0.75-r9
 *>=sys-libs/pwdb-0.61-r4

@@ -11,3 +11,5 @@ move dev-util/gpsim dev-embedded/gpsim
 move media-libs/kyra dev-games/kyra
 move dev-python/TwistedDocs dev-python/twisted-docs
 move x11-misc/epplet-base x11-plugins/epplets
+move sys-apps/tar app-arch/tar
+move sys-apps/star app-arch/star

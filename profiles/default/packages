@@ -60,7 +60,7 @@ sys-apps/kbd
 *sys-apps/shadow
 *sys-apps/sharutils
 *sys-apps/sysvinit
-*sys-apps/tar
+*app-arch/tar
 *sys-apps/tcp-wrappers
 *sys-apps/texinfo
 *sys-apps/textutils

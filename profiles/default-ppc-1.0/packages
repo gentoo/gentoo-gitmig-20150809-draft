@@ -132,7 +132,7 @@ net-misc/rsync
 *sys-apps/pam-login
 # updated for GLSA
 *>=sys-apps/sharutils-4.2.1-r6
-*sys-apps/tar
+*app-arch/tar
 *sys-apps/textutils
 *sys-apps/util-linux
 *sys-apps/which
