@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9l.ebuild,v 1.9 2005/02/13 04:56:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9m.ebuild,v 1.1 2005/02/13 04:56:13 robbat2 Exp $
 
 inherit eutils
 
@@ -15,9 +15,11 @@ IUSE="debug doc tcsim"
 # iproute,linux-atm as the output needs that
 # os-headers as it compiles stuff with them
 # gcc/binutils as it compiles stuff
+# tcsim does NOT compile with 2.6 headers
 DEPEND_COMMON="dev-lang/perl
 				sys-apps/iproute2
 				net-dialup/linux-atm
+				tcsim? ( !=sys-kernel/linux-headers-2.6* !sys-kernel/linux26-headers )
 				virtual/os-headers
 				sys-devel/gcc
 				sys-devel/binutils"
@@ -44,7 +46,7 @@ IPROUTE_SRCFILE="iproute2-2.4.7-now-ss${IPROUTE_PV/20}.tar.gz"
 
 # we also need a vanilla kernel source to use with this
 KERNEL_PN=linux
-KERNEL_PV=2.4.25
+KERNEL_PV=2.4.26
 KERNEL_P=${KERNEL_PN}-${KERNEL_PV}
 
 # note this project does NOT use the SF mirroring system
@@ -60,7 +62,7 @@ KERNEL_S=${WORKDIR}/${KERNEL_P}
 src_unpack() {
 	# unpack tcng
 	unpack ${P}.tar.gz || die "failed to unpack tcng"
-	epatch ${FILESDIR}/${P}-fixes.patch
+	epatch ${FILESDIR}/${PN}-9l-fixes.patch
 	epatch ${FILESDIR}/${PN}-9i-gentoo.patch
 
 	for i in ${S}/tcsim/setup.*lib; do

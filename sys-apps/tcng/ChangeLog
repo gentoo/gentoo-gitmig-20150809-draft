@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tcng
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.9 2004/08/24 03:40:57 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.10 2005/02/13 04:56:13 robbat2 Exp $
+
+*tcng-9m (12 Feb 2005)
+
+  12 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> +tcng-9m.ebuild:
+  Bug #57737, new version from upstream.
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> tcng-9h.ebuild,
   tcng-9i.ebuild, tcng-9l.ebuild:
