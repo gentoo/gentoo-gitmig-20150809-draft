@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.3-r1.ebuild,v 1.2 2004/05/01 17:22:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.3-r1.ebuild,v 1.3 2004/05/02 17:20:38 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://porthole.sourceforge.net"
 SRC_URI="mirror://sourceforge/porthole/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-lang/python-2.3
 		>=gnome-base/libglade-2
