@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.47 2004/09/14 21:34:20 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.48 2004/09/14 22:49:42 tester Exp $
+
+  14 Sep 2004; Olivier Crete <tester@gentoo.org> mpg123-0.59s-r4.ebuild:
+  Stable on x86
 
 *mpg123-0.59s-r4 (14 Sep 2004)
 
