@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.7 2004/10/13 01:45:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.8 2004/10/22 02:21:22 squinky86 Exp $
+
+*limewire-4.1.6 (21 Oct 2004)
+
+  21 Oct 2004; Jon Hood <squinky86@gentoo.org> +limewire-4.1.6.ebuild:
+  Version bump.
 
   12 Oct 2004; Jon Hood <squinky86@gentoo.org> files/main-icon.png:
   Fix icon - png image, not text. Thanks Keith Lea <keith@cs.oswego.edu>.
