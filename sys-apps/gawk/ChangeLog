@@ -1,11 +1,14 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.26 2003/06/24 14:29:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.27 2003/07/06 14:11:09 gmsoft Exp $
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> gawk-3.1.2-r3.ebuild:
   Mark stable on alpha
 
 *gawk-3.1.2-r3 (27 Mar 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> gawk-3.1.2-r3.ebuild :
+  Marked stable on hppa.
 
   22 Jun 2003; Joshua Kinard <kumba@gentoo.org> gawk-3.1.2-r3.ebuild:
   Changed ~sparc to sparc in KEYWORDS

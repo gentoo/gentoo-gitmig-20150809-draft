@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.16 2003/06/23 22:28:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.17 2003/07/06 14:12:14 gmsoft Exp $
 
   23 Jun 2003; Aron Griffis <agriffis@gentoo.org> file-4.02.ebuild:
   Mark stable on alpha
@@ -11,6 +11,9 @@
   output used by configure scripts to detect shared libs.
 
 *file-4.02 (04 Apr 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> file-4.02.ebuild :
+  Marked stable on hppa.
 
   04 Apr 2003; Daniel Robbins <drobbins@gentoo.org> file-4.02.ebuild:
   Added latest version and marked stable for x86, sparc.
