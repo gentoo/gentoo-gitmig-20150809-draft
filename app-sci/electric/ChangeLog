@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/electric
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.10 2004/07/01 19:38:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.11 2004/08/18 07:48:10 phosphan Exp $
+
+  18 Aug 2004; Patrick Kursawe <phosphan@gentoo.org> -electric-6.07-r1.ebuild,
+  electric-6.08-r1.ebuild, -electric-6.08.ebuild:
+  Big cleanup, keeping latest (now stable for x86) and old stable
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   electric-6.07-r1.ebuild, electric-6.07.ebuild, electric-6.08-r1.ebuild,
