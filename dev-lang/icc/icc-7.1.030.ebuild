@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.029.ebuild,v 1.4 2003/10/14 05:08:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.030.ebuild,v 1.1 2003/10/14 05:08:09 drobbins Exp $
 
 inherit rpm
 
 S=${WORKDIR}
-
+#what dir to use in FILESDIR
+FILESV=7.1.029
 DESCRIPTION="Intel C++ Compiler - Intel's Pentium optimized compiler for Linux"
 
 SRC_URI1="ftp://download.intel.com/software/products/compilers/downloads/l_cc_pc_${PV}.tar"
@@ -80,13 +81,13 @@ src_install () {
 	insinto /etc/env.d
 	if [ "$ARCH" = "x86" ]
 	then
-		newins ${FILESDIR}/${PVR}/05icc-ifc-ia32 05icc-ifc || die
+		newins ${FILESDIR}/${FILESV}/05icc-ifc-ia32 05icc-ifc || die
 		# fix the processor name issue with the primary icc executable
 		exeinto /opt/intel/compiler70/ia32/bin
-		newexe ${FILESDIR}/${PVR}/icc-ia32 icc
-		newexe ${FILESDIR}/${PVR}/icpc-ia32 icc
+		newexe ${FILESDIR}/${FILESV}/icc-ia32 icc
+		newexe ${FILESDIR}/${FILESV}/icpc-ia32 icc
 	else
-		newins ${FILESDIR}/${PVR}/05icc-ifc-ia64 05icc-ifc || die
+		newins ${FILESDIR}/${FILESV}/05icc-ifc-ia64 05icc-ifc || die
 		dodir /usr/bin
 		dosym ../../opt/intel/compiler70/ia64/bin/eccbin /usr/bin/ecc
 		dosym ../../opt/intel/compiler70/ia64/bin/ecpcbin /usr/bin/ecpc
