@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.1 2004/11/21 01:51:58 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.2 2005/01/09 10:10:24 vericgar Exp $
 ECLASS=apache-module
 INHERITED="$INHERITED $ECLASS"
 
@@ -147,7 +147,7 @@ apache_doc_magic() {
 ## ${APXS1_ARGS}.  If a module requires a different build setup
 ## than this, use ${APXS1} in your own src_compile routine.
 ####
-apache1_src_compile () {
+apache1_src_compile() {
 	debug-print-function apache1_src_compile
 
 	CD_DIR=$(apache_cd_dir)
@@ -183,11 +183,6 @@ apache1_src_install() {
 	if [ -n "${APACHE1_MOD_CONF}" ] ; then
 		insinto ${APACHE1_MODULES_CONFDIR}
 		doins ${FILESDIR}/${APACHE1_MOD_CONF}.conf || die "internal ebuild error: \'${APACHE2_MOD_CONF}.conf\' not found."
-
-		einfo
-		einfo "Configuration file installed as ${APACHE1_MODULES_CONFDIR}/${APACHE1_MOD_CONF}.conf"
-		einfo "You may want to edit it before turning the module on in /etc/conf.d/apache"
-		einfo
 	fi
 	
 	cd ${S}
@@ -215,6 +210,12 @@ apache1_pkg_postinst() {
 		einfo "add '-D ${APACHE1_MOD_DEFINE}' to APACHE_OPTS."
 		einfo
 	fi
+	if [ -n "${APACHE1_MOD_CONF}" ] ; then
+		einfo
+		einfo "Configuration file installed as ${APACHE1_MODULES_CONFDIR}/${APACHE1_MOD_CONF}.conf"
+		einfo "You may want to edit it before turning the module on in /etc/conf.d/apache"
+		einfo
+	fi
 }
 
 ######
@@ -228,7 +229,7 @@ apache1_pkg_postinst() {
 ## we check what the MPM style used by Apache is, if it isnt prefork, we let the user
 ## know they need prefork, and then exit the build.
 ####
-apache2_pkg_setup () {
+apache2_pkg_setup() {
 	debug-print-function apache2_pkg_setup
 
 	if [ -n "${APACHE2_MT_UNSAFEE}" ]; then
@@ -258,7 +259,7 @@ apache2_pkg_setup () {
 ## ${APXS2_ARGS}.  If a module requires a different build setup
 ## than this, use ${APXS2} in your own src_compile routine.
 ####
-apache2_src_compile () {
+apache2_src_compile() {
 	debug-print-function apache2_src_compile
 
 	CD_DIR=$(apache_cd_dir)
@@ -292,11 +293,6 @@ apache2_src_install() {
 	if [ -n "${APACHE2_MOD_CONF}" ] ; then
 		insinto ${APACHE2_MODULES_CONFDIR}
 		doins ${FILESDIR}/${APACHE2_MOD_CONF}.conf || die "internal ebuild error: \'${APACHE2_MOD_CONF}.conf\' not found."
-
-		einfo
-		einfo "Configuration file installed as ${APACHE2_MODULES_CONFDIR}/${APACHE2_MOD_CONF}.conf"
-		einfo "You may want to edit it before turning the module on in /etc/conf.d/apache2"
-		einfo
 	fi
 
 	if [ -n "${APACHE2_VHOSTFILE}" ]; then
@@ -322,6 +318,12 @@ apache2_pkg_postinst() {
 		einfo
 		einfo "To enable ${PN}, you need to edit your /etc/conf.d/apache2 file and"
 		einfo "add '-D ${APACHE2_MOD_DEFINE}' to APACHE2_OPTS."
+		einfo
+	fi
+	if [ -n "${APACHE2_MOD_CONF}" ] ; then
+		einfo
+		einfo "Configuration file installed as ${APACHE2_MODULES_CONFDIR}/${APACHE2_MOD_CONF}.conf"
+		einfo "You may want to edit it before turning the module on in /etc/conf.d/apache2"
 		einfo
 	fi
 }
