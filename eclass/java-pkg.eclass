@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.5 2004/01/12 09:43:18 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.6 2004/01/25 03:56:09 strider Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -146,6 +146,12 @@ java-pkg_dowar()
 	debug-print "sharepath=${sharepath}"
 	debug-print "shareroot=${shareroot}"
 	debug-print "wardest=${wardest}"
+
+	# Patch from Joerg Schaible <joerg.schaible@gmx.de>
+	# Make sure directory is created
+	if [ ! -d "${D}${wardest}" ] ; then
+		install -d "${D}${wardest}"
+	fi
 	
 	for i in $* ; do
 		# Check for symlink
