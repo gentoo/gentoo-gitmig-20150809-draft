@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r2.ebuild,v 1.9 2003/12/20 01:52:38 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r2.ebuild,v 1.10 2004/01/14 23:48:32 ciaranm Exp $
 
 IUSE="kde gnome nls xinerama truetype cjk"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://fluxbox.sf.net"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa mips amd64 alpha"
+KEYWORDS="x86 ppc sparc hppa mips ~amd64 alpha"
 PROVIDE="virtual/blackbox"
 
 mydoc="ChangeLog COPYING NEWS"
