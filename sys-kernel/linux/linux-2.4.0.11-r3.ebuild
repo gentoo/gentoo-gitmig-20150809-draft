@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.7 2001/02/06 00:42:08 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.8 2001/02/06 00:52:47 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -54,10 +54,7 @@ src_unpack() {
     
     # I had to hack this in so that LVM will look in the current linux
     # source directory instead of /usr/src/linux for stuff - pete
-    CFLAGS_save="${CFLAGS}"
-    CFLAGS="${CFLAGS} -I${S}/include"
-    try ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
-    CFLAGS="${CFLAGS_save}"
+    try CFLAGS=\"$CFLAGS -I${S}/include\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
 
     cd PATCHES
     	try make KERNEL_VERSION=2.4.0-ac11 KERNEL_DIR=${S}
@@ -105,20 +102,19 @@ src_unpack() {
 }
 
 src_compile() {
-    
+
     # moved this up here cause it looks like LVM depends on the symlinks
     cd ${S}
     try make symlinks
 
     #LVM tools are included even in the linux-sources package
     cd ${S}/extras/LVM/${LVMV}
-    
+
     # I had to hack this in so that LVM will look in the current linux
     # source directory instead of /usr/src/linux for stuff - pete
-    CFLAGS_save="${CFLAGS}"
-    CFLAGS="${CFLAGS} -I${S}/include"
-    try ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
-    CFLAGS="${CFLAGS_save}"
+
+    try CFLAGS=\"${CFLAGS} -I${S}/include\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
+
     try make
 
     if [ "$PN" != "linux" ]
@@ -128,7 +124,7 @@ src_compile() {
 
     cd ${S}
     try make dep
-    
+
     cd ${S}/extras/lm_sensors-2.5.5
     try make
 
@@ -148,7 +144,7 @@ src_install() {
 
 	dodir /usr/lib
 	cd ${S}/extras/LVM/${LVMV}
-	#I changed /usr/share/man back to /usr/man... was that a mistake?
+
 	make install -e prefix=${D} mandir=${D}/usr/share/man \
 		sbindir=${D}/sbin libdir=${D}/lib
 	#no need for a static library in /lib
