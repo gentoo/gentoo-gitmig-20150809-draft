@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.116 2004/10/10 23:02:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.117 2004/10/21 09:26:06 satya Exp $
+
+  21 Oct 2004; Christian Andreetta <satya@gentoo.org> -files/recycle.conf,
+  -files/smb.conf.example-samba3, files/smb.conf.example-samba3.gz,
+  -files/winbind-init, samba-3.0.6-r3.ebuild, samba-3.0.6-r4.ebuild,
+  samba-3.0.7-r1.ebuild, samba-3.0.7.ebuild:
+  Some old files cleanup. recycle.conf removed (bug #68315). winbind {r,g}id ->
+  idmap {r,g}id in example smb.conf (bug #68318).
 
   10 Oct 2004; Jason Wever <weeve@gentoo.org> samba-3.0.7-r1.ebuild:
   Stable on sparc.
