@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/make.defaults,v 1.4 2004/05/07 21:21:17 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/make.defaults,v 1.5 2004/06/04 20:14:14 pebenito Exp $
 
 ARCH="sparc"
 
@@ -23,3 +23,4 @@ POLICYDIR="/etc/security/selinux/src/policy"
 
 PORTAGE_T="portage_t"
 PORTAGE_FETCH_T="portage_fetch_t"
+PORTAGE_SANDBOX_T="portage_sandbox_t"
