@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.97 2005/02/26 07:45:04 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.98 2005/02/26 22:33:00 eradicator Exp $
+
+  26 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  mozilla-firefox-1.0.1.ebuild:
+  Multilib fixes.
 
 *mozilla-firefox-1.0.1 (26 Feb 2005)
 

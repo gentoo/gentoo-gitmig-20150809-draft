@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0.1.ebuild,v 1.1 2005/02/26 07:45:04 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0.1.ebuild,v 1.2 2005/02/26 22:33:00 eradicator Exp $
 
-inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher
+inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
 S=${WORKDIR}/mozilla
 
@@ -79,7 +79,7 @@ src_compile() {
 	mozconfig_use_extension gnome gnomevfs
 	mozconfig_use_enable mozsvg svg
 	mozconfig_use_enable mozsvg svg-renderer-cairo
-	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/lib/MozillaFirefox
+	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/$(get_libdir)/MozillaFirefox
 
 	# Finalize and report settings
 	mozconfig_final
@@ -107,18 +107,17 @@ src_compile() {
 
 src_install() {
 	# Plugin path creation
-	PLUGIN_DIR="/usr/lib/nsbrowser/plugins"
+	PLUGIN_DIR="/usr/$(get_libdir)/nsbrowser/plugins"
 	dodir ${PLUGIN_DIR}
 
-	dodir /usr/lib
-	dodir /usr/lib/MozillaFirefox
-	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/lib/MozillaFirefox
+	dodir /usr/$(get_libdir)/MozillaFirefox
+	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/$(get_libdir)/MozillaFirefox
 
 	#fix permissions
-	chown -R root:root ${D}/usr/lib/MozillaFirefox
+	chown -R root:root ${D}/usr/$(get_libdir)/MozillaFirefox
 
 	# Plugin path setup (rescuing the existent plugins)
-	src_mv_plugins /usr/lib/MozillaFirefox/plugins
+	src_mv_plugins /usr/$(get_libdir)/MozillaFirefox/plugins
 
 	dodir /usr/bin
 	dosym /usr/libexec/mozilla-launcher /usr/bin/firefox
@@ -126,7 +125,7 @@ src_install() {
 	doins ${FILESDIR}/10MozillaFirefox
 
 	# Fix icons to look the same everywhere
-	insinto /usr/lib/MozillaFirefox/icons
+	insinto /usr/$(get_libdir)/MozillaFirefox/icons
 	doins ${S}/build/package/rpm/SOURCES/mozicon16.xpm
 	doins ${S}/build/package/rpm/SOURCES/mozicon50.xpm
 
@@ -142,14 +141,14 @@ src_install() {
 	# run as a normal user.  Drop in some initialized files to avoid
 	# this.
 	einfo "Extracting firefox-${PV} initialization files"
-	tar xjpf ${FILESDIR}/firefox-0.9-init.tar.bz2 -C ${D}/usr/lib/MozillaFirefox
+	tar xjpf ${FILESDIR}/firefox-0.9-init.tar.bz2 -C ${D}/usr/$(get_libdir)/MozillaFirefox
 }
 
 pkg_preinst() {
-	export MOZILLA_FIVE_HOME=${ROOT}/usr/lib/MozillaFirefox
+	export MOZILLA_FIVE_HOME=${ROOT}/usr/$(get_libdir)/MozillaFirefox
 
 	# Remove the old plugins dir
-	pkg_mv_plugins /usr/lib/MozillaFirefox/plugins
+	pkg_mv_plugins /usr/$(get_libdir)/MozillaFirefox/plugins
 
 	# Remove entire installed instance to prevent all kinds of
 	# problems... see bug 44772 for example
@@ -157,7 +156,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaFirefox"
+	export MOZILLA_FIVE_HOME="${ROOT}/usr/$(get_libdir)/MozillaFirefox"
 
 	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
@@ -170,8 +169,8 @@ pkg_postinst() {
 	# and 700 perms, which makes subsequent execution of firefox by user
 	# impossible.
 	einfo "Registering Components and Chrome..."
-	HOME=~root LD_LIBRARY_PATH=/usr/lib/MozillaFirefox ${MOZILLA_FIVE_HOME}/regxpcom
-	HOME=~root LD_LIBRARY_PATH=/usr/lib/MozillaFirefox ${MOZILLA_FIVE_HOME}/regchrome
+	HOME=~root LD_LIBRARY_PATH=/usr/$(get_libdir)/MozillaFirefox ${MOZILLA_FIVE_HOME}/regxpcom
+	HOME=~root LD_LIBRARY_PATH=/usr/$(get_libdir)/MozillaFirefox ${MOZILLA_FIVE_HOME}/regchrome
 
 	# Fix permissions of component registry
 	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
