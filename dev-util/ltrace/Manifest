@@ -1,4 +1,4 @@
-MD5 919f0b5af2118193f7cf2b17e11a4d70 ChangeLog 1838
-MD5 06a22d6a4bd2b0b0c9c67c9b94f7e69d ltrace-0.3.31.ebuild 1177
+MD5 b7224481eda2b60e6ebc818e5b7ab6c5 ltrace-0.3.31.ebuild 1187
+MD5 2be0321763b2094b360305c5317eb339 ChangeLog 1927
 MD5 bdd8f496365cbecd525f682a272b724b files/digest-ltrace-0.3.31 136
 MD5 455b619b8ad9fe2bc7507178efef0e58 files/ltrace-0.3.31-64bit-fixes.patch.bz2 1998
