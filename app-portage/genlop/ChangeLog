@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.7 2003/12/14 01:03:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.8 2004/03/21 02:50:07 avenj Exp $
+
+  20 Mar 2004; Jon Portnoy <avenj@gentoo.org> genlop-0.20.2.ebuild :
+  AMD64 keywords.
 
 *genlop-0.20.2 (14 Dec 2003)
 
