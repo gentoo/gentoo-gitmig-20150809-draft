@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3studio/k3studio-0.97.ebuild,v 1.2 2002/01/30 18:08:27 karltk Exp $
-. /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3studio/k3studio-0.97.ebuild,v 1.3 2002/05/21 18:14:10 danarmak Exp $
+
 inherit kde-base || die
 
 need-kde 2.1
