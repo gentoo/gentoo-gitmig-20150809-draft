@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.2.0.ebuild,v 1.7 2003/06/29 22:25:28 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.2.0.ebuild,v 1.8 2003/07/04 21:41:07 gmsoft Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Games for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
-KEYWORDS="x86 ppc alpha ~sparc"
+KEYWORDS="x86 ppc alpha ~sparc hppa"
 LICENSE="GPL-2"
 
 RDEPEND=">=app-text/scrollkeeper-0.3.11
