@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.5.ebuild,v 1.1 2004/04/26 08:07:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.5.ebuild,v 1.2 2004/04/26 19:43:19 swtaylor Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="realize the collective dream of sleeping computers from all over the internet"
 HOMEPAGE="http://electricsheep.org/"
@@ -66,6 +66,7 @@ src_unpack() {
 		mpeg2dec/configure \
 		|| die "sed mpeg2dec failed"
 	epatch ${FILESDIR}/nice.patch
+	filter-flags -fPIC
 }
 
 src_install() {
