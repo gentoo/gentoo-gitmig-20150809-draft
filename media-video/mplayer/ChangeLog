@@ -1,10 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.212 2004/10/17 02:12:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.213 2004/10/17 02:26:22 chriswhite Exp $
 
   17 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   mplayer-1.0_pre5-r3.ebuild:
   alpha happiness, bug 66571.
+
+  17 Oct 2004; Chris White <chriswhite@gentoo.org> :
+  Fixed digest issues :|. Removed ia64 keyword per Bug #67836.
 
   16 Oct 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
   mplayer-1.0_pre5-r2.ebuild, mplayer-1.0_pre5-r3.ebuild,
