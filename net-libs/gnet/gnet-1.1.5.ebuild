@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.5.ebuild,v 1.8 2004/02/17 21:58:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.5.ebuild,v 1.9 2004/04/07 10:44:18 leonardop Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="GNet network library."
 SRC_URI="http://www.gnetlibrary.org/src/${P}.tar.gz"
 HOMEPAGE="http://www.gnetlibrary.org/"
@@ -21,7 +22,7 @@ src_compile() {
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib || die
 
-	patch -p0 < ${FILESDIR}/gnet-docdir-gentoo.diff
+	epatch ${FILESDIR}/${PN}-docdir-gentoo.diff
 
 	emake || die
 }

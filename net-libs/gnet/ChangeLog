@@ -1,7 +1,10 @@
 # ChangeLog for net-libs/gnet
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.24 2004/03/09 16:12:38 gustavoz Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.25 2004/04/07 10:44:18 leonardop Exp $
 
+  07 Apr 2004; L. Boshell <leonardop@gentoo.org> gnet-2.0.5.ebuild:
+  Marked stable on x86.
+  
   09 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> gnet-1.1.9.ebuild,
   gnet-2.0.4.ebuild:
   marked stable on sparc
