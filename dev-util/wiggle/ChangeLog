@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wiggle
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.6 2004/11/22 03:40:45 robbat2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.7 2005/03/03 15:39:25 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> wiggle-0.6-r1.ebuild:
+  Dependency update: sys-apps/time -> sys-process/time.
 
   21 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> wiggle-0.6-r1.ebuild:
   Stable on x86.
