@@ -1,22 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5-r2.ebuild,v 1.5 2004/01/03 00:54:46 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.8.ebuild,v 1.1 2004/01/03 00:54:46 tantive Exp $
 
-IUSE="doc"
+IUSE="doc snmp usb apache2"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
 SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz
 	ftp://ftp.apcupsd.com/pub/apcupsd/contrib/gd1.2.tar.gz"
 HOMEPAGE="http://www.sibbald.com/apcupsd/"
-KEYWORDS="x86 amd64 ~ppc arm"
+KEYWORDS="~x86 ~amd64 ~ppc ~arm ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-apps/baselayout-1.8.4
 	virtual/glibc
 	virtual/mta
+	snmp? ( net-analyzer/ucd-snmp )
 	sys-libs/ncurses"
+RDEPEND="${DEPEND}
+	usb? ( sys-apps/hotplug )"
 
 XPIDDIR=/var/run
 XLOGDIR=/var/log
@@ -27,9 +30,15 @@ XPWRFAILDIR=${XSYSCONFDIR}
 src_unpack() {
 	unpack ${A}
 	cp -a ${WORKDIR}/gd1.2 ${S}/src/
+	cd ${S}/platforms/gentoo
+	epatch ${FILESDIR}/${PV}/apcupsd.in.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PV}/ucd-snmp.patch
 }
 
 src_compile() {
+	local myconf
+	use snmp && myconf="--enable-snmp"
 	APCUPSD_MAIL=/usr/sbin/sendmail ./configure \
 		--prefix=/usr \
 		--sbindir=/usr/sbin \
@@ -46,20 +55,33 @@ src_compile() {
 		--enable-usb \
 		--enable-net \
 		--enable-oldnet \
+		--enable-master-slave \
 		--enable-powerflute \
 		--enable-pthreads \
-		--with-css-dir=/home/httpd/apcupsd \
-		--with-cgi-bin=/home/httpd/apcupsd \
+		--with-css-dir=/var/www/apcupsd \
+		--with-cgi-bin=/var/www/apcupsd \
 		--enable-cgi \
+		${myconf} \
 		|| die
 	make || die
 }
 
 src_install () {
-	make DESTDIR=${D} install
+	make DESTDIR=${D} install || die "installed failed"
 
-	insinto /etc/apache/conf/addon-modules
-	newins ${FILESDIR}/${PV}/apache.conf apcupsd.conf
+	use apache2 || insinto /etc/apache/conf/addon-modules
+	use apache2 || newins  ${FILESDIR}/${PV}/apache.conf apcupsd.conf
+
+	use apache2 && insinto /etc/apache2/conf/modules.d
+	use apache2 && newins ${FILESDIR}/${PV}/apache.conf 60_apcupsd.conf
+
+	insinto /etc/apcupsd
+	newins examples/safe.apccontrol safe.apccontrol
+
+	cd ${D}/etc/apcupsd
+	epatch ${FILESDIR}/${PV}/smtp.patch
+
+	ln -s onbattery powerout
 
 	if [ "`use doc`x" != "x" ]
 	then
