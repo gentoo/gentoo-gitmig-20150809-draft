@@ -1,12 +1,14 @@
 # ChangeLog for media-video/gqcam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.3 2003/02/12 07:38:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.4 2003/11/04 09:55:11 kumba Exp $
+
+*gqcam-0.9 (7 May 2002)
+
+  04 Nov 2003; Joshua Kinard <kumba@gentoo.org> gqcam-0.9.ebuild:
+  Added ~mips to KEYWORDS
 
   27 Nov 2002; foser <foser@gentoo.org> gqcam-0.9.ebuild :
   Fix problems with libpng-1.2.5 (bug #9792)
 
-*gqcam-0.9 (7 May 2002)
-
   7 May 2002; Lasse Mikkelsen <lbm@fatalerror.dk> gqcam-0.9.ebuild :
-  
   Initial release of Gqcam ebuild.
