@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.8 2003/08/30 09:59:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.9 2003/09/06 23:52:56 msterret Exp $
 
 IUSE="pda"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-pim"
-#this version is not available from official gnome repos 
+#this version is not available from official gnome repos
 SRC_URI="http://me.in-berlin.de/~jroger/gnome-pim/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnome-pim.shtml"
 LICENSE="GPL-2"
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf 
+	econf
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/metatheme/metatheme-0.9.7-r1.ebuild,v 1.7 2003/02/13 12:23:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/metatheme/metatheme-0.9.7-r1.ebuild,v 1.8 2003/09/06 23:52:57 msterret Exp $
 
 
 S=${WORKDIR}/${P}
@@ -48,7 +48,7 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
 		install || die
-    
+
 	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING README INSTALL NEWS TODO
 }
 

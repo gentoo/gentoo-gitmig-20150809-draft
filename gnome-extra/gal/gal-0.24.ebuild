@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.7 2003/08/20 03:44:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.8 2003/09/06 23:52:56 msterret Exp $
 
 IUSE="nls doc"
 
@@ -20,14 +20,14 @@ RDEPEND=">=dev-libs/libxml-1.8.16
          =x11-libs/gtk+-1.2*
          <gnome-base/gnome-vfs-1.9.0
          >=dev-libs/libunicode-0.4-r1
-	media-libs/gdk-pixbuf"         
+	media-libs/gdk-pixbuf"
 
 DEPEND="nls? ( sys-devel/gettext )
         >=dev-util/intltool-0.11
         dev-lang/perl
         doc? ( dev-util/gtk-doc )
         ${RDEPEND}"
-		
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -42,7 +42,7 @@ src_compile() {
 
     if [ -n "`use doc`" ]; then
        myconf="${myconf} --enable-gtk-doc"
-    else 
+    else
        myconf="${myconf} --disable-gtk-doc"
     fi
 
@@ -71,11 +71,11 @@ src_install() {
 	# Add some type of backward compat...
 	local fullname="`eval basename \`readlink ${D}/usr/lib/libgal.so\``"
 	dosym ${fullname##*/} /usr/lib/libgal.so.$((`echo ${PV} | cut -d. -f2`-1))
-	
+
 	# gal-0.23 provides libgal.so.21, and its compatible with 0.24
 	# so we add this symlink for more backwards compatibility - liquidx.
 	dosym ${fullname##*/} /usr/lib/libgal.so.21
-	
+
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.6.0.ebuild,v 1.7 2003/07/19 23:27:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.6.0.ebuild,v 1.8 2003/09/06 23:52:57 msterret Exp $
 
 inherit gnome2
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/libxml2-2.4.16
 	  	>=gnome-base/gnome-vfs-2 )"
 
 DEPEND=">=dev-util/pkgconfig-0.9
-	doc?	( dev-util/gtk-doc )" 
+	doc?	( dev-util/gtk-doc )"
 
 src_unpack() {
 	unpack ${A}
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf 
+	local myconf
 
 	use gnome \
 		&& myconf="--with-gnome" \

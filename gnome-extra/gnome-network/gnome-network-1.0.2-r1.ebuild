@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-network/gnome-network-1.0.2-r1.ebuild,v 1.6 2003/02/13 12:18:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-network/gnome-network-1.0.2-r1.ebuild,v 1.7 2003/09/06 23:52:56 msterret Exp $
 
 IUSE="nls"
 
@@ -28,7 +28,7 @@ src_compile() {
 
 	CFLAGS="${CFLAGS} `gnome-config --cflags gdk_pixbuf`"
 	cp sync/sync.h sync/sync.h.old
-	cat  sync/sync.h.old | sed -e s@db.h@db1/db.h@g > sync/sync.h	
+	cat  sync/sync.h.old | sed -e s@db.h@db1/db.h@g > sync/sync.h
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc \
@@ -36,7 +36,7 @@ src_compile() {
 		--enable-static=no \
 		--localstatedir=/var/lib || die "configure failure. please report to http://bugs.gentoo.org"
 	emake || die "compile error"
-	
+
 }
 
 src_install() {

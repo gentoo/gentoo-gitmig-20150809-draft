@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.9.ebuild,v 1.2 2003/08/14 13:26:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.9.ebuild,v 1.3 2003/09/06 23:52:56 msterret Exp $
 
 IUSE="doc"
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/libgnomeprint-2.2.0
     >=gnome-base/libgnomecanvas-2.2.0.2
     >=dev-libs/libxml2-2.0
 	app-text/scrollkeeper"
-    
+
 DEPEND="sys-devel/gettext
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )
@@ -33,9 +33,9 @@ ELTCONF="--reverse-deps"
 
 src_unpack() {
 	unpack ${A}
-	
-	gnome2_omf_fix	
-	
+
+	gnome2_omf_fix
+
 	# Remove gtkdoc-fixxref
 	cd ${S}; epatch ${FILESDIR}/gal-1.99.3-docfix.patch
-}	     
+}

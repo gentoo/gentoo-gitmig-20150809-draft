@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.0.5.ebuild,v 1.5 2003/08/24 17:20:59 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.0.5.ebuild,v 1.6 2003/09/06 23:52:56 msterret Exp $
 
 inherit gnome2 eutils
 
@@ -24,7 +24,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=app-text/scrollkeeper-0.3.11
 	>=dev-util/intltool-0.22
 	${RDEPEND}"
-	 
+
 DOCS="AUTHORS ChangeLog COPYING HACKING README INSTALL NEWS TODO"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.5.ebuild,v 1.4 2003/07/13 13:31:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.5.ebuild,v 1.5 2003/09/06 23:52:57 msterret Exp $
 
 inherit gnome2
 
@@ -33,7 +33,7 @@ RDEPEND=">=gnome-base/libgnomeui-2.2
 	>=dev-libs/libxml2-2.5
 	>=gnome-base/gnome-vfs-2.1
 	>=gnome-base/gail-1.1"
- 
+
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
@@ -42,7 +42,7 @@ SCROLLKEEPER_UPDATE="0"
 
 # HACK HACK HACK !!!
 # libtool's lameness causes libgtkhtml to link to the older installed version
-# rather than the one in its own source tree. normally, elibtoolize 
+# rather than the one in its own source tree. normally, elibtoolize
 # --reverse-deps solves this, but in this case, it screws up when linking
 # src/gtest.c
 #

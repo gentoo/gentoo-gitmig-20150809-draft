@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.3.0-r1.ebuild,v 1.6 2003/02/13 12:22:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.3.0-r1.ebuild,v 1.7 2003/09/06 23:52:57 msterret Exp $
 
 IUSE="gnome doc"
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-libs/glib-2.0.4
 	>=sys-libs/zlib-1.1.4
 	gnome? ( >=gnome-base/libbonobo-2.0.0
 		>=gnome-base/gnome-vfs-2.0.1 )
-	doc?	( dev-util/gtk-doc )" 
+	doc?	( dev-util/gtk-doc )"
 
 
 src_unpack() {
@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf 
+	local myconf
 
 	use gnome &&  myconf="--with-gnome" || myconf="--without-gnome"
 	use doc && myconf="${myconf} --enable-gtk-doc" || \

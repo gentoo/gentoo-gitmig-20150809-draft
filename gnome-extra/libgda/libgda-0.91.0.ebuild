@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.91.0.ebuild,v 1.1 2003/08/28 16:55:40 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.91.0.ebuild,v 1.2 2003/09/06 23:52:57 msterret Exp $
 
 IUSE="odbc postgres mysql ldap firebird freetds sqlite mdb oci8 doc"
 
@@ -35,9 +35,9 @@ DEPEND=">=dev-util/pkgconfig-0.8
 	${RDEPEND}"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
-	
-# problems with parallel builds	
-MAKEOPTS="${MAKEOPTS} -j1"	
+
+# problems with parallel builds
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
@@ -46,7 +46,7 @@ src_unpack() {
 
 src_compile() {
 
-	local myconf 
+	local myconf
 
 	use mysql \
 		&& myconf="${myconf} --with-mysql=/usr" \
@@ -83,8 +83,8 @@ src_compile() {
 	# not in portage (http://linux.techass.com/projects/xdb/)
 	myconf="${myconf} --without-xbase"
 	myconf="${myconf} --without-msql"
-	
-	# closed source dbs 
+
+	# closed source dbs
     myconf="${myconf} --without-ibmdb2"
     myconf="${myconf} --without-sybase"
 	use oci8 || myconf="${myconf} --without-oracle"
@@ -93,9 +93,9 @@ src_compile() {
 	if has_version "=sys-libs/readline-4.1*"; then
 		export CONFIG_TOOL_HEADERS="wrong"
 	fi
-	
+
 	gnome2_src_compile ${myconf}
-	
+
 	unset CONFIG_TOOL_HEADERS
-	
+
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.1 2003/06/14 23:21:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.2 2003/09/06 23:52:57 msterret Exp $
 
 MY_P=${PN/-/_}-${PV}
 DESCRIPTION="A gnome/wm applet displaying comical fish"
@@ -51,13 +51,13 @@ src_compile( ) {
 
 src_install( ) {
 
-	# we need to create some dirs that arent created in the 
+	# we need to create some dirs that arent created in the
 	# Makefile. which ones depend on whether we're building
 	# for gtk1 or gtk2
 	if [ -n "`use gtk2`" ]; then
-		dodir /usr/lib/bonobo/servers /usr/share/gnome-2.0/ui 
+		dodir /usr/lib/bonobo/servers /usr/share/gnome-2.0/ui
 	else
-		dodir /etc/CORBA/servers /usr/share/applets/Amusements 
+		dodir /etc/CORBA/servers /usr/share/applets/Amusements
 	fi
 	dodir /usr/share/pixmaps
 	make DESTDIR=${D} install || die

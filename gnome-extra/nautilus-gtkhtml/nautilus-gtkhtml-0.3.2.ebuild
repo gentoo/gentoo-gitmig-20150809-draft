@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-gtkhtml/nautilus-gtkhtml-0.3.2.ebuild,v 1.10 2003/06/10 13:04:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-gtkhtml/nautilus-gtkhtml-0.3.2.ebuild,v 1.11 2003/09/06 23:52:57 msterret Exp $
 
 inherit debug
 
@@ -39,7 +39,7 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
 		install || die
-    
+
 	dodoc ABOUT-NLS  AUTHORS COPYING  ChangeLog  INSTALL NEWS  README TODO
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/apotheke/apotheke-0.2.ebuild,v 1.4 2003/07/09 15:40:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/apotheke/apotheke-0.2.ebuild,v 1.5 2003/09/06 23:52:56 msterret Exp $
 
 inherit gnome2
 
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	>=gnome-base/nautilus-2
 	app-admin/fam-oss"
-	
+
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/intltool

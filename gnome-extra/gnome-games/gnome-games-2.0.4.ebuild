@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.0.4.ebuild,v 1.6 2003/02/13 12:18:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.0.4.ebuild,v 1.7 2003/09/06 23:52:56 msterret Exp $
 
 inherit gnome2
 
@@ -38,8 +38,8 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
 
 
-G2CONF="${G2CONF} --with-ncurses --enable-debug=yes" 
-		
+G2CONF="${G2CONF} --with-ncurses --enable-debug=yes"
+
 src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 		einstall || die "install failure"
@@ -50,7 +50,7 @@ src_install() {
 	docinto aisleriot
 	cd aisleriot
 	dodoc AUTHORS ChangeLog TODO
-	
+
 	cd ../freecell
 	docinto freecell
 	dodoc AUTHORS ChangeLog NEWS README TODO
@@ -58,7 +58,7 @@ src_install() {
 	cd ../gataxx
 	docinto gataxx
 	dodoc AUTHORS ChangeLog TODO
-	
+
 	cd ../glines
 	docinto glines
 	dodoc AUTHORS ChangeLog NEWS README TODO
@@ -74,19 +74,19 @@ src_install() {
 	cd ../gnobots2
 	docinto gnobots2
 	dodoc  AUTHORS README
-	
+
 	cd ../gnome-stones
 	docinto gnome-stones
 	dodoc  ChangeLog README TODO
-	
+
 	cd ../gnometris
 	docinto gnometris
 	dodoc AUTHORS COPYING  ChangeLog TODO
 
 	cd ../gnomine
-	docinto gnomine 	
+	docinto gnomine
 	dodoc AUTHORS ChangeLog README
-	
+
 	cd ../gnotravex
 	docinto gnotravex
 	dodoc AUTHORS  ChangeLog README
