@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j-bin/wsdl4j-bin-1.4.ebuild,v 1.3 2004/10/22 10:32:14 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j-bin/wsdl4j-bin-1.4.ebuild,v 1.4 2004/11/03 11:40:00 axxo Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www-124.ibm.com/developerworks/projects/wsdl4j"
 KEYWORDS="~x86 ~ppc ~amd64"
 LICENSE="CPL-1.0"
 SLOT="0"
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.4"
 IUSE=""
 S="${WORKDIR}/${PN/-bin}-${PV//./_}"

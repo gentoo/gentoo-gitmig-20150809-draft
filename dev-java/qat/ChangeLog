@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/qat
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/ChangeLog,v 1.8 2004/10/22 09:59:47 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/ChangeLog,v 1.9 2004/11/03 11:37:08 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> qat-2.7.1-r1.ebuild:
+  depend on app-arch/unzip
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> qat-2.7.1-r1.ebuild:
   Keywords ~amd64.

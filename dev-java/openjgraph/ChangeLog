@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/openjgraph
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjgraph/ChangeLog,v 1.5 2004/09/17 11:43:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjgraph/ChangeLog,v 1.6 2004/11/03 11:36:06 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> openjgraph-0.9.2-r1.ebuild,
+  openjgraph-0.9.2.ebuild:
+  depend on app-arch/unzip
 
 *openjgraph-0.9.2-r1 (17 Sep 2004)
 

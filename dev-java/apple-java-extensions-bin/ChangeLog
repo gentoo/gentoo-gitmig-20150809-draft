@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/apple-java-extensions-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.4 2004/10/19 20:14:55 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.5 2004/11/03 11:20:16 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
+  apple-java-extensions-bin-1.2.ebuild:
+  depend on app-arch/unzip
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   apple-java-extensions-bin-1.2.ebuild:

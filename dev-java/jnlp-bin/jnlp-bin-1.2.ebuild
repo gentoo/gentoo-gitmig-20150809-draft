@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-bin/jnlp-bin-1.2.ebuild,v 1.4 2004/10/22 09:13:20 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-bin/jnlp-bin-1.2.ebuild,v 1.5 2004/11/03 11:32:28 axxo Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
-#DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND="virtual/jre"
 RESTRICT="fetch"
 

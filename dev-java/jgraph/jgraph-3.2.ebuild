@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/jgraph-3.2.ebuild,v 1.6 2004/10/22 08:44:30 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/jgraph-3.2.ebuild,v 1.7 2004/11/03 11:30:47 axxo Exp $
 
 inherit java-pkg
 
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.jgraph.com"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 		dev-java/ant
+		app-arch/unzip
 		jikes? ( dev-java/jikes )"
 
 RDEPEND=">=virtual/jdk-1.4"

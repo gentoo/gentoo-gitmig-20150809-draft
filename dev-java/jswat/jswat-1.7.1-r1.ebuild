@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1-r1.ebuild,v 1.2 2004/10/16 17:26:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1-r1.ebuild,v 1.3 2004/11/03 11:34:08 axxo Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/jswat/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86 sparc ppc"
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.3"
 IUSE="doc"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.15 2004/10/27 14:33:02 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.16 2004/11/03 11:22:47 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> batik-1.5.1-r2.ebuild,
+  batik-1.5.1.ebuild:
+  depend on app-arch/unzip
 
 *batik-1.5.1-r2 (26 Oct 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.4 2004/10/17 19:16:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.5 2004/11/03 11:34:59 axxo Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,8 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86"
 IUSE="doc"
-DEPEND="=dev-java/gnu-regexp-1.1*"
+DEPEND="=dev-java/gnu-regexp-1.1*
+		app-arch/unzip"
 #RDEPEND=""
 S=${WORKDIR}/${PN}${PV}
 

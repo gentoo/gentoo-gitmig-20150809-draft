@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks-bin/jgoodies-looks-bin-1.2.1.ebuild,v 1.5 2004/10/22 11:06:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks-bin/jgoodies-looks-bin-1.2.1.ebuild,v 1.6 2004/11/03 11:30:22 axxo Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc"
-DEPEND=">=virtual/jdk-1.4"
+DEPEND=">=virtual/jdk-1.4
+		app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.4"
 S=${WORKDIR}
 

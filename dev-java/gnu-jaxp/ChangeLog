@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-jaxp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.7 2004/10/22 08:40:54 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.8 2004/11/03 11:26:17 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
+  gnu-jaxp-1.0_beta1-r1.ebuild, gnu-jaxp-1.0_beta1.ebuild:
+  depend on app-arch/unzip
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   gnu-jaxp-1.0_beta1-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/oscore-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore-bin/ChangeLog,v 1.4 2004/10/22 09:49:31 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscore-bin/ChangeLog,v 1.5 2004/11/03 11:36:44 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> oscore-bin-2.2.4.ebuild:
+  depend on app-arch/unzip
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> oscore-bin-2.2.4.ebuild:
   Keywords ~amd64.

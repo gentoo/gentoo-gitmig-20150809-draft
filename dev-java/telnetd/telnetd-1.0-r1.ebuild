@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-1.0-r1.ebuild,v 1.4 2004/10/29 12:48:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-1.0-r1.ebuild,v 1.5 2004/11/03 11:39:39 axxo Exp $
 
 inherit java-pkg
 
@@ -12,8 +12,9 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
+		app-arch/unzip
 		>=dev-java/xerces-2.6.2-r1
-	jikes? ( dev-java/jikes )"
+		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jdk-1.4"
 
 src_unpack() {

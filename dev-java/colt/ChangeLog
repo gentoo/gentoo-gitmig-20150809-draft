@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/colt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.6 2004/10/20 05:22:31 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.7 2004/11/03 11:23:46 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> colt-1.1.0.ebuild:
+  depend on app-arch/unzip
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> colt-1.1.0.ebuild:
   Keywords ~amd64.

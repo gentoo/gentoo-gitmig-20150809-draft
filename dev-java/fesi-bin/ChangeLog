@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fesi-bin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi-bin/ChangeLog,v 1.4 2004/10/20 06:18:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi-bin/ChangeLog,v 1.5 2004/11/03 11:25:28 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> fesi-bin-1.1.5.ebuild:
+  depend on app-arch/unzip
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> fesi-bin-1.1.5.ebuild:
   Keywords ~amd64.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/wsdl4j-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j-bin/ChangeLog,v 1.4 2004/10/22 10:32:14 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j-bin/ChangeLog,v 1.5 2004/11/03 11:40:00 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> wsdl4j-bin-1.4.ebuild:
+  depend on app-arch/unzip
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wsdl4j-bin-1.4.ebuild:
   Keywords ~amd64.

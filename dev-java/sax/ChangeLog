@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/ChangeLog,v 1.4 2004/10/22 09:42:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/ChangeLog,v 1.5 2004/11/03 11:37:20 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> sax-2.2.1.ebuild:
+  depend on app-arch/unzip
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> sax-2.2.1.ebuild:
   Keywords ~amd64.

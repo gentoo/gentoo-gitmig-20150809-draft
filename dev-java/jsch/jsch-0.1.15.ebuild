@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.15.ebuild,v 1.6 2004/10/16 17:26:23 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.15.ebuild,v 1.7 2004/11/03 11:33:03 axxo Exp $
 
 inherit java-pkg
 
@@ -15,6 +15,7 @@ IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.4
 	>=dev-java/jzlib-1.0.3
+	app-arch/unzip
 	jikes? ( >=dev-java/jikes-1.17 )"
 RDEPEND=">=virtual/jdk-1.4"
 

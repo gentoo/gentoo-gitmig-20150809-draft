@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0_beta6.ebuild,v 1.4 2004/10/22 11:51:48 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0_beta6.ebuild,v 1.5 2004/11/03 11:40:27 axxo Exp $
 
 inherit java-pkg
 
@@ -15,6 +15,7 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
 DEPEND=">=dev-java/ant-1.4
+		app-arch/unzip
 		>=dev-java/xerces-2.6.2-r1
 		dev-java/xalan
 		dev-java/junit

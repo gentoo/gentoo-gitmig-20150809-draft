@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xt-bin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt-bin/ChangeLog,v 1.4 2004/10/16 17:42:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt-bin/ChangeLog,v 1.5 2004/11/03 11:40:48 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> xt-bin-20020426a.ebuild:
+  depend on app-arch/unzip
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> xt-bin-20020426a.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

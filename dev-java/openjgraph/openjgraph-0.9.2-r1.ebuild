@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjgraph/openjgraph-0.9.2-r1.ebuild,v 1.1 2004/09/17 11:43:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjgraph/openjgraph-0.9.2-r1.ebuild,v 1.2 2004/11/03 11:36:06 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -9,6 +9,7 @@ SRC_URI="mirror://sourceforge/openjgraph/${P}.zip"
 HOMEPAGE="http://openjgraph.sf.net"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
 	dev-java/log4j
 	dev-java/junit
 	=dev-java/xerces-1.3*

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.1 2004/10/30 19:08:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.2 2004/11/03 11:31:04 axxo Exp $
 
 inherit java-pkg
 
@@ -16,6 +16,7 @@ RDEPEND="	=virtual/jre-1.4*
 DEPEND="${RDEPEND}
 		=virtual/jdk-1.4*
 		>=dev-java/ant-core-1.5
+		app-arch/unzip
 		junit? (
 			dev-java/commons-logging
 			dev-java/junit

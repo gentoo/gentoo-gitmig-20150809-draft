@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kunststoff-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff-bin/ChangeLog,v 1.3 2004/06/24 22:38:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kunststoff-bin/ChangeLog,v 1.4 2004/11/03 11:35:34 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
+  kunststoff-bin-2.0.1.ebuild:
+  depend on app-arch/unzip
 
   04 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   kunststoff-bin-2.0.1.ebuild:

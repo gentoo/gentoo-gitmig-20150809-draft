@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jnlp-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-bin/ChangeLog,v 1.3 2004/10/22 09:13:20 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-bin/ChangeLog,v 1.4 2004/11/03 11:32:28 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jnlp-bin-1.2.ebuild:
+  depend on app-arch/unzip
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jnlp-bin-1.2.ebuild:
   Keywords ~amd64.

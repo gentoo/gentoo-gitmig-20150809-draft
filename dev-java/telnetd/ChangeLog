@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/telnetd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.6 2004/10/29 12:48:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.7 2004/11/03 11:39:39 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> telnetd-1.0-r1.ebuild,
+  telnetd-1.0.ebuild:
+  depend on app-arch/unzip
 
   29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> telnetd-1.0-r1.ebuild,
   telnetd-1.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon-bin/saxon-bin-8.0b.ebuild,v 1.3 2004/10/22 11:47:52 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon-bin/saxon-bin-8.0b.ebuild,v 1.4 2004/11/03 11:38:11 axxo Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://saxon.sourceforge.net/"
 LICENSE="MPL-1.1"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="doc"
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND="virtual/jdk"
 SLOT="0"
 RESTRICT="nomirror"

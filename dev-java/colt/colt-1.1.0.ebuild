@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.1.0.ebuild,v 1.6 2004/10/20 05:22:31 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.1.0.ebuild,v 1.7 2004/11/03 11:23:46 axxo Exp $
 
 inherit java-pkg
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 ~sparc ~ppc ~amd64"
 
 DEPEND=">=virtual/jdk-1.4
 		dev-java/ant
+		app-arch/unzip
 		jikes? ( dev-java/jikes )"
 
 RDEPEND=">=virtual/jdk-1.4"

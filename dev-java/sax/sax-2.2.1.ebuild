@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/sax-2.2.1.ebuild,v 1.4 2004/10/22 09:42:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/sax-2.2.1.ebuild,v 1.5 2004/11/03 11:37:20 axxo Exp $
 
 inherit java-pkg
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 DEPEND="virtual/jdk
+		app-arch/unzip
 		dev-java/ant"
 RDEPEND="virtual/jre"
 
