@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libopendaap
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/ChangeLog,v 1.4 2004/09/11 16:06:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/ChangeLog,v 1.5 2004/10/05 20:01:17 eradicator Exp $
+
+  05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libopendaap-0.2.3.ebuild, +files/libopendaap-0.2.3-types.h:
+  Added to ~amd64.  Fixed typedefs to work crossplatform.
 
   11 Sep 2004; Jon Hood <squinky86@gentoo.org> libopendaap-0.2.3.ebuild:
   Stable on x86.
