@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.1.1.ebuild,v 1.2 2004/06/24 21:54:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.1.1.ebuild,v 1.3 2004/06/26 10:17:25 usata Exp $
 
 DESCRIPTION="scim-uim is an input module for Smart Common Input Method (SCIM) which uses uim as backend"
 HOMEPAGE="http://freedesktop.org/~suzhe/"
@@ -8,7 +8,7 @@ SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha"
 IUSE=""
 
 DEPEND=">=app-i18n/scim-0.99.0_pre20040614
