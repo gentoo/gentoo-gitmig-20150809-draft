@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/vncsnapshot
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/ChangeLog,v 1.1 2003/04/21 17:51:45 g2boojum Exp $
+
+*vncsnapshot-1.1 (21 Apr 2003)
+
+  21 Apr 2003; Grant Goodyear <g2boojum@gentoo.org> vncsnapshot-1.1.ebuild:
+  New package
+
