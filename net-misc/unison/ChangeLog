@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/unison
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.1 2002/07/18 02:53:57 george Exp $
+
+*unison-2.9.1.ebuild (17 July 2002)
+
+  17 July 2002; George Shapovalov <george@gentoo.org> unison-2.9.1.ebuild, files/digest-unison-2.9.1, ChangeLog :
+
+  Inital release,
+  Two-way cross-platform file synchronizer
+  
+  ebuild submitted by Bardur Arantsson <bardur-gta@odense.kollegienet.dk>
