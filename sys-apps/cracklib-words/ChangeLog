@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/cracklib-words
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cracklib-words/ChangeLog,v 1.1 2005/02/12 20:21:06 vapier Exp $
+
+*cracklib-words-1.1 (12 Feb 2004)
+
+  12 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
