@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.12 2004/01/07 01:31:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.13 2004/01/09 12:11:42 liquidx Exp $
+
+*bluez-utils-2.3-r2 (09 Jan 2004)
+
+  09 Jan 2004; Alastair Tse <liquidx@gentoo.org>:
+  files/bluez-utils-2.3-bluepin-gtk2.patch bluez-utils-2.3-r2.ebuild
+  new revision bump. added gtk2 patch to /usr/bin/bluepin (#35987).
+  changed default pin_helper to /usr/bin/bluepin.
 
   07 Jan 2004; Alastair Tse <liquidx@gentoo.org> files/bluetooth.rc:
   added 'after hotplug' in rc script (#36762)
