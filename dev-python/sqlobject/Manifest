@@ -1,4 +1,16 @@
-MD5 5b5d703231a25ab3a550c6b3cb17bdea sqlobject-0.6.ebuild 856
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1436c0c2e931c2d0ca9aa610b5a34a38 sqlobject-0.6.ebuild 887
 MD5 4f1a2e57adc3709e1eb06286ce386e62 metadata.xml 373
-MD5 face4a0bd21d4e452c471e0ebe3352e7 ChangeLog 413
+MD5 c4ce49788ecadb13cafad9e040a84738 ChangeLog 584
+MD5 4e367ed18e4e4b3460613985ff2d342d sqlobject-0.6.1.ebuild 888
 MD5 d0031ecb2e25667b84c0f038fbfd9824 files/digest-sqlobject-0.6 65
+MD5 1f977e1d1bdca5117fa468d6d620ca80 files/digest-sqlobject-0.6.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCJpLcz2gxt1z4IGYRAmEeAKCuQJZi9wvz1Cf2DeL7QhPh9XZdUwCgjlxu
+kY+Jn++JMJr+VxYtxuDF980=
+=FoCZ
+-----END PGP SIGNATURE-----

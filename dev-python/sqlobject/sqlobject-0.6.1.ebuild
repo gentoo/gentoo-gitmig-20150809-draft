@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.6.ebuild,v 1.2 2005/03/03 04:29:09 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-0.6.1.ebuild,v 1.1 2005/03/03 04:29:09 pythonhead Exp $
 
 inherit distutils
 
@@ -19,7 +19,6 @@ RDEPEND=">=dev-lang/python-2.2
 		firebird? ( >=dev-python/kinterbasdb-3.0.2 )"
 
 S=${WORKDIR}/${MY_P}
-
 
 src_install() {
 	distutils_src_install
