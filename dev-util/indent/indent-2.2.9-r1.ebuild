@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9-r1.ebuild,v 1.3 2004/09/26 21:08:38 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/indent-2.2.9-r1.ebuild,v 1.4 2004/10/27 16:26:09 vapier Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/indent/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips s390 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="nls"
 
 DEPEND="virtual/libc"
