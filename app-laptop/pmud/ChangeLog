@@ -1,6 +1,6 @@
 # ChangeLog for app-laptop/pmud
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.5 2004/09/05 07:00:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pmud/ChangeLog,v 1.6 2004/09/29 23:27:32 swegener Exp $
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
