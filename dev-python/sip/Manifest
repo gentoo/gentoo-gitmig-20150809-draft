@@ -2,10 +2,10 @@ MD5 1defdeb5f7bc481bafccafaa4079c35c sip-4.0_rc4.ebuild 914
 MD5 e37d8771334e85550c6c20ecd1d13bd9 sip-4.0.1.ebuild 1056
 MD5 fd500927a0c38bbf4f5731c288505ca3 sip-4.0.ebuild 1058
 MD5 84654b58fceead3f36976a4dac646d18 sip-3.8-r1.ebuild 1106
-MD5 3e9fc1abada035d77dd2d85a6220aa87 ChangeLog 5001
+MD5 188452e0ebc6a8d4f680460d21fc652e ChangeLog 5086
 MD5 8d3c359df1792cc095ddf1f47d6726e5 sip-4.0_rc2.ebuild 906
 MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
-MD5 7c8a241a13291cdd72c12bd3c41b1137 sip-3.10.2.ebuild 988
+MD5 07b7f4d1e141163eac225dcd0e44a92d sip-3.10.2.ebuild 983
 MD5 6a011f04f4a2219a674a61dd82763301 files/digest-sip-4.0.1 61
 MD5 e052f291e46bb8d1de4cfb1b45aeac88 files/digest-sip-3.10.2 62
 MD5 821af86e779d5bc5b3457336a0426fa1 files/digest-sip-3.8-r1 67
