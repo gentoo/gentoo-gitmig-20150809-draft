@@ -8,7 +8,7 @@ MD5 a9cb8bca42de24626f531a5b07868233 libglade-2.4.0.ebuild 1276
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 74ee7b4547b5d48e058931ccd619810a libglade-2.4.2.ebuild 1370
 MD5 c357e79b3b931a855d02c8077cd47fe0 ChangeLog 7739
-MD5 027451e1691ce0286ca9a63f81842e51 libglade-2.5.0.ebuild 1363
+MD5 6a5c86c19508707ad8755b265c521390 libglade-2.5.0.ebuild 1363
 MD5 ba2eb9b8a5caed325917e267ef33d8ac files/Makefile.in.am-xmlcatalog.patch 958
 MD5 6876e5db1b80846b82a289a82b44408b files/digest-libglade-0.17-r6 65
 MD5 77fafb164d53dc862957a5bd2b7511e4 files/digest-libglade-2.0.1 67
@@ -20,7 +20,7 @@ MD5 225998fcdfb3607e5908dfb6178d849b files/digest-libglade-2.5.0 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCLpDPXjcVihsel0ERArQjAKDfTWCtVaECLqgvDmrXWd6D+BOyUwCg1wVz
-195TZy0YS05FfEsKp6Fu1Ww=
-=nAE3
+iD8DBQFCLy1ZXjcVihsel0ERAhZkAKDCyIcJje9QjL18VPT73ANxHS/cMACgxeIQ
+bEXlfpa7R75ov2MjYHTUuXo=
+=t3Uw
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.5.0.ebuild,v 1.1 2005/03/09 05:59:24 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.5.0.ebuild,v 1.2 2005/03/09 17:08:04 joem Exp $
 
 # FIXME : catalog stuff
 inherit gnome2 eutils
@@ -30,7 +30,7 @@ src_compile() {
 	cd ${S}
 	# patch to stop make install installing the xml catalog
 	# because we do it ourselves in postinst()
-	epatch ${FILESDIR}/Makefile.in.am-2.4.1-xmlcatalog.patch
+	epatch ${FILESDIR}/Makefile.in.am-2.4.2-xmlcatalog.patch
 
 	gnome2_src_compile
 
