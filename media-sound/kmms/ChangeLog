@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kmms
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmms/ChangeLog,v 1.5 2003/06/12 21:01:13 msterret Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmms/ChangeLog,v 1.6 2004/04/08 16:17:59 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  kmms-0.8_beta1.ebuild:
+  Project appears dead upstream... Changning homepage and SRC_URI to be sf
+  project page and gentoo mirror. Closes bug #47152.
 
   12 Jun 2003; <msterret@gentoo.org> kmms-0.8_beta1.ebuild:
   add Header
