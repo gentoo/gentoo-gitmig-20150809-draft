@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kinterbasdb
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.7 2003/12/25 21:51:56 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.8 2004/02/19 14:19:25 agriffis Exp $
+
+  19 Feb 2004; Aron Griffis <agriffis@gentoo.org>
+  kinterbasdb-3.0.1_pre3.ebuild, kinterbasdb-3.0.2.ebuild:
+  Remove ~alpha since firebird isn't supported here
 
   25 Dec 2003; Jason Wever <weeve@gentoo.org> kinterbasdb-3.0.1_pre3.ebuild,
   kinterbasdb-3.0.2.ebuild:
