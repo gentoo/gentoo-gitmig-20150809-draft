@@ -16,7 +16,7 @@
 # Executes the correct autoconf version.
 #
 # - defaults to autoconf-2.13
-# - runs autoconf-2.5x if it exists and...
+# - runs autoconf-2.52d if it exists and...
 #   - envvar WANT_AUTOCONF_2_5 is set to `1'
 #     -or-
 #   - configure.ac is present
@@ -30,14 +30,14 @@
 sub cat_ { local *F; open F, $_[0] or return; my @l = <F>; wantarray ? @l : join '', @l }
 
 my $binary     = "$0-2.13";
-my $binary_new = "$0-2.5x";
+my $binary_new = "$0-2.52d";
 
 if (!$ENV{WANT_AUTOCONF_2_1}) {
     if (-x $binary_new                  # user may have only 2.13
 	&& ($ENV{WANT_AUTOCONF_2_5}
 	    || -r 'configure.ac'
-	    || (cat_('configure.in') =~ /^\s*AC_PREREQ\(([^\)]{3})[^\)]*\)/m ? $1 : '') gt '2.1' 
-	    || (cat_('aclocal.m4') =~ /^\s*AC_PREREQ\(([^\)]{3})[^\)]*\)/m ? $1 : '') gt '2.1')) {
+	    || (cat_('configure.in') =~ /^\s*AC_PREREQ\(\[?([^\)]{3})[^\)]*\)/m ? $1 : '') gt '2.1' 
+	    || (cat_('aclocal.m4') =~ /^\s*AC_PREREQ\(\[?([^\)]{3})[^\)]*\)/m ? $1 : '') gt '2.1')) {
 	$ENV{WANT_AUTOCONF_2_5} = 1;    # to prevent further "cats" and to enhance consistency (possible cwd etc)
 	$binary 		= $binary_new;
     } else {
