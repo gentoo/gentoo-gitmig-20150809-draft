@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/kbear-2.0_beta2.ebuild,v 1.1 2002/08/22 23:10:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/kbear-2.0_beta2.ebuild,v 1.2 2002/08/29 20:38:20 danarmak Exp $
 inherit kde-base 
 
 S=${WORKDIR}/kbear-2.0beta2
@@ -13,3 +13,5 @@ KEYWORDS="x86"
 
 need-kde 3
 
+# uses xml2pot
+newdepend ">=kde-base/kdesdk-3"
