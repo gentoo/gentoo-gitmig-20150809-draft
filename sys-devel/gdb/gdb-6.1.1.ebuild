@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.1.1.ebuild,v 1.3 2004/06/24 22:46:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.1.1.ebuild,v 1.4 2004/07/16 15:39:04 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc64 ~hppa ~alpha"
+KEYWORDS="~x86 ~alpha ~arm ~hppa ~ppc64"
 IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
@@ -56,17 +56,13 @@ src_install() {
 
 	rm -rf ${D}/usr/include
 
-	dodoc COPYING* README
-
+	dodoc README
 	docinto gdb
-	dodoc gdb/CONTRIBUTE gdb/COPYING* gdb/README \
+	dodoc gdb/CONTRIBUTE gdb/README \
 		gdb/MAINTAINERS gdb/NEWS gdb/ChangeLog* \
 		gdb/TODO
-
 	docinto sim
 	dodoc sim/ChangeLog sim/MAINTAINERS sim/README-HACKING
-
 	docinto mmalloc
-	dodoc mmalloc/COPYING.LIB mmalloc/MAINTAINERS \
-		mmalloc/ChangeLog mmalloc/TODO
+	dodoc mmalloc/MAINTAINERS mmalloc/ChangeLog mmalloc/TODO
 }
