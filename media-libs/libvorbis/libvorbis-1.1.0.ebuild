@@ -1,25 +1,32 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.10 2005/01/12 03:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.11 2005/01/22 22:04:31 lostlogic Exp $
 
 inherit libtool flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="the Ogg Vorbis sound file format library"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
-SRC_URI="http://downloads.xiph.org/releases/vorbis/${P}.tar.gz"
+SRC_URI="http://downloads.xiph.org/releases/vorbis/${P}.tar.gz
+		aotuv? mirror://gentoo/libvorbis-aotuv-b3.patch"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos sparc x86"
-IUSE=""
+IUSE="aotuv"
 
 RDEPEND=">=media-libs/libogg-1.0"
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
+S=${WORKDIR}/${P/_*/}
+
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 	cd ${S}
+
+	if use aotuv; then
+		epatch  ${DISTDIR}/libvorbis-aotuv-b3.patch || die "aoTuV patch failed"
+	fi
 	# Fix a gcc crash.  With the new atexit patch to gcc, it
 	# seems it does not handle -mno-ieee-fp very well.
 	sed -i -e "s:-mno-ieee-fp::g" configure
