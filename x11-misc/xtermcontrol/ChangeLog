@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtermcontrol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.1 2004/02/22 06:18:23 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.2 2004/03/19 02:49:58 pfeifer Exp $
+
+  18 Mar 2004; Jay Pfeifer <pfeifer@gentoo.org> xtermcontrol-2.3.ebuild :
+  Marked stable on x86.
 
 *xtermcontrol-2.3 (22 Feb 2004)
   
