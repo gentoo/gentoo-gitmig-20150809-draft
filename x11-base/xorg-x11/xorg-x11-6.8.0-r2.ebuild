@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.34 2004/10/28 20:31:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.35 2004/10/29 06:20:00 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -691,7 +691,7 @@ compose_files_setup() {
 	# Hack from Mandrake (update ours that just created Compose files for
 	# all locales)
 	local x
-	for x in $(find ${D}/usr/$(get_libdir)/X11/locale/ -mindepth 1 -type d); do
+	for x in $(find ${D}/usr/$(get_libdir)/locale/ -mindepth 1 -type d); do
 		# make empty Compose files for some locales
 		# CJK must not have that file (otherwise XIM don't works some times)
 		case $(basename ${x}) in
@@ -711,7 +711,7 @@ compose_files_setup() {
 	# Another hack from Mandrake -- to fix dead + space for the us
 	# international keyboard
 	local i
-	for i in ${D}/usr/$(get_libdir)/X11/locale/*/Compose; do
+	for i in ${D}/usr/$(get_libdir)/locale/*/Compose; do
 		sed -i \
 			-e 's/\(<dead_diaeresis> <space>\).*$/\1 : "\\"" quotedbl/' \
 			-e "s/\(<dead_acute> <space>\).*$/\1 : \"'\" apostrophe/" ${i} \
@@ -822,7 +822,7 @@ strip_execs() {
 		done
 		# Now do the libraries ...
 		for x in ${D}/usr/{$(get_libdir),$(get_libdir)/opengl/${PN}/$(get_libdir)}/*.so.* \
-			${D}/usr/{$(get_libdir),$(get_libdir)/X11/locale/$(get_libdir)/common}/*.so.*; do
+			${D}/usr/{$(get_libdir),$(get_libdir)/locale/$(get_libdir)/common}/*.so.*; do
 			if [ -f ${x} ]; then
 				echo "$(echo ${x/${D}})"
 				${STRIP} --strip-debug ${x} || :
@@ -931,7 +931,7 @@ src_install() {
 
 	# Fix permissions on locale/common/*.so
 	local x
-	for x in ${D}/usr/$(get_libdir)/X11/locale/$(get_libdir)/common/*.so*; do
+	for x in ${D}/usr/$(get_libdir)/locale/$(get_libdir)/common/*.so*; do
 		if [ -f ${x} ]; then
 			fperms 0755 ${x/${D}}
 		fi
@@ -946,10 +946,10 @@ src_install() {
 
 	# We zap our CFLAGS in the host.def file, as hardcoded CFLAGS can
 	# mess up other things that use xmkmf
-	ebegin "Fixing $(get_libdir)/X11/config/host.def"
-		cp ${D}/usr/$(get_libdir)/X11/config/host.def ${T}
+	ebegin "Fixing $(get_libdir)/config/host.def"
+		cp ${D}/usr/$(get_libdir)/config/host.def ${T}
 		awk '!/OptimizedCDebugFlags|OptimizedCplusplusDebugFlags|GccWarningOptions/ {print $0}' \
-			${T}/host.def > ${D}/usr/$(get_libdir)/X11/config/host.def \
+			${T}/host.def > ${D}/usr/$(get_libdir)/config/host.def \
 			|| eerror "Munging host.def failed"
 		# theoretically, /usr/lib/X11/config is a possible candidate for
 		# config file management. If we find that people really worry about imake
@@ -975,7 +975,7 @@ src_install() {
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/DPS /usr/include/DPS
 	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../../usr/$(get_libdir)/X11/xkb /etc/X11/xkb
+	dosym ../../usr/$(get_libdir)/xkb /etc/X11/xkb
 
 	if use opengl; then
 		fix_opengl_symlinks
@@ -993,7 +993,7 @@ src_install() {
 	dosym ../../usr/X11R6/bin/Xorg /etc/X11/X
 
 	# Fix perms
-	fperms 755 /usr/$(get_libdir)/X11/xkb/geometry/sgi /usr/X11R6/bin/dga
+	fperms 755 /usr/$(get_libdir)/xkb/geometry/sgi /usr/X11R6/bin/dga
 
 	compose_files_setup
 
@@ -1112,26 +1112,26 @@ pkg_preinst() {
 		rm -f ${ROOT}/etc/X11/app-defaults
 	fi
 
-	if [ ! -L ${ROOT}/usr/$(get_libdir)/X11/app-defaults ] \
-		&& [ -d ${ROOT}/usr/$(get_libdir)/X11/app-defaults ]; then
+	if [ ! -L ${ROOT}/usr/$(get_libdir)/app-defaults ] \
+		&& [ -d ${ROOT}/usr/$(get_libdir)/app-defaults ]; then
 		if [ ! -d ${ROOT}/etc/X11/app-defaults ]; then
 			mkdir -p ${ROOT}/etc/X11/app-defaults
 		fi
 
-		mv -f ${ROOT}/usr/$(get_libdir)/X11/app-defaults ${ROOT}/etc/X11
+		mv -f ${ROOT}/usr/$(get_libdir)/app-defaults ${ROOT}/etc/X11
 	fi
 
-	if [ -L ${ROOT}/usr/$(get_libdir)/X11/xkb ]; then
-		rm -f ${ROOT}/usr/$(get_libdir)/X11/xkb
+	if [ -L ${ROOT}/usr/$(get_libdir)/xkb ]; then
+		rm -f ${ROOT}/usr/$(get_libdir)/xkb
 	fi
 
 	if [ ! -L ${ROOT}/etc/X11/xkb ] \
 		&& [ -d ${ROOT}/etc/X11/xkb ]; then
-		if [ ! -d ${ROOT}/usr/$(get_libdir)/X11/xkb ]; then
-			mkdir -p ${ROOT}/usr/$(get_libdir)/X11
+		if [ ! -d ${ROOT}/usr/$(get_libdir)/xkb ]; then
+			mkdir -p ${ROOT}/usr/$(get_libdir)
 		fi
 
-	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/$(get_libdir)/X11
+	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/$(get_libdir)
 	fi
 
 	# Run this even for USE=-opengl, to clean out old stuff from possible
@@ -1316,7 +1316,7 @@ pkg_postinst() {
 		fi
 	fi
 
-	for x in $(find ${ROOT}/usr/$(get_libdir)/X11/locale/ -mindepth 1 -type d); do
+	for x in $(find ${ROOT}/usr/$(get_libdir)/locale/ -mindepth 1 -type d); do
 		# Remove old compose files we might have created incorrectly
 		# CJK must not have that file (otherwise XIM don't works some times)
 		case $(basename ${x}) in
