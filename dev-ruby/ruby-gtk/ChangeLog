@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gtk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ChangeLog,v 1.10 2003/12/26 16:56:39 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ChangeLog,v 1.11 2004/01/09 14:48:31 agriffis Exp $
+
+  09 Jan 2004; Aron Griffis <agriffis@gentoo.org> ruby-gtk-0.34-r1.ebuild:
+  stable on alpha
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> ruby-gtk-0.34-r1.ebuild:
   Added ~sparc keyword.
