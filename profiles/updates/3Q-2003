@@ -478,4 +478,22 @@ move media-libs/gst-plugins-gnomevfs media-plugins/gst-plugins-gnomevfs
 move media-libs/gst-plugins-mad media-plugins/gst-plugins-mad
 move media-libs/gst-plugins-oss media-plugins/gst-plugins-oss
 move media-libs/gst-plugins-vorbis media-plugins/gst-plugins-vorbis
-
+move sys-apps/cramfs sys-fs/cramfs
+move sys-apps dd_rescue sys-fs/dd-rescue
+move sys-apps/devfsd sys-fs/devfsd
+move sys-apps/e2fsprogs sys-fs/e2fsprogs
+move sys-apps/efsd sys-fs/efsd
+move sys-apps/evms sys-fs/evms
+move sys-apps/ext2resize sys-fs/ext2resize
+move sys-apps/hfsplusutils sys-fs/hfsplusutils
+move sys-apps/hfsutils sys-fs/hfsutils
+move sys-apps/jfsutils sys-fs/jfsutils
+move sys-apps/linux-ntfs sys-fs/linux-ntfs
+move sys-apps/lufs sys-fs/lufs
+move sys-apps/lvmuser sys-fs/lvmuser
+move sys-apps/lvm2 sys-fs/lvm2
+move sys-apps/raidtools sys-fs/raidtools
+move sys-apps/reiserfsprogs sys-fs/reiserfsprogs
+move sys-apps/udftools sys-fs/udftools
+move sys-apps/xfsdump sys-fs/xfsdump
+move sys-apps/xfsprogs sys-fs/xfsprogs
