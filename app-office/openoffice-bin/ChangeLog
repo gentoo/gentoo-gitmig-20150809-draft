@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.21 2003/06/20 08:58:17 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.22 2003/06/30 11:05:55 brad Exp $
+
+*openoffice-bin-1.1_beta2-r1 (30 Jun 2003)
+
+  30 Jun 2003; Brad Laue <brad@gentoo.org> openoffice-bin-1.1_beta2-r1.ebuild:
+  Correct an issue where KDE menu items show up twice - directory name changed
+  on us.
 
   20 Jun 2003; Paul de Vrieze <pauldv@gentoo.org>
   openoffice-bin-1.1_beta2.ebuild, files/1.1_beta2/ooffice-wrapper-1.3:
