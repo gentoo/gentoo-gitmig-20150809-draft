@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.76 2005/01/12 05:07:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.77 2005/01/12 11:13:28 eradicator Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -42,7 +42,7 @@
 # UNIPATCH_STRICTORDER	- if this is set places patches into directories of
 #						  order, so they are applied in the order passed
 
-inherit toolchain-funcs
+inherit toolchain-funcs multilib
 
 ECLASS="kernel-2"
 INHERITED="$INHERITED $ECLASS"
@@ -300,18 +300,17 @@ install_headers() {
 		dodir ${ddir}/asm-sparc64
 		cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
 		cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
-		generate_sparc_asm ${D}/usr/include
-	else
-		cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
-	fi
 
-	if [ "${ARCH}" = "amd64" ]; then
+		#generate_sparc_asm ${D}/usr/include
+		create_ml_includes /usr/include/asm __sparc__:/usr/include/asm-sparc __sparc64__:/usr/include/asm-sparc64
+	elif [ "${ARCH}" = "amd64" ]; then
 		rm -Rf ${D}/${ddir}/asm
 		dodir ${ddir}/asm-i386
 		dodir ${ddir}/asm-x86_64
 		cp -ax ${S}/include/asm-i386/* ${D}/usr/include/asm-i386
 		cp -ax ${S}/include/asm-x86_64/* ${D}/usr/include/asm-x86_64
-		/bin/sh ${FILESDIR}/generate-asm-amd64 ${D}/usr/include
+		#/bin/sh ${FILESDIR}/generate-asm-amd64 ${D}/usr/include
+		create_ml_includes /usr/include/asm __i386__:/usr/include/asm-i386 __x86_64__:/usr/include/asm-x86_64
 	else
 		cp -ax ${S}/include/asm/* ${D}/${ddir}/asm
 	fi
