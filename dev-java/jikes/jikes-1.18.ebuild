@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.18.ebuild,v 1.7 2003/09/26 03:35:44 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.18.ebuild,v 1.8 2004/01/18 08:49:23 strider Exp $
 
 DESCRIPTION="IBM's open source, high performance Java compiler"
 HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/jikes/"
 SRC_URI="ftp://www-126.ibm.com/pub/jikes/${PV}/${P}.tar.bz2"
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="x86 sparc ppc ia64"
+KEYWORDS="x86 sparc ppc ia64 amd64"
 
 RDEPEND="virtual/glibc"
 DEPEND="virtual/jdk"
