@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 e8943ca9d33cdcbfe321e8061b70514b ChangeLog 14665
 MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
 MD5 56b0990c71158a55583c149383d8b652 wine-20041019.ebuild 3753
-MD5 9c1a18f2e75416c5de0eeba262eb8dff wine-20041019-r2.ebuild 4024
+MD5 ecf3eb3ce0b8a12aea0902af98f3f881 wine-20041019-r2.ebuild 4062
 MD5 0b8a40b373bf8ab6c0368dd5a64f5449 wine-20040716.ebuild 3443
 MD5 9dbf73d557110996f187b6ed6ae4f7ea files/20041019-load-wrappers.patch 1333
 MD5 1668a758aa2007cb99a773b3c5c844c9 files/winearts-kdecvs-fix.patch 325
@@ -16,7 +16,7 @@ MD5 4ccbe6abe9eafe846714dd218bc6d2dd files/digest-wine-20041019-r2 212
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhKTbHTu7gpaalycRAuL4AKCSYXA6PDSzEOwZuS/hLSZesTiy1gCgonTl
-m8dgLnVbRav6v2kbARNqbgo=
-=axRw
+iD8DBQFBhbEXHTu7gpaalycRAg2kAKDlG5aYGTpH4VAjPHZNWQWdo0QeYwCghtHz
+3i0peOQ4mpMUQNGJj6mEuNE=
+=eoKl
 -----END PGP SIGNATURE-----

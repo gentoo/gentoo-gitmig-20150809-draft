@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r2.ebuild,v 1.2 2004/10/31 08:39:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r2.ebuild,v 1.3 2004/11/01 03:43:51 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,10 +18,8 @@ SLOT="0"
 KEYWORDS="-*"
 IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses doc"
 
-DEPEND="sys-devel/gcc
-	sys-devel/flex
+RDEPEND=">=media-libs/freetype-2.0.0
 	ncurses? ( >=sys-libs/ncurses-5.2 )
-	>=media-libs/freetype-2.0.0
 	jack? ( media-sound/jack-audio-connection-kit )
 	X? ( virtual/x11 )
 	arts? ( kde-base/arts )
@@ -31,9 +29,13 @@ DEPEND="sys-devel/gcc
 	opengl? ( virtual/opengl )
 	gif? ( media-libs/libungif )
 	jpeg? ( media-libs/jpeg )
-	glut? ( virtual/glut )
+	glut? ( virtual/glut )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
+	sys-devel/bison
+	sys-devel/gcc
 	doc? ( app-text/docbook-sgml-utils app-text/jadetex )
-	>=sys-apps/sed-4"
+	sys-devel/flex"
 
 src_unpack() {
 	unpack Wine-${PV}.tar.gz
