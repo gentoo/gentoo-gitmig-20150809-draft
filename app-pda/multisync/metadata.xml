@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>tad@gentoo.org</email>
-  <name>Troy Dack</name>
-</maintainer>
-<longdescription>Sync various portable devices with multiple clients</longdescription>
+  <herd>app-pda</herd>
+  <maintainer>
+    <email>johnm@gentoo.org</email>
+    <name>John Mylchreesy</name>
+    <description>Actively Maintained</description>
+  </maintainer>
+  <longdescription>
+    Multisync is a modular GTK utilities designed to sync many source plugins, with a destination.
+  </longdescription>
 </pkgmetadata>
