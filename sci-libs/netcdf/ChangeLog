@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/netcdf
+# ChangeLog for sci-libs/netcdf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.1 2004/12/28 18:29:26 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.2 2004/12/28 20:00:09 swegener Exp $
 
 *netcdf-3.5.0-r3 (28 Dec 2004)
 

@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/primegen
+# ChangeLog for sci-libs/primegen
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/ChangeLog,v 1.1 2004/12/28 19:19:55 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/ChangeLog,v 1.2 2004/12/28 20:00:37 swegener Exp $
 
 *primegen-0.97 (28 Dec 2004)
 

@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/libnova
+# ChangeLog for sci-libs/libnova
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.1 2004/12/28 18:57:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.2 2004/12/28 19:59:40 swegener Exp $
 
 *libnova-0.7.0 (28 Dec 2004)
 

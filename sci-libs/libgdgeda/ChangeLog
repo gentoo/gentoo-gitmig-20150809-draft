@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/libgdgeda
+# ChangeLog for sci-libs/libgdgeda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgdgeda/ChangeLog,v 1.1 2004/12/28 18:49:50 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgdgeda/ChangeLog,v 1.2 2004/12/28 19:57:59 swegener Exp $
 
 *libgdgeda-2.0.15 (28 Dec 2004)
 

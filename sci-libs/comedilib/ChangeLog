@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/comedilib
+# ChangeLog for sci-libs/comedilib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/comedilib/ChangeLog,v 1.1 2004/12/28 18:47:08 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/comedilib/ChangeLog,v 1.2 2004/12/28 19:57:13 swegener Exp $
 
 *comedilib-0.7.21 (28 Dec 2004)
 

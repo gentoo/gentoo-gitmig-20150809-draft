@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/udunits
+# ChangeLog for sci-libs/udunits
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.1 2004/12/28 19:24:10 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.2 2004/12/28 20:01:07 swegener Exp $
 
 *udunits-1.12.0 (28 Dec 2004)
 
