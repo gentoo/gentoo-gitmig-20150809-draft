@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.5 2003/07/05 22:49:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.6 2003/09/12 05:43:14 solar Exp $
+
+  12 Sep 2003; <solar@gentoo.org> chpax-0.4.ebuild:
+  marking stable for ppc
 
   05 Jul 2003; <solar@gentoo.org> metadata.xml:
   Added metadata.xml
