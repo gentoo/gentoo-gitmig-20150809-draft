@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/kemistry
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.1 2002/10/23 15:06:03 hannes Exp $
+
+*kemistry-0.6 (23 Oct 2002)
+
+  23 Oct 2002; Hannes Mehnert <hannes@gentoo.org> kemistry-0.6.ebuild,
+  ChangeLog: Initial ebuild. Thanks to a-tenderholt@northwestern.edu
+  (Adam Tenderholt) for submission (#7679).
