@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.3 2004/05/02 02:33:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.4 2004/05/05 03:09:18 eradicator Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:
@@ -17,7 +17,7 @@
 #  lrwxr-xr-x  1 root root       16 Apr  2  2003 shaderLibrary -> ../shaderLibrary
 #  drwxr-xr-x  3 root root     2048 Apr  2  2003 support
 
-inherit rpm
+inherit rpm eutils
 
 IUSE="bundled-libs"
 S="${WORKDIR}"
@@ -63,7 +63,8 @@ pkg_nofetch() {
 
 src_unpack() {
 	if [ -z "${MAYA_INSTALL_LOC}" ]; then
-		MAYA_INSTALL_LOC=/mnt/cdrom/LINUX
+		cdrom_get_cds LINUX/AWCommon-${AWCOMMON}.rpm
+		MAYA_INSTALL_LOC=${CDROM_ROOT}/LINUX
 	fi
 
 	if [ ! -d "${MAYA_INSTALL_LOC}" ]; then
