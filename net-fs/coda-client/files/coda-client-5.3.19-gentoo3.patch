@@ -1,0 +1,11 @@
+--- coda-5.3.19/coda-src/volutil/vol-restore.cc.old	2004-03-24 07:59:00.697570424 +0930
++++ coda-5.3.19/coda-src/volutil/vol-restore.cc	2004-03-24 07:59:34.819383120 +0930
+@@ -53,7 +53,7 @@
+ #include <sys/file.h>
+ #include <sys/time.h>
+ #include <ctype.h>
+-#include <varargs.h>
++#include <stdarg.h>
+ 
+ #include <unistd.h>
+ #include <stdlib.h>
