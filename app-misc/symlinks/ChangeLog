@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/symlinks
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.7 2004/09/03 03:12:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.8 2004/09/09 17:19:09 gustavoz Exp $
+
+  09 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> symlinks-1.2.ebuild:
+  Stable on sparc wrt #63439
 
   02 Sep 2004; Tom Gall <tgall@gentoo.org> symlinks-1.2.ebuild:
   stable on ppc64, bug #62327
