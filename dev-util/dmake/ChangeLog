@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dmake
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.10 2004/12/27 18:40:35 seemant Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.11 2005/03/22 19:31:57 luckyduck Exp $
+
+  22 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> dmake-4.1-r1.ebuild:
+  added ~amd64 to KEYWORDS, fixes #83157
 
   27 Dec 2004; Seemant Kulleen <seemant@gentoo.org> dmake-4.1-r1.ebuild:
   HOMEPAGE and SRC_URI fix thanks to: Adam Chodorowski <adam@chodorowski.com>
