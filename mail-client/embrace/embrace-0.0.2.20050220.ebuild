@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/embrace/embrace-0.0.1.20041031.ebuild,v 1.1 2004/11/02 04:52:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/embrace/embrace-0.0.2.20050220.ebuild,v 1.1 2005/02/21 11:04:24 vapier Exp $
 
+ECVS_MODULE="misc/embrace"
 inherit enlightenment
 
 DESCRIPTION="mail-checker which is based on the EFL"
