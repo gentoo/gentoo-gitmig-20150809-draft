@@ -1,4 +1,4 @@
-MD5 24d4a64b13a15508c137d7a4429b2f6b ChangeLog 3184
-MD5 f7fb8f1ed7ade2ec7bc29fd0b06c38b9 slocate-2.7-r2.ebuild 2058
+MD5 0fc93b906029ebed8a15443056f3366f ChangeLog 3181
+MD5 4ad1d9810b8e223f1f6a8074c43ab6ae slocate-2.7-r2.ebuild 2055
 MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7-r2 62
 MD5 68f3e9699059519b146dfc27398d5b03 files/updatedb.conf 586
