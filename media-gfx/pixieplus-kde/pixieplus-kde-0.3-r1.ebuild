@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixieplus-kde/pixieplus-kde-0.3-r1.ebuild,v 1.7 2003/02/13 12:36:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixieplus-kde/pixieplus-kde-0.3-r1.ebuild,v 1.8 2003/02/15 07:33:52 gerk Exp $
 
 inherit kde-base 
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.mosfet.org/pixie"
 
 # eeek! - danarmak
 LICENSE="QPL-1.0 LGPL-2 BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 newdepend ">=kde-base/kdebase-3"
 
