@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2986 2004/07/05 16:57:55 squinky86 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2987 2004/07/05 18:14:09 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -183,7 +183,7 @@ app-admin/msyslog
 
 # <g2boojum@gentoo.org> (04 May 2004)
 # rsync 2.6.2 seems to be behaving badly wrt our rsync servers.  Downgrading.
->=net-misc/rsync-2.6.2
+>=net-misc/rsync-2.6.1
 
 # <squinky86@gentoo.org> (01 May 2004)
 # accessibility testing for development purposes
