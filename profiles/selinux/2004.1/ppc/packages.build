@@ -21,7 +21,6 @@ sys-devel/gcc
 sys-devel/make
 sys-devel/patch
 dev-lang/python
-dev-libs/popt
 net-misc/wget
 net-misc/rsync
 app-editors/nano
