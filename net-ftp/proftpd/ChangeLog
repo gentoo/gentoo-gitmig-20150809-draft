@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.71 2004/09/18 13:35:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.72 2004/10/11 12:00:36 gmsoft Exp $
+
+  11 Oct 2004; Guy Martin <gmsoft@gentoo.org> proftpd-1.2.10.ebuild:
+  Marked stable on hppa.
 
   18 Sep 2004; Jason Wever <weeve@gentoo.org> proftpd-1.2.10.ebuild:
   Stable on sparc.
