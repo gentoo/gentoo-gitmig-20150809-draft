@@ -1,0 +1,11 @@
+--- Makefile	2004-02-25 16:50:22.759175018 +0000
++++ Makefile	2004-02-25 16:50:16.534709390 +0000
+@@ -483,7 +483,7 @@
+ $(OBJDIR)/qtinfo.o \
+ $(OBJDIR)/rechunk.o \
+ $(OBJS):
+-	$(CC) -c `cat $(OBJDIR)/c_flags` $(subst $(OBJDIR)/,, $*.c) -o $*.o
++	$(CC) -fPIC -c `cat $(OBJDIR)/c_flags` $(subst $(OBJDIR)/,, $*.c) -o $*.o
+ 
+ 
+ 

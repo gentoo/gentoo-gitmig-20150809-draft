@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.5.5-r1.ebuild,v 1.13 2004/02/20 10:54:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.5.5-r1.ebuild,v 1.14 2004/02/25 16:55:14 aliz Exp $
 
 DESCRIPTION="quicktime library for linux"
 HOMEPAGE="http://heroinewarrior.com/quicktime.php3"
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/quicktime_makefile.patch
+	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {
