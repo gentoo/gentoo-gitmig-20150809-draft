@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-0.ebuild,v 1.3 2004/02/05 21:05:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/fortune-mod-all-0.ebuild,v 1.4 2004/06/05 22:30:10 kloeri Exp $
 
 DESCRIPTION="Meta package for all fortune-mod packages"
 
@@ -14,6 +14,7 @@ RDEPEND="games-misc/fortune-mod
 	games-misc/fortune-mod-calvin
 	games-misc/fortune-mod-debilneho
 	games-misc/fortune-mod-dubya
+	games-misc/fortune-mod-dune
 	games-misc/fortune-mod-futurama
 	games-misc/fortune-mod-gentoo-dev
 	games-misc/fortune-mod-hitchhiker
