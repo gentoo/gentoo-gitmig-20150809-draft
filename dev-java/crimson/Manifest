@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 701d91120de053beaba7edd9ce060b8e crimson-1.1.3.ebuild 686
-MD5 c82dbb957b7043a21b1ac80be87d4a0e ChangeLog 705
+MD5 b2c2e8ec9ef7dc28b2a3872902d6e3ec crimson-1.1.3.ebuild 695
+MD5 ceeafb68ab07dacfa7e64751f90e63a7 ChangeLog 804
 MD5 5031f2db9b4dfa814dfebcb2736307d8 metadata.xml 864
 MD5 732dadf55f415b36663513d7abf926d2 files/digest-crimson-1.1.3 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcVX9/rLF9B432nYRAk4jAJ9PmQn51IwQOjPyJIz2M3u5XGVjMgCdE+li
-Tvypm2rf3uMAMPn6ur/1Yto=
-=F2kI
+iD8DBQFBcaoe/rLF9B432nYRAvkzAJ9TynchmShKIHgLniFvK0ivE1IwrgCgp3QS
+wYiL5X6fWZGJTKAIK4QzIQ8=
+=EkLE
 -----END PGP SIGNATURE-----

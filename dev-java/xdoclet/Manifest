@@ -1,6 +1,16 @@
-MD5 0dde077665dcaf41a3d658c2b2cfac60 ChangeLog 1148
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 42b386d8d843326065256fb97d838e73 xdoclet-1.2.0_beta1.ebuild 965
+MD5 86621dc6f85f7881a1e0d39918a4cd58 xdoclet-1.2.1.ebuild 1596
+MD5 1471b2fdb3ddf69c6463a0e6bf7bdb8c ChangeLog 1274
 MD5 2f0b8cbc0e0adf36b678725712a3e3b7 metadata.xml 511
-MD5 5f7da806735793bdb583e34adde99cc0 xdoclet-1.2.0_beta1.ebuild 941
-MD5 cdb4d4bc0c9413bf725168d9fdf79703 xdoclet-1.2.1.ebuild 1573
 MD5 cf001749ad1559c92f75e64bf7939974 files/digest-xdoclet-1.2.0_beta1 73
 MD5 6d6f9189f4ecffc98c1b539a0b647cc3 files/digest-xdoclet-1.2.1 139
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcapX/rLF9B432nYRAgyfAKC+TReSlJNMs66YccK/9HOSxDjKZQCgtMMy
+uEhAshsnzWI803BdvpDsaGA=
+=Vc9B
+-----END PGP SIGNATURE-----
