@@ -1,7 +1,14 @@
 # ChangeLog for sys-apps/jfsutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/jfsutils/ChangeLog,v 1.9 2002/12/10 17:11:30 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/jfsutils/ChangeLog,v 1.10 2002/12/16 15:55:22 bcowan Exp $
 
+* jfsutils-1.1.0-r2 (16 Dec 2002)
+
+  16 Dec 2002; Brad Cowan <bcowan@gentoo.org> jfsutils-1.1.0-r2.ebuild,
+  files/digest-jfsutils-1.1.0-r2:
+  
+  Changed syntax a bit.
+      
 *jfsutils-1.1.0-r1 (10 Dec 2002)
 
   10 Dec 2002; Daniel Robbins <drobbins@gentoo.org> jfsutils-1.1.0-r1.ebuild:
