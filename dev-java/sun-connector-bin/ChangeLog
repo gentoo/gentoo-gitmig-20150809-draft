@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/sun-connector-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-connector-bin/ChangeLog,v 1.1 2005/01/07 13:27:35 luckyduck Exp $
+
+*sun-connector-bin-1.5 (07 Jan 2005)
+
+  07 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +sun-connector-bin-1.5.ebuild:
+  Inital import. Ebuild contributed by Dan <dan@intuitivelyobvious.net>. Fixes
+  bug #67406.
+
