@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20041226_pre7.ebuild,v 1.2 2004/12/27 14:24:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20050116_pre7.ebuild,v 1.1 2005/01/17 03:14:05 vapier Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.enlightenment.org/pages/ecore.html"
 
 IUSE="X fbcon opengl"
 
-DEPEND=">=x11-libs/evas-1.0.0.20041226_pre13
+DEPEND=">=x11-libs/evas-1.0.0.20041016_pre13
 	virtual/x11
 	opengl? ( virtual/opengl )"
 

@@ -4,15 +4,15 @@ Hash: SHA1
 MD5 97061826a4036214d1527cc8b786ae94 ChangeLog 663
 MD5 1cc9fb608044e9a215dc5fcdc3d6e650 ecore-1.0.0_pre7.ebuild 843
 MD5 f37911494b2f19fda2bf5b9d9a17f1e4 metadata.xml 611
-MD5 fed5b242b8fd14178e60b7ec64d3c5c4 ecore-1.0.0.20041226_pre7.ebuild 878
-MD5 d88e3e7f99fe3b71fb22b241250af0b6 ecore-9999.ebuild 863
+MD5 7958a855fdd530a1db5e65290f8ff8b4 ecore-1.0.0.20050116_pre7.ebuild 878
+MD5 db353694de8bbcef257596ce964449ad ecore-9999.ebuild 863
 MD5 00fa41b36a959f747a98865239e822c6 files/digest-ecore-1.0.0_pre7 68
-MD5 7396df2e2291f26866847ae5adfbc058 files/digest-ecore-1.0.0.20041226_pre7 79
+MD5 588d87c60f5532f898d4cd8f57ebb779 files/digest-ecore-1.0.0.20050116_pre7 79
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ecore-9999 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB0BvTroRuSHgZdywRAn8VAJ9l9HKtCEobNvs/4N+7wETM5NPH7gCePwBf
-ToAaxVerDZz1fbSn0vfvvgU=
-=sM8W
+iD8DBQFB6y2oroRuSHgZdywRAgqkAJ4sUOGGhvakjsd+V060J+GN/mlKWwCeMrcv
+jEd6n07M14rOWQPYg3EjeNQ=
+=SCfW
 -----END PGP SIGNATURE-----
