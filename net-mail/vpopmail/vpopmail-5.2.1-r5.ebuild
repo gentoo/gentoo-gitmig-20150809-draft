@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.4 2003/09/05 08:50:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.5 2003/12/08 22:31:03 robbat2 Exp $
 
 IUSE="mysql ipalias"
 
@@ -123,7 +123,7 @@ src_install () {
 	dodoc doc/doc_html/* doc/man_html/*
 	rm -rf ${D}/${VPOP_HOME}/doc
 	dosym /usr/share/doc/${PVR}/ ${VPOP_HOME}/doc
-	chown vpopmail.vpopmail ${D}/${VPOP_HOME}/doc
+	chown vpopmail:vpopmail ${D}/${VPOP_HOME}/doc
 
 	# Create symlink in /usr/bin for executables
 	dodir /usr/bin/
