@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.15 2004/08/07 16:49:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.16 2004/08/30 19:51:35 kugelfang Exp $
+
+  30 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> tclx-8.3-r1.ebuild,
+  tclx-8.3.5.ebuild:
+  Removed append-flags -fPIC. Not necessary. See BUG #55238.
 
   07 Aug 2004; Doug Goldstein <cardoe@gentoo.org> tclx-8.3.5.ebuild:
   Fixes for bug #58730 and #46565.

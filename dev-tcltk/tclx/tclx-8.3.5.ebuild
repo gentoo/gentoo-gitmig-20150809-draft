@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.1 2004/08/07 16:49:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.2 2004/08/30 19:51:35 kugelfang Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,8 +22,10 @@ DEPEND=">=sys-apps/sed-4
 
 S=${WORKDIR}/${PN}${PV}
 
-[ $ARCH = alpha ] && append-flags -fPIC
-[ "${ARCH}" = "amd64" ] && append-flags -fPIC
+# Not necessary ! see BUG #55238
+# Danny van Dyk <kugelfang@gentoo.org> 2004/08/30
+# [ $ARCH = alpha ] && append-flags -fPIC
+# [ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
