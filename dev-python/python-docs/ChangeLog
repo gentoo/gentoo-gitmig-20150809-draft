@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.27 2004/05/04 12:23:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.28 2004/05/14 14:56:56 kloeri Exp $
+
+*python-docs-2.3.4_rc1 (14 May 2004)
+
+  14 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  +python-docs-2.3.4_rc1.ebuild:
+  Bump version.
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> python-docs-2.2.2.ebuild,
   python-docs-2.2.3.ebuild, python-docs-2.3.3-r1.ebuild,
