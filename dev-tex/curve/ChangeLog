@@ -1,0 +1,9 @@
+# ChangeLog for dev-tex/curve
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/curve/ChangeLog,v 1.1 2004/04/16 00:05:15 pylon Exp $
+
+*curve-1.7 (16 Apr 2004)
+
+  16 Apr 2004; Lars Weiler <pylon@gentoo.org> curve-1.7.ebuild, metadata.xml:
+  Initial commit of this package.
+
