@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/atlas-c++
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.6 2003/12/31 19:31:04 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.7 2004/04/19 04:48:00 weeve Exp $
+
+  18 Apr 2004; Jason Wever <weeve@gentoo.org> atlas-c++-0.4.5.ebuild:
+  Added ~sparc keyword.
 
 *atlas-c++-0.4.6 (31 Dec 2003)
 
