@@ -1,60 +1,42 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.3.ebuild,v 1.5 2003/02/13 14:23:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.9.ebuild,v 1.1 2003/03/03 20:23:21 foser Exp $
 
-inherit debug gnome2 eutils
+inherit gnome2 eutils
 
 S=${WORKDIR}/${P}
 
-IUSE="nls ssl perl gtkhtml ldap"
-DESCRIPTION="Balsa: Technical Preview email client for GNOME"
+IUSE="ssl gtkhtml perl ldap"
+DESCRIPTION="Email client for GNOME"
 SRC_URI="http://balsa.gnome.org/${P}.tar.bz2"
 HOMEPAGE="http://balsa.gnome.org"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="net-mail/mailbase
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2
 	>=net-libs/libesmtp-0.8.11
-	>=app-text/aspell-0.50
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-vfs-2
-	=gnome-base/libgnomeprint-1*
-	=gnome-base/libgnomeprintui-1*
-	nls? ( sys-devel/gettext )
+	>=gnome-base/libgnomeprint-2.1.4
+	>=gnome-base/libgnomeprintui-2.1.4
+	>=app-text/aspell-0.50
 	ssl? ( dev-libs/openssl )
 	perl? ( >=dev-libs/libpcre-3.4 )
 	gtkhtml? ( >=gnome-extra/libgtkhtml-2 )
 	ldap? ( net-nds/openldap )"
 
 DEPEND="dev-util/pkgconfig
+	sys-devel/gettext
 	>=app-text/scrollkeeper-0.1.4
 	${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-
-	# this patch is from Riccardo Persichetti
-	# (ricpersi@libero.it) to make balsa compile
-	# <seemant@gentoo.org> this patch is updated by me to compile
-	# against the new aspell (until upstream gets its act together, aspell
-	# will be a required dep).
-	epatch ${FILESDIR}/${P}-aspell-configure.patch
-
-	# and get our patch in
-	cd ${S}
-	autoconf || die
-}
-
 src_compile() {
 	local myconf
-	use nls \
-		&& myconf="${myconf} --enable-nls" \
-		|| myconf="${myconf} --disable-nls"
 	use ssl \
 		&& myconf="${myconf} --with-ssl" \
 		|| myconf="${myconf} --without-ssl" 
@@ -64,13 +46,6 @@ src_compile() {
 	use perl \
 		&& myconf="${myconf} --enable-pcre" \
 		|| myconf="${myconf} --disable-pcre"
-
-#	use spell \
-#		&& myconf="${myconf} --with-aspell" \
-#		|| myconf="${myconf} --without-aspell --without-spell"
-
-#	aspell is not optional atm
-	myconf="${myconf} --with-aspell"
 
 	libmutt/configure \
 		--prefix=/usr \
