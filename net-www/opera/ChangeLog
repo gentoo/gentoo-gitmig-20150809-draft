@@ -1,6 +1,12 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.84 2004/11/18 17:14:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.85 2004/12/04 13:05:28 lanius Exp $
+
+*opera-7.60_alpha4 (04 Dec 2004)
+
+  04 Dec 2004; lanius@gentoo.org -opera-7.60_alpha3.ebuild,
+  +opera-7.60_alpha4.ebuild:
+  versino bump
 
 *opera-7.60_alpha3 (18 Nov 2004)
 
