@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.41 2004/08/29 23:13:25 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.42 2004/09/03 12:13:38 tgall Exp $
+
+  03 Sep 2004; Tom Gall <tgall@gentoo.org> scribus-1.2.ebuild:
+  added ~ppc64, bug #62704
 
 *scribus-1.2 (30 Aug 2004)
 
