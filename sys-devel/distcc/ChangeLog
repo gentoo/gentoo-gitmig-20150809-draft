@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.6 2002/08/06 12:13:26 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.7 2002/08/20 17:33:28 blizzy Exp $
+
+*distcc-0.8 (20 Aug 2002)
+
+  20 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : New release.
 
 *distcc-0.7 (06 Aug 2002)
 
