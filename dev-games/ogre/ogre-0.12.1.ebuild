@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.12.1.ebuild,v 1.1 2003/10/30 21:00:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.12.1.ebuild,v 1.2 2003/11/29 23:51:15 vapier Exp $
 
 S=${WORKDIR}/ogrenew
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
@@ -8,16 +8,15 @@ HOMEPAGE="http://ogre.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ogre/${PN}-v${PV//./-}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
 SLOT="0"
-
-IUSE="doc gtk2"
+KEYWORDS="x86"
+IUSE="doc gtk"
 
 RDEPEND="virtual/opengl
 	media-libs/libsdl
 	=media-libs/freetype-2*
 	media-libs/devil
-	gtk2? (
+	gtk? (
 		=dev-cpp/libglademm-2*
 		=dev-cpp/gtkmm-2*
 	)
@@ -29,7 +28,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	local myconf="cli"
 
-	[ `use gtk2` ] && myconf="gtk"
+	[ `use gtk` ] && myconf="gtk"
 
 	econf --with-cfgtk=${myconf} || die
 	emake || die "emake failed"
