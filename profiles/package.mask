@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3024 2004/07/27 22:02:37 vapier Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3025 2004/07/28 00:32:02 karltk Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -120,15 +120,15 @@ net-irc/epic5
 # masking this until the freetts use flag is addressed for all the archs
 =app-accessibility/gnome-speech-0.3.3
 
-# <karltk@gentoo.org> (10 Jun 2004)
-# 3.0 is nearing release upstream, we seem to be in good shape,
-# but it need some more build testing before it's unmasked.
+# <karltk@gentoo.org> (28 Jul 2004)
+# So close!
 >=dev-util/eclipse-sdk-2.9
 dev-util/eclipse-cbg-editor
 dev-util/eclipse-emf-bin
 dev-util/eclipse-ve-bin
 dev-util/eclipse-gef-bin
 dev-util/ecletex
+dev-util/eclipse-cdt
 
 # <vapier@gentoo.org> (05 June 2004)
 # Horribly broken ... it just eat's filesystems #51773
