@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta11-r1.ebuild,v 1.2 2004/04/06 03:06:34 vapier Exp $
-
-inherit flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta11-r1.ebuild,v 1.3 2004/04/06 03:06:45 vapier Exp $
 
 MY_P="${P}.2"
 MY_PV="${PV}.2"
