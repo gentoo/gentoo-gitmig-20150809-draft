@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/gnu-gs-fonts-other
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-other/ChangeLog,v 1.9 2005/02/19 13:12:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-other/ChangeLog,v 1.10 2005/04/06 18:42:39 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  gnu-gs-fonts-other-6.0.ebuild:
+  Stable on ppc64
 
   20 Feb 2005; Joseph Jezak <josejx@gentoo.org>
   gnu-gs-fonts-other-6.0.ebuild:
