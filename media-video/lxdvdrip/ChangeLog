@@ -1,6 +1,11 @@
 # ChangeLog for media-video/lxdvdrip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.12 2005/02/07 15:53:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.13 2005/02/23 18:05:45 luckyduck Exp $
+
+*lxdvdrip-1.42 (23 Feb 2005)
+
+  23 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +lxdvdrip-1.42.ebuild:
+  version bump. fixes #82814
 
 *lxdvdrip-1.42_pre3 (07 Feb 2005)
 
