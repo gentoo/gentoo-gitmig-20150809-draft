@@ -295,10 +295,8 @@ src_compile() {
 		if [ "$PN" == "linux" ]
 		then
 			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep
-			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" bzImage
-			#LEX=\""flex -l"\" bzImage
-			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" modules
-			#LEX="flex -l" modules
+			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" bzImage
+			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" modules
 		fi
 		
 #		if [ "`use pcmcia-cs`" ]
