@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.1.ebuild,v 1.1 2004/01/04 09:00:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.1.ebuild,v 1.2 2004/03/24 05:06:19 mr_bones_ Exp $
 
 inherit games
 
@@ -13,12 +13,13 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-libs/expat
-	dev-util/pkgconfig
+RDEPEND="dev-libs/expat
 	>=media-libs/libsdl-1.2.0
 	>=media-libs/sdl-image-1.2.0
 	>=media-libs/paragui-1.0.4
-	>=dev-libs/libsigc++-1.2.0
+	>=dev-libs/libsigc++-1.2.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	>=sys-apps/sed-4"
 
 src_unpack() {
@@ -36,12 +37,9 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-
 	dodir "${GAMES_SYSCONFDIR}"
 	mv "${D}/etc/freelordsrc" "${D}/${GAMES_SYSCONFDIR}/"
-
 	dodoc AUTHORS BUGS ChangeLog DEPENDENCIES HACKER NEWS README TODO doc/* \
 		|| die "dodoc failed"
-
 	prepgamesdirs
 }
