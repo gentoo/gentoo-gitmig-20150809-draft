@@ -1,16 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1110cce8c66aea62c2086f25e94bf03a ChangeLog 1128
+MD5 291f6bdbd04dab23732d5edae7042fe1 resin-3.0.8.ebuild 3008
+MD5 aaa97f11aa9e852650c7439973399ef8 ChangeLog 1417
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 08069082fca7f48f879ef7d9d566d107 resin-2.1.14.ebuild 3118
+MD5 71aaae109bfbf0c1ccb0a1230f2c76d7 resin-2.1.14.ebuild 3046
 MD5 9c83a0cca4668dbc79df30c1385a5e4c resin-2.1.9.ebuild 3117
 MD5 0e0d2bb7422b3b0f88fe7bb4302738a1 files/digest-resin-2.1.14 65
 MD5 5837c42d665786c9555b544428725ff6 files/digest-resin-2.1.9 64
+MD5 fb879fef5b9755ced18f4715f5c8d0ca files/digest-resin-3.0.8 64
 MD5 177e0d5de914991fbf4bc14297cb1cea files/2.1.9/resin.conf 1239
 MD5 cc895b3b901369aa2c6d80fb88369113 files/2.1.9/resin.diff 504
 MD5 30f17d8fdd8dc59b8cb96cbcb6d2dd47 files/2.1.9/resin.init 748
 MD5 a810be4b68e920ebc5d2cf8160a5642a files/2.1.9/21resin 53
+MD5 bbe6be9c9b6105af982400a135816261 files/3.0.8/resin.conf 1120
+MD5 ce5ad526999297ba5f587f0e0579a44b files/3.0.8/resin.init 539
+MD5 a810be4b68e920ebc5d2cf8160a5642a files/3.0.8/21resin 53
+MD5 fc791301841bde6c69ec74e35fcc07e9 files/3.0.8/wrapper.pl.diff 526
 MD5 edcf8dbbfe51e68a46e710c40d9b4913 files/2.1.14/resin.conf 1172
 MD5 cc895b3b901369aa2c6d80fb88369113 files/2.1.14/resin.diff 504
 MD5 5a2a223ab9c787831c5b95a4707f676a files/2.1.14/resin.init 745
@@ -18,7 +24,7 @@ MD5 a810be4b68e920ebc5d2cf8160a5642a files/2.1.14/21resin 53
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBBrn//rLF9B432nYRAnVwAKCxwhaoeDD6LvS98sU18nUYWN9T0ACgms/m
-QypRZlGRcE9cJqdNxc7QoOs=
-=RC8f
+iD8DBQFBCZ3N/rLF9B432nYRAt27AKCDftPMfnh+QDRl5zGoQRPC3GAlhgCeOCKl
+Ozgrd59A8440hL2BI3iUL/8=
+=PEI3
 -----END PGP SIGNATURE-----
