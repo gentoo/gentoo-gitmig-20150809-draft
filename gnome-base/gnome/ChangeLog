@@ -1,7 +1,12 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.39 2002/09/15 20:47:15 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.40 2002/09/20 13:16:48 spider Exp $
 
+
+*gnome-2.0.2-r1 (20 Sep 2002)
+  20 sep 2002; Spider <spider@gentoo.org> gnome-2.0.2-r1.ebuild :
+  updated gnome-vfs needs propagation
+  
 *gnome-2.0.2 (15 Sep 2002)
   15 Sep 2002; Spider <spider@gentoo.org> gnome-2.0.2.ebuild :
   back in style

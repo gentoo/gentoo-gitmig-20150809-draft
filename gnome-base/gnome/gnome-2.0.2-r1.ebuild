@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.2.ebuild,v 1.2 2002/09/20 13:16:48 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.2-r1.ebuild,v 1.1 2002/09/20 13:16:48 spider Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -53,7 +53,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/eel-2.0.7
 	>=gnome-base/gnome-panel-2.0.9
 	>=gnome-base/gnome-desktop-2.0.8
-	>=gnome-base/gnome-vfs-2.0.4-r2
+	>=gnome-base/gnome-vfs-2.0.4-r1
 	>=gnome-base/libbonoboui-2.0.3
 	>=gnome-base/libbonobo-2.0.0
 	>=gnome-base/librsvg-2.0.1

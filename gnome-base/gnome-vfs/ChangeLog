@@ -1,7 +1,12 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.23 2002/09/13 17:56:52 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.24 2002/09/20 13:16:48 spider Exp $
 
+
+*gnome-vfs-2.0.4-r2 (20 Sep 2002)
+  20 Sep 2002; Spider <spider@gentoo.org> gnome-vfs-2.0.4-r2.ebuild :
+  moved the file removal to pre-install, thus not borking good things.
+  
 *gnome-vfs-2.0.4-r1 (13 Sep 2002)
   13 Sep 2002; Spider <spider@gentoo.org> gnome-vfs-2.0.4-r1.ebuild :
   added a check for a bad menu list file and removing it if needed
