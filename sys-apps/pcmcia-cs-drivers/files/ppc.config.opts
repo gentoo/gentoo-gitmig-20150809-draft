@@ -1,9 +1,0 @@
-#
-# Local PCMCIA Configuration File
-#
-#----------------------------------------------------------------------
-
-include port 0x1000-0x1fff
-include memory 0x90000000-0x9003ffff
-
-# all other modules should be kernel modules on ppc
