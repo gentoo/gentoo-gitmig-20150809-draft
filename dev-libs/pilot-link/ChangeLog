@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/pilot-link
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.15 2003/02/12 06:08:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.16 2003/03/20 13:32:44 vladimir Exp $
+
+*pilot-link-0.11.5-r2 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org>
+  pilot-link-0.11.5-r2.ebuild, pilot-link-0.11.7-r1.ebuild:
+  Removed usage of pic USE flag
+
+*pilot-link-0.11.7-r1 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org>
+  pilot-link-0.11.7-r1.ebuild:
+  Removed usage of pic USE flag
 
 *pilot-link-0.11.7 (16 Jan 2003)
 

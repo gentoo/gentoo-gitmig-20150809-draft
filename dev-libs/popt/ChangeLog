@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/popt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.14 2003/03/09 21:43:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.15 2003/03/20 13:32:44 vladimir Exp $
+
+*popt-1.7-r1 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org> popt-1.7-r1.ebuild:
+  Removed usage of pic USE flag
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
