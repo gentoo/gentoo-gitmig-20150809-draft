@@ -5,7 +5,6 @@ inherit perl-module
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Perl DBI Module"
-CATEGORY="dev-perl"
 SRC_URI="http://www.cpan.org/modules/by-module/DBI/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/DBI/${P}.readme"
 
