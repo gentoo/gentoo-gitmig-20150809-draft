@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.612 2004/09/11 04:12:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.613 2004/09/13 09:16:40 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -503,6 +503,7 @@ sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in 
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
+sys-apps/iproute2:minimal - Builds and installs only the traffic control util.
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/parted:noreiserfs - Do not include reiserfs support
