@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rudl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/ChangeLog,v 1.4 2004/03/19 19:23:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/ChangeLog,v 1.5 2004/04/10 15:50:49 usata Exp $
+
+  11 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> rudl-0.7.1.ebuild,
+  rudl-0.7.ebuild:
+  Marked 0.7.1 stable on x86, virtual/ruby fix
 
 *rudl-0.7.1 (20 Mar 2004)
 

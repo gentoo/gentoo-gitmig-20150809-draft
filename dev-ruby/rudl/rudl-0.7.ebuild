@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/rudl-0.7.ebuild,v 1.4 2004/03/19 19:23:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/rudl-0.7.ebuild,v 1.5 2004/04/10 15:50:49 usata Exp $
 
-inherit ruby
+inherit ruby eutils
 
 DESCRIPTION="Rubyesque Directmedia Layer - Ruby/SDL bindings"
 HOMEPAGE="http://rudl.sourceforge.net/"
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/libsdl-1.2.4.20020601
 	>=media-libs/sdl-image-1.2.2
 	>=media-libs/sdl-mixer-1.2.4
 	>=media-libs/sdl-ttf-2.0.5
-	>=dev-lang/ruby-1.6.7"
+	virtual/ruby"
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
