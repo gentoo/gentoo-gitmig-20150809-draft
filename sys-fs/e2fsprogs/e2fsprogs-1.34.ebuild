@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.12 2003/12/29 04:02:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.13 2003/12/30 09:46:43 seemant Exp $
 
 inherit eutils
 
@@ -31,6 +31,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-kernel-2.6-fix.patch
 	# Userpriv fix. Closes #27348
 	chmod u+w po/*.po
+	# Patch to make the configure and sed scripts more friendly to, 
+	# for example, the Estonian locale
+	epatch ${FILESDIR}/${PN}-sed-locale.patch
 }
 
 src_compile() {
