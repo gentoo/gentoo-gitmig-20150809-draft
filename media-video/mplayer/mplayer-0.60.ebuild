@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60_pre2.ebuild,v 1.1 2001/12/31 00:27:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60.ebuild,v 1.1 2002/01/04 18:33:08 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -11,7 +11,7 @@ SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
 	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
 DESCRIPTION="Media Player for Linux"
-HOMEPAGE="http://www.mplayerhq.hu"
+HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder
 # Experimental USE flags dvd and decss
