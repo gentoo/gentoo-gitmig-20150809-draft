@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.5-r1.ebuild,v 1.7 2004/07/15 00:01:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.8.ebuild,v 1.1 2004/08/24 20:42:54 vapier Exp $
 
 inherit eutils
 
-IPV6_P="ncftp-315-v6-20030207"
+IPV6_P="ncftp-3181-v6-20040728"
 DESCRIPTION="An extremely configurable ftp client"
 HOMEPAGE="http://www.ncftp.com/"
 SRC_URI="ftp://ftp.ncftp.com/ncftp/${P}-src.tar.bz2
@@ -12,17 +12,15 @@ SRC_URI="ftp://ftp.ncftp.com/ncftp/${P}-src.tar.bz2
 
 LICENSE="Clarified-Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
-IUSE="cjk ipv6"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~s390 ~ppc64 ~macos"
+IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
 src_unpack() {
-	unpack ${P}-src.tar.bz2
+	unpack ${A}
 	cd ${S}
-
-	use cjk && epatch ${FILESDIR}/${P}-cjk.patch
-	use ipv6 && epatch ${DISTDIR}/${IPV6_P}.diff.gz
+	use ipv6 && epatch ${WORKDIR}/${IPV6_P}.diff
 }
 
 src_install() {
