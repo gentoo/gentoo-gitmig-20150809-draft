@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0-r1.ebuild,v 1.6 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0-r1.ebuild,v 1.7 2004/06/24 00:14:07 agriffis Exp $
 
 inherit eutils
 
@@ -143,7 +143,7 @@ src_install() {
 
 	dodir ${QTBASE}/doc
 
-	if [ `use doc` ]; then
+	if use doc; then
 		cp -r ${S}/doc ${D}/${QTBASE}
 		cp -r ${S}/examples ${D}/${QTBASE}
 		cp -r ${S}/tutorial ${D}/${QTBASE}

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.51 2004/06/23 05:41:53 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.52 2004/06/24 00:19:16 agriffis Exp $
+
+  23 Jun 2004; Aron Griffis <agriffis@gentoo.org> wxGTK-2.4.0.ebuild,
+  wxGTK-2.4.1-r1.ebuild, wxGTK-2.5.1.ebuild:
+  QA - fix use invocation
 
 *wxGTK-2.4.2-r1 (22 Jun 2004)
 

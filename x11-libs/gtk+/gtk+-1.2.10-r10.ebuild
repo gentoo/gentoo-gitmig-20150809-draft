@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.16 2004/04/15 02:24:36 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.17 2004/06/24 00:13:20 agriffis Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils libtool
@@ -38,7 +38,7 @@ src_compile() {
 	local myconf=
 	use nls || myconf="${myconf} --disable-nls"
 
-	if [ `use debug` ]
+	if use debug
 	then
 		myconf="${myconf} --enable-debug=yes"
 	else

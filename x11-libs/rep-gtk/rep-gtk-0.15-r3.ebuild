@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.15-r3.ebuild,v 1.17 2004/05/13 17:52:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.15-r3.ebuild,v 1.18 2004/06/24 00:14:53 agriffis Exp $
 
 IUSE="gnome"
 
@@ -24,7 +24,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 src_compile() {
 	local myconf=""
 
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		myconf="--with-gnome --with-libglade"
 	else

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.7 2004/06/19 21:36:36 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.8 2004/06/24 00:14:07 agriffis Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ src_unpack() {
 
 	# mips requires this patch to pass a CFLAG to gcc/g++ (which passes it to the assembler).
 	# It tells the assembler to relax branches on mips, otherwise we get build errors.
-	[ "`use mips`" ] && epatch ${FILESDIR}/${P}-mips-relax-branches.patch
+	use mips && epatch ${FILESDIR}/${P}-mips-relax-branches.patch
 
 #	use icc && export PLATFORM=linux-icc
 }
@@ -147,7 +147,7 @@ src_install() {
 
 	dodir ${QTBASE}/doc
 
-	if [ `use doc` ]; then
+	if use doc; then
 		cp -r ${S}/doc ${D}/${QTBASE}
 
 		cd ${S}/examples

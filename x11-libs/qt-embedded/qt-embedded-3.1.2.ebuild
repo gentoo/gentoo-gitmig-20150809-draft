@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.1.2.ebuild,v 1.6 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.1.2.ebuild,v 1.7 2004/06/24 00:20:49 agriffis Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -29,7 +29,7 @@ QTBASE=/usr/qt/3-embedded
 export QTDIR=${S}
 
 pkg_setup() {
-	if [ `use build` ] ; then
+	if use build ; then
 		return 0
 	else
 		ewarn "Note: this will build a rather bloated qt/e, with all features enabled."
@@ -54,7 +54,7 @@ src_compile() {
 	export YACC='byacc -d'
 	export LDFLAGS="-ldl"
 
-	if [ -z "`use build`" ]; then
+	if ! use build; then
 		# ordinary setup, rather bloated
 		use gif		&& myconf="${myconf} -qt-gif"
 		use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
@@ -62,7 +62,7 @@ src_compile() {
 		use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 		use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 
-		if [ "`use x86`" ]; then
+		if use x86; then
 			myconf="$myconf  -embedded x86" # -xplatform linux-g++ -platform linux-g++"
 		else
 			# and i've no idea if it'll work

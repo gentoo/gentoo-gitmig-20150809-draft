@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.1.ebuild,v 1.1 2004/06/22 21:45:50 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.1.ebuild,v 1.2 2004/06/24 00:19:16 agriffis Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -49,10 +49,13 @@ src_compile() {
 	# bug #20116 - liquidx@gentoo.org (07 May 2003)
 
 	use gtk2 && myconf="${myconf} --enable-gtk2"
-	# only allow unicode if using gtk2
-	[ -n "`use gtk2`" -a -n "`use unicode`" ] && myconf="${myconf} --enable-unicode"
-	# only enable odbc if unicode is not enabled.
-	[ -n "`use gtk2`" -a  -n "`use unicode`" ] || myconf="${myconf} `use_with odbc`"
+	if use gtk2 && use unicode; then
+		# only allow unicode if using gtk2
+		myconf="${myconf} --enable-unicode"
+	else
+		# only enable odbc if unicode is not enabled.
+		myconf="${myconf} `use_with odbc`"
+	fi
 
 	econf ${myconf}
 	emake || die "make failed"
