@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.10.ebuild,v 1.7 2004/09/25 06:25:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.10.ebuild,v 1.8 2004/09/25 06:41:01 vapier Exp $
 
-inherit flag-o-matic gnuconfig eutils distutils
+inherit flag-o-matic gnuconfig eutils distutils libtool
 
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="python build"
 
 DEPEND="virtual/libc
@@ -27,11 +27,8 @@ src_unpack() {
 	# recognize things.
 	use mips && epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.diff
 
-	# uclibc support
-	epatch ${FILESDIR}/${PN}-4.08-uclibc.patch
-	epatch ${FILESDIR}/ltconfig-uclibc.patch
-
-	# gnuconfig_update should run for every arch/libc combo not just mips.
+	# GNU updates
+	uclibctoolize
 	gnuconfig_update
 
 	# make sure python links against the current libmagic #54401

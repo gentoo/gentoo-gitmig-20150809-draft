@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.14 2004/09/16 02:20:38 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.15 2004/09/25 06:41:01 vapier Exp $
 
-inherit flag-o-matic gnuconfig eutils
+inherit flag-o-matic gnuconfig eutils libtool
 
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
@@ -26,15 +26,12 @@ src_unpack() {
 	# recognize things.
 	use mips && epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.diff
 
-	# uclibc support
-	epatch ${FILESDIR}/${P}-uclibc.patch
-	epatch ${FILESDIR}/ltconfig-uclibc.patch
+	# GNU updates
+	uclibctoolize
+	gnuconfig_update
 }
 
 src_compile() {
-	# If running mips64, we need updated configure data
-	gnuconfig_update
-
 	# file command segfaults on hppa -  reported by gustavo@zacarias.com.ar
 	[ ${ARCH} = "hppa" ] && filter-flags "-mschedule=8000"
 
