@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/alloy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.1 2003/06/18 14:45:48 tad Exp $
+
+*alloy-0.3 (19 Jun 2003)
+
+  19 Jun 2003; Troy Dack <tad@gentoo.org> alloy-0.3.ebuild:
+  Initial import. Thanks to Christophe LEFEBVRE
+  <christophe.lefebvre@ifrance.com> for submitting the ebuild. Bug #22780.
+
