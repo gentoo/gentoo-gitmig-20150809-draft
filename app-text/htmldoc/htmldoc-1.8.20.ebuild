@@ -1,15 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20.ebuild,v 1.5 2002/12/09 04:17:44 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20.ebuild,v 1.6 2002/12/18 15:42:35 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Convert HTML pages into a PDF document"
 SRC_URI="ftp://ftp.easysw.com/pub/htmldoc/1.8.20/${P}-1-source.tar.bz2"
-HOMEPAGE="http://www.easysw.com/htmldoc"
+HOMEPAGE="http://www.easysw.com/htmldoc/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/x11"
 RDEPEND=">=dev-libs/openssl-0.9.6e
@@ -19,7 +18,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	patch -p1 < ${FILESDIR}/fonts.diff || die "patch failed"
-
 }
 
 src_compile() {
@@ -27,24 +25,21 @@ src_compile() {
 		--with-x \
 		--with-gui \
 		--with-openssl-libs=/usr/lib \
-		--with-openssl-includes=/usr/include/openssl || die
+		--with-openssl-includes=/usr/include/openssl
 	
 	# Add missing -lfltk_images to LIBS
-	#
 	mv Makedefs Makedefs.orig
-	cat ${S}/Makedefs.orig | sed -e 's/-lfltk /-lfltk -lfltk_images /g' \
-		> Makedefs || die "failed to detect -lfltk"
-		
+	sed -e 's/-lfltk /-lfltk -lfltk_images /g' \
+		Makedefs.orig > Makedefs || die "failed to detect -lfltk"
+
 	make || die
 }
 
-
 src_install() {
-
-	einstall || die
+	einstall
 
 	# Minor cleanups
-	mv ${D}/usr/share/doc/htmldoc ${D}/usr/share/doc/${P}
+	mv ${D}/usr/share/doc/htmldoc ${D}/usr/share/doc/${PF}
 	dodir /usr/share/doc/${P}/html
-	mv ${D}/usr/share/doc/${P}/*.html ${D}/usr/share/doc/${P}/html
+	mv ${D}/usr/share/doc/${P}/*.html ${D}/usr/share/doc/${PF}/html
 }
