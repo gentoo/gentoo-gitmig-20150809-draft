@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.22 2004/01/25 11:15:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.23 2004/01/25 16:07:28 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -49,7 +49,7 @@ LICENSE="Ruby"
 
 newdepend ">=dev-lang/ruby-1.6.8"
 
-export RUBY=/usr/bin/ruby
+[[ -n "${RUBY}" ]] && export RUBY=/usr/bin/ruby
 
 ruby_src_unpack() {
 
