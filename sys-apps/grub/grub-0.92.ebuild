@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/sys-apps/grub/grub-0.90-r7.ebuild,v 1.1 2002/03/08 08:54:04 blocke Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.92.ebuild,v 1.8 2002/09/30 01:30:15 woodchip Exp $
+
+inherit mount-boot
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"
@@ -11,33 +13,11 @@ SLOT="0"
 LICENSE="GPL-2"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r5"
+DEPEND="${RDEPEND}"
 
-DEPEND="${RDEPEND}
-	sys-apps/grep 
-	sys-apps/sed"
-	
-pkg_setup() {
-	[ "$ROOT" != "/" ] && return 0
-	#If the user doesn't have a /boot or /mnt/boot filesystem, skip.
-	[ -z "`grep /boot /etc/fstab | grep -v "^[ \t]*#"`" ] || return 0 
-	local myboot
-	myboot=`cat /etc/fstab | grep -v ^# | grep /boot | sed -e 's/^[^[:space:]]*[[:space:]]*\([^[:space:]]*\).*$/\1/'`
-	[ `cat /proc/mounts | cut -f2 -d" " | grep $myboot` ] && return 0
-	mount $myboot
-	if [ $? -ne 0 ]
-	then
-		eerror "GRUB installation requires that $myboot is mounted or mountable."
-		eerror "If you do not have a seperate /boot partition please remove any"
-		eerror "/boot entries from /etc/fstab and make sure /boot exists."
-		eerror ""
-		eerror "Unable to mount $myboot automatically; exiting."
-		die "Please mount your $myboot filesystema and remerge this ebuild."
-	fi
-}
 src_unpack() {
-
-	unpack ${A}
-	cd ${S}
+	unpack ${A} || die
+	cd ${S} || die
 	patch -p1 < ${FILESDIR}/${P}/grub-0.92-vga16.patch || die
 	patch -p1 < ${FILESDIR}/${P}/grub-0.5.96.1-special-raid-devices.patch || die
 	patch -p1 < ${FILESDIR}/${P}/grub-0.90-configfile.patch || die
@@ -55,7 +35,6 @@ src_unpack() {
 	patch -p0 < ${FILESDIR}/${P}/grub-0.92-nodeprecatedflags.patch || die
 	patch -p1 < ${FILESDIR}/${P}/grub-0.91-vga16-serial.patch || die
 	patch -p1 < ${FILESDIR}/${P}/grub-0.92-usbfix.patch || die
-
 }
 
 src_compile() {
@@ -102,4 +81,3 @@ pkg_postinst() {
 		einfo "*** Note that menu.lst now is called grub.conf."
 	fi
 }
-
