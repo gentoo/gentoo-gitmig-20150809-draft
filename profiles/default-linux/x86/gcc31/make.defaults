@@ -1,9 +1,9 @@
-# Copyright 2002 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc31/make.defaults,v 1.4 2004/08/14 13:43:26 swegener Exp $
-
-# System-wide defaults for the gcc 3 Portage system (1.0)
-
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc31/make.defaults,v 1.5 2004/08/25 13:58:06 vapier Exp $
+#
+# System-wide defaults for the Portage system
+# See portage(5) manpage
 
 USE="x86 oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
 java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis
@@ -11,7 +11,6 @@ opengl pam pdflib png python qt quicktime readline sdl slang spell ssl
 svga tcpd truetype X xml2 xmms xv zlib"
 
 ARCH="x86"
-COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
 
 FEATURES="sandbox sfperms"

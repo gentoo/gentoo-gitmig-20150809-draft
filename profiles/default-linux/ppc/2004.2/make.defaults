@@ -1,5 +1,9 @@
-# Copyright 2000 Daniel Robbins, Gentoo Foundation.
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2004.2/make.defaults,v 1.5 2004/08/25 13:58:05 vapier Exp $
+#
 # System-wide defaults for the Portage system
+# See portage(5) manpage
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
 
@@ -31,7 +35,5 @@ motif opengl mozilla png truetype ppc cups foomaticdb"
 # 3dfx 3dnow avi icc icc-pgo mmx svga sse
 
 ACCEPT_KEYWORDS="ppc"
-
-COMPILER="gcc3"
 
 FEATURES="sandbox sfperms"
