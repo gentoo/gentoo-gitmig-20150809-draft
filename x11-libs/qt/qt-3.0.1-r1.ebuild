@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.1.ebuild,v 1.3 2002/01/02 22:00:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.1-r1.ebuild,v 1.1 2002/01/08 01:21:45 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -29,14 +29,6 @@ src_unpack() {
     cp configure configure.orig
     sed -e "s:read acceptance:acceptance=yes:" configure.orig > configure
 
-    cd ${S}
-    mv tools/assistant/helpdialogimpl.cpp tools/assistant/helpdialogimpl.cpp_orig
-    sed -e 's:"/doc/html:"/share/doc/html:g' \
-    	tools/assistant/helpdialogimpl.cpp_orig > tools/assistant/helpdialogimpl.cpp
-    mv tools/assistant/mainwindow.ui.h tools/assistant/mainwindow.ui.h_orig
-    sed -e 's:"/doc/html:"/share/doc/html:g' \
-    	tools/assistant/mainwindow.ui.h_orig > tools/assistant/mainwindow.ui.h
-	
 }
 
 src_compile() {
