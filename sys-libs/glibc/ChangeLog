@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.145 2004/04/27 04:48:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.146 2004/04/27 09:13:08 aliz Exp $
 
   27 Apr 2004; Mike Frysinger <vapier@gentoo.org> 
   +files/2.3.2/glibc-2.3.2-arm-bus-defines.patch,
@@ -94,6 +94,7 @@
   fixes that. Submitted by the PaX Team
 
 *glibc-2.3.3_pre20040207 (09 Feb 2004)
+*glibc-2.3.3_pre200301210 (09 Feb 2004)
 
   09 Feb 2004; Brad House <brad_mssw@gentoo.org>
   glibc-2.3.3_pre20031210.ebuild, glibc-2.3.3_pre20031222.ebuild,
