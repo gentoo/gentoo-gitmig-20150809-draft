@@ -1,6 +1,6 @@
 # Copyright 20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06.ebuild,v 1.5 2002/12/09 04:20:58 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06.ebuild,v 1.6 2003/01/28 13:47:05 nall Exp $
 
 IUSE="tcltk"
 
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="QPL-1.0 LGPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~ppc"
 
 src_compile()
 {

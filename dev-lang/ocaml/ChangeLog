@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.7 2002/12/13 10:56:26 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.8 2003/01/28 13:47:05 nall Exp $
+
+*ocaml-3.06 (28 Jan 2003)
+
+  28 Jan 2003; Jon Nall <nall@gentoo.org> ocaml-3.06 :
+  who made this build? i didn't. i just added ~ppc to it.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
