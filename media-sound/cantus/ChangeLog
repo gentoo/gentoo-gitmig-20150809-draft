@@ -1,8 +1,15 @@
 # ChangeLog for media-sound/cantus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.2 2003/02/12 07:25:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.3 2003/06/19 11:39:23 mjc Exp $
 
-*cantus-1.0.3 (22 Dec 2002)
+*cantus-1.07 (19 Jun 2003)
+
+  19 Jun 2003; Michael J. Cohen <mjc@gentoo.org> cantus-1.07.ebuild :
+
+  Tagging has been updated along with quite a few bugfixes.  Cantus 2.0
+  is due out soon, which uses gtk2.
+
+*cantus-1.03 (22 Dec 2002)
   
   22 Dec 2002; Michael J. Cohen <mjc@gentoo.org> cantus-1.0.3.ebuild :
 
