@@ -1,10 +1,8 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.43 2003/03/01 19:55:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.44 2003/03/03 02:22:38 lostlogic Exp $
 
   TODO:
-  * Update NTFS
-  * Check EVMS version
   * Keep grabbing hardware stuff from xfs-sources
   * Look into the new IDE core for this set maybe
   * Update iptables a few more times (just for good measure)
@@ -14,6 +12,14 @@
     Win4Lin
     Optional RMAP
     Re-add XFS
+
+*lolo-sources-2.4.20.2_pre4 (28 Feb 2003)
+
+  This is in progress, just keeping my notes public :)
+
+  Changes from _pre3:
+  * Updated NTFS to 2.1.1a
+  * Add USAGI support, drop crypto API as it is included in USAGI
 
 *lolo-sources-2.4.20.2_pre3 (28 Feb 2003)
 
