@@ -1,38 +1,27 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.3-r2.ebuild,v 1.4 2001/11/10 11:06:23 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.3-r2.ebuild,v 1.5 2002/04/28 01:29:52 seemant Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Rotates, compresses, and mails system logs"
 SRC_URI="ftp://ftp.redhat.com/redhat/linux/code/${PN}/${P}.tar.gz
 	ftp://ftp.valinux.com/pub/mirrors/redhat/redhat/linux/code/${PN}/${P}.tar.gz"
+HOMEPAGE="http://packages.debian.org/unstable/admin/logrotate.html"
 
-DEPEND="virtual/glibc
-	>=dev-libs/popt-1.5"
-
-src_unpack() {
-  unpack ${A}
-}
+DEPEND=">=dev-libs/popt-1.5"
 
 src_compile() {
-  cp Makefile Makefile.orig
-  sed -e "s:CFLAGS += -g:CFLAGS += -g ${CFLAGS}:" Makefile.orig > Makefile
-  try make
+	cp Makefile Makefile.orig
+	sed -e "s:CFLAGS += -g:CFLAGS += -g ${CFLAGS}:" Makefile.orig > Makefile
+	make || die
 }
 
 src_install() {
 
-  insinto /usr
-  dosbin logrotate
-  doman logrotate.8
-  dodoc examples/logrotate*
+	insinto /usr
+	dosbin logrotate
+	doman logrotate.8
+	dodoc examples/logrotate*
 
 }
-
-
-
-
-
-
