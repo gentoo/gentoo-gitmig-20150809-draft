@@ -1,3 +1,4 @@
-MD5 68051b145826d17523f7bc07c5d4b83a ChangeLog 747
-MD5 e0f096f89af5c411d2d87f78dd787380 splat-0.06.ebuild 520
-MD5 c67d59e42abc0577a1cbf11ca5f94cd5 files/digest-splat-0.06 62
+MD5 4194db1b5f577e246357e5228177f66d splat-0.07.ebuild 529
+MD5 8e56f2ebd19adafdc7efade0dab03d13 ChangeLog 877
+MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
+MD5 c9a6d8a81ceaa4ece009376f32b23054 files/digest-splat-0.07 62

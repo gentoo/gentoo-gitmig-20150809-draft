@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/splat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.4 2003/10/19 09:28:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.5 2003/12/14 03:05:20 genone Exp $
+
+*splat-0.07 (14 Dec 2003)
+
+  14 Dec 2003; Marius Mauch <genone@gentoo.org> splat-0.06.ebuild,
+  splat-0.07.ebuild:
+  version bump
 
   19 Oct 2003; Martin Holzer <mholzer@gentoo.org> splat-0.06.ebuild:
   Adding DEPEND="dev-lang/perl" Closes #31475.
