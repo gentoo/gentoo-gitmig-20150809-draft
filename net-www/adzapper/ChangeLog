@@ -1,6 +1,9 @@
 # ChangeLog for net-www/adzapper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.2 2003/01/02 18:42:54 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.3 2003/01/08 06:36:06 jrray Exp $
+
+  07 Jan 2003; J Robert Ray <jrray@gentoo.org> adzapper-20021128.ebuild :
+  Unmasking for x86.
 
 *adzapper-20021128 (02 Jan 2003)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squirm/squirm-1.23.ebuild,v 1.1 2002/11/08 14:57:29 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squirm/squirm-1.23.ebuild,v 1.2 2003/01/08 06:34:55 jrray Exp $
 
 DESCRIPTION="A redirector for Squid"
 HOMEPAGE="http://squirm.foote.com.au"
 SRC_URI="http://squirm.foote.com.au/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=""
