@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/e1000
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/ChangeLog,v 1.7 2003/04/08 17:36:02 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e1000/ChangeLog,v 1.8 2003/06/25 22:03:18 mholzer Exp $
+
+*e1000-5.1.11 (26 Jun 2003)
+
+  26 Jun 2003; Martin Holzer <mholzer@gentoo.org> e1000-5.1.11.ebuild:
+  Version bumped.
 
 *e1000-5.0.43 (08 Apr 2003)
 
