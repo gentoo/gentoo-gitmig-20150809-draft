@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/kdelibs-apidocs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.15 2003/04/29 06:38:07 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/ChangeLog,v 1.16 2003/05/16 21:14:24 pylon Exp $
+
+  16 Mai 2003; Lars Weiler <pylon@gentoo.org> kdelibs-apidocs-3.1.1a.ebuild:
+  Set ppc in KEYWORDS
 
   28 Apr 2003; Lars Weiler <pylon@gentoo.org> kdelibs-apidocs-3.1.1.ebuild:
   Set ppc in KEYWORDS
