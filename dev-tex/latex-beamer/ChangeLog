@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.12 2004/10/13 23:25:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.13 2004/12/09 10:54:09 usata Exp $
+
+  09 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> latex-beamer-3.00.ebuild:
+  Stable on x86, alpha and ppc.
 
 *latex-beamer-3.00 (14 Oct 2004)
 
