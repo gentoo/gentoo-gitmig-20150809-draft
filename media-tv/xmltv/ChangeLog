@@ -1,12 +1,15 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.14 2004/03/07 21:30:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.15 2004/03/07 23:48:04 avenj Exp $
 
 *xmltv-0.5.29 (07 Mar 2004)
 
   07 Mar 2004; Martin Holzer <mholzer@gentoo.org> xmltv-0.5.28.ebuild,
   xmltv-0.5.29.ebuild:
   VErsion bumped.
+
+  07 Mar 2004; Jon Portnoy <avenj@gentoo.org> xmltv-0.5.28.ebuild :
+  AMD64 keywords.
 
 *xmltv-0.5.28 (07 Feb 2004)
 
