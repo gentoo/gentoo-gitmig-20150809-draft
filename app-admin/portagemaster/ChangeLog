@@ -1,12 +1,13 @@
 # ChangeLog for app-admin/portagemaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/ChangeLog,v 1.4 2002/09/08 20:34:47 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/ChangeLog,v 1.5 2002/09/08 20:41:04 karltk Exp $
 
 *portagemaster-0.1.8 (08 Sep 2002)
 
   08 Sep 2002; Karl Trygve Kalleberg <karltk@gentoo.org> portagemaster-0.1.8.ebuild files/digest-portagemaster-0.1.8 :
   New upstream version. Ebuild submitted by Robin Cull
-  <robin@digitalevacuation.org>. See #6123, #6214, #7238 for details.
+  <robin@digitalevacuation.org>, <milosn@slingshot.co.nz> and Jelmer
+  Jaarsma <dis-k@diska.dyndns.org>.
 
 *portagemaster-0.1.4-r1 (5 Jun 2002)
   
