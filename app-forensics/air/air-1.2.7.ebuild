@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.5-r1.ebuild,v 1.4 2004/12/04 06:27:54 dragonheart Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.7.ebuild,v 1.1 2004/12/04 06:27:54 dragonheart Exp $
 
 DESCRIPTION="A GUI front-end to dd/dcfldd"
 HOMEPAGE="http://air-imager.sourceforge.net/"
@@ -10,7 +8,7 @@ SRC_URI="mirror://sourceforge/air-imager/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-perl/perl-tk-804.027
@@ -21,12 +19,6 @@ DEPEND=">=dev-perl/perl-tk-804.027
 RDEPEND="app-arch/mt-st
 	dev-lang/perl
 	sys-apps/coreutils"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PF}-installfix.patch
-}
 
 src_compile() {
 	einfo "nothing to compile"
@@ -64,5 +56,5 @@ pkg_postinst() {
 	einfo "net-analyzer/netcat"
 	einfo "net-analyzer/cryptcat"
 
-	einfo "The author, steve@unixgurus.com, would appreciate and email of the install file /usr/share/doc/${PF}/air=install.log"
+	einfo "The author, steve@unixgurus.com, would appreciate and email of the install file /usr/share/doc/${PF}/air-install.log"
 }
