@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot-conduits/gnome-pilot-conduits-0.6.ebuild,v 1.1 2001/10/05 08:29:55 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot-conduits/gnome-pilot-conduits-0.6-r1.ebuild,v 1.1 2001/10/06 20:36:42 hallski Exp $
 
 
 A=${P}.tar.gz
@@ -11,11 +11,11 @@ DESCRIPTION="Gnome Pilot Conduits"
 SRC_URI="http://www.eskil.org/gnome-pilot/download/tarballs/${A}"
 HOMEPAGE="http://www.gnome.org/gnome-pilot/"
 
-DEPEND=">=gnome-apps/gnome-pilot-0.1.61"
+DEPEND=">=gnome-extra/gnome-pilot-0.1.61-r1"
 
 src_compile() {
-	./configure --prefix=/opt/gnome 				\
-		    --sysconfdir=/etc/opt/gnome 			\
+	./configure --prefix=/usr 					\
+		    --sysconfdir=/etc		 			\
 		    --host=${CHOST} || die
 
 	emake || die
