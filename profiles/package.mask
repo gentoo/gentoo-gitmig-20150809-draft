@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2824 2004/04/17 11:45:20 lanius Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2825 2004/04/18 18:37:17 solar Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# <solar@gentoo.org> (18 Apr 2004)
+# The 1.9.x series has been deprecated.
+# Users should use now use the learning mode 
+# as it can create rbac lists better than a human can.
+sec-policy/grsecurity-base-policy
 
 # <lu_zero@gentoo.org> (15 Apr 2004)
 # Latest snapshot
