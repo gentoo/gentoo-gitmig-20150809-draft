@@ -1,9 +1,17 @@
 # ChangeLog for dev-ruby/amstd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.3 2003/01/07 14:22:45 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.4 2003/01/07 22:16:38 agriffis Exp $
+
+*amstd-2.0.0 (07 Jan 2003)
+
+	07 Jan 2003; Aron Griffis <agriffis@gentoo.org> amstd-2.0.0.ebuild :
+	Update to latest version
 
 	07 Jan 2003; Chris Houser <chouser@gentoo.org> amstd-1.9.5.ebuild :
 	Added "alpha" to KEYWORDS
+
+	07 Jul 2002; Aron Griffis <agriffis@gentoo.org> amstd-1.9.5.ebuild :
+	Updated with LICENSE, KEYWORDS, SLOT.
 
 *amstd-1.9.5 (1 Feb 2002)
 
@@ -15,7 +23,3 @@
 	details about writing correct changelogs are explained in the
 	skel.ChangeLog file which you can find in the root directory of the
 	portage repository.
-
-	07 Jul 2002; Aron Griffis <agriffis@gentoo.org> amstd-1.9.5.ebuild :
-
-	Updated with LICENSE, KEYWORDS, SLOT.
