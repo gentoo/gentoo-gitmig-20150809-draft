@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.7 2004/03/22 05:19:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.8 2004/04/17 07:10:10 lv Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/expat/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~ia64 ppc64 s390"
+KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~ia64 ppc64 s390"
 
 DEPEND="virtual/glibc"
 
