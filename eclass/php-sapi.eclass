@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.23 2004/05/14 04:03:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.24 2004/05/17 23:30:11 stuart Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -41,7 +41,12 @@ fi
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp"
+
+# Hardened-PHP support
+
+HARDENEDPHP_PATCH="hardened-php-4.3.6-0.1.1.patch.gz"
+use hardenedphp && SRC_URI="$SRC_URI http://www.hardened-php.net/$HARDENEDPHP_PATCH"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
@@ -248,6 +253,7 @@ php-sapi_src_unpack() {
 	# bug 47498
 	[ "${PV//4.3.6}" != "${PV}" ] && EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/php-4.3.6-pcrealloc.patch
 
+	use hardenedphp && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
 }
 
 
