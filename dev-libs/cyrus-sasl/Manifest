@@ -2,10 +2,10 @@ MD5 371deb1330411da2c73d84bf46ee190e cyrus-sasl-1.5.27-r6.ebuild 2765
 MD5 a1468600bebea36437d458d047b417e7 cyrus-sasl-2.1.18.ebuild 4266
 MD5 9bec5bcd49985c0721eec238b54ccc3d cyrus-sasl-2.1.15.ebuild 3747
 MD5 3197fe37928e71d1072a187d59c7420f cyrus-sasl-1.5.27-r5.ebuild 2692
-MD5 5a189b9b80af4d8801515110256b023d cyrus-sasl-2.1.18-r1.ebuild 5378
+MD5 32bbe7da10b78bee5e02286194c076b1 cyrus-sasl-2.1.18-r1.ebuild 5370
 MD5 6277febc050092fe764fe9c445a66570 cyrus-sasl-2.1.17.ebuild 4249
 MD5 0364033278f9f21b78e0a6cb0025db6b cyrus-sasl-2.1.14.ebuild 3917
-MD5 2f6fa60de34aa85e47343ea76914ffac ChangeLog 15427
+MD5 23b8cff3dd02c5a499b4cf07041468a0 ChangeLog 15592
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 5d8f83e453b4f7dff5eeee74335de870 files/cyrus-sasl-1.5.24-rpath.patch 448
 MD5 13c15e58d2fa734adeb718e4e3dea757 files/cyrus-sasl-2.1.18-db4.patch 1604
