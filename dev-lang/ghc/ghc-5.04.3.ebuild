@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3.ebuild,v 1.1 2003/03/22 08:33:57 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3.ebuild,v 1.2 2003/04/06 06:42:25 george Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -34,7 +34,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc -ppc -alpha"
 
 
 PROVIDE="virtual/ghc"
