@@ -1,16 +1,20 @@
 # ChangeLog for media-gfx/fbi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.6 2003/02/13 02:13:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.7 2003/08/04 06:53:45 gmsoft Exp $
 
-  13 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
-  Added hppa to keywords.
 
 *fbi-1.25 (08 Jan 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> fbi-1.25.ebuild :
+  Marked stable on hppa.
 
   08 Jan 2003; Martin Holzer <mholzer@gentoo.org> fbi-1.25.ebuild files/digest-fbi-1.25 ChangeLog : 
   Version bumped. Closes #13469
 
 *fbi-1.21-r1 (26 Dec 2002)
+
+  13 Feb 2003; Guy Martin <gmsoft@gentoo.org> fbi-1.21-r1.ebuild :
+  Added hppa to keywords.
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> fbi-1.21-r1.ebuild :
 
