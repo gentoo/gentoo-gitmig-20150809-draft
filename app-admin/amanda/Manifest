@@ -1,7 +1,7 @@
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/Manifest,v 1.22 2003/12/25 02:44:03 robbat2 Exp $
-MD5 4a3a3cd6d4b5e81fda1c24abc969f90b amanda-2.4.4-r2.ebuild 11250
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/Manifest,v 1.23 2003/12/25 02:44:59 robbat2 Exp $
+MD5 42ee070efeecc99acc78c0cb909f60ba amanda-2.4.4-r2.ebuild 11248
 MD5 b2fd848797d7bad624451d1e3266aa5e amanda-2.4.4.ebuild 8434
-MD5 5cd9987e5e33a65b515d2fcf2328dbc7 amanda-2.4.4-r1.ebuild 11273
+MD5 07adfe3736ddce8b2aac7482107c13f2 amanda-2.4.4-r1.ebuild 11270
 MD5 e08f5636c78e3ad5f131d3e736a3eb3b ChangeLog 2611
 MD5 b21569120561b1c58ad59e93ce6df732 files/amanda-devfs 216
 MD5 fe28f64731a2dbf85f76b6f38942e032 files/example_disklist 55
