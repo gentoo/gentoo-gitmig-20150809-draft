@@ -1,28 +1,24 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.99.3-r1.ebuild,v 1.2 2002/04/12 23:03:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.99.3-r1.ebuild,v 1.3 2002/04/14 05:04:05 seemant Exp $
 
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Text processor"
 SRC_URI="http://download.sourceforge.net/abiword/abiword-${PV}.tar.gz"
 HOMEPAGE="http://www.abisource.com"
 SLOT="0"
-DEPEND="virtual/glibc
-	>=sys-devel/gcc-2.95.2
-	=media-libs/freetype-1.3.1-r3
-	>=media-libs/libpng-1.2.1
-	>=media-libs/jpeg-6b-r2
-	>=x11-libs/gtk+-1.2.10-r4
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
+DEPEND="virtual/x11
+	media-libs/libpng
 	>=dev-libs/libunicode-0.4-r1
 	>=gnome-base/bonobo-1.0.9-r1
-	>=gnome-extra/gal-0.13-r1 )
-	>=sys-devel/automake-1.5d-r1
+	>=x11-libs/gtk+-1.2.10-r4
+	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	perl?  ( >=sys-devel/perl-5.6 )
-	spell? ( >=app-text/pspell-ispell-0.12-r1 )
 	xml2?  ( >=dev-libs/libxml2-2.4.10 )
-	virtual/x11"
+	spell? ( >=app-text/pspell-ispell-0.12-r1 )
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
+		>=gnome-extra/gal-0.13-r1 )"
 
 
 fix_perl_env() {
@@ -38,7 +34,7 @@ src_unpack() {
 
 	unpack ${A}
 
-	if [ "`use perl`" ] ; then
+	use perl && ( \
 		fix_perl_env
 
 		# Fix perl stuff install outside sandbox, as well as a bug in 
@@ -63,7 +59,7 @@ src_unpack() {
 			GNUmakefile.am.orig >GNUmakefile.am || die
 		mkdir -p blib/{arch,bin,lib,man1,man3,script}
 		cd ${S}
-	fi
+	)
 
 	# clear invalid symlinks
 	rm -f ac-helpers/{install-sh,mkinstalldirs,missing}
@@ -72,18 +68,25 @@ src_unpack() {
 src_compile() {
 
 	local myconf
-	use gnome	\
-		&& myconf="${myconf} --with-gnome --enable-gnome"	\
+
+	use gnome \
+		&& myconf="${myconf} --with-gnome --enable-gnome" \
 		&& export ABI_OPT_BONOBO=1
 
-	use perl	\
+	use perl \
 		&& myconf="${myconf} --enable-scripting"
 	
-	use spell	\
+	use spell \
 		&& myconf="${myconf} --with-pspell"
 
-	use xml2	\
+	use xml2 \
 		&& myconf="${myconf} --with-libxml2"
+
+	use jpeg \
+		&& myconf="${myconf} --with-libjpeg"
+	
+	use nls \
+		&& myconf="${myconf} --enable-bidi"
 
 	./autogen.sh
 	
@@ -94,15 +97,14 @@ src_compile() {
 	echo "*************************************************"
 	echo
 
-	CFLAGS="$CFLAGS `gdk-pixbuf-config --cflags`"
+	CFLAGS="${CFLAGS} `gdk-pixbuf-config --cflags`"
 
-	./configure --host=${CHOST} \
+	./configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
-		--with-libjpeg \
 		--enable-extra-optimization \
 		${myconf} || die
 
@@ -131,12 +133,12 @@ src_install() {
 	dodoc BUILD COPYING *.txt, *.TXT
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ] ; then
+	use gnome && ( \
 		insinto /usr/share/pixmaps
 		newins ${WORKDIR}/${P}/abidistfiles/icons/abiword_48.png AbiWord.png
 		insinto /usr/share/gnome/apps/Applications
 		doins ${FILESDIR}/AbiWord.desktop
-	fi
+	)
 }
 
 pkg_postinst() {

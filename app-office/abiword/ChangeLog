@@ -1,6 +1,16 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.5 2002/04/12 21:29:27 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.6 2002/04/14 05:04:05 seemant Exp $
+
+*abiword-0.99.3-r1 (13 Apr 2002)
+
+  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org> abiword-0.99.3-r1.ebuild :
+
+  Jon Nelson (jnelson@gentoo.org) discovered that there is absolutely no
+  dependency on freetype fonts (bug #1411).  This is true, as the AbiSuite
+  applications tend to install their own fonts into /usr/share/AbiSuite 
+  anyway.  Hence, freetype has been removed from the DEPEND list, and
+  other intuitive deends like glibc, automake etc have been removed as well.
 
 *abiword-0.99.3-r1 (12 Apr 2002)
   12 Apr 2002; Spider <spider@gentoo.org>
