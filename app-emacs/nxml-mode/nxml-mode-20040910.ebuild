@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/nxml-mode-20031031.ebuild,v 1.7 2004/10/02 09:41:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/nxml-mode-20040910.ebuild,v 1.1 2004/10/02 09:41:16 usata Exp $
 
 inherit elisp eutils
 
 DESCRIPTION="A new major mode for GNU Emacs for editing XML documents."
 HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki/NxmlMode"
-SRC_URI="http://thaiopensource.com/download/${P}.tar.gz"
+SRC_URI="http://thaiopensource.com/download/${P}.tar.gz
+	mirror://gentoo/${P}-xmlschema.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~ppc-macos"
 IUSE=""
 
 DEPEND="virtual/emacs"
@@ -18,9 +19,10 @@ DEPEND="virtual/emacs"
 SITEFILE=80nxml-mode-gentoo.el
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-info-gentoo.patch
+	epatch ${DISTDIR}/${P}-xmlschema.patch.gz
 }
 
 src_compile() {

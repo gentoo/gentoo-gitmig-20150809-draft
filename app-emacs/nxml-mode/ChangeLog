@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/nxml-mode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.5 2004/09/03 21:26:05 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.6 2004/10/02 09:41:16 usata Exp $
+
+*nxml-mode-20040910 (02 Oct 2004)
+
+  02 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/20031031-info-gentoo.patch, +files/nxml-mode-info-gentoo.patch,
+  nxml-mode-20031031.ebuild, +nxml-mode-20040910.ebuild:
+  Version bumped. W3C XML Schema patch was added by Lénaïc Huard
+  <lhuard@ifrance.com>, closing bug #65836.
 
   03 Sep 2004; Tom Martin <slarti@gentoo.org> nxml-mode-20031031.ebuild:
   Marked ~amd64; resolves #58260. Thanks to Gabriel Ebner <ge@gabrielebner.at>

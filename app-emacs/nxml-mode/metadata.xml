@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>emacs</herd>
+<herd>text-markup</herd>
 <longdescription>
 A new major mode for GNU Emacs for editing XML documents.  It supports
 editing well-formed XML documents and also provides schema-sensitive
