@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021027.ebuild,v 1.7 2002/12/09 04:42:01 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021027.ebuild,v 1.8 2002/12/15 10:44:24 bjb Exp $
 
 IUSE="pic X mmx truetype opengl"
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.enlightenment.org/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 S=${WORKDIR}/${ECVS_MODULE}
 E_PREFIX=/usr/e17
 

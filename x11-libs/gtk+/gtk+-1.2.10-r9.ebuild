@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r9.ebuild,v 1.5 2002/12/09 04:41:42 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r9.ebuild,v 1.6 2002/12/15 10:44:24 bjb Exp $
 
 IUSE="nls"
 
@@ -19,7 +19,7 @@ DEPEND="virtual/x11
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 src_unpack() {
 
