@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.9.ebuild,v 1.2 2003/03/11 04:43:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.9.ebuild,v 1.3 2003/03/11 05:10:15 azarah Exp $
 
 inherit eutils
 
@@ -51,10 +51,15 @@ src_compile() {
 }
 
 src_install() {
-# Do not install all the manpages, etc
-#	einstall \
-#		bindir=${D}/bin || die
-	make DESTDIR=${D} install || die
+	einstall \
+		bindir=${D}/bin || die
+
+	# Do manpages manually, as else it do not install them all
+	rm -rf ${D}/usr/share/man
+	for x in ${S}/man/*.1
+	do
+		[ -f "${x}" ] && doman ${x}
+	done
 	
     # hostname comes from net-base
     # hostname does not work with the -f switch, which breaks gnome2
