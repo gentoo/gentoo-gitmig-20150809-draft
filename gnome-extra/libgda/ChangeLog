@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.23 2003/07/18 21:05:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.24 2003/08/28 16:55:40 obz Exp $
+
+*libgda-0.91.0 (29 Aug 2003)
+
+  29 Aug 2003; Mike Gardiner <obz@gentoo.org> libgda-0.91.0.ebuild:
+  New version, revised dependencies (see ChangeLog and configure.in)
 
   18 Jul 2003; Alastair Tse <liquidx@gentoo.org> libgda-0.12.1.ebuild,
   libgda-0.90.0.ebuild:
