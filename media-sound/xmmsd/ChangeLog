@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/xmmsd
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/ChangeLog,v 1.5 2004/06/24 08:00:35 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/ChangeLog,v 1.6 2004/06/25 00:30:13 agriffis Exp $
 
   24 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> xmmsd-0.3.ebuild:
   Fixed MAKEOPTS QA.  Added ~amd64.

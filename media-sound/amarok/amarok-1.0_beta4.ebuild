@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.0_beta4.ebuild,v 1.1 2004/06/15 17:07:43 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.0_beta4.ebuild,v 1.2 2004/06/24 23:50:00 agriffis Exp $
 
 inherit kde eutils
 

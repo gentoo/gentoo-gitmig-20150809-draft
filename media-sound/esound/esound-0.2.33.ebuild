@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.33.ebuild,v 1.7 2004/05/29 03:35:32 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.33.ebuild,v 1.8 2004/06/24 23:59:03 agriffis Exp $
 
 inherit libtool gnome.org eutils
 

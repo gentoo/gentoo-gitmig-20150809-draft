@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/madman
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.4 2004/04/26 03:57:54 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.5 2004/06/25 00:09:33 agriffis Exp $
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> madman-0.91.1.ebuild:
   Add die following econf for bug 48950

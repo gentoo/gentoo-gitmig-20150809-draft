@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.8.3_beta-r2.ebuild,v 1.5 2004/06/13 08:37:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.8.3_beta-r2.ebuild,v 1.6 2004/06/25 00:19:55 agriffis Exp $
 
 MY_P="${P/_/}"
 DESCRIPTION="Sound editor and recorder"

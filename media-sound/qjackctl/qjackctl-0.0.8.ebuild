@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.0.8.ebuild,v 1.2 2004/03/01 05:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.0.8.ebuild,v 1.3 2004/06/25 00:18:22 agriffis Exp $
 
 DESCRIPTION="A Qt application to control the JACK Audio Connection Kit"
 HOMEPAGE="http://qjackctl.sf.net/"

@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/quark
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.4 2004/03/19 23:35:00 eradicator Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.5 2004/06/25 00:18:53 agriffis Exp $
 
   19 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> quark-3.21.ebuild:
   fixed dep.  bump to stable x86

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b-r1.ebuild,v 1.9 2004/04/26 22:15:52 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b-r1.ebuild,v 1.10 2004/06/25 00:09:45 agriffis Exp $
 
 IUSE="debug nls"
 

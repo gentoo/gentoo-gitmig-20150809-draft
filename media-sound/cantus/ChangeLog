@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/cantus
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.9 2004/05/26 23:39:35 ferringb Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.10 2004/06/24 23:53:30 agriffis Exp $
 
   26 May 2004; Brian Harring <ferringb@gentoo.org> cantus-1.07.ebuild:
   Fix cantus-1.07's deps, similar to bug 36009

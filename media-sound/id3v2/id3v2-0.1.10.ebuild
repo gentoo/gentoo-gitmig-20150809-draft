@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.10.ebuild,v 1.2 2004/06/16 07:30:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.10.ebuild,v 1.3 2004/06/25 00:06:18 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/snd
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.14 2004/06/24 08:13:04 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.15 2004/06/25 00:23:03 agriffis Exp $
 
   24 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> snd-7.4.ebuild:
   Stable x86 amd64

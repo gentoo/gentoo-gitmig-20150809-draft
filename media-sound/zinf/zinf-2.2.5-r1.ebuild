@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.2 2004/06/15 06:46:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.3 2004/06/25 00:30:54 agriffis Exp $
 
 inherit kde-functions eutils flag-o-matic
 

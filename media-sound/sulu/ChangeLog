@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/sulu
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/ChangeLog,v 1.4 2004/04/20 17:37:17 eradicator Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/ChangeLog,v 1.5 2004/06/25 00:25:00 agriffis Exp $
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> sulu-0.15.ebuild:
   Added IUSE.

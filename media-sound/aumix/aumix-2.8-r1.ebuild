@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r1.ebuild,v 1.6 2004/06/10 09:30:31 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r1.ebuild,v 1.7 2004/06/24 23:51:43 agriffis Exp $
 
 IUSE="gtk gtk2 gpm nls"
 

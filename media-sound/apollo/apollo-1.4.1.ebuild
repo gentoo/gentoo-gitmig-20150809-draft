@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.1.ebuild,v 1.7 2004/05/04 02:13:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.4.1.ebuild,v 1.8 2004/06/24 23:50:41 agriffis Exp $
 
 IUSE="kde qt"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.10.3-r1.ebuild,v 1.1 2004/05/24 22:04:03 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.10.3-r1.ebuild,v 1.2 2004/06/25 00:13:30 agriffis Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6 flac"
 

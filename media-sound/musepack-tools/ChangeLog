@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/musepack-tools
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.4 2004/06/16 09:18:40 eradicator Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.5 2004/06/25 00:14:44 agriffis Exp $
 
   16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   musepack-tools-1.15r.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.47.ebuild,v 1.5 2004/03/27 02:45:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.47.ebuild,v 1.6 2004/06/24 23:55:35 agriffis Exp $
 
 DESCRIPTION="A Curses front-end for various audio players."
 SRC_URI="http://www.tf.hut.fi/~flu/cplay/old/${P}.tar.gz"

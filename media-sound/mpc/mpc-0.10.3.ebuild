@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.10.3.ebuild,v 1.3 2004/04/25 17:45:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.10.3.ebuild,v 1.4 2004/06/25 00:13:20 agriffis Exp $
 
 IUSE=""
 

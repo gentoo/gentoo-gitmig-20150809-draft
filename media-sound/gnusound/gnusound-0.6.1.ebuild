@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.6.1.ebuild,v 1.2 2004/03/27 03:35:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.6.1.ebuild,v 1.3 2004/06/25 00:02:38 agriffis Exp $
 
 DESCRIPTION="GNUsound is a sound editor for Linux/x86"
 HOMEPAGE="http://gnusound.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.07.ebuild,v 1.10 2004/05/26 23:39:35 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.07.ebuild,v 1.11 2004/06/24 23:53:30 agriffis Exp $
 
 DESCRIPTION="easy to use tool for tagging and renaming MP3 and OGG/Vorbis files"
 HOMEPAGE="http://software.manicsadness.com/?site=project&project=3"

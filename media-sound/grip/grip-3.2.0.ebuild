@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.4 2004/06/18 09:11:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.5 2004/06/25 00:04:17 agriffis Exp $
 
 DESCRIPTION="GTK+ based Audio CD Player/Ripper."
 HOMEPAGE="http://www.nostatic.org/grip"

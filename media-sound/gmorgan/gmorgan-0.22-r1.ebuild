@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.22-r1.ebuild,v 1.4 2004/05/27 15:00:14 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.22-r1.ebuild,v 1.5 2004/06/25 00:01:19 agriffis Exp $
 
 DESCRIPTION="gmorgan is an opensource software rhythm station."
 HOMEPAGE="http://personal.telefonica.terra.es/web/soudfontcombi/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/positron-1.0.ebuild,v 1.8 2004/04/17 18:23:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/positron-1.0.ebuild,v 1.9 2004/06/25 00:17:20 agriffis Exp $
 
 DESCRIPTION="Synchronization manager for the Neuros Audio Computer (www.neurosaudio.com) portable music player."
 HOMEPAGE="http://www.xiph.org/positron"

@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/mserv
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.4 2004/04/14 10:16:20 eradicator Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.5 2004/06/25 00:14:02 agriffis Exp $
 
   14 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> mserv-0.35.ebuild:
   Stable x86.  Removed apache2 from IUSE.

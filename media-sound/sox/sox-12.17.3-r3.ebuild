@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r3.ebuild,v 1.9 2004/04/20 17:35:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r3.ebuild,v 1.10 2004/06/25 00:23:57 agriffis Exp $
 
 IUSE=""
 

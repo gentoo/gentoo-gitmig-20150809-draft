@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/playmidi
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/ChangeLog,v 1.4 2004/05/10 07:21:30 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/ChangeLog,v 1.5 2004/06/25 00:16:50 agriffis Exp $
 
   10 May 2004; Michael Sterrett <mr_bones_@gentoo.org> playmidi-2.5.ebuild:
   fix bug #50517; use emake; fix use usage; tidy

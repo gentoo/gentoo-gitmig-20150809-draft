@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.4.ebuild,v 1.3 2004/06/24 08:08:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.4.ebuild,v 1.4 2004/06/24 23:48:54 agriffis Exp $
 
 MY_P=${P/_rc/rc}
 S="${WORKDIR}/${MY_P}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5.ebuild,v 1.6 2004/04/22 08:17:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5.ebuild,v 1.7 2004/06/24 23:54:44 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="A package of command-line utilities to play and catalog cdroms."

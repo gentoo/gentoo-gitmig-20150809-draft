@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.3.ebuild,v 1.8 2004/03/27 03:20:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.3.ebuild,v 1.9 2004/06/25 00:01:47 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Gnome 2 based ALSA Mixer"

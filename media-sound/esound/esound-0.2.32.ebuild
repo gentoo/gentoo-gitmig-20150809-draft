@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.32.ebuild,v 1.13 2004/04/15 03:11:29 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.32.ebuild,v 1.14 2004/06/24 23:59:03 agriffis Exp $
 
 IUSE="tcpd alsa ipv6"
 

@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/timidity++
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.29 2004/06/15 22:37:51 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.30 2004/06/25 00:26:42 agriffis Exp $
 
   15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/init.d.timidity:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.1.ebuild,v 1.2 2004/05/26 14:09:17 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.1.ebuild,v 1.3 2004/06/24 23:51:13 agriffis Exp $
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-src-${MY_PV}"
