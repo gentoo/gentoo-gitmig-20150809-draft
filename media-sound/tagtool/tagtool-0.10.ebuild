@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.10.ebuild,v 1.2 2004/09/13 02:31:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.10.ebuild,v 1.3 2004/10/08 04:21:58 eradicator Exp $
 
 IUSE="oggvorbis mp3"
 
@@ -8,14 +8,16 @@ DESCRIPTION="Audio Tag Tool Ogg/Mp3 Tagger"
 HOMEPAGE="http://pwp.netcabo.pt/paol/tagtool/"
 SRC_URI="http://pwp.netcabo.pt/paol/tagtool/${P}.tar.gz"
 
+SLOT="0"
+LICENSE="GPL-2"
+
+#-sparc: 0.10 doesn't browse files properly
+KEYWORDS="~x86 ~ppc ~amd64 -sparc"
+
 DEPEND=">=x11-libs/gtk+-2.4.0-r1
 	>=gnome-base/libglade-2.4.0
 	mp3? ( >=media-libs/id3lib-3.8.3-r3 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0.1 )"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
 
 src_compile() {
 	cd ${S}
