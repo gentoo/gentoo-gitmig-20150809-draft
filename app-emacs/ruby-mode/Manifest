@@ -1,9 +1,19 @@
-MD5 9130affceb3b021ba93741e8cb2eabaa ruby-mode-1.8.0.ebuild 706
-MD5 b078fbd2235af5b0a0677b0b6cfd3aa1 ChangeLog 1182
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b959a87b4692d3f2bd9bce49cd7a4e6c ChangeLog 1288
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 9130affceb3b021ba93741e8cb2eabaa ruby-mode-1.8.0.ebuild 706
 MD5 4613c2da9ee82a6c2b55b01993ea31d1 ruby-mode-1.8.1.ebuild 678
-MD5 488eb388bd493370ca030177b8d4424d ruby-mode-1.8.2.ebuild 687
-MD5 e1c6eac35da8ce7f11bab66795de0b80 files/digest-ruby-mode-1.8.0 63
+MD5 d845aad38b4dccc1b89977789796408a ruby-mode-1.8.2.ebuild 685
 MD5 f36b4b778443d2976f457633e4326ca3 files/50ruby-mode-gentoo.el 333
+MD5 e1c6eac35da8ce7f11bab66795de0b80 files/digest-ruby-mode-1.8.0 63
 MD5 72d152e1bd1b4cb1eab8bee7324ba953 files/digest-ruby-mode-1.8.1 63
 MD5 05fb3b34c1cf542f96284eed48240bed files/digest-ruby-mode-1.8.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPwOAVWNWqTUmv+0RAhPOAJ47ScXcijIMbb+3/XLlyPZ8SYYcwACffDOt
++tfRF+n/XJWGNNYnqL9MxhU=
+=pAo4
+-----END PGP SIGNATURE-----
