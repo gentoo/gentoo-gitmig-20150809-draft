@@ -1,10 +1,11 @@
 MD5 3663ac99fa6ad2eb6584554e34407962 gs-sources-2.4.21_rc1-r1.ebuild 1950
 MD5 c14f4400b54f04a9b1d6771b064f7434 gs-sources-2.4.21_rc6.ebuild 2095
 MD5 ee1ca492f71b77580676aee0ae0b25c8 gs-sources-2.4.21_rc1.ebuild 1941
+MD5 4efd5b29a9b587ce81a48fef00adba23 gs-sources-2.4.21_rc8.ebuild 1927
 MD5 1efb32254b680fb1f5cdb68d663bbafd gs-sources-2.4.21_pre7.ebuild 1943
 MD5 82e338da2ba626361ffc3f7cdadf1b81 gs-sources-2.4.21_pre7-r1.ebuild 1953
 MD5 eb3897321a1b2cdf672954d805acec3e gs-sources-2.4.21_rc2.ebuild 1940
-MD5 1967aee97ec178e07f7d9e67142fb31b ChangeLog 3491
+MD5 760501afdad3c95b138de826bd05205a ChangeLog 3796
 MD5 1d84ead5da2fdae8a336c41ccfe2d2ad files/digest-gs-sources-2.4.21_pre7 280
 MD5 ec2af610cc4d00ceac01e106084647ef files/digest-gs-sources-2.4.21_pre7-r1 147
 MD5 a3ec1083055b245758b2262dd2245145 files/pci.ids.patch 3376
@@ -13,3 +14,4 @@ MD5 517fc1b71501382d041ce0bdfe304511 files/00_3.5-useraddress.patch 7247
 MD5 717894dc028978973aba58d170f19fd7 files/digest-gs-sources-2.4.21_rc1 143
 MD5 f3342e8d86e2f4fa136a33f689e68bef files/digest-gs-sources-2.4.21_rc2 143
 MD5 77991a6c15e7f216f2c485b199a33938 files/digest-gs-sources-2.4.21_rc6 143
+MD5 cdd72a00ab662754202c155103ebcba2 files/digest-gs-sources-2.4.21_rc8 143

@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.17 2003/06/01 20:15:02 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.18 2003/06/11 21:40:52 livewire Exp $
+
+gs-sources-2.4.21_rc8 (11 June 2003)
+
+  11 June 2003; Bob Johnson <livewire@gentoo.org>
+
+	- updated to SuperFreeswan 1.99.7.3
+        - updated to 2.4.21-rc8
+        - updated xfs-snapshot to 2003-06-10
+        - updated acpi to 20030523
+	- added cpu-freq back
+	- 3.5 useraddress added
 
 gs-sources-2.4.21_rc6 (01 June 2003)
 
@@ -51,11 +62,14 @@ gs-sources-2.4.21_rc1 (01 May 2003)
 
 *gs-sources-2.4.21_pre7 (05 April 2003)
 
-  05 Apr 2003; root <root@gentoo.org> gs-sources-2.4.21_pre6.ebuild:
-  bumped to 2.4.21_pre7
-  pulled Aic79xx (now in vanilla)
+  05 Apr 2003; Bob Johnson <livewire@gentoo.org> 
+	
+	- bumped to 2.4.21_pre7
+  	- pulled Aic79xx (now in vanilla)
 
-  29 March 2003: Bob Johnso <livewire@gentoo.org>
+*gs-sources-2.4.21_pre6 (05 May 2003)
+ 
+  29 March 2003: Bob Johnson <livewire@gentoo.org>
 
 	- updated to 2.4.21_pre6
 	- updated acpi to acpi-20030328-2.4.21-pre6
