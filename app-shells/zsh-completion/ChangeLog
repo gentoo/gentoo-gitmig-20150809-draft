@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/zsh-completion
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.4 2005/02/10 17:32:50 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.5 2005/02/22 15:40:35 usata Exp $
+
+*zsh-completion-20050120 (23 Feb 2005)
+
+  23 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +zsh-completion-20050120.ebuild:
+  Support '--' style operation and other improvements. Special thanks to
+  baptux <bapt@ifrance.com> and oberyno <oberyno@gmail.com>. See bug #71957
+  and bug #71532.
 
   10 Feb 2005; Kito <kito@gentoo.org> zsh-completion-20040730.ebuild:
   keyword ~ppc-macos
