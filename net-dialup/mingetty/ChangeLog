@@ -1,8 +1,15 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.2 2002/12/17 06:06:15 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.3 2002/12/31 23:53:31 drobbins Exp $
+
+*mingetty-1.00.3 (31 Dec 2002)
+
+  31 Dec 2002; Daniel Robbins <drobbins@gentoo.org> mingetty-1.00.3.ebuild: New
+  Red Hat 8 release version; unmasked for x86 and a couple of ebuild usability
+  updates.
 
 *mingetty-1.00 (05 Nov 2002)
+
   17 Dec 2002; Seth Chandler <sethbc@gentoo.org> mingetty-1.00.ebuild
   added ~ppc to KEYWORDS
 
