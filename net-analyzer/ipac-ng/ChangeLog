@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ipac-ng
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.2 2003/09/29 17:09:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.3 2003/11/04 03:42:48 vapier Exp $
+
+*ipac-ng-1.27_p1-r1 (03 Nov 2003)
+
+  03 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Install default ipac.conf and rules.conf to fix segfaults for people
+  who didnt setup their config files #30937.
 
 *ipac-ng-1.27_p1 (28 Sep 2002)
 
