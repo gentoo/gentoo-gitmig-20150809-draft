@@ -10,7 +10,7 @@ start() {
 	if [ "${START_CLAMD}" = "yes" ]; then
 		if [ -n "${CLAMD_LOG}" -a ! -f "${CLAMD_LOG}" ]; then
 			touch "${CLAMD_LOG}"
-			chown clamav.clamav "${CLAMD_LOG}"
+			chown clamav:clamav "${CLAMD_LOG}"
 		fi
 		ebegin "Starting clamd"
 		start-stop-daemon --start --quiet \
@@ -20,7 +20,7 @@ start() {
 	if [ "${START_FRESHCLAM}" = "yes" ]; then
 		if [ -n "${FRESHCLAM_LOG}" -a ! -f "${FRESHCLAM_LOG}" ]; then
 			touch "${FRESHCLAM_LOG}"
-			chown clamav.clamav "${FRESHCLAM_LOG}"
+			chown clamav:clamav "${FRESHCLAM_LOG}"
 			FRESHCLAM_OPTS="${FRESHCLAM_OPTS} -l ${FRESHCLAM_LOG}"
 		fi
 		ebegin "Starting freshclam"
