@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.06.23.ebuild,v 1.5 2002/10/04 04:04:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.06.23.ebuild,v 1.6 2002/10/05 05:39:05 drobbins Exp $
+
+IUSE="nls perl"
 
 MY_PV=`echo ${PV} | sed -e 's/\./-/g'`
 S=${WORKDIR}/${PN}-gtk2

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.3 2002/10/04 04:12:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.4 2002/10/05 05:39:07 drobbins Exp $
+
+IUSE="gpm esd postgres xface nas X jpeg tiff png mule"
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"

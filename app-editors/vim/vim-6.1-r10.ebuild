@@ -1,6 +1,8 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r10.ebuild,v 1.6 2002/10/04 04:11:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r10.ebuild,v 1.7 2002/10/05 05:39:07 drobbins Exp $
+
+IUSE="gpm nls gnome python X gtk ruby perl"
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is

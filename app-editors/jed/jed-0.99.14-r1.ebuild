@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14-r1.ebuild,v 1.6 2002/10/04 04:08:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14-r1.ebuild,v 1.7 2002/10/05 05:39:07 drobbins Exp $
+
+IUSE="X gpm"
 
 P0=${PN}-B0.99-14
 S=${WORKDIR}/${P0}
