@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/hdf
+# ChangeLog for sci-libs/hdf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.1 2004/12/28 20:36:12 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.2 2004/12/28 21:39:16 swegener Exp $
 
 *hdf-4.2.0-r3 (28 Dec 2004)
 
