@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3a.ebuild,v 1.3 2003/09/23 17:01:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3a.ebuild,v 1.4 2003/11/17 21:04:31 mholzer Exp $
 
 inherit eutils
+inherit webapp-apache
 
 DESCRIPTION="Cacti is a complete frondend to rrdtool"
 HOMEPAGE="http://www.raxnet.net/products/cacti/"
@@ -21,12 +22,21 @@ RDEPEND="net-www/apache
 	dev-php/php
 	dev-php/mod_php"
 
-export HTTPD_ROOT=/home/httpd/htdocs
-export HTTPD_USER=apache
-export HTTPD_GROUP=apache
-export INSTALL_DEST=${HTTPD_ROOT}/cacti
+webapp-detect || NO_WEBSERVER=1
+
+HTTPD_USER=apache
+HTTPD_GROUP=apache
+
+pkg_setup() {
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
+}
 
 src_install() {
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/${PN}
+	dodir ${destdir}
+
 	dohtml docs/{INSTALL,UPGRADE}.htm
 	dodoc docs/{CHANGELOG,CONTRIB}
 	dodoc LICENSE
@@ -39,10 +49,9 @@ src_install() {
 	rm -fr docs
 	rm -rf cactid
 
-	dodir ${INSTALL_DEST}
 	edos2unix `find -type f -name '*.php'`
 	chown -R ${HTTPD_USER}.${HTTPD_GROUP} *
-	mv * ${D}/${INSTALL_DEST}/
+	cp -r . ${D}/${HTTPD_ROOT}/${PN}
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.14 2003/09/23 17:01:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.15 2003/11/17 21:04:30 mholzer Exp $
+
+  17 Nov 2003; Martin Holzer <mholzer@gentoo.org> cacti-0.8.3a.ebuild:
+  adding webapps-apache.eclass
 
   23 Sep 2003; Martin Holzer <mholzer@gentoo.org> cacti-0.6.8a.ebuild,
   cacti-0.8.3.ebuild, cacti-0.8.3a.ebuild:
