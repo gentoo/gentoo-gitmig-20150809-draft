@@ -1,0 +1,16 @@
+# ChangeLog for media-libs/pyogg
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/ChangeLog,v 1.1 2003/06/13 22:35:01 liquidx Exp $
+
+*pyogg-1.1 (13 Jun 2003)
+
+  13 Jun 2003; Alastair Tse <liquidx@gentoo.org> pyogg-1.1.ebuild:
+  distutil-ize and move from media-libs to dev-python
+
+*pyogg-1.1 (30 Nov 2002)
+
+  30 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  pyogg-1.1.ebuild, files/digest-pyogg-1.1 :
+
+  Initial import.  Ebuild submitted by Matthieu Sozeau
+  <mattam@netcourrier.com>.
