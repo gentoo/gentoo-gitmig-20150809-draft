@@ -25,3 +25,14 @@ move net-www/phoenix-bin net-www/mozilla-firebird-bin
 move x11-wm/WindowMaker x11-wm/windowmaker
 move net-www/phoenix-cvs net-www/mozilla-firebird-cvs
 move app-crypt/krb5 app-crypt/mit-krb5
+move app-text/cpp2latex dev-tex/cpp2latex
+move app-text/latex-SIunits dev-tex/SIunits
+move app-text/latex-aastex dev-tex/aastex
+move app-text/latex-calendar dev-tex/latex-calendar
+move app-text/latex-cdcover dev-tex/cdcover
+move app-text/latex-eurosym dev-tex/eurosym
+move app-text/latex-floatflt dev-tex/floatflt
+move app-text/latex-foiltex dev-tex/foiltex
+move app-text/latex-leaflet dev-tex/leaflet
+move app-text/latex-texpower dev-tex/texpower
+move app-text/latex2html dev-tex/latex2html
