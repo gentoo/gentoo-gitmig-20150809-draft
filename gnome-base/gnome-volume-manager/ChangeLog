@@ -1,0 +1,10 @@
+# ChangeLog for gnome-base/gnome-volume-manager
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.1 2004/08/17 21:31:50 foser Exp $
+
+*gnome-volume-manager-0.9.9 (17 Aug 2004)
+
+  17 Aug 2004; foser <foser@gentoo.org> gnome-volume-manager-0.9.9.ebuild, ChangeLog, metadata.xml :
+  Initial release
+  Gnome Volume Manager (GVM) a daemon & capplet to handle pluggable media volumes
+  Added to the gnome herd
