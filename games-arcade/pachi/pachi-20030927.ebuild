@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-20030927.ebuild,v 1.1 2003/09/28 05:54:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-20030927.ebuild,v 1.2 2003/10/07 02:29:24 mr_bones_ Exp $
 
 inherit games
 
 S="${WORKDIR}/Pachi"
 DESCRIPTION="Pachi el marciano is a platforms game inspired by games like Manic Miner and Jet Set Willy"
 # Upstream doesn't version their releases.
-# I downloaded and re-compressed with tar -jxvf
+# I downloaded and re-compressed with tar -jcvf
 #SRC_URI="mirror://sourceforge/dragontech/pachi_source.tgz"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://dragontech.sourceforge.net/index.php?main=pachi&lang=en"
