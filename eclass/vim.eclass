@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.26 2003/04/29 00:12:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.27 2003/04/29 21:11:34 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -255,6 +255,16 @@ pkg_postinst() {
 		einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
 	fi
 	einfo
+
+	# Warn about VIMRUNTIME
+	if [ -n "$VIMRUNTIME" -a "${VIMRUNTIME##*/vim}" != "${VIM_VERSION/.}" ]; then
+		ewarn
+		ewarn "WARNING: You have VIMRUNTIME set in your environment from an old"
+		ewarn "installation.  You will need to either unset VIMRUNTIME in each"
+		ewarn "terminal, or log out completely and back in.  This problem won't"
+		ewarn "happen again since the ebuild no longer sets VIMRUNTIME."
+		ewarn
+	fi
 
 	# Make convenience symlinks, hopefully without stepping on toes
 	[ -f /usr/bin/gvim ] && ln -s gvim /usr/bin/vim 2>/dev/null
