@@ -1,10 +1,15 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.14 2002/05/03 22:29:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.15 2002/05/13 22:24:47 azarah Exp $
 
+*evolution-1.0.5 (13 May 2002)
+
+  13 May 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.5.ebuild :
+
+  Updated version.
 
 *evolution-1.0.3-r7 (03 May 2002) 
-  03 May 2002; Spider <spider@gentoo.org> evolution-1.0.3-r7.ebuild
+  03 May 2002; Spider <spider@gentoo.org> evolution-1.0.3-r7.ebuild :
   Adding an important security fix
 
   as reported on the mailing list yesterday, Evolution 1.0.3 has a serious
