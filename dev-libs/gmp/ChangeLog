@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.35 2004/08/20 04:23:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.36 2004/10/14 11:06:02 dragonheart Exp $
+
+*gmp-4.1.4 (14 Oct 2004)
+
+  14 Oct 2004; Daniel Black <dragonheart@gentoo.org> -gmp-4.1-r1.ebuild,
+  gmp-4.1.3.ebuild, +gmp-4.1.4.ebuild:
+  version bump as per bug #67022. Thanks Thomas Weidner <3.14159@gmx.net>/ Clean
+  out old version. x86 keyword version 4.1.3
 
   19 Aug 2004; Tom Gall <tgall@gentoo.org> gmp-4.1.3.ebuild, +ppc64-gmp-acinclude.patch:
   stable on ppc64
