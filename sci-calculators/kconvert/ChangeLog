@@ -1,6 +1,15 @@
 # ChangeLog for sci-calculators/kconvert
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kconvert/ChangeLog,v 1.2 2004/12/24 20:05:08 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kconvert/ChangeLog,v 1.3 2005/02/24 17:22:27 cryos Exp $
+
+*kconvert-1.1-r1 (24 Feb 2005)
+
+  24 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/kconvert-1.1-arts-configure.patch, +kconvert-1.1-r1.ebuild,
+  kconvert-1.1.ebuild:
+  Fixed up the ebuild to use kde.eclass, added a configure patch to build
+  without arts and changed to need-kde 3. This fixes bug 82095. Also updated the
+  description a little.
 
 *kconvert-1.1 (24 Dec 2004)
 
