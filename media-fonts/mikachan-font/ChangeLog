@@ -1,8 +1,12 @@
 # ChangeLog for media-fonts/mikachan-font
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.1 2003/07/26 21:40:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.2 2003/07/28 11:58:50 usata Exp $
 
 *mikachan-font-8.8 (27 Jul 2003)
+
+  28 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> mikachan-font-8.8.ebuild:
+  Added ~alpha keyword. Changed fonts.scale and fonts.dir creation method
+  regarding the same issue described in bug #25212
 
   27 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> mikachan-font-8.8.ebuild:
   Initial import. Based on the ebuild submitted by MATSUU Takuto
