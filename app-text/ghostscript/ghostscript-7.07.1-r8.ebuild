@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r8.ebuild,v 1.1 2004/12/05 17:23:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r8.ebuild,v 1.2 2004/12/14 15:14:03 lanius Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -15,22 +15,25 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="X cups cjk emacs gtk"
 
-RDEPEND="virtual/libc
+DEP="virtual/libc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	X? ( virtual/x11 )
+	gtk? ( >=x11-libs/gtk+-2.0 )
+	cups? ( net-print/cups )
+	!virtual/ghostscript"
+
+RDEPEND="${DEP}
 	cjk? ( media-fonts/arphicfonts
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
-	cups? ( net-print/cups )
-	gtk? ( >=x11-libs/gtk+-2.0 )
-	!virtual/ghostscript
 	media-fonts/gnu-gs-fonts-std"
-#	media-libs/fontconfig"
 
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+DEPEND="${DEP}
+	gtk? ( dev-util/pkgconfig )"
+
+#	media-libs/fontconfig"
 
 S=${WORKDIR}/espgs-${PV}
 
@@ -80,13 +83,22 @@ src_unpack() {
 
 	# fix dynamic build
 	echo '#include "png.h"' >> src/png_.h
-	sed -i -e "s:CFLAGS_SO=-fPIC:CFLAGS_SO=-fPIC -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include:" Makefile.in
+
+	# fix for building with gtk2 instead of gtk1
+	if use gtk; then
+		sed -i -e "s:gmodule:gmodule-2.0:" configure.ac
+		sed -i -e "s:glib-config:pkgconfig:" configure.ac
+		sed -i -e "s:gtk-config:pkg-config gtk-2.0:" src/unix-dll.mak
+		sed -i -e "s:CFLAGS_SO=-fPIC:CFLAGS_SO=-fPIC -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include:" Makefile.in
+	else
+		epatch ${FILESDIR}/gs${PV}-nogtk2.patch
+	fi
 }
 
 src_compile() {
 	local myconf
 	myconf="--with-ijs --without-gimp-print"
-	use gtk && myconf="${myconf} --with-omni"
+	use gtk && myconf="${myconf} --with-omni" || myconf="${myconf} --without-omni"
 
 	# bug #56998, only compiled-in fontpath is searched when running 
 	# gs -DPARANOIDSAFER out.ps

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.91 2004/12/05 22:31:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.92 2004/12/14 15:14:03 lanius Exp $
+
+  14 Dec 2004; lanius@gentoo.org +files/gs7.07.1-nogtk2.patch,
+  ghostscript-7.07.1-r8.ebuild:
+  fix gtk use flag
 
   05 Dec 2004; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.
