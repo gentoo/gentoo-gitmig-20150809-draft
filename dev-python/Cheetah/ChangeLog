@@ -1,13 +1,20 @@
 # ChangeLog for dev-python/Cheetah
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/ChangeLog,v 1.2 2002/07/27 05:40:14 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/ChangeLog,v 1.3 2002/08/13 11:12:43 styx Exp $
+
+*Cheetah-0.9.14.ebuild (13 Aug 2002)
+
+  13 Aug 2002; Joachim Blaabjerg <styx@gentoo.org Cheetah-0.9.14.ebuild :
+
+  Version bump.
 
 *Cheetah-0.9.13.ebuild (03 Jun 2002)
 
   26 Jul 2002; George Shapovalov <george@gentoo.org> Cheetah-0.9.13.ebuild :
   added KEYWORDS
 
-  03 Jun 2002; George Shapovalov <george@gentoo.org> Cheetah-0.9.13.ebuild, files/digest-Cheetah-0.9.13 :
+  03 Jun 2002; George Shapovalov <george@gentoo.org> Cheetah-0.9.13.ebuild, 
+  files/digest-Cheetah-0.9.13 :
   
   First submission
   From the ebuild author:
