@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.3.ebuild,v 1.1 2003/03/09 09:58:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.3.ebuild,v 1.2 2003/03/11 11:30:08 zwelch Exp $
 
 IUSE="bootstrap build"
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~arm ~hppa"
 
-DEPEND="sys-kernel/linux-headers
+DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.23"
 # We need at least portage-2.0.23 to handle these DEPEND's properly.
 
