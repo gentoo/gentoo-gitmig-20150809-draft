@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.23 2004/08/28 06:01:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.24 2004/08/28 15:51:25 solar Exp $
 
-inherit eutils flag-o-matic libtool
+inherit eutils flag-o-matic libtool gnuconfig
 
 do_filter_flags() {
 	declare setting
@@ -116,6 +116,7 @@ src_unpack() {
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
+	gnuconfig_update
 }
 
 src_compile() {
