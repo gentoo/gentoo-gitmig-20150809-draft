@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/electric
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.12 2004/09/29 11:18:39 blubb Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.13 2004/10/02 15:09:51 swegener Exp $
 
   29 Sep 2004; Simon Stelling <blubb@gentoo.org> electric-6.08-r1.ebuild:
   added ~amd64

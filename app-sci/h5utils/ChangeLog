@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/h5utils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/h5utils/ChangeLog,v 1.5 2004/06/24 22:03:04 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/h5utils/ChangeLog,v 1.6 2004/10/02 15:07:17 swegener Exp $
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> h5utils-1.7.2.ebuild:
   Adding IUSE
