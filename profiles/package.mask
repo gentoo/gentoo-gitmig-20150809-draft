@@ -294,6 +294,8 @@ app-admin/logsentry
 # <raker@gentoo.org> (23 Sep 2002)
 # masking libsndfile-1.0.0 due to API changes
 >=media-libs/libsndfile-1.0.0
+# adding libsndfile-1 compatible jack-audio-connection-kit
+>=media-sound/jack-audio-connection-kit-0.34.0-r2
 
 # <g2boojum@gentoo.org> (22 Sep 2002)
 # Mask perl-ldap while still semi-frozen
