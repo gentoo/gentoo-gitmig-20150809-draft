@@ -1,4 +1,14 @@
-MD5 fd4600f5a2d996414a3f78516138584b zmysqlda-2.0.8.ebuild 581
-MD5 c96ea69a9a00f9385114d1d5ca6570a3 ChangeLog 811
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 35d52a8c41732ddb0cb9c980b8496b57 ChangeLog 929
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 63f078bc43abb620bfea32dc8afa1d48 zmysqlda-2.0.8.ebuild 586
 MD5 e9a7a5cd66f90aedf983fdfcef9f2c36 files/digest-zmysqlda-2.0.8 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBe86bI1lqEGTUzyQRAplhAJ0TclSbbWWHMJZZ/vBGwxBJhJTAJACglDcN
+0a/swOk9+f9a9Q2y8fTcNaI=
+=iSZz
+-----END PGP SIGNATURE-----

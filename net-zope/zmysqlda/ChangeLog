@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zmysqlda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zmysqlda/ChangeLog,v 1.6 2004/10/23 22:42:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zmysqlda/ChangeLog,v 1.7 2004/10/24 15:47:29 swegener Exp $
+
+  24 Oct 2004; Sven Wegener <swegener@gentoo.org> zmysqlda-2.0.8.ebuild:
+  Fixed LICENSE syntax and broken Manifest.
 
   24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> zmysqlda-2.0.8.ebuild:
   fix -py21 dependency
