@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/vanessa-mcast
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-mcast/ChangeLog,v 1.1 2004/08/31 15:23:34 tantive Exp $
+
+*vanessa-mcast-1.0.0 (31 Aug 2004)
+
+  31 Aug 2004; Michael Imhof <tantive@gentoo.org> +vanessa-mcast-1.0.0.ebuild:
+  Initial import. Closes #51326.
+
