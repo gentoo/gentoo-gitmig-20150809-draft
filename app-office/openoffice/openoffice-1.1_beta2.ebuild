@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_beta2.ebuild,v 1.1 2003/06/18 19:32:30 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_beta2.ebuild,v 1.2 2003/06/20 09:07:57 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -468,7 +468,7 @@ src_install() {
 	
 	# Install wrapper script
 	exeinto /usr/bin
-	sed -e "s|<pv>|${PV//_beta2}|g" \
+	sed -e "s|<pv>|${PV}|g" \
 		${FILESDIR}/${PV}/ooffice-wrapper-1.3 > ${T}/ooffice
 	doexe ${T}/ooffice
 	# Component symlinks
@@ -526,12 +526,14 @@ src_install() {
 	# Unneeded, as they get installed into /usr/share...
 	# They are needed else user installation fails.
 #	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
+	rm -rf ${D}${INSTDIR}/share/cde
 #
 #	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
 #		echo 'Categories=Application;Office;' >> ${f}
 #	done
 
 	# Make sure these do not get nuked.
+	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
 	keepdir ${INSTDIR}/user/psprint/{driver,fontmetric}
 	keepdir ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
 }
