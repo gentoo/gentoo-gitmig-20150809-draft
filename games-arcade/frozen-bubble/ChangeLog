@@ -1,12 +1,17 @@
 # ChangeLog for games-arcade/frozen-bubble
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.2 2003/09/10 20:32:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.3 2003/10/08 01:48:14 vapier Exp $
+
+*frozen-bubble-1.0.0-r3 (07 Oct 2003)
+
+  07 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Properly utilize games.eclass to fix #30599.
+
+*frozen-bubble-1.0.0-r2 (28 Jun 2003)
 
   22 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org>
   frozen-bubble-1.0.0-r2.ebuild:
   Changed to use /usr/games.  Closes bug #25055.
-
-*frozen-bubble-1.0.0-r2 (28 Jun 2003)
 
   28 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump to add network support #17430.
