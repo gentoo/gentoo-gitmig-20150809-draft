@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.82 2004/07/24 17:31:36 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.83 2004/07/26 20:23:33 spyderous Exp $
+
+  26 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r1.ebuild, xorg-x11-6.7.0-r2.ebuild:
+  Add ${ROOT} to absolute path references that need it.
 
   24 Jul 2004; Stephen P. Becker <geoman@gentoo.org> xorg-x11-6.7.0-r1.ebuild,
   xorg-x11-6.7.0-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.8 2004/07/24 17:31:36 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.9 2004/07/26 20:23:33 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -221,7 +221,7 @@ host_def_setup() {
 		echo "#define HaveLib64 NO" >> config/cf/host.def
 
 		# Set location of DRM source to be installed
-		echo "#define InstSrcDir /usr/src/${PF}" >> config/cf/host.def
+		echo "#define InstSrcDir ${ROOT}/usr/src/${PF}" >> config/cf/host.def
 
 		# Bug #12775 .. fails with -Os.
 		replace-flags "-Os" "-O2"
@@ -252,7 +252,7 @@ host_def_setup() {
 			fi
 		fi
 
-		if ( [ -e "/usr/src/linux" ] && \
+		if ( [ -e "${ROOT}/usr/src/linux" ] && \
 			[ ! `is_kernel "2" "2"` ] ) || \
 			[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 		then
@@ -750,9 +750,9 @@ strip_execs() {
 
 setup_config_files() {
 	# Fix default config files after installing fonts to /usr/share/fonts
-	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
+	sed -i "s:/usr/X116/lib/X11/fonts:${ROOT}/usr/share/fonts:g" \
 		${D}/etc/X11/xorg.conf.example
-	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
+	sed -i "s:/usr/X116/lib/X11/fonts:${ROOT}/usr/share/fonts:g" \
 		${D}/etc/X11/fs/config
 
 	# Work around upgrade problem where people have
@@ -1236,8 +1236,8 @@ pkg_postinst() {
 		mv nv_drv.so nv_drv.so.orig
 
 		ld -shared -o ${ROOT}/usr/X11R6/lib/modules/drivers/fbdev_drv.so ${ROOT}/usr/X11R6/lib/modules/drivers/fbdev_drv.so.orig ${ROOT}/usr/X11R6/lib/modules/linux/libfbdevhw.so ${ROOT}/usr/X11R6/lib/modules/libshadow.so ${ROOT}/usr/X11R6/lib/modules/libshadowfb.so ${ROOT}/usr/X11R6/lib/modules/libfb.so
-		ld -rpath /usr/X11R6/lib/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
-		ld -rpath /usr/X11R6/lib/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
+		ld -rpath ${ROOT}/usr/X11R6/lib/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
+		ld -rpath ${ROOT}/usr/X11R6/lib/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
 
 		#The problem about DRI module and GLX module is fixed.
 		cd ${ROOT}/usr/X11R6/lib/modules/extensions
