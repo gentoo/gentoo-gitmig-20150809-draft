@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.15.ebuild,v 1.3 2004/04/21 16:40:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.15.ebuild,v 1.4 2004/06/11 13:52:16 kugelfang Exp $
 
-inherit eutils
+inherit eutils 64-bit
 
 DESCRIPTION="Asynchronous input/output library maintained by RedHat, required by Oracle9i AMD64 edition"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/andrea/libaio/"
@@ -20,7 +20,8 @@ S="${WORKDIR}/${P}-2.5-2"
 
 src_compile() {
 	cd ${S}
-	epatch ${FILESDIR}/${P}-2.5-2-Makefile.patch
+	#this is a -fPIC patch, used on 64bit only
+	64-bit && epatch ${FILESDIR}/${P}-2.5-2-Makefile.patch
 	make || die
 }
 
