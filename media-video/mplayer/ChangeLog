@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.211 2004/10/17 00:21:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.212 2004/10/17 02:12:24 kloeri Exp $
+
+  17 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  mplayer-1.0_pre5-r3.ebuild:
+  alpha happiness, bug 66571.
 
   16 Oct 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
   mplayer-1.0_pre5-r2.ebuild, mplayer-1.0_pre5-r3.ebuild,

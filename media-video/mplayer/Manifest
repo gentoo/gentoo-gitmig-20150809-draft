@@ -1,32 +1,42 @@
-MD5 37ab52d913a699c8dd7a08c0e0ebb45a ChangeLog 39890
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d994774e1e84665b3a64bdd961b63af8 mplayer-1.0_pre5-r2.ebuild 14055
+MD5 1c05859d6d0b69b9811614c5fe1e1c05 mplayer-1.0_pre5-r4.ebuild 15163
+MD5 cae496a8886a461caa91d3f1904604ec mplayer-1.0_pre5-r3.ebuild 15427
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 27d3b9d9184cc1f8a2e8a89acb03b161 mplayer-1.0_pre4-r7.ebuild 12329
-MD5 1c05859d6d0b69b9811614c5fe1e1c05 mplayer-1.0_pre5-r4.ebuild 15163
-MD5 d994774e1e84665b3a64bdd961b63af8 mplayer-1.0_pre5-r2.ebuild 14055
-MD5 1ed43eec75b033b049966125fd375710 mplayer-1.0_pre5-r3.ebuild 15443
-MD5 1f9260386b063367f192b6d5d65d6aea files/real_demux.patch 3107
-MD5 34f948b8f242a2aadb53a1e2b00e3155 files/vuln02-fix.diff 467
-MD5 6c62fe3136b83cc8ea960f4563df8555 files/digest-mplayer-1.0_pre5-r4 360
-MD5 5c931dfafbd010eab985c7f427e2cb8b files/mplayer-1.0_pre5-configure.patch 1281
-MD5 88afe4c7008da4f33b5b89ddc1ab8069 files/digest-mplayer-1.0_pre5-r3 527
-MD5 1056be7554e42ba655fd7423fe6baad7 files/mplayer-1.0_pre5-mips64.patch 459
-MD5 09766023054d07a5f795eda66f247c42 files/mplayer-1.0_pre4-mpst.patch 459
-MD5 1479661ba42d9647f03f2029efcc8565 files/mplayer-1.0_pre5-bio2jack.patch 2691
-MD5 7f52d1618f675149115ecf8d313b497e files/mplayer-1.0_pre5-yuv2rgb_fix.patch 19505
-MD5 65d49d490b98ac8cabcafc5cb439825c files/mplayer-odml.patch 730
-MD5 a71fc9832d953424652af1125fb7ea64 files/mplayer-0.90-coreutils-fixup.patch 1857
-MD5 c54c7ba8e18c8e7f3412c6d6939d010a files/mplayer-1.0-gtk2.patch 5903
-MD5 a9fa1b94e4e3842e2c5e552644b03eaa files/mplayer-1.0_pre4-alsa-gcc34.patch 299
-MD5 a39bd930af792269808dc4bdbc382fbb files/mplayer-1.0_pre4-altivec-gcc34.patch 650
-MD5 42733acde24d84c1482db03c777360ab files/mplayer-1.0_pre4-help_mp-ro.h.patch 3267
-MD5 5cc95d6b380dc27e5ceae0f53ab88f99 files/mplayer-1.0_pre5-mga-kernel-2.6.patch 15043
-MD5 c2d65649f15837c5a326557ded4e47c5 files/mplayer.desktop 119
-MD5 484c45fb52a157c6b056b4298f787f3d files/cachefill.patch 6053
-MD5 0c3c71bf461e94d4dcffabab341ddeec files/digest-mplayer-1.0_pre5-r2 440
-MD5 c39b2e0baa9cc24d22b62765776426ad files/str_undefined.patch 1845
-MD5 e614f6546020b77ced4ba12c36e5b51e files/strl.c 950
-MD5 7d81475ff0d1ba01de3b714d6dcc4891 files/gui_vuln_code.patch 17981
-MD5 38c7908ce49f7f6a272993ba5bc9dd09 files/mplayer-mythtv.patch 13755
-MD5 b72a70cd788b73c1012ebe763e1125f6 files/digest-mplayer-1.0_pre4-r7 445
+MD5 3452ebbf622865e3234845972e463422 ChangeLog 39999
 MD5 4be5ce1a1c93b8d40bc961468fcc1aa7 files/mplayer-1.0_pre5-live.patch 378
+MD5 c54c7ba8e18c8e7f3412c6d6939d010a files/mplayer-1.0-gtk2.patch 5903
+MD5 5c931dfafbd010eab985c7f427e2cb8b files/mplayer-1.0_pre5-configure.patch 1281
+MD5 a71fc9832d953424652af1125fb7ea64 files/mplayer-0.90-coreutils-fixup.patch 1857
 MD5 d77341e4aea32e3e992f01ce5cc12ae0 files/mplayer-1.0_pre5-r1-conf_locale.patch 853
+MD5 a39bd930af792269808dc4bdbc382fbb files/mplayer-1.0_pre4-altivec-gcc34.patch 650
+MD5 38c7908ce49f7f6a272993ba5bc9dd09 files/mplayer-mythtv.patch 13755
+MD5 09766023054d07a5f795eda66f247c42 files/mplayer-1.0_pre4-mpst.patch 459
+MD5 7f52d1618f675149115ecf8d313b497e files/mplayer-1.0_pre5-yuv2rgb_fix.patch 19505
+MD5 1056be7554e42ba655fd7423fe6baad7 files/mplayer-1.0_pre5-mips64.patch 459
+MD5 5cc95d6b380dc27e5ceae0f53ab88f99 files/mplayer-1.0_pre5-mga-kernel-2.6.patch 15043
+MD5 7d81475ff0d1ba01de3b714d6dcc4891 files/gui_vuln_code.patch 17981
+MD5 42733acde24d84c1482db03c777360ab files/mplayer-1.0_pre4-help_mp-ro.h.patch 3267
+MD5 c39b2e0baa9cc24d22b62765776426ad files/str_undefined.patch 1845
+MD5 6c62fe3136b83cc8ea960f4563df8555 files/digest-mplayer-1.0_pre5-r4 360
+MD5 e614f6546020b77ced4ba12c36e5b51e files/strl.c 950
+MD5 1479661ba42d9647f03f2029efcc8565 files/mplayer-1.0_pre5-bio2jack.patch 2691
+MD5 34f948b8f242a2aadb53a1e2b00e3155 files/vuln02-fix.diff 467
+MD5 484c45fb52a157c6b056b4298f787f3d files/cachefill.patch 6053
+MD5 88afe4c7008da4f33b5b89ddc1ab8069 files/digest-mplayer-1.0_pre5-r3 527
+MD5 b72a70cd788b73c1012ebe763e1125f6 files/digest-mplayer-1.0_pre4-r7 445
+MD5 a9fa1b94e4e3842e2c5e552644b03eaa files/mplayer-1.0_pre4-alsa-gcc34.patch 299
+MD5 1f9260386b063367f192b6d5d65d6aea files/real_demux.patch 3107
+MD5 65d49d490b98ac8cabcafc5cb439825c files/mplayer-odml.patch 730
+MD5 0c3c71bf461e94d4dcffabab341ddeec files/digest-mplayer-1.0_pre5-r2 440
+MD5 c2d65649f15837c5a326557ded4e47c5 files/mplayer.desktop 119
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcdUUugEuf3OQ0akRApduAJ9M/wscGaUhM6xjCbfQ1fjuBtKj8gCeIkpL
+dY1ZS83wHiyiBP0b+YcIrb4=
+=0Rms
+-----END PGP SIGNATURE-----
