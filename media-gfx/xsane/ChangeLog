@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.18 2004/06/24 22:53:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.19 2004/06/30 20:58:13 pylon Exp $
+
+  30 Jun 2004; Lars Weiler <pylon@gentoo.org> xsane-0.93.ebuild:
+  Stable on ppc.
 
 *xsane-0.93 (30 Apr 2004)
 
