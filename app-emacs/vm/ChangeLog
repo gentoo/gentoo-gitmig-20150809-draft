@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.9 2004/11/01 03:28:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.10 2004/11/04 11:16:36 usata Exp $
+
+  04 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> vm-7.19.ebuild:
+  Stable on x86.
 
   31 Oct 2004; Jason Wever <weeve@gentoo.org> vm-7.18.ebuild:
   Stable on sparc.

@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 06d14892ec0b5f16a8eab16e991754ae limit-1.14.8_pre20040415.ebuild 1088
-MD5 8dfa9660bb1313b7dc3e882ce954a069 ChangeLog 1838
+MD5 96b05dd246264acf8992f23faf9c867e ChangeLog 1966
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 984ed8b8d6ae489928dd959d2441da07 limit-1.14.9_pre20041001.ebuild 1095
+MD5 06d14892ec0b5f16a8eab16e991754ae limit-1.14.8_pre20040415.ebuild 1088
+MD5 9c86db9ea72945ae6c2ef72d71bf0cc8 limit-1.14.9_pre20041001.ebuild 1076
 MD5 cc4513066907b88771f6d177cb2f9cf4 files/60flim-gentoo.el 82
 MD5 5791c7d6a2218ad0b56e5fc91f96facb files/digest-limit-1.14.8_pre20040415 73
 MD5 b87c66f68be6b2ce7a18416cd69d8f51 files/digest-limit-1.14.9_pre20041001 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBehm3VWNWqTUmv+0RAusRAJ9ZnzDqIKKkgY6NxGSVQ4IWPs5SHwCgnqam
-8Bk+0UPpsGm/WPNCrpFQDjo=
-=KZga
+iD8DBQFBig5yVWNWqTUmv+0RAjJyAJ4qN+kzdv2Lthyod7ZsblT/cWVg5QCeIzH1
+BHANblCY7qnwJ68JpRpjv7E=
+=u/Hg
 -----END PGP SIGNATURE-----
