@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.6 2004/10/06 11:47:08 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.7 2004/10/06 12:50:15 vapier Exp $
 
 inherit eutils gnuconfig gcc mono
 
@@ -85,4 +85,10 @@ src_install() {
 	fi
 
 	dodoc AUTHORS BUGS ChangeLog DISCLAIM NEWS README* THANKS TODO
+}
+
+pkg_postinst() {
+	ewarn "Any package that linked against the previous version"
+	ewarn "of gettext will have to be rebuilt."
+	ewarn "Please 'emerge gentoolkit' and run 'revdep-rebuild'"
 }
