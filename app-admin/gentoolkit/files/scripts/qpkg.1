@@ -1,73 +1,106 @@
-.TH qpkg "1" "March 2002" "gentoolkit 0.1.3" 
-.SH NAME
-qpkg \- manual page for qpk, a package query tool for Gentoo
-.SH SYNOPSIS
-.B qpkg
-\fI[options] [ pkgname | -g group | -f <file> ]\fB
-.br
-.B qpkg
-\fI--dups\fB
-.br
-.B qpkg
-\fI-h | --help\fB
-
-.SH DESCRIPTION
-Qpkg is a package query tool which you can use to query that state of both
-installed and not-installed packages on your Gentoo system.
-.PP
-.SH OPTIONS 
-.TP
-.I Package selection
-.TP
-\fB-f, --find-file\fI
-finds package that owns file <file>.
-.TP
-\fB-fp, --find-pattern\fI
-finds package that owns file matching *<file>*.
-.TP
-\fB-I, --installed\fI
-Include only installed packages.
-.TP
-\fB-U, --uninstalled\fI
-Include only uninstalled packages.
-.TP
-\fB-g, --group\fI
-Find by group (category), this can be combined with other searches.
-.TP
-\fB--dups\fI
-Print a list of packages that have multiple versions installed.
-
-.TP
-.I Information selection
-.TP
-\fB-l, --list\fI
-List package content
-.TP
-\fB-i, --info\fI
-List package description and home page.
-.TP
-\fB-ct, --check-time\fI
-Alias for -tc.
-.TP
-\fB-tc, --time-check\fI
-Verify package files' time stamps.
-.TP
-\fB-cm, --check-md5\fI
-Alias for -mc
-.TP
-\fB-mc, --md5-check\fI
-Verify package files' MD5 sums.
-.TP
-\fB-c, --check\fI
-Verify package consistency by checking both timestamps and MD5 sums.
-
-.SH AUTHORS
+.TH "qpkg" "1" "1.6" "gentoolkit 0.1.11-r1" ""
+.SH "NAME"
+qpkg \- the "query package" tool for Gentoo Linux
+.SH "SYNOPSIS"
+.LP 
+.B qpkg\fR	[\fIoptions\fR] [\fIpkgname\fR] [\fI\-g group\fR]
+.br 
+	[\fI\-f <file>\fR|\fI\-fp <pattern>\fR]
+.br 
+.B qpkg	\fI\-\-dups\fR	[\fI\-\-slot\fR]
+.TP 
+.B qpkg	\fI\-\-help\fR
+.SH "DESCRIPTION"
+qpkg is GenToolKit's "query package" tool, using it, you can find packages owning files on your filesystem, check the integrity of installed packages, and do other queries against installed or uninstalled packages.
+.SH "OPTIONS "
+.LP 
+.I Duplicate Locating:
+.LP 
+.B \-d, \-\-dups\fR		print packages that have multiple
+.br 
+				versions installed
+.br 
+.B \-s, \-\-slot\fR		make \-d SLOT only print dups of the
+.br 
+				same SLOT
+.LP 
+.I Package Selection:
+.LP 
+.B \-f, \-\-find\-file\fR	Finds package that owns file <file>
+.br 
+.B \-fp, \-\-find\-pattern\fR	Finds to package that owns file
+.br 
+				matching *<pattern>*
+.br 
+.B \-I, \-\-installed\fR	Include only installed packages
+.br 
+.B \-U, \-\-uninstalled\fR	Include only uninstalled packages
+.br 
+.B \-g, \-\-group\fR		Find by goup (can be combined with
+.br 
+				other searches)
+.LP 
+.I Information Selection:
+.LP 
+.B \-l, \-\-list\fR		List package content
+.br 
+.B \-i, \-\-info\fR		Get package description and home page.
+.br 
+.B \-ct, \-\-check\-time
+.br 
+.B \-tc, \-\-time\-check\fR	Verify package files timestamps
+.br 
+.B \-cm, \-\-check\-md5
+.br 
+.B \-mc, \-\-md5\-check\fR	Verify package files md5
+.br 
+.B \-c, \-\-check\fR		Verify mtimes and md5.
+.LP 
+.I Operation Modifiers:
+.LP 
+.B \-nc, \-\-no\-color\fR	Don't use colors
+.br 
+.B \-v, \-\-verbose\fR		Be more verbose [2 levels]
+.br 
+.B \-vv\fR				Same as \-v \-v
+.SH "NOTES"
+\fI\-f, \-fp, \-d, \-l, \-ct, \-cm, \fRand \fI\-c\fR apply only to installed packages.
+.br 
+.TP 
+Short options may not be combined on the command\-line, yet.
+.TP 
+The operation of some flags has been changed in version 1.6 by the stripping of version numbers from some output to see the version numbers play with \fI\-v\fR and \fI\-vv\fR.
+.TP 
+When using \fI\-f\fR with \fI\-l\fR or \fI\-\-check.. \-v\fR options, only matching files will be displayed, unless \fI\-v\fR is doubled, (yet more verbose), equivalent to \fI\-vv\fR.
+.SH "EXAMPLES"
+.LP 
+.B qpkg \fI\-\-dups\fR		print duplicates oldest first
+.br 
+.B qpkg \fI\-\-dups \-v\fR..	with versions
+.br 
+.B qpkg\fR				print list of packages
+.br 
+.B qpkg\fR porta \fI\-I\fR		print versions of installed portage
+.br 
+.B qpkg porta \fI\-i\fR		.. + versions in portage tree + 
+.br 
+				descriptions and homepages
+.br 
+.B qpkg gawk \fI\-c \-v\fR	check integrity all installed versions 
+.br 
+				of gawk the older versions will have
+.br 
+				"damaged" files.
+.br 
+.B qpkg \fI\-f\fR /bin/ls	print package(s) that own /bin/ls
+.SH "AUTHORS"
 Vitaly Kushneriuk <vitaly@gentoo.org>, 2002: qpkg
-.br
+.br 
 Karl Trygve Kalleberg <karltk@gentoo.org>, 2002: man page
-
+.br 
+Brandon Low <lostlogic@gentoo.org>, 2002: maintainance
 .SH "SEE ALSO"
 ebuild(5) 
-.TP
+.TP 
 The \fI/usr/sbin/qpkg\fR script. 
-.TP
+.TP 

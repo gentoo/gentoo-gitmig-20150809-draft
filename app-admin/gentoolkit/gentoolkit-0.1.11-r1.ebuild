@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.10-r1.ebuild,v 1.1 2002/06/03 21:59:22 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.11-r1.ebuild,v 1.1 2002/06/08 13:38:46 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
@@ -28,6 +28,8 @@ src_install () {
 
 	dobin ${FILESDIR}/scripts/qpkg
 	doman ${FILESDIR}/scripts/qpkg.1
+	fowners root:wheel /usr/bin/qpkg
+	fperms 0750 /usr/bin/qpkg
 
 	dobin ${FILESDIR}/scripts/pkg-size
 
@@ -47,4 +49,5 @@ src_install () {
 	dodoc ${FILESDIR}/etc-update/ChangeLog
 	insinto /etc	
 	doins ${FILESDIR}/etc-update/etc-update.conf
+
 }
