@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.1 2003/06/09 16:25:45 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.2 2003/06/10 00:44:17 msterret Exp $
 
 inherit eutils
 
@@ -12,9 +12,10 @@ HOMEPAGE="http://www.washington.edu/pine/"
 SLOT="0"
 LICENSE="PICO"
 KEYWORDS="~x86 ~ppc ~sparc"
-IUSE="ssl ldap"
+IUSE="mbox ssl ldap"
 
 DEPEND="virtual/glibc
+	>=sys-apps/sed-4
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )
@@ -31,14 +32,14 @@ src_unpack() {
 	epatch ${FILESDIR}/imap-4.7c2-flock+maildir.patch || die
 
 	# fix for Home and End keys
-        epatch ${FILESDIR}/pine-4.21-fixhome.patch || die
+	epatch ${FILESDIR}/pine-4.21-fixhome.patch || die
 
-        # flock() emulation
-        cp ${FILESDIR}/flock.c ${S}/imap/src/osdep/unix
+	# flock() emulation
+	cp ${FILESDIR}/flock.c ${S}/imap/src/osdep/unix
 
 	# pine-4.56 doesn't need this anymore
-        # change /bin/passwd to /usr/bin/passwd
-        #epatch ${FILESDIR}/pine-4.21-passwd.patch || die
+	# change /bin/passwd to /usr/bin/passwd
+	#epatch ${FILESDIR}/pine-4.21-passwd.patch || die
 
 	if [ "`use ldap`" ] ; then
 		# link to shared ldap libs instead of static
@@ -50,19 +51,19 @@ src_unpack() {
 
 	# Not needed as of pine-4.56
 	# small flock() related fix
-        #epatch ${FILESDIR}/pine-4.40-boguswarning.patch || die
+	#epatch ${FILESDIR}/pine-4.40-boguswarning.patch || die
 
-        # segfix? not sure what this is for but it still applies
-        epatch ${FILESDIR}/pine-4.31-segfix.patch || die
+	# segfix? not sure what this is for but it still applies
+	epatch ${FILESDIR}/pine-4.31-segfix.patch || die
 
-        # change lock files from 0666 to 0600
-        epatch ${FILESDIR}/pine-4.40-lockfile-perm.patch || die
+	# change lock files from 0666 to 0600
+	epatch ${FILESDIR}/pine-4.40-lockfile-perm.patch || die
 
-        # add missing needed time.h includes
-        epatch ${FILESDIR}/imap-2000-time.patch || die
+	# add missing needed time.h includes
+	epatch ${FILESDIR}/imap-2000-time.patch || die
 
-        # gets rid of a call to stripwhitespace()
-        epatch ${FILESDIR}/pine-4.33-whitespace.patch || die
+	# gets rid of a call to stripwhitespace()
+	epatch ${FILESDIR}/pine-4.33-whitespace.patch || die
 
 	if [ -n "$DEBUG" ]; then
 		cd ${S}/pine
@@ -81,9 +82,9 @@ src_unpack() {
 
 }
 
-src_compile() {                           
+src_compile() {
 	BUILDOPTS=""
-	if [ "`use ssl`" ] 
+	if [ "`use ssl`" ]
 	then
 		BUILDOPTS="${BUILDOPTS} SSLDIR=/usr SSLTYPE=unix SSLCERTS=/etc/ssl/certs"
 		cd ${S}/imap/src/osdep/unix
@@ -104,11 +105,11 @@ src_compile() {
 	else
 		BUILDOPTS="${BUILDOPTS} NOLDAP"
 	fi
-		
+
 	./build ${BUILDOPTS} lnp || die
 }
 
-src_install() {                               
+src_install() {
 	into /usr
 	dobin bin/pine bin/pico bin/pilot bin/mtest bin/rpdump bin/rpload
 

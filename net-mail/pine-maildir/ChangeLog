@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pine-maildir
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/ChangeLog,v 1.8 2003/06/09 16:25:45 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/ChangeLog,v 1.9 2003/06/10 00:44:17 msterret Exp $
+
+  09 Jun 2003; <msterret@gentoo.org> pine-maildir-4.56.ebuild:
+  DEPEND on sed >= 4; IUSE mbox
 
 *pine-maildir-4.56 (09 Jun 2003)
 
