@@ -1,0 +1,37 @@
+diff -urN oo_1.1rc3_src.orig/scp/prj/build.lst oo_1.1rc3_src/scp/prj/build.lst
+--- oo_1.1rc3_src.orig/scp/prj/build.lst	2003-08-17 20:49:09.000000000 +0200
++++ oo_1.1rc3_src/scp/prj/build.lst	2003-08-17 20:53:27.000000000 +0200
+@@ -12,10 +12,9 @@
+ cp	scp\source\math							nmake	-	all	cp_math NULL
+ cp	scp\source\chart						nmake	-	all	cp_chart NULL
+ cp	scp\source\psprint						nmake	-	all	cp_psprint NULL
+-cp	scp\source\crashrep						nmake	-	all	cp_crashrep NULL
+ cp	scp\source\cde							nmake	-	u	cp_cde NULL
+ cp	scp\source\kde							nmake	-	u	cp_kde NULL
+ cp	scp\source\gnome						nmake	-	u	cp_gnome NULL
+ cp	scp\source\lingu						nmake	-	all	cp_lingu NULL
+ cp	scp\source\python						nmake   -       all     cp_python NULL
+-cp	scp\util								nmake	-	all	cp_util cp_crashrep cp_calc cp_chart cp_draw cp_fonts cp_gbl cp_grffilt cp_impress cp_javafilter cp_math cp_off cp_office_root cp_lingu cp_cde.u cp_kde.u cp_gnome.u cp_python NULL
++cp	scp\util								nmake	-	all	cp_util cp_calc cp_chart cp_draw cp_fonts cp_gbl cp_grffilt cp_impress cp_javafilter cp_math cp_off cp_office_root cp_lingu cp_cde.u cp_kde.u cp_gnome.u cp_python NULL
+diff -urN oo_1.1rc3_src.orig/scp/util/makefile.mk oo_1.1rc3_src/scp/util/makefile.mk
+--- oo_1.1rc3_src.orig/scp/util/makefile.mk	2003-07-15 16:36:52.000000000 +0200
++++ oo_1.1rc3_src/scp/util/makefile.mk	2003-08-17 20:54:45.000000000 +0200
+@@ -152,18 +152,6 @@
+ 
+ .ENDIF
+ 
+-.IF "$(ENABLE_CRASHDUMP)" != "" || "$(PRODUCT)" != "FULL" 
+-SCP1FILES += \
+-        crashrep_dynamic.par
+-.ENDIF
+-
+-.IF "$(GUI)"=="UNX"
+-.IF "$(ENABLE_CRASHDUMP)" == "STATIC" || "$(PRODUCT)" != "FULL"
+-SCP1FILES += \
+-        crashrep_static.par
+-.ENDIF
+-.ENDIF
+-
+ # --- target -------------------------------------------------------------
+ .INCLUDE :  target.mk
+ 

@@ -1,0 +1,511 @@
+diff -urN stlport.orig/STLport-4.5.3.patch stlport/STLport-4.5.3.patch
+--- stlport.orig/STLport-4.5.3.patch	1970-01-01 01:00:00.000000000 +0100
++++ stlport/STLport-4.5.3.patch	2003-08-13 14:10:51.000000000 +0200
+@@ -0,0 +1,247 @@
++*** misc/STLport-4.5.3/src/fstream.cpp	Tue Sep  4 19:10:12 2001
++--- misc/build/STLport-4.5.3/src/fstream.cpp	Fri Jan 11 17:22:40 2002
++***************
++*** 293,299 ****
++  #ifdef __MINGW32__
++   __MINGW_IMPORT ioinfo * __pioinfo[];
++  #else
++!   extern _CRTIMP ioinfo * __pioinfo[];
++  #endif
++  
++  } // extern "C"
++--- 293,299 ----
++  #ifdef __MINGW32__
++   __MINGW_IMPORT ioinfo * __pioinfo[];
++  #else
++!   extern __declspec( dllimport ) ioinfo * __pioinfo[];
++  #endif
++  
++  } // extern "C"
++*** misc/STLport-4.5.3/src/gcc-3.0.mak	Fri Jan 11 12:48:44 2002
++--- misc/build/STLport-4.5.3/src/gcc-3.0.mak	Fri Jan 11 12:47:21 2002
++***************
++*** 1 ****
++! dummy
++--- 1,59 ----
++! #
++! # Note : this makefile is for gcc-3 !
++! #
++! 
++! #
++! # compiler
++! #
++! CC = $(CCCOMP) 
++! CXX = $(CXXCOMP) -D_REENTRANT -fexceptions
++! 
++! #
++! # Basename for libraries
++! #
++! LIB_BASENAME = libstlport_gcc
++! 
++! #
++! # guts for common stuff
++! #
++! #
++! LINK=ar cr
++! DYN_LINK=$(CXX) --fexceptions -shared -o
++! 
++! OBJEXT=o
++! DYNEXT=so
++! STEXT=a
++! RM=rm -rf
++! PATH_SEP=/
++! MKDIR=mkdir -p
++! COMP=GCC$(ARCH)
++! INSTALL_STEP = install_unix 
++! 
++! all:  all_dynamic all_static symbolic_links 
++! 
++! include common_macros.mak
++! 
++! WARNING_FLAGS= -Wall -W -Wno-sign-compare -Wno-unused -Wno-uninitialized -ftemplate-depth-32
++! 
++! CXXFLAGS_COMMON = -I${STLPORT_DIR} ${WARNING_FLAGS}
++! 
++! CXXFLAGS_RELEASE_static = $(CXXFLAGS_COMMON) -O2 -fPIC
++! CXXFLAGS_RELEASE_dynamic = $(CXXFLAGS_COMMON) -O2 -fPIC
++! 
++! CXXFLAGS_DEBUG_static = $(CXXFLAGS_COMMON) -g -fPIC
++! CXXFLAGS_DEBUG_dynamic = $(CXXFLAGS_COMMON) -g -fPIC
++! 
++! CXXFLAGS_STLDEBUG_static = $(CXXFLAGS_DEBUG_static) -D_STLP_DEBUG
++! CXXFLAGS_STLDEBUG_dynamic = $(CXXFLAGS_DEBUG_dynamic) -D_STLP_DEBUG
++! 
++! include common_percent_rules.mak
++! include common_rules.mak
++! 
++! 
++! #install: all
++! #	cp -p $(LIB_TARGET) ${D_LIB_TARGET} ../lib
++! 
++! #%.s: %.cpp
++! #	$(CXX) $(CXXFLAGS) -O4 -S -pto $<  -o $@
++! 
++! 
++*** misc/STLport-4.5.3/src/vc6.mak	Mon Jul 30 00:18:15 2001
++--- misc/build/STLport-4.5.3/src/vc6.mak	Fri Jan 11 17:41:08 2002
++***************
++*** 10,16 ****
++  COMP=VC6
++  
++  # EXTRA_COMMON_FLAGS=/D "_MBCS"
++! EXTRA_COMMON_FLAGS=/Zm800 /FI "vc_warning_disable.h" /D "_MBCS"
++  EXTRA_DEBUG_FLAGS=
++  EXTRA_NDEBUG_FLAGS=
++  
++--- 10,16 ----
++  COMP=VC6
++  
++  # EXTRA_COMMON_FLAGS=/D "_MBCS"
++! EXTRA_COMMON_FLAGS=/Zm800 /FI "vc_warning_disable.h" /D "_MBCS" /D "_NTSDK" /D "_CRTIMP="
++  EXTRA_DEBUG_FLAGS=
++  EXTRA_NDEBUG_FLAGS=
++  
++*** misc/STLport-4.5.3/src/vc_common.mak	Tue Sep  4 19:10:12 2001
++--- misc/build/STLport-4.5.3/src/vc_common.mak	Fri Jan 11 12:48:14 2002
++***************
++*** 62,68 ****
++  LDFLAGS_RELEASE=/opt:ref
++  
++  LDFLAGS_COMMON_static=$(LDFLAGS_COMMON)
++! LDFLAGS_COMMON_dynamic=$(LDFLAGS_COMMON) /dll /incremental:no
++  
++  
++  CXXFLAGS_DEBUG_static=$(FLAGS_COMMON_static) /MTd $(FLAGS_DEBUG) /Fo"$(DEBUG_OBJDIR_static)\\" /Fd"$(DEBUG_OBJDIR_static)\\" /YXstlport_prefix.h /Fp$(DEBUG_OBJDIR_static)\stlport.pch
++--- 62,68 ----
++  LDFLAGS_RELEASE=/opt:ref
++  
++  LDFLAGS_COMMON_static=$(LDFLAGS_COMMON)
++! LDFLAGS_COMMON_dynamic=$(LDFLAGS_COMMON) /nodefaultlib oldnames.lib kernel32.lib /dll /incremental:no
++  
++  
++  CXXFLAGS_DEBUG_static=$(FLAGS_COMMON_static) /MTd $(FLAGS_DEBUG) /Fo"$(DEBUG_OBJDIR_static)\\" /Fd"$(DEBUG_OBJDIR_static)\\" /YXstlport_prefix.h /Fp$(DEBUG_OBJDIR_static)\stlport.pch
++***************
++*** 79,87 ****
++  
++  
++  LDFLAGS_DEBUG_static=$(LDFLAGS_COMMON_static)
++! LDFLAGS_DEBUG_dynamic=$(LDFLAGS_COMMON_dynamic) $(LDFLAGS_DEBUG) /implib:"$(OUTDIR)\$(DEBUG_NAME).$(STEXT)"
++  LDFLAGS_STLDEBUG_static=$(LDFLAGS_COMMON_static)
++! LDFLAGS_STLDEBUG_dynamic=$(LDFLAGS_COMMON_dynamic) $(LDFLAGS_DEBUG) /implib:"$(OUTDIR)\$(STLDEBUG_NAME).$(STEXT)" 
++  
++  # LDFLAGS_DEBUG_static=$(LDFLAGS_COMMON_static)  /DEBUGTYPE:CV
++  # LDFLAGS_DEBUG_dynamic=$(LDFLAGS_COMMON_dynamic) /DEBUG /DEBUGTYPE:CV /implib:"$(OUTDIR)\$(DEBUG_NAME).$(STEXT)" 
++--- 79,87 ----
++  
++  
++  LDFLAGS_DEBUG_static=$(LDFLAGS_COMMON_static)
++! LDFLAGS_DEBUG_dynamic=$(LDFLAGS_COMMON_dynamic) msvcrtd.lib $(LDFLAGS_DEBUG) /implib:"$(OUTDIR)\$(DEBUG_NAME).$(STEXT)"
++  LDFLAGS_STLDEBUG_static=$(LDFLAGS_COMMON_static)
++! LDFLAGS_STLDEBUG_dynamic=$(LDFLAGS_COMMON_dynamic) msvcrtd.lib $(LDFLAGS_DEBUG) /implib:"$(OUTDIR)\$(STLDEBUG_NAME).$(STEXT)" 
++  
++  # LDFLAGS_DEBUG_static=$(LDFLAGS_COMMON_static)  /DEBUGTYPE:CV
++  # LDFLAGS_DEBUG_dynamic=$(LDFLAGS_COMMON_dynamic) /DEBUG /DEBUGTYPE:CV /implib:"$(OUTDIR)\$(DEBUG_NAME).$(STEXT)" 
++***************
++*** 95,101 ****
++  CXXFLAGS_RELEASE_dynamic=$(FLAGS_COMMON_dynamic) /MD $(FLAGS_NDEBUG) /Fo"$(RELEASE_OBJDIR_dynamic)\\" /Fd"$(RELEASE_OBJDIR_dynamic)\\" /YXstlport_prefix.h /Fp$(RELEASE_OBJDIR_dynamic)\stlport.pch
++  
++  LDFLAGS_RELEASE_static=$(LDFLAGS_COMMON_static)
++! LDFLAGS_RELEASE_dynamic=$(LDFLAGS_COMMON_dynamic) $(LDFLAGS_RELEASE) /implib:"$(OUTDIR)\$(RELEASE_NAME).$(STEXT)" 
++  # LDFLAGS_RELEASE_dynamic=$(LDFLAGS_COMMON_dynamic) /implib:"$(OUTDIR)\$(RELEASE_NAME).$(STEXT)" 
++  
++  RESFILE=$(RELEASE_OBJDIR_dynamic)$(PATH_SEP)stlport.res
++--- 95,101 ----
++  CXXFLAGS_RELEASE_dynamic=$(FLAGS_COMMON_dynamic) /MD $(FLAGS_NDEBUG) /Fo"$(RELEASE_OBJDIR_dynamic)\\" /Fd"$(RELEASE_OBJDIR_dynamic)\\" /YXstlport_prefix.h /Fp$(RELEASE_OBJDIR_dynamic)\stlport.pch
++  
++  LDFLAGS_RELEASE_static=$(LDFLAGS_COMMON_static)
++! LDFLAGS_RELEASE_dynamic=$(LDFLAGS_COMMON_dynamic) $(LDFLAGS_RELEASE) msvcrt.lib /implib:"$(OUTDIR)\$(RELEASE_NAME).$(STEXT)" 
++  # LDFLAGS_RELEASE_dynamic=$(LDFLAGS_COMMON_dynamic) /implib:"$(OUTDIR)\$(RELEASE_NAME).$(STEXT)" 
++  
++  RESFILE=$(RELEASE_OBJDIR_dynamic)$(PATH_SEP)stlport.res
++*** misc/STLport-4.5.3/stlport/stdexcept	Tue May 22 02:50:21 2001
++--- misc/build/STLport-4.5.3/stlport/stdexcept	Mon Jan 14 18:26:09 2002
++***************
++*** 49,54 ****
++--- 49,59 ----
++  
++  _STLP_BEGIN_NAMESPACE
++  
+++ /* maybe limit to gcc 3.x */
+++ #if defined( __GNUC__)
+++ #define _STLP_NOTHROW_INHERENTLY throw()
+++ #endif
+++ 
++  class _STLP_CLASS_DECLSPEC __Named_exception : public _STLP_EXCEPTION_BASE {
++  public:
++    __Named_exception(const string& __str) 
++*** misc/STLport-4.5.3/stlport/config/stl_gcc.h	Thu Jun  6 22:53:04 2002
++--- misc/build/STLport-4.5.3/stlport/config/stl_gcc.h	Thu Jun  6 22:53:56 2002
++***************
++*** 226,233 ****
++  
++  # if (__GNUC__ >= 3)
++  
++! #  define _STLP_NATIVE_INCLUDE_PATH ../g++-v3
++! #  define _STLP_NATIVE_OLD_STREAMS_INCLUDE_PATH ../g++-v3/backward
++  
++  # elif (__GNUC_MINOR__ < 8)
++  
++--- 226,233 ----
++  
++  # if (__GNUC__ >= 3)
++  
++! #  define _STLP_NATIVE_INCLUDE_PATH ../g++-v3
++! #  define _STLP_NATIVE_OLD_STREAMS_INCLUDE_PATH ../g++-v3/backward
++  
++  # elif (__GNUC_MINOR__ < 8)
++  
++***************
++*** 285,298 ****
++  # if defined(__DJGPP)
++  #   define _STLP_NATIVE_INCLUDE_PATH ../lang/cxx
++  # elif (__GNUC__ >= 3) || (__GNUC_MINOR__ >= 97)
++! #   define _STLP_NATIVE_INCLUDE_PATH ../include/g++-v3
++  # elif ((__GNUC_MINOR__ >= 95 && __GNUC_MINOR__ < 97) && !( defined (__FreeBSD__) || defined (__NetBSD__) || defined(__sgi) ) )
++! #   define _STLP_NATIVE_INCLUDE_PATH ../g++-3
++  # elif (__GNUC_MINOR__ > 8) && (__GNUC_MINOR__ < 95) && (__GNUC__ < 3) && !defined( __Lynx__ )
++  // this really sucks, as GNUpro does not really identifies itself, so we have to guess 
++  // depending on a platform
++  #   ifdef __hpux
++! #    define _STLP_NATIVE_INCLUDE_PATH ../g++-3
++  #   else
++  #    define _STLP_NATIVE_INCLUDE_PATH ../g++-2
++  #   endif
++--- 285,298 ----
++  # if defined(__DJGPP)
++  #   define _STLP_NATIVE_INCLUDE_PATH ../lang/cxx
++  # elif (__GNUC__ >= 3) || (__GNUC_MINOR__ >= 97)
++! #   define _STLP_NATIVE_INCLUDE_PATH ../include/g++-v3
++  # elif ((__GNUC_MINOR__ >= 95 && __GNUC_MINOR__ < 97) && !( defined (__FreeBSD__) || defined (__NetBSD__) || defined(__sgi) ) )
++! #   define _STLP_NATIVE_INCLUDE_PATH ../g++-v32
++  # elif (__GNUC_MINOR__ > 8) && (__GNUC_MINOR__ < 95) && (__GNUC__ < 3) && !defined( __Lynx__ )
++  // this really sucks, as GNUpro does not really identifies itself, so we have to guess 
++  // depending on a platform
++  #   ifdef __hpux
++! #    define _STLP_NATIVE_INCLUDE_PATH ../g++-v3
++  #   else
++  #    define _STLP_NATIVE_INCLUDE_PATH ../g++-2
++  #   endif
++*** misc/STLport-4.5.3/src/common_rules.mak	Tue Sep 10 23:41:05 2002
++--- misc/build/STLport-4.5.3/src/common_rules.mak	Tue Sep 10 23:39:45 2002
++***************
++*** 84,90 ****
++  	$(RM) $(OUTDIR)/$(STLDEBUG_NAME).$(DYNEXT)
++  	$(RM) $(OUTDIR)/$(DEBUG_NAME).$(DYNEXT)
++  	ln -s $(RELEASE_DYNLIB) $(OUTDIR)/$(RELEASE_NAME).$(DYNEXT)
++! 	-ln -s $(DEBUG_DYNLIB) $(OUTDIR)/$(DEBUG_NAME).$(DYNEXT)
++  	ln -s $(STLDEBUG_DYNLIB) $(OUTDIR)/$(STLDEBUG_NAME).$(DYNEXT)
++  
++  install_unix :
++--- 84,90 ----
++  	$(RM) $(OUTDIR)/$(STLDEBUG_NAME).$(DYNEXT)
++  	$(RM) $(OUTDIR)/$(DEBUG_NAME).$(DYNEXT)
++  	ln -s $(RELEASE_DYNLIB) $(OUTDIR)/$(RELEASE_NAME).$(DYNEXT)
++! 	-ln -s $(STLDEBUG_DYNLIB) $(OUTDIR)/$(DEBUG_NAME).$(DYNEXT)
++  	ln -s $(STLDEBUG_DYNLIB) $(OUTDIR)/$(STLDEBUG_NAME).$(DYNEXT)
++  
++  install_unix :
+diff -urN stlport.orig/makefile.mk stlport/makefile.mk
+--- stlport.orig/makefile.mk	2003-08-13 14:09:29.000000000 +0200
++++ stlport/makefile.mk	2003-08-13 14:12:38.000000000 +0200
+@@ -72,8 +72,8 @@
+ # --- Files --------------------------------------------------------
+ .EXPORT : CC CXX
+ .IF "$(COMID)"=="gcc3"
+-	TARFILE_NAME=STLport-4.5
+-	PATCH_FILE_NAME=$(MISC)$/STLport-4.5.patch
++	TARFILE_NAME=STLport-4.5.3
++	PATCH_FILE_NAME=$(MISC)$/STLport-4.5.3.patch
+ .ELSE			# "$(COMID)"=="gcc3"
+ 	.IF "$(OS)"=="MACOSX"
+ 		# [ed] For gcc2, we need to use STLport 4.0.  4.5 will not compile with gcc2 on OS X.
+@@ -189,10 +189,10 @@
+ .INCLUDE :	target.mk
+ .INCLUDE :	tg_ext.mk
+ 
+-$(PACKAGE_DIR)$/$(PATCH_FLAG_FILE) : $(MISC)$/STLport-4.5.patch
++$(PACKAGE_DIR)$/$(PATCH_FLAG_FILE) : $(MISC)$/STLport-4.5.3.patch
+ 
+-$(MISC)$/STLport-4.5.patch : STLport-4.5.patch
+-	+$(SED)	-e 's#GXX_INCLUDE_PATH#$(GXX_INCLUDE_PATH)#g' < STLport-4.5.patch > $(MISC)$/STLport-4.5.patch
++$(MISC)$/STLport-4.5.3.patch : STLport-4.5.3.patch
++	+$(SED)	-e 's#GXX_INCLUDE_PATH#$(GXX_INCLUDE_PATH)#g' < STLport-4.5.3.patch > $(MISC)$/STLport-4.5.3.patch
+ 
+ .IF "$(GUI)"=="WNT"
+ .IF "$(CCNUMVER)"<="001300000000"
+diff -urN stlport.orig/makefile.mk.orig stlport/makefile.mk.orig
+--- stlport.orig/makefile.mk.orig	1970-01-01 01:00:00.000000000 +0100
++++ stlport/makefile.mk.orig	2003-08-13 14:10:17.000000000 +0200
+@@ -0,0 +1,228 @@
++#*************************************************************************
++#
++#   $RCSfile: newstlportfix.patch,v $
++#
++#   $Revision: 1.1 $
++#
++#   last change: $Author: pauldv $ $Date: 2003/08/20 07:57:01 $
++#
++#   The Contents of this file are made available subject to the terms of
++#   either of the following licenses
++#
++#          - GNU Lesser General Public License Version 2.1
++#          - Sun Industry Standards Source License Version 1.1
++#
++#   Sun Microsystems Inc., October, 2000
++#
++#   GNU Lesser General Public License Version 2.1
++#   =============================================
++#   Copyright 2000 by Sun Microsystems, Inc.
++#   901 San Antonio Road, Palo Alto, CA 94303, USA
++#
++#   This library is free software; you can redistribute it and/or
++#   modify it under the terms of the GNU Lesser General Public
++#   License version 2.1, as published by the Free Software Foundation.
++#
++#   This library is distributed in the hope that it will be useful,
++#   but WITHOUT ANY WARRANTY; without even the implied warranty of
++#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++#   Lesser General Public License for more details.
++#
++#   You should have received a copy of the GNU Lesser General Public
++#   License along with this library; if not, write to the Free Software
++#   Foundation, Inc., 59 Temple Place, Suite 330, Boston,
++#   MA  02111-1307  USA
++#
++#
++#   Sun Industry Standards Source License Version 1.1
++#   =================================================
++#   The contents of this file are subject to the Sun Industry Standards
++#   Source License Version 1.1 (the "License"); You may not use this file
++#   except in compliance with the License. You may obtain a copy of the
++#   License at http://www.openoffice.org/license.html.
++#
++#   Software provided under this License is provided on an "AS IS" basis,
++#   WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING,
++#   WITHOUT LIMITATION, WARRANTIES THAT THE SOFTWARE IS FREE OF DEFECTS,
++#   MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE, OR NON-INFRINGING.
++#   See the License for the specific provisions governing your rights and
++#   obligations concerning the Software.
++#
++#   The Initial Developer of the Original Code is: Sun Microsystems, Inc.
++#
++#   Copyright: 2000 by Sun Microsystems, Inc.
++#
++#   All Rights Reserved.
++#
++#   Contributor(s): _______________________________________
++#
++#
++#
++#*************************************************************************
++
++PRJ=.
++
++PRJNAME=so_stlport
++TARGET=so_stlport
++
++# --- Settings -----------------------------------------------------
++
++.INCLUDE :	settings.mk
++
++# --- Files --------------------------------------------------------
++.EXPORT : CC CXX
++.IF "$(COMID)"=="gcc3"
++	TARFILE_NAME=STLport-4.5
++	PATCH_FILE_NAME=$(MISC)$/STLport-4.5.patch
++.ELSE			# "$(COMID)"=="gcc3"
++	.IF "$(OS)"=="MACOSX"
++		# [ed] For gcc2, we need to use STLport 4.0.  4.5 will not compile with gcc2 on OS X.
++		TARFILE_NAME=STLport-4.0
++		PATCH_FILE_NAME=STLport-4.0.macosx.patch
++	.ELSE
++		TARFILE_NAME=STLport-4.0
++		PATCH_FILE_NAME=STLport-4.0.patch
++	.ENDIF			# "$(OS)"=="MACOSX"
++.ENDIF			# "$(COMID)"=="gcc3"
++
++.IF "$(GUI)"=="WNT"
++.IF "$(CCNUMVER)"<="001300000000"
++TARFILE_NAME=STLport-4.0
++PATCH_FILE_NAME=STLport-4.0.patch
++.ELSE			# "$(CCNUMVER)"<="001300000000"
++TARFILE_NAME=STLport-4.5-0119
++PATCH_FILE_NAME=STLport-4.5-0119.patch
++.ENDIF			# "$(CCNUMVER)"<="001300000000"
++.ENDIF
++
++.IF "$(USE_SHELL)"=="4nt"
++TAR_EXCLUDES=*/SC5/*
++.ENDIF          # "$(USE_SHELL)"=="4nt"
++
++ADDITIONAL_FILES=src$/gcc-3.0.mak src$/gcc-3.0-macosx.mak src$/gcc-3.0-freebsd.mak
++
++
++CONFIGURE_ACTION=none
++CONFIGURE_FLAGS=
++
++BUILD_DIR=src
++
++.IF "$(COM)"=="MSC"
++BUILD_ACTION=nmake
++.IF "$(CCNUMVER)"<="001300000000"
++BUILD_FLAGS=-f vc6.mak
++.ELSE			# "$(CCNUMVER)"<="001300000000"
++BUILD_FLAGS=-f vc7.mak
++.ENDIF			# "$(CCNUMVER)"<="001300000000"
++.ENDIF
++
++.IF "$(COM)"=="GCC"
++	.IF "$(COMID)"=="gcc3"
++		# FreeBSD needs a special makefile
++		.IF "$(OS)"=="FREEBSD"
++			BUILD_FLAGS=-f gcc-3.0-freebsd.mak
++		.ELIF "$(OS)"=="MACOSX"
++			BUILD_FLAGS=-f gcc-3.0-macosx.mak
++		.ELSE
++			BUILD_FLAGS=-f gcc-3.0.mak
++		.ENDIF
++	.ELSE # "$(COMID)"=="gcc3"
++		# MacOS X/Darwin need a special makefile
++		.IF "$(OS)"=="MACOSX"
++			BUILD_FLAGS=-f gcc-apple-macosx.mak
++		.ELIF "$(OS)"=="FREEBSD"
++			BUILD_FLAGS=-f gcc-freebsd.mak
++		.ELSE # "$(OS)"=="MACOSX"
++			BUILD_FLAGS=-f gcc.mak
++		.ENDIF # "$(OS)"=="MACOSX"
++	.ENDIF # "$(COMID)"=="gcc3"
++	BUILD_ACTION=$(GNUMAKE)
++	# build in parallel
++	BUILD_FLAGS+= -j$(MAXPROCESS)
++.ENDIF
++
++.IF "$(COM)"=="C52"
++BUILD_ACTION=make
++BUILD_FLAGS=-f sunpro6.mak
++
++OUT2INC= \
++    stlport$/SC5$/*.SUNWCCh
++.ENDIF
++
++.IF "$(OS)"=="IRIX"
++TARFILE_NAME=STLport-4.5
++PATCH_FILE_NAME=$(MISC)$/STLport-4.5.patch
++BUILD_ACTION=gmake
++BUILD_FLAGS=-f gcc-3.0.mak
++BUILD_FLAGS+= -j$(MAXPROCESS)
++.ENDIF
++
++OUTDIR2INC= \
++    stlport
++
++.IF "$(GUI)"=="WNT"
++
++OUT2LIB= \
++    lib$/*.lib
++
++OUT2BIN= \
++    lib$/*.dll \
++    lib$/*.pdb
++
++.ELSE          # "$(GUI)"=="WNT"
++
++OUT2LIB= \
++    lib$/lib*
++
++.ENDIF          # "$(GUI)"=="WNT"
++
++# --- Targets ------------------------------------------------------
++
++.IF "$(STLPORT4)"!="NO_STLPORT4"
++all :
++       @echo "         An already available installation of STLport has been chosen in the configure process."
++       @echo "         Therefore the version provided here does not need to be built in addition."
++       +$(COPY) $(STLPORT4)$/lib$/*stlport*$(DLLPOST) $(DLLDEST)
++.ENDIF
++
++.INCLUDE : set_ext.mk
++.INCLUDE :	target.mk
++.INCLUDE :	tg_ext.mk
++
++$(PACKAGE_DIR)$/$(PATCH_FLAG_FILE) : $(MISC)$/STLport-4.5.patch
++
++$(MISC)$/STLport-4.5.patch : STLport-4.5.patch
++	+$(SED)	-e 's#GXX_INCLUDE_PATH#$(GXX_INCLUDE_PATH)#g' < STLport-4.5.patch > $(MISC)$/STLport-4.5.patch
++
++.IF "$(GUI)"=="WNT"
++.IF "$(CCNUMVER)"<="001300000000"
++
++$(MISC)$/$(TARFILE_ROOTDIR) : avoid_win32_patches
++avoid_win32_patches :
++	@+$(ECHONL)
++	@+echo ERROR! this module can't use automated patch creation
++	@+echo on windows.
++	@+$(ECHONL)
++	force_dmake_to_error
++
++$(PACKAGE_DIR)$/so_custom_patch :  $(PACKAGE_DIR)$/$(PATCH_FLAG_FILE)
++.IF "$(USE_SHELL)"=="4nt"
++    +win32_custom.bat $(PACKAGE_DIR) $(BACK_PATH) && $(TOUCH) $@
++.ELSE			# "$(USE_SHELL)"=="4nt"
++    +win32_custom.sh $(PACKAGE_DIR) $(BACK_PATH) && $(TOUCH) $@
++.ENDIF			# "$(USE_SHELL)"=="4nt"
++
++$(PACKAGE_DIR)$/$(CONFIGURE_FLAG_FILE) : $(PACKAGE_DIR)$/so_custom_patch
++
++.IF "$(USE_NEW_SDK)"!=""
++$(PACKAGE_DIR)$/win32_sdk_patch :  $(PACKAGE_DIR)$/$(PATCH_FLAG_FILE)
++.IF "$(USE_SHELL)"=="4nt"
++    +win32_sdk.bat $(PACKAGE_DIR) $(BACK_PATH) && $(TOUCH) $@
++.ELSE			# "$(USE_SHELL)"=="4nt"
++    +win32_sdk.sh $(PACKAGE_DIR) $(BACK_PATH) && $(TOUCH) $@
++.ENDIF			# "$(USE_SHELL)"=="4nt"
++
++$(PACKAGE_DIR)$/$(CONFIGURE_FLAG_FILE) : $(PACKAGE_DIR)$/win32_sdk_patch
++.ENDIF			# "$(USE_NEW_SDK)"!=""
++.ENDIF			# COMVER<=001300000000
++.ENDIF          # "$(GUI)"=="WNT"
