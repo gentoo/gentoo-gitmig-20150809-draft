@@ -1,20 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4.ebuild,v 1.2 2004/08/09 18:46:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4-r1.ebuild,v 1.1 2004/08/21 17:45:22 mattam Exp $
+
+IUSE="tcltk"
 
 DESCRIPTION="OCaml tool to find/use non-standard packages."
 HOMEPAGE="http://www.ocaml-programming.de/packages/"
 SRC_URI="http://www.ocaml-programming.de/packages/${P}.tar.gz"
 
 LICENSE="MIT X11"
+
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
-IUSE="tcltk"
+KEYWORDS="x86 ppc sparc ~amd64"
 
 DEPEND=">=dev-lang/ocaml-3.07"
 
-pkg_setup() {
-	if use tcltk && which ocaml && ! which labltk ; then
+ocamlfind_destdir="/usr/lib/ocaml/site-packages"
+
+pkg_setup()
+{
+	if ( use tcltk && which ocaml && ! which labltk ); then
 		eerror "It seems you don't have ocaml compiled with tk support"
 		eerror ""
 		eerror "The findlib toolbox requires ocaml be built with tk support."
@@ -29,17 +34,39 @@ src_compile() {
 	./configure
 
 	./configure -bindir /usr/bin -mandir /usr/share/man \
-		-sitelib /usr/lib/ocaml/site-packages/ \
-		-config /usr/lib/ocaml/site-packages/findlib/findlib.conf || die "configure failed"
+		-sitelib ${ocamlfind_destdir} \
+		-config ${ocamlfind_destdir}/findlib/findlib.conf || die "configure failed"
 
 	make all || die
 	make opt || die # optimized code
 }
 
 src_install() {
+	dodir `ocamlc -where`
+
 	make prefix=${D} install || die
 
 	cd ${S}/doc
 	dodoc QUICKSTART README
 	dohtml html/*
+}
+
+check_stublibs() {
+	local stublibs=${ocamlfind_destdir}/stublibs
+	local ocaml_stdlib=`ocamlc -where`
+	local ldconf=${ocaml_stdlib}/ld.conf
+
+	if [ ! -e ${ldconf} ]
+	then
+		echo ${ocaml_stdlib} > ${ldconf}
+	fi
+
+	if [ -z `grep -e ${stublibs} ${ldconf}` ]
+	then
+		echo ${stublibs} >> ${ldconf}
+	fi
+}
+
+pkg_postinst() {
+	check_stublibs
 }
