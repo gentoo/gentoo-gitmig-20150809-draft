@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r13.ebuild,v 1.7 2004/02/18 01:44:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r13.ebuild,v 1.8 2004/02/24 09:31:40 mr_bones_ Exp $
 
 inherit eutils fixheadtails
 
@@ -36,7 +36,7 @@ SRC_URI="mirror://qmail/qmail-1.03.tar.gz
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc hppa alpha"
+KEYWORDS="x86 ppc sparc ~hppa alpha"
 DEPEND="virtual/glibc
 	sys-apps/groff
 	ssl? ( >=dev-libs/openssl-0.9.6g )
