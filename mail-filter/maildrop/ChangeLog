@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.7 2004/08/06 12:51:04 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.8 2004/08/21 06:14:03 langthang Exp $
+
+*maildrop-1.7.0-r1 (20 Aug 2004)
+
+  20 Aug 2004; Tuan Van <langthang@gentoo.org>
+  +files/maildrop-1.7.0-db4-bdbobj_configure.in.patch,
+  +files/maildrop-1.7.0-db4-configure.in.patch, +maildrop-1.7.0-r1.ebuild:
+  Revision bump. Attemp to fix bug #59608.
+  Add patches to support db-4.x. Remove flag-o-matic.
 
   06 Aug 2004; Tom Knight <tomk@gentoo.org> maildrop-1.5.3-r1.ebuild,
   maildrop-1.7.0.ebuild:
