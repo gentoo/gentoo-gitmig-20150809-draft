@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.53 2002/10/28 10:07:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.54 2002/10/28 22:13:02 jrray Exp $
+
+  28 Oct 2002; J Robert Ray <jrray@jrray.org> xfree-4.2.1.ebuild :
+
+  Allow unpriviliged user install, non-root fails to overwrite file
+  with 0444 perms.
 
   28 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild,
                                                     xfs.start :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.26 2002/10/28 15:42:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.27 2002/10/28 22:13:02 jrray Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -277,6 +277,7 @@ src_unpack() {
 	# Get Xrender to also install its extension headers, as they need to
 	# be updated.
 	cp ${S}/lib/Xrender/Imakefile ${S}/lib/Xrender/Imakefile.orig
+	chmod 0644 ${S}/lib/Xrender/Imakefile
 	sed -e '2i NONSTANDARD_HEADERS = extutil.h region.h render.h renderproto.h' \
 		${S}/lib/Xrender/Imakefile.orig > ${S}/lib/Xrender/Imakefile
 
