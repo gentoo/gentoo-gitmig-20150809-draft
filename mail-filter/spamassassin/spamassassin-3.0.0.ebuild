@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.0.ebuild,v 1.1 2004/09/22 12:46:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.0.ebuild,v 1.2 2004/09/22 14:18:09 mcummings Exp $
 
 inherit perl-module
 
@@ -183,7 +183,7 @@ pkg_postinst() {
 	fi
 
 	if has_version "mail-filter/razor"; then
-		if ! has_version ">=net-mail/razor-2.40"; then
+		if ! has_version "<=net-mail/razor-2.40"; then
 			ewarn "You have $(best_version mail-filter/razor) installed but SpamAssassin"
 			ewarn "requires at least version 2.40, version 2.61 or later is recommended."
 		elif ! has_version ">=net-mail/razor-2.61"; then

@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.12 2004/09/22 12:46:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.13 2004/09/22 14:18:09 mcummings Exp $
+
+  22 Sep 2004; Michael Cummings <mcummings@gentoo.org>
+  spamassassin-3.0.0.ebuild:
+  <= not >= for razor less than 2.4. axxo - good catch
 
 *spamassassin-3.0.0 (22 Sep 2004)
 
