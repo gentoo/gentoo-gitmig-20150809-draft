@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.9.ebuild,v 1.2 2005/01/20 23:56:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.9.ebuild,v 1.3 2005/01/21 00:58:21 eradicator Exp $
 
 inherit libtool flag-o-matic gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~alpha ~amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 sparc ~ppc ~alpha amd64 ~ia64 ~ppc64"
 IUSE="adns gtk ipv6 snmp ssl gtk2"
 
 # if --disable-gtk2 is not passed to configure it will try to build with glib-2.0.
