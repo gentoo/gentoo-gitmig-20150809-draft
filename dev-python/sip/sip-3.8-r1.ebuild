@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.8-r1.ebuild,v 1.1 2004/02/25 23:28:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.8-r1.ebuild,v 1.2 2004/02/26 00:22:35 kloeri Exp $
 
 IUSE=""
 
@@ -38,11 +38,13 @@ src_compile(){
 		-b ${D}/usr/bin \
 		-d ${D}/usr/lib/python${PYVER}/site-packages \
 		-e ${D}/usr/include/python${PYVER}
+
+	emake || die
 }
 
 src_install() {
 	distutils_python_version
-	dodir /usr/include/python${PYVER}a
+	dodir /usr/include/python${PYVER}
 	emake || die
 	einstall || die
 	dodoc NEWS README THANKS
