@@ -45,9 +45,9 @@ net-www/zope
 # testing should be over in 24h so don't unmask without good reason.
 # added kdeadmin, kdeaddons as well // Spider 
 
-#>=kde-base/arts-1.0.0
-#>=kde-base/kdelibs-3.0
-#>=kde-base/kdebase-3.0
+>=kde-base/arts-1.0.0
+>=kde-base/kdelibs-3.0
+>=kde-base/kdebase-3.0
 >=kde-base/kde-3.0
 >=kde-base/kdeartwork-3.0
 >=kde-base/kdebindings-3.0
