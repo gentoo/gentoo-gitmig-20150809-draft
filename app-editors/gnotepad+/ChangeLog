@@ -1,0 +1,9 @@
+# ChangeLog for app-editors/gnotepad+
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gnotepad+/ChangeLog,v 1.1 2003/08/24 01:28:22 avenj Exp $
+
+*gnotepad+-1.3.3 (23 Aug 2003)
+
+  23 Aug 2003; Jon Portnoy <avenj@gentoo.org> gnotepad+-1.3.3.ebuild :
+  Initial import. Submitted in bug 22149 by Sam 
+  <sambesselink@planet.nl>.
