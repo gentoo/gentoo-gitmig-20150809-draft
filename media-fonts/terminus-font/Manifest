@@ -1,3 +1,5 @@
-MD5 09de09ced8da2fd4cc3602c9b192f9ff files/digest-terminus-font-4.00-r2 142
 MD5 b066ba87418de68e28e45de3e97b25d5 ChangeLog 744
 MD5 847f7c48a960b21d84388dafd45071ff terminus-font-4.00-r2.ebuild 1083
+MD5 d5a2da2cae97479769e8b1a37f5a41eb terminus-font-4.03.ebuild 1145
+MD5 09de09ced8da2fd4cc3602c9b192f9ff files/digest-terminus-font-4.00-r2 142
+MD5 730f29f4145cfd2bfe00ac8986b27640 files/digest-terminus-font-4.03 70

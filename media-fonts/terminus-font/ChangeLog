@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.4 2003/07/12 16:16:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.5 2003/07/30 14:33:34 usata Exp $
+
+*terminus-font-4.03 (30 Jul 2003)
+
+  30 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> terminus-font-4.03.ebuild:
+  New version. Tidy up ebuild according to the change in source package
+  structure. Thanks to Yuri Enshin <kot@formoza-centre.ru> in bug #23500.
 
 *terminus-font-4.00-r2 (24 Apr 2003)
  
