@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0-r1.ebuild,v 1.2 2003/10/18 00:59:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0-r1.ebuild,v 1.3 2003/11/16 18:29:09 brad_mssw Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ SRC_URI="mirror://samba/${PN}${_CVS}.tar.bz2
 
 _COMMON_DEPS="dev-libs/popt
 	readline? sys-libs/readline
-	kerberos? app-crypt/mit-krb5
+	amd64? ( ) : ( kerberos? ( app-crypt/mit-krb5 ) )
 	mysql? ( dev-db/mysql sys-libs/zlib )
 	acl? sys-apps/acl
 	cups? net-print/cups
@@ -36,7 +36,7 @@ DEPEND="sys-devel/autoconf ${_COMMON_DEPS}"
 #IDEALX scripts are now using Net::LDAP
 RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}"
 
-KEYWORDS="~x86 ~ppc ~sparc ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~mips amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -102,9 +102,14 @@ src_compile() {
 		#myconf="${myconf} --with-ldapsam" 
 		myconf="${myconf} --without-ldapsam"
 
-	use kerberos \
-		&& myconf="${myconf} --with-ads" \
-		|| myconf="${myconf} --without-ads"
+	if [ "${ARCH}" != "amd64" ]
+	then
+		use kerberos \
+			&& myconf="${myconf} --with-ads" \
+			|| myconf="${myconf} --without-ads"
+	else
+		myconf="${myconf} --without-ads"
+	fi
 
 	use python \
 		&& myconf="${myconf} --with-python=yes" \
