@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.28 2004/08/25 11:15:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.29 2004/09/15 22:29:16 agriffis Exp $
+
+  15 Sep 2004; <agriffis@gentoo.org> vnc-4.0.ebuild:
+  stable on amd64
 
   25 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> vnc-4.0.ebuild,
   files/xc.patch-cfbglblt8.patch:
