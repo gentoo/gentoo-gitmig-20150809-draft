@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/lamp/lamp-20000903.ebuild,v 1.3 2000/09/15 20:09:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lamp/lamp-20000903.ebuild,v 1.4 2000/11/02 02:17:13 achim Exp $
 
 P=lamp-2000.09.03
 A=${P}.tar.gz
@@ -9,6 +9,14 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A Video Player for mpeg2/3, avi and quicktime movie"
 SRC_URI="http://pauillac.inria.fr/lamp/src/${A}"
 HOMEPAGE="http://pauillac.inria.fr/lamp/"
+
+DEPEND=">=sys-devel/gcc-2.95.2
+	>=sys-libs/glibc-2.1.3
+	>=dev-lang/nasm-0.98
+	>=media-libs/libsdl-1.1.5
+	>=media-libs/jpeg-6b
+	>=media-libs/libpng-1.0.7
+	>=x11-base/xfree-4.0.1"
 
 src_unpack () {
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000a-r1.ebuild,v 1.4 2000/10/29 20:37:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast-2000/bcast-2000a-r1.ebuild,v 1.5 2000/11/02 02:17:13 achim Exp $
 
 P=bcast-2000a
 A=${P}-src.tar.gz
@@ -9,6 +9,14 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Realtime audio and video editor"
 SRC_URI="http://heroine.linuxave.net/${A}"
 HOMEPAGE="http://heroine.linuxave.net/bcast2000.html"
+
+DEPEND=">=sys-libs/glibc-2.1.3
+	>=sys-devel/gcc-2.95.2
+	>=media-sound/esound-0.2.19
+	>=media-libs/jpeg-6b
+	>=media-libs/tiff-3.5.5
+	>=media-libs/libpng-1.0.7
+	>=x11-base/xfree-4.0.1"
 
 src_unpack() {
   unpack ${A}

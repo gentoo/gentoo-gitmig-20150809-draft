@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.5.9a.ebuild,v 1.2 2000/09/15 20:09:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.5.9a.ebuild,v 1.3 2000/11/02 02:17:12 achim Exp $
 
 P=alsa-utils-0.5.9a
 A=${P}.tar.bz2
@@ -9,6 +9,11 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture / Utils"
 SRC_URI="ftp://ftp.alsa-project.org/pub/utils/"${A}
 HOMEPAGE="http://www.alsa-project.org/"
+
+DEPEND=">=sys-libs/glibc-2.1.3
+	>=sys-libs/gpm-1.19.3
+	>=sys-libs/ncurses-5.1
+	>=media-libs/alsa-lib-0.5.9"
 
 src_unpack() {
   unpack ${A}
