@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-4.4.19.ebuild,v 1.7 2004/12/11 11:04:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-4.4.19.ebuild,v 1.8 2004/12/12 17:54:10 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A scientific calculator for Gnome2"
 HOMEPAGE="http://calctool.sourceforge.net/"
@@ -23,6 +23,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO MAINTAINERS"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-4.4.20-remove_disable_deprecated.patch
+
+}
 
 src_install() {
 
