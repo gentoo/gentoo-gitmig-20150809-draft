@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kportage/kportage-0.6.ebuild,v 1.1 2002/12/15 18:08:09 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kportage/kportage-0.6.ebuild,v 1.2 2002/12/16 14:21:07 hannes Exp $
 
 inherit kde-base
 
 need-kde 3
+need-qt 3.1
 
 DESCRIPTION="A graphical frontend for portage"
 SRC_URI="http://freesoftware.fsf.org/download/${PN}/${PN}.pkg/${PV}/${P}.tar.bz2"
