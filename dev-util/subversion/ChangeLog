@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.53 2004/02/19 14:13:42 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.54 2004/02/22 12:11:46 dholm Exp $
+
+  22 Feb 2004; David Holm <dholm@gentoo.org> subversion-0.37.0.ebuild:
+  Readded ~ppc. Thanks for dropping it so we all could run on an old, possibly
+  buggy, version.
 
   19 Feb 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-0.37.0-r1.ebuild,
   subversion-0.37.0.ebuild:
