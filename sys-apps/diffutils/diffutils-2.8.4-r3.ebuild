@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.17 2004/05/10 14:42:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.18 2004/06/17 01:51:05 mr_bones_ Exp $
 
 IUSE="nls build static"
 
-inherit eutils
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 # sdiff SIGSEGVs with this on gcc-3.2.1, so take it out
 # this fixes bug #13502
