@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.6 2003/02/12 08:24:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.7 2003/10/10 18:16:27 mholzer Exp $
+
+*icaclient-7.0 (11 Oct 2003)
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org> icaclient-7.0.ebuild:
+  Version bumped. Closes #26471
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
