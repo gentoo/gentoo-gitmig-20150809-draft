@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pam-login
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.30 2003/12/21 16:44:54 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.31 2004/02/03 00:53:38 darkspecter Exp $
+
+  03 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> pam-login-3.14.ebuild:
+  set ppc in keywords
 
   21 Dec 2003; Brad House <brad_mssw@gentoo.org> pam-login-3.14.ebuild:
   mark stable on amd64

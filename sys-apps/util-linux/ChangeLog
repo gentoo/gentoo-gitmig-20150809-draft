@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.64 2003/12/29 23:08:45 azarah Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.65 2004/02/03 01:04:30 darkspecter Exp $
+
+  03 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  util-linux-2.12-r3.ebuild:
+  set ppc in keywords
 
 *util-linux-2.12-r4 (30 Dec 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.53 2004/01/29 04:44:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.54 2004/02/03 00:56:49 darkspecter Exp $
+
+  03 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> procps-3.1.15.ebuild:
+  set ppc in keywords
 
   28 Jan 2004; Aron Griffis <agriffis@gentoo.org> procps-3.1.12-r1.ebuild:
   stable on alpha and ia64
