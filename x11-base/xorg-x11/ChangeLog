@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.23 2004/04/12 07:07:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.24 2004/04/12 22:18:25 spyderous Exp $
+
+  12 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
+  PATCH_VER 0.5. Add 9500_all_6.7.0-hppa-fixes.patch so it builds on HPPA. Add
+  HPPA fixes to 5900_all_6.7.0-acecad-v2.patch. Thanks to Guy Martin
+  <gmsoft@gentoo.org> for these.
 
   12 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
   PATCH_VER 0.4. Add 9300_all_4.3.0-ncurses-xf86cfg-bool-conflict.patch to avoid
