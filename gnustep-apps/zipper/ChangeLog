@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/zipper
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.1 2004/11/14 20:33:38 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.2 2004/12/04 21:22:19 fafhrd Exp $
+
+  04 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org> zipper-0.9.ebuild:
+  Added missing dependency
 
 *zipper-0.9 (14 Nov 2004)
 

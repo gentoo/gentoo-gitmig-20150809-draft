@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/zipper-0.9.ebuild,v 1.1 2004/11/14 20:33:38 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/zipper-0.9.ebuild,v 1.2 2004/12/04 21:22:19 fafhrd Exp $
 
 inherit gnustep
 
@@ -15,6 +15,7 @@ KEYWORDS="~ppc"
 
 IUSE="${IUSE}"
 DEPEND="${GS_DEPEND}
+	gnustep-libs/renaissance
 	gnustep-libs/objcunit"
 RDEPEND="${GS_RDEPEND}
 	app-arch/tar
