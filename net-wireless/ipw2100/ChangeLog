@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.67 2005/02/01 18:51:10 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.68 2005/02/08 23:13:19 brix Exp $
+
+*ipw2100-1.0.5 (09 Feb 2005)
+
+  09 Feb 2005; Henrik Brix Andersen <brix@gentoo.org> +ipw2100-1.0.5.ebuild:
+  Version bump.
 
 *ipw2100-1.0.4 (01 Feb 2005)
 
