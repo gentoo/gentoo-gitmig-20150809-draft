@@ -730,8 +730,10 @@ dev-libs/libmrproject
 >=dev-python/pygtk-1.99.0
 >=app-arch/file-roller-1.106
 >=net-irc/xchat-1.9.1
+
 >=dev-util/glade-1.1.0
 >=dev-util/glademm-1.1.0
+
 >=dev-util/gob-1.99.3
 
 media-libs/monkey-sound
