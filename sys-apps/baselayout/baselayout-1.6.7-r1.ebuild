@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7-r1.ebuild,v 1.1 2001/12/08 22:37:35 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7-r1.ebuild,v 1.2 2001/12/08 22:57:03 woodchip Exp $
 
 SV=1.2.2
 S=${WORKDIR}/rc-scripts-${SV}
@@ -10,8 +10,8 @@ DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
-#needed for the new RESTORE devfsd function
-RDEPEND=">=sys-apps/devfsd-1.3.20"
+#needed for the new RESTORE devfsd function -- commented out by woodchip -- circ depend?
+#RDEPEND=">=sys-apps/devfsd-1.3.20"
 
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 
