@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.47 2005/03/02 19:31:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.48 2005/03/02 19:56:11 corsair Exp $
+
+  02 Mar 2005; Markus Rothe <corsair@gentoo.org> xv-3.10a-r10.ebuild:
+  Stable on ppc64; bug #83686
 
   02 Mar 2005; Ferris McCormick <fmccor@gentoo.org> xv-3.10a-r10.ebuild:
   Stable for sparc, closing filename issue Bug 83686.
