@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1-r2.ebuild,v 1.5 2001/10/24 17:10:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1-r3.ebuild,v 1.1 2001/11/03 10:36:51 danarmak Exp $
 # note: this is the new revision that installs into /usr
 
 S=${WORKDIR}/qt-${PV}
@@ -28,6 +28,13 @@ src_unpack() {
   then
 	patch -p0 < ${DISTDIR}/qt-configs.patch
   fi
+  #patch -p0 <${FILESDIR}/${P}-gentoo-cxxflags.patch
+  cd ${S}/configs
+  cp linux-g++-shared 1
+  sed -e "s/SYSCONF_CXXFLAGS	/SYSCONF_CXXFLAGS = ${CXXFLAGS} \#/" \
+      -e "s/SYSCONF_CFLAGS	/SYSCONF_CFLAGS = ${CFLAGS} \#/" \
+    1 > linux-g++-shared || die
+  rm 1
 }
 
 src_compile() {
@@ -65,10 +72,8 @@ src_compile() {
         -ldl -lpthread -no-g++-exceptions || die
 
     cd ${S}
-    make SYSCONF_CFLAGS="$CFLAGS" SYSCONF_CXXFLAGS="$CXXFLAGS" \
-    symlinks src-moc src-mt sub-src sub-tools || die
+    SYSCONF_CFLAGS="$CFLAGS" SYSCONF_CXXFLAGS="$CXXFLAGS" make || die
 
-    # leave out src-tools for testing !
 }
 
 src_install() {
@@ -99,6 +104,9 @@ src_install() {
 	insinto /etc/env.d
 	newins ${FILESDIR}/30qt.2 30qt
 	doins ${FILESDIR}/50${P}
+	
+	cd ${S}
+	cp -r examples tutorial ${D}${QTBASE}
 
 }
 
