@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.4 2004/04/17 19:03:50 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.5 2004/04/26 08:31:49 dholm Exp $
 
 inherit libtool flag-o-matic gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vorbis.com/files/${PV}/unix/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 amd64 ~mips sparc hppa alpha ia64 ~ppc"
+KEYWORDS="x86 amd64 ~mips sparc hppa alpha ia64 ppc"
 
 IUSE=""
 

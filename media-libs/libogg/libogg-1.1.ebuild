@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.ebuild,v 1.8 2004/04/21 15:06:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.1.ebuild,v 1.9 2004/04/26 08:29:25 dholm Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~mips ~ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips ~ia64"
 
 src_install () {
 	make DESTDIR=${D} install || die
