@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.4 2002/09/11 00:42:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.5 2002/09/11 00:50:13 azarah Exp $
 # This eclass contains (or should) functions to get common info about gcc
 ECLASS=gcc
 INHERITED="$INHERITED $ECLASS"
@@ -14,6 +14,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # NOTE: To force gcc3 if multi ver install, do:  export WANT_GCC_3="yes"
 [ -z "${WANT_GCC_3}" ] && export WANT_GCC_3="no"
 
+# Returns the name of the C compiler binary
 gcc-getCC() {
 
 	local CC="gcc"
@@ -38,6 +39,7 @@ gcc-getCC() {
 	echo "${CC}"
 }
 
+# Returns the name of the C++ compiler binary
 gcc-getCXX() {
 
 	CC="$(gcc-getCC)"
@@ -50,36 +52,43 @@ gcc-getCXX() {
 	fi
 }
 
+# Returns the version as by `$CC -dumpversion`
 gcc-fullversion() {
 
 	echo "$($(gcc-getCC) -dumpversion)"
 }
 
+# Returns the version, but only the <major>.<minor>
 gcc-version() {
 
 	echo "$(gcc-fullversion | cut -f1,2 -d.)"
 }
 
+# Returns the Major version
 gcc-major-version() {
 
 	echo "$(gcc-version | cut -f1 -d.)"
 }
 
+# Returns the Minor version
 gcc-minor-version() {
 
 	echo "$(gcc-version | cut -f2 -d.)"
 }
 
+# Returns the Micro version
 gcc-micro-version() {
 
 	echo "$(gcc-fullversion | cut -f3 -d.)"
 }
 
+# Returns gcc's internal library path
 gcc-libpath() {
 
 	echo "/usr/lib/gcc-lib/$($(gcc-getCC) -dumpmachine)/$(gcc-fullversion)"
 }
 
+# Returns the full version of libstdc++.so
 gcc-libstdcxx-version() {
 
 	if [ "$(gcc-major-version)" -ge 3 ]
@@ -93,6 +102,7 @@ gcc-libstdcxx-version() {
 	fi
 }
 
+# Returns the Major version of libstdc++.so
 gcc-libstdcxx-major-version() {
 
 	echo "$(echo $(gcc-libstdcxx-version) | cut -f1 -d.)"
