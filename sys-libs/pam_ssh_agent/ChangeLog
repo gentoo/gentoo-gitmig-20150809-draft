@@ -1,10 +1,15 @@
 # ChangeLog for sys-libs/pam_ssh_agent
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_ssh_agent/ChangeLog,v 1.2 2004/03/01 08:18:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_ssh_agent/ChangeLog,v 1.3 2004/03/02 06:15:17 vapier Exp $
 
   01 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   pam_ssh_agent-0.1.ebuild:
   add SLOT and IUSE; fix DEPEND
+
+*pam_ssh_agent-0.2 (02 Mar 2004)
+
+  02 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #43338 by Marko Mikulicic.
 
 *pam_ssh_agent-0.1 (28 Feb 2004)
 
