@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3-r1.ebuild,v 1.2 2003/09/08 13:15:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3-r1.ebuild,v 1.3 2003/09/17 09:35:56 taviso Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://packages.debian.org/stable/oldlibs/termcap-compat.html"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha sparc ppc hppa mips arm"
 
 DEPEND="virtual/glibc"
 
