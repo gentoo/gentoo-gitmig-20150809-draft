@@ -1,0 +1,24 @@
+diff -urN lincvs-0.9.90/src/CommandInterface.h lincvs-0.9.90-modified/src/CommandInterface.h
+--- lincvs-0.9.90/src/CommandInterface.h	Thu Feb 14 04:41:18 2002
++++ lincvs-0.9.90-modified/src/CommandInterface.h	Mon Jul 22 21:00:06 2002
+@@ -70,7 +70,7 @@
+ 			   QString& repository,
+ 			   int cmd,
+ 			   QString& cvsRsh,
+-			   bool noroot=false);
++			   bool noroot);
+ 
+   virtual ~CommandInterface() {}
+   virtual void afterCall(int cmd) = 0;
+diff -urN lincvs-0.9.90/src/controls.h lincvs-0.9.90-modified/src/controls.h
+--- lincvs-0.9.90/src/controls.h	Thu Feb 14 04:41:33 2002
++++ lincvs-0.9.90-modified/src/controls.h	Mon Jul 22 20:56:11 2002
+@@ -111,7 +111,7 @@
+ {
+   Q_OBJECT
+ public:
+-   CheckoutPropertiesControl( QWidget *parent, const QString& checkBoxLabel, bool rwEnabled=false, const char *name=0);
++   CheckoutPropertiesControl( QWidget *parent, const QString& checkBoxLabel, bool rwEnabled, const char *name=0);
+    bool rwParameter();
+    
+ public slots:

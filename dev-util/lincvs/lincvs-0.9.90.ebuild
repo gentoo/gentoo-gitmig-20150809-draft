@@ -1,0 +1,64 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-0.9.90.ebuild,v 1.1 2002/07/23 05:29:48 raker Exp $
+
+S=${WORKDIR}/${P}
+DESCRIPTION="A Graphical CVS Client"
+SRC_URI="http://ppprs1.phy.tu-dresden.de/~trogisch/lincvs/download/LINCVS/lincvs-0.9.90/lincvs-0.9.90-0-generic-src.tgz"
+HOMEPAGE="http://www.lincvs.org"
+SLOT="0"
+DEPEND="kde? ( =kde-base/kdelibs-2* ) =x11-libs/qt-2*"
+RDEPEND="$DEPEND dev-util/cvs"
+KEYWORDS="*"
+LICENSE="GPL-2"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/nodefaults.diff
+
+}
+
+src_compile() {
+
+	if [ "`use kde`" ] ; then
+		myconf="${myconf} --with-kde2-support=yes"
+	else
+		myconf="${myconf} --with-kde2-support=no"
+	fi
+
+	libtoolize --copy --force
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--host=${CHOST} \
+		--with-qt-dir=/usr/qt/2 \
+		${myconf} || die "configure failed"
+
+	cd ${S}/src
+	cp Makefile Makefile.orig
+        sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+	cd ${S}
+
+	make || die "make failed"
+
+}
+
+src_install () {
+
+	into /usr
+	dobin src/lincvs tools/*.sh
+	insinto /usr/share/doc/${P}
+	insopts -m 644
+	doins AUTHORS COPYING ChangeLog INSTALL \
+		README SSH.txt VERSION THANKS
+	dosym /usr/share/doc/${P} /usr/share/${PN}
+	
+}
+
+

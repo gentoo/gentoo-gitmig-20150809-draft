@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/lincvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.2 2002/07/23 05:29:48 raker Exp $
+
+*lincvs-0.9.90 (23 Jul 2002)
+
+  23 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  lincvs-0.9.90.ebuild, files/digest-lincvs-0.9.90, files/nodefaults.diff :
+
+  Version bump.  Added diff for proper compiling.  Pinned down depends to
+  qt-2* and kde-2*.  Tested kde and -kde builds.
 
 *lincvs-0.3.0-r1 (1 Feb 2002)
 
