@@ -1,0 +1,11 @@
+--- Sources/API/Makefile.in.orig	2005-01-02 02:23:16.668233920 -0500
++++ Sources/API/Makefile.in	2005-01-02 02:23:34.674496552 -0500
+@@ -211,7 +211,7 @@
+ 	GL/opengl_state.h \
+ 	GL/opengl_state_data.h \
+ 	GL/viewpoint.h \
+-	GL/light_source.h
++	GL/light_source.h GL/opengl_wrap.h
+ 
+ 
+ clanSmallJPEG_includes = smalljpeg.h SmallJPEG/jpgd_provider.h
