@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.169 2004/12/02 16:08:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.170 2004/12/06 23:56:48 jhuebel Exp $
+
+  06 Dec 2004; Jason Huebel <jhuebel@gentoo.org> kdelibs-3.3.1.ebuild:
+  stable on amd64
 
   02 Dec 2004; Carsten Lohrke <carlo@gentoo.org> kdelibs-3.3.0.ebuild,
   kdelibs-3.3.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.41 2004/11/17 11:12:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.42 2004/12/06 23:56:47 jhuebel Exp $
+
+  06 Dec 2004; Jason Huebel <jhuebel@gentoo.org>
+  kdeaccessibility-3.3.1.ebuild:
+  stable on amd64
 
   17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   kdeaccessibility-3.3.1.ebuild:

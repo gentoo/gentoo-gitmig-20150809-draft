@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.159 2004/11/17 11:15:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.160 2004/12/06 23:56:48 jhuebel Exp $
+
+  06 Dec 2004; Jason Huebel <jhuebel@gentoo.org> kdebase-3.3.1.ebuild:
+  stable on amd64
 
   17 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> kdebase-3.3.1.ebuild:
   Stable on alpha.
