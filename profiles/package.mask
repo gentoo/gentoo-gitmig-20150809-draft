@@ -128,7 +128,8 @@ sys-apps/fakeroot
 
 # <george@gentoo.org> (09 Aug 2002)
 # does not build
-=dev-tcltk/itcl-3.2-r2
+# repaired and tested
+#=dev-tcltk/itcl-3.2-r2
 
 * <seemant@gentoo.org> (09 Aug 2002)
 # masked while azarah approves
