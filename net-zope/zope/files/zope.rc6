@@ -110,7 +110,7 @@ pidofproc() {
 
 	# Next try "/var/run/*.pid" files
 	if [ -f /var/run/$1.pid ] ; then
-	        pid=`head -1 /var/run/$1.pid`
+	        pid=`head -n1 /var/run/$1.pid`
 	        if [ "$pid" != "" ] ; then
 	                echo $pid
 	                return 0

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.5.1.ebuild,v 1.5 2003/12/14 23:36:33 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.5.1.ebuild,v 1.6 2004/01/05 23:27:21 robbat2 Exp $
 
 S=${WORKDIR}/Zope-${PV}-src
 DESCRIPTION="Zope is web application platform used for building high-performance, dynamic web sites."
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc
 	=dev-lang/python-2.1.3*"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 sparc "
 
 src_unpack() {
 
