@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.24 2004/02/21 11:49:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.25 2004/03/03 04:38:15 tgall Exp $
+
+  02 Mar 2004; Tom Gall <tgall@gentoo.org> lcms-1.12.ebuild:
+  stable on ppc64
 
   21 Feb 2004; Heinrich Wendel <lanius@gentoo.org> lcms-1.12.ebuild:
   fix build on amd64, bug #35442
