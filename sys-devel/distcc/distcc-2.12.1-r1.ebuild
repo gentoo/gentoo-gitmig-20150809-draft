@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1-r1.ebuild,v 1.3 2004/06/24 22:44:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1-r1.ebuild,v 1.4 2004/08/27 11:05:10 pyrania Exp $
 
 inherit eutils gcc flag-o-matic
 
@@ -71,7 +71,7 @@ src_install() {
 	doins "${S}/survey.txt"
 
 	exeinto /usr/bin
-	doexe "${FILESDIR}/${PATCHLEVEL}/distcc-config"
+	doexe "${FILESDIR}/distcc-config"
 
 	insinto /etc/conf.d
 	newins "${FILESDIR}/${PATCHLEVEL}/conf" distccd

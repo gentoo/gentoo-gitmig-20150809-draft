@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.113 2004/08/24 02:18:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.114 2004/08/27 11:05:10 pyrania Exp $
+
+  27 Aug 2004; <pyrania@gentoo.org> +files/distcc-config,
+  -files/2.11.1p/distcc-config, -files/2.17/distcc-config,
+  distcc-2.12.1-r1.ebuild, distcc-2.13-r1.ebuild, distcc-2.14.ebuild,
+  distcc-2.16.ebuild, distcc-2.17-r1.ebuild, distcc-2.17.ebuild:
+  Fixing bug #57421, thanks to Stefan Sperling. Cleaning up older distcc-config
+  version.
 
   22 Aug 2004; Tom Gall <tgall@gentoo.org> distcc-2.16.ebuild:
   added ~ppc64, bug #59224

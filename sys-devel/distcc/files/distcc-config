@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.11.1p/distcc-config,v 1.10 2004/07/15 00:57:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/distcc-config,v 1.1 2004/08/27 11:05:10 pyrania Exp $
 
 import os, re, signal, sys, commands, pwd
 from string import rstrip
@@ -99,7 +99,7 @@ if '--get-hosts' in tmpcmdline:
 	HOSTS_HOME = os.environ.get('HOME')+'/hosts'
 	if HOSTS_ENV:
 		print HOSTS_ENV
-	elif os.path.exists(HOSTS_HOME) and os.path.getsize(HOSTS_HOME) != 0:
+	elif os.path.isfile(HOSTS_HOME) and os.path.getsize(HOSTS_HOME) != 0:
 		print HOSTS_HOME
 	elif os.path.exists('/etc/distcc/hosts'):
 		print rstrip(open('/etc/distcc/hosts', 'r').read())
@@ -129,7 +129,7 @@ elif '--install' in tmpcmdline:
 	distcc_env.write('DCCC_PATH="/usr/lib/distcc/bin"\n')
 	distcc_env.write('DISTCC_VERBOSE="0"\n')
 	
-	if os.WEXITSTATUS(commands.getstatusoutput('/usr/sbin/useradd -g daemon -s /bin/false -d /dev/null -c "distccd" distcc')[0]) == 9:
+	if os.WEXITSTATUS(commands.getstatusoutput('/usr/sbin/useradd -u 240 -g daemon -s /bin/false -d /dev/null -c "distccd" distcc')[0]) == 9:
 		os.WEXITSTATUS(commands.getstatusoutput('/usr/sbin/usermod -g daemon -s /bin/false -d /dev/null -c "distccd" distcc')[0])
 
 	foobar = pwd.getpwnam('distcc')

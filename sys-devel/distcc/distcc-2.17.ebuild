@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17.ebuild,v 1.2 2004/08/21 01:13:13 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17.ebuild,v 1.3 2004/08/27 11:05:10 pyrania Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -86,7 +86,7 @@ src_install() {
 	doins "${S}/survey.txt"
 
 	exeinto /usr/bin
-	doexe "${FILESDIR}/${PATCHLEVEL}/distcc-config"
+	doexe "${FILESDIR}/distcc-config"
 
 	insinto /etc/conf.d
 	newins "${FILESDIR}/${PATCHLEVEL}/conf" distccd
