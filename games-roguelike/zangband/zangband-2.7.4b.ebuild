@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4.ebuild,v 1.3 2004/02/01 10:27:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4b.ebuild,v 1.1 2004/02/01 10:27:13 mr_bones_ Exp $
 
 inherit games
 
@@ -11,16 +11,20 @@ SRC_URI="ftp://clockwork.dementia.org/angband/Variant/ZAngband/${P}.tar.gz"
 LICENSE="Moria"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="X"
+IUSE="X gtk tcltk"
 
-DEPEND=">=sys-libs/ncurses-5
+RDEPEND=">=sys-libs/ncurses-5
 	sys-libs/zlib
-	>=sys-apps/sed-4
-	tcltk? ( dev-lang/tcl dev-lang/tk )
+	tcltk? (
+		dev-lang/tcl
+		dev-lang/tk
+	)
 	gtk? ( =x11-libs/gtk+-1* )
 	X? ( virtual/x11 )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_compile() {
 	egamesconf \
@@ -34,9 +38,9 @@ src_compile() {
 
 src_install() {
 	# Keep some important dirs we want to chmod later
-	keepdir ${GAMES_DATADIR}/zangband/lib/apex
-	keepdir ${GAMES_DATADIR}/zangband/lib/user
-	keepdir ${GAMES_DATADIR}/zangband/lib/save
+	keepdir ${GAMES_DATADIR}/zangband/lib/apex \
+		${GAMES_DATADIR}/zangband/lib/user \
+		${GAMES_DATADIR}/zangband/lib/save
 
 	# Install the basic files but remove unneeded crap
 	make DESTDIR=${D}/${GAMES_DATADIR}/zangband/ installbase || \
