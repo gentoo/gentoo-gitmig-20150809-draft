@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ren
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ChangeLog,v 1.8 2004/07/01 21:37:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ChangeLog,v 1.9 2004/07/26 04:20:13 j4rg0n Exp $
+
+  25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org>
+  Stable macos per bug # 58306
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ren-1.0.ebuild:
   virtual/glibc -> virtual/libc
