@@ -1,12 +1,16 @@
 # ChangeLog for dev-python/twisted-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-cvs/ChangeLog,v 1.4 2003/10/23 14:04:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-cvs/ChangeLog,v 1.5 2003/10/24 12:59:28 aliz Exp $
 
-*twisted-cvs-20021104 (12 Dec 2002) Thomas Raschbacher <lordvan@gentoo.org>
+*twisted-cvs-20021104 (12 Dec 2002) 
+
+  12 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org>
   Added dep for dev-python/pycrypto
   Added IUSE
   Added to portage tree on user request(for the moment)
 
 	
-*twisted-cvs-20021023 (23 Oct 2002) Thomas Raschbacher <lordvan@lordvan.com>
+*twisted-cvs-20021023 (23 Oct 2002) 
+
+  23 Oct 2002; Thomas Raschbacher <lordvan@lordvan.com>
   Added twisted-cvs.(It's almost a copy of twisted-1.0.0)
