@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-cdb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.6 2005/03/27 22:43:17 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.7 2005/04/01 02:11:19 josejx Exp $
+
+  01 Apr 2005; Joseph Jezak <josejx@gentoo.org> python-cdb-0.32.ebuild:
+  Marked ~ppc for bug #87349.
 
   27 Mar 2005; Tom Martin <slarti@gentoo.org> python-cdb-0.32.ebuild:
   Stable on amd64, testing on sparc.

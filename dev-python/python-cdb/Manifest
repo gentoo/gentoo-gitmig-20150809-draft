@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 143d2c770ea4f3872d3620dc86baddfe ChangeLog 785
-MD5 c0d1e22643d78e50d5e0300e6ff756d9 python-cdb-0.32.ebuild 509
+MD5 77e55b861d6d66e0fcebf31d3940277a ChangeLog 888
+MD5 e85aa4c92333423d91fac3e3aed182b9 python-cdb-0.32.ebuild 514
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 29c2e3ed79bc08215e725c7844377668 files/digest-python-cdb-0.32 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCRynDCHk4+ZoBpvsRAoCoAJwKDVy+ecFhmsRo2XzeVz86Gc8bGACgrgIK
-h9ys0HNtmk1Jc3PorwkrQSI=
-=N0WD
------END PGP SIGNATURE-----
