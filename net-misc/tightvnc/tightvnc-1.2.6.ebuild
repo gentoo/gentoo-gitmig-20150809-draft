@@ -1,21 +1,30 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $ Header: $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.6.ebuild,v 1.1 2002/09/28 15:56:29 verwilst Exp $
 
 S="${WORKDIR}/vnc_unixsrc"
 DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops."
 SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2"
 HOMEPAGE="http://www.tightvnc.com"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 LICENSE="GPL-2"
 SLOT="0"
-DEPEND="virtual/glibc
-	>=x11-base/xfree-4.1.0
-	>=sys-devel/perl-5.6.1
+DEPEND="virtual/x11
+	sys-devel/perl
 	~media-libs/jpeg-6b
-	>=sys-libs/zlib-1.1.4"
+	sys-libs/zlib"
 
 RDEPEND=$DEPEND
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+	#patch <${FILESDIR}/tightvnc-gentoo.diff || die
+
+	# fix #6814
+	cp vncserver vncserver.orig
+	sed -e 's%^if (!xauthorityFile) {%if (!\$xauthorityFile) {%' \
+		vncserver.orig > vncserver
+}
 
 src_compile() {
 

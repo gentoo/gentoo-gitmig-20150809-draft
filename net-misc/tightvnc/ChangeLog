@@ -1,6 +1,8 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.9 2002/08/28 14:19:04 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.10 2002/09/28 15:56:29 verwilst Exp $
+
+*tightvnc-1.2.6 (28 Sept 2002)
 
 *tightvnc-1.2.5-r1 (26 Aug 2002)
 
