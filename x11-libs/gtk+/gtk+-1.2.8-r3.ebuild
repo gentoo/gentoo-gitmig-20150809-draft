@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.8-r3.ebuild,v 1.1 2000/12/03 23:25:52 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.8-r3.ebuild,v 1.2 2000/12/19 00:56:45 achim Exp $
 
 P=gtk+-1.2.8
 A=${P}.tar.gz
@@ -23,7 +23,8 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	try make install prefix=${D}/usr/X11R6 sysconfdir=${D}/etc/X11 
+	try make install prefix=${D}/usr/X11R6 sysconfdir=${D}/etc/X11 \
+		infodir=${D}/usr/info
 	preplib /usr/X11R6
 	into /usr
 	dodoc AUTHORS COPYING ChangeLog* HACKING
