@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.11 2003/09/03 01:19:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.12 2003/09/09 23:44:48 msterret Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ IUSE="opengl X dedicated"
 
 newdepend "app-arch/unzip"
 newrdepend "virtual/glibc
-	app-games/quake3
+	games-fps/quake3
 	dedicated? ( app-misc/screen )
 	opengl? ( virtual/opengl )
 	X? ( virtual/x11 )"
