@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4.ebuild,v 1.5 2004/12/08 14:15:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4.ebuild,v 1.6 2004/12/13 16:19:38 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="Standard informational utilities and process-handling tools"
 HOMEPAGE="http://procps.sourceforge.net/"
@@ -22,31 +22,35 @@ src_unpack() {
 	# Clean up the makefile
 	# firstly we want to control stripping
 	# and secondly these gcc flags have changed
-	sed -i Makefile \
-	-e '/install/s: --strip : :' \
-	-e '/ALL_CFLAGS += $(call check_gcc,-fweb,)/d' \
-	-e '/ALL_CFLAGS += $(call check_gcc,-Wstrict-aliasing=2,)/s,=2,,'
-	use ppc && \
-	sed -i Makefile -e 's:-m64::g'
+	sed -i \
+		-e '/install/s: --strip : :' \
+		-e '/ALL_CFLAGS += $(call check_gcc,-fweb,)/d' \
+		-e '/ALL_CFLAGS += $(call check_gcc,-Wstrict-aliasing=2,)/s,=2,,' \
+		Makefile || die "sed Makefile"
+	use ppc && sed -i -e 's:-m64::g' Makefile
 
 	# mips 2.4.23 headers (and 2.6.x) don't allow PAGE_SIZE to be defined in
 	# userspace anymore, so this patch instructs procps to get the
 	# value from sysconf().
 	use mips && epatch ${FILESDIR}/${PN}-mips-define-pagesize.patch
-
 }
 
 src_compile() {
 	replace-flags -O3 -O2
-	unset NAME
-	emake -e || die
+	emake \
+		lib64="$(get_libdir)" \
+		CC="$(tc-getCC)" \
+		CPPFLAGS="${CPPFLAGS}" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		|| die "make failed"
 }
 
 src_install() {
-	einstall -e DESTDIR="${D}"|| die
+	make install DESTDIR="${D}" || die "install failed"
 
 	insinto /usr/include/proc
-	doins proc/*.h
+	doins proc/*.h || die "doins include"
 
 	dodoc sysctl.conf BUGS NEWS TODO ps/HACKING
 }
