@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r1.ebuild,v 1.1 2005/02/25 15:04:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.7-r1.ebuild,v 1.2 2005/03/22 15:17:47 azarah Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -60,6 +60,9 @@ src_unpack() {
 
 	# Fix SU_WHEEL_ONLY behavior #80345
 	epatch ${FILESDIR}/${P}-iswheel.patch
+
+	# Fix lastlog not logged for tty's
+	epatch ${FILESDIR}/${P}-lastlog.patch
 
 	# Make user/group names more flexible #3485 / #22920
 	epatch "${FILESDIR}"/shadow-4.0.6-dots-in-usernames.patch

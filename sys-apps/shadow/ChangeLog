@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.98 2005/02/25 15:04:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.99 2005/03/22 15:17:47 azarah Exp $
+
+  22 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/shadow-4.0.7-lastlog.patch, shadow-4.0.7-r1.ebuild:
+  Fix last login logging for tty's - patch from upstream via
+  Robert Connolly <robert@linuxfromscratch.org>.
 
 *shadow-4.0.7-r1 (25 Feb 2005)
 
