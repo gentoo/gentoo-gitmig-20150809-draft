@@ -1,25 +1,32 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.6.ebuild,v 1.7 2005/03/14 21:16:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.8.ebuild,v 1.1 2005/03/14 21:16:31 swegener Exp $
 
 DESCRIPTION="Small file-manager written in perl"
-HOMEPAGE="http://public.rz.fh-wolfenbuettel.de/~luedickj/"
-SRC_URI="http://public.rz.fh-wolfenbuettel.de/~luedickj/${P}.tar.bz2"
+HOMEPAGE="http://blog.perldude.de/projects/filer/"
+SRC_URI="http://perldude.de/projects/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
-DEPEND="dev-lang/perl
+RDEPEND="dev-lang/perl
 	dev-perl/gtk2-perl
 	dev-perl/gtk2-gladexml
 	dev-perl/File-MimeInfo
 	dev-perl/File-Temp
 	dev-perl/TimeDate
 	dev-perl/Stat-lsMode"
+DEPEND="sys-apps/findutils"
 
 S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+
+	find ${S} -type d -name .svn | xargs rm -rf
+}
 
 src_compile() {
 	true
@@ -29,4 +36,5 @@ src_install() {
 	newbin filer.pl filer || die "newbin failed"
 	insinto /usr/lib/filer
 	doins -r Filer icons lib.pl || die "doins failed"
+	dodoc AUTHORS || die "dodoc failed"
 }
