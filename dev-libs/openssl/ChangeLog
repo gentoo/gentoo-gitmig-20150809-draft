@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.69 2004/01/18 17:27:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.70 2004/01/18 18:35:01 weeve Exp $
+
+  18 Jan 2004; Jason Wever <weeve@gentoo.org> openssl-0.9.7c-r1.ebuild:
+  Marked stable on sparc.
 
   18 Jan 2004; Martin Guy <gmsoft@gentoo.org> openssl-0.9.7c-r1.ebuild:
   Marked stable on hppa.
