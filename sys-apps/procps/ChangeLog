@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.46 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.47 2003/12/08 11:50:27 seemant Exp $
+
+*procps-3.1.14-r1 (08 Dec 2003)
+
+  08 Dec 2003; Seemant Kulleen <seemant@gentoo.org> procps-2.0.16-r1.ebuild,
+  procps-2.0.16.ebuild, procps-3.1.12-r1.ebuild, procps-3.1.12.ebuild,
+  procps-3.1.13-r1.ebuild, procps-3.1.13.ebuild, procps-3.1.14-r1.ebuild,
+  procps-3.1.14.ebuild, procps-3.1.8.ebuild, procps-3.1.9-r1.ebuild,
+  procps-3.1.9.ebuild:
+  version bump procps to make sure it owns kill and uptime, instead of coreutils
 
   28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> procps-3.1.11-r1.ebuild,
   procps-3.1.12.ebuild, procps-3.1.13.ebuild, procps-3.1.14.ebuild,
