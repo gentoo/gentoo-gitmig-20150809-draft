@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ferm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ChangeLog,v 1.6 2003/02/12 08:22:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ChangeLog,v 1.7 2003/10/13 11:01:39 lanius Exp $
+
+  13 Oct 2003; Heinrich Wendel <lanius@gentoo.org> :
+  version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

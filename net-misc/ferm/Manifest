@@ -1,3 +1,5 @@
-MD5 54df9dec51b44ff3a1ff77c7aa9aa8c8 ChangeLog 556
-MD5 fc4c2506eacbed3b68d0eb721fca1066 ferm-1.1_pre7.ebuild 721
+MD5 c84f8a4474fe684164dda1fd02987957 ChangeLog 557
+MD5 9b5266a7782a0624223a79d11a62ed65 ferm-1.1_pre7.ebuild 722
+MD5 2f8fc067ded77250c5b5dbc01a263a04 ferm-1.1.ebuild 681
+MD5 dd0943f63b53183454881350f5d4990c files/digest-ferm-1.1 59
 MD5 4f52382b8e53229ef2646397916c0077 files/digest-ferm-1.1_pre7 55
