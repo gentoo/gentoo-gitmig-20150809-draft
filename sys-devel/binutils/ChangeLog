@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.145 2004/07/27 15:07:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.146 2004/08/02 05:22:24 kumba Exp $
+
+*binutils-2.15.91.0.2 (02 Aug 2004)
+
+  02 Aug 2004; Joshua Kinard <kumba@gentoo.org> +binutils-2.15.91.0.2.ebuild:
+  New revision of binutils.  Doesn't include 51* or 52* uclibc patches.
 
   27 Jul 2004; Mike Frysinger <vapier@gentoo.org>
   +files/2.14/binutils-2.14.90.0.6-build_modules.patch,
