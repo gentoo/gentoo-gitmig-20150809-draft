@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/xmmsd-0.3.ebuild,v 1.3 2003/10/29 22:37:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/xmmsd-0.3.ebuild,v 1.4 2004/02/27 03:24:24 eradicator Exp $
 
 DESCRIPTION="Web interface for controlling xmms"
 HOMEPAGE="http://xmmsd.sourceforge.net/"
@@ -11,7 +11,7 @@ DEPEND="media-sound/xmms
 	=x11-libs/gtk+-1*"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
