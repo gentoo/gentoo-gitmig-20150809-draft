@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sara
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.10 2005/03/22 22:47:33 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.11 2005/03/22 23:29:50 vanquirius Exp $
+
+  22 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> -sara-5.0.5b.ebuild,
+  sara-5.1.1a.ebuild, sara-5.2.0a.ebuild, sara-6.0.1.ebuild:
+  Removed unnecessary src_compile from ebuilds, old ebuild.
 
 *sara-6.0.1 (22 Mar 2005)
 
