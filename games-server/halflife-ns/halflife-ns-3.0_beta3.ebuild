@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-ns/halflife-ns-3.0_beta3.ebuild,v 1.1 2004/04/16 18:21:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-ns/halflife-ns-3.0_beta3.ebuild,v 1.2 2004/05/06 00:17:30 vapier Exp $
 
 inherit games eutils
 
@@ -43,7 +43,7 @@ src_install() {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/hlds-ns.rc hlds-nsp
 	dosed "s:GENTOO_DIR:${GAMES_BINDIR}:" /etc/init.d/hlds-nsp
 	dosed "s:GENTOO_GAMES_USER:${GAMES_USER_DED}:" /etc/init.d/hlds-nsp
-	dosed "s:hlds-ns:hlds-nsp:" /etc/init.d/hlds-nsp
+	dosed "s:hlds-ns:hlds-nsp:g" /etc/init.d/hlds-nsp
 	insinto /etc/conf.d ; newins ${FILESDIR}/hlds-ns.conf.d hlds-nsp
 	dosed "s:GENTOO_DIR:${dir}:" /etc/conf.d/hlds-nsp
 
