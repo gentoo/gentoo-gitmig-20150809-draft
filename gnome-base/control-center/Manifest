@@ -3,9 +3,9 @@ MD5 e1c0c367fe0bd93637deea26f5db84dd control-center-2.2.1.ebuild 1120
 MD5 e8143ea8b2f1acd8266df0ee2f20207d control-center-1.4.0.5-r1.ebuild 1260
 MD5 4dd492cac52cd6377f0174be507b9cd4 control-center-2.2.0.1-r1.ebuild 1118
 MD5 d7c5e8d0623aa1fd9aa4d932e9375b48 control-center-2.2.2-r1.ebuild 1284
-MD5 e65d5fc339a2b3b2148c8fbd3e43676a ChangeLog 6236
+MD5 9cb9e4c6a7305f90e6fe2771ef872c38 ChangeLog 6325
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 ee72c48eeb8e4e11db87d2acd3d40bd4 control-center-2.3.6.ebuild 1202
+MD5 5225ee1b3e5e3921270ea19fddec4b0d control-center-2.3.6.ebuild 1202
 MD5 d505cf9f64f1562a777380d903306088 files/digest-control-center-2.2.1 74
 MD5 dbda24a02e6a621f95ad2ee91c154112 files/digest-control-center-2.2.2 74
 MD5 fdc3d7feea8b429588a2d193c9547dbf files/control-center-2.2.0.1-alpha_hack.patch 2997
