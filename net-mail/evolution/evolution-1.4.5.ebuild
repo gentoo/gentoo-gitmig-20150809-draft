@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.14 2004/02/22 06:31:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.5.ebuild,v 1.15 2004/03/07 21:44:00 liquidx Exp $
 
 # kde before gnome2, otherwise kde_src_install will override gnome2_src_install
 use kde && inherit kde
@@ -178,6 +178,7 @@ src_compile() {
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
 	einfo "To change the default browser if you are not using GNOME, do:"
 	einfo "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'mozilla %s'"
 	einfo "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'mozilla %s'"
