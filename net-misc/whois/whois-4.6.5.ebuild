@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.31.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.5.ebuild,v 1.1 2003/05/09 15:19:17 mholzer Exp $
 
 IUSE="nls"
 MY_P=${P/-/_}
@@ -9,38 +9,27 @@ SRC_URI="http://www.linux.it/~md/software/${MY_P}.tar.gz"
 HOMEPAGE="http://www.linux.it/~md/software/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc mips"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~hppa"
 
 DEPEND=">=dev-lang/perl-5"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
-	cp Makefile Makefile.orig
-	sed \
-		-e "s/-O2/$CFLAGS/" \
-		Makefile.orig > Makefile
+	sed -i "s/-O2/$CFLAGS/" Makefile 
 
 	use nls && ( \
 		cd po
-		cp Makefile Makefile.orig
-		sed -e "s:/usr/bin/install:/bin/install:" \
-			Makefile.orig > Makefile
+		sed -i "s:/usr/bin/install:/bin/install:" Makefile
 	) || ( \
-		cp Makefile Makefile.orig
-		sed "s:cd po.*::" \
-			Makefile.orig > Makefile
+		sed -i "s:cd po.*::" Makefile 
 	)
-
 }
 
 src_compile() {
-
 	make || die
 	make mkpasswd || die
-
 }
 
 src_install() {
@@ -51,6 +40,9 @@ src_install() {
 	
 	dobin mkpasswd
 	doman mkpasswd.1
-	dodoc README TODO debian/changelog debian/copyright
+	dodoc README whois.conf debian/changelog debian/copyright
 
+	einfo ""
+	einfo "The example whois.conf is located in /usr/doc/${P}"
+	einfo ""
 }
