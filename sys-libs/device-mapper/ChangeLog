@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/device-mapper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.24 2004/11/14 16:00:10 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.25 2004/11/25 11:54:40 gmsoft Exp $
+
+  25 Nov 2004; Guy Martin <gmsoft@gentoo.org> device-mapper-1.00.19-r1.ebuild:
+  Stable on hppa.
 
   14 Nov 2004; <max@gentoo.org> device-mapper-1.00.07-r1.ebuild,
   device-mapper-1.00.07.ebuild, device-mapper-1.00.08-r1.ebuild,

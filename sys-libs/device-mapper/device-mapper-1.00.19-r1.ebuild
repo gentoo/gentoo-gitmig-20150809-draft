@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.19-r1.ebuild,v 1.4 2004/10/01 14:34:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.19-r1.ebuild,v 1.5 2004/11/25 11:54:40 gmsoft Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sources.redhat.com/pub/dm/${PN}.${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~amd64 ppc64 ~alpha"
+KEYWORDS="~x86 ppc ~sparc ~amd64 ppc64 ~alpha hppa"
 IUSE=""
 
 DEPEND="virtual/linux-sources"
