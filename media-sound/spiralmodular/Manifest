@@ -1,3 +1,4 @@
-MD5 353b475bc5f1bff74b672f77ca6be429 ChangeLog 381
-MD5 8487a35a9c3ed5e6bdbf032f207bad09 spiralmodular-0.2.1.ebuild 1288
+MD5 bc000e5ad5b48879aec886af94486cc2 ChangeLog 548
+MD5 78a94a2c838dd0fa4a26b7d5d069fc45 spiralmodular-0.2.1.ebuild 1390
 MD5 f4e4b9a9232b868cf049bf9ae2c36535 files/digest-spiralmodular-0.2.1 71
+MD5 88633a86b03d3e371fe880f098abee3f files/spiralmodular-0.2.1-gentoo.patch 962
