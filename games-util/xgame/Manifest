@@ -1,4 +1,14 @@
-MD5 b7c14171408aa9eb636c0d61b90ffba6 ChangeLog 582
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 842ad51c6455974664d980603d057114 xgame-1.7.1.ebuild 547
+MD5 87a5c2f21b241e1c41a4d8c33eab8aad ChangeLog 684
 MD5 69bd61de16c74c22893bb09f29950ee1 metadata.xml 159
-MD5 ef6f3a005974a9f8d84f77d36b0ddb59 xgame-1.7.1.ebuild 543
 MD5 e13711e10447bdc26fb510c195d18cc2 files/digest-xgame-1.7.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCM2SEI1lqEGTUzyQRAjrdAKCwTHe5oVtNhrMCKTmD6Z5+68tijwCfXYuN
+dyOm5DP/jv9wLbXv6LWr4gU=
+=CMnp
+-----END PGP SIGNATURE-----
