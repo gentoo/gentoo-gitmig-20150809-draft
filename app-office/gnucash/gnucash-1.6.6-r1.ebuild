@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6-r1.ebuild,v 1.1 2002/08/08 03:23:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6-r1.ebuild,v 1.2 2002/08/19 05:32:15 leonardop Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A personal finance manager"
@@ -45,11 +45,16 @@ src_compile() {
 	use nls      || myconf="--disable-nls"
 	use postgres && myconf="$myconf --enable-sql"
 
+	# The configure script for this package implements gcc calls that are
+	# incompatible with the flag `-fomit-frame-pointer'.
+	CFLAGS=${CFLAGS/-fomit-frame-pointer/}
+	
 	econf --enable-profile \
 		--enable-rpc \
 		$myconf || die "Configuration failed"
 
-	make || die # Doesn't work with make -j 4 (hallski)
+
+	make || die "Compilation failed" # Doesn't work with make -j 4 (hallski)
 }
 
 src_install () {
