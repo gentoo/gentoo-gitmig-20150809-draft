@@ -1,0 +1,28 @@
+diff -urN beast-0.5.4/configure beast-0.5.4-modified/configure
+--- beast-0.5.4/configure	2003-07-21 07:49:11.000000000 -0500
++++ beast-0.5.4-modified/configure	2003-07-26 05:41:51.000000000 -0500
+@@ -7656,7 +7656,7 @@
+     
+ 
+     # setup BSE install paths
+-    bsesharedir=\${datadir}/beast/v$BSE_MAJOR_VERSION.$BSE_MINOR_VERSION.$BSE_MICRO_VERSION
++    bsesharedir=\${datadir}/doc/\${PN}-\${PVR}
+     bsescriptdir=$bsesharedir/scripts
+     
+ 
+@@ -8053,11 +8053,11 @@
+ 
+ 
+     # BEAST resource paths
+-    beastbasedir=\${datadir}/beast
+-    beastdocsdir=$beastbasedir/v$BSE_MAJOR_VERSION.$BSE_MINOR_VERSION.$BSE_MICRO_VERSION/docs
+-    beastimagesdir=$beastbasedir/v$BSE_MAJOR_VERSION.$BSE_MINOR_VERSION/images
++    beastbasedir=\${datadir}/doc/\${PN}-\${PVR}
++    beastdocsdir=$beastbasedir/docs
++    beastimagesdir=$beastbasedir/images
+     # beast-data package path
+-    beastdatadir=$beastbasedir/data-v$BSE_MAJOR_VERSION.$BSE_MINOR_VERSION
++    beastdatadir=$beastbasedir/data
+     beastsampledatadir=$beastdatadir/samples
+ 
+     
