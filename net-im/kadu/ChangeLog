@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.13 2004/08/05 19:17:53 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.14 2004/08/30 15:40:11 dholm Exp $
+
+  30 Aug 2004; David Holm <dholm@gentoo.org> kadu-0.3.9.ebuild:
+  Added to ~ppc.
 
 *kadu-0.3.9 (05 Aug 2004)
 
