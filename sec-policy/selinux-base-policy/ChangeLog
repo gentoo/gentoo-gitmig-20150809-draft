@@ -1,6 +1,14 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.15 2004/02/10 03:50:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.16 2004/02/26 01:12:58 pebenito Exp $
+
+*selinux-base-policy-20040225 (25 Feb 2004)
+
+  25 Feb 2004; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20040225.ebuild:
+  New support for PaX ACL hooks. Addition of tunable.te for configurable policy
+  options. Rewrite of portage.te. Now auto-transition for sysadm is default, can
+  reenable portage_r by tunable.te. Makefile update from NSA CVS.
 
 *selinux-base-policy-20040209 (09 Feb 2004)
 
