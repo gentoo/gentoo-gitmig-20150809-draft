@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/config-kernel-0.3.3.ebuild,v 1.3 2004/04/07 22:38:08 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/config-kernel-0.3.3.ebuild,v 1.4 2004/04/28 21:30:17 steel300 Exp $
 
 inherit distutils
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Kernel enviroment configuration tool"
+DESCRIPTION="Kernel environment configuration tool"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="http://dev.gentoo.org/~latexer/files/koutput/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
