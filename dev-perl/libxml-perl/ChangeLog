@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/libxml-perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/ChangeLog,v 1.13 2005/01/04 15:08:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/ChangeLog,v 1.14 2005/01/04 15:22:38 mcummings Exp $
+
+*libxml-perl-0.08 (04 Jan 2005)
+
+  04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  +libxml-perl-0.08.ebuild:
+  New version
 
   04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
   libxml-perl-0.07-r1.ebuild, libxml-perl-0.07-r2.ebuild:
