@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.16 2003/07/14 15:48:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.17 2003/08/20 00:23:36 latexer Exp $
+
+*wireless-tools-27_pre2 (19 Aug 2003)
+
+  19 Aug 2003; Peter Johanson <latexer@gentoo.org> wireless-tools-26.ebuild,
+  wireless-tools-27_pre2.ebuild:
+  Bumping 27_pre2 to ~x86, and marking v26 stable on x86. Has been very stable,
+  and includes some nice bugfixes and better WE-v16 suppport
 
 *wireless-tools-26 (14 Jul 2003)
 
