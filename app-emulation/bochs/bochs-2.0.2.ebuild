@@ -1,24 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.2.ebuild,v 1.14 2004/06/24 22:30:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.2.ebuild,v 1.15 2004/06/27 23:01:44 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="a LGPL-ed pc emulator"
 HOMEPAGE="http://bochs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
-	 http://bochs.sourceforge.net/guestos/dlxlinux4.tar.gz"
+	http://bochs.sourceforge.net/guestos/dlxlinux4.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc alpha sparc"
 IUSE="sdl gtk"
 
-DEPEND=">=sys-libs/glibc-2.1.3
+DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4
-	sdl? media-libs/libsdl
-	gtk?  x11-libs/wxGTK"
+	sdl? ( media-libs/libsdl )
+	gtk? ( x11-libs/wxGTK )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/tiger/tiger-0.8.ebuild,v 1.5 2004/06/24 22:34:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/tiger/tiger-0.8.ebuild,v 1.6 2004/06/27 23:07:16 vapier Exp $
 
 DESCRIPTION="Ti-92 Graphing Calculator Emulator"
-SRC_URI="http://xtiger.sourceforge.net/files/${P}.tar.gz"
 HOMEPAGE="http://xtiger.sourceforge.net/"
+SRC_URI="http://xtiger.sourceforge.net/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	media-libs/libggi"
 
 src_compile() {
@@ -20,6 +20,6 @@ src_compile() {
 
 src_install() {
 	dobin tiger || die
-	dodoc AUTHORS COPYING ChangeLog HACKING INSTALL README
+	dodoc AUTHORS ChangeLog HACKING INSTALL README
 	doman debian/tiger.1
 }

@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r3.ebuild,v 1.9 2004/06/24 22:36:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.6.0b-r3.ebuild,v 1.10 2004/06/27 23:09:41 vapier Exp $
 
 MY_P1=tcltk-${P}
 MY_P=${P/-/_}-1.1
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Setup tool for WiNE adapted from Codeweavers by Debian"
-SRC_URI="mirror://debian/pool/main/w/winesetuptk/${MY_P}.tar.gz"
 HOMEPAGE="http://packages.debian.org/unstable/otherosfs/winesetuptk.html"
+SRC_URI="mirror://debian/pool/main/w/winesetuptk/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips"
+SLOT="0"
+KEYWORDS="-* x86"
 IUSE=""
 
 DEPEND="virtual/x11"
@@ -21,8 +21,8 @@ src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
 
-	tar zxf ${MY_P1}.tar.gz
-	tar zxf ${P}.tar.gz
+	tar zxf ${MY_P1}.tar.gz || die
+	tar zxf ${P}.tar.gz || die
 }
 
 src_compile() {
@@ -46,7 +46,7 @@ src_compile() {
 	make || die "make failed"
 }
 
-src_install () {
+src_install() {
 	cd ${S}/${P}
 	make \
 		PREFIX_LAUNCHER=${D}/usr/bin \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.6 2004/06/24 22:31:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.7 2004/06/27 23:03:46 vapier Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	cd ${S}/Src
 	dobin Frodo FrodoPC FrodoSC TkGui.tcl
 	cd ${S}
@@ -62,7 +62,7 @@ src_install () {
 	dohtml -r ${S}/Docs/*.html
 }
 
-pkg_postinst () {
+pkg_postinst() {
 einfo "                                                                     "
 einfo " READ THE DOCS!  The documentation can be found at:                  "
 einfo "   /usr/share/doc/${PN}-${PV}/html/                                  "

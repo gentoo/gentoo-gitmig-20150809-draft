@@ -1,23 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/i8086emu/i8086emu-0.9.1.ebuild,v 1.4 2004/06/24 22:32:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/i8086emu/i8086emu-0.9.1.ebuild,v 1.5 2004/06/27 23:04:50 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Emulator for the Intel 8086 microprocessor"
-HOMEPAGE="http://i8086emu.sourceforge.net"
+HOMEPAGE="http://i8086emu.sourceforge.net/"
 SRC_URI="mirror://sourceforge/i8086emu/i8086emu-src-${PV}.tar.bz2"
-RESTRICT="nomirror"
 
-S=${WORKDIR}/i8086emu-src-${PV}
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="x86 ~alpha ~amd64"
 KEYWORDS="x86 ~ppc"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
-	virtual/glibc
+	virtual/libc
 	X? ( dev-libs/glib
 		dev-libs/atk
 		media-libs/fontconfig
@@ -27,11 +24,12 @@ RDEPEND="sys-libs/ncurses
 		sys-libs/zlib
 		dev-libs/expat
 		>=x11-libs/gtk+-2.0.0 )"
-
 DEPEND="${RDEPEND}
 	sys-devel/gcc
 	sys-devel/autoconf
 	dev-util/pkgconfig"
+
+S=${WORKDIR}/i8086emu-src-${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -39,7 +37,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
 	use X || myconf="usegtk=0"
 
@@ -48,7 +45,5 @@ src_compile() {
 }
 
 src_install() {
-
-	emake DESTDIR=${D} infodir=/usr/share/doc/${P} examplesdir=/usr/share/doc/${P}/examples install
-
+	make DESTDIR=${D} infodir=/usr/share/doc/${P} examplesdir=/usr/share/doc/${P}/examples install || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r1.ebuild,v 1.9 2004/06/24 22:36:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r1.ebuild,v 1.10 2004/06/27 23:08:53 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -29,7 +29,7 @@ KEYWORDS="-* x86"
 IUSE=""
 RESTRICT="nostrip"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	virtual/os-headers
 	>=dev-lang/perl-5
@@ -45,10 +45,9 @@ src_unpack() {
 }
 
 src_compile() {
-
-has_version \<sys-libs/glibc-2.3.2 \
-	&& GLIBC_232=0 \
-	|| GLIBC_232=1
+	has_version '<sys-libs/glibc-2.3.2' \
+		&& GLIBC_232=0 \
+		|| GLIBC_232=1
 
 	if [ ${GLIBC_232} -eq 1 ] ; then
 		$(gcc-getCC) -W -Wall -shared -o vmware-glibc-2.3.2-compat.so \
@@ -174,7 +173,7 @@ pkg_preinst() {
 	done
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	# This is to fix the problem where the not_configured file doesn't get
 	# removed when the configuration is run. This doesn't remove the file
 	# It just tells the vmware-config.pl script it can delete it.

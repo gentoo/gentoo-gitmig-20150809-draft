@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.ebuild,v 1.3 2004/06/24 22:30:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.ebuild,v 1.4 2004/06/27 23:02:04 vapier Exp $
 
 MY_P="cedega_${PV}-1.i386"
 DESCRIPTION="Cedega replaces WineX, a distribution of Wine with enhanced DirectX for gaming"
@@ -28,7 +28,7 @@ pkg_nofetch() {
 	einfo "Then put the file in ${DISTDIR}"
 }
 
-src_install () {
+src_install() {
 	mv ${WORKDIR}/usr ${D}
 }
 

@@ -1,37 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-1.4.1.ebuild,v 1.11 2004/06/24 22:30:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-1.4.1.ebuild,v 1.12 2004/06/27 23:01:44 vapier Exp $
 
-DESCRIPTION="Bochs is a pc emulator.
-This ebuild is set up to emulate a Pentium, with a NE2000 network card, and a
-CDROM drive. It also comes with a disk image using dlxlinux."
+DESCRIPTION="a pc emulator"
+HOMEPAGE="http://bochs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 	 http://bochs.sourceforge.net/guestos/dlxlinux3.tar.gz"
-HOMEPAGE="http://bochs.sourceforge.net"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
+KEYWORDS="x86 ppc ~alpha"
 IUSE=""
 
-DEPEND=">=sys-libs/glibc-2.1.3
+DEPEND="virtual/libc
 	virtual/x11"
-
-KEYWORDS="x86 ppc ~alpha"
 
 src_unpack() {
 	unpack ${P}.tar.gz
 
-	cd $S
-	cp Makefile.in Makefile.in.orig
-	sed -e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux3.tar.gz .:" \
-	-e 's: $(prefix): $(DESTDIR)$(prefix):g' \
-	-e 's: $(bindir): $(DESTDIR)$(bindir):g' \
-	-e 's:BOCHSDIR=:BOCHSDIR=/usr/lib/bochs#:' \
-	-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in.orig > Makefile.in
-
+	cd ${S}
+	sed -i \
+		-e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux3.tar.gz .:" \
+		-e 's: $(prefix): $(DESTDIR)$(prefix):g' \
+		-e 's: $(bindir): $(DESTDIR)$(bindir):g' \
+		-e 's:BOCHSDIR=:BOCHSDIR=/usr/lib/bochs#:' \
+		-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' \
+		Makefile.in
 }
 
 src_compile() {
-
 	[ "$ARCH" == "x86" ] && myconf="--enable-idle-hack"
 
 	./configure --enable-fpu --enable-cdrom --enable-control-panel \
@@ -44,8 +41,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
-
+src_install() {
 	make DESTDIR=${D} install || die
-	dodoc CHANGES COPYING CVS README TESTFORM.txt
+	dodoc CHANGES CVS README TESTFORM.txt
 }

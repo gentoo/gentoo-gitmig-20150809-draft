@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.14 2004/06/24 22:35:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.15 2004/06/27 23:07:53 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc amd64"
 IUSE="X gtk svga sdl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	X? (
 		virtual/x11
 		gtk? ( x11-libs/gtk+ )
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin uae readdisk
+	dobin uae readdisk || die
 	cp docs/unix/README docs/README.unix
 	dodoc docs/*
 

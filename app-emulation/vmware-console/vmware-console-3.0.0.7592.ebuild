@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-3.0.0.7592.ebuild,v 1.3 2004/06/24 22:36:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/vmware-console-3.0.0.7592.ebuild,v 1.4 2004/06/27 23:08:30 vapier Exp $
 
 MY_PN="VMware-console"
 MY_PV=`echo ${PV} | sed -e 's/\.\([0-9]\+\)$/-\1/'`
@@ -15,17 +15,17 @@ SRC_URI="${FN}"
 LICENSE="vmware"
 SLOT="0"
 KEYWORDS="~x86"
-RESTRICT="fetch nostrip"
 IUSE="esx"
+RESTRICT="fetch nostrip"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11"
 
 pkg_nofetch() {
 	einfo "Please obtain ${FN} and place it in ${DISTDIR}"
 }
 
-src_install () {
+src_install() {
 	# Set up config database
 	echo 'libdir = "/opt/vmware-console/lib"' >etc/config
 	cat >etc/locations <<EOF
