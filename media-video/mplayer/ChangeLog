@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.88 2003/10/08 23:49:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.89 2003/10/10 15:19:35 mholzer Exp $
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org> mplayer-0.92.ebuild,
+  mplayer-1.0_pre1-r1.ebuild, mplayer-1.0_pre2.ebuild:
+  fixed Doc permissions. Closes #30724.
 
   09 Oct 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.92.ebuild,
   mplayer-1.0_pre1-r1.ebuild, mplayer-1.0_pre2.ebuild:
