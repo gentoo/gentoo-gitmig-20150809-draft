@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.40 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.41 2004/04/18 18:43:40 plasmaroo Exp $
+
+*openmosix-sources-2.4.25-r3 (18 Apr 2004)
+
+  18 Apr 2004; <plasmaroo@gentoo.org>
+  +files/openmosix-sources.CAN-2004-0010.patch,
+  +files/openmosix-sources.CAN-2004-0109.patch,
+  +files/openmosix-sources.CAN-2004-0177.patch,
+  +files/openmosix-sources.CAN-2004-0178.patch,
+  -openmosix-sources-2.4.22-r4.ebuild, -openmosix-sources-2.4.22-r5.ebuild,
+  +openmosix-sources-2.4.22-r6.ebuild, -openmosix-sources-2.4.25-r2.ebuild,
+  +openmosix-sources-2.4.25-r3.ebuild:
+  Added patches for the CAN-2004-0010, CAN-2004-0177 and CAN-2004-0178
+  vulnerabilities.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   openmosix-sources-2.4.22-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.25-r2.ebuild,v 1.1 2004/03/21 21:07:48 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.25-r3.ebuild,v 1.1 2004/04/18 18:43:40 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -18,7 +18,6 @@ S=${WORKDIR}/linux-${KV}
 # INCLUDED:
 #   ${OKV}, plus:
 #   ${OKV}  openmosix-${OKV}-${TIMESTAMP} by tab
-# 
 
 DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://mcaserta.com/openmosix/testing/patch-${OKV}-om-${TIMESTAMP}.bz2"
@@ -33,5 +32,8 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 	cd linux-${KV}
 	bzcat ${DISTDIR}/patch-${OKV}-om-${TIMESTAMP}.bz2 | patch -p1 || die "-openmosix patch failed"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 	kernel_universal_unpack
 }
