@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Ryan Phillips <rphillips@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139.ebuild,v 1.1 2002/05/27 02:03:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139.ebuild,v 1.2 2002/06/17 05:34:50 rphillips Exp $
 
 DESCRIPTION="Snes9x is a portable, freeware Super Nintendo Entertainment System (SNES) emulator."
 HOMEPAGE="http://www.snes9x.com/"
@@ -13,7 +13,7 @@ DEPEND="dev-lang/nasm
 S=${WORKDIR}/release
 
 src_compile() {
-	make -f Makefile.linux
+	make -f Makefile.linux || die
 }
 
 src_install() {
