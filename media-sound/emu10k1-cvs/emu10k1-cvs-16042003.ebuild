@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-cvs/emu10k1-cvs-16042003.ebuild,v 1.1 2003/04/16 22:25:44 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-cvs/emu10k1-cvs-16042003.ebuild,v 1.2 2003/04/17 21:15:55 johnm Exp $
 
 MY_P="emu10k1"
-DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
+DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy, Audigy2)"
 SRC_URI="mirror://gentoo/${MY_P}-${PV}.tar.bz2"
 HOMEPAGE="http://www.sourceforge.net/projects/emu10k1/"
 
