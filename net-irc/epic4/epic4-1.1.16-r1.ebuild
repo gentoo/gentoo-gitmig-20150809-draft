@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.16.ebuild,v 1.5 2004/01/03 17:40:05 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.16-r1.ebuild,v 1.1 2004/01/03 17:40:05 zul Exp $
 
 IUSE="ipv6 perl ssl tcltk"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://epicsol.org"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ia64 ~alpha ~hppa amd64"
+KEYWORDS="~x86 ~ppc ia64 ~alpha ~hppa amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
@@ -23,6 +23,8 @@ replace-flags "-O?" "-O"
 
 src_compile() {
 	myconf=""
+
+	epatch ${FILESDIR}/epic-defaultserver.patch
 
 	myconf="${myconf} `use_with ipv6`"
 	myconf="${myconf} `use_with perl`"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.11.ebuild,v 1.5 2003/09/08 07:01:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.11.ebuild,v 1.6 2004/01/03 17:40:05 zul Exp $
 
 IUSE="ipv6 perl ssl tcltk"
 
