@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/myster-8.0.ebuild,v 1.1 2004/06/29 09:06:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/myster/myster-8.0.ebuild,v 1.2 2004/06/29 09:18:03 squinky86 Exp $
 
 inherit java-pkg
 
@@ -37,6 +37,6 @@ src_install () {
 	dodir /opt/myster/bin
 	mv ${D}/opt/myster/myster ${D}/opt/myster/bin/
 	dodir /etc/env.d
-	echo "HOME=/opt/myster" >> ${D}/etc/env.d/50myster
+	echo "MYSTERHOME=/opt/myster" >> ${D}/etc/env.d/50myster
 	echo "PATH=/opt/myster/bin" >> ${D}/etc/env.d/50myster
 }
