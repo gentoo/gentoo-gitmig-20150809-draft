@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/rioutil
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.3 2003/02/17 11:14:02 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.4 2003/10/03 03:03:27 hillster Exp $
+
+*rioutil-1.4.2b (02 Oct 2003)
+
+  02 Oct 2003; root <root@gentoo.org> rioutil-1.4.2b.ebuild:
+  Revision bump, minor changes made.
 
 *rioutil-1.3.3 (17 Feb 2003)
 
