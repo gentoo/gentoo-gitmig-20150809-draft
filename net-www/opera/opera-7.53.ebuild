@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.53.ebuild,v 1.1 2004/07/20 17:23:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.53.ebuild,v 1.2 2004/08/02 08:57:01 lanius Exp $
 
 IUSE="static spell"
 
@@ -14,20 +14,20 @@ HOMEPAGE="http://www.opera.com/linux/"
 
 # that's an ugly workaround for the broken src_uri syntax
 SRC_URI="
-	x86? ( static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-	x86? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	amd64? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
-	ppc? ( static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
-	ppc? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
-	sparc? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
+	x86? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	x86? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	amd64? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
+	ppc? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
+	ppc? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
+	sparc? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
 
 # amd64 shared libs require app-emulation/emul-linux-x86-qtlibs-1 which is not stable yet
-#	amd64? ( static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-#	amd64? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+#	amd64? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+#	amd64? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
 
 # sparc shared version does not work for me as it uses gcc-2.95 - eradicator
-#	sparc? ( static?  ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
-#	sparc? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )"
+#	sparc? ( static?  ( mirror://opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
+#	sparc? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )"
 
 
 # Dependencies may be augmented later (see below).
