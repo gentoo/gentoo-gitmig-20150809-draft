@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be8717c8af7e78c0352162e8ec2324a8 frox-0.7.17.ebuild 1526
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 e3fc1fdbf8703ac6c553227814dd0f85 ChangeLog 431
+MD5 596f68e71d4f88d5fffac0fe207ead3b files/frox.rc 1088
+MD5 b7ee81e7aac314baf746d17c3560ef04 files/digest-frox-0.7.17 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB9QC1mdTrptrqvGERAr+8AJwLonxio/GwbD69kWoamwSwLNX9vQCeLXo7
+nvqJuHsaQQ09/81cDAGOJtk=
+=k+zs
+-----END PGP SIGNATURE-----
