@@ -1,8 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.14 2003/02/19 22:44:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.15 2003/03/10 22:37:16 wwoods Exp $
 
 *ffmpeg-0.4.6-r1 (4 Jan 2003)
+
+  10 Mar 2003; Will Woods <wwoods@gentoo.org> ffmpeg-0.4.6-r1.ebuild:
+  Added ~alpha to keywords and -fPIC to flags, fixes bug #16281
 
   19 Feb 2003; Martin Holzer <mholzer@gentoo.org> ffmpeg-0.4.6-r1.ebuild :
   Marked as stable.
