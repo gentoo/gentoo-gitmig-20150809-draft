@@ -1,6 +1,13 @@
 # ChangeLog for games-roguelike/crossfire-client
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+*crossfire-client-1.7.0 (30 May 2004)
+
+  30 May 2004; Mike Frysinger <vapier@gentoo.org>
+  -crossfire-client-1.5.0.ebuild, -crossfire-client-1.6.0.ebuild,
+  +crossfire-client-1.7.0.ebuild:
+  Version bumpage.
+
   20 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   crossfire-client-1.6.1.ebuild:
   add cvs version of configure which doesn't check for gnome since that isn't
