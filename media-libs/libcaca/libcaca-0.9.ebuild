@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9.ebuild,v 1.8 2004/06/02 02:52:42 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9.ebuild,v 1.9 2004/06/05 12:08:02 kloeri Exp $
 
 DESCRIPTION="A library that creates colored ASCII-art graphics"
 HOMEPAGE="http://sam.zoy.org/projects/libcaca"
@@ -8,7 +8,7 @@ SRC_URI="http://sam.zoy.org/projects/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha hppa amd64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64"
 IUSE="ncurses slang doc imlib X"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
