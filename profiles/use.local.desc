@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.752 2004/11/22 21:33:32 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.753 2004/11/23 14:46:01 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -91,6 +91,7 @@ app-sci/coq:norealanalysis - Do not build real analysis modules (faster compilat
 app-sci/coq:translator - Install the translator script from coq-7.4 to coq-8.0, and its documentation if doc is set too.
 app-sci/cutg:no-emboss - Do not index the database files for use with EMBOSS
 app-sci/cutg:no-rawdb - Do not install the original database files (keep only indexed files)
+app-sci/drgeo:no-helpbrowser - Do not install the default help browser
 app-sci/emboss:no-biodata - Do not install the biological databases used by some programs.
 app-sci/gmt:gmtfull - Full resolution bathimetry database;
 app-sci/gmt:gmthigh - Adds high resolution bathimetry database
