@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r1.ebuild,v 1.1 2004/03/26 23:34:44 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r1.ebuild,v 1.2 2004/04/17 04:16:35 steel300 Exp $
 
 inherit eutils
 
@@ -32,8 +32,13 @@ src_unpack() {
 src_compile() {
 	local myconf
 
+	[ "$ARCH" == "x86" ] && export ARCH="i386"
+	[ "$ARCH" == "amd64" ] && export ARCH="x86_64"
 	econf ${myconf} || die
+
 	emake || die
+	[ "$ARCH" == "i386" ] && export ARCH="x86"
+	[ "$ARCH" == "x86_64" ] && export ARCH="amd64"
 }
 
 src_install () {
