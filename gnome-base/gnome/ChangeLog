@@ -1,8 +1,14 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.26 2002/06/18 00:42:34 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.27 2002/06/21 04:06:33 spider Exp $
+
+*gnome-2.0.0_rc1-r2 (20 Jun 2002)
+  20 Jun 2002; Spider <spider@gentoo.org> gnome-2.0.0_rc1-r2.ebuild :
+  Major updates to the ebuild, now with far less packages defined, we are close to release and this is my first proposal for a rc for the gentoo package list. 
+  please test this and see if all components get installed properly, they should however be so.
 
 
+  
 *gnome-2.0.0_rc1-r1 (17 Jun 2002)
   17 Jun 2002; Spider <spider@gentoo.org> gnome-2.0.0_rc1-r1.ebuild :
   new gnome utils, panel and desktop, updated gnome-vfs with a patch that fixes a nautilus bug, new glib, gtk+ and pango versions.
