@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.71 2004/11/03 22:34:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.72 2004/11/23 11:02:03 eradicator Exp $
+
+  23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mpg123-0.59s-r7.ebuild:
+  Changing default sparc player to '-generic' to work with 2.6 kernels.
 
 *mpg123-0.59s-r7 (03 Nov 2004)
 

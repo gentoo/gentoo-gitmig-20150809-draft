@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r7.ebuild,v 1.2 2004/11/10 06:07:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r7.ebuild,v 1.3 2004/11/23 11:02:03 eradicator Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-		EPATCH_SUFFIX="patch"
+	EPATCH_SUFFIX="patch"
 	epatch ${PATCHDIR}
 
 	sed -i "s:${PV}-mh4:${PVR}:" version.h
@@ -76,7 +76,7 @@ src_compile() {
 			;;
 		sparc*)
 			use esd && styles="${styles} -sparc-esd"
-			styles="${styles} -sparc"
+			styles="${styles} -sparc -generic"
 			;;
 		amd64)
 			use esd && styles="${styles} -x86_64-esd"
