@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.39 2004/04/27 08:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.40 2004/04/28 09:29:59 kumba Exp $
+
+  28 Apr 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.4.26-r1.ebuild:
+  Removed two lines in the 2.4.26 ebuild that were excluding a patch (debugging
+  bit I forgot to remove).
 
 *mips-sources-2.4.22-r12 (21 Apr 2004)
 *mips-sources-2.4.23-r8 (21 Apr 2004)

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r1.ebuild,v 1.1 2004/04/21 22:05:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r1.ebuild,v 1.2 2004/04/28 09:29:59 kumba Exp $
 
 
 # Version Data
@@ -53,8 +53,6 @@ src_unpack() {
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
 		echo -e ""
 		einfo ">>> Patching kernel for Cobalt support ..."
-		mkdir ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/skip
-		mv ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/08* ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/skip
 		for x in ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/*.patch; do
 			epatch ${x}
 		done
