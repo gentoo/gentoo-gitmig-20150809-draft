@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.34 2004/01/11 23:51:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.35 2004/01/16 22:07:33 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> gettext-0.12.1.ebuild:
+  set ppc in keywords
 
   12 Jan 2004; Guy Martin <gmsoft@gentoo.org> gettext-0.12.1.ebuild :
   Marked stable on hppa.
