@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/newsyslog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.2 2003/02/12 02:25:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.3 2003/10/03 15:01:04 agriffis Exp $
+
+  03 Oct 2003; Aron Griffis <agriffis@gentoo.org> newsyslog-1.0.103.ebuild:
+  Stable on alpha
 
 *newsyslog-1.0.103 (25 Oct 2002)
 

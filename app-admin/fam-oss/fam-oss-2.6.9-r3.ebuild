@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r3.ebuild,v 1.6 2003/09/20 19:56:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r3.ebuild,v 1.7 2003/10/03 15:00:48 agriffis Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="FAM, the File Alteration Monitor"
 SRC_URI="ftp://oss.sgi.com/projects/fam/download/${MY_P}.tar.gz"
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
 
-KEYWORDS="x86 ppc ~alpha ~sparc amd64 ia64"
+KEYWORDS="x86 ppc alpha ~sparc amd64 ia64"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
