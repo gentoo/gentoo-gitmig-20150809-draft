@@ -1,6 +1,9 @@
 
 # linux-wlan-ng requires a configured pcmcia-cs source tree.  
 # unpack/configure it in WORKDIR.  No need to compile it though.
+
+IUSE="trusted apm pnp nocardbus build"
+
 PCMCIA_CS="pcmcia-cs-3.2.1"
 PCMCIA_DIR="${WORKDIR}/${PCMCIA_CS}"
 
