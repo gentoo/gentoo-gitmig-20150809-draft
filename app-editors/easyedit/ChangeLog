@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/easyedit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/ChangeLog,v 1.8 2004/10/20 14:27:22 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/ChangeLog,v 1.9 2004/12/12 21:11:29 weeve Exp $
+
+  12 Dec 2004; Jason Wever <weeve@gentoo.org> easyedit-1.4.6.ebuild:
+  Stable on sparc.
 
   20 Oct 2004; Akinori Hattori <hattya@gentoo.org> easyedit-1.4.6.ebuild:
   stable on ia64.
