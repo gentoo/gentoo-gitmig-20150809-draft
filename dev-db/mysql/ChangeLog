@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.156 2005/01/18 22:05:22 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.157 2005/01/19 07:52:44 tester Exp $
+
+  19 Jan 2005; Olivier Crête <tester@gentoo.org> mysql-4.0.23-r1.ebuild:
+  Stable on x86 wrt security bug 77805
 
 *mysql-4.1.8-r1 (18 Jan 2005)
 
