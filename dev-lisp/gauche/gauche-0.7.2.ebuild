@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.2.ebuild,v 1.1 2003/10/05 17:10:31 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.2.ebuild,v 1.2 2003/10/08 17:52:33 karltk Exp $
 
 inherit flag-o-matic
 
@@ -15,11 +15,18 @@ KEYWORDS="~x86 ~sparc"
 SLOT="0"
 S="${WORKDIR}/Gauche-${PV}"
 
-DEPEND="virtual/glibc
-	>=sys-libs/gdbm-1.8.0-r5"
+DEPEND=">=sys-libs/gdbm-1.8.0-r5"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-gdbm-gentoo.diff
+	autoconf
+}
 
 src_compile() {
-	local myconf
+	local myconf mycflags
 
 	use ipv6 && myconf="--enable-ipv6"
 
@@ -36,14 +43,17 @@ src_compile() {
 
 	filter-flags -fforce-addr
 
-	CFLAGS="" CXXFLAGS="" econf $myconf --enable-threads=pthreads
-	emake OPTFLAGS="$CFLAGS"
+	mycflags=${CFLAGS}
+	unset CFLAGS CXXFLAGS
 
-	make check
+	econf ${myconf} --enable-threads=pthreads || die
+	emake OPTFLAGS="${mycflags}" || die
+
+	make -s check || die
 }
 
 src_install () {
-#	einstall
+
 	make install DESTDIR=${D}
 
 	dodoc AUTHORS COPYING ChangeLog HACKING INSTALL INSTALL.eucjp README
