@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bchunk/bchunk-1.1.1.ebuild,v 1.16 2004/06/27 21:10:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bchunk/bchunk-1.1.1.ebuild,v 1.17 2004/10/05 21:08:41 malc Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://hes.iki.fi/bchunk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
