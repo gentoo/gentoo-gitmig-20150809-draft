@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 167b2b9f6914c67327167e3e53e16493 ChangeLog 797
-MD5 cc2e50303b6b9f78508661a24eeec2c2 kradio-0.3.0_alpha2.ebuild 593
 MD5 ad2ee025e83a8fb2060ed8fbd868e6fa metadata.xml 226
+MD5 2bccbcbb722ba9578f4568bb7dbaebf8 kradio-0.3.0_alpha2.ebuild 600
 MD5 64227e42b8068964bd71a8ebf9741357 files/digest-kradio-0.3.0_alpha2 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBos2gArHZZzCEUG0RAvBbAJ9jX7KKRqsuki7+Zx8pGxwk2HXbbQCfa+xm
-0Pi8u706I2TJ4gi/tfV5XS4=
-=ZvVv
+iD8DBQFBo5ZtArHZZzCEUG0RAlWjAJ4vd2X+K15ZKI8DInn/nk83+ENKxACfcE5a
+h3djgnQgZ6puQaEe/eg5ReE=
+=v5dh
 -----END PGP SIGNATURE-----
