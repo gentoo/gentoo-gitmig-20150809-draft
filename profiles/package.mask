@@ -31,7 +31,8 @@
 # ebuilds are still under development. Installing these CAN break things and the
 # interfaces are not guaranteed to be stable either.
 >=sys-libs/db-4.0
-=sys-libs/db-3.2.9-r5
+# Unmasking as this should be safe
+#=sys-libs/db-3.2.9-r5
 
 # <seemant@gentoo.org> 21 May, 2003
 # Masked while it's still under development.  I need revision control on the
