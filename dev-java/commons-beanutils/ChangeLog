@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.13 2004/08/03 10:53:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.14 2004/09/10 19:46:45 axxo Exp $
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org>
+  commons-beanutils-1.6.1-r1.ebuild, commons-beanutils-1.7.0.ebuild:
+  changed dependenciess to ant-core
 
 *commons-beanutils-1.7.0 (03 Aug 2004)
 

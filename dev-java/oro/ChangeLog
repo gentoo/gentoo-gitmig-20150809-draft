@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/oro
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/ChangeLog,v 1.14 2004/06/24 22:40:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/ChangeLog,v 1.15 2004/09/10 19:49:44 axxo Exp $
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> oro-2.0.8.ebuild:
+  changed dependenciess to ant-core
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> oro-2.0.8.ebuild:
   Fix use invocation

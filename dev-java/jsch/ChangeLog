@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jsch
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.15 2004/06/24 22:36:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.16 2004/09/10 19:48:50 axxo Exp $
+
+*jsch-0.1.16 (10 Sep 2004)
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jsch-0.1.15.ebuild,
+  jsch-0.1.16.ebuild:
+  changed dependenciess to ant-core
 
   21 May 2004; Chris Aniszczyk <zx@gentoo.org> -jsch-0.1.12.ebuild,
   -jsch-0.1.14.ebuild, jsch-0.1.15.ebuild:

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 536f5a9a255dae15f28514ac3c745651 commons-net-1.2.2.ebuild 1250
-MD5 4dfe8b9562c13f2e96197848d1144dd1 ChangeLog 1735
+MD5 8508210cbe2053a3410f975d5cef539a commons-net-1.2.2.ebuild 1255
+MD5 0ad6b3720a95d5af74e531d7c2c3994a ChangeLog 1847
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 e2628a3419f04cdb65cb4a3caad1c9df files/gentoo.diff 4678
 MD5 cd5dd0f16006dfa0491e9fb71981d402 files/gentoo-1.2.diff 3152
 MD5 fb9978c1444923f864212fcb8914da67 files/digest-commons-net-1.2.2 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOcXl/rLF9B432nYRAp8jAKCeYuGr5sGEY0FXQ1Dj98UW+bahqwCgt1Nq
-/wYtmZgPSzqArbULafEHXfg=
-=se7g
------END PGP SIGNATURE-----

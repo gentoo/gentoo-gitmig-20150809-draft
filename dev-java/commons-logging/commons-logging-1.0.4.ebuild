@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.4.ebuild,v 1.6 2004/08/24 03:55:11 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.4.ebuild,v 1.7 2004/09/10 19:47:10 axxo Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jakarta.apache.org/commons/logging/"
 SRC_URI="mirror://apache/jakarta/commons/logging/source/${PN}-${PV}-src.tar.gz"
 DEPEND=">=dev-java/log4j-1.2.5
 	dev-java/avalon-logkit-bin
-	>=dev-java/ant-1.4
+	>=dev-java/ant-core-1.4
 	jikes? ( dev-java/jikes )
 	junit? ( >=dev-java/junit-3.7 >=virtual/jdk-1.4 )
 	!junit? ( >=virtual/jdk-1.3 )"

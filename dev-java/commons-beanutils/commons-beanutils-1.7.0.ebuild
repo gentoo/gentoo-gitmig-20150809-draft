@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0.ebuild,v 1.1 2004/08/03 10:53:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.7.0.ebuild,v 1.2 2004/09/10 19:46:45 axxo Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ DESCRIPTION="The Jakarta BeanUtils component provides easy-to-use wrappers aroun
 HOMEPAGE="http://jakarta.apache.org/commons/beanutils.html"
 SRC_URI="mirror://apache/jakarta/commons/beanutils/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-1.4
+	>=dev-java/ant-core-1.4
 	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-logging-1.0.2
 	junit? ( >=dev-java/junit-3.7 )"
