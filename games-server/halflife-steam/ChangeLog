@@ -1,6 +1,6 @@
-# ChangeLog for app-games/halflife-steam
+# ChangeLog for games-server/halflife-steam
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/ChangeLog,v 1.1 2003/09/10 05:51:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/ChangeLog,v 1.2 2003/09/10 15:49:16 vapier Exp $
 
   22 Jul 2003; Michael Sterrett <msterret@gentoo.org>
   halflife-steam-2.0_beta.ebuild:
