@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.16 2004/07/09 21:28:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.17 2004/09/18 03:11:34 tgall Exp $
+
+  17 Sep 2004; Tom Gall <tgall@gentoo.org> gtk-engines-xfce-2.1.9.ebuild:
+  stable on ppc64, bug #57744
 
   09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   gtk-engines-xfce-2.1.7.ebuild:
