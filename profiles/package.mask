@@ -23,6 +23,10 @@
 ##
 
 # <karltk@gentoo.org> (04 Jul 2002)
+# Has not received any testing.
+=net-www/cocoon-2.0.2
+
+# <karltk@gentoo.org> (04 Jul 2002)
 # We're removing JAXP from our tree. It is just a repack of
 # the Apache project's Xalan and Xerces, with a nastier license
 # and a more erratic release schedule; only tomcat 3.2.2
