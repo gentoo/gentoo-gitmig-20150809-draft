@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.6.ebuild,v 1.8 2005/01/10 06:35:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.6-r1.ebuild,v 1.1 2005/01/12 03:27:46 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -59,6 +59,11 @@ src_unpack() {
 	# Make user/group names more flexible #3485 / #22920
 	epatch "${FILESDIR}"/${P}-dots-in-usernames.patch
 	epatch "${FILESDIR}"/${P}-long-groupnames.patch
+
+	# Newer glibc's have a different nscd socket location #74395
+	sed -i \
+		-e '/_PATH_NSCDSOCKET/s:/var/run/.nscd_socket:/var/run/nscd/socket:' \
+		lib/nscd.c || die "sed nscd socket"
 
 	# Allows shadow configure detect newer systems properly
 	gnuconfig_update
