@@ -1,8 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.9 2002/10/08 23:43:38 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.10 2002/10/22 05:28:34 seemant Exp $
 
 db-4.1.24 (08 Oct 2002)
+
+  21 Oct 2002; Seemant Kulleen <seemant@gentoo.org> db-4.1.24.ebuild :
+
+  changed configure statement to add a few features (like db-1.8.5
+  compatibility).
 
   08 Oct 2002; Ryan Phillips <rphillips@gentoo.org> :
 
