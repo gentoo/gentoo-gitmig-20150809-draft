@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.57 2003/02/15 20:56:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.58 2003/02/24 20:09:30 danarmak Exp $
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdelibs-3.1-r2.ebuild:
   Added ~sparc keyword.
@@ -54,6 +54,9 @@
   for initial testing.
 
 *kdelibs-2.2.2a-r1 (17 Jan 2003)
+
+  24 Feb 2003;  <root@gentoo.org> kdelibs-2.2.2a-r1.ebuild :
+  Fix bug #11732, #14432, #15635: enforce singlethreaded make (-j1).
 
   17 Jan 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-2.2.2a-r1.ebuild:
   new version, fixes #12520

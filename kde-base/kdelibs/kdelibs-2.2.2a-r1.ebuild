@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a-r1.ebuild,v 1.5 2003/02/13 12:27:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a-r1.ebuild,v 1.6 2003/02/24 20:09:31 danarmak Exp $
 inherit kde kde.org
 #don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
 
@@ -50,6 +50,9 @@ set-kdedir $PV
 #this patch contains security issues backported from kde-3.0.5a.
 PATCHES="${FILESDIR}/${P}-gentoo.diff
 	${FILESDIR}/${P}-crosside.diff"
+
+#fix 11732 and friends
+MAKEOPTS="$MAKEOPTS -j1"
 
 src_unpack() {
 	kde_src_unpack
