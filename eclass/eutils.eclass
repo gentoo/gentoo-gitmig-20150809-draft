@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.155 2005/03/06 21:28:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.156 2005/03/07 17:30:53 carlo Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -943,7 +943,7 @@ make_desktop_entry() {
 				;;
 		esac
 	fi
-	local desktop="${T}/${exec}.desktop"
+	local desktop="${T}/${P}.desktop"
 
 echo "[Desktop Entry]
 Encoding=UTF-8
