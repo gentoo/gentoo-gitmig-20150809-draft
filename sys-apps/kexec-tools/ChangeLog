@@ -1,0 +1,14 @@
+# ChangeLog for sys-apps/kexec-tools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.1 2005/01/31 16:19:13 genstef Exp $
+
+*kexec-tools-1.100 (31 Jan 2005)
+
+  31 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +files/kexec.conf, +files/kexec.init, +kexec-tools-1.100.ebuild:
+  New ebuild thanks to Starz McCllelan <starz@antisocial.com>, Jay Pfeifer
+  <pfeifer@gentoo.org>, Christopher Sidebottom <damouse@zero10.demon.co.uk>,
+  Justus Winter <justus@sunny-winter.de>, Radoslaw -AstralStorm- Szkodzinski
+  <astralstorm@gmail.com>, Daniel Webert <rockoo@gmail.com> and Carlos Silva
+  <r3pek@r3pek.homelinux.org> in bug 50313
+

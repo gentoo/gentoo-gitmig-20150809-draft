@@ -1,0 +1,55 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/files/kexec.init,v 1.1 2005/01/31 16:19:13 genstef Exp $
+
+depend() {
+	need checkfs
+}
+
+start() {
+	[ -z "$KNAME" ] && KNAME="bzImage"
+	[ -z "$BOOTPATH" ] && BOOTPATH="/boot"
+	[ -z "$BOOTMOUNT" ] && BOOTMOUNT=1
+	[ -z "$ROOTPART" ] && ROOTPART="`cut -f 1 -d' ' /etc/mtab | grep / | tr '\n' '\t' | cut -f 1`"
+	[ -n "$INITRD" ] && INITRDOPT='--initrd="$INITRD"'
+
+	if [ "$KNAME" != "-" ]
+	then
+		ebegin "Loading kernel $KNAME for Kexec..."
+		MNT=1
+		LOCS="`cut -f 2 -d' ' /etc/mtab | tr '\n' ' '`" 
+		for x in $LOCS
+		do
+			if [ "$x" == "$BOOTPATH" ]
+			then
+				MNT=0
+			fi
+		done
+
+		if [ $MNT -eq 1 -a $BOOTMOUNT -eq 1 ]
+		then
+			/bin/mount $BOOTPATH
+			if [ $? -ne 0 ]
+			then
+				eerror "Couldn't mount $BOOTPART"
+				MNT="0"
+			fi
+		fi
+		kexec -l $BOOTPATH/$KNAME --append="root=$ROOTPART $KPARAM" $INITRDOPT
+		RES=$?
+		if [ $MNT -eq 1 -a $BOOTMOUNT -eq 1 ]
+		then
+			/bin/umount $BOOTPATH
+			if [ $? -ne 0 ]; then
+				eerror "Couldn't umount $BOOTPART"
+			fi
+		fi
+	else
+		ebegin "Disabling kexec..."
+		kexec -u
+		RES=$?
+	fi
+
+	eend $RES
+}
