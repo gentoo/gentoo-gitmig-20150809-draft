@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.ebuild,v 1.2 2003/12/13 22:56:30 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.ebuild,v 1.3 2004/04/11 15:17:30 pyrania Exp $
 
 IUSE="xosd"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Linux support for Easy Access and Internet Keyboards features X11 support"
 HOMEPAGE="http://lineak.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lineak/${P}.tar.gz"
