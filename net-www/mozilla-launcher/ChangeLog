@@ -1,0 +1,9 @@
+# ChangeLog for net-www/mozilla-launcher
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.1 2004/03/24 02:11:36 agriffis Exp $
+
+*mozilla-launcher-1.1 (23 Mar 2004)
+
+  23 Mar 2004; Aron Griffis <agriffis@gentoo.org> mozilla-launcher-1.1.ebuild:
+  New ebuild for mozilla-launcher; a script to launch either firefox or mozilla
+
