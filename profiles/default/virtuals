@@ -16,3 +16,4 @@ sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/sylpheed        net-mail/sylpheed
 virtual/php             dev-php/mod_php
 virtual/xforms          x11-libs/xforms-x86
+virtual/textbrowser		net-www/links
