@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.3.ebuild,v 1.8 2005/02/23 21:48:51 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.3.ebuild,v 1.9 2005/03/29 16:48:58 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,9 +9,10 @@ HOMEPAGE="http://jakarta.apache.org/commons/validator/"
 SRC_URI="mirror://apache/jakarta/commons/validator/source/${PN}-${PV}-src.tar.gz mirror://gentoo/commons-validator-1.1.3-gentoo-missingfiles.tar.bz2"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
-	jikes? ( dev-java/jikes )"
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.3
-	>=dev-java/oro-2.0.8
+	=dev-java/jakarta-oro-2.0*
 	>=dev-java/commons-digester-1.5
 	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-logging-1.0.3
@@ -20,7 +21,7 @@ RDEPEND=">=virtual/jre-1.3
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-IUSE="doc jikes"
+IUSE="doc examples jikes source"
 
 src_unpack() {
 	unpack ${A}
@@ -28,7 +29,7 @@ src_unpack() {
 	#dirty hack
 	sed -e 's:target name="compile" depends="static":target name="compile" depends="prepare":' -i build.xml
 
-	echo "oro.jar=`java-config --classpath=oro`" >> build.properties
+	echo "oro.jar=`java-config --classpath=jakarta-oro-2.0`" >> build.properties
 	echo "commons-digester.jar=`java-config --classpath=commons-digester`" >> build.properties
 	echo "commons-collections.jar=`java-config --classpath=commons-collections`" >> build.properties
 	echo "commons-logging.jar=`java-config --classpath=commons-logging | sed s/.*://`" >> build.properties
@@ -45,9 +46,16 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
 	java-pkg_dojar ${PN}.jar
-	use doc && java-pkg_dohtml -r dist/docs/
-	dohtml PROPOSAL.html STATUS.html
-	dodoc LICENSE.txt
+
+	if use doc; then
+		java-pkg_dohtml -r dist/docs/
+		java-pkg_dohtml PROPOSAL.html STATUS.html
+		dodoc LICENSE.txt
+	fi
+	if use examples; then
+		dodir /usr/share/doc/${PF}/examples
+		cp -r src/example/* ${D}/usr/share/doc/${PF}/examples
+	fi
+	use source && java-pkg_dosrc src/share/*
 }
