@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.2 2005/02/25 16:11:00 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.3 2005/02/27 22:09:56 port001 Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ ns_inst_mods="nslog/nslog.so
 ns_inst_includes="nsd/*.h include/*.h"
 ns_inst_docs="ChangeLog
 	README
-	install-sh"
+	sample-config.tcl"
 
 check_tcl_threads() {
 
@@ -172,9 +172,6 @@ src_install () {
 		doins nsperm/${perm_file}
 	done
 
-	insinto ${ns_data}
-	doins sample-config.tcl
-
 	insinto ${ns_conf}
 	doins ${FILESDIR}/${PV}/Makefile.global
 	newins ${S}/include/Makefile.global Makefile.global.orig
@@ -195,7 +192,7 @@ pkg_postinst () {
 
 	echo
 	einfo "Upgrading:"
-	einfo "  Check /usr/share/aolserver/sample-config.tcl"
+	einfo "  Check /usr/share/doc/${PF}/sample-config.tcl.gz"
 	einfo "  for new configuration options that you may want"
 	einfo "  to use in your existing configuration."
 	echo
