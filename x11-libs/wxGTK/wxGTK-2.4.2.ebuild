@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.3 2003/10/08 00:09:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.4 2003/10/09 08:05:40 liquidx Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.wxwindows.org/"
 
 LICENSE="wxWinLL-3"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE="nls odbc opengl gtk2 unicode debug"
 
 RDEPEND="virtual/x11
@@ -16,7 +16,7 @@ RDEPEND="virtual/x11
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
-	odbc? ( dev-db/unixODBC  )
+	!unicode? ( odbc? ( dev-db/unixODBC ) )
 	opengl? ( virtual/opengl )
 	gtk2? ( >=x11-libs/gtk+-2.0 >=dev-libs/glib-2.0 )
 	!gtk2? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )"
@@ -56,9 +56,9 @@ src_compile() {
 
 	use gtk2 && myconf="${myconf} --enable-gtk2"
 	# only allow unicode if using gtk2
-	use gtk2 && use unicode && myconf="${myconf} --enable-unicode"
+	[ -n "`use gtk2`" -a -n "`use unicode`" ] && myconf="${myconf} --enable-unicode"
 	# only enable odbc if unicode is not enabled.
-	( use gtk2 && use unicode ) || myconf="${myconf} --with-odbc"
+	[ -n "`use gtk2`" -a  -n "`use unicode`" ] || myconf="${myconf} `use_with odbc`"
 
 	econf ${myconf}
 	emake || die "make failed"

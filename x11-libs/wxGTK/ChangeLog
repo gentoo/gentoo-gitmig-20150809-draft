@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.35 2003/10/09 05:55:37 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.36 2003/10/09 08:05:40 liquidx Exp $
+
+  09 Oct 2003; Alastair Tse <liquidx@gentoo.org> wxGTK-2.4.1.ebuild,
+  wxGTK-2.4.2.ebuild:
+  cleanup and fixing conditionals
 
   08 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.4.1-r1.ebuild,
   wxGTK-2.4.1.ebuild:
