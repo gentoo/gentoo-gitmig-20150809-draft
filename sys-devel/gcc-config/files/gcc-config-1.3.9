@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.9,v 1.3 2005/01/07 20:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.9,v 1.4 2005/01/19 23:26:13 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -363,6 +363,7 @@ CHECK_CHOST="no"
 
 CC_COMP=
 [[ -z ${ROOT} ]] && ROOT="/"
+[[ ${ROOT:-1} != "/" ]] && ROOT="${ROOT}/"
 ENV_D="${ROOT}etc/env.d"
 GCC_ENV_D="${ENV_D}/gcc"
 
