@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0_rc2.ebuild,v 1.1 2003/08/29 20:17:02 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0_rc2.ebuild,v 1.2 2003/09/04 20:38:48 weeve Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ DEPEND="sys-devel/autoconf dev-libs/popt
 	pam? sys-libs/pam
 	python? dev-lang/python"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -55,6 +55,13 @@ src_unpack() {
 	# Prep samba-vscan source.
 	if use oav; then
 		cp -a ${WORKDIR}/${PN}-vscan-${VSCAN_VER} ${S}/examples.bin/VFS
+	fi
+
+	# Add a patch for sparc to fix bug #27858
+	if [ "${ARCH}" = "sparc" ]
+	then
+		cd ${S}/source/include
+		epatch ${FILESDIR}/samba-2.2.8-statfs.patch
 	fi
 
 	cd ${S}/source

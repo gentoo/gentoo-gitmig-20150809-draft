@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.42 2003/09/04 01:56:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.43 2003/09/04 20:38:48 weeve Exp $
+
+  04 Sep 2003; Jason Wever <weeve@gentoo.org> samba-3.0.0_rc2.ebuild:
+  Added previous patch from samba-2.2.8a to samba-3.0.0_rc2 to finish fixing bug
+  #27858.
 
   03 Sep 2003; Jason Wever <weeve@gentoo.org> samba-2.2.8a.ebuild,
   files/samba-2.2.8-statfs.patch:
