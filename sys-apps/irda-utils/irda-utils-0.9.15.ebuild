@@ -5,7 +5,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IrDA Utilities, tools for IrDA communication"
-SRC_URI="http://irda.sf.net/ftp/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/irda/${P}.tar.gz"
 HOMEPAGE="http://irda.sf.net"
 KEYWORDS="~x86 -ppc"
 SLOT="0"

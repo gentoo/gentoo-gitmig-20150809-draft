@@ -1,17 +1,22 @@
 # ChangeLog for sys-apps/irda-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/ChangeLog,v 1.4 2002/12/15 18:45:30 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/ChangeLog,v 1.5 2002/12/30 12:53:32 mholzer Exp $
 
 *irda-utils-0.9.15 (15 Dec 2002)
 
-  15 Dec 2002; Chad Huneycutt <chadh@gentoo.org>:
+  30 Dec 2002; Martin Holzer <mholzer@gentoo.org> irda-utils-0.9.15.ebuild ChangeLog :
+  Change SRC_URI to use mirror://sf
 
+  15 Dec 2002; Chad Huneycutt <chadh@gentoo.org>:
   Thanks to contributors to bug 1727 for init scripts and config files to go
   with them.  I have cleaned up the ebuild some, and it now installs all the
   sample programs from irsockets.  README's and man pages are installed as
   well.
 
 *irda-utils-0.9.13 (1 Feb 2002)
+
+  30 Dec 2002; Martin Holzer <mholzer@gentoo.org> irda-utils-0.9.13.ebuild :
+  Change SRC_URI to use mirror://sf
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
   updated keywords (-ppc)
@@ -20,9 +25,9 @@
   Added KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
