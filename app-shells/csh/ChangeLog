@@ -1,0 +1,10 @@
+# ChangeLog for app-shells/csh
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.1 2003/05/28 21:24:25 taviso Exp $
+
+*csh-1.29 (28 May 2003)
+
+  28 May 2003; Tavis Ormandy <taviso@gentoo.org> csh-1.29.ebuild:
+  Initial import, the classic C Shell, tricky to write ebuild for.
+  Hope it works.
+
