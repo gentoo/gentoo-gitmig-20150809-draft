@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.8 2003/09/22 11:26:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.9 2003/12/06 17:51:50 strider Exp $
 
 IUSE="doc"
 
@@ -33,7 +33,7 @@ src_unpack () {
 
 	if (use sparc) ; then
 		# Everything is owned by 1000.100, for some reason..
-		chown -R root.root .
+		chown -R root:root .
 	fi
 }
 

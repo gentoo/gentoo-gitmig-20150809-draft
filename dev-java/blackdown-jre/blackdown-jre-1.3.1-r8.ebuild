@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r8.ebuild,v 1.10 2003/09/22 11:26:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r8.ebuild,v 1.11 2003/12/06 17:53:18 strider Exp $
 
 inherit java nsplugins
 
@@ -28,7 +28,7 @@ src_unpack () {
 	fi
 	if (use sparc) ; then
 		# The files are owned by 1000.100, for some reason.
-		chown -R root.root
+		chown -R root:root
 	fi
 }
 

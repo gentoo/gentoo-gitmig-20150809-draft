@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.6 2003/11/15 03:21:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.7 2003/12/06 17:50:04 strider Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -162,7 +162,7 @@ src_install () {
 	dodir /opt/${P}/share/
 	cp -a demo src.zip ${D}/opt/${P}/share/
 
-	chown -R root.root ${D}/opt/${P}
+	chown -R root:root ${D}/opt/${P}
 
 	inst_plugin /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so
 	set_java_env ${FILESDIR}/${VMHANDLE}
