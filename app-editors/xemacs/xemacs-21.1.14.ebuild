@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.1.14.ebuild,v 1.10 2002/03/06 18:55:22 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.1.14.ebuild,v 1.11 2002/04/02 22:55:35 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XEmacs"
 EFS=1.26
 BASE=1.55
-DEPEND="sys-libs/ncurses nas? (media-libs/nas) >=sys-libs/db-3 X? ( virtual/x11 media-libs/libpng media-libs/tiff media-libs/jpeg )"
+DEPEND="sys-libs/ncurses nas? ( media-libs/nas ) >=sys-libs/db-3 X? ( virtual/x11 media-libs/libpng media-libs/tiff media-libs/jpeg )"
 SRC_URI="ftp://ftp.xemacs.org/pub/current/${P}.tar.bz2 ftp://ftp.xemacs.org/xemacs/packages/efs-${EFS}-pkg.tar.gz ftp://ftp.xemacs.org/xemacs/packages/xemacs-base-${BASE}-pkg.tar.gz"
 HOMEPAGE="http://www.xemacs.org"
 
