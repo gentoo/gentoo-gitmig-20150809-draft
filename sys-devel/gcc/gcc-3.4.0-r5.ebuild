@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r5.ebuild,v 1.4 2004/05/31 04:53:09 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r5.ebuild,v 1.5 2004/06/01 03:40:56 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc n32 n64"
 
@@ -37,15 +37,20 @@ do_filter_flags() {
 	replace-flags -O? -O2
 
 	# -mcpu is deprecated, and will actually break the gcc build on
-	# a few archs...
+	# a few archs... so we change it to mtune, and then strip unsupported
+	# flags so we dont break versions of gcc that dont understand mtune.
 	setting="`get-flag mcpu`"
-	[ ! -z "${setting}" ] && filter-flags -mcpu="${setting}"
+	[ ! -z "${setting}" ] && \
+		replace-flags -mcpu="${setting}" -mtune="${setting}" && \
+		ewarn "-mcpu is deprecated" && \
+		sleep 5
+	strip-unsupported-flags
 
 	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
 	# build of non-default-abi libraries.
 	use mips && use multilib && filter-flags "-mabi*"
 
-	export GCJFLAGS="${CFLAGS/-O?/-O2}"
+	export GCJFLAGS="${CFLAGS}"
 }
 
 # Theoretical cross compiler support
