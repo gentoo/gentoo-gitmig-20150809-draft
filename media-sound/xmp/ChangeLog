@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.4 2004/03/11 12:13:27 karltk Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.5 2004/03/21 04:12:50 eradicator Exp $
+
+  20 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmp-2.0.5_pre3-r1.ebuild, xmp-2.0.5_pre3.ebuild:
+  Bumping to stable for gcc3.3 fix. --disable-alsa since it needs 0.5. Closes
+  bug #38996.
 
 *xmp-2.0.5_pre3-r1 (11 Mar 2004)
 
