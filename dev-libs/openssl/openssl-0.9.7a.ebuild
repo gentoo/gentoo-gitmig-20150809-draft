@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7a.ebuild,v 1.2 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7a.ebuild,v 1.3 2003/03/13 22:27:16 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -33,14 +33,13 @@ src_unpack() {
 
 	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
 
-    # many apps linking to openssl needs -fPIC
-	if [ "${ARCH}" = "hppa" ]
-	then
-		CFLAGS="${CFLAGS} -fPIC"
+	if [ "${ARCH}" = "hppa" ]; then
+	sed -e \
+	's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
+		Configure > Configure.orig
+	else
+		cp Configure Configure.orig
 	fi
-						 
-
-	cp Configure Configure.orig
 	sed -e "s/-O3/$CFLAGS/" -e "s/-m486//" Configure.orig > Configure
 }
 

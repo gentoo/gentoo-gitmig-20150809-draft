@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.30 2003/02/28 12:43:54 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.31 2003/03/13 22:27:16 gmsoft Exp $
+
+  13 Mar 2003; Guy Martin <gmsoft@gento.org> openssl-0.9.6i.ebuild :
+  Now produce also libssl.so on hppa.
 
   28 Feb 2003; Maarten Thibaut <murphy@gentoo.org> openssl-0.9.6i.ebuild :
   Add code to detect sparc32 build on sparc64. Add code to compile for

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.6 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.7 2003/03/13 22:27:16 gmsoft Exp $
 
 IUSE=""
 
@@ -30,15 +30,14 @@ src_unpack() {
 		patch -p1 < ${FILESDIR}/openssl-0.9.6-mips.diff || die
 	fi
 
-    # many apps linking to openssl needs -fPIC
-	if [ "${ARCH}" = "hppa" ]
-	then
-		CFLAGS="${CFLAGS} -fPIC"
-	fi
 	if [ "${ARCH}" = "arm" ]; then
 		# patch linker to add -ldl or things linking aginst libcrypto fail
 		sed -e \
 			's!^"linux-elf-arm"\(.*\)::BN\(.*\)!"linux-elf-arm"\1:-ldl:BN\2!' \
+			Configure > Configure.orig
+	elif [ "${ARCH}" = "hppa" ]; then
+		sed -e \
+		's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
 			Configure > Configure.orig
 	else
 		cp Configure Configure.orig
