@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.522 2004/08/04 02:20:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.523 2004/08/04 10:19:10 karltk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -132,6 +132,8 @@ dev-java/ant-optional:rhino - Enable Rhino JavaScript support
 dev-java/ant-optional:xalan - Enable Xalan support
 dev-java/ant-optional:xerces - Enable Xerces support
 dev-java/ant:optional-tasks - Enable Optional Tasks Support
+dev-java/bsf:rhino - Enable Rhino support
+dev-java/bsf:jython - Enable Jython support
 dev-java/gnu-classpath:native - Compile native .so libraries
 dev-java/gnu-javamail:javadoc - Generate API documentation
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
