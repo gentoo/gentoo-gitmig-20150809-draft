@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gcloop/gcloop-0.99.20040118.ebuild,v 1.3 2004/02/17 15:38:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gcloop/gcloop-0.99.20040217.ebuild,v 1.1 2004/02/17 15:38:47 lu_zero Exp $
 
 DESCRIPTION="Compressed loopback userspace tools and kernel patches"
 
@@ -36,11 +36,13 @@ src_install() {
 
 	doman ${S}/man/*.1
 
-	dodir /usr/share/gcloop
-	insinto /usr/share/gcloop
+	dodir /usr/share/gcloop/
+	insinto /usr/share/gcloop/
 	doins ${S}/*.patch
+	doins ${S}/busybox/*.patch
+	doins ${S}/util-linux/*.patch
 
-	dodoc CHANGELOG README README.kernel
+	dodoc CHANGELOG README*
 }
 
 pkg_postinst() {
@@ -49,7 +51,7 @@ pkg_postinst() {
 	ewarn "or bugzilla. "
 	ewarn "REMEBER this is a PRERELEASE"
 	echo
-	einfo "the kernel patches are installed in /usr/share/gcloop ."
+	einfo "the required patches are installed in /usr/share/gcloop ."
 	einfo "ppc-development-sources and gentoo-dev-sources are"
 	einfo "already patched."
 }
