@@ -5,7 +5,7 @@ depend() {
 }
 
 checkconfig() {
-    if [ ! -e /etc/fcron/fcon.conf ] ; then
+    if [ ! -e /etc/fcron/fcron.conf ] ; then
 	eerror "You will need an /etc/fcron/fcron.conf first"
 	eerror "There  is a sample in  /usr/share/docs/fcron"
 	return 1
