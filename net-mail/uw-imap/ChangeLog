@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.16 2003/05/25 20:38:18 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.17 2003/05/28 05:21:03 robbat2 Exp $
 
 *uw-imap-2002c (25 May 2003)
+
+  27 May 2003; Robin Johnson <robbat2@gentoo.org> uw-imap-2002c.ebuild:
+  Fix bug #21565. Also ensure makefile doesn't ask the interactive question
+  for both SSL cases (assume yes). Fixed a userpriv install bug due to bad
+  permissions (444) inside the initial tarball.
 
   25 May 2003; Preston A. Elder <prez@gentoo.org> uw-imap-2002c.ebuild,
   files/digest-uw-imap-2002c files/uw-ipop3s.xinetd :
