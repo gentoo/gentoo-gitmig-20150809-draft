@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.15 2003/09/22 02:06:45 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.16 2003/10/15 16:02:34 johnm Exp $
+
+*iptables-1.2.8-r2 (15 Oct 2003)
+
+  15 Oct 2003; John Mylchreest <johnm@gentoo.org>; iptables-1.2.8-r2.ebuild:
+  fixes bug #22223
 
   21 Sep 2003; Matthew Rickard <frogger@gentoo.org> iptables-1.2.8-r1.ebuild:
   "-fstack-protector" breaks "iptables -p icmp".  We will
