@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.3.1.ebuild,v 1.2 2004/08/14 17:52:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.3.1.ebuild,v 1.3 2004/08/15 18:23:54 vapier Exp $
 
 inherit eutils
 
@@ -27,6 +27,12 @@ pkg_nofetch() {
 	einfo "from ${HOMEPAGE} (requires a Transgaming subscription)"
 	echo
 	einfo "The archive should then be placed into ${DISTDIR}"
+	echo
+	ewarn "Please note that for some stupid reason Transgaming has"
+	ewarn "started watermarking their downloads to track users."
+	ewarn "This means you will have to rebuild the digest file"
+	ewarn "before emerging it.  Just run this command:"
+	ewarn "ebuild /usr/portage/app-emulation/${PN}/${PF}.ebuild diest"
 }
 
 src_unpack() {
