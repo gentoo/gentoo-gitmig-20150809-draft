@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.6 2003/08/13 15:29:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.7 2003/10/20 00:18:49 weeve Exp $
 
 RHP=${PN}-1.00
 S=${WORKDIR}/${RHP}
@@ -11,7 +11,7 @@ ftp://ftp.redhat.com/pub/redhat/linux/8.0/en/os/i386/SRPMS/${MYP}.src.rpm"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc hppa amd64 alpha"
+KEYWORDS="x86 ~ppc hppa amd64 alpha ~sparc"
 
 DEPEND="app-arch/rpm2targz"
 RDEPEND="virtual/glibc"
