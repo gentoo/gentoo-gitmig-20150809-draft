@@ -1,8 +1,8 @@
 # ChangeLog for app-portage/guitoo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.1 2005/01/28 15:45:37 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.2 2005/01/28 18:31:51 greg_g Exp $
 
 *kuroo-0.53.0 (28 Jan 2005)
 
-  28 Jan 2005; Gregorio Guidi <greg@gentoo.org> :
+  28 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> :
   Moving from app-portage/guitoo to app-portage/kuroo, and version bump.
