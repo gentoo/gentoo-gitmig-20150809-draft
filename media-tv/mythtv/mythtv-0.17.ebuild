@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17.ebuild,v 1.4 2005/02/12 17:04:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17.ebuild,v 1.5 2005/02/28 08:53:26 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
@@ -134,6 +134,21 @@ setup_pro() {
 }
 
 src_unpack() {
+
+	if use cle266; then
+		ewarn "If you have a VIA ITX board with XvMC VLD on it... you need to pull the sources for this stuff yourself"
+		ewarn "and install it yourself before continuing. It is currently not packaged up and requires drm patches to Xorg"
+		ewarn "these patches are not in the xorg-x11. http://bugs.gentoo.org/show_bug.cgi?id=82125"
+		sleep 5
+	fi
+
+	if use ieee1394; then
+		ewarn "The required libraries to use firewire support are only available via Subversion. They are not stable enough to"
+		ewarn "be packaged up in Portage. This is only here as a courtesy for users that use it and have installed the libraries"
+		ewarn "themselves manually. http://bugs.gentoo.org/show_bug.cgi?id=81767"
+		sleep 5
+	fi
+
 	# Fix bugs 40964 and 42943.
 	filter-flags -fforce-addr -fPIC
 
