@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r2.ebuild,v 1.1 2002/10/29 03:11:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r2.ebuild,v 1.2 2002/10/29 03:22:28 vapier Exp $
 
 IUSE="nas nls esd arts perl"
 
@@ -31,7 +31,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 src_compile() {
 	local myconf="--prefix=/usr"
 
-	use esd  || myconf="--disable-esd"
+	use esd  || myconf="${myconf} --disable-esd"
 	use perl || myconf="${myconf} --disable-perl"
 	use nas  && myconf="${myconf} --enable-nas" \
 		 || myconf="${myconf} --disable-nas"
