@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.8.ebuild,v 1.5 2004/07/02 05:13:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.8.ebuild,v 1.6 2004/07/15 00:08:44 agriffis Exp $
 
 IUSE=""
 
@@ -40,4 +40,3 @@ src_install () {
 	dodoc AUTHORS ChangeLog COPYING CREDITS INSTALL \
 		NEWS README THANKS TODO.txt
 }
-
