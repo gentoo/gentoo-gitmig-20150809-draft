@@ -13,7 +13,7 @@ SLOT="1"
 LICENSE="BSD"
 KEYWORDS="x86 sparc "
 
-DEPEND="sys-apps/supersed"
+DEPEND="$DEPEND"
 
 MYBIN="${PN}"
 mydoc="CHANGE* TODO LICENSE data/README*"
