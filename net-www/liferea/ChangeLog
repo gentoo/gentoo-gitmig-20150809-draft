@@ -1,6 +1,9 @@
 # ChangeLog for net-www/liferea
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.21 2004/12/02 21:27:26 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.22 2004/12/03 05:46:46 swegener Exp $
+
+  03 Dec 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digests. Fixed broken Manifest.
 
 *liferea-0.6.4b (02 Dec 2004)
 
