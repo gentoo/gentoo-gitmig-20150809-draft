@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.34 2003/04/07 14:34:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.35 2003/04/10 23:04:36 woodchip Exp $
+
+*samba-3.0_alpha23 (11 Apr 2003)
+
+  11 Apr 2003; Donny Davies <woodchip@gentoo.org> samba-3.0_alpha23.ebuild:
+  Chase latest; nuke `torture' target; seems broken at the moment :\
 
 *samba-2.2.8a (07 Apr 2003)
 
