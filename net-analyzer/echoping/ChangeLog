@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/echoping
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.1 2005/01/25 15:15:35 angusyoung Exp $
+
+*echoping-5.2.0 (25 Jan 2005)
+
+  25 Jan 2005; Otavio R. Piske <angusyoung@gentoo.org>
+  +files/maxtoread-5.2.0.patch, +echoping-5.2.0.ebuild:
+  Initial release. Thanks to Gudleik Rasch <gudleik@rastamatra.org> for
+  submitting the ebuild.
+
