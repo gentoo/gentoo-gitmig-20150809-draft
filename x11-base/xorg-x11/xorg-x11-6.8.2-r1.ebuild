@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.9 2005/03/12 02:47:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.10 2005/03/12 03:25:04 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -607,12 +607,6 @@ host_def_setup() {
 		elif [ "$(gcc-major-version)" -lt "3" ]; then
 			# Bug #12775 .. fails with -Os.
 			replace-flags "-Os" "-O2"
-		fi
-
-		if ( [ -e "${ROOT}/usr/src/linux" ] \
-			&&  ! kernel_is "2" "2" ) \
-			|| [ "$(uname -r | cut -d. -f1,2)" != "2.2" ]; then
-			echo "#define HasLinuxInput YES" >> ${HOSTCONF}
 		fi
 
 		echo "#define CcCmd $(tc-getCC)" >> ${HOSTCONF}
