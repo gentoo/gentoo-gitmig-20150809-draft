@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.5 2002/08/04 09:38:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.6 2002/08/11 19:30:22 danarmak Exp $
 
 # This is for kde-base cvs ebuilds. Read comments about settings.
 # It uses $S and sets $SRC_URI, so inherit it as late as possible (certainly after any other eclasses).
@@ -36,6 +36,11 @@ INHERITED="$INHERITED $ECLASS"
 
 # Other variables: see cvs.eclass
 
+# we do this here and not in the very beginning because we need to keep
+# the configuration order intact: env. and profile settings override
+# kde-source.eclass defaults, which in turn override cvs.eclass defaults
+inherit cvs
+
 # --- end user-configurable settings ---
 
 S="$WORKDIR/$ECVS_MODULE" 
@@ -52,11 +57,6 @@ kde-source_src_unpack() {
 
     debug-print-function $FUNCNAME $*
 
-	# we do this here and not in the very beginning because we need to keep
-	# the configuration order intact: env. and profile settings override
-	# kde-source.eclass defaults, which in turn override cvs.eclass defaults
-	inherit cvs
-	
 	cvs_src_unpack
 
 	# subdirs of kde modules get special treatment that is designed for
