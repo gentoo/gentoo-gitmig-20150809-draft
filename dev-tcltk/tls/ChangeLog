@@ -1,6 +1,6 @@
 # ChangeLog for dev-tcltk/tls
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.6 2004/04/14 11:32:38 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.7 2004/06/25 02:11:09 agriffis Exp $
 
 *tls-1.5.0 (04 Apr 2004)
 

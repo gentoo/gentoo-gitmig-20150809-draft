@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-debug/tcl-debug-2.0.ebuild,v 1.3 2004/04/14 11:32:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-debug/tcl-debug-2.0.ebuild,v 1.4 2004/06/25 02:08:19 agriffis Exp $
 
 DESCRIPTION="TCL debug library"
 HOMEPAGE="http://expect.nist.gov"
