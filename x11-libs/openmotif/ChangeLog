@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.64 2005/02/01 18:27:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.65 2005/02/02 10:16:30 lanius Exp $
+
+  02 Feb 2005; Heinrich Wendel <lanius@gentoo.org> openmotif-2.2.3.ebuild:
+  stable on amd64 and x86
 
   01 Feb 2005; Heinrich Wendel <lanius@gentoo.org> openmotif-2.1.30-r4.ebuild,
   openmotif-2.1.30-r5.ebuild, openmotif-2.1.30-r6.ebuild,
