@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/peksystray
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.1 2004/01/10 17:55:15 taviso Exp $
+
+*peksystray-0.2 (10 Jan 2004)
+
+  10 Jan 2004; Tavis Ormandy <taviso@gentoo.org> peksystray-0.2.ebuild,
+  files/peksystray-gcc3-mlsl.diff:
+  Initial import.
+
