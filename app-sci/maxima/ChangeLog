@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/maxima
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/ChangeLog,v 1.4 2003/09/21 06:36:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/ChangeLog,v 1.5 2003/10/05 23:33:48 mkennedy Exp $
+
+*maxima-5.9.0-r2 (05 Oct 2003)
+
+  05 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> maxima-5.9.0-r2.ebuild:
+  use cmucl and not cmucl-bin (now masked)
 
   21 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> maxima-5.9.0-r1.ebuild:
   depend on virtual/emacs, not app-editors/emacs
