@@ -1,11 +1,14 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.32 2002/12/17 19:37:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.33 2002/12/23 04:40:07 woodchip Exp $
+
+  22 Dec 2002; Donny Davies <woodchip@gentoo.org> mod_php-4.2.3-r2.ebuild :
+  #12582 fix apache2 DEPEND.
+
+  16 Dec 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.3-r2.ebuild :
+  Unmasked -r2 for production. Should fix many bugs in the bug tracker.
 
 *mod_php-4.2.3-r2 (13 Dec 2002)
-
-  16 Dec 2002; Ryan Phillips <rphillips@gentoo.org> : Unmasked -r2 for production. Should
-  fix many bugs in the bug tracker.
 
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> mod_php-4.2.3-r2.ebuild :
   Add alpha to KEYWORDS
