@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.3.ebuild,v 1.1 2004/02/19 23:39:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.3-r1.ebuild,v 1.1 2004/02/22 16:55:36 plasmaroo Exp $
 
 ETYPE="headers"
 inherit kernel

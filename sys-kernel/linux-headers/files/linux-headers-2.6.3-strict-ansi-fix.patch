@@ -47,3 +47,13 @@
  
  #endif /* __ASSEMBLY__ */
  
+--- linux-2.6.3/include/linux/byteorder/swab.h	2004-02-20 00:20:05.000000000 +0000
++++ linux-2.6.3/include/linux/byteorder/swab.h	2004-02-22 16:47:24.000000000 +0000
+@@ -15,6 +15,7 @@
+  *
+  */
+ 
++#define __attribute_const__	__attribute__((__const__))
+ #include <linux/compiler.h>
+ 
+ /* casts are necessary for constants, because we never know how for sure
