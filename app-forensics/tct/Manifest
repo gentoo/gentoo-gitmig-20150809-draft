@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12a96a82c2d277df39339cff0239efcd tct-1.15.ebuild 2340
-MD5 bbb3a816c2282f8cc86226f8c19af58d ChangeLog 546
+MD5 cb8811daa102701312ef7b47cac69e38 ChangeLog 624
 MD5 41bbb72e2d5a56f8446b18931f49c48a metadata.xml 236
-MD5 c0948c285663f6861c03580bdd352d61 files/tct-1.15-gentoo.diff 5214
+MD5 1bb4a5dbd19cd3607064aaad65cab831 tct-1.15.ebuild 2343
 MD5 149e3bd10ce891ee1dd2ad2522a705f0 files/digest-tct-1.15 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBSrUTEZCkKN40op4RAs1iAJ9HIvl1L4kbjePl4ndNGCQq82WKEQCcDEwj
-UCOu9t31YKSC0rCduqJo4MI=
-=xmbr
------END PGP SIGNATURE-----
+MD5 c0948c285663f6861c03580bdd352d61 files/tct-1.15-gentoo.diff 5214
