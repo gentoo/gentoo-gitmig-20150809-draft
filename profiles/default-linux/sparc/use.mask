@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.4 2004/09/30 01:39:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.5 2004/10/01 22:07:21 kumba Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -16,7 +16,6 @@ icc
 icc-pgo
 informix
 firebird
-ladcca
 lirc
 mmx
 mmx2
@@ -33,12 +32,26 @@ wavelan
 
 # And arch keyword flags that don't work
 
-x86
-ppc
 alpha
-mips
-hppa
+amd64
 arm
+hppa
+ia64
+macos
+mips
+ppc
+ppc64
+ppc-macos
+s390
+sparc
+x86
+x86-obsd
+x86-fbsd
+
+# non-sparc arch things
+n32
+n64
+cobalt
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
