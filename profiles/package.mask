@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3437 2004/12/31 12:43:31 pvdabeel Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3438 2004/12/31 21:26:06 lisa Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <lisa@thedoh.com> (31 Dec 2004)
+# Masked for user testing.  Please see bug #75420.
+=sys-devel/distcc-2.18.3-r1
 
 # <swegener@gentoo.org> (31 Dec 2004)
 # pending removal, bug #75873
