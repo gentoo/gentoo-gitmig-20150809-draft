@@ -1,4 +1,5 @@
 MD5 e8b3be8178ebda460713a4d7f7425673 kdenetwork-3.1.5.ebuild 906
+MD5 0f378183d4ddba8467d9301adf2d3d62 kdenetwork-3.2.3.ebuild 1183
 MD5 dbc0744d0a778115c64b37fc1bacbc8d kdenetwork-3.2.0.ebuild 1191
 MD5 6434f979a0684d26aafbf70ac401c6ca kdenetwork-3.3.0_alpha1.ebuild 1174
 MD5 3cad5b75b55d5bd8f71d8b5d51fab181 kdenetwork-3.2.2.ebuild 1282
@@ -15,3 +16,4 @@ MD5 419e4285f4c61e2c2f5cb24cfc3c6145 files/digest-kdenetwork-3.1.5 70
 MD5 62110957dfcdb489a410148cb79839e1 files/digest-kdenetwork-3.2.0 70
 MD5 5aa146ff883f3e9d94f1738db6a9cffd files/digest-kdenetwork-3.2.1 70
 MD5 804c7026171e401cf3733ba8e6987461 files/digest-kdenetwork-3.2.2 70
+MD5 72eca9b8637e868d730399e0becc045d files/digest-kdenetwork-3.2.3 70
