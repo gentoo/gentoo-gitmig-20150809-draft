@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3a83c522533d19a9c8dcd67117da133a ChangeLog 13775
 MD5 799733f5421ef60964d6df8062dfc7b3 metadata.xml 345
 MD5 0c3875dbbf24769f41112c81884dd167 sylpheed-claws-0.9.5-r1.ebuild 4653
 MD5 a3de6ffc8b84e8a73c4d05d36cca26fc sylpheed-claws-0.9.7.ebuild 4671
 MD5 c202d606b7849eb66051fde72ab80fbd sylpheed-claws-0.9.8.ebuild 4660
 MD5 9c0d5251ea553c93eeaeb0fae7698261 sylpheed-claws-0.9.9.ebuild 3755
-MD5 dfc3c4ebcdb56f703f6f6acd61f99df4 sylpheed-claws-0.9.10.ebuild 3763
+MD5 8f6c8ae36668899da79a591cb095a490 sylpheed-claws-0.9.10.ebuild 3764
 MD5 e5a1953a555e8060722cada98b9d55fb files/digest-sylpheed-claws-0.9.10 149
 MD5 1e7e11ae4e8aba685f25aa113e70e1b5 files/digest-sylpheed-claws-0.9.5-r1 234
 MD5 a44580928f3fa901eb944e739c070d44 files/digest-sylpheed-claws-0.9.7 148
@@ -13,3 +16,10 @@ MD5 0c86a50615c61f5a6d26d90b598e898e files/digest-sylpheed-claws-0.9.9 148
 MD5 82d3d3968bf15e87b2fc7b5b53c42277 files/gv-procmime-Makefile.in.patch 930
 MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
 MD5 debd84fa61847ff672e179bcb7845e2b files/sylpheed-0.8.3claws32-dillo.patch 9123
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFAu5m26J2i8a8J4okRAtKbAJ9c0sDF1dHc6rNxDr2ENxpIyAFnCgCgr7O6
+H/C+HjNv1kJ+TMiJ0Oiw0Y8=
+=y/8e
+-----END PGP SIGNATURE-----

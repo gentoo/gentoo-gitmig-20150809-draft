@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.10.ebuild,v 1.3 2004/05/31 20:43:06 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.10.ebuild,v 1.4 2004/05/31 20:45:03 genone Exp $
 
 IUSE="nls gnome xface dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -132,7 +132,7 @@ src_install() {
 	exeinto /usr/lib/${PN}/tools
 	doexe *.pl *.py *.rc *.conf gpg-sign-syl
 	doexe launch_firebird tb2sylpheed update-po uudec
-
+	
 	# install the ghostscipt-viewer plugin
 	if use pdflib; then
 		cd ${S2}
