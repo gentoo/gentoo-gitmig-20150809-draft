@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/gkrellsun
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/ChangeLog,v 1.3 2002/11/10 04:52:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/ChangeLog,v 1.4 2002/12/02 07:44:00 seemant Exp $
+
+*gkrellsun-0.9.1 (01 Dec 2002)
+
+  01 Dec 2002; Seemant Kulleen <seemant@gentoo.org> gkrellsun-0.9.1.ebuild
+  files/digest-gkrellsun-0.9.1 :
+
+  Version bump, which now works with gkrellmoon-0.5 for gkrellm2.  Thanks
+  to: ejwahl@cox.net (Erich Wahl) in bug #10837.
 
 *gkrellsun-0.9 (09 Nov 2002)
 
