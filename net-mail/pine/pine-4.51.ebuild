@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.51.ebuild,v 1.2 2003/01/03 20:05:51 mholzer Exp $
-
-IUSE="ssl ldap"
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.51.ebuild,v 1.3 2003/01/04 09:00:09 vapier Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
@@ -11,6 +9,11 @@ SRC_URI="ftp://ftp.cac.washington.edu/${PN}/${PN}${PV}.tar.bz2
 HOMEPAGE="http://www.washington.edu/pine/
 	http://www.math.washington.edu/~chappa/pine/patches/"
 
+SLOT="0"
+LICENSE="PICO"
+KEYWORDS="~x86 ~ppc ~sparc"
+IUSE="ssl ldap"
+
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/pam-0.72
@@ -18,14 +21,10 @@ DEPEND="virtual/glibc
 	ldap? ( net-nds/openldap )
 	net-www/lynx"
 
-SLOT="0"
-LICENSE="PICO"
-KEYWORDS="~x86 ~ppc ~sparc"
-
 inherit eutils
 
 src_unpack() {
-	unpack ${PN}${PV}.tar.gz
+	unpack ${PN}${PV}.tar.bz2
 	cd ${S}
 
 	epatch ${DISTDIR}/all.patch.gz	
@@ -122,4 +121,3 @@ src_install() {
 	docinto html/tech-notes
 	dodoc doc/tech-notes/*.html
 }
-
