@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.7 2003/12/18 22:46:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.8 2004/02/05 16:19:59 lu_zero Exp $
 
 inherit gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="http://usb.cs.tum.edu/download/usbutils/${P}.tar.gz
 	mirror://gentoo/usb.ids-${USB_IDS_VER}.gz"
 HOMEPAGE="http://usb.cs.tum.edu/"
 
-KEYWORDS="x86 amd64 ~ppc sparc hppa ~alpha"
+KEYWORDS="x86 amd64 ppc sparc hppa ~alpha"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
