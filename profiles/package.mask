@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# cardoe@gentoo.org (12 Jul 2002)
+# new beta of pcmcia-cs
+=sys-apps/pcmcia-cs-3.1.35_beta2
+
 # danarmak@gentoo.org (12 Jul 2002)
 # these are the kde 3.1 prereleases
 >=kde-base/arts-1.0.6
