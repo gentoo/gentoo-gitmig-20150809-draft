@@ -1,4 +1,6 @@
 MD5 63284515a02bc3c3f3ce2a5160339472 gomd-cvs-0.0_alpha.ebuild 756
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
+MD5 dd1a6893bd909db7b1509b773ca7510a gomd-cvs-0.1_beta1.ebuild 936
 MD5 c1986ab6b97c600261ceafcc3b1b20ec ChangeLog 578
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gomd-cvs-0.1_beta1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gomd-cvs-0.0_alpha 0
