@@ -1,4 +1,5 @@
 MD5 0c0b6d060bf91768fc5a6600d9e36f11 ChangeLog 4200
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b17539522ff46c3af691bc63bade57a7 man-pages-2.01.ebuild 639
+MD5 53aa866415d34b9b40621d8e26b2db13 man-pages-2.01.ebuild 743
+MD5 cb00c5586c2aeadb84d5bfe9071c0fe3 files/man-pages-2.01-updates.patch 1067
 MD5 8d8e3bbc41de361f3adf148da48a5844 files/digest-man-pages-2.01 68

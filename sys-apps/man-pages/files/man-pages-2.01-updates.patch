@@ -1,0 +1,51 @@
+Misc corrections/updates/etc...
+
+round.3          http://bugs.gentoo.org/show_bug.cgi?id=75221
+
+epoll_wait.2     http://bugs.gentoo.org/show_bug.cgi?id=58424
+
+ln.1             http://bugs.gentoo.org/show_bug.cgi?id=81949
+readlink.2       http://bugs.gentoo.org/show_bug.cgi?id=81949
+
+--- man3/round.3
++++ man3/round.3
+@@ -25,6 +25,8 @@
+ round, roundf, roundl \- round to nearest integer, away from zero
+ .SH SYNOPSIS
+ .nf
++.B #define _GNU_SOURCE
++.br
+ .B #include <math.h>
+ .sp
+ .BI "double round(double " x );
+--- man2/epoll_wait.2
++++ man2/epoll_wait.2
+@@ -96,6 +96,9 @@
+ .I epfd
+ is not a valid file descriptor.
+ .TP
++.B EINTR
++A signal occured before any requested events.
++.TP
+ .B EFAULT
+ The memory area pointed to by
+ .I events
+--- man1/ln.1
++++ man1/ln.1
+@@ -218,6 +218,7 @@
+ .BR link (2),
+ .BR lstat (2),
+ .BR open (2),
++.BR readlink (1),
+ .BR readlink (2),
+ .BR stat (2),
+ .BR unlink (2)
+--- man2/readlink.2
++++ man2/readlink.2
+@@ -105,5 +105,6 @@
+ .SH "SEE ALSO"
+ .BR lstat (2),
+ .BR path_resolution (2),
++.BR readlink (1),
+ .BR stat (2),
+ .BR symlink (2)
