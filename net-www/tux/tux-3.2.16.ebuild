@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tux/tux-3.2.16.ebuild,v 1.1 2004/02/21 21:13:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tux/tux-3.2.16.ebuild,v 1.2 2004/04/18 19:02:52 vapier Exp $
 
 DESCRIPTION="kernel level httpd"
 HOMEPAGE="http://people.redhat.com/mingo/TUX-patches/"
@@ -9,13 +9,18 @@ SRC_URI="http://people.redhat.com/mingo/TUX-patches/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE="doc"
 
-DEPEND="dev-libs/glib
+RDEPEND="dev-libs/glib
 	dev-libs/popt"
+DEPEND="${RDEPEND}
+	doc? ( app-text/docbook-sgml-utils )"
 
 src_unpack() {
 	unpack ${A}
-	sed -i "s:-g -fomit-frame-pointer -O2:${CFLAGS}:" ${S}/Makefile
+	cd ${S}
+	sed -i "s:-g -fomit-frame-pointer -O2:${CFLAGS}:" Makefile
+	use doc || echo "all:" > docs/Makefile
 }
 
 src_compile() {
