@@ -1,7 +1,0 @@
-MD5 3363bcf680d03df8548b3d8512594930 progsreiserfs-0.3.0.4.ebuild 972
-MD5 1eda5151d79c4587685cbbf78b232b94 ChangeLog 2046
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 c3dde442baee48e44cfe69525467b00c progsreiserfs-0.3.0.3.ebuild 995
-MD5 28dc8fad925d2a2f7b7be786f1e8e24c files/progsreiserfs-0.3.0.3-sparc-linux.diff 4837
-MD5 75294cbe3651dbef695bf07137ed95e5 files/digest-progsreiserfs-0.3.0.3 73
-MD5 97b4fea006b2a01f7a653f9c2b250108 files/digest-progsreiserfs-0.3.0.4 73
