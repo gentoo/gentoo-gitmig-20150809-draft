@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.13 2004/12/07 00:49:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.14 2004/12/09 02:42:38 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -39,7 +39,7 @@ fi
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
-	sys-devel/binutils-config
+	>=sys-devel/binutils-config-1.1
 	!build? ( !bootstrap? ( dev-lang/perl ) )"
 
 LIBPATH="/usr/lib/binutils/${CTARGET}/${PV}"
@@ -153,16 +153,7 @@ toolchain-binutils_src_install() {
 		mv "${D}"/${LIBPATH}/lib/* "${D}"/${LIBPATH}/
 		rm -r "${D}"/${LIBPATH}/lib
 	fi
-
-	# Now we generate all the standard links to binaries ...
-	# if this is a native package, we install the basic symlinks (ld,nm,as,etc...)
-	# in addition to the ${CTARGET}-{ld,nm,as,etc...} symlinks
-	cd "${D}"/${BINPATH}
-	dodir /usr/bin
-	for x in * ; do
-		dosym ../${CTARGET}/bin/${x} /usr/bin/${CTARGET}-${x}
-		is_cross || dosym ${CTARGET}-${x} /usr/bin/${x}
-	done
+	dodir /usr/${CTARGET}/{bin,include,lib}
 
 	# Generate an env.d entry for this binutils
 	cd ${S}
@@ -201,14 +192,19 @@ toolchain-binutils_pkg_postinst() {
 }
 
 toolchain-binutils_pkg_prerm() {
-	local curr=$(binutils-config -c)
-	[ "${curr}" != "${CTARGET}-${PV}" ] && return 0
+	local curr=$(env CHOST=${CTARGET} binutils-config -c)
+	[[ ${curr} != ${CTARGET}-${PV} ]] && return 0
 
 	# if user was so kind as to unmerge the version we have 
 	# active, then switch to another version
 	local choice=$(binutils-config -l | grep ${CTARGET} | grep -v ${CTARGET}-${PV})
 	choice=${choice/* }
-	[ -z "${choice}" ] && return 0
 
-	binutils-config ${choice}
+	# If no other versions exist, then uninstall for this 
+	# target ... otherwise, switch to the newest version
+	if [[ -z ${choice} ]] ; then
+		binutils-config -u ${CTARGET}
+	else
+		binutils-config ${choice}
+	fi
 }
