@@ -7,7 +7,6 @@ JAVA_HOME=/opt/@P@
 CLASSPATH=.:/opt/@P@/jre/lib:/opt/@P@/lib/tools.jar:/opt/@P@/jre/lib/rt.jar
 JDK_HOME=/opt/@P@
 JAVAC=${JAVA_HOME}/bin/javac
-LD_ASSUME_KERNEL=2.2.5
 ADDPATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin"
 ADDLDPATH="/opt/@P@/jre/lib"
 
