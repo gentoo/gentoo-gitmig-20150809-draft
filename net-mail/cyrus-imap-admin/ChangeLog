@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.29 2004/10/15 22:44:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.30 2004/11/01 18:02:24 langthang Exp $
+
+  01 Nov 2004; Tuan Van <langthang@gentoo.org> -files/2.1.14-db4.patch,
+  -files/cyrus-imap-admin-2.1.12-libwrap.patch,
+  -files/cyrus-imap-admin-2.2.3-fPIC.patch,
+  -files/cyrus-imapd-2.1.12-includepath.patch,
+  -files/cyrus-imapd-2.2.3-db4.patch, -cyrus-imap-admin-2.1.12.ebuild,
+  -cyrus-imap-admin-2.1.13.ebuild, -cyrus-imap-admin-2.1.14.ebuild,
+  -cyrus-imap-admin-2.2.3.ebuild:
+  remove old ebuilds.
 
   16 Oct 2004; Guy Martin <gmsoft@gentoo.org> cyrus-imap-admin-2.2.8.ebuild:
   Stable on hppa.
