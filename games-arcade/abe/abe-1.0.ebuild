@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/abe-1.0.ebuild,v 1.1 2004/05/30 07:22:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/abe-1.0.ebuild,v 1.2 2004/06/03 14:26:50 dholm Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/abe/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2.3
