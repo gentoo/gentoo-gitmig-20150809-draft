@@ -1,9 +1,18 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.204 2005/01/31 03:31:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.205 2005/01/31 23:15:25 vapier Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.9-r1 (31 Jan 2005)
+
+  31 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/rc-scripts-1.6.9-checkfs-lvm.patch,
+  +files/rc-scripts-1.6.9-domainname.patch,
+  +files/rc-scripts-1.6.9-ifconfig.patch, +baselayout-1.11.9-r1.ebuild:
+  Version bump to fix #80183 (ifconfig debug) / #80206 (lvm logic error) / 
+  #80174 (domainname quote fix) / #80189 (don't install X related dirs).
 
 *baselayout-1.11.9 (30 Jan 2005)
 

@@ -1,0 +1,16 @@
+Index: init.d/checkfs
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/init.d/checkfs,v
+retrieving revision 1.43
+diff -u -r1.43 checkfs
+--- init.d/checkfs
++++ init.d/checkfs
+@@ -149,7 +149,7 @@
+ 	#       to /etc/modules.autoload if needed
+ 
+ 	if [[ -z ${CDBOOT} && -x /sbin/vgscan ]] && \
+-	   [[ -d /proc/lvm || -n $(grep -qo device-mapper /proc/misc) ]]
++	   [[ -d /proc/lvm || -n $(grep -o device-mapper /proc/misc) ]]
+ 	then
+ 		ebegin "Setting up the Logical Volume Manager"
+ 		#still echo stderr for debugging

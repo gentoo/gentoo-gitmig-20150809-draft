@@ -1,0 +1,10 @@
+--- lib/rcscripts/net.modules.d/ifconfig
++++ lib/rcscripts/net.modules.d/ifconfig
+@@ -317,7 +317,6 @@
+ 		config=( "${config[@]//peer/pointtopoint}" )
+ 	fi
+ 
+-	ewarn "ifconfig ${iface} ${config[@]}"
+ 	ifconfig ${iface} ${config[@]} &>${devnull}
+ 	eend $?
+ 	return $?

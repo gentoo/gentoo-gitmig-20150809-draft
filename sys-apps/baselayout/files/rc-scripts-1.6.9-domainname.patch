@@ -1,0 +1,10 @@
+Index: init.d/domainname
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/init.d/domainname,v
+retrieving revision 1.8.4.1
+diff -U0 -r1.8.4.1 domainname
+--- init.d/domainname
++++ init.d/domainname
+@@ -50 +50 @@
+-			&& resolv=${resolv}"$'\n'"domain ${DNSDOMAIN} \
++			&& resolv="${resolv}"$'\n'"domain ${DNSDOMAIN}" \
