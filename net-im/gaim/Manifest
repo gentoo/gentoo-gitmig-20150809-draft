@@ -4,12 +4,14 @@ MD5 b3e470f59582b9b3379db2326e647e77 gaim-0.72-r2.ebuild 3331
 MD5 a45de72081c78f61dfc3c17285997f7c gaim-0.75-r2.ebuild 3505
 MD5 4a8680f8755cca3c465dc0e05bca0c23 gaim-0.75.ebuild 3918
 MD5 78be5b331aa107c0ef01b5252eb8c87e gaim-0.72-r1.ebuild 2890
+MD5 5dab78b7ad081f7e483ec1669ab86213 gaim-0.75-r4.ebuild 3177
 MD5 cecb719b31af4ea5759fffa397de52be gaim-0.72.ebuild 2508
 MD5 9b0c0eb504517576c7d18406c8c52324 gaim-0.74-r2.ebuild 3858
 MD5 456550d7203f82316e7e598a7655c2fa gaim-0.75-r1.ebuild 3505
 MD5 3baeac8c9a4dd1acfbc0dcd8fd369ce7 ChangeLog 19715
 MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
 MD5 80a22e998261eddcd12f4b93c227bd55 gaim-0.75-r3.ebuild 3116
+MD5 4989dc76d941288934c783f52931762d files/gaim-0.75-static-prpls.patch 3710
 MD5 5993641de8d56c2c433f252997c3c39c files/digest-gaim-0.67 135
 MD5 e6a8773cabdf14d7422e573723258437 files/digest-gaim-0.72 135
 MD5 8b152d59a54ab95627c4c0cd52758d75 files/digest-gaim-0.75 63
@@ -23,6 +25,7 @@ MD5 24bfb2bbc9bef27fcc0f46639504b1c5 files/digest-gaim-0.74-r2 135
 MD5 5dfa9d1c61bf3d41a3e3c1bcc76d6683 files/digest-gaim-0.75-r1 135
 MD5 d7f0521da721e6b5698c638c57dc50b3 files/digest-gaim-0.75-r2 135
 MD5 8b152d59a54ab95627c4c0cd52758d75 files/digest-gaim-0.75-r3 63
+MD5 8b152d59a54ab95627c4c0cd52758d75 files/digest-gaim-0.75-r4 63
 MD5 3eb868476154d28a1123ee91e41fef95 files/gaim-0.72-msn-fixes.patch 1671
 MD5 53302cc68bb7bef9803723e977010339 files/gaim-0.74_cjk_gtkconv.patch 1128
 MD5 97fa7a76f6bc96c363844ccc57b2bec4 files/gaim_gtkimcontext_patch.diff 1106
