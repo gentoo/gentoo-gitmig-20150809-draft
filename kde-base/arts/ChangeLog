@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.38 2003/03/14 21:34:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.39 2003/03/17 03:32:27 gerk Exp $
 
   14 Mar 2003; Dan Armak <danarmak@gentoo.org> arts-1.0.5a.ebuild:
   
@@ -13,6 +13,9 @@
   version bump
 
 *arts-1.1.0-r1 (11 Mar 2003)
+
+  16 Mar 2003; Mark Guertin <gerk@gentoo.org> arts-1.1.0-r1.ebuild:
+  set ppc in keywords
 
   11 Mar 2003; Dan Armak <danarmak@gentoo.org> arts-1.1.0-r1.ebuild:
   Fix bug #16329 (arts not added to paths without kdelibs); goes together

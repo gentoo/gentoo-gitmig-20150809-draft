@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.65 2003/03/14 21:33:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.66 2003/03/17 03:32:51 gerk Exp $
 
   14 Mar 2003; Dan Armak <danarmak@gentoo.org> kdelibs-3.0.5a-r1.ebuild:
   
@@ -20,6 +20,10 @@
   version bump
 
 *kdelibs-3.1-r3 (11 Mar 2003)
+
+  16 Mar 2003; Mark Guertin <gerk@gentoo.org> kdelibs-3.1-r2.ebuild,
+  kdelibs-3.1-r3.ebuild:
+  set ppc in keywords
 
   10 Mar 2003; Dan Armak <danarmak@gentoo.org>
   Fix bug #16329: make arts work without kdelibs installed. Goes together
