@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.3 2003/09/06 22:21:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.4 2003/09/20 06:36:02 obz Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -50,6 +50,13 @@ src_compile() {
 	fi
 
 	export WANT_AUTOCONF_2_5=1
+
+	# Aiksaurus.h fix, see bug #27648, by brandy.
+	# <obz@gentoo.org>
+	einfo "Checking for local Aiksaurus.h"
+	[ -f /usr/include/Aiksaurus/Aiksaurus.h ] \
+		&& myconf="${myconf} --with-extra-inc=/usr/include/Aiksaurus" \
+		|| die "Missing Aiksaurus.h, please remerge app-text/aiksaurus"
 
 	local flags="${CFLAGS}"
 	unset CFLAGS
