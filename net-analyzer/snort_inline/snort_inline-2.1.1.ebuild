@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/snort_inline-2.1.1.ebuild,v 1.4 2004/07/01 20:19:11 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/snort_inline-2.1.1.ebuild,v 1.5 2004/07/05 12:20:02 eldad Exp $
 
 inherit eutils
 
@@ -50,14 +50,20 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
+	local myconf
+
+	if [ -r /usr/include/libipq/libipq.h ]; then
+		myconf="${myconf} --with-libipq-includes=/usr/include/libipq/"
+	fi
+
+	econf 	${myconf} \
 		`use_with postgres postgresql` \
 		`use_with mysql` \
 		`use_with ssl openssl` \
 		--without-odbc \
-		--without-oracle || die "bad ./configure"
+		--without-oracle || die "configure failed"
 
-	emake || die "compile problem"
+	emake || die "make failed"
 }
 
 src_install() {
