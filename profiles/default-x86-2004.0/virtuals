@@ -60,3 +60,4 @@ virtual/blas			app-sci/blas-atlas
 virtual/lapack		app-sci/lapack-atlas
 virtual/squeak-image		dev-lang/squeak-fullimage
 virtual/m3			dev-lang/cm3
+virtual/mailx		mail-client/mailx
