@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/inform-mode/inform-mode-1.5.8.ebuild,v 1.7 2004/06/01 14:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/inform-mode/inform-mode-1.5.8.ebuild,v 1.8 2004/06/15 08:37:13 kloeri Exp $
 
 inherit elisp
 
@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND="virtual/emacs"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 
