@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/pam_ldap
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.21 2004/12/29 03:23:40 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.22 2005/02/05 11:03:31 hansmi Exp $
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> pam_ldap-176.ebuild:
+  Stable on ppc.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
