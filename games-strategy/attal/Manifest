@@ -1,7 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0b7c1ee7844e639c75b9045ef0a14572 ChangeLog 877
-MD5 1e855a92fd714a0763ca6ede2ff89491 attal-0.7.2.ebuild 1621
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 6453017c524d5ed4040b05033028a16e attal-0.8.1.ebuild 1813
-MD5 b6f808586a9be2641f19b2cfe2cbf02b files/digest-attal-0.7.2 135
-MD5 bc43ed577df6439f1a168a4441031b6c files/0.8.1-gcc34.patch 436
 MD5 6df2fe25a4131a625a23b8d59a92ee76 files/digest-attal-0.8.1 135
+MD5 bc43ed577df6439f1a168a4441031b6c files/0.8.1-gcc34.patch 436
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB2benroRuSHgZdywRAus/AKCIKvs6cliEveEubALeGp/3n+ES9wCfYi5X
++xLAsaJylnAiH86yyhWhMbM=
+=2IjR
+-----END PGP SIGNATURE-----
