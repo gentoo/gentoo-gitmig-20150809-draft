@@ -1,4 +1,14 @@
-MD5 544131817e670c20f3bb47ea7f5d421b Video-ivtv-0.12.ebuild 514
-MD5 d41d8cd98f00b204e9800998ecf8427e ChangeLog 0
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c2e5a1788763e1021b1c00f81de539ea Video-ivtv-0.12.ebuild 513
+MD5 cbeefeca76444d3a16fa132fa8b32415 ChangeLog 357
 MD5 212f198236ed9fef7b10b46f8cb80c63 metadata.xml 446
 MD5 df835568a06a56e572bdc9aea81b520d files/digest-Video-ivtv-0.12 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcD55MSkoRwEucGERAjX2AJ4uiAWzi5tchHW+MK4UXM/GfLDpcACaAlIT
+UgawZI+0ByzhopO2RMf2PhU=
+=deO/
+-----END PGP SIGNATURE-----
