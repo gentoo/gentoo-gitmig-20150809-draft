@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.17 2002/11/30 00:50:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.18 2002/11/30 00:59:38 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -13,9 +13,9 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_postinst
 
 export GAMES_PREFIX="/usr/games"
-export GAMES_PREFIX_OPT="/opt/${PN}"
-export GAMES_DATADIR="/usr/share/games/${PN}"
-export GAMES_SYSCONFDIR="/etc/games/${PN}"
+export GAMES_PREFIX_OPT="/opt"
+export GAMES_DATADIR="/usr/share/games"
+export GAMES_SYSCONFDIR="/etc/games"
 export GAMES_STATEDIR="/var/games"
 export GAMES_LIBDIR="/usr/games/lib"
 export GAMES_BINDIR="/usr/games/bin"
@@ -30,8 +30,8 @@ egamesconf() {
 			--host=${CHOST} \
 			--mandir=/usr/share/man \
 			--infodir=/usr/share/info \
-			--datadir=${GAMES_DATADIR} \
-			--sysconfdir=${GAMES_SYSCONFDIR} \
+			--datadir=${GAMES_DATADIR}/${PN} \
+			--sysconfdir=${GAMES_SYSCONFDIR}/${PN} \
 			--localstatedir=${GAMES_STATEDIR} \
 			"$@" || die "egamesconf failed"
 	else
@@ -44,8 +44,8 @@ egamesinstall() {
 		make prefix=${D}${GAMES_PREFIX} \
 		    mandir=${D}/usr/share/man \
 		    infodir=${D}/usr/share/info \
-		    datadir=${D}${GAMES_DATADIR} \
-		    sysconfdir=${D}${GAMES_SYSCONFDIR} \
+		    datadir=${D}${GAMES_DATADIR}/${PN} \
+		    sysconfdir=${D}${GAMES_SYSCONFDIR}/${PN} \
 		    localstatedir=${D}${GAMES_STATEDIR} \
 		    "$@" install || die "einstall failed"
 	else
