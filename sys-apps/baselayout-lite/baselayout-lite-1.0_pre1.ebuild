@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.1 2004/02/23 03:19:56 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.2 2004/02/27 20:21:45 pebenito Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ KEYWORDS="-*"
 S="${WORKDIR}/${PN}"
 
 src_install() {
-	keepdir /bin /etc /etc/init.d /home /lib /sbin /usr /var /proc /root
+	keepdir /bin /etc /etc/init.d /home /lib /sbin /usr /var /proc /root /mnt
 
 	insinto /etc
 	doins ${S}/{fstab,group,nsswitch.conf,passwd,profile.env,protocols,shells}
