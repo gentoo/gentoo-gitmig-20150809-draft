@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.17 2004/11/01 19:27:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.18 2004/12/29 19:52:05 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Nov 2004; Mike Frysinger <vapier@gentoo.org> knock-0.3.1.ebuild:
   Fix broken patching.
@@ -28,7 +31,7 @@
   18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> knock-0.3.ebuild:
   Added amd64 keyword, closing #57090.
 
-  12 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> knock-0.1.ebuild,
+  12 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> knock-0.1.ebuild,
   knock-0.3.ebuild:
   Remove whitespace from CVS header to make repoman happy.
 

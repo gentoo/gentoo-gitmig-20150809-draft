@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/zebedee
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.8 2004/06/25 00:21:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.9 2004/12/29 20:19:16 ciaranm Exp $
 
-  08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> zebedee-2.5.2.ebuild:
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  08 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> zebedee-2.5.2.ebuild:
   Stable on alpha.
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> zebedee-2.5.2.ebuild:

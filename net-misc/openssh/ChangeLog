@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.107 2004/12/29 15:04:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.108 2004/12/29 20:01:54 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   openssh-3.9_p1-r1.ebuild:
@@ -96,7 +99,7 @@
   + Added sftp-logging patch, closing #52168.
   + Added patch for large keys, closing #55013.
 
-  08 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  08 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   openssh-3.8.1_p1-r1.ebuild:
   Stable on alpha.
 
@@ -117,7 +120,7 @@
   15 Jun 2004; <solar@gentoo.org> openssh-3.8.1_p1-r1.ebuild:
   pam & uclibc updates
 
-  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> openssh-3.8.1_p1.ebuild:
+  07 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> openssh-3.8.1_p1.ebuild:
   Stable on alpha.
 
   05 Jun 2004; Hanselmann Michael <hansmi@gentoo.org>

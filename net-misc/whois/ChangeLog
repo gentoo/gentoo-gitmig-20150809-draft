@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.42 2004/10/16 18:32:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.43 2004/12/29 20:16:50 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *whois-4.6.22 (16 Oct 2004)
 
@@ -27,7 +30,7 @@
   whois-4.6.6-r2.ebuild, whois-4.6.9.ebuild:
   change virtual/glibc to virtual/libc
 
-  08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> whois-4.6.13.ebuild:
+  08 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> whois-4.6.13.ebuild:
   Stable on alpha.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> whois-4.6.13.ebuild,

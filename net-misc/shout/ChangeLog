@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/shout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/ChangeLog,v 1.11 2004/11/05 23:52:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/ChangeLog,v 1.12 2004/12/29 20:10:05 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   06 Nov 2004; Chris White <chriswhite@gentoo.org> shout-0.8.0-r2.ebuild:
   Changed http://www.icecast.org to http://icecast.org for the SRC_URI per bug
@@ -14,7 +17,7 @@
   Added metadata.xml. Fixed some install problems thanks to Alexander Gretencord
   <arutha@gmx.de> in bug #57389.
 
-  08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> shout-0.8.0-r1.ebuild,
+  08 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> shout-0.8.0-r1.ebuild,
   shout-0.8.0.ebuild:
   Fix compilation failure caused by upstream packaging a .o file.. Bugfix by
   Olaf Freyer <aaron@cs.tu-berlin.de>

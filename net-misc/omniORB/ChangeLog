@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.31 2004/12/17 20:20:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.32 2004/12/29 20:00:37 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Dec 2004; Markus Rothe <corsair@gentoo.org> omniORB-4.0.4.ebuild:
   Stable on ppc64
@@ -25,7 +28,7 @@
 
 *omniORB-4.0.0 (24 Jul 2004)
 
-  24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> +omniORB-4.0.0.ebuild:
+  24 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +omniORB-4.0.0.ebuild:
   Restore omniORB-4.0.0.
 
   23 Jul 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
@@ -33,7 +36,7 @@
   marked stable on x86, removed older 4.x ebuilds, thanks @ Bryan to volunteer
   as maintainer
 
-  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> omniORB-4.0.3.ebuild:
+  07 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> omniORB-4.0.3.ebuild:
   Stable on alpha.
 
   22 May 2004; Luca Barbato <lu_zero@gentoo.org> omniORB-4.0.3.ebuild:
@@ -52,12 +55,12 @@
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> omniORB-4.0.3.ebuild:
   add ~alpha and ~ia64 for the sake of dev-util/eric
 
-  16 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> omniORB-4.0.2.ebuild:
+  16 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> omniORB-4.0.2.ebuild:
   Mark omniORB-4.0.2 x86.
 
 *omniORB-4.0.3 (15 Dec 2003)
 
-  15 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> omniORB-4.0.3.ebuild:
+  15 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> omniORB-4.0.3.ebuild:
   Version bump.
 
 *omniORB-4.0.2 (03 Oct 2003)

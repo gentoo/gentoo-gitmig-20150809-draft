@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.35 2004/10/14 14:32:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.36 2004/12/29 20:13:08 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> stunnel-3.26.ebuild:
   Added to ~ppc-macos.
@@ -8,7 +11,7 @@
   22 Aug 2004; Jason Wever <weeve@gentoo.org> stunnel-4.05.ebuild:
   Stable on sparc.
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> stunnel-4.05.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> stunnel-4.05.ebuild:
   Stable on alpha.
 
   18 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> files/stunnel.conf.4.05,
@@ -33,7 +36,7 @@
   Version bump found by Daniel Webert <daniel_webert@web.de> in #53519. Added
   metadata.xml.
 
-  08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> stunnel-4.04-r3.ebuild:
+  08 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> stunnel-4.04-r3.ebuild:
   Stable on alpha.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> stunnel-4.04-r3.ebuild:

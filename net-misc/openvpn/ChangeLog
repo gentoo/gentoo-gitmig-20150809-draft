@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.21 2004/12/18 11:50:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.22 2004/12/29 20:02:56 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> openvpn-1.6.0.ebuild:
   added ~amd64
@@ -17,7 +20,7 @@
   02 Oct 2004; Joshua Charles Campbell <warpzero@gentoo.org> openvpn-1.6.0.ebuild:
   Version bump
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> openvpn-1.5.0-r1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> openvpn-1.5.0-r1.ebuild:
   Keyword ~alpha, bug 65839.
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> openvpn-1.1.0.ebuild,

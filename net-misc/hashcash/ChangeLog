@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hashcash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.8 2004/11/30 04:55:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.9 2004/12/29 19:49:25 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *hashcash-1.13 (30 Nov 2004)
 
@@ -8,7 +11,7 @@
   +hashcash-1.13.ebuild:
   Version bump, bug 71217.
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> hashcash-1.02.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> hashcash-1.02.ebuild:
   Move binary to /usr/bin and bump to stable.
 
   30 Aug 2004; David Holm <dholm@gentoo.org> hashcash-1.02.ebuild:
@@ -16,7 +19,7 @@
 
 *hashcash-1.02 (18 Aug 2004)
 
-  18 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> +hashcash-1.02.ebuild:
+  18 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +hashcash-1.02.ebuild:
   Bump version.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> hashcash-0.27.ebuild:

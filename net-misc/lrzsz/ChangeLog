@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lrzsz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.16 2004/11/20 12:10:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.17 2004/12/29 19:54:00 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Nov 2004; Daniel Black <dragonheart@gentoo.org> lrzsz-0.12.20-r1.ebuild:
   ppc stable as per bug #71817
@@ -20,7 +23,7 @@
   lrzsz-0.12.20-r1.ebuild:
   Stable on alpha, bug 36133.
 
-  15 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> lrzsz-0.12.20-r1.ebuild:
+  15 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> lrzsz-0.12.20-r1.ebuild:
   Add ~alpha keyword.
 
   11 Sep 2004; Guy Martin <gmsoft@gentoo.org> lrzsz-0.12.20-r1.ebuild:
