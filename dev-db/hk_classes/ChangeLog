@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/hk_classes
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.10 2003/12/27 16:22:05 caleb Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.11 2004/03/15 14:22:28 caleb Exp $
+
+*hk_classes-0.6.3_alpha3 (15 Mar 2004)
+
+  15 Mar 2004; Caleb Tennis <caleb@gentoo.org> hk_classes-0.6.3_alpha3.ebuild:
+  Version bump
 
 *hk_classes-0.6.3_alpha1 (27 Dec 2003)
 
