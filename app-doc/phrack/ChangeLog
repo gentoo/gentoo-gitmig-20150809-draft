@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/phrack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.7 2004/06/24 21:49:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.8 2004/07/14 01:48:19 vapier Exp $
 
 *phrack-* (11 Feb 2003)
 
@@ -68,3 +68,4 @@
 *phrack-59 (11 Feb 2003)
 *phrack-60 (11 Feb 2003)
 *phrack-61 (11 Feb 2003)
+*phrack-62 (11 Feb 2003)

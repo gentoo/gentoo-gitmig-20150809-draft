@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack-all/phrack-all-61.ebuild,v 1.3 2004/06/24 21:49:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack-all/phrack-all-62.ebuild,v 1.1 2004/07/14 01:50:30 vapier Exp $
 
 MY_P=${PN}${PV}
 DESCRIPTION="...a Hacker magazine by the community, for the community... (this will install *all* issues of phrack)"
@@ -74,4 +74,5 @@ RDEPEND="
 	=app-doc/phrack-59
 	=app-doc/phrack-60
 	=app-doc/phrack-61
+	=app-doc/phrack-62
 	"
