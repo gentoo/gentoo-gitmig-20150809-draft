@@ -1,0 +1,22 @@
+# ChangeLog for sys-apps/nvram-wakeup
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/ChangeLog,v 1.1 2005/03/14 22:22:57 ciaranm Exp $
+
+*nvram-wakeup-0.97-r1 (14 Mar 2005)
+
+  14 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/nvram-wakeup-0.97-nonls.patch, +metadata.xml,
+  +nvram-wakeup-0.97-r1.ebuild:
+  Moved from sys-apps/nvram-wakeup to sys-power/nvram-wakeup.
+
+*nvram-wakeup-0.97-r1 (12 Mar 2005)
+
+  12 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/nvram-wakeup-0.97-nonls.patch, +nvram-wakeup-0.97-r1.ebuild,
+  -nvram-wakeup-0.97.ebuild:
+  Clean up ebuild #47162 Stefan Briesenick.
+
+*nvram-wakeup-0.97 (08 Oct 2004)
+
+  08 Oct 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Stefan Briesenick/Carsten Lohrke #47162.
