@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r5.ebuild,v 1.1 2003/02/26 11:39:27 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r5.ebuild,v 1.2 2003/02/26 12:06:21 carpaski Exp $
 
 IUSE="build"
 
@@ -245,8 +245,10 @@ pkg_postinst() {
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
 
 	cd /sbin/
-	patch -sf < ${FILESDIR}/functions.sh.diff &>/dev/null
-	rm -f functions.sh~ functions.sh.rej
+	if [ -f "${FILESDIR}/functions.sh.diff" ]; then
+		patch -sf < ${FILESDIR}/functions.sh.diff &>/dev/null
+		rm -f functions.sh~ functions.sh.rej
+	fi
 	cd ${S}
 
 }
