@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-	<email>pythonhead@gentoo.org</email>
-	<description>curses interface to the GNU debugger</description>
-</maintainer>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>pythonhead@gentoo.org</email>
+		<name>Rob Cakebread</name>
+	</maintainer>
+	<longdescription>curses interface to gdb, the GNU debugger</longdescription>
 </pkgmetadata>

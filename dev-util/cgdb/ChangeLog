@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cgdb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.4 2004/08/03 19:21:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.5 2004/08/28 06:47:12 pythonhead Exp $
+
+  27 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> metadata.xml,
+  cgdb-0.4.1.ebuild:
+  Marked stable x86
 
   03 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> cgdb-0.4.1.ebuild:
   Added -j1 to emake. Thanks Aaron Walker for the fix. bug
