@@ -6,13 +6,13 @@ MD5 4b19a0ae01c3c38b2e3bf6829c528ee0 multitail-3.4.1.ebuild 841
 MD5 e759ceec140c08f561663c4283e70f62 ChangeLog 2216
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 eb8a5c8e1a126a8e935588e346134806 multitail-3.4.3.ebuild 842
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-multitail-3.0.6 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-multitail-3.4.1 0
+MD5 a2b15786902a65e70fbf571cc9681168 files/digest-multitail-3.0.6 63
+MD5 0fe2c8f86631c227b4945c0f4d6cdf76 files/digest-multitail-3.4.1 63
 MD5 59e4338cd023999f19610f9a5d2e50f7 files/digest-multitail-3.4.3 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB5mTqEZCkKN40op4RAmtBAKCDWLErFeGVV4jfDuHYOevD2hnOcACfcNrD
-ggKVam9nMZi/48DFxbUAL+0=
-=6cf6
+iD8DBQFB5ofMI1lqEGTUzyQRAkrBAJ98oL4AYbD1pkVpJ1ZPuLdGsAKsKQCgtgVi
+n7g/WVXEqEct1pLNYZFgmLU=
+=At8d
 -----END PGP SIGNATURE-----
