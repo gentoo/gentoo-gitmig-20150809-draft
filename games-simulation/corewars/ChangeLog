@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/corewars
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/corewars/ChangeLog,v 1.4 2004/06/24 23:22:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/corewars/ChangeLog,v 1.5 2004/07/01 11:23:52 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  corewars-0.9.12.ebuild, corewars-0.9.13-r1.ebuild, corewars-0.9.13.ebuild:
+  virtual/glibc -> virtual/libc
 
 *corewars-0.9.13-r1 (02 Feb 2004)
 

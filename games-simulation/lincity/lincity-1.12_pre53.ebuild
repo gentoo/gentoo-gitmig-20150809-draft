@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12_pre53.ebuild,v 1.5 2004/06/24 23:22:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12_pre53.ebuild,v 1.6 2004/07/01 11:24:07 eradicator Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="X svga"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	|| (
 		svga? ( media-libs/svgalib )
 		X? ( virtual/x11 )
