@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.0-r2.ebuild,v 1.1 2003/04/06 07:58:02 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.0-r2.ebuild,v 1.2 2003/04/07 16:02:35 absinthe Exp $
 
 inherit jakarta-commons
 
@@ -20,6 +20,7 @@ KEYWORDS="x86 ppc sparc"
 IUSE="doc jikes"
 
 src_compile() {
+	epatch ${FILESDIR}/${PN}-${PV}-gentoo.diff
 	echo "commons-collections.jar=`java-config --classpath=commons-collections`" > build.properties
 	echo "commons-pool.jar=`java-config --classpath=commons-pool`" >> build.properties
 	cp LICENSE.txt ../LICENSE

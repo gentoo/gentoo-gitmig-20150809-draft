@@ -1,8 +1,12 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.5 2003/04/06 07:58:02 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.6 2003/04/07 16:02:35 absinthe Exp $
 
 *commons-dbcp-1.0-r2 (06 Apr 2003)
+
+  07 Apr 2003; Dylan Carlson <absinthe@gentoo.org> commons-dbcp-1.0-r2.ebuild,
+  files/commons-dbcp-1.0-gentoo.diff:
+  Fix to patch build.xml (thanks to lord in Gentoo Forums) and digest.
 
   06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> commons-dbcp-1.0-r1.ebuild,
   commons-dbcp-1.0-r1.ebuild, commons-dbcp-1.0-r2.ebuild,
