@@ -482,7 +482,17 @@ def doebuild(myebuild,mydo,checkdeps=1,debug=0):
 	
 	#initial ebuild.sh bash environment configured
 	if checkdeps:
-		mydeps=string.split(getoutput("/usr/sbin/ebuild.sh depend"),"\n")
+		myso=getstatusoutput("/usr/sbin/ebuild.sh depend")
+		if myso[0]!=0:
+			print "!!! Portage had a problem grabbing dependencies from:"
+			print "!!!",settings["EBUILD"]
+			print "!!! bash output was:"
+			print
+			print myso[1]
+			print
+			print "!!! doebuild() aborting."
+			return 1
+		mydeps=string.split(myso[1],"\n")
 		if mydo=="depend":
 			return mydeps
 		elif mydo=="check":
