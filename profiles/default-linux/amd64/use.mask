@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.11 2004/11/24 08:39:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.12 2005/01/08 20:00:46 eradicator Exp $
 
 #unknowns
 afs
@@ -98,3 +98,6 @@ sybase-ct
 
 # dev-lang/tcc won't build
 tcc
+
+# gcc doesn't build if we have a multitarget binutils
+multitarget
