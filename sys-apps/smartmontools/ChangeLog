@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.28 2004/02/13 18:04:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.29 2004/02/14 18:28:16 joker Exp $
+
+  14 Feb 2004; Christian Birchinger <joker@gentoo.org>
+  smartmontools-5.26.ebuild:
+  Added sparc stable keyword
 
   13 Feb 2004; Martin Holzer <mholzer@gentoo.org> smartmontools-5.26.ebuild:
   x86 stable
