@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r4.ebuild,v 1.11 2004/08/03 14:38:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r4.ebuild,v 1.12 2004/09/04 12:48:10 spock Exp $
 
 inherit eutils
+inherit flag-o-matic
 
 IUSE="cjk"
 DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility"
@@ -30,6 +31,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	append-ldflags -Wl,-z,now
 
 	# You can't --enable-big5 with aterm-0.4.2-ja.patch
 	# I think it's very bad thing but as nobody complains it
