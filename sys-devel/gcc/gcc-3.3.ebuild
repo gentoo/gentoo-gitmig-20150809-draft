@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.1 2003/05/18 07:41:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.2 2003/05/18 13:50:06 azarah Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -47,7 +47,9 @@ STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # ProPolice version
 #PP_VER="3_2_2"
-#PP_FVER="${PP_VER//_/.}-6"
+PP_VER=
+#PP_FVER="${PP_VER//_/.}-7"
+PP_FVER=
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
@@ -55,13 +57,13 @@ PATCH_VER="1.1"
 
 # Snapshot support ...
 #SNAPSHOT="2002-08-12"
-SNAPSHOT=""
+SNAPSHOT=
 
 # Branch update support ...
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
 
 #BRANCH_UPDATE="20021208"
-BRANCH_UPDATE=""
+BRANCH_UPDATE=
 
 if [ -z "${SNAPSHOT}" ]
 then
@@ -82,6 +84,11 @@ then
 else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
 	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
+fi
+if [ -n "${PP_VER}" ]
+then
+	SRC_URI="${SRC_URI}
+		http://www.trl.ibm.com/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
 fi
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-athlon-hammer-branch-20030515.patch.bz2
@@ -194,10 +201,7 @@ src_unpack() {
 
 	if [ -n "${PP_VER}" ]
 	then
-		# ProPolice Stack Smashing protection - protector-3.2.2-6
-		cd ${WORKDIR}
-		epatch ${FILESDIR}/3.2.3/protector-3.2.2-6-PPC.patch
-		cd ${S}
+		# ProPolice Stack Smashing protection - protector-3.2.2-7
 		epatch ${WORKDIR}/protector.dif
 		epatch ${FILESDIR}/3.2.2/protector_parallel_make.patch
 		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"

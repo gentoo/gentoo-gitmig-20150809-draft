@@ -5,8 +5,8 @@ diff -Narup gcc-3.3.orig/gcc/version.c gcc-3.3/gcc/version.c
     please modify this string to indicate that, e.g. by putting your
     organization's name in parentheses at the end of the string.  */
  
--const char version_string[] = "3.3 (Gentoo Linux 1.4 @PV@)";
-+const char version_string[] = "3.3 (Gentoo Linux 1.4 @PV@, propolice)";
+-const char version_string[] = "3.3 (Gentoo Linux 1.4, PVR @PV@)";
++const char version_string[] = "3.3 (Gentoo Linux 1.4, PVR @PV@, propolice)";
  
  /* This is the location of the online document giving instructions for
     reporting bugs.  If you distribute a modified version of GCC,
