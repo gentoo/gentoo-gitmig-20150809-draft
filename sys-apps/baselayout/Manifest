@@ -1,11 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 51eda172b73463b8b53be2417b73053d ChangeLog 43946
+MD5 06dcdd778f9ef7a40b2f6931d7a99cf1 ChangeLog 44074
 MD5 03598cb7f42925d271d258b732f21739 baselayout-1.11.7-r2.ebuild 15743
+MD5 c32a6b41087ad12b996c4246fe28f492 baselayout-1.11.8.ebuild 15653
 MD5 5a6e60d4a0e6baf8f051488786595d0c baselayout-1.9.4-r6.ebuild 16833
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
+MD5 68ea8c716616fbfd5b287dadb5e9ea5c files/digest-baselayout-1.11.8 69
 MD5 17086158a470fb1a8cf207c8f97f5a6f files/rc-scripts-1.6.7-fix-runscript.patch 493
 MD5 9933f0b4a90470585f9cee5372ac4d02 files/digest-baselayout-1.11.7-r2 69
 MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
@@ -19,7 +21,7 @@ MD5 3d1b5592b9b3398edb36d29422dc0143 files/rc-scripts-1.4.16-livecd.patch 672
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBwFRRroRuSHgZdywRAvGtAJ9DBqHYQJm+kS29q61lFu4wlLPm7ACfYrbm
-9JcVczEbShxp/OmgW0i/Su4=
-=sJZf
+iD8DBQFBwP1kroRuSHgZdywRArp1AJ0RgVN4n5MtlXtDcMXPGwHgaOCfkwCggjEp
+oeeCcmV/jRG/01Y86MiRmtU=
+=7E8w
 -----END PGP SIGNATURE-----
