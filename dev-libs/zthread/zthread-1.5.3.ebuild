@@ -9,7 +9,7 @@ DESCRIPTION="A Platform-Independent Object-Oriented Threading Architecture"
 SRC_URI="http://prdownloads.sourceforge.net/zthread/ZThread-${PV}.tar.gz"
 HOMEPAGE="http://www.cs.buffalo.edu/~crahen/projects/zthread/"
 
-DEPEND=""
+DEPEND=">=sys-libs/glibc-2.2.4"
 
 src_compile() {
         local myconf
