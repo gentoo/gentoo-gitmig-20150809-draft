@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/qcad-parts
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad-parts/ChangeLog,v 1.1 2004/04/22 08:08:15 phosphan Exp $
+
+*qcad-parts-2.0.1.2 (22 Apr 2004)
+
+  22 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
+  qcad-parts-2.0.1.2.ebuild:
+  Initial import, suggested in bug #41133
+
