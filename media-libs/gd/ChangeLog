@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.16 2004/11/03 00:44:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.17 2004/11/05 11:35:02 hardave Exp $
+
+  05 Nov 2004; Hardave Riar <hardave@gentoo.org> gd-2.0.32.ebuild:
+  Stable on mips, bug #69070.
 
 *gd-2.0.32 (02 Nov 2004)
 
