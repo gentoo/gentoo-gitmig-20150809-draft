@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9003.481.ebuild,v 1.1 2003/03/09 01:26:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9003.481.ebuild,v 1.2 2003/03/31 18:36:41 mholzer Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -11,7 +11,7 @@ SRC_URI="ppc? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-l
 	x86? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-x86-elf.tar.gz )"
 LICENSE="distributed.net"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -sparc -alpha"
+KEYWORDS="x86 ppc -sparc -alpha"
 IUSE=""
 DEPEND=""
 RDEPEND="net-misc/host"
