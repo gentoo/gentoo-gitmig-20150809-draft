@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.1 2004/06/06 04:01:10 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.2 2004/06/06 05:40:03 tseng Exp $
 
 IUSE="nls pic build nptl erandom"
 
@@ -264,7 +264,7 @@ src_unpack() {
 
 	if [ -n "${BRANCH_UPDATE}" ]
 	then
-		epatch ${DISTDIR}/${PN}-${PV/_*}-branch-update-${BRANCH_UPDATE}.patch.bz2
+		epatch ${DISTDIR}/${PN}-3.3.3-branch-update-${BRANCH_UPDATE}.patch.bz2
 	fi
 
 	if use_nptl
