@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.112 2005/03/13 00:27:19 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.113 2005/03/17 00:00:15 r3pek Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -387,6 +387,11 @@ postinst_sources() {
 	echo
 	einfo "For example, this kernel will require:"
 	einfo "/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
+	echo
+	einfo "If you are upgrading from a previous kernel, you may be interested"
+	einfo "in the following documents:"
+	einfo "  - General upgrade guide: http://www.gentoo.org/doc/en/kernel-upgrade.xml"
+	kernel_is_2_6 && einfo "  - 2.4 to 2.6 migration guide: http://www.gentoo.org/doc/en/migration-to-2.6.xml"
 	echo
 
 	# if K_EXTRAEINFO is set then lets display it now
