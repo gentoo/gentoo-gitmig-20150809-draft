@@ -1,6 +1,12 @@
 # ChangeLog for net-im/jabber-server
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.10 2003/10/11 01:54:13 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.11 2003/11/18 20:57:43 luke-jr Exp $
+
+*jabber-server-1.4.3 (18 Nov 2003)
+
+  18 Nov 2003; Luke-Jr <luke-jr@gentoo.org> jabber-server-1.4.2-r4.ebuild,
+  jabber-server-1.4.3.ebuild:
+  Unstable version bump & mark 1.4.2-r4 stable
 
   11 Oct 2003; Luke-Jr <luke-jr@gentoo.org> jabber-server-1.4.2-r4.ebuild,
   files/config-1.4.2-r4.tbz2:

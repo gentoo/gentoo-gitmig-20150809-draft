@@ -3,6 +3,8 @@ MD5 294f8b0ea0f44ada8012c8dcbc085830 metadata.xml 492
 MD5 b4f693604b2b6a39d6759ce5e89e4db3 jabber-server-1.4.2-r2.ebuild 3881
 MD5 8e3f2c9def6ac70299c29c1f25ed90ef jabber-server-1.4.2-r3.ebuild 7175
 MD5 a14188a36759fd29a4ffd34ccf36c552 jabber-server-1.4.2-r4.ebuild 7344
+MD5 a14188a36759fd29a4ffd34ccf36c552 jabber-server-1.4.3.ebuild~ 7344
+MD5 4f79abd2efc01723fe2a557f46129f1c jabber-server-1.4.3.ebuild 7404
 MD5 56c6d30985fe5f4ce2ecbc717f2b0f11 files/config-1.4.2-r1.tbz2 3202
 MD5 b9aed79237eda16bfed03ecd55ab1d84 files/config-1.4.2-r3.tbz2 3341
 MD5 9729606a22930fc068220751ef1a6f89 files/digest-jabber-server-1.4.2-r2 426
@@ -14,3 +16,4 @@ MD5 bc605a772d428ee0977b948ecdae26d3 files/mio_ssl.c.patch 874
 MD5 de75a0ec597fea156fdbfbd699124e34 files/digest-jabber-server-1.4.2-r4 535
 MD5 1293290534790bda82a6f87d97c399fe files/config-1.4.2-r4.tbz2 3833
 MD5 6eec3798463d34b660b93470f12bb8d5 files/msn-configure-patch-00 1051
+MD5 535f34d7e5a2d886fcf25136882a2798 files/digest-jabber-server-1.4.3 536
