@@ -1,8 +1,14 @@
 # ChangeLog for app-admin/fam-oss
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.4 2002/05/29 05:11:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.5 2002/06/02 04:06:49 prez Exp $
 
 *fam-oss-2.6.7-r1 (28 Mar 2002)
+
+  2 Jun 2002: Preston A. Elder <prez@gentoo.org>
+  fam-oss-2.6.7-r1.ebuild, files/fam-oss-2.6.7-r1-aclocal.m4:
+
+  Added aclocal.m4, as the one that comes with the package
+  does not support AM_CONDITIONAL.
 
   28 Mar 2002; Matthew Kennedy <mkennedy@gentoo.org>
   fam-oss-2.6.7-r1.ebuild, files/digest-fam-oss-2.6.7-r1,

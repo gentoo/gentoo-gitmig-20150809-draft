@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joshua Pierre <joshua@swool.com>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.7-r1.ebuild,v 1.1 2002/05/29 05:11:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.7-r1.ebuild,v 1.2 2002/06/02 04:06:49 prez Exp $
 
 MY_P=${P/-oss/}
 S=${WORKDIR}/${MY_P}
@@ -21,6 +21,7 @@ src_unpack() {
 	# NOTE: dnotify patch for realtime updating, as well as build fixes
 	patch -p1 < ${FILESDIR}/${PF}-gentoo.patch || die
 
+	cp ${FILESDIR}/${PF}-aclocal.m4 aclocal.m4
 	libtoolize --copy --force
 	aclocal
 	autoconf
