@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.2 2001/04/20 03:00:29 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75.ebuild,v 1.3 2001/06/09 18:24:32 achim Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
@@ -38,7 +38,8 @@ src_compile() {
   fi
 
   try make
-
+  cd doc
+  tar xvzf Linux-PAM-0.75-docs.tar.gz
 }
 
 src_install() {
@@ -56,6 +57,15 @@ src_install() {
      dodoc $i/README
    fi
  done
+
+ cd ..
+ docinto html
+ dodoc doc/html/*.html
+ docinto txt
+ dodoc doc/txts/*.txt doc/specs/*.txt
+ docinto print
+ dodoc doc/ps/*.ps
+
 
  cd ${D}/lib
  for i in pam pamc pam_misc
