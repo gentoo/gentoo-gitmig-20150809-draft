@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/xfce4-netload-0.2.0_pre5.ebuild,v 1.1 2003/09/03 23:56:16 bcowan Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/xfce4-netload-0.2.0_pre5.ebuild,v 1.2 2003/09/04 07:09:22 msterret Exp $
 
 IUSE=""
 MY_P="${PN}-plugin-${PV/_/}"
@@ -21,6 +21,5 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 
 src_install() {
 	make DESTDIR=${D} install || die
-                                                                                                                                           
-        dodoc AUTHORS INSTALL COPYING README 
+	dodoc AUTHORS INSTALL COPYING README
 }
