@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-20040128.ebuild,v 1.1 2004/02/05 13:52:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-20040128.ebuild,v 1.2 2004/02/05 19:50:48 mr_bones_ Exp $
 
 inherit kde
 need-kde 3
@@ -24,10 +24,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This new version of kde-bluetooth provide a replacement for the" 
+	einfo "This new version of kde-bluetooth provide a replacement for the"
 	einfo "standard bluepin program called \"kbluepin\"!!! "
 	einfo ""
 	einfo "If you want to use it, you have to edit your \"/etc/bluetooth/hcid.conf\" "
 	einfo "and change the line \"pin_helper oldbluepin;\" with \"pin_helper /usr/bin/kbluepin;\""
-	einfo "Then restart hcid to make the change working"  
+	einfo "Then restart hcid to make the change working"
 }
