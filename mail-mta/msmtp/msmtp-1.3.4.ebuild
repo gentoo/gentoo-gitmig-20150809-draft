@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.3.2-r1.ebuild,v 1.2 2005/01/22 22:52:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.3.4.ebuild,v 1.1 2005/01/22 22:52:18 slarti Exp $
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="http://msmtp.sourceforge.net/"
@@ -9,15 +9,15 @@ IUSE="ssl gnutls sasl mailwrapper"
 DEPEND="virtual/libc
 	dev-util/pkgconfig
 	ssl? (
-		gnutls?	( >=net-libs/gnutls-1.0.0 )
+		gnutls?	( >=net-libs/gnutls-1.1.23 )
 		!gnutls?  ( >=dev-libs/openssl-0.9.6 )
 	)
-	sasl? ( >=virtual/gsasl-0.2.3 )
+	sasl? ( >=virtual/gsasl-0.2.4 )
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	!mailwrapper? ( !virtual/mta )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 PROVIDE="virtual/mta"
 
 src_compile () {
@@ -50,7 +50,6 @@ src_install () {
 		dosym /usr/bin/msmtp /usr/sbin/sendmail || die "dosym failed"
 		dosym /usr/sbin/sendmail /usr/lib/sendmail || die "dosym failed"
 	fi
-
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS \
 		doc/msmtprc.example doc/Mutt+msmtp.txt \
