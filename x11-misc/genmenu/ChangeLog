@@ -1,0 +1,18 @@
+# ChangeLog for x11-misc/genmenu
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.1 2002/10/27 07:39:05 george Exp $
+
+*genmenu-0.9.0 (26 Oct 2002)
+
+  26 Oct 2002; George Shapovalov <george@gentoo.org> genmenu-0.9.0.ebuild, files/{digest-genmenu-0.9.0,genmenu-0.9.0.patch} :
+
+  new package
+
+  menu generator for few wm's. From the freshmeat page:
+  Genmenu generates menus for some common window managers based on which program binaries genmenu finds 
+  installed on a system (a list of programs to search for are contained within the script). Users can 
+  to a limited degree further customize their menu via a set of interactive questions. Genmenu supports 
+  Blackbox, fluxbox, WindowMaker, and Enlightenment window managers. 
+  Author: Geir Torstein Kristiansen <gtk@techie.online.no> 
+
+  I modified the script to make backup copies of original menu files (they will have .orig extention)
