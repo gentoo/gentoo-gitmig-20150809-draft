@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.6-r1.ebuild,v 1.5 2003/12/05 13:06:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.6-r1.ebuild,v 1.6 2004/01/29 03:23:34 brad_mssw Exp $
 
 IUSE="xmms mad"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www1.cs.columbia.edu/~cvaill/normalize/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc amd64"
 
 RDEPEND="xmms? ( >=media-sound/xmms-1.2.7-r6 )
 	mad? ( >=media-sound/mad-0.14.2b )

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/normalize
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.8 2003/12/05 13:06:05 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.9 2004/01/29 03:23:34 brad_mssw Exp $
+
+  28 Jan 2004; Brad House <brad_mssw@gentoo.org> normalize-0.7.6-r1.ebuild:
+  mark stable on amd64
 
   05 Dec 2003; Jason Wever <weeve@gentoo.org> normalize-0.7.6-r1.ebuild:
   Added ~sparc keyword.
