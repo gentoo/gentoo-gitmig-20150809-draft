@@ -1,6 +1,10 @@
 # ChangeLog for games-action/bomberclone
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.7 2004/03/14 17:02:51 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.8 2004/04/19 20:24:14 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  bomberclone-0.11.1.ebuild:
+  Added IUSE.
 
   14 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
   bomberclone-0.11.1.ebuild:
