@@ -23,6 +23,7 @@ SRC_URI="$SRC_PATH0/X${MY_V}src-1.tgz
 
 HOMEPAGE="http://www.xfree.org"
 LICENSE="X11"
+SLOT="0"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
@@ -30,7 +31,8 @@ DEPEND=">=sys-libs/ncurses-5.1
 	sys-devel/perl
 	3dfx? ( >=media-libs/glide-v3-3.10 )"
 	
-RDEPEND=">=sys-libs/ncurses-5.1"
+RDEPEND=">=sys-libs/ncurses-5.1
+	x11-base/opengl-update"
 
 PROVIDE="virtual/x11
 	virtual/opengl
@@ -54,7 +56,8 @@ src_unpack () {
 # on ppc with mouse scrolling.  There should be a better fix than this,
 # but for now:
 
-	if [ ${ARCH} != ppc ] ; then	
+	if [ "${ARCH}" != "ppc" ]
+	then
 		cd ${S}
 		cp ${FILESDIR}/${PVR}/site.def config/cf/host.def
 		echo "#define DefaultGcc2i386Opt ${CFLAGS}" >> config/cf/host.def
@@ -62,11 +65,12 @@ src_unpack () {
 		echo "#define DefaultCCOptions -ansi" >> config/cf/host.def
 
 		# optimize Mesa for architecture
-		if [ -n "`use sse`" ] ; then
-			echo "#define MesaUseKatmai YES" >> config/cf/host.def
-		fi
-		if [ -n "`use 3dnow`" ] ; then
+		if [ -n "`use 3dnow`" ]
+		then
 			echo "#define MesaUse3DNow YES" >> config/cf/host.def
+		elif [ -n "`use sse`" ]
+		then
+			echo "#define MesaUseKatmai YES" >> config/cf/host.def
 		fi
 
 		# build with glide3 support? (build the tdfx_dri.o module)
@@ -84,15 +88,27 @@ src_unpack () {
 		${S}/programs/Xserver/Imakefile.orig \
 		> ${S}/programs/Xserver/Imakefile
 
-	# Apply Xft quality patch from  http://www.cs.mcgill.ca/~dchest/xfthack/
+	# Apply Xft quality patch from http://www.cs.mcgill.ca/~dchest/xfthack/
 	cd ${S}/lib/Xft
 	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 || die
 }
 
 src_compile() {
+
+	# fix build build problems for tdfx driver
+	if [ -n "`use 3dfx`" ] && [ "${ARCH}" != "ppc" ]
+	then
+		cd ${S}/lib/GL/mesa/src/drv/tdfx
+		ln -s /usr/include/glide3/glide.h glide.h
+		ln -s /usr/include/glide3/glideutl.h glideutl.h
+		ln -s /usr/include/glide3/glidesys.h glidesys.h
+		ln -s /usr/include/glide3/g3ext.h g3ext.h
+		cd ${S}
+	fi
 	
 	# make seems safer on ppc.  emake may still work - testing needed.
-	if [ ${ARCH} = ppc ] ; then
+	if [ "${ARCH}" = "ppc" ]
+	then
 		make World || die
 	else
 		emake World || die
@@ -119,7 +135,8 @@ src_install() {
 	fi
 
 	#we zap the host.def file which gets hard-coded with our CFLAGS, messing up other things that use xmkmf
-	if [ ${ARCH} != ppc ] ; then
+	if [ "${ARCH}" != "ppc" ]
+	then
 		echo > ${D}/usr/X11R6/lib/X11/config/host.def
 	fi
 	#theoretically, /usr/X11R6/lib/X11/config is a possible candidate for config file management.
@@ -167,7 +184,7 @@ src_install() {
 	newexe ${FILESDIR}/${PVR}/xfs.start xfs
 
 	#next section is to setup the dinamic libGL stuff
-	dosbin ${FILESDIR}/${PVR}/opengl-update
+#	dosbin ${FILESDIR}/${PVR}/opengl-update
 	dodir /usr/lib/opengl/xfree/{lib,extensions,include}
 	mv ${D}/usr/X11R6/lib/libGL.so* ${D}/usr/lib/opengl/xfree/lib
 	mv ${D}/usr/X11R6/lib/libGL.la ${D}/usr/lib/opengl/xfree/lib

@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.15 2002/04/16 19:58:20 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.16 2002/05/12 18:49:25 azarah Exp $
+
+*xfree-4.2.0-r10 (10 Apr 2002)
+
+  12 May 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r10.ebuild :
+
+  Move opengl-update to its own ebuild for flexibility.  Add some 3dfx fixes.
 
   16 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
   xfree-4.2.0-r9.ebuild, ChangeLog :
