@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.1.ebuild,v 1.2 2004/08/18 19:44:33 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.1.ebuild,v 1.3 2004/08/18 19:45:07 squinky86 Exp $
 
 inherit libtool gnome2
 
@@ -20,7 +20,8 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0
 	spell? ( app-text/gnome-spell )
 	>=gnome-base/libgnomeui-2
 	>=gnome-extra/gal-1.99
-	>=dev-libs/libxml-1.8"
+	>=dev-libs/libxml-1.8
+	virtual/libc"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12
