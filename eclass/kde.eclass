@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.41 2002/02/18 18:29:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.42 2002/03/07 17:54:47 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base
 ECLASS=kde
@@ -28,7 +28,7 @@ kde_src_compile() {
 			    *) echo "!!! $ECLASS: $FUNCNAME: myconf: could not set --prefix based on \$KDEMAJOVER=\"$KDEMAJORVER\"" && exit 1;;
 			esac
 			use qtmt 	&& myconf="$myconf --enable-mt"
-			[ -n "$DEBUG" ] && myconf="$myconf --enable-debug"	|| myconf="$myconf --disable-debug"
+			[ -n "$DEBUG" ] && myconf="$myconf --enable-debug --with-debug"	|| myconf="$myconf --disable-debug --without-debug"
 			debug-print "$FUNCNAME: myconf: set to ${myconf}"
 			;;
 		configure)
