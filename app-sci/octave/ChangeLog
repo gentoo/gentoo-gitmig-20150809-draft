@@ -1,6 +1,12 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.1 2002/05/08 02:04:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.2 2002/07/13 22:56:47 raker Exp $
+
+*octave-2.0.17 (13 Jul 2002)
+
+  13 Jul 2002; Nick Hadaway <raker@gentoo.org> octave-2.0.17.ebuild :
+
+  Updated to latest stable version.  The "unstable" version is on it's way.
 
 *octave-2.0.16 (19 Feb 2002)
 
