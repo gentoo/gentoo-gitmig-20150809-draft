@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.3 2004/10/31 09:52:09 eradicator Exp $
-
-IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.4 2004/11/08 21:27:01 vapier Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -19,11 +17,11 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-
 # Notice to arch maintainers:
 # Please test out the plugins listed below in PDEPEND.  They should
 # work on most of your archs, but haven't been marked yet.
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
@@ -43,12 +41,12 @@ DEPEND="${DEPEND}
 	       sys-devel/gettext )"
 
 # USE flags pull in xmms plugins
-PDEPEND="!alpha? ( !hppa? ( !ia64? ( !mips? ( !ppc64? ( jack? ( media-plugins/xmms-jack ) ) ) ) ) )
-	 !alpha? ( !ia64? ( !ppc64? ( lirc? ( media-plugins/xmms-lirc ) ) ) )
-	 !ia64? ( !ppc64? ( arts? ( media-plugins/xmms-arts ) ) )
-	 !alpha? ( !hppa? ( !ia64? ( !mips? ( !ppc64? ( sndfile? ( media-plugins/xmms-sndfile ) ) ) ) ) )
-	 !alpha? ( !hppa? ( !ia64? ( !mips? ( mad? ( media-plugins/xmms-mad ) ) ) ) )
-	 flac? ( media-libs/flac )"
+PDEPEND="!alpha? ( !mips? ( !ppc64? ( jack? ( media-plugins/xmms-jack ) ) ) )
+	!alpha? ( !ppc64? ( lirc? ( media-plugins/xmms-lirc ) ) )
+	!ppc64? ( arts? ( media-plugins/xmms-arts ) )
+	!alpha? ( !mips? ( !ppc64? ( sndfile? ( media-plugins/xmms-sndfile ) ) ) )
+	!alpha? ( !mips? ( mad? ( media-plugins/xmms-mad ) ) )
+	flac? ( media-libs/flac )"
 
 src_unpack() {
 	unpack ${A}

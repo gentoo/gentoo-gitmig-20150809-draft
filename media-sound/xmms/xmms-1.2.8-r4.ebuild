@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.19 2004/09/05 17:11:18 eradicator Exp $
-
-IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk gtk2 alsa"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.20 2004/11/08 21:27:01 vapier Exp $
 
 inherit flag-o-matic eutils gnuconfig
-filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 PATCHVER="0.2"
 
@@ -15,9 +12,10 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 	mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2
 	mirror://gentoo/${P}-gentoo-patches-${PATCHVER}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha ~hppa amd64 ia64 mips"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
+IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk gtk2 alsa"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
@@ -103,6 +101,8 @@ src_compile() {
 
 	# Allow configure to detect mipslinux systems
 	gnuconfig_update
+	filter-flags -fforce-addr
+	filter-lfs-flags
 
 	if use amd64; then
 		myconf="${myconf} --disable-simd"

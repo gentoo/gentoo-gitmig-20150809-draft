@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
 MD5 0dd8881a77a9941c175ffee961b22ffe ChangeLog 27508
-MD5 33180edc5b30f54debff69322fae465a xmms-1.2.8-r4.ebuild 5271
-MD5 e8f74b9f98c9a742f9d9e7559227ef84 xmms-1.2.10-r5.ebuild 5386
-MD5 a7dd23b5856ef765e4ed17baedb74680 xmms-1.2.10-r9.ebuild 3408
-MD5 567e6084702a3338a1ddeed984fe7d11 files/digest-xmms-1.2.10-r9 277
+MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
+MD5 c3515c2c700aaaefc1fb7d0868356455 xmms-1.2.10-r5.ebuild 5385
+MD5 0138a28811bc6035412d49182fa7772f xmms-1.2.8-r4.ebuild 5245
+MD5 a5adc52f945dac08b8df614e9f77994f xmms-1.2.10-r9.ebuild 3314
+MD5 aa46b23a1cf0655c7f09adbdd623d49f files/digest-xmms-1.2.10-r5 219
 MD5 f52f09b25da87c876de70b6177292f2e files/digest-xmms-1.2.8-r4 216
 MD5 7d2f3807ebbff435b909ecf0539cbf4f files/xmms.desktop 722
-MD5 aa46b23a1cf0655c7f09adbdd623d49f files/digest-xmms-1.2.10-r5 219
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhLX8ArHZZzCEUG0RAnJUAJ0UrBmHjPRmHB0Ht9J9mrjiP7yTEgCeJ/cD
-QXzk0cNTlOmG8iM43aEjQ08=
-=qewT
------END PGP SIGNATURE-----
+MD5 567e6084702a3338a1ddeed984fe7d11 files/digest-xmms-1.2.10-r9 277
