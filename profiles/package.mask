@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3690 2005/03/08 22:19:32 robbat2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3691 2005/03/08 23:36:46 spock Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Michael Januszewski <spock@gentoo.org> (09 Mar 2005)
+# A development version of splashutils which includes many new features
+# and can therefore be slightly broken. Feel free to test and report bugs.
+# Content from http://dev.gentoo.org/~spock/projects/gensplash/testing/
+# might be useful for testing.
+>=media-gfx/splashutils-1.1
 
 # Sebastian Bergmann <sebastian@gentoo.org> (05 Mar 2005)
 # Segfaults on module shutdown.
