@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r2.ebuild,v 1.1 2004/03/04 00:34:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r2.ebuild,v 1.2 2004/03/04 16:18:50 mr_bones_ Exp $
 
 DESCRIPTION="The TeamSpeak voice communication tool"
 HOMEPAGE="http://www.teamspeak.org"
@@ -44,7 +44,7 @@ src_install() {
 
 	# A symlink is created so that Help -> Read Manual still works
 	dosym /usr/share/doc/${PF}/html ${dir}/manual
-	
+
 	# All regular files except the executables are made non executable
 	find -type f -not \( -name "TeamSpeak.bin" -or -name "*.so*" -or \
 		-name "tsControl" \) -exec chmod -x {} \;
@@ -53,7 +53,7 @@ src_install() {
 	dodir /usr/share/pixmaps
 	convert ${S}/icon.xpm ${S}/teamspeak.png
 	cp ${S}/teamspeak.png ${D}/usr/share/pixmaps/
-		
+
 	cp -r * ${D}/${dir}
 }
 
