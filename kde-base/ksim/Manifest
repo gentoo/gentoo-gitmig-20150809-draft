@@ -1,4 +1,5 @@
-MD5 68b20031ce18945382ef3769a18cfb6d ksim-3.4.0_beta1.ebuild 370
-MD5 89da30e550041b36bca75829996288fd ChangeLog 432
+MD5 bf280bd5d38c09ad200d09cd8f759817 ksim-3.4.0_beta1.ebuild 533
+MD5 21b523f5e14aea92ca7f8ed1d1f29b41 ChangeLog 565
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 5cd96fb39354728fd08f80a66155cd4f files/ksim-3.4.0_beta1-snmpfix.patch 923
 MD5 88e740876cecf9b079bcc6622808dbb1 files/digest-ksim-3.4.0_beta1 216

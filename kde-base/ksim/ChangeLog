@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.1 2005/01/15 02:24:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.2 2005/01/16 13:36:10 motaboy Exp $
+
+  16 Jan 2005; Simone Gotti <motaboy@gentoo.org>
+  +files/ksim-3.4.0_beta1-snmpfix.patch, ksim-3.4.0_beta1.ebuild:
+  Fix bug #78204.
 
 *ksim-3.4.0_beta1 (15 Jan 2005)
 
