@@ -26,7 +26,8 @@ RDEPEND="$RDEPEND
 		 >=sys-libs/zlib-1.1.4-r1
 		 >=x11-base/xfree-4.3.0-r2
 		 >=net-misc/openssh-3.6.1_p2
-		 >=dev-lang/perl-5.8.0-r12"
+		 >=dev-lang/perl-5.8.0-r12
+		 =net-misc/nxssh-1.2.2"
 
 DEPEND="$DEPEND
         >=sys-apps/shadow-4.0.3-r6
@@ -80,7 +81,7 @@ nxserver_pkg_postinst() {
 
 	einfo "Generating SSH keys for the 'nx' user"
 	if [ ! -f /usr/NX/etc/users.id_dsa ]; then
-		ssh-keygen -q -t dsa -N '' -f /usr/NX/nxhome/.ssh/users.id_dsa
+		ssh-keygen -q -t dsa -N '' -f /usr/NX/etc/users.id_dsa
 	fi
 	cp -f /usr/NX/nxhome/.ssh/server.id_dsa.pub.key /usr/NX/nxhome/.ssh/authorized_keys2
 
