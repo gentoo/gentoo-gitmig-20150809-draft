@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/open_c-lit/open_c-lit-1.4.ebuild,v 1.1 2004/09/06 22:39:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/open_c-lit/open_c-lit-1.4.ebuild,v 1.2 2004/09/06 22:41:00 vapier Exp $
 
 MY_PV=${PV//.}
 DESCRIPTION="Open Convert .LIT tool"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RESTRICT="nofetch"
+RESTRICT="fetch"
 
 DEPEND=""
 
