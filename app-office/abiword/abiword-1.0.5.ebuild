@@ -1,7 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.5.ebuild,v 1.1 2003/03/21 17:30:22 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.5.ebuild,v 1.2 2003/03/24 12:48:44 foser Exp $
 
+inherit flag-o-matic
+
+replace-flags "-O?" "-O1"
 IUSE="nls build spell jpeg xml2"
 
 S=${WORKDIR}/${P}/abi
