@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/ChangeLog,v 1.3 2003/02/12 07:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/ChangeLog,v 1.4 2003/07/31 16:00:58 tigger Exp $
+
+  31 Jul 2003; rob holland <tigger@gentoo.org> :
+  Version bump and tidied ebuild to make version bumps easier. Prompted by
+  Wilbert Berendsen <wilbert@oswf.org>, closes #18636
 
 *mup-4.4 (21 Oct 2002)
 
