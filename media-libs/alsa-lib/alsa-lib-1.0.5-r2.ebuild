@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5-r2.ebuild,v 1.1 2004/07/01 00:11:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5-r2.ebuild,v 1.2 2004/07/01 19:08:08 eradicator Exp $
 
 inherit libtool
 
@@ -55,7 +55,7 @@ pkg_setup() {
 		cat ${FILESDIR}/fix-asound_h.patch
 		eerror "*******************************************************"
 		echo
-		eerror "Youu should be able to do this by issuing the following commands:"
+		eerror "You should be able to do this by issuing the following commands:"
 		eerror "cd /usr/include/sound"
 		eerror "patch -p0 < ${FILESDIR}/fix-asound_h.patch"
 		echo
