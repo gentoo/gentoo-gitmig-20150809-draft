@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.16 2003/04/18 10:28:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.17 2003/05/29 23:10:38 lu_zero Exp $
+
+  30 May 2003; Luca Barbato <lu_zero@gentoo.org> gtk-doc-1.0.ebuild :
+  Added ppc to keywords.
 
 *gtk-doc-1.1 (18 Apr 2003)
 
