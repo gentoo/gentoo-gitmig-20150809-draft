@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/gnosis-utils
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.1 2003/05/10 13:45:13 liquidx Exp $
+
+*gnosis-utils-1.0.6 (10 May 2003)
+
+  10 May 2003; Alastair Tse <liquidx@gentoo.org> gnosis-utils-1.0.6.ebuild:
+  initial ebuild. thanks to Randall Randall <randall@randallsquared.com>.
+
