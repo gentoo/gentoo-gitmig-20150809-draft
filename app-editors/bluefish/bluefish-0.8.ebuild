@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.8.ebuild,v 1.2 2002/12/17 13:48:55 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.8.ebuild,v 1.3 2002/12/30 00:05:23 drobbins Exp $
 
 MY_P=${PN}-gtk2-${PV}
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,7 @@ SRC_URI="http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/${MY_P}.tar.bz2"
 HOMEPAGE="http://bluefish.openoffice.nl/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 SLOT="0"
 IUSE="nls perl"
 
