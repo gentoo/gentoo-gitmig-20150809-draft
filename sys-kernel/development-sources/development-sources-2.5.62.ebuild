@@ -1,15 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.62.ebuild,v 1.1 2003/02/18 04:10:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.62.ebuild,v 1.2 2003/02/25 21:19:16 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
-#we use this next variable to avoid duplicating stuff on cvs
-GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
-OKV=${PV}
-if [ "${PR}" != "r0" ]; then 
-	PATCH_URI="http://www.kernel.org/pub/linux/kernel/people/akpm/patches/2.5/${PV}/${PVR/r/mm}/${PVR/r/mm}.gz"
-fi
-KV=${PVR/r/mm}
+KV=${PV}
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
@@ -40,17 +34,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
 
-	if [ "${PATCH_URI}" ]; then
-		mv linux-${OKV} linux-${KV}
-		cd ${S}
-		zcat ${DISTDIR}/${PVR/r/mm}.gz | patch -p1 -l || \
-			die "akpm patch application failure"
-		sed -e "s:^EXTRAVERSION.*$:EXTRAVERSION = -${PR/r/mm}:" \
-			Makefile > Makefile.new
-		mv Makefile.new Makefile
-	else
-		cd ${S}
-	fi
+	cd ${S}
 
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
