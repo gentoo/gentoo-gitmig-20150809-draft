@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.50 2004/10/26 02:35:18 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.51 2004/10/31 16:11:14 mholzer Exp $
+
+*xmule-1.9.3 (31 Oct 2004)
+
+  31 Oct 2004; Martin Holzer <mholzer@gentoo.org> +xmule-1.9.3.ebuild:
+  Version bumped.
 
 *xmule-1.9.2 (25 Oct 2004)
 
