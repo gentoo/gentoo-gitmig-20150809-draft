@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.7 2005/01/06 20:28:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.8 2005/01/07 22:14:07 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -264,6 +264,10 @@ src_unpack() {
 	# TODO hansmi, 2005-01-06: no longer needed because auth-after-tls-only is fixed
 	#EPATCH_SINGLE_MSG="Fixing broken #ifdef's to #if (TLS && TLS_BEFORE_AUTH)" \
 	#epatch ${FILESDIR}/${PV}-r15/tlsbeforeauth-fix.patch
+
+	# Fix bug 49971
+	EPATCH_SINGLE_MSG="Applying fix for a special case with courier-imapd" \
+	epatch ${FILESDIR}/${PVR}/famd-dnotify.patch
 
 	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then

@@ -2,8 +2,8 @@ MD5 326c3d12fa42f7d77ec25d0034c6386c qmail-1.03-r11.ebuild 11387
 MD5 b29fd46e11237b9ee8c69b705a91b1bf qmail-1.03-r8.ebuild 8060
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 d18a1222087e80a39b2588e0f12e6e13 qmail-1.03-r10.ebuild 11111
-MD5 93dbb206db72d7929bc3798556de27e9 ChangeLog 21855
-MD5 5e8d5ae301f48a1a9f73c412e777a160 qmail-1.03-r16.ebuild 20342
+MD5 ead6f0c9c9f813a941bf1917d632af3d ChangeLog 21990
+MD5 2a6af36a5b1d62f9a7693772a0928f9a qmail-1.03-r16.ebuild 20480
 MD5 48561c5b6846d4b381dfdd498b1955f4 qmail-1.03-r9.ebuild 9887
 MD5 a0cae8f720499509864d8c17c7aac5a3 qmail-1.03-r12.ebuild 13710
 MD5 f322d995494a3c1b6198916537b6b907 qmail-1.03-r14.ebuild 15817
@@ -75,6 +75,7 @@ MD5 a963429b55bc3713ff3a22674101dfdb files/1.03-r16/auth-after-tls-only.patch 22
 MD5 7a73d3a9a0a19536f2bb673f34b4f2fa files/1.03-r16/Makefile-relaymxlookup.patch 1988
 MD5 dbfe7d95b274567088123575d5da00ba files/1.03-r16/gentoo-qmail-1.03-r16-logging-with-smtpauth.patch 571
 MD5 a1e8f454e96a2b23e9daae34fa6b6b5e files/1.03-r16/qmail-1.03-accept-5xx.tls.patch 930
+MD5 8f196c7649132af2c0c3745c1a5f1e9c files/1.03-r16/famd-dnotify.patch 555
 MD5 fe189f1c8c28ae8b15bde3f8bb169997 files/1.03-r16/gentoo-qmail-1.03-r16-logrelay.patch 454
 MD5 d48eeee899c7999925dd64afd4109269 files/1.03-r16/nullenvsender-recipcount.tls.patch 1479
 MD5 72c4027c99c19158d4bbe3ed77efcae6 files/1.03-r16/double-bounce-trim.patch 1662

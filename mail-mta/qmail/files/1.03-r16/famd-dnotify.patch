@@ -1,0 +1,14 @@
+--- qmail-1.03.orig/qmail-local.c	2005-01-07 23:04:13.890397800 +0100
++++ qmail-1.03/qmail-local.c	2005-01-07 23:05:59.023415152 +0100
+@@ -139,8 +139,9 @@
+  if (close(fd) == -1) goto fail; /* NFS dorks */
+ 
+  if (link(fntmptph,fnnewtph) == -1) goto fail;
+- if ((fd = open(fnnewtph, O_RDONLY)) < 0 ||
+-     fsync(fd) < 0 || close(fd) < 0) goto fail;
++ if ((fd = open(fnnewtph, O_RDONLY)) >= 0) {
++  if (fsync(fd) < 0 || close(fd) < 0) goto fail;
++ }
+    
+    /* if it was error_exist, almost certainly successful; i hate NFS */
+  tryunlinktmp(); _exit(0);
