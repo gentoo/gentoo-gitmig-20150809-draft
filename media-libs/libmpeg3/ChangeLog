@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.14 2003/07/28 13:23:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.15 2003/09/06 12:58:10 pappy Exp $
 
-*libmpeg3-1.5.1 (26 Jul 2003)
+*libmpeg3-1.5.1 (06 Sep 2003)
+
+  06 Sep 2003; Alexander Gabert <pappy@gentoo.org> libmpeg3-1.5.1.ebuild:
+  added hardened-gcc ignore flags
 
   28 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
   Added patch to fix gcc-2.x issues #25349 and another 
