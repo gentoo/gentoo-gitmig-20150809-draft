@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.277 2004/10/14 12:00:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.278 2004/10/16 04:49:56 lu_zero Exp $
+
+  16 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
+  glibc-2.3.4.20041006.ebuild:
+  Marked -ppc has proven to subtle flaw code, probably inline optimizations
 
   14 Oct 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20041006.ebuild:
   Updated hppa patches to 2004-09-30. Fixed unpacking (#67503). Marked -hppa
