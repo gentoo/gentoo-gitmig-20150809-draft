@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc. and Arcady Genkin <agenkin@thpoon.com>
+# Copyright 1999-2004 Gentoo Technologies, Inc. and Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.2 2004/02/03 01:21:14 mr_bones_ Exp $
 
 inherit eutils
 
@@ -19,5 +19,5 @@ src_install () {
 	make DESTDIR=${D} install || die "make install failed"
 	insinto /etc/koth
 	doins src/koth.cfg
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README doc/*.txt
+	dodoc AUTHORS ChangeLog INSTALL NEWS README doc/*.txt
 }
