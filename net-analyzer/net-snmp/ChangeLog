@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.31 2003/10/31 02:11:10 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.32 2003/11/01 14:38:59 gmsoft Exp $
 
   30 Oct 2003; Max Kalika <max@gentoo.org> files/snmpd.conf, files/snmpd.rc6:
   Add connection logging example and do away with config file settings -- snmpd
@@ -38,6 +38,9 @@
   Purge all the no-longer download-able versions and tweak some minor tidbits.
 
 *net-snmp-5.0.9-r1 (19 Sep 2003)
+
+  1 Nov 2003; Guy Martin <gmsoft@gentoo.org> net-snmp-5.0.9-r1.ebuild :
+  Marked stable on hppa.
 
   19 Sep 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.9-r1.ebuild,
   files/snmpd.conf, files/snmpd.rc6:
