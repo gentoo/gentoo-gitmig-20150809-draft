@@ -654,8 +654,7 @@ dev-lang/tcl-tk
 =sys-apps/util-linux-2.11o-r1
 
 # spider@gentoo.org ; 21 May 2002; 
-# =x11-libs/gtk+-1.2* doesn't work
-# this is now the gnome2 big bloated mask!
+# this is the gnome2 mask!
 # (gnome-2 that is ;)
 >=gnome-base/libglade-1.99.10-r1
 >=app-text/scrollkeeper-0.3.0
