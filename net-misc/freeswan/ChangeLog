@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/freeswan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.4 2002/07/07 06:38:12 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.5 2002/09/12 08:04:37 aliz Exp $
+
+*freeswan-1.98b-r1 (12 Sep 2002)
+
+  12 Sep 2002; Daniel Ahlberg <aliz@telia.com> :
+  * fix for bug #7585.
+  * Upgraded to version 0.9.15 for the X509 patch.  
 
 *freeswan-1.98b (5 Jul 2002)
 
