@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/bittorrent 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.30 2004/07/03 12:04:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.31 2004/07/17 15:04:15 squinky86 Exp $
+
+*bittorrent-3.4.2-r1 (17 Jul 2004)
+
+  17 Jul 2004; Jon Hood <squinky86@gentoo.org> metadata.xml,
+  +files/bttrack.conf, +files/bttrack.rc, +files/favicon.ico,
+  +bittorrent-3.4.2-r1.ebuild, bittorrent-3.4.2.ebuild:
+  new init script, stable x86 version bump, move to net-p2p herd (#55954)
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> bittorrent-3.3.0.ebuild,
   bittorrent-3.4.1.ebuild, bittorrent-3.4.1a.ebuild, bittorrent-3.4.2.ebuild:
