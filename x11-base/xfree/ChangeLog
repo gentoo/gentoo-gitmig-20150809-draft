@@ -1,8 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.127 2003/04/19 12:56:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.128 2003/04/21 03:31:52 seemant Exp $
 
 *xfree-4.3.0-r2 (08 Apr 2003)
+
+  20 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  xfree-4.3.0-r2.ebuild:
+  Added TaD's three gentoo themes, changed the default cursor to core. Also,
+  i18n fonts are built when "nls" is set in USE. and CJK fonts when both
+  "nls" and "cjk" are set in USE.
 
   19 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
   xfree-4.3.0-r2.ebuild:

@@ -5,11 +5,11 @@ MD5 567903747018f2534965ab6cb3976b38 X430src-4.tgz 12906091
 MD5 4dbdbe9a85c8f7f98dd0ee015a3c7b4f X430src-5.tgz 4388018
 MD5 163d9864e1353a4a9f992cb3843c240f X430src-6.tgz 8074919
 MD5 e002e70f24098ca4f62fabd1c2809ed1 X430src-7.tgz 9317241
-MD5 ea2e7c4d366edeb0425cf12642d060ba XFree86-4.3.0-patches-1.1.1.tar.bz2 416567
+MD5 c7b321e69c5727306f2b2cff3593c300 XFree86-4.3.0-patches-1.1.2.tar.bz2 420921
 MD5 e0c52f0e726e20db445e9708665a26d4 xfree86-dri-resume-v8.patch 15333
 MD5 222bffcae6c2be37ec5cd993037f4f45 xf86Wacom.c.gz 26156
 MD5 537bb3e2da7642bd979ebc1cafa8dce7 savage-1.1.27t.zip 76974
-MD5 697518974d185cc2cf110d4160eb4f8e sis_drv_src_130403-1.tar.gz 409600
+MD5 e3848a87ea835bd80ed91f674e24fb02 sis_drv_src_180403-1.tar.gz 378880
 MD5 3d4ee581df78c9dacc6e97aa07a1af72 gemini-koi8-u.tar.bz2 439173
 MD5 4d7d5fdc4ed56c144ef998302581478c eurofonts-X11.tar.bz2 8811
 MD5 cfdef5d00cd4a7937ff4bc136dab1932 xfsft-encodings.tar.bz2 11811
@@ -17,6 +17,7 @@ MD5 794107aa54dda238ab1ab4776b36274d XFree86-compose.dir.bz2 1883
 MD5 aafd74e26c541382bb382ff338f81f87 XFree86-en_US.UTF-8.old.bz2 7068
 MD5 2e2263bb4adaee6f959fbb6c8df5336a XFree86-locale.alias.bz2 3592
 MD5 d4402be729da91e849aa5b9f506bda06 XFree86-locale.dir.bz2 2094
+MD5 3585b8924a92d3dab36db8912d2a0581 gentoo-cursors-tad-0.2.tar.bz2 1203605
 MD5 cbdc2fdd7d2ed0832795e86a8b9ee19a andale32.exe 198384
 MD5 9637df0e91703179f0723ec095a36cb5 arial32.exe 554208
 MD5 c9089ae0c3b3d0d8c4b0a95979bb9ff0 arialb32.exe 168176

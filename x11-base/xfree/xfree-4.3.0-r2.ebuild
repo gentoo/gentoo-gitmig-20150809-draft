@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.16 2003/04/19 12:56:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.17 2003/04/21 03:31:52 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 DEBUG="yes"
 RESTRICT="nostrip"
 
-IUSE="3dfx sse mmx 3dnow xml truetype"
+IUSE="3dfx sse mmx 3dnow xml truetype nls cjk doc"
 
 inherit eutils flag-o-matic gcc
 
@@ -40,10 +40,12 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.1.1"
+PATCH_VER="1.1.2"
 FT2_VER="2.1.3"
-SISDRV_VER="130403-1"
+XCUR_VER="0.2"
+SISDRV_VER="180403-1"
 SAVDRV_VER="1.1.27t"
+MGADRV_VER="1_3_0beta"
 
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
@@ -60,6 +62,7 @@ X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
 	http://www.winischhofer.net/sis/sis_drv_src_${SISDRV_VER}.tar.gz"
+#	ftp://ftp.matrox.com/pub/mga/archive/linux/2001/beta_1_3_0/mga-${MGADRV_VER}.tgz"
 #	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
 # Updated Wacom driver:  http://people.mandrakesoft.com/~flepied/projects/wacom/
 # Latest Savaga drivers:  http://www.probo.com/timr/savage40.html
@@ -82,26 +85,27 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	${SRC_PATH0}/X${MY_SV}src-3.tgz
 	${SRC_PATH0}/X${MY_SV}src-4.tgz
 	${SRC_PATH0}/X${MY_SV}src-5.tgz
-	${SRC_PATH0}/X${MY_SV}src-6.tgz
-	${SRC_PATH0}/X${MY_SV}src-7.tgz
 	${SRC_PATH1}/X${MY_SV}src-1.tgz
 	${SRC_PATH1}/X${MY_SV}src-2.tgz
 	${SRC_PATH1}/X${MY_SV}src-3.tgz
 	${SRC_PATH1}/X${MY_SV}src-4.tgz
 	${SRC_PATH1}/X${MY_SV}src-5.tgz
-	${SRC_PATH1}/X${MY_SV}src-6.tgz
-	${SRC_PATH1}/X${MY_SV}src-7.tgz"
+	doc? ( ${SRC_PATH0}/X${MY_SV}src-6.tgz
+		${SRC_PATH0}/X${MY_SV}src-7.tgz
+		${SRC_PATH1}/X${MY_SV}src-6.tgz
+		${SRC_PATH1}/X${MY_SV}src-7.tgz )"
 
 SRC_URI="${SRC_URI}
 	${X_PATCHES}
 	${X_DRIVERS}
-	mirror://gentoo/gemini-koi8-u.tar.bz2
+	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	mirror://gentoo/eurofonts-X11.tar.bz2
 	mirror://gentoo/xfsft-encodings.tar.bz2
 	mirror://gentoo/XFree86-compose.dir.bz2
 	mirror://gentoo/XFree86-en_US.UTF-8.old.bz2
 	mirror://gentoo/XFree86-locale.alias.bz2
 	mirror://gentoo/XFree86-locale.dir.bz2
+	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
 	truetype? ( ${MS_FONT_URLS} )"
 
 LICENSE="X11 MSttfEULA"
@@ -122,7 +126,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	pam? ( >=sys-libs/pam-0.75 )
 	truetype? ( app-arch/cabextract )
 	app-arch/unzip
-	!media-libs/xft" 
+	!virtual/xft" 
 
 # unzip - needed for savage driver (version 1.1.27t)
 # x11-libs/xft -- blocked because of interference with xfree's
@@ -137,11 +141,21 @@ PROVIDE="virtual/x11
 src_unpack() {
 
 	# Unpack source and patches
-	unpack X${MY_SV}src-{1,2,3,4,5,6,7}.tgz
+	unpack X${MY_SV}src-{1,2,3,4,5}.tgz
+	if [ -n "`use doc`" ]
+	then
+		unpack X${MY_SV}src-{6,7}.tgz
+	fi
 	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
+	# Unpack TaD's gentoo cursors
+	unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2
+
 	# Unpack extra fonts stuff from Mandrake
-	unpack gemini-koi8-u.tar.bz2
+	if [ -n "`use nls`" ]
+	then
+		unpack gemini-koi8-u.tar.bz2
+	fi
 	unpack eurofonts-X11.tar.bz2
 	unpack xfsft-encodings.tar.bz2
 	
@@ -169,6 +183,12 @@ src_unpack() {
 	cd ${S}
 	eend 0
     
+#	ebegin "Updating Matrox HAL driver"
+#	unpack mga-${MGADRV_VER}.tgz
+#	touch ${WORKDIR}/mga/HALlib/mgaHALlib.a
+#	mv ${WORKDIR}/mga/HALlib/mgaHALlib.a \
+#		#{S}/programs/Xserver/hw/xfree86/drivers/mga/HALlib
+#	eend 0
 
 	if [ "`gcc-version`" = "2.95" ]
 	then
@@ -343,6 +363,43 @@ src_unpack() {
 
 	# Use the xfree Xft2 lib
 	echo "#define SharedLibXft YES" >> config/cf/host.def
+	
+	# disable docs if doc not in USE
+	if [ -z "`use doc`" ]
+	then
+		echo "#define BuildLinuxDocText NO" >> config/cf/host.def
+		echo "#define BuildLinuxDocHtml NO" >> config/cf/host.def
+		echo "#define BuildLinuxDocPS NO" >> config/cf/host.def
+		echo "#define BuildSpecsDocs NO" >> config/cf/host.def
+	fi
+
+	# enable Japanese docs, optionally
+	if [ -n "`use cjk`" -a -n "`use doc`" ]
+	then
+		echo "#define InstallJapaneseDocs YES" >> config/cf/host.def
+	fi
+
+	# Native Language Support Fonts
+	if [ -z "`use nls`" ]
+	then
+		echo "#define BuildCyrillicFonts NO" >> config/cf/host.def
+		echo "#define BuildArabicFonts NO" >> config/cf/host.def
+		echo "#define BuildGreekFonts NO" >> config/cf/host.def
+		echo "#define BuildHebrewFonts NO" >> config/cf/host.def
+		echo "#define BuildThaiFonts NO" >> config/cf/host.def
+
+		if [ -z "`use cjk`" ]
+		then
+			echo "#define BuildCIDFonts NO" >> config/cf/host.def
+			echo "#define BuildJapaneseFonts NO" >> config/cf/host.def
+			echo "#define BuildKoreanFonts NO" >> config/cf/host.def
+			echo "#define BuildChineseFonts NO" >> config/cf/host.def
+		fi
+	fi
+
+#	# Build with the binary MatroxHAL driver
+#	echo "#define HaveMatroxHal YES" >> config/cf/host.def
+#	echo "#define UseMatroxHal YES" >> config/cf/host.def
 
 # Will uncomment this after kde, qt, and *box ebuilds are alterered to use
 # it
@@ -360,18 +417,21 @@ src_unpack() {
 	bzcat ${DISTDIR}/XFree86-locale.alias.bz2 > nls/locale.alias
 	bzcat ${DISTDIR}/XFree86-locale.dir.bz2 > nls/locale.dir
 	bzcat ${DISTDIR}/XFree86-en_US.UTF-8.old.bz2 > nls/Compose/en_US.UTF-8
-
-	# These are not included anymore as they are obsolete
-	rm -rf ${S}/doc/hardcopy/{XIE,PEX5}
-	for x in ${S}/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}
-	do
-		if [ -f ${x} ]
-		then
-			cp ${x} ${x}.orig
-			grep -iv 'Load[[:space:]]*"\(pex5\|xie\)"' ${x}.orig > ${x}
-			rm -f ${x}.orig
-		fi
-	done
+	
+	if use doc
+	then
+		# These are not included anymore as they are obsolete
+		rm -rf ${S}/doc/hardcopy/{XIE,PEX5}
+		for x in ${S}/programs/Xserver/hw/xfree86/{XF98Conf.cpp,XF98Config}
+		do
+			if [ -f ${x} ]
+			then
+				cp ${x} ${x}.orig
+				grep -iv 'Load[[:space:]]*"\(pex5\|xie\)"' ${x}.orig > ${x}
+				rm -f ${x}.orig
+			fi
+		done
+	fi
 }
 
 src_compile() {
@@ -584,13 +644,16 @@ src_install() {
 	done
 	eend 0
 
-	ebegin "gemini-koi8 fonts..."
-	cd ${WORKDIR}/ukr
-	gunzip *.Z
-	gzip -9 *.pcf
-	cd ${S}
-	cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
-	eend 0
+	if [ -n "`use nls`" ]
+	then
+		ebegin "gemini-koi8 fonts..."
+		cd ${WORKDIR}/ukr
+		gunzip *.Z
+		gzip -9 *.pcf
+		cd ${S}
+		cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
+		eend 0
+	fi
 	
 	exeinto /etc/X11
 	# new session management script
@@ -657,6 +720,10 @@ src_install() {
 	done
 	eend 0
 
+	# Make the core cursor the default.  People seem not to like whiteglass
+	# for some reason.
+	dosed 's:whiteglass:core:' /usr/share/cursors/xfree/default/index.theme
+
 	einfo "Striping binaries and libraries..."
 	# This bit I got from Redhat ... strip binaries and drivers ..
 	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
@@ -685,6 +752,13 @@ src_install() {
 		fi
 	done
 
+	# Install TaD's gentoo cursors
+	insinto /usr/share/cursors/xfree/gentoo/cursors
+	doins ${WORKDIR}/cursors/gentoo/cursors/*
+	insinto /usr/share/cursors/xfree/gentoo-blue/cursors
+	doins ${WORKDIR}/cursors/gentoo-blue/cursors/*
+	insinto /usr/share/cursors/xfree/gentoo-silver/cursors
+	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
 }
 
 pkg_preinst() {
