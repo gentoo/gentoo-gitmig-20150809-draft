@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dspam-web
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.10 2005/01/05 01:11:53 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.11 2005/01/13 01:28:14 st_lim Exp $
+
+  13 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> :
+  Version bump
 
   05 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> :
   Fixed URL for dspam
