@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4.ebuild,v 1.3 2002/12/09 04:33:19 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4.ebuild,v 1.4 2002/12/28 15:03:25 pvdabeel Exp $
 
 S="${WORKDIR}/${PN}sdk-${PV}"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://upnp.sourceforge.net"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/upnp/${PN}sdk-${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~ppc"
 
 RDEPEND="sys-apps/e2fsprogs"
 DEPEND="${RDEPEND}"

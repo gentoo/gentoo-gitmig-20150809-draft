@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020124-r1.ebuild,v 1.4 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020124-r1.ebuild,v 1.5 2002/12/28 14:56:14 pvdabeel Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Network monitoring tools including ping and ping6"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/${PN}-ss${PV}.tar.gz"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 sparc alpha"
+KEYWORDS="x86 sparc alpha ~ppc"
 
 DEPEND="virtual/glibc
 		app-text/openjade
