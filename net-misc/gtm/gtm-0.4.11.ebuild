@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Desktop Team <desktop@cvs.gentoo.org>
 # Author:  Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11.ebuild,v 1.2 2002/05/06 14:39:22 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTM - a transfer manager"
@@ -32,7 +33,7 @@ src_unpack() {
 	do
 		cp ${S}/doc/${lang}/Makefile.in ${S}/doc/${lang}/Makefile.in.orig
 		sed -e 's: \$(gtm_helpdir): \$(DESTDIR)$(gtm_helpdir):g' \
-			${S}/doc/${lang}/Makefile.in.orig	\
+			${S}/doc/${lang}/Makefile.in.orig \
 			>${S}/doc/${lang}/Makefile.in
 	done
 						
@@ -47,13 +48,13 @@ src_compile() {
 	use ssl   || myconf="${myconf} --disable-ssl"
 	use ssl   && myconf="${myconf} --enable-ssl"
 
-	./configure --host=${CHOST}				\
-		--prefix=/usr			  		\
-		--mandir=/usr/share/man 			\
-		--infodir=/usr/share/info			\
-		--localstatedir=/var/lib 			\
-		--sysconfdir=/etc				\
-		--without-debug					\
+	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--localstatedir=/var/lib \
+		--sysconfdir=/etc \
+		--without-debug \
 		$myconf || die
 			
 	emake || die
