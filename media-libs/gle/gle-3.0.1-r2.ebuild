@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.11 2003/02/23 19:46:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.12 2003/03/25 20:43:31 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GL extrusion library"
-SRC_URI="http://www.linas.org/gle/gle-3.0.1.tar.gz"
+SRC_URI="http://www.linas.org/gle/pub/gle-3.0.1.tar.gz"
 HOMEPAGE="http://www.linas.org/gle"
 
 DEPEND="virtual/opengl
