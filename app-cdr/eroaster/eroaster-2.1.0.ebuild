@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.1 2002/07/11 20:06:07 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.2 2002/07/27 23:38:34 seemant Exp $
 
 DESCRIPTION="A graphical frontend for cdrecord and mkisofs written in gnome-python"
 HOMEPAGE="http://eroaster.sourceforge.net"
@@ -19,17 +19,12 @@ DEPEND=">=dev-lang/python-2.0
 # xmms here is only used in runtime
 # not a bulild dep.
 RDEPEND="${DEPEND}
-	xmms? ( media-sound/xmms-1.2.7 )"
+	xmms? ( media-sound/xmms )"
 
 S=${WORKDIR}/${P}
 
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
-
+	econf || die "./configure failed"
 	emake || die
 }
 
