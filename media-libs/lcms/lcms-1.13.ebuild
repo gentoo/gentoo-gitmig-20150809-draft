@@ -1,24 +1,39 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.11.1.ebuild,v 1.5 2004/06/24 23:05:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.13.ebuild,v 1.1 2004/09/22 12:45:27 lanius Exp $
+
+inherit libtool gnuconfig
 
 DESCRIPTION="A lightweight, speed optimized color management engine"
 HOMEPAGE="http://www.littlecms.com/"
 SRC_URI="http://www.littlecms.com/${P}.tar.gz"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 LICENSE="LGPL-2.1"
 SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
+IUSE="tiff jpeg zlib python"
 
 DEPEND="tiff? ( media-libs/tiff )
 	jpeg? ( media-libs/jpeg )
 	zlib? ( sys-libs/zlib )
 	python? ( >=dev-lang/python-1.5.2 )"
 
-IUSE="tiff jpeg zlib python"
+RDEPEND="jpeg? ( media-libs/jpeg )
+	python? ( >=dev-lang/python-1.5.2 )"
 
-MY_PV=1.11
-S=${WORKDIR}/${PN}-${MY_PV}
+src_unpack() {
+	unpack ${A}
+
+	# an updated config.sub for the uclibc env
+	gnuconfig_update || die
+
+	# fix build on amd64
+	cd ${S}
+	einfo "Running autoreconf..."
+	autoreconf
+	einfo "Running libtoolize..."
+	elibtoolize
+}
 
 src_compile() {
 	econf \
@@ -38,7 +53,7 @@ src_install() {
 		install                              || die "make install failed"
 
 	insinto /usr/share/lcms/profiles
-	doins testbed/*.icm                      || die "doins failed"
+	doins testbed/*.icm
 
-	dodoc AUTHORS README* INSTALL NEWS doc/* || die "dodoc failed"
+	dodoc AUTHORS README* INSTALL NEWS doc/*
 }
