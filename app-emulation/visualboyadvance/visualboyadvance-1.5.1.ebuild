@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/visualboyadvance/visualboyadvance-1.5.1.ebuild,v 1.1 2003/06/21 03:34:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/visualboyadvance/visualboyadvance-1.5.1.ebuild,v 1.2 2003/07/18 22:36:56 vapier Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-${PV}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="mmx profiling"
+IUSE="mmx debug"
 
 DEPEND="mmx? ( dev-lang/nasm )
 	media-libs/libpng
@@ -29,10 +29,10 @@ src_compile() {
 
 	egamesconf \
 		--enable-c-core \
-		`use_with profiling` \
+		`use_with debug profiling` \
 		`use_with mmx` \
 		|| die
-	if [ ! `use profiling` ] ; then
+	if [ ! `use debug` ] ; then
 		cp src/Makefile{,.orig}
 		sed -e 's:prof/libprof.a::' \
 			src/Makefile.orig > src/Makefile
