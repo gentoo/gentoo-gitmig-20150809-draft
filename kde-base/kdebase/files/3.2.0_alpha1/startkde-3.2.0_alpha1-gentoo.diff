@@ -34,10 +34,10 @@
 +
 +# Gentoo part ends
 +
- # Boot sequence:
- #
- # kdeinit is used to fork off processes which improves memory usage
-@@ -29,12 +51,12 @@
+ # we have to unset this for Darwin since it will screw up KDE's dynamic-loading
+ unset DYLD_FORCE_FLAT_NAMESPACE
+
+@@ -112,12 +134,12 @@
  # especially necessary on slow machines, where starting KDE takes one or two
  # minutes until anything appears on the screen.
  #
@@ -52,7 +52,7 @@
  xsetroot -cursor_name left_ptr $bkg
  
  # The user's personal KDE directory is usually ~/.kde, but this setting
-@@ -140,7 +162,11 @@
+@@ -163,7 +186,11 @@
  fi
  
  # the splashscreen and progress indicator
