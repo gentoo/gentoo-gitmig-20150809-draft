@@ -1,0 +1,16 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/files/xhkeys,v 1.1 2003/11/20 23:29:49 port001 Exp $
+
+start() {
+	ebegin "Starting xhkeys"
+	start-stop-daemon --start --quiet --exec /usr/bin/xhkeys	
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping xhkeys"
+	start-stop-daemon --stop --quiet --exec /usr/bin/xhkeys
+	eend $?
+}
