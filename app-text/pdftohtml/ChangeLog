@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdftohtml
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.1 2003/10/11 08:02:18 robbat2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.2 2004/03/10 20:10:50 weeve Exp $
+
+  10 Mar 2004; Jason Wever <weeve@gentoo.org> pdftohtml-0.36.ebuild:
+  Added ~sparc keyword.
 
 *pdftohtml-0.36 (11 Oct 2003)
 
