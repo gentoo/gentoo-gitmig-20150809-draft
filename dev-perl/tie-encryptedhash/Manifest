@@ -1,4 +1,14 @@
-MD5 2d2c796a0d557b90be319a3733697831 ChangeLog 836
-MD5 6bd578aab4d4b38c4d8893400a5ec65a tie-encryptedhash-1.21.ebuild 708
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30de330debad934c55d4a7ea98c45703 ChangeLog 943
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 55da3db2b0c2c49bf88d68ff71a6357d tie-encryptedhash-1.21.ebuild 712
 MD5 1f5317ef7769e8eefd7e5940908a9b90 files/digest-tie-encryptedhash-1.21 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5n/4KRy60XGEcJIRAt+hAJ9OS+mEEhj5YWkZkcO3B7050kxJUgCghFns
+tJ1a1RziC/tTTIH7R/k39jQ=
+=Q7+g
+-----END PGP SIGNATURE-----

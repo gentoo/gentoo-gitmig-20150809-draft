@@ -1,6 +1,16 @@
-MD5 07244b1d6e731e61ac325cdfec3748e3 ChangeLog 1000
-MD5 930b5a369c6b6cef24a9caecb93149d4 crypt-cbc-2.11.ebuild 647
-MD5 303de7aa3975b9c4b91edc3162694ee1 crypt-cbc-2.08.ebuild 620
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1e28bdd4a3a58862c2d045f9b3ac7267 ChangeLog 1097
+MD5 9030f08a9a9d3331d70df74e207a6e0d crypt-cbc-2.08.ebuild 624
+MD5 15248d7d566e4a4c1e9c1df90a51991f crypt-cbc-2.11.ebuild 649
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 fa3fc19345cd6ec2e7eded5284f9db02 files/digest-crypt-cbc-2.08 64
 MD5 f510ce2e66d97d831a409fe7a7846a1d files/digest-crypt-cbc-2.11 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5n8tKRy60XGEcJIRAkiQAJ9jSbAR+a4GOtkIQiQIeDGCSJbqKACfYD4t
+GWQp+othUjZn3Sr7E4z2VI0=
+=s/zr
+-----END PGP SIGNATURE-----
