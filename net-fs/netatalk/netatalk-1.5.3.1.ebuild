@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.3.1.ebuild,v 1.5 2002/10/05 05:39:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.3.1.ebuild,v 1.6 2002/11/04 17:50:36 seemant Exp $
 
 IUSE="ssl pam tcpd"
 
@@ -41,7 +41,6 @@ src_install() {
 	dodoc NEWS README TODO VERSION
 
 	# install init script
-	mkdir -p ${D}/etc/init.d
-	cp ${FILESDIR}/atalk-rc6 ${D}/etc/init.d/atalk
-	chmod 755 ${D}/etc/init.d/atalk
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/atalk-rc6 atalk
 }
