@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/yaboot-1.3.10.ebuild,v 1.3 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/yaboot-1.3.10.ebuild,v 1.4 2003/06/23 00:43:21 pylon Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://penguinppc.org/projects/yaboot/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 -sparc -alpha"
+KEYWORDS="ppc -x86 -amd64 -alpha -arm -hppa -mips -sparc"
 
 DEPEND="sys-apps/powerpc-utils 
 	sys-apps/hfsutils
