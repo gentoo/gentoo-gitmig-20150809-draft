@@ -1,24 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r2.ebuild,v 1.8 2002/12/09 04:17:44 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r2.ebuild,v 1.9 2002/12/18 15:38:22 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Converts PNM to ASCII"
 SRC_URI="mirror://sourceforge/jocr/${P}.tar.gz"
 HOMEPAGE="http://jocr.sourceforge.net/"
 
-RDEPEND=">=media-libs/netpbm-9.12-r1"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 sparc"
+IUSE="tetex"
 
+RDEPEND=">=media-libs/netpbm-9.12-r1"
 DEPEND="${RDEPEND}
 	app-text/tetex
 	app-text/ghostscript
 	tetex? ( >=tetex-1.0.7-r10 
 		     >=transfig-3.2.3d-r1 )"
-IUSE="tetex"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
 
 src_unpack() {
 	unpack ${A}
@@ -39,45 +37,20 @@ src_unpack() {
 	cd ../examples
 	cp Makefile Makefile.orig
 	sed -e "s:polish.pbm man.pbm:polish.pbm:" Makefile.orig > Makefile
-
 }
 
 src_compile() {
-
 	addwrite "/usr/share/texmf/fonts/pk"
 	addwrite "/usr/share/texmf/ls-R"
-	econf || die
-	make
-	make src frontend database
-	use tetex && ( \
+	econf
+	make || die
+	make src frontend database || die
+	if [ `use tetex` ] ; then
 		make examples || die
-	)
+	fi
 }
 
-src_install () {
-
+src_install() {
 	addwrite "/usr/share/texmf"
-
-	make DESTDIR=${D} \
-		install || die
-#	dobin bin/gocr
-#	exeinto /usr/bin
-#	doexe bin/gocr.tcl
-#	dolib.a src/libPgm2asc.a
-#	insinto /usr/include
-#	doins src/gocr.h
-#	insinto /usr/share/gocr/db
-#	doins db/*
-#	doman man/man1/gocr.1
-#	dodoc AUTHORS BUGS CREDITS HISTORY README* REMARK.txt REVIEW TODO gpl.html
-#	docinto txt
-#	dodoc doc/*.txt
-
-#	use tetex && ( \
-#		insinto /usr/share/gocr/db
-#		docinto ps
-#		dodoc doc/ocr.ps
-#	)
-
+	make DESTDIR=${D} install || die
 }
-
