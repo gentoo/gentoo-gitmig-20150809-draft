@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.395 2004/05/30 00:50:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.396 2004/05/30 01:05:08 weeve Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -242,6 +242,7 @@ net-dns/djbdns:semanticfix - makes tinydns-data handle more semantic errors
 net-dns/pdnsd:isdn - enable isdn features
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
+net-im/bitlbee:flood - Enable flood protection support
 net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gaim:noaudio - Allow users to disable audio support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
