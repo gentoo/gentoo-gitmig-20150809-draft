@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 9f307169990d989c870efe3220b20ccb winesetuptk-0.6.0b-r3.ebuild 1244
+MD5 520483606544c1a62c58c8144d9dbea2 winesetuptk-0.7.ebuild 1099
 MD5 8b1a3b7acfc1505869c28f561522c32d ChangeLog 2004
 MD5 2757f31c348b5bb2d1c73032387759ca metadata.xml 278
-MD5 970db677fcc7090ef77cbaa95920b1a0 winesetuptk-0.6.0b-r3.ebuild 1260
-MD5 520483606544c1a62c58c8144d9dbea2 winesetuptk-0.7.ebuild 1099
 MD5 980700b0965e1ffe84d9c9e2e0ff519a files/digest-winesetuptk-0.6.0b-r3 75
 MD5 4efdbaaa9921a8bcacb4dc5d5a4b7f0b files/digest-winesetuptk-0.7 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA31PGHTu7gpaalycRAjM/AJ9nzd6LE8MXVubGtNENaePLDU5zgACfVL8W
-JeL/w1+/sMOyV3uDY0lzYwI=
-=7hAt
------END PGP SIGNATURE-----
