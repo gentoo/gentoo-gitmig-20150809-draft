@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/chmlib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.6 2004/06/24 21:38:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.7 2004/06/30 00:50:05 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> chmlib-0.31.ebuild,
+  chmlib-0.32.ebuild:
+  econf || die, add sed-4 dep
 
 *chmlib-0.32 (09 Jun 2004)
 
