@@ -1,0 +1,43 @@
+These profiles are development profiles and not meant for end users.  You
+are welcome to use them to help development, but please realize that they
+are subject to removal with only a 2 week deprecation period.  Here's the
+email I sent to gentoo-amd64 which should explain their purpose:
+
+Hi all,
+
+lv's been busy with his new job, and he's given me his blessing to take
+over multilib development in the toolchain.  As such, I'm going to be
+creating a new amd64 profile series to work on multilib development with
+the new multilib toolchain that I'm working on.  Some details can be
+seen in the following bug report[1], and unfortunately the rest of the
+details are in private emails between me, toolchain, and dev-portage.
+
+Quick summary:
+default-linux/amd64/multilib-dev/lib:
+lib32 = 32bit
+lib64 (lib -> lib64) = 64bit
+
+default-linux/amd64/multilib-dev/lib64:
+lib = 32bit
+lib64 = 64bit
+
+More detail:
+default-linux/amd64/multilib-dev/lib is the replacement for
+2004.3/lib64.  It should be safe to switch from the 2004.3/lib64 profile
+to this one.  The only changes will be in how the multilib information
+is passed to portage  (see the bug report or
+default-linux/sparc/sparc64-multilib for the details about the new
+method).
+
+default-linux/amd64/multilib-dev/lib64 will almost certainly break any
+current system, but the long term goal will be to have lib = 32bit and
+lib64 = 64bit.  The problem is that many packages in portage are not yet
+multilib aware.  This is a long-term target, but it's good to start
+working now... especially since this support is neccessary for multilib
+on sparc and mips.
+
+Do NOT use these profiles unless you also use all patches in the bug
+report as not everything is in the latest portage release.
+
+[1] http://bugs.gentoo.org/show_bug.cgi?id=75420
+
