@@ -1,13 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.9 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.10 2003/04/06 22:49:42 seemant Exp $
+
+inherit flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Fax and Voice modem programs."
 SRC_URI="ftp://alpha.greenie.net/pub/mgetty/source/1.1/${PN}${PV}-Jan10.tar.gz"
 HOMEPAGE="http://alpha.greenie.net/mgetty/"
 
-DEPEND="app-text/tetex
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=sys-apps/sed-4.0.5
+	app-text/tetex
 	sys-apps/gawk
 	dev-lang/perl"
 
@@ -15,35 +19,37 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
+append-flags "-DAUTO_PPP"
+
 src_unpack() {
 	unpack ${A}
 
-	patch -p0 < ${FILESDIR}/mgetty-${PV}-gentoo.diff || die
+	epatch ${FILESDIR}/mgetty-${PV}-gentoo.diff
 	
 	cd ${S}/doc
-	cp Makefile Makefile.orig
-	sed -e "s:dvips -o mgetty.ps:dvips -M -o mgetty.ps:" \
-		Makefile.orig >Makefile
+	sed -i "s:dvips -o mgetty.ps:dvips -M -o mgetty.ps:" Makefile
 
 	cd ${S}
 	sed -e 's:var/log/mgetty:var/log/mgetty/mgetty:' \
 		-e 's:var/log/sendfax:var/log/mgetty/sendfax:' \
-		-e 's:\/\* \#define CNDFILE "dialin.config" \*\/:\#define CNDFILE "dialin.config":' \
+		-e 's:\/\* \(\#define CNDFILE "dialin.config"\) \*\/:\1:' \
 		-e 's:\(\#define FAX_NOTIFY_PROGRAM\).*:\1 "/etc/mgetty+sendfax/new_fax":' \
 		policy.h-dist > policy.h
 }
 
 src_compile() {
-	mycflags="${CFLAGS} -DAUTO_PPP"
-	unset CFLAGS
 	emake prefix=/usr \
 		CONFDIR=/etc/mgetty+sendfax \
-		CFLAGS="${mycflags}" \
-		|| die
+		CFLAGS="${CFLAGS}" \
+		|| make prefix=/usr \
+			CONFDIR=/etc/mgetty+sendfax \
+			CFLAGS="${CFLAGS}" \
+			|| die
+
 	cd voice
 	emake CONFDIR=/etc/mgetty+sendfax \
-		CFLAGS="${mycflags}" \
-		|| die
+		|| make CONFDIR=/etc/mgetty+sendfax \
+			|| die
 	cd ${S}
 }
 
