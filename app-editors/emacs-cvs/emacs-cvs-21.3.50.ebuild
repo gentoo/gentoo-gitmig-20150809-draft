@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.8 2003/04/01 08:41:16 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.9 2003/04/16 17:14:53 mkennedy Exp $
 
 ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
@@ -9,7 +9,7 @@ ECVS_CVS_OPTIONS="-dP"
 
 inherit cvs
 
-IUSE="X nls gtk Xaw3d gnome" 
+IUSE="X nls gtk gtk2 Xaw3d gnome" 
 
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Emacs is the extensible, customizable, self-documenting real-time display editor."
@@ -30,6 +30,7 @@ DEPEND=">=sys-libs/ncurses-5.3
 		>=media-libs/tiff-3.5.7
 		>=media-libs/libpng-1.2.5 )
 	gtk? ( =x11-libs/gtk+-2* )
+	gtk2? ( =x11-libs/gtk+-2* )
 	Xaw3d? ( x11-libs/Xaw3d )
 	gnome? ( gnome-base/gnome-desktop )
 	nls? ( >=sys-devel/gettext-0.11.5 )"
@@ -56,7 +57,7 @@ src_compile() {
 			--with-tiff 
 			--with-gif 
 			--with-png"
-		if use gtk 
+		if use gtk || use gtk2
 		then 
 			myconf="${myconf} --with-x-toolkit=gtk 
 				--with-gtk
