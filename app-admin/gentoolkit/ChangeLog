@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.89 2003/06/30 20:54:18 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.90 2003/07/09 16:46:58 utx Exp $
+
+*gentoolkit-0.1.30 (09 Jul 2003)
+
+  09 Jul 2003; Stanislav Brabec <utx@gentoo.org> gentoolkit-0.1.30.ebuild,
+  files/scripts/revdep-rebuild-2:
+  revdep-rebuild: help text fixes and package order evaluation fixes
+  (bug #23791).
 
 *gentoolkit-0.1.29 (30 Jun 2003)
 
