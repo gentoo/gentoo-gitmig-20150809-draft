@@ -1,14 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 45b230cb3f1fd14ba338701d4080b4ba bind-9.2.3.ebuild 5875
 MD5 6b59baf987877253eb9e2638c6cf56cd bind-9.2.2-r3.ebuild 5709
+MD5 61a6fb5346e4f405c35bf0c823e75476 bind-9.2.2-r5.ebuild 6434
 MD5 e74705fa1f4ec70e05cf44eb7796ba0e bind-9.3.1_beta2.ebuild 5937
 MD5 9676ca38b8a2af68a01785194ecd12d8 bind-9.2.2.ebuild 4678
 MD5 01424b3848125e67c3f94c902f8f984f bind-9.3.0_rc2.ebuild 5892
 MD5 242fac0b5f26fab0bc0a3bded1fccdfa bind-9.2.2-r2.ebuild 4895
 MD5 0fce7dffc077cc801ceeaf46cce6ead0 bind-9.2.2-r4.ebuild 5828
-MD5 b120e4b3cf0bdfe822de67ab50622d27 ChangeLog 8667
+MD5 105ed3a84d4426fa0fe9970bd6bc9e25 ChangeLog 8853
 MD5 9878980f4b7a34ac4812812325b9ad85 metadata.xml 349
 MD5 5a5afd0ab570b531cd0094bf16f6735d bind-9.2.2-r1.ebuild 4880
 MD5 51197afe8da37b1b453456de90ca4f25 files/127 227
@@ -18,6 +16,7 @@ MD5 e020f0d41f68e0c47d196c4aa1a06c09 files/digest-bind-9.2.2-r1 63
 MD5 e020f0d41f68e0c47d196c4aa1a06c09 files/digest-bind-9.2.2-r2 63
 MD5 309110e09d923344a34a803f8906fae3 files/digest-bind-9.2.2-r3 121
 MD5 309110e09d923344a34a803f8906fae3 files/digest-bind-9.2.2-r4 121
+MD5 ce78c05705c759f2494388ad313bdcbb files/digest-bind-9.2.2-r5 182
 MD5 e020f0d41f68e0c47d196c4aa1a06c09 files/digest-bind-9.2.2 63
 MD5 feb1027d97d15dcf8fdc57b2de185af2 files/digest-bind-9.2.3 63
 MD5 21e3efd21e18f4c660155978105f8ebe files/named.confd 351
@@ -32,11 +31,3 @@ MD5 2bb12cfcd70284e72fbf9e70e5e2974d files/dyndns-samples.tbz2 22866
 MD5 412d666c947769b6015a65a42bb8ea00 files/named.rc6 1434
 MD5 42b5ed5adcee33cf40531d7955412b21 files/10bind.env 27
 MD5 e83e7a76e253debfdd120311fda73fb6 files/named.ca 2518
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFB+pKSPpIsIjIzwiwRAi2XAJ9VcV8wmP+Ev5cNJOoqCLL8vPS8RACgmK2n
-WiBL4JrwQKrle37qY+MtnmU=
-=qJEy
------END PGP SIGNATURE-----
