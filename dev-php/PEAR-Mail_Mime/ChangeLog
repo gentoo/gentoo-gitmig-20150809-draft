@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Mail_Mime
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.18 2004/12/30 19:25:17 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.19 2005/03/08 17:11:35 sebastian Exp $
+
+  08 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -PEAR-Mail_Mime-1.2.1.ebuild:
+  Remove old version that does not utilize the php-pear eclass.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
