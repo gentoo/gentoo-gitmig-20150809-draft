@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/duke3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.16 2004/08/22 14:06:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.17 2004/08/27 02:45:19 vapier Exp $
+
+  26 Aug 2004; Mike Frysinger <vapier@gentoo.org> duke3d-20040817.ebuild
+  +files/20040817-endian.patch:
+  Add a patch to fix running on big endian systems #61529 by Maciej J. Woloszyk.
 
   22 Aug 2004; Tony Vroon <chainsaw@gentoo.org> +files/20040817-gcc34.patch,
   duke3d-20040817.ebuild:

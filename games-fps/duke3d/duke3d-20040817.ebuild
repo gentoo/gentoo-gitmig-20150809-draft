@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.2 2004/08/22 14:06:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.3 2004/08/27 02:45:19 vapier Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -55,6 +55,7 @@ src_unpack() {
 		-e 's:/usr/lib/perl5/i386-linux/CORE/libperl.a::' \
 		Makefile \
 		|| die "sed build Makefile failed"
+	epatch ${FILESDIR}/${PV}-endian.patch
 
 	# configure duke3d
 	cd ${S}/source
