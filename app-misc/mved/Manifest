@@ -1,4 +1,4 @@
-MD5 d5743d758884800937ca484eaf77e12d ChangeLog 665
+MD5 032edb57291c55ebfafcb8ef6138bb56 ChangeLog 803
 MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
-MD5 96abb8f6208beaaea16af627952b57c8 mved-0.3.5.ebuild 509
-MD5 be82de44294db16bda3b52e35bc1113b files/digest-mved-0.3.5 60
+MD5 6c8a9acf9c7bf22194f267b300a68c8f mved-1.0.ebuild 502
+MD5 07fb7fc765efbebc108f86cdecb781e2 files/digest-mved-1.0 58

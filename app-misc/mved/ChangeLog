@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mved
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mved/ChangeLog,v 1.4 2005/01/01 15:16:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mved/ChangeLog,v 1.5 2005/01/11 19:03:25 avenj Exp $
+
+*mved-1.0 (11 Jan 2005)
+
+  11 Jan 2005; Jon Portnoy <avenj@gentoo.org> mved-1.0.ebuild :
+  Version bump. Removed 0.3.5 at upstream's request.
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> mved-0.3.5.ebuild:
   Added ~sparc, ~mips
