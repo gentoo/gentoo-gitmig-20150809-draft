@@ -1,7 +1,13 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.2 2002/04/12 16:57:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.3 2002/04/16 09:06:33 blocke Exp $
 
+*xcdroast-0.98_alpha9-r1 (16 Apr 2002)
+
+  16 Apr 2002; Bruce A. Locke <blocke@shivan.org> xcdroast-0.98_alpha9-r1.ebuild:
+
+  Fixed xcdroast's hardcoded dependency versions to work with a newer version 
+  of cdrtools (hardcoding is because of xcdroast itself, not our packaging)
 
 *xcdroast-0.98_alpha9 (11 Apr 2002)
 
