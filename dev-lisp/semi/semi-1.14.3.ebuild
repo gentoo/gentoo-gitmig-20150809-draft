@@ -1,6 +1,6 @@
 # Copyright 2002 moto kawasaki <kawasaki@kawasaki3.org>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/semi/semi-1.14.3.ebuild,v 1.1 2002/06/26 02:06:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/semi/semi-1.14.3.ebuild,v 1.2 2002/06/29 03:14:17 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a library to provide MIME feature for GNU Emacs -- SEMI"
@@ -13,7 +13,7 @@ DEPEND=">=app-editors/emacs-20.4
 RDEPEND="${depend}"
 
 SLOT="0"
-LICENSE=""
+LICENSE="GPL-2"
 
 src_install() {
 	make PREFIX=${D}/usr install || die
