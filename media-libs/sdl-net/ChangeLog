@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-net
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.6 2003/02/12 07:16:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.7 2003/08/25 02:33:15 msterret Exp $
+
+*sdl-net-1.2.5 (24 Aug 2003)
+
+  24 Aug 2003; Michael Sterrett <msterret@gentoo.org> sdl-net-1.2.5.ebuild:
+  version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,3 +1,5 @@
 MD5 1cd19280aa30509882c00fe8173bbfe0 ChangeLog 1004
 MD5 d4c4af08b90fe5b6907ba8f3b5db9fe9 sdl-net-1.2.4.ebuild 644
+MD5 c1941bdb47e521fc76ac18dcb5538fa8 sdl-net-1.2.5.ebuild 648
 MD5 df9292fba38ccb74f6c1b3ecdc0ead40 files/digest-sdl-net-1.2.4 65
+MD5 f119d85316c2c2ebabc21b58d7194d53 files/digest-sdl-net-1.2.5 65
