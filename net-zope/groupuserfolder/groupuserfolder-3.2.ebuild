@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/groupuserfolder-3.2.ebuild,v 1.1 2005/03/26 01:33:24 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/groupuserfolder-3.2.ebuild,v 1.2 2005/04/02 08:54:45 blubb Exp $
 
 inherit zproduct
 
@@ -8,7 +8,7 @@ DESCRIPTION="GroupUserFolder is a kind of user folder that provides a special ki
 HOMEPAGE="http://ingeniweb.sourceforge.net/Products/GroupUserFolder/"
 SRC_URI="mirror://sourceforge/collective/GroupUserFolder-${PV}.tar.gz"
 LICENSE="ZPL"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 ZPROD_LIST="GroupUserFolder"

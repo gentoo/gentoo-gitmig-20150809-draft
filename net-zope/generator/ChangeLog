@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/generator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/generator/ChangeLog,v 1.5 2005/03/19 17:10:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/generator/ChangeLog,v 1.6 2005/04/02 08:45:29 blubb Exp $
+
+  02 Apr 2005; Simon Stelling <blubb@gentoo.org> generator-1.3.0.11.ebuild:
+  added ~amd64
 
   19 Mar 2005; Jason Wever <weeve@gentoo.org> generator-1.3.0.11.ebuild:
   Added ~sparc keyword wrt bug #84791.

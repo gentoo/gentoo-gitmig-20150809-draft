@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/generator/generator-1.3.0.11.ebuild,v 1.2 2005/03/19 17:10:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/generator/generator-1.3.0.11.ebuild,v 1.3 2005/04/02 08:45:29 blubb Exp $
 
 inherit zproduct
 
@@ -10,7 +10,7 @@ DESCRIPTION="Widget generator package, originally designed for Archetypes."
 WEBPAGE="http://www.sourceforge.net/projects/${MASTER_PN}"
 SRC_URI="mirror://sourceforge/${MASTER_PN}/${PN}-1.3.0-11.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 SLOT="1.3"
 

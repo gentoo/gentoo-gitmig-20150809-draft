@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/placelesstranslationservice-fork/placelesstranslationservice-fork-1.0_rc7.ebuild,v 1.3 2005/03/19 17:31:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/placelesstranslationservice-fork/placelesstranslationservice-fork-1.0_rc7.ebuild,v 1.4 2005/04/02 08:55:32 blubb Exp $
 
 inherit zproduct
 
@@ -10,7 +10,7 @@ DESCRIPTION="Translation service based on potfiles in the filesystem. (forked ve
 HOMEPAGE="http://sf.net/projects/collective"
 SRC_URI="mirror://sourceforge/collective/PlacelessTranslationService-${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE=""
 
 ZPROD_LIST="PlacelessTranslationService"

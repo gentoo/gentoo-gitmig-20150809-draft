@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/groupuserfolder
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/ChangeLog,v 1.10 2005/03/26 01:33:24 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/ChangeLog,v 1.11 2005/04/02 08:54:45 blubb Exp $
+
+  02 Apr 2005; Simon Stelling <blubb@gentoo.org> groupuserfolder-3.2.ebuild:
+  added ~amd64
 
 *groupuserfolder-3.2 (26 Mar 2005)
 

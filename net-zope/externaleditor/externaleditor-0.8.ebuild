@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/externaleditor-0.8.ebuild,v 1.3 2005/03/19 17:27:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/externaleditor-0.8.ebuild,v 1.4 2005/04/02 08:53:48 blubb Exp $
 
 inherit zproduct
 
@@ -13,7 +13,7 @@ SRC_URI_BASE="${HOMEPAGE}/${PV}"
 SRC_URI="${SRC_URI_BASE}/${MY_P}.tgz
 	${SRC_URI_BASE}/${MY_P2}.tgz"
 LICENSE="ZPL"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE=""
 ZPROD_LIST="${MY_PN}"
 

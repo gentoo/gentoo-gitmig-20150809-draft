@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/plonetranslations
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plonetranslations/ChangeLog,v 1.5 2005/03/19 17:34:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plonetranslations/ChangeLog,v 1.6 2005/04/02 08:56:42 blubb Exp $
+
+  02 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  plonetranslations-0.5.ebuild:
+  added ~amd64
 
   19 Mar 2005; Jason Wever <weeve@gentoo.org> plonetranslations-0.5.ebuild:
   Added ~sparc keyword wrt bug #84791.

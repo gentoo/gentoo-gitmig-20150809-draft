@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/cmfquickinstallertool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/ChangeLog,v 1.8 2005/03/19 17:24:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfquickinstallertool/ChangeLog,v 1.9 2005/04/02 08:51:43 blubb Exp $
+
+  02 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  cmfquickinstallertool-1.5.0.ebuild:
+  added ~amd64
 
   19 Mar 2005; Jason Wever <weeve@gentoo.org>
   cmfquickinstallertool-1.5.0.ebuild:
