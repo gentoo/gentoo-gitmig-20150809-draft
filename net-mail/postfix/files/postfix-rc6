@@ -1,28 +1,19 @@
 #!/sbin/runscript
 
-SERVICE=postfix
-opts="start stop restart"
-
 PIDFILE=/var/spool/postfix/pid/master.pid
-EXE=/usr/sbin/postfix
 
 depend() {
-        need sysklogd net
+    need sysklogd net
 }
 
 start() {
-        ebegin "Starting $SERVICE..."
-        $EXE start >/dev/null 2>&1
-        eend $? "Started $SERVICE." "Error Starting $SERVICE."
+    ebegin "Starting postfix"
+    /usr/sbin/postfix start >/dev/null 2>&1
+    eend $?
 }
 
 stop() {
-        ebegin "Stopping $SERVICE..."
-        $EXE stop >/dev/null 2>&1
-        eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
-}
-
-restart() {
-        stop
-        start
+    ebegin "Stopping postfix"
+    /usr/sbin/postfix stop >/dev/null 2>&1
+    eend $?
 }
