@@ -52,7 +52,7 @@ MD5 23a2babf3049fe012de21c17e550b3e5 files/1.03-r9/run-qmailsend 29
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03-r9/run-qmailsendlog 96
 MD5 aa0823cdce32c502c856664c8b0ce775 files/1.03-r9/run-qmailsmtpd 231
 MD5 f43900d79a0aacb5e0d71b0bb6c06fea files/1.03-r9/run-qmailsmtpdlog 97
-MD5 cdad16d30dea087302dd3021467b8ad8 qmail-1.03-r10.ebuild 10408
+MD5 2bd95d62166d506d8971bb56ebfdc1d4 qmail-1.03-r10.ebuild 10407
 MD5 19dd9b9232eb66c5adb8263df11c2873 qmail-1.03-r8.ebuild 8143
 MD5 30ae1187a48ebe4c70c38c08c5706d76 qmail-1.03-r9.ebuild 9991
 MD5 aa24b23a6db5d46c59b9d0029c92100d ChangeLog 4318
