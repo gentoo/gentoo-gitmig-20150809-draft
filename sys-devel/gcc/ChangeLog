@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.250 2004/05/26 16:30:01 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.251 2004/05/27 02:08:29 lv Exp $
+
+*gcc-3.4.0-r5 (26 May 2004)
+
+  26 May 2004; Travis Tilley <lv@gentoo.org> +gcc-3.4.0-r5.ebuild:
+  uclibc related updates and fixes from Peter Mazinger
 
   26 May 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r4.ebuild:
   adding ~amd64 keyword. this shouldnt have an effect on most users, as gcc 3.4
