@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.9.ebuild,v 1.3 2003/06/09 17:19:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.9.ebuild,v 1.4 2003/06/09 17:36:25 raker Exp $
 
 FOLDER="${P}"
 SNAP=""
@@ -11,7 +11,7 @@ DESCRIPTION="An ncurses AOL Instant Messenger."
 # This source might change... 
 #SRC_URI="http://site.n.ml.org/download/20030607190139/${PN}/${P}.tar.gz"
 SRC_URI="http://shell.n.ml.org/n/naim/${P}.tar.gz"
-HOMEPAGE="http://site.rpi-acm.org/info/naim/"
+HOMEPAGE="http://naim.n.ml.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -32,7 +32,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/naim
+	dobin src/naim		
+	dosym /usr/bin/naim /usr/bin/nicq
+	dosym /usr/bin/naim /usr/bin/nirc
+	dosym /usr/bin/naim /usr/bin/nlily
 
 	doman naim.1
 

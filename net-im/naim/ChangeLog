@@ -1,11 +1,12 @@
 # ChangeLog for net-im/naim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.26 2003/06/09 17:19:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.27 2003/06/09 17:36:25 raker Exp $
 
 *naim-0.11.5.9 (09 Jun 2003)
 
   09 Jun 2003; Nick Hadaway <raker@gentoo.org> naim-0.11.5.9.ebuild:
-  Marked stable.  Changed SRC_URI to a more stable location.
+  Marked stable.  Changed SRC_URI to a more stable location.  Changed
+  HOMEPAGE.  Added symlinks for nirc, nicq, and nlily.
 
   09 Jun 2003; Nick Hadaway <raker@gentoo.org> naim-0.11.5.9.ebuild:
   Version bump.  0.11.5.8 has a problem with stack corruption and .9 
