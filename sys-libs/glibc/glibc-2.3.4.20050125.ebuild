@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.17 2005/02/13 10:51:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.18 2005/02/13 14:31:45 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -228,9 +228,9 @@ toolchain-glibc_pkg_preinst() {
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
-	if [ -d /${ROOT}$(alt_libdir)/tls ] && use nptlonly ; then
+	if [ -d /${ROOT}$(alt_libdir)/tls ] && { use nptlonly || use !nptl; }; then
 		addwrite /${ROOT}$(alt_libdir)/
-		ewarn "nptlonly in USE, removing /${ROOT}$(alt_libdir)/tls..."
+		ewarn "nptlonly or -nptl in USE, removing /${ROOT}$(alt_libdir)/tls..."
 		rm -rf /${ROOT}$(alt_libdir)/tls || die
 	fi
 }
