@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.1 2004/09/10 16:00:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.2 2004/09/10 16:54:12 aliz Exp $
 
-inherit myth flag-o-matic
+inherit myth flag-o-matic eutils
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
@@ -143,57 +143,14 @@ setup_pro() {
 		-i 'settings.pro' || die "enable xrandr sed failed"
 }
 
-src_unpack() {
-	myth_src_unpack
-
-	# enable exceptions if they are disabled (qt-e).
-	# this might not work.. if so, rebuild qt-e with rtti and exceptions
-#	sed -i -e "s:-fno-exceptions:-fexceptions:g" programs/mythfilldatabase/Makefile
-}
-	
-
-#src_unpack() {
-#	unpack ${A} && cd ${S}
-#
-#	for i in `grep -lr "usr/local" "${S}"` ; do
-#		sed -e "s:usr/local:usr:g" -i "${i}" || die "sed failed"
-#	done
-#
-#	use directfb && epatch ${FILESDIR}/mythtv-0.15-directfb.patch
-#
-#	# Applies patch for gcc-3.4.0 closing bug #52819
-#	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
-#		epatch ${FILESDIR}/gcc-3.4-fix.patch
-#	fi
-#}
-
 src_compile() {
+	export QMAKESPEC="linux-g++"
+
 	econf || die
 	sed -i -e "s:OPTFLAGS=.*:OPTFLAGS=${CFLAGS}:g" config.mak
 
 	qmake -o "Makefile" "${PN}.pro"
 	make || die
-}
-	
-
-33src_compile() {
-
-	if [ "${ARCH}" == "amd64" ]; then
-		sed -e "s:-march=pentiumpro::" -e "/DEFINES += MMX/d" -i settings.pro
-	else
-		local cpu="`get-flag march || get-flag mcpu`"
-		if [ "${cpu}" ] ; then
-			sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
-		fi
-	fi
-
-
-	sed -i -e "s:-O3::g" -e "s:-fomit-frame-pointer::g" settings.pro
-
-	qmake -o "Makefile" "${PN}.pro"
-
-	econf || die "econf failed"
-	emake -j1 || die "compile problem"
 }
 
 src_install() {
@@ -219,33 +176,4 @@ src_install() {
 	dohtml docs/*.html
 
 	keepdir /var/{log,run}/mythtv
-}
-
-55pkg_postinst() {
-	ewarn "Please note that /usr/share/mythtv/setup has been moved"
-	ewarn "to /usr/bin/mythsetup"
-	echo
-
-	einfo "If this is the first time you install MythTV,"
-	einfo "you need to add /usr/share/mythtv/database/mc.sql"
-	einfo "to your mysql database."
-	einfo
-	einfo "You might run 'mysql < /usr/share/mythtv/database/mc.sql'"
-	einfo
-	einfo "Next, you need to run the mythsetup program."
-	einfo "It will ask you some questions about your hardware, and"
-	einfo "then run XMLTV's grabber to configure your channels."
-	einfo
-	einfo "Once you have configured your database, you can run"
-	einfo "/usr/bin/mythfilldatabase to populate the schedule"
-	einfo "or copy /usr/share/mythtv/mythfilldatabase.cron to"
-	einfo "/etc/cron.daily for this to happen automatically."
-	einfo
-	einfo "If you're upgrading from an older version and for more"
-	einfo "setup and usage instructions, please refer to:"
-	einfo "   /usr/share/doc/${PF}/README.gz"
-	einfo "   /usr/share/doc/${PF}/UPGRADING.gz"
-	echo
-	einfo "You need to emerge xmltv manually since it is no longer needed"
-	einfo "if the internal DataDirect implementation is to be used."
 }
