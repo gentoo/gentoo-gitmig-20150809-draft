@@ -2,7 +2,13 @@
 #explanation of why something is getting masked
 
 #testing only (drobbins, 25 Jun 2002)
-=sys-apps/portage-2.0.6
+>=sys-apps/portage-2.0.6
+
+#masked for testing (drobbins, 19 Jun 2002)
+#=sys-apps/portage-2.0.2
+
+# this portage is for testing currently (drobbins, 01 May 2002):
+=sys-apps/portage-1.9.6_pre1
 
 # Masked for testing of the ACL parts (styx 21 Jun 2002)
 >=sys-apps/e2fsprogs-1.27-r1
@@ -15,9 +21,6 @@
 
 # masked for testing (please test r2) (gerk June 19, 2002)
 >=x11-libs/xforms-089-r1
-
-#masked for testing (drobbins, 19 Jun 2002)
-#=sys-apps/portage-2.0.2
 
 #waiting for the unmasking of gnomelibs (gnome2) BaSS 20 Jun 02
 dev-utils/vdkbuilder
@@ -115,9 +118,6 @@ dev-libs/libiconv
 
 # this cracklib is for testing currently (pvdabeel, 03 May 200):
 #=sys-libs/cracklib-2.7-r5
-
-# this portage is for testing currently (drobbins, 01 May 2002):
-=sys-apps/portage-1.9.6_pre1
 
 # this kernel is for testing currently (drobbins, 30 Apr 2002):
 =sys-kernel/gentoo-sources-2.4.19-r2
