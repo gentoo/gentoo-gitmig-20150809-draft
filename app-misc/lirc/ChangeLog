@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.1 2002/07/14 14:34:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.2 2003/02/04 08:40:09 raker Exp $
+
+*lirc-0.6.6 (04 Feb 2003)
+
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> lirc-0.6.6.ebuild,
+  files/digest-lirc-0.6.6, files/lirc-0.6.6-gentoo.diff.bz2 :
+  Migrated previous patch's mknod and depmod related fixes.  Added to the
+  patch removing references to a seemingly missing hw_udp.c.  Added
+  an SMP workaround started on bug #13241.  Version bump.
 
 *lirc-0.6.5 (11 Jul 2002)
 
