@@ -9,13 +9,16 @@ HOWTO upgrade from 2004.3 and 2004.3/lib64 to 2005.0
  7) cp /emul/linux/x86/lib32/libsandbox.so /lib32
  8) rm /etc/make.profile
  9) ln -s /usr/portage/profiles/default-linux/amd64/2005.0 /etc/make.profile
-10) mkdir /usr/tmp/All
-11) cd /usr/tmp/All
-12) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2
-13) PKGDIR=/usr/tmp emerge -vk glibc
-14) (OPTIONAL) emerge -uv glibc
-15) emerge -upv system
-16) emerge -uv system
+-- If you want to use eradicator's prebuilt glibc --
+10a) mkdir /usr/tmp/All
+10b) cd /usr/tmp/All
+10c) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2
+10d) PKGDIR=/usr/tmp emerge -vk glibc
+-- If you prefer to make it yourself --
+10) emerge -v glibc
+--
+11) emerge -upv system
+12) emerge -uv system
 
 Notes:
 The order is VERY important.
