@@ -1,5 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0.ebuild,v 1.2 2004/05/05 09:25:13 phosphan Exp $
+
+inherit eutils
 
 MY_P="${P}.0"
 S=${WORKDIR}/${MY_P}
@@ -23,6 +26,12 @@ DEPEND="
 	svga? ( media-libs/svgalib )
 	readline? ( >=sys-libs/readline-4.2 )
 	plotutils? ( media-libs/plotutils )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/header-order.patch
+}
 
 src_compile() {
 	local myconf
