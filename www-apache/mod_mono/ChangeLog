@@ -1,6 +1,9 @@
-# ChangeLog for net-www/mod_mono
+# ChangeLog for www-apache/mod_mono
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.1 2004/08/15 17:14:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.2 2004/09/05 08:28:02 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *mod_mono-0.8 (15 Aug 2004)
 
