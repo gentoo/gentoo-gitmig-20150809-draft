@@ -3,5 +3,9 @@ media-libs/xine-lib
 
 # Still needing 2.4
 sys-kernel/linux26-headers
+>=sys-kernel/linux-headers-2.6.0
 >=sys-kernel/gentoo-dev-sources-2.6.8
+>=sys-kernel/gentoo-sources-2.6.8
 >=sys-kernel/development-sources-2.6.8
+>=sys-kernel/vanilla-sources-2.6.8
+
