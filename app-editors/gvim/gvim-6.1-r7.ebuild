@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r7.ebuild,v 1.1 2003/03/15 00:52:12 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r7.ebuild,v 1.2 2003/03/16 03:14:58 seemant Exp $
 
 VIMPATCH="390"
 
@@ -34,3 +34,11 @@ DEPEND="dev-util/cscope
 #
 # Please don't re-enable the tclinterp flag without verifying first
 # that the above works.  Thanks.  (08 Sep 2001 agriffis)
+
+src_unpack() {
+	vim_src_unpack
+
+	use gtk2 \
+		&& EPATCH_SUFFIX="gz" EPATCH_FORCE="yes" \
+			epatch ${WORKDIR}/gentoo/patches-gvim/*
+}

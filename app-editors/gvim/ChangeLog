@@ -1,6 +1,18 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.21 2003/03/15 00:52:12 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.22 2003/03/16 03:14:58 seemant Exp $
+
+  15 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gvim-6.1-r7.ebuild :
+
+  Version bumpd by ryan phillips <rphillips@gentoo.org>.
+
+  Now, the gvim specific patches are applied in src_unpack in the ebuild.
+  Note that in the gentoo patches tarball, there are subdirectories:
+
+  patches-all; patches-vim-core; patches-vim; and patches-gvim.  Each
+  ebuild can specify which (conditional) patches to apply, and those
+  patches should be placed in the correct subdirectory.  Common patches go
+  into the patches-all subdirectory
 
   13 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gvim-6.1-r6.ebuild :
 
