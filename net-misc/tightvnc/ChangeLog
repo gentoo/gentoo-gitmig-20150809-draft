@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.20 2003/09/18 09:00:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.21 2003/10/23 14:18:36 aliz Exp $
 
   *18 Sep 2003; Daniel Ahlberg <aliz@gento.org> tightvnc-1.2.9-r1.ebuild :
   Fix unpacking.
@@ -27,13 +27,15 @@
   21 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update.
 
-*tightvnc-1.2.7 (17 Jan 2002) Bart Verwilst <verwilst@gentoo.org>
+*tightvnc-1.2.7 (17 Jan 2002) 
 
   17 Jan 2002; Bart Verwilst <verwilst@gentoo.org>: new ebuild
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
-*tightvnc-1.2.6 (28 Sept 2002) Bart Verwilst <verwilst@gentoo.org>
+*tightvnc-1.2.6 (28 Sep 2002) 
+
+  28 Sep 2002; Bart Verwilst <verwilst@gentoo.org>
 
   New ebuild
 

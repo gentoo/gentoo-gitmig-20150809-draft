@@ -1,8 +1,8 @@
 # ChangeLog for net-misc/kphone
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.8 2003/07/07 20:05:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.9 2003/10/23 14:18:36 aliz Exp $
 
-*kphone-3.11 (07 Jul 2003):
+*kphone-3.11 (07 Jul 2003)
 
   07 Jul 2003; Caleb Tennis <caleb@gentoo.org> kphone-3.11.ebuild:
   Version bump
@@ -12,9 +12,11 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*kphone-2.0 (29 Oktober 2002) Bart Verwilst <verwilst@gentoo.org>
+*kphone-2.0 (29 Oct 2002) 
 
-*kphone-1.0.2 (12 September 2002)
+  29 Oct 2003; Bart Verwilst <verwilst@gentoo.org>
+
+*kphone-1.0.2 (12 Sep 2002)
 
   13 Sep 2002; Wout Mertens <wmertens@gentoo.org> :
   New upstream version, made it compile against KDE 3.
