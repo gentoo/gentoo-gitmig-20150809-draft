@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.69 2004/11/27 15:34:58 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.70 2004/12/03 02:11:12 joker Exp $
+
+  02 Dec 2004; Christian Birchinger <joker@gentoo.org> :
+  Security fix for CAN-2004-1074 (Bug #72452).
+  Added a sparc64 smbfs fix.
 
   27 Nov 2004; Christian Birchinger <joker@gentoo.org>
   -files/gentoo-sources-2.4.27-binfmt_elf.patch,
