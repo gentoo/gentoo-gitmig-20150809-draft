@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.27 2003/03/17 17:01:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.28 2003/06/03 05:40:29 bcowan Exp $
+
+*ethereal-0.9.12-r1 (03 Jun 2003)
+
+  03 Jun 2003; Brad Cowan <bcowan@gentoo.org> :
+  Added support for virtual/snmp and hopefully fixed a recurring sandbox bug.
+  Closing bugs #16832 #17831.
 
 *ethereal-0.9.11 (11 mar 2003)
 
