@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11.ebuild,v 1.7 2003/02/13 15:56:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11.ebuild,v 1.8 2003/02/27 01:53:17 zwelch Exp $
 
 IUSE="nls build"
 
@@ -9,7 +9,7 @@ DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls, etc)"
 SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/fileutils/fileutils.html"
 
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa arm"
 SLOT="0"
 LICENSE="GPL-2"
 
