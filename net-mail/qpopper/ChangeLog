@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/qpopper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.17 2005/02/07 19:08:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.18 2005/02/13 16:46:40 ferdy Exp $
+
+*qpopper-4.0.5-r2 (13 Feb 2005)
+
+  13 Feb 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +qpopper-4.0.5-r2.ebuild:
+  Remove pam.d stuff and make it depend on at least mailbase-0.00-r8 (#79240)
 
   07 Feb 2005; Simon Stelling <blubb@gentoo.org> qpopper-4.0.5-r1.ebuild:
   added ~amd64
