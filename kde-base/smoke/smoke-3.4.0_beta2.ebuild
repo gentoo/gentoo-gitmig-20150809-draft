@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.4.0_beta2.ebuild,v 1.4 2005/02/11 19:18:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.4.0_beta2.ebuild,v 1.5 2005/02/11 19:21:04 caleb Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="kalyptus/kalyptus kalyptus/*.pm"
@@ -14,7 +14,6 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-lang/perl"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff
-$FILESDIR/kalyptus_thread.diff
 $FILESDIR/parallel-make.diff" # bugs.kde.org 92362
 
 # enable-final works, but requires at least 1.5GB of RAM to complete without swapping,
