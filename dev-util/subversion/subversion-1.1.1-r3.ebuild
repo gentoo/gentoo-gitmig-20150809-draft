@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.6 2004/12/12 00:53:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.7 2004/12/16 05:21:31 absinthe Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://subversion.tigris.org/"
 
 SLOT="0"
 LICENSE="Apache-1.1"
-KEYWORDS="x86 sparc ~ppc ~amd64 ~alpha ~hppa ~ppc64 ~ia64"
+KEYWORDS="x86 sparc ~ppc amd64 ~alpha ~hppa ~ppc64 ~ia64"
 IUSE="ssl apache2 berkdb python emacs perl java"
 
 S=${WORKDIR}/${P/_rc/-rc}
