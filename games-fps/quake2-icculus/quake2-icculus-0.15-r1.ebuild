@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.9 2004/07/02 01:50:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.10 2004/11/23 20:11:39 wolf31o2 Exp $
 
 inherit eutils gcc games
 
@@ -15,16 +15,15 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
-IUSE="arts svga X sdl aalib opengl noqmax rogue xatrix"
+IUSE="arts svga sdl aalib dedicated opengl noqmax rogue xatrix"
 
-# default to X11 if svga/X/sdl/aalib are not in USE
+# default to X11 if svga/opengl/sdl/aalib/dedicated are not in USE
 RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
-	X? ( virtual/x11 )
 	sdl? ( media-libs/libsdl )
 	aalib? ( media-libs/aalib )
-	!svga? ( !X? ( !sdl? ( !aalib? ( virtual/x11 ) ) ) )
+	!svga? ( !opengl? ( !sdl? ( !aalib? ( !dedicated? ( virtual/x11 ) ) ) ) )
 	arts? ( kde-base/arts )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
@@ -74,7 +73,7 @@ yesno() {
 
 src_compile() {
 	BUILD_X11=$(yesno X)
-	use sdl || use X || use svga || use aalib || BUILD_X11=YES
+	use sdl || use opengl || use svga || use aalib || BUILD_X11=YES
 
 	# xatrix fails to build
 	# rogue fails to build
@@ -88,7 +87,7 @@ src_compile() {
 			BUILD_SDLQUAKE2=$(yesno sdl) \
 			BUILD_SVGA=$(yesno svga) \
 			BUILD_X11=${BUILD_X11} \
-			BUILD_GLX=$(yesno opengl X) \
+			BUILD_GLX=$(yesno opengl) \
 			BUILD_SDL=$(yesno sdl) \
 			BUILD_SDLGL=$(yesno sdl opengl) \
 			BUILD_CTFDLL=YES \

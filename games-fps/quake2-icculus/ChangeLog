@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.8 2004/07/02 01:50:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.9 2004/11/23 20:11:39 wolf31o2 Exp $
+
+  23 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake2-icculus-0.15-r1.ebuild:
+  Updated DEPEND and IUSE and closing bug #63062.
 
   01 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   quake2-icculus-0.15-r1.ebuild:
