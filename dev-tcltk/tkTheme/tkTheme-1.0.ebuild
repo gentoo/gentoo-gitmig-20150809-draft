@@ -1,6 +1,6 @@
-# Copyright 2003 Arcady Genkin <agenkin@gentoo.org>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0.ebuild,v 1.4 2003/08/07 03:24:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0.ebuild,v 1.5 2003/09/29 21:20:07 mholzer Exp $
 
 inherit eutils
 
