@@ -1,0 +1,43 @@
+--- Makefile	2003-03-30 21:13:05.000000000 -0600
++++ Makefile	2003-08-01 14:26:04.000000000 -0500
+@@ -7,14 +7,14 @@
+ # It is presumed that BINDIR and MANDIR exist, so you may need
+ # to create them, and set their permissions, if necessary.
+ #
+-PREFIX		= /usr/local
++PREFIX		= /usr
+ #
+ BINDIR		= $(PREFIX)/bin
+-CNETDIR		= $(PREFIX)/cnetlib
+-MANDIR		= $(PREFIX)/man/man1
++CNETDIR		= $(PREFIX)/lib/cnetlib
++MANDIR		= $(PREFIX)/share/man/man1
+ MANEXT		= 1
+ MANFILE		= $(MANDIR)/$(NAME).$(MANEXT)
+-WEBDIR		= /home/httpd/html/cnet
++WEBDIR		= $(CNETDIR)/html
+ 
+ # ---------------------------------------------------------------------
+ 
+--- src/Makefile.linux	2003-04-04 16:26:31.000000000 -0600
++++ src/Makefile.linux	2003-08-01 14:26:04.000000000 -0500
+@@ -29,7 +29,7 @@
+ ANSICC		= gcc -ansi
+ INCLUDES	= $(LIBELFINC)
+ 
+-CFLAGS		= -O -Wall -fPIC $(INCLUDES) $(XINCLUDES)
++CFLAGS		= -march=pentium3 -O3 -pipe -fPIC $(INCLUDES) $(XINCLUDES)
+ 
+ LD		= gcc -rdynamic
+ LIBDIRS		= -L/usr/X11R6/lib $(XLIBDIRS) $(LIBELFDIR)
+--- src/config.h	2003-04-25 01:08:23.000000000 -0500
++++ src/config.h	2003-08-01 14:26:04.000000000 -0500
+@@ -169,7 +169,7 @@
+ #if	defined(USE_FREEBSD)
+ #define	CNETPATH	"%%PREFIX%%/share/cnet:%%PREFIX%%/include"
+ #else
+-#define	CNETPATH	"/usr/local/cnetlib:/usr/lib/cnet:/cslinux/cnetlib"
++#define	CNETPATH	"/usr/lib/cnetlib:/usr/lib/cnet:"
+ #endif
+ 
+ 
