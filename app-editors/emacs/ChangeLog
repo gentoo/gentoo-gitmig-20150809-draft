@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.43 2004/10/19 17:39:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.44 2004/11/06 16:06:15 usata Exp $
+
+*emacs-21.3.50_pre20041027 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/emacs-nofink-gentoo.diff, +emacs-21.3.50_pre20041027.ebuild:
+  Added Carbon Emacs (aqua USE flag). See bug #64362.
+  Also added multi-tty patch.
 
   19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> emacs-21.3-r4.ebuild:
   ~alpha keyword.
