@@ -11,5 +11,8 @@
 	<longdescription lang="de">
 		Die Kategorie sys-fs enthält Programme für die Arbeit mit Dateisystemen.
 	</longdescription>
+	<longdescription lang="nl">
+		De sys-fs categorie bevat hulpmiddelen om met bestandssystemen te werken.
+	</longdescription>
 </catmetadata>
 
