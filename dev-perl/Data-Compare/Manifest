@@ -1,6 +1,16 @@
-MD5 5ff9e300de82a003ff5bda0cbf8ba539 Data-Compare-0.11.ebuild 546
-MD5 ab4189853c45be3a5b2b8dd64cd0392f Data-Compare-0.1.ebuild 539
-MD5 1e9b292febe1b7111537a9efc5032d70 ChangeLog 616
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2002ea66dfdbfaeff2a1c626d5ee8ee7 ChangeLog 724
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 e0fc821dc15eb13f0ab56c7f3e1f9c5d Data-Compare-0.1.ebuild 540
+MD5 60f5c71472bc3bf936862d5ccb7d05ad Data-Compare-0.11.ebuild 554
 MD5 1454ad9f1a143497db3cbb62e98eea3b files/digest-Data-Compare-0.1 67
 MD5 cc6ed28ff21c5c40e257e58c21bb8556 files/digest-Data-Compare-0.11 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLezhtG5z4I8BtQoRAl7kAKCERrPVFdVO+KPsB643FqMIbBR3DACdE8l8
+z4i2n7wYC3y387nkBzB7qkQ=
+=bb7R
+-----END PGP SIGNATURE-----

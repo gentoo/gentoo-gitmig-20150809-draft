@@ -1,4 +1,14 @@
-MD5 54a5a3ce19f6cf8d8c0e5787f3211c7d Scalar-Properties-0.12.ebuild 503
-MD5 bebe6ac35bfb992aab042d7c63ac39a0 ChangeLog 503
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c18e68f6bbd5101cf1757098fc7be95b ChangeLog 616
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d52af53593b06503163b65b51cf5cd52 Scalar-Properties-0.12.ebuild 511
 MD5 ef00faf29545448faaae33dfc0b6c3fd files/digest-Scalar-Properties-0.12 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLezEtG5z4I8BtQoRAnmtAJ9GmerJ1pvkPk6FcRKXn+T6rX+BHgCeJExE
+9ktloJ3ER6OduDCYAYFD+hk=
+=8QJa
+-----END PGP SIGNATURE-----
