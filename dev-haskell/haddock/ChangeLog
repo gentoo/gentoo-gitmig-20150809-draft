@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.7 2003/12/17 17:56:35 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.8 2003/12/22 09:11:11 kosmikus Exp $
+
+*haddock-0.6-r2 (22 Dec 2003)
+
+  22 Dec 2003; Andres Loeh <kosmikus@gentoo.org> haddock-0.6-r1.ebuild,
+  haddock-0.6-r2.ebuild:
+  Another directory problem in haddock-0.6
 
 *haddock-0.6-r1 (17 Dec 2003)
 
