@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.13 2004/10/03 02:47:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.14 2004/10/11 16:35:53 lostlogic Exp $
+
+*bogofilter-0.92.7 (11 Oct 2004)
+
+  11 Oct 2004; Brandon Low <lostlogic@gentoo.org> -bogofilter-0.92.0.ebuild,
+  -bogofilter-0.92.1.ebuild, bogofilter-0.92.6.ebuild,
+  +bogofilter-0.92.7.ebuild:
+  Move 0.92.6 to stable on x86 (other arches, please follow), clean out old
+  ebiulds that do not have any unique keywords, bump the latest unstable to
+  0.92.7
 
   02 Oct 2004; Jason Wever <weeve@gentoo.org> bogofilter-0.92.2.ebuild:
   Stable on sparc.

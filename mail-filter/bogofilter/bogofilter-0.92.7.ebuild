@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.92.0.ebuild,v 1.2 2004/07/12 19:30:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.92.7.ebuild,v 1.1 2004/10/11 16:35:53 lostlogic Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -8,23 +8,22 @@ SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE="doc"
 
-DEPEND="virtual/libc
-	!ppc64? ( doc? ( app-text/xmlto ) )
-	>=sys-libs/db-3.2"
 RDEPEND="virtual/libc
 	>=sys-libs/db-3.2"
+DEPEND="${DEPEND}
+	!ppc64? ( doc? ( app-text/xmlto ) )"
 
 src_install() {
 	make DESTDIR=${D} install || die
 
-	exeinto /usr/lib/${PN}/contrib
+	exeinto /usr/share/${PN}/contrib
 	doexe contrib/{bogofilter-qfe,bogogrep,mime.get.rfc822,parmtest.sh}
 	doexe contrib/{randomtrain,scramble,*.pl}
 
-	insinto /usr/lib/${PN}/contrib
+	insinto /usr/share/${PN}/contrib
 	doins contrib/{README.*,bogo.R,bogogrep.c,dot-qmail-bogofilter-default}
 	doins contrib/{trainbogo.sh,*.example}
 
@@ -49,6 +48,6 @@ pkg_postinst() {
 	einfo "A number of features have been removed."
 	ewarn "Please read the RELEASE.NOTES-0.17 carefully!"
 	einfo ""
-	einfo "Contributed tools and documentation is in ${ROOT}usr/lib/${PN}/contrib"
+	einfo "Contributed tools and documentation is in ${ROOT}usr/share/${PN}/contrib"
 	einfo "beside documentation in ${ROOT}usr/share/doc/${PF}."
 }
