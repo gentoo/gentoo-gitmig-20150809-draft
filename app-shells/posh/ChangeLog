@@ -1,0 +1,9 @@
+# ChangeLog for app-shells/posh
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/ChangeLog,v 1.1 2003/05/02 20:00:46 avenj Exp $
+
+*posh-0.2.28 (02 May 2003)
+
+  02 May 2003; Jon Portnoy <avenj@gentoo.org> posh-0.2.28.ebuild :
+  Initial import. Ebuild submitted by Björn Lindström 
+  <bkhl@privat.utfors.se>.
