@@ -1,6 +1,9 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.18 2003/07/13 21:44:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.19 2003/10/04 14:42:11 hillster Exp $
+
+  04 Oct 2003; Joel Hill <hillster@gentoo.org> netscape-flash-6.0.79.ebuild:
+  added RDEPEND to block it from being installed with net-www/gplflash
 
 *netscape-flash-6.0.79 (09 Mar 2003)
 
