@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.232 2004/11/11 03:36:50 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.233 2004/11/14 09:51:36 corsair Exp $
+
+  14 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  +files/mplayer-1.0_pre5-r4-ppc64.patch, mplayer-1.0_pre5-r4.ebuild:
+  Marked ~ppc64 (bug #68112) and added ppc64 patch.
 
   11 Nov 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r4.ebuild:
   Copied midentify to /usr/bin for emovix for bug #58580.

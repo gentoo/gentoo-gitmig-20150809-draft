@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.23 2004/11/11 03:36:50 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.24 2004/11/14 09:51:36 corsair Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -86,7 +86,7 @@ SLOT="0"
 LICENSE="GPL-2"
 #KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~ia64 ~hppa ~sparc"
 #agriffis - uncomment this when ia64 is ready - Chris
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~hppa ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~hppa ~sparc ~ppc64"
 
 src_unpack() {
 
@@ -159,6 +159,8 @@ src_unpack() {
 	use sparc && sed -i 's:#define __KERNEL__::' osdep/kerneltwosix.h
 	# Doesn't break if bio2jack is in
 	epatch ${FILESDIR}/${P}-bio2jack.patch
+
+	use ppc64 && epatch ${FILESDIR}/${P}-r4-ppc64.patch
 }
 
 linguas_warn() {
@@ -380,9 +382,15 @@ src_compile() {
 	myconf="${myconf} $(use_enable mmx)"
 	myconf="${myconf} $(use_enable mmx2)"
 	myconf="${myconf} $(use_enable 3dnow)"
-	myconf="${myconf} $(use_enable altivec)"
 	myconf="${myconf} $(use_enable debug)"
 	myconf="${myconf} $(use_enable nls i18n)"
+
+	if use ppc64
+	then
+		myconf="${myconf} --disable-altivec"
+	else
+		myconf="${myconf} $(use_enable altivec)"
+	fi
 
 	if use real
 	then
