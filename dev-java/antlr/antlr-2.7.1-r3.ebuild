@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.1-r3.ebuild,v 1.3 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.1-r3.ebuild,v 1.4 2002/08/01 17:02:32 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A parser generator for Java, C++ and Sather, written in Java"
@@ -9,6 +9,9 @@ HOMEPAGE="http://www.antlr.org"
 DEPEND=">=virtual/jdk-1.2
 	>=dev-java/jikes-1.13
 	>=sys-devel/gcc-2.95.3"
+LICENSE="ANTLR"
+SLOT="2"
+KEYWORDS="x86"
 
 src_compile() {
 	PATH=${PATH}:${JAVA_HOME}/bin JAVAC=jikes make all-jars || die

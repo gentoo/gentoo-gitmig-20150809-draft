@@ -1,14 +1,22 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.4 2002/06/25 01:31:15 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.5 2002/08/01 17:02:32 karltk Exp $
 
 *antlr-2.7.2_alpha2 (25 Jun 2002)
 
-  25 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> antlr-2.7.2_alpha2.ebuild files/digest-antlr-2.7.2_alpha2:
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> antlr-2.7.2_alpha2.ebuild files/digest-antlr-2.7.2_alpha2 :
+
+  Added KEYWORDS. 
+ 
+  25 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> antlr-2.7.2_alpha2.ebuild files/digest-antlr-2.7.2_alpha2 :
 
   New upstream version.
 
 *antlr-2.7.1-r3 (10 May 2002)
+
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> antlr-2.7.2_alpha2.ebuild files/digest-antlr-2.7.2_alpha2 :
+
+  Added SLOT, KEYWORDS and LICENSE.
 
   10 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> antlr-2.7.1-r3.ebuild files/digest-antlr-2.7.1-r3:
 
@@ -19,8 +27,7 @@
 
 *antlr-2.7.1-r2 (15 Mar 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> antlr-2.7.1-r2.ebuild
-  digest/digest-antlr-2.7.1-r2 :
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> antlr-2.7.1-r2.ebuild digest/digest-antlr-2.7.1-r2 :
   
   Added support for c++ library and includes
   
