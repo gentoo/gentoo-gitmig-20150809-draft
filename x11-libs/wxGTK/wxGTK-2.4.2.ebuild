@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.2 2003/10/08 00:04:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.3 2003/10/08 00:09:38 liquidx Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -59,7 +59,7 @@ src_compile() {
 	use gtk2 && use unicode && myconf="${myconf} --enable-unicode"
 	# only enable odbc if unicode is not enabled.
 	( use gtk2 && use unicode ) || myconf="${myconf} --with-odbc"
-	
+
 	econf ${myconf}
 	emake || die "make failed"
 
