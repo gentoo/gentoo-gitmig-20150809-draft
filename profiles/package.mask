@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <pauldv@gentoo.org> (22 Dec 2003)
+# Some testing is needed before unmasking. It should run well, but this package
+# is quite critical
+>=sys-libs/db-4.2
+
 # <foser@gentoo.org> (15 Dec 2003)
 # abi-1.0 mask pending removal
 =app-office/abiword-1*
