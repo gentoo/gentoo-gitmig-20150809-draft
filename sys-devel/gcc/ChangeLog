@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.283 2004/07/10 06:19:30 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.284 2004/07/11 20:34:27 lv Exp $
+
+  11 Jul 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r6.ebuild,
+  gcc-3.4.1-r1.ebuild, gcc-3.4.1.ebuild:
+  xlib peers are deprecated in libjava 3.4.0, switching gcc 3.4 ebuilds to gtk2
 
 *gcc-3.4.1-r1 (10 Jul 2004)
 

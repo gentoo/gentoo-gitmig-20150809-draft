@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.5 2004/07/10 16:34:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.6 2004/07/11 20:34:27 lv Exp $
 
-IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc n32 n64"
+IUSE="static nls bootstrap build multilib gcj gtk2 f77 objc hardened uclibc n32 n64"
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -173,6 +173,7 @@ DEPEND="virtual/libc
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
+	!build? ( gcj? ( gtk2? ( >=x11-libs/gtk+-2.2 ) ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
@@ -514,7 +515,7 @@ src_compile() {
 		gcc_lang="c,c++"
 		use f77 && gcc_lang="${gcc_lang},f77"
 		use objc && gcc_lang="${gcc_lang},objc"
-		use java && use gcj && gcc_lang="${gcc_lang},java"
+		use gcj && gcc_lang="${gcc_lang},java"
 		# We do NOT want 'ADA support' in here!
 		# use ada  && gcc_lang="${gcc_lang},ada"
 	else
@@ -527,15 +528,12 @@ src_compile() {
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
 
-	# Enable building of the gcj Java AWT & Swing X11 backend
-	# if we have X as a use flag and are not in a build stage.
-	# X11 support is still very experimental but enabling it is
-	# quite innocuous...  [No, gcc is *not* linked to X11...]
-	# <dragon@gentoo.org> (15 May 2003)
-	if ! use build && use java && use gcj && use X && [ -f /usr/X11R6/include/X11/Xlib.h ]
+	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
+	# right now). Much thanks to <csm@gnu.org> for the heads up.
+	# Travis Tilley <lv@gentoo.org>  (11 Jul 2004)
+	if ! use build && use gcj && use gtk2
 	then
-		myconf="${myconf} --x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/lib"
-		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
+		myconf="${myconf} --enable-java-awt=gtk"
 	fi
 
 	# Multilib not yet supported
@@ -862,7 +860,7 @@ src_install() {
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
 
-		if use java && use gcj
+		if use gcj
 		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar
