@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.20 2002/08/05 21:19:52 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.21 2002/08/17 20:23:15 azarah Exp $
 
 inherit libtool
 
@@ -42,6 +42,9 @@ gnome2_src_compile() {
 }
 
 gnome2_src_install() {
+
+	# if this is not present, scrollkeeper-update may segfault
+	dodir /var/lib/scrollkeeper/scrollkeeper_docs
 
 	# we must delay gconf schema installation due to sandbox
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
