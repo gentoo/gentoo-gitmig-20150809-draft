@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libhydrogen
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.1 2003/03/09 02:34:46 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.2 2003/04/12 06:49:16 jje Exp $
+
+*libhydrogen-0.7.6 (12 Apr 2003)
+
+  12 Apr 2003; jje Manifest, libhydrogen-0.7.6.ebuild:
+  Version bump.
+
+  Submitted by: Marc Hildebrand
 
 *libhydrogen-0.7.4 (09 Mar 2003)
 
