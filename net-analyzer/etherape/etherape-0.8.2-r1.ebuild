@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.12 2004/06/24 22:00:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.13 2004/07/11 10:11:35 eldad Exp $
+
+inherit eutils
 
 IUSE="nls"
 DESCRIPTION="A graphical network monitor for Unix modeled after etherman"
@@ -15,12 +17,12 @@ DEPEND="	=x11-libs/gtk+-1.2*
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-gcc3-gentoo.patch
+	epatch ${FILESDIR}/${P}-gcc3-gentoo.patch
 }
 
 src_compile() {
