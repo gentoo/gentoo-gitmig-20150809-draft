@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.9 2004/06/01 19:33:46 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.10 2004/06/14 18:47:30 pyrania Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://daemon.jp.FreeBSD.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/${P}+i1
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 alpha"
-IUSE=""
+IUSE="motif"
 
 DEPEND="virtual/x11
 		motif? ( x11-libs/openmotif )"
