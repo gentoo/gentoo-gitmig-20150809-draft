@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/tkseti
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/ChangeLog,v 1.1 2002/07/06 20:32:41 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/ChangeLog,v 1.2 2002/07/19 21:58:54 rphillips Exp $
+
+  19 Jul 2002; Ryan Phillips <rphillips@gentoo.org> tkseti-3.06.ebuild :
+
+  Added dependencies. Fixes #4761. Submitted by Peter Littmann
 
   06 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
 
