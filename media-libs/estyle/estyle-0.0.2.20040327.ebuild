@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/estyle/estyle-0.0.2.20040313.ebuild,v 1.1 2004/03/15 13:43:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/estyle/estyle-0.0.2.20040327.ebuild,v 1.1 2004/03/31 01:14:17 vapier Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment
