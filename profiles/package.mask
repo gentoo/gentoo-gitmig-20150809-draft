@@ -275,7 +275,7 @@ net-im/kxicq2
 
 # <fava@gentoo.org>, <robbat2@gentoo.org> (24 Apr 2003)
 # work in progress, broken ebuild
->=app-admin/ufed-0.40
+>=app-portage/ufed-0.40
 
 # <robbat2@gentoo.org> (23 Apr 2003)
 # This is just for experimentation
