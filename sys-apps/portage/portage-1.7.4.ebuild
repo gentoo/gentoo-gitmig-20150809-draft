@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.7.4.ebuild,v 1.1 2001/11/29 07:29:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.7.4.ebuild,v 1.2 2001/12/12 06:51:18 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage ports system"
@@ -62,15 +62,11 @@ src_install() {
 	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
 	dosym newins /usr/lib/portage/bin/donewins
 
-    if [ -z "`use build`" ] && [ -z "`use bootcd`" ]
-    then
-	  #man pages
-	  doman ${S}/man/*.[15]
-	fi
+	doman ${S}/man/*.[15]
 	dodir /var/tmp
 	chmod 1777 ${D}/var/tmp
 	touch ${D}/var/tmp/.keep
-	if [ "`use build`" ] || [ "`use bootcd`" ]
+	if [ "`use build`" ] 
 	then
 		#convenience; overwrite existing symlink
 		ln -sf ../usr/portage/profiles/default-1.0_rc6 ${D}/etc/make.profile
