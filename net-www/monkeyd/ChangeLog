@@ -1,6 +1,11 @@
 # ChangeLog for net-www/monkeyd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/ChangeLog,v 1.7 2004/02/22 22:14:30 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/monkeyd/ChangeLog,v 1.8 2004/06/19 04:29:59 vapier Exp $
+
+*monkeyd-0.8.3 (19 Jun 2004)
+
+  19 Jun 2004; Mike Frysinger <vapier@gentoo.org> +monkeyd-0.8.3.ebuild:
+  Version bump #53164 by Mauricio Bahamonde.
 
 *monkeyd-0.8.2 (10 Feb 2004)
 
