@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.5 2005/03/13 21:19:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.6 2005/03/15 11:46:53 cryos Exp $
+
+  15 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kdewebdev-meta-3.4.0.ebuild:
+  Marked ~amd64, keywording KDE split ebuilds, bug 80944.
 
   13 Mar 2005; Dan Armak <danarmak@gentoo.org> kdewebdev-meta-3.4.0.ebuild:
   KDE 3.4.0 ebuilds. Note that the tarballs won't be officially released for a
