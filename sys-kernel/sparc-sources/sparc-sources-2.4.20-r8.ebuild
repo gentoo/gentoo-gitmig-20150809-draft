@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20-r8.ebuild,v 1.4 2003/07/23 09:48:02 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20-r8.ebuild,v 1.5 2003/07/23 15:45:34 vapier Exp $
 
 IUSE="build ultra1"
 
@@ -21,7 +21,7 @@ IUSE="build ultra1"
 
 ETYPE="sources"
 
-inherit kernel || die
+inherit kernel
 OKV="2.4.20"
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/sparc-sources-${PV}/patches.txt.gz
