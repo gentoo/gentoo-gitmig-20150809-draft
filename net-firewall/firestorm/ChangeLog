@@ -1,0 +1,9 @@
+# ChangeLog for media-plugins/xmms-crossfade
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestorm/ChangeLog,v 1.1 2003/05/12 19:06:27 mholzer Exp $
+
+*firestorm-0.5.2 (12 May 2003)
+
+  12 May 2003; Martin Holzer <mholzer@gentoo.org> firestorm-0.5.2.ebuild:
+  Initial Version. Ebuild submitted by Dmitry Platonov <shadowjack@mail.ru>
+  in #20534.
