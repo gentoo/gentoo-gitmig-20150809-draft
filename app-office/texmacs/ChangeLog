@@ -1,6 +1,13 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.5 2002/11/07 07:28:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.6 2003/01/02 05:59:28 satai Exp $
+
+*texmacs-1.0.1 (02 Jan 2002)
+
+  02 Jan 2002; Matthew Turk <satai@gentoo.org> texmacs-1.0.1.ebuild :
+
+  Included some opts, manually turned off all inlining.  Hopefully this'll work
+  nicely.  Also bumped version.
 
 *texmacs-1.0.0.19 (23 Oct 2002)
 
