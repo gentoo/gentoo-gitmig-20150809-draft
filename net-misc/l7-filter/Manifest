@@ -1,4 +1,14 @@
-MD5 82665be1465f0e00805e63bc135904d5 ChangeLog 536
-MD5 6559fae6a337f50ab9cf56a92faf1186 l7-filter-0.9.1.ebuild 1852
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f153c05327a8b4e5084bcf6d3c1dd401 l7-filter-0.9.1.ebuild 2126
 MD5 89edb769612add8464eb3c324f09e197 metadata.xml 374
-MD5 206e258328173ccfc34ba6b19f5b1464 files/digest-l7-filter-0.9.1 74
+MD5 d5871517e8c624d4c4d5f11c52056697 ChangeLog 786
+MD5 006fbe75d4408bba49e102262ea75a34 files/digest-l7-filter-0.9.1 166
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBrv7VmdTrptrqvGERAoR9AJ9drpXkRktDOkGa/lJoB9HwDSNyPACfQho2
+5C2TCptcuRujVp79FcdJR68=
+=oyIp
+-----END PGP SIGNATURE-----
