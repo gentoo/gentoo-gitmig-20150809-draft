@@ -1,12 +1,15 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.9 2003/02/12 06:40:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.10 2003/02/22 03:37:13 agriffis Exp $
 
   10 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
 
 *dialog-0.9_beta20020814 (08 Dec 2002)
-                                                                                                   
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> dialog-0.9_beta20020814.ebuild :
+  Mark stable on Alpha
+
   08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> dialog-0.9_beta20020814.ebuild,
   dialog-0.9_beta20020519.ebuild :
   Removed sparc64 keyword dialog-0.9_beta20020519.ebuild
