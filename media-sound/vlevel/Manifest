@@ -1,5 +1,14 @@
-MD5 059d3aa753313f1912ce04a016ee21ca vlevel-0.5.ebuild 1147
-MD5 7f0b00a2ca62313ebc19943b5ed4bddd ChangeLog 414
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a3ae8185d93d14d1fdc0fa20f77b995d ChangeLog 512
 MD5 ae2f0ce6b633cd6e8ea199bdabb85098 metadata.xml 227
-MD5 c17a1d5b78687b709d31ed6872b22d6e .vlevel-0.5.ebuild.swp 12288
+MD5 7737f73221e8c2bf9d20a522f5ee6575 vlevel-0.5.ebuild 1145
 MD5 2ec3b61ac0b50069246194e8cb3254c3 files/digest-vlevel-0.5 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZEzbArHZZzCEUG0RAr4HAJ4yj/IqCKtUmaqPL2XY5UUGwKblSACfd3W3
+GJFHb3jvrEhKqIjCn/rR9zY=
+=hSQF
+-----END PGP SIGNATURE-----
