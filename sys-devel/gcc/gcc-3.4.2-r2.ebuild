@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.6 2004/10/04 03:56:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.7 2004/10/04 21:58:20 mr_bones_ Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -217,7 +217,7 @@ src_install() {
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry || die
-	
+
 	if [ "${SPLIT_SPECS}" == "true" ] ; then
 		if use hardened ; then
 			create_gcc_env_entry vanilla || die
