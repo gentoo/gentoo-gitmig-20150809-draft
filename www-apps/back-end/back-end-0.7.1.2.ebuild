@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/back-end/back-end-0.7.1.2.ebuild,v 1.3 2004/09/02 13:37:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/back-end/back-end-0.7.1.2.ebuild,v 1.4 2005/01/10 03:53:43 weeve Exp $
 
 inherit webapp
 
@@ -12,7 +12,7 @@ DESCRIPTION="Back-End is a multilingual Web publishing/content management system
 HOMEPAGE="http://back-end.org/"
 SRC_URI="mirror://sourceforge//${PN}/${PN}${PV}.tar.gz"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="
 	>=virtual/php-4.1
