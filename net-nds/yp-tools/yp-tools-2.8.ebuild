@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.8.ebuild,v 1.11 2004/10/04 22:05:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.8.ebuild,v 1.12 2004/11/22 18:49:17 eradicator Exp $
+
+IUSE="nls"
 
 DESCRIPTION="Network Information Service tools"
 HOMEPAGE="http://www.linux-nis.org/nis/"
@@ -8,8 +10,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64 ppc64 ~ia64"
-IUSE="nls"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
 
 DEPEND="virtual/libc"
 

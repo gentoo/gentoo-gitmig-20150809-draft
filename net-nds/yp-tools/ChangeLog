@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.20 2004/07/24 06:40:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.21 2004/11/22 18:49:17 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -yp-tools-2.7.ebuild, yp-tools-2.8.ebuild:
+  Cleanup old versions.
 
   23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> yp-tools-2.8.ebuild:
   Stable x86, amd64, sparc.

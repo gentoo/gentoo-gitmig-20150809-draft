@@ -1,8 +1,0 @@
-# Config file for /etc/init.d/ypserv
-
-# Start Master Password Server? /usr/sbin/rpc.yppasswdd
-PW_SERVER="yes"
-#PW_SERVER_OPTIONS="-e chsh -e chfn"
-
-# Start NIS transfer server? /usr/sbin/rpc.ypxfrd"
-XFR_SERVER="yes"
