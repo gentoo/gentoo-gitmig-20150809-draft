@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.355 2005/03/12 03:25:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.356 2005/03/12 19:35:32 spyderous Exp $
+
+  12 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -xorg-x11-6.7.0-r3.ebuild, -xorg-x11-6.8.0-r4.ebuild,
+  -xorg-x11-6.8.2.ebuild:
+  (#83598) Remove vulnerable versions except xorg-x11-6.8.0-r3, which is
+  forced to stay until arm, hppa, ia64 stable xorg-x11-6.8.2-r1.
 
   11 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r1.ebuild:
