@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2.27-r1.ebuild,v 1.1 2001/04/03 05:09:06 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2.27-r1.ebuild,v 1.2 2001/04/08 16:26:14 pete Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -216,20 +216,25 @@ src_install() {
 		
 	else
 
-		cd ${S}
-		try make clean
+                cd ${S}
+                make mrproper
+                cd ${WORKDIR}
 
-		cd ${S}
-		make mrproper
-		cd ${WORKDIR}
-		cp -a ${S} ${D}/usr/src/linux-${KV}
-		
-		# get alsa includes
-		insinto /usr/src/linux-${KV}/include/linux
-		cd ${D}/usr/src/linux-${KV}/extras/alsa-driver-${AV}/include
-		doins asound.h asoundid.h asequencer.h ainstr_*.h
-		
-		rm -rf ${D}/usr/src/linux-${KV}/extras
+                cd ${S}/extras/LVM/${LVMV}
+                make distclean
+
+                cd ${S}/extras/lm_sensors-${SENV}
+                make clean
+
+                cd ${S}/extras/alsa-driver-${AV}
+                make distclean
+
+                cp -ax ${S} ${D}/usr/src/linux-${KV}
+
+                # get alsa includes
+                insinto /usr/src/linux-${KV}/include/linux
+                cd ${D}/usr/src/linux-${KV}/extras/alsa-driver-${AV}/include
+                doins asound.h asoundid.h asequencer.h ainstr_*.h
 	fi
 	
 	#remove workdir since our install was dirty and modified ${S}
