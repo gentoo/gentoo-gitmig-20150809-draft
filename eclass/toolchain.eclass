@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.101 2005/02/03 02:43:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.102 2005/02/03 05:31:09 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -13,7 +13,7 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test pkg_preinst src_install pkg_postinst pkg_prerm pkg_postrm
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
-FEATURES="${FEATURES/multilib-strict/} multilib-pkg-force"
+FEATURES=${FEATURES/multilib-strict/}
 
 toolchain_pkg_setup() {
 	gcc_pkg_setup
@@ -612,7 +612,7 @@ create_gcc_env_entry() {
 
 	if has_multilib_profile; then
 		local abi=
-		for abi in $(get_multilib_abis); do
+		for abi in $(get_all_abis); do
 			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 			[ "${MULTIDIR}" != "." -a -d "${LIBPATH}/${MULTIDIR}" ] && LDPATH="${LDPATH}:${LIBPATH}/${MULTIDIR}"
 		done
@@ -1373,7 +1373,7 @@ gcc_movelibs() {
 	#[ -d "${FROMDIR}" ] && mv ${FROMDIR}/* ${FROMDIR}/../
 
 	if has_multilib_profile; then
-		for abi in $(get_abi_order); do
+		for abi in $(get_all_abis); do
 			local OS_MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-os-directory)
 			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 			local TODIR=${D}/${LIBPATH}/${MULTIDIR}
