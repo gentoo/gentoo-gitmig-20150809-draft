@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.5 2003/12/23 10:53:35 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.6 2004/01/04 04:03:44 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -252,6 +252,10 @@ php_src_compile() {
 	if use gd-external; then
 		myconf="${myconf} --with-gd=/usr"
 		REQUIREPNG=1
+		if has_version '>=media-libs/libgd-2.0.17'; then
+			einfo "Fixing PHP for libgd function name changes"
+			sed -i 's:gdFreeFontCache:gdFontCacheShutdown:' ${S}/ext/gd/gd.c
+		fi
 	elif use gd; then
 		myconf="${myconf} --with-gd"
 		myconf="${myconf} `use_enable truetype gd-native-ttf`" 
