@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.14 2003/09/30 19:20:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.15 2003/10/04 16:38:38 dholm Exp $
+
+  04 Oct 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r3.ebuild,
+  files/gnat-3.15p-i686-pc-linux-gnu-bin.patch:
+  Added installation fix on x86 submitted by Olivier Crete <tester@gentoo.org>.
 
   30 Sep 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r3.ebuild:
   Added some more compilation fixes for x86 along with more descripting error

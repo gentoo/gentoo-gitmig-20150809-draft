@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.4 2003/09/30 19:20:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.5 2003/10/04 16:38:39 dholm Exp $
+
+inherit gnat
 
 DESCRIPTION="The GNU Ada Toolkit"
 DEPEND="x86? ( >=app-shells/tcsh-6.0 )"
@@ -29,7 +31,7 @@ case ${ARCH} in
 			;;
 esac
 
-inherit gnat
+CFLAGS="-O2 -gnatpgn"
 
 src_unpack() {
 	unpack ${A}
@@ -37,6 +39,7 @@ src_unpack() {
 	# Install the bootstrap compiler
 	if [ "${ARCH}" = "x86" ]; then
 		cd "${GNATBOOTINST}"
+		patch -p1 < ${FILESDIR}/gnat-3.15p-i686-pc-linux-gnu-bin.patch
 		echo $'\n'3$'\n'${GNATBOOT}$'\n' | ./doconfig > doconfig.log 2>&1
 		./doinstall
 	fi
@@ -67,7 +70,6 @@ src_compile() {
 	fi
 
 	# Configure gcc
-	local CFLAGS="-O2 -gnatpgn"
 	cd "${S}"
 	econf --libdir=/usr/lib/ada --program-prefix=gnat \
 		|| die "./configure failed"
@@ -108,7 +110,7 @@ src_install() {
 
 	# Build and install the static version of gnatlib
 	einfo "Building static gnatlib"
-	make CC="gcc" CFLAGS="-O2 -gnatpgn" GNATLIBCFLAGS="-O2 -gnatpgn" gnatlib ||
+	make CC="gcc" CFLAGS="${CFLAGS}" GNATLIBCFLAGS="${CFLAGS}" gnatlib ||
 		die "Failed while compiling static gnatlib!"
 	make prefix="${D}/usr" libdir="${D}/usr/lib/ada" \
 		LANGUAGES="c ada gcov" GCC_INSTALL_NAME=gnatgcc install-gnatlib ||
@@ -127,7 +129,7 @@ src_install() {
 		# Compile and install the FSU threads library
 		rm stamp-gnatlib1
 		einfo "Building FSU-threads runtime"
-		make CC="gcc" CFLAGS="-O0" GNATLIBCFLAGS="-O0 -fPIC" \
+		make CC="gcc" CFLAGS="${CFLAGS}" GNATLIBCFLAGS="${CFLAGS} -fPIC" \
 			THREAD_KIND="fsu" gnatlib-shared
 		make prefix="${D}/usr" libdir="${D}/usr/lib/ada" install-gnatlib
 		cd "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1"
