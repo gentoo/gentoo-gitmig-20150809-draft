@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p1.ebuild,v 1.6 2004/06/24 23:03:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p1.ebuild,v 1.7 2004/09/01 18:24:55 robbat2 Exp $
 
 IUSE="tcltk java doc"
 
 inherit eutils gnuconfig db
 
 #Number of official patches
-PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
+#PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
+PATCHNO=${PV/*.*.*_p}
 if [ "${PATCHNO}" == "${PV}" ]; then
 	MY_PV=${PV}
 	MY_P=${P}
@@ -42,7 +43,7 @@ src_unpack() {
 	cd ${WORKDIR}/${MY_P}
 	for (( i=1 ; i<=$PATCHNO ; i++ ))
 	do
-		patch -p0 <${DISTDIR}/patch.${MY_PV}.${i}
+		epatch ${DISTDIR}/patch.${MY_PV}.${i}
 	done
 	epatch ${FILESDIR}/${PN}-${SLOT}-jarlocation.patch
 
