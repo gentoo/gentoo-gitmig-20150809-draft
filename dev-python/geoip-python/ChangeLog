@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/geoip-python
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.5 2004/06/25 01:30:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.6 2004/12/17 20:29:59 pythonhead Exp $
+
+*geoip-python-1.2.0 (17 Dec 2004)
+
+  17 Dec 2004; Rob Cakebread <pythonhead@gentoo.org>
+  +geoip-python-1.2.0.ebuild:
+  Version bump, added docs.
 
   11 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> geoip-python-0.2.0.ebuild:
   Marked ~amd64.
