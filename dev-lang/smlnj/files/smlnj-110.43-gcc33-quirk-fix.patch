@@ -1,0 +1,17 @@
+diff -Naurp src.orig/runtime/objs/mk.x86-linux src/runtime/objs/mk.x86-linux
+--- src.orig/runtime/objs/mk.x86-linux	2002-04-12 13:54:31.000000000 -0400
++++ src/runtime/objs/mk.x86-linux	2003-10-02 19:05:56.000000000 -0400
+@@ -4,10 +4,10 @@
+ SHELL =		/bin/sh
+ 
+ MAKE =		make
+-CC =		gcc -ansi
++CC =		gcc
+ CFLAGS =	-O2
+ #CPP =		gcc -x c -E -P -ansi
+-CPP =		gcc -x assembler-with-cpp -E -P -ansi
++CPP =		gcc -x assembler-with-cpp -E -P
+ #XOBJS =	xmonitor.o
+ #LD_LIBS =	-lX11
+ #BASE_DEFS =	-DHEAP_MONITOR
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.43.ebuild,v 1.1 2003/10/01 00:33:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.43.ebuild,v 1.2 2003/10/03 05:24:38 kumba Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/config.tgz
 HOMEPAGE="http://cm.bell-labs.com/cm/cs/what/smlnj/"
 
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="-* ~x86"
 
 SLOT="0"
 DEPEND="virtual/glibc"
@@ -43,6 +43,11 @@ src_unpack() {
 	done
 
 	printf ${GEN_POSIX_NAMES_PATCH} | ed -s ${WORKDIR}/src/runtime/config/gen-posix-names.sh
+
+	# This patch removes -ansi flags from the x86-linux Makefiles because they conflict
+	# with both gcc-3.3 and will cause issues is sysmacros.h is included as well.
+	# Closes Bug #30207
+	epatch ${FILESDIR}/${P}-gcc33-quirk-fix.patch
 }
 
 src_compile() {
