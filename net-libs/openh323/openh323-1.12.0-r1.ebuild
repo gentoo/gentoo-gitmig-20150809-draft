@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0-r1.ebuild,v 1.3 2003/09/03 12:51:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0-r1.ebuild,v 1.4 2003/09/04 12:33:26 liquidx Exp $
 
 IUSE="ssl"
 
@@ -14,7 +14,7 @@ LICENSE="MPL-1.1"
 KEYWORDS="x86 ~ppc -sparc "
 
 DEPEND=">=sys-apps/sed-4
-	>=dev-libs/pwlib-1.5.0
+	=dev-libs/pwlib-1.5.0*
 	>=media-video/ffmpeg-0.4.7_pre20030624
 	ssl? ( dev-libs/openssl )"
 

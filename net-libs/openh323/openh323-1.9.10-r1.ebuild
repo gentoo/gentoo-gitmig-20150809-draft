@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.8 2003/06/18 13:56:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.9 2003/09/04 12:33:26 liquidx Exp $
 
 IUSE="ssl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.openh323.org"
 SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 DEPEND="media-libs/speex
-	>=dev-libs/pwlib-1.3.11-r1
+	=dev-libs/pwlib-1.3.11*
 	ssl? ( dev-libs/openssl )"
 
 SLOT="0"
