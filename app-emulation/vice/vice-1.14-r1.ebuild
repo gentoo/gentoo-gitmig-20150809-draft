@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.14-r1.ebuild,v 1.4 2005/01/01 14:18:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.14-r1.ebuild,v 1.5 2005/01/23 00:05:47 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -34,7 +34,7 @@ src_compile() {
 		--enable-fullscreen \
 		--disable-dependency-tracking \
 		$(use_with sdl) \
-		$(use_with gnome gnomeui) \
+		$(use_enable gnome gnomeui) \
 		$(use_with arts) \
 		$(use_enable nls) \
 		|| die

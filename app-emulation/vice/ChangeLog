@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.19 2005/01/01 14:18:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.20 2005/01/23 00:05:47 wolf31o2 Exp $
+
+  22 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> vice-1.14-r1.ebuild:
+  Changed use_with gnome to use_enable gnome and closing bug #77836.
 
   02 Aug 2004; David Holm <dholm@gentoo.org> vice-1.14-r1.ebuild:
   Added to ~ppc.
