@@ -1,9 +1,3 @@
-######################################################
-# Purpose: If the requested file isnt empty, and snarf created the file, unlink it.
-# Author: Tavis Ormandy <taviso@gentoo.org>
-# Date: 1/08/2003
-# Applies Against: Snarf-7.0+basename
-###################################
 diff -urN snarf-7.0.orig/http.c snarf-7.0/http.c
 --- snarf-7.0.orig/http.c	2003-08-01 14:46:26.000000000 +0100
 +++ snarf-7.0/http.c	2003-08-01 14:44:02.000000000 +0100
