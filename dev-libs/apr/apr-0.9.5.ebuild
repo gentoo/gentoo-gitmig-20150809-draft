@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.5.ebuild,v 1.7 2005/02/05 20:43:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.5.ebuild,v 1.8 2005/02/21 15:17:00 agriffis Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://apr.apache.org/"
 SRC_URI="mirror://apache/apr/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-KEYWORDS="~x86 ~sparc ~ppc64 ~hppa ~amd64 ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc64 ~hppa ~amd64 ~ppc ~alpha ~ia64"
 SLOT="0"
 RESTRICT="maketest"
 
