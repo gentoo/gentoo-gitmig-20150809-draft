@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.5 2004/03/09 17:52:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.6 2004/03/16 06:36:02 usata Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -26,12 +26,12 @@ elisp-install() {
 }
 
 elisp-site-file-install() {
-	local sitefile=$1
+	local sitefile=$1 my_pn=${2:-${PN}}
 	pushd ${S}
-	cp ${sitefile} .
-	D=${S}/ dosed "s:@SITELISP@:${SITELISP}/${PN}:g" $(basename ${sitefile})
+	cp ${sitefile} ${T}
+	sed -i "s:@SITELISP@:${SITELISP}/${my_pn}:g" ${T}/$(basename ${sitefile})
 	insinto ${SITELISP}
-	doins ${S}/$(basename ${sitefile})
+	doins ${T}/$(basename ${sitefile})
 	popd
 }
 
