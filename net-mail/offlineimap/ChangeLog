@@ -1,0 +1,9 @@
+# ChangeLog for net-mail/offlineimap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.1 2003/07/07 16:03:16 latexer Exp $
+
+*offlineimap-3.99.17 (07 Jul 2003)
+
+  07 Jul 2003; Peter Johanson <latexer@gentoo.org> offlineimap-3.99.17.ebuild:
+  Initial import. bug #20810. Thanks to Jean Jordaan <jean@upfrontsystems.co.za>.
+
