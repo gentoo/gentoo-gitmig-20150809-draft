@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>text-markup</herd>
 <maintainer>
+  <email>text-markup@gentoo.org</email>
   <description>Feel free to take the maintainership of it.</description>
 </maintainer>
 </pkgmetadata>
