@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-0.10.1.ebuild,v 1.5 2005/01/25 19:49:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-0.10.1.ebuild,v 1.6 2005/02/12 20:02:56 vapier Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.linux1394.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ppc64"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
