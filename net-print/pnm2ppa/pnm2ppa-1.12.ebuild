@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.7 2004/04/09 13:02:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.8 2004/04/13 21:48:58 kugelfang Exp $
 
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/pnm2ppa/${P}.tar.gz
 	 mirror://sourceforge/pnm2ppa/howto.tgz"
 
 HOMEPAGE="http://pnm2ppa.sourceforge.net"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 DESCRIPTION="Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series"
 LICENSE="GPL-2"
