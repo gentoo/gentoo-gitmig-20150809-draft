@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.51 2004/10/23 19:59:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.52 2004/11/08 16:41:10 spyderous Exp $
+
+*xterm-196-r1 (08 Nov 2004)
+
+  08 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>; +xterm-196-r1.ebuild:
+  Make sure /usr/bin/xterm is 0755. It grabs permissions from the live system
+  at install time, and they could be old ones from when it was suid (for
+  unix98 pty) or sgid (for without utempter) (#69510).
 
   23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> xterm-196.ebuild:
   Stable on alpha.
