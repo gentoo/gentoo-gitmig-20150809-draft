@@ -1,6 +1,9 @@
 # ChangeLog for www-client/khttrack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/khttrack/ChangeLog,v 1.2 2005/03/18 18:54:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/khttrack/ChangeLog,v 1.3 2005/03/25 01:13:53 luckyduck Exp $
+
+  25 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> khttrack-0.10.ebuild:
+  added ~amd64 to KEYWORDS, fixes #86528
 
 *khttrack-0.10 (18 Mar 2005)
 
