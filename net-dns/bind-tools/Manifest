@@ -1,15 +1,25 @@
-MD5 da7b4c6348b8f7c881277ea30ac47578 bind-tools-9.2.3.ebuild 1711
-MD5 89b68ba5c8019cd8dfeadb3a5c530005 bind-tools-9.3.1.ebuild 1295
-MD5 69fcb5b4daaabd235a3f6d781a632728 bind-tools-9.2.3-r1.ebuild 1292
-MD5 7f0422ccf8bad33a511b0328cad7ab39 bind-tools-9.2.5.ebuild 1355
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dfc3ba2e65444f3c80617a371d0d976b ChangeLog 4937
 MD5 ede86efe63bf2e0361a59555f46a3ddb bind-tools-9.2.2.ebuild 983
 MD5 ea238a1f5ee7e1bef9f2bb76d19ba5d3 bind-tools-9.2.2_rc1.ebuild 926
-MD5 aff67d4718d549c1079af325647aa52b ChangeLog 4823
+MD5 69fcb5b4daaabd235a3f6d781a632728 bind-tools-9.2.3-r1.ebuild 1292
+MD5 da7b4c6348b8f7c881277ea30ac47578 bind-tools-9.2.3.ebuild 1711
 MD5 8506aec044ae36f266ab8923eb2a111e metadata.xml 334
-MD5 feb1027d97d15dcf8fdc57b2de185af2 files/digest-bind-tools-9.2.3-r1 63
+MD5 5921d2efe3e8fa00fbd7fdb6de167cb8 bind-tools-9.2.5.ebuild 1357
+MD5 89b68ba5c8019cd8dfeadb3a5c530005 bind-tools-9.3.1.ebuild 1295
 MD5 e020f0d41f68e0c47d196c4aa1a06c09 files/digest-bind-tools-9.2.2 63
+MD5 8c87d7839f4a6caa9c690e5905a247f4 files/digest-bind-tools-9.2.2_rc1 66
 MD5 feb1027d97d15dcf8fdc57b2de185af2 files/digest-bind-tools-9.2.3 63
+MD5 feb1027d97d15dcf8fdc57b2de185af2 files/digest-bind-tools-9.2.3-r1 63
+MD5 1d83f3065ae3bad0e88ae3bfe1e95ced files/nslookup.8 14638
 MD5 0b0f1e16a0bf51db8f99fd21c01f7426 files/digest-bind-tools-9.2.5 63
 MD5 c46a805da6650356db77b023d4d042d8 files/digest-bind-tools-9.3.1 63
-MD5 8c87d7839f4a6caa9c690e5905a247f4 files/digest-bind-tools-9.2.2_rc1 66
-MD5 1d83f3065ae3bad0e88ae3bfe1e95ced files/nslookup.8 14638
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCUWoGKRy60XGEcJIRAuZfAJ9UJc0l7HJlKFtidETjlE2U9CteogCdG45Q
+gLnHZM6J8sCx3Q6SRvJkB6A=
+=mCXM
+-----END PGP SIGNATURE-----
