@@ -1,8 +1,11 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.6.6.7.ebuild,v 1.1 2002/05/11 18:37:58 g2boojum Exp $
+# Author: Grant Goodyear <g2boojum@gentoo.org>
+# Maintainer: Grant Goodyear <g2boojum@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.6.6.7.ebuild,v 1.2 2002/05/12 18:31:02 g2boojum Exp $
 
+SLOT=0
+LICENSE="GPL-2"
 S=${WORKDIR}/${PN}
 PV0=0.6.6
 PVP=${PV0}-7
@@ -13,6 +16,8 @@ HOMEPAGE="http://www.preikschat.com/gotmail.html"
 
 DEPEND="net-ftp/curl
 	dev-perl/URI"
+
+RDEPEND=
 
 src_unpack() {
 	unpack ${PN}_${PV0}.orig.tar.gz
