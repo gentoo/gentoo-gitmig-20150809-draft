@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.3 2003/06/12 16:32:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.4 2003/06/12 20:22:53 liquidx Exp $
 
 IUSE="pam kerberos gtk gtk2 gnome opengl jpeg xinerama"
 
@@ -19,7 +19,8 @@ SLOT="0"
 #        to correctly allow users to choose gtk1/gtk2. right now it
 #        only selects the deps.
 
-RDEPEND="media-libs/netpbm
+RDEPEND="virtual/x11
+	media-libs/netpbm
 	app-games/fortune-mod	
 	>=sys-libs/zlib-1.1.4
 	gtk? ( >=dev-libs/libxml2-2.5 )
@@ -128,6 +129,9 @@ src_install() {
 		insinto /usr/share/gnome/capplets
 		doins driver/screensaver-properties.desktop
 	)
+	
+	# install symlink to satisfy kde
+	use kde && dosym /usr/share/control-center/screensavers /usr/lib/xscreensaver/config
 
 	# Remove "extra" capplet
 	rm -f ${D}/usr/share/control-center/capplets/screensaver-properties.desktop

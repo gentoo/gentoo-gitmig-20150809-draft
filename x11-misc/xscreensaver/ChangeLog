@@ -1,13 +1,18 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.26 2003/06/12 16:32:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.27 2003/06/12 20:22:53 liquidx Exp $
+
+  12 Jun 2003; Alastair Tse <liquidx@gentoo.org> xscreensaver-4.09-r1.ebuild,
+  xscreensaver-4.10.ebuild:
+  should depend on virtual/x11 and kde symlink to configs
 
   12 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
   xscreensaver-4.09-r1.ebuild, xscreensaver-4.10.ebuild:
   xpm is provided by xfree
 
-  29 May 2003; <msterret@gentoo.org> :
-  Manifest
+  12 Jun 2003; Alastair Tse <liquidx@gentoo.org> xscreensaver-4.09-r1.ebuild,
+  xscreensaver-4.10.ebuild:
+  remove xpm deps, kde symlink fixes
 
 *xscreensaver-4.10 (29 May 2003)
 
