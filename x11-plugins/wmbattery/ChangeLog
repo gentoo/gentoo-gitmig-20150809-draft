@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/wmbattery
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.4 2003/02/12 09:39:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.5 2003/12/06 15:43:38 port001 Exp $
+
+*wmbattery-2.19 (06 Dec 2003)
+
+  06 Dec 2003; Ian Leitch <port001@gentoo.org> wmbattery-1.2.1-r1.ebuild,
+  wmbattery-2.19.ebuild:
+  Version bump. Fixed SRC_URI, new dep on apmd for 2.x, removed sparc and am64
+  from KEYWORDS and set ~x86 as we don't yet know the stability of this 2.x
+  release. Also changed both version to install pixmaps into /usr/share/pixmaps
+  instead of /usr/share/icons. #32596
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
