@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/kaudiocreator-3.4.0_beta2.ebuild,v 1.2 2005/02/06 07:40:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/kaudiocreator-3.4.0_beta2.ebuild,v 1.3 2005/02/06 15:08:31 danarmak Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -21,7 +21,7 @@ encode? ( media-sound/lame )"
 
 KMCOPYLIB="libkcddb libkcddb"
 KMEXTRACTONLY="libkcddb
-		mpeglib_artsplug/configure.in.in" # for ARTSC_LIB test; bugs.kde.org 98676
+		mpeglib_artsplug/configure.in.in" # for ARTSC_LIB test; in upstream cvs, remove after beta2
 KMCOMPILEONLY="kscd/libwm
 	libkcddb/"
 
