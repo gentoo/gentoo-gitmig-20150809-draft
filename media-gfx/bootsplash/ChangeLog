@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.28 2004/03/06 10:56:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.29 2004/03/20 15:46:50 spock Exp $
+
+*bootsplash-0.6-r12 (20 Mar 2004)
+
+  20 Mar 2004; Michal Januszewski <spock@gentoo.org>
+  bootsplash-0.6-r12.ebuild:
+  Added support for 2.6.5 kernels (up to -rc2), fixed some minor issues with
+  chvt.
 
   06 Mar 2004; Michal Januszewski <spock@gentoo.org>
   bootsplash-0.6-r11.ebuild, bootsplash-0.6-r9.ebuild:
