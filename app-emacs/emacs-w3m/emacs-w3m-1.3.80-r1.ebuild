@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.80.ebuild,v 1.2 2004/01/18 19:41:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.80-r1.ebuild,v 1.1 2004/01/21 16:37:01 usata Exp $
 
 inherit elisp
 
@@ -15,9 +15,8 @@ SLOT="0"
 # This is development release and is not intended to be stable
 KEYWORDS="~x86"
 
-# This version won't run on w3m and w3m-m17n
 DEPEND="virtual/emacs
-	>=net-www/w3mmee-0.3.2_p24-r3
+	virtual/w3m
 	>=app-emacs/apel-10.3
 	virtual/flim"
 
@@ -41,7 +40,7 @@ src_install () {
 		ICONDIR=${D}/usr/share/${PN}/icon \
 		install-icons || die
 
-	elisp-site-file-install ${FILESDIR}/70emacs-w3mmee-gentoo.el
+	elisp-site-file-install ${FILESDIR}/70emacs-w3m-gentoo.el
 
 	dodoc ChangeLog* README* TIPS* FAQ*
 }
