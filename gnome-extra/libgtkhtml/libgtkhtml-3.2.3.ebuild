@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.1.ebuild,v 1.1 2004/09/17 11:32:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.3.ebuild,v 1.1 2004/10/16 19:07:53 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -21,8 +21,8 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND=">=gnome-extra/gal-2.1.14
-	>=net-libs/libsoup-2.2
+RDEPEND=">=gnome-extra/gal-2.2.3
+	>=net-libs/libsoup-2.2.1
 	>=x11-libs/gtk+-2.2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnomeprint-2.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.0.0.ebuild,v 1.5 2004/10/11 01:26:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.0.2.ebuild,v 1.1 2004/10/16 19:12:41 liquidx Exp $
 
 inherit gnome2
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libgnome-2
 	>=gnome-base/gconf-2
 	>=dev-libs/libxml2-2
-	>=net-libs/libsoup-2.2
+	>=net-libs/libsoup-2.2.1
 	ldap? ( >=net-nds/openldap-2.0 )"
 
 DEPEND="${RDEPEND}
@@ -31,3 +31,11 @@ G2CONF="${G2CONF} `use_with ldap openldap`"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 USE_DESTDIR=1
+
+src_compile() {
+	cd ${S}/libdb/dist
+	./s_config || die
+
+	cd ${S}
+	gnome2_src_compile
+}
