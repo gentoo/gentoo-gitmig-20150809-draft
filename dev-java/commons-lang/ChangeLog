@@ -1,8 +1,9 @@
-# ChangeLog for dev-java/commons-dbcp
+# ChangeLog for dev-java/commons-lang
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.1 2002/11/02 21:47:27 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.2 2002/11/02 21:50:44 karltk Exp $
 
-*commons-dbcp-1.0 (02 Nov 2002)
+*commons-lang-1.0 (02 Nov 2002)
 
-  02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> commons-dbcp-1.0.ebuild files/digest-commons-dbcp-1.0 :
-  Initial import.  Ebuild submitted by Adrian Almenar <aalmenar@conectium.com>.
+  02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> commons-lang-1.0.ebuild files/digest-commons-lang-1.0 :
+  Initial import.  Ebuild submitted by the ever-übercool Adrian Almenar 
+  <aalmenar@conectium.com>.
