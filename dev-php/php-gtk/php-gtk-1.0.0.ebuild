@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/php-gtk-1.0.0.ebuild,v 1.6 2004/07/16 18:41:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/php-gtk-1.0.0.ebuild,v 1.7 2004/08/07 19:51:24 robbat2 Exp $
 
 PHP_EXT_NAME="php_gtk"
 PHP_EXT_ZENDEXT="no"
+PHPSAPILIST="cli" # we do NOT want it in place for apache[12],cgi
 inherit php-ext-source
 
 DESCRIPTION="GTK bindings for php"
