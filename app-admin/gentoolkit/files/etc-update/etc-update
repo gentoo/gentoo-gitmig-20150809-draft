@@ -46,7 +46,6 @@ rm_extra_file() {
 		;;
 	5)
 		echo "*** skipping ..."
-		exit
 		;;
 	*)
 		echo "!!! Please pick a valid choice next time !!!"
