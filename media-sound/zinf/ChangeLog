@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/zinf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.29 2004/07/15 08:24:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.30 2004/10/07 03:06:20 eradicator Exp $
+
+  06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  zinf-2.2.5-r1.ebuild:
+  get_libdir fixes.
 
   15 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/zinf-2.2.5-configure.patch:

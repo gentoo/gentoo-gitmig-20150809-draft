@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.7 2004/08/22 04:45:28 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.8 2004/10/07 03:06:20 eradicator Exp $
 
 inherit kde-functions eutils flag-o-matic
 
@@ -90,7 +90,7 @@ src_install() {
 	into /usr
 	dobin base/zinf
 
-	exeinto /usr/lib/zinf/plugins
+	exeinto /usr/$(get_libdir)/zinf/plugins
 	doexe plugins/*
 
 	insinto /usr/share/zinf/themes
