@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.8 2004/08/20 07:50:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.9 2004/09/05 17:03:48 aliz Exp $
 
 inherit eutils gnuconfig games
 
@@ -24,6 +24,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-fPIC.patch"
 	epatch "${FILESDIR}/${PV}-vc.patch"
+	epatch "${FILESDIR}/${P}-gcc34.patch"
 
 	sed -i \
 		-e "/MCL_LIBRARY_PATH/ s:/usr/lib/mcl:${GAMES_LIBDIR}/${PN}:" \
