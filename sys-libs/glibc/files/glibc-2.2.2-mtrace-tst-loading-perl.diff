@@ -1,0 +1,15 @@
+--- iconvdata/Makefile.orig	Tue Feb 20 11:11:52 2001
++++ iconvdata/Makefile	Tue Feb 20 11:11:21 2001
+@@ -259,8 +259,10 @@
+ 
+ ifeq (no,$(cross-compiling))
+ ifeq (yes,$(build-shared))
+-tests: $(objpfx)iconv-test.out $(objpfx)tst-tables.out \
+-       $(objpfx)mtrace-tst-loading
++tests: $(objpfx)iconv-test.out $(objpfx)tst-tables.out 
++ifneq (no,$(PERL))
++tests:      $(objpfx)mtrace-tst-loading
++endif
+ endif
+ endif
+ 

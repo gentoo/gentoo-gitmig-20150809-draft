@@ -1,0 +1,20 @@
+--- configure.orig	Tue Feb 20 10:44:30 2001
++++ configure.in	Tue Feb 20 11:03:14 2001
+@@ -1324,6 +1324,7 @@
+ 
+ dnl Check whether we have the gd library available.
+ AC_MSG_CHECKING(for libgd)
++if test "$with_gd" != "no"; then
+ old_CFLAGS="$CFLAGS"
+ CFLAGS="$CFLAGS $libgd_include"
+ old_LDFLAGS="$LDFLAGS"
+@@ -1334,6 +1335,9 @@
+ CFLAGS="$old_CFLAGS"
+ LDFLAGS="$old_LDFLAGS"
+ LIBS="$old_LIBS"
++else
++LIBGD="no"
++fi
+ AC_MSG_RESULT($LIBGD)
+ AC_SUBST(LIBGD)
+ 

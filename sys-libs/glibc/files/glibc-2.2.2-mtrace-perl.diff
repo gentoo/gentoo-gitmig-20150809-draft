@@ -1,0 +1,14 @@
+--- malloc/Makefile~	Mon Feb 19 15:17:55 2001
++++ malloc/Makefile	Mon Feb 19 15:20:06 2001
+@@ -100,9 +100,11 @@
+ 
+ ifeq (no,$(cross-compiling))
+ ifeq (yes,$(build-shared))
++ifneq (no,$(PERL))
+ tests: $(objpfx)tst-mtrace.out
+ $(objpfx)tst-mtrace.out: tst-mtrace.sh $(objpfx)tst-mtrace
+ 	$(SHELL) -e $< $(common-objpfx)
++endif
+ endif
+ endif
+ 
