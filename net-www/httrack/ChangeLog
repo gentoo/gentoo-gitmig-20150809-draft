@@ -1,6 +1,9 @@
 # ChangeLog for net-www/httrack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/ChangeLog,v 1.8 2004/06/25 00:55:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/httrack/ChangeLog,v 1.9 2004/06/26 04:49:25 swegener Exp $
+
+  26 Jun 2004; Sven Wegener <swegener@gentoo.org> httrack-3.32.2.ebuild:
+  Package is not parallel build capable, added -j1. Closes bug #54756.
 
 *httrack-3.32.2 (21 Jun 2004)
 
