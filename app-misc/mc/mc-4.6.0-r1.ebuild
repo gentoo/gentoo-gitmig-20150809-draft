@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r1.ebuild,v 1.5 2003/07/07 11:47:06 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r1.ebuild,v 1.6 2003/08/08 09:40:17 taviso Exp $
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -20,7 +20,7 @@ DEPEND=">=sys-apps/e2fsprogs-1.19
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha mips hppa ~arm"
+KEYWORDS="x86 ~ppc ~sparc alpha mips hppa ~arm"
 	
 src_compile() {                           
 	local myconf=""
