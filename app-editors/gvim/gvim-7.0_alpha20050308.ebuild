@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.0_alpha20050201.ebuild,v 1.1 2005/02/01 19:16:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.0_alpha20050308.ebuild,v 1.1 2005/03/08 21:46:19 ciaranm Exp $
 
 inherit vim
 
 VIM_DATESTAMP="${PV##*alpha}"
-VIM_PATCHES_DATESTAMP="20050201"
 
 VIM_VERSION="7.0aa"
 VIM_SNAPSHOT="vim-${VIM_VERSION}-${VIM_DATESTAMP}.tar.bz2"
 VIM_GENTOO_PATCHES="vim-${VIM_VERSION}-${VIM_PATCHES_DATESTAMP:-${VIM_DATESTAMP}}-gentoo-patches.tar.bz2"
+GVIMRC_FILE_SUFFIX="-r1"
 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${VIM_SNAPSHOT}

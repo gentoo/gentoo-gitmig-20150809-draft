@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.115 2005/03/06 12:21:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.116 2005/03/08 21:46:19 ciaranm Exp $
+
+*gvim-7.0_alpha20050308 (08 Mar 2005)
+
+  08 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> files/gvim-completion,
+  +files/gvimrc-r1, -gvim-7.0_alpha20050122.ebuild,
+  -gvim-7.0_alpha20050126.ebuild, -gvim-7.0_alpha20050201.ebuild,
+  +gvim-7.0_alpha20050308.ebuild:
+  Updated vim7 snapshot
 
   06 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> gvim-6.3-r4.ebuild:
   Marked stable on amd64.
