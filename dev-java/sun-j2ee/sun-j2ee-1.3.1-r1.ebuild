@@ -1,26 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r1.ebuild,v 1.5 2004/03/18 04:37:03 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r1.ebuild,v 1.6 2004/03/18 05:15:43 zx Exp $
 
-At=j2sdkee-1_3_1-linux.tar.gz
-S=${WORKDIR}/j2sdkee1.3.1
 DESCRIPTION="Sun's Java 2 Enterprise Edition Development Kit"
-SRC_URI=""
+SRC_URI="j2sdkee-1_3_1-linux.tar.gz"
 HOMEPAGE="http://java.sun.com/j2ee/download.html#sdk"
 DEPEND="virtual/glibc
 		>=lib-compat-1.1"
 RDEPEND=">=virtual/jre-1.3.1"
 PROVIDE="virtual/j2ee-1.3.1"
 LICENSE="sun-bcla-j2ee"
+RESTRICT="fetch"
 SLOT="0"
 KEYWORDS="x86 -ppc"
 IUSE="doc"
 
-src_unpack() {
-	if [ ! -f ${DISTDIR}/${At} ] ; then
-		die "Please download ${At} from ${HOMEPAGE} to ${DISTDIR}"
-	fi
-	unpack ${At}
+S=${WORKDIR}/j2sdkee1.3.1
+
+pkg_nofetch() {
+	die "Please download ${SRC_URI} from ${HOMEPAGE} to ${DISTDIR}"
 }
 
 src_install () {

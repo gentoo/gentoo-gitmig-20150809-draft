@@ -1,5 +1,5 @@
-MD5 16ce3e30f35ca0dd8f0cf6ae0a3964ae ChangeLog 518
-MD5 5328770474f9fb1dff6bdde57c9deb4d jrockit-8.1.ebuild 1753
+MD5 64cf0c52d3fa289b9c748d73e6d11bf1 jrockit-8.1.ebuild 1729
+MD5 f2ea4f6de824f7e0778b2994b2ec290b ChangeLog 612
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-jrockit-8.1 0
 MD5 526353109877a591e6417c72c2aa6392 files/jrockit-8.1 293
