@@ -1,0 +1,524 @@
+makedev (2.3.1-26) unstable; urgency=medium
+
+  * fix another syntax error introduced in -25...  /o\
+
+ -- Bdale Garbee <bdale@gag.com>  Sat, 29 May 1999 03:12:32 -0600
+
+makedev (2.3.1-25) unstable; urgency=medium
+
+  * fix *ugly* typos introduced in -24, closes 38489, 38465.
+  * update MAKEDEV to install the mouse -> sunmouse link in generic-sparc,
+    in addition to making it in the postinst if needed.  Closes 38432.
+  * have MAKEDEV exit with error 1 if we hit a "don't know how to make device"
+    situation.  I'm a bit concerned about this since it *might* break a
+    package postinst somewhere.  However, it is clearly the right thing to do
+    on a purely conceptual level.  Closes 29974.
+  * add support for Free S/WAN (IPSEC) device, closes 38372.
+
+ -- Bdale Garbee <bdale@gag.com>  Wed, 26 May 1999 14:00:29 -0600
+
+makedev (2.3.1-24) unstable; urgency=low
+
+  * fold in patch from Espy to provide all the functionality of the RedHat
+    makedev 2.5.  Leave our version number as 2.3.1-XX for now, since we're
+    not actually cleanly derived from the 2.5 RedHat bits. Closes 37795, 28616.
+  * make 'scd' act like 'scd-all', closes 37071
+  * patch for postinst typo, closes 37612
+  * move MAKEDEV to /sbin, create an init.d fragment to put a symlink in the
+    /dev directory at boot time.  This should allow devfs to do its thing,
+    closing 37795, 33025.
+
+ -- Bdale Garbee <bdale@gag.com>  Wed, 26 May 1999 14:00:29 -0600
+
+makedev (2.3.1-23) stable unstable; urgency=low
+
+  * fix problems with st* and adb pointed out by Hartmut
+
+ -- Bdale Garbee <bdale@gag.com>  Thu, 15 Apr 1999 08:39:39 -0600
+
+makedev (2.3.1-22) unstable; urgency=low
+
+  * add 'hamradio' as a target, which is a macro for the new scc[0-7] and
+    bc[0-3] targets, closes 34773.  
+
+ -- Bdale Garbee <bdale@gag.com>  Wed, 14 Apr 1999 11:55:46 -0600
+
+makedev (2.3.1-21) stable unstable; urgency=low
+
+  * make /dev/mouse a symlink to /dev/sunmouse on sparc, closes 35616
+  * have postinst create audio devices, closes 35646
+  * also create [alm] suffix versions for st* devices, closes 33041
+  * add support for hd[ijkl]... noticed while investigating bug 33798
+  * use the same owner/group/perms for nvram that we use for kmem, closes 34111
+  * add loop to the std device set, closes 34899
+
+ -- Bdale Garbee <bdale@gag.com>  Wed, 14 Apr 1999 11:13:47 -0600
+
+makedev (2.3.1-20) stable unstable; urgency=medium
+
+  * release-critical fixes from Hartmut for powerpc, closes 34004
+
+ -- Bdale Garbee <bdale@gag.com>  Wed, 10 Mar 1999 07:51:08 -0700
+
+makedev (2.3.1-19) frozen unstable; urgency=medium
+
+  * fix identification of 'sg' in update, closes the part of 33752 (grave)
+    that I can duplicate on i386 in -18
+
+ -- Bdale Garbee <bdale@gag.com>  Tue, 23 Feb 1999 07:44:30 -0700
+
+makedev (2.3.1-18) frozen unstable; urgency=medium
+
+  * as requested by Wichert, have the postinst force /dev/kmem owner, group,
+    and permissions since this is a security issue, closes 33703.
+  * another patch needed for m68k slink boot floppies from Michael Schmitz
+
+ -- Bdale Garbee <bdale@gag.com>  Mon, 22 Feb 1999 22:56:47 -0700
+
+makedev (2.3.1-17) frozen unstable; urgency=low
+
+  * Wichert points out that /dev/kmem doesn't need to be group writeable.
+
+ -- Bdale Garbee <bdale@gag.com>  Sat, 20 Feb 1999 16:12:29 -0700
+
+makedev (2.3.1-16) frozen unstable; urgency=medium
+
+  * apply patch for m68k that is release-critical for slink
+
+ -- Bdale Garbee <bdale@gag.com>  Fri, 19 Feb 1999 20:07:05 -0700
+
+makedev (2.3.1-15) frozen unstable; urgency=medium
+
+  * fix major number for sunmouse as per Eric Delaunay, closes 33425
+  * tighten default permission on mouse and joystick devices, closes 32378
+  * change audio devices to root.audio 660, closes 32849
+  * apply patch from Eric Delaunay to fix problem with scsi devices and 2.2
+    kernels, closes 32999
+  * target 'frozen' since the sunmouse fix at the very least should be in 
+    slink...
+
+ -- Bdale Garbee <bdale@gag.com>  Wed, 17 Feb 1999 16:53:41 -0700
+
+makedev (2.3.1-14) frozen unstable; urgency=low
+
+  * additions from Eric Delaunay needed for sparc frozen, closes 32458
+
+ -- Bdale Garbee <bdale@gag.com>  Wed, 27 Jan 1999 13:54:31 -0700
+
+makedev (2.3.1-13) frozen unstable; urgency=low
+
+  * make random/urandom available separately, not just in std, closes 32145
+
+ -- Bdale Garbee <bdale@gag.com>  Tue, 19 Jan 1999 21:27:14 -0700
+
+makedev (2.3.1-12) frozen unstable; urgency=low
+
+  * add random/urandom to the std target, closes 31562 and 29193
+  * update manpage to indicate the manpage is out of date, I need to make a
+    chunk of time at some point to give it a thorough review/update.
+  * don't make /dev/cua*, fix group on /dev/ttyS*, closes 30867
+  * change postinst to use syntax that isn't bash-specific, closes 18807 
+    and 30849
+
+ -- Bdale Garbee <bdale@gag.com>  Sat,  9 Jan 1999 00:39:25 -0700
+
+makedev (2.3.1-11) frozen unstable; urgency=low
+
+  * allow 16 sd's instead of 8, as the kernel does.  closes 30555.
+  * create hdc and hdd in generic-i386, and create 20 partitions per hd 
+    instead of 4, closes 30522.
+  * go back (forward?) to using 'u' instead of '[DHE]' in fd entries, 
+    closes 30438.
+  * add 'fb' to both the generic-i386 and generic-powerpc clauses, closes
+    29228
+
+ -- Bdale Garbee <bdale@gag.com>  Sat, 12 Dec 1998 08:10:22 -0700
+
+makedev (2.3.1-10) frozen unstable; urgency=low
+
+  * instead of having the postinst explicitly link /dev/console, have it
+    call MAKEDEV if console doesn't exist.  Update MAKEDEV to know how to
+    link it for 2.0 kernels and prior, and create the explicit device for
+    2.1 and later running kernels.  Building this based on running kernel
+    revision doesn't feel clean, but I see no better way.
+
+ -- Bdale Garbee <bdale@gag.com>  Sun,  8 Nov 1998 18:49:30 -0700
+
+makedev (2.3.1-9) frozen unstable; urgency=low
+
+  * fix postinst to cd to /dev so that devices don't end up in /, now that
+    we don't do the cd in MAKEDEV itself
+  * move 'generic' to 'generic-i386', and have 'generic' use dpkg to determine
+    which generic-<arch> to use... this paves the way for fixing support for
+    other architectures.
+  * Several changes per drow on IRC:
+      change MAXVT from 8 to 63
+      change sd[ab] to create 15 instead of 8 subdevices
+      fix char->block on one scd instance
+      diffs to add support for powerpc machines
+
+ -- Bdale Garbee <bdale@gag.com>  Sun,  8 Nov 1998 18:49:30 -0700
+
+makedev (2.3.1-8) frozen unstable; urgency=low
+
+  * add support for ram0 to the ram* list (0 was omitted), part of 28933.
+  * device 'rtc' was part of 'misc', give it a top-level entry too to reduce
+    possible confusion.  Part of 28933.
+  * add an entry for 'initrd', closes 28933 (slink release-critical).
+
+ -- Bdale Garbee <bdale@gag.com>  Sun,  8 Nov 1998 10:18:37 -0700
+
+makedev (2.3.1-7) frozen unstable; urgency=low
+
+  * now that MAKEDEV is a script, this can be an 'all' package instead of
+    an 'any'.  Thanks to Hartmut Koptein for pointing this out.
+
+ -- Bdale Garbee <bdale@gag.com>  Fri,  6 Nov 1998 11:42:58 -0700
+
+makedev (2.3.1-6) frozen unstable; urgency=low
+
+  * add ttyS entry so update works with recent 2.1 kernels
+
+ -- Bdale Garbee <bdale@gag.com>  Mon,  2 Nov 1998 21:47:34 -0700
+
+makedev (2.3.1-5) frozen unstable; urgency=low
+
+  * fix typo affecting fb devices, closes 28742
+  * fix syntax used for wildcarded devices, part of closing 28769
+  * fix error in minor numbers for isdn-ippp, part of closing 28769
+
+ -- Bdale Garbee <bdale@gag.com>  Sun,  1 Nov 1998 23:09:45 -0700
+
+makedev (2.3.1-4) frozen unstable; urgency=low
+
+  * add support for additional scd and sg devices, closes 28029.
+  * change device names for busmice back to what we used in makedev-1.*, which
+    is also what the kernel documentation uses.  Closes 28143.
+  * add support for various devices in contemporary kernels, closes 27720.
+
+ -- Bdale Garbee <bdale@gag.com>  Wed, 28 Oct 1998 23:41:58 -0700
+
+makedev (2.3.1-3) unstable; urgency=low
+
+  * use 'dialout' instead of 'serial' to select owner/group/perms for ISDN
+    devices, closes 27536
+  * use 'dialout' as group for serial devices instead of 'uucp' to be 
+    compatible with prior Debian makedev packages. 
+
+ -- Bdale Garbee <bdale@gag.com>  Wed,  7 Oct 1998 22:50:36 -0600
+
+makedev (2.3.1-2) unstable; urgency=low
+
+  * fix scd-all and sg-all entry points.  The latter is just an alias for 'sg',
+    but the former was genuinely missing.  Switch sg devices to numeric suffix
+    to comply with kernel's devices.txt.  Closes 27490.
+  * close 26586, since I'm pretty sure it's a weirdy not caused by the package.
+  * add ISDN devices, closes 26971.
+  * add cfs0 for CODA, closes 23815.
+
+ -- Bdale Garbee <bdale@gag.com>  Tue,  6 Oct 1998 00:33:59 -0600
+
+makedev (2.3.1-1) unstable; urgency=low
+
+  * New upstream version.  This is a *significant* change!
+    This is a move (back?) from the short-lived makedev that depended on a     
+    non-free parser to the one that is just a shell script.  We will now be    
+    more like other Linux distributions, no longer depending on a non-free     
+    hunk of code to build the makedev package, and some porting and other      
+    issues will get better.                                                    
+  * With the major change in upstream code, several bugs are not relevant 
+    any more.  Therefore, close 12949, 18037, 18807, 20665, 22648, 22868, 
+    23771, 23898, 24477, 24572, 25660, 25840, 26058.
+  * add support for /dev/ptmx, built as part of pty*, closes 23612.
+  * add support for /dev/ed[ab], closes 23887.
+
+ -- Bdale Garbee <bdale@gag.com>  Sun,  6 Sep 1998 21:21:32 -0600
+
+makedev (1.6-32) frozen unstable; urgency=medium
+
+  * serial devices now owned by root.dialout, closes 22297 (important)
+  * tape devices now owned by root.tape, closes 11910 
+  * be explicit about which 'ls' we're calling, closes 22225
+
+ -- Bdale Garbee <bdale@gag.com>  Fri, 22 May 1998 23:52:58 -0600
+
+makedev (1.6-31) unstable; urgency=low
+
+  * add powerpc support, closes 21949
+  * lose the menu entry
+
+ -- Bdale Garbee <bdale@gag.com>  Sat,  2 May 1998 01:29:06 -0600
+
+makedev (1.6-30) unstable; urgency=low
+
+  * change from debmake to debhelper
+  * fix errors and warnings reported by lintian
+  * deliver devices.sgml instead of trying to build the .txt and .html files,
+    closes bug 16953
+
+ -- Bdale Garbee <bdale@gag.com>  Mon,  9 Feb 1998 22:31:43 -0700
+
+makedev (1.6-29) unstable; urgency=low
+
+  * add arpd device, on request of Elie Rosenblum <erosenbl@nyx.net>.
+
+ -- Bdale Garbee <bdale@gag.com>  Wed, 14 Jan 1998 09:42:14 -0700
+
+makedev (1.6-28) unstable; urgency=low
+
+  * new maintainer
+
+ -- Bdale Garbee <bdale@gag.com>  Fri,  5 Dec 1997 23:22:57 -0700
+
+makedev (1.6-27) unstable; urgency=low
+
+  * changed /dev/console handling. 
+  * updated devinfo to kernel 2.1.62 device list.
+  * changed all device with group "sys" to group "root".
+
+ -- Andreas Jellinghaus <aj@debian.org>  Sat,  8 Nov 1997 11:56:18 +0100
+
+makedev (1.6-26) unstable; urgency=low
+
+  * fixed bug #13787 : amigamouse1 was not corrected by postinst.
+  * fixed ad devices.
+  * added nvram device, added ad* to std-hd-m68k, added ttyS4 and ttyS6
+    to m68k boot-floppies and m68k generic
+
+ -- Andreas Jellinghaus <aj@debian.org>  Thu, 16 Oct 1997 20:09:14 +0200
+
+makedev (1.6-25) unstable; urgency=low
+
+  * bug #9077 is obsolete (kernel bug, fixed in kernel).
+  * libc6 release : closes bugs #12791 and #13122.
+  * fixed bug #12158 : added sr* and sg* devices.
+  * fixed bug #12385 : wrong standard number.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Fri, 19 Sep 1997 16:12:32 +0200
+
+makedev (1.6-24) unstable; urgency=low
+
+  * removed support for old floppy devices.
+  * only create generic floppy devices.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Wed, 10 Sep 1997 10:31:53 +0200
+
+makedev (1.6-23) unstable; urgency=low
+
+  * renamed isdn batches : isdn-xx is 8 devices, isdn-xx-all are 64
+    devices (isdn-io, isdn-tty, isdn-ippp, isdn-cu).
+  * increased numer to 5500 devices. (makedev is getting too large).
+
+ -- Andreas Jellinghaus <aj@debian.org>  Mon,  8 Sep 1997 21:40:11 +0200
+
+makedev (1.6-22) unstable; urgency=low
+
+  * bugfix with cvstree (i forgot to commit befor tagging :-()
+
+ -- Andreas Jellinghaus <aj@debian.org>  Mon,  8 Sep 1997 21:30:08 +0200
+
+makedev (1.6-21) unstable; urgency=low
+
+  * bugfix : out of memory. aarrgg : makedev has fixed size tables.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Mon,  8 Sep 1997 21:28:24 +0200
+
+makedev (1.6-20) unstable; urgency=low
+
+  * corrected problem with my own cvs tree
+
+ -- Andreas Jellinghaus <aj@debian.org>  Sun,  7 Sep 1997 16:54:10 +0200
+
+makedev (1.6-19) unstable; urgency=low
+
+  * changed /dev/full to mode 0622 (0666 was a security hole, as
+  			discussed on linux-kernel).
+
+ -- Andreas Jellinghaus <aj@debian.org>  Sun,  7 Sep 1997 16:22:27 +0200
+
+makedev (1.6-18) unstable; urgency=low
+
+  * added isdn-*-small devices (only 8 devices, not 64). 
+
+ -- Andreas Jellinghaus <aj@debian.org>  Fri, 22 Aug 1997 12:57:20 +0200
+
+makedev (1.6-17) unstable; urgency=low
+
+  * close bug 6541 (missing audio device) : not reproduceable 
+  * generate random and urandom, if missing (bug #12134)
+  * enabled makedev to create more sg* and sr* devices (bug #12158)
+  * changed doubletalkt to dtlk as requested
+  * sd[a-h]16 removed (bug, sda16 = sdb, scsi only supports 15
+    partitions) 
+
+ -- Andreas Jellinghaus <aj@debian.org>  Sun, 17 Aug 1997 19:19:33 +0200
+
+makedev (1.6-16) stable unstable; urgency=low
+
+  * security bug fixed : all mouse devices are now mode 600.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Wed, 30 Jul 1997 10:31:04 +0200
+
+makedev (1.6-15) unstable; urgency=low
+
+  * ibcs2 removed from generic set. revised ibcs2-unoff.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Tue, 29 Jul 1997 13:13:43 +0200
+
+makedev (1.6-14) unstable; urgency=low
+
+  * bug in postinst : type "MAKDEV" and "/dev/tty0" instead of "tty0" (#11441)
+  * stable version (libc5 compiled) for isdnutils
+
+ -- Andreas Jellinghaus <aj@debian.org>  Fri, 25 Jul 1997 10:12:14 +0200
+
+makedev (1.6-13) unstable; urgency=low
+
+  * fixed menu entry (thanks to Abdallah Chatila <acha@poboxes.com>)
+
+ -- Andreas Jellinghaus <aj@debian.org>  Wed,  9 Jul 1997 21:33:55 +0200
+
+makedev (1.6-12) unstable; urgency=low
+
+  * bug fix (changed doubletalk to class audio).
+
+ -- Andreas Jellinghaus <aj@debian.org>  Wed,  9 Jul 1997 09:45:38 +0200
+
+makedev (1.6-11) unstable; urgency=low
+
+  * Fixed isdn devices (ippp were missing).
+  * No longer create isdn device as default (that is done by isdnutils).
+  * Added doubletalk device. Added more ibcs2 stuff.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Tue,  8 Jul 1997 19:04:45 +0200
+
+makedev (1.6-10) unstable stable; urgency=low
+
+  * fixed console device, added documentation.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Wed, 25 Jun 1997 13:20:46 +0200
+
+makedev (1.6-9) unstable stable; urgency=low
+
+  * Added comment about cua devices.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Tue, 24 Jun 1997 09:21:20 +0200
+
+makedev (1.6-8) unstable stable; urgency=low
+
+  * changed /dev/console to be a symlink to /dev/tty0.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Sun, 22 Jun 1997 21:42:35 +0200
+
+makedev (1.6-7) unstable stable; urgency=low
+
+  * fixed bug with possible /dev/console symlink.
+  * fixed bug with not always creating /dev/tty0. (xfree 3.3 need this)
+
+ -- Andreas Jellinghaus <aj@debian.org>  Thu, 19 Jun 1997 22:38:46 +0200
+
+makedev (1.6-6) unstable; urgency=low
+
+  * fixed documentation (thanks to David Welton <davidw@efn.org>)
+  * patch for m68k from frank neumann included
+
+ -- Andreas Jellinghaus <aj@debian.org>  Mon,  9 Jun 1997 15:45:00 +0200
+
+makedev (1.6-5) unstable; urgency=low
+
+  * libc6 release
+  * added postinst script to change tty/pty devices to new major
+    numbers (the next time you boot).
+  * changed all serial devices from root.dialout to uucp.dialout
+  * added generic-ARCH batches
+  * changed (u)random permissions from 444 to 644
+  * corrected mcd/mcdx handling.
+  * small bugfix in manpages.
+
+ -- Andreas Jellinghaus <aj@debian.org>  Thu, 24 Apr 1997 19:12:58 +0200
+
+makedev (1.6-4) unstable frozen; urgency=low
+
+  * fixed manpage, added generic-m68k, added mfd0, changed framebuffer
+        create both : fb[01] and fb[01]current, changed framebuffer
+        class to mode 664. disabled adb (apple desktob bus).
+        this fixes bug #9053
+  * fixed mitsumi cdrom detection. 
+
+ -- Andreas Jellinghaus <aj@debian.org>  Wed, 23 Apr 1997 16:23:50 +0200
+
+makedev (1.6-3) unstable frozen; urgency=low
+
+  * bug fixed : st?l devices (nor st?1). 
+  * only create fd0 and fd1 with generic
+  * seperated old device names to "-old" groups
+  * not generating cm205cd by default
+  * "boot-floppy" added with less devices
+  * documentation in sgml and txt format
+
+ -- Andreas Jellinghaus <aj@debian.org>  Wed, 16 Apr 1997 12:58:56 +0200
+
+makedev (1.6-2) unstable frozen; urgency=high
+
+  * new maintainer Andreas Jellinghaus <aj@debian.org> 
+  * rewrote devinfo (according to linux allocated devices, 2.0.30,2.1.31
+  * this fixes bug #8396 (isdn devices)
+  * this fixes bug #8399 (don't generate cu* devices)
+  * this fixes bug #7144 (device for goldstar cdrom - gscd)
+  * this fixes bug #8173 (new names for floppy devices fd*)
+  * this fixes bug #8068 (hd[efgh] devises added : now ide[0123])
+    (this includes: renamed all floppy device (bug #8173),
+  * this fixes bug #3493 (isdn devices)
+  * this fixes bug #5542 (ttyS* group dialout, cu* not generated)
+  * this fixes bug #6926 (loop back devices corrected)
+  * this fixes bug #6983 (loop back devices creatable)
+  * this fixes bug #7038 (mcd device creatable (only one))
+  * this fixes bug #7754 (sr* devices are created for compatibility)
+  * this fixes parts of bug #7783 (only new tty/pty are created)
+  * bug #7755 obsolete (old cat file ? current man page is ok)
+  * bug #8009 obsolete (disks 1997-04-04 are ok)
+  * remove from generic : cua[0-3] lmscd ram sbpcd[9-15] vcs0
+    added to generic: X0R aztcd beep bpcd cm205cd cm206cd exttrp gscd
+      hd[efgh]* hitcd hwtrap initrd ippp* jbm loop* mcd md* modreq nsfd
+      nst*[1am] optcd ram[0-7] ramdisk relay16 relay8 rtc sd[abcdefgh][9-16]
+      sequence2 sg[0-7] sjcd socksys spx sr[0-7] st*[1am] tpqic* tty[13-63]
+      ttyI[0-63] urandom vcs vcs[13-63] vcsa vcsa[13-63] watchdog
+         (ca. + 600 devices, size + 11 k in a ext2fs)
+
+ -- Andreas Jellinghaus <aj@debian.org>  Sun, 13 Apr 1997 21:06:14 +0200
+
+makedev (1.6-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Bruce Perens <bruce@pixar.com>  Wed, 19 Mar 1997 20:40:17 -0800
+
+makedev (1.5-4) unstable; urgency=low
+
+  * Add devices. Increase the maximum size of a batch from 32 to 1024.
+
+ -- Bruce Perens <bruce@pixar.com>  Tue, 17 Dec 1996 20:34:06 -0800
+
+makedev (1.5-3) unstable; urgency=low
+
+  * Make hd[a-d][8-20] and sd[a-h][8-20]. Remove bad empty "omit" from
+    makedev.cfg
+
+ -- Bruce Perens <bruce@pixar.com>  Sun, 8 Dec 1996 09:42:18 -0800
+
+makedev (1.5-2) unstable; urgency=low
+
+  * Change class of ttySn devices to dialout.
+  * Add ISDN.
+
+ -- Bruce Perens <bruce@pixar.com>  Fri, 6 Dec 1996 21:17:12 -0800
+
+makedev (1.5-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Bruce Perens <bruce@pixar.com>  Wed, 30 Oct 1996 20:36:44 -0800
+
+Local variables:
+mode: debian-changelog
+End:
