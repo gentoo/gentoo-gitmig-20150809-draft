@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.3.ebuild,v 1.1 2002/06/15 00:26:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.3.ebuild,v 1.2 2002/06/15 00:31:45 seemant Exp $
 
 inherit libtool
 
@@ -38,7 +38,7 @@ src_compile() {
 	# configure needs access to the updated CFLAGS
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml -I/usr/include/libxml2"
 
-	econf || die
+	econf ${myconf} || die
 	emake CFLAGS="${CFLAGS}" || die	
 
 }
