@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.21 2003/03/20 00:38:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.22 2003/03/27 02:02:04 liquidx Exp $
 
 *pwlib-1.4.11 (20 Mar 2003)
 
@@ -13,6 +13,9 @@
   Version Bump, thanks to Michele Balistreri <brain87@gmx.net>
 
 *pwlib-1.4.7 (Jan 28 2003)
+
+  27 Mar 2003; Alastair Tse <liquidx@gentoo.org> pwlib-1.4.7.ebuild:
+  using gnomemeeting SRC_URI temporarily
 
   13 Feb 2003; Nick Hadaway <raker@gentoo.org> pwlib-1.4.7.ebuild :
   Added a warning so people realize that during a pwlib upgrade,
