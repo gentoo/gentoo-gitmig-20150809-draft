@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.202 2004/01/03 22:57:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.203 2004/01/03 23:38:11 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -93,6 +93,9 @@ games-server/halflife-statsme:nocstrike - no counterstrike
 games-server/halflife-statsme:nodod - no day of defeat
 games-server/halflife-statsme:notfc - no team fortress classic
 games-strategy/freecraft-fcmp:music - Also installs the music that the project provides
+games-strategy/wesnoth:server - Enable compilation of server
+games-strategy/wesnoth:editor - Enable compilation editor
+games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-util/xqf:geoip - Add geoip support
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
