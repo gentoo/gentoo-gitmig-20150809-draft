@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.8 2004/06/24 21:27:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.9 2004/08/12 21:18:14 aliz Exp $
+
+*arj-3.10.21 (12 Aug 2004)
+
+  12 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> arj-3.10.21.ebuild:
+  Version bump.
 
 *arj-3.10.20 (27 Apr 2004)
 
