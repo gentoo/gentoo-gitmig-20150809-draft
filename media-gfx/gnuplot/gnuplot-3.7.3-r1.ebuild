@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.3-r1.ebuild,v 1.1 2003/10/16 09:15:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.3-r1.ebuild,v 1.2 2003/12/14 19:17:37 zul Exp $
 
 IUSE="X readline svga plotutils pdflib doc"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnuplot.info"
 
 SLOT="0"
 LICENSE="gnuplot"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc amd64"
 
 DEPEND="media-libs/libpng
 	pdflib? ( media-libs/pdflib )
