@@ -1,6 +1,16 @@
-MD5 37232061cde4e016ae24d0b41738a39f encfs-1.1.11.ebuild 539
-MD5 0103c7401bd4b75a4435dfd8fecb0ab1 encfs-1.1.10.ebuild 515
-MD5 9cb23100535738c8a54e3b2768b120af ChangeLog 867
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c72334cbad7d8150f1f8ad36c924a859 encfs-1.1.11.ebuild 598
+MD5 1d23d6fa67dfe44792bc51aa238dbc9d encfs-1.1.10.ebuild 603
+MD5 35299f16a805206bdb56116caacf2924 ChangeLog 1062
 MD5 7a820ed09b03431681c1025e70acaa3a metadata.xml 372
 MD5 714c450406fd70a0a5f8aa7136a6241c files/digest-encfs-1.1.10 63
 MD5 55104922e24cd1b53248abef0fa6b2eb files/digest-encfs-1.1.11 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB38CNI1lqEGTUzyQRAiivAJ49KPAY7lsjLySW0Db53v6mSLvlvACg1oSc
+RoN2l1GNGdqpITIdJn70luo=
+=AJUf
+-----END PGP SIGNATURE-----
