@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8.ebuild,v 1.3 2004/01/19 18:35:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8.ebuild,v 1.4 2004/05/12 12:11:54 pappy Exp $
 
 inherit mount-boot eutils
 
@@ -42,15 +42,12 @@ src_unpack() {
 
 src_compile() {
 
-	CC="${CC:=gcc}"
+	# hardened automatic PIC plus PIE building should be suppressed
+	# because of assembler instructions that cannot be compiled PIC
+	HARDENED_CFLAGS="`test_flag -fno-pic` `test_flag -nopie`"
 
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
-	then
-		find ${W} -type f -name "Makefile" -exec sed -i "s:CC=cc:CC=${CC} ${CFLAGS} -yet_exec:" {} \;
-	fi
-
-	emake lilo || die
+	# we explicitly prevent the custom CFLAGS for stability reasons
+	emake CC="${CC:=gcc} ${HARDENED_CFLAGS}" lilo || die
 }
 
 src_install() {
