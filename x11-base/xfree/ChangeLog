@@ -1,9 +1,15 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.61 2002/11/14 02:54:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.62 2002/11/16 01:57:08 seemant Exp $
 
 
 *xfree-4.2.99.3 (13 Nov 2002)
+
+  15 Nov 2002; Seemant Kulleen <seemant@gentoo.org>
+  files/4.2.99.3-patches/XFree86-4.2.99.3-no-optimize.patch.bz2 :
+
+  Patches one file to not optimise on a gcc-3 system.  Submitted by MrGr1m
+  in #gentoo
 
   13 Nov 2002; Seemant Kulleen <seemant@gentoo.org> xfree-4.2.99.3.ebuild
   files/digest-xfree-4.2.9.3 :
