@@ -1,6 +1,6 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.4 2002/07/15 18:51:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.5 2002/08/06 20:38:38 prez Exp $
 
 *openoffice-1.0.0-r2 (15 Jul 2002)
 
@@ -8,6 +8,11 @@
   General updates to handle changes in our gcc ebuilds;
   Support for gcc-3.1.1.  Also updated the registry .. old
   had version 641 in title, etc.
+
+  06 Aug 2002; Preston A. Elder <prez@gentoo.org> :
+  Fixed read_ins.pl to be able make all DONT_DELETE directories
+  explicitly, and to put quotes around most references, as some
+  contain a directory name with spaces.
 
 *openoffice-1.0.0-r1 (7 Jun 2002)
 
