@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/flexlm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.1 2004/07/23 11:37:34 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.2 2004/07/23 23:44:46 mr_bones_ Exp $
+
+  23 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> flexlm-9.2.1.ebuild:
+  virtual/libc; add missing IUSE
 
 *flexlm-9.2.1 (23 Jul 2004)
 

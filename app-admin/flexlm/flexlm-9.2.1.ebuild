@@ -6,12 +6,16 @@ HOMEPAGE="http://www.macrovision.com/services/support/flexlm/lmgrd.shtml"
 SRC_URI="ftp://ftp.globes.com/flexlm/unix/v${PV}/i86_s8/lmgrd.Z
 	ftp://ftp.globes.com/flexlm/unix/v${PV}/i86_s8/lmutil.Z
 	http://www.macrovision.com/services/support/flexlm/enduser.pdf"
+
 LICENSE="Macromedia"
-KEYWORDS="~x86"
-DEPEND="virtual/glibc"
-S=${WORKDIR}
-RESTRICT="nostrip"
 SLOT="0"
+KEYWORDS="~x86"
+IUSE=""
+RESTRICT="nostrip"
+
+DEPEND="virtual/libc"
+
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
