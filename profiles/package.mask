@@ -54,6 +54,7 @@ net-mail/vqadmin
 # API change. All portage tools that meet this change in API
 # should be masked version-specific and follow immediately underneath.
 >=sys-apps/portage-2.0.50_pre1
+>=app-portage/gentoolkit-0.2.0_pre1
 
 # <lanius@gentoo.org> (31 Dec 2003)
 # fix version scheme
