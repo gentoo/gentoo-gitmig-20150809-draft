@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.2.3.ebuild,v 1.2 2003/11/16 23:01:43 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.2.3.ebuild,v 1.3 2004/02/03 10:03:30 eradicator Exp $
 
 IUSE="gtk2 oss sdl"
 
@@ -19,20 +19,11 @@ DEPEND="gtk2? ( >=x11-libs/gtk+-2.0.0 )
 	>=media-libs/portaudio-18"
 
 src_compile() {
-	local myconf
-
-	use gtk2 || myconf="${myconf} --disable-gtk2"
-
-	use oss || myconf="${myconf} --without-oss"
-
-	use sdl || myconf="${myconf} --withut-sdl"
-
-	econf ${myconf} || die
+	econf `use_enable gtk2` `use_with oss` `use_with sdl` || die
 	emake || die
 }
 
 src_install() {
-
 	einstall || die
 
 	dodoc COPYING ChangeLog AUTHORS README* NEWS BUGS
