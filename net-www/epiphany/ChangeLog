@@ -1,6 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.18 2003/09/08 11:51:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.19 2003/09/09 06:10:08 obz Exp $
+
+*epiphany-1.0 (09 Sep 2003)
+
+  09 Sep 2003; Mike Gardiner <obz@gentoo.org> epiphany-1.0.ebuild:
+  New version, including nautilus view support
 
 *epiphany-0.9.3 (01 Sep 2003)
 
