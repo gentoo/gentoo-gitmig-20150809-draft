@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <solar@gentoo.org> (13 Dec 2003)
+# <seemant@gentoo.org> (11 Dec 2003)
+# malformed dcc send requests in xchat-2.0.6
+# can lead to a denial of service. Bug #35623
+=net-irc/xchat-2.0.6
 
 # <seemant@gentoo.org> 12 Dec 2003)
 # All the sylpheed-gtk2 versions will be masked here together
@@ -28,12 +33,6 @@
 =net-mail/sylpheed-0.9.4-r1
 =net-mail/sylpheed-0.9.5-r1
 =net-mail/sylpheed-0.9.8-r1
-
-
-# <seemant@gentoo.org> (11 Dec 2003)
-# An MIRC malformed dcc header exploit works to bring down xchat.
-# but I thought that OSS, bah
-=net-irc/xchat-2.0.6*
 
 # <carpaski@gentoo.org> (11 Dec 2003)
 # API change. All portage tools that meet this change in API
