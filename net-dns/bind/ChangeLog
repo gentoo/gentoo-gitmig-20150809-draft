@@ -1,0 +1,49 @@
+# ChangeLog for net-dns/bind
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.1 2002/06/29 00:55:03 bangert Exp $
+
+*bind-9.2.1-r1 (2 May 2002)
+
+  1 June 2002; Kyle Manna <nitro@gentoo.org> bind-9.2.1-r1.ebuild:
+
+  *Alot* of bug fixes:
+  	+ We now have a man page for named.conf
+	+ Included a basic /etc/bind/named.conf
+	+ Will automatically create a /etc/bind/rndc.key if file doesn't exist
+	+ With the additon of rndc, we now have '/etc/init.d/named reload'
+	+ Chown /var/run/named and make sure it gets created, bug #2872
+	+ Moved root.cache to named.ca, it was annoying me ;)
+	+ Added multi-threading support to the default configure
+	+ Added support for 'use ssl' and 'use ipv6'
+	+ And other stuff
+
+*bind-9.2.1 (2 May 2002)
+
+  2 May 2002; William McArthur <sandymac@gentoo.org> bind-9.2.1.ebuild:
+
+  New upstream bugfix release, I just bumped the ebuild file name and added
+  a LICENSE line.
+
+*bind-9.1.3-r7 (21 Mar 2002)
+
+  21 Mar 2002; Ferry Meyndert <m0rpheus@gentoo.org> bind-9.2.0.ebuild:
+
+  Updated too new version  
+
+*bind-9.1.3-r7 (8 Feb 2002)
+
+  8 Feb 2002; Donny Davies <woodchip@gentoo.org> files/bind.rc6,
+  bind-9.1.3-r7.ebuild :
+
+  Close bug #483.  Use /var/run/named for bind's pidfile.
+
+*bind-9.1.3-r6 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
+
