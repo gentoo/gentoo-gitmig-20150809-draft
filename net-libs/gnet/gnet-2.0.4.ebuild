@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.4.ebuild,v 1.9 2004/03/09 16:12:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.4.ebuild,v 1.10 2004/04/12 19:41:44 leonardop Exp $
 
 inherit gnome2
 
@@ -8,6 +8,7 @@ DESCRIPTION="GNet network library."
 HOMEPAGE="http://www.gnetlibrary.org/"
 SRC_URI="http://www.gnetlibrary.org/src/${P}.tar.gz"
 
+IUSE=""
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="x86 ~ppc sparc alpha ~hppa ia64"
