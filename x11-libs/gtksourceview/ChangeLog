@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.38 2004/12/19 06:34:36 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.39 2004/12/19 14:57:01 kloeri Exp $
+
+  19 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  gtksourceview-1.1.1.ebuild:
+  Stable on alpha.
 
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> gtksourceview-1.1.1.ebuild:
   Keyworded x86 and ppc for GNOME 2.8.1
