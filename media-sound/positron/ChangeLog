@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/positron
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.8 2004/04/03 10:41:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.9 2004/04/17 18:23:54 eradicator Exp $
+
+  17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> positron-1.0.ebuild,
+  positron-1.1.ebuild:
+  IUSE=oggvorbis.
 
 *positron-1.1 (03 Apr 2004)
 
