@@ -1,20 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2004.02.12.ebuild,v 1.1 2004/03/10 13:00:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2004.02.12.ebuild,v 1.2 2004/03/17 21:53:29 aliz Exp $
+
+inherit eutils
 
 DESCRIPTION="A collection of custom scripts, functions and extensions for GNU Octave"
 HOMEPAGE="http://octave.sourceforge.net/"
 SRC_URI="mirror://sourceforge/octave/${P}.tar.gz"
 
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 SLOT="0"
 IUSE="ginac qhull"
 
 DEPEND=">=app-sci/octave-2.1.40
 		>=sys-apps/sed-4
 		sys-libs/libtermcap-compat
-		ginac? ( app-sci/ginac )
+		!amd64? ( ginac? ( app-sci/ginac ) )
 		qhull? ( >=media-libs/qhull-3.1-r1 )"
 
 src_unpack() {
@@ -23,6 +25,8 @@ src_unpack() {
 	sed -e 's:a"key":a["key"]:' -i configure || die "sed failed on configure"
 	sed -e 's:\(^man1dir = \):\1$(DESTDIR)/:; s:$(bindir):$(DESTDIR)/$(bindir):' -i extra/mex/Makefile \
 		|| die "sed failed on mex/Makefile"
+
+	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {

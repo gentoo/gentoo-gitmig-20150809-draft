@@ -1,0 +1,20 @@
+--- main/miscellaneous/Makefile	2004-03-17 20:49:42.021540006 +0000
++++ main/miscellaneous/Makefile	2004-03-17 20:51:52.258546237 +0000
+@@ -23,7 +23,7 @@
+ 	$(MKOCTFILE) -c listencanfork.c
+ 
+ xmltree.o: xmltree.c xmltree.h
+-	$(CC) -c $< -o $@
++	$(CC) -fPIC -c $< -o $@
+ 
+ ifdef FLEXML
+ xmltree_read.l: xmltree_read.act octave.dtd
+@@ -36,7 +36,7 @@
+ endif
+ 
+ xmltree_read.o: xmltree_read.c xmltree_read.h
+-	$(CC) -c $< -o $@
++	$(CC) -fPIC -c $< -o $@
+ 
+ xmlread.o: xmlread.cc xmltree_read.h xmltree.h
+ 	$(MKOCTFILE) -c $< -o $@
