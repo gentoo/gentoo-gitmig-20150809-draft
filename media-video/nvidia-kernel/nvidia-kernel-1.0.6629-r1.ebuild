@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r1.ebuild,v 1.1 2004/12/19 15:52:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r1.ebuild,v 1.2 2004/12/19 18:10:25 swegener Exp $
 
 inherit eutils linux-mod
 
@@ -100,7 +100,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1165235.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1171869.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1175225.patch
-	
 
 	# Now any patches specific to the 2.6 kernel should go here
 	if kernel_is 2 6
