@@ -1,34 +1,28 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.6 2002/08/27 20:08:11 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.7 2002/09/15 19:17:09 murphy Exp $
 
+*cdrdao-1.1.5-r1 (1 Feb 2002)
+
+  15 Sep 2002; Maarten Thibaut <murphy@gentoo.org> cdrdao-1.1.5-r1.ebuild :
+  Added keywords for sparc and sparc64. Reorganized ChangeLog.
    
   26 Aug 2002; Spider <spider@gentoo.org> cdrdao-1.1.5-r1.ebuild :
   comment out Gnome stuff because it doesn't build with that enabled :/
 
-
-  
   15 Aug 2002; Spider <spider@gentoo.org> cdrdao-1.1.5-r1.ebuild :
   Change the gtkmm deps so they get the right versions
 
-
   18 Jul 2002; Mark Guertin <gerk@gentoo.org> :
- 
   fixed KEYWORDS, it is ppc not PPC.
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
-
   Added KEYWORDS.
 
-
   06 Apr 2002; G.Bevin <gbevin@gentoo.org> files/cdrdao-1.1.5-c++.patch :
-  
   C++ related fixes for gcc 3.
   
-*cdrdao-1.1.5-r1 (1 Feb 2002)
-
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

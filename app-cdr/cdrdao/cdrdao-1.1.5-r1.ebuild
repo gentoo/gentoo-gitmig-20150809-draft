@@ -1,6 +1,6 @@
 # Copyright 1999 - 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.14 2002/08/27 20:08:11 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.15 2002/09/15 19:17:09 murphy Exp $
 
 S=${WORKDIR}/cdrdao-1.1.5
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
@@ -15,7 +15,7 @@ RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	${RDEPEND}"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 
