@@ -1,6 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a0515166deb79ce61e1583e4b3d9fcb8 pymetar-0.12.ebuild 641
 MD5 3bfe9d3d3dec8eab7cc3c3092977fdcf metadata.xml 455
-MD5 c9e19b7074f990a01a32bcf1fd9ce318 ChangeLog 744
+MD5 cbc25e9349490aff242381f66087ac98 ChangeLog 866
 MD5 bdca5b930491ae644e6e30d41d53d17f pymetar-0.8.ebuild 659
 MD5 86cc7e1ce80df75a189bf637d2fda4bb pymetar-0.10.ebuild 641
 MD5 e9de4b7454094ffc8836c1a4f12990a9 files/digest-pymetar-0.8 62
+MD5 862e5b24162434fa7a005774deb49f18 files/digest-pymetar-0.12 63
 MD5 3f0f2906c19c340032771201f035dc40 files/digest-pymetar-0.10 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOkrM2jLqHNfbg2URAjZNAJ9r5vSY8PSVrtg25vs7XJbIvR45ggCfRy/b
+4qDKvLhnUBKCdk2tVIwqg6E=
+=KIos
+-----END PGP SIGNATURE-----
