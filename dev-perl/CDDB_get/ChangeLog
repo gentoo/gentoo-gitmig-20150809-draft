@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CDDB_get
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.15 2004/09/27 10:28:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.16 2004/09/27 14:50:51 gustavoz Exp $
+
+  27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> CDDB_get-2.23.ebuild:
+  Stable on sparc
 
   27 Sep 2004; Michael Cummings <mcummings@gentoo.org> CDDB_get-2.23.ebuild:
   No bugs in 268 days, marking stable on x86
