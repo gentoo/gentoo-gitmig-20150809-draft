@@ -19,6 +19,7 @@ RDEPENR=${DEPEND}
 
 src_install () {
 	dodir /etc/init.d /var/state
+	sed -e 's:ln -s ${DEST}/${FIREWALL} /usr/share/shorewall/init::' install.sh
 	PREFIX=${D} ./install.sh || die
 
 	exeinto /etc/init.d

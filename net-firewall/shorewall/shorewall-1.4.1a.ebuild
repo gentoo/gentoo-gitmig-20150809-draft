@@ -18,11 +18,12 @@ DEPEND="virtual/glibc
 RDEPENR=${DEPEND}
 
 src_install () {
+	sed -i 's:ln -s ${DEST}/${FIREWALL} /usr/share/shorewall/init::' install.sh
 	dodir /etc/init.d /var/state
-	PREFIX=${D} ./install.sh || die
+	PREFIX=${D} ./install.sh /etc/init.d || die
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/shorewall shorewall
+	#exeinto /etc/init.d
+	#newexe ${FILESDIR}/shorewall shorewall
 }
 pkg_postinst() {
 	einfo "Read the documentatition from http://www.shorewall.net"
