@@ -1,16 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.6.1.ebuild,v 1.4 2002/12/09 04:33:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.6.1.ebuild,v 1.5 2003/01/05 18:42:26 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Very thin VNC client for unix framebuffer systems"
 HOMEPAGE="http://adam-lilienthal.de/directvnc"
-DEPEND="dev-libs/DirectFB sys-devel/automake sys-devel/autoconf"
 SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 ppc sparc"
+
+DEPEND="dev-libs/DirectFB
+	sys-devel/automake
+	sys-devel/autoconf
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +36,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make \
 		DESTDIR=${D} \
 		docsdir=/usr/share/doc/${PF} \
