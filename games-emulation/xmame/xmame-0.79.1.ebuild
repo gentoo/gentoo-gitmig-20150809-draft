@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.79.1.ebuild,v 1.2 2004/02/22 10:39:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.79.1.ebuild,v 1.3 2004/02/23 03:52:22 vapier Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
 LICENSE="xmame"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick net"
 
 RDEPEND="sys-libs/zlib
@@ -71,7 +71,7 @@ src_unpack() {
 				|| die "sed Makefile (joystick) failed"
 		fi
 		;;
-	ppc|sparc)
+	ppc|sparc|hppa)
 		sed -i \
 			-e '/^MY_CPU/s:i386:risc:' Makefile \
 			|| die "sed Makefile (ppc|sparc) failed"
