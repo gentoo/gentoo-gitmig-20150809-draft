@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.2-r3.ebuild,v 1.1 2004/08/27 19:36:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.2-r3.ebuild,v 1.2 2004/08/27 20:03:13 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/ant/source/apache-${PN}-${PV}-src.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="doc"
 
 DEPEND="virtual/libc
