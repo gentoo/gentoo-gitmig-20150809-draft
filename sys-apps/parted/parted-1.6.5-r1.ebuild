@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5-r1.ebuild,v 1.13 2004/03/07 08:19:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5-r1.ebuild,v 1.14 2004/03/20 06:39:55 mr_bones_ Exp $
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
@@ -20,7 +20,7 @@ DEPEND=">=sys-fs/e2fsprogs-1.27
 	readline? ( >=sys-libs/readline-4.1-r4 )"
 
 RDEPEND="${DEPEND}
-	!noreiserfs ( =sys-fs/progsreiserfs-0.3.0* )"
+	!noreiserfs? ( =sys-fs/progsreiserfs-0.3.0* )"
 
 PATCHDIR=${WORKDIR}/patches
 
