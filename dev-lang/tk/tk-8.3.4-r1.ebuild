@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.4-r1.ebuild,v 1.1 2003/03/28 23:48:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.4-r1.ebuild,v 1.2 2003/07/18 20:09:23 tester Exp $
 
 S=${WORKDIR}/${PN}${PV}
 SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_3/${PN}${PV}.tar.gz"
@@ -9,7 +9,7 @@ DESCRIPTION="Tk Widget Set"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-apps/portage-2.0.47-r10
