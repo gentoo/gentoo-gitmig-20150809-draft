@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.5 2004/07/18 04:37:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.6 2004/11/30 22:19:52 swegener Exp $
 
 S="${WORKDIR}/${P}-src"
 
@@ -11,7 +11,7 @@ LICENSE="JNIC"
 SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
-DEPEND="libidn"
+DEPEND="net-dns/libidn"
 
 src_install()
 {

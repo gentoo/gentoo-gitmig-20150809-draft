@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.4 2004/07/18 04:36:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.5 2004/11/30 22:19:52 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> idnkit-1.0.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   18 Jul 2004; Lars Weiler <pylon@gentoo.org> idnkit-1.0.ebuild:
   Stable on ppc.
