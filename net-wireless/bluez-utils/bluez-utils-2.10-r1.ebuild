@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.10-r1.ebuild,v 1.1 2004/09/21 23:09:54 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.10-r1.ebuild,v 1.2 2004/09/24 20:23:45 liquidx Exp $
 
 inherit eutils
 
@@ -36,6 +36,8 @@ src_unpack() {
 	mv -f hcid/Makefile.in ${T}/Makefile.in
 	sed -e "s:\$(prefix)/etc/bluetooth:/etc/bluetooth:" \
 		${T}/Makefile.in > hcid/Makefile.in
+
+	epatch ${FILESDIR}/${P}-handsfree.patch
 
 	if ! use gtk; then
 		mv -f scripts/Makefile.in ${T}/Makefile.in

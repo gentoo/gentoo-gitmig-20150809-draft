@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.28 2004/09/21 23:09:54 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.29 2004/09/24 20:23:45 liquidx Exp $
+
+  24 Sep 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/bluez-utils-2.10-handsfree.patch, files/2.10-r1/bluetooth.rc,
+  bluez-utils-2.10-r1.ebuild:
+  adding handsfree profile descriptions
 
 *bluez-utils-2.10-r1 (22 Sep 2004)
 
