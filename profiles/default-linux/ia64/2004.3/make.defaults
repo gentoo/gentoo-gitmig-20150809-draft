@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/2004.3/make.defaults,v 1.4 2004/11/03 14:44:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/2004.3/make.defaults,v 1.5 2004/11/08 00:22:08 lv Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -12,6 +12,7 @@ bitmap-fonts
 crypt
 cups
 encode
+fortran
 f77
 foomaticdb
 gdbm

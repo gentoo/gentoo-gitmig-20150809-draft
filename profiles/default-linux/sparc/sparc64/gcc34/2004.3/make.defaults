@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/make.defaults,v 1.1 2004/11/06 18:11:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/make.defaults,v 1.2 2004/11/08 00:22:08 lv Exp $
 
 ARCH="sparc"
 
@@ -20,7 +20,7 @@ FEATURES="sandbox ccache"
 ACCEPT_KEYWORDS="sparc"
 
 # USE settings
-USE="arts avi berkdb bitmap-fonts crypt cups encode esd f77 fbcon foomaticdb gdbm gcc64 gif gtk gtk2 gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline sdl spell ssl tcpd truetype X xv xml2 xmms zlib"
+USE="arts avi berkdb bitmap-fonts crypt cups encode esd fortran f77 fbcon foomaticdb gdbm gcc64 gif gtk gtk2 gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline sdl spell ssl tcpd truetype X xv xml2 xmms zlib"
 
 # Catalyst stage/grp USE
 GRP_STAGE23_USE="berkdb gpm gcc64 gtk2 ipv6 ncurses nls pam perl python readline ssl tcpd"

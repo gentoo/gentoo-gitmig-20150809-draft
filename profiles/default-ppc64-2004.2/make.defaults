@@ -24,7 +24,7 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="bitmap-fonts oss dvd xv slang readline f77 gpm berkdb gdbm tcpd pam libwww ssl jpeg nls mitshm perl python gif imlib sdl oggvorbis png truetype ppc64 cups foomaticdb"
+USE="bitmap-fonts oss dvd xv slang readline fortran f77 gpm berkdb gdbm tcpd pam libwww ssl jpeg nls mitshm perl python gif imlib sdl oggvorbis png truetype ppc64 cups foomaticdb"
 
 # esd gnome gtk gtk2 X qt kde  motif opengl mozilla
 # The following USE should _not_ bet set on ppc as they can cause breakage

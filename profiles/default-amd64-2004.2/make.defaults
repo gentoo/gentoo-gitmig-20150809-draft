@@ -7,7 +7,7 @@
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses -java -nptl"
 
 
-USE="amd64 oss 3dnow apm arts avi berkdb bitmap-fonts crypt -cups encode f77 foomaticdb gdbm gif gpm gtk  gtk2 imlib nogcj -java -nptl jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis opengl pam pdflib png python -qt quicktime readline sdl slang spell sse ssl tcpd truetype X xml2 xmms xv zlib"
+USE="amd64 oss 3dnow apm arts avi berkdb bitmap-fonts crypt -cups encode fortran f77 foomaticdb gdbm gif gpm gtk  gtk2 imlib nogcj -java -nptl jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis opengl pam pdflib png python -qt quicktime readline sdl slang spell sse ssl tcpd truetype X xml2 xmms xv zlib"
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="amd64"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2004.3/make.defaults,v 1.1 2004/10/14 14:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2004.3/make.defaults,v 1.2 2004/11/08 00:22:08 lv Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -12,6 +12,7 @@ berkdb
 crypt
 cups
 foomaticdb
+fortran
 f77
 gdbm
 gpm

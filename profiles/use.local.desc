@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.723 2004/11/07 21:55:53 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.724 2004/11/08 00:22:07 lv Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -597,7 +597,7 @@ sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled becau
 sys-cluster/lam-mpi:f77 - Adds support for f77
 sys-devel/binutils:multitarget - Adds support to binutils for canadian cross compiling. (does not work with gas)
 sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checking (disables PIE and SSP building in gcc)
-sys-devel/gcc:f77 - Build support for the f77 language
+sys-devel/gcc:fortran - Build support for the fortran language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips

@@ -9,4 +9,4 @@ CXXFLAGS=${CFLAGS}
 FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
 MAKEOPTS="-j2"
 PLATFORM=$CHOST
-USE="dvd jpeg nls gif png truetype ppc f77"
+USE="dvd jpeg nls gif png truetype ppc fortran f77"
