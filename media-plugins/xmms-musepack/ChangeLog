@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/xmms-musepack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.21 2004/09/24 10:14:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.22 2004/10/31 09:45:50 eradicator Exp $
+
+*xmms-musepack-1.1_alpha10 (31 Oct 2004)
+
+  31 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/xmms-musepack-0.98-bad-makefile.patch,
+  -files/xmms-musepack-0.98-titles.patch,
+  -files/xmms-musepack-0.99-bad-makefile.patch,
+  -xmms-musepack-0.98-r2.ebuild, -xmms-musepack-0.99.ebuild,
+  +xmms-musepack-1.1_alpha10.ebuild, -xmms-musepack-1.1_alpha9.ebuild:
+  Version bump and cleanup closes bug #69538.
 
 *xmms-musepack-1.1_alpha9 (24 Sep 2004)
 

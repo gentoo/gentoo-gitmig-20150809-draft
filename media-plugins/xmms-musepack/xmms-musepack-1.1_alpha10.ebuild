@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.1_alpha9.ebuild,v 1.1 2004/09/24 10:14:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.1_alpha10.ebuild,v 1.1 2004/10/31 09:45:50 eradicator Exp $
 
 IUSE=""
 
