@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.6 2004/07/17 22:08:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.7 2004/07/26 22:18:23 langthang Exp $
+
+*nail-10.8 (26 Jul 2004)
+
+  26 Jul 2004; Tuan Van <langthang@gentoo.org>
+  +files/nail-10.8-Makefile.patch, +nail-10.8.ebuild:
+  version bump.
+  added virtual/mailx.
+  added blocks virtual/mailx.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> nail-10.7.ebuild,
   nail-9.30.ebuild:
