@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.111 2004/10/04 05:40:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.112 2004/10/05 03:43:02 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1087,38 +1087,45 @@ unpack_pdv() {
 # the end of the archive.  Loki utilized the format as does
 # many other game companies.
 #
-# Usage: unpack_makeself [file to unpack] [offset]
+# Usage: unpack_makeself [file to unpack] [offset] [tail|dd]
 # - If the file is not specified then unpack will utilize ${A}.
 # - If the offset is not specified then we will attempt to extract
 #   the proper offset from the script itself.
 unpack_makeself() {
-	local src="`find_unpackable_file $1`"
+	local src="$(find_unpackable_file "$1")"
 	local skip="$2"
+	local exe="$3"
 
-	local shrtsrc="`basename ${src}`"
+	local shrtsrc="$(basename "${src}")"
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
 	if [ -z "${skip}" ]
 	then
 		local ver="`grep -a '#.*Makeself' ${src} | awk '{print $NF}'`"
 		local skip=0
+		exe=tail
 		case ${ver} in
 			1.5.*)	# tested 1.5.{3,4,5} ... guessing 1.5.x series is same
-				skip=`grep -a ^skip= ${src} | cut -d= -f2`
+				skip=$(grep -a ^skip= "${src}" | cut -d= -f2)
 				;;
 			2.0|2.0.1)
-				skip=`grep -a ^$'\t'tail ${src} | awk '{print $2}' | cut -b2-`
+				skip=$(grep -a ^$'\t'tail "${src}" | awk '{print $2}' | cut -b2-)
 				;;
 			2.1.1)
-				skip=`grep -a ^offset= ${src} | awk '{print $2}' | cut -b2-`
+				skip=$(grep -a ^offset= "${src}" | awk '{print $2}' | cut -b2-)
 				let skip="skip + 1"
 				;;
 			2.1.2)
-				skip=`grep -a ^offset= ${src} | awk '{print $3}' | head -n 1`
+				skip=$(grep -a ^offset= "${src}" | awk '{print $3}' | head -n 1)
 				let skip="skip + 1"
 				;;
 			2.1.3)
-				skip=`grep -a ^offset= ${src} | awk '{print $3}'`
+				skip=`grep -a ^offset= "${src}" | awk '{print $3}'`
 				let skip="skip + 1"
+				;;
+			2.1.4)
+				skip=$(grep -a offset=.*head.*wc "${src}" | awk '{print $3}' | head -n 1)
+				skip=$(head -n ${skip} "${src}" | wc -c)
+				exe="dd"
 				;;
 			*)
 				eerror "I'm sorry, but I was unable to support the Makeself file."
@@ -1130,23 +1137,28 @@ unpack_makeself() {
 		esac
 		debug-print "Detected Makeself version ${ver} ... using ${skip} as offset"
 	fi
+	case ${exe} in
+		tail)	exe="tail -n +${skip} '${src}'";;
+		dd)		exe="dd ibs=${skip} skip=1 obs=1024 conv=sync if='${src}'";;
+		*)		die "makeself cant handle exe '${exe}'"
+	esac
 
 	# lets grab the first few bytes of the file to figure out what kind of archive it is
-	local tmpfile="`mymktemp ${T}`"
-	tail -n +${skip} ${src} 2>/dev/null | head -c 512 > ${tmpfile}
-	local filetype="`file -b ${tmpfile}`"
+	local tmpfile="$(mymktemp "${T}")"
+	eval ${exe} 2>/dev/null | head -c 512 > "${tmpfile}"
+	local filetype="$(file -b "${tmpfile}")"
 	case ${filetype} in
 		*tar\ archive)
-			tail -n +${skip} ${src} | tar --no-same-owner -xf -
+			eval ${exe} | tar --no-same-owner -xf -
 			;;
 		bzip2*)
-			tail -n +${skip} ${src} | bzip2 -dc | tar --no-same-owner -xf -
+			eval ${exe} | bzip2 -dc | tar --no-same-owner -xf -
 			;;
 		gzip*)
-			tail -n +${skip} ${src} | tar --no-same-owner -xzf -
+			eval ${exe} | tar --no-same-owner -xzf -
 			;;
 		compress*)
-			tail -n +${skip} ${src} | gunzip | tar --no-same-owner -xf -
+			eval ${exe} | gunzip | tar --no-same-owner -xf -
 			;;
 		*)
 			eerror "Unknown filetype \"${filetype}\" ?"
