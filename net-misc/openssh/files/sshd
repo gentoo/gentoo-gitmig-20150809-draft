@@ -10,14 +10,6 @@ opts="start stop restart"
 PIDFILE=/var/run/sshd.pid
 EXE=/usr/sbin/sshd
 
-if [ "`supervised`" ]
-then
-  echo "Super"
-else
-  echo "$SUPERVISE"
-  echo $0
-fi
-
 gen_keys() {
 
   	if [ ! -e /etc/ssh/ssh_host_key ] ; then
