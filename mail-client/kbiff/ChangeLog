@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/kbiff
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/ChangeLog,v 1.12 2004/12/16 11:25:27 motaboy Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/ChangeLog,v 1.13 2005/01/14 23:42:07 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> kbiff-3.6.3.ebuild,
+  kbiff-3.7.1.ebuild, kbiff-3.7.ebuild:
+  Changed dep on kdebase to accept kdebase-meta, the split 'meta' package.
+  This dep will be narrowed down in the future to the precise split packages
+  required.
 
   16 Dec 2004; Simone Gotti <motaboy@gentoo.org> kbiff-3.7.1.ebuild:
   Stable on x86.
