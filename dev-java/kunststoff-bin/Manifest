@@ -1,4 +1,14 @@
-MD5 d5f664e40f39e3eef195a9ba04d50b8c kunststoff-bin-2.0.1.ebuild 586
-MD5 9fab4e9f7e3006affa544a23ebc3ead3 ChangeLog 597
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 90c67c1236a0adc75aedcc79edf18b39 kunststoff-bin-2.0.1.ebuild 590
+MD5 b0d62b5c6cdc81ab4d9efe4662290b92 ChangeLog 701
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 8b1501fc8bd581c4e78c8083d9211b0c files/digest-kunststoff-bin-2.0.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMKM/rLF9B432nYRArXZAJ90J1xgcXOVWDEX9rFr1co1ZT6q5QCgz8oA
+ex7toTglLP1X09ualA0XboU=
+=5tk7
+-----END PGP SIGNATURE-----

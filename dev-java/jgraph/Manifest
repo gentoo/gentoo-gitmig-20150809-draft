@@ -1,4 +1,14 @@
-MD5 af36016e85ad9849805b15136861ef67 ChangeLog 970
-MD5 d2e248c69fe72f34e52b6cc1f2cd1b5a jgraph-3.2.ebuild 845
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b9832fe0f0a099bf48936feea18f58d2 ChangeLog 1062
+MD5 5ba68c56dc6bb2c170bfdfd6d8e562c6 jgraph-3.2.ebuild 858
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 c6d0179bb0aac742f9e84801d80eff44 files/digest-jgraph-3.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMFt/rLF9B432nYRAlJ0AKC+qOKf6gLhTl2Rv+mg7LKozJPA7wCfcli/
+jLsEpqHcJ8VPIj2BONRKFJk=
+=BqQT
+-----END PGP SIGNATURE-----

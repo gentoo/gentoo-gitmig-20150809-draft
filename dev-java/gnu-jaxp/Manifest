@@ -1,6 +1,16 @@
-MD5 5f26bfa5513cfc2d33226a6785343a3b ChangeLog 1321
-MD5 4035f3ef3a5f61658a8429075e076a46 gnu-jaxp-1.0_beta1-r1.ebuild 943
-MD5 18423680451ecd38e77c82669cbf4bf7 gnu-jaxp-1.0_beta1.ebuild 756
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5c39836738c471a90eaca2f09448c40e gnu-jaxp-1.0_beta1.ebuild 770
+MD5 ce09ec44fe2176c73f199355db580033 ChangeLog 1453
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 b39026ab1f8589f90f9a5621ddbf883d gnu-jaxp-1.0_beta1-r1.ebuild 953
 MD5 ccfb07c99005781e9b7c4c232604b056 files/digest-gnu-jaxp-1.0_beta1 134
 MD5 3d1c4ac4f9e43835b6eef1ddb4f5dcd3 files/digest-gnu-jaxp-1.0_beta1-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMBf/rLF9B432nYRAurZAJ4otSkwuHe8MEHkHE5fI6tjSZoA7ACeNZE7
+KP+C+fY0C4ittWaEDPwoYO4=
+=jgrj
+-----END PGP SIGNATURE-----

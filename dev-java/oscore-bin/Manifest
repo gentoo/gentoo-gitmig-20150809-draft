@@ -1,4 +1,14 @@
-MD5 ee28e9a0de8b2c806bac81d1bb925762 ChangeLog 721
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ef450dc6247e7d6b895ea4f41ace535d oscore-bin-2.2.4.ebuild 667
+MD5 57b30c45d407717b1ae5f0e8035fdd6e ChangeLog 819
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 ef4e295426fcea2c5875acda27447716 oscore-bin-2.2.4.ebuild 657
 MD5 f5be5cac1c9dc3f3dc45282461e392f4 files/digest-oscore-bin-2.2.4 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMLS/rLF9B432nYRAp33AKDB+pnOLHcxDKCH4Ee3fOg6ITAVOwCdHovB
+ZDlhQEk+9Kd9ZFwi0j5/Cqw=
+=TqGP
+-----END PGP SIGNATURE-----

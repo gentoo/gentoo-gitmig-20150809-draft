@@ -1,4 +1,14 @@
-MD5 f5eed9a95871156a19129704acbac3b4 ChangeLog 759
-MD5 0223054ba09f8155e76ffbce682f9d3d jtidy-0_pre20010801.ebuild 834
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 84c7d2f3835faa9360d3419c0e6100fa jtidy-0_pre20010801.ebuild 848
+MD5 993ccb94deb210b06f4f16a973c93b17 ChangeLog 860
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 641e41ae611ccfd2dc3d440622b4b344 files/digest-jtidy-0_pre20010801 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMI+/rLF9B432nYRAhARAJ40HoJTQVxM6mmVNtjwfxNfIufBdgCgvFDR
+bO3fOrqVJqJejhVgqGEFp5o=
+=4s//
+-----END PGP SIGNATURE-----

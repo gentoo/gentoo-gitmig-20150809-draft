@@ -1,4 +1,14 @@
-MD5 63d6b630f1b7771c118dec7bbc923a00 ChangeLog 437
-MD5 8a296de59b0ef5746407f6ba7bd77330 jlfgr-1.0.ebuild 625
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fc87232cd60aefa6db28af05398bf3c8 jlfgr-1.0.ebuild 635
+MD5 82fa66b58540bf60040f4eaa91b8a72e ChangeLog 528
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 12a131c53ea77ca695754e2250b1ad11 files/digest-jlfgr-1.0 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMGZ/rLF9B432nYRAlAjAJsFaQbOE7ClEDSeb7Iv+m9YaKJuxACfQm5k
+noB89LsqPPkkZ2C0dF8pRQ8=
+=wOBA
+-----END PGP SIGNATURE-----

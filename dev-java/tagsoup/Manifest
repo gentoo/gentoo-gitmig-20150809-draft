@@ -1,4 +1,14 @@
-MD5 6c6d6777717d78e00a1892e0b04c20d1 ChangeLog 733
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 54ecae5bad868e51766f7458e9408cf5 tagsoup-0.10.2.ebuild 1038
+MD5 bc88bdf6ebce37a6d1e9876f8da41198 ChangeLog 829
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
-MD5 bc573e0b83e9f3e8f10ff894e4ac7270 tagsoup-0.10.2.ebuild 1025
 MD5 e5ace201a33ef7217b14c883e651c546 files/digest-tagsoup-0.10.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMNQ/rLF9B432nYRAr9lAJ9StoMc8QrXmvENslmlhG00xwANAwCfedYZ
+iJD7HCXTbJPn+h9l8pS5jlU=
+=3y43
+-----END PGP SIGNATURE-----

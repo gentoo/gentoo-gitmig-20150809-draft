@@ -1,6 +1,16 @@
-MD5 6b4e9109716a77c3bc9ce154d984837d ChangeLog 1347
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2c12b053c8e9abcfdd31ddc90cf1c7d3 xom-1.0_beta6.ebuild 1426
+MD5 cce3a3a2c4aac32d63a5aaa165b4e08b xom-1.0_beta5.ebuild 1409
+MD5 1db18dd2d68b31d9678780c90cd2cb91 ChangeLog 1466
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 8b286e063b428271dc9670fc69e17671 xom-1.0_beta5.ebuild 1396
-MD5 c9fcdc02e197f97d3b3a64aaffde044b xom-1.0_beta6.ebuild 1413
 MD5 a5d63e4795719a77ec4ed37989972163 files/digest-xom-1.0_beta5 59
 MD5 af8e4185c36e77a42b75df927966d03b files/digest-xom-1.0_beta6 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMOx/rLF9B432nYRAuSUAJ9WojCJS5KI/3Gqv0GmIoICtt9LTQCgl6o6
+TSvPSjwCokYJQ21FU2Ji/Xc=
+=yfWZ
+-----END PGP SIGNATURE-----

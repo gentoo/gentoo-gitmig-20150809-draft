@@ -1,4 +1,14 @@
-MD5 6ea5527413ebd0b0d84812743abd7b76 ChangeLog 811
-MD5 058e832cf229c141c36f545eedd8b7e0 colt-1.1.0.ebuild 947
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 653d778f868b916fffe238921f219ad4 colt-1.1.0.ebuild 960
+MD5 72a16dd9c6e0aba87ee25fe8860289a2 ChangeLog 903
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 a6ff6e660f79708d23716172e2228031 files/digest-colt-1.1.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiL/Q/rLF9B432nYRAmXaAKC7iyiEBTXPn7tbeJuaiW7oJSi+mwCfXbmn
+t6XIU6erxc9AIkhrRiaKFBs=
+=Y+2U
+-----END PGP SIGNATURE-----
