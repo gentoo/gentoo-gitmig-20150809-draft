@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/unrar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.2 2002/05/26 13:46:33 seemant Exp $
+
+*unrar-3.00 (26 May 2002)
+
+  26 May 2002; Seemant Kulleen <seemant@gentoo.org> unrar-3.00.ebuild
+  files/digest-unrar-3.00 :
+
+  Version bump thanks to: uname@gmx.co.uk (Heitham Omar) in bug # 3022
 
 *unrar-2.50 (1 Feb 2002)
 
