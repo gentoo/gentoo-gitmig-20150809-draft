@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.14 2004/06/24 22:36:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.15 2004/06/25 02:00:05 absinthe Exp $
+
+  24 Jun 2004; Dylan Carlson <absinthe@gentoo.org>
+  ghostscript-afpl-8.14.ebuild:
+  keywords ~amd64.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   ghostscript-afpl-8.13.ebuild, ghostscript-afpl-8.14.ebuild:
