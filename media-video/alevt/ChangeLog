@@ -1,6 +1,14 @@
 # ChangeLog for media-video/alevt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.6 2004/05/10 21:07:06 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.7 2004/05/12 11:33:45 phosphan Exp $
+
+*alevt-1.6.1 (12 May 2004)
+
+  12 May 2004; Patrick Kursawe <phosphan@gentoo.org> alevt-1.6.1.ebuild,
+  files/alevt-1.6.1-gentoo.diff:
+  Version bump, see bug #45836
+  Added another SRC_URI, the tarball seems to be about the same the debian guys
+  use.
 
   10 May 2004; Travis Tilley <lv@gentoo.org> alevt-1.6.0-r3.ebuild:
   added ~amd64 keyword
