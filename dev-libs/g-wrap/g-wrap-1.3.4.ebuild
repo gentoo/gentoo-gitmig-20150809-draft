@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4.ebuild,v 1.3 2003/07/16 18:41:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.4.ebuild,v 1.4 2003/07/24 18:38:41 taviso Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A tool for exporting C libraries into Scheme"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnucash.org"
 
 SLOT="1.3"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~alpha"
 
 inherit flag-o-matic
 
