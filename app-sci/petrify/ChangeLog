@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/petrify
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/petrify/ChangeLog,v 1.1 2004/07/23 13:48:26 chrb Exp $
+
+*petrify-4.2 (23 Jul 2004)
+
+  23 Jul 2004; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +petrify-4.2.ebuild:
+  Submitted by Chris Bainbridge, bug #35465
+
