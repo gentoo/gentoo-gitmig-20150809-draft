@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ptlink-services
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ChangeLog,v 1.5 2004/11/14 15:42:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ChangeLog,v 1.6 2004/11/21 23:22:10 swegener Exp $
+
+  22 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  ptlink-services-2.25.1.ebuild:
+  Fixed MySQL support. Modified to install domain.def. Thanks to Daniel
+  'Fremen' Llewellyn <daniel@mainframe.ath.cx> in bug #71961.
 
   14 Nov 2004; Sven Wegener <swegener@gentoo.org>
   -ptlink-services-2.24.1.ebuild:
