@@ -1,7 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.4 2004/02/29 16:45:27 aliz Exp $
-inherit kde # not kde-base since we don't need c++ deps
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.5 2004/03/14 17:33:14 mr_bones_ Exp $
+
+inherit kde
 
 need-kde 3
 
