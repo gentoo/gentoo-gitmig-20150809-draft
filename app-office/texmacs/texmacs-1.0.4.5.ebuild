@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.4.5.ebuild,v 1.2 2005/01/01 15:42:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.4.5.ebuild,v 1.3 2005/02/21 21:03:39 luckyduck Exp $
 
 # although flag-o-matic functions in portage, we should inherit it
 inherit flag-o-matic
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="spell static"
 # TeXmacs 1.0.X-r? -> stable release, TeXmacs 1.0.X.Y -> development release
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 
 RDEPEND="virtual/tetex
 	>=dev-util/guile-1.4

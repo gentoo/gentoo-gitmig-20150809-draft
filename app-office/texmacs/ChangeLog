@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.33 2005/01/02 21:44:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.34 2005/02/21 21:03:39 luckyduck Exp $
+
+  21 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> texmacs-1.0.4.5.ebuild:
+  added ~amd64 to KEYWORDS. fixes #71106
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
