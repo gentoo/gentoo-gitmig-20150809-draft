@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.88 2005/02/25 04:10:37 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.89 2005/03/03 08:46:50 marineam Exp $
+
+*ck-sources-2.6.11-r1 (02 Mar 2005)
+
+  02 Mar 2005; Micheal Marineau <marineam@gentoo.org>
+  -files/ck-sources-2.6.10-74070.patch,
+  -files/ck-sources-2.6.10-drm-dos-fix.patch,
+  +files/ck-sources-2.6.11-74070.patch, -files/ck-sources-81106.patch,
+  -ck-sources-2.6.10-r6.ebuild, +ck-sources-2.6.11-r1.ebuild:
+  Bump to 2.6.11 and ck1, yup :-)
 
 *ck-sources-2.6.10-r6 (24 Feb 2005)
 
