@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.15 2003/07/29 13:48:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.16 2003/08/14 03:59:34 g2boojum Exp $
+
+*pure-ftpd-1.0.16a (13 Aug 2003)
+
+  13 Aug 2003; Nick Hadaway <raker@gentoo.org> pure-ftpd-1.0.16a.ebuild:
+  Version bump.  Fixes for the ldap and pam portion of the install.
+  Added ssl to IUSE.  Other minor build cleanups.
 
 *pure-ftpd-1.0.15 (21 Jun 2003)
 
