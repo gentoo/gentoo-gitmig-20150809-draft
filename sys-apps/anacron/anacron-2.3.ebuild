@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.5 2003/09/07 02:49:15 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.6 2004/06/04 02:28:32 seemant Exp $
 
 #MY_P=${PN}-${PV}
 #S=${WORKDIR}/${MY_P}
@@ -12,7 +12,8 @@ KEYWORDS="x86 amd64 ppc"
 SLOT="0"
 LICENSE="as-is"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-apps/sed-4"
 
 RDEPEND="virtual/mta
 	virtual/cron"
@@ -20,8 +21,8 @@ RDEPEND="virtual/mta
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp Makefile Makefile.orig
-	sed "s:^CFLAGS =:CFLAGS = $CFLAGS:" Makefile.orig >Makefile
+	epatch ${FILESDIR}/${P}-compile-fix-from-debian.patch
+	sed -i "s:^CFLAGS =:CFLAGS = $CFLAGS:" Makefile
 }
 
 src_compile() {

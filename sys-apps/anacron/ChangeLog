@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/anacron
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/ChangeLog,v 1.3 2003/02/15 08:15:34 gerk Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/ChangeLog,v 1.4 2004/06/04 02:28:32 seemant Exp $
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
+  +files/anacron-2.3-compile-fix-from-debian.patch, anacron-2.3.ebuild:
+  Add the compilation fix from debian (available at:
+  http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=240043). This should close
+  bug #49029 by Meder Bakirov <bakirov@transfer.kg>. The fix was found by: Jan
+  Falkenhagen <meinspam@onlinehome.de>. Not version bumping, since this was a
+  non-working ebuild anyway, and now it works.
 
 *anacron-2.3 (03 Aug 2002)
 
