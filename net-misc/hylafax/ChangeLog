@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.39 2004/10/13 16:20:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.40 2004/10/24 05:50:07 nerdboy Exp $
+
+*hylafax-4.2.0-r1 (23 Oct 2004)
+
+  23 Oct 2004; Steve Arnold <nerdboy@gentoo.org>
+  +files/hylafax-4.2.0-tiff_version.patch, +hylafax-4.2.0-r1.ebuild:
+  updated for new tiff and other bug fixes; ebuild co-written with new
+  dev-recruit KingTaco <mike@uberslacks.com>. Should fix bug 66794.
 
   13 Oct 2004; Guy Martin <gmsoft@gentoo.org> hylafax-4.1.8-r4.ebuild:
   Stable on hppa.
