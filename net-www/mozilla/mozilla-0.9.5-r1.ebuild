@@ -5,6 +5,8 @@
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla web browser"
+
+# NOTE!!  Please use the .tar.bz2 next time, as it is about 10mb smaller.
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla${PV}/src/${PN}-source-${PV}.tar.gz"
 HOMEPAGE="http://www.mozilla.org"
 
