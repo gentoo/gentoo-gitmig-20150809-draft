@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/gkrellm-volume-2.1.9.ebuild,v 1.2 2004/01/21 21:46:16 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/gkrellm-volume-2.1.9.ebuild,v 1.3 2004/01/22 05:32:47 pylon Exp $
 
 MY_P=${PN}2-${PV}
 S=${WORKDIR}/${PN}
@@ -12,7 +12,7 @@ DEPEND="=app-admin/gkrellm-2*"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 sparc ~alpha"
+KEYWORDS="~x86 sparc ~alpha ~ppc"
 
 src_compile() {
 	make || die

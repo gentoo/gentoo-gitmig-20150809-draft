@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-volume
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.16 2004/01/21 21:46:16 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.17 2004/01/22 05:32:47 pylon Exp $
+
+  22 Jan 2004; Lars Weiler <pylon@gentoo.org> gkrellm-volume-2.1.9.ebuild:
+  Add ~ppc to keywords
 
   21 Jan 2004; Sven Blumenstein <bazik@gentoo.org>
   gkrellm-volume-2.1.9.ebuild:
