@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.147 2004/03/17 21:15:50 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.148 2004/03/19 17:31:58 rizzo Exp $
+
+  19 Mar 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r10.ebuild,
+  gaim-0.75-r8.ebuild:
+  Removing nomirror per klieber's memo.
 
   17 Mar 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r10.ebuild,
   gaim-0.75-r8.ebuild:
