@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.5 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.6 2002/08/05 09:38:56 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GTK/X11 application launcher with nice features such as a history"
@@ -36,10 +36,8 @@ src_compile() {
 	if [ -z ${TERM} ] ; then
 		TERM=xterm
 	fi
-	./configure --prefix=/usr \
-		--host=${CHOST} \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
+
+	econf \
 		--enable-testfile \
 		--with-default-xterm=${TERM} \
 		--enable-associations \

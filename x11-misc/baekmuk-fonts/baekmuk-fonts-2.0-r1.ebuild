@@ -1,19 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/baekmuk-fonts/baekmuk-fonts-2.0-r1.ebuild,v 1.2 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/baekmuk-fonts/baekmuk-fonts-2.0-r1.ebuild,v 1.3 2002/08/05 09:38:55 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean Baekmuk Font"
 SRC_URI="ftp://ftp.nnongae.com/pub/gentoo/${P}.tar.gz"
-HOMEPAGE="http://"
-DEPEND="virtual/x11"
-LICENSE="BAEKMUK"
+HOMEPAGE="ftp://ftp.nnongae.com/pub/gentoo/"
+
 SLOT="0"
+LICENSE="BAEKMUK"
 KEYWORDS="x86"
 
-src_unpack () {
-	unpack ${P}.tar.gz
-}
+DEPEND="virtual/x11"
 
 src_install () {
 	dodir /usr/X11R6/lib/X11/fonts/baekmuk
@@ -35,5 +33,4 @@ pkg_postinst() {
 	ewarn "****************************************************************"
 
 	einfo "You should restart X server..."
-															
 }
