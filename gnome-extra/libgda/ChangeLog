@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.30 2003/11/13 02:04:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.31 2003/11/18 23:10:25 agriffis Exp $
+
+  18 Nov 2003; Aron Griffis <agriffis@gentoo.org> libgda-1.0.1.ebuild:
+  Add ~alpha
 
   12 Nov 2003; Jason Wever <weeve@gentoo.org> libgda-1.0.0.ebuild:
   Marked stable on sparc.
