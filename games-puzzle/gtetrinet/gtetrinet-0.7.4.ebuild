@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.4.ebuild,v 1.5 2004/06/24 23:05:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.4.ebuild,v 1.6 2005/02/23 01:42:34 wolf31o2 Exp $
 
 # games after gnome2 so games' functions will override gnome2's
 inherit gnome2 games

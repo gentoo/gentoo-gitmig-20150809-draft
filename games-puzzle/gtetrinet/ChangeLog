@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/gtetrinet
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.9 2004/09/05 23:51:34 pylon Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.10 2005/02/23 01:42:34 wolf31o2 Exp $
+
+*gtetrinet-0.7.8 (22 Feb 2005)
+
+  22 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +gtetrinet-0.7.8.ebuild:
+  Version bumped and closing bug #80931.
 
   06 Sep 2004; Lars Weiler <pylon@gentoo.org> gtetrinet-0.7.7.ebuild:
   Stable on ppc.
