@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.22-r3.ebuild,v 1.1 2003/12/02 08:08:13 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.22-r3.ebuild,v 1.2 2003/12/17 04:52:10 brad_mssw Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ DESCRIPTION="PowerPC kernel tree based on benh's patches, -r corresponds to ben{
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://www.kernel.org/pub/linux/kernel/people/benh/patch-${OKV}-${MY_R/3/2}.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/benh/"
-KEYWORDS="-x86 ppc -sparc -alpha"
+KEYWORDS="-x86 ppc -sparc -alpha ppc64"
 PROVIDE="virtual/linux-sources"
 LICENSE="GPL-2"
 SLOT="${KV}"
