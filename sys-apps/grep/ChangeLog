@@ -1,11 +1,14 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.16 2003/06/24 14:32:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.17 2003/07/06 14:01:16 gmsoft Exp $
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> grep-2.5.1-r1.ebuild:
   Mark stable on alpha
 
 *grep-2.5.1-r1 (27 Feb 2003)
+
+  06 Jul 2003; Guy Marin <gmsoft@gentoo.org> grep-2.5.1-r1.ebuild :
+  Marked stable on hppa.
 
   22 Jun 2003; Joshua Kinard <kumba@gentoo.org> grep-2.5.1-r1.ebuild:
   Changed ~sparc & ~mips to sparc & mips in KEYWORDS
