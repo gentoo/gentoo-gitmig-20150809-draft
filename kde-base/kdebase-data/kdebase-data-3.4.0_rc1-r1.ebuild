@@ -1,10 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-3.4.0_rc1-r1.ebuild,v 1.1 2005/03/13 18:48:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-3.4.0_rc1-r1.ebuild,v 1.2 2005/03/13 19:01:52 danarmak Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
-KMEXTRACTONLY="kdm/kfrontend/sessions/kde.desktop.in startkde"
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
@@ -23,13 +22,14 @@ $(deprange $PV $MAXKDEVER kde-base/ksmserver)
 $(deprange $PV $MAXKDEVER kde-base/kwin)
 $(deprange $PV $MAXKDEVER kde-base/kpersonalizer)
 $(deprange 3.4.0_beta2 $MAXKDEVER kde-base/kreadconfig)
-$(deprange $PV $MAXKDEVER kde-base/ksplashml)"
+$(deprange $PV $MAXKDEVER kde-base/ksplashml)
+!kde-base/kdebase-l10n !kde-base/kdebase-startkde !kde-base/kdebase-pics" # replaced these three ebuilds
 
-src_compile() {
-	einfo "Nothing to compile"
-}
+KMEXTRACTONLY="kdm/kfrontend/sessions/kde.desktop.in startkde"
+KMEXTRA="l10n pics"
 
 src_install() {
+	kde-meta_src_install
 
 	# startkde script
 	dodir $KDEDIR/bin
