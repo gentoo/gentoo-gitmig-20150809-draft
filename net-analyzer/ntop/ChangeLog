@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.9 2003/05/04 14:31:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.10 2003/06/29 20:17:42 mholzer Exp $
+
+  29 Jun 2003; Martin Holzer <mholzer@gentoo.org> ntop-2.2.ebuild:
+  Marked stable on x86.
 
 *ntop-2.2 (04 May 2003)
 

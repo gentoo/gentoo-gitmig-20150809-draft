@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.2.ebuild,v 1.1 2003/05/04 14:31:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.2.ebuild,v 1.2 2003/06/29 20:17:42 mholzer Exp $
 
 IUSE="ssl readline tcpd ncurses"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ntop.org/ntop.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=net-libs/libpcap-0.5.2
@@ -74,4 +74,3 @@ src_install () {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/ntop-init ntop
 	insinto /etc/conf.d ; newins ${FILESDIR}/ntop-confd ntop
 }
-
