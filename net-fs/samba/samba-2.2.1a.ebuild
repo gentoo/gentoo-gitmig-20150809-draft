@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.1a.ebuild,v 1.2 2001/07/25 03:20:35 lamer Exp $
+# /home/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.1a.ebuild,v 1.2 2001/07/25 03:20:35 lamer Exp
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Samba :)"
@@ -21,7 +21,13 @@ RDEPEND="virtual/glibc
 # about 40 posts long about this
 #		pam? ( >=sys-libs/pam-0.72 )"
 
-
+src_unpack() {
+    unpack ${A}
+    if [ "`use afs`" ]; then
+      cd ${S}
+      cat ${FILESDIR}/patch.221a.08 | patch -p0
+    fi
+}
 
 src_compile() { 
   local myconf
@@ -41,7 +47,9 @@ src_compile() {
     autoconf
   fi
   
-
+  if [ "`use afs`" ]; then
+    myconf="$myconf --with-afs"
+  fi
 
   # Disabled automout support, because it failed
   # Added -lncurses for readline detection
