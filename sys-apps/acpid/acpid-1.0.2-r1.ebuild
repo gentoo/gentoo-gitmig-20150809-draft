@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.2-r1.ebuild,v 1.1 2003/06/07 08:35:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.2-r1.ebuild,v 1.2 2003/06/12 20:51:29 hanno Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface."
 SRC_URI="mirror://sourceforge/acpid/${P}.tar.gz"
 HOMEPAGE="http://acpid.sourceforge.net/"
 IUSE=""
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
