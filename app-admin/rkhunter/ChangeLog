@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/rkhunter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/ChangeLog,v 1.16 2004/08/19 07:08:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/ChangeLog,v 1.17 2004/08/29 14:52:16 solar Exp $
+
+*rkhunter-1.1.7 (29 Aug 2004)
+
+  29 Aug 2004; <solar@gentoo.org> +rkhunter-1.1.7.ebuild:
+  version bump
 
 *rkhunter-1.1.6 (19 Aug 2004)
 
