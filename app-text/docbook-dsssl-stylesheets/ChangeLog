@@ -1,6 +1,13 @@
 # ChangeLog for app-text/docbook-dsssl-stylesheets
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.19 2004/06/29 04:10:35 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.20 2004/07/22 04:52:13 obz Exp $
+
+  22 Jul 2004; Mike Gardiner <obz@gentoo.org>
+  docbook-dsssl-stylesheets-1.77-r1.ebuild,
+  docbook-dsssl-stylesheets-1.77-r2.ebuild,
+  docbook-dsssl-stylesheets-1.77.ebuild:
+  Corrected HOMEPAGE to point to http://docbook.sourceforge.net, as requested in
+  bug #53478
 
   28 Jun 2004; Tom Gall <tgall@gentoo.org> docbook-dsssl-stylesheets-1.77-r2.ebuild:
   stable on ppc64, bug #54792

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77.ebuild,v 1.12 2004/07/13 21:03:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77.ebuild,v 1.13 2004/07/22 04:52:13 obz Exp $
 
 MY_P=${P/-stylesheets/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="DSSSL Stylesheets for DocBook."
 SRC_URI="mirror://sourceforge/docbook/${MY_P}.tar.gz"
-HOMEPAGE="http://www.sourceforge.net/docbook/"
+HOMEPAGE="http://docbook.sourceforge.net"
 
 RDEPEND="app-text/sgml-common"
 
