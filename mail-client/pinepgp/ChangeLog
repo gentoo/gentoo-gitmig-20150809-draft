@@ -1,0 +1,29 @@
+# ChangeLog for net-mail/pinepgp
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pinepgp/ChangeLog,v 1.1 2004/05/30 02:59:00 seemant Exp $
+
+*pinepgp-0.18.0 (29 May 2004)
+
+  29 May 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +pinepgp-0.18.0-r1.ebuild, +pinepgp-0.18.0.ebuild:
+  Moved from net-mail/pinepgp to mail-client/pinepgp.
+
+  23 Mar 2004; Martin Holzer <mholzer@gentoo.org> pinepgp-0.18.0-r1.ebuild,
+  pinepgp-0.18.0.ebuild:
+  fixing depend qa issue. see 45343.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  17 Oct 2002; Maik Schreiber <blizzy@gentoo.org> pinepgp-0.18.0.ebuild,
+  pinepgp-0.18.0-r1.ebuild: Changed KEYWORDS to phase out of
+  package.mask.
+
+*pinepgp-0.18.0-r1 (14 Aug 2002)
+
+  14 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : Fixed install
+  procedure. This should fix comment #3 on bug #6388.
+
+*pinepgp-0.18.0 (13 Aug 2002)
+
+  13 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import.
+  ebuild submitted by Eric Stockbridge <stocke2@cox.net>
