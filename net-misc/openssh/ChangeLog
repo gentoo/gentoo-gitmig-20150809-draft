@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.20 2002/11/22 20:18:26 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.21 2002/11/29 21:06:05 aliz Exp $
+
+  29 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> openssh-3.5_p1.ebuild :
+  Rewrote patch applying code.
 
   22 Nov 2002; Will Woods <wwoods@gentoo.org> openssh-3.5_p1.ebuild:
   Added patch to fix compile problem on alpha.
