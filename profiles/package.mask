@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (12 Aug 2002)
+# add libdvdnav-0.1.3 support. needs testing
+=media-video/mplayer-0.90_pre6-r3
+
 # <raker@gentoo.org> (12 Aug 2002)
 # masked new build of hylafax.
 =net-misc/hylafax-4.1.3
