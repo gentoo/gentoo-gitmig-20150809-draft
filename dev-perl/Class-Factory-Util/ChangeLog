@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Factory-Util
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.4 2004/06/25 00:12:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.5 2004/09/27 22:02:41 kloeri Exp $
+
+  28 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  Class-Factory-Util-1.6.ebuild:
+  Add ~alpha.
 
   07 May 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   Class-Factory-Util-1.6.ebuild:
