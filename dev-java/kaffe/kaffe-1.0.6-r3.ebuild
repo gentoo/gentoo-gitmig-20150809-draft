@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.0.6-r3.ebuild,v 1.1 2002/05/05 02:06:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.0.6-r3.ebuild,v 1.2 2002/07/11 06:30:19 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A cleanroom, open source Java VM and class libraries"

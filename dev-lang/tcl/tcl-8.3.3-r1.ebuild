@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r1.ebuild,v 1.4 2002/05/09 17:56:23 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r1.ebuild,v 1.5 2002/07/11 06:30:20 drobbins Exp $
 
 
 S=${WORKDIR}/${PN}${PV}

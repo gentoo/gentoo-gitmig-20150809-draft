@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r3.ebuild,v 1.3 2001/11/10 11:31:53 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r3.ebuild,v 1.4 2002/07/11 06:30:20 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="groovy little assembler"

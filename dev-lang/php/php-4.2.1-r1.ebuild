@@ -1,7 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tools Team <tools@gentoo.org>
-# Author: Achim Gottinger <achim@gentoo.org>
 # Update: Roman Weber <gentoo@gonzo.ch>
 # /space/gentoo/cvsroot/gentoo-x86/dev-lang/php/php-4.2.1.ebuild,v 1.2 2002/05/19 23:53:32 rphillips Exp
 

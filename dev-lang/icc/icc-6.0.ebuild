@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: William McArthur <sandymac@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0.ebuild,v 1.3 2002/04/29 20:53:42 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0.ebuild,v 1.4 2002/07/11 06:30:20 drobbins Exp $
 
 S=${WORKDIR}
 

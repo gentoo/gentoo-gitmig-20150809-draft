@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.2 2001/08/02 20:09:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.40.ebuild,v 1.3 2002/07/11 06:30:20 drobbins Exp $
 
 S=${WORKDIR}/icon.v940src
 SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon.v940src.tgz"

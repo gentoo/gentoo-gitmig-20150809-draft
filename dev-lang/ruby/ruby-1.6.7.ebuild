@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tools Team <tools@gentoo.org>
-# Author: Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.7.ebuild,v 1.2 2002/07/08 00:26:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.7.ebuild,v 1.3 2002/07/11 06:30:20 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An object-oriented scripting language"

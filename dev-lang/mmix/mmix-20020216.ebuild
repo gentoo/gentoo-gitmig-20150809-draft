@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Hanno Boeck <hanno@gmx.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20020216.ebuild,v 1.1 2002/05/04 00:53:07 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20020216.ebuild,v 1.2 2002/07/11 06:30:20 drobbins Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Donald Knuth's MMIX Assembler and Simulator"

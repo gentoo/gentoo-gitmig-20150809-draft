@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tools Team <tools@gentoo.org>
-# Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/jaxp-1.1.3.ebuild,v 1.2 2002/01/23 20:06:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/jaxp-1.1.3.ebuild,v 1.3 2002/07/11 06:30:19 drobbins Exp $
 
 At=java_xml_pack-winter01.zip
 S=${WORKDIR}/java_xml_pack-winter01

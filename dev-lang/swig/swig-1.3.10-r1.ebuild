@@ -1,8 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tools Team <tools@gentoo.org>
-# Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r1.ebuild,v 1.2 2002/01/24 19:40:43 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r1.ebuild,v 1.3 2002/07/11 06:30:20 drobbins Exp $
 
 S=${WORKDIR}/SWIG-${PV}
 DESCRIPTION="Simplied Wrapper and Interface Generator"

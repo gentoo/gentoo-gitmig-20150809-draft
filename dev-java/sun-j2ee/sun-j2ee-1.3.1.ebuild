@@ -1,7 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tools Team <tools@gentoo.org>
-# Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.ebuild,v 1.2 2002/01/18 16:06:26 karltk Exp
 
 At=j2sdkee-1_3_1-linux.tar.gz
