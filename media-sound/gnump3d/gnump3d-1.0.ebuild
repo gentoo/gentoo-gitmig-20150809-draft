@@ -1,20 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-1.0.ebuild,v 1.4 2003/02/13 13:12:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-1.0.ebuild,v 1.5 2003/02/14 08:52:13 vapier Exp $
 
-IUSE="oggvorbis"
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="A streaming server for MP3, OGG vorbis and other streamable files"
 SRC_URI="mirror://sourceforge/gnump3d/${P}.tar.gz"
 HOMEPAGE="http://gnump3d.sourceforge.net/"
-DEPEND="virtual/glibc"
-RDEPEND=">=sys-devel/perl-5.6.1
-	oggvorbis? ( media-libs/libvorbis )"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE="oggvorbis"
 
-inherit eutils
+DEPEND="virtual/glibc"
+RDEPEND=">=sys-devel/perl-5.6.1
+	oggvorbis? ( media-libs/libvorbis )"
 
 src_unpack() {
 	unpack ${A}
@@ -23,9 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use oggvorbis && myconf="${myconf} --with-vorbis" \
-		|| myconf="${myconf} --without-vorbis"
-	econf ${myconf} || die
+	econf `use_with oggvorbis vorbis` || die
 	emake || die
 }
 
@@ -49,9 +48,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "The default directory for shared mp3s is /home/mp3"
 	einfo "Please edit your /etc/gnump3d/gnump3d.conf before"
 	einfo "running /etc/init.d/gnump3d start"
-	einfo ""
+	einfo
 }
