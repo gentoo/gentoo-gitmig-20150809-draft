@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.98.0.ebuild,v 1.1 2003/06/27 12:29:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.98.0.ebuild,v 1.2 2003/07/21 22:27:47 liquidx Exp $
 
-IUSE="sdl ssl ipv6 gnome"
+IUSE="sdl ssl ipv6"
 
 inherit gnome2
 
@@ -19,11 +19,11 @@ DEPEND=">=dev-libs/pwlib-1.5.0
 	>=net-nds/openldap-2.0.25
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sdl? ( >=media-libs/libsdl-1.2.4 )
-    gnome? ( >=gnome-base/libbonoboui-2.0
-    	>=gnome-base/libbonobo-2.0
-    	>=gnome-base/libgnomeui-2.0
-        >=gnome-base/libgnome-2.0
-		>=net-libs/linc-0.5.0 )
+	>=gnome-base/libbonoboui-2.0
+    >=gnome-base/libbonobo-2.0
+    >=gnome-base/libgnomeui-2.0
+    >=gnome-base/libgnome-2.0
+	>=net-libs/linc-0.5.0
 	>=x11-libs/gtk+-2.0.0
 	>=dev-libs/glib-2.0.0    
 	>=gnome-base/gconf-2.0
@@ -60,14 +60,8 @@ src_compile() {
 		&& myconf="${myconf} --enable-ipv6" \
     	|| myconf="${myconf} --disable-ipv6"
 
-	use gnome || myconf="${myconf} --disable-gnome"
-        
     econf ${myconf} || die "configure failed"
 	emake || die
 }
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS FAQ TODO"
-G2CONF="${G2CONF} --enable-platform-gnome-2"
-SCHEMAS="gnomemeeting.schema"
-	
-															
