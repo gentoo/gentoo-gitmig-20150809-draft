@@ -1,5 +1,7 @@
 MD5 db8e1e958caf0ea3d7e1127228802e7c ChangeLog 525
 MD5 730180e45420ff7e3a0f9b165d2d72b9 w3mimgfb-0.7.1.ebuild 826
 MD5 691d6859c5e425c28f24ed3e19ef5feb w3mimgfb-0.8.ebuild 821
+MD5 98898c1c7066285f3ebdb4fbb26dd60b w3mimgfb-0.9.1.ebuild 1056
 MD5 03177f6c3ff748dd109287e5eeeb0933 files/digest-w3mimgfb-0.7.1 65
 MD5 d99ba8e5acdf25cebb8d0c7d2786a3ec files/digest-w3mimgfb-0.8 62
+MD5 9a3da37d4a2b9e331d232580b09d7b3f files/digest-w3mimgfb-0.9.1 65
