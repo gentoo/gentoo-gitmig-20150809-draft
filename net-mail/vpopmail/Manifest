@@ -24,6 +24,6 @@ MD5 61705fcd13006df869646877d966fac8 files/digest-vpopmail-5.2.1-r8 134
 MD5 61705fcd13006df869646877d966fac8 files/digest-vpopmail-5.2.1-r9 134
 MD5 d0bc9f5393a1f0602c71fdee0b3d2cd8 files/digest-vpopmail-5.2.2-r1 134
 MD5 d3296e78f37859945cfe766afb969dc2 files/digest-vpopmail-5.4.0-r1 134
-MD5 6e448510b6ede07c24fcd2ea6e20de77 files/vpopmail.conf 472
+MD5 63284ad7aa0644157e4b754b969a8421 files/vpopmail.conf 466
 MD5 9aeca181f86314f09d9cfe99ebe8b7d0 files/vpopmail.diff 2101
 MD5 b325c0d16aa0a9a4450415fe4e29fc43 files/vpopmail.clearopensmtp 231

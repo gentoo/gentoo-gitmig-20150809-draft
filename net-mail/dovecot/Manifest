@@ -6,5 +6,5 @@ MD5 2092e856e5d69a505c3a7f99b2e1251c dovecot-0.99.10.5-r1.ebuild 4404
 MD5 d0c98a89b6d8d960ae0312a96256ecb8 files/digest-dovecot-0.99.10.6 69
 MD5 02900826bf90ce0fcbf43a3ebbfa31cf files/digest-dovecot-0.99.10.4-r1 69
 MD5 533a7de1250c369ae33b60c3c53586a1 files/digest-dovecot-0.99.10.5-r1 69
-MD5 55ac3fc8f2caaf3a6492cb5f2a0ccd5a files/dovecot.init 525
+MD5 07b795b2b49257dee3743d5698d0d919 files/dovecot.init 517
 MD5 1c0a9ca75cadf12377e70c2ef725ba0e files/dovecot.pam 220
