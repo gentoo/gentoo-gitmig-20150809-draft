@@ -77,6 +77,4 @@ app-text/sgml2x
 # incompatible
 >=sys-devel/autoconf-2.50
 
-#crux made a big boo-boo
-=kde-apps/kvirc-2.1.1
 
