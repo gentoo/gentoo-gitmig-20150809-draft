@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.5 2005/01/01 17:34:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.6 2005/02/28 00:44:19 trapni Exp $
+
+  28 Feb 2005; Christian Parpart <trapni@gentoo.org> libdbi-0.7.2.ebuild:
+  adding to ~amd64
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> libdbi-0.7.2.ebuild:
   add sed-4 dep

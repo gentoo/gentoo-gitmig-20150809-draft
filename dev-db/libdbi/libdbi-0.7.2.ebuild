@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.7.2.ebuild,v 1.6 2005/01/01 17:34:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.7.2.ebuild,v 1.7 2005/02/28 00:44:19 trapni Exp $
 
 DESCRIPTION="libdbi implements a database-independent abstraction layer in C, similar to the DBI/DBD layer in Perl."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -10,7 +10,7 @@ DEPEND="
 	>=sys-apps/sed-4"
 RDEPEND=""
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 SLOT=0
 
 src_compile() {
