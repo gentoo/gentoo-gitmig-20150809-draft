@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.1.ebuild,v 1.1 2002/01/02 03:19:38 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.21.ebuild,v 1.1 2002/02/25 03:50:17 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The most popular logfile analyser in the world"
@@ -16,7 +16,7 @@ src_unpack() {
 		-e 's:^DEFS.*:DEFS = -DHAVE_GD -DHAVE_PCRE:' \
 		-e 's:^LIBS.*:LIBS = -lgd -lpng -ljpeg -lz -lpcre -lm:' \
 		src/Makefile.orig > src/Makefile
-	patch -p1 < ${FILESDIR}/${PN}-${PV}-gentoo.diff
+	patch -p1 < ${FILESDIR}/${PN}-5.1-gentoo.diff
 }
 
 src_compile() {
