@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/enet-0_pre20031103.ebuild,v 1.3 2004/01/30 06:58:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/enet-0_pre20031103.ebuild,v 1.4 2004/03/21 19:56:38 dholm Exp $
 
 #ECVS_SERVER=sferik.cubik.org:/home/enet/cvsroot
 #ECVS_USER=anoncvs
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-devel/autoconf-2.58"
 RDEPEND=""
