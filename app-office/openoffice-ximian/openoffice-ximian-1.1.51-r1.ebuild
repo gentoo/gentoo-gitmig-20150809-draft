@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.51-r1.ebuild,v 1.1 2004/04/25 11:41:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.51-r1.ebuild,v 1.2 2004/04/27 08:20:39 vapier Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -346,8 +346,8 @@ src_compile() {
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
 	then
 		# Set CCCOMP and CXXCOMP.  This is still needed for STLport
-		export CCCOMP=${CC}
-		export CXXCOMP=${CXX}
+		export CCCOMP="$(gcc-getCC)"
+		export CXXCOMP="$(gcc-getCXX)"
 	fi
 
 	einfo "Bootstrapping OpenOffice.org..."
