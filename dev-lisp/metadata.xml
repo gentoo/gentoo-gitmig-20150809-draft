@@ -5,5 +5,9 @@
 		The dev-lisp category contains libraries and utilities relevant to the
 		Lisp programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-lisp enthält Bibliotheken und Werkzeuge für die 
+		Programmiersprache Lisp.
+	</longdescription>
 </catmetadata>
 
