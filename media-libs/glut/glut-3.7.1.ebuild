@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.19 2004/07/30 03:15:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.20 2004/07/31 00:06:56 mr_bones_ Exp $
 
 inherit libtool gnuconfig
 
@@ -19,17 +19,19 @@ DEPEND="virtual/opengl
 	virtual/glu"
 PROVIDE="virtual/glut"
 
-S=${WORKDIR}/Mesa-${MESA_VER}
+S="${WORKDIR}/Mesa-${MESA_VER}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
+	elibtoolize
+}
 
 src_compile() {
-
-	use ppc64 && gnuconfig_update
-
-	elibtoolize
 	econf || die
-
-	cd ${S}/src-glut
-	emake || die
+	cd "${S}/src-glut"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -43,5 +45,5 @@ src_install() {
 	insinto /usr/include/GL
 	doins ${S}/include/GL/glut* || die "headers"
 
-	dodoc ${S}/docs/COPY*
+	dodoc ${S}/docs/COPYRIGHT
 }

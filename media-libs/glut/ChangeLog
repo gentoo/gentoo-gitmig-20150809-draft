@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glut
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.15 2004/07/30 03:15:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.16 2004/07/31 00:06:56 mr_bones_ Exp $
+
+  30 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> glut-3.7.1.ebuild:
+  always gnuconfig_update; elibtoolize in src_unpack; tidy
 
   29 Jul 2004; Tom Gall <tgall@gentoo.org> glut-3.7.1.ebuild:
   stable on ppc64, bug #57012
