@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/unclutter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.8 2004/06/24 22:34:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.9 2004/06/28 22:52:34 kugelfang Exp $
+
+  29 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> unclutter-8.ebuild:
+  Marked ~amd64.
 
   13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; unclutter-8.ebuild:
   Change x11-base/xfree dependency to virtual/x11 (#52153).
