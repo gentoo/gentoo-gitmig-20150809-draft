@@ -37,3 +37,4 @@
 # busybox/uclibc w/o shadow support
 #-*sys-apps/shadow
 #-*sys-libs/cracklib
+<app-arch/tar-1.13.92-r3
