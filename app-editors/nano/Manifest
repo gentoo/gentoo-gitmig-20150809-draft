@@ -3,13 +3,14 @@ MD5 b297797b490f7c6ca8d5f40f2d6347cc metadata.xml 1015
 MD5 d8d8da511c4fb40d0ae643b79006aadb nano-1.2.4.ebuild 1401
 MD5 ce43a4101c4d4b6915478aee57aea74c nano-1.3.4.ebuild 1577
 MD5 f08ac6a2355e4a42a301f144d0ca2c52 nano-1.3.5.ebuild 1728
-MD5 d3fc101c4680f0004ad6342653203eee nano-1.3.6.ebuild 1697
+MD5 272ac1a979c65ea95553b5288a65f26e nano-1.3.6.ebuild 1741
 MD5 d8142b390b68a527e95d17d20be72c5e files/1.3.5-nomac.patch 545
 MD5 ddf5d8f69c2fef9a4f253ce9bcfbf767 files/digest-nano-1.3.5 62
 MD5 b780924181d045cd8367d7d09b12b41b files/nano-1.3.5-break_line.patch 529
 MD5 b6b8e30beb4e577ac5d8d58bced6b326 files/digest-nano-1.3.6 62
 MD5 ebe8f2a4d216c558d080645929ad7176 files/nano-1.3.6-nomac.patch 883
 MD5 bbdbc4c41e290e7658f6a6d06b3ac6f4 files/digest-nano-1.2.4 62
+MD5 60ac26176596b3e131acc70a327fde01 files/nano-1.3.6-debug-typo.patch 415
 MD5 1dc6cc0231305e0268bd17287b429db2 files/nanorc-gentoo 1866
 MD5 eabfefc7d73cdd882c2ac8ca7a676970 files/nanorc-man 330
 MD5 061dd7ec0e2fef8722c1c46d2a09b327 files/nanorc-patch 258

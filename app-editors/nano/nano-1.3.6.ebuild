@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.6.ebuild,v 1.1 2005/03/22 06:22:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.6.ebuild,v 1.2 2005/03/23 04:56:25 vapier Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	use nomac && epatch "${FILESDIR}"/${P}-nomac.patch
+	epatch "${FILESDIR}"/${P}-debug-typo.patch
 }
 
 src_compile() {
