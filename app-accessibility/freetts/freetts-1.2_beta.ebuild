@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2_beta.ebuild,v 1.2 2004/03/17 23:11:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2_beta.ebuild,v 1.3 2004/03/22 20:35:03 zx Exp $
 
 inherit java-pkg eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/freetts/${PN}-srcs-${PV/./_}.zip"
 HOMEPAGE="http://freetts.sourceforge.net"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.3
-		dev-java/ant
+		>=dev-java/ant-1.6.0
 		app-arch/unzip
 		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jdk-1.3"
