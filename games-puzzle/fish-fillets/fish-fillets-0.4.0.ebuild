@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.4.0.ebuild,v 1.1 2004/07/14 07:23:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.4.0.ebuild,v 1.2 2004/07/14 17:09:41 mr_bones_ Exp $
 
 inherit games
 
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/sdl-mixer-1.2.5
 	>=media-libs/sdl-image-1.2.2
+	media-libs/sdl-ttf
 	dev-libs/boost
 	>=dev-lang/lua-5"
 

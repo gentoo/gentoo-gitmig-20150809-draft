@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/fish-fillets
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.4 2004/07/14 07:23:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.5 2004/07/14 17:09:41 mr_bones_ Exp $
+
+  14 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  fish-fillets-0.4.0.ebuild:
+  Fix deps (bug #57032)
 
 *fish-fillets-0.4.0 (14 Jul 2004)
 
