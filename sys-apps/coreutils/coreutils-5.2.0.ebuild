@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0.ebuild,v 1.5 2004/04/09 04:56:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0.ebuild,v 1.6 2004/04/22 17:02:05 mholzer Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,9 +16,9 @@ HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 	http://www.openi18n.org/subgroups/utildev/patch/${P}-${I18N_VER}.patch.gz
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~seemant/extras/${P}.tar.bz2
-	http://dev.gentoo.org/~seemant/extras/${P}-${I18N_VER}.patch.gz
-	http://dev.gentoo.org/~seemant/extras/${P}-gentoo-${PATCH_VER}.tar.bz2"
+	mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/${P}-${I18N_VER}.patch.gz
+	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,16 +1,15 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.83 2004/04/18 21:55:48 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.84 2004/04/22 17:02:05 mholzer Exp $
+
+  22 Apr 2004; Martin Holzer <mholzer@gentoo.org> coreutils-5.2.0-r1.ebuild,
+  coreutils-5.2.0.ebuild:
+  changing src_uri.
 
 *coreutils-5.2.0-r1 (18 Apr 2004)
 
   18 Apr 2004; Michael McCabe <randy@gentoo.org> +coreutils-5.2.0-r1.ebuild:
   Adding s390 specific fixes to close bug 47965
-
-*coreutils-5.2.0-r1 18 Apr 2004
-
-  18 Apr 2004;  <> 
-  # INSERT ENTRY HERE
 
   09 Apr 2004; Travis Tilley <lv@gentoo.org> coreutils-5.2.0.ebuild:
   stable on amd64
