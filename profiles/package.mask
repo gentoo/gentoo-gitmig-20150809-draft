@@ -59,9 +59,6 @@
 #masked for testing (bangert 20 Jun 2002)
 =dev-perl/mod_perl-1.27
 
-#masked for testing (bangert 20 Jun 2002)
-=sys-apps/xinetd-2.3.5
-
 # masked for testing (please test r2) (gerk June 19, 2002)
 >=x11-libs/xforms-089-r1
 
