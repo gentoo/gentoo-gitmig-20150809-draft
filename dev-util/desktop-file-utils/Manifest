@@ -1,4 +1,6 @@
-MD5 3dceebc43119a3dab5ecfb1547d3895e ChangeLog 683
 MD5 6307d077eef94ac519557bcd1a796f16 desktop-file-utils-0.3.ebuild 878
+MD5 58afbbbc208caf38998bad1010e8365c desktop-file-utils-0.5.ebuild 880
+MD5 e48ad65002700fee5f695e9487a512a1 ChangeLog 840
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 d5fb44d1f502de66b26adb38f8cb552e files/digest-desktop-file-utils-0.3 74
+MD5 3ec40b5b7c9a78f971f6208e41e847c0 files/digest-desktop-file-utils-0.5 74
