@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.5 2004/01/20 20:16:33 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.6 2004/02/20 19:25:52 usata Exp $
 
 # Convert gentoo version number x.y.z to date xyz for
 # tidy's source numbering by date
@@ -26,6 +26,7 @@ src_unpack() {
 	cd ${S}
 	# Required to setup the source dist for autotools
 	einfo "Setting up autotools for source build"
+	export WANT_AUTOMAKE=1.5 WANT_AUTOCONF=2.5
 	/bin/sh ./build/gnuauto/setup.sh > /dev/null
 
 	# Stop tidy from appending -O2 to our CFLAGS
