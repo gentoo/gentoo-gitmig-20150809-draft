@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20040522.ebuild,v 1.4 2004/06/30 12:07:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20040710.ebuild,v 1.1 2004/07/12 13:43:59 vapier Exp $
 
 inherit enlightenment eutils flag-o-matic
 
@@ -23,7 +23,6 @@ DEPEND=">=dev-util/pkgconfig-0.5
 	virtual/libc
 	sys-devel/gcc
 	app-admin/fam
-	>=sys-fs/efsd-0.0.1.20031013
 	>=x11-libs/evas-1.0.0.20031018_pre12
 	>=dev-db/edb-1.0.4
 	>=dev-libs/eet-0.9.0.20031013
@@ -42,7 +41,6 @@ src_compile() {
 	export MY_ECONF="
 		--enable-ecore-ipc
 		--enable-canvas-evas2
-		--disable-backend-efsd
 		--enable-extra-themes
 		--enable-extra-iconsets
 		`use_enable perl pcre`
