@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.6 2002/12/20 18:48:30 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.7 2003/02/09 18:51:40 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> gdbm-1.8.0-r5.ebuild :
+  Added hppa to keywords.
 
 *gdbm-1.8.0-r5 (20 Dec 2002)
 
