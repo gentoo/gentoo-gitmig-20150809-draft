@@ -1,13 +1,14 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.5 2003/04/24 10:16:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.6 2003/04/24 10:19:56 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
 # repoman was complaining at me too much
 
 # TODO LIST
+# * Finish install cleanup
 # * USE flags
 # - needs to get cleaned up
 # - dependancies on more things for correctness
