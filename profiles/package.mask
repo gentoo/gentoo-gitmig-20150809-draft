@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
+# no corresponding PyQt on cvs to get this thing to compile
+dev-python/anygui
+
 # <blizzy@gentoo.org> (30 Jul 2002)
 # masked for testing
 =net-im/gnomeicu-0.98.2-r4
@@ -32,7 +36,8 @@ media-video/kxine
 
 # George <george@gentoo.org> (29 Jul 2002)
 # masked for testing
-dev-libs/lam-mpi
+#dev-libs/lam-mpi
+#works for me (drobbins@gentoo.org), and fftw needs it so I'm unmasking it (30 Jul 2002)
 
 # Spider <spider@gentoo.org> (29 Jul 2002)
 # New version, lots of different USE flags that I havent tested together.
@@ -369,6 +374,7 @@ net-mail/exmh
 # and a more erratic release schedule; only tomcat 3.2.2
 # depends on it, and 3.2.2 is old.
 dev-java/jaxp
+=dev-db/postgresql-7.1-r1
 =net-www/tomcat-3.2.2
 
 #azarah@gentoo.org (03 Jul 2002)
@@ -758,17 +764,9 @@ dev-lang/tcl-tk
 # Doesn't seem to work with xfs :-(
 >=sys-apps/grub-0.91
 
-#tod@gentoo.org, 8 Feb 2002
-#buggy version, use 0.1.1 instead
-=dev-python/anygui-0.1
-
-#simply won't compile for us
-=dev-python/PyQt-3.0
-
 # We are masking out the older pams now, in order to get the
 # new one propogated into everybodys systems. ( Woodchip - Mar 20 2002)
 <sys-libs/pam-0.75-r4
-
 
 =dev-ruby/mod-ruby-0.9.7
 
