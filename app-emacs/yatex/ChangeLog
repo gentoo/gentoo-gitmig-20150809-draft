@@ -1,8 +1,14 @@
 # ChangeLog for app-emacs/yatex
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.4 2003/10/07 14:36:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.5 2003/10/08 15:56:46 usata Exp $
 
 *yatex-1.71 (12 Sep 2003)
+
+  09 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> yatex-1.71.ebuild,
+  files/yatex-1.71-yatexhlp-gentoo.diff:
+  Turned to not byte-compile because it fails on alpha, ppc and sparc.
+  Added ~alpha, ~ppc and ~sparc keywords.  Fixed yatexhlp install
+  directory path.
 
   07 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> yatex-1.71.ebuild,
   files/lp.el:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.71.ebuild,v 1.2 2003/10/07 14:36:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.71.ebuild,v 1.3 2003/10/08 15:56:46 usata Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ DESCRIPTION="YaTeX: Yet Another TeX mode for Emacs"
 HOMEPAGE="http://www.yatex.org/"
 SRC_URI="http://www.yatex.org/${P/-/}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha ~sparc ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -25,27 +25,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-yatexhlp-gentoo.diff
 }
 
 src_compile() {
 
-	local yahtml common lisp yahtmllisp
-	yahtml="yahtml.el"
-	common="yatexlib.el yatexprc.el"
-	lisp="comment.el yatex.el yatexadd.el yatexgen.el
-		yatexenv.el ${common} yatexmth.el
-		yatexhks.el yatexhlp.el yatexm-o.el yatexsec.el
-		yatexhie.el ${yahtml}"
-	yahtmllisp="${yahtml} ${common}"
-
-	emacs -q --no-site-file -batch \
-		-l ${FILESDIR}/lp.el \
-		-l ./yatexlib.el \
-		-e batch-byte-compile ${lisp} || die
-	emacs -q --no-site-file -batch \
-		-l ${FILESDIR}/lp.el \
-		-l ./yatexlib.el \
-		-e bcf-and-exit ${yahtmllisp} || die
+	# compilation b0rks on alpha, sparc and ppc
 
 	cd docs
 	mv yatexe yatex.info
@@ -58,12 +43,13 @@ src_compile() {
 
 src_install() {
 
-	elisp-install ${PN} *.el *.elc
+	elisp-install ${PN} *.el
 	elisp-site-file-install ${FILESDIR}/50yatex-gentoo.el
+	elisp-install ${PN} help/YATEXHLP*
 
-	dodoc help/YATEXHLP.eng docs/*.eng
+	dodoc docs/*.eng
 	if [ -n "`use cjk`" ] ; then
-		dodoc 00readme install help/YATEXHLP.jp
+		dodoc 00readme install
 		dodoc docs/{htmlqa,qanda} docs/*.doc
 	fi
 	for i in docs/*.info; do
