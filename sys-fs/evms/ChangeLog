@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.8 2004/02/25 20:12:42 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.9 2004/02/25 22:21:16 iggy Exp $
+
+  25 Feb 2004; Brian Jackson <iggy@gentoo.org> evms-2.2.2.ebuild:
+  bump 2.2.2 to x86
 
   25 Feb 2004; Brian Jackson <iggy@gentoo.org> evms-2.2.1.ebuild,
   evms-2.2.2.ebuild:
