@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.30 2004/07/17 22:33:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.31 2004/07/23 12:12:15 agriffis Exp $
+
+  23 Jul 2004; Aron Griffis <agriffis@gentoo.org> a2ps-4.13c.ebuild:
+  Run gnuconfig_update regardless of arch
 
   17 Jul 2004; Tom Gall <tgall@gentoo.org> a2ps-4.13c.ebuild:
   stable on ppc64 bug #55806

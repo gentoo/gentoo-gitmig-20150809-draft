@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.16 2004/07/17 22:33:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.17 2004/07/23 12:12:15 agriffis Exp $
 
 inherit gnuconfig eutils
 
@@ -29,14 +29,12 @@ RDEPEND="virtual/ghostscript
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	if use alpha; then
-		gnuconfig_update || die "gnuconfig_update failed"
-	fi
 	cd ${S}
 	epatch ${FILESDIR}/${P}-locale-gentoo.diff
 	epatch ${FILESDIR}/a2ps-4.13-stdout.diff
 	epatch ${FILESDIR}/${PV}-gcc34.patch
 	use cjk && epatch ${DISTDIR}/${P}-ja_nls.patch.gz
+	gnuconfig_update || die "gnuconfig_update failed"
 }
 
 src_compile() {
