@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-image
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.10 2003/10/06 18:50:41 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.11 2004/03/14 16:58:31 geoman Exp $
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> sdl-image-1.2.3.ebuild:
+  Added ~mips keyword.
 
   06 Oct 2003; Aron Griffis <agriffis@gentoo.org> sdl-image-1.2.3.ebuild:
   Stable on alpha

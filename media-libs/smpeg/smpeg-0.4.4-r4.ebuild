@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.11 2004/01/29 07:43:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.12 2004/03/14 16:51:57 geoman Exp $
 
 DESCRIPTION="SDL MPEG Player Library"
 HOMEPAGE="http://www.lokigames.com/development/smpeg.php3"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips"
 IUSE="X gtk opengl"
 
 DEPEND=">=media-libs/libsdl-1.2.0
