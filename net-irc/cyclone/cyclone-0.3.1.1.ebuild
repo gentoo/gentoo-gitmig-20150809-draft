@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.2 2002/07/12 05:57:02 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cyclone/cyclone-0.3.1.1.ebuild,v 1.3 2002/07/12 06:04:35 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IRC daemon with hostname cloaking, SOCKS proxy checking and other advanced features"
@@ -79,7 +79,8 @@ END_OF_CONFIG
 
 	mv Config Config.orig
 	sed -e 's|DEFOPT="-O2"|DEFOPT="${CFLAGS}"|' \
-		-e 's|more ChangeLog||'   Config.orig > Config
+		-e 's|more ChangeLog||' \
+		-e 's|clear||' Config.orig > Config
 	chmod +x Config
 	yes "" | ./Config -n
 
