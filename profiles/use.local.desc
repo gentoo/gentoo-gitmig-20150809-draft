@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.444 2004/06/22 17:16:42 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.445 2004/06/23 17:04:14 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -72,6 +72,7 @@ app-sci/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to app-sc
 app-sci/orsa:cln - Use the Class Library for Numbers for calculations
 app-sci/orsa:gsl - Use the GNU scientific library for calculations
 app-sci/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
+app-sci/seaview:clustalw - Use clustalw for sequence realignment
 app-sci/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
 app-sci/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
