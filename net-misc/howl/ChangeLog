@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.23 2005/02/25 02:17:34 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.24 2005/03/13 08:35:46 stkn Exp $
+
+  13 Mar 2005; Stefan Knoblich <stkn@gentoo.org> howl-0.9.8.ebuild:
+  Added patch to fix compilation problems due to missing type declarations
+  (#84030, thanks to Robin Princeley <princely@emirates.net.ae> and Greg Symons
+  <gsymons@gsconsulting.biz> for finding a fix and creating this patch).
 
   24 Feb 2005; Kito <kito@gentoo.org> howl-0.9.8.ebuild:
   ~ppc-macos keyword

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.8.ebuild,v 1.4 2005/02/25 02:17:34 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.8.ebuild,v 1.5 2005/03/13 08:35:46 stkn Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,6 +15,14 @@ IUSE=""
 
 DEPEND="virtual/libc"
 # sys-devel/automake - needed if we remove the html docs from /usr/share
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# patch fixes #84030 (missing linux/types.h include)
+	epatch ${FILESDIR}/${P}-types.patch
+}
 
 src_compile() {
 	# The following solves compilation using linux26-headers-2.6.8.1-r2 on ia64.
