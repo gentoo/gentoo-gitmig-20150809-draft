@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b.ebuild,v 1.3 2003/10/05 02:23:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b.ebuild,v 1.4 2003/10/05 02:37:02 vapier Exp $
 
 inherit games
 
@@ -23,6 +23,7 @@ S=${WORKDIR}
 
 pkg_setup() {
 	check_license
+	games_pkg_setup
 }
 
 src_unpack() {

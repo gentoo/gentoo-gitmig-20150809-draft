@@ -26,6 +26,7 @@ S=${WORKDIR}
 
 pkg_setup() {
 	check_license || die "License check failed"
+	games_pkg_setup
 }
 
 src_unpack() {
