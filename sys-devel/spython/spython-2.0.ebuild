@@ -1,20 +1,18 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0.ebuild,v 1.1 2001/01/01 23:33:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0.ebuild,v 1.2 2001/01/11 23:11:27 drobbins Exp $
 
 P=spython-1.5.2      
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
-DESCRIPTION="A really great language"
+DESCRIPTION="A really great language -- static minimalist binary only"
 SRC_URI="http://www.python.org/ftp/python/src/BeOpen-Python-2.0.tar.bz2 
 	 http://www.azstarnet.com/~donut/programs/fchksum/python-fchksum-1.1.tar.gz"
 
-HOMEPAGE="http://www.python.org
-	  http://www.azstarnet.com/~donut/programs/fchksum/"
+HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum/"
 DEPEND=">=sys-libs/gpm-1.19.3"
-RDEPEND="$DEPEND
-	 >=sys-apps/bash-2.04"
+RDEPEND="$DEPEND >=sys-apps/bash-2.04 >=dev-lang/python-2.0"
 PROVIDE="virtual/python-2.0"
 
 src_unpack() {
@@ -42,7 +40,7 @@ src_unpack() {
 src_compile() {   
     cd ${S}
     export LDFLAGS=-static
-    try ./configure --prefix=/ --without-libdb
+    try ./configure --prefix=/usr --without-libdb
 	#libdb3 support is available from http://pybsddb.sourceforge.net/; the one
 	#included with python is for db 1.85 only.
     cp Makefile Makefile.orig
@@ -58,16 +56,8 @@ src_compile() {
 }
 
 src_install() {                 
-                
-    try make install prefix=${D}
-    mv ${D}/bin/python ${D}/bin/spython
-#    mv ${D}/bin/python1.5 ${D}/bin/spython1.5
-   # for i in lib-dynload lib-stdwin lib-tk test
-   # do
-   #     rm -r ${D}/lib/python1.5/${i}
-   # done
-   # rm -r ${D}/include 
-    rm -r ${D}/man
-    dodoc README
+	#just install the static binary
+	exeinto /usr/bin
+	newexe ${S}/python spython
 }
 
