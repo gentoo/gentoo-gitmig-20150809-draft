@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.15.ebuild,v 1.13 2004/01/11 02:39:00 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.15.ebuild,v 1.14 2004/01/13 14:34:12 gustavoz Exp $
 
 DESCRIPTION="A bash script for converting XML and DocBook formatted documents to a variety of output formats"
 HOMEPAGE="http://cyberelk.net/tim/xmlto/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ~ppc ~sparc alpha ia64"
+KEYWORDS="x86 ~ppc sparc alpha ia64"
 
 DEPEND="app-shells/bash
 	dev-libs/libxslt
