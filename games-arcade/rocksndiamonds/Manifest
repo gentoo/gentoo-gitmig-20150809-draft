@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4381c1006a095527ac5c4a231d75dc8 ChangeLog 2315
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9f4e4408282e8ce895cb6743108844fd rocksndiamonds-3.1.0.ebuild 2163
+MD5 b31f1d3d43d3f4a37e10efde1e89c448 rocksndiamonds-3.1.0.ebuild 2181
 MD5 452148bfa791d662b14800a1c6776ced rocksndiamonds-3.0.8.ebuild 1543
+MD5 a6efc6dcab3255f10fefcffddc373999 ChangeLog 2457
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 c0dd06c0fe32de45f69611091418a4ea files/digest-rocksndiamonds-3.0.8 194
 MD5 5754bf31f3faf0aa3505b3c3b1c0a0ee files/digest-rocksndiamonds-3.1.0 406
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBVSD/HTu7gpaalycRAnLZAKDPNWMXC44YSnNz6l4upzOr9Hz7qwCglnou
-KO9e1Xso/dHJy4GXlpempQQ=
-=UUxk
------END PGP SIGNATURE-----
