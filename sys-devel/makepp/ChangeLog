@@ -1,0 +1,9 @@
+# ChangeLog for sys-devel/makepp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/makepp/ChangeLog,v 1.1 2003/04/27 22:49:19 rac Exp $
+
+*makepp-1.18 (27 Apr 2003)
+
+  27 Apr 2003; <rac@gentoo.org> makepp-1.18.ebuild:
+  Initial import, requested in bug 4191
+
