@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.23 2004/06/06 00:14:30 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.24 2004/06/07 17:16:08 khai Exp $
+
+*glade-2.6.0 (07 Jun 2004)
+
+  07 Jun 2004; Yi Qiang <khai@gentoo.org> glade-2.6.0.ebuild:
+  Fixed slots
 
   05 Jun 2004; Yi Qiang <khai@gentoo.org> :
   Committed the overdue glade-2.6, also marked 2.0.1 stable on x86

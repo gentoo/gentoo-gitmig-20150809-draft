@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.6.0.ebuild,v 1.1 2004/06/06 00:14:30 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.6.0.ebuild,v 1.2 2004/06/07 17:16:08 khai Exp $
 
 inherit gnome.org eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="a GUI Builder.  This release is for GTK+ 2 and GNOME 2."
 HOMEPAGE="http://glade.gnome.org/"
 
 LICENSE="GPL-2"
-SLOT="2.6"
+SLOT="2"
 KEYWORDS="~x86"
 IUSE="gnome gnomedb"
 
