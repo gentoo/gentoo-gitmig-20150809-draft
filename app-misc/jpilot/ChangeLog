@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jpilot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.3 2002/05/28 06:32:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.4 2002/07/22 17:02:52 owen Exp $
+
+  22 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  Fixed Various to make package Repoman Complaint.
 
 *jpilot-0.99.2-r1 (27 May 2002)
 
