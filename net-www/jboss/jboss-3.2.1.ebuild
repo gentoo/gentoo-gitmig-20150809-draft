@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.1.ebuild,v 1.2 2003/05/28 08:15:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.1.ebuild,v 1.3 2003/06/10 00:46:21 msterret Exp $
 
 MY_P="${P}-src"
 
@@ -14,6 +14,7 @@ KEYWORDS="~x86"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	dev-java/ant"
 
 INSTALL_DIR=/opt/${P}
@@ -79,7 +80,7 @@ pkg_postinst() {
 	chgrp -R jboss ${INSTALL_DIR}/server
 	chown jboss /var/log/jboss
 	chgrp jboss /var/log/jboss
-	chmod -R g+w ${INSTALL_DIR}/server	
+	chmod -R g+w ${INSTALL_DIR}/server
 
 	einfo ""
 	einfo "Access summary"
