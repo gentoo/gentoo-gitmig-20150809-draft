@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-swallow
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.5 2004/08/07 23:07:56 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.6 2004/11/12 21:09:55 s4t4n Exp $
+
+*gnome-swallow-1.2 (12 Nov 2004)
+
+  12 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> gnome-swallow-1.2.ebuild:
+  Version bump.
+  gnome-swallow-1.1.ebuild:
+  Updated HOMEPAGE and SRC_URI.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> :
   Typo in DESCRIPTION: usefull -> useful. Bug 59717.
