@@ -1,24 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.55.ebuild,v 1.4 2004/02/11 00:01:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.55.ebuild,v 1.5 2004/03/12 11:50:04 mr_bones_ Exp $
 
 DESCRIPTION="A GUI for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen."
 HOMEPAGE="http://www.abo.fi/~jmunsin/gcombust/"
-LICENSE="GPL-2"
+SRC_URI="http://www.abo.fi/~jmunsin/gcombust/${P}.tar.gz"
 
-IUSE="nls"
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	nls? ( sys-devel/gettext )"
 
 RDEPEND="${DEPEND}
 	app-cdr/cdrtools"
-
-SRC_URI="http://www.abo.fi/~jmunsin/gcombust/${P}.tar.gz"
-S=${WORKDIR}/${P}
-
-SLOT="0"
 
 src_compile() {
 	local myconf
