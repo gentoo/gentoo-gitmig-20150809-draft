@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.9 2004/09/09 12:25:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.10 2004/09/16 02:18:58 pvdabeel Exp $
 
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg"
 
@@ -14,14 +14,14 @@ SRC_URI="${HOMEPAGE}/download/${MYP}.tar.bz2"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc ~sparc alpha ~mips ~hppa ~amd64 ~ia64 macos ~ppc64"
+KEYWORDS="~x86 ppc ~sparc alpha ~mips ~hppa ~amd64 ~ia64 macos ~ppc64 ppc-macos"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
 # mode. libpng is required to compile links in graphic mode
 # (not required in text mode), so let's add libpng for X? and fbcon?
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
-	!macos? ( gpm? ( sys-libs/gpm ) )
+	!macos? ( !ppc-macos? ( gpm? ( sys-libs/gpm ) ) )
 	javascript? ( >=sys-devel/flex-2.5.4a )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
