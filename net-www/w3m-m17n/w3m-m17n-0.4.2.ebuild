@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.11 2004/06/25 01:15:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.12 2004/06/25 17:56:39 agriffis Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ PROVIDE="virtual/textbrowser
 S=${WORKDIR}/${P/-m17n/}
 
 pkg_setup() {
-	if [ -n "`use X`" -a -n "`use nopixbuf`" -a -z "`use imlib2`" -a -z "`use imlib`" ] ; then
+	if use X && use nopixbuf && ! use imlib2 && ! use imlib ; then
 		ewarn
 		ewarn "If you set USE=\"nopixbuf\" (disable gdk-pixbuf for w3mimgdisplay),"
 		ewarn "you need to enable either imlib2 or imlib USE flag."
@@ -79,13 +79,13 @@ src_unpack() {
 src_compile() {
 	local myconf migemo_command imglib
 
-	if [ -n "`use X`" ] ; then
+	if use X ; then
 		myconf="${myconf} --enable-image=x11,fb `use_enable xface`"
-		if [ ! -n "`use nopixbuf`" ] ; then
+		if ! use nopixbuf ; then
 			imglib="gdk_pixbuf"
-		elif [ -n "`use imlib2`" ] ; then
+		elif use imlib2 ; then
 			imglib="imlib2"
-		elif [ -n "`use imlib`" ] ; then
+		elif use imlib ; then
 			imglib="imlib"
 		else
 			# defaults to gdk_pixbuf
@@ -95,7 +95,7 @@ src_compile() {
 		myconf="${myconf} --enable-image=no"
 	fi
 
-	if [ -n "`use migemo`" ] ; then
+	if use migemo ; then
 		migemo_command="migemo -t egrep /usr/share/migemo/migemo-dict"
 	else
 		migemo_command="no"
