@@ -1,10 +1,14 @@
 # ChangeLog for dev-java/sun-j2sdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.16 2003/04/16 17:26:05 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.17 2003/04/23 20:47:57 strider Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *sun-j2sdk-1.4.1 (12 Jan 2003)
+
+  23 Apr 2003; Adrian Almenar <strider@gentoo.org> files/sun-j2sdk-1.4.1:
+  Fixed Bugs #18067 #19722.
+
   16 Apr 2003; Stefan Jones <cretin@gentoo.org> files/1.4.1/j2sdk-1.4.1-force-motif.patch :
   Edit so motif compiles with newer glibc-2.3.2 (gencat problem)
 
@@ -18,6 +22,10 @@
   New version, works here, have fun!
 
 *sun-j2sdk-1.4.0-r3 (21 Nov 2002)
+
+  23 Apr 2003; Adrian Almenar <strider@gentoo.org> files/sun-j2sdk-1.4.0:
+  Fixed Bugs #18067 #19722. Changed to stable.
+
   12 Jan 2003; Stefan Jones <cretin@gentoo.org> sun-j2sdk-1.4.0-r3.ebuild:
   Cleaned up the last update.
 
