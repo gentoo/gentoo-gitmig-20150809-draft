@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/superadduser
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.3 2002/07/30 04:18:49 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.4 2002/08/18 00:14:42 karltk Exp $
+
+*superadduser-1.0-r2 (18 Aug 2002)
+
+  18 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> superadduser-1.0-r2.ebuild files/digest-superadduser-1.0-r2:
+
+  # INSERT COMMENT HERE
+
+  Removed superadduser-1.0-r1.ebuild files/digest-superadduser-1.0-r1
 
 *superadduser-1.0-r1 (16 Apr 2002)
 

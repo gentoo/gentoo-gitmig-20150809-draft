@@ -2,6 +2,7 @@
 # adduser script for use with shadow passwords and useradd command.
 # by Hrvoje Dogan <hdogan@student.math.hr>, Dec 1995.
 # Modified by Patrick Volkerding, Oct 1997, Mar 1999, May 2000.
+# Modifier by Karl Trygve Kalleberg, Aug 2002.
 
 echo
 echo -n "Login name for new user []: "
@@ -100,6 +101,7 @@ echo Making new account...
 /usr/sbin/useradd $GHME -m $GEXP $GGID $GAGID $GSHL $GUID $LOGIN
 if [ -d $HME ]; then
   chmod 711 $HME
+  chown $LOGIN:$GGID $HME
 fi
 echo
 /usr/bin/chfn $LOGIN
