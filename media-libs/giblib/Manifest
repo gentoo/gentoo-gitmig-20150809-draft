@@ -3,13 +3,12 @@ Hash: SHA1
 
 MD5 cab6efc72140e48af2e7bf3d603c6780 ChangeLog 2032
 MD5 6b36114042766b590a929750635602fe metadata.xml 640
-MD5 a060d8bb0a642344131c4b0317069ad2 giblib-1.2.4.ebuild 848
-MD5 bd2c6f3969e5aa806ef43f96c23f4ace files/imlib-x-test.c 84
+MD5 42aae5c5168b66954313eb83f4fbbe13 giblib-1.2.4.ebuild 820
 MD5 6ddf4a6071a44007ba8be97ab21ebfd4 files/digest-giblib-1.2.4 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB3yZuroRuSHgZdywRAgJmAKCFUUDtVrsrdRy9fQhmwuHjJxw0XwCff/MV
-W5oYxXBbKMNzinCLFoY8Gos=
-=YqhD
+iD8DBQFB4o1broRuSHgZdywRAif/AJ9m/7oPjs2IlGzX76yVdugI/ME9iwCeIRRk
+Hqy750+POe/nxJKbIuQokA0=
+=P+Ih
 -----END PGP SIGNATURE-----
