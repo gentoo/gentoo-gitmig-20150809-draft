@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry Alexandratos <jerry@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/app-editors/vile/vile-9.2-r1.ebuild,v 1.3 2001/11/10 02:54:28 hallski Exp
+# Author Jerry A! <jerry@thehutt.org>
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2p.ebuild,v 1.2 2001/11/27 07:54:10 jerrya Exp $
 
 S=${WORKDIR}/vile-9.2
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
