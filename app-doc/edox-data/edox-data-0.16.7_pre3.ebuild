@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/edox-data-0.16.7_pre3.ebuild,v 1.7 2005/01/01 13:12:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/edox-data-0.16.7_pre3.ebuild,v 1.8 2005/01/28 02:24:28 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/enlightenment/enlightenment-docs-${EDOXVER}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=x11-wm/enlightenment-0.16.7_pre3"
