@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.13 2005/02/25 02:45:37 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.14 2005/03/22 07:33:50 sekretarz Exp $
+
+*limewire-4.8.1 (22 Mar 2005)
+
+  22 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +limewire-4.8.1.ebuild:
+  Version bump. This release fixes security hole, bug #85380
 
 *limewire-4.6.0 (24 Feb 2005)
 
