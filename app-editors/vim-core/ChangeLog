@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.136 2005/03/08 21:44:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.137 2005/03/18 00:00:47 j4rg0n Exp $
+
+  17 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org>
+  vim-core-7.0_alpha20050308.ebuild:
+  Testing ppc-macos progressive profile
 
 *vim-core-7.0_alpha20050308 (08 Mar 2005)
 
