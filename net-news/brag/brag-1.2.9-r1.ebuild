@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/brag/brag-1.2.9-r1.ebuild,v 1.1 2003/02/11 20:43:58 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/brag/brag-1.2.9-r1.ebuild,v 1.2 2003/02/11 21:21:12 rajiv Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ RDEPEND="dev-lang/tcl
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch < ${FILESDIR}/${P}-gentoo.patch
+	patch < ${FILESDIR}/${P}-${PR}-gentoo.patch
 }	
 
 src_install() {
