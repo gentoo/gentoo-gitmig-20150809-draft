@@ -1,6 +1,6 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-521e.ebuild,v 1.2 2002/08/17 13:31:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-521e.ebuild,v 1.3 2002/09/06 22:12:50 owen Exp $
 
 DESCRIPTION="Create & extract files from DOS .ARC files."
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.kiarchive.ru/pub/unix/arcers/${MY_P}.tar.Z"
 S=${WORKDIR}
 
 HOMEPAGE=""
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 SLOT="0"
 LICENSE="ARC"
 

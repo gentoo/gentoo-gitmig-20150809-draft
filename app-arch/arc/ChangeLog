@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/arc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.1 2002/08/17 13:25:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.2 2002/09/06 22:12:50 owen Exp $
 
 *arc-521e (17 Aug 2002)
+
+  6 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Doesn't work on PPC. Added -ppc to KEYWORDS.
 
   17 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> arc-521e.ebuild:
   Initial import. Ebuild submitted by Enrico Morelli <morelli@cerm.unifi.it>.
