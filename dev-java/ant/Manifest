@@ -5,8 +5,6 @@ MD5 339d83bd5e86d9310b45f399a62be9c0 ant-1.6.0.ebuild 2794
 MD5 174198e11b21538922ec6cb51c77b36b ChangeLog 8435
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 63b5b63f49808fff86cf74d4bc318dd9 ant-1.5.4-r2.ebuild 1475
-MD5 16fc30727700598832d64bbdda5d897a ant-1.5.4.ebuild 2761
-MD5 8d9dbdc8011a4b6ca468537db70bd4fb files/digest-ant-1.5.4 74
 MD5 c2a3ad39a9e095b30108083f4002b384 files/digest-ant-1.6.0 74
 MD5 4383441650437fec5622070e48e4324c files/build.sh-exit-fix.patch.gz 256
 MD5 55ece9ccf573b244b3dff966839528c5 files/rpmbuild.patch.gz 1164
