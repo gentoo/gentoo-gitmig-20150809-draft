@@ -1,43 +1,40 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.14 2002/12/09 04:17:41 manson Exp $
-
-DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators."
-S=${WORKDIR}/vmware-distrib
-NP="VMware-workstation-3.1.1-1790"
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.0.2230-r1.ebuild,v 1.1 2002/12/16 18:46:18 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware. The agreeing to a licence is part of the configure step
 # which the user must run manually.
-SRC_PATH0="http://vmware-svca.www.conxion.com/software"
-SRC_PATH1="http://www.vmware.com/download1/software"
-SRC_PATH2="ftp://download1.vmware.com/pub/software"
-SRC_PATH3="http://vmware-chil.www.conxion.com/software"
-SRC_PATH4="http://vmware-heva.www.conxion.com/software"
-SRC_PATH5="http://vmware.wespe.de/software"
-SRC_PATH6="ftp://vmware.wespe.de/pub/software"
 
-SRC_URI="$SRC_PATH0/${NP}.tar.gz
-	$SRC_PATH1/${NP}.tar.gz
-	$SRC_PATH2/${NP}.tar.gz
-	$SRC_PATH3/${NP}.tar.gz
-	$SRC_PATH4/${NP}.tar.gz
-	$SRC_PATH5/${NP}.tar.gz
-	$SRC_PATH6/${NP}.tar.gz"
-
+S=${WORKDIR}/vmware-distrib
+NP="VMware-workstation-3.2.0-2230"
+DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
+SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
+	http://www.vmware.com/download1/software/${NP}.tar.gz
+	ftp://download1.vmware.com/pub/software/${NP}.tar.gz
+	http://vmware-chil.www.conxion.com/software/${NP}.tar.gz
+	http://vmware-heva.www.conxion.com/software/${NP}.tar.gz
+	http://vmware.wespe.de/software/${NP}.tar.gz
+	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
+
 SLOT="0"
 LICENSE="vmware"
 KEYWORDS="x86 -ppc -sparc "
 IUSE="kde"
-DEPEND="virtual/glibc virtual/x11 sys-kernel/linux-headers
-		>=sys-devel/perl-5 ~dev-lang/tcl-8.3.3"
-#debug is needed to prevent a segfault from stripping vmware executables
-export DEBUG="yes"
+
+DEPEND="virtual/glibc
+	virtual/x11
+	sys-kernel/linux-headers
+	>=sys-devel/perl-5
+	~dev-lang/tcl-8.3.3"
+
 RESTRICT="nostrip"
 
-src_install () {
-	# Copy:
+src_install() {
+	# lets make gcc happy regardless of what version we're using
+	patch -p0 < ${FILESDIR}/${PVR}/vmware-config.pl-gcc-generalized.patch
+
 	dodir /opt/vmware/bin
 	cp -a bin/* ${D}/opt/vmware/bin/
 	# vmware and vmware-ping needs to be suid root.
@@ -80,17 +77,14 @@ src_install () {
 	# This is to fix a problem where if someone merges vmware and then
 	# before configuring vmware they upgrade or re-merge the vmware
 	# package which would rmdir the /etc/vmware/init.d/rc?.d directories.
-	touch  ${D}/etc/vmware/init.d/rc{0,1,2,3,4,5,6}.d/.keep
+	keepdir /etc/vmware/init.d/rc{0,1,2,3,4,5,6}.d
 
 	# A simple icon I made
 	dodir /opt/vmware/lib/icon
 	insinto /opt/vmware/lib/icon
 	doins ${FILESDIR}/${PVR}/vmware.png
 
-	if [ "`use kde`" ]
-	then
-		# KDE 2 - not supported anymore
-		# recent setups:
+	if [ "`use kde`" ] ; then
 		dodir /usr/share/applnk/Applications
 		insinto /usr/share/applnk/Applications
 		doins "${FILESDIR}/${PVR}/VMwareWorkstation.desktop"
@@ -108,7 +102,7 @@ src_install () {
 	echo "answer INITSCRIPTSDIR /etc/vmware/init.d" >> ${locations}
 }
 
-pkg_preinst () {
+pkg_preinst() {
 	# This must be done after the install to get the mtimes on each file
 	# right. This perl snippet gets the /etc/vmware/locations file code:
 	# perl -e "@a = stat('bin/vmware'); print \$a[9]"
@@ -121,19 +115,15 @@ pkg_preinst () {
 
 	einfo "Generating /etc/vmware/locations file."
 	d=`echo ${D} | wc -c`
-	for x in `find ${D}/opt/vmware ${D}/etc/vmware`
-	do
+	for x in `find ${D}/opt/vmware ${D}/etc/vmware` ; do
 		x="`echo ${x} | cut -c ${d}-`"
-		if [ -d ${D}/${x} ]
-		then
+		if [ -d ${D}/${x} ] ; then
 			echo "directory ${x}" >> ${D}/etc/vmware/locations
 		else
 			echo -n "file ${x}" >> ${D}/etc/vmware/locations
-			if [ "${x}" == "/etc/vmware/locations" ]
-			then
+			if [ "${x}" == "/etc/vmware/locations" ] ; then
 				echo "" >> ${D}/etc/vmware/locations
-			elif [ "${x}" == "/etc/vmware/not_configured" ]
-			then
+			elif [ "${x}" == "/etc/vmware/not_configured" ] ; then
 				echo "" >> ${D}/etc/vmware/locations
 			else
 				echo -n " " >> ${D}/etc/vmware/locations
@@ -150,23 +140,19 @@ pkg_postinst () {
 	# removed when the configuration is run. This doesn't remove the file
 	# It just tells the vmware-config.pl script it can delete it.
 	einfo "Updating /etc/vmware/locations"
-	for x in /etc/vmware/._cfg????_locations
-	do
-		if [ -f $x ]
-		then
+	for x in /etc/vmware/._cfg????_locations ; do
+		if [ -f $x ] ; then
 			cat $x >> /etc/vmware/locations
 			rm $x
 		fi
 	done
 
-	einfo "Activating vmware init scripts..."
-	rc-update add vmware default
 	einfo
 	einfo "You need to run /opt/vmware/bin/vmware-config.pl to complete the install."
 	einfo
 }
 
-pkg_postrm () {
+pkg_postrm() {
 	einfo 
 	einfo "To remove all traces of vmware you will need to remove the files"
 	einfo "in /etc/vmware/, /etc/init.d/vmware, /lib/modules/*/misc/vm*.o,"
