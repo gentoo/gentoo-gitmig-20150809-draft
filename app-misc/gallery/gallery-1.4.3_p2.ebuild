@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.3_p2.ebuild,v 1.8 2004/07/13 17:50:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.3_p2.ebuild,v 1.9 2004/07/15 19:53:43 tigger Exp $
 
 inherit webapp-apache
 
@@ -59,6 +59,7 @@ pkg_postinst() {
 	einfo "--------------------------------------------"
 	einfo "For upgrades, just run"
 	einfo "# cd ${destdir}"
+	einfo "# sh ./configure.sh"
 	einfo "# sh ./secure.sh"
 	einfo
 }
