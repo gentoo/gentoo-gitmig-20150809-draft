@@ -1,0 +1,8 @@
+# ChangeLog for app-sci/udunits
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/ChangeLog,v 1.1 2003/11/03 02:57:33 nerdboy Exp $
+
+*udunits-1.12.0 (02 Nov 2003)
+
+  02 Nov 2003; <nerdboy@gentoo.org> udunits-1.12.0.ebuild:
+  new ebuild for the Unidata units library and perl module
