@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.3 2004/12/27 00:41:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.4 2004/12/27 05:18:11 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dts dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -37,10 +37,11 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	bidi? ( dev-libs/fribidi )
 	cdparanoia? ( media-sound/cdparanoia )
 	directfb? ( dev-libs/DirectFB )
+	dts? ( media-libs/libdts )
 	dvd? ( dvdread? ( media-libs/libdvdread ) )
 	encode? (
 		media-sound/lame
-		>=media-libs/libdv-0.9.5
+		dv? ( >=media-libs/libdv-0.9.5 )
 		)
 	esd? ( media-sound/esound )
 	gif? ( media-libs/giflib
@@ -255,7 +256,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable gif)"
 	myconf="${myconf} $(use_enable jpeg)"
 	#myconf="${myconf} $(use_enable ladspa)"
-	#myconf="${myconf} $(use_enable dts)"
+	myconf="${myconf} $(use_enable dts)"
 	myconf="${myconf} $(use_enable lzo liblzo)"
 	myconf="${myconf} $(use_enable matroska internal-matroska)"
 	myconf="${myconf} $(use_enable mpeg external-faad) $(use_enable !mpeg internal-faad)"
