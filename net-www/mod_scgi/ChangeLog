@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_scgi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.9 2004/06/25 15:52:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/ChangeLog,v 1.10 2004/08/16 17:36:24 mr_bones_ Exp $
+
+  16 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  mod_scgi-1.2_alpha1-r1.ebuild, mod_scgi-1.2_alpha1-r2.ebuild,
+  mod_scgi-1.2_alpha1.ebuild, mod_scgi-1.2_alpha2.ebuild:
+  net-www/scgi -> www-apps/scgi
 
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   mod_scgi-1.2_alpha1-r1.ebuild, mod_scgi-1.2_alpha1-r2.ebuild,

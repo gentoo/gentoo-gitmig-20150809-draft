@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/mod_scgi-1.2_alpha1.ebuild,v 1.5 2004/06/25 01:03:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_scgi/mod_scgi-1.2_alpha1.ebuild,v 1.6 2004/08/16 17:36:24 mr_bones_ Exp $
 
 apachedir='1'
 apache=''
@@ -17,7 +17,7 @@ SLOT="${apachedir}"
 KEYWORDS="~x86"
 IUSE="apache2"
 DEPEND="${DEPEND}
-		net-www/scgi
+		www-apps/scgi
 		net-www/apache
 		apache2? ( >=net-www/apache-2 )"
 
