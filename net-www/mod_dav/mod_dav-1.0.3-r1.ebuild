@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r1.ebuild,v 1.9 2004/02/22 16:52:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r1.ebuild,v 1.10 2004/04/04 22:42:27 zul Exp $
 
 MY_V=${PV}-1.3.6
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_dav
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.8 2003/02/23 19:17:46 woodchip Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.9 2004/04/04 22:42:27 zul Exp $
+
+  04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  mod_dav-1.0.3-r1.ebuild:
+  Added metadata.xml, updated header.
 
   23 Feb 2003; Donny Davies <woodchip@gentoo.org> : Fix #14574.
 
