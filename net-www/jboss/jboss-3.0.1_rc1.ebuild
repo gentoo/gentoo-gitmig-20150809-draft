@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.0.1_rc1.ebuild,v 1.2 2003/02/13 11:47:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.0.1_rc1.ebuild,v 1.3 2003/02/13 11:48:07 seemant Exp $
 
 MY_P="jboss-3.0.1RC1-src"
 S=${WORKDIR}/${MY_P}
@@ -16,7 +16,7 @@ DEPEND="${RDEPEND}
 	dev-java/ant"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 INSTALL_DIR=/usr/lib/${P}
 
