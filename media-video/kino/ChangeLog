@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.1 2002/10/14 13:41:09 hanno Exp $
+
+*kino-0.51 (14 Oct 2002)
+
+  14 Oct 2002 Hanno Boeck <hanno@gentoo.org> kino-0.51.ebuild:
+  
+  kino ebuild added.
+  kino is a digital video editing software for linux.
+  Credits to the author Arne Schirmacher.
