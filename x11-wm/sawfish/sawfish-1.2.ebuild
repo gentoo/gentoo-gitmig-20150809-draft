@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.4 2002/11/19 15:01:56 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.5 2002/11/20 22:42:29 azarah Exp $
 
 inherit base
 
@@ -32,6 +32,12 @@ src_unpack() {
 	cd ${S}
 	einfo "Applying fullscreen patch"
 	patch -p0 < ${FILESDIR}/sawfish-1.2-fullscreen.patch
+
+	# Fix Xft2.0 support not working with XFree86 compiled against system
+	# freetype2 ...
+	# <azarah@gentoo.org> (21 Nov 2002)
+	[ -d /usr/include/freetype2/freetype ] \
+		&& ln -s /usr/include/freetype2/freetype ${S}/src/freetype
 }
 
 src_compile() {
