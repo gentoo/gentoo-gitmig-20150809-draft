@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r4.ebuild,v 1.8 2004/06/25 02:33:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r4.ebuild,v 1.9 2004/07/14 23:35:25 agriffis Exp $
 
 S=${WORKDIR}/glimmer-${P_VERSION}
 DESCRIPTION="All-purpose gnome code editor."
@@ -10,6 +10,7 @@ HOMEPAGE="http://glimmer.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=gnome-base/gnome-vfs-1*
