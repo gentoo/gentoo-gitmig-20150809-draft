@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.2.3.ebuild,v 1.2 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.2.3.ebuild,v 1.3 2002/10/19 22:15:41 cselkirk Exp $
 
 IUSE="nls"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://xcin.linux.org.tw/"
 SRC_URI="ftp://xcin.linux.org.tw/pub/xcin/xcin/${P}.tar.gz"
 LICENSE="XCIN"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="${DEPEND}"
 
