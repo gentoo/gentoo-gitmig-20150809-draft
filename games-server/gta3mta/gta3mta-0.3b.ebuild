@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/gta3mta/gta3mta-0.3b.ebuild,v 1.2 2004/02/20 07:31:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/gta3mta/gta3mta-0.3b.ebuild,v 1.3 2004/06/01 20:08:03 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -11,6 +11,7 @@ SRC_URI="dedlinux.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 RESTRICT="fetch"
 
 DEPEND="virtual/glibc

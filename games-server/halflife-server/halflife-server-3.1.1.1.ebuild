@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.1.ebuild,v 1.7 2004/04/19 03:33:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.1.ebuild,v 1.8 2004/06/01 20:13:56 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -13,6 +13,7 @@ HOMEPAGE="http://www.valve.com/ http://www.fileplanet.com/files/50000/58368.shtm
 LICENSE="ValveServer"
 SLOT="0"
 KEYWORDS="-* ~x86"
+IUSE=""
 RESTRICT="nostrip fetch"
 
 DEPEND="sys-apps/util-linux"
