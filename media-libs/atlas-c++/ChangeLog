@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/atlas-c++
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.1 2002/07/18 22:57:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.2 2002/10/01 20:26:07 verwilst Exp $
+
+*atlas-c++-0.4.5 (1 Okt 2002) Bart Verwilst <verwilst@gentoo.org>:
+
+  Updated to 0.4.5, but left 0.4.4 in Portage until the sparc guys test 
+  this.
 
 *atlas-c++-0.4.4 (18 Jul 2002)
 
