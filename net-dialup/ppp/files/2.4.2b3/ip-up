@@ -14,12 +14,28 @@
 if [ "$USEPEERDNS" ]; then
 
 	# add the server supplied DNS entries to /etc/resolv.conf
-	/bin/cp -f /etc/resolv.conf /etc/resolv.conf.old
-	/bin/cat /etc/ppp/resolv.conf >> /etc/resolv.conf
+	# (taken from debian's 0000usepeerdns)
+
+	# follow any symlink to find the real file
+	REALRESOLVCONF=$(readlink --canonicalize /etc/resolv.conf)
+
+	if [ "$REALRESOLVCONF" != "/etc/ppp/resolv.conf" ]; then
+
+	# merge the new nameservers with the other options from the old configuration
+	{
+		grep --invert-match '^nameserver[[:space:]]' $REALRESOLVCONF
+		cat /etc/ppp/resolv.conf
+	} > $REALRESOLVCONF.tmp
+
+	# backup the old configuration and install the new one
+	cp -a $REALRESOLVCONF $REALRESOLVCONF.pppd-backup
+	mv $REALRESOLVCONF.tmp $REALRESOLVCONF
 
 	# Change perms because it b0rked kppp
 	/bin/chmod 640 /etc/resolv.conf
-	/bin/chown --no-dereference root:users /etc/resolv.conf
+	/bin/chown root:users /etc/resolv.conf
+
+	fi
 
 fi
 
