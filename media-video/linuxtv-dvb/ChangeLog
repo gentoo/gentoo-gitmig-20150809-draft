@@ -1,8 +1,13 @@
 # ChangeLog for media-video/linuxtv-dvb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/ChangeLog,v 1.2 2003/03/11 20:04:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/ChangeLog,v 1.3 2003/03/19 18:28:20 mholzer Exp $
 
-*media-video/linuxtv-dvb-1.0.0_pre2 (06 Mar 2003)
+*linuxtv-dvb-1.0.0_pre2 (19 Mar 2003)
+
+  19 Mar 2003; Martin Holzer <mholzer@gentoo.org>
+  linuxtv-dvb-1.0.0_pre2.ebuild:
+  Added info for your kernel config.
+
   11 Mar 2003; Martin Holzer <mholzer@gentoo.org>
   linuxtv-dvb-1.0.0_pre2.ebuild : Added virtual/linux-sources to DEPEND.
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2.ebuild,v 1.4 2003/03/11 20:04:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2.ebuild,v 1.5 2003/03/19 18:28:20 mholzer Exp $
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
@@ -12,6 +12,13 @@ IUSE=""
 DEPEND="virtual/linux-sources"
 #RDEPEND=""
 S=${WORKDIR}/${PN}-1.0.0-pre2
+
+pkg_setup() {
+	einfo ""
+	einfo "Please make sure that the following option is enabled"
+	einfo "in your current kernel 'Multimedia devices'"
+	einfo ""
+}
 
 src_compile() {
     emake
@@ -85,8 +92,10 @@ src_install() {
 
 pkg_postinst() {
     depmod -a
+	einfo ""
     einfo "If you don't use devfs, execute makedev.napi o create"
     einfo "the device nodes. The file is in /usr/share/doc/${PV}/"
+	einfo ""
 }
 
 pkg_postrm() {
