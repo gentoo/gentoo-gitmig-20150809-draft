@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-DOM
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.17 2004/03/20 03:07:02 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.18 2004/03/30 00:40:55 pylon Exp $
+
+  30 Mar 2004; Lars Weiler <pylon@gentoo.org> XML-DOM-1.43.ebuild:
+  stable on ppc
 
   19 Mar 2004; Eric Sammer <esammer@gentoo.org> XML-DOM-1.39-r1.ebuild,
   XML-DOM-1.39-r2.ebuild, XML-DOM-1.39-r3.ebuild, XML-DOM-1.39-r4.ebuild,
