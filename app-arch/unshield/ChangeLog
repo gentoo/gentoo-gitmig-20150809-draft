@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/unshield
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unshield/ChangeLog,v 1.1 2003/09/02 19:13:00 liquidx Exp $
+
+*unshield-0.2 (02 Sep 2003)
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> unshield-0.2.ebuild:
+  initial ebuild
+
