@@ -334,7 +334,7 @@ User Docs:<br/>
 						<a class="altlink" href="http://lists.gentoo.org">Complete list of mailing lists</a><br/>
 						<br/>
 						Other Resources:<br/>
-						<a class="altlink" href="http://www.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> (browse our repository)<br/>
+						<a class="altlink" href="http://www.gentoo.org/cgi-bin/viewcvs.cgi">viewcvs</a> (browse our repository)<br/>
 						IRC: #gentoo on <a class="altlink" href="http://www.openprojects.net/">OPN</a><br/>
 						<br/><br/></p></td></tr></table>
 					</td></tr>
@@ -515,10 +515,13 @@ of your sale will go towards further Gentoo Linux development.</p>
 		</xsl:if>
 	</xsl:otherwise>
 	</xsl:choose>
-	<xsl:apply-templates select="section"/>
+	<xsl:apply-templates select="section">
+	<xsl:with-param name="chapid" value="$chapid"/>
+	</xsl:apply-templates>
 </xsl:template>
 
 <xsl:template match="section">
+	<xsl:param name="chapid"/>
 	<xsl:if test="title">
 		<xsl:variable name="sectid"><xsl:value-of select="$chapid"/>_sect<xsl:number/></xsl:variable>
 		<p class="secthead"><a name="{$sectid}"><xsl:value-of select="title"/>&#160;</a></p>
