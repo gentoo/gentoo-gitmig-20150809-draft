@@ -1,4 +1,4 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
@@ -16,7 +16,7 @@ DEPEND="${DEPEND}
 	>=net-nds/openldap-2.0.11"
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 src_compile() {

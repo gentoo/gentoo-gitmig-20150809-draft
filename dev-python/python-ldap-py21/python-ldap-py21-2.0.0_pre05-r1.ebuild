@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap-py21/python-ldap-py21-2.0.0_pre05-r1.ebuild,v 1.7 2003/11/23 02:24:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap-py21/python-ldap-py21-2.0.0_pre05-r1.ebuild,v 1.8 2004/04/15 20:22:39 mr_bones_ Exp $
 
 PYTHON_SLOT_VERSION=2.1
 
@@ -16,7 +16,7 @@ DEPEND="${DEPEND}
 	>=net-nds/openldap-2.0.11"
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 src_compile() {
