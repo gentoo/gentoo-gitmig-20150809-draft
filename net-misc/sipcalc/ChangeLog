@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sipcalc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.1 2004/11/20 14:22:18 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sipcalc/ChangeLog,v 1.2 2004/12/10 22:25:42 weeve Exp $
+
+  10 Dec 2004; Jason Wever <weeve@gentoo.org> sipcalc-1.1.2.ebuild:
+  Added ~sparc keyword.
 
 *sipcalc-1.1.2 (20 Nov 2004)
 
