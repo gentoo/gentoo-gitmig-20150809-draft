@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xdms/xdms-1.3.1.ebuild,v 1.3 2005/01/01 12:02:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xdms/xdms-1.3.1.ebuild,v 1.4 2005/04/02 11:29:31 dholm Exp $
 
 inherit eutils
 
 DESCRIPTION="xDMS - Amiga DMS disk image decompressor"
 HOMEPAGE="http://freshmeat.net/projects/xdms"
-SRC_URI="http://ee.tut.fi/~heikki/xdms/${P}.tar.gz"
+SRC_URI="http://modeemi.cs.tut.fi/~shd/xdms/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="amd64 x86 ppc"
 IUSE=""
 
 DEPEND="virtual/libc"
