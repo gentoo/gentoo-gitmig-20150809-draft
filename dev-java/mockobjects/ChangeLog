@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mockobjects
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.1 2004/04/27 22:30:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.2 2004/04/28 16:23:10 dholm Exp $
+
+  28 Apr 2004; David Holm <dholm@gentoo.org> mockobjects-0.09.ebuild:
+  Added to ~ppc.
 
 *mockobjects-0.09 (27 Apr 2004)
 
