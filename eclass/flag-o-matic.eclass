@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.75 2004/10/28 01:38:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.76 2004/10/30 00:00:14 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -74,7 +74,11 @@ inherit eutils toolchain-funcs
 # C[XX]FLAGS that we allow in strip-flags
 setup-allowed-flags() {
 	if [ -z "${ALLOWED_FLAGS}" ] ; then
-		export ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -fno-stack-protector -fno-pie -fno-unit-at-a-time -pipe -g"
+		export ALLOWED_FLAGS="-pipe"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -O -O0 -O1 -O2 -mcpu -march -mtune"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fstack-protector -fno-stack-protector"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-unit-at-a-time"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -g -g0 -g1 -g2 -g3 -ggdb -ggdb0 -ggdb1 -ggdb2 -ggdb3"
 		case "${ARCH}" in
 			mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mips32 -mips64 -mips16 -EL -EB -mabi" ;;
 			amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC -m64" ;;
