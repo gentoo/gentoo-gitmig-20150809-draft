@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-2.9.ebuild,v 1.4 2003/09/17 04:55:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-2.9.ebuild,v 1.5 2003/09/17 09:29:41 seemant Exp $
 
 inherit kde-base libtool
 need-qt 3
@@ -20,7 +20,7 @@ DEPEND="mysql? ( dev-db/mysql++ )
 
 src_unpack() {
 
-	unpack ${A}	
+	unpack ${A}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	epatch ${FILESDIR}/${P}-mysqlplugin-gcc-3.3.patch
 
