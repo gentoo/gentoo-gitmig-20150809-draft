@@ -27,7 +27,7 @@ src_unpack() {
     cp configure configure.orig
     sed -e "s:read acceptance:acceptance=yes:" configure.orig > configure
 
-#    cd ${S}/mkspecs/linux-g++
+    cd ${S}/mkspecs/linux-g++
 #    mv qmake.conf tmp
 #    echo "
 #QMAKE_CFLAGS = ${CFLAGS}
