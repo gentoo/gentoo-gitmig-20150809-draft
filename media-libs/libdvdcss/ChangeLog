@@ -1,6 +1,8 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.2 2002/04/06 15:47:48 azarah Exp $
+
+*libdvdcss-1.1.1 (6 Apr 2002)
 
 *libdvdcss-0.0.3.3 (1 Feb 2002)
 
