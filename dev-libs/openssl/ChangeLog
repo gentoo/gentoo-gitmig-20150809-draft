@@ -1,7 +1,12 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.49 2003/09/29 06:44:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.50 2003/09/30 15:03:20 aliz Exp $
 
+*openssl-0.9.7c (30 Sep 2003)
+*openssl-0.9.6k (30 Sep 2003)
+
+  30 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7c.ebuild, openssl-0.9.6k.ebuild :
+  Security update.
 
 *openssl-0.9.7b-r2 (16 Sep 2003)
 
