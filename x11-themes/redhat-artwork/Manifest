@@ -5,8 +5,10 @@ MD5 b28ea1fa56508eefa3e7e85b2e2d5f3d redhat-artwork-0.88.ebuild 5024
 MD5 4533680520b21fdf1d238ca3eb18a2c4 redhat-artwork-0.47.ebuild 4373
 MD5 6569935c29ee071647625ea04457e624 ChangeLog 3828
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 1967be4b070ac7ea75644bcce416e4dd redhat-artwork-0.88-r2.ebuild 5024
 MD5 9912a3c64a0b848f2ccf2673f2b3093d files/redhat-artwork-0.63-gcc2.patch 483
 MD5 dd889dbdcebae49dc59d0d60dff259de files/redhat-artwork-0.63-cursors.patch 1071
+MD5 4158bb6cda9c431dd4a10309ab20ab06 files/digest-redhat-artwork-0.88-r2 75
 MD5 2b18f0bfd9c83a7d52127c8cb69ba123 files/digest-redhat-artwork-0.39 75
 MD5 3b65e10c4a020c4a0ea202f4865e686f files/digest-redhat-artwork-0.47 75
 MD5 927835d1878c71d197a09b5ec12f145d files/digest-redhat-artwork-0.73 75
