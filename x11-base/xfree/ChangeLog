@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.337 2004/05/29 07:44:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.338 2004/06/03 06:34:13 spyderous Exp $
+
+  03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  Fix typo in xrender.pc generation, includ to include.
+
+  02 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  Fix generation of xrender.pc so version is resolved (#52843).
 
   29 May 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
   Force opengl-update to change to xfree if xorg-x11 is currently selected, else

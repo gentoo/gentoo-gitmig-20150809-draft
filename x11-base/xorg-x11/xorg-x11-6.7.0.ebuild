@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.47 2004/06/03 03:34:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.48 2004/06/03 06:33:01 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -734,7 +734,7 @@ src_install() {
 	echo 'prefix=/usr/X11R6' >> ${XRENDER_PC}
 	echo 'exec_prefix=${prefix}' >> ${XRENDER_PC}
 	echo 'libdir=${exec_prefix}/lib' >> ${XRENDER_PC}
-	echo 'includedir=${prefix}/includ' >> ${XRENDER_PC}
+	echo 'includedir=${prefix}/include' >> ${XRENDER_PC}
 	echo '' >> ${XRENDER_PC}
 	echo 'Name: Xrender' >> ${XRENDER_PC}
 	echo 'Description: X Render Library' >> ${XRENDER_PC}
