@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/desklet-psisensors
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/ChangeLog,v 1.2 2003/11/01 03:43:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/ChangeLog,v 1.3 2003/11/12 10:21:23 obz Exp $
+
+*desklet-psisensors-20031024-r1 (12 Nov 2003)
+
+  12 Nov 2003; Mike Gardiner <obz@gentoo.org>
+  desklet-psisensors-20031024-r1.ebuild:
+  Fixed Sensor permissions, see bug #32907
 
   01 Nov 2003; Luca Barbato <lu_zero@gentoo.org>
   desklet-psisensors-20031024.ebuild:
