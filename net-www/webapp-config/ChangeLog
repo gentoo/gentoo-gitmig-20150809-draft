@@ -1,6 +1,9 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.25 2004/06/12 17:18:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.26 2004/06/14 23:21:00 stuart Exp $
+
+  15 Jun 2004; Stuart Herbert <stuart@gentoo.org> :
+  Version bump; lots of fixes
 
   12 Jun 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.10.ebuild:
   Changed SRC_URI to get webapp-config from dev.gentoo.org, for when the
