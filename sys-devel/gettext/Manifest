@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f98dcab2ecfe46c0bf4110810f88e3c9 gettext-0.14.1.ebuild 2549
-MD5 29d1fe3a62144203bb27244c717472cf gettext-0.12.1-r2.ebuild 2465
-MD5 aa04a859043670ddf1c59af4ddfa6cb7 ChangeLog 9272
+MD5 d7b6abc54badd4ad403c2949d3555ae6 ChangeLog 9573
+MD5 15dfff1c6388770711d2b6e3d5d53c56 gettext-0.12.1-r2.ebuild 2542
+MD5 0336e7c441609d73687d2519295bd5ba gettext-0.14.1.ebuild 2614
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3b9aefbb552545fdf0836f56121c9ae5 files/gettext-0.12.1-without_java.patch 2743
-MD5 0e4a00cc30a91523c838cd17b5841399 files/digest-gettext-0.14.1 67
 MD5 83b80576c27ac3a75d70802eb9c92790 files/digest-gettext-0.12.1-r2 67
+MD5 0e4a00cc30a91523c838cd17b5841399 files/digest-gettext-0.14.1 67
 MD5 fada337fd753f2580b6849dc560498ff files/gettext-0.12.1-tempfile.patch 2226
+MD5 3b9aefbb552545fdf0836f56121c9ae5 files/gettext-0.12.1-without_java.patch 2743
 MD5 2a60a632eb22d99acfa09d16828fe073 files/gettext-0.14.1-no-java-tests.patch 2885
 MD5 3b9aefbb552545fdf0836f56121c9ae5 files/gettext-0.14.1-without_java.patch 2743
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBwtEFI1lqEGTUzyQRAkMGAJ4uSRwAptPBy3hH6ujk863PI4A/IACgv2z1
-dL2f5vPMbkfy7P8sfH7aNuA=
-=3F9v
------END PGP SIGNATURE-----

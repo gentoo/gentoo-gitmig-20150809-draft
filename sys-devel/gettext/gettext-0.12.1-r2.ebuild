@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.16 2004/12/17 06:15:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.17 2004/12/30 03:56:20 j4rg0n Exp $
 
 inherit eutils gnuconfig toolchain-funcs libtool
 
@@ -66,8 +66,11 @@ src_install() {
 	doexe gettext-tools/misc/gettextize || die "doexe"
 
 	# remove stuff that glibc handles
-	rm -f ${D}/usr/include/libintl.h
-	rm -f ${D}/usr/$(get_libdir)/libintl.*
+	if ! use ppc-macos; then
+		# these files are not provided on Mac OS X
+		rm -f ${D}/usr/include/libintl.h
+		rm -f ${D}/usr/$(get_libdir)/libintl.*
+	fi
 	rm -rf ${D}/usr/share/locale/locale.alias
 	# /usr/lib/charset.alias is provided by Mac OS X
 	use ppc-macos && rm -f ${D}/usr/lib/charset.alias
