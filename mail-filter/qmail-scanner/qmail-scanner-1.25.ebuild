@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.23-r3.ebuild,v 1.4 2005/02/18 01:11:15 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25.ebuild,v 1.1 2005/02/18 01:11:15 st_lim Exp $
 
 inherit fixheadtails gcc eutils
 
-Q_S_DATE=20040819
+Q_S_DATE=20050207
 DESCRIPTION="E-Mail virus scanner for qmail."
 HOMEPAGE="http://qmail-scanner.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qmail-scanner/${P}.tgz
@@ -58,7 +58,7 @@ src_unpack() {
 
 src_compile () {
 	local myconf
-	use spamassassin && myconf="--virus-to-delete yes --sa-quarantine 2.1 --sa-delete 4.2 --sa-reject yes --sa-subject SPAM: --sa-delta 0.5 --sa-alt yes"
+	use spamassassin && myconf="--virus-to-delete yes --sa-quarantine 2.1 --sa-delete 4.2 --sa-reject no --sa-subject SPAM: --sa-delta 0.5 --sa-alt yes"
 
 	PATH=${PATH}:/opt/f-prot:/opt/vlnx ./configure \
 	--domain localhost \
