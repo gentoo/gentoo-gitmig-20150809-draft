@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.2 2002/04/04 22:50:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.3 2002/04/13 20:30:41 karltk Exp $
+
+*kdbg-1.2.5 (13 Apr 2002)
+
+  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> kdbg-1.2.1.ebuild files/digest-kdbg-1.2.1 kdbg-1.2.2.ebuild files/kdbg-1.2.2 kdbg-1.2.5.2.ebuild kdbg-1.2.5.3.ebuild:
+
+  Added a runtime dependency on sys-devel/gdb-5.0, as kdbg is useless without
+  it.
+
+  Removed old versions.
 
 *kdbg-1.2.5 (4 Apr 2002)
 
