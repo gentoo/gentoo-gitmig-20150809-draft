@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.26 2005/03/14 17:26:44 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.27 2005/04/04 20:24:50 gustavoz Exp $
+
+  04 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> libffi-3.3.4.ebuild,
+  libffi-3.3.5.ebuild:
+  3.3.5 to sparc stable, 3.3.4 removed ~sparc for cleanup
+
+  04 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> libffi-3.3.5.ebuild:
+  Stable on sparc
 
 *libffi-3.3.5 (14 Mar 2005)
 

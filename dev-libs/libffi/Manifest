@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 01079f33957634e5811a9f40abf404d6 ChangeLog 4025
+MD5 5dd69c9f604d45c17401eff40200a6c5 ChangeLog 4281
 MD5 ea5e2ecd7602d6f2fb898c3f25f6e353 libffi-1.20.ebuild 604
 MD5 f390450c0617d9b528e65eebd6390329 libffi-3.3.3-r1.ebuild 6679
 MD5 49582270c45808ea4ccf224f0bc2250b libffi-3.3.3.ebuild 6896
-MD5 84b5db1551a559b37635f64c35113601 libffi-3.3.4.ebuild 6671
+MD5 78fce81c2abac95d8498d36ec26df445 libffi-3.3.4.ebuild 6669
 MD5 2705fe04da79c768857632094b264cc7 libffi-3.4.1-r1.ebuild 5751
 MD5 b1b14c71ebf918ab0ae9cf9588a1886e libffi-3.4.1.ebuild 7094
-MD5 cca8a7a03aadc90d3e00f2dbb3851ad8 libffi-3.4.3.ebuild 5785
 MD5 ef1d6e99f954cc3412a9e513a2d80c64 metadata.xml 1836
-MD5 7a5e49a7024584e40eb8b0a92f7e7e83 libffi-3.3.5.ebuild 6671
+MD5 cca8a7a03aadc90d3e00f2dbb3851ad8 libffi-3.4.3.ebuild 5785
+MD5 3928b121e3ea5ea31bd1edd7b04a3b2a libffi-3.3.5.ebuild 6675
 MD5 ed8f1e978198c34ad3dc3b81c4804199 files/digest-libffi-1.20 63
 MD5 14f4d6619c938dbb907e2420c0eeefd9 files/digest-libffi-3.3.3 64
 MD5 14f4d6619c938dbb907e2420c0eeefd9 files/digest-libffi-3.3.3-r1 64
 MD5 4068b84d9ce9d440b063718549cfc354 files/digest-libffi-3.3.4 64
 MD5 03a0e46a8ce1aff598b68a731112c13a files/digest-libffi-3.4.1 64
 MD5 03a0e46a8ce1aff598b68a731112c13a files/digest-libffi-3.4.1-r1 64
-MD5 2ca380cbcf0547fb5d2a671c1c0296de files/digest-libffi-3.4.3 64
 MD5 78c9b1a1b40fcc12f8cf34d57a970f00 files/libffi-soversion.dpatch 1943
 MD5 1ca677e646f4d209e68601c9ba83c629 files/libffi-without-libgcj.dpatch 2255
+MD5 2ca380cbcf0547fb5d2a671c1c0296de files/digest-libffi-3.4.3 64
 MD5 595fc5d3e417d76d1f7e7f0a8439535a files/digest-libffi-3.3.5 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCNcpT+uC/ViVka/0RAjhBAJ9sqoyOJj/u7wHMPwh7a5eI20vL7gCgsyRq
-akdnmSG/EDyFS3oKZ/Qs20o=
-=HuRu
+iD8DBQFCUaKqKRy60XGEcJIRAmcGAJ47KuOEBUsCBjx1k6ZJ1SpwLUgHQgCdG5/Z
+DH40kCdVLaAy9A2Ut0nOr1Y=
+=rnXF
 -----END PGP SIGNATURE-----

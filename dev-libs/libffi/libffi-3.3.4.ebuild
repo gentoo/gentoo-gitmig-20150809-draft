@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.3.4.ebuild,v 1.5 2005/03/12 11:46:47 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.3.4.ebuild,v 1.6 2005/04/04 20:24:50 gustavoz Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -79,7 +79,7 @@ HOMEPAGE="http://gcc.gnu.org/"
 
 LICENSE="libffi"
 
-KEYWORDS="-* x86 ~sparc"
+KEYWORDS="-* x86"
 IUSE="nls"
 
 SLOT="0"
