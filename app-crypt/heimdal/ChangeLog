@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.41 2004/05/27 09:25:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.42 2004/06/03 20:10:57 rphillips Exp $
+
+  03 Jun 2004; <rphillips@gentoo.org> :
+  Removed old ebuilds that had security flaws in them
 
   27 May 2004; Joshua Kinard <kumba@gentoo.org> heimdal-0.6.2.ebuild:
   Marked stable on mips.
