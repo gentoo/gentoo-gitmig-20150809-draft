@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/wxhaskell
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.6 2004/06/24 22:15:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.7 2004/08/23 13:15:43 kosmikus Exp $
+
+*wxhaskell-0.8 (23 Aug 2004)
+
+  23 Aug 2004; Andres Loeh <kosmikus@gentoo.org> wxhaskell-0.8.ebuild:
+  New version.
 
   13 Jun 2004; Andres Loeh <kosmikus@gentoo.org> wxhaskell-0.7.ebuild:
   Marked stable for x86.
