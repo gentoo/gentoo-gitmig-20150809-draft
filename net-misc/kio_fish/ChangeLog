@@ -1,16 +1,17 @@
 # ChangeLog for net-misc/kio_fish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kio_fish/ChangeLog,v 1.2 2002/06/07 14:35:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kio_fish/ChangeLog,v 1.3 2002/07/07 08:28:54 phoenix Exp $
 
 *kio_fish-1.1.2 (7 Jun 2002)
+
+  07 Jul 2002; phoen][x <phoenix@gentoo.org> kio_fish-1.1.2.ebuild:
+  Added KEYWORDS.
   
   7 Jun 2002; Dan Armak <danarmak@gentoo.org> changelog:
-  
   New version.
 
 *kio_fish-1.1.1 (21 Apr 2002)
   
-  21 Apr 2002; Dan Armak <danarmak@gentoo.org> changelog:
-  
+  21 Apr 2002; Dan Armak <danarmak@gentoo.org> changelog:  
   New kde3 version.
 
