@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/neti
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.5 2004/07/01 20:03:21 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.6 2004/07/28 05:54:33 dragonheart Exp $
+
+  28 Jul 2004; Daniel Black <dragonheart@gentoo.org> neti-1.01.ebuild:
+  Marked x86 stable
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> neti-1.01.ebuild:
   change virtual/glibc to virtual/libc
