@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.47 2003/06/22 19:48:06 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.48 2003/06/30 11:25:38 brad Exp $
+
+  30 Jun 2003; Brad Laue <brad@gentoo.org> arts-1.1.1.ebuild,
+  arts-1.1.2.ebuild:
+  Really disable alsa if not specified in USE flags. (we mean it this time!)
 
   21 Jun 2003; Caleb Tennis <caleb@gentoo.org>:
   Removing old ebuilds: 1.0.5a, 1.1.0, 1.1.0-r1

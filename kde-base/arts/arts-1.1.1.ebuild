@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.1.ebuild,v 1.3 2003/04/28 05:51:20 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.1.ebuild,v 1.4 2003/06/30 11:25:38 brad Exp $
 inherit kde-base flag-o-matic
 
 # this is the arts 1.1 from kde 3.1, as opposed to arts 1.1.0 from kde 3.1 beta2 and friends
@@ -25,7 +25,7 @@ filter-flags "-foptimize-sibling-calls"
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
 
-use alsa && myconf="$myconf --enable-alsa" || myconf="$myconf --disable-alsa"
+use alsa && myconf="$myconf --with-alsa" || myconf="$myconf --without-alsa"
 
 src_unpack() {
 	kde_src_unpack
