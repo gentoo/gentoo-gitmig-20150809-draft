@@ -1,12 +1,16 @@
 # ChangeLog for net-p2p/gift-fasttrack-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack-cvs/ChangeLog,v 1.3 2003/07/14 20:27:57 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack-cvs/ChangeLog,v 1.4 2003/07/16 23:48:55 naz Exp $
 
 *gift-fasttrack-cvs-0.8.1 (14 Jul 2003)
 
   14 Jul 2003; Brandon Low <lostlogic@gentoo.org>
   gift-fasttrack-cvs-0.8.0.ebuild, gift-fasttrack-cvs-0.8.1.ebuild:
   Bump
+
+  16 Jul 2003; Michael Nazaroff <naz@gentoo.org> 
+  gift-fasttrack-cvs-0.8.1.ebuild:
+  Fixed Depend line and changed depenency from gift-cvs to gift.
 
 *gift-fasttrack-cvs-0.8.0 (02 Jul 2003)
 
