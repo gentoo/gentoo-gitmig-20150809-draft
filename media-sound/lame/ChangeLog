@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.11 2002/12/11 16:22:26 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.12 2002/12/12 17:56:15 phoenix Exp $
 
 *lame-3.93.1 (11 Dec 2002)
+
+  12 Dec 2002; phoen][x <phoenix@gentoo.org> lame-3.93.1.ebuild :
+  Tagging this ebuild stable ("x86").
 
   11 Dec 2002; phoen][x <phoenix@gentoo.org> lame-3.93.1.ebuild,
   files/digest-lame-3.93.1 :
@@ -12,13 +15,17 @@
 * Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
-*lame-3.93.0 (23 Nov 2002)
+*lame-3.93.0-r1 (23 Nov 2002)
 
   01 Dec 2002; phoen][x <phoenix@gentoo.org> lame-3.93.0-r1.ebuild, 
   files/lame-3.93.0-npsytunefix.diff, files/lame-3.93.0-q0fix.diff :
   Incorporated the fixes from bug #11194. Thanks to Sebastian Droege 
   <sebastian.droege@gmx.de> for the contribution.
-  
+
+  12 Dec 2002; phoen][x <phoenix@gentoo.org> lame-3.93.0-r1.ebuild,
+  files/lame-3.93.0-npsytunefix.diff, files/lame-3.93.0-q0fix.diff :
+  Removing this ebuild - lame-3.93.1 comes with these patches.
+ 
 *lame-3.93.0 (23 Nov 2002)
   
   23 Nov 2002; Spider <spider@gentoo.org> lame-3.93.0.ebuild :
