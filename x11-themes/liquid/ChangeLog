@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/liquid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.3 2005/01/15 00:22:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.4 2005/02/07 19:29:12 blubb Exp $
+
+  07 Feb 2005; Simon Stelling <blubb@gentoo.org> liquid-0.9.7.ebuild:
+  added ~amd64
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> liquid-0.9.7.ebuild:
   Changed dep on a kde-base monolithic package to accept the equivalent split
