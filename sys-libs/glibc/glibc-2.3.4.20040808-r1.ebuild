@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.32 2005/01/12 12:24:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.33 2005/01/14 02:51:58 vapier Exp $
 
 inherit eutils multilib flag-o-matic gcc versionator
 
@@ -15,10 +15,10 @@ BRANCH_UPDATE="20040808"
 MIN_KERNEL_VERSION="2.6.5"
 
 # (very) Theoretical cross-compiler support
-export CTARGET="${CTARGET:-${CHOST}}"
+export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} = ${CHOST} ]] ; then
 	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-		export CTARGET="${CATEGORY/cross-}"
+		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
 
@@ -747,7 +747,7 @@ src_install() {
 	# now, strip everything but the thread libs #46186
 	mkdir -p ${T}/thread-backup
 	mv ${D}/$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
-	env -uRESTRICT prepallstrip
+	env -uRESTRICT CHOST=${CTARGET} prepallstrip
 
 	# this directory can be empty in certain cases so || die is wrong
 	ls  ${T}/thread-backup/*  1>/dev/null 2>&1 && mv -f ${T}/thread-backup/* ${D}/$(alt_libdir)/

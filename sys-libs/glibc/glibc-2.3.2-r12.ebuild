@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.5 2005/01/05 01:53:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.6 2005/01/14 02:51:58 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -17,10 +17,10 @@ export MIN_KV="2.4.1"
 export MIN_NPTL_KV="2.6.0"
 
 # (very) Theoretical cross-compiler support
-export CTARGET="${CTARGET:-${CHOST}}"
+export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} = ${CHOST} ]] ; then
 	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-		export CTARGET="${CATEGORY/cross-}"
+		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
 
@@ -607,7 +607,7 @@ src_install() {
 	# now, strip everything but the thread libs #46186
 	mkdir ${T}/thread-backup
 	mv ${D}/lib/lib{pthread,thread_db}* ${T}/thread-backup/
-	env -uRESTRICT prepallstrip
+	env -uRESTRICT CHOST=${CTARGET} prepallstrip
 	mv ${T}/thread-backup/* ${D}/lib/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)

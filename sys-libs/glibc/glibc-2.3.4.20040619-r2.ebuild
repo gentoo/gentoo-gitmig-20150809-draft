@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.6 2005/01/12 05:17:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.7 2005/01/14 02:51:58 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -45,7 +45,7 @@ fi
 LICENSE="LGPL-2"
 SLOT="2.2"
 KEYWORDS="-* ~x86 mips amd64 ~hppa ~ppc ~ia64"
-IUSE="userlocales pic build nptl erandom hardened makecheck multilib debug n32 n64"
+IUSE="userlocales pic build nptl erandom hardened test multilib debug n32 n64"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -221,7 +221,7 @@ want_tls() {
 }
 
 
-do_makecheck() {
+do_test() {
 	ATIME=`mount | awk '{ print $3,$6 }' | grep ^\/\  | grep noatime`
 	if [ "$ATIME" = "" ]; then
 		cd ${WORKDIR}/build
@@ -249,8 +249,8 @@ install_locales() {
 
 
 setup_locales() {
-	if use !userlocales || use makecheck; then
-		einfo "makecheck in USE or userlocales not enabled, installing -ALL- locales..."
+	if use !userlocales || use test; then
+		einfo "test in USE or userlocales not enabled, installing -ALL- locales..."
 		install_locales || die
 	elif [ -e /etc/locales.build ]; then
 		einfo "Installing locales in /etc/locales.build..."
@@ -306,7 +306,7 @@ glibc_setup() {
 	fi
 	echo
 
-	hasq sandbox $FEATURES && use makecheck && die "sandbox breaks make check. either take makecheck out of USE or set FEATURES=-sandbox"
+	hasq sandbox $FEATURES && use test && die "sandbox breaks make check. either take test out of USE or set FEATURES=-sandbox"
 }
 
 
@@ -711,12 +711,12 @@ EOF
 	insinto /etc
 	doins ${FILESDIR}/locales.build
 
-	if use makecheck; then
+	if use test; then
 		local OLD_SANDBOX_ON="${SANDBOX_ON}"
 		# make check will fail if sandbox is enabled.  Do not do it
 		# globally though, else we might fail to find sandbox violations ...
 		SANDBOX_ON="0"
-		do_makecheck
+		do_test
 		SANDBOX_ON="${OLD_SANDBOX_ON}"
 	fi
 }
