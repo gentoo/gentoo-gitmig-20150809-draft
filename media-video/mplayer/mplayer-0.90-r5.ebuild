@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r5.ebuild,v 1.1 2003/08/09 23:20:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r5.ebuild,v 1.2 2003/08/24 07:43:56 azarah Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2"
 
@@ -81,6 +81,9 @@ src_unpack() {
 
 	# Fix head/tail call for new coreutils
 	cd ${S}; epatch ${FILESDIR}/${P}-coreutils-fixup.patch
+
+	# Fix mencoder segfaulting with bad arguments
+	cd ${S}; epatch ${FILESDIR}/mencoder-segfault.patch
 
 	# Fix mplayer to detect detect/use altivec on benh kernels,
 	# bug #18511.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc4.ebuild,v 1.6 2003/07/15 21:15:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc4.ebuild,v 1.7 2003/08/24 07:43:56 azarah Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts"
 
@@ -84,6 +84,9 @@ src_unpack() {
 		cd ${WORKDIR}/default
 		epatch ${FILESDIR}/default-skin.diff
 	fi
+
+	# Fix mencoder segfaulting with bad arguments
+	cd ${S}; epatch ${FILESDIR}/mencoder-segfault.patch
 
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.90_rc4-gtk2.patch
 }

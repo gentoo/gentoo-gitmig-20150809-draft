@@ -1,0 +1,16 @@
+Index: mencoder.c
+===================================================================
+RCS file: /cvsroot/mplayer/main/mencoder.c,v
+retrieving revision 1.218
+diff -u -r1.218 mencoder.c
+--- mencoder.c	13 Aug 2003 16:29:00 -0000	1.218
++++ mencoder.c	20 Aug 2003 22:34:31 -0000
+@@ -488,7 +488,7 @@
+ sh_audio=d_audio->sh;
+ sh_video=d_video->sh;
+ 
+-  if(!video_read_properties(sh_video)){
++  if(!sh_video || !video_read_properties(sh_video)){
+       printf(MSGTR_CannotReadVideoProperties);
+       mencoder_exit(1,NULL);
+   }
