@@ -57,7 +57,7 @@ empress-bcs
 esoob
 filepro
 frontbase
-hyperwave
+hyperwave-api
 informix
 ingres
 oracle7
