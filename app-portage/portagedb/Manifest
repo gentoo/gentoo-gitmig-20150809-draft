@@ -1,4 +1,14 @@
-MD5 9a98e005a0d77dd91841cc37e846a015 metadata.xml 221
-MD5 6667e127abb89510e3910e212298577d portagedb-0.2.0.ebuild 1070
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a77f6ca171ccd68e977cd85c874b29f1 portagedb-0.2.0.ebuild 1046
 MD5 0695da60ebce45c1df7544bcae7ac434 ChangeLog 578
+MD5 9a98e005a0d77dd91841cc37e846a015 metadata.xml 221
 MD5 5283d17018c56e1f8ff29426c1f10cc7 files/digest-portagedb-0.2.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB2panI1lqEGTUzyQRAqgnAKDczbhdL6EasLg9QebWDDFv2aydjgCfb8CH
+Q0xY9qGmuPkHYNKclx4pf30=
+=Zw5S
+-----END PGP SIGNATURE-----
