@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/sdif-3.8.6.ebuild,v 1.1 2004/09/03 05:42:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/sdif-3.8.6.ebuild,v 1.2 2004/09/04 23:14:49 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ircam.fr/anasyn/sdif/download/${MY_P}.tar.gz
 		doc? ( http://www.ircam.fr/anasyn/sdif/download/${MY_PN}-doc.tar.gz  )"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="doc threads ftruncate debug"
 DEPEND=""
 S=${WORKDIR}/${MY_P}
