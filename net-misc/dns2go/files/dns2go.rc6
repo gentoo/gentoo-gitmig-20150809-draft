@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /home/cvsroot/gentoo-x86/net-misc/dns2go/files/dns2go.rc6 $
+
+depend() {
+        need net
+}
+
+start() {
+        ebegin "Starting DNS2GO"
+        /usr/bin/dns2go
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping DNS2GO"
+        /usr/bin/dns2go -k
+        eend $?
+}
