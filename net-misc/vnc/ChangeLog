@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.5 2002/09/09 13:43:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.6 2002/09/27 02:22:55 bcowan Exp $
+
+*vnc-3.3.4 (26 Sep 2002)
+
+  26 Sep 2002; Brad Cowan <bradlyatc@gentoo.org> vnc-3.3.4.ebuild 
+  files/digest-vnc-3.3.4 :
+  
+  Updated version with many bugfixes. Notably a change in maintainers
+  back to the original dev team. Homepage changed, removed patches,
+  patches may need replaced after testing.
 
 *vnc-3.3.3-r3 (03 Sep 2002)
 
