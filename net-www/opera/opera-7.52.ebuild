@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.52.ebuild,v 1.2 2004/07/07 17:10:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.52.ebuild,v 1.3 2004/07/08 21:05:51 eradicator Exp $
 
 IUSE="static spell"
 
@@ -16,11 +16,14 @@ HOMEPAGE="http://www.opera.com/linux/"
 SRC_URI="
 	x86? ( static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
 	x86? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	amd64? ( static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-	amd64? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	amd64? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
 	ppc? ( static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
 	ppc? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
 	sparc? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
+
+# amd64 shared libs require app-emulation/emul-linux-x86-qtlibs-1 which is not stable yet
+#	amd64? ( static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+#	amd64? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
 
 # sparc shared version does not work for me as it uses gcc-2.95 - eradicator
 #	sparc? ( static?  ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
@@ -35,12 +38,15 @@ RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
 	media-libs/libexif
 	x11-libs/openmotif
-	static? (
-		amd64? ( app-emulation/emul-linux-x86-xlibs ) )
-	!static? (
-		amd64? ( =app-emulation/emul-linux-x86-qtlibs-1* )
-		!amd64? ( =x11-libs/qt-3* ) )
-	spell? ( app-text/aspell )"
+	spell? ( app-text/aspell )
+	amd64? ( app-emulation/emul-linux-x86-xlibs )
+	!amd64 ( !sparc? ( !static? ( =x11-libs/qt-3* ) ) )"
+
+#	static? (
+#		amd64? ( app-emulation/emul-linux-x86-xlibs ) )
+#	!static? (
+#		amd64? ( =app-emulation/emul-linux-x86-qtlibs-1* )
+#		!amd64? ( =x11-libs/qt-3* ) )
 
 SLOT="0"
 LICENSE="OPERA"
