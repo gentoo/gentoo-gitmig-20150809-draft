@@ -165,7 +165,6 @@ app-admin/va-systemimager-client
 =dev-java/makeme-0.02
 =x11-wm/ASFiles-1.0
 =x11-wm/asapm-2.10
-=x11-wm/asclock-2.0.12
 
 # Moved in the big GNOME move
 gnome-office/abiword
