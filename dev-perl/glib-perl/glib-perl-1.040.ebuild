@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.040.ebuild,v 1.1 2004/03/29 14:18:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.040.ebuild,v 1.2 2004/04/07 00:43:43 gustavoz Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.cpan.org/authors/id/R/RM/RMCFARLA/Gtk2-Perl/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa ~amd64"
 IUSE="xml"
 
 RDEPEND=">=x11-libs/gtk+-2*
