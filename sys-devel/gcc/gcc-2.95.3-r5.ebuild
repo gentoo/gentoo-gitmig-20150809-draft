@@ -2,15 +2,10 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r5.ebuild,v 1.3 2001/09/11 01:35:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r5.ebuild,v 1.4 2001/09/29 15:41:26 drobbins Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
-	ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3.tar.gz
-    ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000312.diff.gz
-    ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000419.diff.gz
-    ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000816.diff.gz
-    ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000914.diff.gz
 	ftp://gatekeeper.dec.com/pub/GNU/texinfo/texinfo-${TV}.tar.gz
 	ftp://ftp.gnu.org/pub/gnu/texinfo/texinfo-${TV}.tar.gz"
 
@@ -30,18 +25,6 @@ fi
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	if [ "`use libg++`" ]
-	then
-		unpack libg++-2.8.1.3.tar.gz
-		cd ${S}/../libg++-2.8.1.3
-		gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000312.diff.gz | patch -p1 || die
-		gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000419.diff.gz | patch -p1 || die
-		gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000816.diff.gz | patch -p1 || die
-		gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000914.diff.gz | patch -p1 || die
-		cd ${S}
-		mv ../libg++-2.8.1.3/* .
-		rmdir ../libg++-2.8.1.3
-	fi
 	cd ${S}
 	# A patch for the atexit problem occured with glibc-2.2.3
 	patch -l -p0 < ${FILESDIR}/${P}-atexit.diff || die
@@ -154,17 +137,9 @@ src_install() {
 	    cd ${S}/libobjc
 	    docinto libobjc
 	    dodoc ChangeLog README* THREADS*
-
-        if [ "`use libg++`" ]
-        then
-            cd ${S}/libg++
-	        docinto libg++
-	        dodoc ChangeLog g++FAQ.txt NEWS README* TODO
-        else
-            cd ${S}/libstdc++
-	        docinto libstdc++
-            dodoc ChangeLog NEWS
-        fi
+		cd ${S}/libstdc++
+		docinto libstdc++
+		dodoc ChangeLog NEWS
     else
         rm -rf ${D}/usr/share/{man,info}
 		#do a minimal texinfo install (build image)
