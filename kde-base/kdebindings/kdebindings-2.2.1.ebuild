@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.1.ebuild,v 1.4 2001/09/29 21:03:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.1.ebuild,v 1.5 2001/10/06 10:41:47 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Bindings"
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 HOMEPAGE="http://www.kde.org/"
 
 DEPEND=">=kde-base/kdebase-${PV}
-	>=x11-libs/gtk+-1.2.10
+	>=x11-libs/gtk+-1.2.10-r4
 	sys-devel/perl 
 	python? ( dev-lang/python )
 	java? (	dev-lang/jdk )

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.1-r1.ebuild,v 1.2 2001/10/01 11:04:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.1-r1.ebuild,v 1.3 2001/10/06 10:41:47 azarah Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -14,7 +14,7 @@ NEWDEPEND=">=sys-libs/ncurses-5.2
 	nas? ( >=media-sound/nas-1.4.1 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
-	gtk? ( >=x11-libs/gtk+-1.2.10 )
+	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
 	slang? ( >=sys-libs/slang-1.4.4 )"
 #	tcltk? ( =dev-lang/tcl-tk.8.0.5-r2 )
 
