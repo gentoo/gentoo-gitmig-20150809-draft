@@ -1,7 +1,17 @@
-MD5 3218cae5cb59a9a10e3c8a45b92b4c1c guarddog-2.3.1.ebuild 532
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a46f5915f425bd2f1337ed75372ebede ChangeLog 3312
 MD5 8efbf4b826fc2f2c5d869cae37931848 guarddog-1.9.16.ebuild 517
-MD5 e0a62154a82eb560a9fd0001c5833e27 ChangeLog 3357
 MD5 da8ab233ce55c516eb20c56f726173a5 guarddog-2.0.0.ebuild 514
+MD5 3218cae5cb59a9a10e3c8a45b92b4c1c guarddog-2.3.1.ebuild 532
 MD5 e9ddebda7ffe67fa5c9114a9072dd580 files/digest-guarddog-1.9.16 67
 MD5 3e8e679c65f3fe358520ed81a1a9f994 files/digest-guarddog-2.0.0 66
 MD5 7a85206ca249edbc9eb61afb8654e8a7 files/digest-guarddog-2.3.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXslPI1lqEGTUzyQRAk+VAJ4wg/f70xNKNQ9Fq73rgpUHClFuLwCfRVTe
+PI8zDLBPidFYVF/H/FFtE/g=
+=HfOq
+-----END PGP SIGNATURE-----
