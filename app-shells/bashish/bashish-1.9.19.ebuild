@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bashish/${P}.tar.gz"
 SLOT=0
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha sparc sparc64"
+KEYWORDS="x86 ppc alpha sparc"
 
 
 src_install() {
@@ -58,4 +58,3 @@ DEFAULT_SHELL=""
 	done
 
 }
-
