@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.15 2004/10/05 10:30:15 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.16 2005/01/09 12:14:48 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86 ppc alpha"
 
 DEPEND="=dev-lang/tcl-8.3*
-	X? =dev-lang/tk-8.3*"
+	X? ( =dev-lang/tk-8.3* )"
 
 S=${WORKDIR}/${PN}${PV}
 
