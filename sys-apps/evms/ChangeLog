@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/evms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.4 2002/07/14 19:20:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.5 2002/07/21 18:52:23 gerk Exp $
 
 *evms-1.0.1 (8 May 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (-ppc)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> evms-1.0.1.ebuild :
   Added KEYWORDS.
