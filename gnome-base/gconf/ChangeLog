@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.71 2004/05/29 03:46:49 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.72 2004/06/03 23:12:30 geoman Exp $
+
+  03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> gconf-2.6.0.ebuild:
+  Stable on mips.
 
   29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gconf-1.0.8-r5.ebuild, gconf-1.0.9.ebuild, gconf-2.6.0.ebuild:
