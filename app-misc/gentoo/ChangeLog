@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.8 2002/06/22 15:21:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.9 2002/07/03 19:27:22 seemant Exp $
+
+*gentoo-0.11.27-r1 (03 Jul 2002)
+
+  03 Jul 2002; Seemant Kulleen <seemant@gentoo.org> gentoo-0.11.27-r1.ebuild
+  files/digest-gentoo-0.11.27-r1 :
+
+  Added USE dependent nls support. thanks to: Martin Uddén
+  <nanook@lysator.liu.se>
 
 *gentoo-0.11.27 (22 Jun 2002)
 

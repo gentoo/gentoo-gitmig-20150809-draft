@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.25.ebuild,v 1.1 2002/06/03 14:00:40 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.27-r1.ebuild,v 1.1 2002/07/03 19:27:22 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
@@ -9,12 +9,25 @@ HOMEPAGE="http://www.obsession.se/gentoo/"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 
+RDEPEND="nls? ( sys-devel/gettext )"
+
+SLOT=""
+LICENSE="GPL-2"
+
+src_unpack() {
+
+	unpack ${A}
+
+	use nls && ( \
+		cd ${S}/src
+		cp gentoo.h gentoo.h.orig
+		sed "s:#undef ENABLE_NLS:#define ENABLE_NLS:" \
+			gentoo.h.orig > gentoo.h
+	)
+}
+
 src_compile() {
-	./configure \
-		--build=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
+	econf \
 		--sysconfdir=/etc/gentoo || die "./configure failed"
 	emake || die
 }
