@@ -1,16 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041203.ebuild,v 1.3 2005/01/02 03:59:13 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.53.ebuild,v 1.1 2005/01/30 19:51:07 swtaylor Exp $
 
 inherit eutils gnuconfig
 
 DESCRIPTION="courier authentication library"
-[ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier-authlib/${P}.tar.bz2" || SRC_URI="http://www.courier-mta.org/beta/courier-authlib/${P}.tar.bz2"
+[ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2" || SRC_URI="http://www.courier-mta.org/beta/courier-authlib/${P%%_pre}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
+S="${WORKDIR}/${P%%_pre}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~mips"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~x86 ~ppc64"
 IUSE="postgres ldap mysql berkdb gdbm pam crypt uclibc debug"
 
 DEPEND="virtual/libc
@@ -41,10 +42,12 @@ src_unpack() {
 		epatch ${FILESDIR}/configure-db4.patch
 		export WANT_AUTOCONF="2.5"
 		gnuconfig_update
+		libtoolize --copy --force
 		ebegin "Recreating configure"
 			autoconf ||  die "recreate configure failed"
 		eend $?
 		cd ${S}/bdbobj
+		libtoolize --copy --force
 		ebegin "Recreating bdbobj/configure"
 			autoconf ||  die "recreate bdbobj/configure failed"
 		eend $?
@@ -76,21 +79,19 @@ src_compile() {
 
 	ewarn "${myconf}"
 
-	./configure \
-	    --prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
 		--sysconfdir=/etc/courier \
 		--datadir=/usr/share/courier \
-		--libexecdir=/usr/lib/courier \
+		--libexecdir=/usr/$(get_libdir)/courier \
 		--localstatedir=/var/lib/courier \
 		--sharedstatedir=/var/lib/courier/com \
 		--with-authdaemonvar=/var/lib/courier/authdaemon \
+		--with-authshadow \
 		--without-redhat \
 		--with-mailuser=mail \
 		--with-mailgroup=mail \
 		--cache-file=${S}/configuring.cache \
-		--build=${CHOST} \
-		--host=${CHOST} ${myconf} || die "bad ./configure"
+		${myconf} || die "bad ./configure"
 	emake || die "Compile problem"
 }
 
@@ -139,4 +140,3 @@ pkg_postinst() {
 		einfo " rm `echo \"${list}\" | xargs echo`"
 	fi
 }
-
