@@ -3,6 +3,15 @@
 # /home/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.2 2002/07/14
 # 19:20:18 aliz Exp $
 
+*pbbuttonsd-0.5.2.ebuild (17 0ct 2002)
+
+  17 Oct 2002; Kain <kain@kain.org> pbbuttonsd-0.5.2.ebuild :
+
+  New ebuild for upstream enhancements and fixes.  Pbbuttonsd is no longer
+  PowerMac only, but I haven't tested this on non-ppc yet.
+  This is an important update to pbbuttonsd, as its functionality is enhanced
+  on PPC platforms, and is made more predictable.
+
 *pbbuttonsd-0.4.10a.ebuild (28 Jul 2002)
 
   28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> pbbuttonsd-0.4.10a.ebuild :
