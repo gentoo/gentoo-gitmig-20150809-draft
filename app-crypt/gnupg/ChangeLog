@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.73 2004/08/29 08:12:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.74 2004/09/04 13:43:56 gustavoz Exp $
+
+  04 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> gnupg-1.2.6.ebuild:
+  Keyworded ~sparc wrt #62615
 
   29 Aug 2004; Tavis Ormandy <taviso@gentoo.org> +gnupg-1.2.6.ebuild:
   new version, #61751
