@@ -58,7 +58,24 @@ nxserver_src_compile() {
 nxserver_src_install() {
 	einfo "Installing"
 	find usr/NX/lib -type l -exec rm {} \;
-	mv usr/NX/etc/passwd.sample usr/NX/etc/passwd
+
+	# NX changed the name of the passwords sample file in 1.3.0
+
+	for x in passwd.sample passwords.sample ; do
+		if [ -f usr/NX/etc/$x ]; then
+			mv usr/NX/etc/$x usr/NX/etc/`basename $x .sample`
+		fi
+	done
+
+	# NX renamed the nxhome directory in 1.3.0
+	#
+	# Gentoo is sticking with the old name to make it easier to handle
+	# upgrades for now
+
+	if [ -d usr/NX/home ]; then
+		mv usr/NX/home usr/NX/nxhome
+	fi
+
 	tar -cf - * | ( cd ${D} ; tar -xf - )
 
 	dodir /usr/NX/var
@@ -75,10 +92,19 @@ nxserver_pkg_postinst() {
 	einfo "Adding user 'nx' for the NX server"
 	enewuser nx -1 /usr/NX/bin/nxserver /usr/NX/nxhome
 
+	# this is support for users upgrading from NX 1.2.2 to 1.3.0
+
+	l_szPasswd=passwd
+
+	if [ -f /usr/NX/etc/passwd -a -f /usr/NX/etc/passwords.sample ]; then
+		mv /usr/NX/etc/passwd /usr/NX/etc/passwords
+		l_szPasswd=passwords
+	fi
+
 	einfo "Changing permissions for files under /usr/NX"
-	chown nx:root /usr/NX/etc/passwd
+	chown nx:root /usr/NX/etc/$l_szPasswd
 	chown -R nx:root /usr/NX/nxhome
-	chown -R nx:root /usr/NX/var/sessions
+	chown -R nx:root /usr/NX/var
 
 	einfo "Generating SSH keys for the 'nx' user"
 	if [ ! -f /usr/NX/etc/users.id_dsa ]; then
