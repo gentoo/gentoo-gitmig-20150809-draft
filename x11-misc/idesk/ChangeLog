@@ -1,6 +1,17 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.6 2003/02/12 09:29:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.7 2003/06/09 07:07:33 absinthe Exp $
+
+*idesk-0.3.5-r2 (09 Jun 2003)
+
+  09 Jun 2003; Dylan Carlson <absinthe@gentoo.org> idesk-0.3.5-r2.ebuild,
+  files/idesk-0.3.5-clickbox-and-singleclick.patch:
+  Added the "clickbox-and-singleclick" patch.  What this does is makes
+  double-clicking & single-clicking user selectable.  See the README for 
+  more specific detail on how to add this to your .ideskrc.
+
+  This patch was pulled from Slackware, but not 100% sure who credit
+  should go to.  Please contact me if you have this information.
 
 *idesk-0.3.5-r1 (07 Dec 2002)
 
