@@ -1,0 +1,25 @@
+diff -ur Addresses-0.4.6/Frameworks/Addresses/ADLocalAddressBook.m Addresses-0.4.6-adc/Frameworks/Addresses/ADLocalAddressBook.m
+--- Addresses-0.4.6/Frameworks/Addresses/ADLocalAddressBook.m	2004-07-29 08:23:10.000000000 -0400
++++ Addresses-0.4.6-adc/Frameworks/Addresses/ADLocalAddressBook.m	2004-11-08 14:08:07.252017064 -0500
+@@ -308,8 +308,20 @@
+ + (ADAddressBook*) sharedAddressBook
+ {
+   if(!_localAB)
++  {
++    NSProcessInfo *pInfo;
++    NSDictionary *env;
++    NSMutableString *user;
++    
++    pInfo = [NSProcessInfo processInfo];
++    env = [pInfo environment];
++    user = [[[env objectForKey: @"GNUSTEP_USER_ROOT"] 
++      mutableCopy]
++        autorelease];
++    [user appendString: @"/Library/Addresses"];
+     _localAB = [[ADLocalAddressBook alloc]
+-		 initWithLocation: [self defaultLocation]];
++		 initWithLocation: user];
++  }
+   return _localAB;
+ }
+ 

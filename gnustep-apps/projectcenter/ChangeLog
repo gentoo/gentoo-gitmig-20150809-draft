@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-apps/projectcenter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.4 2004/09/28 17:54:36 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.5 2004/11/12 03:55:50 fafhrd Exp $
+
+  11 Nov 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/pc-non-flattened.patch, -projectcenter-0.3.5.ebuild,
+  projectcenter-0.4.1_pre20040927.ebuild:
+  Mass Update: gnustep.eclass revamped to allow configurable root install;
+  gnustep-base/libs/apps updated to utilize new gnustep.eclass (only versions
+  bumped where files would change); some KEYWORDS were accidentally dropped
+  between version bumps of packages -- this has been resolved; windowmaker
+  correctly supports gnustep now
 
 *projectcenter-0.4.1_pre20040927 (28 Sep 2004)
 

@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.7.ebuild,v 1.2 2004/10/21 19:08:50 fafhrd Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.7.ebuild,v 1.3 2004/11/12 03:55:33 fafhrd Exp $
 
 inherit gnustep
 
@@ -17,4 +16,6 @@ KEYWORDS="~x86 ~ppc"
 IUSE="${IUSE}"
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
+
+egnustep_install_domain "System"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20041030.ebuild,v 1.1 2004/10/31 17:09:16 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20041030.ebuild,v 1.2 2004/11/12 03:52:49 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="Sophos.ca:/opt/cvsroot"
@@ -18,7 +18,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="A fully featured mail application for GNUstep"
 HOMEPAGE="http://www.collaboration-world.com/gnumail/"
 
-KEYWORDS="~ppc"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -62,9 +62,9 @@ src_install() {
 		egnustep_doc || die
 	fi
 
-	use xface && cp -a ${S}/Bundles/Face/Face.bundle ${D}${GENTOO_GNUSTEP_ROOT}/System/Library/GNUMail/
-	use crypt && cp -a ${S}/Bundles/PGP/PGP.bundle ${D}${GENTOO_GNUSTEP_ROOT}/System/Library/GNUMail/
-	use emoticon && cp -a ${S}/Bundles/Emoticon/Emoticon.bundle ${D}${GENTOO_GNUSTEP_ROOT}/System/Library/GNUMail/
+	use xface && cp -a ${S}/Bundles/Face/Face.bundle ${D}$(egnustep_prefix)/System/Library/GNUMail/
+	use crypt && cp -a ${S}/Bundles/PGP/PGP.bundle ${D}$(egnustep_prefix)/System/Library/GNUMail/
+	use emoticon && cp -a ${S}/Bundles/Emoticon/Emoticon.bundle ${D}$(egnustep_prefix)/System/Library/GNUMail/
 
 	egnustep_package_config
 }

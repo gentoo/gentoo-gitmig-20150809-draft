@@ -1,6 +1,16 @@
 # ChangeLog for gnustep-apps/terminal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.6 2004/10/18 12:18:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.7 2004/11/12 03:57:00 fafhrd Exp $
+
+*terminal-0.9.5_pre20040909 (11 Nov 2004)
+
+  11 Nov 2004; Armando Di Cianno <fafhrd@gentoo.org> -terminal-0.9.4.ebuild,
+  -terminal-0.9.5_pre20040909.ebuild, terminal-0.9.5_pre20040927.ebuild:
+  Mass Update: gnustep.eclass revamped to allow configurable root install;
+  gnustep-base/libs/apps updated to utilize new gnustep.eclass (only versions
+  bumped where files would change); some KEYWORDS were accidentally dropped
+  between version bumps of packages -- this has been resolved; windowmaker
+  correctly supports gnustep now
 
   18 Oct 2004; David Holm <dholm@gentoo.org> :
   Added to ~ppc.

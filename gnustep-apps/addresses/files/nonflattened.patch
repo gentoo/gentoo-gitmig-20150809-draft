@@ -1,0 +1,26 @@
+diff -ur Addresses-0.4.6/AddressManager/GNUmakefile Addresses-0.4.6-adc/AddressManager/GNUmakefile
+--- Addresses-0.4.6/AddressManager/GNUmakefile	2004-07-29 08:23:10.000000000 -0400
++++ Addresses-0.4.6-adc/AddressManager/GNUmakefile	2004-11-06 16:31:51.661209800 -0500
+@@ -23,8 +23,8 @@
+ AddressManager_LANGUAGES=Dutch English French German Spanish
+ AddressManager_OBJCFLAGS=-I../Frameworks -Wall
+ AddressManager_LDFLAGS=\
+-	-L../Frameworks/AddressView/AddressView.framework/Versions/A \
+-	-L../Frameworks/Addresses/Addresses.framework/Versions/A     \
++	-L../Frameworks/AddressView/AddressView.framework/Versions/A/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/${LIBRARY_COMBO} \
++	-L../Frameworks/Addresses/Addresses.framework/Versions/A/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/${LIBRARY_COMBO} \
+ 	-lAddressView -lAddresses
+ 
+ -include GNUmakefile.preamble
+diff -ur Addresses-0.4.6/Frameworks/Addresses/GNUmakefile Addresses-0.4.6-adc/Frameworks/Addresses/GNUmakefile
+--- Addresses-0.4.6/Frameworks/Addresses/GNUmakefile	2004-07-29 08:23:10.000000000 -0400
++++ Addresses-0.4.6-adc/Frameworks/Addresses/GNUmakefile	2004-11-06 16:45:42.292934584 -0500
+@@ -49,6 +49,6 @@
+ -include GNUmakefile.postamble
+ 
+ after-Addresses-install::
+-	ln -sf $(GNUSTEP_INSTALLATION_DIR)/Library/Headers/Addresses \
+-	       $(GNUSTEP_INSTALLATION_DIR)/Library/Headers/AddressBook
++	ln -sf $(GNUSTEP_INSTALLATION_DIR)/Library/Headers/${LIBRARY_COMBO}/Addresses \
++	       $(GNUSTEP_INSTALLATION_DIR)/Library/Headers/${LIBRARY_COMBO}/AddressBook
+ 

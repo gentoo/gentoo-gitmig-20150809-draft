@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/recycler/recycler-0.7_pre20040928.ebuild,v 1.2 2004/10/09 22:28:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/recycler/recycler-0.7_pre20040928.ebuild,v 1.3 2004/11/12 03:51:36 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -26,6 +26,8 @@ DEPEND="${GS_DEPEND}
 	gnustep-apps/gworkspace"
 RDEPEND="${GS_RDEPEND}
 	gnustep-apps/gworkspace"
+
+egnustep_install_domain "System"
 
 src_compile() {
 	egnustep_env

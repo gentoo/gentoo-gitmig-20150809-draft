@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/easydiff-0.3.1_pre20040927.ebuild,v 1.2 2004/10/17 09:23:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/easydiff-0.3.1_pre20040927.ebuild,v 1.3 2004/11/12 03:51:53 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -10,6 +10,7 @@ ECVS_MODULE="gnustep/dev-apps/${PN/easyd/EasyD}"
 ECVS_CO_OPTS="-D ${PV/*_pre}"
 ECVS_UP_OPTS="-D ${PV/*_pre}"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
+inherit gnustep cvs
 
 S=${WORKDIR}/${ECVS_MODULE}
 

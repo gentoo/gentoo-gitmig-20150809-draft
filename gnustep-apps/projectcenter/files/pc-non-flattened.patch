@@ -1,0 +1,11 @@
+--- GNUmakefile.preamble	2004-11-11 16:07:14.214927024 -0500
++++ GNUmakefile.preamble	2004-11-11 16:09:24.561111392 -0500
+@@ -45,7 +45,7 @@
+ 
+ # Additional library directories the linker should search
+ #ADDITIONAL_LIB_DIRS += -L./Library/$(GNUSTEP_OBJ_DIR)
+-ADDITIONAL_LIB_DIRS += -L./Library/ProjectCenter.framework/Versions/Current
++ADDITIONAL_LIB_DIRS += -L./Library/ProjectCenter.framework/Versions/Current/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}/${LIBRARY_COMBO}
+ 
+ ADDITIONAL_TOOL_LIBS +=
+ 

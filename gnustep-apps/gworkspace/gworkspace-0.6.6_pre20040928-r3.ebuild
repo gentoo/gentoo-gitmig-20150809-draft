@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.6.6_pre20040928-r3.ebuild,v 1.2 2004/10/22 19:51:02 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.6.6_pre20040928-r3.ebuild,v 1.3 2004/11/12 03:51:18 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -25,6 +25,8 @@ IUSE="${IUSE} pdfkit"
 DEPEND="${GS_DEPEND}
 	pdfkit? ( gnustep-libs/pdfkit )"
 RDEPEND="${GS_RDEPEND}"
+
+egnustep_install_domain "System"
 
 src_compile() {
 	egnustep_env

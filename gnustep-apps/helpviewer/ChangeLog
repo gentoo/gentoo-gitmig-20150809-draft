@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/helpviewer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/helpviewer/ChangeLog,v 1.4 2004/10/22 06:37:47 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/helpviewer/ChangeLog,v 1.5 2004/11/12 03:54:20 fafhrd Exp $
+
+  11 Nov 2004; Armando Di Cianno <fafhrd@gentoo.org> helpviewer-0.3-r1.ebuild,
+  -helpviewer-0.3.ebuild:
+  Mass Update: gnustep.eclass revamped to allow configurable root install;
+  gnustep-base/libs/apps updated to utilize new gnustep.eclass (only versions
+  bumped where files would change); some KEYWORDS were accidentally dropped
+  between version bumps of packages -- this has been resolved; windowmaker
+  correctly supports gnustep now
 
 *helpviewer-0.3-r1 (22 Oct 2004)
 
