@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/ChangeLog,v 1.2 2003/07/26 07:38:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/ChangeLog,v 1.3 2003/12/10 05:32:55 mr_bones_ Exp $
+
+  09 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  crystalspace-cvs-0.97.ebuild:
+  Live CVS ebuilds are never stable.
 
 *crystalspace-cvs-0.97 (03 Apr 2003)
 
