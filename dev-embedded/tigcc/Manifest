@@ -1,5 +1,5 @@
-MD5 3a95c31a8335bbf659da189392bf42cb ChangeLog 561
+MD5 ea5a3891da56ac4a1c27ec902000e52f ChangeLog 653
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 59ab495f9ad14fb5eb4d8080090e613b tigcc-0.95_beta19-r1.ebuild 6455
+MD5 debeb1287c40e5295252ea3e0e219d45 tigcc-0.95_beta19-r1.ebuild 6460
 MD5 627b7e86641edb82ffa0702ff65de4c1 files/a68k-fix.patch 625
 MD5 a10a653d920682c632466905a53be915 files/digest-tigcc-0.95_beta19-r1 322
