@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.47 2004/10/20 21:21:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.48 2004/10/21 18:15:54 plasmaroo Exp $
+
+*usermode-sources-2.6.8.1-r1 (21 Oct 2004)
+
+  21 Oct 2004; <plasmaroo@gentoo.org> -usermode-sources-2.6.6-r6.ebuild,
+  +usermode-sources-2.6.8.1-r1.ebuild,
+  -files/usermode-sources-2.6.6.CAN-2004-0495-0496.patch,
+  -files/usermode-sources-2.6.6.FPULockup-53804.patch,
+  -files/usermode-sources-2.6.6.ProcPerms.patch,
+  -files/usermode-sources-2.6.CAN-2004-0596.patch,
+  -files/usermode-sources-2.6.IPTables-RDoS.patch:
+  Version bump - closes bug #68278. Old version removed due to security issues,
+  bug #68375.
 
   20 Oct 2004; Michael Hanselmann <hansmi@gentoo.org>
   usermode-sources-2.6.6-r6.ebuild:
