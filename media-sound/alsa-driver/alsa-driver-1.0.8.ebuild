@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.6 2005/01/28 16:28:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.7 2005/02/18 23:37:27 luckyduck Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -61,6 +61,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	#see #81666
+	epatch ${FILESDIR}/${PV}-msi_audigyls.patch
 
 	convert_to_m ${S}/Makefile
 }
