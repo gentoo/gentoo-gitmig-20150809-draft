@@ -18,13 +18,15 @@ ETYPE="sources"
 
 inherit kernel || die
 
-KV=2.4.20-selinux
 EXTRAVERSION=selinux
 S=${WORKDIR}/linux-${KV}
 OKV=2.4.20
 DESCRIPTION="LSM patched kernel with SELinux archive"
+
+SEPATCH=2003011510
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 
-      http://www.nsa.gov/selinux/patches/lsm-2.4-2003011510.patch.gz"
+	 http://www.nsa.gov/selinux/patches/lsm-2.4-${SEPATCH}.patch.gz
+	 http://www.nsa.gov/selinux/patches/selinux-2.4-${SEPATCH}.patch.gz"
 
 HOMEPAGE="http://www.kernel.org/ http://www.nsa.gov/selinux"
 KEYWORDS="x86"
@@ -35,7 +37,8 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 	
 	cd linux-${KV}
-	epatch ${WORKDIR}/lsm-2.4-2003011510.patch 
+	epatch ${WORKDIR}/lsm-2.4-${SEPATCH}.patch
+	epatch ${WORKDIR}/selinux-2.4-${SEPATCH}.patch
 
 	kernel_src_unpack
 }
