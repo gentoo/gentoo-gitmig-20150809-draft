@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdsplash/lcdsplash-0.1.ebuild,v 1.1 2004/11/17 02:14:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdsplash/lcdsplash-0.2.ebuild,v 1.1 2004/11/23 01:51:52 vapier Exp $
 
 DESCRIPTION="splash Gentoo boot information on LCD's"
 HOMEPAGE="http://www.gentoo.org/"
@@ -20,7 +20,7 @@ src_install() {
 	insinto /sbin
 	doins splash-functions.sh || die "splash"
 	insinto /lib/rcscripts/lcdsplash
-	doins modules/* || die "modules"
+	doins -r modules/* || die "modules"
 
 	insinto /etc
 	doins lcdsplash.conf || die "conf"

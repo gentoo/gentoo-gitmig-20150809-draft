@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lcdsplash
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdsplash/ChangeLog,v 1.1 2004/11/17 02:14:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdsplash/ChangeLog,v 1.2 2004/11/23 01:51:52 vapier Exp $
+
+*lcdsplash-0.2 (22 Nov 2004)
+
+  22 Nov 2004; Mike Frysinger <vapier@gentoo.org> -lcdsplash-0.1.ebuild,
+  +lcdsplash-0.2.ebuild:
+  Version bump.
 
 *lcdsplash-0.1 (16 Nov 2004)
 
