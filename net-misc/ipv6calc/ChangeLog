@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/palo
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.1 2003/03/20 04:44:06 gmsoft Exp $
+
+*ipv6calc-0.45 (06 Mar 2003)
+
+  06 Mar 2003; Guy Martin <gmsoft@gentoo.org> ipv6calc-0.45.ebuild :
+  Initial import. Thanks to Klavs Klavsen <kl@vsen.dk> for the initial ebuild.
