@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.6 2005/01/29 09:07:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.7 2005/02/06 17:58:47 fserb Exp $
+
+  06 Feb 2005; Fernando Serboncini <fserb@gentoo.org> x11vnc-0.7.ebuild:
+  Added to ~ppc
 
   29 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   -files/0.6.2-configure.ac.patch, +files/0.7-autotools.patch,
