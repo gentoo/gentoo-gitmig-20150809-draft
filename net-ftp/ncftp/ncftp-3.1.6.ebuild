@@ -1,28 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.6.ebuild,v 1.3 2003/10/18 01:51:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.6.ebuild,v 1.4 2004/01/07 19:31:24 vapier Exp $
 
-IUSE="" #ipv6
-
-S=${WORKDIR}/${P}
-#IPV6_P="ncftp-315-v6-20030207"
-
+IPV6_P="ncftp-316-v6-20040106"
 DESCRIPTION="An extremely configurable ftp client"
-SRC_URI="ftp://ftp.ncftp.com/ncftp/${P}-src.tar.bz2"
-#ipv6? ( ftp://ftp.cc.chuo-u.ac.jp/pub/IPv6/kame/misc/${IPV6_P}.diff.gz )"
+SRC_URI="ftp://ftp.ncftp.com/ncftp/${P}-src.tar.bz2
+	ipv6? ( ftp://ftp.cc.chuo-u.ac.jp/pub/IPv6/kame/misc/${IPV6_P}.diff.gz )"
 HOMEPAGE="http://www.ncftp.com/"
 
-SLOT="0"
 LICENSE="Clarified-Artistic"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
 src_unpack() {
-	unpack ${P}-src.tar.bz2
+	unpack ${A}
 	cd ${S}
-
-	#use ipv6 && epatch ${DISTDIR}/${IPV6_P}.diff.gz
+	use ipv6 && epatch ${WORKDIR}/${IPV6_P}.diff
 }
 
 src_install() {

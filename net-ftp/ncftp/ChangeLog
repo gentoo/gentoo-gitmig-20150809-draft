@@ -1,11 +1,20 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.17 2003/10/18 01:51:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.18 2004/01/07 19:31:24 vapier Exp $
+
+*ncftp-3.1.7 (07 Jan 2004)
+
+  07 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
+
+*ncftp-3.1.6 (16 Oct 2003)
+
+  07 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  The ipv6 patch has been updated, add back in.  Also move to stable because
+  of security issue (sorry other arches).
 
   17 Oct 2003; Nick Hadaway <raker@gentoo.org> ncftp-3.1.6.ebuild:
   The ipv6 patch has not been updated yet.  Removing for now.
-
-*ncftp-3.1.6 (16 Oct 2003)
 
   16 Oct 2003; Masatomo Nakano <nakano@gentoo.org> ncftp-3.1.6.ebuild:
   Removed CJK patch because the patch is already included in 
