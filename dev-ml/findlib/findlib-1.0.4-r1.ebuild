@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4-r1.ebuild,v 1.3 2004/08/21 20:18:43 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4-r1.ebuild,v 1.4 2004/08/21 21:47:55 mattam Exp $
 
 IUSE="tcltk"
 
@@ -46,7 +46,7 @@ src_install() {
 	dodir `ocamlc -where`
 
 	make prefix=${D} install || die
-	
+
 	dodir ${stublibs}
 
 	cd ${S}/doc
