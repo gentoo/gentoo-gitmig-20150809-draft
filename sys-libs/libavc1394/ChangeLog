@@ -1,0 +1,13 @@
+# ChangeLog for sys-libs/libavc1394
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+*libavc1394-0.3.1 (12 Jul 2002)
+
+  12 Jul 2002; Doug Goldstein <cardoe@gentoo.org> libavc1394-0.3.1.ebuild
+  ChangeLog files/digest-libavc1394-0.3.1 :
+
+  New package
+  libavc1394 is a programming interface for the 1394 Trade Association AV/C (Audio/Video Control) 
+  Digital Interface Command Set. It is intended for use with GNU/Linux (quote from author's site).
+  Thanks to Hanno Beock hanno@gmx.de in bug #4167 for the ebuild.
+  Cleaned up the ebuild prior to adding to the tree.
