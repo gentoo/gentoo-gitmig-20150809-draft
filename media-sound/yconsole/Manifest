@@ -1,0 +1,5 @@
+MD5 22555a9b3a74e883646b4b63a8303d83 yconsole-3.0.1.ebuild 747
+MD5 50a0e5ffe2cb35284ce34ffa12e6a320 files/digest-yconsole-3.0.1 63
+MD5 ea7949504c3791cd699a231f82feef7e files/3.0.1-makefile-cflags.patch 306
+MD5 71695ac17f14f2dedbc6df453d072d13 ChangeLog 348
+MD5 ec09b9a6676d5d1a73e9da083b6c51b7 metadata.xml 633
