@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.3 2003/09/06 21:26:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.4 2003/10/02 16:52:18 leonardop Exp $
+
+  02 Oct 2003; L. Boshell <leonardop@gentoo.org> libgnomeuimm-2.0.0.ebuild :
+  Patch: make it compile nicely under gcc-2. Should close bug #29436.
 
 *libgnomeuimm-2.0.0 (06 Sep 2003)
 
