@@ -35,7 +35,7 @@ sys-apps/sed
 sys-apps/setserial
 sys-apps/sh-utils
 sys-apps/shadow
-sys-apps/sharutils
+app-arch/sharutils
 sys-apps/star
 app-arch/tar
 sys-apps/textutils

@@ -89,7 +89,7 @@ dev-lang/perl
 *sys-apps/sh-utils
 *<sys-apps/shadow-5
 *sys-apps/pam-login
-*sys-apps/sharutils
+*app-arch/sharutils
 *app-arch/tar
 #only needed by xinetd, and it's out.  So tcp-wrappers is out too
 #sys-apps/tcp-wrappers

@@ -107,7 +107,7 @@ net-misc/rsync
 *sys-apps/sh-utils
 *<sys-apps/shadow-5
 *sys-apps/pam-login
-*sys-apps/sharutils
+*app-arch/sharutils
 *app-arch/tar
 *sys-apps/textutils
 *sys-apps/util-linux

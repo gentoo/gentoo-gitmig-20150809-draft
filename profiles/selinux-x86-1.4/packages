@@ -77,7 +77,7 @@
 *sys-apps/sed
 *sys-apps/setserial
 *<sys-apps/shadow-5
-*sys-apps/sharutils
+*app-arch/sharutils
 *>=sys-apps/texinfo-4.2-r1
 *sys-apps/which
 *sys-devel/autoconf

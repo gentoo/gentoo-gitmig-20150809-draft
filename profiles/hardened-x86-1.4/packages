@@ -88,7 +88,7 @@ virtual/os-headers
 # <zhen@gentoo.org> Again, added until bug 10135 is addressed
 *sys-apps/pam-login
 
-*sys-apps/sharutils
+*app-arch/sharutils
 *app-arch/tar
 *>=sys-apps/texinfo-4.2-r1
 *sys-apps/util-linux

@@ -58,7 +58,7 @@ sys-apps/kbd
 *sys-apps/setserial
 *sys-apps/sh-utils
 *sys-apps/shadow
-*sys-apps/sharutils
+*app-arch/sharutils
 *sys-apps/sysvinit
 *app-arch/tar
 *sys-apps/tcp-wrappers

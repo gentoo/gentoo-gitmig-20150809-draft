@@ -83,7 +83,7 @@
 *sys-apps/sed
 *sys-apps/setserial
 *<sys-apps/shadow-5
-*>=sys-apps/sharutils-4.2.1-r6
+*>=app-arch/sharutils-4.2.1-r6
 *sys-apps/slocate
 *sys-apps/texinfo
 *sys-apps/which

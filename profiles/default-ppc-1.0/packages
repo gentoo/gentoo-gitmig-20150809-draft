@@ -131,7 +131,7 @@ net-misc/rsync
 *<sys-apps/shadow-5
 *sys-apps/pam-login
 # updated for GLSA
-*>=sys-apps/sharutils-4.2.1-r6
+*>=app-arch/sharutils-4.2.1-r6
 *app-arch/tar
 *sys-apps/textutils
 *sys-apps/util-linux
