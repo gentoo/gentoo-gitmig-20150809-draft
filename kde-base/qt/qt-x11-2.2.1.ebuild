@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-x11-2.2.1.ebuild,v 1.1 2000/10/19 16:18:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-x11-2.2.1.ebuild,v 1.2 2000/10/29 20:36:59 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/qt-2.2.1
 DESCRIPTION="QT 2.2"
-SRC_URI="ftp://ftp.kde.org/pub/kde/unstable/distribution/2.0RC2/tar/src/${A}
-	 ftp://ftp.sourceforge.net/pub/mirrors/kde/unstable/distribution/2.0RC2/tar/src/${A}"
+SRC_PATH="kde/stable/2.0/distribution/tar/generic/src/${A}"
+SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
+	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 HOMEPAGE="http://www.kde.org/"
 
 export QTDIR=${S}
@@ -19,8 +20,9 @@ src_unpack() {
 }
 src_compile() {
     cd ${S}
+    export LDFLAGS="-ldl"
     ./configure -sm -thread -system-zlib -system-jpeg -system-nas-sound \
-	-system-libmng -system-libpng -gif -platform linux-g++
+	-system-libmng -system-libpng -gif -platform linux-g++ -ldl -lpthread
     cd ${S}/src
     cp Makefile Makefile.orig
     sed -e "s/-O2/${CFLAGS}/" Makefile.orig > Makefile
