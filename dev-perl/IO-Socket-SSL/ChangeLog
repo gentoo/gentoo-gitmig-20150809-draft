@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Socket-SSL
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.19 2004/03/23 10:00:06 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.20 2004/03/27 02:17:25 gustavoz Exp $
+
+  26 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  IO-Socket-SSL-0.94.ebuild:
+  stable on hppa
 
   23 Mar 2004; Joshua Kinard <kumba@gentoo.org> IO-Socket-SSL-0.94.ebuild,
   IO-Socket-SSL-0.95.ebuild:

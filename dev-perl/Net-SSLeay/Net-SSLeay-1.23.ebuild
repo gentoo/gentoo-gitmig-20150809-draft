@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.23.ebuild,v 1.6 2004/03/23 09:57:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.23.ebuild,v 1.7 2004/03/27 02:16:09 gustavoz Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cpan.org/authors/id/SAMPO/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc sparc alpha ia64 mips"
+KEYWORDS="x86 ~amd64 ~ppc sparc alpha ia64 mips hppa"
 
 DEPEND="${DEPEND} dev-libs/openssl"
 

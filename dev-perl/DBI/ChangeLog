@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.23 2004/03/21 10:16:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.24 2004/03/27 02:19:36 gustavoz Exp $
+
+  26 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> DBI-1.38.ebuild:
+  stable on hppa
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> DBI-1.21-r1.ebuild,
   DBI-1.21.ebuild, DBI-1.30-r1.ebuild, DBI-1.30.ebuild, DBI-1.32.ebuild,
