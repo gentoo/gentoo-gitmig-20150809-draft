@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r2.ebuild,v 1.3 2004/06/14 21:09:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.1 2004/06/24 01:34:45 vapier Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -31,16 +31,16 @@ DEPEND="media-libs/jpeg
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
+	cp -rf ${S}{,.orig}
 
-	# This breaks compilation on x86 architecture
-	# See bug #36502, comment 8
-	[ "$ARCH" != x86 ] && epatch ${FILESDIR}/${P}-fPIC.patch
+	epatch ${FILESDIR}/${P}-fPIC.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
 
 	# Fix an error in the detection of the altivec-support
 	# in the compiler
 	epatch "${FILESDIR}/altivec-fix-${PV}.patch"
-	autoreconf
+	sed -i 's:-O3::' configure.in
+	autoreconf || die
 
 	use X || epatch "${FILESDIR}/no-x11-lib-2.patch"
 }
