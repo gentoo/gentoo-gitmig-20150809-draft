@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/lsof
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.15 2003/07/16 11:32:57 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.16 2003/08/03 06:22:17 kumba Exp $
+
 
 *lsof-4.68 (30 Jun 2003)
+
+  03 Aug 2003; Joshua Kinard <kumba@gentoo.org> lsof-4.68.ebuild:
+  Changed ~sparc to sparc and added ~mips to KEYWORDS
 
   06 Jul 2003; Guy Martin <gmsoft@gentoo.org> lsof-4.68.ebuild :
   Marked stable on hppa.
