@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/htmlize-0.67.ebuild,v 1.2 2003/02/13 07:06:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/htmlize-0.67.ebuild,v 1.3 2003/03/24 11:31:07 mkennedy Exp $
 
 inherit elisp 
 
@@ -18,6 +18,8 @@ DEPEND="virtual/emacs"
 S="${WORKDIR}/${P}"
 
 SITEFILE=50htmlize-gentoo.el
+
+# NOTE: this version of htmlize may have issues with emacs-cvs
 
 src_compile() {
 	emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el
