@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/disspam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/disspam/ChangeLog,v 1.5 2003/05/27 16:11:11 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/disspam/ChangeLog,v 1.6 2003/05/29 02:10:15 strider Exp $
 
 *disspam-0.12 (27 May 2003)
+  
+  28 May 2003; Adrian Almenar <strider@gentoo.org> disspam-0.12.ebuild:
+  Fixed path to perl executable in disspam.pl
   
   27 May 2003; Adrian Almenar <strider@gentoo.org> disspam-0.12.ebuild:
   Version Bump.
