@@ -1,11 +1,14 @@
 # ChangeLog for net-mail/pop3vscan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # AUTHOR: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/ChangeLog,v 1.4 2003/02/12 08:14:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/ChangeLog,v 1.5 2003/03/11 22:14:14 mholzer Exp $
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
 *pop3vscan-0.4 (10 Jul 2002)
- 
+
+  11 Mar 2003; Martin Holzer <mholzer@gentoo.org> pop3vscan-0.4.ebuild:
+  changed sys-apps/iptables to net-firewall/iptables
+
   10 Jul 2002; J.Alberto S.L. <bass@gentoo.org> pop3vscan-0.4.ebuild:
   First relase.
