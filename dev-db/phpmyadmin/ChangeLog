@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.15 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.16 2003/04/08 10:17:26 twp Exp $
+
+*phpmyadmin-2.4.0 (08 Apr 2003)
+
+  08 Apr 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.4.0.ebuild files/phpmyadmin-config.patch files/phpmyadmin-mysql-setup.sql.in :
+
+  Version bump.  Improved config file handling (doesn't overwrite on upgrade,
+  now stores config file in /etc/phpmyadmin so it is config-protected).  Added
+  pkg_config to setup MySQL. Bug # 16521.
 
 *phpmyadmin-2.3.3 (11 Dec 2002)
 
