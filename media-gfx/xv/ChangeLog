@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.21 2003/10/26 08:58:43 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.22 2003/10/28 14:20:47 mholzer Exp $
+
+*xv-3.10a-r6 (28 Oct 2003)
+
+  28 Oct 2003; Martin Holzer <mholzer@gentoo.org> xv-3.10a-r6.ebuild:
+  Closing #29253.
 
   26 Oct 2003; Sven Blumenstein <bazik@gentoo.org> xv-3.10a-r5.ebuild:
   Bumped to stable on sparc, removed RESTRICT (bug #29276)
