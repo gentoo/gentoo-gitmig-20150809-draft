@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.65 2004/12/16 00:59:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.66 2004/12/16 11:08:23 absinthe Exp $
+
+  16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> libsdl-1.2.8.ebuild:
+  Masked on amd64 due to build failure, bug 74608.
 
   15 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
   -libsdl-1.2.7-r1.ebuild, -libsdl-1.2.7-r2.ebuild, -libsdl-1.2.7.ebuild:
