@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.31 2004/11/23 00:06:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.32 2004/12/01 00:01:51 robbat2 Exp $
+
+*nss_ldap-226 (30 Nov 2004)
+
+  30 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> nss_ldap-226.ebuild,
+  nss_ldap-220.ebuild:
+  Bug #49349 redux, 220 in x86. Add new version of 226, new upstream no longer
+  has a dep on berkdb in any way.
 
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
