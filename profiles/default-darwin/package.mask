@@ -1,4 +1,1 @@
-# ndimiduk@gentoo.org
-# masked until i can get the tests to pass or the patch gets merged upstream
-dev-libs/libsigsegv
 
