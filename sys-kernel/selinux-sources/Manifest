@@ -7,3 +7,4 @@ MD5 5b59de8931749376328efcb2798be298 files/digest-selinux-sources-2.4.25 145
 MD5 5b59de8931749376328efcb2798be298 files/digest-selinux-sources-2.4.25-r1 145
 MD5 69447df9da3cc0678dc94d99e514d93d files/digest-selinux-sources-2.4.24-r2 145
 MD5 174438d215b70cad5ffb00ca8123c062 files/selinux-sources-2.4.24.munmap.patch 837
+MD5 21f3a4f186017d925067335e24db36a1 files/selinux-sources-2.4.25.CAN-2004-0109.patch 1877
