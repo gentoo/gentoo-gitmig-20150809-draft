@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.9.1.ebuild,v 1.2 2003/12/10 19:55:24 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.9.1.ebuild,v 1.3 2004/01/07 18:41:07 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 
 IUSE=""
 
