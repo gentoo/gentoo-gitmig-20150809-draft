@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3-r1.ebuild,v 1.2 2004/04/27 21:50:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3-r1.ebuild,v 1.3 2004/05/03 20:43:06 vapier Exp $
 
-IUSE="nls objc"
+inherit flag-o-matic ccc eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
 SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
@@ -14,12 +13,10 @@ SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 s390"
+IUSE="nls objc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"
-
-inherit flag-o-matic ccc eutils
-replace-flags -O? -O2
 
 src_unpack() {
 	unpack gdb-${PV}.tar.bz2
@@ -27,9 +24,9 @@ src_unpack() {
 
 	if [ "${ARCH}" = "hppa" ]; then
 		cd ${S}
-		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-01.patch
-		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-02.patch
-		patch -p1 < ${FILESDIR}/gdb-5.3-hppa-03.patch
+		epatch ${FILESDIR}/gdb-5.3-hppa-01.patch
+		epatch ${FILESDIR}/gdb-5.3-hppa-02.patch
+		epatch ${FILESDIR}/gdb-5.3-hppa-03.patch
 	fi
 
 	#s390 Specific fixes to close Bug #47903
@@ -44,7 +41,7 @@ src_unpack() {
 	fi
 
 
-	if [ -n "`use objc`" ] ; then
+	if use objc ; then
 		unpack gdb-5_3-objc-patch.tgz
 		cd ${S}
 
@@ -62,18 +59,12 @@ src_unpack() {
 }
 
 src_compile() {
-
-	local myconf
-
-	use nls && myconf="--enable-nls" || myconf="--disable-nls"
-
-	econf ${myconf} || die
-
+	replace-flags -O? -O2
+	econf `use_enable nls` || die
 	make || die
 }
 
 src_install() {
-
 	 make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
@@ -100,17 +91,15 @@ src_install() {
 
 	rm -rf ${D}/usr/include
 
-	dodoc COPYING* README
+	dodoc README
 
 	docinto gdb
-	dodoc gdb/CONTRIBUTE gdb/COPYING* gdb/README \
-		gdb/MAINTAINERS gdb/NEWS gdb/ChangeLog* \
-		gdb/TODO
+	dodoc gdb/CONTRIBUTE gdb/README gdb/TODO \
+		gdb/MAINTAINERS gdb/NEWS gdb/ChangeLog*
 
 	docinto sim
 	dodoc sim/ChangeLog sim/MAINTAINERS sim/README-HACKING
 
 	docinto mmalloc
-	dodoc mmalloc/COPYING.LIB mmalloc/MAINTAINERS \
-		mmalloc/ChangeLog mmalloc/TODO
+	dodoc mmalloc/MAINTAINERS mmalloc/ChangeLog mmalloc/TODO
 }
