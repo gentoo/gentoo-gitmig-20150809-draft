@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.16 2004/07/02 04:18:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.17 2004/07/14 12:22:27 axxo Exp $
 
 inherit java nsplugins gcc
 
@@ -22,20 +22,10 @@ PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
 
 src_unpack () {
-	typeset a want_gcc_ver
-
-	if [[ $(gcc-major-version) -eq 3 && $(gcc-minor-version) -ge 2 ]]; then
-		want_gcc_ver=3.2
-	else
-		want_gcc_ver=2.95
-	fi
-
 	for a in ${A}; do
-		if [[ ${a} == *gcc*.bin ]]; then
-			if [[ ${a} == *-gcc${want_gcc_ver}.bin ]]; then
-				echo ">>> Unpacking ${a}..."
-				tail -n +422 ${DISTDIR}/${a} | tar xjf - || die
-			fi
+		if [[ ${a} == *.bin ]]; then
+			echo ">>> Unpacking ${a}..."
+			tail -n +422 ${DISTDIR}/${a} | tar xjf - || die
 		else
 			# Handle files (none right now) that don't have a gcc
 			# version dependency
