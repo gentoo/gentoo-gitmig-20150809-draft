@@ -1,7 +1,7 @@
-# Copyright 2000-2003 Gentoo Technologies, Inc., Okrain Genady (^Mafteah), 
-#						and Luke-Jr
-# Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-mxs/bittorrent-mxs-3.2.1b.ebuild,v 1.3 2003/08/21 14:00:38 luke-jr Exp $
+# Copyright 2000-2003 Gentoo Technologies, Inc., Okrain Genady (^Mafteah), and Luke-Jr
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-mxs/bittorrent-mxs-3.2.1b.ebuild,v 1.4 2003/09/08 07:03:03 msterret Exp $
+
 inherit distutils
 
 MY_P="${P/bittorrent-mxs/BitTorrent-experimental}-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/zuul/zuul-1.0.0.ebuild,v 1.3 2003/09/08 07:03:03 msterret Exp $
 
 HOSTNAME=`hostname`
 DESCRIPTION="Zuul is yet another PHP front-end for mldonkey. It will allow full access to all the features of mldonkey including starting/viewing downloads, viewing uploads, viewing servers, and setting all the options."
