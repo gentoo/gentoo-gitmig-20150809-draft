@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.25 2003/05/27 09:40:21 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.26 2003/05/27 11:07:46 pauldv Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -196,10 +196,11 @@ php_src_compile() {
 	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
 
 	#Hack to use db4
-	if [ -n "`has_version =sys-libs/db-4*`" -a "`grep -q -- '--with-db4' configure`" ] ; then
+	if has_version =sys-libs/db-4* && grep -q -- '--with-db4' configure; then
 		einfo "Enabling db4"
 		use berkdb && myconf="${myconf} --with-db4=/usr"
 	else
+		einfo "enabling db3"
 		use berkdb && myconf="${myconf} --with-db3=/usr"
 	fi
 
