@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4.ebuild,v 1.4 2004/03/23 02:52:05 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.4.ebuild,v 1.5 2004/03/23 02:59:38 zx Exp $
 
 inherit java-pkg
 
@@ -22,8 +22,8 @@ src_compile() {
 	antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadoc examples"
-	ant ${antflags} -f jsr154/build.xml
-	ant ${antflags} -f jsr152/build.xml
+	ant ${antflags} -f jsr154/build.xml || die "compilation problem"
+	ant ${antflags} -f jsr152/build.xml || die "compilation problem"
 }
 
 src_install () {
