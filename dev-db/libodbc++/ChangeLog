@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/libodbc++
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.1 2003/11/16 11:57:27 robbat2 Exp $
+
+*libodbc++-0.2.3 (16 Nov 2003)
+
+  16 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> libodbc++-0.2.3.ebuild:
+  initial commit, from bug 26140, submission by Henri Schomaecker
+  <henri.schomaecker@virtual-homes.de>
+
