@@ -1,5 +1,5 @@
-MD5 ce3de495d234cf1823b1248c27f30105 ChangeLog 1188
-MD5 7f2ebf1e6349087981c35361d6890f28 unix2dos-2.2.ebuild 757
+MD5 001fc0a00ae4573d9e534772a272f5f4 ChangeLog 1311
+MD5 c1ed0e3f5c9b33286cae94f2dfe5f6d7 unix2dos-2.2.ebuild 770
 MD5 9b19aa73a3447d0d691bd0e5537f6547 files/digest-unix2dos-2.2 66
 MD5 e7f3673c14b9bbeed71e94730d7ef386 files/unix2dos-2.2-manpage.patch 888
 MD5 fe14e5681bc093d2039290d906023047 files/unix2dos-2.2-segfault.patch 2297
