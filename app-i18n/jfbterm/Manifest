@@ -1,5 +1,6 @@
 MD5 4804c754eb7d14938680434f659eb721 ChangeLog 650
 MD5 bdd96c10abb8910b6e088d47e8b59ea1 jfbterm-0.3.12.ebuild 1165
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 9e93ac5a5ce5371fe60243ba3278701a files/digest-jfbterm-0.3.12 65
 MD5 38d6ce7897140c1258cfeed5ebd30bc2 files/jfbterm.conf.extra 3899
 MD5 e4b59496f2d92bde0401211a5a935c5c files/jfbterm.conf.xfree 3803

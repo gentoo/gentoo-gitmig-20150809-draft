@@ -1,5 +1,6 @@
 MD5 781c8278081600b4b660a2a45cfbd018 ChangeLog 1134
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 587dbc04030ef18ca632476a2c6770b0 imhangul-0.9.5.ebuild 1096
 MD5 d1efac7b52007c36c5533a878fb47cd0 imhangul-0.9.6.ebuild 1096
-MD5 315e40fca88690a617cc1fa76450d924 files/digest-imhangul-0.9.5 67
 MD5 fb2e40427ff74570f9e360b984f0effe files/digest-imhangul-0.9.6 67
+MD5 315e40fca88690a617cc1fa76450d924 files/digest-imhangul-0.9.5 67

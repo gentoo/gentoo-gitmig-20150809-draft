@@ -1,4 +1,5 @@
 MD5 0f66a90a10b4d839f99eb1f079ebe573 ChangeLog 547
-MD5 cc7d0c858d870c6265f665aa0c16e2a8 kcc-1.0.ebuild 782
+MD5 50716b395416cb8745efa05ab9a505e5 kcc-1.0.ebuild 777
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 b1c138bf5f5e98cdaf6ab142bc86fc0f files/digest-kcc-1.0 54
 MD5 24113a71a8621fc051fcc25412599374 files/kcc-1.0/gentoo.diff 562
