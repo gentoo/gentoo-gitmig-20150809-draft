@@ -1,0 +1,20 @@
+diff -urN shout-0.8.0/Makefile.in shout-0.8.0-modified/Makefile.in
+--- shout-0.8.0/Makefile.in	Thu Apr 20 02:31:50 2000
++++ shout-0.8.0-modified/Makefile.in	Tue Jul 23 19:14:36 2002
+@@ -9,11 +9,11 @@
+ srcdir = @srcdir@
+ VPATH = @srcdir@
+ 
+-prefix = @prefix@/icecast
+-exec_prefix = @prefix@
+-bindir = @BINDIR@
+-etcdir = @ETCDIR@
+-logdir = @LOGDIR@
++prefix = /usr
++exec_prefix = /usr
++bindir = /usr/bin
++etcdir = /etc/shout
++logdir = /var/log/shout
+ 
+ DEFS = -I. @DEFS@
+ 
