@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.8 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.9 2002/10/29 06:27:55 leonardop Exp $
 
 # The gtk-engines eclass is inheritd by all gtk-engines-* ebuilds.
 
@@ -32,12 +32,14 @@ ENGINE=${PN/gtk-engines-/}
 case "${ENGINE}" in
 	"cleanice" )
 		[ "$SLOT" -eq "2" ] && MY_PN="gtk-engines-cleanice2" ;;
+		
 	"crux" )
 		MY_PN="crux"
 		newdepend '>=gnome-base/libgnomeui-2.0.1' \
 			'>=gnome-base/libglade-2.0.0'
 		DEPEND="${DEPEND} sys-devel/libtool"
 		;;
+		
 	"eazel" )
 		MY_PN="eazel-engine"
 		newdepend media-libs/gdk-pixbuf
@@ -46,8 +48,20 @@ case "${ENGINE}" in
 		# know if we should rather disabled the tests...
 		[ "${SLOT}" -eq 1 ] && newdepend "=gnome-base/control-center-1.4*"
 		;;
+
+	"flat" )
+		if [ "$SLOT" -eq "2" ]
+		then
+			MY_PN="gtk-flat-theme-2.0"
+		fi
+		;;
+	
 	"gtkstep" )
 		LICENSE="LGPL-2" ;;
+		
+	"lighthouseblue" )
+		MY_PN="lighthouseblue" ;;
+		
 	"metal" | "notif" | "pixbuf" | "pixmap" | "raleigh" | "redmond95" )
 		MY_PN="gtk-engines"
 		if [ "$SLOT" -eq "2" ]
@@ -67,13 +81,16 @@ case "${ENGINE}" in
 			newdepend '>=media-libs/imlib-1.8'
 		fi
 		;;
+		
 	"thinice" )
 		[ "$SLOT" -eq "2" ] && MY_PN="gtk-thinice-engine" ;;
+		
 	"xenophilia" )
 		MY_PN="xenophilia"
 		INSTALL_FONTS=1
 		LICENSE="LGPL-2"
 		;;
+		
 	"xfce" )
 		MY_PN="gtk-xfce-engine" ;;
 esac
@@ -84,9 +101,17 @@ if [ "X${ENGINE}" = "Xthinice" ] && [ "$SLOT" -eq "2" ]
 then
 	SRC_URI="http://thinice.sourceforge.net/${MY_P}.tar.gz"
 	
+elif [ "X${ENGINE}" = "Xflat" ] && [ "$SLOT" -eq "2" ]
+then
+	SRC_URI="http://download.freshmeat.net/themes/gtk2flat/gtk2flat-default.tar.gz"
+	
 elif [ "X${ENGINE}" = "Xxfce" ]
 then
 	SRC_URI="mirror://sourceforge/xfce/${MY_P}.tar.gz"
+	
+elif [ "X${ENGINE}" = "Xlighthouseblue" ]
+then
+	SRC_URI="mirror://sourceforge/lighthouseblue/${MY_P}.tar.gz"
 	
 elif [ "X${ENGINE}" = "Xcrux" ]
 then
@@ -146,7 +171,7 @@ gtk-engines_src_install() {
 		die "Installation failed"
 	
 	for doc in AUTHORS BUGS ChangeLog CONFIGURATION COPYING CUSTOMIZATION \
-		INSTALL NEWS README THANKS TODO
+		NEWS README THANKS TODO
 	do
 		[ -s $doc ] && dodoc $doc
 	done
