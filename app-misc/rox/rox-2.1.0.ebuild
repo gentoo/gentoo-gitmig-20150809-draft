@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.1.0.ebuild,v 1.2 2003/10/25 19:16:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.1.0.ebuild,v 1.3 2003/12/16 01:53:09 weeve Exp $
 
 DESCRIPTION="ROX is a desktop environment, like GNOME, KDE and XFCE.  It is an attempt to bring some of the good features from RISC OS to Unix and Linux."
 HOMEPAGE="http://rox.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/rox/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
 DEPEND=">=x11-libs/gtk+-2.0.5
 	>=dev-libs/glib-2.0.4
