@@ -7,22 +7,39 @@ depend() {
 }
 
 checkconfig() {
-	/sbin/chpax -v /sbin/chpax >/dev/null 2>&1 || return 1
+	if [ "x$CHPAX" = "x" ]; then
+		#CHPAX=/sbin/paxctl
+		CHPAX=/sbin/chpax
+	fi
+	$CHPAX -v $CHPAX >/dev/null 2>&1 || return 1
 }
 
 chpax_flag() {
 	flag=$1
 	fname=$2
 
-	if [ -w "$fname" ]; then
-		#einfo "chpax $flags $fname"
-		/sbin/chpax -$flag ${fname}
-		[ $? != 0 ] && eerror "error: chpax -$flag ${fname}"
+	#einfo "chpax -$flag ${fname}"
+	if [ -w ${fname} ]; then
+		einfo "$CHPAX -$flag ${fname}"
+		$CHPAX -$flag ${fname}
+		[ $? != 0 ] && eerror "error: $CHPAX -$flag ${fname}"
 	fi
+}
+
+fix_exempts() {
+	#need to do this for foo{,bar,baz} expressions to work.
+	PAGEEXEC_EXEMPT=`eval echo $PAGEEXEC_EXEMPT`
+	TRAMPOLINE_EXEMPT=`eval echo $TRAMPOLINE_EXEMPT`
+	RANDMMAP_EXEMPT=`eval echo $RANDMMAP_EXEMPT`
+	MPROTECT_EXEMPT=`eval echo $MPROTECT_EXEMPT`
+	SEGMEXEC_EXEMPT=`eval echo $SEGMEXEC_EXEMPT`
+	RANDEXEC_EXEMPT=`eval echo $RANDEXEC_EXEMPT`
 }
 
 start() {
 	checkconfig || return 1
+
+	fix_exempts
 
 	for p in $PAGEEXEC_EXEMPT; do chpax_flag p ${p} ;done
 	for e in $TRAMPOLINE_EXEMPT; do chpax_flag e ${e} ;done
@@ -38,6 +55,7 @@ stop() {
 	checkconfig || return 1
 
 	[ "$ZERO_FLAG_MASK" = "yes" ] || return 0
+	fix_exempts
 	einfo "chpax zero flag masking"
 	for p in $PAGEEXEC_EXEMPT; do chpax_flag z ${p} ;done
 	for e in $TRAMPOLINE_EXEMPT; do chpax_flag z ${e} ;done
