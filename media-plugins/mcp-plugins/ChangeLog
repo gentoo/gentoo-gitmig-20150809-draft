@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mcp-plugins
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.4 2004/05/10 23:41:51 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.5 2004/06/15 18:29:42 fvdpol Exp $
+
+*mcp-plugins-0.3.0 (15 Jun 2004)
+
+  15 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> +mcp-plugins-0.3.0.ebuild:
+  Version bump to 0.3.0; changed URL for download and homepage to new location.
 
   10 May 2004; Travis Tilley <lv@gentoo.org> mcp-plugins-0.2.1b.ebuild:
   added ~amd64 keyword
