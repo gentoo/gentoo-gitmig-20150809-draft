@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.30 2003/04/15 10:23:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.31 2003/04/17 23:13:32 liquidx Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -52,7 +52,9 @@ gnome2_src_install() {
 	if [ -z "${USE_DESTDIR}" -o "${USE_DESTDIR}" = "0" ]; then
 		einstall " scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ " ${@}
 	else
-		make DESTDIR=${D} ${@} install 
+		make DESTDIR=${D} \
+			scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper \
+			${@} install
 	fi
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
