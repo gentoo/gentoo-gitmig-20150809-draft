@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.5.ebuild,v 1.5 2003/06/20 01:09:53 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.6-r1.ebuild,v 1.1 2003/08/11 06:38:51 solar Exp $
 
 IUSE="nls"
 MY_P=${P/-/_}
@@ -9,7 +9,7 @@ SRC_URI="http://www.linux.it/~md/software/${MY_P}.tar.gz"
 HOMEPAGE="http://www.linux.it/~md/software/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~hppa arm"
+KEYWORDS="x86 ~ppc sparc ~mips hppa ~arm"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-lang/perl-5"
@@ -26,6 +26,8 @@ src_unpack() {
 	) || ( \
 		sed -i "s:cd po.*::" Makefile 
 	)
+
+	epatch ${FILESDIR}/${P}-gentoo-security.patch
 }
 
 src_compile() {

@@ -1,4 +1,4 @@
-MD5 2c055f614183433072ab30cc38995f8f ChangeLog 3894
-MD5 d4a23ed83f0dbe83ac1089f92efec43e whois-4.6.6-r1.ebuild 1168
+MD5 1c43f5eddd256b74ccc50a771a0229c4 ChangeLog 3894
+MD5 b35811231b642eb74054a27ab425e80a whois-4.6.6-r1.ebuild 1171
 MD5 9d6a7c447cdafb5e2b97f86d5c6e9789 files/digest-whois-4.6.6-r1 62
 MD5 745ef0b207e44192ca5df00b65584328 files/whois-4.6.6-gentoo-security.patch 2871
