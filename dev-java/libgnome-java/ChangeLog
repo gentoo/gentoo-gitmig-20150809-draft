@@ -1,6 +1,6 @@
-# ChangeLog for dev-java/libgtk-java
+# ChangeLog for dev-java/libgnome-java
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.1 2004/11/22 00:22:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.2 2004/11/22 10:15:38 swegener Exp $
 
 *libgnome-java-2.8.2 (22 Nov 2004)
 
