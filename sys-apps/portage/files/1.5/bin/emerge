@@ -139,32 +139,33 @@ class depgraph:
 			print ">>> emerge",x[2],"to",x[1]
 			#the last argument in the portage.doebuild() tells doebuild to *not* do dep checking
 			#(emerge is already handling that)
+			y=self.db[x[1]]["porttree"].getname(x[2])
 			if x[0]=="ebuild":
 				if "--buildpkg" in self.myopts:
 					#create pkg, then merge pkg
-					retval=portage.doebuild(self.db[x[1]]["porttree"].getname(x[2]),"clean",0)
+					retval=portage.doebuild(y,"clean",0)
 					if retval:
-						print "!!! emerge aborting."
+						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
-					retval=portage.doebuild(self.db[x[1]]["porttree"].getname(x[2]),"package",0)
+					retval=portage.doebuild(y,"package",0)
 					if retval:
-						print "!!! emerge aborting."
+						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
 					#dynamically update our database	
 					self.db[portage.root]["bintree"].inject(x[2])
 					mytbz2=self.db[portage.root]["bintree"].getname(x[2])
 					retval=portage.pkgmerge(mytbz2)
 					if retval==None:
-						print "!!! emerge aborting."
+						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
 				else:
-					retval=portage.doebuild(self.db[x[1]]["porttree"].getname(x[2]),"clean",0)
+					retval=portage.doebuild(y,"clean",0)
 					if retval:
-						print "!!! emerge aborting."
+						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
-					retval=portage.doebuild(self.db[x[1]]["porttree"].getname(x[2]),"merge",0)
+					retval=portage.doebuild(y,"merge",0)
 					if retval:
-						print "!!! emerge aborting."
+						print "!!! emerge aborting on ",y,"."
 						sys.exit(1)
 					#dynamically update our database	
 			else:
@@ -172,12 +173,16 @@ class depgraph:
 				mytbz2=self.db[portage.root]["bintree"].getname(x[2])
 				retval=portage.pkgmerge(mytbz2)
 				if retval==None:
-					print "!!! emerge aborting."
+					print "!!! emerge aborting on ",y,"."
 					sys.exit(1)
 				#need to check for errors
 			self.db[x[1]]["vartree"].inject(x[2])
-
-opts=["--help","--pretend","--buildpkg","--usepkg"]
+			if "--autoclean" in self.myopts:
+				retval=portage.doebuild(y,"clean",0)
+				if retval:
+					print "!!! emerge aborting on ",y,"."
+					sys.exit(1)
+opts=["--help","--pretend","--buildpkg","--usepkg","--autoclean"]
 modes=["rsync","system","update"]
 myopts=[]
 mymode=[]
