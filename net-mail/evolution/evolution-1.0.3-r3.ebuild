@@ -1,7 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r1.ebuild,v 1.1 2002/04/02 01:58:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r3.ebuild,v 1.1 2002/04/09 19:24:09 azarah Exp $
+
+#provide Xmake and Xemake
+. /usr/portage/eclass/inherit.eclass
+inherit virtualx
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
@@ -28,13 +32,14 @@ RDEPEND=">=gnome-extra/bonobo-conf-0.14
 	ssl?     ( >=net-www/mozilla-0.9.9 )
 	ldap?    ( >=net-nds/openldap-2.0 )
 	mozilla? ( >=net-www/mozilla-0.9.9 )
-	pda?     ( >=gnome-extra/gnome-pilot-0.1.61-r2 )" 
+	pda?     ( >=gnome-extra/gnome-pilot-0.1.61-r2 )
+	spell?   ( >=app-text/gnome-spell-0.4.1-r1 )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.11
 	>=sys-devel/libtool-1.4.1-r1
-	sys-devel/gettext
-	perl?    ( dev-util/gtk-doc )"
+	perl? ( dev-util/gtk-doc )
+	nls?  ( >=dev-util/intltool-0.11
+	        sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
@@ -62,7 +67,8 @@ src_compile() {
 
 	cd ${WORKDIR}/${DB3}/build_unix
 	../dist/configure --prefix=${WORKDIR}/db3 || die
-	make || die # make -j 4 doesn't work, use make
+
+	make || die
 	make prefix=${WORKDIR}/db3 install || die
 
 	cd ${S}
@@ -109,21 +115,24 @@ src_compile() {
 		myconf="${myconf} --disable-gtk-doc"
 	fi
 
+	if [ -z "`use nls`" ] ; then
+		myconf="${myconf} --disable-nls"
+	fi
+
 	CFLAGS="${CFLAGS} -I/usr/include/libpisock"
-	./configure	--host=${CHOST} \
+	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--datadir=/usr/share \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
-		--enable-file-locking=no \
 		--with-db3=${WORKDIR}/db3 \
 		--disable-python-bindings \
 		${myconf} || die
 
-	# emake might not work, so fall back to make
-	emake || make || die
+	#needs to be able to connect to X display to build.
+	Xemake || Xmake || die
 }
 
 src_install() {
