@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-magicchicken
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-magicchicken/ChangeLog,v 1.2 2003/10/04 12:12:19 leonardop Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-magicchicken/ChangeLog,v 1.3 2004/02/07 00:25:34 agriffis Exp $
+
+  06 Feb 2004; Aron Griffis <agriffis@gentoo.org>
+  gtk-engines-magicchicken-1.1.1.ebuild:
+  stable on alpha
 
   04 Oct 2003; L. Boshell <leonardop@gentoo.org>
   gtk-engines-magicchicken-1.1.1.ebuild :
