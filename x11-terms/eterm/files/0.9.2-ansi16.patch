@@ -1,0 +1,54 @@
+diff -r -u -d Eterm-0.9.2-orig/src/screen.c Eterm-0.9.2-current/src/screen.c
+--- Eterm-0.9.2-orig/src/screen.c	2002-10-07 21:18:08.000000000 -0500
++++ Eterm-0.9.2-current/src/screen.c	2003-07-31 10:00:59.000000000 -0500
+@@ -488,11 +488,6 @@
+ #ifndef NO_BRIGHTCOLOR
+             if ((rstyle & Intensity) && color >= minColor && color <= maxColor)
+                 color += (minBright - minColor);
+-            else if (color >= minBright && color <= maxBright) {
+-                if (rstyle & Intensity)
+-                    return;
+-                color -= (minBright - minColor);
+-            }
+ #endif
+         }
+     }
+diff -r -u -d Eterm-0.9.2-orig/src/term.c Eterm-0.9.2-current/src/term.c
+--- Eterm-0.9.2-orig/src/term.c	2002-10-22 22:03:26.000000000 -0500
++++ Eterm-0.9.2-current/src/term.c	2003-07-31 10:01:09.000000000 -0500
+@@ -1646,6 +1646,35 @@
+           case 49:             /* default bg */
+               scr_color(restoreBG, RS_Blink);
+               break;
++
++	  case 90:
++	  case 91:		/* set fg color - bright */
++	  case 92:
++	  case 93:
++	  case 94:
++	  case 95:
++	  case 96:
++	  case 97:
++	      scr_color(minBright + (arg[i] - 90), RS_Bold);
++	      break;
++          case 99:             /* default fg */
++              scr_color(restoreFG, RS_Bold);
++              break;
++
++          case 100:
++          case 101:             /* set bg color - bright*/
++          case 102:
++          case 103:
++          case 104:
++          case 105:
++          case 106:
++          case 107:
++              scr_color(minBright + (arg[i] - 100), RS_Blink);
++              break;
++          case 109:             /* default bg */
++              scr_color(restoreBG, RS_Blink);
++              break;
++
+         }
+ }
+ 
