@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc4.ebuild,v 1.3 2003/03/13 18:30:14 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc4.ebuild,v 1.4 2003/03/30 19:28:07 azarah Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts"
 
@@ -16,8 +16,8 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 # Only install Skin if GUI should be build (gtk as USE flag)
 SRC_URI="http://www2.mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	http://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
-	http://mplayerhq.hu/MPlayer/releases/fonts/mp-arial-iso-8859-1.zip
-	http://mplayerhq.hu/MPlayer/releases/fonts/mp-arial-iso-8859-2.zip
+	http://mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
+	http://mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	gtk? ( mirror://gentoo/distfiles/default-skin-0.1.tar.bz2 )"
 #	 This is to get the digest problem fixed.
 #	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
@@ -74,7 +74,8 @@ src_unpack() {
 
 	unpack MPlayer-${MY_PV}.tar.bz2
 
-	use truetype || unpack mp-arial-iso-8859-1.zip mp-arial-iso-8859-2.zip
+	use truetype || \
+		unpack font-arial-iso-8859-1.tar.bz2 font-arial-iso-8859-1.tar.bz2
 
 	# Fix bug with the default Skin
 	if [ -n "`use gtk`" ]
@@ -303,9 +304,9 @@ src_install() {
 	if [ -z "`use truetype`" ]
 	then
 		dodir /usr/share/mplayer/fonts
-		cp -a ${WORKDIR}/iso-8859-[12]/ ${D}/usr/share/mplayer/fonts
+		cp -a ${WORKDIR}/font-arial* ${D}/usr/share/mplayer/fonts
 		rm -rf ${D}/usr/share/mplayer/font
-		dosym fonts/iso-8859-1/arial-14/ /usr/share/mplayer/font
+		dosym fonts/font-arial-14-iso-8859-1 /usr/share/mplayer/font
 	elif [ -f /usr/X11R6/lib/X11/fonts/truetype/arial.ttf ]
 	then
 		# For freetype we need a real truetype font in place ...
