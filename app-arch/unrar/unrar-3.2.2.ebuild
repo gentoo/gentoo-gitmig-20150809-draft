@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.2.2.ebuild,v 1.5 2004/01/11 22:10:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.2.2.ebuild,v 1.6 2004/01/16 22:24:29 gmsoft Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.rarlab.com/rar_add.htm"
 
 SLOT="0"
 LICENSE="unRAR"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa ~amd64"
 
 DEPEND=""
 
