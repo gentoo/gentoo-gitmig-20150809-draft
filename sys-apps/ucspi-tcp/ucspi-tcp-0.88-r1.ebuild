@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r1.ebuild,v 1.5 2002/08/01 11:59:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r1.ebuild,v 1.6 2002/08/14 02:56:08 murphy Exp $
 
 DESCRIPTION="Collection of tools for managing UNIX services"
 SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/${PN}/"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="Freeware"
 S=${WORKDIR}/${P}
