@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.37 2003/11/22 05:17:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.38 2003/12/13 05:39:38 seemant Exp $
+
+  12 Dec 2003; Seemant Kulleen <seemant@gentoo.org> metadata.xml,
+  vlc-0.4.4.ebuild, vlc-0.4.5.ebuild, vlc-0.5.2-r1.ebuild, vlc-0.5.2.ebuild,
+  vlc-0.6.0.ebuild, vlc-0.6.2.ebuild:
+  remove crufty ebuilds and move to use_enable syntax for configure options
 
   22 Nov 2003; Luca Barbato <lu_zero@gentoo.org> vlc-0.6.2.ebuild,
   files/0.6.2-mozilla-fix.patch:

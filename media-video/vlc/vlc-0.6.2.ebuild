@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.10 2003/11/22 05:17:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.11 2003/12/13 05:39:38 seemant Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -121,92 +121,52 @@ src_compile(){
 	#--enable-testsuite      build test modules (default disabled)
 	#--disable-plugins       make all plugins built-in (default plugins enabled)
 
-	use nls || myconf="${myconf} --disable-nls"
-
 	use debug && myconf="${myconf} --enable-debug" \
 		|| myconf="${myconf} --enable-release"
 
-	use dvd \
-		&& myconf="${myconf} --enable-dvdread" \
-		|| myconf="${myconf} \
-			--disable-dvd \
-			--disable-dvdread \
-			--disable-dvdplay \
-			--disable-vcd"
-
-	use v4l && myconf="${myconf} --enable-v4l"
-
-	use dvb && myconf="${myconf} --enable-satellite --enable-pvr"
-
-	use oggvorbis || myconf="${myconf} --disable-vorbis --disable-ogg"
-
-	use matroska || myconf="${myconf} --disable-mkv"
-
-	use mad && myconf="${myconf} --enable-mad"
-
-	use faad && myconf="${myconf} --enable-faad"
-
-	use xvid && myconf="${myconf} --enable-xvid"
-
-	use X || myconf="${myconf} --disable-x11"
-
-	use xv || myconf="${myconf} --disable-xvideo"
-
-	use sdl || myconf="${myconf} --disable-sdl"
-
-	use truetype && myconf="${myconf} --enable-freetype"
-
-	use fbcon || myconf="${myconf} --disable-fb"
-
-	use svga && myconf="${myconf} --enable-svgalib"
-
-	use ggi && myconf="${myconf} --enable-ggi"
-
-	use 3dfx && myconf="${myconf} --enable-glide"
-
-	use aalib && myconf="${myconf} --enable-aa"
-
-	use oss || myconf="${myconf} --disable-oss"
-
-	use esd && myconf="${myconf} --enable-esd"
-
-	use arts && myconf="${myconf} --enable-arts"
-
-	use alsa && myconf="${myconf} --enable-alsa"
-
 	(use imlib && use wxwindows) && myconf="${myconf} --enable-skins"
-
-	use gtk || myconf="${myconf} --disable-gtk"
-
-	use gnome && myconf="${myconf} --enable-gnome"
-
-	use qt && myconf="${myconf} --enable-qt"
-
-	use kde && myconf="${myconf} --enable-kde"
-
-	use ncurses && myconf="${myconf} --enable-ncurses"
-
-	use xosd && myconf="${myconf} --enable-xosd"
-
-	use slp || myconf="${myconf} --disable-slp"
-
-	use lirc && myconf="${myconf} --enable-lirc"
-
-	use joystick && myconf="${myconf} --enable-joystick"
 
 	use mozilla \
 		&& myconf="${myconf} --enable-mozilla \
 		MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config \
 		XPIDL=/usr/bin/xpidl"
 
-	use altivec || myconf="${myconf} --disable-altivec"
-
 	export CXXFLAGS=""
 	export CFLAGS=""
 	export WANT_AUTOCONF_2_5=1
 	export WANT_AUTOMAKE_1_6=1
 
-	econf ${myconf} || die "configure failed"
+	econf \
+		`use_enable nls` \
+		`use_enable slp` \
+		`use_enable xosd` \
+		`use_enable ncurses` \
+		`use_enable alsa` \
+		`use_enable esd` \
+		`use_enable oss` \
+		`use_enable ggi` \
+		`use_enable sdl` \
+		`use_enable mad` \
+		`use_enable faad` \
+		`use_enable xvid` \
+		`use_enable v4l` \
+		`use_enable dvd` \
+		`use_enable dvd vcd` `use_enable dvdread` `use_enable dvd dvdplay` \
+		`use_enable dvb satellite` `use_enable dvb pvr` \
+		`use_enable joystick` `use_enable lirc` \
+		`use_enable qt` `use_enable kde` `use_enable arts` \
+		`use_enable gtk` `use_enable gnome` \
+		`use_enable oggvorbis ogg` `use_enable oggvorbis vorbis` \
+		`use_enable matroska mkv` \
+		`use_enable truetype freetype` \
+		`use_enable svga svgalib` \
+		`use_enable fbcon fb` \
+		`use_enable aalib aa` \
+		`use_enable xv xvideo` \
+		`use_enable X x11` \
+		`use_enable 3dfx glide` \
+		`use_enable altivec` \
+		${myconf} || die "configure failed"
 
 	if [ `gcc-major-version` -eq 2 ]; then
 		sed -i s:"-fomit-frame-pointer":: vlc-config

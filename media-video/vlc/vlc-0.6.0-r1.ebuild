@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0-r1.ebuild,v 1.5 2003/09/04 04:52:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0-r1.ebuild,v 1.6 2003/12/13 05:39:38 seemant Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.videolan.org/vlc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2 )
