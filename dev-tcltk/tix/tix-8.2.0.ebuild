@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.4 2003/02/13 11:46:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.5 2003/03/25 22:13:02 seemant Exp $
 
-IUSE="gcc tcl tk threads shared"
+IUSE="tcl tk threads shared"
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A widget library for Tcl/Tk. Has been ported to Python and Perl, too."
