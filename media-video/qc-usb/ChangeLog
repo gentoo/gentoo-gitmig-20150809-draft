@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.4 2004/07/24 05:17:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.5 2004/10/06 16:19:13 sekretarz Exp $
+
+  06 Oct 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/qc-usb-0.6.0-gcc34.patch, qc-usb-0.6.0.ebuild:
+  Fixed gcc-3.4 compile issue. Bug #62340
 
 *qc-usb-0.6.0 (24 Jul 2004)
 

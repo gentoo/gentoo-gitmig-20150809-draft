@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.0.ebuild,v 1.3 2004/09/27 09:21:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.0.ebuild,v 1.4 2004/10/06 16:19:13 sekretarz Exp $
 
-inherit kernel-mod
+inherit kernel-mod eutils
 
 DESCRIPTION="Logitech USB Quickcam Express Linux Driver Modules"
 HOMEPAGE="http://qce-ga.sourceforge.net/"
@@ -14,6 +14,13 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/linux-sources"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
 
 src_compile() {
 	emake KERNEL_DIR=${KERNEL_DIR} all || die
