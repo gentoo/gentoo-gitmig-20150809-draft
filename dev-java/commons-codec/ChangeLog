@@ -1,7 +1,13 @@
 # ChangeLog for dev-java/commons-codec
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.1 2004/03/29 23:48:23 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.2 2004/03/30 22:49:11 karltk Exp $
 
+*commons-codec-1.1 (31 Mar 2004)
+
+  31 Mar 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  commons-codec-1.1.ebuild: Initial import. Ebuild submitted by myself.
+  
+*commons-codec-1.2 (30 Mar 2004)
 
   30 Mar 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   commons-codec-1.2.ebuild: Initial import. Ebuild submitted by myself.
