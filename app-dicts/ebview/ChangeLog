@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ebview
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.5 2003/12/31 21:09:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.6 2004/01/01 20:19:16 usata Exp $
+
+  02 Jan 2004; <usata@gentoo.org> ebview-0.3.1.ebuild, ebview-0.3.2.ebuild:
+  Fixed finding eb library bug
 
 *ebview-0.3.2 (01 Jan 2004)
 
