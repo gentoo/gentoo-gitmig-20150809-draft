@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0-r1.ebuild,v 1.5 2003/02/13 09:46:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0-r1.ebuild,v 1.6 2003/02/22 03:38:37 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TETEXSR
          ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMFSRC}
          ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMF}"
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
