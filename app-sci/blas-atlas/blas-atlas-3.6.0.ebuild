@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.17 2004/11/17 16:38:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.18 2004/11/29 01:41:04 morfic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,6 +37,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${DISTDIR}/atlas3.6.0-shared-libs.patch.bz2
+	sed -i -e "s:ASM:ASM VOLATILE:" include/contrib/camm_dpa.h || die "sed failed to fix clobbering"
 	cp ${FILESDIR}/war ${S}
 	chmod a+x ${S}/war
 }
@@ -56,23 +57,34 @@ atlas_fail() {
 reconfigure() {
 	case "`uname -p`" in
 		"sun4m")
-			MY_CCFLAG0="-O3 -mcpu=v8"
+			MY_CCFLAGS="-O3 -mcpu=v8"
+			MY_CXXFLAGS="${MY_CCFLAGS}"
 			MY_MMFLAGS="-O -mcpu=v8"
+			MY_LDFLAGS=""
 			;;
 		"sun4u")
-			MY_CCFLAG0="-O3 -mcpu=ultrasparc"
+			MY_CCFLAGS="-O3 -mcpu=ultrasparc"
+			MY_CXXFLAGS="${MY_CCFLAGS}"
 			MY_MMFLAGS="-O -mcpu=ultrasparc"
+			MY_LDFLAGS=""
 			;;
 		*)
-			MY_CCFLAG0="${CFLAGS}"
+			MY_CCFLAGS="${CFLAGS}"
+			MY_CXXFLAGS="${CXXFLAGS}"
 			MY_MMFLAGS="${CFLAGS}"
+			MY_LDFLAGS="${LDFLAGS}"
 			;;
 	esac
 
 	MY_FILE="`find -name Make.Linux*`"
 
-	sed -i -e "s/CCFLAG0 =/CCFLAG0 = ${MY_CCFLAG0}\n#&/1" ${MY_FILE}
-	sed -i -e "s/MMFLAGS =/MMFLAGS = ${MY_MMFLAGS}\n#&/" ${MY_FILE}
+	sed -i -e "s/CCFLAG0 =.*/CCFLAG0 = \$(CDEFS) ${MY_CCFLAGS}/" \
+		-e "s/CCFLAGS =.*/CCFLAGS = \$(CDEFS) ${MY_CCFLAGS}/" \
+		-e "s/CLINKFLAGS =.*/CLINKFLAGS =\$(CDEFS) ${MY_LDFLAGS}/" \
+		-e "s/XCCFLAGS =.*/XCCFLAGS =\$(CDEFS) ${MY_CXXFLAGS}/" \
+		-e "s/MMFLAGS =.*/MMFLAGS = ${MY_MMFLAGS}/" \
+		${MY_FILE} || die "sed didnt complete"
+
 }
 
 src_compile() {
@@ -88,9 +100,7 @@ src_compile() {
 		(echo | make config CC="$(tc-getCC) -DUSE_LIBTOOL") || atlas_fail
 	fi
 
-	if [ "${ARCH}" == "sparc" ]; then
-		reconfigure
-	fi
+	reconfigure
 
 	TMPSTR=$(ls Make.Linux*)
 	ATLAS_ARCH=${TMPSTR#'Make.'}

@@ -1,9 +1,19 @@
-MD5 2cfd815d73e607aa54f355d6a01f7566 ChangeLog 2657
-MD5 4a521dea733e897598342ab3b14abac3 blas-atlas-3.6.0.ebuild 3740
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5f4e25157c1dfc508b9ab8ff9a1e7955 blas-atlas-3.6.0.ebuild 4153
+MD5 1f1c90fcc90a32c794c6756de7235604 ChangeLog 2805
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 646c8df3efa24d6573a870dbb0f5fc8d files/f77-ATLAS 457
-MD5 73bb69e091e5629e3d47ec813d560223 files/c-ATLAS 497
-MD5 a12493a52d3484ebdcaa90f5e250129a files/c-threaded-ATLAS 564
-MD5 c1c57e922c1763ddde357504442e94c4 files/digest-blas-atlas-3.6.0 139
-MD5 c0a79db6ec6fb95a56ce677107f08c01 files/f77-threaded-ATLAS 492
 MD5 13d26350d75e6993f1b3ec48ca97f14e files/war 545
+MD5 73bb69e091e5629e3d47ec813d560223 files/c-ATLAS 497
+MD5 646c8df3efa24d6573a870dbb0f5fc8d files/f77-ATLAS 457
+MD5 a12493a52d3484ebdcaa90f5e250129a files/c-threaded-ATLAS 564
+MD5 c0a79db6ec6fb95a56ce677107f08c01 files/f77-threaded-ATLAS 492
+MD5 c1c57e922c1763ddde357504442e94c4 files/digest-blas-atlas-3.6.0 139
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBqn4zUpKYMelfdYERAihMAKCGnaOjjygFTwCmuBwSppRuaaY47wCfb4Wr
+w1ysUo+edGbGsTCtuQ6of3c=
+=WIDA
+-----END PGP SIGNATURE-----
