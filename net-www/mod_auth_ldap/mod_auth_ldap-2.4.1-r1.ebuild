@@ -1,29 +1,36 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-2.4.2.ebuild,v 1.3 2004/04/13 22:41:21 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-2.4.1-r1.ebuild,v 1.1 2004/04/13 22:41:21 zul Exp $
+
+inherit eutils
 
 DESCRIPTION="Apache module for LDAP authorizaion"
 HOMEPAGE="http://www.muquit.com/muquit/software/mod_auth_ldap/mod_auth_ldap.html"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 #watch out for this thing; no version number ...
-#SRC_URI="http://www.muquit.com/muquit/software/mod_auth_ldap/${PN}.tar.gz"
-#---> as of 2.4.2 still no version number, doing it the hard way, sigh.
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
-DEPEND="=net-www/apache-1* >=net-nds/openldap-2.0.25"
+SRC_URI="http://www.muquit.com/muquit/software/mod_auth_ldap/${PN}.tar.gz"
+DEPEND="=net-www/apache-1*
+		>=net-nds/openldap-2.0.25
+		ssl? ( dev-libs/openssl )"
 LICENSE="as-is"
 SLOT="0"
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/modauthldap
 
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	patch -p1 <${FILESDIR}/${P}-register.patch || die
+	epatch ${FILESDIR}/${P}-register.patch
 }
 
 src_compile() {
-	apxs -lresolv -lldap -llber -c mod_auth_ldap.c || die
+	if use ssl;
+	then
+		apxs -lresolv -lldap -llber -lssl -c mod_auth_ldap.c || die
+	else
+		apxs -lresolv -lldap -llber -c mod_auth_ldap.c || die
+	fi
 }
 
 src_install() {
