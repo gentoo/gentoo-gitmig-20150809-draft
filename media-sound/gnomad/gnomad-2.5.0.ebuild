@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.5.0.ebuild,v 1.1 2004/10/05 20:17:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.5.0.ebuild,v 1.2 2004/10/06 08:43:14 axxo Exp $
 
 IUSE=""
 
@@ -24,7 +24,7 @@ KEYWORDS="~x86 ~ppc ~amd64 -sparc"
 
 DEPEND=">=gnome-base/libgnomeui-2
 	>=media-libs/libnjb-1.2
-	media-libs/id3lib
+	media-libs/libid3tag
 	>=gnome-base/gconf-1.2"
 
 RDEPEND="${DEPEND}
