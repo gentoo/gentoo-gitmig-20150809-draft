@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbweather
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.8 2003/10/30 15:43:38 tseng Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.9 2004/04/05 13:56:34 zx Exp $
+
+  05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> bbweather-0.6.ebuild:
+  Marking stable on hppa
 
   30 Oct 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
   Added metadata.xml
