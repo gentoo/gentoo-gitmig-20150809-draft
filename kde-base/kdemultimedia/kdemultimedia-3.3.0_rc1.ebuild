@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0_rc1.ebuild,v 1.2 2004/08/06 18:57:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0_rc1.ebuild,v 1.3 2004/08/07 19:24:29 caleb Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -32,6 +32,9 @@ src_compile() {
 	filter-flags "-fno-default-inline"
 
 	use xine && myconf="$myconf --with-xine-prefix=/usr"
+	use xine || DO_NOT_COMPILE="$DO_NOT_COMPILE xine_artsplugin"
+
+	myconf="${myconf} `use_with cdparanoia`"
 
 	# make -j2 fails, at least on ppc
 	use ppc && export MAKEOPTS="$MAKEOPTS -j1"
