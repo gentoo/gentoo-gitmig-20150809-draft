@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/lostirc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.15 2004/03/06 13:29:33 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.16 2004/03/23 23:39:51 zul Exp $
+
+*lostirc-0.3.3 (23 Mar 2004)
+
+  23 Mar 2004; Chuck Short <zul@gentoo.org> lostirc-0.3.3.ebuild:
+  Version bump, closes #45500.
 
 *lostirc-0.3.2 (06 Mar 2004)
 
