@@ -22,10 +22,6 @@
 ##   End example
 ##
 
-# <kabau@gentoo.org> 25 Jul 2002
-# broken ebuild, needs testing
-=mysql-3.23.51-r3.ebuild
-
 # <spider@gentoo.org> 25 Jul 2002
 # we need to fix deps on >=dev-util/gob-1.0.x
 >=dev-util/gob-1.99.3
