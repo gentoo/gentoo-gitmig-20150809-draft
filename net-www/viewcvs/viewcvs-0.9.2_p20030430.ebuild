@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2_p20030430.ebuild,v 1.1 2003/05/01 18:12:42 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2_p20030430.ebuild,v 1.2 2003/05/21 13:05:26 pauldv Exp $
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -19,8 +19,7 @@ DEPEND=""
 RDEPEND=">=app-text/rcs-5.7
 	>=dev-util/cvs-1.11
 	sys-apps/diffutils
-	net-www/apache
-	app-text/enscript"
+	net-www/apache"
 
 doinstall() {
 	# start_location=$1
