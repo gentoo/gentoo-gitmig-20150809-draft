@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.18.ebuild,v 1.5 2003/04/06 09:00:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.18.ebuild,v 1.6 2003/08/15 05:47:04 strider Exp $
 
 DESCRIPTION="IBM's open source, high performance Java compiler"
 HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/jikes/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc"
 
 RDEPEND="virtual/glibc"
-DEPEND="${RDEPEND}"
+DEPEND="virtual/jdk"
 
 S="${WORKDIR}/${P}"
 

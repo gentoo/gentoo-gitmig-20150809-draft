@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.13 2003/04/06 09:00:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.14 2003/08/15 05:47:04 strider Exp $
+
+  15 Aug 2003; Adrian Almenar <strider@gentoo.org> jikes-1.18.ebuild:
+  Fixed Dependency.
 
   05 Jan 2003; Rodney Rees <manson@gentoo.org> jikes-1.1*.ebuild
   changed keywords from ~sparc to sparc
