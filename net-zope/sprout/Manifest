@@ -1,4 +1,6 @@
+MD5 4a7a791ac909118dae8cf1d97ef4ea59 sprout-0.6.1.ebuild 479
 MD5 a8fdbbbdea3a68e6c474783bfb7d982e sprout-0.5.ebuild 476
-MD5 8544a818c53b5fb7d9d10e6845c48095 ChangeLog 652
+MD5 bcb63e5923fa86bf6e890e153c6658b4 ChangeLog 773
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 68c847c2a4601f37327fe070c0cd349a files/digest-sprout-0.6.1 60
 MD5 ac21e63f6958c3d00a18e5cd44a358bc files/digest-sprout-0.5 58
