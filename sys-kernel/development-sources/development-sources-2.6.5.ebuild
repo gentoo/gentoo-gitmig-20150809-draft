@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.16 2004/11/26 01:14:22 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.17 2004/11/27 13:16:08 swegener Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
 SPARC_URI="mirror://gentoo/patches-2.6.5-sparc.tar.bz2"
 S390_URI="mirror://gentoo/patches-2.6.5-s390.tar.bz2"
 inherit kernel-2
+detect_arch
 detect_version
 
 DESCRIPTION="Full sources for the vanilla 2.6 kernel tree"
