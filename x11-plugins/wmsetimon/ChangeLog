@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmsetimon
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsetimon/ChangeLog,v 1.1 2005/01/08 01:07:31 s4t4n Exp $
+
+*wmsetimon-0.5 (08 Jan 2005)
+
+  08 Jan 2005; Michele Noberasco <s4t4n@gentoo.org> wmsetimon-0.5.ebuild:
+  Initial import. Thanks to Matt Taylor bug #76848.
+
