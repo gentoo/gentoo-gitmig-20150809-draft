@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/trickle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/trickle/ChangeLog,v 1.5 2005/03/20 12:00:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/trickle/ChangeLog,v 1.6 2005/04/04 18:32:23 hansmi Exp $
+
+  04 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> trickle-1.06.ebuild:
+  Added to ~ppc.
 
   20 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> trickle-1.06.ebuild:
   Added to ~sparc.
