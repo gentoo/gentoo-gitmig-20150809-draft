@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 6816c17429d2b0f735ff6f1e5872b2a1 metadata.xml 333
-MD5 3fadec78944fd488c6048f679ada5d6e aim-transport-20040131-r2.ebuild 1489
-MD5 37da7f56930d8ef88e1b57c621014788 ChangeLog 2924
+MD5 3c219638f8f29d6e6529e5016f6e6769 aim-transport-20040131-r2.ebuild 1488
+MD5 b1caec88aa1a02a6a5c118422cc917c9 ChangeLog 3032
 MD5 5a4bef3dd00833b9dc322168c9d4dec6 aim-transport-20040131-r1.ebuild 1376
 MD5 6d23b47062aa2c8a4a659332b379dabb files/aim-transport-conf.d 430
 MD5 d34af520e9b92e7356fe2c12d1943f80 files/aimtrans.patch 419
@@ -16,7 +16,7 @@ MD5 fc71050bb7266ee2b89046dd30db8815 files/README.Gentoo 1460
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCHUVNmOfEJZHYOKcRAjxmAKC2MnQOErG0dsfQwKaRtJZIbSV0aACgnDAf
-FqhEYet1LNn0mg8pRlvrA8o=
-=YvHw
+iD8DBQFCOdP9mOfEJZHYOKcRAmvaAKCNM95kIJt1C33ZEwwHKX3729aQIwCguBac
+hg6GL3F99silDK4Qbj4yvOw=
+=s+TA
 -----END PGP SIGNATURE-----
