@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.2.0-r2.ebuild,v 1.1 2005/03/23 16:10:41 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.2.0-r2.ebuild,v 1.2 2005/03/28 17:24:10 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -90,6 +90,7 @@ src_unpack() {
 	cd ${S}
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
 	epatch ${FILESDIR}/gaim-1.2.0-icq-auth.diff
+	epatch ${FILESDIR}/gaim-1.2.0_yahoochat.diff
 }
 
 src_compile() {
