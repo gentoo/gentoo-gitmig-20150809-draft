@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.4-r2.ebuild,v 1.5 2002/03/21 07:23:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.4-r2.ebuild,v 1.6 2002/03/21 16:32:41 azarah Exp $
 
 SV="1.3.0"
 SVREV=""
@@ -102,7 +102,7 @@ defaltmerge() {
 	#(because it conflicts with some makefiles)
 	local ROOT
 	ROOT="`cat ${T}/ROOT`"
-	if [ -z "`use build`" ] &&  [ -e ${ROOT}/dev/.devfsd ]
+	if [ -z "`use bootstrap`" ] && [ -z "`use build`" ] &&  [ -e ${ROOT}/dev/.devfsd ]
 	then
 		# we're installing to a system that has devfs enabled; don't create device
 		# nodes.
@@ -311,7 +311,7 @@ pkg_postinst() {
 	defaltmerge
 	# we dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
-	if [ $altmerge -eq 0 ] || [ -n "`use build`" ]
+	if [ $altmerge -eq 0 ]
 	then
 		cd ${ROOT}/dev
 		#These devices are also needed by many people and should be included
@@ -364,7 +364,7 @@ EOF
 	done
 	rm -f ${ROOT}/etc/._cfg*_inittab
 	cp -f ${S}/etc/inittab ${ROOT}/etc/
-	if [ "$ROOT" = "/" ] && [ -z "`use build`" ]
+	if [ "$ROOT" = "/" ] && [ -z "`use bootstrap`" ] && [ -z "`use build`" ]
 	then
 		/sbin/init Q
 	fi
@@ -374,7 +374,8 @@ EOF
 
 	#handle the ${svcdir} that changed in location
 	source ${ROOT}/etc/init.d/functions.sh
-	if [ ! -d ${ROOT}/${svcdir}/started/ ] && [ -z "`use build`" ]
+	if [ ! -d ${ROOT}/${svcdir}/started/ ] && [ -z "`use bootstrap`" ] && \
+	   [ -z "`use build`" ]
 	then
 		mkdir -p ${ROOT}/${svcdir}
 		mount -t tmpfs tmpfs ${ROOT}/${svcdir}
@@ -385,13 +386,13 @@ EOF
 	fi
 
 	#reload init to fix unmounting problems of / on next reboot
-	if [ "$ROOT" = "/" ] && [ -z "`use build`" ]
+	if [ "$ROOT" = "/" ] && [ -z "`use bootstrap`" ] && [ -z "`use build`" ]
 	then
 		/sbin/init U
 	fi
 
 	#kill the old /dev-state directory if it exists
-	if [ -e /dev-state ] && [ -z "`use build`" ]
+	if [ -e /dev-state ] && [ -z "`use bootstrap`" ] && [ -z "`use build`" ]
 	then
 		if [ "`cat /proc/mounts |grep '/dev-state'`" ]
 		then
@@ -417,7 +418,7 @@ EOF
 	#we dont want to restart devfsd when bootstrapping, because it will
 	#create unneeded entries in /lib/dev-state, which will override the
 	#symlinks (to /dev/sound/*, etc) and cause problems.
-	if [ -z "`use build`" ]
+	if [ -z "`use bootstrap`" ] && [ -z "`use build`" ]
 	then
 		#force clean start of devfsd (we want it to fail on start
 		#when the version is < 1.3.20 to display notice ...)
