@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.1 2003/10/01 21:31:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.2 2003/10/18 19:03:46 mholzer Exp $
 
 DESCRIPTION="Turba ${PV} is the Horde address book / contact management program"
 HOMEPAGE="http://www.horde.org"
@@ -8,7 +8,7 @@ MY_P=${P/horde-/}
 SRC_URI="ftp://ftp.horde.org/pub/turba/tarballs/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.4"
 IUSE=""
@@ -39,12 +39,7 @@ pkg_setup() {
 	[ -f ${REGISTRY} ] || die "${REGISTRY} not found"
 }
 
-src_compile() {
-	echo "Nothing to compile"
-}
-
 src_install () {
-
 	# detecting apache usergroup
 	GID=`grep apache /etc/group |cut -d: -f3`
 	if [ -z "${GID}" ]; then
@@ -53,6 +48,8 @@ src_install () {
 	fi
 
 	find_http_root
+	dodoc COPYING README docs/*
+	rm -rf COPYING README docs
 	dodir ${HTTPD_ROOT}/horde/turba
 	cp -r . ${D}/${HTTPD_ROOT}/horde/turba
 
