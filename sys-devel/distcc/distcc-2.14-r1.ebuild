@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16.ebuild,v 1.8 2004/09/13 12:21:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.14-r1.ebuild,v 1.1 2004/09/16 21:57:03 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
 
-inherit eutils gcc flag-o-matic gnuconfig
+inherit eutils gcc flag-o-matic
 
-PATCHLEVEL="2.11.1p"
+PATCHLEVEL="2.17"
 
 DESCRIPTION="a program to distribute compilation of C code across several machines on a network"
 HOMEPAGE="http://distcc.samba.org/"
@@ -15,11 +15,8 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha ~arm ~hppa ~ia64 ~amd64 ~s390 ~ppc64"
-# ATTN s390 MAINTANER: if you bump this stable on s390 please remove 2.14 from cvs -lisa
-# 2004-07-08
-
-
+KEYWORDS="-* s390"  # added 2004-07-08 since s390 bumped to stable before 2.16 was ready.
+#                     so we might as well test the rest on 2.16 and move s390 up
 IUSE="gnome gtk selinux ipv6"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
@@ -27,7 +24,7 @@ DEPEND=">=sys-apps/portage-2.0.49-r6
 	sys-apps/shadow
 	dev-util/pkgconfig"
 RDEPEND="
-	!arm? ( !mips? ( !s390? (
+	!mips? ( !arm? ( !s390? (
 	gnome? (
 		>=x11-libs/gtk+-2.0.0
 		>=gnome-base/libgnome-2.0.0
@@ -35,19 +32,13 @@ RDEPEND="
 		>=gnome-base/libglade-2.0.0
 		x11-libs/pango
 		>=gnome-base/gconf-2.0.0
-	)
+		)
 	gtk? (
 		>=x11-libs/gtk+-2.0.0
 		x11-libs/pango
-	)
+		)
 	) ) )
 	selinux? ( sec-policy/selinux-distcc )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnuconfig_update
-}
 
 src_compile() {
 	local myconf="--with-included-popt "
@@ -154,5 +145,10 @@ pkg_postinst() {
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
 	einfo "      DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
 	use gnome || use gtk && einfo "Or:   DISTCC_DIR=/var/tmp/portage/.distcc distccmon-gnome"
-	epause 5
+
+	ewarn "***SECURITY NOTICE***"
+	ewarn "If you are upgrading distcc please make sure to run etc-update to"
+	ewarn "update your /etc/conf.d/distccd and /etc/init.d/distccd files with"
+	ewarn "added security precautions (the --listen and --allow directives)"
+	ebeep 5
 }

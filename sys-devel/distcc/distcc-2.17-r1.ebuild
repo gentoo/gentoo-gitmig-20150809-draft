@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17-r1.ebuild,v 1.4 2004/09/16 21:38:56 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17-r1.ebuild,v 1.5 2004/09/16 21:57:03 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -154,6 +154,10 @@ pkg_postinst() {
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
 	einfo "      DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
 	use gnome || use gtk && einfo "Or:   DISTCC_DIR=/var/tmp/portage/.distcc distccmon-gnome"
-	ewarn "Don't forget to run etc-update and restart distccd!"
-	epause 5
+
+	ewarn "***SECURITY NOTICE***"
+	ewarn "If you are upgrading distcc please make sure to run etc-update to"
+	ewarn "update your /etc/conf.d/distccd and /etc/init.d/distccd files with"
+	ewarn "added security precautions (the --listen and --allow directives)"
+	ebeep 5
 }
