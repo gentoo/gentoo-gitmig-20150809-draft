@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.3 2002/08/07 08:47:37 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.4 2002/08/08 15:48:57 seemant Exp $
 
 *pdflib-4.0.1-r3 (3 Apr 2002)
+
+  08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> pdflib-4.0.1-r3 :
+
+  Added "--with-zlib" configure flag.  Closes bug #6205 by sponge80@msn.com
+  (Nicholas)
 
   7 Aug 2002; Ryan Phillips <rphillips@gentoo.org> : 
 
