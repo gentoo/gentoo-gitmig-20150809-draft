@@ -10,7 +10,7 @@ HOMEPAGE="http://www.linux-nis.org/nis"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ppc64"
 DEPEND="virtual/glibc"
 
 src_compile() {
