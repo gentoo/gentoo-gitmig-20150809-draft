@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.2.ebuild,v 1.6 2004/07/11 10:33:31 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.2.ebuild,v 1.7 2004/10/15 10:01:30 eldad Exp $
 
 DESCRIPTION="p0f performs passive OS detection based on SYN packets."
 # the p0f.tgz always resembles the latest version, trashing the digest md5sum then, discovered and fixed by gustavoz
@@ -18,6 +18,9 @@ src_compile () {
 	sed -i "s: /usr/sbin/: ../../image/usr/sbin/:g" ${WORKDIR}/p0f/mk/Linux
 	sed -i "s: /etc/p0f: ../../image/etc/p0f:g" ${WORKDIR}/p0f/mk/Linux
 	sed -i "s: /usr/man/man1/: ../../image/usr/man/man1/:g" ${WORKDIR}/p0f/mk/Linux
+
+	sed -e 's;#include <net/bpf.h>;;' -i p0f.c
+
 	make || die
 }
 
