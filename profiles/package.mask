@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <styx@gentoo.org> (12 Aug 2002)
+# masked for testing
+x11-terms/treewm
+
 # <blizzy@gentoo.org> (12 Aug 2002)
 # masked for testing
 =sys-apps/gradm-1.4
