@@ -1,0 +1,21 @@
+--- gpart-0.1h/src/l64seek.c	2000-12-13 23:54:11.000000000 +0100
++++ gpart-0.1h-working/src/l64seek.c	2003-04-14 18:02:51.000000000 +0200
+@@ -15,7 +15,7 @@
+  */
+ 
+ #include "l64seek.h"
+-
++#include <errno.h>
+ 
+ #define OSTACKLEN	16
+ static struct
+--- gpart-0.1h/src/disku.c	2001-02-07 20:04:07.000000000 +0100
++++ gpart-0.1h-working/src/disku.c	2003-04-14 18:02:46.000000000 +0200
+@@ -20,6 +20,7 @@
+ #include <string.h>
+ #include <sys/ioctl.h>
+ #include "gpart.h"
++#include <errno.h>
+ 
+ #if defined(__linux__)
+ #include <sys/mount.h>

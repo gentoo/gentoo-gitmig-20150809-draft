@@ -1,8 +1,10 @@
 # ChangeLog sys-app/gpart
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gpart/ChangeLog,v 1.2 2003/04/22 10:17:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gpart/ChangeLog,v 1.3 2003/04/22 19:54:16 cretin Exp $
 
 *gpart-0.1h (09 Feb 2003)
+  22 Apr 2003; Stefan Jones <cretin@gentoo.org> gpart-0.1h.ebuild gpart-0.1h-errno.diff :
+	Added errno patch to fix compile on nwer glibc, bug #19302
 
   15 Feb 2003: Seth Chandler <sethbc@gentoo.org> gpart-0.1h.ebuild:
   added gpart to portage...

@@ -10,8 +10,11 @@ KEYWORDS="~x86"
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}"
 
+inherit eutils
+
 src_unpack() {
 	unpack ${A}
+	cd ${S} ; epatch ${FILESDIR}/${P}-errno.diff
 }
 
 src_compile() {
