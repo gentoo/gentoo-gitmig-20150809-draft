@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.96.20000731.ebuild,v 1.1 2000/11/11 16:26:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.96.20000731.ebuild,v 1.2 2000/11/11 17:30:14 achim Exp $
 
 A="gcc-2.96-20000731.tar.bz2
    libg++-2.8.1.3.tar.gz
    libg++-2.8.1.3-20000312.diff.gz
    libg++-2.8.1.3-20000419.diff.gz
-   libg++-2.8.1.3-20000816.diff.gz"
+   libg++-2.8.1.3-20000816.diff.gz
+   libg++-2.8.1.3-20000914.diff.gz"
 
 S=${WORKDIR}/gcc-2.96-20000731
 T=/usr
@@ -16,7 +17,8 @@ SRC_URI="ftp://ftp.eos.hokudai.ac.jp/pub/Linux/Kondara/Jirai/SOURCES/gcc-2.96-20
 	 ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3.tar.gz
          ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000312.diff.gz
          ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000419.diff.gz
-	 ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000816.diff.gz"
+	 ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000816.diff.gz
+         ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000914.diff.gz"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 src_unpack() {
@@ -66,6 +68,7 @@ src_unpack() {
     gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000312.diff.gz | patch -p1
     gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000419.diff.gz | patch -p1
     gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000816.diff.gz | patch -p1
+    gzip -dc ${DISTDIR}/libg++-2.8.1.3-20000914.diff.gz | patch -p1
 
 
 }
@@ -82,9 +85,9 @@ src_compile() {
         try make -C gcc CC=\"./xgcc -B ./ -O2\" proto
 }
 
-src_install() {      
+src_install() {
 	try make install prefix=${D}${T} mandir=${D}${T}/man \
-		gxx_include_dir=${D}${T}/${CHOST}/include/g++ 
+		gxx_include_dir=${D}${T}/${CHOST}/include/g++
 	cd ${FULLPATH}
 	dodir /lib
 	dosym	${T}/lib/gcc-lib/${CHOST}/2.96/cpp /lib/cpp
