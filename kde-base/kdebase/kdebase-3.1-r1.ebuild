@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1-r1.ebuild,v 1.10 2003/03/08 12:23:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1-r1.ebuild,v 1.11 2003/03/18 12:37:04 danarmak Exp $
 NEED_KDE_DONT_ADD_KDELIBS_DEP=1 # we're a special case, see below
 inherit kde-dist eutils
 
@@ -26,8 +26,9 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 
 # special case, contd.: we need kdelibs >=3.1-r1, but not so that we get a version !=3.1
 # so we told kde-functions:need-kde not to add a dep on kdelibs, and now we'll do it manually
-# newdepend "( >=kde-base/kdelibs-3.1-r1 <kde-base/kdelibs-3.1.1 )" # bug in portage?
-newdepend "=kde-base/kdelibs-3.1-r2"
+# cf. bug 17429 too - this will break a litle for the live cvs ebuild users but i can't do
+# anything about that without version range support in portage
+newdepend ">=kde-base/kdelibs-3.1-r2"
 
 myconf="$myconf --with-dpms --with-cdparanoia"
 
