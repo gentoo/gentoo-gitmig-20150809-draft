@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.24 2003/06/12 14:40:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.25 2003/06/16 07:41:29 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -40,7 +40,7 @@ USE_SNAPSHOT="no"
 
 PATCH_VER="2.1.3"
 FT2_VER="2.1.3"
-XCUR_VER="0.2"
+XCUR_VER="0.3.1"
 SISDRV_VER="180403-1"
 SAVDRV_VER="1.1.27t"
 MGADRV_VER="1_3_0beta"
