@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# this is a script which is executed after connecting the ppp interface.
+# look at man pppd for details
+
+# the followings parameters are available:
+# $1 = interface-name
+# $2 = tty-device
+# $3 = speed
+# $4 = local-IP-address
+# $5 = remote-IP-address
+# $6 = ipparam
+			  
