@@ -192,3 +192,6 @@ move sys-apps/noflushd sys-block/noflushd
 move media-libs/panotools media-libs/libpano12
 move dev-dotnet/nemerle dev-lang/nemerle
 move dev-dotnet/mono dev-lang/mono
+move kde-base/kdebase-l10n kde-base/kdebase-data
+move kde-base/kdebase-pics kde-base/kdebase-data
+move kde-base/kdebase-startkde kde-base/kdebase-data
