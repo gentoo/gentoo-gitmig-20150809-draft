@@ -1,7 +1,11 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.25 2004/11/09 16:48:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.26 2004/11/09 17:24:18 mrness Exp $
 
+  09 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  files/3.5_p20041024/ip-down, files/3.5_p20041024/ip-up:
+  Correctly pass empty params to ip-up.local and ip-down.local . See bug #70440.
+  
   09 Nov 2004; Alin Nastac <mrness@gentoo.org>
   -isdn4k-utils-20041024.ebuild, -isdn4k-utils-20041024-r1.ebuild, 
   -files/20041024/config, -files/20041024/gentoo.patch,
