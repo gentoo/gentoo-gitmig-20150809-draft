@@ -27,7 +27,7 @@ MD5 1eec486ab39a239e25a76b16a6fcd460 files/smb.conf.example 16183
 MD5 6b6683448cdc01d013bd2c61b4ed8e1e files/samba-slapd-include.conf 499
 MD5 60e527174c1b2c53126dbbedb3cae0f7 files/samba-2.2.8-statfs.patch 209
 MD5 43a38a5331805a2fa61e899f18413ccd files/digest-samba-3.0.5 203
-MD5 5674f3d9b2f2e643f85ed0737baaaa7f files/digest-samba-3.0.7 203
+MD5 a6cb7ea67d2a4fa00cb2d5dba0710cc3 files/digest-samba-3.0.7 203
 MD5 8ea7b443dd580aaaaf7e9e896eba54f2 files/samba-3.0.x-smbumount-uid32.patch 425
 MD5 bf268fdddc8ef677b6fa78661a094eac files/samba.schema 16044
 MD5 2539fea7a9f177544b05ee84f7dac0e2 files/smb.conf.example-samba3.gz 7840
