@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.3 2004/03/02 23:57:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.4 2004/03/03 18:44:34 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -15,21 +15,17 @@
 # member of the web-apps herd first!
 #
 # ------------------------------------------------------------------------
-#
-# THIS IS A BETA RELEASE ONLY.  ALL DETAILS ARE SUBJECT TO CHANGE BEFORE
-# WE ARE READY TO START PORTING EVERYTHING TO THIS ECLASS
-#
-# ------------------------------------------------------------------------
 
 ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
+G_HASCONFIG=1
 
 if [ -f /etc/conf.d/webapp-config ] ; then
 	. /etc/conf.d/webapp-config
 else
-	die "Unable to open /etc/conf.d/webapp-config files"
+	G_HASCONFIG=0
 fi
 
 EXPORT_FUNCTIONS pkg_config pkg_setup src_install
@@ -221,6 +217,12 @@ function webapp_src_install ()
 
 function webapp_pkg_setup ()
 {
+	# we do have the config file, right?
+
+	if [ "$G_HASCONFIG" = "0" ]; then
+		die "/etc/conf.d/webapp-config missing"
+	fi
+
 	# are we emerging something that is already installed?
 
 	if [ -d "${MY_APPROOT}/${MY_APPSUFFIX}" ]; then
