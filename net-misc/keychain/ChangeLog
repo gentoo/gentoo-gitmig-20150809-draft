@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/keychain
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.20 2004/05/03 22:48:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.21 2004/05/14 21:52:40 agriffis Exp $
+
+*keychain-2.3.0 (14 May 2004)
+
+  14 May 2004; Aron Griffis <agriffis@gentoo.org> +keychain-2.3.0.ebuild:
+  Version bump to 2.3.0, which removes the dependency on procmail for locking
 
 *keychain-2.2.2 (03 May 2004)
 
