@@ -1,5 +1,15 @@
-MD5 7a708f131aa53b3b27126a5e801df3b7 pnet-0.6.6.ebuild 1310
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ddc01ea1fd66477dbf0e6602a2923a2c ChangeLog 3143
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
-MD5 97a60b64bbeb718a8c070c92ca94e5ab files/verify_branch.c.patch 389
+MD5 02f9ab5b5a75a08f954f1e7bbf4af37b pnet-0.6.6.ebuild 1276
 MD5 e037d34aa40e555d9a9a193104770ea4 files/digest-pnet-0.6.6 63
+MD5 97a60b64bbeb718a8c070c92ca94e5ab files/verify_branch.c.patch 389
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4X7uHTu7gpaalycRAmlaAKD9EENfsRDYjv1SqnmSxLGI0DV5uACfXTnL
+SDfbkljKykjFnkUs+NkiPZM=
+=HYjj
+-----END PGP SIGNATURE-----

@@ -1,20 +1,30 @@
-MD5 ac41e6746265571928c0c40b9370310b mono-0.96.ebuild 1606
-MD5 0605c068b91108ae515261de9bc038ba mono-0.30.ebuild 2449
-MD5 5d70aa2dc0b35bbc8d67989b9da20c8c mono-0.91.ebuild 1718
-MD5 fff4d6940949f3280dcb8556749b6278 mono-0.30.1.ebuild 2451
-MD5 bda2e6b82684286bc13346b7851e0473 mono-0.28.ebuild 2151
-MD5 67131dd9bf95d27be0abb143fd60199a mono-0.95.ebuild 1606
-MD5 b78e0f09930aa9c7ab310d19e393005f mono-0.97.ebuild 1804
-MD5 4854360d1955592fb8e93f7bf4efa93d mono-0.31.ebuild 2603
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9563afa7a85b1b3463f41e15c252600a ChangeLog 7785
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
+MD5 d61de115e7b37b55c71b44b0cb2bee89 mono-0.28.ebuild 2093
+MD5 6a866ffdedeca043a6aaf267f8e2cab9 mono-0.30.1.ebuild 2394
+MD5 320ce3e4c19a4e80c41ee9400a39f23c mono-0.30.ebuild 2392
+MD5 f694ec86655b731f2d46488f531684f5 mono-0.31.ebuild 2546
+MD5 0569a7578a0082a433223c7dad460a6e mono-0.91.ebuild 1661
+MD5 38b11c580052bca1c3ab11d14b281b51 mono-0.95.ebuild 1557
+MD5 f7e22e6411bbcd37bf830d576b10e66a mono-0.96.ebuild 1557
+MD5 a8512424f7c7ad11b9af4f723016681d mono-0.97.ebuild 1756
+MD5 b1d7d1f8b30cadd81ca257cfb0126f2b files/digest-mono-0.30 123
+MD5 43da8709d0752a2ef9f9dfb050a05d9f files/digest-mono-0.28 123
 MD5 9f4b4eb6a1555ed574dbdd359cae3070 files/dotnet.conf 573
 MD5 f33c78b627cbbc1db2ab5f6cc5299e70 files/dotnet.init 1034
 MD5 33b073ed2746ffc3552b2c68a2215b56 files/digest-mono-0.30.1 127
-MD5 43da8709d0752a2ef9f9dfb050a05d9f files/digest-mono-0.28 123
-MD5 b1d7d1f8b30cadd81ca257cfb0126f2b files/digest-mono-0.30 123
 MD5 e7d95f62bf18430aa812b1a501c2e485 files/digest-mono-0.31 124
 MD5 0145cec2f8b351f3a72669bd6f7e4e0e files/digest-mono-0.91 63
 MD5 274bce1afaca6fcf8751ccea8d3d77c7 files/digest-mono-0.95 63
 MD5 7aace03d500c5c79171c98bfd0ed7b7e files/digest-mono-0.96 63
 MD5 d84a98b3dd678d6332f84ca5c148191c files/digest-mono-0.97 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4X7bHTu7gpaalycRAlk4AJ9r033RomZo/BF6LloWqcpE37npXACgt+Gv
+3OP/ChcNU5YBzHB0lVs/gOE=
+=eHkC
+-----END PGP SIGNATURE-----
