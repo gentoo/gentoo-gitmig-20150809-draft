@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.5.ebuild,v 1.3 2004/07/01 05:21:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.5.ebuild,v 1.4 2004/09/23 09:31:56 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://clockwork.dementia.org/${PN}/Source/${P}.tar.gz"
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE="X gtk"
 
 RDEPEND="virtual/libc
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:/games/:/:" configure \
 		|| die "sed configure failed"
