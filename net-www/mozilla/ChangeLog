@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.109 2003/07/18 04:43:43 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.110 2003/07/18 15:51:45 brad Exp $
+
+*mozilla-1.4-r1 (18 Jul 2003)
+
+  18 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-1.4-r1.ebuild:
+  Enigmail version bump, track download sites
 
   18 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-1.4.ebuild:
   Build fix on 2.6 series kernels.
