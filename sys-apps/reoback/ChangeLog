@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/reoback
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reoback/ChangeLog,v 1.5 2005/01/14 00:48:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reoback/ChangeLog,v 1.6 2005/03/13 09:56:07 vapier Exp $
+
+*reoback-1.0_rc3-r1 (13 Mar 2005)
+
+  13 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +reoback-1.0_rc3-r1.ebuild:
+  Clean up & fix again #84607 by Thomas Seifert.
 
 *reoback-1.0_rc3 (13 Jan 2005)
 
