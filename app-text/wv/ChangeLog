@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.6 2002/12/13 10:56:21 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.7 2003/01/27 01:55:47 bcowan Exp $
+
+*wv-0.7.4-r1 (25 Jan 2003)
+
+  26 Jan 2003; Brad Cowan <bcowan@gentoo.org> wv-0.7.4-r1.ebuild,
+  files/digest-wv-0.7.4-r1:
+  
+  Added header file and fixed symlink.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
