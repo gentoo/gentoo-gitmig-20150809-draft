@@ -1,0 +1,231 @@
+# This is a BitKeeper generated diff -Nru style patch.
+#
+# ChangeSet
+#   2004/02/12 23:28:01+03:00 vitaly@bitstream.namesys.com 
+#   a few bugs were fixed in the mount entry detection code.
+# 
+# reiserfsprogs/tune/tune.c
+#   2004/02/12 23:27:42+03:00 vitaly@bitstream.namesys.com +1 -1
+# 
+# reiserfsprogs/resize_reiserfs/resize_reiserfs.c
+#   2004/02/12 23:27:42+03:00 vitaly@bitstream.namesys.com +2 -2
+# 
+# reiserfsprogs/reiserfscore/reiserfslib.c
+#   2004/02/12 23:27:42+03:00 vitaly@bitstream.namesys.com +1 -1
+# 
+# reiserfsprogs/lib/misc.c
+#   2004/02/12 23:27:42+03:00 vitaly@bitstream.namesys.com +6 -29
+# 
+# reiserfsprogs/include/misc.h
+#   2004/02/12 23:27:42+03:00 vitaly@bitstream.namesys.com +4 -4
+# 
+# reiserfsprogs/fsck/main.c
+#   2004/02/12 23:27:42+03:00 vitaly@bitstream.namesys.com +11 -9
+# 
+# reiserfsprogs/fsck/fsck.h
+#   2004/02/12 23:27:42+03:00 vitaly@bitstream.namesys.com +1 -0
+# 
+# reiserfsprogs/debugreiserfs/unpack.c
+#   2004/02/12 23:27:42+03:00 vitaly@bitstream.namesys.com +1 -1
+# 
+diff -Nru a/reiserfsprogs/debugreiserfs/unpack.c b/reiserfsprogs/debugreiserfs/unpack.c
+--- a/reiserfsprogs/debugreiserfs/unpack.c	Thu Feb 12 23:29:27 2004
++++ b/reiserfsprogs/debugreiserfs/unpack.c	Thu Feb 12 23:29:27 2004
+@@ -616,7 +616,7 @@
+ 	/* only one non-option argument is permitted */
+ 	print_usage_and_exit();
+ 
+-    if (misc_device_mounted(argv[optind], 0))
++    if (misc_device_mounted(argv[optind]) > 0)
+ 	reiserfs_panic ("%s seems mounted, umount it first\n", argv[optind]);
+   
+     fd = open (argv[optind], O_RDWR | O_LARGEFILE);
+diff -Nru a/reiserfsprogs/fsck/fsck.h b/reiserfsprogs/fsck/fsck.h
+--- a/reiserfsprogs/fsck/fsck.h	Thu Feb 12 23:29:27 2004
++++ b/reiserfsprogs/fsck/fsck.h	Thu Feb 12 23:29:27 2004
+@@ -408,6 +408,7 @@
+ struct fsck_data {
+     unsigned short mode; /* check, rebuild, etc*/
+     unsigned long options;
++    unsigned long mounted;
+ 
+     struct rebuild_info rebuild;
+     struct check_info check;
+diff -Nru a/reiserfsprogs/fsck/main.c b/reiserfsprogs/fsck/main.c
+--- a/reiserfsprogs/fsck/main.c	Thu Feb 12 23:29:27 2004
++++ b/reiserfsprogs/fsck/main.c	Thu Feb 12 23:29:27 2004
+@@ -746,10 +746,10 @@
+ 
+     mark_filesystem_consistent (fs);
+     clear_buffer_do_not_flush (fs->fs_super_bh);
+-    
+-    if (misc_device_mounted(fs->fs_file_name, MF_RO)) {
+-	reiserfs_warning(stderr, "\nThe partition is mounted ro. It is better "
+-			 "to umount and mount it again.\n\n");
++
++    if (fsck_data(fs)->mounted == MF_RO) {
++	reiserfs_warning(stderr, "\nThe partition is mounted ro. It "
++			 "is better to umount and mount it again.\n\n");
+ 	ret = EXIT_REBOOT;
+     }
+ 
+@@ -764,18 +764,20 @@
+ }
+ 
+ /* check umounted or read-only mounted filesystems only */
+-void prepare_fs_for_check(reiserfs_filsys_t * fs) {
++static void prepare_fs_for_check(reiserfs_filsys_t * fs) {
+     /* The method could be called from auto_check already. */
+     if (fs->fs_flags == O_RDWR) 
+ 	return;
+ 
+     reiserfs_reopen (fs, O_RDWR);
+     
+-    if (misc_device_mounted(fs->fs_file_name, 0)) {
+-	if (!misc_device_mounted(fs->fs_file_name, MF_RO)) {
++    fsck_data(fs)->mounted = misc_device_mounted(fs->fs_file_name);
++    
++    if (fsck_data(fs)->mounted > 0) {
++	if (fsck_data(fs)->mounted == MF_RW) {
+ 	    fsck_progress ("Partition %s is mounted with write permissions, "
+ 		"cannot check it\n", fs->fs_file_name);
+-	    reiserfs_close (fs);
++	    reiserfs_close(fs);
+ 	    exit(EXIT_USER);
+ 	}
+ 	
+@@ -1093,7 +1095,7 @@
+ 	stage_report (5, fs);
+ 
+ 	if (fsck_mode(fs) != FSCK_CHECK) {
+-		if (misc_device_mounted(fs->fs_file_name, MF_RO)) {
++		if (misc_device_mounted(fs->fs_file_name) == MF_RO) {
+ 			reiserfs_warning(stderr, "\nThe partition is mounted ro. It is better "
+ 					 "to umount and mount it again.\n\n");
+ 			retval = EXIT_REBOOT;
+diff -Nru a/reiserfsprogs/include/misc.h b/reiserfsprogs/include/misc.h
+--- a/reiserfsprogs/include/misc.h	Thu Feb 12 23:29:27 2004
++++ b/reiserfsprogs/include/misc.h	Thu Feb 12 23:29:27 2004
+@@ -35,9 +35,9 @@
+ char * kdevname (int dev);
+ 
+ typedef enum mount_flags {
+-	MF_MOUNTED	= 0x1,
+-	MF_RO		= 0x2,
+-	MF_RW		= 0x4
++	MF_NOT_MOUNTED  = 0x0,
++	MF_RO		= 0x1,
++	MF_RW		= 0x2
+ } mount_flags_t;
+ 
+ typedef struct mount_hint {
+@@ -47,7 +47,7 @@
+ } mount_hint_t;
+ 
+ struct mntent *misc_mntent(char *device);
+-int misc_device_mounted(char *device, __u32 options);
++int misc_device_mounted(char *device);
+ 	
+ void misc_print_credit(FILE *out);
+ 
+diff -Nru a/reiserfsprogs/lib/misc.c b/reiserfsprogs/lib/misc.c
+--- a/reiserfsprogs/lib/misc.c	Thu Feb 12 23:29:27 2004
++++ b/reiserfsprogs/lib/misc.c	Thu Feb 12 23:29:27 2004
+@@ -328,46 +328,23 @@
+ 	return (!proc && !path) ? INVAL_PTR : NULL;
+ }
+ 
+-static int callback_misc_mounted(char *device, __u32 options) {
+-	fprintf(stderr, "Could not figure out, is '%s' '%s' mounted?",
+-		device, options & MF_RO ? "RO" : options & MF_RW ? "RW" : "");
+-	return (user_confirmed (stderr, " (Yes)", "Yes\n"));
+-}
+-
+-int misc_device_mounted(char *device, __u32 options) {
++int misc_device_mounted(char *device) {
+ 	struct mntent *mnt;
+ 	
+ 	/* Check for the "/" first to avoid any possible problem with 
+ 	   reflecting the root fs info in mtab files. */
+-	if (misc_root_mounted(device)) {
+-		if (options & MF_RO)
+-			return misc_file_ro(device);
+-
+-		if (options & MF_RW)
+-			return !misc_file_ro(device);
+-
+-		return 1;
++	if (misc_root_mounted(device) == 1) {
++		return misc_file_ro("/") ? MF_RO : MF_RW;
+ 	}
+ 	
+ 	/* Lookup the mount entry. */
+ 	if ((mnt = misc_mntent(device)) == NULL) {
+-		return 0;
++		return MF_NOT_MOUNTED;
+ 	} else if (mnt == INVAL_PTR) {
+-		goto error;
++		return 0;
+ 	}
+ 
+-	if (options & MF_RO)
+-		return hasmntopt(mnt, MNTOPT_RO) != 0;
+-	
+-	if (options & MF_RW)
+-		return hasmntopt(mnt, MNTOPT_RW) != 0;
+-	
+-	return 1;
+-	
+- error:
+-	/* Failed to lookup in /proc/mounts and /etc/mtab. 
+-	   Check if the "/" first and ask the user then. */
+-	return callback_misc_mounted(device, options);
++	return hasmntopt(mnt, MNTOPT_RO) ? MF_RO : MF_RW;
+ }
+ 
+ char buf1 [100];
+diff -Nru a/reiserfsprogs/reiserfscore/reiserfslib.c b/reiserfsprogs/reiserfscore/reiserfslib.c
+--- a/reiserfsprogs/reiserfscore/reiserfslib.c	Thu Feb 12 23:29:27 2004
++++ b/reiserfsprogs/reiserfscore/reiserfslib.c	Thu Feb 12 23:29:27 2004
+@@ -1197,7 +1197,7 @@
+     dev_t rdev;
+ 
+ 
+-    if (misc_device_mounted(device_name, 0)) {
++    if (misc_device_mounted(device_name) > 0) {
+ 	/* device looks mounted */
+ 	reiserfs_warning (stderr, "'%s' looks mounted.", device_name);
+ 	check_forcing_ask_confirmation (force);
+diff -Nru a/reiserfsprogs/resize_reiserfs/resize_reiserfs.c b/reiserfsprogs/resize_reiserfs/resize_reiserfs.c
+--- a/reiserfsprogs/resize_reiserfs/resize_reiserfs.c	Thu Feb 12 23:29:27 2004
++++ b/reiserfsprogs/resize_reiserfs/resize_reiserfs.c	Thu Feb 12 23:29:27 2004
+@@ -152,7 +152,7 @@
+     }
+ 
+     if (new_size < get_sb_block_count(fs->fs_ondisk_sb)) {
+-	if (misc_device_mounted(fs->fs_file_name, 0)) {
++	if (misc_device_mounted(fs->fs_file_name) > 0) {
+ 	    reiserfs_warning (stderr, "Can't shrink filesystem on-line.\n\n");
+ 	    return 1;
+ 	}
+@@ -276,7 +276,7 @@
+     if (resizer_check_fs_size(fs, block_count_new))
+ 	return 1;
+ 
+-    if (misc_device_mounted(devname, 0)) {
++    if (misc_device_mounted(devname) > 0) {
+ 	reiserfs_close(fs);
+ 	error = resize_fs_online(devname, block_count_new);
+ 	reiserfs_warning(stderr, "\n\nresize_reiserfs: On-line resizing %s.\n\n",
+diff -Nru a/reiserfsprogs/tune/tune.c b/reiserfsprogs/tune/tune.c
+--- a/reiserfsprogs/tune/tune.c	Thu Feb 12 23:29:27 2004
++++ b/reiserfsprogs/tune/tune.c	Thu Feb 12 23:29:27 2004
+@@ -467,7 +467,7 @@
+        --no-journal-available has been specified by user */
+ 
+     /* make sure filesystem is not mounted */
+-    if (misc_device_mounted(fs->fs_file_name, 0)) {
++    if (misc_device_mounted(fs->fs_file_name) > 0) {
+ 	/* fixme: it can not be mounted, btw */
+         message ("Reiserfstune is not allowed to be run on mounted filesystem.");
+ 	reiserfs_close (fs);

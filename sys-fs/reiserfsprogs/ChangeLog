@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.9 2004/02/10 20:02:32 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.10 2004/02/12 22:10:28 lostlogic Exp $
+
+*reiserfsprogs-3.6.12-r1 (12 Feb 2004)
+
+  12 Feb 2004; Brandon Low <lostlogic@gentoo.org>
+  reiserfsprogs-3.6.12-r1.ebuild, files/reiserfsprogs-3.6.12-check_root-bug:
+  Add a patch from Vitaly Fertman of the namesys team which properly checks the
+  mounted status of drives. My thanks to him for working with me on it, and to
+  Henning Westerholt for helping Vitaly test and whatnot
 
 *reiserfsprogs-3.6.12 (10 Feb 2004)
 
