@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.2 2004/04/20 23:14:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.3 2004/04/21 13:55:50 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -74,10 +74,10 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-text/ggv-2.6
 	>=app-text/gpdf-0.131
 
-	>=gnome-base/gnome-session-2.6
-	>=gnome-base/gnome-desktop-2.6.0.1
+	>=gnome-base/gnome-session-2.6.1
+	>=gnome-base/gnome-desktop-2.6.1
 	>=gnome-base/gnome-applets-2.6
-	>=gnome-base/gnome-panel-2.6
+	>=gnome-base/gnome-panel-2.6.1
 
 	>=x11-themes/gnome-icon-theme-1.2
 	>=x11-themes/gnome-themes-2.6
@@ -135,11 +135,10 @@ pkg_postinst () {
 	einfo " export WINDOW_MANAGER=\"/usr/bin/metacity\""
 	einfo "of course this works for all other window managers as well"
 	echo
-	echo
 	einfo "To have nautilus and gnome-vfs monitor file changes, you should"
 	einfo "start the FAM daemon. You can do this to by issueing the"
 	einfo "'/etc/init.d/famd start' command."
-	einfo "'rc-update add fam default' will make FAM start on every boot."
+	einfo "'rc-update add famd default' will make FAM start on every boot."
 	echo
 
 }
