@@ -1,3 +1,6 @@
-MD5 4eb9e4eecb2e3990635aa90f559dd2c9 ChangeLog 743
 MD5 bfb59aeb850ed8ac565ba9c5f6fc4e20 ecls-0.2.ebuild 1371
+MD5 841779426c5d2273a78c47ce74f55013 ecls-0.9b.ebuild 1002
+MD5 bfb59aeb850ed8ac565ba9c5f6fc4e20 ecls-0.9b.ebuild~ 1371
+MD5 4eb9e4eecb2e3990635aa90f559dd2c9 ChangeLog 743
 MD5 e23cb04b0671bbdf6c508b87489570ee files/digest-ecls-0.2 58
+MD5 146550f52692408e4bbc8ff3b641a436 files/digest-ecls-0.9b 58
