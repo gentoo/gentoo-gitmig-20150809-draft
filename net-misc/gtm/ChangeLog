@@ -1,7 +1,12 @@
 # ChangeLog for net-misc/gtm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/ChangeLog,v 1.2 2002/05/28 23:40:58 spider Exp $
 
+*gtm-0.4.11-r1 (28 May 2002)
+  28 May 2001; Spider <spider@gentoo.org> gtm-0.4.11-r1.ebuild:
+  Added a patch for gtm to support wget 1.8
+
+ 
 *gtm-0.4.11 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
