@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12.ebuild,v 1.17 2004/10/18 16:40:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12.ebuild,v 1.18 2004/11/08 14:49:25 vapier Exp $
 
 inherit eutils
 
 MY_PN=${PN/-sgml/}
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="Shell scripts to manage DocBook documents"
 HOMEPAGE="http://sources.redhat.com/docbook-tools/"
 SRC_URI="ftp://sources.redhat.com/pub/docbook-tools/new-trials/SOURCES/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc sparc x86"
 IUSE="tetex"
 
 DEPEND=">=dev-lang/perl-5

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/docbook-sgml-1.0.ebuild,v 1.25 2004/10/18 16:35:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/docbook-sgml-1.0.ebuild,v 1.26 2004/11/08 14:49:59 vapier Exp $
 
 DESCRIPTION="A helper package for sgml docbook"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64"
 
 RDEPEND="app-text/sgml-common app-text/openjade
 	>=app-text/docbook-dsssl-stylesheets-1.64
