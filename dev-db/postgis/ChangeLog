@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgis
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.10 2004/04/20 15:54:27 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.11 2004/05/03 22:15:02 nakano Exp $
+
+*postgis-0.7.5-r2 (03 May 2004)
+
+  03 May 2004; Masatomo Nakano <nakano@gentoo.org> +postgis-0.7.5-r2.ebuild:
+  Fixed dependency.
 
   20 Apr 2004; Martin Holzer <mholzer@gentoo.org> postgis-0.7.5-r1.ebuild:
   src_uri now uses mirror://postgresql
