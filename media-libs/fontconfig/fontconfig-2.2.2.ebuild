@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.3 2004/04/17 07:16:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.2.ebuild,v 1.4 2004/04/28 22:41:11 vapier Exp $
 
 inherit eutils
 
@@ -11,13 +11,7 @@ SRC_URI="http://freedesktop.org/~fontconfig/release/${P}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="1.0"
-
-# Note about keywords here:
-# >=kde-base/kdebase-3.1.2 has a fix needed to work with fontconfig 2.2 and higher,
-# so don't mark this ebuild stable on archs where kde 3.1.2 is only ~.
-# this of course doesn't apply to archs where kde has no keywords at all :-)
-# -- danarmak@gentoo.org
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~mips hppa ~ia64 amd64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa amd64 ~ia64 ~ppc64"
 
 DEPEND=">=sys-apps/sed-4
 	>=media-libs/freetype-2.1.4
