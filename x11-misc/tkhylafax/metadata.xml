@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>comm-fax</herd>
+<maintainer>
+  <email>nerdboy@gentoo.org</email>
+  <name>Steve Arnold</name>
+  <description>Primary Maintainer</description>
+</maintainer>
+<longdescription>Front end for sending faxes with HylaFAX.  Current features include:
+        o Batching fax destinations
+        o Built-in faxnumber database
+        o Fast cover sheet generation 
+        o Cover sheet preview
+        o Cover sheet ONLY transmission option
+        o Directory browser
+        o Fax job dequeuing made easier
+        o Fax job scheduling made easier
+        o Highly configurable
+<longdescription>
+</pkgmetadata>
