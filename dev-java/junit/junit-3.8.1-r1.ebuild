@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r1.ebuild,v 1.2 2004/10/16 17:27:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r1.ebuild,v 1.3 2004/10/29 12:39:19 axxo Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,6 @@ DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.4
 	>=app-arch/unzip-5.50-r1"
 RDEPEND=">=virtual/jdk-1.3"
-RESTRICT="nomirror"
 
 src_unpack() {
 	unpack ${A}

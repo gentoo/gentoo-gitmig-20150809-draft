@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.15 2004/10/16 17:27:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.16 2004/10/29 12:39:19 axxo Exp $
+
+  29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> junit-3.8.1-r1.ebuild:
+  remove nomirror
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> junit-3.8.1-r1.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
