@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/rpy
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.1 2004/02/21 18:56:04 kloeri Exp $
+
+*rpy-0.3.5 (21 Feb 2004)
+
+  21 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org> metadata.xml,
+  rpy-0.3.5.ebuild:
+  Initial import.
+
