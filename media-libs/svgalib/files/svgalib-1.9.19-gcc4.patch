@@ -1,0 +1,25 @@
+Patch by Peter Gordon to fix building with gcc-4.
+
+http://bugs.gentoo.org/show_bug.cgi?id=80668
+
+--- svgalib-1.9.19.orig/src/drivers/apm.c	2005-02-03 17:35:55.235794968 -0800
++++ svgalib-1.9.19/src/drivers/apm.c	2005-02-03 17:37:49.670398264 -0800
+@@ -148,12 +148,12 @@ static int apm_saveregs(unsigned char re
+    regs[APMREG_SAVE(15)] = (k >> 8)&0xff;
+    regs[APMREG_SAVE(16)] = (k >> 16) & 0xff ;
+    regs[APMREG_SAVE(17)] = ( k >> 24 ) & 0xff ;
+-   (unsigned long)regs[APMREG_SAVE(18)] = inlXR(0xf0) ;
+-   (unsigned long)regs[APMREG_SAVE(22)] = inlXR(0xf4) ;
+-   (unsigned long)regs[APMREG_SAVE(26)] = inlXR(0x140) ;
+-   (unsigned short)regs[APMREG_SAVE(30)] = inlXR(0x144) ;
+-   (unsigned long)regs[APMREG_SAVE(32)] = inXR(0x148) ;
+-   (unsigned short)regs[APMREG_SAVE(36)] = inXR(0x14c) ;
++   regs[APMREG_SAVE(18)] = (unsigned long) inlXR(0xf0) ;
++   regs[APMREG_SAVE(22)] = (unsigned long) inlXR(0xf4) ;
++   regs[APMREG_SAVE(26)] = (unsigned long) inlXR(0x140) ;
++   regs[APMREG_SAVE(30)] = (unsigned short) inlXR(0x144) ;
++   regs[APMREG_SAVE(32)] = (unsigned long) inXR(0x148) ;
++   regs[APMREG_SAVE(36)] = (unsigned short) inXR(0x14c) ;
+ 
+     return APM_TOTAL_REGS - VGA_TOTAL_REGS;
+ }

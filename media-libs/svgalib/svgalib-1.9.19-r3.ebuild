@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r3.ebuild,v 1.1 2005/01/23 14:52:10 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r3.ebuild,v 1.2 2005/02/06 21:05:38 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs kernel-mod
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.arava.co.il/matan/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE="build"
 
 DEPEND="virtual/libc"
@@ -46,6 +46,9 @@ src_unpack() {
 
 	# devfs_mk_symlink no longer available #77186
 	epatch ${FILESDIR}/${P}-devfs.patch
+
+	# Fix building with gcc-4
+	epatch ${FILESDIR}/${P}-gcc4.patch
 
 	# Link like the other packages
 	sed -i 's:$(FLAGS):$(CFLAGS) $(LDFLAGS):' demos/Makefile || die
@@ -84,9 +87,8 @@ src_compile() {
 	make OPTIMIZE="${CFLAGS} -I../gl" LDFLAGS='-L../sharedlib' \
 		demoprogs || die "Failed to build demoprogs!"
 
-	if ! use build && kernel-mod_modules_supported
-	then
-		cd ${S}/kernel/svgalib_helper
+	if ! use build && kernel-mod_modules_supported ; then
+		cd "${S}"/kernel/svgalib_helper
 		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
 			env -u ARCH \
 				make -f Makefile.alt INCLUDEDIR="${ROOT}/usr/src/linux/include" \
@@ -94,7 +96,7 @@ src_compile() {
 		else
 			env -u ARCH make || die "Failed to build kernel module!"
 		fi
-		cd ${S}
+		cd "${S}"
 	fi
 
 	cp Makefile Makefile.orig
@@ -108,21 +110,20 @@ src_install() {
 	dodir /etc/svgalib /usr/{include,lib,bin,share/man}
 
 	make \
-		TOPDIR=${D} OPTIMIZE="${CFLAGS}" INSTALLMODULE="" \
+		TOPDIR="${D}" OPTIMIZE="${CFLAGS}" INSTALLMODULE="" \
 		install || die "Failed to install svgalib!"
-	if ! use build && kernel-mod_modules_supported
-	then
-		cd ${S}/kernel/svgalib_helper
+	if ! use build && kernel-mod_modules_supported ; then
+		cd "${S}"/kernel/svgalib_helper
 		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
 			env -u ARCH \
-				make -f Makefile.alt TOPDIR=${D} \
+				make -f Makefile.alt TOPDIR="${D}" \
 					INCLUDEDIR="${ROOT}/usr/src/linux/include" \
 					modules_install || die "Failed to install svgalib module!"
 		else
 			insinto /lib/modules/${KV}/kernel/misc
 			doins svgalib_helper.ko
 		fi
-		cd ${S}
+		cd "${S}"
 	fi
 
 	insinto /usr/include
@@ -141,48 +142,47 @@ src_install() {
 	dodir /etc/modules.d
 	echo "probeall  /dev/svga  svgalib_helper" > ${D}/etc/modules.d/svgalib
 
-	if [ -e ${ROOT}/dev/.devfsd ] ; then
+	if [[ -e ${ROOT}/dev/.devfsd ]] ; then
 		insinto /etc/devfs.d
 		newins ${FILESDIR}/svgalib.devfs svgalib
-	elif [ -e ${ROOT}/dev/.udev ] ; then
+	elif [[ -e ${ROOT}/dev/.udev ]] ; then
 		dodir /etc/udev/permissions.d
 		echo "svga*:root:video:0660" > \
-			${D}/etc/udev/permissions.d/30-${PN}.permissions
+			"${D}"/etc/udev/permissions.d/30-${PN}.permissions
 	fi
 
 	exeinto /usr/lib/svgalib/demos
-	for x in ${S}/demos/*
-	do
-		[ -x "${x}" ] && doexe ${x}
+	for x in "${S}"/demos/* ; do
+		[[ -x ${x} ]] && doexe ${x}
 	done
 
-	cd ${S}/threeDKit
+	cd "${S}"/threeDKit
 	exeinto /usr/lib/svgalib/threeDKit
 	local THREED_PROGS="plane wrapdemo"
 	doexe ${THREED_PROGS}
 
-	cd ${S}
+	cd "${S}"
 	dodoc 0-README
-	cd ${S}/doc
+	cd "${S}"/doc
 	dodoc CHANGES DESIGN TODO
 	docinto txt
 	dodoc  Driver-programming-HOWTO README.* add_driver svgalib.lsm
 
-	mv ${D}/usr/man/* ${D}/usr/share/man
-	rmdir ${D}/usr/man
+	mv "${D}"/usr/man/* "${D}"/usr/share/man
+	rmdir "${D}"/usr/man
 }
 
 pkg_postinst() {
-	if [ -e ${ROOT}/dev/.devfsd ]; then
+	if [[ -e ${ROOT}/dev/.devfsd ]] ; then
 		ebegin "Restarting devfsd to reread devfs rules"
 		killall -HUP devfsd
 		eend $?
-	elif [ -e ${ROOT}/dev/.udev ]; then
+	elif [[ -e ${ROOT}/dev/.udev ]] ; then
 		ebegin "Restarting udev to reread udev rules"
 		udevstart
 		eend $?
 	fi
 
-	[ "${ROOT}" = "/" ] && /sbin/modules-update &> /dev/null
+	[[ ${ROOT} == "/" ]] && /sbin/modules-update &> /dev/null
 	einfo "When upgrading your kernel you'll need to rebuild the kernel module."
 }

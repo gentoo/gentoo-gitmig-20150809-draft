@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.54 2005/01/23 14:52:10 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.55 2005/02/06 21:05:38 vapier Exp $
+
+  06 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/svgalib-1.9.19-gcc4.patch, svgalib-1.9.19-r3.ebuild:
+  Add gcc-4 patch by Peter Gordon #80668.
 
 *svgalib-1.9.19-r3 (23 Jan 2005)
 
