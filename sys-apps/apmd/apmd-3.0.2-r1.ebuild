@@ -1,31 +1,35 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r1.ebuild,v 1.1 2002/03/18 03:28:41 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r1.ebuild,v 1.2 2002/03/28 01:50:38 seemant Exp $
 
 DESCRIPTION="Advanced Power Management Daemon"
 HOMEPAGE="http://www.worldvisions.ca/~apenwarr/apmd/"
-
 SRC_URI="http://www.worldvisions.ca/~apenwarr/apmd/${P}.tar.gz"
 S=${WORKDIR}/${PN}
 
-DEPEND="virtual/glibc X? ( virtual/x11 )"
+DEPEND="virtual/glibc
+	>=sys-apps/debianutils-1.16
+	X? ( virtual/x11 )"
 
 src_unpack() {
 
 	unpack ${A} ; cd ${S}
 
 	cp Makefile Makefile.orig
-	sed -e "s:PREFIX=\/usr:PREFIX=\$\{DESTDIR\}\/usr:" \
-		-e "s:APMD_PROXY_DIR\=\/etc:APMD_PROXY_DIR\=\$\{DESTDIR\}\/etc\/apm:" \
+	sed -e "s:\(PREFIX=\)\(/usr\):\1\$\{DESTDIR\}\2:" \
+		-e "s:\(APMD_PROXY_DIR\=\)\(/etc\):\1\$\{DESTDIR\}\2/apm:" \
 		-e "97d" \
-		-e "s:MANDIR\=\${PREFIX}\/man:MANDIR\=\${PREFIX}\/share\/man:" \
+		-e "s:\(MANDIR\=\${PREFIX}\)\(/man\):\1/share\2:" \
 		Makefile.orig > Makefile
 
-	cp Makefile Makefile.orig2
-	use X || sed -e "/^EXES=/s/xapm//" \
-		-e "/install.*xapm/d" \
-		Makefile.orig2 > Makefile
+	if [ "`use X`" ] 
+	then
+		cp Makefile Makefile.orig
+		sed -e "/^EXES=/s/xapm//" \
+			-e "/install.*xapm/d" \
+			Makefile.orig > Makefile
+	fi
 }
 
 src_compile() {
