@@ -1,9 +1,11 @@
 # ChangeLog for dev-games/cel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.7 2004/06/29 18:10:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.8 2004/07/17 21:20:26 aliz Exp $
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> cel-20040604.ebuild:
   sync IUSE (+python)
+
+*cel-20040604 (05 Jun 2004)
 
   05 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org> cel-20040604.ebuild:
   new snapshot version
