@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.22 2002/03/24 19:12:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.23 2002/04/05 21:38:36 azarah Exp $
+
+*baselayout-1.7.7 (5 Apr 2002)
+
+  7 Apr 2002; M.Schlemmer <azarah@gentoo.org> :
+
+  Move /etc/init.d/depscan.sh, /etc/init.d/runscript.sh and
+  /etc/init.d/functions.sh to /sbin to ensure that they are updated correctly.
+
+  Other minor bug fixes, check the Changelog.
 
 *baselayout-1.7.6 (24 Mar 2002)
 
