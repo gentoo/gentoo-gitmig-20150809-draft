@@ -1,0 +1,5 @@
+MD5 3182fe6027c72791a4d31d2bc38b6e0e coda-client-5.3.19.ebuild 2325
+MD5 9044bb3cb4f3e986d64affc18e16f027 ChangeLog 1904
+MD5 f82985c6f7aeb1f277c3188f0b2ec358 files/coda-client-5.3.19-gentoo.patch 2608
+MD5 c64c09508bed2660cfd97ac95fe466e2 files/digest-coda-client-5.3.19 64
+MD5 296b4e177ceef43d26796422bbe2ec15 files/coda-client-5.3.19-gentoo2.patch 732
