@@ -1,3 +1,11 @@
+Note that if you update this patch, please update this one as well:
+
+  eclass/ELT-patches/portage/1.4.1
+
+The file name can stay 1.4.1, as it will still apply to all versions.  Only
+when a new version of libtool comes out that it do not apply to, then the
+name should be bumped, but the patch content should stay fairly the same.
+
 --- ltmain.in.orig	Wed Apr  3 01:19:37 2002
 +++ ltmain.in	Sun May 26 19:50:52 2002
 @@ -3940,9 +3940,50 @@
@@ -59,7 +67,7 @@
  	  esac
 +	  # Do not add duplicates
 +	  if test "$installed" = yes && test "$D"; then
-+	    install_libdir=`echo "$install_libdir" |sed -e "s:$D::g" -e 's://:/:g'`
++	    install_libdir=`echo "$install_libdir" |sed -e "s:$D:/:g" -e 's:/\+:/:g'`
 +	  fi
  	  $echo > $output "\
  # $outputname - a libtool library file

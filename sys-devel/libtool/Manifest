@@ -38,4 +38,4 @@ MD5 5e84c0a07a77ed6408b25453373914ab files/1.5.6/libtool-1.5.6-ltmain-SED.patch 
 MD5 2badc5a56ce45a238edbef00b20677f7 files/1.5.6/libtool-1.5-filter-host-tags.patch 1146
 MD5 2196d46d17a239f4b4d7629ca264a9ff files/1.5.10/libtool-1.5.10-locking.patch 513
 MD5 c420dec3cd806113ecc347a457137ea6 files/1.5.10/libtool-1.5.10-version-checking.patch 1805
-MD5 29a35c156998b785947217ca749a3a96 files/1.5.10/libtool-1.5.10-portage.patch 2509
+MD5 31af600c8e04aa03291773b91ca1bc53 files/1.5.10/libtool-1.5.10-portage.patch 2841
