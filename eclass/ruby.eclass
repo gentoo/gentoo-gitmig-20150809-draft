@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.1 2003/09/07 02:37:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.2 2003/09/07 03:09:26 agriffis Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -37,8 +37,7 @@ ruby_src_compile() {
 }
 
 ruby_src_install() {
-	local siteruby=$(ruby -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
-	local rdbase=/usr/share/doc/${PF}/rd
+	local siteruby rdbase=/usr/share/doc/${PF}/rd
 
 	if [ -f extconf.rb -o -f Makefile ] ; then
 		einstall DESTDIR=${D} || die "einstall failed"
@@ -48,6 +47,7 @@ ruby_src_install() {
 		ruby install.rb install \
 			|| die "install.rb install failed"
 	else
+		siteruby=$(ruby -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
 		insinto ${siteruby}/${PN}
 		doins *.rb || "doins failed"
 	fi
