@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.18 2004/09/15 23:10:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.19 2004/09/22 11:04:22 axxo Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -13,7 +13,7 @@ DESCRIPTION="Based on the $ECLASS eclass"
 VMHANDLE=${PN}-${PV}
 
 function sed2() {
-	unset filename 
+	unset filename
 	unset arglist
 	local filename=""
 	local arglist
@@ -26,7 +26,7 @@ function sed2() {
 				arglist[${#arglist[@]}]="$1"
 			;;
 			*)
-				if [ -e "$1" ] ; then 
+				if [ -e "$1" ] ; then
 					filename=$1
 				fi
 			;;
@@ -34,7 +34,7 @@ function sed2() {
 		shift
 	done
 
-	if [ ! -z $filename ] ; then 
+	if [ ! -z $filename ] ; then
 		mv "${filename}" "${filename}.orig"
 		sed "${arglist[@]}" < ${filename}.orig > ${filename}
 		return 0
@@ -44,7 +44,7 @@ function sed2() {
 }
 
 java_pkg_postinst() {
-#	if [ -z `java-config --java 2> /dev/null` ] ; then 
+#	if [ -z `java-config --java 2> /dev/null` ] ; then
 #		einfo "No default VM found, setting ${VMHANDLE} as default"
 		einfo "Setting ${VMHANDLE} as default"
 		einfo "Use java-config to reassign your VM."
@@ -70,7 +70,7 @@ system_arch() {
 set_java_env() {
 	dodir /etc/env.d/java
 	platform=`system_arch`
-	
+
 	sed \
 		-e "s/@P@/${P}/g" \
 		-e "s/@PN@/${PN}/g" \
