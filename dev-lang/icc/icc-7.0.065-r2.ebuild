@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.065-r2.ebuild,v 1.2 2003/02/13 10:26:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.065-r2.ebuild,v 1.3 2003/03/18 01:45:33 avenj Exp $
 
 S=${WORKDIR}
 
@@ -23,7 +23,7 @@ RDEPEND=">=virtual/linux-sources-2.4
 		>=sys-libs/glibc-2.2.4"
 
 SLOT="7"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips"
 IUSE=""
 
 src_compile() {
@@ -94,12 +94,13 @@ pkg_postinst () {
 		ewarn "to 'compiler60' and run 'ldconfig.' Note that this edit"
 		ewarn "won't persist and will require you to re-edit after each"
 		ewarn "package you re-install."
+		ewarn "BEFORE COMPILING IMPORTANT APPLICATIONS THAT YOUR"
+		ewarn "SYSTEM DEPENDS ON, READ THE WARNING ABOVE."
+		ewarn "THIS COULD RENDER YOUR SYSTEM UNUSABLE."
+		ewarn "THIS IS A PROBLEM WITH INTEL'S SOFTWARE, _NOT_"
+		ewarn "WITH GENTOO."
 	fi
 	ewarn "If 'icc' breaks, use 'iccbin' instead and report a bug."
-	ewarn "NOTE: Before compiling important applications that your system"
-	ewarn "depends on, read the warning above. This could potentially"
-	ewarn "render your system unusable. This is a problem with Intel's"
-	ewarn "software, _not_ with Gentoo."
 	ewarn "Please use 'source /etc/profile' prior to merging any icc-enabled"
 	ewarn "ebuilds."
 }
