@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk-oh323
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/ChangeLog,v 1.1 2004/02/18 23:22:06 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/ChangeLog,v 1.2 2004/03/12 02:01:30 stkn Exp $
+
+*asterisk-oh323-0.5.10 (12 Mar 2004)
+
+  12 Mar 2004; Stefan Knoblich <stkn@gentoo.org> asterisk-oh323-0.5.10.ebuild,
+  asterisk-oh323-0.5.9.ebuild, files/asterisk-oh323-0.5.10-Makefile.patch,
+  files/asterisk-oh323-0.5.10-asterisk-driver-Makefile.patch:
+  version bump and some fixes for the new openh323 release.
+  old blocks now with new openh323 installed (won't compile...)
 
 *asterisk-oh323-0.5.9 (19 Feb 2004)
 

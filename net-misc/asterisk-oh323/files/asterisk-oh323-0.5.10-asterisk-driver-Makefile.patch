@@ -1,0 +1,10 @@
+--- asterisk-driver/Makefile.orig	2003-10-07 14:31:45.000000000 +0200
++++ asterisk-driver/Makefile	2004-02-05 15:51:25.884616624 +0200
+@@ -29,6 +29,7 @@
+ #################################################################################
+ 
+ TARGET=chan_oh323.so
++OPENH323DIR=/usr
+ 
+ ifndef SKIP_SUFFIX
+ 	ifeq ($(WRAPSTAT),1)
