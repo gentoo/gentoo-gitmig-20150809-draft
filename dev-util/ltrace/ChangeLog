@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ltrace
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.12 2003/10/13 12:00:32 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.13 2004/02/24 20:24:24 aliz Exp $
+
+  24 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> ltrace-0.3.31.ebuild:
+  Add support for amd64 by adding patch and tarball from Mandrake. Closing
+  #38726.
 
   13 Oct 2003; Heinrich Wendel <lanius@gentoo.org> ltrace-0.3.26-r1.ebuild:
   cleanup
