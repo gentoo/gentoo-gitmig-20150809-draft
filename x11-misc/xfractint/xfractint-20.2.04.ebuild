@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.11 2004/03/27 20:22:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.12 2004/04/23 14:09:27 spock Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND="app-arch/unzip
 	virtual/glibc
 	>=sys-libs/ncurses-5.1
-	x11-base/xfree"
+	virtual/x11"
 
 RDEPEND=$DEPEND
 
