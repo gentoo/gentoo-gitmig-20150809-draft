@@ -178,3 +178,4 @@ move gnome-base/ORBit2 gnome-base/orbit
 move net-misc/gwget2 net-misc/gwget
 
 move net-www/dspam-web www-apps/dspam-web
+move dev-tcltk/mmucl games-mud/mmucl
