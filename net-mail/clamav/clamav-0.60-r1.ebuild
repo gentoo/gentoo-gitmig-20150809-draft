@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.60-r1.ebuild,v 1.1 2003/10/27 10:07:06 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.60-r1.ebuild,v 1.2 2003/10/27 10:32:19 raker Exp $
 
 IUSE="milter"
 
@@ -39,4 +39,13 @@ src_install() {
 	dodoc AUTHORS BUGS NEWS README ChangeLog TODO FAQ INSTALL
 	exeinto /etc/init.d ; newexe ${FILESDIR}/clamd.rc clamd
 	insinto /etc/conf.d ; newins ${FILESDIR}/clamd.conf clamd
+	dodoc ${FILESDIR}/clamav-milter.README.gentoo
+}
+
+pkg_postinst() {
+	if [ `use milter` ]; then
+		einfo "For simple instructions howto setup the clamav-milter..."
+		einfo ""
+		einfo "less /usr/share/doc/${PVR}/clamav-milter.README.gentoo.gz"
+	fi
 }
