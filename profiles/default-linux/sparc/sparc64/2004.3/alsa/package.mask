@@ -1,0 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.3/alsa/package.mask,v 1.1 2004/11/22 18:31:09 eradicator Exp $
+
+-media-sound/alsa-utils
+-media-libs/alsa-lib
+

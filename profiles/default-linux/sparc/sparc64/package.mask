@@ -1,0 +1,8 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/package.mask,v 1.1 2004/11/22 18:31:09 eradicator Exp $
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Mask alsa-lib and alsa-utils so people don't accidently emerge them on a
+# system with unsafe alsa drivers.
+media-sound/alsa-utils
+media-libs/alsa-lib
+
