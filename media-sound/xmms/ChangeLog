@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.6 2002/03/27 22:05:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.7 2002/03/28 12:00:45 seemant Exp $
+
+*xmms-1.2.7-r4 (28 Mar 2002)
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r4.ebuild :
+  Ha ha, wishful thinking on my part.  This revision gets rid of the "built-in"
+  avi hack.  We still make use of the avi USE flag, because there are certain
+  libraries we need to link against for the new avi plugin, called avi4xmms.
 
 *xmms-1.2.7-r3 (27 Mar 2002)
 
