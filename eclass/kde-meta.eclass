@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.22 2005/02/11 17:09:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.23 2005/02/11 17:15:03 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -63,7 +63,7 @@ if [ "$KDEBASE" = "true" ]; then
 					XDELTA_DELTA="unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta"
 					;;
 		3.3.92)		XDELTA_BASE="unstable/3.3.90/src/${myPN}-3.3.90.tar.bz2"
-					XDELTA_DELTA="unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta unstable/3.3.92/src/${myPN}-3.3.91-3.3.92.tar.xdelta"
+					XDELTA_DELTA="unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/${myPN}-3.3.91-3.3.92.tar.xdelta"
 					;;
 		*)			;;
 	esac	
