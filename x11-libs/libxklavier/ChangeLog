@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.11 2004/04/20 01:24:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.12 2004/04/24 15:50:40 weeve Exp $
+
+  24 Apr 2004; Jason Wever <weeve@gentoo.org> +files/sun-keymaps-102.patch,
+  libxklavier-1.02.ebuild:
+  Added todd's fixes to 1.02.
 
   19 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   libxklavier-1.02.ebuild:
