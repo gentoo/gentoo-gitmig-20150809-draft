@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.20 2004/01/25 22:00:52 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.21 2004/01/26 09:06:27 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -448,13 +448,13 @@ detect_version() {
 	
 	if [ -n "${K_PREPATCHED}" ]
 	then
-		KV="${OKV}-${PN/-*/}${PR/r/}"
+		EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}${PR/r/}"
 	else
 		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
-		[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
-		
-		KV=${OKV}${EXTRAVERSION}
+		[ "${PR}" != "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
+	
+	KV=${OKV}${EXTRAVERSION}
 	
 	# -rcXX-bkXX pulls are *IMPOSSIBLE* to support within the portage naming convention
 	# these cannot be supported, but the code here can handle it up until this point
@@ -466,7 +466,7 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${PV//_/-}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST="${DISTDIR}/patch-${PV//_/-}.bz2 ${UNIPATCH_LIST}"
-		[ -n "${K_PREPATCHED}" ] && KV="${PV/[-_]*/}${EXTRAVERSION}-${PN/-*/}${PR/r/}" || KV=${PV/[-_]*/}${EXTRAVERSION}
+		KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
 	if [ "${RELEASETYPE}" == "-bk" ]
@@ -475,7 +475,7 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2 ${UNIPATCH_LIST}"
-		[ -n "${K_PREPATCHED}" ] && KV="${PV/[-_]*/}${EXTRAVERSION}-${PN/-*/}${PR/r/}" || KV=${PV/[-_]*/}${EXTRAVERSION}
+		KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
 	if [ "${RELEASETYPE}" == "-rc-bk" ]
@@ -486,7 +486,7 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2 ${UNIPATCH_LIST}"
-		[ -n "${K_PREPATCHED}" ] && KV="${PV/[-_]*/}${EXTRAVERSION}-${PN/-*/}${PR/r/}" || KV=${PV/[-_]*/}${EXTRAVERSION}
+		KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
 	S=${WORKDIR}/linux-${KV}
