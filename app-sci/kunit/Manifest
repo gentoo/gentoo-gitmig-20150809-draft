@@ -1,4 +1,4 @@
-MD5 9b6b4aa6e85ad3b17abe563471376b42 ChangeLog 543
-MD5 e98c3ca5a90d54c606cdebc1122a3caf kunit-0.5.ebuild 651
+MD5 3377e845cecac7a68c9cff9fb2cb112f kunit-0.5.ebuild 642
+MD5 72e1d0d502531930bf6b67b9bac9fa64 ChangeLog 534
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 0c90d280bdbe0daf16c2cb881e61683a files/digest-kunit-0.5 61
