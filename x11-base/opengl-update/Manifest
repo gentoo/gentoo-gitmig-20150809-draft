@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 72eebc329989b914c21576b125189e57 ChangeLog 13369
 MD5 f4a810bc95a74e27b27973e4e948a937 metadata.xml 358
 MD5 4e8eebd835dbf4f24182d7cce7af8ab7 opengl-update-1.7.2.ebuild 541
@@ -15,3 +18,10 @@ MD5 745fdf145b2e08f0c996a3ca40b1ca16 files/digest-opengl-update-2.0_pre5 64
 MD5 f21996de10b91b58cced8fbcc6c44792 files/opengl-update-2.0_pre5 9738
 MD5 6d1cf5524b4fb49bc35ed0410ef2c9a4 files/opengl-update-2.1.0 8887
 MD5 bbec0e16e4f45a464cec5b4feeecaa9b files/digest-opengl-update-2.1.0 116
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCCc6uArHZZzCEUG0RAgHIAJ41O6Qhs+GJljGK9sl8zJcCcQFQiACfbTVG
+0COWq+QyR5f81nS/L7RFAYs=
+=qQGB
+-----END PGP SIGNATURE-----
