@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r3.ebuild,v 1.1 2004/08/02 18:17:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r4.ebuild,v 1.1 2004/08/02 19:23:44 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -62,6 +62,11 @@ src_unpack() {
 	# the environment because INPUTRC will override even after the
 	# user creates a ~/.inputrc
 	epatch ${FILESDIR}/${P}-etc-inputrc.patch
+
+	# Chet Ramey (upstream maintainer) provided this patch in
+	# http://news.gmane.org/gmane.comp.shells.bash.bugs/cutoff=4115
+	# to fix bug 58961 (segfault on local arrays)
+	epatch ${FILESDIR}/${P}-local-array.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	echo '#define SSH_SOURCE_BASHRC' >> config-top.h

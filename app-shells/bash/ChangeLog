@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.44 2004/08/02 18:17:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.45 2004/08/02 19:23:44 agriffis Exp $
+
+*bash-3.0-r4 (02 Aug 2004)
+
+  02 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/bash-3.0-local-array.patch, -bash-3.0-r3.ebuild, +bash-3.0-r4.ebuild:
+  Fix bug 58961 with patch from Chet Ramey to prevent segfault
 
 *bash-3.0-r3 (02 Aug 2004)
 
