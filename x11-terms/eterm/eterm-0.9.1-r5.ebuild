@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r5.ebuild,v 1.7 2002/10/27 08:28:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r5.ebuild,v 1.8 2003/02/03 23:15:59 seo Exp $
 
+IUSE="cjk"
 MY_PN=${PN/et/Et}
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -29,6 +30,8 @@ src_compile() {
 	
 	# always disable mmx because binutils 2.11.92+ seems to be broken for this package
 	local myconf="--disable-mmx"
+
+	use cjk && myconf="${myconf} --enable-xim"
 
 	econf \
 		--with-imlib \

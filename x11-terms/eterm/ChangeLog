@@ -1,6 +1,6 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.13 2003/01/24 16:25:21 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.14 2003/02/03 23:15:59 seo Exp $
 
   24 Jan 2003; Jason Wever <weeve@gentoo.org> eterm-0.9.2-r3.ebuild :
   Added ~sparc to keywords.
@@ -38,6 +38,9 @@
   options some neet screen interoperability.
 
 *eterm-0.9.1-r5 (18 Jun 2002)
+
+  03 Feb 2003; Jungmin Seo <seo@gentoo.org> eterm-0.9.1-r5.ebuild:
+  added 'cjk' use flag
 
   18 Jun 2002; Michael Nazaroff <naz@gentoo.org> eterm-0.9.1-r5.ebuild:
   #4051 eterm needs imlib other wise it will not compile, I'm not sure why
