@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.80 2005/01/20 18:29:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.81 2005/01/29 03:09:45 solar Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -325,23 +325,30 @@ has_hardened() {
 	return 1
 }
 
+# indicate whether PIC is set
 has_pic() {
 	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpic}" != "${CFLAGS}" ] && return 0
+	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__)" ] && return 0
 	test_version_info pie && return 0
 	return 1
 }
 
+# indicate whether PIE is set
 has_pie() { 
 	[ "${CFLAGS/-fPIE}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpie}" != "${CFLAGS}" ] && return 0
-	test_version_info pie && return 0
+	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIE__)" ] && return 0
+	# test PIC while waiting for specs to be updated to generate __PIE__
+	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__)" ] && return 0
 	return 1
 }
 	
+# indicate whether code for SSP is being generated
 has_ssp() {
+	# note; this matches both -fstack-protector and -fstack-protector-all
 	[ "${CFLAGS/-fstack-protector}" != "${CFLAGS}" ] && return 0
-	test_version_info ssp && return 0
+	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP__)" ] && return 0
 	return 1
 }
 
