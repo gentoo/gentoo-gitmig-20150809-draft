@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <rac@gentoo.org> (17 July 2003) 
+# emergency mask because of confirmed reports of compilation failure 
+# see bug 24570 
+>dev-libs/dvnet-0.9.4 
+
 # <naz@gentoo.org> (16 July 2003)
 # the cvs of gift is broken
 >=net-p2p/gift-cvs-0.10.0
