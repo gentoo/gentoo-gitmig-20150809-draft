@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/kuake
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/ChangeLog,v 1.1 2003/03/05 02:57:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/ChangeLog,v 1.2 2004/01/23 02:26:21 vapier Exp $
+
+*kuake-0.2.2 (22 Jan 2004)
+
+  22 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #39028 by daniel webert.
 
 *kuake-0.2.1 (04 Mar 2003)
 
