@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.17 2005/03/13 06:59:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.18 2005/03/19 19:23:22 hollow Exp $
+
+*eix-0.2.2_beta (19 Mar 2005)
+
+  19 Mar 2005; Benedikt Boehm <hollow@gentoo.org> +eix-0.2.2_beta.ebuild:
+  Version bump
 
   13 Mar 2005; Benedikt Boehm <hollow@gentoo.org>
   -files/0.2.0_alpha-bugfixes.patch, -eix-0.1.2.ebuild, -eix-0.1.3.ebuild,
