@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.11 2004/07/13 16:19:14 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.12 2004/07/24 06:05:18 liquidx Exp $
 
-inherit flag-o-matic eutils
-use kde && inherit kde
+inherit flag-o-matic eutils kde
 
 MY_P=${PN}_${PV}
 S=${WORKDIR}/${MY_P}
@@ -21,7 +20,7 @@ DEPEND="virtual/x11
 	>=sys-apps/sed-4
 	>=media-gfx/imagemagick-5.5.7
 	kde? ( kde-base/kdeartwork )
-	!kde? ( x11-misc/xscreensaver )
+	!kde? ( x11-misc/xscreensaver kde-base/kde-env )
 	openal? ( media-libs/openal )"
 
 src_unpack() {
@@ -40,8 +39,8 @@ src_compile() {
 	if use kde; then
 		find . -name '*.desktop' -exec \
 			sed -i \
-				-e 's:Exec=kxsrun \(.*\):Exec=kxsrun /usr/lib/xscreensaver/\1:g' \
-				-e 's:Exec=kxsconfig \(.*\):Exec=kxsconfig /usr/lib/xscreensaver/\1:g' \
+				-e 's:Exec=kxsrun \(.*\):Exec=kxsrun \1:g' \
+				-e 's:Exec=kxsconfig \(.*\):Exec=kxsconfig \1:g' \
 				'{}' \
 			\; \
 			|| die "couldnt sed desktop files"

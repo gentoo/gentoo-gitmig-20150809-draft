@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.20 2004/06/24 22:31:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.21 2004/07/24 06:05:18 liquidx Exp $
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org> rss-glx-0.7.6.ebuild:
+  fixing xscreensaver installation for KDE 3.2 (#43173)
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> rss-glx-0.7.4-r1.ebuild,
   rss-glx-0.7.6.ebuild:
