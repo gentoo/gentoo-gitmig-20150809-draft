@@ -456,8 +456,6 @@ and reboot the system:</p>
 <body><p>If you have any questions or would like to get involved with Gentoo Linux development, 
 consider joining our gentoo-dev mailing list (there's a "click to subscribe" link on our <uri link="http://www.gentoo.org">main page</uri>).
 </p>
-<warn>This is a warning.</warn>
-<impo>This is important.</impo>
 </body>
 </section>
 </chapter>
