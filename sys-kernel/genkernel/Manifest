@@ -1,8 +1,8 @@
-MD5 a810b5de5478b8368dfe6c5b2ba726ed ChangeLog 11816
+MD5 c42f1bcd45fa19b2efe2ba6ddda539b9 genkernel-3.1.0k.ebuild 925
+MD5 b1dae721c20cbee97eadf16590ecaaca ChangeLog 11956
 MD5 697bdc27694bc88ad6d20ed2b7041008 genkernel-1.8.ebuild 663
 MD5 1276ab96d4127d4fd0ea6d67244083bd genkernel-2.1.ebuild 1006
 MD5 40936e9063143ed6e5c22c8c29a8f013 genkernel-3.0.1.ebuild 765
-MD5 ed2752d0fd57bd85fbbe10f0a5793efe genkernel-3.1.0j.ebuild 925
 MD5 e57f94c747921d4b9bf284b54e8bde3d metadata.xml 228
 MD5 456b8cb28883b6bb42391a74da131716 genkernel-1.6.ebuild 566
 MD5 584598ae9319861ffbf307c8bee1ba46 genkernel-3.1.0c.ebuild 924
@@ -10,6 +10,7 @@ MD5 92456af73fe98b8f5149cabd7bc34ef6 genkernel-3.0.2.ebuild 812
 MD5 864cdca957e5444d526e79e9d4471238 genkernel-1.9.ebuild 680
 MD5 5c9bdc9dcc15d62196e7c0c03bc8c286 genkernel-2.0.ebuild 994
 MD5 2c3259f869e04ff498e4ba16fd7aad6c files/digest-genkernel-3.1.0c 70
+MD5 8a1fd970ab060eb13f9db77c68038cc7 files/digest-genkernel-3.1.0k 70
 MD5 ac5aa968fb16a108a6536efc2fe94621 files/digest-genkernel-2.1 200
 MD5 1f19fad2f303865b8a247dcdac81fe02 files/digest-genkernel-2.0 195
 MD5 440e33e8603dd4aad622093a60c7e32e files/digest-genkernel-1.6 66
@@ -18,4 +19,3 @@ MD5 291fa3228fe4c8ef8f5d3a820984be53 files/digest-genkernel-1.9 66
 MD5 dd2611bb1ae0689fbbb0ecdbca6e0cec files/bin-keymaps.tar.gz 17054
 MD5 85c20772dc52cc678fad96d09ebc44e2 files/digest-genkernel-1.8 66
 MD5 98fc638bf0e5dad6ba7e8ad55d416260 files/digest-genkernel-3.0.2 69
-MD5 fec2b54b2ad580415ccb4446ba9fca7a files/digest-genkernel-3.1.0j 70
