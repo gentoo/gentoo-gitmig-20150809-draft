@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.9 2004/10/06 11:41:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.10 2004/10/13 22:22:12 usata Exp $
 
 inherit flag-o-matic eutils alternatives gcc
 
@@ -127,7 +127,7 @@ src_install() {
 update-alternatives() {
 	for i in emacs emacsclient etags ctags b2m ebrowse \
 		rcs-checkin grep-changelog ; do
-		alternatives_auto_makesym "/usr/bin/$i" "/usr/bin/$i-21*"
+		alternatives_makesym "/usr/bin/$i" "/usr/bin/$i-21.3.50" "/usr/bin/$i-21"
 	done
 }
 
