@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.0.ebuild,v 1.1 2004/11/13 13:26:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.0.ebuild,v 1.2 2004/11/13 13:34:25 slarti Exp $
 
 DESCRIPTION="The GNU SASL client, server, and library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
@@ -23,7 +23,7 @@ src_compile() {
 	econf \
 		--enable-client \
 		--enable-server \
-		$(use_enable kerberos) \
+		$(use_enable kerberos gssapi) \
 		$(use_enable nls) \
 		$(use_enable static) \
 	|| die "econf failed"
