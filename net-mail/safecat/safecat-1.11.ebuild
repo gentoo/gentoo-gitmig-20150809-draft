@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.10 2005/03/19 15:25:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.11 2005/03/22 04:14:31 agriffis Exp $
+
+inherit fixheadtails eutils toolchain-funcs
 
 IUSE=""
 
-inherit fixheadtails eutils
-
 DESCRIPTION="Safecat implements qmail's maildir algorithm, copying standard input safely to a specified directory."
-HOMEPAGE="http://budney.homeunix.net:8080/users/budney/linux/software/${PN}/"
+HOMEPAGE="http://budney.homeunix.net:8080/users/budney/linux/software/safecat/"
 SRC_URI="http://budney.homeunix.net:8080/users/budney/linux/software/${PN}/${P}.tar.gz"
 
 DEPEND="virtual/libc
@@ -26,15 +26,16 @@ src_unpack() {
 
 	cd ${S}
 	echo "/usr" > conf-root
-	echo "${CC} ${CFLAGS}" > conf-cc
-	echo "${CC} ${LDFLAGS}" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 
 	ht_fix_file Makefile make-compile.sh
+
+	egrep -v 'man|doc' hier.c > hier.c.new
+	mv hier.c.new hier.c
 }
 
 src_compile() {
-	egrep -v 'man|doc' hier.c > hier.c.new
-	mv hier.c.new hier.c
 	make it man || die
 }
 
