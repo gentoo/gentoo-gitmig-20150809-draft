@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ascii-invaders-0.1b.ebuild,v 1.3 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ascii-invaders-0.1b.ebuild,v 1.4 2004/04/17 04:06:26 weeve Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ip9.org/munro/invaders/invaders${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ~sparc"
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
