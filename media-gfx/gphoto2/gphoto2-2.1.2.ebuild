@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.2.ebuild,v 1.3 2003/10/08 21:30:22 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.2.ebuild,v 1.4 2003/10/12 13:13:44 lanius Exp $
 
 inherit libtool flag-o-matic
 
@@ -17,7 +17,7 @@ IUSE="nls jpeg readline ncurses aalib"
 # aalib -> needs libjpeg
 RDEPEND=">=dev-libs/libusb-0.1.6
 	dev-libs/popt
-	>=media-libs/libgphoto2-2.1.1-r2
+	>=media-libs/libgphoto2-2.1.2-r1
 	ncurses? ( dev-libs/cdk )
 	aalib? ( media-libs/aalib
 		media-libs/jpeg )
