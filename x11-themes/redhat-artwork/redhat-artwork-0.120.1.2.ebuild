@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.7 2005/03/22 14:58:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.8 2005/04/03 21:35:38 greg_g Exp $
 
 inherit eutils rpm libtool versionator kde-functions
 
@@ -12,19 +12,19 @@ SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRP
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
-IUSE="kde gtk xmms gtk2"
+IUSE="gtk kde xmms"
 
 # Needed to build...
-DEPEND=">=sys-devel/autoconf-2.58
+DEPEND="sys-devel/autoconf
 	sys-devel/automake
 	media-gfx/icon-slicer
 	>=x11-libs/gtk+-2.0
 	gtk? (  >=media-libs/gdk-pixbuf-0.2.5
-			=x11-libs/gtk+-1.2* )
+		=x11-libs/gtk+-1.2* )
 	kde? (	|| ( kde-base/kcontrol kde-base/kdebase )
 		|| ( kde-base/kwin kde-base/kdebase ) )
-	gtk2? ( >=x11-libs/gtk+-2* )
 	dev-util/intltool"
+
 # Because one may only want to use the theme with kde OR gtk OR Metacity
 # OR gdm, we don't want either as run-time dependencies...
 RDEPEND="virtual/x11"
@@ -51,75 +51,66 @@ src_compile() {
 		set-kdedir 3
 	fi
 
-	export WANT_AUTOCONF=2.5
 	# dies is LANG has UTF-8
 	export LANG=C
 	export LC_ALL=C
 
-	use kde || (
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.8
 
 	rm configure
-	mv configure.in configure.in.old
-	sed -e	"s|dnl KDE_USE_QT||" \
-		-e "s|KDE_||g" \
-		-e "s|AC_PATH_KDE||" \
-		-e "s|art/kde/Makefile||" \
-		-e "s|art/kde/kwin/Makefile||" \
-		-e "s|art/kde/kwin/Bluecurve/Makefile||" \
-			configure.in.old > configure.in
+	sed -i -e "s|.*MCOPIDL.*||" \
+	       -e "s|.*ARTSCCONFIG.*||" \
+		acinclude.m4
 
-	mv art/Makefile.am art/Makefile.am.old
-	sed -e 	"s|kde||" \
-		-e	"s|qt||" \
-			art/Makefile.am.old > art/Makefile.am
+	if ! use kde; then
+		sed -i -e "s|dnl KDE_USE_QT||" \
+		       -e "s|KDE_SET_PREFIX||" \
+		       -e "s|KDE_CHECK_FINAL||" \
+		       -e "s|AC_PATH_KDE||" \
+		       -e "s|art/kde/Makefile||" \
+		       -e "s|art/kde/kwin/Makefile||" \
+		       -e "s|art/kde/kwin/Bluecurve/Makefile||" \
+			configure.in
 
-	mv art/Makefile.in art/Makefile.in.old
-	sed -e  "s|kde||" \
-		-e  "s|qt||" \
-			art/Makefile.in.old > art/Makefile.in
+		sed -i -e "s|kde||" \
+		       -e "s|qt||" \
+			art/Makefile.am
 
-	)
-
-	# disable gtk 1.x support if gtk use keyword is not set
-	use gtk || (
-
-	rm configure
-	mv configure.in configure.in.old
-	sed -e  "s|AM_PATH_GTK(1.2.9, ,||" \
-		-e  "s|AC_MSG_ERROR(.*GTK+-1.*||" \
-		-e  "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
-		-e  "s|AC_MSG_ERROR(.*gtk_style.*||" \
-		-e  "s|             \$GTK_LIBS)||" \
-		-e  "s|AM_PATH_GDK_PIXBUF||" \
-		-e  "s|art/gtk/Bluecurve1/Makefile||" \
-		-e  "s|art/gtk/Bluecurve1/gtk/Makefile||" \
-	configure.in.old > configure.in
-
-	mv art/gtk/Makefile.am art/gtk/Makefile.am.old
-	sed -e  "s|Bluecurve1||" \
-	art/gtk/Makefile.am.old > art/gtk/Makefile.am
-
-	)
-
-	if ! use kde || ! use gtk ; then
-		aclocal
-		libtoolize --copy --force
-		autoconf && automake --add-missing || die "auto* failed"
+		sed -i -e "s|kde||" \
+		       -e "s|qt||" \
+			art/Makefile.in
 	fi
 
+	# disable gtk 1.x support if gtk use keyword is not set
+	if ! use gtk; then
+		sed -i -e "s|AM_PATH_GTK(1.2.9, ,||" \
+		       -e "s|AC_MSG_ERROR(.*GTK+-1.*||" \
+		       -e "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
+		       -e "s|AC_MSG_ERROR(.*gtk_style.*||" \
+		       -e "s|             \$GTK_LIBS)||" \
+		       -e "s|AM_PATH_GDK_PIXBUF||" \
+		       -e "s|art/gtk/Bluecurve1/Makefile||" \
+		       -e "s|art/gtk/Bluecurve1/gtk/Makefile||" \
+			configure.in
+
+		sed -i -e "s|Bluecurve1||" \
+			art/gtk/Makefile.am
+	fi
+
+	autoreconf --force --install || die "autoreconf failed"
+
 	# paths have to be fixed for kde
-	use kde && (
-
-	# Fix paths...
-	_replace "/usr/lib/qt3"          "${QTDIR}"
-	_replace '${libdir}/qt3'         "${QTDIR}"
-	_replace '$(libdir)/qt3'         "${QTDIR}"
-	_replace "/usr/lib/kde3"         "${KDEDIR}/lib"
-	_replace '${libdir}/kde3'        "${KDEDIR}/lib"
-	_replace "/usr/lib/kwin.la"      "${KDEDIR}/lib/kwin.la"
-	chmod +x configure
-
-	)
+	if ! use kde; then
+		# Fix paths...
+		_replace "/usr/lib/qt3"          "${QTDIR}"
+		_replace '${libdir}/qt3'         "${QTDIR}"
+		_replace '$(libdir)/qt3'         "${QTDIR}"
+		_replace "/usr/lib/kde3"         "${KDEDIR}/lib"
+		_replace '${libdir}/kde3'        "${KDEDIR}/lib"
+		_replace "/usr/lib/kwin.la"      "${KDEDIR}/lib/kwin.la"
+		chmod +x configure
+	fi
 
 	# fix iconrc
 	#mv art/gtk/make-iconrc.pl art/gtk/make-iconrc.pl.broken

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.50 2005/03/31 04:18:28 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.51 2005/04/03 21:35:38 greg_g Exp $
+
+  03 Apr 2005; Gregorio Guidi <greg_g@gentoo.org>
+  redhat-artwork-0.120.1.2.ebuild:
+  Fix arts detection (#62304). Cleanup.
 
   30 Mar 2005; Rajiv Aaron Manglani <rajiv@gentoo.org>
   redhat-artwork-0.96.ebuild:
