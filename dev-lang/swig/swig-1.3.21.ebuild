@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.20 2004/07/16 01:33:32 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.21 2004/08/07 21:50:44 slarti Exp $
 
 inherit mono #48511
 
-DESCRIPTION="Simplied Wrapper and Interface Generator"
+DESCRIPTION="Simplified Wrapper and Interface Generator"
 HOMEPAGE="http://www.swig.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
