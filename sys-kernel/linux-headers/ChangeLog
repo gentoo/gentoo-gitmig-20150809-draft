@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.83 2004/06/28 16:28:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.84 2004/07/03 09:54:32 spock Exp $
+
+  03 Jul 2004; Michal Januszewski <spock@gentoo.org>
+  linux-headers-2.6.7-r1.ebuild:
+  Removed the nptl-fix patch from 2.6.7 ebuild, as this has been fixed in
+  upstream. Closes bug #55165.
 
 *linux-headers-2.6.7-r1 (28 Jun 2004)
 

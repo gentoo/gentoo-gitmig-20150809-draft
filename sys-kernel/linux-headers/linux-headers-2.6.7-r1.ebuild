@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.7-r1.ebuild,v 1.1 2004/06/28 16:28:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.7-r1.ebuild,v 1.2 2004/07/03 09:54:32 spock Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -53,13 +53,6 @@ src_unpack() {
 	epatch ${FILESDIR}/linux-headers-2.6.3-strict-ansi-fix.patch
 	epatch ${FILESDIR}/linux-headers-2.6.0-sysctl_h-compat.patch
 	epatch ${FILESDIR}/linux-headers-2.6.0-fb.patch
-
-	# Needed to compile NPTL on amd64
-	if use amd64; then
-		cd ${S}/include/asm-x86_64/
-		epatch ${FILESDIR}/linux-headers-2.6.4-unistd-nptl-fix.patch
-	fi
-
 }
 
 src_compile() {
