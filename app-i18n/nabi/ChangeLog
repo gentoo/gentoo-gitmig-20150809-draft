@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/nabi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.1 2003/10/26 03:35:32 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.2 2003/11/16 13:39:21 jayskwak Exp $
+
+*nabi-0.9 (17 Nov 2003)
+  17 Nov 2003: Jay Kwak <jayskwak@gentoo.org> nabi-0.9.ebuild:
+  ChangeLog : changed to x86
 
 *nabi-0.9 (26 Oct 2003)
 
