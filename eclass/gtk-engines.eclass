@@ -101,24 +101,23 @@ fi
 gtk-engines_src_unpack() {
 	unpack ${A}
 	
-	# Let's try to figure out the right value for S
-	S="${WORKDIR}/`ls -t ${WORKDIR} | head -n 1`"
+	MY_DIR=`ls -t ${WORKDIR} | head -n 1`
+
+	mv $MY_DIR $S
 }
 
 gtk-engines_src_compile() {
-	econf || die
+	econf || die "Configuration failed"
 	
 	if [ "X${MY_PN}" = "Xgtk-engines" ]
 	then
 		cd ${ENGINE}
 	fi
 	
-	emake || die
+	emake || die "Compilation failed"
 }
 
 gtk-engines_src_install() {
-	cd ${S}
-	
 	if [ "X${MY_PN}" = "Xgtk-engines" ]
 	then
 		cd ${ENGINE}
@@ -138,7 +137,8 @@ gtk-engines_src_install() {
 
 	einstall \
 		THEME_DIR=${D}/usr/share/themes \
-		ENGINE_DIR=${D}/usr/lib/gtk/themes/engines || die
+		ENGINE_DIR=${D}/usr/lib/gtk/themes/engines || \
+		die "Installation failed"
 	
 	for doc in AUTHORS BUGS ChangeLog CONFIGURATION COPYING CUSTOMIZATION \
 		INSTALL NEWS README THANKS TODO
