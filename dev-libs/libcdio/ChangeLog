@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.21 2004/12/05 03:22:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.22 2004/12/11 14:39:06 kloeri Exp $
+
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> libcdio-0.69.ebuild:
+  Stable on alpha.
 
   04 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libcdio-0.70.ebuild:
