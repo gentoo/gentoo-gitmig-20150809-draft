@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.5 2003/02/07 21:40:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.6 2003/02/09 19:08:47 raker Exp $
 
 IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://avifile.sourceforge.net/"
 
 SLOT="0.7"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND=">=media-libs/jpeg-6b
 	x86? ( >=media-libs/divx4linux-20020418
