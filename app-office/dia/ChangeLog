@@ -1,11 +1,16 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.12 2003/02/13 07:18:17 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.13 2003/03/26 09:32:40 seo Exp $
+
+*dia-0.91 (26 Mar 2003)
+
+  26 Mar 2003; Jungmin Seo <seo@gentoo.org> dia-0.91.ebuild :
+  New version. now supports gtk+-2. 
+
+*dia-0.90-r2 (22 Oct 2002)
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> dia-0.90-r2.ebuild :
   set ppc in keywords
-
-*dia-0.90-r2 (22 Oct 2002)
 
   11 Jan 2003; foser <foser@gentoo.org> dia-0.90-r2.ebuild :
   Fixed png deps (bug #13408)
