@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.7 2004/06/24 21:59:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.8 2004/06/28 16:01:00 vapier Exp $
 
 inherit eutils
 
@@ -13,10 +13,10 @@ SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc arm ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~mips arm ~amd64"
 IUSE="debug static uclibc savedconfig make-busybox-symlinks"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	!amd64? ( uclibc? ( dev-libs/uclibc ) )"
 RDEPEND="!static? ( ${DEPEND} )"
 # <pebenito> then eventually turning on selinux would mean

@@ -1,31 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.20 2004/06/25 20:41:21 agriffis Exp $
-
-IUSE="nls build static"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.21 2004/06/28 16:04:27 vapier Exp $
 
 inherit eutils flag-o-matic
 
-# sdiff SIGSEGVs with this on gcc-3.2.1, so take it out
-# this fixes bug #13502
-filter-flags "-mpowerpc-gfxopt"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Tools to make diffs and compare files"
-SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/diffutils/diffutils.html"
+SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa "
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
+IUSE="nls build static"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )
 	!build? ( sys-apps/texinfo sys-apps/help2man )"
-
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -54,6 +47,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# sdiff SIGSEGVs with this on gcc-3.2.1, so take it out
+	# this fixes bug #13502
+	filter-flags -mpowerpc-gfxopt
+
 	econf --build=${CHOST} `use_enable nls` || die "econf"
 
 	if use static ; then

@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13.ebuild,v 1.11 2004/06/24 22:04:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13.ebuild,v 1.12 2004/06/28 16:05:39 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A command to eject a disc from the CD-ROM drive"
 HOMEPAGE="http://eject.sourceforge.net/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/disk-management/${P}.tar.gz
 	http://www.pobox.com/~tranter/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc sparc alpha hppa ppc64 ia64 mips"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc mips alpha hppa amd64 ia64 ppc64"
+IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

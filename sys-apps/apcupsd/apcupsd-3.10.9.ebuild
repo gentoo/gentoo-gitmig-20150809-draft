@@ -1,21 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.9.ebuild,v 1.6 2004/06/24 21:57:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.9.ebuild,v 1.7 2004/06/28 15:58:35 vapier Exp $
 
 inherit eutils
 
-IUSE="doc snmp usb apache2"
-
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
+HOMEPAGE="http://www.sibbald.com/apcupsd/"
 SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz
 	ftp://ftp.apcupsd.com/pub/apcupsd/contrib/gd1.2.tar.gz"
-HOMEPAGE="http://www.sibbald.com/apcupsd/"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc"
-SLOT="0"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc"
+IUSE="doc snmp usb apache2"
 
 DEPEND=">=sys-apps/baselayout-1.8.4
-	virtual/glibc
+	virtual/libc
 	virtual/mta
 	snmp? ( net-analyzer/ucd-snmp )
 	sys-libs/ncurses"
@@ -84,7 +84,7 @@ src_install () {
 
 	ln -s onbattery powerout
 
-	if [ "`use doc`x" != "x" ]
+	if use doc
 	then
 		einfo "Installing full documentation into /usr/share/doc/${P}..."
 		cd ${S}/doc

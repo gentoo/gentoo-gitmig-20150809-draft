@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r4.ebuild,v 1.10 2004/06/24 22:01:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r4.ebuild,v 1.11 2004/06/28 16:02:57 vapier Exp $
 
 inherit eutils gcc
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc mips alpha arm hppa ~amd64 ~ia64"
 IUSE="selinux"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="selinux? ( sec-policy/selinux-daemontools )"
 
 S=${WORKDIR}/admin/${P}

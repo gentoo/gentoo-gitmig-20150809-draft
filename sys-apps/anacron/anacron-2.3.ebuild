@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.8 2004/06/24 21:57:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.9 2004/06/28 15:58:09 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="Anacron -- a periodic command scheduler"
+DESCRIPTION="a periodic command scheduler"
 HOMEPAGE="http://anacron.sourceforge.net/"
 SRC_URI=" http://umn.dl.sourceforge.net/sourceforge/anacron/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="x86 ppc amd64"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
-
 RDEPEND="virtual/mta
 	virtual/cron"
 

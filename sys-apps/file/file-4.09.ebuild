@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.7 2004/06/25 23:45:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.8 2004/06/28 16:07:10 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils
 use python && inherit distutils
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc sparc mips alpha ~arm ~hppa amd64 ~ia64 ~ppc64 s390"
 IUSE="python build"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	!build? ( python? ( virtual/python ) )"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.21 2004/06/25 20:59:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.22 2004/06/28 16:07:47 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -19,12 +19,12 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa alpha amd64 ia64 ppc64 s390"
 IUSE="nls build afs selinux"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )
 	x86? ( afs? ( net-fs/openafs ) )
 	selinux? ( sys-libs/libselinux )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

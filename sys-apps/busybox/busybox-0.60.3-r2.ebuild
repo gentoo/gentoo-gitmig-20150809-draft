@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3-r2.ebuild,v 1.4 2004/06/24 21:59:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3-r2.ebuild,v 1.5 2004/06/28 16:01:00 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
+HOMEPAGE="http://www.busybox.net/"
 SRC_URI="http://www.busybox.net/downloads/${P}.tar.gz"
-HOMEPAGE="http://www.busybox.net"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="-* sparc -amd64"
+IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r1.ebuild,v 1.12 2004/06/25 20:28:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r1.ebuild,v 1.13 2004/06/28 16:01:00 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
+HOMEPAGE="http://www.busybox.net/"
 SRC_URI="http://www.busybox.net/downloads/${P}.tar.gz"
-HOMEPAGE="http://www.busybox.net"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -amd64 -alpha"
+SLOT="0"
+KEYWORDS="~x86 -alpha -amd64"
 IUSE="static uclibc"
 
-DEPEND="virtual/glibc"
-RDEPEND="!static? ${DEPEND}"
+DEPEND="virtual/libc"
+RDEPEND="!static? ( virtual/libc )"
 
 src_unpack() {
 	unpack ${A}

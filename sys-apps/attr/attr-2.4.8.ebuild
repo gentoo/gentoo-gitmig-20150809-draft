@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.8.ebuild,v 1.5 2004/06/25 20:19:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.8.ebuild,v 1.6 2004/06/28 15:59:35 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="xfs extended attributes tools"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 SRC_URI="ftp://oss.sgi.com/projects/xfs/download/latest/cmd_tars/${P}.src.tar.gz
-		http://acl.bestbits.at/current/tar/${P}.src.tar.gz"
+	http://acl.bestbits.at/current/tar/${P}.src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -16,11 +16,10 @@ IUSE="nls debug"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
-	virtual/glibc
+	virtual/libc
 	nls? ( sys-devel/gettext )
 	sys-devel/libtool"
-
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

@@ -1,27 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r1.ebuild,v 1.4 2004/06/24 22:02:31 agriffis Exp $
-
-# to use this, you must be part of the "cron" group
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r1.ebuild,v 1.5 2004/06/28 16:03:39 vapier Exp $
 
 inherit eutils
 
 MY_PV=29
 S=${WORKDIR}/${PN}
 DESCRIPTION="A cute little cron from Matt Dillon"
-SRC_URI="http://apollo.backplane.com/FreeSrc/${PN}${MY_PV}.tgz"
 HOMEPAGE="http://apollo.backplane.com/"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~hppa ~alpha ~mips"
-SLOT="0"
+SRC_URI="http://apollo.backplane.com/FreeSrc/${PN}${MY_PV}.tgz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64"
+IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
-
 RDEPEND="!virtual/cron
 	>=sys-apps/cronbase-0.2.1-r3
 	virtual/mta"
-
 PROVIDE="virtual/cron"
 
 src_unpack() {

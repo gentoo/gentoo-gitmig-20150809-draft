@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.14 2004/06/24 22:03:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.15 2004/06/28 16:04:27 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,12 +13,12 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc mips alpha arm hppa ~amd64 ia64 ppc64 s390"
 IUSE="nls build static"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )
 	!build? ( sys-apps/texinfo sys-apps/help2man )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

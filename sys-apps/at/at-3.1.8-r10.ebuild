@@ -1,19 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r10.ebuild,v 1.4 2004/06/24 21:58:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r10.ebuild,v 1.5 2004/06/28 15:59:01 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Queues jobs for later execution"
-SRC_URI="http://ftp.debian.org/debian/pool/main/a/at/at_${PV}-11.tar.gz"
 HOMEPAGE="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc alpha ~ia64 ~ppc64"
-SLOT="0"
-LICENSE="GPL-2"
+SRC_URI="http://ftp.debian.org/debian/pool/main/a/at/at_${PV}-11.tar.gz"
 
-DEPEND="virtual/glibc >=sys-devel/flex-2.5.4a"
-RDEPEND="virtual/glibc virtual/mta"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~amd64 ~ia64 ~ppc64"
+IUSE=""
+
+DEPEND="virtual/libc
+	>=sys-devel/flex-2.5.4a"
+RDEPEND="virtual/libc
+	virtual/mta"
 
 src_unpack() {
 	unpack ${A} && cd ${S} || die "error unpacking"

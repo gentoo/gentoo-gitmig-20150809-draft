@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7.ebuild,v 1.5 2004/06/24 22:03:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7.ebuild,v 1.6 2004/06/28 16:04:27 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,15 +10,15 @@ SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86 ppc ~hppa ~ppc64 amd64"
+KEYWORDS="-* ~x86 ppc ~hppa amd64 ~ppc64"
 IUSE="nls build static"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )
 	!build? ( sys-apps/texinfo sys-apps/help2man )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

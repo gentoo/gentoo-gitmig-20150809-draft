@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20.ebuild,v 1.7 2004/06/24 22:06:58 agriffis Exp $
-
-IUSE="nls build afs"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20.ebuild,v 1.8 2004/06/28 16:07:47 vapier Exp $
 
 inherit eutils
 
@@ -18,12 +16,13 @@ SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~hppa ~alpha ~ia64"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="nls build afs"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )
 	x86? ( afs? ( net-fs/openafs ) )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

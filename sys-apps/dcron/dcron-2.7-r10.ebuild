@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r10.ebuild,v 1.7 2004/06/24 22:02:31 agriffis Exp $
-
-# to use this, you must be part of the "cron" group
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r10.ebuild,v 1.8 2004/06/28 16:03:39 vapier Exp $
 
 inherit eutils
 
@@ -11,17 +9,16 @@ DESCRIPTION="A cute little cron from Matt Dillon"
 HOMEPAGE="http://apollo.backplane.com/"
 SRC_URI="http://apollo.backplane.com/FreeSrc/dcron27.tgz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 amd64 ppc sparc hppa mips"
+IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
-
 RDEPEND="!virtual/cron
 	sys-apps/cronbase
 	virtual/mta"
-
 PROVIDE="virtual/cron"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.6.1.ebuild,v 1.10 2004/06/25 03:08:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.6.1.ebuild,v 1.11 2004/06/28 16:01:35 vapier Exp $
 
 inherit flag-o-matic gcc
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~mips alpha ~arm hppa amd64 ia64"
 #IUSE="static"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

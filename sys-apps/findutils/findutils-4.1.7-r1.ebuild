@@ -1,20 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r1.ebuild,v 1.20 2004/06/25 20:59:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r1.ebuild,v 1.21 2004/06/28 16:07:47 vapier Exp $
 
+DESCRIPTION="GNU utilities to find files"
+HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
+SRC_URI="ftp://alpha.gnu.org/gnu/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
 IUSE="nls build"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="GNU utilities to find files"
-SRC_URI="ftp://alpha.gnu.org/gnu/${P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa"
-SLOT="0"
-LICENSE="GPL-2"
-
-DEPEND="virtual/glibc
-		nls? ( sys-devel/gettext )"
-RDEPEND="virtual/glibc"
+DEPEND="virtual/libc
+	nls? ( sys-devel/gettext )"
+RDEPEND="virtual/libc"
 
 src_compile() {
 

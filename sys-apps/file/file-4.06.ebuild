@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.18 2004/06/25 20:43:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.19 2004/06/28 16:07:10 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
+HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 	ftp://ftp.astron.com/pub/file/${P}.tar.gz"
-HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 
-KEYWORDS="x86 amd64 ~ppc sparc alpha hppa mips ia64 ppc64"
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc mips alpha hppa amd64 ia64 ppc64"
 IUSE="uclibc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
