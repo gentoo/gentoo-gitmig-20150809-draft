@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.7.ebuild,v 1.4 2004/04/25 02:13:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.7.ebuild,v 1.5 2004/04/27 20:07:49 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="A streaming server for MP3, OGG vorbis and other streamable files"
 HOMEPAGE="http://www.gnump3d.org/"
