@@ -1,0 +1,9 @@
+# ChangeLog for app-text/freepwing
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/freepwing/ChangeLog,v 1.1 2003/08/29 23:03:24 usata Exp $
+
+*freepwing-1.4.3 (30 Aug 2003)
+
+  30 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> freepwing-1.4.3.ebuild:
+  Initial import
+
