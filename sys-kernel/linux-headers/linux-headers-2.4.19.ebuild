@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19.ebuild,v 1.4 2002/09/02 05:27:15 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19.ebuild,v 1.5 2002/09/02 18:22:31 murphy Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -10,7 +10,7 @@ OKV=2.4.19
 KV=2.4.19
 S=${WORKDIR}/linux-${KV}
 
-#These are *stock* 2.4.18 headers, for niceness.
+#These are *stock* 2.4.19 headers, for niceness.
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
@@ -93,7 +93,7 @@ src_install() {
 				cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
 				if [ ! -r ${D}/usr/include/asm-sparc64/asm_offsets.h ]
 				then
-					cp -ax ${SPARCFILEDIR}/sparc64-asm_offsets.h \
+					cp ${SPARCFILEDIR}/${OKV}/sparc64-asm_offsets.h \
 						${D}/usr/include/asm-sparc64/asm_offsets.h
 				fi
 			fi
@@ -101,7 +101,7 @@ src_install() {
 			cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
 			if [ ! -r ${D}/usr/include/asm-sparc/asm_offsets.h ]
 			then
-				cp -ax ${SPARCFILEDIR}/sparc-asm_offsets.h \
+				cp ${SPARCFILEDIR}/${OKV}/sparc-asm_offsets.h \
 					${D}/usr/include/asm-sparc/asm_offsets.h
 			fi
 			${SPARCFILEDIR}/generate-asm-sparc ${D}/usr/include
