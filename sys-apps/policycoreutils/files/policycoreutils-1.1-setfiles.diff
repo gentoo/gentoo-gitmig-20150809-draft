@@ -1,0 +1,111 @@
+diff -ur policycoreutils-1.1.orig/setfiles/setfiles.c policycoreutils-1.1/setfiles/setfiles.c
+--- policycoreutils-1.1.orig/setfiles/setfiles.c	2003-07-14 15:00:06.000000000 -0500
++++ policycoreutils-1.1/setfiles/setfiles.c	2003-08-17 13:22:20.000000000 -0500
+@@ -17,6 +17,7 @@
+  * -d   Show what specification matched each file.
+  * -n	Do not change any file labels.
+  * -q   Be quiet (suppress non-error output).
++ * -r   Use an alternate root path
+  * -s   Use stdin for a list of files instead of searching a partition.
+  * -v	Show changes in file labels.  
+  * -W   Warn about entries that have no matching file.
+@@ -78,6 +79,8 @@
+ static int use_stdin = 0;
+ static int verbose = 0;
+ static int warn_no_match = 0;
++static char *rootpath = NULL;
++static int rootpathlen = 0;
+ 
+ /*
+  * Program name and error message buffer.
+@@ -267,11 +270,23 @@
+ int match(const char *name, struct stat *sb)
+ {
+ 	int i, ret;
++	const char *fullname = name;
+ 
+-	ret = lstat(name, sb);
++	/* fullname will be the real file that gets labeled
++	 * name will be what is matched in the policy */
++	if (NULL != rootpath) {
++		if (0 != strncmp(rootpath, name, rootpathlen)) {
++			fprintf(stderr, "%s:  %s is not located in %s\n", 
++				progname, name, rootpath);
++			return -1;
++		}
++		name += rootpathlen;
++	}
++
++	ret = lstat(fullname, sb);
+ 	if (ret) {
+ 		fprintf(stderr, "%s:  unable to stat file %s\n", progname,
+-			name);
++			fullname);
+ 		return -1;
+ 	}
+ 
+@@ -511,6 +526,23 @@
+ 	return 0;
+ }
+ 
++void set_rootpath(const char *arg)
++{
++	int len;
++
++	rootpath = strdup(arg);
++	if (NULL == rootpath) {
++		fprintf(stderr, "%s:  insufficient memory for rootpath\n", 
++			progname);
++		exit(1);
++	}
++
++	/* trim trailing /, if present */
++	len = strlen(rootpath);
++	while ('/' == rootpath[len - 1])
++		rootpath[--len] = 0;
++	rootpathlen = len;
++}
+ 
+ int main(int argc, char **argv)
+ {
+@@ -521,7 +553,7 @@
+ 	int opt, items, len, lineno, pass, nerr, regerr, i;
+ 
+ 	/* Process any options. */
+-	while ((opt = getopt(argc, argv, "dnpqsvxW")) > 0) {
++	while ((opt = getopt(argc, argv, "dnpqrsvxW")) > 0) {
+ 		switch (opt) {
+ 		case 'd':
+ 			debug = 1;
+@@ -532,6 +564,20 @@
+ 		case 'q':
+ 			quiet = 1;
+ 			break;
++		case 'r':
++			if (optind + 1 >= argc) {
++				fprintf(stderr, "usage:  %s -r rootpath\n", 
++					argv[0]);
++				exit(1);
++			}
++			if (NULL != rootpath) {
++				fprintf(stderr, 
++					"%s: only one -r can be specified\n", 
++					argv[0]);
++				exit(1);
++			}
++			set_rootpath(argv[optind++]);
++			break;
+ 		case 's':
+ 			use_stdin = 1;
+ 			add_assoc = 0;
+@@ -789,6 +835,10 @@
+ 	}
+ 	else for (; optind < argc; optind++)
+ 	{
++		if (NULL != rootpath) {
++			QPRINTF("%s:  labeling files, pretending %s is /\n",
++				argv[0], rootpath);
++		}
+ 
+ 		QPRINTF("%s:  labeling files under %s\n", argv[0],
+ 			argv[optind]);

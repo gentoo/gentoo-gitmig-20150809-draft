@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.3 2003/08/14 15:32:03 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.4 2003/08/19 00:59:51 pebenito Exp $
+
+*policycoreutils-1.1-r1 (18 Aug 2003)
+
+  18 Aug 2003; Chris PeBenito <pebenito@gentoo.org> metadata.xml,
+  policycoreutils-1.0.ebuild, policycoreutils-1.1-r1.ebuild,
+  files/avc_enforcing, files/avc_toggle,
+  files/policycoreutils-1.1-setfiles.diff:
+  Add setfiles patch for alternate root. Add avc_enforcing and avc_toggle
+  scripts for ease of use for old API users. Use package description from RPM
+  spec file in metadata.xml long description.
 
 *policycoreutils-1.1 (14 Aug 2003)
 
