@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.21 2004/08/21 23:59:48 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.22 2004/08/27 22:35:00 kugelfang Exp $
+
+  28 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  cyrus-imap-dev-2.2.8.ebuild:
+  Marked ~amd64.
 
 *cyrus-imap-dev-2.2.8 (21 Aug 2004)
 

@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4dfb8029a40d29da7804a243c06999e7 cyrus-imap-dev-2.1.13.ebuild 2478
+MD5 0efd44ea7b7bf5168d5bf4d1f2275da3 ChangeLog 3492
 MD5 bd94fedc7558962efe668977e39422b6 cyrus-imap-dev-2.1.12.ebuild 2461
-MD5 214ef41806b85a8a4fe75715eec24f14 ChangeLog 3391
-MD5 ee170953d8da21acc3039568dc7d4feb cyrus-imap-dev-2.2.8.ebuild 2260
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 f6041d6b757a358156694c6356f9d24f cyrus-imap-dev-2.2.3.ebuild 2165
+MD5 4dfb8029a40d29da7804a243c06999e7 cyrus-imap-dev-2.1.13.ebuild 2478
 MD5 60591bfd13a1eff9dca08a6da1f0aa9a cyrus-imap-dev-2.1.14.ebuild 2978
-MD5 fe1bbab93ddd6cf3a9c4aacc111154d4 files/cyrus-imapd-2.2.3-db4.patch 1604
+MD5 f6041d6b757a358156694c6356f9d24f cyrus-imap-dev-2.2.3.ebuild 2165
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 580e02a2b651190b402caf05596cf55a cyrus-imap-dev-2.2.8.ebuild 2267
+MD5 b398dd3696347604a52a40bf1a77291b files/2.1.14-db4.patch 2032
 MD5 24cfd296507c04e376368f15665041d1 files/cyrus-imap-dev-2.1.12-libwrap.patch 494
 MD5 419f3372b21d1eea29593634a57bc134 files/cyrus-imapd-2.1.12-includepath.patch 2721
-MD5 6678b1b72838a7ba2cb5045909ea909f files/digest-cyrus-imap-dev-2.2.3 70
-MD5 6453c70342b78c99a073a06292b7e757 files/digest-cyrus-imap-dev-2.2.8 70
+MD5 fe1bbab93ddd6cf3a9c4aacc111154d4 files/cyrus-imapd-2.2.3-db4.patch 1604
+MD5 24cfd296507c04e376368f15665041d1 files/cyrus-imapd-libwrap.patch 494
 MD5 a73606d0350e6883a11a4c525af59551 files/digest-cyrus-imap-dev-2.1.12 71
 MD5 d63d317f0f8fa042638be86b663fffc0 files/digest-cyrus-imap-dev-2.1.13 71
 MD5 aa678d0f596367397edeea90763ab29e files/digest-cyrus-imap-dev-2.1.14 155
-MD5 b398dd3696347604a52a40bf1a77291b files/2.1.14-db4.patch 2032
+MD5 6678b1b72838a7ba2cb5045909ea909f files/digest-cyrus-imap-dev-2.2.3 70
 MD5 fe1bbab93ddd6cf3a9c4aacc111154d4 files/cyrus-imapd-2.2.8-db4.patch 1604
-MD5 24cfd296507c04e376368f15665041d1 files/cyrus-imapd-libwrap.patch 494
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBJ+Uh5FrxP71izLARAr7dAKDGz+P+ES3qZGiF7hNGYLe+aeh/qACgykph
-y12wUSULGEB9bLI9PNKqZic=
-=s7Qa
------END PGP SIGNATURE-----
+MD5 6453c70342b78c99a073a06292b7e757 files/digest-cyrus-imap-dev-2.2.8 70
