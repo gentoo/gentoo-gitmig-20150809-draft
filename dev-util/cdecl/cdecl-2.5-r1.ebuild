@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.1 2003/10/01 08:18:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.2 2003/11/04 10:02:21 phosphan Exp $
 
 inherit eutils
 
 DESCRIPTION="Turn English phrases to C or C++ declarations"
 SRC_URI="ftp://ftp.netsw.org/softeng/lang/c/tools/cdecl/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="public-domain"
 SLOT="0"
 
