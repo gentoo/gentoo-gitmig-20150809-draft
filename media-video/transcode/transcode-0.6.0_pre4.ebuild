@@ -18,7 +18,7 @@ DEPEND="media-libs/libdv
 	=x11-libs/gtk+-1.2*
 	>=media-video/avifile-0.6
 	dvd? ( media-libs/libdvdread )
-	lame? ( >=media-sound/lame-3.89 )
+	encode? ( >=media-sound/lame-3.89 )
 	libmpeg3?( media-libs/libmpeg3 )
 	quicktime? ( media-libs/quicktime4linux )"
 
@@ -26,15 +26,17 @@ src_compile() {
 
 	local myconf
 	
-	use lame \
+	use encode \
 		&& myconf="${myconf} --with-lame" \
 		|| myconf="${myconf} --without-lame"
 	
 	use libmpeg3 \
-		&& myconf="${myconf} --with-libmpeg3"
+		&& myconf="${myconf} --with-libmpeg3" \
+		|| myconf="${myconf} --without-libmpeg3"
 	
     ./configure \
-		--prefix=/usr || die
+		--prefix=/usr \
+		${myconf} || die
 
     emake all || die
 
