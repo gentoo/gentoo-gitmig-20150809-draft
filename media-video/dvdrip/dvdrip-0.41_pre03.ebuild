@@ -22,7 +22,7 @@ DEPEND=">=media-video/transcode-0.6.0_pre4-r1
 	dev-perl/Event"
 
 RDEPEND="${DEPEND}
-	>=net-misc/fping-2.3"
+	>=net-analyzer/fping-2.3"
 
 src_compile() {
 	perl Makefile.PL
