@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.13-r1.ebuild,v 1.3 2004/04/26 04:08:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.13-r1.ebuild,v 1.4 2004/04/27 20:46:03 agriffis Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Homebrew PVR project."
 HOMEPAGE="http://www.mythtv.org/"
