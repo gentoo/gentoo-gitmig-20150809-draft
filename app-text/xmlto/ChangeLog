@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.17 2004/03/07 22:38:00 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.18 2004/03/16 04:47:56 geoman Exp $
+
+  15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> xmlto-0.0.17.ebuild:
+  Added ~mips keyword.
 
   07 Mar 2004; Jon Portnoy <avenj@gentoo.org> xmlto-0.0.17.ebuild :
   Stable on AMD64 to make repoman happy.
