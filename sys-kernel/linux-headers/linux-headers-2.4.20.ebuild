@@ -17,7 +17,7 @@ PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="hppa ~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="hppa -x86 -ppc -sparc -alpha"
 
 KERNEL_ARCH=`echo $ARCH |\
   sed -e s/[i]*.86/i386/ -e s/sun4u// -e s/arm.*/arm/ -e s/sa110/arm/ -e s/hppa*/parisc/`
