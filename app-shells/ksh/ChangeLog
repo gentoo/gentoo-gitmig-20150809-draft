@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/ksh
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.9 2003/12/06 15:26:10 weeve Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.10 2004/04/10 21:22:03 taviso Exp $
+
+*ksh-93.20040229 (10 Apr 2004)
+
+  10 Apr 2004; Tavis Ormandy <taviso@gentoo.org> ksh-93.20040229.ebuild:
+  new release
 
   06 Dec 2003; Jason Wever <weeve@gentoo.org> ksh-93.20030724.ebuild:
   Marked stable on sparc, closes #25668
