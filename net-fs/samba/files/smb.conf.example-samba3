@@ -338,9 +338,11 @@
 # Enabling internationalization:
 # you can match a Windows code page with a UNIX character set.
 # Windows: 437 (US), 737 (GREEK), 850 (Latin1 - Western European),
-# 852 (Eastern Eu.), 861 (Icelandic), 932 (Cyrillic - Russian),
-# 936 (Japanese - Shift-JIS), 936 (Simpl. Chinese), 949 (Korean Hangul),
+# 852 (Czech), 861 (???), 932 (Japanese),
+# 936 (Simplified Chin.), 949 (Korean Hangul),
 # 950 (Trad. Chin.).
+# More detail about code page is in
+# "http://www.microsoft.com/globaldev/reference/oslocversion.mspx"
 # UNIX: ISO8859-1 (Western European), ISO8859-2 (Eastern Eu.),
 # ISO8859-5 (Russian Cyrillic), KOI8-R (Alt-Russ. Cyril.)
 # This is an example for french users:

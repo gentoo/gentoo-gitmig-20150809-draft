@@ -2,8 +2,8 @@ MD5 30190ad2dc86a988bb9ac7021e728577 samba-3.0.0-r1.ebuild 10882
 MD5 11978d96cfebe10cabfbc2c6da2f04ee samba-2.2.8a.ebuild 10853
 MD5 c60dc84e4426dc9c0dd4a350f15caed5 samba-3.0.1.ebuild 11341
 MD5 1ae0da814c10f7df5be30c27d4273ebb samba-3.0.1-r1.ebuild 11369
-MD5 21a22779c79884efdfb43bb424ca2c77 samba-3.0.2a.ebuild 11476
-MD5 efbed29da5ab1682f1f71993586e9e06 ChangeLog 13625
+MD5 5991629f1fd030a74b0ec1b12e04a292 samba-3.0.2a.ebuild 11471
+MD5 701cc46d94b035136c96f03c408c1f10 ChangeLog 13622
 MD5 eeb3ec0ae25e9d4f7ce62c32b52d5996 metadata.xml 466
 MD5 cac4662bb25a75115b40c9558de26f26 files/winbind-init 503
 MD5 9780745de080ee53a34c1b2f9fb1f228 files/digest-samba-2.2.8a 135
