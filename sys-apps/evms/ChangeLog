@@ -1,10 +1,12 @@
 # ChangeLog for sys-apps/evms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.7 2002/08/07 16:37:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/ChangeLog,v 1.8 2002/08/27 04:34:35 woodchip Exp $
 
 *evms-1.1.0 (07 Aug 2002)
 
-  07 Aug 2002; Daniel Robbins <drobbins@gentoo.org> New release version of evms
+  27 Aug 2002; Donny Davies <woodchip@gentoo.org>: Removed the LVM clone tools.
+
+  07 Aug 2002; Daniel Robbins <drobbins@gentoo.org>: New release version of evms
   1.1.0.
 
 *evms-1.1.0_pre4 (31 Jul 2002)
@@ -19,18 +21,18 @@
   14 Jul 2002; phoen][x <phoenix@gentoo.org> evms-1.0.1.ebuild : Added
   KEYWORDS.
 
-  8 May 2002; Donny Davies <woodchip@gentoo.org> : Updated to 1.0.1.
+  8 May 2002; Donny Davies <woodchip@gentoo.org>: Updated to 1.0.1.
 
 *evms-1.0.0-r1 (30 Apr 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> evms-1.0.0-r1.ebuild :
   Added KEYWORDS.
 
-  30 Apr 2002; Donny Davies <woodchip@gentoo.org> : Moved the plugins to
+  30 Apr 2002; Donny Davies <woodchip@gentoo.org>: Moved the plugins to
   /lib/evms, where they belong.  Please unmerge the older version of this
   package if you had it installed.
 
 *evms-1.0.0 (27 Apr 2002)
 
-  27 Apr 2002; Donny Davies <woodchip@gentoo.org> : Made a package for IBM's
+  27 Apr 2002; Donny Davies <woodchip@gentoo.org>: Made a package for IBM's
   Enterprise Volume Management System.
