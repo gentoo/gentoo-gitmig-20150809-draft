@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.13.ebuild,v 1.2 2003/09/22 00:31:52 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.13-r1.ebuild,v 1.1 2003/09/22 00:31:52 zhen Exp $
 
 IUSE="svga"
 
