@@ -1,5 +1,5 @@
-MD5 b9be2de07afc3d87393ec2308f3d2488 mini-qmail-1.05.ebuild 2593
-MD5 e4b73cfce46c02291d5a16b412040519 ChangeLog 797
+MD5 6ab2aa0f72ecd69af4af8b628bce89c6 mini-qmail-1.05.ebuild 2581
+MD5 e9c5a9b46da9c71508938329dd2ff801 ChangeLog 893
 MD5 f122df2231e2b47b96dba6895be1e7e8 metadata.xml 223
 MD5 38ce537c00a3ca069dbeaee4adb6b990 files/99qmail 84
 MD5 9554540a85991abc913745fd057ef71b files/1.05-config-mini-help.patch 674
