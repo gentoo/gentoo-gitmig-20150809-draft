@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2-r2.ebuild,v 1.9 2003/02/13 13:49:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2-r2.ebuild,v 1.10 2004/01/12 06:04:07 seemant Exp $
 
 IUSE="ssl readline mysql"
 
@@ -16,6 +16,7 @@ KEYWORDS="x86 ppc sparc "
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=net-libs/libpcap-0.5.2
 	>=sys-apps/tcp-wrappers-7.6
+	>=sys-apps/sed-4
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	mysql? ( dev-db/mysql )
 	readline? ( >=sys-libs/readline-4.1 )"
@@ -29,8 +30,7 @@ src_compile() {
 	if [ -z "`use ssl`" ] ; then
 		myconf="--disable-ssl"
 	else
-		cp configure configure.orig
-		sed -e "s:/usr/local/ssl:/usr:" configure.orig > configure
+		sed -i "s:/usr/local/ssl:/usr:" configure
 		export CFLAGS="$CFLAGS -I/usr/include/openssl"
 	fi
 
@@ -70,17 +70,11 @@ src_compile() {
 
 src_install () {
 	# slight issue with man file installation
-	mv Makefile Makefile.orig
-	sed 's/man_MANS = ntop.8 intop\/intop.1//g' Makefile.orig > Makefile
+	sed -i 's/man_MANS = ntop.8 intop\/intop.1//g' Makefile
 
-	make \
-		prefix=${D}/usr \
-		sysconfdir=/${D}/etc \
-		mandir=${D}/usr/share/man \
-		datadir=${D}/usr/share \
+	einstall \
 		DATAFILE_DIR=${D}/usr/share/ntop \
-		CONFIGFILE_DIR=${D}/etc/ntop \
-		install || die "install problem"
+		CONFIGFILE_DIR=${D}/etc/ntop || die
 
 	# fixme: bad handling of plugins (in /usr/lib with unsuggestive names)
 	# (don't know if there is a clean way to handle it)
@@ -92,5 +86,5 @@ src_install () {
 
 	dohtml ntop.html
 
-	dodir /var/lib/ntop
+	keepdir /var/lib/ntop
 }
