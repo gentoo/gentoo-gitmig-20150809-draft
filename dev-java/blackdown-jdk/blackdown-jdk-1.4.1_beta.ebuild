@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1_beta.ebuild,v 1.5 2002/12/10 01:31:10 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1_beta.ebuild,v 1.6 2002/12/15 19:54:40 strider Exp $
 
 inherit java
 
-S=${WORKDIR}/j2sdk1.4.1
+S="${WORKDIR}/j2sdk1.4.1"
 DESCRIPTION="Blackdown Java Development Kit 1.4.1 Beta"
-SRC_URI="x86? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.4.1/i386/beta/j2sdk-1.4.1-beta-linux-i586.bin"
+SRC_URI="x86? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.4.1/i386/beta/j2sdk-1.4.1-beta-linux-i586.bin
+	sparc? ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.4.1/sparc/beta/j2sdk-1.4.1-beta-linux-sparc.bin"
 
 HOMEPAGE="http://www.blackdown.org"
 DEPEND="virtual/glibc
@@ -18,7 +19,7 @@ PROVIDE="virtual/jdk-1.4.1
 	virtual/java-scheme-2"
 SLOT="1.4.1"
 LICENSE="sun-bcla"
-KEYWORDS="~x86 -ppc -sparc"
+KEYWORDS="~x86 -ppc ~sparc"
 IUSE="mozilla doc"
 
 src_unpack () {
