@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta1.ebuild,v 1.7 2004/09/17 09:49:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta1-r1.ebuild,v 1.1 2004/09/17 18:16:18 axxo Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,9 @@ IUSE="kde gnome"
 
 S=${WORKDIR}
 
-src_unpack() { :; }
+src_unpack() {
+	cp ${DISTDIR}/${P/_beta1/b1}.jar ${WORKDIR}/${PN}.jar
+}
 
 src_compile() {
 	einfo " This ebuild is binary-only (for now)."
@@ -26,8 +28,8 @@ src_compile() {
 
 src_install() {
 	dobin ${FILESDIR}/bsh.Console ${FILESDIR}/bsh.Interpreter
-	java-pkg_dojar ${DISTDIR}/${P/_beta1/b1}.jar
 
+	java-pkg_dojar ${PN}.jar
 	if use gnome || use kde ; then
 		insinto /usr/share/pixmaps
 		doins ${DISTDIR}/beanshell-icon.png
