@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.12 2004/10/12 15:14:45 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.13 2004/11/11 23:30:47 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -194,7 +194,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 
-	einfo "******************************************************************"
 	einfo " To start OpenOffice.org, run:"
 	einfo
 	einfo "   $ ooffice"
@@ -203,12 +202,5 @@ pkg_postinst() {
 	einfo
 	einfo "   oocalc, oodraw, ooimpress, oomath, ooweb or oowriter"
 	einfo
-	einfo "******************************************************************"
-	einfo
-	einfo "******************************************************************"
-	einfo " If you are upgrading from OpenOffice.org 1.1.0 you will have"
-	einfo " to redo your settings."
-	einfo
-	einfo "******************************************************************"
 }
 
