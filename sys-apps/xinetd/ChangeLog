@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.25 2003/12/29 03:56:16 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.26 2004/01/09 19:49:02 agriffis Exp $
+
+  09 Jan 2004; Aron Griffis <agriffis@gentoo.org> xinetd-2.3.12.ebuild:
+  stable on alpha
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> xinetd-2.3.12.ebuild:
   Move to mips stable (~mips -> mips)
