@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dvutil
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.5 2003/07/14 20:26:24 pvdabeel Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.6 2004/03/14 12:10:03 mr_bones_ Exp $
+
+*dvutil-0.13.12 (14 Mar 2004)
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> dvutil-0.13.12.ebuild,
+  dvutil-0.13.3.ebuild, dvutil-0.13.6.ebuild, dvutil-0.13.7.ebuild:
+  don't assign to A; header fix
 
 *dvutil-0.13.7 (14 Jul 2003)
 
