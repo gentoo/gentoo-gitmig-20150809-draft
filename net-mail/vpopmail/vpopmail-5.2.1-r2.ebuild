@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.1 2002/07/26 09:38:47 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.2 2002/07/26 11:09:41 carpaski Exp $
 
 # TODO: all ldap, sybase support
 S=${WORKDIR}/${P}
@@ -27,10 +27,10 @@ VPOP_DEFAULT_HOME="/var/vpopmail"
 VPOP_HOME="$VPOP_DEFAULT_HOME"
 
 vpopmail_set_homedir() {
-	VPOP_HOME=`grep vchkpw /etc/passwd | cut -d: -f6`
+	VPOP_HOME=`grep vpopmail /etc/passwd | cut -d: -f6`
 	if [ -z "$VPOP_HOME" ]; then
 		echo -ne "\a"
-	  eerror "vchkpw's home directory is null in /etc/passwd"
+	  eerror "vpopmail's home directory is null in /etc/passwd"
 	  eerror "You probably want to check that out."
 		eerror "Continuing with default."
 		sleep 1; echo -ne "\a"; sleep 1; echo -ne "\a"
@@ -41,12 +41,12 @@ vpopmail_set_homedir() {
 }
 
 pkg_setup() {
-	if [ -z `getent group vchkpw` ]; then
-		(groupadd -g 89 vchkpw 2>/dev/null || groupadd vchkpw ) || die "problem adding vchkpw group"
+	if [ -z `getent group vpopmail` ]; then
+		(groupadd -g 89 vpopmail 2>/dev/null || groupadd vpopmail ) || die "problem adding vpopmail group"
 	fi    
 	if [ -z `getent passwd vpopmail` ]; then
-		useradd -g vchkpw -u 89 -d ${VPOP_DEFAULT_HOME} -c "vpopmail_directory" -s /bin/false -m vpopmail || \
-		useradd -g vchkpw -u `getent group vchkpw | awk -F":" '{ print $3 }'` -d ${VPOP_DEFAULT_HOME} -c "vpopmail_directory" \
+		useradd -g vpopmail -u 89 -d ${VPOP_DEFAULT_HOME} -c "vpopmail_directory" -s /bin/false -m vpopmail || \
+		useradd -g vpopmail -u `getent group vpopmail | awk -F":" '{ print $3 }'` -d ${VPOP_DEFAULT_HOME} -c "vpopmail_directory" \
 		-s /bin/false -m vpopmail || die "problem adding vpopmail user"
 	fi
 }
@@ -90,7 +90,7 @@ src_compile() {
 		--enable-qmail-newmrh=/var/qmail/bin/qmail-newmrh \
 		--enable-vpopuser=vpopmail \
 		--enable-many-domains=y \
-		--enable-vpopgroup=vchkpw \
+		--enable-vpopgroup=vpopmail \
 		--enable-file-locking=y \
 		--enable-file-sync=y \
 		--enable-md5-passwords=y \
@@ -118,7 +118,7 @@ src_install () {
 	dodoc doc/doc_html/* doc/man_html/*
 	rm -rf ${D}/${VPOP_HOME}/doc
 	dosym /usr/share/doc/${P}-r1/ ${VPOP_HOME}/doc
-	chown vpopmail.vchkpw ${D}/${VPOP_HOME}/doc
+	chown vpopmail.vpopmail ${D}/${VPOP_HOME}/doc
 
 	# Create symlink in /usr/bin for executables
 	mkdir -p ${D}/usr/bin/
