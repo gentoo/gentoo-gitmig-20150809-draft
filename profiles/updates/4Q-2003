@@ -53,6 +53,5 @@ move sys-apps/quik sys-boot/quik
 move sys-apps/silo sys-boot/silo
 move sys-apps/syslinux sys-boot/syslinux
 move sys-apps/yaboot sys-boot/yaboot
-move sys-apps/vcron sys-apps/vixie-cron
 move sys-devel/autoproject dev-util/autoproject
 move media-gfx/sketch media-gfx/skencil
