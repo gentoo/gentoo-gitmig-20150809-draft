@@ -1,0 +1,13 @@
+# default: off
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/files/dbskkd-cdb.xinetd,v 1.1 2003/05/05 09:29:38 phosphan Exp $
+# description: Yet another SKK dictionary server 
+
+server skkserv
+{
+	socket_type		= stream
+	protocol		= tcp
+	wait			= no
+	user			= nobody
+	server			= /usr/sbin/dbskkd-cdb
+	disable			= yes
+}
