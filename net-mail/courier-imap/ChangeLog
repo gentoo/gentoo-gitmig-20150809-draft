@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.59 2004/03/26 18:27:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.60 2004/03/28 14:40:22 sejo Exp $
+
+  28 Mar 2004; Jochen Maes <sejo@gentoo.org> courier-imap-3.0.2.ebuild:
+  courier-imap-3.0.2.ebuild
 
   26 Mar 2004; Jason Wever <weeve@gentoo.org> courier-imap-3.0.2.ebuild:
   Marked stable on sparc wrt bug #45584.
