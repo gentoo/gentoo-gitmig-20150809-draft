@@ -14,7 +14,8 @@
 # flexibility.  For example, >=sys-libs/glibc-2.2.4 will cause emerge to ignore
 # all glibc ebuilds with a version less than 2.2.4.  This allows us to have
 # profile-specific package.mask settings.  *All* lines are used for this
-# masking process, whether they are prefixed with a * or not.  And if a generic
+7# masking process, whether they are prefixed with a * or not.  And if a
+generic
 # dep is used, like "sys-apps/foo", then all versions of foo are included.  If
 # there is no entry, then all versions of an app are included.  The key thing
 # to note is that this file does not need to end up being an exhaustive list
@@ -166,6 +167,7 @@
 >=net-dialup/ppp-2.4.1-r6
 <=sys-apps/tcp-wrappers-7.6-r3
 <=app-sci/octave-2.0.17
+media-video/cinelerra
 
 #GNUStep stuff works in gcc-3 only
 ~dev-util/gnustep-back
@@ -173,3 +175,4 @@
 ~dev-util/gnustep-gui
 ~dev-util/gnustep-guile
 ~dev-util/gnustep-make
+
