@@ -157,10 +157,6 @@ dev-libs/commoncpp2
 # Masking pending BRRRR disfreeze
 media-video/SDLcam
 
-# <lostlogic@gentoo.org> (30 Sep 2002)
-# Another new procps from Rik Van Riel
-=sys-apps/procps-2.0.9
-
 # <agenkin@gentoo.org> (30 Sep 2002)
 # Masking pending unfreeze.
 >=app-cdr/cdrtools-1.11.35
@@ -178,10 +174,6 @@ media-video/SDLcam
 # <raker@gentoo.org> (28 Sep 2002)
 # masking new lbreakout2 build to respect the freeze
 =app-games/lbreakout2-2.3.5
-
-# <bcowan@gentoo.org> (27 Sep 2002)
-# updated verion that includes all the patches and fixes over the last 2 years
-=sys-apps/procps-2.0.8
 
 # <g2boojum@gentoo.org> (27 Sep 2002)
 # useful security tool; masked while in freeze
