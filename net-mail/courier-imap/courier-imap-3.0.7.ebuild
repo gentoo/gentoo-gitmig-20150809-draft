@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.4 2004/08/22 06:05:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.5 2004/08/22 06:51:37 rajiv Exp $
 
 inherit eutils gnuconfig
 
@@ -292,15 +292,14 @@ src_install() {
 
 	keepdir /var/lib/courier-imap/authdaemon
 
-	# bug #42686, more docs
-	dodoc 00README.NOW.OR.SUFFER AUTHORS INSTALL NEWS NEWS.html README ChangeLog
+	# bug #45953, more docs
+	dodoc ${S}/{00README.NOW.OR.SUFFER,AUTHORS,INSTALL,NEWS,NEWS.html,README,ChangeLog}
 	docinto imap
-	dodoc ${S}/imap/{ChangeLog,BUGS,FAQ,FAQ.html,README,README.html,README.imapkeywords.html}
+	dodoc ${S}/imap/{ChangeLog,BUGS,BUGS.html,README,README.html}
 	docinto maildir
-	dodoc ${S}/maildir/{AUTHORS,INSTALL,README.maildirfilter.html,README.maildirquota.txt,README.sharedfolders.txt}
+	dodoc ${S}/maildir/{AUTHORS,INSTALL,README.imapkeywords.html,README.maildirfilter.html,README.maildirquota.html,README.maildirquota.txt,README.sharedfolders.html,README.sharedfolders.txt}
 	docinto tcpd
 	dodoc ${S}/tcpd/README.couriertls
-
 }
 
 pkg_postinst() {
