@@ -337,3 +337,6 @@ dev-lang/tcl-tk
 
 # [aeoo] testing
 >dev-python/egenix-mx-base-2.0.2
+
+# [aeoo] testing
+>=dev-python/psycopg-1.0.1
