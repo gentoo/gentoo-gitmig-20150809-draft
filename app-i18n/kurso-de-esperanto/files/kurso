@@ -1,5 +1,6 @@
 #!/bin/bash
 dir=/opt/kurso
 export LD_LIBRARY_PATH="${dir}/lib:${LD_LIBRARY_PATH}"
+#export GCONV_PATH="/usr/lib32/gconv/"
 cd ${dir}
 exec ./bin/kurso3 "$@"
