@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mii-diag
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/ChangeLog,v 1.7 2004/12/24 20:33:36 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/ChangeLog,v 1.8 2005/02/13 03:29:27 robbat2 Exp $
+
+  12 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> mii-diag-2.09.ebuild:
+  Tag as ~mips for my XXS1500.
 
   24 Dec 2004; Jason Wever <weeve@gentoo.org> mii-diag-2.09.ebuild:
   Added ~sparc keyword.
