@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.15 2004/09/13 09:40:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.16 2004/09/13 09:53:49 stuart Exp $
+
+*nxclient-1.4.0-r2 (13 Sep 2004)
+
+  13 Sep 2004; Stuart Herbert <stuart@gentoo.org> nxclient-1.4.0-r1.ebuild,
+  +nxclient-1.4.0-r2.ebuild:
+  Added missing dep on gnu-netcat; added support for snapshot 5 again after
+  feedback from zypher@gentoo.org
 
   13 Sep 2004; Stuart Herbert <stuart@gentoo.org> nxclient-1.4.0-r1.ebuild:
   Downgraded to snapshot 4 client

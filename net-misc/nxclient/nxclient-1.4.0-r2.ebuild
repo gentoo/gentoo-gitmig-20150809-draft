@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.4.0-r1.ebuild,v 1.3 2004/09/13 09:53:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.4.0-r2.ebuild,v 1.1 2004/09/13 09:53:49 stuart Exp $
 
 inherit rpm
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 -ppc -sparc -alpha -mips"
 RESTRICT="nostrip"
 
-MY_PV="${PV}-43"
+MY_PV="${PV}-49"
 SRC_URI="http://www.nomachine.com/download/snapshot/nxbinaries/Linux/${PN}-${MY_PV}.i386.rpm"
 
 DEPEND=">=media-libs/jpeg-6b-r3
