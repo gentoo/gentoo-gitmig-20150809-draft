@@ -1,0 +1,37 @@
+# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Preston A. Elder <prez@goth.net>
+
+DESCRIPTION="Administratinve interface to grsecurity"
+SRC_URI="http://www.grsecurity.net/gradm-1.2.1.tar.gz
+	http://pageexec.virtualave.net/chpax.c"
+HOMEPAGE="http://www.grsecurity.net"
+#DEPEND=""
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	cd ${S}
+	cp ${DISTDIR}/chpax.c .
+}
+
+src_compile() {
+	./configure || die
+	emake || die
+	emake chpax || die
+}
+
+src_install() {
+	dodir /sbin /etc/grsec /etc/init.d /etc/conf.d /usr/share/man/man8
+
+	cp gradm ${D}/sbin
+	gzip -9 gradm.8
+	cp gradm.8.gz ${D}/usr/share/man/man8
+	cp chpax ${D}/sbin
+	chmod 0700 ${D}/sbin/*
+	cp ${FILESDIR}/grsecurity.rc ${D}/etc/init.d/grsecurity
+	chmod 755 ${D}/etc/init.d/*
+	cp ${FILESDIR}/grsecurity ${D}/etc/conf.d/grsecurity
+	chmod 644 ${D}/etc/conf.d/*
+
+	dodoc ChangeLog* INSTALL COPYING
+}

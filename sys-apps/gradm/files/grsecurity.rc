@@ -1,0 +1,77 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/sys-libs/gpm/files/gpm.rc6,v 1.7 2002/01/20 10:00:55 azarah Exp
+
+#NB: Config is in /etc/conf.d/gpm
+
+PROCDIR=/proc/sys/kernel/grsecurity
+
+depend() {
+	need bootmisc localmount
+}
+
+checkconfig() {
+	if [ ! -d ${PROCDIR} ] ; then
+		eerror "You must have GR security turned on in your kernel."
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting grsecurity"
+
+	for x in ${ENABLED} ; do
+		if [ -f ${PROCDIR}/${x} ]; then
+			echo 1 >${PROCDIR}/${x}
+		fi
+		case "${x}" in
+		allow_ptrace_group)
+			echo ${ptrace_gid} >${PROCDIR}/ptrace_gid
+			;;
+		fork_bomb_prot)
+			echo ${fork_bomb_gid} >${PROCDIR}/fork_bomb_gid
+			echo ${fork_bomb_sec} >${PROCDIR}/fork_bomb_sec
+			echo ${fork_bomb_max} >${PROCDIR}/fork_bomb_max
+			;;
+		socket_all)
+			echo ${socket_all_gid} >${PROCDIR}/socket_all_gid
+			;;
+		socket_client)
+			echo ${socket_client_gid} >${PROCDIR}/socket_client_gid
+			;;
+		socket_server)
+			echo ${socket_server_gid} >${PROCDIR}/socket_server_gid
+			;;
+		esac
+	done
+
+	for x in ${PAGE_EXEC_EXEMPT} ; do
+		/sbin/chpax -p ${x}
+	done
+
+	for x in ${TRAMPOLINE_EXEMPT} ; do
+		/sbin/chpax -e ${x}
+	done
+
+	for x in ${MPROTECT_EXEMPT} ; do
+		/sbin/chpax -m ${x}
+	done
+
+	for x in ${MMAP_EXEMPT} ; do
+		/sbin/chpax -r ${x}
+	done
+
+	if [ -d ${PROCDIR}/grsec_lock ] ; then
+		echo ${LOCK} >${PROCDIR}/grsec_lock
+	fi
+
+	eend ${?}
+}
+
+#stop() {
+#	ebegin "Stopping grsecurity"
+#	eend ${?}
+#}
