@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wma/xmms-wma-1.0.3.ebuild,v 1.5 2004/07/17 10:19:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wma/xmms-wma-1.0.3.ebuild,v 1.6 2005/03/15 22:50:33 chriswhite Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="media-sound/xmms
-	>=media-video/ffmpeg-0.4.8.20040322-r1"
+	>=media-video/ffmpeg-0.4.9_p20050226-r1"
 
 src_unpack() {
 	unpack ${A}

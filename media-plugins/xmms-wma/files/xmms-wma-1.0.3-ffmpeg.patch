@@ -24,7 +24,7 @@ diff -Naur xmms-wma-1.0.3.orig/Makefile.inc xmms-wma-1.0.3/Makefile.inc
 +MYCFLAGS := $(CFLAGS) -fPIC
 +#MYCFLAGS := -Wall -g -O3
 +MYCFLAGS += -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -fPIC
-+#MYCFLAGS += -I ffmpeg-strip-wma
++MYCFLAGS += -I ffmpeg-strip-wma
 +MYCFLAGS += `xmms-config --cflags`
 +MYCFLAGS += -I/usr/include/ffmpeg
 +#LIBS := `xmms-config --libs` -L ffmpeg-strip-wma -lffwma
