@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/atftp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/ChangeLog,v 1.10 2004/01/27 00:33:43 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/ChangeLog,v 1.11 2004/03/22 15:44:00 zul Exp $
+
+*atftp-0.7 (22 Mar 2004)
+
+  22 Mar 2004; Chuck Short <zul@gentoo.org> atftp-0.6.2.ebuild,
+  atftp-0.7.ebuild:
+  Version bump, closes #45210.
+
+  22 Mar 2004; Chuck Short <zul@gentoo.org> atftp-0.6.2.ebuild:
+  Marked stable for x86.
 
   26 Jan 2004; Chuck Short <zul@gentoo.org> atftp-0.6-r3.ebuild,
   atftp-0.6.2.ebuild:
