@@ -1,0 +1,11 @@
+# ChangeLog for app-office/grisbi
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.1 2004/07/13 20:55:40 seemant Exp $
+
+*grisbi-0.5.0-r1 (13 Jul 2004)
+
+  13 Jul 2004; Seemant Kulleen <seemant@gentoo.org> +grisbi-0.5.0-r1.ebuild:
+  new accounting office package. Ebuild submitted by: Guillaume Castagnino
+  <guilc@fr.st> in bug #52595. Guillaume will be the third party maintainer for
+  this package. Seemant will be his gentoo proxy
+

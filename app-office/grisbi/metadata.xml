@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>office</herd>
+<maintainer>
+  <email>guilc@fr.st</email>
+  <name>Guillaume Castagnino</name>
+  <description>third party maintainer</description>
+</maintainer>
+<maintainer>
+  <email>seemant@gentoo.org</email>
+  <name>Seemant Kulleen</name>
+  <description>Proxy maintainer</description>
+</pkgmetadata>
