@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/commonbox-styles-extra-0.1.ebuild,v 1.6 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/commonbox-styles-extra-0.1.ebuild,v 1.7 2003/02/13 17:36:55 vapier Exp $
 
 DESCRIPTION="Extra styles pack for {flux,black,open}box"
 SRC_URI="mirror://gentoo/${P}.tar.bz2

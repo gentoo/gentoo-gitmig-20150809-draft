@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.2 2003/01/26 23:39:17 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.3 2003/02/13 17:43:27 vapier Exp $
 
 DESCRIPTION="Some nice themes for MetaCity"
 S=${WORKDIR}

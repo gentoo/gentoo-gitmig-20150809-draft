@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/mosfet-liquid-widgets-0.9.6_pre1.ebuild,v 1.2 2003/01/19 19:08:46 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/mosfet-liquid-widgets-0.9.6_pre1.ebuild,v 1.3 2003/02/13 17:43:45 vapier Exp $
 inherit kde-base
 
 need-kde 3.1_rc1

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.2.ebuild,v 1.2 2002/12/15 01:26:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.2.ebuild,v 1.3 2003/02/13 17:45:47 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of XMMS themes"
