@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tvision
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.6 2004/12/14 11:13:18 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.7 2005/01/11 19:21:40 luckyduck Exp $
+
+  11 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> tvision-2.0.3.ebuild:
+  added ~amd64 to KEYWORDS.
 
   14 Dec 2004; Daniel Black <dragonheart@gentoo.org> tvision-2.0.3.ebuild:
   added symlink /usr/include/tvision -> rhtvision.
