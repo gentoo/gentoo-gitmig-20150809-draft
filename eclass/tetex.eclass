@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.31 2004/11/20 19:46:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.32 2005/02/08 11:58:29 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -117,7 +117,8 @@ tetex_src_unpack() {
 
 tetex_src_compile() {
 
-	filter-flags "-fstack-protector"
+	# filter -Os; bug #74307.
+	filter-flags "-fstack-protector" "-Os"
 
 	einfo "Building teTeX"
 
