@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.17.ebuild,v 1.2 2005/02/12 07:18:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.17.ebuild,v 1.3 2005/02/12 17:06:03 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
@@ -140,8 +140,10 @@ src_unpack() {
 	# Fix bugs 40964 and 42943.
 	filter-flags -fforce-addr -fPIC
 
-	# fix bug 67832, fix can be removed for 0.17 when its released
+	# fix bug 67832, 81610, etc
 	is-flag "-march=pentium4" && replace-flags "-O3" "-O2"
+	is-flag "-march=pentium4" && replace-flags "-0s" "-O2"
+	is-flag "-march=athlon-xp" && replace-flags "-O3" "-O2"
 
 	myth_src_unpack || die "unpack failed"
 }
