@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.12.ebuild,v 1.7 2003/07/19 22:55:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.12.ebuild,v 1.8 2003/09/05 22:37:22 msterret Exp $
 
 IUSE="nls"
 
@@ -31,7 +31,7 @@ src_unpack() {
 	cd ${S}
 	patch -p0< ${FILESDIR}/${P}-gentoo.diff || die
 }
-	
+
 src_compile() {
 	elibtoolize
 
@@ -45,7 +45,7 @@ src_compile() {
 
 	# hack around some to make sure we find the libxml2 includes. odd bug.
 	#CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml"
-				
+
 	econf \
 		--localstatedir=/var \
 		${myconf} || die
@@ -71,7 +71,7 @@ pkg_postinst() {
 		"-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" \
 		"`echo "${ROOT}/usr/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd" |sed -e "s://:/:g"`" \
 		${ROOT}/etc/xml/catalog
-	echo ">>> Rebuilding Scrollkeeper database..."	
+	echo ">>> Rebuilding Scrollkeeper database..."
 	scrollkeeper-rebuilddb -q -p ${ROOT}/var/lib/scrollkeeper
 	echo ">>> Updating Scrollkeeper database..."
 	scrollkeeper-update -v &>${T}/foo

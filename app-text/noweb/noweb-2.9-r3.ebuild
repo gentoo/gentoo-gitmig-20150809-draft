@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r3.ebuild,v 1.3 2003/08/05 22:08:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r3.ebuild,v 1.4 2003/09/05 22:37:22 msterret Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-security.patch
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
-	find -type f | xargs touch	
+	find -type f | xargs touch
 }
 
 src_compile() {

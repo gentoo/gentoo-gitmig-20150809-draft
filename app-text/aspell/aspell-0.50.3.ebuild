@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.10 2003/08/05 15:56:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.11 2003/09/05 22:37:21 msterret Exp $
 
 inherit libtool
 
@@ -31,7 +31,7 @@ src_compile() {
 		--disable-static \
 		--sysconfdir=/etc/aspell \
 		--enable-docdir=/usr/share/doc/${PF} || die
-	
+
 	emake || die
 }
 
@@ -44,13 +44,13 @@ src_install() {
 	dodoc man-text
 	rm -rf man-text
 	cd ${S}
-	
+
 	dodoc README* TODO
 
 	cd examples
 	make clean || die
 	cd ${S}
-	
+
 	docinto examples
 	dodoc examples/*
 }

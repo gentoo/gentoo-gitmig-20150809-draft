@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r6.ebuild,v 1.6 2003/07/19 22:55:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r6.ebuild,v 1.7 2003/09/05 22:37:22 msterret Exp $
 
-inherit libtool flag-o-matic 
+inherit libtool flag-o-matic
 inherit sgml-catalog
 
 
@@ -48,18 +48,18 @@ src_compile() {
 		--enable-default-catalog=/etc/sgml/catalog \
 		--enable-default-search-path=/usr/share/sgml \
 		--datadir=/usr/share/sgml/${P} || die
- 
+
 	make || die
 }
 
-src_install() {                               
+src_install() {
 
 	dodir /usr
 	dodir /usr/lib
 	make prefix=${D}/usr \
 	  	datadir=${D}/usr/share/sgml/${P} \
 		install || die
-	
+
 	dosym openjade  /usr/bin/jade
 	dosym onsgmls   /usr/bin/nsgmls
 	dosym osgmlnorm /usr/bin/sgmlnorm

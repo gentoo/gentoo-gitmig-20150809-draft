@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/cedilla-0.3.ebuild,v 1.1 2003/08/23 00:57:00 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/cedilla-0.3.ebuild,v 1.2 2003/09/05 22:37:21 msterret Exp $
 
 DESCRIPTION="Utf-8 to postscript converter."
 HOMEPAGE="http://www.pps.jussieu.fr/~jch/software/cedilla/"
@@ -17,7 +17,7 @@ RDEPEND=""
 
 S="${WORKDIR}/${P}"
 src_unpack() {
-	unpack ${A} 
+	unpack ${A}
 	epatch ${FILESDIR}/cedilla-gentoo.patch
 }
 src_compile() {
@@ -29,5 +29,5 @@ src_install() {
 
 	newman cedilla.man cedilla.1
 	dodoc COPYING NEWS README
-	
+
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.5 2003/08/07 20:30:42 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.6 2003/09/05 22:37:22 msterret Exp $
 
 inherit libtool sgml-catalog
 
@@ -35,7 +35,7 @@ src_compile() {
 	CXXFLAGS=""
 
 	# Default CFLAGS and CXXFLAGS is -O2 but this make openjade segfault
-	# on hppa. Using -O1 works fine. So I force it here.                                                                                                                          
+	# on hppa. Using -O1 works fine. So I force it here.
 	if [ "${ARCH}" = "hppa" ]
 	then
 		CFLAGS="-O1 -pipe"
@@ -52,18 +52,18 @@ src_compile() {
 		--enable-default-catalog=/etc/sgml/catalog \
 		--enable-default-search-path=/usr/share/sgml \
 		--datadir=/usr/share/sgml/${P} || die
- 
+
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 
 	dodir /usr
 	dodir /usr/lib
 	make prefix=${D}/usr \
 	  	datadir=${D}/usr/share/sgml/${P} \
 		install || die
-	
+
 	dosym openjade  /usr/bin/jade
 	dosym onsgmls   /usr/bin/nsgmls
 	dosym osgmlnorm /usr/bin/sgmlnorm
@@ -86,7 +86,7 @@ src_install() {
 
 	dodoc COPYING NEWS README VERSION
 	dohtml doc/*.htm
-	
+
 	insinto /usr/share/doc/${PF}/jadedoc
 	doins jadedoc/*.htm
 	insinto /usr/share/doc/${PF}/jadedoc/images

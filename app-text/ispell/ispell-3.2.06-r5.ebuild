@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r5.ebuild,v 1.8 2003/07/31 20:44:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r5.ebuild,v 1.9 2003/09/05 22:37:22 msterret Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_compile() {
 		-e "s:^\(MAN1DIR='\)\(.*\):\1${D}\2:" \
 		-e "s:^\(MAN4DIR='\)\(.*\):\1${D}\2:" \
 		< config.sh > config.sh.install
-	
+
 	make || die
 }
 
@@ -49,10 +49,10 @@ src_install() {
 
 	make \
 		install || die "Installation Failed"
-	
+
 	rmdir ${D}/usr/share/man/man5
 	rmdir ${D}/usr/share/info
-	
+
 	dodoc Contributors README WISHES
 
 	dosed ${D}/usr/share/man/man1/ispell.1

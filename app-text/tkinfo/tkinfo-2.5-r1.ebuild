@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkinfo/tkinfo-2.5-r1.ebuild,v 1.10 2003/07/17 00:08:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkinfo/tkinfo-2.5-r1.ebuild,v 1.11 2003/09/05 22:37:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Info Browser in TK"
@@ -14,21 +14,17 @@ DEPEND=">=dev-lang/tk-8.0.5"
 
 
 src_install () {
-
-    dobin tkinfo
-    doman tkinfo.1
-    dodoc README
-
+	dobin tkinfo
+	doman tkinfo.1
+	dodoc README
 }
 
 pkg_postinst () {
-
-# Let's check to see if info has been setup completely
-cd /usr/share/info
-if [ -f dir ]; then
-	exit 0;
-else
-	mkinfodir . > dir
-fi
+	# Let's check to see if info has been setup completely
+	cd /usr/share/info
+	if [ -f dir ]; then
+		exit 0;
+	else
+		mkinfodir . > dir
+	fi
 }
-

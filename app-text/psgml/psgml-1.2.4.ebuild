@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psgml/psgml-1.2.4.ebuild,v 1.9 2003/02/13 09:43:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psgml/psgml-1.2.4.ebuild,v 1.10 2003/09/05 22:37:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PSGML is a GNU Emacs Major Mode for editing SGML and XML coded documents."
@@ -18,7 +18,7 @@ src_compile() {
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--host=${CHOST} || die "Configuration failed."
-		
+
 	emake || die "parallel make failed."
 
 }
@@ -26,9 +26,9 @@ src_compile() {
 src_install () {
 
 	make prefix=${D}/usr install || die "Installation failed."
-	
+
 	dodir /usr/share/info
-    
+
 	make infodir=${D}/usr/share/info install-info || die "install-info failed."
 
 	dodoc ChangeLog README.psgml ${FILESDIR}/dot_emacs

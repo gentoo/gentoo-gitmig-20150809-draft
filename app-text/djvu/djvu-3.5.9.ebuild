@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.9.ebuild,v 1.4 2003/07/11 20:35:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.9.ebuild,v 1.5 2003/09/05 22:37:21 msterret Exp $
 
 MY_P="${PN}libre-${PV}"
 DESCRIPTION="A web-centric format and software platform for distributing documents and images."
@@ -50,7 +50,7 @@ pkg_postrm() {
 	# Maybe we must remove the plugin from the mozilla plugins dir.
 	if [ -f /usr/lib/mozilla/plugins/nsdejavu.so ]
 	then
-		rm /usr/lib/mozilla/plugins/nsdejavu.so 
+		rm /usr/lib/mozilla/plugins/nsdejavu.so
 	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.1.ebuild,v 1.9 2003/06/12 20:27:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.1.ebuild,v 1.10 2003/09/05 22:37:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A printing tool"
@@ -13,10 +13,10 @@ DEPEND="virtual/glibc"
 
 
 src_compile() {
-    emake CFLAGS="$CFLAGS \$(DEFS)" PREFIX=/usr MANDIR=/usr/share/man/man1 || die
+	emake CFLAGS="$CFLAGS \$(DEFS)" PREFIX=/usr MANDIR=/usr/share/man/man1 || die
 }
 
 src_install () {
-    emake PREFIX=${D}/usr MANDIR=${D}/usr/share/man/man1 install || die
+	emake PREFIX=${D}/usr MANDIR=${D}/usr/share/man/man1 install || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.0.7.ebuild,v 1.2 2003/07/11 20:35:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.0.7.ebuild,v 1.3 2003/09/05 22:37:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -16,12 +16,12 @@ DEPEND=">=gnome-extra/libgsf-1.7.2
 	>=media-libs/freetype-2.1
 	sys-libs/zlib
 	media-libs/libpng"
-	
-RDEPEND="media-gfx/imagemagick"		
+
+RDEPEND="media-gfx/imagemagick"
 
 src_compile() {
-	
-	econf || die #--with-docdir=/usr/share/doc/${PF} || die 
+
+	econf || die #--with-docdir=/usr/share/doc/${PF} || die
 
 	make || die
 }
@@ -29,5 +29,5 @@ src_compile() {
 src_install () {
 
 	einstall || die
-	
+
 }

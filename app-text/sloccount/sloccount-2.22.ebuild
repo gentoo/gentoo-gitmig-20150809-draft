@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.4 2003/08/05 15:56:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.5 2003/09/05 22:37:22 msterret Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 
 DEPEND="dev-lang/perl
 	>=sys-apps/sed-4
-        app-shells/bash"
+	app-shells/bash"
 
 src_unpack() {
 	unpack ${A}
@@ -23,7 +23,7 @@ src_unpack() {
 	# Patch to move most of the executables out of /usr/bin
 	# and into /usr/libexec/sloccount to avoid conflicts.
 	epatch ${FILESDIR}/${P}-libexec.patch
-	
+
 	sed -i \
 		-e "/^CC/ { s/$/ ${CFLAGS}/g }" \
 		-e "/^DOC_DIR/ { s/-\$(RPM_VERSION)//g }" \

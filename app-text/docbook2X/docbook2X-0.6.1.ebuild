@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.17 2003/02/13 09:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.18 2003/09/05 22:37:21 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Tools to convert docbook to man and info"
@@ -31,7 +31,7 @@ src_install () {
 	insinto /usr/share/sgml/docbook/db2X-customization/texi
 	doins xslt/texi/*
 	insinto /usr/share/sgml/docbook/db2X-customization/dtd
-	doins dtd/Texi-XML 
+	doins dtd/Texi-XML
 	exeinto /usr/bin
 	doexe docbook2man docbook2manxml docbook2texi docbook2texixml
 	doexe docbook2man-spec.pl docbook2texi-spec.pl texi_xml man_xml

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.13 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.14 2003/09/05 22:37:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts True Type to Type 1 fonts"
@@ -33,5 +33,5 @@ src_install () {
 	rm -r app other
 	mv *.html ../doc/${PF}/html
 	mv [A-Z]* ../doc/${PF}
-	prepalldocs 
+	prepalldocs
 }

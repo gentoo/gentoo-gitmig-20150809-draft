@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-1.0.1.ebuild,v 1.1 2003/08/27 21:39:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-1.0.1.ebuild,v 1.2 2003/09/05 22:37:21 msterret Exp $
 
 inherit flag-o-matic
 
@@ -20,7 +20,7 @@ src_unpack() {
 	cd ${S}/base
 	epatch ${FILESDIR}/${PN}-0.15-gentoo.patch || die
 }
-				
+
 src_compile() {
 
 	filter-flags -fno-exceptions

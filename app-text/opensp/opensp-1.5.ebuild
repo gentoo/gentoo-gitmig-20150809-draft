@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.ebuild,v 1.4 2003/08/05 15:56:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.ebuild,v 1.5 2003/09/05 22:37:22 msterret Exp $
 
 MY_P=${P/opensp/OpenSP}
 S=${WORKDIR}/${MY_P}
@@ -22,7 +22,7 @@ PDEPEND=">=app-text/openjade-1.3.2"
 
 src_compile() {
 	local myconf
-	
+
 	myconf="--pkgdocdir=/usr/share/doc/${PF}"
 	myconf="${myconf} --enable-default-catalog=/etc/sgml/catalog"
 	myconf="${myconf} --enable-default-search-path=/usr/share/sgml"

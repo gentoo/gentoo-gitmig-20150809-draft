@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.43.ebuild,v 1.10 2003/06/10 13:14:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.43.ebuild,v 1.11 2003/09/05 22:37:21 msterret Exp $
 
 IUSE="nls"
 
@@ -29,7 +29,7 @@ src_compile() {
 	local myopts
 
 	use nls || myopts="--disable-nls"
-	
+
 	./configure \
 		--host=${CHOST} \
 		--disable-debug \
@@ -50,7 +50,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	dodoc ABOUT-NLS AUTHORS Changelog COPYING HACKING INSTALL NEWS README \
-		THANKS TODO DEPENDS 
+		THANKS TODO DEPENDS
 }
 
 pkg_postinst() {

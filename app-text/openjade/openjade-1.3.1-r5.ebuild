@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r5.ebuild,v 1.6 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r5.ebuild,v 1.7 2003/09/05 22:37:22 msterret Exp $
 
 inherit libtool flag-o-matic
 
@@ -39,18 +39,18 @@ src_compile() {
 		--enable-default-catalog=/etc/sgml/catalog \
 		--enable-default-search-path=/usr/share/sgml \
 		--datadir=/usr/share/sgml/${P} || die
- 
+
 	make || die
 }
 
-src_install() {                               
+src_install() {
 
 	dodir /usr
 	dodir /usr/lib
 	make prefix=${D}/usr \
 	  	datadir=${D}/usr/share/sgml/${P} \
 		install || die
-	
+
 	dosym openjade  /usr/bin/jade
 	dosym onsgmls   /usr/bin/nsgmls
 	dosym osgmlnorm /usr/bin/sgmlnorm
@@ -92,12 +92,12 @@ src_install() {
 }
 
 pkg_postinst() {
-  if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ] ; then
-    install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/catalog
-    install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/dsssl/catalog
+	if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ] ; then
+		install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/catalog
+		install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/dsssl/catalog
 #    install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-${PV}/unicode/catalog
-    install-catalog --add /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
-  fi
+		install-catalog --add /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
+	fi
 }
 
 pkg_postrm() {

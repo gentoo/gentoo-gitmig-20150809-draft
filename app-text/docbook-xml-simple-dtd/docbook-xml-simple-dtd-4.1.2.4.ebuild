@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.4.ebuild,v 1.15 2003/07/19 22:55:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.4.ebuild,v 1.16 2003/09/05 22:37:21 msterret Exp $
 
 MY_P="sdb4124"
 S=${WORKDIR}/${P}
@@ -14,13 +14,12 @@ LICENSE="X11"
 DEPEND=">=app-arch/unzip-5.41"
 
 src_unpack() {
-  mkdir ${S}
-  cd ${S}
-  unpack ${A}
+	mkdir ${S}
+	cd ${S}
+	unpack ${A}
 }
 
 src_install() {
-
 	insinto /usr/share/sgml/docbook/xml-simple-dtd-${PV}
 	doins *.dtd *.mod *.css
 
@@ -28,6 +27,6 @@ src_install() {
 
 	insinto /usr/share/sgml/docbook/xml-simple-dtd-${PV}/ent
 	doins ent/*.ent
-	
+
 	dodoc README ChangeLog LostLog COPYRIGHT
 }

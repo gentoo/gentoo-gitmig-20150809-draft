@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.5 2003/07/19 22:55:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.6 2003/09/05 22:37:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Base ISO character entities and utilities for SGML"
@@ -12,10 +12,10 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 src_unpack() {
-    unpack ${A}
-    # We use a hacked version of install-catalog that supports the ROOT
-    # variable, and puts quotes around the CATALOG files.
-    cp ${FILESDIR}/${PF}-install-catalog.in ${S}/bin/install-catalog.in
+	unpack ${A}
+	# We use a hacked version of install-catalog that supports the ROOT
+	# variable, and puts quotes around the CATALOG files.
+	cp ${FILESDIR}/${PF}-install-catalog.in ${S}/bin/install-catalog.in
 }
 
 src_compile() {
@@ -25,10 +25,10 @@ src_compile() {
 
 src_install () {
 	emake \
-        prefix=${D}/usr \
-        sysconfdir=${D}/etc \
-        mandir=${D}/usr/share/man \
-        docdir=${D}/usr/share/doc \
+		prefix=${D}/usr \
+		sysconfdir=${D}/etc \
+		mandir=${D}/usr/share/man \
+		docdir=${D}/usr/share/doc \
 		install || die
 }
 
@@ -71,7 +71,7 @@ pkg_postrm() {
 			/etc/sgml/sgml-ent.cat \
 			/usr/share/sgml/sgml-iso-entities-8879.1986/catalog
 		fi
-	
+
 		if [ -e /etc/sgml/sgml-docbook.cat ]
 		then
 		${T}/install-catalog --remove \

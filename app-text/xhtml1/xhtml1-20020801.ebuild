@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801.ebuild,v 1.3 2003/07/11 20:35:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/xhtml1-20020801.ebuild,v 1.4 2003/09/05 22:37:22 msterret Exp $
 
 DESCRIPTION="DTDs for the eXtensible HyperText Markup Language 1.0"
 HOMEPAGE="http://www.w3.org/TR/${PN}/"
@@ -19,7 +19,7 @@ src_install() {
 }
 
 pkg_postinst() {
-    if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
+	if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
 	then
 		install-catalog --add /etc/sgml/${PN}.cat /usr/share/sgml/${PN}/xhtml.soc
 	fi

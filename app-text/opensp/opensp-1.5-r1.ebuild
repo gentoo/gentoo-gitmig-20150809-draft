@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.6 2003/08/05 15:56:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.7 2003/09/05 22:37:22 msterret Exp $
 
 inherit eutils
 
@@ -24,14 +24,14 @@ PDEPEND=">=app-text/openjade-1.3.2"
 
 src_unpack() {
 	unpack ${A}
-	# from gentoo bug #21631 and 
+	# from gentoo bug #21631 and
 	# http://sourceforge.net/tracker/index.php?func=detail&aid=742214&group_id=2115&atid=302115
 	epatch ${FILESDIR}/${P}-gcc33.patch
 }
 
 src_compile() {
 	local myconf
-	
+
 	myconf="${myconf} --enable-default-catalog=/etc/sgml/catalog"
 	myconf="${myconf} --enable-default-search-path=/usr/share/sgml"
 	myconf="${myconf} --datadir=/usr/share/sgml/${P}"

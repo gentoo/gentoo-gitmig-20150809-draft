@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.11 2003/02/13 09:39:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.12 2003/09/05 22:37:22 msterret Exp $
 
 use kde && inherit kde
 
@@ -16,18 +16,16 @@ IUSE="kde"
 
 if [ "`use kde`" ]
 then
-    need-kde 2
+	need-kde 2
 else
-    DEPEND="=x11-libs/qt-2.3*"
-    RDEPEND="$DEPEND"
+	DEPEND="=x11-libs/qt-2.3*"
+	RDEPEND="$DEPEND"
 fi
 
 src_unpack() {
-
-    unpack ${A}
-
+	unpack ${A}
 }
-       
+
 src_compile() {
 	local myopts
 	if [ -n "`use kde`" ]

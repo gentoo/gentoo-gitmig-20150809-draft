@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.07.ebuild,v 1.3 2003/08/11 17:22:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.07.ebuild,v 1.4 2003/09/05 22:37:21 msterret Exp $
 
 inherit nsplugins eutils
 
@@ -21,18 +21,18 @@ DEPEND="virtual/glibc
 INSTALLDIR=/opt/Acrobat5
 
 src_compile() {
-	
+
 	tar -xvf LINUXRDR.TAR --no-same-owner
 	tar -xvf COMMON.TAR --no-same-owner
 
 	sed -e "s:REPLACE_ME:${INSTALLDIR}/Reader:" \
 		bin/acroread.sh > acroread
-	
+
 	epatch ${FILESDIR}/acroread-utf8-gentoo.diff
 }
 
 src_install() {
-	
+
 	dodir ${INSTALLDIR}
 	for i in Browsers Reader Resource
 	do
@@ -41,17 +41,17 @@ src_install() {
 			cp -Rd ${i} ${D}${INSTALLDIR}
 		fi
 	done
-	
+
 	sed -i \
 		-e "s:\$PROG =.*:\$PROG = '${INSTALLDIR}/acroread.real':" \
 		acroread || die "sed acroread failed"
-	
+
 	exeinto ${INSTALLDIR}
 	doexe acroread
 	dodoc README LICREAD.TXT
 	dodir /opt/netscape/plugins
 	dosym ${INSTALLDIR}/Browsers/intellinux/nppdf.so /opt/netscape/plugins
-	
+
 	#dynamic environment by T.Henderson@cs.ucl.ac.uk (Tristan Henderson)
 	dodir /etc/env.d
 	echo -e "PATH=${INSTALLDIR}\nROOTPATH=${INSTALLDIR}" > \
@@ -62,6 +62,6 @@ src_install() {
 
 pkg_postinst () {
 
-        # fix wrong directory permissions (bug #25931)
+	# fix wrong directory permissions (bug #25931)
 	find ${INSTALLDIR} -type d | xargs chmod 755 || die
 }

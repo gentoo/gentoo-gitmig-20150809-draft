@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.12.ebuild,v 1.1 2003/06/20 16:46:41 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.12.ebuild,v 1.2 2003/09/05 22:37:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Namazu is a full-text search engine"
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/perl-5.6.1
 	cjk? ( >=app-i18n/nkf-1.71 )
 	kakasi? ( >=dev-perl/Text-Kakasi-1.05 )
 	chasen? ( >=dev-perl/Text-ChaSen-1.03 )
-	tcltk? ( >=dev-lang/tk-8.3.3 
+	tcltk? ( >=dev-lang/tk-8.3.3
 		>=net-www/lynx-2.8.4 )"
 
 #RDEPEND=$DEPEND

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.1.94.ebuild,v 1.10 2003/02/13 09:36:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.1.94.ebuild,v 1.11 2003/09/05 22:37:21 msterret Exp $
 
 IUSE="nls bonobo"
 
@@ -50,17 +50,17 @@ src_install() {
 }
 
 pkg_postinst() {
-    # This is from the devhelp ebuild...
-    # Fix gconf permissions
-    killall gconfd-1 2>/dev/null >/dev/null
-    chmod o+rX /etc/gconf -R
-    # Install schemas
-    gconftool-1 --shutdown
-    SOURCE=xml::/etc/gconf/gconf.xml.defaults
-    GCONF_CONFIG_SOURCE=$SOURCE \
+	# This is from the devhelp ebuild...
+	# Fix gconf permissions
+	killall gconfd-1 2>/dev/null >/dev/null
+	chmod o+rX /etc/gconf -R
+	# Install schemas
+	gconftool-1 --shutdown
+	SOURCE=xml::/etc/gconf/gconf.xml.defaults
+	GCONF_CONFIG_SOURCE=$SOURCE \
 		gconftool-1 --makefile-install-rule \
 		/etc/gconf/schemas/${PN}.schemas \
 		# 2>/dev/null >/dev/null || exit 1
-    assert "gconftool-1 execution failed"
+	assert "gconftool-1 execution failed"
 }
 

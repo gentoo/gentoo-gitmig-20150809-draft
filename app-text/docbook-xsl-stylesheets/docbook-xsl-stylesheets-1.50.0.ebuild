@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.50.0.ebuild,v 1.9 2003/02/13 09:35:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.50.0.ebuild,v 1.10 2003/09/05 22:37:21 msterret Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
@@ -21,14 +21,14 @@ src_install() {
 	for i in common extensions fo html htmlhelp images javahelp lib template xhtml
 	do
 		cd ${S}
-		cp -af ${i} ${D}/${DEST} 
+		cp -af ${i} ${D}/${DEST}
 		cd ${D}/${DEST}/${i}
 
 		for j in ChangeLog LostLog README
 		do
 			if [ -e ${j} ]
 			then
-				mv ${j} ${D}/usr/share/doc/${P}/${j}.${i} 
+				mv ${j} ${D}/usr/share/doc/${P}/${j}.${i}
 	   		fi
 		done
 	done
@@ -46,7 +46,7 @@ pkg_postinst() {
 	[ -e $CATALOG ] && rm $CATALOG
 
 	/usr/bin/xmlcatalog --noout --create $CATALOG
-	
+
 	/usr/bin/xmlcatalog --noout --add "rewriteSystem" \
 		"http://docbook.sourceforge.net/release/xsl/1.45" \
 		"/usr/share/sgml/docbook/xsl-stylesheets-${PV}" $CATALOG

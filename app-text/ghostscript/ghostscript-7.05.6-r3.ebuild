@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r3.ebuild,v 1.9 2003/08/05 15:56:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r3.ebuild,v 1.10 2003/09/05 22:37:21 msterret Exp $
 
 inherit eutils
 
@@ -18,10 +18,10 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE="X cups cjk"
 
 DEPEND="virtual/glibc
-	>=media-libs/jpeg-6b 
+	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
-	X? ( virtual/x11 ) 
+	X? ( virtual/x11 )
 	cjk? ( media-fonts/arphicfonts
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
@@ -66,7 +66,7 @@ src_compile() {
 	myconf="--with-ijs --with-omni --without-gimp-print"
 
 	use X && myconf="${myconf} --with-x" \
-		|| myconf="${myconf} --without-x" 
+		|| myconf="${myconf} --without-x"
 
 	use cups && myconf="${myconf} --enable-cups" \
 		|| myconf="${myconf} --disable-cups"

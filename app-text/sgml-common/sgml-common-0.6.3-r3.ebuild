@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r3.ebuild,v 1.4 2003/07/19 22:55:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r3.ebuild,v 1.5 2003/09/05 22:37:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Base ISO character entities and utilities for SGML"
@@ -67,7 +67,7 @@ pkg_postrm() {
 			/etc/sgml/sgml-ent.cat \
 			/usr/share/sgml/sgml-iso-entities-8879.1986/catalog
 		fi
-	
+
 		if [ -e /etc/sgml/sgml-docbook.cat ]
 		then
 		${T}/install-catalog --remove \

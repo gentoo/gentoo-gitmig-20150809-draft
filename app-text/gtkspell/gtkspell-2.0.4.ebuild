@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4.ebuild,v 1.9 2003/08/05 15:56:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4.ebuild,v 1.10 2003/09/05 22:37:21 msterret Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 	# fix the config script's gtkdoc check (bug #16997)
 	cd ${S}
 	sed -i "s:GTKDOC=true::" configure
-	
+
 	# workaround missing docbook 4.2 xml dtd in /etc/xml/docbook
 	epatch ${FILESDIR}/${P}-docbookx.patch
 }
@@ -34,7 +34,7 @@ src_compile() {
 	use doc \
 		&& myconf="--enable-gtk-doc" \
 		|| myconf="--disable-gtk-doc"
-	
+
 	econf ${myconf} || die
 	emake || die "compile failure"
 }

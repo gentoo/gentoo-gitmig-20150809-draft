@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.1.ebuild,v 1.4 2003/07/22 20:43:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.1.ebuild,v 1.5 2003/09/05 22:37:22 msterret Exp $
 
 IUSE="motif"
 
@@ -42,7 +42,7 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "HINT: To have even nicer results add these lines to your ~/.xpdfrc"
-	einfo 
+	einfo
 	einfo "  include         /etc/xpdfrc"
 	einfo "  t1libControl    high"
 	einfo "  freetypeControl high"

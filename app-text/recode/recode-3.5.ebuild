@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.5.ebuild,v 1.12 2003/08/05 15:56:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.5.ebuild,v 1.13 2003/09/05 22:37:22 msterret Exp $
 
 DESCRIPTION="Convert files between various character sets."
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
-        
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \

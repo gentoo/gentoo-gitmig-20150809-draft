@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.5 2003/08/05 18:45:34 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.6 2003/09/05 22:37:21 msterret Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
-        virtual/x11"
+	virtual/x11"
 RDEPEND="${DEPEND}
 	>=app-text/ghostscript-6.50-r2"
 
-src_unpack() { 
+src_unpack() {
 	unpack ${A}
 	# This patch contains all the Debian patches and enables anti-aliasing.
 	epatch ${FILESDIR}/${PF}-gentoo.diff

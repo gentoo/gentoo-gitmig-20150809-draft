@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.6 2003/08/03 14:24:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.7 2003/09/05 22:37:21 msterret Exp $
 
 # this r1 is a major change. it uses sed instead of patches.
 # hopefully this will enable everyone to compile gv on widely
@@ -30,10 +30,10 @@ src_compile() {
 	cp config.Unix 1
 	sed -e 's:usr/local:usr:' 1 > config.Unix
 	rm 1
-	
+
 	xmkmf || die
 	make Makefiles || die
-	
+
 	cd source
 
 	cp Makefile 1
@@ -47,7 +47,7 @@ src_compile() {
 		echo "We'll just run make and pray."
 		sleep 2s
 	fi
-	
+
 	cd ${S}
 	emake || die
 }

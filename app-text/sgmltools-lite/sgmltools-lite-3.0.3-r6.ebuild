@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r6.ebuild,v 1.5 2003/06/12 20:28:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r6.ebuild,v 1.6 2003/09/05 22:37:22 msterret Exp $
 
 inherit sgml-catalog
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
 HOMEPAGE="http://sgmltools-lite.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-DESCRIPTION="Python interface to SGML software specificially in a 
+DESCRIPTION="Python interface to SGML software specificially in a
 DocBook/OpenJade environment.  Provides sgml2{html,txt,rtf,dvi,ps}"
 
 DEPEND="virtual/python
@@ -31,8 +31,8 @@ src_compile() {
 		--sbindir=/usr/sbin	\
 		--datadir=/usr/share	\
 		--mandir=/usr/share/man	|| die
-	
-	make || die	
+
+	make || die
 
 	#remove CVS directories from the tree
 	for dirs in bin doc dsssl dtd man python rpm
@@ -55,15 +55,15 @@ src_install() {
 
 	dodoc COPYING ChangeLog POSTINSTALL README*
 	dohtml -r .
-	
+
 	cd ${WORKDIR}/nw-eps-icons-0.0.1/images
 	insinto /usr/share/sgml/docbook/dsssl-stylesheets/images
 	doins *.eps
-	
+
 	cd callouts
 	insinto /usr/share/sgml/docbook/dsssl-stylesheets/images/callouts
 	doins *.eps
-	
+
 	rm ${D}/etc/sgml/catalog.{suse,rh62}
 
 	# Create simple alias scripts that people are used to

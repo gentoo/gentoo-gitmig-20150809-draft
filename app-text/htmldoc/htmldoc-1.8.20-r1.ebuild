@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20-r1.ebuild,v 1.2 2003/08/28 23:03:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20-r1.ebuild,v 1.3 2003/09/05 22:37:21 msterret Exp $
 
 DESCRIPTION="Convert HTML pages into a PDF document"
 SRC_URI="ftp://ftp.easysw.com/pub/htmldoc/1.8.20/${P}-1-source.tar.bz2"
@@ -31,7 +31,7 @@ src_compile() {
 		--with-gui \
 		--with-openssl-libs=/usr/lib \
 		--with-openssl-includes=/usr/include/openssl
-	
+
 	# Add missing -lfltk_images to LIBS
 	mv Makedefs Makedefs.orig
 	sed -e 's/-lfltk /-lfltk -lfltk_images /g' \

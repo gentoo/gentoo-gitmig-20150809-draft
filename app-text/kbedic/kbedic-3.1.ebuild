@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-3.1.ebuild,v 1.4 2003/02/13 09:39:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-3.1.ebuild,v 1.5 2003/09/05 22:37:22 msterret Exp $
 inherit kde
 
 S=${WORKDIR}/${P}
@@ -21,7 +21,7 @@ need-qt 3
 PATCHES="$FILESDIR/$P-gcc3.diff $FILESDIR/$P-location.diff"
 
 src_compile() {
-	
+
 	local myopts
 	if [ -n "`use kde`" ]
 	then
@@ -32,13 +32,13 @@ src_compile() {
 	need-automake 1.6
 	need-autoconf 2.5
 
-	aclocal	
+	aclocal
 
 	./configure --prefix=/usr \
 		--host=${CHOST} \
 		${myopts} || die
-		
+
 	emake || die
-	
+
 }
 
