@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.16 2004/04/11 10:32:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.17 2004/04/19 19:57:39 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> gtkam-0.1.11.ebuild:
+  Removing gnome deps, since it only builds a yelp file and we are missing the
+  gphoto2 docs in portage, the gnome deps served no purpose. For more
+  information, please see bug #36684.
 
   11 Apr 2004; Alastair Tse <liquidx@gentoo.org> gtkam-0.1.11.ebuild:
   fixed gtkam-0.1.11 dep to libgphoto2-2.1.4 (#47458)

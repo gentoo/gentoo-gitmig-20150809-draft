@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.11.ebuild,v 1.2 2004/04/11 10:32:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.11.ebuild,v 1.3 2004/04/19 19:57:39 wolf31o2 Exp $
 
 IUSE="nls gnome jpeg"
 
@@ -15,10 +15,11 @@ KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=media-libs/libgphoto2-2.1.4
-	gnome? ( >=gnome-base/libbonobo-2
-		>=gnome-base/libgnomeui-2 )
 	jpeg? ( media-libs/libexif-gtk
 		media-libs/libexif )"
+	# commenting per bug #36684
+	#gnome? ( >=gnome-base/libbonobo-2
+	#	>=gnome-base/libgnomeui-2 )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -42,9 +43,9 @@ src_compile() {
 		&& myconf="${myconf} --with-exif" \
 		|| myconf="${myconf} --without-exif"
 
-	use gnome \
-		&& myconf="${myconf} --with-gnome --with-bonobo" \
-		|| myconf="${myconf} --without-gnome --without-bonobo"
+	#use gnome \
+	#	&& myconf="${myconf} --with-gnome --with-bonobo" \
+	#	|| myconf="${myconf} --without-gnome --without-bonobo"
 
 	econf ${myconf} `use_enable nls` || die
 	emake || die
