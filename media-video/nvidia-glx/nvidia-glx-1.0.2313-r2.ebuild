@@ -5,6 +5,10 @@
 # This portage installs binary XFree drivers for video cards
 # with NVIDIA chipsets.  The driver is provided by NVIDIA corporation.
 
+# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
+DEBUG="yes"
+RESTRICT="nostrip"
+
 S="${WORKDIR}/${P}"
 
 DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
