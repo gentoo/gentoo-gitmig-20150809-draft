@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.54 2004/03/08 19:22:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.55 2004/04/26 10:49:09 lanius Exp $
+
+  26 Apr 2004; Heinrich Wendel <lanius@gentoo.org> files/2.4.2/modules.ppp:
+  update pppoatm patch, bug #47574
+  add mppe alias, bug #47091
 
   08 Mar 2004; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2-r1.ebuild:
   install pppoatm.so, not only build it
