@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.0.ebuild,v 1.8 2004/06/25 02:33:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.0.ebuild,v 1.9 2004/07/14 23:36:06 agriffis Exp $
 
 DESCRIPTION="GNUstep GUI backend"
 HOMEPAGE="http://www.gnustep.org"
@@ -8,12 +8,12 @@ SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc "
+IUSE=""
 DEPEND=">=dev-util/gnustep-gui-0.8.0
 	>=media-libs/tiff-3.5.7
 	>=media-libs/jpeg-6b-r2
 	virtual/x11
 	>=x11-wm/windowmaker-0.80.1"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	. /usr/GNUstep/System/Makefiles/GNUstep.sh

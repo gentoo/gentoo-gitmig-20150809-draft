@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/gnustep-gui-0.8.8.ebuild,v 1.5 2004/06/25 02:34:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/gnustep-gui-0.8.8.ebuild,v 1.6 2004/07/14 23:36:41 agriffis Exp $
 
 IUSE=""
 
@@ -18,8 +18,6 @@ DEPEND=">=dev-util/gnustep-base-1.7.2
 	>=media-libs/tiff-3.5.7
 	>=media-libs/jpeg-6b-r2"
 PDEPEND="=dev-util/gnustep-back-${PV}*"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	egnustepmake \
