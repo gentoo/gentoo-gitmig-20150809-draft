@@ -1,6 +1,10 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.2 2004/08/26 18:17:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.3 2004/09/01 07:54:57 axxo Exp $
+
+  01 Sep 2004; Thomas Matthijs <axxo@gentoo.org> tomcat-4.1.30-r5.ebuild,
+  tomcat-5.0.27-r4.ebuild:
+  keepdir work,temp so they are not removed when upgrading, bug 62468
 
 *tomcat-5.0.27-r4 (26 Aug 2004)
 

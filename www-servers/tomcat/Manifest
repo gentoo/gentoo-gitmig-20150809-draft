@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6c1857b5c5632dffdc97a59186ba8862 tomcat-5.0.27-r4.ebuild 3602
+MD5 58a231bb241da5971f20da7c1f9142ab tomcat-5.0.27-r4.ebuild 3639
 MD5 c11fdb7147ea2a703c7bb0718f23aa35 tomcat-5.0.27-r3.ebuild 3604
-MD5 d795dea0882b46701498ff1b31fe7734 tomcat-4.1.30-r5.ebuild 3574
+MD5 da2934ad11dbc56320dbf22aa6a12ff7 tomcat-4.1.30-r5.ebuild 3604
 MD5 b195cb8574a416935e3d15a82f99fa5a tomcat-3.3.2-r2.ebuild 3216
-MD5 ac019be44c8271f2aa2863198dc06ab5 ChangeLog 11045
+MD5 7d5234c869e8ef4f248cf3478570e4f6 ChangeLog 11217
 MD5 56292f22dced45d993974e198033461d metadata.xml 221
 MD5 950a3d9fb8b5ed810a0d4d1238a0235e tomcat-4.1.30-r4.ebuild 3576
 MD5 71d59fd713a960e63c1b894ca5893a1b files/digest-tomcat-4.1.30-r4 74
@@ -25,9 +25,9 @@ MD5 bf74c2bd8c21359ada1793cddfa95f37 files/5.0.27/tomcat.conf 2660
 MD5 30acf279da2c8d377225a5b84ce5f7b6 files/5.0.27/tomcat.init 642
 MD5 c19b85e130d0e0a565eebc406d699965 files/5.0.27/jikes.diff 510
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBLimK/rLF9B432nYRAgwfAJ9z0R4dIdIZfoaXUdIcX3um4f3zCwCgxvR6
-EzDF55WTd/kYRF8ySfiF1sg=
-=Qeb6
+iD8DBQFBNYCS/rLF9B432nYRAsB0AJ9jOLGAPLvh81wBI9vGbq7cWWVnRwCfVAdG
+Bf7EjZoLW1brdkMtFbDab9M=
+=bY9H
 -----END PGP SIGNATURE-----
