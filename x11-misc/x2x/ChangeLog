@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2x
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.6 2003/11/04 03:40:44 abhishek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.7 2003/12/13 17:54:36 brad_mssw Exp $
+
+  13 Dec 2003; Brad House <brad_mssw@gentoo.org> x2x-1.27.ebuild:
+  mark stable on amd64
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml
