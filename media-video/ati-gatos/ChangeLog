@@ -1,8 +1,12 @@
 # ChangeLog for media-video/ati-gatos
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.7 2004/01/14 00:58:01 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.8 2004/01/14 01:10:18 battousai Exp $
 
 *ati-gatos-4.3.0 (13 Jan 2004)
+
+  13 Jan 2004; <battousai@gentoo.org> ChangeLog, ati-gatos-4.3.0.ebuild:
+  Warn user about SDK only if XFree was merged without the sdk USE flag. Also,
+  fix the SRC_URI, making it use the Gentoo mirrors.
 
   13 Jan 2004; <battousai@gentoo.org> ati-gatos-4.3.0.ebuild:
   Updated ebuild. This will build against xfree 4.3.0 with the sdk installed,
