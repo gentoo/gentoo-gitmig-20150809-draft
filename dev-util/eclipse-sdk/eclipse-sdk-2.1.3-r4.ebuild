@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r4.ebuild,v 1.2 2004/07/09 21:17:40 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r4.ebuild,v 1.3 2004/07/14 23:25:53 agriffis Exp $
 
 inherit eutils
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/eclipse-sourceBuild-srcIncluded-2.1.3.zip"
-IUSE="gtk motif gnome kde jikes"
+IUSE="gnome gtk jikes kde motif mozilla"
 SLOT="2"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86 ~ppc ~sparc"
