@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.9 2004/12/25 15:39:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.10 2004/12/25 18:46:58 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -10,7 +10,7 @@
 inherit kde
 ECLASS=kde-meta
 INHERITED="$INHERITED $ECLASS"
-IUSE="$IUSE usepackagedmakefiles kdexdeltas"
+IUSE="$IUSE kdexdeltas" # usepackagedmakefiles 
 
 # only broken-up ebuilds can use this eclass
 if [ -z "$KMNAME" ]; then
@@ -98,8 +98,9 @@ DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
 
 # prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
 # use a newer tarball without increasing the ebuild revision.
-MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
-SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
+# DISABLED - SEMIBROKEN --danarmak
+#MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
+#SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
 
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
@@ -317,30 +318,31 @@ function kde-meta_src_unpack() {
 	makefiles)
 
 		# allow usage of precreated makefiles, and/or packaging of the makefiles we create.
-		if useq usepackagedmakefiles; then
-			echo ">>> Using pregenerated makefile templates"
-			cd $WORKDIR
-			tar -xjf $DISTDIR/$MAKEFILESTARBALL
-			cd $S
-			echo ">>> Creating configure script"
-			# If you can, clean this up
-			touch aclocal.m4
-			touch config.h.in
-			touch `find . -name Makefile.in -print`
-			make -f admin/Makefile.common configure || die "Failed to create configure script"
-		else
+		# DISABLED - SEMIBROKEN --danarmak
+# 		if useq usepackagedmakefiles; then
+# 			echo ">>> Using pregenerated makefile templates"
+# 			cd $WORKDIR
+# 			tar -xjf $DISTDIR/$MAKEFILESTARBALL
+# 			cd $S
+# 			echo ">>> Creating configure script"
+# 			# If you can, clean this up
+# 			touch aclocal.m4
+# 			touch config.h.in
+# 			touch `find . -name Makefile.in -print`
+# 			make -f admin/Makefile.common configure || die "Failed to create configure script"
+# 		else
 			# Create Makefile.am files
 			create_fullpaths
 			change_makefiles $S "false"
-			if [ -n "$KM_PACKAGEMAKEFILES" ]; then
-				make -f admin/Makefile.common || die "Failed to create makefile templates"
-				cd $WORKDIR
-	# 			# skipped:  $P/configure.in.in* $P/acinclude.m4 $P/aclocal.m4 $P/configure 
-				/bin/tar -cjpf $T/$MAKEFILESTARBALL $P/stamp-h.in $P/configure.in $P/configure.files \
-					`find $P -name Makefile\*` $P/config.h.in $P/subdirs
-				echo ">>> Saved generated makefile templates in $T/$MAKEFILESTARBALL"
-			fi
-		fi
+# 			if [ -n "$KM_PACKAGEMAKEFILES" ]; then
+# 				make -f admin/Makefile.common || die "Failed to create makefile templates"
+# 				cd $WORKDIR
+# 	 			# skipped:  $P/configure.in.in* $P/acinclude.m4 $P/aclocal.m4 $P/configure 
+# 				/bin/tar -cjpf $T/$MAKEFILESTARBALL $P/stamp-h.in $P/configure.in $P/configure.files \
+# 					`find $P -name Makefile\*` $P/config.h.in $P/subdirs
+# 				echo ">>> Saved generated makefile templates in $T/$MAKEFILESTARBALL"
+# 			fi
+# 		fi
 	
 		# for ebuilds with extended src_unpack
 		cd $S
