@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1.ebuild,v 1.3 2003/03/08 23:12:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1.ebuild,v 1.4 2003/08/01 13:51:43 pauldv Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Make use of extra buttons on newer keyboards."
@@ -13,7 +13,8 @@ KEYWORDS="x86 ~sparc"
 
 DEPEND="virtual/x11
 	>=dev-libs/libxml2-2.2.8
-	>=sys-libs/db-3.2.9
+	=sys-libs/db-3.2*
+	!>=sys-libs/db-4*
 	>=x11-libs/xosd-1.0.0
 	gtk2? ( >=x11-libs/gtk+-2.0.0 )"
 
