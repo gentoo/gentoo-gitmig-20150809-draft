@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57.ebuild,v 1.2 2003/07/11 21:04:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57.ebuild,v 1.3 2003/08/03 02:03:54 vapier Exp $
 
 # bug #11681; get b0rked code when using -march=k6 with this package.
 inherit flag-o-matic
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="static readline innodb berkdb tcpd ssl"
+IUSE="static readline innodb berkdb tcpd ssl debug"
 KEYWORDS="x86 ~sparc ~alpha ~hppa"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
@@ -71,8 +71,7 @@ src_compile() {
 	use innodb || myconf="${myconf} --without-innodb"
 	use ssl && myconf="${myconf} --with-vio --with-openssl"
 	use ssl || myconf="${myconf} --without-openssl"
-	[ -n "${DEBUGBUILD}" ] && myconf="${myconf} --with-debug"
-	[ -n "${DEBUGBUILD}" ] || myconf="${myconf} --without-debug"
+	myconf="${myconf} `use_with debug`"
 
 	#glibc-2.3.2_pre fix; bug #16496
 	export CFLAGS="${CFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"

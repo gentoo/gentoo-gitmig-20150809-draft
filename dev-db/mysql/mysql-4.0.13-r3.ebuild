@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r3.ebuild,v 1.9 2003/07/20 16:09:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r3.ebuild,v 1.10 2003/08/03 02:03:54 vapier Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -20,7 +20,7 @@ SRC_URI="mirror://mysql/Downloads/${SDIR}/${NEWP}.tar.gz"
 KEYWORDS="x86 sparc ppc arm amd64"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="static readline innodb berkdb tcpd ssl perl"
+IUSE="static readline innodb berkdb tcpd ssl perl debug"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
@@ -104,9 +104,7 @@ src_compile() {
 		&& myconf="${myconf} --with-vio --with-openssl" \
 		|| myconf="${myconf} --without-openssl"
 
-	[ -n "${DEBUGBUILD}" ] \
-		&& myconf="${myconf} --with-debug" \
-		|| myconf="${myconf} --without-debug"
+	myconf="${myconf} `use_with debug`"
 
 	#glibc-2.3.2_pre fix; bug #16496
 	export CFLAGS="${CFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"

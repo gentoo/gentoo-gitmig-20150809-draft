@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.14 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.15 2003/08/03 02:03:54 vapier Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="static readline innodb berkdb tcpd"
+IUSE="static readline innodb berkdb tcpd debug"
 KEYWORDS="ppc x86 sparc ~alpha"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
@@ -65,8 +65,7 @@ src_compile() {
 	use tcpd || myconf="${myconf} --without-libwrap"
 	use innodb && myconf="${myconf} --with-innodb"
 	use innodb || myconf="${myconf} --without-innodb"
-	[ -n "${DEBUGBUILD}" ] && myconf="${myconf} --with-debug"
-	[ -n "${DEBUGBUILD}" ] || myconf="${myconf} --without-debug"
+	myconf="${myconf} `use_with debug`"
 
 	# the compiler flags are as per their "official" spec ;-)
 	einfo "myconf is $myconf"
