@@ -1,0 +1,80 @@
+diff -ruN cinelerra-1.1.6.orig/libmpeg3/mpeg3io.c cinelerra-1.1.6/libmpeg3/mpeg3io.c
+--- cinelerra-1.1.6.orig/libmpeg3/mpeg3io.c	2003-05-13 19:11:23.000000000 +0200
++++ cinelerra-1.1.6/libmpeg3/mpeg3io.c	2003-05-13 19:13:30.000000000 +0200
+@@ -35,8 +35,8 @@
+ 
+ int64_t mpeg3io_get_total_bytes(mpeg3_fs_t *fs)
+ {
+-	struct stat64 ostat;
+-	stat64(fs->path, &ostat);
++	struct stat ostat;
++	stat(fs->path, &ostat);
+ 	fs->total_bytes = ostat.st_size;
+ 	return fs->total_bytes;
+ 	
+@@ -50,8 +50,8 @@
+ 
+ int64_t mpeg3io_path_total_bytes(char *path)
+ {
+-	struct stat64 st;
+-	if(stat64(path, &st) < 0) return 0;
++	struct stat st;
++	if(stat(path, &st) < 0) return 0;
+ 	return st.st_size;
+ }
+ 
+@@ -184,11 +184,11 @@
+ 
+ int mpeg3io_device(char *path, char *device)
+ {
+-	struct stat64 file_st, device_st;
++	struct stat file_st, device_st;
+     struct mntent *mnt;
+ 	FILE *fp;
+ 
+-	if(stat64(path, &file_st) < 0)
++	if(stat(path, &file_st) < 0)
+ 	{
+ 		perror("mpeg3io_device");
+ 		return 1;
+@@ -197,7 +197,7 @@
+ 	fp = setmntent(MOUNTED, "r");
+     while(fp && (mnt = getmntent(fp)))
+ 	{
+-		if(stat64(mnt->mnt_fsname, &device_st) < 0) continue;
++		if(stat(mnt->mnt_fsname, &device_st) < 0) continue;
+ 		if(device_st.st_rdev == file_st.st_dev)
+ 		{
+ 			strncpy(device, mnt->mnt_fsname, MPEG3_STRLEN);
+diff -ruN cinelerra-1.1.6.orig/libmpeg3/mpeg3private.h cinelerra-1.1.6/libmpeg3/mpeg3private.h
+--- cinelerra-1.1.6.orig/libmpeg3/mpeg3private.h	2003-05-13 19:11:23.000000000 +0200
++++ cinelerra-1.1.6/libmpeg3/mpeg3private.h	2003-05-13 19:19:52.000000000 +0200
+@@ -3,7 +3,7 @@
+ 
+ #include <stdint.h>
+ #include <stdio.h>
+-
++#include <pthread.h>
+ 
+ 
+ 
+diff -ruN cinelerra-1.1.6.orig/quicktime/Makefile cinelerra-1.1.6/quicktime/Makefile
+--- cinelerra-1.1.6.orig/quicktime/Makefile	2003-05-13 19:11:24.000000000 +0200
++++ cinelerra-1.1.6/quicktime/Makefile	2003-05-13 19:48:02.000000000 +0200
+@@ -44,7 +44,6 @@
+ include Makefile.vorbis
+ include Makefile.ffmpeg
+ include Makefile.lame
+-include Makefile.dv
+ include Makefile.encore50
+ 
+ 
+@@ -207,7 +206,7 @@
+ 	$(OBJDIR)/$(ENCORE_DIR)/mbtransquant/intel_mmx
+ 
+ 
+-LIBS := $(OUTPUT) $(MPEG3_DIR)/$(OBJDIR)/libmpeg3.a -lpng -lz -lpthread -lglib -ldl -lm
++LIBS := $(OUTPUT) $(MPEG3_DIR)/$(OBJDIR)/libmpeg3.a -lpng -lz -lpthread -lglib -ldl -lm -ldv
+ 
+ $(shell echo  $(CFLAGS) > $(OBJDIR)/c_flags)
+ $(shell echo  $(LIBRAW_CFLAGS) > $(OBJDIR)/libraw_cflags)
