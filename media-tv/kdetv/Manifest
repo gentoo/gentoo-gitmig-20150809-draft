@@ -1,4 +1,6 @@
 MD5 1d42dd6c1f39dc0b96c6bd3d86dec1f3 kdetv-0.8.0.ebuild 466
-MD5 ab9e0ed997813e837cba968fe0b62a50 ChangeLog 603
+MD5 aaccbb8ae87497a967e8b6fb4600bd4d ChangeLog 758
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 f90a413aa31b57fde2369c5e13c7627a kdetv-0.8.2.ebuild 827
 MD5 2da879018c033e27525474c0baf414bd files/digest-kdetv-0.8.0 64
+MD5 cf2e35190fbfe5e369ced358f87bc46c files/digest-kdetv-0.8.2 65

@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.5 2004/06/25 00:32:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.6 2004/08/06 22:34:55 carlo Exp $
+
+*kdetv-0.8.2 (07 Aug 2004)
+
+  07 Aug 2004; Carsten Lohrke <carlo@gentoo.org> +kdetv-0.8.2.ebuild:
+  version bump, arts and lirc use flags, linguas test code
 
   18 May 2004; Caleb Tennis <caleb@gentoo.org> kdetv-0.8.0.ebuild:
   Add dep on zbvi per bug #50640
