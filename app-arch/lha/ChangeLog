@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/lha
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.6 2003/02/12 02:57:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.7 2003/07/15 18:43:39 agenkin Exp $
+
+*lha-114i (15 Jul 2003)
+
+  15 Jul 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Update to handle multy-byte characters in the file names by
+  Matsuu Takuto <matsuu@gentoo.org> (bug #11186).
 
 *lha-114i (24 May 2002)
 
