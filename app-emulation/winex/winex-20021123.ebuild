@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021123.ebuild,v 1.1 2002/11/23 14:22:02 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021123.ebuild,v 1.2 2002/11/23 14:25:43 phoenix Exp $
 
 inherit base
 
@@ -26,8 +26,6 @@ DEPEND="virtual/x11
 
 
 src_unpack() {
-	#cd ${WORKDIR}
-	#unpack ${A}
 	base_src_unpack
 	# Unpacking the miscellaneous files
 	mkdir misc
