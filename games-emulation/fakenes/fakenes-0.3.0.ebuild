@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.3.0.ebuild,v 1.1 2003/09/26 02:40:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.3.0.ebuild,v 1.2 2003/09/26 05:55:20 vapier Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/fakenes/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="zlib fbcon svgalib"
+IUSE="zlib fbcon svga"
 
 DEPEND=">=media-libs/allegro-4.1
 	zlib? ( sys-libs/zlib )
@@ -24,7 +24,7 @@ src_unpack() {
 	chmod a+x configure
 	epatch ${FILESDIR}/${PV}-allegro.patch
 	[ ! `use fbcon` ] && sed -i '/sedfbme/s:.*::' src/gui.c src/include/gui/menus.h
-	[ ! `use svgalib` ] && sed -i '/sedsvgalibme/s:.*::' src/gui.c src/include/gui/menus.h
+	[ ! `use svga` ] && sed -i '/sedsvgalibme/s:.*::' src/gui.c src/include/gui/menus.h
 }
 
 src_compile() {
