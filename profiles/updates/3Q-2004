@@ -29,3 +29,4 @@ move app-gnustep/easydiff gnustep-apps/easydiff
 move app-gnustep/gridlock gnustep-apps/gridlock
 move app-gnustep/gnumail gnustep-apps/gnumail
 move app-gnustep/gorm gnustep-apps/gorm
+move app-gnustep/gworkspace gnustep-apps/gworkspace
