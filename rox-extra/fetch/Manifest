@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 839f81fb6bcb26a8641b12b889028270 fetch-0.0.3.ebuild 529
+MD5 56497e4cd5af67f681a22730bea8e288 ChangeLog 419
 MD5 5394559a5f84d1ca65c57c3b2380195b metadata.xml 256
-MD5 fbc444b2397be8c13a40de07685d88f5 ChangeLog 416
 MD5 498d4117b9a2d8b1f015da9a93fa89fe files/digest-fetch-0.0.3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBr4wbI1lqEGTUzyQRAnAUAKCty/z73mqXECbjq2oW0cRHjDg1zwCfZxQK
+qZk/9xeBXJePCHnfMXL1xFU=
+=e4i3
+-----END PGP SIGNATURE-----
