@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.7 2004/11/28 06:24:50 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.8 2004/11/28 17:16:52 chriswhite Exp $
+
+  29 Nov 2004; Chris White <chriswhite@gentoo.org> openexr-1.0.7.ebuild:
+  Marked 1.0.7 stable. Test case was running with FEATURES=maketest and using
+  sample images from the homepage and a test program.
 
   28 Nov 2004; Chris White <chriswhite@gentoo.org> metadata.xml:
   Taking over as maintainer.

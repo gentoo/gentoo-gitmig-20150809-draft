@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9efb90e7a9c1160abdacc72b34092ed1 ChangeLog 1478
+MD5 de933c9c711064a4e3592a87d65c744d ChangeLog 1684
 MD5 c4ccbeec0593132258f0b2f63aa54851 metadata.xml 225
 MD5 68b003895ed5b1979cfa67eb902b79d7 openexr-1.0.6.ebuild 982
-MD5 ac290f7b7615a0bcbfda7105b4ac8e71 openexr-1.0.7.ebuild 953
+MD5 d8e3ac953836b1dc60461ece2a09efac openexr-1.0.7.ebuild 1021
 MD5 c57bd7a44f086412e9ddff65a07e31d6 openexr-1.2.1.ebuild 1012
 MD5 5c15fc8183a5c726df8c76d20689bfb6 files/digest-openexr-1.0.6 66
 MD5 21ea9ea0c3fabd1e25cd34b7de57dc62 files/digest-openexr-1.0.7 66
@@ -14,7 +14,7 @@ MD5 dd45e17d712e65d12cb5a8cb704fc11c files/openexr-1.0.7-gentoo.patch 993
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBqW9KFdQwWVoAgN4RAoQAAKCabOFUnWI0LY2Th0REnREEdEScsgCg+g7T
-aEOFcFW2OKWQU1/VjxKKPQ4=
-=youx
+iD8DBQFBqggfFdQwWVoAgN4RAnSpAJ9XJ+f2Gva4kvH8nsAueuYZ/IF8cQCfd+q2
+D63sXhhpZAuASvsYEk+t2tM=
+=g/Un
 -----END PGP SIGNATURE-----
