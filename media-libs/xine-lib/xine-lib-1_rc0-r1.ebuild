@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r1.ebuild,v 1.1 2003/08/07 21:13:37 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r1.ebuild,v 1.2 2003/08/10 14:46:09 tantive Exp $ 
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
 # Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
@@ -32,8 +32,7 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	avi? ( x86? ( >=media-libs/win32codecs-0.50 
 	       media-libs/divx4linux ) )
 	esd? ( media-sound/esound )
-	dvd? ( >=media-libs/libdvdcss-0.0.3.3
-	       >=media-libs/libdvdread-0.9.2 )
+	dvd? ( >=media-libs/libdvdcss-1.2.7 )
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
