@@ -1,8 +1,15 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.5 2002/07/28 04:52:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.6 2002/07/28 05:39:03 cselkirk Exp $
 
 *mutt-1.4-r1 (27 Jul 2002)
+
+  28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r1.ebuild,
+  mutt-1.3.28.ebuild, mutt-1.4.ebuild :
+
+  Added PPC to KEYWORDS
+  Seemant: the compressed folder patch author is Roland Rosenfeld
+  <roland@spinnaker.de>.
 
   27 Jul 2002; Seemant Kulleen <seemant@gentoo.org> mutt-1.4-r1.ebuild :
 
