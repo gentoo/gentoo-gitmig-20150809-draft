@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.6 2004/04/06 03:56:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.7 2004/05/05 08:48:35 usata Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc sparc ~amd64"
 IUSE="canna freewnn"
 
 DEPEND="virtual/glibc
-	canna? >=app-i18n/canna-3.5_beta2-r1
+	canna? ( >=app-i18n/canna-3.5_beta2-r1 )
 	freewnn? ( >=app-i18n/freewnn-1.1.1_alpha19 )
 	!freewnn? ( >=app-i18n/canna-3.5_beta2-r1 )"
 
