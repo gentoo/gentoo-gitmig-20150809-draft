@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l-r2.ebuild,v 1.3 2004/06/24 22:43:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l-r2.ebuild,v 1.4 2004/07/13 22:20:58 agriffis Exp $
 
 inherit eutils webapp
 
@@ -10,6 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/man/man-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~sparc ~x86 ~ia64 ~ppc"
+IUSE=""
 
 DEPEND="app-misc/glimpse
 	sys-apps/gawk

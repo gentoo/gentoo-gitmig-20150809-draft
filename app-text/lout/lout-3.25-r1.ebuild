@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.25-r1.ebuild,v 1.11 2004/06/24 22:43:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.25-r1.ebuild,v 1.12 2004/07/13 22:19:58 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.tex.ac.uk/tex-archive/support/lout/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND=">=sys-libs/zlib-1.1.4"
 RDEPEND=""
