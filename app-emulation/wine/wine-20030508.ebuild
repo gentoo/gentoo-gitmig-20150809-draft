@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030508.ebuild,v 1.3 2003/05/14 20:14:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030508.ebuild,v 1.4 2003/05/20 16:51:30 utx Exp $
 
 inherit eutils base
 
@@ -17,8 +17,6 @@ KEYWORDS="x86 -ppc -sparc"
 IUSE="nas arts cups opengl alsa tcltk nptl"
 
 DEPEND="sys-devel/gcc
-	!media-sound/jack-audio-connection-kit
-	!media-sound/jack-cvs
 	sys-devel/flex
 	dev-util/yacc
 	>=sys-libs/ncurses-5.2
@@ -47,6 +45,8 @@ src_compile() {
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
 	
+	ac_cv_header_jack_jack_h=no \
+	ac_cv_lib_soname_jack= \
 	./configure --prefix=/usr/lib/wine \
 		--sysconfdir=/etc/wine \
 		--host=${CHOST} \

@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.41 2003/05/13 20:23:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.42 2003/05/20 16:51:28 utx Exp $
 
 *wine-20030508 (11 May 2003)
+
+  20 May 2003; Stanislav Brabec <utx@gentoo.org> wine-20030508.ebuild:
+  Non-blocking solution of bug #20857.
 
   13 May 2003; Martin Holzer <mholzer@gentoo.org> wine-20030508.ebuild:
   Added Blocking DEPEND. Closes #20857
