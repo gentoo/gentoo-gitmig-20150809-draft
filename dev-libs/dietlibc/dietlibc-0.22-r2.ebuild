@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22-r2.ebuild,v 1.2 2003/05/25 14:51:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22-r2.ebuild,v 1.3 2003/06/16 14:17:06 vapier Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -17,9 +17,9 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 
 	epatch ${FILESDIR}/${P}_xdr_security_fix.patch
+	epatch ${FILESDIR}/${PV}-dirent-prototype.patch
 
 	mv Makefile Makefile.orig
-
 	sed -e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
 		-e "s:^prefix.*:prefix=/usr/diet:" \
 		-e "s:^#DESTDIR=/tmp/fef.*:DESTDIR=${D}:" \
