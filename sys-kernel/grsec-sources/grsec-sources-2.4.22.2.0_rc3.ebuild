@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.22.2.0_rc3.ebuild,v 1.2 2003/11/05 17:29:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.22.2.0_rc3.ebuild,v 1.3 2003/12/01 22:48:34 iggy Exp $
 
 # Documentation on the patch contained in this kernel will be installed someday
 
@@ -39,6 +39,8 @@ src_unpack() {
 	else
 		die "Unable to the kernel patch"
 	fi
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	mkdir -p docs
 	touch docs/patches.txt
