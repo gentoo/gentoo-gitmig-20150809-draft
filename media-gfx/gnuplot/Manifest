@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 933b4ca7448f930326882932547a5faf ChangeLog 5863
 MD5 77cecd5626caaba8696e896a0f88ea98 gnuplot-3.8j.ebuild 2011
 MD5 0d0ccbc08efef8b97818204479649574 metadata.xml 220
-MD5 933b4ca7448f930326882932547a5faf ChangeLog 5863
 MD5 a945cf203f726632334f896aa6f066cd gnuplot-3.8j-r1.ebuild 2117
-MD5 17fe7e645887d7ae971a74499376ed6f gnuplot-4.0-r1.ebuild 3935
+MD5 3d40c0918220d1faff383f2ddbe7a041 gnuplot-4.0-r1.ebuild 3938
 MD5 4ca2057b57f07811b4da7bd8958d50c2 files/digest-gnuplot-3.8j 67
-MD5 d6d201e466142a8e19ab7a86da486dde files/gnuplot-3.8j-amd64.diff 329
-MD5 ca4f01c5e5b582017b2ff93ac26d650e files/digest-gnuplot-4.0-r1 66
 MD5 4ca2057b57f07811b4da7bd8958d50c2 files/digest-gnuplot-3.8j-r1 67
+MD5 d6d201e466142a8e19ab7a86da486dde files/gnuplot-3.8j-amd64.diff 329
 MD5 6bd90ea3b0173af9fe24085ca37fbfa3 files/header-order.patch 1692
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNecAKRy60XGEcJIRAmnEAJ9S8xi5UJPRcEGHka+c3kLdSJTYKwCgjMe+
-UAO1EUIKFHYz4m+GQGVE2Jg=
-=MnII
------END PGP SIGNATURE-----
+MD5 ca4f01c5e5b582017b2ff93ac26d650e files/digest-gnuplot-4.0-r1 66
