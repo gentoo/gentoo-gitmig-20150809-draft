@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-bouquet/cl-bouquet-0.1.ebuild,v 1.1 2004/05/19 15:51:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-bouquet/cl-bouquet-0.1.ebuild,v 1.2 2004/05/19 16:42:31 mkennedy Exp $
 
 inherit common-lisp
 
@@ -16,6 +16,11 @@ DEPEND="virtual/commonlisp
 CLPACKAGE=bouquet
 
 S=${WORKDIR}/bouquet
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-clisp-package-lock-gentoo.patch
+}
 
 src_install() {
 	common-lisp-install *.lisp *.asd
