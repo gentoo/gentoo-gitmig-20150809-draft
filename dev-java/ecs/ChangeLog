@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ecs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ChangeLog,v 1.5 2004/10/16 17:11:46 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ChangeLog,v 1.6 2004/10/20 06:00:38 absinthe Exp $
+
+  20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> ecs-1.4.1.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> ecs-1.4.1.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
