@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.1.ebuild,v 1.1 2003/06/11 15:28:38 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.1.ebuild,v 1.2 2003/06/11 15:34:51 tad Exp $
 
 DESCRIPTION="Cacti is a complete frondend to rrdtool"
 HOMEPAGE="http://www.raxnet.net/products/cacti/"
@@ -29,7 +29,7 @@ INSTALL_DEST="${HTTPD_ROOT}/cacti"
 src_install() {
 	dohtml docs/{INSTALL,UPGRADE}.htm
 	dodoc docs/{CHANGELOG,CONTRIB}
-	dodoc {LICENSE}
+	dodoc LICENSE
 
 	rm docs/{INSTALL,UPGRADE,INSTALL-WIN32}.htm
 	rm docs/{README,CHANGELOG,CONTRIB}
@@ -45,9 +45,10 @@ src_install() {
 
 pkg_postinst() {
 	# check to see if we have a previous version installed
-	minor_inst= $(ls -d /var/db/pkg/net-analyzer/cacti*|head -n 1|cut -d\. -f2)
-	rel_inst= $(ls -d /var/db/pkg/net-analyzer/cacti*|head -n 1|cut -d\. -f3)
-	if [ '${minor_inst}${rel_inst}' -lt '81' ]
+	minor_inst="$(ls -d /var/db/pkg/net-analyzer/cacti*|head -n 1|cut -d\. -f2)"
+	rel_inst="$(ls -d /var/db/pkg/net-analyzer/cacti*|head -n 1|cut -d\. -f3)"
+	echo "${minor_inst}${rel_inst}"
+	if [ ${minor_inst}${rel_inst} -lt 81 ]
 	then
 		einfo
 		einfo "The cacti has been installed to ${INSTALL_DEST}"
