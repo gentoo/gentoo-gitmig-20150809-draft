@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4727b9c2a7c27e118ca2fe73c852552e ruby-pango-0.8.0.ebuild 431
+MD5 57a7c5b6f4107343f797247ddfba8c81 ruby-pango-0.8.0.ebuild 431
 MD5 c8b43c826b7cc232545b081e3d9900dc ruby-pango-0.12.0.ebuild 460
-MD5 d750d0a72ca6308bc7cdeb90b47c303c ruby-pango-0.10.1.ebuild 485
-MD5 8b1191ebad27afd9481b8510ebb5177f ruby-pango-0.8.1.ebuild 467
-MD5 ed53d28f2aec817db1a9d995ee38e4ce ruby-pango-0.11.0.ebuild 455
-MD5 73445581027a375eb3b5bd0ed2cd6416 ruby-pango-0.9.1.ebuild 506
-MD5 9f107b0b3126534153242669ba1cd4db ChangeLog 2263
+MD5 d90a9de6eafb7ce62f440cb94e8b6d6c ruby-pango-0.10.1.ebuild 487
+MD5 f6844eb219caa39a5285c5b1faf3065d ruby-pango-0.8.1.ebuild 467
+MD5 d4f43d8de34d0723169e67ec7d979c3e ruby-pango-0.11.0.ebuild 458
+MD5 8938b373c2f60aa10b087da64fc58ded ruby-pango-0.9.1.ebuild 506
+MD5 6d72417ada8c338a88ed20f51ead584d ChangeLog 2355
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-pango-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-pango-0.11.0 75
@@ -15,10 +12,3 @@ MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-pango-0.12.0 75
 MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-pango-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-pango-0.8.1 73
 MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-pango-0.9.1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNMnO/UDVUK2NELYRAqnzAJ9CifomjVZrvVj6856exspIMe+T7QCg0e8x
-L9Z1hWdYkJLGAK/vN+CJdl0=
-=Tl2y
------END PGP SIGNATURE-----
