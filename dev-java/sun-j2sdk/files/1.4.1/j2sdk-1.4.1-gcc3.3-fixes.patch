@@ -1,0 +1,127 @@
+diff -ur /prims/jni.cpp j2sdk/hotspot/src/share/vm/prims/jni.cpp
+--- /prims/jni.cpp	2003-05-21 11:40:17.000000000 +0200
++++ j2sdk/hotspot/src/share/vm/prims/jni.cpp	2003-05-21 12:55:26.000000000 +0200
+@@ -902,7 +902,7 @@
+   JNI_ArgumentPusherVaArg ap(methodID, args); \
+   jni_invoke_nonstatic(env, &jvalue, obj, JNI_VIRTUAL, methodID, &ap, CHECK_0); \
+   va_end(args); \
+-  return (ResultType)(jvalue._value.##unionType); \
++  return (ResultType)(jvalue._value.unionType); \
+ JNI_END \
+ \
+ \
+@@ -912,7 +912,7 @@
+   JavaValue jvalue(Tag); \
+   JNI_ArgumentPusherVaArg ap(methodID, args); \
+   jni_invoke_nonstatic(env, &jvalue, obj, JNI_VIRTUAL, methodID, &ap, CHECK_0); \
+-  return (ResultType)(jvalue._value.##unionType); \
++  return (ResultType)(jvalue._value.unionType); \
+ JNI_END \
+ \
+ \
+@@ -922,7 +922,7 @@
+   JavaValue jvalue(Tag); \
+   JNI_ArgumentPusherArray ap(methodID, args); \
+   jni_invoke_nonstatic(env, &jvalue, obj, JNI_VIRTUAL, methodID, &ap, CHECK_0); \
+-  return (ResultType)(jvalue._value.##unionType); \
++  return (ResultType)(jvalue._value.unionType); \
+ JNI_END
+ 
+ // the runtime type of subword integral basic types is integer
+@@ -976,7 +976,7 @@
+   JNI_ArgumentPusherVaArg ap(methodID, args); \
+   jni_invoke_nonstatic(env, &jvalue, obj, JNI_NONVIRTUAL, methodID, &ap, CHECK_0); \
+   va_end(args); \
+-  return (ResultType)(jvalue._value.##unionType); \
++  return (ResultType)(jvalue._value.unionType); \
+ JNI_END \
+ \
+ \
+@@ -986,7 +986,7 @@
+   JavaValue jvalue(Tag); \
+   JNI_ArgumentPusherVaArg ap(methodID, args); \
+   jni_invoke_nonstatic(env, &jvalue, obj, JNI_NONVIRTUAL, methodID, &ap, CHECK_0); \
+-  return (ResultType)(jvalue._value.##unionType); \
++  return (ResultType)(jvalue._value.unionType); \
+ JNI_END \
+ \
+ \
+@@ -996,7 +996,7 @@
+   JavaValue jvalue(Tag); \
+   JNI_ArgumentPusherArray ap(methodID, args); \
+   jni_invoke_nonstatic(env, &jvalue, obj, JNI_NONVIRTUAL, methodID, &ap, CHECK_0); \
+-  return (ResultType)(jvalue._value.##unionType); \
++  return (ResultType)(jvalue._value.unionType); \
+ JNI_END
+ 
+ // the runtime type of subword integral basic types is integer
+@@ -1051,7 +1051,7 @@
+   JNI_ArgumentPusherVaArg ap(methodID, args); \
+   jni_invoke_static(env, &jvalue, NULL, JNI_STATIC, methodID, &ap, CHECK_0); \
+   va_end(args); \
+-  return (ResultType)(jvalue._value.##unionType); \
++  return (ResultType)(jvalue._value.unionType); \
+ JNI_END \
+ \
+ \
+@@ -1061,7 +1061,7 @@
+   JavaValue jvalue(Tag); \
+   JNI_ArgumentPusherVaArg ap(methodID, args); \
+   jni_invoke_static(env, &jvalue, NULL, JNI_STATIC, methodID, &ap, CHECK_0); \
+-  return (ResultType)(jvalue._value.##unionType); \
++  return (ResultType)(jvalue._value.unionType); \
+ JNI_END \
+ \
+ \
+@@ -1071,7 +1071,7 @@
+   JavaValue jvalue(Tag); \
+   JNI_ArgumentPusherArray ap(methodID, args); \
+   jni_invoke_static(env, &jvalue, NULL, JNI_STATIC, methodID, &ap, CHECK_0); \
+-  return (ResultType)(jvalue._value.##unionType); \
++  return (ResultType)(jvalue._value.unionType); \
+ JNI_END
+ 
+ // the runtime type of subword integral basic types is integer
+@@ -1204,7 +1204,7 @@
+   /* and creates a ResetNoHandleMark.                                   */ \
+   if (jvmdi::enabled()) { \
+     jvalue field_value; \
+-    field_value.##unionType = value; \
++    field_value.unionType = value; \
+     o = jvmdi::jni_SetField_probe_nh(thread, obj, o, k, fieldID, false, SigType, (jvalue *)&field_value); \
+   } \
+   o->Fieldname##_field_put(offset, value); \
+@@ -1333,7 +1333,7 @@
+   /* jni_SetField_probe() assumes that is okay to create handles. */ \
+   if (jvmdi::enabled()) { \
+     jvalue field_value; \
+-    field_value.##unionType = value; \
++    field_value.unionType = value; \
+     jvmdi::jni_SetField_probe(thread, NULL, NULL, id->holder(), fieldID, true, SigType, (jvalue *)&field_value); \
+   } \
+   id->holder()-> Fieldname##_field_put (id->offset(), value); \
+
+diff -ur /runtime/jvmdiInterfaceSupport.hpp j2sdk/hotspot/src/share/vm/runtime/jvmdiInterfaceSupport.hpp
+--- /runtime/jvmdiInterfaceSupport.hpp	2003-05-21 12:46:32.000000000 +0200
++++ j2sdk/hotspot/src/share/vm/runtime/jvmdiInterfaceSupport.hpp	2003-05-21 12:48:18.000000000 +0200
+@@ -24,7 +24,7 @@
+   result_type JNICALL methodName signature {                                         \
+     JavaThread* thread = (JavaThread*) ThreadLocalStorage::thread();                 \
+     TransitionClass __tiv(thread);                                                   \
+-    __ENTRY(result_type, methodName##signature, thread)                              \
++    __ENTRY(result_type, methodName#signature, thread)                              \
+     debug_only(VMNativeEntryWrapper __vew;)                                          \
+     debug_only(const char* const _jvmdi_methodName_ = #methodName;)                  \
+     debug_only(bool  _trace_ = trace; );                                             \
+diff -ur /runtime/mutexLocker.cpp j2sdk/hotspot/src/share/vm/runtime/mutexLocker.cpp
+--- /runtime/mutexLocker.cpp	2003-05-21 12:46:32.000000000 +0200
++++ j2sdk/hotspot/src/share/vm/runtime/mutexLocker.cpp	2003-05-21 12:54:18.000000000 +0200
+@@ -95,7 +95,7 @@
+ #endif
+ 
+ #define def(var, type, pri, vm_block) \
+-  var = new type(Mutex::##pri, #var, vm_block)
++  var = new type(Mutex::pri, #var, vm_block)
+ 
+ void mutex_init() {  
+   def(Event_lock                   , Mutex  , event,       true ); // allow to lock in VM
