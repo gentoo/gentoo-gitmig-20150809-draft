@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-periodic-table
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-periodic-table/ChangeLog,v 1.1 2005/02/10 22:22:15 mkennedy Exp $
+
+*cl-periodic-table-1.0 (10 Feb 2005)
+
+  10 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +files/1.0-gentoo.patch, +cl-periodic-table-1.0.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
