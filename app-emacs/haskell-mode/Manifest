@@ -1,5 +1,5 @@
-MD5 93afee9b32262e749c999e892e3590fa haskell-mode-1.44-r1.ebuild 735
-MD5 b60d6f30459501fcf58abab93e3184d7 ChangeLog 953
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 1b2aa45abeb40f0b1612a11013464851 haskell-mode-1.44-r1.ebuild 742
+MD5 47410512a8d81a627f767998df69c231 ChangeLog 1055
 MD5 0dfd307298e9d2c80f00001a80d95f89 files/50haskell-mode-gentoo.el 476
 MD5 a310c35d01a33d349ce788cb408b70c3 files/digest-haskell-mode-1.44-r1 68
