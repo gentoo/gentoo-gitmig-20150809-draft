@@ -1,8 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.16 2002/05/12 18:49:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.17 2002/05/20 17:52:54 agenkin Exp $
 
 *xfree-4.2.0-r10 (10 Apr 2002)
+
+  20 May 2002; Arcady Genkin <agenkin@thpoon.com>
+	files/4.2.0-r10/xfs.config files/4.2.0-r10/xfs.start :
+
+  Moved the XFS TCP port specification from the startup file into the
+  config file.
 
   12 May 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r10.ebuild :
 
@@ -25,6 +31,12 @@
   the /usr/lib/libGLcore.so symlinks for nvidia implementation.
 
 *xfree-4.2.0-r9 (7 Apr 2002)
+
+  20 May 2002; Arcady Genkin <agenkin@thpoon.com>
+	files/4.2.0-r9/xfs.config files/4.2.0-r9/xfs.start :
+
+  Moved the XFS TCP port specification from the startup file into the
+  config file.
 
   7 Apr 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r9.ebuild,
                                                    files/4.2.0-r9/opengl-update :
