@@ -35,7 +35,7 @@
 
 # arrrrggg someone in x86 land unmsked a non working on ppc binutils build
 # Gerk - June 12 2002
->=sys-devel//binutils-2.12.90.0.9
+>=sys-devel/binutils-2.12.90.0.9
 
 
 # masked for x86 only patch present (and nothing needed in new build for ppc anyway)
