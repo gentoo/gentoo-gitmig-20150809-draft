@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.7.ebuild,v 1.1 2003/06/29 20:35:18 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.7.ebuild,v 1.2 2003/07/04 17:34:59 cretin Exp $
 
-inherit libtool flag-o-matic
+inherit libtool flag-o-matic eutils
 
 # Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
 filter-flags -mfpmath=sse 
@@ -50,6 +50,8 @@ src_unpack() {
 	else
 		einfo "Old netbpm (<=9.12)..."
 	fi
+
+	epatch ${FILESDIR}/${P}-clone_close.diff
 }
 
 src_compile() {

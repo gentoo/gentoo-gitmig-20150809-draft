@@ -1,0 +1,28 @@
+--- transcode-0.6.7/import/clone.c.jj	2003-07-03 20:40:53.000000000 +0100
++++ transcode-0.6.7/import/clone.c	2003-07-03 20:49:24.000000000 +0100
+@@ -51,7 +51,7 @@
+ 
+ static double fps;
+ 
+-static pthread_t thread;
++static pthread_t thread=(pthread_t)0;
+ 
+ static int clone_read_thread_flag=0;
+ 
+@@ -272,12 +272,15 @@
+ {
+     void *status;
+ 
++    if(thread) {
+     // cancel the thread
+     pthread_cancel(thread);
+     pthread_join(thread, &status);
+ 
+     //reentrance safe
+-  
++    thread=(pthread_t)0;
++    }
++    
+     if(video_buffer != NULL) free(video_buffer);
+     video_buffer=NULL;
+     
