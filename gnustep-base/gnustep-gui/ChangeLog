@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.20 2004/12/13 23:07:39 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.21 2004/12/29 21:44:24 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *gnustep-gui-0.9.5_pre20041116 (13 Dec 2004)
 
@@ -115,7 +118,7 @@
   gnustep-gui-0.8.8.ebuild:
   Changing the eclass to gnustep-old
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> gnustep-gui-0.8.8.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gnustep-gui-0.8.8.ebuild:
   Stable on alpha.
 
   06 Feb 2004; Aron Griffis <agriffis@gentoo.org> gnustep-gui-0.8.8.ebuild:
