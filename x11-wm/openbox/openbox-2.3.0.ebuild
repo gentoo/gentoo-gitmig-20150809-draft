@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.0.ebuild,v 1.1 2003/02/08 00:28:39 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.0.ebuild,v 1.2 2003/02/13 08:11:20 gerk Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://icculus.org/openbox/"
 
 SLOT="2"
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ppc"
 
 DEPEND="$DEPEND
 		x11-libs/xft"
