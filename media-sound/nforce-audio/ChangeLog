@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/nforce-audio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/ChangeLog,v 1.9 2005/03/25 17:51:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/ChangeLog,v 1.10 2005/03/30 19:26:27 luckyduck Exp $
+
+  30 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  nforce-audio-1.0.0301.ebuild:
+  now we also install nvmix-reg, fixes #87292
 
 *nforce-audio-1.0.0301 (25 Mar 2005)
 
