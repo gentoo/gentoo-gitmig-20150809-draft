@@ -1,8 +1,14 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.37 2003/04/01 02:48:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.38 2003/04/22 23:31:19 vladimir Exp $
 
 *sylpheed-claws-0.8.11 (12 Mar 2003)
+
+  22 Apr 2003; Graham Forest <vladimir@gentoo.org>
+  sylpheed-claws-0.8.10.ebuild, sylpheed-claws-0.8.11.ebuild,
+  sylpheed-claws-0.8.3.ebuild, sylpheed-claws-0.8.5.ebuild,
+  sylpheed-claws-0.8.9.ebuild:
+  app-text/aspell -> virtual/aspell-dict
 
   31 Mar 2003; Jason Wever <weeve@gentoo.org> sylpheed-claws-0.8.11.ebuild:
   Changed ~sparc keyword to sparc.
