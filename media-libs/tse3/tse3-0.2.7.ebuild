@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.10 2004/07/14 09:40:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.11 2004/07/20 06:28:38 eradicator Exp $
 
 IUSE="alsa oss arts"
 
-inherit eutils
+inherit eutils 64-bit
 
 DESCRIPTION="TSE3 Sequencer library"
 HOMEPAGE="http://TSE3.sourceforge.net/"
@@ -22,7 +22,11 @@ src_unpack() {
 
 	cd ${S}
 	# size_t patch for 64bit machines
-	epatch ${FILESDIR}/${P}-size_t-64bit.patch
+	case "${ARCH}" in
+		alpha|*64)
+			epatch ${FILESDIR}/${P}-size_t-64bit.patch
+		;;
+	esac
 
 	# gcc-3.4 patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
