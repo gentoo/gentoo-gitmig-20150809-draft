@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.0.2.20030220.ebuild,v 1.1 2003/03/02 08:58:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.0.2.20030310.ebuild,v 1.1 2003/03/10 17:38:38 vapier Exp $
 
 inherit eutils
 
@@ -29,7 +29,6 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-autofiles.patch
 	epatch ${FILESDIR}/gentoo-sessions.patch
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/entrance
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/ChangeLog,v 1.1 2003/03/02 08:58:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/ChangeLog,v 1.2 2003/03/10 17:38:37 vapier Exp $
+
+*entrance-0.0.2.20030310 (10 Mar 2003)
+
+  10 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Updated themes, configure scripts, and pam setup.
 
 *entrance-0.0.2.20030220 (02 Mar 2003)
 
