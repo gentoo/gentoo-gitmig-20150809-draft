@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3c1e623d45ed861a0c06eee5f06fa21c babel-1.6.ebuild 938
-MD5 4d0ad66e680a46d72d6476a856846cc6 ChangeLog 1661
+MD5 a08ad1b401f31d70cfbdb3f3d33bca95 ChangeLog 1667
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 444ffe6f4986e1fb199a0f2a31cccd7d files/babel-1.6-gcc32.diff 549
 MD5 45d9ad9dceace9db87c213339d35e10d files/digest-babel-1.6 60
 MD5 89cff2c8f6593871433dc050f452fb55 files/10babel 27
 MD5 80848d0c7c776240d8295eadb1593a8e files/babel-1.6-gentoo.diff 569
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHfmI1lqEGTUzyQRAvLJAJwJkP7szd/fEX5AgsUKLZrAqpdyJwCeNWQg
+aN0wniZTNbiVposeXfmsIT0=
+=oktb
+-----END PGP SIGNATURE-----

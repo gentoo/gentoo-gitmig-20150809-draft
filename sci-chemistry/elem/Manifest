@@ -1,4 +1,14 @@
-MD5 48bfa68500672caa14be6407ff61cddc elem-1.0.3-r1.ebuild 779
-MD5 fee08c3cfa2f8ae89b78aec816bb7022 ChangeLog 1204
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 60bdbdd014a54a59bcbce78e7e8c3846 elem-1.0.3-r1.ebuild 785
+MD5 57239eae827d7514190374b236c6a087 ChangeLog 1389
 MD5 c000c0728c9136f1b54cbc3a5fc07644 metadata.xml 220
 MD5 2aff871a57515123e5580c4530d20c6e files/digest-elem-1.0.3-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHg4I1lqEGTUzyQRAlkTAKDWUSGO+huCvE60WsL4TuZcJ/05zwCfdoqV
+mydvdMrC5+ss4sn2ynxUAHA=
+=1wkA
+-----END PGP SIGNATURE-----

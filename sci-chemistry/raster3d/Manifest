@@ -1,4 +1,14 @@
-MD5 4e907aef402d2bba7c21094c86926aaf ChangeLog 658
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e77bd2224ab6a74eb2cb7790e76c3f7d ChangeLog 851
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 eb8ccfac6ce392bb1022b957f011dc7f raster3d-2.6e.ebuild 1278
+MD5 ccae91a86f4e295c88f3538fa525de3f raster3d-2.6e.ebuild 1284
 MD5 723018f5f5337107a1540a5c233fcefb files/digest-raster3d-2.6e 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHoEI1lqEGTUzyQRAr4FAKCJHUGoYzTQyXteMSm+p3QyinsGcgCfRPPm
+Zy1z5fR3DIsJTygGWkdT5GQ=
+=gTaT
+-----END PGP SIGNATURE-----

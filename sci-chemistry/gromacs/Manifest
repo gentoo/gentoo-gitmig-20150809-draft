@@ -1,4 +1,14 @@
-MD5 19d76fe83eec7daeb93be37ddf80c48d ChangeLog 2900
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d5d785a98040a5926b5836028555874c ChangeLog 3090
 MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
-MD5 52f9213641edab2cd66394df116f9d70 gromacs-3.2.1.ebuild 1897
+MD5 ef0479ec048a9dfc6376004caab5179c gromacs-3.2.1.ebuild 1903
 MD5 e6cada3bcb0c80d058e7be754fde4612 files/digest-gromacs-3.2.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHiiI1lqEGTUzyQRAtUpAJ9EwgJzxDKkGK2K6ojm8QdeWFCiAwCfZHzK
+57W1Y31qM/aN/ML17EaPlHQ=
+=fAA9
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 ce0f7259a2782ab85bc8420f54fefc98 openbabel-1.100.2.ebuild 854
-MD5 01107a848c187e498114560b97890298 ChangeLog 1133
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b7e8a54dab6b03ecba9ed705c173300a openbabel-1.100.2.ebuild 860
+MD5 8a97146803aa4fec8efbf77ef313209d ChangeLog 1336
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 fb703018955c2ecf55e0ab8971b399df files/digest-openbabel-1.100.2 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHmbI1lqEGTUzyQRAqUXAJ9VzPe2Ff+/sH6BsYHvVzZBgJFBEwCgviEs
+CbQb80qI40wtPFv0cv1F+nM=
+=l1Z2
+-----END PGP SIGNATURE-----

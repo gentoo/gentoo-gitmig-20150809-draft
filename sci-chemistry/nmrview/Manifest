@@ -1,5 +1,15 @@
-MD5 219e639963f7f9ae74a0361c3832a1c2 nmrview-5.2.2-r1.ebuild 1172
-MD5 9a2205a4307880242427e5bd2a517b06 ChangeLog 583
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 82e444733302bc0a85b275c5fe094042 nmrview-5.2.2-r1.ebuild 1178
+MD5 d2572e7387bd202d730f3dd401a52588 ChangeLog 799
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 8a6408219a081c5208f17e288ebe32bb files/nmrview.sh 153
 MD5 a8857c8e06c514a0e16ec3d10999ca52 files/digest-nmrview-5.2.2-r1 138
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHl0I1lqEGTUzyQRAgMYAJ4/E4XPWHoaWvHP4aedr8KeGyWsRACgidMj
+N0YznAJc8xttHB7s3ZzQySE=
+=q/Zw
+-----END PGP SIGNATURE-----

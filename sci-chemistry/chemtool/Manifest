@@ -1,4 +1,14 @@
-MD5 ddc8ec841548d8137c1af37072e1029e ChangeLog 2494
-MD5 3e92bd96497d39964a183de5ef42bb75 chemtool-1.6.3.ebuild 1946
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6f3d0b7c1bb71e270fac6a81ebe20dce chemtool-1.6.3.ebuild 1951
+MD5 1a69eacd6f581744e8085bc97741bf85 ChangeLog 2688
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 4ae73ea952733fc1500a98a82b1b8f3d files/digest-chemtool-1.6.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHgTI1lqEGTUzyQRAg6BAJsHNLUZkhdBGS+2Ckels7OPzGmTfgCePUux
+2BmOQrhrDtzp4yAAGZEw7TU=
+=XQdm
+-----END PGP SIGNATURE-----

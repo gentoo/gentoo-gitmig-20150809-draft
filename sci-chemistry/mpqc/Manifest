@@ -1,6 +1,16 @@
-MD5 b6eaeb36f3414a9581916c0d33541858 mpqc-2.2.2-r1.ebuild 1408
-MD5 95bdc8b319e8d559cd6ec46d826ce98a ChangeLog 1783
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 44394632655ca756bf89e43585b43013 mpqc-2.2.2.ebuild 1408
+MD5 8871651055e9750fd5030fb384a7f5b1 mpqc-2.2.2-r1.ebuild 1413
+MD5 87778a705db969a50f45db45b1a9a342 ChangeLog 1983
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 dd3d8c69dfa94b9bc43251ef63d0c094 mpqc-2.2.2.ebuild 1403
-MD5 ef8f7cc3214e84dfd6bec6d38eacb3a6 files/digest-mpqc-2.2.2-r1 129
 MD5 ef8f7cc3214e84dfd6bec6d38eacb3a6 files/digest-mpqc-2.2.2 129
+MD5 ef8f7cc3214e84dfd6bec6d38eacb3a6 files/digest-mpqc-2.2.2-r1 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHlDI1lqEGTUzyQRAmjjAKDHGHiB5LZTUa7HOrHNIUke9RHEvgCeI0V1
+MpMCj0v3xx1xnKItOInkNSw=
+=TLMd
+-----END PGP SIGNATURE-----
