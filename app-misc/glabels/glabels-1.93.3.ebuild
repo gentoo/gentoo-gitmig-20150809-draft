@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/glabels-1.93.3.ebuild,v 1.2 2004/04/19 14:30:04 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/glabels-1.93.3.ebuild,v 1.3 2004/04/26 12:22:07 fmccor Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://glabels.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
 IUSE=""
 
