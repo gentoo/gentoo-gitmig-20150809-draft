@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/maven
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven/ChangeLog,v 1.2 2003/04/23 06:16:50 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven/ChangeLog,v 1.3 2003/09/23 03:19:57 strider Exp $
+
+*maven-1.0_beta10 (22 Sep 2003)
+
+  22 Sep 2003; Adrian Almenar <strider@gentoo.org> maven-1.0_beta10.ebuild, metadata.xml,
+  files/25maven:
+  New maven version, should fix problems found in beta9 and bug #21743, its now
+  working for me. Also updated metadata.xml.
 
 *maven-1.0_beta9 (23 Apr 2003)
 
@@ -10,7 +17,7 @@
 
 *maven-1.0_beta8 (17 Mar 2003)
 
-  17 Mar 2003; root <root@gentoo.org> maven-1.0_beta8.ebuild, files/25maven:
+  17 Mar 2003; Dylan Carlson <absinthe@gentoo.org> maven-1.0_beta8.ebuild, files/25maven:
   Initial import.
   
   Thanks to Stéphane Mor <stephanemor@yahoo.fr> in bug # 15669 for the
