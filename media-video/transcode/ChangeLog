@@ -1,25 +1,26 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.12 2002/08/28 14:23:02 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.13 2002/08/30 16:14:01 phoenix Exp $
 
 *transcode-0.6.0 (28 Aug 2002)
 
   28 Aug 2002; phoen][x <phoenix@gentoo.org> transcode-0.6.0.ebuild :
 
-  Deleted the gtk+ dependency - transcode doesnt need gtk+ while building.
+  Made libsdl an optional dependency.
+
   This closes bug 7000.
 
-*transcode-0.6.0 (12 Aug 2002)
+  28 Aug 2002; phoen][x <phoenix@gentoo.org> transcode-0.6.0.ebuild :
+
+  Deleted the gtk+ dependency - transcode doesnt need gtk+ while building.
 
   12 Aug 2002; Martin Schlemmer <azarah@gentoo.org> transcode-0.6.0.ebuild :
 
   Add support for MPlayer's libpostproc.a.
 
-*transcode-0.6.0 (11 Aug 2002)
-
   11 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
 
-  Update version.
+  Updated version.
 
 *transcode-0.6.0_pre5-r2 (29 May 2002)
 
