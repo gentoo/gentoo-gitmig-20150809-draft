@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.4 2004/08/30 18:28:06 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.5 2004/09/12 20:03:36 axxo Exp $
+
+*checkstyle-3.4-r1 (12 Sep 2004)
+
+  12 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +checkstyle-3.4-r1.ebuild:
+  no longer uses packed jars, bug 63306
 
 *checkstyle-3.4 (30 Aug 2004)
 

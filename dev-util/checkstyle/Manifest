@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 d373a86081726a2e8f8e15fd5c229ade checkstyle-3.4-r1.ebuild 1757
 MD5 670082724fff8fc0675c6b047a102726 checkstyle-3.4.ebuild 1402
 MD5 946d15e4a0e7ee14cd7d065c05128b68 checkstyle-3.3.ebuild 1381
-MD5 b87b7e76dbd53c3448ffe1291dc5906c ChangeLog 659
+MD5 11efa6c975cd464e0758817525ef058b ChangeLog 812
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 3bfc61fcf1ab108f7cf96aef2c3acd0e files/digest-checkstyle-3.3 71
 MD5 ee7955e25b09c5307250330d16910077 files/digest-checkstyle-3.4 71
+MD5 ee7955e25b09c5307250330d16910077 files/digest-checkstyle-3.4-r1 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOenW/rLF9B432nYRAiKSAKCEeAtowSh6/HjA0gbIXQrBIT3uWQCeLxQZ
-5sviPa2Ya+Vq8O20dr+7IPI=
-=+Vxf
+iD8DBQFBRKul/rLF9B432nYRAk/VAJ0VR+qbMTfKXmXs57ZZLPu4A88rNwCfeA3P
+p5K6SeNcL7tlPGRbwjuJq2c=
+=Ykie
 -----END PGP SIGNATURE-----
