@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91.ebuild,v 1.6 2005/02/27 16:13:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.92.ebuild,v 1.1 2005/02/27 16:13:11 weeve Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~ia64 ~amd64"
 IUSE="debug jabber msn oscar yahoo flood ssl"
 
 DEPEND="virtual/libc
@@ -41,6 +41,7 @@ src_unpack() {
 
 	# Patch the default xinetd file to add/adjust values to Gentoo defaults
 	cd ${S}/doc && epatch ${FILESDIR}/${PN}-0.80-xinetd.patch
+	cd ${S} && epatch ${FILESDIR}/${PN}-gentoohack.patch
 }
 
 src_compile() {
@@ -54,9 +55,9 @@ src_compile() {
 	use flood && myconf="${myconf} --flood=1"
 
 	if ( ( use jabber && use ssl ) || use msn ); then
-		myconf="--ssl=gnutls"
+		myconf="${myconf} --ssl=gnutls"
 	else
-		myconf="--ssl=bogus"
+		myconf="${myconf} --ssl=bogus"
 	fi
 
 	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf} \
@@ -102,11 +103,6 @@ src_install() {
 	cp ${S}/utils/* ${D}/usr/share/bitlbee
 	rm ${D}/usr/share/bitlbee/bitlbeed*
 
-	has_version net-irc/irssi && [ -d /usr/share/irssi/scripts ] && \
-		dodir /usr/share/irssi/scripts && \
-		dosym /usr/share/bitlbee/bitlbee_tab_completion.pl \
-			/usr/share/irssi/scripts/bitlbee_tab_completion.pl
-
 }
 
 pkg_postinst() {
@@ -114,4 +110,6 @@ pkg_postinst() {
 	chmod 700 ${ROOT}/var/lib/bitlbee
 	einfo "The utils included in bitlbee (other than bitlbeed) are now"
 	einfo "located in /usr/share/bitlbee"
+	einfo
+	einfo "NOTE: The irssi script is no longer provided by bitlbee."
 }

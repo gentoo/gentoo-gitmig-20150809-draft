@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91-r1.ebuild,v 1.2 2004/11/24 15:20:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91-r1.ebuild,v 1.3 2005/02/27 16:13:11 weeve Exp $
 
 inherit eutils gcc
 
