@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-pear/horde-pear-1.3-r1.ebuild,v 1.2 2005/02/15 08:14:57 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-pear/horde-pear-1.3-r2.ebuild,v 1.1 2005/02/15 08:14:57 sebastian Exp $
 
 inherit horde
 
@@ -21,6 +21,7 @@ pkg_setup() { :;}
 src_unpack() {
 	unpack ${A}
 	sed -i 's:/home/jan/pear_root/share/pear:/usr/lib/php:g' ${S}/pearcmd.php || die
+	sed -i 's:temperture:temperature:g' ${S}/Services/Weather/Weatherdotcom.php || die #79684
 }
 
 src_install() {
