@@ -1,6 +1,12 @@
 # ChangeLog for games-server/hlstats
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/ChangeLog,v 1.4 2004/06/21 17:24:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/ChangeLog,v 1.5 2004/06/24 03:08:27 vapier Exp $
+
+*hlstats-1.20-r1 (23 Jun 2004)
+
+  23 Jun 2004; Mike Frysinger <vapier@gentoo.org> +hlstats-1.20-r1.ebuild,
+  -hlstats-1.20.ebuild:
+  Use webapps #27805
 
   21 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> hlstats-1.02.ebuild:
   clean older ebuild

@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/hlstats-1.20.ebuild,v 1.3 2004/05/27 04:46:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/hlstats-1.20-r1.ebuild,v 1.1 2004/06/24 03:08:27 vapier Exp $
 
-inherit games
+inherit games webapp
 
 DESCRIPTION="real-time player rankings/statistics for half-life"
 HOMEPAGE="http://www.hlstats.org/"
 SRC_URI="mirror://sourceforge/hlstats/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
@@ -19,20 +18,26 @@ RDEPEND="dev-lang/perl
 	net-www/apache
 	dev-php/mod_php"
 
+pkg_setup() {
+	webapp_pkg_setup
+	games_pkg_setup
+}
+
 src_install() {
+	webapp_src_preinst
+
 	dodoc ChangeLog
 
 	insinto ${GAMES_LIBDIR}/${PN}
 	doins *.{pm,plib}
-
 	insinto ${GAMES_DATADIR}/${PN}
 	doins *.sql
 
 	sed -i \
 		-e "s:\./hlstats\.conf:${GAMES_SYSCONFDIR}/hlstats.conf:" \
 		-e "/^\$opt_libdir =/s:=.*:=\"${GAMES_LIBDIR}/${PN}/\";:" \
-		*.pl
-	dogamesbin *.pl
+		*.pl || die "sed pl failed"
+	dogamesbin *.pl || die "dogamesbin failed"
 	dobin ${FILESDIR}/hlstats
 	dosed "s:GENTOO_DIR:${GAMES_BINDIR}:" /usr/bin/hlstats
 	exeinto /etc/init.d
@@ -41,10 +46,11 @@ src_install() {
 	insinto ${GAMES_SYSCONFDIR}
 	doins hlstats.conf
 
-	dodir /home/httpd/htdocs
-	cp -r hlstats.php hlstatsimg hlstatsinc ${D}/home/httpd/htdocs/
+	dodir ${MY_HTDOCSDIR}
+	cp -r hlstats.php hlstatsimg hlstatsinc ${D}/${MY_HTDOCSDIR}/
+	webapp_serverowned ${MY_HTDOCSDIR}
 
-	#prepgamesdirs # let apache own the files
+	webapp_src_install
 }
 
 pkg_postinst() {
@@ -54,7 +60,7 @@ pkg_postinst() {
 	einfo " 3. \`mysql hlstats < ${GAMES_DATADIR}/${PN}/gamesupport_GAME.sql\`"
 	einfo "     so if you want cstrike support, replace 'GAME' with 'cstrike'"
 	einfo " 4. Edit ${GAMES_SYSCONFDIR}/hlstats.conf"
-	einfo " 5. Edit /home/httpd/htdocs/hlstats.php"
+	einfo " 5. Edit ${MY_HTDOCSDIR}/hlstats.php"
 	einfo " 6. \`rc-update add hlstats default\`"
 	einfo " 7. \`/etc/init.d/hlstats start\`"
 	einfo " 8. Edit the cfg files of the game servers you want to track ..."
@@ -68,4 +74,5 @@ pkg_postinst() {
 	einfo " 10. Finally !  Start up the server and after a while goto"
 	einfo "      http://1.2.3.4/hlstats.php"
 	einfo "      (replace 1.2.3.4 with the IP of the server hlstats is running on)"
+	webapp_pkg_postinst
 }
