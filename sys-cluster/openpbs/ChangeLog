@@ -1,0 +1,17 @@
+# ChangeLog for sys-apps/mosix-user
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /home/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog
+
+
+*openpbs-2.3.16 (04 Nov 2002)
+
+  04 Nov 2002; Michael Imhof <tantive@gentoo.org>
+  Initial release. This ebuild was submitted by
+  Chad Schmutzer (schmutze@its.caltech.edu). Thanks!
+
+  04 Nov 2002; Michael Imhof <tantive@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
