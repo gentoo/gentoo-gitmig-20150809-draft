@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.10-r1.ebuild,v 1.2 2001/10/07 22:15:58 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.12-r1.ebuild,v 1.1 2001/11/10 02:16:54 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-performance, lightweight CORBA ORB aiming for CORBA 2.2 compliance"
@@ -47,6 +47,9 @@ src_install() {
 	docinto popt
 	cd ../popt
 	dodoc CHANGES COPYING README
+
+	cd ${D}/usr/lib
+	patch -p0 < ${FILESDIR}/libIDLConf.sh-gentoo.diff
 }
 
 
