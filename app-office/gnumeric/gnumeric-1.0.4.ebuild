@@ -1,14 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.2.ebuild,v 1.1 2002/01/17 08:21:05 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.4.ebuild,v 1.1 2002/02/02 18:52:57 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnumeric/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 
-# We actually need guile-1.5
 RDEPEND=">=x11-libs/gtk+-1.2.10-r3
 	 >=gnome-base/gnome-libs-1.4.1.2-r1
 	 >=gnome-base/oaf-0.6.7
