@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.114 2004/10/06 04:21:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.115 2004/10/06 06:20:57 usata Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -692,6 +692,7 @@ enewuser() {
 		export IFS=","
 		for g in ${egroups}
 		do
+			export IFS="${oldifs}"
 			if [ -z "`egetent group \"${g}\"`" ]
 			then
 				eerror "You must add group ${g} to the system first"
@@ -703,6 +704,7 @@ enewuser() {
 			else
 				exgroups="${exgroups},${g}"
 			fi
+			export IFS=","
 		done
 		export IFS="${oldifs}"
 
@@ -730,12 +732,13 @@ enewuser() {
 			dscl . create /users/${euser} home ${ehome}
 			dscl . create /users/${euser} realname "added by portage for ${PN}"
 			### Add the user to the groups specified
+			local oldifs="${IFS}"
+			export IFS=","
 			for g in ${egroups}
 			do
-				# $egroups is , delimited, not space
-				ewarn "This is code is wrong; someone on the OS X team should fix it"
 				dscl . merge /groups/${g} users ${euser}
 			done
+			export IFS="${oldifs}"
 		else
 			einfo "Extra options are not supported on macos yet"
 			einfo "Please report the ebuild along with the info below"
