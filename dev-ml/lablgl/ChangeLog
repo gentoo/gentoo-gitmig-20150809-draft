@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.12 2004/02/17 22:07:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.13 2004/02/18 12:53:05 mattam Exp $
+
+  18 Feb 2004; Matthieu Sozeau <mattam@gentoo.org> lablgl-0.97.ebuild,
+  lablgl-0.98.ebuild, lablgl-0.99.ebuild:
+  Remove opengl?, it is not an optional dependancy.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> lablgl-1.00.ebuild:
   add ~alpha and ~ia64
