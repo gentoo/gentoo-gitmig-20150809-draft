@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/snort
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/ChangeLog,v 1.2 2002/02/09 00:00:40 woodchip Exp $
+
+*snort-1.8.3-r1 (8 Feb 2002)
+
+  8 Feb 2002; Donny Davies <woodchip@gentoo.org> Changelog,
+  snort-1.8.3-r1.ebuild, files/digest-snort-1.8.3-r1,
+  files/snort.confd, files/snort.rc6 files/snort.conf :
+
+  Fix for nonexistant /etc/conf.d/snort.  Make user/group addition
+  a little smarter.
 
 *snort-1.8.3 (1 Feb 2002)
 
@@ -11,3 +20,4 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
