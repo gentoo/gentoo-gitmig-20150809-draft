@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.59 2003/10/06 04:43:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.60 2003/10/06 06:01:51 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -50,8 +50,7 @@ BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
 S="${WORKDIR}/xc"
 SYNDIR="${WORKDIR}/synaptics"
-SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${BASE_PV}/source"
-SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
+SRC_PATH="mirror://xfree/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"
 
 # Misc patches we may need to fetch ..
@@ -81,20 +80,13 @@ MS_COREFONTS="./andale32.exe ./arial32.exe
 # Need windows license to use this one
 MS_FONT_URLS="${MS_COREFONTS//\.\//mirror://sourceforge/corefonts/}"
 
-SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
-	${SRC_PATH0}/X${MY_SV}src-2.tgz
-	${SRC_PATH0}/X${MY_SV}src-3.tgz
-	${SRC_PATH0}/X${MY_SV}src-4.tgz
-	${SRC_PATH0}/X${MY_SV}src-5.tgz
-	${SRC_PATH1}/X${MY_SV}src-1.tgz
-	${SRC_PATH1}/X${MY_SV}src-2.tgz
-	${SRC_PATH1}/X${MY_SV}src-3.tgz
-	${SRC_PATH1}/X${MY_SV}src-4.tgz
-	${SRC_PATH1}/X${MY_SV}src-5.tgz
-	doc? ( ${SRC_PATH0}/X${MY_SV}src-6.tgz
-		${SRC_PATH0}/X${MY_SV}src-7.tgz
-		${SRC_PATH1}/X${MY_SV}src-6.tgz
-		${SRC_PATH1}/X${MY_SV}src-7.tgz )"
+SRC_URI="${SRC_PATH}/X${MY_SV}src-1.tgz
+	${SRC_PATH}/X${MY_SV}src-2.tgz
+	${SRC_PATH}/X${MY_SV}src-3.tgz
+	${SRC_PATH}/X${MY_SV}src-4.tgz
+	${SRC_PATH}/X${MY_SV}src-5.tgz
+	doc? ( ${SRC_PATH}/X${MY_SV}src-6.tgz
+		${SRC_PATH}/X${MY_SV}src-7.tgz )"
 
 SRC_URI="${SRC_URI}
 	${X_PATCHES}
@@ -111,7 +103,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa ~arm amd64 ia64"
+KEYWORDS="~x86 ppc ~sparc alpha ~mips ~hppa ~arm amd64 ia64"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
