@@ -1,0 +1,24 @@
+--- openafs/src/rx/xdr_array.c	2001/08/08 00:03:57	1.4
++++ openafs/src/rx/xdr_array.c	2002/07/31 23:13:49	1.4.2.1
+@@ -29,7 +29,7 @@
+ #include <afsconfig.h>
+ #include <afs/param.h>
+ 
+-RCSID("$Header: /var/cvsroot/gentoo-x86/net-fs/openafs/files/openafs-1.2.5-sunrpc-overflow.patch,v 1.1 2002/08/02 22:47:20 aliz Exp $");
++RCSID("$Header: /var/cvsroot/gentoo-x86/net-fs/openafs/files/openafs-1.2.5-sunrpc-overflow.patch,v 1.1 2002/08/02 22:47:20 aliz Exp $");
+ 
+ #ifndef	NeXT
+ 
+@@ -84,7 +84,10 @@
+ 	register caddr_t target = *addrp;
+ 	register u_int c;  /* the actual element count */
+ 	register bool_t stat = TRUE;
+-	register int nodesize;
++	register u_int nodesize;
++
++        i = ((~0) >> 1) / elsize;
++        if (maxsize > i) maxsize = i;
+ 
+ 	/* like strings, arrays are really counted arrays */
+ 	if (! xdr_u_int(xdrs, sizep)) {
+
