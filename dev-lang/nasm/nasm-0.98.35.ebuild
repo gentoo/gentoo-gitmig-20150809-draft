@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.35.ebuild,v 1.1 2003/03/24 22:03:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.35.ebuild,v 1.2 2003/03/25 18:00:44 carpaski Exp $
 
 IUSE="doc build"
 
@@ -9,7 +9,7 @@ DESCRIPTION="groovy little assembler"
 SRC_URI="mirror://sourceforge/nasm/${P}.tar.bz2"
 HOMEPAGE="http://nasm.sourceforge.net/"
 
-DEPEND="build? ( dev-lang/perl )
+DEPEND="!build? ( dev-lang/perl )
 	doc? ( app-text/ghostscript sys-apps/texinfo )
 	sys-devel/gcc"
 

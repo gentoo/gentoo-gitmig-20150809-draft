@@ -1,8 +1,11 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.15 2003/03/24 22:03:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.16 2003/03/25 18:00:44 carpaski Exp $
 
 *nasm-0.98.36 (24 Mar 2003)
+
+	25 Mar 2003; Nicholas Jones <carpaski@gentoo.org> .ebuild:
+	Fixing improper dependencies. build? in this case.
 
   24 Mar 2003; Aron Griffis <agriffis@gentoo.org> nasm-0.98.35.ebuild,
   nasm-0.98.36.ebuild:
@@ -13,6 +16,9 @@
  
 *nasm-0.98.34 (08 Sep 2002)
 
+	25 Mar 2003; Nicholas Jones <carpaski@gentoo.org> .ebuild:
+	Fixing improper dependencies. build? in this case.
+
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> nasm-0.98.34.ebuild :
   Add -alpha to KEYWORDS
   
@@ -20,6 +26,9 @@
   Updated to new version and creates new patches
 
 *nasm-0.98.31-r1 (18 May 2002)
+
+	25 Mar 2003; Nicholas Jones <carpaski@gentoo.org> .ebuild:
+	Fixing improper dependencies. build? in this case.
 
   05 Sep 2002; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
 
@@ -30,6 +39,9 @@
   Only create ps, pdf etc. docs if USE doc is enabled. Closes bug #2824.
 
 *nasm-0.98.31 (17 May 2002)
+
+	25 Mar 2003; Nicholas Jones <carpaski@gentoo.org> .ebuild:
+	Fixing improper dependencies. build? in this case.
 
   20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
   Updated HOMEPAGE variable
