@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.16 2004/06/24 23:59:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.17 2004/09/30 04:44:51 solar Exp $
+
+*netkit-telnetd-0.17-r4 (30 Sep 2004)
+
+  30 Sep 2004; <solar@gentoo.org> +metadata.xml,
+  +files/netkit-telnetd-0.17-cflags-gnu_source.patch,
+  +netkit-telnetd-0.17-r4.ebuild:
+  fix really old old telnetd security bugs. We now follow debs source lead for
+  netkit-telnetd. bug 64632
 
 *netkit-telnetd-0.17-r3 (1 May 2002)
 
