@@ -23,7 +23,7 @@
 +if test "$ENABLE_HTML_DOCS" == "yes" ; then
 +	# you need doxygen to make dist.
 +	AC_CHECK_PROG(HAVE_DOXYGEN, doxygen, true, false)
-+	if test $HAVE_DOXYGEN = "false"; then
++	if test $HAVE_DOXYGEN == "false"; then
 +		AC_MSG_ERROR([*** doxygen not found, unable to build docs.])
 +	fi
 +else
