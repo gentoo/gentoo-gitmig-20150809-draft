@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/awesfx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.7 2004/04/20 17:15:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.8 2004/06/08 06:30:01 raker Exp $
+
+  08 Jun 2004; Nick Hadaway <raker@gentoo.org> awesfx-0.5.0b.ebuild :
+  Added ~amd64 to keywords.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> awesfx-0.4.4.ebuild:
   Added IUSE.
