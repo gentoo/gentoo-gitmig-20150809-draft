@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.0.0.ebuild,v 1.1 2004/03/17 22:23:13 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.0.0.ebuild,v 1.2 2004/03/20 17:41:38 leonardop Exp $
 
 DESCRIPTION="information-efficient text-entry interface, driven by natural continuous pointing gestures"
 HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
@@ -9,6 +9,7 @@ SRC_URI="http://www.inference.phy.cam.ac.uk/dasher/download/linux/source/3.0/${P
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
+IUSE=""
 
 DEPEND="=dev-cpp/gtkmm-1.2*"
 

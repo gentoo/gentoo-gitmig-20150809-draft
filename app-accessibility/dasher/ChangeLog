@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.1 2004/03/17 22:23:13 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.2 2004/03/20 17:41:38 leonardop Exp $
+
+  20 Mar 2004; L. Boshell <leonardop@gentoo.org> dasher-3.2.1.ebuild:
+  Marked stable on x86.
 
   13 Mar 2004; foser <foser@gentoo.org> metadata.xml :
   Maintainership to gnome-accessibility
