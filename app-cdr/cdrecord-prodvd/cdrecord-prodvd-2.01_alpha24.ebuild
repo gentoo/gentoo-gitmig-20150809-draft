@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_alpha24.ebuild,v 1.4 2004/01/30 03:13:55 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_alpha24.ebuild,v 1.5 2004/02/07 03:03:10 pylon Exp $
 
 X86_FILENAME="cdrecord-prodvd-2.01a24-i686-pc-linux-gnu"
 
@@ -10,7 +10,7 @@ SRC_URI="x86? ( ftp://ftp.berlios.de/pub/cdrecord/ProDVD/${X86_FILENAME} )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=app-cdr/cdrtools-2.01_alpha24"
 
