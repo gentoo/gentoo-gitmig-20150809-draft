@@ -1,4 +1,14 @@
-MD5 1815f82d92c70a923455f12170b09d00 ChangeLog 741
-MD5 600e1dec3e119cf5decb1965af1535e5 bplay-0.991.ebuild 677
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c1da23f8e7a002641ac07496fc2b2fde ChangeLog 839
+MD5 0d810be7f9c70d3109ac7a26578947b4 bplay-0.991.ebuild 684
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 456f4e1dc90197fd9d52549fbc1913fe files/digest-bplay-0.991 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBorJAArHZZzCEUG0RArgqAJ0chC83oNSZgTMFeIz8NGtl4oPm/wCeLYqA
+cO/jy/yUcL9wRhynRg+KSWw=
+=rXZP
+-----END PGP SIGNATURE-----

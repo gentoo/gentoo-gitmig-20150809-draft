@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audiocompress
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.9 2004/09/03 09:48:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.10 2004/11/23 03:41:51 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  audiocompress-1.5.1.ebuild:
+  -sparc
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   audiocompress-1.5.1.ebuild:
