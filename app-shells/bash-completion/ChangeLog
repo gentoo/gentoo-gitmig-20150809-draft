@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.30 2003/02/18 10:07:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.31 2003/03/13 18:34:20 doctomoe Exp $
+
+  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> bash-completion-20021231.ebuild:
+  Marked ppc stable
 
 *bash-completion-20030209 (17 Feb 2003)
 
