@@ -1,8 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.27 2004/05/25 23:57:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.28 2004/05/26 00:37:15 mr_bones_ Exp $
 
-  25 May 2004; Michael Sterrett <mr_bones_@gentoo.org> :
+*sqlite-2.8.3 (25 May 2004)
+
+  25 May 2004; Michael Sterrett <mr_bones_@gentoo.org> sqlite-2.8.3.ebuild:
   restore sqlite-2.8.3 for ppc
 
   28 Mar 2004; Guy Martin <gmsoft@gentoo.org> sqlite-2.8.11.ebuild:
