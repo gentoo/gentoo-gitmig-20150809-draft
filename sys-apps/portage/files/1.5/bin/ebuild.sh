@@ -615,6 +615,23 @@ dyn_help() {
 	echo
 }
 
+#The following diefunc() and aliases come from Aron Griffis -- an excellent bash coder -- thanks! 
+
+diefunc() {
+	local funcname="$1" lineno="$2" exitcode="$3"
+	shift 3
+	echo >&2
+	echo "!!! ERROR: The ebuild did not complete successfully." >&2
+	echo "!!! Function $funcname, Line $lineno, Exitcode $exitcode" >&2
+	echo "!!! ${*:-(no error message)}" >&2
+	echo >&2
+	exit 1
+}
+
+alias die='diefunc "$FUNCNAME" "$LINENO" "$?"'
+alias assert='_retval=$?; [ $_retval = 0 ] || diefunc "$FUNCNAME" "$LINENO" "$_retval"'
+
+
 #if [ -e ${PEBUILD} ]
 #then
 #	source ${PEBUILD}
