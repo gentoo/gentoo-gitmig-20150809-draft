@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.84 2005/01/09 11:26:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.85 2005/01/21 11:28:04 corsair Exp $
+
+  21 Jan 2005; Markus Rothe <corsair@gentoo.org> proftpd-1.2.10-r2.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #78927
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> proftpd-1.2.10-r1.ebuild,
   proftpd-1.2.10-r2.ebuild:
