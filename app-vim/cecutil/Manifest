@@ -1,4 +1,16 @@
-MD5 a3205ff4d893734cb064c60d471a4fa5 ChangeLog 669
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 016208560d33fc4be062bcdd783340b3 cecutil-3.ebuild 557
+MD5 ef098668d9a2d1ada04a6d8f79c503b4 ChangeLog 790
+MD5 6fb7c008bdb0673702e8e7ca21f3069e cecutil-4.ebuild 960
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 8840159f3e78e32a0a4715e6546ca0b7 files/digest-cecutil-3 60
+MD5 4e2527502d264bfb0e8aa278c10c9687 files/digest-cecutil-4 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB8S/pLLFUmVNQ7rkRAsRSAJ9cCQYLuvEU2PVycgWDJLJ6poLs/gCfXTby
+g50JSGw3SV6cDbuwAuewRrc=
+=L3VY
+-----END PGP SIGNATURE-----
