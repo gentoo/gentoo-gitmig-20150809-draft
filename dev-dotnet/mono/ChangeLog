@@ -1,6 +1,6 @@
-# ChangeLog for dev-lang/mono
+# ChangeLog for dev-dotnet/mono
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.1 2003/07/25 00:12:47 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.2 2003/07/26 07:40:30 vapier Exp $
 
 *mono-0.25 (24 Jul 2003)
 
