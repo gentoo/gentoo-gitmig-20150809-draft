@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.82 2004/11/12 00:12:22 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.83 2004/11/17 21:02:55 gregkh Exp $
+
+*udev-045 (17 Nov 2004)
+
+  17 Nov 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-045.ebuild:
+  045 release (just a rules file update to fix bugs caused by the 044 release,
+  sorry about that...)
 
   11 Nov 2004; Travis Tilley <lv@gentoo.org> udev-043.ebuild:
   stable on amd64
