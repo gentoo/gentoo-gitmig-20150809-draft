@@ -1,8 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.7 2002/12/13 19:05:47 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.8 2002/12/14 19:38:32 method Exp $
 
 *ffmpeg-0.4.5.20021212 (13 Dec 2002)
+
+  14 Dec 2002; Joshua Brindle <method@snu.edu> ffmpeg-0.4.5.20021212.ebuild :
+  Changing url to reflect where author moved his.
   
   13 Dec 2002; Bryon Roche <kain@gentoo.org> ffmpeg-0.4.5.20021212.ebuild :
   ffmpeg isn't REALLY x86 specific.  Giving ppc and sparc a nice big ~.
