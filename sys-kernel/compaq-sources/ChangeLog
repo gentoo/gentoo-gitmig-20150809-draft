@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/compaq-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/ChangeLog,v 1.12 2004/06/26 15:39:51 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/ChangeLog,v 1.13 2004/07/09 14:18:39 plasmaroo Exp $
+
+*compaq-sources-2.4.9.32.7-r8 (09 Jul 2004)
+
+  09 Jul 2004; <plasmaroo@gentoo.org> -compaq-sources-2.4.9.32.7-r7.ebuild,
+  +compaq-sources-2.4.9.32.7-r8.ebuild,
+  +files/compaq-sources-2.4.9.32.7.CAN-2004-0497.patch:
+  Patched for attribute vulnerabilities, bug #56479.
 
   26 Jun 2004; Jon Hood <squinky86@gentoo.org>
   compaq-sources-2.4.9.32.7-r7.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r7.ebuild,v 1.3 2004/06/26 15:39:51 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r8.ebuild,v 1.1 2004/07/09 14:18:39 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -31,7 +31,7 @@ src_unpack() {
 	local kernel_rpm="kernel-source-${KV}.alpha.rpm"
 	cd ${WORKDIR}
 
-	ebegin "Unpacking Distribution RPM..."
+	ebegin "Unpacking Distribution RPM"
 
 	# agriffis' fast+efficient rpm extraction method from
 	# the dev-lang/ccc ebuild.
@@ -60,6 +60,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${P}.do_brk.patch || die "Failed to patch do_brk() vulnerability!"
 	epatch ${FILESDIR}/${P}.I2C_Limits.patch || die "Failed to patch the I2C i2cdev_ioctl() kmalloc() bug!"
 	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
