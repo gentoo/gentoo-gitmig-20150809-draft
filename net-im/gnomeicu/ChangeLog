@@ -1,7 +1,12 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.4 2002/06/13 20:35:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.5 2002/06/28 01:51:40 spider Exp $
 
+
+gnomeicu-0.98.2-r3 (28 Jun 2002)
+  28 Jun 2002; Spider <spider@gentoo.org> gnomeicu-0.98.2-r3.ebuild :
+  moved the gnome-core dep to the new gnome-panel. keeping the gnome use flag since its nice :)
+   
 gnomeicu-0.98.2-r2 (13 Jun 2002)
   13 Jun 2002; Spider <spider@gentoo.org> gnomeicu-0.98.2-r2.ebuild :
   make a "gnome" useflag that depends on gnome-core. to have -gnome means you won't have the panel applet built, which is a good thing for gnome2
