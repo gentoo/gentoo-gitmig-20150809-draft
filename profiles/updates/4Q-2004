@@ -78,3 +78,4 @@ move app-sci/bioperl-run sci-biology/bioperl-run
 move app-sci/bioperl-pipeline sci-biology/bioperl-pipeline
 move app-sci/biopython sci-biology/biopython
 move app-sci/ecell sci-biology/ecell
+move app-sci/generic-genome-browser sci-biology/generic-genome-browser
