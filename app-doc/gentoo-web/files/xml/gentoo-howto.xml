@@ -1,17 +1,13 @@
 <?xml version='1.0'?>
-<!DOCTYPE guide PUBLIC "-//Gentoo//DTD Guide XML V1.0//EN"
-"/usr/share/sgml/gentoo/guide/guide.dtd">
 
 <guide>
 <title>Gentoo Linux HOWTO</title>
-
-<author title="Author" email="pete@gentoo.org">Peter Gavin</author>
-
+<author title="Author"><mail link="pete@gentoo.org">Peter Gavin</mail></author>
 <abstract>This document is a work in progress, and is constantly being
 updated and changed. It is by no means complete.  </abstract><!--  blah, blah, blah... (I'll fill this in later) -->
 
-<version>0.5</version>
-<date>1 Mar 2001</date>
+<version>0.51</version>
+<date>9 Apr 2001</date>
 
 <!--
 
@@ -37,8 +33,8 @@ VI. Package Dependencies
 -->
 
 
-<chapter link="portage_tree">
-<title>The Portage Tree</title>
+<chapter>
+<title>The Portage tree</title>
 
 <section>
 <title>Introduction</title>
@@ -48,9 +44,9 @@ and the second is the name of the package.
 </section>
 
 <section>
-<title> What (Not) to Put in the Portage Tree</title>
-<body><p>The portage tree should only include ebuild files, and other
-files in the 'files' directory for each package. No binary
+<title> What (not) to put in the Portage tree</title>
+<body><p>The Portage tree should only include ebuild files, and other
+files in the <path>files</path> directory for each package. Generally, no binary
 files should be placed in the portage tree. No files that can
 be downloaded from other sources (such as patches written by
 other people) should be put here. No patches you write
@@ -61,134 +57,137 @@ yourself should be compressed.
 <section>
 <title>Categories</title>
 <body><p>The categories are defined as follows:</p>
-<ul>
-<li>app-admin - non-critical system administration utilities
-</li><li>app-arch - non-critical archival/compression utilities
-</li><li>app-cdr - CD recording utilities
-</li><li>app-doc - application documentation
-</li><li>app-editors - non-critical text editors
-</li><li>app-emulation - packages for emulating other systems/OSes
-</li><li>app-misc - applications that don't fit anywhere else
-</li><li>app-office - office-type (word processing, spreadsheet, etc.)
-                packages
-</li><li>app-shells - non-critical shells and command interpreters
-</li><li>app-text - text processing, spell checkers, and document
-                formatting packages
-</li><li>dev-db - database libraries
-</li><li>dev-java - java classes/packages/etc.
-</li><li>dev-lang - compilers and interpreters for different languages
-</li><li>dev-libs - miscellaneous developer's libraries
-</li><li>dev-perl - perl modules
-</li><li>dev-python - python modules
-</li><li>dev-ruby - ruby modules
-</li><li>dev-util - various developers utilities
-</li><li>gnome-apps - applications for gnome
-</li><li>gnome-base - base gnome packages
-</li><li>gnome-libs - non-essential gnome libraries
-</li><li>gnome-office - office packages for gnome
-</li><li>kde-apps - applications for kde
-</li><li>kde-base - base kde packages
-</li><li>kde-i18n - kde internationalization packages
-</li><li>media-gfx - graphics related programs
-</li><li>media-libs - libraries for manipulating different media,
-                including accessing multimedia peripherals of your
-                computer (sound card, video card, etc.)
-</li><li>media-sound - programs related to sound, including cd-audio
-                and sound encoding
-</li><li>media-video - programs related to video, including video
-                codecs and players
-</li><li>net-analyzer - network usage statistics monitors/analyzers
-</li><li>net-dialup - network dialup clients and servers such as pppd
-</li><li>net-fs - network filesystems
-</li><li>net-ftp - ftp servers and clients
-</li><li>net-irc - irc servers and clients
-</li><li>net-libs - networking related libraries
-</li><li>net-mail - mtas and muas
-</li><li>net-misc - miscellaneous servers, clients, firewalls, etc.
-</li><li>net-nds - NIS/NIS+ and other name services
-</li><li>net-print - print servers and clients
-</li><li>net-www - http/www servers and clients
-</li><li>sys-apps - system-critical applications and utilities
-</li><li>sys-devel - base development packages, such as gcc and make
-</li><li>sys-kernel - linux kernels
-</li><li>sys-libs - system-critical libraries such as glibc
-</li><li>x11-base - xfree86 and xfree86 drivers for various video cards
-</li><li>x11-libs - widget sets and other x11 specific libraries
-</li><li>x11-terms - x11 terminal emulators
-</li><li>x11-wm - x11 window managers
-</li></ul>
+<table><tr><th>Category</th><th>Description</th></tr>
+<tr><ti><path>app-admin</path></ti><ti>non-critical system administration utilities</ti></tr>
+<tr><ti><path>app-arch</path></ti><ti>non-critical archival/compression utilities </ti></tr>
+<tr><ti><path>app-cdr</path></ti><ti> CD recording utilities </ti></tr>
+<tr><ti><path>app-doc</path></ti><ti>application documentation </ti></tr>
+<tr><ti><path>app-editors</path></ti><ti>non-critical text editors </ti></tr>
+<tr><ti><path>app-emulation</path></ti><ti>packages for emulating other systems/OSes </ti></tr>
+<tr><ti><path>app-misc</path></ti><ti>applications that don't fit anywhere else </ti></tr>
+<tr><ti><path>app-office</path></ti><ti>office-type (word processing, spreadsheet, etc.) packages </ti></tr>
+<tr><ti><path>app-shells </path></ti><ti>non-critical shells and command interpreters </ti></tr>
+<tr><ti><path>app-text  </path></ti><ti>text processing, spell checkers, and document formatting packages </ti></tr>
+<tr><ti><path>dev-db  </path></ti><ti>database libraries </ti></tr>
+<tr><ti><path>dev-java  </path></ti><ti>java classes/packages/etc.  </ti></tr>
+<tr><ti><path>dev-lang  </path></ti><ti>compilers and interpreters for different languages </ti></tr>
+<tr><ti><path>dev-libs  </path></ti><ti>miscellaneous developer's libraries </ti></tr>
+<tr><ti><path>dev-perl  </path></ti><ti>perl modules </ti></tr>
+<tr><ti><path>dev-python  </path></ti><ti>python modules </ti></tr>
+<tr><ti><path>dev-ruby </path></ti><ti>ruby modules </ti></tr>
+<tr><ti><path>dev-util </path></ti><ti>various developers utilities </ti></tr>
+<tr><ti><path>gnome-apps  </path></ti><ti>applications for GNOME </ti></tr>
+<tr><ti><path>gnome-base  </path></ti><ti>base GNOME packages </ti></tr>
+<tr><ti><path>gnome-libs  </path></ti><ti>non-essential GNOME libraries </ti></tr>
+<tr><ti><path>gnome-office </path></ti><ti>office packages for gnome </ti></tr>
+<tr><ti><path>kde-apps  </path></ti><ti>applications for KDE </ti></tr>
+<tr><ti><path>kde-base  </path></ti><ti>base KDE packages </ti></tr>
+<tr><ti><path>kde-i18n  </path></ti><ti>KDE internationalization packages </ti></tr>
+<tr><ti><path>media-gfx  </path></ti><ti>graphics-related programs </ti></tr>
+<tr><ti><path>media-libs  </path></ti><ti>  libraries for manipulating different media, including accessing multimedia peripherals of your computer (sound card, video card, etc.) </ti></tr>
+<tr><ti><path>media-sound  </path></ti><ti>programs related to sound, including cd-audio and sound encoding </ti></tr>
+<tr><ti><path>media-video </path></ti><ti>programs related to video, including video codecs and players </ti></tr>
+<tr><ti><path>net-analyzer </path></ti><ti>network usage statistics monitors/analyzers </ti></tr>
+<tr><ti><path>net-dialup </path></ti><ti>network dialup clients and servers such as pppd </ti></tr>
+<tr><ti><path>net-fs </path></ti><ti>network filesystems </ti></tr>
+<tr><ti><path>net-ftp </path></ti><ti>ftp servers and clients </ti></tr>
+<tr><ti><path>net-irc </path></ti><ti>irc servers and clients </ti></tr>
+<tr><ti><path>net-libs </path></ti><ti>networking-related libraries </ti></tr>
+<tr><ti><path>net-mail </path></ti><ti>MTAs and MUAs </ti></tr>
+<tr><ti><path>net-misc </path></ti><ti>miscellaneous servers, clients, firewalls, etc. </ti></tr>
+<tr><ti><path>net-nds </path></ti><ti>NIS/NIS+ and other network directory services </ti></tr>
+<tr><ti><path>net-print </path></ti><ti>print servers and clients </ti></tr>
+<tr><ti><path>net-www </path></ti><ti>http/www servers and clients </ti></tr>
+<tr><ti><path>sys-apps </path></ti><ti>system-critical applications and utilities </ti></tr>
+<tr><ti><path>sys-devel </path></ti><ti>base development packages, such as gcc and make </ti></tr>
+<tr><ti><path>sys-kernel </path></ti><ti>Linux kernels and kernel source packages </ti></tr>
+<tr><ti><path>sys-libs </path></ti><ti>system-critical libraries such as glibc </ti></tr>
+<tr><ti><path>x11-base </path></ti><ti>base X packages, such as XFree86 and drivers for various video cards </ti></tr>
+<tr><ti><path>x11-libs </path></ti><ti>widget sets and other X-specific libraries</ti></tr>
+<tr><ti><path>x11-terms </path></ti><ti>X-based terminal emulators </ti></tr>
+<tr><ti><path>x11-wm </path></ti><ti>X window managers </ti></tr>
+</table>
 </body>
 </section>
 
 <section>
 <title>The files Directory</title>
-<body><p>Under each package subdirectory is a 'files' directory. You
+<body><p>Under each package subdirectory is a <path>files</path> directory. You
 should place any patches, configuration files, and other
 auxillary files your package might require in this
 directory. Patches you create yourself just to get your
-package to build should be called '${PF}-gentoo.diff'. You
-should not compress these diffs, since 1) they should not be big
-enough to require compressing, and 2) cvs does not play well
+package to build should be called <path>${PF}-gentoo.diff</path>. You
+should not compress these diffs, since they should not be big
+enough to require compressing, and cvs does not play well
 with binary files.
-</p><p>Please add a suffix or prefix such as ${PVR} to the tail of every file you put into
-the files directory, so that the files used for each
+</p><p>Please add a suffix or prefix such as <path>${PVR}</path> to the tail of every file you put into
+the <path>files</path> directory, so that the files used for each
 individual version of your ebuild scripts are distinguishable
 from one another, and so that the changes between different
 revisions are visible.
 </p><p>If you have many files that should go into the files
-directory, you should create a subdirectory files/${PVR}, and put all these files
+directory, you should create a subdirectory <path>files/${PVR}</path>, and put all these files
 in there. If you use this method, you do not need to suffix
 the names of the files in this directory with the ebuild version.
 </p></body>
 </section>
 </chapter>
 	
-<chapter link="ebuild_files">
-<title>.ebuild Files</title>
+<chapter>
+<title>ebuild files</title>
 <section>
 <title>Introduction</title>
-<body><p>.ebuild files are the basis for the entire portage
+<body><p>ebuild files are the basis for the entire portage
 system. They contain all the information required to build a
 package, and every installed package requires one of these
-files. .ebuild files are essentially just bash scripts that
+files. ebuild files are essentially just bash scripts that
 contain a few functions and environment variable settings. The
-ebuild command takes care of the rest of the details, such as
+<c>ebuild</c> command takes care of the rest of the details, such as
 merging the package into the filesystem and recording the
 package into the package database.
 </p></body>
 </section>
 
 <section>
-<title>Naming .ebuild Files</title>
-<body><p>.ebuild file names are in four sections:</p>
+<title>Naming ebuild Files</title>
+<body><p>ebuild file names are in four sections:</p>
 <p>The first section is the package name, which should only
 contain lowercase letters, the digits 0-9, and hyphen ('-')
 characters.
 </p><p>The second section is the version of the package, which should
 normally be the same as the version on the main source
-tarball. The version is normally made up of 2 or 3 numbers
-separated by periods, such as 1.2 or 4.5.2, and may have a
-single letter immidiately following the last digit, e.g., 1.4b
-or 2.6h. This letter should *not* be used to signify alpha or
-beta status for the package. There are 3 special suffixes that
-may be used for these packages: _alpha, _beta, and _pre. Each
+tarball. The version is normally made up of two or three numbers
+separated by periods, such as <c>1.2</c> or <c>4.5.2</c> (although very long period-separated number sequences <e>are</e> supported), and may have a
+single letter immediately following the last digit, e.g., <c>1.4b</c>
+or <c>2.6h</c>. This letter should <e>not</e> be used to signify alpha or
+beta status for the package. There are four special suffixes that
+may be used for these packages: <c>_alpha</c>, <c>_beta</c>, <c>_pre</c> and <c>_rc</c>. Each
 of these suffixes may be immediately followed my a number,
-e.g., 'linux-2.4.0_pre10'.
-</p><p>The third section of the package name is the revision number,
-which is specified by -r#, where '#' is a number,
-e.g. 'package-4.5.3-r3'. This revision number is independent of
+e.g., <c>linux-2.4.0_pre10</c>.  Assuming identical version parts, an <c>_alpha</c> package is
+older than <c>_beta</c>, <c>_beta</c> older than <c>_pre</c>, and <c>_pre</c> older than <c>_rc</c>.
+An <c>_rc</c> package is older than a package without an underscore prefix (i.e. <c>linux-2.4.0</c>),
+and <c>linux-2.4.0</c> is older than a package with a single letter prefix, i.e. <c>linux-2.4.0b</c>.
+As you would expect, the <c>linux-2.4.0b</c> package is considered older than <c>linux-2.4.0c</c>.
+All this versioning information is important, as Portage uses it internally to determine whether one package
+or ebuild is newer than another with the same category and name.
+</p>
+
+<p>The third section of the package name is the Gentoo Linux-specific <e>revision</e> number,
+which is specified by <c>-r#</c>, where <c>#</c> is a number,
+e.g. <c>package-4.5.3-r3</c>. This revision number is independent of
 the version of the source tarball, but if you need to make
-non-trivial changes to your .ebuild file, you should copy the
-.ebuild file to a new file with the revision number
+non-trivial changes to your ebuild file, you should copy the
+ebuild file to a new file with the revision number
 incremented by 1. Initial releases normally have no revision
-number, e.g. 'package-4.5.3'.
-</p><p>The fourth section of the .ebuild file name is always the
-.ebuild extension.
+number, e.g. <c>package-4.5.3</c> and default to a revision of zero.
+
+</p><p>The fourth section of the ebuild file name is always the
+<c>.ebuild</c> extension.
 </p></body>
 </section>
 
 <section>
-<title>Contents of an .ebuild File</title>
+<title>Contents of an ebuild File</title>
 <body><p>1. Variable Settings:
 </p><p>The first part of every ebuild file is made up of a number of
 variable settings. The variables you can set are:</p>
@@ -199,21 +198,21 @@ variable settings. The variables you can set are:</p>
 </li><li>DESCRIPTION - a short, one line description of your package
 </li><li>SRC_URI - the URIs for every source file in your package, separated by whitespace; normally the first one is something like "ftp://ftp.company.com/pub/somepackage/${A}"
 </li><li>HOMEPAGE - your package's homepage
-</li><li>DEPEND - build dependencies; see the section <a href="#dependencies">Package Dependencies</a>
-</li><li>RDEPEND - runtime dependencies; see the section <a href="#dependencies">Package Dependencies</a>
+</li><li>DEPEND - build dependencies; see the section <uri link="#dependencies">Package Dependencies</uri>
+</li><li>RDEPEND - runtime dependencies; see the section <uri link="#dependencies">Package Dependencies</uri>
 </li></ul>
 <p></p>
 </body>
 </section>
 
 <section>
-<title>Rules for Writing an .ebuild File</title>
-<body><p><!-- todo -->
+<title>Rules for writing an ebuild File</title>
+<body><p>(TODO)<!-- todo -->
 </p></body>
 </section>	
 </chapter>
 
-<chapter link="fs_locations">
+<chapter>
 <title>Filesystem Locations</title>
 
 <section>
@@ -222,28 +221,26 @@ variable settings. The variables you can set are:</p>
 <p>The filesystem standard used in Gentoo Linux is the FHS,
 short for Filesystem Heirarchy Standard, version 2.0. A simplified
 description of the standard is given here; for a complete
-specification go to <a href="http://www.ibiblio.org/pub/Linux/docs/fhs/">http://www.ibiblio.org/pub/Linux/docs/fhs/</a>.</p>
-<p></p>
+specification go to <uri>http://www.ibiblio.org/pub/Linux/docs/fhs/</uri>.</p>
 </body>
 </section>
 
 <section>
-<title>How to Fit Your Packages into the Filesystem</title>
-<body><p><!-- todo -->
+<title>How to fit your packages into the filesystem</title>
+<body><p>(TODO)<!-- todo -->
 </p></body>
 </section>
 </chapter>
 
-<chapter link="scripts_and_utils">
-<title>The Portage Scripts and Utilities</title>
+<chapter>
+<title>The Portage scripts and utilities</title>
 
 <section>
-<title>Public Scripts</title>
+<title>Public scripts</title>
 <body><p>These are scripts used by the system-administrator to install and remove packages, and maintain the package database.</p>
 <ul>
-<li>ebuild - the main engine of the Portage system; performs all major tasks such as unpacking, compiling, installing, merging, and unmerging packages
-</li><li>portage-maintain - compares the list of available and merged packages to show which can be upgraded
-</li><li>pkgmerge - merges a pre-packaged .tbz2 file for a package
+<li>ebuild - the main engine of the Portage system; performs all major tasks such as unpacking, compiling, installing, merging, and unmerging packages </li>
+<li>pkgmerge - merges a pre-packaged .tbz2 file for a package
 </li></ul>
 </body>
 </section>
@@ -306,18 +303,18 @@ specification go to <a href="http://www.ibiblio.org/pub/Linux/docs/fhs/">http://
 </section>
 </chapter>
 
-<chapter link="dependencies">
+<chapter>
 <title>Package Dependencies</title>
 
 <section>
-<title>Why Dependencies are Important</title>
-<body><p><!-- todo -->
+<title>Why dependencies are important</title>
+<body><p>(TODO)<!-- todo -->
 </p></body>
 </section>
 
 <section>
-<title>How to Specify Dependencies in Your .ebuild Files</title>
-<body><p><!-- todo -->
+<title>How to Specify Dependencies in Your ebuild Files</title>
+<body><p>(TODO)<!-- todo -->
 </p></body>
 </section>
 </chapter>
