@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.6 2005/01/09 09:16:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.7 2005/01/22 23:27:21 luckyduck Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -15,7 +15,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="a52 3dfx nls utf8 debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg faad dts flac mpeg2 vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi"
+IUSE="a52 3dfx nls utf8 debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg faad dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi"
 
 DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		cdio? ( >=dev-libs/libcdio-0.70 )
@@ -34,7 +34,7 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		a52? ( media-libs/a52dec )
 		dts? ( media-libs/libdts )
 		flac? ( media-libs/flac )
-		mpeg2? ( >=media-libs/libmpeg2-0.3.2 )
+		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
 		vorbis? ( media-libs/libvorbis )
 		theora? ( media-libs/libtheora )
 		X? ( virtual/x11 )
@@ -157,7 +157,7 @@ src_compile () {
 	$(use_enable faad) \
 	$(use_enable a52) \
 	$(use_enable dts) \
-	$(use_enable mpeg2 libmpeg2) \
+	$(use_enable mpeg libmpeg2) \
 	$(use_enable ggi) \
 	$(use_enable 3dfx glide) \
 	${myconf} \
