@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/openwrt-cvs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/openwrt-cvs/ChangeLog,v 1.1 2004/08/04 06:56:16 solar Exp $
+
+*openwrt-cvs-20040705 (04 Aug 2004)
+
+  04 Aug 2004; <solar@gentoo.org> metadata.xml, openwrt-cvs-20040705.ebuild:
+  Initial commit of the OpenWrt linux firmware distribution for the Linksys
+  WRT54G.
+
