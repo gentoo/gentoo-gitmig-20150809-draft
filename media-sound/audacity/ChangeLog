@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.9 2003/02/12 07:24:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.10 2003/02/13 05:21:54 raker Exp $
 
 *audacity-1.1.1-r1 (30 Jan 2003)
+
+  12 Feb 2003; Nick Hadaway <raker@gentoo.org> audacity-1.1.1-r1.ebuild,
+  files/basecfg-1.1.1 :
+  Added a very basic configuration so when building against wxGTK,
+  starting it doesn't cause a segfault.
 
   04 Feb 2003; Nick Hadaway <raker@gentoo.org> audacity-1.1.1-r1.ebuild :
   I have now tested audacity with wxGTK-2.4.0 and it works great.
