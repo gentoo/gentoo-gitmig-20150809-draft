@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.14 2003/06/08 21:33:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.15 2003/06/12 08:56:37 liquidx Exp $
+
+*ettercap-0.6.10-r1 (12 Jun 2003)
+
+  12 Jun 2003; Alastair Tse <liquidx@gentoo.org> ettercap-0.6.10-r1.ebuild:
+  disabled gtk check (#22642) and fixed ettercap DATADIR to point to /etc
+  (#22649)
 
   08 Jun 2003; Alastair Tse <liquidx@gentoo.org> ettercap-0.6.10.ebuild:
   added warning about needing to regenerate your SSL certificate
