@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lanius@gentoo.org> (11 Jan 2004)
+# force downgrade
+>=x11-libs/openmotif-2.2.2
+
 # <robbat2@gentoo.org> (10 Jan 2004)
 # blocked for testing
 =net-mail/qmail-ldap-1.03-r3
@@ -240,15 +244,6 @@ x11-misc/med
 # <tseng@gentoo.org> (11 Oct 2003)
 # Mask pending a solution to bsetroot
 =x11-misc/commonbox-utils-0.5
-
-# <lanius@gentoo.org> (10 Oct 2003)
-# updated 24 Nov
-# motif cleanups
-=x11-libs/openmotif-2.2.2-r3
-=x11-libs/openmotif-2.1.30-r2
-=x11-libs/openmotif-2.1.30-r3
-=x11-libs/lesstif-0.93.91
-=x11-libs/lesstif-0.93.94
 
 # <hanno@gentoo.org> (7 Oct 2003)
 # Old and broken cvs-releases of sidplay, to be removed soon.
