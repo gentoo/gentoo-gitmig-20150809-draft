@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/magicpoint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/ChangeLog,v 1.6 2003/02/12 05:04:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/ChangeLog,v 1.7 2003/08/06 02:11:54 usata Exp $
+
+*magicpoint-1.10a (06 Aug 2003)
+
+  06 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a.ebuild,
+  files/50mgp-mode-gentoo.el, files/magicpoint-1.10a-gentoo.diff:
+  Version bump.  Added cjk and emacs USE flags.  Upstream now supports
+  Xft2 rendering engine.  However, it is not enabled because there is
+  some problem with Xft2.  Included default font configuration file. 
+  Added support scripts and sample presentation files.
 
 *magicpoint-1.09a-r1 (12 Apr 2002)
 
