@@ -33,7 +33,7 @@
 *>=sys-apps/portage-2.0.45
 *>=sys-devel/binutils-2.14.90.0.2
 *>=sys-devel/gcc-3.2.2
-*>=sys-libs/glibc-2.3.2-r2
+*>=sys-libs/glibc-2.3.2-r1
 *>=sys-kernel/mips-headers-2.4.21
 *>=sys-devel/gnuconfig-20030708
 
