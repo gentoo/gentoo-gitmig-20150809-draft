@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.99 2005/02/11 01:32:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.100 2005/02/11 01:44:48 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -43,12 +43,10 @@ kde-base/kdeaddons kde-base/kate-xmltools
 kde-base/kdeaddons kde-base/kdeaddons-docs-kate-plugins
 kde-base/kdeaddons kde-base/kdeaddons-docs-kicker-applets
 kde-base/kdeaddons kde-base/kdeaddons-docs-konq-plugins
-kde-base/kdeaddons kde-base/kfile-cert
 kde-base/kdeaddons kde-base/kfile-desktop
 kde-base/kdeaddons kde-base/kfile-folder
 kde-base/kdeaddons kde-base/kfile-html
 kde-base/kdeaddons kde-base/kfile-lnk
-kde-base/kdeaddons kde-base/kfile-mhtml
 kde-base/kdeaddons kde-base/kfile-txt
 kde-base/kdeaddons kde-base/kdeaddons-kfile-plugins
 kde-base/kdeaddons kde-base/kicker-kbinaryclock
