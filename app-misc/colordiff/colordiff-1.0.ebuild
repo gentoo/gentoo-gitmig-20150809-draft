@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.ebuild,v 1.3 2002/12/02 08:23:47 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Colorizes output of diff"
