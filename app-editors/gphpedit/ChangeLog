@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/gphpedit
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.1 2003/07/20 15:30:59 liquidx Exp $
+
+*gphpedit-0.4.3 (20 Jul 2003)
+
+  20 Jul 2003; Alastair Tse <liquidx@gentoo.org> gphpedit-0.4.3.ebuild:
+  initial commit. contributed by TGL <degrenier@easyconnect.fr> and Mike
+  Gardiner <driver@iinet.net.au>
+
