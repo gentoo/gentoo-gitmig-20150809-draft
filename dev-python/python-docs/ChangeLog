@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.25 2004/03/14 21:04:08 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.26 2004/03/29 22:43:41 kloeri Exp $
+
+*python-docs-2.3.3-r1 (30 Mar 2004)
+
+  30 Mar 2004; Bryan Østergaard <kloeri@gentoo.org>
+  python-docs-2.3.3-r1.ebuild:
+  Fix install path, bug #45753.
 
   14 Mar 2004; Tom Gall <tgall@gentoo.org> python-docs-2.2.3.ebuild:
   stable on ppc64
