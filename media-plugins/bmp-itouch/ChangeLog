@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/bmp-itouch
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/ChangeLog,v 1.4 2004/09/20 15:43:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/ChangeLog,v 1.5 2004/10/01 19:11:05 chainsaw Exp $
+
+*bmp-itouch-0.1.4.3 (01 Oct 2004)
+
+  01 Oct 2004; Tony Vroon <chainsaw@gentoo.org>
+  -bmp-itouch-0.1.4.2-r1.ebuild, +bmp-itouch-0.1.4.3.ebuild:
+  Version bump. No more patching required.
 
   20 Sep 2004; Tony Vroon <chainsaw@gentoo.org>
   +files/0.1.4.2-keyboard-config.patch:

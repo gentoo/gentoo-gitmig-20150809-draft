@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/bmp-itouch-0.1.4.2-r1.ebuild,v 1.1 2004/09/04 20:00:11 chainsaw Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/bmp-itouch-0.1.4.3.ebuild,v 1.1 2004/10/01 19:11:05 chainsaw Exp $
 
 IUSE=""
 
-DESCRIPTION="BMP plugin for multimedia keys on Logitech keyboards and others alike"
+DESCRIPTION="BMP plugin for the extra keys on multimedia keyboards"
 HOMEPAGE="http://bmp-itouch.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
@@ -18,15 +16,7 @@ DEPEND="media-sound/beep-media-player
 	sys-devel/autoconf
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/${PV}-keyboard-config.patch
-}
 src_compile() {
-	ebegin "Rebuilding configure script"
-	autoconf || die
-	autoheader -Wno-obsolete || die
-	eend
 	econf || die
 	emake || die
 }
