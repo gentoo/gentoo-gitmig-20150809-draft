@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_dav
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.17 2004/09/16 16:31:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.18 2004/11/04 08:16:46 urilith Exp $
+
+  04 Nov 2004; Michael Tindal <urilith@gentoo.org> mod_dav-1.0.3-r1.ebuild:
+  IUSE fixes.
 
   16 Sep 2004; Olivier Crete <tester@gentoo.org> mod_dav-1.0.3-r2.ebuild:
   Marking stable on x86 per security bug #63948
