@@ -1,40 +1,46 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.39 2004/03/12 18:56:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.40 2004/03/21 15:38:01 plasmaroo Exp $
+
+  21 Mar 2004; Tim Yamin <plasmaroo@gentoo.org>
+  genkernel-3.0.2_rc1.ebuild:
+  Version bump. Closes bugs #34948, #37371, #41129, #41166,
+  #42725, #42815, #44127, #44556, #44601.
 
   12 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
   genkernel-3.0.1_rc2.ebuild:
-  more cleanups and point SRC_URI to mirrors
+  More cleanups and point SRC_URI to mirrors.
 
   09 Mar 2004; Seemant Kulleen <seemant@gentoo.org> genkernel-3.0.1.ebuild,
   genkernel-3.0.1_beta10.ebuild, genkernel-3.0.1_beta11.ebuild,
   genkernel-3.0.1_beta12.ebuild, genkernel-3.0.1_rc1.ebuild,
   genkernel-3.0.ebuild:
-  removed crufty versions, adjusted SRC_URI to gentoo mirrors, and fixed some
-  syntax
+  Removed crufty versions, adjusted SRC_URI to gentoo mirrors, and fixed some
+  syntax.
 
   01 Mar 2004; Brad House <brad_mssw@gentoo.org> genkernel-3.0.1.ebuild:
-  break digests for genkernel, bad version was uploaded
+  Break digests for genkernel, bad version was uploaded.
 
 *genkernel-3.0.1 (27 Feb 2004)
 
-  27 Feb 2004; Daniel Robbins <drobbins@gentoo.org> New release with bootsplash
-  fixes (now uses the "default" bootsplash symlink.)
+  27 Feb 2004; Daniel Robbins <drobbins@gentoo.org> 
+  New release with bootsplash fixes 
+  (now uses the "default" bootsplash symlink.)
 
 *genkernel-3.0.1_rc2 (25 Feb 2004)
 
   25 Feb 2004; Brad House <brad_mssw@gentoo.org> genkernel-3.0.1_rc2.ebuild:
-  version bump, livecd error message fix, alpha fix, reiserfs now static in 2.4
-  x86 kernel
+  Version bump, livecd error message fix, alpha fix, reiserfs now static in 2.4
+  x86 kernel.
 
 *genkernel-3.0.1_rc1 (22 Feb 2004)
 
   22 Feb 2004; Brad House <brad_mssw@gentoo.org> genkernel-3.0.1_rc1.ebuild:
-  gcloop fixes, and amd64 kernel config updates
+  Gcloop fixes, and amd64 kernel config updates.
 
   14 Feb 2004; Brad House <brad_mssw@gentoo.org>
   genkernel-3.0.1_beta12.ebuild:
-  add ppc keyword
+  Added the ppc keyword.
 
 *genkernel-3.0.1_beta12 (14 Feb 2004)
 
