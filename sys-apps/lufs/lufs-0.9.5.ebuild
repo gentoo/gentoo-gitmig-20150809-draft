@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.5.ebuild,v 1.1 2003/04/05 01:00:39 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/lufs-0.9.5.ebuild,v 1.2 2003/04/26 13:22:17 wmertens Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="User-mode filesystem implementation"
@@ -16,6 +16,7 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 
+	# Fix some sandbox failures
 	cd ${S}/lufsd
 	mv Makefile.in Makefile.in.orig
 	sed -e 's/install-exec-hook//' Makefile.in.orig > Makefile.in || die
@@ -25,6 +26,10 @@ src_unpack() {
 	sed -e 's/install-exec-hook//' Makefile.in.orig > Makefile.in || die
 
 	cd ${S}/kernel/Linux/2.4
+	mv Makefile.in Makefile.in.orig
+	sed -e 's/install-data-hook//' Makefile.in.orig > Makefile.in || die
+
+	cd ${S}/kernel/Linux/2.5
 	mv Makefile.in Makefile.in.orig
 	sed -e 's/install-data-hook//' Makefile.in.orig > Makefile.in || die
 }

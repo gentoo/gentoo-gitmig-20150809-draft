@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lufs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.9 2003/04/05 01:00:39 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.10 2003/04/26 13:22:17 wmertens Exp $
+
+  26 Apr 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.5.ebuild :
+  Fix sandbox failure for kernel 2.5. No revision bump because it just didn't
+  build for 2.5. Fixes #18740, thanks to Jedi/Sector One.
 
 *lufs-0.9.5 (05 Apr 2003)
   05 Apr 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.5.ebuild :
