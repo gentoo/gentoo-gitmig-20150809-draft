@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libdvb/libdvb-0.2.1.ebuild,v 1.1 2003/03/07 14:23:32 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libdvb/libdvb-0.2.1.ebuild,v 1.2 2003/03/07 15:06:22 lordvan Exp $
 
 DESCRIPTION="mpegtools package for manipulation of various MPEG file formats"
 HOMEPAGE="http://www.metzlerbros.org/dvb/"
@@ -24,6 +24,11 @@ src_install() {
     sed s%/usr/local/lib/%${D}/usr/lib/% ${S}/Makefile_orig > ${S}/Makefile
     dodir /usr/lib
     make install || die
+
+    # install headers
+    dodir /usr/include/libdvb
+    insinto /usr/include/libdvb
+    doins ${S}/*.h ${S}/*.hh
     
     # docs
     dodoc ${S}/README
