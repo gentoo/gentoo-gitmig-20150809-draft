@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2x
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.7 2003/12/13 17:54:36 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.8 2004/03/14 00:40:09 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> x2x-1.27.ebuild:
+  Added ~mips keyword.
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> x2x-1.27.ebuild:
   mark stable on amd64
