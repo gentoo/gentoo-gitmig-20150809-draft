@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3749 2005/03/22 13:02:28 axxo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3750 2005/03/22 20:09:56 carlo Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Carsten Lohrke <carlo@gentoo.org (22 March 2005)
+# Quanta crashes #86284
+=kde-base/quanta-3.4.0
+=kde-base/kdewebdev-meta-3.4.0
+=kde-base/kdewebdev-3.4.0
 
 # Rob Holland <tigger@gentoo.org> (21 March 2005)
 # marked due to bad code #84659
