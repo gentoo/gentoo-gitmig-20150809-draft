@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.20 2004/11/09 15:17:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.21 2004/11/09 22:15:45 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -166,7 +166,69 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-bio2jack.patch
 }
 
+linguas_warn() {
+	ewarn "Language ${LANG[0]} or ${LANG_CC} not avaliable"
+	ewarn "Language set to English"
+	ewarn "If this is a mistake, please set the"
+	ewarn "First LINGUAS language to one of the following"
+	ewarn ""
+	ewarn "bg - Bulgarian"
+	ewarn "cz - Czech"
+	ewarn "de - German"
+	ewarn "dk - Swedish"
+	ewarn "el - Greek"
+	ewarn "en - English"
+	ewarn "es - Spanish"
+	ewarn "fr - French"
+	ewarn "hu - Hungarian"
+	ewarn "ja - Japanese"
+	ewarn "ko - Korean"
+	ewarn "mk - FYRO Macedonian"
+	ewarn "nl - Dutch"
+	ewarn "no - Norwegian"
+	ewarn "pl - Polish"
+	ewarn "pt_BR - Portuguese - Brazil"
+	ewarn "ro - Romanian"
+	ewarn "ru - Russian"
+	ewarn "sk - Slovak"
+	ewarn "tr - Turkish"
+	ewarn "uk - Ukranian"
+	ewarn "zh_CN - Chinese - China"
+	ewarn "zh_TW - Chinese - Taiwan"
+	export LINGUAS="en ${LINGUAS}"
+}
+
 src_compile() {
+
+	# have fun with LINGUAS variable
+	if [[ -n $LINGUAS ]]
+	then
+		# LINGUAS has stuff in it, start the logic
+		LANG=( $LINGUAS )
+		if [ -e ${S}/help/help_mp-${LANG[0]}.h ]
+		then
+			einfo "Setting MPlayer messages to language: ${LANG[0]}"
+		else
+			LANG_CC=${LANG[0]}
+			if [ ${#LANG_CC} -ge 2 ]
+			then
+				LANG_CC=${LANG_CC:0:2}
+				if [ -e ${S}/help/help_mp-${LANG_CC}.h ]
+				then
+					einfo "Setting MPlayer messages to language ${LANG_CC}"
+					export LINGUAS="${LANG_CC} ${LINGUAS}"
+				else
+					linguas_warn
+				fi
+			else
+				linguas_warn
+			fi
+		fi
+	else
+		# sending blank LINGUAS, make it default to en
+		einfo "No LINGUAS given, defaulting to English"
+		export LINGUAS="en ${LINGUAS}"
+	fi
 
 	# let's play the filtration game!  MPlayer hates on all!
 	filter-flags -fPIE -fPIC -fstack-protector -fforce-addr -momit-leaf-frame-pointer -msse2 -falign-functions
