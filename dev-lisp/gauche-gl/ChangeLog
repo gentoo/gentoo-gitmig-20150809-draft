@@ -1,6 +1,14 @@
 # ChangeLog for dev-lisp/gauche-gl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gl/ChangeLog,v 1.2 2003/02/12 06:11:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gl/ChangeLog,v 1.3 2003/12/31 04:38:57 george Exp $
+
+*gauche-gl-0.3.1 (30 Dec 2003)
+
+  30 Dec 2003; George Shapovalov <george@gentoo.org> gauche-gl-0.3.1.ebuild, files/{destdir-gentoo.diff, nvidia-headers-gentoo.diff} :
+  new version (#36666),
+  thanks to Andrei Barbu <teval@myrealbox.com> for report
+  Substantially reworked to use base.eclass
+  
 
 *gauche-gl-0.1.3 (19 Jul 2002)
 

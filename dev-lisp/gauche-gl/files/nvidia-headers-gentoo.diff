@@ -1,0 +1,12 @@
+diff -urN --exclude '*.c' --exclude 'config.*' --exclude Makefile.in --exclude Makefile Gauche-gl/src/gl-syms.stub Gauche-gl.tainted/src/gl-syms.stub
+--- Gauche-gl.vanilla/src/gl-syms.stub	Fri Jul 19 05:12:48 2002
++++ Gauche-gl/src/gl-syms.stub	Sat Jul 20 00:51:45 2002
+@@ -17,6 +17,8 @@
+ 
+ "
+ #include \"gauche-gl.h\"
++#undef GL_EXT_texture_object
++#include <GL/glext.h>
+ "
+ 
+ ;;=============================================================
