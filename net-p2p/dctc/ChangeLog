@@ -1,10 +1,10 @@
 # ChangeLog for net-p2p/dctc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.18 2003/07/24 00:17:55 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.19 2003/07/24 00:23:04 agenkin Exp $
 
-*dctc-0.85.3 (07 Jun 2003)
+*dctc-0.85.3 (23 Jul 2003)
 
-  07 Jun 2003; Arcady Genkin <agenkin@gentoo.org> dctc-0.85.4.ebuild:
+  23 Jul 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bumped.
 
 *dctc-0.85.3 (07 Jun 2003)
