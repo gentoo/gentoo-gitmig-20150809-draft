@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 
 DESCRIPTION="The LDP howtos, pdf format."
 
-SRC_URI="http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/pdf/${P}-${V}.tar.gz"
+SRC_URI="http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/pdf/${P}-${PV}.tar.gz"
 
 HOMEPAGE="http://www.linuxdoc.org"
 
