@@ -1,6 +1,15 @@
 # ChangeLog for net-www/orion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.2 2003/03/11 11:58:01 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.3 2003/03/13 22:27:40 absinthe Exp $
+
+*orion-1.5.2b-r1 (13 Mar 2003)
+
+  13 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
+
+  Log directory gets properly created now.  init.d/conf.d is fixed.
+  Improved post_install notices.  Changed JDK requirement to virtual/jdk-1.4.
+  /opt/orion/persistence/ is now created properly.  Added necessary delay to 
+  'stop' in /etc/init.d/orion.
 
   11 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
 

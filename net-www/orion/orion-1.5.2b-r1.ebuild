@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-1.5.2b.ebuild,v 1.1 2003/03/11 11:54:15 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-1.5.2b-r1.ebuild,v 1.1 2003/03/13 22:27:40 absinthe Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -56,13 +56,24 @@ src_install() {
 	doins ${FILESDIR}/${PV}/start_orion.sh
 	doins ${FILESDIR}/${PV}/stop_orion.sh
 	
+	cp -a ${FILESDIR}/${PV}/orion.init ${S}/orion
 	insinto /etc/init.d
-	insopts -o orion -g orion -m0750
-	doins ${FILESDIR}/${PV}/orion.init
-	
+	insopts -m0750
+	doins ${S}/orion
+
+	cp -a ${FILESDIR}/${PV}/orion.conf ${S}/orion
 	insinto /etc/conf.d
-	insopts -o orion -g orion -m0750
-	doins ${FILESDIR}/${PV}/orion.conf
+	insopts -m0755
+	doins ${S}/orion
+
+	# CREATE DUMMY LOG & PERSISTENCE DIR
+	touch ${S}/stdout.log
+	touch ${S}/dummy
+	insinto /var/log/${PN}
+	insopts -o orion -g orion
+	doins ${S}/stdout.log
+	insinto /opt/${PN}/persistence
+	doins ${S}/dummy
 
 	# INSTALL EXTRA FILES
 	local dirs="applications database default-web-app demo lib persistence autoupdate.properties"
@@ -92,18 +103,31 @@ src_install() {
 
 pkg_postinst() {
 	einfo " "
+	einfo " NOTICE!  User account created:  orion"
+	einfo " Please set a password for this account!"
 	einfo " "
-        einfo " To set an administrative password, execute the"
-	einfo " following commands as user 'orion':"
+	einfo " Orion's home directory is: /opt/orion"
+	einfo " In this directory you will have all of your application data,"
+	einfo " settings and configurations."
+	einfo " "
+	einfo " Runtime settings, such as CLASSPATH and desired JDK are set"
+	einfo " in /etc/conf.d/orion"
+	einfo " "
+	einfo " Logs can be found in /var/log/orion/"
+	einfo " "
+	einfo " Executables and libraries are in /usr/share/${PN}/"
+	einfo " "
+	einfo " To set an administrative password, execute the following"
+	einfo " commands as user 'orion':"
 	einfo " \$ java -jar /usr/share/${PN}/lib/orion.jar -install"
-        einfo " "
-        einfo " "
+	einfo " "
 	einfo " To start/stop orion, use '/etc/init.d/orion' as root."
 	einfo " "
+	einfo " By default, Orion runs on port 8080.  You can change this"
+	einfo " value by editing /opt/orion/config/default-web-site.xml."
 	einfo " "
-	einfo " To test Orion while it's running, point your web"
-	einfo " browser to:  http://localhost:8080/"
-	einfo " "
+	einfo " To test Orion while it's running, point your web browser to:"
+	einfo " http://localhost:8080/"
 	einfo " "
 	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
         sleep 10

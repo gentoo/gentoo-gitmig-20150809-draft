@@ -15,6 +15,7 @@ start()	{
 stop ()	{
 	ebegin "Stopping orion"
 	su - orion -c /opt/orion/sbin/stop_orion.sh
+	sleep 2
 	eend $?
 }
 
