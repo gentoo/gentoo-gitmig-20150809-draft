@@ -1,11 +1,15 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.40 2003/11/19 16:36:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.41 2003/11/23 08:24:56 usata Exp $
 
   14 Nov 2003; Brad House <brad_mssw@gentoo.org> w3m-0.4.2.ebuild:
   mark stable on amd64
 
 *w3m-0.4.2-r3 (14 Nov 2003)
+
+  23 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2-r3.ebuild,
+  files/w3m-async-dlpanel-gentoo.diff:
+  Added a patch to fix ordering of download list panel
 
   20 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2-r3.ebuild,
   files/w3m-async-gpm-gentoo.diff:
