@@ -1,4 +1,4 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Andreas Happe <andreashappe@subdimension.com>
 # based upon / copied from : x11-wm/ion by Author Doug Miller <orkim@kc.rr.com>
