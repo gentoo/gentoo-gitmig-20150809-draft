@@ -1,11 +1,21 @@
-MD5 c4141c9761475e5f5fa176873d3c4591 ChangeLog 2917
-MD5 9799c398155a7108a5de6e4a9e020b5f tclx-8.3-r1.ebuild 2064
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4fbbbe2c93af355334baada5794a88c9 tclx-8.3.5.ebuild 1851
 MD5 285c3551021e7c3643059be2c14f368d tclx-8.3.ebuild 1648
+MD5 9799c398155a7108a5de6e4a9e020b5f tclx-8.3-r1.ebuild 2064
 MD5 1e433c9ae0ffeed4f71f8c2c68e2ebad metadata.xml 310
-MD5 6532eba1db8c627a2611b6d36ee4b792 tclx-8.3.5.ebuild 1854
-MD5 3c218afaa0edc44f1195d0c013f7d85c files/digest-tclx-8.3 180
-MD5 1d4e6ad4bf55d13d432197bc480ac445 files/digest-tclx-8.3-r1 188
+MD5 c2fa55e2d515fba8203ff328d4e27842 ChangeLog 3006
 MD5 fa76370803a64a3cf2f0d01a5d1ac3b5 files/tclx-8.3-argv.patch 802
-MD5 92db3525521a7be527aaea89eb2aca51 files/tclx-8.3-makecfg.patch 10999
 MD5 f4af4334bd8c05af3b43ee89b4dfb03c files/tclx-8.3-varinit.patch 386
+MD5 1d4e6ad4bf55d13d432197bc480ac445 files/digest-tclx-8.3-r1 188
+MD5 92db3525521a7be527aaea89eb2aca51 files/tclx-8.3-makecfg.patch 10999
 MD5 d46f93a255785ed6c5b88a1a065da82d files/digest-tclx-8.3.5 194
+MD5 3c218afaa0edc44f1195d0c013f7d85c files/digest-tclx-8.3 180
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdVMGugEuf3OQ0akRAlDYAJ0fI+3EhPIPPQS3+Nz/GVeth2o1IQCgomtL
+hgyEuO5ssLkmre8tZqbHi9A=
+=bLv3
+-----END PGP SIGNATURE-----

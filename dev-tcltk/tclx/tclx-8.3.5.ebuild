@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.6 2004/10/19 10:01:00 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.5.ebuild,v 1.7 2004/10/19 17:46:24 kloeri Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/tclx/${PN}${PV}-src.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc alpha ~amd64"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-lang/tcl-8.4.6
