@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/streamtuner-python
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-python/ChangeLog,v 1.1 2004/04/09 05:04:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-python/ChangeLog,v 1.2 2004/04/09 14:18:53 dholm Exp $
+
+  09 Apr 2004; David Holm <dholm@gentoo.org> streamtuner-python-0.1.0.ebuild:
+  Added to ~ppc.
 
 *streamtuner-python-0.1.0 (08 Apr 2004)
 
