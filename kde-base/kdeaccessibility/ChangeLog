@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.50 2005/01/14 00:19:30 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.51 2005/01/14 23:17:05 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org>
+  kdeaccessibility-3.4.0_beta1.ebuild:
+  Added blocking dep on x11-misc/kmousetool, an older version of an app now
+  included here.
 
 *kdeaccessibility-3.4.0_beta1 (13 Jan 2005)
 
