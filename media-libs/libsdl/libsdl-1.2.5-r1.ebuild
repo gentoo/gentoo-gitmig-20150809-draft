@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.1 2003/01/19 22:40:11 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.2 2003/01/21 16:39:12 styx Exp $
 
-IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa directfb"
+IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 
 S="${WORKDIR}/SDL-${PV}"
 DESCRIPTION="Simple Direct Media Layer"
@@ -83,9 +83,9 @@ src_compile() {
 		&& myconf="${myconf} --enable-video-opengl" \
 		|| myconf="${myconf} --disable-video-opengl"
 
-	use directfb \
-		&& myconf="${myconf} --enable-video-directfb" \
-		|| myconf="${myconf} --disable-video-directfb"
+	#use directfb \
+	#	&& myconf="${myconf} --enable-video-directfb" \
+	#	|| myconf="${myconf} --disable-video-directfb"
 
 	use x86 \
 		&& myconf="${myconf} --enable-nasm" \
@@ -98,7 +98,7 @@ src_compile() {
 		myconf="${myconf} --disable-audio"
 	fi
 
-	if use X || use xv || use ggi || use aalib || use svga || use directfb || use fbcon || use opengl
+	if use X || use xv || use ggi || use aalib || use svga || use fbcon || use opengl
 	then
 		myconf="${myconf} --enable-video-dummy"
 	else

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.17 2003/01/08 21:54:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.18 2003/01/21 16:39:12 styx Exp $
+
+  21 Jan 2003; Joachim Blaabjerg <styx@gentoo.org> libsdl-1.2.5-r1.ebuild :
+
+  Remove all directfb support, as this causes circular deps.
 
   08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> libsdl-1.2.5.ebuild :
   
