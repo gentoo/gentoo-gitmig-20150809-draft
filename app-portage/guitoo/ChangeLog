@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/guitoo
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/ChangeLog,v 1.1 2004/10/24 22:05:54 motaboy Exp $
+
+*guitoo-0.47.0 (25 Oct 2004)
+
+  25 Oct 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +guitoo-0.47.0.ebuild:
+  New Ebuild. Thanks to Karim. Closes bug #58369
+
