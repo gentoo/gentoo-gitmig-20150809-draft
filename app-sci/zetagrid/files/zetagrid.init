@@ -1,8 +1,8 @@
+#!/sbin/runscript
+#
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/files/zetagrid.init,v 1.8 2003/03/01 16:57:18 tantive Exp $
-
-#!/sbin/runscript
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/files/zetagrid.init,v 1.9 2003/03/01 23:09:08 mholzer Exp $
 
 opts="${opts} progress"
 ZETADIR=/opt/zetagrid/
