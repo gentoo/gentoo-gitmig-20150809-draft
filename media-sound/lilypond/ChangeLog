@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.30 2004/11/03 02:30:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.31 2004/11/28 18:33:46 agriffis Exp $
+
+*lilypond-2.4.2 (28 Nov 2004)
+
+  28 Nov 2004; Aron Griffis <agriffis@gentoo.org> +lilypond-2.4.2.ebuild:
+  Bump to 2.4.2. Add DEPEND on ec-fonts-mftraced which requires dropping some
+  KEYWORDS for now. #69594
 
 *lilypond-2.2.6 (02 Nov 2004)
 
