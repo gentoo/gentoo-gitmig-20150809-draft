@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.27 2004/08/12 16:55:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.28 2004/08/13 22:30:27 mr_bones_ Exp $
 
 inherit gnome.org libtool
 
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	[ `use gtk` ] || econf_args="--with-gtk-prefix=/dev/null --disable-gtktest"
+	use gtk || econf_args="--with-gtk-prefix=/dev/null --disable-gtktest"
 	elibtoolize
 	econf --sysconfdir=/etc/imlib ${econf_args} || die
 	emake || die
