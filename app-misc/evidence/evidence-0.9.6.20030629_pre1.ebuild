@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20030629_pre1.ebuild,v 1.1 2003/06/30 04:18:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20030629_pre1.ebuild,v 1.2 2003/06/30 23:56:20 vapier Exp $
 
 inherit enlightenment eutils
 
 DESCRIPTION="GTK2 file-manager"
 HOMEPAGE="http://evidence.sourceforge.net/"
 
-LICENSE="as-is"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc"
 IUSE="${IUSE} perl X libao libmad oggvorbis id3 truetype"

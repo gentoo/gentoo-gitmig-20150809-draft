@@ -2,5 +2,5 @@ MD5 50a05a2589e9e1fee69274dcbed65eeb files/digest-evidence-0.9.6.20030629_pre1 8
 MD5 5429bbafbe264bdce537fe2f6f027622 files/digest-evidence-0.9.4.20030220-r2 77
 MD5 e43a7922d7bbbbc6a859880fdafbc173 files/evidence-info-direntry.patch 326
 MD5 a6dc1fd28575efdeb34319aa1bbf6389 ChangeLog 1403
-MD5 5c07262e3c0a7b51436eca7ca5203747 evidence-0.9.6.20030629_pre1.ebuild 2564
-MD5 4cd15fea0c3160ec53879de0cda0785a evidence-0.9.4.20030220-r2.ebuild 2205
+MD5 127c253dacbeaa7404e360f5d4af16b0 evidence-0.9.6.20030629_pre1.ebuild 2564
+MD5 f73fddc66a5ab2fbaafa2ea5c80ffea8 evidence-0.9.4.20030220-r2.ebuild 2204
