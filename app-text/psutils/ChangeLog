@@ -1,6 +1,9 @@
 # ChangeLog for app-text/psutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.5 2003/02/12 05:33:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.6 2003/05/23 23:10:28 agriffis Exp $
+
+  23 May 2003; Aron Griffis <agriffis@gentoo.org> psutils-1.17.ebuild:
+  Mark stable on alpha
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
