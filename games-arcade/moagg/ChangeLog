@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/moagg
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.9 2004/11/23 02:05:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.10 2004/12/21 14:13:24 josejx Exp $
+
+  22 Dec 2004; Joseph Jezak <josejx@gentoo.org> moagg-0.16.ebuild:
+  Marked ppc stable.
 
 *moagg-0.16 (22 Nov 2004)
 
