@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07.ebuild,v 1.8 2004/01/22 23:20:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.07.ebuild,v 1.9 2004/01/22 23:32:07 zul Exp $
 
 S=${WORKDIR}/uucp-1.07	# This should be a .2 bug the package is messed
 DESCRIPTION="Taylor UUCP"
@@ -40,6 +40,9 @@ src_install() {
 		install install-info || die
 	cp sample/* ${D}/etc/uucp
 	dodoc COPYING ChangeLog NEWS README TODO
+
+	chmod -R 775 ${D}/var/lock/uucp
+	chown -R root:uucp ${D}/var/lock/uucp
 }
 
 pkg_preinst() {
