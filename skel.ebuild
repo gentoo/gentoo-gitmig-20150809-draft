@@ -136,7 +136,9 @@ src_install() {
 	# You must *personally verify* that this trick doesn't install
 	# anything outside of DESTDIR; do this by reading and
 	# understanding the install part of the Makefiles.
+	# This is the preferred way to install.
 	make DESTDIR=${D} install || die
+
 	# For Makefiles that don't make proper use of DESTDIR, setting
 	# prefix is often an alternative.  However if you do this, then
 	# you also need to specify mandir and infodir, since they were
@@ -154,6 +156,4 @@ src_install() {
 	# The portage shortcut to the above command is simply:
 	#
 	#einstall || die
-	# Note that einstall will die on failure, but please use einstall || die
-	# for consistency.
 }
