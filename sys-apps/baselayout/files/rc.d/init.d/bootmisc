@@ -30,7 +30,7 @@ ebegin "Cleaning /var/lock, /var/run"
 	-exec rm -f -- {} \; 1>&2 )
 : > /var/run/utmp
 # Let's rid ourselves of .X* lockfiles so if we crash X will still run.
-( cd /tmp && find . -type f -name ".X*" --exec rm -f -- {} \; 1>&2 )
+( cd /tmp && find . -type f -name ".X*" -exec rm -f -- {} \; 1>&2 )
 # Uncomment this next line if you don't care to keep all the $WORKDIRS
 # between reboots. It tends to get pretty big.
 # ( cd /tmp/portage && find . -exec rm -f -- {} \; 1>&2 )
