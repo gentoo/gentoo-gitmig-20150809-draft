@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.2 2003/03/16 23:13:16 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.3 2003/09/03 16:05:32 vapier Exp $
 
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="reads sendmail's .forward files under qmail"
 HOMEPAGE="http://cr.yp.to/dot-forward.html"
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/glibc
@@ -19,20 +19,21 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-errno.patch
+	epatch ${FILESDIR}/${PV}-head-1.patch
 
-	echo "gcc ${CFLAGS}" > conf-cc
-	echo "gcc" > conf-ld
+	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(gcc-getCC)" > conf-ld
 }
 
 src_compile() {
 	emake it || die
 }
 
-src_install() {				 
+src_install() {
 	dodoc BLURB CHANGES FILES INSTALL README SYSDEPS TARGETS THANKS
 	dodoc TODO VERSION
 	doman *.1
- 
+
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/bin
 	doins dot-forward
