@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (21 Oct 2002)
+# have portage issues
+=sys-devel/flex-2.5.22
+
 # <blizzy@gentoo.org> (20 Oct 2002)
 # breaks xfree
 =sys-devel/bison-1.75
