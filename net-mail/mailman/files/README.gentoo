@@ -8,10 +8,10 @@ Please view the documentation on Mailman at: http://www.list.org/
 
 I have configured Mailman to install in /usr/local/mailman by default, to change
 this you will need to modify the INSTALLDIR variable in the ebuild and the
-locations in the mailman.conf(.apache) file.
+locations in the mailman.conf file.
 
-1) If this is your first time installing mailman, after your "emerge mailman", you will need to
-run:
+1) If this is your first time installing mailman, after your "emerge mailman",
+**and you are using apache 1.x**, you will need to run:
 
 ebuild /var/db/pkg/net-mail/mailman-x.x.x/mailman-x.x.x.ebuild config
 
