@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.81 2003/12/29 09:52:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.82 2003/12/29 10:32:19 mholzer Exp $
+
+  29 Dec 2003; Martin Holzer <mholzer@gentoo.org> xine-lib-1_rc2.ebuild,
+  xine-lib-1_rc3-r1.ebuild, xine-lib-1_rc3.ebuild:
+  making speex IUSE depend. Closes 34592
 
 *xine-lib-1_rc3-r1 (29 Dec 2003)
 
