@@ -1,6 +1,19 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.9 2002/12/13 10:56:01 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.10 2003/01/30 06:56:06 jrray Exp $
+
+*gpgme-0.4.0 (29 Jan 2003)
+
+  29 Jan 2003; J Robert Ray <jrray@gentoo.org> : Added slotted 0.4.0 ebuild
+  that installs all library files as called 'gpgme4', run gpgme4-config
+  instead of gpgme-config to find the correct CFLAGS and LDFLAGS to pass
+  to a program that needs gpgme 0.4.0 or later.
+
+*gpgme-0.3.14 (29 Jan 2003)
+
+  29 Jan 2003; J Robert Ray <jrray@gentoo.org> : Added 0.3.14 and unmasking
+  for x86, contains lots of bug fixes over the currently unmasked 0.3.9
+  version.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
