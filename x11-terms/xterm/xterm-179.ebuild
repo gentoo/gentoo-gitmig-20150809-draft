@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-179.ebuild,v 1.9 2004/04/09 19:13:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-179.ebuild,v 1.10 2004/04/09 19:19:46 spyderous Exp $
 
 IUSE="truetype"
 
@@ -11,9 +11,9 @@ SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+KEYWORDS="~x86 ~amd64"
 
-DEPEND="virtual/x11
+DEPEND="x11-base/xorg-x11
 	sys-apps/utempter"
 
 src_compile() {
