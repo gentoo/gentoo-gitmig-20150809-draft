@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/mcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.9 2004/09/05 17:03:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.10 2004/11/05 05:24:04 josejx Exp $
+
+  05 Nov 2004; Joseph Jezak <josejx@gentoo.org> mcl-0.53.00.ebuild:
+  Added ~ppc.
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mcl-0.53.00.ebuild,
   files/mcl-0.53.00-gcc34.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.5.ebuild,v 1.2 2004/06/24 23:00:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.5.ebuild,v 1.3 2004/11/05 05:21:43 josejx Exp $
 
 inherit games gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/softwaremap/projects/gnome-mud/"
 SRC_URI="mirror://gnome/sources/${PN}/0.10/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 
 IUSE="python zlib"

@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/kmc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmc/ChangeLog,v 1.5 2004/07/03 22:22:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmc/ChangeLog,v 1.6 2004/11/05 05:24:18 josejx Exp $
+
+  05 Nov 2004; Joseph Jezak <josejx@gentoo.org> kmc-0.9.ebuild:
+  Added ~ppc.
 
   04 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kmc-0.9.ebuild:
   QA: need-kde after R/DEPEND
