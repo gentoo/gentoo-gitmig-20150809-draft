@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.9 2004/07/17 03:31:11 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.10 2004/08/22 10:54:16 lv Exp $
+
+*emul-linux-x86-xlibs-1.2 (22 Aug 2004)
+
+  22 Aug 2004; Travis Tilley <lv@gentoo.org> +emul-linux-x86-xlibs-1.2.ebuild:
+  recompiled with gcc 3.4, moved libpng and libmng to baselibs, added openmotif
 
 *emul-linux-x86-xlibs-1.1-r1 (17 Jul 2004)
 
