@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc-sparc64
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.21 2005/03/24 01:41:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.22 2005/03/24 01:45:06 gustavoz Exp $
+
+  23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/gcc-3.2.3-gentoo-branding.patch,
+  -files/gcc-3.3.1-gentoo-branding.patch,
+  -files/gcc-3.3.2-gentoo-branding.patch,
+  -files/gcc-3.3.3-gentoo-branding.patch, -gcc-sparc64-3.2.3.ebuild,
+  -gcc-sparc64-3.3.1.ebuild, -gcc-sparc64-3.3.2.ebuild,
+  -gcc-sparc64-3.3.3.ebuild:
+  Old version cleanup
 
   23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gcc-sparc64-3.3.4.ebuild, gcc-sparc64-3.3.5.ebuild:
