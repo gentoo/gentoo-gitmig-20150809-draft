@@ -8,7 +8,7 @@ MD5 ae0cc66f01f8207f334d45f40fd09c98 gnome-icon-theme-1.2.1.ebuild 560
 MD5 110b4de2f7cb7e278c31f5fc3167ffdd gnome-icon-theme-1.2.3.ebuild 560
 MD5 dd0bb53dee356781a980a6d626ba1522 gnome-icon-theme-2.8.0.ebuild 559
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 aadfe1e54f639fd31f0d3af8878ecf6a gnome-icon-theme-2.10.0.ebuild 732
+MD5 fb9ee0ecdfd53c60f7d4af14914bcb67 gnome-icon-theme-2.10.0.ebuild 751
 MD5 79fed86dbc571a23c5b1f18e52b30c83 files/digest-gnome-icon-theme-1.0.9 76
 MD5 792bc31e5e5f3833d61567326710544c files/digest-gnome-icon-theme-1.2.0 76
 MD5 d5d241a899b4f7e15f7efa75cf4259d0 files/digest-gnome-icon-theme-1.2.1 76
@@ -18,7 +18,7 @@ MD5 c9c1b85c1ecabbaaecc7ba5b6d3074e2 files/digest-gnome-icon-theme-2.10.0 77
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCUZRrXjcVihsel0ERAmJ6AJoCs9CaRvR6rK8u/U3GN6bUFQ1YYwCfRi3m
-R18hhNerujR0rzRwABSPcHg=
-=2Q/7
+iD8DBQFCUZo9XjcVihsel0ERAubSAJ9VxWvyp/LHyXP/XFIfIV0xosrsoACgo14V
+H9YuD6vEYz0Tf7Xu20Wvwlg=
+=ceYn
 -----END PGP SIGNATURE-----
