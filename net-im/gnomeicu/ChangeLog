@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.25 2004/04/18 15:49:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.26 2004/04/21 15:39:08 gustavoz Exp $
+
+  21 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> gnomeicu-0.99.5.ebuild:
+  sparc it up
 
   18 Apr 2004; <tester@gentoo.org> gnomeicu-0.99.5.ebuild:
   Marked stable on x86
