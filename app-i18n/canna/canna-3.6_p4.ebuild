@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.5 2003/09/29 17:52:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.6 2003/10/22 20:48:40 usata Exp $
 
 inherit cannadic
 
-IUSE="tetex"
+IUSE="doc"
 
 MY_P="Canna36${PV#*_}"
 
@@ -14,12 +14,12 @@ SRC_URI="mirror://sourceforge.jp/canna/6059/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 alpha ppc sparc"
 
 DEPEND="virtual/glibc
 	x11-base/xfree
 	>=sys-apps/sed-4
-	tetex? ( app-text/ptex )"
+	doc? ( app-text/ptex )"
 RDEPEND="virtual/glibc"
 
 S="${WORKDIR}/${MY_P}"
@@ -37,7 +37,7 @@ src_compile() {
 	# make includes
 	make canna || die
 
-	if [ -n "`use tetex`" ] ; then
+	if [ -n "`use doc`" ] ; then
 		einfo "Compiling DVI, PS (and PDF) document"
 		cd doc/man/guide/tex
 		xmkmf || die
@@ -71,7 +71,7 @@ src_install() {
 
 	dodoc CHANGES.jp ChangeLog INSTALL* README* WHATIS*
 
-	if [ -n "`use tetex`" ] ; then
+	if [ -n "`use doc`" ] ; then
 		insinto /usr/share/doc/${PF}
 		doins doc/man/guide/tex/canna.{dvi,ps,pdf}
 	fi

@@ -1,6 +1,6 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.26 2003/10/01 11:45:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.27 2003/10/22 20:48:40 usata Exp $
 
 *canna-3.7_beta1 (30 Sep 2003)
 
@@ -20,6 +20,9 @@
   canna-3.6_p1.ebuild (it had wrong name)
 
 *canna-3.6_p4 (23 Sep 2003)
+
+  23 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> canna-3.6_p4.ebuild:
+  Considered as stable. Changed tetex IUSE flag to doc IUSE flag.
 
   23 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> canna-3.6_p4.ebuild:
   make canna.pdf if acroread or xpdf is installed. Removed eutils.
