@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/gnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.15 2003/07/14 15:42:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.16 2003/08/04 21:56:40 gmsoft Exp $
 
   14 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnet-1.1.9.ebuild:
   set 1.1.9 back to SLOT=1
@@ -10,6 +10,9 @@
   dep cleanup
 
 *gnet-2.0.3 (14 May 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> gnet-2.0.3.ebuild :
+  Added hppa to KEYWORDS.
 
   14 May 2003; foser <foser@gentoo.org> gnet-2.0.3.ebuild :
   New version
