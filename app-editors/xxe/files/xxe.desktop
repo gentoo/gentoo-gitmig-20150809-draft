@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=/opt/xxe/xxe
+Icon=/opt/xxe/docs/help/icons/logo.gif
+Name=XMLmind XML Editor
+GenericName=XML Editor
+Comment=XML file editor
+Categories=Application;Development

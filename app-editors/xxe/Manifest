@@ -1,4 +1,5 @@
-MD5 6cbf3157ebfbe19ea7ab84dcccc6fdf6 ChangeLog 1566
-MD5 541dfc891f1c69480a13388db5479f43 xxe-2.5_p4.ebuild 849
+MD5 929a6db3ca19f98cce5b91c26178c764 xxe-2.5_p4.ebuild 1036
+MD5 760faf10dc0547366415bd9812c5c7c4 ChangeLog 1708
 MD5 cba5f21f1e37c6fc886c08c621f8a636 metadata.xml 398
 MD5 e3be91112b6b91abee45c6a63e8963f8 files/digest-xxe-2.5_p4 65
+MD5 b821128de3dfbcbf02b24d7fb13a0337 files/xxe.desktop 223

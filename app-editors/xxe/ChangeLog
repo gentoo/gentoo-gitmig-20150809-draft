@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xxe
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.9 2004/03/26 10:30:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.10 2004/03/30 20:40:33 rizzo Exp $
+
+  30 Mar 2004; Don Seiler <rizzo@gentoo.org>; xxe-2.5_p4.ebuild:
+  Added xxe.desktop and some other cosmetic changes.  Thanks to Keith Lea.
 
   26 Mar 2004; David Holm <dholm@gentoo.org> xxe-2.5_p4.ebuild:
   Backed out of ~ppc while waiting for portage upgrade.
