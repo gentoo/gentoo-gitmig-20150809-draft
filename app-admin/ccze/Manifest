@@ -1,4 +1,14 @@
-MD5 3ef7f0c68b3c8bc6217e18070473e748 ChangeLog 607
-MD5 63b58c703ee2c7b0050e5f679db1ab01 ccze-0.2.1.ebuild 733
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ada931fecc1f072d9d62174d755b2b0b ChangeLog 691
 MD5 02a03e9ed6268b3c5ab55184ac8c4486 metadata.xml 644
+MD5 68fde8632319283f2b00dc6473985fac ccze-0.2.1.ebuild 742
 MD5 f6258721f177c5397ecb5650aa04d9c8 files/digest-ccze-0.2.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXG8KCHk4+ZoBpvsRAmboAJ9scTyfFTrjmC7KZ8T38AQPPNEuLgCghedg
+ZlJ8TvTnx9/rdOvYFPypSI4=
+=/QpR
+-----END PGP SIGNATURE-----
