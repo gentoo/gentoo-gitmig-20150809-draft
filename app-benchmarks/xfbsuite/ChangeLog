@@ -1,0 +1,8 @@
+# ChangeLog for app-benchmarks/xfbsuite
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/xfbsuite/ChangeLog,v 1.1 2004/04/12 19:37:06 cretin Exp $
+
+*xfbsuite-0.9.7.3 (12 Apr 2004)
+
+  12 Apr 2004; <cretin@gentoo.org> :
+  New package, bug #47599
