@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.14 2005/01/26 20:24:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.15 2005/02/07 22:19:15 kloeri Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://dl.bytesex.org/releases/fbida/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc hppa ~amd64 ~sparc ppc64 ~alpha"
+KEYWORDS="x86 ppc hppa ~amd64 ~sparc ppc64 alpha"
 IUSE="png jpeg gif tiff curl lirc X"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )

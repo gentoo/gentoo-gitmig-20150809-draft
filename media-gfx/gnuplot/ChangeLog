@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.36 2005/02/06 02:55:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.37 2005/02/07 22:17:28 kloeri Exp $
+
+  07 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> gnuplot-4.0-r1.ebuild:
+  Stable on alpha.
 
   05 Feb 2005; Steve Arnold <nerdboy@gentoo.org> gnuplot-4.0-r1.ebuild,
   -gnuplot-4.0.ebuild:
