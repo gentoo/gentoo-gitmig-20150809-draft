@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Profiler
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Profiler/ChangeLog,v 1.4 2004/09/03 00:54:09 dholm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Profiler/ChangeLog,v 1.5 2005/03/30 17:48:48 gustavoz Exp $
+
+  30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  Devel-Profiler-0.04.ebuild:
+  Stable on sparc
 
   03 Sep 2004; David Holm <dholm@gentoo.org> Devel-Profiler-0.04.ebuild:
   Added to ~ppc.
