@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/Memoize-1.00-r2.ebuild,v 1.8 2004/06/25 00:45:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/Memoize-1.00-r2.ebuild,v 1.9 2004/07/14 18:57:20 agriffis Exp $
 
 inherit perl-module
 
@@ -13,4 +13,4 @@ HOMEPAGE="http://perl.plover.com/Memoize/"
 SLOT="0"
 LICENSE="Artistic GPL-2"
 KEYWORDS="x86 amd64 sparc alpha ppc"
-
+IUSE=""
