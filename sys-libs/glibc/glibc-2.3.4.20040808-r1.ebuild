@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.19 2004/12/07 00:25:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.20 2004/12/07 01:44:14 vapier Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -16,6 +16,11 @@ MIN_KERNEL_VERSION="2.6.5"
 
 # (very) Theoretical cross-compiler support
 export CTARGET="${CTARGET:-${CHOST}}"
+if [[ ${CTARGET} = ${CHOST} ]] ; then
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+		export CTARGET="${CATEGORY/cross-}"
+	fi
+fi
 
 
 if [ -z "${BRANCH_UPDATE}" ]; then
