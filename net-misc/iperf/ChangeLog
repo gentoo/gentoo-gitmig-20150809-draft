@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iperf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.4 2003/07/28 19:26:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.5 2003/07/29 19:31:34 mholzer Exp $
+
+*iperf-1.7.0 (30 Jul 2003)
+
+  30 Jul 2003; Martin Holzer <mholzer@gentoo.org> iperf-1.7.0.ebuild:
+  Version bumped.
 
   28 Jul 2003; Martin Holzer <mholzer@gentoo.org> iperf-1.6.3.ebuild:
   Fixing install dir.
