@@ -1,8 +1,15 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.26 2002/12/09 04:21:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.27 2002/12/10 19:10:59 woodchip Exp $
 
-\* Autoupdate keywords (12-6-02)
+*mod_php-4.2.3-r1 (10 Dec 2002)
+
+  10 Dec 2002; Donny Davies <woodchip@gentoo.org> : Added Apache2 support.
+  Please put 'apache2' in your USE variable, then emerge mod_php.  After
+  it installs, simply edit /etc/conf.d/apache2 and add '-D PHP'.  Then
+  restart apache2.  You're done :)
+  
+  Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
   02 Sep 2002; Daniel Robbins <drobbins@gentoo.org> mod_php-4.2.2-r1.ebuild :
@@ -21,30 +28,24 @@
   Tweaked deps...
 
   27 Oct 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.3.ebuild :
-
   Fixed QT dep
 
   12 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.3.ebuild :
-
   Added xmlrpc to 'xml' use flag. Fixes #7811
 
   10 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.3.ebuild :
-
   New version. Fixes #7716
 
 *mod_php-4.2.2-r1 (18 Aug 2002)
 
   27 Oct 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.2-r1.ebuild :
-
   Fixed QT dep
 
   19 Oct 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.2-r1.ebuild :
-
   Is pdflib playing nice now?  Moved the image formats out of the pdflib
   'if' statement
 
   03 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.2-r1.ebuild :
-
   Users have had issues compiling php with java support.  It works fine
   on my two computers. I'm not sure if it is user error or config file
   problems.  I've disabled it for now.
@@ -193,10 +194,8 @@
   files/mod_php.conf : Added a mod_php.conf file, which installs into the
   apache addon-modules config directory.  This eliminates the need to "sed" the
   apache config file in order to "turn on" the php mime types.  Removed some
-  stale ebuilds/digests.
-
-  Ooops, round two for today: fix the php.ini location with a symlink.
-  Keeps things tidy.
+  stale ebuilds/digests.  Ooops, round two for today: fix the php.ini location
+  with a symlink.  Keeps things tidy.
 
 *php-4.1.2-r4 (9 Apr 2002)
 
@@ -206,29 +205,23 @@
 *php-4.1.2-r3 (13 Mar 2002)
 
   13 Mar 2002; Grant Goodyear <g2boojum@gentoo.org> :
-
   Minor update to fix bug # 1042.
 
 *php-4.1.2 (28 Feb 2002)
 
   28 Feb 2002; Bruce A. Locke <blocke@shivan.org> php-4.1.2.ebuild :
-
   Major security fixes in this version.  All php users are urged
   to upgrade to this version.
 
 *php-4.1.1-r5 ( 25 Feb 2002 )
 
   25 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> php-4.1.1-r5.ebuild
-
   Fixed a bug that made compiling with libpng bug out on some 
-  installations.
-
-  Old revisions removed.
+  installations.  Old revisions removed.
 
 *php-4.1.1-r4 ( 22 Feb 2002 )
 
   22 Feb 2002; Grant Goodyear <g2boojum@gentoo.org> php-4.1.1-r4.ebuild
-
   Now imap support should work.  Building php w/ imap support requires
   the uw-imap library and headers (from uw-imap or pine).  Annoying
   problem that uw-imap or pine needs to be compiled w/ SSL; otherwise
@@ -237,49 +230,31 @@
 *php-4.0.6-r5 ( 18 Feb 2002 )
 
   18 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> php-4.0.6-r4.ebuild
-
   As Java support fails to work with Blackdown, and the fix seems non-trivial,
   Java support is removed from PHP 4.0.6 altogether.
-
   Old revisions have been removed.
 
 *php-4.0.6-r4 ( 12 Feb 2002 )
 
   12 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> php-4.0.6-r4.ebuild
-
   Java support is back. The ebuild also tries harder to follow the style 
-  guide.
-
-  Old revisions have been removed.
+  guide.  Old revisions have been removed.
 
 *php-4.1.1-r3 ( 18 Feb 2002 )
 
   18 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> php-4.1.1-r3.ebuild
-
   Java is still here, but now it actually works with Blackdown as well.
-
   Old revisions have been removed.
 
 *php-4.1.1-r2 ( 12 Feb 2002 )
 
   12 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> php-4.1.1-r2.ebuild
-
-  Java support is back. The ebuild also tries harder to follow the style 
-  guide.
-
+  Java support is back. The ebuild also tries harder to follow the style guide.
   Old revisions have been removed.
 
 *php-4.1.1 (1 Feb 2002)
 
-  6 Feb 2002; Grant Goodyear <g2boojum@gentoo.org>:
-  
+  6 Feb 2002; Grant Goodyear <g2boojum@gentoo.org>:  
   Added a new -r1 revision of the php-4.1.1 ebuild that adds
   two new USE variables, mcrypt and mhash.
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+k
