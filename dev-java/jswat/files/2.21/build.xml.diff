@@ -1,17 +1,15 @@
---- build.xml.orig	2004-02-16 05:29:31.000000000 -0500
-+++ build.xml	2004-02-25 01:43:23.271058552 -0500
-@@ -92,11 +92,11 @@
+--- build.xml	2004-08-27 11:29:14.149734160 +0200
++++ build.xml   2004-08-27 11:29:44.246158808 +0200
+@@ -92,9 +92,10 @@
    <!-- Get the release version number from the builder. -->
    <target name="version">
      <!-- Newer Ant releases only ask if 'version' is not set. -->
 -    <input message="Enter JSwat version number (x.y[.z]):"
 -           addproperty="version"/>
-+    <!-- <input message="Enter JSwat version number (x.y[.z]):"
-+           addproperty="version"/> -->
++    <!-- input message="Enter JSwat version number (x.y[.z]):"
++           addproperty="version"/-->
      <!-- Update the version.properties file for this build. -->
++       <property name="version" value="2.21"/>
      <propertyfile file="${classes}/${pkgpath}/util/version.properties">
--      <entry key="version" value="${version}"/>
-+      <entry key="version" value="2.21"/>
+       <entry key="version" value="${version}"/>
      </propertyfile>
-   </target>
- 
