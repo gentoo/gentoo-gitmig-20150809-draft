@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.6 2004/10/13 18:12:02 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.7 2004/10/15 23:43:52 s4t4n Exp $
+
+*libical-0.24_rc4-r1 (16 Oct 2004)
+
+  16 Oct 2004; Michele Noberasco <s4t4n@gentoo.org> libical-0.24_rc4-rc1.ebuild:
+  Correctly link libical.so against libpthread. Closes #66377.
 
   13 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> libical-0.24_rc4.ebuild:
   Marked ~amd64.
