@@ -146,7 +146,7 @@ if [ -z "$OOHOME" ] ; then
       fi
 
       echo "running openoffice.org setup..."
-      if ! /opt/OpenOffice.org<pv>/program/setup ${UPDATEFLAG} -R:/etc/openoffice/autoresponse-<pv>.conf >& /dev/null; then
+      if ! /opt/OpenOffice.org${PV}/program/setup ${UPDATEFLAG} -R:/etc/openoffice/autoresponse-<pv>.conf >& /dev/null; then
         echo "setup failed.. abort"
         exit 1
       fi
@@ -199,6 +199,23 @@ fi
 #	ooconfigimport $TMPFILE >/dev/null
 #	rm -f ${TMPFILE}
 #}
+
+# Check whether the programs actually link to anything, or are from an old
+# version.
+
+if [ ! -s $OOHOME/setup ]; then
+	echo "${OOHOME}/setup links to nothing, resetting link"
+	ln -sf /opt/OpenOffice.org${PV}/program/setup ${OOHOME}/setup
+fi
+if [ ! -s $OOHOME/soffice ]; then
+	echo "${OOHOME}/soffice links to nothing, resetting link"
+	ln -sf /opt/OpenOffice.org${PV}/program/soffice ${OOHOME}/soffice
+fi
+if [ ! -s $OOHOME/spadmin ]; then
+	echo "${OOHOME}/spadmin links to nothing, resetting link"
+	ln -sf /opt/OpenOffice.org${PV}/program/soffice ${OOHOME}/spadmin
+fi
+
 
 ##
 ## That's it. Launch the beast (with the given args)
