@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.19.1.ebuild,v 1.1 2002/07/19 20:59:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.19.1.ebuild,v 1.2 2002/09/30 00:01:07 seemant Exp $
 
 NPVER=20011209
 S=${WORKDIR}/${P}
-DESCRIPTION="Network utility to retrieve files from the WWW"
+DESCRIPTION="Network utility to retrieve files from an NNTP news server"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/nget/nget-0.19.1+uulib.tar.gz"
 HOMEPAGE="http://nget.sourceforge.net/"
 RDEPEND="virtual/glibc"

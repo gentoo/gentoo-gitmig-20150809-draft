@@ -1,8 +1,12 @@
 # ChangeLog for net-news/nget
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/ChangeLog,v 1.1 2002/07/19 20:59:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/ChangeLog,v 1.2 2002/09/30 00:01:07 seemant Exp $
 
 *nget-0.19.1 (19 Jul 2002)
+
+  29 Sep 2002; Seemant Kulleen <seemant@gentoo.org> nget-0.19.1.ebuild :
+
+  Method in #gentoo-dev pointed out the wrong description.
 
   19 Jul 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
