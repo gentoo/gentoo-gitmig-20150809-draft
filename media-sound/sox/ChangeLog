@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.10 2003/02/12 07:34:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.11 2003/07/31 15:29:37 tigger Exp $
+
+*sox-12.17.4 (31 Jul 2003)
+
+  31 Jul 2003; rob holland <tigger@gentoo.org> sox-12.17.4.ebuild:
+  Version bump. Fixes alsa issues from 12.17.3. Submitted by Andy Pyles
+  <a_pyles@yahoo.com>. Closes #19021
 
 *sox-12.17.3-r3 (21 Dec 2002)
 
