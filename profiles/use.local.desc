@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.981 2005/03/02 18:10:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.982 2005/03/03 02:37:44 ticho Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -548,6 +548,7 @@ net-mail/poppassd_ceti:cracklib - Support for cracklib strong password checking
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
 net-mail/qpopper:xinetd - If you want inetd version instead of standalone
 net-mail/teapop:virtual - Enable teapop's virtual domain support.
+net-mail/uw-imap:clearpasswd - Enables cleartext logins outside of SSL sessions
 net-mail/vpopmail:clearpasswd - Enables cleartext password storage in the vpasswd files
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-misc/asterisk:noiax - Disable iax (Inter-Asterisk eXchange) support
