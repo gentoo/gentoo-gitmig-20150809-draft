@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.6 2003/02/12 06:46:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.7 2003/03/15 14:54:54 azarah Exp $
+
+  15 Mar 2003; Martin Schlemmer <azarah@gentoo.org> subversion-0.10_pre1.ebuild :
+  Fix m4 depend.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
