@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.0.1-r6.ebuild,v 1.13 2004/06/28 02:55:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.0.1-r6.ebuild,v 1.14 2004/07/15 01:16:02 agriffis Exp $
 
 IUSE="gtk nls esd gnome"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Extensible window manager using a Lisp-based scripting language"
 SRC_URI="mirror://sourceforge/sawmill/${P}.tar.gz"
 HOMEPAGE="http://sawmill.sourceforge.net/"

@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.2.0.ebuild,v 1.4 2004/06/24 23:42:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.2.0.ebuild,v 1.5 2004/07/15 01:14:02 agriffis Exp $
 
 IUSE="motif"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The ultimate lightweight window manager"
 SRC_URI="ftp://ftp.cs.york.ac.uk/pub/james/${P}.tar.gz"
 HOMEPAGE="http://www.jfc.org.uk/software/lwm.html"

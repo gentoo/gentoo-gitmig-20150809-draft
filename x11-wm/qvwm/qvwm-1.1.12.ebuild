@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/qvwm/qvwm-1.1.12.ebuild,v 1.6 2004/06/24 23:44:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qvwm/qvwm-1.1.12.ebuild,v 1.7 2004/07/15 01:15:08 agriffis Exp $
 
 DESCRIPTION="Qvwm is a Windows 9X like window manager for X Window System."
 HOMEPAGE="http://www.qvwm.org/"
@@ -18,8 +18,6 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison"
-
-S=${WORKDIR}/${P}
 
 src_compile(){
 
