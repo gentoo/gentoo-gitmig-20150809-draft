@@ -1,9 +1,10 @@
 # ChangeLog for net-wireless/hostap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.4 2003/02/28 02:50:02 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.5 2003/02/28 07:51:35 latexer Exp $
 
   27 Feb 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012-r1.ebuild :
   Major fixes to work with latest portage. HOSTAP_DRIVERS functionality now works.
+  Fixed PCMCIA_VERSION.
 
   25 Feb 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012.ebuild
   hostap-20021012-r1.ebuild:

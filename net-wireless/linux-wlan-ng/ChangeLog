@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.11 2003/02/28 02:02:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.12 2003/02/28 07:50:23 latexer Exp $
+
+  27 Feb 2003; Peter Johanson <latexer@gentoo.org> linux-wlan-ng-0.1.16_pre9.ebuild :
+  small fix to PCMCIA_VERSION. bug #16537
 
   27 Feb 2003; Peter Johanson <latexer@gentoo.org> linux-wlan-ng-0.1.16_pre9.ebuild :
   Fixed PCMCIA_VERSION definition to work with latest portage
