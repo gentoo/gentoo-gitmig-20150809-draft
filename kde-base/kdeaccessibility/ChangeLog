@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.60 2005/03/14 21:46:21 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.61 2005/03/18 18:26:30 morfic Exp $
+
+  18 Mar 2005; Daniel Goller <morfic@gentoo.org>
+  kdeaccessibility-3.4.0.ebuild:
+  Added to ~ppc
 
 *kdeaccessibility-3.4.0 (14 Mar 2005)
 

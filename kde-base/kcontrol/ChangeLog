@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.8 2005/03/13 21:19:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.9 2005/03/18 18:21:38 morfic Exp $
+
+  18 Mar 2005; Daniel Goller <morfic@gentoo.org> kcontrol-3.4.0.ebuild,
+  kcontrol-3.4.0_beta2.ebuild:
+  Added to ~ppc
 
   13 Mar 2005; Dan Armak <danarmak@gentoo.org> kcontrol-3.4.0.ebuild:
   KDE 3.4.0 ebuilds. Note that the tarballs won't be officially released for a

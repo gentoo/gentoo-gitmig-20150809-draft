@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.5 2005/03/13 21:19:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.6 2005/03/18 18:23:21 morfic Exp $
+
+  18 Mar 2005; Daniel Goller <morfic@gentoo.org> konqueror-3.4.0.ebuild,
+  konqueror-3.4.0_beta2.ebuild:
+  Added to ~ppc
 
   13 Mar 2005; Dan Armak <danarmak@gentoo.org> konqueror-3.4.0.ebuild:
   KDE 3.4.0 ebuilds. Note that the tarballs won't be officially released for a
