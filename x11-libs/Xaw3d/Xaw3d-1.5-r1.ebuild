@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.6 2002/08/14 13:05:59 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.7 2002/09/21 04:09:45 vapier Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -22,8 +22,7 @@ DESCRIPTION="the Xaw3d is a drop-in 3D replacement of the Xaw widget set
 # All full ftp.x.org mirrors can be added here.
 SRC_URI="ftp://ftp.x.org/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz
 	 http://ibiblio.org/pub/X11/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz"
-# None so far as I know.
-#HOMEPAGE="http://"
+HOMEPAGE="http://freshmeat.net/projects/xaw3d/"
 LICENSE="X11"
 SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
