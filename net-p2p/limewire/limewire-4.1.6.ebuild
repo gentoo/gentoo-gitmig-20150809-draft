@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.1.6.ebuild,v 1.1 2004/10/22 02:21:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.1.6.ebuild,v 1.2 2004/11/11 23:00:36 kang Exp $
 
 IUSE="gtk"
 DESCRIPTION="Limewire Java Gnutella client"
@@ -41,12 +41,7 @@ src_install() {
 }
 pkg_postinst() {
 	use gtk || ewarn "You will probably not be able to use the gtk frontend."
-	einfo "******************************************************************"
 	einfo " Finished installing LimeWire into ${PREFIX}"
-	einfo
 	einfo " To start LimeWire, run:"
-	einfo
 	einfo "   $ limewire"
-	einfo
-	einfo "******************************************************************"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.9 2004/10/26 19:57:27 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.10 2004/11/11 23:00:36 kang Exp $
+
+  11 Nov 2004; Guillaume Destuynder <kang@gentoo.org> limewire-4.0.8.ebuild,
+  limewire-4.1.6.ebuild, limewire-4.1.7.ebuild:
+  Fixes #70857, removed unecessary banners.
 
 *limewire-4.1.7 (26 Oct 2004)
 

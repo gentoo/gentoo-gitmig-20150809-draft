@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.0.8.ebuild,v 1.5 2004/09/02 17:38:25 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.0.8.ebuild,v 1.6 2004/11/11 23:00:36 kang Exp $
 
 DESCRIPTION="Limewire Java Gnutella client"
 HOMEPAGE="http://www.limewire.com"
@@ -39,12 +39,7 @@ src_install() {
 }
 pkg_postinst() {
 
-	einfo "******************************************************************"
 	einfo " Finished installing LimeWire into ${PREFIX}"
-	einfo
 	einfo " To start LimeWire, run:"
-	einfo
 	einfo "   $ limewire"
-	einfo
-	einfo "******************************************************************"
 }
