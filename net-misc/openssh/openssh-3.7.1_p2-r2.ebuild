@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.2 2004/01/10 22:56:42 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.3 2004/01/29 07:05:43 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -33,12 +33,11 @@ RDEPEND="virtual/glibc
 	!ppc64? ( skey? ( >=app-admin/skey-1.1.5-r1 ) )
 	>=dev-libs/openssl-0.9.6d
 	>=sys-libs/zlib-1.1.4
-	>=sys-apps/sed-4"
-
+	!ppc64? ( tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-apps/groff
-	!ppc64? ( tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) )"
+	>=sys-apps/sed-4"
 PROVIDE="virtual/ssh"
 
 src_unpack() {
