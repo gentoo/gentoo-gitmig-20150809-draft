@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.7.ebuild,v 1.7 2005/01/28 02:12:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.3.ebuild,v 1.1 2005/03/02 16:23:30 foser Exp $
 
-inherit libtool
+inherit libtool eutils flag-o-matic
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~s390 ~ppc-macos"
+KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc"
 IUSE="doc"
 
 DEPEND=">=dev-util/pkgconfig-0.14
@@ -19,16 +19,27 @@ DEPEND=">=dev-util/pkgconfig-0.14
 
 RDEPEND="virtual/libc"
 
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	use ppc-macos && epatch ${FILESDIR}/${PN}-2-macos.patch
+
+}
+
 src_compile() {
+
+	epunt_cxx
 
 	if use ppc-macos; then
 		glibtoolize
-	else
-		elibtoolize
+		append-ldflags "-L/usr/lib -lpthread"
 	fi
 
+	# enable static for PAM
 	econf \
 		--with-threads=posix \
+		--enable-static \
 		`use_enable doc gtk-doc` \
 		|| die
 
@@ -38,7 +49,6 @@ src_compile() {
 
 src_install() {
 
-	# einstall || die
 	make DESTDIR=${D} install || die
 
 	# Do not install charset.alias for ppc-macos since it already exists.
