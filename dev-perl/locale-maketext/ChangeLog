@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/locale-maketext
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext/ChangeLog,v 1.14 2004/05/30 16:07:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext/ChangeLog,v 1.15 2004/06/06 12:33:13 mcummings Exp $
+
+*locale-maketext-1.09 (06 Jun 2004)
+
+  06 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  locale-maketext-1.09.ebuild:
+  new version on cpan
 
   30 May 2004; Bryan Østergaard <kloeri@gentoo.org>
   locale-maketext-1.08.ebuild:
