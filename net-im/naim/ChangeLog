@@ -1,6 +1,12 @@
 # ChangeLog for net-im/naim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.1 2002/07/17 09:08:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.2 2002/10/01 23:08:38 vapier Exp $
+
+*naim-0.11.4p1 (01 Oct 2002)
+
+  01 Oct 2002; Mike Frysinger <vapier@gentoo.org> naim-0.11.4_p1.ebuild :
+  Updated version since older versions were unable to connect to aol servers
+  Also redid the compile/install process since the old one was weak :x
 
 *naim-0.11.2 (08 Feb 2002)
 
