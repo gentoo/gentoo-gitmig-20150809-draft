@@ -1,0 +1,29 @@
+# ChangeLog for x11-themes/gtk-theme-switch
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/Changelog,v 1.1 2002/06/29 09:27:15 seemant Exp $
+
+
+Relocated to x11-themes
+
+*gtk-theme-switch-2.0.0_rc2 (9 Jun 2002)
+
+  9 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  gtk-theme-switch-2.0.0_rc2.ebuild files/digest-gtk-theme-switch-2.0.0_rc2:
+
+  This is designed to work with GTK+-2 themes
+
+*gtk-theme-switch-1.0.1 (06 may 2002)
+
+  11 Jun 2002; J. Alberto Suárez L. <bass@gentoo.org> gtk-theme-switch-1.0.1.ebuild:
+
+  added doc
+
+  01 Jun 2002; Bruce A. Locke <blocke@shivan.org> gtk-theme-switch-1.0.1.ebuild:
+
+  Fixed GTK+ Dependency
+
+  06 may 2002 ; José Alberto Suárez López <bass@gentoo.org> ChangeLog :
+	First Relase 
+
+  31 May 2002; J. Alberto Suárez L. <bass@gentoo.org> gtk-theme-switch :
+  	Fisex problem with gtk.
