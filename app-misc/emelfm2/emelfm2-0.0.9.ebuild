@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.0.9.ebuild,v 1.1 2004/09/02 13:52:33 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.0.9.ebuild,v 1.2 2004/09/02 13:54:59 brad Exp $
 
 inherit eutils
 
@@ -45,9 +45,10 @@ pkg_postinst() {
 
 	einfo "This application prefers that you set your LANG variable."
 	einfo "This is best done by placing 'export LANG=en_US' (example"
-	einfo "for english systems ONLY) into your shell environment. Other"
-	einfo "locales can be found in /usr/share/locale. Export the "
-	einfo "corresponding directory name into your LANG variable."
+	einfo "is for english systems - customize for your language) into "
+	einfo "your shell environment. Other locales can be found in "
+	einfo "/usr/share/locale. Export the corresponding directory name "
+	einfo "into your LANG variable."
 	einfo ""
 	einfo "You can launch emelfm2 without setting this variable by running"
 	einfo "it with the -i flag."
