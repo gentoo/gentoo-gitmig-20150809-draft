@@ -14,21 +14,10 @@ SLOT="0"
 DEPEND="virtual/glibc
 	virtual/x11"
 
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}/scripts/autoconf
-	sed -e "/^aclocaldir =/ a DESTDIR = ${D}" \
-	       Makefile.in > Makefile.in.hacked
-	mv Makefile.in.hacked Makefile.in || die
-}
-
 src_compile() {
 	elibtoolize
 
 	econf \
-	  --prefix=/usr/LessTif \
-	  --mandir=/usr/LessTif/man \
 	  --enable-build-12 \
 	  --disable-build-20 \
 	  --disable-build-21 \
@@ -43,18 +32,62 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install"
-	prepman "/usr/LessTif"
 
-	dodir /usr/X11R6/lib
-	for lib in libMrm.so.1 libMrm.so.1.0.2 \
-	           libUil.so.1 libUil.so.1.0.2 \
-	           libXm.so.1  libXm.so.1.0.2
+
+	# bin
+	for file in `ls ${D}/usr/bin`
 	do
-		dosym "/usr/LessTif/lib/${lib}"\
-		      "/usr/X11R6/lib/${lib}" || die "symlinking ${lib}"
+		mv ${D}/usr/bin/${file} ${D}/usr/bin/${file}-1.2
 	done
 
-	dodir "/usr/share/doc"
-	dosym "/usr/LessTif/LessTif"\
-	      "/usr/share/doc/${PF}" || die "linking docs"
+
+	# docs
+	dodir /usr/share/doc/
+	mv ${D}/usr/LessTif ${D}/usr/share/doc/${P}
+
+
+	# garbage
+	rm -fR ${D}/usr/lib/LessTif
+	rm -fR ${D}/usr/lib/X11
+
+
+	# libs
+	dodir /usr/lib/motif/1.2
+	mv ${D}/usr/lib/lib* ${D}/usr/lib/motif/1.2
+
+	for lib in libMrm.so.1 libMrm.so.1.0.2 \
+		libUil.so.1 libUil.so.1.0.2 \
+		libXm.so.1  libXm.so.1.0.2
+	do
+		dosym "/usr/lib/motif/1.2/${lib}"\
+			"/usr/lib/${lib}"
+	done
+
+
+	# includes
+	dodir /usr/include/Mrm/1.2/Mrm
+	dodir /usr/include/Xm/1.2/Xm
+	dodir /usr/include/uil/1.2/uil
+
+	mv ${D}/usr/include/Mrm/*.h ${D}/usr/include/Mrm/1.2/Mrm
+	mv ${D}/usr/include/Xm/*.h ${D}/usr/include/Xm/1.2/Xm
+	mv ${D}/usr/include/uil/*.{h,uil} ${D}/usr/include/uil/1.2/uil
+
+
+	# man pages
+	for file in `ls ${D}/usr/share/man/man1`
+	do
+		file=${file/.1/}
+		mv ${D}/usr/share/man/man1/${file}.1 ${D}/usr/share/man/man1/${file}-12.1
+	done
+	for file in `ls ${D}/usr/share/man/man3`
+	do
+		file=${file/.3/}
+		mv ${D}/usr/share/man/man3/${file}.3 ${D}/usr/share/man/man3/${file}-12.3
+	done
+	for file in `ls ${D}/usr/share/man/man5`
+	do
+		file=${file/.5/}
+		mv ${D}/usr/share/man/man5/${file}.5 ${D}/usr/share/man/man5/${file}-12.5
+	done
 }
