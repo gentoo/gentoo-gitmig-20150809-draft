@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/streamtranscoder
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamtranscoder/ChangeLog,v 1.1 2004/09/22 08:59:36 eradicator Exp $
+
+*streamtranscoder-1.2.4 (22 Sep 2004)
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +streamtranscoder-1.2.4.ebuild:
+  Ebuild submitted by Evan Borgstrom <evan@mirrored.ca> and adapted to meet
+  gentoo ebuild policies by <cparpart@surakware.net>
+
