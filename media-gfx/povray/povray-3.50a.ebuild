@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.4 2002/08/07 01:18:31 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.5 2002/08/09 07:25:14 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
@@ -43,6 +43,7 @@ src_compile() {
 
 	if [ "`use icc`" ]; then
 		# ICC CPPFLAGS
+		echo "s/g++/icc/" >> makefile.sed
 		echo "s/gcc/icc/" >> makefile.sed
 
 		# Should pull from /etc/make.conf
@@ -50,12 +51,12 @@ src_compile() {
 		# If you want lean/mean replace -axiMKW with -x? (see icc docs for -x)
 		# Note: -ipo breaks povray
 		# Note: -ip breaks povray on a P3
-		echo "s/^CPPFLAGS =/CPPFLAGS = -O3 -axiMKW /" >> makefile.sed
+		# echo "s/^CPPFLAGS =/CPPFLAGS = -O3 -axiMKW /" >> makefile.sed
 		# This is optimized for my Pentium 2:
-		#echo "s/^CPPFLAGS =/CPPFLAGS = -O3 -xM -ip /" >> makefile.sed
+		echo "s/^CPPFLAGS =/CPPFLAGS = -O3 -xM -ip /" >> makefile.sed
 		# This is optimized for Pentium 3 (semi-untested, I don't own one):
 		#echo "s/^CPPFLAGS =/CPPFLAGS = -O3 -xK /" >> makefile.sed
-		# This is optimized for Pentium 4 (untested, I don't own one):
+		#This is optimized for Pentium 4 (untested, I don't own one):
 		#echo "s/^CPPFLAGS =/CPPFLAGS = -O3 -xW -ip -tpp7 /" >> makefile.sed
 
 		if [ "`use icc-pgo`" ]; then
