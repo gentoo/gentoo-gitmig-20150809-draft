@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.15 2004/10/29 18:34:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.16 2004/12/12 05:06:51 weeve Exp $
+
+  11 Dec 2004; Jason Wever <weeve@gentoo.org> libofx-0.6.6.ebuild:
+  Stable on sparc.
 
 *libofx-0.7.0 (29 Oct 2004)
 
