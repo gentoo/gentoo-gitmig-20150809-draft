@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.1 2004/08/30 10:33:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.2 2004/09/02 13:37:40 lv Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -27,14 +27,6 @@ src_unpack() {
 	# Bug #42336.
 	epatch ${FILESDIR}/${P}-share-sed.patch
 	gnuconfig_update
-}
-
-pkg_setup() {
-	# this adds support for installing to lib64/lib32. since only portage
-	# 2.0.51 will have this functionality supported in dolib and friends,
-	# and since it isnt expected that many profiles will define it, we need
-	# to make this variable default to lib.
-	[ -z "${CONF_LIBDIR}" ] && export CONF_LIBDIR="lib"
 }
 
 src_compile() {
@@ -68,7 +60,7 @@ src_compile() {
 	# add '--with-terminfo-dirs' and then populate /etc/terminfo in
 	# src_install() ...
 	econf \
-		--libdir=/${CONF_LIBDIR} \
+		--libdir=/$(get_libdir) \
 		--with-terminfo-dirs="/etc/terminfo:/usr/share/terminfo" \
 		--disable-termcap \
 		--with-shared \
@@ -93,17 +85,17 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
 	# Move static and extraneous ncurses libraries out of /lib
-	cd ${D}/${CONF_LIBDIR}
-	dodir /usr/${CONF_LIBDIR}
-	mv libform* libmenu* libpanel* *.a ${D}/usr/${CONF_LIBDIR}
+	cd ${D}/$(get_libdir)
+	dodir /usr/$(get_libdir)
+	mv libform* libmenu* libpanel* *.a ${D}/usr/$(get_libdir)
 
 	if use unicode ; then
 		gen_usr_ldscript libncursesw.so
-		for i in ${D}/usr/${CONF_LIBDIR}/*w.*; do
+		for i in ${D}/usr/$(get_libdir)/*w.*; do
 			local libncurses=${i/${D}/}
 			dosym ${libncurses} ${libncurses/w./.}
 		done
-		for i in ${D}/${CONF_LIBDIR}/libncursesw.so*; do
+		for i in ${D}/$(get_libdir)/libncursesw.so*; do
 			local libncurses=${i/${D}}
 			dosym ${libncurses} ${libncurses/w./.}
 		done
@@ -131,7 +123,7 @@ src_install() {
 	done
 
 	# Build fails to create this ...
-	dosym ../share/terminfo /usr/${CONF_LIBDIR}/terminfo
+	dosym ../share/terminfo /usr/$(get_libdir)/terminfo
 
 	dodir /etc/env.d
 	echo "CONFIG_PROTECT_MASK=\"/etc/terminfo\"" > ${D}/etc/env.d/50ncurses
@@ -152,15 +144,15 @@ src_install() {
 		# need to remove libncurses.a from the build image manually.
 		# cd ${D}/usr/lib; rm *.a
 		# remove extraneous ncurses libraries
-		cd ${D}/usr/${CONF_LIBDIR}; rm -f lib{form,menu,panel}*
+		cd ${D}/usr/$(get_libdir); rm -f lib{form,menu,panel}*
 		cd ${D}/usr/include; rm -f {eti,form,menu,panel}.h
 	else
 		if use bootstrap ; then
-			cd ${D}/usr/${CONF_LIBDIR}; rm -f lib{form,menu,panel,ncurses++}*
+			cd ${D}/usr/$(get_libdir); rm -f lib{form,menu,panel,ncurses++}*
 			cd ${D}/usr/include; rm -f {eti,form,menu,panel}.h cursesapp.h curses?.h cursslk.h etip.h
 		fi
 		# Install xterm-debian terminfo entry to satisfy bug #18486
-		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${D}/usr/${CONF_LIBDIR}:${D}/${CONF_LIBDIR} \
+		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir):${D}/$(get_Libdir) \
 			TERMINFO=${D}/usr/share/terminfo \
 			${D}/usr/bin/tic ${FILESDIR}/xterm-debian.ti
 
@@ -187,8 +179,8 @@ pkg_preinst() {
 pkg_postinst() {
 	# Old ncurses may still be around from old build tbz2's.
 	rm -f /lib/libncurses.so.5.[23] /usr/lib/lib{form,menu,panel}.so.5.[23]
-	if [ "${CONF_LIBDIR}" != "lib" ] ;then
-		rm -f /${CONF_LIBDIR}/libncurses.so.5.[23] \
-			/usr/${CONF_LIBDIR}/lib{form,menu,panel}.so.5.[23]
+	if [ "$(get_libdir)" != "lib" ] ;then
+		rm -f /$(get_libdir)/libncurses.so.5.[23] \
+			/usr/$(get_libdir)/lib{form,menu,panel}.so.5.[23]
 	fi
 }
