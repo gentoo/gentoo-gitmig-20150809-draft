@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.21 2004/05/29 18:50:17 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.22 2004/06/09 21:04:22 seemant Exp $
+
+*xterm-191 (09 Jun 2004)
+
+  09 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +xterm-191.ebuild:
+  version bump -- this one has the luit fixes that Thomas Dickey promised in bug
+  #50982 by Daniel Webert <daniel_webert@web.de>. Now xterm once again works
+  with utempter! Yay! Thanks Thomas
 
   29 May 2004; Ferris McCormick <fmccor@gentoo.org> xterm-184.ebuild:
   Mark stable on sparc.
