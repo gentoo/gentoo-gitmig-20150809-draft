@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.12 2004/05/16 00:15:09 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.13 2004/06/03 22:25:55 geoman Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -63,8 +63,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/nautilus-2.4.2
 	>=gnome-extra/nautilus-media-0.3.3.1
 
-
-	!hppa? ( >=net-www/epiphany-1.0.7 )
+	!hppa? ( !mips? ( >=net-www/epiphany-1.0.7 ) )
 
 	>=media-gfx/eog-2.4.1
 	>=app-arch/file-roller-2.4.4-r2

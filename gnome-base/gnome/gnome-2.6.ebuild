@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.ebuild,v 1.6 2004/05/29 03:46:49 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.ebuild,v 1.7 2004/06/03 22:25:55 geoman Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -61,7 +61,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-media-2.6
 
 	>=media-gfx/eog-2.6
-	!hppa? ( >=net-www/epiphany-1.2.2 )
+	!hppa? ( !mips? ( >=net-www/epiphany-1.2.2 ) )
 	>=app-arch/file-roller-2.6
 	>=gnome-extra/gcalctool-4.3.51
 	>=gnome-extra/gconf-editor-2.6
