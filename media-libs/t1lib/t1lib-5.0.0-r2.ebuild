@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.3 2003/09/06 23:59:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.4 2003/09/24 16:39:26 usata Exp $
 
 inherit gnuconfig
 
-IUSE="X tetex doc"
+IUSE="X doc"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Type 1 Rasterizer Library for UNIX/X11"
@@ -37,8 +37,10 @@ src_compile() {
 		&& myconf="--with-x" \
 		|| myconf="--without-x"
 
-	use tetex \
-		|| myopt="without_doc"
+	if [ ! -x /usr/bin/latex ] ; then
+		myopt="without_doc"
+	fi
+
 	echo `pwd`
 	econf ${myconf} || die
 	make ${myopt} || die

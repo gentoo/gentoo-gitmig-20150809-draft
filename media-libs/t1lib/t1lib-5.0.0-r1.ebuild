@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r1.ebuild,v 1.4 2003/09/06 23:59:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r1.ebuild,v 1.5 2003/09/24 16:39:26 usata Exp $
 
 inherit gnuconfig
 
-IUSE="X tetex"
+IUSE="X"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Type 1 Rasterizer Library for UNIX/X11"
 SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
 HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/libs/graphics"
 
-DEPEND="X? ( virtual/x11 )
-	tetex? ( virtual/tetex )"
+DEPEND="X? ( virtual/x11 )"
 
 SLOT="0"
 LICENSE="LGPL-2 GPL-2"
@@ -25,7 +24,6 @@ src_unpack() {
 	cd ${S}/doc
 	mv Makefile.in Makefile.in-orig
 	sed -e "s:dvips:#dvips:" Makefile.in-orig>Makefile.in
-
 }
 
 src_compile() {
@@ -37,8 +35,10 @@ src_compile() {
 		&& myconf="--with-x" \
 		|| myconf="--without-x"
 
-	use tetex \
-		|| myopt="without_doc"
+	if [ ! -x /usr/bin/latex ] ; then
+		myopt="without_doc"
+	fi
+
 	echo `pwd`
 	econf ${myconf} || die
 	make ${myopt} || die
@@ -68,7 +68,7 @@ src_install() {
 	cd ..
 	dodoc Changes LGPL LICENSE README*
 	cd doc
-	insinto /usr/share/doc/${P}
+	insinto /usr/share/doc/${PF}
 	doins *.pdf *.dvi
 }
 

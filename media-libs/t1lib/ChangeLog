@@ -2,6 +2,15 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.2 2002/04/16 01:14:04 seemant Exp
 
+  25 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> t1lib-1.3.1.ebuild,
+  t1lib-5.0.0-r1.ebuild, t1lib-5.0.0-r2.ebuild:
+  Removed virtual/tetex since it pulls app-text/tetex in when no
+  virtual/tetex candidate is installed. If you want to install
+  app-text/ptex, it will install t1lib (as app-text/ptex PDEPENDs on
+  app-text/xdvik and xdvik DEPENDs on t1lib) and want app-text/tetex
+  since no virtual/tetex will have been installed (app-text/tetex is
+  the first candidate of virtual/tetex if nothing installed).
+
 *t1lib-5.0.0-r2 (09 Aug 2003)
 
   09 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> t1lib-5.0.0-r2.ebuild:
