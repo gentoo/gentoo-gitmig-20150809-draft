@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.687 2004/10/19 05:56:12 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.688 2004/10/19 19:40:51 suka Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -70,7 +70,6 @@ app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
 app-office/grisbi:print - Enable TeX and printing support
 app-office/imposter:iksemel - Enable externel iksemel parsing support.
 app-office/magicpoint:m17n-lib - Enable m17n-lib (Multilingual Library) support.
-app-office/openoffice-ximian:ooo-kde - Build with KDE instead of GNOME integration
 app-office/pointless:freetype - Enables Freetype font support
 app-pda/gtkpod:mpeg4 - Enable mpeg4ip support, to read Mpeg4 AAC files
 app-pda/multisync:bluetooth - Enable Bluetooth support with IRMC
