@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/win4lin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.13 2003/12/30 03:12:21 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.14 2004/03/18 18:47:57 bass Exp $
+
+*win4lin-5.1 (18 Mar 2004)
+
+  18 Mar 2004; José Alberto Suárez López <bass@gentoo.org> win4lin-5.1.ebuild:
+  New version
 
   30 Dec 2003; Sven Blumenstein <bazik@gentoo.org> win4lin-5.0.1.ebuild,
   win4lin-5.0.4.ebuild, win4lin-5.0.8.ebuild:
@@ -9,6 +14,10 @@
   blocking the commit...
 
 *win4lin-5.0.8 (25 Oct 2003)
+  
+  18 Mar 2004; José Alberto Suárez López <bass@gentoo.org> win4lin-5.0.8.ebuild:
+  Stable in x86   
+
   25 Oct 2003; José Alberto Suárez López <bass@gentoo.org> win4lin-5.0.8.ebuild:
   New Version
 

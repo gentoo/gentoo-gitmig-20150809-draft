@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.8.ebuild,v 1.5 2004/03/18 18:47:57 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.1.ebuild,v 1.1 2004/03/18 18:47:57 bass Exp $
 
 IUSE="doc"
 
-MY_P=Win4Lin-5.5.8e-d.i386
+MY_P=Win4Lin-5.5.16c-d.i386
 
 S=${WORKDIR}
 DESCRIPTION="Win4Lin allows you run Windows applications somewhat natively
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${MY_P}.rpm"
 
 SLOT="0"
 LICENSE="NeTraverse"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="app-arch/rpm2targz
 		virtual/winkernel"
