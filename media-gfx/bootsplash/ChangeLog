@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.47 2004/06/29 18:32:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.48 2004/07/03 09:16:00 spock Exp $
+
+*bootsplash-0.6.1-r4 (03 Jul 2004)
+
+  03 Jul 2004; Michal Januszewski <spock@gentoo.org>
+  +bootsplash-0.6.1-r4.ebuild:
+  Yet another release. This time I've hopefully fixed all non-x86 bugs. 24bpp &
+  16bpp should work fine on PPCs now. I've added ~pcc to KEYWORDS, so please
+  test it. This release incorporates fixes from bugs #55744 and #55877. Thanks
+  to Ming Zhao and DiskBreaker for patches from these bugs.
 
 *bootsplash-0.6.1-r3 (29 Jun 2004)
 
