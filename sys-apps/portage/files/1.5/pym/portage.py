@@ -2101,6 +2101,7 @@ def ebuild_init():
 	else:
 		roottree=vartree(root,root_virts)
 	ebuild_initialized=1
+os.umask(0)
 root=getenv("ROOT")
 if len(root)==0:
 	root="/"
@@ -2117,6 +2118,9 @@ if root != "/":
 		print "!!! Exiting."
 		print
 		sys.exit(1)
+if not os.path.exists(root+"tmp"):
+	print ">>> "+root+"tmp doesn't exist, creating it..."
+	os.path.mkdir(root+"tmp",01777)
 settings=config()
 ebuild_initialized=0
 
