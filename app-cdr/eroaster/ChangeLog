@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/eroaster
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.26 2004/06/24 21:33:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.27 2004/09/03 19:12:23 caleb Exp $
+
+  03 Sep 2004; Caleb Tennis <caleb@gentoo.org> -eroaster-2.0.12.ebuild:
+  Remove old masked version
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> eroaster-2.0.12.ebuild:
   Add die following econf for bug 48950
