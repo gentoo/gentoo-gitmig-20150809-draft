@@ -9,7 +9,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite"
 
 PROVIDE="virtual/mta

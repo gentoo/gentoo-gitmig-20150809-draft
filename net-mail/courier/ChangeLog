@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.51 2004/04/06 09:33:17 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.52 2004/04/07 04:39:08 weeve Exp $
+
+  06 Apr 2004; Jason Wever <weeve@gentoo.org> courier-0.45.3.ebuild:
+  Added ~sparc keyword wrt bug #46319.
 
 *courier-0.45.4 (06 Apr 2004)
 
