@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.4 2003/06/22 05:30:30 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.5 2003/07/14 18:15:27 frogger Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -203,7 +203,6 @@ src_unpack() {
 	then
 		# ProPolice Stack Smashing protection - protector-3.2.2-7
 		epatch ${WORKDIR}/protector.dif
-		epatch ${FILESDIR}/3.2.2/protector_parallel_make.patch
 		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 		version_patch ${FILESDIR}/3.3/gcc33-propolice-version.patch
