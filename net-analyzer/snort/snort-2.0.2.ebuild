@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.2.ebuild,v 1.4 2003/10/28 14:45:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.2.ebuild,v 1.5 2003/11/24 15:40:18 vapier Exp $
 
 inherit eutils
 
@@ -93,6 +93,6 @@ pkg_postinst() {
 	usermod -s "/dev/null" snort || die "usermod problem"
 	echo "ignore any message about CREATE_HOME above..."
 
-	chown snort.snort /var/log/snort
+	chown snort:snort /var/log/snort
 	chmod 0770 /var/log/snort
 }
