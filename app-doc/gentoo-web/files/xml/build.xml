@@ -13,7 +13,7 @@ will work with any x86-compatible system.
 </abstract>
 
 <version>1.4.2</version>
-<date>18 Oct. 2001</date>
+<date>18 Oct 2001</date>
 
 <chapter>
 <title>About the Install</title>
@@ -109,12 +109,12 @@ filesystem back to a consistent state (since you can't boot!)      </p>
 
 <p>Now, on to filesystem types.  Right now, you have three filesystem options:
 ext2, ext3 (journalling) and ReiserFS.  ext2 is the tried and true Linux
-filesystem but doesn't have metadata journalling.  ext3 is the new version of
-ext2 with both metadata journalling and ordered data writes, effectively
+filesystem but doesn't have metadata journaling.  ext3 is the new version of
+ext2 with both metadata journaling and ordered data writes, effectively
 providing data journalling as well.  ReiserFS is a B*-tree based filesystem
 with very good small file performance, and greatly outperforms both ext2 and
 ext3 when dealing with small files (files less than 4k), often by a factor of
-10x-15x.  ReiserFS has metadata journalling, but no data journalling.  If
+10x-15x.  ReiserFS has metadata journaling, but no data journaling.  If
 you're looking for the most standard filesystem, use ext2.  If you're looking
 for the most rugged journaled filesystem, use ext3.  If you're looking for a
 high-performance filesystem with journalling support, use ReiserFS.  Both ext3
@@ -131,7 +131,7 @@ sizes and types:</p>
   <tr>
   	<ti>boot partition, containing kernel(s) and boot information</ti>
 	<ti>&gt;10 Megabytes</ti>
-	<ti>ext2 highly recommended (easiest) or ReiserFS, if reiserfs then mount with <c>-o notail</c></ti>
+	<ti>ext2/3 highly recommended (easiest) or ReiserFS, if reiserfs then mount with <c>-o notail</c></ti>
   	<ti>/dev/hda1</ti>
   </tr>
    <tr>
@@ -143,7 +143,7 @@ sizes and types:</p>
   <tr>
   	<ti>root partition, containing main filesystem (/usr, /home, etc)</ti>
 	<ti>&gt;=1.5 Gigabytes</ti>
-	<ti>ReiserFS, ext3, ext2 ok</ti>
+	<ti>ReiserFS, ext3 recommended; ext2 ok</ti>
   	<ti>/dev/hda3</ti>
   </tr>
  </table>
@@ -165,11 +165,7 @@ the filesystems that will be used to house our data.  Initialize swap as follows
 <pre>
 # <i>mkreiserfs /dev/hda3</i>
 </pre>
-<p>If you'd like to use ext3, first make sure that the <path>ext3.o</path> module is loaded:</p>
-<pre>
-# <i>modprobe ext3</i>
-</pre>
-<p>Then, you can create ext3 filesystems using <c>mke2fs -j</c>:</p>
+<p>If you'd like to use ext3, you can create ext3 filesystems using <c>mke2fs -j</c>:</p>
 <pre>
 # <i>mke2fs -j /dev/hda3</i>
 </pre>

@@ -333,12 +333,14 @@ User Docs:<br/>
 						<a class="altlink" href="/doc/xml-guide.html">XML Documentation Guide</a><br/>
 						<br/>
 	
-						Mailing Lists:<br/>
-						<font color="#ff0000">New!</font> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-ebuild">gentoo-ebuild</a><br/>
-						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</a><br/>
-						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</a><br/>
-						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-cvs">gentoo-cvs</a><br/>
-						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo">complete list</a><br/>
+						Mailing Lists:<br/><br/>
+						<font color="#ff0000">New! General User List:</font><br/> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-user">gentoo-user</a><br/><br/>
+						<font color="#ff0000">New! Ebuild submissions:</font><br/> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-ebuild">gentoo-ebuild</a><br/><br/>
+						
+						Developer list:<br/> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</a><br/><br/>
+						Announcements:<br/> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</a><br/><br/>
+						Daily CVS logs:<br/>  <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-cvs">gentoo-cvs</a><br/><br/>
+						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo">Complete list of mailing lists</a><br/>
 						<br/>
 						Other Resources:<br/>
 						<a class="altlink" href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> (browse our repository)<br/>
