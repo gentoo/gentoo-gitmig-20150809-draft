@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.1 2002/12/11 22:57:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.2 2003/01/14 00:20:30 rphillips Exp $
 
 *mysql++-1.7.9 (11 Dec 2002)
+
+  13 Jan 2003; Ryan Phillips <rphillips@gentoo.org> :
+  Removed gcc 3.0 and moved it to ibiblio... removing bloat
 
   11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   Initial version

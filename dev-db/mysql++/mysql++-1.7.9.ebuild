@@ -10,7 +10,8 @@ DESCRIPTION="C++ API interface to the MySQL database"
 SRC_URI="http://mysql.he.net/Downloads/mysql++/mysql++-1.7.9.tar.gz
 	http://mysql.adgrafix.com/Downloads/mysql++/mysql++-1.7.9.tar.gz
 	http://mysql.fastmirror.com/Downloads/mysql++/mysql++-1.7.9.tar.gz
-	http://mysql.oms-net.nl/Downloads/mysql++/mysql++-1.7.9.tar.gz"
+	http://mysql.oms-net.nl/Downloads/mysql++/mysql++-1.7.9.tar.gz
+	mirror://gentoo/mysql++-gcc-3.0.patch"
 
 # This is the download page but includes links to other places
 HOMEPAGE="http://www.mysql.org/downloads/api-mysql++.html"
@@ -27,7 +28,7 @@ src_unpack() {
 
 	# unpack a bunck of stuff and exit
 	unpack ${A} ; cd ${S}
-	patch -p1 < ${FILESDIR}/mysql++-gcc-3.0.patch || die
+	patch -p1 < ${DISTFILES}/mysql++-gcc-3.0.patch || die
 	patch -p1 < ${FILESDIR}/mysql++-gcc-3.2.patch || die
 	patch -p1 < ${FILESDIR}/mysql++-1.7.9_example.patch || die
 }
