@@ -4,26 +4,20 @@ Hash: SHA1
 MD5 4c036ee248fdf0dd7157545e36a83003 ChangeLog 17347
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
 MD5 aec43e5b3a4401a4acb51363c755a729 openssh-3.7.1_p2-r1.ebuild 4113
-MD5 a028e2299c7750ee138516c268f1eeec openssh-3.7.1_p2-r2.ebuild 4644
-MD5 f80730dd66dcef312979858e358615e7 openssh-3.8.1_p1.ebuild 4064
-MD5 2358cb06c79fcfc3c2cde9444309a324 openssh-3.8_p1.ebuild 4241
 MD5 5f87f18a24efe616d1dfcc5e9848946b openssh-3.8.1_p1-r1.ebuild 4241
 MD5 b4353850fbc9705f26093f98055cfc69 openssh-3.8.1_p1-r2.ebuild 4266
 MD5 e9523dae352f6d0b78f1574f05df7f74 openssh-3.9_p1.ebuild 4425
-MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r2 142
 MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r1 142
 MD5 7880e18b2a91e5927810dddc7bda270f files/openssh-3.7.1_p1-selinux.diff.bz2 1353
 MD5 b912e51afc37c43afef30d1f4aaee55a files/openssh-skeychallenge-args.diff.bz2 424
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
 MD5 0a1428803057b7d25e624c6b297980d8 files/sshd.rc6 1281
 MD5 7a205083ec21bedffb0adc331d587291 files/openssh-3.7.1_p2-skey.patch.bz2 272
-MD5 e62c6cfae268e95fb406080c91713c1a files/digest-openssh-3.8_p1 138
 MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8.1_p1-chroot.patch.bz2 1119
 MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8_p1-chroot.patch.bz2 1119
 MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8_p1-kerberos.patch.bz2 465
 MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8_p1-resolv_functions.patch.bz2 315
 MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8_p1-skey.patch.bz2 270
-MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1 141
 MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8.1_p1-kerberos.patch.bz2 465
 MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8.1_p1-resolv_functions.patch.bz2 315
 MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8.1_p1-skey.patch.bz2 270
@@ -46,7 +40,7 @@ MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB0gW8roRuSHgZdywRAvEqAJkB+GiuyQoy1KsMavLwWzmTndUB1gCdEv5t
-H/7P4QEMLeqsERMt/DX5dKw=
-=2VDS
+iD8DBQFB0gYaroRuSHgZdywRAmq/AJ9OvivN/Mzd2eeY+2ynKXK3EQva+gCfc9Im
+bEYuUfprH+7N/wBqoIQXVXg=
+=RQ3O
 -----END PGP SIGNATURE-----
