@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Author: Spider <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7.ebuild,v 1.1 2002/05/12 19:40:28 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7.ebuild,v 1.2 2002/05/12 19:52:52 spider Exp $
 
 MY_P=ex-020403
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="The original VI package"
 SRC_URI="http://download.berlios.de/ex-vi/${MY_P}.tar.gz"
 HOMEPAGE="http://ex-vi.berlios.de/"
-#LICENSE=""
+LICENSE="Caldera"
 DEPEND="virtual/glibc sys-libs/ncurses"
 SLOT="0"
 RDEPEND=$DEPEND
