@@ -1,0 +1,7 @@
+# ChangeLog for dev-python/twibber
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twibber/ChangeLog,v 1.1 2005/03/14 14:40:59 lordvan Exp $
+
+  14 Mar 2005; Thomas Raschbacher <lordvan@gentoo.org> :
+  initial import
+
