@@ -3,5 +3,5 @@
 #define HasGcc2ForCplusplus YES
 #define ForceNormalLib YES
 #define BuildXinerama YES
-
+#define SharedLibXau YES
 

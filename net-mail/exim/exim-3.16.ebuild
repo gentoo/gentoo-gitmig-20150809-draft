@@ -16,7 +16,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 src_compile() {
     cd ${S}
     mkdir Local
-    cp ${O}/files/Makefile Local
+    cp ${FILESDIR}/Makefile Local
     try make
 }
 
@@ -55,7 +55,7 @@ src_install () {
 
     insopts -m 755
     insinto /etc/rc.d/init.d
-    doins ${O}/files/exim
+    doins ${FILESDIR}/exim
 }
 
 pkg_config() {
