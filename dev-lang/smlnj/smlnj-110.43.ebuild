@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.42.ebuild,v 1.3 2003/10/01 00:33:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.43.ebuild,v 1.1 2003/10/01 00:33:48 george Exp $
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard ML of New Jersey compiler and libraries"
 SRC_URI="ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/config.tgz
 	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/runtime.tgz
@@ -19,7 +18,7 @@ SRC_URI="ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/config.tgz
 HOMEPAGE="http://cm.bell-labs.com/cm/cs/what/smlnj/"
 
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 SLOT="0"
 DEPEND="virtual/glibc"
