@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.6.ebuild,v 1.1 2005/01/08 08:52:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.6.ebuild,v 1.2 2005/01/31 22:07:00 luckyduck Exp $
 
 DESCRIPTION="blackbox program execution dialog box"
 SRC_URI="http://www.darkops.net/${PN}/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.darkops.net/bbrun/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~amd64 ~x86 ~ppc ~sparc"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2"
