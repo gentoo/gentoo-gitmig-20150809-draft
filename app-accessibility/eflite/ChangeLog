@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/eflite
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.3 2004/03/22 07:37:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.4 2004/03/22 17:46:04 eradicator Exp $
+
+  22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> eflite-0.3.8.ebuild:
+  Conf file is now in /etc/eflite/ instead of /etc. No revbump done because it
+  worked before, but in the future, it should be at the new location... I doubt
+  many people have triend the package yet, though...
 
   21 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> eflite-0.3.8.ebuild,
   files/eflite-0.3.8-daemon.patch, files/eflite.rc, files/es.conf:

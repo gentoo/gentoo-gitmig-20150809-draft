@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8.ebuild,v 1.5 2004/03/22 07:59:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8.ebuild,v 1.6 2004/03/22 17:46:04 eradicator Exp $
 
 inherit eutils
 
@@ -24,6 +24,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-shared_flite.patch
 	epatch ${FILESDIR}/${P}-daemon.patch
+
+	sed -i 's:/etc/es.conf:/etc/eflite/es.conf:g' *
+
 	WANT_AUTOCONF=2.5 autoconf
 }
 
@@ -31,7 +34,7 @@ src_install() {
 	dobin eflite || die
 	dodoc ChangeLog README INSTALL eflite_test.txt
 
-	insinto /etc
+	insinto /etc/eflite
 	doins ${FILESDIR}/es.conf
 
 	exeinto /etc/init.d
