@@ -1,153 +1,114 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.3 2003/09/09 08:55:19 msterret Exp $
-#OKV=original kernel version, KV=patched kernel version.  They can be the same.
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.4 2003/09/12 09:41:40 kumba Exp $
 
-#we use this next variable to avoid duplicating stuff on cvs
-GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
-SPARCFILEDIR=${PORTDIR}/sys-kernel/sparc-sources/files
-OKV=2.4.21
-KV=2.4.21
-S=${WORKDIR}/linux-${KV}
 
-#These are *stock* 2.4.21 headers, for niceness.
+ETYPE="headers"
+inherit kernel
+OKV=${PV/_/-}
+S=${WORKDIR}/linux-${OKV}
 
-DESCRIPTION="Full sources for the Gentoo Linux kernel"
+# What's in this kernel?
+
+# INCLUDED:
+# 1) linux sources from kernel.org
+# 2) patch for big-endian machines to fix header issue (currently sparc only)
+
+DESCRIPTION="Linux ${OKV} headers from kernel.org"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
-PROVIDE="virtual/kernel virtual/os-headers"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
-SLOT="${KV}"
-KEYWORDS="-* amd64"
+SLOT="${OKV}"
+KEYWORDS="-* amd64 ~sparc"
 
-if [ "$ARCH" = "amd64" ]
-then
-	KERNEL_ARCH="x86_64"
-else
-	KERNEL_ARCH=`echo $ARCH |\
-	sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
-	if [ -z "$KERNEL_ARCH" ]
-	then
-		KERNEL_ARCH=`uname -m |\
-			sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
-	fi
-	[ $KERNEL_ARCH="sparc" -a "$PROFILE_ARCH" = "sparc64" ] && KERNEL_ARCH="sparc64"
+
+# Figure out what architecture we are, and set KERNEL_ARCH appropriately
+ARCH="${ARCH:-`uname -m`}"
+ARCH=`echo $ARCH | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/`
+[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
+
+
+# Archs which have their own separate header packages, add a check here
+# and redirect the user to them
+if [ "${ARCH}" = "mips" ] || [ "${ARCH}" = "mips64" ]; then
+	eerror "These headers are not appropriate for your architecture."
+	eerror "Please use sys-kernel/${ARCH/64/}-headers instead."
+	die
 fi
 
-if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
-then
-	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-	RDEPEND =">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make ? sys-devel/egcs64-sparc"
-fi
 
-[ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include"
 
 src_unpack() {
-	cd ${WORKDIR}
-	unpack linux-${OKV}.tar.bz2
-	#the main source dir for linux-2.4.19 (and higher?) has the version attached
-	if [ $OKV != $KV ]; then
-		mv linux-${OKV} linux-${KV} || die "moving kernel"
+	unpack ${A}
+	cd ${S}
+
+	# Big Endian architectures need this patch in order to build certain programs properly
+	# Right now, this fix only affects sparc.  hppa and ppc will need to edit this later.
+	# Closes Bug #26062
+	if [ -n "`use sparc`" ]; then
+		epatch ${FILESDIR}/bigendian-byteorder-fix.patch
 	fi
-	cd ${S}
 
-	#sometimes we have icky kernel symbols; this seems to get rid of them
-	make mrproper || die "making proper"
-
-	#this file is required for other things to build properly, so we autogenerate it
-	make include/linux/version.h || die "making headers"
-
-	#fix silly permissions in tarball
-	cd ${WORKDIR}
-	chown -R 0.0 *
-	chmod -R a+r-w+X,u+w *
-
-	# Gentoo Linux uses /boot, so fix 'make install' to work properly
-	cd ${S}
-	mv Makefile Makefile.orig
-	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-		Makefile.orig >Makefile || die "sed makefile" # test, remove me if Makefile ok
-	rm Makefile.orig
+	# Do Stuff
+	kernel_universal_unpack
 }
 
 src_compile() {
-	if [ "$PN" = "linux-headers" ]
-	then
-		yes "" | make oldconfig
-		echo "Ignore any errors from the yes command above."
+
+	# Do normal src_compile stuff
+	kernel_src_compile
+
+	# If this is sparc, then geneate asm_offsets.h
+	if [ -n "`use sparc`" ]; then
+		make dep ARCH=sparc || die "Failed to run 'make dep'"
 	fi
 }
 
 src_install() {
-	if [ "$PN" = "linux-sources" ]
-	then
-		dodir /usr/src
-		echo ">>> Copying sources..."
-		mv ${WORKDIR}/* ${D}/usr/src
-	else
-		#linux-headers
-		dodir /usr/include/linux
-		cp -ax ${S}/include/linux/* ${D}/usr/include/linux
-		rm -rf ${D}/usr/include/linux/modules
+
+	# Do normal src_install stuff
+	kernel_src_install
+
+	# If this is sparc, then we need to place asm_offsets.h in the proper location(s)
+	if [ -n "`use sparc`" ]; then
+
+		# We don't need /usr/include/asm, generate-asm-sparc will take care of this
+		rm -Rf ${D}/usr/include/asm
+
+		# We do need empty directories, though...
 		dodir /usr/include/asm
-		if [ `expr $KERNEL_ARCH ":" "sparc"` -eq 5 ]
-		then
-			dodir /usr/include/asm-{sparc,sparc64}
-			if [ "$KERNEL_ARCH" = "sparc64" ]
-			then
-				cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
-				if [ ! -r ${D}/usr/include/asm-sparc64/asm_offsets.h ]
-				then
-					cp ${SPARCFILEDIR}/${OKV}/sparc64-asm_offsets.h \
-						${D}/usr/include/asm-sparc64/asm_offsets.h
-				fi
+		dodir /usr/include/asm-sparc
+
+		# Copy asm-sparc
+		cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
+
+		# If this is sparc64, then we need asm-sparc64 stuff too
+		if [ "$PROFILE_ARCH" = "sparc64" ]; then
+			dodir /usr/include/asm-sparc64
+			cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
+		fi
+
+		# Check if generate-asm-sparc exists
+		if [ -a "${FILESDIR}/generate-asm-sparc" ]; then
+
+			# Just incase generate-asm-sparc isn't executable, make it so
+			if [ ! -x "${FILESDIR}/generate-asm-sparc" ]; then
+				chmod +x ${FILESDIR}/generate-asm-sparc
 			fi
 
-			cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
-			if [ ! -r ${D}/usr/include/asm-sparc/asm_offsets.h ]
-			then
-				cp ${SPARCFILEDIR}/${OKV}/sparc-asm_offsets.h \
-					${D}/usr/include/asm-sparc/asm_offsets.h
-			fi
-			${SPARCFILEDIR}/generate-asm-sparc ${D}/usr/include
-
+			# Generate /usr/include/asm for sparc systems
+			${FILESDIR}/generate-asm-sparc ${D}/usr/include
 		else
-			cp  -ax ${S}/include/asm-${KERNEL_ARCH}/* ${D}/usr/include/asm
+			eerror "${FILESDIR}/generate-asm-sparc doesn't exist!"
+			die
 		fi
 	fi
 }
 
 pkg_preinst() {
-	if [ "$PN" = "linux-headers" ]
-	then
-		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
-		[  -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
-		[ -L ${ROOT}usr/include/asm-sparc ] && rm ${ROOT}usr/include/asm-sparc
-		[ -L ${ROOT}usr/include/asm- ] && rm ${ROOT}usr/include/asm-
-		[ -L ${ROOT}usr/include/asm-${KERNEL_ARCH} ] && rm ${ROOT}usr/include/asm-${KERNEL_ARCH}
-		true
-	fi
+	kernel_pkg_preinst
 }
 
 pkg_postinst() {
-	[ "$PN" = "linux-headers" ] && return
-	cd ${ROOT}usr/src/linux-${KV}
-	make mrproper
-	if [ -e "${ROOT}usr/src/linux/.config" ]
-	then
-		cp "${ROOT}usr/src/linux/.config" .config
-		#we only make dep when upgrading to a new kernel (with existing config)
-		#The default setting will be selected.
-		yes "" | make oldconfig
-		echo "Ignore any errors from the yes command above."
-		make dep
-	else
-		cp  "${ROOT}usr/src/linux-${KV}/arch/${KERNEL_ARCH}/defconfig" .config \
-			|| cp  "${ROOT}usr/src/linux-${KV}/arch/i386/defconfig" .config
-	fi
-	#remove /usr/src/linux symlink
-	rm -f ${ROOT}/usr/src/linux
-	#set up a new one
-	ln -sf linux-${KV} ${ROOT}/usr/src/linux
+	kernel_pkg_postinst
 }

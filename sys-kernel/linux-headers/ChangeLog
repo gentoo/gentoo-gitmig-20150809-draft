@@ -1,8 +1,15 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.18 2003/06/21 18:14:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.19 2003/09/12 09:41:40 kumba Exp $
+
 
 *linux-headers-2.4.21 (21 Jun 2003)
+
+  12 Sep 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild,
+  files/bigendian-byteorder-fix.patch, files/generate-asm-sparc:
+  Re-written linux-headers-2.4.21 ebuild; Utilizes kernel.eclass, and includes a
+  needed fix for sparc systems. Only usable with the gcc33-sparc64-1.4 testing
+  profile right now.  Should not affect amd64; if it does, Yell.
 
   21 Jun 2003; Daniel Robbins <drobbins@gentoo.org> new linux-headers-2.4.21 (stock)
   to be used for amd64.
