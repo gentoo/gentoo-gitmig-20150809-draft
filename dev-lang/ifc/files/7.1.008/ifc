@@ -1,0 +1,4 @@
+#!/bin/sh
+export INTEL_LICENSE_FILE="/opt/intel/licenses"
+export LD_LIBRARY_PATH="/opt/intel/compiler70/ia32/lib"
+/opt/intel/compiler70/ia32/bin/ifcbin $*
