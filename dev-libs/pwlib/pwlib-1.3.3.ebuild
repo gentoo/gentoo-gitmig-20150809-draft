@@ -1,10 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.3.ebuild,v 1.3 2002/08/01 18:46:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.3.ebuild,v 1.4 2002/11/17 09:06:30 vapier Exp $
 
-S=${WORKDIR}/${PN}
 DESCRIPTION="Libs needed for GnomeMeeting"
-HOMEPAGE="http://www.openh323.org"
+HOMEPAGE="http://www.openh323.org/"
 SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 SLOT="0"
@@ -14,14 +13,14 @@ KEYWORDS="x86 -ppc -sparc -sparc64"
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a"
 
-src_unpack() {
+S=${WORKDIR}/${PN}
 
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# Removes optimizations from unix make options
 	# Allows the users make.conf to set optimization level
 	patch -p1 < ${FILESDIR}/opts.diff || die
-
 }
 
 src_compile() {
@@ -33,10 +32,10 @@ src_compile() {
 }
 
 src_install() {
-	mkdir -p ${D}/usr/lib
-	mkdir -p ${D}/usr/include/ptclib
-	mkdir -p ${D}/usr/include/ptlib/unix/ptlib
-	mkdir -p ${D}/usr/share/pwlib
+	dodir /usr/lib
+	dodir /usr/include/ptclib
+	dodir /usr/include/ptlib/unix/ptlib
+	dodir /usr/share/pwlib
 	cd ${S}	
 	cp -a lib/*so* ${D}/usr/lib
 	cp -a include/ptlib.h ${D}/usr/include
