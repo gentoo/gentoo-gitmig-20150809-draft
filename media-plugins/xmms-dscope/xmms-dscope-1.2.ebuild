@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dscope/xmms-dscope-1.2.ebuild,v 1.5 2003/03/29 03:55:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dscope/xmms-dscope-1.2.ebuild,v 1.6 2003/09/07 00:02:15 msterret Exp $
 
 MY_P=${PN/xmms-/}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -22,7 +22,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${MY_P}-destdir.patch
 }
 
-src_compile() {     
+src_compile() {
 	# There is no configure script, but the
 	# Makefile does things (mostly) correctly.
  	make clean || die

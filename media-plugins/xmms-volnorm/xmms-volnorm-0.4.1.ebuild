@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.4.1.ebuild,v 1.3 2003/02/13 13:04:56 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.4.1.ebuild,v 1.4 2003/09/07 00:02:15 msterret Exp $
 
 MY_P=${P/xmms-/}
-S=${WORKDIR}/${MY_P} 
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Plugin for XMMS, music will be played at the same volume even if it
 is recorded at a different volume level"
 SRC_URI="http://download.sourceforge.net/volnorm/${MY_P}.tar.gz"
@@ -22,7 +22,7 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	einstall \
 		libdir=${D}/usr/lib/xmms/Plugins || die
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.6 2003/07/04 07:49:34 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.7 2003/09/07 00:02:15 msterret Exp $
 
 IUSE=""
 
@@ -59,14 +59,14 @@ src_compile () {
     cd ${S}/rmxmms
     sed -e 's/^LIBS =/LIBS = -lgcc/' Makefile.in > Makefile.in.new
     sed -e 's/^LDFLAGS =/LDFLAGS = -lgcc/' Makefile.in.new > Makefile.in
-    
+
 	cd ${S}
 	econf "--with-realsdk-dir=${WORKDIR}/realsdk/rmasdk_6_0" || die
 	emake || die
 }
 
 src_install () {
-	
+
 	make install DESTDIR=${D} || die
 
 	dodoc ${S}/README

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jess/xmms-jess-2.9.1.ebuild,v 1.4 2003/02/13 13:02:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jess/xmms-jess-2.9.1.ebuild,v 1.5 2003/09/07 00:02:15 msterret Exp $
 
 MY_P="JESS-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -28,6 +28,6 @@ src_install () {
 	dodir /usr/lib/xmms/Visualization
 
 	make DESTDIR=${D} install || die
-	
+
 	dodoc AUTHORS COPYING ChangeLog INSTALL README NEWS
 }

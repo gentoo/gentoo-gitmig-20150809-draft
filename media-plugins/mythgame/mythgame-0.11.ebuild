@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/mythgame-0.11.ebuild,v 1.1 2003/08/18 18:03:40 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/mythgame-0.11.ebuild,v 1.2 2003/09/07 00:02:15 msterret Exp $
 
 inherit flag-o-matic
 
@@ -39,7 +39,7 @@ src_install () {
 	einstall INSTALL_ROOT="${D}"
 
 	insinto "/usr/share/mythtv/database/${PN}"
-	doins gamedb/*.sql  
+	doins gamedb/*.sql
 
 	dodoc README UPGRADING gamelist.xml
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-realrandom/xmms-realrandom-0.2.ebuild,v 1.2 2003/08/12 09:58:08 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-realrandom/xmms-realrandom-0.2.ebuild,v 1.3 2003/09/07 00:02:15 msterret Exp $
 
 IUSE=""
 
@@ -17,12 +17,12 @@ SLOT="0"
 
 DEPEND="media-sound/xmms"
 
-src_compile() {     
+src_compile() {
 	econf || die
 	emake || die
 }
 
-src_install() {        
+src_install() {
 	make DESTDIR=${D} libdir=$(xmms-config --general-plugin-dir) install || die
-	dodoc AUTHORS README	
+	dodoc AUTHORS README
 }

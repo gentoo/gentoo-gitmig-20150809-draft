@@ -1,6 +1,6 @@
 # Copyright 2002, Jens Schittenhelm
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.3 2003/08/07 04:01:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.4 2003/09/07 00:02:15 msterret Exp $
 
 DESCRIPTION="A xmms remote that allows users to use K-Jofol skins"
 HOMEPAGE="http://www.csse.monash.edu.au/~timf/xmms.html"
@@ -29,4 +29,4 @@ pkg_postinst() {
 	einfo "This plugin works as a remote for XMMS. Start XMMS before"
 	einfo "using this plugin with kj"
 	einfo "Place K-Jofol skins in ~/.xmms/kjofol/"
-} 
+}

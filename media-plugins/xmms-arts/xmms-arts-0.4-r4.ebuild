@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r4.ebuild,v 1.3 2003/02/13 13:01:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r4.ebuild,v 1.4 2003/09/07 00:02:15 msterret Exp $
 inherit kde-base
 
 # Note: we set many vars e.g. DEPEND insteaed of extending them because this isn't a proper KDE app,
@@ -19,7 +19,7 @@ newdepend ">=media-sound/xmms-1.2.5-r1
 	    kde-base/arts"
 
 set-kdedir 3
-	 
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -30,14 +30,14 @@ src_unpack() {
 	autoconf
 }
 
-src_compile() {     
+src_compile() {
 	kde_src_compile myconf # calls set-kdedir
-	CFLAGS="$CFLAGS -I/usr/X11R6/include -I/usr/include -I${KDEDIR}/include -I${KDEDIR}/include/artsc"  
+	CFLAGS="$CFLAGS -I/usr/X11R6/include -I/usr/include -I${KDEDIR}/include -I${KDEDIR}/include/artsc"
 	econf || die
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING NEWS README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.9 2003/07/12 18:40:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.10 2003/09/07 00:02:15 msterret Exp $
 
 inherit kde-base eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 	#epatch ${FILESDIR}/${P}-gentoo-endian.patch
 }
 
-src_compile() {     
+src_compile() {
 	kde_src_compile myconf # calls set-kdedir
 	econf || die
 	emake || die

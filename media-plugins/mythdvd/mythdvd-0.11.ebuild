@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.11.ebuild,v 1.1 2003/08/18 18:00:00 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.11.ebuild,v 1.2 2003/09/07 00:02:14 msterret Exp $
 
 inherit flag-o-matic
 
@@ -34,7 +34,7 @@ src_compile() {
 	if [ ! -z "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "${S}/settings.pro" || die "sed failed"
 	fi
-	
+
 	qmake -o "${S}/Makefile" "${S}/${PN}.pro"
 
 	econf "`use_enable transcode`"

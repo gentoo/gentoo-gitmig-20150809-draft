@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-d5d/xine-d5d-0.2.7-r1.ebuild,v 1.6 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-d5d/xine-d5d-0.2.7-r1.ebuild,v 1.7 2003/09/07 00:02:15 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Captain CSS menu plugin for the xine media player"
@@ -31,7 +31,7 @@ src_compile() {
 		einfo "Configuring for Big-Endian Architecture"
 		echo "#define WORDS_BIGENDIAN" >> config.h
 	fi
-	
+
 	emake || die
 }
 
