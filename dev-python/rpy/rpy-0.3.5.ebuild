@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.3.5.ebuild,v 1.4 2004/10/18 13:13:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.3.5.ebuild,v 1.5 2004/10/18 14:02:58 liquidx Exp $
 
 inherit distutils
 
@@ -12,11 +12,15 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/python
-	dev-lang/R"
+	dev-lang/R
+	dev-python/numeric"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -e "s#^r_libs = .*#r_libs = '/usr/lib/R/lib'#" \
 		-i ${S}/setup.py
+
+	# fix for undefined symbol: MAIN__
+	echo "int  MAIN__( ) {  return(0); }" >> ${S}/src/rpymodule.c 
 }

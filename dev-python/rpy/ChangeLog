@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rpy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.4 2004/10/18 13:13:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.5 2004/10/18 14:02:58 liquidx Exp $
+
+  18 Oct 2004; Alastair Tse <liquidx@gentoo.org> rpy-0.3.5.ebuild:
+  fix problem with undefined reference to MAIN__ if using libf2c
 
   18 Oct 2004; Alastair Tse <liquidx@gentoo.org> rpy-0.3.5.ebuild:
   added dev-lang/R dep and fix to find libR properly
