@@ -1,17 +1,18 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/files/idmapd.rc,v 1.4 2004/07/14 23:34:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/files/idmapd.rc,v 1.5 2004/11/08 05:08:15 vapier Exp $
 
 depend() {
 	need net
 }
 
 start() {
-	if grep -q rpc_pipefs /proc/filesystems &>/dev/null; then
-		if ! grep -q "rpc_pipefs /var/lib/rpc_pipes" /proc/mounts &>/dev/null; then
+	[ ! -d /var/lib/rpc_pipes ] && mkdir -p /var/lib/rpc_pipes
+
+	if grep -q rpc_pipefs /proc/filesystems ; then
+		if ! grep -q "rpc_pipefs /var/lib/rpc_pipes" /proc/mounts ; then
 			ebegin "Mounting RPC pipefs"
-			mkdir -p /var/lib/rpc_pipes
 			mount -t rpc_pipefs rpc_pipefs /var/lib/rpc_pipes
 			eend $? "Error mounting RPC pipefs"
 		fi
