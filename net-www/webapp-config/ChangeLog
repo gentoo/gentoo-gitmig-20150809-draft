@@ -1,6 +1,9 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.65 2004/09/19 16:45:03 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.66 2004/12/29 21:14:23 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Sep 2004; Stuart Herbert <stuart@gentoo.org> :
   Version bump; CONF_LIBDIR support for amd64
@@ -16,7 +19,7 @@
   webapp-config-1.10-r10.ebuild:
   Marked stable on amd64.
 
-  04 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   webapp-config-1.10-r10.ebuild:
   Stable on alpha.
 
@@ -80,7 +83,7 @@
   15 Aug 2004; Jason Wever <weeve@gentoo.org> webapp-config-1.10-r6.ebuild:
   Stable on sparc wrt bug #59756.
 
-  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  13 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   webapp-config-1.10-r6.ebuild:
   Stable on alpha.
 
@@ -179,7 +182,7 @@
   11 Jun 2004; Stuart Herbert <stuart@gentoo.org> webapp-config-1.10.ebuild:
   Version bump; new features + changes for bugs #53215, #53390, #53384
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   webapp-config-1.9-r2.ebuild:
   Stable on alpha.
 
@@ -229,7 +232,7 @@
   Removed rdepend on xmlto. If you need to regen the man pages from the docbook
   source, remember to emerge xmlto first!
 
-  03 May 2004; Bryan Østergaard <kloeri@gentoo.org> webapp-config-1.7.ebuild:
+  03 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> webapp-config-1.7.ebuild:
   Keyworded ~alpha.
 
 *webapp-config-1.7 (01 May 2004)

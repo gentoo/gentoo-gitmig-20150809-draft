@@ -1,6 +1,9 @@
 # ChangeLog for net-www/elinks
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.41 2004/12/25 16:28:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.42 2004/12/29 21:08:15 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *elinks-0.10.0 (25 Dec 2004)
 
@@ -74,7 +77,7 @@
   -elinks-0.9.2_rc2.ebuild, +elinks-0.9.2_rc4.ebuild:
   Version bump. Removed old ebuilds.
 
-  24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> elinks-0.9.2_rc3.ebuild:
+  24 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> elinks-0.9.2_rc3.ebuild:
   Keyworded ~alpha.
 
 *elinks-0.9.2_rc3 (21 Jul 2004)

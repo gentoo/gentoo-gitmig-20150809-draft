@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.37 2004/11/15 03:32:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.38 2004/12/29 21:12:44 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *mozilla-launcher-1.23 (14 Nov 2004)
 
@@ -22,7 +25,7 @@
   Add XUL.mfasl to the list of files to delete when the browser is upgraded
   #67338
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   mozilla-launcher-1.21.ebuild:
   Stable on alpha.
 
