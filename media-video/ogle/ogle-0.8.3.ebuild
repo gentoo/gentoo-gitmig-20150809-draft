@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.3.ebuild,v 1.2 2002/06/15 00:31:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.3.ebuild,v 1.3 2002/06/15 18:45:42 danarmak Exp $
 
 inherit libtool
 
@@ -14,7 +14,7 @@ DEPEND="media-libs/libdvdcss
 	media-libs/libdvdread 
 	x11-base/xfree
 	>=dev-libs/libxml2-2.4.19
-	>=media-libs/a52dec-0.7.2
+	>=media-libs/a52dec-0.7.3
 	alsa? ( media-libs/alsa-lib )"
 
 SLOT=""

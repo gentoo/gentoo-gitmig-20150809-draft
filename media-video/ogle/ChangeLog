@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ogle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.5 2002/06/15 00:26:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.6 2002/06/15 18:45:41 danarmak Exp $
+
+  15 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Correct a52dec dep to >=0.7.3 for this new ogle version, closes bug #3761
 
 *ogle-0.8.3 (14 Jun 2002)
 
