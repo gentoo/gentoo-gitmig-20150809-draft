@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.2 2004/03/17 19:01:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.3 2004/04/07 01:06:09 solar Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE="static"
 
 DEPEND=">=sys-libs/ncurses-5.2-r5
