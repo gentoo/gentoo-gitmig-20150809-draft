@@ -424,9 +424,9 @@ media-video/kxine
 # we need to fix deps on >=dev-util/gob-1.0.x
 >=dev-util/gob-1.99.3
 
-# <george@gentoo.org> (date??)
+# <george@gentoo.org> (25 Jul 2002)
 # masking omniORB-305 for testing
-=net-misc/omniORB-305
+#=net-misc/omniORB-305
 
 # <seemant@gentoo.org> (25 Jul 2002)
 # masked because of unhealthy groupadd operation in postinst
