@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r2.ebuild,v 1.4 2004/06/30 07:58:17 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r2.ebuild,v 1.5 2004/07/26 20:32:24 spyderous Exp $
 
 inherit eutils
 
@@ -118,10 +118,10 @@ src_compile() {
 	# kernel outside the chroot rather than within.
 	if is_kernel 2 5 || is_kernel 2 6
 	then
-		make IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
+		make IGNORE_CC_MISMATCH="yes" KERNDIR="${ROOT}/usr/src/linux" \
 			clean nvidia.o || die
 	else
-		make IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
+		make IGNORE_CC_MISMATCH="yes" KERNDIR="${ROOT}/usr/src/linux" \
 			clean module || die
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4499.ebuild,v 1.9 2004/06/30 07:58:17 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4499.ebuild,v 1.10 2004/07/26 20:32:24 spyderous Exp $
 
 inherit eutils
 
@@ -103,7 +103,7 @@ src_compile() {
 	# updated but the running kernel is still compiled with an older gcc.  This is
 	# needed for chrooted building, where the sanity check detects the gcc of the
 	# kernel outside the chroot rather than within.
-	make IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
+	make IGNORE_CC_MISMATCH="yes" KERNDIR="${ROOT}/usr/src/linux" \
 		clean nvidia.o || die
 }
 

@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.81 2004/07/26 13:15:27 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.82 2004/07/26 20:32:24 spyderous Exp $
+
+  26 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  nvidia-kernel-1.0.4363-r3.ebuild, nvidia-kernel-1.0.4496-r3.ebuild,
+  nvidia-kernel-1.0.4499.ebuild, nvidia-kernel-1.0.5328-r1.ebuild,
+  nvidia-kernel-1.0.5332-r1.ebuild, nvidia-kernel-1.0.5336-r2.ebuild,
+  nvidia-kernel-1.0.5336-r3.ebuild:
+  /usr/src/linux needs ${ROOT}. Also bring back digest-nvidia-kernel-1.0.6106,
+  as the ebuild's still in the tree.
 
 *nvidia-kernel-1.0.6106-r1 (26 Jul 2004)
 
