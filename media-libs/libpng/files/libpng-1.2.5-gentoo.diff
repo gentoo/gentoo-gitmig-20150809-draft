@@ -1,0 +1,42 @@
+--- libpng3-1.2.5.orig/pngrtran.c
++++ libpng3-1.2.5/pngrtran.c
+@@ -1930,7 +1930,7 @@
+          if (flags & PNG_FLAG_FILLER_AFTER)
+          {
+             png_bytep sp = row + (png_size_t)row_width * 3;
+-            png_bytep dp = sp  + (png_size_t)row_width;
++            png_bytep dp = sp  + (png_size_t)row_width ;
+             for (i = 1; i < row_width; i++)
+             {
+                *(--dp) = lo_filler;
+@@ -1947,7 +1947,7 @@
+          else
+          {
+             png_bytep sp = row + (png_size_t)row_width * 3;
+-            png_bytep dp = sp + (png_size_t)row_width;
++            png_bytep dp = sp + (png_size_t)row_width ;
+             for (i = 0; i < row_width; i++)
+             {
+                *(--dp) = *(--sp);
+@@ -1965,8 +1965,8 @@
+          /* This changes the data from RRGGBB to RRGGBBXX */
+          if (flags & PNG_FLAG_FILLER_AFTER)
+          {
+-            png_bytep sp = row + (png_size_t)row_width * 3;
+-            png_bytep dp = sp  + (png_size_t)row_width;
++            png_bytep sp = row + (png_size_t)row_width * 6;
++            png_bytep dp = sp  + (png_size_t)row_width * 2;
+             for (i = 1; i < row_width; i++)
+             {
+                *(--dp) = hi_filler;
+@@ -1987,8 +1987,8 @@
+          /* This changes the data from RRGGBB to XXRRGGBB */
+          else
+          {
+-            png_bytep sp = row + (png_size_t)row_width * 3;
+-            png_bytep dp = sp  + (png_size_t)row_width;
++            png_bytep sp = row + (png_size_t)row_width * 6;
++            png_bytep dp = sp  + (png_size_t)row_width * 2;
+             for (i = 0; i < row_width; i++)
+             {
+                *(--dp) = *(--sp);
