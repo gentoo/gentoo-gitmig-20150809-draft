@@ -5,6 +5,9 @@
 # ebuild incomplete
 media-gfx/k3studio
 
+# masking xforms update for ppc for testing (gerk June 7 2002)
+=x11-libs/xforms-0.89-r1
+
 # NOOO, please check with the maintainer!  the rc3-r5* releases
 # added gtk+-2.0 support, but breaks galeon, nautilus and co
 #
