@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.1-r1.ebuild,v 1.6 2003/02/14 08:50:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.1-r1.ebuild,v 1.7 2003/02/18 02:50:23 raker Exp $
 
 inherit eutils
 
@@ -23,6 +23,14 @@ DEPEND=">=x11-libs/wxGTK-2.2.9
 S="${WORKDIR}/${PN}-src-${PV}-3"
 
 src_unpack() {
+	if [ `use gtk2` ]; then
+		eerror ""
+		eerror "Audacity will not build with wxGTK compiled"
+		eerror "against gtk2.  Make sure you have set"
+		eerror "-gtk2 in use for this program to compile"
+		eerror ""
+		die "Make sure -gtk2 is in USE"
+	fi		
 	unpack ${PN}-src-${PV}-3.tgz
 	cd ${S}
 	epatch ${FILESDIR}/mono_mp3_export.patch || die

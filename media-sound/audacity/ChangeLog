@@ -1,8 +1,12 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.10 2003/02/13 05:21:54 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.11 2003/02/18 02:50:23 raker Exp $
 
 *audacity-1.1.1-r1 (30 Jan 2003)
+
+  17 Feb 2003; Nick Hadaway <raker@gentoo.org> audacity-1.1.1-r1.ebuild :
+  Added a hook so gtk2 in USE causes the compile to stop and warn
+  the user of the incompatibility.
 
   12 Feb 2003; Nick Hadaway <raker@gentoo.org> audacity-1.1.1-r1.ebuild,
   files/basecfg-1.1.1 :
