@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.37 2004/04/23 05:02:11 npmccallum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.38 2004/04/24 03:33:52 npmccallum Exp $
+
+*parted-1.6.10 (23 Apr 2004)
+
+  23 Apr 2004; Nathaniel McCallum <npmccallum@gentoo.org>
+  +parted-1.6.10.ebuild:
+  added parted-1.6.10
+  fixed hfs patch so it will apply to parted-1.6.10
 
 *parted-1.6.9 (23 Apr 2004)
 
