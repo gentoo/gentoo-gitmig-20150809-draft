@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.77 2003/10/26 20:19:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.78 2003/10/27 18:51:30 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -44,7 +44,7 @@ SISDRV_VER="261003-1"
 SAVDRV_VER="1.1.27t"
 MGADRV_VER="1_3_0beta"
 VIADRV_VER="0.1"
-SYNDRV_VER="0.11.8"
+SYNDRV_VER="0.12.0"
 
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
