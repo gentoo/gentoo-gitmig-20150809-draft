@@ -1,6 +1,11 @@
 # ChangeLog for games-action/barrage
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/ChangeLog,v 1.6 2004/06/24 21:52:09 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/ChangeLog,v 1.7 2005/02/15 00:03:35 mr_bones_ Exp $
+
+*barrage-1.0.2 (14 Feb 2005)
+
+  14 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +barrage-1.0.2.ebuild:
+  version bump
 
   19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> barrage-1.0.1.ebuild:
   Marked ~amd64.
