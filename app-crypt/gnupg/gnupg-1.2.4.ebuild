@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.2 2003/12/26 18:17:03 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.3 2003/12/27 12:26:38 taviso Exp $
 
 inherit eutils
 
@@ -100,6 +100,8 @@ src_install() {
 	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS PROJECTS \
 	README THANKS TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
 
+	use idea && dodoc ${S}/cipher/idea.c
+
 	docinto sgml
 	dodoc doc/*.sgml
 
@@ -118,18 +120,19 @@ pkg_postinst() {
 	fi
 	echo
 	if use idea; then
-		einfo "you have compiled gnupg with support for the IDEA algorithm, this code"
+		einfo "you have compiled ${PN} with support for the IDEA algorithm, this code"
 		einfo "is distributed under the GPL in countries where it is permitted to do so"
 		einfo "by law."
+		einfo
 		einfo "Please read http://www.gnupg.org/why-not-idea.html for more information."
 		einfo
 		einfo "If you are in a country where the IDEA algorithm is patented, you are permitted"
-		einfo "to use it freely (FAIB) for non revenue generating data transfer between private"
-		einfo "individuals only."
+		einfo "to use it at no cost for 'non revenue generating data transfer between private"
+		einfo "individuals'."
 		einfo
-		einfo "Special conditions are applicable to European research projects, who may also be"
-		einfo "permitted FAIB use within the scope of their project."
+		einfo "Countries where the patent applies are listed here"
+		einfo "http://www.mediacrypt.com/engl/Content/patent_info.htm"
 		einfo
-		einfo "Other licenses and further information is availble from http://www.mediacrypt.com"
+		einfo "Further information and other licenses are availble from http://www.mediacrypt.com/"
 	fi
 }
