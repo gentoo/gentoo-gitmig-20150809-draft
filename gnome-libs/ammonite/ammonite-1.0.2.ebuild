@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-libs/ammonite/ammonite-1.0.2.ebuild,v 1.3 2001/06/09 14:11:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-libs/ammonite/ammonite-1.0.2.ebuild,v 1.4 2001/06/09 14:39:06 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ DEPEND="nls? ( sys-devel/gettext )
         >=gnome-base/gnome-libs-1.2.12
         >=gnome-base/gconf-0.50
         >=dev-libs/openssl-0.9.6
-        >=dev-libs/xml-i18n-tools-0.8.4"
+        >=dev-util/xml-i18n-tools-0.8.4"
 
 RDEPEND=">=gnome-base/gnome-libs-1.2.12
         >=gnome-base/gconf-0.50
