@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ondir
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.5 2004/07/10 14:45:53 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.6 2004/10/21 14:27:44 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> ondir-0.2.1.ebuild:
   Marked ~amd64.
