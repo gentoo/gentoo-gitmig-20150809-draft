@@ -1,0 +1,10 @@
+--- src/GLEXT/GLStateExtension.h.orig	2004-03-26 18:32:17.000000000 +0200
++++ src/GLEXT/GLStateExtension.h	2004-04-04 22:13:11.000000000 +0300
+@@ -37,6 +37,7 @@
+ typedef void (* PFNGLMULTITEXCOORD2FARBPROC) (GLenum target, GLfloat s, GLfloat t);
+ typedef void (* PFNGLCLIENTACTIVETEXTUREARBPROC) (GLenum texture);
+ typedef void (* PFNGLLOCKARRAYSEXTPROC) (GLint first, GLsizei count);
++typedef void (* PFNGLUNLOCKARRAYSEXTPROC) ();
+ #endif
+ 
+ class GLStateExtension
