@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.26 2004/10/28 12:10:10 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.27 2004/11/26 14:11:56 zypher Exp $
+
+*libquicktime-0.9.3 (19 Jul 2004)
+  26 Nov 2004; Marc Hildebrand <zypher@gentoo.org> libquicktime-0.9.3.ebuild:
+  Fixed dependencies, closes bug #72179. Thanks to Diego Petteno for the fix.
 
   28 Oct 2004; Marc Hildebrand <zypher@gentoo.org> libquicktime-0.9.3.ebuild:
   Added ~amd64 keyword
