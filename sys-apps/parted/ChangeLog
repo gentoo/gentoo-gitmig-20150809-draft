@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.4 2002/04/16 19:32:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.5 2002/06/09 03:08:22 woodchip Exp $
+
+*parted-1.6.1 (8 Jun 2002)
+
+  8 Jun 2002; Donny Davies <woodchip@gentoo.org> :
+
+  New 1.6 release + small install patch.  This one can use dev-libs/progsreiserfs
+  optionally at runtime; not installed per default at the moment.  Testing/feedback
+  on this welcome.
 
 *parted-1.4.24-r3 (16 Apr 2002)
 
