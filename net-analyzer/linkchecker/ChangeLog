@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.10 2005/03/05 01:49:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.11 2005/03/10 10:35:32 ka0ttic Exp $
+
+  10 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> linkchecker-2.4.ebuild,
+  linkchecker-2.5.ebuild:
+  Fixed deps; >=2.4 depends on >=python-2.4 - bug 84596.
 
 *linkchecker-2.5 (04 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-2.4.ebuild,v 1.2 2005/03/05 01:49:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-2.4.ebuild,v 1.3 2005/03/10 10:35:32 ka0ttic Exp $
 
 IUSE=""
 
@@ -14,4 +14,4 @@ KEYWORDS="x86 ~ppc ~amd64"
 RESTRICT="nomirror"
 SLOT=0
 
-DEPEND=">=dev-lang/python-2.3.3"
+DEPEND=">=dev-lang/python-2.4"
