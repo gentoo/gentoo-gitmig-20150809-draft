@@ -1,7 +1,16 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.13 2002/04/29 19:50:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.14 2002/05/03 22:29:10 spider Exp $
 
+
+*evolution-1.0.3-r7 (03 May 2002) 
+  03 May 2002; Spider <spider@gentoo.org> evolution-1.0.3-r7.ebuild
+  Adding an important security fix
+
+  as reported on the mailing list yesterday, Evolution 1.0.3 has a serious
+  bug that can make it eat all the memory on your system and then crash
+  when downloading certain messages with invalid headers.
+  
   29 Apr 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.0.3-r6.ebuild :
 
   Replaced the "perl" use flag with "doc".
