@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.4 2004/02/26 20:36:49 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.5 2004/02/26 21:07:14 pappy Exp $
 
 IUSE="static nls bootstrap java build X multilib nogcj"
 
@@ -334,7 +334,7 @@ src_unpack() {
 		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 
-		release_version="${release_version}, ssp-${PP_VER}"
+		release_version="${release_version}, ssp-${PP_FVER}"
 
 		update_gcc_for_libc_ssp
 	fi
@@ -344,6 +344,8 @@ src_unpack() {
 
 	cd ${WORKDIR}/${P}; epatch "${DISTDIR}/gcc-3.3.2-nodefault-pie-ssp.patch"
 
+	release_version="${release_version}, pie-${PIE_VER}"
+
 	if [ -n "`use hardened`" ]
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
@@ -351,9 +353,7 @@ src_unpack() {
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 
 		# will show if default PIE/SSP building was used - make bug reports easier
-		release_version="${release_version/Gentoo/Gentoo Hardened}, pie-${PIE_VER}"
-	else
-		release_version="${release_version}, pie-${PIE_VER}"
+		release_version="${release_version/Gentoo/Gentoo Hardened}"
 	fi
 
 	version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
