@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.8.ebuild,v 1.1 2003/10/25 16:30:21 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.8.ebuild,v 1.2 2003/10/26 09:53:53 bazik Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://konst.org.ua/download/${P}.tar.gz"
 HOMEPAGE="http://konst.org.ua/eng/software/centericq/info.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
