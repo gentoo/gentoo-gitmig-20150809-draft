@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iplog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.9 2004/03/11 03:19:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.10 2004/03/21 12:18:59 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> iplog-2.2.3-r1.ebuild,
+  iplog-2.2.3-r2.ebuild, iplog-2.2.3.ebuild:
+  QA: IUSE variable was missing, unnecessary definition of S removed.
 
   10 Mar 2004; Jason Wever <weeve@gentoo.org> iplog-2.2.3-r2.ebuild:
   Stable on sparc.
