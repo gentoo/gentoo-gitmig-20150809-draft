@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.9.2.ebuild,v 1.1 2003/05/05 14:20:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.9.2.ebuild,v 1.2 2003/05/09 15:27:14 caleb Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${P}-src
 DESCRIPTION="a MySQL GUI Client"
 HOMEPAGE="http://www.mysql.com/"
-SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MyCC/${P}-src.tar.gz"
+SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQLCC/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
