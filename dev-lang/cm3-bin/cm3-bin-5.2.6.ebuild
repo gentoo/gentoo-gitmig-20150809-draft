@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.1 2003/07/17 17:11:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.2 2003/07/17 19:04:36 vapier Exp $
 
 DESCRIPTION="Critical Mass Modula-3 compiler (binary version)"
 HOMEPAGE="http://www.elegosoft.com/cm3/"
@@ -24,7 +24,7 @@ src_unpack() {
 		-e "s:GENTOO_GNU_CC:${CC:-gcc}:" \
 		-e "s:GENTOO_GNU_CFLAGS:${CFLAGS:--O}:" \
 		-e "s:GENTOO_GNU_MAKE:${MAKE:-make}:" \
-		${FILESDIR}/cm3.cfg > bin/cm3.cfg
+		${FILESDIR}/cm3-${ARCH}.cfg > bin/cm3.cfg
 	echo "ROOT=\"/usr/lib/cm3/pkg/\"" >> bin/cm3.cfg
 	rm -rf doc elisp examples man
 }
