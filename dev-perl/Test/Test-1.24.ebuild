@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test/Test-1.24.ebuild,v 1.3 2003/06/21 21:36:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test/Test-1.24.ebuild,v 1.4 2003/06/23 00:18:05 rac Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/Test/${P}.readme"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 alpha arm hppa mips ppc sparc"
 
 DEPEND="dev-perl/Test-Harness"
 
