@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.62 2004/11/27 00:45:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.63 2004/11/27 12:35:04 kumba Exp $
+
+  27 Nov 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.6.9-r4.ebuild:
+  Tested to work (for the most part) on IP22, works well for Cobalt, and
+  required for IP32/IP30 support. All in all, finally ready for unstable.
 
 *mips-sources-2.4.26-r11 (26 Nov 2004)
 
