@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-01.06a.ebuild,v 1.1 2004/02/28 17:01:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-01.06a.ebuild,v 1.2 2004/04/25 02:17:17 matsuu Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/ezix/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 RESTRICT="nomirror"
 
 DEPEND="virtual/glibc"
