@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.4 2003/03/09 03:23:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.5 2003/03/24 02:59:25 method Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -66,7 +66,7 @@ SNAPSHOT=""
 # Branch update support ...
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
 #BRANCH_UPDATE="20021208"
-BRANCH_UPDATE=""
+BRANCH_UPDATE="20030322"
 
 if [ -z "${SNAPSHOT}" ]
 then
@@ -89,7 +89,7 @@ else
 	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
 fi
 #SRC_URI="${SRC_URI} mirror://gentoo/${P}-manpages.tar.bz2"
-SRC_URI="${SRC_URI} mirror://gentoo/${P}-tls-update.patch.bz2"
+SRC_URI="${SRC_URI} mirror://gentoo/${P}-tls-update2.patch.bz2"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -171,7 +171,7 @@ src_unpack() {
 	fi
 
 	# Update to support TLS and __thread
-	epatch ${DISTDIR}/${P}-tls-update.patch.bz2
+	epatch ${DISTDIR}/${P}-tls-update2.patch.bz2
 
 	# Patches from Redhat ...
 #	epatch ${FILESDIR}/3.2.1/gcc32-ada-make.patch
@@ -180,15 +180,35 @@ src_unpack() {
 
 	# Patches from Mandrake/Suse ...
 	epatch ${FILESDIR}/3.2.1/gcc31-loop-load-final-value.patch
-	epatch ${FILESDIR}/3.2.1/gcc32-pr8213.patch
 	epatch ${FILESDIR}/3.2.1/gcc32-strip-dotdot.patch
 	epatch ${FILESDIR}/3.2.1/gcc32-athlon-alignment.patch
 
+	# ProPolice Stack Smashing protection
+	epatch ${FILESDIR}/3.2/protector.patch
+	# The following patch enables protection by default.  We don't
+	# want this as it causes problems with things like the kernel
+	# (among others).
+	cp ${FILESDIR}/3.2/protector.c ${WORKDIR}/${P}/gcc/
+	cp ${FILESDIR}/3.2/protector.h ${WORKDIR}/${P}/gcc/
+
+
+       # GCC bugfixes ...
+        epatch ${FILESDIR}/3.2.2/gcc32-pr7768.patch
+        epatch ${FILESDIR}/3.2.2/gcc32-pr8213.patch
+#       epatch ${FILESDIR}/3.2.2/gcc32-pr9732.patch
+#       epatch ${FILESDIR}/3.2.2/gcc322-pr9888.patch
+        epatch ${FILESDIR}/3.2.2/gcc322-pr8746.patch
+
 	# Patches from debian-arm
-	if [ "${ARCH}" = "arm" ]; then
+	if [ "${ARCH}" = "arm" ]
+	then
 		epatch ${FILESDIR}/3.2.1/gcc32-arm-disable-mathf.patch
 		epatch ${FILESDIR}/3.2.1/gcc32-arm-reload1-fix.patch
 	fi
+
+	# Get gcc to decreases the number of times the collector has to be run
+	# by increasing its memory workspace, bug #16548.
+	epatch ${FILESDIR}/3.2.2/gcc322-ggc_page-speedup.patch
 
 	# Install our pre generated manpages if we do not have perl ...
 #	if [ ! -x /usr/bin/perl ]
