@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.26_p0-r10.ebuild,v 1.1 2004/11/27 18:25:13 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.26_p0-r11.ebuild,v 1.1 2004/12/24 18:36:03 plasmaroo Exp $
 
 IUSE=""
 
@@ -61,6 +61,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.smbfs.patch || die "Failed to apply the SMBFS patch!"
 	epatch ${FILESDIR}/${PN}.AF_UNIX.patch || die "Failed to apply the AF_UNIX patch!"
 	epatch ${FILESDIR}/${P}.binfmt_a.out.patch || die "Failed to apply the a.out patch!"
+	epatch ${FILESDIR}/${P}.vma.patch || die "Failed to apply the VMA patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-1016.patch || die "Failed to apply the CAN-2004-1016 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-1137.patch || die "Failed to apply the CAN-2004-1137 patch!"
 
 	kernel_universal_unpack
 	set ARCH=${MY_ARCH}
