@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/mule-ucs-0.85_rc3.ebuild,v 1.4 2003/08/14 08:56:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/mule-ucs-0.85_rc3.ebuild,v 1.5 2003/12/14 18:22:27 usata Exp $
+
+inherit elisp-common
 
 MY_PN="Mule-UCS"
 DESCRIPTION="A character code translator."
@@ -9,9 +11,9 @@ HOMEPAGE="http://www.m17n.org/mule/
 SRC_URI="http://gentoojp.sourceforge.jp/distfiles/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ppc sparc"
 IUSE=""
-DEPEND=">=app-editors/emacs-20.4"
+DEPEND="virtual/emacs"
 S="${WORKDIR}/${MY_PN}-current"
 
 src_compile() {
@@ -27,18 +29,10 @@ src_compile() {
 src_install() {
 	cd ${S}/lisp
 
-	insinto /usr/share/emacs/site-lisp/Mule-UCS/
-	insopts -m0644
-	doins *.el{,c}
-
-	insinto /usr/share/emacs/site-lisp/Mule-UCS/big5conv/
-	doins big5conv/*.el{,c}
-
-	insinto /usr/share/emacs/site-lisp/Mule-UCS/jisx0213/
-	doins jisx0213/*.el{,c}
-
-	insinto /usr/share/emacs/site-lisp/Mule-UCS/reldata/
-	doins reldata/*.el
+	elisp-install ${MY_PN} *.el{,c}
+	elisp-install ${MY_PN}/big5conv big5conv/*.el{,c}
+	elisp-install ${MY_PN}/jisx0213 jisx0213/*.el{,c}
+	elisp-install ${MY_PN}/reldata reldata/*.el
 
 	dodoc ChangeLog MuleUni.txt README README.Unicode
 	dodoc ../doc/mule-ucs.sgml ../doc/mule-ucs.texi
