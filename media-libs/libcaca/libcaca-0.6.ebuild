@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.2.ebuild,v 1.2 2004/01/17 17:01:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.6.ebuild,v 1.1 2004/01/17 17:01:22 mholzer Exp $
 
 IUSE="ncurses slang"
 
@@ -26,7 +26,7 @@ src_compile() {
 
 	econf ${myconf} || die "configure of libcaca failed"
 
-	sed -i -e "s:src examples doc:src examples:" Makefile
+	sed -i -e "s:src examples test doc:src examples test:" Makefile
 
 	emake || die "make of libcaca failed"
 	}
