@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.3.1.ebuild,v 1.3 2004/01/21 06:56:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.3.2.ebuild,v 1.1 2004/01/21 06:56:57 lanius Exp $
 
 DESCRIPTION="CD ripping/mastering"
 HOMEPAGE="http://ogre.rocky-road.net/cdr.shtml"
 SRC_URI="http://ogre.rocky-road.net/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
-IUSE="gnome"
+IUSE=""
 
 #todo: add blade encoder
 DEPEND="media-sound/mad
@@ -26,9 +26,7 @@ DEPEND="media-sound/mad
 	media-libs/libao"
 
 src_compile() {
-	cp src/main.c src/main.c.orig
-	sed -e 's:/usr/local/share:/usr/share:g' \
-		src/main.c.orig >src/main.c || die
+	sed -i -e 's:/usr/local/share:/usr/share:g' src/main.c.orig
 	econf
 	emake || die
 }
@@ -41,11 +39,9 @@ src_install() {
 	insinto /usr/share/pixmaps
 	doins pixmaps/simplecdr.xpm ${FILESDIR}/simplecdrx.png
 
-	# Add the Gnome menu entry
-	if [ `use gnome` ] ; then
-		insinto /usr/share/gnome/apps/Applications/
-		doins ${FILESDIR}/simplecdrx.desktop
-	fi
+	# Add the menu entry
+	insinto /usr/share/applications/
+	doins ${FILESDIR}/simplecdrx.desktop
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README
 }
