@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.12.ebuild,v 1.6 2004/02/17 23:25:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.12.ebuild,v 1.7 2004/05/04 11:30:24 kloeri Exp $
 
 inherit distutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A fully functional X client library for Python, written in Python."
 SRC_URI="mirror://sourceforge/python-xlib/${P}.tar.gz"
 HOMEPAGE="http://python-xlib.sourceforge.net/"

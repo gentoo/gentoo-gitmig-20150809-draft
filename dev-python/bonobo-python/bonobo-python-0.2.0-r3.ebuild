@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r3.ebuild,v 1.7 2004/05/01 20:17:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r3.ebuild,v 1.8 2004/05/04 11:16:47 kloeri Exp $
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Bonobo bindings for Python"
 SRC_URI="http://bonobo-python.lajnux.nu/download/${P}.tar.gz"
 HOMEPAGE="http://bonobo-python.lajnux.nu/"

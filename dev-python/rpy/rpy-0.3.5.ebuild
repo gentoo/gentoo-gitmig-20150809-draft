@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.3.5.ebuild,v 1.1 2004/02/21 18:56:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-0.3.5.ebuild,v 1.2 2004/05/04 11:32:08 kloeri Exp $
 
 inherit distutils
 
@@ -12,4 +12,3 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/python"
-S=${WORKDIR}/${P}

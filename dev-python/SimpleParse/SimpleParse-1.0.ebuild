@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/SimpleParse/SimpleParse-1.0.ebuild,v 1.13 2004/03/28 10:32:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/SimpleParse/SimpleParse-1.0.ebuild,v 1.14 2004/05/04 11:11:12 kloeri Exp $
 
 IUSE=""
 
 inherit distutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A Parser Generator for mxTextTools."
 SRC_URI="mirror://sourceforge/simpleparse/${P}.zip"
 HOMEPAGE="http://simpleparse.sourceforge.net"
