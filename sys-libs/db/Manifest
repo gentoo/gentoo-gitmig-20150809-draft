@@ -4,41 +4,41 @@ Hash: SHA1
 MD5 444280510d43ebe9268fce7efd34fbbc ChangeLog 17651
 MD5 65ddccb99462ea54a0cede7cbf3ae44d db-1.85-r1.ebuild 1447
 MD5 70c2f0029c3d32d10f9d0a85a3e10481 db-3.2.9-r10.ebuild 4266
+MD5 defb926189d0ad7738f5b1e49cd3bbde db-4.2.52_p1.ebuild 2850
 MD5 c44c1f91c41bc879f73dce1b7b3548fa db-3.2.9-r7.ebuild 4448
+MD5 fa6c8b4e3857d6a6f41857b13ec63e77 db-4.2.52_p2.ebuild 2906
 MD5 3734e84d6a4cdbdf13b709a43537b139 db-4.0.14-r2.ebuild 2242
 MD5 f3b27954bfc1f5ae36ec3616fd1cbe1c db-4.0.14-r3.ebuild 2491
+MD5 62473192ca1a736310539692db39ec7d db-4.1.25_p1-r4.ebuild 2816
 MD5 97e2c1db9b0a6996c8425e905dca27a0 db-4.1.25_p1-r3.ebuild 2564
-MD5 defb926189d0ad7738f5b1e49cd3bbde db-4.2.52_p1.ebuild 2850
-MD5 fa6c8b4e3857d6a6f41857b13ec63e77 db-4.2.52_p2.ebuild 2906
 MD5 e1753ef0eb3e9614fadff321ecd1b082 metadata.xml 1460
-MD5 ae90a1a5449e5821ebf574ba6a3a5814 db-4.1.25_p1-r4.ebuild 2826
 MD5 d6cd1d1e88928bc706fc90102d17b42b db-1.85-r2.ebuild 1487
 MD5 194200b3295b95b46b4564980af27f1f files/db-3.2.9-fix-dep-link.patch 1005
 MD5 6eb8be5f7803acaa5bcfd4ed5ffabf83 files/db-3.2.9-jarlocation.patch 492
 MD5 eb9b0f2c1d8440c6c49fc1d916c2dc0e files/db-4.0.14-fix-dep-link.patch 1119
 MD5 0101200dac8a9299fc1578081ac72b71 files/db-4.0.14-jarlocation.patch 565
 MD5 2bb2a5dbe8d16f858d177e1193639b70 files/db-4.1.25_p1-jarlocation.patch 626
-MD5 3c47ce6ed92e948fbde232c1e3571f16 files/db-4.2-jarlocation.patch 599
-MD5 ecd81fa9868ec49c61306444144d44a9 files/db.1.85.patch 55584
+MD5 69bde9765bf0a2d6c55a253eb0e53190 files/digest-db-1.85-r2 120
 MD5 3057fcc117c33a02bd4c092586a58e49 files/digest-db-1.85-r1 59
+MD5 3c47ce6ed92e948fbde232c1e3571f16 files/db-4.2-jarlocation.patch 599
 MD5 44c6041ae9527bfa8a4ff4cec7cf4a9a files/digest-db-3.2.9-r10 61
 MD5 44c6041ae9527bfa8a4ff4cec7cf4a9a files/digest-db-3.2.9-r7 61
-MD5 69bde9765bf0a2d6c55a253eb0e53190 files/digest-db-1.85-r2 120
+MD5 ecd81fa9868ec49c61306444144d44a9 files/db.1.85.patch 55584
 MD5 068fc523df1ee6f36b5de8516ab7739f files/digest-db-4.0.14-r2 62
 MD5 068fc523df1ee6f36b5de8516ab7739f files/digest-db-4.0.14-r3 62
-MD5 f029f70f531ca67c16b62573d61de49e files/digest-db-4.1.25_p1-r3 118
 MD5 35fa694f3db327e4fb015728aca6a082 files/digest-db-4.2.52_p1 118
-MD5 68a677d9846ad3fc623f173581ff9aa5 files/digest-db-4.2.52_p2 175
+MD5 75ba5de97737693cfdfe85908b5adfbd files/db-4.1.25-uclibc.patch 731
+MD5 f029f70f531ca67c16b62573d61de49e files/digest-db-4.1.25_p1-r3 118
+MD5 f029f70f531ca67c16b62573d61de49e files/digest-db-4.1.25_p1-r4 118
 MD5 9cf113248f29b1e319ae73b266df4986 files/patch.3.2.9.1 2139
 MD5 f8edd1cf6535cd62f9b8ff81e0474273 files/patch.3.2.9.2 495
-MD5 75ba5de97737693cfdfe85908b5adfbd files/db-4.1.25-uclibc.patch 731
-MD5 f029f70f531ca67c16b62573d61de49e files/digest-db-4.1.25_p1-r4 118
+MD5 68a677d9846ad3fc623f173581ff9aa5 files/digest-db-4.2.52_p2 175
 MD5 395933484399c22681916b0e86db3258 files/db-4.1.25-java.patch 721
 MD5 4f68188f3bc051f50a85c5b72bab85c7 files/db-4.2-libtool.patch 665
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBwWORArHZZzCEUG0RAm51AJ9h8KVRWbju8Y09cB0tehWErmwMrwCeMgK5
-OG68FDpawDjZJJ34PAHOAz4=
-=Xmgu
+iD8DBQFB23nYroRuSHgZdywRAv+DAJ9XRkRk8bkpG7r8TwuytDsiWIH+DgCeMeNw
+n1wGdA0G98202rJtnYF6aaU=
+=Zbuj
 -----END PGP SIGNATURE-----
