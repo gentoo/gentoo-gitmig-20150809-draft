@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.5 2004/03/02 16:34:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.6 2004/04/01 02:35:59 vapier Exp $
 
 inherit gcc flag-o-matic
 
@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ ! `use build` ]
+	if ! use build
 	then
 		emake CC="$(gcc-getCC)" CXX="$(gcc-getCXX)" -f Makefile-libbz2_so all || die "Make failed"
 	fi
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ ! `use build` ]
+	if ! use build
 	then
 		make PREFIX=${D}/usr install || die
 		mv ${D}/usr/bin ${D}
