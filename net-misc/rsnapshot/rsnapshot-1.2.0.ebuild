@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsnapshot/rsnapshot-1.1.6.ebuild,v 1.3 2005/02/11 23:39:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsnapshot/rsnapshot-1.2.0.ebuild,v 1.1 2005/02/11 23:39:12 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rsnapshot.org/downloads/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8.2
@@ -33,13 +33,10 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "The configuration file: "
-	einfo "  /etc/rsnapshot.conf.default "
+	einfo "The configuration file: /etc/rsnapshot.conf.default "
 	einfo "  has been installed. "
 	einfo "This is a template. "
-	einfo "Copy, or move, the above file to: "
-	einfo "  /etc/rsnapshot.conf "
-	einfo "Note that upgrading will update "
-	einfo "  the template, not real config. "
+	einfo "Copy, or move, the above file to: /etc/rsnapshot.conf "
+	einfo "Note that upgrading will update the template, not real config. "
 	einfo
 }
