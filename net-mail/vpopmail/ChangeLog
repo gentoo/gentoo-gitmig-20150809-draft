@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/vpopmail
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.24 2003/12/26 01:56:07 robbat2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.25 2004/01/05 06:07:29 robbat2 Exp $
+
+*vpopmail-5.2.2 (04 Jan 2004)
+
+  04 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> vpopmail-5.2.1-r9.ebuild,
+  vpopmail-5.2.2.ebuild:
+  add conversion script to -r9, and do version bump to new stable version
 
 *vpopmail-5.2.1-r9 (25 Dec 2003)
 
