@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.2.22.ebuild,v 1.2 2005/02/05 11:15:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.3.10.ebuild,v 1.1 2005/03/06 16:55:17 plasmaroo Exp $
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://xcircuit.ece.jhu.edu/archive/${P}.tgz"
