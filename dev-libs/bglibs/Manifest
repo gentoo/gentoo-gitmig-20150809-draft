@@ -1,9 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/Manifest,v 1.11 2003/12/26 03:31:14 robbat2 Exp $
-MD5 b673cd5845110b57bd6b139141a7337e bglibs-1.001.ebuild 650
-MD5 d4a9c81d587d2e5983e87ad6bb83feba bglibs-1.011.ebuild 1274
-MD5 a2a608a729e808952311a59d3f3b5dc1 ChangeLog 1137
-MD5 e024355c15a308e350f3730c2932916e bglibs-1.009.ebuild 696
-MD5 3643eb4817c8b6fd5b46bd4ab534d37d bglibs-1.009-r1.ebuild 1277
+MD5 346fac4c8ded2457e001dd701d112820 bglibs-1.001.ebuild 651
+MD5 2db6547190d3b28fbe2213bb97b201bf bglibs-1.011.ebuild 1273
+MD5 7379d72f5da8b1482536e0130ce78b39 ChangeLog 1318
+MD5 e1773335230f5e0031ab8cd49cefce57 bglibs-1.009.ebuild 695
+MD5 0fc44071df21de88633c3632c02eea27 bglibs-1.009-r1.ebuild 1276
 MD5 b992a5664543a9bbaacce368b5d6e3fb files/digest-bglibs-1.009-r1 64
 MD5 be39aca40d8a5b754844f62353828a06 files/digest-bglibs-1.001 63
 MD5 b992a5664543a9bbaacce368b5d6e3fb files/digest-bglibs-1.009 64
