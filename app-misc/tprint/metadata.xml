@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>pfeifer@gentoo.org</email>
+  <name>Jay Pfeifer</name>
+<!--  <description>Description of the maintainership</description> -->
+</maintainer>
+<longdescription>The Transparent Print utility program for Linux. Provides an easy way to transparently print to serial terminals that have printers attached.</longdescription>
+</pkgmetadata>
