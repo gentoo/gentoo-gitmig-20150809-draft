@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.2.ebuild,v 1.4 2004/01/20 07:28:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.2.ebuild,v 1.5 2004/01/21 10:32:05 aliz Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -57,6 +57,7 @@ src_compile() {
 	use kde && kde_src_compile myconf
 
 	econf $myconf --without-gkrellm || die
+	make clean  || die
 	emake || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.27 2004/01/19 17:06:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.28 2004/01/21 10:32:05 aliz Exp $
+
+  21 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> sim-0.9.2.ebuild:
+  Clean before compiling. Closing #38240.
 
   19 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> sim-0.9.2.ebuild, sim-0.9.3.ebuild:
   Use admin dir from CVS. Export WANT_AUTOMAKE and WANT_AUTOCONF versions instead of just setting them.
