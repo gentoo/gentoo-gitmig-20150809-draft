@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.10 2004/09/29 23:05:31 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.11 2004/10/04 20:19:26 pvdabeel Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 ~ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64"
 
 IUSE="esd gnome imlib nls spell truetype xinerama silverxp"
 

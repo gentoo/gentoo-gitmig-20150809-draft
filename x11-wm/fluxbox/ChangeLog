@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.121 2004/09/25 15:26:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.122 2004/10/04 20:17:28 pvdabeel Exp $
 
   25 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> fluxbox-0.9.10-r3.ebuild:
   Stable on x86, sparc after discussion with upstream. There may be an -r4
@@ -28,6 +28,9 @@
   editors and terminals, more detailed fluxbox -version, an About entry in the
   fluxbox menu, support for including directories in menus and a new improved
   styles directory system.
+
+  04 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  Stable on ppc
 
 *fluxbox-0.9.10-r2 (07 Sep 2004)
 
