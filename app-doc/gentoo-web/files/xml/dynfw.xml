@@ -3,8 +3,8 @@
 <title>dynfw Dynamic Firewall Tools, v1.0</title>
 <author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 
-<version>1.0</version>
-<date>19 Apr 2001</date>
+<version>1.0.1</version>
+<date>30 Jul 2001</date>
 
 <chapter>
 <title>dynfw</title>
@@ -26,7 +26,7 @@ link="http://www-106.ibm.com/developerworks/linux/library/l-fw/?n-l-4191">this
 IBM developerWorks article</uri>.</p>
 
 <p>You can download the current version of dynfw here:
-<uri>dynfw-1.0.tar.gz</uri>.</p> 
+<uri>dynfw-1.0.1.tar.gz</uri>.</p> 
 
 <note>The dynfw Dynamic Firewall Tools are
 Copyright 2001 Gentoo Technologies, Inc. and distributed under the GNU General Public
@@ -35,7 +35,7 @@ tools to <mail link="drobbins@gentoo.org">Daniel Robbins</mail> so that they
 can be rolled into the official release.</note>
 
 
-<p>The following scripts are included in <path>dynfw-1.0.tar.gz</path>:
+<p>The following scripts are included in <path>dynfw-1.0.1.tar.gz</path>:
 </p>
 <p>
 <table>
@@ -50,6 +50,14 @@ can be rolled into the official release.</note>
 </table>
 </p>
 
+</body>
+</section>
+<section>
+<title>Changelog</title>
+<body>
+
+<p><e>1.0.1</e>: sh-compatibility fixes; <c>==</c> changed to <c>=</c> (oops!)</p>
+<p><e>1.0</e>: Initial release.</p>
 
 </body>
 </section>

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.8 2001/07/29 00:44:25 thread Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.9 2001/07/30 17:08:26 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -39,7 +39,7 @@ src_install() {
 	xsltproc xsl/guide-main.xsl xml/project-xml.xml > ${D}/usr/local/httpd/htdocs/projects/xml.html	
 	
 	insinto /usr/local/httpd/htdocs/projects
-	doins dynfw-1.0/dynfw-1.0.tar.gz 
+	doins dynfw/dynfw-1.0.1.tar.gz 
 	
 	cd ..
 	tar czvf ${D}/usr/local/httpd/htdocs/projects/guide-xml-latest.tar.gz files 
@@ -76,7 +76,7 @@ src_install() {
 	doins *.gif
 	cd ../bios
 	insinto /usr/local/httpd/htdocs/wiki/bios
-	doins *.png
+	doins *.png *.jpg *.gif
 	
 	cd ${D}
 	chmod -R g+rw,o+r *
