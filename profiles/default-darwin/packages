@@ -6,6 +6,5 @@
 
 # Things we want emerge system to install for all Darwin profiles
 
-*net-misc/wget
 *virtual/editor
 *sys-apps/sed
