@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.13 2004/06/29 15:03:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.14 2004/06/29 18:23:55 agriffis Exp $
 
 inherit cvs
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/crystal"
@@ -15,7 +15,7 @@ SRC_URI=""
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE=""
+IUSE="3ds freetype mikmod mng oggvorbis openal zlib"
 
 RDEPEND=">=media-libs/libpng-1.2.1
 	>=media-libs/jpeg-6b
