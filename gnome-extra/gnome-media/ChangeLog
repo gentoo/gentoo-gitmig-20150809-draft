@@ -1,7 +1,11 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.8 2002/09/06 04:45:58 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.9 2002/10/12 18:56:07 foser Exp $
 
+*gnome-media-2.0.2.5-r1 (12 Oct 2002)
+
+  12 Oct 2002; foser <foser@gentoo.org> gnome-media-2.0.2.5-r1.ebuild :
+  Added sox dependency for soundrecording (bug #8938)
 
 *gnome-media-2.0.2.5 (06 Sep 2002)
   06 Sep 2002; Spider <spider@gentoo.org> gnome-media-2.0.2.5.ebuild :
