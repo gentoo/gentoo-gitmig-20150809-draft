@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.9 2004/01/13 17:42:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.10 2004/01/29 15:13:36 gustavoz Exp $
+
+  29 Jan 2004; <gustavoz@gentoo.org> libraw1394-0.9.0.ebuild:
+  marked stable on sparc
 
   13 Jan 2004; <gustavoz@gentoo.org> libraw1394-0.9.0.ebuild:
   keyworded ~sparc

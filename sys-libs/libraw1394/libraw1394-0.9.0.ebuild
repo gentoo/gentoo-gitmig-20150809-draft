@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-0.9.0.ebuild,v 1.13 2004/01/13 17:42:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-0.9.0.ebuild,v 1.14 2004/01/29 15:13:36 gustavoz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libraw1394 provides direct access to the IEEE 1394 bus through the Linux 1394 subsystem's raw1394 user space interface."
@@ -10,7 +10,7 @@ RESTRICT="nomirror"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1 | GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="virtual/glibc"
 
