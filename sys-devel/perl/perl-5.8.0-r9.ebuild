@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r9.ebuild,v 1.1 2003/01/16 01:38:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r9.ebuild,v 1.2 2003/01/16 20:12:13 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -250,6 +250,7 @@ sleep 10
 			-Duselargefiles \
 			-Dd_dosuid \
 			-Dd_semctl_semun \
+			-Dscriptdir=/usr/bin \
 			-Dman3ext='3pm' \
 			-Dcf_by='Gentoo' \
 			-Ud_csh \
@@ -419,10 +420,10 @@ pkg_postinst() {
 		eerror "you may need to recompile applications that"
 		eerror "were emerged against the old libperl.so"
 		eerror ""
-		eerror "${FILESDIR}/libperl_rebuilder is provided "
-		eerror "to assist with this. PLEASE DO NOT INTERRUPT"
-		eerror "THE RUNNING OF THIS SCRIPT. Part of the "
-		eerror "rebuilding of applications compiled against "
+		eerror "${FILESDIR}/libperl_rebuilder "
+		eerror "is provided to assist with this. "
+		eerror "PLEASE DO NOT INTERRUPT THE RUNNING OF THIS SCRIPT."
+		eerror "Part of the rebuilding of applications compiled against "
 		eerror "your old libperl involves temporarily unmerging"
 		eerror "them - interruptions could leave you with unmerged"
 		eerror "packages before they can be remerged."
