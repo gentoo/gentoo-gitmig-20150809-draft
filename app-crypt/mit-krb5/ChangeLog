@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.10 2003/06/19 18:10:14 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.11 2003/06/26 13:29:58 darkspecter Exp $
+
+  26 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> mit-krb5-1.2.8.ebuild:
+  set ppc in keywords
 
   19 Jun 2003; Will Woods <wwoods@gentoo.org> mit-krb5-1.2.8.ebuild:
   Marked stable for alpha
