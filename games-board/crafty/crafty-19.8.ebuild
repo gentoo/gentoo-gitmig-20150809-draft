@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-19.8.ebuild,v 1.6 2004/07/01 11:10:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-19.8.ebuild,v 1.7 2004/08/15 07:02:14 vapier Exp $
 
 inherit games eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="Bob Hyatt's strong chess engine"
 HOMEPAGE="ftp://ftp.cis.uab.edu/pub/hyatt/"
 SRC_URI="ftp://ftp.cis.uab.edu/pub/hyatt/v19/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="crafty"
 SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="icc no-opts"
