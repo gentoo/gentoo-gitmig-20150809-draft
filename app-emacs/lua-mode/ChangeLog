@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/lua-mode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.4 2004/06/24 22:17:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.5 2004/10/01 22:42:10 slarti Exp $
+
+  01 Oct 2004; Tom Martin <slarti@gentoo.org> lua-mode-1.26-r1.ebuild:
+  Marked ~amd64, resolves bug 65075. Thanks to Bardur Arantsson
+  <gentoo@scientician.net> for reporting.
 
   01 Jan 2004; Jeremy Maitin-Shepard <jbms@gentoo.org> :
   Fixed checksums, fixed copyright header.

@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b34ccb5448c46cf6aa77bd8d4e027316 lua-mode-1.26.ebuild 765
-MD5 3dae7227573cc18945ca553ab18250c8 lua-mode-1.26-r1.ebuild 606
-MD5 c4c31284bb252fe0ed25fa3644c8279a ChangeLog 629
+MD5 d8e112da99161d11199af3e7fb860d7c lua-mode-1.26-r1.ebuild 611
+MD5 7f32ae0aab9a21738088c8bb57e129b5 ChangeLog 805
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 08f5bc31d5db2fbb018155ce81a18812 files/digest-lua-mode-1.26-r1 64
 MD5 5f162ad79174f8ec9eb51309facbf431 files/70lua-mode-gentoo.el 282
 MD5 08f5bc31d5db2fbb018155ce81a18812 files/digest-lua-mode-1.26 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXd1UCHk4+ZoBpvsRAgVtAJ4/td2ZqOYzgaZU45iTE1hVhqlYVQCfZOD3
+PCzd772SQ5G9tZsD9syG5kw=
+=x07y
+-----END PGP SIGNATURE-----
