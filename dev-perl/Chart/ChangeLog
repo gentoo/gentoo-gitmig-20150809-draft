@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Chart
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart/ChangeLog,v 1.12 2005/01/22 13:24:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart/ChangeLog,v 1.13 2005/03/09 18:30:48 corsair Exp $
+
+  09 Mar 2005; Markus Rothe <corsair@gentoo.org> Chart-2.3.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   22 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> Chart-2.3.ebuild:
   Stable on sparc
