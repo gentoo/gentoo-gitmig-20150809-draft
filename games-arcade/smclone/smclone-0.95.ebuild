@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.95.ebuild,v 1.2 2005/04/04 08:09:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.95.ebuild,v 1.3 2005/04/05 06:18:13 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -53,7 +53,7 @@ src_compile() {
 src_install() {
 	dogamesbin src/unix/smc || die "smc"
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data levels world || die "doins"
+	doins -r data/* levels world || die "doins"
 	dodoc *.txt ../readme-linux.txt
 	cd ..
 	dohtml *.html *.css
