@@ -1,11 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/generator-1.0.ebuild,v 1.2 2003/10/11 08:54:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/generator-1.2.3.ebuild,v 1.1 2004/01/19 13:14:18 lanius Exp $
 SLOT="0"
 IUSE=""
-DESCRIPTION="widget generator for Archetypes"
-SRC_URI="mirror://sourceforge/archetypes/${P}.tar.gz"
-S=${WORKDIR}/${P}
+DESCRIPTION="Widget generator for Archetypes"
+SRC_PN=archetypes
+SRC_PV=1.2.3_final
+SRC_P=${SRC_PN}-${SRC_PV}
+SRC_URI="mirror://sourceforge/${SRC_PN}/${SRC_P}.tgz"
+S=${WORKDIR}/${SRC_P}/${PN}
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
@@ -39,4 +42,3 @@ src_install() {
 	done;
 	dodoc ChangeLog PKG-INFO README
 }
-
