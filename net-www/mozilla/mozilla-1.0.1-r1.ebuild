@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r1.ebuild,v 1.10 2002/10/17 19:16:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r1.ebuild,v 1.11 2002/10/18 22:43:05 seemant Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -86,6 +86,12 @@ src_unpack() {
         if [ "${ARCH}" = "alpha" ] ; then
             patch -p1 < ${FILESDIR}/mozilla-alpha-xpcom-subs-fix.patch || die
         fi
+
+		# ABI Patch for sparc and sparc64/xpcom for gcc-3.x
+		if use sparc &>/dev/null || use sparc64 &>/dev/null
+		then
+			patch -p1 < ${FILESDIR}/mozilla-1.0.1-sparc-xpcom.patch || die
+		fi
 	fi
 
 	# Apply the bytecode patch for freetype2

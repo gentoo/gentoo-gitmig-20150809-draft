@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.41 2002/10/17 19:16:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.42 2002/10/18 22:43:05 seemant Exp $
+
+  18 Oct 2002; Seemant Kulleen <seemant@gentoo.org> :
+  Add an ABI fix for sparc/sparc64 gcc-3.x based systems.
 
   17 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
   Add a fix for bug #7656.  This fix the missing headers from
