@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.15 2004/09/27 23:45:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.16 2004/09/28 21:29:17 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -283,7 +283,9 @@ mozilla_conf() {
 		use mozxmlterm && myext="${myext},xmlterm"
 	elif ${FF}; then
 		# note that help is broken, and irc doesn't work
-		myext="cookie,inspector,negotiateauth,pref,transformiix,typeaheadfind,universalchardet,webservices,xmlextras,xml-rpc"
+		# also typeaheadfind applies only to versions prior to 1.0PR #64196
+		myext="cookie,inspector,negotiateauth,pref,transformiix,universalchardet,webservices,xmlextras,xml-rpc"
+		[[ ${PV} < 1.0 ]] && myext="${myext},typeaheadfind"
 		use mozdevelop && myext="${myext},venkman"
 		use gnome && myext="${myext},gnomevfs"
 	else
