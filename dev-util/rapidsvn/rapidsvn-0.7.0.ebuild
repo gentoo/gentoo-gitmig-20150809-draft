@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.5.0.ebuild,v 1.7 2004/07/15 00:02:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.7.0.ebuild,v 1.1 2004/12/04 07:51:45 dragonheart Exp $
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system."
 HOMEPAGE="http://rapidsvn.tigris.org/"
 SRC_URI="http://www.rapidsvn.org/download/${P}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="doc"
 
-DEPEND="=dev-util/subversion-1.0*
-	>=x11-libs/wxGTK-2.4.0
+DEPEND=">=dev-util/subversion-1.0.0
+	>=x11-libs/wxGTK-2.4.2
 	doc? ( dev-libs/libxslt app-text/docbook-sgml-utils app-doc/doxygen )"
 
 src_compile() {
@@ -22,8 +22,6 @@ src_compile() {
 	use doc && myconf="--with-docbook-xsl=/usr/share/sgml/docbook/" \
 		|| myconf="--without-xsltproc --without-docbook-xsl --without-doxygen \
 			--without-dot"
-	#README says you have too
-	autoconf configure.in > configure
 	econf	--with-svn-lib=/usr/lib \
 		--with-svn-include=/usr/include \
 		${myconf} || die "./configure failed"
@@ -31,5 +29,5 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	emake DESTDIR=${D} install || die
 }

@@ -1,6 +1,16 @@
-MD5 5d1343603f1a593330996964432fc2eb rapidsvn-0.5.0.ebuild 1231
-MD5 51926d8163a27ca445c60b98f7ebc797 ChangeLog 1640
-MD5 245aed150a2d13e10c649702d481809c rapidsvn-0.6.0.ebuild 1178
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 78ffc1fa2af20812656fd90801545813 ChangeLog 1859
 MD5 33643051957c632bbcb03868ac5d7463 metadata.xml 377
-MD5 f3f2d451769687fbe41d18f69ef60b76 files/digest-rapidsvn-0.5.0 66
+MD5 8d1069b75d4d0d07380f919416628f1e rapidsvn-0.6.0.ebuild 1180
+MD5 2dedbc8a52d6f2eee945fa1a206ac2bb rapidsvn-0.7.0.ebuild 1199
 MD5 33b2f551a1f5109276382650f2bb1e6f files/digest-rapidsvn-0.6.0 66
+MD5 42cbed2e361c2977189f54e6ccd1c2de files/digest-rapidsvn-0.7.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsWyYmdTrptrqvGERAu5xAJ9sLN3SXjMdZozlBDcED+YrZ2rFHACfURtL
+gav4LomGV9HIwhj6rpoBtRI=
+=eRW9
+-----END PGP SIGNATURE-----
