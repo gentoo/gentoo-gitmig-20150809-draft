@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/glib-perl
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.7 2004/02/25 10:13:51 mcummings Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.8 2004/03/29 14:18:25 mcummings Exp $
+
+*glib-perl-1.040 (29 Mar 2004)
+
+  29 Mar 2004; Michael Cummings <mcummings@gentoo.org> glib-perl-1.040.ebuild:
+  version bump
 
   25 Feb 2004; Michael Cummings <mcummings@gentoo.org>
   glib-perl-1.012.ebuild:
