@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.9 2003/07/09 16:43:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.10 2003/08/13 06:52:25 obz Exp $
+
+*gramps-0.9.3 (13 Aug 2003)
+
+  13 Aug 2003; Mike Gardiner <obz@gentoo.org> gramps-0.9.3.ebuild:
+  Version bump, added scrollkeeper to depends
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gramps-0.9.1.ebuild,
   gramps-0.9.2.ebuild:

@@ -1,4 +1,6 @@
+MD5 420e74acf0bdeb0abcc8b49c51f720aa gramps-0.9.3.ebuild 904
+MD5 5f186b9f3e02aefd08f56c27da1ce3db gramps-0.9.2.ebuild 974
 MD5 726b7fee6342b739d3bae2d2cc63fa39 ChangeLog 1625
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 5f186b9f3e02aefd08f56c27da1ce3db gramps-0.9.2.ebuild 974
 MD5 d1fe6f9e867886b477c931415c994ce4 files/digest-gramps-0.9.2 65
+MD5 a107b8c2ea1924a525987a642531ee04 files/digest-gramps-0.9.3 65
