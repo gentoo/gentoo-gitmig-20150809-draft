@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.204 2004/04/18 23:41:31 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.205 2004/04/19 06:58:36 lv Exp $
+
+*gcc-3.4.0_pre20040416 (19 Apr 2004)
+
+  19 Apr 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.4.0/gcc-3.4.0_pre20040416-gentoo-branding.patch,
+  +gcc-3.4.0_pre20040416.ebuild:
+  initial commit for gcc 3.4.0 pre-release. currently only amd64 is tested well
+  with gcc 3.4, gcj is broken, and some things dont compile properly.
+  PIE-by-default support has been added, but propolice has yet to be ported.
 
   18 Apr 2004; <solar@gentoo.org> :
   ChangeLog correction.. instructions on unmasking can be found in
