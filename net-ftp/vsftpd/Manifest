@@ -1,15 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7dac24dc4104e05c98f32f71dad57c46 ChangeLog 4455
+MD5 f53c8c293e2b469bfb55ee5ad1518cc3 ChangeLog 4574
 MD5 d161cb0e313c1619fc61077d5b0c8821 metadata.xml 251
 MD5 d1a2ec32b0639d78243cc5aee840eb9f vsftpd-1.0.1-r1.ebuild 1325
 MD5 213703fc92069b2036caf192afb39068 vsftpd-1.2.0-r1.ebuild 2218
 MD5 284ab51c778b56a5f4155fbb7eb7492e vsftpd-1.2.1.ebuild 2237
 MD5 8db5a76f69189b1fc1bbbcce8f18e517 vsftpd-1.2.2.ebuild 2238
+MD5 03d322f35f310fbedaa3bfdca57a0689 vsftpd-2.0.1.ebuild 2346
 MD5 3734a4e9aaa1cc7775943c0c97bedd4b files/digest-vsftpd-1.0.1-r1 63
 MD5 767d44cc19f7afc4085da8fd837193e4 files/digest-vsftpd-1.2.0-r1 64
 MD5 fd342c037bab05b6fcdd20c0d8fd6720 files/digest-vsftpd-1.2.1 64
+MD5 a44f959b4b7b9b7fa839bf999f04c9e1 files/digest-vsftpd-1.2.2 64
 MD5 5a140ccd0017f39fe3c63e6a29e1abcd files/ftpusers 365
 MD5 b602cee3b9a0967cfa02e3e398c0d641 files/vsftpd-1.0.1-gentoo.diff 5204
 MD5 12157a137e6633887fad5c7a8e1e1ae3 files/vsftpd-1.2.0-gentoo.diff.bz2 2078
@@ -20,11 +19,4 @@ MD5 73da8f18451d3c3770c539e5dde163ef files/vsftpd.init.d 979
 MD5 aaa55785aee7dd51daf75a72232693f9 files/vsftpd.pam 481
 MD5 e50b10a57c22f7b27de250b8b65038a0 files/vsftpd.xinetd 468
 MD5 32951e2e5a1c743fa96533989167c54a files/vsftpd.xinetd.ipv6 488
-MD5 a44f959b4b7b9b7fa839bf999f04c9e1 files/digest-vsftpd-1.2.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBUlWVHTu7gpaalycRAv7jAJ4+aEt2TKVky+ASsL3qRiOA6xMi0gCcCIkn
-OGALcZOlciYN5CN3eNUlN/g=
-=dAEV
------END PGP SIGNATURE-----
+MD5 2b36bc74604934d6ce3ef5c6b2d77485 files/digest-vsftpd-2.0.1 64
