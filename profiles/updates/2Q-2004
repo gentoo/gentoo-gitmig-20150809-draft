@@ -35,7 +35,7 @@ move games-action/mutantstormdemo games-action/mutantstorm-demo
 move games-action/spacetripperdemo games-action/spacetripper-demo
 move x11-misc/culmus media-fonts/culmus
 move net-mail/clamav app-antivirus/clamav
-move net-mail/f-prot app-antivirus/f-prot 
+move net-mail/f-prot app-antivirus/f-prot
 move net-mail/vlnx app-antivirus/vlnx
 move net-mail/courier mail-mta/courier
 move net-mail/exim mail-mta/exim
@@ -101,3 +101,4 @@ move app-misc/proxyper net-misc/proxyper
 move app-misc/mutt-vc-query mail-client/mutt-vc-query
 move sys-apps/mac-fdisk sys-fs/mac-fdisk
 move sys-apps/amiga-fdisk sys-fs/amiga-fdisk
+move games-puzzle/marbles games-puzzle/lmarbles
