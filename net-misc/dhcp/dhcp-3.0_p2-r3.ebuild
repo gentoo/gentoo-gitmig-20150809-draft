@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.10 2004/01/15 01:04:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r3.ebuild,v 1.3 2004/01/15 01:04:44 max Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P/_p/pl}.tar.gz
 
 LICENSE="isc-dhcp"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ppc64 hppa"
+KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips hppa"
 IUSE="static"
 
 DEPEND="virtual/glibc
@@ -24,6 +24,7 @@ src_unpack() {
 	epatch "${FILESDIR}/dhcp-3.0pl2-user-option-fix.patch"
 	epatch "${FILESDIR}/dhclient.c-3.0-dw-cli-fix.patch"
 	epatch "${DISTDIR}/dhcp-3.0+paranoia.patch"
+	epatch "${FILESDIR}/dhcp-3.0pl2-fix-perms.patch"
 }
 
 src_compile() {
@@ -81,10 +82,12 @@ src_install() {
 	newdoc client/scripts/linux dhclient-script.sample
 	newdoc server/dhcpd.conf dhcpd.conf.sample
 
-	insinto /etc/conf.d
-	newins "${FILESDIR}/dhcp.conf" dhcp
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/dhcp.rc6" dhcp
+	newexe "${FILESDIR}/dhcrelay.rc6" dhcrelay
+	insinto /etc/conf.d
+	newins "${FILESDIR}/dhcp.conf" dhcp
+	newins "${FILESDIR}/dhcrelay.conf" dhcrelay
 
 	keepdir /var/{lib,run}/dhcp
 }

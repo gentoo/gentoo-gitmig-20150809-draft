@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.30 2004/01/05 18:35:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.31 2004/01/15 01:04:44 max Exp $
+
+  14 Jan 2004; Max Kalika <max@gentoo.org> dhcp-3.0_p2-r3.ebuild,
+  files/dhcp.conf, files/dhcp.rc6, files/dhcrelay.conf, files/dhcrelay.rc6:
+  Add dhcrelay startup script. Contributed by Martin Jackson on bug #33895.
+
+  14 Jan 2004; Max Kalika <max@gentoo.org> dhcp-3.0_p2-r3.ebuild:
+  Readd the ebuild and chown patch to address bugs #27079 and #36869.
 
   05 Jan 2004; Jason Wever <weeve@gentoo.org> dhcp-3.0_p2-r2.ebuild:
   Marked stable on sparc.
