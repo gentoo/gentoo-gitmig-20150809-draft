@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3a.ebuild,v 1.5 2003/11/17 21:22:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.4.ebuild,v 1.1 2003/11/17 21:22:42 mholzer Exp $
 
 inherit eutils
 inherit webapp-apache
