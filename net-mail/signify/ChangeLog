@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/signify
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/ChangeLog,v 1.8 2005/02/28 21:49:30 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/ChangeLog,v 1.9 2005/03/06 10:55:31 tove Exp $
+
+*signify-1.14 (06 Mar 2005)
+
+  06 Mar 2005; Torsten Veller <tove@gentoo.org> -signify-1.14.1.ebuild,
+  +signify-1.14.ebuild:
+  Corrected version number: 1.14.1 to 1.14. Sorry for inconvenience.
+  Marked 1.14 stable for x86.
 
   28 Feb 2005; Alex Howells <astinus@gentoo.org> signify-1.07.ebuild,
   signify-1.14.1.ebuild:

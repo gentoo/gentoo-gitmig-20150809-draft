@@ -1,14 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/signify-1.14.1.ebuild,v 1.2 2005/02/28 21:49:30 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/signify-1.14.ebuild,v 1.1 2005/03/06 10:55:31 tove Exp $
 
-inherit versionator
-
-MY_PV=$(replace_version_separator 2 '-' )
 S=${WORKDIR}/${PN}
 
 DESCRIPTION="A (semi-)random e-mail signature rotator"
-SRC_URI="mirror://debian/pool/main/s/${PN}/${PN}_${MY_PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/s/${PN}/${PN}_${PV}-1.tar.gz"
 HOMEPAGE="http://signify.sf.net/"
 
 RDEPEND="dev-lang/perl"
@@ -17,7 +14,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~ppc ~sparc ~x86 ~amd64"
+KEYWORDS="~ppc ~sparc x86 ~amd64"
 IUSE=""
 
 src_unpack() {

@@ -1,6 +1,16 @@
-MD5 56399ea909ef10b5c17b2cbf0fe8d488 ChangeLog 1217
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c1ba3954c8379e127dab151e95ab6136 signify-1.07.ebuild 790
-MD5 081e2cc9be9234fe928cd196f0b527b6 signify-1.14.1.ebuild 930
+MD5 48e2fd5a75bf53e01a3500d823eef187 ChangeLog 1439
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 64534db2780baecd0213a0df37e43ef2 signify-1.14.ebuild 860
 MD5 3e164a501365935ba51092659d139618 files/digest-signify-1.07 63
-MD5 846f7b02af0290ba33b859698b7722aa files/digest-signify-1.14.1 65
+MD5 846f7b02af0290ba33b859698b7722aa files/digest-signify-1.14 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCKuGvV3J2n04EauwRAol8AKC6Te5RfMuUd44HslI6Ktk9jK0q9wCgxgaU
+wlwQcywvgErfcttJzLN5rZk=
+=6u0y
+-----END PGP SIGNATURE-----
