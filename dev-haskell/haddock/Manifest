@@ -1,13 +1,23 @@
-MD5 f0675aa77940593d4d2eee6e509980dd ChangeLog 2315
-MD5 f3c40e00d8950761c2e18aaa5df5eabf haddock-0.4.ebuild 2045
-MD5 56c6b7c556bf24c9795a8dea8556d27b haddock-0.5.ebuild 1951
-MD5 1dbfca5149590c7cb3812a8fa66bb07b haddock-0.6-r1.ebuild 1967
-MD5 d799b9d11119e9251bf2af6554692e82 haddock-0.6-r2.ebuild 1966
-MD5 badb8b642b7e15fedbe8876fbb98bad1 haddock-0.6.ebuild 1965
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3844031600db93db8e366550cb6a2a3c ChangeLog 2518
+MD5 334e58c2bde7264b3d4c1a9eadca4e6d haddock-0.4.ebuild 2039
+MD5 23c0627111ec2ccabcaf76839e6ebef1 haddock-0.5.ebuild 1945
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
+MD5 d0fed0b48c927cfbad74c22ea29c2d88 haddock-0.6-r1.ebuild 1961
+MD5 e840b12d8e339b635266cbbcd80a212b haddock-0.6-r2.ebuild 1964
+MD5 ec08b75db21049d8e6c97749ec23c930 haddock-0.6.ebuild 1959
 MD5 345c00e86d5388d60c897e487987922a files/digest-haddock-0.4 67
 MD5 8f05c67dab27a2cac367e6499281ca06 files/digest-haddock-0.5 67
+MD5 0fe55540bd0531c1ca8da69fb5098d76 files/haddock-0.4-ghc6.patch 6858
 MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6 67
 MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6-r1 67
 MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6-r2 67
-MD5 0fe55540bd0531c1ca8da69fb5098d76 files/haddock-0.4-ghc6.patch 6858
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBc/HoVWNWqTUmv+0RAtw/AJ9eu7g7GxcJzWIXrEKnQEZiATQYtwCfWiGq
+sW2RVqTDg9vyER+o4YaKmy4=
+=kjnb
+-----END PGP SIGNATURE-----
