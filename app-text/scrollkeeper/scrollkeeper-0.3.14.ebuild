@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14.ebuild,v 1.5 2004/02/10 21:21:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14.ebuild,v 1.6 2004/02/12 16:17:50 leonardop Exp $
 
 IUSE="nls"
 
@@ -30,6 +30,7 @@ src_unpack() {
 
 	cd ${S}
 	patch -p0< ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
 
 src_compile() {
