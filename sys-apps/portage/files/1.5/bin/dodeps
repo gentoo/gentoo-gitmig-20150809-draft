@@ -1,0 +1,57 @@
+#!/usr/bin/spython
+from portage import *
+import sys
+import commands
+import os
+import string
+
+for x in sys.argv[1:]:
+	if isinstalled(x):
+		continue
+	mysplit=string.split(x,"/")
+	if len(mysplit) != 2:
+		print
+		print "!!! Error:",x,"is not a valid dependency string."
+		print
+		sys.exit(1)
+	if justname(mysplit[1]):
+		mypath="/usr/portage/"+mysplit[0]+"/"+mysplit[1]
+	else:
+		mypath="/usr/portage/"+mysplit[0]+"/"+pkgsplit(mysplit[1])[0]
+	myfiles=os.listdir(mypath)	
+	print myfiles
+	myebuilds=[]
+	for y in myfiles:
+		if y[-7:] == ".ebuild":
+			myebuilds.append(y)
+	if len(myebuilds)>1:
+		newebuild=["0.0","0"]
+		for z in myebuilds:
+			esplit=pkgsplit(z[:-7])
+			#not a valid version part of ebuild name, out of contention
+			if not esplit:
+				continue
+			#version is newer
+			if vercmp(esplit[1],newebuild[0])>0:
+				newebuild=esplit[1:]
+			#version is same
+			elif vercmp(esplit[1],newebuild[0])==0:
+				#rev is newer
+				if atoi(esplit[2][1:])>atoi(newebuild[1][1:]):
+					newebuild=esplit[1:]
+		myebuilds=esplit[0]+"-"+newebuild[0]	
+		if newebuild[1][1:] != "0":
+			myebuilds=myebuilds+"-"+newebuild[1]
+		myebuilds=[myebuilds+".ebuild"]
+		print
+		print ">>> Hmmm... multiple ebuild files in",mypath
+		print ">>> Picking newest file: ",myebuilds[0]
+		print
+	print myebuilds
+	myout=os.system("/usr/bin/ebuild "+mypath+"/"+myebuilds[0]+" merge")
+	if myout != 0:
+		print
+		print "!!! Error: Autobuild of",mypath+"/"+myebuilds[0],"failed."
+		print	
+		sys.exit(1)
+sys.exit(0)

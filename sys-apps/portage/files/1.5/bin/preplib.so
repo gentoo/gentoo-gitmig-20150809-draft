@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -n "${DEBUG}" ]
+then
+	exit
+fi	
+for x in $@
+do
+	strip --strip-unneeded ${D}${x}/*.so*
+done
+

@@ -1,0 +1,45 @@
+#!/usr/bin/spython
+
+import os
+import portage
+import string
+import sys
+
+installeddict=portage.port_insttree()
+currentdict=portage.port_currtree()
+portagedict=portage.port_porttree()
+
+for mypkg in installeddict.keys():
+	#if there is one installed version, and one recommended version, and they both
+	#are the same version, don't list the package.  This package is up-to-date.
+	if (len(installeddict[mypkg])==1) and currentdict.has_key(mypkg): 
+		if len(currentdict[mypkg])==1: 
+			if portage.pkgcmp(currentdict[mypkg][0][1][1:],installeddict[mypkg][0][1][1:])==0:
+				continue
+	print "Package",mypkg
+	print "Installed version(s):"
+	for inspkg in installeddict[mypkg]:
+		print " ",inspkg[0]
+	# print available portage versions, labelling one as the recommended version
+	print "Available versions:"
+	if portagedict.has_key(mypkg):
+		for curpkg in portagedict[mypkg]:
+			print " ",curpkg[0]
+	else:
+		print " ","(none)"
+	print "Recommended version:"
+	if currentdict.has_key(mypkg):
+		for curpkg in currentdict[mypkg]:
+			print " ",curpkg[0]
+	else:
+		print " ","(none)"
+	print
+
+print "System (important) packages not installed:"
+print
+for x in currentdict.keys():
+	if currentdict[x][0][1][0][0:4]=="sys-":
+		#required package
+		if not installeddict.has_key(x):
+			print x
+print

@@ -1,0 +1,7 @@
+#!/bin/bash
+    if [ ${#} -ne 2 ]
+    then
+	echo "${0}: two arguments needed"
+	return
+    fi
+    chmod ${1} ${D}${2}
