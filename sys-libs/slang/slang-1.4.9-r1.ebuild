@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.8 2004/10/04 21:16:25 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.9 2004/10/06 11:43:25 gmsoft Exp $
 
 inherit gcc eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://space.mit.edu/pub/davis/slang/v1.4/${P}.tar.bz2"
 
 LICENSE="GPL-2 | Artistic"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ppc sparc alpha mips hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="cjk unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
