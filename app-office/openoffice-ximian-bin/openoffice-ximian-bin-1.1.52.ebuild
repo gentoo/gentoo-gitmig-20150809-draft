@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.3 2004/04/05 14:03:36 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.4 2004/06/02 02:32:17 agriffis Exp $
 
 inherit rpm
 
@@ -140,7 +140,7 @@ src_install() {
 	sed -i -e s/'=oo'/'=xoo'/g *.desktop
 
 	einfo "Installing Menu shortcuts and mime info (need \"gnome\" or \"kde\" in USE)..."
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/applications
 		doins *.desktop
@@ -150,7 +150,7 @@ src_install() {
 		doins ${FILESDIR}/${OO_VER}/ximian-openoffice.keys
 	fi
 
-	if [ -n "`use kde`" ]
+	if use kde
 	then
 		insinto /usr/share/applnk/Ximian-OpenOffice.org
 		doins *.desktop

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.57.ebuild,v 1.1 2004/05/28 21:45:54 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.57.ebuild,v 1.2 2004/06/02 02:30:26 agriffis Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -247,7 +247,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
 	fi
 
-	if [ `use ooo-kde` ]; then
+	if use ooo-kde; then
 		DISTRO=KDE
 		ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
 		WIDGETSET=kde
@@ -481,7 +481,7 @@ src_install() {
 	sed -i -e s/'=oo'/'=xoo'/g *.desktop
 
 	einfo "Installing Menu shortcuts and mime info (need \"gnome\" or \"kde\" in USE)..."
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/applications
 		doins *.desktop
@@ -491,7 +491,7 @@ src_install() {
 		doins ${FILESDIR}/${OO_VER}/ximian-openoffice.keys
 	fi
 
-	if [ -n "`use kde`" ]
+	if use kde
 	then
 		insinto /usr/share/applnk/Ximian-OpenOffice.org
 		doins *.desktop

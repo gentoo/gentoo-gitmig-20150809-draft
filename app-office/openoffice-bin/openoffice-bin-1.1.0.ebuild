@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.8 2004/01/24 13:54:07 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.9 2004/06/02 02:31:03 agriffis Exp $
 
 IUSE="kde gnome"
 
@@ -126,7 +126,7 @@ src_install() {
 	done
 
 	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/gnome/apps/OpenOffice.org
 		# Install the files needed for the catagory
@@ -147,7 +147,7 @@ src_install() {
 		done
 	fi
 
-	if [ -n "`use kde`" ]
+	if use kde
 	then
 		local kdeloc="${D}${INSTDIR}/share/kde/net/"
 

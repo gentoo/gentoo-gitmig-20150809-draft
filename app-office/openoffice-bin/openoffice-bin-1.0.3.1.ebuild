@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.3.1.ebuild,v 1.5 2004/05/12 07:14:06 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.3.1.ebuild,v 1.6 2004/06/02 02:31:03 agriffis Exp $
 
 IUSE="kde gnome"
 
@@ -15,7 +15,7 @@ LOC="/opt"
 INSTDIR="${LOC}/OpenOffice.org${PV//.1/}"
 MY_PV="`echo ${PV//.1/} | gawk '{ print toupper($1) }'`"
 
-if [ `use ppc` ]; then
+if use ppc; then
 	MY_P="OOo_${MY_PV}_LinuxPowerPC_installer"
 	S="${WORKDIR}/${MY_P}"
 else
@@ -135,7 +135,7 @@ src_install() {
 	dosym ooffice /usr/bin/oopadmin
 
 	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/gnome/apps/OpenOffice.org
 		# Install the files needed for the catagory
@@ -152,7 +152,7 @@ src_install() {
 		done
 	fi
 
-	if [ -n "`use kde`" ]
+	if use kde
 	then
 		local kdeloc="${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org${PV//.1/}"
 

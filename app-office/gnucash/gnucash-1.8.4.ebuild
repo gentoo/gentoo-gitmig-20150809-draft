@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.4.ebuild,v 1.11 2004/01/01 15:26:02 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.4.ebuild,v 1.12 2004/06/02 02:31:45 agriffis Exp $
 
 inherit flag-o-matic libtool
 
@@ -72,7 +72,7 @@ src_compile() {
 
 	emake || die "make failed"
 
-	if [ -n "`use doc`" ]; then
+	if use doc; then
 		cd ${WORKDIR}/${PN}-docs-${DOC_VER}
 		econf --localstatedir=/var/lib || die "doc configure failed"
 		emake || die "doc make failed"
@@ -84,7 +84,7 @@ src_install() {
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog HACKING NEWS README* TODO
 	dodoc docs/README*
 
-	if [ -n "`use doc`" ]; then
+	if use doc; then
 		cd ${WORKDIR}/${PN}-docs-${DOC_VER}
 		make DESTDIR=${D} \
 			scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper \

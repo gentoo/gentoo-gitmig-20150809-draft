@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.2 2004/05/11 17:53:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.3 2004/06/02 02:31:45 agriffis Exp $
 
 inherit flag-o-matic libtool
 
@@ -96,7 +96,7 @@ pkg_postinst() {
 		scrollkeeper-update -q -p ${ROOT}/var/lib/scrollkeeper
 	fi
 
-	if [ -z "`use quotes`" ]; then
+	if ! use quotes; then
 		ewarn
 		einfo "If you wish to enable Online Stock Quotes Retrieval,"
 		einfo "Please re-emerge gnucash with USE=\"quotes\""

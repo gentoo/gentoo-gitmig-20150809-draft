@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.4.ebuild,v 1.5 2004/02/26 12:28:10 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.4.ebuild,v 1.6 2004/06/02 02:28:47 agriffis Exp $
 
 DESCRIPTION="Desktop Publishing (DTP) and Layout program for Linux."
 HOMEPAGE="http://web2.altmuehlnet.de/fschmid/"
@@ -31,7 +31,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 
 	# Fixing desktop.scribus
-	if [ `use kde` ] ; then
+	if use kde ; then
 		inherit kde-functions
 		set-kdedir 3
 		sed -e 's/local\///' scribus.desktop > desktop.scribus.2
