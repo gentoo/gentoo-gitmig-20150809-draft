@@ -1,11 +1,18 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.17 2003/07/23 18:43:54 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.18 2003/07/23 19:49:34 mcummings Exp $
 
 *CGI-2.98 (23 Jul 2003)
 
   23 Jul 2003; <rac@gentoo.org> CGI-2.98.ebuild:
   Upstream version bump, install into vendordir
+
+  23 Jul 2003; Michael Cummings <mcummings@gentoo.org> CGI-2.97.ebuild:
+  Had confirmation from arch's that this is fine to release. See
+  http://www.securityfocus.com/bid/8231 for security bulletin
+  regarding bug in
+  cross-site scripting vulnerability in CGI.pm
+      
 
   23 Jul 2003; Michael Cummings <mcummings@gentoo.org> CGI-2.97.ebuild:
   Unmasking for x86. There is a security fix for cross site scripting included.
