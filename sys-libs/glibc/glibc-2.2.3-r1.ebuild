@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r1.ebuild,v 1.2 2001/05/31 22:15:27 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r1.ebuild,v 1.3 2001/06/07 23:20:03 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -132,10 +132,10 @@ pkg_preinst()
     echo "Saving ld-linux,libc6 and libpthread"
     for file in ld-linux.so.2 libc.so.6 libpthread.so.0
     do
-	if [ -f ${file} ]
+	if [ -f ${ROOT}lib/${file} ]
 	then
-	    /bin/cp ${ROOT}/lib/${file} ${ROOT}/tmp
-	    /sbin/sln ${ROOT}/tmp/${file} ${ROOT}/lib/${file}
+	    /bin/cp ${ROOT}lib/${file} ${ROOT}tmp
+	    /sbin/sln ${ROOT}tmp/${file} ${ROOT}lib/${file}
 	fi
     done
     
