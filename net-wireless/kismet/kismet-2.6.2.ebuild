@@ -7,7 +7,7 @@ SRC_URI="http://www.kismetwireless.net/code/${P}.tar.gz
 	 http://www.ethereal.com/distribution/ethereal-0.9.7.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~sparc64 ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="acpi ipv6 gps"
 DEPEND="gps? ( >=dev-libs/expat-1.95.4 media-gfx/imagemagick )"
 S="${WORKDIR}/${P}"

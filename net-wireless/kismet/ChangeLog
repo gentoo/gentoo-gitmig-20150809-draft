@@ -1,6 +1,8 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.5 2002/12/17 19:45:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.6 2002/12/20 03:54:38 alron Exp $
+
+  19 Dev 2002; Dean Bailey <alron@gentoo.org> : removed sparc64 keyword
 
 *kismet-2.6.2 (16 Dec 2002)
 
