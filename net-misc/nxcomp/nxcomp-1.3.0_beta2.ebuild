@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.3.0_beta2.ebuild,v 1.1 2003/11/13 20:48:25 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.3.0_beta2.ebuild,v 1.2 2003/11/24 22:31:26 stuart Exp $
 
 MY_P="${PN}-1.3.0-34"
 DESCRIPTION="X11 protocol compression library"
@@ -22,7 +22,7 @@ src_compile() {
 
 src_install() {
 	insinto /usr/NX/lib
-	dolib libXcomp.so.1.2.2
+	dolib libXcomp.so.1.3.0
 
 	dodoc README README-IPAQ LICENSE VERSION
 

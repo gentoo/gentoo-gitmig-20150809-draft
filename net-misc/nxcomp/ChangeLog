@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxcomp
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.4 2003/11/13 20:48:25 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.5 2003/11/24 22:31:26 stuart Exp $
+
+*nxcomp-1.3.0_beta2 (24 Nov 2003)
+
+  24 Nov 2003; Stuart Herbert <stuart@gentoo.org> nxcomp-1.3.0_beta2.ebuild:
+  Fix for attempt to install wrong version of the .so file
 
   13 Nov 2003; Stuart Herbert <stuart@gentoo.org> :
   Added ebuild for beta2 of nxcomp-1.3.0
