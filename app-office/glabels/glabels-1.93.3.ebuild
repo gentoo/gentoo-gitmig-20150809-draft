@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-1.93.3.ebuild,v 1.2 2004/08/18 17:31:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-1.93.3.ebuild,v 1.3 2004/09/04 17:08:00 axxo Exp $
 
 inherit gnome2
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.2
 	>=gnome-base/libgnomecanvas-2.0.1
 	>=gnome-base/libglade-2.0.1"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig
+	dev-util/pkgconfig
 	>=dev-util/intltool-0.21"
 
 DOCS="AUTHORS ChangeLog README TODO"

@@ -1,7 +1,17 @@
-MD5 e78eaa8915bb479f0510c602f0ab3464 ChangeLog 2323
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3129160a257e17368dfe952aac6efe56 glabels-2.0.1.ebuild 1125
+MD5 26890e94b37a31b9d6c7d22f430771dc glabels-1.93.3.ebuild 958
+MD5 ef2982e8ba862a6ec74bc7e3c85a3824 ChangeLog 2441
 MD5 54b7f17aa1f3cf4e8cc03858fd99070c metadata.xml 554
-MD5 ab002f8bde4d44c83f613d09a152faef glabels-1.93.3.ebuild 964
-MD5 da094e4522b465f03f79adfecb3e5b24 glabels-2.0.1.ebuild 1132
-MD5 9e2ffe73924322314756d4f75f0f7298 files/digest-glabels-1.93.3 67
 MD5 ee01115ee9516cf17cc6ae7d001cd05c files/glabels-2.0.1-sandbox_fix.patch 415
 MD5 42fee8564da4e38b5e06395d87648ee4 files/digest-glabels-2.0.1 66
+MD5 9e2ffe73924322314756d4f75f0f7298 files/digest-glabels-1.93.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOfa0/rLF9B432nYRAvhgAJ4+oOBLAWgg5FLOwEvMDKtKDVHVggCgh8Q5
+YK94GG7geKoD17+37B/hGDw=
+=HL0i
+-----END PGP SIGNATURE-----
