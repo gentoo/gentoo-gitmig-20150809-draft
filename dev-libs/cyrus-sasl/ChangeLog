@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.81 2004/07/07 16:59:28 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.82 2004/07/07 17:12:44 langthang Exp $
+
+  07 Jul 2004; langthang@gentoo.org :
+  stable cyrus-sasl-2.1.18-r1 on x86
 
   07 Jul 2004; Cory Visi <merlin@gentoo.org>
   files/cyrus-sasl-2.1.18-sasl-path-fix.patch:
