@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r2.ebuild,v 1.1 2004/01/06 23:25:03 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r2.ebuild,v 1.2 2004/01/08 21:43:19 plasmaroo Exp $
 
 IUSE="build"
 
@@ -11,7 +11,7 @@ ETYPE="sources"
 inherit kernel
 
 # PACV=Bernhard Rosenkraenzer's release version
-PACV=pac${PR/r/}
+PACV=pac1
 # KV=patched kernel version
 KV="${PV/_/-}-${PACV}"
 # OKV=original kernel version as provided by ebuild
