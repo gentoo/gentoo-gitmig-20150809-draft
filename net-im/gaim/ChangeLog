@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.227 2004/08/25 16:35:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.228 2004/08/25 17:06:25 kloeri Exp $
+
+  25 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gaim-0.81-r5.ebuild:
+  Stable on alpha, bug 61457.
 
   25 Aug 2004; Travis Tilley <lv@gentoo.org> gaim-0.81-r5.ebuild:
   stable on amd64
