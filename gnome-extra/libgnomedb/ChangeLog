@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.8 2003/07/05 12:27:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.9 2003/08/28 17:00:42 obz Exp $
+
+*libgnomedb-0.91.0 (29 Aug 2003)
+
+  29 Aug 2003; Mike Gardiner <obz@gentoo.org> libgnomedb-0.91.0.ebuild:
+  New version
 
 *libgnomedb-0.90.0 (05 Jul 2003)
 
