@@ -1,10 +1,10 @@
 # ChangeLog for x11-wm/oroborus
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.12 2004/03/22 19:50:35 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.13 2004/03/23 18:38:44 mholzer Exp $
 
   22 Mar 2004; Brandon Hale <tseng@gentoo.org> oroborus-2.0.13.ebuild,
   oroborus-2.0.7.ebuild, oroborus-2.0.9.ebuild:
-  Fix DEPEND-ness, bug #27778
+  Fix DEPEND-ness, bug #45343
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> oroborus-2.0.9.ebuild:
   KEYWORDS got sparced.
