@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.0.ebuild,v 1.11 2002/12/06 04:20:57 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.0.ebuild,v 1.12 2002/12/09 04:17:37 manson Exp $
 
 S=${WORKDIR}/${PN}
 MY_P=${PN}linux-${PV}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.rarsoft.com/"
 
 SLOT="0"
 LICENSE="RAR"
-KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
+KEYWORDS="x86 -ppc -sparc  -alpha"
 
 RDEPEND="virtual/glibc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta5.ebuild,v 1.15 2002/10/16 23:05:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta5.ebuild,v 1.16 2002/12/09 04:17:37 manson Exp $
 
 IUSE="nls esd gnome oss oggvorbis"
 
@@ -12,7 +12,7 @@ SRC_URI="http://gnometoaster.rulez.org/archive/${MY_P}.tgz"
 HOMEPAGE="http://gnometoaster.rulez.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2 )

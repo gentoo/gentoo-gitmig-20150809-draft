@@ -1,7 +1,10 @@
 # ChangeLog for app-cdr/gcombust
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.9 2002/10/27 22:31:02 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.10 2002/12/09 04:17:37 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *gcombust-0.1.53 (27 Oct 2002)
 
   27 Oct 2002; Arcady Genkin <agenkin@gentoo.org> gcombust-0.1.53.ebuild :

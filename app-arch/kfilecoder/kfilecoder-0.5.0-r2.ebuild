@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/kfilecoder-0.5.0-r2.ebuild,v 1.12 2002/11/30 02:45:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/kfilecoder-0.5.0-r2.ebuild,v 1.13 2002/12/09 04:17:37 manson Exp $
 
 inherit kde-base
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/kfilecoder/${P}.tar.bz2"
 HOMEPAGE="http://kfilecoder.sourceforge.net"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 need-kde 2.1.1
 

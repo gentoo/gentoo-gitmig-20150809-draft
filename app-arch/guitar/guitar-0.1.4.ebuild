@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.10 2002/11/30 02:16:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.11 2002/12/09 04:17:36 manson Exp $
 
 MY_P=guiTAR-${PV}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://artemis.efes.net/disq/guitar/"
 IUSE="gnome"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="x11-libs/gtk+
 	sys-apps/tar

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i.ebuild,v 1.7 2002/11/30 02:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i.ebuild,v 1.8 2002/12/09 04:17:37 manson Exp $
 
 DESCRIPTION="Utility for creating and opening lzh archives."
 HOMEPAGE="http://www2m.biglobe.ne.jp/~dolphin/lha/lha-unix.htm"
@@ -8,7 +8,7 @@ SRC_URI="http://www2m.biglobe.ne.jp/~dolphin/lha/prog/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="lha"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/glibc"
 

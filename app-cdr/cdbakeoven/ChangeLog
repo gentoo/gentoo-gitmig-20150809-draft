@@ -1,7 +1,10 @@
 # ChangeLog for app-cdr/cdbakeoven
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/ChangeLog,v 1.4 2002/09/03 00:04:26 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/ChangeLog,v 1.5 2002/12/09 04:17:37 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *cdbakeoven-1.8.9-r1 (2 Sep 2002)
 
   2 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org>

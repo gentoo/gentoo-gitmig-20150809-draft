@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.7 2002/11/30 02:27:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.8 2002/12/09 04:17:37 manson Exp $
 
 # Fix so that updating can only be done by 'cp old.ebuild new.ebuild'
 MY_P="`echo ${P} |sed -e 's:-::' -e 's:_b:B:'`"
@@ -12,7 +12,7 @@ HOMEPAGE="http://gnometoaster.rulez.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 IUSE="nls esd gnome oss oggvorbis"
 
 DEPEND="=x11-libs/gtk+-1.2*

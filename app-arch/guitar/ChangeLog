@@ -1,7 +1,10 @@
 # ChangeLog for app-arch/guitar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.3 2002/10/17 13:20:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.4 2002/12/09 04:17:36 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *guitar-0.1.4 (21 May 2002)
 
   17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> guitar-0.1.4.ebuild :
