@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0d7ea5665dab001d7b9f173703d2173e xfe-0.70-r1.ebuild 973
 MD5 45afed04aa773719b3f16befc321e9e0 xfe-0.66.ebuild 643
 MD5 e876ab71b8f9746210242a9e760d3257 xfe-0.72.ebuild 1027
-MD5 13e102a6346b6c5cc388e0057b4e0043 ChangeLog 2342
+MD5 6f83345af92b56473c8a77279ebabbb8 ChangeLog 2437
 MD5 a22298bb40896990d55b5d48b54e5d26 metadata.xml 262
 MD5 2e471d0d64c75be23f9e68537cf1f6bb files/xfe-0.70-file-association.patch 753
-MD5 a0d27671deda8d1d90e4d14e7f473ce5 files/digest-xfe-0.70-r1 60
 MD5 534a237bed017d0c5e6bfd73d9760e87 files/digest-xfe-0.66 60
 MD5 322d8f7e8c091743501a044efcd8dfe6 files/digest-xfe-0.72 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBeotPCHk4+ZoBpvsRAu4IAKDFnMwlY5KJa8joIpBHP1K4O0AOaACfapp2
-f9xtFSUUiESLj4CLmQLhmJg=
-=Bm27
------END PGP SIGNATURE-----

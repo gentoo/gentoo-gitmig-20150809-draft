@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.19 2004/10/23 16:48:02 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.20 2004/12/08 08:28:55 s4t4n Exp $
+
+  08 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> xfe-0.70-r1.ebuild:
+  Remove older ebuild.
 
   23 Oct 2004; Tom Martin <slarti@gentoo.org> xfe-0.72.ebuild:
   Stable on amd64.
