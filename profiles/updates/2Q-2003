@@ -3,3 +3,4 @@ move net-p2p/qt-dcgui net-p2p/dcgui-qt
 move dev-java/mysql-jdbc dev-java/jdbc-mysql
 move dev-util/jext app-editors/jext
 move x11-misc/setimgr app-sci/setimgr
+move x11-misc/rss_glx x11-misc/rss-glx
