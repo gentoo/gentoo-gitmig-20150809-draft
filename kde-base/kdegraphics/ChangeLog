@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.85 2004/04/21 01:39:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.86 2004/04/27 00:48:49 caleb Exp $
+
+  26 Apr 2004; Caleb Tennis <caleb@gentoo.org>
+  +files/kdegraphics-3.2.2-gcc34-compile.patch:
+  GCC 3.4 compile fix
 
   20 Apr 2004; Caleb Tennis <caleb@gentoo.org>
   -files/kdegraphics-3.0.5b-kghostviewrc, -kdegraphics-3.0.5b.ebuild:

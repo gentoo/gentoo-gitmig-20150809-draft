@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.2.ebuild,v 1.1 2004/04/20 01:50:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.2.ebuild,v 1.2 2004/04/27 00:48:49 caleb Exp $
 
 inherit kde-dist
 
@@ -21,6 +21,11 @@ DEPEND="~kde-base/kdebase-${PV}
 	x86? ( scanner? sys-libs/libieee1284 )"
 RDEPEND="${DEPEND}
 	app-text/xpdf"
+
+src_unpack() {
+	kde_src_unpack
+	epatch ${FILESDIR}/${P}-gcc34-compile.patch
+}
 
 src_compile() {
 
