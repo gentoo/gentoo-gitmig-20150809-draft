@@ -1,6 +1,11 @@
 # ChangeLog for www-client/ochusha
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.1 2004/09/08 13:36:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.2 2004/11/30 03:34:12 usata Exp $
+
+*ochusha-0.5.7 (30 Nov 2004)
+
+  30 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +ochusha-0.5.7.ebuild:
+  Version bumped.
 
 *ochusha-0.5.5 (08 Sep 2004)
 
