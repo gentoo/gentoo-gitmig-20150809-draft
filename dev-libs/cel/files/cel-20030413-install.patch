@@ -1,0 +1,32 @@
+diff -ur celorig/Jamrules.in cel/Jamrules.in
+--- celorig/Jamrules.in	2003-02-24 18:13:13.000000000 +0100
++++ cel/Jamrules.in	2003-05-03 14:41:11.000000000 +0200
+@@ -6,6 +6,7 @@
+ PYTHON_LIBS = "@PYTHON_LIBS@" ;
+ PYTHON_CFLAGS = "@PYTHON_CFLAGS@" ;
+ 
++Cc = @CC@ ;
+ C++ = @CXX@ ;
+ LINK = $(C++) ;
+ 
+@@ -13,13 +14,13 @@
+ C++FLAGS += $(CRYSTAL_C++FLAGS) ;
+ LINKLIBS += $(CRYSTAL_LIBS) ;
+ 
+-prefix = "@prefix@" ;
+-exec_prefix = "@exec_prefix@" ;
+-libdir = "@libdir@" ;
+-plugindir = "@libdir@/cel" ;
+-csconfdir = "@bindir@" ;
+-bindir = "@bindir@" ;
+-includedir = "@includedir@" ;
++prefix ?= "@prefix@" ;
++exec_prefix ?= "@exec_prefix@" ;
++libdir ?= "@libdir@" ;
++plugindir ?= "@libdir@/cel" ;
++csconfdir ?= "@bindir@" ;
++bindir ?= "@bindir@" ;
++includedir ?= "@includedir@" ;
+ 
+ C++FLAGS += "-DLIBDIR='\"$(plugindir)/\"'" ;
+ 

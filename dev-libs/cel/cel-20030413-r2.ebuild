@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/cel-20030413.ebuild,v 1.3 2003/06/10 20:48:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/cel-20030413-r2.ebuild,v 1.1 2003/07/10 22:40:20 vapier Exp $
 
 inherit games
 
@@ -13,33 +13,31 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="dev-libs/crystalspace
-	>=sys-apps/sed-4
 	dev-util/jam
 	!dev-libs/cel-cvs"
 
 S=${WORKDIR}/${PN}
 
 CEL_PREFIX=${GAMES_PREFIX_OPT}/crystal
+CS_PREFIX=${GAMES_PREFIX_OPT}/crystal
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-install.patch
+}
 
 src_compile() {
 	./autogen.sh || die
-	PATH="${CEL_PREFIX}/bin:${PATH}" ./configure --prefix=${CEL_PREFIX} || die
+	PATH="${CEL_PREFIX}/bin:${PATH}" ./configure --prefix=${CEL_PREFIX} --with-cs-prefix=${CEL_PREFIX} || die
 	jam || die
 }
 
 src_install() {
 	sed -i -e "s:/usr/local/cel:${CEL_PREFIX}:g" cel.cex
-
-	insinto ${CEL_PREFIX}
-	doins `find include -iname '*.h'`
-
-	into ${CEL_PREFIX}
-	dolib.so *.so
-
-	insinto ${CEL_PREFIX}/bin
-	doins	cel.cex
-	#dogamesbin cel.cex
-	mv celtst ${D}/${CEL_PREFIX}/
-
+	# attention don't put a / between ${D} and ${CEL_PREFIX} jam has a bug where
+	# it fails with 3 following slashes.
+	jam -sFILEMODE=0640 -sEXEMODE=0750 -sprefix=${D}${CEL_PREFIX} install || die
+	dogamesbin cel.cex
 	prepgamesdirs
 }

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/ChangeLog,v 1.5 2003/07/02 23:19:29 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cel/ChangeLog,v 1.6 2003/07/10 22:40:20 vapier Exp $
+
+*cel-20030413-r2 (10 Jul 2003)
+
+  10 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Bumped to fix all known problems with cel.  Many thanks to people on
+  #20383, especially Matze Braun <matze@braunis.de>.
 
 *cel-20030413-r1 (02 Jul 2003)
 
@@ -13,8 +19,10 @@
 
   10 Jun 2003; <msterret@gentoo.org> cel-20030413.ebuild:
   DEPEND on sed >= 4
+
   13 Apr 2003; Philip Walls <malverian@gentoo.org> cel-20030413.ebuild :
   Cel snapshot that works with Planeshift
+
   19 May 2003; Thomas Raschbacher <lordvan@gentoo.org> cel-20030413.ebuild:
   installing cel.cex to /opt/crystal/bin now so cs-config can find it
 
