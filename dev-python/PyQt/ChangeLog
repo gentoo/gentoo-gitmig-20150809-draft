@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.51 2005/02/08 05:46:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.52 2005/02/20 16:11:15 carlo Exp $
+
+*PyQt-3.13-r1 (20 Feb 2005)
+
+  20 Feb 2005; Carsten Lohrke <carlo@gentoo.org> +PyQt-3.13-r1.ebuild,
+  +PyQt-3.14.ebuild:
+  version bump
 
   07 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> PyQt-3.13.ebuild:
   Multilib fix for python.
