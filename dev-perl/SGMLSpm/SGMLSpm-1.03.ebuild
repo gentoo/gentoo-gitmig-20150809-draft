@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03.ebuild,v 1.4 2001/02/15 18:17:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03.ebuild,v 1.5 2001/04/09 05:08:37 achim Exp $
 
 A=${PN}-${PV}ii.tar.gz
 S=${WORKDIR}/${PN}
@@ -14,7 +14,7 @@ DEPEND=">=sys-devel/perl-5"
 src_unpack() {
 
   unpack ${A}
-  cp ${FILESDIR}/Makefile ${S}
+  cp ${FILESDIR}/${P}-Makefile ${S}/Makefile
 
 }
 src_compile() {

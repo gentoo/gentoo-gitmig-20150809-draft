@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/XML-DOM-1.25.ebuild,v 1.6 2000/12/15 07:29:29 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/XML-DOM-1.25.ebuild,v 1.7 2001/04/09 05:08:37 achim Exp $
 
 P=XML-DOM-1.25
 A=${P}.tar.gz
@@ -13,9 +13,15 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Pro
 DEPEND=">=sys-devel/perl-5
 	>=dev-perl/XML-Parser-2.29"
 
+src_unpack() {
+  unpack ${A}
+  cd ${S}
+  cp DOM.pm DOM.pm.orig
+  sed -e 's:\\\d:[0-9]:' DOM.pm.orig > DOM.pm
+}
+
 src_compile() {
 
-    cd ${S}
     perl Makefile.PL 
     try make 
     make test
@@ -23,9 +29,8 @@ src_compile() {
 
 src_install () {
 
-    cd ${S}
-    try make PREFIX=${D}/usr install
-    dodoc Changes MANIFEST README rfc2396.txt
+    try make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install
+    dodoc Changes MANIFEST README 
 
 }
 
