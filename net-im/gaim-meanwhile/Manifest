@@ -1,4 +1,6 @@
-MD5 65db9ec9c30fd0432333578fc7602cd2 ChangeLog 1809
+MD5 c1f1f0515a2774d6b825de298f76e7db ChangeLog 1937
 MD5 1cf929a52f1ac87c0d9d2bf6e31bbd9f gaim-meanwhile-1.0.2.ebuild 633
 MD5 c1a2d7f113e28668f770c363bd5e761f metadata.xml 224
+MD5 85703fedb89472a92cd74fff47ad6622 gaim-meanwhile-1.2.0.ebuild 637
 MD5 1b90bae8ed29c6289af54e9242d341b5 files/digest-gaim-meanwhile-1.0.2 72
+MD5 48726fa4bef647a6f47483cf493ea060 files/digest-gaim-meanwhile-1.2.0 72
