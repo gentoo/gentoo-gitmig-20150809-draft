@@ -1,16 +1,26 @@
-MD5 d0a7e238f7c2127f14ade855f41d0a26 museseq-0.7.1_pre3.ebuild 1715
-MD5 903285cc4e3edb1c6a6c19cfda7131cc museseq-0.7.0-r1.ebuild 2044
-MD5 28e39e34d4d450fe17a1228be4d839f5 museseq-0.7.1.ebuild 1718
-MD5 91a3a3e50dcf616ca1a17f0bbd9cca1b museseq-0.6.2-r1.ebuild 3167
-MD5 03d5f4e65228eb489aa7b1db45ecd231 ChangeLog 4377
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 448f16597d18f5add0cfeee42d6c2f4c ChangeLog 4505
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 7fb0bc9c25aa67018b8c07120f4f16a1 files/museseq-0.6.2-memory.patch 2032
-MD5 8bf0be08b3013a6047aecad1e99bc1fb files/museseq-0.6.2-gcc34.patch 5500
-MD5 08b5947de834c47253a313e6a7d0a3e5 files/museseq-0.6.2-fPIC.patch 4002
-MD5 1006036f5832dc460206b706858ff87b files/digest-museseq-0.7.1 69
-MD5 49c3c1f0136766a89c7cd1ba91006bc6 files/museseq-0.6.2-drumport.patch 771
-MD5 135d65fe445ace2c95913e681e7a7b68 files/museseq-0.6.2-int2ptr.patch.gz 4000
-MD5 8e4317aae91e4f07628431262e27ad09 files/digest-museseq-0.7.1_pre3 68
+MD5 91a3a3e50dcf616ca1a17f0bbd9cca1b museseq-0.6.2-r1.ebuild 3167
+MD5 903285cc4e3edb1c6a6c19cfda7131cc museseq-0.7.0-r1.ebuild 2044
+MD5 d0a7e238f7c2127f14ade855f41d0a26 museseq-0.7.1_pre3.ebuild 1715
+MD5 3f6d6488c5f9b4f5ece2b7a8d0d79a8e museseq-0.7.1.ebuild 1775
 MD5 fbb837028f0103f8c2775f24e661888b files/digest-museseq-0.6.2-r1 64
 MD5 20ef97c251eae618ada71d7493308b96 files/digest-museseq-0.7.0-r1 64
+MD5 8e4317aae91e4f07628431262e27ad09 files/digest-museseq-0.7.1_pre3 68
+MD5 49c3c1f0136766a89c7cd1ba91006bc6 files/museseq-0.6.2-drumport.patch 771
+MD5 08b5947de834c47253a313e6a7d0a3e5 files/museseq-0.6.2-fPIC.patch 4002
+MD5 8bf0be08b3013a6047aecad1e99bc1fb files/museseq-0.6.2-gcc34.patch 5500
+MD5 7fb0bc9c25aa67018b8c07120f4f16a1 files/museseq-0.6.2-memory.patch 2032
 MD5 fd23ed0d1b20d7ed5f18d26d4a45acc1 files/museseq-0.7.0-suidinstall.patch 837
+MD5 1006036f5832dc460206b706858ff87b files/digest-museseq-0.7.1 69
+MD5 135d65fe445ace2c95913e681e7a7b68 files/museseq-0.6.2-int2ptr.patch.gz 4000
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCRm5KArHZZzCEUG0RAupdAJwIp7Q4zJeIBtPl1+j8CBt5uHG1rgCeNYi0
+CFayLZfmuf3pKmgpdYch5SE=
+=TDrr
+-----END PGP SIGNATURE-----

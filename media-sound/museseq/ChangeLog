@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/museseq
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.26 2005/02/18 17:13:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.27 2005/03/27 08:26:30 eradicator Exp $
+
+  27 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  museseq-0.7.1.ebuild:
+  Use proper toolchain ld.  Added to ~sparc.
 
   18 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   -files/museseq-0.6.2-int2ptr.patch, +files/museseq-0.6.2-int2ptr.patch.gz,

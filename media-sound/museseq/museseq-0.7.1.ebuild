@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1.ebuild,v 1.2 2005/02/18 17:13:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1.ebuild,v 1.3 2005/03/27 08:26:30 eradicator Exp $
 
-inherit kde-functions gcc virtualx eutils
+inherit kde-functions gcc virtualx eutils toolchain-funcs
 need-qt 3
 
 MY_P=${P/museseq/muse}
@@ -14,11 +14,11 @@ HOMEPAGE="http://lmuse.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-IUSE="doc ladcca debug"
+KEYWORDS="~amd64 ~sparc ~x86"
+IUSE="alsa doc ladcca debug"
 
 DEPEND=">=x11-libs/qt-3.2.0
-	>=media-libs/alsa-lib-0.9.0
+	alsa? ( media-libs/alsa-lib )
 	media-sound/fluidsynth
 	doc? ( app-text/openjade
 		   app-doc/doxygen
@@ -35,6 +35,8 @@ src_compile() {
 	myconf="--disable-suid-build" # instead, use CONFIG_RTC and realtime-lsm
 	use ladcca		|| myconf="${myconf} --disable-ladcca"
 	use debug		&& myconf="${myconf} --enable-debug"
+
+	export LD="$(tc-getLD)"
 	Xeconf ${myconf} || die "configure failed"
 
 	emake || die
