@@ -1,0 +1,24 @@
+diff -r -u cherokee-0.4.1-old/src/common.c cherokee-0.4.1/src/common.c
+--- cherokee-0.4.1-old/src/common.c	2003-02-23 08:36:02.000000000 -0700
++++ cherokee-0.4.1/src/common.c	2004-02-15 23:17:22.000000000 -0700
+@@ -23,7 +23,7 @@
+  * USA
+  */
+ 
+-#include <varargs.h>
++#include <stdarg.h>
+ #include "common.h"
+ 
+ /* Global mini-buffer for quickly use
+diff -r -u cherokee-0.4.1-old/src/log.c cherokee-0.4.1/src/log.c
+--- cherokee-0.4.1-old/src/log.c	2003-02-23 08:36:31.000000000 -0700
++++ cherokee-0.4.1/src/log.c	2004-02-15 23:17:37.000000000 -0700
+@@ -24,7 +24,7 @@
+  */
+ 
+ #include "log.h"
+-#include <varargs.h>
++#include <stdarg.h>
+ 
+ static int __cherokee_logging = 0;
+ 
