@@ -1,0 +1,21 @@
+#!/bin/bash
+if [ ${#} -lt 1 ]
+then
+	echo "doinfo: at least one argument needed"
+	return
+fi
+if [ ! -d ${D}usr/info ]
+then
+	install -d ${D}usr/info
+fi
+for x in "$@"
+do
+	if [ -e ${x} ]
+	then
+	    	install -m0644 ${x} ${D}usr/info
+	    	gzip -9 ${D}usr/info/${x##*/}
+	else
+	    	echo "doinfo: ${x} does not exist"
+	fi
+done
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+if [ ${mynum} -lt 1 ]
+then
+	echo "${0}: at least one argument needed"
+	return
+fi
+if [ ! -d ${D}${DESTTREE}/bin ]
+then
+	install -d ${D}${DESTTREE}/bin
+fi
+for x in "$@"
+do
+	if [ -x ${x} ]
+	then
+            if [ -z "$DEBUG" ]
+	    then
+		MYVAL=`file ${x} | grep "ELF"` 
+	        if [ -n "$MYVAL" ]
+	        then
+		    strip ${x}
+                fi
+            fi
+	    install ${x} ${D}${DESTTREE}/bin
+	else
+	    echo "${0}: ${x} is not executable or does not exist"
+	fi
+    done
+

@@ -13,9 +13,9 @@ fi
 #2 minutes ago.
 source /etc/profile
 source /etc/make.conf
-export PROXY
-export HTTP_PROXY
-export FTP_PROXY
+export PROXY HTTP_PROXY FTP_PROXY
+export DEBUG MAKEOPTS USE
+export PATH=/usr/lib/portage/bin:${PATH}
 
 initvars() {
 	#fix up ROOT path so that it always has a / after it
@@ -26,29 +26,26 @@ initvars() {
     		export ROOT=${ROOT}/
 	fi
 
-
-	DESTTREE=/usr
-	INSDESTTREE=""
-	EXEDESTTREE=""
-	DOCDESTTREE=""
-	INSOPTIONS="-m0644"
-	EXEOPTIONS="-m0755"	
-	LIBOPTIONS="-m0644"
-	MOPREFIX=${PN}
-	KVERS=`uname -r`
+	export DESTTREE=/usr
+	export INSDESTTREE=""
+	export EXEDESTTREE=""
+	export DOCDESTTREE=""
+	export INSOPTIONS="-m0644"
+	export EXEOPTIONS="-m0755"	
+	export LIBOPTIONS="-m0644"
+	export MOPREFIX=${PN}
+	export KVERS=`uname -r`
 }
 
 initvars
 
-src_unpack() 
-    {  
+src_unpack() { 
 	unpack ${A} 
-    }
+}
 
-src_compile() 
-    { 
+src_compile() { 
 	return 
-    }
+}
 
 src_install() 
     { 
@@ -75,26 +72,6 @@ pkg_postrm()
 	return
     }
 
-bz2unpack() 
-    { 
-	tar -x --use=bzip2 -f $1 
-    }
-
-gzunpack() 
-    { 
-	tar xzf $1 
-    }
-
-pkunpack()
-    {
-	unzip $i
-    }
-
-pmake() 
-    { 
-	make ${MAKEOPTS} MAKE="make ${MAKEOPTS}" $* 
-    }
-
 try() {
 	eval $*
 	if [ $? -ne 0 ]
@@ -106,20 +83,6 @@ try() {
 		echo
 		exit 1
 	fi
-}
-
-use() 
-{
-	local x
-	for x in "$USE"
-	do
-		if [ "${1}" = "${x}" ]
-		then
-			echo "${x}"
-			return
-		fi
-		return
-	done
 }
 
 dyn_digest() {
@@ -279,42 +242,6 @@ dyn_unpack() {
     trap SIGINT SIGQUIT
 }
 
-unpack() {
-    local x
-    for x in "$@"
-    do
-	echo ${x}
-	case "${x##*.}" in
-		gz)
-	    		gzunpack ${DISTDIR}/${x}
-	  		;;
-		tgz)
-	    		gzunpack ${DISTDIR}/${x}
-	  		;;
-		Z)
-	    		gzunpack ${DISTDIR}/${x}
-	  		;;
-		bz2)
-	    		bz2unpack ${DISTDIR}/${x}
-	    		;;
-		tbz2)
-	    		bz2unpack ${DISTDIR}/${x}
-	    		;;
-		zip)
-			pkunpack ${DISTDIR}/${x}
-			;;
-		ZIP)
-			pkunpack ${DISTDIR}/${x}
-			;;
-        	*)
-            		echo "Archive format not recognized."
-	    		exit
-	    		;;
-        esac
-    done			
-}
-
-
 dyn_clean() {
     if [ -d ${WORKDIR} ]
     then
@@ -330,9 +257,9 @@ dyn_clean() {
 into() {
     if [ $1 = "/" ]
     then
-	DESTTREE=""
+	export DESTTREE=""
     else
-	DESTTREE=$1
+	export DESTTREE=$1
 	if [ ! -d ${D}${DESTTREE} ]
 	then
 	    install -d ${D}${DESTTREE}
@@ -343,9 +270,9 @@ into() {
 insinto() {
     if [ $1 = "/" ]
     then
-	INSDESTTREE=""
+	export INSDESTTREE=""
     else
-	INSDESTTREE=$1
+	export INSDESTTREE=$1
 	if [ ! -d ${D}${INSDESTTREE} ]
 	then
 	    install -d ${D}${INSDESTTREE}
@@ -356,9 +283,9 @@ insinto() {
 exeinto() {
     if [ $1 = "/" ]
     then
-	EXEDESTTREE=""
+	export EXEDESTTREE=""
     else
-	EXEDESTTREE=$1
+	export EXEDESTTREE=$1
 	if [ ! -d ${D}${EXEDESTTREE} ]
 	then
 	    install -d ${D}${EXEDESTTREE}
@@ -368,343 +295,15 @@ exeinto() {
 docinto() {
     if [ $1 = "/" ]
     then
-	DOCDESTTREE=""
+	export DOCDESTTREE=""
     else
-	DOCDESTTREE=$1
+	export DOCDESTTREE=$1
 	if [ ! -d ${D}usr/doc/${PF}/${DOCDESTTREE} ]
 	then
 	    install -d ${D}usr/doc/${PF}/${DOCDESTTREE} 
 	fi
     fi
 }
-dodoc() {
-    local x
-    for x in "$@"
-    do
-	if [ -e ${x} ]
-	then
-	    if [ ! -d ${D}usr/doc/${PF} ]
-	    then
-		install -d ${D}usr/doc/${PF}
-	    fi
-	    if [ -z ${DOCDESTTREE} ]
-	    then
-		install -m0644 ${x} ${D}usr/doc/${PF}
-		gzip -9 ${D}usr/doc/${PF}/${x##*/}
-	    else
-		install -m0644 ${x} ${D}usr/doc/${PF}/${DOCDESTTREE}
-		gzip -9 ${D}usr/doc/${PF}/${DOCDESTTREE}/${x##*/}
-	    fi
-	else
-	    echo "${0}: ${x} does not exist."
-	fi
-    done
-}
-
-prepstrip() {
-    if [ -n "${DEBUG}" ]
-    then
-	return
-    fi	
-    local x
-    for x in $@
-    do
-	strip ${D}${x}/*
-    done
-}
-
-preplib.so() {
-    if [ -n "${DEBUG}" ]
-    then
-	return
-    fi	
-    local x
-    for x in $@
-    do
-	strip --strip-unneeded ${D}${x}/*.so*
-    done
-}
-
-prepinfo() {
-  if [ -z "$1" ]
-  then
-    rm -f ${D}usr/info/dir
-    gzip -9 ${D}usr/info/*
-  else
-    rm -f ${D}$1/info/dir
-    gzip -9 ${D}$1/info/*
-  fi
-}
-
-prepman() {
-  local x
-  local y
-  if [ -z "$1" ] ; then z=${D}usr/man ; else z=${D}$1/man ; fi
-    for x in ${z}/* 
-    do
-	local y
-	for y in ${x}/*
-	do
-	    if [ -h ${y} ]
-	    then
-		#symlink
-		local linkto=`ls -l ${y} | sed -e "s:${D}::" | awk '{ printf ("%s.gz",$11) } '`
-	        echo "$linkto $y.gz"
-		ln -sf ${linkto} ${y}.gz
-		rm ${y}
-	    else
-		gzip -f -9 ${y}
-            fi	
-	done
-    done
-}
-
-
-doman() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    local myloc=$DESTTREE
-    if [ "$myloc" = "" ]
-    then
-        myloc=/usr
-    fi
-    local x
-    for x in "$@"
-    do
-	local md=${x##*.}
-	local mandir
-	mandir=man${md:0:1}
-	if [ -e ${x} ]
-	then
-	    if [ ! -d ${D}${myloc}/man/${mandir} ]
-	    then
-		install -d ${D}${myloc}/man/${mandir}
-	    fi
-	    install -m0644 ${x} ${D}${myloc}/man/${mandir}
-	    gzip -9 ${D}${myloc}/man/${mandir}/${x##*/}
-	else
-	    echo "${0}: ${x} does not exist."
-	fi
-    done
-}
-
-doinfo() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}usr/info ]
-    then
-	install -d ${D}usr/info
-    fi
-    local x
-    for x in "$@"
-    do
-	if [ -e ${x} ]
-	then
-	    install -m0644 ${x} ${D}usr/info
-	    gzip -9 ${D}usr/info/${x##*/}
-	else
-	    echo "${0}: ${x} does not exist"
-	fi
-    done
-}
-
-dolib() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}${DESTTREE}/lib ]
-    then
-	install -d ${D}${DESTTREE}/lib
-    fi
-    local x
-    for x in "$@"
-    do
-	if [ -e ${x} ]
-	then
-	    install ${LIBOPTIONS} ${x} ${D}${DESTTREE}/lib
-	else
-	    echo "${0}: ${x} does not exist"
-	fi
-    done
-}
-
-#To be used for dynamic .so libraries
-dolib.so() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}${DESTTREE}/lib ]
-    then
-	install -d ${D}${DESTTREE}/lib
-    fi
-    local x
-    for x in "$@"
-    do
-	if [ -e ${x} ]
-	then
-	    install -m0755 ${x} ${D}${DESTTREE}/lib
-	    if [ -z "$DEBUG" ]
-            then
-	        strip --strip-unneeded ${D}${DESTTREE}/lib/${x##*/}
-            fi
-	else
-	    echo "${0}: ${x} does not exist"
-	fi
-    done
-}
-
-#To be used for static .a libraries
-dolib.a() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}${DESTTREE}/lib ]
-    then
-	install -d ${D}${DESTTREE}/lib
-    fi
-    local x
-    for x in "$@"
-    do
-	if [ -e ${x} ]
-	then
-	    install -m0644 ${x} ${D}${DESTTREE}/lib
-	else
-	    echo "${0}: ${x} does not exist"
-	fi
-    done
-}
-
-dobin() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}${DESTTREE}/bin ]
-    then
-	install -d ${D}${DESTTREE}/bin
-    fi
-    local x
-    for x in "$@"
-    do
-	if [ -x ${x} ]
-	then
-            if [ -z "$DEBUG" ]
-	    then
-	        local MYVAL
-		MYVAL=`file ${x} | grep "ELF"` 
-	        if [ -n "$MYVAL" ]
-	        then
-		    strip ${x}
-                fi
-            fi
-	    install ${x} ${D}${DESTTREE}/bin
-	else
-	    echo "${0}: ${x} is not executable or does not exist"
-	fi
-    done
-}
-
-dosbin() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}${DESTTREE}/sbin ]
-    then
-	install -d ${D}${DESTTREE}/sbin
-    fi
-    local x
-    for x in "$@"
-    do
-	if [ -x ${x} ]
-	then
-            if [ -z "$DEBUG" ]
-            then
-	        local MYVAL=`file ${x} | grep "ELF"` 
-	        if [ "$MYVAL" ]
-	        then
-		    strip ${x}
-                fi
-	    fi
-	    install -m0754 ${x} ${D}${DESTTREE}/sbin
-	else
-	    echo "${0}: ${x} is not executable or does not exist"
-	fi
-    done
-}
-
-#symlink
-dosym() {
-    if [ ${#} -ne 2 ]
-    then
-	echo "${0}: two arguments needed"
-	return
-    fi
-    local target=${1}
-    local linkname=${2}
-    ln -sf ${target} ${D}${linkname}
-}
-
-#hard link
-dohard() {
-    if [ ${#} -ne 2 ]
-    then
-	echo "${0}: two arguments needed"
-	return
-    fi
-    local mysrc=${1}
-    local mydest=${2}
-    ln -f ${D}${mysrc} ${D}${mydest}
-}
-    
-#mkdir
-dodir() {
-    local x
-    for x in "$@"
-    do
-    	install -d ${D}${x}
-    done
-}
-
-fperms() {
-    if [ ${#} -ne 2 ]
-    then
-	echo "${0}: two arguments needed"
-	return
-    fi
-    chmod ${1} ${D}${2}
-}
-
-fowners() {
-    if [ ${#} -ne 2 ]
-    then
-	echo "${0}: two arguments needed"
-	return
-    fi
-    chown ${1} ${D}${2}
-}
-
 
 insopts() {
     INSOPTIONS=""
@@ -718,6 +317,7 @@ insopts() {
              INSOPTIONS="$INSOPTIONS $x"
         fi
     done
+    export INSOPTIONS
 }
 
 doins() {
@@ -750,54 +350,6 @@ doins() {
     done
 }
 
-newdoc() {
-        rm -rf ${T}/${2}
-        cp ${1} ${T}/${2}
-        dodoc ${T}/${2}
-}
-
-newman() {
-        rm -rf ${T}/${2}
-        cp ${1} ${T}/${2}
-        doman ${T}/${2}
-}
-
-newexe() {
-        rm -rf ${T}/${2}
-        cp ${1} ${T}/${2}
-        doexe ${T}/${2}
-}
-
-newbin() {
-        rm -rf ${T}/${2}
-        cp ${1} ${T}/${2}
-        dobin ${T}/${2}
-}
-
-newlib.so() {
-        rm -rf ${T}/${2}
-        cp ${1} ${T}/${2}
-        dolib.so ${T}/${2}
-}
-
-newlib.a() {
-        rm -rf ${T}/${2}
-        cp ${1} ${T}/${2}
-        dolib.a ${T}/${2}
-}
-
-newsbin() {
-        rm -rf ${T}/${2}
-        cp ${1} ${T}/${2}
-        dosbin ${T}/${2}
-}
-
-newins() {
-        rm -rf ${T}/${2}
-        cp ${1} ${T}/${2}
-        doins ${T}/${2}
-}
-
 donewins() {
     local mynum=${#}
     if [ ${mynum} -lt 1 ]
@@ -825,6 +377,7 @@ exeopts() {
              EXEOPTIONS="$EXEOPTIONS $x"
         fi
     done
+    export EXEOPTIONS
 }
 
 libopts() {
@@ -839,69 +392,7 @@ libopts() {
              LIBOPTIONS="$LIBOPTIONS $x"
         fi
     done
-}
-
-doexe() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "doexe: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}${EXEDESTTREE} ]
-    then
-	install -d ${D}${EXEDESTTREE}
-    fi
-    local x
-    local mysrc
-    for x in "$@"
-    do
-	if [ -L ${x} ]
-	then
-		cp ${x} ${T}
-		mysrc=${T}/`/usr/bin/basename ${x}`
-	elif [ -d ${x} ]
-	then
-		echo "doexe: warning, skipping directory ${x}"
-		continue
-	else
-		mysrc=${x}
-	fi
-	install ${EXEOPTIONS} ${mysrc} ${D}${EXEDESTTREE}
-	if [ -n "$DEBUG" ]
-	then
-		strip ${D}${EXEDESTTREE}/`/usr/bin/basename ${x}`
-	fi
-    done
-}
-
-domo() {
-    local mynum=${#}
-    if [ ${mynum} -lt 1 ]
-    then
-	echo "${0}: at least one argument needed"
-	return
-    fi
-    if [ ! -d ${D}${DESTTREE}/share/locale ]
-    then
-	install -d ${D}${DESTTREE}/share/locale/
-    fi
-    local x
-    for x in "$@"
-    do
-	if [ -e ${x} ]
-	then
-	    local mytiny=${x##*/}
-	    local mydir=${D}${DESTTREE}/share/locale/${mytiny%.*}/LC_MESSAGES
-	    if [ ! -d ${mydir} ]
-	    then
-		install -d ${mydir}
-	    fi
-	    install -m0644 ${x} ${mydir}/${MOPREFIX}.mo
-	else
-	    echo "${0}: ${x} does not exist"
-	fi
-    done
+    export LIBOPTIONS
 }
 
 abort_compile() {
