@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3-r1.ebuild,v 1.1 2004/08/06 15:08:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3-r1.ebuild,v 1.2 2004/08/07 17:27:44 caleb Exp $
 
 inherit kde eutils
 
@@ -47,6 +47,7 @@ src_unpack() {
 	epatch ${FILESDIR}/post-3.2.3-kdelibs-kstandarddirs.patch
 	epatch ${FILESDIR}/post-3.2.3-kdelibs-htmlframes.patch
 	cd ${S}/dcop && patch -p0 < ${FILESDIR}/post-3.2.3-kdelibs-dcopserver.patch
+	cd ${S} && aclocal -I ${S}
 }
 
 src_compile() {
