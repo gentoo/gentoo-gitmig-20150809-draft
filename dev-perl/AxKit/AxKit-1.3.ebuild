@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.3.ebuild,v 1.1 2001/02/18 02:10:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.3.ebuild,v 1.2 2001/03/12 10:52:03 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,15 @@ DESCRIPTION="The Apache AxKit Perl Module"
 SRC_URI="http://xml.sergeant.org/download/${A}"
 HOMEPAGE="http://xml.sergeant.org/"
 
-DEPEND=">=sys-devel/perl-5"
+DEPEND=">=sys-devel/perl-5
+	>=net-www/apache-ssl-1.3.17.2.8.0-r1
+	>=dev-perl/libapreq-0.31
+	>=dev-perl/Compress-Zlib-1.10
+	>=dev-perl/Error-0.13
+	>=dev-perl/HTTP-GHTTP-1.06
+	>=dev-perl/Storable-1.0.7
+	>=dev-perl/XML-XPath-1.04
+	>=dev-perl/XML-Sablot-0.50"
 
 src_unpack() {
   unpack ${A}
@@ -27,8 +35,12 @@ src_compile() {
 
 src_install () {
 
-    cd ${S}
     try make PREFIX=${D}/usr install
+    diropts -o nobody -g nogroup
+    dodir /var/cache/axkit
+    dodir /usr/local/httpd/htdocs/xslt
+    insinto /etc/httpd
+    doins ${FILESDIR}/httpd.axkit
     dodoc ChangeLog MANIFEST README* TODO
 
 }
