@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Which
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.1 2004/08/17 17:34:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.2 2004/10/14 12:22:32 agriffis Exp $
+
+  14 Oct 2004; Aron Griffis <agriffis@gentoo.org> File-Which-0.05.ebuild:
+  Mark stable for muttprint #66216
 
 *File-Which-0.05 (17 Aug 2004)
 
