@@ -1,6 +1,6 @@
-diff -ur linux-2.4.4-xfs-20010521/drivers/md/Makefile linux-2.4.4-xfs-20010521-lvm/drivers/md/Makefile
---- linux-2.4.4-xfs-20010521/drivers/md/Makefile	Mon May 21 19:30:05 2001
-+++ linux-2.4.4-xfs-20010521-lvm/drivers/md/Makefile	Mon May 21 19:30:35 2001
+diff -urP linux-2.4.4-xfs-20010523-gentoo/drivers/md/Makefile linux-2.4.4-xfs-pre-lvm/drivers/md/Makefile
+--- linux-2.4.4-xfs-20010523-gentoo/drivers/md/Makefile	Wed May 23 21:08:52 2001
++++ linux-2.4.4-xfs-pre-lvm/drivers/md/Makefile	Wed May 23 21:09:27 2001
 @@ -6,7 +6,7 @@
  
  export-objs	:= md.o xor.o
