@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.4 2003/09/04 12:59:30 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.5 2003/10/22 20:38:33 lanius Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -154,6 +154,39 @@ kernel-mod_checkzlibinflate_configured ()
 kernel-mod_src_compile ()
 {
 	emake KERNEL_DIR=${KERNEL_DIR} || die
+}
+
+kernel-mod_is_2_4_kernel() {
+	kernel-mod_getversion
+
+    if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 4 ]
+    then
+        return 0
+    else
+        return 1
+    fi
+}
+
+kernel-mod_is_2_5_kernel() {
+	kernel-mod_getversion
+
+    if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
+    then
+        return 0
+    else
+        return 1
+    fi
+}
+
+kernel-mod_is_2_6_kernel() {
+	kernel-mod_getversion
+
+    if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 6 ]
+    then
+        return 0
+    else
+        return 1
+    fi
 }
 
 EXPORT_FUNCTIONS src_compile
