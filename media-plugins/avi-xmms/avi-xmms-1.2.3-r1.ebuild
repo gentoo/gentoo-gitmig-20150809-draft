@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/avi-xmms-1.2.3-r1.ebuild,v 1.7 2004/06/24 23:26:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/avi-xmms-1.2.3-r1.ebuild,v 1.8 2004/07/06 21:06:36 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,8 @@ HOMEPAGE="http://www.xmms.org/plugins_input.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-x86"
+# Contains x86 assembly
+KEYWORDS="-x86 -*"
 
 DEPEND=">=media-sound/xmms-1.2.7-r13
 	media-libs/libsdl"
