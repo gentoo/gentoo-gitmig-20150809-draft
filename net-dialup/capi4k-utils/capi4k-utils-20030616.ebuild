@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20030616.ebuild,v 1.1 2003/11/23 09:35:23 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20030616.ebuild,v 1.2 2003/11/24 13:48:07 lanius Exp $
 
 YEAR_PV=${PV:0:4}
 MON_PV=${PV:4:2}
@@ -10,7 +10,7 @@ MY_P=${PN}-${YEAR_PV}-${MON_PV}-${DAY_PV}
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Capi4Linux Utils"
-SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/OLD/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/${MY_P}.tar.gz ftp://ftp.in-berlin.de/pub/capi4linux/OLD/${MY_P}.tar.gz"
 HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
 SLOT="0"
 LICENSE="GPL-2"
