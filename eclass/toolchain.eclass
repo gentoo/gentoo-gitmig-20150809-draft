@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.34 2004/10/25 17:35:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.35 2004/10/25 19:59:07 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -246,7 +246,7 @@ get_gcc_src_uri() {
 
 	if [ -n "${HTB_VER}" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
-					http://web.inter.nl.net/hcc/Haj.Ten.Brugge/bounds-checking-${PN}-${PV}-${HTB_VER}.patch.bz2"
+					boundschecking? ( http://web.inter.nl.net/hcc/Haj.Ten.Brugge/bounds-checking-${PN}-${PV}-${HTB_VER}.patch.bz2 )"
 	fi
 
 	echo "${GCC_SRC_URI}"
