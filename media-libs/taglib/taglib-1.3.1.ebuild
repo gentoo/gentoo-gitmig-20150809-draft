@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.3.1.ebuild,v 1.5 2005/01/21 20:30:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.3.1.ebuild,v 1.6 2005/01/22 12:59:31 kloeri Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://developer.kde.org/~wheeler/files/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~hppa ~amd64 ~alpha ~ia64 ppc64"
+KEYWORDS="x86 ppc sparc ~hppa ~amd64 alpha ~ia64 ppc64"
 IUSE="debug"
 
 DEPEND=">=sys-devel/autoconf-2.58"
