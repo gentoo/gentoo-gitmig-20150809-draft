@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/nestra
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/nestra/ChangeLog,v 1.1 2002/12/27 18:16:37 rphillips Exp $
+
+*nestra-0.66 (27 Dec 2002)
+
+  27 Dec 2002; Ryan Phillips <rphillips@gentoo.org> nestra-0.66.ebuild :
+  initial release
