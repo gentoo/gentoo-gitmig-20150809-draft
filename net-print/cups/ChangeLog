@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.106 2004/12/27 20:06:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.107 2004/12/29 20:36:51 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> cups-1.1.23_rc1.ebuild:
   Stable on alpha, bug 74479.
@@ -71,7 +74,7 @@
   07 Oct 2004; Lars Weiler <pylon@gentoo.org> cups-1.1.20-r3.ebuild:
   Stable on ppc as requested in bug #66501.
 
-  07 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> cups-1.1.20-r3.ebuild:
+  07 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> cups-1.1.20-r3.ebuild:
   Stable on alpha, bug 66501.
 
   06 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> cups-1.1.20-r3.ebuild:
@@ -92,7 +95,7 @@
   18 Sep 2004; Thomas Matthijs <axxo@gentoo.org> cups-1.1.21.ebuild:
   Added some more mirrors since i was unable to fetch it
 
-  17 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> cups-1.1.20-r2.ebuild:
+  17 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> cups-1.1.20-r2.ebuild:
   Stable on alpha, bug 64168.
 
   17 Sep 2004; <SeJo@gentoo.org> cups-1.1.20-r2.ebuild:

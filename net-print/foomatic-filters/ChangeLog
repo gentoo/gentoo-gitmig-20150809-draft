@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.25 2004/10/09 23:31:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.26 2004/12/29 20:39:56 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   09 Oct 2004; Tom Gall <tgall@gentoo.org> foomatic-filters-3.0.2.ebuild:
   stable on ppc64, bug #64166
@@ -12,7 +15,7 @@
   foomatic-filters-3.0.2.ebuild:
   Marked stable on amd64.
 
-  17 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  17 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   foomatic-filters-3.0.2.ebuild:
   Stable on alpha, bug 64166.
 
@@ -29,7 +32,7 @@
   +foomatic-filters-3.0.2.ebuild:
   security bump, bug #64166
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   foomatic-filters-3.0.1.ebuild:
   Stable on alpha.
 
