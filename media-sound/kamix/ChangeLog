@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kamix
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.8 2004/10/21 23:17:43 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.9 2004/11/01 19:59:25 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  kamix-0.5.7.ebuild:
+  Marked ~ppc64; bug #64641
 
   22 Oct 2004; Simone Gotti <motaboy@gentoo.org> kamix-0.5.7.ebuild:
   Disable the VUMETER if 'arts' USE flag is disabled too. This should be fixed
