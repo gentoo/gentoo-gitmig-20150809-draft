@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/lapack-config
 # Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-config/ChangeLog,v 1.8 2004/09/09 12:15:17 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-config/ChangeLog,v 1.9 2004/09/12 20:36:44 kugelfang Exp $
+
+  12 Sep 2004; Danny van Dyk <kugelfang@gentoo.org>
+  lapack-config-1.0.1.ebuild:
+  Marked stable on amd64.
 
 *lapack-config-1.0.1 (24 Aug 2004)
 
