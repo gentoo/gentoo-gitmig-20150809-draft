@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.2.3.ebuild,v 1.1 2004/08/15 13:24:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.2.3.ebuild,v 1.2 2004/08/21 19:36:25 spock Exp $
 
 DESCRIPTION="A scalable configuration management system"
 HOMEPAGE="http://www.bitkeeper.com/"
@@ -10,13 +10,14 @@ SRC_URI="alpha? ( bk-${PV}-alpha-glibc22-linux.bin )
 	ia64? ( bk-${PV}-ia64-glibc22-linux.bin )
 	mips? ( bk-${PV}-mips-glibc22-linux.bin )
 	ppc? ( bk-${PV}-powerpc-glibc21-linux.bin )
+	s390? ( bk-${PV}-s390-glibc22-linux.bin )
 	sparc? ( bk-${PV}-sparc-glibc21-linux.bin )
 	x86? ( bk-${PV}-x86-glibc23-linux.bin )
-	amd64? ( bk-${PV}-x86_64-unknown-linux.bin )"
+	amd64? ( bk-${PV}-x86_64-glibc23-linux.bin )"
 
 LICENSE="BKL"
 SLOT="0"
-KEYWORDS="alpha arm hppa ia64 mips ppc sparc x86 ~amd64"
+KEYWORDS="alpha arm hppa ia64 mips ppc s390 sparc x86 ~amd64"
 IUSE="X"
 RESTRICT="fetch"
 
