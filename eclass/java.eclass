@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.12 2003/05/20 01:29:57 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.13 2003/11/04 03:47:09 strider Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -54,20 +54,23 @@ pkg_postinst() {
 
 system_arch() {
 	local sarch
-	sarch=`echo $ARCH | sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	sarch=`echo $ARCH | sed -e s/[i]*.86/i386/ -e s/x86_64/i386/ -e s/sun4u/sparc/ -e s/sparc64/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/`
 	if [ -z "$sarch" ] ; then
-		sarch=`uname -m | sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+		sarch=`uname -m | sed -e s/[i]*.86/i386/ -e s/x86_64/i386/ -e s/sun4u/sparc/ -e s/sparc64/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/`
 	fi
 	echo $sarch
 }
 
 set_java_env() {
 	dodir /etc/env.d/java
+	platform=`system_arch`
+	
 	sed \
 		-e "s/@P@/${P}/g" \
 		-e "s/@PN@/${PN}/g" \
 		-e "s/@PV@/${PV}/g" \
 		-e "s/@PF@/${PF}/g" \
+		-e "s/@PLATFORM@/${platform}/g" \
 		-e "/^ADDLDPATH=.*lib\\/\\\"/s|\"\\(.*\\)\"|\"\\1${platform}/:\\1${platform}/server/\"|" \
 		< $1 \
 		> ${D}/etc/env.d/java/20`basename $1` || die
