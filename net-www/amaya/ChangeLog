@@ -1,6 +1,12 @@
 # ChangeLog for net-www/amaya
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.13 2003/04/28 03:41:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.14 2003/07/28 01:10:23 lu_zero Exp $
+
+*amaya-8.1a (28 Jul 2003)
+
+  28 Jul 2003; lu_zero <lu_zero@gentoo.org> amaya-8.1a.ebuild:
+  Version bump, thanks to Arnaud Launay <asl@launay.org> for the 
+  notice.
 
 *amaya-8.0 (28 Apr 2003)
 
