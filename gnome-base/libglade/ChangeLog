@@ -1,9 +1,12 @@
 # ChangeLog for gnome-base/libglade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.4 2002/04/09 22:07:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.5 2002/04/25 07:48:25 spider Exp $
+
+*libglade-0.17-r5 (24 Apr 2002)
+  24 Apr 2002; Spider <spider@gentoo.org> libglade-0.17-r5.ebuild
+  SLOTify
 
 *libglade-0.17-r5 (9 Apr 2002)
-
   9 Apr 2002; M.Schlemmer <azarah@gentoo.org> libglade-0.17-r5.ebuild
 
   Fix build in console.  Add gnome-libs back as a perm depend again, as
