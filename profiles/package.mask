@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3550 2005/02/02 10:10:43 pauldv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3551 2005/02/03 04:19:49 joem Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -702,10 +702,6 @@ sys-kernel/hppa-dev-sources
 # <langthang@gentoo.org> (22 Dec 2004)
 # Mask for testing.
 =mail-mta/postfix-2.2*
-
-# <lu_zero@gentoo.org> (22 Dec 2004)
-# Not ready yet
-=media-gfx/gimp-2.2.0
 
 # <trapni@gentoo.org> (18 Dec 2004)
 # Contains a security vulnerability. See #74272.
