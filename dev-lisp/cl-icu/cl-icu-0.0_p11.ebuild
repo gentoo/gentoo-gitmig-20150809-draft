@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-icu/cl-icu-0.0_p11.ebuild,v 1.1 2005/01/11 16:53:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-icu/cl-icu-0.0_p11.ebuild,v 1.2 2005/03/21 08:14:13 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://common-lisp.net/project/bese/cl-icu.html"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 # ICU is not binary compatible between *minor* version releases because they
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND="dev-lisp/cl-uffi
 	dev-lisp/cl-arnesi
-	=dev-libs/icu-2.6*"
+	=dev-libs/icu-3.2*"
 
 CLPACKAGE=cl-icu
 
@@ -27,8 +27,8 @@ S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	local version=$(icu-config --version)
-	if [ "${version:0:3}" != "2.6" ]; then
-		die "dev-lisp/cl-icue is only compatible with =dev-libs/icu-2.6 (ICU ${version} was installed)"
+	if [ "${version:0:3}" != "3.2" ]; then
+		warn "Note: dev-lisp/cl-icu when used against versions other than ICU 3.2 may not work."
 	fi
 }
 
@@ -42,7 +42,8 @@ src_unpack() {
 src_install() {
 	dodir /usr/share/common-lisp/source/cl-icu
 	dodir /usr/share/common-lisp/systems
-	cp -R src ${D}/usr/share/common-lisp/source/cl-icu/
+	insinto /usr/share/common-lisp/source/cl-icu/
+	doins -r src
 	common-lisp-install cl-icu.asd
 	common-lisp-system-symlink
 	dosym /usr/share/common-lisp/source/cl-icu/cl-icu.asd \

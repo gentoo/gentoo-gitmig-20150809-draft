@@ -1,6 +1,6 @@
 diff -ur cl-icu--dev--0.0--patch-11.orig/src/calendar.lisp cl-icu--dev--0.0--patch-11/src/calendar.lisp
---- cl-icu--dev--0.0--patch-11.orig/src/calendar.lisp	2004-12-28 17:49:51.000000000 -0600
-+++ cl-icu--dev--0.0--patch-11/src/calendar.lisp	2005-01-11 09:50:02.000000000 -0600
+--- cl-icu--dev--0.0--patch-11.orig/src/calendar.lisp	2005-02-23 21:21:58.544789648 -0600
++++ cl-icu--dev--0.0--patch-11/src/calendar.lisp	2005-02-23 21:21:48.087379416 -0600
 @@ -49,7 +49,7 @@
    (make-date (ucal-getnow)))
  
@@ -10,9 +10,26 @@ diff -ur cl-icu--dev--0.0--patch-11.orig/src/calendar.lisp cl-icu--dev--0.0--pat
  
  (defmethod make-date ((millis double-float))
    (make-instance 'date :uobject millis))
+diff -ur cl-icu--dev--0.0--patch-11.orig/src/icu/ucal.lisp cl-icu--dev--0.0--patch-11/src/icu/ucal.lisp
+--- cl-icu--dev--0.0--patch-11.orig/src/icu/ucal.lisp	2005-02-23 21:21:58.549788888 -0600
++++ cl-icu--dev--0.0--patch-11/src/icu/ucal.lisp	2005-02-23 21:21:48.097377896 -0600
+@@ -228,13 +228,3 @@
+    (limit udate-limit-type)
+    (status (* UErrorCode)))
+   :returning :int)
+-
+-(def-icu-function "ucal_getAvailableTZIDs"
+-  ((rawOffset :int)
+-   (index :int)
+-   (status (* UErrorCode)))
+-  :returning (* UChar))
+-
+-(def-icu-function "ucal_countAvailableTZIDs"
+-  ((rawOffset :int))
+-  :returning :int)
 diff -ur cl-icu--dev--0.0--patch-11.orig/src/init-icu.lisp cl-icu--dev--0.0--patch-11/src/init-icu.lisp
---- cl-icu--dev--0.0--patch-11.orig/src/init-icu.lisp	2004-12-28 17:49:51.000000000 -0600
-+++ cl-icu--dev--0.0--patch-11/src/init-icu.lisp	2005-01-11 09:47:49.000000000 -0600
+--- cl-icu--dev--0.0--patch-11.orig/src/init-icu.lisp	2005-02-23 21:21:58.552788432 -0600
++++ cl-icu--dev--0.0--patch-11/src/init-icu.lisp	2005-02-23 21:21:48.139371512 -0600
 @@ -14,7 +14,7 @@
    "The namse of the libraries we need to load for ICU support.")
  
@@ -23,8 +40,8 @@ diff -ur cl-icu--dev--0.0--patch-11.orig/src/init-icu.lisp cl-icu--dev--0.0--pat
  
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 diff -ur cl-icu--dev--0.0--patch-11.orig/src/locale.lisp cl-icu--dev--0.0--patch-11/src/locale.lisp
---- cl-icu--dev--0.0--patch-11.orig/src/locale.lisp	2004-12-28 17:49:51.000000000 -0600
-+++ cl-icu--dev--0.0--patch-11/src/locale.lisp	2005-01-11 09:51:15.000000000 -0600
+--- cl-icu--dev--0.0--patch-11.orig/src/locale.lisp	2005-02-23 21:21:58.555787976 -0600
++++ cl-icu--dev--0.0--patch-11/src/locale.lisp	2005-02-23 21:21:48.139371512 -0600
 @@ -11,11 +11,7 @@
  
  (defun make-locale (id)
@@ -34,7 +51,19 @@ diff -ur cl-icu--dev--0.0--patch-11.orig/src/locale.lisp cl-icu--dev--0.0--patch
 -                                                       (string (map-into (make-string (length id))
 -                                                                         #'identity
 -                                                                         id))))))
-+                 :uobject id))
++                 :uobject (convert-to-foreign-string id)))
  
  (defun default-locale ()
    (make-instance 'locale :uobject (uloc-getDefault)))
+diff -ur cl-icu--dev--0.0--patch-11.orig/src/uffi-extras.lisp cl-icu--dev--0.0--patch-11/src/uffi-extras.lisp
+--- cl-icu--dev--0.0--patch-11.orig/src/uffi-extras.lisp	2005-02-23 21:21:58.558787520 -0600
++++ cl-icu--dev--0.0--patch-11/src/uffi-extras.lisp	2005-02-23 21:21:48.141371208 -0600
+@@ -2,7 +2,7 @@
+ 
+ (in-package :it.bese.cl-icu)
+ 
+-(defvar *icu-symbol-suffix* "_2_6")
++(defvar *icu-symbol-suffix* "_3_2")
+ 
+ (defmacro def-icu-function (name &rest def-function-args)
+   (destructuring-bind (c-name lisp-name) 

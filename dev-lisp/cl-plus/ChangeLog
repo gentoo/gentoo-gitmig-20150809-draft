@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-plus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-plus/ChangeLog,v 1.1 2005/02/03 22:08:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-plus/ChangeLog,v 1.2 2005/03/21 08:20:24 mkennedy Exp $
+
+  21 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-plus-1.0.ebuild:
+  Keywording for ~amd64
 
 *cl-plus-1.0 (03 Feb 2005)
 

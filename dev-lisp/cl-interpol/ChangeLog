@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-interpol
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-interpol/ChangeLog,v 1.6 2004/12/16 19:39:27 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-interpol/ChangeLog,v 1.7 2005/03/21 08:17:06 mkennedy Exp $
+
+  21 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-interpol-0.1.2.ebuild:
+  Keywording for ~amd64
 
 *cl-interpol-0.1.2 (16 Dec 2004)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-iterate
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/ChangeLog,v 1.5 2004/12/28 21:20:13 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/ChangeLog,v 1.6 2005/03/21 08:19:32 mkennedy Exp $
+
+  21 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-iterate-1.3_pre1.ebuild:
+  Keywording for ~amd64
+
+  21 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> :
+  Keywording for cl-iterate-1.3_pre1.ebuild
 
 *cl-iterate-1.3_pre1 (28 Dec 2004)
 

@@ -1,6 +1,14 @@
 # ChangeLog for dev-lisp/cl-icu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-icu/ChangeLog,v 1.1 2005/01/11 16:53:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-icu/ChangeLog,v 1.2 2005/03/21 08:14:13 mkennedy Exp $
+
+  21 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  files/0.0_p11-gentoo.patch, cl-icu-0.0_p11.ebuild:
+  Keywording for ~amd64
+
+  23 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  files/0.0_p11-gentoo.patch, cl-icu-0.0_p11.ebuild:
+  Update for dev-libs/icu-3.2
 
 *cl-icu-0.0_p11 (11 Jan 2005)
 

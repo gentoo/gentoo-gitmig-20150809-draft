@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-irc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/ChangeLog,v 1.5 2004/10/15 03:52:10 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/ChangeLog,v 1.6 2005/03/21 08:17:36 mkennedy Exp $
+
+  21 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-irc-0.6.0.ebuild:
+  Keywording for ~amd64
 
 *cl-irc-0.6.0 (14 Oct 2004)
 

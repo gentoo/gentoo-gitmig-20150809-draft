@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/cl-irc-0.6.0.ebuild,v 1.1 2004/10/15 03:52:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/cl-irc-0.6.0.ebuild,v 1.2 2005/03/21 08:17:36 mkennedy Exp $
 
 inherit common-lisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://common-lisp.net/project/cl-irc/"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/${PN}/${PN}_${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
