@@ -1,4 +1,14 @@
-MD5 9dd60498d04bdfb1e778f16152d7b573 ChangeLog 800
-MD5 325de646e6ce18b8ace129d2ab0d90d7 ink-0.3.ebuild 562
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a2c88ebc9b97c236eee3709626a1ea9b ChangeLog 882
+MD5 fba192cd90dfc639a99223c0714733ae ink-0.3.ebuild 568
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 867a416b30b4398c8ed9b80ee081bd6e files/digest-ink-0.3 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB117HntT9W3vfTuoRApS0AJ9CQr2jUirLI3QZ3nQAgH3buTQ2LwCeM/qy
+QlHF9vDUVTL+8TNfQJbThno=
+=xd3F
+-----END PGP SIGNATURE-----
