@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.5 2004/06/24 22:40:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.6 2004/07/23 07:09:49 seemant Exp $
 
 inherit flag-o-matic libtool
 
@@ -17,9 +17,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://sourceforge/${PN}/${PN}-docs-${DOC_VER}.tar.gz"
 HOMEPAGE="http://www.gnucash.org/"
 
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ~alpha ~ppc ~sparc"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=dev-util/guile-1.6
@@ -72,6 +72,9 @@ src_compile() {
 		${myconf} || die "configure failed"
 
 	emake || die "make failed"
+
+	cd ${WORKDIR}/${P}/src/doc/design
+	emake gnucash-design || die "make gnucash-design failed"
 
 	cd ${WORKDIR}/${PN}-docs-${DOC_VER}
 	econf --localstatedir=/var/lib || die "doc configure failed"

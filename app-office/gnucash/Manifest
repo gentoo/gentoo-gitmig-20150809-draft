@@ -1,16 +1,20 @@
-MD5 83210bd24f4014f22866c529e5d77c28 gnucash-1.8.5.ebuild 2641
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ab4a844cb62e3ab3d1c4444f57d6f94 gnucash-1.8.7.ebuild 2639
 MD5 b66e1106b4e35eb9d717387f4bab874c gnucash-1.6.8.ebuild 1900
-MD5 9e80ada1f11277c22277412c65654725 gnucash-1.8.9.ebuild 2868
-MD5 d187cafdea4ee7ef849d6f8137be7fa4 gnucash-1.8.4.ebuild 2712
-MD5 0601eb53063ddeac1edaa62222690bb5 gnucash-1.8.6.ebuild 2889
-MD5 b87427e326afcba921d311bec2abaa8d ChangeLog 7395
+MD5 db78a03795aaa235774e55bcad071229 gnucash-1.8.9.ebuild 2960
+MD5 2ef9afc3fe558cf6d73cbb8f45de0a1c ChangeLog 7777
 MD5 3c20dccad7b705d7e9a379e6831149f9 metadata.xml 252
 MD5 083a8af101c5e6c053beaa535d6790de gnucash-1.8.8.ebuild 2646
 MD5 8ccd6e0765bb53caad58e8f736b020e9 files/digest-gnucash-1.6.8 67
-MD5 6ccd22f551213649d30be28d42195243 files/digest-gnucash-1.8.4 137
-MD5 3e194be2875a82e22930a264830302b6 files/digest-gnucash-1.8.5 137
-MD5 821e14a3926ce81acc6632d4bbdbb22e files/digest-gnucash-1.8.6 137
 MD5 0f94abb98bd0f3c658208a411b238acd files/digest-gnucash-1.8.7 137
 MD5 803eedb2666cca5708fe32c2a0d973b0 files/digest-gnucash-1.8.8 137
 MD5 6f6c233c0f0e5d8115b1fccc1ae3e3c0 files/digest-gnucash-1.8.9 137
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBALnV7aJl2DRYeA4RAoVLAKCLVM/22CD/dl37EnE8KgLUFh2PJwCfXYcP
+nRARH6eiX05UfBM3EvzeJ6U=
+=iJET
+-----END PGP SIGNATURE-----

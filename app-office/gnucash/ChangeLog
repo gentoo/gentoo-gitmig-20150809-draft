@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.47 2004/06/24 22:40:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.48 2004/07/23 07:09:49 seemant Exp $
+
+  22 Jul 2004; Seemant Kulleen <seemant@gentoo.org> -gnucash-1.8.4.ebuild,
+  -gnucash-1.8.5.ebuild, -gnucash-1.8.6.ebuild, gnucash-1.8.9.ebuild:
+  info pages fix thanks to: Doug Weimer <dweimer@socal.rr.com> who provided the
+  fix in bug #52171 by Alan Schmitt <alan.schmitt@polytechnique.org>. Also, move
+  1.8.9 to stable to fix the compilation issue being reported on the forums
 
   21 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> gnucash-1.6.8.ebuild,
   gnucash-1.8.4.ebuild, gnucash-1.8.5.ebuild, gnucash-1.8.6.ebuild,
