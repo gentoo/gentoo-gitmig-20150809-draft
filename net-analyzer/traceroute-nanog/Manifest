@@ -1,4 +1,14 @@
-MD5 a8223b238cbac00939d18de8198382d9 traceroute-nanog-6.3.9.ebuild 966
-MD5 a6e590bdd3d755d778c704034b7601c2 ChangeLog 555
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4fb5386754a94dd60304fd9215ccfbdf traceroute-nanog-6.3.9.ebuild 965
+MD5 7ca7f03847f8b5eacb8a58f0e6894f8d ChangeLog 664
 MD5 ac1e94ae6d3460cf9a5d5ae8ba5797e9 metadata.xml 267
 MD5 3d64910fb617c2be3b7e316b39daf553 files/digest-traceroute-nanog-6.3.9 154
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA9MToT+MN7JbqCpMRAkj2AJwNBtbOADhvf7LMO/Ig3hSFyZhy2gCfa9cN
+Xtzk8a5V+JqpZ8lUmPJdneg=
+=UpMs
+-----END PGP SIGNATURE-----

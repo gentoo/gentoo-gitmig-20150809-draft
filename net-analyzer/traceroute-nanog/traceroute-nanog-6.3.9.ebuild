@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.3.9.ebuild,v 1.2 2004/07/10 11:13:34 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.3.9.ebuild,v 1.3 2004/07/14 05:32:10 eldad Exp $
 
 inherit gcc eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
