@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.7 2003/03/13 16:54:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.8 2003/04/01 08:41:16 mkennedy Exp $
 
 ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
@@ -23,8 +23,9 @@ DEPEND=">=sys-libs/ncurses-5.3
 	sys-libs/gdbm
 	dev-util/cvs
 	dev-python/pexpect
+	app-text/ispell
 	X? ( virtual/x11
-		>=media-libs/libungif-4.1.0
+		>=media-libs/libungif-4.1.0.1b
 		>=media-libs/jpeg-6b
 		>=media-libs/tiff-3.5.7
 		>=media-libs/libpng-1.2.5 )
@@ -87,11 +88,7 @@ src_install () {
 		install || die
 
 	# fix info documentation
-	find ${D}/usr/share/info -type f -print | \
-		while read i
-		do
-			mv ${i} ${i}.info
-		done
+	find ${D}/usr/share/info -type f -exec echo mv {} {}.info \;
 
 	dodoc BUGS ChangeLog README
 
