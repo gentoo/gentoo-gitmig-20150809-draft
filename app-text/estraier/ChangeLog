@@ -1,0 +1,11 @@
+# ChangeLog for app-text/estraier
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/ChangeLog,v 1.1 2004/07/25 07:49:31 hattya Exp $
+
+*estraier-1.2.16 (25 Jul 2004)
+
+  25 Jul 2004; Akinori Hattori <hattya@gentoo.org> +metadata.xml,
+  +estraier-1.2.16.ebuild:
+  Initial revision. Based on the ebuild from Atzm Watanabe
+  <sitosito@p.chan.ne.jp> in bug #55575, and modified by me.
+
