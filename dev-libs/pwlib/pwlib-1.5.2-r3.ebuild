@@ -1,35 +1,34 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.3-r2.ebuild,v 1.2 2004/03/29 23:21:23 stkn Exp $
-
-IUSE="ssl sdl ieee1394 alsa esd"
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.2-r3.ebuild,v 1.1 2004/03/29 23:21:23 stkn Exp $
 
 DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
 HOMEPAGE="http://www.openh323.org/"
-SRC_URI="http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}.tar.gz"
+SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE="ssl sdl ldap"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
 	dev-libs/expat
 	>=sys-apps/sed-4
-	net-nds/openldap
+	ldap? ( net-nds/openldap )
 	sdl? ( media-libs/libsdl )
-	ssl? ( dev-libs/openssl )
-	alsa? ( media-libs/alsa-lib )
-	ieee1394? ( media-libs/libdv
-		sys-libs/libavc1394
-		sys-libs/libraw1394 )
-	esd? ( media-sound/esound )"
+	ssl? ( dev-libs/openssl )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+
+	# fix #45846 / CAN-2004-0097
+	epatch ${FILESDIR}/${P}-asnparser-secfix.diff
+
 	cd ${S}/make
 
 	# filter out -O3 and -mcpu embedded compiler flags
@@ -40,42 +39,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local plugins
-	local myconf
-
 	if [ "`use ssl`" ]; then
 		export OPENSSLFLAG=1
 		export OPENSSLDIR="/usr"
 		export OPENSSLLIBS="-lssl -lcrypt"
 	fi
 
-	## gnomemeeting-1.00 requires pwlib to be built w/ IPV6 support
-	## (even if itself is built without...)
-	#use ipv6 \
-	#	&& myconf="${myconf} --enable-ipv6" \
-	#	|| myconf="${myconf} --disable-ipv6"
-	myconf="${myconf} --enable-ipv6"
-
-	# plugins, oss and v4l are default
-	plugins="oss v4l"
-
-	use ieee1394 \
-		&& plugins="${plugins} avc"
-
-	use alsa \
-		&& plugins="${plugins} alsa"
-
-	if [ -n "`use esd`" ]; then
-		# fixes bug #45059
-		export ESDDIR=/usr
-	fi
-
-	# merge plugin options (safe way if default = "")
-	plugins="`echo ${plugins} | sed -e "y: :,:"`"
-
-	econf ${myconf} \
-		--enable-plugins \
-		--with-plugins=${plugins} || die "configure failed"
+	econf || die "configure failed"
 
 	# Horrible hack to strip out -L/usr/lib to allow upgrades
 	# problem is it adds -L/usr/lib before -L${S} when SSL is
@@ -88,14 +58,7 @@ src_compile() {
 		-e "s:^\(CCFLAGS[\s]*=.*\) -I/usr/include:\1:" \
 		${S}/make/ptlib-config
 
-	# remove -fno-rtti, this breaks various things *grr*
-	sed -i -e "s:-fno-rtti::" \
-		make/ptbuildopts.mak
-	sed -i -e "s:-fno-rtti::" \
-		make/ptlib-config
-
 	emake opt || die "make failed"
-	emake PWLIBDIR=${S} -C plugins opt || die "make plugins failed"
 }
 
 src_install() {
@@ -118,7 +81,7 @@ src_install() {
 	find ${D} -name CVS -type d | xargs rm -rf
 
 	# fix symlink
-	# only amd64 needs special handling, afaiks
+	# only amd64 needs special care, afaiks
 	rm ${D}/usr/lib/libpt.so
 	if [ ${ARCH} = "amd64" ] ; then
 		dosym /usr/lib/libpt_linux_x86_64_r.so.${PV} /usr/lib/libpt.so
