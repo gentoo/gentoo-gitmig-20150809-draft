@@ -1,15 +1,10 @@
 --- bsdsfv.c.orig	2003-04-16 16:05:16.000000000 -0400
-+++ bsdsfv.c	2003-04-16 16:09:50.000000000 -0400
-@@ -34,12 +34,20 @@
- 
- *************************************************************************/
++++ bsdsfv.c	2003-04-16 16:32:35.000000000 -0400
+@@ -36,3 +36,2 @@
  
 -
  #define FNAMELEN		250
- #define MAXSFVFILE		1024
--#define BSDSFV_VERSION	"BSDSFV for UNiX, $Revision: 1.2 $"
-+#define BSDSFV_VERSION		"BSDSFV for UNiX, Revision: 1.14"
- #define MISSINGTAG 		".missing"
+@@ -42,2 +41,11 @@
  #define BADTAG 			".bad"
 +#define OPENBRACKET             "\e[34;01m[\e[0m"
 +#define CLOSEBRACKET            "\e[34;01m]\e[0m"
@@ -21,37 +16,22 @@
 +#define MISSINGMSG              "MISSING"
 +
  
- typedef struct sfvtable
- {
-@@ -523,7 +531,7 @@
- 
- 			  if (listedcrc == mycrc)
+@@ -525,3 +533,3 @@
  				{
 -				  printf ("OK\n");
 +				  printf ("%s %s%s %s\n", OPENBRACKET, OKCOLOR, OKMSG, CLOSEBRACKET);
  				  if (glftpdmode)
- 					{
- 					  sprintf (crap, "%s%s", sfvTable[0].filename,
-@@ -535,7 +543,7 @@
- 				}
- 			  else
+@@ -537,3 +545,3 @@
  				{
 -				  printf ("BAD\n");
 +				  printf ("%s %s%s %s\n", OPENBRACKET, BADCOLOR, BADMSG, CLOSEBRACKET);
  				  badfiles++;
- 				  if (glftpdmode)
- 					{
-@@ -549,16 +557,18 @@
- 			}
- 		  else
+@@ -551,3 +559,3 @@
  			{
 -			  printf ("MISSING\n");
 +			  printf ("%s %s%s %s\n", OPENBRACKET, MISSINGCOLOR, MISSINGMSG, CLOSEBRACKET);
  			  missingfiles++;
- 			}
- 		  numfiles++;
- 		  paramcnt++;
- 		}
+@@ -558,5 +566,7 @@
  
 -	  printf ("\n%d file(s) tested - %d OK - %d bad - %d missing...\n",
 -			  numfiles, numfiles - badfiles - missingfiles, badfiles,
@@ -62,33 +42,22 @@
 +	  	OPENBRACKET, BADCOLOR, badfiles, BADMSG, CLOSEBRACKET,
 +	  	OPENBRACKET, MISSINGCOLOR, missingfiles, MISSINGMSG, CLOSEBRACKET);
  
- 	  if (badfiles || missingfiles)
- 		return 1;
-@@ -635,18 +645,18 @@
- 
- 				  if (mycrc == sfvTable[cnt].crc)
+@@ -637,3 +647,3 @@
  					{
 -					  printf ("OK\n");
 +					  printf ("%s %s%s %s\n", OPENBRACKET, OKCOLOR, OKMSG, CLOSEBRACKET);
  					}
- 				  else
- 					{
- 					  if (mycrc == 0xffffffff)
+@@ -643,3 +653,3 @@
  						{
 -						  printf ("MISSING\n");
 +						  printf ("%s %s%s %s\n", OPENBRACKET, MISSINGCOLOR, MISSINGMSG, CLOSEBRACKET);
  						  missingfiles++;
- 						}
- 					  else
+@@ -648,3 +658,3 @@
  						{
 -						  printf ("BAD\n");
 +						  printf ("%s %s%s %s\n", OPENBRACKET, BADCOLOR, BADMSG, CLOSEBRACKET);
  						  badfiles++;
- 						}
- 					}
-@@ -668,8 +678,9 @@
- 			}
- 		  else
+@@ -670,4 +680,5 @@
  			{
 -			  printf ("Testing %s ... listed = 0x%08X ... Local = MISSING",
 -						  sfvTable[cnt].filename, sfvTable[cnt].crc);
@@ -96,11 +65,7 @@
 +						  sfvTable[cnt].filename, sfvTable[cnt].crc,
 +						  OPENBRACKET, MISSINGCOLOR, MISSINGMSG, CLOSEBRACKET);
  			  missingfiles++;
- 			  if (glftpdmode)
- 				{
-@@ -714,10 +725,12 @@
- 			}
- 		  printf ("Completion Status: %s\n", NEWTAG);
+@@ -716,6 +727,8 @@
  		}
 -
 -	  printf ("\n%d file(s) tested - %d OK - %d bad - %d missing ...\n\n",
@@ -113,5 +78,3 @@
 +			OPENBRACKET, BADCOLOR, badfiles, BADMSG, CLOSEBRACKET,
 +			OPENBRACKET, MISSINGCOLOR, missingfiles, MISSINGMSG, CLOSEBRACKET);
  
- 	  if (missingfiles)
- 		return 2;
