@@ -1,13 +1,14 @@
 # ChangeLog for app-arch/rar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.4 2002/05/30 05:27:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.5 2002/05/31 01:48:14 seemant Exp $
 
 *rar-3.0 (29 May 2002)
 
   29 May 2002; Seemant Kulleen <seemant@gentoo.org> rar-3.0.ebuild
   files/digest-rar-3.0 :
 
-  Version bump to newest stable.
+  Version bump to newest stable. steve_flack@ntlworld.com (Steve Flack) in
+  bug # 3123 gave in the update.
 
 *rar-3.0_beta7 (12 May 2002)
 
