@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.6 2003/02/03 08:24:13 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.7 2003/02/13 09:24:15 vapier Exp $
 
 DESCRIPTION="GNU Octave is a high-level language (MatLab compatible) intended for numerical computations"
 SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2"

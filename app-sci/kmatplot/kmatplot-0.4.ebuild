@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kmatplot/kmatplot-0.4.ebuild,v 1.4 2003/02/02 22:41:34 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kmatplot/kmatplot-0.4.ebuild,v 1.5 2003/02/13 09:22:42 vapier Exp $
 
 PATCHES="${FILESDIR}/${P}-gentoo.patch
 	${FILESDIR}/${P}-inline.patch

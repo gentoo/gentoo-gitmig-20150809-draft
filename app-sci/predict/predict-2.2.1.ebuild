@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.1.ebuild,v 1.2 2002/11/17 06:42:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.1.ebuild,v 1.3 2003/02/13 09:24:46 vapier Exp $
 
 HOMEPAGE="http://www.qsl.net/kd2bd/predict.html"
 DESCRIPTION="Satellite tracking and orbital prediction."

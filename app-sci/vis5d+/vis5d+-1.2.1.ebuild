@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/vis5d+/vis5d+-1.2.1.ebuild,v 1.3 2002/10/20 18:40:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/vis5d+/vis5d+-1.2.1.ebuild,v 1.4 2003/02/13 09:26:33 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="3dimensional weather modeling software"

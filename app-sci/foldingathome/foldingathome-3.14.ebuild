@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/foldingathome-3.14.ebuild,v 1.2 2002/11/06 14:49:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/foldingathome-3.14.ebuild,v 1.3 2003/02/13 09:21:31 vapier Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/spice-3.5.5.ebuild,v 1.3 2002/11/17 06:39:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/spice-3.5.5.ebuild,v 1.4 2003/02/13 09:26:09 vapier Exp $
 
 MY_P="spice3f5sfix"
 DESCRIPTION="SPICE 3 is a general-purpose circuit simulation program"
