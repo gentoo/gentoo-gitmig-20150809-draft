@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.4 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.5 2003/05/23 06:06:19 mkennedy Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -47,3 +47,40 @@ EOF
 	done
 	einfo ""
 }
+
+# DEFAULT OVERRIDES
+
+# SRC_URI should be set to wherever the primary app-emacs/ maintainer
+# keeps the local elisp mirror, since most app-emacs packages are
+# upstream as a single .el file
+
+SRC_URI="http://cvs.gentoo.org/~mkennedy/app-emacs/${P}.el.bz2"
+S="${WORKDIR}/"
+DEPEND="virtual/emacs"
+IUSE=""
+
+src_unpack() {
+	unpack ${A}
+	if [ "${SIMPLE_ELISP}" = 't' ]
+	then
+		cd ${S} && mv ${P}.el ${PN}.el
+	fi 
+}
+
+src_compile() {
+	emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el || die
+}
+
+src_install() {
+	elisp-install ${PN} *.el *.elc
+	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+}
+
+pkg_postinst() {
+	elisp-site-regen
+}
+
+pkg_postrm() {
+	elisp-site-regen
+}
+
