@@ -1,39 +1,26 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.ebuild,v 1.11 2003/07/24 00:39:50 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.ebuild,v 1.12 2004/03/19 01:56:42 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Enlightment Data Base"
+HOMEPAGE="http://enlightenment.org/"
 SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
-HOMEPAGE="http://enlightenment.org"
-SLOT="0"
+
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 
-RDEPEND="virtual/glibc"
-
-DEPEND="$RDEPEND
-	sys-apps/which"
-
-src_unpack() {
-	unpack ${A}
-	cp ${FILESDIR}/autogen.sh ${S}
-	chmod +x ${S}/autogen.sh
-}
+DEPEND="virtual/glibc"
 
 src_compile() {
-	./autogen.sh --host=${CHOST} \
-		     --prefix=/usr \
-		     --enable-compat185 \
-		     --enable-dump185 \
-		     --enable-cxx
-	assert
-
+	econf \
+		--enable-compat185 \
+		--enable-dump185 \
+		|| die
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
-
-	dodoc AUTHORS COPYING README
+	dodoc AUTHORS README
 }
