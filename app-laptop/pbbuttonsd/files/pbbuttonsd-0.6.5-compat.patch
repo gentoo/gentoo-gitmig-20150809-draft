@@ -1,0 +1,18 @@
+diff -ruN pbbuttonsd-0.6.5.orig/libpbbipc/pbbtags.h pbbuttonsd-0.6.5/libpbbipc/pbbtags.h
+--- pbbuttonsd-0.6.5.orig/libpbbipc/pbbtags.h	2004-08-28 21:10:07.000000000 +0200
++++ pbbuttonsd-0.6.5/libpbbipc/pbbtags.h	2004-09-15 09:31:56.759094488 +0200
+@@ -101,6 +101,14 @@
+ #define TAG_BLANKFRAMEBUFFER	MOD_DISPLAY | 9
+ #define TAG_DIMFULLYDARK	MOD_DISPLAY | 11
+ 
++/* Compatibility tags, needed by kmilo and possibly other programs */
++#define TAG_BRIGHTNESSUPKEY    MOD_DISPLAY | 1
++#define TAG_BRIGHTNESSUPMOD    MOD_DISPLAY | 2
++#define TAG_BRIGHTNESSDOWNKEY  MOD_DISPLAY | 3
++#define TAG_BRIGHTNESSDOWNMOD  MOD_DISPLAY | 4
++#define TAG_BRIGHTNESSMAX      MOD_DISPLAY | 7
++#define TAG_FADINGSPEED        MOD_DISPLAY | 10
++
+ #define MOD_MIXER		5 << 16
+ #define TAG_MIXERDEVICE		MOD_MIXER | FLG_STRING | 1
+ #define TAG_VOLUMEUPKEY		MOD_MIXER | 2
