@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.156 2005/01/31 22:34:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.157 2005/02/03 22:19:51 eradicator Exp $
+
+*xmms-1.2.10-r11 (03 Feb 2005)
+
+  03 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -xmms-1.2.10-r10.ebuild, +xmms-1.2.10-r11.ebuild:
+  Added patch for https:// streaming in mpg123 and vorbis. Added missing
+  autoconf function to m4. Closes bug #80372.
 
   31 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.10-r10.ebuild:

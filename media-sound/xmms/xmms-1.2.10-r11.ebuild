@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r10.ebuild,v 1.4 2005/01/31 22:34:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r11.ebuild,v 1.1 2005/02/03 22:19:51 eradicator Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
-PATCHVER="2.1.8"
+PATCHVER="2.2.0"
 
 PATCHDIR="${WORKDIR}/patches"
 
@@ -20,7 +20,7 @@ SLOT="0"
 # alpha was removed because it doesnt satisfy DEPEND.  See bug #66572.
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
+IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad ssl"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
@@ -28,6 +28,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	xml? ( >=dev-libs/libxml-1.8.15 )
 	opengl? ( virtual/opengl )
 	alsa? ( >=media-libs/alsa-lib-0.9.0 )
+	ssl? ( dev-libs/openssl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )"
 
 RDEPEND="${DEPEND}
@@ -116,6 +117,7 @@ src_compile() {
 		`use_enable opengl` \
 		`use_enable nls` \
 		`use_enable ipv6` \
+		`use_enable ssl` \
 		`use_enable oss oss` \
 		${myconf} \
 		|| die
