@@ -1,3 +1,6 @@
-MD5 e9da93f44e1e8687b4b753b112e325e7 ChangeLog 1477
+MD5 dfe7955a81a7433737dd5d523c285a72 gentoo-artwork-0.4.ebuild 1660
 MD5 afc0d9bd2ede9fded10a716f1896e9bb gentoo-artwork-0.3.ebuild 1537
+MD5 8f5b95bc1f19532cb4cb122d2593d70b ChangeLog 1690
+MD5 42bb15c37e072cf6216b4692514d08c9 metadata.xml 275
 MD5 32f8292da4bed77f9a89816f529922a7 files/digest-gentoo-artwork-0.3 145
+MD5 b7a8bd6179f97bf8729072206d60c31b files/digest-gentoo-artwork-0.4 218
