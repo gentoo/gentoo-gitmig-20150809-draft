@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-infiltration/unreal-tournament-infiltration-290.ebuild,v 1.1 2004/02/22 01:41:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-infiltration/unreal-tournament-infiltration-290.ebuild,v 1.2 2004/02/23 04:57:25 vapier Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="infiltration${PV}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nofetch"
+RESTRICT="fetch"
 
 DEPEND="app-arch/unzip
 	|| ( games-fps/unreal-tournament games-fps/unreal-tournament-goty )"
