@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.11-r2.ebuild,v 1.3 2001/05/29 17:28:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.11-r2.ebuild,v 1.4 2001/06/01 16:18:55 blutgens Exp $
 
 A=${PN}-stable-20000704.tgz
 S=${WORKDIR}/${P}
@@ -12,16 +12,23 @@ HOMEPAGE="http://www.OpenLDAP.org/"
 DEPEND="virtual/glibc
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	>=sys-libs/ncurses-5.1
-	>=sys-libs/gdbm-1.8.0"
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	berkdb? ( >=sys-libs/db-3.2.3h )"
 
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
-	>=sys-libs/gdbm-1.8.0"
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	berkdb? ( >=sys-libs/db-3.2.3h )""
 
 src_compile() {
   local myconf
   if [ "`use tcpd`" ] ; then
     myconf="--enable-wrappers"
+  fi
+  if [ "`use berkdb`" ] ; then
+     myconf="--enable-ldbm --with-ldbm-api=db"
+  else [ "`use gdbm`" ] ; then
+     myconf="$myconf --enable-ldbm --with-ldbm-api=gdbm"
   fi
   ./configure --host=${CHOST} --enable-passwd \
 	      --enable-shell --enable-shared --enable-static \
