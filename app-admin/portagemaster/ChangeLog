@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/portagemaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/ChangeLog,v 1.10 2002/12/25 23:47:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/ChangeLog,v 1.11 2003/01/21 13:34:51 nall Exp $
 
 *portagemaster-0.2.0 (11 Oct 2002)
+
+  21 Jan 2003; Jon Nall <nall@gentoo.org> portagemaster-0.2.0.ebuild :
+  changed to -ppc, since sun-jdk is -ppc
 
   25 Dec 2002; Martin Holzer <mholzer@gentoo.org> portagemaster-0.2.0.ebuild :
   Changed SRC_URI.
@@ -12,6 +15,9 @@
   #8909.
 
 *portagemaster-0.1.8 (08 Sep 2002)
+
+  21 Jan 2003; Jon Nall <nall@gentoo.org> portagemaster-0.1.8.ebuild :
+  changed to -ppc, since sun-jdk is -ppc
 
   25 Dec 2002; Martin Holzer <mholzer@gentoo.org> portagemaster-0.1.8.ebuild :
   Changed SRC_URI.
