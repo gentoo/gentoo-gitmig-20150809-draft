@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.22 2005/03/30 09:20:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.23 2005/03/30 12:42:36 gustavoz Exp $
+
+  30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> balsa-2.2.6.ebuild:
+  Keyworded ~sparc wrt #86731
 
   30 Mar 2005; Sven Wegener <swegener@gentoo.org> balsa-2.2.6.ebuild:
   Fixed invalid atoms in *DEPEND.
