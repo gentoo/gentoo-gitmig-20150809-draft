@@ -1,9 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.1.ebuild,v 1.4 2002/12/04 23:28:59 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.1.ebuild,v 1.5 2003/01/31 13:54:38 hannes Exp $
 inherit kde-dist 
 
-PATCHES="${FILESDIR}/${P}-alpha.diff"
 DESCRIPTION="KDE network apps: kmail, kppp, knode..."
 KEYWORDS="x86 ppc"
 newdepend "~kde-base/kdebase-${PV}"
