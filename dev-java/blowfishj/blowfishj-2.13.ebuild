@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.13.ebuild,v 1.2 2005/01/01 18:11:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.13.ebuild,v 1.3 2005/02/17 17:22:55 luckyduck Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ LICENSE="Apache-1.1"
 SLOT="0"
 IUSE="doc junit"
 DEPEND=">=virtual/jre-1.4
-		  app-arch/zip"
+		  app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {

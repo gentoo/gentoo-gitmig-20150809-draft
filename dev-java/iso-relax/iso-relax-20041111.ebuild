@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20041111.ebuild,v 1.2 2005/01/14 16:08:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20041111.ebuild,v 1.3 2005/02/17 17:27:52 luckyduck Exp $
 
 inherit java-pkg
 
@@ -13,6 +13,7 @@ KEYWORDS="x86 amd64"
 IUSE="jikes"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.4
+	app-arch/unzip
 	jikes? ( >=dev-java/jikes-1.21 )"
 RDEPEND=">=virtual/jre-1.4"
 
