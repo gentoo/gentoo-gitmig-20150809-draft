@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_usb/pam_usb-0.2_rc1.ebuild,v 1.1 2003/11/18 20:04:42 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_usb/pam_usb-0.2_rc2.ebuild,v 1.1 2003/12/18 23:28:17 scox Exp $
 
 inherit eutils
 
