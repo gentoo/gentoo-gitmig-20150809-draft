@@ -109,7 +109,7 @@ dev-java/jaxp
 #azarah@gentoo.org (03 Jul 2002)
 #this one moves a lot of stuff around, and have a search dir
 #order fix that is very experimental
-#=sys-devel/gcc-3.1-r8
+=sys-devel/gcc-3.1-r8
 
 #lostlogic@gentoo.org (03 Jul 2002)
 #new apache ebuild changes a bit how we are handling the group
@@ -366,9 +366,9 @@ net-www/zope
 # soon as a new version is available in Portage, otherwise you'll pollute 
 # the still-under-high-development network with old protocols and such.
   
-#net-p2p/gift
-#net-p2p/kift
-#net-p2p/giftcurs
+net-p2p/gift
+net-p2p/kift
+net-p2p/giftcurs
 #note: kift and giftcurs depend on gift, so they need masking too. (drobbins, 7 Jul 2002)
 
 # Opera 6 final.
