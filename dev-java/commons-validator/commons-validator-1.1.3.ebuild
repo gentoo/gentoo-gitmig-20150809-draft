@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.3.ebuild,v 1.7 2005/01/01 18:19:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.3.ebuild,v 1.8 2005/02/23 21:48:51 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,8 +9,7 @@ HOMEPAGE="http://jakarta.apache.org/commons/validator/"
 SRC_URI="mirror://apache/jakarta/commons/validator/source/${PN}-${PV}-src.tar.gz mirror://gentoo/commons-validator-1.1.3-gentoo-missingfiles.tar.bz2"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
-	jikes? ( dev-java/jikes )
-	junit? ( >=dev-java/junit-3.8.1 )"
+	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/oro-2.0.8
 	>=dev-java/commons-digester-1.5
@@ -21,7 +20,7 @@ RDEPEND=">=virtual/jre-1.3
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-IUSE="doc jikes junit"
+IUSE="doc jikes"
 
 src_unpack() {
 	unpack ${A}
@@ -35,14 +34,12 @@ src_unpack() {
 	echo "commons-logging.jar=`java-config --classpath=commons-logging | sed s/.*://`" >> build.properties
 	echo "commons-beanutils.jar=`java-config --classpath=commons-beanutils | sed s/.*://`" >> build.properties
 	echo "xerces.jar=`java-config --classpath=xerces-2`" >> build.properties
-	use junit && echo "junit.jar=`java-config --classpath=junit`" >> build.properties
 }
 
 src_compile() {
 	local antflags="compile"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadoc"
-	use junit && antflags="${antflags} test"
 	ant ${antflags} || die "build failed"
 	jar -cvf ${PN}.jar -C target/classes/ . || die "could not create jar"
 }
