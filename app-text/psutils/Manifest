@@ -1,3 +1,13 @@
-MD5 ad82ffa01cd0d3d5ea50d99733150da3 psutils-1.17.ebuild 814
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d2ca5ad8f26f071875da8170e448248c ChangeLog 1592
+MD5 b8b3953e2ba529bad5c363e20d588b26 psutils-1.17.ebuild 817
 MD5 5cdea5e78a2b92331f2e5b0325a86069 files/digest-psutils-1.17 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiqmvHTu7gpaalycRAsm/AJ0av6c+CI3Ro4pBqUml5oje38OxDACghOjC
+y3Z+/BLONZ1HuYmJKqJ3RYQ=
+=OuIm
+-----END PGP SIGNATURE-----
