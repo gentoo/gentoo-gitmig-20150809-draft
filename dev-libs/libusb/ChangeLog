@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.28 2005/03/18 12:18:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.29 2005/03/23 14:08:16 liquidx Exp $
+
+  23 Mar 2005; Alastair Tse <liquidx@gentoo.org> libusb-0.1.10a.ebuild:
+  fix compile error for ppc (#86023)
 
 *libusb-0.1.10a (18 Mar 2005)
 

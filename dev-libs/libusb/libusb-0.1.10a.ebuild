@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.10a.ebuild,v 1.1 2005/03/18 12:18:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.10a.ebuild,v 1.2 2005/03/23 14:08:16 liquidx Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="sys-devel/libtool
 src_unpack(){
 	unpack ${A}
 
-	if use ppc || use ppc-macos ; then
+	if use ppc-macos ; then
 		aclocal || die
 		autoconf || die
 		automake --add-missing || die
