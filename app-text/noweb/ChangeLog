@@ -1,8 +1,11 @@
 # ChangeLog for app-text/noweb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.4 2002/07/16 03:59:46 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.5 2002/08/02 16:59:33 phoenix Exp $
 
 *noweb-2.9-r2 (30 Apr 2002)
+
+  2 Aug 2002; phoen][x <phoenix@gentoo.org> noweb-2.9-r2.ebuild :
+  Added LICENSE, SLOT.
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 
@@ -12,13 +15,6 @@
   files/noweb-2.9-r2-gentoo.diff files/digest-noweb-2.9-r2 :
 
   man pages now installed in /usr/share/man instead.
-
-*noweb-2.9-r1 (21 Mar 2002)
-
-  21 Mar 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
-  
-  Use awk not icon to compile. Icon package is in trouble and I don't want to depend on it right now.
-  Also some sandbox fixes.
 
 *noweb-2.9 (1 Feb 2002)
 
