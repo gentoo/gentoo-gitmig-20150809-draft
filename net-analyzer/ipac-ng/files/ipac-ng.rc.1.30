@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/files/ipac-ng.rc.1.27_p1-r2,v 1.4 2004/07/27 08:50:13 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/files/ipac-ng.rc.1.30,v 1.1 2004/07/27 08:50:13 eldad Exp $
 
 depend() {
 	need net logger

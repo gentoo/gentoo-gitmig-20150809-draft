@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.30.ebuild,v 1.1 2004/07/25 15:00:52 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.30.ebuild,v 1.2 2004/07/27 08:50:13 eldad Exp $
 
 DESCRIPTION="ip accounting suite for 2.4 and 2.6 series kernels with text and PNG image output like mrtg"
 HOMEPAGE="http://sourceforge.net/projects/ipac-ng/"
@@ -60,7 +60,7 @@ src_install() {
 	exeinto /etc/cron.hourly
 	newexe ${FILESDIR}/ipac-ng.cron.${PVR} ipac-ng
 
-	dodoc  COPYING README* TODO UPDATE* CHANGES
+	dodoc README TODO doc/* CHANGELOG
 }
 
 pkg_postinst() {

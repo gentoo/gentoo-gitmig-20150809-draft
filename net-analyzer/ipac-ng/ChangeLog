@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ipac-ng
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.8 2004/07/25 15:00:52 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.9 2004/07/27 08:50:13 eldad Exp $
+
+  27 Jul 2004; Eldad Zack <eldad@gentoo.org> +files/ipac-ng.cron.1.30,
+  files/ipac-ng.rc.1.27_p1-r2, +files/ipac-ng.rc.1.30, +files/ipac.conf.1.30,
+  +files/rules.conf.1.30, ipac-ng-1.30.ebuild:
+  Fixed missing files in install. Closes #58437.
 
 *ipac-ng-1.30 (25 Jul 2004)
 
