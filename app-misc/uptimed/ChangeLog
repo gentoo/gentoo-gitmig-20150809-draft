@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.25 2005/03/24 19:31:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.26 2005/04/03 12:13:26 hardave Exp $
+
+  03 Apr 2005; Hardave Riar <hardave@gentoo.org> uptimed-0.3.3.ebuild:
+  Keyworded ~mips
 
   24 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> uptimed-0.3.3.ebuild:
   Add ~alpha keyword, bug 85479.
