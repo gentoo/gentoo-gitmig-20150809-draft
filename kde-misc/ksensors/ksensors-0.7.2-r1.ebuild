@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ksensors-0.7.2-r1.ebuild,v 1.3 2005/01/14 23:39:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ksensors-0.7.2-r1.ebuild,v 1.4 2005/02/27 12:34:17 brix Exp $
 
 inherit kde eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64 -ppc"
 IUSE=""
 SLOT="0"
 
-DEPEND=">=sys-apps/lm-sensors-2.6.3
+DEPEND=">=sys-apps/lm_sensors-2.6.3
 	|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.0 )"
 
 need-kde 3.0
