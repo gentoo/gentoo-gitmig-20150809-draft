@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/hotwayd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.12 2004/11/12 12:08:03 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.13 2004/12/28 21:25:24 ticho Exp $
+
+*hotwayd-0.8.2 (28 Dec 2004)
+
+  28 Dec 2004; Andrej Kacian <ticho@gentoo.org>
+  files/hotwayd-0.8-headerfix.patch, +hotwayd-0.8.2.ebuild,
+  hotwayd-0.8.ebuild:
+  Version bump. Closes #75930, reported by Scott <s_aldinger@hotmail.com>. Not
+  using amd64 nor headerfix patch, as both issues are fixed by upstream.
 
   12 Nov 2004; Tom Knight <tomk@gentoo.org> hotwayd-0.7.4.ebuild,
   hotwayd-0.8-r1.ebuild, hotwayd-0.8.ebuild:
