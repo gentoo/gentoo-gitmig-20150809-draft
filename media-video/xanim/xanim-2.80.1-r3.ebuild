@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Id: xanim-2.80.1-r3.ebuild,v 1.1 2002/04/27 11:26:53 pvdabeel Exp $
+# $Id: xanim-2.80.1-r3.ebuild,v 1.2 2002/04/27 11:41:41 pvdabeel Exp $
 
 _XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
 _XA_CVID_SPARC=xa2.0_cvid_sparcELF.o
@@ -17,8 +17,6 @@ _XA_CYUV_PPC=xa1.0_cyuv_linuxPPC.o
 _XA_CVID_PPC=xa2.0_cvid_linuxPPC.o
 _XA_IV32_PPC=xa2.0_iv32_linuxPPC.o
 _XA_PPC_EXT=.Z
-
-MAKEFILE="Makefile"
 
 case $ARCH in
 	sparc*)
