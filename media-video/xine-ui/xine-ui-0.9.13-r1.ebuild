@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.13-r1.ebuild,v 1.3 2004/06/25 00:53:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.13-r1.ebuild,v 1.4 2004/08/22 05:18:10 obz Exp $
 
 IUSE="X aalib gnome nls directfb"
 
@@ -15,7 +15,7 @@ DEPEND="media-libs/libpng
 	=media-libs/xine-lib-0.9.13*
 	X? ( virtual/x11 )
 	aalib? ( media-libs/aalib )
-	gnome? ( gnome-base/ORBit )
+	gnome? ( =gnome-base/orbit-0* )
 	directfb? ( media-libs/aalib
 		>=dev-libs/DirectFB-0.9.9 )"
 
