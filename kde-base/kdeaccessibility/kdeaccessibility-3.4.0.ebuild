@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/kdeaccessibility-3.4.0.ebuild,v 1.1 2005/03/14 21:46:21 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/kdeaccessibility-3.4.0.ebuild,v 1.2 2005/03/17 22:10:02 greg_g Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE accessibility module"
 KEYWORDS="~x86 ~amd64 ~sparc"
-IUSE="arts"
+IUSE="arts gstreamer"
 
 DEPEND="gstreamer? ( >=media-libs/gstreamer-0.8.7 )"
 
