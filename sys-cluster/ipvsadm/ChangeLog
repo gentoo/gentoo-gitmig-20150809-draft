@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ipvsadm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.5 2003/11/12 22:01:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.6 2003/11/14 20:58:15 iggy Exp $
+
+  14 Nov 2003; Brian Jackson <iggy@gentoo.org> ipvsadm-1.21.ebuild,
+  files/ipvsadm-init:
+  fixed a little typo in the ebuild, and some references to iptables in the init
+  script
 
   12 Nov 2003; Brian Jackson <iggy@gentoo.org> ipvsadm-1.21.ebuild,
   files/ipvsadm-init:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21.ebuild,v 1.5 2003/11/12 22:01:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21.ebuild,v 1.6 2003/11/14 20:58:15 iggy Exp $
 
 
 DESCRIPTION="ipvsadm is a utility to administer the IP virtual server services offered by the Linux kernel with IP virtual server support."
@@ -31,7 +31,7 @@ src_install() {
 	doman ipvsadm-restore.8
 
 	exeinto /etc/init.d
-	newbin ${FILESDIR}/ipvsadm-init ipvsadm
+	newexe ${FILESDIR}/ipvsadm-init ipvsadm
 	keepdir /var/lib/ipvsadm
 
 	einfo "You will need a kernel that has ipvs patches to use LVS"
