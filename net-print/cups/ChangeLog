@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.41 2003/07/02 22:17:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.42 2003/07/16 15:08:21 lanius Exp $
+
+*cups-1.1.19-r1 (16 Jul 2003)
+
+  16 Jul 2003; Heinrich Wendel <lanius@gentoo.org> cups-1.1.19-r1.ebuild,
+  files/cupsd.rc6:
+  fixed init script / made compatible with new foomatic
 
 *cups-1.1.19 (02 Jul 2003)
 
