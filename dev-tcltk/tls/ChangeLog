@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tls
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.7 2004/06/25 02:11:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.8 2004/12/10 21:59:41 ticho Exp $
+
+  10 Dec 2004; Andrej Kacian <ticho@gentoo.org> tls-1.5.0.ebuild:
+  Removed dev-lang/tk from DEPEND. Closes bug #73999.
 
 *tls-1.5.0 (04 Apr 2004)
 

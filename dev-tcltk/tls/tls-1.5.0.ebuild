@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.5.0.ebuild,v 1.3 2004/06/25 02:11:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.5.0.ebuild,v 1.4 2004/12/10 21:59:41 ticho Exp $
 
 DESCRIPTION="TLS OpenSSL extension to Tcl."
 HOMEPAGE="http://tls.sourceforge.net/"
@@ -11,8 +11,7 @@ KEYWORDS="~x86 ~hppa ~alpha ppc ~amd64 ~sparc"
 IUSE=""
 
 DEPEND=">=dev-lang/tcl-8.3.3
-		>=dev-lang/tk-8.3.3
-		dev-libs/openssl"
+	dev-libs/openssl"
 
 S=${WORKDIR}/tls1.5
 
