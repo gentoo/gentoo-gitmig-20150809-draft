@@ -1,18 +1,21 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.3 2003/07/14 08:56:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.4 2003/07/21 22:25:32 max Exp $
+
+  21 Jul 2003; Max Kalika <max@gentoo.org> mythtv-0.10.ebuild:
+  Correct and simplify the compile process.
 
   14 Jul 2003; Nick Hadaway <raker@gentoo.org> mythtv-0.10.ebuild:
   Locked dependancy of xmltv to 0.5.14 as 0.5.15 is incompatible
   with the 0.10 release as reported on the upstream homepage.
 
-  03 Jul 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-0.8.ebuild:
+  03 Jul 2003; Max Kalika <max@gentoo.org> mythtv-0.8.ebuild:
   Set KEYWORDS to ~x86.
 
-  02 Jul 2003; Max Kalika <max@lsit.ucsb.edu> files/mythfilldatabase.cron:
+  02 Jul 2003; Max Kalika <max@gentoo.org> files/mythfilldatabase.cron:
   Remove --update and --no-delete from the sample cron file.
 
-  01 Jul 2003; Max Kalika <max@lsit.ucsb.edu> files/mythbackend.conf,
+  01 Jul 2003; Max Kalika <max@gentoo.org> files/mythbackend.conf,
   files/mythbackend.rc6:
   Fix up mythbackend start up script: reset permissions on pid and log
   directories, change MYTH_NOWARN to MYTH_WARN and reverse the functionality,
@@ -20,7 +23,7 @@
 
 *mythtv-0.10 (01 Jul 2003)
 
-  01 Jul 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-0.10.ebuild,
+  01 Jul 2003; Max Kalika <max@gentoo.org> mythtv-0.10.ebuild,
   files/mythbackend.conf:
   Bump version to 0.10. Drop all patches -- just move config to /etc/mythtv and
   link to /usr/share/mythtv. Change xmltv depend to >= 0.5.14. Move
@@ -32,18 +35,18 @@
   on startup as reported on #10533. Add a note about the importance of upgrading
   the database.
 
-  22 Jun 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-0.9.1-r2.ebuild:
+  22 Jun 2003; Max Kalika <max@gentoo.org> mythtv-0.9.1-r2.ebuild:
   Rename patch to mythtv-0.9-gentoo.patch. Depend on >=sys-apps/sed-4. Die
   if sed fails. Clean up some other dependencies.
 
 *mythtv-0.9.1-r2 (18 Jun 2003)
 
-  18 Jun 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-0.9.1-r2.ebuild,
+  18 Jun 2003; Max Kalika <max@gentoo.org> mythtv-0.9.1-r2.ebuild,
   Move to media-tv. Drop the mysql dependency.
 
 *mythtv-0.9.1 (13 Jun 2003)
 
-  13 Jun 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-0.9.1.ebuild,
+  13 Jun 2003; Max Kalika <max@gentoo.org> mythtv-0.9.1.ebuild,
   mythtv-gentoo.patch:
   Bump to 0.9.1. Drop the sed fix for config file in /etc/mythtv and use
   a patch instead which also fixes another file. This allows mythgallery
@@ -51,7 +54,7 @@
 
 *mythtv-0.9 (09 Jun 2003)
 
-  09 Jun 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-0.9.ebuild:
+  09 Jun 2003; Max Kalika <max@gentoo.org> mythtv-0.9.ebuild:
   Bump to 0.9. Make all sed operations inline. Add a sed fix to use config
   file in /etc/mythtv instead of /usr/etc/mythtv. Run qmake as in all other
   Myth projects to generate a valid Makefile. Change emake to make because
@@ -60,5 +63,5 @@
 
 *mythtv-0.8 (28 Apr 2003)
 
-  28 Apr 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-0.8.ebuild:
+  28 Apr 2003; Max Kalika <max@gentoo.org> mythtv-0.8.ebuild:
   Initial import.

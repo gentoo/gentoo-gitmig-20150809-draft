@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.10.ebuild,v 1.2 2003/07/14 08:56:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.10.ebuild,v 1.3 2003/07/21 22:25:32 max Exp $
 
 inherit flag-o-matic
 
-IUSE="lcd mmx oss"
+IUSE="lcd"
 DESCRIPTION="Homebrew PVR project."
 HOMEPAGE="http://www.mythtv.org/"
 SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
@@ -14,9 +14,8 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND=">=x11-libs/qt-3
-	media-libs/a52dec
 	=media-tv/xmltv-0.5.14*
-	media-sound/lame
+	>=media-sound/lame-3.92
 	>=media-libs/freetype-2.0
 	>=sys-apps/sed-4
 	virtual/x11"
@@ -36,20 +35,14 @@ src_unpack() {
 
 src_compile() {
 
-	local myconf="--enable-a52bin --enable-shared"
-	myconf="${myconf} `use_enable lcd`"
-	myconf="${myconf} `use_enable mmx`"
-	myconf="${myconf} `use_enable oss audio-oss`"
-
 	cpu="`get-flag march`"
 	if [ -n "${cpu}" ] ; then
-		myconf="${myconf} --cpu=${cpu}"
 		sed -e "s:pentiumpro:${cpu}:g" -i "${S}/settings.pro" || die "sed failed"
 	fi
 
 	qmake -o "${S}/Makefile" "${S}/${PN}.pro"
 
-	econf ${myconf}
+	econf `use_enable lcd`
 
 	# Parallel build doesn't work.
 	make || die "compile problem"
