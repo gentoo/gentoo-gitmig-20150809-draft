@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Heavily modified by Ryan Tolboom <ryan@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.5.20011611-r1.ebuild,v 1.1 2001/12/11 19:39:34 ryan Exp
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.5.20011214.ebuild,v 1.3 2002/04/27 23:34:20 bangert Exp $
 
 A=${PN}-1.5-20011214.tar.gz
 S=${WORKDIR}/${PN}-1.5-20011214

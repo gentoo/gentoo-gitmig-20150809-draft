@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel robbins <drobbins@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5.ebuild,v 1.2 2001/11/24 18:40:50 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5-r1.ebuild,v 1.3 2002/04/27 23:34:20 bangert Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

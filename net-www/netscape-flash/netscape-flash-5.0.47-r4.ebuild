@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-5.0.47-r3.ebuild,v 1.1 2001/12/13 15:45:39 hallski Exp
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-5.0.47-r4.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 S=${WORKDIR}/flash_linux
 DESCRIPTION="Macromedia Shockwave Flash Player"

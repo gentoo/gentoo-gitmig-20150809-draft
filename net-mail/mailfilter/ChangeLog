@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/mailfilter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfilter/ChangeLog,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 *mailfilter-0.3.1 (10 Feb 2002)
 

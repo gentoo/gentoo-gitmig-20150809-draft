@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke (blocke@shivan.org)
 # Modified by Riccardo Persichetti (ricpersi@libero.it)
-# /space/gentoo/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.3.4.ebuild,v 1.2 2002/04/12 18:48:20 spider Exp
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.3.4.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}

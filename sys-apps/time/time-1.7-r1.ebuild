@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/sys-apps/time/time-1.7.ebuild,v 1.1 2002/02/28 00:22:58 blocke Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/time/time-1.7-r1.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A command that displays info about resources used by a program"

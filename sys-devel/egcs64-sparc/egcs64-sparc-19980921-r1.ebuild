@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r3.ebuild,v 1.2 2001/11/24 18:40:50 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/egcs64-sparc-19980921-r1.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 EGCSDATE=`echo $P| sed -e 's/egcs64-sparc-\([0-9]*\).*/\1/'`
 EGCSVER=2.92.11

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Preston A. Elder <prez@goth.net>
-# /space/gentoo/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.1.ebuild,v 1.1 2001/09/14 15:26:10 chouser Exp
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.1.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 # This identd is nearly perfect for a NAT box. It runs in one
 # process (doesn't fork()) and isnt very susceptible to DOS attack.

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Server Team <server@gentoo.org>
 # Maintainers: Daniel Robbins <drobbins@gentoo.org>, Aron Griffis <agriffis@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.3.22.1.ebuild,v 1.1 2001/09/26 12:06:29 agriffis Exp
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.3.28.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 S=$WORKDIR/$P
 DESCRIPTION="a small but very powerful text-based mail client"

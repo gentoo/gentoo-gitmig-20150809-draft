@@ -1,7 +1,7 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.22.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Markus Krainer <markus-krainer@chello.at>
-# /space/gentoo/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.21.ebuild,v 1.1 2002/04/16 09:42:11 blocke Exp
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.22.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 S=${WORKDIR}/${P}.rel
 DESCRIPTION="leafnode - A USENET software package designed for small sites"

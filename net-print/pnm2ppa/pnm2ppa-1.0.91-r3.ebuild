@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91-r2.ebuild,v 1.1 2002/04/14 20:53:35 seemant Exp
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91-r3.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
 # pnm2ppa is a print filter for HP's line of Winprinters which use a proprietary

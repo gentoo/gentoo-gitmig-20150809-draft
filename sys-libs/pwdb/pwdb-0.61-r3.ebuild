@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r3.ebuild,v 1.3 2001/08/23 15:58:44 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r3.ebuild,v 1.7 2002/04/27 23:34:20 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Password database"

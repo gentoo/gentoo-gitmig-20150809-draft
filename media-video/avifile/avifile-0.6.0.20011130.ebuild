@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011109.ebuild,v 1.4 2001/11/15 14:30:14 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011130.ebuild,v 1.5 2002/04/27 23:34:20 bangert Exp $
 
 A=${PN}-0.6.0-20011130
 S=${WORKDIR}/${P}

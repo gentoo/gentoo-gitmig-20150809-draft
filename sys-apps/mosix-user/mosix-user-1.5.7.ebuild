@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.2.ebuild,v 1.4 2001/11/25 02:40:12 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.7.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 S=${WORKDIR}/user
 DESCRIPTION="User-land utilities for MOSIX process migration (clustering) software"

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/net-fs/ftpfs/ftpfs-0.6.2.ebuild,v 1.1 2001/12/02 14:17:10 ryan Exp
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ftpfs/ftpfs-0.6.2-r2.ebuild,v 1.3 2002/04/27 23:34:20 bangert Exp $
 
 A=${P}-k2.4.tar.gz
 S=${WORKDIR}/${P}-k2.4

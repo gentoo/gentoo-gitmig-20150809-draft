@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Aron Griffis <agriffis@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/sys-apps/quota/quota-3.03.ebuild,v 1.2 2002/02/01 22:32:41 agriffis Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.04.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
 
 S=${WORKDIR}/quota-tools
 DESCRIPTION="Linux quota tools"
