@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.6 2002/09/19 20:05:26 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.7 2002/11/06 09:09:57 agenkin Exp $
+
+*gnuplot-3.7.2 (06 Nov 2002)
+
+  06 Nov 2002; Arcady Genkin <agenkin@gentoo.org> gnuplot-3.7.2.ebuild :
+
+  Version bump.
 
 *gnuplot-3.7.1-r3 (12 Apr 2002)
 
