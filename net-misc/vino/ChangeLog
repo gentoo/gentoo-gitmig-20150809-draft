@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.20 2005/03/09 03:14:04 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.21 2005/03/09 08:52:27 joem Exp $
+
+*vino-2.10.0 (09 Mar 2005)
+
+  09 Mar 2005; Joe McCann <joem@gentoo.org> +vino-2.10.0.ebuild:
+  gnome-2.10 release
 
   09 Mar 2005; Mike Gardiner <obz@gentoo.org> vino-2.8.1.ebuild:
   Keyworded x86 ppc
