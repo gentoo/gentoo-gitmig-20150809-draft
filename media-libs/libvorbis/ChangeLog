@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.21 2003/12/13 00:12:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.22 2003/12/18 20:49:53 mholzer Exp $
+
+  18 Dec 2003; Martin Holzer <mholzer@gentoo.org> libvorbis-1.0.1.ebuild:
+  marking stable.
 
 *libvorbis-1.0.1 (22 Nov 2003)
 
