@@ -6,5 +6,5 @@
   <email>ticho@gentoo.org</email>
   <name>Andrej Kacian</name>
  </maintainer>
- <longdescription>Advanced CLI tool for mail sending.</longdescription>
+ <longdescription>Advanced CLI tool for sending mail.</longdescription>
 </pkgmetadata>
