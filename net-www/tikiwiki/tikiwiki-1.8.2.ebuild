@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tikiwiki/tikiwiki-1.8.2.ebuild,v 1.1 2004/04/13 17:54:18 mholzer Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-www/tikiwiki/tikiwiki-1.8.2.ebuild,v 1.2 2004/04/17 21:54:42 weeve Exp $ 
 
 inherit webapp-apache
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="virtual/php
 	media-gfx/graphviz
