@@ -210,7 +210,7 @@ net-misc/gift
 #
 >=net-www/opera-6.0
 
-# xine-0.9.10 has a new API, so theseplugins work for now.
+# xine-0.9.10 has a new API, so these plugins don't work for now.
 # 17 Jun 2002, Brandon Low <lostlogic@gentoo.org>
 media-video/xine-d4d
 media-video/xine-d5d
