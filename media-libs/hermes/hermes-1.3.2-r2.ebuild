@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.17 2004/03/19 07:39:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.18 2004/03/20 09:23:44 eradicator Exp $
 
 inherit eutils gnuconfig
 
@@ -17,7 +17,8 @@ KEYWORDS="x86 ppc sparc alpha ~mips amd64"
 DEPEND="sys-devel/libtool
 	sys-devel/automake
 	sys-devel/autoconf"
-RDEPEND=""
+
+RDEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A} || die

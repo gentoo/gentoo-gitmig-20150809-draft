@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.9 2004/01/29 03:22:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.10 2004/03/20 09:21:40 eradicator Exp $
 
 inherit libtool
 
@@ -13,10 +13,12 @@ LICENSE="GPL-2 LGPL-2.1"
 
 IUSE="jack"
 
-DEPEND="virtual/glibc
+RDEPEND="!ppc? ( jack? ( virtual/jack ) )"
+
+DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7.2
-	>=sys-devel/autoconf-2.57-r1
-	!ppc? ( jack? ( virtual/jack ) )"
+	>=sys-devel/autoconf-2.57-r1"
+
 
 SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 RESTRICT="nomirror"

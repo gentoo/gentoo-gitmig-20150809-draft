@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.56 2004/03/15 00:19:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.57 2004/03/20 09:21:40 eradicator Exp $
+
+  20 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-lib-0.9.8.ebuild:
+  RDEPEND fix for bug #44816.
 
 *alsa-lib-1.0.3b-r1 (14 Mar 2004)
 

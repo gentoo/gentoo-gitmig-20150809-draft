@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.12 2004/03/09 18:31:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.13 2004/03/20 09:25:10 eradicator Exp $
+
+  20 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> a52dec-0.7.4.ebuild:
+  RDEPEND fix for bug #44816.
 
   09 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   a52dec-0.7.3-r1.ebuild, a52dec-0.7.4.ebuild:
