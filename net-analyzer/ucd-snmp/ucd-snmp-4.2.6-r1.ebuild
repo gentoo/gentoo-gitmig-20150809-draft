@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r1.ebuild,v 1.2 2003/07/01 16:47:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r1.ebuild,v 1.3 2003/09/19 21:53:46 max Exp $
 
 IUSE="ssl ipv6 tcpd"
 PROVIDE="virtual/snmp"
@@ -12,6 +12,8 @@ DEPEND="<sys-libs/db-2
 	>=sys-libs/zlib-1.1.4
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+RDEPEND="${DEPEND}
+	!virtual/snmp"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc ~ppc hppa"
