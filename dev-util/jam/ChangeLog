@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/jam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.4 2003/04/16 02:36:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.5 2003/04/27 21:38:51 vapier Exp $
+
+*jam-2.4 (03 Nov 2002)
+
+  27 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added edos2unix support since gcc-2.x dies on the windows file format.
 
   16 Apr 2003; Luca barbato <lu_zero@gentoo.org> :
   added ~ppc KEYWORD
@@ -10,8 +15,6 @@
   ebuild.  I should note that Brian Olsen <bnolsen@attbi.com> also
   submitted an ebuild long ago, but I could just never get to
   it (bug #4583).
-
-*jam-2.4 (03 Nov 2002)
 
   03 Nov 2002; J Robert Ray <jrray@gentoo.org> :
   New ebuild, submitted by Jeffrey Palmer <jeffrey.palmer@acm.org>.
