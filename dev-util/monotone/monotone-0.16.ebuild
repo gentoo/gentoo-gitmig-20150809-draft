@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.15.ebuild,v 1.1 2004/12/30 04:35:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.16.ebuild,v 1.1 2005/01/02 00:11:03 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,8 +22,8 @@ RDEPEND="virtual/libc
 
 DEPEND="${RDEPEND}
 	>=sys-devel/gcc-3.3.3
-	sys-devel/gettext"
-#	doc? ( dev-lang/perl sys-apps/texinfo )"
+	sys-devel/gettext
+	doc? ( dev-lang/perl sys-apps/texinfo )"
 
 src_compile() {
 
@@ -32,7 +32,7 @@ src_compile() {
 	# disable stack protector
 
 	replace-flags -O3 -O2
-	append-flags -fno-stack-protector-all -fno-stack-protector
+	append-flags -fno-stack-protector-all -fno-stack-protector -fno-strict-aliasing
 
 	econf `use_enable nls` || die
 	emake || die "emake failed"

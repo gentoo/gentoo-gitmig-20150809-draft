@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/monotone
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.1 2004/12/30 04:35:47 dragonheart Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.2 2005/01/02 00:11:03 dragonheart Exp $
+
+*monotone-0.16 (02 Jan 2005)
+
+  02 Jan 2005; Daniel Black <dragonheart@gentoo.org> -monotone-0.15.ebuild,
+  +monotone-0.16.ebuild:
+  Remove broken 0.15 version. Added version 0.16 as per bug report #76332.
+  Thanks to ajax <ajax@nwnk.net> and Wojciech Milkowski <wmilkowski@gazeta.pl>.
 
 *monotone-0.15 (30 Dec 2004)
 
