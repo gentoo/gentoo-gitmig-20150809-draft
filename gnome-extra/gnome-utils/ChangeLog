@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.13 2002/09/03 18:54:38 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.14 2002/09/06 03:55:58 spider Exp $
+
+
+*gnome-utils-2.0.5 (96 Sep 2002)
+  06 Sep 2002; Spider <spider@gentoo.org> gnome-utils-2.0.5.ebuild :
+  versionbump
 
 *gnome-utils-2.0.2-r1 (02 Sep 2002)
   02 Sep 2002; Spider <spider@gentoo.org> gnome-utils-2.0.2-r1.ebuild :
