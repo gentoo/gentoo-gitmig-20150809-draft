@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author Thilo Bangert <bangert@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.3 2001/05/28 05:24:13 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.5 2002/04/27 21:46:45 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a simple ntp client"
