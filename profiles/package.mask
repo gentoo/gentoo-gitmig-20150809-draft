@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# <stubear@gentoo.org> (12 Aug 2002)
+# masked for testing
+=app-i18n/konfont-0.1
+=app-i18n/kon2-0.3.9b
+
 # <styx@gentoo.org> (12 Aug 2002)
 # masked for testing
 sys-apps/udftools
@@ -48,7 +53,7 @@ sys-apps/udftools
 
 # <danarmak@gentoo.org> (09 Aug 2002)
 # please test - should make kxine work (bug #5412)
-=media-libs/xine-lib-0.9.13-r1
+#=media-libs/xine-lib-0.9.13-r1
 
 # <george@gentoo.org> (08 Aug 2002)
 # new version, masked for testing
@@ -78,13 +83,13 @@ app-editors/kvim
 
 # Brandon Low <lostlogic@gentoo.org> (06 Aug 2002)
 # Mask new xine version for testing, please test and report.
-=media-libs/xine-lib-0.9.13
-=media-video/xine-ui-0.9.13
-=media-video/xine-dvdnav-0.9.13
+#=media-libs/xine-lib-0.9.13
+#=media-video/xine-ui-0.9.13
+#=media-video/xine-dvdnav-0.9.13
 
 # <azarah@gentoo.org> (08 Aug 2002)
 # This one at lest breaks mplayer
-=media-libs/libdvdnav-0.1.3
+#=media-libs/libdvdnav-0.1.3
 
 # <nitro@gentoo.org> (05 Aug 2002)
 # masked for testing -- new features
