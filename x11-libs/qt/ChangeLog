@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.93 2003/11/08 15:14:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.94 2003/11/14 14:20:19 caleb Exp $
+
+*qt-3.2.3 (14 Nov 2003)
+
+  14 Nov 2003; Caleb Tennis <caleb@gentoo.org> qt-3.2.3.ebuild, files/45qt3:
+  New Qt version
 
   08 Nov 2003; David Holm <dholm@gentoo.org> qt-3.2.2-r1.ebuild:
   Added to ~ppc.
