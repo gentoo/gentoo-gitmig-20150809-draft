@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/glunarclock
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.5 2004/10/01 12:26:39 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.6 2004/11/30 22:34:00 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> glunarclock-0.32.1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   01 Oct 2004; <pyrania@gentoo.org> glunarclock-0.32.1.ebuild:
   Marked stable on x86.

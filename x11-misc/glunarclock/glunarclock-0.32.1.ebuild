@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/glunarclock-0.32.1.ebuild,v 1.5 2004/10/01 12:26:39 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/glunarclock-0.32.1.ebuild,v 1.6 2004/11/30 22:34:00 swegener Exp $
 
 inherit gnome2
 
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2.1.0
 		>=gnome-base/libgnome-2.0.0
 		>=gnome-base/libgnomeui-2.0.0
-		>=gnome-vfs-1.9.16
+		>=gnome-base/gnome-vfs-1.9.16
 		>=gnome-base/gconf-1.1.11
 		>=gnome-base/libgtop-2.0.0
 		>=x11-libs/libwnck-0.13
