@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaf-bin/sun-jaf-bin-1.0.2.ebuild,v 1.1 2004/05/02 01:07:45 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaf-bin/sun-jaf-bin-1.0.2.ebuild,v 1.2 2004/05/14 01:28:39 zx Exp $
 
 inherit java-pkg
 
-At="jaf-1_0_2.zip"
+At="jaf-1_0_2-upd.zip"
 S=${WORKDIR}/${P}
 DESCRIPTION="Sun's JavaBeans Activation Framework (JAF)"
 SRC_URI="${At}"
