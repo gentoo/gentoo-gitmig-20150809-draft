@@ -1,4 +1,6 @@
-MD5 d3963c78524ed1bf570d2a07fafbc52b ChangeLog 1601
+MD5 644e8573f3807cca8b4255146b2466dc ChangeLog 1737
 MD5 a59b768ac3881fcddf26b75ffe50461b mnet-0.6.1.208.ebuild 1183
+MD5 5c49be402248a78fc742e0cb3d933fcf mnet-0.6.2.340.ebuild 1183
 MD5 780c5baba0231780c2e21de40ab48280 files/96mnet 51
 MD5 797f48ffff66d3347e5f71ba7bca111d files/digest-mnet-0.6.1.208 198
+MD5 ea0bc9ec5679af37c1851e98ad83f7df files/digest-mnet-0.6.2.340 78
