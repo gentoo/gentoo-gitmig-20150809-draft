@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.25 2004/10/15 02:00:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.26 2004/10/15 02:19:54 vapier Exp $
 
 inherit gcc flag-o-matic eutils gnuconfig
 
@@ -11,12 +11,10 @@ SRC_URI="mirror://gnu/bison/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-IUSE="nls static uclibc"
+IUSE="nls static"
 
 DEPEND="sys-devel/m4
 	nls? ( sys-devel/gettext )"
-
-use uclibc && PROVIDE="dev-util/yacc"
 
 src_unpack() {
 	unpack ${A}
@@ -59,9 +57,7 @@ src_install() {
 	# We do not need this.
 	rm -f ${D}/usr/lib/liby.a
 
-	dodoc AUTHORS NEWS ChangeLog README REFERENCES OChangeLog
-	docinto txt
-	dodoc doc/FAQ
+	dodoc AUTHORS NEWS ChangeLog README REFERENCES OChangeLog doc/FAQ
 }
 
 pkg_postinst() {
