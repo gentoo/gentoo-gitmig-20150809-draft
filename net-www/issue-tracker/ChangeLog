@@ -1,0 +1,9 @@
+# ChangeLog for net-www/issue-tracker
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/issue-tracker/ChangeLog,v 1.1 2004/03/28 15:29:37 karltk Exp $
+
+*issue-tracker-4.0.3 (28 Mar 2004)
+
+  28 Mar 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  issue-tracker-4.0.3.ebuild:
+  Initial import.  Ebuild submitted by myself.
