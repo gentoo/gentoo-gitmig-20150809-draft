@@ -1,14 +1,16 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.15 2004/08/18 16:42:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.16 2004/09/29 03:00:09 agriffis Exp $
 
 opts="depend checkconfig start stop reload"
 
 depend() {
 	# Make networking dependency conditional on configuration
-	sed 's/#.*//' /etc/syslog-ng/syslog-ng.conf | xargs | \
-	grep -Eq '(source|destination).*(tcp|udp)' && need net
+	case $(sed 's/#.*//' /etc/syslog-ng/syslog-ng.conf) in
+		source*tcp|source*udp|destination*tcp|destination*udp)
+			need net ;;
+	esac
 
 	need clock hostname
 	provide logger
