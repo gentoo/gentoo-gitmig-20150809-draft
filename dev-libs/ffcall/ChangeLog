@@ -1,9 +1,8 @@
 # ChangeLog for dev-libs/ffcall
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Nick Hadaway <raker@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.4 2002/12/09 04:21:03 manson Exp $
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.5 2002/12/13 10:56:29 blizzy Exp $
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
 *ffcall-1.8d (03 Jul 2002)
