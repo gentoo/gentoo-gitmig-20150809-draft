@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3ff3402c98ed0020027994ed884fb51 bsf-2.3.0-r2.ebuild 1502
-MD5 f8d9dc4d1e7783298197fedd3bd4afa2 bsf-2.3.0-r1.ebuild 1664
-MD5 56ac0a079d5dd338176ea61005b0fa2b ChangeLog 1581
+MD5 7fe4d76dd1f5c20f4e5c2e735ceffafd ChangeLog 1674
 MD5 2a5c0decd09ba5a48289b129458bf44c metadata.xml 829
-MD5 2d349b974ef57925e6b968aa654645b3 files/digest-bsf-2.3.0-r1 133
+MD5 f8d9dc4d1e7783298197fedd3bd4afa2 bsf-2.3.0-r1.ebuild 1664
+MD5 c0046140c99bd97b82309bcaccef7108 bsf-2.3.0-r2.ebuild 1510
 MD5 2d349b974ef57925e6b968aa654645b3 files/digest-bsf-2.3.0-r2 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdhEv/rLF9B432nYRAjhwAKDEM2/Wn8Xpo5X0jQgCRWxw7cWZ2ACgzzxv
-zbTuOmUXq6rHl8vffGOwgf4=
-=XQiB
------END PGP SIGNATURE-----
+MD5 2d349b974ef57925e6b968aa654645b3 files/digest-bsf-2.3.0-r1 133
