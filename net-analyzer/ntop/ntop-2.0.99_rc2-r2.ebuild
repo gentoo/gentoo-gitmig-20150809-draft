@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2-r2.ebuild,v 1.10 2004/01/12 06:04:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2-r2.ebuild,v 1.11 2004/06/09 18:17:04 agriffis Exp $
 
 IUSE="ssl readline mysql"
 
@@ -27,7 +27,7 @@ DEPEND=">=sys-libs/gdbm-1.8.0
 
 src_compile() {
 	local myconf
-	if [ -z "`use ssl`" ] ; then
+	if ! use ssl ; then
 		myconf="--disable-ssl"
 	else
 		sed -i "s:/usr/local/ssl:/usr:" configure

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r1.ebuild,v 1.2 2004/05/30 07:17:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r1.ebuild,v 1.3 2004/06/09 18:11:06 agriffis Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ -n "`use mysql`" -a -n "`use postgres`" ]; then
+	if use mysql && use postgres; then
 		eerror "Unfortunatly you can't have both MySQL and PostgreSQL enabled at the same time."
 		eerror "You have to remove either 'mysql' or 'postgres' from your USE flags before emerging this."
 
@@ -80,7 +80,7 @@ src_compile() {
 		--enable-embedded-perl \
 		--with-perlcache"
 
-	if [ -n "`use debug`" ]; then
+	if use debug; then
 		myconf="${myconf} --enable-DEBUG0"
 		myconf="${myconf} --enable-DEBUG1"
 		myconf="${myconf} --enable-DEBUG2"
@@ -162,13 +162,13 @@ pkg_postinst() {
 	einfo "  rc-update add nagios default"
 	einfo
 
-	if [ -z "`use noweb`" ]; then
+	if ! use noweb; then
 		einfo "This does not include cgis that are perl-dependent"
 		einfo "Currently traceroute.cgi is perl-dependent"
 		einfo "To have ministatus.cgi requires copying of ministatus.c"
 		einfo "to cgi directory for compiling."
 
-		if [ -n "`use apache2`" ]; then
+		if use apache2; then
 			insinto /etc/apache2/conf/modules.d
 			doins ${FILESDIR}/99_nagios.conf
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.12 2004/05/30 07:17:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.13 2004/06/09 18:11:06 agriffis Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/Makefile-distclean.diff.bz2
-	[ `use gd` ] && epatch ${FILESDIR}/tac.cgi.diff.bz2
+	use gd && epatch ${FILESDIR}/tac.cgi.diff.bz2
 }
 
 src_compile() {
@@ -53,7 +53,7 @@ src_compile() {
 
 	use perl && myconf="${myconf} --enable-embedded-perl --with-perlcache"
 
-	if [ -n "`use debug`" ]; then
+	if use debug; then
 		myconf="${myconf} --enable-DEBUG0"
 		myconf="${myconf} --enable-DEBUG1"
 		myconf="${myconf} --enable-DEBUG2"
@@ -75,9 +75,9 @@ src_compile() {
 
 src_install() {
 	dodoc Changelog INSTALLING LEGAL LICENSE README UPGRADING
-	if [ -n "`use gd`" ]; then
+	if use gd; then
 		make DESTDIR=${D} fullinstall install-config || die
-		if [ -n "`use apache2`" ]; then
+		if use apache2; then
 			insinto /etc/apache2/conf/modules.d
 			doins ${FILESDIR}/99_nagios.conf
 		else
@@ -122,12 +122,12 @@ pkg_postinst() {
 	einfo "Also, if you want nagios to start at boot time"
 	einfo "remember to execute rc-update add nagios default"
 	einfo
-	if [ -n "`use gd`" ]; then
+	if use gd; then
 		einfo "This does not include cgis that are perl-dependent"
 		einfo "Currently traceroute.cgi is perl-dependent"
 		einfo "To have ministatus.cgi requires copying of ministatus.c"
 		einfo "to cgi directory for compiling"
-		if [ -n "`use apache2`" ]; then
+		if use apache2; then
 			einfo "To have nagios visable on the web, please do the following:"
 			einfo "Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
 			einfo "The Apache2 config file for nagios will be in"
@@ -154,8 +154,8 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	if [ "`use gd`" ]; then
-		if [ "`use apache2`" ]; then
+	if use gd; then
+		if use apache2; then
 			einfo "Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
 		fi
 		echo "Include  conf/addon-modules/nagios.conf" >> ${ROOT}/etc/apache/conf/apache.conf

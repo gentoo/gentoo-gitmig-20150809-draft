@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.ebuild,v 1.6 2004/04/26 04:28:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.ebuild,v 1.7 2004/06/09 18:15:11 agriffis Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 
 	emake -j1 || die "compile problem"
 
-	if [ "`use perl`" ] ; then
+	if use perl ; then
 		emake perlmodules || die "compile perl modules problem"
 	fi
 }
@@ -58,9 +58,9 @@ src_compile() {
 src_install () {
 	einstall exec_prefix="${D}/usr" persistentdir="${D}/var/lib/net-snmp"
 
-	if [ "`use perl`" ] ; then
+	if use perl ; then
 		make DESTDIR="${D}" perlinstall || die "make perlinstall failed"
-		if [ ! "`use X`" ] ; then
+		if ! use X ; then
 			rm -f "${D}/usr/bin/tkmib"
 		fi
 	else
