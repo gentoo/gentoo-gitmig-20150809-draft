@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/pyvorbis
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pyvorbis/ChangeLog,v 1.1 2002/11/30 21:08:11 mkennedy Exp $
+
+*pyvorbis-1.1 (30 Nov 2002)
+
+  30 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  pyvorbis-1.1.ebuild, files/digest-pyvorbis-1.1 :
+
+  Initial import.  Ebuild submitted by Matthieu Sozeau
+  <mattam@netcourrier.com>.
