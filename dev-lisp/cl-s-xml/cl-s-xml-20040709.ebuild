@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-s-xml/cl-s-xml-20040709.ebuild,v 1.1 2004/07/10 19:56:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-s-xml/cl-s-xml-20040709.ebuild,v 1.2 2004/07/11 02:01:45 mkennedy Exp $
 
 inherit common-lisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirrors://gentoo/s-xml-20040709.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-DEPEND="dev-lisp/cl-s-xml"
+DEPEND="dev-lisp/common-lisp-controller"
 
 S=${WORKDIR}/${PN#cl-}
 
@@ -24,5 +24,4 @@ src_install() {
 	common-lisp-system-symlink
 	dosym /usr/share/common-lisp/source/s-xml/s-xml.asd \
 		/usr/share/common-lisp/systems/
-	dodoc ChangeLog
 }
