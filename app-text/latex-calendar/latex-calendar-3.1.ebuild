@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex-calendar/latex-calendar-3.1.ebuild,v 1.1 2002/11/05 04:02:38 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex-calendar/latex-calendar-3.1.ebuild,v 1.2 2002/11/05 04:15:03 satai Exp $
 
 inherit latex-package
 
@@ -23,7 +23,8 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	latex-package_src_doinstall styles fonts bin
+	texi2dvi -q -c --language=latex calguide.tex &> /dev/null
+	latex-package_src_doinstall styles fonts bin dvi
 	dodoc README MANIFEST CATALOG
 	insinto /usr/share/doc/${P}/samples
 	doins bigdemo.tgz *.cfg *.tex *.cld
