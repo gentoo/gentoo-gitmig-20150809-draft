@@ -12,7 +12,7 @@ LIBFILES:= ./pa_common/pa_lib.c ./pa_common/pa_convert.c ./pablio/ringbuffer.c .
 all: sharedlib libinstall testo testq
 
 .c.o:
-		-gcc -c -I./pa_common $< -o $*.o
+		-gcc -c -I./pablio -I./pa_common $< -o $*.o
 
 .o:
 		-gcc $*.o -o $* -Lpa_mac_core $(LIBS) -lportaudio
