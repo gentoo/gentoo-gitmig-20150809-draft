@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.3.1.ebuild,v 1.5 2004/08/16 15:29:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.3.1.ebuild,v 1.6 2004/08/16 17:33:44 vapier Exp $
 
 inherit eutils
 
@@ -31,9 +31,10 @@ pkg_nofetch() {
 	ewarn "Please note that for some stupid reason Transgaming has"
 	ewarn "started watermarking their downloads."
 	ewarn "http://transgaming.org/forum/viewtopic.php?t=660"
-	ewarn "This means you will have to rebuild the digest file"
-	ewarn "before emerging it.  Just run this command:"
-	ewarn "ebuild /usr/portage/app-emulation/${PN}/${PF}.ebuild digest"
+	ewarn
+	ewarn "To remove the simple watermark and verify the"
+	ewarn "authenticity of your download, just do this:"
+	ewarn "sh /usr/portage/app-emulation/${PN}/files/remove-watermark.sh ${DISTDIR}/${MY_P}.tgz"
 }
 
 src_unpack() {
