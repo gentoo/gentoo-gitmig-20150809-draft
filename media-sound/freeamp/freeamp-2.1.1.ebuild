@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.4 2002/03/29 00:26:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.5 2002/04/04 13:05:11 danarmak Exp $
 use arts && . /usr/portage/eclass/inherit.eclass
-use arts && inherit functions && set-kdedir
+use arts && inherit kde-functions && set-kdedir
 
 # I highly suggest you read the features section of the freeamp website to
 # see all the neat stuff this program can do. Pretty spiffy :)
