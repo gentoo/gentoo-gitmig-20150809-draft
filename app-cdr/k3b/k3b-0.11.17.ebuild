@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.17.ebuild,v 1.7 2004/11/19 17:24:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.17.ebuild,v 1.8 2004/11/23 15:22:00 carlo Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="K3b, KDE CD Writing Software"
 HOMEPAGE="http://www.k3b.org/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/k3b/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc amd64"
-IUSE="arts debug dvdr kde oggvorbis mad flac encode"
+IUSE="arts dvdr kde oggvorbis mad flac encode"
 
 DEPEND="kde? ( >=kde-base/kdebase-3.1 )
 	>=media-sound/cdparanoia-3.9.8
