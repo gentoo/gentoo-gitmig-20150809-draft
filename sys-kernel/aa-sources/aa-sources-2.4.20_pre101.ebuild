@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.20_pre101.ebuild,v 1.1 2002/10/15 17:53:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.20_pre101.ebuild,v 1.2 2002/11/28 18:24:38 gerk Exp $
 
 IUSE="build"
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 http://www.kernel.org/pub/linux/kernel/v2.4/testing/patch-${KV/-aa1/}.bz2
 http://www.kernel.org/pub/linux/kernel/people/andrea/kernels/v2.4/${KV//-/}.bz2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 src_unpack() {
 	unpack linux-${OKV}.tar.bz2
