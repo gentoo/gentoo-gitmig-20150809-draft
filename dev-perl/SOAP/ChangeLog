@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/SOAP
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/ChangeLog,v 1.2 2002/05/06 15:47:33 seemant Exp $
+
+*SOAP-0.28-r1 (6 May 2002)
+
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org> SOAP-0.28-r1.ebuild
+  files/digest-SOAP-0.28-r1 :
+
+  eclass conversion
 
 *SOAP-0.28 (1 Feb 2002)
 
