@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.71 2005/01/13 13:19:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.72 2005/01/15 05:13:10 eradicator Exp $
+
+  14 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  webmin-1.170-r3.ebuild:
+  Fixing bug #78017 on new emerges.
 
 *webmin-1.170-r3 (13 Jan 2005)
 
