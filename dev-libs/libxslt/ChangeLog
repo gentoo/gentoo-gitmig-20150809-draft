@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.51 2004/01/13 13:41:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.52 2004/01/18 18:28:29 tuxus Exp $
+
+  18 Jan 2004; <tuxus@gentoo.org> libxslt-1.0.33.ebuild:
+  Added ~mips to KEYWORDS.
 
   13 Jan 2004; <gustavoz@gentoo.org> libxslt-1.1.1.ebuild:
   stable on hppa and sparc
