@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptraceroute
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.18 2004/10/01 02:21:05 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.19 2004/11/10 19:13:42 eldad Exp $
+
+  10 Nov 2004; Eldad Zack <eldad@gentoo.org> tcptraceroute-1.4-r3.ebuild,
+  tcptraceroute-1.5_beta5.ebuild:
+  Fix to use bind-now for suid binaries.
 
   30 Sep 2004; Travis Tilley <lv@gentoo.org> tcptraceroute-1.5_beta5.ebuild:
   stable on amd64

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.4-r3.ebuild,v 1.6 2004/07/08 23:02:06 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.4-r3.ebuild,v 1.7 2004/11/10 19:13:42 eldad Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="tcptraceroute is a traceroute implementation using TCP packets"
 HOMEPAGE="http://michael.toren.net/code/tcptraceroute/"
@@ -25,6 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-ldflags -Wl,-z,now
+
 	make CFLAGS="${CFLAGS}" || die
 }
 

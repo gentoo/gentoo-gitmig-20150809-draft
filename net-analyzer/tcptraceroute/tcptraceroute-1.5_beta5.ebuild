@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta5.ebuild,v 1.8 2004/10/04 22:54:32 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta5.ebuild,v 1.9 2004/11/10 19:13:42 eldad Exp $
+
+inherit flag-o-matic
 
 MY_P=${P/_beta/beta}
 MY_PV=${PV/_beta/beta}
@@ -19,6 +21,8 @@ DEPEND="net-libs/libpcap
 	net-libs/libnet"
 
 src_compile() {
+	append-ldflags -Wl,-z,now
+
 	econf || die
 	emake || die
 }
@@ -28,6 +32,6 @@ src_install() {
 	fperms 4710 /usr/sbin/tcptraceroute
 	fowners root:wheel /usr/sbin/tcptraceroute
 	doman tcptraceroute.1
-	dodoc examples.txt COPYING README changelog
+	dodoc examples.txt COPYING README ChangeLog
 	dohtml -r ./
 }
