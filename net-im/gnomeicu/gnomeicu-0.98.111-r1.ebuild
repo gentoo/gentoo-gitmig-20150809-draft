@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.111-r1.ebuild,v 1.3 2003/02/13 14:08:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.111-r1.ebuild,v 1.4 2003/05/09 22:42:31 liquidx Exp $
 
 
 inherit debug
@@ -20,7 +20,7 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 	>=gnome-base/libgnomeui-2.0.0
 	>=sys-libs/gdbm-1.8.0
 	>=gnome-base/libglade-2.0.0	
-	>=net-libs/gnet-1.1.3
+	<net-libs/gnet-2
 	>=gnome-base/gnome-panel-2.0.0"
 RDEPEND="sys-devel/gettext"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99-r1.ebuild,v 1.2 2003/04/03 00:10:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99-r1.ebuild,v 1.3 2003/05/09 22:42:31 liquidx Exp $
 
 inherit gnome2 
 
@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 	>=gnome-base/libgnomeui-2.0.0
 	>=sys-libs/gdbm-1.8.0
 	>=gnome-base/libglade-2.0.0	
-	>=net-libs/gnet-1.1.4
+	<net-libs/gnet-2
 	>=app-text/scrollkeeper-0.3.5
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.22
@@ -29,12 +29,7 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}/doc/C
-	cp Makefile.in Makefile.in.old
-	sed -e "s:-scrollkeeper-update.*::g" \
-		Makefile.in.old > Makefile.in
-	rm Makefile.in.old
-	cd ${S}
+	cd ${S}/doc/C; sed -i -e 's:-scrollkeeper-update.*:-scrollkeeper-update -p $(scrollkeeper_localstate_dir) -o $(DESTDIR)$(omf_dest_dir):' Makefile.in
 }
 
 DOCS="AUTHORS COPYING CREDITS ChangeLog README ABOUT-NLS"

@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.19 2003/04/03 00:10:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.20 2003/05/09 22:42:31 liquidx Exp $
+
+  09 May 2003; Alastair Tse <liquidx@gentoo.org> gnomeicu-0.98.111-r1.ebuild,
+  gnomeicu-0.99-r1.ebuild:
+  fix gnet deps and scrollkeeper fix
 
 *gnomeicu-0.99-r1 (18 mar 2003)
 
