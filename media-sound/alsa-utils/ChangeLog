@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.77 2004/11/20 10:47:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.78 2004/11/22 18:56:24 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-utils-1.0.7.ebuild:
+  Stable sparc. This is package.mask'd in the normal sparc profiles. Use the
+  default-linux/sparc/sparc64/2004.3/alsa profile if you want to use alsa on
+  sparc.
 
   20 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
   Load snd-ioctl32 on start.
