@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.17 2003/10/01 11:39:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.18 2003/10/24 11:43:32 aliz Exp $
 
 inherit eutils
 
@@ -39,10 +39,8 @@ src_compile() {
 		--datadir=${D}/usr/share/elvis \
 		${myconf} || die
 
-	cp Makefile Makefile.orig
-	sed -e "s:gcc -O2:gcc ${CFLAGS}:" Makefile.orig > Makefile
-	cp config.h config.h.orig
-	sed -e "s:${D}/usr/share/elvis:/usr/share/elvis:" config.h.orig > config.h
+	sed -i -e "s:gcc -O2:gcc ${CFLAGS}:" Makefile
+	sed -i -e "s:${D}/usr/share/elvis:/usr/share/elvis:" config.h
 	make || die
 }
 
