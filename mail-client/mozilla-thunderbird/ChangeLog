@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.46 2005/03/23 15:58:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.47 2005/03/23 19:47:31 agriffis Exp $
+
+  23 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-thunderbird-1.0.ebuild:
+  Upstream enigmail tarball changed, md5sum broken. Copy new version to Gentoo
+  mirrors as -r1 #78585
 
   23 Mar 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-thunderbird-1.0.2.ebuild:
