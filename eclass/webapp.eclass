@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.10 2004/04/28 22:18:27 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.11 2004/04/29 10:18:14 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -71,7 +71,7 @@ function webapp_import_config ()
 
 function webapp_strip_appdir ()
 {
-	echo "$1" | sed -e "s|${D}${MY_APPDIR}/||g;"
+	echo "$1" | sed -e "s|${MY_APPDIR}/||g;"
 }
 
 function webapp_strip_d ()
@@ -95,7 +95,9 @@ function webapp_strip_cwd ()
 function webapp_configfile ()
 {
 	webapp_checkfileexists "$1" "$D"
+	echo $1
 	local MY_FILE="`webapp_strip_appdir $1`"
+	echo $MY_FILE
 
 	einfo "(config) $MY_FILE"
 	echo "$MY_FILE" >> ${D}${WA_CONFIGLIST}
@@ -266,7 +268,10 @@ function webapp_pkg_postinst ()
 	# if 'vhosts' is not set in your USE flags, we install a copy of
 	# this application in /var/www/localhost/htdocs/${PN}/ for you
 
+	
 	if ! use vhosts ; then
+		einfo "vhosts USE flag not set - auto-installing using webapp-config"
+
 		G_HOSTNAME="localhost"
 		. /etc/vhosts/webapp-config
 
@@ -277,18 +282,35 @@ function webapp_pkg_postinst ()
 		# find out by looking to see what (if anything) is installed
 		# in there already
 
-		local my_output="`/usr/sbin/webapp-config --show-installed -d $my_dir 2> /dev/null`"
-		if [ "$?" = 0 ]; then
+		my_cmd="/usr/sbin/webapp-config --show-installed -d $my_dir 2> /dev/null"
+		einfo "$my_cmd"
+
+		my_output="`/usr/sbin/webapp-config --show-installed -d $my_dir 2> /dev/null`"
+
+		# we can't use the exit status from webapp-config
+
+		if [ "$?" = "0" ]; then
 
 			# something is in there - but the question has to be ... what?
 
-			if [ "`echo $my_output | awk '{ print $1 }'`" = "${PN}" ]; then
-				# we have an older version of whatever it is our ebuild is
-				# trying to install ;-)
-				#
-				# this is the situation we can deal with
+			ewarn "$my_output already installed"
 
-				my_mode=-U
+			if [ "`echo $my_output | awk '{ print $1 }'`" = "${PN}" ]; then
+				einfo "$my_output is a copy of ${PN}"
+				if [ "`echo $my_output | awk '{ print $2 }'`" = "${PVR}" ]; then
+					# this version is already installed
+					# we need to remove it first
+
+					/usr/sbin/webapp-config -C -d $my_dir
+				else
+					# we have an older version of whatever it is our ebuild is
+					# trying to install ;-)
+					#
+					# this is the situation we can deal with
+
+					einfo "selecting upgrade mode"
+					my_mode=-U
+				fi
 			else
 				# this should never happen - but just in case ...
 				#
@@ -300,8 +322,14 @@ function webapp_pkg_postinst ()
 
 				die "$my_output is already installed in $my_dir"
 			fi
+		else
+			einfo "${PN}-${PVR} is not installed - using install mode"
 		fi
 	
-		/usr/sbin/webapp-config $my_mode -u root -d "$my_dir" ${PN} ${PVR}
+		my_cmd="/usr/sbin/webapp-config $my_mode -u root -d $my_dir ${PN} ${PVR}"
+		einfo "Running $my_cmd"
+		$my_cmd
 	fi
+
+	return 0
 }
