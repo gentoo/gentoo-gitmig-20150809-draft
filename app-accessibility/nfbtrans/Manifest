@@ -1,15 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34e151a5b64379c2630b5415a9accd5f ChangeLog 577
-MD5 4bd341a8d13d3ce0f9875ebc36874f87 metadata.xml 231
 MD5 267ca40b47eae53d736cadc9a3bdbf31 nfbtrans-7.70.ebuild 917
-MD5 2ecaeb8ca8564ced87e769f7724eeaec files/digest-nfbtrans-7.70 57
+MD5 b00eff01943923e65b65fb2056941b80 ChangeLog 741
+MD5 4bd341a8d13d3ce0f9875ebc36874f87 metadata.xml 231
+MD5 df1f060a66edbb627329b7ca9c7b9c42 nfbtrans-7.74.ebuild 920
 MD5 4d9150d98875467c85dbe0e275725ca1 files/nfbtrans-7.70-gentoo-fix.patch 1147
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3Ew3HTu7gpaalycRAi0cAJ4zld4NLmAgY/1US+p6iwQtDz7EpACgnkRi
-mfMbDzlfBQfmTXR2uQoBglA=
-=iBQa
------END PGP SIGNATURE-----
+MD5 2ecaeb8ca8564ced87e769f7724eeaec files/digest-nfbtrans-7.70 57
+MD5 16277d630fea1bd1422d3c187bd021d0 files/nfbtrans-7.74-gentoo-fix.patch 310
+MD5 0ae5e0978960d78b8df07510b3f3231c files/digest-nfbtrans-7.74 57
