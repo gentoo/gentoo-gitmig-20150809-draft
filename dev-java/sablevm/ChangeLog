@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sablevm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/ChangeLog,v 1.8 2004/10/16 21:15:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/ChangeLog,v 1.9 2004/11/16 19:06:32 karltk Exp $
+
+*sablevm-1.1.7 (16 Nov 2004)
+
+  16 Nov 2004; <karltk@gentoo.org> +sablevm-1.1.7.ebuild:
+  New upstream release, fixes #70995.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> sablevm-1.1.6.ebuild:
   fix bug 67608
