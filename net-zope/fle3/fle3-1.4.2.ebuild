@@ -1,6 +1,6 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/fle3/fle3-1.4.2.ebuild,v 1.1 2003/04/22 09:15:57 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/fle3/fle3-1.4.2.ebuild,v 1.2 2003/07/13 21:46:28 aliz Exp $
 
 inherit zproduct
 P_NEW="fle_${PV}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://fle3.uiah.fi/"
 SRC_URI="${HOMEPAGE}/download/${P_NEW}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 RDEPEND="dev-python/Imaging-py21
 	${RDEPEND}"
 
