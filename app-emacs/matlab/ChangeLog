@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/matlab
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.6 2005/01/01 13:53:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.7 2005/04/05 15:55:38 blubb Exp $
+
+  05 Apr 2005; Simon Stelling <blubb@gentoo.org> matlab-2.2.3.ebuild:
+  added ~amd64
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> matlab-2.2.3.ebuild:
   Stable on sparc.
