@@ -105,7 +105,7 @@ media-video/SDLcam
 # Test please, as this is going to be the next stable
 # moz (also for galeon-1.2.6)
 # worksforme // Spider
-=net-www/mozilla-1.0.1
+>=net-www/mozilla-1.0.1
 
 # <raker@gentoo.org> (28 Sep 2002)
 # masking new lbreakout2 build to respect the freeze
