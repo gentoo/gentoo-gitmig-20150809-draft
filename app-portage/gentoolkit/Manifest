@@ -1,4 +1,4 @@
-MD5 f92474c9642a74a37bc4004a9a6a6562 ChangeLog 21016
+MD5 b058dc78f43d55a402b7f4d935c41783 ChangeLog 21048
 MD5 8293fb11223ccfc1f9b80caa687b1f31 gentoolkit-0.1.30.ebuild 2740
 MD5 2342f8711f0a4ecb063556c25fde9add metadata.xml 605
 MD5 ec64f86677a1db3ee6030299475a2e7f gentoolkit-0.1.31.ebuild 2710
@@ -33,6 +33,6 @@ MD5 18cb80b264de19fa91ee69f213dcbfef files/scripts/pkg-clean 2863
 MD5 ed6713f4f45b71ee207a2511627d9bca files/scripts/pkg-size 1226
 MD5 17ba2e2daf61e0a9bf6ba96e213c75f4 files/scripts/qpkg 13678
 MD5 ac41939247058bc3d14dadeb9026e494 files/scripts/qpkg.1 3476
-MD5 59ddc165f8876ff903e72246a391cadb files/scripts/revdep-rebuild 10983
+MD5 cf5ca7f72196d949451a860ae7dc7f74 files/scripts/revdep-rebuild 10968
 MD5 347e69e1c9fba8b60fa631d92ea0a8f2 files/scripts/useflag 16164
 MD5 0a120feea2b79a3731c7912926421a27 files/scripts/useflag.1 5461

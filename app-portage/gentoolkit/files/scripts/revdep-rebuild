@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/revdep-rebuild,v 1.1 2003/08/15 12:23:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/revdep-rebuild,v 1.2 2003/09/30 19:39:32 mholzer Exp $
 
 # revdep-rebuild: Reverse dependency rebuilder.
 # Author: Stanislav Brabec <utx@gentoo.org>
@@ -159,7 +159,7 @@ if $SEARCH_BROKEN ; then
 	(
 		grep '.*\.so\(\|\..*\)$' <$LIST.1_files | sed 's:/[^/]*$::'
 		sed '/^#/d;s/#.*$//' </etc/ld.so.conf
-	) | uniq | sort | uniq |
+	) | sort -u |
 	tr '\n' : | tr -d '\r' | sed 's/:$//' >$LIST.2_ldpath
 	echo -e " done.\n  ($LIST.2_ldpath)"
 	fi
@@ -229,7 +229,7 @@ if $PACKAGE_NAMES ; then
 		echo " using existing $LLIST.5_packages."
 	else
 		set_trap "$LLIST.5_packages"
-		sort <$LLIST.4_packages_raw | uniq >$LLIST.5_packages
+		sort -u $LLIST.4_packages_raw >$LLIST.5_packages
 		echo -e " done.\n  ($LLIST.5_packages)"
 	fi
 
