@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.10 2004/08/07 19:44:44 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.11 2004/11/15 20:16:25 corsair Exp $
+
+  15 Nov 2004; Markus Rothe <corsair@gentoo.org> lzop-1.01.ebuild:
+  Marked ~ppc64; bug #71166
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> lzop-1.01.ebuild:
   Typo in DESCRIPTION: reat-time -> real-time. Bug 59717.
