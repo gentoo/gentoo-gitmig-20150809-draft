@@ -50,11 +50,12 @@ move media-video/atitvout media-tv/atitvout
 move media-video/kwintv media-tv/kwintv
 move media-video/linuxtv-dvb media-tv/linuxtv-dvb
 move media-video/nvrec media-tv/nvrec
-move media-video/zapping media-tv/zapping
-move x11-misc/nxtvepg media-tv/nxtvepg
 move media-video/nvtv media-tv/nvtv
 move media-video/rivatv media-tv/rivatv
 move media-video/tvtime media-tv/tvtime
 move media-video/vcr media-tv/vcr
 move media-video/xawdecode media-tv/xawdecode
 move media-video/xawtv media-tv/xawtv
+move media-video/zapping media-tv/zapping
+move x11-misc/nxtvepg media-tv/nxtvepg
+move media-video/tuxzap_programs media-video/tuxzap-programs
