@@ -49,12 +49,31 @@ if (-f 'ChangeLog') {
 open C, 'cvs diff --brief 2>&1 |' or die "Can't run cvs diff: $!\n";
 while (<C>) {
     /ChangeLog/ and next;
-    if (/^cvs server: (\S+) .*new entry/ || /^Index: (\S+)/) {
+	if (/^cvs server: (([^\/]*?)\.ebuild) was removed/) { 
+		push @files, $1;
+		$versions{$2} = 0;	# existing ebuild that was removed
+	}
+    if (/^cvs server: (\S+) was removed/) {
+		push @files, $1;
+		# existing file that has been removed
+	}
+	elsif (/^Index: (([^\/]*?)\.ebuild)\s*$/) { 
+		push @files, $1;
+		$versions{$2} = 0;	# existing ebuild that has changed
+	}
+	elsif (/^Index: (\S+)/) {
+		push @files, $1;
+		# existing file, but not an ebuild, so no %version entry
+	}
+	elsif (/^cvs server: (([^\/]*?)\.ebuild) is a new entry/) { 
+		push @files, $1;
+		$versions{$2} = -1;	# new ebuild, will create a new entry
+	}
+	elsif (/^cvs server: (\S+) is a new entry/) {
         push @files, $1;
-        if ($1 =~ /^([^\/]*?)\.ebuild$/) {
-            $versions{$1} = -1;
-        }
-    }
+		# new file, but not an ebuild, so no %version entry
+	}
+	# other cvs output is ignored
 }
 close C;
 die "No changed files found (did you forget to cvs add?)\n" unless @files;
@@ -86,10 +105,12 @@ $entry = Text::Wrap::fill('  ', '  ', $entry);  # does not append a \n
 $entry .= "\n$input";                           # append user input
 
 # Find the version that's highest in the file (or determine if we're
-# adding a new version).
+# adding a new version).  Note that existing ebuilds have version=0,
+# new ebuilds have version=-1 to make them automatically rise to the
+# top.
 if (%versions) {
     for (keys %versions) {
-        $versions{$_} = index $text, $_;
+        $versions{$_} = index $text, $_ unless $versions{$_};
     }
     $version = (sort { $versions{$a} <=> $versions{$b} } keys %versions)[0];
 }
@@ -118,8 +139,9 @@ if (!defined $version) {
     #$text =~ s/^\*\Q$version\E\.?(?:ebuild)?\s.*\n/$&\n$entry\n/m 
 } else {
     # Insert at the top with a new version marker
-    # XXX Fix to use a regex similar to above
-    $text =~ s/^(.*?)\n(?=\s)/$&\n*$version ($date)\n\n$entry\n/s
+	$text =~ s/^( .*? )				  # grab header
+	            \s*\n(?=\ \ \d|\*|\z) # suck up trailing whitespace
+			  /$1\n\n*$version ($date)\n\n$entry\n\n/sx
         or die "Failed to insert new entry (3)\n";
 }
 
