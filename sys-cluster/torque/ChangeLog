@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.7 2005/02/20 09:40:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.8 2005/02/20 09:41:03 spyderous Exp $
+
+  20 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  Add metadata -- owned by cluster herd.
 
 *torque-1.2.0_p1 (20 Feb 2005)
 
