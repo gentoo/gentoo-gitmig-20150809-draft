@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.16 2005/02/17 12:14:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.17 2005/03/28 12:38:15 gmsoft Exp $
+
+  28 Mar 2005; Guy Martin <gmsoft@gentoo.org> portaudio-18.1.ebuild:
+  Stable on hppa.
 
   17 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> portaudio-18.1.ebuild:
   Added to ~hppa.

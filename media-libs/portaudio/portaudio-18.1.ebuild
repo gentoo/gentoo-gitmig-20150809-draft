@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1.ebuild,v 1.11 2005/02/17 12:14:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.1.ebuild,v 1.12 2005/03/28 12:38:15 gmsoft Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.portaudio.com/archives/${MY_P}.zip"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 ~ppc ~ppc-macos ~mips ~hppa"
+KEYWORDS="x86 sparc amd64 ~ppc ~ppc-macos ~mips hppa"
 
 IUSE=""
 
