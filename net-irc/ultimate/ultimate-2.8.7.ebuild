@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-2.8.7.ebuild,v 1.1 2003/10/25 01:44:44 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-2.8.7.ebuild,v 1.2 2003/10/27 17:41:55 zul Exp $
 
 MY_P="${P/ultimate-/Ultimate}"
 DESCRIPTION="And IRCd server based on DALnet's DreamForge IRCd."
@@ -88,7 +88,7 @@ src_install() {
 	newexe ${FILESDIR}/ultimateircd.rc ultimateircd
 
 	exeinto /etc/conf.d
-	newexec ${FILESDIR}/ultimateircd.conf ultimateircd
+	newexe  ${FILESDIR}/ultimateircd.conf ultimateircd
 
 	dodoc crypt/crypter ircdcron/ircd.cron ircdcron/ircdchk
 }

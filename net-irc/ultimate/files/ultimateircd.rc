@@ -1,6 +1,22 @@
+#!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/files/ultimateircd.rc,v 1.2 2003/10/27 17:41:55 zul Exp $
 
-# user to run ptlinkircd as
-PTLINKIRCD_USER="nobody"
+depend() {
+	need ned
+	use dns
+}
+
+start() {
+	ebegin "Starting ultimate-ircd"
+	start-stop-daemon --start --quiet --exec /usr/bin/ultimate-ircd \
+		--chuid ${ULTIMATEIRCD_USER}
+	eend $?
+}
+
+stop() {
+	ebegin "Shutting down ultimate-ircd"
+	killall ultimate-ircd
+	eend $?
+}
