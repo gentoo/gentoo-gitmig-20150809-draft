@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.5.ebuild,v 1.1 2004/11/29 20:07:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.5.ebuild,v 1.2 2005/01/29 01:07:25 vapier Exp $
 
 inherit flag-o-matic
 
@@ -10,10 +10,11 @@ SRC_URI="http://savannah.nongnu.org/download/dmidecode/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc"
+KEYWORDS="amd64 ia64 ppc x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
