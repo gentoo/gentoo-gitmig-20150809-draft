@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103-r1.ebuild,v 1.13 2004/06/25 00:03:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gom/gom-0.29.103-r1.ebuild,v 1.14 2004/07/13 05:05:57 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ DEPEND=">=sys-libs/ncurses-5.2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc ~amd64"
 
 src_compile() {
 	econf || die

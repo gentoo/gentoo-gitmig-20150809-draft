@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gqradio
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.9 2004/06/25 00:03:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.10 2004/07/13 05:07:36 eradicator Exp $
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gqradio-1.9.1.ebuild:
+  ~sparc ~amd64
 
   13 May 2004; David Holm <dholm@gentoo.org> gqradio-1.9.1.ebuild:
   Added to ~ppc.
