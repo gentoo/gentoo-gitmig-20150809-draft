@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/qtwvdialer
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.7 2004/11/20 10:05:07 mrness Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.8 2005/02/12 09:40:08 mrness Exp $
+
+  12 Feb 2005; Alin Nastac <mrness@gentoo.org> -qtwvdialer-0.3.1-r2.ebuild:
+  Remove old ebuild.
 
   20 Nov 2004; Alin Nastac <mrness@gentoo.org> qtwvdialer-0.4.2.ebuild:
   Correct makefile to use our CXXFLAGS and mark it stable on x86.
