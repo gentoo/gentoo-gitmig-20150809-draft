@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.3.1.ebuild,v 1.3 2004/05/30 07:24:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.3.1.ebuild,v 1.4 2004/05/30 08:28:41 robbat2 Exp $
 
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
 HOMEPAGE="http://www.gnu.org/software/mailutils/mailutils.html"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="nls pam mysql gdbm"
 DEPEND="!mail-client/mailx
-	!net-mail/nmh
+	!mail-client/nmh
 	dev-util/guile
 	gdbm? ( sys-libs/gdbm )
 	mysql? ( dev-db/mysql )
