@@ -1,10 +1,16 @@
 # ChangeLog for sys-apps/less
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.15 2003/02/28 18:30:57 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.16 2003/03/20 06:23:18 rajiv Exp $
 
 *less-378-r2 (08 Feb 2003)
 
-  28 Feb 2003; Zach Welch <zwelch@gentoo.org> less-378-r2.ebuild:
+  20 Mar 2003; Rajiv Manglani <rajiv@gentoo.org> less-378-r2.ebuild :
+  Marked stable for ppc and sparc. This version of less (with LESS=-R
+  set in the environment) is needed by groff-1.18 and later. That version
+  of groff is needed by man-1.5l. man-1.5l is needed to fix a security
+  issue in previous versions of man.
+
+  28 Feb 2003; Zach Welch <zwelch@gentoo.org> less-378-r2.ebuild :
   add arm keyword
 
   25 Feb 2003; Guy Martin <gmsoft@gentoo.org> less-378-r2.ebuild :
