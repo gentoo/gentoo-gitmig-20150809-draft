@@ -8,4 +8,4 @@ MD5 f40b47266698753b0bc58c24ce9aac4e files/digest-silc-toolkit-0.9.11 73
 MD5 f40b47266698753b0bc58c24ce9aac4e files/digest-silc-toolkit-0.9.11-r1 73
 MD5 f5feddf04be28d35adc7b14360eac931 files/digest-silc-toolkit-0.9.12 73
 MD5 f5feddf04be28d35adc7b14360eac931 files/digest-silc-toolkit-0.9.12-r1 73
-MD5 6c8639c61522d4e5e7ee452088000fc3 files/silc-toolkit-0.9.12-r1-64bit_goodness.patch 4563
+MD5 6c8639c61522d4e5e7ee452088000fc3 files/silc-toolkit-0.9.12-64bit_goodness.patch 4563
