@@ -1,6 +1,14 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.67 2002/12/13 11:00:27 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.68 2002/12/14 17:26:07 azarah Exp $
+
+*mozilla-1.2.1-r2 (14 Dec 2002)
+
+  14 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r2.ebuild :
+
+  Update to use fontconfig-2.1 tarball (Xft2.0.1, bugfixed Xrender).  Modify
+  Xft and Xrender to install libXft_moz.so* and libXrender_moz.so*, and mozilla
+  to link to those.  This should hopefully fix bugs where mozilla do not start.
 
   09 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r1.ebuild :
 
