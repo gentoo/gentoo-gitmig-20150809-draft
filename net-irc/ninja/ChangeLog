@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/ninja
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.10 2004/07/01 22:22:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.11 2004/07/08 22:13:53 swegener Exp $
+
+*ninja-1.5.9_pre12 (09 Jul 2004)
+
+  09 Jul 2004; Sven Wegener <swegener@gentoo.org> +ninja-1.5.9_pre12.ebuild,
+  ninja-1.5.9_pre9.ebuild:
+  Updated SRC_URI and version bump.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ninja-1.5.9_pre9.ebuild:
