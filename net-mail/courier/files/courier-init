@@ -61,6 +61,9 @@ start() {
 	[ -x ${libexecdir}/authlib/authdaemond ] && \
 	${libexecdir}/authlib/authdaemond start && ebegin " Starting authdaemond"
 
+	[ -x ${libexecdir}/courier/sqwebmaild ] && \
+	${libexecdir}/courier/sqwebmaild start && ebegin " Starting sqwebmaild"
+
 	[ -x ${sbindir}/courierldapaliasd ] && \
 	${sbindir}/courierldapaliasd start && ebegin " Starting courierldapaliasd"
 
@@ -161,6 +164,9 @@ stop() {
 
 	[ -x ${sbindir}/courierldapaliasd ] && \
 	( ${sbindir}/courierldapaliasd stop ; ebegin " Stoping courierldapaliasd" )
+
+	[ -x ${libexecdir}/courier/sqwebmaild ] && \
+	( ${libexecdir}/courier/sqwebmaild stop ; ebegin " Stoping sqwebmaild" )
 
 	[ -x ${libexecdir}/authlib/authdaemond ] && \
 	( ${libexecdir}/authlib/authdaemond stop ; ebegin " Stoping authdaemond" )
