@@ -1,0 +1,210 @@
+Index: kdepim/korganizer/komailclient.cpp
+diff -u kdepim/korganizer/komailclient.cpp:1.18 kdepim/korganizer/komailclient.cpp:1.18.2.1
+--- kdepim/korganizer/komailclient.cpp:1.18	Sun May  6 20:57:36 2001
++++ kdepim/korganizer/komailclient.cpp	Fri Dec  6 18:35:26 2002
+@@ -14,6 +14,7 @@
+ #include <kurl.h>
+ #include <kapp.h>
+ #include <dcopclient.h>
++#include <kprocess.h>
+ 
+ #include "version.h"
+ #include "event.h"
+@@ -67,17 +68,16 @@
+       command = KStandardDirs::findExe(QString::fromLatin1("mail"));
+       if (command.isNull()) return false; // give up
+     
+-      command.append(QString::fromLatin1(" -s \x22"));
+-      command.append(subject);
+-      command.append(QString::fromLatin1("\x22"));
++      command.append(QString::fromLatin1(" -s "));
++      command.append(KShellProcess::quote(subject));
+ 
+       if (bcc) {
+         command.append(QString::fromLatin1(" -b "));
+-        command.append(from);
++        command.append(KShellProcess::quote(from));
+       }
+ 
+       command.append(" ");
+-      command.append(to);
++      command.append(KShellProcess::quote(to));
+ 
+       needHeaders = false;
+     }
+Index: kdepim/kpilot/conduits/popmail/parsedate.c
+diff -u kdepim/kpilot/conduits/popmail/parsedate.c:1.4 kdepim/kpilot/conduits/popmail/parsedate.c:1.4.6.3
+--- kdepim/kpilot/conduits/popmail/parsedate.c:1.4	Fri Jul 28 01:07:16 2000
++++ kdepim/kpilot/conduits/popmail/parsedate.c	Thu Dec  5 19:34:09 2002
+@@ -1676,7 +1676,7 @@
+     for ( ; ; ) {
+ 	(void)printf("\t> ");
+ 	(void)fflush(stdout);
+-	if (gets(buff) == NULL || buff[0] == '\n')
++	if (fgets(stdin,buff,sizeof(buff)-1) == NULL || buff[0] == '\n')
+ 	    break;
+ #if YYDEBUG
+ 	if (strcmp(buff, "yydebug") == 0) {
+Index: kdepim/libical/src/libicalss/icalfileset.c
+diff -u kdepim/libical/src/libicalss/icalfileset.c:1.5 kdepim/libical/src/libicalss/icalfileset.c:1.5.2.1
+--- kdepim/libical/src/libicalss/icalfileset.c:1.5	Wed Apr 11 17:37:32 2001
++++ kdepim/libical/src/libicalss/icalfileset.c	Fri Dec  6 17:16:04 2002
+@@ -282,12 +282,6 @@
+ 
+ }
+ 
+-#ifdef ICAL_SAFESAVES
+-int icalfileset_safe_saves=1;
+-#else
+-int icalfileset_safe_saves=0;
+-#endif
+-
+ icalerrorenum icalfileset_commit(icalfileset* cluster)
+ {
+     char tmp[ICAL_PATH_MAX]; 
+@@ -306,15 +300,6 @@
+ 	return ICAL_NO_ERROR;
+     }
+     
+-    if(icalfileset_safe_saves == 1){
+-	snprintf(tmp,ICAL_PATH_MAX,"cp %s %s.bak",impl->path,impl->path);
+-	
+-	if(system(tmp) < 0){
+-	    icalerror_set_errno(ICAL_FILE_ERROR);
+-	    return ICAL_FILE_ERROR;
+-	}
+-    }
+-
+     if(lseek(impl->fd,SEEK_SET,0) < 0){
+ 	icalerror_set_errno(ICAL_FILE_ERROR);
+ 	return ICAL_FILE_ERROR;
+Index: kdepim/libical/src/test/regression.c
+diff -u kdepim/libical/src/test/regression.c:1.4 kdepim/libical/src/test/regression.c:1.4.2.1
+--- kdepim/libical/src/test/regression.c:1.4	Wed Apr 11 17:37:32 2001
++++ kdepim/libical/src/test/regression.c	Fri Dec  6 18:25:09 2002
+@@ -2863,8 +2863,6 @@
+     struct icaldurationtype d;
+     int i;
+     int final,sec;
+-
+-    icalfileset_safe_saves = 1;
+ 
+     icalerror_clear_errno();
+ 
+--- kdepim/libical/src/libical/icalmime.c~	2003-01-17 17:58:09.000000000 +0100
++++ kdepim/libical/src/libical/icalmime.c	2003-01-17 17:59:40.000000000 +0100
+@@ -205,8 +205,8 @@
+ 	}
+ 
+ 	if(parts[i].header.error!=SSPM_NO_ERROR){
+-	    char *str;
+-	    char* temp[256];
++	    const char *str = "Unknown Error";
++	    char temp[256];
+ 
+ 	    if(parts[i].header.error==SSPM_UNEXPECTED_BOUNDARY_ERROR){
+ 		str = "Got an unexpected boundary, possibly due to a MIME header for a MULTIPART part that is missing the Content-Type line";
+@@ -227,16 +227,16 @@
+ 	    }
+ 
+ 	    if(parts[i].header.error_text != 0){
+-		snprintf((char*)temp,256,
++		snprintf(temp,sizeof(temp),
+ 			 "%s: %s",str,parts[i].header.error_text);
+ 	    } else {
+-		strcpy((char*)temp,str);
++		strcpy(temp,str);
+ 	    }
+ 
+ 	    icalcomponent_add_property
+ 		(comp,
+ 		 icalproperty_vanew_xlicerror(
+-		     (char*)temp,
++		     temp,
+ 		     icalparameter_new_xlicerrortype(
+ 			 ICAL_XLICERRORTYPE_MIMEPARSEERROR),
+ 		     0));  
+Index: libical/icalparameter.c
+===================================================================
+RCS file: /home/kde/kdepim/libical/src/libical/icalparameter.c,v
+retrieving revision 1.4
+diff -u -r1.4 icalparameter.c
+--- kdepim/libical/src/libical/icalparameter.c	11 Apr 2001 15:37:32 -0000	1.4
++++ kdepim/libical/src/libical/icalparameter.c	15 Dec 2002 21:58:11 -0000
+@@ -257,7 +257,7 @@
+     /* Now, copy the buffer to a tmp_buffer, which is safe to give to
+        the caller without worring about de-allocating it. */
+     
+-    out_buf = icalmemory_tmp_buffer(strlen(buf));
++    out_buf = icalmemory_tmp_buffer(strlen(buf)+1);
+     strcpy(out_buf, buf);
+ 
+     icalmemory_free_buffer(buf);
+Index: libical/sspm.c
+===================================================================
+RCS file: /home/kde/kdepim/libical/src/libical/sspm.c,v
+retrieving revision 1.4
+diff -u -r1.4 sspm.c
+--- kdepim/libical/src/libical/sspm.c	11 Apr 2001 15:37:32 -0000	1.4
++++ kdepim/libical/src/libical/sspm.c	15 Dec 2002 21:58:12 -0000
+@@ -948,7 +948,8 @@
+ 		
+ 		assert(strlen(buf) < BUF_SIZE);
+ 		
+-		strcpy(header_lines[current_line],buf);
++		strncpy(header_lines[current_line],buf,BUF_SIZE);
++		header_lines[current_line][BUF_SIZE-1] = '\0';
+ 		
+ 		break;
+ 	    }
+@@ -984,7 +984,7 @@
+ 		
+ 		assert( strlen(buf_start) + strlen(last_line) < BUF_SIZE);
+ 		
+-		strcat(last_line,buf_start);
++		strncat(last_line,buf_start, BUF_SIZE-strlen(last_line)-1);
+ 		
+ 		break;
+ 	    }
+Index: libicalvcal/vobject.c
+===================================================================
+RCS file: /home/kde/kdepim/libical/src/libicalvcal/vobject.c,v
+retrieving revision 1.1
+diff -u -r1.1 vobject.c
+--- kdepim/libical/src/libicalvcal/vobject.c	1 Jan 2001 15:37:08 -0000	1.1
++++ kdepim/libical/src/libicalvcal/vobject.c	15 Dec 2002 21:58:12 -0000
+@@ -1247,9 +1247,10 @@
+     char buf2[256];
+     strcpy(buf1,NAME_OF(o));
+     while ((o=isAPropertyOf(o,VCGroupingProp)) != 0) {
+-	strcpy(buf2,STRINGZ_VALUE_OF(o));
+-	strcat(buf2,".");
+-	strcat(buf2,buf1);
++	strncpy(buf2,STRINGZ_VALUE_OF(o), sizeof(buf2));
++	buf2[sizeof(buf2)-1] = '\0';
++	strncat(buf2,".", sizeof(buf2)-strlen(buf2)-1);
++	strncat(buf2,buf1, sizeof(buf2)-strlen(buf2)-1);
+ 	strcpy(buf1,buf2);
+ 	}
+     appendsOFile(fp,buf1);
+Index: versit/vobject.c
+===================================================================
+RCS file: /home/kde/kdepim/libkcal/versit/vobject.c,v
+retrieving revision 1.1
+diff -u -r1.1 vobject.c
+--- kdepim/libkcal/versit/vobject.c	18 Apr 2001 23:28:58 -0000	1.1
++++ kdepim/libkcal/versit/vobject.c	15 Dec 2002 21:52:11 -0000
+@@ -1226,9 +1226,10 @@
+     char buf2[256];
+     strcpy(buf1,NAME_OF(o));
+     while ((o=isAPropertyOf(o,VCGroupingProp)) != 0) {
+-	strcpy(buf2,STRINGZ_VALUE_OF(o));
+-	strcat(buf2,".");
+-	strcat(buf2,buf1);
++	strncpy(buf2,STRINGZ_VALUE_OF(o),sizeof(buf2));
++	buf2[sizeof(buf2)] = '\0';
++	strncat(buf2,".",sizeof(buf2)-strlen(buf2)-1);
++	strncat(buf2,buf1,sizeof(buf2)-strlen(buf2)-1);
+ 	strcpy(buf1,buf2);
+ 	}
+     appendsOFile(fp,buf1);

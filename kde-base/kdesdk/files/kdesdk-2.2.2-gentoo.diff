@@ -1,0 +1,39 @@
+--- kmtrace/ktrace.c	2001-03-13 20:16:09.000000000 +0100
++++ kmtrace/ktrace.c	2003-01-11 13:03:52.000000000 +0100
+@@ -25,14 +25,15 @@
+    or (US mail) as Mike Haertel c/o Free Software Foundation.
+ */
+ 
+-#define _LIBC
+ #define MALLOC_HOOKS
+ #define _GNU_SOURCE
+ 
+ #ifndef	_MALLOC_INTERNAL
+ #define	_MALLOC_INTERNAL
++#define _LIBC
+ #include <malloc.h>
+ #include <bits/libc-lock.h>
++#undef _LIBC
+ #endif
+ 
+ #include <dlfcn.h>
+--- poxml/GettextParser.hpp	2001-03-21 21:21:33.000000000 +0100
++++ poxml/GettextParser.hpp	2003-01-11 13:20:32.000000000 +0100
+@@ -13,6 +13,9 @@
+ #include "GettextParserTokenTypes.hpp"
+ #include "antlr/LLkParser.hpp"
+ 
++#include <string>
++using namespace std;
++
+ class GettextParser : public ANTLR_USE_NAMESPACE(antlr)LLkParser, public GettextParserTokenTypes
+  {
+ #line 1 "gettext.g"
+--- poxml/swappo.cpp	2001-05-02 12:13:59.000000000 +0200
++++ poxml/swappo.cpp	2003-01-11 13:22:38.000000000 +0100
+@@ -1,3 +1,5 @@
++#include <iostream>
++using namespace std;
+ #include "GettextParser.hpp"
+ #include <fstream>
+ #include "GettextLexer.hpp"

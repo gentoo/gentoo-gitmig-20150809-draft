@@ -1,0 +1,2385 @@
+Index: kdelibs/arts/mcop/debug.cc
+diff -u kdelibs/arts/mcop/debug.cc:1.6 kdelibs/arts/mcop/debug.cc:1.6.2.2
+--- arts/mcop/debug.cc:1.6	Wed Jul 25 12:41:35 2001
++++ arts/mcop/debug.cc	Fri Dec  6 16:12:02 2002
+@@ -1,8 +1,11 @@
+     /*
+ 
+-    Copyright (C) 2000 Stefan Westerfeld
++    Copyright (C) 2000-2002 Stefan Westerfeld
+                        stefan@space.twc.de
+ 
++	(see also below for details on the copyright of arts_strdup_printf,
++	 which is taken from GLib)
++ 
+     This library is free software; you can redistribute it and/or
+     modify it under the terms of the GNU Library General Public
+     License as published by the Free Software Foundation; either
+@@ -33,8 +36,36 @@
+ static char *messageAppName = 0;
+ static Arts::Mutex *arts_debug_mutex = 0;
+ 
++/* routines for variable length sprintf without buffer overflow (from GLib) */
++static char* arts_strdup_vprintf(const char *format, va_list args1);
++static char* arts_strdup_printf (const char *format, ...);
++
+ namespace Arts {
+ 
++static char * shell_quote(const char *s)
++{
++   char *result;
++   char *p;
++   p = result = (char *) malloc(strlen(s)*5+1);
++   while(*s)
++   {
++     if (*s == '\'')
++     {
++        *p++ = '\'';
++        *p++ = '"';
++        *p++ = *s++;
++        *p++ = '"';
++        *p++ = '\'';
++     }
++     else
++     {
++        *p++ = *s++;
++     }
++   }
++   *p = '\0';
++   return result;
++}
++
+ /*
+  * Call the graphical application to display a message, if
+  * defined. Otherwise, send to standard error. Debug messages are
+@@ -42,8 +73,9 @@
+  * Note that the external application is run in the background to
+  * avoid blocking the sound server.
+  */
+-void output_message(Debug::Level level, const char *msg) {
+-	char buff[1024];
++static void output_message(Debug::Level level, const char *msg) {
++	char *quoted_msg;
++	char *buff = 0;
+ 
+ 	/* default to text output if no message app is defined or if it is a debug message. */
+ 	if (messageAppName == 0 || !strcmp(messageAppName, "") || (level == Debug::lDebug))
+@@ -52,20 +84,27 @@
+ 		return;
+ 	}
+ 
++        quoted_msg = shell_quote(msg);
+ 	switch (level) {
+ 	  case Debug::lFatal:
+-		  sprintf(buff, "%s -e \"Sound server fatal error:\n\n%s\" &", messageAppName, msg);
++		  buff = arts_strdup_printf("%s -e 'Sound server fatal error:\n\n%s' &", messageAppName, quoted_msg);
+ 		  break;
+ 	  case Debug::lWarning:
+-		  sprintf(buff, "%s -w \"Sound server warning message:\n\n%s\" &", messageAppName, msg);
++		  buff = arts_strdup_printf("%s -w 'Sound server warning message:\n\n%s' &", messageAppName, quoted_msg);
+ 		  break;
+ 	  case Debug::lInfo:
+-		  sprintf(buff, "%s -i \"Sound server informational message:\n\n%s\" &", messageAppName, msg);
++		  buff = arts_strdup_printf("%s -i 'Sound server informational message:\n\n%s' &", messageAppName, quoted_msg);
+ 		  break;
+ 	  default:
+ 		  break; // avoid compile warning
+ 	}
++	free(quoted_msg);
++	
++	if(buff != 0)
++	{
+ 	system(buff);
++		free(buff);
++	}
+ }
+ 
+ /*
+@@ -76,7 +115,7 @@
+  * previously repeated message (if any) and reset the last message and
+  * count.
+  */
+-void display_message(Debug::Level level, const char *msg) {
++static void display_message(Debug::Level level, const char *msg) {
+ 	static char lastMsg[1024];
+ 	static Debug::Level lastLevel;
+ 	static int msgCount = 0;
+@@ -90,9 +129,10 @@
+ 	} else {
+ 		if (msgCount > 0)
+ 		{
+-			char buff[1024];
+-			sprintf(buff, "%s\n(The previous message was repeated %d times.)", lastMsg, msgCount);
++			char *buff;
++			buff = arts_strdup_printf("%s\n(The previous message was repeated %d times.)", lastMsg, msgCount);
+ 			output_message(lastLevel, buff);
++			free(buff);
+ 		}
+ 		strncpy(lastMsg, msg, 1024);
+ 		lastLevel = level;
+@@ -140,12 +180,15 @@
+ 
+ void Arts::Debug::fatal(const char *fmt, ...)
+ {
+-	char buff[1024];
++	char *buff;
+     va_list ap;
++
+     va_start(ap, fmt);
+-	vsprintf(buff, fmt, ap);
++	buff = arts_strdup_vprintf(fmt, ap);
+     va_end(ap);
++
+ 	display_message(Debug::lFatal, buff);
++	free(buff);
+ 
+ 	if(arts_debug_abort) abort();
+ 	exit(1);
+@@ -155,12 +198,15 @@
+ {
+ 	if(lWarning >= arts_debug_level)
+ 	{
+-		char buff[1024];
++		char *buff;
+ 		va_list ap;
++
+ 		va_start(ap, fmt);
+-		vsprintf(buff, fmt, ap);
++		buff = arts_strdup_vprintf(fmt, ap);
+ 		va_end(ap);
++
+ 		display_message(Debug::lWarning, buff);
++		free(buff);
+ 	}
+ }
+ 
+@@ -168,12 +214,15 @@
+ {
+ 	if(lInfo >= arts_debug_level)
+ 	{
+-		char buff[1024];
++		char *buff;
+ 		va_list ap;
++
+ 		va_start(ap, fmt);
+-		vsprintf(buff, fmt, ap);
++		buff = arts_strdup_vprintf(fmt, ap);
+ 		va_end(ap);
++
+ 		display_message(Debug::lInfo, buff);
++		free(buff);
+ 	}
+ }
+ 
+@@ -181,12 +230,15 @@
+ {
+ 	if(lDebug >= arts_debug_level)
+ 	{
+-		char buff[1024];
++		char *buff;
+ 		va_list ap;
++
+ 		va_start(ap, fmt);
+-		vsprintf(buff, fmt, ap);
++		buff = arts_strdup_vprintf(fmt, ap);
+ 		va_end(ap);
++
+ 		display_message(Debug::lDebug, buff);
++		free(buff);
+ 	}
+ }
+ 
+@@ -209,4 +261,551 @@
+ 
+ 	delete arts_debug_mutex;
+ 	arts_debug_mutex = 0;
++}
++
++/*
++ * For the sake of portability (snprintf is non-portable), what follows is an
++ * implementation of a variant g_strdup_printf, to format debug messages of
++ * an arbitary length appropriately. This is reduntant with flow/gsl/gslglib.c,
++ * however, as libmcop doesn't necessarily link against gslglib.c, this is a
++ * more-or-less complete copy.
++ */
++
++/* GLIB - Library of useful routines for C programming
++ * Copyright (C) 1995-1997  Peter Mattis, Spencer Kimball and Josh MacDonald
++ *
++ * GScanner: Flexible lexical scanner for general purpose.
++ * Copyright (C) 1997, 1998 Tim Janik
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2 of the License, or (at your option) any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with this library; if not, write to the
++ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
++ * Boston, MA 02111-1307, USA.
++ */
++
++/*
++ * Modified by the GLib Team and others 1997-2000.  See the AUTHORS
++ * file for a list of people on the GLib Team.  See the ChangeLog
++ * files for a list of changes.  These files are distributed with
++ * GLib at ftp://ftp.gtk.org/pub/gtk/. 
++ */
++
++
++#include <sys/types.h>
++#include <stdarg.h>
++#include <string.h>
++
++#define g_warning printf
++#define g_strerror strerror
++
++/*--- gslglib.h ---*/
++
++#include <limits.h>
++#include <float.h>
++#include <stddef.h>
++#include <stdarg.h>
++
++/* --- GLib typedefs --- */
++typedef void*           gpointer;
++typedef const void*     gconstpointer;
++typedef char            gchar;
++typedef unsigned char   guchar;
++typedef signed short    gshort;
++typedef unsigned short  gushort;
++typedef signed int      gint;
++typedef unsigned int    guint;
++typedef signed long     glong;
++typedef unsigned long   gulong;
++typedef float           gfloat;
++typedef double          gdouble;
++typedef size_t          gsize;
++typedef gchar           gint8;
++typedef guchar          guint8;
++typedef gshort          gint16;
++typedef gushort         guint16;
++typedef gint            gint32;
++typedef guint           guint32;
++typedef gint            gboolean;
++typedef gint32          GTime;
++#ifdef __alpha
++typedef long int                gint64;
++typedef unsigned long int       guint64;
++#else
++typedef long long int   gint64;
++typedef unsigned long long int  guint64;
++#endif
++typedef struct _GString GString;
++
++/* --- standard macros --- */
++#ifndef ABS
++#define ABS(a)          ((a) > 0 ? (a) : -(a))
++#endif
++#ifndef MAX
++#define MAX(a,b)        ((a) > (b) ? (a) : (b))
++#endif
++#ifndef MIN
++#define MIN(a,b)        ((a) < (b) ? (a) : (b))
++#endif
++#ifndef CLAMP
++#define CLAMP(v,l,h)    ((v) < (l) ? (l) : (v) > (h) ? (h) : (v))
++#endif
++#ifndef FALSE
++#define FALSE           0
++#endif
++#ifndef TRUE
++#define TRUE            (!FALSE)
++#endif
++#ifndef NULL
++#define NULL            ((void*) 0)
++#endif
++
++/* --- configure stuff!!! --- */
++#ifdef WORDS_BIGENDIAN
++#define G_BYTE_ORDER G_BIG_ENDIAN
++#else
++#define G_BYTE_ORDER G_LITTLE_ENDIAN
++#endif
++
++/* #define      GLIB_HAVE_STPCPY        1 */
++/* Define G_VA_COPY() to do the right thing for copying va_list variables.
++ * glibconfig.h may have already defined G_VA_COPY as va_copy or __va_copy.
++ */
++#if !defined (G_VA_COPY)
++#  if defined (__GNUC__) && ( defined (__PPC__) || defined (__s390__) ) && (defined (_CALL_SYSV) || defined (_WIN32) || defined (__s390__) )
++#    define G_VA_COPY(ap1, ap2)   (*(ap1) = *(ap2))
++#  elif defined (G_VA_COPY_AS_ARRAY)
++#    define G_VA_COPY(ap1, ap2)   g_memmove ((ap1), (ap2), sizeof (va_list))
++#  else /* va_list is a pointer */
++#    define G_VA_COPY(ap1, ap2)   ((ap1) = (ap2))
++#  endif /* va_list is a pointer */
++#endif /* !G_VA_COPY */
++
++/* --- glib macros --- */
++#define G_MINFLOAT      FLT_MIN
++#define G_MAXFLOAT      FLT_MAX
++#define G_MINDOUBLE     DBL_MIN
++#define G_MAXDOUBLE     DBL_MAX
++#define G_MINSHORT      SHRT_MIN
++#define G_MAXSHORT      SHRT_MAX
++#define G_MAXUSHORT     USHRT_MAX
++#define G_MININT        INT_MIN
++#define G_MAXINT        INT_MAX
++#define G_MAXUINT       UINT_MAX
++#define G_MINLONG       LONG_MIN
++#define G_MAXLONG       LONG_MAX
++#define G_MAXULONG      ULONG_MAX
++#define G_USEC_PER_SEC  1000000
++#define G_LITTLE_ENDIAN 1234
++#define G_BIG_ENDIAN    4321
++
++#define G_STRINGIFY(macro_or_string)    G_STRINGIFY_ARG (macro_or_string)
++#define G_STRINGIFY_ARG(contents)       #contents
++#if  defined __GNUC__ && !defined __cplusplus
++#  define G_STRLOC      __FILE__ ":" G_STRINGIFY (__LINE__) ":" __PRETTY_FUNCTION__ "()"
++#else
++#  define G_STRLOC      __FILE__ ":" G_STRINGIFY (__LINE__)
++#endif
++       
++/* subtract from biased_exponent to form base2 exponent (normal numbers) */
++typedef union  _GDoubleIEEE754  GDoubleIEEE754;
++typedef union  _GFloatIEEE754   GFloatIEEE754;
++#define G_IEEE754_FLOAT_BIAS    (127)
++#define G_IEEE754_DOUBLE_BIAS   (1023)
++/* multiply with base2 exponent to get base10 exponent (nomal numbers) */
++#define G_LOG_2_BASE_10         (0.30102999566398119521)
++#if G_BYTE_ORDER == G_LITTLE_ENDIAN
++union _GFloatIEEE754
++{
++  gfloat v_float;
++  struct {
++    guint mantissa : 23;
++    guint biased_exponent : 8;
++    guint sign : 1;
++  } mpn;
++};
++union _GDoubleIEEE754
++{
++  gdouble v_double;
++  struct {
++    guint mantissa_low : 32;
++    guint mantissa_high : 20;
++    guint biased_exponent : 11;
++    guint sign : 1;
++  } mpn;
++};
++#elif G_BYTE_ORDER == G_BIG_ENDIAN
++union _GFloatIEEE754
++{
++  gfloat v_float;
++  struct {
++    guint sign : 1;
++    guint biased_exponent : 8;
++    guint mantissa : 23;
++  } mpn;
++};
++union _GDoubleIEEE754
++{
++  gdouble v_double;
++  struct {
++    guint sign : 1;
++    guint biased_exponent : 11;
++    guint mantissa_high : 20;
++    guint mantissa_low : 32;
++  } mpn;
++};
++#else /* !G_LITTLE_ENDIAN && !G_BIG_ENDIAN */
++#error unknown ENDIAN type
++#endif /* !G_LITTLE_ENDIAN && !G_BIG_ENDIAN */
++
++#include <errno.h>
++#include <stdlib.h>
++#include <unistd.h>
++#include <stdio.h>
++
++#define GLIB_SIZEOF_INTMAX      (8 /* educated guess */)
++
++typedef struct
++{
++  guint min_width;
++  guint precision;
++  gboolean alternate_format, zero_padding, adjust_left, locale_grouping;
++  gboolean add_space, add_sign, possible_sign, seen_precision;
++  gboolean mod_half, mod_long, mod_extra_long;
++} PrintfArgSpec;
++
++
++static gsize
++printf_string_upper_bound (const gchar *format,
++                           gboolean     may_warn,
++                           va_list      args)
++{
++  static  gboolean honour_longs = sizeof(long) > 4 || sizeof(void*) > 4;
++  gsize len = 1;
++
++  if (!format)
++    return len;
++
++  while (*format)
++    {
++      register gchar c = *format++;
++
++      if (c != '%')
++        len += 1;
++      else /* (c == '%') */
++        {
++          PrintfArgSpec spec = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
++          gboolean seen_l = FALSE, conv_done = FALSE;
++          gsize conv_len = 0;
++          const gchar *spec_start = format;
++
++          do
++            {
++              c = *format++;
++              switch (c)
++                {
++                  GDoubleIEEE754 u_double;
++                  guint v_uint;
++                  gint v_int;
++                  const gchar *v_string;
++
++                  /* beware of positional parameters
++                   */
++                case '$':
++                  if (may_warn)
++                    g_warning (G_STRLOC ": unable to handle positional parameters (%%n$)");
++                  len += 1024; /* try adding some safety padding */
++                  break;
++
++                  /* parse flags
++                   */
++                case '#':
++                  spec.alternate_format = TRUE;
++                  break;
++                case '0':
++                  spec.zero_padding = TRUE;
++                  break;
++                case '-':
++                  spec.adjust_left = TRUE;
++                  break;
++                case ' ':
++                  spec.add_space = TRUE;
++                  break;
++                case '+':
++                  spec.add_sign = TRUE;
++                  break;
++                case '\'':
++                  spec.locale_grouping = TRUE;
++                  break;
++
++                  /* parse output size specifications
++                   */
++                case '.':
++                  spec.seen_precision = TRUE;
++                  break;
++                case '1':
++                case '2':
++                case '3':
++                case '4':
++                case '5':
++                case '6':
++                case '7':
++                case '8':
++                case '9':
++                  v_uint = c - '0';
++                  c = *format;
++                  while (c >= '0' && c <= '9')
++                    {
++                      format++;
++                      v_uint = v_uint * 10 + c - '0';
++                      c = *format;
++                    }
++                  if (spec.seen_precision)
++                    spec.precision = MAX (spec.precision, v_uint);
++                  else
++                    spec.min_width = MAX (spec.min_width, v_uint);
++                  break;
++                case '*':
++                  v_int = va_arg (args, int);
++                  if (spec.seen_precision)
++                    {
++                      /* forget about negative precision */
++                      if (v_int >= 0)
++                        spec.precision = MAX (spec.precision, (unsigned)v_int);
++                    }
++                  else
++                    {
++                      if (v_int < 0)
++                        {
++                          v_int = - v_int;
++                          spec.adjust_left = TRUE;
++                        }
++                      spec.min_width = MAX (spec.min_width, (unsigned)v_int);
++                    }
++                  break;
++
++                  /* parse type modifiers
++                   */
++                case 'h':
++                  spec.mod_half = TRUE;
++                  break;
++                case 'l':
++                  if (!seen_l)
++                    {
++                      spec.mod_long = TRUE;
++                      seen_l = TRUE;
++                      break;
++                    }
++                  /* else, fall through */
++                case 'L':
++                case 'q':
++                  spec.mod_long = TRUE;
++                  spec.mod_extra_long = TRUE;
++                  break;
++                case 'z':
++                case 'Z':
++                  if (sizeof(size_t))
++                    {
++                      spec.mod_long = TRUE;
++                      spec.mod_extra_long = TRUE;
++                    }
++                  break;
++                case 't':
++                  if (sizeof(ptrdiff_t) > 4)
++                    {
++                      spec.mod_long = TRUE;
++                      spec.mod_extra_long = TRUE;
++                    }
++                  break;
++                case 'j':
++                  if (GLIB_SIZEOF_INTMAX > 4)
++                    {
++                      spec.mod_long = TRUE;
++                      spec.mod_extra_long = TRUE;
++                    }
++                  break;
++
++                  /* parse output conversions
++                   */
++                case '%':
++                  conv_len += 1;
++                  break;
++                case 'O':
++                case 'D':
++                case 'I':
++                case 'U':
++                  /* some C libraries feature long variants for these as well? */
++                  spec.mod_long = TRUE;
++                  /* fall through */
++                case 'o':
++                  conv_len += 2;
++                  /* fall through */
++                case 'd':
++                case 'i':
++                  conv_len += 1; /* sign */
++                  /* fall through */
++                case 'u':
++                  conv_len += 4;
++                  /* fall through */
++                case 'x':
++                case 'X':
++                  spec.possible_sign = TRUE;
++                  conv_len += 10;
++                  if (spec.mod_long && honour_longs)
++                    conv_len *= 2;
++                  if (spec.mod_extra_long)
++                    conv_len *= 2;
++                  if (spec.mod_extra_long)
++                    {
++                      (void) va_arg (args, gint64);
++                    }
++                  else if (spec.mod_long)
++                    (void) va_arg (args, long);
++                  else
++                    (void) va_arg (args, int);
++                  break;
++                case 'A':
++                case 'a':
++                  /*          0x */
++                  conv_len += 2;
++                  /* fall through */
++                case 'g':
++                case 'G':
++                case 'e':
++                case 'E':
++                case 'f':
++                  spec.possible_sign = TRUE;
++                  /*          n   .   dddddddddddddddddddddddd   E   +-  eeee */
++                  conv_len += 1 + 1 + MAX (24, spec.precision) + 1 + 1 + 4;
++                  if (may_warn && spec.mod_extra_long)
++                    g_warning (G_STRLOC ": unable to handle long double, collecting double only");
++#ifdef HAVE_LONG_DOUBLE
++#error need to implement special handling for long double
++#endif
++                  u_double.v_double = va_arg (args, double);
++                  /* %f can expand up to all significant digits before '.' (308) */
++                  if (c == 'f' &&
++                      u_double.mpn.biased_exponent > 0 && u_double.mpn.biased_exponent < 2047)
++                    {
++                      gint exp = u_double.mpn.biased_exponent;
++
++                      exp -= G_IEEE754_DOUBLE_BIAS;
++                      exp = (gint)(exp * G_LOG_2_BASE_10 + 1);
++                      conv_len += ABS (exp);    /* exp can be <0 */
++                    }
++                  /* some printf() implementations require extra padding for rounding */
++                  conv_len += 2;
++                  /* we can't really handle locale specific grouping here */
++                  if (spec.locale_grouping)
++                    conv_len *= 2;
++                  break;
++                case 'C':
++                  spec.mod_long = TRUE;
++                  /* fall through */
++                case 'c':
++                  conv_len += spec.mod_long ? MB_LEN_MAX : 1;
++                  (void) va_arg (args, int);
++                  break;
++                case 'S':
++                  spec.mod_long = TRUE;
++                  /* fall through */
++                case 's':
++                  v_string = va_arg (args, char*);
++                  if (!v_string)
++                    conv_len += 8; /* hold "(null)" */
++                  else if (spec.seen_precision)
++                    conv_len += spec.precision;
++                  else
++                    conv_len += strlen (v_string);
++                  conv_done = TRUE;
++                  if (spec.mod_long)
++                    {
++                      if (may_warn)
++                        g_warning (G_STRLOC": unable to handle wide char strings");
++                      len += 1024; /* try adding some safety padding */
++                    }
++                  break;
++                case 'P': /* do we actually need this? */
++                  /* fall through */
++                case 'p':
++                  spec.alternate_format = TRUE;
++                  conv_len += 10;
++                  if (honour_longs)
++                    conv_len *= 2;
++                  /* fall through */
++                case 'n':
++                  conv_done = TRUE;
++                  (void) va_arg (args, void*);
++                  break;
++                case 'm':
++                  /* there's not much we can do to be clever */
++                  v_string = g_strerror (errno);
++                  v_uint = v_string ? strlen (v_string) : 0;
++                  conv_len += MAX (256, v_uint);
++                  break;
++
++                  /* handle invalid cases
++                   */
++                case '\000':
++                  /* no conversion specification, bad bad */
++                  conv_len += format - spec_start;
++                  break;
++                default:
++                  if (may_warn)
++                    g_warning (G_STRLOC": unable to handle `%c' while parsing format",
++                               c);
++                  break;
++                }
++              conv_done |= conv_len > 0;
++            }
++          while (!conv_done);
++          /* handle width specifications */
++          conv_len = MAX (conv_len, MAX (spec.precision, spec.min_width));
++          /* handle flags */
++          conv_len += spec.alternate_format ? 2 : 0;
++          conv_len += (spec.add_space || spec.add_sign || spec.possible_sign);
++          /* finally done */
++          len += conv_len;
++        } /* else (c == '%') */
++    } /* while (*format) */
++
++  return len;
++}
++
++static char*
++arts_strdup_vprintf (const char *format, va_list args1)
++{
++  gchar *buffer;
++  va_list args2;
++
++  G_VA_COPY (args2, args1);
++
++  buffer = (gchar *)malloc (printf_string_upper_bound (format, TRUE, args1));
++
++  vsprintf (buffer, format, args2);
++  va_end (args2);
++
++  return buffer;
++}
++
++char*
++arts_strdup_printf (const char *format, ...)
++{
++  gchar *buffer;
++  va_list args;
++
++  va_start (args, format);
++  buffer = arts_strdup_vprintf (format, args);
++  va_end (args);
++
++  return buffer;
+ }
+Index: kdelibs/dcop/dcopc.c
+diff -u kdelibs/dcop/dcopc.c:1.17 kdelibs/dcop/dcopc.c:1.17.2.1
+--- dcop/dcopc.c:1.17	Wed Apr 18 18:18:55 2001
++++ dcop/dcopc.c	Sat Dec  7 18:48:29 2002
+@@ -36,6 +36,9 @@
+ #include "dcopglobal.h"
+ #include "dcopc.h"
+ 
++
++#define BUFFER_SIZE 1024
++
+ enum {
+   DCOP_REPLY_PENDING,
+   DCOP_REPLY_OK,
+@@ -133,7 +136,11 @@
+   int length;
+   char * pos = dcop_read_int(buf, &length);
+   fprintf(stderr, "dcop_read_string: length == %d\n", length);
++
+   *output = (char *)malloc(length);
++  if (*output == NULL)
++    return pos;
++
+   memcpy(*output, pos, length);
+   return pos + length;
+ }
+@@ -215,6 +222,8 @@
+ 
+       fprintf(stderr, "dcop_process_message(): length == %ld\n", length);
+       buf = (char *)malloc(length);
++      if (buf == NULL)
++        return;
+       status = IceReadData(dcop_ice_conn, length, buf);
+       if (False == status) {
+         fprintf(stderr, "dcop_process_message(): IceReadData failed\n");
+@@ -253,6 +262,9 @@
+       fprintf(stderr, "dcop_process_message(): DCOPSend received\n");
+ 
+       buf = (char *)malloc(length);
++      if (buf == NULL)
++        return;
++
+       IceReadData(dcop_ice_conn, length, buf);
+ 
+       pos = buf;
+@@ -307,6 +319,8 @@
+ 
+   struct DCOPMsg * pMsgPtr = 0;
+ 
++  static const char sAnonymous = "anonymous";
++
+   if (0 == dcop_ice_conn) {
+     fprintf(stderr, "Try running dcop_attach(), moron\n");
+     return False;
+@@ -338,10 +352,19 @@
+    * as last field into the dcop msg header ;-)
+    */
+ 
+-  header = (char *)malloc(1024);
++  headerLength = strlen(sAnonymous) + 1 +
++                 strlen(receiving_app) + 1 +
++                 strlen(object) + 1 +
++                 strlen(function) + 1 +
++                 4*5;  /* 4 string lengths + 1 int */
++
++  header = (char *)malloc(headerLength);
++  if (header == NULL)
++    return False;
++
+   pos = header;
+ 
+-  pos = dcop_write_string(pos, "anonymous");
++  pos = dcop_write_string(pos, sAnonymous);
+   pos = dcop_write_string(pos, receiving_app);
+   pos = dcop_write_string(pos, object);
+   pos = dcop_write_string(pos, function);
+@@ -423,6 +446,8 @@
+   temp += 1024; /* Extra space for marshalling overhead */
+ 
+   outputData = (char *)malloc(temp);
++  if (outputData == NULL)
++    return False;
+ 
+   temp = 0;
+ 
+@@ -556,10 +581,16 @@
+     /* Leave room for "-pid" */
+     int len = strlen(app_name) + 64;
+     dcop_requested_name = (char *)malloc(len);
++    if (dcop_requested_name == NULL)
++      return NULL;
++
+     snprintf(dcop_requested_name, len, "%s-%ld", app_name, (long)getpid());
+   }
+ 
+   data = (char *)malloc(strlen(dcop_requested_name) + 42);
++  if (data == NULL)
++    return NULL;
++
+   pos = data;
+   pos = dcop_write_string(pos, dcop_requested_name);
+   dataLength = pos - data;
+@@ -616,6 +647,7 @@
+   return (dcop_major_opcode >= 0) ? True : False;
+ }
+ 
++
+ /***************************************************************************/
+ 
+   Bool
+@@ -628,10 +660,10 @@
+   char      * homeDir       = 0L;
+   char      * display       = 0L;
+   char      * dcopServer    = 0L;
+-  char        errBuf[1024];
+-  char        fileName[512];
+-  char        hostName[256];
+-  char        displayName[256];
++  char        errBuf[BUFFER_SIZE];
++  char        fileName[BUFFER_SIZE];
++  char        hostName[BUFFER_SIZE];
++  char        displayName[BUFFER_SIZE];
+   char      * i;
+ 
+   homeDir = getenv("HOME");
+@@ -644,7 +676,9 @@
+   if (NULL == display)
+     return False;
+ 
+-  strcpy(displayName, display);
++  strncpy(displayName, display, sizeof(displayName));
++  displayName[sizeof(displayName) - 1] = 0;
++
+   if((i = strrchr(displayName, '.')) > strrchr(displayName, ':') && i)
+       *i = '\0';
+ 
+@@ -668,9 +702,12 @@
+       return False;
+     }
+ 
+-    dcopServer = (char *)malloc(1024);
++    dcopServer = (char *)malloc(BUFFER_SIZE);
++    if (dcopServer == NULL)
++      return False;
+ 
+-    bytesRead = fread((void *)dcopServer, sizeof(char), 1024, f);
++    bytesRead = fread((void *)dcopServer, sizeof(char), BUFFER_SIZE, f);
++    dcopServer[BUFFER_SIZE - 1] = 0;
+ 
+     if (0 == bytesRead)
+       return False;
+@@ -719,7 +756,7 @@
+   int           majorVersion  = 0;
+   int           minorVersion  = 0;
+   int           status        = 0;
+-  char          errBuf[1024];
++  char          errBuf[BUFFER_SIZE];
+ 
+   status =
+     IceProtocolSetup(
+@@ -731,7 +768,7 @@
+       &(minorVersion),
+       &(vendor),
+       &(release),
+-      1024,
++      BUFFER_SIZE,
+       errBuf
+     );
+ 
+Index: kdelibs/dcop/dcopserver.cpp
+diff -u kdelibs/dcop/dcopserver.cpp:1.130 kdelibs/dcop/dcopserver.cpp:1.130.2.1
+--- dcop/dcopserver.cpp:1.130	Thu Aug  2 19:23:20 2001
++++ dcop/dcopserver.cpp	Sat Dec  7 18:48:31 2002
+@@ -475,12 +475,15 @@
+     char tempFile[PATH_MAX];
+     char *tmp;
+ 
+-    sprintf (tempFile, "%s/%sXXXXXX", path, prefix);
++    snprintf (tempFile, PATH_MAX, "%s/%sXXXXXX", path, prefix);
+     tmp = (char *) mktemp (tempFile);
+     if (tmp)
+ 	{
+ 	    char *ptr = (char *) malloc (strlen (tmp) + 1);
+-	    strcpy (ptr, tmp);
++        if (ptr != NULL)
++        {
++	        strcpy (ptr, tmp);
++        }
+ 	    return (ptr);
+ 	}
+     else
+@@ -490,7 +493,7 @@
+     char tempFile[PATH_MAX];
+     char *ptr;
+ 
+-    sprintf (tempFile, "%s/%sXXXXXX", path, prefix);
++    snprintf (tempFile, PATH_MAX, "%s/%sXXXXXX", path, prefix);
+     ptr = static_cast<char *>(malloc(strlen(tempFile) + 1));
+     if (ptr != NULL)
+ 	{
+@@ -541,7 +544,7 @@
+     FILE        *removefp = NULL;
+     const char  *path;
+     int         original_umask;
+-    char        command[256];
++    char        command[PATH_MAX + 32];
+     int         i;
+ #ifdef HAVE_MKSTEMP
+     int         fd;
+@@ -613,7 +616,7 @@
+ 
+     umask (original_umask);
+ 
+-    sprintf (command, "iceauth source %s", addAuthFile);
++    snprintf (command, PATH_MAX + 32, "iceauth source %s", addAuthFile);
+     system (command);
+ 
+     unlink(addAuthFile);
+Index: kdelibs/dcop/KDE-ICE/Xtrans.c
+diff -u kdelibs/dcop/KDE-ICE/Xtrans.c:1.2 kdelibs/dcop/KDE-ICE/Xtrans.c:1.2.2.1
+--- dcop/KDE-ICE/Xtrans.c:1.2	Mon May 14 08:32:16 2001
++++ dcop/KDE-ICE/Xtrans.c	Sat Dec  7 18:48:25 2002
+@@ -1021,7 +1021,7 @@
+ 	if (trans->flags&TRANS_ALIAS || trans->flags&TRANS_NOLISTEN)
+ 	    continue;
+ 
+-	sprintf(buffer,"%s/:%s", trans->TransName, port ? port : "");
++	snprintf(buffer, 256, "%s/:%s", trans->TransName, port ? port : "");
+ 
+ 	PRMSG (5,"MakeAllCOTSServerListeners: opening %s\n",
+ 	       buffer, 0, 0);
+@@ -1123,7 +1123,7 @@
+ 	if (trans->flags&TRANS_ALIAS || trans->flags&TRANS_NOLISTEN)
+ 	    continue;
+ 
+-	sprintf(buffer,"%s/:%s", trans->TransName, port ? port : "");
++	snprintf(buffer, 256, "%s/:%s", trans->TransName, port ? port : "");
+ 
+ 	PRMSG (5,"MakeAllCLTSServerListeners: opening %s\n",
+ 	    buffer, 0, 0);
+Index: kdelibs/dcop/KDE-ICE/Xtransutil.c
+diff -u kdelibs/dcop/KDE-ICE/Xtransutil.c:1.4 kdelibs/dcop/KDE-ICE/Xtransutil.c:1.4.2.1
+--- dcop/KDE-ICE/Xtransutil.c:1.4	Sun May  6 18:35:54 2001
++++ dcop/KDE-ICE/Xtransutil.c	Sat Dec  7 18:48:26 2002
+@@ -367,9 +367,9 @@
+ 
+ 	if (np = getnodebyaddr(saddr->sdn_add.a_addr,
+ 	    saddr->sdn_add.a_len, AF_DECnet)) {
+-	    sprintf(addrbuf, "%s:", np->n_name);
++	    snprintf(addrbuf, 256, "%s:", np->n_name);
+ 	} else {
+-	    sprintf(addrbuf, "%s:", dnet_htoa(&saddr->sdn_add));
++	    snprintf(addrbuf, 256, "%s:", dnet_htoa(&saddr->sdn_add));
+ 	}
+ 	addr = addrbuf;
+ 	break;
+Index: kdelibs/dcop/KDE-ICE/process.c
+diff -u kdelibs/dcop/KDE-ICE/process.c:1.2 kdelibs/dcop/KDE-ICE/process.c:1.2.2.1
+--- dcop/KDE-ICE/process.c:1.2	Tue Mar 13 02:36:38 2001
++++ dcop/KDE-ICE/process.c	Sat Dec  7 18:48:28 2002
+@@ -734,7 +734,7 @@
+ 	    case IceMajorOpcodeDuplicate:
+ 
+ 		prefix = "The major opcode was already used : ";
+-		errorStr = (char *) malloc (strlen (prefix) + 2);
++		errorStr = (char *) malloc (strlen (prefix) + 16);
+ 		sprintf (errorStr, "%s%d", prefix, (int) *pData);
+ 		break;
+ 
+Index: kdelibs/kdecore/kapp.cpp
+diff -u kdelibs/kdecore/kapp.cpp:1.454.2.2 kdelibs/kdecore/kapp.cpp:1.454.2.3
+--- kdecore/kapp.cpp:1.454.2.2	Sun Sep  2 21:36:47 2001
++++ kdecore/kapp.cpp	Wed Dec  5 02:42:24 2001
+@@ -2163,6 +2163,8 @@
+   int pos = dirName.findRev('/');
+   if ( pos == -1 )
+     return false;   // No path in argument. This is evil, we won't allow this
++  else if ( pos == 0 ) // don't turn e.g. /root into an empty string
++      pos = 1;
+ 
+   dirName.truncate(pos); // strip everything starting from the last '/'
+ 
+Index: kdelibs/kdecore/kdebug.cpp
+diff -u kdelibs/kdecore/kdebug.cpp:1.97 kdelibs/kdecore/kdebug.cpp:1.97.2.2
+--- kdecore/kdebug.cpp:1.97	Sun Jul 29 14:58:58 2001
++++ kdecore/kdebug.cpp	Fri Dec  6 03:31:52 2002
+@@ -276,7 +276,7 @@
+           }
+         case 3: // syslog
+           {
+-	      syslog( nPriority, data);
++	      syslog( nPriority, "%s", data);
+           }
+         case 4: // nothing
+           {
+@@ -448,7 +448,8 @@
+     char buf[4096];
+     va_list arguments;
+     va_start( arguments, format );
+-    vsprintf( buf, format, arguments );
++    buf[sizeof(buf)-1] = '\0';
++    vsnprintf( buf, sizeof(buf)-1, format, arguments );
+     va_end(arguments);
+     *this << buf;
+     return *this;
+Index: kdelibs/kdecore/ktempfile.cpp
+diff -u kdelibs/kdecore/ktempfile.cpp:1.19.2.1 kdelibs/kdecore/ktempfile.cpp:1.19.2.2
+--- kdecore/ktempfile.cpp:1.19.2.1	Sat Aug 11 07:12:17 2001
++++ kdecore/ktempfile.cpp	Mon Dec  3 01:48:46 2001
+@@ -90,6 +90,9 @@
+ KTempFile::create(const QString &filePrefix, const QString &fileExtension,
+ 		  int mode)
+ {
++   // make sure the random seed is randomized
++   (void) KApplication::random();
++
+    QCString ext = QFile::encodeName(fileExtension);
+    QCString nme = QFile::encodeName(filePrefix) + "XXXXXX" + ext;
+    if((mFd = mkstemps(nme.data(), ext.length())) < 0)
+Index: kdelibs/kdecore/netsupp.cpp
+diff -u kdelibs/kdecore/netsupp.cpp:1.21.2.3 kdelibs/kdecore/netsupp.cpp:1.21.2.4
+--- kdecore/netsupp.cpp:1.21.2.3	Wed Oct 24 21:43:45 2001
++++ kdecore/netsupp.cpp	Fri Dec 13 11:18:08 2002
+@@ -926,7 +926,7 @@
+ 
+       if (servlen && serv != NULL)
+ 	*serv = '\0';
+-      if (host == NULL || hostlen < strlen(s._sun->sun_path))
++      if (host != NULL && hostlen > strlen(s._sun->sun_path))
+ 	strcpy(host, s._sun->sun_path);
+ 
+       return 0;
+@@ -1008,7 +1008,7 @@
+     {
+       sprintf(buf2, "%u.%u.%u.%u", data[0], data[1], data[2], data[3]);
+ 
+-      if (len >= strlen(buf2))
++      if (len > strlen(buf2))
+ 	{
+ 	  strcpy(buf, buf2);
+ 	  return buf;
+@@ -1077,7 +1077,7 @@
+ 	    }
+ 	}
+ 
+-      if (strlen(buf2) <= len)
++      if (strlen(buf2) < len)
+ 	{
+ 	  strcpy(buf, buf2);
+ 	  return buf;
+Index: kdelibs/kdecore/tests/kmemtest.cpp
+diff -u kdelibs/kdecore/tests/kmemtest.cpp:1.1 kdelibs/kdecore/tests/kmemtest.cpp:1.1.6.1
+--- kdecore/tests/kmemtest.cpp:1.1	Tue Feb 22 16:06:49 2000
++++ kdecore/tests/kmemtest.cpp	Sat Dec  7 18:48:32 2002
+@@ -165,9 +165,9 @@
+      char buf[200];
+   
+      if (argc >=3)
+-        sprintf(buf, "%s &", argv[2]);
++        snprintf(buf, 200, "%s &", argv[2]);
+      else
+-        sprintf(buf, "%s &", argv[0]);
++        snprintf(buf, 200, "%s &", argv[0]);
+ 
+      printf("Waiting for memory usage to settle down....\n");
+      long prev = showTotalMem();
+Index: kdelibs/kdeprint/lpd/make_driver_db_lpd.c
+diff -u kdelibs/kdeprint/lpd/make_driver_db_lpd.c:1.1 kdelibs/kdeprint/lpd/make_driver_db_lpd.c:1.1.2.1
+--- kdeprint/lpd/make_driver_db_lpd.c:1.1	Mon Apr  2 15:21:07 2001
++++ kdeprint/lpd/make_driver_db_lpd.c	Sat Dec  7 18:48:33 2002
+@@ -82,7 +82,7 @@
+ 			c2 = strchr(c+12,'}');
+ 			if (c1 && c2)
+ 			{
+-				char 	model[256], manuf[256];
++				char 	model[BUFFER_SIZE], manuf[BUFFER_SIZE];
+ 				char 	*c3;
+ 
+ 				*c2 = 0;
+Index: kdelibs/kdeprint/management/kmwlpd.cpp
+diff -u kdelibs/kdeprint/management/kmwlpd.cpp:1.11 kdelibs/kdeprint/management/kmwlpd.cpp:1.11.2.1
+--- kdeprint/management/kmwlpd.cpp:1.11	Fri Aug  3 21:59:21 2001
++++ kdeprint/management/kmwlpd.cpp	Sat Dec  7 18:48:34 2002
+@@ -122,12 +122,15 @@
+ 	}
+ 
+ 	char	buf[1024] = {0};
+-	int	n;
++	int	n, tot(1);
+ kdDebug() << "reading" << endl;
+ 	while ((n=::read(sock,res,63)) > 0)
+ 	{
+ 		res[n] = 0;
++		tot += n;
+ kdDebug() << buf << endl;
++		if (tot >= 1024)
++			break;
+ 		strncat(buf,res,1023);
+ 	}
+ 	close(sock);
+Index: kdelibs/kdeprint/management/smbview.cpp
+diff -u kdelibs/kdeprint/management/smbview.cpp:1.3 kdelibs/kdeprint/management/smbview.cpp:1.3.2.1
+--- kdeprint/management/smbview.cpp:1.3	Mon Apr  2 21:01:00 2001
++++ kdeprint/management/smbview.cpp	Fri Dec 13 12:23:22 2002
+@@ -19,6 +19,9 @@
+ 
+ #include "smbview.h"
+ 
++#include <config.h>
++#include <stdlib.h>
++
+ #include <kprocess.h>
+ #include <qheader.h>
+ #include <qapplication.h>
+@@ -117,20 +120,36 @@
+ {
+ 	if (on && item->childCount() == 0)
+ 	{
++		QCString oldpw = getenv("PASSWD");
++		QCString olduser = getenv("USER");
++		QCString pw = m_password.local8Bit();
++		setenv("PASSWD", pw, 1);
++		QCString user = m_login.local8Bit();
++		setenv("USER", user, 1);
+ 		if (item->depth() == 0)
+ 		{ // opening group
+ 			m_current = item;
+-			QString	cmd = QString("nmblookup -M %1 -S | grep '<20>' | awk '{print $1}' | xargs -iserv_name smbclient -L serv_name -W %2 %3").arg(item->text(0)).arg(item->text(0)).arg(smbPasswordString(m_login,m_password));
++			QString	cmd = QString("nmblookup -M %1 -S | grep '<20>' | awk '{print $1}' | xargs -iserv_name ").arg(KShellProcess::quote(item->text(0)));
++			cmd += QString("smbclient -L serv_name -N -W %1").arg(KShellProcess::quote(item->text(0)));
+ 			m_proc->setExecutable(cmd);
+ 			startProcess(ServerListing);
+ 		}
+ 		else if (item->depth() == 1)
+ 		{ // opening server
+ 			m_current = item;
+-			QString	cmd = QString("smbclient -L %1 -W %2 %3").arg(item->text(0)).arg(item->parent()->text(0)).arg(smbPasswordString(m_login,m_password));
++			QString	cmd = QString("smbclient -L %1 ").arg(KShellProcess::quote(item->text(0)));
++			cmd += QString("-N -W %1").arg(KShellProcess::quote(item->parent()->text(0)));
+ 			m_proc->setExecutable(cmd);
+ 			startProcess(ShareListing);
+ 		}
++		if (oldpw.isNull())
++		   unsetenv("PASSWD");
++		else
++		   setenv("PASSWD", oldpw, 1);
++		if (olduser.isNull())
++		   unsetenv("USER");
++		else
++		   setenv("USER", olduser, 1);
+ 	}
+ 	QListView::setOpen(item,on);
+ }
+Index: kdelibs/kdoctools/meinproc.cpp
+diff -u kdelibs/kdoctools/meinproc.cpp:1.20.2.2 kdelibs/kdoctools/meinproc.cpp:1.20.2.3
+--- kdoctools/meinproc.cpp:1.20.2.2	Fri Nov  9 08:50:49 2001
++++ kdoctools/meinproc.cpp	Fri Dec  6 18:07:49 2002
+@@ -24,6 +24,7 @@
+ #include <kdebug.h>
+ #include <qtextcodec.h>
+ #include <qfileinfo.h>
++#include <kprocess.h>
+ 
+ extern int xmlLoadExtDtdDefaultValue;
+ 
+@@ -145,7 +146,11 @@
+                 exe = locate( "exe", "xmllint" );
+         }
+         if ( !::access( QFile::encodeName( exe ), X_OK ) ) {
+-            FILE *xmllint = popen( QString( exe + " --catalogs --valid --noout %1 2>&1" ).arg( file.fileName() ).local8Bit().data(), "r");
++            QString cmd = exe;
++            cmd += " --catalogs --valid --noout ";
++            cmd += KShellProcess::quote(file.fileName());
++            cmd += " 2>&1";
++            FILE *xmllint = popen( QFile::encodeName( cmd ), "r");
+             bool noout = true;
+             while ( !feof( xmllint ) ) {
+                 int c;
+Index: kdelibs/kdoctools/xslt.cpp
+diff -u kdelibs/kdoctools/xslt.cpp:1.41.2.2 kdelibs/kdoctools/xslt.cpp:1.41.2.4
+--- kdoctools/xslt.cpp:1.41.2.2	Fri Nov  9 08:50:49 2001
++++ kdoctools/xslt.cpp	Wed Dec 11 14:09:47 2002
+@@ -95,7 +95,9 @@
+     /* if (contents.left(5) != "<?xml") {
+         fprintf(stderr, "xmlizer\n");
+         INFO(i18n("XMLize document"));
+-        FILE *p = popen(QString::fromLatin1("xmlizer %1").arg(pat).latin1(), "r");
++        QString cmd = "xmlizer ";
++        cmd += KProcess::quote(pat);
++        FILE *p = popen(QFile::encodeName(cmd), "r");
+         xmlFile.open(IO_ReadOnly, p);
+         char buffer[5001];
+         contents.truncate(0);
+@@ -403,12 +405,16 @@
+         for ( uint i = 0; i < len; i++ ) {
+             QCString test = locale->fromUnicode( part.mid( i, 1 ) );
+             if ( locale->toUnicode( test ) == part.mid( i, 1 ) ) {
++                if (buffer_len + test.length() + 1 > sizeof(buffer))
++                   break;
+                 strcpy( buffer + buffer_len, test.data() );
+                 buffer_len += test.length();
+             } else {
+                 QString res;
+                 res.sprintf( "&#%d;", part.at( i ).unicode() );
+                 test = locale->fromUnicode( res );
++                if (buffer_len + test.length() + 1 > sizeof(buffer))
++                   break;
+                 strcpy( buffer + buffer_len, test.data() );
+                 buffer_len += test.length();
+             }
+Index: kdelibs/khtml/html/html_baseimpl.cpp
+diff -u kdelibs/khtml/html/html_baseimpl.cpp:1.125.2.2 kdelibs/khtml/html/html_baseimpl.cpp:1.125.2.3
+--- khtml/html/html_baseimpl.cpp:1.125.2.2	Fri Nov  2 14:44:05 2001
++++ khtml/html/html_baseimpl.cpp	Fri Nov 30 07:24:07 2001
+@@ -272,7 +272,7 @@
+     while ((part = part->parentPart()))
+         depth++;
+ 
+-    if (depth > 6 || url.isNull()) {
++    if (depth > 6) {
+         style()->setDisplay( NONE );
+         return;
+     }
+@@ -309,6 +309,7 @@
+       kdDebug( 6030 ) << "creating frame name: " << name.string() << endl;
+     }
+ 
++    if (!url.isNull())
+     w->part()->requestFrame( renderFrame, url.string(), name.string() );
+ 
+     HTMLElementImpl::attach();
+Index: kdelibs/khtml/html/html_imageimpl.cpp
+diff -u kdelibs/khtml/html/html_imageimpl.cpp:1.104.2.1 kdelibs/khtml/html/html_imageimpl.cpp:1.104.2.2
+--- khtml/html/html_imageimpl.cpp:1.104.2.1	Thu Oct 18 05:00:07 2001
++++ khtml/html/html_imageimpl.cpp	Tue Jun 18 17:57:28 2002
+@@ -462,7 +462,7 @@
+         int y1 = coords->at(3)->minWidth(height_);
+         region = QRegion(x0,y0,x1-x0,y1-y0);
+     }
+-    else /*if (shape==Default || shape == Unknown)*/ {
++    else if (shape==Default) {
+         //cout << "default/unknown" << endl;
+         region = QRegion(0,0,width_,height_);
+     }
+Index: kdelibs/khtml/html/htmltokenizer.cpp
+diff -u kdelibs/khtml/html/htmltokenizer.cpp:1.193.2.6 kdelibs/khtml/html/htmltokenizer.cpp:1.193.2.7
+--- khtml/html/htmltokenizer.cpp:1.193.2.6	Tue Nov  6 00:33:38 2001
++++ khtml/html/htmltokenizer.cpp	Mon Nov 26 17:37:25 2001
+@@ -281,7 +281,7 @@
+     while ( src.length() ) {
+         checkScriptBuffer();
+         unsigned char ch = src->latin1();
+-        if ( !scriptCodeResync && ch == '-' && scriptCodeSize >= 3 && !src.escaped() && QConstString( scriptCode+scriptCodeSize-3, 3 ).string() == "<!-" ) {
++        if ( !scriptCodeResync && !textarea && ch == '-' && scriptCodeSize >= 3 && !src.escaped() && QConstString( scriptCode+scriptCodeSize-3, 3 ).string() == "<!-" ) {
+             comment = true;
+             parseComment( src );
+             continue;
+Index: kdelibs/kimgio/eps.cpp
+diff -u kdelibs/kimgio/eps.cpp:1.14 kdelibs/kimgio/eps.cpp:1.14.2.1
+--- kimgio/eps.cpp:1.14	Mon Jul  9 22:05:21 2001
++++ kimgio/eps.cpp	Fri Dec  6 12:37:43 2002
+@@ -24,7 +24,6 @@
+ {
+ 	int ret = FALSE;
+         char buf[BUFLEN+1];
+-        char dummy[BUFLEN+1];
+ 
+ 	while (imageio->ioDevice()->readLine(buf, BUFLEN) != -1)
+         {
+@@ -33,7 +32,7 @@
+ 			// Some EPS files have non-integer values for the bbox
+ 			// We don't support that currently, but at least we parse it
+ 			float _x1, _y1, _x2, _y2;
+-			if ( sscanf (buf, "%s %f %f %f %f", dummy,
++                        if ( sscanf (buf, "%*s %f %f %f %f", 
+ 				&_x1, &_y1, &_x2, &_y2) == 5) {
+ 				*x1=(int)_x1; *y1=(int)_y1; *x2=(int)_x2; *y2=(int)_y2;
+ 				ret = TRUE;
+@@ -152,7 +151,7 @@
+   QFile	inFile(tmpFile.name());
+   QString szBoxInfo;
+ 
+-  szBoxInfo.sprintf("%sBoundingBox: 0 0 %d %d\n", "%%",
++  szBoxInfo.sprintf("%%%%BoundingBox: 0 0 %d %d\n", 
+                     imageio->image().width(),
+                     imageio->image().height());
+ 
+Index: kdelibs/kimgio/netpbm.cpp
+diff -u kdelibs/kimgio/netpbm.cpp:1.2 kdelibs/kimgio/netpbm.cpp:1.2.6.1
+--- kimgio/netpbm.cpp:1.2	Mon Mar 27 22:49:18 2000
++++ kimgio/netpbm.cpp	Sat Dec  7 16:27:03 2002
+@@ -12,30 +12,31 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <qimage.h>
+-
+-#define CMDBUFLEN     4096
++#include <qfile.h>
++#include <kprocess.h>
++#include <ktempfile.h>
+ 
+ //////
+ // the real filter.
+ //
+ 
+-void import_graphic (char *filter, QImageIO *image)
++void import_graphic (const char *filter, QImageIO *image)
+ {
+-  char * tmpFileName;
+   QImage myimage;
+ 
+-  char cmdBuf [CMDBUFLEN];
+-
+-  tmpFileName = tmpnam(NULL);
++  KTempFile tmp;
++  tmp.close();
+ 
+-  sprintf (cmdBuf, "%s %s > %s", filter, image->fileName(), tmpFileName);
+-//  printf (cmdBuf);
+-//  fflush (stdout);
++  QString cmd = filter;
++  cmd += " ";
++  cmd += KShellProcess::quote(image->fileName());
++  cmd += " > ";
++  cmd += KShellProcess::quote(tmp.name());
+ 
+-  system (cmdBuf);
+-  myimage.load (tmpFileName);
++  system (QFile::encodeName(cmd));
++  myimage.load (tmp.name());
+ 
+-  unlink (tmpFileName);
++  tmp.unlink();
+ 
+   image->setImage (myimage);
+   image->setStatus (0);
+Index: kdelibs/kinit/lnusertemp.c
+diff -u kdelibs/kinit/lnusertemp.c:1.7 kdelibs/kinit/lnusertemp.c:1.7.2.1
+--- kinit/lnusertemp.c:1.7	Wed Mar 14 20:22:29 2001
++++ kinit/lnusertemp.c	Sat Dec  7 18:48:35 2002
+@@ -109,8 +109,8 @@
+      return 1;
+   }
+ 
+-  strcpy(user_tmp_dir, tmp_prefix);
+-  strcat(user_tmp_dir, pw_ent->pw_name);
++  strncpy(user_tmp_dir, tmp_prefix, PATH_MAX);
++  strncat(user_tmp_dir, pw_ent->pw_name, PATH_MAX - strlen(tmp_prefix));
+ 
+   if (!kde_home || !kde_home[0])
+   {
+@@ -130,9 +130,9 @@
+         exit(255);
+      }
+      kde_home++;
+-     strcat(kde_tmp_dir, home_dir);
++     strncpy(kde_tmp_dir, home_dir, PATH_MAX);
+   }
+-  strcat(kde_tmp_dir, kde_home);
++  strncat(kde_tmp_dir, kde_home, PATH_MAX - strlen(kde_tmp_dir));
+ 
+   /** Strip trailing '/' **/
+   if ( kde_tmp_dir[strlen(kde_tmp_dir)-1] == '/')
+@@ -148,7 +148,7 @@
+      return 1;
+   }  
+ 
+-  strcat(kde_tmp_dir, kde_prefix);
++  strncat(kde_tmp_dir, kde_prefix, PATH_MAX - strlen(kde_tmp_dir));
+   if (gethostname(kde_tmp_dir+strlen(kde_tmp_dir), PATH_MAX - strlen(kde_tmp_dir) - 1) != 0)
+   {
+      perror("Aborting. Could not determine hostname: ");
+@@ -168,7 +168,7 @@
+      result = create_link(kde_tmp_dir, user_tmp_dir);
+      if (result == 0) return 0; /* Success */
+      unlink(kde_tmp_dir);
+-     strcat(user_tmp_dir, "XXXXXX");
++     strncat(user_tmp_dir, "XXXXXX", PATH_MAX - strlen(user_tmp_dir));
+      mktemp(user_tmp_dir);
+      return create_link(kde_tmp_dir, user_tmp_dir);
+   }
+@@ -194,7 +194,7 @@
+      result = create_link(kde_tmp_dir, user_tmp_dir);
+      if (result == 0) return 0; /* Success */
+      unlink(kde_tmp_dir);
+-     strcat(user_tmp_dir, "XXXXXX");
++     strncat(user_tmp_dir, "XXXXXX", PATH_MAX - strlen(user_tmp_dir));
+      mktemp(user_tmp_dir);
+      return create_link(kde_tmp_dir, user_tmp_dir);
+      return 1;
+@@ -202,7 +202,7 @@
+   result = check_tmp_dir(tmp_buf);
+   if (result == 0) return 0; /* Success */
+   unlink(kde_tmp_dir);
+-  strcat(user_tmp_dir, "XXXXXX");
++  strncat(user_tmp_dir, "XXXXXX", PATH_MAX - strlen(user_tmp_dir));
+   mktemp(user_tmp_dir);
+   return create_link(kde_tmp_dir, user_tmp_dir);
+ }
+Index: kdelibs/kinit/setproctitle.cpp
+diff -u kdelibs/kinit/setproctitle.cpp:1.6 kdelibs/kinit/setproctitle.cpp:1.6.4.2
+--- kinit/setproctitle.cpp:1.6	Sun Feb  4 01:35:48 2001
++++ kinit/setproctitle.cpp	Sat Dec  7 19:27:51 2002
+@@ -35,7 +35,6 @@
+ # define _PATH_KMEM	"/dev/kmem"
+ #endif
+ 
+-#define newstr(s)	strcpy((char*)malloc(strlen(s) + 1), s)
+ #define SPACELEFT(buf, ptr)	(sizeof buf - ((ptr) - buf))
+ 
+ 
+@@ -143,8 +142,13 @@
+ 	for (i = 0; envp[i] != NULL; i++)
+ 		envpsize += strlen(envp[i]) + 1;
+ 	environ = (char **) malloc(sizeof (char *) * (i + 1));
++    if (environ == NULL)
++        return;
++
+ 	for (i = 0; envp[i] != NULL; i++)
+-		environ[i] = newstr(envp[i]);
++    {
++	environ[i] = strdup(envp[i]);
++    }
+ 	environ[i] = NULL;
+ 
+ 	/*
+Index: kdelibs/kinit/wrapper.c
+diff -u kdelibs/kinit/wrapper.c:1.22 kdelibs/kinit/wrapper.c:1.22.2.2
+--- kinit/wrapper.c:1.22	Fri Jul 13 13:16:19 2001
++++ kinit/wrapper.c	Fri Dec 13 11:23:21 2002
+@@ -38,6 +38,7 @@
+ #include <unistd.h>
+ #include <pwd.h>
+ #include <signal.h>
++#include <limits.h>
+ 
+ extern char **environ;
+ 
+@@ -53,6 +54,9 @@
+       display = ":0";
+    }
+    result = malloc(strlen(display)+1);
++   if (result == NULL)
++      return NULL;
++
+    strcpy(result, display);
+    screen = strrchr(result, '.');
+    colon = strrchr(result, ':');
+@@ -115,12 +119,12 @@
+   int s;
+   struct sockaddr_un server;
+ #define MAX_SOCK_FILE 255
+-  char sock_file[MAX_SOCK_FILE];
++  char sock_file[MAX_SOCK_FILE + 1];
+   const char *home_dir = getenv("HOME");
+   const char *kde_home = getenv("KDEHOME");
+   char *display;
+ 
+-  sock_file[0] = 0;
++  sock_file[0] = sock_file[MAX_SOCK_FILE] = 0;
+ 
+   if (!kde_home || !kde_home[0])
+   {
+@@ -140,15 +144,15 @@
+         exit(255);
+      }
+      kde_home++;
+-     strcat(sock_file, home_dir);
++     strncpy(sock_file, home_dir, MAX_SOCK_FILE);
+   }
+-  strcat(sock_file, kde_home);
++  strncat(sock_file, kde_home, MAX_SOCK_FILE - strlen(sock_file));
+ 
+   /** Strip trailing '/' **/
+   if ( sock_file[strlen(sock_file)-1] == '/')
+      sock_file[strlen(sock_file)-1] = 0;
+   
+-  strcat(sock_file, "/socket-");
++  strncat(sock_file, "/socket-", MAX_SOCK_FILE - strlen(sock_file));
+   if (gethostname(sock_file+strlen(sock_file), MAX_SOCK_FILE - strlen(sock_file) - 1) != 0)
+   {
+      perror("Aborting. Could not determine hostname: ");
+@@ -157,7 +161,13 @@
+ 
+   /* append $DISPLAY */
+   display = getDisplay();
+-  if (strlen(sock_file)+strlen(display)+2 > MAX_SOCK_FILE)
++  if (display == NULL)
++  {
++     fprintf(stderr, "Error: Could not determine display.\n");
++     return -1;
++  }
++
++  if (strlen(sock_file)+strlen(display)+strlen("/kdeinit-")+2 > MAX_SOCK_FILE)
+   {
+      fprintf(stderr, "Aborting. Socket name will be too long.\n");
+      exit(255);
+@@ -401,6 +411,11 @@
+    write_socket(sock, (char *) &header, sizeof(header));
+ 
+    buffer = (char *) malloc(size);
++   if (buffer == NULL)
++   {
++        fprintf(stderr, "Error: malloc() failed.");
++        exit(255);
++   }
+    p = buffer;
+       
+    memcpy(p, &arg_count, sizeof(arg_count));
+@@ -472,6 +487,11 @@
+    {
+       long pid;
+       buffer = (char *) malloc(header.arg_length);
++      if (buffer == NULL)
++      {
++          fprintf(stderr, "Error: malloc() failed\n");
++          exit(255);
++      }
+       read_socket(sock, buffer, header.arg_length);
+       pid = *((long *) buffer);
+       if( !kwrapper ) /* kwrapper shouldn't print any output */
+Index: kdelibs/kio/job.cpp
+diff -u kdelibs/kio/job.cpp:1.261.2.6 kdelibs/kio/job.cpp:1.261.2.8
+--- kio/job.cpp:1.261.2.6	Fri Oct 19 22:09:57 2001
++++ kio/job.cpp	Tue Jan 22 11:39:10 2002
+@@ -2588,11 +2588,18 @@
+             break;
+         case STATE_RENAMING: // We were trying to rename a directory
+         {
+-            bool err = job->error() != 0;
++            int err = job->error();
+             subjobs.remove( job );
+             assert ( subjobs.isEmpty() );
+             if ( err )
+             {
++                // Only try copy+del if the reason for not renaming was "unsupported" (which includes EXDEV)
++                // One case where we really don't want to go to copy+del is renaming 'a' to 'A' on a FAT partition
++                if ( err != KIO::ERR_UNSUPPORTED_ACTION )
++                {
++                    Job::slotResult( job ); // will set the error and emit result(this)
++                    return;
++                }
+                 kdDebug(7007) << "Couldn't rename, starting listing, for copy and del" << endl;
+                 startListing( *m_currentStatSrc );
+             }
+@@ -2863,59 +2870,87 @@
+     //kdDebug(7007) << "deleteNextFile" << endl;
+     if ( !files.isEmpty() || !symlinks.isEmpty() )
+     {
+-        // Take first file to delete out of list
+-        KURL::List::Iterator it = files.begin();
+-        bool isLink = false;
+-        if ( it == files.end() ) // No more files
+-        {
+-            it = symlinks.begin(); // Pick up a symlink to delete
+-            isLink = true;
+-        }
+         SimpleJob *job;
+-        // Use shredding ?
+-        if ( m_shred && (*it).isLocalFile() && !isLink )
+-        {
+-            // KShred your KTie
+-            KIO_ARGS << int(3) << (*it).path();
+-            job = KIO::special(KURL("file:/"), packedArgs, false /*no GUI*/);
+-            Scheduler::scheduleJob(job);
+-            m_currentURL=(*it);
+-            //emit deleting( this, *it );
+-            connect( job, SIGNAL( processedSize( KIO::Job*, unsigned long ) ),
+-                     this, SLOT( slotProcessedSize( KIO::Job*, unsigned long ) ) );
+-        } else
+-        {
+-            // Normal deletion
+-            job = KIO::file_delete( *it, false /*no GUI*/);
+-            Scheduler::scheduleJob(job);
+-            m_currentURL=(*it);
+-            //emit deleting( this, *it );
+-        }
+-        if ( isLink )
+-           symlinks.remove(it);
+-        else
+-           files.remove(it);
+-        addSubjob(job);
+-    } else
+-    {
+-        state = STATE_DELETING_DIRS;
+-        deleteNextDir();
++        do {
++            // Take first file to delete out of list
++            KURL::List::Iterator it = files.begin();
++            bool isLink = false;
++            if ( it == files.end() ) // No more files
++            {
++                it = symlinks.begin(); // Pick up a symlink to delete
++                isLink = true;
++            }
++            // Use shredding ?
++            if ( m_shred && (*it).isLocalFile() && !isLink )
++            {
++                // KShred your KTie
++                KIO_ARGS << int(3) << (*it).path();
++                job = KIO::special(KURL("file:/"), packedArgs, false /*no GUI*/);
++                Scheduler::scheduleJob(job);
++                m_currentURL=(*it);
++                connect( job, SIGNAL( processedSize( KIO::Job*, KIO::filesize_t ) ),
++                         this, SLOT( slotProcessedSize( KIO::Job*, KIO::filesize_t ) ) );
++            } else
++            {
++                // Normal deletion
++                // If local file, try do it directly
++                if ( (*it).isLocalFile() && unlink( QFile::encodeName((*it).path()) ) == 0 ) {
++                    job = 0;
++                    m_processedFiles++;
++                    if ( m_processedFiles % 300 == 0 ) { // update progress info every 300 files
++                        m_currentURL = *it;
++                        slotReport();
++                    }
++                } else
++                { // if remote - or if unlink() failed (we'll use the job's error handling in that case)
++                    job = KIO::file_delete( *it, false /*no GUI*/);
++                    Scheduler::scheduleJob(job);
++                    m_currentURL=(*it);
++                }
++            }
++            if ( isLink )
++                symlinks.remove(it);
++            else
++                files.remove(it);
++            if ( job ) {
++                addSubjob(job);
++                return;
++            }
++            // loop only if direct deletion worked (job=0) and there is something else to delete
++        } while (!job && (!files.isEmpty() || !symlinks.isEmpty()));
+     }
++    state = STATE_DELETING_DIRS;
++    deleteNextDir(); 
+ }
+ 
+ void DeleteJob::deleteNextDir()
+ {
+     if ( !dirs.isEmpty() ) // some dirs to delete ?
+     {
+-        // Take first dir to delete out of list - last ones first !
+-        KURL::List::Iterator it = dirs.fromLast();
+-        SimpleJob *job = KIO::rmdir( *it );
+-        Scheduler::scheduleJob(job);
+-        dirs.remove(it);
+-        addSubjob( job );
++        do {
++            // Take first dir to delete out of list - last ones first !
++            KURL::List::Iterator it = dirs.fromLast();
++            // If local dir, try to rmdir it directly
++            if ( (*it).isLocalFile() && ::rmdir( QFile::encodeName((*it).path()) ) == 0 ) {
++
++                m_processedDirs++;
++                if ( m_processedDirs % 100 == 0 ) { // update progress info every 100 dirs
++                    m_currentURL = *it;
++                    slotReport();
++               }
++            } else
++            {
++                SimpleJob *job = KIO::rmdir( *it );
++                Scheduler::scheduleJob(job);
++                dirs.remove(it);
++                addSubjob( job );
++                return;
++            }
++            dirs.remove(it);
++        } while ( !dirs.isEmpty() );
+     }
+-    else // We have finished deleting
+-        startNextJob();
++    // We have finished deleting
++    startNextJob();
+ }
+ 
+ void DeleteJob::slotProcessedSize( KIO::Job*, unsigned long data_size )
+@@ -3089,9 +3124,6 @@
+       assert( subjobs.isEmpty() );
+       m_processedFiles++;
+ 
+-      /*emit processedFiles( this, m_processedFiles );
+-       if (!m_shred)
+-       emitPercent( m_processedFiles, m_totalFilesDirs );*/
+       deleteNextFile();
+       break;
+    case STATE_DELETING_DIRS:
+Index: kdelibs/kio/kdirlister.cpp
+diff -u kdelibs/kio/kdirlister.cpp:1.64 kdelibs/kio/kdirlister.cpp:1.64.2.1
+--- kio/kdirlister.cpp:1.64	Wed Jun  6 22:39:51 2001
++++ kio/kdirlister.cpp	Sun Nov 11 16:50:41 2001
+@@ -159,7 +159,8 @@
+     return;
+   }
+ 
+-  m_url = _url;
++  if ( m_url.isEmpty() || !_keep ) // Set toplevel URL if not set yet
++    m_url = _url;
+ 
+   m_bComplete = false;
+   d->urlChanged = false;
+@@ -261,15 +262,13 @@
+   {
+     job->showErrorDialog();
+ 
+-    if ( m_lstDirs.count() > 1 )
+-      emit canceled( job->url() );
++    emit canceled( job->url() );
+     if ( m_bComplete )
+       emit canceled();
+   }
+   else
+   {
+-    if ( m_lstDirs.count() > 1 )
+-      emit completed( job->url() );
++    emit completed( job->url() );
+     if ( m_bComplete )
+       emit completed();
+   }
+@@ -308,7 +307,7 @@
+ 
+     if ( name == dot )
+     {
+-      if ( !m_rootFileItem ) // only if we didn't keep the previous dir
++      if ( !m_rootFileItem && url == m_url ) // only if we didn't keep the previous dir
+       {
+         m_rootFileItem = createFileItem( *it, url, m_bDelayedMimeTypes );
+       }
+Index: kdelibs/kio/kmimemagic.cpp
+diff -u kdelibs/kio/kmimemagic.cpp:1.39 kdelibs/kio/kmimemagic.cpp:1.39.2.1
+--- kio/kmimemagic.cpp:1.39	Thu Aug  2 11:21:27 2001
++++ kio/kmimemagic.cpp	Sat Dec  7 18:48:04 2002
+@@ -1478,7 +1478,9 @@
+ 					char *tmp;
+ 					char buf2[BUFSIZ + BUFSIZ + 4];
+ 
+-					strcpy(buf2, fn);
++					strncpy(buf2, fn, BUFSIZ);
++                    buf2[BUFSIZ] = 0;
++
+ 					if ((tmp = strrchr(buf2, '/')) == NULL) {
+ 						tmp = buf; /* in current dir */
+ 					} else {
+Index: kdelibs/kio/kmimetype.cpp
+diff -u kdelibs/kio/kmimetype.cpp:1.134.2.1 kdelibs/kio/kmimetype.cpp:1.134.2.2
+--- kio/kmimetype.cpp:1.134.2.1	Thu Nov  8 21:50:39 2001
++++ kio/kmimetype.cpp	Sun Dec  8 01:58:10 2002
+@@ -653,7 +653,7 @@
+   // at the global file, or at a file not in share/mimelnk...
+ 
+   KShellProcess p;
+-  p << "kfmclient" << "openProperties" << url.path().local8Bit();
++  p << "kfmclient" << "openProperties" << KShellProcess::quote(url.path());
+   p.start(KProcess::DontCare);
+   return p.getPid();
+ }
+Index: kdelibs/kio/ktar.cpp
+diff -u kdelibs/kio/ktar.cpp:1.32 kdelibs/kio/ktar.cpp:1.32.2.1
+--- kio/ktar.cpp:1.32	Tue Jun 26 22:22:37 2001
++++ kio/ktar.cpp	Sat Dec  7 18:48:04 2002
+@@ -355,15 +355,20 @@
+     strcpy( buffer, "././@LongLink" );
+     fillBuffer( buffer, "     0", dirName.length()+1, 'L', user.local8Bit(), group.local8Bit() );
+     write( buffer, 0x200 );
+-    memset( buffer, 0, 0x200 );
+-    strcpy( buffer, QFile::encodeName(dirName) );
++    strncpy( buffer, QFile::encodeName(dirName), 0x200 );
++    buffer[0x200] = 0;
++
+     // write long name
+     write( buffer, 0x200 );
+     // not even needed to reclear the buffer, tar doesn't do it
+   }
+   else
++  {
+     // Write name
+-    strcpy( buffer, QFile::encodeName(dirName) );
++    strncpy( buffer, QFile::encodeName(dirName), 0x200 );
++    buffer[0x200] = 0;
++  }
++          
+ 
+   fillBuffer( buffer, " 40755", 0, 0x35, user.local8Bit(), group.local8Bit());
+ 
+@@ -419,15 +424,19 @@
+     fillBuffer( buffer, "     0", fileName.length()+1, 'L', user.local8Bit(), group.local8Bit() );
+     write( buffer, 0x200 );
+ 
+-    memset( buffer, 0, 0x200 );
+-    strcpy( buffer, QFile::encodeName(fileName) );
++    strncpy( buffer, QFile::encodeName(fileName), 0x200 );
++    buffer[0x200] = 0;
+     // write long name
+     write( buffer, 0x200 );
+     // not even needed to reclear the buffer, tar doesn't do it
+   }
+   else
++  {
+     // Write name
+-    strcpy( buffer, QFile::encodeName(fileName) );
++    strncpy( buffer, QFile::encodeName(fileName), 0x200 );
++    buffer[0x200] = 0;
++  }
++          
+ 
+   fillBuffer( buffer, "100644", size, 0x30, user.local8Bit(), group.local8Bit() );
+ 
+Index: kdelibs/kio/lex.l
+diff -u kdelibs/kio/lex.l:1.5 kdelibs/kio/lex.l:1.5.2.1
+--- kio/lex.l:1.5	Wed Jun 13 16:16:39 2001
++++ kio/lex.l	Sat Dec  7 18:48:04 2002
+@@ -58,9 +58,11 @@
+ {
+   int l = strlen( _name )-1;
+   char *p = (char *)malloc( l );
+-
+-  strncpy( p, _name+1, l-1 );
+-  p[l-1] = 0;
++  if (p != NULL)
++  {
++    strncpy( p, _name+1, l-1 );
++    p[l-1] = 0;
++  }
+ 
+   return p;
+ }
+@@ -68,7 +70,10 @@
+ char *putSymbol( char *_name )
+ {
+   char *p = (char*)malloc( strlen( _name ) + 1 );
+-  strcpy( p, _name );
++  if (p != NULL)
++  {
++      strcpy( p, _name );
++  }
+   return p;
+ }
+ 
+@@ -78,6 +83,10 @@
+   char *p = (char*)malloc( l );
+   char *s = _str + 1;
+   char *d = p;
++
++  if (p == NULL)
++    return NULL;
++
+   while ( s != _str + l - 1 )
+   {
+      if ( *s != '\\' )
+Index: kdelibs/kio/passdlg.cpp
+diff -u kdelibs/kio/passdlg.cpp:1.26 kdelibs/kio/passdlg.cpp:1.26.2.1
+--- kio/passdlg.cpp:1.26	Sun May 27 01:00:31 2001
++++ kio/passdlg.cpp	Sat Nov 10 18:52:33 2001
+@@ -279,8 +279,15 @@
+     if ( ret == Accepted )
+     {
+         user = dlg->username();
++        if ( user.isNull() )
++          user = "";
++
+         pass = dlg->password();
+-        if ( keep ) { (*keep) = dlg->keepPassword(); }
++        if ( pass.isNull() )
++          pass = "";
++
++        if ( keep )
++          (*keep) = dlg->keepPassword();
+     }
+     delete dlg;
+     return ret;
+Index: kdelibs/kio/rlogin.protocol
+diff -u kdelibs/kio/rlogin.protocol:1.2 kdelibs/kio/rlogin.protocol:removed
+--- kio/rlogin.protocol:1.2	Sun Jan 21 00:01:05 2001
++++ kio/rlogin.protocol	Fri Dec 13 17:03:06 2002
+@@ -1,11 +0,0 @@
+-[Protocol]
+-exec=konsole -e rlogin `echo %u | sed -e 's,rlogin:/*,,'`
+-protocol=rlogin
+-input=none
+-output=none
+-helper=true
+-listing=false
+-reading=false
+-writing=false
+-makedir=false
+-deleting=false
+Index: kdelibs/kio/telnet.protocol
+diff -u kdelibs/kio/telnet.protocol:1.3 kdelibs/kio/telnet.protocol:removed
+--- kio/telnet.protocol:1.3	Wed Apr 11 07:37:55 2001
++++ kio/telnet.protocol	Fri Dec 13 17:03:07 2002
+@@ -1,11 +0,0 @@
+-[Protocol]
+-exec=konsole -e telnet `echo %u | sed -e 's,telnet:/*,,' | sed -e 's,:\([0-9]*\), \1,'`
+-protocol=telnet
+-input=none
+-output=none
+-helper=true
+-listing=false
+-reading=false
+-writing=false
+-makedir=false
+-deleting=false
+Index: kdelibs/kio/ftp/ftp.cc
+diff -u kdelibs/kio/ftp/ftp.cc:1.147.2.1 kdelibs/kio/ftp/ftp.cc:1.147.2.2
+--- kio/ftp/ftp.cc:1.147.2.1	Thu Sep 27 18:37:20 2001
++++ kio/ftp/ftp.cc	Wed Dec 11 23:03:47 2002
+@@ -1677,7 +1677,10 @@
+                     }
+                     else
+                       de.link = QString::null;
+-
++                      
++                    if (strchr(p_name, '/'))
++                       return 0L; // Don't trick us!
++                    
+                     de.access = 0;
+                     de.type = S_IFREG;
+                     switch ( p_access[0] ) {
+Index: kdelibs/kparts/browserextension.cpp
+diff -u kdelibs/kparts/browserextension.cpp:1.34 kdelibs/kparts/browserextension.cpp:1.34.2.1
+--- kparts/browserextension.cpp:1.34	Wed Jun 20 22:19:00 2001
++++ kparts/browserextension.cpp	Fri Nov 29 12:39:09 2002
+@@ -541,7 +541,7 @@
+ 
+ BrowserHostExtension *BrowserHostExtension::childObject( QObject *obj )
+ {
+-    if ( !obj )
++    if ( !obj || !obj->children() )
+         return 0L;
+ 
+     // we try to do it on our own, in hope that we are faster than
+Index: kdelibs/kssl/kopenssl.cc
+diff -u kdelibs/kssl/kopenssl.cc:1.24.2.1 kdelibs/kssl/kopenssl.cc:1.24.2.2
+--- kssl/kopenssl.cc:1.24.2.1	Tue Aug 21 18:07:31 2001
++++ kssl/kopenssl.cc	Tue Aug 13 00:23:03 2002
+@@ -92,6 +92,7 @@
+ static int (*K_SSL_get_error) (SSL*, int) = NULL;
+ static STACK_OF(X509)* (*K_SSL_get_peer_cert_chain) (SSL*) = NULL;
+ static void (*K_X509_STORE_CTX_set_chain) (X509_STORE_CTX *, STACK_OF(X509)*) = NULL;
++static void (*K_X509_STORE_CTX_set_purpose) (X509_STORE_CTX *, int) = NULL;
+ static void (*K_sk_free) (STACK*) = NULL;
+ static int (*K_sk_num) (STACK*) = NULL;
+ static char* (*K_sk_value) (STACK*, int) = NULL;
+@@ -254,6 +255,7 @@
+                 X509**, STACK_OF(X509)**)) _cryptoLib->symbol("PKCS12_parse");
+       K_EVP_PKEY_free = (void (*) (EVP_PKEY *)) _cryptoLib->symbol("EVP_PKEY_free");
+       K_X509_STORE_CTX_set_chain = (void (*)(X509_STORE_CTX *, STACK_OF(X509)*)) _cryptoLib->symbol("X509_STORE_CTX_set_chain");
++      K_X509_STORE_CTX_set_purpose = (void (*)(X509_STORE_CTX *, int)) _cryptoLib->symbol("X509_STORE_CTX_set_purpose");
+       K_sk_free = (void (*) (STACK *)) _cryptoLib->symbol("sk_free");
+       K_sk_num = (int (*) (STACK *)) _cryptoLib->symbol("sk_num");
+       K_sk_value = (char* (*) (STACK *, int)) _cryptoLib->symbol("sk_value");
+@@ -742,6 +744,10 @@
+ 
+ void KOpenSSLProxy::X509_STORE_CTX_set_chain(X509_STORE_CTX *v, STACK_OF(X509)* x) {
+    if (K_X509_STORE_CTX_set_chain) (K_X509_STORE_CTX_set_chain)(v,x);
++}
++
++void KOpenSSLProxy::X509_STORE_CTX_set_purpose(X509_STORE_CTX *v, int purpose) {
++   if (K_X509_STORE_CTX_set_purpose) (K_X509_STORE_CTX_set_purpose)(v,purpose);
+ }
+ 
+ 
+Index: kdelibs/kssl/kopenssl.h
+diff -u kdelibs/kssl/kopenssl.h:1.15 kdelibs/kssl/kopenssl.h:1.15.2.1
+--- kssl/kopenssl.h:1.15	Fri Jul 27 11:55:02 2001
++++ kssl/kopenssl.h	Tue Aug 13 00:23:03 2002
+@@ -277,6 +277,10 @@
+     */
+    void X509_STORE_CTX_set_chain(X509_STORE_CTX *v, STACK_OF(X509)* x);
+ 
++   /*
++    *   X509_STORE_CTX_set_purpose - set the purpose of the certificate 
++    */
++   void X509_STORE_CTX_set_purpose(X509_STORE_CTX *v, int purpose);
+ 
+    /*
+     *   X509_verify_cert - verify the certificate
+Index: kdelibs/kssl/ksslcertificate.cc
+diff -u kdelibs/kssl/ksslcertificate.cc:1.39.2.6 kdelibs/kssl/ksslcertificate.cc:1.39.2.7
+--- kssl/ksslcertificate.cc:1.39.2.6	Thu Oct 25 08:12:11 2001
++++ kssl/ksslcertificate.cc	Tue Aug 13 00:23:03 2002
+@@ -262,6 +262,8 @@
+     // FIXME: do all the X509_STORE_CTX_set_flags(); here
+     //   +----->  Note that this is for 0.9.6 or better ONLY!
+ 
++    d->kossl->X509_STORE_CTX_set_purpose(certStoreCTX, X509_PURPOSE_SSL_SERVER);
++
+     //kdDebug(7029) << "KSSL verifying.............." << endl;
+     certStoreCTX->error = X509_V_OK;
+     rc = d->kossl->X509_verify_cert(certStoreCTX);
+Index: kdelibs/kssl/ksslpeerinfo.cc
+diff -u kdelibs/kssl/ksslpeerinfo.cc:1.12.2.10 kdelibs/kssl/ksslpeerinfo.cc:1.12.2.11
+--- kssl/ksslpeerinfo.cc:1.12.2.10	Wed Nov  7 06:47:37 2001
++++ kssl/ksslpeerinfo.cc	Fri Nov 23 19:42:36 2001
+@@ -23,7 +23,6 @@
+ #endif
+ 
+ #include "ksslpeerinfo.h"
+-#include <qstring.h>
+ #include <kdebug.h>
+ 
+ #include <ksockaddr.h>
+@@ -74,25 +73,54 @@
+   QString cn = certinfo.getValue("CN");
+ 
+   if (d->proxying) {
+-	if (cn.startsWith("*")) {
+-		QRegExp cnre(cn.lower(), false, true);
+-		if (cnre.match(d->proxyHost.lower()) >= 0) return true;
+-	} else {
+-		if (cn.lower() == d->proxyHost.lower()) return true;
+-	}
+-	return false;
++    QStringList domains;
++
++    kdDebug(7029) << "Matching CN=" << cn << " to " << d->proxyHost << endl;
++
++    extractDomains(d->proxyHost, domains);
++    QStringList::Iterator it = domains.begin();
++    for (; it != domains.end(); it++)
++    {
++      int match = cn.findRev(*it, -1, false);
++      kdDebug(7029) << "Match= " << match << ", CN.length= " << cn.length()
++                    << ", host.length= " << (*it).length() << endl;
++
++      if (match > -1 && ((match + (*it).length()) == cn.length()))
++      {
++        kdDebug(7029) << "Found a match ==> " << (*it) << endl;
++        return true;
++      }
++    }
++    return false;
+   }
+ 
+ 
+   if (cn.startsWith("*")) {   // stupid wildcard cn
+-     QRegExp cnre(cn.lower(), false, true);
+      QString host, port;
++     QStringList domains;
+ 
+-     if (KExtendedSocket::resolve(d->host, host, port, NI_NAMEREQD) != 0) 
++     if (KExtendedSocket::resolve(d->host, host, port, NI_NAMEREQD) != 0)
+         host = d->host->nodeName();
+ 
+      kdDebug(7029) << "Matching CN=" << cn << " to " << host << endl;
+-     if (cnre.match(host.lower()) >= 0) return true;
++
++     extractDomains( host, domains );
++     QStringList::Iterator it = domains.begin();
++
++     for (; it != domains.end(); it++)
++     {
++        int match = cn.findRev(*it, -1, false);
++        kdDebug(7029) << "Match= " << match << ", CN.length= " << cn.length()
++                      << ", host.length= " << (*it).length() << endl;
++
++        if (match > -1 && ((match + (*it).length()) == cn.length()))
++        {
++          kdDebug(7029) << "Found a match ==> " << (*it) << endl;
++          return true;
++         }
++     }
++
++     return false;
+   } else {
+      int err = 0;
+      QList<KAddressInfo> cns = KExtendedSocket::lookup(cn.latin1(), 0, 0, &err);
+@@ -102,17 +130,55 @@
+      }
+      cns.setAutoDelete(true);
+ 
+-//     kdDebug(7029) << "The original ones were: " << d->host->nodeName()
+-//                   << " and: " << certinfo.getValue("CN").latin1()
+-//                   << endl;
++     kdDebug(7029) << "The original ones were: " << d->host->nodeName()
++                   << " and: " << certinfo.getValue("CN").latin1()
++                   << endl;
+ 
+      for (KAddressInfo *x = cns.first(); x; x = cns.next()) {
+         if ((*x).address()->isCoreEqual(d->host)) {
+            return true;
+         }
+      }
++     kdDebug(7029) << "Testing failed!" << endl;
+   }
+ 
+ #endif
+   return false;
++}
++
++void KSSLPeerInfo::extractDomains(const QString &fqdn, QStringList &domains)
++{
++    domains.clear();
++
++    // If fqdn is an IP address, then only use
++    // the entire IP address to find a match! (DA)
++    if (fqdn[0] >= '0' && fqdn[0] <= '9') {
++       domains.append(fqdn);
++       return;
++    }
++
++    QStringList partList = QStringList::split('.', fqdn, false);
++
++    if (partList.count())
++        partList.remove(partList.begin()); // Remove hostname
++
++    while(partList.count()) {
++       if (partList.count() == 1)
++         break; // We only have a TLD left.
++
++       if (partList.count() == 2) {
++          // If this is a TLD, we should stop. (e.g. co.uk)
++          // We assume this is a TLD if it ends with .xx.yy or .x.yy
++          if (partList[0].length() <= 2 && partList[1].length() == 2)
++             break; // This is a TLD.
++       }
++
++       QString domain = partList.join(".");
++       domains.append(domain);
++       partList.remove(partList.begin());
++    }
++
++    // Add the entire FQDN at the end of the
++    // list for fqdn == CN checks
++    domains.append(fqdn);
+ }
+Index: kdelibs/kssl/ksslpeerinfo.h
+diff -u kdelibs/kssl/ksslpeerinfo.h:1.12.2.1 kdelibs/kssl/ksslpeerinfo.h:1.12.2.2
+--- kssl/ksslpeerinfo.h:1.12.2.1	Wed Nov  7 06:47:37 2001
++++ kssl/ksslpeerinfo.h	Fri Nov 23 19:42:36 2001
+@@ -24,7 +24,7 @@
+ class KSSL;
+ 
+ #include <qglobal.h>
+-#include <qstring.h>
++#include <qstringlist.h>
+ #include <ksslcertificate.h>
+ 
+ class KSSLPeerInfoPrivate;
+@@ -38,14 +38,15 @@
+   KSSLCertificate& getPeerCertificate();
+   bool certMatchesAddress();
+   QString getPeerAddress();
+-  
++
+   void setProxying(bool active, QString realHost = QString::null);
+- 
++
+ protected:
+   KSSLPeerInfo();
+ 
+   KSSLCertificate m_cert;
+   void setPeerAddress(KInetSocketAddress &x);
++  void extractDomains(const QString &fqdn, QStringList &domains);
+ 
+ private:
+   KSSLPeerInfoPrivate *d;
+Index: kdelibs/libkmid/fmout.cc
+diff -u kdelibs/libkmid/fmout.cc:1.19 kdelibs/libkmid/fmout.cc:1.19.6.1
+--- libkmid/fmout.cc:1.19	Tue Oct 10 00:09:23 2000
++++ libkmid/fmout.cc	Sat Dec  7 18:48:38 2002
+@@ -34,6 +34,7 @@
+ #include <string.h>
+ #include <sys/param.h>
+ #include <stdlib.h>
++#include <limits.h>
+ #include "midispec.h"
+ #ifdef HAVE_CONFIG_H
+ #include <config.h>
+@@ -126,8 +127,8 @@
+ void FMOut::loadFMPatches(void)
+ {
+ #ifdef HAVE_OSS_SUPPORT
+-  char patchesfile[120];
+-  char drumsfile[120];
++  char patchesfile[PATH_MAX];
++  char drumsfile[PATH_MAX];
+   int size;
+   struct sbi_instrument instr;
+   char tmp[60];
+@@ -140,12 +141,12 @@
+ 
+   if (opl==3)
+   {
+-    sprintf(patchesfile,"%s/std.o3",FMPatchesDirectory);
++    snprintf(patchesfile, PATH_MAX, "%s/std.o3",FMPatchesDirectory);
+     size=60;
+   }
+   else
+   {
+-    sprintf(patchesfile,"%s/std.sb",FMPatchesDirectory);
++    snprintf(patchesfile, PATH_MAX, "%s/std.sb",FMPatchesDirectory);
+     size=52;
+   }
+   fh=fopen(patchesfile,"rb");
+@@ -170,11 +171,11 @@
+ 
+   if (opl==3)
+   {
+-    sprintf(drumsfile,"%s/drums.o3",FMPatchesDirectory);
++    snprintf(drumsfile, PATH_MAX, "%s/drums.o3",FMPatchesDirectory);
+   }
+   else
+   {
+-    sprintf(drumsfile,"%s/drums.sb",FMPatchesDirectory);
++    snprintf(drumsfile, PATH_MAX, "%s/drums.sb",FMPatchesDirectory);
+   }
+ 
+   fh=fopen(drumsfile,"rb");
+Index: kdelibs/libkmid/midfile.cc
+diff -u kdelibs/libkmid/midfile.cc:1.21 kdelibs/libkmid/midfile.cc:1.21.2.3
+--- libkmid/midfile.cc:1.21	Tue Mar 13 17:41:09 2001
++++ libkmid/midfile.cc	Fri Dec  6 15:24:24 2002
+@@ -34,6 +34,9 @@
+ #include "sys/stat.h"
+ #include <config.h>
+ 
++#include <kprocess.h>
++#include <qfile.h>
++
+ int fsearch(FILE *fh,const char *text,long *ptr);
+ 
+ /* This function gives the metronome tempo, from a tempo data as found in
+@@ -51,26 +54,23 @@
+ int uncompressFile(const char *gzname, char *tmpname)
+   // Returns 0 if OK, 1 if error (tmpname not set)
+ {
+-  char *cmd=new char[20+strlen(gzname)];
+-  sprintf(cmd, "gzip -dc \"%s\"",gzname);
+-  FILE *infile = popen( cmd, "r");
+-  if (infile==NULL)
+-  {
+-    fprintf(stderr,"ERROR : popen failed : %s\n",cmd);
++  QString cmd("gzip -dc " + KShellProcess::quote(gzname));
++  FILE *infile = popen( QFile::encodeName(cmd).data(), "r");
++  if (infile==NULL) {
++    fprintf(stderr,"ERROR : popen failed : %s\n",QFile::encodeName(cmd).data());
++    return 1;
+   }
+   strcpy(tmpname, "/tmp/KMid.XXXXXXXXXX");
+   int fd = mkstemp(tmpname);
+   if (fd == -1)
+   {
+     pclose(infile);
+-    delete cmd;
+     return 1;
+   }
+   FILE *outfile= fdopen(fd,"wb");
+   if (outfile==NULL)
+   {
+     pclose(infile);
+-    delete cmd;
+     return 1;
+   }
+   int n=getc(infile);
+@@ -79,7 +79,6 @@
+     pclose(infile);
+     fclose(outfile);
+     unlink(tmpname);
+-    delete cmd;
+     return 1;
+   }
+   fputc(n,outfile);
+@@ -97,7 +96,6 @@
+   // Is it right for pclose to always fail ?
+ 
+   fclose(outfile);
+-  delete cmd;
+   return 0;
+ }
+ 
+Index: kdelibs/libkmid/midimapper.cc
+diff -u kdelibs/libkmid/midimapper.cc:1.12 kdelibs/libkmid/midimapper.cc:1.12.6.1
+--- libkmid/midimapper.cc:1.12	Fri Jul 28 23:45:30 2000
++++ libkmid/midimapper.cc	Sat Dec  7 18:48:39 2002
+@@ -184,7 +184,9 @@
+ MidiMapper::Keymap *MidiMapper::createKeymap(char *name,uchar use_same_note,uchar note)
+ {
+   Keymap *km=new Keymap;
+-  strcpy(km->name,name);
++  strncpy(km->name, name, KM_NAME_SIZE);
++  km->name[KM_NAME_SIZE - 1] = 0;
++
+   int i;
+   if (use_same_note==1)
+   {
+@@ -263,7 +265,7 @@
+   char s[101];
+   char v[101];
+   char t[101];
+-  char name[101];
++  char name[256]; /* Longer than t and 'AllKeysTo' */
+   int i=0;
+   int j,w;
+ #ifdef MIDIMAPPERDEBUG
+@@ -323,7 +325,9 @@
+   removeSpaces(first_line);
+   getWord(v,first_line,2);
+   Keymap *km=new Keymap;
+-  strcpy(km->name,v);
++  strncpy(km->name, v, KM_NAME_SIZE);
++  km->name[KM_NAME_SIZE - 1] = 0;
++
+   int i=0;
+   while (i<128)
+   {
+Index: kdelibs/libkmid/midimapper.h
+diff -u kdelibs/libkmid/midimapper.h:1.8 kdelibs/libkmid/midimapper.h:1.8.6.1
+--- libkmid/midimapper.h:1.8	Fri Jul 28 23:45:30 2000
++++ libkmid/midimapper.h	Sat Dec  7 18:48:41 2002
+@@ -27,6 +27,8 @@
+ #include <stdio.h>
+ #include <libkmid/dattypes.h>
+ 
++#define KM_NAME_SIZE 30
++
+ /**
+  * A Midi Mapper class which defines the way MIDI events are translated
+  * (or "mapped") to different ones. This way, when two MIDI devices "talk"
+@@ -65,7 +67,7 @@
+      */
+     struct Keymap
+     {
+-      char name[30];
++      char name[KM_NAME_SIZE];
+       uchar key[128];
+       struct Keymap *next;
+     };
+Index: kdelibs/libkmid/player.cc
+diff -u kdelibs/libkmid/player.cc:1.41 kdelibs/libkmid/player.cc:1.41.2.1
+--- libkmid/player.cc:1.41	Wed Aug  1 02:05:10 2001
++++ libkmid/player.cc	Sat Dec  7 18:48:42 2002
+@@ -366,7 +366,8 @@
+                     {
+                       lasttexttime=pspev->absmilliseconds;
+                       lasttexttype=pspev->type;
+-                      strcpy(lasttext,pspev->text);
++                      strncpy(lasttext, pspev->text, 1024);
++                      lasttext[1023] = 0;
+ #endif
+                       pspev->next=new SpecialEvent;
+ #ifdef PLAYERDEBUG

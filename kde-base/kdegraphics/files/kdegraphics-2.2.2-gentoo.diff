@@ -1,0 +1,11 @@
+--- kooka/scanpackager.cpp~	2002-12-23 11:20:30.000000000 +0100
++++ kooka/scanpackager.cpp	2002-12-23 11:20:40.000000000 +0100
+@@ -426,7 +426,7 @@
+ /* ----------------------------------------------------------------------- */
+ void ScanPackager::slShowContextMenue(QListViewItem *lvi, const QPoint &p, int col )
+ {
+-   kdDebug(28000) << "Showing Context Menue" << endl;
++   kdDebug(28000) << "Showing Context Menue" << endl;
+    (void) col;
+ 
+    PackagerItem *curr = 0;
