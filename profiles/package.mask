@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2857 2004/05/12 03:33:31 mkennedy Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2858 2004/05/12 12:48:07 foser Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <foser@gentoo.org> (12 May 2004)
+# masking out for now, because of their unstable nature
+dev-util/gst-editor
+media-video/gst-player
 
 # <mkennedy@gentoo.org> (11 May 2004)
 # app-emacs/slime-cvs is being phased out in favour app-emacs/slime
