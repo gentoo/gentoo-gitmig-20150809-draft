@@ -1,17 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c517ca7a38cfbdf56c7a5d0818f291f9 hydra-4.2.ebuild 980
-MD5 81e210799d1800cccc7031a22ff8806d hydra-4.1.ebuild 796
-MD5 1f1f68ea65a76944c9c6aa38c3ca859d ChangeLog 1092
+MD5 a66bc352b0c85d993512c0a9193a0019 ChangeLog 1225
 MD5 9aa8f98344bb5026af633d7a5d3923cd metadata.xml 227
-MD5 d495ec554ff9245c9ceded834753c6a8 files/make_xhydra.sh 239
-MD5 bb569d03a75366ecec4924c020582d81 files/digest-hydra-4.1 65
-MD5 a2cff30d156e87cb8c7e5b5563560056 files/digest-hydra-4.2 65
+MD5 ed82a155064361687eb85a50d420497b hydra-4.3.ebuild 1389
+MD5 58c771c7306f6836af960f9bd61bc562 files/digest-hydra-4.3 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBItbAcAgAdbxYsnERAsO/AKCQy5mGDQB6HcnfRZohGBJxk34zZgCcCPKP
-LxatlYsnl7saFmAdgdsf5tg=
-=AnxI
+iD8DBQFBVPJ7HTu7gpaalycRAox6AKCOdD30NmAG+mQehE2QFaStq6girQCeJg5F
+Jzp63EtQF6CfNrbK72LeY7k=
+=bnAE
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.8 2004/08/18 04:04:17 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.9 2004/09/25 04:22:03 vapier Exp $
+
+*hydra-4.3 (25 Sep 2004)
+
+  25 Sep 2004; Mike Frysinger <vapier@gentoo.org> +hydra-4.3.ebuild:
+  Version bump #64451 by Daniel Webert.
 
 *hydra-4.2 (17 Aug 2004)
 
