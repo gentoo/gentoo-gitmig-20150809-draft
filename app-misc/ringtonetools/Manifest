@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 92ad0527e913dd440738efe8e3ccbae2 ChangeLog 944
+MD5 3c0fd3833743ee4047f58ae34ae8ec34 ChangeLog 1054
 MD5 dac1049948f02514e6d7e18d46552368 metadata.xml 817
-MD5 858c2bf68dd659611f386a59905b738f ringtonetools-2.18.ebuild 664
 MD5 9622cc7b7e973b992de2b3ffffe97342 ringtonetools-2.23.ebuild 670
-MD5 c40a96a71133bdefbf34425ae712ffef files/digest-ringtonetools-2.18 69
 MD5 cd8e37aec51a49ca41c79aaf35457b05 files/digest-ringtonetools-2.23 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCM9MpFdQwWVoAgN4RAlNqAJ9FAdydLFuyFjtjuZpHGi3tn/x4IQCeMsEr
-/wSPlaxqTV8jjFL70eaT6qg=
-=ATwT
+iD8DBQFCNuoKFdQwWVoAgN4RAsUgAJ9A8dhzchC9Fx50ZWHOOiFS9vyOUACg6VtR
+k+sBzTAU/92Jkn5pYnVNq54=
+=vnrQ
 -----END PGP SIGNATURE-----

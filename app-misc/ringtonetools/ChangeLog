@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ringtonetools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ringtonetools/ChangeLog,v 1.8 2005/03/13 06:02:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ringtonetools/ChangeLog,v 1.9 2005/03/15 14:31:44 chriswhite Exp $
+
+  15 Mar 2005; Chris White <chriswhite@gentoo.org>
+  -ringtonetools-2.18.ebuild:
+  Removed insecure version.
 
 *ringtonetools-2.23 (13 Mar 2005)
 
