@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.113 2005/04/02 05:22:21 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.114 2005/04/06 17:48:02 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org> gnupg-1.4.1.ebuild:
+  Somehow the stable ppc64 keyword has been lost
 
   02 Apr 2005; Stephen P. Becker <geoman@gentoo.org> gnupg-1.4.1.ebuild:
   stable on mips
