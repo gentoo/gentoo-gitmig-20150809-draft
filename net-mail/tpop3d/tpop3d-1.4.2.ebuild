@@ -1,13 +1,21 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.8 2002/05/30 01:54:49 sandymac Exp
+
+inherit eutils
+
+IUSE="ssl ldap mysql perl pam tcpd maildir"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extensible POP3 server with vmail-sql/MySQL support."
 SRC_URI="http://www.ex-parrot.com/~chris/tpop3d/${P}.tar.gz
 	http://www.ex-parrot.com/~chris/tpop3d/${P}-auth-flatfile-broken.patch"
 HOMEPAGE="http://www.ex-parrot.com/~chris/tpop3d/"
+
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
+
 DEPEND="virtual/glibc
 	ssl?	( >=dev-libs/openssl-0.9.6 )
         ldap? 	( >=net-nds/openldap-2.0.7 )
@@ -15,10 +23,6 @@ DEPEND="virtual/glibc
 	perl?	( >=sys-devel/perl-5.6.1 )
 	pam?	( >=sys-libs/pam-0.75 )
 	tcpd?	( >=sys-apps/tcp-wrappers-7.6 )"
-IUSE="ssl ldap mysql perl pam tcpd maildir"
-KEYWORDS="x86"
-
-inherit eutils
 
 src_unpack() {
 	unpack ${P}.tar.gz
