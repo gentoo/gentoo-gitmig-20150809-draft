@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0-r1.ebuild,v 1.7 2004/01/25 04:38:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0-r1.ebuild,v 1.8 2004/01/26 00:52:12 vapier Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet
@@ -183,8 +183,8 @@ src_compile(){
 	# and forcing custom ones generally fails building
 	export CXXFLAGS=""
 	export CFLAGS=""
-	export WANT_AUTOCONF_2_5=1
-	export WANT_AUTOMAKE_1_6=1
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.6
 
 	econf ${myconf} || die "configure of VLC failed"
 

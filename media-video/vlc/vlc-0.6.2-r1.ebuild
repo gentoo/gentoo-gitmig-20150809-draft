@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.6 2004/01/25 04:38:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.7 2004/01/26 00:52:12 vapier Exp $
 
 inherit libtool
 
@@ -11,14 +11,9 @@ inherit libtool
 
 inherit gcc eutils
 
-IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi
-	oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
-	wxwindows imlib mozilla dvb debug faad xosd matroska altivec"
-
 PFFM=ffmpeg-20030813
 PMPG=mpeg2dec-20030612
 
-S=${WORKDIR}/${P}
 SFFM=${WORKDIR}/${PFFM}
 SMPG=${WORKDIR}/${PMPG}
 DESCRIPTION="VideoLAN Client - DVD/video player and more"
@@ -27,9 +22,12 @@ SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2
 	http://www.videolan.org/pub/${PN}/${PV}/contrib/${PMPG}.tar.bz2
 	http://www.videolan.org/pub/${PN}/${PV}/contrib/${PFFM}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~mips ~amd64 ~ia64"
+IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi
+	oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
+	wxwindows imlib mozilla dvb debug faad xosd matroska altivec"
 
 DEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2 )
@@ -67,11 +65,9 @@ DEPEND="X? ( virtual/x11 )
 	>=media-libs/libdv-0.98
 	>=media-libs/libdvbpsi-0.1.3"
 
-
 # mplayer is a required dependancy until the libpostproc code becomes
 # a separate packages or until ffmpeg gets support for installing
 # the library.
-
 
 # get kde and arts paths
 if [ -n "`use kde`" -o -n "`use arts`" ]; then
@@ -178,8 +174,8 @@ src_compile() {
 
 	export CXXFLAGS=""
 	export CFLAGS=""
-	export WANT_AUTOCONF_2_5=1
-	export WANT_AUTOMAKE_1_6=1
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.6
 
 	myconf="${myconf} --enable-ffmpeg \
 		--with-ffmpeg-tree=${SFFM} \

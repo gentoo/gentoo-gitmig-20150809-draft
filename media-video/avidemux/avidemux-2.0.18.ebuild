@@ -1,22 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.5 2003/11/27 18:00:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.6 2004/01/26 00:49:35 vapier Exp $
 
-IUSE="debug nls oggvorbis arts truetype alsa"
-filter-flags "-funroll-loops"
-filter-flags "-maltivec -mabi=altivec"
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P=${P}
-S=${WORKDIR}/${MY_P}
-
-DESCRIPTION="Great Video editing/encoding tool. New, gtk2 version"
+DESCRIPTION="Great Video editing/encoding tool"
 HOMEPAGE="http://fixounet.free.fr/avidemux/"
 SRC_URI="http://fixounet.free.fr/avidemux/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86 ~ppc"
+IUSE="debug nls oggvorbis arts truetype alsa"
 
 DEPEND="virtual/x11
 	media-sound/mad
@@ -36,6 +32,7 @@ DEPEND="virtual/x11
 	alsa? ( >=media-libs/alsa-lib-0.9.1 )"
 # media-sound/toolame is supported as well
 
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	# Fixes a possible automake error due to clock skew
@@ -44,15 +41,14 @@ src_compile() {
 	cd ${S}/avidemux/mpeg2enc; epatch ${FILESDIR}/gcc2.patch; cd ${S}
 	cd ${S}/avidemux/ADM_dialog; epatch ${FILESDIR}/resize_crash.patch; cd ${S}
 
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	autoconf
 
 	# invalid cast
 	use ppc \
 		&& sed -i -e '188s/const//g' avidemux/ADM_video/ADM_vidFont.cpp
 
-	local myconf
-	myconf="--with-gnu-ld --disable-warnings"
+	local myconf="--disable-warnings"
 
 	# --enable-profile        creates profiling infos default=no
 	# --enable-pch            enables precompiled header support
@@ -63,6 +59,9 @@ src_compile() {
 
 	use debug && myconf="${myconf} --enable-debug=full"
 	use nls || myconf="${myconf} --disable-nls"
+
+	filter-flags -funroll-loops
+	filter-flags -maltivec -mabi=altivec
 
 	econf ${myconf} || die "configure failed"
 
@@ -75,9 +74,7 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	if [ -n "`use pcc`" ]
-	then
+	if [ `use pcc` ] ; then
 		echo
 		einfo "OSS sound output may not work on ppc"
 		einfo "If your hear only static noise, try"

@@ -1,16 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.8-r2.ebuild,v 1.1 2003/12/08 14:30:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.8-r2.ebuild,v 1.2 2004/01/26 00:50:33 vapier Exp $
 
 inherit gnome2
 
-IUSE="gstreamer lirc curl"
 DESCRIPTION="Movie player for GNOME"
 HOMEPAGE="http://www.hadess.net/totem.php3"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-LICENSE="GPL-2"
+IUSE="gstreamer lirc curl"
 
 # specific gtk dep is needed for a certain xfree patch (#21336)
 RDEPEND=">=dev-libs/glib-2.1
@@ -38,7 +38,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 
@@ -48,12 +47,11 @@ src_unpack() {
 	# Disables a videodriver that doesn't work with all nvidia drivers
 	# you can override it by putting xvmc in ~/.gnome2/totem_config
 	epatch ${FILESDIR}/${P}-nvidia.patch
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	autoconf
 
 	#fixes sandbox violations
 	gnome2_omf_fix
-
 }
 
 
@@ -68,6 +66,3 @@ use gstreamer && G2CONF="${G2CONF} --enable-gstreamer --disable-curl"
 use lirc \
 	&& G2CONF="${G2CONF} --enable-lirc" \
 	|| G2CONF="${G2CONF} --disable-lirc"
-
-
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9-r1.ebuild,v 1.3 2003/09/10 22:34:15 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9-r1.ebuild,v 1.4 2004/01/26 00:49:35 vapier Exp $
 
 inherit eutils
 
@@ -8,8 +8,8 @@ DESCRIPTION="Great Video editing/encoding tool"
 HOMEPAGE="http://fixounet.free.fr/avidemux/"
 SRC_URI="http://fixounet.free.fr/avidemux/${P}.tgz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
 IUSE="debug nls oggvorbis arts truetype alsa"
 
@@ -29,9 +29,6 @@ DEPEND="virtual/x11
 	truetype? ( >=media-libs/freetype-2.1.2 )
 	alsa? ( >=media-libs/alsa-lib-0.9.1 )"
 
-
-S=${WORKDIR}/${P}
-
 src_compile() {
 
 	cd ${S}
@@ -47,7 +44,7 @@ src_compile() {
 
 	# Fixes a possible automake error due to clock skew
 	touch -r *
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	autoconf
 
 	local myconf
@@ -68,7 +65,6 @@ src_compile() {
 
 	make || die "make failed"
 }
-
 
 src_install() {
 	make DESTDIR=${D} install || die
