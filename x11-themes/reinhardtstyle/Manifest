@@ -1,4 +1,6 @@
 MD5 d2755b6890be6086379b3f751ce24933 reinhardtstyle-0.8.ebuild 595
-MD5 f1b24c15e5d61d51dcb017ec10757750 ChangeLog 467
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 67d4fbee9ad7755173f25c1b7c79dc3b ChangeLog 613
+MD5 92bca4533b32adce50afeb70145ed79e reinhardtstyle-0.8.2.ebuild 599
 MD5 c404681188496b2ec0aae61966ad1be7 files/digest-reinhardtstyle-0.8 76
+MD5 953776f9d36d0ae63bbb815edd2487f4 files/digest-reinhardtstyle-0.8.2 78
