@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.0.ebuild,v 1.10 2004/05/30 14:40:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.0.ebuild,v 1.11 2004/06/01 11:45:42 wolf31o2 Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Hardware setup program"
 SRC_URI="mirror://gentoo/hwsetup_1.0-9.tar.gz"
 HOMEPAGE="http://www.knopper.net"
