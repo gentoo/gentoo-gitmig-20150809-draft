@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.3.90.ebuild,v 1.1 2003/09/07 22:07:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.4.0.ebuild,v 1.1 2003/09/09 22:06:24 foser Exp $
 
 inherit gnome2
 
-DESCRIPTION="Help browser for Gnome2"
+DESCRIPTION="Help browser for Gnome"
 HOMEPAGE="http://www.gnome.org/"
 
 IUSE=""
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.0.6
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libbonobo-2
-	=gnome-extra/libgtkhtml-2.2*
+	=gnome-extra/libgtkhtml-2*
 	>=dev-libs/libxslt-1.0.15
 	>=gnome-base/libglade-2
 	dev-libs/popt
