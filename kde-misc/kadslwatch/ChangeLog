@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kadslwatch
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/ChangeLog,v 1.3 2004/11/23 15:44:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/ChangeLog,v 1.4 2004/12/05 17:05:16 motaboy Exp $
+
+  05 Dec 2004; Simone Gotti <motaboy@gentoo.org> kadslwatch-01.00.05.ebuild:
+  Stable on x86.
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kadslwatch-01.00.05.ebuild:
   QA: missing "inherit eutils"

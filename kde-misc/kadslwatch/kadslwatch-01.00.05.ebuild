@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/kadslwatch-01.00.05.ebuild,v 1.3 2004/11/23 15:44:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/kadslwatch-01.00.05.ebuild,v 1.4 2004/12/05 17:05:16 motaboy Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.avm.de/tools/k_adsl_watch.linux/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 DEPEND="net-dialup/capi4k-utils"
