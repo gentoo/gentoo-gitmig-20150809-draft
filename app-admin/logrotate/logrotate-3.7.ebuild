@@ -1,10 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.ebuild,v 1.2 2005/01/01 11:08:57 eradicator Exp $
-
-inherit eutils
-
-SELINUX_PATCH="logrotate-3.6.5-selinux.diff.bz2"
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.ebuild,v 1.3 2005/01/02 03:56:46 pebenito Exp $
 
 DESCRIPTION="Rotates, compresses, and mails system logs"
 HOMEPAGE="http://packages.debian.org/unstable/admin/logrotate.html"
@@ -26,8 +22,6 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${PN}_${PV}.orig.tar.gz
 
-	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
-
 	sed -i \
 		-e "s:CFLAGS += -g:CFLAGS += -g ${CFLAGS}:" \
 		-e "/CVSROOT =/d" \
@@ -39,7 +33,9 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	local myconf
+	useq selinux && myconf='WITH_SELINUX=yes'
+	emake ${myconf} || die "emake failed"
 }
 
 src_install() {
