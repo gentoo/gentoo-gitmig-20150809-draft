@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.1 2003/12/28 02:20:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.2 2003/12/28 15:59:33 spider Exp $
 
 IUSE="alsa arts esd nas"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="the audio output library"
 SRC_URI="http://www.xiph.org/ao/src/${P}.tar.gz"
-HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
+HOMEPAGE="http://www.xiph.org/ao/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -24,6 +24,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/src/plugins/alsa09
 	epatch ${FILESDIR}/alsa-1.0.patch
+	cd ${S}
+	epatch ${FILESDIR}/${P}-esd.patch
+	WANT_AUTOCONF_2_5=1 autoconf || die
 }
 
 src_compile() {

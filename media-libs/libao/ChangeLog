@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.18 2003/12/28 02:21:15 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.19 2003/12/28 15:59:33 spider Exp $
+
+  28 Dec 2003; <spider@gentoo.org> libao-0.8.4-r1.ebuild,
+  files/libao-0.8.4-esd.patch:
+  changed HOMEPAGE , added a patch that I missed last (fixes USE="-esd" and
+  closes #36644)
 
 *libao-0.8.4-r1 (28 Dec 2003)
 
