@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.8.ebuild,v 1.1 2003/03/17 18:34:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.8.ebuild,v 1.2 2003/04/17 17:17:32 mholzer Exp $
 
 IUSE="ldap pam postgres mysql ssl tcpd"
 
@@ -23,9 +23,7 @@ DEPEND="net-libs/libpcap
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r3 )"
 
 src_unpack() {
-
 	unpack ${MY_P}.tar.bz2
-
 	cd ${S}
 }	
 
@@ -110,4 +108,7 @@ pkg_postinst() {
 	groupadd proftpd &>/dev/null
 	id proftpd &>/dev/null || \
 		useradd -g proftpd -d /home/ftp -s /bin/false proftpd
+	einfo 
+	einfo 'You can find the config files in /etc/proftpd'
+	einfo
 }

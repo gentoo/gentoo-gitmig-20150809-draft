@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.7.ebuild,v 1.7 2003/03/23 08:06:56 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.7.ebuild,v 1.8 2003/04/17 17:17:32 mholzer Exp $
 
 IUSE="ldap pam postgres mysql ssl tcpd"
 
@@ -143,4 +143,7 @@ pkg_postinst() {
 	groupadd proftpd &>/dev/null
 	id proftpd &>/dev/null || \
 		useradd -g proftpd -d /home/ftp -s /bin/false proftpd
+	einfo 
+	einfo 'You can find the config files in /etc/proftpd'
+	einfo
 }
