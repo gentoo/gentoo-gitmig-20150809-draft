@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.15 2005/02/20 05:21:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.16 2005/03/10 21:55:03 luckyduck Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -68,11 +68,12 @@ src_compile() {
 
 	if use dv; then
 		myconf="${myconf} --with-dv=/usr"
+		myconf="${myconf} $(use_with yv12 dv-yv12)"
+	else
+		myconf="${myconf} --without-dv --without-dv-yv12"
 		if use yv12; then
-			myconf="${myconf} --with-dv-yv12"
+			ewarn "yv12 support is only possible when \"dv\" is in your USE flags."
 		fi
-	elif use yv12; then
-		ewarn "yv12 support is only possible when \"dv\" is in your USE flags."
 	fi
 
 	if use x86; then
