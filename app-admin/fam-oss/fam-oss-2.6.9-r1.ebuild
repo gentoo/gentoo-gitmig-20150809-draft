@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.6 2003/02/10 17:22:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.7 2003/02/11 01:40:54 foser Exp $
 
 IUSE=""
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${MY_P}.tar.gz
 
 	cd ${S}
-	epatch ${DISTDIR}/dnotify.patch || die
+	epatch ${FILESDIR}/dnotify.patch || die
 	epatch ${FILESDIR}/${P}-gcc3.patch || die
 
 	# should fix the sigqueue overflow problems
