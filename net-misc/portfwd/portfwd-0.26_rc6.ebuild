@@ -1,0 +1,63 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/portfwd-0.26_rc6.ebuild,v 1.1 2003/10/17 20:42:05 avenj Exp $
+
+DESCRIPTION="Port Forwarding Daemon"
+SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tar.gz"
+HOMEPAGE="http://portfwd.sourceforge.net"
+LICENSE="GPL-2"
+
+SLOT="0"
+KEYWORDS="~x86"
+
+DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}
+	>=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+	cd ${WORKDIR}/${P/_/}
+
+	cd src
+	sed -iorig \
+		-e "s:^CFLAGS   =.*:CFLAGS   = @CFLAGS@ -Wall -DPORTFWD_CONF=\\\\\"\$(sysconfdir)/portfwd.cfg\\\\\":" \
+		-e "s:^CXXFLAGS =.*:CPPFLAGS = @CXXFLAGS@ -Wall -DPORTFWD_CONF=\\\\\"\$(sysconfdir)/portfwd.cfg\\\\\":" \
+		Makefile.am
+	cd ../tools
+	sed -iorig \
+		-e "s:^CXXFLAGS =.*:CPPFLAGS = @CXXFLAGS@ -Wall -DPORTFWD_CONF=\\\\\"\$(sysconfdir)/portfwd.cfg\\\\\":" \
+		Makefile.am
+	cd ../getopt
+	sed -iorig -e "s:$.CC.:\$(CC) @CFLAGS@:g" Makefile.am
+	cd ../doc
+	sed -iorig -e "s:/doc/portfwd:/share/doc/$P:" Makefile.am
+	cd ..
+	sed -iorig -e "s:/doc/portfwd:/share/doc/$P:" Makefile.am
+}
+
+src_compile() {
+	cd ${WORKDIR}/${P/_/}
+
+	./bootstrap
+	econf
+	emake
+}
+
+src_install() {
+	cd ${WORKDIR}/${P/_/}
+
+	einstall
+	prepalldocs
+
+	dodoc cfg/*
+
+	insinto /etc/init.d
+	insopts -m0755
+	newins ${FILESDIR}/${PN}.init ${PN}
+}
+
+pkg_postinst() {
+	einfo "Many configuration file (/etc/portfwd.cfg) samples are available in /usr/share/doc/${P}"
+	einfo
+}
+

@@ -1,0 +1,28 @@
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/files/portfwd.init,v 1.1 2003/10/17 20:42:05 avenj Exp $
+
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -e /etc/portfwd.cnf ] ; then
+		eerror "You need an /etc/portfwd.cnf file first"
+		eerror "There are samples in the documentation directory"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting portfwd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/portfwd -- -t -f
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping portfwd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/portfwd.pid
+	eend $?
+}

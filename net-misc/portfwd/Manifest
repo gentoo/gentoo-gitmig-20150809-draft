@@ -1,4 +1,4 @@
-MD5 bbca487388cbca9bde137a1501486b98 portfwd-0.26_rc6.ebuild 1371
-MD5 e924c392dcbb193a9c9df5b6a60a9f4a ChangeLog 311
-MD5 e6a3ab5f84df42432043801310f18bae files/portfwd.init 480
+MD5 ce7732b9663c61bc04c6c3572d7030ce portfwd-0.26_rc6.ebuild 1475
+MD5 c04632725efdd4246954a6bb600f1906 ChangeLog 399
+MD5 7a307e7563a06329307a4f3bc11e2e55 files/portfwd.init 591
 MD5 3e26912825dccefb4a4474400d2c7eb6 files/digest-portfwd-0.26_rc6 67
