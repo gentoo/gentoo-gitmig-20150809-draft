@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-ShinyMetal/etheme-ShinyMetal-0.16.7.1.ebuild,v 1.8 2005/02/09 00:14:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-ShinyMetal/etheme-ShinyMetal-0.16.7.1.ebuild,v 1.9 2005/03/30 16:44:41 hansmi Exp $
 
 MY_PV="0.02"
 MY_PN="${PN/etheme-}"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/enlightenment/enlightenment-theme-${MY_PN}-0.16-${
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=x11-wm/enlightenment-0.16.7_pre3"
