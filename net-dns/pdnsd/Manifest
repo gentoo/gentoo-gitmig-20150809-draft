@@ -1,0 +1,6 @@
+MD5 d05195b5dcaa5db5888c6fcedc4cb145 ChangeLog 1396
+MD5 492f72eb0b47dd16e97567ad94c43754 pdnsd-1.1.6-r7.ebuild 987
+MD5 25c034584044f3f5925673311693beca pdnsd-1.1.7a.ebuild 983
+MD5 0be52a5ffe250606d96898f3936bc249 files/digest-pdnsd-1.1.6-r7 64
+MD5 729266103aee86613f32b6e39c03172f files/digest-pdnsd-1.1.7a 65
+MD5 fa58342514a2c664a7c900e8bc04d08b files/pdnsd.rc6 759
