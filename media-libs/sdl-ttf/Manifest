@@ -1,5 +1,5 @@
-MD5 56c56c953dace6b423d8379a4272b28b ChangeLog 1512
+MD5 0cae9693a1b5cc8def13858c3dd42828 ChangeLog 1607
 MD5 9edbcae9a39e867f295e2ef4d426d497 sdl-ttf-2.0.5.ebuild 727
-MD5 182a3749c9207fd6483f0da7db46f0f7 sdl-ttf-2.0.6.ebuild 727
+MD5 e87cad84c509b7aa764d2f11c29a9127 sdl-ttf-2.0.6.ebuild 733
 MD5 3b3b77b50f5b7aee5bf15751a9da419b files/digest-sdl-ttf-2.0.5 66
 MD5 65f14a95508d9bc0c81cc8d8282b23ef files/digest-sdl-ttf-2.0.6 66
