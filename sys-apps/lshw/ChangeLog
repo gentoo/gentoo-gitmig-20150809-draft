@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.1 2003/04/15 15:15:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.2 2003/08/06 20:07:34 mholzer Exp $
+
+*lshw-01.02 (06 Aug 2003)
+
+  06 Aug 2003; Martin Holzer <mholzer@gentoo.org> lshw-01.02.ebuild:
+  Version bumped. closes #25925.
 
 *lshw-01.00 (15 Apr 2003)
 
