@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/kpogre
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.6 2004/08/07 21:44:44 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.7 2004/08/22 03:26:33 nakano Exp $
+
+*kpogre-0.99 (22 Aug 2004)
+
+  22 Aug 2004; Masatomo Nakano <nakano@gentoo.org> +kpogre-0.99.ebuild:
+  Version bump. Ebuild submitted by Diego Petteno“ <dgp85@users.sourceforge.net>
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> kpogre-0.97.ebuild:
   Typo in DESCRIPTION: grafical -> graphical. Bug 59717.
