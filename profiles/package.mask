@@ -25,7 +25,7 @@
 # masked for security reasons bug 26787
 # masked <=r, as seen here:
 # http://archives.neohapsis.com/archives/bugtraq/2003-01/0116.html
-<=media-sound/mpg123-0.59r
+>=media-sound/mpg123-0.59r-r3
 
 # <usata@gentoo.org> (30 Sep 2003)
 # Testing needed, beta version.
