@@ -1,0 +1,13 @@
+# ChangeLog for app-emulation/specemu
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.1 2002/05/27 22:42:44 rphillips Exp $
+
+*specemu-0.9.4 (27 May 2002)
+
+  27 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
