@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.1 2005/01/19 10:35:11 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.2 2005/03/19 12:36:31 kosmikus Exp $
 
 inherit base eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://haskell.org/happy/"
 SRC_URI="http://haskell.cs.yale.edu/happy/dist/${PV}/${P}-src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc java"
 
 DEPEND=">=virtual/ghc-5.04

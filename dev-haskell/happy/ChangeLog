@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.8 2005/01/19 10:35:11 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.9 2005/03/19 12:36:31 kosmikus Exp $
+
+  19 Mar 2005; Andres Loeh <kosmikus@gentoo.org> happy-1.15.ebuild:
+  Added ~amd64 keyword.
 
 *happy-1.15 (19 Jan 2005)
 
