@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.3.ebuild,v 1.1 2004/10/25 07:27:13 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.3.ebuild,v 1.2 2004/10/26 13:42:53 batlogg Exp $
 
 inherit eutils
 
@@ -41,8 +41,6 @@ ZSERVDIR=${ZS_DIR}/${PN}-${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use amd64 \
-		&& epatch ${FILESDIR}/2.7.3/gid.patch
 }
 
 src_compile() {
