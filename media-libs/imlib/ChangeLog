@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/imlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.6 2002/05/04 14:53:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.7 2002/05/29 04:26:12 mkennedy Exp $
+
+*imlib-1.9.14-r1 (28 May 2002)
+
+  28 May 2002; Matthew Kennedy <mkennedy@gentoo.org> imlib-1.9.14-r1.ebuild
+  files/digest-imlib-1.9.14-r1, ChangeLog :
+
+  Pass configure --includedir="" and make install
+  includedir=${D}/usr/include to make gcc3.1 happy (also tested on a
+  2.95.3 machine). Thanks to Rufiao Valhacouto
+  <rufiao@gmx.net> and lostlogic@lostlogicx.com (Brandon Low) of bug
+  #3135 for this nice catch. 
 
 *imlib-1.9.14 (4 May 2002)
 
