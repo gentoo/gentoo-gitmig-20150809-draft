@@ -1,5 +1,5 @@
-MD5 90dc6bdafc812e705843bb8c5cdebdb3 ChangeLog 890
 MD5 4bf4b97ce1b725d1852ad47aa5224a44 normalize-0.7.4.ebuild 979
-MD5 ed1bbcb2c768450a31b8a7869c7cfc29 normalize-0.7.6.ebuild 985
+MD5 1938cc628d510a95463c35425c657255 normalize-0.7.6.ebuild 983
+MD5 a41770714386e4b82666aaa2470373e6 ChangeLog 982
 MD5 d5be91906061cbb310757eeccd79c6cc files/digest-normalize-0.7.4 68
 MD5 ca7f6d0db3e04885c8412eb70cb1a482 files/digest-normalize-0.7.6 68
