@@ -1,6 +1,6 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r8.ebuild,v 1.4 2002/07/16 02:05:39 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r8.ebuild,v 1.5 2002/07/24 21:21:37 seemant Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -54,20 +54,21 @@ fi
 
 DESCRIPTION="Vi IMproved!"
 HOMEPAGE="http://www.vim.org/"
-LICENSE="vim"
 
-DEPEND="virtual/glibc 
-		>=sys-libs/ncurses-5.2-r2
-		dev-util/cscope
-		>=sys-apps/portage-1.8.18
-		gpm?	( >=sys-libs/gpm-1.19.3 )
-		gnome?	( >=gnome-base/gnome-libs-1.4.1.2-r1 )
-		gtk?	( =x11-libs/gtk+-1.2* )
-		X?		( x11-base/xfree )
-		perl?	( sys-devel/perl )
-		python? ( dev-lang/python )
-		ruby?	( >=dev-lang/ruby-1.6.4 )"
-#		tcltk?	( dev-lang/tcl )"
+SLOT="0"
+LICENSE="vim"
+KEYWORDS="x86 ppc"
+
+DEPEND="dev-util/cscope
+	>=sys-libs/ncurses-5.2-r2
+	gpm?	( >=sys-libs/gpm-1.19.3 )
+	gnome?	( >=gnome-base/gnome-libs-1.4.1.2-r1 )
+	gtk?	( =x11-libs/gtk+-1.2* )
+	X?		( x11-base/xfree )
+	perl?	( sys-devel/perl )
+	python? ( dev-lang/python )
+	ruby?	( >=dev-lang/ruby-1.6.4 )"
+#	tcltk?	( dev-lang/tcl )"
 # It appears that the tclinterp stuff in Vim is broken right now (at
 # least on Linux... it works on BSD).  When you --enable-tclinterp
 # flag, then the following command never returns:
@@ -77,7 +78,6 @@ DEPEND="virtual/glibc
 # Please don't re-enable the tclinterp flag without verifying first
 # that the above works.  Thanks.  (08 Sep 2001 agriffis)
 
-KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack $A
