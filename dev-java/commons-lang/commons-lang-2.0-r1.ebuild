@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r1.ebuild,v 1.7 2004/06/24 22:22:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r1.ebuild,v 1.8 2004/08/19 18:59:41 lv Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
 RESTRICT="nomirror"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE="doc jikes junit"
 
 S="${WORKDIR}/${PN}-${PV}-src"
