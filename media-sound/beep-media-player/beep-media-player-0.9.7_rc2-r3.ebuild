@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r3.ebuild,v 1.2 2004/11/11 09:58:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r3.ebuild,v 1.3 2004/11/15 19:39:15 chainsaw Exp $
 
 IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx"
 
@@ -27,7 +27,8 @@ RDEPEND="app-arch/unzip
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	esd? ( >=media-sound/esound-0.2.30 )
 	opengl? ( virtual/opengl )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )
+	oggvorbis? ( >=media-libs/libvorbis-1.0
+		     >=media-libs/libogg-1.0 )
 	alsa? ( >=media-libs/alsa-lib-1.0 )
 	gnome? ( >=gnome-base/gnome-vfs-2.6.0
 	         >=gnome-base/gconf-2.6.0 )"
