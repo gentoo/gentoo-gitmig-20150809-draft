@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.102 2004/09/16 14:05:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.103 2004/09/17 10:37:58 kugelfang Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -51,17 +51,26 @@ ebeep() {
 #
 # Travis Tilley <lv@gentoo.org> (24 Aug 2004)
 get_libdir() {
+	LIBDIR_TEST=$(type econf)
 	if [ ! -z "${CONF_LIBDIR_OVERRIDE}" ] ; then
 		# if there is an override, we want to use that... always.
 		CONF_LIBDIR="${CONF_LIBDIR_OVERRIDE}"
-	elif portageq has_version / '<sys-apps/portage-2.0.51_pre20' ; then
-		# and if there isnt an override, and we're using a version of
-		# portage without CONF_LIBDIR support, force the use of lib. dolib
-		# and friends from portage 2.0.50 wont be too happy otherwise.
+	# We don't need to know the verison of portage. We only need to know
+	# if there is support for CONF_LIBDIR in econf and co.
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/17/09 
+	#elif portageq has_version / '<sys-apps/portage-2.0.51_pre20' ; then
+	#	# and if there isnt an override, and we're using a version of
+	#	# portage without CONF_LIBDIR support, force the use of lib. dolib
+	#	# and friends from portage 2.0.50 wont be too happy otherwise.
+	#	CONF_LIBDIR="lib"
+	#fi
+	elif [ "${LIBDIR_TEST/CONF_LIBDIR}" == "${LIBDIR_TEST}" ]; then # we don't have CONF_LIBDIR support
+		# will be <portage-2.0.51_pre20
 		CONF_LIBDIR="lib"
 	fi
 	# and of course, default to lib if CONF_LIBDIR isnt set
 	echo ${CONF_LIBDIR:=lib}
+	unset LIBDIR_TEST
 }
 
 
