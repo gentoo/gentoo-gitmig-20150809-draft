@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.24 2005/03/14 20:21:12 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.25 2005/03/15 14:16:15 seemant Exp $
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> unison-2.12.2.ebuild:
+  Dependency update: net-www/lynx -> www-client/lynx.
 
 *unison-2.12.2 (14 Mar 2005)
 

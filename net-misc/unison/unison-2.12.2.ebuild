@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.12.2.ebuild,v 1.1 2005/03/14 20:21:12 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.12.2.ebuild,v 1.2 2005/03/15 14:16:15 seemant Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND=">=dev-lang/ocaml-3.04
 	gtk? ( gtk2? ( >=dev-ml/lablgtk-2.2 ) !gtk2? ( =dev-ml/lablgtk-1.2* ) )
-	doc? ( net-www/lynx >=dev-tex/hevea-1.07 virtual/tetex virtual/ghostscript )"
+	doc? ( www-client/lynx >=dev-tex/hevea-1.07 virtual/tetex virtual/ghostscript )"
 
 RDEPEND="gtk? ( gtk2? ( >=dev-ml/lablgtk-2.2 ) !gtk2? ( =dev-ml/lablgtk-1.2* )
 || ( net-misc/x11-ssh-askpass net-misc/gtk2-ssh-askpass ) )"
