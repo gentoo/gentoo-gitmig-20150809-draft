@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r11.ebuild,v 1.1 2004/08/23 12:19:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r11.ebuild,v 1.2 2004/09/01 12:38:32 spock Exp $
 
 inherit eutils
 
@@ -62,6 +62,8 @@ src_compile() {
 		--enable-linespace"
 
 	econf \
+		--enable-xgetdefault \
+		--with-terminfo=/usr/share/terminfo \
 		--enable-transparency \
 		--enable-fading \
 		--enable-background-image \
