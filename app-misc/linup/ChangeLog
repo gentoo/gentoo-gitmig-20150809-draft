@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linup
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.7 2004/06/08 19:57:06 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.8 2004/06/08 19:58:25 lisa Exp $
+
+  08 Jun 2004; Lisa Seelye <lisa@gentoo.org> -linup-1.1.1.ebuild:
+  just cleaning old ebuilds out
 
   08 Jun 2004; Lisa Seelye <lisa@gentoo.org> linup-1.1.1-r1.ebuild:
   This works on my sparc.  please test so we can move this to stable.

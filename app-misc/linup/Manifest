@@ -1,6 +1,4 @@
 MD5 0c7310245895be53ee02ad5f574438e7 linup-1.1.1-r1.ebuild 766
-MD5 6031e3f52f1e64335ef72f8ab0a33967 ChangeLog 1181
-MD5 740ab3fc8dcb9f9f137a27bd28ed8766 linup-1.1.1.ebuild 671
+MD5 1bdab8a52a70962e62dbe1642caa56a0 ChangeLog 1280
 MD5 edb03e1f886db92dc51695d05cbced61 files/digest-linup-1.1.1-r1 62
-MD5 edb03e1f886db92dc51695d05cbced61 files/digest-linup-1.1.1 62
 MD5 2d62949fcd5cb73c7366d168b2225a41 files/fix-uptimes-host.gz 303
