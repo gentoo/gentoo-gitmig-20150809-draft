@@ -1,8 +1,8 @@
 # ChangeLog for dev-libs/gaul-devel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gaul-devel/ChangeLog,v 1.1 2004/02/29 08:28:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gaul-devel/ChangeLog,v 1.2 2004/03/18 20:52:45 aliz Exp $
 
-*gaul-devel-0.1846.ebuild (29 Feb 2004)
+*gaul-devel-0.1846 (29 Feb 2004)
 
   29 Feb 2004; George Shapovalov <george@gentoo.org> gaul-devel-0.1846.ebuild, Manifest, files/{digest-gaul-devel-0.1846} :
   initial release (#22147)

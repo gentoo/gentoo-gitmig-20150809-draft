@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.4 2003/07/07 21:47:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.5 2004/03/18 20:52:46 aliz Exp $
 
   07 Jul 2003; Michael Sterrett <msterret@gentoo.org> libf2c-20021004.ebuild:
   more error checking
@@ -8,7 +8,7 @@
   02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> libf2c-20021004.ebuild:
   marked stable for x86
 
-*libf2c-20021004` (28 Oct 2002)
+*libf2c-20021004 (28 Oct 2002)
 
   28 Oct 2002; Hannes Mehnert <hannes@gentoo.org> libf2c-20021004.ebuild,
   ChangeLog: Initial ebuild. Thanks to a-tenderholt@northwestern.edu.

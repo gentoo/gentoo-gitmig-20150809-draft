@@ -1,9 +1,11 @@
 # ChangeLog for dev-libs/csconv
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.3 2004/03/10 20:33:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.4 2004/03/18 20:52:45 aliz Exp $
 
   11 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> csconv-11.4.1467.ebuild:
   Added ~x86 keyword
+
+*csconv-11.4.1467 (14 Sep 2003)
 
   14 Sep 2003; Mamoru KOMACHI <usata@gentoo.org>
   files/csconv-11.4.1467-gentoo.diff:

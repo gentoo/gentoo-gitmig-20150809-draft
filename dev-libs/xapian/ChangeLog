@@ -1,8 +1,8 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.1 2003/03/13 09:58:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.2 2004/03/18 20:52:46 aliz Exp $
 
-*xapian-0.5.5.ebuild (13 Mar 2003)
+*xapian-0.5.5 (13 Mar 2003)
 
   13 Mar 2003; George Shapovalov <george@gentoo.org> ChangeLog, xapian-0.5.5.ebuild, files/{digest-xapian-0.5.5} :
   initial release (#14849)

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.26 2004/03/07 18:18:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.27 2004/03/18 20:52:46 aliz Exp $
 
   07 Mar 2004; Tom Gall <tgall@gentoo.org> libpcre-4.4.ebuild:
   stable on ppc64
@@ -66,7 +66,7 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*libpcre-3.9-r1
+*libpcre-3.9-r1 (21 Mar 2003)
 
   21 Mar 2003; Guy Martin <gmsoft@gentoo.org> libpcre-3.9-r1.ebuild :
   Added hppa to KEYWORDS.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.3 2004/02/25 07:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.4 2004/03/18 20:52:46 aliz Exp $
+
+*libedit-20040302 (02 Mar 2004)
+*libedit-20040225 (25 Feb 2004)
 
 *libedit-YYYYMMDD (22 Dec 2003)
 
