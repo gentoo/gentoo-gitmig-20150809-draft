@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1.ebuild,v 1.1 2003/10/20 13:02:59 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1.ebuild,v 1.2 2003/10/27 05:48:32 nakano Exp $
 
 IUSE="truetype gtk gtk2 nls imlib nopixbuf bidi"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/mlterm/${MY_P}.tar.gz
 	mirror://sourceforge/mlterm/${PATCH_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 LICENSE="BSD"
 
 DEPEND="virtual/x11
