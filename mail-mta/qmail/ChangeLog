@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.7 2004/07/17 21:37:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.8 2004/07/20 14:24:11 tomk Exp $
+
+  20 Jul 2004; <tomk@gentoo.org> qmail-1.03-r13.ebuild, qmail-1.03-r14.ebuild,
+  qmail-1.03-r15.ebuild:
+  Added third party mirror to SRC_URI for qmail-smtpd-relay-reject
 
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> files/run-qmailpop3d,
   files/1.03-r13/run-qmailpop3d:

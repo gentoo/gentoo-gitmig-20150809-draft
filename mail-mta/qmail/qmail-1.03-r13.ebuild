@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r13.ebuild,v 1.4 2004/07/14 16:53:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r13.ebuild,v 1.5 2004/07/20 14:24:11 tomk Exp $
 
 inherit gcc eutils fixheadtails
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://qmail/qmail-1.03.tar.gz
 	http://www.suspectclass.com/~sgifford/qmail/qmail-0.0.0.0.patch
 	http://david.acz.org/software/sendmail-flagf.patch
 	mirror://qmail/qmail-1.03-qmtpc.patch
-	http://qmail.goof.com/qmail-smtpd-relay-reject
+	mirror://qmail/qmail-smtpd-relay-reject
 	mirror://gentoo/qmail-local-tabs.patch
 	http://www.shupp.org/patches/qmail-maildir++.patch
 	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-date-localtime.patch.txt
