@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/culmus
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/ChangeLog,v 1.2 2003/08/15 18:34:11 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/culmus/ChangeLog,v 1.3 2003/09/11 20:30:01 mksoft Exp $
+
+*culmus-0.90-r1 (11 Sep 2003)
+  11 Sep 2003; Meir Kriheli <mksoft@gentoo.org> culmus-0.90-r1.ebuild:
+  Include upstream fixes for display problems with OpenOffice.org
 
 *culmus-0.90 (15 Aug 2003)
 
