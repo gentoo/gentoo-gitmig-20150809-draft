@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.2.2.ebuild,v 1.7 2004/02/22 22:33:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/usb-pwcx-8.2.2.ebuild,v 1.8 2004/06/07 10:30:49 phosphan Exp $
+
+inherit check-kernel
 
 DESCRIPTION="Optional closed source drivers for phillips webcams to allow for higher resoltions and framerates "
 HOMEPAGE="http://www.smcc.demon.nl/webcam/"
@@ -11,6 +13,13 @@ SLOT="0"
 KEYWORDS="x86 -ppc -sparc -alpha"
 
 DEPEND=""
+
+pkg_setup() {
+	if is_2_6_kernel; then
+		eerror "You need a newer version for 2.6 kernels!"
+		die "This works only for 2.4 kernels"
+	fi
+}
 
 src_install() {
 	insinto "/lib/modules/usb"
