@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ksmoothdock-3.5.1.ebuild,v 1.2 2004/11/21 23:14:27 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ksmoothdock-3.5.1.ebuild,v 1.3 2004/11/25 22:26:31 motaboy Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="KSmoothDock is a dock program for KDE with smooth parabolic zooming."
 HOMEPAGE="http://ksmoothdock.sourceforge.net"

@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/ksmoothdock
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.3 2004/11/21 23:14:27 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.4 2004/11/25 22:26:31 motaboy Exp $
+
+  25 Nov 2004; Simone Gotti <motaboy@gentoo.org> ksmoothdock-3.5.1.ebuild:
+  QA: inherits eutils.
 
   22 Nov 2004; Simone Gotti <motaboy@gentoo.org>
   +files/ksmoothdock-3.5.1-configure-arts.patch, ksmoothdock-3.5.1.ebuild:
