@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/dictd-vera
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.5 2003/02/12 03:33:01 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.6 2004/01/16 00:09:18 liquidx Exp $
+
+*dictd-vera-1.9_pre (16 Jan 2004)
+
+  16 Jan 2004; Alastair Tse <liquidx@gentoo.org> dictd-vera-1.9_pre.ebuild,
+  metadata.xml:
+  version bump, apparently fixes issues with older version of dictd (?)
+  (#38305), thanks to José Romildo Malaquias <romildo uber.com.br>
 
   19 Jan 2003; Olivier Reisch <doctomoe@gentoo.org> :
   Added ~ppc keyword
