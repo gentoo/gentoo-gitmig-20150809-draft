@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.1 2003/10/03 11:39:26 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.2 2003/10/07 11:02:16 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -368,6 +368,9 @@ src_compile() {
 	einfo "Configuring OpenOffice.org with language support for ${LFULLNAME}..."
 	cd ${S}/config_office
 	rm -f config.cache
+	if [ "LANGNAME" != "ENUS" ]; then
+		LANGNAME="${LANGNAME},ENUS"
+	fi
 	./configure --enable-gcc3 \
 		--with-jdk-home=${JAVA_HOME} \
 		--with-lang=${LANGNAME}\
