@@ -1,11 +1,17 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.27 2002/07/14 22:39:40 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.28 2002/07/15 12:19:36 karltk Exp $
 
 *gentoolkit-0.1.14 (14 Jul 2002)
 
+  15 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/scripts/pkg-clean :  
+
+  Fixed non-functioning -y option.
+
   14 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg files/scripts/qpkg.1
 						  files/etc-update/etc-update files/etc-update/ChangeLog: 
+
+  14 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg files/scripts/qpkg.1 files/etc-update/etc-update files/etc-update/ChangeLog: 
 
   Added -q --query-deps option to qpkg and qpkg.1.  
   See `man qpkg` or `qpkg --help` for more information

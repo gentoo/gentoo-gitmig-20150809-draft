@@ -83,9 +83,13 @@ for pkg_core in pkg_hash.keys():
 		full_path = pkg_hash[pkg_core][idx-1][PKG]
 		ebuild = string.replace(full_path, "/var/db/pkg/", "")
 
-		params = "dialog --backtitle \"" + ebuild + "\" " + \
-			 "--yesno \"Are you sure you want to unmerge " + ebuild + " ?\" 20 70"
-		res = os.system(params)
+		if not assume_yes: 
+			params = "dialog --backtitle \"" + ebuild + "\" " + \
+				 "--yesno \"Are you sure you want to unmerge " + ebuild + " ?\" 20 70"
+			res = os.system(params)
+		else:
+			res = 0
+
 		if res == 0:
 			(status, unmerge_out) = commands.getstatusoutput(
 				"ebuild %s unmerge" % (full_path))
