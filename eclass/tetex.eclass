@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.21 2004/10/25 18:07:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.22 2004/10/26 05:37:35 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -128,7 +128,7 @@ tetex_src_compile() {
 		--with-etex \
 		$(use_with X x) \
 		${xdvik} \
-		${myconf} || die
+		${TETEX_ECONF} || die
 
 	emake -j1 texmf=/usr/share/texmf || die "make teTeX failed"
 }
