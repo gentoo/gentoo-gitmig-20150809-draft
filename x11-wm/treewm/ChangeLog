@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/treewm
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/ChangeLog,v 1.1 2002/08/13 09:26:23 styx Exp $
+
+*treewm-0.4.2 (12 Aug 2002)
+
+  12 Aug 2002; Joachim Blaabjerg <styx@gentoo.org> treewm-0.4.2.ebuild:
+
+  Initial import. Ebuild submitted by Thomas Raschbacher (LordVan,
+  <lordvan@lordvan.com>).
