@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.3 2004/04/27 21:58:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.4 2004/04/29 03:49:55 lv Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 HOMEPAGE="http://freenetproject.org/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 LICENSE="GPL-2"
 
 DEPEND="virtual/jre

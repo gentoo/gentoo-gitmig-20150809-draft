@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.37 2004/04/27 21:58:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.38 2004/04/29 03:49:55 lv Exp $
+
+  28 Apr 2004; Travis Tilley <lv@gentoo.org> freenet-0.5.2.1-r8.ebuild:
+  added ~amd64 keyword, since freenet actually works with the beta sun-jdk even
+  if it doesnt work with the early blackdown port
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> freenet-0.5.2.1-r8.ebuild:
   Add inherit eutils
