@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.47 2002/10/13 04:55:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.48 2002/10/20 20:40:12 azarah Exp $
+
+  20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild :
+
+  Remove /usr/X11R6/lib/X11/fonts/encodings from /etc/X11/fs/config.
+  Get the font stuff in pkg_postinst() sane.  This should fix bug #9357.
+  Should also fix bug #9354 if you specify -e option to ttmkfdir.
+
+  Update /etc/init.d/xfs to scan and index font dirs.
 
   13 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild :
 

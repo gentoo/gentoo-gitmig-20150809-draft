@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.18 2002/10/20 11:31:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.19 2002/10/20 20:40:12 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -470,36 +470,63 @@ pkg_postinst() {
 
 	if [ "${ROOT}" = "/" ]
 	then
-		einfo "Making font dirs..."
-		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
-		find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1 \
-			-exec ${ROOT}/usr/X11R6/bin/mkfontdir {} \;
-
-		einfo "Creating fonts.scale files..."
-		find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1 \
-			-exec ${ROOT}/usr/X11R6/bin/ttmkfdir2 -o {}/fonts.scale -d {} \;
-
 		einfo "Creating FC font cache..."
-		/usr/bin/fc-cache
+		${ROOT}/usr/bin/fc-cache
 
-		einfo "Generating encodings..."
-		rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/fonts.{cache-1,dir,scale}
+		# This one cause ttmkfdir to segfault :/
+		rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large/gbk-0.enc.gz
+
+		# These could be from old installations, and should not be present
+		find ${ROOT}/usr/X11R6/lib/X11/fonts/encodings -type f -name 'fonts.*' \
+			-exec rm -f {} \;
+
+		# ********************************************************************
+		#  A note about fonts and needed files:
+		#  
+		#  1)  Create /usr/X11R6/lib/X11/fonts/encodings/encodings.dir
+		#
+		#  2)  Create font.scale for TrueType fonts (need to do this before
+		#      we create fonts.dir files, else fonts.dir files will be
+		#      invalid for TrueType fonts...)
+		#
+		#  3)  Now Generate fonts.dir files.
+		#
+		#  CID fonts is a bit more involved, but as we do not install any,
+		#  I am not going to bother.
+		#
+		#  <azarah@gentoo.org> (20 Oct 2002)
+		#
+		# ********************************************************************
+
+		einfo "Generating encodings.dir..."
 		# Create the encodings.dir in /usr/X11R6/lib/X11/fonts/encodings
-		cd ${ROOT}/usr/X11R6/lib/X11/fonts/encodings
 		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
 		${ROOT}/usr/X11R6/bin/mkfontdir -n \
 			-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings \
-			-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large
-		# Now create encodings.dir for the fonts
+			-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large \
+			-- ${ROOT}/usr/X11R6/lib/X11/fonts/encodings
+
+		einfo "Creating fonts.scale files..."
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
-			if [ "${x}" != "${ROOT}/usr/X11R6/lib/X11/fonts/encodings" ]
+			if [ "${x/encodings}" = "${x}" ]
 			then
-				cd ${x}
+				${ROOT}/usr/X11R6/bin/ttmkfdir2 \
+					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
+					-o ${x}/fonts.scale -d ${x}
+			fi
+		done
+			
+		einfo "Generating fonts.dir files..."
+		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
+		do
+			if [ "${x/encodings}" = "${x}" ]
+			then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
-				${ROOT}/usr/X11R6/bin/mkfontdir -n \
+				${ROOT}/usr/X11R6/bin/mkfontdir \
 					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings \
-					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large
+					-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large \
+					-- ${x}
 			fi
 		done
 
@@ -510,7 +537,7 @@ pkg_postinst() {
 		# Switch to the xfree implementation.
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
-		/usr/sbin/opengl-update --use-old xfree
+		${ROOT}/usr/sbin/opengl-update --use-old xfree
 	fi
 
 	# make sure all the Compose files are present
