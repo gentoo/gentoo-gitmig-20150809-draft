@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.19 2004/03/16 04:25:01 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.20 2004/03/26 16:27:25 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> id3lib-3.8.0.ebuild,
+  id3lib-3.8.3-r1.ebuild:
+  Added explicit IUSE.
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> id3lib-3.8.3-r1.ebuild:
   Added ~mips keyword.

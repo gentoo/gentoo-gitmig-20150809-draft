@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.0.ebuild,v 1.8 2004/03/19 07:56:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.0.ebuild,v 1.9 2004/03/26 16:27:25 eradicator Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -11,6 +11,8 @@ HOMEPAGE="http://id3lib.sourceforge.net/"
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc sparc "
+
+IUSE=""
 
 DEPEND="virtual/glibc"
 

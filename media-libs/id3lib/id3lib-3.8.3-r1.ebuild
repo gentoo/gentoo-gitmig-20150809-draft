@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r1.ebuild,v 1.10 2004/03/16 04:25:01 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r1.ebuild,v 1.11 2004/03/26 16:27:25 eradicator Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -12,13 +12,15 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
 
+IUSE=""
+
 DEPEND="virtual/glibc"
 
 export CPPFLAGS="${CPPFLAGS} -Wno-deprecated"
 
 src_install() {
 
-	einstall || die "Install failed"
+	make DESTDIR=${D} install || die "Install failed"
 	dosym /usr/lib/libid3-3.8.so.3 /usr/lib/libid3-3.8.so.0.0.0
 	dosym /usr/lib/libid3-3.8.so.0.0.0 /usr/lib/libid3-3.8.so.0
 
