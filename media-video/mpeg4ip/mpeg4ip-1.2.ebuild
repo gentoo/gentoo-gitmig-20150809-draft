@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.2.ebuild,v 1.1 2004/12/04 06:06:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.2.ebuild,v 1.2 2004/12/06 23:12:48 tester Exp $
 
 inherit eutils
 
@@ -37,9 +37,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e 's/-Wmissing-prototypes//g' -e 's/-Werror//g' configure
 
-	epatch ${FILESDIR}/mpeg4ip-1.2-gentoo-fixes.patch
+	# This will break building on gcc 3.4 and 4.0
+	sed -i -e 's/-Wmissing-prototypes//g' -e 's/-Werror//g' configure
 }
 
 src_compile() {
@@ -47,7 +47,6 @@ src_compile() {
 
 	local myconf
 
-	# mp4live doesnt build, disable it..
 	myconf=" $(use_enable ipv6)
 			$(use_enable mmx)
 			$(use_enable ppc)
