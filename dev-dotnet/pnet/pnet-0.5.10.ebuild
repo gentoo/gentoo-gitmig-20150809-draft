@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.10.ebuild,v 1.2 2003/08/13 10:58:40 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.10.ebuild,v 1.3 2003/08/13 11:20:03 scandium Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
         unpack ${A}
         cd ${S}
         epatch ${FILESDIR}/md5hash.patch
+	./auto_gen.sh || die
 }
 
 src_compile() {
