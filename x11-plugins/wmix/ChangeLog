@@ -1,11 +1,13 @@
-# ChangeLog for media-sound/wmix
+# ChangeLog for x11-plugins/wmix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wmix/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/ChangeLog,v 1.1 2002/09/16 16:20:23 raker Exp $
 
 *wmix-3.0-r1 (1 Feb 2002)
 
+  16 Sep 2002; Nick Hadaway <raker@gentoo.org> :
+  Moved from media-sound to x11-plugins.
+
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
