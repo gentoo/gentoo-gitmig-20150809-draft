@@ -1,16 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.8.ebuild,v 1.10 2004/01/29 04:18:45 agriffis Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.8.ebuild,v 1.11 2004/02/08 20:46:36 vapier Exp $
 
 DESCRIPTION="A portable abstraction library for DVD decryption"
-SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 HOMEPAGE="http://developers.videolan.org/libdvdcss/"
+SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 
-SLOT="1.2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc alpha sparc amd64 hppa ia64"
+SLOT="1.2"
+KEYWORDS="x86 ppc alpha sparc amd64 hppa ia64"
 
 DEPEND="virtual/glibc"
 
