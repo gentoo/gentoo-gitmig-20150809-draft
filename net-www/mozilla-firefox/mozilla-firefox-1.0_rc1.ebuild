@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0_pre.ebuild,v 1.6 2004/09/19 12:36:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0_rc1.ebuild,v 1.1 2004/10/28 16:33:08 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla mozilla-launcher
 
@@ -8,12 +8,13 @@ S=${WORKDIR}/mozilla
 
 DESCRIPTION="The Mozilla Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
-MY_PV=${PV/_pre/PR}
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/0.10/firefox-${MY_PV}-source.tar.bz2"
+MY_PV=${PV/_rc1/rc1}
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/firefox-${MY_PV}-source.tar.bz2
+	http://ftp.mozilla.org/pub/firefox/releases/${MY_PV}/firefox-${MY_PV}-source.tar.bz2"
 
-KEYWORDS="x86 ppc sparc alpha amd64 ~ia64"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
-LICENSE="MPL-1.1 | NPL-1.1"
+LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java gtk2 ipv6 moznoxft truetype xinerama"
 
 RDEPEND="virtual/x11
@@ -29,7 +30,7 @@ RDEPEND="virtual/x11
 	gtk2?  ( >=x11-libs/gtk+-2.1.1 >=dev-libs/libIDL-0.8.0 )
 	!gtk2? ( =x11-libs/gtk+-1.2* =gnome-base/orbit-0* )
 	java?  ( virtual/jre )
-	>=net-www/mozilla-launcher-1.7-r1"
+	>=net-www/mozilla-launcher-1.20"
 
 DEPEND="${RDEPEND}
 	virtual/libc
@@ -67,6 +68,11 @@ src_compile() {
 	myconf="${myconf} \
 		--with-default-mozilla-five-home=/usr/lib/MozillaFirefox \
 		--enable-single-profile"
+
+	# hardened GCC uses -fstack-protector-all by default, and this breaks
+	# firefox.
+	has_hardened && append-flags -fno-stack-protector-all
+	replace-flags -fstack-protector-all -fstack-protector
 
 	####################################
 	#
