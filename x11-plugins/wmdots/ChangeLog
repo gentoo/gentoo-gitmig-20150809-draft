@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/wmdots
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header
+
+*wmdots-0.2_beta (15 Dec 2002)
+  
+  15 Dec 2002; Matt Keadle <mkeadle@gentoo.org> wmdots-0.2_beta.ebuild
+  files/digest-wmdots-0.2_beta
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This was requested by gongloo from #fluxbox.
