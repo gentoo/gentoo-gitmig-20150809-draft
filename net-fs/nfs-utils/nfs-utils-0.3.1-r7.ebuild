@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Originally written by Achim Gottinger <achim@gentoo.org>
 # Heavily updated for nfs-utils-0.3.1 by Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r7.ebuild,v 1.1 2001/10/22 00:08:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r7.ebuild,v 1.2 2001/10/22 00:13:25 agriffis Exp $
 
-A=$P.tar.gz
 S=$WORKDIR/$P
 DESCRIPTION="kernel NFS daemons"
-SRC_URI="http://download.sourceforge.net/nfs/$A"
+SRC_URI="http://download.sourceforge.net/nfs/$P.tar.gz"
 HOMEPAGE="http://nfs.sourceforge.net/"
 
 DEPEND="virtual/glibc
