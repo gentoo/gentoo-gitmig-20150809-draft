@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4.ebuild,v 1.5 2004/06/02 02:04:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4.ebuild,v 1.6 2004/06/14 07:30:42 kloeri Exp $
 
 DESCRIPTION="A simple and fast GBK Chinese XIM server."
 HOMEPAGE="http://developer.berlios.de/projects/xsim/"
@@ -9,6 +9,7 @@ SRC_URI="http://download.berlios.de/xsim/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.0.0"

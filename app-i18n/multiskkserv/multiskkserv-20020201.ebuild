@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.5 2003/12/27 05:10:55 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.6 2004/06/14 07:24:12 kloeri Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ SRC_URI="http://www3.big.or.jp/~sian/linux/products/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 alpha sparc ppc"
+IUSE=""
 
 DEPEND="virtual/glibc
 	app-i18n/skk-jisyo-cdb"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.10 2004/04/06 03:55:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.11 2004/06/14 07:23:39 kloeri Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SRC_URI="mirror://gnu/less/${LESS_P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2"

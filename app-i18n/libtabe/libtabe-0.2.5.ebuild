@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.5.ebuild,v 1.9 2004/05/03 10:19:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.5.ebuild,v 1.10 2004/06/14 07:19:54 kloeri Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://xcin.linux.org.tw/pub/xcin/libtabe/devel/${P}.tar.gz"
 LICENSE="XCIN"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
 DEPEND="=sys-libs/db-3*"
 

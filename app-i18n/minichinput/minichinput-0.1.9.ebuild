@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/minichinput-0.1.9.ebuild,v 1.3 2004/04/06 03:58:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/minichinput-0.1.9.ebuild,v 1.4 2004/06/14 07:20:40 kloeri Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SRC_URI="mirror://sourceforge/minichinput/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/x11
 	virtual/xft
