@@ -1,7 +1,13 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.13 2003/12/19 18:58:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.14 2003/12/29 16:39:07 wmertens Exp $
 
+*mixxx-1.1-r1 (29 Dec 2003)
+
+  29 Dec 2003; Wout Mertens <wmertens@gentoo.org> mixxx-1.1-r1.ebuild:
+  g++ now also has cflags (bad spacing in sed call). Bumping revision so
+  people can rebuild.
+  
   19 Dec 2003; Martin Holzer <mholzer@gentoo.org> mixxx-1.1.ebuild:
   now uses cflags. closes 36092
 
@@ -13,6 +19,11 @@
 
   18 Dec 2003; Martin Holzer <mholzer@gentoo.org> mixxx-1.1.ebuild:
   Version bumped.
+
+*mixxx-1.1 (24 Dec 2003)
+
+  24 Dec 2003; Wout Mertens <wmertens@gentoo.org> mixxx-1.1.ebuild:
+  Version bump
 
   30 Sep 2003; jje <jje@gentoo.org> mixxx-1.0.ebuild:
   Fixed fftw depend - needs 2.1.5.
