@@ -2,6 +2,9 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.2 2002/04/16 01:14:04 seemant Exp
 
+  30 Jul 2004; Tom Gall <tgall@gentoo.org> t1lib-5.0.2.ebuild:
+  stable on ppc64
+
   12 Jul 2004; Tom Gall <tgall@gentoo.org> t1lib-5.0.2.ebuild:
   add ~ppc64, bug #55965
 
