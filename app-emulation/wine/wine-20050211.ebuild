@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.6 2005/03/19 02:10:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.7 2005/03/20 19:33:10 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,6 +15,7 @@ IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses doc lcms"
 RESTRICT="maketest" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
+	media-fonts/corefonts
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	X? ( virtual/x11 )
