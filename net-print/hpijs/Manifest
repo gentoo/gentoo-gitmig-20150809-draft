@@ -1,5 +1,7 @@
+MD5 8e2d551f161dd5c0b65d4d1ee7ffe031 hpijs-1.5.ebuild 2093
 MD5 1b78c9755845c50ea5367d850d01ffda hpijs-1.4.1.ebuild 2067
 MD5 35fc8ec0c3bbed46592cec224b9c0ada ChangeLog 1871
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 153b11771cdc5889cbe726925c862292 files/hpijs-1.4.1-rss.1.patch 6182
 MD5 9eb7c84d396d9a290a23086489dc1a2c files/digest-hpijs-1.4.1 137
+MD5 4a45d7f2afffa6ae0b5a8c27d7608ddc files/digest-hpijs-1.5 143

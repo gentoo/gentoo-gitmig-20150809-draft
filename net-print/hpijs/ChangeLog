@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.15 2003/10/30 15:00:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.16 2003/11/25 18:40:18 lanius Exp $
+
+  25 Nov 2003; Heinrich Wendel <lanius@gentoo.org> :
+  bump
 
   30 Oct 2003; Heinrich Wendel <lanius@gentoo.org> hpijs-1.4.1.ebuild:
   bug #32097
