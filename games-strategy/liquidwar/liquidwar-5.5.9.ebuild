@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.5.9.ebuild,v 1.2 2003/11/07 01:28:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.5.9.ebuild,v 1.3 2003/11/07 08:42:04 hythloday Exp $
 
 inherit games flag-o-matic
 
@@ -24,6 +24,8 @@ src_unpack() {
 	sed -i \
 		-e '/@echo/d' Makefile.in || \
 			die "sed Makefile.in failed"
+
+	epatch ${FILESDIR}/liquidwar-gcc-3.3-fix.patch
 }
 
 src_compile() {
