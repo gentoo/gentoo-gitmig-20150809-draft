@@ -1,5 +1,6 @@
 MD5 865340a19fd3bf588d13a3edad97315f aspell-en-0.51.1.ebuild 334
 MD5 66e57fd4e7c14f17a98b84b1e6adf789 aspell-en-0.51.0.ebuild 336
 MD5 424f29e0ef850ef7c67ff14306c99d88 ChangeLog 1568
+MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
 MD5 fbec29a990059655eda87df56690a2ab files/digest-aspell-en-0.51.0 69
 MD5 8dddabff04fb784aa045fcb6bede77c2 files/digest-aspell-en-0.51.1 69
