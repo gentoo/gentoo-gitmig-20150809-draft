@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.2.0_rc1.ebuild,v 1.1 2004/01/19 04:03:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.2.0.ebuild,v 1.1 2004/02/02 14:32:38 caleb Exp $
 # TODO: add gnustep, objc bindings
 
 inherit kde-dist
@@ -44,12 +44,6 @@ src_unpack()
 	cp Makefile.am Makefile.am.orig
 	sed -e 's:mozilla::' Makefile.am.orig > Makefile.am
 	fi
-
-#	# qt 3.2.1 fix, bug #29095
-#	cd ${S}/smoke/qt
-#	epatch ${FILESDIR}/x_QFont.cpp.diff
-#	epatch ${FILESDIR}/x_QHBox.cpp.diff
-#	epatch ${FILESDIR}/x_Qt.cpp.diff
 
 	cd ${S} && aclocal
 }
