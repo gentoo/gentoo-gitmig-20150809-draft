@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/live
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.42 2004/12/29 01:07:50 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.43 2005/01/30 17:02:13 luckyduck Exp $
+
+*live-2005.01.29 (30 Jan 2005)
+
+  30 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +live-2005.01.29.ebuild:
+  new upstream version, bumped.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
