@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/giftoxic
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/ChangeLog,v 1.10 2004/10/16 12:03:16 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/ChangeLog,v 1.11 2005/01/02 12:23:20 hansmi Exp $
+
+  02 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  giftoxic-0.0.10.ebuild:
+  Added to ~ppc, bug 76116.
 
   16 Oct 2004; Tom Martin <slarti@gentoo.org> giftoxic-0.0.10.ebuild:
   Marked ~amd64.
