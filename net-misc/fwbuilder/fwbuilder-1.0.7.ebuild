@@ -1,19 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fwbuilder/fwbuilder-1.0.6.ebuild,v 1.3 2002/11/04 13:42:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fwbuilder/fwbuilder-1.0.7.ebuild,v 1.1 2002/11/04 13:42:19 aliz Exp $
 
 DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 HOMEPAGE="http://fwbuilder.sourceforge.net/"
 S=${WORKDIR}/${P}
 
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="~x86 ~sparc ~sparc64"
 LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND=">=x11-libs/gtkmm-1.2.8
 	>=dev-libs/libxslt-1.0.7
-	>=net-libs/libfwbuilder-0.10.8
+	>=net-libs/libfwbuilder-0.10.11
 	media-libs/gdk-pixbuf
 	dev-libs/libxml2
 	=dev-libs/libsigc++-1.0*"
@@ -49,3 +49,4 @@ pkg_postinst() {
 	einfo "You may have to install iproute on the machine that"
 	einfo "will run the firewall script."
 }
+
