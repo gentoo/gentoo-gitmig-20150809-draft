@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.5 2003/07/28 21:00:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.6 2004/01/24 19:59:33 vapier Exp $
 
 DESCRIPTION="Critical Mass Modula-3 compiler (binary version)"
 HOMEPAGE="http://www.elegosoft.com/cm3/"

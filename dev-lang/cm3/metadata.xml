@@ -14,16 +14,16 @@ available so far. The changes made by Critical Mass, Inc. since their CM3 4.1
 release include:
 
     * Modula-3 modules loadable at runtime
-    * <*IMPLICIT*> exceptions (changes language semantics)
+    * *IMPLICIT* exceptions (changes language semantics)
     * checked runtime errors are mapped to the implicit exception RuntimeError.E
     * garbage collector failures are also mapped to implicit exceptions
     * COM-compatible object layout (for WIN32)
     * Unicode support: WIDECHAR, Text, Text8, Text16, Unicode interfaces
     * extended ASSERT pragma:
-      <*ASSERT condition [ ("," | WITH) msg ] *>>
+      *ASSERT condition [ ("," | WITH) msg ] *
     * new DEBUG pragma:
-      <*DEBUG condition [ ("," | WITH) msg {, msg} ] *>
-      <*DEBUG [ msg {, msg } ] *>
+      *DEBUG condition [ ("," | WITH) msg {, msg} ] *
+      *DEBUG [ msg {, msg } ] *
     * 64 bit support for 64 bit machines
 
 There have been many more changes, and the 4.1 release also contained lots of 
