@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.79 2003/09/27 00:26:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.80 2003/10/01 21:01:54 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -47,9 +47,15 @@ S=${WORKDIR}/${MY_P}
 
 IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2"
 
-# Berkdb is disabled due to DB4 and changes in PHP4.3.2
-#RDEPEND="${RDEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
-#IUSE="${IUSE} berkdb"
+# berkdb stuff is complicated
+# we need db-1.* for ndbm
+# and then either of db3 or db4
+IUSE="${IUSE} berkdb"
+RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1.* 
+							  || ( >=sys-libs/db-4.0.14-r2 
+								   >=sys-libs/db-3.2.9-r9
+							     ) 
+							)"
 
 # Everything is in this list is dynamically linked agaist or needed at runtime in some other way
 RDEPEND="
@@ -243,19 +249,23 @@ php_src_compile() {
 
 	use java && php_check_java_config
 
-	# BerkDB is disabled due to DB4 and changes in PHP4.3.2
-	myconf="${myconf} --without-db3 --without-db4 --without-db2"
 	if use berkdb; then
-		ewarn "BerkDB is disabled due to DB4 issues and changes in PHP 4.3.2 presently."
-		ewarn "If you need BerkDB support, please do NOT upgrade at this time"
-	#	#Hack to use db4
-	#	if has_version =sys-libs/db-4* && grep -q -- '--with-db4' configure; then
-	#		einfo "Enabling DB4"
-	#		myconf="${myconf} --with-db4=/usr"
-	#	else
-	#		einfo "Enabling DB3"
-	#		myconf="${myconf} --with-db3=/usr"
-	#	fi
+		einfo "Enabling NBDM"
+		myconf="${myconf} --with-ndbm"
+	 	#Hack to use db4
+	 	if has_version '=sys-libs/db-4*' && grep -q -- '--with-db4' configure; then
+	 		einfo "Enabling DB4"
+	 		myconf="${myconf} --with-db4=/usr"
+		elif has_version '=sys-libs/db-3*' && grep -q -- '--with-db3' configure; then
+	 		einfo "Enabling DB3"
+	 		myconf="${myconf} --with-db3=/usr"
+		else
+			einfo "Enabling DB2"
+			myconf="${myconf} --with-db2=/usr"
+	 	fi
+	else
+		einfo "Skipping DB2, DB3, DB4, NDBM support"
+		myconf="${myconf} --without-db3 --without-db4 --without-db2 --without-ndbm"
 	fi
 
 	use crypt && myconf="${myconf} --with-mcrypt=/usr --with-mhash"
@@ -365,12 +375,12 @@ php_src_compile() {
 	# These are some things that we don't really need use flags for, we just
 	# throw them in for functionality. Somebody could turn them off if their
 	# heart so desired
-	# DEPEND sys-apps/bzip2
+	# DEPEND - sys-apps/bzip2
 	myconf="${myconf} --with-bz2"
-	# DEPEND sys-libs/cracklib
+	# DEPEND - sys-libs/cracklib
 	myconf="${myconf} --with-crack"
-	# DEPEND sys-libs/db 
-	myconf="${myconf} --with-ndbm --with-cdb"
+	# DEPEND - nothing
+	myconf="${myconf} --with-cdb"
 	
 	# No DEPENDancies
 	mycony="${myconf} --enable-pcntl"
