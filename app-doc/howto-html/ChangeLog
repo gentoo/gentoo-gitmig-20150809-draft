@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/howto-html
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.9 2003/10/06 13:14:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.10 2004/03/18 03:55:45 vapier Exp $
+
+*howto-html-20040317 (17 Mar 2004)
+
+  17 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #44240 by Jaco Kroon.
 
 *howto-html-20031006 (06 Oct 2003)
 
