@@ -1,0 +1,7 @@
+# ChangeLog for gnome-extra/at-spi
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.1 2002/05/23 00:43:24 spider Exp $
+
+*at-spi-0.12.1 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> *t-spi-0.12.1.ebuild :
+  initial release from gnome2
