@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.17.ebuild,v 1.2 2004/09/29 11:24:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.17.ebuild,v 1.3 2004/10/12 18:12:06 vapier Exp $
 
 DESCRIPTION="WebMail->POP3 converter and more"
 HOMEPAGE="http://freepops.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/freepops/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
 DEPEND=" doc? ( >=app-doc/doxygen-1.3* )
