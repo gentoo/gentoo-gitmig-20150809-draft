@@ -1,13 +1,23 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac1137a20503dcb8f9ba2939a2a766f6 metadata.xml 230
 MD5 2b9b70a8a132d04ffa84b047fc2736bb xorg-x11-6.7.0-r3.ebuild 38110
+MD5 adcff6bd7e563e320e58d5c32077ed5a xorg-x11-6.8.2.ebuild 59001
+MD5 964bf2fe7bbddb6eab73140faa911397 xorg-x11-6.8.1.901-r1.ebuild 52453
 MD5 e33b194fdfcdaa928956aa1e5e937b72 xorg-x11-6.8.0-r3.ebuild 40114
 MD5 1a41dee2ee7de099201ab7b03c17b409 xorg-x11-6.8.0-r4.ebuild 52259
-MD5 964bf2fe7bbddb6eab73140faa911397 xorg-x11-6.8.1.901-r1.ebuild 52453
-MD5 21018397d1f7a73cd24a6925f7210ffe ChangeLog 80671
-MD5 1bfab86af33fd9fc7aa3416d26c1112b xorg-x11-6.8.2.ebuild 58997
+MD5 1cd655e8e37063ae94bad950c50c899b ChangeLog 80763
 MD5 a3314fbdc270d7d84ea14fd477b8d048 files/digest-xorg-x11-6.7.0-r3 904
-MD5 70facbdb85b7ef2bc9b9b702442eda7e files/digest-xorg-x11-6.8.0-r3 908
+MD5 a89ceac8aaa19a446dab3a634a027d0b files/digest-xorg-x11-6.8.2 504
 MD5 0fa47dcdfd673d5824ea3a6cfe17ade0 files/digest-xorg-x11-6.8.0-r4 911
+MD5 70facbdb85b7ef2bc9b9b702442eda7e files/digest-xorg-x11-6.8.0-r3 908
 MD5 31a8fa39480a7053afd4ebd7493c09c4 files/digest-xorg-x11-6.8.1.901-r1 517
 MD5 f14e22fa0891e99c1000c0d61d7e8a0c files/xpm-secfix-thomas.diff 55674
-MD5 a89ceac8aaa19a446dab3a634a027d0b files/digest-xorg-x11-6.8.2 504
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCD2chugEuf3OQ0akRAnvJAKCKKK1n9U54pb06Dd2ziRXNWso+/QCfby91
+X8DwtZzUpord+DzfI5oFf/w=
+=gY7c
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.75 2005/02/12 05:25:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.76 2005/02/13 14:37:34 kloeri Exp $
+
+  13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  opengl-update-2.0_pre5.ebuild:
+  Stable on alpha.
 
 *opengl-update-2.1.1-r1 (11 Feb 2005)
 
