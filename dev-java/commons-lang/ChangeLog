@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.15 2004/03/23 02:55:22 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.16 2004/03/23 03:22:37 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> commons-lang-2.0-r1.ebuild:
+  Marking stable on x86.
 
   22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> commons-lang-2.0-r1.ebuild:
   Let ant die gracefully, #45398
