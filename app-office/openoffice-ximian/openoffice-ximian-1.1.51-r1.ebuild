@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.51-r1.ebuild,v 1.6 2004/06/24 22:43:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.51-r1.ebuild,v 1.7 2004/06/28 15:29:49 vapier Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -56,7 +56,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="gnome kde"
 
-RDEPEND=">=sys-libs/glibc-2.1
+RDEPEND="virtual/libc
 	!=sys-libs/glibc-2.3.1*
 	>=dev-lang/perl-5.0
 	>=x11-libs/gtk+-2.0
@@ -80,7 +80,7 @@ RDEPEND=">=sys-libs/glibc-2.1
 	virtual/lpr
 	!app-office/openoffice-ximian-bin
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
-	>=sys-devel/gcc-3.2.1 )
+		>=sys-devel/gcc-3.2.1 )
 	>=media-libs/freetype-2.1.4"
 
 DEPEND="${RDEPEND}

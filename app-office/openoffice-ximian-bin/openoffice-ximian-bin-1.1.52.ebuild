@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.5 2004/06/24 22:44:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.6 2004/06/28 15:26:19 vapier Exp $
 
 inherit rpm
 
@@ -8,16 +8,16 @@ OO_VER=1.1.1
 INSTDIR="/opt/Ximian-OpenOffice"
 S="${WORKDIR}/usr"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
+HOMEPAGE="http://ooo.ximian.com"
 SRC_URI="ftp://ftp.ximian.com/pub/xd-unstable/suse-90-i586/ooo-1.1.1-0.ximian.8.1.1.snap.1.1.52.1.i586.rpm
 	ftp://ftp.ximian.com/pub/xd-unstable/suse-90-i586/ooo-fonts-1.1.3-0.ximian.8.2.noarch.rpm"
 
-HOMEPAGE="http://ooo.ximian.com"
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="gnome kde"
 
-RDEPEND=">=sys-libs/glibc-2.1
+RDEPEND="virtual/libc
 	!=sys-libs/glibc-2.3.1*
 	>=dev-lang/perl-5.0
 	>=x11-libs/gtk+-2.0
@@ -40,10 +40,8 @@ RDEPEND=">=sys-libs/glibc-2.1
 	net-libs/linc
 	!app-office/openoffice-ximian
 	virtual/lpr
-	ppc? ( >=sys-libs/glibc-2.2.5-r7
-	>=sys-devel/gcc-3.2.1 )
+	ppc? ( >=sys-devel/gcc-3.2.1 )
 	>=media-libs/freetype-2.1.4"
-
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
