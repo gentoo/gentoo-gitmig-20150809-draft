@@ -1,5 +1,5 @@
-MD5 3a1edc58f9d9611e0397b1cd10bb6ca6 ChangeLog 1016
+MD5 8db871a14d283a8d83ad4d8bbd632084 ChangeLog 1139
 MD5 2d6bcd071b0afb2f2dc56d5acf930e34 nbtscan-1.0.3.ebuild 696
-MD5 32277bbdf4a61c22ddd2e7db10aa689f nbtscan-1.5.1.ebuild 693
+MD5 726257bfaba4a4ae7683c3d16235fa5f nbtscan-1.5.1.ebuild 694
 MD5 cf7eaedc7093ec3f2c0aca3848d73798 files/digest-nbtscan-1.0.3 64
 MD5 8e3778c37bb9f7f1e27633860cd1b2f2 files/digest-nbtscan-1.5.1 64
