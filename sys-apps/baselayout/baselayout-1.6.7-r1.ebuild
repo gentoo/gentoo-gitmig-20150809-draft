@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7-r1.ebuild,v 1.4 2001/12/08 23:52:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7-r1.ebuild,v 1.5 2001/12/11 04:15:58 azarah Exp $
 
 SV=1.2.2
 S=${WORKDIR}/rc-scripts-${SV}
@@ -159,10 +159,7 @@ src_install()
 		#rootfs and devfs
 		keepdir /lib/dev-state
 		dosym /usr/sbin/MAKEDEV /lib/dev-state/MAKEDEV
-		#this is not needed anymore, and causes /sbin/init to lock on
-		#boot (the .keep files in /lib/dev-state/{pts,shm})
-		#NOTE: this is only when using 'try' with moving /lib/dev-state
-		#      to /dev
+		#this is not needed anymore...
 		#keepdir /lib/dev-state/pts /lib/dev-state/shm
 		cd ${D}/lib/dev-state
 	else
@@ -211,7 +208,7 @@ src_install()
 		[ -f $foo ] && doins $foo
 	done
 	#/etc/conf.d/net.ppp* should only be readible by root
-	chmod 0600 ${D}/etc/conf.d/net.ppp*
+#	chmod 0600 ${D}/etc/conf.d/net.ppp*
 
 	#this seems the best place for templates .. any ideas ?
 	#NB: if we move this, then $TEMPLATEDIR in net.ppp0 need to be updated as well
@@ -225,6 +222,8 @@ src_install()
 	do
 		[ -f $foo ] && doexe $foo
 	done
+	#/etc/init.d/net.ppp* should only be readible by root
+	chmod 0600 ${D}/etc/init.d/net.ppp*
 
 	dodir /etc/skel
 	insinto /etc/skel
@@ -261,11 +260,27 @@ pkg_postinst() {
 	done
 
 	#kill the old /dev-state directory if it exists
-	[ "`cat /proc/mounts |grep '/dev-state'`" ] && umount /dev-state >/dev/null 2>&1
-	[ -e /dev-state ] && rm -rf /dev-state
-	
-	#remove /lib/dev-state/{pts,shm}, as the .keep files cause init to lock
-#	rm -rf /lib/dev-state/{pts,shm} >/dev/null 2>&1
+	if [ -e /dev-state ]
+	then
+		if [ "`cat /proc/mounts |grep '/dev-state'`" ]
+		then
+			umount /dev-state >/dev/null 2>&1
+
+			if [ $? -eq 0 ]
+			then
+				rm -rf /dev-state
+			else
+				echo
+				echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+				echo "! Please remove /dev-state after reboot. !"
+				echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+				echo
+			fi
+			
+		else
+			rm -rf /dev-state
+		fi
+	fi
 	
 	#force update of /etc/devfsd.conf
 	#just until everybody upgrade that is ...
@@ -285,7 +300,6 @@ pkg_postinst() {
 		echo "* try not to delete lines from the new devfsd.conf.     *"
 		echo "*********************************************************"
 		echo
-		
 	fi
 	
 	#restart devfsd
@@ -300,6 +314,21 @@ pkg_postinst() {
 		elif [ -x /sbin/devfsd ]
 		then
 			/sbin/devfsd /dev >/dev/null 2>&1
+		fi
+		
+		if [ $? -eq 1 ]
+		then
+			echo
+			echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+			echo "!                                               !"
+			echo "! Please install devfsd-1.3.20 or later!!       !"
+			echo "! The following should install the latest       !"
+			echo "! version:                                      !"
+			echo "!                                               !"
+			echo "!    emerge sys-apps/devfsd                     !"
+			echo "!                                               !"
+			echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+			echo
 		fi
 	fi
 }
