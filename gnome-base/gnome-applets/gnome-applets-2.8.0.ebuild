@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.8.0.ebuild,v 1.1 2004/09/16 11:38:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.8.0.ebuild,v 1.2 2004/10/08 22:00:15 foser Exp $
 
 inherit gnome2 eutils
 
@@ -16,7 +16,7 @@ RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/gail-1.3
 	>=gnome-base/gconf-2.0
 	>=gnome-base/gnome-vfs-2
-	>=gnome-base/libgtop-2.5
+	>=gnome-base/libgtop-2.8
 	>=gnome-base/gnome-panel-2.7
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2
