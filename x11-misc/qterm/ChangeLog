@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qterm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.9 2004/12/09 11:07:08 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.10 2005/02/19 09:22:52 usata Exp $
+
+  19 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> -qterm-0.4.0_pre1.ebuild,
+  qterm-0.4.0_pre2.ebuild:
+  Use kde-function.eclass. This closes bug #80978.
 
 *qterm-0.4.0_pre2 (09 Dec 2004)
 
