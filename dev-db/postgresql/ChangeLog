@@ -1,9 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.17 2002/07/14 00:03:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.18 2002/07/15 05:35:00 rphillips Exp $
 
 *postgresql-7.2-r3 (02 Jul 2002)
-  
+
   08 Jul 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.2-r3.ebuild :
 
   Added creation of user and group
@@ -17,6 +17,10 @@
 
 *postgresql-7.2.1-r1 (20 Jun 2002)
 
+  14 Jul 2002l Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.1-r1.ebuild :
+
+  Added init.d startup file for 7.2.1
+  
   13 Jul 2002l Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.1-r1.ebuild :
 
   Added sudo dependency

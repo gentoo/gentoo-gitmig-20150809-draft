@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1-r1.ebuild,v 1.9 2002/07/14 00:03:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1-r1.ebuild,v 1.10 2002/07/15 05:35:00 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -53,7 +53,7 @@ src_unpack() {
 	# config is however set to the static libperl.a
 	# just remove the check
 	patch -p1 < ${FILESDIR}/${P}-dyn-libperl-gentoo.diff || die
-	cp ${FILESDIR}/${P}-build.xml ${S}/src/interfaces/jdbc/build.xml
+	# cp ${FILESDIR}/${P}-build.xml ${S}/src/interfaces/jdbc/build.xml
 }
 
 src_compile() {
