@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.79 2004/09/08 15:05:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.80 2004/09/21 14:36:17 lanius Exp $
+
+  21 Sep 2004; Heinrich Wendel <lanius@gentoo.org> ncurses-5.4-r5.ebuild:
+  mark x86
 
   08 Sep 2004; Mike Frysinger <vapier@gentoo.org> ncurses-5.3-r5.ebuild,
   ncurses-5.4-r1.ebuild, ncurses-5.4-r2.ebuild, ncurses-5.4-r3.ebuild,
