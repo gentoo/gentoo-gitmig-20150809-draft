@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-repeatit
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-repeatit/ChangeLog,v 1.1 2004/08/14 16:12:00 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-repeatit/ChangeLog,v 1.2 2004/08/30 23:45:20 dholm Exp $
+
+  31 Aug 2004; David Holm <dholm@gentoo.org> xmms-repeatit-0.0.4.ebuild:
+  Added to ~ppc.
 
 *xmms-repeatit-0.0.4 (14 Aug 2004)
 
