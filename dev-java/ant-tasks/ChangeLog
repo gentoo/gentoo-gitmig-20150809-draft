@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.14 2005/01/26 21:51:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.15 2005/01/29 21:29:03 luckyduck Exp $
+
+  29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> ant-tasks-1.6.2-r5.ebuild:
+  update to reflect the new rhino slots.
 
   26 Jan 2005; Markus Rothe <corsair@gentoo.org> ant-tasks-1.6.2-r5.ebuild:
   Stable on ppc64

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r5.ebuild,v 1.7 2005/01/26 21:51:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r5.ebuild,v 1.8 2005/01/29 21:29:03 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -27,7 +27,7 @@ DEPEND="=dev-java/ant-core-${PV}*
 	!nocommonsnet? ( >=dev-java/commons-net-1.1.0 )
 	!nobcel? ( >=dev-java/bcel-5.1 )
 	!nooro? ( >=dev-java/oro-2.0.7 )
-	!norhino? ( >=dev-java/rhino-1.5_rc4 )
+	!norhino? ( =dev-java/rhino-1.5* )
 	!nojdepend? ( >=dev-java/jdepend-2.6 )
 	!nojsch? ( >=dev-java/jsch-0.1.12 )
 	!noregexp? ( >=dev-java/regexp-1.3-r1 )
@@ -58,7 +58,7 @@ src_compile() {
 	use nolog4j || p="${p},log4j"
 	use nooro || p="${p},oro"
 	use noregexp || p="${p},regexp"
-	use norhino || p="${p},rhino"
+	use norhino || p="${p},rhino-1.5"
 	use noxalan || p="${p},xalan"
 	use noxerces || p="${p},xerces-2"
 
