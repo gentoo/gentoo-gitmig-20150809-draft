@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.21 2004/04/21 06:42:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.22 2004/04/25 08:49:14 mr_bones_ Exp $
+
+*wesnoth-0.7.5 (25 Apr 2004)
+
+  25 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-0.7.5.ebuild:
+  version bump
 
   20 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-0.7.3.ebuild:
   Work around for broken compile on ppc from Ernst Persson via bug #48326; tidy
