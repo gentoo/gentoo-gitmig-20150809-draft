@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/lzop-1.01.ebuild,v 1.2 2004/03/12 11:11:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/lzop-1.01.ebuild,v 1.3 2004/05/21 16:42:59 jhuebel Exp $
 
 DESCRIPTION="Utility for fast (even reat-time) compression/decompression"
 HOMEPAGE="http://www.oberhumer.com/opensource/lzop/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.oberhumer.com/opensource/lzop/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND="dev-libs/lzo"
 
