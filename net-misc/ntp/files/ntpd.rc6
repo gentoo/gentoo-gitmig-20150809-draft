@@ -1,20 +1,53 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc6,v 1.2 2001/12/06 20:17:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc6,v 1.3 2002/03/24 14:25:31 azarah Exp $
+
+#NB: Config is in /etc/conf.d/ntpd
+
 
 depend() {
 	need net
 }
 
+checkconfig() {
+	if [ ! -f /etc/ntp.conf ] && [ -z "${NTPDATESERVER}" ]
+	then
+		eerror "Please create /etc/ntp.conf or set \$NTPDATESERVER"
+		eerror "in /etc/conf.d/ntp"
+		return 1
+	fi
+	return 0
+}
+
 start() {
-    ebegin "Starting ntpd"
-    start-stop-daemon --start --quiet --exec /usr/bin/ntpd -- -p /var/run/ntpd.pid
-    eend $?
+	checkconfig || return $?
+	if [ ! -f /etc/ntp.conf ] && [ -n "${NTPDATESERVER}" ]
+	then
+		echo "server ${NTPDATESERVER}" >/etc/ntp.conf
+		echo "driftfile /etc/ntp.drift" >>/etc/ntp.conf
+	fi
+	if [ -n "${NTPDATESERVER}" ]
+	then
+		ebegin "Running ntpdate"
+		ntpdate ${NTPDATESERVER} > /dev/null
+		eend $? "Failed to run ntpdate"
+	fi
+	ebegin "Starting ntpd"
+	start-stop-daemon --start --quiet --pidfile /var/run/ntpd.pid \
+		--startas /usr/bin/ntpd -- -p /var/run/ntpd.pid
+	eend $? "Failed to start ntpd"
 }
 
 stop() {
-    ebegin "Stopping ntpd"
-    start-stop-daemon --stop --quiet --pidfile /var/run/ntpd.pid
-    eend $?
+	ebegin "Stopping ntpd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/ntpd.pid
+	eend $? "Failed to stop ntpd"
+
+	# clean stale pidfile
+	if [ -f /var/run/ntpd.pid ]
+	then
+		rm -f /var/run/ntpd.pid
+	fi
 }
+

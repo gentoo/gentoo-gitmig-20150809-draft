@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.2 2002/03/24 14:25:31 azarah Exp $
+
+*ntp-4.1.72-r1 (24 March 2002)
+  
+  24 March 2002; M.Schlemmer <azarah@gentoo.org> :
+
+  Resolve bug #897 (add ntpdate to rc-script); add config file for ntpd.
 
 *ntp-4.1.72 (1 Feb 2002)
 

@@ -1,0 +1,7 @@
+# Config file for /etc/init.d/ntpd
+
+
+# Name of the server ntpd should sync with
+
+#NTPDATESERVER=ntp.ctr.columbia.edu
+
