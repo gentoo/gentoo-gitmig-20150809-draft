@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-firmware/capi4k-firmware-2004.4.5-r1.ebuild,v 1.2 2004/11/21 19:00:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-firmware/capi4k-firmware-2004.4.5-r1.ebuild,v 1.3 2004/11/21 20:32:35 mrness Exp $
 
 inherit rpm
 
@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc s390 sparc x86"
 
 IUSE=""
-DEPEND="|| ( app-arch/rpm2targz app-arch/rpm )"
 S=${WORKDIR}
 
 src_install() {
