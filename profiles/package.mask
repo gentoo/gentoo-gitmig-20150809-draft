@@ -124,10 +124,6 @@
 # gtkmm-addons is broken for gcc32
 x11-libs/gtkmm-addons
 
-# <hannes@gentoo.org> (12 Oct 2002)
-# Masking kvim-6.1.141 (configure called twice, bug #8985)
-=app-editors/kvim-6.1.141
-
 # <phoenix@gentoo.org> (11 Oct 2002)
 # Masking the new winex for testing
 =app-emulation/winex-20021011
