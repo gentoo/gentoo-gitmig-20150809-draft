@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.6 2003/04/26 21:26:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.7 2003/06/21 00:14:52 liquidx Exp $
 
 DESCRIPTION="A C++ backend for glade, the GUI designer for Gtk."
 HOMEPAGE="http://home.wtal.de/petig/Gtk/"
@@ -13,7 +13,7 @@ KEYWORDS="x86 sparc "
 DEPEND="=dev-util/glade-0.6*
 	=x11-libs/gtk+-1.2*
 	=x11-libs/gtkmm-1.2*
-	>=gnome-extra/gnomemm-1.2.0-r1"
+	>=dev-cpp/gnomemm-1.2.0-r1"
 
 S=${WORKDIR}/${P}b
 
