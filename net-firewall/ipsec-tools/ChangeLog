@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.19 2005/03/09 03:35:00 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.20 2005/03/10 23:31:46 latexer Exp $
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> ipsec-tools-0.5.ebuild:
+  Fix problem on VIA C3 processors. See bug #77369.
 
 *ipsec-tools-0.5 (08 Mar 2005)
 
