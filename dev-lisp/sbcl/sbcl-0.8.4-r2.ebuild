@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.4-r2.ebuild,v 1.4 2003/10/13 06:10:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.4-r2.ebuild,v 1.5 2003/10/30 17:44:53 mkennedy Exp $
 
 inherit common-lisp-common
 
@@ -90,12 +90,14 @@ src_install() {
 	find ${D} -type f -name .cvsignore -exec rm -f '{}' \;
 	find ${D} -type f -name \*.c -exec chmod 644 '{}' \;
 
+	# BIG FAT HACK
+	#
 	# Since the Portage emerge step kills file timestamp information,
-	# we need to compensate by ensuring all .fasl files are more recent
-	# than their .lisp source.
+	# we need to compensate by ensuring all .fasl files are more
+	# recent than their .lisp source.
 
-	dodir /usr/share/sbcl
-	tar cpvzf ${D}/usr/share/sbcl/portage-timestamp-compensate -C ${D}/usr/lib/sbcl .
+	dodir /usr/share/${PN}
+	tar cpvzf ${D}/usr/share/${PN}/portage-timestamp-compensate -C ${D}/usr/lib/${PN} .
 }
 
 pkg_postinst() {
@@ -105,14 +107,11 @@ pkg_postinst() {
 	/usr/sbin/register-common-lisp-implementation sbcl
 }
 
-pkg_prerm() {
-	/usr/sbin/unregister-common-lisp-implementation sbcl
-}
-
 pkg_postrm() {
 	# Since we keep our own time stamps we must manually remove them
 	# here.
 	if [ ! -x /usr/bin/sbcl ]; then
 		rm -rf /usr/lib/sbcl
 	fi
+	rm -rf /usr/lib/common-lisp/${PN}
 }

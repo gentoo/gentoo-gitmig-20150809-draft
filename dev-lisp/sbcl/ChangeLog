@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.20 2003/10/13 07:05:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.21 2003/10/30 17:44:53 mkennedy Exp $
+
+  30 Oct 2003; <mkennedy@gentoo.org> sbcl-0.6.12.ebuild, sbcl-0.7.5.ebuild,
+  sbcl-0.7.6-r1.ebuild, sbcl-0.8.3.68.ebuild, sbcl-0.8.4-r2.ebuild:
+  removed old ebuilds
+
+  30 Oct 2003; <mkennedy@gentoo.org> sbcl-0.6.12.ebuild, sbcl-0.7.5.ebuild,
+  sbcl-0.7.6-r1.ebuild, sbcl-0.8.3.68.ebuild, sbcl-0.8.4-r2.ebuild:
+  improved clean up code, if you experience problems after updating to this
+  version, try re-emerging sbcl -- this should resolve any transient upgrade
+  problems
 
   13 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml:
   add metadata.xml
