@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.3 2003/02/12 07:36:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.4 2003/03/01 16:39:07 lu_zero Exp $
+
+  1 Mar 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.5.1-r1.ebuild,
+    ChangeLog:
+    make sure that the opengl is set to xfree while compiling and after 
+    unmerge.
 
 *ati-drivers-2.5.1-r1 (3 Feb 2003)
   3 Feb 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-2.5.1-r1.ebuild,

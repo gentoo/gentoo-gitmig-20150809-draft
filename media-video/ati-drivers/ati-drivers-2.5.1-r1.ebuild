@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.4 2003/02/28 18:56:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.5 2003/03/01 16:39:08 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -8,7 +8,7 @@ SRC_URI="http://pdownload.mii.instacontent.net/ati/drivers/fglrx-glc22-4.2.0-${P
 HOMEPAGE="http://www.ati.com"
 DESCRIPTION="Ati precompiled drivers for r300, r250 and r200 chipsets"
 
-LICENSE="ATI GPL-2 QPL-1.0"
+LICENSE="ATI GPL QPL"
 SLOT="${KV}"
 KEYWORDS="~x86 -ppc -sparc -sparc64"
 
@@ -27,6 +27,11 @@ src_unpack() {
     rpm2cpio ${DISTDIR}/${A} | cpio --extract --make-directories --unconditional
 }
 
+pkg_setup(){
+	opengl-update xfree
+}
+
+
 src_compile() {
 
 	einfo "building the glx module"
@@ -36,8 +41,8 @@ src_compile() {
 	
 
     einfo "building the fgl_glxgears sample"
-
-    mkdir ${WORKDIR}/fglrxgears
+	
+	mkdir ${WORKDIR}/fglrxgears
     cd ${WORKDIR}/fglrxgears
     tar -xzvf ${WORKDIR}/usr/src/fglrx_sample_source.tgz
     mv xc/programs/fgl_glxgears/* .
@@ -135,4 +140,8 @@ pkg_postinst() {
     
 #drm-module
     update-modules
+}
+
+pkg_postrm() {
+	opengl-update xfree
 }
