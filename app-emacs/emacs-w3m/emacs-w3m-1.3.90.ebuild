@@ -1,24 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.2.ebuild,v 1.6 2004/04/19 21:02:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.90.ebuild,v 1.1 2004/04/25 17:05:28 usata Exp $
 
 inherit elisp
 
 IUSE=""
 
-DESCRIPTION="emacs-w3m is interface program of w3m on Emacs."
+DESCRIPTION="emacs-w3m is an interface program of w3m on Emacs."
 HOMEPAGE="http://emacs-w3m.namazu.org"
 SRC_URI="http://emacs-w3m.namazu.org/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+# This is development release and is not intended to be stable
+KEYWORDS="~x86 ~alpha"
 
 DEPEND="virtual/emacs
 	virtual/w3m
 	>=app-emacs/apel-10.3
 	virtual/flim"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	./configure --prefix=/usr \
@@ -30,6 +30,7 @@ src_compile() {
 
 src_install () {
 	make lispdir=${D}/${SITELISP}/${PN} \
+		infodir=${D}/usr/share/info \
 		ICONDIR=${D}/usr/share/${PN}/icon \
 		install || die
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.6.ebuild,v 1.5 2004/04/19 21:02:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.6.ebuild,v 1.6 2004/04/25 17:05:28 usata Exp $
 
 inherit elisp
 
@@ -18,8 +18,6 @@ DEPEND="virtual/emacs
 	virtual/w3m
 	>=app-emacs/apel-10.3
 	virtual/flim"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	./configure --prefix=/usr \
