@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyid3lib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/ChangeLog,v 1.7 2004/08/29 11:05:12 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/ChangeLog,v 1.8 2004/09/02 13:43:30 tgall Exp $
+
+  02 Sep 2004; Tom Gall <tgall@gentoo.org> pyid3lib-0.5.1.ebuild:
+  stable on ppc64
 
   29 Aug 2004; Travis Tilley <lv@gentoo.org> pyid3lib-0.5.1.ebuild:
   stable on amd64
