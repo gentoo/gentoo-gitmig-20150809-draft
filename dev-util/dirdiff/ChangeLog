@@ -1,8 +1,13 @@
 # ChangeLog for dev-util/dirdiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.3 2004/06/25 02:29:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.4 2004/07/18 15:51:14 tgall Exp $
 
-  11 May 2004; Tom Gall <tgall@gentoo.org> dirdiff-1.6.ebuild:
+  18 Jul 2004; Tom Gall <tgall@gentoo.org> +metadata.xml:
+  added maintainer information
+
+*metadata.xml
+
+  11 May 2004; Tom Gall <tgall@gentoo.org> +dirdiff-1.6.ebuild:
   Initial version, stable on ppc, x86 (and very likely other architectures
   as well)
 
