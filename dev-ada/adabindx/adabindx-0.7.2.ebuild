@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2.ebuild,v 1.2 2003/09/08 07:20:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2.ebuild,v 1.3 2003/09/18 15:35:18 dholm Exp $
 #
 
 DESCRIPTION="An Ada-binding to the X Window System and *tif."
@@ -11,7 +11,7 @@ LICENSE="GMGPL"
 DEPEND="dev-lang/gnat
 	virtual/x11"
 RDEPEND=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 IUSE=""
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack "${P}.tar.bz2"
 	cd "${S}"
 	patch -p1 < ${FILESDIR}/${P}.diff
+	sed -i -e "s/-O3.*/\${ADACFLAGS}/g" Local.conf
 }
 
 src_compile() {
