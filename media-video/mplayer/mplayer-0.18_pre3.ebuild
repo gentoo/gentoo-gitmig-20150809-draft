@@ -13,7 +13,9 @@ DEPEND="media-video/avifile"
 src_compile() {
 
   local myconf
-
+  local myprefix
+  echo /usr/X11R6 > ${T}/myprefix
+  
   if [ -z "`use nls`" ] ; then
 	myconf="${myconf} --disable-nls"
   fi
@@ -48,13 +50,14 @@ src_compile() {
 
   if [ -z "`use X`" ] ; then
 	myconf="${myconf} --disable-x11 --disable-xv"
+  	echo /usr > ${T}/myprefix
   fi
 
   if [ -z "`use oss`" ] ; then
 	myconf="${myconf} --disable-ossaudio"
   fi
 
-  if [ -z "`use alsa`"] ; then
+  if [ -z "`use alsa`" ] ; then
 	myconf="${myconf} --disable-alsa"
   fi
 
@@ -62,15 +65,13 @@ src_compile() {
 	myconf="${myconf} --disable-esd"
   fi
 
-  try ./configure --prefix=/usr --host=${CHOST} ${myconf}
+  try ./configure --mandir=/usr/share/man --prefix=`cat ${T}/myprefix` --host=${CHOST} ${myconf}
 
   try make OPTFLAGS=\"${CFLAGS}\" all
 }
 
 src_install() {
-
-
-  make prefix=${D}/usr install
+  make prefix=${D}/`cat ${T}/myprefix` install
 
   rm ${S}/DOCS/*.1
   dodoc DOCS/*
