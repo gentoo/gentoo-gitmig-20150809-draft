@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.45 2003/03/03 15:34:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.46 2003/03/09 19:41:56 agriffis Exp $
 
 *xchat-2.0.1 (03 Mar 2003)
 
@@ -8,6 +8,9 @@
   Bump to latest gtk2 release and remove all other old unstable gtk2 releases
 
 *xchat-2.0.0 (11 Feb 2003)
+
+  09 Mar 2003; Aron Griffis <agriffis@gentoo.org> xchat-2.0.0.ebuild:
+  Mark stable on alpha
 
   11 Feb 2003; foser <foser@gentoo.org> xchat-2.0.0.ebuild :
   First stable gtk2 release
