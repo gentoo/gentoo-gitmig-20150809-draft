@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/etheme-BrushedMetal-Tigert
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-BrushedMetal-Tigert/ChangeLog,v 1.4 2004/07/23 17:35:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-BrushedMetal-Tigert/ChangeLog,v 1.5 2004/12/22 14:13:16 gustavoz Exp $
+
+  22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  etheme-BrushedMetal-Tigert-0.16.7.1.ebuild:
+  Stable on sparc
 
   23 Jul 2004; Tom Gall <tgall@gentoo.org> 
   etheme-BrushedMetal-Tigert-0.16.7.1.ebuild:
