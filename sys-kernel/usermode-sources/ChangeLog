@@ -1,76 +1,70 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.17 2003/12/02 09:28:47 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.18 2003/12/05 17:33:31 plasmaroo Exp $
 
 *usermode-sources-2.4.22-r1 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
   usermode-sources-2.4.22-r1.ebuild:
-  version bump for do_brk vuln
+  Version bump for the 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   usermode-sources-2.4.19-r51.ebuild, usermode-sources-2.4.20-r1.ebuild,
   usermode-sources-2.4.21.ebuild, usermode-sources-2.4.22.ebuild,
-  files/do_brk_fix.patch:
-  fix do_brk vuln
+  files/do_brk_fix.patch: Fix the 'do_brk' vulnerability.
 
   31 Oct 2003; Heinrich Wendel <lanius@gentoo.org>
-  usermode-sources-2.4.22.ebuild:
-  stable bump
+  usermode-sources-2.4.22.ebuild: Bump to stable.
 
 *usermode-sources-2.4.22 (29 Sep 2003)
 
   29 Sep 2003; Heinrich Wendel <lanius@gentoo.org>
   usermode-sources-2.4.22.ebuild:
-  version bump
+  Version bump.
 
 *usermode-sources-2.4.20-r1 (29 Sep 2003)
 
   29 Sep 2003; Martin Holzer <mholzer@gentoo.org>
   usermode-sources-2.4.19-r51.ebuild, usermode-sources-2.4.20-r1.ebuild,
-  usermode-sources-2.4.21.ebuild:
-  now uses mirror://kernel.
+  usermode-sources-2.4.21.ebuild: Now uses mirror://kernel.
 
 *usermode-sources-2.4.21 (10 Sep 2003)
 
   10 Sep 2003; <plasmaroo@gentoo.org> usermode-sources-2.4.21.ebuild:
-  Fixed broken patch location [bug #28118]
+  Fixed broken patch location [bug #28118].
 
-  28 Aug 2003; stuart :
-  Upgraded to provide UML for 2.4.21 kernels
+  28 Aug 2003; stuart : Upgraded to provide UML for 2.4.21 kernels.
 
 *usermode-sources-2.4.20-rX (05 Mar 2002)
 
   02 Mar 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped, -rX contains uml-patch-2.4.20-rX
+  Version bumped, -rX contains uml-patch-2.4.20-rX.
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords.
  
 *usermode-sources-2.4.19-rX (05 Oct 2002)
 
   05 Oct 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped, -rX contains uml-patch-2.4.19-rX
+  Version bumped, -rX contains uml-patch-2.4.19-rX.
 
 *usermode-sources-2.4.19-r2 (10 Sep 2002)
 
   10 Sep 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped, including uml-patch-2.4.19-2
+  Version bumped, including uml-patch-2.4.19-2.
 
 *usermode-sources-2.4.19-r1 (10 Sep 2002)
 
   10 Sep 2002; Michael Imhof <tantive@gentoo.org>
-  Version bumped, including uml-patch-2.4.19-1
+  Version bumped, including uml-patch-2.4.19-1.
 
 *usermode-sources-2.4.18-r2 (23 Jul 2002)
 
   23 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
-  usermode-sources-2.4.18-r2 :
-
-  Ulf.Bartelt@t-online.de (Ulf Bartelt) submitted this new ebuild, which
-  basically patches with a newer patch.
+  usermode-sources-2.4.18-r2 : Ulf.Bartelt@t-online.de (Ulf Bartelt) 
+  submitted this new ebuild, which basically patches with a newer patch.
 
 *usermode-kernel-2.4.18 (4 March 2002)
 
@@ -78,6 +72,4 @@
   Added arch keywords (-ppc -sparc -sparc64)
 
   4 March 2002; Grant Goodyear <g2boojum@gentoo.org> :
-  
   Initial ebuild.  
-

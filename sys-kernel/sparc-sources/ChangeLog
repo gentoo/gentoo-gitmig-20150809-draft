@@ -1,48 +1,47 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.40 2003/12/04 12:58:04 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.41 2003/12/05 17:31:23 plasmaroo Exp $
 
   04 Dec 2003; Christian Birchinger <joker@gentoo.org>
-  sparc-sources-2.4.23.ebuild:
-  Marked stable
+  sparc-sources-2.4.23.ebuild: Marked stable.
 
   04 Dec 2003; Christian Birchinger <joker@gentoo.org>
-  sparc-sources-2.4.22.ebuild:
-  Moved do_brk patch below kernel_src_unpack because kernel_src_unpack needs the
-  patchdir as current dir and not the kernel source tree. This made epatch fail.
+  sparc-sources-2.4.22.ebuild: Moved the 'do_brk' patch below 
+  kernel_src_unpack because kernel_src_unpack needs the patch directory 
+  as the current directory current dir and not the kernel source tree - this 
+  made 'epatch' fail.
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org> sparc-sources-2.4.22.ebuild:
-  fix do_brk vuln... again ;)
+  Fix the 'do_brk' vulnerability.
 
   02 Dec 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.22.ebuild:
   Used the 2.4.23 ebuild for 2.4.22 to make it emergable again with the latest
-  kernel eclass
+  kernel eclass.
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org> sparc-sources-2.4.22-r1.ebuild:
-  removing broken 22-r1 ebuild
+  Removing the broken 22-r1 ebuild.
 
 *sparc-sources-2.4.22-r1 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org> sparc-sources-2.4.22-r1.ebuild:
-  version bump for do_brk vuln
+  Version bump for 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org> sparc-sources-2.4.20-r8.ebuild,
   sparc-sources-2.4.21-r1.ebuild, sparc-sources-2.4.22.ebuild,
-  files/do_brk_fix.patch:
-  fix do_brk vuln
+  files/do_brk_fix.patch: Fix the 'do_brk' vulnerability.
 
 *sparc-sources-2.4.23 (01 Dec 2003)
 
   01 Dec 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.23.ebuild:
-  New version
+  New version.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   sparc-sources-2.4.20-r8.ebuild, sparc-sources-2.4.21-r1.ebuild,
   sparc-sources-2.4.22.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
   19 Oct 2003; Sven Blumenstein <bazik@gentoo.org>
   sparc-sources-2.4.22.ebuild:
@@ -51,35 +50,35 @@
   29 Sep 2003; Martin Holzer <mholzer@gentoo.org>
   sparc-sources-2.4.20-r8.ebuild, sparc-sources-2.4.21-r1.ebuild,
   sparc-sources-2.4.22.ebuild:
-  now uses mirror://kernel.
+  Now uses mirror://kernel.
 
   05 Sep 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.2.21_pre3.ebuild, files/sparc-asm_offsets.h,
   files/sparc64-asm_offsets.h:
-  Cleaned old ebuilds and files
+  Cleaned old ebuilds and files.
 
 *sparc-sources-2.4.22 (03 Sep 2003)
 
   03 Sep 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.22.ebuild:
-  Version bump
+  Version bump.
 
   16 Aug 2003; Jason Wever <weeve@gentoo.org> metadata.xml:
-  Added metadata.xml
+  Added metadata.xml.
 
   23 Jul 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.20-r8.ebuild, sparc-sources-2.4.21-r1.ebuild:
-  Fixed ebuilds so they work with newer portage versions
+  Fixed ebuilds so they work with newer portage versions.
 
 *sparc-sources-2.4.21-r1 (22 Jun 2003)
 
   22 Jun 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.21-r1.ebuild:
-  Added new release which fixes smp booting on sparc32
+  Added new release which fixes smp booting on sparc32.
 
   22 Jun 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.21.ebuild:
-  Added stable sparc keyword
+  Added stable sparc keyword.
 
   19 Jun 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.21.ebuild:
@@ -95,7 +94,7 @@
 
   06 Apr 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.20-r8.ebuild:
-  Marked 2.4.20-r8 stable
+  Marked 2.4.20-r8 stable.
 
   06 Apr 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.20-r8.ebuild:
@@ -106,7 +105,7 @@
 
   02 Apr 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.20-r7.ebuild:
-  Switched from a U1_HME_FIX variable to a local use flag
+  Switched from a U1_HME_FIX variable to a local use flag.
 
   30 Mar 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.20-r7.ebuild files/digest-sparc-sources-2.4.20-r7 :
@@ -118,57 +117,50 @@
 
   25 Mar 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.20-r6.ebuild:
-  Added an optional HME patch for Ultra1 machines
+  Added an optional HME patch for Ultra1 machines.
 
   20 Mar 2003; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.20-r6.ebuild:
-  Changed KEYWORD from ~sparc to sparc
+  Changed KEYWORD from ~sparc to sparc.
 
   19 Mar 2003; Christian Birchinger <joker@gentoo.org>:
   sparc-sources-2.4.20-r6.ebuild files/digest-sparc-sources-2.4.20-r6 :
-
   Better ptrace fix. The original one wont compile on sparc64.
 
 *sparc-sources-2.4.20-r5 (18 Mar 2003)
 
   18 Mar 2003; Christian Birchinger <joker@gentoo.org>:
   sparc-sources-2.4.20-r5.ebuild files/digest-sparc-sources-2.4.20-r5 :
-  
   Added 2 new patches. A fix for the ext3 corruption problem and a fix
-  for the recent ptrace local security hole.
-  The grsecurity version has been bumped to 1.9.9c
+  for the recent ptrace local security hole. The grsecurity version 
+  has been bumped to 1.9.9c.
 
 *sparc-sources-2.4.20-r4 (02 Mar 2003)
 
   11 Feb 2003; Christian Birchinger <joker@gentoo.org>:
   sparc-sources-2.4.20-r4.ebuild :
-
   New version with better kgcc handling for sparc32.
 
 *sparc-sources-2.4.20-r3 (03 Feb 2003)
 
   03 Feb 2003; Christian Birchinger <joker@gentoo.org>:
   sparc-sources-2.4.20-r3.ebuild files/digest-sparc-sources-2.4.20-r3 :
-  
   Added a sparc32 kgcc Makefile patch.
 
 *sparc-sources-2.4.20-r2 (09 Jan 2003)
 
   10 Jan 2003; Christian Birchinger <joker@gentoo.org>:
   sparc-sources-2.4.20-r2.ebuild:
-
-  Changed sparc keyword to stable. 
+  Changed 'sparc' keyword to stable. 
 
   09 Jan 2003; Christian Birchinger <joker@gentoo.org>:
   sparc-sources-2.4.20-r2.ebuild files/digest-sparc-sources-2.4.20-r2 :  
-
   Added a sparc64 netfilter patch.
 
 *sparc-sources-2.4.20-r1 (07 Jan 2003)
 
   07 Jan 2003; Christian Birchinger <joker@gentoo.org>:
   sparc-sources-2.4.20-r1.ebuild files/digest-sparc-sources-2.4.20-r1 :  
-
   Added grsecurity 1.9.8 to patches-2.4.20-r1-sparc.tar.bz2
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
@@ -178,23 +170,20 @@
 
   14 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
   sparc-sources-2.4.21.ebuild files/digest-sparc-sources-2.4.21_pre1 :
-
   Moved 2.4.20 to stable, and this to the new testing
 
 *sparc-sources-2.4.20 (30 Nov 2002)
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords
  
   30 Nov 2002; Seemant Kulleen <seemant@gentoo.org>
   sparc-sources-2.4.20.ebuild files/digest-sparc-sources-2.4.20 :
-
   Version bump.  Same framebuffer logo patch.
 
 *sparc-sources-2.4.20_pre10 (09 Oct 2002)
 
   09 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
   sparc-sources-2.4.20_pre10.ebuild files/digest-sparc-sources-2.4.20_pre10 :
-
   Version bump to newest available stable-ish kernel.  This version has many
   many fixes for sparc architectures.  Additionally, Troy Dack's patch for
   the framebuffer logos is applied to the kernel source, to allow choice of
