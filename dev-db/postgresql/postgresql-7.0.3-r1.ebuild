@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3-r1.ebuild,v 1.2 2001/01/23 15:52:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3-r1.ebuild,v 1.3 2001/01/23 16:23:37 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -30,6 +30,7 @@ src_install () {
     cd ${S}
     dodir /usr/include/postgres
     try make POSTGRESDIR=${D}/usr install
+    dosed "s:/usr/pgaccess:/usr/lib/pgaccess:" /usr/bin/pgaccess
     cd ${D}/usr
     mv pgaccess lib
     cd lib/postgres
