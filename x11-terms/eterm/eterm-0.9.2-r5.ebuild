@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.6 2004/02/29 21:36:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.7 2004/06/04 19:32:18 vapier Exp $
 
 inherit eutils
 
@@ -9,8 +9,10 @@ MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A vt102 terminal emulator for X"
 HOMEPAGE="http://www.eterm.org/"
-SRC_URI="mirror://sourceforge/eterm/${MY_P}.tar.gz http://www.eterm.org/download/${MY_P}.tar.gz
-	 mirror://sourceforge/eterm/${MY_PN}-bg-${PV}.tar.gz http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/eterm/${MY_P}.tar.gz
+	http://www.eterm.org/download/${MY_P}.tar.gz
+	 mirror://sourceforge/eterm/${MY_PN}-bg-${PV}.tar.gz
+	http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -61,6 +63,7 @@ src_install() {
 		TIC="tic -o ${D}/usr/share/terminfo" \
 		install || die
 
-	dodoc COPYING ChangeLog README ReleaseNotes
+	dodoc ChangeLog README ReleaseNotes
+	use escreen && dodoc doc/README.Escreen
 	dodoc bg/README.backgrounds
 }
