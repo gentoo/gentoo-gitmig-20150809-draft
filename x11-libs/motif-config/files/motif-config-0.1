@@ -10,18 +10,7 @@ source /etc/init.d/functions.sh || {
 }
 umask 022
 
-# functions.sh returns a wrong libdir on multilib architectures
-#source /etc/make.profile/make.defaults || {
-#	echo "$0: Could not source /etc/make.profile/make.defaults!"
-#	exit 1
-#}
-#get_libdir() {
-#	libdirvar="LIBDIR_${DEFAULT_ABI}"
-#	echo ${!libdirvar}
-#}
-
-LIBDIR=$(get_libdir)
-PROFILE_PATH=/usr/$LIBDIR/motif
+PROFILE_PATH=/usr/@@LIBDIR@@/motif
 CONFIG_FILE=${PROFILE_PATH}/current
 
 usage() {
@@ -68,8 +57,8 @@ _activate_profile() {
 
 	new=${1}
 	# libs
-	for file in `ls /usr/$LIBDIR/${new}/`; do
-		ln -s /usr/$LIBDIR/${new}/${file} /usr/$LIBDIR/${file}
+	for file in `ls /usr/@@LIBDIR@@/${new}/`; do
+		ln -s /usr/@@LIBDIR@@/${new}/${file} /usr/@@LIBDIR@@/${file}
 	done
 	# includes
 	for file in `ls /usr/include/${new}/`; do
@@ -102,8 +91,8 @@ _deactivate_profile() {
 	fi
 
 	# libs
-	for file in `ls /usr/$LIBDIR/${current}/`; do
-		rm -f /usr/$LIBDIR/${file}
+	for file in `ls /usr/@@LIBDIR@@/${current}/`; do
+		rm -f /usr/@@LIBDIR@@/${file}
 	done
 	# includes
 	for file in `ls /usr/include/${current}/`; do
@@ -181,7 +170,7 @@ get_lib_path() {
 	if [ $? -eq 1 ]; then
 		eerror "$0: No such profile: $profile"
 	else
-		echo "/usr/$LIBDIR/${name}/"
+		echo "/usr/@@LIBDIR@@/${name}/"
 		exit 0
 	fi
 }
@@ -226,7 +215,7 @@ get_libs() {
 	if [ $? -eq 1 ]; then
 		eerror "$0: No such profile: $profile"
 	else
-		echo "-L/usr/$LIBDIR/${name}/"
+		echo "-L/usr/@@LIBDIR@@/${name}/"
 		exit 0
 	fi
 }
