@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 12e51813f6fb4f453b7ad1344bfc0cd0 ChangeLog 387
+MD5 d0eb2058f77d01492f62b14ad7b76759 metadata.xml 379
+MD5 8dbfd242eda8645dcea4c9c8ecd5c96e help-extra-syntax-20050106.ebuild 540
+MD5 4ef9160eb80a2282eb54f3bf47c4d816 files/digest-help-extra-syntax-20050106 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3LhiLLFUmVNQ7rkRAkW+AJ45t49ybUFieeQ5kPYZv0FAyrXwDwCgnTDg
+qvVkdiwKU8JWGdas5anfEXE=
+=1B6h
+-----END PGP SIGNATURE-----
