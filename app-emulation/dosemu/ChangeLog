@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.8 2003/02/12 04:00:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.9 2003/04/16 12:12:57 liquidx Exp $
+
+*dosemu-1.1.4.15 (16 Apr 2003)
+
+  16 Apr 2003; Alastair Tse <liquidx@gentoo.org> dosemu-1.1.4.15.ebuild,
+  dosemu-1.1.4.ebuild:
+  bumping to an unstable testing version because this fixes the ugly build
+  scripts and also the errno problem with slang .ar.
 
 *dosemu-1.1.4 (07 Feb 2003)
 

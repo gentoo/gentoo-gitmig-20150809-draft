@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.4.ebuild,v 1.2 2003/02/13 07:13:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.4.ebuild,v 1.3 2003/04/16 12:12:57 liquidx Exp $
 
 IUSE="X svga"
 
@@ -27,19 +27,20 @@ src_compile() {
 ### mitshm will bork ./base-configure entirely, so we disable it here
 	myflags="--enable-mitshm=no"
 	myflags="${myflags} --enable-experimental"
+	myflags="${myflags} --enable-force-slang=no"
 
 ### and then set build paramaters based on USE variables
 	use X || myflags="${myflags} --with-x=no"
 	use svga && myflags="${myflags} --enable-use-svgalib"
 
-### this is really a ./configure (honestly)
-	./base-configure \
-		${myflags} || die "DOSemu Base Configuration Failed"
-
 ### We HAVE to do this, or the build will fail due to strange additional
 ### files in the downloaded tarball!
 	emake pristine || die "Dosemu Make Pristine Failed"
 
+### this is really a ./configure (honestly)
+	./base-configure \
+		${myflags} || die "DOSemu Base Configuration Failed"
+		
 ### Ok, the build tree is clean, lets make the executables, and 'dos' commands
 	emake -C src || die "DOSemu Make Failed!"
 	emake dosbin || die "DOSbin Make Failed"
