@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.13 2003/02/14 00:12:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.14 2003/02/14 17:14:39 lostlogic Exp $
+
+  14 Feb 2003; Brandon Low <lostlogic@lostlogicx.com> *.ebuild:
+  assert ebuild.workswith(newdistcc);
+  Fixed MAKEOPTS, and CC so that this doesn't get errors
+  building on a distcc box (of course it has to be built
+  with -j1 so distcc could only distribute all or none of
+  the processes, but that might be of use, and at least
+  it doesn't break.)
 
 *netpbm-10.11.5 (13 Feb 2003)
 

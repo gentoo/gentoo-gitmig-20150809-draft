@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.4.ebuild,v 1.7 2003/02/13 12:52:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.4.ebuild,v 1.8 2003/02/14 17:14:39 lostlogic Exp $
 
 IUSE="svga pic"
 
@@ -43,7 +43,8 @@ src_unpack() {
 }
 
 src_compile() {
-	make || die
+	MAKEOPTS="${MAKEOPTS} -j1"
+	emake CC="${CC}" CXX="${CXX}"|| die
 }
 
 src_install () {
