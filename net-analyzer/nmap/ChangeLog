@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.64 2004/09/01 11:37:07 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.65 2004/09/03 13:32:14 spock Exp $
+
+  03 Sep 2004; Michal Januszewski <spock@gentoo.org> nmap-3.70.ebuild:
+  Added a fix for the .desktop file for nmapfe. Closes bug #62531.
 
 *nmap-3.70 (01 Sep 2004)
 
