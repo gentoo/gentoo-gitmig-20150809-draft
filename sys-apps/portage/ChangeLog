@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.30 2004/04/04 23:59:18 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.31 2004/04/26 17:24:41 carpaski Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
@@ -8,5 +8,5 @@
 *portage-2.0.50-r3 (23 Mar 2004)
 
   23 Mar 2004; Nicholas Jones <carpaski@gentoo.org> portage-2.0.50-r3:
-	Security fixes for sandbox hardlink vulnerabilities.
+  Security fixes for sandbox hardlink vulnerabilities.
 

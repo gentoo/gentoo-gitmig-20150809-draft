@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre4.ebuild,v 1.1 2004/04/25 09:11:51 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre7.ebuild,v 1.1 2004/04/26 17:24:41 carpaski Exp $
 
 IUSE="build"
 
@@ -16,8 +16,8 @@ HOMEPAGE="http://www.gentoo.org"
 
 
 # Contact carpaski with a reason before you modify any of these.
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
-#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~s390 ~x86"
+KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc64  s390  sparc  x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) selinux? ( dev-python/python-selinux )"
@@ -204,26 +204,28 @@ pkg_postinst() {
 
 	if [ ! -L "${OLDWORLD}" ]; then
 		# edb/world is not a symlink
-		if [ -f "${NEWWORLD}" ]; then
+		if [ -s "${NEWWORLD}" ]; then
 			# portage/world exists
 			if cmp "${OLDWORLD}" "${NEWWORLD}"; then
 				# They are identical. Delete the real file and symlink it.
 				rm "${OLDWORLD}"
 				ln -s "../../../var/lib/portage/world" "${OLDWORLD}"
-				rm /etc/portage/sets/worldem
-				ln -s "../../../var/lib/portage/world" "${OLDWORLD}"
+				rm /etc/portage/sets/world
+				ln -s "../../../var/lib/portage/world" "/etc/portage/sets/world"
 			else
 				# They don't match. Complain and do nothing.
-				ewarn "A world file exists in both ${ROOT}/var/cache/db/world and"
-				ewarn "in ${ROOT}/etc/portage/sets/world --- you will need to merge these"
+				ewarn "A world file exists in both ${NEWWORLD} and"
+				ewarn "in ${OLDWORLD} --- you will need to merge these"
 				ewarn "files by hand to ensure that your world is proper. For compatibility"
 				ewarn "the file in /var should be a symlink to the one in /etc."
 			fi
 		else
 			# portage/world does not yet exist.
-			ewarn "Moving world file into /etc/portage/sets/world"
-			rm "${ROOT}/var/cache/edb/world"
-			ln -s "../../../etc/portage/sets/world" "${ROOT}/var/cache/edb/world"
+			ewarn "Moving world file into ${NEWWORLD}"
+			mv "${OLDWORLD}" "${NEWWORLD}"
+			chown root:portage "${NEWWORLD}"
+			chmod 0660 "${NEWWORLD}"
+			ln -s "../../lib/portage/world" "${OLDWORLD}"
 		fi
 	fi
 
@@ -250,11 +252,12 @@ pkg_postinst() {
 	ewarn "        with and without these changes may introduce some inconsistencies"
 	ewarn "        in package data regarding 'world' and 'virtuals' (provides)."
 	echo
-	einfo "        /var/cache/edb/world has moved to /etc/portage/sets/world"
-	einfo "        /var/cache/edb/virtuals has move to /etc/portage/virtuals"
+	einfo "        /var/cache/edb/world has moved to /var/lib/portage/world"
+	einfo "        with a convenience symlink at /etc/portage/sets/world"
 	echo
-	ewarn "The virtuals file functionality is being changed. It will contain only"
-	ewarn "user preferences for virtuals and will never be modified by portage."
+	einfo "        /var/cache/edb/virtuals has been deprecated and is now calculated"
+	einfo "        on demand. Strictly _USER_ modifications to virtuals may go into"
+	einfo "        /etc/portage/virtuals and will never be modified by portage."
 	echo
 
 	if [ -z "$PORTAGE_TEST" ]; then
