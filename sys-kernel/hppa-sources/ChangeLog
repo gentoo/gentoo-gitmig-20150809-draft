@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.36 2004/05/13 11:03:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.37 2004/06/07 00:16:35 gmsoft Exp $
+
+*hppa-sources-2.4.26_p4 (07 Jun 2004)
+
+  07 Jun 2004; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.25_p1.ebuild,
+  hppa-sources-2.4.26_p1.ebuild, hppa-sources-2.4.26_p4.ebuild,
+  files/CAN-2004-0394.patch:
+  Bumped version. Include CAN-2004-0394 fix. Removed other older ebuilds.
 
   13 May 2004; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.21_p10.ebuild,
   hppa-sources-2.4.21_p13.ebuild, hppa-sources-2.4.21_p2.ebuild,
