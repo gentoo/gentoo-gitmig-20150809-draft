@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.45 2005/01/01 14:26:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.46 2005/01/02 21:03:30 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> canna-3.7_p2.ebuild:
   Stable on sparc
@@ -11,7 +14,7 @@
   12 Jul 2004; Tom Gall <tgall@gentoo.org> canna-3.7_p2.ebuild:
   ~ppc64, bug #55965
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> canna-3.7_p2.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> canna-3.7_p2.ebuild:
   Stable on alpha.
 
   24 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> canna-3.7_p2.ebuild:
@@ -38,7 +41,7 @@
   files/canna-3.5_beta2-r2/canna.initd, files/canna-3.5_beta2-r2/gentoo.diff:
   Adds quotes around VENDORNAME, see bug #48229. Removed old ebuild.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> canna-3.7.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> canna-3.7.ebuild:
   Stable on alpha.
 
   04 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> canna-3.7.ebuild:

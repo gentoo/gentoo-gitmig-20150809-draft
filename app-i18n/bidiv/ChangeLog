@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/bidiv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/ChangeLog,v 1.6 2005/01/01 14:25:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/ChangeLog,v 1.7 2005/01/02 21:02:32 ciaranm Exp $
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> bidiv-1.4.ebuild:
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> bidiv-1.4.ebuild:
   Stable on alpha.
 
 *bidiv-1.4 (04 Oct 2003)
