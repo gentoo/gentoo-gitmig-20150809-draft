@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4o-r1.ebuild,v 1.4 2000/11/30 23:15:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4o-r1.ebuild,v 1.5 2000/12/19 00:44:03 achim Exp $
 
 P=m4-1.4o      
 A=${P}.tar.gz
@@ -19,7 +19,7 @@ src_compile() {
 src_install() {                        
        
     cd ${S}
-    try make DESTDIR=${D} install
+    try make prefix=${D}/usr install
     rm -rf ${D}/usr/include ${D}/usr/lib
     dodoc AUTHORS BACKLOG ChangeLog COPYING NEWS README* THANKS TODO
     docinto modules
