@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.40 2003/06/02 07:54:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.41 2003/06/18 04:34:58 rac Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -15,8 +15,7 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 	perlinfo updatepod
 
 eval `perl '-V:version'`
-DEPEND="dev-lang/perl
-	>=dev-perl/ExtUtils-MakeMaker-6.05-r5
+DEPEND=">=dev-lang/perl-5.6.1-r12
 	${DEPEND}"
 SRC_PREP="no"
 
