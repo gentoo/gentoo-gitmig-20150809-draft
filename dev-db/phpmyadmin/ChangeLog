@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.87 2005/03/01 18:24:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.88 2005/03/02 14:48:45 ka0ttic Exp $
+
+*phpmyadmin-2.6.1_p2-r1 (02 Mar 2005)
+
+  02 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/2.6.1_p2-no-wildcard-privs-for-you.patch,
+  +phpmyadmin-2.6.1_p2-r1.ebuild:
+  Revision bump for security bug 83792.
 
   01 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   phpmyadmin-2.6.1_p2.ebuild:
