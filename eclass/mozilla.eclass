@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.21 2004/11/06 08:23:23 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.22 2004/11/07 23:50:13 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -257,7 +257,7 @@ mozilla_conf() {
 		myext="cookie,inspector,negotiateauth,pref,transformiix,universalchardet,webservices,xmlextras,xml-rpc"
 		[[ ${PV} < 1.0 ]] && myext="${myext},typeaheadfind"
 		use mozdevelop && myext="${myext},venkman"
-		use gnome && myext="${myext},gnomevfs"
+		use gnome && use gtk2 && myext="${myext},gnomevfs"
 		
 		myconf="${myconf} \
 			--enable-single-profile \
