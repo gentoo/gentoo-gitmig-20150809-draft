@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1-r1.ebuild,v 1.6 2004/06/25 00:52:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1-r1.ebuild,v 1.7 2004/07/14 22:26:13 agriffis Exp $
 
 inherit libtool gcc eutils
 
@@ -8,11 +8,6 @@ inherit libtool gcc eutils
 #	tarkin - package not in portage yet - experimental
 #	theora - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
-
-IUSE="arts ncurses dvd gtk nls 3dfx svga fbcon esd X alsa ggi speex
-	oggvorbis gnome xv oss sdl aalib slp bidi truetype v4l lirc
-	wxwindows imlib matroska dvb mozilla debug faad
-	xosd altivec png"
 
 DESCRIPTION="VLC media player - Video player and streamer"
 SRC_URI="http://download.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
@@ -22,6 +17,9 @@ HOMEPAGE="http://www.videolan.org/vlc"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc amd64"
+IUSE="3dfx X aalib alsa arts bidi debug dvb dvd esd faad fbcon ggi gnome gtk
+	imlib joystick lirc mad matroska mozilla ncurses nls oggvorbis oss png sdl slp
+	speex svga truetype v4l wxwindows xosd xv"
 
 RDEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2
