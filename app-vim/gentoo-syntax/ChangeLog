@@ -1,6 +1,14 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.9 2004/09/30 14:22:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.10 2004/10/09 22:46:32 ciaranm Exp $
+
+*gentoo-syntax-20041009 (09 Oct 2004)
+
+  09 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20041009.ebuild:
+  New release. Changes include highlighting for recognised function names (eg
+  src_unpack), better highlighting for bug numbers, error highlighting for non
+  GLEP 23 compliant licenses and cvs.eclass support.
 
   30 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   gentoo-syntax-20040911.ebuild:
