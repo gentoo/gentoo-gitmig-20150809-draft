@@ -1,6 +1,9 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.85 2004/12/04 13:05:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.86 2004/12/05 10:34:31 lanius Exp $
+
+  05 Dec 2004; lanius@gentoo.org opera-7.60_alpha4.ebuild:
+  fix src_uri for amd64
 
 *opera-7.60_alpha4 (04 Dec 2004)
 
