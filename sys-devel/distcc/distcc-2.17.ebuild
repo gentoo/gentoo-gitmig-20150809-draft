@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17.ebuild,v 1.1 2004/08/20 20:08:49 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17.ebuild,v 1.2 2004/08/21 01:13:13 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -66,9 +66,9 @@ src_compile() {
 	[ `gcc-major-version` -eq 2 ] && filter-lfs-flags
 
 	if use ipv6; then
+		ewarn "WARNING:  ipv6 DOES NOT WORK with distcc-2.17! Aborting"
 		ewarn "To use IPV6 you must have IPV6 compiled into your kernel"
 		ewarn "either via a module or compiled code"
-		ewarn "WARNING:  ipv6 DOES NOT WORK with distcc-2.17! Aborting"
 		ewarn "You can recompile without ipv6 with: USE='-ipv6' emerge distcc"
 		myconf=" ${myconf} --enable-rfc2553 "
 		sleep 4s

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.110 2004/08/20 20:08:49 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.111 2004/08/21 01:13:13 lisa Exp $
+
+  20 Aug 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.17.ebuild:
+  <@SpanKY> make the first line 'ipv6 does not work with distcc-2.17' ?
 
 *distcc-2.17 (20 Aug 2004)
 
