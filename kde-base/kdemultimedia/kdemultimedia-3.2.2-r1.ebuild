@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.2-r1.ebuild,v 1.6 2004/06/01 21:33:45 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.2-r1.ebuild,v 1.7 2004/06/09 14:44:12 agriffis Exp $
 
 inherit kde-dist flag-o-matic
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.5.ebuild,v 1.8 2004/03/25 22:56:22 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.5.ebuild,v 1.9 2004/06/09 14:44:12 agriffis Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="nas esd motif slang tcltk oggvorbis cdr"
@@ -55,8 +55,6 @@ use oggvorbis	&& myconf="$myconf --with-vorbis=/usr"		|| myconf="$myconf --witho
 
 use cdr		|| KDE_REMOVE_DIR="kaudiocreator"
 
-[ -z "`use cdr`" ] && KDE_REMOVE_DIR="$KDE_REMOVE_DIR kaudiocreator"
-
 # Robin Johnson <robbat2@gentoo.org> 23/01/2004
 # fixes bug #38326 
 myconf="${myconf} --disable-strict --disable-warnings"
@@ -64,7 +62,7 @@ myconf="${myconf} --disable-strict --disable-warnings"
 myconf="$myconf $myaudio $myinterface"
 
 pkg_postinst() {
-	if [ -n "`use alsa`" ]; then
+	if use alsa; then
 	einfo "WARNING: alsa support has been removed becuase of a bug in kdemm sources.
 For further information see bug #2324 on bugs.gentoo.org and bug #39574 on bugs.kde.org.
 Meanwhile, you can use the alsa oss emulation."
