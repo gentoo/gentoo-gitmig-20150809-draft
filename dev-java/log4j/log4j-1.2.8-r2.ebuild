@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.8-r2.ebuild,v 1.2 2004/09/18 11:00:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.8-r2.ebuild,v 1.3 2004/10/08 14:00:58 axxo Exp $
 
 inherit java-pkg
 
@@ -40,6 +40,8 @@ src_install() {
 	cd dist/lib
 	mv log4j-${PV}.jar ${PN}.jar
 	java-pkg_dojar ${PN}.jar
+
+	cd ${S}
 	use doc && dohtml -r docs/*
 }
 

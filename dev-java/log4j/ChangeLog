@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.19 2004/09/18 10:03:16 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.20 2004/10/08 14:00:58 axxo Exp $
+
+  08 Oct 2004; Thomas Matthijs <axxo@gentoo.org> log4j-1.2.8-r2.ebuild:
+  Fixed to actualy install docs with USE=doc
 
 *log4j-1.2.8-r2 (18 Sep 2004)
 
