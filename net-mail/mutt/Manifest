@@ -2,8 +2,8 @@ MD5 ddc50e3033c4b3c8a3e120b2c488189f mutt-1.5.4-r1.ebuild 2860
 MD5 ba60edd1ef4959b5a3c8511d97755f08 mutt-1.5.4.ebuild 2615
 MD5 b1516d4df25894190ac3cb387b700093 mutt-1.5.5.1.ebuild 2945
 MD5 e170aef6acb390b5badf3867a6f82f08 mutt-1.4.2.1.ebuild 3376
-MD5 4a485f22d07117fdf4d8f3e2f010617b mutt-1.5.6.ebuild 4093
-MD5 fd0b8e65276c1e945bd3496c49c70ae5 ChangeLog 7350
+MD5 df30af3c57f2205ccbd17a291b3a5651 mutt-1.5.6.ebuild 4244
+MD5 e78a55f3097dc50533daf8ea98577f66 ChangeLog 7522
 MD5 f46d05fe0172cb035a01f40d25242d30 metadata.xml 253
 MD5 b2b515e96b060771a00646405c620755 files/Muttrc 678
 MD5 2aed1ac688ef4a607857a75422066740 files/digest-mutt-1.5.4 280
@@ -12,4 +12,5 @@ MD5 2aed1ac688ef4a607857a75422066740 files/digest-mutt-1.5.4-r1 280
 MD5 78c54f1f293cf702401021c22ca9992a files/Muttrc.color 1177
 MD5 cae412df424c3f499c539c93ebd02e48 files/digest-mutt-1.4.2.1 292
 MD5 245167f81a90f23cdecb1a55dcc7dd1a files/digest-mutt-1.5.5.1 217
+MD5 74ddaf505ea8bd19fbeb1330a23506ea files/8patch-1.5.6.dyc.source_stat 1531
 MD5 25e242fd402f42d5bd5230dbe9ea68a6 files/slang.patch 493
