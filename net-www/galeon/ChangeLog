@@ -1,7 +1,15 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.17 2002/07/25 01:09:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.18 2002/08/28 23:58:17 spider Exp $
 
+
+*galeon-1.2.5-r1 (29 Aug 2002)
+  29 Aug 2002; Spider <spider@gentoo.org> galeon-1.2.5-r1.ebuild :
+  Fix for the crash on close bugs 
+  thanks to TGL <degrenier@easyconnect.fr> for the fix
+
+
+  
   25 Jul 2002; Spider <spider@gentoo.org> galeon-1.2.5.ebuild :
   some minor dep changes to make it not pull in gnome2 stuff while we wait for the new portage syntax
   
