@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.3.ebuild,v 1.16 2004/10/29 22:17:28 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.3.ebuild,v 1.17 2005/01/05 05:20:50 vapier Exp $
 
 DESCRIPTION="fast compiler cache"
 HOMEPAGE="http://ccache.samba.org/"
@@ -8,16 +8,16 @@ SRC_URI="http://ccache.samba.org/ftp/ccache/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ia64 ppc64 ~s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc ppc64 s390 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc \
+DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.46-r11"
 
 # Note: this version is designed to be auto-detected and used if
 # you happen to have Portage 2.0.X+ installed.
 
-src_install () {
+src_install() {
 	dobin ccache || die
 	doman ccache.1
 	dodoc README
@@ -37,12 +37,12 @@ src_install () {
 
 pkg_preinst() {
 	# Portage doesn't handle replacing a non-empty dir with a file!
-	[ -e /usr/bin/ccache ] && rm -rf /usr/bin/ccache
-	[ -e /usr/bin/ccache.backup ] && rm -rf /usr/bin/ccache.backup
+	[[ -e ${ROOT}/usr/bin/ccache ]] && rm -r "${ROOT}"/usr/bin/ccache
+	[[ -e ${ROOT}/usr/bin/ccache.backup ]] && rm -r "${ROOT}"/usr/bin/ccache.backup
 }
 
 pkg_postinst() {
-	if [ "${ROOT}" = "/" ]; then
+	if [[ ${ROOT} = "/" ]] ; then
 		einfo "Scanning for compiler front-ends..."
 		/usr/bin/ccache-config --install-links
 		/usr/bin/ccache-config --install-links ${CHOST}
