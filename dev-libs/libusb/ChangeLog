@@ -1,8 +1,14 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.3 2002/10/19 20:24:33 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.4 2002/10/23 17:17:32 spider Exp $
+
+*libusb-0.1.6a (23 Oct 2002)
+ 
+  23 Oct 2002; Spider <spider@gentoo.org> libusb-0.1.6a.ebuild :
+  New version by Robert Davis <rdavis@uniformcompany.com> 
 
 
+  
 *libusb-0.1.5 (11 March 2002)
 
   19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> libusb-0.1.5.ebuild :
