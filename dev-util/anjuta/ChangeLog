@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.23 2003/09/26 13:12:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.24 2003/10/07 18:04:58 lisa Exp $
+
+*anjuta-1.1.97-r1 (07 Oct 2003)
+
+  07 Oct 2003; Lisa Seelye <lisa@gentoo.org> anjuta-1.1.97-r1.ebuild:
+  fix new project crash bug (bug 24855)
 
   26 Sep 2003; Luca Barbato <lu_zero@gentoo.org> anjuta-1.1.97.ebuild:
   Added ~ppc to keyword.
