@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 2004 The Gentoo Foundation, Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.7 2004/09/03 20:49:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.8 2004/11/18 02:28:54 kito Exp $
 
 # Make sure sudo passwd is asked for
 
@@ -26,17 +26,17 @@ case "`uname -r`" in
 		# We reuse the Panther profile
 		RELEASE="10.3"
 		;;
-	7*)
+		7*)
 		NAME="Panther"
 		RELEASE="10.3"
 		;;
         8*)
-        	NAME="Tiger"
+        NAME="Tiger"
 		RELEASE="10.4"
 		;;
 esac
 
-sudo ln -sf /usr/portage/profiles/default-macos-${RELEASE} /etc/make.profile
+sudo ln -sf /usr/portage/profiles/default-darwin/macos/${RELEASE} /etc/make.profile
 
 # ebegin "Portage will attempt taming your ${NAME}"
 
