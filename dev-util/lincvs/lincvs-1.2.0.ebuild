@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.2.0.ebuild,v 1.4 2004/03/13 01:44:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.2.0.ebuild,v 1.5 2004/03/19 09:55:30 mr_bones_ Exp $
 
 IUSE="kde"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 DEPEND="kde? ( >=kde-base/kdelibs-2 )
 	>=x11-libs/qt-3.0.5
-	>=cvs-1.9"
+	>=dev-util/cvs-1.9"
 
 RDEPEND="${DEPEND}
 	dev-util/cvs"

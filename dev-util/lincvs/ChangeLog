@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lincvs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.24 2004/03/19 09:54:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.25 2004/03/19 09:55:30 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> lincvs-1.2.0.ebuild:
+  fix depend (bug #45110)
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> lincvs-1.1.5.ebuild,
   lincvs-1.1.6.ebuild:
