@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/snort_inline-2.1.1.ebuild,v 1.6 2004/07/08 16:53:31 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/snort_inline-2.1.1.ebuild,v 1.7 2004/08/03 12:00:48 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://snort-inline.sf.net/"
 SRC_URI="mirror://sourceforge/snort-inline/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="ssl postgres mysql"
 DEPEND="virtual/libc
 	>=dev-libs/libpcre-4.2-r1

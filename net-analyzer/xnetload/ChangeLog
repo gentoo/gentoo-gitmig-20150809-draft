@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/xnetload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.5 2004/07/10 10:02:02 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.6 2004/08/03 12:01:05 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> xnetload-1.11.3.ebuild:
+  Added to ~ppc.
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   xnetload-1.11.3.ebuild:
