@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.12 2003/08/05 04:22:59 sindian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.13 2003/08/08 22:57:46 strider Exp $
+
+  08 Aug 2003; Adrian Almenar <strider@gentoo.org> java-sdk-docs-1.3.1.ebuild,
+  java-sdk-docs-1.4.1.ebuild, java-sdk-docs-1.4.2.ebuild:
+  Updated keywords, insert RESTRICT="fetch" so it solves bug #24274
 
 *java-sdk-docs-1.4.2 (04 Aug 2003)
 
