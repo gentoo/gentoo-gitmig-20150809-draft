@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_watch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/ChangeLog,v 1.10 2005/03/01 00:52:34 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/ChangeLog,v 1.11 2005/03/01 01:00:57 beu Exp $
+
+  01 Mar 2005; Elfyn McBratney <beu@gentoo.org> mod_watch-3.18.ebuild:
+  Kill more sed in global scope.
 
   01 Mar 2005; Elfyn McBratney <beu@gentoo.org> mod_watch-4.03-r1.ebuild,
   mod_watch-4.03.ebuild:
