@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/authforce-0.9.6.ebuild,v 1.3 2004/06/24 21:56:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/authforce-0.9.6.ebuild,v 1.4 2004/07/11 09:06:16 eldad Exp $
 
 DESCRIPTION="An HTTP authentication brute forcer"
 HOMEPAGE="http://kapheine.hypa.net/authforce/"
@@ -8,7 +8,7 @@ SRC_URI="http://kapheine.hypa.net/authforce/authforce-0.9.6.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="curl nls"
 DEPEND="sys-libs/readline
 	curl? ( net-ftp/curl )"
