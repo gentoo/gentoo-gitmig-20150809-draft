@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.35 2003/12/04 17:32:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.36 2003/12/07 19:44:14 mholzer Exp $
+
+*alsa-utils-1.0.0_rc2 (07 Dec 2003)
+
+  07 Dec 2003; Martin Holzer <mholzer@gentoo.org> alsa-utils-1.0.0_rc2.ebuild:
+  Version bumped.
 
   04 Dec 2003; Martin Holzer <mholzer@gentoo.org> files/alsasound:
   fixing typo. Closes #35062
