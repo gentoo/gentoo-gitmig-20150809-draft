@@ -1,18 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wampager/wampager-0.9.ebuild,v 1.5 2002/08/14 23:44:15 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wampager/wampager-0.9.ebuild,v 1.6 2002/08/30 07:54:19 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Pager for Waimea."
 SRC_URI="http://download.sourceforge.net/waimea/${P}.tar.gz"
 HOMEPAGE="http://waimea.sf.net"
-LICENSE="GPL-2"
 
-DEPEND="virtual/x11 x11-wm/waimea"
+DEPEND="x11-wm/waimea"
 	 
-RDEPEND="${DEPEND}"
-PROVIDE="virtual/blackbox"
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
@@ -29,4 +27,3 @@ src_compile() {
 src_install () {
 	make install || die
 }
-																	 
