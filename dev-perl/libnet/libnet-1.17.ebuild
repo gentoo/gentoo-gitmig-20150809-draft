@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/libnet-1.17.ebuild,v 1.7 2004/07/14 18:37:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/libnet-1.17.ebuild,v 1.8 2004/08/31 13:29:05 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="A URI Perl Module"
-SRC_URI="http://cpan.valueclick.com/modules/by-category/05_Networking_Devices_IPC/Net/${P}.tar.gz"
-HOMEPAGE="http://cpan.valueclick.com/modules/by-category/05_Networking_Devices_IPC/Net/${P}.readme"
+SRC_URI="http://search.cpan.org/CPAN/authors/id/G/GB/GBARR/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~gbarr/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"

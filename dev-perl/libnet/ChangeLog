@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/libnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.25 2004/07/30 15:40:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.26 2004/08/31 13:29:05 mcummings Exp $
+
+  31 Aug 2004; Michael Cummings <mcummings@gentoo.org> libnet-1.11-r1.ebuild,
+  libnet-1.11.ebuild, libnet-1.13.ebuild, libnet-1.16.ebuild,
+  libnet-1.17.ebuild, libnet-1.18.ebuild, libnet-1.19.ebuild:
+  Reset the SRC and HOMEPAGES to point to search.cpan. 2 reasons. 1. Let the
+  multiplexer at cpan do its job. 2. The references to valueclick weren't
+  working for a lot of users.
 
 *libnet-1.19 (30 Jul 2004)
 
