@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.5-r2.ebuild,v 1.1 2003/07/02 11:11:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.5-r2.ebuild,v 1.2 2003/07/21 15:38:08 azarah Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ inherit eutils
 # OLD14 = 1.4
 # OLD15 = 1.5
 # OLD16 = 1.6
-# NEW = 1.7 (.2)
+# NEW = 1.7 (.5)
 
 # NOTE:  For all of those brave souls out there that wants to fix
 #        or update this, note that all three versions install
@@ -278,6 +278,7 @@ src_install() {
 	#
 
 	cd ${OLD14_S}
+# Not needed anymore for 1.4-p6
 #	fix_bins "1.4"
 
 	# Ignore duplicates like automake-1.5 and 1.6
