@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.3 2004/02/22 14:08:36 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.4 2004/02/28 05:13:33 vapier Exp $
 
 *libcaca-0.9 (22 Feb 2004)
+
+  28 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Fixed DEPEND and add optional X to USE.
 
   22 Feb 2004; Hanno Boeck <hanno@gentoo.org> libcaca-0.9.ebuild:
   Version bump. Cleaned up ebuild, added imlib and doc use-flag support.
