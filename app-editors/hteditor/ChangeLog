@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hteditor
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.5 2004/03/16 02:35:08 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.6 2004/03/16 12:58:57 dholm Exp $
+
+  16 Mar 2004; David Holm <dholm@gentoo.org> hteditor-0.7.4.ebuild:
+  Added to ~ppc. (Current version does not support ppc disassembly!)
 
 *hteditor-0.7.4 (15 Mar 2004)
 

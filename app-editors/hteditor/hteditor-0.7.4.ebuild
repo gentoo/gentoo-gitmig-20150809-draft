@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.7.4.ebuild,v 1.1 2004/03/16 02:35:08 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.7.4.ebuild,v 1.2 2004/03/16 12:58:57 dholm Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://hte.sf.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -alpha"
+KEYWORDS="~x86 ~ppc -alpha"
 
 DEPEND="virtual/glibc"
 
