@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/freenet6
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.4 2003/12/07 17:05:50 gmsoft Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.5 2004/06/07 07:02:57 kloeri Exp $
+
+  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> freenet6-1.0.0.ebuild:
+  Stable on alpha.
 
 *freenet6-1.0.0 (7 Dec 2003)
 
