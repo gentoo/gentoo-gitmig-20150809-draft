@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gif2png
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.4 2003/12/29 13:13:27 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/ChangeLog,v 1.5 2004/03/21 08:56:15 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> gif2png-2.4.6.ebuild,
+  gif2png-2.4.7.ebuild, gif2png-2.5.1.ebuild:
+  fixing QA issue. closes 44519
 
 *gif2png-2.5.1 (29 Dec 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/gif2png-2.5.1.ebuild,v 1.1 2003/12/29 13:13:27 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/gif2png-2.5.1.ebuild,v 1.2 2004/03/21 08:56:15 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gif2png"
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="media-libs/libpng"
-RDEPEND=${DEPEND}
 
 src_compile() {
 	econf --prefix=/usr || die "econf failed"
