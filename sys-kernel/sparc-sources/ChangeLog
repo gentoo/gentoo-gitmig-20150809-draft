@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.19 2003/03/25 15:16:27 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.20 2003/03/30 18:29:41 joker Exp $
+
+*sparc-sources-2.4.20-r7 (30 Mar 2003)
+
+  30 Mar 2003; Christian Birchinger <joker@gentoo.org>
+  sparc-sources-2.4.20-r7.ebuild files/digest-sparc-sources-2.4.20-r7 :
+  New Grsecurity 1.9.9e version included which has sparc64 fixes and
+  the ptrace security fix included. The standalone ptrace patch has
+  been removed.
 
 *sparc-sources-2.4.20-r6 (19 Mar 2003)
 
