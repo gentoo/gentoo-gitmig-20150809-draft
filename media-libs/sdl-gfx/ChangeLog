@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.4 2002/08/28 05:46:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.5 2002/09/29 06:29:43 trance Exp $
+
+*sdl-gfx-2.0.3 (9 Sep 2002)
+
+  changed econf to econf ${myconf} || die
+
 
 *sdl-gfx-2.0.3 (5 Jul 2002)
 
