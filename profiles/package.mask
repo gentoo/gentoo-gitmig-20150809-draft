@@ -1,8 +1,10 @@
 #this gcc's new atexit() fix that is supposed to be wonderful, doesn't work....
 =sys-devel/gcc-2.95.3-r2
+# needs to be tested
+=sys-devel/gcc-2.95.3-r3
 
 #experimental objprelink, used by qt/kde, may be unstable
-dev-util/objprelink
+#dev-util/objprelink
 
 #moved away
 kde-apps/cervisia
