@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.02.ebuild,v 1.4 2004/08/30 19:41:12 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.02.ebuild,v 1.5 2004/09/03 14:04:51 dholm Exp $
 
 inherit webapp
 
@@ -12,7 +12,7 @@ IUSE=""
 DESCRIPTION="PolarBlog is an open source embedded weblog solution"
 HOMEPAGE="http://polarblog.polarlava.com"
 SRC_URI="http://polarblog.polarlava.com/releases/pb_v${MY_PV}.tgz"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="
 	>=dev-db/mysql-3.23.23
