@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.0.3.1.ebuild,v 1.3 2004/03/03 01:20:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.0.3.1.ebuild,v 1.4 2004/03/09 04:21:59 psi29a Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xfce.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ia64 x86 ~ppc ~alpha sparc ~amd64 ~hppa"
+KEYWORDS="~ia64 x86 ~ppc ~alpha sparc ~amd64 ~hppa ~mips"
 
 DEPEND="=xfce-base/xfce4-base-${PV}
 	=xfce-extra/xfce4-systray-${XV}
