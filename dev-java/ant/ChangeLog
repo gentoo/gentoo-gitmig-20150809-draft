@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.55 2004/03/11 20:37:24 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.56 2004/03/17 03:31:57 zx Exp $
+
+  20 Mar 2004; Chris Aniszczyk <zx@gentoo.org> files/1.6.1/ant:
+  Updated ant to use the new launcher interface.
+  Thanks to Thomas Wutsch <twutsch@iicm.edu> for the updates. Closes #44804
 
   11 Mar 2004; Chris Aniszczyk <zx@gentoo.org> ant-1.6.0-r2.ebuild,
   ant-1.6.1.ebuild:

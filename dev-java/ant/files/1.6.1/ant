@@ -3,7 +3,7 @@
 #   Copyright (c) 2001-2003 The Apache Software Foundation.  All rights
 #   reserved.
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.6.1/ant,v 1.1 2004/03/11 02:35:50 zx Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.6.1/ant,v 1.2 2004/03/17 03:31:58 zx Exp $
 
 if [ -f $HOME/.gentoo/java-env ] ; then
   source $HOME/.gentoo/java-env
@@ -50,12 +50,13 @@ if [ ! -x "$JAVACMD" ] ; then
   exit 1
 fi
 
-if [ -n "$CLASSPATH" ] ; then
-  LOCALCLASSPATH="$CLASSPATH"
+if [ -z "$LOCALCLASSPATH" ] ; then
+    LOCALCLASSPATH=$ANT_LIB/ant-launcher.jar
+else
+	LOCALCLASSPATH="$ANT_LIB/ant-launcher.jar:${LOCALCLASSPATH}:`java-config --classpath=ant,ant-optional,log4j,xerces,xalan,junit,antlr,bcel,bsh,commons-beanutils,commons-logging,commons-net,oro,jdepend,jsch,regexp,rhino,jython,jta,jaf,javamail 2> /dev/null`"
 fi
 
 # add in the dependency .jar files
-LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant,ant-optional,log4j,xerces,xalan,junit,antlr,bcel,bsh,commons-beanutils,commons-logging,commons-net,oro,jdepend,jsch,regexp,rhino,jython,jta,jaf,javamail 2> /dev/null`"
 
 if [ -n "$JAVA_HOME" ] ; then
   if [ -f "$JAVA_HOME/lib/tools.jar" ] ; then
@@ -86,4 +87,5 @@ if [ "`arch`" == "ppc" ] ; then
 	export THREADS_FLAG="green"
 fi
 
-"$JAVACMD" -classpath "$LOCALCLASSPATH" -Dant.home="${ANT_HOME}" $ANT_OPTS org.apache.tools.ant.Main $ANT_ARGS "$@"
+"$JAVACMD" $ANT_OPTS -classpath "$LOCALCLASSPATH" -Dant.home="${ANT_HOME}" org.apache.tools.ant.launch.Launcher $ANT_ARGS -lib "$CLASSPATH" "$@"
+
