@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.55.ebuild,v 1.4 2005/03/19 22:52:57 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.55.ebuild,v 1.5 2005/03/20 20:18:11 swtaylor Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="courier authentication library"
 [ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -12,7 +12,7 @@ S="${WORKDIR}/${P%%_pre}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~ppc64"
+KEYWORDS="x86 alpha amd64 arm hppa ia64 mips ppc s390 sparc ppc64"
 IUSE="postgres ldap mysql berkdb gdbm pam crypt uclibc debug"
 
 DEPEND="virtual/libc
@@ -27,6 +27,8 @@ DEPEND="virtual/libc
 RDEPEND="virtual/libc
 		gdbm? ( sys-libs/gdbm )
 		!gdbm? ( sys-libs/db )"
+
+filter-flags '-fomit-frame-pointer'
 
 src_unpack() {
 	if ! has_version 'dev-tcltk/expect' ; then
