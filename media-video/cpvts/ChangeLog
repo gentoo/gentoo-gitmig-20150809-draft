@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cpvts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/ChangeLog,v 1.1 2004/10/06 20:26:56 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpvts/ChangeLog,v 1.2 2004/10/06 21:19:59 eradicator Exp $
+
+  06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> cpvts-1.2.ebuild:
+  Added to ~amd64.  Fixed LICENSE.
 
 *cpvts-1.2 (06 Oct 2004)
 
