@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.51 2003/06/26 11:16:36 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.52 2003/06/27 12:36:27 robh Exp $
+
+  27 Jun 2003; robh <robh@gentoo.org> xmms-1.2.7-r22.ebuild:
+  Fixed russian cjk patch overlap. Fixes bug #23535. Thanks to jje :)
 
   26 June 2003; <robh@gentoo.org> xmms-1.2.7-r22.ebuild:
   Added support for Russian Charset. Thanks to Sergey Kuleshov. Closes #22194
