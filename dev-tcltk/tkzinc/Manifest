@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c01e8fa82dbfb1366026dd2fa152ab86 ChangeLog 592
 MD5 ae7d35b0e9210b59b954696dbed0ab91 metadata.xml 260
-MD5 6b2c697f2c83eb30c1de17bf41eb163e ChangeLog 507
-MD5 26aecd02115bc76b27a13ee7c96123d1 tkzinc-3.2.100.ebuild 1022
+MD5 4fe3bd653baafa06c3911e04fb418df7 tkzinc-3.2.100.ebuild 1026
+MD5 9afdeb5a2ecca7f53e8af3c9afd4d64f files/digest-tkzinc-3.2.100 68
 MD5 b81680a7177cf127f167222ccc677ec0 files/fix-makefile.patch 458
 MD5 8f62e724d25db6215c67b8e00fc02785 files/without-opengl.patch 267
-MD5 9afdeb5a2ecca7f53e8af3c9afd4d64f files/digest-tkzinc-3.2.100 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBFtMFFhz/XBeRBtARAhgKAKCqmWitgQ7yqCeV3lKH+jk4ClmIUQCdE03M
-xB3JFeFnN924i1cGGvBtNtk=
-=uwVO
------END PGP SIGNATURE-----
