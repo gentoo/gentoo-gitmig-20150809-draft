@@ -1,0 +1,31 @@
+diff -Naur speechd-0.3.vanilla/config/speechd.conf.in speechd-0.3/config/speechd.conf.in
+--- speechd-0.3.vanilla/config/speechd.conf.in	2004-02-13 08:55:01.000000000 -0600
++++ speechd-0.3/config/speechd.conf.in	2004-04-04 15:10:25.767924376 -0500
+@@ -28,7 +28,7 @@
+ # Specify "stdout" for standard console output
+ # or a full path to some file which the log should be written to.
+ 
+-LogFile  "/var/log/speechd.log"
++LogFile  "/var/log/speech-dispatcher.log"
+ #LogFile  "stdout"
+ 
+ # CustomLogFile allows logging all messages of the given kind, regardless their
+@@ -170,5 +170,5 @@
+ # it should apply this settings (it does glob-style matching, you can use
+ # * to match any number of characters and ? to match one character)
+ 
+-# Include "clients/emacs.conf"
++Include "clients/emacs.conf"
+ 
+diff -Naur speechd-0.3.vanilla/configure.in speechd-0.3/configure.in
+--- speechd-0.3.vanilla/configure.in	2004-03-30 18:30:08.000000000 -0600
++++ speechd-0.3/configure.in	2004-04-04 15:09:32.947954232 -0500
+@@ -50,7 +50,7 @@
+ AC_SUBST(spdconfdir)
+ snddatadir="$datadir/sounds/speech-dispatcher/" 
+ AC_SUBST(snddatadir)
+-modulebindir="$bindir/speechd-modules/" 
++modulebindir="$libdir/speech-dispatcher-modules/" 
+ AC_SUBST(modulebindir)
+ moduleconfdir="$sysconfdir/speech-dispatcher/modules/" 
+ AC_SUBST(moduleconfdir)
