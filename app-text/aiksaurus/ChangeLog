@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aiksaurus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.17 2004/07/17 17:26:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.18 2004/08/14 15:03:28 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Corrected metadata.xml to match DTD.
 
   17 Jul 2004; Seemant Kulleen <seemant@gentoo.org> aiksaurus-1.0.1-r1.ebuild:
   fix 1.0.1 to have gtk2 and pkgconfig dependencies

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.12 2004/07/27 16:58:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.13 2004/08/14 15:08:54 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Corrected metadata.xml to match DTD.
 
   22 Jul 2004; David Holm <dholm@gentoo.org> multitail-3.2.3.ebuild:
   Added to ~ppc.
