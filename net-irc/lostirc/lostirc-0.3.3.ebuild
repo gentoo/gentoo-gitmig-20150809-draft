@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.3.ebuild,v 1.9 2004/10/15 20:31:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.3.ebuild,v 1.10 2004/10/16 13:39:26 swegener Exp $
 
 inherit base
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~amd64 ~sparc"
 DEPEND=">=sys-apps/sed-4*
-	=dev-cpp/gtkmm-2.2.11
+	>=dev-cpp/gtkmm-2.2.11
 	>=dev-libs/libsigc++-1.2"
 
 src_compile() {
