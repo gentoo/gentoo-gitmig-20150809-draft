@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/liteamp-0.2.3.2.ebuild,v 1.1 2003/07/19 12:22:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/liteamp-0.2.3.2.ebuild,v 1.2 2003/07/19 18:58:49 raker Exp $
 
 inherit eutils gnome2
 
@@ -14,9 +14,8 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=x11-libs/gtk+-2.0.0
 	>=gnome-base/libgnomeui-2.0
-	>=media-libs/libmad-0.15.0b
-	>=media-libs/libid3tag-0.15.0b
 	>=media-libs/libvorbis-1.0
+	>=media-sound/mad-0.14.2b
 	media-libs/libao
 	media-libs/libogg"
 
