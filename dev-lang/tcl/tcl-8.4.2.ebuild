@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.2.ebuild,v 1.1 2003/04/17 17:22:45 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.2.ebuild,v 1.2 2003/05/09 14:38:20 utx Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -11,7 +11,10 @@ HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
 
 DESCRIPTION="Tool Command Language"
 
-DEPEND="virtual/glibc"
+# gentoolkit is needed only for revdep-rebuild
+DEPEND="virtual/glibc
+	>=app-admin/gentoolkit-0.1.22"
+RDEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="BSD"
@@ -71,4 +74,15 @@ src_install() {
 	cd ${S}
 	dodoc README changes license.terms
 
+}
+
+pkg_postinst() {
+	ewarn
+	ewarn "If you're upgrading from tcl-8.3, you must recompile the other"
+	ewarn "packages on your system that link with tcl after the upgrade"
+	ewarn "completes.  To perform this action, please run revdep-rebuild."
+	ewarn "If you have dev-lang/tk and dev-tcltk/tclx installed you should"
+	ewarn "upgrade them before this recompilation, too,"
+	ewarn
+	sleep 5
 }

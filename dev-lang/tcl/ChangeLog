@@ -1,8 +1,12 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.13 2003/04/17 17:22:44 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.14 2003/05/09 14:38:20 utx Exp $
 
 *tcl-8.4.2 (17 Apr 2003)
+
+  09 May 2003; Stanislav Brabec <utx@gentoo.org> tcl-8.4.2.ebuild:
+  Added upgrade recompilation warning (bug #19939) and dependency on
+  revdep-rebuild.
 
   17 Apr 2003; Stanislav Brabec <utx@gentoo.org> tcl-8.4.2.ebuild:
   Updated to version 8.4.2 (bug #18483).
