@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.10.ebuild,v 1.1 2005/01/13 23:49:54 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.10.ebuild,v 1.2 2005/01/14 00:23:22 kang Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -38,4 +38,9 @@ src_unpack() {
 pkg_postinst() {
 	postinst_sources
 	ewarn "Please configure and compile your RSBAC kernel before installing rsbac-admin tools"
+
+	einfo "Guides are available from the Gentoo Documentation Project for this kernel"
+	einfo "Please see http://www.gentoo.org/proj/en/hardened/rsbac/quickstart.xml"
+	einfo "And the RSBAC hardened project http://www.gentoo.org/proj/en/hardened/rsbac/"
+	einfo "For help setting up and using RSBAC."
 }
