@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/skk-jisyo-cdb-200308.ebuild,v 1.2 2003/08/20 14:31:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/skk-jisyo-cdb-200308.ebuild,v 1.3 2003/11/14 21:24:19 seemant Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 
-DEPEND="sys-apps/gzip"
+DEPEND="app-arch/gzip"
 RDEPEND=""
 
 S=${WORKDIR}/${P}
