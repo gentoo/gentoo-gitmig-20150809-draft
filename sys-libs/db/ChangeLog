@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.104 2004/10/01 14:33:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.105 2004/11/30 19:37:20 pauldv Exp $
+
+  30 Nov 2004; Paul de Vrieze <pauldv@gentoo.org>
+  +files/db-4.1.25-java.patch, db-4.0.14-r2.ebuild, db-4.0.14-r3.ebuild,
+  db-4.1.25_p1-r3.ebuild, db-4.1.25_p1-r4.ebuild:
+  Fix compilation with 1.5 jdk's by renaming some enum local variable
+
+  30 Nov 2004; Paul de Vrieze <pauldv@gentoo.org> db-4.1.25_p1-r4.ebuild:
+  Stabilize on x86
 
   01 Oct 2004; Simon Stelling <blubb@gentoo.org> db-4.1.25_p1-r3.ebuild,
   db-4.1.25_p1-r4.ebuild, db-4.2.52_p2.ebuild:

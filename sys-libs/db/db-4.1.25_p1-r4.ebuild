@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.9 2004/11/12 15:01:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.10 2004/11/30 19:37:20 pauldv Exp $
 
 inherit eutils gnuconfig db
 
@@ -27,7 +27,7 @@ done
 
 LICENSE="DB"
 SLOT="4.1"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~sh"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~sh"
 IUSE="tcltk java doc uclibc"
 
 DEPEND="tcltk? ( dev-lang/tcl )
@@ -47,6 +47,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PN}-4.0.14-fix-dep-link.patch
 	epatch ${FILESDIR}/${PN}-4.1.25-uclibc.patch
+	epatch ${FILESDIR}/${PN}-4.1.25-java.patch
 	gnuconfig_update "${S}/../dist"
 }
 

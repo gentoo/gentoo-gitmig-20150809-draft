@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r3.ebuild,v 1.8 2004/06/24 23:03:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r3.ebuild,v 1.9 2004/11/30 19:37:20 pauldv Exp $
 
 IUSE="tcltk java doc"
 
@@ -28,6 +28,7 @@ src_unpack() {
 	# libpthread, but does not do so ...
 	# <azarah@gentoo.org> (23 Feb 2003)
 	cd ${WORKDIR}/${P}; epatch ${FILESDIR}/${P}-fix-dep-link.patch
+	epatch ${FILESDIR}/${PN}-4.1.25-java.patch
 
 	cd ${WORKDIR} ; epatch ${FILESDIR}/${P}-jarlocation.patch
 }
