@@ -1,32 +1,33 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.3.ebuild,v 1.13 2003/03/07 20:59:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7.ebuild,v 1.1 2003/03/26 23:04:29 seemant Exp $
 
-inherit eutils
-
-IUSE=""
+IUSE="static build"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A selection of tools from Debian"
 SRC_URI="http://ftp.debian.org/debian/pool/main/d/${PN}/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://packages.debian.org/unstable/base/debianutils.html"
 
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 SLOT="0"
 LICENSE="GPL-2 BSD SMAIL"
-IUSE="static build"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 DEPEND="virtual/glibc"
+
+RDEPEND="sys-apps/bzip2"
 
 src_unpack() {
 	unpack ${A}
 	
 	cd ${S}
-	epatch ${FILESDIR}/${P}-Makefile-gentoo.diff
 
 	# Make installkernel and mkboot more Gentoo friendly
 	# <azarah@gentoo.org> (25 Sep 2002)
 	epatch ${FILESDIR}/${P}-gentoo.patch
+
+	# Patch savelog to use bzip2 compression instead of gzip
+	epatch ${FILESDIR}/${PN}-compress.patch
 }
 
 src_compile() {

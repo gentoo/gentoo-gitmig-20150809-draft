@@ -1,0 +1,73 @@
+diff -urN debianutils-1.16.3/installkernel debianutils-1.16.3.azarah/installkernel
+--- debianutils-1.16.3/installkernel	2002-06-13 14:22:33.000000000 +0200
++++ debianutils-1.16.3.azarah/installkernel	2002-09-26 23:07:52.000000000 +0200
+@@ -33,7 +33,7 @@
+   cat "$2" > "$dir/$1-$ver"
+ 
+   if [ -f "$dir/$1" ] ; then
+-    if [ -L "$dir/$1" -a $(ls -l "$dir/$1" | awk '{print $11}') \
++    if [ -L "$dir/$1" -a "$(ls -l "$dir/$1" | awk '{print $11}')" \
+      = "$1-$ver" ] ; then
+       ln -sf "$1-$ver.old" "$dir/$1.old"
+     else
+diff -urN debianutils-1.16.3/mkboot debianutils-1.16.3.azarah/mkboot
+--- debianutils-1.16.3/mkboot	2002-02-19 02:03:17.000000000 +0200
++++ debianutils-1.16.3.azarah/mkboot	2002-09-26 23:10:00.000000000 +0200
+@@ -14,7 +14,13 @@
+ 
+ # check whether GRUB is installed
+ grubcheck () {
+-    [ $(dpkg -s grub | grep -i ^status: | cut -d ' ' -f 4) = "installed" ]
++    # Right way in Gentoo to check, but grub is in system profile,
++    # so rather check for lilo first....
++    if [ -x /usr/bin/qpkg ] ; then
++        [ "$(qpkg -nc sys-apps/grub)" = "sys-apps/grub *" ]
++    else
++        return 1
++    fi
+ }
+ 
+ # check whether LILO is installed
+@@ -94,7 +100,7 @@
+     fi
+ 
+     boottype="lilo"
+-    if [ $(whoami) != root ] ; then
++    if [ "$(whoami)" != root ] ; then
+ 	echo "Since you don't have root permissions, I can't put LILO on the diskette."
+ 	echo "I will make a non-LILO diskette instead, but it won't be as useful.  You"
+ 	echo "can hit <Ctrl-C> to cancel."
+@@ -144,6 +150,16 @@
+     echo "either make a bootable floppy diskette, re-run LILO, or have GRUB"
+     echo "installed."
+ 
++    lilocheck
++    if [ $? -eq 0 ] ; then
++    echo -en "\nShould I run /sbin/lilo? (y/n) "
++    read input
++    if [ "$input" = "y" ] ; then
++        /sbin/lilo && exit 0
++            echo "There was a problem running /sbin/lilo."
++    fi
++    fi
++
+     grubcheck
+     if [ $? -eq 0 ] ; then
+         echo -e "\nGRUB is installed. To automatically switch to new kernels, point your"
+@@ -151,16 +167,6 @@
+         exit 0
+     fi
+ 
+-    lilocheck
+-    if [ $? -eq 0 ] ; then
+-	echo -en "\nShould I run /sbin/lilo? (y/n) "
+-	read input
+-	if [ "$input" = "y" ] ; then
+-	    /sbin/lilo && exit 0
+-            echo "There was a problem running /sbin/lilo."
+-	fi
+-    fi
+-
+     echo -en "\nShould I make a bootdisk? (y/n) "
+     read input
+     if [ "$input" = "y" ] ; then
