@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.ebuild,v 1.3 2003/11/20 17:16:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.ebuild,v 1.4 2003/11/21 01:20:40 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
@@ -17,6 +17,7 @@ DEPEND="virtual/glibc
 	sys-devel/autoconf
 	app-admin/sudo
 	>=sys-libs/ncurses-5.2
+	>=sys-devel/bison-1.875
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	readline? ( >=sys-libs/readline-4.1 )
 	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
