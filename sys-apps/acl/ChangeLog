@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/acl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.25 2004/03/01 17:42:16 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.26 2004/04/17 08:01:55 lv Exp $
+
+  17 Apr 2004; Travis Tilley <lv@gentoo.org> acl-2.2.13-r1.ebuild,
+  acl-2.2.13-r2.ebuild, acl-2.2.13.ebuild:
+  marked as stable on amd64
 
   01 Mar 2004; Tom Gall <tgall@gentoo.org> acl-2.2.13-r2.ebuild:
   bug #42937 affects ppc64 as well, utilize the same fix
