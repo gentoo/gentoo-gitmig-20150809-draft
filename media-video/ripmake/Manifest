@@ -1,4 +1,14 @@
-MD5 4ee9569a7ab928c4804f805229d3a34c ChangeLog 421
-MD5 9c25be6cfd9d39fb811fbf21ffe97090 ripmake-1.39.ebuild 825
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a7fc7028eb0a6c27c124fe1c15ebeac ChangeLog 541
 MD5 446c2ccebfd17f0cf3aa8e8d8b815635 metadata.xml 233
+MD5 d0956e0f8ee7067239c624df215230f1 ripmake-1.39.ebuild 868
 MD5 65f652a6b4ba77918181890d8f0bd582 files/digest-ripmake-1.39 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZGYGArHZZzCEUG0RAiI2AJ47cFb3zfedLBi6jGVHIQ/UypHTpACeJ8BW
+0Hw/DzBLnVnACrw3zIdRfw0=
+=il5w
+-----END PGP SIGNATURE-----
