@@ -1,9 +1,13 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.3 2002/07/01 20:59:34 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.4 2002/07/30 04:33:17 cselkirk Exp $
 
 
 *ulogd-0.97-r1,  (20 Jun 2002)
+
+  30 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> ulogd-0.97-r1.ebuild :
+
+  Added ppc to KEYWORDS.
   
   1 Jul 2002; Kyle Manna <nitro@gentoo.org> ulogd-0.97-r1.ebuild :
 

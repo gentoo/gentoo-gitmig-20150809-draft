@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-0.97-r1.ebuild,v 1.4 2002/07/25 13:48:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-0.97-r1.ebuild,v 1.5 2002/07/30 04:33:17 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
@@ -8,10 +8,11 @@ SRC_URI="ftp://ftp.netfilter.org/pub/ulogd/ulogd-0.97.tar.gz"
 HOMEPAGE="http://www.gnumonks.org/gnumonks/projects/project_details?p_id=1"
 
 DEPEND="sys-apps/iptables"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	local myconf
