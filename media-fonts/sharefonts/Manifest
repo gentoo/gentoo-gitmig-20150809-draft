@@ -1,8 +1,16 @@
-MD5 099bc13b9f9fca7f53255d7e805dc2e7 sharefonts-0.10-r1.ebuild 637
-MD5 60186373f836eae032ecffad3f148cf8 sharefonts-0.10-r3.ebuild 507
-MD5 f65f5d2a65204b88357d3652c67d6e71 sharefonts-0.10-r2.ebuild 958
-MD5 860d3f64a5729927cc22494997313463 ChangeLog 2171
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 386f1b3e30c40eb88516e60a93b0c7da ChangeLog 2307
 MD5 f975ed3aaa0dc4ae36de1fad71a89e8e metadata.xml 177
+MD5 099bc13b9f9fca7f53255d7e805dc2e7 sharefonts-0.10-r1.ebuild 637
+MD5 7fc30a5dcce0395b845fe72374bdf901 sharefonts-0.10-r3.ebuild 525
 MD5 844974be1ef6607c9a78acf3ca0b0593 files/digest-sharefonts-0.10-r1 67
-MD5 844974be1ef6607c9a78acf3ca0b0593 files/digest-sharefonts-0.10-r2 67
 MD5 844974be1ef6607c9a78acf3ca0b0593 files/digest-sharefonts-0.10-r3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBWlljVWNWqTUmv+0RAkNsAJ9SOMONKtvJgqQ1D5dlNXUlNgjK0QCeKjLT
+GJ1JhG6QMrUdmWvLXvsQ+wg=
+=ZC/Q
+-----END PGP SIGNATURE-----
