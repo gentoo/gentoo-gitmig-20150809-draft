@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cvs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.26 2003/12/21 12:22:58 scandium Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.27 2004/02/15 13:25:57 scandium Exp $
+
+*cvs-1.11.13 (15 Feb 2004)
+
+  15 Feb 2004; Rainer Groesslinger <scandium@gentoo.org> cvs-1.11.13.ebuild:
+  new version
+  Using a fixed uid and gid for the cvs user/group (350) until a better
+  solution is found (bug #36416)
+  Moved enewgroup/enewuser to pkg_setup() (bug #36601)
 
   20 Dec 2003; Rainer Groesslinger <scandium@gentoo.org>
   cvs-1.11.10-r1.ebuild, cvs-1.11.11.ebuild, files/cvspserver.xinetd.d:
