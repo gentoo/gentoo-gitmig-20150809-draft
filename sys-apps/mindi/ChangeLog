@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/mindi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.11 2004/06/30 20:58:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.12 2004/08/12 21:30:21 pfeifer Exp $
+
+*mindi-1.10 (12 Aug 2004)
+
+  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org>; mindi-1.10.ebuild:
+  Version bump. This is package masked for testing.
+
+*mindi-1.03 (12 Aug 2004)
+
+  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org>; mindi-1.03.ebuild:
+  Version bump.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> mindi-0.85.ebuild,
   mindi-0.86.ebuild:
