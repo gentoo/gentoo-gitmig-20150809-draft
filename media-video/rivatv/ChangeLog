@@ -1,6 +1,13 @@
 # ChangeLog for media-video/rivatv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/rivatv/ChangeLog,v 1.1 2002/06/07 15:12:59 blauwers Exp $
+# /space/gentoo/cvsroot/gentoo-x86/media-video/rivatv/ChangeLog,v 1.1 2002/06/07 15:12:59 blauwers Exp
+
+*rivatv-0.8.0 (16 Jun 2002)
+
+  16 June 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu> rivatv-0.8.0-r1.ebuild:
+ 
+  cleaned up ebuild and fixed it so it'll actually emerge without giving a whole long error msg
+  about how we changed the kernel ebuild names and then need to be emerged --nodeps to get it to work
 
 *rivatv-0.8.0-0 (07/06/2002)
 
