@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.41 2004/10/28 19:50:24 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.42 2004/11/03 19:22:50 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -58,8 +58,12 @@ gcc_setup_path_vars() {
 	PREFIX="${PREFIX:="/usr"}"
 
 	if [ "$1" == "versioned" ] ; then
-		# GCC 3.4 no longer uses gcc-lib.
-		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CTARGET}/${MY_PV_FULL}"}"
+		if version_is_at_least 3.4.0 ; then
+			# GCC 3.4 no longer uses gcc-lib.
+			LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CTARGET}/${MY_PV_FULL}"}"
+		else
+			LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc-lib/${CTARGET}/${MY_PV_FULL}"}"
+		fi
 		INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
 		BINPATH="${BINPATH:="${PREFIX}/${CTARGET}/gcc-bin/${MY_PV}"}"
 		DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CTARGET}/${MY_PV}"}"
@@ -377,28 +381,25 @@ do_gcc_SSP_patches() {
 	local ssppatch
 	local sspdocs
 
-	if  [ ${GCCMAJOR} -lt 3 ] ; then
-		die "gcc version not supported by do_gcc_SSP_patches"
-	elif [ ${GCCMAJOR} -eq 3 -a ${GCCMINOR} -lt 2 ] ; then
-		die "gcc version not supported by do_gcc_SSP_patches"
-	elif [ ${GCCMAJOR} -eq 3 -a ${GCCMINOR} -eq 2 ] && [ ${GCCMICRO} -lt 3 ] ; then
-		die "gcc version not supported by do_gcc_SSP_patches"
-	fi
+	version_is_at_least 3.2.3 || die "gcc version not supported by do_gcc_SSP_patches"
 
 	# Etoh keeps changing where files are and what the patch is named
-	if [ "${GCCMINOR}" -lt "4" ] ; then
+	if version_is_at_least 3.4.1 ; then
+		# >3.4.1 uses version in patch name, and also includes docs
+		ssppatch="${S}/gcc_${PP_VER}.dif"
+		sspdocs="yes"
+	elif version_is_at_least 3.4.0 ; then
+		# >3.4 put files where they belong and 3_4 uses old patch name
+		ssppatch="${S}/protector.dif"
+		sspdocs="no"
+	elif version_is_at_least 3.2.3 ; then
 		# earlier versions have no directory structure or docs
 		mv ${S}/protector.{c,h} ${S}/gcc
 		ssppatch="${S}/protector.dif"
 		sspdocs="no"
-	elif [ "${GCCMINOR}" -eq "4" -a ${PP_VER} == "3_4" ] ; then
-		# >3.4 put files where they belong and 3_4 uses old patch name
-		ssppatch="${S}/protector.dif"
-		sspdocs="no"
 	else
-		# >3.4.1 uses version in patch name, and also includes docs
-		ssppatch="${S}/gcc_${PP_VER}.dif"
-		sspdocs="yes"
+		# redundantly redundant
+		die "gcc version not supported by do_gcc_SSP_patches"
 	fi
 
 	epatch ${ssppatch}
