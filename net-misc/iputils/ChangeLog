@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.15 2003/09/21 17:32:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.16 2003/11/17 00:19:37 kumba Exp $
+
+
+*iputils-021109 (16 Nov 2003)
+
+  16 Nov 2003; Joshua Kinard <kumba@gentoo.org> iputils-021109.ebuild:
+  Version bump to a package that appears to be beta. It builds against 2.4.22+
+  linux-headers, however, so worth testing.
 
 *iputils-020927 (03 Jan 2003)
 
