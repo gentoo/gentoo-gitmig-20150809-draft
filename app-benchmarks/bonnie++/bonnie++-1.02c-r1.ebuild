@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.02c-r1.ebuild,v 1.2 2003/08/01 20:09:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.02c-r1.ebuild,v 1.3 2004/03/12 11:43:20 mr_bones_ Exp $
 
 DESCRIPTION="Hard drive bottleneck testing benchmark suite"
 HOMEPAGE="http://www.coker.com.au/bonnie++/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.55.ebuild,v 1.9 2003/10/20 23:17:54 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.55.ebuild,v 1.10 2004/03/12 11:43:20 mr_bones_ Exp $
 
 DESCRIPTION="An http regression testing and benchmarking utility"
 SRC_URI="ftp://ftp.armstrong.com/pub/siege/${P}.tar.gz"
