@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20050115.ebuild,v 1.3 2005/01/17 00:47:29 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20050115.ebuild,v 1.4 2005/03/15 14:23:49 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86" # ~arm ~ia64 ~mips ~ppc64 ~s390
 IUSE=""
-RDEPEND="net-www/lynx
+RDEPEND="www-client/lynx
 	net-misc/curl
 	dev-lang/perl
 	dev-perl/libwww-perl"
