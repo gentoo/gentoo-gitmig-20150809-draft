@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/cloop-0.68.ebuild,v 1.2 2003/08/26 13:34:47 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/cloop-0.68.ebuild,v 1.3 2003/08/26 14:17:05 stuart Exp $
 
 inherit kernel-mod
 
@@ -30,10 +30,22 @@ badversion () {
 	die "cloop ${PV} only works with Linux 2.4"
 }
 
+badconfig () {
+	eerror "You have not enabled the zlib compression and/or decompression options"
+	eerror "in your Linux kernel."
+	eerror
+	eerror "You must configure both options to be compiled into your kernel; cloop"
+	eerror "will not compile if the zlib options are compiled as modules"
+	die
+}
+
 src_compile() {
 	kernel-mod_getversion
-
 	[ "$KV_MAJOR" = "2" ] && [ "$KV_MINOR" != "4" ] && badversion
+
+	. ${KERNEL_DIR}/.config || die "kernel has not been configured yet"
+	[ "$CONFIG_ZLIB_INFLATE" != "y" ] && badconfig
+	[ "$CONFIG_ZLIB_DEFLATE" != "y" ] && badconfig
 
 	kernel-mod_src_compile
 }
