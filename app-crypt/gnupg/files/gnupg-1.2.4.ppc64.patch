@@ -1,0 +1,14 @@
+diff -ruN gnupg-1.2.4.old/mpi/config.links gnupg-1.2.4/mpi/config.links
+--- gnupg-1.2.4.old/mpi/config.links	2004-06-23 01:17:29.127131544 +0000
++++ gnupg-1.2.4/mpi/config.links	2004-06-23 01:17:56.951162792 +0000
+@@ -218,6 +218,10 @@
+ 	path="m68k/mc68020 m68k"
+ 	;;
+ 
++    powerpc64*-*-linux*)
++	path="powerpc64"
++	;;
++
+     powerpc*-*-linux*)
+ 	echo '/* configured for powerpc/ELF */' >>./mpi/asm-syntax.h
+ 	echo '#define ELF_SYNTAX'               >>./mpi/asm-syntax.h
