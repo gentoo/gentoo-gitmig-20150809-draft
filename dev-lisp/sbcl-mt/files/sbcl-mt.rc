@@ -1,9 +1,0 @@
-;;; -*- Lisp -*-
-;;; this file gets installed as /etc/sbcl-mt.rc and run on every
-;;; invocation of sbcl
-
-(setq sb-fasl:*fasl-file-type* "faslmt")
-
-(if (probe-file "/etc/lisp-config.lisp")
-    (load "/etc/lisp-config.lisp")
-    (format t "~%;;; Warning: there is no /etc/lisp-config.lisp file"))
