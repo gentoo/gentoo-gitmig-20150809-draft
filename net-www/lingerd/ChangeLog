@@ -1,6 +1,9 @@
 # ChangeLog for net-www/lingerd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/ChangeLog,v 1.4 2005/01/31 04:39:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/ChangeLog,v 1.5 2005/02/05 21:19:55 kloeri Exp $
+
+  05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> lingerd-0.94.ebuild:
+  ~alpha keyword, bug 79435.
 
   30 Jan 2005; Jason Wever <weeve@gentoo.org> lingerd-0.94.ebuild:
   Added ~sparc keyword wrt bug #79435.
