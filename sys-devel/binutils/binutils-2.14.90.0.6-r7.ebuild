@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r7.ebuild,v 1.1 2003/10/26 19:01:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r7.ebuild,v 1.2 2003/11/03 23:30:36 azarah Exp $
 
 IUSE="nls bootstrap build"
 
@@ -179,6 +179,17 @@ src_install() {
 		fi
 		ln -s ../${CHOST}/bin/${x} ${x}
 	done
+
+	if [ -n "${PROFILE_ARCH}" ] && \
+	   [ "${PROFILE_ARCH/64}" != "${PROFILE_ARCH}" ]
+	then
+		dosym ${CHOST} /usr/${CHOST/-/64-}
+
+		for x in `ls ${D}/usr/${CHOST/-/64-}/bin/`
+		do
+			dosym ../${CHOST/-/64-}/bin/${x} /usr/bin/${CHOST/-/64-}-${x}
+		done
+	fi
 
 	cd ${S}
 	if [ -z "`use build`" ]

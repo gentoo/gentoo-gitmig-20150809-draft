@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.83 2003/11/01 16:17:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.84 2003/11/03 23:30:36 azarah Exp $
+
+  04 Nov 2003; Martin Schlemmer <azarah@gentoo.org>
+  binutils-2.14.90.0.2.ebuild, binutils-2.14.90.0.4.1-r1.ebuild,
+  binutils-2.14.90.0.6-r7.ebuild, binutils-2.14.90.0.7.ebuild:
+  Enable building of 64bit apps on Sparc and Mips, closing bug #24631. Fix is an
+  modified one from Jason Wever <weeve@gentoo.org>.
 
 *binutils-2.14.90.0.7 (01 Nov 2003)
 
