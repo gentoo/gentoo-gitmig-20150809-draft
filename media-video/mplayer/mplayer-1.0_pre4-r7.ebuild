@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.18 2004/10/24 01:36:10 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.19 2004/10/24 01:41:40 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -64,7 +64,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 		live? (
 			x86? ( >=media-plugins/live-2004.07.20 )
 			amd64? ( >=media-plugins/live-2004.03.27 )
-			alpha? ( >=media-plugins/live-2004.03.27 )
+			alpha? ( >=media-plugins/live-2004.07.20 )
 		)
 	)
 	truetype? ( >=media-libs/freetype-2.1 )
@@ -118,7 +118,7 @@ src_unpack() {
 	use mythtv && epatch ${FILESDIR}/mplayer-mythtv.patch
 
 	#fixes a live api bug
-	if use live && use x86
+	if use live && [ use x86 || use alpha ]
 	then
 		epatch ${FILESDIR}/mplayer-1.0_pre5-live.patch
 	fi
