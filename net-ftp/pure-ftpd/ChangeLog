@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.37 2004/08/09 17:25:31 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.38 2004/08/09 17:51:01 humpback Exp $
+
+*pure-ftpd-1.0.20 (09 Aug 2004)
+
+  09 Aug 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  pure-ftpd-1.0.20.ebuild:
+  Added caps flag. Closes bug #59458. thanks to erkan kaplan
 
   09 Aug 2004; Gustavo Felisberto <humpback@gentoo.org>; :
   Version bump tp 1.0.20, closes bug #59355.

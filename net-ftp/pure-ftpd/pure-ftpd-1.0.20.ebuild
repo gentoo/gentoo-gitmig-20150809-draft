@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.20.ebuild,v 1.1 2004/08/09 17:25:31 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.20.ebuild,v 1.2 2004/08/09 17:51:01 humpback Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
-IUSE="pam mysql postgres ldap ssl"
+IUSE="pam mysql postgres ldap ssl caps"
 
 DEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -28,6 +28,8 @@ src_compile() {
 	use mysql && myconf="${myconf} --with-mysql"
 	use postgres && myconf="${myconf} --with-pgsql"
 	use ssl && myconf="${myconf} --with-tls"
+	use caps && myconf="${myconf} --with-capabilities"
+	!(use caps) && myconf="${myconf} --without-capabilities"
 
 	econf \
 		--with-altlog --with-extauth \
