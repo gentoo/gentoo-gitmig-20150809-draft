@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.7 2002/12/09 04:37:28 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.8 2002/12/13 20:01:51 lostlogic Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -24,7 +24,7 @@ ETYPE="sources"
 inherit kernel || die
 
 # Documentation on the patches contained in this kernel will be installed
-# to /usr/share/doc/lolo-sources-${PV}/patches.txt.gz
+# to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
@@ -37,8 +37,7 @@ src_unpack() {
 
 	cd linux-${KV}
 	patch -p1 < ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
-	patch -p1 < ${FILESDIR}/i810_drm.patch || die "i810_drm patch
-failed"
+	patch -p1 < ${FILESDIR}/i810_drm.patch || die "i810_drm patch failed"
 	cd ..
 
 	cd ${KV}
