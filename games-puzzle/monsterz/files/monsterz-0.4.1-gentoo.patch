@@ -1,0 +1,24 @@
+Touchup the paths so that the default isn't $PWD.
+
+--- monsterz.py
++++ monsterz.py
+@@ -1225,7 +1225,7 @@
+     print '          (C) 2002 Castles Music Productions <info@castlesmusic.co.nz>'
+     print '          (C) 1998 MenTaLguY <mental@rydia.net>'
+     print 'This is free software; you can redistribute it and/or modify it under the terms'
+-    print 'of the Do What The Fuck You Want To Public License, Version 2, as published'
++    print 'of the WTFPL, Version 2, as published'
+     print 'by Sam Hocevar. See http://sam.zoy.org/projects/COPYING.WTFPL for more details.'
+ 
+ def usage():
+@@ -1247,8 +1247,8 @@
+     from getopt import getopt, GetoptError
+     global system, data, hiscores, fonter, monsterz
+     global FLAG_FULLSCREEN, FLAG_MUSIC, FLAG_SFX
+-    sharedir = dirname(argv[0])
+-    scorefile = join(sharedir, "scores")
++    sharedir = "GENTOO_DATADIR"
++    scorefile = "GENTOO_SCOREFILE"
+     outfd = None
+     try:
+         long = ['help', 'version', 'music', 'sound', 'fullscreen',

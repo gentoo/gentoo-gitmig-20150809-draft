@@ -1,0 +1,8 @@
+# ChangeLog for games-puzzle/monsterz
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.1 2005/03/19 00:08:20 vapier Exp $
+
+*monsterz-0.4.1 (18 Mar 2005)
+
+  18 Mar 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Julien Cayzac #84751.
