@@ -199,54 +199,7 @@ def getconfig(mycfg,tolerant=0):
 				return mykeys
 		mykeys[key]=val
 	return mykeys
-"""	
-def var_expand(mystring,dictlist,rec=0):
-	if (rec>=16):
-		print "!!! Recursion level too high when expanding",mystring
-		return ""
-	pos=0
-	newstring=" "
-	while (pos<len(mystring)):
-		if ( mystring[pos]!="$" or mystring[pos-1]=="\\" ):
-			newstring=newstring+mystring[pos]
-			pos=pos+1
-			continue
-		if (pos+1)>=len(mystring):
-			#we're at the end of the string, error
-			return ""
-		if mystring[pos+1]=="{":
-			newpos=pos+1
-			while newpos<len(mystring) and mystring[newpos]!="}":
-				newpos=newpos+1
-			if newpos>=len(mystring):
-				return "" # ending } not found
-			varname=mystring[pos+2:newpos]
-			if len(varname)==0:
-				return "" #zero-length variable, error
-			for x in dictlist:
-				if x.has_key(varname):
-					#recurse
-					newstring=newstring+var_expand(x[varname],dictlist,rec+1)
-					break
-			pos=newpos+1
-		else:
-			newpos=pos+1
-			while newpos<len(mystring) and (mystring[newpos] not in string.whitespace):
-				newpos=newpos+1
-			if newpos>=len(mystring):
-				varname=mystring[pos+1:]
-			else:
-				varname=mystring[pos+1:newpos]
-			pos=newpos
-			if len(varname)==0:
-				return "" #zero-length variable, error
-			for x in dictlist:
-				if x.has_key(varname):
-					#recurse
-					newstring=newstring+var_expand(x[varname],dictlist,rec+1)
-					break
-	return newstring[1:]
-"""
+
 def expand(mystring,dictlist=[]):
 	"""
 	new variable expansion code.  Removes quotes, handles \n, etc, and
@@ -873,27 +826,7 @@ def dep_opconvert(mysplit,myuse):
 				mypos=mypos-1
 		mypos=mypos+1
 	return mysplit
-"""
-def dep_wordreduce(mydeplist):
-	mypos=0
-	deplist=mydeplist[:]
-	while mypos<len(deplist):
-		if type(deplist[mypos])==types.ListType:
-			#recurse
-			deplist[mypos]=dep_wordreduce(deplist[mypos])
-		else:
-			if deplist[mypos]=="||":
-				pass
-			else:
-				mydep=dep_depreduce(deplist[mypos])
-				if mydep!=None:
-					deplist[mypos]=mydep
-				else:
-					#encountered invalid string
-					return None
-		mypos=mypos+1
-	return deplist
-"""
+
 def dep_eval(deplist):
 	if len(deplist)==0:
 		return 1
@@ -1090,6 +1023,20 @@ class packagetree:
 		populated=1
 		pass
 
+	def zap(self,mycatpkg):
+		"remove a catpkg from the deptree"
+		cps=catpkgsplit(mycatpkg,0)
+		mykey=cps[0]+"/"+cps[1]
+		if not self.tree.has_key(mykey):
+			return
+		x=0
+		while x<len(self.tree[mykey]):
+			if self.tree[mykey][x][0]==mycatpkg:
+				del self.tree[mykey][x]
+			x=x+1
+		if len(self.tree[mykey])==0:
+			del self.tree[mykey]
+
 	def inject(self,mycatpkg):
 		"add a catpkg to the deptree"
 		cps=catpkgsplit(mycatpkg,0)
@@ -1097,7 +1044,7 @@ class packagetree:
 		if not self.tree.has_key(mykey):
 			self.tree[mykey]=[]
 		self.tree[mykey].append([mycatpkg,cps])
-		
+	
 	def resolve_key(self,mykey):
 		"generates new key, taking into account virtual keys"
 		if self.virtual:
@@ -1335,15 +1282,18 @@ class packagetree:
 			mynodes=[]
 			for x in self.getnode(mykey):
 				if eval("pkgcmp(x[1][1:],mycatpkg[1:])"+cmpstr+"0"):
-					mynodes.append(x)
+					mynodes.append(x[0])
 			#now we have a list of all nodes that qualify
 			#since we want all nodes that match, return this list
 			return mynodes
 		elif not isspecific(mypkgdep):
 			if not self.hasnode(mypkgdep):
 				return [] 
-			return self.getnode(mypkgdep)[:]
-			
+			mynodes=[]
+			for x in self.getnode(mypkgdep)[:]:
+				mynodes.append(x[0])
+			return mynodes
+
 class vartree(packagetree):
 	"this tree will scan a var/db/pkg database located at root (passed to init)"
 	def __init__(self,root="/",virtual=None):
@@ -1414,8 +1364,26 @@ class portagetree(packagetree):
 						print "!!! Error:",self.portroot+"/"+x+"/"+y,"is not a valid Portage directory, skipping..."
 						continue	
 					self.tree[mykey].append([fullpkg,mysplit])
-		os.chdir(origdir)
+		#self.populated must be set here, otherwise dep_match will cause recursive populate() calls
 		self.populated=1
+		if os.path.exists("profiles/package.mask"):
+			myfile=open("profiles/package.mask","r")
+			mylines=myfile.readlines()
+			myfile.close()
+			deps=[]
+			for x in mylines:
+				myline=string.join(string.split(x))
+				if not len(myline):
+					continue
+				if myline[0]=="#":
+					continue
+				deps.append(myline)
+			for x in deps:
+				matches=self.dep_match(x)
+				if matches:
+					for y in matches:
+						self.zap(y)
+		os.chdir(origdir)
 	def getdeps(self,pf):
 		"returns list of dependencies, if any"
 		if not self.populated:
@@ -1445,39 +1413,7 @@ class portagetree(packagetree):
 		mysplit=string.split(pkgname,"/")
 		psplit=pkgsplit(mysplit[1])
 		return self.portroot+"/"+mysplit[0]+"/"+psplit[0]+"/"+mysplit[1]+".ebuild"
-"""
-class currenttree(packagetree):
-	"this tree will scan a current package file located at root (passed to init)"
-	def __init__(self,root):
-		self.root=root
-		packagetree.__init__(self)
-	def populate(self):
-		"populates the current tree"
-		newroot=settings["CURRENTFILE",self.root)
-		
-		#the currentfile still comes from /usr/portage, not ${ROOT}/usr/portage, but the currentfile setting
-		#comes from ${ROOT}/etc/make.*
-		
-		mycurrent=open(+newroot,"r")
-		mylines=mycurrent.readlines()
-		for x in mylines:
-			if x[:2]!="./":
-				continue
-			myline=string.split(string.strip(x)[2:-7],"/")
-			if len(myline)!=3:
-				continue
-			fullpkg=string.join([myline[0],myline[2]],"/")
-			mysplit=catpkgsplit(fullpkg,0)
-			if mysplit==None:
-				print "!!! Error:",self.root+":"+fullpkg,"is not a valid current packages entry, skipping..."
-				continue
-			mykey=mysplit[0]+"/"+mysplit[1]
-			if not self.tree.has_key(mykey):
-				self.tree[mykey]=[]
-			self.tree[mykey].append([fullpkg,mysplit])
-		mycurrent.close()
-		self.populated=1
-"""
+
 class binarytree(packagetree):
 	"this tree scans for a list of all packages available in PKGDIR"
 	def __init__(self,root="/",virtual=None):
