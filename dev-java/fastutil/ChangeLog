@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/fastutil
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.1 2004/02/16 02:59:37 zx Exp $
+
+*fastutil-4.1 (15 Feb 2004)
+
+  15 Feb 2004; <zx@gentoo.org> fastutil-4.1.ebuild:
+  Initial Import. Thanks to Matteo Coloberti <xteo78@libero.it> for the initial
+  ebuild. Bug #34100
+
