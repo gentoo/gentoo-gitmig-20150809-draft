@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/inform
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/ChangeLog,v 1.4 2004/07/02 04:27:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/ChangeLog,v 1.5 2004/08/06 19:04:17 malc Exp $
+
+  06 Aug 2004; Malcolm Lashley <malc@gentoo.org> inform-6.21.4.ebuild:
+  Add ~amd64 closes bug #57637
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> inform-6.21.3.ebuild,
   inform-6.21.4.ebuild:
