@@ -1,4 +1,5 @@
-MD5 de152cc741b1a993a6ba2389d3fb3960 wmtz-0.7.ebuild 655
-MD5 00f57070a1c14e2d6a1f32b722562577 ChangeLog 645
+MD5 650f908b1e9a4bc11b4bf476bbb5e925 wmtz-0.7.ebuild 691
+MD5 c69346572bac3585622f43b1830586f7 ChangeLog 793
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 87d237cba796423d80d030a210401ed0 files/wmtz.c.patch 465
 MD5 6efb0655a3f8a17ecd56106d4d39ebda files/digest-wmtz-0.7 59
