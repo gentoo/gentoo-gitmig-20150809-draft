@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.6.2-r1.ebuild,v 1.15 2004/03/30 19:54:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.6.2-r1.ebuild,v 1.16 2004/05/02 07:20:05 vapier Exp $
 
-IUSE="ssl"
+IUSE="ssl ipv6"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Tool for network monitoring and data acquisition"
