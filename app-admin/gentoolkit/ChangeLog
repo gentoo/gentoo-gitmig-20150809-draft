@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.53 2003/01/22 19:28:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.54 2003/02/10 16:20:38 gmsoft Exp $
+
+  10 Feb 2003; Guy Martin <gmsoft@gentoo.org> gentoolkit-0.1.17-r11.ebuild :
+  Added hppa to keywords.
 
 *gentoolkit-0.1.17-r11 (22 Jan 2003)
 
