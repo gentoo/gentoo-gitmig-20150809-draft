@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/canna-cannadic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.17 2005/01/01 12:47:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.18 2005/01/02 19:26:16 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   canna-cannadic-0.95b.ebuild:
@@ -19,7 +22,7 @@
   23 May 2004; <usata@gentoo.org> canna-cannadic-0.95b.ebuild:
   Stable on ppc
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   canna-cannadic-0.95b.ebuild:
   Stable on alpha.
 

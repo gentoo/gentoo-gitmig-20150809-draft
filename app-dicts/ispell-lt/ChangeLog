@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-lt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ChangeLog,v 1.13 2005/01/01 12:54:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ChangeLog,v 1.14 2005/01/02 19:29:40 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   22 Aug 2004; Joshua Kinard <kumba@gentoo.org> ispell-lt-1.0.ebuild:
   Marked stable on mips.
@@ -11,7 +14,7 @@
   08 Aug 2004; Guy Martin <gmsoft@gentoo.org> ispell-lt-1.0.ebuild:
   Stable on hppa.
 
-  16 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> ispell-lt-1.0.ebuild:
+  16 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ispell-lt-1.0.ebuild:
   Stable on alpha.
 
 *ispell-lt-1.0 (15 Jul 2004)

@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-fi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fi/ChangeLog,v 1.7 2005/01/01 12:53:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fi/ChangeLog,v 1.8 2005/01/02 19:29:03 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   ispell-fi-20000903.ebuild:
@@ -13,7 +16,7 @@
   ispell-fi-20000903.ebuild:
   QA - IUSE fix
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> ispell-fi-20000903.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ispell-fi-20000903.ebuild:
   Stable on alpha.
 
 *ispell-fi-20000903 (13 Jun 2003)

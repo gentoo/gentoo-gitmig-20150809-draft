@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/duali-data
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/ChangeLog,v 1.7 2005/01/01 12:50:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/ChangeLog,v 1.8 2005/01/02 19:27:14 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   30 Jul 2004; Anders Rune Jensen <arj@gentoo.org> metadata.xml:
   QA - IUSE fix and {add missing,correct} metatata.xml.
@@ -12,7 +15,7 @@
   +metadata.xml:
   x86 stable
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> duali-data-0.1b.ebuild:
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> duali-data-0.1b.ebuild:
   Stable on alpha.
 
 *duali-data-0.1b (23 Sep 2003)
