@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.124 2005/03/09 06:20:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.125 2005/03/09 18:42:37 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -816,7 +816,7 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
-	if !is_crosscompile && use_multilib && \
+	if ! is_crosscompile && use_multilib && \
 	   [[ $(tc-arch) == "amd64" && -z ${SKIP_MULTILIB_HACK} ]] ; then
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
 	fi
