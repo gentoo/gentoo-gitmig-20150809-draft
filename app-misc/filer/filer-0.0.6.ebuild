@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.6.ebuild,v 1.1 2004/08/23 23:39:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.6.ebuild,v 1.2 2004/09/03 00:53:46 dholm Exp $
 
 DESCRIPTION="Small file-manager written in perl"
 HOMEPAGE="http://public.rz.fh-wolfenbuettel.de/~luedickj/"
@@ -8,7 +8,7 @@ SRC_URI="http://public.rz.fh-wolfenbuettel.de/~luedickj/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
 DEPEND="dev-lang/perl
