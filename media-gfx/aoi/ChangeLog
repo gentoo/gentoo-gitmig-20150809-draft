@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/aoi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.5 2004/03/25 09:15:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.6 2004/03/26 10:51:46 dholm Exp $
+
+  26 Mar 2004; David Holm <dholm@gentoo.org> aoi-1.4.ebuild, aoi-1.6.ebuild:
+  Backed out of ppc and ~ppc while waiting fort portage upgrade.
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> aoi-1.4.ebuild,
   aoi-1.6.ebuild:
