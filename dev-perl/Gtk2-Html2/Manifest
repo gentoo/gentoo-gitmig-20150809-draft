@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e4a01f0f95648df8c9dda1922b424138 Gtk2-Html2-0.04.ebuild 581
+MD5 a93bb8a37e05158102dc5f2a31b2200b ChangeLog 393
+MD5 3f4e0500e2e8b25a7ccace131dbf8dcd files/digest-Gtk2-Html2-0.04 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB7O8etG5z4I8BtQoRArLgAJ9f/vds2R3gu+mqrHLjklHznl2nRACggM/H
+wdvz5qvnaArkjj4tKnecwqs=
+=Y7fk
+-----END PGP SIGNATURE-----

@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Gtk2-Html2
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Html2/ChangeLog,v 1.1 2005/01/18 11:12:41 mcummings Exp $
+
+*Gtk2-Html2-0.04 (18 Jan 2005)
+
+  18 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  +Gtk2-Html2-0.04.ebuild:
+  New package not on cpan; bug 55206; ebuild courtesy of matsuu
+
