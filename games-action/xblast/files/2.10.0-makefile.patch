@@ -1,0 +1,60 @@
+--- Makefile.in.orig	2005-02-02 01:41:14.000000000 -0500
++++ Makefile.in	2005-02-02 01:41:56.000000000 -0500
+@@ -782,19 +782,19 @@
+ install-data-local:
+ 	@$(NORMAL_INSTALL)
+ 	if test -d $(srcdir)/image; then \
+-	  $(mkinstalldirs)     $(game_datadir); \
+-	  $(mkinstalldirs) $(game_datadir)/image; \
+-	  cp -r $(srcdir)/image/* $(game_datadir)/image;\
++	  $(mkinstalldirs)     $(DESTDIR)$(game_datadir); \
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/image; \
++	  cp -r $(srcdir)/image/* $(DESTDIR)$(game_datadir)/image;\
+ 	fi; \
+ 	if test -d $(srcdir)/level; then \
+-	  $(mkinstalldirs) $(game_datadir)/ ; \
+-	  $(mkinstalldirs) $(game_datadir)//level; \
+-	  cp -r $(srcdir)/level/* $(game_datadir)//level;\
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/ ; \
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)//level; \
++	  cp -r $(srcdir)/level/* $(DESTDIR)$(game_datadir)//level;\
+ 	fi; \
+ 	if test -d $(srcdir)/sounds; then \
+-	  $(mkinstalldirs) $(game_datadir)/ ; \
+-	  $(mkinstalldirs) $(game_datadir)//sounds; \
+-	  cp -r $(srcdir)/sounds/* $(game_datadir)//sounds;\
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/ ; \
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)//sounds; \
++	  cp -r $(srcdir)/sounds/* $(DESTDIR)$(game_datadir)//sounds;\
+ 	fi;
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+--- Makefile.am.orig	2005-02-02 01:47:12.000000000 -0500
++++ Makefile.am	2005-02-02 01:48:57.000000000 -0500
+@@ -67,17 +67,17 @@
+ install-data-local:
+ 	@$(NORMAL_INSTALL)
+ 	if test -d $(srcdir)/image; then \
+-	  $(mkinstalldirs)     $(game_datadir); \
+-	  $(mkinstalldirs) $(game_datadir)/image; \
+-	  cp -r $(srcdir)/image/* $(game_datadir)/image;\
++	  $(mkinstalldirs)     $(DESTDIR)$(game_datadir); \
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/image; \
++	  cp -r $(srcdir)/image/* $(DESTDIR)$(game_datadir)/image;\
+ 	fi; \
+ 	if test -d $(srcdir)/level; then \
+-	  $(mkinstalldirs) $(game_datadir)/ ; \
+-	  $(mkinstalldirs) $(game_datadir)//level; \
+-	  cp -r $(srcdir)/level/* $(game_datadir)//level;\
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/ ; \
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)//level; \
++	  cp -r $(srcdir)/level/* $(DESTDIR)$(game_datadir)//level;\
+ 	fi; \
+ 	if test -d $(srcdir)/sounds; then \
+-	  $(mkinstalldirs) $(game_datadir)/ ; \
+-	  $(mkinstalldirs) $(game_datadir)//sounds; \
+-	  cp -r $(srcdir)/sounds/* $(game_datadir)//sounds;\
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/ ; \
++	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)//sounds; \
++	  cp -r $(srcdir)/sounds/* $(DESTDIR)$(game_datadir)//sounds;\
+ 	fi;

@@ -1,6 +1,12 @@
 # ChangeLog for games-action/xblast
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/ChangeLog,v 1.4 2004/12/20 21:33:55 josejx Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/ChangeLog,v 1.5 2005/02/02 07:30:51 mr_bones_ Exp $
+
+*xblast-2.10.0 (02 Feb 2005)
+
+  02 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/2.10.0-makefile.patch, +xblast-2.10.0.ebuild:
+  version bump
 
   21 Dec 2004; Joseph Jezak <josejx@gentoo.org> xblast-2.9.22.ebuild:
   Marked ppc stable.

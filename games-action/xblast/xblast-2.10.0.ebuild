@@ -1,20 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/xblast-2.9.22.ebuild,v 1.5 2005/02/02 07:30:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/xblast-2.10.0.ebuild,v 1.1 2005/02/02 07:30:51 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Bomberman clone w/network support for up to 6 players"
 HOMEPAGE="http://xblast.sourceforge.net/"
-SRC_URI="mirror://sourceforge/xblast/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/xblast/${PN}-complete-sounds-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/x11
 	media-libs/libpng"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-makefile.patch"
+}
 
 src_compile() {
 	export MY_DATADIR="${GAMES_DATADIR}/${PN}"
@@ -26,10 +32,8 @@ src_compile() {
 }
 
 src_install() {
-	egamesinstall game_datadir="${D}${MY_DATADIR}" || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README
-	find "${D}${MY_DATADIR}" \( -name "*akefile*" -o -name "*~" \) \
-		-exec rm -f \{\} \;
-	find "${D}${MY_DATADIR}" -type f -exec chmod a-x \{\} \;
+	find "${D}" -name Imakefile -exec rm \{\} \;
 	prepgamesdirs
 }
