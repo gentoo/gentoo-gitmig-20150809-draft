@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<!-- $Id: gentoo-howto.xml,v 1.20 2001/08/17 21:52:07 drobbins Exp $ -->
+<!-- gentoo-howto.xml,v 1.20 2001/08/17 21:52:07 drobbins Exp -->
 
 <guide link="/doc/gentoo-howto.html">
 <title>Gentoo Linux Developers HOWTO</title>
@@ -443,10 +443,15 @@ and will be true only if the <c>gnome</c> USE variable is set.</p>
 <section>
 <title>Introduction to the FHS</title>
 <body>
-<p>The filesystem layout standards used in Gentoo Linux closely follow the  FHS,
+<p>The filesystem layout standards used in Gentoo Linux closely follow the FHS,
 short for <e>Filesystem Heirarchy Standard</e>. A simplified
 description of the standard is given here; for a complete
 specification go to <uri>http://www.pathname.com/fhs/</uri>.</p>
+<note> The <path>/opt</path> hierarchy is addressed in section 3.12 of the FHS.
+Section 4.4 deals with the <path>/usr/X11R6</path> directory.  KDE and GNOME are
+not specifically addressed, and are in fact not even mentioned in the current
+version of the FHS.
+</note>
 </body>
 </section>
 
@@ -462,21 +467,47 @@ corresponding man page should be installed into the <path>/usr/share/man</path>
 tree.  This can often be accomplished by specifying a  <c>./configure
 --mandir=${prefix}/share/man</c> in the ebuild.</li>
 
-<li>In general, you should have ebuilds install their files into the
-<path>/usr</path> tree.  X11-specific programs and libraries should use
-<path>/usr/X11R6</path>, GNOME packages should be placed in
-<path>/opt/gnome</path> and KDE packages should be placed in
-<path>/opt/kde[vers]</path>.</li>
-
-
 <li>GNU info files should always be installed to <path>/usr/share/info</path>,
 <e>even if the info files are about X11, GNOME or KDE-specific programs or
 tools</e>.  Make a note: <path>/usr/share/info</path> is the <e>only</e>
 official location for GNU info files.  Since most <c>./configure</c> scripts
 default to installing GNU info files in <c>/usr/info</c>, it's often necessary
-to call <c>./configure</c> with the <c>--infodir=/usr/share/info</c> argument.
+to call <c>./configure</c> with the <c>--infodir=/usr/share/info</c> argument.</li>
+
+<li>Documentation files are installed in <path>/usr/share/doc</path>, into a
+subdirectory reflecting the name, version and revision of the particular
+program. This applies to all programs: GNOME, KDE, X11 and console alike.
+However, some programs may install additional documentation and support files
+into a <path>/usr/share</path> hierarchy for their own purposes.
 </li>
+
+<li>X11-specific programs and libraries should always be installed into <path>/usr</path>, not
+directly into <path>/usr/X11R6</path>.  We reserve the <path>/usr/X11R6</path> hierarchy for
+the X Window System, Version 11 Release 6 <e>itself</e>.  This is perhaps a more to-the-letter
+interpretation of the FHS than some other distributions have made.</li>
+
+<li>GNOME and KDE programs, similarly, should always be installed into
+<path>/usr</path>.</li>
+
 </ul>
+<impo> Some distributions choose to install GNOME and KDE into <path>/opt</path>. There
+exists no standard for these desktop environments in terms of where to actually install
+their files. In the interests of simplicity and consistency, we elect to install all 
+KDE and GNOME packages into the <path>/usr</path> hierarchy.</impo>
+
+<p>In general, you should have ebuilds install their files into the <path>/usr</path>
+tree.  <e>Some</e> programs can be compiled with or without GNOME, KDE and X11 libraries,
+which can cause confusion.  Our solution is to install everything into <path>/usr</path>
+which avoids ambiguity and needless complexity for ebuild authors.  The location in which to
+install a program's files should <e>not</e> depend on the presence or abscence of specific
+<c>USE</c> variables.  Therefore, the ebuilds in the portage tree <e>almost always</e>
+install into the <path>/usr</path> hierarchy exclusively.</p>
+
+<note>The <path>/opt</path> directory is reserved in Gentoo Linux for binary-only packages.
+Examples include mozilla-bin, acroread, netscape and realplayer.  Packages that get
+installed here will usually require a <path>/etc/env.d/foo</path> stub file.  This is
+so that paths and additional variables can be included into the environment.</note>
+
 </body>
 </section>
 </chapter>
