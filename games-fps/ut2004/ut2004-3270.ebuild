@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3270.ebuild,v 1.1 2004/08/31 20:50:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3270.ebuild,v 1.2 2004/09/02 13:02:56 wolf31o2 Exp $
 
 inherit games
 
@@ -183,7 +183,7 @@ src_install() {
 
 	# creating .loki/installed links
 	mkdir -p ${D}/root/.loki/installed
-	dosym .manifest/${PN}.xml /root/.loki/installed/${PN}.xml
+	dosym ${dir}/.manifest/${PN}.xml /root/.loki/installed/${PN}.xml
 
 	games_make_wrapper ut2004 ./ut2004 ${dir}
 
