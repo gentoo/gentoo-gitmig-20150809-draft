@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/nvu-0.50.ebuild,v 1.3 2004/10/15 05:13:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/nvu-0.50.ebuild,v 1.4 2004/10/16 13:16:31 chriswhite Exp $
 
 inherit eutils mozilla flag-o-matic
 
@@ -24,9 +24,9 @@ src_compile() {
 	# has some quirks... just copy the darn thing over :) - Chris
 	cp ${FILESDIR}/mozconfig ${S}/.mozconfig
 
-	# It "sort of" has a standard configure system
-	# Here's how I fix the prefix issue. - Chris
-	epatch ${FILESDIR}/${P}-prefix.patch
+	# Fix those darn directories!  Make something more "standard"
+	# That can extend to future versions with much more ease. - Chris
+	epatch ${FILESDIR}/${P}-dir.patch
 
 	# The build system is a weeee bit sensitive to naughty -O flags.
 	# filter them out and let the build system figure out what
@@ -37,6 +37,10 @@ src_compile() {
 }
 
 src_install() {
+
+	# patch the final nvu binary to workaround bug #67658
+	epatch ${FILESDIR}/${P}-nvu.patch
+
 	make -f client.mk DESTDIR=${D} install || die
 
 	#menu entry for gnome/kde

@@ -30,7 +30,7 @@ ac_add_options --disable-debug
 
 # You may need to uncomment and edit that line. On Linspire,
 # just uncomment it
-#ac_add_options --with-default-mozilla-five-home=/usr/lib/mozilla
+ac_add_options --with-default-mozilla-five-home=/usr/lib/nvu
 
 # You probably have nothing to change below that line
 ac_add_options  --disable-svg
@@ -59,4 +59,4 @@ ac_add_options  --enable-freetype2
 ac_add_options  --enable-toolkit=gtk2
 ac_add_options  --enable-default-toolkit=gtk2
 ac_add_options  --enable-xft
-ac_add_options  --with-default-mozilla-five-home=/usr/lib/nvu
+ac_add_options  --prefix=/usr
