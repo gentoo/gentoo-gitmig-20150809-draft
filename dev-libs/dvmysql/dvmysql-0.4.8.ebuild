@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/dvmysql-0.4.8.ebuild,v 1.1 2003/07/14 19:05:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/dvmysql-0.4.8.ebuild,v 1.2 2003/08/11 17:52:06 robbat2 Exp $
 
 inherit eutils
 
@@ -20,5 +20,5 @@ DEPEND="virtual/glibc
 RDEPEND=${DEPEND}
 
 src_install() {
-	make prefix=${D}/usr install
+	make prefix=${D}/usr datadir=${D}/usr/share install
 }
