@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Authen-PAM
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-PAM/ChangeLog,v 1.13 2003/12/24 21:25:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-PAM/ChangeLog,v 1.14 2003/12/25 19:56:32 weeve Exp $
+
+  25 Dec 2003; Jason Wever <weeve@gentoo.org> Authen-PAM-0.14.ebuild:
+  Marked stable on sparc.
 
   24 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
   Authen-PAM-0.12-r2.ebuild, Authen-PAM-0.12-r3.ebuild:
