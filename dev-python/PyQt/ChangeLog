@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.30 2004/03/03 21:37:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.31 2004/03/14 21:09:52 avenj Exp $
+
+  14 Mar 2004; Jon Portnoy <avenj@gentoo.org> PyQt-3.8.1.ebuild :
+  AMD64 keywords.
 
   03 Mar 2004; <kloeri@gentoo.org> PyQt-3.8.1.ebuild:
   Move make around, close bug #43610.

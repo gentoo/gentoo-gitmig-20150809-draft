@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.16 2004/02/26 03:29:07 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.17 2004/03/14 21:08:00 avenj Exp $
+
+  14 Mar 2004; Jon Portnoy <avenj@gentoo.org> qscintilla-1.54.ebuild :
+  AMD64 keywords.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> qscintilla-1.54.ebuild:
   Stable on sparc.
