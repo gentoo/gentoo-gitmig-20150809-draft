@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.110 2005/01/16 21:02:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.111 2005/02/04 04:46:32 langthang Exp $
+
+  03 Feb 2005; Tuấn Văn <langthang@gentoo.org> courier-imap-4.0.1.ebuild:
+  Stable on x86. This upgrade is non-trival. Please read:
+  http://www.courier-mta.org/imap/?INSTALL.html~upgrading
+  less /usr/share/doc/courier-imap-4.0.1/courier-imap-gentoo.readme.gz
+  and pay attention to postinstall messages.
 
   16 Jan 2005; Guy Martin <gmsoft@gentoo.org> courier-imap-3.0.8.ebuild:
   Stable on hppa.
