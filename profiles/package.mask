@@ -121,7 +121,7 @@ net-www/galeon-cvs
 =gnome-base/gnome-vfs-2.0.4
 =gnome-extra/gnome-utils-2.0.5
 =gnome-base/libgnomecanvas-2.0.4
-=gnome-base/libgnome-2.0.4
+>=gnome-base/libgnome-2.0.4
 =gnome-base/libgnomeui-2.0.5
 =gnome-extra/yelp-1.0.6
 =gnome-extra/gnome-media-2.0.2.5
