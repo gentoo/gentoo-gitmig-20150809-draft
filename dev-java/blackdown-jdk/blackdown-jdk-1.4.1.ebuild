@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.12 2003/10/15 17:49:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.13 2003/11/13 14:08:55 pappy Exp $
 
 IUSE="doc"
 
@@ -125,6 +125,9 @@ pkg_postinst () {
 		do
 			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
 		done
+
+		# /opt/blackdown-jdk-1.4.1/jre/bin/java_vm
+		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/jre/bin/java_vm
 
 		einfo "you should have seen lots of chpax output above now"
 		ewarn "make sure the grsec ACL contains those entries also"
