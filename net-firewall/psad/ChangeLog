@@ -1,9 +1,9 @@
 # ChangeLog for net-firewall/psad
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.2 2003/09/19 07:42:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.3 2003/09/19 07:44:06 seemant Exp $
 
   19 Sep 2003; Seemant Kulleen <seemant@gentoo.org> :
-  version bump
+  version bump, thanks again to Battoussai (Bryan Stine <admin@kentonet.net>)
 
 *psad-1.2.1 (17 Sep 2003)
 

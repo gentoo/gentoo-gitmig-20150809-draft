@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.2.3.ebuild,v 1.1 2003/09/18 23:55:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.2.3.ebuild,v 1.2 2003/09/19 07:44:06 seemant Exp $
 
 inherit eutils
 inherit perl-module
@@ -55,7 +55,7 @@ src_install() {
 
 	cd ${S}/Net-IPv4Addr
 	perl-module_src_install
-	
+
 	cd ${S}/IPTables/Parse
 	perl-module_src_install
 
@@ -79,7 +79,7 @@ src_install() {
 	insinto /etc/psad/snort_rules
 	doins *.rules
 
-	dodoc BENCHMARK CREDITS Change* FW_EXAMPLE_RULES README LICENSE SCAN_LOG 
+	dodoc BENCHMARK CREDITS Change* FW_EXAMPLE_RULES README LICENSE SCAN_LOG
 }
 
 pkg_postinst() {
@@ -89,7 +89,7 @@ pkg_postinst() {
 		mknod -m 600 ${ROOT}/var/lib/psad/psadfifo p
 		eend $?
 	fi
-	echo	
+	echo
 	einfo "Several programs in the PSAD package are in the process of being converted to"
 	einfo "compiled C from PERL. If you have any problems, please notify the PSAD"
 	einfo "maintainers. Please do not take PSAD issues to the Bastille-Linux team."
