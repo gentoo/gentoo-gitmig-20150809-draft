@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.6 2004/09/06 08:46:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.7 2004/09/10 19:48:00 axxo Exp $
 
 inherit java-pkg
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.6.0
-	>=dev-java/ant-tasks
+	>=dev-java/ant-1.5.4
 	!dev-java/fop-bin"
 
 S=${WORKDIR}/${P/_/}
