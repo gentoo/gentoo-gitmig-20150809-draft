@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.18 2003/07/28 04:40:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.19 2003/08/07 18:09:52 agriffis Exp $
+
+  07 Aug 2003; Aron Griffis <agriffis@gentoo.org> parted-1.6.5-r1.ebuild:
+  Add ~alpha to KEYWORDS
 
 *parted-1.6.6 (27 Jul 2003)
 
