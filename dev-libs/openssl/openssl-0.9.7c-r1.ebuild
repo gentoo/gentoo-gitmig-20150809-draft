@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.10 2004/01/03 22:17:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.11 2004/01/08 21:12:22 robbat2 Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -48,7 +48,7 @@ src_unpack() {
 	if [ "$(gcc-version)" == "3.3" ] || [ "$(gcc-version)" == "3.2" ] ; then
 		filter-flags -fprefetch-loop-arrays
 	fi
-	sed -i -r -e "s/-O[23]/$CFLAGS/" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[a-z0-9]+//" -e "s/-m486//" Configure
+	sed -i -r -e "s|-O[23]|$CFLAGS|" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[-a-z0-9]+//" -e "s/-m486//" Configure
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
@@ -75,7 +75,7 @@ src_unpack() {
 			sed -i -e 's/parisc-\*-linux2/parisc\*-\*-linux2/' config
 		esac
 
-		sed -i -e "s/-O[23]/$CFLAGS/" -e "s/-fomit-frame-pointer//" -e -r "s/\-mcpu=[a-z0-9]+//" -e "s/-m486//" Configure
+		sed -i -e "s|-O[23]|$CFLAGS|" -e "s/-fomit-frame-pointer//" -e -r "s/\-mcpu=[-a-z0-9]+//" -e "s/-m486//" Configure
 	}
 }
 
