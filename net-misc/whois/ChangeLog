@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.11 2003/02/12 08:35:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.12 2003/02/24 19:42:04 dragon Exp $
 
 *whois-4.6.2 (29 Jan 2003)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> whois-4.6.2.ebuild :
+  Added stable mips keyword to the ebuild.
 
   29 Jan 2003; Martin Holzer <mholzer@gentoo.org> whois-4.6.2.ebuild
   files/digest-whois-4.6.2 ChangeLog :
@@ -10,21 +13,33 @@
 
 *whois-4.6.1 (25 Dec 2002)
 
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> whois-4.6.1.ebuild :
+  Added stable mips keyword to the ebuild.
+
   25 Dec 2002; Martin Holzer <mholzer@gentoo.org> whois-4.6.1.ebuild
   files/digest-whois-4.6.1 ChangeLog :
   Version bumped. Closes #12107.
  
 *whois-4.5.33 (21 Nov 2002)
 
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> whois-4.5.33.ebuild :
+  Added stable mips keyword to the ebuild.
+
   21 Nov 2002; Hannes Mehnert <hannes@gentoo.org> whois-4.5.33.ebuild,
   files/digest-whois-4.5.33: version bump
 
 *whois-4.5.31 (31 Oct 2002)
 
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> whois-4.5.31.ebuild :
+  Added stable mips keyword to the ebuild.
+
   31 Oct 2002; Hannes Mehnert <hannes@gentoo.org> whois-4.5.31.ebuild,
   files/digest-whois-4.5.31: version bump
 
 *whois-4.5.28-r1 (1 Jul 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> whois-4.5.28-r1.ebuild :
+  Added stable mips keyword to the ebuild.
 
   01 Jul 2002; Seemant Kulleen <seemant@gentoo.org> whois-4.5.28-r1.ebuild
   files/digest-whois-4.5.28-r1 :

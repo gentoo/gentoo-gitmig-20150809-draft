@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.9 2003/02/12 08:28:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.10 2003/02/24 19:42:04 dragon Exp $
 
 *netkit-rsh-0.17-r3 (25 Oct 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> netkit-rsh-0.17-r3.ebuild :
+  Added mips to the keywords.
 
   10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
 
@@ -18,6 +21,9 @@
   25 Oct 2002; Donny Davies <woodchip@gentoo.org> : Add xinetd.d/ configs; #9443.
 
 *netkit-rsh-0.17-r2 (1 Feb 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> netkit-rsh-0.17-r2.ebuild :
+  Added mips to the keywords.
 
   20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> netkit-rsh-0.17-r2.ebuild :
   Added ppc to KEYWORDS.

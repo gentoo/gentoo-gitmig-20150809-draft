@@ -1,11 +1,14 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.7 2003/02/12 14:54:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.8 2003/02/24 19:42:04 dragon Exp $
 
  12 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
  Added hppa to keywords.
 
 *iputils-020927 (03 Jan 2003)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> iputils-020927.ebuild :
+  Added testing mips keyword to the ebuild.
 
   03 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> iputils-020927.ebuild :
   Version bump, found by Torgeir Hansen <torgeir@trenger.ro> in #13052.
@@ -19,12 +22,19 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *iputils-020124-r1 (16 Aug 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> iputils-020124-r1.ebuild :
+  Added stable mips keyword to the ebuild.
+
   16 Aug 2002; Matthew Turk <satai@gentoo.org> ChangeLog:
 
   Updated by enabling documentation; recent changes in DocBook ebuilds have
   fixed the outstanding issues.
 
 *iputils-020124 (16 Jul 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> iputils-020124.ebuild :
+  Added stable mips keyword to the ebuild.
 
   16 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
 

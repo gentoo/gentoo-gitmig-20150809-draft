@@ -1,10 +1,13 @@
 # ChangeLog for net-misc/netkit-routed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.6 2003/02/12 08:28:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.7 2003/02/24 19:42:04 dragon Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *netkit-routed-0.17-r1 (1 Feb 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> netkit-routed-0.17-r1.ebuild :
+  Added stable mips keyword to the ebuild.
 
   20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org>
   netkit-routed-0.17-r1.ebuild :

@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.15 2003/02/22 07:27:44 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.16 2003/02/24 19:42:04 dragon Exp $
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
@@ -10,10 +10,16 @@
 
 *dhcpcd-1.3.22_p4 (04 Jan 2003)
 
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> dhcpcd-1.3.22_p4.ebuild :
+  Added stable mips keyword to the ebuild.
+
   04 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump
 
 *dhcpcd-1.3.22_p3-r3 (04 Jan 2003)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> dhcpcd-1.3.22_p3-r3.ebuild :
+  Added stable mips keyword to the ebuild.
 
   04 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> dhcpcd-1.3.22_p3-r3.ebuild :
   Removed installation of pcmcia network files. Marked stable becuse of security update.
@@ -22,10 +28,16 @@
  
 *dhcpcd-1.3.22_p3-r2 (04 Dec 2002)
 
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> dhcpcd-1.3.22_p3-r2.ebuild :
+  Added stable mips keyword to the ebuild.
+
   04 Dec 2002; Donny Davies <woodchip@gentoo.org> dhcpcd-1.3.22_p3-r1.ebuild :
   Added a fix to force the pidfile into /var/run.
 
 *dhcpcd-1.3.22_p3-r1 (31 Oct 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> dhcpcd-1.3.22_p3-r1.ebuild :
+  Added stable mips keyword to the ebuild.
 
   12 Nov 2002; Will Woods <wwoods@gentoo.org> dhcpcd-1.3.22_p3-r1.ebuild :
   Added "inherit gnuconfig" and src_unpack to fix build problems on alphaev67
@@ -45,6 +57,9 @@
   Version bump, apparently many upstream bugfixes.
 
 *dhcpcd-1.3.20_p0-r1 (1 Feb 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> dhcpcd-1.3.20_p0-r1.ebuild :
+  Added stable mips keyword to the ebuild.
 
   18 Sept 2002; SpanKY <vapier@gentoo.org> ChangeLog dhcpcd-1.3.20_p0-r1.ebuild :
   Fixed HOMEPAGE.

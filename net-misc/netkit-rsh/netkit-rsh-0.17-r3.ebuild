@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r3.ebuild,v 1.4 2003/02/10 10:32:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r3.ebuild,v 1.5 2003/02/24 19:42:04 dragon Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc ppc alpha"
+KEYWORDS="x86 sparc ppc alpha mips"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.72"
