@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.49 2005/02/26 03:30:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.50 2005/02/28 09:06:19 dragonheart Exp $
+
+  28 Feb 2005; Daniel Black <dragonheart@gentoo.org> nessus-2.0.12.ebuild,
+  nessus-2.2.0.ebuild, nessus-2.2.2a.ebuild, nessus-2.2.3.ebuild,
+  nessus-2.3.0.ebuild:
+  Added remove message as this is a META ebuild. Dependancies should of been ~
+  instead of >=. Thanks to bug #83513 by Darren Spruell <lists@sancho2k.net>
 
 *nessus-2.2.3 (26 Feb 2005)
 
