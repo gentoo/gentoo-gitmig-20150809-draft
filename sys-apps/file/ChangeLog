@@ -1,7 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.22 2003/10/18 00:50:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.23 2003/10/18 03:17:15 mr_bones_ Exp $
 
+  17 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> file-4.06.ebuild:
+  fix failure of parallel make.  bug 31356
 
 *file-4.06 (17 Oct 2003)
 

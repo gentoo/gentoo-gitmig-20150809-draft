@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.2 2003/10/18 00:50:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.3 2003/10/18 03:17:15 mr_bones_ Exp $
 
 inherit flag-o-matic
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
 SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 	ftp://ftp.astron.com/pub/file/${P}.tar.gz"
@@ -22,7 +21,7 @@ src_unpack() {
 
 	# (12 Oct 2003) <kumba@gentoo.org>
 	# This patch is for MIPS only.  It slightly changes the 'file' output
-	# on MIPS machines to a specific format so that other programs can 
+	# on MIPS machines to a specific format so that other programs can
 	# recognize things.
 	if [ "${ARCH}" = "mips" ]; then
 		epatch ${FILESDIR}/${P}-mips-gentoo.diff
@@ -39,14 +38,15 @@ src_compile() {
 		--datadir=/usr/share/misc \
 		--host=${CHOST} || die
 
-	emake || die
+	# Buggy Makefiles.  This fixes bug 31356
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "make install failed"
 
 	if [ -z "`use build`" ] ; then
-		dodoc ChangeLog LEGAL.NOTICE MAINT README || die
+		dodoc ChangeLog LEGAL.NOTICE MAINT README || die "dodoc failed"
 	else
 		rm -rf ${D}/usr/share/man
 	fi
