@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-4.1.9.ebuild,v 1.2 2002/10/29 16:31:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-4.1.9.ebuild,v 1.3 2002/10/30 05:39:21 nall Exp $
 
 inherit gnome2 debug
 
@@ -9,7 +9,7 @@ DESCRIPTION="A scientific calculator for Gnome2"
 HOMEPAGE="http://calctool.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=x11-libs/gtk+-2"
 
