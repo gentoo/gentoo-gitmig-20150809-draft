@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.676 2004/10/08 12:28:55 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.677 2004/10/08 14:21:47 ciaranm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -24,11 +24,13 @@ app-crypt/gpgme:smime - Add smime support
 app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
 app-crypt/johntheripper:skey - Enable S/Key (Single use password) authentication cracking support
 app-editors/emacs:nosendmail - If you do not want to install any MTA
+app-editors/gvim:mzscheme - Include support for the mzscheme interpreter
 app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature
 app-editors/scite:lua - Enable Lua scripting support
 app-editors/vim:minimal - Build vim with minimal features, resulting in a ~430K binary
+app-editors/vim:mzscheme - Include support for the mzscheme interpreter
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
