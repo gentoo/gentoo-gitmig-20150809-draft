@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.1-r1.ebuild,v 1.2 2001/11/10 02:30:19 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.1-r1.ebuild,v 1.3 2001/12/29 21:45:08 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A QT frontend for svc"
 SRC_URI="http://www.together.net/~plomp/${P}.tar.gz"
 HOMEPAGE="http://www.together.net/~plomp/qtsvc.html"
 
-DEPEND=">=x11-libs/qt-x11-2.2.3"
+DEPEND=">=x11-libs/qt-2.2.3"
 RDEPEND="$DEPEND
 	 >=sys-apps/daemontools-0.70"
 
@@ -21,8 +21,9 @@ src_unpack() {
 
 src_compile() {
 
-    try ./configure --host=${CHOST}
-    try make CPPFLAGS=\"${CPPFLAGS} -fkeep-inline-functions\"
+    QTDIR=/usr/qt/2 ./configure --host=${CHOST} || die
+    #make CPPFLAGS=\"${CPPFLAGS} -fkeep-inline-functions\" || die
+    make || die
 
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.6.ebuild,v 1.1 2001/03/20 05:47:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.6.ebuild,v 1.2 2001/12/29 21:45:08 danarmak Exp $
 
 A=docbook-utils-${PV}.tar.gz
 S=${WORKDIR}/docbook-utils-${PV}
@@ -14,8 +14,8 @@ DEPEND=">=sys-devel/perl-5"
 
 src_compile() {
 
-    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST}
-    try make
+    ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} || die
+    make || die
 
 }
 

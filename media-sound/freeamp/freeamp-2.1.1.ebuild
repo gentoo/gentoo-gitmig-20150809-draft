@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.0.ebuild,v 1.2 2001/12/29 21:45:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.1 2001/12/29 21:45:08 danarmak Exp $
 
 # I highly suggest you read the features section of the freeamp website to
 # see all the neat stuff this program can do. Pretty spiffy :)
@@ -14,7 +14,7 @@ S=${WORKDIR}/freeamp
 RDEPEND="virtual/glibc
 	>=dev-libs/glib-1.2.5 >=x11-libs/gtk+-1.2.5
 	>=sys-libs/zlib-1.1.3 >=sys-libs/ncurses-5.2
-	~media-libs/freetype-1.3.1 >=media-libs/musicbrainz-1.0.0
+	~media-libs/freetype-1.3.1 >=media-libs/musicbrainz-1.0.1
 	esd? ( media-sound/esound ) alsa? ( media-libs/alsa-lib )
 	gnome? ( gnome-base/ORBit >=media-libs/gdk-pixbuf-0.8 )
 	X? ( virtual/x11 ) arts? ( kde-base/kdelibs )

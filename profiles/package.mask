@@ -1,3 +1,6 @@
+#won't compile here
+=media-sound/freeamp-2.1.1
+
 #hasn't built in months
 >=net-ftp/kbear-1.2.1
 

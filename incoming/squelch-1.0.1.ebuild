@@ -11,7 +11,7 @@ HOMEPAGE="http://www.geoid.clara.net/rik/squelch.html"
 DEPEND="virtual/x11 virtual/glibc
 	>=media-libs/libvorbis-1.0_rc1
 	>=media-libs/libao-0.8.0
-	>=x11-libs/qt-x11-2.3.1
+	>=x11-libs/qt-2.3.1
 	>=media-libs/libogg-1.0_rc1"
 
 # The runtime depends are a bit different than the compiling ones
