@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.9.ebuild,v 1.1 2003/11/19 08:54:23 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.9.ebuild,v 1.2 2003/11/24 07:55:39 phosphan Exp $
 
 DESCRIPTION="A remote security scanner for Linux (nessus-core)"
 HOMEPAGE="http://www.nessus.org/"
@@ -10,12 +10,12 @@ SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-IUSE="tcpd X gtk gtk2 debug prelude"
+IUSE="tcpd gtk2 debug prelude"
 
 DEPEND="=net-analyzer/libnasl-${PV}
 	tcpd? ( sys-apps/tcp-wrappers )
 	X? ( x11-base/xfree )
-	gtk? ( =x11-libs/gtk+-1.2* )
+	!gtk2? ( =x11-libs/gtk+-1.2* )
 	gtk2? ( =x11-libs/gtk+-2* )
 	prelude? ( dev-libs/libprelude )"
 
@@ -31,14 +31,6 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use X && myconf="--with-x" || myconf="--without-x"
-	if [ `use gtk` ]; then
-		myconf="${myconf} --enable-gtk"
-	elif [ `use gtk2` ]; then
-		myconf="${myconf} --enable-gtk"
-	else
-		myconf="${myconf} --disable-gtk"
-	fi
 	# no use_enable because of bug 31670
 	if [ `use tcpd` ]; then
 		myconf="${myconf} --enable-tcpwrappers"
@@ -47,9 +39,6 @@ src_compile() {
 		myconf="${myconf} --enable-debug"
 	else
 		myconf="${myconf} --disable-debug"
-	fi
-	if [ `use prelude` ]; then
-		export LIBPRELUDE_CONFIG=/usr/bin/libprelude-config
 	fi
 	if [ `use prelude` ]; then
 		export LIBPRELUDE_CONFIG=/usr/bin/libprelude-config
