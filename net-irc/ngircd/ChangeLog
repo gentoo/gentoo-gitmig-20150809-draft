@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.6 2004/07/08 22:59:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.7 2004/08/06 23:57:26 malc Exp $
+
+  06 Aug 2004; Malcolm Lashley <malc@gentoo.org> ngircd-0.8.0.ebuild:
+  ~amd64 closes bug #58427
 
 *ngircd-0.8.0 (09 Jul 2004)
 
