@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocamlnet
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.8 2004/09/30 18:48:06 mattam Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.9 2005/02/17 23:30:15 mattam Exp $
+
+*ocamlnet-0.98 (18 Feb 2005)
+
+  18 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> +ocamlnet-0.98.ebuild:
+  Version bump.
 
   30 Sep 2004; Matthieu Sozeau <mattam@gentoo.org> ocamlnet-0.97.1.ebuild:
   Stable move (fixes bug #65131 for amd64)
