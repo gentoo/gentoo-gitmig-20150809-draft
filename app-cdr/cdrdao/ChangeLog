@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.10 2002/10/25 11:31:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.11 2002/10/30 12:43:03 aliz Exp $
+
+*cdrdao-1.1.7 (30 Oct 2002)
+
+  30 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Added installation of contributed software mp32dao.pl.
 
 *cdrdao-1.1.7 (12 Oct 2002)
 
