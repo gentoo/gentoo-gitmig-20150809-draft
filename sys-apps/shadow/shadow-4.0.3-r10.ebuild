@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.6 2004/03/29 22:05:49 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.7 2004/05/04 21:37:06 gustavoz Exp $
 
 IUSE="pam selinux nls"
 
@@ -171,11 +171,20 @@ src_install() {
 	dodoc HOWTO LSM README.* *.txt
 
 	# Fix sparc serial console
-	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "" ]
+	if [ "${ARCH}" = "sparc" ]
 	then
 		# ttyS0 and its devfsd counterpart (Sparc serial port "A")
 		dosed 's:\(vc/1\)$:tts/0\n\1:' /etc/securetty
 		dosed 's:\(tty1\)$:ttyS0\n\1:' /etc/securetty
+	fi
+
+	# fix hppa serial console
+	if [ "${ARCH}" = "hppa" ]
+	then
+		# ttyB0 is the PDC software console
+		dosed 's:\(vc/1\)$:tts/0\n\1:' /etc/securetty
+		dosed 's:\(tty1\)$:ttyS0\n\1:' /etc/securetty
+		dosed 's:\(tty1\)$:ttyB0\n\1:' /etc/securetty
 	fi
 }
 
