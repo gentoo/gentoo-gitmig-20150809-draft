@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r3.ebuild,v 1.8 2004/08/15 14:55:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r3.ebuild,v 1.9 2004/09/01 03:44:21 lv Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -106,6 +106,7 @@ src_compile() {
 	# Use the built-in dvdnav plugin.
 	local myconf="--with-included-dvdnav"
 
+	# the win32 codec path should ignore $(get_libdir) and always use lib
 	use avi	&& use x86 \
 		&& myconf="${myconf} --with-w32-path=/usr/lib/win32" \
 		|| myconf="${myconf} --disable-asf"
@@ -114,7 +115,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-vis --build=${CHOST}"
 
 	use amd64 \
-		&& myconf="${myconf} --with-xv-path=/usr/X11R6/lib"
+		&& myconf="${myconf} --with-xv-path=/usr/X11R6/$(get_libdir)"
 
 	# Fix compilation-errors on PowerPC #45393 & #55460
 	if use ppc ; then
@@ -128,6 +129,10 @@ src_compile() {
 	else
 		append-flags -ffunction-sections
 	fi
+
+	# if lib64 is a directory, sometimes the configure will set libdir itself
+	# and the installation fails. see bug #62339
+	myconf="${myconf} --libdir=/usr/$(get_libdir)"
 
 	econf \
 		`use_enable X x11` `use_with X x` `use_enable X shm` `use_enable X xft` \
@@ -146,7 +151,8 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "Install failed"
+	# portage 2.0.50's einstall is broken for handling libdir
+	make DESTDIR=${D} install || die "Install failed"
 
 	# Xine's makefiles install some file incorrectly. (Gentoo bug #8583, #16112).
 	dodir /usr/share/xine/libxine1/fonts
