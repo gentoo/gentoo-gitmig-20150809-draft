@@ -1,39 +1,39 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.6_beta2.ebuild,v 1.7 2003/09/21 12:41:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.6_beta2.ebuild,v 1.8 2003/10/03 20:50:44 spyderous Exp $
 
-DESCRIPTION="Free program which displays molecular structure."
+DESCRIPTION="Free program that displays molecular structure."
 HOMEPAGE="http://www.umass.edu/microbio/rasmol/index2.htm"
 KEYWORDS="x86"
 SLOT="0"
 LICENSE="public-domain"
-
 DEPEND="virtual/x11"
 
+PATCHVER="6"
 P0=rasmol_2.6b2
 SRC_URI="mirror://debian/pool/main/r/rasmol/${P0}.orig.tar.gz
-	mirror://debian/pool/main/r/rasmol/${P0}-6.diff.gz"
+	mirror://debian/pool/main/r/rasmol/${P0}-${PATCHVER}.diff.gz"
 
 S="${WORKDIR}/RasMol2"
 
 src_unpack() {
-	unpack ${P0}.orig.tar.gz
-	zcat ${DISTDIR}/${P0}-6.diff.gz | patch -d ${S} -p1 || die "debian patch failed"
+	unpack ${A}
+	epatch ${WORKDIR}/${P0}-${PATCHVER}.diff
 }
 
 src_compile() {
 	xmkmf || die "xmkmf failed"
-	make DEPTHDEF=-DEIGHTBIT=1 CC=gcc \
+	make DEPTHDEF=-DEIGHTBIT=1 CC=${CC} \
 		CDEBUGFLAGS="${CFLAGS} -DLINUX" \
 		|| die "8-bit make failed"
 	mv rasmol rasmol.8
 	make clean
-	make DEPTHDEF=-DSIXTEENBIT=1 CC=gcc \
+	make DEPTHDEF=-DSIXTEENBIT=1 CC=${CC} \
 		CDEBUGFLAGS="${CFLAGS} -DLINUX" \
 		|| die "16-bit make failed"
 	mv rasmol rasmol.16
 	make clean
-	make DEPTHDEF=-DTHIRTYTWOBIT=1 CC=gcc \
+	make DEPTHDEF=-DTHIRTYTWOBIT=1 CC=${CC} \
 		CDEBUGFLAGS="${CFLAGS} -DLINUX" \
 		|| die "32-bit make failed"
 	mv rasmol rasmol.32
