@@ -1,8 +1,12 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.16 2003/02/25 04:40:04 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.17 2003/02/25 20:18:02 zwelch Exp $
 
 *ccache-2.1.1-r2 (24 Feb 2003)
+
+  25 Feb 2003; Zach Welch <zwelch@gentoo.org> ccache-2.1.1-r2.ebuild :
+  Remove old versions outright, don't backup; fixes multiple re-installs
+  Add portage 2.0.46-r11 as a RDEPEND.
 
   24 Feb 2003; Zach Welch <zwelch@gentoo.org> ccache-2.1.1-r2.ebuild :
   Add missing keepdir; no bump since found fast
@@ -14,6 +18,9 @@
   Added hppa to keywords.
 
 *ccache-2.1.1 (24 Jan 2002)
+
+  25 Feb 2003; Zach Welch <zwelch@gentoo.org> ccache-2.1.1-r2.ebuild ccache-2.1.1.ebuild :
+  Fix ccache-2.1.1 ebuild to allow downgrade from 2.1.1-r2
 
   24 Jan 2002; Bart Verwilst <verwilst@gentoo.org> : updating to 2.1.1.
 

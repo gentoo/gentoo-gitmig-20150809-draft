@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.1.1-r2.ebuild,v 1.2 2003/02/25 04:40:04 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.1.1-r2.ebuild,v 1.3 2003/02/25 20:18:02 zwelch Exp $
 
 DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
 compiler to safely cache compilation output. When the same code is compiled
@@ -12,7 +12,8 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha arm"
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc \
+		>=sys-apps/portage-2.0.46-r11"
 
 # Note: this version is designed to be auto-detected and used if
 # you happen to have Portage 2.0.X+ installed.
@@ -42,7 +43,8 @@ src_install () {
 
 pkg_preinst() {
 	# Portage doesn't handle replacing a non-empty dir with a file!
-	test -d /usr/bin/ccache && mv -f /usr/bin/ccache /usr/bin/ccache.backup
+	[ -e /usr/bin/ccache ] && rm -rf /usr/bin/ccache
+	[ -e /usr/bin/ccache.backup ] && rm -rf /usr/bin/ccache.backup
 }
 
 pkg_postinst() {
@@ -62,7 +64,7 @@ pkg_postinst() {
 	einfo "/usr/lib/ccache/bin to your path before /usr/bin.  Portage 2.0.X+"
 	einfo "will automatically take advantage of ccache with no additional"
 	einfo "steps.  If this is your first install of ccache, type something"
-	einfo "like this to set a maximum cache size of 2GB (or similar)"
+	einfo "like this to set a maximum cache size of 2GB (or similar):"
 	einfo "# ccache -M 2G"
 }
 
