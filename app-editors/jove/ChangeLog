@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/jove
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.1 2004/02/26 03:16:01 seemant Exp $
+
+*jove-4.16.0.58 (25 Feb 2004)
+
+  25 Feb 2004; Seemant Kulleen <seemant@gentoo.org> jove-4.16.0.58.ebuild:
+  Jonathan's Own Version of Emacs, as requested by: David Boggs
+  <boggs@boggs.palo-alto.ca.us> vi email
+
