@@ -1,9 +1,20 @@
 # ChangeLog for dev-python/anygui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/ChangeLog,v 1.4 2002/02/22 16:08:45 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/ChangeLog,v 1.5 2002/03/15 22:20:45 tod Exp $
 
+*anygui-0.1.1-r1 (15 Mar 2002)
+
+  15 Mar 2002; T.Neidt <tod@gentoo.org> ChangeLog, anygui-0.1.1-r1.ebuild :
+
+  Added installation of manual and tutorial docs in various formats.
+  This fixes Bug #977.
+  
 *anygui-0.1.1 (8 Feb 2002)
 
+  15 Mar 2002; T.Neidt <tod@gentoo.org> ChangeLog, anygui-0.1.1.ebuild :
+
+  Formatting cleanup, i.e. spaces and tabs. 
+  
   22 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, anygui-0.1.1.ebuild :
 
   Fixed PyQt dependency to avoid masked version PyQt-3.0

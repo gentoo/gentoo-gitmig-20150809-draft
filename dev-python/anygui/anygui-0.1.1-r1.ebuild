@@ -31,6 +31,15 @@ src_install() {
 	python setup.py install --prefix=${D}/usr || die "Python Install Failed"
 
 	dodoc CHANGELOG.txt INSTALL.txt KNOWN_BUGS.txt LICENSE.txt \
-	MAINTAINERS.txt  PKG-INFO README.txt TODO.txt VERSION.txt
+	MAINTAINERS.txt  PKG-INFO README.txt TODO.txt VERSION.txt \
+	doc/anygui.txt doc/tutorial.txt
+
+	dohtml doc/anygui.html
+
+	insinto /usr/share/doc/${PF}/pdf
+	doins doc/anygui.pdf
+
+	insinto /usr/share/doc/${PF}/ps
+	doins doc/anygui.ps
         
 }
