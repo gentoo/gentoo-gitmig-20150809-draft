@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.1 2003/11/17 11:37:40 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.2 2003/11/17 11:42:30 spider Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 LICENSE="GPL-2"
-IUSE=""
+IUSE="tcpd X xinerama"
 SRC_URI="${SRC_URI}
 	mirror://gentoo/gentoo-gdm-theme.tar.bz2"
 MY_V="`echo ${PV} |cut -b -5`"
