@@ -1,23 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.14 2004/04/27 21:52:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.15 2004/05/17 03:26:59 vapier Exp $
 
-inherit libtool flag-o-matic gnuconfig eutils
+inherit libtool flag-o-matic eutils
+
+DESCRIPTION="JPEG library with mmx enhancements"
+HOMEPAGE="http://mjpeg.sourceforge.net/"
+SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="-* x86"
+IUSE=""
+
+DEPEND="virtual/glibc"
 
 S=${WORKDIR}/jpeg-mmx
-DESCRIPTION="JPEG library with mmx enhancements"
-SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
-HOMEPAGE="http://mjpeg.sourceforge.net/"
-
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS="x86 -ppc -sparc -amd64"
-IUSE=""
-DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	epatch ${FILESDIR}/jpeg-mmx-gcc33fix.gz
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 }
 
 src_compile() {
@@ -35,7 +38,6 @@ src_compile() {
 }
 
 src_install() {
-
 	dodir /usr/{include/jpeg-mmx,lib}
 	make \
 		includedir=${D}/usr/include/jpeg-mmx \
@@ -49,5 +51,4 @@ src_install() {
 	rm ${D}/usr/lib/libjpeg.so.62
 	ln -s /usr/lib/libjpeg-mmx.so.62.0.0 ${D}/usr/lib/libjpeg-mmx.so.62
 	dodoc README change.log structure.doc libjpeg.doc
-
 }
