@@ -1,0 +1,42 @@
+--- configure.in        2003-02-07 16:35:14.000000000 +0100
++++ configure.in.new    2003-05-12 12:43:24.000000000 +0200
+@@ -787,7 +787,7 @@
+ #
+ cobdir_default='${prefix}/share/htcobol'
+ optfile_dir='${prefix}/share/htcobol'
+-cobpp_dir='${prefix}/share/htcobol'
++cobpp_dir='${prefix}/bin'
+ cobcpy_default='${prefix}/share/htcobol/copybooks'
+ #
+ cobbin_default='${prefix}/bin'
+--- configure   2003-05-12 12:44:37.000000000 +0200
++++ configure.new       2003-05-12 12:45:33.000000000 +0200
+@@ -7312,7 +7312,7 @@
+ #
+ cobdir_default='${prefix}/share/htcobol'
+ optfile_dir='${prefix}/share/htcobol'
+-cobpp_dir='${prefix}/share/htcobol'
++cobpp_dir='${prefix}/bin'
+ cobcpy_default='${prefix}/share/htcobol/copybooks'
+ #
+ cobbin_default='${prefix}/bin'
+--- htconfig.h.in	2003-02-07 16:35:14.000000000 +0100
++++ htconfig.h.in.new	2003-05-12 13:24:10.000000000 +0200
+@@ -201,7 +201,7 @@
+ 
+ /* Set the pre-processor (htcobolpp) paths */
+ #define COBPP_NAME "htcobolpp"		
+-#define COBPP_PATH COBDIR_DEFAULT"/"COBPP_NAME		
++#define COBPP_PATH COBBIN_DEFAULT"/"COBPP_NAME		
+ 
+ /* Set the expand command path  */
+ #undef COBPP_EXPAND_CMD_PATH		
+--- cobpp/Makefile.in	2003-05-12 13:31:10.000000000 +0200
++++ cobpp/Makefile.in.new	2003-05-12 13:30:57.000000000 +0200
+@@ -80,5 +80,5 @@
+ 
+ install: $(PROG)
+ 	strip $(PROG)
+-	${INSTALL} -m 755 $(PROG) $(INSTRC)/$(PROG)
++	${INSTALL} -m 755 $(PROG) $(INSTBIN)/$(PROG)
+ #	${INSTALL_DATA} $(PROG) $(INSTRC)/$(PROG)
