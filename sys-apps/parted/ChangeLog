@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.20 2003/08/11 23:42:49 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.21 2003/09/02 18:49:31 mholzer Exp $
+
+  02 Sep 2003; Martin Holzer <mholzer@gentoo.org> parted-1.6.5-r1.ebuild,
+  parted-1.6.5.ebuild, parted-1.6.6.ebuild:
+  now uses mirror://gnu
 
   11 Aug 2003; Will Woods <wwoods@gentoo.org> parted-1.6.5-r1.ebuild,
   parted-1.6.5.ebuild, parted-1.6.6.ebuild:
