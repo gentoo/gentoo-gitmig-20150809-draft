@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.15 2003/05/26 01:19:11 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.16 2003/09/18 18:46:13 drobbins Exp $
+
+*icc-7.1.029 (18 Sep 2003)
+
+  18 Sep 2003; Daniel Robbins <drobbins@gentoo.org> icc-7.1.029.ebuild:
+  new version marked stable for ia64, unstable for x86. ia64 support
+  integrated into this ebuild. Also switched to slower rpm2targz simply
+  because it doesn't require "rpm" to be merged.
 
 *icc-7.1.006 (11 April 2003)
 
