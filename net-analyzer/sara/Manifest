@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4a50082fbb8a7956cd2d1bb390ee683 sara-5.0.5b.ebuild 3540
-MD5 8863fc29dc013f266038dad0b4604941 sara-5.2.0a.ebuild 3521
-MD5 a415ad309654e6cc9cc569c9a2e6733c ChangeLog 1154
+MD5 ce8d087a031ee43e0484409832551e37 sara-5.0.5b.ebuild 3541
+MD5 fef3f0220e3cd783d23fd2e2e47fc48c sara-5.2.0a.ebuild 3522
+MD5 c4bdb40fb1f2798260886c501a94ca7f sara-6.0.1.ebuild 3521
+MD5 e29ba52aac808f0d8d9c42aec566e78f ChangeLog 1271
 MD5 fb036e5fc8845306c0bdc8ed6e905ce1 metadata.xml 224
-MD5 7a28548ee366615f2197ae4116d1884e sara-5.1.1a.ebuild 3578
+MD5 a8a711988fb7596c7e8da082140c1e6e sara-5.1.1a.ebuild 3579
 MD5 291ce83a97555c503a53904467cae289 files/sara 246
+MD5 15237773c81b669c743ca0b4634726f2 files/digest-sara-6.0.1 60
 MD5 aed7b12c3de035d00503376c2482954f files/digest-sara-5.0.5b 61
 MD5 23446d529b197d73315dede9049525ed files/digest-sara-5.1.1a 61
 MD5 dc985efca84faac73bff647aec89bf59 files/digest-sara-5.2.0a 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBuLYRcAgAdbxYsnERAirKAJ46H5D2F/kReQG6D0vKP+DpVrbswwCfYVkc
-STz+nYaK8UJTy0cHrfIVZyM=
-=bz2I
------END PGP SIGNATURE-----
