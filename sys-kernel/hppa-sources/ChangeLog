@@ -1,10 +1,15 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.6 2003/04/09 00:28:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.7 2003/05/10 18:40:07 gmsoft Exp $
+
+*hppa-sources-2.4.20_35 (10 May 2003)
+
+  10 May 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p35.ebuild :
+  Incremented patch level. This fix SMP build.
 
 *hppa-sources-2.4.20_32 (09 Apr 2003)
 
-  09 Apr 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p27.ebuild :
+  09 Apr 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.20_p32.ebuild :
   Incremented patch level. Marked stable. Done some improvements in the ebuild.
 
 *hppa-sources-2.4.20_p27 (19 Feb 2003)
