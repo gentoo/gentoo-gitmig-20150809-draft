@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.3-r2.ebuild,v 1.8 2003/03/16 11:14:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.3-r2.ebuild,v 1.9 2003/03/25 05:13:39 drobbins Exp $
 
 IUSE="doc"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.freetype.org/"
 
 SLOT="2"
 LICENSE="FTL | GPL-2"
-KEYWORDS="~x86 ppc ~sparc alpha hppa arm"
+KEYWORDS="x86 ppc sparc alpha hppa arm"
 
 DEPEND="virtual/glibc"
 
@@ -26,13 +26,13 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	# Patches fro better rendering quality.  Home page:
-	#
-	#  http://www.cs.mcgill.ca/~dchest/xfthack/
-	#
+	# Optional patches that affect rendering quality. Home page:
+	# http://www.cs.mcgill.ca/~dchest/xfthack/
+	# note that these tweak the auto-hinter, but we enable the real byte-code hinter.
+	# But we keep this here for those who may want to use this instead.
 	use smooth && epatch ${WORKDIR}/ft-smooth-${FT_SMOOTH_VER}/ft-all-together.diff
 
-	# Slight Hint patch from Redhat
+	# Slight hint patch from Red Hat, updated by Azarah for freetype 2.1.3
 	epatch ${FILESDIR}/${SPV}/${P}-slighthint.patch
 }
 
