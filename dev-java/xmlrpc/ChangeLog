@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/xmlrpc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.1 2004/07/25 07:49:49 mkennedy Exp $
+
+*xmlrpc-1.2_beta1 (25 Jul 2004)
+
+  25 Jul 2004; <mkennedy@gentoo.org> +metadata.xml, +xmlrpc-1.2_beta1.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
