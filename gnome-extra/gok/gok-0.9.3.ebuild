@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.8.4.ebuild,v 1.4 2004/02/11 17:57:48 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.9.3.ebuild,v 1.1 2004/02/11 17:57:48 leonardop Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~sparc ~hppa ~alpha ~ia64 ~ppc ~amd64"
 
 IUSE=""
 
@@ -21,7 +21,8 @@ RDEPEND=">=x11-libs/gtk+-2
 	gnome-base/gail
 	media-sound/esound
 	>=x11-libs/libwnck-1
-	>=gnome-extra/at-spi-1.3.4"
+	>=gnome-extra/at-spi-1.3.4
+	virtual/x11"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -34,5 +35,7 @@ src_unpack()
 	unpack ${A}
 	cd ${S}
 
+	epatch ${FILESDIR}/${PN}-${PV}-ansi_C.patch
 	sed -i 's:$pkgdatadir:/usr/share/gok:' gok-with-references.schemas.m4
 }
+
