@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16.ebuild,v 1.6 2003/09/09 17:24:34 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16.ebuild,v 1.7 2003/09/10 04:37:16 msterret Exp $
 
 NAME=`echo ${P} | sed -e "s|openpbs-|OpenPBS_|; y|.|_|"`
 B=${NAME}.tar.gz
@@ -21,15 +21,15 @@ RDEPEND="net-misc/openssh"
 
 
 src_unpack() {
-        if [ ! -e ${DISTDIR}/${A} ] ; then
-                einfo "Due to license issues you have to download"
-                einfo "the appropriate openpbs archive:"
+	if [ ! -e ${DISTDIR}/${A} ] ; then
+		einfo "Due to license issues you have to download"
+		einfo "the appropriate openpbs archive:"
 		einfo "http://www.openpbs.org/UserArea/Download/"${B}
 		einfo ""
-                einfo "The archive should be placed into ${DISTDIR}."
+		einfo "The archive should be placed into ${DISTDIR}."
 
-                die "package archive not found"
-        fi
+		die "package archive not found"
+	fi
 
 	cd ${WORKDIR}
 	unpack ${B}
