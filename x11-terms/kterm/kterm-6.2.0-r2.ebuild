@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r1.ebuild,v 1.4 2004/01/06 21:45:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r2.ebuild,v 1.1 2004/01/06 21:45:23 usata Exp $
 
-IUSE=""
+IUSE="Xaw3d"
 
 DESCRIPTION="Japanese Kanji X Terminal"
 SRC_URI="ftp://ftp.x.org/contrib/applications/${P}.tar.gz
@@ -12,15 +12,13 @@ SRC_URI="ftp://ftp.x.org/contrib/applications/${P}.tar.gz
 HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="x86 ~sparc -alpha ~ppc"
+KEYWORDS="~x86 ~sparc -alpha ~ppc"
 
-S=${WORKDIR}/${P}
-
-DEPEND="virtual/x11
-	sys-libs/ncurses
+DEPEND="${RDEPEND}
 	app-i18n/nkf"
 RDEPEND="virtual/x11
-	sys-libs/ncurses"
+	sys-libs/ncurses
+	Xaw3d? ( x11-libs/Xaw3d )"
 
 src_unpack(){
 	unpack ${A}
@@ -28,23 +26,19 @@ src_unpack(){
 	cd ${S}
 	epatch ${WORKDIR}/${P}-wpi.patch		# wallpaper patch
 	epatch ${WORKDIR}/${P}.ext02.patch		# JIS 0213 support
-	epatch ${FILESDIR}/kterm-6.2.0-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${PN}-ad-gentoo.diff
+
+	if [ `use Xaw3d` ]
+	then
+		epatch ${FILESDIR}/kterm-6.2.0-Xaw3d.patch
+	fi
 }
 
 src_compile(){
 
-	cat >>KTerm.ad<<-EOF
-
-	! default values added by portage
-	*VT100*kanjiMode:	euc
-	*inputMethod:		kinput2
-	*openIm:		true
-	! To use wallpaper
-	!*wallPaper:		/path/to/filename.xpm
-	EOF
-
 	xmkmf -a || die
-	emake    || die
+	emake || die
 }
 
 src_install(){
@@ -57,9 +51,7 @@ src_install(){
 	nkf -e kterm.jman > kterm.ja.1
 	newins kterm.ja.1 kterm.1
 
-	if [ ! -e /usr/share/terminfo/k/kterm ]; then
-		tic terminfo.kt -o${D}/usr/share/terminfo || die "tic failed"
-	fi
+	tic terminfo.kt -o${D}/usr/share/terminfo || die "tic failed"
 
 	dodoc README.kt
 }
