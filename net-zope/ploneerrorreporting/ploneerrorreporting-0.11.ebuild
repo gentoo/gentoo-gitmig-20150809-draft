@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/ploneerrorreporting/ploneerrorreporting-0.1.ebuild,v 1.3 2004/09/11 22:08:25 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/ploneerrorreporting/ploneerrorreporting-0.11.ebuild,v 1.1 2004/09/11 22:08:25 lanius Exp $
 
 inherit zproduct
 
