@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla-firebird-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.7 2003/08/13 13:20:14 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.8 2003/10/20 09:18:43 brad Exp $
+
+*mozilla-firebird-bin-0.7 (20 Oct 2003)
+
+  20 Oct 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-bin-0.7.ebuild,
+  files/icon/firebird-icon.png, files/icon/mozillafirebird.desktop:
+  Bump to 0.7 - now requires GTK+2. Also features a new icon, contributed by
+  mtrolley@scs.carleton.ca from the Windows distribution of Firebird.
 
   13 Aug 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-bin-0.6-r1.ebuild,
   mozilla-firebird-bin-0.6.1.ebuild:
