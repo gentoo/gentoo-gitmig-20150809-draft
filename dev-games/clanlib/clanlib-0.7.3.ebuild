@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.3.ebuild,v 1.1 2003/09/07 14:24:33 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.3.ebuild,v 1.2 2003/09/08 01:25:34 msterret Exp $
 
 inherit flag-o-matic
 replace-flags -O? -O2
@@ -11,18 +11,18 @@ SRC_URI="http://www.clanlib.org/~sphair/download/ClanLib-${PV}-3.tar.bz2"
 
 LICENSE="LGPL-2"
 # 2003-09-07: karltk
-# NOTE! According to the ClanLib developers, 0.<odd> are always unstable, 
+# NOTE! According to the ClanLib developers, 0.<odd> are always unstable,
 # so we must  slot major.minor.patch
-SLOT="0.7.3" 
+SLOT="0.7.3"
 KEYWORDS="~x86"
 IUSE="arts oss esd alsa png opengl truetype X oggvorbis mikmod jpeg directfb joystick"
 
 DEPEND=">=media-libs/hermes-1.3.2
 	media-libs/libpng
 	>=media-libs/jpeg-6b
-	|| ( 
-		opengl? ( virtual/opengl ) 
-		>=media-libs/libsdl-1.2.5 
+	|| (
+		opengl? ( virtual/opengl )
+		>=media-libs/libsdl-1.2.5
 	)
 	X? ( virtual/x11 )
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
@@ -53,7 +53,7 @@ src_compile() {
 		--disable-clanJavaScript \
 		--enable-clanDisplay \
 		--enable-clanNetwork \
-                --enable-clanGUI \
+		--enable-clanGUI \
 		`use_enable X x11` \
 		`use_enable directfb` \
 		`use_enable oggvorbis clanVorbis` \
