@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.6.ebuild,v 1.3 2004/06/26 14:52:49 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.6.ebuild,v 1.4 2004/07/12 16:29:57 scandium Exp $
 # Contributions by Emil Skoldberg, Fredrik Mellstrom (see ChangeLog)
 
 inherit fixheadtails
 
-IUSE="debug doc fftw gdbm gif gtk java jpeg mysql oci8 odbc opengl pdflib postgres scanner sdl tiff truetype zlib"
+IUSE="crypt debug doc fftw gdbm gif gtk java jpeg mysql oci8 odbc opengl pdflib postgres scanner sdl tiff truetype zlib"
 
 S="${WORKDIR}/Pike-v${PV}"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -32,6 +32,7 @@ DEPEND="zlib?	( sys-libs/zlib )
 	sdl?	( media-libs/libsdl )
 	gtk?	( =x11-libs/gtk+-1.2* )
 	fftw?	( dev-libs/fftw )
+	crypt?	( dev-libs/nettle )
 	dev-libs/gmp"
 
 src_unpack() {
@@ -65,9 +66,9 @@ src_compile() {
 	use opengl	|| myconf="${myconf} --without-GL --without-GLUT"
 	use gtk		|| myconf="${myconf} --without-GTK"
 	use fftw	|| myconf="${myconf} --without-fftw"
+	use crypt	|| myconf="${myconf} --without-nettle"
 
-	# Using --without-nettle until the Nettle library is available in portage
-	emake CONFIGUREARGS="${myconf} --prefix=/usr --disable-make_conf --without-nettle" || die
+	emake CONFIGUREARGS="${myconf} --prefix=/usr --disable-make_conf" || die
 
 	if use doc; then
 		PATH="${S}/bin:${PATH}" make doc || die
