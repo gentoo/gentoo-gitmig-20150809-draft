@@ -1,0 +1,4 @@
+MD5 6629516ddef0983cb463ba2475cb457f ChangeLog 1632
+MD5 30a85c40c37852e5964330a943540540 libperl-5.8.0.ebuild 13351
+MD5 8605f033c451df987f4631bbf9d7b481 files/digest-libperl-5.8.0 64
+MD5 d2af75f06a64c5934db314ff38939cdd files/libperl-5.8.0-create-libperl-soname.patch 424

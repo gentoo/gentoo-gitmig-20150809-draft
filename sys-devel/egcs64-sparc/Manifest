@@ -1,0 +1,5 @@
+MD5 7785b9138facc74c43fde63496fab4e5 ChangeLog 688
+MD5 79df9dc4ee2e82423bafdc4ab6de01da egcs64-sparc-19980921-r2.ebuild 2881
+MD5 1fd384e9544a542c21bbc239029fa70a files/digest-egcs64-sparc-19980921-r2 74
+MD5 22c983d001f437c0dd6d865ba1583a3d files/egcs64_19980921-4-gentoo.diff 519
+MD5 2d0f7f21d1e920c882bdb3e12bbae018 files/egcs64_19980921-4.diff 50461
