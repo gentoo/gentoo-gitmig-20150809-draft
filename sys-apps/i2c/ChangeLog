@@ -1,11 +1,13 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.4 2003/03/01 11:00:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.5 2003/03/02 19:31:05 lostlogic Exp $
 
-*i2c-2.7.0 (20 Jan 2003): i2c-2.7.0.ebuild files/digest-i2c-2.7.0 :
+*i2c-2.7.0 (20 Jan 2003)
 
-  01 Mar 2003; Seemant Kulleen <seemant@gentoo.org> :
+  02 Mar 2003; Brandon Low <lostlogic@gentoo.org> i2c-2.7.0.ebuild:
+  mark unstable for the time being awaiting some fixage
 
+  01 Mar 2003; Seemant Kulleen <seemant@gentoo.org> i2c-2.7.0.ebuild :
   Moved 2.7.0 to stable x86  It was causing breakage because lm_sensors depends on this, and
   that went to stable x86
 
@@ -13,7 +15,7 @@
   Update to latest version, unstable marked for a few days, although
   this code is well tested in the lolo and gentoo-sources.
 
-*i2c-2.6.5 (08 Dec 2002):
+*i2c-2.6.5 (08 Dec 2002)
   08 Dec 2002; Seth Chandler <sethbc@gentoo.org>: i2c-2.6.5-r1.ebuild
   added to portage, originally contributed by Jonathan Kelly
   <j0n@tpg.com.au>
