@@ -1,6 +1,13 @@
 # ChangeLog for net-www/snownews
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.14 2004/11/22 18:35:52 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.15 2004/12/08 19:49:35 citizen428 Exp $
+
+*snownews-1.5.6 (08 Dec 2004)
+
+  08 Dec 2004; Michael Kohl <citizen428@gentoo.org> +snownews-1.5.6.ebuild,
+  -snownews-1.5.6_beta1.ebuild:
+  Version bump; added new dependencies for snowsync. Moved dependencies on
+  Perl libraries to RDEPEND.
 
 *snownews-1.5.6_beta1 (22 Nov 2004)
 
