@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/mythweather-0.14.ebuild,v 1.1 2004/02/03 13:51:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/mythweather-0.14.ebuild,v 1.2 2004/02/06 14:46:49 max Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ DEPEND=">=sys-apps/sed-4
 	|| ( >=media-tv/mythtv-${PV} >=media-tv/mythfrontend-${PV} )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A} && cd "${S}"
 
 	for i in `grep -lr "usr/local" "${S}"` ; do
 		sed -e "s:/usr/local:/usr:" -i "${i}" || die "sed failed"
