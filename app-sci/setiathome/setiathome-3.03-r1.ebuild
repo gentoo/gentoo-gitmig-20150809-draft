@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.11 2003/02/13 09:25:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.12 2003/12/06 23:38:00 spyderous Exp $
 
 IUSE="X"
 
@@ -47,8 +47,8 @@ src_install () {
 	dodir ${I}
 	cp {setiathome,README} ${D}/${I}
 	use X && cp {xsetiathome,README.xsetiathome} ${D}/${I}
-	chown nobody.nogroup ${D}/${I}
-	chown nobody.nogroup ${D}/${I}/setiathome
+	chown nobody:nogroup ${D}/${I}
+	chown nobody:nogroup ${D}/${I}/setiathome
 	chmod +s ${S}/setiathome
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/seti-init.d-r1 setiathome

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/chessbrain
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.3 2003/07/02 12:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.4 2003/12/06 23:36:34 spyderous Exp $
+
+  06 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  chessbrain-20304.ebuild, chessbrain-20310.ebuild, chessbrain-20314.ebuild:
+  Changing obsolete chown syntax for bug #35127.
 
 *chessbrain-20314 (17 Mar 2003)
 

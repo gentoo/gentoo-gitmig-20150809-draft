@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/chessbrain-20314.ebuild,v 1.2 2003/04/23 14:34:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/chessbrain-20314.ebuild,v 1.3 2003/12/06 23:36:34 spyderous Exp $
 
 MY_PV=${PV}-03
 DESCRIPTION="distibuted computing project client"
@@ -20,8 +20,8 @@ I=/opt/chessbrain
 src_install() {
 	dodir ${I}
 	cp {cbspn,cbspn.conf} ${D}/${I}
-	chown nobody.nogroup ${D}/${I}
-	chown nobody.nogroup ${D}/${I}/cbspn
+	chown nobody:nogroup ${D}/${I}
+	chown nobody:nogroup ${D}/${I}/cbspn
 	chmod +s ${S}/cbspn
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/cb-init.d chessbrain
