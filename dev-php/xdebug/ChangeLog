@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/xdebug
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.16 2005/03/15 10:16:58 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.17 2005/03/15 11:24:39 sebastian Exp $
+
+  15 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  xdebug-2.0.0_beta2.ebuild:
+  Build DBGp client, too.
 
 *xdebug-2.0.0_beta2 (15 Mar 2005)
 
