@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/yup/yup-0.6.5-r1.ebuild,v 1.2 2000/08/16 04:37:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/yup/yup-0.6.5-r1.ebuild,v 1.3 2000/09/15 20:08:44 drobbins Exp $
 
 P=yup-0.6.5
 A=${P}.tar.gz
@@ -14,14 +14,14 @@ src_unpack() {
 }
 
 src_compile() {                           
-  make build
+  try make build
 }
 
 src_install() {                               
   cd ${S}
   dodir /etc
   dodir /usr/sbin
-  make PREFIX=${D} install
+  try make PREFIX=${D} install
   dodoc BUGS ChangeLog CONTRIBUTORS COPYING NEWS README TODO
 }
 
