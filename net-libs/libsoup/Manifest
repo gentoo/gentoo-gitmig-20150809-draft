@@ -1,5 +1,5 @@
 MD5 7c7792576a2bd03216b71619bc9cf86a libsoup-1.99.12.ebuild 915
-MD5 278a23042e874f469929ae1f71dc9ae9 ChangeLog 647
-MD5 c19f4c23386ec82f2f300f354fe5b995 libsoup-1.99.17.ebuild 915
+MD5 b6d6a0f95166483899de0bef15584352 ChangeLog 764
+MD5 fbba1b1e45a28634fe6d6b32cefa8770 libsoup-1.99.17.ebuild 844
 MD5 a875f4b0842e739f0a797ec0e5a7ad50 files/digest-libsoup-1.99.12 68
 MD5 3b140665fa099254cf9b28eb26948840 files/digest-libsoup-1.99.17 68
