@@ -1,4 +1,6 @@
-MD5 5fd32368ee0b98b9000f99a0962b4be8 ChangeLog 645
+MD5 5114acdbf4fbc36d2cd8ee26ae4edc58 ChangeLog 766
 MD5 5fc23b6d5e1b1f7962107203575bb63c gphpedit-0.4.3.ebuild 665
+MD5 5cf6f5f65decc9a6bc416c99f2d94abe gphpedit-0.9.6.ebuild 702
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 fd6d197b7562ef3b534e1db2f822744e files/digest-gphpedit-0.4.3 66
+MD5 f44408eb5e7c8472ca40c70423599872 files/digest-gphpedit-0.9.6 66
