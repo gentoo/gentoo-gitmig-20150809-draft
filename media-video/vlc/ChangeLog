@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.44 2004/03/17 20:38:54 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.45 2004/03/25 15:41:32 kanaka Exp $
+
+  20 Mar 2004; Joel Martin <kanaka@gentoo.org> :
+  Changed to live.com ebuild rather than importing source. Disabled qt and kde
+  interfaces and xvid since they are deprecated, added libdvdnav dependency,
+  restructured configuration of dvd and dvb features, synchronized the format
+  of the ebuild with the one by Derk-Jan Hartman.
 
   17 Mar 2004; Joel Martin <kanaka@gentoo.org> vlc-0.6.2-r1.ebuild,
   vlc-0.7.1.ebuild:
