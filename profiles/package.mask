@@ -78,8 +78,6 @@ app-emacs/monk
 # <foser@gentoo.org> (27 Oct 2002)
 # Unstable GNOME2 tree mask (2.1)
 # Expect things to break if you unmask this !
-# As long as this line is here, i'm still updating packages and
-# the install won't be complete
 >=x11-libs/vte-0.9.2
 >=x11-libs/xft-2.0
 >=x11-libs/gtk+-2.1
