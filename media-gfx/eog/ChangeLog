@@ -1,74 +1,74 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.15 2002/09/06 05:00:28 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.16 2002/09/16 00:57:39 murphy Exp $
 
 *eog-1.0.3 (06 Sep 2002)
-  06 Sep 2002; Spider <spider@gentoo.org> eog-1.0.3.ebuild :
-  new version
+
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> eog-1.0.3.ebuild : Adding
+  sparc/sparc64 keywords. Revamping ChangeLog layout.
+
+  06 Sep 2002; Spider <spider@gentoo.org> eog-1.0.3.ebuild : New version
   
 *eog-1.0.2 (05 Aug 2002)
-  05 Aug 2002; Spider <spider@gentoo.org> eog-1.0.2.ebuild :
-  new version, tweaked deps
+
+  05 Aug 2002; Spider <spider@gentoo.org> eog-1.0.2.ebuild : New version, tweaked deps
   
-eog-1.0.1 (27 Jun 2002)
-  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
-  Added ppc to keywords
+*eog-1.0.1 (27 Jun 2002)
 
-  27 Jun 2002; Spider <spider@gentoo.org> eog-1.0.1-r2.ebuild :
-  mirror:// code
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org> eog-1.0.1.ebuild :  Added ppc to keywords
 
-eog-1.0.1 (21 Jun 2002)
-  21 Jun 2002; Spider <spider@gentoo.org> eog-1.0.1-r1.ebuild :
-  missed the librsvg dep 
+  27 Jun 2002; Spider <spider@gentoo.org> eog-1.0.1-r2.ebuild : mirror:// code
+
+*eog-1.0.1 (21 Jun 2002)
+
+  21 Jun 2002; Spider <spider@gentoo.org> eog-1.0.1-r1.ebuild : Missed the librsvg dep 
 
 *eog-1.0.1 (19 Jun 2002)
-  19 Jun 2002; Spider <spider@gentoo.org> eog-1.0.1.ebuild :
-  dep tweak to match latest, update version
 
-    
+  19 Jun 2002; Spider <spider@gentoo.org> eog-1.0.1.ebuild : Dep tweak to match latest,
+  update version
+
 *eog-1.0.0 (10 Jun 2002)
-  10 Jun 2002; Spider <spider@gentoo.org> eog-1.0.0.ebuild :
-  New stable version! get it while its hot
+
+  10 Jun 2002; Spider <spider@gentoo.org> eog-1.0.0.ebuild : New stable version!
+  Get it while its hot
   
-eog-0.118.0 (06 Jun 2002)
-  06 Jun  2002; Spider <spider@gentoo.org>  eog-0.118.0.ebuild:
-   gnome-print fix
+*eog-0.118.0 (06 Jun 2002)
+
+  06 Jun 2002; Spider <spider@gentoo.org> eog-0.118.0.ebuild : gnome-print fix
     
 *eog-0.119 (05 Jun  2002)
-  05 Jun 2002; Spider <spider@gentoo.org> eog-0.119.ebuild
-  new eog was announced, this is the ebuild, but the tarball isn't ready yet :)
+
+  05 Jun 2002; Spider <spider@gentoo.org> eog-0.119.ebuild : New eog was announced,
+  this is the ebuild, but the tarball isn't ready yet :)
   gnome2 eclassed. untested yet
   
 *eog-0.118.0 (23 May 2002)
-  23 May 2002; Spider <spider@gentoo.org>  eog-0.118.0.ebuild: 
-  version bump
+
+  23 May 2002; Spider <spider@gentoo.org>  eog-0.118.0.ebuild : Version bump
 
 *eog-0.117.0 (22 May 2002)
-  22 May 2002; Spider <spider@gentoo.org>  eog-0.117.0.ebuild: 
-  gnome2 port of eog
 
+  22 May 2002; Spider <spider@gentoo.org>  eog-0.117.0.ebuild : gnome2 port of eog
 
 *eog-0.6-r4 (12 Apr 2002)
 
-  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
-  Added ppc to keywords
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>: Added ppc to keywords
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> eog-0.6-r4.ebuild :
-
   Compile against newer libpng
 
 *eog-0.6-r3
+
   11 Apr 2002; Spider <spider@gentoo.org eog-0.6-r3.ebuild:
   Big DEPEND update.
 
   19 Feb 2002; M.Schlemmer <azarah@gentoo.org> eog-0.6-r2.ebuild :
-
   Fix SANDBOX errors for locale files and schema files.
 
 *eog-0.6-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
