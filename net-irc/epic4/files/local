@@ -1,4 +1,7 @@
-if (fexist(~/.ircrc) == -1) {
+if (fexist(~/.ircrc) == -1 && fexist(~/.epicrc == -1)) {
+# set this if you want logging
+# assign win_logdir logs
+
 # uncomment this if you don't want time stamping
 # timestamp off
 
@@ -16,6 +19,7 @@ bind ^[6 parse_command window swap 6
 bind ^[7 parse_command window swap 7
 bind ^[8 parse_command window swap 8
 bind ^[9 parse_command window swap 9
+bind ^[0 parse_command window swap 10
 
 
 # *** variable sets ***
@@ -25,8 +29,37 @@ set dcc_auto_send_rejects off
 set dcc_timeout 60
 set dcc_sliding_window 1000
 set auto_rejoin off
+set log_rewrite $log_format($1-)
+set mangle_logfiles all
 set mirc_broken_dcc_resume on
 set status_format 16,12%T [%R] %=%@%N%*%#%S%H%B%Q%A%C%+%I%O%M%F%L %D
+
+
+# make sure that our logging directory exists
+
+if (!(win_logdir == [])) {
+	@mkdir($win_logdir)
+}
+
+
+# create status and msg windows, if necessary
+
+if (winnam(status) == []) {
+	window 1 name status level CRAP,PUBLIC,WALLS,WALLOPS,SNOTES,CTCP,USERLOG1,USERLOG2,USERLOG3,USERLOG4
+	if (!(win_logdir == [])) {
+		^window logfile $win_logdir/status.log log on
+	}
+	@ setitem(my_wins 0 blank_item)
+	@ setitem(my_wins 1 status)
+}
+
+if (winnam(queries) == []) {
+	window new name queries level msgs,actions,dcc hide
+	if (!(win_logdir == [])) {
+		^window queries logfile $win_logdir/msg.log log on
+	}
+	@ setitem(my_wins 2 queries)
+}
 
 
 # *** aliases ***
@@ -155,6 +188,26 @@ alias format_idle_time {
 	return ${[$0] % 60} seconds
 }
 
+alias j jnw
+
+alias jnw {
+	@:ref_num = matchitem(my_wins $0))
+
+	if ( (ref_num < 3) || (winnum($ref_num) == -1) ) {
+		window new hide
+		window swap last
+		if (!(win_logdir == [])) {
+			^window logfile $win_logdir/$0.log log on
+		}
+		@ setitem(my_wins $winnum(0) $0)
+	} {
+		window swap $ref_num
+	}
+	//join $*
+}
+
+alias join jnw
+
 alias k {
 	kick $C $*
 }
@@ -162,6 +215,14 @@ alias k {
 alias kb {
 	ban $0
 	k $*
+}
+
+alias log_format {
+	if ( left(1 $0) == [\(] ) {
+		return $strftime($time() (%m/%d/%Y %I:%M:%S %P)) $2-
+	} else {
+		return $strftime($time() (%m/%d/%Y %I:%M:%S %P)) $0-
+	}
 }
 
 alias memoserv { quote memoserv $* }
@@ -228,7 +289,9 @@ alias scan {
 		      } {
 			if (n2) {
 			  @:num += 2
-			 } { @:num++ }
+			} {
+			  @:num++
+			}
 		      }
 		    }
 	}
@@ -556,6 +619,33 @@ on ^332 "*" {
 
 on ^333 "*" {
 	xecho -w $winchan($1) $ts()$banner Topic set by $2 $strftime($3 %c)
+}
+
+on ^353 "*" {
+	xecho -w $winchan($2)
+	xecho -w $winchan($2) -b 16Users on $2:
+	fe ($3-) n1 n2 n3 n4 {
+		xecho -w $winchan($2) 14|  13$[17]n1 $[17]n2 $[17]n3 $[17]n414  |
+		if (n4) {
+		  @total_nicks += 4
+		} {
+		  if (n3) {
+		    @total_nicks += 3
+		  } {
+		    if (n2) {
+		      @total_nicks += 2
+		    } {
+		      @total_nicks++
+		    }
+		  }
+		}
+	}
+}
+
+on ^366 "*" {
+	xecho -w $winchan($1) Total number of users on $1: $total_nicks
+	xecho -w $winchan($1)
+	@total_nicks = 0
 }
 
 on ^367 "*" {
