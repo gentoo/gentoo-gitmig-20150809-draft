@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.6 2004/06/04 19:15:03 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.7 2004/06/04 19:21:27 jhuebel Exp $
 
 inherit eutils games gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://home-2.consunet.nl/~cb007736/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="nls"
 
 DEPEND="virtual/x11
