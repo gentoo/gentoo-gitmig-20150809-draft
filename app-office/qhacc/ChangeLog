@@ -1,6 +1,10 @@
 # ChangeLog for app-office/qhacc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.17 2004/10/15 09:59:57 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.18 2004/10/20 20:12:14 carlo Exp $
+
+  20 Oct 2004; Carsten Lohrke <carlo@gentoo.org>
+  files/qhacc-3.2.1-sandbox.patch, qhacc-3.2.1.ebuild:
+  fixed patch
 
   15 Oct 2004; <dams@gentoo.org> +files/qhacc-3.2.1-mysql_plugin_libs.patch,
   +files/qhacc-3.2.1-psql_plugin_libs.patch, qhacc-3.2.1.ebuild:

@@ -143,3 +143,170 @@
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
+--- plugins/ofx/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/ofx/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -267,7 +267,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+--- plugins/qif/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/qif/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -266,7 +266,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+--- plugins/xml/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/xml/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -274,7 +274,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+--- plugins/psql/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/psql/Makefile.in	2004-10-20 19:13:54.000000000 +0200
+@@ -274,7 +274,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -524,9 +524,9 @@
+ @PSQL_TRUE@	mkdir -p $(dbdir)
+ @PSQL_TRUE@	if test ! -L $(dbdir)/libpsqlio.so ; then cd $(dbdir); ln -s $(libdir)/libpsqlio.so $(dbdir) ; fi
+ @PSQL_TRUE@	mkdir -p $(importdir)
+-@PSQL_TRUE@	if test ! -L $(importdir)/libpsqlio.so ; then cd $(importdir); ln -s ../../lib/libpsqlio.so $(importdir) ; fi
++@PSQL_TRUE@	if test ! -L $(importdir)/libpsqlio.so ; then cd $(importdir); ln -s $(libdir)/libpsqlio.so $(importdir) ; fi
+ @PSQL_TRUE@	mkdir -p $(exportdir)
+-@PSQL_TRUE@	if test ! -L $(exportdir)/libpsqlio.so ; then cd $(exportdir); ln -s ../../lib/libpsqlio.so $(exportdir) ; fi
++@PSQL_TRUE@	if test ! -L $(exportdir)/libpsqlio.so ; then cd $(exportdir); ln -s $(libdir)/libpsqlio.so $(exportdir) ; fi
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+--- plugins/reports/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/reports/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -385,7 +385,7 @@
+ 	$(RANLIB) libtemp.a
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
++++ plugins/mysql/Makefile.in	2004-10-20 19:13:32.000000000 +0200
+--- plugins/mysql/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
+@@ -274,7 +274,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+@@ -524,9 +524,9 @@
+ @MYSQL_TRUE@	mkdir -p $(dbdir)
+ @MYSQL_TRUE@	if test ! -L $(dbdir)/libmysqlio.so ; then cd $(dbdir); ln -s $(libdir)/libmysqlio.so $(dbdir) ; fi
+ @MYSQL_TRUE@	mkdir -p $(importdir)
+-@MYSQL_TRUE@	if test ! -L $(importdir)/libmysqlio.so ; then cd $(importdir); ln -s ../../lib/libmysqlio.so $(importdir) ; fi
++@MYSQL_TRUE@	if test ! -L $(importdir)/libmysqlio.so ; then cd $(importdir); ln -s $(libdir)/libmysqlio.so $(importdir) ; fi
+ @MYSQL_TRUE@	mkdir -p $(exportdir)
+-@MYSQL_TRUE@	if test ! -L $(exportdir)/libmysqlio.so ; then cd $(exportdir); ln -s ../../lib/libmysqlio.so $(exportdir) ; fi
++@MYSQL_TRUE@	if test ! -L $(exportdir)/libmysqlio.so ; then cd $(exportdir); ln -s $(libdir)/libmysqlio.so $(exportdir) ; fi
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+--- plugins/cliimp/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/cliimp/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -265,7 +265,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+--- plugins/extprg/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/extprg/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -274,7 +274,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+--- plugins/graphs/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/graphs/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -331,7 +331,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+--- plugins/generator/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/generator/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -271,7 +271,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+--- plugins/archiver/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/archiver/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -265,7 +265,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+--- plugins/upgrade/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/upgrade/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -272,7 +272,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+--- plugins/sqlite/Makefile.in.orig	2004-10-20 19:11:02.000000000 +0200
++++ plugins/sqlite/Makefile.in	2004-10-20 19:12:54.000000000 +0200
+@@ -284,7 +284,7 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
++	test -z "$(DESTDIR)/$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \

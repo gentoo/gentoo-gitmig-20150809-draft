@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.1.ebuild,v 1.5 2004/10/15 09:59:57 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.1.ebuild,v 1.6 2004/10/20 20:12:14 carlo Exp $
 
 inherit libtool kde-functions eutils
 
@@ -25,9 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	elibtoolize
-	for name in sandbox mysql_plugin_libs psql_plugin_libs; do
-		epatch ${FILESDIR}/${P}-$name.patch || die "failed applying the patch ${P}-$name.patch"
-	done
+	epatch ${FILESDIR}/${P}-sandbox.patch
 }
 
 src_compile() {
@@ -47,10 +45,8 @@ src_install() {
 	# can't do this and I'm too lazy to patch all the Makefiles
 	# mv ${D}/usr/plugins ${D}/usr/lib/qhacc
 	dodir /usr/share/doc/${PF}
-	use doc && mv ${D}/${D}/usr/share/doc/* ${D}/usr/share/doc/${PF}
-	rm -rf ${D}/${D}/usr/share/doc
-	dodir /usr/share/qhacc
-	mv ${D}/${D}/usr/share/* ${D}/usr/share/qhacc
+	use doc && mv ${D}/usr/share/qhacc/doc/* ${D}/usr/share/doc/${PF}
+	rm -rf ${D}/usr/share/qhacc/doc
 	rm ${S}/contrib/easysetup/Makefile*
 	insinto /usr/share/qhacc/easysetup
 	doins ${S}/contrib/easysetup/*
