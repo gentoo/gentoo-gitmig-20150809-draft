@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.7 2002/05/18 17:25:12 agenkin Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kochi-fonts/kochi-fonts-0.2.20020503.ebuild,v 1.6 2002/08/28 23:53:35 stubear Exp $
 
 DESCRIPTION="Kochi Gothic and Mincho Japanese TrueType fonts"
 
@@ -10,8 +10,8 @@ LICENSE="kochi-fonts"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64"
 
-DEPEND=">=xfree-4.2.0-r9
-	>=ttmkfdir-0.0-r1"
+DEPEND=">=x11-base/xfree-4.2.0-r9
+	>=x11-misc/ttmkfdir-0.0-r1"
 
 SRC_PATH="http://www.on.cs.keio.ac.jp/~yasu/linux/fonts"
 
