@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-1.9-r1.ebuild,v 1.6 2002/12/09 04:21:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-1.9-r1.ebuild,v 1.7 2003/01/06 21:49:35 tuxus Exp $
 
 DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
 compiler to safely cache compilation output. When the same code is compiled
@@ -10,7 +10,7 @@ HOMEPAGE="http://ccache.samba.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc mips"
 
 # Note: this version is designed to be auto-detected and used if you happen to have Portage
 # 2.0.6+ installed.
