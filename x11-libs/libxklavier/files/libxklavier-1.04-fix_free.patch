@@ -1,0 +1,11 @@
+--- libxklavier-1.04/libxklavier/xklavier_config_i18n.c.orig	2004-11-16 15:56:37.472228000 -0500
++++ libxklavier-1.04/libxklavier/xklavier_config_i18n.c	2004-11-16 15:58:02.971230176 -0500
+@@ -148,7 +148,7 @@
+ 
+   iconv_close( converter );
+ 
+-  return converted;
++  return strdup(converted);
+ }
+ 
+ /*
