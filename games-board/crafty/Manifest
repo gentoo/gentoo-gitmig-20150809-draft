@@ -1,5 +1,5 @@
-MD5 5106b26e627adabb9ed54dd89eb9e7f5 ChangeLog 942
-MD5 ac527ff027a17911095b79155c6d01d9 crafty-19.1.ebuild 2289
+MD5 c6528c6ce2a503b5aeb602b6884600a2 ChangeLog 1038
+MD5 d62887acde786a0ba0adad80ac5bb8eb crafty-19.1.ebuild 2298
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 1cfc5524de1fd69ae391d434d6e483d9 files/crafty-18.15-ppc.patch 634
 MD5 cf2bf7fa0aa2a30369f35f79bbc0f44a files/digest-crafty-19.1 63
