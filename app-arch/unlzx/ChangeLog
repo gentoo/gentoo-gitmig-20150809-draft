@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for app-arch/unlzx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/ChangeLog,v 1.2 2002/08/14 08:27:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/ChangeLog,v 1.3 2002/09/01 08:28:55 seemant Exp $
 
 *unlzx-1.1 (23 Feb 2002)
 
