@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.24 2004/10/31 17:01:30 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.25 2004/12/29 01:15:27 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *freevo-1.5.1 (31 Oct 2004)
 
@@ -30,7 +33,7 @@
   -freevo-1.5.0_rc4.ebuild:
   version bump, thanks to: Benjamin Schleinzer <thor@4players.de> in bug #58397
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> freevo-1.4.1.ebuild,
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> freevo-1.4.1.ebuild,
   freevo-1.4.ebuild, freevo-1.5.0_rc4.ebuild:
   dev-python/Imaging renamed to dev-python/imaging.
 
@@ -47,7 +50,7 @@
   30 May 2004; David Holm <dholm@gentoo.org> freevo-1.4.1.ebuild:
   Added to ~ppc.
 
-  27 May 2004; Bryan Østergaard <kloeri@gentoo.org> freevo-1.4.1.ebuild,
+  27 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> freevo-1.4.1.ebuild,
   freevo-1.4.ebuild:
   Freevo 1.4.1 only works with mmpython-0.3. Thanks to Dirk Meyer
   <dischi@tzi.de> (mmpython and freevo developer) for reporting this.
