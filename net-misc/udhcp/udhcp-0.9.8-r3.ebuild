@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.9 2004/07/01 22:06:12 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.10 2004/09/04 00:33:24 morfic Exp $
 
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="udhcp Server/Client Package"
 HOMEPAGE="http://udhcp.busybox.net/"
@@ -19,6 +19,17 @@ PROVIDE="virtual/dhcpc"
 pkg_setup() {
 	enewgroup dhcp
 	enewuser dhcp -1 /bin/false /var/lib/dhcp dhcp
+}
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	#fixes #62714, thanks GurliGebis
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	then
+		epatch ${FILESDIR}/udhcp-gcc-3.4.patch
+	fi
 }
 
 src_compile() {
