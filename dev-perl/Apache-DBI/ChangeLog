@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Apache-DBI
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.1 2002/11/18 04:30:44 mkennedy Exp $
+
+*Apache-DBI-0.89 (15 Nov 2002)
+
+  15 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  Apache-DBI-0.89.ebuild, ChangeLog,
+  files/digest-Apache-DBI-0.89 :
+
+  Initial import.
