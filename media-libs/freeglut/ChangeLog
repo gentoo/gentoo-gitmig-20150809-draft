@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.1 2004/08/01 20:39:49 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.2 2004/08/03 11:27:55 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> freeglut-2.2.0.ebuild:
+  Added to ~ppc.
 
 *freeglut-2.2.0 (01 Aug 2004)
 
