@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gtk-imonc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtk-imonc/ChangeLog,v 1.3 2005/03/20 21:16:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtk-imonc/ChangeLog,v 1.4 2005/03/20 22:01:07 genstef Exp $
+
+  20 Mar 2005; Stefan Schweizer <genstef@gentoo.org>
+  gtk-imonc-0.6.4.1.ebuild:
+  Remove x11 depend, add pkgconfig depend, add domenu for the .desktop file
 
   20 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   gtk-imonc-0.6.2.ebuild, gtk-imonc-0.6.3.ebuild, gtk-imonc-0.6.4.1.ebuild:
