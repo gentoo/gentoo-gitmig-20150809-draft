@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.4.ebuild,v 1.2 2003/06/10 13:22:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.4.ebuild,v 1.3 2003/06/12 01:14:44 liquidx Exp $
 
 inherit flag-o-matic libtool
 
 # won't configure with this
-filter-flags -fomit-frame-pointer
+filter-flags -fomit-frame-pointer 
+# gnucash uses GLIB_INLINE, this will break it
+filter-flags -fno-inline
 
 DOC_VER="1.8.1"
 IUSE="nls postgres ofx hbci doc"
