@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.28 2004/02/23 14:30:15 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.29 2004/03/02 07:49:21 seemant Exp $
+
+*gentoo-0.11.46 (01 Mar 2004)
+
+  01 Mar 2004; Seemant Kulleen <seemant@gentoo.org> gentoo-0.11.43.ebuild,
+  gentoo-0.11.45.ebuild, gentoo-0.11.46.ebuild:
+  Version bump, as requested by Jesús García Crespo (aka Sevein)
+  <correo@sevein.com> in bug #43311
 
   23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> gentoo-0.11.45.ebuild:
   Stable on sparc.

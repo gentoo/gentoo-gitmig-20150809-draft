@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.45.ebuild,v 1.6 2004/02/23 14:33:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.45.ebuild,v 1.7 2004/03/02 07:49:21 seemant Exp $
 
 IUSE="nls gnome"
 
@@ -17,12 +17,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc ~alpha ~hppa ~amd64 ~ia64"
 
 src_compile() {
-	local myconf
-
-	use nls || myconf="${myconf} --disable-nls"
 	econf \
 		--sysconfdir=/etc/gentoo \
-		${myconf} || die "./configure failed"
+		`use_enable nls` || die
 
 	emake || die
 }
