@@ -34,13 +34,6 @@
 # Newer ppc kernel; wants more testing.
 =sys-kernel/ppc-sources-2.4.20-r1
 
-# <tantive@gentoo.org> (10 Oct 2002)
-# Version bumped, masked due to move
-=sys-apps/usermode-utilities-20020906
-=sys-apps/usermode-utilities-20020821
-=sys-apps/usermode-utilities-20020729
-=sys-apps/usermode-utilities-20020718
-
 # <bcowan@gentoo.org> (09 Oct 2002)
 # masked for testing
 =net-mail/sylpheed-claws-0.8.5
