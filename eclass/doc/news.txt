@@ -1,6 +1,6 @@
-Plans for v3.1:
-- debug.eclass
-- kde-objprelink.eclass
+1/10
+v3.1
+Addition of debug.eclass.
 
 1/10
 v3

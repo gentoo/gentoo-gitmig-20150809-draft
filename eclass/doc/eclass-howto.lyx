@@ -130,11 +130,11 @@ This function is the entire contents of inherit.eclass.
  For now, we don't want to make a new version of portage just for this,
  so we put this function in a separate eclass.
  Every inheriting ebuild begins with these two lines:
-\layout Standard
+\layout Code
 
 .
  /usr/portage/eclass/inherit.eclass || die
-\layout Standard
+\layout Code
 
 inherit kde-base || die
 \layout Standard
@@ -151,6 +151,7 @@ virtual.eclass
 \layout Standard
 
 Defines empty variables and functions; defines EXPORT_FUNCTIONS().
+ Also inherits debug.eclass so that everyone gets that.
 \layout Standard
 
 This eclass is inherited by most other eclasses e.g.
@@ -418,6 +419,11 @@ and the upcoming kde_src_unpack
 objprelink-patch
 \emph default 
  (whose name may change when I actually write it).
+\layout Standard
+
+A more final note: the eclasses also include some debug statements, which
+ are not part of the function/section strufture.
+ More on this at the debug.eclass section.
 \layout Subsection
 
 base.eclass
@@ -540,13 +546,127 @@ Adds make/automake/autoconf to DEPEND.
 debug.eclass
 \layout Standard
 
-Will be written soon.
- Will provide verbose debug output functions to centralise the numerous
+Adds verbose output debugging functions.
+ Is inherited by virtual.eclass.
+\layout Standard
+
+A function with debugging looks like this:
+\layout Code
+
+base_src_install() {
+\layout Code
+
  
-\emph on 
-echo
-\emph default 
-s I have scattered around the eclasses.
+\layout Code
+
+        debug-print-function base_src_install $*
+\layout Code
+
+        [ -z "$1" ] && base_src_install all
+\layout Code
+
+ 
+\layout Code
+
+        while [ "$1" ]; do
+\layout Code
+
+ 
+\layout Code
+
+        case $1 in
+\layout Code
+
+                make)
+\layout Code
+
+                        debug-print-section make
+\layout Code
+
+                        make DESTDIR=${D} install || die
+\layout Code
+
+                        ;;
+\layout Code
+
+            all)
+\layout Code
+
+                        debug-prnit-section all
+\layout Code
+
+                        base_src_install make
+\layout Code
+
+                        ;;
+\layout Code
+
+        esac
+\layout Code
+
+ 
+\layout Code
+
+        shift
+\layout Code
+
+        done
+\layout Code
+
+ 
+\layout Code
+
+}
+\layout Standard
+
+debug-print-function() prints 
+\begin_inset Quotes eld
+\end_inset 
+
+now in function $1
+\begin_inset Quotes erd
+\end_inset 
+
+, 
+\begin_inset Quotes eld
+\end_inset 
+
+parameters are $2...
+\begin_inset Quotes erd
+\end_inset 
+
+ (all following aprameteres to the function).
+\layout Standard
+
+debug-print-section() prints 
+\begin_inset Quotes eld
+\end_inset 
+
+now in section $1
+\begin_inset Quotes erd
+\end_inset 
+
+.
+\layout Standard
+
+debug-print() prints raw 
+\begin_inset Quotes eld
+\end_inset 
+
+$1
+\begin_inset Quotes erd
+\end_inset 
+
+.
+\layout Standard
+
+Inside debug.eclass are several settings, which can later be moved to some
+ external config file.
+ They include turning debug on or off and redirecting its output.
+\layout Standard
+
+The functions are used in all ebuild functions/sections of all eclasses,
+ and in the helper funcions inherit() and EXPORT_FUNCTIONS().
 \layout Subsection
 
 kde-objprelink.eclass

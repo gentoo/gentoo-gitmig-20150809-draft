@@ -82,6 +82,7 @@ sourced from an ebuild which has it.
 2.2 virtual.eclass
 
 Defines empty variables and functions; defines EXPORT_FUNCTIONS().
+Also inherits debug.eclass so that everyone gets that.
 
 This eclass is inherited by most other eclasses e.g. base,
 kde*. As a rule, any eclass that defines some of the base
@@ -248,6 +249,10 @@ examples inculde base_src_unpack patch and the upcoming
 kde_src_unpack objprelink-patch (whose name may change when
 I actually write it).
 
+A more final note: the eclasses also include some debug statements,
+which are not part of the function/section strufture. More
+on this at the debug.eclass section.
+
 2.3 base.eclass
 
 This eclass defines some default variables and functions,
@@ -330,9 +335,70 @@ Adds make/automake/autoconf to DEPEND.
 
 2.10 debug.eclass
 
-Will be written soon. Will provide verbose debug output functions
-to centralise the numerous echos I have scattered around
-the eclasses.
+Adds verbose output debugging functions. Is inherited by
+virtual.eclass.
+
+A function with debugging looks like this:
+
+base_src_install() {
+
+ 
+
+        debug-print-function base_src_install $*
+
+        [ -z "$1" ] && base_src_install all
+
+ 
+
+        while [ "$1" ]; do
+
+ 
+
+        case $1 in
+
+                make)
+
+                        debug-print-section make
+
+                        make DESTDIR=${D} install || die
+
+                        ;;
+
+            all)
+
+                        debug-prnit-section all
+
+                        base_src_install make
+
+                        ;;
+
+        esac
+
+ 
+
+        shift
+
+        done
+
+ 
+
+}
+
+debug-print-function() prints "now
+in function $1", "parameters
+are $2..." (all following aprameteres to the function).
+
+debug-print-section() prints "now
+in section $1".
+
+debug-print() prints raw "$1".
+
+Inside debug.eclass are several settings, which can later
+be moved to some external config file. They include turning
+debug on or off and redirecting its output.
+
+The functions are used in all ebuild functions/sections of
+all eclasses, and in the helper funcions inherit() and EXPORT_FUNCTIONS().
 
 2.11 kde-objprelink.eclass
 

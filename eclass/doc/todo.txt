@@ -1,4 +1,4 @@
-debug.eclass
+debug.eclass - debug levels
 
 kde-objprelink.eclass
 

@@ -73,12 +73,10 @@
    <para>
     This function is the entire contents of inherit.eclass. In the future, once eclasses are considered to be stable, this function will live in ebuild.sh, and every ebuild will be able to use it. For now, we don't want to make a new version of portage just for this, so we put this function in a separate eclass. Every inheriting ebuild begins with these two lines:
    </para>
-   <para>
-    . /usr/portage/eclass/inherit.eclass || die
-   </para>
-   <para>
-    inherit kde-base || die
-   </para>
+   <programlisting>
+<![ CDATA [. /usr/portage/eclass/inherit.eclass || die
+]]><![ CDATA [inherit kde-base || die
+]]>   </programlisting>
    <para>
     Once the inherit() function goes into ebuild.sh, we can drop the first line; there will be no further change necessary.
    </para>
@@ -91,7 +89,7 @@
     virtual.eclass
    </title>
    <para>
-    Defines empty variables and functions; defines EXPORT_FUNCTIONS().
+    Defines empty variables and functions; defines EXPORT_FUNCTIONS(). Also inherits debug.eclass so that everyone gets that.
    </para>
    <para>
     This eclass is inherited by most other eclasses e.g. base, kde*. As a rule, any eclass that defines some of the base functions needs it. Therefore the only ebuilds which don't get it are the ones that only inherit one of the smaller eclasses e.g. c, autoconf.
@@ -206,6 +204,9 @@
     <para>
      A final note: not all functions execute all their sections when called with <emphasis>all</emphasis> or without parameters. Some sections may be non-standrd and must be called explicitly. Current examples inculde base_src_unpack<emphasis> patch </emphasis>and the upcoming kde_src_unpack <emphasis>objprelink-patch</emphasis> (whose name may change when I actually write it).
     </para>
+    <para>
+     A more final note: the eclasses also include some debug statements, which are not part of the function/section strufture. More on this at the debug.eclass section.
+    </para>
     </sect3>
    </sect2>
    <sect2>
@@ -300,7 +301,49 @@
     debug.eclass
    </title>
    <para>
-    Will be written soon. Will provide verbose debug output functions to centralise the numerous <emphasis>echo</emphasis>s I have scattered around the eclasses.
+    Adds verbose output debugging functions. Is inherited by virtual.eclass.
+   </para>
+   <para>
+    A function with debugging looks like this:
+   </para>
+   <programlisting>
+<![ CDATA [base_src_install() {
+]]><![ CDATA [ 
+]]><![ CDATA [        debug-print-function base_src_install $*
+]]><![ CDATA [        [ -z "$1" ] && base_src_install all
+]]><![ CDATA [ 
+]]><![ CDATA [        while [ "$1" ]; do
+]]><![ CDATA [ 
+]]><![ CDATA [        case $1 in
+]]><![ CDATA [                make)
+]]><![ CDATA [                        debug-print-section make
+]]><![ CDATA [                        make DESTDIR=${D} install || die
+]]><![ CDATA [                        ;;
+]]><![ CDATA [            all)
+]]><![ CDATA [                        debug-prnit-section all
+]]><![ CDATA [                        base_src_install make
+]]><![ CDATA [                        ;;
+]]><![ CDATA [        esac
+]]><![ CDATA [ 
+]]><![ CDATA [        shift
+]]><![ CDATA [        done
+]]><![ CDATA [ 
+]]><![ CDATA [}
+]]>   </programlisting>
+   <para>
+    debug-print-function() prints &ldquo;now in function &dollar;1&rdquo;, &ldquo;parameters are &dollar;2...&rdquo; (all following aprameteres to the function).
+   </para>
+   <para>
+    debug-print-section() prints &ldquo;now in section &dollar;1&rdquo;.
+   </para>
+   <para>
+    debug-print() prints raw &ldquo;&dollar;1&rdquo;.
+   </para>
+   <para>
+    Inside debug.eclass are several settings, which can later be moved to some external config file. They include turning debug on or off and redirecting its output.
+   </para>
+   <para>
+    The functions are used in all ebuild functions/sections of all eclasses, and in the helper funcions inherit() and EXPORT_FUNCTIONS().
    </para>
    </sect2>
    <sect2>

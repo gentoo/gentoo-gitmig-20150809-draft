@@ -1,9 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtual.eclass,v 1.3 2001/09/29 12:35:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtual.eclass,v 1.4 2001/10/01 13:54:38 danarmak Exp $
 # All other eclasses, and thus ebuilds, inherit from this. It defines the EXPORT_FUNCTIONS
 # string, which (should) be eval'd by all other eclasses.
+inherit debug || die
 
 # Used by the EXPORT_FUNCTIONS code, and placed at the beginning of the eclass
 # for elegancy's sake.
@@ -15,25 +16,25 @@ ECLASS=virtual
 DESCRIPTION="Based on the $ECLASS eclass."
 
 virtual_src_unpack() {
-return
+debug-print-function virtual_src_unpack $*
 }
 virtual_src_compile() {
-return
+debug-print-function virtual_src_compile $*
 }
 virtual_src_install() {
-return
+debug-print-function virtual_src_install $*
 }
 virtual_pkg_preinst() {
-return
+debug-print-function virtual_pkg_preinst $*
 }
 virtual_pkg_postinst() {
-return
+debug-print-function virtual_pkg_postinst $*
 }
 virtual_pkg_prerm() {
-return
+debug-print-function virtual_pkg_prerm $*
 }
 virtual_pkg_postrm() {
-return
+debug-print-function virtual_pkg_postrm $*
 }
 
 # EXPORT_FUNCTIONS trick
@@ -42,11 +43,8 @@ return
 EXPORT_FUNCTIONS() {
 
 	while [ "$1" ]; do
-	    #debug - if you use it, make sure to touch /1 /2 first
-	    #mv /1 /2
-	    #echo "$1() { ${ECLASS}_$1 ; }" | cat /2 - > /1
+	    debug-print "EXPORT_FUNCTIONS: ${1} -> ${ECLASS}_${1}" 
 	    eval "$1() { ${ECLASS}_$1 ; }" > /dev/null
-
 	shift
 	done
 
