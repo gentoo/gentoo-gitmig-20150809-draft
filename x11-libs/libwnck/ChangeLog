@@ -1,37 +1,37 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.8 2002/09/06 04:59:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.9 2002/09/16 01:17:38 murphy Exp $
 
 *libwnck-0.17 (06 Sep 2002)
-  06 Sep 2002; Spider <spider@gentoo.org> libwnck-0.17.ebuild :
-  new version
+
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> libwnck-0.17.ebuild : Added 
+  sparc/sparc64 keywords. Revamped ChangeLog layout.
   
-  05 Sep 2002; Spider <spider@gentoo.org> 
-  fix all mirror://gnome/sources to be mirror://gnome/2.0.0/sources due to mirror changes.
+  06 Sep 2002; Spider <spider@gentoo.org> libwnck-0.17.ebuild : New version
   
-   
+  05 Sep 2002; Spider <spider@gentoo.org> : fix all mirror://gnome/sources
+  to be mirror://gnome/2.0.0/sources due to mirror changes.
+  
 *libwnck-0.15 (05 Aug 2002)
-  05 Aug 2002; Spider <spider@gentoo.org> libwnck-0.15.ebuild :
-  New version
+
+  05 Aug 2002; Spider <spider@gentoo.org> libwnck-0.15.ebuild : New version
    
 *libwnck-0.14-r1 (27 Jun 2002)
 
-  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
-  Added ppc to keywords
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org> : Added ppc to keywords
 
-  27 Jun 2002; Spider <spider@gentoo.org> libwnck-0.14-r1.ebuild
-  using mirror:// 
-
+  27 Jun 2002; Spider <spider@gentoo.org> libwnck-0.14-r1.ebuild : using mirror:// 
 
 *libwnck-0.14 (12 Jun 2002)
-  12 Jun 2002; Spider <spider@gentoo.org> libwnck-0.14.ebuild:
-  new version
-  eclassed
+
+  12 Jun 2002; Spider <spider@gentoo.org> libwnck-0.14.ebuild: New version eclassed
 
 *libwnck-0.13 (4 June 2002)
-  4 June 2002; Gabriele Giorgetti <stroke@gentoo.org> libwnck-0.13.ebuild:
-  New version
+
+  4 June 2002; Gabriele Giorgetti <stroke@gentoo.org> libwnck-0.13.ebuild: New
+  version
 
 *libwnck-0.12 (22 May 2002)
-  22 May 2002; Spider <spider@gentoo.org> libwnck-0.12.ebuild  ChangeLog:
-  Added this from the gnome2 tarballs
+
+  22 May 2002; Spider <spider@gentoo.org> libwnck-0.12.ebuild, ChangeLog: Added
+  this from the gnome2 tarballs
