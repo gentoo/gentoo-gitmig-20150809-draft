@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ -n "$DISPLAY" ]]
+then
+        set +m; /usr/bin/me32 "$@"
+else
+        # ixon allows ctrl S to be used for searching
+        stty -ixon; /usr/bin/me32 "$@"; stty ixon
+fi
