@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.75 2003/10/22 04:32:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.76 2003/10/22 06:46:33 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -141,6 +141,28 @@ DESCRIPTION="Xfree86: famous and free X server"
 
 PATCH_DIR=${WORKDIR}/patch
 
+pkg_setup() {
+	# Hack for patch 9132.
+	if [ ! -e "/usr/src/linux" ] || \
+		( [ -e "/usr/src/linux" ] && \
+		is_kernel "2" "4" ) ; then
+			ewarn "If you compile this against a 2.4 kernel and later switch"
+			ewarn "to a 2.6 kernel, you must recompile xfree or OpenGL"
+			ewarn "applications will segfault."
+			ewarn "It compiles for 2.4 if no /usr/src/linux exists."
+			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+			echo -ne "\a" ; sleep 1
+			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+			echo -ne "\a" ; sleep 1
+			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+			echo -ne "\a" ; sleep 1
+			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+			echo -ne "\a" ; sleep 1
+			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+			echo -ne "\a" ; sleep 1
+	fi
+}
+
 src_unpack() {
 
 	# Unpack source and patches
@@ -251,8 +273,13 @@ src_unpack() {
 	fi
 
 	# Bug #30541, workaround
-	is_kernel "2" "4" || \
+	# Default to using patch, to avoid issues with tcltk
+	# on initial install, emerge system whines about no kernel
+	# Do -e instead of -h for hand-rolled kernels
+	if [ -e "/usr/src/linux" ] ; then
+		is_kernel "2" "4" || \
 		mv -f ${PATCH_DIR}/9132* ${PATCH_DIR}/excluded
+	fi
 
 	# Various Patches from all over
 	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
@@ -269,7 +296,9 @@ src_unpack() {
 	#
 	#  http://people.mandrakesoft.com/~flepied/projects/wacom/
 	#
-	if [ ! `is_kernel "2" "2"` ]
+	if ( [ -e "/usr/src/linux" ] && \
+		[ ! `is_kernel "2" "2"` ] ) || \
+		[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 	then
 		ebegin "Updating Wacom USB Driver"
 		gzip -dc ${DISTDIR}/xf86Wacom.c.gz > \
@@ -321,7 +350,9 @@ src_unpack() {
 		fi
 	fi
 
-	if [ ! `is_kernel "2" "2"` ]
+	if ( [ -e "/usr/src/linux" ] && \
+		[ ! `is_kernel "2" "2"` ] ) || \
+		[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 	then
 		echo "#define HasLinuxInput YES" >> config/cf/host.def
 	fi
@@ -1152,11 +1183,6 @@ pkg_postinst() {
 	einfo "documentation in /usr/share/doc/xfree, as well as"
 	einfo "http://tuxmobil.org/touchpad_driver.html and"
 	einfo "http://w1.894.telia.com/~u89404340/touchpad/."
-	einfo
-	# Hack for patch 9132.
-	ewarn "If you compile this against a 2.4 kernel and later switch"
-	ewarn "to a 2.6 kernel, you must recompile xfree or OpenGL"
-	ewarn "applications will segfault."
 	einfo
 	ewarn "Listening on tcp is disabled by default with startx."
 	ewarn "To enable it, edit /usr/X11R6/bin/startx."
