@@ -1,7 +1,7 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r5.ebuild,v 1.3 2002/04/30 07:21:36 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r5.ebuild,v 1.4 2002/04/30 07:49:23 rphillips Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -103,11 +103,12 @@ src_unpack() {
 src_compile() {
 
 	local myconf
-	use nls    || myconf="--disable-nls"
+	use nls    && myconf="--enable-multibyte" || myconf="--disable-nls"
 	use gpm    || myconf="$myconf --disable-gpm"
 	use perl   && myconf="$myconf --enable-perlinterp"
 	use python && myconf="$myconf --enable-pythoninterp"
 	use ruby   && myconf="$myconf --enable-rubyinterp"
+	
 # tclinterp is BROKEN.  See note above DEPEND=
 #	use tcltk  && myconf="$myconf --enable-tclinterp"
 
