@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.19-r2.ebuild,v 1.2 2004/05/31 00:26:50 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.0.19-r3.ebuild,v 1.1 2004/05/31 00:26:50 g2boojum Exp $
 
 inherit eutils ssl-cert
 
@@ -24,7 +24,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 s390"
-IUSE="ipv6 pam ldap mysql postgres ssl sasl vda maildir mbox"
+IUSE="ipv6 pam ldap mysql postgres ssl sasl vda mailwrapper mbox"
 
 PROVIDE="virtual/mta virtual/mda"
 DEPEND=">=sys-libs/db-3.2
@@ -37,7 +37,8 @@ DEPEND=">=sys-libs/db-3.2
 	sasl? ( >=dev-libs/cyrus-sasl-2 )"
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
-	=net-mail/mailwrapper-0.1"
+	!mailwrapper? ( !virtual/mta )
+	mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
@@ -132,8 +133,14 @@ src_install () {
 	rm -rf "${D}/var"
 	keepdir /var/spool/postfix
 
-	# Remove the /usr/sbin/sendmail symlink
-	mv "${D}/usr/sbin/sendmail" "${D}/usr/sbin/sendmail.postfix"
+	# mailwrapper stuff
+	if use mailwrapper
+	then
+		mv "${D}/usr/sbin/sendmail" "${D}/usr/sbin/sendmail.postfix"
+		insinto /etc/mail
+		doins "${FILESDIR}/mailer.conf"
+	fi
+
 
 	# Provide another link for legacy FSH.
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
@@ -147,20 +154,19 @@ src_install () {
 
 	keepdir /etc/postfix
 	mv "${D}/usr/share/doc/${PF}/defaults/"{*.cf,post*-*} "${D}/etc/postfix"
-	if use maildir ; then
-		mypostconf="home_mailbox=.maildir/"
-	elif use mbox ; then
+	if use mbox
+	then
 		mypostconf="mail_spool_directory=/var/spool/mail"
+	else
+		mypostconf="home_mailbox=.maildir/"
 	fi
+
 	"${D}/usr/sbin/postconf" -c "${D}/etc/postfix" -e \
 		"alias_maps=hash:/etc/mail/aliases" \
 		"alias_database=hash:/etc/mail/aliases" \
 		"local_destination_concurrency_limit=2" \
 		"default_destination_concurrency_limit=2" \
 		${mypostconf} || die "postconf failed"
-
-	insinto /etc
-	doins "${FILESDIR}/mailer.conf"
 
 	insinto /etc/postfix
 	newins "${FILESDIR}/smtp.pass" saslpass
@@ -204,5 +210,13 @@ pkg_postinst() {
 		ewarn "You must edit /etc/mail/aliases to suit your needs"
 		ewarn "and then run /usr/bin/newaliases. Postfix will not"
 		ewarn "work correctly without it."
+	fi
+
+	if ! use mailwrapper && [[ -e /etc/mailer.conf ]]
+	then
+		einfo
+		einfo "Since you emerged $PN without mailwrapper in USE,"
+		einfo "you probably want to 'emerge -C mailwrapper' now."
+		einfo
 	fi
 }

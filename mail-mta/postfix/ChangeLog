@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.1 2004/05/30 09:38:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.2 2004/05/31 00:26:50 g2boojum Exp $
+
+*postfix-2.0.19-r3 (30 May 2004)
+
+  30 May 2004; Grant Goodyear <g2boojum@gentoo.org> files/mailer.conf,
+  postfix-2.0.19-r2.ebuild, +postfix-2.0.19-r3.ebuild:
+  Changes to make mailwrapper an optional dep.
+  Also, I removed "maildir" as a use flag, as it's our default
+  format.
 
   12 May 2004; Michael McCabe <randy@gentoo.org> postfix-2.0.19-r2.ebuild:
   Added s390 keywords
