@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.47 2003/06/15 21:33:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.48 2003/06/16 22:28:47 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -20,6 +20,8 @@ dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-libs/crystalspace:mng - Enables mng support in CrystalSpace
 dev-libs/crystalspace:openal - Enables Open Audio Library support in CrystalSpace
 dev-libs/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
+dev-php/mod_php:gd-bundled - Use the bundled version of libgd rather than the external one
+dev-php/php:gd-bundled - Use the bundled version of libgd rather than the external one
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 gnome-extra/libgda:sqlite - Enable sqlite support for GnomeDB.
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
