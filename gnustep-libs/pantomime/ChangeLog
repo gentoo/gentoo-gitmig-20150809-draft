@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-libs/pantomime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.11 2005/01/10 16:23:31 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.12 2005/03/17 20:56:46 fafhrd Exp $
+
+*pantomime-1.2.0_pre20050312 (17 Mar 2005)
+
+  17 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -pantomime-1.2.0_pre20041203.ebuild, +pantomime-1.2.0_pre20050312.ebuild:
+  ebuild updates for GNUstep base, libs, and apps across the board; proper
+  versions (to be stabilized, in due time) added where apropos, cvs-pull
+  versions updated where needed
 
 *pantomime-1.2.0_pre20050106 (10 Jan 2005)
 
