@@ -1,5 +1,5 @@
 #
-# DATABASE VERSION 036 (20/07/2003)
+# DATABASE VERSION 039 (27/10/2003)
 #
 # Insert a regular expression for support of the model or the serie of your hard drive.
 # If you don't know what to put in the second field, put the number
@@ -26,7 +26,6 @@
 # SEAGATE ST310211A 9.8GB
 # SEAGATE ST310215A 10.0GB
 # SEAGATE ST315320A 14.9GB
-# SEAGATE ST320011A 19.6GB
 # SEAGATE ST320410A 19.6GB
 # SEAGATE ST320413A 19.6GB
 # SEAGATE ST320420A 19.9GB
@@ -53,14 +52,20 @@
 "FUJITSU MHN2200AT"		194  C  "Fujitsu MHN2200AT"
 "FUJITSU MHN2300AT"		194  C  "Fujitsu MHN2300AT"
 "FUJITSU MHR2020AT"		194  C  "Fujitsu MHR2020AT"
+"FUJITSU MHR2030AT"		194  C  "Fujitsu MHR2030AT"
+"FUJITSU MHS2030AT"		194  C  "Fujitsu MHS2030AT"
+"FUJITSU MHS2040AT"		194  C  "Fujitsu MHS2040AT"
 "FUJITSU MHS2060AT"             194  C  "Fujitsu MHS2060AT (Apple PowerBook G4)"
+"FUJITSU MHT2030AT"		194  C  "Fujitsu MHT2030AT"
+"FUJITSU MHT2040AT"		194  C  "Fujitsu MHT2040AT"
 "FUJITSU MPF3204AH"		194  C  "Fujitsu MPF3204AH"
 "FUJITSU MPG3204AT.*"		194  C  "Fujitsu MPG3204AT"
 "FUJITSU MPG3307AT"		194  C  "Fujitsu MPG3307AT"
 "FUJITSU MPG3409AT.*"		194  C  "Fujitsu MPG3409AT E"
 "FUJITSU MPG3409AH.*"           194  C  "Fujitsu MPG3409AH E"
 "FUJITSU MPG3204AH"		194  C  "Fujitsu MPG3204AH"
-"FUJITSU MHR2030AT"             194  C  "Fujitsu MHR2030AT"
+
+
 
 
 ########################################
@@ -71,9 +76,11 @@
 "HITACHI_DK23CA-20"		194  C  "Hitachi DK23CA-20"
 "HITACHI_DK23CA-30B"		194  C  "Hitachi DK23CA-30B"
 "HITACHI_DK23CA-75"		194  C  "Hitachi DK23CA-75"
-"HITACHI_DK23DA-[234]0"		194  C  "Hitachi DK23DA serie"
-"HITACHI_DK23EA-30"             194  C  "Hitachi DK23EA-30"
-"HITACHI_DK23EA-60"             194  C  "Hitachi DK23EA-60"
+"HITACHI_DK23DA-[234]0"		194  C  "Hitachi DK23DA series"
+"HITACHI_DK23EA-[346]0"		194  C  "Hitachi DK23EA series"
+"HITACHI_DK23FB-60"		194  C  "Hitachi DK23FB60"
+
+
 
 ########################################
 ############# IBM drives
@@ -151,9 +158,11 @@
 "SAMSUNG SW0434A"			0    C  "Samsung SW0434A"
 "SAMSUNG SP(2001|4002|6003|8004|40A2)H" 194  C  "Samsung SpinPoint P40 serie"
 "SAMSUNG SV0432A"			0    C  "Samsung SV0432A"
+"SAMSUNG SV3002H"			0    C  "Samsung SpinPoint V30 serie"
 "SAMSUNG SV(2001|4002|6003|8004)H"	194  C  "Samsung SpinPoint V40 serie"
-#"SAMSUNG SV(0221|0602|0813|1204)H"	9    C  "Samsung SpinPoint V60 series"
-"SAMSUNG SV(0401|0802|1203|1604)N"      194  C  "Samsung SpinPoint V80 series"
+#"SAMSUNG SV(0221|0602|0813|1204)H"	9    C  "Samsung SpinPoint V60 serie"
+#"SAMSUNG SV1204H"                       194  C  "Samsung 120G"
+"SAMSUNG SV(0401|0802|1203|1604)N"      194  C  "Samsung SpinPoint V80 serie"
 
 
 ########################################
@@ -172,6 +181,7 @@
 "ST315320A"				194  C  "Seagate ST315320A"
 "ST320423A"				0    C  "Seagate U10 20423, Ultra ATA/66"
 "ST320011A"				194  C  "Seagate ST320011A"
+"ST320014A"				194  C  "Seagate ST320014A (5400 rpm, 20Gb)"
 "ST320410A"				194  C  "Seagate ST320410A"
 "ST320413A"				194  C  "Seagate ST320413A"
 "ST320414A"				194  C  "Seagate ST320414A"
@@ -197,6 +207,9 @@
 "ST3120023A"                            194  C  "Seagate Barracuda V ST3120023A"
 "ST3120024A"				194  C  "Seagate Barracuda V ST3120024A"
 "ST3120026A"				194  C  "Seagate Barracuda V ST3120026A"
+"ST3160023AS"				194  C  "Seagate Barracuda V ST3160023AS (160Gb, Serial ATA)"
+"ST94011A"				194  C  "Seagate ST94011A"
+
 
 
 
@@ -224,9 +237,11 @@
 "WDC WD400BB-(18CA|00DE)A0"     0   C "Western Digital Caviar WD400BB"
 "WDC WD600BB-32BSA0"		0   C "Western Digital 600BB-32BSA0"
 "WDC WD800BB-00CAA1"		0   C "Western Digital WD800BB-00CAA1"
+"WDC WD800BB-22DKA0"		194 C "Western Digital 800BB-22DKA0"
 "WDC WD100EB-00BHF0"            0   C "Western Digital 100EB-00BHF0"
 "WDC WD400EB-00CPF0"		0   C "Western Digital 400EB-00CPF0"
 "WDC WD800JB-00ETA0"            194 C "Western Digital 80GB Special Edition 8MB"
+"WDC WD1600JB-00EVA0"           194 C "Western Digital 160GB Special Edition 8MB"
 "WDC WD2000JB-34EVA0"		194 C "Western Digital 200GB Special Edition 8MB"
 "WDC AC420400D"                 231 C "Western Digital Caviar AC420400D"
 "WDC AC418000D"			231 C "Western Digital AC418000D"
