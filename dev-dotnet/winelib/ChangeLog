@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/winelib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/ChangeLog,v 1.6 2004/06/29 18:05:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/ChangeLog,v 1.7 2004/06/30 15:37:58 latexer Exp $
+
+*winelib-0.3-r1 (30 Jun 2004)
+
+  30 Jun 2004; Peter Johanson <latexer@gentoo.org> +winelib-0.3-r1.ebuild:
+  Just revision bumping for the new 1.0 release.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> winelib-0.3.ebuild:
   add sed-4 dep

@@ -1,4 +1,6 @@
+MD5 177c95d40ccb78510c1a526baa9545b8 winelib-0.3-r1.ebuild 1373
 MD5 107d39ebac14f007f38ed39dd80fd326 winelib-0.3.ebuild 1380
-MD5 09bd3cc23afa6f4bc1f99ad54d662138 ChangeLog 922
+MD5 131347e2f0a9eb3c6b663b72f890db76 ChangeLog 1078
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 7111cffda33b020d5834e8197c8e8e09 files/digest-winelib-0.3 62
+MD5 7111cffda33b020d5834e8197c8e8e09 files/digest-winelib-0.3-r1 62

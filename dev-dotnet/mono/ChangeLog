@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.24 2004/06/29 17:08:56 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.25 2004/06/30 15:34:39 latexer Exp $
+
+*mono-1.0 (30 Jun 2004)
+
+  30 Jun 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.ebuild:
+  1.0. Nuff said.
 
   29 Jun 2004; Peter Johanson <latexer@gentoo.org> mono-0.97.ebuild:
   Fix for installation for first time installs. See bug #55229 and #55393.

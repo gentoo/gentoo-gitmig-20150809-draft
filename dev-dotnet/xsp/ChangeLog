@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.8 2004/06/29 18:06:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.9 2004/06/30 15:36:58 latexer Exp $
+
+*xsp-1.0 (30 Jun 2004)
+
+  30 Jun 2004; Peter Johanson <latexer@gentoo.org> +xsp-1.0.ebuild:
+  1.0. Nuff said.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> xsp-0.13.ebuild,
   xsp-0.14.ebuild, xsp-0.15.ebuild, xsp-0.16.ebuild:
