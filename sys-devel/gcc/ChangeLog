@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.2 2002/03/01 16:15:04 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.3 2002/04/15 03:15:43 azarah Exp $
+
+*gcc-3.0.4-r2 (15 Apr 2002)
+
+  15 Apr 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  This build enables us to have multiple versions of gcc
+  installed.
 
 *gcc-3.0.4 (1 Mar 2002)
 
