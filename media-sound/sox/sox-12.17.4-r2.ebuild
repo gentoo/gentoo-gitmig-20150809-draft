@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r2.ebuild,v 1.3 2004/08/11 20:40:35 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r2.ebuild,v 1.4 2004/10/17 23:43:09 josejx Exp $
 
-inherit gnuconfig eutils
+inherit gnuconfig eutils flag-o-matic
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -19,7 +19,6 @@ DEPEND="virtual/libc
 	mad? ( media-sound/madplay )"
 
 src_compile () {
-
 	# Needed on mips and probablly others
 	gnuconfig_update
 
@@ -29,6 +28,8 @@ src_compile () {
 
 	# Wave buffer overflow fix.  Adresses Bug #57962
 	epatch ${FILESDIR}/sox-wave-overflow.patch
+	# Wave segfault fix.  Adresses Bug #35745
+	append-flags -fsigned-char
 
 	use oggvorbis || myconf="${myconf} --disable-ogg-vorbis"
 	use mad || myconf="${myconf} --disable-mad"

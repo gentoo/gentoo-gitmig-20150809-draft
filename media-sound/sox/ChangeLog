@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.32 2004/09/14 07:43:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.33 2004/10/17 23:43:09 josejx Exp $
+
+  18 Oct 2004; Joseph Jezak <josejx@gentoo.org>
+  +files/sox-wav-segfault.patch, sox-12.17.4-r2.ebuild,
+  sox-12.17.5-r1.ebuild:
+  Added -fsigned-char to sox-12.17.4-r2 and sox-12.17.5-r1 to fix bug #35745.
+  Patch for wav segfaults in sox-12.17.5-r1, also bug #35745
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> :
   Removing sox-12.17.5 as it installs exactly the same thing as -r1. -r1 should

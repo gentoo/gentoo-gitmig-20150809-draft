@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.5-r1.ebuild,v 1.2 2004/09/14 07:43:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.5-r1.ebuild,v 1.3 2004/10/17 23:43:09 josejx Exp $
 
-inherit gnuconfig eutils
+inherit gnuconfig eutils flag-o-matic
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -29,6 +29,10 @@ src_compile () {
 
 	epatch ${FILESDIR}/${PN}-soundcard.patch
 	epatch ${FILESDIR}/${PN}-install.patch
+
+	# Fixes wav segfaults. See Bug #35745.
+	append-flags -fsigned-char
+	use ppc && epatch ${FILESDIR}/${PN}-wav-segfault.patch
 
 	myconf="${myconf} `use_enable oggvorbis ogg-vorbis`"
 	myconf="${myconf} `use_enable mad`"
