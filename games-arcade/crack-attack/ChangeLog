@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/crack-attack
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.13 2004/12/28 22:55:03 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.14 2005/03/29 02:50:26 mr_bones_ Exp $
+
+*crack-attack-1.1.12 (28 Mar 2005)
+
+  28 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +crack-attack-1.1.12.ebuild:
+  version bump (bug #86829)
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

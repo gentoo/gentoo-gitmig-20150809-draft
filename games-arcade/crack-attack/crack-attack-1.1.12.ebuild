@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.11-r1.ebuild,v 1.2 2005/03/29 02:50:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.12.ebuild,v 1.1 2005/03/29 02:50:26 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
 DESCRIPTION="Addictive OpenGL-based block game"
 HOMEPAGE="https://savannah.nongnu.org/projects/crack-attack/"
-SRC_URI="http://savannah.nongnu.org/download/crack-attack/${P}.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/crack-attack/${P}-r1.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,10 +16,14 @@ IUSE="gtk"
 DEPEND="virtual/glut
 	gtk? ( >=x11-libs/gtk+-2.4 )"
 
+S=${WORKDIR}/${P}-r1
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-multi-compat.patch
+	cd "${S}"
+	sed -i \
+		-e '/handle flashing/d' src/LevelLights.cxx \
+		|| die "sed failed"
 }
 
 src_compile() {
