@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.1 2003/05/09 10:31:07 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.2 2003/05/09 10:33:46 kosmikus Exp $
 
 DESCRIPTION="Helium (for learning Haskell)"
 SRC_URI="http://www.cs.uu.nl/~afie/helium/distr/${P}-src.tar.gz
@@ -8,7 +8,7 @@ SRC_URI="http://www.cs.uu.nl/~afie/helium/distr/${P}-src.tar.gz
 HOMEPAGE="http://www.cs.uu.nl/~afie/helium"
 
 DEPEND="virtual/glibc
-	dev-lang/ghc
+	virtual/ghc
 	readline? ( sys-libs/readline )"
 RDEPEND="virtual/glibc
 	virtual/jdk
@@ -19,7 +19,7 @@ IUSE="readline"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc"
 
 src_unpack() { 
 	unpack ${P}-src.tar.gz
