@@ -106,3 +106,4 @@ move net-www/horde www-apps/horde
 move net-www/horde-accounts www-apps/horde-accounts
 move net-www/horde-chora www-apps/horde-chora
 move net-www/horde-forwards www-apps/horde-forwards
+move net-www/horde-imp www-apps/horde-imp
