@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.3.6.ebuild,v 1.1 2003/12/13 09:34:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.3.6.ebuild,v 1.2 2004/01/05 16:37:41 vapier Exp $
 
 inherit games
 
@@ -8,11 +8,11 @@ DESCRIPTION="A fast-paced first-person-perspective online multiplayer game simil
 HOMEPAGE="http://hosted.tribalwar.com/legends/"
 SRC_URI="http://themasters.co.za/${P}.tar.gz"
 
-RESTRICT="nomirror"
-KEYWORDS="~x86"
 LICENSE="as-is"
 SLOT="0"
+KEYWORDS="x86"
 IUSE="dedicated"
+RESTRICT="nomirror"
 
 DEPEND=""
 RDEPEND=">=media-libs/libsdl-1.2
@@ -29,11 +29,11 @@ src_unpack() {
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
 
-	dodir ${dir}                           || die "dodir failed"
-	cp -R * ${D}/${dir}/                   || die "cp failed"
+	dodir ${dir}
+	cp -R * ${D}/${dir}/ || die "cp failed"
 	dogamesbin ${FILESDIR}/legends         || die "dogamesbin failed (1)"
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/legends
-	if use dedicated; then
+	if [ `use dedicated` ] ; then
 		dogamesbin ${FILESDIR}/legends-ded || die "dogamesbin failed (2)"
 		dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/legends-ded
 	fi
