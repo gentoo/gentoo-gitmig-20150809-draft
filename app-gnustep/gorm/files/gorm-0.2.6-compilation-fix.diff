@@ -1,0 +1,12 @@
+--- Gorm.m.orig	2003-07-15 19:20:50.000000000 +0200
++++ Gorm.m	2003-07-15 19:21:15.000000000 +0200
+@@ -1288,7 +1288,8 @@
+ 
+ - (id) save: (id)sender
+ {
+-  return [(id)[self activeDocument] saveDocument: sender];
++   [(GormDocument *)[self activeDocument] saveGormDocument: sender];
++   return self;
+ }
+ 
+ - (id) saveAll: (id)sender
