@@ -1,11 +1,18 @@
 # ChangeLog for sys-apps/at
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.11 2003/11/19 19:55:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.12 2003/12/15 04:18:56 rajiv Exp $
 
-  19 Nov 2003; Caleb Tennis <caleb@gentoo.org> at-3.1.8-r3.ebuild, at-3.1.8-r6.ebuild,
-  at-3.1.8-r7.ebuild:
-  Removed old versions. They were masked in package.mask anyway and haven't been
-  updated in a very long time.
+*at-3.1.8-r9 (14 Dec 2003)
+
+  14 Dec 2003; Rajiv Aaron Manglani <rajiv@gentoo.org> at-3.1.8-r9.ebuild:
+  fperms after fowners. include 'timespec' in the docs since the man page
+  references it. also removed some old diffs and other files from
+  the files dir. cleaned up the ChangeLog.
+
+  19 Nov 2003; Caleb Tennis <caleb@gentoo.org> at-3.1.8-r3.ebuild,
+  at-3.1.8-r6.ebuild, at-3.1.8-r7.ebuild:
+  Removed old versions. They were masked in package.mask anyway and haven't
+  been updated in a very long time.
 
   06 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> at-3.1.8-r3.ebuild,
   at-3.1.8-r6.ebuild, at-3.1.8-r7.ebuild, at-3.1.8-r8.ebuild:
@@ -47,8 +54,4 @@
   Added KEYWORDS, SLOT.
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Added initial ChangeLog.
