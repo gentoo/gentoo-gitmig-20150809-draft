@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.1 2004/06/03 13:43:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.2 2004/06/03 23:00:26 mr_bones_ Exp $
 
 inherit games
 
@@ -63,11 +63,11 @@ src_install() {
 	done
 
 	dodoc README
-	dogamesbin battalion
+	dogamesbin battalion || die "dogamesbin failed"
 
-	insinto ${GAMES_STATEDIR}
-	touch ${D}${GAMES_STATEDIR}/battalion_hiscore
-	fperms 660 ${GAMES_STATEDIR}/battalion_hiscore
+	dodir "${GAMES_STATEDIR}"
+	touch "${D}${GAMES_STATEDIR}/battalion_hiscore"
+	fperms 660 "${GAMES_STATEDIR}/battalion_hiscore"
 
 	prepgamesdirs
 }
