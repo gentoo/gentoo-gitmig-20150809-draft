@@ -616,7 +616,7 @@ app-misc/ldapbrowser
 
 # phoen][x <phoenix@gentoo.org> (22 Jul 2002)
 # Bumped to new version - masked for testing
->=app-emulation/bochs-1.4.1
+=app-emulation/bochs-1.4.1
 
 # <seemant@gentoo.org> (20 Jul 2002)
 # masked because GNU Readline 4.2 is not in 1.0 default inclusion
