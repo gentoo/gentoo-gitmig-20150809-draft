@@ -2,10 +2,10 @@ MD5 fee6ff9d3bda846c84a2650aff370283 fvwm-2.5.7-r5.ebuild 8765
 MD5 f7be9fe31d4c7311d643486221a530a3 fvwm-2.5.10-r5.ebuild 9855
 MD5 9dea6a4c4802ee4b7fadd0b74e176899 fvwm-2.5.8-r6.ebuild 10705
 MD5 5b04edc59a5abc45ff89473f9039d6e8 fvwm-2.5.10-r4.ebuild 9486
-MD5 c9e5e40a3d0f7adf5154ca6f220c1a88 ChangeLog 14032
+MD5 bf8326cb19f07f1381f9821550ad720b ChangeLog 14125
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
 MD5 a747110a9b94991131c858edd26e677f fvwm-2.4.18.ebuild 3163
-MD5 0cf4f15f3aa4be78b9148840330c0b5c fvwm-2.5.10-r3.ebuild 9290
+MD5 23650ab610c9edf0c2e2414aefe7c23a fvwm-2.5.10-r3.ebuild 9287
 MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
 MD5 d8a3811b3a9581c42119cdc86dff4c7d files/fvwm-2.5.10-Test-update.diff 702
 MD5 e2ceb5d855c5406a09d82442196efad8 files/README.transluceny.gz 5788
