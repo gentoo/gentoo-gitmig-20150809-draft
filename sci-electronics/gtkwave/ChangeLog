@@ -1,0 +1,46 @@
+# ChangeLog for app-sci/gtkwave
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.1 2004/12/27 19:40:57 ribosome Exp $
+
+*gtkwave-2.0.0_pre20030319 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +gtkwave-2.0.0_pre20030319.ebuild:
+  Moved from app-sci/gtkwave to sci-electronics/gtkwave.
+
+  05 Jun 2004; David Holm <dholm@gentoo.org> gtkwave-2.0.0_pre20030319.ebuild:
+  Added to ~ppc.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org>
+  gtkwave-2.0.0_pre20021022-r1.ebuild, gtkwave-2.0.0_pre20030319.ebuild:
+  Cleanup, added IUSE
+
+  05 Jan 2004; <plasmaroo@gentoo.org> gtkwave-2.0.0_pre20030319.ebuild:
+  Removed the 2003-07-15 snapshot as it was unstable and was not  
+  recommended for general public consumption by the author. "~sparc"
+  added to 20030319.
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org>
+  gtkwave-2.0.0_pre20030715.ebuild:
+  Added ~sparc keyword o fix broken dependencies in app/sci/tbass.
+
+*gtkwave-2.0.0_pre20030715 (27 Nov 2003)
+
+  27 Nov 2003; <plasmaroo@gentoo.org> gtkwave-2.0.0_pre20030715.ebuild:
+  Version bump...
+
+*gtkwave-2.0.0_pre20030319 (28 Jul 2003)
+
+  28 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #25387 + add docs.
+
+*gtkwave-2.0.0_pre20021022-r1 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org>
+  gtkwave-2.0.0_pre20021022-r1.ebuild:
+  Removed usage of pic USE flag
+
+*gtkwave-gtkwave-2.0.0_pre20021022 (22 Nov 2002)
+
+  22 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk>.
