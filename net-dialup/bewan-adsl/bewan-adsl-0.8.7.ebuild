@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.8.7.ebuild,v 1.2 2004/10/28 09:32:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.8.7.ebuild,v 1.3 2004/12/05 21:17:16 mrness Exp $
 
-inherit eutils kernel-mod
+inherit eutils linux-info
 
 DESCRIPTION="Bewan ADSL PCI&USB st driver"
 SRC_URI="http://www.bewan.com/bewan/drivers/bast-${PV}.tgz"
@@ -37,8 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	if kernel-mod_is_2_6_kernel
-	then
+	if kernel_is 2 6 ; then
 		KV_OBJ="ko"
 	else
 		KV_OBJ="o"

@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/bewan-adsl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.2 2004/10/28 09:32:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.3 2004/12/05 21:20:46 mrness Exp $
+
+  05 Dec 2004; Alin Nastac <mrness@gentoo.org> bewan-adsl-0.8.7.ebuild:
+  Replace kernel-mod eclass with linux-info.
 
   28 Oct 2004; Daniel Black <dragonheart@gentoo.org> bewan-adsl-0.8.7.ebuild:
   eclass kmod -> kernel-mod thanks to Stefan Schweizer <sschweizer@gmail.com> in
