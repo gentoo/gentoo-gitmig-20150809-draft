@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.53 2003/06/07 07:37:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.54 2003/06/08 21:30:59 lu_zero Exp $
 
+  08 Jun 2003; Luca Barbato <lu_zero@gentoo.org>
+  binutils-2.14.90.0.1-r1.ebuild, binutils-2.14.90.0.2.ebuild:
+  marked stable on ppc.
 
 *binutils-2.14.90.0.4 (26 May 2003)
 
