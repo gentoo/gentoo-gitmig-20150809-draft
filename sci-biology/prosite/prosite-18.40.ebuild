@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-18.40.ebuild,v 1.1 2004/12/23 21:24:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-18.40.ebuild,v 1.2 2005/01/02 01:52:22 j4rg0n Exp $
 
 DESCRIPTION="A protein families and domains database"
 HOMEPAGE="http://ca.expasy.org/${PN}"
