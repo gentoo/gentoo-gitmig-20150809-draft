@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r6.ebuild,v 1.11 2003/11/14 08:24:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r6.ebuild,v 1.12 2003/11/16 06:18:13 vapier Exp $
 
 inherit eutils
 
@@ -17,11 +17,11 @@ KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64"
 IUSE="parse-clocks selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	>=sys-libs/readline-4.1
-	|| (
-		dev-libs/libelf
-		dev-libs/elfutils
-	)"
+	>=sys-libs/readline-4.1"
+#	|| (
+#		dev-libs/libelf
+#		dev-libs/elfutils
+#	)"
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-ntp )
 	>=sys-apps/sed-4.0.5"
