@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/kflog
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.4 2004/06/04 17:52:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.5 2004/06/06 00:15:42 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> kflog-2.1.1.ebuild:
+  x86 keyword
 
   04 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> kflog-2.1.1.ebuild:
   pkg_postinstall -> pkg_postinst

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/kflog-2.1.1.ebuild,v 1.4 2004/06/04 17:52:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/kflog-2.1.1.ebuild,v 1.5 2004/06/06 00:15:42 dragonheart Exp $
 
 inherit kde
 need-kde 3
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kflog.org/"
 SRC_URI="http://www.kflog.org/download/src/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="${DEPEND}
