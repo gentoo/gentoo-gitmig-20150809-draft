@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.18 2004/09/04 04:04:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.19 2004/09/04 04:15:32 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -111,7 +111,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	chmod 0775 /var/run/screen
+	chmod 0775 ${ROOT}/var/run/screen
 
 	einfo "Some dangerous key bindings have been removed or changed to more safe values."
 	einfo "For more info, please check /etc/screenrc"
