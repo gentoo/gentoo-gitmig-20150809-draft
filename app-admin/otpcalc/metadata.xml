@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>taviso@gentoo.org</email>
+  <name>Tavis Ormandy</name>
+</maintainer>
+<longdescription>
+otpCalc is an RFC2289 and RFC1760 compliant one time password calculator, written to use the GTK+ library for screen I/O.
+</longdescription>
+</pkgmetadata>
