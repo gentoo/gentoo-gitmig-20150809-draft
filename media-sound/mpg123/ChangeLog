@@ -1,8 +1,12 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.15 2003/07/19 02:44:31 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.16 2003/08/10 05:58:23 tester Exp $
 
 *mpg123-0.59s (19 Jul 2003)
+
+  10 Aug 2003; Olivier Crete <tester@gentoo.org> files/mpg123-0.59r-amd64.diff:
+  Newer amd64 patch, the original version produced garbled sound, fixed
+  version from Andres Meyer <andres.meyer@computer.org>, fixes bug #25587
 
   19 Jul 2003; jje <jje@gentoo.org> mpg123-0.59s.ebuild:
   Last development version. Adds support for id3_v2 tags. I'm a little nervous 
