@@ -1,8 +1,11 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.27 2002/12/18 01:44:01 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.28 2002/12/25 23:14:32 mholzer Exp $
 
-*cdrtools-2.0 (2 Dec 2002)
+*cdrtools-2.0_preX (2 Dec 2002)
+
+  25 Dec 2002; Martin Holzer <mholzer@gentoo.org> cdrtools-2.0_pre3.ebuild :
+  Changed SRC_URI. Fixes #12703.
 
   17 Dec 2002; Matt Keadle <mkeadle@gentoo.org> cdrtools-2.0_pre3.ebuild :
   Corrected SRC_URI
