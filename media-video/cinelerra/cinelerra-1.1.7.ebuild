@@ -1,11 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.2 2003/08/13 01:53:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.7.ebuild,v 1.3 2003/08/28 22:32:03 lu_zero Exp $
 
-inherit gcc eutils
+inherit gcc eutils flag-o-matic
 export WANT_GCC_3="yes"
 
-export CFLAGS=${CFLAGS/-O?/-O2}
+#export CFLAGS=${CFLAGS/-O?/-O2}
+
+filter-flags "-fPIC -fforce-addr"
 
 DESCRIPTION="Cinelerra - Professional Video Editor"
 HOMEPAGE="http://heroinewarrior.com/cinelerra.php3"
