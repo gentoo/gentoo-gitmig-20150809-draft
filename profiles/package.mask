@@ -747,9 +747,8 @@ app-cdr/cddump
 # add 4.1.71* too
 =net-misc/ntp-4.1.71*
 
-# jnelson@gentoo.org 2 May 2002
-# mask python 2.2.1  unmasked may 7th on jnelson's request
-# =dev-lang/python-2.2.1*
+# jnelson@gentoo.org 29 May 2002
+=dev-lang/python-2.2.1-r1
 
 # seemant@gentoo.org 1 May 2002
 # libpng-1.2.2 -- coz users don't --clean rsync like they should
