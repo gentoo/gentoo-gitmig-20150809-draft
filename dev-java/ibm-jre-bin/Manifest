@@ -1,8 +1,18 @@
-MD5 719b7a0709f57206826673bba1810c39 ChangeLog 2041
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dbda75ce0d6522086129ca13817da9c1 ibm-jre-bin-1.4.2.ebuild 1464
+MD5 9efe89786363057fdf47e2c2b4c40fcb ibm-jre-bin-1.4.1-r1.ebuild 1453
+MD5 1182da9272fd7ab20062bf14806ffd98 ChangeLog 2217
 MD5 fb2a9b7b6110f3fc99c228068cac96b8 metadata.xml 284
-MD5 f51e18895c9918782713b9cbfb0795ad ibm-jre-bin-1.4.1-r1.ebuild 1448
-MD5 c3b512aff29c784c77da7a27b2671b52 ibm-jre-bin-1.4.2.ebuild 1458
 MD5 51a2a58cc1b1113444ccc5c545f2674e files/digest-ibm-jre-bin-1.4.1-r1 211
-MD5 2e39286179863d6cfd0686f84e4907f6 files/digest-ibm-jre-bin-1.4.2 211
 MD5 8bd327361eb4826b3903c4358cc44a2b files/ibm-jre-bin-1.4.1 685
 MD5 dbb65981559a5881a93e19de3dde0b7c files/ibm-jre-bin-1.4.2 681
+MD5 2e39286179863d6cfd0686f84e4907f6 files/digest-ibm-jre-bin-1.4.2 211
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCTHns06ebR+OMO78RAu3dAJ9vbdniFIy7kG6g51Lk9J6XZyZt7wCfWJyE
+PeQEuwZ5k7dI6mioTD2PGw8=
+=72FI
+-----END PGP SIGNATURE-----
