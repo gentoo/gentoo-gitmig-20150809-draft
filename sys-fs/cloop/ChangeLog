@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/cloop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.1 2004/11/23 22:36:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.2 2004/11/23 22:50:05 genstef Exp $
+
+*cloop-2.01.5 (23 Nov 2004)
+
+  23 Nov 2004; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  +files/cloop.fix.patch, +files/kernel-2.6.8-fs_h-fix.patch,
+  +files/kernel26_amd64.patch, +cloop-2.01.5.ebuild:
+  Version bump. Adding patches thanks to Billy Holmes <billy@gonoph.net> in
+  bug 57912
 
 *cloop-1.0 (23 Nov 2004)
 

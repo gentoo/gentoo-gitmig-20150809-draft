@@ -1,0 +1,20 @@
+--- cloop-2.01/compressed_loop.c.orig	2004-05-14 15:22:47.000000000 -0400
++++ cloop-2.01/compressed_loop.c	2004-11-22 11:32:45.772837000 -0500
+@@ -202,7 +202,7 @@
+                           unsigned long offset, unsigned long size)
+ {
+  char *kaddr;
+- struct clo_read_data *p = (struct clo_read_data*)desc->buf;
++ struct clo_read_data *p = (struct clo_read_data*)desc->arg.buf;
+  unsigned long count = desc->count;
+  if (size > count) size = count;
+  kaddr = kmap(page);
+@@ -228,7 +228,7 @@
+    read_descriptor_t desc;
+    desc.written = 0;
+    desc.count   = size;
+-   desc.buf     = (char*)&cd;
++   desc.arg.buf     = (char*)&cd;
+    desc.error   = 0;
+ #ifdef REDHAT_KERNEL /* Greenshoe Linux */
+    do_generic_file_read(f, &pos, &desc, clo_read_actor, 0);
