@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-1.0.0.ebuild,v 1.16 2004/07/11 02:55:19 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-1.0.0.ebuild,v 1.17 2004/09/16 01:21:37 pvdabeel Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc ppc64 macos"
+KEYWORDS="x86 ppc sparc ppc64 macos ppc-macos"
 
 DEPEND="dev-lang/perl
 	sys-apps/grep
