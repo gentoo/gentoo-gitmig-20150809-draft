@@ -1,0 +1,9 @@
+# ChangeLog for media-video/maven-poke
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/maven-poke/ChangeLog,v 1.1 2004/03/18 15:24:18 kanaka Exp $
+
+*maven-poke-0.0.1 (18 Mar 2004)
+
+  18 Mar 2004; Joel Martin <kanaka@gentoo.org> maven-poke-0.0.1.ebuild:
+  New ebuild to close bug 40861
+
