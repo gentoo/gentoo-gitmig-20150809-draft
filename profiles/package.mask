@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3354 2004/11/29 01:51:33 nakano Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3355 2004/11/29 10:16:00 obz Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -497,6 +497,8 @@ app-accessibility/speechd-up
 # gnome meta update tracker
 =gnome-base/gnome-2.6.1_p1
 =gnome-base/gnome-2.6.3_pre*
+# masking 2.8.1
+=gnome-base/gnome-2.8.1
 
 # <lanius@gentoo.org> (12 Apr 2004) (upd. 25 Aug 2004)
 # these are beta version
