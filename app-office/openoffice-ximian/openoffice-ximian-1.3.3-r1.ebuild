@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.3-r1.ebuild,v 1.1 2004/09/06 14:26:57 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.3-r1.ebuild,v 1.2 2004/09/06 18:33:53 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -86,7 +86,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	!dev-util/dmake
 	java? ( >=virtual/jdk-1.4.1 )
-	!java? (dev-libs/libxslt )"
+	!java? ( dev-libs/libxslt )"
 
 pkg_setup() {
 
