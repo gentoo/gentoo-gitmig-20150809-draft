@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.1.ebuild,v 1.2 2001/01/07 06:57:47 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.3.ebuild,v 1.1 2001/01/07 06:57:47 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac1
@@ -13,8 +13,8 @@ else
 fi
 SRC_URI="
 http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0.tar.bz2
-http://www.de.kernel.org/pub/linux/kernel/people/alan/2.4/patch-2.4.0-ac1.bz2
-ftp://ftp.reiserfs.org/pub/2.4/linux-2.4.0-test12-reiserfs-3.6.23-patch.gz
+http://www.de.kernel.org/pub/linux/kernel/people/alan/2.4/patch-2.4.0-ac3.bz2
+ftp://ftp.reiserfs.org/pub/2.4/linux-2.4.0-reiserfs-3.6.24-patch.gz
 http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz
 http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz
 http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.1.1-patch.tar.gz
@@ -34,21 +34,18 @@ src_unpack() {
     cd ${WORKDIR}
     unpack linux-2.4.0.tar.bz2
     cd ${S}
-    echo "Applying ac1 patch..."
-    bzip2 -dc ${DISTDIR}/patch-2.4.0-ac1.bz2 | patch -p1
+    echo "Applying ac3 patch..."
+    bzip2 -dc ${DISTDIR}/patch-2.4.0-ac3.bz2 | patch -p1
 
 
     echo "Applying ReiserFS patch..."
-    gzip -dc ${DISTDIR}/linux-2.4.0-test12-reiserfs-3.6.23-patch.gz | patch -p1
+    gzip -dc ${DISTDIR}/linux-2.4.0-reiserfs-3.6.24-patch.gz | patch -p1
 
-    echo "Applying ReiserFS Makefile patch..."
-    gzip -dc ${FILESDIR}/${PV}/reiserfs-prerelease-makefile.patch.gz | ( cd fs/reiserfs; patch -p0 )
+    echo "Applying ReiserFS fixes patch..."
+    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-ac3-reiserfs-3.6.24-fixes.patch.gz | patch -p1
 
     echo "Applying reiser-nfs patch..."
-    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-prerelease-ac2-reiserfs-3.6.23-nfs.diff.gz | patch -p1
-
-    echo "Fixing rejected file..."
-    cp ${FILESDIR}/${PV}/nfsfh.c ${S}/fs/nfsd/nfsfh.c
+    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-ac3-reiserfs-3.6.24-nfs.diff.gz | patch -p1
 
     mkdir extras
     if [ "`use jfs`" ]
@@ -165,8 +162,7 @@ src_install() {
 		cd ${S}
 		doins arch/i386/boot/bzImage
 		#grab modules
-		dodir /lib/modules/`/bin/uname -r` 
-		dodir /lib/modules/2.4.0-ac1
+		dodir /lib/modules/${KV}
 		try make INSTALL_MOD_PATH=${D} modules_install
 		#install ALSA modules
 		cd ${S}/extras/alsa-driver-0.5.10
