@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.45 2004/05/27 13:13:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.46 2004/05/27 13:39:40 caleb Exp $
+
+*autoconf-2.59-r4 (27 May 2004)
+
+  27 May 2004; Caleb Tennis <caleb@gentoo.org> autoconf-2.59-r4.ebuild:
+  New version which incorporates a new ac-wrapper-4.pl
+  Use a subroutine which will pull out the greatest AC_PREREQ() value in
+  a configure.in file in case there is more than one (see Bug #41389).
+  Also, change the gt statements to be 2.13 instead of 2.1 or AC_PREREQs fail
+  on seeing 2.12 for example (actually, don't fail, but use autoconf-2.5x which
+  is not correct).
 
   27 May 2004; Caleb Tennis <caleb@gentoo.org> autoconf-2.59-r3.ebuild:
   Mark x86 stable
