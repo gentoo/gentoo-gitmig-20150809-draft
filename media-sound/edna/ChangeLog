@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.1 2003/12/14 22:57:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.2 2003/12/14 23:17:39 nerdboy Exp $
+
+*edna-0.5-r1 (14 Dec 2003)
+
+  14 Dec 2003; <nerdboy@gentoo.org> edna-0.5-r1.ebuild, edna-0.5.ebuild:
+  added html docs (doh!) and cleaned up ebuilds a bit
 
 *edna-0.5 (14 Dec 2003)
 
