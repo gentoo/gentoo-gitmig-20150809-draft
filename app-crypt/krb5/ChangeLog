@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/krb5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/ChangeLog,v 1.14 2003/03/21 17:07:26 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/ChangeLog,v 1.15 2003/03/28 12:29:34 pvdabeel Exp $
 
   21 Mar 2003; Wout Mertens <wmertens@gentoo.org> krb5-1.2.7-r1.ebuild :
   Bumped revision, forcing rebuild so that people who already had it will
@@ -17,6 +17,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *krb5-1.2.6-r1 (06 Dec 2002)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> krb5-1.2.6-r1.ebuild :
+  Moved to ppc
 
   20 Jan 2003; Nick Hadaway <raker@gentoo.org> krb5-1.2.6-r1.ebuild :
   Changed PROVIDES to PROVIDE.
