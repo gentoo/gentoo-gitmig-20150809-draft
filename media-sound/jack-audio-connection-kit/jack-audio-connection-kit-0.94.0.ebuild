@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.94.0.ebuild,v 1.2 2004/02/04 21:45:53 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.94.0.ebuild,v 1.3 2004/02/07 22:28:49 vapier Exp $
 
 inherit flag-o-matic
-
-IUSE="doc debug jack-tmpfs jack-caps"
 
 DESCRIPTION="A low-latency audio server"
 HOMEPAGE="http://jackit.sourceforge.net/"
 SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~ppc"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~amd64"
+IUSE="doc debug jack-tmpfs jack-caps"
 
 DEPEND=">=media-libs/alsa-lib-0.9.1
 	>=media-libs/libsndfile-1.0.0
@@ -23,14 +22,12 @@ DEPEND=">=media-libs/alsa-lib-0.9.1
 	doc? ( app-doc/doxygen )
 	sys-devel/autoconf
 	!media-sound/jack-cvs"
-
 PROVIDE="virtual/jack"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-doc-option.patch || \
-		die "Documentation configure option patch failed"
+	epatch ${FILESDIR}/${PN}-doc-option.patch
 	autoconf || die "Couldn't regenerate configure file, failing"
 }
 
@@ -40,7 +37,6 @@ src_compile() {
 
 	myarch=`get-flag -march`
 
-	cd $S
 	sed -i "s/^CFLAGS=\$JACK_CFLAGS/CFLAGS=\"\$JACK_CFLAGS $myarch\"/" configure
 	use doc \
 		&& myconf="--enable-html-docs --with-html-dir=/usr/share/doc/${PF}" \
