@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.710 2004/11/03 09:14:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.711 2004/11/04 01:52:38 latexer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -137,6 +137,7 @@ dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure 
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
 dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, FoxPro, Visual dBase/Objects/FoxPro plus some older products.
 dev-db/tora:oracle - Enable oracle support
+dev-dotnet/gtk-sharp:gnomedb - Enable gnomedb support
 dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
 dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace-cvs:3ds - Enables support for .3DS files in CrystalSpace
@@ -674,7 +675,6 @@ x11-base/xorg-x11:type1-fonts - Build Type1 fonts
 x11-base/xorg-x11:xprint - Builds the XPrint extension to X
 x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fox:freetype - Enable freetype support (allows for antialiased fonts)
-x11-libs/gtk-sharp:gnomedb - Enable gnomedb support
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/qt:immqt -Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
