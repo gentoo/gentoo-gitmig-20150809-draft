@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/e16menuedit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit/ChangeLog,v 1.5 2004/06/28 19:51:52 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit/ChangeLog,v 1.6 2005/03/29 14:44:06 luckyduck Exp $
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> e16menuedit-0.1.ebuild:
+  added ~amd64 to KEYWORDS, fixes #86563
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> e16menuedit-0.1.ebuild:
   add sed-4 dep
