@@ -1,6 +1,12 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.26 2003/03/25 23:57:25 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.27 2003/06/12 00:07:38 seemant Exp $
+
+*links-2.1_pre11 (11 Jun 2003)
+
+  11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre11.ebuild:
+  version bump thanks to: Ingo -LaSombra- Hoffmann <las0mbra@ig.com.br> in bug
+  #22557
 
 *links-2.1_pre9 (04 Mar 2003)
 
