@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45-r2.ebuild,v 1.10 2004/09/03 16:43:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45-r2.ebuild,v 1.11 2005/04/01 13:58:21 agriffis Exp $
 
 inherit perl-module flag-o-matic gnuconfig
 

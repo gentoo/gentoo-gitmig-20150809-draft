@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.18 2005/02/24 18:18:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.19 2005/04/01 13:50:44 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> amap-4.7.ebuild:
+  stable on ia64
 
   24 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> amap-4.7.ebuild:
   Stable on sparc

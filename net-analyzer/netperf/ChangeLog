@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.21 2005/03/19 18:08:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.22 2005/04/01 13:53:31 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> netperf-2.3.ebuild:
+  stable on ia64
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> netperf-2.3.ebuild:
   Stable on alpha.

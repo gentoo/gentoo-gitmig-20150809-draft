@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.50 2004/12/29 02:56:03 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.51 2005/04/01 13:58:21 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> rrdtool-1.0.49.ebuild:
+  stable on ia64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
