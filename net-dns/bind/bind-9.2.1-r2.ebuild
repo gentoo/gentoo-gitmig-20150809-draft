@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.1 2002/08/06 01:41:26 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.2 2002/08/06 01:55:21 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="BIND - Name Server"
@@ -107,6 +107,11 @@ pkg_config() {
 	chmod 700 /chroot
 	chown named:named /chroot/dns
 	chmod 700 /chroot/dns
+
+	cp /etc/conf.d/named /etc/conf.d/named.orig
+	sed -e 's:^#CHROOT="/chroot/dns"$:CHROOT="/chroot/dns":' \
+		/etc/conf.d/named.orig > /etc/conf.d/named
+	rm -f /etc/conf.d/named.orig
 
 	einfo "Add the following to your root .bashrc or .bash_profile:"
 	einfo "alias rndc='rndc -k /chroot/dns/etc/bind/rndc.key'"
