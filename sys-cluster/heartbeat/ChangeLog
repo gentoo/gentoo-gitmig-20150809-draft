@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.7 2003/10/09 20:30:56 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.8 2003/10/15 15:22:16 iggy Exp $
+
+*heartbeat-1.0.4 (15 Oct 2003)
+
+  15 Oct 2003; <iggy@gentoo.org> heartbeat-1.0.3-r1.ebuild,
+  heartbeat-1.0.4.ebuild:
+  version bump, security fix, upgrade asap and let me know if anything is
+  broken, this is getting fasttracked to arch
 
   09 Oct 2003; <iggy@gentoo.org> files/heartbeat-init:
   small fix in the init script
