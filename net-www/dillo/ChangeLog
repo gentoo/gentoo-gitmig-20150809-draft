@@ -1,6 +1,10 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.36 2004/04/27 07:34:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.37 2004/04/27 22:17:14 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> dillo-0.7.3-r3.ebuild,
+  dillo-0.7.3-r5.ebuild:
+  Add inherit eutils
 
   27 Apr 2004; Mike Frysinger <vapier@gentoo.org> +files/0.8.0-gcc34.patch,
   dillo-0.8.0-r2.ebuild:

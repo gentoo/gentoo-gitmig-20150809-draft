@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r3.ebuild,v 1.6 2004/02/23 09:46:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.7.3-r3.ebuild,v 1.7 2004/04/27 22:17:14 agriffis Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 S2=${WORKDIR}/dillo-gentoo-extras-patch3
 I18N_P=${P}-i18n-misc-20031105-2

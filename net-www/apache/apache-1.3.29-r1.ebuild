@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r1.ebuild,v 1.11 2004/04/10 01:13:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r1.ebuild,v 1.12 2004/04/27 22:14:09 agriffis Exp $
+
+inherit eutils
 
 #IUSE="ipv6 pam"
 IUSE="pam"

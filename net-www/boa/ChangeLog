@@ -1,6 +1,10 @@
 # ChangeLog for net-www/boa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.16 2004/04/26 19:15:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.17 2004/04/27 22:15:13 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> boa-0.94.13-r1.ebuild,
+  boa-0.94.13.ebuild:
+  Add inherit eutils
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> boa-0.94.13-r1.ebuild,
   boa-0.94.13.ebuild:
