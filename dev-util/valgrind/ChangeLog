@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.2 2002/09/29 19:47:47 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.3 2002/10/23 04:31:13 blocke Exp $
+
+*valgrind-1.0.4 (23 Oct 2002)
+
+  23 Oct 2002; Bruce A. Locke <blocke@shivan.org> valgrind-1.0.4.ebuild:
+  Version bump with gcc 3.1+ fixes mentioned on the upstream website.
 
 *valgrind-1.0.3 (29 Sep 2002)
 
