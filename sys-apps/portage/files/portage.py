@@ -66,34 +66,39 @@ def relparse(myver):
 	mynewver=string.split(myver,"_")
 	if len(mynewver)==2:
 		#alpha,beta or pre
-		number=string.atoi(mynewver[0])
+		number=string.atof(mynewver[0])
 		if "beta" == mynewver[1][:4]:
 			p1=-2
 			try:
-				p2=string.atoi(mynewver[1][4:])
+				p2=string.atof(mynewver[1][4:])
 			except:
 				p2=0
 		elif "alpha" == mynewver[1][:5]:
 			p1=-3
 			try:
-				p2=string.atoi(mynewver[1][5:])
+				p2=string.atof(mynewver[1][5:])
 			except:
 				p2=0
 		elif "pre" ==mynewver[1][:3]:
 			p1=-1
 			try:
-				p2=string.atoi(mynewver[1][3:])
+				p2=string.atof(mynewver[1][3:])
 			except:
 				p2=0
+		elif "p" ==mynewver[1][:1]:
+			try:
+				p1=string.atoi(mynewver[1][1:])
+			except:
+				p1=0
 	else:
 		#normal number or number with letter at end
 		divider=len(myver)-1
 		if myver[divider:] not in "1234567890":
 			#letter at end
 			p1=ord(myver[divider:])
-			number=string.atoi(myver[0:divider])
+			number=string.atof(myver[0:divider])
 		else:
-			number=string.atoi(myver)		
+			number=string.atof(myver)		
 	return [number,p1,p2]
 
 
@@ -109,81 +114,69 @@ def revverify(myrev):
 	return 0
 
 #returns 1 if valid version string, else 0
-# valid string in format: <v1>.<v2>...<vx>[a-z,_{alpha,beta,pre}[vy]]-vz
+# valid string in format: <v1>.<v2>...<vx>[a-z,_{alpha,beta,pre}[vy]]
+# ververify doesn't do package rev.
 
 def ververify(myval):
-	mybuildval=string.split(myval,'-')
-	if len(mybuildval)==2:
-		try:
-			string.atoi(mybuildval[1])
-			myval=mybuildval[0]
-		except:
-			return 0
+	global ERRVER
+	ERRVER=""
 	myval=string.split(myval,'.')
-	for x in range(0,len(myval)-1):
+	for x in myval[1:]:
+		x="."+x
+	for x in myval[:-1]:
 		try:
-			foo=string.atoi(myval[x])
+			foo=string.atof(x)
 		except:
+			ERRVER=x+" is not a valid version component."
 			return 0
-	endval=myval[-1:][0]
 	try:
-		string.atoi(endval)
+		string.atof(myval[-1])
 		return 1
 	except:
 		pass
-	pos=0
-	keepgoing=1
-	while keepgoing:
-		if (pos<len(endval)) and (endval[pos] in "0123456789"):
-			pos=pos+1
-		else:
-			keepgoing=0
-	if pos==0:
-		return 0
-	endval=endval[pos:]
-	if len(endval)==0:
-		return 1
-	if endval[0] in string.lowercase:
-		if len(endval)>1:
-			return 0
-		else:
+	if myval[-1][-1] in "abcdefghijklmnopqrstuvwxyz":
+		try:
+			string.atof(myval[-1][:-1])
+			# if we got here, it's something like .02a
 			return 1
-	elif endval[0] == "_":
-		endval=endval[1:]
-		mylen=len(endval)
-		if (mylen>=3) and (endval[0:3]=="pre"):
-			if mylen==3:
-				return 1
-			else:
-				try:
-					string.atoi(endval[3:])
-					return 1
-				except:
-					return 0
-		elif (mylen>=4) and (endval[0:4]=="beta"):
-			if mylen==4:
-				return 1
-			else:
-				try:
-					string.atoi(endval[4:])
-					return 1
-				except:
-					return 0
-
-		elif (mylen>=5) and (endval[0:5]=="alpha"):
-			if mylen==5:
-				return 1
-			else:
-				try:
-					string.atoi(endval[5:])
-					return 1
-				except:
-					return 0
-
-		else:
-			return 0
-	else:
+		except:
+			pass
+	splits=string.split(myval[-1],"_")
+	if len(splits)!=2:
+		#not a valid _alpha, _beta, _pre or _p, so fail
+		ERRVER="Too many or too few \"_\" characters."
 		return 0
+	try:
+		string.atof(splits[0])
+	except:
+		#something like .asldfkj_alpha1 which is invalid :)
+		ERRVER=splits[0]+" is not a valid number."
+		return 0
+	valid=["alpha","beta","pre","p"]
+	for x in valid:
+		if splits[1][0:len(x)]==x:
+			firpart=x
+			secpart=splits[1][len(x):]
+			ok=1
+	if not ok:
+		ERRVER='Did not find an "alpha", "beta", "pre" or "p" after trailing "_"'
+		return 0
+	if len(secpart)==0:
+		if firpart=="p":
+			#patchlevel requires an int
+			ERRVER='"p" (patchlevel) requires a trailing integer (i.e. "p3")'
+			return 0	
+		else:
+			#alpha, beta and pre don't require an int
+			return 1
+	try:
+		string.atoi(secpart)
+		return 1
+		#the int after the "alpha", "beta" or "pre" was ok
+	except:
+		ERRVER=secpart+" is not a valid integer."
+		return 0
+		#invalid number!
 
 # This function can be used as a package verification function, i.e.
 # "pkgsplit("foo-1.2-1") will return None if foo-1.2-1 isn't a valid
@@ -193,31 +186,40 @@ def ververify(myval):
 # Mesa-3.0, this list would be [ "Mesa", "3.0", "0" ].
 
 def pkgsplit(mypkg):
+	global ERRPKG
+	ERRPKG=""
 	myparts=string.split(mypkg,'-')
 	if len(myparts)<2:
+		ERRPKG="Not enough \"-\" characters."
 		return None
 	if revverify(myparts[-1]):
 		if ververify(myparts[-2]):
 			if len(myparts)==2:
+				ERRPKG="Found rev and version, but no package name."
 				return None
 			else:
 				for x in myparts[:-2]:
 					if ververify(x):
+						ERRPKG=x+" shouldn't look like a version part."
 						return None
 						#names can't have versiony looking parts
 				return [string.join(myparts[:-2],"-"),myparts[-2],myparts[-1]]
 		else:
+			ERRPKG="Found revision but "+myparts[-2]+" does not appear to be a valid version."
 			return None
 
 	elif ververify(myparts[-1]):
 		if len(myparts)==1:
+			ERRPKG="Found version, but no package name."
 			return None
 		else:
 			for x in myparts[:-1]:
 				if ververify(x):
+					ERRPKG=x+" shouldn't look like a version part."
 					return None
 			return [string.join(myparts[:-1],"-"),myparts[-1],"0"]
 	else:
+		ERRPKG=myparts[-1]+" doesn't appear to be a version or rev string."
 		return None
 
 # vercmp:
@@ -229,10 +231,15 @@ def vercmp(val1,val2):
 	if len(val1)==2:
 		val1[0]=val1[0]+"."+val1[1]
 	val1=string.split(val1[0],'.')
+	#add back decimal point so that .03 does not become "3" !
+	for x in val1[1:]:
+		x="."+x
 	val2=string.split(val2,'-')
 	if len(val2)==2:
 		val2[0]=val2[0]+"."+val2[1]
 	val2=string.split(val2[0],'.')
+	for x in val2[1:]:
+		x="."+x
 	if len(val2)<len(val1):
 		for x in range(0,len(val1)-len(val2)):
 			val2.append("0")
