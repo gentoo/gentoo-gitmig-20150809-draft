@@ -81,16 +81,10 @@ gnome-extra/nautilus-media
 #not sure that it works now, sorry
 gnome-extra/nautilus-cd-burner
 
-# <vapier@gentoo.org> (28 Jan 2003)
-# overwrites glibc and breaks other packages :/
-# Bugs #14378 #14459
-app-crypt/heimdal
-
 # <chadh@gentoo.org> (23 Jan 2003)
 # new pcmcia-cs ebuilds need testing and acceptance
 sys-apps/pcmcia-cs-tools
 sys-apps/pcmcia-cs-drivers
-
 
 # <lu_zero@gentoo.org> (23 Jan 2003)
 #Not enough mature
