@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.42 2002/10/18 22:43:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.43 2002/10/19 12:41:49 azarah Exp $
+
+*mozilla-1.0.1-r2 (19 Oct 2002)
+
+  19 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add the abi-compat patch back, thanks to Tony Clark.
 
   18 Oct 2002; Seemant Kulleen <seemant@gentoo.org> :
   Add an ABI fix for sparc/sparc64 gcc-3.x based systems.
