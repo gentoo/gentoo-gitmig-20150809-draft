@@ -1,6 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ChangeLog,v 1.6 2002/07/16 04:39:54 gerk Exp $
+# $Id: ChangeLog,v 1.7 2002/10/10 11:04:22 kain Exp $
+
+*ppc-sources-2.4.20-r1 (10 Oct 2002)
+
+  10 Oct 2002; Kain <kain@kain.org> ppc-sources-2.4.20-r1 :
+
+  New PPC benh kernel + XFS.  Please remember that turning on XFS is optional.
 
 *ppc-sources-2.4.19-r6 (12 Jun 2002)
 
