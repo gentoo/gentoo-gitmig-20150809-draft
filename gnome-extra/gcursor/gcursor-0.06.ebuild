@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/gcursor-0.06.ebuild,v 1.1 2004/08/11 05:37:55 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/gcursor-0.06.ebuild,v 1.2 2004/08/11 05:47:28 obz Exp $
 
 inherit gnome2
 
@@ -18,7 +18,8 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
-	>=gnome-base/gconf-2"
+	>=gnome-base/gconf-2
+	>=app-arch/file-roller-2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12"
