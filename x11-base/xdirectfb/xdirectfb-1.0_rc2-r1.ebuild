@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc2-r1.ebuild,v 1.7 2002/10/17 16:23:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc2-r1.ebuild,v 1.8 2002/11/16 03:18:50 seemant Exp $
 
 MY_PN="XDirectFB"
 MY_PV=${PV/_/-}
@@ -20,7 +20,7 @@ SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/${MY_V}-1.tar.bz2
 HOMEPAGE="http://www.directfb.org"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="~x86 ~sparc ~sparc64"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
