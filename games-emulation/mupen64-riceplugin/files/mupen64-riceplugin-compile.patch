@@ -1,0 +1,214 @@
+diff -ur riceplugin.old/Config.cpp riceplugin/Config.cpp
+--- riceplugin.old/Config.cpp	2003-09-05 09:28:35.000000000 -0700
++++ riceplugin/Config.cpp	2005-01-09 16:52:09.915439032 -0800
+@@ -148,9 +148,9 @@
+ const int numberOfOpenGLRenderEngineSettings = sizeof(OpenGLRenderSettings)/sizeof(RenderEngineSetting);
+ 
+ #define MAIN_RICE_DAEDALUS_4		"Software\\RICEDAEDALUS510\\WINDOW"
+-#define RICE_DAEDALUS_INI_FILE		"RiceDaedalus5.1.0.ini"
++#define RICE_DAEDALUS_INI_FILE		"/usr/games/lib/mupen64/plugins/RiceDaedalus5.1.0.ini"
+ 
+-#define CONFIG_FILE                     "RiceDaedalus.cfg"
++#define CONFIG_FILE                     "/RiceDaedalus.cfg"
+ 
+ void WriteConfiguration(void);
+ void GenerateCurrentRomOptions();
+diff -ur riceplugin.old/DaedalusGraphics.cpp riceplugin/DaedalusGraphics.cpp
+--- riceplugin.old/DaedalusGraphics.cpp	2003-09-04 17:12:40.000000000 -0700
++++ riceplugin/DaedalusGraphics.cpp	2005-01-09 16:38:02.452745942 -0800
+@@ -18,11 +18,16 @@
+ */
+ #include "stdafx.h"
+ #include "_BldNum.h"
++#include <assert.h>
+ 
+ #ifndef _WIN32
+ #include <unistd.h>
+ #include <stdarg.h>
+ #include "messagebox.h"
++#include <features.h>
++#include <dlfcn.h>
++#include <errno.h>
++#include <limits.h>
+ #endif
+ 
+ PluginStatus status;
+@@ -97,30 +102,31 @@
+ 	return TRUE; 
+ } 
+ #endif
+-
+-void GetPluginDir( char * Directory ) 
+-{
+-#ifdef _WIN32
+-	char path_buffer[_MAX_PATH], drive[_MAX_DRIVE] ,dir[_MAX_DIR];
+-	char fname[_MAX_FNAME],ext[_MAX_EXT];
+-	GetModuleFileName(myhInst,path_buffer,sizeof(path_buffer));
+-	_splitpath( path_buffer, drive, dir, fname, ext );
+-	strcpy(Directory,drive);
+-	strcat(Directory,dir);
+-#else // _WIN32
+-   int n = readlink("/proc/self/exe", Directory, MAX_PATH);
+-   if (n == -1)
+-     strcpy(Directory, "./");
+-   else
+-     {
+-	Directory[n] = '\0';
+-	while(Directory[strlen(Directory)-1] != '/') 
+-	  Directory[strlen(Directory)-1] = '\0';
+-     }
+-   strcat(Directory, "plugins/");
+-#endif //_WIN32
+-}
+-
++
++void GetPluginDir( char * Directory )
++{
++#ifdef __USE_GNU
++	Dl_info info;
++	void *addr = (void *)GetPluginDir;
++	if (dladdr( addr, &info ) != 0) {
++		strncpy( Directory, info.dli_fname, PATH_MAX );
++		*(strrchr( Directory, '/' )) = '\0';
++	} else {
++		fprintf( stderr, "(WW) Couldn't get Directory of .so, trying to get emulator's path\n" );
++#endif // __USE_GNU
++		if (readlink( "/proc/self/exe", Directory, PATH_MAX ) == -1)
++		{
++			fprintf( stderr, "(WW) readlink() /proc/self/exe fail   ed: %s\n", strerror( errno ) );
++			Directory[0] = '.';
++			Directory[1] = '\0';
++		}
++		strcat( Directory, "/plugins/");
++#ifdef __USE_GNU
++	}
++#endif
++
++}
++
+ //-------------------------------------------------------------------------------------
+ __declspec(dllexport) void CALL GetDllInfo ( PLUGIN_INFO * PluginInfo )
+ {
+diff -ur riceplugin.old/DecodedMux.cpp riceplugin/DecodedMux.cpp
+--- riceplugin.old/DecodedMux.cpp	2003-08-28 13:39:21.000000000 -0700
++++ riceplugin/DecodedMux.cpp	2005-01-09 16:22:52.951517362 -0800
+@@ -760,7 +760,7 @@
+ ShadeConstMergeMapType MergeShadeWithConstantsMaps[] =
+ {
+ 	0,	SHADE_DO_NOTHING,
+-	0x0007000600070006,	SHADE_MOD_ENV,		// SHADE * ENV
++	SHADE_DO_NOTHING,	SHADE_MOD_ENV,		// SHADE * ENV
+ };
+ 
+ // 0x05070501, 0x00070006		//(1 - PRIM) * ENV + PRIM
+diff -ur riceplugin.old/IniFile.cpp riceplugin/IniFile.cpp
+--- riceplugin.old/IniFile.cpp	2003-09-03 07:49:33.000000000 -0700
++++ riceplugin/IniFile.cpp	2005-01-09 16:41:30.433074073 -0800
+@@ -115,10 +115,7 @@
+ 	char readinfo[100];
+ 	char trim[]="{}"; //remove first and last character
+ 	
+-	char filename[256];
+-	GetPluginDir(filename);
+-	strcat(filename,m_szFileName);
+-	inifile.open(filename);
++	inifile.open(m_szFileName);
+ 
+ 	if (inifile.fail())
+ 	{
+Only in riceplugin: Makefile.orig
+diff -ur riceplugin.old/OGLCombinerTNT2.cpp riceplugin/OGLCombinerTNT2.cpp
+--- riceplugin.old/OGLCombinerTNT2.cpp	2003-08-29 06:50:40.000000000 -0700
++++ riceplugin/OGLCombinerTNT2.cpp	2005-01-09 16:22:52.952517258 -0800
+@@ -120,22 +120,22 @@
+ 
+ GLenum COGLColorCombinerTNT2::RGBArgsMap[] =
+ {
+-	{GL_ZERO,					},	//MUX_0
+-	{GL_ZERO,					},	//MUX_1
+-	{GL_PREVIOUS_EXT,			},	//MUX_COMBINED,
+-	{GL_TEXTURE0_ARB,			},	//MUX_TEXEL0,
+-	{GL_TEXTURE1_ARB,			},	//MUX_TEXEL1,
+-	{GL_CONSTANT_EXT,			},	//MUX_PRIM,
+-	{GL_PRIMARY_COLOR_EXT,		},	//MUX_SHADE,
+-	{GL_CONSTANT_EXT,			},	//MUX_ENV,
+-	{GL_PREVIOUS_EXT,			},	//MUX_COMBALPHA,
+-	{GL_TEXTURE0_ARB,			},	//MUX_T0_ALPHA,
+-	{GL_TEXTURE1_ARB,			},	//MUX_T1_ALPHA,
+-	{GL_CONSTANT_EXT,			},	//MUX_PRIM_ALPHA,
+-	{GL_PRIMARY_COLOR_EXT,		},	//MUX_SHADE_ALPHA,
+-	{GL_CONSTANT_EXT,			},	//MUX_ENV_ALPHA,
+-	{GL_CONSTANT_EXT,			},	//MUX_LODFRAC,
+-	{GL_CONSTANT_EXT,			},	//MUX_PRIMLODFRAC,
++	GL_ZERO,
++	GL_ZERO,
++	GL_PREVIOUS_EXT,
++	GL_TEXTURE0_ARB,
++	GL_TEXTURE1_ARB,
++	GL_CONSTANT_EXT,
++	GL_PRIMARY_COLOR_EXT,
++	GL_CONSTANT_EXT,
++	GL_PREVIOUS_EXT,
++	GL_TEXTURE0_ARB,
++	GL_TEXTURE1_ARB,
++	GL_CONSTANT_EXT,
++	GL_PRIMARY_COLOR_EXT,
++	GL_CONSTANT_EXT,
++	GL_CONSTANT_EXT,
++	GL_CONSTANT_EXT,
+ };
+ 
+ 
+diff -ur riceplugin.old/OGLExtCombiner.cpp riceplugin/OGLExtCombiner.cpp
+--- riceplugin.old/OGLExtCombiner.cpp	2003-08-28 14:31:44.000000000 -0700
++++ riceplugin/OGLExtCombiner.cpp	2005-01-09 16:22:52.953517154 -0800
+@@ -474,22 +474,22 @@
+ 
+ GLenum COGLExtColorCombiner::RGBArgsMap[] =
+ {
+-	{GL_PRIMARY_COLOR_ARB,		},	//MUX_0
+-	{GL_PRIMARY_COLOR_ARB,		},	//MUX_1
+-	{GL_PREVIOUS_ARB,			},	//MUX_COMBINED,
+-	{GL_TEXTURE0_ARB,			},	//MUX_TEXEL0,
+-	{GL_TEXTURE1_ARB,			},	//MUX_TEXEL1,
+-	{GL_CONSTANT_ARB,			},	//MUX_PRIM,
+-	{GL_PRIMARY_COLOR_ARB,		},	//MUX_SHADE,
+-	{GL_CONSTANT_ARB,			},	//MUX_ENV,
+-	{GL_PREVIOUS_ARB,			},	//MUX_COMBALPHA,
+-	{GL_TEXTURE0_ARB,			},	//MUX_T0_ALPHA,
+-	{GL_TEXTURE1_ARB,			},	//MUX_T1_ALPHA,
+-	{GL_CONSTANT_ARB,			},	//MUX_PRIM_ALPHA,
+-	{GL_PRIMARY_COLOR_ARB,		},	//MUX_SHADE_ALPHA,
+-	{GL_CONSTANT_ARB,			},	//MUX_ENV_ALPHA,
+-	{GL_CONSTANT_ARB,			},	//MUX_LODFRAC,
+-	{GL_CONSTANT_ARB,			},	//MUX_PRIMLODFRAC,
++	GL_PRIMARY_COLOR_ARB,
++	GL_PRIMARY_COLOR_ARB,
++	GL_PREVIOUS_ARB,
++	GL_TEXTURE0_ARB,
++	GL_TEXTURE1_ARB,
++	GL_CONSTANT_ARB,
++	GL_PRIMARY_COLOR_ARB,
++	GL_CONSTANT_ARB,
++	GL_PREVIOUS_ARB,
++	GL_TEXTURE0_ARB,
++	GL_TEXTURE1_ARB,
++	GL_CONSTANT_ARB,
++	GL_PRIMARY_COLOR_ARB,
++	GL_CONSTANT_ARB,
++	GL_CONSTANT_ARB,
++	GL_CONSTANT_ARB,
+ };
+ 
+ 
+diff -ur riceplugin.old/unique.h riceplugin/unique.h
+--- riceplugin.old/unique.h	2003-08-25 15:25:58.000000000 -0700
++++ riceplugin/unique.h	2005-01-09 16:22:52.953517154 -0800
+@@ -39,6 +39,7 @@
+ //
+ //
+ 
++#include <assert.h>
+ #ifdef _MSC_VER
+ #include <crtdbg.h>
+ #endif

@@ -1,0 +1,15 @@
+--- riceplugin/Makefile.old	2005-01-09 15:01:48.512722168 -0800
++++ riceplugin/Makefile	2005-01-09 15:02:34.228618182 -0800
+@@ -1,10 +1,10 @@
+ CC = gcc
+ #CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -g -mmmx -msse
+-CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags`
++CFLAGS = -DUSE_GTK `sdl-config --cflags` `pkg-config --cflags gtk+-2.0 glib-2.0` -D_GTK2
+ CXX = g++
+ CPPFLAGS = $(CFLAGS)
+ LD = g++
+-LDFLAGS = -lGL -lGLU `sdl-config --libs` `gtk-config --libs` 
++LDFLAGS = -lGL -lGLU `sdl-config --libs` `pkg-config --libs gtk+-2.0 glib-2.0`
+ 
+ OBJECTS = DaedalusGraphics.o \
+ 	DaedalusRenderBase.o \

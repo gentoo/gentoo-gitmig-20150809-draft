@@ -1,14 +1,25 @@
---- riceplugin/Makefile.orig	2004-07-15 21:38:45.195293640 +0000
-+++ riceplugin/Makefile	2004-07-15 21:40:31.719099560 +0000
-@@ -1,8 +1,8 @@
+--- riceplugin/Makefile.old	2005-01-09 14:57:38.882829518 -0800
++++ riceplugin/Makefile	2005-01-09 14:59:26.839945436 -0800
+@@ -1,10 +1,10 @@
  CC = gcc
--#CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -g -mmmx -msse
+ #CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -g -mmmx -msse
 -CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer -msse -mmmx
 +CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags`
-+#CFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags` -O3 -mcpu=athlon -ffast-math -funroll-loops -fomit-frame-pointer -msse -mmmx
  CXX = g++
--CPPFLAGS = $(CFLAGS)
-+CPPFLAGS = -DUSE_GTK `sdl-config --cflags` `gtk-config --cflags`
+ CPPFLAGS = $(CFLAGS)
  LD = g++
- LDFLAGS = -lGL -lGLU -L/usr/X11R6/lib -lSDL
+-LDFLAGS = -lGL -lGLU -L/usr/X11R6/lib -lSDL
++LDFLAGS = -lGL -lGLU `sdl-config --libs` `gtk-config --libs` 
  
+ OBJECTS = DaedalusGraphics.o \
+ 	DaedalusRenderBase.o \
+@@ -49,8 +49,7 @@
+ all: ricedaedalus.so instruction
+ 
+ ricedaedalus.so: $(OBJECTS)
+-	$(LD) -shared -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
+-	strip --strip-all $@
++	$(LD) -shared -Wl,-Bsymbolic $(LDFLAGS) -o $@ $(OBJECTS)
+ 
+ instruction:
+ 	$(warning please copy ricedaedalus.so AND RiceDaedalus5.1.0.ini in the plugins/ folder of the emulator)
