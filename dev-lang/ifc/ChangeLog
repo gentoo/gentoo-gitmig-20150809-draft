@@ -1,10 +1,13 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.2 2002/12/09 04:20:58 manson Exp $
+# $Header:
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
- 
+*ifc-7.0.064 (9 Dec 2002)
+
+  9 Dec 2002   Jon Portnoy <avenj@gentoo.org> icc-7.0.064.ebuild :
+
+  Latest IFC, ebuild submitted by Daniel Jaeggi (daniel@jaeggi.co.uk)
+
 *ifc-6.0 (13 May 2002)
   
   13 May 2002  William McArthur <sandymac@gentoo.org> icc-6.0.ebuild :
