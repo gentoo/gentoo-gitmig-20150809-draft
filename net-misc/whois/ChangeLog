@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.38 2004/07/01 22:11:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.39 2004/07/13 18:24:19 seemant Exp $
+
+*whois-4.6.13-r1 (13 Jul 2004)
+
+  13 Jul 2004; Seemant Kulleen <seemant@gentoo.org> +whois-4.6.13-r1.ebuild,
+  -whois-4.6.13.ebuild, -whois-4.6.6-r2.ebuild, +whois-4.6.6-r3.ebuild,
+  +whois-4.6.9-r1.ebuild, -whois-4.6.9.ebuild:
+  in place bumps to ensure that whois owns the mkpasswd binary and manpage,
+  rather than expect. This bump corresponds to bug #51353 by Carsten Lohrke
+  <carlo@gentoo.org>
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> whois-4.6.13.ebuild,
   whois-4.6.6-r2.ebuild, whois-4.6.9.ebuild:
