@@ -817,8 +817,3 @@ app-arch/gnorpm
 # Masked because it doesnt work properly
 # and because I'm not inclined to break that many users systems. see bug #3065
 x11-libs/gdkxft
-
-# mkennedy@gentoo.org 2 June 2002
-# Includes GCC3.1 suport -- masked because it needs testing by 2.95.3
-# users.
-=net-www/lynx-2.8.4a-r4
