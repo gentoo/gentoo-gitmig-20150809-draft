@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.2.1.ebuild,v 1.4 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.2.1.ebuild,v 1.5 2002/10/26 18:51:34 vapier Exp $
 
 IUSE="sdl X"
 
@@ -8,7 +8,7 @@ inherit libtool
 
 MY_P="${P/libmpeg2/mpeg2dec}"
 S="${WORKDIR}/${MY_P}"
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="library for decoding mpeg-2 and mpeg-1 video"
 SRC_URI="http://libmpeg2.sourceforge.net/files/${MY_P}.tar.gz"
 HOMEPAGE="http://libmpeg2.sourceforge.net/"
 
