@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.15 2004/02/09 09:04:41 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.16 2004/04/09 15:51:40 matsuu Exp $
+
+*xforms-1.0.90 (09 Apr 2004)
+
+  09 Apr 2004; <matsuu@gentoo.org> xforms-1.0.90.ebuild:
+  Fix HOMEPAGE and SRC_URI.
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> xforms-1.0.ebuild:
   added amd64 keyword.
