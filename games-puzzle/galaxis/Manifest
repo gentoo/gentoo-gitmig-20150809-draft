@@ -1,4 +1,14 @@
-MD5 3427e8c05c66b92ca2cd45099212590b ChangeLog 697
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e09fe25fe221e5353606cf99b183c453 ChangeLog 779
+MD5 1942d4f3bec3c9d2dc2e4c0630aa9060 galaxis-1.7.ebuild 901
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 e8f5edd362d0b86f21e70d5b8581bde2 galaxis-1.7.ebuild 894
 MD5 9ec6a948b51fda7b058808f6b1c469cc files/digest-galaxis-1.7 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB0+ZR60LfUIagIAkRAlg/AJ9bmsFjKzyJFGt6rJLm6gQe0/yg3wCfWbcT
+ytstMMrgb9qtz3bT4Ljy93A=
+=OTUR
+-----END PGP SIGNATURE-----
