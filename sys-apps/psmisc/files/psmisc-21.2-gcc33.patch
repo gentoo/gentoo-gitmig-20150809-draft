@@ -1,0 +1,11 @@
+--- psmisc-21.2/src/killall.c.orig	2003-05-19 01:03:00.000000000 +0200
++++ psmisc-21.2/src/killall.c	2003-05-19 01:03:34.000000000 +0200
+@@ -395,7 +395,7 @@
+ #ifdef FLASK_LINUX
+   fprintf (stderr, "  -S,--Sid            kill only process(es) having sid\n");
+   fprintf (stderr, "  -c,--context        kill only process(es) having scontext\n");
+-  fprintf(stderr, "   (-s, -c are mutually exclusive and must precede other
++  fprintf(stderr, "   (-s, -c are mutually exclusive and must precede other\n\
+ arguments)\n\n");
+ #endif /*FLASK_LINUX*/
+ }
