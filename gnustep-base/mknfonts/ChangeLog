@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/mknfonts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.2 2004/10/09 21:59:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.3 2004/10/25 03:30:25 weeve Exp $
+
+  24 Oct 2004; Jason Wever <weeve@gentoo.org> mknfonts-0.5.ebuild:
+  Added ~sparc keyword wrt bug #68729.
 
 *mknfonts-0.5 (10 Oct 2004)
 
