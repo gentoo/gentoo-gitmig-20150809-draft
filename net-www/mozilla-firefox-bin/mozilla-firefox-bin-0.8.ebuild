@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-0.8.ebuild,v 1.4 2004/04/26 01:41:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-0.8.ebuild,v 1.5 2004/04/26 01:41:59 agriffis Exp $
 
 inherit nsplugins eutils
 
@@ -21,7 +21,7 @@ DEPEND="virtual/glibc"
 RDEPEND="virtual/x11
 	x86? ( 
 		>=sys-libs/lib-compat-1.0-r2 
-		>=x11-libs/gtk+-2.2*
+		>=x11-libs/gtk+-2.2
 	)
 	amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-1.0
