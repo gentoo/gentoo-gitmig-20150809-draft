@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/pbuilder-0.99.ebuild,v 1.7 2004/11/11 15:16:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/pbuilder-0.99.ebuild,v 1.8 2005/01/27 14:05:09 lanius Exp $
 
 DESCRIPTION="personal package builder for Debian packages"
 HOMEPAGE="http://packages.qa.debian.org/p/pbuilder.html"
