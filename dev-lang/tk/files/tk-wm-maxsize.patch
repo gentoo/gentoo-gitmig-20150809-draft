@@ -1,0 +1,29 @@
+Date: Wed Mar 24 02:43:08 PM PST 2004
+Files: unix/tkUnixWm.c
+Bug-id: 915350
+
+--- unix/tkUnixWm.c.wm-maxsize.old	2004-01-31 12:27:52.000000000 -0800
++++ unix/tkUnixWm.c	2004-03-24 14:42:00.000000000 -0800
+@@ -2279,6 +2279,13 @@
+     wmPtr->maxWidth = width;
+     wmPtr->maxHeight = height;
+     wmPtr->flags |= WM_UPDATE_SIZE_HINTS;
++
++    if (width <= 0 && height <= 0) {
++	wmPtr->sizeHintsFlags &= ~PMaxSize;
++    } else {
++	wmPtr->sizeHintsFlags |= PMaxSize;
++    }
++
+     WmUpdateGeom(wmPtr, winPtr);
+     return TCL_OK;
+ }
+@@ -4269,7 +4276,7 @@
+     hintsPtr->max_aspect.x = wmPtr->maxAspect.x;
+     hintsPtr->max_aspect.y = wmPtr->maxAspect.y;
+     hintsPtr->win_gravity = wmPtr->gravity;
+-    hintsPtr->flags = wmPtr->sizeHintsFlags | PMinSize | PMaxSize;
++    hintsPtr->flags = wmPtr->sizeHintsFlags | PMinSize;
+ 
+     /*
+      * If the window isn't supposed to be resizable, then set the

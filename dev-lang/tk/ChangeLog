@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.38 2004/06/24 22:58:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.39 2004/08/07 06:59:08 cardoe Exp $
+
+*tk-8.4.6-r1 (07 Aug 2004)
+
+  07 Aug 2004; Doug Goldstein <cardoe@gentoo.org> tk-8.4.6-r1.ebuild
+  +files/tk-wm-maxsize.patch, +tk-8.4.6-r1.ebuild:
+  Fixed bug #56229. KDE 3.2 missing maximize button with tk apps.
+  http://bugs.kde.org/show_bug.cgi?id=67577
+  http://sourceforge.net/tracker/index.php?func=detail&aid=915350&group_id=12997
+  &atid=112997
 
   15 Jun 2004; Ferris McCormick <fmccor@gentoo.org> tk-8.4.6.ebuild:
   Marked stable for sparc.
