@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-3.4.0.ebuild,v 1.2 2005/03/18 17:18:11 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-3.4.0.ebuild,v 1.3 2005/03/22 21:34:24 carlo Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -25,7 +25,8 @@ $(deprange $PV $MAXKDEVER kde-base/kdepim-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdesdk-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdetoys-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdeutils-meta)
-$(deprange $PV $MAXKDEVER kde-base/kdewebdev-meta)
 $(deprange $PV $MAXKDEVER kde-base/kdeartwork-meta)
 accessibility? ( $(deprange $PV $MAXKDEVER kde-base/kdeaccessibility-meta) )"
 
+# see bug 86284
+#$(deprange $PV $MAXKDEVER kde-base/kdewebdev-meta)

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.104 2005/03/18 16:15:33 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.105 2005/03/22 21:37:12 carlo Exp $
+
+  22 Mar 2005; Carsten Lohrke <carlo@gentoo.org> kde-3.4.0.ebuild:
+  removed kdewebdev temporarily, #86284
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kde-3.4.0.ebuild:
   Added to ~ppc
