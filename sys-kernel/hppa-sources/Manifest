@@ -1,4 +1,5 @@
-MD5 fbfd4f9cf611b51f445dc4d48ae0b3da ChangeLog 9407
+MD5 1df10c0d89865d97c1565c5ca584095f ChangeLog 9592
+MD5 b3f3f3026234e3e4e09eb594357f2883 hppa-sources-2.6.10_p11.ebuild 755
 MD5 dcf6adc464035c767d3183e5f7774b26 hppa-sources-2.6.10_p1.ebuild 692
 MD5 f176b7d1c3f6ed8055e2d49209e0fa90 hppa-sources-2.6.10_p10.ebuild 781
 MD5 074dd720871b3b04b90e6f39c3664c7c hppa-sources-2.6.10_p2.ebuild 717
@@ -13,3 +14,5 @@ MD5 bd7b5cad7b0cadde6daab1e2c3abd13e files/digest-hppa-sources-2.6.10_p10 132
 MD5 818ff61f20404922a662b3383416b453 files/digest-hppa-sources-2.6.10_p2 131
 MD5 47f5d83813a16f62c031edd2e0c1b79b files/digest-hppa-sources-2.6.10_p4 131
 MD5 db1af05869240e3d6499fb4554fa4540 files/digest-hppa-sources-2.6.10_p6 131
+MD5 655251f31f0bdc85bdd0cd0280af22b7 files/LSM-capability-fix.patch 979
+MD5 55ffb01e7102f6f1c4a6a0e888dbddb0 files/digest-hppa-sources-2.6.10_p11 132
