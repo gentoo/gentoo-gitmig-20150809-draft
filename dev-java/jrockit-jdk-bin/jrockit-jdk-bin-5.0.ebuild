@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.04.ebuild,v 1.5 2005/02/04 17:57:07 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-5.0.ebuild,v 1.1 2005/02/04 17:57:07 karltk Exp $
 
 IUSE=""
 
@@ -12,19 +12,19 @@ RESTRICT="nostrip fetch"
 
 inherit java
 
-SRC_URI="ia64? ( jrockit-j2sdk1.4.2_04-linux-ipf.bin )
-		x86? ( jrockit-j2sdk1.4.2_04-linux-ia32.bin )"
-DESCRIPTION="BEA WebLogic's J2SE Development Kit, version 8.1"
-HOMEPAGE="http://commerce.bea.com/downloads/weblogic_jrockit.jsp"
+SRC_URI="ia64? ( jrockit-jdk1.5.0-linux-ipf.bin )
+		x86? ( jrockit-jdk1.5.0-linux-ia32.bin )"
+DESCRIPTION="BEA WebLogic's J2SE Development Kit, version 5.0"
+HOMEPAGE="http://commerce.bea.com/downloads/weblogicjrockit/5.0/jr_50.jsp"
 LICENSE="jrockit"
-SLOT="1.4"
-KEYWORDS="~x86 ~ia64"
+SLOT="1.5"
+KEYWORDS="~x86"
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
 	>=app-arch/unzip-5.50-r1"
 
-PROVIDE="virtual/jre-1.4
-	virtual/jdk-1.4
+PROVIDE="virtual/jre-1.5
+	virtual/jdk-1.5
 	virtual/java-scheme-2"
 
 pkg_nofetch() {

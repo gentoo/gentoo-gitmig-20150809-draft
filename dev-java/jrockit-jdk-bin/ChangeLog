@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.5 2004/12/23 01:17:42 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.6 2005/02/04 17:57:07 karltk Exp $
+
+*jrockit-jdk-bin-5.0 (04 Feb 2005)
+
+  04 Feb 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/jrockit-jdk-bin-5.0, +jrockit-jdk-bin-5.0.ebuild:
+  New upstream version. Ebuild submitted by Qian Qiao <qian.qiao@gmail.com>.
+  Fixes #79451. No idea if this even works on ia64, so I've opened #80745
+  to have it tested on ia64.
 
   23 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> :
   Updated digests. Upstream is being anal and changing binary content without
