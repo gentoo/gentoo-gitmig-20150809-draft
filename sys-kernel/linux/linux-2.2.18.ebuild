@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.2.18.ebuild,v 1.2 2000/12/27 10:51:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.2.18.ebuild,v 1.3 2000/12/28 11:16:32 achim Exp $
 
 P=linux-UP-2.2.18
 A="linux-2.2.18.tar.bz2 i2c-2.5.4.tar.gz lm_sensors-2.5.4.tar.gz
@@ -65,7 +65,9 @@ src_unpack() {
     patch -p1 < pppoed-0.47/kernel-patches/2214-pppox
 
     echo "Applying linux-progress-patch..."
-    bzip2 -dc ${DISTDIR}/lpp-0.1c.tar.bz2 | patch -p1
+    unpack lpp-0.1c.tar.bz2
+
+    bzip2 -dc lpp-0.1c/lpp-2.2.18.bz2 | patch -p1
 
     echo "Creating i2c-patch..."
     unpack i2c-2.5.4.tar.gz

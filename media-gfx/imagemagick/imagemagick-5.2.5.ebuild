@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.2.5.ebuild,v 1.2 2000/11/27 22:48:59 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.2.5.ebuild,v 1.3 2000/12/28 11:16:32 achim Exp $
 
 P=ImageMagick-${PV}
 A=${P}.tar.gz
@@ -33,8 +33,9 @@ RDEPEND=">app-text/dgs-0.5.9.1
 src_compile() {
 
     cd ${S}
-    ./configure CFLAGS="$CFLAGS -I/opt/gnome/include" --prefix=/usr/X11R6 --build=${CHOST} \
-		--without-xml --enable-lzw \
+    ./configure CFLAGS="$CFLAGS -I/opt/gnome/include" \
+		--prefix=/usr/X11R6 --build=${CHOST} \
+		--without-xml --enable-lzw --without-ttf \
 		--enable-shared --with-threads 
     make
 
