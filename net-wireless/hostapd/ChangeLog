@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.1 2003/10/20 22:48:59 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.2 2003/11/11 19:59:55 latexer Exp $
+
+  11 Nov 2003; Peter Johanson <latexer@gentoo.org> metadata.xml:
+  Added to the new "mobile" herd.
 
 *hostapd-0.1.0 (21 Oct 2003)
 
