@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.48 2003/12/20 00:54:03 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.49 2003/12/24 19:12:55 mholzer Exp $
+
+*procps-3.1.15 (24 Dec 2003)
+
+  24 Dec 2003; Martin Holzer <mholzer@gentoo.org> procps-3.1.15.ebuild:
+  Version bumped.
 
   20 Dec 2003; Christian Birchinger <joker@gentoo.org>
   procps-3.1.12-r1.ebuild:
