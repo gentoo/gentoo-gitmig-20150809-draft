@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.10 2004/03/28 02:21:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.11 2004/06/05 23:40:36 dragonheart Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ an address. It also allows local and remote lookups of port, service, or proto
 numbers."
 HOMEPAGE="http://www.dewn.com/rfc/"
 SRC_URI="http://www.dewn.com/rfc/${MY_P}.tar.gz"
-
+IUSE=""
 KEYWORDS="x86 sparc ppc"
 SLOT="0"
 LICENSE="as-is"
