@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.8 2004/12/23 22:06:56 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.9 2004/12/23 22:10:42 ribosome Exp $
 
 inherit perl-module
 CATEGORY="app-sci"
@@ -18,7 +18,7 @@ RDEPEND="
 	dev-db/mysql
 	>=sci-biology/ncbi-tools-20031103
 	>=sci-biology/bioperl-1.2.3
-	>=app-sci/bioperl-run-1.2.2
+	>=sci-biology/bioperl-run-1.2.2
 	dev-perl/XML-SimpleObject
 	dev-perl/XML-Parser
 	dev-perl/Data-ShowTable"
