@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.70 2005/01/12 22:13:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.71 2005/01/24 20:03:45 luckyduck Exp $
+
+  24 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  files/blackdown-jdk-1.4.2.01, files/blackdown-jdk-1.4.2.01-r1,
+  blackdown-jdk-1.4.2.01-r1.ebuild, blackdown-jdk-1.4.2.01.ebuild:
+  defined CHPAX_CONSERVATIVE_FLAGS to fix #75309.
 
   12 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   blackdown-jdk-1.4.1-r1.ebuild:
