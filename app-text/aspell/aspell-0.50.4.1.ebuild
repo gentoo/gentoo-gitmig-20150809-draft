@@ -1,30 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.4.1.ebuild,v 1.6 2004/04/02 19:15:09 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.4.1.ebuild,v 1.7 2004/04/07 21:28:44 vapier Exp $
 
-inherit libtool
+inherit libtool flag-o-matic eutils
 
 DESCRIPTION="A spell checker replacement for ispell"
 HOMEPAGE="http://aspell.net/"
 SRC_URI="http://aspell.net/${P}.tar.gz"
 
-IUSE="gpm"
-SLOT="0"
 LICENSE="LGPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa -amd64 ia64"
+IUSE="gpm"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	gpm? ( sys-libs/gpm )"
 
-pkg_setup() {
-	if [ ${ARCH} = "ppc" ] ; then
-		CXXFLAGS="-O2 -fsigned-char"
-		CFLAGS=${CXXFLAGS}
-	fi
-	use gpm && LDFLAGS="-lgpm"
-}
-
 src_compile() {
+	if [ "${ARCH}" == "ppc" ] ; then
+		export CXXFLAGS="-O2 -fsigned-char"
+		export CFLAGS="${CXXFLAGS}"
+	fi
+	use gpm && append-ldflags -lgpm
 	epatch ${FILESDIR}/01-gcc3.3-assert.patch
 
 	elibtoolize --reverse-deps
