@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.20 2004/12/07 14:41:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.21 2004/12/10 04:38:41 weeve Exp $
+
+  09 Dec 2004; Jason Wever <weeve@gentoo.org> eric-3.5.0.ebuild:
+  Stable on sparc.
 
   07 Dec 2004; Carsten Lohrke <carlo@gentoo.org> :
   fixed digests
