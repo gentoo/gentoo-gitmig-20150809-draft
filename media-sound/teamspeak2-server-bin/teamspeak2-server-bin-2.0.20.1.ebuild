@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1.ebuild,v 1.11 2005/01/07 22:30:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1.ebuild,v 1.12 2005/01/11 13:10:09 eradicator Exp $
 
 inherit eutils
 
@@ -11,11 +11,11 @@ SRC_URI="ftp://webpost.teamspeak.org/releases/ts2_server_rc2_${PV//./}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
-IUSE="mysql"
+IUSE="mysql emul-linux-x86"
 
 S=${WORKDIR}/tss2_rc2
 
-RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
+RDEPEND="emul-linux-x86? ( =app-emulation/emul-linux-x86-baselibs-1.0 )"
 DEPEND=""
 
 pkg_setup() {

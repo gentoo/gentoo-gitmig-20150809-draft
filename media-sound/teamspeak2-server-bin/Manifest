@@ -1,7 +1,17 @@
-MD5 3174551d87cb5495819d5f77767bbe5c teamspeak2-server-bin-2.0.19.40.ebuild 1428
-MD5 4af409ef36a0fce4cee9cbb50aa27329 teamspeak2-server-bin-2.0.20.1.ebuild 2510
-MD5 2df2889a7c63a263782087fe19b79c58 ChangeLog 2049
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 efcf9de7650faae9d8ee8767327353f9 ChangeLog 2193
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 3174551d87cb5495819d5f77767bbe5c teamspeak2-server-bin-2.0.19.40.ebuild 1428
+MD5 a8f65f2607b7282c3069d7d3ceb67668 teamspeak2-server-bin-2.0.20.1.ebuild 2540
 MD5 9ea73cb7d7ab9d82d18ed112ba6e5435 files/digest-teamspeak2-server-bin-2.0.19.40 74
-MD5 19ea411494a0103d83bf56f318f06d04 files/teamspeak2-server.rc6 925
 MD5 5b1551eea3ebab04fd4494431f4ca03c files/digest-teamspeak2-server-bin-2.0.20.1 74
+MD5 19ea411494a0103d83bf56f318f06d04 files/teamspeak2-server.rc6 925
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB49BqArHZZzCEUG0RApbuAJ9vwMPwi89SFB5it/La+2YcuKPAWQCeIeC6
+f4xSLCMSM3VoYYJrLvmtobk=
+=rnwZ
+-----END PGP SIGNATURE-----
