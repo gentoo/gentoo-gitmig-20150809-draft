@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.1.ebuild,v 1.1 2002/10/18 18:59:40 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.1.ebuild,v 1.2 2002/11/02 13:53:55 hannes Exp $
 
 IUSE=""
 DESCRIPTION="Linux IPv6 Router Advertisement Daemon (radvd)"
@@ -10,7 +10,7 @@ DEPEND="virtual/glibc
 	virtual/kernel"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 pkg_preinst() {
 	if ! groupmod radvd; then

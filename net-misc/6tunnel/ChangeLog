@@ -1,9 +1,12 @@
 # ChangeLog for net-misc/6tunnel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/6tunnel/ChangeLog,v 1.1 2002/10/25 18:13:28 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/6tunnel/ChangeLog,v 1.2 2002/11/02 13:55:56 hannes Exp $
+
+  02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> 6tunnel-0.09.ebuild:
+  marked stable for x86
 
 *6tunnel-0.09 (25 Oct 2002)
 
-  25 Oct 2002; Hannes Mehnert <hannes@gentoo.org> .ebuild,
+  25 Oct 2002; Hannes Mehnert <hannes@gentoo.org> 6tunnel-0.09.ebuild,
   ChangeLog: Initial ebuild. Thanks to kevin@aptbasilicata.it (Maurizio
   Disimino) for submission (#7952).
