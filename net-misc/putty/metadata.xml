@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>taviso@gentoo.org</email>
+  <name>Tavis Ormandy</name>
+</maintainer>
+<longdescription>
+This is the Unix port of the popular Windows ssh client, PuTTY. It supports flexible terminal setup, mid-session reconfiguration using Ctrl-rightclick, multiple X11 authentication protocols, and various other interesting things not provided by ssh in an xterm.
+</longdescription>
+</pkgmetadata>
