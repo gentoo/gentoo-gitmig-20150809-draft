@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.24 2003/06/13 12:57:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.25 2003/06/25 13:01:15 lostlogic Exp $
+
+*DirectFB-0.9.18 (25 Jun 2003)
+
+  25 Jun 2003; Brandon Low <lostlogic@gentoo.org> DirectFB-0.9.18.ebuild:
+  Bump
 
   13 Jun 2003; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.16-r1.ebuild:
   moved to x86
