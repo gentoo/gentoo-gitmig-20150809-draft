@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5.ebuild,v 1.5 2003/09/08 11:47:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5.ebuild,v 1.6 2003/09/14 18:34:07 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -49,8 +49,10 @@ src_unpack() {
 	patch -p1 < ${FILESDIR}/fglrx-2.6-makefile.patch
 	einfo "applying fglrx-2.6-amd-adv-spec-fix.patch"
 	patch -p1 < ${FILESDIR}/fglrx-2.6-amd-adv-spec-fix.patch
-	einfo "applying fglrx-2.6-vmalloc-vmaddr"
+	einfo "applying fglrx-2.6-vmalloc-vmaddr.patch"
 	patch -p1 < ${FILESDIR}/fglrx-2.6-vmalloc-vmaddr.patch
+	einfo "applying fglrx-2.6-iminor.patch"
+	patch -p1 < ${FILESDIR}/fglrx-2.6-iminor.patch
 	fi
 }
 
