@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/gbuffy-0.2.6.ebuild,v 1.1 2004/11/02 16:00:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/gbuffy-0.2.6.ebuild,v 1.2 2004/11/03 10:05:24 mr_bones_ Exp $
 
 inherit eutils
 
@@ -18,8 +18,6 @@ DEPEND="x11-libs/libPropList
 	>=x11-libs/gtk+-1.1.11
 	gnome? ( >=gnome-base/gnome-panel-2.4.0-r1 )
 	ssl? ( dev-libs/openssl )"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	if use gnome; then
