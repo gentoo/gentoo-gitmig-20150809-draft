@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/museseq
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.16 2004/09/14 07:59:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.17 2004/09/25 06:00:22 chriswhite Exp $
+
+*museseq-0.7.0-r1 (25 Sep 2004)
+
+  25 Sep 2004; Chris White <chriswhite@gentoo.org>
+  +files/museseq-0.7.0-suidinstall.patch, +museseq-0.7.0-r1.ebuild:
+  Bump to 0.7.0. Big thanks to Eric Shattow <shadow@serverart.org> for his help
+  in cleaning up. Closes bug #57740.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   museseq-0.6.2-r1.ebuild:
