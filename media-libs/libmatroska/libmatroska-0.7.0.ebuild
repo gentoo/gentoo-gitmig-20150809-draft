@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.0.ebuild,v 1.12 2004/12/11 22:27:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.0.ebuild,v 1.13 2004/12/15 21:22:09 kloeri Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha hppa amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc ~mips alpha hppa amd64 ~ia64"
 IUSE=""
 
 DEPEND="virtual/libc
