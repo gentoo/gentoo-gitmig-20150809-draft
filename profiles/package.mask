@@ -5,7 +5,7 @@
 dev-libs/libiconv
 
 # this cracklib is for testing currently (pvdabeel, 03 May 200):
-=sys-libs/cracklib-2.7-r5
+#=sys-libs/cracklib-2.7-r5
 
 # this portage is for testing currently (drobbins, 01 May 2002):
 =sys-apps/portage-1.9.6_pre1
