@@ -1,17 +1,28 @@
-MD5 caa91c0a4e1c4ee0ca7d4f53f33feebd gnome-games-2.6.2.ebuild 1352
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 29eaaca9524704ebfcecc132762acad1 ChangeLog 9527
 MD5 f1a7f6e7010166876bf1181099cb15fd gnome-games-1.4.0.3-r3.ebuild 1274
-MD5 915e5e78fa86946af8cc657b732f401e gnome-games-2.6.1.ebuild 1492
 MD5 9db4e0ddea684696bb43e5029ecc9bb5 gnome-games-2.4.2.ebuild 1310
 MD5 979b1d3d04d2275f4395da2ac35036fe gnome-games-2.6.0.1.ebuild 1478
-MD5 1c42f21a67e1eefa0a9f23d61b414b3e ChangeLog 9371
+MD5 915e5e78fa86946af8cc657b732f401e gnome-games-2.6.1.ebuild 1492
+MD5 6f8ceb48ce20b11ed95326325513ed42 gnome-games-2.6.2.ebuild 1430
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 16c5ef17a6a61cd533234d4a18aba19f gnome-games-2.8.1.ebuild 1982
-MD5 e6684984af39cf3cea7ca09fd08a6552 files/gnome-games-2.6.0.1-aisleriot.patch 491
-MD5 3a5e1fbf83efc9cbd7ce679387b8b2f2 files/digest-gnome-games-2.6.0.1 73
 MD5 2301a09a3e02fd7e40f6ee5a7e79e95c files/digest-gnome-games-1.4.0.3-r3 72
-MD5 94622ab0dcdf1cfbb8f6c51855b3a81e files/guile-1.5-gentoo.diff 318
-MD5 70c1ce37a2d4a8762d949445e21122b4 files/gnome-games-2.8.0-pkgconfig_gconf.patch 861
 MD5 97e3065e45df12441df89f6ba12f4915 files/digest-gnome-games-2.4.2 71
+MD5 3a5e1fbf83efc9cbd7ce679387b8b2f2 files/digest-gnome-games-2.6.0.1 73
 MD5 bdfd086ef923a4227e5d551f2a482854 files/digest-gnome-games-2.6.1 71
 MD5 9f9b4b44ecc874043f8a7a57d9e96ce7 files/digest-gnome-games-2.6.2 71
+MD5 e6684984af39cf3cea7ca09fd08a6552 files/gnome-games-2.6.0.1-aisleriot.patch 491
+MD5 94622ab0dcdf1cfbb8f6c51855b3a81e files/guile-1.5-gentoo.diff 318
 MD5 2105a5dad556d5ace66d269debb6fb20 files/digest-gnome-games-2.8.1 71
+MD5 70c1ce37a2d4a8762d949445e21122b4 files/gnome-games-2.8.0-pkgconfig_gconf.patch 861
+MD5 7f65705cb02235fdf356420a2f6cde38 files/gnome-games-2.6.2-amd64.patch 2219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcsnkRkyva5PS18kRAl5KAJ9bUTBuBtzW1Pj5+UARmDnJWeP8GwCeLdYm
+ideR6zVl8Kb5IUQ8UShDwzU=
+=hfjL
+-----END PGP SIGNATURE-----
