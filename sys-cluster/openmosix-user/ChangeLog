@@ -1,13 +1,17 @@
 # ChangeLog for sys-cluster/openmosix-user
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.7 2003/03/31 14:31:02 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.8 2003/04/12 17:34:35 tantive Exp $
+
+* openmosix-user-0.3 (12 Apr 2003)
+
+  12 Apr 2003; Michael Imhof <tantive@gentoo.org>
+  Version bumped. Cleaned up the ebuild.
 
 * openmosix-user-0.2.4-r6 (31 Mar 2003)
 
   31 Mar 2003; Michael Imhof <tantive@gentoo.org>
   Version bumped to make sure autodiscovery works when used.
   That error was introduced with -r5 and discovered in #18372.
-  
 
 * openmosix-user-0.2.4-r5 (26 Mar 2003)
 
