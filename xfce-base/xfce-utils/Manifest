@@ -1,12 +1,22 @@
-MD5 d1e93ed9710bcf31c8c65fdcb4b205cf xfce-utils-4.0.5.ebuild 1028
-MD5 7ec8666ebf72c039d4226835d7db1daa xfce-utils-4.1.90.ebuild 977
-MD5 3fb4466d5a9ddc949be8e76a13acc585 xfce-utils-4.0.4.ebuild 1007
-MD5 5a1843919b2e6c9e4ebcbf19922ed5dc xfce-utils-4.0.6.ebuild 1091
-MD5 faacc6cee995f6195a239512c7dee24b xfce-utils-4.1.91.ebuild 942
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a02af86965ae83df406c4b781450eb1 ChangeLog 4404
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 4d29c942c355af4175d4aac666302711 files/digest-xfce-utils-4.1.90 70
-MD5 c835e3bda5e4b790bda35f90f72a9b1c files/digest-xfce-utils-4.1.91 70
+MD5 0019025df780d775eb231e393aa564b8 xfce-utils-4.0.6.ebuild 1091
+MD5 e653a4455608f56c4a897d9dd3639754 xfce-utils-4.0.4.ebuild 1009
+MD5 b19e43333593090a7d87bf84a3a979d8 xfce-utils-4.0.5.ebuild 1029
+MD5 291e4a6b1a55eb3f3395029eae1e81c3 xfce-utils-4.1.90.ebuild 995
+MD5 88d1272947b9a7eeffce1a4dcfdb45d3 xfce-utils-4.1.91.ebuild 960
+MD5 36cfb57721de1080726f288c17acd532 files/digest-xfce-utils-4.0.6 68
 MD5 8c5fafba9ad6530d4fe86ec623702306 files/digest-xfce-utils-4.0.4 68
 MD5 21cdb98a6674dcf94ea60223609f449d files/digest-xfce-utils-4.0.5 68
-MD5 36cfb57721de1080726f288c17acd532 files/digest-xfce-utils-4.0.6 68
+MD5 4d29c942c355af4175d4aac666302711 files/digest-xfce-utils-4.1.90 70
+MD5 c835e3bda5e4b790bda35f90f72a9b1c files/digest-xfce-utils-4.1.91 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD4DBQFBirrIHTu7gpaalycRAhusAJiUQSQ6ITgX7POShNaIlUfKPnCiAKCGzUOq
+ddohKrzsfUCV3M8lYC/Zfw==
+=ALyT
+-----END PGP SIGNATURE-----
