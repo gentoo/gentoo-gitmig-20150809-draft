@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r4.ebuild,v 1.2 2004/02/17 22:51:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r4.ebuild,v 1.3 2004/03/19 10:51:22 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -95,7 +95,11 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	${X_DRIVERS}
 	truetype? ( ${MS_FONT_URLS} )"
 
-LICENSE="X11 MSttfEULA"
+# http://www.xfree86.org/4.3.0/LICENSE.html
+LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
+	bigelow-holmes-urw-gmbh-luxi christopher-g-demetriou national-semiconductor
+	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
+	MIT SGI-B BSD FTL | GPL-2 MSttfEULA"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 

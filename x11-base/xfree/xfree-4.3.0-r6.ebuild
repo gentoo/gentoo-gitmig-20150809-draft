@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.8 2004/03/17 08:59:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.9 2004/03/19 10:51:22 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -88,7 +88,11 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/XFree86-locale.dir.bz2
 	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2"
 
-LICENSE="X11"
+# http://www.xfree86.org/4.3.0/LICENSE.html
+LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
+	bigelow-holmes-urw-gmbh-luxi christopher-g-demetriou national-semiconductor
+	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
+	MIT SGI-B BSD FTL | GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
