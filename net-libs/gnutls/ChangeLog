@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.5 2003/11/21 20:07:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.6 2003/11/23 01:46:48 liquidx Exp $
+
+*gnutls-0.8.12 (23 Nov 2003)
+
+  23 Nov 2003; Alastair Tse <liquidx@gentoo.org> gnutls-0.8.12.ebuild:
+  fixed opencdk linking due to faulty configure flags. new version now depends
+  on opencdk-0.5.1 (#33930)
 
   21 Nov 2003; Jason Wever <weeve@gentoo.org> gnutls-0.8.10.ebuild:
   Added ~sparc keyword.
