@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.23 2005/03/16 09:38:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.24 2005/03/16 18:26:14 hansmi Exp $
+
+  16 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> openslp-1.2.1.ebuild:
+  Stable on ppc.
 
 *openslp-1.2.1 (16 Mar 2005)
 
