@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.27-r4.ebuild,v 1.6 2004/07/14 19:39:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.27-r4.ebuild,v 1.7 2005/03/11 18:04:51 beu Exp $
 
 inherit eutils
 
@@ -14,20 +14,10 @@ KEYWORDS="x86 amd64 ~ppc sparc ~alpha ~mips"
 
 DEPEND="dev-lang/perl dev-perl/libwww-perl =net-www/apache-1* >=sys-apps/sed-4"
 
-IUSE="ipv6"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
-
-	if has_version '>=apache-1.3.27-r4' && use ipv6; then
-		# This patch originally came from
-		# http://pasky.ji.cz/~pasky/dev/apache/mod_perl-1.27+ipv6.patch.
-		# It allows mod_perl to correctly build with an IPv6-enabled
-		# Apache (bug #6986).
-		# Robert Coie <rac@gentoo.org> 2002.02.19
-
-		cd ${S}; epatch ${FILESDIR}/${P}-ipv6.patch
-	fi
 
 	cd ${S}
 	for f in "apaci/mod_perl.config.sh" "apaci/libperl.module"
