@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.8 2003/06/23 13:29:11 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.9 2003/08/18 12:07:09 tad Exp $
+
+*bootsplash-0.6-r2 (18 Aug 2003)
+
+  18 Aug 2003; Troy Dack <tad@gentoo.org> bootsplash-0.6-r2.ebuild:
+  Bump to -r2. Fixes Bugs #20497, #26245, #20964.
 
 *bootsplash-0.6-r1
   23 Jun 2003; Troy Dack <tad@gentoo.org> :
