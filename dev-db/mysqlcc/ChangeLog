@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysqlcc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.14 2003/12/29 10:01:37 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.15 2004/03/30 08:38:19 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> mysqlcc-0.9.4.ebuild:
+  Adding amd64 keyword. Closing #43597.
 
 *mysqlcc-0.9.4 (29 Dec 2003)
 
