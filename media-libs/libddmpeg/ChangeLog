@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libddmpeg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libddmpeg/ChangeLog,v 1.5 2004/06/24 23:06:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libddmpeg/ChangeLog,v 1.6 2004/09/17 01:20:42 cardoe Exp $
+
+  16 Sep 2004; Doug Goldstein <cardoe@gentoo.org> libddmpeg-1.6.ebuild:
+  stable x86
 
   03 Jun 2004; <tester@gentoo.org> libddmpeg-1.6.ebuild:
   The amd64 test broke building on x86, fixed bug #52799. Also mpu != march.
