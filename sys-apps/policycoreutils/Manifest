@@ -1,2 +1,5 @@
-MD5 548c21fbd3fc5fe72e26dbaa7ce1a099 policycoreutils-1.0.ebuild 727
+MD5 107039bfb7b4e4512f10b946948650d8 policycoreutils-1.0.ebuild 879
+MD5 fd55bafe00aa7a8e91b2d172642b0ef4 metadata.xml 268
+MD5 ae734e416fd50b4e3a5b065d7f3cac2e ChangeLog 421
 MD5 a70bb20f56dfca63475bea2bc811927a files/digest-policycoreutils-1.0 67
+MD5 6d4df7058894970c15d4066f7ad88c29 files/policycoreutils-1.0-gentoo.diff 1818
