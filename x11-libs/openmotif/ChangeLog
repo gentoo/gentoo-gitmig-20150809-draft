@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.14 2003/05/15 15:51:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.15 2003/06/06 20:56:38 seemant Exp $
+
+*openmotif-2.2.2-r2 (06 Jun 2003)
+
+  06 Jun 2003; Seemant Kulleen <seemant@gentoo.org> openmotif-2.2.2-r2.ebuild,
+  openmotif-2.2.2.ebuild, files/Mwm.defaults:
+  many many fixes. libMrm.so.3 finally exists, documentation is installed, an
+  app-defaults file is installed, man pages reflect the actual app-defaults
+  path. All this, thanks to: bartron <bartron@gmx.net> in bug #21681
 
   09 May 2003; Tavis Ormandy <taviso@gentoo.org> openmotif-2.2.2-r1.ebuild:
   Looks good on ALPHA, marking stable.
