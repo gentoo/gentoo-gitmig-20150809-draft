@@ -1,0 +1,7 @@
+# ChangeLog for gnustep-base/mknfonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/mknfonts/ChangeLog,v 1.1 2004/09/24 01:05:34 fafhrd Exp $
+
+  28 Aug 2004; Armando Di Cianno <fafhrd@gentoo.org> :
+  Added first package.
+

@@ -1,0 +1,14 @@
+# ChangeLog for gnustep-base/gnustep-back-xlib
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.1 2004/09/24 01:03:33 fafhrd Exp $
+
+*gnustep-back-xlib-0.9.4_pre20040908 (08 Sep 2004)
+
+  08 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +files/config-gnustep-back-xlib.sh,
+  +gnustep-back-xlib-0.9.4_pre20040908.ebuild:
+  Version bump; key'd for ~x86.
+
+  28 Aug 2004; Armando Di Cianno <fafhrd@gentoo.org> :
+  Added first gnustep-back-xlib package.
+

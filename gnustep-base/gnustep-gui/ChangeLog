@@ -1,8 +1,14 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.3 2004/07/27 17:19:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.4 2004/09/24 01:04:50 fafhrd Exp $
 
-  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+*gnustep-gui-0.9.4_pre20040908 (08 Sep 2004)
+
+  08 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> metadata.xml,
+  +gnustep-gui-0.9.4_pre20040908.ebuild:
+  Version bump; key'd for ~x86.
+
+  23 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org>
   gnustep-gui-0.7.9.ebuild, gnustep-gui-0.8.0.ebuild,
   gnustep-gui-0.8.3.ebuild, gnustep-gui-0.8.5-r1.ebuild,
   gnustep-gui-0.8.5.ebuild, gnustep-gui-0.8.7.ebuild,
@@ -11,19 +17,19 @@
 
 *gnustep-gui-0.7.9 (23 Jul 2004)
 
-  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> +metadata.xml,
+  23 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
   +gnustep-gui-0.7.9.ebuild, +gnustep-gui-0.8.0.ebuild,
   +gnustep-gui-0.8.3.ebuild, +gnustep-gui-0.8.5-r1.ebuild,
   +gnustep-gui-0.8.5.ebuild, +gnustep-gui-0.8.7.ebuild,
   +gnustep-gui-0.8.8.ebuild:
   Moved from dev-util/gnustep-gui to gnustep-base/gnustep-gui.
 
-  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  22 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org>
   gnustep-gui-0.8.5-r1.ebuild, gnustep-gui-0.8.7.ebuild,
   gnustep-gui-0.8.8.ebuild:
   Changing the eclass to gnustep-old
 
-  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  22 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org>
   gnustep-gui-0.8.5-r1.ebuild, gnustep-gui-0.8.7.ebuild,
   gnustep-gui-0.8.8.ebuild:
   Changing the eclass to gnustep-old
