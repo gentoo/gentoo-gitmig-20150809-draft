@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.8 2004/09/09 19:18:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.9 2004/11/13 18:25:52 ciaranm Exp $
 #
 # This eclass simplifies installation of app-vim plugins into
 # /usr/share/vim/vimfiles.  This is a version-independent directory
@@ -94,7 +94,9 @@ update_vim_afterscripts() {
 # VIM_PLUGIN_HELPFILES env var. If multiple help files are available, they
 # should be separated by spaces. If no help files are available, but the env
 # var VIM_PLUGIN_HELPTEXT is set, that is displayed instead. Finally, if we
-# have nothing else, display a link to VIM_PLUGIN_HELPURI.
+# have nothing else, display a link to VIM_PLUGIN_HELPURI. An extra message
+# regarding enabling filetype plugins is displayed if VIM_PLUGIN_MESSAGES
+# includes the word "filetype".
 display_vim_plugin_help() {
 	local h
 
@@ -118,6 +120,15 @@ display_vim_plugin_help() {
 		einfo " "
 		einfo "Documentation for this plugin is available online at:"
 		einfo "    ${VIM_PLUGIN_HELPURI}"
+		einfo " "
+	fi
+
+	if hasq "filetype" "${VIM_PLUGIN_MESSAGES}" ; then
+		einfo "This plugin makes use of filetype settings. To enable these,"
+		einfo "add lines like:"
+		einfo "    filetype plugin on"
+		einfo "    filetype indent on"
+		einfo "to your ~/.vimrc file."
 		einfo " "
 	fi
 }
