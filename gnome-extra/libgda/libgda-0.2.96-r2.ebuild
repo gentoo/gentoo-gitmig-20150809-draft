@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.12 2004/02/22 20:52:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.96-r2.ebuild,v 1.13 2004/06/03 23:11:13 agriffis Exp $
 
 IUSE="odbc postgres mysql"
 
@@ -49,24 +49,24 @@ src_compile() {
 
 	local myconf
 
-	if [ "`use mysql`" ]
+	if use mysql
 	then
 		myconf="--with-mysql=/usr"
 	fi
 
-#  	if [ "`use ldap`" ]
+#  	if use ldap
 #	then
 #    		myconf="$myconf --with-ldap=/usr"
 #  	fi
 #
 # LDAP support is currently broken
 
-	if [ "`use odbc`" ]
+	if use odbc
 	then
 		myconf="$myconf --with-odbc"
 	fi
 
-	if [ "`use postgres`" ]
+	if use postgres
 	then
 		myconf="$myconf --with-postgres=/usr"
 	fi

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.96.ebuild,v 1.15 2004/05/29 03:46:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.96.ebuild,v 1.16 2004/06/03 23:12:02 agriffis Exp $
 
 IUSE="nls"
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	local myopts
 
-	if [ "`use nls`" ]
+	if use nls
 	then
 		myopts="--enable-nls"
 	else

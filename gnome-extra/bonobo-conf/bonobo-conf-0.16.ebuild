@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/bonobo-conf-0.16.ebuild,v 1.7 2003/07/06 11:49:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/bonobo-conf-0.16.ebuild,v 1.8 2004/06/03 23:09:31 agriffis Exp $
 
 IUSE="nls"
 
