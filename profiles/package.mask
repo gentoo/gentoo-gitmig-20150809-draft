@@ -45,6 +45,7 @@ net-www/zope
 >=net-misc/krfb-0.6
 >=net-misc/kio_fish-1.1
 >=x11-misc/mosfet-liquid-widgets-0.9.1
+>=netmisc/kbiff-3.6
 
 # These two have compile problems -- Azarah (24/03/2002)
 #
