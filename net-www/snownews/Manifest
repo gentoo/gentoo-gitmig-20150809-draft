@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 e136ca3c4b8271f402724196edaa152f snownews-1.5.4.ebuild 700
-MD5 be1208f3b786c22c93cb3d901c3549d2 ChangeLog 1906
+MD5 977418dd2334ac426fa3fd90f6a68b13 snownews-1.5.5.1.ebuild 738
+MD5 709eefa71cf3b857a758fcb8bc8d4b7b ChangeLog 2096
 MD5 817fc324e8ff21847c777fa4352c826c metadata.xml 259
+MD5 83d43c97303a6a50bac26cd0e5463afa files/digest-snownews-1.5.5.1 68
 MD5 d16418f7b262a83e005bc8cfbae29d04 files/digest-snownews-1.5.4 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBgUgI/UDVUK2NELYRArqLAKDo9wxsBg17nO1FGsThPs9TyfGt5wCgneL4
-kdPUne2ko6Cz9nTQH8rgfKI=
-=FSn/
+iD8DBQFBj59G/UDVUK2NELYRAr1tAKCSdJ2KRpHgj5meImYYIgA5ssIevACffd7F
+6zJcgycDKX49HknTC9KoD14=
+=wuYr
 -----END PGP SIGNATURE-----
