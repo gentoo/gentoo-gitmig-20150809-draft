@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-monitor-core/ganglia-monitor-core-2.5.5.ebuild,v 1.5 2004/07/15 02:54:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-monitor-core/ganglia-monitor-core-2.5.5.ebuild,v 1.6 2004/08/25 03:03:43 swegener Exp $
 
 DESCRIPTION="Ganglia is a scalable distributed monitoring system for high-performance computing systems such as clusters and Grids"
 HOMEPAGE="http://ganglia.sourceforge.net/"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/ganglia/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/ganglia/${P}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
