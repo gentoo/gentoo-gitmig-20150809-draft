@@ -1,4 +1,6 @@
 MD5 5b35b0dfeba14922263d8ea912d65266 terminus-font-4.07.ebuild 1098
-MD5 e9ee7b60d62346cefae451ea2fa6f508 ChangeLog 1874
+MD5 c80e6db63b523aa8e31bc8ab033889b5 ChangeLog 2026
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 983e36096d07c0ec0db98374bd521846 terminus-font-4.09.ebuild 1103
 MD5 92f73aafe5535cf0996be1b810ab7c9b files/digest-terminus-font-4.07 70
+MD5 fd82d94715f95b654cc4ea9a696b7981 files/digest-terminus-font-4.09 70
