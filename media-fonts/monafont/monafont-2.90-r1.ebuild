@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r1.ebuild,v 1.2 2004/06/24 22:29:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r1.ebuild,v 1.3 2004/07/15 03:48:02 agriffis Exp $
 
 inherit font
-
-IUSE="X truetype"
 
 MY_P=${P/_/}
 
@@ -15,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
-IUSE=""
+IUSE="X truetype"
 DEPEND="virtual/x11
 	dev-lang/perl
 	>=sys-apps/sed-4"
