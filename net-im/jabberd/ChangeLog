@@ -1,6 +1,13 @@
 # ChangeLog for net-im/jabberd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.45 2004/12/15 13:43:45 humpback Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.46 2005/01/31 23:05:41 humpback Exp $
+
+*jabberd-2.0_p20050119 (31 Jan 2005)
+
+  31 Jan 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +jabberd-2.0_p20050119.ebuild:
+  Adding cvs snapshot hardmasked. Credit to Wolfram Schlich
+  <wschlich@gentoo.org> for updating alot of stuff here.
 
   15 Dec 2004; Gustavo Felisberto <humpback@gentoo.org>;
   jabberd-2.0-r2.ebuild:
