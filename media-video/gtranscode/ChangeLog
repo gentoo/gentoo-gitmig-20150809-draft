@@ -1,0 +1,9 @@
+# ChangeLog for media-video/gtranscode
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gtranscode/ChangeLog,v 1.1 2005/01/17 17:08:29 kzimmerm Exp $
+
+*gtranscode-0.3 (17 Jan 2005)
+
+	17 Jan 2005;  Kai Zimmermann <kzimmerm@gentoo.org> :
+	Initial import into the tree.  Closes bug #34663.  Thanks to 
+	Graeme Humphries <unit3@demoni.ca> for the ebuild submission.
