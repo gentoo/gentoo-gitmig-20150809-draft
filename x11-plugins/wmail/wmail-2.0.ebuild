@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0.ebuild,v 1.8 2004/06/28 20:36:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0.ebuild,v 1.9 2004/08/31 14:35:43 s4t4n Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 amd64 ~ppc"
 
 DEPEND="virtual/libc
 	virtual/x11
-	>=x11-libs/libdockapp-0.4.0-r1"
+	=x11-libs/libdockapp-0.4.0-r1"
 
 src_compile() {
 
