@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3344 2004/11/24 19:44:22 method Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3345 2004/11/25 21:41:31 chriswhite Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# <chriswhite@gentoo.org> (25 Nov 2004)
+# media-video/bcast who commited this!?
+# better yet, who marked it stable!
+# masking because it's just plain broken.
+media-video/bcast
 
 # <method@gentoo.org> (24 Nov 2004)
 # sys-kernel/hardened-sources: masked until
