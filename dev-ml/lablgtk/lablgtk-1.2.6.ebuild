@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.6.ebuild,v 1.8 2004/06/25 00:02:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.6.ebuild,v 1.9 2004/07/14 01:35:45 lv Exp $
 
 IUSE="gnome opengl"
 
@@ -21,7 +21,7 @@ RDEPEND=${DEPEND}
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/lablgtk-${PV}.tar.gz"
 S=${WORKDIR}/${P}
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~ia64 -amd64 hppa"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~ia64 ~amd64 hppa"
 
 Name="LablGTK"
 

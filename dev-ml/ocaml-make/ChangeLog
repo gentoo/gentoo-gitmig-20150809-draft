@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-make
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ChangeLog,v 1.4 2004/06/25 00:02:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ChangeLog,v 1.5 2004/07/14 01:40:17 lv Exp $
+
+  13 Jul 2004; Travis Tilley <lv@gentoo.org> ocaml-make-5.04.0.ebuild:
+  added ~amd64 keyword
 
   13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   ocaml-make-5.04.0.ebuild:
