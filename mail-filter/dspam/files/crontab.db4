@@ -1,2 +1,3 @@
-0 0 */7 * * /usr/bin/dspam_clean -s -p -u 2>&1 > /dev/null
+#!/bin/sh
+/usr/bin/dspam_clean -s -p -u 2>&1 > /dev/null
                                                                                                                                           

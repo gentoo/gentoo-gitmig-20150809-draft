@@ -1,3 +1,4 @@
+#!/bin/sh
 # Remove old signatures and unimportant tokens from the database
-0 0 */7 * * @confdir@/mysql_purge_db 2>&1 > /dev/null
+@confdir@/mysql_purge_db 2>&1 > /dev/null
 
