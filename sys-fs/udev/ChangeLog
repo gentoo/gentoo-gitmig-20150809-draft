@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.21 2004/01/29 18:39:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.22 2004/01/30 04:46:09 azarah Exp $
+
+  30 Jan 2004; Martin Schlemmer <azarah@gentoo.org>
+  files/udev-015-logging-config-option.patch:
+  Tweak patch to use #define and not a string.
 
 *udev-015 (29 Jan 2004)
 

@@ -78,11 +78,12 @@
  void udev_init_config(void)
 --- udev-015/logging.c	2004-01-29 19:20:40.673380296 +0200
 +++ udev-015.log_option/logging.c	2004-01-29 20:02:41.316184344 +0200
-@@ -26,6 +26,7 @@
+@@ -26,6 +26,8 @@
  #include <unistd.h>
  #include <syslog.h>
  
 +#include "udev.h"
++#include "udev_version.h"
  #include "logging.h"
  
  
@@ -90,7 +91,7 @@
  {
  	va_list	args;
  
-+	if (0 != strncmp(udev_log_str, "yes", BOOL_SIZE))
++	if (0 != strncmp(udev_log_str, UDEV_LOG_DEFAULT, BOOL_SIZE))
 +		return 0;
 +
  	if (!logging_init)
