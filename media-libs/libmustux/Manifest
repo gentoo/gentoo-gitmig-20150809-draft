@@ -2,7 +2,7 @@ MD5 23d2ec3f59f201da9a48a65b9c1bcc11 libmustux-0.17.5.ebuild 862
 MD5 b1b1ef9d6cd1cdcdccb4e22d15562272 libmustux-0.20.0.ebuild 827
 MD5 a8c61ebe1b27d9a441ef191368da94b2 libmustux-0.20.2.ebuild 1046
 MD5 5a35dc567293872270007f398f4db084 libmustux-0.20.1.ebuild 827
-MD5 d17f6389642787a3131e4f5a56ffc693 ChangeLog 2347
+MD5 77dc3814f9bdf6449e586c22171da068 ChangeLog 2374
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 c8baabd5462d6c6cb70f63003e5d65cc libmustux-0.16.0.ebuild 990
 MD5 fef0b54e949cfb0fe28896608d517516 files/libmustux-0.16.0-alsalib-fix.patch 480
