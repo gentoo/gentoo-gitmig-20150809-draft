@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.7 2002/06/13 20:47:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.8 2002/07/03 07:56:16 danarmak Exp $
+
+*kdevelop-2.1.2 (03 Jul 2002)
+
+  03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New stability release (comes with kde 3.0.2).
 
 *kdevelop-2.1.1-r1 (06 Jun 2002)
 
