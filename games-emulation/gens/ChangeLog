@@ -1,11 +1,16 @@
 # ChangeLog for games-emulation/gens
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.3 2003/09/14 08:55:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.4 2003/09/19 18:41:35 vapier Exp $
+
+*gens-2.12a (19 Sep 2003)
+
+  19 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix nasm issues #27841.
+
+*gens-2.12 (01 Aug 2003)
 
   14 Sep 2003; Michael Sterrett <msterret@gentoo.org> gens-2.12.ebuild:
   added RDEPEND for the run dependencies; fix things up for >=nasm-0.98.37
-
-*gens-2.12 (01 Aug 2003)
 
   01 Aug 2003; Michael Sterrett <msterret@gentoo.org> gens-2.12.ebuild:
   initial commit.  ebuild contributed by David Holm (modified) via bug 24821.
