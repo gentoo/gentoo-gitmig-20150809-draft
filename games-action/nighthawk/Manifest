@@ -1,5 +1,15 @@
-MD5 16fbefe70a097cf132ef5f062b2acbf8 ChangeLog 972
-MD5 f660b95a143c1b022fe3f1d1b1979d3b nighthawk-2.2.ebuild 745
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6086858ccd70d708aae68a2552aa25b0 ChangeLog 1084
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f826d4317e95ccdbdb8df0bb08abfe4d nighthawk-2.2.ebuild 752
 MD5 28c1f0d1d7d1c8823306d9966fb387ff files/digest-nighthawk-2.2 68
 MD5 91536401b3a8a82fd155e6ca166dfc54 files/nighthawk.patch 1235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLzEK06ebR+OMO78RAjXsAJsFVKhQsW6b36o1VYCmbnQkdEsTVQCgkKRI
+Y0uP0AiscIr+ZY2eyiDytO0=
+=PR71
+-----END PGP SIGNATURE-----
