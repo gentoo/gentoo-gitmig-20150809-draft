@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/dbh-1.0.20.ebuild,v 1.5 2005/01/21 23:19:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/dbh-1.0.20.ebuild,v 1.6 2005/01/24 19:35:44 gmsoft Exp $
 
 DESCRIPTION="Disk based hashes is a method to create multidimensional binary trees on disk"
 HOMEPAGE="http://dbh.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="QPL"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-util/pkgconfig"
