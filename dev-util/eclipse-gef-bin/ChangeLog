@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-gef-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/ChangeLog,v 1.4 2004/09/30 00:30:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/ChangeLog,v 1.5 2004/11/03 11:45:04 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
+  eclipse-gef-bin-20040330.ebuild, eclipse-gef-bin-20040619.ebuild:
+  depend on app-arch/unzip
 
 *eclipse-gef-bin-20040619 (22 Aug 2004)
 

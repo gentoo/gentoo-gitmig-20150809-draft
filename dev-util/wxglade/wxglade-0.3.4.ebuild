@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.3.4.ebuild,v 1.3 2004/10/17 20:46:46 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.3.4.ebuild,v 1.4 2004/11/03 11:50:25 axxo Exp $
 
 inherit python
 
@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 DEPEND=">=dev-lang/python-2.2
+	app-arch/unzip
 	>=dev-python/wxpython-2.4.2.4"
 
 src_install() {

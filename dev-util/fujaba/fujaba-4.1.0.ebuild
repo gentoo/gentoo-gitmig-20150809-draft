@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.1.0.ebuild,v 1.2 2004/10/26 12:54:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.1.0.ebuild,v 1.3 2004/11/03 11:47:03 axxo Exp $
 
 MY_PV="${PV//./_}"
 MY_PNB="Fujaba_${PV:0:1}"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 RDEPEND=">=virtual/jdk-1.4.1"
-
+DEPEND="app-arch/unzip"
 S=${WORKDIR}
 
 src_unpack () {

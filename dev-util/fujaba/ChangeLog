@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/fujaba
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/ChangeLog,v 1.7 2004/10/27 14:38:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/ChangeLog,v 1.8 2004/11/03 11:47:03 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> fujaba-4.0.1.ebuild,
+  fujaba-4.1.0.ebuild:
+  depend on app-arch/unzip
 
 *fujaba-4.1.0 (26 Oct 2004)
 

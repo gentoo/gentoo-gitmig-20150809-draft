@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pmd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.5 2004/10/16 18:17:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.6 2004/11/03 11:49:15 axxo Exp $
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> pmd-1.5-r1.ebuild,
+  pmd-1.5.ebuild:
+  depend on app-arch/unzip
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> pmd-1.5-r1.ebuild,
   pmd-1.5.ebuild:

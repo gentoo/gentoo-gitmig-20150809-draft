@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-1.5-r1.ebuild,v 1.2 2004/10/16 18:17:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-1.5-r1.ebuild,v 1.3 2004/11/03 11:49:15 axxo Exp $
 
 inherit java-pkg
 
@@ -13,6 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.3
+	app-arch/unzip
 	>=dev-java/ant-1.5
 	>=dev-java/xerces-2.6.2-r1
 	dev-java/saxpath
