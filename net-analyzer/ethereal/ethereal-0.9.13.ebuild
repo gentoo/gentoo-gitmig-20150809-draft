@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.3 2003/06/15 15:42:56 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.4 2003/06/16 01:34:18 bcowan Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 
@@ -33,7 +33,6 @@ src_unpack() {
 	mv configure configure.broken
 	sed "s|-I/usr/local/include||" configure.broken > configure
 	chmod +x ./configure
-
 }
 
 src_compile() {
@@ -48,8 +47,6 @@ src_compile() {
 	use snmp || myconf="${myconf} --without-ucdsnmp"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
-	addwrite "/usr/share/snmp/mibs/.index" 
-	
 	econf \
 		--enable-pcap \
 		--enable-zlib \
@@ -68,6 +65,7 @@ src_compile() {
 }
 
 src_install() {
+	addwrite "/usr/share/snmp/mibs/.index"
 	dodir /usr/lib/ethereal/plugins/${PV}
 	make DESTDIR=${D} install
 	dodoc AUTHORS COPYING ChangeLog INSTALL.* NEWS README* TODO

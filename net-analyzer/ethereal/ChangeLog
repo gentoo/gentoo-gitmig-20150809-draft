@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.31 2003/06/15 15:42:56 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.32 2003/06/16 01:34:18 bcowan Exp $
+
+  15 Jun 2003; Brad Cowan <bcowan@gentoo.org> ethereal-0.9.13.ebuild:
+  Hopefully fixed bug #22233.
 
   15 Jun 2003; Brad Cowan <bcowan@gentoo.org> ethereal-0.9.13.ebuild:
   Fix for bug #22861.
