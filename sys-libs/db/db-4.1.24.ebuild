@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.24.ebuild,v 1.9 2003/05/24 08:35:24 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.24.ebuild,v 1.10 2003/05/24 11:48:05 pauldv Exp $
 
 IUSE="tcltk java"
 
@@ -45,7 +45,33 @@ src_compile() {
 src_install () {
 
 	einstall || die
+	for fname in ${D}/usr/bin/db_*
+	do
+		mv ${fname} ${fname//\/db_/\/db4_}
+	done
+
+	dodir /usr/include/db4
+	mv ${D}/usr/include/*.h ${D}/usr/include/db4/
 	
 	dodir /usr/share/doc/${PF}/html
 	mv ${D}/usr/docs/* ${D}/usr/share/doc/${PF}/html/
+}
+
+fix_so () {
+	cd /usr/lib
+	target=`find -type f -maxdepth 1 -name "libdb-*.so" |tail -n 1`
+	[ ${target} ] && ln -sf ${target//.\//} libdb.so
+	target=`find -type f -maxdepth 1 -name "libdb_cxx*.so" |tail -n 1`
+	[ ${target} ] && ln -sf ${target//.\//} libdb_cxx.so
+	target=`find -type f -maxdepth 1 -name "libdb_tcl*.so" |tail -n 1`
+	[ ${target} ] && ln -sf ${target//.\//} libdb_tcl.so
+	cd -
+}
+
+pkg_postinst () {
+	fix_so
+}
+
+pkg_postrm () {
+	fix_so
 }
