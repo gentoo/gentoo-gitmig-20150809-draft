@@ -1,10 +1,13 @@
 # ChangeLog for net-mail/qpopper
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# Author: Enrico Morelli <morelli@cerm.unifi.it>
-# Maintaniner: José Alberto Suárez López <bass@gentoo.org>
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.7 2003/03/14 10:38:02 aliz Exp $
+
+*qpopper-4.0.5 (14 Mar 2003)
+
+  14 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.6 2003/02/13 20:40:45 vapier Exp $
 
 *qpopper-4.0.4 (20 Jun 2002)
 
