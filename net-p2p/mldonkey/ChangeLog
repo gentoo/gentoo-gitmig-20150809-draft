@@ -1,12 +1,18 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.57 2004/07/31 02:14:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.58 2004/07/31 03:30:52 squinky86 Exp $
+
+  30 Jul 2004; Jon Hood <squinky86@gentoo.org> -files/97mldonkey,
+  -files/mldonkey-2.5.16-16g.patch, -files/mldonkey-2.5.16-oldbt.patch:
+  fix
 
   30 Jul 2004; Jon Hood <squinky86@gentoo.org> files/mldonkey
   -mldonkey-2.5.16-r4.ebuild, mldonkey-2.5.16-r6.ebuild,
-  files/mldonkey.initd:
+  files/mldonkey.initd, -files/97mldonkey,
+  -files/mldonkey-2.5.16-16g.patch, -files/mldonkey-2.5.16-oldbt.patch:
   fix init script irt #58857
   Stable on x86; remove old version.
+  Remove unused patches and files
 
   27 Jul 2004; Guillaume Destuynder <kang@gentoo.org>
   mldonkey-2.5.16-r(4,5,6,7).ebuild,
