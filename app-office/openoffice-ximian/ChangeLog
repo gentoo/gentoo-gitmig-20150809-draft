@@ -1,6 +1,14 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.94 2005/01/17 07:09:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.95 2005/01/17 14:57:53 suka Exp $
+
+  17 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-ximian-1.3.7.ebuild:
+  Add support for localized helpcontent. For it to work you will have to
+  download the correct helpcontent file from one of the OOo-mirrors (it's in
+  the contrib/helpcontent/ directory, for instance:
+  http://ftp.stardiv.de/pub/OpenOffice.org/contrib/helpcontent/) and put it in
+  you distfiles-directory. Closes bug #30668
 
   17 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-ximian-1.3.7.ebuild:

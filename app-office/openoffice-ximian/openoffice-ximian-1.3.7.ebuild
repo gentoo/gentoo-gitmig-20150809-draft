@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.6 2005/01/17 07:09:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.7 2005/01/17 14:57:53 suka Exp $
 
 # Notes:
 #
@@ -376,6 +376,13 @@ src_compile() {
 
 	cd ${S}
 	get_EnvSet
+
+	# unpack help files if present
+	if [ -f ${DISTDIR}/helpcontent_${LANGNO}_unix.tgz ]; then
+		einfo "Using helpcontent for ${LFULLNAME}"
+		mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/pck
+		tar -xzf ${DISTDIR}/helpcontent_${LANGNO}_unix.tgz -C ${S}/solver/${SOLVER}/${SOLPATH}/pck
+	fi
 
 	# Build as minimal as possible
 	export BUILD_MINIMAL="${LANGNO}"
