@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rarpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/ChangeLog,v 1.6 2003/08/21 04:59:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/ChangeLog,v 1.7 2003/11/04 03:23:48 vapier Exp $
+
+*rarpd-1.1-r2 (03 Nov 2003)
+
+  03 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add init.d scripts and a daemon patch #32540 to write a pid file.
 
 *rarpd-1.1-r1 (21 Aug 2003)
 
