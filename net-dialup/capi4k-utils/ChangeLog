@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.16 2004/10/31 22:30:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.17 2004/11/10 22:39:56 mrness Exp $
+
+*capi4k-utils-20041006-r1 (11 Nov 2004)
+
+  11 Nov 2004; Alin Nastac <mrness@gentoo.org> +capi4k-utils-20041006-r1.ebuild:
+  Add a bunch of AVM firmware files, thanks to Stefan Briesenick <sbriesen@gmx.de>. 
+  Closing #69324.
 
   01 Nov 2004; Daniel Black <dragonheart@gentoo.org> files/capi-init-20041006:
   Init script fix as per bug #69558. Thanks to Stefan Briesenick

@@ -1,23 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 22354caf6445da21e5ebe8609a9e7012 capi4k-utils-20041006.ebuild 2267
+MD5 65bc18212452f8314d9717b5dadd3aaa ChangeLog 2571
 MD5 03aaea36415b2221e3057baee7f1662f capi4k-utils-20021026.ebuild 1346
-MD5 e97bcb3ddf5985150a05bf7466dd09c6 ChangeLog 2350
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 8a68cd59daa9bd143ce9987778320b62 capi4k-utils-20040810.ebuild 1760
+MD5 22354caf6445da21e5ebe8609a9e7012 capi4k-utils-20041006.ebuild 2267
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 5828a0246b9775e74d584023dbbf8024 capi4k-utils-20041006-r1.ebuild 2740
 MD5 6c75232315b3bb9c63d8e566c24e396a files/capi 543
-MD5 8b4a7394c2826badb822b9575dbfbd4d files/capi4k-utils-2004-10-06.patch 2144
-MD5 14a08bf121eef97390c18eafd8458bc7 files/digest-capi4k-utils-20021026 75
-MD5 f2524d2cc37ffcbc2096a4f0ac7177c7 files/digest-capi4k-utils-20041006 75
-MD5 daf5a35ac5aeac77c4ac69274ed15395 files/digest-capi4k-utils-20040810 75
 MD5 befd926d2f898c15846c2f7452853ec1 files/capi-init-20040810 609
 MD5 b1de4263d145b4fb13baf0e4791e49a0 files/capi-init-20041006 617
 MD5 9bc030e6ab061e50f16efb0def04f0b6 files/capi4k-utils-2004-10-06-fPIC.patch 286
+MD5 8b4a7394c2826badb822b9575dbfbd4d files/capi4k-utils-2004-10-06.patch 2144
+MD5 14a08bf121eef97390c18eafd8458bc7 files/digest-capi4k-utils-20021026 75
+MD5 daf5a35ac5aeac77c4ac69274ed15395 files/digest-capi4k-utils-20040810 75
+MD5 f2524d2cc37ffcbc2096a4f0ac7177c7 files/digest-capi4k-utils-20041006 75
+MD5 41806879bfb1f3d6784fc8ba60cfa936 files/digest-capi4k-utils-20041006-r1 419
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhWd6mdTrptrqvGERAp+6AJ49cAGr7gFfXji6qvHgITo+hvjnOgCfSLav
-ElLn7JJyiFjBQnX0UD/ceLQ=
-=ADRp
+iD8DBQFBkpjGjtv59x0+BrURAuYKAJ9zHQw0lzCEPDiJiQ6+Xk3d13FA3ACgqd4w
+Q0akfkak/zQhfxNgVpL3LoE=
+=DDjN
 -----END PGP SIGNATURE-----
