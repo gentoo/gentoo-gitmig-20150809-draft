@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.81 2003/08/28 03:20:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.82 2003/09/08 02:15:54 caleb Exp $
+
+  07 Aug 2003; Caleb Tennis <caleb@gentoo.org> qt-3.1.2-r4.ebuid:
+  Add some complextext patches for cjk users (bug #27988)
 
 qt-3.2.1 (27 Aug 2003)
 

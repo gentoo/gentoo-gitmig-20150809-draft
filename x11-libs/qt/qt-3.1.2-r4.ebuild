@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r4.ebuild,v 1.7 2003/09/07 00:23:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r4.ebuild,v 1.8 2003/09/08 02:15:54 caleb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -53,6 +53,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-coreutils-fixup.patch
 
 	use cjk && epatch ${FILESDIR}/${P}-korean-xim.patch
+	use cjk && epatch ${FILESDIR}/${P}-qfont-jp-family-subst-20030421.patch
+	use cjk && epatch ${FILESDIR}/${P}-qpsprinter-ttc-otf-italic-20030429.patch
 	epatch ${FILESDIR}/${P}-thai-complextext.patch
 
 	cp configure configure.orig
