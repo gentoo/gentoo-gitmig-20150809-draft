@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.1 2003/10/09 05:45:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.2 2003/11/28 18:26:20 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Access control list utilities, libraries and headers"
@@ -34,6 +34,11 @@ src_compile() {
 
 	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
 	-e 's:-O1::' -i include/builddefs || die "failed to update builddefs"
+
+	if [ "${ARCH}" = "sparc" ]; then
+		sed -i -e 's/sparc.*$/linux/' include/builddefs || \
+			die "failed to update builddefs for sparc"
+	fi
 
 	emake || die
 

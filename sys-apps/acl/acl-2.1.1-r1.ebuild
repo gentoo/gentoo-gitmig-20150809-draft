@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.1.1-r1.ebuild,v 1.7 2003/09/13 17:38:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.1.1-r1.ebuild,v 1.8 2003/11/28 18:26:20 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XFS dump/restore utilities"
@@ -28,6 +28,11 @@ src_compile() {
 	cp include/builddefs include/builddefs.orig
 	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
 	-e 's:-O1::' include/builddefs.orig > include/builddefs || die
+
+	if [ "${ARCH}" = "sparc" ]; then
+		sed -i -e 's/sparc.*$/linux/' include/builddefs || \
+			die "failed to update builddefs for sparc"
+	fi
 
 	emake || die
 
