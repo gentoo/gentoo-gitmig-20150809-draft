@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.8 2004/06/24 22:10:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.9 2004/12/25 08:00:54 vapier Exp $
+
+*crystalspace-0.98.4 (25 Dec 2004)
+
+  25 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +crystalspace-0.98.4.ebuild, -crystalspace-20030413-r1.ebuild,
+  -crystalspace-20040604.ebuild:
+  Version bumpage.
 
   16 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   crystalspace-20040604.ebuild:

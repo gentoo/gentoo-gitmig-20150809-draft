@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4e1034c5eabf9abd9e3167bc7e2612a5 ChangeLog 1470
-MD5 68692f72fd2dd2a0d49f7f8df2584678 crystalspace-20030413-r1.ebuild 1488
+MD5 c414510a08d70a98c9d95f57e7038e9f ChangeLog 1672
 MD5 e4c7a49ca08eb200cfa0a9f9246e2257 metadata.xml 959
-MD5 449820375e3cdabfa5aa2dfff32b1109 crystalspace-20040604.ebuild 2063
-MD5 d90edc320c9f4398c1e5c528569f8706 files/digest-crystalspace-20030413-r1 75
-MD5 392d20cde72d17f97d8dee0f54041588 files/digest-crystalspace-20040604 76
+MD5 d90977a97ee1456c40bc5af14262b49b crystalspace-0.98.4.ebuild 1735
+MD5 bec0edb0863c282510494dc014bbf750 files/digest-crystalspace-0.98.4 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA4YTcHTu7gpaalycRAiYRAJ4ktFCp/oe87DpNPzNobyGaRpKHOwCfVTyV
-xBdP5eVCk+BZMber0JsKqRk=
-=89sa
+iD4DBQFBzR5LroRuSHgZdywRAhDSAJwMUth+HKclfE+nDKzLsylvX3LVYgCYg7bk
+ox6cYy/xhB7NPQUuqeLPHA==
+=32Wg
 -----END PGP SIGNATURE-----
