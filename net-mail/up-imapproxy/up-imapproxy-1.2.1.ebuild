@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.1.ebuild,v 1.2 2004/04/26 18:51:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.1.ebuild,v 1.3 2004/06/24 23:31:18 agriffis Exp $
 
 DESCRIPTION="Proxy IMAP transactions between an IMAP client and an IMAP server."
 HOMEPAGE="http://www.imapproxy.org/"

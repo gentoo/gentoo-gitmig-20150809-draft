@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70-r2.ebuild,v 1.6 2004/02/22 16:19:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70-r2.ebuild,v 1.7 2004/06/24 23:23:15 agriffis Exp $
 
 inherit perl-module
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.4-r1.ebuild,v 1.1 2004/06/12 14:46:51 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.4-r1.ebuild,v 1.2 2004/06/24 23:21:27 agriffis Exp $
 
 IUSE="debug gnutls ipv6 ldap maildir pam postgres sasl ssl vpopmail nopop3d"
 

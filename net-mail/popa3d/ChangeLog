@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/popa3d
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.7 2004/04/27 21:01:55 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.8 2004/06/24 23:26:39 agriffis Exp $
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> popa3d-0.6.3.ebuild,
   popa3d-0.6.4.ebuild:

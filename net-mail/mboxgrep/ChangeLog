@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/mboxgrep
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.6 2003/10/19 17:57:01 lanius Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.7 2004/06/24 23:25:14 agriffis Exp $
 
 *mboxgrep-0.7.9 (19 Oct 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.3.ebuild,v 1.5 2004/01/18 22:59:02 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.3.ebuild,v 1.6 2004/06/24 23:22:21 agriffis Exp $
 
 IUSE="ssl nls ipv6"
 

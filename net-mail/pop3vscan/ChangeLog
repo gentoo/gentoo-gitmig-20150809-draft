@@ -1,7 +1,7 @@
 # ChangeLog for net-mail/pop3vscan
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # AUTHOR: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/ChangeLog,v 1.7 2004/06/04 18:06:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/ChangeLog,v 1.8 2004/06/24 23:26:27 agriffis Exp $
 
   04 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> pop3vscan-0.4.ebuild:
   pkg_postinstall -> pkg_postinst

@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/cyrus-imapd
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.42 2004/06/10 21:23:39 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.43 2004/06/24 23:20:54 agriffis Exp $
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> cyrus-imapd-2.1.12.ebuild,
   cyrus-imapd-2.1.13.ebuild, cyrus-imapd-2.1.14.ebuild,

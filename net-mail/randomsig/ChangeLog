@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/randomsig
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/randomsig/ChangeLog,v 1.5 2004/04/16 20:27:52 randy Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/randomsig/ChangeLog,v 1.6 2004/06/24 23:29:30 agriffis Exp $
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> randomsig-1.10.0.ebuild:
   adding s390 keywords

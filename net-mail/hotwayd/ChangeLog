@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/hotwayd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.3 2003/11/20 16:40:00 mholzer Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.4 2004/06/24 23:23:26 agriffis Exp $
 
 *hotwayd-0.7.1 (20 Nov 2003)
 

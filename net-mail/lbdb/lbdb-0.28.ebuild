@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.28.ebuild,v 1.3 2004/05/30 08:30:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.28.ebuild,v 1.4 2004/06/24 23:23:38 agriffis Exp $
 
 IUSE="pda ldap"
 

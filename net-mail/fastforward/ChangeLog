@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/fastforward
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/ChangeLog,v 1.6 2003/10/19 16:58:42 lanius Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/ChangeLog,v 1.7 2004/06/24 23:22:10 agriffis Exp $
 
   19 Oct 2003; Heinrich Wendel <lanius@gentoo.org> fastforward-0.51-r1.ebuild:
   head/tail fix
