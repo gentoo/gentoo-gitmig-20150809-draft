@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/aewm++-1.0.24.ebuild,v 1.5 2005/01/07 04:56:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/aewm++-1.0.24.ebuild,v 1.6 2005/01/19 01:28:45 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}	
+	cd ${S}
 	epatch ${FILESDIR}/gcc-3.4.patch
 }
 
