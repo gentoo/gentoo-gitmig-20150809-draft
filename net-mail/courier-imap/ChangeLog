@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.22 2002/12/31 08:07:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.23 2003/01/09 21:51:34 raker Exp $
 
 *courier-imap-1.6.2 (31 Dec 2002)
+
+  09 Jan 2002; Nick Hadaway <raker@gentoo.org> courier-imap-1.6.2.ebuild :
+  Marked stable for x86.
 
   31 Dec 2002; Nick Hadaway <raker@gentoo.org> courier-imap-1.6.2.ebuild,
   files/digest-courier-imap-1.6.2 :
