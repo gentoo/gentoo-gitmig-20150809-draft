@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r1.ebuild,v 1.3 2003/11/05 01:03:23 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r1.ebuild,v 1.4 2003/11/24 01:30:54 vapier Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack () {
 
 	# Apply security fix
 	epatch ${FILESDIR}/${P}-security.diff
+	epatch ${FILESDIR}/${PV}-generic.patch
 	use amd64 && epatch ${FILESDIR}/mpg123-0.59s-amd64.patch
 	sed -i \
 		-e "s:-O2 -m486:${CFLAGS}:" \
@@ -64,6 +65,8 @@ src_compile() {
 			MAKESTYLE="-alpha";;
 		arm)
 			;;
+		hppa)
+			MAKESTYLE="-generic";;
 	esac
 
 	make linux${MAKESTYLE}${MAKEOPT} || die
