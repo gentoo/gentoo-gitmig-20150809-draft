@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3720 2005/03/12 23:38:41 stuart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3721 2005/03/13 06:04:08 chriswhite Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -787,9 +787,7 @@ dev-php/asp2php
 
 # <chriswhite@gentoo.org> (30 Dec 2004)
 # Junkie being masked per security bug #74696
-# Ringtones being masked per security bug #74700
 net-ftp/junkie
-app-misc/ringtonetools
 
 # <brix@gentoo.org> (29 Dec 2004)
 # Masking net-wireless/waproamd since it is no longer
