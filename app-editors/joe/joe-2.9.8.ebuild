@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.8.ebuild,v 1.7 2004/03/09 06:53:03 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.8.ebuild,v 1.8 2004/03/25 03:09:10 kumba Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/joe-editor/${MY_P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/joe-editor/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~mips amd64"
+KEYWORDS="x86 ~ppc sparc alpha mips amd64"
 LICENSE="GPL-1"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
