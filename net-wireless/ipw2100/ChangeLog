@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.11 2004/03/26 20:57:46 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.12 2004/04/23 15:19:05 latexer Exp $
+
+*ipw2100-0.41 (23 Apr 2004)
+
+  23 Apr 2004; Peter Johanson <latexer@gentoo.org> ipw2100-0.33-r1.ebuild,
+  ipw2100-0.34.ebuild, ipw2100-0.35.ebuild, ipw2100-0.41.ebuild,
+  files/hostap_crypt.h:
+  Bump. First version with testing WEP support. Thanks to all on bug #47892.
+  Note added about re-emerging both ipw2100 and hostap-driver after a kernel
+  upgrade. Removed some old versions too.
 
 *ipw2100-0.39 (26 Mar 2004)
 
