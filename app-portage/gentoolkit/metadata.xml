@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>portage-tools</herd>
+<herd>tools-portage</herd>
 <maintainer>
   <email>karltk@gentoo.org</email>
   <name>Karl Trygve Kalleberg</name>
