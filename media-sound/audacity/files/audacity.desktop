@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Audacity
+Comment=Sound Editor
+Exec=/usr/bin/audacity
+Icon=audacity.xpm
+Terminal=0
+Type=Application
+Categories=Application;AudioVideo;

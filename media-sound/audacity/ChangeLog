@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.19 2004/03/13 10:07:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.20 2004/04/05 07:17:25 eradicator Exp $
+
+*audacity-1.2.0-r1 (04 Apr 2004)
+
+  04 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  audacity-1.2.0-r1.ebuild, audacity-1.2.0.ebuild, files/audacity.desktop:
+  Stable on x86.  Revbumping to include the .desktop.
 
   13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   audacity-1.2.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.0.ebuild,v 1.3 2004/03/13 10:07:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.0-r1.ebuild,v 1.1 2004/04/05 07:17:25 eradicator Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 IUSE="encode flac mad oggvorbis"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=x11-libs/wxGTK-2.2.9
 	>=app-arch/zip-2.3
@@ -83,4 +83,11 @@ src_install() {
 
 	# Remove bad doc install
 	rm -rf ${D}/share/doc
+
+	insinto /usr/share/gnome/apps/Multimedia
+	doins ${FILESDIR}/audacity.desktop
+	insinto /usr/share/applnk/Multimedia
+	doins ${FILESDIR}/audacity.desktop
+	insinto /usr/share/applications
+	doins ${FILESDIR}/audacity.desktop
 }
