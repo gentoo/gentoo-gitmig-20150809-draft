@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.4.0_rc1.ebuild,v 1.2 2005/03/02 00:56:35 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.4.0_rc1.ebuild,v 1.3 2005/03/07 11:07:44 greg_g Exp $
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
@@ -17,7 +17,8 @@ DEPEND="
 $(deprange $PV $MAXKDEVER kde-base/libkonq)"
 
 RDEPEND="${DEPEND}
-$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
+$(deprange $PV $MAXKDEVER kde-base/kcontrol)
+java? ( || ( virtual/jdk virtual/jre ) )"
+
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY=kdesktop/KDesktopIface.h
-
