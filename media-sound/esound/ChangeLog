@@ -1,11 +1,12 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.6 2002/04/24 17:16:28 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.7 2002/04/27 08:45:08 verwilst Exp $
 
 *esound-0.2.25 (24 Apr 2002)
   24 Apr 2002; Spider <spider@gentoo.org> esound-0.2.25.ebuild:
   update to latest version that has alsa 0.9 support
-  
+  Note: Me, Verwilst, added a SLOT="0" to this ebuild, to enable
+  auto-unmerging of previous versions
 
 *esound-0.2.24-r2 (03 Apr 2002)
 
