@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.5.9.ebuild,v 1.4 2004/02/18 10:27:33 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.7.2.ebuild,v 1.1 2004/02/18 10:27:33 torbenh Exp $
 
 DESCRIPTION="GTK+ graphical music notation editor"
 HOMEPAGE="http://denemo.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://dl.sourceforge.net/sourceforge/denemo/denemo-${PV}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/glibc
