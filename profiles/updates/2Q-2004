@@ -65,3 +65,6 @@ move net-mail/nullmailer mail-mta/nullmailer
 move net-mail/xmail mail-mta/xmail
 move net-mail/nbsmtp mail-mta/nbsmtp
 move net-mail/ssmtp mail-mta/ssmtp
+move net-mail/qmail mail-mta/qmail
+move net-mail/qmail-ldap mail-mta/qmail-ldap
+move net-mail/qmail-mysql mail-mta/qmail-mysql
