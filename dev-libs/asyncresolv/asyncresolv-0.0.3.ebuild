@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/asyncresolv/asyncresolv-0.0.3.ebuild,v 1.2 2004/07/14 14:02:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/asyncresolv/asyncresolv-0.0.3.ebuild,v 1.3 2004/07/14 22:00:42 agriffis Exp $
 
 DESCRIPTION="Asynchronous DNS query library written in C++"
 HOMEPAGE="http://asyncresolv.sourceforge.net/"
