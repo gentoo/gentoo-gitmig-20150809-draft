@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-1.9.3.ebuild,v 1.6 2004/06/24 22:51:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-1.9.3.ebuild,v 1.7 2004/07/15 00:08:04 agriffis Exp $
 
 inherit gnome2
 
@@ -35,7 +35,7 @@ use spell && MYCONF=${MYCONF} || MYCONF="${MYCONF} --disable-gtkspell"
 
 # The configure works bad with this see bug 45758
 #G2CONF="${G2CONF} $(use_enable ssl)"
-#G2CONF="${G2CONF} $(use_enable spell gtkspell)" 
+#G2CONF="${G2CONF} $(use_enable spell gtkspell)"
 G2CONF="${G2CONF} ${MYCONF}"
 
 DOCS="AUTHORS ChangeLog COPYING HACKING HACKING.ideas NEWS README TODO"

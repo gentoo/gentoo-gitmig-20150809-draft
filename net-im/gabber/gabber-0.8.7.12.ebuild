@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7.12.ebuild,v 1.13 2004/06/24 22:51:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7.12.ebuild,v 1.14 2004/07/15 00:08:04 agriffis Exp $
 
 inherit flag-o-matic
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME Jabber Client"
 # we only have this one on our distfiles
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://gabber.sourceforge.net"
 
-IUSE="ssl crypt xmms"
+IUSE="crypt nls ssl xmms"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
