@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.32 2005/02/07 00:46:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.33 2005/02/19 18:26:09 solar Exp $
+
+*expect-5.42.1-r1 (19 Feb 2005)
+
+  19 Feb 2005; <solar@gentoo.org> +files/expect-5.39.0-libdir.patch,
+  +expect-5.42.1-r1.ebuild:
+  - security fix for expects RPATH. do not remove the expect-5.39.0-libdir.patch
+  without talking to solar or tavis
 
   07 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> expect-5.42.1.ebuild:
   Stable on alpha.
