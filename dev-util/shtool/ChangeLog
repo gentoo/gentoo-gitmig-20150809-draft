@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/shtool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.7 2004/07/17 10:09:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.8 2004/09/23 14:31:08 ka0ttic Exp $
+
+*shtool-2.0.1 (23 Sep 2004)
+
+  23 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  shtool-2.0.0.ebuild, +shtool-2.0.1.ebuild:
+  Version bump to 2.0.1; Marked 2.0.0 stable on x86.
 
   17 Jul 2004; David Holm <dholm@gentoo.org> shtool-2.0.0.ebuild:
   Added to ~ppc.

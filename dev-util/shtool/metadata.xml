@@ -2,10 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>no-herd</herd>
-<!--
 	<maintainer>
-		<email>bug-wranglers@gentoo.org</email>
-		<description>Package has no maintainer</description>
+		<email>ka0tttic@gentoo.org</email>
+		<name>Aaron Walker</name>
 	</maintainer>
--->
 </pkgmetadata>
