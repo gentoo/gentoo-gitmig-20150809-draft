@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.77.2.ebuild,v 1.5 2003/11/20 02:24:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.77.2.ebuild,v 1.6 2004/04/15 23:53:47 randy Exp $
 
 DEB_PV=1
 
