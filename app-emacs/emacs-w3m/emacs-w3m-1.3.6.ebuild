@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.6.ebuild,v 1.8 2004/06/24 22:10:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.6.ebuild,v 1.9 2004/06/26 11:53:44 usata Exp $
 
 inherit elisp
 
@@ -15,9 +15,7 @@ SLOT="0"
 KEYWORDS="x86 alpha ~ppc sparc"
 
 DEPEND="virtual/emacs
-	virtual/w3m
-	>=app-emacs/apel-10.3
-	virtual/flim"
+	virtual/w3m"
 
 src_compile() {
 	./configure --prefix=/usr \
@@ -45,6 +43,9 @@ src_install () {
 pkg_postinst() {
 	elisp-site-regen
 	einfo "Please see /usr/share/doc/${P}/README.gz."
+	einfo
+	einfo "If you want to use shimbun library, please emerge app-emacs/apel and app-emacs/flim."
+	einfo
 }
 
 pkg_postrm() {

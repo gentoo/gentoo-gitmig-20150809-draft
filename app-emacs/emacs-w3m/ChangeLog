@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.16 2004/06/24 22:10:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.17 2004/06/26 11:53:44 usata Exp $
+
+  26 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-w3m-1.3.6.ebuild,
+  emacs-w3m-1.4.ebuild:
+  Removed hard dependency to flim and added an advisory to install flim to
+  pkg_postsinst(). This closes bug #55028
 
   24 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-w3m-1.4.ebuild:
   Stable on x86 and ppc
