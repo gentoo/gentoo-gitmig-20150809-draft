@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.45 2005/01/22 21:21:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.46 2005/01/23 15:08:36 luckyduck Exp $
+
+  23 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +files/2.2.0-gentoo.patch,
+  icecast-2.2.0.ebuild:
+  2.2.0 now applies a patch to fix #79199
 
 *icecast-2.2.0 (22 Jan 2005)
 
