@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.2 2004/11/25 19:47:18 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.3 2004/11/25 22:40:29 johnm Exp $
 
 # This eclass provides functions for compiling external kernel modules
 # from source.
@@ -18,6 +18,7 @@ DEPEND="virtual/linux-sources
 
 # This eclass is designed to help ease the installation of external kernel
 # modules into the kernel tree.
+
 
 # eclass utilities
 # ----------------------------------
@@ -57,6 +58,15 @@ update_depmod() {
 		ewarn
 	fi
 	eend $?
+}
+
+update_modules() {
+	if [ -x /sbin/modules-update ] ;
+	then
+		ebegin "Updating modules.conf"
+		/sbin/modules-update
+		eend $?
+	fi
 }
 
 set_kvobj() {
@@ -109,7 +119,7 @@ linux-mod_src_compile() {
 	xarch="${ARCH}"
 	unset ARCH	
 
-	for i in ${MODULE_NAMES}
+	for i in "${MODULE_NAMES}"
 	do
 		module_temp="$(echo ${i} | sed -e "s:.*(\(.*\)):\1:")"
 		modulename="${i/(*/}"
@@ -120,8 +130,8 @@ linux-mod_src_compile() {
 	
 		einfo "Preparing ${modulename} module"
 		cd ${sourcedir}
-		make clean
-		make ${BUILD_PARAMS} module
+		emake clean || die Unable to make clean.
+		emake ${BUILD_PARAMS} module || die Unable to make ${BUILD_PARAMS} module.
 	done
 	ARCH="${xarch}"
 }
@@ -147,5 +157,6 @@ linux-mod_src_install() {
 
 linux-mod_pkg_postinst() {
 	update_depmod;
+	update_modules;
 	display_postinst;
 }
