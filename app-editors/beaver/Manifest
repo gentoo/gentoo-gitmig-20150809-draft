@@ -1,3 +1,13 @@
-MD5 0949bf283827b3e487f72bbbb0f1e1bd ChangeLog 1401
-MD5 be19b8c900f4c8afd98ff772699c6a84 beaver-0.2.6.ebuild 612
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 11cf325282ed0ccd2cfaa9bc034e990e ChangeLog 1515
+MD5 972afd336b588c60e547a2aa3af10eb6 beaver-0.2.6.ebuild 618
 MD5 37eae8b19ad2c101b55ebed07db7e0f6 files/digest-beaver-0.2.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOb5u06ebR+OMO78RAjPrAJ0XxiwUN5c/Skn6SWU6X86MXd8oWgCfZhzU
+XKCJXPkesEhf+5hihQATprg=
+=/Ozk
+-----END PGP SIGNATURE-----
