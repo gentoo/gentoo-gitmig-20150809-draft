@@ -1,6 +1,6 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.57 2003/04/16 10:17:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.58 2003/04/16 11:03:35 mholzer Exp $
 
 *mplayer-0.90 (09 Apr 2003)
 
@@ -36,6 +36,9 @@
   Marked ppc stable
 
 *mplayer-0.90_rc4 (16 Feb 2003)
+
+  16 Apr 2003; Martin Holzer <mholzer@gentoo.org> mplayer-0.90_rc4.ebuild:
+  Forcing to use old libdvdnav.
 
   06 March 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_rc4.ebuild :
 
