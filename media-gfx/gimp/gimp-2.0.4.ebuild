@@ -1,24 +1,29 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.4.ebuild,v 1.1 2004/08/11 18:04:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.4.ebuild,v 1.2 2004/08/29 17:31:32 foser Exp $
 
 inherit flag-o-matic libtool eutils
-IUSE="X aalib altivec debug doc gimpprint gtkhtml jpeg mmx mng png python sse svg tiff wmf"
+
 DESCRIPTION="GNU Image Manipulation Program"
+HOMEPAGE="http://www.gimp.org/"
+LICENSE="GPL-2"
+
 P_HELP="gimp-help-${PV/\./-}"
 S_HELP="$WORKDIR/${P_HELP}"
 SRC_URI="mirror://gimp/v2.0/${P}.tar.bz2
-		 doc? ( mirror://gimp/help/testing/${P_HELP}.tar.gz )"
-HOMEPAGE="http://www.gimp.org/"
+	doc? ( mirror://gimp/help/testing/${P_HELP}.tar.gz )"
 
 SLOT="2"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 ~mips ppc64"
+KEYWORDS="x86 ~ppc ~hppa ~sparc ~amd64 ~mips ~ppc64"
+#IUSE="X aalib altivec debug doc gimpprint jpeg mmx mng png python sse svg tiff wmf"
+IUSE="aalib altivec debug doc gimpprint jpeg mmx mng png python sse svg tiff wmf"
 
 # FIXME : some more things can be (local) USE flagged
 # a few options are detection only, fix them to switch
 
-RDEPEND=">=dev-libs/glib-2.2
+#	X? ( virtual/x11 )"
+RDEPEND="virtual/x11
+	>=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2.2
 	>=x11-libs/pango-1.2.2
 	>=media-libs/fontconfig-2.2
@@ -26,7 +31,7 @@ RDEPEND=">=dev-libs/glib-2.2
 	sys-libs/zlib
 
 	gimpprint? ( =media-gfx/gimp-print-4.2* )
-	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
+	doc? ( =gnome-extra/libgtkhtml-2* )
 
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2
@@ -39,8 +44,7 @@ RDEPEND=">=dev-libs/glib-2.2
 
 	aalib?	( media-libs/aalib )
 	python?	( >=dev-lang/python-2.2
-		>=dev-python/pygtk-2 )
-	X? ( virtual/x11 )"
+		>=dev-python/pygtk-2 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
@@ -58,17 +62,6 @@ src_unpack() {
 
 }
 
-gimp_help_compile(){
-	cd ${S_HELP}
-	econf || die
-	emake || die
-}
-
-gimp_help_install(){
-	cd ${S_HELP}
-	make DESTDIR=${D} install || die
-}
-
 src_compile() {
 
 	# Since 1.3.16, fixes linker problems when upgrading
@@ -83,13 +76,13 @@ src_compile() {
 
 	econf \
 		--disable-default-binary \
+		--with-x \
 		`use_enable mmx` \
 		`use_enable sse` \
 		`use_enable altivec` \
 		`use_enable doc gtk-doc` \
 		`use_enable python` \
 		`use_enable gimpprint print` \
-		`use_with X x` \
 		`use_with png libpng` \
 		`use_with jpeg libjpeg` \
 		`use_with jpeg libexif` \
@@ -98,9 +91,16 @@ src_compile() {
 		`use_with aalib aa` \
 		`use_enable debug` || die
 
+	# X isn't optional (#58003) atm
+	#	`use_with X x` \
+
 	emake || die
 
-	use doc && gimp_help_compile
+	if use doc; then
+		cd ${S_HELP}
+		econf --without-gimp || die
+		emake || die
+	fi
 
 }
 
@@ -116,5 +116,10 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeL* HACKING INSTALL \
 		MAINTAINERS NEWS PLUGIN_MAINTAINERS README* TODO*
-	use doc && gimp_help_install
+
+	if use doc; then
+		cd ${S_HELP}
+		make DESTDIR=${D} install || die
+	fi
+
 }
