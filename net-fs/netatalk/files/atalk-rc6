@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/files/atalk-rc6,v 1.1 2002/02/27 05:16:53 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/files/atalk-rc6,v 1.2 2004/07/18 03:53:34 dragonheart Exp $
 
 # AppleTalk daemons. Make sure not to start atalkd in the background:
 # its data structures must have time to stablize before running the
