@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.4 2002/03/14 16:53:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.5 2002/04/07 05:42:34 azarah Exp $
+
+*nvidia-glx-1.0.2880 (7 Apr 2002)
+
+  7 Apr 2002; M.Schlemmer <azarah@gentoo.org> nvidia-glx-1.0.2880.ebuild :
+
+  Moved back to /usr to fix various problems we had.  Update for dinamic
+  OpenGL switching.
 
 *nvidia-glx-1.0.2802-r2 (07 Mar 2002)
 
