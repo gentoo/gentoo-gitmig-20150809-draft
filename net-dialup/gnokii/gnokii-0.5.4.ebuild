@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.4.ebuild,v 1.1 2003/10/01 00:04:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.4.ebuild,v 1.2 2003/10/01 00:07:08 liquidx Exp $
 
 DESCRIPTION="a client that plugs into your handphone"
 SRC_URI="http://freesoftware.fsf.org/download/${PN}/${P}.tar.bz2"
@@ -41,13 +41,13 @@ src_install () {
 
 	dodoc Docs/*
 	cp -r Docs/sample ${D}/usr/share/doc/${PF}/sample
-	cp -r Docs/protocol ${D}/usr/share/doc/${PF}/protocol	
+	cp -r Docs/protocol ${D}/usr/share/doc/${PF}/protocol
 
 	doman Docs/man/*
 
 	dodir /etc
 	sed -e 's:/usr/local/sbin:/usr/sbin:' ${S}/Docs/sample/gnokiirc > ${D}/etc/gnokiirc
-	
+
 	# only one file needs suid root to make a psuedo device
 	fperms 4755 /usr/sbin/mgnokiidev
 }
@@ -56,7 +56,7 @@ pkg_postinst() {
 	einfo "gnokii does not need it's own group anymore."
 	einfo "Make sure the user that runs gnokii has read/write access to the device"
 	einfo "which your phone is connected to. eg. chown <user> /dev/ttyS0"
-	
+
 	# clean up old gnokii group perms
 	groupdel gnokii
 }
