@@ -1,18 +1,17 @@
 # ChangeLog for app-sci/spice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/ChangeLog,v 1.5 2003/05/07 18:28:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/ChangeLog,v 1.6 2003/11/28 20:38:11 plasmaroo Exp $
 
   07 May 2003; George Shapovalov <george@gentoo.org> spice-3.5.5.ebuild :
-  added x11-base/xfree to DEPEND, see #19904
+  Added x11-base/xfree to DEPEND, see bug #19904
 
   28 Apr 2003; George Shapovalov <george@gentoo.org> spice-3.5.5.ebuild :
-  few cosmetic touches + added ISUE; made ebuild honor EDITOR setting on user system
+  Few cosmetic touches + added IUSE; made ebuild honor EDITOR setting on 
+  user system
 
 *spice-3.5.5 (7 Aug 2002)
 
   07 Aug 2002; George Shapovalov <george@gentoo.org> spice-3.5.5.ebuild, files/digest-spice-3.5.5:
-
-  initial release
 
   SPICE 3 is a general-purpose circuit simulation program for nonlinear dc, 
   nonlinear transient, and linear ac analyses.  Circuits may contain resistors, 
@@ -21,4 +20,4 @@
   most common semiconductor devices: diodes, BJT's, JFET's, and MOSFET's. This 
   version includes support for the Bsim3 model (V3.1). 
 
-  ebuild submitted by: Chris Bainbridge <chrb@dcs.ed.ac.uk>
+  Ebuild submitted by: Chris Bainbridge <chrb@dcs.ed.ac.uk>
