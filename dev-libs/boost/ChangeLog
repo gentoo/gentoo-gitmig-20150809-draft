@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.45 2005/03/10 04:42:33 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.46 2005/03/18 06:56:46 morfic Exp $
+
+  18 Mar 2005; Daniel Goller <morfic@gentoo.org> boost-1.32.0-r1.ebuild:
+  depend on icc 8 as 7 is no longer supported by intel
 
   09 Mar 2005; Daniel Goller <morfic@gentoo.org> boost-1.32.0-r1.ebuild:
   set paths for icc to properly build all boost targets
