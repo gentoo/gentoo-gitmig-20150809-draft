@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/uconv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.6 2004/07/30 17:17:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.7 2004/09/07 08:58:41 usata Exp $
+
+  07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -uconv-0.4.11-r1.ebuild,
+  -uconv-0.4.11.ebuild, uconv-0.4.12.ebuild:
+  Stable on x86 and ppc.
 
   31 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> uconv-0.4.12.ebuild:
   Added to ~amd64.
