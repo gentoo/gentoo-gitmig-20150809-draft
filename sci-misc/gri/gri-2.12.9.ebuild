@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.5.ebuild,v 1.2 2004/12/28 19:12:21 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.9.ebuild,v 1.1 2005/03/10 21:19:17 phosphan Exp $
 
 inherit eutils
 
@@ -12,16 +12,10 @@ SRC_URI="mirror://sourceforge/gri/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
-DEPEND=">=sci-libs/netcdf-3.5.0"
-
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/info-install.patch
-}
+DEPEND=">=sci-libs/netcdf-3.5.0
+		virtual/tetex"
 
 src_compile() {
 	econf || die
@@ -30,8 +24,7 @@ src_compile() {
 
 src_install() {
 	# Replace PREFIX now and correct paths in the startup message.
-	mv ${S}/startup.msg ${S}/startup.msg.orig
-	sed -e s,PREFIX/share/doc/gri/,/usr/share/doc/${P}/, ${S}/startup.msg.orig > ${S}/startup.msg
+	sed -e s,PREFIX/share/doc/gri/,/usr/share/doc/${P}/, -i ${S}/startup.msg
 
 	einstall || die
 
