@@ -1,6 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.89 2004/01/13 01:23:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.90 2004/01/15 03:55:18 robbat2 Exp $
+
+  14 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> apache-1.3.27-r3.ebuild,
+  apache-1.3.27-r4.ebuild, apache-1.3.28-r1.ebuild, apache-1.3.28.ebuild,
+  apache-1.3.29-r1.ebuild, apache-1.3.29.ebuild, apache-2.0.46.ebuild,
+  apache-2.0.47-r1.ebuild, apache-2.0.47.ebuild, apache-2.0.48-r1.ebuild,
+  apache-2.0.48-r2.ebuild, apache-2.0.48.ebuild:
+  fix bug #38040. cleanup all apache2 DEPENDS to block mips from ldap until they
+  have openldap supported.
 
 *apache-2.0.48-r2 (12 Jan 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r2.ebuild,v 1.1 2004/01/13 01:23:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r2.ebuild,v 1.2 2004/01/15 03:55:19 robbat2 Exp $
 
 inherit flag-o-matic
 has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -22,9 +22,9 @@ DEPEND="dev-util/yacc
 	sys-libs/zlib
 	dev-libs/expat
 	dev-libs/openssl
-	berkdb? sys-libs/db
-	gdbm? sys-libs/gdbm
-	ldap? =net-nds/openldap-2*"
+	berkdb? ( sys-libs/db )
+	gdbm? ( sys-libs/gdbm )
+	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
 IUSE="berkdb gdbm ldap"
 
 src_unpack() {
@@ -119,7 +119,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use ldap && \
+	use !mips && use ldap && \
 		myconf="--with-ldap --enable-auth-ldap=shared --enable-ldap=shared"
 
 	select_modules_config || die "determining modules"
@@ -190,7 +190,7 @@ src_install () {
 	#protect the suexec binary
 	local gid=`getent group apache |cut -d: -f3`
 	[ -z "${gid}" ] && gid=81
-	fowners root.${gid} /usr/sbin/suexec
+	fowners root:${gid} /usr/sbin/suexec
 	fperms 4710 /usr/sbin/suexec
 
 	#apxs needs this to pickup the right lib for install
@@ -233,7 +233,7 @@ src_install () {
 	do
 		doins ${FILESDIR}/2.0.40/$i
 	done
-	use ldap && doins ${FILESDIR}/2.0.40/46_mod_ldap.conf
+	use !mips && use ldap && doins ${FILESDIR}/2.0.40/46_mod_ldap.conf
 
 	#drop in a convenient link to the manual
 	dosym /usr/share/doc/${PF}/manual ${DATADIR}/htdocs/manual

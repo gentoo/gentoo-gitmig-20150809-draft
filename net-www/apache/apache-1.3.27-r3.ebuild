@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.7 2003/12/26 01:07:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.27-r3.ebuild,v 1.8 2004/01/15 03:55:18 robbat2 Exp $
 
 mod_ssl_ver=2.8.14-${PV}
 
@@ -136,10 +136,10 @@ src_install() {
 	make install-quiet root=${D} || die
 	dodoc ABOUT_APACHE Announcement INSTALL* LICENSE* README* WARNING* ${FILESDIR}/robots.txt
 
-	fowners root.${GID} /usr/sbin/suexec
+	fowners root:${GID} /usr/sbin/suexec
 	fperms 4710 /usr/sbin/suexec
-	#fowners apache.apache ${DATA_DIR}
-	#fowners apache.apache ${DATA_DIR}/htdocs
+	#fowners apache:apache ${DATA_DIR}
+	#fowners apache:apache ${DATA_DIR}/htdocs
 
 	# nice support scripts..
 	for myfile in apacheaddmod apachedelmod \
