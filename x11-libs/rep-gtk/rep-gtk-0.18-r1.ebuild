@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r1.ebuild,v 1.1 2005/03/14 04:07:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r1.ebuild,v 1.2 2005/03/14 04:17:50 agriffis Exp $
 
 inherit eutils
 
@@ -33,6 +33,11 @@ src_unpack() {
 	if has_version '>=x11-libs/gtk+-2.4'; then
 		epatch ${FILESDIR}/rep-gtk-0.18-gtk24.patch
 	fi
+
+	# Remove reference to gtk internal functions.  These functions are no
+	# longer available in recent versions of gtk, and sawfish doesn't use
+	# them anyway.  Bug 48439, patch from fn_x
+	epatch ${FILESDIR}/rep-gtk-0.18-gtk26.patch
 }
 
 src_compile() {

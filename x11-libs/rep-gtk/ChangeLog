@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.32 2005/03/14 04:07:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.33 2005/03/14 04:17:50 agriffis Exp $
+
+  14 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/rep-gtk-0.18-gtk26.patch, rep-gtk-0.18-r1.ebuild:
+  Remove reference to gtk internal functions. These functions are no longer
+  available in recent versions of gtk, and sawfish doesn't use them anyway.
+  Bug 48439, patch from fn_x
 
 *rep-gtk-0.18-r1 (14 Mar 2005)
 
