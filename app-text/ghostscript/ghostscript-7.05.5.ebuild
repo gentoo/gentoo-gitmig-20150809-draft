@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.8 2002/10/31 00:50:43 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.9 2002/11/02 07:06:35 seemant Exp $
 
 IUSE="X cups gnome"
 
@@ -16,7 +16,8 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 
-DEPEND=">=media-libs/jpeg-6b 
+DEPEND="virtual/glibc
+	>=media-libs/jpeg-6b 
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	X? ( virtual/x11 ) 
