@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.37 2002/11/04 22:42:39 mkeadle Exp $
+# $Header
+
+*fluxbox-0.1.13 (19 Nov 2002)
+
+  19 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13.ebuild
+  files/digest-fluxbox-0.1.13 ChangeLog
+
+  Version bump to latest stable. Fluxbox now has Xft support! Also, build
+  was edited to grab the .bz2 instead of the .gz, and the new menu
+  generation script was yanked and scheduled to be adapted to commonbox.
 
 *fluxbox-0.1.12-r2 (26 Oct 2002)
 
