@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.1 2003/02/01 08:04:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.2 2003/02/01 18:50:42 raker Exp $
 
 IUSE="ssl"
 
@@ -28,6 +28,7 @@ RDEPEND="!virtual/mta
 	>=sys-apps/ucspi-tcp-0.88
 	>=sys-apps/daemontools-0.76-r1
 	>=net-mail/checkpassword-0.90
+	>=net-mail/cmd5checkpw-0.22
 	>=net-mail/dot-forward-0.71"
 PROVIDE="virtual/mta
 	 virtual/mda"
