@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.3.4.ebuild,v 1.1 2004/03/05 09:02:05 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.3.4.ebuild,v 1.2 2004/04/19 09:21:41 phosphan Exp $
 
 DESCRIPTION="Tools and library for reading Outlook files (.pst format)"
 HOMEPAGE="http://sourceforge.net/projects/ol2mbox"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
