@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/babytrans-en2pt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.2 2004/09/16 19:55:21 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.3 2004/09/22 20:21:55 angusyoung Exp $
+
+*babytrans-en2pt-0.2 (22 Sep 2004)
+
+  22 Sep 2004; Otavio Piske <angusyoung@gentoo.org>
+  -babytrans-en2pt-0.1.ebuild, +babytrans-en2pt-0.2.ebuild:
+  Added fetch restrictions to package until define what license restrictions may
+  or may not apply to this package
 
   16 Sep 2004; Otavio Piske <angusyoung@gentoo.org> :
   Corrected ChangeLog to according to Gentoo standard
