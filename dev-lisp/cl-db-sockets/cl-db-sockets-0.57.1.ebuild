@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-db-sockets/cl-db-sockets-0.57.1.ebuild,v 1.1 2003/06/10 04:53:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-db-sockets/cl-db-sockets-0.57.1.ebuild,v 1.2 2003/08/28 17:20:23 mkennedy Exp $
 
 inherit common-lisp
 
@@ -14,8 +14,7 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
-	dev-lisp/cl-rt
-	dev-lisp/sbcl"
+	dev-lisp/cl-rt"
 
 CLPACKAGE=db-sockets
 

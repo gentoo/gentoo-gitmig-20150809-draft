@@ -1,4 +1,4 @@
-MD5 649ddb555a1ef2e1e290f3b93357c1e4 ChangeLog 337
-MD5 e38b876fe7b276615bf6278073a78a89 cl-db-sockets-0.57.1.ebuild 1259
+MD5 cf1849829c8d569f61990e691a3d3286 cl-db-sockets-0.57.1.ebuild 1244
+MD5 64fb784e9bb26cdc3710d79716b05c0e ChangeLog 448
 MD5 334f3e2343d3fdfe50317eef0d9754fc files/db-sockets.asd 1932
 MD5 b1583fd16ea0c02c3122790055cdca7e files/digest-cl-db-sockets-0.57.1 76
