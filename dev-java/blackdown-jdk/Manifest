@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9188a678adcbcb490e9a8f2084f9d4fc blackdown-jdk-1.4.2_rc1.ebuild 4225
-MD5 0052da924a28441c6378160ecf4a58f9 blackdown-jdk-1.3.1-r8.ebuild 2310
-MD5 d6f9d33ab37807e3feba5c7bdae209f3 blackdown-jdk-1.4.1-r1.ebuild 3773
-MD5 bd223a65d6d2dce425e23ac87c53e07c blackdown-jdk-1.4.2.01.ebuild 4234
+MD5 0638191494f1f7376b5a829e87dc3277 ChangeLog 11660
 MD5 c3a1674a9be9f34f261b9e0613a76680 blackdown-jdk-1.3.1-r10.ebuild 2164
-MD5 63cc6bab8a1fa443c1fa9892e40fa035 ChangeLog 11567
+MD5 0052da924a28441c6378160ecf4a58f9 blackdown-jdk-1.3.1-r8.ebuild 2310
+MD5 9188a678adcbcb490e9a8f2084f9d4fc blackdown-jdk-1.4.2_rc1.ebuild 4225
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 fc3e5f204dcfe4d99ac75d70f55ab2c8 files/blackdown-jdk-1.4.2.01 592
+MD5 668dacd97dae55440bd0caf5818401f1 blackdown-jdk-1.4.2.01.ebuild 4231
+MD5 d6f9d33ab37807e3feba5c7bdae209f3 blackdown-jdk-1.4.1-r1.ebuild 3773
 MD5 4180217fbbedc728995047569e9bd581 files/blackdown-jdk-1.3.1 594
-MD5 b553ff878f45505a9285c3a9612c7584 files/blackdown-jdk-1.4.1 589
 MD5 df9f7a9474494654fa07776f1e4054c9 files/blackdown-jdk-1.4.2_rc1 597
 MD5 729ed4be8a29fe7d7c3d946b8f14d8d4 files/digest-blackdown-jdk-1.3.1-r10 80
 MD5 f150863fcc96f4ca2d2bdd75f1c0a1c5 files/digest-blackdown-jdk-1.3.1-r8 243
-MD5 8009bc4bb09e243860795380d025f0e5 files/digest-blackdown-jdk-1.4.1-r1 167
-MD5 4e91fa8beedb2d7c135e05318b097702 files/digest-blackdown-jdk-1.4.2.01 153
 MD5 a61878251515677261fbc5607b6e5a4b files/digest-blackdown-jdk-1.4.2_rc1 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBpd3M/rLF9B432nYRAk4gAJ9N17lfopCd8u1iSeNZgBBK/dd4SgCaArDy
-MqhZZhuxXVLuTl23HDomlco=
-=hQE5
------END PGP SIGNATURE-----
+MD5 fc3e5f204dcfe4d99ac75d70f55ab2c8 files/blackdown-jdk-1.4.2.01 592
+MD5 4e91fa8beedb2d7c135e05318b097702 files/digest-blackdown-jdk-1.4.2.01 153
+MD5 b553ff878f45505a9285c3a9612c7584 files/blackdown-jdk-1.4.1 589
+MD5 8009bc4bb09e243860795380d025f0e5 files/digest-blackdown-jdk-1.4.1-r1 167
