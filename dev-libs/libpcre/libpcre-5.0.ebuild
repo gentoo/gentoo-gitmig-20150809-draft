@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.1 2004/12/28 17:29:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.2 2005/01/21 16:02:46 gongloo Exp $
 
 IUSE=""
 
@@ -23,7 +23,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/pcre-5.0-uclibc-tuple.patch
 	epatch ${FILESDIR}/pcre-4.2-link.patch
-	use ppc-macos && epatch ${FILESDIR}/pcre-4.2-macos.patch
 	# position-independent code must used for all shared objects.
 	append-flags -fPIC
 	elibtoolize
