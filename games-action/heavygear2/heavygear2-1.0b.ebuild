@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.6 2004/06/30 02:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.7 2005/03/07 14:04:48 wolf31o2 Exp $
 
 inherit games
 
@@ -43,9 +43,9 @@ src_unpack() {
 src_install() {
 	dodir ${dir}
 	einfo "Copying files... this may take a while..."
-	exeinto /opt/heavygear2
+	exeinto ${dir}
 	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/hg2
-	insinto /opt/heavygear2
+	insinto ${dir}
 	use 3dfx && doins ${CDROM_ROOT}/bin/x86/glibc-2.1/LibMesaVoodooGL.so.1.2.030300
 
 	cp ${CDROM_ROOT}/{README,icon.{bmp,xpm}} ${Ddir}
