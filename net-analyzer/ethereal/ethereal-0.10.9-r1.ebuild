@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.9-r1.ebuild,v 1.4 2005/01/29 20:47:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.9-r1.ebuild,v 1.5 2005/02/15 15:41:04 ka0ttic Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -51,12 +51,7 @@ src_compile() {
 	# Fix gcc-3.4 segfault #49238
 	#[ "`gcc-version`" == "3.4" ] && append-flags -fno-unroll-loops
 
-	local myconf="
-		$(use_with ssl)
-		$(use_enable ipv6)
-		$(use_with adns)
-		$(use_with kerberos krb5)
-		$(use_with snmp net-snmp)"
+	local myconf
 
 	if use gtk; then
 		myconf="${myconf} $(use_enable gtk2)"
@@ -69,6 +64,11 @@ src_compile() {
 	fi
 
 	econf \
+		$(use_with ssl) \
+		$(use_enable ipv6) \
+		$(use_with adns) \
+		$(use_with kerberos krb5) \
+		$(use_with snmp net-snmp) \
 		--without-ucd-snmp \
 		--enable-dftest \
 		--enable-randpkt \
@@ -86,6 +86,12 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS ChangeLog INSTALL.* NEWS README* TODO
-	insinto "/usr/share/pixmaps/"
-	doins "image/hi48-app-ethereal.png"
+
+	insinto /usr/share/icons/hicolor/16x16/apps
+	newins ${S}/image/hi16-app-ethereal.png ethereal.png
+	insinto /usr/share/icons/hicolor/32x32/apps
+	newins ${S}/image/hi32-app-ethereal.png ethereal.png
+	insinto /usr/share/icons/hicolor/48x48/apps
+	newins ${S}/image/hi48-app-ethereal.png ethereal.png
+	make_desktop_entry ethereal "Ethereal" ethereal
 }
