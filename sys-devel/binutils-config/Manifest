@@ -5,11 +5,11 @@ MD5 77032215f7b1d5e6564ce3252f0629ee binutils-config-1.0.ebuild 599
 MD5 40a8b3fbd8febefda7e27a41434e1e7c ChangeLog 354
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.0 0
-MD5 550f6f79cb02fd88747031d3e8b089f7 files/binutils-config-1.0 4332
+MD5 89f444ee1aafa7cbc86ceea992fcb3c3 files/binutils-config-1.0 4353
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBrBG1roRuSHgZdywRAr7wAJsH6hakC92iX8T12Uxw5VkbjohDIgCcCUb6
-3qgkDZUPjKYlNugYcx5e2oM=
-=6L8t
+iD8DBQFBr3ARroRuSHgZdywRAhBaAJ9yb++3QJH59a6U6SCaf2rIBQNtPQCfTyP7
+D5uqWP4pXp7JYMFj/LlwTgs=
+=ps1o
 -----END PGP SIGNATURE-----
