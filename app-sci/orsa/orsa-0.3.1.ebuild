@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.3.1.ebuild,v 1.2 2004/03/10 08:17:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.3.1.ebuild,v 1.3 2004/03/10 10:24:48 phosphan Exp $
 
 inherit base flag-o-matic
 
-DESCRIPTION="Orbital Reconstruction, Simulation and Analysis"
+DESCRIPTION="Orbit Reconstruction, Simulation and Analysis"
 HOMEPAGE="http://orsa.sourceforge.net/"
 SRC_URI="mirror://sourceforge/orsa/${P}.tar.gz"
 

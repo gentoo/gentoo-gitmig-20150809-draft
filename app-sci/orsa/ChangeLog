@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/orsa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.5 2004/03/10 07:03:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.6 2004/03/10 10:24:48 phosphan Exp $
+
+  10 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> orsa-0.3.1.ebuild,
+  orsa-0.5.0_rc2.ebuild:
+  Corrected description
 
 *orsa-0.5.0_rc2 (10 Mar 2004)
 
@@ -27,5 +31,5 @@
 
   13 Mar 2003; George Shapovalov <george@gentoo.org> ChangeLog, orsa-0.3.0_rc1.ebuild, files/{digest-orsa-0.3.0_rc1} :
   initial release (#15726)
-  ORSA Orbital Reconstruction Simulation Algorithym
+  ORSA Orbit Reconstruction, Simulation and Analysis
   ebuild submitted by David Cozatt <yggsdrasil@hotmail.com>
