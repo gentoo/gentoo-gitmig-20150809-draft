@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gaul-devel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gaul-devel/ChangeLog,v 1.4 2004/09/30 00:18:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gaul-devel/ChangeLog,v 1.5 2004/11/30 21:46:12 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> gaul-devel-0.1846.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *gaul-devel-0.1846 (29 Feb 2004)
 
