@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-1.9.5_pre20040820.ebuild,v 1.1 2004/08/21 16:40:44 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-1.9.5_pre20040820.ebuild,v 1.2 2004/08/21 18:18:46 chriswhite Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
-DEPEND=""
+DEPEND="!dev-lang/fpc"
 S=${WORKDIR}/fpc-${FPC_V}
 
 src_compile() {
