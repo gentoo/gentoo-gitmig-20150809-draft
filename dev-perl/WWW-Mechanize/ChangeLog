@@ -1,7 +1,9 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.9 2004/06/25 14:28:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.10 2004/07/13 23:19:13 rac Exp $
 
+  13 Jul 2004; Robert Coie <rac@gentoo.org> WWW-Mechanize-1.0301.ebuild:
+  Keywording amd64 and x86
 
 *WWW-Mechanize-1.0301 (25 Jun 2004)
 

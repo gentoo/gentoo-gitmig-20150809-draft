@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.0301.ebuild,v 1.2 2004/07/09 00:25:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.0301.ebuild,v 1.3 2004/07/13 23:19:13 rac Exp $
 
 inherit perl-module
 
@@ -13,10 +13,10 @@ CATEGORY="dev-perl"
 DESCRIPTION="automate interaction with websites "
 SRC_URI="http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/${MY_P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~petdance/${MY_P}"
-
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="x86 ~sparc amd64 ~ppc"
 
 DEPEND="dev-perl/IO-Socket-SSL
 	>=dev-perl/libwww-perl-5.76
