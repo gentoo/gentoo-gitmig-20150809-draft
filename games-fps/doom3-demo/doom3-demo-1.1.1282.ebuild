@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1282.ebuild,v 1.2 2004/10/07 14:10:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1282.ebuild,v 1.3 2004/11/09 14:16:17 wolf31o2 Exp $
 
 inherit games eutils
 
 DESCRIPTION="Doom III - 3rd installment of the classic id 3D first-person shooter"
 HOMEPAGE="http://www.doom3.com/"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-${PV}-demo.x86.run"
+SRC_URI="ftp://ftp.idsoftware.com/idstuff/doom3/linux/doom3-linux-${PV}-demo.x86.run
+	ftp://dl.xs4all.nl/pub/mirror/idsoftware/idstuff/doom3/linux/doom3-linux-${PV}-demo.x86.run
+	mirror://gentoo/doom3.png"
 
 LICENSE="DOOM3"
 SLOT="0"
@@ -50,6 +52,9 @@ src_install() {
 	doins demo/* || die "doins base"
 
 	games_make_wrapper doom3-demo ./doom.x86 ${dir}
+
+	insinto /usr/share/pixmaps
+	newins ${DISTDIR}/doom3.png doom3-demo.png
 
 	prepgamesdirs
 	make_desktop_entry doom3-demo "Doom III Demo" doom3.xpm
