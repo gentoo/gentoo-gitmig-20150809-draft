@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r1.ebuild,v 1.1 2003/10/04 20:20:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r1.ebuild,v 1.2 2003/10/04 21:22:53 usata Exp $
 
 IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk"
 
@@ -21,10 +21,10 @@ DEPEND="${RDEPEND}
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
 	>=dev-libs/boehm-gc-6.2
-	X? ( || ( !nopixbuf? ( =x11-libs/gtk+-1.2* )
+	X? ( || ( !nopixbuf? ( >=media-libs/gdk-pixbuf-0.22.0 )
 		imlib2? ( >=media-libs/imlib2-1.0.5 )
 		imlib? ( >=media-libs/imlib-1.9.8 )
-		=x11-libs/gtk+-1.2* )
+		>=media-libs/gdk-pixbuf-0.22.0 )
 	)
 	xface? ( media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
