@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/lufis
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufis/ChangeLog,v 1.1 2004/11/14 15:17:07 genstef Exp $
+
+*lufis-0.2 (14 Nov 2004)
+
+  14 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +files/lufis-0.2-lufs.patch, +lufis-0.2.ebuild:
+  Initial Version thanks to Matthias R. <spinebuster@gmx.net> and Vaclav
+  Slavik <vaclav.slavik@matfyz.cz>
+
