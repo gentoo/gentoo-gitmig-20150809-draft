@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.7.ebuild,v 1.7 2005/02/18 21:53:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.ebuild,v 1.1 2005/02/18 21:53:19 chainsaw Exp $
+
+IUSE=""
 
 inherit eutils
 
@@ -10,15 +12,13 @@ SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
-
-IUSE=""
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
 
 DEPEND="sys-apps/sed"
 
 RDEPEND=">=dev-lang/perl-5.8.0"
 
-LIBDIR=/usr/lib/gnump3d
+LIBDIR=/usr/$(get_libdir)/gnump3d
 
 pkg_setup() {
 	enewuser gnump3d '' '' '' nogroup || die
