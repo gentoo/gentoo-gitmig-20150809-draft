@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.27 2004/08/06 00:47:53 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.28 2004/08/17 23:59:30 latexer Exp $
+
+*mono-1.0.1-r1 (17 Aug 2004)
+
+  17 Aug 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.1-r1.ebuild,
+  +mono-1.0.1-r2.ebuild:
+  Two new versions. One removes all NPTL support, in hopes of being marked
+  stable soon. -r2 keeps the support, and is package.masked.
 
 *mono-1.0.1 (05 Aug 2004)
 
