@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.6.2.ebuild,v 1.1 2004/11/22 00:57:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.6.2.ebuild,v 1.2 2004/12/10 00:48:44 swegener Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.karlrunge.com/x11vnc/"
 SRC_URI="mirror://sourceforge/libvncserver/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~hppa"
 IUSE="jpeg zlib"
 
 RDEPEND="virtual/x11
