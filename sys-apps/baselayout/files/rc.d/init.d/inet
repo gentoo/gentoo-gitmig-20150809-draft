@@ -28,7 +28,13 @@ doint() {
 # bring an interface up or down
 # ${1} = interface
 # ${2} = "down" or "up"
-	if [ "`intstat ${1}`" != "${2}" ]
+	if [ "$1" = "security" ]
+	then
+		. /etc/rc.d/config/inet.security
+		net${2} 1>&2
+		ebegin "Security ${2}"
+		eend 0
+	elif [ "`intstat ${1}`" != "${2}" ]
 	then 
 		. /etc/rc.d/config/inet.${1}
 		net${2} 1>&2
@@ -50,12 +56,13 @@ doints() {
 	if [ "$1" = "up" ]
 	then
 		doint lo up
+		doint security up
 	fi
 
 	for x in /etc/rc.d/config/inet.*
 	do
 		myint=${x##*.}
-		if [ "$myint" != "lo" ]
+		if [ "$myint" != "lo" ] && [ "$myint" != "security" ]
 		then
 			doint ${myint} ${1}
 		fi
@@ -63,6 +70,7 @@ doints() {
 
 	if [ "$1" = "down" ]
 	then
+		doint security down
 		doint lo down
 	fi
 
