@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.6.1.ebuild,v 1.1 2004/05/29 20:14:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.6.1.ebuild,v 1.2 2004/05/30 04:32:39 khai Exp $
 
 inherit gnome2
 
@@ -22,8 +22,5 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 DOCS="AUTHORS COPYING ChangeLog NEWS README TODO INSTALL"
 
 src_compile() {
-	aclocal -I scripts
-	automake -c -f
-	autoconf
 	gnome2_src_compile
 }
