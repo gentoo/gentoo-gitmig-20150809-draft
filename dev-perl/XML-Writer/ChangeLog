@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.9 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.10 2003/07/04 05:34:53 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -8,6 +8,9 @@
   forced version bump to install into correct locations
 
 *XML-Writer-0.5-r1 (6 May 2002)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> XML-Writer-0.5-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords

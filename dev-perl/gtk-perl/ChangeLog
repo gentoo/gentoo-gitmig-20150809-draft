@@ -1,10 +1,13 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.18 2003/02/12 06:27:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.19 2003/07/04 05:35:21 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gtk-perl-0.7008-r9 (29 Nov 2002)
+
+  04 Jul 2003; Guy Lartin <gmsoft@gentoo.org> gtk-perl-0.7008-r9.ebuild :
+  Added hppa to KEYWORDS.
 
   29 Nov 2002; Michael Cuummings <mcummings@gentoo.org> :
   A significant typo on my part removed the GDK::Pixbuff modules.
