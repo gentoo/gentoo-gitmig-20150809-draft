@@ -1,18 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.9.ebuild,v 1.3 2002/07/14 19:20:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.0.ebuild,v 1.1 2002/07/17 21:31:15 azarah Exp $
 
-SV="1.3.5"
+SV="1.3.7"
 SVREV=""
 #sysvinit version
-SVIV="2.83"
+SVIV="2.84"
 S=${WORKDIR}/rc-scripts-${SV}
 S2=${WORKDIR}/sysvinit-${SVIV}/src
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
-SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
+SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.gz
+	ftp://unsite.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
 #	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -124,14 +125,19 @@ src_install()
 	keepdir /usr/bin
 	keepdir /usr/lib
 	keepdir /usr/sbin
-	dosbin ${S}/sbin/MAKEDEV ${S}/sbin/run-crons ${S}/sbin/update-modules
+	#dont install run-crons anymore, as sys-apps/cronbase installs it now
+	#dosbin ${S}/sbin/MAKEDEV ${S}/sbin/run-crons ${S}/sbin/update-modules
+	dosbin ${S}/sbin/MAKEDEV ${S}/sbin/update-modules
 	keepdir /var /var/run /var/lock/subsys
 	dosym ../var/tmp /usr/tmp
 	
 	keepdir /home
-	keepdir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
+	keepdir /usr/include /usr/src /usr/portage
+	keepdir /usr/X11R6/include/{X11,GL} /usr/X11R6/lib/X11
+	
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/GL /usr/include/GL
+	dosym ../X11R6/lib/X11 /usr/lib/X11
 	
 	#dosym ../src/linux/include/linux /usr/include/linux
 	#dosym ../src/linux/include/asm-i386 /usr/include/asm
@@ -183,7 +189,7 @@ src_install()
 	dodir /proc	
 	
 	chmod go-rx ${D}/root
-	keepdir /tmp
+	keepdir /tmp /var/lock
 	chmod 1777 ${D}/tmp
 	chmod 1777 ${D}/var/tmp
 	chown root.uucp ${D}/var/lock
@@ -418,3 +424,11 @@ EOF
 		/sbin/init U &>/dev/null
 	fi
 }
+
+pkg_postrm() {
+	# Fix problematic links
+	ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
+	ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
+	ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
+}
+
