@@ -8,7 +8,6 @@ HOMEPAGE="http://www.palmos.com/dev/tools/emulator/"
 SRC_URI="http://www.palmos.com/dev/tools/emulator/sources/emulator_src_3.5.tar.gz"
 
 DESCRIPTION="Palm OS Emulator"
-LICENSE=GPL-2
 
 DEPEND=">=x11-libs/fltk-1.0.11"
 
