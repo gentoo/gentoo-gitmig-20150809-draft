@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.5.ebuild,v 1.10 2005/02/21 15:18:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.5.ebuild,v 1.11 2005/02/28 22:10:31 eradicator Exp $
 
 inherit gnuconfig
 
@@ -43,14 +43,7 @@ src_compile() {
 		fi
 	fi
 
-	./configure \
-		--prefix=/usr \
-		--host=${CHOST} \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--datadir=/usr/share/apr-util-0 \
-		--sysconfdir=/etc \
-		--localstatedir=/var/lib \
+	econf	--datadir=/usr/share/apr-util-0 \
 		--with-apr=/usr \
 		--with-expat=/usr \
 		$myconf || die
@@ -59,7 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall installbuilddir=${D}/usr/share/apr-util-0/build
+	make DESTDIR="${D}" installbuilddir=/usr/share/apr-util-0/build install || die
 
 	#bogus values pointing at /var/tmp/portage
 	sed -i -e 's:APU_SOURCE_DIR=.*:APU_SOURCE_DIR=:g' ${D}/usr/bin/apu-config
