@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.10 2005/01/10 22:48:09 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.11 2005/01/18 19:32:47 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -27,8 +27,7 @@ RDEPEND="apache2? ( >=net-www/apache-2.0.49 )
 	emacs? ( virtual/emacs )"
 
 DEPEND="${RDEPEND}
-	|| ( >=sys-devel/autoconf-2.59 =sys-devel/autoconf-2.57* )
-	!=sys-devel/autoconf-2.58"
+	>=sys-devel/autoconf-2.59"
 # Does not work because jikes is broken
 #	jikes? (dev-java/jikes)"
 
