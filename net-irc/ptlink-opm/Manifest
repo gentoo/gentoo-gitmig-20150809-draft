@@ -1,10 +1,18 @@
-MD5 111bccd2042649bc860e9ceee0195f10 ChangeLog 975
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 65b5f249d405797259256c44570ccb99 ptlink-opm-1.1.1.ebuild 1381
-MD5 d36a80eb0c77b8efc72493ddbb2f3b2f ptlink-opm-1.3.0.ebuild 1447
-MD5 d36a80eb0c77b8efc72493ddbb2f3b2f ptlink-opm-1.3.1.ebuild 1447
-MD5 55de0a052638e8efbbcfbd39b00b699b files/digest-ptlink-opm-1.1.1 67
+MD5 4cd64b5997c1250d43d11ffbb188cbea ptlink-opm-1.3.0.ebuild 1573
+MD5 8aae9066f06eeb352a9b1453497c32a7 ptlink-opm-1.3.1.ebuild 1573
+MD5 00c409874aa32781ff68bdea79248004 ChangeLog 1174
 MD5 6ecad87c0247e165f3316b758358aa72 files/digest-ptlink-opm-1.3.0 67
 MD5 1cfbc36b60e8ae51e840e337eae1fe32 files/ptlink-opm.conf.d 283
 MD5 5239c77a2d0978ebdefdda450b1f13dd files/ptlink-opm.init.d 546
 MD5 70ece3a2f3634a46cf1f6c6d07791b5f files/digest-ptlink-opm-1.3.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBl3y1I1lqEGTUzyQRAsOgAKCy758Z0PmOmopF+ewlGAmrX9bT0QCeI++w
+LzT61WSc/jmN0e51M12yzkw=
+=UK53
+-----END PGP SIGNATURE-----
