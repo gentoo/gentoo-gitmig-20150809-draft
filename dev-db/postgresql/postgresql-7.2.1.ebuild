@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1.ebuild,v 1.1 2002/06/14 20:13:23 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1.ebuild,v 1.2 2002/06/17 04:05:39 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -32,10 +32,12 @@ SLOT="0"
 
 pkg_setup() {
 	local foo
-	foo=`java-config --java-version 2>&1 | grep "1.4.0"`
-	if [ ! -z "$foo" ] ; then
-		einfo "Cannot build with Sun JDK 1.4.0, use an 1.3.x JDK instead."
-		exit 1
+	if [ "`use java`" ] ; then
+		foo=`java-config --java-version 2>&1 | grep "1.4.0"`
+		if [ ! -z "$foo" ] ; then
+			einfo "Cannot build with Sun JDK 1.4.0, use an 1.3.x JDK instead."
+			exit 1
+		fi
 	fi
 }
 src_unpack() {
