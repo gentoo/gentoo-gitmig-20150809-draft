@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.1 2005/01/15 02:24:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.2 2005/01/16 12:28:49 motaboy Exp $
+
+  16 Jan 2005; Simone Gotti <motaboy@gentoo.org> kmail-3.4.0_beta1.ebuild:
+  Add kdepim-kioslaves as an RDEPEND. Fixes bug #78187.
 
 *kmail-3.4.0_beta1 (15 Jan 2005)
 
