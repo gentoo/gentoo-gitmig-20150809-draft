@@ -1,6 +1,9 @@
 # ChangeLog for app-text/namazu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.10 2005/01/01 16:27:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.11 2005/02/28 09:36:57 dams Exp $
+
+  28 Feb 2005; <dams@gentoo.org> namazu-2.0.14.ebuild:
+  added ~ppc (bug #83185)
 
 *namazu-2.0.14 (16 Dec 2004)
 
