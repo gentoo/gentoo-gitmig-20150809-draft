@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.0.ebuild,v 1.3 2004/03/25 23:06:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.0.ebuild,v 1.4 2004/03/26 15:20:56 foser Exp $
 
 inherit gnome2
 
@@ -78,8 +78,7 @@ pkg_postinst() {
 	einfo "Nautilus moved to a new spatial browsing model."
 	einfo "If you are unhappy with this behaviour you can revert to the"
 	einfo "old browerslike behaviour by issueing the following command :"
-	einfo "gconftool-2  -s /apps/nautilus/preferences/always_use_browser -t bool FALSE"
-	echo
+	einfo "gconftool-2  -s /apps/nautilus/preferences/always_use_browser -t bool TRUE"
 
 }
 
