@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.07.ebuild,v 1.8 2004/06/30 15:50:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.07.ebuild,v 1.9 2004/07/15 01:45:13 agriffis Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 src_compile() {
 
 	# If running mips64, we need updated configure data
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	# file command segfaults on hppa -  reported by gustavo@zacarias.com.ar
 	[ ${ARCH} = "hppa" ] && filter-flags "-mschedule=8000"
