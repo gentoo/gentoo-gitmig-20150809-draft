@@ -1,6 +1,18 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.18 2004/08/15 08:03:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.19 2004/08/15 08:51:46 vapier Exp $
+
+*clanlib-0.7.8-r1 (15 Aug 2004)
+
+  15 Aug 2004; Mike Frysinger <vapier@gentoo.org> +clanlib-0.7.8-r1.ebuild:
+  Install clanlib-0.6.x into a SLOT-ed dir but move 0.7.x back into normal
+  behavior #52509 / #44258.
+
+*clanlib-0.6.5-r2 (15 Aug 2004)
+
+  15 Aug 2004; Mike Frysinger <vapier@gentoo.org> +clanlib-0.6.5-r2.ebuild:
+  Install clanlib-0.6.x into a SLOT-ed dir but move 0.7.x back into normal
+  behavior #52509 / #44258.
 
   15 Aug 2004; Mike Frysinger <vapier@gentoo.org> files/0.6.5-gcc3.patch:
   Update gcc-3.x patch from ROCKLinux #51997 by Felix Riemann.

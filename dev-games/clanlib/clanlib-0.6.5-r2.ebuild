@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r1.ebuild,v 1.11 2004/06/24 22:09:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r2.ebuild,v 1.1 2004/08/15 08:51:46 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.clanlib.org/download/files/ClanLib-${PV}-1.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0.6"
-KEYWORDS="x86 ppc sparc ~alpha ~amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE="arts oss esd alsa png opengl truetype X oggvorbis mikmod jpeg directfb joystick"
 
 DEPEND=">=media-libs/hermes-1.3.2
@@ -40,10 +40,9 @@ src_compile() {
 		&& myconf="${myconf} --enable-clansound" \
 		|| myconf="${myconf} --disable-clansound"
 
-	./autogen.sh
-
 	econf \
 		--libdir=/usr/lib/${P} \
+		--includedir=/usr/include/${P} \
 		--enable-network \
 		`use_enable x86 asm386` \
 		--enable-dyn \
@@ -65,14 +64,10 @@ src_install() {
 	make install \
 		prefix=${D}/usr \
 		LIB_PREFIX=${D}/usr/lib/${P} \
+		INC_PREFIX=${D}/usr/include/${P} \
 		|| die "make install failed"
-	mv ${D}/usr/include/{ClanLib,${P}}
-	dobin ${FILESDIR}/clanlib-config \
-		|| die "dobin failed"
-	dodoc BUGS CODING_STYLE HARDWARE NEWS PATCHES PORTING README* ROADMAP INSTALL.linux \
-		|| die "dodoc failed"
-}
+	dodoc BUGS CODING_STYLE HARDWARE NEWS PATCHES PORTING README* ROADMAP INSTALL.linux
 
-pkg_postinst() {
-	clanlib-config ${PV}
+	dodir /etc/env.d
+	echo "LDPATH=/usr/lib/${P}" > ${D}/etc/env.d/91clanlib-${PV}
 }
