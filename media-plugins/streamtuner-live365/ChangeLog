@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-live365
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-live365/ChangeLog,v 1.9 2004/06/24 23:34:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-live365/ChangeLog,v 1.10 2004/09/22 17:57:25 eradicator Exp $
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  streamtuner-live365-0.3.4.ebuild:
+  Stabnle amd64, x86.
 
   24 May 2004; Daniel Ahlberg <aliz@gentoo.org>
   streamtuner-live365-0.3.4.ebuild:
