@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.976 2005/02/28 15:49:44 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.977 2005/03/01 20:54:33 nakano Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -598,6 +598,8 @@ net-www/elinks:lua - enable lua support
 net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default webroot (/var/www/localhost)
 net-www/kazehakase:estraier - enable estraier support for full-text search in history.
 net-www/kazehakase:thumbnail - enable thumbnail support.
+net-www/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
+net-www/kazehakase-cvs:thumbnail - enable thumbnail support.
 net-www/mod_log_sql:dbi - Enables support for libDBI
 net-www/mod_auth_ldap:disk-cache - Enables support for disk cache.
 net-www/mod_auth_ldap:mem-cache - Enables support for memory cache.
