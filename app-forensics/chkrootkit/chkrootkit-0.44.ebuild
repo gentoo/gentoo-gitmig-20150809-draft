@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.44.ebuild,v 1.4 2004/11/01 19:24:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.44.ebuild,v 1.5 2004/11/02 14:43:24 vapier Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="a tool to locally check for signs of a rootkit"
 HOMEPAGE="http://www.chkrootkit.org/"
 SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz
-		 mirror://gentoo/${P}-gentoo.diff.bz2"
+	mirror://gentoo/${P}-gentoo.diff.bz2"
 
 LICENSE="AMS"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~ia64 ~amd64 ~ppc64"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 s390 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
