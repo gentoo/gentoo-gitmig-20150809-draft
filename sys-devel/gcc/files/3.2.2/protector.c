@@ -2004,7 +2004,9 @@ push_frame_of_insns (insn, push_size, boundary)
 	insn_pushed = FALSE; debuginsn = insn;
 	push_frame_in_operand (insn, PATTERN (insn), push_size, boundary);
 
-	if (insn_pushed)
+	if (insn_pushed
+	    /* skip if it is called from purge_address_of */
+	    && cse_not_expected)
 	  {
 	    rtx after = insn;
 	    rtx seq = split_insns (PATTERN (insn), insn);
