@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.93 2005/02/08 19:41:42 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.94 2005/02/08 19:42:45 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -71,7 +71,7 @@ LICENSE="GPL-2"
 #Eclass functions only from here onwards ...
 #==============================================================
 kernel_is() {
-	[[ -z ${KV_FULL} ]] && return 1	
+	[[ -z ${OKV} ]] && return 1	
 	local operator test value x=0 y=0 z=0
 
 	case ${1} in
