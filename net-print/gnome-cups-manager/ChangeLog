@@ -1,0 +1,8 @@
+# ChangeLog for net-print/gnome-cups-manager
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.1 2003/06/24 00:57:15 foser Exp $
+
+*gnome-cups-manager-0.16 (24 Jun 2003)
+
+  24 Jun 2003; foser <foser@gentoo.org> gnome-cups-manager-0.16.ebuild, ChangeLog :
+  Initial commit, cups frontend
