@@ -1,16 +1,20 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r1.ebuild,v 1.2 2004/02/23 00:16:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r2.ebuild,v 1.1 2004/03/08 23:51:40 seemant Exp $
+
+IUSE=""
 
 DESCRIPTION="udhcp Server/Client Package"
 HOMEPAGE="http://udhcp.busybox.net/"
 SRC_URI="http://udhcp.busybox.net/source/${P}.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 amd64"
+LICENSE="GPL-2"
+KEYWORDS="x86 sparc amd64"
 
-DEPEND=""
+DEPEND="virtual/glibc"
+
+PROVIDE="virtual/dhcpc"
 
 src_compile() {
 	emake SYSLOG=1 || die
@@ -30,7 +34,4 @@ src_install() {
 
 	insinto /usr/share/udhcpc
 	doins samples/*
-
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/udhcp.init udhcp
 }
