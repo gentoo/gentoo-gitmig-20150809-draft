@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/livecd-ng/livecd-ng-1.0.ebuild,v 1.3 2003/02/13 05:25:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/livecd-ng/livecd-ng-1.0.ebuild,v 1.4 2003/03/28 09:41:45 pvdabeel Exp $
 
 DESCRIPTION="Gentoo LiveCD creation script" 
 HOMEPAGE="http://www.gentoo.org"
@@ -14,6 +14,8 @@ IUSE=""
 DEPEND=""
 
 S=${WORKDIR}/${P}
+
+# Note for ppc users: You can build a ppc livecd with gentoo-src/pvdabeel/ppclivecd
 
 src_install() {
 	dodir /etc/livecd-ng
