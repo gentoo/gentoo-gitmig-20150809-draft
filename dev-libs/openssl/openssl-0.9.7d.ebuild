@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.6 2004/04/21 03:51:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.7 2004/04/25 17:18:54 aliz Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc alpha sparc mips hppa amd64 ia64 ppc64 s390"
-IUSE=""
+IUSE="emacs"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
@@ -47,13 +47,13 @@ src_unpack() {
 		sed -i -e \
 			's!CC=ccc!CC=gcc!' config
 	fi
-set -x
+
 	case $( gcc-version ) in
 		3.3 | 3.2 )
 			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
 		;;
 	esac
-set +x
+
 	# replace CFLAGS
 	OLDIFS=$IFS
 	IFS="
@@ -187,6 +187,11 @@ src_install() {
 	dohtml doc/*
 	insinto /usr/share/emacs/site-lisp
 	doins doc/c-indentation.el
+
+	if use emacs ; then
+		insinto /usr/share/emacs/site-lisp
+		doins doc/c-indentation.el
+	fi
 
 	# create the certs directory.  Previous openssl builds
 	# would need to create /usr/lib/ssl/certs but this looks

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.77 2004/04/21 03:51:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.78 2004/04/25 17:18:53 aliz Exp $
+
+  25 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7d.ebuild:
+  Install emacs files, from #47854.
 
   20 Apr 2004; Tom Gall <tgall@gentoo.org> openssl-0.9.7d.ebuild:
   fix for ppc64 support see #45463
