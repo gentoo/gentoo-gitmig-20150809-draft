@@ -1,4 +1,4 @@
-MD5 f4257165581f9c2cb8e2a428f2ebeaae files/0.60-alsa-1.0.0.patch 721
-MD5 a15acc3d9f2a2d55bde29cf697f86297 files/digest-dosbox-0.60 63
-MD5 6765cebf3071624a2b716470387477c6 dosbox-0.60.ebuild 888
 MD5 a4f2ca26601f36ed0a11e1c357bacb59 ChangeLog 954
+MD5 6cd126f45a12b91aafe36d620496ca2f dosbox-0.60.ebuild 898
+MD5 a15acc3d9f2a2d55bde29cf697f86297 files/digest-dosbox-0.60 63
+MD5 f4257165581f9c2cb8e2a428f2ebeaae files/0.60-alsa-1.0.0.patch 721
