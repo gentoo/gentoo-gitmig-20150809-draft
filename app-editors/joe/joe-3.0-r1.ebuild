@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0-r1.ebuild,v 1.1 2004/05/07 14:20:31 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0-r1.ebuild,v 1.2 2004/05/07 15:04:34 joker Exp $
 
 IUSE=""
 
@@ -18,9 +18,6 @@ DEPEND=">=sys-libs/ncurses-5.2-r2"
 
 PROVIDE="virtual/editor"
 
-# Bug 34609 (joe 2.9.8 editor seg-faults on 'find and replace' when compiled with -Os)
-replace-flags "-Os" "-O2"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -32,6 +29,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Bug 34609 (joe 2.9.8 editor seg-faults on 'find and replace' when compiled with -Os)
+	replace-flags "-Os" "-O2"
+
 	econf || die
 	make || die
 }
