@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.39 2004/10/24 11:41:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.40 2004/10/25 18:52:54 plasmaroo Exp $
+
+  25 Oct 2004; <plasmaroo@gentoo.org> lm-sensors-2.8.1.ebuild,
+  lm-sensors-2.8.2.ebuild, lm-sensors-2.8.3.ebuild, lm-sensors-2.8.4.ebuild,
+  lm-sensors-2.8.5.ebuild, lm-sensors-2.8.6.ebuild, lm-sensors-2.8.7.ebuild,
+  lm-sensors-2.8.8.ebuild:
+  CC=${CC} >> CC=${tc-getCC}; bug #68382.
 
 *lm-sensors-2.8.8 (24 Oct 2004)
 

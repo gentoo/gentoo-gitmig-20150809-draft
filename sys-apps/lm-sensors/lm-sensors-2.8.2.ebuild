@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.2.ebuild,v 1.15 2004/07/20 18:22:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.2.ebuild,v 1.16 2004/10/25 18:52:54 plasmaroo Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 MY_P=${PN/-/_}-${PV}
 S="${WORKDIR}/${MY_P}"
@@ -88,9 +88,9 @@ src_compile()  {
 	rm kernel/chips/via686a.d
 	rm kernel/chips/vt1211.d
 	if [ ${UserModeOnly} == true ]; then
-		emake CC=${CC} I2C_HEADERS=${MYI2C} user || die "Could not compile user-mode utilities!"
+		emake CC=$(tc-getCC) I2C_HEADERS=${MYI2C} user || die "Could not compile user-mode utilities!"
 	else
-		emake CC=${CC} I2C_HEADERS=${MYI2C} LINUX=$LINUX || die "lm_sensors requires the source of a compatible kernel version in /usr/src/linux or specified in \$LINUX and >=i2c-2.8.1 support built as modules. Make sure that I2C >=2.8.1 is on your system before filing a bug."
+		emake CC=$(tc-getCC) I2C_HEADERS=${MYI2C} LINUX=$LINUX || die "lm_sensors requires the source of a compatible kernel version in /usr/src/linux or specified in \$LINUX and >=i2c-2.8.1 support built as modules. Make sure that I2C >=2.8.1 is on your system before filing a bug."
 	fi
 }
 
