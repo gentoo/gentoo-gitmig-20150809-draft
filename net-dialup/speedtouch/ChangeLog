@@ -1,13 +1,13 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.24 2004/12/18 15:11:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.25 2004/12/18 15:59:51 mrness Exp $
 
 *speedtouch-1.3.1-r1 (18 Dec 2004)
 
   18 Dec 2004; Alin Nastac <mrness@gentoo.org> -files/speedtouch.rc6,
   -speedtouch-1.1.ebuild, -speedtouch-1.2.ebuild,
   -speedtouch-1.2_beta2.ebuild, +speedtouch-1.3.1-r1.ebuild,
-  -speedtouch-1.3.1.ebuild:
+  -speedtouch-1.3.ebuild, -speedtouch-1.3.1.ebuild:
   Increase verbosity level required by ATM log reports due to decreased
   performance in some cases (bug #74770). Cleanup old ebuilds.
 
