@@ -1,9 +1,0 @@
-# ChangeLog for sys-apps/gzip_x86
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip_x86/ChangeLog,v 1.1 2003/02/21 02:02:54 zwelch Exp $
-
-*gzip_x86-0.90 (01 Jan 2002)
-
-  20 Feb 2003; Zach Welch <zwelch@gentoo.org> :
-  Add missing changelog.  Add missing -arch keywords
-
