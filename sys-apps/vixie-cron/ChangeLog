@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.30 2004/10/31 19:59:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.31 2004/11/04 16:15:12 ka0ttic Exp $
+
+*vixie-cron-4.1-r3 (04 Nov 2004)
+
+  04 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> +vixie-cron-4.1-r3.ebuild:
+  Revision bump (bug #69796); use tc-getCC instead of ${CC}
 
   31 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   vixie-cron-4.1-r2.ebuild:
