@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-vcalendar
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-vcalendar/ChangeLog,v 1.2 2004/10/18 01:37:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-vcalendar/ChangeLog,v 1.3 2004/10/19 10:19:31 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  sylpheed-claws-vcalendar-0.4.ebuild:
+  KEYWORDS ~amd64.
 
   17 Oct 2004; Jason Wever <weeve@gentoo.org>
   sylpheed-claws-vcalendar-0.4.ebuild:

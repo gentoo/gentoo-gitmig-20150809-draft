@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-vcalendar/sylpheed-claws-vcalendar-0.4.ebuild,v 1.2 2004/10/18 01:37:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-vcalendar/sylpheed-claws-vcalendar-0.4.ebuild,v 1.3 2004/10/19 10:19:31 absinthe Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sylpheed-claws.sourceforge.net"
 SRC_URI="http://sylpheed-claws.sourceforge.net/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 DEPEND=">=mail-client/sylpheed-claws-0.9.12b-r1
 		>=dev-libs/libical-0.24_rc4-r1"
