@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/razor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.7 2003/02/12 08:15:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.8 2003/08/11 10:10:46 mcummings Exp $
+
+*razor-2.36 (11 Aug 2003)
+
+  11 Aug 2003; Michael Cummings <mcummings@gentoo.org> razor-2.36.ebuild:
+  Serious version bump - bug 18858
 
 *razor-2.20
 
