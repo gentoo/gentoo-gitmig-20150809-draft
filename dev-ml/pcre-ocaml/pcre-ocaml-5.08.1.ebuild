@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-5.08.1.ebuild,v 1.1 2004/08/21 20:56:24 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-5.08.1.ebuild,v 1.2 2004/09/30 18:33:55 mattam Exp $
 
 inherit findlib
 
@@ -13,7 +13,7 @@ DEPEND=">=dev-lang/ocaml-3.07
 	>=dev-libs/libpcre-4.5"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc amd64"
 
 src_compile() {
 	make all || die
