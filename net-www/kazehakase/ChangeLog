@@ -1,6 +1,11 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.26 2004/12/08 00:59:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.27 2004/12/14 17:45:16 nakano Exp $
+
+  14 Dec 2004; Masatomo Nakano <nakano@gentoo.org>
+  -files/kazehakase-0.2.0-label.patch, -kazehakase-0.1.6.ebuild,
+  -kazehakase-0.2.0.ebuild, kazehakase-0.2.2.ebuild:
+  Marke stable on x86/ppc. remove old ebuild
 
   07 Dec 2004; Jason Wever <weeve@gentoo.org> kazehakase-0.2.2.ebuild:
   Added ~sparc keyword.
