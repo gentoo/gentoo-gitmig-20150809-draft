@@ -1,0 +1,6 @@
+MD5 965a5b086b42a47e54c034f0b632f5b9 asterisk-oh323-0.5.9.ebuild 922
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+MD5 40d44cd580aafc63d23885373f9301d4 ChangeLog 535
+MD5 4313406e25f5b3bc750c792e1448ce04 files/digest-asterisk-oh323-0.5.9 71
+MD5 d81ba6256f0eadf0479f37fae7451836 files/asterisk-oh323-0.5.9-Makefile.patch 1163
+MD5 ffa52289baeedd9c24e1a9eb21ab721f files/asterisk-oh323-0.5.9-asterisk-driver-Makefile.patch 323

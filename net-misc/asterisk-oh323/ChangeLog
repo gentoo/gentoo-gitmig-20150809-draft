@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/asterisk-oh323
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/ChangeLog,v 1.1 2004/02/18 23:22:06 stkn Exp $
+
+*asterisk-oh323-0.5.9 (19 Feb 2004)
+
+  19 Feb 2004; Stefan Knoblich <stkn@gentoo.org> asterisk-oh323-0.5.9.ebuild,
+  metadata.xml, files/asterisk-oh323-0.5.9-Makefile.patch,
+  files/asterisk-oh323-0.5.9-asterisk-driver-Makefile.patch:
+  Initial import. Ebuild submitted by Russell Cloran <russell@rucus.net>
+

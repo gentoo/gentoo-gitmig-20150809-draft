@@ -1,0 +1,36 @@
+--- Makefile.orig	2004-02-18 22:09:49.000000000 +0100
++++ Makefile	2004-02-18 22:11:11.000000000 +0100
+@@ -44,13 +44,13 @@
+ # Set PWLIBDIR variable to the directory containing the sources of 
+ # PWlib library.
+ #
+-PWLIBDIR=/root/src/oh323/pwlib
++PWLIBDIR=/usr/share/pwlib
+ 
+ #
+ # Set OPENH323LIBDIR variable to the directory containing the sources of
+ # OpenH323 library.
+ #
+-OPENH323DIR=/root/src/oh323/openh323
++OPENH323DIR=/usr/share/openh323
+ 
+ #
+ # Set ASTERISKSRCDIR variable to the directory where ASTERISK's source files
+@@ -76,7 +76,7 @@
+ # LD_LIBRARY_PATH shell variable, or to the /etc/ld.so.conf
+ # file and run "ldconfig".
+ #
+-OH323WRAPLIBDIR=$(DESTDIR)/usr/local/lib
++OH323WRAPLIBDIR=$(DESTDIR)/usr/lib
+ 
+ #
+ # Set SSLINCDIR variable to the directory where ssl/crypto
+@@ -158,7 +158,7 @@
+ OPENH323USERFLAGS += P_PTHREADS=1
+ endif
+ OPENH323FLAGS=$(shell make $(OPENH323USERFLAGS) --no-print-directory -s \
+-            -C $(OPENH323DIR) \
++            -C $(OPENH323DIR) -f openh323u.mak \
+             PWLIBDIR=$(PWLIBDIR) OPENH323DIR=$(OPENH323DIR) ccflags)
+ CPPFLAGS=$(OPENH323FLAGS) -Wall
+ ASTERISKINCLUDE=-I$(ASTERISKSRCDIR)/include -I../wrapper
