@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 465db7a66d7f807cde7e6133ad946d76 lahelper-0.6.3.ebuild 1032
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 961f3cf3c58bb7f193c735b85f64e26f ChangeLog 458
+MD5 e237d5fbab9fde60bb295a94527d1c06 files/digest-lahelper-0.6.3 65
+MD5 862fdfd90490e2e78f1ca4f6809dd92e files/lahelper-0.6.3-gentoo.diff 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBmLVhVWNWqTUmv+0RAmvGAKCxD0fX7qHuEZNxKQxy0SDuwXC5+wCeNiRg
+SYcwtDZDoHsQAULo99YWEgY=
+=Stmh
+-----END PGP SIGNATURE-----

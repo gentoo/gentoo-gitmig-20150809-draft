@@ -1,0 +1,10 @@
+--- src/framework.c.orig	2004-11-15 22:44:28.000000000 +0900
++++ src/framework.c	2004-11-15 22:47:04.000000000 +0900
+@@ -81,6 +81,7 @@
+ 
+     default:
+       /* do nothing for now */
++      ;
+   } /* end switch */
+   
+   if (obj != NULL)
