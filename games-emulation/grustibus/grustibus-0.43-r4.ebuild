@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/grustibus/grustibus-0.43-r4.ebuild,v 1.1 2003/09/09 16:28:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/grustibus/grustibus-0.43-r4.ebuild,v 1.2 2003/09/09 23:33:23 msterret Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/grustibus/${P}.tar.gz"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND=">=app-emulation/xmame-0.56.1
+DEPEND=">=games-emulation/xmame-0.56.1
 	>=media-libs/gdk-pixbuf-0.17.0
 	>=gnome-base/gnome-libs-1.4.1.2"
 

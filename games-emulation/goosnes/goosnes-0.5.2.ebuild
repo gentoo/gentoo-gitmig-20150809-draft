@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/goosnes/goosnes-0.5.2.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/goosnes/goosnes-0.5.2.ebuild,v 1.2 2003/09/09 23:33:23 msterret Exp $
 
 DESCRIPTION="A GTK+ frontend for Snes9X"
 SRC_URI="http://bard.sytes.net/debian/dists/unstable/main/source/${PN}_${PV}-1.tar.gz"
@@ -17,7 +17,7 @@ DEPEND="|| (
 	)
 	dev-util/pkgconfig
 	dev-libs/libxml2"
-RDEPEND="app-emulation/snes9x"
+RDEPEND="games-emulation/snes9x"
 
 src_compile() {
 	use gtk2 && myconf="--with-gtk-version=2.0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.41.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.41.ebuild,v 1.2 2003/09/09 23:33:23 msterret Exp $
 
 inherit games eutils
 
@@ -15,12 +15,12 @@ KEYWORDS="x86"
 RDEPEND="virtual/x11
 	=x11-libs/gtk+-1*
 	|| (
-		app-emulation/ps2emu-cddvdlinuz
-		app-emulation/ps2emu-cdvdiso
+		games-emulation/ps2emu-cddvdlinuz
+		games-emulation/ps2emu-cdvdiso
 	)
-	app-emulation/ps2emu-gssoft
-	app-emulation/ps2emu-padxwin
-	app-emulation/ps2emu-spu2null"
+	games-emulation/ps2emu-gssoft
+	games-emulation/ps2emu-padxwin
+	games-emulation/ps2emu-spu2null"
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
 

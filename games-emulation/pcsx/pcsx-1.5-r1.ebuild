@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.2 2003/09/09 23:33:23 msterret Exp $
 
 inherit games eutils
 
@@ -19,14 +19,14 @@ DEPEND="sys-libs/zlib
 	app-arch/unzip
 	x11-libs/gtk+
 	gnome-base/libglade"
-RDEPEND="app-emulation/psemu-cdr
-	app-emulation/psemu-cdriso
-	app-emulation/psemu-padxwin
-	app-emulation/psemu-padjoy
-	app-emulation/psemu-peopsspu
+RDEPEND="games-emulation/psemu-cdr
+	games-emulation/psemu-cdriso
+	games-emulation/psemu-padxwin
+	games-emulation/psemu-padjoy
+	games-emulation/psemu-peopsspu
 	|| (
-		opengl? ( app-emulation/psemu-gpupetemesagl )
-		app-emulation/psemu-peopssoftgpu
+		opengl? ( games-emulation/psemu-gpupetemesagl )
+		games-emulation/psemu-peopssoftgpu
 	)"
 
 src_unpack() {
