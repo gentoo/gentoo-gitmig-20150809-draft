@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.6 2003/02/12 03:27:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.7 2003/02/13 06:10:21 zhen Exp $
+
+*johntheripper-1.6-r1 (13 Feb 2003)
+
+  13 Feb 2003;  <zhen@gentoo.org> johntheripper-1.6-r1.ebuild files/digest-johntheripper-1.6-r1 :
+  new version that uses patches for ntlm, mysql, etc password cracking
+
+  13 Feb 2003;  <zhen@gentoo.org> johntheripper-1.6-r1.ebuild files/digest-johntheripper-1.6-r1 :
+  new
 
 *johntheripper-1.6 (22 May 2002)
 
