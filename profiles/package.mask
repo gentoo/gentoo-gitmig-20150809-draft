@@ -24,10 +24,6 @@ app-misc/gtk-theme-switch-2.0.0-r2
 >=kde-base/kdetoys-3.0.1.20020604
 >=kde-base/kdeutils-3.0.1.20020604
 
-#Temporary masked for me to test it, will be used in new stageX gcc3.1 tarball
-#as well.. Verwilst, 6 June
-=sys-libs/glibc-2.2.5-r4
-
 #the XMMS crash when activate the osd plugin, but osd_cat work's well
 #x11-libs/xosd
 
