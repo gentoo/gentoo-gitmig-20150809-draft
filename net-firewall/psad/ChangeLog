@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/psad
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.6 2003/10/21 06:44:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.7 2003/10/29 06:18:07 seemant Exp $
+
+*psad-1.2.4-r1 (28 Oct 2003)
+
+  28 Oct 2003; Seemant Kulleen <seemant@gentoo.org> psad-1.2.4-r1.ebuild,
+  files/psad-1.2.4-metalog.patch:
+  new patch to make psad work better with metalog. The patch was written by:
+  Dennis Freise <cat@final-frontier.ath.cx> and sent to psad's upstream author
+  and myself. Battoussai rediff'd it and updated the ebuild for us.
 
 *psad-1.2.4 (20 Oct 2003)
 
