@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.14 2003/10/24 12:55:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.15 2004/01/22 22:07:46 mr_bones_ Exp $
 
 IUSE="gpm postgres xface tiff gtk jpeg mule nas esd X png gnome"
 
@@ -38,7 +38,7 @@ RDEPEND="virtual/glibc
 	nas? ( media-libs/nas )
 	esd? ( media-sound/esound )
 
-	gtk? ( =x11/libs/gtk+-1.2* )
+	gtk? ( =x11-libs/gtk+-1.2* )
 	gnome? ( =gnome-base/gnome-libs-1.4* )
 
 	tiff? ( media-libs/tiff )

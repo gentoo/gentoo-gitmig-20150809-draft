@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs-gtk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/ChangeLog,v 1.12 2003/02/12 03:49:55 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/ChangeLog,v 1.13 2004/01/22 22:07:46 mr_bones_ Exp $
+
+  22 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  xemacs-gtk-21.4.8-r2.ebuild, xemacs-gtk-21.4.8-r3.ebuild:
+  fix depend for bug 39073
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
