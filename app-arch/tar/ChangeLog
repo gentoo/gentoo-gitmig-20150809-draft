@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.5 2004/01/11 13:45:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.6 2004/01/11 18:33:14 azarah Exp $
+
+*tar-1.13.92-r3 (11 Jan 2004)
+
+  11 Jan 2004; Martin Schlemmer <azarah@gentoo.org> tar-1.13.92-r3.ebuild,
+  files/tar-1.13.92-fix-one_file_system.patch:
+  Fix -l, --one-file-system option to actually work.
 
 *tar-1.13.92-r2 (11 Jan 2004)
 
