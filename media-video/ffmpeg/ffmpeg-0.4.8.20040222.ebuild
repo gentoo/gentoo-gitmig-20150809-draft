@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040222.ebuild,v 1.4 2004/06/25 00:40:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040222.ebuild,v 1.5 2004/07/14 21:37:24 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/vlc/0.7.1/contrib/ffmpeg-${PD
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 -ppc ~sparc ~alpha ~amd64 ~ia64"
-IUSE="mmx altivec encode oggvorbis doc faad dvd static sdl imlib truetype"
+IUSE="altivec debug doc dvd encode faad imlib mmx oggvorbis sdl static truetype"
 
 DEPEND="encode? ( >=media-sound/lame-3.92 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0-r1 )
