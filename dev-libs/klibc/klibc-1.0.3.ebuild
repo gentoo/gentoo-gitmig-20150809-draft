@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.0.3.ebuild,v 1.2 2005/03/11 01:29:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.0.3.ebuild,v 1.3 2005/03/13 10:45:05 azarah Exp $
 
 inherit eutils linux-mod
 
@@ -83,7 +83,16 @@ src_unpack() {
 
 	cd ${S}
 
+	# Add our linux source tree symlink
 	ln -snf ${KV_DIR} linux
+
+	# We do not want all the nice prelink warnings
+	# NOTE: for amd64, we might change below to '/usr/$(get_libdir)/klibc',
+	#       but I do not do it right now, as the build system do not support
+	#       the lib64 yet ....
+	cat > "${S}/70klibc" <<-EOF
+		PRELINK_PATH_MASK="/usr/lib/klibc"
+	EOF
 }
 
 src_compile() {
@@ -122,6 +131,8 @@ src_install() {
 	if ! is_cross ; then
 		insinto /usr/share/aclocal
 		doins ${FILESDIR}/klibc.m4
+
+		doenvd ${S}/70klibc
 
 		dodoc ${S}/README ${S}/klibc/{LICENSE,CAVEATS}
 		newdoc ${S}/klibc/README README.klibc

@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 300321e4e9125b68cfc58017ec3949fd klibc-1.0.ebuild 3289
 MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
-MD5 e577d30291ae2c7bf2efc14ddc0edfab ChangeLog 1140
-MD5 8cb74e7f2cdc3c49941b7d708aa7c34e klibc-1.0.3.ebuild 3584
+MD5 beb313b40bf598a07e83498ceaab297e ChangeLog 1256
+MD5 e054f1020f728f17ff8cf5fc3cef0ed3 klibc-1.0.3.ebuild 3939
 MD5 d995810231e49d3aee9101cebc8a6a17 files/digest-klibc-1.0 62
 MD5 dfa828b111983dc4ccc9a21dee070b39 files/klibc.m4 3630
 MD5 e70edb40913b7ad07638a7202f773b6f files/klibc-1.0-makeklcc-empty-args.patch 807
@@ -12,7 +12,7 @@ MD5 626ed5b2981bf97e3b37743bb3b4cc08 files/digest-klibc-1.0.3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCMPU61ZcsMnZjRyIRAifvAJ4l/ttDLqejTLxhlFPDC6LEJZLM/ACZAT2V
-cWva14ffp1TVBTKRj0tFt60=
-=fRQQ
+iD8DBQFCNBqP1ZcsMnZjRyIRAkQWAJ0avMMpfCMIDp860LcPWC69a0Aq+QCfRodU
+NURkiAYAzv5NJZynCz0sS7k=
+=eqPw
 -----END PGP SIGNATURE-----
