@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.44 2005/01/12 07:10:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.45 2005/01/20 05:11:49 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -370,6 +370,10 @@ src_install() {
 	# Requested on #68316
 	if use xprint; then
 		setup_xprint_init
+	else
+		# delete xprint stuff
+		rm -f ${D}/etc/{init,profile}.d/xprint*
+		rmdir --ignore-fail-on-non-empty ${D}/etc/{init,profile}.d
 	fi
 
 	# Remove the /etc/rc.d nonsense -- not everyone is RedHat
@@ -1267,10 +1271,12 @@ install_extra_cursors() {
 setup_xprint_init() {
 	# RH-style init script, we provide a wrapper
 	exeinto /usr/lib/misc
-	doexe ${D}/etc/rc.d/xprint
+	doexe ${D}/etc/init.d/xprint
+	rm -f ${D}/etc/init.d/xprint
 	# Install the wrapper
-	exeinto /etc/init.d
-	doexe ${FILES_DIR}/xprint.init
+	newinitd ${FILES_DIR}/xprint.init xprint
+	# patch profile scripts
+	sed -i -e "s:/bin/sh.*get_xpserverlist:/usr/lib/misc/xprint get_xpserverlist:g" ${D}/etc/profile.d/xprint*
 }
 
 setup_config_files() {
@@ -1308,28 +1314,53 @@ fix_opengl_symlinks() {
 #################
 
 migrate_usr_x11r6_lib() {
-	# We need a symlink from /usr/X11R6/lib -> /usr/lib so all the packages
+	# We need a symlink /usr/X11R6/libdir -> /usr/libdir so all the packages
 	# whose files we move don't lose track of them. As such, we need
-	# _absolutely nothing_ in /usr/X11R6/lib so we can make such a symlink.
+	# _absolutely nothing_ in /usr/X11R6/libdir so we can make such a symlink.
 	# Donnie Berkholz <spyderous@gentoo.org> 20 October 2004
 
-	einfo "Migrating from /usr/X11R6/lib to /usr/lib..."
+	einfo "Migrating from /usr/X11R6/$(get_libdir) to /usr/$(get_libdir)..."
 	# Get rid of "standard" symlink from <6.8.0-r2
 	# We can't overwrite symlink with directory w/ $(mv -f)
 	[ -L ${ROOT}usr/$(get_libdir)/X11 ] \
 		&& rm ${ROOT}usr/$(get_libdir)/X11
-	# Move everything if it's not a symlink
-	[ ! -L ${ROOT}usr/X11R6/$(get_libdir) ] \
-		&& mv -f ${ROOT}usr/X11R6/$(get_libdir)/* ${ROOT}usr/$(get_libdir)
-	# Remove any floating .keep files so we can run rmdir if it's not a symlink
-	[ ! -L ${ROOT}usr/X11R6/$(get_libdir) ] \
-		&& find ${ROOT}usr/X11R6/$(get_libdir) -name '\.keep' -exec rm -f {} \;
-	# Get rid of the directory if it's not a symlink
-	[ ! -L ${ROOT}usr/X11R6/$(get_libdir) ] \
-		&& rmdir ${ROOT}usr/X11R6/$(get_libdir)
-	# Put a symlink in its place if there's not one there
-	[ ! -L ${ROOT}usr/X11R6/$(get_libdir) ] \
-		&& ln -s ../$(get_libdir) ${ROOT}usr/X11R6/$(get_libdir)
+
+	# If it's not a symlink (in other words, it should be a directory)
+	if [ ! -L ${ROOT}usr/X11R6/$(get_libdir) ]; then
+		einfo "  /usr/X11R6/$(get_libdir) isn't a symlink, migrating..."
+		# Move everything
+		mv -f ${ROOT}usr/X11R6/$(get_libdir)/* ${ROOT}usr/$(get_libdir)
+		# Remove any floating .keep files so we can run rmdir
+		find ${ROOT}usr/X11R6/$(get_libdir) -name '\.keep' -exec rm -f {} \;
+		# Get rid of the directory
+		rmdir ${ROOT}usr/X11R6/$(get_libdir)
+		# Put a symlink in its place
+		ln -s ../$(get_libdir) ${ROOT}usr/X11R6/$(get_libdir)
+	else
+		# If ${ROOT}usr/X11R6/$(get_libdir) is a symlink ...
+		einfo "  /usr/X11R6/$(get_libdir) is a symlink, continuing..."
+
+		# for amd64 at least, lib64 symlinked to lib in <=6.8.0-r4 (except -r2),
+		# so the migration doesn't work properly with just the above.
+		# (#78074) DO NOT use '-d' because it's true on symlinks to dirs too.
+		if [ ! -L ${ROOT}usr/X11R6/lib ]; then
+			einfo "    /usr/X11R6/lib is a directory, migrating..."
+			# Move everything
+			mv -f ${ROOT}usr/X11R6/lib/* ${ROOT}usr/lib
+			# Remove any floating .keep files so we can run rmdir
+			find ${ROOT}usr/X11R6/lib -name '\.keep' -exec rm -f {} \;
+			# Get rid of the directory
+			rmdir ${ROOT}usr/X11R6/lib
+			# Put a symlink in its place
+			ln -s $(get_libdir) ${ROOT}usr/X11R6/lib
+			# Make _sure_ we don't get a circular symlink, even though
+			# we do the symlink again later on
+			rm ${ROOT}usr/X11R6/$(get_libdir)
+			ln -s ../$(get_libdir) ${ROOT}usr/X11R6/$(get_libdir)
+		else
+			einfo "    /usr/X11R6/lib isn't a directory, not migrating"
+		fi
+	fi
 }
 
 update_config_files() {
