@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.2-r2.ebuild,v 1.1 2005/01/04 00:38:32 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.2-r2.ebuild,v 1.2 2005/01/04 10:11:10 brix Exp $
 
 inherit linux-mod eutils
 
@@ -25,8 +25,13 @@ RDEPEND="=net-wireless/ipw2100-firmware-${FW_VERSION}
 BUILD_PARAMS="KSRC=${KV_DIR}"
 BUILD_TARGETS="all"
 
-MODULE_NAMES="ipw2100(net:) ieee80211(net:) ieee80211_crypt(net:) ieee80211_crypt_wep(net:) ieee80211_crypt_ccmp(net:) ieee80211_crypt_tkip(net:)"
-MODULESD_IPW2100_DOCS="ISSUES README.ipw2100 CHANGES LICENSE"
+MODULE_NAMES="ipw2100(net:)
+			ieee80211(net:)
+			ieee80211_crypt(net:)
+			ieee80211_crypt_wep(net:)
+			ieee80211_crypt_ccmp(net:)
+			ieee80211_crypt_tkip(net:)"
+MODULESD_IPW2100_DOCS="README.ipw2100"
 
 CONFIG_CHECK="NET_RADIO CRYPTO_ARC4 CRYPTO_MICHAEL_MIC FW_LOADER CRC32"
 NET_RADIO_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
@@ -62,4 +67,10 @@ src_unpack() {
 		${S}/Makefile
 
 	convert_to_m ${S}/Makefile
+}
+
+src_install() {
+	linux-mod_src_install
+
+	dodoc ISSUES CHANGES
 }

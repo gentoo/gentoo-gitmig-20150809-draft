@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.58 2005/01/04 00:38:32 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.59 2005/01/04 10:11:10 brix Exp $
+
+  04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> ipw2100-0.56-r3.ebuild,
+  ipw2100-1.0.2-r2.ebuild:
+  Only use MODULESD_IPW2100_DOCS to install README.ipw2100.
 
 *ipw2100-1.0.2-r2 (04 Jan 2005)
 
