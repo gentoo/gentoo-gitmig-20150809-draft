@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.14 2002/11/08 02:27:13 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.15 2002/11/08 18:49:00 zhen Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -71,7 +71,7 @@ src_install() {
 	
 	local x
 	local y
-	for y in en es fr nl cz
+	for y in en es fr nl cz ja de
 	do
 		cd ${S}/xml/doc/${y}
 		for x in *.xml
