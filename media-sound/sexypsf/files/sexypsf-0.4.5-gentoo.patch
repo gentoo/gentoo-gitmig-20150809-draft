@@ -1,0 +1,53 @@
+diff -Naur sexypsf.vanilla/Linux/Makefile sexypsf/Linux/Makefile
+--- sexypsf.vanilla/Linux/Makefile	2004-02-07 10:29:54.000000000 -0800
++++ sexypsf/Linux/Makefile	2004-03-30 17:17:29.000000000 -0800
+@@ -8,8 +8,7 @@
+ RM = rm -f
+ STRIP = strip
+ 
+-OPTIMIZE = -O2 -fomit-frame-pointer -finline-functions -ffast-math
+-FLAGS = -g -D__LINUX__ -DPSS_STYLE=1 
++FLAGS = -g -D__LINUX__ -DPSS_STYLE=1 -fPIC
+ #-DTIMEO
+ LIBS = -lz
+ 
+@@ -20,7 +19,7 @@
+ 
+ OBJS+= LnxMain.o
+ 
+-CFLAGS = -Wall -Winline ${OPTIMIZE} -I. -I.. -I/usr/include/g++ ${FLAGS}
++CFLAGS+= -Wall -Winline -I. -I.. -I/usr/include/g++ ${FLAGS}
+ CFLAGS+= $(shell gtk-config --cflags)
+ #CFLAGS+= $(shell pkg-config gtk+-2.0 --cflags)
+ 
+diff -Naur sexypsf.vanilla/xmms/Makefile sexypsf/xmms/Makefile
+--- sexypsf.vanilla/xmms/Makefile	2003-09-20 13:12:30.000000000 -0700
++++ sexypsf/xmms/Makefile	2004-03-30 17:17:38.000000000 -0800
+@@ -11,8 +11,7 @@
+ RM = rm -f
+ #LD = ld -shared
+ LIBS = -lz -shared $(shell gtk-config --libs)
+-OPTIMIZE = -O2 -finline-functions -ffast-math
+-FLAGS = -DPSS_STYLE=1
++FLAGS = -DPSS_STYLE=1 -fPIC
+ 
+ OBJS = ../PsxBios.o ../PsxCounters.o ../PsxDma.o \
+        ../Spu.o ../PsxHw.o ../PsxMem.o ../Misc.o \
+@@ -22,7 +21,7 @@
+ OBJS+= xmms.o
+ 
+ ifeq (${CPU}, ix86)
+-	OPTIMIZE += -fomit-frame-pointer -mcpu=i686 -fno-exceptions
++#	OPTIMIZE += -fomit-frame-pointer -mcpu=i686 -fno-exceptions
+ endif
+ 
+ ifeq (${CPU}, ppc)
+@@ -33,7 +32,7 @@
+ 	FLAGS+=-DMSB_FIRST
+ endif
+ 
+-CFLAGS = -Wall ${OPTIMIZE} -I. -I.. -I/usr/include/g++ ${FLAGS}
++CFLAGS+= -Wall -I. -I.. -I/usr/include/g++ ${FLAGS}
+ CFLAGS+= $(shell gtk-config --cflags)
+ 
+ #ifdef LD
