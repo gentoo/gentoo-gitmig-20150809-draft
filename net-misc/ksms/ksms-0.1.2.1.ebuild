@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksms/ksms-0.1.2.1.ebuild,v 1.1 2003/08/28 02:21:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksms/ksms-0.1.2.1.ebuild,v 1.2 2003/08/28 02:23:24 caleb Exp $
 
 inherit kde
 
@@ -16,6 +16,6 @@ S=${WORKDIR}/${P:0:10}
 
 src_unpack() {
 	kde_src_unpack
-	epatch ${FILESDIR}/${P}-empty-store.diff
+#	epatch ${FILESDIR}/${P}-empty-store.diff
 }
 
