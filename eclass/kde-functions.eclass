@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.77 2004/12/25 14:47:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.78 2004/12/29 19:56:46 mr_bones_ Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -11,7 +11,7 @@ ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
 
 # since it's always possible, that kde_sandbox_patch() gets called, the dependency is needed
-# at least with the slotted autotools, we have the same problem identifying and adding the correct 
+# at least with the slotted autotools, we have the same problem identifying and adding the correct
 # dependency like with the need-kde/qt functions. this needs to be changed
 DEPEND="sys-apps/sed"
 
@@ -54,12 +54,12 @@ need-autoconf() {
 # Note that only the kde versioning scheme is supported - ie x.y, and we only iterate through y
 # (i.e. x can contain more . separators).
 deprange() {
-	
+
 	# Assign, parse params
 	local MINVER=$1
 	local MAXVER=$2
 	shift; shift
-	
+
 	local BASEVER=${MINVER%.*}
 	local MINMINOR=${MINVER##*.}
 	local MAXMINOR=${MAXVER##*.}
@@ -67,13 +67,13 @@ deprange() {
 	while [ -n "$1" ]; do
 		local PACKAGE=$1
 		shift
-	
-		# If min version has -rN component, separate it 
+
+		# If min version has -rN component, separate it
 		if [ "$MINMINOR" != "${MINMINOR/-r}" ]; then
 			local MINREV=${MINMINOR##*-r}
 			MINMINOR=${MINMINOR%-r*}
 		fi
-		
+
 		# If min or max version has a _alpha/beta/pre/rc suffix, separate it.
 		# To understand why we initialize MINALPHA etc the way we do, see the loops
 		# that use them as bounds.
@@ -103,7 +103,7 @@ deprange() {
 				return
 			fi
 		fi
-		
+
 		local MAXALPHA=0
 		local MAXBETA=0
 		local MAXPRE=0
@@ -130,7 +130,7 @@ deprange() {
 				return
 			fi
 		fi
-		
+
 		# If we stripped a revision number from MINMINOR earlier, increase the main loop's lower bound,
 		# as we don't want to include a ~$PACKAGE-$BASEVER.$MINMINOR option.
 		# If the lower bound has a suffix, we want to increase the suffix and not MINMINOR itself.
@@ -147,21 +147,21 @@ deprange() {
 				let MINALPHA++
 			fi
 		fi
-		
+
 		# If we stripped a suffix from MAXMINOR, decrease it, since MAXMINOR without a suffix
 		# is outside the requested range
 		if [ -n "$MAXSUFFIX" ]; then
 			let MAXMINOR--
 		fi
-		
+
 		# Build list of versions in descending order:
-		# from upper suffix to highest normal (suffixless) version, then just normal versions, 
+		# from upper suffix to highest normal (suffixless) version, then just normal versions,
 		# then from lowest normal version to lowest suffix.
 		# Cf. the blocks that initialize MAXALPHA, MINBETA etc above to understand why
-		# the loops below work. 
+		# the loops below work.
 		local NEWDEP="|| ( "
 		local i
-		
+
 		# max version's allowed suffixes
 		for (( i=$MAXRC ; $i > 0 ; i-- )) ; do
 			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_rc$i"
@@ -175,12 +175,12 @@ deprange() {
 		for (( i=$MAXALPHA ; $i > 0 ; i-- )) ; do
 			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_alpha$i"
 		done
-		
+
 		# allowed normal versions
 		for (( i=$MAXMINOR ; $i >= $MINMINOR ; i-- )) ; do
 			NEWDEP="$NEWDEP ~$PACKAGE-$BASEVER.$i"
 		done
-		
+
 		# min version's allowed suffixes
 		for (( i=10 ; $i >= $MINRC ; i-- )) ; do
 			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_rc$i"
@@ -194,7 +194,7 @@ deprange() {
 		for (( i=10 ; $i >= $MINALPHA ; i-- )) ; do
 			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_alpha$i"
 		done
-		
+
 		# If min verson had -rN component, add all revisions from r99 to it in descending order
 		if [ -n "$MINREV" ]; then
 			let MINMINOR--
@@ -207,7 +207,7 @@ deprange() {
 				NEWDEP="$NEWDEP =$BASEMINVER-r$i"
 			done
 		fi
-		
+
 		NEWDEP="$NEWDEP ) "
 		echo -n $NEWDEP
 	done
@@ -549,7 +549,7 @@ kde_remove_flag() {
 # used by kdemultimedia et al
 # autorun from kde_src_compile:configure if $KDE_REMOVE_DIR is set;
 # $KDE_REMOVE_DIR is then passed as parameter
-kde_remove_dir(){
+kde_remove_dir() {
 
 	debug-print-function $FUNCNAME $*
 
@@ -577,11 +577,9 @@ kde_remove_dir(){
 
 }
 
-
 # is this a kde-base ebuid?
 case $PN in kde-i18n|arts|kdeaccessibility|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdewebdev|kdelibs-apidocs)
 		debug-print "$ECLASS: KDEBASE ebuild recognized"
 		export KDEBASE="true"
 		;;
 esac
-
