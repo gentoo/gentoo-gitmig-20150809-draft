@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.8-r2.ebuild,v 1.3 2001/03/07 19:55:38 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.8-r2.ebuild,v 1.4 2001/03/09 10:26:59 achim Exp $
 
 A=mozilla-source-${PV}.tar.gz
 S=${WORKDIR}/mozilla
@@ -19,7 +19,7 @@ DEPEND=">=gnome-base/ORBit-0.5.7
 src_compile() {
 
     try ./configure --prefix=/opt/mozilla --host=${CHOST} \
-	--with-gtk --disable-tests --disable-debug --enable-cpp-rtti
+	--with-gtk --disable-tests --disable-debug
     try make
 
 }

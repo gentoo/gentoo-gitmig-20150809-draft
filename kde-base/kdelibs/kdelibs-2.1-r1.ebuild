@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1-r1.ebuild,v 1.1 2001/03/06 06:36:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1-r1.ebuild,v 1.2 2001/03/09 10:26:59 achim Exp $
 
 V=2.1
 A=${PN}-${V}.tar.bz2
@@ -21,7 +21,7 @@ DEPEND=">=sys-devel/gcc-2.95.2
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	mysql? ( >=dev-db/mysql-3.23.30 )
 	postgres? ( >=dev-db/postgresql-7.0.3 )
-	alsa? ( >=media-libs/alsa-lib-0.9 )"
+	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
 
 RDEPEND=">=sys-devel/gcc-2.95.2
 	 >=media-libs/audiofile-0.1.9

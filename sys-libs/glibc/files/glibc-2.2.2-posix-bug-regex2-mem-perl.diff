@@ -1,0 +1,12 @@
+--- posix/Makefile~	Thu Feb 15 23:08:40 2001
++++ posix/Makefile	Tue Feb 27 23:26:10 2001
+@@ -139,7 +139,9 @@
+ # XXX Please note that for now we ignore the result of this test.
+ tests: $(objpfx)annexc.out
+ ifeq (no,$(cross-compiling))
++ifneq (no,$(PERL))
+ tests:$(objpfx)bug-regex2-mem
++endif
+ endif
+ 
+ $(objpfx)annexc.out: $(objpfx)annexc

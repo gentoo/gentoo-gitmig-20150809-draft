@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2.13.ebuild,v 1.1 2001/03/08 17:41:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2.13.ebuild,v 1.2 2001/03/09 10:26:59 achim Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -14,6 +14,7 @@ AV=0.5.10b
 JFSV=0.2.0
 SENV=2.5.5
 RV=20010305
+XMLV=0.3
 
 if [ "$PN" = "linux" ]
 then
@@ -28,6 +29,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
          ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
 	 ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-${OKV}-reiserfs-${RV}.patch.gz
          ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz"
+#	 http://download.sourceforge.net/xmlprocfs/linux-2.4-xmlprocfs-${XMLV}.patch.gz
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
@@ -52,8 +54,11 @@ src_unpack() {
     echo "Applying reiserfs-update patch..."
     try gzip -dc ${DISTDIR}/linux-${OKV}-reiserfs-${RV}.patch.gz | patch -N -p1
     echo "You can ignore the rejects the changes already are in rc13"
+#    echo
+#    echo "Applying xmlprocfs patch..."
+#    try gzip -dc ${DISTDIR}/linux-2.4-xmlprocfs-${XMLV}.patch.gz | patch -p1   
+
     mkdir ${S}/extras
-    
     #create and apply LVM patch.  The tools get built later.
     cd ${S}/extras
     echo "Unpacking and applying LVM patch..."

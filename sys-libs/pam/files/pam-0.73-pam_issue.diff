@@ -1,0 +1,10 @@
+--- modules/pam_issue/pam_issue.c~	Tue Jun 20 22:11:40 2000
++++ modules/pam_issue/pam_issue.c	Sun Feb 18 10:03:26 2001
+@@ -28,6 +28,7 @@
+ #include <sys/utsname.h>
+ #include <utmp.h>
+ #include <malloc.h>
++#include <time.h>
+ 
+ #include <security/_pam_macros.h>
+ 
