@@ -1,8 +1,11 @@
 # ChangeLog for net-zope/btreefolder2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/btreefolder2/ChangeLog,v 1.2 2003/04/04 03:29:48 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/btreefolder2/ChangeLog,v 1.3 2003/06/18 11:37:10 kutsuya Exp $
 
 *btreefolder2-0.5.0 (27 Feb 2003)
+
+  18 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> btreefolder2-0.5.0.ebuild:
+  ~ppc -> ppc
 
   03 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> btreefolder2-0.5.0.ebuild:
   ~x86 -> x86 and added ~ppc. Changed description.
