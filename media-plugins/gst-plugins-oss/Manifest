@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c3b0055de06dba8ee434f7e3d458fc8c gst-plugins-oss-0.8.7.ebuild 398
-MD5 b74afd801b762dc088a1efabd3629984 gst-plugins-oss-0.8.3.ebuild 399
-MD5 af5d439858be06dfd7255289ab42d3a5 ChangeLog 4343
 MD5 86ba9a0fd6a31fb1c8dcccae15ca97b0 gst-plugins-oss-0.8.1.ebuild 393
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 ed10a9299e8a63c2b35ba275bfae62c8 gst-plugins-oss-0.6.4.ebuild 339
-MD5 4fec64d0f3c6fcce9f0565f0c0ad6ced gst-plugins-oss-0.8.2.ebuild 398
 MD5 7e3244cd1f1ed24687ea43104633d971 gst-plugins-oss-0.8.8.ebuild 370
+MD5 b74afd801b762dc088a1efabd3629984 gst-plugins-oss-0.8.3.ebuild 399
+MD5 ed10a9299e8a63c2b35ba275bfae62c8 gst-plugins-oss-0.6.4.ebuild 339
 MD5 f35345e6eb56dbb8ac6c13bca2a5276a gst-plugins-oss-0.8.5.ebuild 399
+MD5 6a0f94c0c6d0dc8b0d7480c9ab2f04d1 gst-plugins-oss-0.8.7.ebuild 397
+MD5 4fec64d0f3c6fcce9f0565f0c0ad6ced gst-plugins-oss-0.8.2.ebuild 398
+MD5 9a05af07539be90b02f1e23b13e297ec ChangeLog 4446
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-oss-0.6.4 71
-MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-oss-0.8.5 71
-MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-oss-0.8.2 71
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-oss-0.8.1 71
+MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-oss-0.8.2 71
+MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-oss-0.8.3 71
+MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-oss-0.8.5 71
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-oss-0.8.7 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-oss-0.8.8 71
-MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-oss-0.8.3 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPb9qugEuf3OQ0akRAsZDAJ9QGuOTyoDAizsbuJ1dspISx/c7HwCfTFmb
-1paTj4zgBdJbXq5Z+oXDb/8=
-=fPGB
------END PGP SIGNATURE-----
