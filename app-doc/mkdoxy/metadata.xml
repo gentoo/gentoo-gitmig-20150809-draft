@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>app-doc</herd>
 <maintainer>
-  <email>nerdboy@gentoo.org</email>
-  <name>Steve Arnold</name>
+  <email>jmglov@gentoo.org</email>
+  <name>Josh Glover</name>
 </maintainer>
 <longdescription>A doxygen-style documentation tool for makefiles (requires doxygen).</longdescription>
 </pkgmetadata>
