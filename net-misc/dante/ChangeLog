@@ -1,12 +1,13 @@
 # ChangeLog for homeblutgensgentoo-x86net-miscdanteChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.5 2002/07/15 18:18:21 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.6 2002/07/15 18:57:07 lamer Exp $
 
-  15 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+*dante-1.1.13 (15 Jul 2002)
+  15 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog dante-1.1.19.ebuild:
 
   Upgraded to 1.1.13, removed entire src_unpack stuff as none of the patches
-  applied cleanly.
-# ChangeLog for net-misc/dante
+  applied cleanly. Also I comment out line 99 of the socks.h before it's
+  installed as it conflicts with a line in /usr/include/netinet/in.h
 
 
 *dante-1.1.12 (6 Jul 2002)

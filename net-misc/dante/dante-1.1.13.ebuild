@@ -30,6 +30,10 @@ src_compile() {
 }
 
 src_install() {
+	# Line 99 in socks.h conflicts with stuff in line 333 of
+	# /usr/include/netinet/in.h this is a not-too-cool way of fix0ring that
+	cat capi/socks.h | \
+		sed -e "s:^int Rbindresvport://int Rbindresvport:" > capi/socks.h
 	make DESTDIR=${D} install || die
 	# bor: comment libdl.so out it seems to work just fine without it
 	perl -pe 's/(libdl\.so)//' -i ${D}/usr/bin/socksify
