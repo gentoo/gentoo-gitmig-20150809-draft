@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.21 2004/02/17 19:03:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.22 2004/03/26 21:29:28 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsaplayer-0.99.75-r1.ebuild, alsaplayer-0.99.76.ebuild:
+  Cleaned up DEPs, added eutils.  Moved to stable x86.
 
   17 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   alsaplayer-0.99.75-r1.ebuild, alsaplayer-0.99.76.ebuild:

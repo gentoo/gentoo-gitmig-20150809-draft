@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.4 2004/02/17 19:03:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.5 2004/03/26 21:29:28 eradicator Exp $
 
 IUSE="nas nls esd opengl doc oss gtk oggvorbis alsa"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Media player primarily utilising ALSA"
 HOMEPAGE="http://www.alsaplayer.org/"
 SRC_URI="http://www.alsaplayer.org/${P}.tar.bz2"
@@ -13,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc -sparc ~alpha ~amd64"
 
-DEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
+RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	doc? ( app-doc/doxygen )
 	esd? ( media-sound/esound )
 	gtk? ( x11-libs/gtk+ )
@@ -23,7 +22,9 @@ DEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	>=media-libs/libmikmod-3.1.10
 	>=dev-libs/glib-1.2.10"
 
-RDEPEND="nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	sys-apps/sed
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
