@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> 23 Jul 2002
+# Masked while g2boojum approves
+=sys-kernel/usermode-sources-2.4.18-r2
+=dev-util/usermode-20020718
+
 # <raker@gentoo.org> 22 Jul 2002
 # New snazzy postfix ebuild with ipv6,tls, and saslv2 support
 =net-mail/postfix-1.1.11.20020613
