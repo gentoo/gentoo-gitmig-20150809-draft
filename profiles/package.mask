@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <bcowan@gentoo.org> (26 Sep 2002)
+#version bump. needs testing to see if patches need to be re-applied
+=net-misc/vnc-3.3.4
+
 # <agenkin@gentoo.org> (26 Sep 2002)
 # Masking pending portage tree unfreeze.
 >=media-sound/grip-3.0.3
