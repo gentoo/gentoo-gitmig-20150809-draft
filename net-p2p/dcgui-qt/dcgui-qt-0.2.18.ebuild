@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/dcgui-qt-0.2.18.ebuild,v 1.1 2003/08/21 13:42:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/dcgui-qt-0.2.18.ebuild,v 1.2 2003/10/10 09:00:34 aliz Exp $
 
 inherit kde-functions
 need-qt 3
@@ -15,7 +15,7 @@ SRC_URI="http://download.berlios.de/dcgui/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 
 newdepend ">=dev-libs/libxml2-2.4.22
