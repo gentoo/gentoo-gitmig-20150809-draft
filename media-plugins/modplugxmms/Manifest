@@ -1,6 +1,7 @@
 MD5 30bfad04add4f4079563af5143c9ed49 modplugxmms-2.03.ebuild 895
 MD5 9f8a2698ef106a370d51703a00409737 modplugxmms-2.04.ebuild 1151
 MD5 4974e305284b60ef852962a63bd336ce ChangeLog 1130
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 347455313bf5f53d8e4266e15aa5e626 files/modplugxmms-2.04.patch 1493
 MD5 f6708258d3e7af56cfb32b7cc55d695a files/digest-modplugxmms-2.03 68
 MD5 d7165423584038258ba8ea95f016b073 files/digest-modplugxmms-2.04 68
