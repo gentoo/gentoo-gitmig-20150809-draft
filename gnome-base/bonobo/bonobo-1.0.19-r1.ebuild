@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.1 2002/02/14 16:34:19 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.2 2002/03/29 23:58:33 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of language and system independant CORBA interfaces"
@@ -10,43 +10,41 @@ HOMEPAGE="http://www.gnome.org/"
 
 
 RDEPEND=">=gnome-base/oaf-0.6.8
-	 >=gnome-base/ORBit-0.5.13
-	 >=gnome-base/gnome-print-0.30"
+	>=gnome-base/ORBit-0.5.13
+	>=gnome-base/gnome-print-0.30"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext ) 
 	sys-devel/perl
-        >=dev-util/intltool-0.11"
+	>=dev-util/intltool-0.11"
 
 src_compile() {
 	local myconf
 
-	if [ -z "`use nls`" ]
-	then
-		myconf="--disable-nls"
-	fi
+	use nls || myconf="${myconf} --disable-nls"
   
 	CFLAGS="${CFLAGS} `gnome-config --cflags print`"
 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-	            --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-		    ${myconf} || die
+	./configure 	\
+		--host=${CHOST} 					\
+	    --prefix=/usr					\
+		--sysconfdir=/etc					\
+		--localstatedir=/var/lib				\
+		${myconf} || die
 
 	make || die # make -j 4 didn't work
 }
 
 src_install() {
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-	     install || die
+	make 	\
+		prefix=${D}/usr						\
+		sysconfdir=${D}/etc					\
+		localstatedir=${D}/var/lib					\
+		install || die
 
 	chmod 644 ${D}/usr/lib/pkgconfig/libefs.pc
 
-	dodoc AUTHORS COPYING* ChangeLog README
-	dodoc NEWS TODO
+	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
 }
 
 
