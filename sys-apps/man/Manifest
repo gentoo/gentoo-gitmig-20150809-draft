@@ -2,9 +2,9 @@ MD5 cc48ccc28bd49d8e81c0dac9d4156485 ChangeLog 5802
 MD5 a825386d37ad27ccddca70297edd6bfa man-1.5i-r3.ebuild 1723
 MD5 f8b1c002982c8ad007dad7d16145dc78 man-1.5k-r1.ebuild 2563
 MD5 d020fa3baaf93822ab983d529f28e7e1 man-1.5l-r3.ebuild 2311
-MD5 7e511a386ffae9ab7be7aa22cd6a7fcc man-1.5l-r4.ebuild 2358
+MD5 e7dc30c047d82ceee603b52863eebb05 man-1.5l-r4.ebuild 2357
 MD5 ee72fd94fb8f63b92b9cb14d356b991d man-1.5l-r5.ebuild 2409
-MD5 23938ca91cfc7b6dd9373606748c55df man-1.5l-r6.ebuild 2593
+MD5 ec0aa69a15cfed6240ef9c7666af616c man-1.5l-r6.ebuild 2594
 MD5 c40cc9207adc44cb98bf59a1e9e90766 files/digest-man-1.5i-r3 61
 MD5 00f30e0e111b386b879a36f64180026c files/digest-man-1.5k-r1 60
 MD5 a63bfea0511bb4ea9292d63dc11348b3 files/digest-man-1.5l-r3 60

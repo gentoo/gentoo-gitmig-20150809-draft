@@ -1,6 +1,6 @@
 MD5 5b7ca42b683ae2d75aafb9286a7126e6 ChangeLog 3625
 MD5 751990c9f2fcb47a94d2d086b9c8e96e netkit-base-0.17-r6.ebuild 1562
-MD5 e3a50f4cd49cf3131b94e1fa13e33b76 netkit-base-0.17-r7.ebuild 1591
+MD5 b6531439d966af0f96cd7d26bb4068e8 netkit-base-0.17-r7.ebuild 1590
 MD5 73d2a3895af6d67ea718481a2263a550 netkit-base-0.17-r8.ebuild 1789
 MD5 a6d426736cbb3c0534504a6e2d041b36 files/001_alpha_netkit-base-0.17-ping-fix.patch.bz2 686
 MD5 93d4bc3300be01ea835abfc46863d005 files/002_all_netkit-base-0.17-wrong-byte-fix.patch.bz2 425
