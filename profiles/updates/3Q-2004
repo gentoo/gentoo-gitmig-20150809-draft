@@ -38,3 +38,4 @@ move app-gnustep/terminal gnustep-apps/terminal
 move app-gnustep/jigs gnustep-libs/jigs
 move app-gnustep/pantomime gnustep-libs/pantomime
 move app-gnustep/renaissance gnustep-libs/renaissance
+move dev-util/gnustep-make gnustep-base/gnustep-make
