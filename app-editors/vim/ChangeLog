@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.71 2003/10/01 11:39:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.72 2003/10/01 15:26:28 agriffis Exp $
+
+  01 Oct 2003; Aron Griffis <agriffis@gentoo.org> vim-6.2-r3.ebuild,
+  vim-6.2_pre1.ebuild, vim-6.2_pre2.ebuild, vim-6.2_pre3.ebuild,
+  vim-6.2_pre4.ebuild, vim-6.2_pre5.ebuild, vim-6.2_pre6-r1.ebuild,
+  vim-6.2_pre6.ebuild:
+  Remove 6.2_pre ebuilds
+
+  24 Sep 2003; Aron Griffis <agriffis@gentoo.org> vim-6.2-r3.ebuild:
+  Mark stable on all arches
 
 *vim-6.2-r3 (18 Sep 2003)
 
