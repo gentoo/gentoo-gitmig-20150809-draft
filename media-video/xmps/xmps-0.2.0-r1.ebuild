@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r1.ebuild,v 1.5 2002/07/19 11:28:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r1.ebuild,v 1.6 2002/07/30 04:52:16 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Movie Player System"
@@ -21,26 +21,26 @@ KEYWORDS="x86"
 
 src_compile() {
 
-    local myconf
+	local myconf
 
-    use gnome && myconf="--enable-gnome"
+	use gnome && myconf="--enable-gnome"
 
-    use nls || myconf="${myconf} --disable-nls"
+	use nls || myconf="${myconf} --disable-nls"
 
-    econf ${myconf} || die
+	econf ${myconf} || die
 
-    cp Makefile Makefile.orig
-    sed -e "s:\$(bindir)/xmps-config:\$(DESTDIR)\$(bindir)/xmps-config:" \
+	cp Makefile Makefile.orig
+	sed -e "s:\$(bindir)/xmps-config:\$(DESTDIR)\$(bindir)/xmps-config:" \
 		Makefile.orig > Makefile
 
-    make || die
+	make || die
 
 }
 
 src_install () {
 
-    make prefix=${D}/usr install || die
+	einstall || die
 
-    dodoc AUTHORS ChangeLog COPYING NEWS README TODO
+	dodoc AUTHORS ChangeLog COPYING NEWS README TODO
 
 }
