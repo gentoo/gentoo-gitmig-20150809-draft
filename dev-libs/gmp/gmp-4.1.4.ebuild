@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.10 2005/01/27 21:39:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.11 2005/02/15 08:28:37 dragonheart Exp $
 
 inherit flag-o-matic libtool eutils multilib
 
@@ -63,6 +63,11 @@ src_compile() {
 		--enable-mpbsd \
 		${myconf} \
 		|| die "configure failed"
+	if use amd64; then
+		export ABI=64
+	else
+		export ABI=standard
+	fi
 	emake || die "emake failed"
 
 }
