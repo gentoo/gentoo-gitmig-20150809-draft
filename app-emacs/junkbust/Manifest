@@ -1,5 +1,5 @@
-MD5 87f26cad4659e7999ec0b36a1540dfcd ChangeLog 412
-MD5 7d249354d65936fcbf1ad4c20d10471e junkbust-0.8.ebuild 962
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 9acf82f1121d87beacf6c8006b54d8f7 junkbust-0.8.ebuild 938
+MD5 87f26cad4659e7999ec0b36a1540dfcd ChangeLog 412
 MD5 1276120f68d61c84752a3864e5a1b5c7 files/50junkbust-gentoo.el 268
 MD5 064075c4d2cf3ae3d72f3d498000134a files/digest-junkbust-0.8 64
