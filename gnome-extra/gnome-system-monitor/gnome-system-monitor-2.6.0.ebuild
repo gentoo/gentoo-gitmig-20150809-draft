@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.5.4.ebuild,v 1.1 2004/03/21 16:49:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.6.0.ebuild,v 1.1 2004/03/21 19:56:20 foser Exp $
 
 inherit gnome2
 
@@ -16,9 +16,8 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnome-2
 	>=gnome-base/gconf-2
-	>=gnome-base/libgtop-2.5
+	>=gnome-base/libgtop-2.5.2
 	>=x11-libs/libwnck-2.5"
-# libgtop-2.5 dep needed because of broken lib versioning
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=app-text/scrollkeeper-0.3.11
