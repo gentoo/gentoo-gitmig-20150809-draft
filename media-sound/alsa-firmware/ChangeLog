@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.7 2004/04/04 19:13:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.8 2004/04/16 11:21:30 lv Exp $
+
+  16 Apr 2004; Travis Tilley <lv@gentoo.org> alsa-firmware-1.0.4.ebuild:
+  added ~amd64 keyword
 
 *alsa-firmware-1.0.4 (04 Apr 2004)
 
