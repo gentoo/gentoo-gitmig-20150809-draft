@@ -86,7 +86,7 @@ app-sci/setiathome
 # phoenix@gentoo.org (17 Jul 2002)
 # Masking mkisofs - this package is obsolete (cdrtools took its place)
 # and nothing depends on this package
-=sys-apps/mkisofs-1.13-r2
+sys-apps/mkisofs
 
 # mjc@gentoo.org (17 Jul 2002)
 # New wine release, masked for testing and to wait for winesetuptk fix.
@@ -176,16 +176,6 @@ app-sci/setiathome
 # masked cause it has not been tested enough
 =net-dialup/hsflinmodem-5.03.03.02062500
 
-# seemant@gentoo.org (09 Jul 2002)
-# masked for gcc-3.1 breakages with galeon, per blocke and mkennedy's
-# request:
-#
-# azarah@gentoo.org (14 Jul 2002)
-# Should be fixed now, as gtk2 was taken out of the make.defaults of the
-# gcc3 profile.  Also added a check for Galeon to detect if Mozilla was
-# compiled against gtk+-1.2 or not.
-#=net-www/mozilla-1.0-r3
-
 # <danarmak@gentoo.org> (10 July 2002)
 # short-term mask for testing - see bug #2483. Anyone except the user there doesn't care about this.
 =x11-libs/qt-3.0.4.20020606-r3
@@ -213,7 +203,6 @@ net-mail/exmh
 # NOTE: you must also unmask glibc-2.2.5-r5, as gcc-3.1.1 have
 #       stricker checking, and will fail otherwise
 >=sys-devel/gcc-3.1.1
-#=sys-libs/glibc-2.2.5-r5
 
 # <danarmak@gentoo.org> (06 July 2002)
 # short-term mask for testing - see core post for details
@@ -249,10 +238,6 @@ dev-java/jaxp
 # masked for licencing reasons.
 # see myself or seemant before unmasking
 =net-im/ymessenger-0.99.19-r2
-# <chadh@gentoo.org> (01 Jul 2002)
-# new ebuilds that need to be tested
-# released into the wild by cardoe on 13 Jul 2002
-#>=sys-apps/pcmcia-cs-3.1.34
 
 # <owen@gentoo.org> (30 Jun 2002 )
 # New ebuild for CCMSN. Masked For Testing.
@@ -263,22 +248,6 @@ dev-java/jaxp
 #while ebuild submitter can do this fine
 #also LICENSE entry is not complete
 =dev-util/netbeans-3.3.2
-
-# <spider@gentoo.org> ( 18 Jun 2002)
-# libtool break.
-#=net-libs/linc-0.5.0-r2
-#=gnome-base/ORBit2-2.4.0-r2 
-
-#testing only (drobbins, 25 Jun 2002)
-#portage 2.0.8 is fast and apparently the most stable Portage 2.x release so far, unmasking:
-#=sys-apps/portage-2.0.8
-=sys-apps/portage-2.0.6
-
-#masked for testing (drobbins, 19 Jun 2002)
-#=sys-apps/portage-2.0.2
-
-# this portage is for testing currently (drobbins, 01 May 2002):
-=sys-apps/portage-1.9.6_pre1
 
 # Masked for testing of the ACL parts (styx 21 Jun 2002)
 >=sys-apps/e2fsprogs-1.27-r1
@@ -307,12 +276,6 @@ dev-lang/nhc98
 # ebuild incomplete
 media-gfx/k3studio
 
-# NOOO, please check with the maintainer!  the rc3-r5* releases
-# added gtk+-2.0 support, but breaks galeon, nautilus and co
-#
-# Azarah - 5 June 2002
-=net-www/mozilla-1.0
-
 # X driver renaming *dont* work.
 # Azarah - 5 June 2002
 =media-video/ati-gatos-4.2.0.11-r1
@@ -336,23 +299,9 @@ media-libs/nurbs++
 # azarah - 19 Jun 2002
 >=x11-base/xfree-4.2.99
 
-# These ones are untested, and introduce new stuff
-# azarah - 28 May 2002
-=x11-base/xfree-4.2.0-r11
-#=net-www/mozilla-1.0-r2
-=net-www/mozilla-1.0_rc3-r2
-
-# This is the gtk2 branch of our test-stuff.
-# Spider - 28 May 2002
-=net-www/mozilla-1.0_rc3-r50
-=net-www/mozilla-1.0_rc3-r51
-
 # devel branch of syslog-ng -- broken (blocke, May 21, 2002)
 >=app-admin/syslog-ng-1.5.17
 >=dev-libs/libol-0.3.2
-
-# fixed mouse scrolling in ppc xfree.  Masked for testing (daybird, 10 may)
-=x11-base/xfree-4.2.0-r10
 
 # this patch works for me on x86 and ppc but breaks other ppl :( (kain, 08 May 2002)
 =sys-devel/gdb-5.1.1-r1
@@ -360,15 +309,6 @@ media-libs/nurbs++
 # According to spider this breaks gnome-vfs (sandymac, 03 May 2002):
 # and evolution (azarah, 05 May 2002)
 dev-libs/libiconv
-
-# this cracklib is for testing currently (pvdabeel, 03 May 200):
-#=sys-libs/cracklib-2.7-r5
-
-# this kernel is for testing currently (drobbins, 30 Apr 2002):
-=sys-kernel/gentoo-sources-2.4.19-r2
-
-# this ebuild had problems (drobbins, 29 Apr 2002):
-=dev-lang/python-2.2-r6
 
 # This one really mess with a lot of stuff.  We will have to wait until
 # everything is sorted, or apps have adapted to it.
@@ -380,12 +320,6 @@ dev-libs/libiconv
 #
 # Azarah - 01 May 2002
 =media-libs/freetype-2.1.0*
-
-# pam-login is a new package that is based on util-linux's /bin/login,
-# but adds shadow features.
-#>=sys-apps/util-linux-2.11o-r3
-#>=sys-apps/shadow-4.0.2-r5
-#>=sys-apps/pam-login-3.6
 
 # masked for security reasons
 # see
@@ -402,14 +336,6 @@ dev-libs/libiconv
 #this fixes that.  devlopers give it a shot
 #repeat for newer rsync
 =net-misc/rsync-2.5.5-r1
-
-# Since azarah is the opengl dude here, i'll mask this untill he looks at 
-# it... Won't compile.. <Verwilst, 17 April 2002>
-# 
-# I grabbed the bug #1666 and have tried it on two very different machines
-# and it's good to go. I'm taking the liberty to unmask it <lamer, 26 May
-# 2002>
-#=app-games/crack-attack-1.1.7
 
 # Licq is b0rked beyond usability.. Not only the ebuild, but the protocol 
 #they use as well... Trust me, unmasking this has no use at all :o) <Verwilst, 17 April 2002>
@@ -441,22 +367,8 @@ dev-libs/libiconv
 # bug #468
 net-www/zope
 
-#18 Mar 2002, drobbins: this doesn't build if USE="-* build" is set
-#>=sys-apps/sh-utils-2.0.11-r2
-
-#These introduce a method to dinamically switch between OpenGL
-#implementations on the fly.  Need testing.
-#
-# -- Azarah (7 April 2002)
-#>=media-video/nvidia-kernel-1.0.2880
-#>=media-video/nvidia-glx-1.0.2880
-#>=x11-base/xfree-4.2.0-r9
-
 # drobbins, 16 Mar 2002: This kernel sucks :)
 =sys-kernel/linux-sources-2.4.18
-
-# cvs 1.11.1p1 needs to be tested
-=dev-util/cvs-1.11.1_p1
 
 # By unmasking this, you hereby promise to update your gift package as 
 # soon as a new version is available in Portage, otherwise you'll pollute 
@@ -476,12 +388,6 @@ net-p2p/giftcurs
 # Arcady Genkin <agenkin@gentoo.org> May 20, 2002.
 #
 net-www/opera
-
-# Masing Azarah's new baselayout until several problems are confirmed fixed.
-# 4 Mar 2002, Daniel Robbins
-=sys-apps/baselayout-1.7.2
-#this should fix most/all problem, but needs field testing first.
-=sys-apps/baselayout-1.7.3
 
 # 18 Feb 2002, azarah.
 # Gnumeric needs 0.0.17, and most other stuff should work with this version
@@ -523,29 +429,14 @@ dev-lang/php
 #previous versions had a security hole (bug #212)
 <net-misc/stunnel-3.22
 
-# Mask until the new Sessions scheme is tested
-=gnome-base/gdm-2.2.5.4-r3
-
 # Causes slow DVD auth, and do not work with MPlayer
 =media-libs/libdvdcss-1.0.0
 
 #we no longer use sysvinit (rolled into baselayout)
 sys-apps/sysvinit
 
-# this new bison has problems and breaks nearly anything that uses it.
-# (kde-pim and pwdlib)
-# drobbins (12/31/2001)
-=sys-devel/bison-1.30
-=sys-devel/bison-1.32
-
 # broken
 =app-doc/quanta-docs-1.0
-
-#won't compile here
-#=media-sound/freeamp-2.1.1
-
-#glibc-2.2.4-r8 is working, it seems.  No longer a need to unmask it.
-#(12/22/01 - drobbins)
 
 #incomplete and very dangerous < Danarmak >
 #
@@ -567,11 +458,6 @@ media-libs/id3lib-docs
 
 #still not working:
 =sys-libs/ncurses-5.2-r4
-
-#this gcc's new atexit() fix that is supposed to be wonderful, doesn't work....
-=sys-devel/gcc-2.95.3-r2
-# needs to be tested
-=sys-devel/gcc-2.95.3-r3
 
 #moved away < Danarmak >
 app-text/ispell-de
@@ -651,10 +537,6 @@ kde-apps/webconfig
 # conflict with linux-sources, to be resolved soon
 sys-kernel/linux-sources-vanilla
 
-# in development
-#>=sys-devel/gcc-2.96
-#net-mail/sendmail
-
 # incompatible
 #added pspell-ispell till i sort out the *spells
 #
@@ -683,7 +565,6 @@ app-text/sgml2x
 app-admin/va-systemimager-server
 app-admin/va-systemimager-client
 <media-video/avifile-0.6.0
-#>=media-libs/pdflib-4.0.0
 >=berlin-base/berlin-0.2.2
 
 # broken
@@ -699,7 +580,6 @@ app-admin/va-systemimager-client
 # untested
 >=dev-db/unixODBC-2.0.8
 =app-editors/fte-20010819
-#=net-dialup/mgetty-1.1.26
 
 #older versions were reported as broken, 0.30 works fine (george)
 <=media-gfx/autotrace-0.28
@@ -780,9 +660,6 @@ gnome-apps/gnapster
 app-doc/gmanedit
 app-doc/tkinfo
 
-# Fails with new Java scheme (karltk) 
-=net-www/tomcat-3.2.2
-
 # the packages dependent on tcl-tk have been updated to
 # support the seperation of both
 dev-lang/tcl-tk
@@ -812,11 +689,6 @@ dev-lang/tcl-tk
 =media-sound/alsa-utils-0.9.0.1_beta10
 =media-libs/alsa-lib-0.9.0.1_beta10
 =media-libs/alsa-oss-0.9.0.1_beta10
-
-#moving xmame to app-emulation with other emulators
-#old location is deprecated.  Additional game packages
-#for xmame should still go into app-games
-#>=app-games/xmame-0.53.1
 
 #tod@gentoo.org, 8 Feb 2002
 #buggy version, use 0.1.1 instead
@@ -855,11 +727,6 @@ dev-lang/tcl-tk
 # This is the new version of shadow, needs more beta testing
 >=sys-apps/shadow-4.0.3
 
-#seemant@gentoo.org
-#11 Apr 2002
-# USE dependent nls bloat reduction, but needs more testing
-=sys-apps/util-linux-2.11o-r1
-
 # spider@gentoo.org ; 21 May 2002; 
 # this is the gnome2 mask!
 # (gnome-2 that is ;)
@@ -877,13 +744,10 @@ gnome-extra/libgnomeuimm
 
 >=media-gfx/gimp-1.3.5
 gnome-extra/gal2
-# >=app-text/ggv-1.99.0
 #dev-libs/libmrproject
-#>=app-office/mrproject-0.5.91
 >=app-office/gnumeric-1.1.3
 
 >=dev-python/pygtk-1.99.0
-# >=app-arch/file-roller-1.106
 >=net-irc/xchat-1.9.1
 
 >=dev-util/glade-1.1.0
@@ -917,12 +781,6 @@ media-sound/rhythmbox
 
 # Snapshot, 1.9 is newer.
 >=net-irc/xchat-20020519
-
-
-
-# mkennedy@gentoo.org 14 Apr 2002
-# Beta, so masked for now. See also bug 1662.
-=app-arch/rar-3.0_beta5
 
 #seemant@gentoo.org, 14 Apr 2002
 # these are lower versions not higher
@@ -1026,10 +884,6 @@ x11-base/xdirectfb
 # ruby-libglade-1.2 is OLD.  The 0.2[789] versions represent new
 # maintainership.
 =dev-ruby/ruby-libglade-1.2
-
-# raker@gentoo.org 10 Jul 2002
-# postfix-1.1.11-r3.ebuild provided by Alexander Holler (NMU) Please test!
-#>=net-mail/postfix-1.1.11-r2
 
 # stroke@gentoo.org 11 Jul 2002
 # app-cdr/eroaster-2.1.0 development branch #4250, masked for testing
