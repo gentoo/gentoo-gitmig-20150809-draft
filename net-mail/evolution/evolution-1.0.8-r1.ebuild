@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r1.ebuild,v 1.2 2002/08/14 12:05:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r1.ebuild,v 1.3 2002/08/15 14:49:06 gerk Exp $
 
 #provide Xmake and Xemake
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz
 HOMEPAGE="http://www.ximian.com"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND=">=gnome-extra/bonobo-conf-0.14
 	>=gnome-base/bonobo-1.0.18
