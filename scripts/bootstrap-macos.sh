@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 2004 The Gentoo Foundation, Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.6 2004/08/08 12:10:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.7 2004/09/03 20:49:03 pvdabeel Exp $
 
 # Make sure sudo passwd is asked for
 
@@ -12,7 +12,7 @@ sudo true
 trap 'exit 1' TERM KILL INT QUIT ABRT
 
 echo
-echo -e "Gentoo Mac OS ; http://www.gentoo.org/"
+echo -e "Gentoo for Mac OS X; http://www.gentoo.org/"
 echo -e "Copyright 2004 The Gentoo Foundation ; Distributed under the GPL v2"
 echo
 
