@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.8 2003/11/05 01:21:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.9 2003/12/26 03:31:07 robbat2 Exp $
+
+*bglibs-1.011 (25 Dec 2003)
+
+  25 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> bglibs-1.011.ebuild:
+  version bump per bug #35034
 
   04 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> bglibs-1.009-r1.ebuild:
   fix compile bug in tests on new gcc3.3.2
