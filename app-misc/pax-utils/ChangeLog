@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/pax-utils
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.1 2003/10/24 10:15:17 solar Exp $
+
+*pax-utils-0.0.1 (24 Oct 2003)
+
+  24 Oct 2003; <solar@gentoo.org> metadata.xml, pax-utils-0.0.1.ebuild:
+  import of pax-utils into portage
+
