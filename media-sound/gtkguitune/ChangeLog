@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gtkguitune
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.5 2004/06/25 00:05:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.6 2004/07/13 07:33:55 eradicator Exp $
+
+  13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gtkguitune-0.6.ebuild:
+  Added to ~sparc and ~amd64
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gtkguitune-0.6.ebuild:
