@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.93 2003/12/08 22:29:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.94 2003/12/29 03:59:00 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org>
+  binutils-2.14.90.0.7-r3.ebuild:
+  Move to mips stable (~mips -> mips)
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org>
   binutils-2.14.90.0.7-r3.ebuild:
