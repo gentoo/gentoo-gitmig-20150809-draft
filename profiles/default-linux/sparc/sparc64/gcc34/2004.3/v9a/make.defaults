@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/ul64/make.defaults,v 1.1 2004/12/09 10:32:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/v9a/make.defaults,v 1.1 2004/12/09 20:21:33 eradicator Exp $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"
-# Used in ebuilds for verifying sparc64 profile
-PROFILE_ARCH="sparc64"
+
+# Used in ebuilds for verifying 64bit userland
+PROFILE_ARCH="v9a"
 
 CHOST="sparc64-unknown-linux-gnu"
 PLATFORM="sparc64-unknown-linux-gnu"
 
 # Compiler flags
-CFLAGS="-O2 -pipe"
+CFLAGS="-O2 -pipe -mcpu=v9a -mtune=v9a"
 CXXFLAGS=${CFLAGS}
 
 # Misc
@@ -25,4 +26,3 @@ USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups fortran f77 fbcon gif jpeg 
 
 CONF_LIBDIR="lib64"
 CONF_MULTILIBDIR="lib32"
-
