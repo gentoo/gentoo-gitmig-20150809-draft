@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.0-r1.ebuild,v 1.1 2005/01/02 15:17:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.0.0-r1.ebuild,v 1.2 2005/01/04 00:30:20 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -19,6 +19,7 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/linux-sources
 		!net-wireless/ipw2200
+		!net-wireless/ipw2100-firmware
 		sys-apps/sed"
 RDEPEND=">=sys-apps/hotplug-20030805-r2
 		>=net-wireless/wireless-tools-27_pre23"
