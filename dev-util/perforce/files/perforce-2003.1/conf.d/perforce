@@ -1,0 +1,3 @@
+# Config file for /etc/init.d/perforce
+
+P4D="-q -L /var/log/perforce"

@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/files/perforce-2003.1/init.d/perforce,v 1.1 2003/12/14 09:39:28 stuart Exp $
+#
+# NB: Configuration is in /etc/conf.d/perforce
+
+PIDFILE=/var/run/p4d.pid
+
+depend() {
+    need net
+}
+
+
+start() {
+    ebegin "Starting Perforce SCM"
+    # make sure they can't break our startup by passing -d (which would
+    # cause incorrect PID to be written to pidfile), or the incorrect
+    # depot root
+    P4D="`echo ${P4D} | sed -e 's#-d##' -e 's#-r [^[:space:]]*##'`"
+    start-stop-daemon --start --quiet --chuid perforce:perforce \
+                      --exec /usr/sbin/p4d \
+                      -- ${P4D} -d -r /var/lib/perforce
+    eend $?
+
+}
+
+stop() {
+    ebegin "Stopping Perforce SCM"
+      if (  ps -C p4d | grep 'p4d' > /dev/null )
+	  then
+            killall p4d
+	fi
+    eend $?
+}

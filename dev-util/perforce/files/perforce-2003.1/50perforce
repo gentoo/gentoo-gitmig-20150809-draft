@@ -1,0 +1,3 @@
+PATH=/opt/perforce/bin
+ROOTPATH=/opt/perforce/bin:/opt/perforce/sbin
+MANPATH=/opt/perforce/man
