@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-012.ebuild,v 1.1 2004/01/01 03:41:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-012.ebuild,v 1.2 2004/01/04 07:55:13 vapier Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -65,6 +65,9 @@ src_unpack() {
 
 	# Do not sleep if UDEV_NO_SLEEP is set
 	epatch ${FILESDIR}/${PN}-011-no-wait-for-sleep.patch
+
+	# Fix gcc-2.95.3 compat
+	epatch ${FILESDIR}/${P}-udev_c-gcc295-compat.patch
 }
 
 src_compile() {

@@ -1,8 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.16 2004/01/01 03:41:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.17 2004/01/04 07:55:12 vapier Exp $
 
 *udev-012 (01 Jan 2004)
+
+  04 Jan 2004; Mike Frysinger <vapier@gentoo.org> udev-012-udev_c-gcc295-compat.patch :
+  Another gcc-2.x compatible patch.  I thought these guys wrote C, not C++ :).
 
   01 Jan 2004; Martin Schlemmer <azarah@gentoo.org> udev-012.ebuild,
   files/udev.permissions:
