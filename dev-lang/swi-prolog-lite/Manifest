@@ -1,0 +1,6 @@
+MD5 727ef6b0d888045e5dd05de611f42561 ChangeLog 452
+MD5 c565e7641a91a79d924ffbb4c7a91d45 swi-prolog-lite-5.0.10.ebuild 1241
+MD5 7193218d0192a3b2d375f684b4f24447 swi-prolog-lite-5.1.13.ebuild 1253
+MD5 a162047529de9300ae67de9aa8f509be files/destdir.patch 502
+MD5 ac0b2bc6ebbb0b4d807dc2e7f88c0edf files/digest-swi-prolog-lite-5.0.10 67
+MD5 640ff31e82704bfbbd79ac576d005850 files/digest-swi-prolog-lite-5.1.13 62
