@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-mcclim
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.1 2004/03/04 21:56:45 mkennedy Exp $
+
+*cl-mcclim-0.9 (04 Mar 2004)
+
+  04 Mar 2004; <mkennedy@gentoo.org> cl-mcclim-0.9.ebuild, metadata.xml,
+  files/TODO.Gentoo, files/0.9/system.lisp-gentoo.patch:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

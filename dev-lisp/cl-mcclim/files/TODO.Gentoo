@@ -1,0 +1,12 @@
+
+-*- Outline -*-
+
+  * Investigate CLISP portability
+
+  * Provide packages for the Listener and SciGraph
+    (dev-lisp/cl-clim-listener and dev-lisp/cl-clim-scigraph
+
+  * catalog other CLIM source for inclusion into portage
+
+
+
