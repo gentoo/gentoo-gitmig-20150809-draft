@@ -33,6 +33,9 @@
 
 # PPC PROFILE
 
+# hfsplusutils masked for testing - Gerk - June 20, 2002
+sys-apps/hfsplusutils
+
 # arrrrggg someone in x86 land unmsked a non working on ppc binutils build
 # Gerk - June 12 2002
 # DocTomoe - June 13 2002
