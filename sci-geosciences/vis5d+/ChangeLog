@@ -1,0 +1,21 @@
+# ChangeLog for app-sci/vis5d+
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/vis5d+/ChangeLog,v 1.1 2004/12/29 02:00:35 ribosome Exp $
+
+*vis5d+-1.2.1 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +vis5d+-1.2.1.ebuild:
+  Moved app-sci/vis5d+ to sci/geosciences
+
+  15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> vis5d+-1.2.1.ebuild:
+  don't assign default to S; IUSE; PROVIDE is for virtuals; tidy
+
+*vis5d+-1.2.1 (26 July 2002)
+
+  19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> vis5d+-1.2.1.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  26 July 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, vis5d+-1.2.1.ebuild, files/digest-vis5d+-1.2.1 :
+
+  Initial version in Portage now..
