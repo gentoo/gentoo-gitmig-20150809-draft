@@ -1,8 +1,12 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.38 2003/05/05 15:34:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.39 2003/05/12 16:25:11 mholzer Exp $
 
 *transcode-0.6.4 (05 May 2003)
+
+  12 May 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.ebuild,
+  transcode-0.6.4.ebuild, transcode-0.6.4_pre20030409.ebuild:
+  Updated -fPic -> -fPIC
 
   05 May 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.4.ebuild:
   Version bumped. Closes #20307.
@@ -141,7 +145,6 @@
 
   29 Oct 2002; phoen][x <phoenix@gentoo.org> ChangeLog, transcode-0.6.1.ebuild,
   files/digest-transcode-0.6.1 :
-
   Bumped to new version and put it in the unstable profile. This closes bug #9351. 
   Thanks to Tony Clark <tclark@telia.com> for the submission.
 
@@ -152,50 +155,40 @@
   Added mplayer dependency, downported PP_QUALITY_MAX patch
 
   11 Sep 2002; Mark Guertin <gerk@gentoo.org> :
-
   set nasm as x86 only dependancy
 
   28 Aug 2002; phoen][x <phoenix@gentoo.org> transcode-0.6.0.ebuild :
-
   Made libsdl an optional dependency.
-
   This closes bug 7000.
 
   28 Aug 2002; phoen][x <phoenix@gentoo.org> transcode-0.6.0.ebuild :
-
   Deleted the gtk+ dependency - transcode doesnt need gtk+ while building.
 
   12 Aug 2002; Martin Schlemmer <azarah@gentoo.org> transcode-0.6.0.ebuild :
-
   Add support for MPlayer's libpostproc.a.
 
   11 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
-
   Updated version.
 
 *transcode-0.6.0_pre5-r2 (29 May 2002)
 
   11 Aug 2002; phoen][x <phoenix@gentoo.org> transcode-0.6.0_pre5-r2.ebuild :
-  
   Made transcode depend on libdv-0.9.5*. The new libdv doesnt come with libdv.so.1.
   This fixes bug 6271.
 
   29 May 2002; Martin Schlemmer <azarah@gentoo.org> :
-
   Seems as if to not want to build without avifile and dvdread
   currently.
 
 *transcode-0.6.0_pre5-r1 (26 May 2002)
 
   26 May 2002; Martin Schlemmer <azarah@gentoo.org> :
-
   Libtoolize to fix invalid paths in plugin .la's.  Add more configure
   options according to USE flags.
 
 *transcode-0.6.0_pre5 (16 May 2002)
 
   16 May 2002; Dan Armak <danarmak@gentoo.org>
-  
   New upstream version, lots of fixes. Fixes infamous bug #2583 (and many duplicates)
   - dv_init() being called without parameters.
 
@@ -204,7 +197,6 @@
   3 May 2002; J.Hudson <jhhudso@gentoo.org>
   transcode-0.6.0_pre4-r2.ebuild,
   files/digest-transcode-0.6.0_pre4-r1, Changelog :
-
   Added a patch that fixes gcc3 compiles with this package.
 	
 *transcode-0.6.0_pre4-r1 (21 Apr 2002)
@@ -212,14 +204,12 @@
   21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
   transcode-0.6.0_pre4-r1.ebuild,
   files/digest-transcode-0.6.0_pre4-r1, ChangeLog :
-
   Added missing dependency media-libs/a52dec. Corrected ChangeLog header.
 
 *transcode-0.6.0_pre4 (15 Apr 2002)
 
   15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> transcode-0.6.0_pre4.ebuild
   files/digest-transcode-0.6.0_pre4 :
-
   Version bump submitted by doug_shea@alumni.ucsd.edu (Doug Shea) in bug #1740
 
 *transcode-0.5.3 (2 Apr 2002)
