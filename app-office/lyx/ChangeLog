@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.49 2004/10/13 13:47:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.50 2004/10/22 02:29:16 usata Exp $
+
+  22 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> lyx-1.3.4.ebuild,
+  lyx-1.3.5.ebuild:
+  Added -j1 to emake; bug #57479.
 
   13 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/lyx-1.3.5-boost.patch, lyx-1.3.5.ebuild:

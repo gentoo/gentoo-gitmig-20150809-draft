@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.9 2004/09/08 18:40:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.10 2004/10/22 02:29:16 usata Exp $
 
 inherit kde-functions eutils libtool
 
@@ -72,7 +72,8 @@ src_compile() {
 		${myconf} \
 		--enable-optimization="$flags" \
 		|| die
-	emake || die "emake failed"
+	# bug 57479
+	emake -j1 || die "emake failed"
 
 }
 
