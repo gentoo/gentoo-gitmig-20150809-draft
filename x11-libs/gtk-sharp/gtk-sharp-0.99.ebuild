@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.99.ebuild,v 1.1 2004/06/28 00:58:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.99.ebuild,v 1.2 2004/06/28 15:12:35 latexer Exp $
 
 inherit eutils mono
 
@@ -35,6 +35,9 @@ src_unpack() {
 	# disable building of samples (#16015)
 	cd ${S}
 	sed -i -e "s:sample::" Makefile.in
+
+	# Build fix
+	sed -i -e "s:^RUNTIME=\(.*\)$:RUNTIME=\"\1 --optimize=loop\":" ${S}/configure
 }
 
 src_compile() {
