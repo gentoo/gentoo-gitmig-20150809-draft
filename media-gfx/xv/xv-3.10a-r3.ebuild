@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.11 2003/11/05 18:26:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.12 2004/02/02 19:46:01 mr_bones_ Exp $
 
 inherit ccc eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.trilon.com/xv/index.html"
 SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz
 	png? http://www.ibiblio.org/gentoo/distfiles/xv-png-patch.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="xv"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ~amd64"
 IUSE="png"
