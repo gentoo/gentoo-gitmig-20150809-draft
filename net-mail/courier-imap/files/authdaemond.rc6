@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/authdaemond.rc6,v 1.1 2002/06/13 19:01:00 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/authdaemond.rc6,v 1.2 2002/07/22 23:23:51 raker Exp $
 
 depend() {
 	need net
@@ -21,7 +21,7 @@ setauth() {
 	if [ "${version}" != "" ] ; then
 			AUTHDAEMOND="$version"
 		elif [ -x $AUTHLIB/authdaemond.pgsql ] ; then
-			AUTHDAEMOND="authdaemond.pqsql"
+			AUTHDAEMOND="authdaemond.pgsql"
 		elif [ -x $AUTHLIB/authdaemond.mysql ] ; then
 			AUTHDAEMOND="authdaemond.mysql"
 		elif [ -x $AUTHLIB/authdaemond.ldap ] ; then
