@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.56 2004/11/13 03:54:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.57 2004/11/20 03:58:17 usata Exp $
+
+*libpng-1.2.7-r1 (20 Nov 2004)
+
+  20 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/libpng-1.2.7-png_do_strip_filler.diff, +libpng-1.2.7-r1.ebuild:
+  Extracted png_do_strip_filler patch from libpng-1.2.8beta4.
+  This fixes bug #67069.
 
   12 Nov 2004; Joshua Kinard <kumba@gentoo.org> libpng-1.2.7.ebuild:
   Marked stable on mips.
@@ -37,7 +44,7 @@
   06 Aug 2004; foser <foser@gentoo.org> libpng-1.0* :
   Remove all traces of libpng-1.0* (#59424)
 
-  06 Aug 2004; Bryan Østergaard,,, <kloeri@gentoo.org> libpng-1.2.5-r8.ebuild:
+  06 Aug 2004; Bryan ƒŠstergaard,,, <kloeri@gentoo.org> libpng-1.2.5-r8.ebuild:
   Stable on alpha, bug #59424.
 
   05 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> libpng-1.2.5-r8.ebuild:
