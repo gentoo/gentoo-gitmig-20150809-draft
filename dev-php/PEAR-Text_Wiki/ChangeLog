@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Text_Wiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.14 2005/03/27 16:33:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.15 2005/04/06 19:44:14 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org> PEAR-Text_Wiki-0.20.1.ebuild:
+  Stable on ppc64
 
   27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   PEAR-Text_Wiki-0.20.1.ebuild:

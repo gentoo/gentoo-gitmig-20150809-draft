@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Mail_Mime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.21 2005/03/12 12:17:08 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.22 2005/04/06 19:24:39 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-Mail_Mime-1.2.1-r1.ebuild:
+  Stable on ppc64
 
   12 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-Mail_Mime-1.2.1-r1.ebuild:
