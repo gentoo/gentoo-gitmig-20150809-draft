@@ -1,5 +1,15 @@
-MD5 57be936571e51a73e7b44f4cd460c4d3 files/digest-time-1.7-r1 60
-MD5 a1dddef27c61d5286b14565321fb2aac files/1.7-info-dir-entry.patch 461
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2b8f6fd88f62fb20a31194d782085e0d ChangeLog 1418
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 aa7cfdd78e600d7eb36cb7a23cc0dd13 time-1.7-r1.ebuild 731
+MD5 acb82963fed4fd643c9efd47a6b917db time-1.7-r1.ebuild 747
+MD5 57be936571e51a73e7b44f4cd460c4d3 files/digest-time-1.7-r1 60
+MD5 a1dddef27c61d5286b14565321fb2aac files/1.7-info-dir-entry.patch 461
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBUeuXHTu7gpaalycRAvKCAJ9WSRyTp1fV9tKA+zG/mYtnmbj1UACglynt
+kNMBoGrwoGOhvtFyfWJkGxc=
+=DHw0
+-----END PGP SIGNATURE-----
