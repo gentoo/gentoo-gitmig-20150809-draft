@@ -1,6 +1,6 @@
 virtual/libc			dev-libs/uclibc
 virtual/glibc			dev-libs/uclibc
 virtual/logger			app-admin/sysklogd
-virtual/modutils		sys-apps/modutil-init-tools
+virtual/modutils		sys-apps/module-init-tools
 virtual/cdrtools		app-cdr/cdrtools
 virtual/os-headers		sys-kernel/linux26-headers
