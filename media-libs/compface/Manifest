@@ -1,4 +1,4 @@
+MD5 58dc6233e1e2a20886a12a00383059e6 compface-1.4.ebuild 805
 MD5 adc8fd9c59935f376d413d3d94cf91c5 ChangeLog 1477
-MD5 d52eca7f36429f4645683e75161df0e8 compface-1.4.ebuild 799
-MD5 99136b248ff383abec90471de2c701ac files/compface-1.4-errno.diff 908
 MD5 9b8d9c4812b5caa0557fe8bc88a688d8 files/digest-compface-1.4 63
+MD5 99136b248ff383abec90471de2c701ac files/compface-1.4-errno.diff 908
