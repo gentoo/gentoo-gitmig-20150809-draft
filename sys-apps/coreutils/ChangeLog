@@ -1,9 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.21 2003/08/05 02:09:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.22 2003/08/11 22:18:18 agriffis Exp $
 
-
-*coreutils-5.0-r1 (28 Jul 2003)
+  11 Aug 2003; Aron Griffis <agriffis@gentoo.org> coreutils-5.0-r1.ebuild:
+  Mark stable on alpha
 
   04 Aug 2003; Joshua Kinard <kumba@gentoo.org> coreutils-5.0-r1.ebuild:
   Changed ~mips to mips in KEYWORDS
@@ -24,6 +24,8 @@
   01 Aug 2003; Aron Griffis <agriffis@gentoo.org> coreutils-5.0-r1.ebuild,
   files/coreutils-5.0-confdir3.patch:
   Fix bug 25702 by refraining from cleaning up PATH_MAX test
+
+*coreutils-5.0-r1 (28 Jul 2003)
 
   28 Jul 2003; Martin Schlemmer <azarah@gentoo.org> coreutils-5.0-r1.ebuild:
   Do not include su infopage, as it is not valid for the su from sys-apps/shadow
