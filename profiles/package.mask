@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <msterret@gentoo.org> (04 Sep 2003)
+# segfaults on some input that used to work fine.
+=dev-lang/nasm-0.98.37
+
 # <lu_zero@gentoo.org> (04 Sep 2003)
 # Not working for me, still builds fine
 media-video/lives
