@@ -1,8 +1,13 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.7 2002/11/11 04:42:48 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.8 2002/11/11 06:59:17 seemant Exp $
 
 *webmin-1.030 (07 Nov 2002)
+
+  10 Nov 2002; Seemant Kulleen <seemant@gentoo.org> webmin-1.030.ebuild :
+
+  Make sure the /etc/init.d script has +x permissions on it. Closing bug
+  #10555 by newspost@venzke.org (Alexander Venzke (Samson))
 
   10 Nov 2002; Jon Nall <nall@gentoo.org> webmin-1.030.ebuild :
   added ~ppc to KEYWORDS
