@@ -1,0 +1,13 @@
+# ChangeLog for sys-kernel/mips-prepatch-sources
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/ChangeLog,v 1.1 2003/08/15 02:43:52 kumba Exp $
+
+*mips-prepatch-sources-2.4.22_rc2-r1 (14 Aug 2003)
+
+  14 Aug 2003; Joshua Kinard <kumba@gentoo.org> mips-prepatch-sources-2.4.22_rc2-r1.ebuild,
+  files/mips-gcc-makefile-fix-20030813.patch:
+  Initial release. 
+  Contains methods to install a linux pre-patch kernel sourceswith a diff from Linux-mips.org CVS.
+  Once 2.4.22 goes stable, it will get added to sys-kernel/mips-sources.  mips-prepatch-sources
+  are only for pre-patched versions of kernels (which will occur periodically).
+
