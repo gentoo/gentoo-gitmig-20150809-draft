@@ -1,6 +1,6 @@
-# ChangeLog for app-misc/xlockmore
+# ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.1 2003/11/18 17:42:24 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.2 2003/11/20 03:00:39 vapier Exp $
 
 *xlockmore-5.08.2 (18 Nov 2003)
 
