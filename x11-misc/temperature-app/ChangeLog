@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/temperature-app
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/temperature-app/ChangeLog,v 1.3 2004/06/24 22:33:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/temperature-app/ChangeLog,v 1.4 2004/08/08 00:55:45 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> temperature-app-1.4.ebuild:
+  Typo in DESCRIPTION: farenheit -> fahrenheit. Bug 59717.
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> temperature-app-1.4.ebuild:
   Marked stable.

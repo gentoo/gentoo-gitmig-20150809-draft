@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lookingglass-bin/lookingglass-bin-0.5.ebuild,v 1.1 2004/07/31 15:39:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lookingglass-bin/lookingglass-bin-0.5.ebuild,v 1.2 2004/08/08 00:54:21 slarti Exp $
 
 inherit eutils
 
-DESCRIPTION="Looking Glass - 3D window manager writen in Java"
+DESCRIPTION="Looking Glass - 3D window manager written in Java"
 HOMEPAGE="https://lg3d.dev.java.net/"
 SRC_URI="https://lg3d-core.dev.java.net/files/documents/1834/5501/lg3d-${PV}.tar.gz"
 LICENSE="GPL-2"

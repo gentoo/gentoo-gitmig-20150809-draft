@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lookingglass-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lookingglass-bin/ChangeLog,v 1.1 2004/07/31 15:39:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lookingglass-bin/ChangeLog,v 1.2 2004/08/08 00:54:21 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> lookingglass-bin-0.5.ebuild:
+  Typo in DESCRIPTION: writen -> written. Bug 59717.
 
 *lookingglass-bin-0.5 (31 Jul 2004)
 

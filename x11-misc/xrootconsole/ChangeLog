@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xrootconsole
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.13 2004/06/24 22:44:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.14 2004/08/08 00:58:50 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> xrootconsole-0.4-r1.ebuild,
+  xrootconsole-0.4.ebuild:
+  Typo in DESCRIPTION: an utillity -> a utility. Bug 59717.
 
   14 Jun 2004; <pyrania@gentoo.org> xrootconsole-0.4-r1.ebuild:
   Added IUSE.
