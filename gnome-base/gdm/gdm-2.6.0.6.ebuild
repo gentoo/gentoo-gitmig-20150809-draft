@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.6.ebuild,v 1.7 2005/01/08 23:57:29 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.6.ebuild,v 1.8 2005/01/22 06:32:20 vapier Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.jirka.org/gdm.html"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64 ~mips ~ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips ~ppc64"
 IUSE="tcpd xinerama selinux"
 
 SRC_URI="${SRC_URI}
@@ -103,7 +103,7 @@ src_install() {
 	# Move Gentoo theme in
 	mv ${WORKDIR}/gentoo-*  ${D}/usr/share/gdm/themes
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README* TODO
 
 }
 

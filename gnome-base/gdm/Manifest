@@ -2,45 +2,45 @@
 Hash: SHA1
 
 MD5 eb5c185ed296f52a4105860d87416f22 ChangeLog 11362
-MD5 ea62033494a3e02a75bd72d3dbd6c986 gdm-2.4.4.7-r1.ebuild 3410
-MD5 21f74f6f1e60858a6874343c9d7cb523 gdm-2.6.0.6.ebuild 3263
-MD5 d979d4d7e5b2ec03f8384d1d8db37f1d gdm-2.4.1.7-r1.ebuild 5270
 MD5 c4d34959dd6c05056e5852277f76d250 gdm-2.2.5.4-r5.ebuild 4413
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 d979d4d7e5b2ec03f8384d1d8db37f1d gdm-2.4.1.7-r1.ebuild 5270
+MD5 ea62033494a3e02a75bd72d3dbd6c986 gdm-2.4.4.7-r1.ebuild 3410
 MD5 a7405d9c839482fff8b76a3312842a59 gdm-2.6.0.3.ebuild 3371
 MD5 d53dd7b184e898d50c7e5cc31bfd7036 gdm-2.6.0.4-r1.ebuild 3268
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 aaea1d63e50c98768949cf44896c9cb5 gdm-2.6.0.6.ebuild 3244
+MD5 80ecdc9dea675084c39d7d30876acf5b files/digest-gdm-2.2.5.4-r5 65
 MD5 6392095707ae98912a626cb035796255 files/digest-gdm-2.4.1.7-r1 134
-MD5 5f1a2155fb7d9ac84b228d439df56777 files/digest-gdm-2.6.0.4-r1 137
 MD5 25720fd12f8eee788fc5169824a0fe7e files/digest-gdm-2.4.4.7-r1 205
-MD5 2f7f1a2f8ba0b8808f27f0a1f6abdcee files/digest-gdm-2.6.0.6 137
 MD5 6d2d226ffb2ab29992376b5e2e4abe9f files/digest-gdm-2.6.0.3 205
+MD5 5f1a2155fb7d9ac84b228d439df56777 files/digest-gdm-2.6.0.4-r1 137
 MD5 b2d71444a82a418126728e6301dd3389 files/gdm-2.4.1.7-gtk-2.4.patch 5730
 MD5 7dc28411b445f8459abba359b03f36b8 files/gdm-2.4.4-selinux_remove_attr.patch 826
-MD5 80ecdc9dea675084c39d7d30876acf5b files/digest-gdm-2.2.5.4-r5 65
+MD5 2f7f1a2f8ba0b8808f27f0a1f6abdcee files/digest-gdm-2.6.0.6 137
+MD5 2a4dc345919a4094ead16d7a122e40bf files/2.2.5/gnomerc 235
+MD5 2a4dc345919a4094ead16d7a122e40bf files/2.4.1/gnomerc 235
 MD5 0107e56a45d8ef4413c1779e809f1c03 files/2.4.4/Xsession 6198
 MD5 a3f4b5a7ab813f106578125638e3b2f0 files/2.4.4/custom.desktop 301
-MD5 2a4dc345919a4094ead16d7a122e40bf files/2.2.5/gnomerc 235
 MD5 0107e56a45d8ef4413c1779e809f1c03 files/2.6.0/Xsession 6198
 MD5 a3f4b5a7ab813f106578125638e3b2f0 files/2.6.0/custom.desktop 301
-MD5 2a4dc345919a4094ead16d7a122e40bf files/2.4.1/gnomerc 235
+MD5 d0cb338160e3be8790524af8071cc4df files/2.2.5/pam.d/gdm 380
+MD5 89cc8ab9525284af6babcb9c86122443 files/2.2.5/pam.d/gdmconfig 288
+MD5 d0cb338160e3be8790524af8071cc4df files/2.4.1/pam.d/gdm 380
+MD5 89cc8ab9525284af6babcb9c86122443 files/2.4.1/pam.d/gdmconfig 288
+MD5 2edddb54af0c3c979b9ef73ba52deb4a files/2.4.4/pam.d/gdm 425
 MD5 6c45b586e2cf16cf89ab544197b12bae files/2.4.4/pam.d/gdm-autologin 406
 MD5 89cc8ab9525284af6babcb9c86122443 files/2.4.4/pam.d/gdmconfig 288
-MD5 2edddb54af0c3c979b9ef73ba52deb4a files/2.4.4/pam.d/gdm 425
-MD5 89cc8ab9525284af6babcb9c86122443 files/2.2.5/pam.d/gdmconfig 288
-MD5 d0cb338160e3be8790524af8071cc4df files/2.2.5/pam.d/gdm 380
+MD5 2edddb54af0c3c979b9ef73ba52deb4a files/2.6.0/pam.d/gdm 425
 MD5 6c45b586e2cf16cf89ab544197b12bae files/2.6.0/pam.d/gdm-autologin 406
 MD5 89cc8ab9525284af6babcb9c86122443 files/2.6.0/pam.d/gdmconfig 288
-MD5 2edddb54af0c3c979b9ef73ba52deb4a files/2.6.0/pam.d/gdm 425
-MD5 89cc8ab9525284af6babcb9c86122443 files/2.4.1/pam.d/gdmconfig 288
-MD5 d0cb338160e3be8790524af8071cc4df files/2.4.1/pam.d/gdm 380
-MD5 114395565e31f41b44d31d731f1478b0 files/2.4.4/security/console.apps/gdmconfig 66
 MD5 114395565e31f41b44d31d731f1478b0 files/2.2.5/security/console.apps/gdmconfig 66
-MD5 114395565e31f41b44d31d731f1478b0 files/2.6.0/security/console.apps/gdmconfig 66
 MD5 114395565e31f41b44d31d731f1478b0 files/2.4.1/security/console.apps/gdmconfig 66
+MD5 114395565e31f41b44d31d731f1478b0 files/2.4.4/security/console.apps/gdmconfig 66
+MD5 114395565e31f41b44d31d731f1478b0 files/2.6.0/security/console.apps/gdmconfig 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4HPbCHk4+ZoBpvsRAtsQAJ9CMeSsvf5+Wdm0D9IGTdBAWxHHkQCgq9SP
-0gwsnBNgd7qSp6/q4CMaIY4=
-=ma6Q
+iD8DBQFB8fOuroRuSHgZdywRAuOOAJ4tqlferLHNx6ik3ioOmrwpsYGIigCcD+u3
+ffS33Yss+XtoQjPUaNbX420=
+=bMbB
 -----END PGP SIGNATURE-----
