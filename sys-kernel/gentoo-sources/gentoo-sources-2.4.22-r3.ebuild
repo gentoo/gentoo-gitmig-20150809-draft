@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r3.ebuild,v 1.2 2004/01/07 08:33:17 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r3.ebuild,v 1.3 2004/01/09 11:49:48 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -49,6 +49,10 @@ src_unpack() {
 pkg_postinst() {
 	kernel_pkg_postinst
 
+	echo
+	ewarn "If iptables/netfilter behaves abnormally, such as 'Invalid Argument',"
+	ewarn "you will need to re-emerge iptables to restore proper functionality."
+	echo
 	einfo "If there are issues with this kernel, search http://bugs.gentoo.org/ for an"
 	einfo "existing bug. Only create a new bug if you have not found one that matches"
 	einfo "your issue. It is best to do an advanced search as the initial search has a"
