@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.8.ebuild,v 1.1 2004/03/13 03:56:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.8.ebuild,v 1.2 2004/03/16 02:53:42 pebenito Exp $
 
 IUSE="build"
 
-EXTRAS_VER="1.0"
+EXTRAS_VER="1.1"
 
 DESCRIPTION="SELinux core utilites"
 HOMEPAGE="http://www.nsa.gov/selinux"
