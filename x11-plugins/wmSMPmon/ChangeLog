@@ -1,10 +1,17 @@
 # ChangeLog for x11-plugins/wmSMPmon
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/ChangeLog,v 1.5 2004/08/11 13:04:51 s4t4n Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/ChangeLog,v 1.6 2005/02/08 13:07:41 s4t4n Exp $
+
+  08 Feb 2005; Michele Noberasco <s4t4n@gentoo.org> wmSMPmon-2.3.ebuild:
+  Stable for x86. Fix copyright headers.
+  wmSMPmon-2.3.ebuild:
+  Fix copyright headers.
+  metadata.xml:
+  Assigned to desktop-dock herd.
 
   *wmSMPmon-2.3 (11 Aug 2004)
 
-  11 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> +wmSMPmon-2.3.ebuild:
+  11 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmSMPmon-2.3.ebuild:
   Version bump.
   wmSMPmon-2.2.ebuild:
   Update ebuild, correct S variable. It always segfaults on me but I assume
