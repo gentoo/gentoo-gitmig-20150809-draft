@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-3.99.17.ebuild,v 1.1 2003/07/07 16:03:16 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-3.99.17.ebuild,v 1.2 2003/09/08 07:38:37 msterret Exp $
 
 inherit distutils
 
