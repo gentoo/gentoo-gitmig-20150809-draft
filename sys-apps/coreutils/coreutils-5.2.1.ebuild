@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r1.ebuild,v 1.3 2004/04/24 09:07:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.1 2004/05/17 00:01:03 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,15 +12,16 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
-	http://www.openi18n.org/subgroups/utildev/patch/${P}-${I18N_VER}.patch.gz
-	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
 	mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
 	mirror://gentoo/${P}-${I18N_VER}.patch.gz
-	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"
+	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~seemant/distfiles/${P}-${I18N_VER}.patch.gz
+	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCH_VER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha arm ~hppa ~ia64 ~amd64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="nls build acl selinux static"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
@@ -30,8 +31,8 @@ RDEPEND="selinux? ( sys-libs/libselinux )
 DEPEND="${RDEPEND}
 	virtual/glibc
 	>=sys-apps/portage-2.0.49
-	>=sys-devel/automake-1.8.2
-	>=sys-devel/autoconf-2.57
+	>=sys-devel/automake-1.8.3
+	>=sys-devel/autoconf-2.58
 	>=sys-devel/m4-1.4-r1
 	sys-apps/help2man"
 
@@ -43,7 +44,7 @@ src_unpack() {
 	# Mandrake's lsw patch caused issues on ia64 and amd64 with ls
 	# Reported upstream, but we don't apply it for now
 	# mv ${PATCHDIR}/mandrake/019* ${PATCHDIR}/excluded
-
+	mv ${PATCHDIR}/mandrake/025* ${PATCHDIR}/excluded
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/mandrake
 	epatch ${WORKDIR}/${P}-${I18N_VER}.patch
 
@@ -82,8 +83,6 @@ src_unpack() {
 
 src_compile() {
 
-#	export DEFAULT_POSIX2_VERSION=199209
-
 	if [ -z "`which cvs 2>/dev/null`" ]
 	then
 		# Fix issues with gettext's autopoint if cvs is not installed,
@@ -93,12 +92,13 @@ src_compile() {
 
 
 	export WANT_AUTOMAKE=1.8
+	export WANT_AUTOCONF=2.5
 
 	mv m4/inttypes.m4 m4/inttypes-eggert.m4
 	touch aclocal.m4 configure config.hin \
 		Makefile.in */Makefile.in */*/Makefile.in
 
-	ebegin "Reconfiguring configure scripts"
+	ebegin "Reconfiguring configure scripts (be patient)"
 	aclocal -I m4 &>/dev/null || die
 	autoconf || die
 	automake || die
@@ -125,6 +125,10 @@ src_install() {
 	cd ${D}
 	dodir /usr/bin
 	rm -rf usr/lib
+
+	# add DIRCOLORS
+	insinto /etc
+	doins ${FILESDIR}/DIR_COLORS
 
 	# move non-critical packages into /usr
 	mv bin/{csplit,expand,factor,fmt,fold,join,md5sum,nl,od} usr/bin
