@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-mad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.8 2003/07/17 10:34:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.9 2003/07/19 19:45:57 raker Exp $
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org>:
+  Reverted back to previous build
 
 *xmms-mad-0.5.1-r1 (17 Jul 2003)
 
