@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.16 2004/06/01 15:01:48 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.17 2004/06/07 23:01:24 latexer Exp $
+
+*ipw2100-0.46 (07 Jun 2004)
+
+  07 Jun 2004; Peter Johanson,,, <peter@gentoo.org> ipw2100-0.46.ebuild:
+  Bump to new release.
 
   01 Jun 2004; Peter Johanson <latexer@gentoo.org> ipw2100-0.39.ebuild,
   ipw2100-0.44.ebuild:

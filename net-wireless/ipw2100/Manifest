@@ -1,6 +1,7 @@
+MD5 c1c46382d36dfa148d5f65f35a790f45 ipw2100-0.46.ebuild 2315
 MD5 d011a6d2ead424ccb64f49f9aa0e9194 ipw2100-0.41.ebuild 2229
 MD5 9b001769ed251b43ae798d7c90e8353d ipw2100-0.45.ebuild 2314
-MD5 3f941cc5b2f3edd9cb801bb7f0eb2a30 ChangeLog 3918
+MD5 8ebbc5ac0f6836889f3584d606da7bf0 ChangeLog 4043
 MD5 db76d51212bff92212cb8dd316a0931d metadata.xml 222
 MD5 c06a987ea3e36a649714fb41973ccd0a ipw2100-0.44.ebuild 2313
 MD5 a8f45ac36d3629f7fd90082355b44d89 files/ipw2100-0.38-resume.patch 717
@@ -11,5 +12,6 @@ MD5 1d1276f437b0101f8283429a0c048ec7 files/ipw2100-0.31-sched-fix.diff 1232
 MD5 f9a4a4e4aacd5c115776d3ccc8333cab files/digest-ipw2100-0.41 123
 MD5 5ccd21f930c68d8fd53afe3a87bcd56e files/digest-ipw2100-0.44 124
 MD5 3d2b283cc098381a32b94d472e5b11dc files/digest-ipw2100-0.45 124
+MD5 a508f0e5b0fb4fda0c68b61cfb7112cb files/digest-ipw2100-0.46 126
 MD5 1939e18b58d29ee8ec02ce6777ebaa4e files/ipw2100-0.33-makefile-fix.diff 2275
 MD5 99cced47568e9cb3fd2e3ceaed896c88 files/hostap_crypt.h 1344
