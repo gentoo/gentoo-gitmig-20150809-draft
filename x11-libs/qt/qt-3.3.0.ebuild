@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.4 2004/02/09 19:45:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.5 2004/02/09 22:10:42 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -103,7 +103,9 @@ src_install() {
 	dobin bin/*
 
 	# libraries
-	dolib lib/libqt-mt.so.3.3.0 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designercore}.a
+	dolib lib/libqt-mt.so.3.3.0 lib/libqui.so.1.0.0
+	dolib lib/lib{editor,qassistantclient,designercore}.a lib/libqt-mt.la
+
 	cd ${D}/$QTBASE/lib
 	for x in libqui.so ; do
 		ln -s $x.1.0.0 $x.1.0
