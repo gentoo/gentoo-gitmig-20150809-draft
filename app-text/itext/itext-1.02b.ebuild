@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/itext/itext-1.02b.ebuild,v 1.4 2004/08/24 03:14:55 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/itext/itext-1.02b.ebuild,v 1.5 2004/10/16 18:15:21 axxo Exp $
 
 inherit java-pkg
 
@@ -37,5 +37,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/*
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }

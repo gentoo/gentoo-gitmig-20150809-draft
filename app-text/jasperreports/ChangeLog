@@ -1,6 +1,11 @@
 # ChangeLog for app-text/jasperreports
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/ChangeLog,v 1.5 2004/09/01 08:12:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/ChangeLog,v 1.6 2004/10/16 18:15:46 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  jasperreports-0.6.1-r1.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
 *jasperreports-0.6.1-r1 (01 Sep 2004)
 

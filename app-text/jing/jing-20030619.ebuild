@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619.ebuild,v 1.5 2004/08/24 03:20:13 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619.ebuild,v 1.6 2004/10/16 18:16:09 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="Jing: A RELAX NG validator in Java"
 HOMEPAGE="http://thaiopensource.com/relaxng/jing.html"
@@ -16,11 +18,11 @@ DEPEND=""
 
 
 src_install() {
-	dojar bin/jing.jar
+	java-pkg_dojar bin/jing.jar
 	cat >jing <<'EOF'
 #!/bin/sh
 exec `java-config --java` -classpath `java-config -p xerces,saxon` -jar `java-config -p jing` "$@"
 EOF
 	dobin jing
-	dohtml -r doc/* readme.html
+	java-pkg_dohtml -r doc/* readme.html
 }
