@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r2.ebuild,v 1.9 2002/12/09 04:33:17 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r2.ebuild,v 1.10 2002/12/10 04:12:02 woodchip Exp $
 
 IUSE="ipv6 static pam tcpd"
 
@@ -92,4 +92,9 @@ pkg_postinst() {
 	einfo "new one with UID 22.  If you have any scripts or programs that"
 	einfo "that referenced the old UID directly, you will need to update them."
 	einfo
+	if use pam; then
+		einfo "Please be aware users need a valid shell in /etc/passwd"
+		einfo "in order to be allowed to login."
+		einfo
+	fi
 }
