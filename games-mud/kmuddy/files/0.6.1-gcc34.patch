@@ -1,0 +1,22 @@
+--- ctelnet.h.orig	2004-09-08 15:05:22.000000000 -0700
++++ ctelnet.h	2004-09-08 15:05:55.000000000 -0700
+@@ -267,7 +267,7 @@
+     for more information... */
+   bool announcedState[256];
+     /** whether the server has already announced his WILL/WON'T */
+-  bool heAnnouncedState[256];;
++  bool heAnnouncedState[256];
+     /** whether we have tried to enable this option */
+   bool triedToEnable[256];
+     /** amount of bytes sent up to now */
+--- cdownloader.h.orig	2004-09-08 15:05:30.000000000 -0700
++++ cdownloader.h	2004-09-08 15:06:11.000000000 -0700
+@@ -30,7 +30,7 @@
+ #endif
+ 
+ //forward declaration for KIO::Job
+-namespace KIO { class Job; };
++namespace KIO { class Job; }
+ 
+ /**
+ Class used to download stuff.
