@@ -27,6 +27,10 @@ MD5 9adecda5cdf6951ea0bcb6515c21a38b files/3.2.1/kdmrc 18202
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.2.1/backgroundrc 342
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.2.1/Xsetup 758
 MD5 0faaf9eacb170e30dae8818f927b2934 files/3.2.1/startkde-3.2.1-gentoo.diff 1923
+MD5 9adecda5cdf6951ea0bcb6515c21a38b files/3.2.2/kdmrc 18202
+MD5 0faaf9eacb170e30dae8818f927b2934 files/3.2.2/startkde-3.2.2-gentoo.diff 1923
+MD5 2f1f31f38b93136baeb537500c8cfabc files/3.2.2/backgroundrc 342
+MD5 3403677f5c4e44815c5a97c507d4f117 files/3.2.2/Xsetup 758
 MD5 91f01b28ae245f6af19ea53cb5586101 files/3.0.5b/kdebase-3.0.5b-nspluginviewer-qt31.diff.gz 36346
 MD5 836a4045534a443437eea7506a7fa3f7 files/3.0.5b/startkde-3.0.5b-gentoo.diff 1641
 MD5 867ead4d7b68109c1437e1b96eb26342 files/3.0.5b/kdebase-3.0.5b-xft_h-fix.diff 214
