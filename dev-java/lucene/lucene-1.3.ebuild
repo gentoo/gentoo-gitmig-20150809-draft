@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.3.ebuild,v 1.2 2004/03/23 02:58:31 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.3.ebuild,v 1.3 2004/05/02 01:54:13 zx Exp $
 
 inherit java-pkg
 
@@ -21,7 +21,7 @@ S="${WORKDIR}/${P}-final"
 src_compile() {
 	local antflags="jar-core"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	use doc && antflags="${antflags} javadoc"
+	use doc && antflags="${antflags} javadocs"
 	ant ${antflags} || die "compilation failed"
 }
 
