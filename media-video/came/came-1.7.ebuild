@@ -1,22 +1,31 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.7.ebuild,v 1.2 2004/03/29 01:04:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.7.ebuild,v 1.3 2004/06/11 13:17:49 vapier Exp $
 
-DESCRIPTION="camE is a rewrite of the xawtv webcam app, which adds imlib2 support and a lot of new features"
+inherit eutils
+
+DESCRIPTION="rewrite of the xawtv webcam app, which adds imlib2 support and a lot of new features"
 HOMEPAGE="http://linuxbrit.co.uk/camE/"
 SRC_URI="http://linuxbrit.co.uk/downloads/camE-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND=">=net-misc/curl-7.9.1
 	>=media-libs/giblib-1.2.3"
 
 S=${WORKDIR}/camE-${PV}
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	sed -i -e "s:/usr/local:/usr:" Makefile
+	epatch ${FILESDIR}/${PV}-true-false.patch
+}
+
+src_compile() {
 	emake || die
 }
 
