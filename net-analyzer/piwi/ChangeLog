@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/piwi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.4 2003/11/21 16:46:20 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.5 2003/12/18 06:34:26 mboman Exp $
+
+  18 Dec 2003; Michael Boman <mboman@gentoo.org> piwi-0.8.0.20031109.ebuild,
+  files/make_release.sh, files/piwi-apache.conf:
+  Updated piwi-apache.conf, it was pointing at the old htdocs structure.
+
+*piwi-0.8.0.20031109 (17 Dec 2003)
+
+  17 Dec 2003; Michael Boman <mboman@gentoo.org> piwi-0.8.0.20031109.ebuild,
+  files/make_release.sh:
+  New CVS snapshot. Uses GhostScript instead of GD by default to generate
+  images. Updated make_release.sh to generate filename the same way
+  upstream does it.
 
   22 Nov 2003; Michael Boman <mboman@gentoo.org> metadata.xml:
   I'm now the primary maintainer of this package. Please report all bugs
