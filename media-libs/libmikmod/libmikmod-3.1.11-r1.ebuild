@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.11-r1.ebuild,v 1.8 2004/11/08 09:12:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.11-r1.ebuild,v 1.9 2004/11/08 15:42:45 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://mikmod.raphnet.net/files/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 LGPL-2 )"
 SLOT="0"
-KEYWORDS="x86 amd64 hppa sparc mips alpha ia64 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc ppc64 sparc x86"
 IUSE="oss esd alsa"
 
 DEPEND=">=media-libs/audiofile-0.2.3
