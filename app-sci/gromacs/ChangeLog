@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/gromacs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/ChangeLog,v 1.8 2004/03/01 04:16:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gromacs/ChangeLog,v 1.9 2004/04/02 23:53:52 spyderous Exp $
+
+*gromacs-3.2.1 (02 Apr 2004)
+
+  02 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; gromacs-3.2.1.ebuild:
+  Version bump, closes #44377.
 
 *gromacs-3.2 (29 Feb 2004)
 
