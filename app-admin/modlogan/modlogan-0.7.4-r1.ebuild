@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.20 2004/05/31 19:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.21 2004/06/24 21:32:14 agriffis Exp $
 
 DESCRIPTION="Logfile Analyzer"
 HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"

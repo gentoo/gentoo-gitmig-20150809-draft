@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/lsat
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.9 2004/04/28 21:05:33 avenj Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.10 2004/06/24 21:31:07 agriffis Exp $
 
   28 Apr 2004; Jon Portnoy <avenj@gentoo.org> lsat-0.9.0.ebuild :
   Stable on AMD64.

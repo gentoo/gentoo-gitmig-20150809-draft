@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/systemimager-client-bin
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemimager-client-bin/ChangeLog,v 1.4 2004/02/29 15:27:12 aliz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemimager-client-bin/ChangeLog,v 1.5 2004/06/24 21:40:03 agriffis Exp $
 
   05 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
   systemimager-client-bin-3.0.1.ebuild:

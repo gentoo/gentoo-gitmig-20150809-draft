@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.4.ebuild,v 1.6 2004/06/23 02:56:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.4.ebuild,v 1.7 2004/06/24 21:39:18 agriffis Exp $
 
 inherit flag-o-matic
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/webalizer
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.24 2004/06/01 22:31:57 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.25 2004/06/24 21:42:43 agriffis Exp $
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> webalizer-2.01.10-r4.ebuild,
   webalizer-2.01.10-r5.ebuild:

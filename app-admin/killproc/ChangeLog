@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/killproc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.8 2004/06/16 03:58:13 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.9 2004/06/24 21:30:02 agriffis Exp $
 
   15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml:
   Added ~amd64.

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/logsentry
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.10 2004/06/06 11:11:45 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.11 2004/06/24 21:30:51 agriffis Exp $
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> logsentry-1.1.1.ebuild:
   QA - IUSE fix

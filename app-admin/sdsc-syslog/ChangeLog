@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/sdsc-syslog
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.2 2004/06/15 01:12:52 dragonheart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.3 2004/06/24 21:37:38 agriffis Exp $
 
   15 Jun 2004; Daniel Black <dragonheart@gentoo.org> sdsc-syslog-1.0.2.ebuild:
   x86 stable

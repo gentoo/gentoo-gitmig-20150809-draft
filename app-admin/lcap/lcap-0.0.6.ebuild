@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6.ebuild,v 1.6 2004/05/31 19:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6.ebuild,v 1.7 2004/06/24 21:30:11 agriffis Exp $
 
 DESCRIPTION="kernel capability remover"
 # The normal homepage of the program was not reachable by the time

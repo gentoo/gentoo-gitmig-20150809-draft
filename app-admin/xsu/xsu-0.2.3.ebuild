@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/xsu-0.2.3.ebuild,v 1.11 2004/05/31 19:21:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/xsu-0.2.3.ebuild,v 1.12 2004/06/24 21:43:16 agriffis Exp $
 
 DESCRIPTION="Interface for 'su - username -c command' in GNOME."
 HOMEPAGE="http://xsu.freax.eu.org/"

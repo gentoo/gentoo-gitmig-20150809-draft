@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/partgui-0.2.3-r2.ebuild,v 1.2 2004/03/10 07:41:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/partgui-0.2.3-r2.ebuild,v 1.3 2004/06/24 21:33:34 agriffis Exp $
 
 DESCRIPTION="PartGUI is a nice graphical partitioning tool"
 HOMEPAGE="http://part-gui.sourceforge.net/"

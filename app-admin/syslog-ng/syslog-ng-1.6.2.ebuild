@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.2.ebuild,v 1.5 2004/05/29 20:32:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.2.ebuild,v 1.6 2004/06/24 21:39:18 agriffis Exp $
 
 # The release candidates are named syslog-ng-1.6.0rc1 for example
 MY_P=${P/_/}

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/livecd-ng
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/livecd-ng/ChangeLog,v 1.4 2004/03/12 10:32:54 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/livecd-ng/ChangeLog,v 1.5 2004/06/24 21:30:20 agriffis Exp $
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> livecd-ng-1.0.ebuild:
   Don't assign default to S; header fix

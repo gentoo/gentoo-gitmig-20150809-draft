@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1.ebuild,v 1.5 2004/03/12 06:25:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1.ebuild,v 1.6 2004/06/24 21:23:53 agriffis Exp $
 
 DESCRIPTION="A flexible and fast logfile colorizer"
 HOMEPAGE="http://bonehunter.rulez.org/CCZE.html"

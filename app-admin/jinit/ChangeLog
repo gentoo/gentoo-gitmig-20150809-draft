@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/jinit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.6 2003/05/24 14:21:38 mholzer Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.7 2004/06/24 21:29:39 agriffis Exp $
 
 *jinit-0.1.11 (24 May 2003)
 

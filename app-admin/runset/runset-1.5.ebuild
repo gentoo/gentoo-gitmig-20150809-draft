@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.5.ebuild,v 1.5 2004/06/06 14:16:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.5.ebuild,v 1.6 2004/06/24 21:37:06 agriffis Exp $
 
 DESCRIPTION="Runset Init suite, a replacement for sysv style initd"
 HOMEPAGE="http://www.icewalkers.com/softlib/app/app_00233.html"

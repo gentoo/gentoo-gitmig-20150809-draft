@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.2.1.ebuild,v 1.3 2004/06/01 21:14:04 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.2.1.ebuild,v 1.4 2004/06/24 21:32:32 agriffis Exp $
 
 DESCRIPTION="a utility for monitoring and managing daemons or similar programs running on a Unix system."
 HOMEPAGE="http://www.tildeslash.com/monit/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/sysklogd
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.31 2004/06/21 22:24:22 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.32 2004/06/24 21:39:04 agriffis Exp $
 
   21 Jun 2004; <plasmaroo@gentoo.org> files/sysklogd-1.4.1-2.6.headers.patch:
   Updated the 2.6 headers patch to check that the <linux/list.h> header is not

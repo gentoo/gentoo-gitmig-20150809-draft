@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r3.ebuild,v 1.3 2004/06/08 21:55:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r3.ebuild,v 1.4 2004/06/24 21:26:49 agriffis Exp $
 
 IUSE=""
 S=${WORKDIR}/gentoo-rsync-mirror-${PV}

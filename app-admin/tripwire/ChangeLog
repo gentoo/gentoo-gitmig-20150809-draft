@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/tripwire
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.10 2004/06/05 18:34:09 taviso Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.11 2004/06/24 21:41:03 agriffis Exp $
 
   05 Jun 2004; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2.ebuild:
   removing old ebuilds

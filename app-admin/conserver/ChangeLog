@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/conserver
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.21 2004/06/20 15:12:57 weeve Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.22 2004/06/24 21:24:24 agriffis Exp $
 
 *conserver-8.1.8 (20 Jun 2004)
 

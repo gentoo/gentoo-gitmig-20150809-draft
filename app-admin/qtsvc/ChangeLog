@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/qtsvc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/ChangeLog,v 1.8 2004/04/26 21:04:18 centic Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/ChangeLog,v 1.9 2004/06/24 21:36:04 agriffis Exp $
 
   26 Apr 2004; Dominik Stadler <centic@gentoo.org> qtsvc-0.1-r1.ebuild,
   qtsvc-0.2.ebuild:

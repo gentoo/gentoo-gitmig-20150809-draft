@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/wasabi/wasabi-0.1-r1.ebuild,v 1.2 2004/06/18 20:19:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/wasabi/wasabi-0.1-r1.ebuild,v 1.3 2004/06/24 21:42:13 agriffis Exp $
 
 DESCRIPTION="Log parsing and notification program"
 HOMEPAGE="http://www.gentoo.org/~lcars/wasabi"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.5 2004/06/06 11:14:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.6 2004/06/24 21:33:26 agriffis Exp $
 
 MY_P="${P/_beta/beta}"
 S="${WORKDIR}/${MY_P}"

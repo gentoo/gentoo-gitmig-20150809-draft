@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/grubconfig
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.9 2004/06/06 02:51:31 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.10 2004/06/24 21:28:20 agriffis Exp $
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> grubconfig-1.22.ebuild:
   QA fix - IUSE. x86 keyword too
