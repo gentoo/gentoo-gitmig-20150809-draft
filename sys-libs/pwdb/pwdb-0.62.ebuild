@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.15 2004/07/02 08:50:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.16 2004/11/05 01:40:41 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="BSD | GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="selinux"
 
 DEPEND="virtual/libc
@@ -26,13 +26,15 @@ src_unpack () {
 
 	use selinux && epatch ${FILESDIR}/${P}-selinux.patch
 
-	sed -i -e "s/^DIRS = .*/DIRS = libpwdb/" -e "s:EXTRAS += :EXTRAS += ${CFLAGS} :" \
+	sed -i \
+		-e "s/^DIRS = .*/DIRS = libpwdb/" \
+		-e "s:EXTRAS += :EXTRAS += ${CFLAGS} :" \
 		Makefile
-	sed -i -e "s/=gcc/=${CC:-gcc}/g" default.defs
+	sed -i -e "s/=gcc/=$(tc-getCC)/g" default.defs
 }
 
 src_compile() {
-	filter-flags "-fstack-protector"
+	filter-flags -fstack-protector
 
 	# author has specified application to be compiled with `-g` 
 	# no problem, but with ccc `-g` disables optimisation to make
@@ -44,7 +46,8 @@ src_compile() {
 
 src_install() {
 	dodir /lib /usr/include/pwdb
-	make INCLUDED=${D}/usr/include/pwdb \
+	make \
+		INCLUDED=${D}/usr/include/pwdb \
 		LIBDIR=${D}/lib \
 		LDCONFIG="echo" \
 		install || die
