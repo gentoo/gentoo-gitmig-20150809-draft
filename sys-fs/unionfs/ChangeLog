@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.2 2005/02/05 14:06:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.3 2005/02/08 13:44:50 satya Exp $
+
+*unionfs-1.0.8-r1 (08 Feb 2005)
+
+  08 Feb 2005; Christian Andreetta <satya@gentoo.org>
+  +unionfs-1.0.8-r1.ebuild:
+  vserver patch: for 2.4 kernels only
 
 *unionfs-1.0.8 (05 Feb 2005)
 
