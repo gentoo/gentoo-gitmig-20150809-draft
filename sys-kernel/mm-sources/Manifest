@@ -1,5 +1,6 @@
 MD5 7bf0f98496d2cb1c89630facf1df4552 mm-sources-2.6.0_beta2-r4.ebuild 2072
 MD5 f31654d3bc2df53af3be7ef99c0351a0 mm-sources-2.6.0_beta1-r2.ebuild 1097
+MD5 4efff1d87bf01a7ea5317ff8acb427c5 mm-sources-2.6.0_beta3-r3.ebuild 2072
 MD5 f63b6c8d584f48104a9dd65731999806 mm-sources-2.6.0_beta2-r1.ebuild 1097
 MD5 3115a277370147aee35cc6fc0f03b612 mm-sources-2.6.0_beta2-r3.ebuild 2076
 MD5 a2fa04ef5dff12be2c541a8e407758a1 mm-sources-2.6.0_beta1-r1.ebuild 1253
@@ -18,3 +19,4 @@ MD5 23c5710e662207350e53acbea529e644 files/digest-mm-sources-2.6.0_beta2-r4 137
 MD5 d79ba384ab494caaa886bb7f0228f8b6 files/digest-mm-sources-2.6.0_beta2-r5 137
 MD5 7a30e716e2d27e98aaa68d5eee6c63b2 files/digest-mm-sources-2.6.0_beta3-r1 136
 MD5 c21a38ab9d0191bf6d8e29c62ed33a8f files/digest-mm-sources-2.6.0_beta3-r2 136
+MD5 9dd17030e60ec4e849afdb6d610e231d files/digest-mm-sources-2.6.0_beta3-r3 137
