@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.0.ebuild,v 1.3 2004/12/11 03:57:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.0.ebuild,v 1.4 2005/02/02 03:09:53 squinky86 Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="kde"
 
 DEPEND="virtual/libc
-	amd64? ( app-arch/unzip )"
+	app-arch/unzip"
 
 RDEPEND="${DEPEND}
 	kde? ( dev-java/systray4j )

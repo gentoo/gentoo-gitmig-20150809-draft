@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/azureus-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.25 2004/12/19 13:49:13 mholzer Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.26 2005/02/02 03:09:53 squinky86 Exp $
+
+  01 Feb 2005; Jon Hood <squinky86@gentoo.org> azureus-bin-2.1.0.4.ebuild,
+  azureus-bin-2.2.0.0-r1.ebuild, azureus-bin-2.2.0.0.ebuild,
+  azureus-bin-2.2.0.2.ebuild:
+  DEPEND on app-arch/unzip, #80000; thanks Michiel de Bruijne.
 
 *azureus-bin-2.2.0.2 (19 Dec 2004)
 
