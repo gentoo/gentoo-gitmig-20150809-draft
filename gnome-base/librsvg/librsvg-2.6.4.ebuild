@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.4.ebuild,v 1.10 2004/09/15 15:30:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.4.ebuild,v 1.11 2005/01/08 23:39:41 slarti Exp $
 
 inherit eutils gnome2
 

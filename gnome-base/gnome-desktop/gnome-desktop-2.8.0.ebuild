@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.8.0.ebuild,v 1.7 2004/12/11 10:53:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.8.0.ebuild,v 1.8 2005/01/08 23:25:07 slarti Exp $
 
 inherit gnome2 eutils
 

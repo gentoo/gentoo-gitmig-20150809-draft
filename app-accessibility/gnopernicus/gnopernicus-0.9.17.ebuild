@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.9.17.ebuild,v 1.6 2005/01/01 10:50:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.9.17.ebuild,v 1.7 2005/01/08 23:39:41 slarti Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.baum.ro/gnopernicus.html"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64 ~mips"
 IUSE="brltty doc ipv6 static"
 
 RDEPEND=">=gnome-base/gconf-1.1.5

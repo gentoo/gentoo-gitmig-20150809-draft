@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.0.ebuild,v 1.9 2004/12/11 10:28:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.0.ebuild,v 1.10 2005/01/08 23:19:34 slarti Exp $
 
 inherit gnome2 eutils
 

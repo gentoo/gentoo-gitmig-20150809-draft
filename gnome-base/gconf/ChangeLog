@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.99 2004/12/29 02:00:56 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.100 2005/01/08 23:26:55 slarti Exp $
+
+  08 Jan 2005; Tom Martin <slarti@gentoo.org> gconf-2.8.1-r1.ebuild:
+  Stable on amd64.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

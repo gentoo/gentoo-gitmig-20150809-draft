@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnome
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.69 2004/12/29 02:09:19 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.70 2005/01/08 23:38:54 slarti Exp $
+
+  08 Jan 2005; Tom Martin <slarti@gentoo.org> :
+  Stable on amd64.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

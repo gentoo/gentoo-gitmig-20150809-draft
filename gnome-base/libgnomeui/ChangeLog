@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomeui
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.66 2004/12/29 02:12:38 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.67 2005/01/08 23:14:46 slarti Exp $
+
+  08 Jan 2005; Tom Martin <slarti@gentoo.org> libgnomeui-2.8.0.ebuild:
+  Stable on amd64.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

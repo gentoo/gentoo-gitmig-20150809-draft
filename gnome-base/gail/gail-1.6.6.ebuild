@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/gail-1.6.6.ebuild,v 1.10 2004/11/17 18:04:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/gail-1.6.6.ebuild,v 1.11 2005/01/08 23:24:22 slarti Exp $
 
 inherit gnome2
 

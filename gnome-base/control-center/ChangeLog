@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/control-center
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.89 2004/12/29 01:58:29 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.90 2005/01/08 23:25:15 slarti Exp $
+
+  08 Jan 2005; Tom Martin <slarti@gentoo.org>
+  control-center-2.8.1-r1.ebuild:
+  Stable on amd64.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

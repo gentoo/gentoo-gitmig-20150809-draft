@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.8.2.ebuild,v 1.5 2004/12/24 00:28:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.8.2.ebuild,v 1.6 2005/01/08 23:18:46 slarti Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc alpha sparc hppa ~amd64 ~ia64 ~mips ~ppc64 ~arm"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 ~mips ~ppc64 ~arm"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
