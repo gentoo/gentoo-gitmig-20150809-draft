@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r13.ebuild,v 1.1 2005/01/09 16:21:03 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r14.ebuild,v 1.1 2005/03/26 18:41:50 plasmaroo Exp $
 
 OKV="2.4.20"
 OKB="2.4"
@@ -48,7 +48,11 @@ UNIPATCH_LIST="
 	${FILESDIR}/${PN}.CAN-2004-1016.patch
 	${FILESDIR}/${PN}.CAN-2004-1056.patch
 	${FILESDIR}/${PN}.brk-locked.patch
-	${FILESDIR}/${PN}.77094.patch"
+	${FILESDIR}/${PN}.77094.patch
+	${FILESDIR}/${PN}.77666.patch
+	${FILESDIR}/${PN}.78362.patch
+	${FILESDIR}/${PN}.78363.patch
+	${FILESDIR}/${PN}.81106.patch"
 
 #============================================================================
 # We'll override the src_unpack() function from the eclass. This is necessary

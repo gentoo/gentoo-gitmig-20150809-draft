@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.11-r16.ebuild,v 1.1 2005/01/09 16:21:03 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.11-r17.ebuild,v 1.1 2005/03/26 18:41:50 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -60,6 +60,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
 	epatch ${FILESDIR}/${PN}.brk-locked.patch || die "Failed to apply the do_brk() locking patch!"
 	epatch ${FILESDIR}/${PN}.77094.patch || die "Failed to apply bug #77094 patch!"
+	epatch ${FILESDIR}/${PN}.77666.patch || die "Failed to apply bug #77666 patch!"
+	epatch ${FILESDIR}/${PN}.78362.patch || die "Failed to apply bug #78362 patch!"
+	epatch ${FILESDIR}/${PN}.78363.patch || die "Failed to apply bug #78363 patch!"
+	epatch ${FILESDIR}/${PN}.81106.patch || die "Failed to apply bug #81106 patch!"
 
 	kernel_universal_unpack
 }
