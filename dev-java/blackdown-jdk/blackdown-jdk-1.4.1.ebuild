@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.9 2003/09/08 21:21:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.10 2003/10/03 10:57:22 pappy Exp $
 
 IUSE="doc"
 
@@ -17,6 +17,9 @@ else
 	SRC_URI="x86? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc2.95.bin )"
 fi
 SRC_URI="${SRC_URI} sparc? ( ${J_URI}/sparc/${JREV}/j2sdk-${PV}-${JREV}-linux-sparc-gcc3.2.bin )"
+
+# this is needed for proper operating under a PaX kernel without activated grsecurity acl
+CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
 HOMEPAGE="http://www.blackdown.org"
 
@@ -104,5 +107,24 @@ src_install () {
 pkg_postinst () {
 	# Set as default system VM if none exists
 	java_pkg_postinst
+
+	# if chpax is on the target system, set the appropriate PaX flags
+	# this will not hurt the binary, it modifies only unused ELF bits
+	# but may confuse things like AV scanners and automatic tripwire
+	if has_version "sys-apps/chpax"
+	then
+		einfo "setting up conservative PaX flags for jar and javac"
+
+		for paxkills in "jar" "javac"
+		do
+			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
+		done
+
+		einfo "you should have seen lots of chpax output above now"
+		ewarn "make sure the grsec ACL contains those entries also"
+		ewarn "because enabling it will override the chpax setting"
+		ewarn "on the physical files - help for PaX and grsecurity"
+		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
+	fi
 }
 
