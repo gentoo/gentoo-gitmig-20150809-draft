@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.1.0.ebuild,v 1.5 2004/07/30 20:31:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.1.0-r1.ebuild,v 1.1 2005/01/07 01:08:33 swegener Exp $
 
-inherit gnuconfig
+inherit eutils
 
 DESCRIPTION="an IRC proxy server"
 HOMEPAGE="http://dircproxy.securiweb.net/"
@@ -18,7 +18,8 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	gnuconfig_update
+
+	epatch ${FILESDIR}/${PV}-005-numeric.patch
 }
 
 src_install() {

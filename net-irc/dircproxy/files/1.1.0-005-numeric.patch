@@ -1,0 +1,22 @@
+--- src/irc_client.c    2002-08-17 23:05:55.000000000 +0200
++++ src/irc_client.c.005        2005-01-04 01:21:43.326252869 +0100
+@@ -1885,6 +1885,8 @@
+                            p->servername, p->serverver,
+                            p->serverumodes, p->servercmodes);
+
++  ircserver_send_command(p, "VERSION", "");
++
+   _ircclient_motd(p);
+
+   if (p->modes)
+--- src/irc_server.c    2002-08-17 23:48:03.000000000 +0200
++++ src/irc_server.c.005        2005-01-04 01:21:55.021318675 +0100
+@@ -547,8 +547,6 @@
+       }
+     }
+
+-  } else if (!irc_strcasecmp(msg.cmd, "005")) {
+-    /* Ignore 005 */
+   } else if (!irc_strcasecmp(msg.cmd, "375")) {
+     /* Ignore 375 unless allow_motd */
+     if (p->allow_motd)

@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/dircproxy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.11 2004/07/01 22:21:03 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.12 2005/01/07 01:08:33 swegener Exp $
+
+*dircproxy-1.1.0-r1 (07 Jan 2005)
+
+  07 Jan 2005; Sven Wegener <swegener@gentoo.org>
+  +files/1.1.0-005-numeric.patch, +dircproxy-1.1.0-r1.ebuild,
+  -dircproxy-1.1.0.ebuild:
+  Revision bump to include patch by Adrian <adrian@planetcoding.net> from bug
+  #76781. It patches dircproxy to not ignore the 005 numeric. Old behaviour
+  breaks some scripts.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   dircproxy-1.0.5.ebuild, dircproxy-1.1.0.ebuild:
