@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.168 2004/08/21 18:48:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.169 2004/08/21 20:08:32 usata Exp $
+
+  22 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.2.ebuild,
+  +files/qt-3.3.2-immodule-20040819.patch,
+  -files/qt-3.3.3-complemental-patch-for-immodule-20040814.diff:
+  Updated immodule for Qt patch (same as the last commit).
 
   22 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.3.ebuild:
   Updated immodule for Qt patch (fixes plugins/input path).

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.16 2004/08/20 16:14:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.17 2004/08/21 20:08:32 usata Exp $
 
 inherit eutils
 
@@ -9,14 +9,20 @@ DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 
 IMMQT_P="qt-x11-immodule-unified-qt3.3.2-20040814"
+IMMQT_P2="qt-3.3.3-immodule-20040814-20040819"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
-	immqt-bc? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz )"
+	immqt? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz
+		mirror://gentoo/${IMMQT_P2}.diff.gz
+		http://dev.gentoo.org/~usata/distfiles/${IMMQT_P2}.diff.gz )
+	immqt-bc? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz
+		mirror://gentoo/${IMMQT_P2}.diff.gz
+		http://dev.gentoo.org/~usata/distfiles/${IMMQT_P2}.diff.gz )"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
 KEYWORDS="x86 alpha ppc amd64 sparc hppa ~mips ppc64"
-IUSE="cups debug doc firebird gif icc ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt-bc"
+IUSE="cups debug doc firebird gif icc ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt immqt-bc"
 
 DEPEND="virtual/x11 virtual/xft
 	media-libs/libpng media-libs/jpeg media-libs/libmng
@@ -33,13 +39,26 @@ DEPEND="virtual/x11 virtual/xft
 	zlib? ( sys-libs/zlib )
 	icc? ( dev-lang/icc )"
 
-RDEPEND="${DEPEND}"
+# old immodules may cause segfaults on some qt applications,
+# especially qtconfig
+PDEPEND="!<app-i18n/scim-qtimm-0.6_pre20040813
+	!<app-i18n/uim-qt-0.1.6_p20040815"
 
 S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
 QTBASE=/usr/qt/3
 export QTDIR=${S}
 export PLATFORM=linux-g++
+
+pkg_setup() {
+	if use immqt ; then
+		ewarn
+		ewarn "You are going to compile binary imcompatible immodule for Qt. This means"
+		ewarn "you have to recompile everything depending on Qt after you install it."
+		ewarn "Be aware."
+		ewarn
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -52,8 +71,13 @@ src_unpack() {
 
 	epatch ${FILESDIR}/qt-no-rpath-uic.patch
 
-	if use immqt-bc ; then
-		epatch ../${IMMQT_P}.diff
+	if use immqt || use immqt-bc ; then
+		pushd ..
+		epatch ${IMMQT_P2}.diff
+		popd
+		einfo "Applying ${IMMQT_P}.... Please ignore an error on qapplication_x11.cpp."
+		patch -p0 -g0 -s < ../${IMMQT_P}.diff
+		patch -p0 -g0 -s < ${FILESDIR}/qt-3.3.2-immodule-20040819.patch
 		sh make-symlinks.sh || die "make symlinks failed"
 	fi
 
@@ -88,6 +112,7 @@ src_compile() {
 	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
 	use ipv6        && myconf="${myconf} -ipv6" || myconf="${myconf} -no-ipv6"
 	use immqt-bc	&& myconf="${myconf} -im"
+	use immqt	&& myconf="${myconf} -im -im-ext"
 
 	export YACC='byacc -d'
 

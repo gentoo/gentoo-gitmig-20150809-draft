@@ -1,0 +1,40 @@
+Index: src/kernel/qapplication_x11.cpp
+===================================================================
+--- src/kernel/qapplication_x11.cpp	(.../vendor/qt-x11-free)	(revision 92)
++++ src/kernel/qapplication_x11.cpp	(.../immodule-qt-x11/trunk)	(revision 92)
+@@ -1026,13 +1057,31 @@
+ 	settings.readEntry( "/qt/XIMInputStyle",
+ 			    QObject::trUtf8( "On The Spot" ) ).lower();
+     if ( ximInputStyle == "on the spot" )
+-	xim_preferred_style = XIMPreeditCallbacks | XIMStatusNothing;
++	qt_xim_preferred_style = XIMPreeditCallbacks | XIMStatusNothing;
+     else if ( ximInputStyle == "over the spot" )
+-	xim_preferred_style = XIMPreeditPosition | XIMStatusNothing;
++	qt_xim_preferred_style = XIMPreeditPosition | XIMStatusNothing;
+     else if ( ximInputStyle == "off the spot" )
+-	xim_preferred_style = XIMPreeditArea | XIMStatusArea;
++	qt_xim_preferred_style = XIMPreeditArea | XIMStatusArea;
+     else if ( ximInputStyle == "root" )
+-	xim_preferred_style = XIMPreeditNothing | XIMStatusNothing;
++	qt_xim_preferred_style = XIMPreeditNothing | XIMStatusNothing;
++
++    /*
++	The identifier name of an input method is acquired from the
++	configuration file as a default. If a environment variable
++	"QT_IM_SWITCHER" is not empty it will overwrite the
++	configuration file. The "imsw-multi" becomes the default if the entry
++	is not configured.
++     */
++    if ( getenv( "QT_IM_SWITCHER" ) )
++        defaultIM = getenv( "QT_IM_SWITCHER" );
++    else
++        defaultIM = settings.readEntry( "/qt/DefaultInputMethodSwitcher", "imsw-multi" );
++
++    // defaultIM is restricted to be an IM-switcher. An IM-switcher
++    // has a 'imsw-' prefix
++    if ( defaultIM.find( "imsw-" ) != 0 ) {
++	defaultIM = "imsw-multi";
++    }
+ #endif
+ 
+     if (update_timestamp) {
