@@ -1,8 +1,11 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.4 2003/12/08 16:14:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.5 2003/12/31 17:13:21 vapier Exp $
 
 *gcompris-4.2 (08 Dec 2003)
+
+  31 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Remove all the games.eclass stuff ... this is too gnome-ified atm.
 
   08 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump.

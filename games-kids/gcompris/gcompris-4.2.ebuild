@@ -36,13 +36,14 @@ src_compile() {
 	local myconf=""
 	use oggvorbis && myconf="${myconf} --with-ogg=/usr --with-vorbis=/usr --with-ao=/usr"
 	use python && myconf="${myconf} --with-python=`which python`"
-	egamesconf ${myconf} || die
-	for f in `grep -Rl /usr/games/share *` ; do
-		sed -i \
-			-e "s:${GAMES_PREFIX}/share/gnome:/usr/share/gnome:g" \
-			-e "s:${GAMES_PREFIX}/share:${GAMES_DATADIR}:g" \
-			${f} || die "sed ${f} failed"
-	done
+#	egamesconf ${myconf} || die
+#	for f in `grep -Rl /usr/games/share *` ; do
+#		sed -i \
+#			-e "s:${GAMES_PREFIX}/share/gnome:/usr/share/gnome:g" \
+#			-e "s:${GAMES_PREFIX}/share:${GAMES_DATADIR}:g" \
+#			${f} || die "sed ${f} failed"
+#	done
+	econf ${myconf} || die
 
 	emake || die "emake failed"
 }
@@ -50,12 +51,12 @@ src_compile() {
 src_install() {
 	make install DESTDIR=${D} || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
-	mv ${D}/${GAMES_DATADIR}/{locale,gnome,pixmaps} ${D}/usr/share/
-	rm -rf ${D}/${GAMES_LIBDIR}/menu
-	if [ ! `use nls` ] ; then
-		rm -rf ${D}/usr/share/locale
-		cd ${D}/${GAMES_DATADIR}/gcompris/boards/sounds
-		rm -rf `find -type d -maxdepth 1 -mindepth 1 ! -name en`
-	fi
-	prepgamesdirs
+#	mv ${D}/${GAMES_DATADIR}/{locale,gnome,pixmaps} ${D}/usr/share/
+#	rm -rf ${D}/${GAMES_LIBDIR}/menu
+#	if [ ! `use nls` ] ; then
+#		rm -rf ${D}/usr/share/locale
+#		cd ${D}/${GAMES_DATADIR}/gcompris/boards/sounds
+#		rm -rf `find -type d -maxdepth 1 -mindepth 1 ! -name en`
+#	fi
+#	prepgamesdirs
 }
