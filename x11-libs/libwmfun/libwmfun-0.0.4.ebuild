@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwmfun/libwmfun-0.0.4.ebuild,v 1.4 2003/02/13 16:58:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwmfun/libwmfun-0.0.4.ebuild,v 1.5 2003/06/04 13:43:13 joker Exp $
 
 DESCRIPTION="Additional FUN! WindowMaker library"
 HOMEPAGE="http://www.windowmaker.org"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc
-	x11-wm/WindowMaker
+	x11-wm/windowmaker
 	>=media-libs/freetype-2.0.9"
 
 S=${WORKDIR}/${P}
