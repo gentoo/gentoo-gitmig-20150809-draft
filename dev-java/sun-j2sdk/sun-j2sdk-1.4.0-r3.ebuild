@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r3.ebuild,v 1.1 2002/11/21 19:45:44 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r3.ebuild,v 1.2 2002/12/09 04:20:57 manson Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -33,7 +33,7 @@ DESCRIPTION="Sun's J2SE Development Kit, version 1.4.0"
 HOMEPAGE="http://wwws.sun.com/software/java2/download.html"
 
 SLOT="0"
-KEYWORDS="x86 -ppc -alpha -sparc -sparc64"
+KEYWORDS="x86 -ppc -alpha -sparc "
 LICENSE="sun-csl"
 
 RDEPEND="virtual/glibc

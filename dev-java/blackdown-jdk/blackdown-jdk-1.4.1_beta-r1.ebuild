@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1_beta-r1.ebuild,v 1.1 2002/11/21 20:25:19 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1_beta-r1.ebuild,v 1.2 2002/12/09 04:20:57 manson Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java nsplugins
@@ -19,7 +19,7 @@ PROVIDE="virtual/jdk-1.4.1
 	virtual/java-scheme-2"
 SLOT="1.4.1"
 LICENSE="sun-bcla"
-KEYWORDS="~x86 -ppc -sparc -sparc64"
+KEYWORDS="~x86 -ppc -sparc "
 IUSE="doc"
 
 src_unpack () {

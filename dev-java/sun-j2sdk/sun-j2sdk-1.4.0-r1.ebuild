@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.9 2002/11/12 12:42:38 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.10 2002/12/09 04:20:57 manson Exp $
 
 # Based on http://tushar.lfsforum.org/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
@@ -31,7 +31,7 @@ DESCRIPTION="Sun's J2SE Development Kit, version 1.4.0"
 HOMEPAGE="http://java.sun.com/j2se/1.4/download.html"
 
 SLOT="0"
-KEYWORDS="x86 -ppc -alpha -sparc -sparc64"
+KEYWORDS="x86 -ppc -alpha -sparc "
 LICENSE="sun-csl"
 
 RDEPEND="virtual/glibc

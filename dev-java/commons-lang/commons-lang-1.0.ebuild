@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-1.0.ebuild,v 1.2 2002/11/08 01:16:16 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-1.0.ebuild,v 1.3 2002/12/09 04:20:57 manson Exp $
 
 S="${WORKDIR}/${PN}-${PV}-src"
 DESCRIPTION="Jakarta components to manipulate core java classes"
@@ -12,7 +12,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
 IUSE="jikes junit"
 
 src_compile() {
