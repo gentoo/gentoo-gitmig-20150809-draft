@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <solar@gentoo.org> (6 Nov 2003)
+# dsniff has a dep of libnids-1.16 which no longer flys. my vote is for
+# removal of dsniff from portage till an upstream update happens.
+net-analyzer/dsniff
+
 # <solar@gentoo.org> (5 Nov 2003)
 # secuirty update #32724
 <net-libs/libnids-1.18
