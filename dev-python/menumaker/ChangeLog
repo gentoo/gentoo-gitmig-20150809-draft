@@ -1,0 +1,7 @@
+# ChangeLog for dev-python/menumaker
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/menumaker/ChangeLog,v 1.1 2003/07/30 00:09:12 g2boojum Exp $
+
+  29 Jul 2003; Grant Goodyear <g2boojum@gentoo.org> :
+  New package.
+
