@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.19-r1.ebuild,v 1.3 2004/11/01 20:39:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.19-r1.ebuild,v 1.4 2004/11/16 18:40:20 hansmi Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://kitenet.net/programs/wmbattery"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 -sparc"
+KEYWORDS="x86 amd64 -sparc ~ppc"
 
 DEPEND="virtual/x11
 	sys-apps/apmd"
