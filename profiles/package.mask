@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# brad@gentoo.org 29 Jul 2003
+# Build testing
+=net-www/mozilla-firebird-0.6.1
+
 # <azarah@gentoo.org> (28 July 2003)
 # These are depriciated
 sys-apps/console-tools
@@ -672,3 +676,4 @@ x11-libs/gdkxft
 # jnelson@gentoo.org 24 Sep 2002
 # mask todo-manager because it's really busted
 app-misc/todo-manager-bronze
+
