@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r3.ebuild,v 1.1 2003/09/22 11:57:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r3.ebuild,v 1.2 2003/10/27 10:00:38 phosphan Exp $
 
 MY_P="SNNSv${PV}"
 DESCRIPTION="Stuttgart Neural Network Simulator"
@@ -9,7 +9,7 @@ SRC_URI="http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/${MY_P}.tar.gz
 	doc? ( http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/${MY_P}.Manual.pdf )"
 
 LICENSE="SNNS-${PV}"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE="X doc"
 
