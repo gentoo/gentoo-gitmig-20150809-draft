@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.3.ebuild,v 1.3 2004/01/13 05:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.3.ebuild,v 1.4 2004/04/01 16:45:28 jhuebel Exp $
+
+inherit gnuconfig
 
 MY_P="${PN}${PV//.}"
 DESCRIPTION="Mother Board Monitor Program for X Window System"
@@ -18,10 +20,12 @@ DEPEND="virtual/glibc
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
+	gnuconfig_update
+
 	econf || die "Configure failed"
-	emake CFLAGS="$CFLAGS \$(INCLUDES) \$(DEFS)" mbmon || die "Make mbmon failed"
+	emake DEFS="$DEFS -DLINUX" CFLAGS="$CFLAGS \$(INCLUDES) \$(DEFS)" mbmon || die "Make mbmon failed"
 	if [ `use X` ] ; then
-		emake CFLAGSX="$CFLAGS \$(INCLUDES) \$(DEFS)" xmbmon || die "Make xmbmon failed"
+		emake DEFS="$DEFS -DLINUX" CFLAGSX="$CFLAGS \$(INCLUDES) \$(DEFS)" xmbmon || die "Make xmbmon failed"
 	fi
 }
 
