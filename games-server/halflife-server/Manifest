@@ -4,9 +4,9 @@ MD5 8c8528384271d7595adc08e59e9d9cc1 ChangeLog 1372
 MD5 0f7e8ba1362dcc736a0128544a4421fa halflife-server-3.1.1.1e.ebuild 2735
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 44f3ab1b21f0c77083d95b7797622c4d files/hlds 45
-MD5 d663a8b106e13776bfb612c5c94210a4 files/hlds.conf.d 411
+MD5 91d0a041d8ff8c57d39b692d7af45935 files/hlds.conf.d 405
 MD5 5b849a039a512e868b4a7b494225324c files/3.1.1.0-hlds_run-boffix.patch 362
-MD5 fc6abe65c6efa6db2343dcb4e361099a files/hlds.rc 747
+MD5 d946f1defb7ea2fce873155f83933fc2 files/hlds.rc 741
 MD5 0084423084f2d147fe7ce67a8c7913ac files/digest-halflife-server-3.1.1.1e 140
 MD5 c9e8e6c4eb131ff5bde143fc43ab86f5 files/digest-halflife-server-3.1.1.0 127
 MD5 33aa6e9a8329c0496b14c7fe325bd710 files/digest-halflife-server-3.1.1.1 68

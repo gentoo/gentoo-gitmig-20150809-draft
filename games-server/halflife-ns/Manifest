@@ -4,10 +4,10 @@ MD5 7dbc5cd02264221acd5b588a65c72047 halflife-ns-1.04.ebuild 2030
 MD5 e0719f8700b0da47d716758e57ed37ec halflife-ns-2.0.ebuild 2187
 MD5 0974d0a3ee4b251afc5a3fcebe41ee63 ChangeLog 718
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ee8a6fecbb41b271ffa7de2955f224c5 files/hlds-ns.rc 764
+MD5 2fef95156cd220aa430b93dba760d72c files/hlds-ns.rc 758
 MD5 c66877a7e84218012527f6f8ce3af59c files/hlds-ns 56
 MD5 8b1a469757092d885d57bcae90524bac files/digest-halflife-ns-3.0_beta3 160
 MD5 a15626d4baff256269cd997f5dc600b6 files/digest-halflife-ns-1.04 139
 MD5 630d1e830ed6a879521d80e017852898 files/digest-halflife-ns-2.01 130
 MD5 75b63cf2942acc8e30a8d81ad7b6067a files/digest-halflife-ns-2.0 73
-MD5 0e2af26ce16d61234018dd5349871e4a files/hlds-ns.conf.d 389
+MD5 0a4d7d8c2fb8626d4da997c701c88f0f files/hlds-ns.conf.d 383

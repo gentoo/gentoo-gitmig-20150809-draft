@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 40051382ce84b2bfbcabe9e5340a4eb6 WarpPipe-0.3.5.ebuild 614
+MD5 a5a646e855bcda7988584ae799276215 ChangeLog 343
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 0c2beb8b8eedeb058c7c3f49471f7cc2 ChangeLog 349
+MD5 40051382ce84b2bfbcabe9e5340a4eb6 WarpPipe-0.3.5.ebuild 614
 MD5 6be3d7ffc81bf75895e545ef308533a7 files/digest-WarpPipe-0.3.5 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA8heRHTu7gpaalycRAp/AAJ0Zgv+WkyIQWAwpdnnuWNjyNHdWbACffJgo
-zWssznSrBFyvJlUwNNYIOMc=
-=d5pY
------END PGP SIGNATURE-----
