@@ -10,11 +10,11 @@ MD5 0525a754475de417bde039d1d5ea1b02 files/digest-fence-1.1 60
 MD5 ee20a5bcde14f8c6c135faed5114967c files/digest-fence-1.5 60
 MD5 f01eba53626c01082acd57e7a8caa414 files/digest-fence-1.25 61
 MD5 b9a391863cee53deccffa52e767bd506 files/fenced.rc 509
-MD5 f279c8f64cb9efe161f4b3d9742daa2d files/fenced.conf 15
+MD5 847b16e549d8f4bf1f496454d7d653ad files/fenced.conf 263
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCQCEXgMUyd/cdjWsRAgV4AJ4ssitKUoM+8QH21jD9vDYRujAt7ACfSZxH
-ajjq1scuT7M0BZMxNUTktBQ=
-=E58r
+iD8DBQFCQCGbgMUyd/cdjWsRArC6AJ9WRTvhEW08JDtDp/Po0t4OxOotoQCeO2Wt
+CZx/NaiLCKLznc6H2ZTApd4=
+=hh0D
 -----END PGP SIGNATURE-----
