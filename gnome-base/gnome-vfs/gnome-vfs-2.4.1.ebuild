@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.1.ebuild,v 1.1 2003/10/14 04:02:58 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.1.ebuild,v 1.2 2003/12/07 23:35:54 foser Exp $
 
 inherit gnome2 eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/libxml2-2.2.8
 	>=gnome-base/gnome-mime-data-2
 
-	app-admin/fam-oss
+	app-admin/fam
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 
 DEPEND="${RDEPEND}
