@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.6.ebuild,v 1.1 2004/04/03 21:49:24 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.6.ebuild,v 1.2 2004/04/18 01:54:42 randy Exp $
 
 DESCRIPTION="Small forwarding DNS server for local networks"
 HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/"
@@ -12,7 +12,7 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.gz"
 SLOT="0"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~ia64 ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~ia64 ~amd64 ~mips s390"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
