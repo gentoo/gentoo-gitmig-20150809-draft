@@ -1,5 +1,5 @@
-MD5 a971f25273eeca4b1abb89268fede6ea ChangeLog 390
-MD5 f93363aebac76ef7e984816b51ed309d sml-mode-3.9.5.ebuild 964
+MD5 1c21857a1550ee40aa64880b1c8435d6 sml-mode-3.9.5.ebuild 942
+MD5 04a03797d0c9802ab0f37484f7cc52e1 ChangeLog 389
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 44144fe26337a173aac5ad08c0b67808 files/50sml-mode-gentoo.el 39
 MD5 e8471d35a605788298c9a77c5171aafc files/digest-sml-mode-3.9.5 65

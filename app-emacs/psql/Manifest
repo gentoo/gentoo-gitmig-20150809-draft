@@ -1,5 +1,5 @@
-MD5 78b6c3ec8ba930efe7fdba42808e701c ChangeLog 391
-MD5 6f377fe44ff1bd38a5b8cd6432518bed psql-1.10.ebuild 862
+MD5 86b292eb4e28c216d1f21eabaa7f9583 psql-1.10.ebuild 838
+MD5 180682722cb55843db7156cbeee81a00 ChangeLog 390
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 81139699223e814a9cfc44694145fb61 files/50psql-gentoo.el 281
 MD5 6ee82110ea8413c6d9c7e6de741a8cf3 files/digest-psql-1.10 60
