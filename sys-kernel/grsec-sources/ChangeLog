@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.39 2004/12/15 06:59:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.40 2004/12/25 13:15:40 plasmaroo Exp $
+
+*grsec-sources-2.4.28.2.0.2-r3 (25 Dec 2004)
+
+  25 Dec 2004; <plasmaroo@gentoo.org> +grsec-sources-2.4.28.2.0.2-r3.ebuild,
+  +files/CAN-2004-1056.patch, +files/CAN-2004-1074.patch:
+  Security bump for bugs #72452 and #74464; please thank tocharian for the
+  ebuild.
 
 *grsec-sources-2.4.28.2.0.2-r2 (15 Dec 2004)
 

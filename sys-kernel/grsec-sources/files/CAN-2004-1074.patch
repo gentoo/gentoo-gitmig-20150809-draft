@@ -1,0 +1,352 @@
+diff -Nru linux-2.4.28/arch/ia64/ia32/binfmt_elf32.c linux-2.4.28-hardened/arch/ia64/ia32/binfmt_elf32.c
+--- linux-2.4.28/arch/ia64/ia32/binfmt_elf32.c	2004-12-21 20:59:35.000000000 -0500
++++ linux-2.4.28-hardened/arch/ia64/ia32/binfmt_elf32.c	2004-12-21 21:07:11.095515536 -0500
+@@ -105,7 +105,11 @@
+ 		vma->vm_private_data = NULL;
+ 		down_write(&current->mm->mmap_sem);
+ 		{
+-			insert_vm_struct(current->mm, vma);
++			if (insert_vm_struct(current->mm, vma)) {
++				kmem_cache_free(vm_area_cachep, vma);
++				up_write(&current->mm->mmap_sem);
++				return;
++			}
+ 		}
+ 		up_write(&current->mm->mmap_sem);
+ 	}
+@@ -127,7 +131,11 @@
+ 		vma->vm_private_data = NULL;
+ 		down_write(&current->mm->mmap_sem);
+ 		{
+-			insert_vm_struct(current->mm, vma);
++			if (insert_vm_struct(current->mm, vma)) {
++				kmem_cache_free(vm_area_cachep, vma);
++				up_write(&current->mm->mmap_sem);
++				return;
++			}
+ 		}
+ 		up_write(&current->mm->mmap_sem);
+ 	}
+@@ -174,7 +182,7 @@
+ {
+ 	unsigned long stack_base;
+ 	struct vm_area_struct *mpnt;
+-	int i;
++	int i, ret;
+ 
+ 	stack_base = IA32_STACK_TOP - MAX_ARG_PAGES*PAGE_SIZE;
+ 
+@@ -205,7 +213,11 @@
+ 		mpnt->vm_pgoff = 0;
+ 		mpnt->vm_file = NULL;
+ 		mpnt->vm_private_data = 0;
+-		insert_vm_struct(current->mm, mpnt);
++		if ((ret = insert_vm_struct(current->mm, mpnt))) {
++			up_write(&current->mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return ret;
++		}
+ 		current->mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 	}
+ 
+diff -Nru linux-2.4.28/arch/ia64/kernel/perfmon.c linux-2.4.28-hardened/arch/ia64/kernel/perfmon.c
+--- linux-2.4.28/arch/ia64/kernel/perfmon.c	2004-12-21 20:47:22.000000000 -0500
++++ linux-2.4.28-hardened/arch/ia64/kernel/perfmon.c	2004-12-21 21:07:11.102514472 -0500
+@@ -967,7 +967,8 @@
+ 	 * now insert the vma in the vm list for the process, must be
+ 	 * done with mmap lock held
+ 	 */
+-	insert_vm_struct(mm, vma);
++	if(insert_vm_struct(mm, vma)) /* Handle -ENOMEM et al. */
++		goto error;
+ 
+ 	mm->total_vm  += size >> PAGE_SHIFT;
+ 
+diff -Nru linux-2.4.28/arch/ia64/mm/init.c linux-2.4.28-hardened/arch/ia64/mm/init.c
+--- linux-2.4.28/arch/ia64/mm/init.c	2004-12-21 20:59:35.000000000 -0500
++++ linux-2.4.28-hardened/arch/ia64/mm/init.c	2004-12-21 21:07:11.104514168 -0500
+@@ -105,7 +105,13 @@
+ 		vma->vm_pgoff = 0;
+ 		vma->vm_file = NULL;
+ 		vma->vm_private_data = NULL;
+-		insert_vm_struct(current->mm, vma);
++		down_write(&current->mm->mmap_sem);
++		if (insert_vm_struct(current->mm, vma)) {
++			up_write(&current->mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, vma);
++			return;
++		}
++		up_write(&current->mm->mmap_sem);
+ 	}
+ 
+ 	/* map NaT-page at address zero to speed up speculative dereferencing of NULL: */
+@@ -117,7 +123,13 @@
+ 			vma->vm_end = PAGE_SIZE;
+ 			vma->vm_page_prot = __pgprot(pgprot_val(PAGE_READONLY) | _PAGE_MA_NAT);
+ 			vma->vm_flags = VM_READ | VM_MAYREAD | VM_IO | VM_RESERVED;
+-			insert_vm_struct(current->mm, vma);
++			down_write(&current->mm->mmap_sem);
++			if (insert_vm_struct(current->mm, vma)) {
++				up_write(&current->mm->mmap_sem);
++				kmem_cache_free(vm_area_cachep, vma);
++				return;
++			}
++			up_write(&current->mm->mmap_sem);
+ 		}
+ 	}
+ }
+diff -Nru linux-2.4.28/arch/ppc/mm/fault.c linux-2.4.28-hardened/arch/ppc/mm/fault.c
+--- linux-2.4.28/arch/ppc/mm/fault.c	2004-12-21 20:57:02.000000000 -0500
++++ linux-2.4.28-hardened/arch/ppc/mm/fault.c	2004-12-21 21:07:11.107513712 -0500
+@@ -83,8 +83,10 @@
+ 	nopage:		pax_syscall_nopage,
+ };
+ 
+-static void pax_insert_vma(struct vm_area_struct *vma, unsigned long addr)
++static int pax_insert_vma(struct vm_area_struct *vma, unsigned long addr)
+ {
++	int ret;
++
+ 	vma->vm_mm = current->mm;
+ 	vma->vm_start = addr;
+ 	vma->vm_end = addr + PAGE_SIZE;
+@@ -94,8 +96,15 @@
+ 	vma->vm_pgoff = 0UL;
+ 	vma->vm_file = NULL;
+ 	vma->vm_private_data = NULL;
+-	insert_vm_struct(current->mm, vma);
++	ret = insert_vm_struct(current->mm, vma);
++	if(ret != 0)
++	{
++		up_write(&current->mm->mmap_sem);
++		kmem_cache_free(vm_area_cachep, vma);
++		return ret;
++	}
+ 	++current->mm->total_vm;
++	return 0;
+ }
+ #endif
+ 
+@@ -333,7 +342,8 @@
+ 				return 1;
+ 			}
+ 
+-			pax_insert_vma(vma, call_syscall);
++			if(pax_insert_vma(vma, call_syscall))
++				return 1; /* VMA overlapping attempt; bye bye! */
+ 			current->mm->call_syscall = call_syscall;
+ 			up_write(&current->mm->mmap_sem);
+ 
+@@ -377,7 +387,8 @@
+ 				return 1;
+ 			}
+ 
+-			pax_insert_vma(vma, call_syscall);
++			if(pax_insert_vma(vma, call_syscall))
++				return 1; /* VMA overlapping attempt; bye bye! */
+ 			current->mm->call_syscall = call_syscall;
+ 			up_write(&current->mm->mmap_sem);
+ 
+diff -Nru linux-2.4.28/arch/s390x/kernel/exec32.c linux-2.4.28-hardened/arch/s390x/kernel/exec32.c
+--- linux-2.4.28/arch/s390x/kernel/exec32.c	2004-12-21 20:59:35.000000000 -0500
++++ linux-2.4.28-hardened/arch/s390x/kernel/exec32.c	2004-12-21 21:07:11.109513408 -0500
+@@ -41,7 +41,7 @@
+ {
+ 	unsigned long stack_base;
+ 	struct vm_area_struct *mpnt;
+-	int i;
++	int i, ret;
+ 
+ 	stack_base = STACK_TOP - MAX_ARG_PAGES*PAGE_SIZE;
+ 
+@@ -65,7 +65,11 @@
+ 		mpnt->vm_pgoff = 0;
+ 		mpnt->vm_file = NULL;
+ 		mpnt->vm_private_data = (void *) 0;
+-		insert_vm_struct(current->mm, mpnt);
++		if ((ret = insert_vm_struct(current->mm, mpnt))) {
++			up_write(&current->mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return ret;
++		}
+ 		current->mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 	} 
+ 
+diff -Nru linux-2.4.28/arch/sparc/mm/fault.c linux-2.4.28-hardened/arch/sparc/mm/fault.c
+--- linux-2.4.28/arch/sparc/mm/fault.c	2004-12-21 20:57:02.000000000 -0500
++++ linux-2.4.28-hardened/arch/sparc/mm/fault.c	2004-12-21 21:07:11.111513104 -0500
+@@ -250,8 +250,10 @@
+ 	nopage:		pax_emuplt_nopage,
+ };
+ 
+-static void pax_insert_vma(struct vm_area_struct *vma, unsigned long addr)
++static int pax_insert_vma(struct vm_area_struct *vma, unsigned long addr)
+ {
++	int ret;
++
+ 	vma->vm_mm = current->mm;
+ 	vma->vm_start = addr;
+ 	vma->vm_end = addr + PAGE_SIZE;
+@@ -261,8 +263,15 @@
+ 	vma->vm_pgoff = 0UL;
+ 	vma->vm_file = NULL;
+ 	vma->vm_private_data = NULL;
+-	insert_vm_struct(current->mm, vma);
++	ret = insert_vm_struct(current->mm, vma);
++	if(ret != 0)
++	{
++		up_write(&current->mm->mmap_sem);
++		kmem_cache_free(vm_area_cachep, vma);
++		return ret;
++	}
+ 	++current->mm->total_vm;
++	return 0;
+ }
+ 
+ /*
+@@ -423,7 +432,8 @@
+ 					return 1;
+ 				}
+ 
+-				pax_insert_vma(vma, call_dl_resolve);
++				if(pax_insert_vma(vma, call_dl_resolve))
++					return 1; /* VMA overlapping attempt; bye bye! */
+ 				current->mm->call_dl_resolve = call_dl_resolve;
+ 				up_write(&current->mm->mmap_sem);
+ 
+diff -Nru linux-2.4.28/arch/sparc64/mm/fault.c linux-2.4.28-hardened/arch/sparc64/mm/fault.c
+--- linux-2.4.28/arch/sparc64/mm/fault.c	2004-12-21 20:57:02.000000000 -0500
++++ linux-2.4.28-hardened/arch/sparc64/mm/fault.c	2004-12-21 21:07:11.117512192 -0500
+@@ -338,8 +338,10 @@
+ 	nopage:		pax_emuplt_nopage,
+ };
+ 
+-static void pax_insert_vma(struct vm_area_struct *vma, unsigned long addr)
++static int pax_insert_vma(struct vm_area_struct *vma, unsigned long addr)
+ {
++	int ret;
++
+ 	vma->vm_mm = current->mm;
+ 	vma->vm_start = addr;
+ 	vma->vm_end = addr + PAGE_SIZE;
+@@ -349,8 +351,15 @@
+ 	vma->vm_pgoff = 0UL;
+ 	vma->vm_file = NULL;
+ 	vma->vm_private_data = NULL;
+-	insert_vm_struct(current->mm, vma);
++	ret = insert_vm_struct(current->mm, vma);
++	if(ret != 0)
++	{
++		up_write(&current->mm->mmap_sem);
++		kmem_cache_free(vm_area_cachep, vma);
++		return ret;
++	}
+ 	++current->mm->total_vm;
++	return 0;
+ }
+ #endif
+ 
+@@ -633,7 +642,8 @@
+ 					return 1;
+ 				}
+ 
+-				pax_insert_vma(vma, call_dl_resolve);
++				if(pax_insert_vma(vma, call_dl_resolve))
++					return 1; /* VMA overlapping attempt; bye bye! */
+ 				current->mm->call_dl_resolve = call_dl_resolve;
+ 				up_write(&current->mm->mmap_sem);
+ 
+diff -Nru linux-2.4.28/arch/x86_64/ia32/ia32_binfmt.c linux-2.4.28-hardened/arch/x86_64/ia32/ia32_binfmt.c
+--- linux-2.4.28/arch/x86_64/ia32/ia32_binfmt.c	2004-12-21 20:59:35.000000000 -0500
++++ linux-2.4.28-hardened/arch/x86_64/ia32/ia32_binfmt.c	2004-12-21 21:07:11.122511432 -0500
+@@ -243,7 +243,7 @@
+ {
+ 	unsigned long stack_base;
+ 	struct vm_area_struct *mpnt;
+-	int i;
++	int i, ret;
+ 
+ 	stack_base = IA32_STACK_TOP - MAX_ARG_PAGES*PAGE_SIZE;
+ 
+@@ -274,7 +274,11 @@
+ 		mpnt->vm_pgoff = 0;
+ 		mpnt->vm_file = NULL;
+ 		mpnt->vm_private_data = (void *) 0;
+-		insert_vm_struct(current->mm, mpnt);
++		if ((ret = insert_vm_struct(current->mm, mpnt))) {
++			up_write(&current->mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return ret;
++		}
+ 		current->mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 	} 
+ 
+diff -Nru linux-2.4.28/include/linux/mm.h linux-2.4.28-hardened/include/linux/mm.h
+--- linux-2.4.28/include/linux/mm.h	2004-12-21 20:59:35.000000000 -0500
++++ linux-2.4.28-hardened/include/linux/mm.h	2004-12-21 21:07:11.000000000 -0500
+@@ -568,7 +568,7 @@
+ /* mmap.c */
+ extern void lock_vma_mappings(struct vm_area_struct *);
+ extern void unlock_vma_mappings(struct vm_area_struct *);
+-extern void insert_vm_struct(struct mm_struct *, struct vm_area_struct *);
++extern int insert_vm_struct(struct mm_struct *, struct vm_area_struct *);
+ extern void __insert_vm_struct(struct mm_struct *, struct vm_area_struct *);
+ extern void build_mmap_rb(struct mm_struct *);
+ extern void exit_mmap(struct mm_struct *);
+diff -Nru linux-2.4.28/mm/mmap.c linux-2.4.28-hardened/mm/mmap.c
+--- linux-2.4.28/mm/mmap.c	2004-12-21 20:59:35.000000000 -0500
++++ linux-2.4.28-hardened/mm/mmap.c	2004-12-21 21:07:11.000000000 -0500
+@@ -1478,14 +1478,15 @@
+ 	validate_mm(mm);
+ }
+ 
+-void insert_vm_struct(struct mm_struct * mm, struct vm_area_struct * vma)
++int insert_vm_struct(struct mm_struct * mm, struct vm_area_struct * vma)
+ {
+ 	struct vm_area_struct * __vma, * prev;
+ 	rb_node_t ** rb_link, * rb_parent;
+ 
+ 	__vma = find_vma_prepare(mm, vma->vm_start, &prev, &rb_link, &rb_parent);
+ 	if (__vma && __vma->vm_start < vma->vm_end)
+-		BUG();
++		return -ENOMEM;
+ 	vma_link(mm, vma, prev, rb_link, rb_parent);
+ 	validate_mm(mm);
++	return 0;
+ }
+--- linux-2.4.28-grsec/fs/exec.c	2004-12-24 15:27:42.000000000 -0500
++++ linux-2.4.28-grsec-2.0.2/fs/exec.c	2004-12-24 15:47:07.208307624 -0500
+@@ -358,7 +358,7 @@
+ {
+ 	unsigned long stack_base;
+ 	struct vm_area_struct *mpnt;
+-	int i;
++	int i, ret;
+ 
+ #ifdef CONFIG_GRKERNSEC_PAX_SEGMEXEC
+ 	struct vm_area_struct *mpnt_m = NULL;
+@@ -387,7 +387,6 @@
+ 
+ 	down_write(&current->mm->mmap_sem);
+ 	{
+-		struct vm_area_struct *vma;
+ 		mpnt->vm_mm = current->mm;
+ 		mpnt->vm_start = PAGE_MASK & (unsigned long) bprm->p;
+ 		mpnt->vm_end = STACK_TOP;
+@@ -402,13 +401,11 @@
+ 		mpnt->vm_pgoff = 0;
+ 		mpnt->vm_file = NULL;
+ 		mpnt->vm_private_data = (void *) 0;
+-		vma = find_vma(current->mm, mpnt->vm_start);
+-		if (vma) {
+-			up_write(&current->mm->mmap_sem);
++		if ((ret = insert_vm_struct(current->mm, mpnt))) {
++			up_write(&current->mm->mmap_sem);
+ 			kmem_cache_free(vm_area_cachep, mpnt);
+-			return -ENOMEM;
++			return ret;
+ 		}
+-		insert_vm_struct(current->mm, mpnt);
+ 		current->mm->total_vm = (mpnt->vm_end - mpnt->vm_start) >> PAGE_SHIFT;
+ 
+ #ifdef CONFIG_GRKERNSEC_PAX_SEGMEXEC
