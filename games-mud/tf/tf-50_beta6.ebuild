@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta6.ebuild,v 1.3 2004/09/04 23:18:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta6.ebuild,v 1.4 2004/09/22 17:18:13 blubb Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://tf.tcp.com/~hawkeye/tf/"
 SRC_URI="http://ftp.tcp.com/pub/mud/Clients/tinyfugue/${MY_P}.tar.gz
 	doc? ( http://ftp.tcp.com/pub/mud/Clients/tinyfugue/${MY_P}-help.tar.gz )"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="ipv6 doc debug ssl"
