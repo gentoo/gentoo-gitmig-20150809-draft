@@ -1,0 +1,11 @@
+--- eq-xmms-0.6/src/iir.c	2004-05-16 06:24:31.000000000 +0400
++++ eq-xmms/src/iir.c	2005-03-22 16:14:58.000000000 +0300
+@@ -167,7 +167,7 @@
+      * the buffer (length is in bytes)
+      */
+     halflength = (length >> 1);
+-    for (index = 0; index < halflength; index+=2)
++    for (index = 0; index < halflength; index+=nch)
+     {
+         /* For each channel */
+         for (channel = 0; channel < nch; channel++)

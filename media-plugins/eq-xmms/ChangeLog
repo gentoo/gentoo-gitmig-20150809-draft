@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/eq-xmms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.9 2005/03/13 14:22:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.10 2005/03/22 13:29:34 voxus Exp $
+
+*eq-xmms-0.6-r2 (22 Mar 2005)
+
+  22 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> -eq-xmms-0.6.ebuild,
+  +eq-xmms-0.6-r2.ebuild, +files/eq-xmms-0.6-mono_fix.patch:
+  Added fix for playing mono streams. For details - see:
+  http://sf.net/tracker/?func=detail&aid=999884&group_id=61119&atid=496208
+  Old 0.6 ebuild dropped.
 
   13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> eq-xmms-0.6-r1.ebuild,
   eq-xmms-0.6.ebuild:

@@ -1,18 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dea4b1f92f278b40c4155093f3c47f47 eq-xmms-0.6.ebuild 1005
+MD5 ded2cd2ce121d18f8afd4de7739674b3 eq-xmms-0.6-r2.ebuild 1109
 MD5 5304d2b33a716509f3137ff6c72d5f54 eq-xmms-0.6-r1.ebuild 1070
-MD5 53f8680c8195e7302cbc113f07e5fae2 ChangeLog 1590
+MD5 e3291199ba6f18789f104dc6e20922ac ChangeLog 1913
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 db956a0ebfff40720bb6487f96564a00 files/eq-xmms-0.6-shade_fix.patch 1116
+MD5 774f966c8056c9448a2cdd295cf76302 files/eq-xmms-0.6-mono_fix.patch 418
 MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r1 63
-MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6 63
+MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r2 63
 MD5 e2cda8be9765888166aa11cb345e6a41 files/eq-xmms-0.6-nonx86.patch 410
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNzo006ebR+OMO78RAljqAJ9sQTeuJ+m0RQoLOq9nvGizW7uAcQCgg9Yf
-uxY/to6f1WC/KXZJABU9nPM=
-=uy2Z
------END PGP SIGNATURE-----
