@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.46 2004/10/13 12:29:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.47 2004/10/13 19:50:34 swegener Exp $
+
+  13 Oct 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digest.
 
 *busybox-1.00 (13 Oct 2004)
 
