@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-gammu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.3 2005/02/12 10:26:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gammu/ChangeLog,v 1.4 2005/02/12 10:34:56 kloeri Exp $
+
+  12 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  -python-gammu-0.6.ebuild, python-gammu-0.7.ebuild:
+  Remove 0.6 as it fails and mark 0.7 stable instead.
 
   12 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   python-gammu-0.6.ebuild:
