@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/textedit
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.5 2004/12/04 22:35:45 fafhrd Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.6 2005/01/12 18:25:27 fafhrd Exp $
+
+*textedit-0.95_pre20050110 (12 Jan 2005)
+
+  12 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -textedit-0.95_pre20040927.ebuild, +textedit-0.95_pre20050110.ebuild:
+  Version bump
 
 *textedit-0.95_pre20041116 (04 Dec 2004)
 
