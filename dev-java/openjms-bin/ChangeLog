@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/openjms-bin
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/ChangeLog,v 1.1 2003/12/18 17:36:09 lostlogic Exp $
+
+*openjms-bin-0.7.5 (18 Dec 2003)
+
+  18 Dec 2003; Brandon Low <lostlogic@gentoo.org> openjms-bin-0.7.5.ebuild:
+  Initial import
+
