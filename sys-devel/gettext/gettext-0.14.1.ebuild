@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.24 2005/03/04 01:48:24 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.25 2005/03/12 21:31:17 vapier Exp $
 
 inherit eutils gnuconfig toolchain-funcs mono libtool
 
@@ -10,20 +10,20 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc x86"
 IUSE="emacs nls"
 
 DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epunt_cxx
 
 	# java sucks
-	epatch ${FILESDIR}/${P}-without_java.patch
-	epatch ${FILESDIR}/${P}-no-java-tests.patch
+	epatch "${FILESDIR}"/${P}-without_java.patch
+	epatch "${FILESDIR}"/${P}-no-java-tests.patch
 
 	if use ppc-macos ; then
 		elibtoolize
