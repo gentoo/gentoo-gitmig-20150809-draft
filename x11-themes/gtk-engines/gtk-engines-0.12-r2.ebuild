@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-0.12-r2.ebuild,v 1.1 2002/06/29 13:21:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-0.12-r2.ebuild,v 1.2 2002/06/29 13:30:13 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtk-engines"
@@ -11,6 +10,9 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="virtual/glibc virtual/x11
 	>=media-libs/imlib-1.9.10-r1"
+
+SLOT="0"
+LICENSE="GPL-2"
 
 src_unpack() {
 	unpack ${P}.tar.gz
