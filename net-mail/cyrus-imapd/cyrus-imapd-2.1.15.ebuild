@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.15.ebuild,v 1.3 2003/12/14 22:52:15 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.15.ebuild,v 1.4 2004/01/20 18:00:43 max Exp $
 
 inherit eutils
 IPV6_P="${P}-ipv6-20030819"
@@ -40,10 +40,10 @@ src_unpack() {
 	cd ${S}
 
 	# patch for db4 detection and their respective versioned symbols
-	epatch ${FILESDIR}/2.1.15-db4.patch
+	epatch ${FILESDIR}/${P}-db4.patch
 
 	# add libwrap defines as we don't have a dynamicly linked library.
-	epatch ${FILESDIR}/cyrus-imapd-2.1.12-libwrap.patch
+	epatch ${FILESDIR}/${PN}-libwrap.patch
 
 	# Does running autoconf squash any of this?
 	use ipv6 && epatch ${WORKDIR}/${IPV6_P}.diff

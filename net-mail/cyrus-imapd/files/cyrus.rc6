@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/files/cyrus.rc6,v 1.4 2004/01/20 18:00:43 max Exp $
+
+depend() {
+	need net
+	use dns logger
+	after drac saslauthd
+}
+
+start() {
+	ebegin "Starting cyrus imapd"
+	start-stop-daemon --start --quiet --background \
+		--exec /usr/lib/cyrus/master
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping cyrus imapd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/cyrus-master.pid
+	eend $?
+}
