@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.7 2004/06/01 12:11:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.8 2004/06/03 06:06:42 mr_bones_ Exp $
 
 inherit games gcc
 
@@ -28,6 +28,7 @@ src_unpack() {
 	sed -i \
 		-e "s:config/:${GAMES_SYSCONFDIR}/:" \
 		myConfig.h || die
+	rm -rf $(find -name CVS)
 }
 
 src_compile() {
@@ -35,14 +36,12 @@ src_compile() {
 }
 
 src_install() {
-	rm -rf `find -name CVS`
-
 	newgamesbin poopmup.o poopmup || die
 
-	insinto ${GAMES_DATADIR}/${PN}
+	insinto "${GAMES_DATADIR}/${PN}"
 	doins textures/*
 
-	insinto ${GAMES_SYSCONFDIR}
+	insinto "${GAMES_SYSCONFDIR}"
 	doins config/*
 
 	dodoc README docs/*.doc
