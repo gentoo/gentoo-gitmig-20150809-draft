@@ -1,3 +1,4 @@
+MD5 19754bf6b216cf0e2dbd5d28be56fa95 vte-0.11.10.ebuild 757
 MD5 b42298ba630736f054c8ce33c27d6982 vte-0.10.27.ebuild 719
 MD5 a41fd2764405cbd350cac7c5144fda6f vte-0.10.29.ebuild 851
 MD5 51da691a6358d91385cd4cae05f64147 vte-0.10.26.ebuild 706
@@ -10,3 +11,4 @@ MD5 9ec35890659e969bf8bc097208cfc210 files/digest-vte-0.10.26 64
 MD5 9fb16c649cecfe6b194ff487ff112c40 files/digest-vte-0.10.27 64
 MD5 7fd6e432e5d911d5469eed45360aec6c files/digest-vte-0.10.28 64
 MD5 be623776239aa85bd3c86ba840b71c45 files/digest-vte-0.10.29 64
+MD5 bae7fb7cbc1656fb42249c1aefc806cb files/digest-vte-0.11.10 64
