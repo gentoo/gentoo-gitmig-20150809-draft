@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.7 2004/02/18 13:46:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r2.ebuild,v 1.8 2004/02/27 01:37:57 bazik Exp $
 
 IUSE="X nls motif leim gnome Xaw3d"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/emacs/${P}.tar.gz
 HOMEPAGE="http://www.gnu.org/software/emacs"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha amd64 hppa ia64"
+KEYWORDS="x86 ~ppc sparc alpha amd64 hppa ia64"
 
 DEPEND="sys-libs/ncurses
 	sys-libs/gdbm
