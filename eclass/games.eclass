@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.32 2003/07/01 19:13:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.33 2003/07/02 04:00:34 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -101,6 +101,7 @@ games_pkg_setup() {
 	enewgroup ${GAMES_GROUP} 35
 	enewuser ${GAMES_USER} 35 /bin/false /usr/games ${GAMES_GROUP}
 	use dedicated && enewuser ${GAMES_USER_DED} 36 /bin/false /usr/games ${GAMES_GROUP}
+	return 0
 }
 
 # pkg_postinst function ... create env.d entry and warn about games group
