@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/email
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.1 2004/11/12 20:16:22 ticho Exp $
+
+*email-2.3.0 (12 Nov 2004)
+
+  12 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +email-2.3.0.ebuild:
+  Initial import, ebuild written by me.
+
