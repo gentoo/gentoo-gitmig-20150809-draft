@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 87f2fce9f1ac8dfb522c272757e25693 ChangeLog 5575
+MD5 5d9e60ae4633eb75917fd46d08aa2f63 ChangeLog 5731
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 5880934b241e158b5e06c7c1365b434a sgmltools-lite-3.0.3-r6.ebuild 2170
-MD5 3a92f85baa54fb956ecd84accc3edf25 sgmltools-lite-3.0.3-r7.ebuild 2052
+MD5 77ebb917e002910cb0faf14fe6007cab sgmltools-lite-3.0.3-r6.ebuild 2166
+MD5 859a45c8c6845d7934cebd33df517dde sgmltools-lite-3.0.3-r7.ebuild 2048
 MD5 4068e19bd2400f18c7b90fc071c31619 files/digest-sgmltools-lite-3.0.3-r6 139
-MD5 4068e19bd2400f18c7b90fc071c31619 files/digest-sgmltools-lite-3.0.3-r7 139
 MD5 5a72138dcb78d9d707c734eaf04d248b files/sgmltools-lite-3.0.3-gentoo.diff 679
+MD5 4068e19bd2400f18c7b90fc071c31619 files/digest-sgmltools-lite-3.0.3-r7 139
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBUMbbHTu7gpaalycRApTdAKDKcuvFToJDCEaWAiwTG/xKCfnr8QCgrVlO
-9PIYKjozN8NesJDWE9G11jI=
-=4K6K
+iD8DBQFBc/EbVWNWqTUmv+0RAl+QAJ4sD0SKa34G5nkzcUFckMHn7qaoRQCfQlH2
+o+yf3v/cUz7a9ei2NqWX47c=
+=fa6+
 -----END PGP SIGNATURE-----
