@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.17.ebuild,v 1.5 2004/07/13 03:31:28 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.17.ebuild,v 1.6 2004/07/23 09:25:05 eradicator Exp $
 
 DESCRIPTION="Gnome based FTP Client"
 SRC_URI="http://www.gftp.org/${P}.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gftp.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc amd64 ~ppc64"
 IUSE="nls gtk gtk2 ssl"
 
 DEPEND="virtual/x11
