@@ -1,26 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.2-r1.ebuild,v 1.5 2004/03/24 17:20:07 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.2-r1.ebuild,v 1.6 2004/04/25 21:33:37 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download2.eclipse.org/downloads/drops/R-2.1.2-200311030802/eclipse-sourceBuild-srcIncluded-2.1.2.zip"
-IUSE="gtk motif gnome kde"
 
-SLOT="0"
 LICENSE="CPL-1.0"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
-
-DEPEND="${RDEPEND}
-	>=dev-java/ant-1.5.3
-	>=sys-apps/findutils-4.1.7
-	>=app-shells/tcsh-6.11"
+IUSE="gtk motif gnome kde"
 
 # removed since the bin lives in /opt and this in /usr
 #	!dev-util/eclipse-platform-bin
 #	!dev-util/eclipse-jdt-bin
 #	!dev-util/eclipse-cdt-bin"
-
 RDEPEND=">=virtual/jdk-1.3
 	kde? ( kde-base/kde x11-libs/openmotif ) :
 		( gnome? ( =gnome-base/gnome-vfs-2* ) :
@@ -29,6 +25,10 @@ RDEPEND=">=virtual/jdk-1.3
 	motif? ( x11-libs/openmotif )
 	gnome? ( =gnome-base/gnome-vfs-2* )
 	gtk? ( >=x11-libs/gtk+-2.4 )"
+DEPEND="${RDEPEND}
+	>=dev-java/ant-1.5.3
+	>=sys-apps/findutils-4.1.7
+	>=app-shells/tcsh-6.11"
 
 S=${WORKDIR}/eclipse
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a.ebuild,v 1.7 2004/04/25 12:55:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a.ebuild,v 1.8 2004/04/25 21:34:18 vapier Exp $
+
+inherit eutils
 
 MY_PN=${PN/elf/ELF}
 S=${WORKDIR}/${MY_PN}
@@ -12,6 +14,7 @@ SRC_URI="http://www.muppetlabs.com/~breadbox/pub/software/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc hppa"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -40,6 +43,6 @@ src_install() {
 	insinto /usr
 	dobin ebfc/ebfc sstrip/sstrip elfls/elfls elftoc/elftoc rebind/rebind
 	doman */*.1
-	dodoc COPYING Changelog README
+	dodoc Changelog README
 	dodoc README.ebfc README.elfls README.elftoc README.rebind README.sstrip ebfc/elfparts.txt
 }

@@ -1,25 +1,26 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m.ebuild,v 1.6 2004/01/09 01:07:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m.ebuild,v 1.7 2004/04/25 21:35:28 vapier Exp $
 
-IUSE=""
+inherit eutils
 
-S=${WORKDIR}/${PN}
 DESCRIPTION="Fenris is a tracer, GUI debugger, analyzer, partial decompiler and much more"
 HOMEPAGE="http://razor.bindview.com/tools/fenris/"
 SRC_URI="http://razor.bindview.com/tools/fenris/${PN}.tgz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	sys-libs/libtermcap-compat
 	app-misc/screen
 	sys-libs/ncurses
 	sys-devel/gdb"
-
 RDEPEND="sys-apps/gawk"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}

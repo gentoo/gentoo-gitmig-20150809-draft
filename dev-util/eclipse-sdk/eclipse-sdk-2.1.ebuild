@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.ebuild,v 1.7 2004/01/07 20:28:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.ebuild,v 1.8 2004/04/25 21:34:04 vapier Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/downloads/drops/R-2.1-200303272130/eclipse-sourceBuild-srcIncluded-2.1.zip"
+
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~x86 -ppc -sparc"
+
 RDEPEND=">=virtual/jdk-1.3
 	>=x11-libs/gtk+-2.2.1-r1
 	=gnome-base/gnome-vfs-2*"
-
 DEPEND="${RDEPEND}
 	>=virtual/jdk-1.3
 	>=dev-java/ant-1.4

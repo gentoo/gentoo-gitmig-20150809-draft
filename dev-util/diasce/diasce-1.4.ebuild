@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.3 2004/03/13 01:49:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.4 2004/04/25 21:32:58 vapier Exp $
+
+inherit eutils
 
 MY_P=${PN}2-${PV}
 S=${WORKDIR}/${MY_P}
@@ -11,6 +13,7 @@ SRC_URI="http://diasce.es.gnome.org/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
+IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.4
 	>=x11-libs/gtk+-2
@@ -42,5 +45,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
