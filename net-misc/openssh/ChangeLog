@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.46 2003/09/17 00:56:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.47 2003/09/17 02:34:44 rajiv Exp $
 
 *openssh-3.7.1_p1 (16 Sep 2003)
+
+  16 Sep 2003; Rajiv Aaron Manglani <rajiv@gentoo.org> openssh-3.7.1_p1.ebuild:
+  added warning about restarting sshd.
 
   16 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
   Another version bump ! :D #28927.  This fixes 'more malloc bugs'.
