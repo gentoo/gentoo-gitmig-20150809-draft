@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e909b13784555c94774d26bbc3fe7a9e ChangeLog 1235
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 a9350c5b9b02ef26225936eff7abd396 mtink-1.0.1.ebuild 1256
-MD5 8d8ea32e5671c4e59c1f7c6933b454cd files/digest-mtink-1.0.1 63
+MD5 35702d6dd11b2b990ed368fcb02e5e8b ChangeLog 1407
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 64cc5c90dbb9328a438eaeaa5605e855 mtink-1.0.5.ebuild 1254
 MD5 3d7d657325f8c614eab923174f39d213 files/mtinkd.confd 494
 MD5 3d70b9a7f2797c53b2514593ca34d634 files/mtinkd.rc 439
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYHSxI1lqEGTUzyQRAqc+AKCKxhauz3AjDT9tm/reyUjVhJXjSwCgwP7O
-63c1UQ7Wd0K52ozMOuR1Xfk=
-=yZrf
------END PGP SIGNATURE-----
+MD5 8d8ea32e5671c4e59c1f7c6933b454cd files/digest-mtink-1.0.1 63
+MD5 6bf7b30c283a992ce56095736e46c764 files/digest-mtink-1.0.5 63
