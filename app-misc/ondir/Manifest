@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 30084fcb434ca58607b0295dc7e0216f ondir-0.2.1.ebuild 869
-MD5 0a102e49a9aa0d25e364799592e85348 ChangeLog 1142
-MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 6004e5bb8f4ba0198008b642935ac4d7 ondir-0.2.2.ebuild 897
+MD5 a49c9c4d9207beabec0026a3b7f7b87f ChangeLog 1280
+MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
+MD5 998f2cfd0ea62c6bb2e0300156fd1fa1 ondir-0.2.2.ebuild 896
 MD5 60c8f133ff798b83676f2909366dbfbf files/digest-ondir-0.2.1 62
 MD5 62c60a68887b0d75738e24cd63fe1a23 files/digest-ondir-0.2.2 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBflKzEZCkKN40op4RAkLVAJ9RHBpoGBt/8vE600RwWkqbKWyKUgCgiwuW
-P3oSNcvAXowSg9Zq7/QlIOg=
-=ADyH
------END PGP SIGNATURE-----
