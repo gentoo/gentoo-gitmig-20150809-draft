@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.4 2004/02/16 16:52:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.5 2004/03/22 13:33:19 aliz Exp $
+
+  22 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> XML-Twig-3.13.ebuild:
+  Adding amd64 keyword.
 
 *XML-Twig-3.13 (16 Feb 2004)
 
