@@ -1,0 +1,11 @@
+--- man-1.5k/src/Makefile.in.orig	2002-12-26 06:43:39.000000000 +0200
++++ man-1.5k/src/Makefile.in	2002-12-26 06:48:18.000000000 +0200
+@@ -16,7 +16,7 @@
+ 
+ pager = @pager@
+ 
+-GS = -DGREPSILENT=\'@grepsilent@\'
++GS = -DGREPSILENT=0x71
+ DEFS = @DEFS@ $(GS)
+ CWARN = -Wall -Wstrict-prototypes -Wmissing-prototypes
+ CWARNNP = -Wall
