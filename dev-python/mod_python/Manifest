@@ -3,7 +3,7 @@ MD5 fa728080467e8c1a3d9088d8c7c464aa mod_python-3.0.1.ebuild 1500
 MD5 1f8667cc283448c799ca483f659e487f mod_python-3.0.3.ebuild 1658
 MD5 001ec247084f2976db970717fb6bd78a ChangeLog 1429
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 559839f2f486ddf971d9a9a551721e91 mod_python-3.0.0_beta4.ebuild 1576
+MD5 9c26ca83a3a14072189c2f370b37e5c7 mod_python-3.0.0_beta4.ebuild 1574
 MD5 ff854e7ccb21572faafdc9bc82795c11 files/mod_python-3.0.3-dest1.diff 376
 MD5 155cbbec64eef8aba0304289113190f4 files/mod_python-3.0.3-dest2.diff 438
 MD5 05bbbfafd26dcf70f83fcc2b015751dc files/16_mod_python.conf 1106
