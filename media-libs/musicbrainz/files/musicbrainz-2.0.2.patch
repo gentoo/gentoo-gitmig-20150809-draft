@@ -1,0 +1,32 @@
+diff -urN libmusicbrainz-2.0.2-orig/python/setup.py libmusicbrainz-2.0.2/python/setup.py
+--- libmusicbrainz-2.0.2-orig/python/setup.py	2003-02-28 06:12:15.000000000 +0100
++++ libmusicbrainz-2.0.2/python/setup.py	2004-02-19 01:51:46.860602872 +0100
+@@ -109,7 +109,7 @@
+                                   'src/pymb.c',
+                                   'src/pytrm.c',],
+                          define_macros = [('VERSION', '"%s"' % pymusicbrainz_version)],
+-                         libraries=["musicbrainz","stdc++"])
++                         libraries=["../lib/.libs/musicbrainz","stdc++"])
+ 
+ setup ( 
+     name            = "pymusicbrainz",
+diff -urN libmusicbrainz-2.0.2-orig/python/src/pymb.c libmusicbrainz-2.0.2/python/src/pymb.c
+--- libmusicbrainz-2.0.2-orig/python/src/pymb.c	2003-02-28 06:12:15.000000000 +0100
++++ libmusicbrainz-2.0.2/python/src/pymb.c	2004-02-19 01:52:14.831350672 +0100
+@@ -1,5 +1,5 @@
+ #include "Python.h"
+-#include <musicbrainz/mb_c.h>
++#include "../../lib/mb_c.h"
+ #include "pymusicbrainz.h"
+ #include <string.h>
+ #include <stdio.h>
+diff -urN libmusicbrainz-2.0.2-orig/python/src/pytrm.c libmusicbrainz-2.0.2/python/src/pytrm.c
+--- libmusicbrainz-2.0.2-orig/python/src/pytrm.c	2003-02-28 06:12:15.000000000 +0100
++++ libmusicbrainz-2.0.2/python/src/pytrm.c	2004-02-19 01:52:28.505271920 +0100
+@@ -1,5 +1,5 @@
+ #include "Python.h"
+-#include <musicbrainz/mb_c.h>
++#include "../../lib/mb_c.h"
+ #include "pymusicbrainz.h"
+ 
+ #define PY_TRM(x) (((py_trm *)x)->trm)

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.20 2004/02/19 01:23:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.21 2004/02/19 13:29:07 kloeri Exp $
+
+  19 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  files/musicbrainz-2.0.2.patch:
+  Add missing patch.
 
   19 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
   musicbrainz-2.0.2-r2.ebuild:
