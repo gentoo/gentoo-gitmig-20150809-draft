@@ -1,6 +1,9 @@
 # ChangeLog for app-text/yodl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.5 2004/06/24 22:59:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.6 2004/06/29 07:17:37 ciaranm Exp $
+
+  29 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> yodl-1.31.18.ebuild:
+  Added ~mips
 
   13 May 2004; Bryan Østergaard <kloeri@gentoo.org> yodl-1.31.18.ebuild:
   Stable on alpha.
