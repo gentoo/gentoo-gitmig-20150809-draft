@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.8 2004/06/10 16:20:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.9 2004/06/11 08:21:28 mr_bones_ Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
@@ -24,7 +24,7 @@ src_unpack() {
 		( has_m64 && has_m32) || \
 			die "please re-emerge gcc with USE=multilib FEATURES=-sandbox"
 	fi
-	
+
 	unpack ${A}
 	cd ${S}
 
