@@ -1,5 +1,6 @@
---- gforth.el	2003-03-09 09:05:33.000000000 -0600
-+++ gforth.el~	2003-04-02 04:34:42.000000000 -0600
+diff -ur gforth-0.6.2.orig/gforth.el gforth-0.6.2/gforth.el
+--- gforth-0.6.2.orig/gforth.el	2003-08-05 04:12:47.000000000 -0500
++++ gforth-0.6.2/gforth.el	2003-10-15 20:08:42.460949736 -0500
 @@ -65,22 +65,24 @@
    (or (< emacs-major-version major)
        (and (= emacs-major-version major) (< emacs-minor-version minor))))
