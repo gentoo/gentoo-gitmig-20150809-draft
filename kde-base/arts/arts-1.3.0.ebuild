@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0.ebuild,v 1.2 2004/08/22 16:32:48 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0.ebuild,v 1.3 2004/08/26 19:37:30 caleb Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
@@ -12,11 +12,12 @@ SRC_URI="mirror://kde/stable/${PV/1.3.0/3.3}/src/${PN}-${PV}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
 KEYWORDS="~x86 ~amd64 ppc64"
-IUSE="alsa oggvorbis esd artswrappersuid mad"
+IUSE="alsa oggvorbis esd artswrappersuid jack mad"
 
 DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	esd? ( media-sound/esound )
+	jack? ( media-sound/jack )
 	mad? ( media-libs/libmad media-libs/libid3tag )
 	media-libs/audiofile
 	>=dev-libs/glib-2
@@ -34,7 +35,9 @@ src_unpack() {
 	# for the configure.in.in patch, for some reason it's not automatically picked up
 	# rm -f $S/configure
 
-	cd ${S}
+	epatch ${FILESDIR}/1.3.0-jack-configure.in.in.patch
+
+	cd ${S} && make -f admin/Makefile.common
 	# use amd64 && epatch ${FILESDIR}/arts-${PV}-buffer.patch
 	# this patch fixes the high cpu usage of mp3 and vorbis
 	# epatch ${FILESDIR}/arts-vorbis-fix.dif
@@ -48,9 +51,7 @@ src_compile() {
 	#fix bug 41980
 	use sparc && filter-flags -fomit-frame-pointer
 
-	myconf="$myconf `use_enable alsa`"
-	myconf="$myconf `use_enable oggvorbis vorbis`"
-	myconf="$myconf `use_enable mad libmad`"
+	myconf="$myconf $(use_enable alsa) $(use_enable oggvorbis vorbis) $(use_enable mad libmad) $(use_enable jack)"
 
 	kde_src_compile
 }
