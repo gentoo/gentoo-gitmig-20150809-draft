@@ -1,34 +1,29 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0-r1.ebuild,v 1.6 2003/07/18 20:19:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0-r1.ebuild,v 1.7 2003/07/18 20:20:45 vapier Exp $
 
 DESCRIPTION="BitKeeper is a scalable configuration management system."
-SRC_URI=""
+SRC_URI="x86? ( bk-${PV}-x86-glibc22-linux.bin )
+	ppc? ( bk-${PV}-powerpc-glibc21-linux.bin )
+	sparc? ( bk-${PV}-sparc-glibc21-linux.bin )
+	alpha? ( bk-${PV}-alpha-glibc21-linux.bin )"
 HOMEPAGE="http://www.bitkeeper.com"
 
 SLOT="0"
 LICENSE="BKL"
 KEYWORDS="x86 ppc sparc alpha"
+RESTRICT="fetch"
 
 DEPEND="virtual/glibc
 	>=dev-lang/tcl-8.3.3
 	X? ( >=dev-lang/tk-8.3.3 )"
 
-# I'm not sure what the official way to do this is...
-use 'x86' >/dev/null && A="bk-3.0-x86-glibc22-linux.bin"
-use 'ppc' >/dev/null && A="bk-3.0-powerpc-glibc21-linux.bin"
-use 'sparc' >/dev/null && A="bk-3.0-sparc-glibc21-linux.bin"
-use 'alpha' >/dev/null && A="bk-3.0-alpha-glibc21-linux.bin"
-
-pkg_setup() {
-	if [ ! -f ${DISTDIR}/${A} ] ; then
-		eerror "You need to perform the following steps to install this package:"
-		eerror "- Sign up at ${HOMEPAGE}"
-		eerror "- Check your mail and visit the download location"
-		eerror "- Download ${A} and place it in ${DISTDIR}"
-		eerror "- emerge this package again"
-		die "package must be downloaded"
-	fi
+pkg_nofetch() {
+	einfo "You need to perform the following steps to install this package:"
+	einfo "- Sign up at ${HOMEPAGE}"
+	einfo "- Check your mail and visit the download location"
+	einfo "- Download ${A} and place it in ${DISTDIR}"
+	einfo "- emerge this package again"
 }
 
 src_unpack() {
