@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/maxima
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/ChangeLog,v 1.1 2003/04/19 20:16:51 george Exp $
+
+*maxima-5.9.0.ebuild (19 Apr 2003)
+
+  19 Apr 2003; George Shapovalov <george@gentoo.org> maxima-5.9.0.ebuild, files/{digest-maxima-5.9.0} :
+  initial release (#16529)
+  Free computer algebra environment, based on Macsyma
+  ebuild submitted by Sourav Mandal <sourav@sourav.net>
