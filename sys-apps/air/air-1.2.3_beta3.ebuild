@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/air/air-1.2.3_beta3.ebuild,v 1.1 2004/05/18 07:06:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/air/air-1.2.3_beta3.ebuild,v 1.2 2004/05/18 07:58:53 dragonheart Exp $
 
 DESCRIPTION="A GUI front-end to dd/dcfldd"
 HOMEPAGE="http://air-imager.sourceforge.net/"
@@ -19,7 +19,8 @@ DEPEND="dev-perl/perl-tk
 	app-arch/sharutils
 	>=sys-apps/sed-4"
 
-RDEPEND="app-arch/mt-st"
+RDEPEND="app-arch/mt-st
+	dev-lang/perl"
 
 S=${WORKDIR}/${P}
 
@@ -48,4 +49,8 @@ src_install() {
 	    -e "s!air_log_dir = \"/usr/local!air_log_dir = \"/usr!" \
 	    -e "s!air_fifo = \"/usr/local!air_fifo = \"/usr!" \
 		air
+
+	chown -R root:root ${D}
+	fowners root:users /usr/share/air/logs/
+	fperms g+rwx /usr/share/air/logs/
 }

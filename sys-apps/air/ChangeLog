@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/air
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/air/ChangeLog,v 1.1 2004/05/18 07:06:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/air/ChangeLog,v 1.2 2004/05/18 07:58:53 dragonheart Exp $
+
+  18 May 2004; Daniel Black <dragonheart@gentoo.org> air-1.2.3_beta3.ebuild:
+  fix permissions
 
 *air-1.2.3_beta3 (18 May 2004)
 
