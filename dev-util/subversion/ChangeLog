@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.115 2004/11/02 21:49:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.116 2004/11/05 21:25:52 agriffis Exp $
+
+  05 Nov 2004; Aron Griffis <agriffis@gentoo.org> subversion-1.0.9.ebuild:
+  Remove attempted installation of cvs2svn #47099
 
   04 Nov 2004; Aron Griffis <agriffis@gentoo.org> subversion-1.0.9.ebuild,
   subversion-1.1.0.ebuild:
@@ -14,35 +17,35 @@
   21 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.0.9.ebuild:
   Backport the svn-revision.txt fix
 
-  19 Oct 2004; <pauldv@gentoo.org> subversion-1.1.0.ebuild:
+  19 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.1.0.ebuild:
   Explicitly enable or disable javahl to fix bug #67681
 
-  19 Oct 2004; <pauldv@gentoo.org> subversion-1.1.0.ebuild:
+  19 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.1.0.ebuild:
   Fix missing quotes problem in combination with jikes. Thanks to 
   snikkt@yahoo.com in bug #63464 for signalling this.
 
 *subversion-1.0.9 (19 Oct 2004)
 
-  19 Oct 2004; <pauldv@gentoo.org> +subversion-1.0.9.ebuild:
+  19 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> +subversion-1.0.9.ebuild:
   A new upstream version that fixes some slowness with "svn ls"
 
   09 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.1.0.ebuild:
   Fix bug #63464 on compilation with jikes.
 
-  08 Oct 2004; <pauldv@gentoo.org> subversion-1.1.0.ebuild:
+  08 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.1.0.ebuild:
   Fix bug #66659 concerning the name of the book file. Why doesn't dohtml 
   complain when a file doesn't exist?
 
-  08 Oct 2004; <pauldv@gentoo.org> +files/subversion-1.1.0-build.patch,
+  08 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> +files/subversion-1.1.0-build.patch,
   -files/subversion-1.1.0-rc4-build.patch, subversion-1.1.0.ebuild:
   The previous fix was not applied. Also fix bug #66644 by broadening the 
   sed script that hacks around the svnversion stuff (the output is 
   constant)
 
-  08 Oct 2004; <pauldv@gentoo.org> files/subversion-1.1.0-rc4-build.patch:
+  08 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> files/subversion-1.1.0-rc4-build.patch:
   Fix javahl linking (again) to fix bug #66625, this fix comes from rc2
 
-  01 Oct 2004; <pauldv@gentoo.org> -files/subversion-pre-1.0.5.patch,
+  01 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> -files/subversion-pre-1.0.5.patch,
   -subversion-1.0.1.ebuild, -subversion-1.0.2.ebuild,
   -subversion-1.0.3.ebuild, -subversion-1.0.4-r1.ebuild,
   -subversion-1.0.4.ebuild, -subversion-1.0.6.ebuild,
@@ -51,7 +54,7 @@
 
 *subversion-1.1.0 (01 Oct 2004)
 
-  01 Oct 2004; <pauldv@gentoo.org> +subversion-1.1.0.ebuild:
+  01 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> +subversion-1.1.0.ebuild:
   New upstream version
 
   27 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
@@ -61,7 +64,7 @@
   25 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> subversion-1.0.8.ebuild:
   Stable on sparc wrt #65085
 
-  27 Sep 2004; <pauldv@gentoo.org> subversion-1.0.8.ebuild,
+  27 Sep 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.0.8.ebuild,
   subversion-1.1.0_rc2.ebuild, subversion-1.1.0_rc4.ebuild:
   Fix subversion swig dependency as the 1.3.22 release does not longer 
   provide a runtime library while subversion still expects one.
@@ -92,26 +95,26 @@
   Fix bug #62753. swig is now build when either python or perl is in the
   useflags, not python only.
 
-  07 Sep 2004; <pauldv@gentoo.org> subversion-1.1.0_rc2.ebuild:
+  07 Sep 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.1.0_rc2.ebuild:
   Spelling fixes. Thanks to Marko Djukic <marko@oblo.com> in bug #63014
 
-  01 Sep 2004; <pauldv@gentoo.org> subversion-1.1.0_rc2.ebuild:
+  01 Sep 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.1.0_rc2.ebuild:
   Change the book installation location to it's own dir, to make it easier 
   to find.
 
-  30 Aug 2004; <pauldv@gentoo.org> +files/subversion-1.1.0-rc2-build.patch,
+  30 Aug 2004; Paul de Vrieze <pauldv@gentoo.org> +files/subversion-1.1.0-rc2-build.patch,
   subversion-1.1.0_rc2.ebuild:
   Fix some java linking error and a variable substitution error. Thanks to 
   Holger Thon <ht_gentoo04@arcor.de> in bug #59693
 
 *subversion-1.1.0_rc2 (19 Aug 2004)
 
-  19 Aug 2004; <pauldv@gentoo.org> +subversion-1.1.0_rc2.ebuild:
+  19 Aug 2004; Paul de Vrieze <pauldv@gentoo.org> +subversion-1.1.0_rc2.ebuild:
   An initial version of the rc2 package. It has some streamlining for the
   building of the bindings too, and installs the example hook-scripts in the
   documentation dir.
 
-  04 Aug 2004; <pauldv@gentoo.org> subversion-1.0.6.ebuild:
+  04 Aug 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.0.6.ebuild:
   Make the java stuff compile in all cases by specifying an encoding 
   (needed for a french author name) and a source version (needed for 1.5 
   jdk's)
@@ -137,7 +140,7 @@
   20 Jul 2004; Stuart Herbert <stuart@gentoo.org> +subversion-1.0.6.ebuild:
   Version bump for security problem; see bug #57747
 
-  24 Jun 2004; <pauldv@gentoo.org> subversion-1.0.4-r1.ebuild:
+  24 Jun 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.0.4-r1.ebuild:
   Clarify the ebuild config comment (bug #54940)
 
   11 Jun 2004; Jason Wever <weeve@gentoo.org> subversion-1.0.4-r1.ebuild:

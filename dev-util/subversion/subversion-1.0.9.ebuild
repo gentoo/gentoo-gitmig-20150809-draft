@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.9.ebuild,v 1.4 2004/11/02 21:49:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.9.ebuild,v 1.5 2004/11/05 21:25:52 agriffis Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -191,10 +191,6 @@ src_install () {
 		dobin svn-config
 		if use python; then
 			make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}  LD_LIBRARY_PATH="-L${D}/usr/lib" || die "Installation of subversion python bindings failed"
-			# install cvs2svn
-			dobin tools/cvs2svn/cvs2svn.py
-			mv ${D}/usr/bin/cvs2svn.py ${D}/usr/bin/cvs2svn
-			doman tools/cvs2svn/cvs2svn.1
 
 			# move python bindings
 			mkdir -p ${D}${PYTHON_DIR}/site-packages
