@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r3.ebuild,v 1.4 2002/10/04 06:22:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r3.ebuild,v 1.5 2002/10/25 17:16:48 wwoods Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gnuconfig
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The standard GNU Bourne again shell"
@@ -24,6 +24,8 @@ src_unpack() {
 	#enable non-interactive login shells; this patch allows your prompt 
 	#to be preserved when you start X and closes bug #1579.
 	cat ${FILESDIR}/config-top.h.diff | patch -p0 -l || die
+	# bash's config.sub doesn't recognize alphaev67. update it.
+	use alpha && gnuconfig_update
 }
 
 src_compile() {
