@@ -1,14 +1,21 @@
 # ChangeLog for gnome-extra/libglademm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libglademm/ChangeLog,v 1.2 2002/06/17 23:32:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libglademm/ChangeLog,v 1.3 2002/07/25 04:16:12 spider Exp $
 
 
 *libglademm-1.3.1 (17 Jun 2002)
+  25 Jul 2002; Spider <spider@gentoo.org>
+   KEYWORDS added
+      
   17 Jun 2002; Spider <spider@gentoo.org> ChangeLog libglademm-1.3.1.ebuild :
   version bump
 
 
 *libglademm-1.3.0 (02 Jun 2002)
+  25 Jul 2002; Spider <spider@gentoo.org>
+  KEYWORDS added
+
+
   02 Jun 2002; Spider <spider@gentoo.org> ChangeLog libglademm-1.3.0.ebuild :
   gnome2.eclass version of foser <foser@sesmar.eu.org> gnome-c++
   bindings.
