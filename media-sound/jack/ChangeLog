@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.8 2004/08/29 11:06:36 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.9 2004/09/02 13:58:22 tgall Exp $
+
+  02 Sep 2004; Tom Gall <tgall@gentoo.org> jack-3.0.0.ebuild:
+  stable on ppc64
 
   29 Aug 2004; Travis Tilley <lv@gentoo.org> jack-3.0.0.ebuild:
   stable on amd64
