@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/pbbuttonsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.10 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.11 2003/03/15 03:25:21 gerk Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -14,6 +14,10 @@
   patched to actually use the pmud replacement code.
 
 *pbbuttonsd-0.5.2 (17 0ct 2002)
+
+  14 Mar 2003; Mark Guertin <gerk@gentoo.org> pbbuttonsd-0.5.2-r1.ebuild,
+  pbbuttonsd-0.5.2.ebuild:
+  set ppc in keywords
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org>  pbbuttonsd-0.5.2.ebuild :
   This is definitely not for mips.
