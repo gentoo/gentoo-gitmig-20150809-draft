@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.65 2004/11/03 04:44:13 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.66 2004/11/16 17:57:16 mholzer Exp $
+
+*net-snmp-5.1.2 (16 Nov 2004)
+
+  16 Nov 2004; Martin Holzer <mholzer@gentoo.org> +net-snmp-5.1.2.ebuild:
+  Version bumped. Closes 68467
 
   03 Nov 2004; Bret Curtis <psi29a@gentoo.org> net-snmp-5.1.1-r1.ebuild:
   marked ~mips for testing
