@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/text-format-0.64.ebuild,v 1.3 2004/06/25 02:05:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/text-format-0.64.ebuild,v 1.4 2004/07/14 22:18:30 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/ruby"
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ruby-svg-1.0.3.ebuild,v 1.4 2004/06/25 02:03:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ruby-svg-1.0.3.ebuild,v 1.5 2004/07/14 22:15:52 agriffis Exp $
 
 inherit ruby
 
@@ -13,7 +13,6 @@ KEYWORDS="x86 ~ppc"
 USE_RUBY="any"
 IUSE=""
 DEPEND="virtual/ruby"
-S="${WORKDIR}/${P}"
 
 src_install() {
 
