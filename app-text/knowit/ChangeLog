@@ -1,6 +1,9 @@
 # ChangeLog for app-text/knowit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/ChangeLog,v 1.10 2004/11/19 23:02:48 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/ChangeLog,v 1.11 2004/11/21 20:44:39 sekretarz Exp $
+
+  21 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> knowit-0.10.ebuild:
+  Added to ~amd64
 
   20 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> knowit-0.10_beta3.ebuild:
   Added to ~amd64
