@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.0.ebuild,v 1.1 2003/05/12 22:16:49 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.0.ebuild,v 1.2 2003/05/15 00:11:46 twp Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://phpmyadmin.sourceforge.net/"
 SRC_URI="mirror://sourceforge/phpmyadmin/${MY_P}-php.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~arm ~hppa ~mips ~sparc ~x86"
+KEYWORDS="alpha arm hppa mips sparc x86"
 DEPEND=">=net-www/apache-1.3
 	>=dev-db/mysql-3.21 <dev-db/mysql-4.1
 	>=dev-php/mod_php-3.0.8
