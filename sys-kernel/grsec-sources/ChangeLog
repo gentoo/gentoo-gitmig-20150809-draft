@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.6 2003/12/01 22:48:34 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.7 2003/12/02 07:04:05 iggy Exp $
+
+*grsec-sources-2.4.22.1.9.12-r1 (02 Dec 2003)
+
+  02 Dec 2003; Brian Jackson <iggy@gentoo.org>
+  grsec-sources-2.4.22.1.9.12-r1.ebuild,
+  grsec-sources-2.4.22.2.0_rc3-r1.ebuild:
+  version bump for do_brk vuln
 
 *grsec-sources-2.4.23.1.9.13 (01 Dec 2003)
 
