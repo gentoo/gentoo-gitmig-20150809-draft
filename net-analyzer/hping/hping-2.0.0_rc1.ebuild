@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc1.ebuild,v 1.6 2002/10/04 05:58:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc1.ebuild,v 1.7 2002/12/09 04:33:08 manson Exp $
 
 # NOTE: author couldn't make up mind over tarball names, directory names,
 # etc... hense the need to hardcode S and SRC_URI :(
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.hping.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="net-libs/libpcap"
 

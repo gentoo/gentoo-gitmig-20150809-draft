@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.ebuild,v 1.6 2002/10/04 05:59:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.ebuild,v 1.7 2002/12/09 04:33:08 manson Exp $
 
 MY_P=${P}alpha
 S=${WORKDIR}/${P}alpha
@@ -13,7 +13,7 @@ DEPEND=""
 
 SLOT="0"
 LICENSE="HP"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_unpack() {
 	unpack ${A}

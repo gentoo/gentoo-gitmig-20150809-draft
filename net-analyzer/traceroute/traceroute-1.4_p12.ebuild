@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12.ebuild,v 1.12 2002/10/22 13:12:10 kilroy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12.ebuild,v 1.13 2002/12/09 04:33:09 manson Exp $
 
 MY_P=${PN}-1.4a12
 S=${WORKDIR}/${MY_P}
@@ -10,14 +10,14 @@ HOMEPAGE="http://ee.lbl.gov/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	if use sparc64 > /dev/null || use sparc > /dev/null 
+	if use  > /dev/null || use sparc > /dev/null 
 	then
 		patch -p0 < ${FILESDIR}/traceroute-1.4a12.patch
 	fi

@@ -1,7 +1,10 @@
 # ChangeLog for net-analyzer/xtraceroute
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.1 2002/06/28 11:54:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.2 2002/12/09 04:33:09 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
   28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
   moved to net-analyzer - added SLOT
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netleds_applet/netleds_applet-0.9.1-r3.ebuild,v 1.5 2002/10/04 05:59:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netleds_applet/netleds_applet-0.9.1-r3.ebuild,v 1.6 2002/12/09 04:33:08 manson Exp $
 
 
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://netleds.port5.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
 	>=gnome-base/libgtop-1.0.12-r1"

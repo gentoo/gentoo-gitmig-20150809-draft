@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.4.ebuild,v 1.2 2002/10/04 05:59:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.4.ebuild,v 1.3 2002/12/09 04:33:09 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="tcptraceroute is a traceroute implementation using TCP packets"
@@ -9,7 +9,7 @@ HOMEPAGE="http://michael.toren.net/code/tcptraceroute/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="net-libs/libpcap
 	net-libs/libnet"

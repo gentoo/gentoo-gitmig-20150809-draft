@@ -1,7 +1,10 @@
 # ChangeLog for net-analyzer/ucd-snmp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.6 2002/11/06 05:39:11 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.7 2002/12/09 04:33:09 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *ucd-snmp-4.2.6 (06 Nov 2002)
 
   06 Nov 2002; Bruce A. Locke <blocke@shivan.org> ucd-snmp-4.2.6.ebuild:

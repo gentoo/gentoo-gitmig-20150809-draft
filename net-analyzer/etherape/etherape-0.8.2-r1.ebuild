@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.7 2002/11/04 14:53:52 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.8 2002/12/09 04:33:08 manson Exp $
 
 IUSE="nls"
 DESCRIPTION="A graphical network monitor for Unix modeled after etherman"
@@ -15,7 +15,7 @@ DEPEND="	=x11-libs/gtk+-1.2*
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/lcrzoex-4.10.ebuild,v 1.5 2002/10/04 05:58:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/lcrzoex-4.10.ebuild,v 1.6 2002/12/09 04:33:08 manson Exp $
 
 S=${WORKDIR}/${P}-src
 DESCRIPTION="Toolbox of over 300 utilities for testing Ethernet/IP networks"
@@ -10,7 +10,7 @@ DEPEND="=net-libs/lcrzo-${PV}*"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_unpack() {
 	unpack ${A} ; cd ${S}/src

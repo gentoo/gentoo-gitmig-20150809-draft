@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6.ebuild,v 1.1 2002/10/14 07:23:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6.ebuild,v 1.2 2002/12/09 04:33:08 manson Exp $
 
 IUSE="ssl kerberos ipv6 tcpd"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc <sys-libs/db-2
 	
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 	unpack ${A}

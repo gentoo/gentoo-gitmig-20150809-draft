@@ -1,6 +1,6 @@
 # Copyright 2000-2002 Achim Gottinger
 # Distributed under the GPL by Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-1.2.4.ebuild,v 1.3 2002/10/20 18:50:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-1.2.4.ebuild,v 1.4 2002/12/09 04:33:08 manson Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -12,7 +12,7 @@ DEPEND="=net-analyzer/nessus-core-${PV}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc -sparc -sparc64"
+KEYWORDS="x86 ppc -sparc "
 
 src_compile() {
 

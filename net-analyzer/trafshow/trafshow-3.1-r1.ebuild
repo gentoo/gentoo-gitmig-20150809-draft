@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-3.1-r1.ebuild,v 1.6 2002/10/05 05:39:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-3.1-r1.ebuild,v 1.7 2002/12/09 04:33:09 manson Exp $
 
 IUSE="slang"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://soft.risp.ru/trafshow/index_en.shtml"
 
 SLOT="3"
 LICENSE="Freeware"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses

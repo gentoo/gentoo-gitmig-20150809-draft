@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.2.6.ebuild,v 1.1 2002/11/05 19:29:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.2.6.ebuild,v 1.2 2002/12/09 04:33:08 manson Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -15,4 +15,4 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc -sparc -sparc64"
+KEYWORDS="~x86 ~ppc -sparc "
