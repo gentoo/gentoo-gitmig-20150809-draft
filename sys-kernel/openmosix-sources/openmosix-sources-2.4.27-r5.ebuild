@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.27-r4.ebuild,v 1.2 2004/11/16 11:49:08 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.27-r5.ebuild,v 1.1 2004/11/25 14:59:37 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -39,6 +39,7 @@ src_unpack() {
 	epatch ${DISTDIR}/linux-${PV}-CAN-2004-0814.patch || die "security patch for CAN-2004-0814 failed."
 	epatch ${FILESDIR}/${PN}.CAN-2004-0841-fix_ldisc_switch.patch || die "fix for CAN-2004-0814 patch failed."
 	epatch ${DISTDIR}/linux-${PV}-nfs3-xdr.patch.bz2 || die "security patch for nfs3-xdk failed."
-	epatch ${FILESDIR}/openmosix-sources-binfmt_elf.patch || die "Security patch for binfmt_elf failed."
+	epatch ${FILESDIR}/${PN}-binfmt_elf.patch || die "Security patch for binfmt_elf failed."
+	epatch ${FILESDIR}/${PN}-${PV}-smbfs.patch
 	kernel_universal_unpack
 }

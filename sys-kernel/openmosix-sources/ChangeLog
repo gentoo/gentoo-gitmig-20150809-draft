@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.70 2004/11/16 11:49:08 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.71 2004/11/25 14:59:37 voxus Exp $
+
+*openmosix-sources-2.4.24-r8 (25 Nov 2004)
+*openmosix-sources-2.4.27-r5 (25 Nov 2004)
+
+  25 Nov 2004; Konstantin Arkhipov <voxus@gentoo.org>:
+  +files/openmosix-sources-2.4.24-smbfs.patch,
+  +files/openmosix-sources-2.4.27-smbfs.patch,
+  -openmosix-sources-2.4.27-r4.ebuild,
+  +openmosix-sources-2.4.27-r5.ebuild,
+  +openmosix-sources-2.4.24-r8.ebuild:
+  Fixed smbfs vulnerability, closing #65877.
 
 *openmosix-sources-2.4.24-r7 (16 Nov 2004)
 
