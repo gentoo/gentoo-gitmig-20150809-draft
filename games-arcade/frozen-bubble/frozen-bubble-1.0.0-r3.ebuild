@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.3 2004/01/29 09:40:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.4 2004/02/03 01:28:31 mr_bones_ Exp $
 
 inherit games perl-module
 
@@ -12,9 +12,10 @@ SRC_URI="http://guillaume.cottenceau.free.fr/fb/${P}.tar.bz2
 	http://chl.tuxfamily.org/frozen-bubble/${NET_CLIENT_P}.tar.bz2
 	http://chl.tuxfamily.org/frozen-bubble/${NET_SERVER_P}.tar.bz2"
 
+KEYWORDS="x86 ppc hppa amd64"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc hppa amd64"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4
@@ -25,9 +26,10 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 
-	sed -i 's:INSTALLDIRS=.*:PREFIX=${D}/usr:' \
-		${P}/c_stuff/Makefile \
-		|| die 'sed c_stuff/Makefile failed'
+	sed -i \
+		-e 's:INSTALLDIRS=.*:PREFIX=${D}/usr:' \
+			${P}/c_stuff/Makefile \
+				|| die 'sed c_stuff/Makefile failed'
 }
 
 src_compile() {
@@ -37,7 +39,7 @@ src_compile() {
 		BINDIR=${GAMES_BINDIR} \
 		DATADIR=${GAMES_DATADIR} \
 		MANDIR=/usr/share/man \
-		|| die
+			|| die "make failed"
 
 	cd ${WORKDIR}/${NET_SERVER_P}
 	./bootstrap.sh || die
@@ -51,9 +53,9 @@ src_install() {
 		DATADIR=${D}/${GAMES_DATADIR} \
 		MANDIR=${D}/usr/share/man \
 		install \
-		|| die
+			|| die "make install failed"
 	dosed /usr/games/bin/frozen-bubble
-	dodoc AUTHORS CHANGES COPYING README
+	dodoc AUTHORS CHANGES README
 
 	cd ${WORKDIR}/${NET_CLIENT_P}
 	make \
@@ -62,10 +64,11 @@ src_install() {
 		DATADIR=${D}/${GAMES_DATADIR} \
 		MANDIR=${D}/usr/share/man \
 		install \
-		|| die
+			|| die "make install failed"
 
 	cd ${WORKDIR}/${NET_SERVER_P}
-	make DESTDIR=${D} sbindir=${GAMES_BINDIR} install || die
+	make DESTDIR=${D} sbindir=${GAMES_BINDIR} install \
+		|| die "make install failed"
 	dodoc TODO
 	newdoc README README.server
 
