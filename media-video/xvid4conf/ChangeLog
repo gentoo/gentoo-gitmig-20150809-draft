@@ -1,0 +1,9 @@
+# ChangeLog for media-video/xvid4conf
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/ChangeLog,v 1.1 2004/03/31 19:33:10 mholzer Exp $
+
+*xvid4conf-1.12 (31 Mar 2004)
+
+  31 Mar 2004; Martin Holzer <mholzer@gentoo.org> xvid4conf-1.12.ebuild:
+  Initial ebuild. Submitted by Simon Raffeiner <wiredcoder@web.de> in 37139
+
