@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.51.ebuild,v 1.11 2004/09/21 14:10:07 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.51.ebuild,v 1.12 2004/10/03 21:55:38 swegener Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
