@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.1 2003/05/11 09:38:18 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.2 2003/12/12 03:46:56 jbms Exp $
+
+  11 Dec 2003; Jeremy Maitin-Shepard <jbms@gentoo.org> qemacs-0.3.1.ebuild:
+  The ebuild now patches the configure script so that the package
+  compiles on GCC 3.3.  Resolves Bug #35632.
 
 *qemacs-0.3.1 (11 May 2003)
 
