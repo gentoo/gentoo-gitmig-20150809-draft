@@ -55,7 +55,7 @@ setup_multilib_variables() {
 
 # spec switching support only available in gcc 3.4.2-r1 and later
 if [ -n "${USE_SPECS}" ] ; then
-	GCC_VER="$(${CC:=gcc} --version | grep ^gcc | awk '{ print $3 }')"
+	GCC_VER="$(${CC:=gcc} -dumpversion)"
 	SPECSLOC="/usr/lib/gcc-lib/${CHOST}/${GCC_VER}/"
 	if [ -f ${SPECSLOC}/${USE_SPECS}.specs ] ; then
 		export GCC_SPECS="${SPECSLOC}/${USE_SPECS}.specs"
