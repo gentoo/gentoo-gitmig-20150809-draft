@@ -1,6 +1,16 @@
-MD5 3de695112e481905ec3b214affa626c1 ChangeLog 2228
-MD5 fac8d701cb19edff4b3937370f298e83 tintin-1.93.7.ebuild 979
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d12913b47687fbc26b2dbac0920e7c9f ChangeLog 2322
+MD5 ad409e9d4319179db4612a76156ff279 tintin-1.93.7.ebuild 977
 MD5 ff65bfc2d78f93e08ef1a7795f5cd260 tintin-1.93.2-r1.ebuild 1009
-MD5 2d3f6788e9c4820e6c16a322dd871689 files/digest-tintin-1.93.7 65
 MD5 51f0669c75838ea5d5956bb788bfc412 files/digest-tintin-1.93.2-r1 65
+MD5 2d3f6788e9c4820e6c16a322dd871689 files/digest-tintin-1.93.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB9rrtKRy60XGEcJIRAnY4AKCnSeA3aIM2z3kplPQYzmkWvu9RHQCeNnXg
+BTz4ITNm3uBuwHW2GZ8sC3A=
+=jgzS
+-----END PGP SIGNATURE-----
