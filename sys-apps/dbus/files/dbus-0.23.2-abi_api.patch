@@ -1,0 +1,39 @@
+diff -Naur dbus-0.23.2.orig/dbus/dbus-pending-call.c dbus-0.23.2/dbus/dbus-pending-call.c
+--- dbus-0.23.2.orig/dbus/dbus-pending-call.c	2005-02-28 13:43:54.850066742 +0100
++++ dbus-0.23.2/dbus/dbus-pending-call.c	2005-02-28 13:44:50.266318842 +0100
+@@ -291,6 +291,24 @@
+ }
+ 
+ /**
++ * Gets the reply, or returns #NULL if none has been received yet. The
++ * reference count is not incremented on the returned message, so you
++ * have to keep a reference count on the pending call (or add one
++ * to the message).
++ *
++ * @todo not thread safe? I guess it has to lock though it sucks
++ * @todo maybe to make this threadsafe, it should be steal_reply(), i.e. only one thread can ever get the message
++ * 
++ * @param pending the pending call
++ * @returns the reply message or #NULL.
++ */
++DBusMessage*
++dbus_pending_call_get_reply (DBusPendingCall *pending)
++{
++  return pending->reply;
++}
++
++/**
+  * Block until the pending call is completed.  The blocking is as with
+  * dbus_connection_send_with_reply_and_block(); it does not enter the
+  * main loop or process other messages, it simply waits for the reply
+diff -Naur dbus-0.23.2.orig/dbus/dbus-pending-call.h dbus-0.23.2/dbus/dbus-pending-call.h
+--- dbus-0.23.2.orig/dbus/dbus-pending-call.h	2005-02-28 13:43:54.824066155 +0100
++++ dbus-0.23.2/dbus/dbus-pending-call.h	2005-02-28 13:45:30.271222777 +0100
+@@ -42,6 +42,7 @@
+ void         dbus_pending_call_cancel        (DBusPendingCall               *pending);
+ dbus_bool_t  dbus_pending_call_get_completed (DBusPendingCall               *pending);
+ DBusMessage* dbus_pending_call_steal_reply   (DBusPendingCall               *pending);
++DBusMessage* dbus_pending_call_get_reply     (DBusPendingCall               *pending);
+ void         dbus_pending_call_block         (DBusPendingCall               *pending);
+ 
+ dbus_bool_t dbus_pending_call_allocate_data_slot (dbus_int32_t     *slot_p);

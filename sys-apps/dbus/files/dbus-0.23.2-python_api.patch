@@ -1,0 +1,12 @@
+diff -ru dbus-0.23.2.orig/python/dbus_bindings.pyx.in dbus-0.23.2/python/dbus_bindings.pyx.in
+--- dbus-0.23.2.orig/python/dbus_bindings.pyx.in	2005-02-24 11:16:05.771568616 +0100
++++ dbus-0.23.2/python/dbus_bindings.pyx.in	2005-02-24 11:16:38.016303835 +0100
+@@ -395,7 +395,7 @@
+     def get_reply(self):
+         cdef Message message
+         message = Message(_create=0)
+-        message._set_msg(dbus_pending_call_get_reply(self.pending_call))
++        message._set_msg(dbus_pending_call_steal_reply(self.pending_call))
+         return message
+ 
+     def block(self):

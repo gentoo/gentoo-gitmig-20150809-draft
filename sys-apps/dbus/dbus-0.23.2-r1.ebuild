@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.2.ebuild,v 1.2 2005/03/06 21:59:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.23.2-r1.ebuild,v 1.1 2005/03/06 21:59:25 foser Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono python multilib
@@ -48,16 +48,20 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-0.23-fd_set.patch
 	# workaround mono lib versioning (#81794)
 	epatch ${FILESDIR}/${P}-version_fix.patch
+	# fix python abi/api (#83979)
+	epatch ${FILESDIR}/${P}-abi_api.patch
+	epatch ${FILESDIR}/${P}-python_api.patch
 
 	# It stupidly tries to install python stuff to platform-independent
 	# libdir
-#	epatch ${FILESDIR}/dbus-0.23-pyexecdir.patch
+	epatch ${FILESDIR}/dbus-0.23-pyexecdir.patch
 
 	# Don't rerun auto*
 	sleep 1
 	touch ${S}/python/Makefile.in
 	sleep 1
 	touch ${S}/configure
+
 }
 
 src_compile() {
@@ -112,6 +116,10 @@ src_install() {
 	# initscript
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/dbus
+
+	# dbus X session script (#77504)
+	exeinto /etc/X11/xinit/xinitrc.d/
+	doexe ${FILESDIR}/30-dbus
 
 	# needs to exist for the system socket
 	keepdir /var/lib/dbus
