@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/plb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/plb/ChangeLog,v 1.1 2003/02/28 06:42:23 vapier Exp $
+
+*plb-0.3 (28 Feb 2003)
+
+  28 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by the maintainer of plb for #16423.
