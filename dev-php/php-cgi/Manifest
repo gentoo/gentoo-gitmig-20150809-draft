@@ -4,10 +4,10 @@ MD5 dffa69fb33eb0cadc0ba2d01e178dda8 php-cgi-5.0.1.ebuild 895
 MD5 3411777bc579d53726a119e9bcd58c0c php-cgi-4.3.9_rc1.ebuild 866
 MD5 dea7eefba04e3e8d7fa6dcb9f01bd95a php-cgi-5.0.0-r1.ebuild 898
 MD5 ff8d280e1df6a129bc07898d5acbb1c0 php-cgi-5.0.0.ebuild 751
-MD5 552c78181a8dc33713a9c756c194fbf3 php-cgi-4.3.9.ebuild 806
-MD5 9e2227c1288f239d4b8c64c2997773ab php-cgi-5.0.2.ebuild 895
+MD5 1d1f8822edc295c245081073e0686e8a php-cgi-4.3.9.ebuild 802
+MD5 7e76422a184b68458a18cdc7a5a21834 php-cgi-5.0.2.ebuild 897
 MD5 6069f9c2784adf67f7fb2ed0e860ca0d php-cgi-4.3.9_rc1-r1.ebuild 886
-MD5 caf6f49f39f907b9ddcae240a1407420 ChangeLog 5242
+MD5 7a5a1953577cf4c1c7a6198df6e2ccc3 ChangeLog 5320
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 11f305b98b753ee023da8503a360762a files/digest-php-cgi-5.0.0-r1 63
 MD5 286ce4ea00fde75122c14fd35c3d4672 files/digest-php-cgi-4.3.9_rc1 208
