@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.27 2004/02/15 20:11:00 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.28 2004/02/16 00:40:41 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -501,6 +501,22 @@ detect_version() {
 	fi
 	
 	S=${WORKDIR}/linux-${KV}
+}
+
+
+detect_arch() {
+	# This function sets ARCH_URI and ARCH_PATCH
+	# with the neccessary info for the arch sepecific compatibility
+	# patchsets.
+	
+	local LOCAL_ARCH
+	local COMPAT_URI	
+
+	LOCAL_ARCH="$(echo ${ARCH} | tr [a-z] [A-Z])"
+	COMPAT_URI="${LOCAL_ARCH}_URI"
+
+	ARCH_URI="${!COMPAT_URI}"
+	ARCH_PATCH="${DISTDIR}/${ARCH_URI/*\//}"
 }
 
 
