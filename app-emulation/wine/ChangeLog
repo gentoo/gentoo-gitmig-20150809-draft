@@ -1,7 +1,12 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.5 2002/03/28 01:41:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.6 2002/03/29 16:29:47 danarmak Exp $
 
+*wine-20020310-r1 (29 Mar 2002)
+
+  29 Mar 2002; Dan Armak <danarmak@gentoo.org>: fix bug #1373: disable custom optimizations,
+  or the resulting wine won't work properly and will make the hardworking folks at #winehq
+  really really angry
 
 *wine-20020310 (27 Mar 2002)
 
