@@ -1,12 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.9 2004/07/28 10:58:57 axxo Exp $
-
-# Maintainer: Stefan Jones <cretin@gentoo.org>
-# Author: Stefan Jones <cretin@gentoo.org>
-
-# Based on http://www.linuxfromscratch.org/~tushar/hints/javafromscratch.txt (LFS)
-# By Tushar Teredesai <Tush@Yahoo.Com>
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.10 2004/09/04 19:05:51 axxo Exp $
 
 IUSE="nptl doc"
 
@@ -115,7 +109,7 @@ src_compile () {
 	export ALT_CACERTS_FILE=${ALT_BOOTDIR}/jre/lib/security/cacerts
 	export ALT_MOTIF_DIR="${S}/motif"
 	export ALT_DEVTOOLS_PATH="/usr/bin"
-	export MILESTONE="gentoo"
+	#export MILESTONE="gentoo"
 	export BUILD_NUMBER=`date +%s`
 	export LIBS="-lstdc++"
 	export OTHER_LDFLAGS="-lpthread"
