@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.7 2004/04/22 06:12:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.8 2004/05/18 23:49:37 vapier Exp $
 
 inherit eutils fixheadtails
 
@@ -13,9 +13,10 @@ SRC_URI="http://www.cstr.ed.ac.uk/download/festival/1.4.3/${MY_P}-release.tar.gz
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc amd64"
+IUSE="doc"
 
 RDEPEND="virtual/glibc"
-IUSE="doc"
+
 S="${WORKDIR}/speech_tools"
 
 src_unpack() {
@@ -24,10 +25,9 @@ src_unpack() {
 	cd ${S}
 	use doc && unpack festdoc-1.4.2.tar.gz && mv festdoc-1.4.2 festdoc
 
-	epatch ${FILESDIR}/${PN}-gcc3.3.diff
+	epatch ${FILESDIR}/${PV}-gcc3.4.patch
 	ht_fix_file config.guess
-	sed -i 's:-O3:$(CFLAGS):' base_class/Makefile
-	sed -i 's/-fno-implicit-templates //' config/compilers/gcc_defaults.mak
+	sed -i 's:-O3:$(OPTIMISE_CXXFLAGS):' base_class/Makefile
 
 	# Compile fix for #41329.
 	sed -i 's/-fpic/-fPIC/' config/compilers/gcc_defaults.mak
@@ -35,7 +35,10 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-	emake -j1 || die
+	emake -j1 \
+		OPTIMISE_CXXFLAGS="${CXXFLAGS}" \
+		OPTIMISE_CCFLAGS="${CFLAGS}" \
+		|| die
 }
 
 src_install() {
@@ -45,7 +48,7 @@ src_install() {
 	rm -f Makefile
 
 	dodir /usr/lib/speech-tools/share/testsuite
-	for file in *; do
+	for file in * ; do
 		dobin ${file}
 		dosed "s:${S}/testsuite/data:/usr/lib/speech-tools/share/testsuite:g" /usr/lib/speech-tools/bin/${file} testsuite/data
 		dosed "s:${S}/bin:/usr/lib/speech-tools/bin:g" /usr/lib/speech-tools/bin/${file}
@@ -81,7 +84,7 @@ src_install() {
 	cd ${S}/lib
 	dodoc cstrutt.dtd
 
-	if use doc; then
+	if use doc ; then
 		cd ${S}/festdoc/speech_tools/doc
 		dohtml *
 	fi
