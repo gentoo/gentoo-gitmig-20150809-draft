@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gforth
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.10 2004/07/29 01:11:41 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.11 2004/08/06 18:49:34 malc Exp $
+
+  06 Aug 2004; Malcolm Lashley <malc@gentoo.org> gforth-0.6.2.ebuild:
+  Add ~amd64, closes bug #57634
 
 *gforth-0.5.0-r1 (28 Jul 2004)
 
