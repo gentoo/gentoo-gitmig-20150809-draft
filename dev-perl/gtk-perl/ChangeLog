@@ -1,6 +1,12 @@
 # ChangeLog for dev-perlgtk-perlChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.11 2002/11/05 16:14:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.12 2002/11/07 13:14:29 azarah Exp $
+
+*gtk-perl-0.7008-r7 (7 Nov 2002)
+
+  07 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Fix gdk-pixbuf-0.20.0 not detected, bug #10232.
 
 *gtk-perl-0.7008-r6 (26 May 2002)
 
