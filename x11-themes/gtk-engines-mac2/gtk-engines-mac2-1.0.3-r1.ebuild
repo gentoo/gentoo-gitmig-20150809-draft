@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mac2/gtk-engines-mac2-1.0.3-r1.ebuild,v 1.7 2004/07/09 21:32:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mac2/gtk-engines-mac2-1.0.3-r1.ebuild,v 1.8 2004/07/15 01:05:31 agriffis Exp $
 
 inherit gtk-engines2
 
@@ -15,5 +15,3 @@ SLOT="1"
 DEPEND="=x11-libs/gtk+-1.2*"
 
 S=${WORKDIR}/gtk-Mac2-theme
-
-

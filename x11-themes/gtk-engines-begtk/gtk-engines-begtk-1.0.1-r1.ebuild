@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-begtk/gtk-engines-begtk-1.0.1-r1.ebuild,v 1.9 2004/07/09 21:38:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-begtk/gtk-engines-begtk-1.0.1-r1.ebuild,v 1.10 2004/07/15 01:02:47 agriffis Exp $
 
 inherit gtk-engines2
 
@@ -15,5 +15,3 @@ LICENSE="GPL-2"
 DEPEND="=x11-libs/gtk+-1.2*"
 
 S=${WORKDIR}/GTKBeEngine
-
-
