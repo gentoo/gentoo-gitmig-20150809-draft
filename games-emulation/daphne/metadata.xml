@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<longdescription>
-Welcome to DAPHNE, the First Ever Multiple Arcade Laserdisc Emulator! =]  DAPHNE is a 
-program that lets one play the original versions of many laserdisc arcade games on 
-one's PC.
-</longdescription>
+<herd>games</herd>
 </pkgmetadata>
