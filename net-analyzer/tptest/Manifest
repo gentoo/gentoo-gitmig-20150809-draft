@@ -1,4 +1,6 @@
 MD5 f6970304197557d08144449452bc5dc4 tptest-3.1.0.ebuild 779
 MD5 31ca498e1b8c0a038430956fa28d4f72 ChangeLog 335
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
+MD5 9d9b0a172bca2ecb77e1c8aeffb437fd tptest-3.1.2.ebuild 580
 MD5 f268c8a87c38b2b211c6d304a4319535 files/digest-tptest-3.1.0 63
+MD5 8675b4967e182af2a1f99f9acc7ac895 files/digest-tptest-3.1.2 63
