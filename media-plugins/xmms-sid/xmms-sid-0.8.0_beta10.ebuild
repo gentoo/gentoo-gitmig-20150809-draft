@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta10.ebuild,v 1.5 2004/07/04 15:53:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta10.ebuild,v 1.6 2004/07/07 12:55:14 kloeri Exp $
 
 MY_PV=${PV/_beta/beta}
 MY_P=${PN}-${MY_PV}
@@ -18,7 +18,7 @@ IUSE=""
 # GRP to work right.
 RDEPEND="media-sound/xmms
 	=media-libs/libsidplay-1*
-	!alpha? ( =media-libs/libsidplay-2* )"
+	=media-libs/libsidplay-2*"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7"
 
