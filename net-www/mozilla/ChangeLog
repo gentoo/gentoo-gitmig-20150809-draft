@@ -1,8 +1,22 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.45 2002/11/12 17:28:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.46 2002/11/18 20:16:00 azarah Exp $
+
+*mozilla-1.2_beta (18 Nov 2002)
+
+  18 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2_beta.ebuild :
+
+  New version of 1.2b.  This adds Xft2.0 support without having to install
+  Xft2.0 (and possibly break other things), as Xft2.0 is build with mozilla
+  and installed in /usr/lib/mozilla.  Hope this makes up for the long wait :)
+  Thanks to Jelmer Jaarsma <dis-k@diska.dyndns.org> (bug #9319) for the
+  gtk2 patch.
 
 *mozilla-1.0.1-r3 (12 Nov 2002)
+
+  18 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.0.1-r3.ebuild :
+
+  Mark as stable.
 
   12 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
 

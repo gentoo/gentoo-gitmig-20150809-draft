@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r3.ebuild,v 1.2 2002/11/18 20:16:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2_beta.ebuild,v 1.1 2002/11/18 20:16:00 azarah Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -10,8 +10,10 @@ inherit flag-o-matic gcc makeedit eutils
 # Crashes on start when compiled with -fomit-frame-pointer
 filter-flags "-fomit-frame-pointer"
 
-EMVER="0.63.3"
-IPCVER="0.99.63"
+EMVER="0.70.0"
+IPCVER="1.0.1"
+
+FCVER="2.0"
 
 PATCH_VER="1.0"
 
@@ -19,14 +21,16 @@ PATCH_VER="1.0"
 MY_PV1="${PV/_}"
 MY_PV2="${MY_PV1/eta}"
 S="${WORKDIR}/mozilla"
+FC_S="${WORKDIR}/fcpackage.${FCVER/\./_}/Xft"
 DESCRIPTION="The Mozilla Web Browser"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.gz
 	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-${EMVER}.tar.gz
 	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )
-	mirror://gentoo/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
+	http://fontconfig.org/release/fcpackage.${FCVER/\./_}.tar.gz"
+#	mirror://gentoo/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -35,14 +39,15 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
+	>=media-libs/fontconfig-2.0-r3
 	>=sys-apps/portage-2.0.14
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
 	( gtk2? >=x11-libs/gtk+-2.0.5 :
-	  =x11-libs/gtk+-1.2* )
+	        =x11-libs/gtk+-1.2* )
 	( gtk2? >=dev-libs/glib-2.0.4 :
-	  =dev-libs/glib-1.2* )
+	        =dev-libs/glib-1.2* )
 	java?  ( virtual/jre )"
 
 DEPEND="${RDEPEND}
@@ -69,48 +74,35 @@ src_unpack() {
 	
 	unpack ${A}
 
-	if [ "$(gcc-version)" != "2.95" ] ; then
-		# Fix bogus asm (from Mandrake .spec)
-		cd ${S}; epatch ${FILESDIR}/mozilla-1.0-asmfixes.patch
-
-		# ABI compat patch for gcc-3.x to use gcc-2.95 plugins
-		#
-		# http://bugzilla.mozilla.org/show_bug.cgi?id=154206
-		# http://bugzilla.mozilla.org/show_bug.cgi?id=124006
-		# http://bugzilla.mozilla.org/show_bug.cgi?id=116444
-		#
-		if [ "${ARCH}" = "x86" ] ; then
-			cd ${S}; epatch ${FILESDIR}/mozilla-1.0-abi-compat-wrappers.patch
-		fi
-
-		# ABI Patch for ppc/xpcom for gcc-3.x
-		# http://bugzilla.mozilla.org/show_bug.cgi?id=142594
-		if [ "${ARCH}" = "ppc" ] ; then
-			cd ${S}; epatch ${FILESDIR}/mozilla-1.0-abi-xpcom-ppc.patch
-		fi
-
+	if [ "$(gcc-major-version)" -eq "3" ] ; then
 		# ABI Patch for alpha/xpcom for gcc-3.x
 		if [ "${ARCH}" = "alpha" ] ; then
 			cd ${S}; epatch ${FILESDIR}/mozilla-alpha-xpcom-subs-fix.patch
 		fi
-
-		# ABI Patch for sparc and sparc64/xpcom for gcc-3.x
-		if use sparc &>/dev/null || use sparc64 &>/dev/null
-		then
-			cd ${S}; epatch ${FILESDIR}/mozilla-1.0.1-sparc-xpcom.patch
-		fi
 	fi
-
-	# Apply the bytecode patch for freetype2
-	cd ${S}; epatch ${FILESDIR}/mozilla-ft-bytecode.patch
 
 	# A patch for mozilla to disregard the PLATFORM variable, which
 	# can break compiles (has done for sparc64).  See:
 	# http://bugzilla.mozilla.org/show_bug.cgi?id=174143
-	cd ${S}; epatch ${FILESDIR}/${P}-platform.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-1.0.1-platform.patch
+
+	epatch ${FILESDIR}/1.2/mozilla-1.2b-default-plugin-less-annoying.patch.bz2
+	epatch ${FILESDIR}/1.2/mozilla-1.2b-over-the-spot.patch.bz2
+	epatch ${FILESDIR}/1.2/mozilla-1.2b-freetype.patch.bz2
+	epatch ${FILESDIR}/1.2/mozilla-1.2b-wallet.patch.bz2
+
+	# Get mozilla to link to Xft2.0 that we install in tmp directory
+	# <azarah@gentoo.org> (18 Nov 2002)
+	epatch ${FILESDIR}/1.2/mozilla-1.2b-Xft-includes.patch.bz2
+
+	if [ -n "`use gtk2`" ]; then
+		epatch ${FILESDIR}/1.2/mozilla-1.2b-gtk2.patch.bz2
+	fi
 	
-	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2 
-	cd ${S}; epatch ${WORKDIR}/patch
+	cd ${S}
+	export WANT_AUTOCONF_2_1=1
+	autoconf &> /dev/null
+	unset WANT_AUTOCONF_2_1
 
 	# Unpack the enigmail plugin
 	if [ -n "`use crypt`" -a -z "`use moznomail`" ] && \
@@ -120,10 +112,10 @@ src_unpack() {
 		mv ${WORKDIR}/enigmail ${S}/extensions/
 	fi
 
-	# Fix bug #7656
-	cd ${S}/other-licenses/Xft/Xrender
-	ln -s /usr/X11R6/include/X11/extensions/Xext.h Xext.h
-	ln -s /usr/X11R6/include/X11/extensions/renderproto.h renderproto.h
+	cd ${FC_S}
+	export WANT_AUTOCONF_2_5=1
+	autoconf --force
+	unset WANT_AUTOCONF_2_5
 }
 
 src_compile() {
@@ -133,10 +125,10 @@ src_compile() {
 	#       tested ok -- azarah
 	if [ -n "`use gtk2`" ] ; then
 		myconf="${myconf} --enable-toolkit-gtk2 \
-			              --enable-default-toolkit=gtk2 \
-			              --disable-toolkit-qt \
-			              --disable-toolkit-xlib \
-			              --disable-toolkit-gtk"
+		                  --enable-default-toolkit=gtk2 \
+		                  --disable-toolkit-qt \
+		                  --disable-toolkit-xlib \
+		                  --disable-toolkit-gtk"
 	else
 		myconf="${myconf} --enable-toolkit-gtk \
 			              --enable-default-toolkit=gtk \
@@ -152,14 +144,11 @@ src_compile() {
 	if [ -z "${DEBUG}" ] ; then
 		myconf="${myconf} --enable-strip-libs \
 			              --disable-debug \
-			              --disable-tests"
-# Seems to be the cause of crashes on form submit
-#						  --disable-dtd-debug
+			              --disable-tests \
+						  --disable-dtd-debug"
 	fi
 
 	if [ -n "${MOZ_ENABLE_XFT}" ] ; then
-		# Enable Xft (currently this is done via freetype2 for gtk1,
-		# and libpangoXft for gtk2).
 		myconf="${myconf} --enable-xft"
 	fi
 
@@ -222,14 +211,51 @@ src_compile() {
 		fi
 	fi
 
-	export WANT_AUTOCONF_2_1=1
-	autoconf
+	# *********************************************************************
+	#
+	#  Configure and build Xft2.0 and Xrender
+	#
+	# *********************************************************************
+
+	cd ${FC_S}
+	einfo "Configuring Xft2.0..."
+	mkdir -p ${WORKDIR}/Xft
+	./configure --prefix=${WORKDIR}/Xft || die
+	
+	einfo "Building Xft2.0..."
+	emake || die
+	
+	einfo "Installing Xft2.0 in temp directory..."
+	make prefix=${WORKDIR}/Xft \
+		confdir=${WORKDIR}/Xft/etc/fonts \
+		datadir=${WORKDIR}/Xft/share \
+		install || die
+
+	# We also need to update Xrender ..
+	cd ${FC_S}/../Xrender
+	einfo "Compiling Xrender..."
+	xmkmf
+	make
+	cp -df Xrender.h extutil.h region.h render.h renderproto.h \
+		${WORKDIR}/Xft/include
+	cp -df libXrender.so* ${WORKDIR}/Xft/lib
+
+	# Where is Xft2.0 located ?
+	export PKG_CONFIG_PATH="${WORKDIR}/Xft/lib/pkgconfig"
+
+	# *********************************************************************
+	#
+	#  Configure and build Mozilla
+	#
+	# *********************************************************************
+	
+	cd ${S}
 	
 	#This should enable parallel builds, I hope
 	export MAKE="emake"
 	
 	# Get it to work without warnings on gcc3
-	CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
+	export CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
 	./configure --prefix=/usr/lib/mozilla \
 		--disable-pedantic \
@@ -250,10 +276,18 @@ src_compile() {
 		${myconf} || die
 
 	edit_makefiles
-	make || die
+	einfo "Building Mozilla..."
+	make WORKDIR="${WORKDIR}" || die
+
+	# *********************************************************************
+	#
+	#  Build Mozilla NSS
+	#
+	# *********************************************************************
 
 	# Build the NSS/SSL support
 	if [ "`use ssl`" ] ; then
+		einfo "Building Mozilla NSS..."
 		cd ${S}/security/coreconf
 		
 		# Fix #include problem
@@ -272,10 +306,17 @@ src_compile() {
 		cd ${S}
 	fi
 
+	# *********************************************************************
+	#
+	#  Build Enigmail plugin
+	#
+	# *********************************************************************
+
 	# Build the enigmail plugin
 	if [ -n "`use crypt`" -a -z "`use moznomail`" ] && \
 	   [ "${NO_MAIL}" != "YES" -a "${NO_MAIL}" != "yes" ]
 	then
+		einfo "Building Enigmail plugin..."
 		cd ${S}/extensions/ipc
 		make || die
 
@@ -293,6 +334,11 @@ src_install() {
 	make MOZ_PKG_FORMAT="raw" TAR_CREATE_FLAGS="-chf" > /dev/null || die
 	mv -f ${S}/dist/mozilla ${D}/usr/lib/mozilla
 
+	einfo "Installing Xft2.0..."
+	cp -df ${WORKDIR}/Xft/lib/libXft.so.* ${D}/usr/lib/mozilla
+	cp -df ${WORKDIR}/Xft/lib/libXrender.so.* ${D}/usr/lib/mozilla
+
+	einfo "Installing includes and idl files..."
 	# Copy the include and idl files
 	dodir /usr/lib/mozilla/include/idl /usr/include
 	cd ${S}/dist
@@ -306,6 +352,7 @@ src_install() {
 
 	# Install the NSS/SSL libs, headers and tools
 	if [ "`use ssl`" ] ; then
+		einfo "Installing Mozilla NSS..."
 		# Install the headers ('make install' do not work for headers ...)
 		insinto /usr/lib/mozilla/include/nss
 		doins ${S}/dist/public/seccmd/*.h
@@ -350,6 +397,11 @@ src_install() {
 	cd ${S}
 	exeinto /usr/bin
 	newexe ${FILESDIR}/mozilla.sh mozilla
+	# Get mozilla to preload lesstif to fix java bork ...
+	if [ "$(gcc-major-version)" -eq "3" ] ; then
+		perl -pi -e 's|/usr/lib/mozilla/libc\+\+mem.so|/usr/lib/libXm.so.2|g' \
+			${D}/usr/bin/mozilla
+	fi
 	insinto /etc/env.d
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*
@@ -372,13 +424,9 @@ src_install() {
 		doins ${S}/build/package/rpm/SOURCES/mozilla.desktop
 	fi
 
-	if [ -n "${MOZ_ENABLE_XFT}" ] ; then
-		cd ${D}/usr/lib/mozilla/defaults/pref
-		epatch ${FILESDIR}/mozilla-xft-unix-prefs.patch
-	fi
-
 	# Take care of non root execution
 	# (seems the problem is that not all files are readible by the user)
+	einfo "Fixing Permissions..."
 	chmod -R g+r,o+r ${D}/usr/lib/mozilla
 }
 
@@ -403,20 +451,13 @@ pkg_postinst() {
 
 	# Make symlink for Java plugin (do not do in src_install(), else it only
 	# gets installed every second time)
-	if [ "`use java`" -a ! -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ]
+	if [ "`use java`" -a "$(gcc-major-version)" -ne "3" \
+	     -a ! -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ]
 	then
 		if [ -e `java-config --full-browser-plugin-path=mozilla` ]
 		then
 			ln -snf `java-config --full-browser-plugin-path=mozilla` \
 				${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` 
-		fi
-	fi
-
-	# We do not yet want any JAVA plugins with gcc-3.x, as they cause
-	# mozilla to crash in some cases.
-	if [ "$(gcc-version)" != "2.95" -a -n "`use java`" ] ; then
-		if [ -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ] ; then
-			rm -f ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla`
 		fi
 	fi
 
@@ -440,7 +481,7 @@ pkg_postinst() {
 	# Register components, setup Chrome .rdf files and fix file permissions
 	einfo "Registering Components and Chrome..."
 	umask 022
-	${MOZILLA_FIVE_HOME}/regxpcom
+	${MOZILLA_FIVE_HOME}/regxpcom &> /dev/null
 	if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
 		chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
 	fi
@@ -450,7 +491,7 @@ pkg_postinst() {
 		${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt
 	echo "locale,install,select,en-US" >> \
 		${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt
-	${MOZILLA_FIVE_HOME}/regchrome
+	${MOZILLA_FIVE_HOME}/regchrome &> /dev/null
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
 
 
