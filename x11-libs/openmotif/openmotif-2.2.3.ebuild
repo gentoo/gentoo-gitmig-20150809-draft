@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.1 2005/02/01 18:00:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.2 2005/02/01 18:04:18 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -20,10 +20,12 @@ DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4
 	sys-devel/automake
-	sys-devel/autoconf"
+	sys-devel/autoconf
+	!virtual/motif"
 
 RDEPEND="virtual/libc
-	virtual/x11"
+	virtual/x11
+	!virtual/motif"
 
 pkg_setup() {
 	# multilib includes don't work right in this package...
