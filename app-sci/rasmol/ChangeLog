@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/rasmol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.4 2003/10/03 20:50:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.5 2003/10/09 08:07:29 brandy Exp $
+
+  09 Oct 2003; Brandy Westcott brandy@gentoo.org rasmol-2.6_beta2.ebuild:
+  Fixed applying of patch. Closes Bug #30730
 
   03 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>;
   rasmol-2.6_beta2.ebuild:

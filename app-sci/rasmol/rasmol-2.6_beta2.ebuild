@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.6_beta2.ebuild,v 1.8 2003/10/03 20:50:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.6_beta2.ebuild,v 1.9 2003/10/09 08:07:29 brandy Exp $
 
 DESCRIPTION="Free program that displays molecular structure."
 HOMEPAGE="http://www.umass.edu/microbio/rasmol/index2.htm"
@@ -18,6 +18,7 @@ S="${WORKDIR}/RasMol2"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${WORKDIR}/${P0}-${PATCHVER}.diff
 }
 
