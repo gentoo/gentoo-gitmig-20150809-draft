@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/make.defaults,v 1.1 2004/11/24 00:57:28 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/make.defaults,v 1.2 2005/04/01 02:43:50 pebenito Exp $
 
 USE="berkdb crypt ncurses pam python readline selinux ssl zlib"
 STAGE1_USE="selinux"
 GRP_STAGE23_USE="berkdb crypt ncurses pam python readline selinux ssl zlib"
 
-FEATURES="autoconfig strict sfperms"
+FEATURES="autoconfig selinux strict sfperms"
 POLICYDIR="/etc/security/selinux/src/policy"
 
 PORTAGE_T="portage_t"
