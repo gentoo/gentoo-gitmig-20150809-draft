@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-wireless
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-wireless/ChangeLog,v 1.1 2004/07/18 09:34:26 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-wireless/ChangeLog,v 1.2 2004/07/19 09:49:37 dholm Exp $
+
+  19 Jul 2004; David Holm <dholm@gentoo.org> desklet-wireless-0.2.ebuild:
+  Added to ~ppc.
 
 *desklet-wireless-0.2 (18 Jul 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psiextras/desklet-psiextras-0.1.ebuild,v 1.1 2004/07/18 09:48:04 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psiextras/desklet-psiextras-0.1.ebuild,v 1.2 2004/07/19 09:50:46 dholm Exp $
 
 DESKLET_NAME="desklet-psiextras"
 
@@ -18,7 +18,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.26
 	>=x11-plugins/desklet-psidisplays-20040420
