@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.3.ebuild,v 1.8 2004/04/26 03:13:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.3.ebuild,v 1.9 2004/04/27 21:54:58 agriffis Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 IUSE="nls"
 

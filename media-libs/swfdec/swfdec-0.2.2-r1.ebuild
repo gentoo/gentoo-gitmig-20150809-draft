@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.2.2-r1.ebuild,v 1.3 2004/03/19 07:56:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.2.2-r1.ebuild,v 1.4 2004/04/27 22:02:25 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Macromedia Flash decoding library"
 HOMEPAGE="http://swfdec.sourceforge.net"

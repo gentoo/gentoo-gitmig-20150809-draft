@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.3 2004/02/19 01:23:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.4 2004/04/27 21:59:04 agriffis Exp $
 
-inherit libtool distutils
+inherit libtool distutils eutils
 
 DESCRIPTION="Client library to access metadata of mp3/vorbis/CD media"
 HOMEPAGE="http://www.musicbrainz.org/"

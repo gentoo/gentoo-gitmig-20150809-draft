@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/swfdec
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.3 2003/09/22 11:53:13 pauldv Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.4 2004/04/27 22:02:25 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> swfdec-0.2.2-r1.ebuild,
+  swfdec-0.2.2.ebuild:
+  Add inherit eutils
 
   22 Sep 2003; <paul@gentoo.org> metadata.xml:
   Fix metadata.xml

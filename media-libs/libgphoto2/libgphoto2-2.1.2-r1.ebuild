@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2-r1.ebuild,v 1.10 2004/04/26 03:15:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2-r1.ebuild,v 1.11 2004/04/27 21:56:35 agriffis Exp $
 
-inherit libtool
+inherit libtool eutils
 
 MAKEOPTS="-j1" # or the documentation fails. bah!
 
