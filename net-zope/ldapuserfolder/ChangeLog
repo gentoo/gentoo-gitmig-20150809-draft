@@ -1,11 +1,11 @@
 # ChangeLog for net-zope/ldapuserfolder
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/ldapuserfolder/ChangeLog,v 1.2 2003/04/06 00:54:55 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/ldapuserfolder/ChangeLog,v 1.3 2003/04/12 21:28:56 kutsuya Exp $
 
 *ldapuserfolder-2.1_beta3 (05 Apr 2003)
 
   05 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> ldapuserfolder-2.0.ebuild,
-  ldapuserfolder-2.1_beta3.ebuild: Version bumped. Currently unmasked.
+  ldapuserfolder-2.1_beta3.ebuild: Version bumped. Currently unmasked. #18540
 
 *ldapuserfolder-2.0 (29 Mar 2003)
 
