@@ -2,7 +2,7 @@ MD5 e951d3004fa2e73f70ede10d751a546d ChangeLog 5810
 MD5 ae18cf435aeb21a9e0c0464ce35c1c31 expat-1.95.7.ebuild 687
 MD5 d8b16dcf06de09185c96bc18e116f52f expat-1.95.7-r1.ebuild 831
 MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
-MD5 bd2aba30fb2561aba303f8cc85e474b0 expat-1.95.8.ebuild 834
+MD5 ae895e3694899f1ba2292357573488a4 expat-1.95.8.ebuild 1024
 MD5 0137bf2c738329ab03f266ac859b4613 files/digest-expat-1.95.7 64
 MD5 0137bf2c738329ab03f266ac859b4613 files/digest-expat-1.95.7-r1 64
 MD5 be97487dd2627fe82f06252c88b83ab1 files/digest-expat-1.95.8 64
