@@ -1,6 +1,6 @@
-# ChangeLog for net-apache/ApacheTop
+# ChangeLog for app-admin/apachetop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.1 2003/10/04 20:25:07 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.2 2003/10/06 06:54:57 vapier Exp $
 
 *apachetop-0.5 (04 Oct 2003)
 
