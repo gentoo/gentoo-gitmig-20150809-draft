@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.9 2004/04/07 23:12:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.10 2004/04/10 05:06:19 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,11 +45,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-rates-1024-fix.patch
 	rm include/linux/pkt_sched.h
 
-	# Now a little hack to handle 2.4.x headers and stupid defines ...
-	if has_version '<sys-kernel/linux-headers-2.6' ; then
-		echo '#define __constant_htons(x) htons(x)' >> include-glibc/glibc-bugs.h
-		append-flags -D_LINUX_BYTEORDER_LITTLE_ENDIAN_H -D_LINUX_BYTEORDER_BIG_ENDIAN_H
-	fi
+	# Now a little hack to handle kernel headers and stupid defines ...
+	echo '#define __constant_htons(x) htons(x)' >> include-glibc/glibc-bugs.h
+	append-flags -D_LINUX_BYTEORDER_LITTLE_ENDIAN_H -D_LINUX_BYTEORDER_BIG_ENDIAN_H
 
 	# Fix local DoS exploit #34294
 	epatch ${FILESDIR}/${PV}-local-exploit-fix.patch
