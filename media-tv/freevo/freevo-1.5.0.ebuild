@@ -1,37 +1,36 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.0_rc4.ebuild,v 1.2 2004/07/19 21:58:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.0.ebuild,v 1.1 2004/08/18 22:21:05 seemant Exp $
 
 inherit distutils
 
 IUSE="matrox dvd encode lirc X nls"
-
 DESCRIPTION="Digital video jukebox (PVR, DVR)."
 HOMEPAGE="http://www.freevo.org/"
-SRC_URI="mirror://sourceforge/${PN}/freevo-1.5-rc4.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 
 DEPEND="${DEPEND}
 	>=dev-python/pygame-1.5.6
 	>=dev-python/imaging-1.1.3
 	>=dev-python/pyxml-0.8.2
 	>=dev-python/twisted-1.0.7
-	>=dev-python/mmpython-0.4.4
+	>=dev-python/mmpython-0.4.5
 	>=media-video/mplayer-0.92
 	>=media-libs/freetype-2.1.4
 	>=media-libs/libsdl-1.2.5
 	>=sys-apps/sed-4
-	dvd? ( >=media-video/xine-ui-0.9.22 )
+	dvd? ( >=media-video/xine-ui-0.9.22 >=media-video/lsdvd-0.10 )
 	encode? ( >=media-sound/cdparanoia-3.9.8 >=media-sound/lame-3.93.1 )
 	matrox? ( >=media-video/matroxset-0.3 )
 	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )
 	X? ( virtual/x11 )"
 
-S="${WORKDIR}/freevo-1.5-rc4"
+S="${WORKDIR}/${P}"
 
 src_install() {
 	distutils_src_install
@@ -39,10 +38,6 @@ src_install() {
 	insinto /etc/freevo
 	doins "${T}/freevo.conf"
 	newins local_conf.py.example local_conf.py
-	if [ "${PROFILE_ARCH}" == "xbox" ]; then
-		sed -i -e "s/# MPLAYER_AO_DEV.*/MPLAYER_AO_DEV='alsa1x'/" ${D}/etc/freevo/local_conf.py
-		newins ${FILESDIR}/xbox-lircrc lircrc
-	fi
 
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/freevo.rc6" freevo
@@ -83,15 +78,12 @@ pkg_postinst() {
 	fi
 
 	local myconf
-	if [ "`/bin/ls -l /etc/localtime | grep -e "Europe\|GMT"`" ] ; then
+	if [ "`/bin/ls -l /etc/localtime | grep Europe`" ] ; then
 		myconf="${myconf} --tv=pal"
 	fi
-
-	if [ "${PROFILE_ARCH}" == "xbox" ]; then
-		myconf="${myconf} --geometry=640x480 --display=x11"
-	elif use matrox ; then
+	if [ "`use matrox`" ] ; then
 		myconf="${myconf} --geometry=768x576 --display=mga"
-	elif use X ; then
+	elif [ "`use X`" ] ; then
 		myconf="${myconf} --geometry=800x600 --display=x11"
 	else
 		myconf="${myconf} --geometry=800x600 --display=fbdev"
