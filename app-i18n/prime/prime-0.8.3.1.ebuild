@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.8.3.1.ebuild,v 1.2 2004/06/24 21:52:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.8.3.1.ebuild,v 1.3 2004/06/30 03:30:18 agriffis Exp $
 
 inherit ruby
 
-IUSE="emacs"
+IUSE=""
 
 DESCRIPTION="PRIME -- Japanese PRedictive Input Method Editor"
 HOMEPAGE="http://taiyaki.org/prime/"

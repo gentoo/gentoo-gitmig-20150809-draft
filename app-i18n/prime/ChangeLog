@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/prime
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.31 2004/06/24 21:52:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.32 2004/06/30 03:30:18 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> prime-0.8.3.1.ebuild,
+  prime-0.9.1.ebuild:
+  sync IUSE (-emacs)
 
 *prime-0.8.3.1 (24 Jun 2004)
 
