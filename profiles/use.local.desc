@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.819 2004/12/27 13:17:03 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.820 2004/12/28 02:05:20 rphillips Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -736,7 +736,7 @@ x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
 x11-base/xorg-x11:type1-fonts - Build Type1 fonts
 x11-libs/cairo:glitz - Build with glitz support
 x11-libs/evas:cairo - Build the cairo graphical engine
-x11-libs/fox:freetype - Enable freetype support (allows for antialiased fonts)
+x11-libs/fox:truetype - Enable freetype support (allows for antialiased fonts)
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/qt:immqt -Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
