@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/stardict-xdict-en-zh-gb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-xdict-en-zh-gb/ChangeLog,v 1.3 2004/06/24 21:49:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-xdict-en-zh-gb/ChangeLog,v 1.4 2004/06/29 23:13:40 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> :
+  sync IUSE (missing)
 
 *stardict-xdict-en-zh-gb-2.4.2 (07 Jan 2004)
 
