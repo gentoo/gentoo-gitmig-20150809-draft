@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.29.ebuild,v 1.10 2003/10/30 12:34:39 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.29.ebuild,v 1.11 2004/02/15 09:37:08 kumba Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="diffstat reads the output of diff and displays a histogram of the insertions, deletions, and modifications per-file"
@@ -21,8 +21,13 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-	export CFLAGS="-Wshadow -Wconversion -Wstrict-prototypes -Wmissing-prototypes ${CFLAGS}"
-	make || die
+
+	# Fix CFLAGS
+	local oldcflags="-O -Wall -Wshadow -Wconversion -Wstrict-prototypes -Wmissing-prototypes"
+	mv ${S}/makefile ${S}/makefile.orig
+	sed -e "s:CFLAGS\t\t= ${oldcflags}:CFLAGS\t\t= ${oldcflags} ${CFLAGS}:g" ${S}/makefile.orig > ${S}/makefile
+
+	emake || die
 }
 
 src_install() {

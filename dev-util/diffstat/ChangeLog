@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/diffstat
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.6 2003/10/30 12:34:39 brandy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.7 2004/02/15 09:37:08 kumba Exp $
+
+*diffstat-1.34 (15 Feb 2004)
+
+  15 Feb 2004; Joshua Kinard <kumba@gentoo.org> diffstat-1.29.ebuild,
+  diffstat-1.34.ebuild:
+  Seems we're behind on our versions, so this is an ebuild for the newest
+  version, and the 1.29 ebuild has been cleaned up with a better method of
+  passing CFLAGS to the makefile. 1.34 doesn't need this makefile hack, however,
+  nor does the 1.29 hard-locale patch apply. This may cause Bug #31689 to reopen
+  if another patch is needed. The codebase looks to have changed far too much
+  between versions for the 1.29 patch to apply.
 
   31 Oct 2003; Brandy Westcott brandy@gentoo.org diffstat-1.29.ebuild:
   Added patch to allow diffstat to handle hard-locale time format. Thanks to
