@@ -15,6 +15,6 @@ USE="x86 oss apm arts avi berkdb crypt cups encode foomaticdb gdbm gif gpm imlib
 
 ARCH="x86"
 COMPILER="gcc3"
-ACCEPT_KEYWORDS="x86"
+ACCEPT_KEYWORDS="x86 ~x86"
 CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
