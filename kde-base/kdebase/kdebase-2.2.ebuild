@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.2 2001/08/17 00:36:00 achim Exp $
+# /home/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.ebuild,v 1.2 2001/08/17 00:36:00 achim Exp
 
 V=${PV}
 A=${PN}-${V}.tar.bz2
@@ -96,6 +96,16 @@ src_install() {
   sed -e "s:^#\!/bin/sh:#\!/bin/sh --login:" ${D}/opt/kde${V}/bin/startkde > ${D}/opt/kde${V}/bin/startkde.tmp
   mv ${D}/opt/kde${V}/bin/startkde.tmp ${D}/opt/kde${V}/bin/startkde
   chmod a+x ${D}/opt/kde${V}/bin/startkde
+  
+  #install xsession session
+  #explanation too long to put in here, mail me for info - danarmak
+  insinto /usr/X11R6/bin/wm
+  doins ${FILESDIR}/xsession
+  cd ${D}/opt/kde${V}/share/config/kdm
+  mv kdmrc kdmrc.orig
+  sed -e 's/SessionTypes=/SessionTypes=dan,/' kdmrc.orig > kdmrc
+  rm kdmrc.orig
+  
 }
 
 
