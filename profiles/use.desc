@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.181 2004/08/12 08:22:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.182 2004/09/16 18:38:04 fafhrd Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -268,7 +268,7 @@ wavelan - Tells pcmcia-cs that you want to use the built-in wvlan drivers instea
 wddx - Adds support for WDDX
 wmf - Adds support for the wmf vector image format
 wxwindows - Adds support for wxWindows/wxGTK
-xface - Adds xface support -- only in use for sylpheed and sylpheed-claws
+xface - Adds xface support used to allow a small image of xface format to be included in an email via the header 'X-Face'.
 xine - Add support for the XINE movie libraries
 xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
 xml - Check/Support flag for XML library (version 1)
