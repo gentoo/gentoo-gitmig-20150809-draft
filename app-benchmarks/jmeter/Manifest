@@ -1,4 +1,4 @@
-MD5 999ec7d13c2ebe1966a4e506cd469577 ChangeLog 1217
-MD5 9783ce7877438bb61df8402c8976df64 jmeter-1.8.1.ebuild 930
+MD5 23b27337944cf38bcd9ce213c082e99c ChangeLog 1345
+MD5 613a29cc5a595e568a9a06b6e8a84f79 jmeter-1.8.1.ebuild 932
 MD5 95c741b3cec21124a6ed8ebcac8f8aef files/digest-jmeter-1.8.1 206
 MD5 39ba6f903ec77a9818e377eff831a0a3 files/jmeter-1.8.1-gentoo.diff 1221
