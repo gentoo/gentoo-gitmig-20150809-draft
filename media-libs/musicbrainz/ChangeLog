@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.13 2003/07/20 02:19:47 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.14 2003/08/17 09:55:58 g2boojum Exp $
+
+*musicbrainz-2.0.2 (17 Aug 2003)
+
+  17 Aug 2003; Nick Hadaway <raker@gentoo.org> musicbrainz-2.0.2.ebuild:
+  Refreshed the ebuild a bit and gave the version a little bump.
+  Thanks to Andrew Snare on bug #26774 for the heads up.
 
   20 Jul 2003; jje <jje@gentoo.org> musicbrainz-1.0.1-r1.ebuild,
   musicbrainz-1.1.0.ebuild:
