@@ -17,6 +17,7 @@ stop() {
     ebegin "Stopping supervised ${SERVICE}"
    	if [ -e ${SVCDIR}/control/${SERVICE} ]
 	then
+		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}/log
 		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}
 		rm ${SVCDIR}/control/${SERVICE}
 	fi
