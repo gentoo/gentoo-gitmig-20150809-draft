@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.1 2003/10/22 10:58:59 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.2 2003/10/23 09:31:22 obz Exp $
+
+  23 Oct 2003; Mike Gardiner <obz@gentoo.org> xmlto-0.0.15.ebuild:
+  Added docbook-xsl-stylesheets dependency
 
 *xmlto-0.0.15 (22 Oct 2003)
 
