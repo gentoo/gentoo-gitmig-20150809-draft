@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.0.ebuild,v 1.4 2004/08/30 17:31:29 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.0.ebuild,v 1.5 2004/09/03 14:11:19 caleb Exp $
 
 inherit python kde eutils
 
@@ -44,7 +44,7 @@ src_compile() {
 	myconf="$myconf $(use_enable java javasupport) $(use_with java java $(java-config --jdk-home))
 			$(use_enable python scripting) $(use_with python pythondir /usr/lib/python${PYVER})
 			$(use_enable ruby)
-			$(use_enable arts)"
+			$(use_with arts)"
 	kde_src_compile
 }
 
