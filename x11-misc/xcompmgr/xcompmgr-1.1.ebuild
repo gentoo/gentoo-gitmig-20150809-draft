@@ -1,5 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/xcompmgr-1.1.ebuild,v 1.2 2004/10/11 09:29:55 spyderous Exp $
 
 inherit eutils
 
