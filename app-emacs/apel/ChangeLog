@@ -1,8 +1,11 @@
 # ChangeLog for app-emacs/apel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.4 2003/07/12 15:11:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.5 2003/07/29 02:09:24 usata Exp $
 
 *apel-10.6 (12 Jul 2003)
+
+  29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> apel-10.6.ebuild:
+  Marked x86 and alpha stable.
 
   12 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> apel-10.6.ebuild:
   New version, added ~sparc, ~ppc and ~alpha to KEYWORDS.
