@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.15 2003/02/09 00:52:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.16 2003/02/09 12:35:04 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A utility to set the framebuffer videomode"
@@ -21,4 +21,4 @@ src_install() {
 	doman *.[58]
 	dodoc etc/fb.modes.*
 	dodoc INSTALL
-
+}
