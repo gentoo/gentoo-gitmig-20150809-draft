@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.28 2003/10/07 22:02:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.29 2003/10/31 00:03:07 drobbins Exp $
+
+  30 Oct 2003; Daniel Robbins <drobbins@gentoo.org>: all ebuilds: modified
+  pkg_preinst() to use $ROOT and prevent non-ROOT="/" autoconf merges from
+  frying the "/" tree (was causing catalyst to die.) Should be a very low-
+  risk change since the overwhelming majority of Gentoo users always have
+  ROOT set to "/" anyway.
 
 *autoconf-2.57a-r1 (08 Oct 2003)
 

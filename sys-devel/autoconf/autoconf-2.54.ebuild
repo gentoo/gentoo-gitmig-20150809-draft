@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.15 2003/09/06 08:10:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.16 2003/10/31 00:03:07 drobbins Exp $
 
 IUSE=""
 
@@ -130,9 +130,9 @@ pkg_preinst() {
 	# was binaries
 	for x in autoconf autoheader autoreconf autoscan autoupdate ifnames autom4te
 	do
-		if [ -e /usr/bin/${x} ]
+		if [ -e ${ROOT}/usr/bin/${x} ]
 		then
-			rm -f /usr/bin/${x}
+			rm -f ${ROOT}/usr/bin/${x}
 		fi
 	done
 }
