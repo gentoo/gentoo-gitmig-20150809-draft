@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.4 2003/09/08 07:09:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.5 2003/09/26 06:44:19 jje Exp $
 
 MY_P=TiMidity++-${PV}-pre1
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="http://www.goice.co.jp/member/mo/timidity/dist/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="nas esd motif X gtk oggvorbis tcltk slang alsa"
+IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa"
 
 DEPEND=">=sys-libs/ncurses-5.0
 	X? ( >=x11-base/xfree-4.0 )
