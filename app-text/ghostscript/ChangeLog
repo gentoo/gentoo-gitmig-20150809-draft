@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.60 2004/07/11 19:52:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.61 2004/07/27 02:29:02 tgall Exp $
+
+  26 Jul 2004; Tom Gall <tgall@gentoo.org> ghostscript-7.07.1-r3.ebuild:
+  stable on ppc64
 
 *ghostscript-7.07.1-r3 (11 Jul 2004)
 
