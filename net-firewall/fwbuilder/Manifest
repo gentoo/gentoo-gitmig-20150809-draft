@@ -1,6 +1,6 @@
 MD5 81dfc240bfb7e2b0e3daf67cfea20c8e fwbuilder-1.1.2.ebuild 1393
 MD5 76ad0ae9ceb47ca4c51d895b5d21cf6a fwbuilder-2.0.1.ebuild 836
-MD5 6982401325c1398c4c72a51ab7e1a250 ChangeLog 5981
+MD5 432e53800cebd4e6f1f6575071f323cb ChangeLog 6028
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 b984066164f916fbd07f2a398d312cbe fwbuilder-2.0.0.ebuild 854
 MD5 b7ecd1d8440ad584eead03ccddd2a800 files/fwbuilder-1.1.2-nls_fix.patch 382
