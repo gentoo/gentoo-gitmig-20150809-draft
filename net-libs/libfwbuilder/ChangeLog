@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.39 2005/02/07 17:21:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.40 2005/02/21 02:20:37 dragonheart Exp $
+
+  21 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  libfwbuilder-1.0.2-r1.ebuild, libfwbuilder-1.0.2-r2.ebuild,
+  libfwbuilder-2.0.0.ebuild, libfwbuilder-2.0.1.ebuild,
+  libfwbuilder-2.0.2.ebuild, libfwbuilder-2.0.3.ebuild,
+  libfwbuilder-2.0.4.ebuild, libfwbuilder-2.0.5.ebuild:
+  removing ucd-snmp as per bug #69451
 
 *libfwbuilder-2.0.5 (07 Feb 2005)
 

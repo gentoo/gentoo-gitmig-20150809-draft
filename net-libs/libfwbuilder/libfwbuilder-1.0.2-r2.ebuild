@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.2-r2.ebuild,v 1.6 2005/02/07 17:21:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.2-r2.ebuild,v 1.7 2005/02/21 02:20:37 dragonheart Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="sys-devel/libtool
 	>=dev-libs/libxml2-2.4.19
 	!=dev-libs/libxml2-2.4.25
 	>=dev-libs/libxslt-1.0.15
-	snmp? ( virtual/snmp )
+	snmp? ( net-analyzer/net-snmp )
 	ssl? ( dev-libs/openssl )"
 
 src_compile() {
