@@ -835,3 +835,7 @@ net-mail/spamassassin
 # naz@gentoo.org 16 Jun 2002
 # Works but needs some testing an finishing startxdfb script, hint hint :o).
 x11-base/xdirectfb
+
+#seemant@gentoo.org
+# testing new version
+=net-libs/libwww-5.4.0
