@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kooldock
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.1 2004/10/31 18:29:52 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.2 2004/11/17 03:53:17 weeve Exp $
+
+  16 Nov 2004; Jason Wever <weeve@gentoo.org> kooldock-0.3.ebuild:
+  Added ~sparc keyword.
 
 *kooldock-0.3 (31 Oct 2004)
 
