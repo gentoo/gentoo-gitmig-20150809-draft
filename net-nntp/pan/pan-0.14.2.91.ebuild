@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.14.2.91.ebuild,v 1.1 2005/01/17 20:08:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.14.2.91.ebuild,v 1.2 2005/02/06 17:40:23 corsair Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
 HOMEPAGE="http://pan.rebelbase.com/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~hppa ~ppc ~sparc ~amd64 ~ppc64"
+KEYWORDS="~x86 ~hppa ~ppc ~sparc ~amd64 ppc64"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0.4
