@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.36 2004/11/29 03:02:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.37 2004/11/29 03:07:27 eradicator Exp $
 
   28 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/linux26-headers-2.6.8.1-sparc-signal_h.patch,
@@ -8,7 +8,10 @@
   Added to ~sparc (still masked in sparc32 profiles) as I've been using 2.6
   headers and nptl for about 5 months now with no issues to report (UP).
   geoman similarly has been using these headers on a SMP machine with no
-  issues relating directly to 26headers or nptl.
+  issues relating directly to 26headers or nptl.  Note, however, that there
+  are still lockup issues with the 2.6 kernels on sparc (especially with SMP),
+  so if you're concerned about stability, please use linux-headers and a 2.4
+  kernel.
 
   14 Nov 2004; Markus Rothe <corsair@gentoo.org>
   linux26-headers-2.6.8.1-r1.ebuild:

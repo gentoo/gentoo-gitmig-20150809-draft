@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3703be25638cd3f3adc385cd11433951 ChangeLog 8423
+MD5 10c84eaa24b525439885d4040b4fd216 ChangeLog 8616
 MD5 58516a09eebcaa2239ea0b70f310484e linux26-headers-2.6.8.1.ebuild 3895
 MD5 91179c84e3dc8dadcfdad16cabede343 linux26-headers-2.6.5.ebuild 4188
 MD5 f47af355016acfd75aa57699c9ac25cd linux26-headers-2.6.8.1-r1.ebuild 4471
@@ -31,7 +31,7 @@ MD5 9f83b3bf65ac599e58c5b96ed2569963 files/linux26-headers-2.6.8.1-sparc-signal_
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBqpHUArHZZzCEUG0RAhZFAJkB8jWo1ppvcQPjXJKHNY+R64h+nQCfT7vQ
-3xL7WbTRzp7OMBJShNz8BIw=
-=rdDs
+iD8DBQFBqpJ8ArHZZzCEUG0RAuqnAKCLM/GB9sQGB93tsOnnAghRBwJ0AACfbgYA
+iTOU0NULAlGDfBTYLkP+zyk=
+=9QI6
 -----END PGP SIGNATURE-----
