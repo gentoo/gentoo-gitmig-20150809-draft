@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtk-theme-switch/gtk-theme-switch-1.0.1.ebuild,v 1.3 2002/06/01 00:04:31 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtk-theme-switch/gtk-theme-switch-1.0.1.ebuild,v 1.4 2002/06/01 08:47:01 blocke Exp $
 S=${WORKDIR}/${P}
 
 # Short one-line description of this package.
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.muhri.net/nav.php3?node=gts"
 
 LICENSE="GPL"
 
-DEPEND="=x11-libs/gtk+-1.2.10-r8"
+DEPEND="=x11-libs/gtk+-1.2*"
 RDEPEND="${DEPEND}"
 SLOT="0"
 

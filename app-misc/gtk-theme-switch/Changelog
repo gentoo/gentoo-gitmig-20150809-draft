@@ -1,9 +1,13 @@
 # ChangeLog for app-misc/gtk-theme-switch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # AUTHOR: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtk-theme-switch/Changelog,v 1.2 2002/05/31 21:00:12 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtk-theme-switch/Changelog,v 1.3 2002/06/01 08:47:01 blocke Exp $
 
 *gtk-theme-switch-1.0.1 (06 may 2002)
+
+  01 Jun 2002; Bruce A. Locke <blocke@shivan.org> gtk-theme-switch-1.0.1.ebuild:
+
+  Fixed GTK+ Dependency
 
   06 may 2002 ; José Alberto Suárez López <bass@gentoo.org> ChangeLog :
 	First Relase 
