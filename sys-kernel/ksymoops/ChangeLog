@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ksymoops
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.14 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.15 2004/04/16 20:41:59 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org> ksymoops-2.4.9.ebuild:
+  adding s390 keywords
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ksymoops-2.4.9.ebuild:
   Add IUSE=
