@@ -1,6 +1,10 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# 1 march 2002, danarmak
+# masking new wine ebuild until testing is finished
+>=app-emulation/wine-20020122
+
 # 1 march 2002, verwilst
 # not yet finished, just stay away from this for now :o)
 =net-im/gnomemeeting-0.84.0
