@@ -1,15 +1,18 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.21 2003/05/24 18:48:15 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.22 2003/06/05 20:16:00 robbat2 Exp $
 
+*cracklib-2.7-r7 (12 May 2003)
+
+  05 June 2003; Robin Johnson <robbat@gentoo.org> cracklib-2.7-r7.ebuild:
+  No complaints heard about ~x86. Moving to stable x86.
+  
   24 May 2003; Tavis Ormandy <taviso@gentoo.org> cracklib-2.7-r6.ebuild,
   cracklib-2.7-r7.ebuild, files/cracklib-2.7-dec-alpha-compiler.diff:
   dont use -g with ccc, use -g3
-
-*cracklib-2.7-r7 (12 May 2003)
  
   22 May 2003; Robin Johnson <robbat@gentoo.org> cracklib-2.7-r7.ebuild:
-  Moved to x86. Ensure gcc-config in DEPEND.
+  Moved to ~x86. Ensure gcc-config in DEPEND.
 
   14 May 2003; Robin Johnson <robbat@gentoo.org> 
   files/cracklib-2.7-gentoo-new.diff:
