@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.6.0.ebuild,v 1.10 2004/06/25 00:22:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.6.0.ebuild,v 1.11 2004/11/26 08:07:53 dragonheart Exp $
 
 DESCRIPTION="GTK-based LDAP client"
 SRC_URI="mirror://sourceforge/gqclient/${P}.tar.gz"
@@ -32,7 +32,8 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "Installation failed"
+	emake DESTDIR=${D} || die "Installation failed"
 
+	rm -f ${D}/usr/share/locale/locale.alias
 	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING NEWS README* TODO
 }
