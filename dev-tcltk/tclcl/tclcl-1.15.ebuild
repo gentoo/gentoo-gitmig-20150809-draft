@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.1 2004/01/11 04:08:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.2 2004/01/11 04:17:25 robbat2 Exp $
 
-DESCRIPTION="tcl librairy"
+DESCRIPTION="Tcl/C++ interface library"
 SF_PN="otcl-tclcl"
 HOMEPAGE="http://sourceforge.net/projects/${SF_PN}/"
 MY_P="${PN}-src-${PV}"
@@ -19,12 +19,11 @@ S=${WORKDIR}/${P}
 src_compile() {
 	econf || die
 	sed 's|$(LIBRARY_TCL)/http/http.tcl|$(LIBRARY_TCL)/http2.4/http.tcl|g' -i Makefile
-	#sed s/http2.3/http2.4/ -i Makefile
-	emake || die 
+	emake || die
 }
 
 src_install() {
-	dolib.a libtclcl.a 
+	dolib.a libtclcl.a
 	dobin tcl2c++
 	dodir /usr/include
 	insinto /usr/include
