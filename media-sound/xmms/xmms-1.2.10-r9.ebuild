@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.4 2004/11/08 21:27:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.5 2004/11/08 23:37:56 eradicator Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
-PATCHVER="2.1.4"
+PATCHVER="2.1.5"
 
 PATCHDIR="${WORKDIR}/patches"
 
