@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.35 2003/03/13 17:57:33 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.36 2003/03/23 07:51:00 vladimir Exp $
 
 *sylpheed-claws-0.8.11 (12 Mar 2003)
+
+  22 Mar 2003; Graham Forest <vladimir@gentoo.org>
+  sylpheed-claws-0.8.11.ebuild:
+  set ppc in keywords
 
   12 Mar 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.11.ebuild, 
   files/digest-sylpheed-claws-0.8.11 :
