@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.4 2005/04/03 00:49:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.5 2005/04/03 01:43:58 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask alsa-lib and alsa-utils so people don't accidently emerge them on a
@@ -17,3 +17,43 @@ media-libs/alsa-lib
 # Jason Wever <weeve@gentoo.org>
 # Packages masked that have hard deps on alsa
 media-sound/horgand
+app-accessibility/speech-dispatcher
+app-forensics/regviewer
+dev-games/neoengine
+dev-java/sun-j2sdk
+games-arcade/emergence-bin
+games-emulation/mupen64-alsasnd
+games-roguelike/crossfire-client
+media-libs/alsa-oss
+media-libs/ladcca
+media-libs/libclalsadrv
+media-libs/libmustux
+media-plugins/alsa-jack
+media-plugins/gst-plugins-alsa
+media-plugins/xmms-alsa
+media-sound/alsa-patch-bay
+media-sound/alsa-tools
+media-sound/alsa-utils
+media-sound/alsamixergui
+media-sound/ams
+media-sound/aseqview
+media-sound/brutefir
+media-sound/gmorgan
+media-sound/gnome-alsamixer
+media-sound/horgand
+media-sound/jack-audio-connection-kit
+media-sound/jamin
+media-sound/kamix
+media-sound/tk707
+media-sound/krecord
+media-sound/museseq
+media-sound/pmidi
+media-sound/qjackconnect
+media-sound/qjackctl
+media-sound/qmidiarp
+media-sound/rosegarden
+media-sound/seq24
+media-sound/sfc
+media-sound/supercollider
+media-sound/tapiir
+media-video/gephe
