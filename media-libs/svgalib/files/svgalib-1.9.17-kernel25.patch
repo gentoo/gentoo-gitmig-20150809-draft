@@ -1,0 +1,11 @@
+--- svgalib-1.9.17/kernel/svgalib_helper/kernel25compat.h.orig	2002-12-29 19:47:01.000000000 +0200
++++ svgalib-1.9.17/kernel/svgalib_helper/kernel25compat.h	2002-12-29 19:47:07.000000000 +0200
+@@ -1,4 +1,8 @@
++#include <linux/version.h>
++
++#ifndef minor
+ #define minor(x) MINOR(x)
++#endif
+ 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,5,0)
+ #define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(start,ofs,len,prot)
