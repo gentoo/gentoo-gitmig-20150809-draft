@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.53 2004/07/14 00:17:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.54 2004/07/25 19:04:41 plasmaroo Exp $
+
+  25 Jul 2004; <plasmaroo@gentoo.org> libsdl-1.2.7-r2.ebuild,
+  +files/1.2.7-26headers.patch:
+  Fix for bug #58192.
 
 *libsdl-1.2.7-r2 (13 Jul 2004)
 

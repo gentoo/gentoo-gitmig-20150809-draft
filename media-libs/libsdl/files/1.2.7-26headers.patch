@@ -1,0 +1,29 @@
+--- SDL-1.2.7/src/video/fbcon/SDL_fbevents.c.old	2004-02-18 17:22:06.000000000 +0000
++++ SDL-1.2.7/src/video/fbcon/SDL_fbevents.c	2004-07-25 13:44:16.654181264 +0100
+@@ -835,7 +835,7 @@
+ static void switch_vt(_THIS, unsigned short which)
+ {
+ 	struct vt_stat vtstate;
+-	unsigned short current;
++	unsigned short current_;
+ 	SDL_Surface *screen;
+ 	__u16 saved_pal[3*256];
+ 	Uint32 screen_arealen;
+@@ -846,7 +846,7 @@
+ 	     (which == vtstate.v_active) ) {
+ 		return;
+ 	}
+-	current = vtstate.v_active;
++	current_ = vtstate.v_active;
+ 
+ 	/* Save the contents of the screen, and go to text mode */
+ 	SDL_mutexP(hw_lock);
+@@ -864,7 +864,7 @@
+ 	if ( ioctl(keyboard_fd, VT_ACTIVATE, which) == 0 ) {
+ 		/* Wait for our console to be activated again */
+ 		ioctl(keyboard_fd, VT_WAITACTIVE, which);
+-		while ( ioctl(keyboard_fd, VT_WAITACTIVE, current) < 0 ) {
++		while ( ioctl(keyboard_fd, VT_WAITACTIVE, current_) < 0 ) {
+ 			if ( (errno != EINTR) && (errno != EAGAIN) ) {
+ 				/* Unknown VT error - cancel this */
+ 				break;
