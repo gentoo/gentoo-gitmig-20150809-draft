@@ -1,15 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Maintainer: Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.74.ebuild,v 1.2 2002/04/27 21:46:44 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.76.ebuild,v 1.1 2002/06/26 21:53:40 bangert Exp $
 
 S=${WORKDIR}/${P}
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	dev-libs/bglibs"
 
 RDEPEND="net-mail/cvm-vmailmgr
 	net-mail/qmail
 	net-mail/qmail-pop3d"
+
+SLOT="0"
 
 DESCRIPTION="Mail server network protocol front-ends."
 SRC_URI="http://untroubled.org/mailfront/${P}.tar.gz"
@@ -17,14 +20,15 @@ HOMEPAGE="http://untroubled.org/mailfront/"
 
 src_compile() {
 	cd ${S}
-	echo "gcc ${CFLAGS}" > conf-cc
-	echo "gcc" > conf-ld
+	echo "/var/qmail/bin" > conf-bin
+	echo "gcc ${CFLAGS} -I/usr/lib/bglibs/include" > conf-cc
+	echo "gcc -s -L/usr/lib/bglibs/lib" > conf-ld
 	emake || die
 }
 
 src_install () {
 	exeinto /var/qmail/bin
-	doexe pop3front-auth pop3front-maildir smtpfront-echo smtpfront-qmail smtpfront-reject
+	doexe pop3front-auth pop3front-maildir smtpfront-echo smtpfront-qmail smtpfront-reject imapfront-auth
 
 	#install new run files for qmail-smtpd and qmail-pop3
 	exeinto /var/qmail/supervise/qmail-smtpd
