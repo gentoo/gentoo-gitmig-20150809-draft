@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 9299ace5688576a9b9ab9ddf5a4dfca4 sun-jdk-1.3.1.13.ebuild 3802
-MD5 437f2228c37d680507b4d4b713736357 sun-jdk-1.4.2.07-r1.ebuild 6482
+MD5 614dcc02457bdb00a91bdd6e21ab2a59 sun-jdk-1.4.2.07-r1.ebuild 6223
 MD5 183d3481b4e5d7b6367616cff588b875 sun-jdk-1.2.2.017.ebuild 3149
-MD5 e86c0e7a8a08b5c58c7114fde0493806 ChangeLog 22114
-MD5 4f2c47dc09d033c640ab6985db46e16b sun-jdk-1.5.0.02-r1.ebuild 7323
+MD5 e06197be2333b3d89f88ff26883497e6 ChangeLog 22312
+MD5 6db4cbf3c7f2c7ccc19859a28adf5985 sun-jdk-1.5.0.02-r1.ebuild 6962
 MD5 16c9e337522b7e477aece60ff98dde54 metadata.xml 239
 MD5 0f94a657aa38fbca24dd767967474bc4 files/sun-jdk-1.3.1.13 475
 MD5 ca753d6c6afc7ee2df1192978846d0d4 files/sun-jdk-1.4.2.07 499
@@ -16,9 +16,9 @@ MD5 087d481a89540a1b830bbb4559d74663 files/digest-sun-jdk-1.4.2.07-r1 140
 MD5 d1e29e8acce3cfec9912e23aa366478a files/digest-sun-jdk-1.3.1.13 76
 MD5 dc0cdafb5c99594fb0ef9daa13b35fcf files/digest-sun-jdk-1.5.0.02-r1 212
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCRJLM06ebR+OMO78RAuJMAJ9VYGMeBMCk+tKZ5cf7JS2SFuFj3ACaArN9
-160n8oyxSccD1/foz7M5dTg=
-=W1bR
+iD8DBQFCUE1S/rLF9B432nYRAsH2AKChr0hvtREQuNbzkrxX0gIL9iwRXACgkPai
+A5YKR+HYZ1zx4IrVy0GHcbc=
+=tAs7
 -----END PGP SIGNATURE-----
