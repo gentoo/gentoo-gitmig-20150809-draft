@@ -1,10 +1,22 @@
-MD5 17ff2560da61a688103abf3ede5c8187 ChangeLog 1191
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 792ea1d795fddd791a2618f5db96a385 ChangeLog 1363
 MD5 06fb25083aa0b1858bfd8e843c0166dc Math-BigInt-1.64.ebuild 563
 MD5 9a80c2a48d6fbb5f9e99649980c7fbd2 Math-BigInt-1.65.ebuild 565
 MD5 afe12e0a4891422c71235ea9c909a445 Math-BigInt-1.69.ebuild 585
 MD5 983cc259b7fde90c0351e2d837b9b893 Math-BigInt-1.70.ebuild 585
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 0a29bad7eb252ec48f8f7798d8be39d2 Math-BigInt-1.73.ebuild 600
 MD5 44d4c4593483186e8e4180af93336694 files/digest-Math-BigInt-1.64 68
 MD5 d127a7a35ada94be3081f2dd3b845206 files/digest-Math-BigInt-1.65 68
 MD5 b461900d92f57d4e040ce12dfe67f876 files/digest-Math-BigInt-1.69 68
 MD5 d6a633b9a6acedb716053a67339c2a00 files/digest-Math-BigInt-1.70 68
+MD5 109b3f67b6c2ed044cbd5921a74aa244 files/digest-Math-BigInt-1.73 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBgRGetG5z4I8BtQoRAtKHAJ0Vizit3XTgr6oCAgC1eotNZhzEbQCdG4IX
+zzem2VXwS1vQ/lfZDsUZsP8=
+=S7KE
+-----END PGP SIGNATURE-----
