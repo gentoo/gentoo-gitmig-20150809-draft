@@ -1,16 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r5.ebuild,v 1.5 2003/03/21 16:16:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r6.ebuild,v 1.1 2003/06/16 18:25:04 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Network Time Protocol suite/programs"
-SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz"
+SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz
+	mirror://gentoo/${PF}-manpages.tbz2"
 HOMEPAGE="http://www.ntp.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2
@@ -27,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cp configure configure.orig
+	cp configure{,.orig}
 	sed -i "s:-Wpointer-arith::" configure
 
 	econf --build=${CHOST} || die
@@ -38,6 +39,7 @@ src_install() {
 	einstall || die
 
 	dodoc ChangeLog INSTALL NEWS README TODO WHERE-TO-START
+	doman ${WORKDIR}/man/*.1
 	dohtml -r html/*
 
 	insinto /usr/share/ntp
