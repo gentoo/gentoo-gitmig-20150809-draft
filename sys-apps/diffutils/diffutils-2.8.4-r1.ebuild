@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r1.ebuild,v 1.1 2002/10/14 09:58:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r1.ebuild,v 1.2 2002/10/14 17:24:17 azarah Exp $
 
 IUSE="nls build"
 
@@ -33,11 +33,10 @@ src_unpack() {
 	fi
 
 	# Build fails with make -j5 or greater on pentium4.  This is because
-	# the .c.o rule should depend on paths.h, else they are being compiled
-	# at the same time of its generation.  This *should* hopefully fix
-	# this problem.  Cannot test it now though, as this is a celeron :/
+	# the jobs creating the opjects, which depend on paths.h is sheduled
+	# at the same time paths.h is generated.  This closes bug #8934.
 	# <azarah@gentoo.org> (14 Oct 2002)
-	cd ${S}; patch -p1 < ${FILESDIR}/${P}-fix-multi-job-build.patch || die
+	cd ${S}; patch -p1 < ${FILESDIR}/${P}-fix-multi-job-build.patch2 || die
 }
 
 src_compile() {

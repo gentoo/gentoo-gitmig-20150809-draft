@@ -1,0 +1,11 @@
+diff -urN diffutils-2.8.4/src/Makefile.in diffutils-2.8.4.azarah/src/Makefile.in
+--- diffutils-2.8.4/src/Makefile.in	2002-06-28 09:04:20.000000000 +0200
++++ diffutils-2.8.4.azarah/src/Makefile.in	2002-10-14 19:03:33.000000000 +0200
+@@ -410,6 +410,7 @@
+ 	uninstall-binPROGRAMS uninstall-info-am
+ 
+ 
++cmp.c diff3.c diff.c sdiff.c: paths.h
+ cmp.$(OBJEXT) diff3.$(OBJECT) diff.$(OBJECT) sdiff.$(OBJECT): paths.h
+ paths.h:
+ 	(echo '#define DEFAULT_DIFF_PROGRAM "$(bindir)/'`echo diff|sed '$(transform)'`'"' && \
