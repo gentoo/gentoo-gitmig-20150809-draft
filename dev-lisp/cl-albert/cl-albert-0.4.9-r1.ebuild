@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-albert/cl-albert-0.4.9-r1.ebuild,v 1.2 2004/06/24 23:40:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-albert/cl-albert-0.4.9-r1.ebuild,v 1.3 2005/02/08 19:03:04 mkennedy Exp $
 
 inherit common-lisp
 

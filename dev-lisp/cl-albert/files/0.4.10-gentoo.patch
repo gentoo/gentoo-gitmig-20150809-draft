@@ -1,0 +1,151 @@
+diff -ur albert-0.4.10.orig/apispec/helpers.lisp albert-0.4.10/apispec/helpers.lisp
+--- albert-0.4.10.orig/apispec/helpers.lisp	2003-11-14 10:03:27.000000000 -0600
++++ albert-0.4.10/apispec/helpers.lisp	2005-02-08 12:07:21.326910544 -0600
+@@ -20,7 +20,6 @@
+   "creates a method which prints out a warning that it's not written"
+   (let* ((ignorable-args nil)
+          (args (reduce #'(lambda (x y) 
+-			   (declare (type simple-base-string x y))
+ 			   (strcat x " " y)) 
+                        (mapcar #'(lambda (x) 
+                                    ;; we should ignore non-specialised arguments
+Only in albert-0.4.10/apispec: helpers.lisp~
+diff -ur albert-0.4.10.orig/apispec/xml-base.lisp albert-0.4.10/apispec/xml-base.lisp
+--- albert-0.4.10.orig/apispec/xml-base.lisp	2003-10-20 11:43:59.000000000 -0500
++++ albert-0.4.10/apispec/xml-base.lisp	2005-02-08 12:54:34.828504070 -0600
+@@ -356,13 +356,6 @@
+ 	 (element-name (get-element-name xmlobj))
+ 	 (subs  (slot-value xmlobj 'sub-info))
+ 	 (sublen (length subs)))
+-
+-    (declare (optimize (safety 0) (speed 3) (debug 0)))
+-    (declare (type simple-base-string element-name))
+-    (declare (type fixnum indentlevel sublen))
+-
+-;;    (break)
+-    
+     ;; whip out start and any attrs
+     (write-string (get-indent indentlevel) stream)
+     (write-char #\< stream)
+@@ -397,9 +390,6 @@
+ 	    (ptr nil)
+ 	    (its-type nil)
+ 	    (its-name ""))
+-	
+-	(declare (type simple-base-string its-name))
+-	
+ 	(loop for curobj across subs do
+ 	      (setq lastptr ptr)
+ 	      (setq ptr (xml-subelement-info-ptr curobj))
+@@ -414,9 +404,6 @@
+ 		  ((=subelement-string= =subelement-stringlist=)
+ 		   (let (;;(tag-end (strcat its-name ">"))
+ 			 (cur-indent (get-indent (xml-tool.indent xtool))))
+-		     
+-		     (declare (type simple-base-string cur-indent))
+-		     
+ 		     (dolist (my-iter (slot-value xmlobj ptr))
+ 		       (write-string cur-indent stream)
+ 		       (write-char #\< stream)
+@@ -596,62 +583,16 @@
+ 
+     retval))
+ 
+-
+-#-sbcl
+-(declaim (ftype (function (simple-base-string) simple-base-string) xmlify-string))
+-;;(declaim (ftype (function (simple-base-string) simple-base-string) xmlify-string-1))
+-
+-
+-(defvar *tmpres-len* 8192 "keeps the length to avoid recalculation")
+-(defvar *tmpres* (make-string 8192) 
+-  "temporary array for the xmlify-string function")
+-
+-(declaim (type fixnum *tmpres-len*))
+-(declaim (type simple-base-string *tmpres*))
+-
+-(defun xmlify-string (str)
+-  "I don't know if it is any fast. I hope so. Uses *tmpres* to
+-save new string in."
+-  (declare (optimize (safety 0) (speed 3) (debug 0)))
+-  (declare (type simple-base-string str))
+-  
+-  (let ((cnt -1)
+-	(xlen (- (length str) 1)))
+-    
+-    (declare (type fixnum xlen cnt))
+-  
+-    ;; make sure the buffer is at least twice as long as string we
+-    ;; want to xmlify.  an educated guess
+-    (when (> (* xlen 2) *tmpres-len*)
+-      (setf *tmpres-len* (* 2 (if (> xlen *tmpres-len*) 
+-				  xlen 
+-				*tmpres-len*)))
+-      (setf *tmpres* (make-string *tmpres-len*)))
+-    
+-    (macrolet ((add-new-word (word)
+-		 ;; assume word is string
+-		 (let ((code nil))
+-		   (loop for x of-type base-char across word
+-		       do (push `(setf (schar *tmpres* (incf cnt)) ,x) code))
+-		   `(progn
+-		      ,@(nreverse code)))))
+-    
+-    
+-      (loop 
+-	  for i of-type fixnum from 0 to xlen 
+-	  for c of-type base-char = (schar str i)
+-	  do
+-	    (cond 
+-	     ((eq c #\&) (add-new-word "&amp;"))
+-	     ((eq c #\<) (add-new-word "&lt;"))
+-	     ((eq c #\>) (add-new-word "&gt;"))
+-	     ((eq c #\") (add-new-word "&quot;"))
+-	     (t (setf (schar *tmpres* (incf cnt)) c))))
+-      
+-      ;; faster way than subseq here?
+-      (subseq *tmpres* 0 (1+ cnt))
+-      )))
+-
++(defun xmlify-string (string)
++  (with-output-to-string (stream)
++    (dotimes (i (length string))
++      (let ((char (char string i)))
++	(case char
++	  (#\& (write-string "&amp;" stream))
++	  (#\< (write-string "&lt;" stream))
++	  (#\> (write-string "&gt;" stream))
++	  (#\" (write-string "&quote;" stream))
++	  (otherwise (write-char char stream)))))))
+ 
+ (defmethod print-object ((inst xml-tool) stream)
+   (print-unreadable-object (inst stream :identity t)
+Only in albert-0.4.10/apispec: xml-base.lisp~
+diff -ur albert-0.4.10.orig/apispec/xml-esis.lisp albert-0.4.10/apispec/xml-esis.lisp
+--- albert-0.4.10.orig/apispec/xml-esis.lisp	2003-08-06 09:22:34.000000000 -0500
++++ albert-0.4.10/apispec/xml-esis.lisp	2005-02-08 12:58:36.331952820 -0600
+@@ -18,11 +18,6 @@
+ (defun read-esis-file (filename xml-tool)
+   "filename is assumed to be a pathname and xml-tool a real xml-tool inited with 
+ a factory"
+-  
+-  (declare (optimize (safety 0) (speed 3) (debug 0)))
+-  
+-  ;;  (format t "Read esis file ~a with ~a~%" filename xml-tool)
+-  
+   (let* ((attr-stack nil)
+ 	 (rest-of-line "")
+ 	 (last-pos 0)
+@@ -30,11 +25,6 @@
+ 	 ;; this may slow things down and be outright annoying
+ 	 (full-file (eat-file filename))
+ 	 (len (- (length full-file) 1)))
+-    
+-    (declare (type fixnum len last-pos))
+-    (declare (type simple-base-string full-file rest-of-line))
+-
+-
+     (loop 
+ 	for i of-type fixnum from 1 to len 
+ 	for cur-char of-type character = (schar full-file i)
+Only in albert-0.4.10/apispec: xml-esis.lisp~
