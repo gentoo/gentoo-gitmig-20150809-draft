@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.2 2004/12/08 10:27:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.4.4.ebuild,v 1.3 2004/12/09 14:16:52 gustavoz Exp $
 
 # Comments/fixes to lloyd@randombit.net (author)
 
@@ -10,7 +10,7 @@ DESCRIPTION="A C++ crypto library"
 HOMEPAGE="http://botan.randombit.net/"
 SRC_URI="http://botan.randombit.net/files/Botan-${PV}.tgz"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc"
 SLOT="0"
 LICENSE="BSD"
 IUSE="bzlib zlib gmp ssl debug"
@@ -45,22 +45,24 @@ src_compile() {
 	if useq ssl; then modules="$modules,eng_ossl"; fi
 
 
-	# This is also supported on i586+ and sparcv9 - hope this is correct.
+	# This is also supported on i586+ - hope this is correct.
 	if [ ${ARCH} = 'alpha' -o ${ARCH} = 'amd64' ] || \
-		[ ${ARCH} = 'x86' -a ${CHOST:0:4} != "i386" -a ${CHOST:0:4} != "i486" ] || \
-		[ ${CHOSTARCH} = 'sparc32-v9' -a ${PROFILE_ARCH} = 'sparc64' ]; then
+		[ ${ARCH} = 'x86' -a ${CHOST:0:4} != "i386" -a ${CHOST:0:4} != "i486" ]; then
 		modules="$modules,tm_hard"
 	fi
 
-	# Also works on mips64 and sparc64
+	# Also works on mips64
 	if [ "${ARCH}" = 'alpha' -o "${ARCH}" = 'amd64' -o \
-		"${ARCH}" = 'ia64' -o "${ARCH}" = 'ppc64' -o "${PROFILE_ARCH}" = 'mips64'  ] || \
-		[ "${CHOSTARCH}" = 'sparc32-v9' -a "${PROFILE_ARCH}" = 'sparc64' ]; then
+		"${ARCH}" = 'ia64' -o "${ARCH}" = 'ppc64' -o "${PROFILE_ARCH}" = 'mips64'  ]; then
 		modules="$modules,mp_asm64"
 	fi
 
-	# Are there any CHOSTs in use which break this?
-	CHOSTARCH=$(echo ${CHOST} | cut -d - -f 1)
+	# Enable v9 instructions for sparc64
+	if [ ${PROFILE_ARCH} = 'sparc64' ]; then
+		CHOSTARCH='sparc32-v9'
+	else
+		CHOSTARCH=$(echo ${CHOST} | cut -d - -f 1)
+	fi
 
 	cd ${S}
 	einfo "Enabling modules: " ${modules}
