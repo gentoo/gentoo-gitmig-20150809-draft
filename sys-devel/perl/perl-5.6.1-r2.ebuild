@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r2.ebuild,v 1.3 2002/02/01 09:44:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r2.ebuild,v 1.4 2002/02/01 11:09:08 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
@@ -13,6 +13,18 @@ DEPEND="virtual/glibc sys-apps/groff berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs
 RDEPEND="virtual/glibc berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 src_compile() {
+
+    local myconf
+    if [ "`use gdbm`" ]
+    then
+      myconf="-Di_gdbm"
+    fi
+    if [ "`use berkdb`" ]
+    then
+      myconf="${myconf} -Di_db -Di_ndbm"
+    else
+      myconf="${myconf} -Ui_db -Ui_ndbm"
+    fi
 
 	# configure for libperl.so
     sh Configure -des \
@@ -27,6 +39,9 @@ src_compile() {
 		-Dd_dosuid \
 		-Dd_semctl_semun \
 		${myconf} || die
+	# add optimization flags
+    cp config.sh config.sh.orig
+    sed -e "s/optimize='-O2'/optimize=\'${CFLAGS}\'/" config.sh.orig > config.sh
 	# create libperl.so and move it out of the way
 	mv -f Makefile Makefile_orig
 	sed -e 's#^CCDLFLAGS = -rdynamic -Wl,-rpath,/usr/lib/perl5/.*#CCDLFLAGS = -rdynamic#' \
@@ -35,10 +50,12 @@ src_compile() {
 	make libperl.so || die
 	mv libperl.so ${WORKDIR}
 
+	# starting from scratch again
 	cd ${WORKDIR}
 	rm -rf ${S}
 	unpack ${A}
 	cd ${S}
+	
 	# configure for libperl.a
 # this is gross -- from Christian Gafton, Red Hat
 	cat > config.over <<EOF
@@ -61,18 +78,13 @@ installsitelib=\`echo \$installsitelib | sed "s!\$prefix!\$installprefix!"\`
 installsitearch=\`echo \$installsitearch | sed "s!\$prefix!\$installprefix!"\`
 EOF
 
-    local myconf
-    if [ "`use gdbm`" ]
-    then
-      myconf="-Di_gdbm"
-    fi
-    if [ "`use berkdb`" ]
-    then
-      myconf="${myconf} -Di_db -Di_ndbm"
-    else
-      myconf="${myconf} -Ui_db -Ui_ndbm"
-    fi
-    sh Configure -des -Dprefix=/usr -Dd_dosuid -Dd_semctl_semun ${myconf} -Duselargefiles -Darchname=${CHOST%%-*}-linux
+    sh Configure -des \
+		-Dprefix=/usr \
+		-Darchname=${CHOST%%-*}-linux \
+		-Duselargefiles \
+		-Dd_dosuid \
+		-Dd_semctl_semun \
+		${myconf} || die
 
     #Optimize ;)
     cp config.sh config.sh.orig
@@ -91,13 +103,15 @@ EOF
 	rm -f makefile x2p/makefile
     make -f Makefile || die
     # Parallel make fails
+	# dont use the || die since some tests fail on bootstrap
     make -f Makefile test 
 }
 
 src_install() {
 
 	insinto /usr/lib/perl5/${PV}/i686-linux/CORE/
-	doins ${WORKDIR}/libperl.so 
+	doins ${WORKDIR}/libperl.so
+	dosym /usr/lib/perl5/${PV}/i686-linux/CORE/libperl.so /usr/lib/libperl.so
 	
     export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
