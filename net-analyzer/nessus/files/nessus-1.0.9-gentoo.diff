@@ -1,0 +1,60 @@
+--- nessus-core/nessus/nessus.c~	Sun Apr 29 21:15:06 2001
++++ nessus-core/nessus/nessus.c	Thu Nov 15 14:14:15 2001
+@@ -750,7 +750,7 @@
+         display_help("nessus");
+ 	exit (1);
+        }
+-        if(optarg[0]=='=')inc_optind(); /* no optind++ on Win32 -- jordan */
++        if(optarg[0]=='=')optind++; /* no optind++ on Win32 -- jordan */
+ 	if(!strcmp(optarg, "text"))output_func = arglist_to_text;
+ 	else if(!strcmp(optarg, "html"))output_func = arglist_to_html;
+ 	else if(!strcmp(optarg, "html_graph"))output_func = arglist_to_html_graph;
+@@ -996,39 +996,39 @@
+ 
+     /* next arguments: SERVER PORT */
+ #ifdef USE_AF_INET
+-    cli_args_server(cli, argv[inc_optind()]);
+-    cli_args_port(cli, atoi(argv[inc_optind()]));
++    cli_args_server(cli, argv[optind++]);
++    cli_args_port(cli, atoi(argv[optind++]));
+ #else
+     cli_args_server(cli, "localhost");
+     cli_args_port(cli, 0);
+ #endif
+ 
+     /* next argument: LOGIN */
+-    cli_args_login(cli, argv[inc_optind()]);
++    cli_args_login(cli, argv[optind++]);
+    
+     /* next argument: PASSWORD */
+ #ifndef ENABLE_CRYPTO_LAYER
+-    cli_args_password(cli, argv[inc_optind()]);
++    cli_args_password(cli, argv[optind++]);
+ #endif	
+ 
+ #ifndef ENABLE_SAVE_TESTS
+     if(!opt_m)
+     {
+-     cli_args_target(cli, argv[inc_optind()]);
+-     cli_args_results(cli,  argv[inc_optind()]);
++     cli_args_target(cli, argv[optind++]);
++     cli_args_results(cli,  argv[optind++]);
+     }
+ #else  
+    if(!opt_m)
+    {
+    if(restore_session)
+    {
+-     cli_args_results(cli,  argv[inc_optind()]);
++     cli_args_results(cli,  argv[optind++]);
+    }
+    else
+     if(!list_sessions)
+      {
+-     cli_args_target(cli, argv[inc_optind()]);
+-     cli_args_results(cli,  argv[inc_optind()]);
++     cli_args_target(cli, argv[optind++]);
++     cli_args_results(cli,  argv[optind++]);
+      }
+    }
+    
