@@ -1,0 +1,28 @@
+--- NFORCE-Linux-x86-1.0-0292-pkg1/nvsound/main/nvmain.c	2004-10-08 15:10:57.000000000 -0500
++++ nvmain.c	2005-03-06 03:39:31.000000000 -0500
+@@ -824,11 +824,7 @@
+             unlock_kernel();
+             return -EINVAL;
+         }
+-#if(REMAP_NEW)
+-        if (remap_page_range(vma, vma->vm_start, virt_to_phys(nvstream->vir_dmabuf), size, vma->vm_page_prot)) {
+-#else
+-        if (remap_page_range(vma->vm_start, virt_to_phys(nvstream->vir_dmabuf), size, vma->vm_page_prot)) {
+-#endif
++        if (remap_pfn_range(vma, vma->vm_start, virt_to_phys(nvstream->vir_dmabuf)>>PAGE_SHIFT, size, vma->vm_page_prot)) {
+             unlock_kernel();
+             return -EAGAIN;
+         }
+@@ -847,11 +843,7 @@
+             unlock_kernel();
+             return -EINVAL;
+         }
+-#if(REMAP_NEW)
+-        if (remap_page_range(vma, vma->vm_start, virt_to_phys(nvstream->vir_dmabuf), size, vma->vm_page_prot)) {
+-#else
+-        if (remap_page_range(vma->vm_start, virt_to_phys(nvstream->vir_dmabuf), size, vma->vm_page_prot)) {
+-#endif
++        if (remap_pfn_range(vma, vma->vm_start, virt_to_phys(nvstream->vir_dmabuf)>>PAGE_SHIFT, size, vma->vm_page_prot)) {
+             unlock_kernel();
+             return -EAGAIN;
+         }

@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/nforce-audio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/ChangeLog,v 1.6 2005/02/04 19:47:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/ChangeLog,v 1.7 2005/03/07 21:19:58 genstef Exp $
+
+*nforce-audio-1.0.0292-r1 (07 Mar 2005)
+
+  07 Mar 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/nforce-2.6.10.patch, +files/nforce-2.6.11.patch,
+  +nforce-audio-1.0.0292-r1.ebuild:
+  Adding patches for 2.6.10/11 closes bug 82350 by Félix Dewaleyne
+  <draco.brasier@gmail.com>, thanks to Bols <bols2000@ibelgique.com> and Paul
+  Marks <pmarks@purdue.edu> for the patches in bug 81838 by Alain
+  <myth.384@wanadoo.nl>
 
 *nforce-audio-1.0.0292 (04 Feb 2005)
 

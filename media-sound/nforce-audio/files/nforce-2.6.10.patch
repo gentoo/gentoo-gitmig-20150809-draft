@@ -1,0 +1,36 @@
+diff -Nru NFORCE-Linux-x86-1.0-0292-pkg1/nvnet/nvenet.c NFORCE-Linux-x86-1.0-0292-pkgz/nvnet/nvenet.c
+--- NFORCE-Linux-x86-1.0-0292-pkg1/nvnet/nvenet.c	2004-10-08 22:10:57.000000000 +0200
++++ NFORCE-Linux-x86-1.0-0292-pkgz/nvnet/nvenet.c	2005-01-04 18:47:06.000000000 +0100
+@@ -1315,7 +1315,7 @@
+     if (dev && dev->priv)
+     {
+ 
+-        pci_save_state(priv->pdev, priv->pci_state);
++        pci_save_state(priv->pdev);
+         priv->pADApi->pfnGetPowerState(priv->pADApi->pADCX, &power_state);
+         if (netif_running(dev))
+         {
+@@ -1371,7 +1371,7 @@
+     if (dev && dev->priv)
+     {
+         pci_set_power_state(priv->pdev, 0);
+-        pci_restore_state(priv->pdev, priv->pci_state);
++        pci_restore_state(priv->pdev);
+         pci_enable_wake(priv->pdev, 3, 0);
+         pci_enable_wake(priv->pdev, 4, 0);
+ 
+diff -Nru NFORCE-Linux-x86-1.0-0292-pkg1/nvsound/main/Makefile.kbuild NFORCE-Linux-x86-1.0-0292-pkgz/nvsound/main/Makefile.kbuild
+--- NFORCE-Linux-x86-1.0-0292-pkg1/nvsound/main/Makefile.kbuild	2004-10-08 22:10:57.000000000 +0200
++++ NFORCE-Linux-x86-1.0-0292-pkgz/nvsound/main/Makefile.kbuild	2005-01-04 14:58:19.000000000 +0100
+@@ -51,9 +51,9 @@
+ 
+ REMAP_PAGE_RANGE := $(shell sh $(src)/conftest.sh "$(CC)" "$(KERNEL_SOURCES)" "$(KERNEL_OUTPUT)" remap_page_range)
+ 
+-ifeq ($(REMAP_PAGE_RANGE),5)
++#ifeq ($(REMAP_PAGE_RANGE),5)
+ EXTRA_CFLAGS += -DREMAP_NEW
+-endif
++#endif
+ 
+ #
+ # KBUILD build parameters.
