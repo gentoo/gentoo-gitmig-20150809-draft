@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/guitar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.13 2004/07/07 21:08:14 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.14 2004/08/20 21:08:29 seemant Exp $
+
+  20 Aug 2004; Seemant Kulleen <seemant@gentoo.org> guitar-0.1.4.ebuild:
+  it depends specifically on the 1.2 branch of GTK+, as pointed out by: Chris
+  Dellin <cdellin@gmail.com> in bug #60326
 
   07 Jul 2004; Tom Martin <slarti@gentoo.org> guitar-0.1.4.ebuild:
   Added ~amd64 keyword.

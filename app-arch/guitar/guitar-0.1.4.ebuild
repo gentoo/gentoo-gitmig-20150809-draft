@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.24 2004/07/07 21:08:14 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.25 2004/08/20 21:08:29 seemant Exp $
 
 MY_P=guiTAR-${PV}
 S=${WORKDIR}/${MY_P}
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 #app-arch/rar is binary for x86 only, how is sparc supported?
 KEYWORDS="x86 ppc ~amd64 -sparc"
 
-DEPEND="x11-libs/gtk+
+DEPEND="=x11-libs/gtk+-1.2*
 	app-arch/tar
 	app-arch/bzip2
 	x86? ( app-arch/rar )
