@@ -1,0 +1,8 @@
+# ChangeLog for games-arcade/gish-demo
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.1 2004/12/08 04:35:13 vapier Exp $
+
+*gish-demo-1.0.0 (07 Dec 2004)
+
+  07 Dec 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

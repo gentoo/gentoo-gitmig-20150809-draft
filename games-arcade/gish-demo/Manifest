@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a4e5b30fbeeff5971466ee8f7516f7bd ChangeLog 344
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 5cee5a7b599fda84f7eb6e3e7fe079e4 gish-demo-1.0.0.ebuild 1025
+MD5 bc93e6dd939f132d3726c777818f8708 files/gish-wrapper 73
+MD5 21351c1f2a26f61575de34d7a28560f4 files/digest-gish-demo-1.0.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBtoSKroRuSHgZdywRArKBAJ9wZ04LTv5GIMdSEW5ZwcGuDhA4fwCeM4bh
+JvgZM4R5hnWHi6iAJ2dH54c=
+=+4ef
+-----END PGP SIGNATURE-----
