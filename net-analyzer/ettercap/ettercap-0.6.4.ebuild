@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.3.ebuild,v 1.1 2001/12/14 02:02:38 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.4.ebuild,v 1.1 2002/02/14 20:42:51 m0rpheus Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ettercap is a multipurpose sniffer/interceptor/logger for switched LAN."
