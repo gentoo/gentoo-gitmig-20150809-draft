@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/pyzor
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.1 2002/12/12 23:01:30 blauwers Exp $
+
+*pyzor-0.4.0 (12 Dec 2002)
+
+  12 Dec 2002; B.Lauwers <blauwers@gentoo.org> pyzor-0.4.0.ebuild, Changelog :
+  Initial import. Ebuild submitted by Marcelo Fontenele S Santos <msantos@pobox.com>.
