@@ -1,3 +1,6 @@
+#a test ebuild for agriffis
+=sys-kernel/linux-headers-2.4.10-r1
+
 #this gcc's new atexit() fix that is supposed to be wonderful, doesn't work....
 =sys-devel/gcc-2.95.3-r2
 # needs to be tested
