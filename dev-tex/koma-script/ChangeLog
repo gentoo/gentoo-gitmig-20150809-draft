@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/koma-script
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.6 2004/05/08 09:54:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.7 2004/06/21 18:55:22 hansmi Exp $
+
+  21 Jun 2004; Michael Hanselmann <hansmi@gentoo.org>
+  koma-script-20040111-r1.ebuild:
+  Added to ~ppc, bug #54668.
 
   08 May 2004; Mamoru KOMACHI <usata@gentoo.org>
   koma-script-20040111-r1.ebuild, koma-script-20040111.ebuild:
