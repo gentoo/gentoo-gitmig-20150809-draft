@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.24 2004/01/02 21:54:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.25 2004/02/11 19:33:14 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -110,7 +110,7 @@ elibtoolize() {
 	local do_only_patches="no"
 	local deptoremove=
 	local my_dirlist=
-	local elt_patches="portage relink sed test tmp"
+	local elt_patches="portage relink max_cmd_len sed test tmp"
 
 	my_dirlist="$(ELT_find_ltmain_sh)"
 	
@@ -172,6 +172,14 @@ elibtoolize() {
 				"fix-relink")
 					# Do not apply if we do not have the relink patch applied ...
 					if [ -n "$(grep 'inst_prefix_dir' "${x}/ltmain.sh")" ]
+					then
+						ELT_walk_patches "${x}/ltmain.sh" "${y}"
+						ret=$?
+					fi
+					;;
+				"max_cmd_len")
+					# Do not apply if $max_cmd_len is not used ...
+					if [ -n "$(grep 'max_cmd_len' "${x}/ltmain.sh")" ]
 					then
 						ELT_walk_patches "${x}/ltmain.sh" "${y}"
 						ret=$?
