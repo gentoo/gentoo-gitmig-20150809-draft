@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dac1fc494f1dc8c3b3b89bce671fd903 nvram-reboot-2004.10.03.ebuild 725
+MD5 d92768f0806171cdd417e715d4726e3e ChangeLog 387
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 6cb3f533650b42a79b6511b2867e5029 files/digest-nvram-reboot-2004.10.03 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBaNkFHTu7gpaalycRAr3bAJ9LFQ3pOVlLpJgdWU5HlrH+X6/tjgCgnI+5
+JWFfKwLPzzb2LYDq8Sig/z8=
+=qtoE
+-----END PGP SIGNATURE-----
