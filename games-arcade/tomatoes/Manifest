@@ -1,7 +1,17 @@
-MD5 32b0224854525bd4cacd92a1c02d11e4 ChangeLog 910
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0d2c6b2463934e19d9ad35c5ea37dbda ChangeLog 1028
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 11de52ea527dd712b724b9b292d934ae tomatoes-1.55.ebuild 1809
 MD5 141957abaf30c10abd0014e5c62c2e9e tomatoes-1.5.ebuild 1775
+MD5 912585c72ff4a05a922d65023ec6cdf9 tomatoes-1.55.ebuild 2025
 MD5 541cb5f35391525048ce62e6d28a5f17 files/1.5-gcc34.patch 712
-MD5 e7264e50f8ef000802c7943781dd7d5b files/digest-tomatoes-1.55 147
 MD5 2c9494bdf746978eff80c55028b0e5dc files/digest-tomatoes-1.5 146
+MD5 e7264e50f8ef000802c7943781dd7d5b files/digest-tomatoes-1.55 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB1Kw9roRuSHgZdywRAnvuAJ9PX4cLigTAZFS+3Rq+ZRH3tD7qnQCfV10N
+u3hfpBthiOR3+7Uve/zssCs=
+=wUZE
+-----END PGP SIGNATURE-----
