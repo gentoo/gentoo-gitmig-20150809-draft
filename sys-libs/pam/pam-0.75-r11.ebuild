@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.24 2004/02/09 09:31:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.25 2004/04/16 10:24:29 mr_bones_ Exp $
+
+inherit gcc eutils flag-o-matic
 
 IUSE="berkdb selinux"
 
@@ -29,9 +31,6 @@ DEPEND="$RDEPEND
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.6
 	>=sys-devel/flex-2.5.4a-r5"
-
-#inherit needs to be after DEPEND definition to protect RDEPEND
-inherit gcc eutils flag-o-matic
 
 src_unpack() {
 	unpack ${A}
