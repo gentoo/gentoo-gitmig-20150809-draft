@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.11 2003/12/06 02:25:04 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.12 2004/01/04 02:37:52 caleb Exp $
+
+  03 Jan 2004; Caleb Tennis <caleb@gentoo.org> kvirc-3.0.0_beta1-r1.ebuild,
+  kvirc-3.0.0_beta2-r1.ebuild:
+  Change dep to get away from need-qt syntax
+  Mark x86 stable (though the ebuild is really old)
 
   05 Dec 2003; Chuck Short <zul@gentoo.org> kvirc-3.0.0_beta1-r1.ebuild,
   kvirc-3.0.0_beta2-r1.ebuild:

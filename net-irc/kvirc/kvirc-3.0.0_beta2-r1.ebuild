@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2-r1.ebuild,v 1.4 2003/12/06 02:25:04 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2-r1.ebuild,v 1.5 2004/01/04 02:37:52 caleb Exp $
 
 inherit kde-base
 
@@ -13,15 +13,14 @@ SRC_URI="ftp://ftp.kvirc.net/kvirc/${MYPV}/source/${MYP}.tar.gz"
 
 LICENSE="kvirc"
 SLOT="3"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="kde esd ipv6 ssl debug"
 
-use kde && need-kde 3 || need-qt 3
-
-newdepend "esd? ( media-sound/esound )
-	   ssl? ( dev-libs/openssl )
-	   oss? ( media-libs/audiofile )"
-use kde || newdepend "arts? ( kde-base/arts )"
+DEPEND="esd? ( media-sound/esound )
+	ssl? ( dev-libs/openssl )
+	oss? ( media-libs/audiofile )
+	>=x11-libs/qt-3
+	kde? ( >=kde-base/kdelibs-3 )"
 
 [ `use debug` ]		&& myconf="$myconf --with-debug-symbols"
 
