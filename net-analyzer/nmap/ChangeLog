@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.2 2002/03/21 16:45:30 seemant Exp $
+
+*nmap-2.54_beta31 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> nmap-2.54_beta31 :
+
+  Version bump.  Copied old ebuild over, and updated to reflect new syntax style
+
 
 *nmap-2.54_beta30 (1 Feb 2002)
 
