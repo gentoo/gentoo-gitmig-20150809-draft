@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r2.ebuild,v 1.7 2002/10/05 05:39:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r2.ebuild,v 1.8 2002/11/20 16:10:19 vapier Exp $
 
 IUSE="gpm postgres xface tiff gtk jpeg mule nas esd X png gnome"
 
@@ -11,7 +11,7 @@ SANDBOX_DISABLED="1"
 REAL_P=${P//-gtk/}
 S="${WORKDIR}/${REAL_P}"
 
-DESCRIPTION="XEmacs is a highly customizable open source text editor and application development system. This is the \"gamma\" release. Support for ncurses, and optional support for X via the GTK+ toolkit."
+DESCRIPTION="highly customizable text editor and application development system"
 
 EFS=1.29
 BASE=1.63
