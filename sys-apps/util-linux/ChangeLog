@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.74 2004/04/01 07:02:46 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.75 2004/04/02 16:12:15 solar Exp $
+
+  02 Apr 2004; <solar@gentoo.org> util-linux-2.12-r5.ebuild:
+  util-linux gives additional -fPIC errors on amd64 with -pie. Bugzilla Bug 46366
 
   01 Apr 2004; Jon Portnoy <avenj@gentoo.org> util-linux-2.12-r4.ebuild :
   Stable on AMD64.
