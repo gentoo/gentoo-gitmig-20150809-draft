@@ -123,7 +123,7 @@
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
-*<sys-libs/db-3.2.10
+*<sys-libs/db-4.1.0
 *sys-libs/gdbm  
 *>=sys-libs/ncurses-5.2.20020511-r3
 *>=sys-libs/pam-0.75-r10
