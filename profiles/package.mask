@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3120 2004/08/31 18:01:45 scox Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3121 2004/09/02 11:18:43 twp Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -25,10 +25,6 @@
 # <scox@gentoo.org> (31 Aug 2004)
 # Updated SELinux headers needs more testing before hitting ~x86
 >=sys-kernel/hardened-sources-2.4.27-r2
-
-# <twp@gentoo.org> (29 Aug 2004)
-# does not compile
-=dev-ruby/wxruby-0.5
 
 # <squinky86@gentoo.org> (28 Aug 2004)
 # dependency on pygtk remasked
