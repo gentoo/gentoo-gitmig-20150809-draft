@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip-id3v2/grip-id3v2-2.96.ebuild,v 1.2 2001/10/26 01:54:07 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip-id3v2/grip-id3v2-2.96.ebuild,v 1.3 2001/10/26 01:59:21 lordjoe Exp $
 
 P=grip-${PV}
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd grip-2.95
-	cp -a id3.c LICENSE README.id3v2 ${S}
+	cp -a id3.c README.id3v2 ${S}
 	cd ${S}
 	
 	#required to build without needing the cdparanoia source tarball
@@ -54,6 +54,6 @@ src_install () {
 	cp ${S}/grip.1.gz ${D}/usr/man/man1
 	cp ${S}/grip.1.gz ${D}/usr/man/man1/gcd.1.gz
 
-	dodoc README LICENSE TODO CREDITS CHANGES
+	dodoc README LICENSE TODO CREDITS CHANGES README.id3v2
 
 }
