@@ -11,7 +11,7 @@ Purpose:        klogd (from sysklogd-1.4.1) uses an antiquated method of
 
 --- sysklogd-1.4.1/ksym_mod.c	2000-09-12 22:15:28.000000000 +0100
 +++ sysklogd-1.4.1-plasmaroo/ksym_mod.c	2004-01-19 20:15:16.000000000 +0000
-@@ -80,9 +80,31 @@
+@@ -80,9 +80,33 @@
   *	Changed llseek() to lseek64() in order to skip a libc warning.
   */
  
@@ -33,8 +33,10 @@ Purpose:        klogd (from sysklogd-1.4.1) uses an antiquated method of
 +	#undef __KERNEL_STRICT_NAMES
 +	#include <linux/types.h>
 +
-+	#undef _LINUX_LIST_H
-+	#include <linux/list.h>
++	#ifndef LIST_POISON1
++		#undef _LINUX_LIST_H
++		#include <linux/list.h>
++	#endif
 +	#include <asm/semaphore.h>
 +	#undef __KERNEL__
 +	#include "module.h"
