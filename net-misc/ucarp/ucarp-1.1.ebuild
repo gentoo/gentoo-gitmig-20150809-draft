@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.1.ebuild,v 1.2 2005/01/29 21:26:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.1.ebuild,v 1.3 2005/03/01 12:43:02 xmerlin Exp $
 
 inherit eutils
 
@@ -13,19 +13,16 @@ DEPEND="virtual/libpcap"
 SRC_URI="ftp://ftp.ucarp.org/pub/ucarp/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 
 src_compile() {
-	cd "${S}"
 	econf || die
-
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install-strip || die
-	#einstall || die
+	make DESTDIR=${D} install || die
 
 	dodoc README INSTALL NEWS ChangeLog || die
 	dodoc examples/linux/vip-up.sh examples/linux/vip-down.sh

@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ucarp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.5 2005/01/29 21:26:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.6 2005/03/01 12:43:02 xmerlin Exp $
+
+  01 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
+  ucarp-1.1.ebuild:
+  added metadata.xml, ucarp-1.1 marked stable on x86
+
+  01 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
+  ucarp-1.1.ebuild:
+  added metadata.xml, ucarp-1.1 marked stable on x86
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> ucarp-0.7.ebuild,
   ucarp-1.1.ebuild:
