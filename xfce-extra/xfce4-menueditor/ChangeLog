@@ -1,0 +1,9 @@
+# ChangeLog for xfce-extra/xfce4-menueditor
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-menueditor/ChangeLog,v 1.1 2004/02/02 21:16:56 bcowan Exp $
+
+*xfce4-menueditor-1.0 (02 Feb 2004)
+
+  02 Feb 2004; Brad Cowan <bcowan@gentoo.org> xfce4-menueditor-1.0.ebuild:
+  Initial import.
+
