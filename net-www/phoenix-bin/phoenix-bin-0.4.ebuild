@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4.ebuild,v 1.2 2002/10/31 18:16:28 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4.ebuild,v 1.3 2002/11/07 19:36:05 phoenix Exp $
 
 MY_PN=${PN/-bin/}
 S=${WORKDIR}/${MY_PN}
@@ -14,6 +14,7 @@ SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 
 RDEPEND=">=sys-libs/lib-compat-1.0-r2
+	 >=x11-libs/gtk+-1.2.10-r9
 	 virtual/x11"
 
 src_install() {
