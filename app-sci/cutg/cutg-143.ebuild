@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/cutg/cutg-143.ebuild,v 1.1 2004/09/29 23:17:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/cutg/cutg-143.ebuild,v 1.2 2004/09/30 11:50:38 ribosome Exp $
 
 DESCRIPTION="Codon usage tables calculated from GenBank"
 HOMEPAGE="http://www.kazusa.or.jp/codon/"
 SRC_URI="ftp://ftp.kazusa.or.jp/pub/codon/current/compressed/CUTG.${PV}.tar.gz"
 LICENSE="public-domain"
-RESTRICT="fetch"
+RESTRICT="nomirror"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
