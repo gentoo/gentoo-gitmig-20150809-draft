@@ -1,29 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a21abceab9181623c7f3c8a472efb4b8 development-sources-2.6.11_rc2.ebuild 572
 MD5 63a42b858a6db60dc63371bb36e25660 development-sources-2.6.8.1.ebuild 557
-MD5 1d50ed5441a06c6b1122482ddd304999 development-sources-2.6.5.ebuild 1395
-MD5 ddce13dc1ecab41cd2d337523f7c0ecf development-sources-2.6.11_rc4.ebuild 569
-MD5 ae23074c9562e0b9b3f8ef62599770f6 development-sources-2.6.10-r1.ebuild 600
-MD5 c7d1eb55f425325502311831ed5c1d56 development-sources-2.6.11_rc1.ebuild 570
-MD5 d5d0435c1079243d61c187a29e263f57 development-sources-2.6.9.ebuild 649
-MD5 fd9a5cca3ecacdcb0bcd8dff4c9ca64e development-sources-2.6.11_rc3.ebuild 569
-MD5 fc55c53f9a7e31359463116683accb50 ChangeLog 30776
 MD5 5caccd9193acfe5a3a07ea88861cb11b metadata.xml 660
+MD5 ddce13dc1ecab41cd2d337523f7c0ecf development-sources-2.6.11_rc4.ebuild 569
+MD5 fc55c53f9a7e31359463116683accb50 ChangeLog 30776
+MD5 ddce13dc1ecab41cd2d337523f7c0ecf development-sources-2.6.11_rc5.ebuild 569
+MD5 c7d1eb55f425325502311831ed5c1d56 development-sources-2.6.11_rc1.ebuild 570
+MD5 fd9a5cca3ecacdcb0bcd8dff4c9ca64e development-sources-2.6.11_rc3.ebuild 569
+MD5 ae23074c9562e0b9b3f8ef62599770f6 development-sources-2.6.10-r1.ebuild 600
+MD5 d5d0435c1079243d61c187a29e263f57 development-sources-2.6.9.ebuild 649
+MD5 1d50ed5441a06c6b1122482ddd304999 development-sources-2.6.5.ebuild 1395
+MD5 a21abceab9181623c7f3c8a472efb4b8 development-sources-2.6.11_rc2.ebuild 572
+MD5 414403f6046e06086e6d2fb0e2d5be60 files/digest-development-sources-2.6.9 135
+MD5 cd0a7533c43364e377348613c6d76bb7 files/development-sources-2.6.10-CAN-2004-1235.patch 9736
 MD5 3f736d94a8104152db324c680f8d065b files/digest-development-sources-2.6.11_rc1 133
 MD5 8a11e5038184ee7a1f4e6c56b3a565e2 files/digest-development-sources-2.6.11_rc2 133
 MD5 3cd845b90655fbc9b596d3c2d506928f files/digest-development-sources-2.6.11_rc3 133
-MD5 8cd9ac39f6158c3b2a027748609f0332 files/digest-development-sources-2.6.11_rc4 133
-MD5 a09d4ddd7fe62bbf298879c6450cb6e7 files/digest-development-sources-2.6.5 208
-MD5 414403f6046e06086e6d2fb0e2d5be60 files/digest-development-sources-2.6.9 135
-MD5 78b4470aebd0088d0560ca3f88387b83 files/digest-development-sources-2.6.10-r1 67
-MD5 cd0a7533c43364e377348613c6d76bb7 files/development-sources-2.6.10-CAN-2004-1235.patch 9736
 MD5 18bed04a1b45de515096089cc10913ec files/digest-development-sources-2.6.8.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCD0gTchej4aZK9/cRAh2/AJ47n1RIaUV1DC7uEyTBquMcpkQLhgCeN0e3
-Gl2tZmbFe+NSB6hDxfaT8Rc=
-=nap9
------END PGP SIGNATURE-----
+MD5 8cd9ac39f6158c3b2a027748609f0332 files/digest-development-sources-2.6.11_rc4 133
+MD5 78b4470aebd0088d0560ca3f88387b83 files/digest-development-sources-2.6.10-r1 67
+MD5 9f8dcdbad851c890545340780e35b2fb files/digest-development-sources-2.6.11_rc5 133
+MD5 a09d4ddd7fe62bbf298879c6450cb6e7 files/digest-development-sources-2.6.5 208
