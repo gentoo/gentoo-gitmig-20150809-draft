@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.8 2002/05/25 21:44:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.9 2002/05/25 22:07:24 seemant Exp $
+
+*balsa-1.3.6 (25 May 2002)
+
+  25 May 2002; Seemant Kulleen <seemant@gentoo.org> balsa-1.3.6.ebuild
+  files/balsa-1.3.6.diff files/digest-balsa-1.3.6 :
+
+  Hot on the heels of -r2 comes a version bump also submitted by Jose
+  Fonseca.  This closes bug 2974
 
 *balsa-1.3.5-r2 (25 May 2002)
 
