@@ -1,5 +1,5 @@
-MD5 47cd6a8fe129e0daaad89b7a1b785c4a ChangeLog 358
+MD5 9ebdcd5ea0047e8ec540b969976e48e6 ChangeLog 464
 MD5 c181a55be5a629cd6d6ac125d0cea540 kmusicdb-0.9.2.ebuild 646
-MD5 dd3a97857efaaa56046bc9b8b932374f kmusicdb-0.11.0.ebuild 641
+MD5 ae9b13f4a68dc9ed584ac7974a5875b6 kmusicdb-0.11.0.ebuild 639
 MD5 d9a6003b09174cc2dfb6ff127ba24c2e files/digest-kmusicdb-0.9.2 71
 MD5 a65946b76ac16be634bfe0ed81aeb3d4 files/digest-kmusicdb-0.11.0 67
