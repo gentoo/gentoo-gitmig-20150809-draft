@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/freeze
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.7 2004/08/28 21:54:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.8 2004/10/02 16:21:22 kloeri Exp $
+
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> freeze-2.5.0.ebuild:
+  Keyword ~alpha.
 
   28 Aug 2004; Tom Gall <tgall@gentoo.org> freeze-2.5.0.ebuild:
   stable on ppc64, bug #60194
