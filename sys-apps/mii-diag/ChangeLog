@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/mii-diag
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/ChangeLog,v 1.2 2003/02/12 09:03:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/ChangeLog,v 1.3 2003/09/20 03:24:40 agriffis Exp $
+
+  19 Sep 2003; Aron Griffis <agriffis@gentoo.org> mii-diag-2.07.ebuild,
+  mii-diag-2.09.ebuild:
+  Fix building with gcc-3.3.1, mark stable on alpha, and add some error-checking
+  to the ebuild (bug 29165). Also add version 2.09.
 
 *mii-diag-2.07 (23 Nov 2002)
 
-  23 Nov 2002; Aron Griffis <agriffis@gentoo.org> :
-
+  23 Nov 2002; Aron Griffis <agriffis@gentoo.org> mii-diag-2.07.ebuild:
   Initial import.
