@@ -52,7 +52,6 @@
 
 import string,os
 from commands import *
-import md5
 from stat import *
 import fchksum,types
 import sys
