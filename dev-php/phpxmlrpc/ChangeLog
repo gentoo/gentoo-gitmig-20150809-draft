@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/phpxmlrpc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpxmlrpc/ChangeLog,v 1.1 2004/04/17 01:51:54 eradicator Exp $
+
+*phpxmlrpc-1.0.99.2 (16 Apr 2004)
+
+  16 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  phpxmlrpc-1.0.99.2.ebuild:
+  Initial ebuild by Josh Glover <gentoo@jmglov.net> in bug #48064.
+
