@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/evkeyd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evkeyd/ChangeLog,v 1.2 2003/06/20 20:45:26 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evkeyd/ChangeLog,v 1.3 2003/06/20 21:26:05 vladimir Exp $
+
+  20 Jun 2003; Graham Forest <vladimir@gentoo.org> :
+  digest fix
 
 *evkeyd-0.1_pre3 (20 Jun 2003)
 
