@@ -1,78 +1,71 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.3.8-r1.ebuild,v 1.5 2001/08/31 03:23:38 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.3.8-r1.ebuild,v 1.6 2002/04/28 02:37:31 seemant Exp $
 
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A text-mode window environment"
-SRC_URI="http://ftp1.sourceforge.net/twin/${A}
-	 http://linuz.sns.it/~max/twin/${A}"
+SRC_URI="http://ftp1.sourceforge.net/twin/${P}.tar.gz
+	http://linuz.sns.it/~max/twin/${P}.tar.gz"
 HOMEPAGE="http://linuz.sns.it/~max/twin/" 
 DEPEND="virtual/glibc
 	X? ( virtual/x11 )
 	ggi? ( >=media-libs/libggi-1.9 )
-        >=sys-libs/gpm-1.19.3
-        >=sys-libs/ncurses-5.2"
+	>=sys-libs/gpm-1.19.3
+	>=sys-libs/ncurses-5.2"
 	
 src_unpack() {
-   unpack ${A}
-   cd ${S}
-   try patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff || die
 }
 
 src_compile() {
-   local conf
-   conf="\n\n\n\n\n""\n\n\n\n\n""\n\ny\n\n\n""\n\n\n\n"
-   if [ "`use X`" ]
-   then
-      conf=${conf}"y\n"
-   else
-      conf=${conf}"n\n"
-   fi
-   conf=${conf}"\n\n"
-   if [ "`use ggi`" ]
-   then
-      conf=${conf}"y\n"
-   else
-      conf=${conf}"n\n"
-   fi
-   conf=${conf}"\n\n""\n\n\n\nn\n" 
-   echo -e "${conf}" > test
-   try cat test | make config
-   rm test
-   try make clean
-   try make 
+	local conf
+	conf="\n\n\n\n\n""\n\n\n\n\n""\n\ny\n\n\n""\n\n\n\n"
+	
+	use X \
+	   && conf=${conf}"y\n" \
+	   || conf=${conf}"n\n"
+
+	conf=${conf}"\n\n"
+	use ggi \
+	   && conf=${conf}"y\n" \
+	   || conf=${conf}"n\n"
+
+	conf=${conf}"\n\n""\n\n\n\nn\n" 
+	echo -e "${conf}" > test
+	cat test | make config
+	rm test
+	make clean || die
+	make || die
 }
 
 src_install() {
-   
-   dodir /usr/lib /usr/bin /usr/lib/ /usr/include /usr/include/Tw \
-         /usr/lib/twin/modules /usr/X11R6/lib/X11/fonts/misc
+	
+	dodir /usr/lib /usr/bin /usr/lib/ /usr/include /usr/include/Tw \
+		/usr/lib/twin/modules /usr/X11R6/lib/X11/fonts/misc
 
-   DESTDIR=${D} make install
+	DESTDIR=${D} make install || die
 
-   if [ "`use X`" ]
-   then
-      insinto /usr/X11R6/lib/X11/fonts/misc
-         doins fonts/vga.pcf.gz
-   fi
+	use X && ( \
+		insinto /usr/X11R6/lib/X11/fonts/misc
+		doins fonts/vga.pcf.gz
+	)
 
 }
 
-pkg_postinst() {   
-   if [ "`use X`" ]
-   then
-      /usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
-      /usr/X11R6/bin/xset fp rehash
-   fi
+pkg_postinst() {	
+	use X && ( \
+		/usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
+		/usr/X11R6/bin/xset fp rehash
+	)
 }
 
 pkg_postrm() {
-   if [ "`use X`" ]
-   then
-      /usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
-      /usr/X11R6/bin/xset fp rehash
-   fi
+	use X && ( \
+		/usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
+		/usr/X11R6/bin/xset fp rehash
+	)
 }

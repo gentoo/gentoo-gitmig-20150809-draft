@@ -1,12 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/gtktalog-0.99.19.ebuild,v 1.1 2002/04/06 13:23:19 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/gtktalog-0.99.19.ebuild,v 1.2 2002/04/28 02:37:31 seemant Exp $
 
-A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="The GTK disk catalog."
-SRC_URI="http://freesoftware.fsf.org/download/gtktalog/gtktalog/sources/${A}"
+SRC_URI="http://freesoftware.fsf.org/download/gtktalog/gtktalog/sources/${P}.tar.bz2"
 HOMEPAGE="http://www.freesoftware.fsf.org/gtktalog"
 
 DEPEND=">=x11-libs/gtk+-1.2.10-r4
@@ -17,9 +16,7 @@ DEPEND=">=x11-libs/gtk+-1.2.10-r4
 src_compile() {
 	local myconf
 
-	if [ -z "`use nls`" ] ; then
-        	myconf="--disable-nls"
-	fi
+	use nls || myconf="--disable-nls"
     
 	./configure --host=${CHOST}	\
 		--prefix=/usr \
@@ -33,7 +30,7 @@ src_compile() {
 		--enable-ogginfo \
 		--enable-catalog2 \
 		--enable-catalog3 \
-		$myconf || die
+		${myconf} || die
 	emake || die
 }
 

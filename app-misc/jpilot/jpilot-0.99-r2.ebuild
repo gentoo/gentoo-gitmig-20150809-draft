@@ -1,10 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99-r2.ebuild,v 1.1 2001/10/06 12:36:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99-r2.ebuild,v 1.2 2002/04/28 02:37:31 seemant Exp $
 
 
-A="${P}.tar.gz jpilot-syncmal_0.62.tar.gz malsync_2.0.6.src.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="Desktop Organizer Software for the Palm Pilot"
 SRC_URI="http://jpilot.org/${P}.tar.gz

@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Tod M. Neidt <tneidt@fidnet.com>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/netcdf/netcdf-3.5.0-r1.ebuild,v 1.1 2002/01/05 03:58:44 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/netcdf/netcdf-3.5.0-r1.ebuild,v 1.2 2002/04/28 02:37:31 seemant Exp $
 
 S=${WORKDIR}/${P}/src
 DESCRIPTION="Interface for array oriented data access"
@@ -36,4 +36,3 @@ src_install() {
 	dodoc COMPATIBILITY COPYRIGHT INSTALL.html MANIFEST
 	dodoc README RELEASE_NOTES VERSION
 }
-
