@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.11.1.ebuild,v 1.1 2003/12/06 18:32:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.11.1.ebuild,v 1.2 2003/12/06 20:11:42 lanius Exp $
 
 DESCRIPTION="A lightweight, speed optimized color management engine"
 HOMEPAGE="http://www.littlecms.com/"
@@ -16,6 +16,10 @@ DEPEND="tiff? ( media-libs/tiff )
 	python? ( >=dev-lang/python-1.5.2 )"
 
 IUSE="tiff jpeg zlib python"
+
+MY_PV=1.11
+S=${WORKDIR}/${PN}-${MY_PV}
+
 
 src_compile() {
 	econf \
