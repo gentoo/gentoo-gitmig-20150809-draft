@@ -1,0 +1,8 @@
+# ChangeLog for x11-wm/trswm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/trswm/ChangeLog,v 1.1 2003/06/17 20:02:33 twp Exp $
+
+*trswm-0.3 (17 Jun 2003)
+
+  17 Jun 2003; Tom Payne <twp@gentoo.org> trswm-0.3.ebuild :
+  Initial release.
