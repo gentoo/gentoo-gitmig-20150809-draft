@@ -1,6 +1,16 @@
-MD5 26a4473eece8c82884972ad140afacf0 libxml-perl-0.07-r2.ebuild 585
-MD5 434bf59b465493c3805ef996da1d9d14 libxml-perl-0.07-r1.ebuild 581
-MD5 b9444d0b79f6107094019b8c641b82cb ChangeLog 1336
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4a96093cfd3ba7d04d36865e9e5c1458 ChangeLog 1463
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 90cd8b71e269a3bd773947a343793dcb libxml-perl-0.07-r1.ebuild 565
+MD5 e11c3bd849b01ce36701edd86a9b2827 libxml-perl-0.07-r2.ebuild 569
 MD5 5441d75a1cfa708ef55263f6d011f0e0 files/digest-libxml-perl-0.07-r1 67
 MD5 5441d75a1cfa708ef55263f6d011f0e0 files/digest-libxml-perl-0.07-r2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2rEDtG5z4I8BtQoRAna1AJ0Xrbz9m84exGq8bTalqfbuIy05dQCfczVp
+6R9wxfOJ0blvVKLKqsiYUEY=
+=IsnW
+-----END PGP SIGNATURE-----
