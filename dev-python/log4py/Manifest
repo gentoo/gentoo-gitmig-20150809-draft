@@ -1,3 +1,4 @@
-MD5 a820c38660b8c987de0c9e71a7786846 files/digest-log4py-1.1 61
-MD5 8b00c373b7f6c4f4f86beb941b174a9d log4py-1.1.ebuild 679
 MD5 a70e6c8e6ae3488c4e2dc0e252829b95 ChangeLog 454
+MD5 8b00c373b7f6c4f4f86beb941b174a9d log4py-1.1.ebuild 679
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 a820c38660b8c987de0c9e71a7786846 files/digest-log4py-1.1 61

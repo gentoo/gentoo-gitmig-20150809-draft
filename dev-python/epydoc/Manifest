@@ -1,3 +1,4 @@
-MD5 d21c286501b0192dd368d1f9476ab2cd files/digest-epydoc-1.1 62
-MD5 84734ceebba47687e7fb09f594af9c09 epydoc-1.1.ebuild 757
 MD5 08ed11397145c1df6c2d03b97057e9d4 ChangeLog 426
+MD5 84734ceebba47687e7fb09f594af9c09 epydoc-1.1.ebuild 757
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 d21c286501b0192dd368d1f9476ab2cd files/digest-epydoc-1.1 62

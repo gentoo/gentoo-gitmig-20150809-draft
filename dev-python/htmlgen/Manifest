@@ -1,3 +1,4 @@
-MD5 43b1948d8e565b8bfc50541f916b1311 files/digest-htmlgen-2.2.2 56
-MD5 4db6750ffdb4860a58bfe3fe7230321d ChangeLog 443
 MD5 77a2f88a1a1d60ab0499c0f712ab8f29 htmlgen-2.2.2.ebuild 1400
+MD5 4db6750ffdb4860a58bfe3fe7230321d ChangeLog 443
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 43b1948d8e565b8bfc50541f916b1311 files/digest-htmlgen-2.2.2 56

@@ -1,3 +1,4 @@
-MD5 8e1128c918bb21f44497bb31c44949e6 files/digest-gadfly-1.0.0 64
-MD5 5359ea67ea66f1e6ec16d7eba792f2eb gadfly-1.0.0.ebuild 755
 MD5 8897b66bbd0f86dcf68461cf6a54c6aa ChangeLog 436
+MD5 5359ea67ea66f1e6ec16d7eba792f2eb gadfly-1.0.0.ebuild 755
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 8e1128c918bb21f44497bb31c44949e6 files/digest-gadfly-1.0.0 64

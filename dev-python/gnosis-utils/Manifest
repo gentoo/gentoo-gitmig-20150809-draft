@@ -1,3 +1,4 @@
-MD5 d8ed548f398d1067e2611ebd0e590c23 files/digest-gnosis-utils-1.0.6 70
-MD5 a786baa96c4f10410a9a88609374f24a ChangeLog 415
 MD5 5284e08f1683c3486f4fd06471577dbb gnosis-utils-1.0.6.ebuild 1128
+MD5 a786baa96c4f10410a9a88609374f24a ChangeLog 415
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 d8ed548f398d1067e2611ebd0e590c23 files/digest-gnosis-utils-1.0.6 70

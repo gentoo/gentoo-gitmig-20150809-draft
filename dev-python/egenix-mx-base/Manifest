@@ -2,8 +2,7 @@ MD5 513189d89d06ad13454dfe2863f7576b ChangeLog 1294
 MD5 a238b55af8e847c51d446d4e6ebea9bf egenix-mx-base-2.0.2.ebuild 708
 MD5 839e67255bc277af4b43c0eacbf53b29 egenix-mx-base-2.0.3.ebuild 730
 MD5 433548126d98a0465427e04a813d394f egenix-mx-base-2.0.4.ebuild 646
-MD5 25e67498ed30636efd200465c76ccdfb egenix-mx-base-2.1.0_beta5.ebuild 668
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 9220404a96cadf0acbcb3d7480c0077d files/digest-egenix-mx-base-2.0.2 72
 MD5 d35a8b52f34e9f071b7488d8f683f97b files/digest-egenix-mx-base-2.0.3 72
 MD5 dbf897ee982aacf0446fb44b1fca6dc8 files/digest-egenix-mx-base-2.0.4 72
-MD5 7594eeb9123a07bb2c89a7d315b6f298 files/digest-egenix-mx-base-2.1.0_beta5 74
