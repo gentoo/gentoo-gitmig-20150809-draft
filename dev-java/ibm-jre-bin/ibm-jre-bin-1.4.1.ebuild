@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.7 2004/06/03 20:28:45 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.8 2004/06/04 17:42:16 mr_bones_ Exp $
 
 inherit java nsplugins
 
@@ -52,7 +52,7 @@ src_postinst(){
 }
 
 pkg_prerm() {
- 	if [ ! -z "$(java-config -J | grep ${P})" ] ; then
+	if [ ! -z "$(java-config -J | grep ${P})" ] ; then
 		ewarn "It appears you are removing your default system VM!"
 		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
 	fi
