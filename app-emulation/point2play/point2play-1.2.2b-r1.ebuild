@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.2.2b-r1.ebuild,v 1.1 2004/05/16 04:27:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.2.2b-r1.ebuild,v 1.2 2004/05/16 06:06:08 vapier Exp $
+
+inherit eutils
 
 MY_P=${PN}-1.2.2.b
 DESCRIPTION="graphical frontend for WineX"
@@ -25,6 +27,11 @@ pkg_nofetch() {
 	einfo "from ${HOMEPAGE} (requires a Transgaming subscription)"
 	echo
 	einfo "The archive should then be placed into ${DISTDIR}"
+}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/1.2-python2.2.patch
 }
 
 src_install() {
