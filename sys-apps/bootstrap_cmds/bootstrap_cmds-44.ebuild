@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bootstrap_cmds/bootstrap_cmds-44.ebuild,v 1.7 2005/02/18 07:40:36 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bootstrap_cmds/bootstrap_cmds-44.ebuild,v 1.8 2005/03/04 05:16:16 kito Exp $
 
 DESCRIPTION="Darwin bootstrap_cmds - config, decomment, mig, relpath"
 HOMEPAGE="http://darwinsource.opendarwin.org/10.3.5/"
@@ -9,7 +9,7 @@ SRC_URI="http://darwinsource.opendarwin.org/tarballs/apsl/${P}.tar.gz"
 LICENSE="APSL-2"
 
 SLOT="0"
-KEYWORDS="~ppc-macos"
+KEYWORDS="ppc-macos"
 IUSE="build"
 DEPEND="virtual/libc"
 
