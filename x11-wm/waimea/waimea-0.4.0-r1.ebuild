@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0-r1.ebuild,v 1.4 2003/06/27 11:39:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0-r1.ebuild,v 1.5 2003/08/01 04:39:39 vapier Exp $
 
 inherit eutils
  
 DESCRIPTION="Window manager based on BlackBox"
 SRC_URI="http://www.waimea.org/files/stable/source/${P}.tar.bz2
-	cjk? ( http://www.kasumi.sakura.ne.jp/~zoe/tdiary/patch/${P}-ja.patch )"
+	cjk? ( http://www.kasumi.sakura.ne.jp/~zoe/tdiary/patch/${P}-japanese.patch )"
 HOMEPAGE="http://www.waimea.org/"
 
 LICENSE="GPL-2"
