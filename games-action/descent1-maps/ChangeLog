@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/descent1-maps
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-maps/ChangeLog,v 1.1 2004/02/17 18:23:30 mr_bones_ Exp $
+
+*descent1-maps-1.0 (19 Jan 2004)
+
+  19 Jan 2004; Jeremy Maitin-Shepard <jbms@gentoo.org>
+  descent1-maps-1.0.ebuild, metadata.xml:
+  Initial import.
+
