@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.8 2003/03/19 20:50:19 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.9 2003/09/20 06:16:15 seemant Exp $
+
+  19 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  gentoo-rsync-mirror-1.0-r2.ebuild:
+  typo fix in einfo, thanks to: Rich Churcher <rmch@xtra.co.nz> in bug #28740
 
 *gentoo-rsync-mirror-1.0-r2 (19 Mar 2003)
 
