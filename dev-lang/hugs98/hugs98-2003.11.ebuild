@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.9 2004/12/08 19:50:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.10 2004/12/08 22:57:55 hansmi Exp $
 
 inherit base flag-o-matic eutils
 
@@ -30,6 +30,11 @@ src_compile() {
 	local myconf
 
 	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
+
+	# Strip -O? from CFLAGS because of bugs
+	# in the garbage collection of gcc on ppc.
+	# See bug #73611
+	[ "${ARCH}" = "ppc" ] && filter-flags "-O?"
 
 	if use opengl; then
 		myconf="--enable-hopengl"

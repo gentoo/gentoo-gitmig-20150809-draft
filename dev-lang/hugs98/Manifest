@@ -1,5 +1,5 @@
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 ffa9227aae6cf0c6ebea667f7757cb7a ChangeLog 4089
-MD5 5c17f8a26be24c0d8aeb69ec7bcfb4a3 hugs98-2003.11.ebuild 2346
+MD5 5eb3705255b2c784618b092d5d0e64a6 ChangeLog 4187
+MD5 0227863e162dc3615f5e5cb759d74dd2 hugs98-2003.11.ebuild 2496
 MD5 eb7ae57bb23e867135381cbd99c5c1c0 files/digest-hugs98-2003.11 67
 MD5 4c6e27fe15252dea9f141e0f6b06ed36 files/hugs98-2003.11-gcc34.patch 303
