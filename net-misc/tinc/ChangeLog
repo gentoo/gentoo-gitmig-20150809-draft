@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tinc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.1 2003/12/24 13:21:04 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.2 2003/12/24 14:23:51 bazik Exp $
+
+  24 Dec 2003; Sven Blumenstein <bazik@gentoo.org> tinc-1.0.2.ebuild,
+  files/tincd:
+  Fixed init script and added ~sparc keyword.
 
 *tinc-1.0.2 (03 Aug 2003)
 
