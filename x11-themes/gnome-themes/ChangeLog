@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.24 2003/10/07 22:56:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.25 2003/10/08 03:56:12 obz Exp $
+
+  08 Oct 2003; Mike Gardiner <obz@gentoo.org> gnome-themes-2.4.0.ebuild,
+  files/gnome-themes-2.4.0-nothinice.patch:
+  Re the FIXME in the ebuild and bug #30497 added a patch to not use the
+  thinice-engine included here, and then depend on our version in
+  x11-plugins/gtk-engines-thinice.
 
   07 Oct 2003; Alastair Tse <liquidx@gentoo.org> gnome-themes-0.3.ebuild,
   gnome-themes-2.2.1.ebuild, gnome-themes-2.2.2.ebuild,
