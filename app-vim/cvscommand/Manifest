@@ -1,4 +1,4 @@
-MD5 9971d13ac661c33314a6b6bd677cbdea ChangeLog 794
-MD5 0d1e101199371ee64c89108f39736680 cvscommand-1.63.ebuild 421
+MD5 0a63bcaa2a3cb3fd55bab32be3de456f ChangeLog 879
+MD5 430987e358b0aeedd7713e40904683ad cvscommand-1.63.ebuild 424
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 a4656469986a2ce622163caf9ad436fe files/digest-cvscommand-1.63 67
