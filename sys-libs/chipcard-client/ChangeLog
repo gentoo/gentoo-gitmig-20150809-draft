@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/chipcard-client
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/chipcard-client/ChangeLog,v 1.1 2004/12/21 19:21:20 hanno Exp $
+
+*chipcard-client-1.9.4_beta (21 Dec 2004)
+
+  21 Dec 2004; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +chipcard-client-1.9.4_beta.ebuild:
+  Initial commit (thanks to Florian Mueller in bug #69029).
+
