@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r4.ebuild,v 1.9 2004/08/11 20:45:05 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r4.ebuild,v 1.10 2004/08/12 03:22:31 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://ftp.gnu.org/gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2.5"
-KEYWORDS="x86 ~ppc ~ppc64 sparc mips alpha ~arm hppa amd64 ~ia64 ~s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE=""
 
 DEPEND=">=sys-apps/texinfo-4.3
@@ -120,7 +120,6 @@ src_install() {
 }
 
 pkg_preinst() {
-
 	# remove these to make sure symlinks install properly if old versions
 	# was binaries
 	for x in autoconf autoheader autoreconf autoscan autoupdate ifnames autom4te
@@ -133,7 +132,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
 	echo
 	einfo "Please note that the 'WANT_AUTOCONF_?_?=1' have changed to:"
 	echo
