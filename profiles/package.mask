@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <iggy@gentoo.org> (02 Dec 2003)
+# unmaintained upstream, I'll add pac instead
+sys-kernel/ac-sources
+
 # <genone@gentoo.org> (30 Nov 2003)
 # unmaintained package
 app-portage/kemerge
