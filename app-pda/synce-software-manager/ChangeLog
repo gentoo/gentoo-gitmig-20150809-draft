@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/synce-software-manager
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-software-manager/ChangeLog,v 1.1 2004/09/26 11:32:34 liquidx Exp $
+
+*synce-software-manager-0.9.0 (26 Sep 2004)
+
+  26 Sep 2004; Alastair Tse <liquidx@gentoo.org>
+  +synce-software-manager-0.9.0.ebuild:
+  initial commit. ebuild thanks to Miles Lubin <miles@lubin.us> (#61952)
+
