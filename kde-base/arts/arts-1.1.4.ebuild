@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.10 2003/12/28 03:32:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.11 2004/01/02 14:55:36 caleb Exp $
 inherit kde flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
 
 set-kdedir 3.1
-need-qt 3.1.0
 
 SRC_URI="mirror://kde/stable/3.1.4/src/${P}.tar.bz2"
 HOMEPAGE="http://multimedia.kde.org"
@@ -19,6 +18,7 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 	mad? ( media-libs/libmad media-libs/libid3tag )
 	media-libs/audiofile
 	>=dev-libs/glib-2"
+need-qt 3.1.0
 
 if [ "${COMPILER}" == "gcc3" ]; then
 	# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with
@@ -42,6 +42,8 @@ use mad || myconf="$myconf --disable-libmad"
 PATCHES="$FILESDIR/optional-deps.diff"
 
 src_unpack() {
+	echo $DEPEND
+	echo $RDEPEND
 	kde_src_unpack
 	kde_sandbox_patch ${S}/soundserver
 	# for the configure.in.in patch, for some reason it's not automatically picked up
