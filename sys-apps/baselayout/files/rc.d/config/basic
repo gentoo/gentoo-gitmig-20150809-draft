@@ -1,7 +1,11 @@
-SYSLOGD=""				# For remote UDP logging use SYSLOGD="-r"
-KEYMAP="de-latin1-nodeadkeys"
-CONSOLEFONT="iso09.f14"
-KLOGD=""				# Use KLOGD="-k /boot/System.map-$(uname -r)" to specify System.map
+#achim lives in Germany, and enjoys these settings
+#KEYMAP="de-latin1-nodeadkeys"
+#CONSOLEFONT="iso09.f14"
+
+#drobbins lives in the USA, and likes these settings
+KEYMAP="us"
+CONSOLEFONT="grfixed"
+
 SULOGIN=no				# Set to yes if you want sulogin to be spawned on bootup
 DELAYLOGIN=yes				# Set to no if you want to be able to login over telnet/rlogin
 					# before system startup is complete (as soon as inetd is started)
@@ -12,3 +16,13 @@ FSCKFIX=no				# Set FSCKFIX to "yes" if you want to add "-y" to the fsck at star
 ARCH=`uname -m`				# Architecture
 NFSSERVER=no				# Set to yes if you want to run an nfsserver
 SUPERVISE="sysklogd sshd xinetd"        # Add the services you want to run supervised
+
+# if you sysklogd is listed in the SUPERVISE line above, you can leave these
+# next two variables commented out.  Otherwise, they can be used to set 
+# traditional syslogd/klogd options:
+
+#KLOGD=""                                
+# Use KLOGD="-k /boot/System.map-$(uname -r)" to specify System.map
+
+#SYSLOGD=""                              
+# For remote UDP logging use SYSLOGD="-r"  
