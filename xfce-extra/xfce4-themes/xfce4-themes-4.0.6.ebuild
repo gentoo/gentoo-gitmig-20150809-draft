@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/xfce4-themes-4.0.6.ebuild,v 1.10 2005/01/03 01:25:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/xfce4-themes-4.0.6.ebuild,v 1.11 2005/02/02 05:08:40 bcowan Exp $
 
 DESCRIPTION="Xfce4 themes"
 HOMEPAGE="http://www.xfce.org/"
@@ -14,7 +14,8 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0.6
 	dev-libs/libxml2
-	>=xfce-base/xfce4-base-${PV}"
+	~xfce-base/xfce4-base-${PV}
+	!>xfce-base/xfce4-4.0.6"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
