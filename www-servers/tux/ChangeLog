@@ -1,6 +1,9 @@
-# ChangeLog for net-www/tux
+# ChangeLog for www-servers/tux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/ChangeLog,v 1.4 2004/09/03 15:58:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/ChangeLog,v 1.5 2004/09/05 09:52:51 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> tux-2.2.7.ebuild:
+  Fixed ChangeLog header. Added missing IUSE.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> tux-3.2.16.ebuild:
   Masked tux-3.2.16.ebuild stable for ppc
