@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/snns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.3 2005/01/30 16:07:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.4 2005/02/10 11:43:22 phosphan Exp $
+
+*snns-4.2-r7 (10 Feb 2005)
+
+  10 Feb 2005; Patrick Kursawe <phosphan@gentoo.org> +snns-4.2-r7.ebuild:
+  New patch for python function calls from the SNNS kernel
 
   30 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   +files/4.2-fPIC-python.patch, snns-4.2-r6.ebuild:
