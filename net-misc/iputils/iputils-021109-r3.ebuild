@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.19 2005/01/19 01:09:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.20 2005/01/21 00:17:30 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils toolchain-funcs
 
@@ -82,7 +82,8 @@ src_install() {
 
 	dodoc INSTALL RELNOTES
 
-	use ipv6 || rm doc/*6.8
+	rm -f doc/setkey.8
+	use ipv6 || rm -f doc/*6.8
 	doman doc/*.8
 
 	use doc && dohtml doc/*.html
