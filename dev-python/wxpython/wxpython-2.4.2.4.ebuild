@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4.ebuild,v 1.6 2004/08/02 14:47:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4.ebuild,v 1.7 2004/08/07 06:32:35 pythonhead Exp $
 
-inherit eutils
+inherit eutils wxwidgets
 
 MY_P="${P/wxpython-/wxPythonSrc-}"
 S="${WORKDIR}/${MY_P}/wxPython"
@@ -13,11 +13,14 @@ SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.gz"
 LICENSE="wxWinLL-3"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha arm amd64 ia64 hppa"
-IUSE="opengl tiff jpeg png gtk2 unicode"
+IUSE="gtk2 unicode opengl tiff jpeg png"
 
 RDEPEND=">=dev-lang/python-2.1
 	>=x11-libs/wxGTK-2.4.2
 	gtk2? ( >=x11-libs/gtk+-2.0
+		>=x11-libs/pango-1.2
+		>=dev-libs/glib-2.0 )
+	unicode? ( >=x11-libs/gtk+-2.0
 		>=x11-libs/pango-1.2
 		>=dev-libs/glib-2.0 )
 	!gtk2? ( =x11-libs/gtk+-1.2*
@@ -32,44 +35,25 @@ DEPEND="${RDEPEND}
 	gtk2? ( dev-util/pkgconfig )"
 
 pkg_setup() {
-	# make sure if you want gtk2, you have wxGTK with gtk2, and vice versa
-	if use gtk2; then
-		if [ ! -f "/usr/bin/wxgtk2u-2.4-config" -a ! -f "/usr/bin/wxgtk2ud-2.4-config" -a ! -f "/usr/bin/wxgtk2-2.4-config" -a ! -f "/usr/bin/wxgtk2d-2.4-config" ]; then
-			eerror "You need x11-libs/wxGTK compiled with GTK+2 support."
-			eerror "Either emerge wxGTK with 'gtk2' in your USE flags or"
-			eerror "emerge wxpython with '-gtk2' in your USE flags."
-			die "wxGTK needs to be compiled with USE='gtk2'"
-		fi
-	else
-		if [ ! -f "/usr/bin/wxgtk-2.4-config" ]; then
-			eerror "You need x11-libs/wxGTK compiled with GTK+1."
-			eerror "Either re-emerge wxGTK with '-gtk2' in your USE flags or"
-			eerror "emerge wxpython with '-gtk2' in your USE flags."
-			die "wxGTK needs to be compiled with USE='-gtk2'"
-		fi
+	einfo "You can now have gtk, gtk2 and unicode versions of wxGTK"
+	einfo "simultaneously installed as of >=wxGTK-2.4.2-r2."
+	einfo "This means you can have wxpython installed using any one of those"
+	einfo "versions by setting gtk2, unicode, or -gtk2 (for gtk1) in USE"
+	if  use unicode; then
+		! use gtk2 && die "You must put gtk2 in your USE if you need unicode support"
 	fi
-
-	# make sure that wxpython and wxGTK have same unicode setting:
-	if use unicode; then
-		if [ ! -f "/usr/bin/wxgtk2u-2.4-config" -a ! -f "/usr/bin/wxgtk2ud-2.4-config" ]; then
-			eerror "You need x11-libs/wxGTK compiled with Unicode support."
-			eerror "Either emerge wxGTK with 'unicode' in your USE flags or"
-			eerror "emerge wxpython without 'unicode' in your USE flags."
-			die "wxGTK needs to be compiled with unicode"
-		fi
-	else
-		if [ ! -f "/usr/bin/wxgtk-2.4-config" -a ! -f "/usr/bin/wxgtk2-2.4-config" -a ! -f "/usr/bin/wxgtkd-2.4-config" -a ! -f "/usr/bin/wxgtk2d-2.4-config" ]; then
-			eerror "You need x11-libs/wxGTK compiled without Unicode."
-			eerror "Either emerge wxGTK without 'unicode' in your USE flags or"
-			eerror "emerge wxpython with 'unicode' in your USE flags."
-			die "wxGTK needs to be compiled without unicode"
-		fi
-	fi
-
 }
 
 src_compile() {
 	local mypyconf
+
+	if ! use gtk2; then
+		need-wxwidgets gtk || die "Emerge wxGTK with -no_wxgtk1 in USE"
+	elif use unicode; then
+		need-wxwidgets unicode || die "Emerge wxGTK with unicode in USE"
+	else
+		need-wxwidgets gtk2 || die "Emerge wxGTK with gtk2 in USE"
+	fi
 
 	use opengl \
 		&& 	mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
