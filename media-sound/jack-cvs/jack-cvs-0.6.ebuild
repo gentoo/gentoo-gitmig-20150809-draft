@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.6.ebuild,v 1.2 2003/04/03 22:20:41 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.6.ebuild,v 1.3 2003/05/09 12:30:42 jje Exp $
 
 IUSE="doc"
 
@@ -41,7 +41,7 @@ src_compile() {
 		&& myconf="--with-html-dir=/usr/share/doc/${PF}/html" \
 		|| myconf="--without-html-dir"
 
-	econf || die "configure failed"
+	econf ${myconf} || die "configure failed"
 	emake || die "parallel make failed"
 }
 
