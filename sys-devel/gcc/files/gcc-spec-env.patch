@@ -1,0 +1,24 @@
+--- gcc-3.4.2-r1/gcc/gcc.c	2004-09-13 14:30:15.995139424 +0000
++++ gcc-3.4.2-r1/gcc/gcc.c.new	2004-09-13 14:38:58.731671392 +0000
+@@ -6421,6 +6421,21 @@
+ 
+   /* Process any user specified specs in the order given on the command
+      line.  */
++
++  GET_ENVIRONMENT (specs_file, "GCC_SPECS");
++  if (specs_file)
++    {
++      struct user_specs *user = (struct user_specs *)
++        xmalloc (sizeof (struct user_specs));
++
++      user->next = (struct user_specs *) 0;
++      user->filename = specs_file;
++      if (user_specs_tail)
++        user_specs_tail->next = user;
++      else
++        user_specs_head = user;
++      user_specs_tail = user;
++    }
+   for (uptr = user_specs_head; uptr; uptr = uptr->next)
+     {
+       char *filename = find_a_file (&startfile_prefixes, uptr->filename,

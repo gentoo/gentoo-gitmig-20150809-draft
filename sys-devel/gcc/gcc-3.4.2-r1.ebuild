@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r1.ebuild,v 1.1 2004/09/12 17:44:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r1.ebuild,v 1.2 2004/09/13 21:39:47 lv Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -55,8 +55,9 @@ S="$(gcc_get_s_dir)"
 
 ETYPE="gcc-compiler"
 
-PIEPATCH_EXCLUDE="upstream/04_all_gcc-3.4.0-v8.7.6.1-pie-arm-uclibc.patch.bz2"
+#PIEPATCH_EXCLUDE="upstream/04_all_gcc-3.4.0-v8.7.6.1-pie-arm-uclibc.patch.bz2"
 HARDENED_GCC_WORKS="x86 sparc amd64"
+SPLIT_SPECS="true"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -135,6 +136,7 @@ src_unpack() {
 
 	# misc patches that havent made it into a patch tarball yet
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
+	epatch ${FILESDIR}/gcc-spec-env.patch
 
 	if use mips && use nomultilib; then
 		use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
@@ -184,6 +186,10 @@ src_install() {
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
 
 	create_gcc_multilib_scripts
+
+	if [ "${SPLIT_SPECS}" == "true" ] ; then
+		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
+	fi
 
 	# Because GCC 3.4 installs into the gcc directory and not the gcc-lib
 	# directory, we will have to rename it in order to keep compatibility

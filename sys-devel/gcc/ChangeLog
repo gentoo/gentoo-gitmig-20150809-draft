@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.323 2004/09/12 17:44:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.324 2004/09/13 21:39:47 lv Exp $
+
+  13 Sep 2004; Travis Tilley <lv@gentoo.org> +files/gcc-spec-env.patch,
+  gcc-3.4.2-r1.ebuild:
+  added a patch from Rob "I own lv" Holland that allows you to switch specs
+  files based on an environment variable (GCC_SPECS) and made gcc build both a
+  vanilla and hardened specs file by default. Eventually this will mean being
+  able to switch between gcc and hardened gcc on the fly. Since neither
+  gcc-config nor portage support this yet, I'm not bumping the revision number.
 
 *gcc-3.4.2-r1 (12 Sep 2004)
 

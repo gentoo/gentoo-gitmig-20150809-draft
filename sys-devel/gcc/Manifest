@@ -1,5 +1,5 @@
 MD5 99bd42b20f573db4f5dd176ec2fc8f08 gcc-3.3.2-r3.ebuild 20310
-MD5 fdf6561d2a79b49718b1e535e0767567 gcc-3.4.2-r1.ebuild 13821
+MD5 771f72a241e3ebeb7436fbe1c8a68447 gcc-3.4.2-r1.ebuild 13973
 MD5 ebb324eea95cb2c6be9254a05a7ff815 gcc-3.2.3-r4.ebuild 19653
 MD5 d3b281e2d3ff272a34d85f475452a668 gcc-3.3.3_pre20040408-r1.ebuild 22511
 MD5 9be02aa10d2d5643f3fb4f769345ecf9 gcc-3.3.ebuild 16522
@@ -16,7 +16,7 @@ MD5 3f83a8d4f48a08c93928a74922eabaf0 gcc-3.3.2-r4.ebuild 20562
 MD5 2f2650284e244eafc0795b02a1bdadd2 gcc-2.95.3-r8.ebuild 8306
 MD5 192382b893da342324669e153371fd56 gcc-3.3.3-r3.ebuild 23575
 MD5 8dc61d014521e2c7e35e11b147a5be30 gcc-3.3.2-r1.ebuild 17783
-MD5 2801094d1372aea39d59d80537651ca0 ChangeLog 66866
+MD5 cb74f725d554fc3bdb035372ee8ec027 ChangeLog 67347
 MD5 c874c9694587097d692fa64cd46be416 gcc-3.3.2.ebuild 17730
 MD5 c45538377c4cf95b5e05fe3f3eaecc97 gcc-3.3.3_pre20040426.ebuild 22454
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
@@ -50,6 +50,7 @@ MD5 fc48a7567c14adcfeed10b5e03b4ebf6 files/digest-gcc-3.4.1 355
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
 MD5 f57a9900e4d0edcae7b1e327e263d2f7 files/digest-gcc-3.3 294
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
+MD5 edced3dd7f4035b638bbee500bc89e7b files/gcc-spec-env.patch 791
 MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
 MD5 f6b6f7c3577eccb694066bb54dd8075a files/3.3/gcc33-gentoo-branding-1.patch 870
 MD5 d047c78a9141b16915d8ec3f54d1e246 files/3.3/gcc33-coreutils-compat.patch.bz2 3462
