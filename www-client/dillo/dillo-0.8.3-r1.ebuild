@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.2.ebuild,v 1.2 2004/09/14 19:11:26 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.3-r1.ebuild,v 1.1 2004/11/17 17:11:12 usata Exp $
 
 inherit flag-o-matic eutils
 
 S2=${WORKDIR}/dillo-gentoo-extras-patch4
-DILLO_I18N_P="${P}-i18n-20040708"
+DILLO_I18N_P="${P}-i18n-misc-20041118"
 
 DESCRIPTION="Lean GTK+-based web browser"
 HOMEPAGE="http://www.dillo.org/"
@@ -15,15 +15,15 @@ SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
-#MISC_IUSE="nls ssl truetype ssl"
-IUSE="${MISC_IUSE} ipv6"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips ~arm"
+MISC_IUSE="nls truetype"
+IUSE="${MISC_IUSE} ipv6 ssl"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.3
-	>=media-libs/libpng-1.2.1"
-#	ssl? ( dev-libs/openssl )
+	>=media-libs/libpng-1.2.1
+	ssl? ( dev-libs/openssl )"
 
 src_unpack() {
 	unpack ${A}
@@ -67,15 +67,15 @@ src_compile() {
 	replace-flags "-O2 -mcpu=k6" "-O2 -mcpu=pentium"
 
 	local myconf
-	myconf="`use_enable nls`
-		`use_enable ssl`
-		`use_enable truetype anti-alias`
-		--enable-tabs
-		--enable-meta-refresh
-		--enable-user-agent"
 
-	#myconf="${myconf} `use_enable ipv6`"
-	myconf="`use_enable ipv6`"
+	myconf="$(use_enable nls)
+		$(use_enable truetype anti-alias)
+		--enable-tabs
+		--enable-meta-refresh"
+
+	myconf="${myconf}
+		$(use_enable ipv6)
+		$(use_enable ssl)"
 
 	econf ${myconf} || die
 	emake || make || die
@@ -83,7 +83,7 @@ src_compile() {
 
 src_install() {
 	dodir /etc  /usr/share/icons/${PN}
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	dosed /etc/dpidrc
 
