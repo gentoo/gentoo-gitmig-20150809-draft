@@ -3,9 +3,9 @@
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
-S="${WORKDIR}/kmerlin-0.3.3"
-need-kde 2.1
+S="${WORKDIR}/kmerlin-0.3.4-pre3"
+need-kde 2.2
 SLOT="0"
 DESCRIPTION="KDE MSN Messenger"
-SRC_URI="http://prdownloads.sourceforge.net/kmsn/kmerlin-0.3.3.tar.gz"
+SRC_URI="http://prdownloads.sourceforge.net/kmsn/kmerlin-0.3.4-pre3.tar.gz"
 HOMEPAGE="http://kmerlin.olsd.de"
