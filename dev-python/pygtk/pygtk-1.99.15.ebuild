@@ -5,6 +5,8 @@
 # since its a development version
 inherit debug 
 
+IUSE="gnome opengl"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+2  bindings for Python"
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/python/v2.0/${P}.tar.gz"
