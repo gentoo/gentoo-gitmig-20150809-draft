@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r2.ebuild,v 1.9 2004/10/31 11:01:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r3.ebuild,v 1.1 2004/11/07 18:29:29 chainsaw Exp $
 
 IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx jack lirc mad sndfile"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/beepmp/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~hppa"
+KEYWORDS="~amd64 ~ppc ~sparc x86 ~hppa"
 
 RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.4
@@ -84,8 +84,8 @@ src_install() {
 	make DESTDIR="${D}" install || die
 
 	insinto /usr/share/pixmaps
-	doins beep.svg
-	doins beep/beep_mini.xpm
+	doins icons/bmp.svg
+	doins beep/beep_logo.xpm
 
 	dosym /usr/include/beep-media-player/bmp /usr/include/beep-media-player/xmms
 
@@ -97,7 +97,7 @@ src_install() {
 	# to work with xmms-plugin.eclass
 	dobin ${FILESDIR}/beep-config
 
-	dodoc AUTHORS ChangeLog FAQ NEWS README TODO
+	dodoc AUTHORS FAQ NEWS README TODO
 }
 
 pkg_postinst() {
