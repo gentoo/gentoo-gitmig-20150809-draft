@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25-r3.ebuild,v 1.4 2005/02/01 02:44:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25-r3.ebuild,v 1.5 2005/02/01 19:44:17 lu_zero Exp $
 
 IUSE=""
 
@@ -50,7 +50,7 @@ src_unpack() {
 		#epatch ${FILESDIR}/fglrx-2.6.10-pci_get_class.patch
 		epatch ${FILESDIR}/8.08-kernel-2.6.10.patch
 	fi
-
+	epatch ${FILESDIR}/8.8.25-via-amd64.patch
 	rm -rf ${WORKDIR}/usr/X11R6/bin/fgl_glxgears
 }
 

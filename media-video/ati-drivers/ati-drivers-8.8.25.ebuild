@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.7 2005/02/01 02:44:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25.ebuild,v 1.8 2005/02/01 19:44:17 lu_zero Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ LICENSE="ATI"
 KEYWORDS="-* ~x86"
 
 RDEPEND=">=x11-base/xorg-x11-6.8.0
-		 x11-base/opengl-update"
+		 >=x11-base/opengl-update-2.0_pre5"
 
 DEPEND=">=virtual/linux-sources-2.4
 	${RDEPEND}"
@@ -112,7 +112,7 @@ src_install() {
 	doins ${FILESDIR}/09ati
 	exeinto /opt/ati/bin
 	doexe usr/X11R6/bin/*
-
+	
 	#ati custom stuff
 	cp -a ${WORKDIR}/usr/include ${D}/usr/include
 }
@@ -136,7 +136,8 @@ src_install-libs() {
 
 	# same as the xorg implementation
 	dosym ../${X11_IMPLEM}/extensions ${ATI_ROOT}/extensions
-	#Workaround 
+	#Workaround for ancient opengl-config
+	#fixes celestia issues
 	sed -e "s:libdir=.*:libdir=${ATI_ROOT}/lib:" \
 		/usr/${inslibdir}/opengl/${X11_IMPLEM}/lib/libGL.la \
 		> $D/${ATI_ROOT}/lib/libGL.la
