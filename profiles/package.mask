@@ -810,11 +810,6 @@ media-libs/monkey-sound
 # not fit for release (working on it though)
 app-cdr/cddump
 
-# seemant@gentoo.org 26 Apr 2002
-# the old ebuild of puregui was mis-versioned to 1, when it was actually
-# 0.0.1
-=app-admin/puregui-1-r1
-
 # spider@gentoo.org 9 May 2002
 # Security update see:
 # http://online.securityfocus.com/bid/4339
