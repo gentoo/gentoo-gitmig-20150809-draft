@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.21.ebuild,v 1.2 2003/06/21 15:59:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.21.ebuild,v 1.3 2003/09/10 04:51:12 msterret Exp $
 
 IUSE="ssl tcpd readline ipv6 gdbm sasl kerberos odbc perl slp"
 
@@ -98,7 +98,7 @@ src_compile() {
 	# only turn off bdb if berkdb is not in USE
 	use gdbm && [ ! `use berkdb` ] \
 		&& myconf="${myconf} --enable-ldbm --disable-bdb --with-ldbm-api=gdbm" \
-   		|| myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley"
+		|| myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley"
 
 	use perl \
 		&& myconf="${myconf} --enable-perl" \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r1.ebuild,v 1.9 2003/06/22 11:33:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r1.ebuild,v 1.10 2003/09/10 04:51:12 msterret Exp $
 
 ### WARNING !! Do not remove openldap 2.0.25 or else it will break for 
 ####           default-1.0 profile!
@@ -25,8 +25,8 @@ DEPEND="virtual/glibc
 	sasl?     ( >=dev-libs/cyrus-sasl-1.5.27 )"
 
 RDEPEND="virtual/glibc
-        >=sys-libs/ncurses-5.1
-        gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+	>=sys-libs/ncurses-5.1
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 src_compile() {
 	local myconf

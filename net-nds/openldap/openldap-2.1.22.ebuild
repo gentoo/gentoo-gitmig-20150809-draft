@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22.ebuild,v 1.6 2003/08/03 04:13:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22.ebuild,v 1.7 2003/09/10 04:51:12 msterret Exp $
 
 inherit eutils
 
@@ -66,7 +66,7 @@ src_compile() {
 	# only turn off bdb if berkdb is not in USE
 	use gdbm && [ ! `use berkdb` ] \
 		&& myconf="${myconf} --enable-ldbm --disable-bdb --with-ldbm-api=gdbm" \
-   		|| myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley"
+		|| myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley"
 
 	myconf="${myconf} --enable-dynamic --enable-modules"
 	myconf="${myconf} --enable-rewrite --enable-rlookups"
@@ -114,7 +114,7 @@ src_install() {
 	sed -i -e "s:/var/lib/slapd.pid:/var/run/openldap/slapd.pid:" ${D}/etc/openldap/slapd.conf
 	sed -i -e "s:/var/lib/slapd.pid:/var/run/openldap/slapd.pid:" ${D}/etc/openldap/slapd.conf.default
 	sed -i -e "s:/var/lib/slapd.args:/var/run/openldap/slapd.args:" ${D}/etc/openldap/slapd.conf
-        sed -i -e "s:/var/lib/slapd.args:/var/run/openldap/slapd.args:" ${D}/etc/openldap/slapd.conf.default
+	sed -i -e "s:/var/lib/slapd.args:/var/run/openldap/slapd.args:" ${D}/etc/openldap/slapd.conf.default
 	fowners root:ldap /etc/openldap/slapd.conf
 	fperms 0640 /etc/openldap/slapd.conf
 	fowners root:ldap /etc/openldap/slapd.conf.default
@@ -145,13 +145,13 @@ pkg_postinst() {
 	fi
 
 	# Since moving to running openldap as user ldap there are some
-        # permissions problems with directories and files.
-        # Let's make sure these permissions are correct.
-        chown ldap:ldap /var/run/openldap
-        chmod 0755 /var/run/openldap
-        chown root:ldap /etc/openldap/slapd.conf
-        chmod 0640 /etc/openldap/slapd.conf
-        chown root:ldap /etc/openldap/slapd.conf.default
-        chmod 0640 /etc/openldap/slapd.conf.default
+	# permissions problems with directories and files.
+	# Let's make sure these permissions are correct.
+	chown ldap:ldap /var/run/openldap
+	chmod 0755 /var/run/openldap
+	chown root:ldap /etc/openldap/slapd.conf
+	chmod 0640 /etc/openldap/slapd.conf
+	chown root:ldap /etc/openldap/slapd.conf.default
+	chmod 0640 /etc/openldap/slapd.conf.default
 	chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp}
 }

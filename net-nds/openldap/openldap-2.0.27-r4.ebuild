@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.11 2003/09/07 00:16:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.12 2003/09/10 04:51:12 msterret Exp $
 
 inherit eutils
 
@@ -114,7 +114,7 @@ src_compile() {
 	# only set gdbm api if berkdb is not in USE
 	use gdbm && [ ! `use berkdb` ] \
 		&& myconf="${myconf} --enable-ldbm --with-ldbm-api=gdbm" \
-   		|| myconf="${myconf} --enable-ldbm --with-ldbm-api=berkeley"
+		|| myconf="${myconf} --enable-ldbm --with-ldbm-api=berkeley"
 
 	if [ "${SASL1}" = "yes" ]; then
 		myconf="${myconf} --with-cyrus-sasl"
