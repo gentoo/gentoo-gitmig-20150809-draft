@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/nestra
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.4 2004/06/24 22:31:37 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.5 2005/03/21 08:10:09 eradicator Exp $
+
+  21 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  nestra-0.66-r1.ebuild:
+  Added support to build 32bit version on amd64.
 
 *nestra-0.66-r1 (27 Mar 2004)
 
