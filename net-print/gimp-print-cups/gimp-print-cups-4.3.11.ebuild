@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/gimp-print-cups-4.3.11.ebuild,v 1.1 2003/03/05 17:19:09 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/gimp-print-cups-4.3.11.ebuild,v 1.2 2003/03/08 09:40:37 lordvan Exp $
 
 IUSE="nls gtk readline"
 
@@ -17,7 +17,8 @@ DEPEND=">=net-print/cups-1.1.18
 	media-gfx/imagemagick
 	sys-libs/readline
 	sys-devel/perl
-	gtk? ( =x11-libs/gtk+-1.2* )"
+	gtk? ( =x11-libs/gtk+-1.2* )
+        !media-gfx/gimp-print"
 
 LICENSE="GPL-2"
 SLOT="0"
