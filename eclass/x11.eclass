@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.3 2004/10/29 07:11:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.4 2004/11/03 10:15:05 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
-# The xfree.eclass is designed to ease the checking functions that are
-# performed in xfree and xfree-drm ebuilds.  In the new scheme, a variable
-# called VIDEO_CARDS will be used to indicate which cards a user wishes to
-# build support for.  Note, that this variable is only unlocked if the USE
-# variable "expertxfree" is switched on, at least for xfree.
+# The x11.eclass is designed to ease the checking functions that are
+# performed in xorg-x11, xfree and x11-drm ebuilds.  In the new scheme, a
+# variable called VIDEO_CARDS will be used to indicate which cards a user
+# wishes to build support for.  Note, that this variable is only unlocked if
+# the USE variable "expertxfree" is switched on, at least for xfree.
 
 ECLASS=x11
 INHERITED="${INHERITED} ${ECLASS}"
