@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l.ebuild,v 1.3 2003/11/13 06:15:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l.ebuild,v 1.4 2003/12/15 19:59:12 stuart Exp $
 
 inherit eutils webapp-apache
 webapp-detect || NO_HTTPD=1
@@ -36,6 +36,8 @@ src_compile() {
 }
 
 src_install() {
+	webapp-mkdirs
+
 	cd man2html
 	exeinto ${HTTPD_CGIBIN}/man
 	doexe scripts/cgi-bin/man/*
