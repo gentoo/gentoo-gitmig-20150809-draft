@@ -3,8 +3,8 @@ MD5 aa4d89c1cea6130ad879b0367270b33b ttmkfdir-2.0-r1.ebuild 1080
 MD5 b0ff26a7aca78ec1f51dfedec0d0aa08 ttmkfdir-2.0.ebuild 918
 MD5 3dba93d6486b6147f1803b90e1252884 ttmkfdir-3.0.9.ebuild 862
 MD5 4ccaa4ddc197e8644e2beb8cf00a034e ttmkfdir-3.0.4.ebuild 850
-MD5 61da562068658cf8be446d89b26edb95 ttmkfdir-3.0.9-r1.ebuild 915
-MD5 87ee6a384c53fe646c4d650180794dff ChangeLog 2864
+MD5 6aa06a27e907d37cc765bd0e97176f30 ttmkfdir-3.0.9-r1.ebuild 914
+MD5 92f08ff2672edc5a8c6c53c4646479c4 ChangeLog 2863
 MD5 e285b7a7c7369e7947c0997de817d3ce files/ttmkfdir-2.0-gentoo.patch 688
 MD5 255516ccdde8cad5c8f7b6659f4bdde2 files/ttmkfdir-3.0.9-cpp.patch 505
 MD5 8d09eeb49f560873b6b4b85755ce5502 files/digest-ttmkfdir-3.0.9-r1 66
