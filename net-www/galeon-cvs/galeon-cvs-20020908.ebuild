@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.18 2003/03/19 13:40:03 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.19 2003/03/30 13:44:34 liquidx Exp $
 
 
 # ECVS_TOP_DIR="${PORTAGE_TMPDIR}"
@@ -23,7 +23,7 @@ KEYWORDS="~x86"
 LICENSE="GPL-2"
 
 DEPEND="virtual/x11
-	=net-www/mozilla-1.3
+	=net-www/mozilla-1.3*
 	>=gnome-base/gnome-2.2
 	>=gnome-base/gnome-common-1.2.4
 	dev-util/cvs"
