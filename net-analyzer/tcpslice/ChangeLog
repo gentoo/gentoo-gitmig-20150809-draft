@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpslice
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.7 2004/09/13 17:21:44 squinky86 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.8 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  tcpslice-1.1_alpha3.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   13 Sep 2004; Jon Hood <squinky86@gentoo.org> tcpslice-1.1_alpha3.ebuild:
   Compile correctly with pcap, bug #63888.

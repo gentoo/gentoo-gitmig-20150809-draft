@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-0.21.ebuild,v 1.1 2005/01/26 00:44:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-0.21.ebuild,v 1.2 2005/01/29 05:12:51 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-libs/libpcap"
+RDEPEND="virtual/libpcap"
 
 src_compile() {
 	econf || die

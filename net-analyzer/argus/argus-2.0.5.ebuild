@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.9 2004/10/03 09:53:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.10 2005/01/29 05:12:50 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc-macos"
 IUSE=""
 RDEPEND="virtual/libc
-	>=net-libs/libpcap-0.6.2"
+	virtual/libpcap"
 DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.28
 	>=sys-devel/flex-2.4.6"

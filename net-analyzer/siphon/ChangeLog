@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/siphon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.7 2004/07/10 11:30:56 eldad Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.8 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> siphon-666.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> siphon-666.ebuild:
   marked x86 stable

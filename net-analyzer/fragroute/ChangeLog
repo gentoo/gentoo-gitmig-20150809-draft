@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fragroute
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.7 2004/08/24 12:43:03 eldad Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.8 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> fragroute-1.2.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   24 Aug 2004; Eldad Zack <eldad@gentoo.org> fragroute-1.2.ebuild:
   Removed ~macos (bad deps)

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/argus
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.8 2004/07/27 02:18:38 j4rg0n Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.9 2005/01/29 05:12:50 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> argus-2.0.5.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   26 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org> argus-2.0.5.ebuild:
   Changed newsbin for macos to argus_bpf.  Stable macos.

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fprobe
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.6 2004/09/27 18:52:49 squinky86 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.7 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> fprobe-1.0.6.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
 *fprobe-1.0.6 (27 Sep 2004)
 

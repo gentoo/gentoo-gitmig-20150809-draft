@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpick
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/ChangeLog,v 1.5 2004/08/01 22:03:00 kugelfang Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/ChangeLog,v 1.6 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> tcpick-0.1.19.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   02 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> tcpick-0.1.19.ebuild:
   Marked ~amd64.

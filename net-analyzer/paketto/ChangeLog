@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/paketto
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/ChangeLog,v 1.8 2004/06/24 22:15:00 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/ChangeLog,v 1.9 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> paketto-1.10-r1.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> paketto-1.10-r1.ebuild:
   QA: IUSE variable was missing.

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pktstat
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.4 2004/11/06 13:12:33 eldad Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.5 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> pktstat-1.7.2q.ebuild,
+  pktstat-1.7.5.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
 *pktstat-1.7.5 (06 Nov 2004)
 

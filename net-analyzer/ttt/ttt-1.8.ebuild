@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.ebuild,v 1.5 2004/07/08 23:06:18 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ttt-1.8.ebuild,v 1.6 2005/01/29 05:12:52 dragonheart Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 	dev-lang/tcl
 	dev-lang/tk
 	>=dev-tcltk/blt-2.4
-	>=net-libs/libpcap-0.7.1
+	virtual/libpcap
 	sys-apps/grep"
 
 src_unpack() {

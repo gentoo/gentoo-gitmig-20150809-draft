@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/scanssh
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.8 2004/11/20 03:07:49 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.9 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> scanssh-1.6b.ebuild,
+  scanssh-2.0.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   19 Nov 2004; Jason Wever <weeve@gentoo.org> scanssh-1.6b.ebuild:
   Stable on sparc.

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipaudit
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ChangeLog,v 1.1 2004/11/23 22:07:44 robbat2 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ChangeLog,v 1.2 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> ipaudit-1.0_beta1.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
 *ipaudit-1.0_beta1 (23 Nov 2004)
 

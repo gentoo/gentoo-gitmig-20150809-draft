@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zodiac/zodiac-0.4.9-r1.ebuild,v 1.5 2004/07/10 09:51:52 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zodiac/zodiac-0.4.9-r1.ebuild,v 1.6 2005/01/29 05:12:52 dragonheart Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 DEPEND="sys-libs/ncurses
 	<net-libs/libnet-1.1
 	>=net-libs/libnet-1.0.2a-r3
-	net-libs/libpcap"
+	virtual/libpcap"
 
 S=${WORKDIR}/${PN}
 IUSE=""

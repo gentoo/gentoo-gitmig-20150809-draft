@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9.ebuild,v 1.8 2004/10/11 00:43:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9.ebuild,v 1.9 2005/01/29 05:12:51 dragonheart Exp $
 
 inherit gnuconfig eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 sparc"
 LICENSE="GPL-2"
 
-DEPEND=">=net-libs/libpcap-0.6.1
+DEPEND="virtual/libpcap
 	ssl? ( >=dev-libs/openssl-0.6.9 )"
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptraceroute
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.19 2004/11/10 19:13:42 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.20 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  tcptraceroute-1.4-r3.ebuild, tcptraceroute-1.5_beta5.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   10 Nov 2004; Eldad Zack <eldad@gentoo.org> tcptraceroute-1.4-r3.ebuild,
   tcptraceroute-1.5_beta5.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r2.ebuild,v 1.6 2004/09/28 02:56:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r2.ebuild,v 1.7 2005/01/29 05:12:50 dragonheart Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="x86 ~alpha ~ppc"
 IUSE=""
 
-RDEPEND=">=net-libs/libpcap-0.7.1
+RDEPEND="virtual/libpcap
 	<net-libs/libnet-1.1
 	>=net-libs/libnet-1.0.2a-r3
 	>=net-libs/libnids-1.18

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort_inline
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/ChangeLog,v 1.12 2004/08/03 12:00:48 dholm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/ChangeLog,v 1.13 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  snort_inline-2.1.0a-r2.ebuild, snort_inline-2.1.1.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   03 Aug 2004; David Holm <dholm@gentoo.org> snort_inline-2.1.1.ebuild:
   Added to ~ppc.

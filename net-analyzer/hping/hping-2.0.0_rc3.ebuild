@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3.ebuild,v 1.13 2004/10/19 10:39:58 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3.ebuild,v 1.14 2005/01/29 05:12:51 dragonheart Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 sparc hppa ~ia64 amd64 alpha ppc"
 IUSE="debug"
 
-DEPEND="net-libs/libpcap"
+DEPEND="virtual/libpcap"
 
 S="${WORKDIR}/${MY_P//\.[0-9]}"
 

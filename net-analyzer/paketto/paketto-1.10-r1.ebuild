@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.8 2004/06/24 22:15:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/paketto-1.10-r1.ebuild,v 1.9 2005/01/29 05:12:51 dragonheart Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 #paketto comes with local copies of these ...
 DEPEND="<net-libs/libnet-1.1
 	>=net-libs/libnet-1.0.2a-r3"
-#	net-libs/libpcap
+#	virtual/libpcap
 #	dev-libs/libtomcrypt"
 
 src_unpack() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/angst
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/ChangeLog,v 1.5 2004/07/08 16:34:46 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/ChangeLog,v 1.6 2005/01/29 05:12:50 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> angst-0.4b-r1.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   08 Jul 2004; Eldad Zack <eldad@gentoo.org> angst-0.4b-r1.ebuild,
   angst-0.4b.ebuild:

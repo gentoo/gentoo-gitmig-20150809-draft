@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.3.ebuild,v 1.10 2004/10/23 06:41:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.3.ebuild,v 1.11 2005/01/29 05:12:51 dragonheart Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 S=${WORKDIR}/${PN}
 
 
-DEPEND="net-libs/libpcap"
+DEPEND="virtual/libpcap"
 
 src_compile() {
 	sed -e 's;#include <net/bpf.h>;;' -i p0f.c

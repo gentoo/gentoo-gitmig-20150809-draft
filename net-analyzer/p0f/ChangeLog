@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/p0f
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.17 2004/10/15 10:01:30 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.18 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> p0f-2.0.3.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   15 Oct 2004; Eldad Zack <eldad@gentoo.org> p0f-1.8.2.ebuild,
   p0f-2.0.2.ebuild, p0f-2.0.3.ebuild:

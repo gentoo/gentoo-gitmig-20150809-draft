@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traffic-vis
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.9 2004/07/11 10:38:44 eldad Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.10 2005/01/29 05:12:52 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> traffic-vis-0.35.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   11 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   traffic-vis-0.35.ebuild:

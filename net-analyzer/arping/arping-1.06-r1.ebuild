@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.06-r1.ebuild,v 1.9 2005/01/09 05:52:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.06-r1.ebuild,v 1.10 2005/01/29 05:12:50 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="1"
 KEYWORDS="x86 ppc sparc"
 IUSE=""
 
-DEPEND="net-libs/libpcap
+DEPEND="virtual/libpcap
 	<net-libs/libnet-1.1
 	>=net-libs/libnet-1.0.2a-r3"
 

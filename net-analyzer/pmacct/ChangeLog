@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.7 2005/01/25 15:51:28 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.8 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> pmacct-0.7.1.ebuild,
+  pmacct-0.7.9.ebuild, pmacct-0.8.0.ebuild, pmacct-0.8.1.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
 *pmacct-0.8.1 (25 Jan 2005)
 

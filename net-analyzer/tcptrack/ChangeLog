@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptrack
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.7 2004/07/31 02:58:31 squinky86 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.8 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> tcptrack-1.1.1.ebuild,
+  tcptrack-1.1.2.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   30 Jul 2004; Jon Hood <squinky86@gentoo.org> tcptrack-1.1.2.ebuild:
   Stable on x86.

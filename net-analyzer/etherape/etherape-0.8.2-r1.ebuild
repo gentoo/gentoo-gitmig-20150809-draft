@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.14 2005/01/08 08:24:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.15 2005/01/29 05:12:51 dragonheart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://etherape.sourceforge.net/"
 
 DEPEND="	=x11-libs/gtk+-1.2*
 		>=gnome-base/gnome-libs-1.4.1.2-r1
-		>=net-libs/libpcap-0.6.1
+		virtual/libpcap
 		~gnome-base/libglade-0.17"
 
 

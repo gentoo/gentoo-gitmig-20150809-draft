@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/tcptrack-1.1.2.ebuild,v 1.4 2004/07/31 02:58:31 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/tcptrack-1.1.2.ebuild,v 1.5 2005/01/29 05:12:51 dragonheart Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 
-newdepend ">=net-libs/libpcap-0.7.2
+newdepend "virtual/libpcap
 	   sys-libs/ncurses"
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/firewalk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.4 2005/01/27 11:10:03 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/firewalk/ChangeLog,v 1.5 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> firewalk-5.0.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   27 Jan 2005; Otavio R. Piske <angusyoung@gentoo.org> firewalk-5.0.ebuild:
   Fixed emake install error message

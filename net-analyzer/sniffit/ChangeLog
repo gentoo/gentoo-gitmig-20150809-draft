@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sniffit
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.8 2004/07/09 20:25:04 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.9 2005/01/29 05:12:51 dragonheart Exp $
+
+  29 Jan 2005; Daniel Black <dragonheart@gentoo.org> sniffit-0.3.7-r1.ebuild,
+  sniffit-0.3.7.ebuild:
+  changed net-libs/libpcap depend to virtual/libcap
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   sniffit-0.3.7-r1.ebuild, sniffit-0.3.7.ebuild:

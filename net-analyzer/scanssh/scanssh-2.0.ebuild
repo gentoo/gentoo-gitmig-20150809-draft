@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/scanssh-2.0.ebuild,v 1.2 2004/09/28 18:09:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/scanssh-2.0.ebuild,v 1.3 2005/01/29 05:12:51 dragonheart Exp $
 
 DESCRIPTION="network scanner that gathers info on SSH protocols and versions"
 HOMEPAGE="http://monkey.org/~provos/scanssh/"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=""
-DEPEND="net-libs/libpcap
+DEPEND="virtual/libpcap
 	dev-libs/libdnet
 	>=dev-libs/libevent-0.8a"
 
