@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.29 2005/01/14 13:35:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.30 2005/01/14 21:44:00 eradicator Exp $
 
 inherit eutils multilib flag-o-matic gcc versionator
 
@@ -701,7 +701,7 @@ src_compile() {
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			einfo "Compiling ${ABI} glibc"
-			src_compile && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
+			src_compile
 		done
 		ABI="${OABI}"
 		unset OABI
@@ -730,7 +730,6 @@ src_install() {
 		local OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
-			mv ${WORKDIR}/build.${ABI} ${WORKDIR}/build
 
 			# Handle stupid lib32 BS
 			if use amd64 && [ "${ABI}" = "x86" -a "$(get_libdir)" != "lib" ]; then
@@ -738,7 +737,7 @@ src_install() {
 				LIBDIR_x86="lib"
 			fi
 
-			src_install && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
+			src_install
 
 			# Handle stupid lib32 BS
 			if use amd64 && [ "${ABI}" = "x86" -a -n "${OLD_LIBDIR}" ]; then
