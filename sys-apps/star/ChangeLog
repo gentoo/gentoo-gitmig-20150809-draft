@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/star
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.5 2002/07/21 20:49:31 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.6 2002/08/27 17:53:30 raker Exp $
+
+*star-1.5_alpha06 (27 Aug 2002) 
+
+  27 Aug 2002; raker <raker@gentoo.org>
+  star-1.5_alpha06.ebuild, digest-star-1.5_alpha06 :
+  Version bump.  Many fixes for gcc3.x, sparc, sparc64, and much more.
+  Check out the AN-* files in the doc directory for further details. 
 
 *star-1.3_alpha8-r2.ebuild (14 July 2002)
 
