@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/guile-pg/guile-pg-0.15.ebuild,v 1.1 2003/06/18 20:39:46 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/guile-pg/guile-pg-0.15.ebuild,v 1.2 2004/03/14 01:23:00 mr_bones_ Exp $
 
 IUSE=""
 
@@ -15,9 +15,6 @@ DEPEND="virtual/glibc
 		dev-db/postgresql
 		dev-util/guile"
 
-SLOT="0"
-
-S=${WORKDIR}/${P}
 src_compile() {
 	econf || die
 	emake || die
