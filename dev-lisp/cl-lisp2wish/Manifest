@@ -1,4 +1,5 @@
-MD5 d79794f9e255d3fa8c5e1e436d9663ee cl-lisp2wish-20040131.ebuild 756
-MD5 052e8fd4b2c68dd69596991a68ad2ce6 ChangeLog 418
+MD5 a2a47d9efc5aad35f83bd3dfef36d987 cl-lisp2wish-20040131.ebuild 852
+MD5 15666d8ba3f50e6b1f945ce0925aed41 ChangeLog 628
 MD5 adbb077106b6066cfbeae73a672bafc7 metadata.xml 428
+MD5 0413f0f4b516a2b1b4f87482fa71d48e files/20040131-USER-package-gentoo.patch 1129
 MD5 4acfe1debf50e27cfd7911043ee3444f files/digest-cl-lisp2wish-20040131 67
