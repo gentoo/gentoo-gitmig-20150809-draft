@@ -1,5 +1,6 @@
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/files/conf.d_ircd,v 1.1 2003/12/17 02:37:45 zul Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/files/conf.d_ircd,v 1.2 2004/03/06 03:11:35 vapier Exp $
 
 # Config file for /etc/init.d/ircd
 
