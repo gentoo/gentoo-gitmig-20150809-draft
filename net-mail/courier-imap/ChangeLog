@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.38 2003/08/01 02:25:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.39 2003/08/01 02:45:00 robbat2 Exp $
+
+*courier-imap-2.0.0 (31 Jul 2003)
+
+  31 Jul 2003; Robin Hugh Johnson <robbat2@gentoo.org> courier-imap-2.0.0.ebuild:
+  Bump to latest stable upstream version, new fix for userpriv
 
 *courier-imap-1.7.3-r1 (31 Jul 2003)
 
