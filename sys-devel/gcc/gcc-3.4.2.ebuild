@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2.ebuild,v 1.3 2004/09/08 23:07:04 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2.ebuild,v 1.4 2004/09/09 23:10:26 lv Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -54,6 +54,9 @@ PP_FVER="${PP_VER//_/.}-2"
 SRC_URI="$(get_gcc_src_uri)"
 
 S="$(gcc_get_s_dir)"
+
+PIEPATCH_EXCLUDE="upstream/04_all_gcc-3.4.0-v8.7.6.1-pie-arm-uclibc.patch.bz2"
+HARDENED_GCC_WORKS="x86 sparc amd64"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -117,8 +120,6 @@ fi
 
 pkg_setup() {
 	gcc_setup_variables
-	PIEPATCH_EXCLUDE="upstream/04_all_gcc-3.4.0-v8.7.6.1-pie-arm-uclibc.patch.bz2"
-	(use x86 || use sparc || use amd64) && HARDENED_GCC_WORKS="true"
 }
 
 check_option_validity() {
