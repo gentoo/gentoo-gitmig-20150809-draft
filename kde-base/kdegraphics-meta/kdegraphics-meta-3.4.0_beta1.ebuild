@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/kdegraphics-meta-3.4.0_beta1.ebuild,v 1.2 2005/01/17 23:05:15 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/kdegraphics-meta-3.4.0_beta1.ebuild,v 1.3 2005/02/11 16:13:03 danarmak Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -28,8 +28,6 @@ RDEPEND="gphoto2? ( $(deprange $PV $MAXKDEVER kde-base/kamera) )
 	povray? ( $(deprange $PV $MAXKDEVER kde-base/kpovmodeler) )
 	$(deprange $PV $MAXKDEVER kde-base/kruler)
 	$(deprange $PV $MAXKDEVER kde-base/ksnapshot)
-	$(deprange $PV $MAXKDEVER kde-base/ksvgplugin)
 	$(deprange $PV $MAXKDEVER kde-base/kuickshow)
 	$(deprange $PV $MAXKDEVER kde-base/kview)
-	$(deprange $PV $MAXKDEVER kde-base/kviewshell)
-	$(deprange $PV $MAXKDEVER kde-base/libksvg)"
+	$(deprange $PV $MAXKDEVER kde-base/kviewshell)"

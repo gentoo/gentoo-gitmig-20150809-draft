@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.4 2005/02/11 16:01:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.5 2005/02/11 16:13:03 danarmak Exp $
+
+  11 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  kdegraphics-meta-3.4.0_beta1.ebuild:
+  Some more changes related to the previous commit: removed 3.4.0_beta2 (since
+  3.4.0_beta2-r1 now exists). Removed the libksvg and ksvgplugin deps from the
+  3.4.0_beta1 ebuild: we want to get rid of beta1 soon anyway, and the
+  libksvg+ksvgplugin combination simply doesn't work.
 
 *kdegraphics-meta-3.4.0_beta2-r1 (11 Feb 2005)
 
