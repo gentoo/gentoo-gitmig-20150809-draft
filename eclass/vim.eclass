@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.79 2004/11/28 14:23:33 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.80 2004/11/28 14:34:19 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -517,9 +517,11 @@ pkg_postinst() {
 		fi
 	else
 		if [[ "${MY_PN}" == "gvim" ]] ; then
+			echo
 			# TODO: once we have all the GUIs working, display a message
 			# explaining them.
 		elif [[ "${MY_PN}" == "vim" ]] ; then
+			echo
 			# TODO: once we have the GUIs working, display a message explaining
 			# them.
 		fi
