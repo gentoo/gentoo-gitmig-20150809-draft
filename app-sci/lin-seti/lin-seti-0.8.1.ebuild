@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.8.0.ebuild,v 1.3 2004/06/26 15:50:31 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.8.1.ebuild,v 1.1 2004/06/26 15:50:31 s4t4n Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_compile()
 src_install()
 {
 	# copy documentation manually as make install doesn't do that
-	dodoc AUTHORS COPYING ChangeLog INSTALL LEGGIMI NEWS README TODO
+	dodoc AUTHORS COPYING ChangeLog INSTALL LEGGIMI NEWS README THANKS TODO
 
 	einstall prefix=${D} || die "Installation failed"
 
@@ -45,7 +45,11 @@ src_install()
 
 pkg_postinst ()
 {
-	einfo "NOTICE: If you use SETI Driver for Windows"
+	einfo "NOTICE 1: If you use SETI Driver for Windows"
 	einfo "to share the cache make sure it is"
 	einfo "version 1.6.4.0 or higher!"
+	einfo
+	einfo "NOTICE 2: If you decide to use the new"
+	einfo "UID and GID features of lin-seti,"
+	einfo "make sure to change the ownership of your cache path!"
 }

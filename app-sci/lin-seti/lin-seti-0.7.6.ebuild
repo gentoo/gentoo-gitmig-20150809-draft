@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.7.6.ebuild,v 1.5 2004/06/24 22:08:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.7.6.ebuild,v 1.6 2004/06/26 15:50:31 s4t4n Exp $
 
 DESCRIPTION="A Seti@Home cache manager, cache-compatible with Seti Driver. Can be run as system daemon."
 HOMEPAGE="http://lin-seti.sourceforge.net/"
