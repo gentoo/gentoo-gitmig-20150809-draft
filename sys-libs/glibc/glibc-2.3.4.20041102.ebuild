@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.8 2004/12/03 16:52:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.9 2004/12/04 03:17:33 vapier Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -447,7 +447,7 @@ do_ssp_patches() {
 	# __guard_setup__stack_smash_handler
 	#
 	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ]; then
+	if use hppa ; then
 		epatch ${FILESDIR}/2.3.3/glibc-2.3.2-propolice-guard-functions-v3.patch
 		cp ${FILESDIR}/2.3.3/ssp.c ${S}/sysdeps/unix/sysv/linux || \
 			die "failed to copy ssp.c to ${S}/sysdeps/unix/sysv/linux/"
@@ -519,6 +519,14 @@ src_unpack() {
 
 	# disable binutils -as-needed
 	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
+
+	# Glibc is stupid sometimes, and doesn't realize that with a 
+	# static C-Only gcc, -lgcc_eh doesn't exist.
+	# http://sources.redhat.com/ml/libc-alpha/2003-09/msg00100.html
+	echo 'int main(){}' > ${T}/gcc_eh_test.c
+	if ! $(tc-getCC) ${T}/gcc_eh_test.c -lgcc_eh 2>/dev/null ; then
+		sed -i -e '/static-gnulib := /s:-lgcc -lgcc_eh:-lgcc:' Makeconfig
+	fi
 
 	# hardened toolchain/relro/nptl/security/etc fixes
 	do_hardened_fixes
