@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.20-r1.ebuild,v 1.1 2003/04/09 15:27:53 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.20-r1.ebuild,v 1.2 2003/05/16 22:22:14 azarah Exp $
 
 IUSE="nls bootstrap build"
 
@@ -118,7 +118,8 @@ src_install() {
 	
 	# c++filt is included with gcc -- what are these GNU people thinking?
 	# but not the manpage, so leave that!
-	rm -f ${D}/usr/bin/c++filt #${D}/usr/share/man/man1/c++filt*
+# We install it now, as gcc-3.3 do not have it any longer ...
+#	rm -f ${D}/usr/bin/c++filt #${D}/usr/share/man/man1/c++filt*
 
 	# By default strip has a symlink going from /usr/${CHOST}/bin/strip to
 	# /usr/bin/strip we should reverse it:

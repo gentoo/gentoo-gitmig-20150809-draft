@@ -1,7 +1,17 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.47 2003/05/09 06:49:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.48 2003/05/16 22:22:13 azarah Exp $
 
+  17 May 2003; Martin Schlemmer <azarah@gentoo.org>
+  binutils-2.13.90.0.10.ebuild, binutils-2.13.90.0.10.ebuild,
+  binutils-2.13.90.0.14.ebuild, binutils-2.13.90.0.14.ebuild,
+  binutils-2.13.90.0.16-r1.ebuild, binutils-2.13.90.0.16.ebuild,
+  binutils-2.13.90.0.16.ebuild, binutils-2.13.90.0.18-r1.ebuild,
+  binutils-2.13.90.0.18.ebuild, binutils-2.13.90.0.20-r1.ebuild,
+  binutils-2.13.90.0.4.ebuild, binutils-2.13.90.0.4.ebuild,
+  binutils-2.14.90.0.1-r1.ebuild, binutils-2.14.90.0.1.ebuild,
+  binutils-2.14.90.0.1.ebuild :
+  Add c++filt back in anticipation for gcc-3.3.  Cleanup.
 
 *binutils-2.14.90.0.1-r1 (08 May 2003)
 
