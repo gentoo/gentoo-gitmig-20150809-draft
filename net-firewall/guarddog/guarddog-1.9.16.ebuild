@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/guarddog-1.9.16.ebuild,v 1.1 2003/05/01 11:11:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/guarddog-1.9.16.ebuild,v 1.2 2003/07/22 20:12:55 vapier Exp $
 
-inherit kde-base || die
+inherit kde-base
 
 need-kde 3
 
