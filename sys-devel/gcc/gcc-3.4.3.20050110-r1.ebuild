@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r1.ebuild,v 1.3 2005/03/23 00:08:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r1.ebuild,v 1.4 2005/04/06 00:43:22 vapier Exp $
 
 MAN_VER="3.4.3"
 PATCH_VER="1.2"
@@ -46,7 +46,7 @@ KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa ~ppc ~sparc ~ia64"
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
 RDEPEND="virtual/libc
-	>=sys-devel/gcc-config-1.3.6-r4
+	>=sys-devel/gcc-config-1.3.10
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
 	!uclibc? (
@@ -103,6 +103,9 @@ src_unpack() {
 
 	# Fix cross-compiling
 	epatch ${FILESDIR}/3.4.3/gcc-3.4.3-cross-compile.patch
+
+	# Upstream fix for ia64
+	epatch ${FILESDIR}/3.4.3/35_all_pr18987-fix.patch
 
 	# Arch stuff
 	case $(tc-arch) in
