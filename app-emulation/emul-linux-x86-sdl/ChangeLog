@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.5 2005/03/21 07:26:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.6 2005/03/21 07:43:24 eradicator Exp $
+
+  21 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  emul-linux-x86-sdl-1.2.8-r1.ebuild:
+  Added dep on soundlibs.
 
 *emul-linux-x86-sdl-1.2.8-r1 (21 Mar 2005)
 
