@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Sort-Versions
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Versions/ChangeLog,v 1.1 2003/05/31 23:59:46 mcummings Exp $
+
+*Sort-Versions-1.4 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org>
+  Sort-Versions-1.4.ebuild:
+  Dependancy of ExtUtils-AutoInstall
+
