@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.4 2004/12/08 21:22:17 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.5 2004/12/19 17:26:29 ciaranm Exp $
 
 inherit eutils
 
@@ -43,8 +43,13 @@ src_unpack() {
 	epatch ${FILESDIR}/0.9.10/${PN}-0.9.10-fancy-gentoo-styledirs.patch
 
 	# Add in the Gentoo -r number to fluxbox -version output.
+	if [[ "${PR}" == "r0" ]] ; then
+		suffix="gentoo"
+	else
+		suffix="gentoo-${PR}"
+	fi
 	sed -i \
-		-e "s~\(__fluxbox_version .@VERSION@\)~\1-gentoo${PR:+-${PR}}~" \
+		-e "s~\(__fluxbox_version .@VERSION@\)~\1-${suffix}~" \
 		version.h.in || die "version sed failed"
 
 	# Use a less fugly default theme
