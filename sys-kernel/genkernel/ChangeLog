@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.14 2003/10/19 21:37:43 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.15 2003/10/19 21:49:11 zhen Exp $
+
+  19 Oct 2003; zhen <zhen@gentoo.org> genkernel-2.0.ebuild:
+  OK, we are building fine now. I have left it masked until I can verify that it
+  can actually build 2.6 kernels ok.
 
   19 Oct 2003; zhen <zhen@gentoo.org> genkernel-2.0.ebuild:
   this should have been masked.
