@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.13 2002/08/16 05:03:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.14 2002/08/22 17:58:14 raker Exp $
+
+*cyrus-sasl-2.1.7-r1 (22 Aug 2002)
+
+  22 Aug 2002; Nick Hadaway <raker@gentoo.org> cyrus-sasl-2.1.7-r1.ebuild, 
+  files/digest-cyrus-sasl-2.1.7-r1.ebuild, files/crypt.diff :
+  Enabled finer grained auth mechanism controls as suggested by Eric Renfro.
+  There are use variables for all relevant configure switches now.  By
+  default pam authentication is enabled and any of the other insecure,
+  unsupported, or non-standard mechanisms are disabled.
 
 *cyrus-sasl-2.1.7 (13 Aug 2002)
 
