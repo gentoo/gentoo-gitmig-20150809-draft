@@ -2,10 +2,12 @@ MD5 14783c2140a3056824016019cc66ccaa centericq-4.11.0.ebuild 1610
 MD5 b42775646a55d2833833ff5d7d39a0ce centericq-4.9.12.ebuild 1576
 MD5 d0c53f2a1fcf6fb91d80ad95111bf1bb centericq-4.9.12-r1.ebuild 1627
 MD5 7f795e49e944fe6f3aa15fe53e8da366 metadata.xml 693
-MD5 65772b897c641cffa38b28eabe0ff7ad ChangeLog 6850
+MD5 72acef932d3f193ee0fc3c810674b1ed ChangeLog 6996
+MD5 a1595d74fd9b298929e4d6e476d518a1 centericq-4.12.0.ebuild 2036
 MD5 906791d5e39c347fdb98c7a9e312e960 files/digest-centericq-4.9.12 69
 MD5 e645af5e8774c5cf9be9396564e75850 files/missing_namespace.patch 432
 MD5 906791d5e39c347fdb98c7a9e312e960 files/digest-centericq-4.9.12-r1 69
 MD5 3ff4d1ed212b9191d78f5d62dbbd4e71 files/digest-centericq-4.11.0 70
 MD5 e930249e8c8b5386353c1c829dbbc888 files/centericq-4.9.12-gcc3.4.patch 41292
+MD5 f2b19b888bf1799ee2643a7a832f996b files/digest-centericq-4.12.0 70
 MD5 4dffe42a3b07b5ea3d785a442ed92f73 files/nls.patch 496
