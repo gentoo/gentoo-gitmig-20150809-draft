@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/bsddb3
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.8 2003/11/01 14:25:24 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.9 2004/02/13 10:06:01 liquidx Exp $
+
+*bsddb3-4.2.4 (13 Feb 2004)
+
+  13 Feb 2004; Alastair Tse <liquidx@gentoo.org> bsddb3-3.4.0.ebuild,
+  bsddb3-4.1.3.ebuild, bsddb3-4.2.4.ebuild, files/bsddb3-4.1.3-db4.0.patch,
+  files/bsddb3-4.2.4-db4.2.patch:
+  version bump to work with db-4.2, peg bsddb3-4.1 at db-4.0 and bsddb3-4.2 at
+  db-4.2 and add patches to change references to version specific include files
+  and libraries.
 
   01 Nov 2003; Jason Wever <weeve@gentoo.org> bsddb3-3.4.0-r1.ebuild,
   bsddb3-3.4.0.ebuild, bsddb3-4.1.3.ebuild:

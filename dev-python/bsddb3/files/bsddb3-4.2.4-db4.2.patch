@@ -1,0 +1,26 @@
+--- setup.py.old	2004-02-13 09:53:33.220320152 +0000
++++ setup.py	2004-02-13 09:54:06.966190000 +0000
+@@ -75,11 +75,11 @@
+ 
+     # figure out from the base setting where the lib and .h are
+     if not incdir:
+-        incdir = os.path.join(BERKELEYDB_DIR, 'include')
++        incdir = os.path.join(BERKELEYDB_DIR, 'include/db4.2')
+     if not libdir:
+         libdir = os.path.join(BERKELEYDB_DIR, 'lib')
+-    if not '-ldb' in LIBS:
+-        libname = ['db']
++    if not '-ldb-4.2' in LIBS:
++        libname = ['db-4.2']
+     else:
+         libname = []
+     utils = []
+@@ -98,7 +98,7 @@
+     fp = os.popen('ldd %s 2>&1' % sys.executable)
+     results = fp.read()
+     status = fp.close()
+-    if not status and results.find('libdb.') >= 0:
++    if not status and results.find('libdb-4.2.') >= 0:
+         static = 1
+ 
+     if static:
