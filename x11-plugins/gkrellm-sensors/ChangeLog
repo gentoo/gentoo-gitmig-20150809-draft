@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-sensors
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/ChangeLog,v 1.7 2004/06/24 22:57:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/ChangeLog,v 1.8 2004/12/18 11:00:43 hansmi Exp $
+
+  18 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
+  gkrellm-sensors-0.1.ebuild:
+  Removed ppc from keywords, as we no longer have kernel 2.4.
 
 *gkrellm-sensors-0.1 (26 Dec 2003)
 

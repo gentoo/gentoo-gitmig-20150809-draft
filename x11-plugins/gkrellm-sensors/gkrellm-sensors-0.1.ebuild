@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/gkrellm-sensors-0.1.ebuild,v 1.9 2004/06/24 22:57:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/gkrellm-sensors-0.1.ebuild,v 1.10 2004/12/18 11:00:43 hansmi Exp $
 
 IUSE=""
 MY_P=${P/gkrellm-/gklm}
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gklmsensors/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc -sparc"
+KEYWORDS="x86 -ppc -sparc"
 
 DEPEND="=app-admin/gkrellm-1.2*
 	>=sys-apps/lm-sensors-2.6.3"
