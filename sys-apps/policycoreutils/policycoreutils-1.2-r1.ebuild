@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.2.ebuild,v 1.3 2003/10/20 02:10:32 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.2-r1.ebuild,v 1.1 2003/10/21 02:42:17 pebenito Exp $
 
 IUSE="build"
 
@@ -25,6 +25,12 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.2-gentoo.diff
+
+	# remove -lattr from Makefiles
+	SUBDIRS="load_policy newrole run_init setfiles"
+	for i in ${SUBDIRS}; do
+		sed -i -e 's:-lattr::g' ${i}/Makefile
+	done
 
 	# overwrite the /etc/pam.d files with ones
 	# that work with our pam setup
