@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.2 2004/02/21 00:16:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.3 2004/02/21 11:57:55 lanius Exp $
 
 IUSE="java guile python tcltk ruby perl"
 
@@ -47,7 +47,10 @@ src_compile() {
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		$myc || die "./configure failed"
+			$myc || die "./configure failed"
+
+	# fix the broken configure script
+	use tcltk || sed -i -e "s:am__append_1 =:#am__append_1 =:" Runtime/Makefile
 
 	make || die
 	make runtime PLTCOLLECTS="/usr/share/mzscheme/collects" || die
