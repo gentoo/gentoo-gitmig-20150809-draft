@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0.ebuild,v 1.5 2004/07/19 23:33:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0.ebuild,v 1.6 2004/10/04 21:57:43 pvdabeel Exp $
 
 inherit kde eutils
 
@@ -14,7 +14,7 @@ DESCRIPTION="Excellent QT/KDE Gnutella Client"
 SLOT="3" # why??
 LICENSE="GPL-2"
 #masking by keywords as there are known bugs and I don't want to put up with the reports yet
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 export MAKEOPTS="$MAKEOPTS -j1"
 
 src_unpack() {
