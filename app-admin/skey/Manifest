@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 febdd5b8615f0d42fc66dde258816628 ChangeLog 3697
 MD5 fb946a077c4e2ae03befc41f3a095b39 metadata.xml 1425
-MD5 9eef830d442da8aae38f0242283be14e skey-1.1.5-r3.ebuild 2268
-MD5 f2044e365db41a63c4a385876d1e3390 skey-1.1.5-r4.ebuild 2868
+MD5 2ceec42dadea30ff4de02783483d9176 skey-1.1.5-r3.ebuild 2272
+MD5 9c7194cad3faeeab37c3d4e25431e20e skey-1.1.5-r4.ebuild 2872
 MD5 c862d14e1478ec91ed4c5b97f124ea08 files/skey-1.1.5-gentoo.diff.gz 37614
 MD5 2bc2fd632a13d33a3832ec3bf2449c1b files/skey-login_name_max.diff 386
 MD5 ab3f803b5ad68dc89dfb5b544342b403 files/skey-1.1.5-fPIC.patch 271
@@ -13,7 +13,7 @@ MD5 c402251257567c1f0321c9c426144ced files/digest-skey-1.1.5-r4 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhpHYHTu7gpaalycRAmWDAKC3ZekxbALGkwKSDT88SaAXL6iXdACfdn4h
-jJrMrDwqVK39QcCXGDYMOPg=
-=2Rzu
+iD8DBQFBlt0uHTu7gpaalycRAgEwAKCGz+fLY1W9+f2MpwGjw3+uXQzt0gCeIcmv
+KYsnBPAeoBynbaEoaXhmuxs=
+=E+TG
 -----END PGP SIGNATURE-----
