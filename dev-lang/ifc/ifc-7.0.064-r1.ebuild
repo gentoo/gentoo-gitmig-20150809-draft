@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064-r1.ebuild,v 1.3 2003/09/11 01:08:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064-r1.ebuild,v 1.4 2003/09/20 22:21:25 avenj Exp $
+
+inherit rpm
 
 S=${WORKDIR}
 DESCRIPTION="Intel Fortran Compiler - The Pentium optimized compiler for Linux"
@@ -17,26 +19,21 @@ LICENSE="icc-7.0"
 SLOT="0"
 KEYWORDS="-* x86"
 
-
 DEPEND=">=virtual/linux-sources-2.4
-	>=sys-libs/glibc-2.2.4
-	sys-apps/cpio
-	app-arch/rpm"
+	>=sys-libs/glibc-2.2.4"
 
 RDEPEND=">=virtual/linux-sources-2.4
 	>=sys-libs/glibc-2.2.4"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	# Keep disk space to a minimum
 	rm -f intel-*.ia64.rpm
+	rpm_unpack intel-*.i386.rpm
+}
 
-	mkdir opt
-
-	for x in intel-*.i386.rpm
-	do
-		einfo "Extracting: ${x}"
-		rpm2cpio ${x} | cpio --extract --make-directories --unconditional
-	done
+src_compile() {
 
 	# From UNTAG_CFG_FILES in 'install'
 	SD=${S}/opt/intel # Build DESTINATION
@@ -60,6 +57,10 @@ src_compile() {
 	sed s@\<INSTALLTIMECOMBOPACKAGEID\>@$COMBOPACKAGEID@g $SUPPORTFILE > $SUPPORTFILE.abs
 	mv $SUPPORTFILE.abs $SUPPORTFILE
 	chmod 644 $SUPPORTFILE
+
+	# these should not be executable
+	find "${SD}/compiler70/"{docs,man,training,ia32/include} -type f -exec chmod -x "{}" ";"
+	find "${SD}/compiler70/ia32/lib" -name \*.a -exec chmod -x "{}" ";"
 }
 
 src_install () {
