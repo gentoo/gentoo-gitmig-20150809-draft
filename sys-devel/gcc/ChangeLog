@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.393 2005/03/28 00:16:19 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.394 2005/03/28 03:42:03 halcy0n Exp $
+
+*gcc-4.0.0_beta20050326 (28 Mar 2005)
+
+  28 Mar 2005; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.0.0_beta20050305.ebuild, +gcc-4.0.0_beta20050326.ebuild:
+  Version bump to newest GCC4 snapshot
 
   27 Mar 2005; Hardave Riar <hardave@gentoo.org> gcc-3.4.3-r1.ebuild:
   Stable on mips.
