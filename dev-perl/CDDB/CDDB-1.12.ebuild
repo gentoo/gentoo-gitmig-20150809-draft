@@ -10,4 +10,4 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/R/RC/RCAPUTO/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
