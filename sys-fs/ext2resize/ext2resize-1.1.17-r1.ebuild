@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.17-r1.ebuild,v 1.2 2004/01/13 00:28:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.17-r1.ebuild,v 1.3 2004/01/23 15:32:58 gustavoz Exp $
 
 IUSE="static"
 
 DESCRIPTION="EXT2 and EXT3 filesystem resizing utilities"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://ext2resize.sourceforge.net/"
-KEYWORDS="x86 amd64 ~ppc ~sparc alpha"
+KEYWORDS="x86 amd64 ~ppc sparc alpha"
 SLOT="0"
 LICENSE="GPL-2"
 

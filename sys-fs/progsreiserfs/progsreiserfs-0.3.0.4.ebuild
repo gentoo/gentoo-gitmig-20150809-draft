@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.0.4.ebuild,v 1.2 2003/09/18 22:58:59 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.0.4.ebuild,v 1.3 2004/01/23 15:31:03 gustavoz Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://reiserfs.linux.kiev.ua/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc hppa amd64 alpha ia64"
+KEYWORDS="x86 ~ppc sparc hppa amd64 alpha ia64"
 IUSE="nls debug"
 
 DEPEND="nls? ( sys-devel/gettext )"
