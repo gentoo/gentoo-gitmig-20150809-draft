@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.30 2003/01/10 03:51:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.31 2003/01/26 22:01:50 bcowan Exp $
+
+*sylpheed-claws-0.8.9 (26 Jan 2003)
+
+  26 Jan 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.9.ebuild,
+  files/digest-sylpheed-claws-0.8.9:
+  
+  Version bump, with many bugfixes and feature enhancements including new plugin support,
+  with a built in spamassassin plugin :).
 
 
 *sylpheed-claws-0.8.8-r1 (10 Jan 2003)
