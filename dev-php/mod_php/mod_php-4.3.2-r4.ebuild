@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r4.ebuild,v 1.2 2003/07/22 12:04:40 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r4.ebuild,v 1.3 2003/08/04 14:26:39 gmsoft Exp $
 
 IUSE="${IUSE} apache2"
 
 DESCRIPTION="Apache module for PHP"
-KEYWORDS="x86 sparc ~ppc ~alpha ~hppa ~arm"
+KEYWORDS="x86 sparc ~ppc ~alpha hppa ~arm"
 EXCLUDE_DB4_FIX=1
 EXCLUDE_PEAR_FIX=1
 

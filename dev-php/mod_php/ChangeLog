@@ -1,12 +1,15 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.93 2003/07/30 08:50:42 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.94 2003/08/04 14:26:39 gmsoft Exp $
 
 *mod-php-4.3.2-r5 (30 Jul 2003)
   30 Jul 2003; Tal Peer <coredumb@gentoo.org> mod_php-4.3.2-r5.ebuild:
   Dropped cjk from IUSE. Now mbstring and mbregex are always enabled.
 
-mod-php-4.3.2-r4 (21 Jul 2003)
+*mod-php-4.3.2-r4 (21 Jul 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> mod-php-4.3.2-r4.ebuild :
+  Marked stable on hppa.
 
   22 Jul 2003; Christian Birchinger <joker@gentoo.org>
   mod_php-4.3.2-r4.ebuild:
