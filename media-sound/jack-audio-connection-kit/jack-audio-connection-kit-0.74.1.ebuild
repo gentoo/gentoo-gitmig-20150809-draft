@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.74.1.ebuild,v 1.1 2003/07/23 04:32:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.74.1.ebuild,v 1.2 2003/07/24 12:21:51 torbenh Exp $
 
 IUSE="doc debug"
 
@@ -24,9 +24,6 @@ PROVIDE="virtual/jack"
 src_compile() {
 	local myconf
 	myconf="--with-gnu-ld"
-	# --enable-optimize       ask the compiler for its best optimizations
-	# --enable-capabilities   use libcap to gain realtime scheduling priviledges
-	# --enable-timestamps     allow clients to use the JACK timestamp API
 
 	use debug && myconf="${myconf} --enable-debug"
 
