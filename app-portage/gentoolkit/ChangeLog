@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.24 2004/03/13 11:38:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.25 2004/04/01 07:43:05 genone Exp $
+
+*gentoolkit-0.2.0_pre8 (01 Apr 2004)
+
+  01 Apr 2004; Marius Mauch <genone@gentoo.org> gentoolkit-0.2.0_pre8.ebuild:
+  version bump to get the new glsa-check out
 
   13 Mar 2004; Marius Mauch <genone@gentoo.org> :
   added temporary glsa-check tool, fixed bugs #42160, #40935, #43389

@@ -2,8 +2,9 @@ MD5 43834cd0f44889dcbc78928504a5809c gentoolkit-0.2.0_pre7.ebuild 1075
 MD5 e8b7ce22d0c84a1d48e1a6aba1b161bd gentoolkit-0.2.0_pre4.ebuild 835
 MD5 52cec006b21c48a0b33fb4e7f33839f3 gentoolkit-0.1.38.ebuild 2875
 MD5 f400520dd8122e82c5852a4780e9e805 gentoolkit-0.2.0_pre6.ebuild 809
+MD5 70dbb9bae30c8b91e8b14610f3ab3b81 gentoolkit-0.2.0_pre8.ebuild 1075
 MD5 e4383d8d3bc827453b25af125a61707a gentoolkit-0.2.0_pre3.ebuild 813
-MD5 5142f53faad8b50b6872a530648c2b90 ChangeLog 24615
+MD5 43d9efcb1411d401af3f9d72a06961c4 ChangeLog 24777
 MD5 a87703ce539fbcd83da4745cc082f737 metadata.xml 611
 MD5 8eac89a292cdd6dacfb24c4ebfea7a5d gentoolkit-0.2.0_pre5.ebuild 814
 MD5 35eefd58066abfa1d2f6b4d721d57690 files/digest-gentoolkit-0.2.0_pre3 72
@@ -11,6 +12,7 @@ MD5 9106b9afa932344c6a3ba1ef06d53c0d files/digest-gentoolkit-0.2.0_pre4 72
 MD5 9b27a424328734bd41aae6fdbd5c2117 files/digest-gentoolkit-0.2.0_pre5 72
 MD5 5716d0fba086de7e3163e815cc5f2fa2 files/digest-gentoolkit-0.2.0_pre6 72
 MD5 eb45ed0289923c51c7a1caeb2b678379 files/digest-gentoolkit-0.2.0_pre7 72
+MD5 1b132e20e9de1c5163594b2cbd950d34 files/digest-gentoolkit-0.2.0_pre8 72
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoolkit-0.1.38 0
 MD5 1fdf94e41b73fbba7504786ba247d87b files/euse/euse 33486
 MD5 8ac906ab7791d60344eb357af4002247 files/euse/README 4404
