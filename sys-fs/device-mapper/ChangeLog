@@ -1,0 +1,132 @@
+# ChangeLog for sys-libs/device-mapper
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.1 2005/03/01 22:45:26 vapier Exp $
+
+  23 Feb 2005; Martin Schlemmer <azarah@gentoo.org> files/dm-start.sh:
+  Fix error printing.  Remove sourcing of functions.sh.
+
+*device-mapper-1.00.19-r2 (23 Feb 2005)
+
+  23 Feb 2005; Martin Schlemmer <azarah@gentoo.org> +files/dm-start.sh,
+  +files/dmtab, +device-mapper-1.00.19-r2.ebuild:
+  Install static library again. Add /etc/dmtab and new rc-scripts addon for
+  setting up DM volumes at boot. Note that this need upcomming baselayout
+  release.
+
+  25 Nov 2004; Guy Martin <gmsoft@gentoo.org> device-mapper-1.00.19-r1.ebuild:
+  Stable on hppa.
+
+  14 Nov 2004; <max@gentoo.org> device-mapper-1.00.07-r1.ebuild,
+  device-mapper-1.00.07.ebuild, device-mapper-1.00.08-r1.ebuild,
+  device-mapper-1.00.08.ebuild, device-mapper-1.00.17-r1.ebuild,
+  device-mapper-1.00.17.ebuild, device-mapper-1.00.18-r1.ebuild,
+  device-mapper-1.00.18.ebuild, device-mapper-1.00.19.ebuild:
+  Add empty IUSE to silence repoman errors. Fix SRC_URI as per bug #65807.
+
+  31 Oct 2004; Jason Wever <weeve@gentoo.org>
+  device-mapper-1.00.17-r1.ebuild:
+  Stable on sparc (as much as 2.6 kernel stuff can be stable on sparc).
+
+  01 Oct 2004; Simon Stelling <blubb@gentoo.org>
+  device-mapper-1.00.19-r1.ebuild:
+  get_libdir-ized and added IUSE=""
+
+  17 Aug 2004; <agriffis@gentoo.org> device-mapper-1.00.19-r1.ebuild:
+  add ~alpha #60071
+
+*device-mapper-1.00.07-r1 (24 Jul 2004)
+
+  24 Jul 2004; Martin Schlemmer <azarah@gentoo.org>
+  +device-mapper-1.00.07-r1.ebuild, +device-mapper-1.00.08-r1.ebuild,
+  +device-mapper-1.00.17-r1.ebuild, +device-mapper-1.00.18-r1.ebuild,
+  +device-mapper-1.00.19-r1.ebuild:
+  Add linker script to fixup bug #4411
+
+*device-mapper-1.00.19 (23 Jul 2004)
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +device-mapper-1.00.19.ebuild:
+  Marked 1.00.17 stable on x86 and amd64.  Version bumps close bug #54534
+
+  29 May 2004; Tom Gall <tgall@gentoo.org> device-mapper-1.00.17.ebuild:
+  mark stable on ppc64, bug #52331
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  device-mapper-1.00.07.ebuild, device-mapper-1.00.08.ebuild,
+  device-mapper-1.00.17.ebuild:
+  Add die following econf for bug 48950
+
+*device-mapper-1.00.17 (24 Apr 2004)
+
+  24 Apr 2004; Max Kalika <max@gentoo.org> device-mapper-1.00.17.ebuild:
+  Bump to version 1.00.17.
+
+  13 Apr 2004; Jason Wever <weeve@gentoo.org> device-mapper-1.00.08.ebuild:
+  Stable on sparc.
+
+  15 Mar 2004; Max Kalika <max@gentoo.org> device-mapper-1.00.08.ebuild:
+  Bump to stable x86.
+
+  10 Mar 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  device-mapper-1.00.07.ebuild:
+  set ppc in keywords
+
+  10 Mar 2004; Max Kalika <max@gentoo.org> device-mapper-1.00.08.ebuild:
+  Install the static library into /usr as well. Fixes bug #44223.
+
+*device-mapper-1.00.08 (09 Mar 2004)
+
+  09 Mar 2004; Max Kalika <max@gentoo.org> device-mapper-1.00.05.ebuild,
+  device-mapper-1.00.07.ebuild, device-mapper-1.00.08.ebuild:
+  Update SRC_URI as per bug #43880. Update HOMEPAGE as well. Bump to 1.00.08.
+
+  22 Jan 2004; Markus Nigbur <pyrania@gentoo.org>
+  device-mapper-1.00.07.ebuild:
+  Marked stable on sparc.
+
+  26 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org>
+  device-mapper-1.00.07.ebuild:
+  Added ~sparc keyword
+
+  13 Dec 2003; Brad House <brad_mssw@gentoo.org> device-mapper-1.00.07.ebuild:
+  mark stable on amd64
+
+  08 Dec 2003; <max@gentoo.org> device-mapper-1.00.07.ebuild:
+  Bump to stable x86 and add ~amd64 as per bug 34779.
+
+*device-mapper-1.00.07 (02 Dec 2003)
+
+  02 Dec 2003; <max@gentoo.org> device-mapper-1.00.07.ebuild:
+  Bump to version 1.00.07. Make it ~x86 for now.
+
+  29 Oct 2003; Max Kalika <max@gentoo.org> device-mapper-1.00.05.ebuild:
+  Put the kernel check back in pkg_setup(). Fixes bug 32044.
+
+  27 Oct 2003; Max Kalika <max@gentoo.org> device-mapper-1.00.05.ebuild:
+  Fix kernel support check.
+
+  21 Oct 2003; Max Kalika <max@gentoo.org> device-mapper-1.00.05.ebuild:
+  Bump to stable x86.
+
+*device-mapper-1.00.05 (02 Sep 2003)
+
+  02 Sep 2003; Max Kalika <max@gentoo.org> device-mapper-1.00.05.ebuild:
+  Bump version to 1.00.05.
+
+  03 Jul 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Set KEYWORDS to ~x86.
+
+  12 Jun 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Drop unneccessary die() calls.
+
+  29 May 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Better kernel-support error message.
+
+  23 May 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Install libdevmapper.so to /lib as well.
+
+*device-mapper-0.96.08 (12 May 2003)
+
+  12 May 2003; Max Kalika <max@gentoo.org> device-mapper-0.96.08.ebuild:
+  Initial version.
+
