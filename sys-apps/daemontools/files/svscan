@@ -1,34 +1,33 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/files/svscan,v 1.7 2003/02/27 06:25:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/files/svscan,v 1.8 2003/09/08 21:31:09 vapier Exp $
 
 depend() {
-    need net
-    after net
-    before ntpd
-    before spamd
-    before apache
-    before apache2
+	need net
+	after net
+	before ntpd
+	before spamd
+	before apache
+	before apache2
 }
 
 start() {
-    ebegin "Starting service scan..."
-    PATH="/usr/bin:$PATH"
-    start-stop-daemon --start --quiet --exec /usr/bin/svscan --pidfile /var/run/svscan.pid -- /service &
-    echo $! > /var/run/svscan.pid
-    eend $?
+	ebegin "Starting service scan"
+	PATH="/usr/bin:$PATH"
+	start-stop-daemon --start --quiet --exec /usr/bin/svscan --pidfile /var/run/svscan.pid -- /service &
+	echo $! > /var/run/svscan.pid
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping service scan..."
-    start-stop-daemon --stop --quiet --pidfile /var/run/svscan.pid
-    eend $?
-    ebegin "Stopping services..."
-    svc -dx /service/*
-    eend $?
-    ebegin "Stopping service logging..."
-    svc -dx /service/*/log
-    eend $?
+	ebegin "Stopping service scan"
+	start-stop-daemon --stop --quiet --pidfile /var/run/svscan.pid
+	eend $?
+	ebegin "Stopping services"
+	svc -dx /service/*
+	eend $?
+	ebegin "Stopping service logging"
+	svc -dx /service/*/log
+	eend $?
 }
-
