@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.5 2004/06/25 00:08:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.6 2004/07/18 23:01:51 aliz Exp $
+
+  18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> BerkeleyDB-0.25.ebuild:
+  Added amd64 keyword, closing #56450.
 
   16 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> BerkeleyDB-0.25.ebuild:
   Added ~sparc, thanks tigger^

@@ -1,5 +1,5 @@
-MD5 2551689da2ed2807ce048d88e2e127d6 BerkeleyDB-0.25.ebuild 739
-MD5 6dc3779d6fbc189e2e33187f81dd64aa ChangeLog 439
+MD5 9a5fb72533ae7d2a0bcd21553c8297e0 BerkeleyDB-0.25.ebuild 742
+MD5 768b0ae6b03c2f993a3f308caa385d52 ChangeLog 547
 MD5 3cf9a8e9b6c21daabc284cd62c32740e metadata.xml 419
 MD5 7463cf48040ddb011b8d843ee0749c17 files/Gentoo-config.diff 592
 MD5 d0108ca1b395d686172109e68c2ea99a files/digest-BerkeleyDB-0.25 67
