@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.26 2003/04/13 16:52:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.27 2003/04/19 10:41:53 danarmak Exp $
+
+*kdevelop-3.0_alpha4-r1 (19 Apr 2003)
+
+  19 Apr 2003; Dan Armak <danarmak@gentoo.org> Manifest,
+  kdevelop-3.0_alpha4-r1.ebuild:
+  New upstream version. Fixes the big bugs in alpha4. See www.kdevelop.org for
+  more details.
 
 *kdevelop-3.0_alpha4 (13 Apr 2003)
 
