@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/rfb-0.6.1-r1.ebuild,v 1.2 2003/02/13 15:05:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/rfb-0.6.1-r1.ebuild,v 1.3 2003/03/25 23:31:14 rajiv Exp $
 
 inherit eutils
 
 DESCRIPTION="comprehensive collection of rfb enabled tools and applications"
-HOMEPAGE="http://forums.hexonet.com/"
+HOMEPAGE="http://forum.hexonet.com/"
 SRC_URI="http://download.hexonet.com/software/rfb/${P}.tar.gz"
 
 LICENSE="GPL-2"

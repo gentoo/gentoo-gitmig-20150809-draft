@@ -1,8 +1,16 @@
 # ChangeLog for net-misc/rfb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/ChangeLog,v 1.5 2003/02/12 08:31:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/ChangeLog,v 1.6 2003/03/25 23:31:14 rajiv Exp $
+
+*rfb-0.6.1-r1 (25 Mar 2003)
+
+  25 Mar 2003; Rajiv Manglani <rajiv@gentoo.org> rfb-0.6.1-r1.ebuild :
+  fixed homepage url.
 
 *rfb-0.6.1 (18 Jan 2003)
+
+  25 Mar 2003; Rajiv Manglani <rajiv@gentoo.org> rfb-0.6.1.ebuild :
+  fixed homepage url.
 
   18 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
   Added a patch to support a '-daemon' switch ... sexy :)
