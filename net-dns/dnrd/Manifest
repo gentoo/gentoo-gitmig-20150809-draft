@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5b7ece5d8f6b168d48f1b6d3db9c1d21 ChangeLog 858
 MD5 7a4e4dab2fd918ab73a67810a68ebc31 dnrd-2.17.2.ebuild 707
-MD5 6e337a49786952bf09c027f74d9b2c24 metadata.xml 439
 MD5 e563768727a4c965013e06510b0d997d dnrd-2.18.ebuild 743
-MD5 adabeaf8e108dbbac72ac51528b3fc12 files/digest-dnrd-2.17.2 63
+MD5 8cd96a15d11d6ad9cb6cecd408275c7f ChangeLog 854
+MD5 6e337a49786952bf09c027f74d9b2c24 metadata.xml 439
 MD5 37af42cf55f4b5e709d87a79e89fd760 files/dnrd 465
-MD5 7d30e0bd4d61ae20ed63339d3cc5739d files/dnrd.conf 250
+MD5 adabeaf8e108dbbac72ac51528b3fc12 files/digest-dnrd-2.17.2 63
 MD5 59a8af5b8e044f741c3077e196ab080d files/digest-dnrd-2.18 61
+MD5 7d30e0bd4d61ae20ed63339d3cc5739d files/dnrd.conf 250
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB42eXFdQwWVoAgN4RAqX2AKDMiODjKRZqSNz2ij9XiEbujNiiAgCgjEDb
-+KIyMpinAmF2bG4jQ0HzpDw=
-=FIJM
+iD8DBQFB44D6I1lqEGTUzyQRAtklAKCems66Dq9q2Kq5pPQZSmampC+9iQCdFEhM
+tNTiVE0CqCpq9IT4j4RhyYQ=
+=YUda
 -----END PGP SIGNATURE-----

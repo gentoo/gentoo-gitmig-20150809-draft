@@ -1,6 +1,6 @@
-# ChangeLog for www-proxy/dnrd
+# ChangeLog for net-dns/dnrd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.2 2005/01/11 05:49:28 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.3 2005/01/11 07:31:56 swegener Exp $
 
 *dnrd-2.18 (11 Jan 2005)
 
