@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/ut2004-bonuspack-ece
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ChangeLog,v 1.1 2005/02/23 00:29:31 wolf31o2 Exp $
+
+*ut2004-bonuspack-ece-1 (22 Feb 2005)
+
+  22 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +ut2004-bonuspack-ece-1.ebuild:
+  Initial import of new broken-up ut2004 install.
+
