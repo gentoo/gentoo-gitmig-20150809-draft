@@ -284,13 +284,6 @@ x11-themes/gtk-xfce-engine
 # masked for testing
 =net-dialup/hsflinmodem-5.03.03.02072100
 
-# Daniel Ahlberg <aliz@gentoo.org> (02 Aug 2002)
-# masked for testing
-#
-# <azarah@gentoo.org> (03 Aug 2002)
-# also mask -r7, as it will need testing.
->=sys-libs/glibc-2.2.5-r6
-
 # George Shapovalov <george@gentoo.org> (01 Aug 2002)
 # sandbox violation
 =dev-lang/stratego-0.7.ebuild
@@ -715,10 +708,6 @@ dev-libs/libiconv
 #Azarah -- 8 April 2002
 <sys-apps/shadow-4.0.2-r4
 <sys-apps/util-linux-2.11o
-
-#Seems to cause binary incompatibility problems
-#(gbevin, 05 Apr 2002)
-=sys-libs/glibc-2.2.5-r3
 
 # 23 Mar, m0rpheus: bind 8 keeps having serious problems.
 <net-misc/bind-9.0.0
