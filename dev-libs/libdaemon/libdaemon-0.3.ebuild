@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.3.ebuild,v 1.6 2004/09/03 20:55:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.3.ebuild,v 1.7 2005/01/25 11:57:52 ka0ttic Exp $
 
 DESCRIPTION="Simple library for creating daemon processes in C"
 HOMEPAGE="http://0pointer.de/lennart/projects/libdaemon/"
