@@ -1,6 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cecce935876d9ee07fdd25f5199c864f slurm-0.3.3.ebuild 764
 MD5 f7f0760a946369222b38676ce9b007eb slurm-0.2.2.ebuild 984
 MD5 5fff9eab03364c705d79ff3ba1d16c78 slurm-0.3.2.ebuild 762
-MD5 92689970a8e9abe659ef74f12011cbf2 ChangeLog 1620
+MD5 b687ac9766390e7231dbccc1cd345e40 ChangeLog 1763
 MD5 a96a9c0d4be659091bc997c67c36d781 metadata.xml 258
 MD5 cd33ca61f17417a1605b9649b4d3e2db slurm-0.2.3.ebuild 1078
 MD5 42f81938478bb63828b98c7367b49949 files/slurm-0.2.2-fix-gentoo.patch 2209
@@ -8,4 +12,12 @@ MD5 2dc5e67b0c6424cc560be57e7dcf099a files/slurm-0.2.2-altcolors-gentoo.patch 80
 MD5 d1776e848116293161a1973b4ee313c7 files/digest-slurm-0.2.2 62
 MD5 24dbad68e154494dfc342ba0a06ed75f files/digest-slurm-0.2.3 62
 MD5 962d85efe2f7632aeb0ab2485d9ceed4 files/digest-slurm-0.3.2 63
+MD5 8a743905ff4f988e739f163cfed42e89 files/digest-slurm-0.3.3 63
 MD5 7c9bf01cf4427645967c290fdf77d0a1 files/slurm-0.2.3-theme.patch 10051
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSp9uEZCkKN40op4RAtkoAKCrwV2NEWlPm0cqwlFCQFkMWgS9yQCgxHbx
+RZKEGArm6gDB1FtIBz5Nuw8=
+=Eal+
+-----END PGP SIGNATURE-----
