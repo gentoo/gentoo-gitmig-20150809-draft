@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.2.1-r2.ebuild,v 1.1 2002/08/29 18:39:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.2.1-r2.ebuild,v 1.2 2002/09/01 21:46:46 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -44,12 +44,12 @@ src_compile() {
 		myconf="${myconf} BUILD_GLCANVAS=0"
 	fi
         
-	python setup.py build || die
+	python setup.py ${myconf} build || die
 }
 
 src_install () {
 
-	python setup.py install --prefix=${D}/usr || die
+	python setup.py ${myconf} install --prefix=${D}/usr || die
 
 	dodoc BUILD.unix.txt CHANGES.txt MANIFEST.in PKG-INFO README.txt
 }

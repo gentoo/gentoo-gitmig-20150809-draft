@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.5 2002/08/29 18:39:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.6 2002/09/01 21:46:46 raker Exp $
 
 *wxPython-2.3.2.1-r2 (29 Aug 2002)
+
+  01 Sep 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r2.ebuild :
+  Updated ebuild with missing ${myconf}'s
 
   29 Aug 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r2.ebuild,
   file/digest-wxPython-2.3.2.1-r2, files/ledctrl.diff :
