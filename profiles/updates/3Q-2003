@@ -137,3 +137,10 @@ move app-emulation/xmess games-emulation/xmess
 move app-emulation/zinc games-emulation/zinc
 move app-emulation/zsnes games-emulation/zsnes
 move app-games/grustibus games-emulation/grustibus
+move app-emulation/freesci games-engines/freesci
+move app-emulation/kwest games-engines/kwest
+move app-games/exult games-engines/exult
+move app-games/frotz games-engines/frotz
+move app-games/scummvm games-engines/scummvm
+move app-games/xzip games-engines/xzip
+move app-games/zoom games-engines/zoom
