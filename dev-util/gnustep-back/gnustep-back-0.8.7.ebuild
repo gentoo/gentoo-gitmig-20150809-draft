@@ -1,23 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.7.ebuild,v 1.1 2003/07/13 21:01:17 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.7.ebuild,v 1.2 2003/07/26 08:53:59 raker Exp $
+
+IUSE=""
 
 inherit base gnustep
 
 DESCRIPTION="GNUstep GUI backend"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc"
+KEYWORDS="-x86 -ppc -sparc"
+
 DEPEND="=dev-util/gnustep-gui-${PV}*
     	>=media-libs/tiff-3.5.7
     	>=media-libs/jpeg-6b-r2
 	>=media-libs/freetype-2*
 	>=x11-base/xfree-4.3.0"
-S=${WORKDIR}/${P}
-PATCHES1="${FILESDIR}/${PN}-0.8.5.xft2.patch"
 
+PATCHES1="${FILESDIR}/${PN}-0.8.5.xft2.patch"
 GNUSTEPBACK_XFT=2
 
 src_unpack() {
