@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/otpcalc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.1 2003/09/05 13:10:29 taviso Exp $
+
+*otpcalc-0.96 (05 Sep 2003)
+
+  05 Sep 2003; Tavis Ormandy <taviso@gentoo.org> otpcalc-0.96.ebuild:
+  initial import
+
