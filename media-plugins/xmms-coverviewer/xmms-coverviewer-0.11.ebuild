@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.11.ebuild,v 1.4 2004/09/03 21:20:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.11.ebuild,v 1.5 2004/09/14 07:04:11 eradicator Exp $
 
 IUSE=""
 
@@ -10,10 +10,9 @@ SRC_URI="mirror://sourceforge/coverviewer/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc sparc ~alpha ~hppa amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64"
 
-DEPEND="=x11-libs/gtk+-1.2*
-	media-libs/gdk-pixbuf
+DEPEND="media-libs/gdk-pixbuf
 	media-sound/xmms
 	media-libs/id3lib"
 
