@@ -5,6 +5,7 @@ MD5 0cbfbeeb375623e66000ec9d511e8b1a gkrellm-2.1.10.ebuild 1571
 MD5 fcbfeb6886145161003a8b1de6724faa gkrellm-2.1.20.ebuild 1668
 MD5 b57c76f9c899495cd67a7fd0a02e1660 gkrellm-2.1.15.ebuild 1651
 MD5 0f5aa783d9ac45e2fc8e370ec86f8960 gkrellm-2.1.16.ebuild 1665
+MD5 fcbfeb6886145161003a8b1de6724faa gkrellm-2.1.21.ebuild 1668
 MD5 6e41c75396a6b0df361a04657fd45ac3 files/digest-gkrellm-1.2.13 67
 MD5 7080ee73719d75a573216e6661b04032 files/digest-gkrellm-2.1.10 67
 MD5 89d6f54c23b2093a0d9178d32bc4665e files/digest-gkrellm-2.1.19 67
@@ -12,3 +13,4 @@ MD5 cafab2b9743941916312f01b8f64cffd files/gkrellmd 598
 MD5 79872955cccce1dc999d1d4f78726aea files/digest-gkrellm-2.1.20 67
 MD5 04b1ddde8d427b96c5bdaeb5b2e5f145 files/digest-gkrellm-2.1.15 67
 MD5 2bc2bbd63d2c61b7db072bc1ae0aea75 files/digest-gkrellm-2.1.16 67
+MD5 c5d8fc720276fdf771751c4e12521c6d files/digest-gkrellm-2.1.21 67
