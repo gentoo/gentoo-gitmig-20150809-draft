@@ -1,8 +1,12 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.5 2002/12/09 04:33:09 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.6 2002/12/10 16:38:37 drobbins Exp $
 
-\* Autoupdate keywords (12-6-02)
+*wvdial-1.53-r1 (10 Dec 2002)
+
+  10 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: Adding missing wvstreams
+  runtime dependency, closing bug #10133. Removing buggy 1.53 ebuild.
+  
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *wvdial-1.53 (27 Apr 2002)
