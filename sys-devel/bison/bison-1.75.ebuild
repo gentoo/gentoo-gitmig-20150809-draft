@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.75.ebuild,v 1.7 2003/02/13 16:28:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.75.ebuild,v 1.8 2003/07/16 14:08:07 pvdabeel Exp $
 
 IUSE="nls static build" # icc"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnu.org/software/bison/bison.html"
 LICENSE="GPL-2"
 SLOT="0"
 # do not compile xfree
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="nls? ( sys-devel/gettext )"
 #	icc? ( dev-lang/icc )"
