@@ -1,4 +1,6 @@
 MD5 19396ea503241bd6fa4c8377b0e62073 selinux-courier-imap-20040203.ebuild 416
-MD5 5be535cc6d6f1046fa3644a389d76bf5 ChangeLog 444
+MD5 3781027206c0e3e1dee32ab73da72d55 selinux-courier-imap-20040406.ebuild 420
+MD5 a63590b0575559621e63cd4df942eb62 ChangeLog 632
 MD5 a1916b05f4192dde706ba9bea1343435 metadata.xml 389
 MD5 8a1f92082cb738c61002ba2239603c2e files/digest-selinux-courier-imap-20040203 80
+MD5 f4cf4fe94c6b3f0ddfa02aee8c5e27e5 files/digest-selinux-courier-imap-20040406 80
