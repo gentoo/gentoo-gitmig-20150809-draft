@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.27 2004/04/27 20:59:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.28 2004/05/04 07:41:45 brad Exp $
+
+*mozilla-thunderbird-0.6 (04 May 2004)
+
+  04 May 2004; Brad Laue <brad@gentoo.org> +mozilla-thunderbird-0.6.ebuild:
+  Bump to 0.6. Clean up some dependency problems.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-thunderbird-0.4.ebuild, mozilla-thunderbird-0.5-r1.ebuild,
