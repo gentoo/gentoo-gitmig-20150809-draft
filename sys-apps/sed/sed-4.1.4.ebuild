@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.2 2005/03/13 08:47:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.3 2005/03/26 17:06:39 gongloo Exp $
 
 inherit flag-o-matic
 
@@ -76,6 +76,7 @@ src_install() {
 			mv "$x" "${x//sed/gsed}"
 		done
 		dosym /bin/gsed /usr/bin/gsed
+		rm  ${D}/usr/lib/charset.alias ${D}/usr/share/locale/locale.alias
 	else
 		dosym /bin/sed /usr/bin/sed
 	fi
