@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/normalize
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.15 2004/09/02 02:16:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.16 2004/11/25 09:33:45 eradicator Exp $
+
+  25 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  normalize-0.7.6-r2.ebuild:
+  Added nls USE flag and fixed mad dependency.  Closes bug #72187.
 
   01 Sep 2004; Tom Gall <tgall@gentoo.org> normalize-0.7.6-r2.ebuild:
   stable on ppc64, bug #61787

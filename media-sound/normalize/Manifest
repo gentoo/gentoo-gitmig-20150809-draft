@@ -1,8 +1,18 @@
-MD5 a28aff2f7a2048739d445eaba39bdb37 ChangeLog 2144
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 86483675bacb3d3695cf188044202643 ChangeLog 2303
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 999023603c8f8e3fa46f2ab854f33d31 normalize-0.7.4.ebuild 976
 MD5 dcd7d2be60083cf5d4a6eb395444dd28 normalize-0.7.6-r1.ebuild 815
-MD5 4a73ba25b89058c5b19f25ac1ef092bf normalize-0.7.6-r2.ebuild 861
+MD5 d0a3c86fff11fe8492df4ef1f7062485 normalize-0.7.6-r2.ebuild 941
 MD5 d5be91906061cbb310757eeccd79c6cc files/digest-normalize-0.7.4 68
 MD5 ca7f6d0db3e04885c8412eb70cb1a482 files/digest-normalize-0.7.6-r1 68
 MD5 ca7f6d0db3e04885c8412eb70cb1a482 files/digest-normalize-0.7.6-r2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpacEArHZZzCEUG0RAnhUAJ99FlRN+tWuPLng06A/faNIGKb1FACfbASW
+mm+DHJmHrHV0sOmnWwDmIUI=
+=qU1h
+-----END PGP SIGNATURE-----
