@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.5 2004/10/09 16:52:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.6 2004/11/21 08:58:37 dragonheart Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch ${FILESDIR}/makefile.doc.in.patch || die "failed to patch"
 	epatch ${FILESDIR}/configure.in.patch || die "failed to patch"
 	epatch ${FILESDIR}/log4c_1.0.11_test.patch  || die "failed to patch"
+	epatch ${FILESDIR}/${P}-function.patch || die "failed to patch"
 }
 
 src_compile() {
@@ -44,7 +45,7 @@ src_compile() {
 }
 
 src_test() {
-	einfo "Cannot get test working. patches welcome on bugs.gentoo.org"
+	${S}/tests/log4c/test_category || die "test_rc failed"
 }
 
 src_install() {
