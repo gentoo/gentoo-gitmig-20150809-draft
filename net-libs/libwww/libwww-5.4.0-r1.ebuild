@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.15 2003/10/02 10:08:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.16 2003/10/03 08:30:05 usata Exp $
 
 IUSE="ssl mysql"
 
@@ -32,30 +32,24 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
-	use mysql \
-		&& myconf="--with-mysql" \
-		|| myconf="--without-mysql"
-
-	use ssl \
-		&& myconf="${myconf} --with-ssl" \
-		|| myconf="${myconf} --without-ssl"
 
 	elibtoolize
 
-	./configure \
-		--prefix=/usr \
+	econf \
+		--enable-shared \
+		--enable-static \
 		--with-zlib \
 		--with-md5 \
 		--with-expat \
-		${myconf} || die
+		`use_with mysql` \
+		`use_with ssl` \
+		|| die
 
 	emake || die
 }
 
 src_install () {
-	make prefix=${D}/usr install || die
+	make DESTDIR=${D} install || die
 	dodoc COPYRIGH ChangeLog
 	dohtml -r .
 }
