@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.ebuild,v 1.1 2003/03/26 08:25:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.ebuild,v 1.2 2003/04/01 21:11:11 drobbins Exp $
 
 inherit base eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/sawmill/${P}.tar.gz"
 HOMEPAGE="http://sawmill.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~alpha"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=x11-libs/rep-gtk-0.17
@@ -59,6 +59,9 @@ src_compile() {
 		--with-audiofile \
 		${myconf} || die
 
+	#the following two lines allow sawfish to compile with gcc 2.95 (see bug 18294)
+	cp Makedefs Makedefs.orig
+	sed -e s:'REP_CFLAGS=':'REP-CFLAGS=-I/usr/include/freetype2 ': Makedefs.orig > Makedefs || die
 	# DO NOT USE "emake" !!! - Azarah, 24 Jun 2002
 	MAKEOPTS=-j1 make || die
 }
