@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.3 2003/11/24 10:00:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.4 2003/12/29 16:42:39 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -34,7 +34,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="X"
 
-DEPEND="!app-text/tetex
+newdepend "!app-text/tetex
 	!app-text/ptex
 	!app-text/cstetex
 	sys-apps/ed
@@ -43,10 +43,17 @@ DEPEND="!app-text/tetex
 	>=media-libs/libpng-1.2.1
 	sys-libs/ncurses
 	>=net-libs/libwww-5.3.2-r1"
-RDEPEND="${DEPEND}
+newrdepend "!app-text/tetex
+	!app-text/ptex
+	!app-text/cstetex
+	sys-apps/ed
+	sys-libs/zlib
+	X? ( virtual/x11 )
+	>=media-libs/libpng-1.2.1
+	sys-libs/ncurses
+	>=net-libs/libwww-5.3.2-r1
 	>=dev-lang/perl-5.2
 	dev-util/dialog"
-#PDEPEND="app-text/xdvik"
 PROVIDE="virtual/tetex"
 
 tetex_src_unpack() {
