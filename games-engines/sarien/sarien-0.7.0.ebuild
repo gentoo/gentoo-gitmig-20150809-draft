@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/sarien/sarien-0.7.0.ebuild,v 1.1 2004/03/27 10:21:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/sarien/sarien-0.7.0.ebuild,v 1.2 2004/03/30 03:36:55 mr_bones_ Exp $
 
 inherit games
 
@@ -25,6 +25,12 @@ src_unpack() {
 	sed -i \
 		-e "s:/etc:${GAMES_SYSCONFDIR}:" src/filesys/unix/path.c \
 			|| die "sed src/filesys/unix/path.c failed"
+}
+
+src_compile() {
+	egamesconf || die
+	# buggy build - comments on bug #45813
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
