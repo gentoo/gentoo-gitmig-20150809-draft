@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.15 2004/08/20 14:12:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.16 2004/09/25 11:29:30 hanno Exp $
+
+  25 Sep 2004; Hanno Boeck <hanno@gentoo.org> +files/qemu_gcc34.patch.gz,
+  qemu-0.6.0.ebuild:
+  Fix for gcc 3.4.
 
   20 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
   +files/qemu-0.6.0-sigaction.patch, qemu-0.6.0.ebuild:
