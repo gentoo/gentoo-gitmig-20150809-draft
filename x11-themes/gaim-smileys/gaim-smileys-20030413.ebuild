@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20030413.ebuild,v 1.1 2003/04/13 19:15:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20030413.ebuild,v 1.2 2003/04/13 19:42:41 liquidx Exp $
 
 RESTRICT="${RESTRICT} nostrip"
 
 DESCRIPTION="Snapshot of Available Gaim Smiley Themes"
 HOMEPAGE="http://gaim.sourceforge.net/themes.php"
+# use absolute links rather than php-redirects from gaim.sf.net
 SRC_URI="http://www.ics.uci.edu/~swrobel/Jimmac.tar.gz
 	http://www.kingant.net/oscar/gaim/icq.tar.gz
 	http://gaim.sourceforge.net/exhaustive.tar.gz
@@ -34,6 +35,25 @@ src_compile() {
 
 src_install() {
 	cd ${WORKDIR}
+	
+	# get rid of crufty .xvpics
+	for x in `find . -type d -name .xvpics`; do
+		rm -rf ${x}
+	done
+	
+	# get rid of misc files not related to themes
+	# - you should review this if you add more themes
+	rm -f kids/Makefile*
+	rm -f kids/.cvsignore
+	rm -f Jimmac/theme~
+	rm -f Jimmac/.theme.swp
+	rm -f alien/.cvsignore
+	rm -f bugeyes/Makefile*
+	rm -f CrystalAIM/Makefile*
+	rm -f EasterAIM/Makefile*
+	rm -f exhaustive/lt_purple.tar
+
+	# only install the directories
 	dodir /usr/share/pixmaps/gaim/smileys
 	for x in *; do
 		if [ -d ${x} ]; then
