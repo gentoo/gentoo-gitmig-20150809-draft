@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.2.4.ebuild,v 1.7 2004/10/18 15:16:12 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.2.4.ebuild,v 1.8 2004/10/26 22:02:35 malc Exp $
 
 inherit gcc kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kdenlive/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/piave-0.2.4

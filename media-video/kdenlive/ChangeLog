@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.6 2004/10/18 15:16:12 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.7 2004/10/26 22:02:35 malc Exp $
+
+  26 Oct 2004; Malcolm Lashley <malc@gentoo.org> kdenlive-0.2.4.ebuild:
+  ~amd64 - closes bug #59344
 
   18 Oct 2004; Marc Hildebrand <zypher@gentoo.org> kdenlive-0.2.4.ebuild:
   Added gcc-3.4 patch. Thanks to Mathijs Mohlmann for the patch.
