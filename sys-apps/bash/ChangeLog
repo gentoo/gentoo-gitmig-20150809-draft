@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/bash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.9 2002/08/31 23:07:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.10 2002/09/01 19:02:21 seemant Exp $
 
 *bash-2.05b-r2 (1 Sep 2002)
 *bash-2.05a-r3 (1 Sep 2002)
+
+  1 Sep 2002; Seemant Kulleen <seemant@gentoo.org> bash-2.05a-r3 bash-2.05b-r2 :
+
+  ska-fan in #gentoo-dev offered insight into bug #7332 by
+  Jan.Schubert@GMX.li (Jan Schubert).  Note that ska-fan is:
+  twanger@bluetwanger.de
 
   1 Sep 2002; Martin Schlemmer <azarah@gentoo.org> bash-2.05a-r3 bash-2.05b-r2 :
   Update to use internal readline.  This fixes problems where bash stops
