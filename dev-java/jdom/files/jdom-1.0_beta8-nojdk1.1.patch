@@ -1,0 +1,18 @@
+--- build.xml.orig	2002-03-29 01:28:29.000000000 +0800
++++ build.xml	2003-02-15 17:22:02.000000000 +0800
+@@ -47,9 +47,14 @@
+     <filter token="verbose" value="true"/>
+ 
+     <!-- JDK1.1 collections -->
++    <!--
+     <property name="coll.import" value="com.sun.java.util.collections"/>
+     <available classname="${coll.import}.Collection" property="coll.present"/>
+-
++    -->
++    
++    <!-- JDK1.4 collections -->
++    <property name="coll.import" value="java.util"/>
++    <available classname="${coll.import}.Collection" property="coll.present"/>
+   </target>
+ 
+   <!-- =================================================================== -->
