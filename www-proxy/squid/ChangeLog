@@ -1,6 +1,9 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.7 2004/08/27 17:10:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.8 2004/08/28 01:47:42 weeve Exp $
+
+  27 Aug 2004; Jason Wever <weeve@gentoo.org> squid-2.5.6-r2.ebuild:
+  Stable on sparc wrt security bug #61280.
 
   27 Aug 2004; Martin Holzer <mholzer@gentoo.org> squid-2.5.6-r2.ebuild:
   x86 stable
