@@ -1,17 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104.ebuild,v 1.1 2005/01/11 02:44:46 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.104.ebuild,v 1.2 2005/01/12 04:06:39 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils libtool
 
-DESCRIPTION="Software codec for dv-format video (camcorders etc)."
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
+DESCRIPTION="Software codec for dv-format video (camcorders etc)"
 HOMEPAGE="http://libdv.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ia64 ~x86"
 IUSE="debug gtk sdl xv"
 
 RDEPEND="dev-libs/popt
@@ -22,23 +21,25 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {
-	unpack ${A} && cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.99-2.6.patch"
-	epatch "${FILESDIR}/${PN}-0.104-amd64reloc.patch"
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-0.99-2.6.patch
+	epatch "${FILESDIR}"/${PN}-0.104-amd64reloc.patch
+	epunt_cxx #74497
+	uclibctoolize #74497
 }
 
 src_compile() {
-	local myconf
-	myconf="${myconf} `use_with debug`"
-	myconf="${myconf} `use_enable gtk` `use_enable gtk gtktest`"
-	myconf="${myconf} `use_enable sdl`"
-	myconf="${myconf} `use_enable xv`"
-
-	econf ${myconf} || die "econf failed"
+	econf \
+		$(use_with debug) \
+		$(use_enable gtk) $(use_enable gtk gtktest) \
+		$(use_enable sdl) \
+		$(use_enable xv) \
+		|| die "econf failed"
 	make || die "compile problem"
 }
 
-src_install () {
-	einstall
-	dodoc AUTHORS COPYING COPYRIGHT ChangeLog INSTALL NEWS README* TODO
+src_install() {
+	make install DESTDIR="${D}" || die
+	dodoc AUTHORS ChangeLog INSTALL NEWS README* TODO
 }
