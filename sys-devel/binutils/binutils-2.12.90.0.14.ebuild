@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.7.ebuild,v 1.3 2002/07/06 08:24:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.14.ebuild,v 1.1 2002/07/06 08:24:29 azarah Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -22,6 +22,26 @@ DEPEND="virtual/glibc
 [ -z "`use build`" ] && [ -z "`use bootstrap`" ] && \
 	DEPEND="${DEPEND} sys-devel/perl"
 
+
+pkg_setup() {
+
+	eerror
+	eerror "Please do not use this release of binutils, as it"
+	eerror "is very buggy (cannot even compile glibc)!!!"
+	eerror
+	die
+}
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# Some Mandrake/Suse patches to fixup build (fails with glibc among other
+	# thigns).
+	patch -p1 <${FILESDIR}/${P}-glibc21.patch || die
+	patch -p1 <${FILESDIR}/${P}-x86_64-libpic.patch || die
+}
 
 src_compile() {
 	
@@ -81,7 +101,7 @@ src_install() {
 
 	rm ${D}/usr/${CHOST}/bin/strip; mv ${D}/usr/bin/strip ${D}/usr/${CHOST}/bin/strip
 	#the strip symlink gets created in the loop below
-	
+
 	#ar, as, ld, nm, ranlib and strip are in two places; create symlinks.  This will reduce the 
 	#size of the tbz2 significantly.  We also move all the stuff in /usr/bin to /usr/${CHOST}/bin
 	#and create the appropriate symlinks.  Things are cleaner that way.
