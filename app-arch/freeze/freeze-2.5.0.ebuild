@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0.ebuild,v 1.11 2004/10/05 10:59:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0.ebuild,v 1.12 2004/12/18 18:47:56 blubb Exp $
 
 DESCRIPTION="Freeze/unfreeze compression program"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/utils/compress/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/utils/compress/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64 ~sparc ppc64 ~alpha"
+KEYWORDS="x86 ppc amd64 ~sparc ppc64 ~alpha"
 IUSE=""
 
 RDEPEND="virtual/libc"
