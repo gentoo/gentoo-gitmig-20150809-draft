@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.2 2003/03/22 04:07:30 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.3 2003/03/22 04:24:41 absinthe Exp $
 
 
 S=${WORKDIR}/${PN}
@@ -72,25 +72,27 @@ src_install() {
 	doins ${S}/orion
 
 	# CREATE DUMMY LOG & PERSISTENCE DIR
+	insopts -o orion -g orion -m0750
 	touch ${S}/.keep
 	insinto /var/log/${PN}
-	insopts -o orion -g orion
 	doins ${S}/.keep
 	insinto /opt/${PN}/persistence
 	doins ${S}/.keep
 
 	# INSTALL EXTRA FILES
 	local dirs="applications database default-web-app demo lib persistence autoupdate.properties"
-        for i in $dirs ; do
-		cp -a $i ${D}/opt/${PN}/
+	for i in $dirs ; do
+		cp -a ${i} ${D}/opt/${PN}/
+		chown -R orion.orion ${D}/opt/${PN}/${i}
 	done
 	
 	# INSTALL APP CONFIG
 	cd ${S}/config
 	local dirs="application.xml data-sources.xml database-schemas default-web-site.xml global-web-application.xml jms.xml mime.types principals.xml rmi.xml server.xml"
-        for i in $dirs ; do
-		cp -a $i ${D}/opt/${PN}/config
-        done
+	for i in $dirs ; do
+		cp -a ${i} ${D}/opt/${PN}/config
+		chown -R orion.orion ${D}/opt/${PN}/config/${i}
+	done
 	
 	# INSTALL JARS
 	cd ${S}
