@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/neverball
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.10 2004/04/10 17:55:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.11 2004/04/11 00:42:53 wolf31o2 Exp $
+
+*neverball-1.2.1 (10 Apr 2004)
+
+  10 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> neverball-1.2.1.ebuild:
+  Bumping version to 1.2.1 for floam on #icculus.org.
 
 *neverball-1.2.0-r1 (10 Apr 2004)
 
