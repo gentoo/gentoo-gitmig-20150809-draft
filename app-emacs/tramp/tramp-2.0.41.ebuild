@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.0.38.ebuild,v 1.4 2004/04/25 17:17:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.0.41.ebuild,v 1.1 2004/06/13 14:21:07 usata Exp $
 
 inherit elisp
 
@@ -8,13 +8,11 @@ IUSE=""
 
 DESCRIPTION="TRAMP is a package for editing remote files similar to ange-ftp but with rlogin, telnet and/or ssh"
 HOMEPAGE="http://savannah.nongnu.org/projects/tramp/"
-# I cannot find tramp-2.0.38 on master site atm (2004/02/17)
-#SRC_URI="http://savannah.nongnu.org/download/tramp/${P}.tar.gz"
-SRC_URI="mirror://debian/pool/main/t/tramp/${P/-/_}.orig.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/tramp/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="virtual/emacs"
 
