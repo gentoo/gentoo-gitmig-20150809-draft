@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.14 2004/01/23 18:14:06 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.15 2004/01/23 18:15:52 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -519,5 +519,5 @@ pkg_setup() {
 	[ "${ETYPE}" == "headers" ] && setup_headers
 
 	# this is to fix some weird portage bug? in stable versions of portage.
-	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to "
+	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack..."
 }
