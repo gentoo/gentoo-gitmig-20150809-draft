@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.5.0_pre3.ebuild,v 1.1 2001/07/01 14:57:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.5.0_pre3.ebuild,v 1.2 2001/07/04 01:25:59 lordjoe Exp $
 
 #P=
 A=${PN}-0.5.0pre3.tar.bz2
@@ -21,9 +21,9 @@ RDEPEND=">=x11-libs/gtk+-1.2
 src_compile() {
 
     local myconf
-    if [ -z "`use gnome`" ] ; then
-	myconf="--disable-gdk-pixbuf --disable-imlib"
-    fi
+#    if [ -z "`use gnome`" ] ; then
+#	myconf="--disable-gdk-pixbuf --disable-imlib"
+#    fi
     if [ -z "`use nls`" ] ; then
 	myconf="$myconf --disable-nls"
     fi
