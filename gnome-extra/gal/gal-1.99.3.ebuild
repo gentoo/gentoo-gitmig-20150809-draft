@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.3.ebuild,v 1.1 2003/04/21 14:43:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.3.ebuild,v 1.2 2003/04/22 15:24:55 liquidx Exp $
 
 IUSE="doc"
 
-inherit gnome.org libtool
+inherit gnome2 gnome.org libtool
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="The Gnome Application Libraries"
@@ -25,24 +25,11 @@ DEPEND="sys-devel/gettext
         doc? ( dev-util/gtk-doc )
         ${RDEPEND}"
 
-src_compile() {
-	elibtoolize
+MAKEOPTS="-j1"
+USE_DESTDIR="1"
 
-	local myconf=""
-
-    if [ -n "`use doc`" ]; then
-       myconf="${myconf} --enable-gtk-doc"
-    else 
-       myconf="${myconf} --disable-gtk-doc"
-    fi
-
-	econf ${myconf} || die
-	make || die # parallel make doesn't work
-}
-
-src_install() {
-	make DESTDIR=${D} install || die
-
-	dodoc AUTHORS COPYING ChangeLog NEWS README
-}
-
+src_unpack() {
+	     cd ${S}
+	     unpack ${A}
+	     epatch ${FILESDIR}/${P}-docfix.patch
+}	     

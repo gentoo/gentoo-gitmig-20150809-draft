@@ -1,0 +1,11 @@
+--- gal-1.99.3/docs/Makefile.in	2003-04-09 19:37:42.000000000 +0100
++++ gal-1.99.3/docs/Makefile.in.new	2003-04-21 18:52:01.000000000 +0100
+@@ -365,8 +365,6 @@
+ 	  done; \
+ 	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
+ 	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR); \
+-	  echo '-- Fixing Crossreferences' ; \
+-	  gtkdoc-fixxref --module=$(DOC_MODULE) --html-dir=$(HTML_DIR)|| true; \
+ 	fi)
+ 
+ dist-hook:
