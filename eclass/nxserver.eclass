@@ -30,6 +30,7 @@ RDEPEND="$RDEPEND
 		 =net-misc/nxssh-1.2.2"
 
 DEPEND="$DEPEND
+	    >=net-misc/nxproxy-1.2.2
         >=sys-apps/shadow-4.0.3-r6
 		>=net-misc/openssh-3.6.1_p2"
 
@@ -80,6 +81,7 @@ nxserver_pkg_postinst() {
 
 	einfo "Changing permissions for files under /usr/NX"
 	chown nx.root /usr/NX/etc/passwd
+	chown nx.root /usr/NX/etc/users.id_dsa
 	chown -R nx.root /usr/NX/nxhome
 	chown -R nx.root /usr/NX/var/sessions
 
