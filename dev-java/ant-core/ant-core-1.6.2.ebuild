@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2.ebuild,v 1.9 2005/01/26 20:41:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2.ebuild,v 1.10 2005/02/03 21:09:22 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -27,6 +27,10 @@ S="${WORKDIR}/apache-ant-${PV}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# also see #77365 and
+	# http://sourceforge.net/mailarchive/forum.php?thread_id=6173225&forum_id=12628
+	epatch ${FILESDIR}/${PV}-scp.patch
 
 	# Patch build.sh to die with non-zero exit code in case of errors.
 	# This patch may be useful for all ant versions.

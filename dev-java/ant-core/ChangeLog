@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.12 2005/01/29 21:27:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.13 2005/02/03 21:09:22 luckyduck Exp $
+
+  03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +files/1.6.2-scp.patch,
+  ant-core-1.6.2.ebuild:
+  applied an patch to fix scp with openssh-3.9. also see #77365
 
   29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> files/1.6.2-ant:
   updated java-config -p call in 1.6.2-ant to reflect the new rhino slots.
