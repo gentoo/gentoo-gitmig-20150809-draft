@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ogdi/ogdi-3.1.1.ebuild,v 1.6 2004/07/14 15:02:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ogdi/ogdi-3.1.1.ebuild,v 1.7 2004/12/19 03:06:31 nerdboy Exp $
 
 DESCRIPTION="open geographical datastore interface"
 HOMEPAGE="http://ogdi.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/ogdi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~sparc ~hppa ~alpha ~amd64 ~ppc ~ppc64"
 IUSE=""
 
 DEPEND="dev-libs/proj
@@ -35,16 +35,16 @@ src_compile() {
 		--with-expat \
 		--with-expatlib=/usr/lib \
 		--with-expatinc=/usr/include || die "./configure failed"
-	make || die
+	make || die "make failed"
 }
 
 src_install() {
 	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
+		prefix=${D}usr \
+		mandir=${D}usr/share/man \
+		infodir=${D}usr/share/info \
 		TOPDIR="${S}" TARGET="linux" LD_LIBRARY_PATH="${TOPDIR}/bin/${TARGET}" \
-		install || die
+		install || die "make install failed"
 
 	dodoc ChangeLog LICENSE NEWS README VERSION
 }
