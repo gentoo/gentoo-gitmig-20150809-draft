@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/net-server
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.1 2003/06/28 03:50:32 mcummings Exp $
+
+*net-server-0.85 (27 Jun 2003)
+
+  27 Jun 2003; Michael Cummings <mcummings@gentoo.org> net-server-0.85.ebuild:
+  ebuild submitted by Max Kalika <alkern23@yahoo.com> in bug 21432
+
