@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.12 2003/11/12 09:07:16 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.13 2003/11/12 12:13:54 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -65,7 +65,7 @@ src_unpack() {
 	# damage with symlinks. It will also break if multiple users try using 
 	# the same location simultaneously...probably should use File::Temp, but 
 	# moving it into ~/.fvwmtabs.state will do for now.
-	cd ${WORKDIR}; epatch ${FILESDIR}/fvwmtabs-insecure-tmp-handling.diff
+	cd ${WORKDIR}; use perl && epatch ${FILESDIR}/fvwmtabs-insecure-tmp-handling.diff
 
 	# this patch from cvs, regarding a message sent to the fvwm-workers 
 	# mailing list in <20031111234845.A12314@deepblue.milkyway.com.au>, 
