@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vcp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/ChangeLog,v 1.13 2005/02/05 10:22:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vcp/ChangeLog,v 1.14 2005/02/05 10:41:37 hansmi Exp $
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> vcp-2.2.ebuild:
+  Added to ~sparc.
 
   05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> vcp-2.2.ebuild:
   Stable on ppc.
