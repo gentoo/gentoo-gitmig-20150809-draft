@@ -22,7 +22,7 @@
 ##
 
 # <carpaski@gentoo.org> (12 Oct 2002)
-# Masked for testing.
+# Testing/Broken. Included make.conf has a line wrapped.
 =sys-apps/portage-2.0.39
 
 # <hannes@gentoo.org> (12 Oct 2002)
