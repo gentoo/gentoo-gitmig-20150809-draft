@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pmidi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pmidi/ChangeLog,v 1.5 2004/04/20 16:58:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pmidi/ChangeLog,v 1.6 2004/06/15 04:03:29 eradicator Exp $
+
+*pmidi-1.6.0 (14 Jun 2004)
+
+  14 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> +pmidi-1.6.0.ebuild:
+  Version bump to 1.6.0
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> pmidi-1.5.5.ebuild:
   QA fixes.
