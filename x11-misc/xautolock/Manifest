@@ -1,4 +1,14 @@
-MD5 b76264931b3bfe8271f4f2a2cee34d72 xautolock-2.1.ebuild 658
-MD5 15ef923854123953f561f18919052d4f ChangeLog 598
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc6e7c9875d8ea3a28b698da82113cf7 xautolock-2.1.ebuild 666
+MD5 ce88d16cbdd43558c8ab35625e6e04a7 ChangeLog 706
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 2a7ccbf66ad1d0f69e8ada42c8562755 files/digest-xautolock-2.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCHjbKZ/iYVBmujdURApLMAJ0ZQfWGSPMn/hgaHLxXFohfcheWYACghq4z
+wOfwL8w4YoOwGTPJpp1w4Ws=
+=6WIR
+-----END PGP SIGNATURE-----
