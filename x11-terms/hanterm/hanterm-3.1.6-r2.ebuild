@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.14 2004/08/14 14:58:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.15 2004/09/03 09:14:58 lu_zero Exp $
 
 IUSE=""
 
@@ -17,6 +17,13 @@ DEPEND="virtual/libc
 	>=x11-libs/Xaw3d-1.5"
 RDEPEND="${DEPEND}
 	media-fonts/baekmuk-fonts"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e "s:extern char \*malloc();::" \
+		button.c charproc.c
+}
 
 src_compile() {
 

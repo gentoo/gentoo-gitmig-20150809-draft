@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/hanterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.13 2004/08/14 14:58:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.14 2004/09/03 09:14:58 lu_zero Exp $
+
+  03 Sep 2004; Luca Barbato <lu_zero@gentoo.org> hanterm-3.1.6-r2.ebuild:
+  gcc-3.4 fix
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> hanterm-3.1.6-r2.ebuild:
   Trimmed trailing whitespace.
