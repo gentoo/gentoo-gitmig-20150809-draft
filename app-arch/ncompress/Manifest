@@ -1,4 +1,4 @@
-MD5 9be32ecbb829734784c0c68a1d237b16 ChangeLog 1412
-MD5 d336d52d7b941a4c8d6e670847a3b2c9 ncompress-4.2.4.ebuild 883
+MD5 057b500620165f880cb32e2fbd24bd1a ChangeLog 1510
+MD5 7c109250321ff0da809ccd7556ffdd0a ncompress-4.2.4.ebuild 899
 MD5 44e597943ff90e32aacebcd702147801 files/digest-ncompress-4.2.4 66
 MD5 e6539b304d089dd57b63d364379500b7 files/ncompress-gcc34.patch 915

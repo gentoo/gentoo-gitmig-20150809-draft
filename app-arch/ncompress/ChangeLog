@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ncompress
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.11 2004/04/27 03:03:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.12 2004/06/15 05:58:18 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> ncompress-4.2.4.ebuild:
+  skip manfile when USE=build is set
 
   26 Apr 2004; Travis Tilley <lv@gentoo.org> +files/ncompress-gcc34.patch,
   ncompress-4.2.4.ebuild:
