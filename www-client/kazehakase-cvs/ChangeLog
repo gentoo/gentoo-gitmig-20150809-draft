@@ -1,6 +1,10 @@
 # ChangeLog for www-client/kazehakase-cvs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/ChangeLog,v 1.2 2005/03/18 16:34:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/ChangeLog,v 1.3 2005/03/23 16:20:05 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  kazehakase-cvs-20050301.ebuild:
+  change dep from net-www/mozilla to www-client/mozilla
 
 *kazehakase-cvs-20050301 (18 Mar 2005)
 

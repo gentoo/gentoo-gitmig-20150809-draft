@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.18.ebuild,v 1.1 2005/03/18 14:13:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-1.3.18.ebuild,v 1.2 2005/03/23 16:19:58 seemant Exp $
 
 inherit gnome2 debug libtool eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 S=${WORKDIR}/${P}
 
 RDEPEND="virtual/x11
-	>=net-www/mozilla-1.7.5
+	>=www-client/mozilla-1.7.5
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/libxml2-2.6.6

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050301.ebuild,v 1.1 2005/03/18 16:32:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050301.ebuild,v 1.2 2005/03/23 16:20:05 seemant Exp $
 
 inherit cvs
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 LICENSE="GPL-2"
 
-DEPEND=">=net-www/mozilla-1.7
+DEPEND=">=www-client/mozilla-1.7
 	x11-libs/pango
 	>=x11-libs/gtk+-2
 	dev-util/pkgconfig
@@ -35,10 +35,10 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${ECVS_MODULE}"
 
 pkg_setup(){
-	local moz_use="$(</var/db/pkg/`best_version net-www/mozilla`/USE)"
+	local moz_use="$(</var/db/pkg/`best_version www-client/mozilla`/USE)"
 
-	# >=net-www/mozilla-1.7.3-r2 always depend on gtk2.
-	if ! has_version '>=net-www/mozilla-1.7.3-r2' && ! has gtk2 ${moz_use}
+	# >=www-client/mozilla-1.7.3-r2 always depend on gtk2.
+	if ! has_version '>=www-client/mozilla-1.7.3-r2' && ! has gtk2 ${moz_use}
 	then
 		echo
 		eerror

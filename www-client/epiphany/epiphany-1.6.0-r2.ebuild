@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.6.0-r2.ebuild,v 1.3 2005/03/23 15:10:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.6.0-r2.ebuild,v 1.4 2005/03/23 16:19:45 seemant Exp $
 
 inherit eutils gnome2
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=gnome-base/libbonoboui-2.2
 	>=gnome-base/orbit-2
 	>=gnome-base/gnome-vfs-2.3.1
-	>=net-www/mozilla-1.7.3
+	>=www-client/mozilla-1.7.3
 	>=x11-themes/gnome-icon-theme-2.9.3
 	>=x11-libs/startup-notification-0.5"
 # dbus? ( >=sys-apps/dbus-0.22 )
