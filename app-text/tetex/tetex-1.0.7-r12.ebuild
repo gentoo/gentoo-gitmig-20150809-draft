@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.1 2003/01/18 19:44:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.2 2003/01/19 01:53:18 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -110,7 +110,8 @@ src_compile() {
 		--with-etex \
 		${myconf} || die "econf failed"
 
-	emake
+	# emake seems to not work (18 Jan 2003 agriffis)
+	make
 }
 
 src_install() {
@@ -172,6 +173,12 @@ pkg_postinst() {
 		texconfig init &>/dev/null
 		texconfig confall &>/dev/null
 		texconfig font vardir /var/cache/fonts &>/dev/null
+
+		# Fix bug 13789; this should really be done by texconfig init
+		# but oh well, it will probably be fixed by 2.0, right? ;-)
+		# (18 Jan 2003 agriffis)
+		( cd /var/lib/texmf/web2c; inimf mf; ) &>/dev/null
+
 		einfo "Generating format files..."
 		fmtutil --missing &>/dev/null # This should generate all missing fmt files.
 		

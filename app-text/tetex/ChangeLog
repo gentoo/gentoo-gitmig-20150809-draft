@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.24 2003/01/18 17:06:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.25 2003/01/19 01:53:18 agriffis Exp $
+
+  18 Jan 2003; Aron Griffis <agriffis@gentoo.org> tetex-1.0.7-r12.ebuild :
+  Fix bug 13789 again, this time by taking Felix's suggestion.  Thought I had
+  it fixed the first time, this time I'm even more thinkful.
 
   18 Jan 2003; Aron Griffis <agriffis@gentoo.org> tetex-1.0.7-r12.ebuild :
   Fix bug 13789 by pulling in a couple hints from the RH rpm, specifically the
