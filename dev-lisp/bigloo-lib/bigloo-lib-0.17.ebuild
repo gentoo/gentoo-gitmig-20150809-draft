@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.3 2002/07/11 06:30:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.4 2002/07/30 06:59:57 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Bigloo support libraries"
@@ -11,8 +11,8 @@ DEPEND=">=dev-lisp/bigloo-2.4
 	gd? ( >=media-libs/libgd-1.8.3 )
 	X? ( virtual/x11 )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	gtk2? ( x11-libs/gtk+-2* )
-	ldap? ( >=net-nds/openldaap/2.0.18 )
+	gtk2? ( =x11-libs/gtk+-2* )
+	ldap? ( >=net-nds/openldap-2.0.18 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gettext? ( >=sys-devel/gettext-0.11.1 )
 	"
