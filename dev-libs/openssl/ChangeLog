@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.20 2003/01/05 14:19:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.21 2003/01/07 09:17:39 aliz Exp $
+
+  07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7.ebuild :
+  Added warning message and some info on how to successfully emerge new version.
 
 *openssl-0.9.7 (05 Jan 2003)
 
