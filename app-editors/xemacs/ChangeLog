@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.46 2004/08/10 22:05:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.47 2004/08/20 16:55:58 pvdabeel Exp $
+
+
+  20 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xemacs-21.4.15-r1.ebuild:
+  ppc keyworded.
 
   11 Aug 2004; Luca Barbato <lu_zero@gentoo.org> xemacs-21.4.15.ebuild:
   Removed an unnecessary patch
@@ -11,6 +15,10 @@
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> xemacs-21.4.12.ebuild,
   xemacs-21.4.15.ebuild:
   Fix use invocation
+
+*xemacs-21.4.15-r1 (20 Aug 2004)
+  I accidentally committed a local file based on an older revision. This screwed up the keywords.
+  I corrected the mistake by creating a new revision.
 
 *xemacs-21.4.15 (21 May 2004)
 
