@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.22 2004/06/24 23:24:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.23 2004/07/14 20:31:06 agriffis Exp $
 
 inherit gnuconfig
 
 IUSE="X"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A Type 1 Font Rasterizer Library for UNIX/X11"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/libs/graphics"
@@ -19,7 +18,7 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 src_unpack() {
 	unpack ${A}
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 
 	cd ${S}/doc
 	mv Makefile.in Makefile.in-orig
