@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/binclock
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/ChangeLog,v 1.5 2004/08/24 04:43:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/ChangeLog,v 1.6 2004/09/12 20:19:39 kloeri Exp $
+
+  12 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> binclock-1.5.ebuild:
+  Add ~alpha keyword, bug 63728.
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> -binclock-1.4.ebuild,
   binclock-1.5.ebuild:

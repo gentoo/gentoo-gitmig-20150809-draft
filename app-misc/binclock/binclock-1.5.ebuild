@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/binclock-1.5.ebuild,v 1.3 2004/08/24 04:43:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/binclock-1.5.ebuild,v 1.4 2004/09/12 20:19:39 kloeri Exp $
 
 DESCRIPTION="Displays a binary clock in your terminal"
 HOMEPAGE="http://www.ngolde.de/binclock/"
 SRC_URI="http://www.ngolde.de/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ppc64"
+KEYWORDS="x86 ~ppc ppc64 ~alpha"
 IUSE=""
 
 RDEPEND=""
