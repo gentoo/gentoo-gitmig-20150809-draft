@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.4 2004/10/22 10:22:36 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.5 2004/10/31 20:07:24 karltk Exp $
+
+*swt-3.0-r1 (31 Oct 2004)
+
+  31 Oct 2004; Karl Trygve Kalleberg <karltk@gentoo.org> swt-3.0-r1.ebuild:
+  Now install *.so in /usr/lib. Can be built without mozilla in USE. 
+  Works with 1.5. 
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> swt-3.0.ebuild:
   Keywords ~amd64.
