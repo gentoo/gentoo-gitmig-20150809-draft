@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/ChangeLog,v 1.1 2004/06/03 00:55:46 karltk Exp $
+
+*sablevm-1.1.5 (03 Jun 2004)
+
+  03 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org> sablevm-1.1.5.ebuild:
+  Initial import.  Ebuild submitted by myself.
