@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.6.ebuild,v 1.2 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.6.ebuild,v 1.3 2003/09/12 20:50:04 liquidx Exp $
 
 inherit gnome2 libtool
 
@@ -24,7 +24,6 @@ RDEPEND="virtual/x11
 	>=gnome-base/ORBit2-2.0
 	>=gnome-base/libbonobo-2.0
 	>=gnome-base/libbonoboui-2.1.1
-	>=gnome-base/bonobo-activation-2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/gnome-vfs-2.0
 	>=gnome-base/libglade-2.0"
