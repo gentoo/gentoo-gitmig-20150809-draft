@@ -1,0 +1,10 @@
+# ChangeLog for app-office/plan
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.1 2003/10/17 12:33:02 brandy Exp $
+
+*plan-1.8.6 (18 Oct 2003)
+
+  18 Oct 2003; Brandy Westcott brandy@gentoo.org plan-1.8.6.ebuild:
+  Initial import. Thanks to Priit Laes <amd@tt.ee> and Mr Bones
+  <mr_bones_@gentoo.org> for providing the ebuilds in Bug #11217.
+
