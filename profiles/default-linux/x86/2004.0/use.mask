@@ -1,7 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.0/use.mask,v 1.2 2004/06/26 23:29:25 solar Exp $
-
-# This file serves as a mask file for USE flags.  This way flags that may be
-# invalid on a specific architecture or profile and not on this one will
-# be listed in here.
