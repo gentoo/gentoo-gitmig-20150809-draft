@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gri/gri-2.12.1.ebuild,v 1.2 2002/12/18 14:41:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gri/gri-2.12.1.ebuild,v 1.3 2003/01/08 06:08:51 george Exp $
+
+IUSE=""
 
 DESCRIPTION="Gri is a language for scientific graphics programming."
 HOMEPAGE="http://gri.sourceforge.net/"
@@ -18,6 +20,10 @@ src_compile() {
 }
 
 src_install() {
+	# Replace PREFIX now and correct paths in the startup message.
+	mv ${S}/startup.msg ${S}/startup.msg.orig
+	sed -e s,PREFIX/share/doc/gri/,/usr/share/doc/${P}/, ${S}/startup.msg.orig > ${S}/startup.msg
+
 	einstall
 
 	dodoc AUTHOR README
