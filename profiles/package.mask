@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3580 2005/02/09 02:33:03 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3581 2005/02/09 03:05:34 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -27,7 +27,7 @@
 # compat.
 =dev-util/monodevelop-0.5.1-r3 
 =dev-dotnet/xsp-1.0.5-r1
-=media-sound/muine-0.6.3-r1
+=media-sound/muine-0.6.3-r2
 
 # Matthew Kennedy <mkennedy@gentoo.org> (8 Feb 2005)
 # To many incorrect type assertions made to make the port viable for now.
