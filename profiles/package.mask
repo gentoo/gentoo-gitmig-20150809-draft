@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3301 2004/11/05 23:32:19 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3302 2004/11/06 17:08:33 danarmak Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,25 @@
 ##
 ##   End example
 ##
+
+# <danarmak@gentoo.org> (06 Nov 2004)
+# Masked incoming 'split' kde ebuilds pending more extensive testing
+# These are on track to replace the monolithic kde-base ebuilds
+# Cf. kde-metaebuilds.berlios.de
+kde-base/dcopc
+kde-base/dcopjava
+kde-base/dcopperl
+kde-base/dcoppython
+kde-base/kalyptus
+kde-base/kdebindings-meta
+kde-base/kdejava
+kde-base/kjsembed
+kde-base/korundum
+kde-base/qtjava
+kde-base/qtruby
+kde-base/qtsharp
+kde-base/smoke
+kde-base/xparts
 
 # <chriswhite@gentoo.org> (05 Nov 2004)
 # Masked until all arches have re-marked per 
