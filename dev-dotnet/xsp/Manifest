@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5ddcfa55d4303a42f8809232e368f13 ChangeLog 1320
+MD5 988605da778b5f9a6c8933ec3bde3e2d xsp-1.0.ebuild 1048
+MD5 12a4371f4a88ee7b75fa0670707c1d28 xsp-0.13.ebuild 875
+MD5 f86161875a36e12c70eff3ce22c50fb0 xsp-0.15.ebuild 1048
+MD5 c43c707d794e9d0f0ba30ffef04604f4 xsp-0.14.ebuild 1049
+MD5 7a872f6c6a5ccd650ac9ff7663793b51 ChangeLog 1506
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
-MD5 5c4cea9a44d82fa89854e3e838856821 xsp-0.13.ebuild 858
-MD5 72186e868a96a5d1dbacfb17c662a278 xsp-0.14.ebuild 1032
-MD5 a6c1dcb50ca63615b5f299d3d5469fba xsp-0.15.ebuild 1032
-MD5 f8c92bb5211e9de348d08777e84f9dbc xsp-0.16.ebuild 1029
-MD5 71e64f08b720c80a7a0d4afafb6afa70 xsp-1.0.ebuild 1031
+MD5 daf5c6ed3e34f5ab6ebc08cf88adbd41 xsp-0.16.ebuild 1046
 MD5 b9ad1f9879e49c0e9dd64197c018cd0e files/digest-xsp-0.13 60
-MD5 5788140ef902e673f760b875b5f4c1c0 files/xsp.confd 301
-MD5 4c6ea487a7fa33ca219f4d49803f1e25 files/xsp.initd 669
 MD5 cbf98ddcd59fcc55cbc21fe6fb9bb56e files/digest-xsp-0.14 60
 MD5 26af51781fab59682eb75d854280b4a9 files/digest-xsp-0.15 60
 MD5 f18d63d88f5bee4df47c3f7e9f0285c5 files/digest-xsp-0.16 60
+MD5 5788140ef902e673f760b875b5f4c1c0 files/xsp.confd 301
+MD5 4c6ea487a7fa33ca219f4d49803f1e25 files/xsp.initd 669
 MD5 f546d127c2bbcd153f5668d0f114de3d files/digest-xsp-1.0 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+ebTmdTrptrqvGERAkXTAJ90PvQy0ZcY2G4oLgpznP+rgwGt/gCgkxLA
-jxXf8nyesynOdXbvnI26Gjg=
-=Kj55
------END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.10 2004/06/30 15:55:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.11 2004/08/03 02:21:41 latexer Exp $
+
+  02 Aug 2004; Peter Johanson <latexer@gentoo.org> xsp-0.13.ebuild,
+  xsp-0.14.ebuild, xsp-0.15.ebuild, xsp-0.16.ebuild, xsp-1.0.ebuild:
+  Fix for new group/user stuff. See bug #58526.
 
   30 Jun 2004; Peter Johanson <latexer@gentoo.org> xsp-1.0.ebuild:
   Smal dep fix.

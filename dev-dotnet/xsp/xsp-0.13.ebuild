@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-0.13.ebuild,v 1.4 2004/06/29 18:06:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-0.13.ebuild,v 1.5 2004/08/03 02:21:41 latexer Exp $
 
 inherit mono eutils
 
@@ -15,12 +15,14 @@ IUSE=""
 
 DEPEND=">=dev-dotnet/mono-0.91"
 
-src_install() {
+pkg_preinst() {
 	enewgroup aspnet
 
 	# Give aspnet home dir of /tmp since it must create ~/.wapi
 	enewuser aspnet -1 /bin/false /tmp aspnet
+}
 
+src_install() {
 	einstall DESTDIR=${D} || die
 	exeinto /etc/init.d ; newexe ${FILESDIR}/xsp.initd xsp
 	insinto /etc/conf.d ; newins ${FILESDIR}/xsp.confd xsp
