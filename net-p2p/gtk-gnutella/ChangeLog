@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.19 2004/01/22 16:41:21 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.20 2004/02/11 20:46:38 mholzer Exp $
+
+  11 Feb 2004; Martin Holzer <mholzer@gentoo.org> gtk-gnutella-0.91.1.ebuild,
+  gtk-gnutella-0.92.ebuild, gtk-gnutella-0.93-r1.ebuild,
+  gtk-gnutella-0.93.ebuild:
+  adding RESTRICT=nomirror
 
   22 Jan 2004; Brandon Low <lostlogic@gentoo.org> gtk-gnutella-0.93-r1.ebuild:
   Depends on Yacc
