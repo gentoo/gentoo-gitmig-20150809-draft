@@ -3,6 +3,8 @@
 
 (add-to-list 'load-path "@SITELISP@")
 
+(setq w3m-command "/usr/bin/w3mmee")
+
 (autoload 'w3m "w3m" "Interface for w3m on Emacs." t)
 (autoload 'w3m-browse-url "w3m" "Interface for w3m on Emacs." t)
 (autoload 'w3m-find-file "w3m" "w3m interface function for local file." t)
