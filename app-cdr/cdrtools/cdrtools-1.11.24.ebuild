@@ -16,6 +16,8 @@ SLOT="0"
 SRC_URI="ftp://ftp.fokus.gmd.de:21/pub/unix/cdrecord/alpha/${PN}-1.11a24.tar.bz2"
 S=${WORKDIR}/${PN}-1.11
 
+KEYWORDS="x86 ppc"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}/DEFAULTS

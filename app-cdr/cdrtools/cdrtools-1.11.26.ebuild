@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.26.ebuild,v 1.1 2002/07/10 19:14:02 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.26.ebuild,v 1.2 2002/07/16 01:45:29 owen Exp $
 
 S=${WORKDIR}/${PN}-1.11
 DESCRIPTION="cdrtools - A set of tools for CDR drives, including cdrecord"
@@ -13,7 +13,7 @@ RDEPEND="${DEPEND}"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}
