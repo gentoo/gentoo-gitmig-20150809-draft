@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9.ebuild,v 1.3 2003/02/13 11:47:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9.ebuild,v 1.4 2003/08/20 04:31:49 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="the best variant of the Yacc parser generator"
 HOMEPAGE="http://dickey.his.com/byacc/byacc.html"
@@ -11,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 
 src_compile() {
-	patch -p0 < ${FILESDIR}/mkstemp.patch
+	epatch ${FILESDIR}/mkstemp.patch
 	make PROGRAM=byacc CFLAGS="${CFLAGS}" || die
 }
 
