@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.5.0.ebuild,v 1.1 2003/02/04 05:52:20 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.5.0.ebuild,v 1.2 2003/02/11 04:00:41 latexer Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ DESCRIPTION="Console based AIM client that looks like ircII"
 HOMEPAGE="http://dev.ojnk.net/"
 LICENSE="GPLv2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha"
 SLOT="0"
 DEPEND="perl? ( sys-devel/perl )
 	sys-libs/ncurses"
