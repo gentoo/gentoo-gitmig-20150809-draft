@@ -1,4 +1,5 @@
 #!/bin/bash
+source /etc/profile
 source /etc/rc.d/config/functions
 export DESTTREE=/usr
 export INSDESTTREE=""
