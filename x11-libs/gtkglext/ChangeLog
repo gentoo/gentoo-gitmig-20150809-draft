@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.11 2003/02/12 09:23:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.12 2003/03/21 15:03:44 foser Exp $
+
+*gtkglext-0.7.1 (21 Mar 2003)
+
+  21 Mar 2003; foser <foser@gentoo.org> gtkglext-0.7.1.ebuild :
+  New version
+  Added some extra logic to get around possible build problems with nvidia headers
 
 *gtkglext-0.7.0 (31 Jan 2003)
 
