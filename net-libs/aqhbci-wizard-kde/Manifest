@@ -1,4 +1,14 @@
-MD5 42486a264416c0d2b21a8f94b8486ca3 ChangeLog 502
-MD5 22370b6059310fb1358c86d6f0b5c2a3 aqhbci-wizard-kde-0.9.13_beta.ebuild 757
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 761009e84133f57f49de1066e6be9f5f ChangeLog 626
+MD5 da68c10a9e18721464ce18aeaffc1939 aqhbci-wizard-kde-0.9.13_beta.ebuild 767
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 6d67c913213803fc8950f9ac7fa23cd2 files/digest-aqhbci-wizard-kde-0.9.13_beta 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2D1KFdQwWVoAgN4RAlwEAKDYGPJw6a5Jm1FrKzGiOhvPpXfdzgCfbGxB
+kgbqAN497kbdxaA4MeoJ7MA=
+=Z747
+-----END PGP SIGNATURE-----

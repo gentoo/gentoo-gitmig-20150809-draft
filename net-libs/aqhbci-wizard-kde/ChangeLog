@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/aqhbci-wizard-kde
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-wizard-kde/ChangeLog,v 1.2 2004/12/30 23:41:20 weeve Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-wizard-kde/ChangeLog,v 1.3 2005/01/02 18:32:12 chriswhite Exp $
+
+  03 Jan 2005; Chris White <chriswhite@gentoo.org>
+  aqhbci-wizard-kde-0.9.13_beta.ebuild:
+  ~ppc towards bug #73702.
 
   30 Dec 2004; Jason Wever <weeve@gentoo.org>
   aqhbci-wizard-kde-0.9.13_beta.ebuild:
