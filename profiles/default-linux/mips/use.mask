@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.26 2005/03/18 01:40:48 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.27 2005/04/02 03:40:49 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# masked until an alsa driver finally works on mips
+alsa
 
 # Armando Di Cianno <fafhrd@gentoo.org>
 # gnustep is currently unbuildable on mips - masking this to repair windowmaker
