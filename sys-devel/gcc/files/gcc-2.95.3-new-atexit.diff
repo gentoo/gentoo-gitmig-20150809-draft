@@ -109,19 +109,6 @@ diff -NPru gcc-2.95.3-orig/gcc/config/i386/linux.h gcc-2.95.3/gcc/config/i386/li
 +    }                                  \
 +  while (0)
 +#endif
-diff -NPru gcc-2.95.3-orig/gcc/config.in gcc-2.95.3/gcc/config.in
---- gcc-2.95.3-orig/gcc/config.in	Fri Mar 16 08:13:48 2001
-+++ gcc-2.95.3/gcc/config.in	Fri Aug 10 13:49:47 2001
-@@ -34,6 +34,9 @@
-    emitting at the beginning of your section */
- #undef HAVE_GAS_SUBSECTION_ORDERING
- 
-+/* Define if your assember supports .hidden */
-+#undef HAVE_GAS_HIDDEN
-+
- /* Define if your assembler uses the old HImode fild and fist notation.  */
- #undef HAVE_GAS_FILDS_FISTS
- 
 diff -uNr gcc-2.95.3.orig/gcc/configure gcc-2.95.3/gcc/configure
 --- gcc-2.95.3.orig/gcc/configure       Sat Mar 17 01:13:48 2001
 +++ gcc-2.95.3/gcc/configure    Sat Aug 18 07:18:42 2001
@@ -162,31 +149,6 @@ diff -uNr gcc-2.95.3.orig/gcc/configure gcc-2.95.3/gcc/configure
  gcc_cv_as_instructions=
  if test x$gcc_cv_as != x; then
         set "filds fists" "filds mem; fists mem"
-diff -NPru gcc-2.95.3-orig/gcc/configure.in gcc-2.95.3/gcc/configure.in
---- gcc-2.95.3-orig/gcc/configure.in	Thu Jan 25 08:03:02 2001
-+++ gcc-2.95.3/gcc/configure.in	Fri Aug 10 13:48:30 2001
-@@ -4066,6 +4066,21 @@
- fi
- AC_MSG_RESULT($gcc_cv_as_subsections)
- 
-+AC_MSG_CHECKING(assembler hidden support)
-+gcc_cv_as_hidden=
-+if test x$gcc_cv_as != x; then
-+	# Check if we have .hidden
-+	echo "  .hidden foobar" > conftest.s
-+	echo "foobar:" >> conftest.s
-+	if $gcc_cv_as -o conftest.o conftest.s > /dev/null 2>&1; then
-+		AC_DEFINE(HAVE_GAS_HIDDEN, 1,
-+			[Define if your assembler supports .hidden.])
-+		gcc_cv_as_hidden="yes"
-+	fi
-+	rm -f conftest.s conftest.o conftest.nm1 conftest.nm2
-+fi
-+AC_MSG_RESULT($gcc_cv_as_hidden)
-+
- AC_MSG_CHECKING(assembler instructions)
- gcc_cv_as_instructions=
- if test x$gcc_cv_as != x; then
 diff -NPru gcc-2.95.3-orig/gcc/crtstuff.c gcc-2.95.3/gcc/crtstuff.c
 --- gcc-2.95.3-orig/gcc/crtstuff.c	Mon Mar 22 18:43:51 1999
 +++ gcc-2.95.3/gcc/crtstuff.c	Fri Aug 10 13:45:26 2001
