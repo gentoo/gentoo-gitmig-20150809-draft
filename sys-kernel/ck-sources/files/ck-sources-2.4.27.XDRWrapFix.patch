@@ -1,0 +1,48 @@
+# This is a BitKeeper generated diff -Nru style patch.
+#
+# ChangeSet
+#   2004/08/16 14:50:04-03:00 neilb@cse.unsw.edu.au 
+#   [PATCH] Fixed possibly xdr parsing error if write size exceed 2^31
+#   
+#   xdr_argsize_check needs to cope with the possibility that the
+#   pointer has wrapped and could be below buf->base.
+#   
+#   Signed-off-by: Neil Brown <neilb@cse.unsw.edu.au>
+#   
+#   ### Diffstat output
+#    ./fs/nfsd/nfs3xdr.c         |    2 +-
+#    ./include/linux/nfsd/xdr3.h |    2 +-
+#    2 files changed, 2 insertions(+), 2 deletions(-)
+# 
+# fs/nfsd/nfs3xdr.c
+#   2004/08/14 00:23:06-03:00 neilb@cse.unsw.edu.au +1 -1
+#   Fixed possibly xdr parsing error if write size exceed 2^31
+# 
+# include/linux/nfsd/xdr3.h
+#   2004/08/15 20:48:43-03:00 neilb@cse.unsw.edu.au +1 -1
+#   Fixed possibly xdr parsing error if write size exceed 2^31
+# 
+diff -Nru a/fs/nfsd/nfs3xdr.c b/fs/nfsd/nfs3xdr.c
+--- a/fs/nfsd/nfs3xdr.c	2004-09-06 11:20:28 -07:00
++++ b/fs/nfsd/nfs3xdr.c	2004-09-06 11:20:28 -07:00
+@@ -273,7 +273,7 @@
+ {
+ 	struct svc_buf	*buf = &rqstp->rq_argbuf;
+ 
+-	return p - buf->base <= buf->buflen;
++	return p >= buf->base && p <= buf->base + buf->buflen ;
+ }
+ 
+ static inline int
+diff -Nru a/include/linux/nfsd/xdr3.h b/include/linux/nfsd/xdr3.h
+--- a/include/linux/nfsd/xdr3.h	2004-09-06 11:20:28 -07:00
++++ b/include/linux/nfsd/xdr3.h	2004-09-06 11:20:28 -07:00
+@@ -41,7 +41,7 @@
+ 	__u32			count;
+ 	int			stable;
+ 	__u8 *			data;
+-	int			len;
++	__u32			len;
+ };
+ 
+ struct nfsd3_createargs {

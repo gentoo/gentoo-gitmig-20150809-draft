@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.62 2004/10/29 20:57:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.63 2004/11/06 22:13:08 plasmaroo Exp $
+
+*ck-sources-2.4.27-r1 (06 Nov 2004)
+
+  06 Nov 2004; <plasmaroo@gentoo.org> +ck-sources-2.4.27-r1.ebuild,
+  -ck-sources-2.4.27.ebuild, +files/ck-sources-2.4.27.XDRWrapFix.patch:
+  Fix for the kNFSd security vulnerability, bug #62524 and the CAN-2004-0814
+  vulnerability, bug #68421.
 
   29 Oct 2004; Sven Wegener <swegener@gentoo.org> :
   Removed stray digest.
