@@ -3,12 +3,14 @@ Hash: SHA1
 
 MD5 3aea5d7d0dcc404fe99e0b14eb3d8666 gnbd-kernel-2.6.9.ebuild 974
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 fa5b88b6af27aea914d9e1fdbc83f517 ChangeLog 469
+MD5 5aa3dbf8dbeafec8edec5b6f7f261493 ChangeLog 626
+MD5 e9465d83dfa0ec488a4949fb870a7276 gnbd-kernel-2.6.9-r1.ebuild 1139
 MD5 8af1444584213d2dd6f2476d86f53aac files/digest-gnbd-kernel-2.6.9 70
+MD5 8af1444584213d2dd6f2476d86f53aac files/digest-gnbd-kernel-2.6.9-r1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCLzaPgMUyd/cdjWsRAh1WAJ9mvPmIOnWrZ759sEeUDGGiVmeaqgCeOPhF
-KM4JZ1lBz4qQis8wbcN1Bus=
-=B5uJ
+iD8DBQFCPFVcgMUyd/cdjWsRAj/eAJ43mAWtalssZSKmEQEtL826n4pbdwCgh553
+fxhQvTxDPlvtpRRCajB/sZw=
+=IK95
 -----END PGP SIGNATURE-----
