@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ccf7ca0b52148a26cc63b3b935bdef22 ChangeLog 1121
+MD5 7f9a616054d7a98c3406b7193f1dc392 ChangeLog 1250
 MD5 6318a5ff88b254b5c6a94b7663ac87fa globespan-adsl-0.8-r1.ebuild 1224
 MD5 575ffa3ca2fb255dec061bd288635889 globespan-adsl-0.9.ebuild 1468
 MD5 70ce62627e1d0046ec3ca4082ad0ef16 metadata.xml 383
+MD5 8b6bd00277a9c680c5505776780e9948 globespan-adsl-0.10.ebuild 1668
 MD5 607f1328e222264b4c8de4661311c2f1 files/digest-globespan-adsl-0.8-r1 73
 MD5 11a028d498831e42bca49a9fa83af136 files/digest-globespan-adsl-0.9 72
+MD5 96cd6f208139a099dc9bd3bbd97ff00d files/digest-globespan-adsl-0.10 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBm5/zjtv59x0+BrURAkPiAKDJ0DntTnMUTQZ5m9h4F/+ML0xDMACgxzQ8
-2Kpc7Cw2iOXPbkXSA6Nwzv8=
-=hFzA
+iD8DBQFBm6kXjtv59x0+BrURAtdxAJ9zVlpOTqfQRBfnbf4GoMM4RTeT8ACdHURm
+cVOj71bdM3oKKrE+M91Rmko=
+=RoSg
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/globespan-adsl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.8 2004/11/17 19:00:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.9 2004/11/17 19:39:52 mrness Exp $
+
+*globespan-adsl-0.10 (17 Nov 2004)
+
+  17 Nov 2004; Alin Nastac <mrness@gentoo.org> +globespan-adsl-0.10.ebuild:
+  Bump version.
 
   17 Nov 2004; Alin Nastac <mrness@gentoo.org> globespan-adsl-0.9.ebuild:
   Marked stable on x86.
