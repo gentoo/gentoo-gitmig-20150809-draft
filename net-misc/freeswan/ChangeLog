@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/freeswan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.23 2004/07/01 21:00:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.24 2004/07/08 22:48:45 pfeifer Exp $
+
+  08 Jul 2004; Jay Pfeifer <pfeifer@gentoo.org> freeswan-1.99-r1.ebuild,
+  freeswan2.04-r1.ebuild:
+  Remove freeswan ebuilds from the tree.
+  All users should use a supported package such as strongswan or openswan.
 
 *freeswan-2.04-r1 (01 Jul 2004)
 
