@@ -320,32 +320,6 @@ media-libs/nurbs++
 # fixed mouse scrolling in ppc xfree.  Masked for testing (daybird, 10 may)
 =x11-base/xfree-4.2.0-r10
 
-# kde-base 'child' packages, in testing. 10 May, danarmak
-=kde-base/kdetoys-3.0-r1
-app-misc/amor
-app-misc/kmoon
-app-misc/eyesapplet
-app-misc/fifteenapplet
-app-misc/kaphorism
-app-misc/kmoon
-app-misc/kodo
-app-misc/kteatime
-app-misc/ktux
-app-misc/kweather
-app-misc/kworldwatch
-app-misc/kfortune
-app-misc/kscore
-=kde-base/kdeadmin-3.0-r1
-app-arch/kdat
-app-arch/kpackage
-app-admin/kcmlinuz
-app-admin/kcron
-app-admin/ksysv
-app-admin/kuser
-app-admin/kwuftpd
-app-admin/lilo-config
-app-admin/secpolicy
-
 # this patch works for me on x86 and ppc but breaks other ppl :( (kain, 08 May 2002)
 =sys-devel/gdb-5.1.1-r1
 
