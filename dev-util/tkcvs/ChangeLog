@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/tkcvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.13 2004/08/30 23:38:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.14 2004/11/25 11:12:04 dragonheart Exp $
+
+*tkcvs-7.2.2 (25 Nov 2004)
+
+  25 Nov 2004; Daniel Black <dragonheart@gentoo.org> tkcvs-7.2.1.ebuild,
+  +tkcvs-7.2.2.ebuild:
+  version bump as per bug #72180. Thanks for the bug report Laurent Duperval
+  <lduperval@yahoo.com>
 
   31 Aug 2004; David Holm <dholm@gentoo.org> tkcvs-7.2.1.ebuild:
   Added to ~ppc.

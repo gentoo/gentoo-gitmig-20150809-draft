@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.2.1.ebuild,v 1.3 2004/11/25 11:12:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.2.2.ebuild,v 1.1 2004/11/25 11:12:04 dragonheart Exp $
 
 MY_P=${PN}_${PV//./_}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 sparc ~ppc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 IUSE=""
 
 RDEPEND=">=dev-lang/tk-8.4
@@ -18,7 +18,7 @@ RDEPEND=">=dev-lang/tk-8.4
 	sys-apps/diffutils"
 
 src_compile() {
-	echo "It's tcl, you don't need to compile.  ;)"
+	einfo "It's tcl, you don't need to compile.  ;)"
 }
 
 src_install() {
@@ -35,11 +35,8 @@ src_install() {
 	doins tkdiff/tkdiff.xbm
 
 	# Add docs...this is important
-	dodoc CHANGELOG FAQ README.tkcvs README.windows
+	dodoc CHANGELOG FAQ
 
 	docinto tkdiff
 	dodoc tkdiff/COPYING
-
-	docinto tkcvs
-	dodoc tkcvs/vendor.readme
 }
