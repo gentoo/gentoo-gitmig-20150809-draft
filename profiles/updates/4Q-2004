@@ -163,3 +163,4 @@ move app-sci/ng-spice-rework sci-electronics/ng-spice-rework
 move app-sci/oregano sci-electronics/oregano
 move app-sci/pcb sci-electronics/pcb
 move app-sci/petrify sci-electronics/petrify
+move app-sci/spice sci-electronics/spice
