@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25_pre20040302.ebuild,v 1.4 2004/03/07 15:50:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25_pre20040302.ebuild,v 1.5 2004/03/07 15:51:49 dholm Exp $
 
 inherit flag-o-matic
 
@@ -22,6 +22,7 @@ DEPEND="X? ( virtual/x11 gtk? x11-libs/gtk+ ) :
 	games-emulation/caps"
 
 src_compile() {
+	# -O3 breaks compilation, GCC will eat all your RAM + Swap and die
 	replace-flags "-O3" "-O2"
 	use sdl && myconf="--with-sdl-sound --with-sdl-gfx"
 
