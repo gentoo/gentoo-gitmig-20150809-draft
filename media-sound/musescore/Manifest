@@ -1,5 +1,15 @@
-MD5 fc11da3a51040f94c2af203566d826c1 musescore-0.0.6.ebuild 799
-MD5 87f57c7c877963b2b284401477288147 ChangeLog 696
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2aad4c6027510c644d7309d2be60ae35 ChangeLog 801
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 56eb9287f3dd49624e640674d5c2ead2 files/musescore-0.0.6-assert.patch 1572
+MD5 df9cec12e99cd378dd978e8126209f5d musescore-0.0.6.ebuild 810
 MD5 727e72b54693e0734a6d0a66159140ea files/digest-musescore-0.0.6 65
+MD5 56eb9287f3dd49624e640674d5c2ead2 files/musescore-0.0.6-assert.patch 1572
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBowrOArHZZzCEUG0RAlYrAJ4+BfmB/0JPC/xFK6QbTN4fjDIb6ACgiFa6
+swYJSkbtu7hAmSAk2iimxk4=
+=HZTT
+-----END PGP SIGNATURE-----
