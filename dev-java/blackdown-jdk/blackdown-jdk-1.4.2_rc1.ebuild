@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.3 2003/12/24 02:22:08 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.4 2003/12/24 02:39:47 brad_mssw Exp $
 
 IUSE="doc"
 
@@ -15,8 +15,8 @@ S="${WORKDIR}/j2sdk${JV}"
 DESCRIPTION="Blackdown Java Development Kit ${PV}"
 J_URI="ftp://ftp.tux.org/pub/java/JDK-${JV}"
 SRC_URI="amd64? ( ${J_URI}/amd64/${JREV}/j2sdk-${JV}-${JREV}-linux-amd64.bin )
-	 x86? ( ${J_URI}/i386/${JREV}/j2sdk-${JV}-${JREV}-linux-i586-gcc3.2.bin )
-	 sparc? ( ${J_URI}/sparc/${JREV}/j2sdk-${JV}-${JREV}-linux-sparc.bin )"
+	x86? ( ${J_URI}/i386/${JREV}/j2sdk-${JV}-${JREV}-linux-i586-gcc3.2.bin )"
+#	sparc? ( ${J_URI}/sparc/${JREV}/j2sdk-${JV}-${JREV}-linux-sparc.bin )"
 
 
 if [ "${ARCH}" = "amd64" ]
