@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.103.0.ebuild,v 1.1 2004/04/11 14:45:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.130.0.ebuild,v 1.1 2004/05/07 17:54:42 usata Exp $
 
 IUSE=""
 
 DESCRIPTION="Kita - 2ch client for KDE"
 HOMEPAGE="http://kita.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/kita/8826/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/kita/9393/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	>=x11-libs/qt-3.1
 	>=kde-base/kdebase-3.1
 	>=kde-base/kdelibs-3.1
 	>=kde-base/arts-1.1.4
-	>=sys-devel/gcc-3.2
 	>=dev-libs/libpcre-4.2
 	>=dev-libs/expat-1.95.6
 	>=sys-libs/zlib-1.1.4
@@ -28,6 +27,8 @@ DEPEND="virtual/glibc
 	>=media-libs/fontconfig-2.2.1
 	>=media-libs/libart_lgpl-2.3.16
 	sys-devel/gettext"
+DEPEND="${RDEPEND}
+	>=sys-devel/gcc-3.2"
 # Never depend on a meta package
 #	>=kde-base/kde-3.1
 # see http://dev.gentoo.org/~liquidx/ebuildmistakes.html

@@ -1,6 +1,12 @@
 # ChangeLog for net-www/kita
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/ChangeLog,v 1.20 2004/04/29 18:57:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/ChangeLog,v 1.21 2004/05/07 17:54:42 usata Exp $
+
+*kita-0.130.0 (08 May 2004)
+
+  08 May 2004; Mamoru KOMACHI <usata@gentoo.org> kita-0.103.0.ebuild,
+  kita-0.110.0.ebuild, kita-0.120.0.ebuild, kita-0.130.0.ebuild:
+  Version bumped. <=net-www/kita-0.120.0 fail to build with gcc-3.4
 
 *kita-0.120.0 (30 Apr 2004)
 
