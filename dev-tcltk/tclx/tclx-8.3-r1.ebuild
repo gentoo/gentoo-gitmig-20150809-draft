@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.3 2003/09/06 23:48:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.4 2003/11/16 17:34:17 brad_mssw Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.slackware.com/pub/slackware/slackware-8.1/source/tcl/tclx/${P
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha amd64"
 
 DEPEND=">=dev-lang/tcl-8.4.2
 	X? >=dev-lang/tk-8.4.2"
@@ -22,6 +22,7 @@ DEPEND=">=dev-lang/tcl-8.4.2
 S=${WORKDIR}/${PN}${PV}
 
 [ $ARCH = alpha ] && append-flags -fPIC
+[ "${ARCH}" = "amd64" ] && append-flags -fPIC
 
 src_unpack() {
 	ewarn ""
