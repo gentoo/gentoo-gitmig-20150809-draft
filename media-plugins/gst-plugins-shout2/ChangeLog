@@ -1,0 +1,9 @@
+# ChangeLog for media-plugins/gst-plugins-libpng
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-shout2/ChangeLog,v 1.1 2004/10/21 23:12:51 foser Exp $
+
+*gst-plugins-shout2-0.8.5 (22 Oct 2004)
+
+  22 Oct 2004; foser <foser@gentoo.org> gst-plugins-shout2-0.8.6.ebuild, metadata.xml, ChangeLog :
+  Initial commit of the shout2 ebuild for gstreamer, requested in #59373
+  gstreamer primary herd, gnome second
