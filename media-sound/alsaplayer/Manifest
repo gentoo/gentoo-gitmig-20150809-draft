@@ -1,4 +1,6 @@
 MD5 6aa47a95c905310a0e8f16feffff3b85 alsaplayer-0.99.75-r1.ebuild 2097
 MD5 4f5c1e1f8f06134d3ae65725ccf431c1 ChangeLog 3406
+MD5 d681551fbb08a24cb111bee75ffbfc25 alsaplayer-0.99.76.ebuild 1478
 MD5 d7c5048a47693b7a9ba603a3fadd8cd1 files/digest-alsaplayer-0.99.75-r1 71
+MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76 71
 MD5 5c35a3140250067b9e24fea110bde6c4 files/gcc.patch 805
