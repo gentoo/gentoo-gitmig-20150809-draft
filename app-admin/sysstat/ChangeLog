@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.17 2004/04/03 00:33:52 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.18 2004/05/18 19:41:24 tuxus Exp $
+
+  18 May 2004; <tuxus@gentoo.org> sysstat-5.0.2.ebuild:
+  Added mips to keywords
 
   03 Apr 2004; Lars Weiler <pylon@gentoo.org> sysstat-5.0.2.ebuild:
   stable on ppc as required in bug #45159
