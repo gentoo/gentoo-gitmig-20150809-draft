@@ -1,7 +1,8 @@
 /*
  * Copyright 1999-2003 Gentoo Technologies, Inc.
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/cc-config/files/wrapper.c,v 1.1 2003/01/13 15:18:10 azarah Exp $
+ * Author: Martin Schlemmer <azarah@gentoo.org>
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/cc-config/files/wrapper.c,v 1.2 2003/01/13 23:20:22 azarah Exp $
  */
 
 #define _REENTRANT
@@ -48,14 +49,12 @@ int main(int argc, char **argv) {
 		tmpstr = (char *)malloc(strlen(token) + strlen(wrappername) + 2);
 		snprintf(tmpstr, strlen(token) + strlen(wrappername) + 2,
 			"%s/%s", token, wrappername);
-		
+
 		/* Does it exist and is a file? */
 		ret = stat(tmpstr, &sbuf);
-		/* It exists, and are not our wrapper ... */
-		if ((0 == ret) && (sbuf.st_mode & S_IFREG)) {
-
-			if (0 == strcmp(tmpstr, wrapfullname))
-				continue;
+		/* It exists, and are not our wrapper, and its not in /usr/bin ... */
+		if ((0 == ret) && (sbuf.st_mode & S_IFREG) && 
+		    (0 != strcmp(tmpstr, wrapfullname)) && (0 == strstr(tmpstr, "/usr/bin"))) {
 
 			strncpy(wrapperbin, tmpstr, MAXPATHLEN);
 				
@@ -80,10 +79,10 @@ int main(int argc, char **argv) {
 
 		/* It is our wrapper, so get the CC path, and execute the real binary in
 		 * there ... */
-		inpipe = popen("/usr/sbin/gcc-config --get-bin-path", "r");
+		inpipe = popen("/usr/bin/cc-config --get-bin-path", "r");
 		if (NULL == inpipe) {
 			
-			fprintf(stderr, "Could not run /usr/sbin/gcc-config!\n");
+			fprintf(stderr, "Could not run /usr/bin/cc-config!\n");
 			exit(1);
 		}
 

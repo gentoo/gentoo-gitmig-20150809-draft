@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/cc-config/files/cc-config-1.2.8,v 1.1 2003/01/13 15:18:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/cc-config/files/cc-config-1.2.8,v 1.2 2003/01/13 23:20:22 azarah Exp $
 
 
 source /etc/init.d/functions.sh || {
@@ -144,14 +144,29 @@ switch_profile() {
 
 	# Setup /etc/env.d/05gcc
 	${AWK} '!/^STDCXX_INCDIR=|^LDPATH=/ {print $0}' \
-		/etc/env.d/gcc/${CC_COMP} >> /etc/env.d/05gcc
+		/etc/env.d/gcc/${CC_COMP} > /etc/env.d/05gcc
 
 	# Add our custom LDPATH
 	echo "LDPATH=\"${MY_LDPATH}\"" >> /etc/env.d/05gcc
+
+	# Make sure we do not recreate /lib/cpp and /usr/bin/cc ...
+#	echo "DISABLE_GEN_GCC_WRAPPERS=\"yes\"" >> /etc/env.d/05gcc
 	
 	echo "CURRENT=${CC_COMP}" > /etc/env.d/gcc/config
 
 	source /etc/profile
+
+	# These might not be installed, and we want to update the mtime
+	# for ccache and distcc anyhow ...
+	${RM} -f /lib/cpp
+	${CP} -f /usr/lib/gcc-config/wrapper /lib/cpp
+	for x in gcc cpp cc c++ g++ ${CHOST}-gcc ${CHOST}-c++ ${CHOST}-g++
+	do
+		${RM} -f /usr/bin/${x}
+		${CP} -f /usr/lib/gcc-config/wrapper /usr/bin/${x}
+		${TOUCH} -m /usr/bin/${x}
+	done
+
 
 	${ENV_UPDATE} &> /dev/null
 
