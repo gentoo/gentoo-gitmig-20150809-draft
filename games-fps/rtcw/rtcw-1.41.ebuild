@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41.ebuild,v 1.14 2004/05/11 12:53:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41.ebuild,v 1.15 2004/06/03 19:56:04 agriffis Exp $
 
 inherit games
 
@@ -39,7 +39,7 @@ src_install() {
 
 	exeinto ${dir}
 	doexe bin/Linux/x86/*.x86 openurl.sh
-	if [ "`use dedicated`" ];
+	if use dedicated;
 	then
 		doexe ${FILESDIR}/wolf-ded
 		dosed "s:GENTOO_DIR:${dir}:" ${dir}/wolf-ded
@@ -50,7 +50,7 @@ src_install() {
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolf
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/wolfsp
 
-	if [ "`use dedicated`" ];
+	if use dedicated;
 	then
 		doexe ${FILESDIR}/wolf-ded
 		dosed "s:GENTOO_DIR:${dir}:" ${dir}/wolf-ded
@@ -78,7 +78,7 @@ pkg_postinst() {
 	einfo "To play the game run:"
 	einfo " wolfsp (single-player)"
 	einfo " wolfmp (multi-player)"
-	if [ "`use dedicated`" ];
+	if use dedicated;
 	then
 		echo
 		einfo "To start a dedicated server run:"

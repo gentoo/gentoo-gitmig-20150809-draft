@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.3.6.ebuild,v 1.3 2004/02/10 10:35:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.3.6.ebuild,v 1.4 2004/06/03 19:57:09 agriffis Exp $
 
 inherit games
 
@@ -33,7 +33,7 @@ src_install() {
 	cp -R * ${D}/${dir}/ || die "cp failed"
 	dogamesbin ${FILESDIR}/legends         || die "dogamesbin failed (1)"
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/legends
-	if [ `use dedicated` ] ; then
+	if use dedicated ; then
 		dogamesbin ${FILESDIR}/legends-ded || die "dogamesbin failed (2)"
 		dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/legends-ded
 	fi

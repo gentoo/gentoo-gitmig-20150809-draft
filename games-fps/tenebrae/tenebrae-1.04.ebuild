@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.3 2004/05/27 03:12:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.4 2004/06/03 19:59:09 agriffis Exp $
 
 #ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
 #ECVS_MODULE="tenebrae_0"
@@ -33,7 +33,7 @@ src_unpack() {
 	[ "${gl}" == "nvidia" ] && epatch ${FILESDIR}/${PV}-nvidia-opengl.patch
 	cd linux
 	sed "s:-mpentiumpro:${CFLAGS}:" Makefile.i386linux > Makefile
-	#if [ `use sdl` ] ; then
+	#if use sdl ; then
 	#	cd ../sdl
 	#	./autogen.sh
 	#fi
@@ -42,7 +42,7 @@ src_unpack() {
 src_compile() {
 	cd ${S}/tenebrae_0/linux
 	make MASTER_DIR=${GAMES_DATADIR}/quake-data build_release || die
-	#if [ `use sdl` ] ; then
+	#if use sdl ; then
 	#	cd ${S}/tenebrae_0/sdl
 	#	egamesconf || die
 	#	make || die
