@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0.ebuild,v 1.3 2000/12/13 15:13:59 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0-r1.ebuild,v 1.1 2000/12/23 00:29:31 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Pipe and socket fittings for the system and kernel logs"
@@ -30,7 +30,6 @@ src_install() {
 		exeinto /etc/svc.d/services/${x}
 		newexe ${FILESDIR}/${x}-run run
 		ln -s ../services/${x} ${D}/etc/svc.d/control/${x}
-		touch ${D}/etc/svc.d/services/${x}/down
 		install -d -m0750 -o daemon -g wheel ${D}/var/log/${x}.d
 	done
 }
