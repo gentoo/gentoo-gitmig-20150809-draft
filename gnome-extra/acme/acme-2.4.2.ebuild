@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-2.0.6.ebuild,v 1.4 2003/09/23 15:51:24 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-2.4.2.ebuild,v 1.1 2003/11/23 13:48:41 foser Exp $
 
 inherit gnome2
 
-IUSE=""
-
-DESCRIPTION="GNOME tool to make use of the multimedia buttons present on most laptops and internet keyboards."
+DESCRIPTION="GNOME tool to make use of the multimedia buttons on laptops and internet keyboards"
 HOMEPAGE="http://www.hadess.net/misc-code.php3"
+
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 ppc ~alpha ~sparc ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 
 RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
