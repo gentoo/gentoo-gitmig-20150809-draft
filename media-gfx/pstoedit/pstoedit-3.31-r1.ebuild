@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.31-r1.ebuild,v 1.4 2002/07/23 05:18:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.31-r1.ebuild,v 1.5 2002/10/03 21:24:45 owen Exp $
 
 # nonstandard archive name and source dir
 MY_P=${P//[-.]/_}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pstoedit.net/pstoedit"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="media-libs/libpng
 	sys-libs/zlib"
