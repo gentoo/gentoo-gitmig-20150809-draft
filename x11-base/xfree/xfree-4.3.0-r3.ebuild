@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.73 2003/10/19 21:57:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.74 2003/10/19 22:30:40 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -1152,6 +1152,11 @@ pkg_postinst() {
 	einfo "documentation in /usr/share/doc/xfree, as well as"
 	einfo "http://tuxmobil.org/touchpad_driver.html and"
 	einfo "http://w1.894.telia.com/~u89404340/touchpad/."
+	einfo
+	# Hack for patch 9132.
+	ewarn "If you compile this against a 2.4 kernel and later switch"
+	ewarn "to a 2.6 kernel, you must recompile xfree or OpenGL"
+	ewarn "applications will segfault."
 	einfo
 	ewarn "Listening on tcp is disabled by default with startx."
 	ewarn "To enable it, edit /usr/X11R6/bin/startx."
