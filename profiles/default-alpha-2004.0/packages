@@ -64,8 +64,8 @@
 *sys-apps/net-tools
 *sys-apps/pam-login
 *>=sys-apps/portage-2.0.36
-*sys-apps/procps
-*sys-apps/psmisc
+*sys-process/procps
+*sys-process/psmisc
 *sys-apps/sed
 *sys-apps/setserial
 *<sys-apps/shadow-5

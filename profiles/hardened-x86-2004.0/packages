@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-2004.0/packages,v 1.9 2005/01/04 06:52:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-2004.0/packages,v 1.10 2005/03/03 16:53:31 ciaranm Exp $
 
 # base system stuff
 >dev-lang/gpc-2.1
@@ -52,8 +52,8 @@ virtual/os-headers
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/net-tools
-*sys-apps/procps
-*sys-apps/psmisc
+*sys-process/procps
+*sys-process/psmisc
 *sys-apps/sed
 *sys-apps/setserial
 *<sys-apps/shadow-5

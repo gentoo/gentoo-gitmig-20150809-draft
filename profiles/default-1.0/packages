@@ -82,8 +82,8 @@ dev-lang/perl
 *sys-apps/man-pages
 *virtual/modutils
 *sys-apps/net-tools
-*sys-apps/procps
-*sys-apps/psmisc
+*sys-process/procps
+*sys-process/psmisc
 *sys-apps/raidtools
 *sys-fs/reiserfsprogs
 *sys-apps/sed

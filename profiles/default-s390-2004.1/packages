@@ -80,8 +80,8 @@
 *sys-apps/man-pages
 *sys-apps/modutils
 *sys-apps/net-tools
-*sys-apps/procps
-*sys-apps/psmisc
+*sys-process/procps
+*sys-process/psmisc
 *sys-apps/sed
 *sys-apps/setserial
 *<sys-apps/shadow-5

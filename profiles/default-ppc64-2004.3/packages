@@ -62,8 +62,8 @@
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/pam-login
-*sys-apps/procps
-*sys-apps/psmisc
+*sys-process/procps
+*sys-process/psmisc
 sys-apps/raidtools
 sys-fs/reiserfsprogs
 *sys-apps/sed

@@ -118,8 +118,8 @@ net-misc/rsync
 *sys-apps/modutils
 *sys-apps/net-tools
 *sys-apps/xinetd
-*sys-apps/procps
-*sys-apps/psmisc
+*sys-process/procps
+*sys-process/psmisc
 *sys-apps/raidtools
 *sys-fs/reiserfsprogs
 *sys-apps/sed

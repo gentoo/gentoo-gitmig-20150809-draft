@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.15 2005/02/01 00:29:24 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.16 2005/03/03 16:53:31 ciaranm Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -25,8 +25,8 @@
 *>=net-misc/openssh-3.7.1_p2
 *>=sys-apps/coreutils-5.0.91
 *>=sys-apps/findutils-4.1.20-r1
-*>=sys-apps/procps-3.1.15
-*>=sys-apps/psmisc-21.2-r4
+*>=sys-process/procps-3.1.15
+*>=sys-process/psmisc-21.2-r4
 *>=sys-apps/pam-login-3.14
 *>=sys-apps/shadow-4.0.3-r7
 *>=sys-apps/util-linux-2.12

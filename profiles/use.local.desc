@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.984 2005/03/03 13:47:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.985 2005/03/03 16:53:30 ciaranm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -688,7 +688,7 @@ sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 an
 sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/partimage:nologin - Do not include login support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
-sys-apps/procps:n32 - Enable n32 ABI support on mips
+sys-process/procps:n32 - Enable n32 ABI support on mips
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
