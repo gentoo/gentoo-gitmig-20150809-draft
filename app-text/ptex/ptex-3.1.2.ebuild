@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.2 2003/07/29 16:31:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.3 2003/08/13 13:14:25 usata Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -28,7 +28,7 @@ SRC_URI="${SRC_PATH_PTEX}/tetex/${PTEX_SRC}
 		mirror://gentoo/dvipsk-vflib-1.2alpha.patch.tar.gz )"
 HOMEPAGE="http://www.ascii.co.jp/pb/ptex/"
 
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 ~alpha ~ppc ~sparc"
 SLOT="0"
 LICENSE="GPL-2 BSD"
 
