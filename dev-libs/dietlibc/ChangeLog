@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.9 2003/03/28 10:09:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.10 2003/03/28 22:59:21 gmsoft Exp $
 
 *dietlibc-0.22 (28 Mar 2003)
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> dietlibc-0.22.ebuild :
+  Added ~hppa to KEYWORDS.
 
   28 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> dietlibc-0.22.ebuild :
   Security update.
@@ -10,6 +13,7 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *dietlibc-0.21 (29 Oct 2002)
+
 
   29 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump. Ebuild contributed by fridtjof@fbunet.de, ppc patch by 
