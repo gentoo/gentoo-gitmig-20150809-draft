@@ -3,16 +3,16 @@ Hash: SHA1
 
 MD5 5b71aae363a9f5072dd8ce7d74f88638 ChangeLog 3513
 MD5 78eb6c6b267f0157a058188c7b4808cb libselinux-1.12.ebuild 771
-MD5 bab0f9370831ad1ad1b0eed6c53a102a libselinux-1.14.ebuild 1224
+MD5 0c719ee8292d223fd02d6ca7b5b75a0d libselinux-1.14.ebuild 1230
 MD5 652c5e8a0a081bf4317359f04f65a603 metadata.xml 537
-MD5 0c4d2281945721f2b04ad957bdc8259f libselinux-1.16.ebuild 1227
+MD5 dd8a5885283f9b7800e8d19908707a14 libselinux-1.16.ebuild 1234
 MD5 5e3d36a9bfcfa3ec8ecd6842df08d850 files/digest-libselinux-1.12 63
 MD5 5944a7b41de5d5d3313c0ce771e081ef files/digest-libselinux-1.14 63
 MD5 df040452d72f2635e048a0c69d739e02 files/digest-libselinux-1.16 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBRROaGFJQsIJWJy4RAg3QAJ0exVrsL0YrofG5f9sZCpg3sVj8EACdEVu+
-mWCOtZSipxvrqYoA9LLUEB0=
-=7MGj
+iD8DBQFBTjsxGFJQsIJWJy4RAq2pAJ9arDU41cTwqFI5OSp4Td29PSlEpwCfdYRv
+zh8bpK9RLDQhXqMS1/gQzKY=
+=2hRn
 -----END PGP SIGNATURE-----
