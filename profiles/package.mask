@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# kde 3.0.1 - not available for fetching yet, but we lucky packagers have it
+>=x11-libs/qt-3.0.4.1
+
 # fixed mouse scrolling in ppc xfree.  Masked for testing (daybird, 10 may)
 =x11-base/xfree-4.2.0-r10
 
