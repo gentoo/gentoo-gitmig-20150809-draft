@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.8 2004/06/24 21:56:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.9 2004/07/08 16:34:33 eldad Exp $
+
+  08 Jul 2004; Eldad Zack <eldad@gentoo.org> arpwatch-2.1.11-r1.ebuild:
+  Added missing IUSE
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> arpwatch-2.1.11-r1.ebuild:
   Added ~sparc keyword.

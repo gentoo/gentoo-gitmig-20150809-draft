@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.8 2004/06/24 21:56:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.11-r1.ebuild,v 1.9 2004/07/08 16:34:33 eldad Exp $
 
 MY_P=arpwatch-2.1a11
 S=${WORKDIR}/$MY_P
@@ -10,6 +10,7 @@ HOMEPAGE="http://www-nrg.ee.lbl.gov/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~ppc amd64 ~sparc"
+IUSE=""
 
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses"
