@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 275bb36daf17fc0b2de0db0b89a3be59 libcdio-0.69.ebuild 803
 MD5 9db9dca79d0867f61570cdeb7c8d7862 libcdio-0.64.ebuild 600
-MD5 03daaf7c91d7d59d7389b8594e69cb22 libcdio-0.70.ebuild 1052
-MD5 fe83fc64fba9abd0e7676afa6f1de05d ChangeLog 3179
+MD5 f0b4db01cb39ebc8837e829e2adde387 libcdio-0.70.ebuild 1050
+MD5 b1321018d33fedcd3688064afc1c121a ChangeLog 3267
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 0165911115603b51b34b8ae19ab71e2a files/digest-libcdio-0.64 65
 MD5 8276d2edab3e451a5639073967339ebb files/digest-libcdio-0.69 65
 MD5 29744769327f1087e4de0f7c5d8e9fbb files/digest-libcdio-0.70 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCTJYW06ebR+OMO78RAtefAKCT2kKoMHJ349FVlKEgK+ycWGjIgACglPZR
-PVoIQGt+9Jj2xQWO77/uENI=
-=0msF
------END PGP SIGNATURE-----

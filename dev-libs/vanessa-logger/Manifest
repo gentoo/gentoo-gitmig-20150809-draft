@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2b7a6601f9139a697d882beca1e3988 ChangeLog 2424
-MD5 4bd2949290f0bf4ee43e8d079b69dcd5 vanessa-logger-0.0.4_beta2.ebuild 780
-MD5 4821c19c6bb72e3366ef45d4b9c7a806 metadata.xml 352
 MD5 1fa92f7aaf0e83b27a207c6bffef4c14 vanessa-logger-0.0.7.ebuild 858
-MD5 bf82d63da3d092ae4335bc124d7f56eb vanessa-logger-0.0.6.ebuild 855
-MD5 e682981535e2ca12e8b8b407986f1f97 files/digest-vanessa-logger-0.0.7 72
+MD5 4bd2949290f0bf4ee43e8d079b69dcd5 vanessa-logger-0.0.4_beta2.ebuild 780
+MD5 b217b9a477553211cbaa227fa8c7557f ChangeLog 2523
+MD5 94e80dccaee5de27944c153e3acc4cd0 vanessa-logger-0.0.6.ebuild 856
+MD5 4821c19c6bb72e3366ef45d4b9c7a806 metadata.xml 352
 MD5 f65a14286eb1226e0ea40b4741e34f0e files/digest-vanessa-logger-0.0.6 72
+MD5 e682981535e2ca12e8b8b407986f1f97 files/digest-vanessa-logger-0.0.7 72
 MD5 af56181885cd6a9d0afb1243414c2ca3 files/digest-vanessa-logger-0.0.4_beta2 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRrKrugEuf3OQ0akRArpzAJ0f0f2m2SdpF7fJ/Uiya3FnZFO8gACdGOrw
-fjjcIUQMnettHcvqsCw0OrM=
-=FOBk
------END PGP SIGNATURE-----

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 aef400e4f4a3f386a996b33f6155c197 yaz-2.0.8.ebuild 1117
-MD5 e369c3fb4dab52b2d4e7c2761a0754cd yaz-2.0.19.ebuild 1129
-MD5 6d409e40e93f3ca8573e7af78708f1ce ChangeLog 1830
+MD5 c9b7e52ffa05d9cfe041c18456925912 yaz-2.0.19.ebuild 1129
+MD5 1efd704a225d211d60ee16198bbcb0e4 ChangeLog 1918
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 a6c294f2f2fccd0b6e44ddd17ee069e7 files/yaz-2.0.19-notcpd-fix.diff 512
 MD5 9cabcd5a2b9e4c9f0c8d8ccb5277cb41 files/digest-yaz-2.0.19 63
 MD5 2c601b2958127cb7cfb70ec3fb718177 files/digest-yaz-2.0.8 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD4DBQFCGVC0M+I1L6GK/u4RAqIyAJ4+TDY5WxubJs6lfI+4ravvqcOiqwCXS0Fy
-tPuvNFMY3pOA0jm23X3bIQ==
-=6qd/
------END PGP SIGNATURE-----
