@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.5.0.ebuild,v 1.1 2003/03/20 22:05:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.5.0.ebuild,v 1.2 2003/09/20 05:50:21 seemant Exp $
 
 inherit elisp
 
 IUSE=""
 
-DESCRIPTION="Install color themes (includes many themes and allows you to share you won with the world)"
+DESCRIPTION="Install color themes (includes many themes and allows you to share you own with the world)"
 HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki.pl?ColorTheme"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
