@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/dclock
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/ChangeLog,v 1.1 2004/05/06 13:17:25 g2boojum Exp $
+
+*dclock-2.1.2_p5 (06 May 2004)
+
+  06 May 2004; Grant Goodyear <g2boojum@gentoo.org> +dclock-2.1.2_p5.ebuild:
+  New package
+
