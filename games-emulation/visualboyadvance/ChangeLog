@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.8 2004/03/24 06:42:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.9 2004/03/24 06:44:33 mr_bones_ Exp $
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  visualboyadvance-1.7.1.ebuild:
+  don't rdepend on sed
 
   23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   visualboyadvance-1.6a.ebuild:

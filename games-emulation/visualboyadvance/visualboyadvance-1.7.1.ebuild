@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.1.ebuild,v 1.2 2004/03/02 10:27:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.1.ebuild,v 1.3 2004/03/24 06:44:33 mr_bones_ Exp $
 
 inherit games
 
@@ -13,11 +13,12 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="mmx debug"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	mmx? ( dev-lang/nasm )
 	media-libs/libpng
 	sys-libs/zlib
-	media-libs/libsdl
+	media-libs/libsdl"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 S=${WORKDIR}/VisualBoyAdvance-${PV}
@@ -32,14 +33,14 @@ src_compile() {
 		sed -i \
 			-e 's:prof/libprof.a::' \
 			src/Makefile \
-			|| die "sed src/Makefile failed"
+				|| die "sed src/Makefile failed"
 	fi
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
-	dogamesbin ${FILESDIR}/visualboyadvance
+	make DESTDIR="${D}" install || die "make install failed"
+	dogamesbin ${FILESDIR}/visualboyadvance || die "dogamesbin failed"
 	insinto ${GAMES_DATADIR}/VisualBoyAdvance
 	doins src/VisualBoyAdvance.cfg
 	dodoc AUTHORS ChangeLog INSTALL NEWS README README-win.txt
