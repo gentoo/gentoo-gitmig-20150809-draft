@@ -1,13 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.7 2002/05/18 17:25:12 agenkin Exp
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.6.ebuild,v 1.3 2002/07/27 15:16:16 stubear Exp $
 
 DESCRIPTION="P.E.Op.S Software GPU plugin"
 HOMEPAGE="http://peops.sourceforge.net"
 LICENSE="GPL-2"
+KEYWORDS="x86"
+SLOT="0" 
 DEPEND="x11-libs/gtk+
 		dev-lang/nasm
 		sdl? ( media-libs/libsdl )"
+RDEPEND="${DEPEND}"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/peops/PeopsSoftGpu106.tar.gz"
 S=${WORKDIR}
 
