@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.22 2004/11/07 17:30:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.23 2004/11/08 22:13:04 mrness Exp $
+
+*isdn4k-utils-20041024-r1 (09 Nov 2004)
+
+  09 Nov 2004; Alin Nastac <mrness@gentoo.org> +isdn4k-utils-20041024-r1.ebuild:
+  Allow install to create device nodes.
 
 *isdn4k-utils-20041024 (07 Nov 2004)
 
