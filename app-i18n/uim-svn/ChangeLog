@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.10 2004/08/10 08:19:40 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.11 2004/11/04 14:28:31 hattya Exp $
+
+  04 Nov 2004; Akinori Hattori <hattya@gentoo.org>
+  files/uim-svn-qtkde-helper.diff, uim-svn-20040709.ebuild:
+  add dict and fep use flags. and some updates.
 
   10 Aug 2004; Akinori Hattori <hattya@gentoo.org> uim-svn-20040709.ebuild:
   fixed access violation of qtkde-helper.

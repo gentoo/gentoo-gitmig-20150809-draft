@@ -1,35 +1,36 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.3 2004/08/10 08:19:40 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.4 2004/11/04 14:28:31 hattya Exp $
 
 inherit subversion flag-o-matic
 
-IUSE="X debug gtk nls m17n-lib kde"
+IUSE="X canna dict debug fep gtk kde m17n-lib nls"
 
 ESVN_REPO_URI="http://freedesktop.org:8080/svn/uim/trunk"
-ESVN_BOOTSTRAP="autogen.sh"
+ESVN_BOOTSTRAP="./autogen.sh -V"
 ESVN_PATCHES="*.diff"
 
 DESCRIPTION="a simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
 SRC_URI=""
 
-LICENSE="GPL-2 | BSD"
+LICENSE="||(GPL-2 BSD)"
 KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 DEPEND="${RDEPEND}
 	dev-perl/XML-Parser
 	nls? ( sys-devel/gettext )"
-RDEPEND="X? ( virtual/x11 )
+RDEPEND="!app-i18n/uim
+	X? ( virtual/x11 )
+	canna? ( app-i18n/canna )
 	gtk? ( >=x11-libs/gtk+-2 )
 	kde? (
 		=x11-libs/qt-3*
-		=kde-base/kdebase-3.2*
-		=kde-base/kdelibs-3.2*
+		=kde-base/kdebase-3*
+		=kde-base/kdelibs-3*
 	)
-	m17n-lib? ( dev-libs/m17n-lib )
-	!app-i18n/uim"
+	m17n-lib? ( dev-libs/m17n-lib )"
 
 src_compile() {
 
@@ -37,8 +38,11 @@ src_compile() {
 	use debug && append-flags -g
 
 	econf \
+		`use_enable fep` \
+		`use_enable dict` \
 		`use_enable nls` \
 		`use_with X x` \
+		`use_with canna` \
 		`use_with gtk gtk2` \
 		`use_with m17n-lib m17nlib` \
 		|| die
@@ -74,6 +78,11 @@ src_install() {
 	fi
 
 	dodoc [A-Z][A-Z]* ChangeLog* doc/[A-Z0-9][A-Z0-9]*
+
+	if use fep; then
+		docinto fep
+		dodoc fep/[A-Z][A-Z]*
+	fi
 
 }
 
