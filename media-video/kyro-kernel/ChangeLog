@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kyro-kernel
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-kernel/ChangeLog,v 1.7 2004/03/22 00:15:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-kernel/ChangeLog,v 1.8 2004/03/22 00:19:24 spyderous Exp $
+
+  21 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  kyro-kernel-2.00.20.0427.ebuild:
+  Pull old version.
 
 *kyro-kernel-2.01.21.7 (21 Mar 2004)
 
