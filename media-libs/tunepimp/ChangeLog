@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.6 2004/09/03 03:53:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.7 2004/09/09 16:32:40 caleb Exp $
+
+  09 Sep 2004; Caleb Tennis <caleb@gentoo.org> tunepimp-0.3.0.ebuild:
+  x86 stable
 
   02 Sep 2004; Tom Gall <tgall@gentoo.org> tunepimp-0.3.0.ebuild:
   added ~ppc64, bug #62683
