@@ -1,6 +1,11 @@
 # ChangeLog for www-client/kazehakase-cvs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/ChangeLog,v 1.5 2005/03/25 17:56:06 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/ChangeLog,v 1.6 2005/03/27 18:48:11 nakano Exp $
+
+  27 Mar 2005; Masatomo Nakano <nakano@gentoo.org>
+  -files/kazehakase-cvs-gentoo.patch, kazehakase-cvs-20050325.ebuild:
+  Removed gentoo patch because it has been included on the upstream.
+  Added einfo for kazehakase-cvs.
 
   25 Mar 2005; Masatomo Nakano <nakano@gentoo.org>
   kazehakase-cvs-20050325.ebuild:

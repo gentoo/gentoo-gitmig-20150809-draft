@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050325.ebuild,v 1.2 2005/03/25 17:56:06 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050325.ebuild,v 1.3 2005/03/27 18:48:11 nakano Exp $
 
 inherit cvs eutils
 
@@ -51,7 +51,7 @@ pkg_setup(){
 src_unpack(){
 	cvs_src_unpack || die
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-gentoo.patch
+	# epatch ${FILESDIR}/${PN}-gentoo.patch
 
 	mv configure.in configure.in.org
 	sed -e "s/\(AC_INIT(kazehakase\|GETTEXT_PACKAGE=kazehakase\)/\1-cvs/" \
@@ -94,4 +94,18 @@ pkg_postinst(){
 		ewarn "   4. Print the page to a file."
 		ewarn
 	fi
+
+	einfo ""
+	einfo "Many files/directories have been installed with -cvs postfix since kazehakase-cvs-20050325 "
+	einfo "so that you can install kazehakase/kazehakase-cvs in the same box."
+	einfo ""
+	einfo "Renamed files/directories which you should know."
+	einfo " /usr/bin/kazehakase-cvs"
+	einfo " /etc/kazehakase-cvs"
+	einfo " <your home directory>/.kazehakase-cvs"
+	einfo ""
+	einfo "You might want to create symbolic link .kazehakase-cvs which points to .kazehakase in your home directory."
+	einfo "i.e. ln -s .kazehakase <your home directory>/.kazehakase-cvs"
+	einfo ""
 }
+
