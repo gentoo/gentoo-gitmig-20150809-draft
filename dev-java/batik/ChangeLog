@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.4 2004/02/15 20:06:59 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.5 2004/02/15 20:32:25 zx Exp $
+
+  15 Feb 2004; Chris Aniszczyk <zx@gentoo.org> batik-1.5.ebuild:
+  Minor fix.
 
   15 Feb 2004; Chris Aniszczyk <zx@gentoo.org> batik-1.5.ebuild:
   Fixed Bug #29045
