@@ -1,0 +1,48 @@
+diff -urN NVIDIA_kernel-1.0-4363.orig/os-agp.c NVIDIA_kernel-1.0-4363/os-agp.c
+--- NVIDIA_kernel-1.0-4363.orig/os-agp.c	2003-05-26 20:03:59.000000000 +0200
++++ NVIDIA_kernel-1.0-4363/os-agp.c	2003-05-26 20:03:25.000000000 +0200
+@@ -28,7 +28,7 @@
+ #ifdef AGPGART
+ 
+ typedef struct {
+-    agp_memory *ptr;
++    struct agp_memory *ptr;
+     int num_pages;
+     int offset;
+ #if defined(NVCPU_IA64)
+@@ -45,7 +45,7 @@
+     int  ready;
+ } agp_gart;
+ 
+-agp_kern_info         agpinfo;
++struct agp_kern_info         agpinfo;
+ agp_gart              gart;
+ const drm_agp_t       *drm_agp_p;
+ 
+@@ -260,7 +260,7 @@
+     *pAddress = (void*) 0;
+     return RM_ERROR;
+ #else
+-    agp_memory *ptr;
++    struct agp_memory *ptr;
+     int err;
+     agp_priv_data *data;
+     RM_STATUS status;
+@@ -388,7 +388,7 @@
+ #else
+     struct vm_area_struct *vma = (struct vm_area_struct *) pvma;
+     agp_priv_data *agp_data = (agp_priv_data *) priv_data;
+-    agp_memory *agp_memory_ptr = agp_data->ptr;
++    struct agp_memory *agp_memory_ptr = agp_data->ptr;
+     struct page *page_ptr;
+     unsigned long phys_addr;
+     int idx;
+@@ -431,7 +431,7 @@
+ #ifndef AGPGART
+     return RM_OK;
+ #else
+-    agp_memory *ptr;
++    struct agp_memory *ptr;
+     agp_priv_data *data = priv_data;
+     
+ #if defined(NVCPU_IA64) && (LINUX_VERSION_CODE < KERNEL_VERSION(2, 4, 9))
