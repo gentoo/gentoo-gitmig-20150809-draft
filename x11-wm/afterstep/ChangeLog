@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.21 2004/07/03 21:23:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.22 2004/07/08 05:55:38 hardave Exp $
+
+  07 Jul 2004; Hardave Riar <hardave@gentoo.org> afterstep-1.8.11-r2.ebuild:
+  Added ~mips KEYWORD
 
   03 Jul 2004; Jason Wever <weeve@gentoo.org> afterstep-2.0_beta4.ebuild:
   Added ~sparc keyword.

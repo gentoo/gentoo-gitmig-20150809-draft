@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.11-r2.ebuild,v 1.18 2004/06/28 22:59:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.11-r2.ebuild,v 1.19 2004/07/08 05:55:38 hardave Exp $
 
 S=${WORKDIR}/AfterStep-${PV}
 DESCRIPTION="A window manager based on the NeXTStep interface."
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2"
 HOMEPAGE="http://www.afterstep.org/"
 LICENSE="AFTERSTEP"
 SLOT="0"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 sparc ppc ~mips"
 IUSE="nls"
 
 DEPEND="virtual/libc virtual/x11
