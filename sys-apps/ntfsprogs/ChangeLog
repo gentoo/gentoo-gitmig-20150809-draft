@@ -1,11 +1,11 @@
 # ChangeLog for sys-apps/linux-ntfs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ntfsprogs/ChangeLog,v 1.1 2003/06/01 04:41:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ntfsprogs/ChangeLog,v 1.2 2003/06/01 04:41:45 lostlogic Exp $
 
 *ntfsprogs-1.7.1 (31 May 2003)
 
   31 May 2003; Brandon Low <lostlogic@gentoo.org> ntfsprogs-1.7.1.ebuild:
-  Move package to new name, and bump version
+  Move package to new name, and bump version thangs to bug 18713
 
 *linux-ntfs-1.6.0 (02 Nov 2002)
 
