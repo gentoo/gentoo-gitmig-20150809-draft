@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (17 Oct 2002)
+# new ncurses.  Please comment on bug #9245
+>=ncurses-5.3.ebuild
+
 # <seemant@gentoo.org> (16 Oct 2002)
 # new version is 3.2 (upstream has version numbering issues)
 =x11-plugins/gkrellshoot-0.3.11
