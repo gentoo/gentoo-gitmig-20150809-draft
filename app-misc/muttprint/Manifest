@@ -1,0 +1,7 @@
+MD5 016db300c9b8b78ede8a0637274a5384 muttprint-0.64.ebuild 991
+MD5 a483b16ba3692265c7bce78f39b8812c muttprint-0.63a.ebuild 586
+MD5 7d436593f9eaf46b1f96ec8f45f4cf7c muttprint-0.62b.ebuild 585
+MD5 724363a02cc125b895642c39d0acfe70 ChangeLog 690
+MD5 d4b2567e46b8d2d51bb1c79d210b4dae files/digest-muttprint-0.62b 67
+MD5 a1c66f4b58129048d98c90388dfac898 files/digest-muttprint-0.63a 67
+MD5 ac006cd555c0f2dc37c054b04b706478 files/digest-muttprint-0.64 66

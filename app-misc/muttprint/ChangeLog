@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.4 2003/02/12 05:04:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.5 2003/04/18 17:34:10 latexer Exp $
+
+*muttprint-0.64 (19 Apr 2003)
+
+  19 Apr 2003; Peter Johanson <latexer@gentoo.org> muttprint-0.64.ebuild:
+  Version bump. thanks to Christian Dietl <christian@expires.de> bug #18641
 
 *muttprint-0.63a (05 Nov 2002)
 
