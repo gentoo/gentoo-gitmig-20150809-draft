@@ -2,7 +2,7 @@ P=beaver-0.2.3
 S=${WORKDIR}/${P}
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 SLOT="0"
 
 DESCRIPTION="An Early AdVanced EditoR"
