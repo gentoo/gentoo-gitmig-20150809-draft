@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.9 2005/02/03 22:58:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.10 2005/03/15 20:25:48 axxo Exp $
+
+*jaxen-1.1_beta2-r1 (15 Mar 2005)
+
+  15 Mar 2005; Thomas Matthijs <axxo@gentoo.org> +jaxen-1.1_beta2-r1.ebuild:
+  rename installed jar, closes 85392
 
   03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> jaxen-1.0.ebuild,
   jaxen-1.1_beta2.ebuild:
