@@ -172,3 +172,4 @@ move app-sci/xcircuit sci-electronics/xcircuit
 move app-sci/chessbrain sci-misc/chessbrain
 move app-sci/gt-itm sci-misc/gt-itm
 move app-sci/lightspeed sci-misc/lightspeed
+move app-sci/oww sci-misc/oww
