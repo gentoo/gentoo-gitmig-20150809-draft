@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20040301.ebuild,v 1.1 2004/04/25 16:09:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20040301.ebuild,v 1.2 2004/04/26 09:28:58 dholm Exp $
 
 IUSE="X"
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.jasspa.com/release_${MY_PV}/jasspa-memacros-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc
 	sys-libs/ncurses
