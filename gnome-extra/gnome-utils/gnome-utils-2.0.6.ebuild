@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.0.6.ebuild,v 1.6 2003/06/10 13:03:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.0.6.ebuild,v 1.7 2003/07/09 16:33:01 liquidx Exp $
 
 inherit gnome2
 
@@ -32,7 +32,8 @@ RDEPEND=">=dev-libs/glib-2.0.7
 	>=dev-libs/libxml2-2.4.24
 	>=sys-libs/ncurses-5.2-r5
 	>=gnome-base/libgtop-2.0.0
-	>=net-libs/linc-0.5.3"
+	>=net-libs/linc-0.5.3
+	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.22
