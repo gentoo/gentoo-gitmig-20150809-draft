@@ -1,8 +1,0 @@
-# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
-# System-wide defaults for the Portage system
-
-CHOST=sparc-unknown-linux-gnu
-PLATFORM=$CHOST
-USE="berkdb gdbm readline slang pam nls"
-CFLAGS="-O2"
-CXXFLAGS=$CFLAGS
