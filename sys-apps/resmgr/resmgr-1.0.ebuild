@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/resmgr/resmgr-1.0.ebuild,v 1.1 2004/10/31 02:03:29 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/resmgr/resmgr-1.0.ebuild,v 1.2 2004/10/31 02:05:18 pylon Exp $
 
 DESCRIPTION="Resource manager that will provide unprivileged users access to device files"
 HOMEPAGE="http://rechner.lst.de/~okir/resmgr/"
@@ -15,20 +15,20 @@ DEPEND="sys-apps/hotplug
 IUSE=""
 
 src_compile() {
-    emake CFLAGS="$CFLAGS" || die
+	emake CFLAGS="$CFLAGS" || die
 }
 
 src_install() {
-    make DESTDIR="${D}" install || die
-    dosym $(basename ${D}/lib/libresmgr.so.*) /lib/libresmgr.so
-    exeinto /etc/init.d
-    newexe "${FILESDIR}/resmgrd.rc" resmgrd
-    insinto /etc/conf.d
-    newins "${FILESDIR}/resmgrd.confd" resmgrd
-    exeinto /etc/hotplug/usb
-    newexe "${FILESDIR}/desktopdev" desktopdev
-    dodoc ANNOUNCE COPYING INSTALL README TODO
-    dodoc "${FILESDIR}/README.gentoo"
+	make DESTDIR="${D}" install || die
+	dosym $(basename ${D}/lib/libresmgr.so.*) /lib/libresmgr.so
+	exeinto /etc/init.d
+	newexe "${FILESDIR}/resmgrd.rc" resmgrd
+	insinto /etc/conf.d
+	newins "${FILESDIR}/resmgrd.confd" resmgrd
+	exeinto /etc/hotplug/usb
+	newexe "${FILESDIR}/desktopdev" desktopdev
+	dodoc ANNOUNCE COPYING INSTALL README TODO
+	dodoc "${FILESDIR}/README.gentoo"
 }
 
 pkg_postinst() {

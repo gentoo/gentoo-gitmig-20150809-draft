@@ -1,6 +1,6 @@
 MD5 035613e4ea415232c9b9fea9783994ce metadata.xml 221
-MD5 0ade7f5d2c097b661c550629e360b015 resmgr-1.0.ebuild 1591
 MD5 b6bcff3e651e1bec10773145c01ec139 ChangeLog 458
+MD5 62a17239024ac07f7db75846c47ae721 resmgr-1.0.ebuild 1550
 MD5 7070484a957c6df9a2596c47b2e1e57e files/resmgrd.confd 16
 MD5 1dc16a2e50e5ca1248142513f13e687e files/resmgrd.rc 490
 MD5 b7e1e7081f910cac837bc24c429cfac5 files/digest-resmgr-1.0 62
