@@ -1136,14 +1136,14 @@ def port_currtree():
 def port_insttree():
 	"""
 	This function builds a dictionary of installed packages on the system, based on
-	the contents of ROOT/var/db/pkg.  Dictionary format is:
+	the contents of /var/db/pkg Dictionary format is:
 	mydict["cat/pkg"]=[
 					["cat/fullpkgname",["cat","pkg","ver","rev"]
 					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
 					]
 	"""
 	installeddict={}
-	dbdir=root+"var/db/pkg"
+	dbdir="/var/db/pkg"
 	prep_dbdir()	
 	origdir=os.getcwd()
 	os.chdir(dbdir)
