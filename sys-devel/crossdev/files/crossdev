@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.8 2005/03/10 04:51:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.9 2005/03/10 22:49:08 vapier Exp $
 
 source /sbin/functions.sh || exit 1
 die() {
@@ -23,21 +23,18 @@ ${GOOD}Options${NORMAL}:
     ${GOOD}--g, --gcc${NORMAL} ver        Specify version of gcc to use
     ${GOOD}--k, --kernel${NORMAL} ver     Specify version of kernel headers to use
     ${GOOD}--l, --libc${NORMAL} ver       Specify version of libc to use
-    ${GOOD}-a, -b, -p, -v${NORMAL}        Options to pass to emerge (see emerge(1))
 
     ${GOOD}-V, --version${NORMAL}         Show crossdev version
+    ${GOOD}-C, --clean${NORMAL} target    Uninstall specified target
+    ${GOOD}-a, -b, -p, -v${NORMAL}        Options to pass to emerge (see emerge(1))
 
     ${GOOD}-s1, --stage1${NORMAL}         Build a C compiler (no libc/C++)
     ${GOOD}-s2, --stage2${NORMAL}         Build a C compiler & libc (no C++)
     ${GOOD}-s3, --stage3${NORMAL}         Build a C/C++ compiler & libc [default]
 
 ${BRACKET}Target (-t)${NORMAL}:
-    The target takes the form:   ${BRACKET}ARCH-VENDOR-OS-LIBC${NORMAL}
-    The default 'pc-linux-gnu' will be appended if only ARCH is specified.
-    Examples:
-       arm-unknown-linux-gnu  sh4-pc-linux-uclibc  mips-pc-linux-uclibc
-
-For more info, please see ${HILITE}crossdev${NORMAL}(8).
+    The target takes the form: ${BRACKET}ARCH-VENDOR-OS-LIBC${NORMAL}
+    Examples:  arm-unknown-linux-gnu  sh4-pc-linux-uclibc  mips-pc-linux-uclibc
 EOF
 	exit ${1:-0}
 }
@@ -87,6 +84,41 @@ parse_target() {
 	CTARGET=${CPRE}
 	[[ -n ${CPOST} ]] && CTARGET=${CTARGET}-${CPOST}
 }
+
+setup_portage_vars() {
+	PORTDIR_OVERLAY=$(portageq envvar PORTDIR_OVERLAY)
+	PORTDIR=$(portageq envvar PORTDIR)
+	PORT_LOGDIR=$(portageq envvar PORT_LOGDIR)
+	PORT_LOGDIR=${PORT_LOGDIR:-/var/log/portage}
+	PKGDIR=$(portageq envvar PKGDIR)/cross/${CTARGET}
+	[[ ! -d ${PORT_LOGDIR} ]] && mkdir -p ${PORT_LOGDIR}
+}
+
+uninstall() {
+	setup_portage_vars
+
+	[[ -d ${PORTDIR_OVERLAY}/cross-${CTARGET} ]] \
+		&& rm -ri ${PORTDIR_OVERLAY}/cross-${CTARGET}
+	for f in mask keywords use ; do
+		f="/etc/portage/package.${f}"
+		[[ ! -e ${f} ]] && continue
+		sed -i -e "/cross-${CTARGET}\//d" ${f}
+	done
+
+	if [[ ! -d /var/db/pkg/cross-${CTARGET} ]] ; then
+		eerror "${CTARGET} is not installed."
+		exit 1
+	fi
+
+	cd /var/db/pkg
+	for p in cross-${CTARGET}/* ; do
+		emerge -C =${p}
+	done
+	[[ -d /usr/${CTARGET} ]] && rm -ri /usr/${CTARGET}
+
+	exit 0
+}
+
 hr() {
 	local c=${COLUMNS:-0}
 	if [[ ${c} -eq 0 ]] ; then
@@ -124,6 +156,7 @@ while [[ $# -gt 0 ]] ; do
 	--g|--gcc)      shift; GVER=$1;;
 	--k|--kernel)   shift; KVER=$1;;
 	--l|--libc)     shift; LVER=$1;;
+	-C|--clean)     shift; parse_target $1; uninstall;;
 	-s?|--stage?)   [[ ${STAGE} -eq 4 ]] && STAGE=${1:0-1};;
 	-a|-b|-p|-v)    UOPTS="${UOPTS} $1";;
 	-h|--help)      usage;;
@@ -152,12 +185,7 @@ fi
 
 #####################
 ### do the emerge ###
-PORTDIR_OVERLAY=$(portageq envvar PORTDIR_OVERLAY)
-PORTDIR=$(portageq envvar PORTDIR)
-PORT_LOGDIR=$(portageq envvar PORT_LOGDIR)
-PORT_LOGDIR=${PORT_LOGDIR:-/var/log/portage}
-PKGDIR=$(portageq envvar PKGDIR)/cross/${CTARGET}
-[[ ! -d ${PORT_LOGDIR} ]] && mkdir -p ${PORT_LOGDIR}
+setup_portage_vars
 (
 hr
 einfo "Host Portage ARCH:     ${HARCH}"
@@ -197,7 +225,9 @@ set_keywords() {
 	fi
 }
 set_use() {
-	local pkg=$1 use=$2
+	local pkg=$1
+	shift
+	local use=$@
 	[[ -z ${use} ]] && return
 	sed -i -e "/cross-${CTARGET}\/${pkg}/d" package.use
 	echo "cross-${CTARGET}/${pkg} ${use}" >> package.use
@@ -236,7 +266,8 @@ doemerge() {
 EOPTS="${UOPTS} -u --nodeps"
 
 doemerge binutils
-USE=nocxx doemerge gcc gcc-stage1
+USE="-boundschecking -fortran -gcj -objc nocxx -static" \
+	doemerge gcc gcc-stage1
 [[ ${STAGE} -gt 1 ]] || exit 0
 doemerge linux-headers
 USE=$TARCH doemerge ${LPKG}
