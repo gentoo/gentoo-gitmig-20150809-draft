@@ -20,7 +20,6 @@
 	<td>&nbsp;</td>
 	<td bgcolor="#dddaec"><b>Date</b></td>
 	<td bgcolor="#dddaec"><b>Title</b></td>
-	<td bgcolor="#dddaec"><b>Flags</b></td>
 	<td bgcolor="#dddaec"><b>Followups</b></td>
 </tr>
 <?php
@@ -45,7 +44,6 @@
 	<td><img src="images/<?=$priority;?>.gif" alt="<?=$priority;?>"></td>
 	<td><?=date( "n/j/y", $todo['date'] );?></td>
 	<td><a href="single.php?tid=<?=$todo['tid'];?>"><?=$todo['title'];?></a></td>
-	<td><?=$flagimgs;?></td>
 	<td><?=$fupcount;?></td>
 </tr>
 <?php 
