@@ -1,0 +1,62 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.5.8.ebuild,v 1.1 2004/03/21 00:14:30 foser Exp $
+
+# FIXME : block gst until we got it sorted
+inherit gnome2
+
+DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
+HOMEPAGE="http://www.gnome.org/"
+
+#IUSE="doc apm acpi ipv6 gstreamer"
+IUSE="doc apm acpi ipv6"
+SLOT="2"
+LICENSE="GPL-2 FDL-1.1"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
+
+RDEPEND=">=x11-libs/gtk+-2.1
+	>=gnome-base/gail-1.3
+	>=gnome-base/gconf-2.0
+	>=gnome-base/gnome-vfs-2
+	>=gnome-base/libgtop-2.5
+	>=gnome-base/gnome-panel-2.5
+	>=gnome-base/libglade-2
+	>=gnome-base/libgnome-2
+	>=gnome-base/libgnomeui-2
+	>=x11-libs/libxklavier-0.97
+	apm? ( sys-apps/apmd )
+	acpi? ( sys-apps/acpid )"
+#	gstreamer? ( >=media-libs/gstreamer-0.7.3.1 )
+
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.12.0
+	>=app-text/scrollkeeper-0.3.11
+	doc? ( dev-util/gtk-doc )"
+
+DOCS="AUTHORS ChangeLog COPYING COPYING-DOCS INSTALL NEWS README"
+
+#G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable gstreamer) --enable-flags"
+G2CONF="${G2CONF} $(use_enable ipv6) --disable-gstreamer --enable-flags"
+
+MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+
+	unpack ${A}
+
+	gnome2_omf_fix
+
+}
+
+src_install () {
+
+	gnome2_src_install
+
+	for BLERHG  in accessx-status battstat cdplayer charpick drivemount geyes gkb-new gtik gweather mailcheck mini-commander mixer modemlights multiload screen-exec stickynotes wireless; do
+			docinto ${BLERHG}
+			dodoc ${BLERHG}/[ChangeLog,AUTHORS,NEWS,TODO] ${BLERHG}/README*
+	done
+
+}
+
+USE_DESTDIR="1"
