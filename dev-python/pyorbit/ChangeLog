@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyorbit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.7 2003/09/03 12:45:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.8 2003/09/17 17:25:52 agriffis Exp $
+
+  17 Sep 2003; Aron Griffis <agriffis@gentoo.org> pyorbit-2.0.0.ebuild:
+  Add ~alpha
 
 *pyorbit-2.0.0 (03 Sep 2003)
 
