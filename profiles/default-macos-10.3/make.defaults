@@ -1,0 +1,33 @@
+# Copyright 2004 Pieter Van den Abeele, Gentoo Foundation
+# Copyright 2000 Daniel Robbins, Gentoo Foundation.
+# System-wide defaults for the Portage system
+
+GRP_STAGE23_USE="readline ssl perl python ncurses"
+
+ARCH="macos"
+
+# Host-type
+
+CHOST=powerpc-apple-darwin
+PLATFORM=$CHOST
+
+# Options passed to make during the build process
+MAKEOPTS="-j2"
+
+# Fetching command (5 tries, passive ftp for firewall compatibility)
+FETCHCOMMAND="/usr/bin/curl --connect-timeout 15 -# -o \${DISTDIR}/\${FILE} \${URI}"
+
+# Global configure options
+
+# C Compiler flags
+CFLAGS="-O2 -pipe"
+
+# C++ Compiler flags
+CXXFLAGS=${CFLAGS}
+
+USE=""
+
+ACCEPT_KEYWORDS="~ppc" # change to macos later
+
+COMPILER="gcc3"
+
