@@ -14,10 +14,10 @@ and functions. ebuilds can inherit from eclasses, and eclasses
 can inherit from other eclasses. As in OOP, this is used
 to ensure maximum code reuse among similar ebuilds.
 
-This inheritance is implmented via simple bash sourcing.
+This inheritance is implemented via simple bash sourcing.
 So, when you 'inherit" something its
 functions and variables override your own. For this reason,
-variables and funcitons are usually extended and not just
+variables and functions are usually extended and not just
 set (more on this later).
 
 The most similar group of ebuilds is the kde apps. These
@@ -26,7 +26,7 @@ and I believe I can now say the test has been successful.
 Eclasses for non-kde ebuilds may follow, but there are no
 concrete plans as of this time.
 
-Because of the current customizable KDEDIR (KDE?DIR, KDE?LIBSDIR)
+Because of the current customisable KDEDIR (KDE?DIR, KDE?LIBSDIR)
 scheme, all kde ebuilds (including ebuilds for apps with
 optional kde support) must use the eclasses. As a minimum,
 inherit kde-dirs to get the set-qtdir(), set-kdedir() functions.
@@ -43,7 +43,7 @@ structure is an explanation of what each eclass does.
 2.1 inherit.eclass
 
 This is the basic eclass. It should always be present (i.e.
-inherited). No other eclass iherits from it, however: an
+inherited). No other eclass inherits from it, however: an
 inheriting ebuild needs to inherit it explicitly before
 it does anything else, by saying:
 
@@ -96,7 +96,7 @@ and B.eclass will define a B_src_compile(). That way, the
 ebuild can call either function and know what it'll get.
 
 This raises a new problem: we need a function called src_compile
-so that the ebuild doesn't need to explicitly call something_src_comiple.
+so that the ebuild doesn't need to explicitly call something_src_compile.
 This is where EXPORT_FUNCTIONS() comes into play:
 
 EXPORT_FUNCTIONS() {
@@ -124,7 +124,7 @@ ECLASS=foo
 
 EXPORT_FUNCTIONS src_unpack
 
-The EXPORT_FUNCTIONS will call eval on the followin string:
+The EXPORT_FUNCTIONS will call eval on the following string:
 
 src_unpack() { foo_src_unpack() ; }
 
@@ -230,7 +230,7 @@ src_compile() {
 
 }
 
-Where myfunc{1,2} is any code you want to execute btween
+Where myfunc{1,2} is any code you want to execute between
 the sections.
 
 The only way to know what functions contain what sections
@@ -245,14 +245,14 @@ such section right now is base_src_compile patch.
 
 Adds verbose output debugging functions. Is inherited by
 virtual.eclass. All eclasses call these functions a lot,
-which makes them look ugky but helps a geat deal in tracing
-stuff, snice there is no bash script debugger/ide/step-by-step
+which makes them look ugly but helps a great deal in tracing
+stuff, since there is no bash script debugger/ide/step-by-step
 interpreter AFAIK (if you know of one, tell me!).
 
 Look at it to see the functions it provides, they are simplistic.
 
 You can export ECLASS_DEBUG_OUTPUT="/dev/stdout"
-to get the output with your other msgs while megring. Unfortunately
+to get the output with your other msgs while merging. Unfortunately
 opening /dev/stdout for writing violates the sandbox. I'm
 not sure how to bypass this (FIXME!).
 
@@ -338,7 +338,7 @@ Adds make/automake/autoconf to DEPEND.
 
 This is made and maintained by Azarah. To quote his comments:
 
-This eclass was made to bridge the incompadibility problem
+This eclass was made to bridge the incompatibility problem
 of autoconf-2.13, autoconf-2.5x and automake-1.4x, automake-1.5x.
 Most packages needs autoconf-2.13 and automake-1.4x, but
 cannot work with the latest versions of these packages due
@@ -346,7 +346,7 @@ to incompatibility, thus when we have a package that needs
 the latest versions of automake and autoconf, it begins
 to get a problem.
 
-Read the eclass for more info. AFAIK it has no relatinship
+Read the eclass for more info. AFAIK it has no relationship
 whatsoever to an of the other eclasses. Contact Azarah for
 any further info. (Azarah, you're welcome to feel in here).
 
@@ -381,7 +381,7 @@ should inherit from kde-base.eclass.
 A short explanation about the current multi-kdedir scheme:
 
 $KDE{2,3}DIR and $KDELIBS{2,3}DIR are set in make.globals
-(and can be overriden in make.conf). Their default values
+(and can be overridden in make.conf). Their default values
 are /usr/kde/{2,3}.
 
 A package that identifies itself as a kde2 package (see below)
@@ -393,9 +393,9 @@ is untested and unsupported.
 As for qt, the latest 2.x, 3.x version lives in /usr/qt/2,3
 respectively.
 
-The inner works of the sytem needn't be described here. A
-few weeks ago all this scheme was changed out of recognition,
-but no ebulds needed to be changed, only eclasses. That
+The inner works of the system needn't be described here.
+A few weeks ago all this scheme was changed out of recognition,
+but no ebuilds needed to be changed, only eclasses. That
 speaks for their success.
 
 This eclass provides two pairs of functions: need-kde(),
@@ -419,7 +419,7 @@ of the configure section of the kde_src_compile() function.
 They set KDEDIR and QTDIR appropriately. That's all your
 ebuild should need.
 
-In a euild with optional kde support, you inherit kde-dirs
+In a ebuild with optional kde support, you inherit kde-dirs
 directly (and no other eclass). You should then call both
 need-* and set-* yourself.
 
@@ -472,13 +472,13 @@ eclass. Useful if you have a local copy of the kde cvs modules.
 This is only included with the kde3-pre ebuilds, and doesn't
 live in portage. See [http://www.gentoo.org/~danarmak/kde3-pre.html||http://www.gentoo.org/~danarmak/kde3-pre.html].
 
-For prerelease ebuilds, which have underscores in their portage
-names (3.0_beta1) but not in their source archives' names
-(3.0beta1.tar.gz). Removes any underscores from $SRC_URI
+For pre-release ebuilds, which have underscores in their
+portage names (3.0_beta1) but not in their source archives'
+names (3.0beta1.tar.gz). Removes any underscores from $SRC_URI
 and $S.
 
 I'll probably add this to portage if there'll be a reason
-to do it (i.e. a prrelease kde ebuild in portage).
+to do it (i.e. a pre-release kde ebuild in portage).
 
 3 The inheriting ebuilds
 

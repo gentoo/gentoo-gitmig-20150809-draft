@@ -43,13 +43,13 @@ eclasses are parts of ebuilds; that is, they have the same syntax ebuilds
  As in OOP, this is used to ensure maximum code reuse among similar ebuilds.
 \layout Standard
 
-This inheritance is implmented via simple bash sourcing.
+This inheritance is implemented via simple bash sourcing.
  So, when you 'inherit
 \begin_inset Quotes erd
 \end_inset 
 
  something its functions and variables override your own.
- For this reason, variables and funcitons are usually extended and not just
+ For this reason, variables and functions are usually extended and not just
  set (more on this later).
 \layout Standard
 
@@ -60,7 +60,7 @@ The most similar group of ebuilds is the kde apps.
  as of this time.
 \layout Standard
 
-Because of the current customizable KDEDIR (KDE?DIR, KDE?LIBSDIR) scheme,
+Because of the current customisable KDEDIR (KDE?DIR, KDE?LIBSDIR) scheme,
  all kde ebuilds (including ebuilds for apps with optional kde support)
  
 \emph on 
@@ -88,7 +88,7 @@ inherit.eclass
 This is the basic eclass.
  It should always be present (i.e.
  inherited).
- No other eclass iherits from it, however: an inheriting ebuild needs to
+ No other eclass inherits from it, however: an inheriting ebuild needs to
  inherit it explicitly before it does anything else, by saying:
 \layout Code
 
@@ -157,66 +157,29 @@ So, every eclass adds to the functions that it defines a prefix.
 \layout Standard
 
 This raises a new problem: we need a function called src_compile so that
- the ebuild doesn't need to explicitly call something_src_comiple.
+ the ebuild doesn't need to explicitly call something_src_compile.
  This is where EXPORT_FUNCTIONS() comes into play:
 \layout Code
 
 EXPORT_FUNCTIONS() {
 \layout Code
 
-\SpecialChar ~
-
+ 
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-while [ "$1" ]; do
+        while [ "$1" ]; do
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
- eval "$1() { ${ECLASS}_$1 ; }" > /dev/null
+            eval "$1() { ${ECLASS}_$1 ; }" > /dev/null
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-shift
+        shift
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-done
+        done
 \layout Code
 
-\SpecialChar ~
-
+ 
 \layout Code
 
 }
@@ -250,7 +213,7 @@ ECLASS=foo
 EXPORT_FUNCTIONS src_unpack
 \layout Standard
 
-The EXPORT_FUNCTIONS will call eval on the followin string:
+The EXPORT_FUNCTIONS will call eval on the following string:
 \layout Code
 
 src_unpack() { foo_src_unpack() ; }
@@ -433,7 +396,7 @@ src_compile() {
 }
 \layout Standard
 
-Where myfunc{1,2} is any code you want to execute btween the sections.
+Where myfunc{1,2} is any code you want to execute between the sections.
 \layout Standard
 
 The only way to know what functions contain what sections is to read the
@@ -459,9 +422,9 @@ debug.eclass
 
 Adds verbose output debugging functions.
  Is inherited by virtual.eclass.
- All eclasses call these functions a lot, which makes them look ugky but
- helps a geat deal in tracing stuff, snice there is no bash script debugger/ide/
-step-by-step interpreter AFAIK (if you know of one, tell me!).
+ All eclasses call these functions a lot, which makes them look ugly but
+ helps a great deal in tracing stuff, since there is no bash script debugger/ide
+/step-by-step interpreter AFAIK (if you know of one, tell me!).
 \layout Standard
 
 Look at it to see the functions it provides, they are simplistic.
@@ -475,7 +438,7 @@ You can export ECLASS_DEBUG_OUTPUT=
 \begin_inset Quotes erd
 \end_inset 
 
- to get the output with your other msgs while megring.
+ to get the output with your other msgs while merging.
  Unfortunately opening /dev/stdout for writing violates the sandbox.
  I'm not sure how to bypass this (FIXME!).
 \layout Standard
@@ -612,7 +575,7 @@ This is made and maintained by Azarah.
  To quote his comments:
 \layout Standard
 
-This eclass was made to bridge the incompadibility problem of autoconf-2.13,
+This eclass was made to bridge the incompatibility problem of autoconf-2.13,
  autoconf-2.5x and automake-1.4x, automake-1.5x.
  Most packages needs autoconf-2.13 and automake-1.4x, but cannot work with
  the latest versions of these packages due to incompatibility, thus when
@@ -621,7 +584,7 @@ This eclass was made to bridge the incompadibility problem of autoconf-2.13,
 \layout Standard
 
 Read the eclass for more info.
- AFAIK it has no relatinship whatsoever to an of the other eclasses.
+ AFAIK it has no relationship whatsoever to an of the other eclasses.
  Contact Azarah for any further info.
  (Azarah, you're welcome to feel in here).
 \layout Subsection
@@ -667,7 +630,7 @@ kde-dirs.eclass
 A short explanation about the current multi-kdedir scheme:
 \layout Standard
 
-$KDE{2,3}DIR and $KDELIBS{2,3}DIR are set in make.globals (and can be overriden
+$KDE{2,3}DIR and $KDELIBS{2,3}DIR are set in make.globals (and can be overridden
  in make.conf).
  Their default values are /usr/kde/{2,3}.
 \layout Standard
@@ -682,9 +645,9 @@ A package that identifies itself as a kde2 package (see below) will use
 As for qt, the latest 2.x, 3.x version lives in /usr/qt/2,3 respectively.
 \layout Standard
 
-The inner works of the sytem needn't be described here.
+The inner works of the system needn't be described here.
  A few weeks ago all this scheme was changed out of recognition, but no
- ebulds needed to be changed, only eclasses.
+ ebuilds needed to be changed, only eclasses.
  That speaks for their success.
 \layout Standard
 
@@ -714,7 +677,7 @@ The set-* dir functions are both called from the beginning of the configure
  That's all your ebuild should need.
 \layout Standard
 
-In a euild with optional kde support, you inherit kde-dirs directly (and
+In a ebuild with optional kde support, you inherit kde-dirs directly (and
  no other eclass).
  You should then call both need-* and set-* yourself.
 \layout Standard
@@ -806,13 +769,13 @@ This is only included with the kde3-pre ebuilds, and doesn't live in portage.
 .
 \layout Standard
 
-For prerelease ebuilds, which have underscores in their portage names (3.0_beta1)
- but not in their source archives' names (3.0beta1.tar.gz).
+For pre-release ebuilds, which have underscores in their portage names (3.0_beta1
+) but not in their source archives' names (3.0beta1.tar.gz).
  Removes any underscores from $SRC_URI and $S.
 \layout Standard
 
 I'll probably add this to portage if there'll be a reason to do it (i.e.
- a prrelease kde ebuild in portage).
+ a pre-release kde ebuild in portage).
 \layout Section
 
 The inheriting ebuilds
