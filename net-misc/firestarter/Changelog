@@ -1,11 +1,14 @@
 # ChangeLog for misc-net/firestarter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/Changelog,v 1.1 2002/05/31 18:21:15 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/Changelog,v 1.2 2002/05/31 21:00:54 bass Exp $
 
 *firestarter-0.8.2 (27 May 2002)
 
   27 May 2002; J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
 	First relase.
+
+  30 May 2002; J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
+  	Fixed problem with gtk.
 
 
