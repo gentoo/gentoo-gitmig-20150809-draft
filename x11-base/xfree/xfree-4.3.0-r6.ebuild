@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.10 2004/03/19 10:59:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.11 2004/03/20 20:23:18 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -27,7 +27,7 @@ inherit eutils flag-o-matic gcc xfree
 RESTRICT="nostrip"
 
 # IUSE="sse mmx 3dnow" were disabled in favor of autodetection
-IUSE="3dfx truetype nls cjk doc ipv6 debug static sdk gatos no-pam pie"
+IUSE="3dfx truetype nls cjk doc ipv6 debug static sdk gatos pam pie"
 IUSE_INPUT_DEVICES="synaptics wacom"
 
 PATCH_VER="2.1.26.15"
@@ -167,7 +167,7 @@ pkg_setup() {
 	strip-flags
 
 	# See bug #35468, circular pam-xfree dep
-	if [ ! "`use no-pam`" -a "`has_version x11-base/xfree`" ]
+	if [ "`use pam`" -a "`has_version x11-base/xfree`" ]
 	then
 		einfo "Previous XFree86 installation detected"
 		einfo "Enabling PAM features in XFree86..."
@@ -437,7 +437,7 @@ src_unpack() {
 
 	# Remove circular dep between pam and xfree, bug #35468
 	# If no-pam isn't in USE and we have xfree, then we can enable PAM
-	if [ ! "`use no-pam`" -a "`has_version x11-base/xfree`" ]
+	if [ "`use pam`" -a "`has_version x11-base/xfree`" ]
 	then
 		# If you want to have optional pam support, do it properly ...
 		echo "#define HasPam YES" >> config/cf/host.def
