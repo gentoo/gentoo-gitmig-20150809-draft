@@ -31,7 +31,7 @@ virtual/editor			app-editors/nano
 virtual/bootloader      sys-apps/dvhtool
 virtual/os-headers		sys-kernel/linux-headers
 virtual/modutils 		sys-apps/modutils
-virtual/inetd			sys-apps/netkit-base
+virtual/inetd			sys-apps/xinetd
 virtual/antivirus		net-mail/clamav
 virtual/aspell-dict           app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
