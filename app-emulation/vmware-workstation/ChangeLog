@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.34 2004/02/25 01:36:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.35 2004/02/26 22:28:15 wolf31o2 Exp $
+
+  26 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-4.0.5.6030.ebuild:
+  Removing extra version left during bump.
 
   24 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-3.2.1.2242-r1.ebuild:
