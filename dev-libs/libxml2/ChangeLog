@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.5 2002/03/27 09:52:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.6 2002/04/16 13:47:36 seemant Exp $
+
+*libxml2-2.4.20 (16 Apr 2002)
+
+  16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> libxml2-2.4.20.ebuild,
+  files/digest-libxml2-2.4.20 :
+
+  Quick version update.
 
 *libxml2-2.4.19 (27 Mar 2002)
 
