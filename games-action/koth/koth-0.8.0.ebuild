@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation and Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.10 2004/11/06 04:20:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.11 2004/12/20 13:15:26 josejx Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/default.pkg/${PV}/${P}.tar.bz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ~amd64 ~ppc"
+KEYWORDS="x86 alpha ~amd64 ppc"
 IUSE=""
 
 DEPEND="media-libs/libggi"
