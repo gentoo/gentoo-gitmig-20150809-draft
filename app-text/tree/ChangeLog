@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.21 2004/10/28 02:36:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.22 2004/11/01 19:30:29 agriffis Exp $
+
+  03 Nov 2004; Aron Griffis <agriffis@gentoo.org> tree-1.5.0.ebuild:
+  stable on alpha and ia64
 
   28 Oct 2004; Joseph Jezak <josejx@gentoo.org> tree-1.4.ebuild:
   Marked ppc stable to fix compile issues
