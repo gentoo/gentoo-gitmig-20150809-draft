@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.7 2003/09/04 04:42:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.8 2003/09/18 22:04:33 max Exp $
 
 inherit eutils
 
 DESCRIPTION="The Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
-SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
+SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/${P}.tar.gz"
 IUSE="afs snmp ssl kerberos"
 LICENSE="as-is"
 SLOT="0"

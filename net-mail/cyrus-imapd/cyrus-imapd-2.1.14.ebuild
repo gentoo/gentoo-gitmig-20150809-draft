@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.14.ebuild,v 1.3 2003/09/04 04:42:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.14.ebuild,v 1.4 2003/09/18 22:04:33 max Exp $
 
 inherit eutils
 IPV6_P="${P}-ipv6-20030703"
@@ -9,7 +9,7 @@ IUSE="afs snmp ssl kerberos ipv6"
 
 DESCRIPTION="The Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
-SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
+SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/${P}.tar.gz
 	ipv6? ( http://www.imasy.or.jp/~ume/ipv6/${IPV6_P}.diff.gz )"
 
 LICENSE="as-is"
