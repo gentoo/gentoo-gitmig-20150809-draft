@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.01-r1.ebuild,v 1.6 2002/10/04 05:54:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.01-r1.ebuild,v 1.7 2002/11/04 21:01:58 seemant Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A command-line based audio CD ripper and mp3 encoder"
@@ -14,6 +14,7 @@ KEYWORDS="x86 ppc"
 DEPEND=""
 
 RDEPEND="media-sound/cdparanoia
+	sys-apps/eject
 	sys-devel/perl
 	>=dev-perl/CDDB_get-1.66
 	>=dev-perl/MP3-Info-0.91"
