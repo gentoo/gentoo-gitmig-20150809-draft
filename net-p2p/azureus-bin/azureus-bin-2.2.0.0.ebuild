@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.0.ebuild,v 1.2 2004/11/06 17:23:53 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.0.ebuild,v 1.3 2004/12/11 03:57:22 squinky86 Exp $
 
 inherit eutils
 
@@ -27,13 +27,9 @@ DEPEND="virtual/libc
 	amd64? ( app-arch/unzip )"
 
 RDEPEND="${DEPEND}
-	dev-java/commons-cli
-	dev-java/log4j
 	kde? ( dev-java/systray4j )
-	dev-java/junit
 	=x11-libs/gtk+-2*
-	>=virtual/jre-1.4
-	>=net-libs/linc-1.0.3"
+	>=virtual/jre-1.4"
 
 # Where to install the package
 PROGRAM_DIR="/usr/lib/${MY_PN}"
