@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.13 2003/04/07 15:10:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.14 2003/05/10 23:33:34 liquidx Exp $
+
+  11 May 2003; Alastair Tse <liquidx@gentoo.org> xpad-1.10.1.ebuild,
+  xpad-1.4.ebuild, xpad-1.6.1.ebuild, xpad-1.6.1.ebuild, xpad-1.7.ebuild,
+  xpad-1.7.ebuild, xpad-1.9.1.ebuild:
+  fix gentoo header and cleanups
 
 *xpad-1.10.1 (07 Apr 2003)
 
