@@ -1,12 +1,13 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.53 2004/12/03 15:32:47 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.54 2004/12/03 15:36:21 chrb Exp $
 
 *lirc-0.7.0-r1 (03 Dec 2004)
 
   03 Dec 2004; Chris Bainbridge <chrb@gentoo.org>
   +files/lirc-0.7.0-xbox.patch.bz2, +lirc-0.7.0-r1.ebuild:
-  Added xbox driver. Only used when the xbox profile is selected.
+  Added xbox driver. Only used when the xbox profile is selected. 
+  Thanks to Tim Dodge for the patch.
 
 *lirc-0.7.0_pre8 (03 Dec 2004)
 
