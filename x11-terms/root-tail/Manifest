@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 de0d9e09f1be04e4f105b3288ae8e72a root-tail-1.2.ebuild 673
-MD5 184e54959e4e7fca4c95560a0e6511d4 root-tail-1.1.ebuild 674
-MD5 123c1423e1b8241be74ee597a64dc4d5 ChangeLog 3309
+MD5 ac19e82a7d9ddbcab1d0fae89799b272 root-tail-1.2-r1.ebuild 769
+MD5 ac82ac29a67025a863f3d258d3d6d680 root-tail-1.1.ebuild 673
+MD5 3fdd6f83d3628619bf38206be732dc62 ChangeLog 3539
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 f8b36716748f19ede695042176e3648b files/digest-root-tail-1.2-r1 64
 MD5 bc94057d9203dc8c6a01efb2172f5a15 files/digest-root-tail-1.1 64
-MD5 f8b36716748f19ede695042176e3648b files/digest-root-tail-1.2 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB/hH2EZCkKN40op4RAlUsAKCISHFATMx8WHdz3p6DBa4QE4f2iACZAbCz
-+PtTSieHw4vjkEoPp2DFg3g=
-=7li5
+iD8DBQFCAhTBEZCkKN40op4RArMnAJ9RWYByAwEoDKBsGX3bJ0ceSAA2QwCfT0lx
+0HFwI3QB4o8ikczZkUGodo0=
+=C+X1
 -----END PGP SIGNATURE-----
