@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclreadline
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.6 2004/04/04 22:36:58 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.7 2004/06/03 09:09:12 kloeri Exp $
+
+  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> tclreadline-2.1.0.ebuild:
+  Stable on alpha.
 
   04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml,
   tclreadline-2.1.0.ebuild:
