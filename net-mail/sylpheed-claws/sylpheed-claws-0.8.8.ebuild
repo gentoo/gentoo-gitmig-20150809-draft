@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8.ebuild,v 1.5 2003/01/07 05:29:28 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8.ebuild,v 1.6 2003/01/08 20:14:04 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda"
 
@@ -32,7 +32,6 @@ RDEPEND="nls? ( sys-devel/gettext )"
 PROVIDE="virtual/sylpheed"
 
 src_unpack() {
-
 	unpack ${A}
 
 	# This patch allows for dillo web browser to be embeedded
@@ -52,7 +51,6 @@ src_unpack() {
 }
 
 src_compile() {
-	
 	local myconf
 
 	use gnome \
@@ -89,7 +87,7 @@ src_compile() {
 }
 
 src_install() {
-	
+	dodir /etc
 	make DESTDIR=${D} install || die
 
 	local menuentry="/usr/share/gnome/apps/Internet/sylpheed.desktop"
@@ -103,6 +101,9 @@ src_install() {
 
 	mv ${D}/usr/share/pixmaps/sylpheed.png \
 		${D}/usr/share/pixmaps/sylpheed-claws.png
-
+	
+	insinto /etc
+	doins ${FILESDIR}/mime.types
+	
 	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*  
 }
