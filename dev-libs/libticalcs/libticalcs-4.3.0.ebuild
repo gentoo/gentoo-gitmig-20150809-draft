@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticalcs/libticalcs-4.3.0.ebuild,v 1.3 2003/11/04 11:19:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticalcs/libticalcs-4.3.0.ebuild,v 1.4 2004/04/26 01:17:25 agriffis Exp $
 
 DESCRIPTION="libticalcs is a necessary library for the TiLP calculator linking program."
 HOMEPAGE="http://tilp.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND="dev-libs/libticables
 		dev-libs/libtifiles"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

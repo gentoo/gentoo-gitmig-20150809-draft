@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.6 2004/01/10 17:44:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.7 2004/04/26 01:02:05 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libmcal-0.7.ebuild:
+  Add die following econf for bug 48950
 
   10 Jan 2004; Aron Griffis <agriffis@gentoo.org> libmcal-0.7-r1.ebuild:
   stable on alpha and ia64

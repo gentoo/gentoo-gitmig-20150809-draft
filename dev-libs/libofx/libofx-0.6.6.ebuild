@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.6.6.ebuild,v 1.2 2004/04/10 21:30:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.6.6.ebuild,v 1.3 2004/04/26 01:07:08 agriffis Exp $
 
 DESCRIPTION="Library to support the Open Financial eXchange XML Format"
 HOMEPAGE="http://libofx.sourceforge.net/"
@@ -25,7 +25,7 @@ src_unpack() {
 		Makefile.in
 }
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libiconv
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.6 2003/05/01 10:19:47 pylon Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.7 2004/04/26 01:00:37 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libiconv-1.7.ebuild:
+  Add die following econf for bug 48950
 
   01 May 2003; Lars Weiler <pylon@gentoo.org> libiconv-1.7.ebuild:
   Tested it on ppc for quite a long time and set KEYWORD now to ppc.

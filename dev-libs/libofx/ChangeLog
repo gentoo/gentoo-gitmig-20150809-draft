@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.11 2004/04/10 21:30:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.12 2004/04/26 01:07:08 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libofx-0.6.4-r1.ebuild,
+  libofx-0.6.4.ebuild, libofx-0.6.5.ebuild, libofx-0.6.6.ebuild:
+  Add die following econf for bug 48950
 
   10 Apr 2004; Jason Wever <weeve@gentoo.org> libofx-0.6.6.ebuild:
   Added ~sparc keyword, helps resolve bug #47243.

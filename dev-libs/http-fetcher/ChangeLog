@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/http-fetcher
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/ChangeLog,v 1.5 2003/11/12 17:10:26 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/ChangeLog,v 1.6 2004/04/26 00:56:27 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> http-fetcher-1.0.2.ebuild:
+  Add die following econf for bug 48950
 
 *http-fetcher-1.0.3 (12 Nov 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7.ebuild,v 1.5 2004/03/14 12:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7.ebuild,v 1.6 2004/04/26 01:02:05 agriffis Exp $
 
 DESCRIPTION="Modular Calendar Access Libary"
 HOMEPAGE="http://mcal.chek.com/"
@@ -16,7 +16,7 @@ RDEPEND=""
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

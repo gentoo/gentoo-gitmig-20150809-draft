@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/libextractor-0.2.6.ebuild,v 1.3 2004/03/30 09:42:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/libextractor-0.2.6.ebuild,v 1.4 2004/04/26 00:58:38 agriffis Exp $
 
 inherit libtool
 
@@ -21,7 +21,7 @@ src_compile() {
 	use static \
 		&& myconf="${myconf} --enable-static" \
 		|| myconf="${myconf} --disable-static"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	make || die
 }
 
