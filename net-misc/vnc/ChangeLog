@@ -1,12 +1,17 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.6 2002/09/27 02:22:55 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.7 2002/11/18 17:10:56 raker Exp $
+
+*vnc-3.3.5 (18 Nov 2002)
+
+  18 Nov 2002; Nick Hadaway <raker@gentoo.org> vnc-3.3.5.ebuild,
+  files/digest-vnc-3.3.5 :
+  Version bump.  Currently marked unstable.
 
 *vnc-3.3.4 (26 Sep 2002)
 
   26 Sep 2002; Brad Cowan <bradlyatc@gentoo.org> vnc-3.3.4.ebuild 
   files/digest-vnc-3.3.4 :
-  
   Updated version with many bugfixes. Notably a change in maintainers
   back to the original dev team. Homepage changed, removed patches,
   patches may need replaced after testing.
@@ -14,7 +19,6 @@
 *vnc-3.3.3-r3 (03 Sep 2002)
 
   09 Sep 2002; Seemant Kulleen <seemant@gentoo.org> vnc-3.3.3-r3.ebuild :
-
   Added Mandrake's javabin stuff, since the javasrc stuff was written in the
   Roaring 20's and the days of Coltrane and Java-1.1, so it is not even
   compilable with the more contemporary (and altogether more hip) java
@@ -22,7 +26,6 @@
 
   03 Sep 2002; Seemant Kulleen <seemant@gentoo.org> vnc-3.3.3-r3.ebuild
   files/digest-vnc-3.3.3-r3 :
-
   Added a bunch of packages, courtesy of Mandrake's src.rpm.  The following
   patches are applied: imake, xauth, tightvnc encoding, using xinit's
   XClients script to start the session, vncpassword creates ~/.vnc if
