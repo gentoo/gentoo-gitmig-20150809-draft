@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.16 2003/02/22 09:02:27 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.17 2003/04/03 21:55:06 mholzer Exp $
 
 IUSE="static nls bootstrap java build"
 
 inherit eutils flag-o-matic gcc
 
 # Compile problems with these (bug #6641 among others)...
-filter-flags "-fno-exceptions -fomit-frame-pointer"
+filter-flags "-fno-exceptions -fomit-frame-pointer -ggdb"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3

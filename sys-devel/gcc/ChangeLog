@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.85 2003/04/01 04:33:50 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.86 2003/04/03 21:55:06 mholzer Exp $
 
   24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> :
   - Fix latest ebuild to only build static if we are just building the C
@@ -221,6 +221,9 @@
   Updated with patches from Mandrake/Redhat/Suse.
 
 *gcc-2.95.3-r8 (10 Oct 2002)
+
+  03 Arp 2003; Martin Holzer <mholzer@gentoo.org> gcc-2.95.3-r8.ebuild :
+  Filtering out -ggdb. Closes #8229.
 
   08 Jan 2003; Seemant Kulleen <seemant@gentoo.org> gcc-2.95.3-r8.ebuild :
 
