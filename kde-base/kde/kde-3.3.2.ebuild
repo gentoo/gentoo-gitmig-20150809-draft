@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.3.2.ebuild,v 1.6 2005/01/03 23:31:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.3.2.ebuild,v 1.7 2005/01/05 18:22:57 pvdabeel Exp $
 
 DESCRIPTION="KDE 3.3 - merge this to pull in all non-developer kde-base/* packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="3.3"
-KEYWORDS="amd64 hppa ~sparc x86 ~ppc ~ppc64 alpha"
+KEYWORDS="amd64 hppa ~sparc x86 ppc ~ppc64 alpha"
 IUSE=""
 
 # removed: kdebindings, kdesdk since these are developer-only packages
