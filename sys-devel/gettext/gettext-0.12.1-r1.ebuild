@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.10 2004/06/02 19:42:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.11 2004/06/11 13:33:54 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa amd64 ~ia64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm hppa amd64 ~ia64 s390"
 IUSE="nls emacs"
 
 DEPEND="virtual/glibc"
