@@ -1,10 +1,13 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.11 2005/03/25 17:20:17 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.12 2005/03/25 21:29:35 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> oprofile-0.8.2.ebuild:
+  added ~amd64
 
 *oprofile-0.8.2 (25 Mar 2005)
 
-  25 Mar 2005; Michał Januszewski <spock@gentoo.org> -oprofile-0.7.ebuild,
+  25 Mar 2005; MichaÅ Januszewski <spock@gentoo.org> -oprofile-0.7.ebuild,
   -oprofile-0.7.1.ebuild, +oprofile-0.8.2.ebuild:
   Version bump. Removed old ebuilds.
 
