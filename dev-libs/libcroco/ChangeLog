@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.6 2004/04/15 23:12:57 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.7 2004/04/30 13:13:08 latexer Exp $
+
+*libcroco-0.5.1 (30 Apr 2004)
+
+  30 Apr 2004; Peter Johanson <latexer@gentoo.org> libcroco-0.5.1.ebuild:
+  Bump at foser's request.
 
   15 Apr 2004; Stephen P. Becker <geoman@gentoo.org> libcroco-0.5.0.ebuild:
   Added ~mips keyword.
