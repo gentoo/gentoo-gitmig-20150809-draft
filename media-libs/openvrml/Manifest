@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 92b4a987221eb8a7fa03a5541907af43 ChangeLog 1298
+MD5 44cf90962f0c764bb7185249e51a423a openvrml-0.14.3.ebuild 2073
+MD5 6c1a44e4d02db764bf3f9258c16421ff ChangeLog 1387
 MD5 f95672507fb3470c5fba91f525cabd65 openvrml-0.11.2.ebuild 1013
-MD5 a92f5c8f0b15d1168de0fc2df546a3c0 openvrml-0.14.3.ebuild 2047
 MD5 1809eaa3f4dfdf64908639f65510c4ed files/digest-openvrml-0.11.2 67
 MD5 71922a636a8e7fa0ff7dc645a8b304ee files/digest-openvrml-0.14.3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBK/l0I1lqEGTUzyQRAvq5AJ901syVe/6VYVBY46YnEVq8buQkLQCglvp5
-ngPmJ3yY0hMLCsEfDwlILr8=
-=tX9X
------END PGP SIGNATURE-----

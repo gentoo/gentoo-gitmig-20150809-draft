@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.7 2004/08/25 02:29:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.8 2004/11/06 15:28:34 lanius Exp $
 
 IUSE="java javascript jpeg opengl png truetype truetype zlib"
 
@@ -55,7 +55,7 @@ src_compile() {
 		|| myconf="${myconf} --disable-script-node-javascript"
 
 	use java \
-		&& myconf="${myconf} --enable-script-node-java" \
+		&& myconf="${myconf} --enable-script-node-java --with-jdk=`java-config -O`" \
 		|| myconf="${myconf} --disable-script-node-java"
 
 	use opengl \
