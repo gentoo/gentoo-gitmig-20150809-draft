@@ -25,7 +25,7 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	cd ${S}/libltdl
 	autoconf || die
 }
