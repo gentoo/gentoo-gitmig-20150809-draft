@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/anacron
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/ChangeLog,v 1.9 2004/10/08 16:30:26 ka0ttic Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/ChangeLog,v 1.10 2005/01/10 06:49:58 ciaranm Exp $
+
+  10 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> anacron-2.3.ebuild:
+  Added in a message with a link to the Cron Guide, bug #77320
 
   08 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> files/anacron.rc6:
   Init script should use rather than depend on logger.

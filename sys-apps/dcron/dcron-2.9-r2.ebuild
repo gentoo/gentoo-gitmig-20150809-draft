@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.20 2004/11/11 00:42:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.21 2005/01/10 06:49:36 ciaranm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -76,5 +76,9 @@ pkg_postinst() {
 	einfo "crontab /etc/crontab"
 	echo
 	einfo "!!! That will replace root's current crontab !!!"
+	echo
+	einfo "You may wish to read the Gentoo Linux Cron Guide, which can be"
+	einfo "found online at:"
+	einfo "    http://www.gentoo.org/doc/en/cron-guide.xml"
 	echo
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.10 2004/08/24 02:43:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.11 2005/01/10 06:49:58 ciaranm Exp $
 
 inherit eutils
 
@@ -53,4 +53,10 @@ pkg_postinst() {
 	einfo "when the systems is left running for a night."
 	einfo ""
 	einfo "Update /etc/anacrontab to include what you want anacron to run."
+
+	echo
+	einfo "You may wish to read the Gentoo Linux Cron Guide, which can be"
+	einfo "found online at:"
+	einfo "    http://www.gentoo.org/doc/en/cron-guide.xml"
+	echo
 }

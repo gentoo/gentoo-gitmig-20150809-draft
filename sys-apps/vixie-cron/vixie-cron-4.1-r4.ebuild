@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.9 2005/01/02 23:56:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.10 2005/01/10 06:49:11 ciaranm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs debug
 
@@ -115,4 +115,10 @@ pkg_postinst() {
 		ewarn "   chmod 0644 /etc/pam.d/cron"
 		echo
 	fi
+
+	echo
+	einfo "You may wish to read the Gentoo Linux Cron Guide, which can be"
+	einfo "found online at:"
+	einfo "    http://www.gentoo.org/doc/en/cron-guide.xml"
+	echo
 }
