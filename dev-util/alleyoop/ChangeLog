@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/alleyoop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.1 2004/05/13 00:12:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.2 2004/05/13 09:25:10 dragonheart Exp $
+
+  13 May 2004; Daniel Black <dragonheart@gentoo.org> alleyoop-0.8.2.ebuild:
+  Reduced number of dependancies to include only those directly linked.
 
 *alleyoop-0.8.2 (13 May 2004)
 

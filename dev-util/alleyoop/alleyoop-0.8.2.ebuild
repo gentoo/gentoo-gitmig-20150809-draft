@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.8.2.ebuild,v 1.1 2004/05/13 00:12:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.8.2.ebuild,v 1.2 2004/05/13 09:25:10 dragonheart Exp $
 
 inherit gnome2
 
@@ -23,28 +23,14 @@ RDEPEND=">=dev-libs/glib-2.2
 	dev-libs/atk
 	dev-libs/expat
 	dev-libs/libxml2
-	dev-libs/openssl
 	dev-libs/popt
 	gnome-base/ORBit2
 	gnome-base/gnome-vfs
-	gnome-base/libbonobo
 	gnome-base/libbonoboui
-	gnome-base/libgnome
-	gnome-base/libgnomecanvas
-	media-libs/alsa-lib
-	media-libs/audiofile
-	media-libs/fontconfig
-	media-libs/freetype
-	media-libs/jpeg
-	media-libs/libart_lgpl
-	media-sound/esound
 	virtual/glibc
 	sys-libs/zlib
 	virtual/x11
 	x11-libs/pango"
-
-#ldd ./usr/bin/alleyoop | cut -f 3 -d ' '  | xargs -n1 qpkg -f | sort -u
-# for runtime dependancies
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
