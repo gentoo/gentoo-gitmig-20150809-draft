@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.13 2004/06/03 02:01:55 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.14 2004/06/03 12:44:32 latexer Exp $
+
+  03 Jun 2004; Peter Johanson <latexer@gentoo.org> monodoc-0.16.ebuild:
+  Moved details of upgrading to pkg_setup and a has_version check, as comment #6
+  on bug #52818 points out that the problem produces a hang, not a failure.
 
   02 Jun 2004; Peter Johanson <latexer@gentoo.org> monodoc-0.10.ebuild,
   monodoc-0.11.ebuild, monodoc-0.13.ebuild, monodoc-0.16.ebuild:
