@@ -59,6 +59,8 @@ information.</p>
 <p>
 <e>devfs</e> support is compiled-in to our standard kernels.  To enable it, add a <c>devfs=mount</c> to your <c>GRUB</c> kernel boot options so that the line looks something like <c>kernel /boot/boot/bzImage devfs=mount foo=bar</c>  The kernel will then mount the <path>/dev</path> <e>devfs</e> filesystem automatically at boot-time.
 </p>
+<note>As of Gentoo Linux 1.0-rc5, <e>devfs</e> is automatically enabled
+at boot-time; <c>devfs=mount</c> is no longer needed.</note>
 	</body>
 	</section>
 	<section>
@@ -165,6 +167,16 @@ the various configuration files is as follows (highest first):
 			<li><path>/etc/make.profile/make.defaults</path>, for profile-specific defaults</li>
 			<li><path>/etc/make.globals</path>, for global defaults (settings not specified in any other place come from here)</li>
 		</ol></p></body>
+	</section>
+	
+	<section>
+		<title>Is there a way to upgrade all installed packages
+		a la <e>apt-get upgrade</e> or <e>make World</e>?</title>
+		<body><p>Not yet, although such functionality is
+		being worked upon.  For the moment you can use
+		<c>emerge --pretend update</c> to list upgradable
+		packages, but the actual upgrading has to be done
+		package by package.</p></body>
 	</section>
 
 	<section>
