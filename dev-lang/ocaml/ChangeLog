@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.18 2003/10/16 19:24:18 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.19 2004/02/03 00:08:33 mattam Exp $
+
+  03 Feb 2004; Matthieu Sozeau <mattam@gentoo.org> ocaml-3.06-r2.ebuild:
+  Mark stable/tested on ppc.
 
 *ocaml-3.07-r1 (17 Oct 2003)
 
