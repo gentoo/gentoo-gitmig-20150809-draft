@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94.ebuild,v 1.1 2004/02/24 18:39:13 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94.ebuild,v 1.2 2004/03/01 19:51:05 cretin Exp $
 
 inherit eutils
 
@@ -39,14 +39,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-
-	# Remove stuff we do not use ...
-	rm -f ${D}/usr/bin/eu-ld
-	rm -f ${D}/usr/include/elfutils/lib{asm,dw,dwarf}.h
-	rm -f ${D}/usr/lib/lib{asm,dw}-${PV}.so
-	rm -f ${D}/usr/lib/lib{asm,dw}.so*
-	rm -f ${D}/usr/lib/lib{asm,dw,dwarf}.a
-	rm -rf ${D}/usr/usr
 
 	dodoc AUTHORS COPYING ChangeLog NEWS NOTES README THANKS TODO
 }
