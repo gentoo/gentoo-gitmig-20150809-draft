@@ -71,6 +71,22 @@ elog() {
 }
 
 
+#
+# Sanity check
+#
+
+if [ -z "${PORTDIR}" ]; then
+	eerror "Unable to proceed. Can not find PORTDIR. Make sure the command:"
+	eerror " "
+	eerror "  portageq portdir"
+	eerror " "
+	eerror "returns a value. If it doesn't, make sure you have updated to"
+	eerror "latest portage version."
+	eerror " "
+	eerror "Report bugs to http://bugs.gentoo.org/"
+	exit 1
+fi	
+
 
 # 
 #

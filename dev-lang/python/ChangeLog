@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.49 2003/11/12 15:37:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.50 2003/11/12 18:49:57 liquidx Exp $
+
+  12 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.2.2-r1.ebuild,
+  python-2.2.3-r2.ebuild, python-2.2.3-r3.ebuild, python-2.2.3-r4.ebuild,
+  python-2.3.2-r1.ebuild, python-2.3.2.ebuild, files/python-updater:
+  cleanup and add warning on python-updated or PORTDIR is not set
 
   12 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> python-2.2.3-r5.ebuild :
   Add a patch that adds CFLAGSFORSHARED variable to some extra modules defined in the Makefile.
