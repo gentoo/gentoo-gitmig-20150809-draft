@@ -20,7 +20,7 @@ src_unpack() {
 	cd ${S}
 }
 src_compile() {
-	addpredict /dev/ptys/*
+	addpredict /dev/pty/*
 	
 	econf \
 		--with-sys-screenrc=/etc/screen/screenrc \
