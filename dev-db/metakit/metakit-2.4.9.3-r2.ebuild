@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.9 2004/06/24 21:56:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.10 2004/07/01 21:49:15 eradicator Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.equi4.com/pub/mk/${P}.tar.gz"
 
 LICENSE="MetaKit"
 SLOT="0"
-KEYWORDS="x86 ~amd64 sparc s390 hppa"
+KEYWORDS="x86 amd64 sparc s390 hppa"
 IUSE="python tcltk"
 
 DEPEND=">=sys-apps/sed-4

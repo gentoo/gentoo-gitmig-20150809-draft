@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.21 2004/06/24 21:56:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.22 2004/07/01 21:49:15 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  metakit-2.4.9.3-r2.ebuild:
+  Stable amd64.
 
   08 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> metakit-2.4.9.2.ebuild,
   metakit-2.4.9.3-r1.ebuild, metakit-2.4.9.3.ebuild:
