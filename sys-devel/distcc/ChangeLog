@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.121 2004/09/17 19:11:18 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.122 2004/10/05 15:50:15 lisa Exp $
+
+  05 Oct 2004; Lisa Seelye <lisa@gentoo.org> -distcc-2.14-r1.ebuild:
+  Removing 2.14 due to security concerns bug #66424
 
 *distcc-2.16-r2 (17 Sep 2004)
 
