@@ -699,10 +699,6 @@ dev-lang/tcl-tk
 # not fit for release (working on it though)
 app-cdr/cddump
 
-# spider@gentoo.org 23 Apr 2002
-# Development series
-=net-mail/balsa-1.3.4
-
 #seemant@gentoo.org 24 Apr 2002
 # people forget to --clean rsync, so this will need to be masked for a while
 =media-video/avifile-0.7.20020412
