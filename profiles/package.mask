@@ -681,15 +681,6 @@ dev-lang/tcl-tk
 # Doesn't seem to work with xfs :-(
 >=sys-apps/grub-0.91
 
-# Arcady Genkin <agenkin@thpoon.com> (May 2, 2002)
-# These need to be masked because portage thinks that 0.9.0.1_beta10
-# newer than 0.9.0_pre1, which is not the case here.
-# NOTE: don't use ~ deps in package masks because they break 1.8.8 portage and aren't
-# correct anyway -- drobbins, 02 May 2002
-=media-sound/alsa-utils-0.9.0.1_beta10
-=media-libs/alsa-lib-0.9.0.1_beta10
-=media-libs/alsa-oss-0.9.0.1_beta10
-
 #tod@gentoo.org, 8 Feb 2002
 #buggy version, use 0.1.1 instead
 =dev-python/anygui-0.1
