@@ -10,3 +10,4 @@ move net-www/memcached net-misc/memcached
 move net-misc/freeswan net-misc/openswan
 move dev-lisp/gauche-gtk dev-scheme/gauche-gtk
 move net-irc/ptlink net-irc/ptlink-ircd
+move dev-lisp/gauche-gl dev-scheme/gauche-gl
