@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/aaindex
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/ChangeLog,v 1.2 2004/12/24 02:20:20 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/ChangeLog,v 1.3 2005/01/14 22:47:33 j4rg0n Exp $
+
+  14 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> aaindex-6.0.ebuild:
+  Stable ppc-macos.
 
 *aaindex-6.0 (23 Dec 2004)
 
