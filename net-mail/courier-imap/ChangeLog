@@ -1,7 +1,13 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.6 2002/06/13 18:58:04 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.7 2002/06/14 22:04:22 nitro Exp $
 
+
+*courier-imap-1.4.5-r2 (14 Jun 2002)
+
+  14 Jun 2002; Kyle Manna <nitro@gentoo.org> :
+
+    Forgot to install /etc/init.d/authdaemond
 
 *courier-imap-1.4.5-r1 (8 Jun 2002)
 
