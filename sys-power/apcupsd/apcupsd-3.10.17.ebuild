@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.17.ebuild,v 1.1 2005/03/28 18:31:43 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.17.ebuild,v 1.2 2005/03/28 18:39:11 tantive Exp $
 
 inherit eutils depend.apache
 
@@ -16,14 +16,13 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="doc snmp usb apache2 cgi threads ncurses nls"
 
 DEPEND="virtual/libc
-	virtual/mta
 	snmp? ( net-analyzer/net-snmp )
 	cgi? ( >=media-libs/gd-1.8.4
 		net-www/apache )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )"
 RDEPEND="${DEPEND}
-	usb? ( sys-apps/hotplug )"
+	virtual/mta"
 
 XPIDDIR=/var/run
 XLOGDIR=/var/log
