@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/winex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.28 2003/06/24 18:22:31 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.29 2003/07/17 04:44:47 pfeifer Exp $
+
+  16 Jul 2003; pfeifer <pfeifer@gentoo.org> All winex ebuilds:
+  added !>sys-libs/glibc-2.3.2 to ebuild depend since it does not work
+  with sys-libs/glibc-2.3.2
 
   24 Jun 2003; coronalvr <coronalvr@gentoo.org> winex-20030328.ebuild:
   cleanups and minor fixes
