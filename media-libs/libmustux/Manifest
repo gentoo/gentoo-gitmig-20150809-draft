@@ -1,13 +1,16 @@
-MD5 2f54da302a85f03ed6b573b4bb53bc9d libmustux-0.16.0.ebuild 989
-MD5 5071434f518eabe54aa86aab8659053c libmustux-0.17.5.ebuild 861
-MD5 15bd0db19c5e19fcc83adbf25bb7f55b libmustux-0.20.0.ebuild 824
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7ef97339c65923224d08376b59ad6444 libmustux-0.20.1.ebuild 824
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 72de03bf90b30b009d46e22cb1323b20 ChangeLog 2715
+MD5 2986671948bdc14bf0717eaabff3c983 ChangeLog 2923
 MD5 70e5551735774133c3fdd1bfc14f9fc0 libmustux-0.20.2.ebuild 1045
-MD5 7514c5bcfb2fe30b6d14c9fdd04bae9a files/digest-libmustux-0.16.0 68
-MD5 ef3ef2ffeec56ba14dda1f266a6e4c13 files/digest-libmustux-0.17.5 68
-MD5 763510bc391ac7485eb6af4aa4c01412 files/digest-libmustux-0.20.0 68
 MD5 cf5082c812a4848bacd63b5b8c0338f2 files/digest-libmustux-0.20.1 68
-MD5 fef0b54e949cfb0fe28896608d517516 files/libmustux-0.16.0-alsalib-fix.patch 480
 MD5 3c81d6bb6e17103411e654d928297b31 files/digest-libmustux-0.20.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdr4IArHZZzCEUG0RAshBAKCBCk59JaCitfRi9O3fepZBoBjzqQCfSEla
+z85XJaLyfPstvB0obV5AqRo=
+=x3ys
+-----END PGP SIGNATURE-----

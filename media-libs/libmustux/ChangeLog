@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmustux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.19 2004/09/01 17:13:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.20 2004/10/20 19:34:47 eradicator Exp $
+
+  20 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/libmustux-0.16.0-alsalib-fix.patch, -libmustux-0.16.0.ebuild,
+  -libmustux-0.17.5.ebuild, -libmustux-0.20.0.ebuild:
+  Removing old versions.
 
   01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libmustux-0.20.2.ebuild:
