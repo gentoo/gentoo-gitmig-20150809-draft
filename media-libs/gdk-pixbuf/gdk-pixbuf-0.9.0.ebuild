@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.9.0.ebuild,v 1.7 2000/11/22 12:23:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.9.0.ebuild,v 1.8 2000/12/03 20:28:04 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -24,7 +24,7 @@ src_install() {
 
 pkg_postinst() {
 
-  ldconfg -r ${ROOT}
+  ldconfig -r ${ROOT}
 
 }
 
