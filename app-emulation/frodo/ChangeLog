@@ -1,0 +1,13 @@
+# ChangeLog for app-emulation/frodo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/ChangeLog,v 1.1 2003/04/17 09:31:22 absinthe Exp $
+
+*frodo-4.1 (17 Apr 2003)
+
+  17 Apr 2003; Dylan Carlson <absinthe@gentoo.org> frodo-4.1.ebuild,
+  files/frodo-4.1-gentoo.diff:
+  Initial import. This build isn't the cleanest thing, but it's mostly
+  functional. I need some volunteers to help test and improve it.  Please
+  send in bug reports and patches to http://bugs.gentoo.org.
+
+  x86 ppc and sparc masked for testing.
