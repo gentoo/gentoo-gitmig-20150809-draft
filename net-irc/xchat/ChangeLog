@@ -1,7 +1,12 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.18 2002/09/06 04:36:42 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.19 2002/09/30 04:52:03 rphillips Exp $
 
+*xchat-1.8.10-r1 (29 Sep 2002)
+
+  29 Sep 2002; Ryan Phillips <rphillips@gentoo.org> xchat-1.8.10-r1.ebuild :
+
+  Bret Towe reimplemented the xchat perl/gnome ebuild
 
 *xchat-1.8.10 (05 Sep 2002) 
   05 Sep 2002; Spider <spider@gentoo.org> xchat-1.8.10.ebuild :
