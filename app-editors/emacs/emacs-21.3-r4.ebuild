@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.3 2004/07/18 03:17:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r4.ebuild,v 1.4 2004/09/07 14:29:18 usata Exp $
 
 inherit flag-o-matic eutils alternatives
 
@@ -29,7 +29,8 @@ RDEPEND="sys-libs/ncurses
 		gnome? ( gnome-base/gnome-desktop )
 		)
 	)
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	!nosendmail ( virtual/mta )"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
@@ -119,6 +120,12 @@ update-alternatives() {
 
 pkg_postinst() {
 	update-alternatives
+	if use nosendmail ; then
+	ewarn
+	ewarn "You disabled sendmail support for Emacs. If you will install any MTA"
+	ewarn "you need to recompile Emacs after that. See bug #11104."
+	ewarn
+	fi
 }
 
 pkg_postrm() {
