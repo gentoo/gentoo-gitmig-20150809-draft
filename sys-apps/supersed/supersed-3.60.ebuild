@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.7 2004/07/01 21:39:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.60.ebuild,v 1.8 2004/07/07 23:45:42 kloeri Exp $
 
 IUSE="nls static"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://queen.rett.polimi.it/~paolob/seders/ssed/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 mips sparc"
+KEYWORDS="x86 amd64 mips sparc ~alpha"
 
 DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.45-r3
