@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.7 2004/09/15 23:10:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.8 2004/10/03 13:00:32 usata Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -39,15 +39,15 @@ font_xfont_config() {
 	if use X ;
 	then
 		einfo "Creating fonts.scale & fonts.dir..."
-		mkfontscale ${D}/usr/share/fonts/${PN}
+		mkfontscale "${D}/usr/share/fonts/${PN}"
 		mkfontdir \
 			-e /usr/share/fonts/encodings \
 			-e /usr/share/fonts/encodings/large \
 			-e /usr/X11R6/$(get_libdir)/X11/fonts/encodings \
-			${D}/usr/share/fonts/${PN}
-		if [ -e ${FONT_S}/fonts.alias ] ;
+			"${D}/usr/share/fonts/${PN}"
+		if [ -e "${FONT_S}/fonts.alias" ] ;
 		then
-			doins ${FONT_S}/fonts.alias
+			doins "${FONT_S}/fonts.alias"
 		fi
 	fi
 
@@ -57,7 +57,7 @@ font_xft_config() {
 
 	# create fontconfig cache
 	einfo "Creating fontconfig cache..."
-	HOME="/root" /usr/bin/fc-cache -f ${D}/usr/share/fonts/${PN}
+	HOME="/root" /usr/bin/fc-cache -f "${D}/usr/share/fonts/${PN}"
 
 }
 
@@ -69,9 +69,9 @@ font_src_install() {
 
 	local suffix
 
-	cd ${FONT_S}
+	cd "${FONT_S}"
 
-	insinto /usr/share/fonts/${PN}
+	insinto "/usr/share/fonts/${PN}"
 	
 	for suffix in ${FONT_SUFFIX}; do
 		doins *.${suffix}
@@ -82,11 +82,11 @@ font_src_install() {
 	font_xfont_config
 	font_xft_config
 
-	cd ${S}
+	cd "${S}"
 	# try to install some common docs
 	DOCS="${DOCS} COPYRIGHT README NEWS"
 	for f in ${DOCS}; do
-		[[ -e ${f} ]] && dodoc ${f}
+		[[ -e "${f}" ]] && dodoc "${f}"
 	done
 }
 
