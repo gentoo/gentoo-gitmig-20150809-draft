@@ -1,0 +1,11 @@
+# ChangeLog for games-util/agistudio
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.1 2004/09/12 03:45:23 mr_bones_ Exp $
+
+*agistudio-1.2.1 (11 Sep 2004)
+
+  11 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +agistudio-1.2.1.ebuild:
+  initial commit - ebuild based on the one provided by Adrian Fruehwirth via bug
+  #62815
+
