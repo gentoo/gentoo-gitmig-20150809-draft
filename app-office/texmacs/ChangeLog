@@ -1,8 +1,14 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.4 2002/10/24 02:45:40 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.5 2002/11/07 07:28:41 seemant Exp $
 
 *texmacs-1.0.0.19 (23 Oct 2002)
+
+  06 Nov 2002; Seemant Kulleen <seemant@gentoo.org> texmacs-1.0.0.19.ebuild :
+
+  Changed to use econf so things get installed in the correct locations 
+  and custom CXXFLAGS settings.  Closes bug #10220 by:
+  jap1@ionet.net (Jacob Perkins)
 
   23 Oct 2002; Matthew Turk <satai@gentoo.org> :
 
