@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.8 2004/06/03 15:39:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.9 2004/06/07 16:51:43 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.perl.org/"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 s390"
 IUSE="berkdb doc gdbm threads"
 
 DEPEND="sys-apps/groff
@@ -99,6 +99,7 @@ src_unpack() {
 src_compile() {
 	# Arm and -O do not mix :)
 	use arm && replace-flags -O? -O1
+	use ppc && replace-flags -O? -O1
 	# Perl has problems compiling with -Os in your flags
 	replace-flags "-Os" "-O2"
 	# This flag makes compiling crash in interesting ways
