@@ -9,8 +9,8 @@
 # Additional code thanks to:
 #	      Josh Goebel <dreamer@firesedge.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.24 2003/06/13 07:15:27 rajiv Exp $
-ID='$Id: qpkg,v 1.24 2003/06/13 07:15:27 rajiv Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.25 2003/06/22 20:09:48 agriffis Exp $
+ID='$Id: qpkg,v 1.25 2003/06/22 20:09:48 agriffis Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -502,9 +502,9 @@ for p in ${ipak} ${upak} -;do
 	
 done | (
 	if [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o "${query}" -o "${mask}" -o ${verb} -gt 0 \) ]; then
-		sed -e "s:-r[0-9]\+$::" -e "s:-[0-9][^-]*$::"|sort -k2|uniq -1
+		sed -e "s:-r[0-9]\+$::" -e "s:-[0-9][^-]*$::"|sort -k2|uniq -f1
 	elif [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o "${query}" -o "${mask}" -o ${verb} -lt 2 \) ]; then
-		sort -k2|uniq -1
+		sort -k2|uniq -f1
 	else
 		cat
 	fi | sed \
