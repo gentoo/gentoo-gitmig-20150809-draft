@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r2.ebuild,v 1.3 2002/07/11 06:30:58 drobbins Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r2.ebuild,v 1.4 2002/07/22 13:27:39 aliz Exp $
 
 P0N=Eterm
 S=${WORKDIR}/${P0N}-${PV}
@@ -17,6 +17,7 @@ DEPEND="virtual/glibc
 		virtual/x11
 		>=x11-libs/libast-0.4-r1
 		>=media-libs/imlib2-1.0.4-r1"
+RDEPEND=$DEPEND
 
 src_unpack() {
 	unpack ${P0N}-${PV}.tar.gz
@@ -25,22 +26,19 @@ src_unpack() {
 }
 
 src_compile() {
-
-    cd ${S}
+	cd ${S}
 	# always disable mmx because binutils 2.11.92+ seems to be broken for this package
-    ./configure --disable-mmx --prefix=/usr --host=${CHOST} \
+	./configure --disable-mmx --prefix=/usr --host=${CHOST} \
 	--with-imlib || die
-    emake
-
+	emake
 }
 
 src_install () {
-
-    cd ${S}
+	cd ${S}
 	dodir /usr/share/terminfo
-    try make DESTDIR=${D} TIC="tic -o ${D}/usr/share/terminfo" install
-    dodoc COPYING ChangeLog README ReleaseNotes
-    dodoc bg/README.backgrounds
+	make DESTDIR=${D} TIC="tic -o ${D}/usr/share/terminfo" install
+	dodoc COPYING ChangeLog README ReleaseNotes
+	dodoc bg/README.backgrounds
 	cd ${D}/usr/share/Eterm/themes
 	unpack glass-Eterm-theme.tar.gz
 }
