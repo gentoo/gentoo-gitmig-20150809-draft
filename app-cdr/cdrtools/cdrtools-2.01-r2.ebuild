@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r2.ebuild,v 1.1 2005/03/01 14:59:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r2.ebuild,v 1.2 2005/03/01 20:04:52 pylon Exp $
 
 inherit eutils gcc gnuconfig versionator
 
@@ -31,14 +31,18 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.01-scsi-remote.patch || die "Can't apply SCSI-remote patch"
 
 	# UTF-8 support, see Bug #28369
-	use unicode && epatch ${FILESDIR}/mkisofs-iconv-10.patch
+	if use unicode; then
+		epatch ${FILESDIR}/mkisofs-iconv-10.patch || die "Can't apply utf-8 patch"
+	fi
 
 	# Add support for On-The-Fly AES encryption
 	# http://burbon04.gmxhome.de/linux/CDREncryption.html
-	use crypt && epatch ${DISTDIR}/${PN}-${MY_CRYPT_VERS}.diff.gz || die "Can't apply encryption patch"
+	if use crypt; then
+		epatch ${DISTDIR}/${PN}-${MY_CRYPT_VERS}.diff.gz || die "Can't apply encryption patch"
+	fi
 
 	cd ${S}/DEFAULTS
-	use ppc-macos && MYARCH="mac-os10" || MYARCH="linux"
+	( use ppc-macos && MYARCH="mac-os10" ) || MYARCH="linux"
 	sed -i "s:/opt/schily:/usr:g" Defaults.${MYARCH}
 	sed -i "s:/usr/src/linux/include::g" Defaults.${MYARCH}
 
