@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/arch-landry
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/arch-landry/ChangeLog,v 1.1 2002/11/25 22:58:40 karltk Exp $
+
+*arch-landry-1.0_pre10 (25 Nov 2002)
+
+  25 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> arch-landry-1.0_pre10.ebuild files/digest-arch-landry-1.0_pre10 :
+  Initial import.  Ebuild submitted by Clemens Oertel
+  <gentoo-bugzilla@kriegste.net>. Fixes #10647.
+
