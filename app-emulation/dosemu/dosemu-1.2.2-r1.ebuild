@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.1 2005/01/10 09:52:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.2 2005/02/13 19:39:20 hanno Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myflags="--with-fdtarball=none --sysconfdir=/etc/dosemu/ \
+	local myflags="--sysconfdir=/etc/dosemu/ \
 	--with-mandir=/usr/share/man/"
 
 	use X || myflags="${myflags} --with-x=no"
