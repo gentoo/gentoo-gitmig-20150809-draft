@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.5-r1.ebuild,v 1.1 2005/02/14 20:57:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.5-r1.ebuild,v 1.2 2005/02/20 18:48:45 gmsoft Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc resperl debug postgres vmdbmysql vmdbpostgres"
 
@@ -21,7 +21,7 @@ S_SOUNDS=${WORKDIR}/${PN}-sounds-${SOUNDS_VERSION}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~hppa"
 
 DEPEND="dev-libs/newt
 	media-sound/mpg123
@@ -122,6 +122,9 @@ src_unpack() {
 
 	# fix include path for speex >= 1.1.0
 	epatch ${FILESDIR}/1.0.0/${P}-speex.diff
+
+	# hppa build fix
+	epatch ${FILESDIR}/1.0.0/${P}-hppa.patch
 
 	#
 	# database voicemail support
