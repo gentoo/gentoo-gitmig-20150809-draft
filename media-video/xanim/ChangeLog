@@ -1,6 +1,12 @@
 # ChangeLog for media-video/xanim
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.14 2003/11/29 23:13:22 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/ChangeLog,v 1.15 2004/03/02 23:44:35 agriffis Exp $
+
+  02 Mar 2004; <agriffis@gentoo.org> xanim-2.80.1-r4.ebuild:
+  Do a cleanup of the arch support in this ebuild so that ia64 can build. These
+  changes obviate files/Makefile and files/Makefile.amd64 and might even allow
+  hppa and mips to build without changes to the ebuild. I don't think I broke
+  anything
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> xanim-2.80.1-r4.ebuild:
   mark stable on amd64

@@ -1,137 +1,111 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.20 2004/02/22 22:34:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.21 2004/03/02 23:44:35 agriffis Exp $
 
 inherit flag-o-matic
 
+DESCRIPTION="program for playing a wide variety of animation, audio and video formats"
+HOMEPAGE="http://smurfland.cit.buffalo.edu/xanim/home.html"
 SLOT="0"
 LICENSE="XAnim"
-KEYWORDS="x86 ppc sparc alpha -mips -hppa amd64 -ia64"
+KEYWORDS="x86 ppc sparc alpha -mips -hppa amd64 ia64"
 
-_XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
-_XA_CVID_SPARC=xa2.0_cvid_sparcELF.o
-_XA_IV32_SPARC=xa2.0_iv32_sparcELF.o
-_XA_SPARC_EXT=.Z
+RDEPEND="virtual/x11
+	>=sys-libs/zlib-1.1.3"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.0.5"
+
+MY_P=${PN}${PV//.}
+S=${WORKDIR}/${MY_P}
 
 _XA_CYUV_ALPHA=xa1.0_cyuv_linuxAlpha.o
 _XA_CVID_ALPHA=xa2.0_cvid_linuxAlpha.o
 _XA_IV32_ALPHA=xa2.0_iv32_linuxAlpha.o
 _XA_ALPHA_EXT=.gz
 
-_XA_CYUV_I386=xa1.0_cyuv_linuxELFg21.o
-_XA_CVID_I386=xa2.0_cvid_linuxELFg21.o
-_XA_IV32_I386=xa2.1_iv32_linuxELFg21.o
-_XA_I386_EXT=.gz
-
 _XA_CYUV_PPC=xa1.0_cyuv_linuxPPC.o
 _XA_CVID_PPC=xa2.0_cvid_linuxPPC.o
 _XA_IV32_PPC=xa2.0_iv32_linuxPPC.o
 _XA_PPC_EXT=.Z
 
-case $ARCH in
-	sparc)
-			_XA_CYUV=$_XA_CYUV_SPARC
-			_XA_CVID=$_XA_CVID_SPARC
-			_XA_IV32=$_XA_IV32_SPARC
-			_XA_EXT=$_XA_SPARC_EXT
-			_XA_UNCOMPRESS=uncompress
-			;;
-	alpha)
-			_XA_CYUV=$_XA_CYUV_ALPHA
-			_XA_CVID=$_XA_CVID_ALPHA
-			_XA_IV32=$_XA_IV32_ALPHA
-			_XA_EXT=$_XA_ALPHA_EXT
-			_XA_UNCOMPRESS=gunzip
-			;;
-	ppc)
-			_XA_CYUV=$_XA_CYUV_PPC
-			_XA_CVID=$_XA_CVID_PPC
-			_XA_IV32=$_XA_IV32_PPC
-			_XA_EXT=$_XA_PPC_EXT
-			_XA_UNCOMPRESS=uncompress
-			;;
-	amd64)
-			_XA_EXT=$_XA_I386_EXT
-			_XA_UNCOMPRESS=gunzip
-			;;
-	*)
-			_XA_CYUV=$_XA_CYUV_I386
-			_XA_CVID=$_XA_CVID_I386
-			_XA_IV32=$_XA_IV32_I386
-			_XA_EXT=$_XA_I386_EXT
-			_XA_UNCOMPRESS=gunzip
-			;;
-esac
+_XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
+_XA_CVID_SPARC=xa2.0_cvid_sparcELF.o
+_XA_IV32_SPARC=xa2.0_iv32_sparcELF.o
+_XA_SPARC_EXT=.Z
 
-MY_P=${PN}${PV//.}
-S=${WORKDIR}/${MY_P}
-DESCRIPTION="XAnim"
-HOMEPAGE="http://smurfland.cit.buffalo.edu/xanim/home.html"
-XANIM_SRC="mirror://gentoo/"
-SRC_URI="${XANIM_SRC}/${MY_P}.tar.gz
-	sparc? ${XANIM_SRC}/${_XA_CYUV_SPARC}${_XA_SPARC_EXT}
-	sparc? ${XANIM_SRC}/${_XA_CVID_SPARC}${_XA_SPARC_EXT}
-	sparc? ${XANIM_SRC}/${_XA_IV32_SPARC}${_XA_SPARC_EXT}
-	alpha? ${XANIM_SRC}/${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT}
-	alpha? ${XANIM_SRC}/${_XA_CVID_ALPHA}${_XA_ALPHA_EXT}
-	alpha? ${XANIM_SRC}/${_XA_IV32_ALPHA}${_XA_ALPHA_EXT}
-	ppc? ${XANIM_SRC}/${_XA_CYUV_PPC}${_XA_PPC_EXT}
-	ppc? ${XANIM_SRC}/${_XA_CVID_PPC}${_XA_PPC_EXT}
-	ppc? ${XANIM_SRC}/${_XA_IV32_PPC}${_XA_PPC_EXT}
-	x86? ${XANIM_SRC}/${_XA_CYUV_I386}${_XA_I386_EXT}
-	x86? ${XANIM_SRC}/${_XA_CVID_I386}${_XA_I386_EXT}
-	x86? ${XANIM_SRC}/${_XA_IV32_I386}${_XA_I386_EXT}"
+_XA_CYUV_X86=xa1.0_cyuv_linuxELFg21.o
+_XA_CVID_X86=xa2.0_cvid_linuxELFg21.o
+_XA_IV32_X86=xa2.1_iv32_linuxELFg21.o
+_XA_X86_EXT=.gz
 
-DEPEND="virtual/x11
-	>=sys-libs/zlib-1.1.3
-	>=sys-apps/sed-4.0.5
-	ppc? ( app-arch/ncompress )
-	sparc? ( app-arch/ncompress )"
+# This might leave _XA_EXT empty and that's fine, just indicates no
+# particular support for a given arch
+eval _XA_EXT=\$_XA_`echo $ARCH | tr a-z A-Z`_EXT
+eval _XA_CVID=\$_XA_CVID_`echo $ARCH | tr a-z A-Z`
+eval _XA_CYUV=\$_XA_CYUV_`echo $ARCH | tr a-z A-Z`
+eval _XA_IV32=\$_XA_IV32_`echo $ARCH | tr a-z A-Z`
+
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz
+	sparc? (
+		mirror://gentoo/${_XA_CVID_SPARC}${_XA_SPARC_EXT}
+		mirror://gentoo/${_XA_CYUV_SPARC}${_XA_SPARC_EXT}
+		mirror://gentoo/${_XA_IV32_SPARC}${_XA_SPARC_EXT}
+	)
+	alpha? (
+		mirror://gentoo/${_XA_CVID_ALPHA}${_XA_ALPHA_EXT}
+		mirror://gentoo/${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT}
+		mirror://gentoo/${_XA_IV32_ALPHA}${_XA_ALPHA_EXT}
+	)
+	ppc? (
+		mirror://gentoo/${_XA_CVID_PPC}${_XA_PPC_EXT}
+		mirror://gentoo/${_XA_CYUV_PPC}${_XA_PPC_EXT}
+		mirror://gentoo/${_XA_IV32_PPC}${_XA_PPC_EXT}
+	)
+	x86? (
+		mirror://gentoo/${_XA_CVID_X86}${_XA_X86_EXT}
+		mirror://gentoo/${_XA_CYUV_X86}${_XA_X86_EXT}
+		mirror://gentoo/${_XA_IV32_X86}${_XA_X86_EXT}
+	)"
 
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	if [ "$ARCH" != "amd64" ]
-	then
-		mkdir ${S}/mods
-		cd ${S}/mods
-		cp ${DISTDIR}/${_XA_CYUV}${_XA_EXT} .
-		$_XA_UNCOMPRESS ${_XA_CYUV}${_XA_EXT}
-		cp ${DISTDIR}/${_XA_CVID}${_XA_EXT} .
-		$_XA_UNCOMPRESS ${_XA_CVID}${_XA_EXT}
-		cp ${DISTDIR}/${_XA_IV32}${_XA_EXT} .
-		$_XA_UNCOMPRESS ${_XA_IV32}${_XA_EXT}
+	if [[ -n ${_XA_EXT} ]]; then
+		mkdir ${S}/mods || die
+		cd ${S}/mods || die
+		unpack ${_XA_CVID}${_XA_EXT}
+		unpack ${_XA_CYUV}${_XA_EXT}
+		unpack ${_XA_IV32}${_XA_EXT}
 	fi
-
-	# -O higher than -O2 breaks for GCC3.1
-	filter-flags -finline-functions
-	filter-flags "-O?" "-O2"
-	#CFLAGS=${CFLAGS//-O[0-9]/-O2}
-	if [ "$ARCH" = "amd64" ]
-	then
-		sed -e "s:-O2:${CFLAGS}:" ${FILESDIR}/Makefile.amd64 > ${S}/Makefile
-	else
-		sed -e "s:-O2:${CFLAGS}:" ${FILESDIR}/Makefile > ${S}/Makefile
-	fi
-
 }
 
 src_compile() {
-	if [ "$ARCH" = "amd64" ]
-	then
-		make || die
-	else
-		make XA_IV32_LIB=mods/${_XA_CYUV} XA_CVID_LIB=mods/${_XA_CVID} \
-			XA_CYUV_LIB=mods/${_XA_IV32} || die
-	fi
+	# -O higher than -O2 breaks for GCC3.1
+	filter-flags "-O?" "-O2"
+	filter-flags -finline-functions
+
+	# Set XA_DLL_PATH even though we statically link the mods, I guess
+	# this provides extensibility
+	make CC="${CC}" OPTIMIZE="${CFLAGS}" \
+		XA_DLL_DEF="-DXA_DLL -DXA_PRINT" XA_DLL_PATH=/usr/lib/xanim/mods \
+		${_XA_EXT:+ \
+			XA_IV32_LIB="mods/${_XA_CVID}" \
+			XA_CYUV_LIB="mods/${_XA_CYUV}" \
+			XA_CVID_LIB="mods/${_XA_IV32}" }
 }
 
 src_install () {
 	into /usr
 	dobin xanim
 	newman docs/xanim.man xanim.1
-	insinto /usr/lib/xanim/mods
-	doins mods/*
 	dodoc README
 	dodoc docs/README.* docs/*.readme docs/*.doc
+
+	# I don't know why we're installing these modules when they're
+	# statically linked, but whatever...
+	insinto /usr/lib/xanim/mods
+	doins mods/${_XA_CVID}
+	doins mods/${_XA_CYUV}
+	doins mods/${_XA_IV32}
 }
