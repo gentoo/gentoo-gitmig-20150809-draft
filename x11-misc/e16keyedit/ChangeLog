@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/e16keyedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/ChangeLog,v 1.8 2004/06/28 19:51:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/ChangeLog,v 1.9 2004/07/04 19:09:13 slarti Exp $
+
+  04 Jul 2004; Tom Martin <slarti@gentoo.org> e16keyedit-0.2.ebuild:
+  Added to ~amd64.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> e16keyedit-0.2.ebuild:
   add sed-4 dep

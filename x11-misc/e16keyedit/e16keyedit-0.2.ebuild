@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.2.ebuild,v 1.18 2004/06/28 19:51:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.2.ebuild,v 1.19 2004/07/04 19:09:13 slarti Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ IUSE=""
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~amd64"
 
 DEPEND="virtual/x11
 	>=x11-wm/enlightenment-0.16
