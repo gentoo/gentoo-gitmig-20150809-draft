@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.8.ebuild,v 1.1 2005/01/23 07:02:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.8.ebuild,v 1.2 2005/02/03 21:37:29 eradicator Exp $
 
-IUSE="static jack doc"
+IUSE="jack doc"
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_compile() {
 	# needed to avoid gcc looping internaly
 	use hppa && export CFLAGS="-O1 -pipe"
 
-	econf $(use_enable static) --enable-shared=yes || die
+	econf --enable-static=yes --enable-shared=yes || die
 	emake || die
 
 	if use doc; then
@@ -42,15 +42,11 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	preserve_old_lib /usr/$(get_libdir)/libasound.so.1
-
 	dodoc ChangeLog COPYING TODO
 	use doc && dohtml -r doc/doxygen/html/*
 }
 
 pkg_postinst() {
-	preserve_old_lib_notify /usr/$(get_libdir)/libasound.so.1
-
 	einfo "If you are using an emu10k1 based sound card, and you are upgrading"
 	einfo "from a version of alsalib <1.0.6, you will need to recompile packages"
 	einfo "that link against alsa-lib due to some ABI changes between 1.0.5 and"
