@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.1.6.ebuild,v 1.2 2003/07/01 22:07:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.1.6.ebuild,v 1.3 2003/07/01 22:08:29 mholzer Exp $
 
-IUSE="kde eutils"
+IUSE="kde"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Graphical CVS Client"
