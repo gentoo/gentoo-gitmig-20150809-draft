@@ -1,9 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-3.1.9-r1.ebuild,v 1.1 2000/08/08 13:20:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-3.1.9-r1.ebuild,v 1.2 2000/08/13 05:28:48 drobbins Exp $
 
-P=gimp-print-3.1.9
 A=print-3.1.9.tar.gz
 S=${WORKDIR}/print-3.1.9
 CATEGORY="media-gfx"

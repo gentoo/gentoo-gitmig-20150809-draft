@@ -133,8 +133,15 @@ digest_check() {
     if [ ! -e ${FILESDIR}/digest ]
     then
 	echo '!!!'" No message digest file found."
-	echo '!!!'" Maintainer: ebuild digest to update message digests."
-	return 1
+	if [ -n "$MAINTAINER" ]
+	then
+		echo '>>> Maintainer mode: auto-computing digests.'
+		dyn_digest
+		return 0
+	else
+		echo '!!!'" Maintainer: ebuild digest to update message digests."
+		return 1
+	fi
     fi
     if [ ! -e ${DISTDIR}/${1} ]
     then

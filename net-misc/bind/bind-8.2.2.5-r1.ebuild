@@ -1,9 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2-P5-r1.ebuild,v 1.1 2000/08/09 22:58:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2.5-r1.ebuild,v 1.1 2000/08/13 05:28:48 drobbins Exp $
 
-P=bind-8.2.2-P5
 A=bind-src.tar.gz
 S=${WORKDIR}/src
 CATEGORY="net-misc"
@@ -56,7 +55,7 @@ src_install() {
 	dodoc conf/workstation/pri/* 
 	dodir /etc/rc.d/init.d
 	cp ${O}/files/named ${D}/etc/rc.d/init.d
-	cp ${O}/files/named.conf ${D}/usr/doc/${P}/conf/workstation/named.conf.gentoolinux
+	cp ${O}/files/named.conf ${D}/usr/doc/${PF}/conf/workstation/named.conf.gentoolinux
 	dodir /etc/bind
 	dodir /var/bind
 }
@@ -68,12 +67,12 @@ pkg_config() {
     if [ -e ${ROOT}/etc/bind/named.conf ]; then
 	echo "You already have a named.conf in ${ROOT}/etc/bind/named.conf, not creating one."
     else
-	install -m0644 ${ROOT}/usr/doc/bind-8.2.2-P5/conf/workstation/named.conf.gentoolinux ${ROOT}/etc/bind/named.conf
+	install -m0644 ${ROOT}/usr/doc/${PF}/conf/workstation/named.conf.gentoolinux ${ROOT}/etc/bind/named.conf
 	mkdir ${ROOT}/var/bind/pri
-	gzip -d ${ROOT}/usr/doc/bind-8.2.2-P5/conf/workstation/root.cache.gz
-	gzip -d ${ROOT}/usr/doc/bind-8.2.2-P5/conf/workstation/pri/*.gz
-	install -m0644 ${ROOT}/usr/doc/bind-8.2.2-P5/conf/workstation/root.cache ${ROOT}/var/bind/root.cache
-	install -m0644 ${ROOT}/usr/doc/bind-8.2.2-P5/conf/workstation/pri/* ${ROOT}/var/bind/pri/
+	gzip -d ${ROOT}/usr/doc/${PF}/conf/workstation/root.cache.gz
+	gzip -d ${ROOT}/usr/doc/${PF}/conf/workstation/pri/*.gz
+	install -m0644 ${ROOT}/usr/doc/${PF}/conf/workstation/root.cache ${ROOT}/var/bind/root.cache
+	install -m0644 ${ROOT}/usr/doc/${PF}/conf/workstation/pri/* ${ROOT}/var/bind/pri/
     fi
     echo; 
     ${ROOT}/usr/sbin/rc-update add named 

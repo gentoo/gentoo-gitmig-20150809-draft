@@ -1,11 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.22.32-r1.ebuild,v 1.1 2000/08/07 17:40:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.22.32-r1.ebuild,v 1.2 2000/08/13 05:28:48 drobbins Exp $
 
-P=mysql-3.22.32
 A=${P}.tar.gz
-S=${WORKDIR}/${P}
 DESCRIPTION="The MySQL Database"
 SRC_URI="http://www.mysql.com/Downloads/MySQL-3.22/${A}"
 HOMEPAGE="http://www.mysql.com/"
@@ -13,6 +11,7 @@ CATEGORY="dev-db"
 
 
 src_compile() {
+	#Achim -- is there a problem with pentiumpro/PII opts? vvv
         if [ "$PLATFORM" = "i686-pc-linux-gnu" ]
 	then
 	    export CFLAGS="-mpentium"
