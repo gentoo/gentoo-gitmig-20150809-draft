@@ -1,0 +1,16 @@
+diff -uNr libgnomeui-2.8.0/images/Makefile.am libgnomeui-2.8.0.patched/images/Makefile.am
+--- libgnomeui-2.8.0/images/Makefile.am	2002-02-11 02:48:51.000000000 +0100
++++ libgnomeui-2.8.0.patched/images/Makefile.am	2005-03-02 23:48:31.000000000 +0100
+@@ -1,11 +1,6 @@
+ pixmapdir = $(datadir)/pixmaps
+ 
+ pixmap_DATA = \
+-	gnome-about-logo.png	\
+-	gnome-info.png		\
+-	gnome-error.png		\
+-	gnome-question.png	\
+-	gnome-warning.png	\
+-	gnome-default-dlg.png
++	gnome-about-logo.png
+ 
+ EXTRA_DIST=$(pixmap_DATA)
