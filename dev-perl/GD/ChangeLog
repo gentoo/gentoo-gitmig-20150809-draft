@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.14 2003/03/10 13:02:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.15 2003/03/25 22:09:21 seemant Exp $
 
 *GD-2.06 (23 Feb 2003)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> GD-2.06.ebuild:
+  freetype USE to truetype USE, which ACTUALLY EXISTS, Sheesh
 
   10 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
   Added optional xpm/gif support (gif patch is from dragon@gentoo.org).
