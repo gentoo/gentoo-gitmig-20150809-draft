@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbindkeys
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.7 2004/01/04 03:49:52 port001 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.8 2004/03/22 23:49:13 mattam Exp $
+
+  23 Mar 2004; Matthieu Sozeau <mattam@gentoo.org> xbindkeys-1.7.0.ebuild:
+  Mark testing on ppc, works right for me :)
 
 *xbindkeys-1.7.0 (04 Jan 2004)
 
