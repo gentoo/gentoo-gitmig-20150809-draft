@@ -1,7 +1,15 @@
-MD5 76bb546381fce2c57ebb6f3bead5d0fd ChangeLog 1813
-MD5 92759840989edb50254ca728bb5b9f6c amsynth-1.0.0.ebuild 1553
-MD5 79c29cfa1b5be5679a965dac9f80d3b4 amsynth-1.0_rc4.ebuild 1659
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd95e3a648c51391b0d1162963964348 ChangeLog 1922
 MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
+MD5 92759840989edb50254ca728bb5b9f6c amsynth-1.0.0.ebuild 1553
 MD5 2f7dc56770343abd47f6fcc7bca6938e files/amsynth-pthread.patch 256
 MD5 d7a734ec324ae5b115669d858666fb58 files/digest-amsynth-1.0.0 65
-MD5 bec083e8e27d21ba34cb61070ac11fea files/digest-amsynth-1.0_rc4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhLjWArHZZzCEUG0RAjq6AJ4wMExlo12QakchiufQbAbFhvkKQwCfePRC
+VWHgbD4cdmjk6sRwAITE7VQ=
+=5lZO
+-----END PGP SIGNATURE-----
