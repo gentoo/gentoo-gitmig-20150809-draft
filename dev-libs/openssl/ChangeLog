@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.48 2003/09/24 18:28:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.49 2003/09/29 06:44:01 kumba Exp $
+
+
+*openssl-0.9.7b-r2 (16 Sep 2003)
 
   24 Sep 2003; Martin Schlemmer <azarah@gentoo.org> openssl-0.9.7b-r1.ebuild,
   openssl-0.9.7b-r2.ebuild, openssl-0.9.7b.ebuild:
@@ -8,17 +11,12 @@
   a 'gcc fixed' version in $(gcc-config -L) from 0.9.6, then breaks as it was
   defined as 'int BN_mod(...)' and in 0.9.7 it is a #define with BN_div(...).
 
-  23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> openssl-0.9.6j.ebuild:
-  set ppc in keywords
-
   19 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7b-r2.ebuild :
   Filter "-fprefetch-loop-arrays" for all GCC 3.3 versions.
   Closing #28997.
 
   17 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7b-r2.ebuild :
   Closing #12971 and #25461. Removing from packages.mask
-
-*openssl-0.9.7b-r2 (16 Sep 2003)
 
   16 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7b-r2.ebuild :
   This version optionally installs openssl-0.9.6 if upgrading, and leaves it out
@@ -35,6 +33,12 @@
   Use SSH_TARGET on alpha to force it to honor CHOST, marked stable.
 
 *openssl-0.9.6j (23 May 2003)
+
+  29 Sep 2003; Joshua Kinard <kumba@gentoo.org> openssl-0.9.6j.ebuild:
+  Changes ~mips to mips in KEYWORDS
+
+  23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> openssl-0.9.6j.ebuild:
+  set ppc in keywords
 
   23 Jul 2003; Guy Martin <gmsoft@gentoo.org> openssl-0.9.6j.ebuild :
   Marked stable on hppa.
