@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.19 2004/10/02 10:58:30 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.20 2004/10/02 13:41:53 kumba Exp $
+
+  02 Oct 2004; Joshua Kinard <kumba@gentoo.org> netkit-telnetd-0.17-r4.ebuild:
+  Marked stable on mips.
 
   02 Oct 2004; <SeJo@gentoo.org> netkit-telnetd-0.17-r4.ebuild:
   stable on ppc gsla bug: 64632
