@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.4 2003/09/07 07:27:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.5 2003/09/07 13:35:46 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -348,6 +348,10 @@ src_unpack() {
 			echo "#define MesaUseKatmai NO" >> config/cf/host.def
 		fi
 
+	fi
+
+	if [ "${ARCH}" = "x86" ]
+	then
 		# build with glide3 support? (build the tdfx_dri.o module)
 		if use 3dfx
 		then
