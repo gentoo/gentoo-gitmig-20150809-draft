@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/wmget
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/ChangeLog,v 1.6 2004/06/24 23:10:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/ChangeLog,v 1.7 2004/07/22 09:41:19 s4t4n Exp $
+
+*wmget-0.6.0 (22 Jul 2004)
+
+  22 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmget-0.6.0.ebuild:
+  Version bump.
+  wmget-0.6.0.ebuild:
+  Stable for x86.
+  wmget-0.4.4.ebuild:
+  Remove old ebuilds.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> wmget-0.4.4.ebuild,
   wmget-0.5.0.ebuild:
