@@ -1,0 +1,14 @@
+# ChangeLog for sys-apps/nwutil
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/ChangeLog,v 1.1 2005/03/06 00:50:07 ciaranm Exp $
+
+*nwutil-1.4 (06 Mar 2005)
+
+  06 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +files/1.4-errno.patch, +files/1.4-rename-debug.patch, +nwutil-1.4.ebuild:
+  Moved from sys-apps/nwutil to sys-block/nwutil.
+
+*nwutil-1.4 (27 Jun 2004)
+
+  27 Jun 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for the netwinder.

@@ -1,0 +1,6 @@
+MD5 f3d595254a11404fa6e2082e5bf98c4b nwutil-1.4.ebuild 1034
+MD5 96c35175ada47b9abde2299fb0c733f5 ChangeLog 345
+MD5 48834ccc5ffa5b7734f8cac702fcd38a metadata.xml 156
+MD5 1d309a746225866dceb538c121b2a30e files/digest-nwutil-1.4 129
+MD5 78ccbcfded4d224832705ac6aabfe671 files/1.4-rename-debug.patch 1496
+MD5 9f531354a568f2d63816ddc8ebfa9494 files/1.4-errno.patch 276
