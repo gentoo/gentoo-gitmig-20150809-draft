@@ -1,7 +1,15 @@
 # ChangeLog for dev-python/PyXML
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/ChangeLog,v 1.3 2002/08/02 19:35:56 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/ChangeLog,v 1.4 2002/09/09 15:37:37 jnelson Exp $
 
+*PyXML-0.8 (9 Sep 2002)
+*PyXML-0.7.1 (9 Sep 2002)
+
+  9 Sep 2002; Jon Nelson <jnelson@gentoo.org>: PyXML-0.7.1.ebuild PyXML-0.8.ebuild
+  Update upstream and fix doc install
+  Closes bug #6251
+  0.8 is masked until after freeze
+  
 *PyXML-0.7 (1 Feb 2002)
 
   02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
