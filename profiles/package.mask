@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (15 Oct 2002)
+# Testing! portage-2.0.40-Perfect_alpha1 :)
+=sys-apps/portage-2.0.40
+# B0rken make.globals -- trivial.
+=sys-apps/portage-2.0.39
+
 # <seemant@gentoo.org> (15 Oct 2002)
 # b0rked beyond belief.
 # ExtUtils-MakeMaker is now a part of the default system profile
@@ -44,10 +50,6 @@
 # <foser@gentoo.org> (13 Oct 2002)
 # gtkmm-addons is broken for gcc32
 x11-libs/gtkmm-addons
-
-# <carpaski@gentoo.org> (12 Oct 2002)
-# Testing/Broken. Included make.conf has a line wrapped.
-=sys-apps/portage-2.0.39
 
 # <hannes@gentoo.org> (12 Oct 2002)
 # Masking kvim-6.1.141 (configure called twice, bug #8985)
