@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/album
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.6 2004/07/01 10:48:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.7 2004/08/04 21:00:02 mholzer Exp $
+
+  04 Aug 2004;  Martin Holzer <mholzer@gentoo.org> +album-3.00.ebuild
+  Version bumped.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> album-2.37.ebuild,
   album-2.44.ebuild, album-2.52.ebuild:
