@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.9 2002/09/10 20:43:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.10 2002/09/16 18:35:47 raker Exp $
 
 *cyrus-imapd-2.1.9 (10 Sep 2002)
+
+  16 Sep 2002; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.9.ebuild :
+  Updated src_install() to delete the empty /var/log{auth,imapd}.log
+  files.  Closes bug #7196.
 
   10 Sep 2002; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.9.ebuild,
   files/digest-cyrus-imapd-2.1.9, files/config.diff :
