@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.16 2004/12/07 23:42:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.17 2004/12/09 15:36:06 vapier Exp $
 
 # What's in this kernel?
 
@@ -16,7 +16,8 @@ EXTRAVERSION=""
 
 DESCRIPTION="Linux ${OKV} headers from kernel.org"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
-SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
+	mirror://gentoo/linux-2.6.8.1-sh-headers.patch.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="-* amd64 arm hppa ia64 ~ppc ppc64 ~sparc sh x86"
@@ -57,6 +58,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${WORKDIR}/linux-2.6.8.1-sh-headers.patch
 
 	# Do Stuff
 	kernel_universal_unpack

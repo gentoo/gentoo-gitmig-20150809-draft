@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.38 2004/12/07 23:42:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.39 2004/12/09 15:36:06 vapier Exp $
+
+  09 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  linux26-headers-2.6.8.1-r1.ebuild:
+  Add patch for SuperH support.
 
   07 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/linux26-headers-2.6.8.1-sparc-glibcsafe.patch,
