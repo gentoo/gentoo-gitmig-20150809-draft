@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1.ebuild,v 1.3 2004/06/24 22:42:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1.ebuild,v 1.4 2004/07/13 17:42:05 sejo Exp $
 
 inherit java-pkg
 
@@ -24,7 +24,7 @@ DEPEND=">=virtual/jdk-1.4
 		jikes? ( dev-java/jikes )"
 
 IUSE="doc jikes"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 S=${WORKDIR}/jakarta-${PN}-${PV}-src
 
