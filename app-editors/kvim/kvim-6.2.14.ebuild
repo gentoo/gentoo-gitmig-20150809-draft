@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.2 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.3 2003/09/08 15:17:44 agriffis Exp $
 
 IUSE="python gpm nls ruby perl"
 
@@ -20,6 +20,12 @@ newdepend ">=app-editors/vim-core-6.2
 	perl?   ( dev-lang/perl )
 	python? ( dev-lang/python )
 	ruby?   ( dev-lang/ruby )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/kvim-6.2.14-gcc2.patch
+}
 
 src_compile() {
 	myconf="--with-features=huge \

@@ -1,0 +1,12 @@
+--- kvim-6.2.14/src/proto/misc2.pro.old	2003-06-14 13:38:46.000000000 -0400
++++ kvim-6.2.14/src/proto/misc2.pro	2003-09-08 10:21:19.000000000 -0400
+@@ -17,7 +17,9 @@
+ void adjust_cursor_col __ARGS((void));
+ int leftcol_changed __ARGS((void));
+ void vim_mem_profile_dump __ARGS((void));
++#ifndef __cplusplus
+ char_u *alloc __ARGS((unsigned size));
++#endif
+ char_u *alloc_clear __ARGS((unsigned size));
+ char_u *alloc_check __ARGS((unsigned size));
+ char_u *lalloc_clear __ARGS((long_u size, int message));
