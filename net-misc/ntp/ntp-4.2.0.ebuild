@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.ebuild,v 1.3 2004/02/15 01:05:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.ebuild,v 1.4 2004/02/15 01:51:32 vapier Exp $
 
 inherit eutils
 
@@ -98,7 +98,7 @@ src_install() {
 		-name 'rc[12]' -o \
 		-name support`
 	cp -r scripts/* ${D}/usr/share/ntp/
-	chmod -R go-w /usr/share/ntp
+	chmod -R go-w ${D}/usr/share/ntp
 
 	[ ! -e /etc/ntp.conf ] && insinto /etc && doins ${FILESDIR}/ntp.conf
 	exeinto /etc/init.d
