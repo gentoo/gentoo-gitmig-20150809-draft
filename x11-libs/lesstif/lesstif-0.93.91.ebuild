@@ -49,6 +49,7 @@ src_install() {
 	# garbage
 	rm -fR ${D}/usr/lib/LessTif
 	rm -fR ${D}/usr/lib/X11
+	rm -f  ${D}/bin/mxmkmf
 
 
 	# libs
