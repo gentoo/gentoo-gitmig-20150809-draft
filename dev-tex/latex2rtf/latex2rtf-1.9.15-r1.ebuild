@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.15-r1.ebuild,v 1.5 2004/06/25 02:14:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.15-r1.ebuild,v 1.6 2004/07/02 05:02:50 eradicator Exp $
 
 inherit eutils gcc
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
 IUSE="doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/tetex
 	media-gfx/imagemagick"
 
