@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.8-r1.ebuild,v 1.1 2002/12/30 02:30:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.8-r1.ebuild,v 1.2 2003/01/08 19:53:06 bcowan Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 
@@ -15,7 +15,8 @@ KEYWORDS="x86"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.5 )
-	gtk2? ( >=dev-libs/glib-2.0.4 =x11-libs/gtk+-2.0* ) : ( gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* ) )
+	#gtk2? ( >=dev-libs/glib-2.0.4 =x11-libs/gtk+-2.0* ) : ( gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* ) )
+	gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )
 	ssl? ( >=dev-libs/openssl-0.9.6e )
 	>=net-libs/libpcap-0.7.1"
 
@@ -37,17 +38,19 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	if [ "`use gtk2`" ]
-	then
-		myconf="--enable-gtk2"
-	elif [ -z "`use gtk`" ]
-	then
-		myconf="--disable-ethereal"
-	fi
+	#if [ "`use gtk2`" ]
+	#then
+	#	myconf="--enable-gtk2"
+	#elif [ -z "`use gtk`" ]
+	#then
+	#	myconf="--disable-ethereal"
+	#fi
+	
 	use ssl || myconf="${myconf} --without-ssl"
 	use snmp || myconf="${myconf} --without-ucdsnmp"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
-
+	use gtk || myconf="${myconf} --disable-ethereal"
+	
 	if use snmp
 	    then addwrite "/usr/share/snmp/mibs/"
 	fi    
