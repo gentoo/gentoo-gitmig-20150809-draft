@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxproxy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/ChangeLog,v 1.8 2004/06/25 00:01:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/ChangeLog,v 1.9 2004/09/12 09:56:49 stuart Exp $
+
+*nxproxy-1.4.0 (12 Sep 2004)
+
+  12 Sep 2004; Stuart Herbert <stuart@gentoo.org> +nxproxy-1.4.0.ebuild:
+  Added nxproxy-1.4.0 (needed by nxclient-1.4.0)
 
 *nxproxy-1.3.2 (13 May 2004)
 
