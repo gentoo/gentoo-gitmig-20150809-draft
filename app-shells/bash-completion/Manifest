@@ -5,7 +5,7 @@ MD5 966a1b97060ac3708d22d088e3cf49d6 bash-completion-20041017-r3.ebuild 2621
 MD5 b8b1307836a8311de6750fff5048b09d bash-completion-20050121-r1.ebuild 2696
 MD5 9a2fbf3133e8372c5201102c2255109b bash-completion-20050121-r5.ebuild 1971
 MD5 024e773f28de53b9ec7592a3901b3bc8 ChangeLog 18592
-MD5 00e8cae3d9ece63e4be61f4a2b3afd5e metadata.xml 930
+MD5 08ab540760a142dbc2af127d5f71be07 metadata.xml 1019
 MD5 4406981db9a6c4f413d3f9f4b14eae91 files/gentoo-bashcomp-20050117-equery.diff 3329
 MD5 9aca91cdcddd5454ebc4f17efe465d71 files/digest-bash-completion-20041017-r3 152
 MD5 be3ee952819bf05163462ba9bbc69f0a files/20050121-tar.diff 315
@@ -19,7 +19,7 @@ MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSWCcEZCkKN40op4RAk7pAJ9MwqZYNu+6rx3XhuuioTGc5jLLvQCgu+jg
-fkQ2c330k1v7txUfG4DBazs=
-=t6Bw
+iD8DBQFCSauFEZCkKN40op4RArU+AKCLBpVuNTEU32c4srYp8L+qQFmqyACfdyWw
+gUrpyEPw7gH77SD3dUxeMJI=
+=gouU
 -----END PGP SIGNATURE-----
