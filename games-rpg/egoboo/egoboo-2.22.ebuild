@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.5 2004/02/29 21:09:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.6 2004/02/29 21:10:01 vapier Exp $
 
-inherit flag-o-matic games
+inherit games flag-o-matic
 
 DESCRIPTION="A 3d dungeon crawling adventure in the spirit of NetHack"
 HOMEPAGE="http://egoboo.sourceforge.net/"
