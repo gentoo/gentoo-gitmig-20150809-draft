@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/app-admin/portagemaster/portagemaster-0.1.4.ebuild,v 1.1 2002/06/05 06:45:36 rphillips Exp
+# $Header: /var/cvsroot/gentoo-x86/app-admin/portagemaster/portagemaster-0.1.5.ebuild,v 1.5 2002/08/13 21:00:31 pvdabeel Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A java portage browser and installer."
@@ -9,8 +9,9 @@ HOMEPAGE="http://portagemaster.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
+DEPEND=""
 RDEPEND="virtual/jre"
 
 src_unpack() {
