@@ -8,8 +8,10 @@ icc
 icc-pgo
 ifc
 mmx
+mmx2
 svga
-sse 
+sse
+sse2
 firebird
 tcc
 acpi

@@ -10,8 +10,10 @@ icc
 icc-pgo
 ifc
 mmx
+mmx2
 selinux
-sse 
+sse
+sse2
 svga
 tcc
 x86 
