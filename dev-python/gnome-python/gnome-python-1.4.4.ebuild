@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4.ebuild,v 1.2 2003/02/13 11:34:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4.ebuild,v 1.3 2003/03/27 02:07:02 seemant Exp $
 
 inherit gnome.org
 
@@ -10,18 +10,18 @@ S=${WORKDIR}/${P}
 DESCRIPTION="gnome-python"
 HOMEPAGE="http://www.daa.com.au/~james/gnome/"
 
+SLOT="1"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+LICENSE="GPL-2"
+
 DEPEND="virtual/python
 	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 
-		 <gnome-base/libglade-1.90.0
-		 <gnome-base/control-center-1.90.0 )
+		<gnome-base/libglade-1.90.0
+		<gnome-base/control-center-1.90.0 )
 	opengl? ( <x11-libs/gtkglarea-1.99.0 )"
 RDEPEND="${RDEPEND}"
-
-SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
-LICENSE="GPL-2"
 
 src_compile() {
 	if [ -n "`use gnome`" ]
