@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.11 2004/01/05 02:57:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.12 2004/01/05 21:13:04 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -72,7 +72,7 @@ src_compile() {
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
-	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
+	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/pgsql"
 	use firebird    && myconf="${myconf} -plugin-sql-ibase"
 #	use oci8	&& myconf="${myconf} -plugin-sql-oci"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite"

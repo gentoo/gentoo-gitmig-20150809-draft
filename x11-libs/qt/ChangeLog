@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.106 2004/01/05 18:20:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.107 2004/01/05 21:13:04 caleb Exp $
+
+  05 Jan 2004; Caleb Tennis <caleb@gentoo.org> qt-3.2.3.ebuild,
+  qt-3.3.0_beta1.ebuild:
+  Change postgresql include directory as it seems like the one
+  that was in the ebuild before isn't correct.
 
   05 Jan 2004; Jason Wever <weeve@gentoo.org> qt-3.2.3.ebuild:
   Marked stable on sparc.
