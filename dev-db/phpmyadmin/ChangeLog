@@ -1,33 +1,45 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.5 2002/10/28 20:24:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.6 2002/11/14 18:54:26 vapier Exp $
 
 *phpmyadmin-2.3.2 (28 Aug 2002)
 
-  28 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
+
+  28 Aug 2002; Maik Schreiber <blizzy@gentoo.org> :
+  New version.
 
 *phpmyadmin-2.3.0 (18 Aug 2002)
 
-  18 Aug 2002; Ryan Phillips <rphillips@gentoo.org> : New version
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
+
+  18 Aug 2002; Ryan Phillips <rphillips@gentoo.org> :
+  New version
 
 *phpmyadmin-2.2.6 (27 Apr 2002)
 
-  16 Jul 2002; Ryan Phillips <rphillips@gentoo.org> : Repoman fixes
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
 
-*phpmyadmin-2.2.5 (27 Apr 2002)
-
-  27 Apr 2002; Donny Davies <woodchip@gentoo.org> : Re-added this package back
-  without the CAPS in the name.
+  16 Jul 2002; Ryan Phillips <rphillips@gentoo.org> :
+  Repoman fixes
 
 *phpmyadmin-2.2.5 (10 Apr 2002)
 
-  10 Apr 2002; Donny Davies <woodchip@gentoo.org> : Updated to latest release
-  and fixed to match the new apache layout.
+  14 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Replaced hardcoding of /home/httpd/htdocs with a grep of /etc/apache/conf/apache.conf
+
+  27 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+  Re-added this package back without the CAPS in the name.
+
+  10 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+  Updated to latest release and fixed to match the new apache layout.
 
 *phpmyadmin-2.2.0 (01 Feb 2002)
 
   01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
