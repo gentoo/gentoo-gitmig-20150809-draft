@@ -21,3 +21,29 @@ diff -u -r1.8 chkname.c
  
  	return good_name (name);
  }
+Index: man/groupadd.8
+===================================================================
+RCS file: /cvsroot/shadow/man/groupadd.8,v
+retrieving revision 1.21
+diff -u -r1.21 groupadd.8
+--- man/groupadd.8	4 Nov 2004 03:06:31 -0000	1.21
++++ man/groupadd.8	10 Jan 2005 06:36:51 -0000
+@@ -46,6 +46,18 @@
+ \fB-o\fR option is used. The value must be non-negative. The default is to
+ use the smallest ID value greater than 999 and greater than every other
+ group. Values between 0 and 999 are typically reserved for system accounts.
++.SH RESTRICTIONS
++Currently, the shadow suite enforces the following restrictions on group 
++names:
++
++.nf
++\- must begin with a lower case letter or underscore
++\- can only contain lower case letters, underscores, and dashes
++\- regex for these requirements: [a\-z_][a\-z0\-9_\-]*
++.fi
++
++Normally shadow enforces a 16 character limit, but Gentoo adds patches to 
++remove it.
+ .SH FILES
+ \fI/etc/group\fR	\- group account information
+ .br

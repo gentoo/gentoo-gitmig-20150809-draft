@@ -29,8 +29,8 @@ MD5 d8b8542a7bc013011a293732ca504a50 files/digest-shadow-4.0.5-r3 66
 MD5 c5e9081ed43837797e2f1617b7ce1c24 files/shadow-4.0.5-fix-adding-of-pam_env-set-env-vars.patch 285
 MD5 fda41657b856ffaeec5a2734b312409b files/shadow-4.0.5-fix-mail-configure.patch 5452
 MD5 d15398f7d8c06b906abdf73ae3a55f54 files/shadow-4.0.6-manpages.patch 564
-MD5 722c164266b87cc374eae4ce1de7632b files/shadow-4.0.6-dots-in-usernames.patch 882
-MD5 fcbc820ddc961b2b153ccc5a7a62935b files/shadow-4.0.6-long-groupnames.patch 659
+MD5 1df33165731b93f2292d5fb4c5a36d1e files/shadow-4.0.6-dots-in-usernames.patch 1993
+MD5 8bf11ce0e8ee683fe290462473871dab files/shadow-4.0.6-long-groupnames.patch 1625
 MD5 6e0bc0211949c624da0ea08d994a7038 files/default/useradd 96
 MD5 51b0337bd261f6ed5e53af5dc196431a files/pam.d/system-auth 499
 MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/pam.d/login 431
@@ -42,7 +42,7 @@ MD5 624bacd4dd8e9855404cd262dd6f8f62 files/pam.d/system-auth-1.1 671
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4iI3roRuSHgZdywRAkMKAJ9D4VG7wuORt92xJ+IO8mQL21TVkwCeKWNO
-aZpz+QS/fPxdTbw5QZS1I+k=
-=EFcc
+iD8DBQFB4iO6roRuSHgZdywRAhp3AJ9U7fGyxZqGQpTI1N+V9qH5gXEnsgCdFkAw
+sIiJSvusdnbAIl5Bg2Hb3oc=
+=7TdX
 -----END PGP SIGNATURE-----
