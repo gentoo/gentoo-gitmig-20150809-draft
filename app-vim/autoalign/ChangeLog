@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/autoalign
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/ChangeLog,v 1.8 2005/01/01 16:46:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/ChangeLog,v 1.9 2005/01/29 23:01:47 ciaranm Exp $
+
+*autoalign-5 (29 Jan 2005)
+
+  29 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> +autoalign-5.ebuild:
+  Bump, bug #79359.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> -autoalign-3.ebuild:
   Tidy up old versions
