@@ -1,14 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.7.6.ebuild,v 1.1 2003/10/06 12:19:46 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.7.6.ebuild,v 1.2 2003/10/17 16:51:14 mkennedy Exp $
 
 inherit common-lisp
+
+DEB_PV=1
 
 DESCRIPTION="A multi-platform SQL interface for Common Lisp"
 HOMEPAGE="http://clsql.med-info.com/
 	http://packages.debian.org/unstable/devel/cl-sql.html
 	http://www.cliki.net/CLSQL"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql_${PV}.orig.tar.gz"
+SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql_${PV}.orig.tar.gz
+	http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql_${PV}-${DEB_PV}.diff.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
@@ -22,6 +25,11 @@ DEPEND="dev-lisp/common-lisp-controller
 S=${WORKDIR}/cl-sql-${PV}
 
 modules='clsql-base clsql clsql-postgresql-socket clsql-uffi'
+
+src_unpack() {
+	unpack ${A}
+	epatch cl-sql_${PV}-${DEB_PV}.diff
+}
 
 src_compile() {
 	make -C uffi
@@ -70,6 +78,8 @@ src_install() {
 
 	dodoc COPYING* ChangeLog INSTALL NEWS README TODO
 	tar xfz doc/html.tar.gz -C ${D}/usr/share/doc/${P}/
+
+	do-debian-credits
 }
 
 pkg_postinst() {
@@ -86,4 +96,13 @@ pkg_prerm() {
 	done
 	use postgres && /usr/sbin/unregister-common-lisp-source clsql-postgresql
 	use mysql && /usr/sbin/unregister-common-lisp-source clsql-mysql
+}
+
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/clsql* || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/clsql* || true
 }
