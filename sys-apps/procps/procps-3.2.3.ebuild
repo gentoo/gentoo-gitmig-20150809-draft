@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.3.ebuild,v 1.2 2004/08/13 00:40:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.3.ebuild,v 1.3 2004/08/13 15:28:25 lostlogic Exp $
 
 inherit flag-o-matic eutils
 
@@ -34,10 +34,7 @@ src_compile() {
 
 src_install() {
 	einstall -e DESTDIR="${D}"|| die
-	dodir /etc
-	insinto /etc
-	doins sysctl.conf
-	dodoc BUGS NEWS TODO ps/HACKING
+	dodoc sysctl.conf BUGS NEWS TODO ps/HACKING
 }
 
 pkg_postinst() {
