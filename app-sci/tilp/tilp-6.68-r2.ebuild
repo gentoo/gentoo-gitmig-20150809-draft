@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.68-r2.ebuild,v 1.4 2004/06/24 22:19:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.68-r2.ebuild,v 1.5 2004/08/22 19:25:29 ribosome Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-libs/libticables-3.7.7
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-keepdir.patch
+	epatch ${FILESDIR}/keepdir.patch
 	epatch ${FILESDIR}/formatbug.patch
 }
 

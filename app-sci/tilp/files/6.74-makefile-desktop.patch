@@ -1,0 +1,16 @@
+--- desktop/Makefile.in	2004-06-29 17:02:14.000000000 -0400
++++ desktop/Makefile.in.new	2004-08-22 00:25:48.029609736 -0400
+@@ -340,8 +340,11 @@
+ 	@echo "---";
+ 
+ 	@echo Installing Gnome VFS MIME magic patterns...
+-	@if ! grep "\*\*TI" /etc/gnome-vfs-mime-magic; then		\
+-		cat gnome/gnome-vfs-mime-magic >> /etc/gnome-vfs-mime-magic;	\
++	@if ! grep "\*\*TI" $(sysconfdir)/gnome-vfs-mime-magic; then		\
++		cp $(sysconfdir)/gnome-vfs-mime-magic .;	\
++		cat gnome/gnome-vfs-mime-magic >> gnome-vfs-mime-magic;	\
++		cp gnome-vfs-mime-magic $(DESTDIR)$(sysconfdir)/gnome-vfs-mime-magic;	\
++		cp gnome-vfs-mime-magic $(DESTDIR)$(sysconfdir)/pokpok;	\
+ 	fi;
+ 
+ 	@echo Installing application registry in Gnome...

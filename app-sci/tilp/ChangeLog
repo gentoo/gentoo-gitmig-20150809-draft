@@ -1,6 +1,16 @@
 # ChangeLog for app-sci/tilp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.9 2004/06/24 22:19:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.10 2004/08/22 19:25:29 ribosome Exp $
+
+*tilp-6.74 (22 Aug 2004)
+
+  22 Aug 2004; Olivier Fisette <ribosome@gentoo.org> -files/6.68-keepdir.patch,
+  +files/6.74-makefile-desktop.patch, +files/6.74-makefile.patch,
+  +files/keepdir.patch, -tilp-6.09.ebuild, tilp-6.68-r2.ebuild,
+  +tilp-6.74.ebuild:
+  Version bump (6.74) (formatbug patch is no longer needed). Removed old ebuild.
+  Removed version from the keepdir patch's file name, since it is now shared 
+  with 6.74 (and changed ebuild for 6.68 accordingly).
 
   10 May 2004; Patrick Kursawe <phosphan@gentoo.org> tilp-6.68-r2.ebuild:
   Adding missing libglade dependency (see bug #50451)
