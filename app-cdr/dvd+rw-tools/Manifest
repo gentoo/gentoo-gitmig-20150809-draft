@@ -1,19 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec0b8eb7bf025877b5281cacd48339c5 ChangeLog 4041
-MD5 5502b33884b4f11ed90edbb254070119 dvd+rw-tools-5.20.4.10.8.ebuild 842
-MD5 34aff7ebf51a9a0fea022909fe8e86f1 metadata.xml 420
-MD5 b36c5bb3145491baf558713eb5e0a975 dvd+rw-tools-5.17.4.8.6.ebuild 842
 MD5 9678c3c7d356ee37eea0275c3acf0872 dvd+rw-tools-5.21.4.10.8.ebuild 949
-MD5 4f6723ab646a2b57c5cec438b0275ecb files/digest-dvd+rw-tools-5.20.4.10.8 76
-MD5 954e341db551af19f64f07dc914f9ff8 files/digest-dvd+rw-tools-5.17.4.8.6 74
+MD5 88efc2257d62bed1934bca3d506f1be7 ChangeLog 4178
+MD5 34aff7ebf51a9a0fea022909fe8e86f1 metadata.xml 420
 MD5 fce4ae0aea831d5b1f176e8dcff5059f files/01_all_samsung-media-fix.patch 701
 MD5 753e5e7fcdcc5b990cee000f16b2507f files/digest-dvd+rw-tools-5.21.4.10.8 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB24MsroRuSHgZdywRAj42AJ0WKJfU8618Z4RwGUO/IS0rVJhWUACeJZvB
-GwVLFlCQ8dzhu1Ulj3SdZmk=
-=ZHhB
------END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvd+rw-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.30 2005/01/02 19:17:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.31 2005/03/30 01:36:45 pylon Exp $
+
+  30 Mar 2005; Lars Weiler <pylon@gentoo.org>
+  -dvd+rw-tools-5.17.4.8.6.ebuild, -dvd+rw-tools-5.20.4.10.8.ebuild:
+  Remove old versions.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
