@@ -1,16 +1,18 @@
 # ChangeLog for dev-lang/wml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.2 2002/09/07 12:23:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.3 2002/11/11 16:21:08 karltk Exp $
 
-*wml-2.0.8.ebuild  (17 July 2002)
+*wml-2.0.9.ebuild  (11 Nov 2002)
+
+  11 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> wml-2.0.9.ebuild files/digest-wml-2.0.9 : 
+  New upstream version.
+
+*wml-2.0.8.ebuild  (17 Jul 2002)
 
   07 Sep 2002; Seemant Kulleen <seemant@gentoo.org> wml-2.0.8.ebuild :
-
   Changed dependency to add sys-devel/ in front of it.  Closes bug #7608 by
   joakim.elofsson@home.se (Joakim Elofsson)
 
-  17 July 2002; George Shapovalov <george@gentoo.org> wml-2.0.8.ebuild, digest-wml-2.0.8 :
-
-  initial release
-  ebuild submitted by Bardur Arantsson <bardur@imada.sdu.dk>
+  17 Jul 2002; George Shapovalov <george@gentoo.org> wml-2.0.8.ebuild, digest-wml-2.0.8 :
+  Initial release. Ebuild submitted by Bardur Arantsson <bardur@imada.sdu.dk>
 
