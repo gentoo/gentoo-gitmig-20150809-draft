@@ -2,8 +2,8 @@ MD5 910b5f4acd08041100bde38f77fb58af ChangeLog 3525
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 42a89c5ba45396e62ab002c6bce22509 pyxml-0.8.1.ebuild 641
 MD5 e01536ad7dd2546c92112fb7e0d17420 pyxml-0.8.2.ebuild 915
-MD5 7ded66074ca319ea21aa522d11515acc pyxml-0.8.3-r1.ebuild 1139
-MD5 4f8fa47a1212fcc270d79d4fd1a07cb5 pyxml-0.8.3.ebuild 927
+MD5 8df7086d0618f8bfa7c49ba987fa542e pyxml-0.8.3.ebuild 928
+MD5 150ddf2916b68c4fc68f1ff2c540296b pyxml-0.8.3-r1.ebuild 1135
 MD5 b83e36b4dc90c3ce5840f0d2e432b7b2 files/digest-pyxml-0.8.1 63
 MD5 6a14eefbf90c139b1f9b058131cb211f files/digest-pyxml-0.8.2 63
 MD5 7d09f52601eefbf60eb70af6516bd302 files/digest-pyxml-0.8.3 63
