@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/fhist
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.10 2004/10/21 15:24:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.11 2004/12/05 03:21:27 ka0ttic Exp $
+
+*fhist-1.14 (04 Dec 2004)
+
+  04 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> +fhist-1.14.ebuild:
+  Version bump; cleaned up ebuild and added src_test() to run test suite.
 
   21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Add metadata (shell-tools)
