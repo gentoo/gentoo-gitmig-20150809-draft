@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1-r2.ebuild,v 1.3 2003/10/20 23:14:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1-r2.ebuild,v 1.4 2003/10/20 23:16:05 mcummings Exp $
 
 inherit eutils flag-o-matic
 
@@ -286,7 +286,7 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" ]
 	then
 		ebegin "Converting C header files to the corresponding Perl format"
-		cd /usr/include; find ./ -name "*.h" -exec h2ph {} \;
+		cd /usr/include; find ./ -name "*.h" -type f -exec h2ph {} \;
 	fi
 
 	eerror ""
