@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5-r3.ebuild,v 1.2 2002/04/27 08:29:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5-r3.ebuild,v 1.3 2002/07/31 17:38:04 kabau Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
@@ -10,6 +10,9 @@ HOMEPAGE="http://www.dict.org"
 
 DEPEND="virtual/glibc"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
     
