@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r1.ebuild,v 1.1 2003/03/17 05:25:50 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r1.ebuild,v 1.2 2003/03/17 07:17:24 method Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ S="${WORKDIR}/${P}-gentoo"
 
 KEYWORDS="~x86 -*"
 IUSE="selinux"
-DEPEND=">=selinux-sources-2.4.20
+DEPEND=">=selinux-sources-2.4.20-r1
 	>=yacc-1.9.1"
 
 
