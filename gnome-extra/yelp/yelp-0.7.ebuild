@@ -16,12 +16,14 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 
-DEPEND=">=dev-util/pkgconfig-0.12.0
-	>=gnome-2/ORBit2-2.3.106
-	>=gnome-2/libgnomeui-1.112.1
-	>=gnome-2/libgtkhtml-1.99.7
-	>=gnome-2/gnome-vfs-1.9.10
-	>=gnome-2/libbonobo-1.112.0-r1"
+RDEPEND=">=gnome-base/ORBit2-2.3.106
+	>=gnome-base/libgnomeui-1.112.1
+	>=gnome-base/gnome-vfs-1.9.10
+	>=gnome-base/libbonobo-1.112.0
+	>=gnome-extra/libgtkhtml-1.99.7"
+
+DEPEND="${DEPEND}
+	>=dev-util/pkgconfig-0.12.0"
 
 src_compile() {
 	./configure --host=${CHOST} \
