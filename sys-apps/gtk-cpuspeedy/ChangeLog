@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/gtk-cpuspeedy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-cpuspeedy/ChangeLog,v 1.6 2004/04/24 07:50:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-cpuspeedy/ChangeLog,v 1.7 2004/04/26 05:51:22 dragonheart Exp $
+
+  26 Apr 2004; Daniel Black <dragonheart@gentoo.org> gtk-cpuspeedy-0.1.ebuild:
+  virtual/xfree to virtual/x11 in version 0.1 thanks to Pieter Baele
+  <pieter.baele@pandora.be> in bug #48769. gksu dependancy version on x86
+  only due to higher verions available. I have doubts weither it is a real
+  dependancy.
+
+  26 Apr 2004; Daniel Black <dragonheart@gentoo.org>
+  gtk-cpuspeedy-0.3.0.ebuild:
+  Added gksu dependancy as per bug #48978. Thanks Priit Laes <amd@tt.ee>
 
   24 Apr 2004; Daniel Black <dragonheart@gentoo.org>
   gtk-cpuspeedy-0.3.0.ebuild:
