@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.5 2004/02/12 18:06:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.6 2004/02/21 19:50:44 vapier Exp $
 
-IUSE="static nls bootstrap java build X multilib"
+IUSE="static nls bootstrap java build X multilib nogcj"
 
 inherit eutils flag-o-matic libtool
 
