@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.66 2003/07/02 16:25:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.67 2003/07/12 16:58:50 foser Exp $
+
+*gnome-2.2.2 (12 Jul 2003)
+
+  12 Jul 2003; foser <foser@gentoo.org> gnome-2.2.2.ebuild :
+  New version, added intltool dep to be on the safe side with bug #15194
 
   30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> gnome-2.2.1.ebuild:
   set ppc in keywords
