@@ -1,4 +1,5 @@
-MD5 463af50b959047e150847914b7ec4dcb archetypes-1.0.1.ebuild 664
-MD5 95ac0bb0b41f9f9e26bad5648c2f8f7d archetypes-1.0.ebuild 681
+MD5 4a299130ccf0bc5c47fcd20c5e878445 archetypes-1.0.1.ebuild 781
+MD5 45e4987e1ce80415db9f52afdb802b68 archetypes-1.0.ebuild 747
+MD5 06a3dc9906acd6212ae5d63c393d7d56 ChangeLog 432
 MD5 616e79a9cb70b6117b75b990c0c0f94c files/digest-archetypes-1.0 69
 MD5 223af5173c7341daf23e517d356b0a0e files/digest-archetypes-1.0.1 65
