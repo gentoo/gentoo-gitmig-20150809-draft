@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-goom
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.1 2002/12/02 08:07:21 seemant Exp $
+
+*xmms-goom-1.10.0 (02 Dec 2002)
+
+  02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xmms-goom-1.10.0.ebuild
+  files/xmms-goom-1.10.0-libtool.patch files/digest-xmms-goom-1.10.0 :
+
+  New "trippy" SDL based visualisation plugin for XMMS. Submitted by:
+  trauma@web.de (Thomas R. (TRauMa)) in bug #10968.
