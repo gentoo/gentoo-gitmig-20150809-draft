@@ -1,0 +1,11 @@
+diff -urNa crux-1.9.5.old/src/crux-draw.c crux-1.9.5/src/crux-draw.c
+--- crux-1.9.5.old/src/crux-draw.c	2002-06-25 08:10:58.000000000 +0200
++++ crux-1.9.5/src/crux-draw.c	2004-08-25 17:53:37.263679667 +0200
+@@ -2120,6 +2120,7 @@
+ 	    break;
+ 
+ 	default:			/* gcc drugging */
++	    break;
+ 	}
+ 	paint_background_area (style, window, state_type, area,
+ 			       x, y, width, height);

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-crux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-crux/ChangeLog,v 1.8 2004/07/09 21:35:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-crux/ChangeLog,v 1.9 2004/08/29 19:24:34 sekretarz Exp $
+
+  29 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  gtk-engines-crux-1.9.5-r1.ebuild, gtk-engines-crux-1.9.5.ebuild:
+  Fixed compile problems using gcc-3.4
 
   09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   gtk-engines-crux-1.9.5-r1.ebuild:
