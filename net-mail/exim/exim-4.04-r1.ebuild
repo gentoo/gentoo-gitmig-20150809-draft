@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r1.ebuild,v 1.4 2002/08/01 11:59:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r1.ebuild,v 1.5 2002/08/14 12:05:25 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
@@ -26,7 +26,7 @@ PROVIDE="virtual/mta"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
 

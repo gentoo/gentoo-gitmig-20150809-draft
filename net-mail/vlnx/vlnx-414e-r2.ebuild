@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Script Revised by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e-r2.ebuild,v 1.4 2002/07/17 05:26:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e-r2.ebuild,v 1.5 2002/08/14 12:05:25 murphy Exp $
 
 MY_P=${PN}${PV}
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.mcafee.com/products/evaluation/virusscan/english/unix/l
 
 SLOT="0"
 LICENSE="VirusScan"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=""
 RDEPEND="sys-devel/ld.so"

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.1 2002/07/23 20:14:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.2 2002/08/14 12:05:25 murphy Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 POSTFIX_TLS_VER="0.8.11a-${PV}-0.9.6d"
 

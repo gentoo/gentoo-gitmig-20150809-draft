@@ -1,6 +1,6 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.58.ebuild,v 1.2 2002/07/17 05:26:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.58.ebuild,v 1.3 2002/08/14 12:05:25 murphy Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Python-based SPAM reduction system"
@@ -13,7 +13,7 @@ DEPEND=">=dev-lang/python-2.0
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	./compileall || die

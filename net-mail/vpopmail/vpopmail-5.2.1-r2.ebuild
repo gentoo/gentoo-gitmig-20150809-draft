@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.5 2002/07/30 13:32:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.6 2002/08/14 12:05:25 murphy Exp $
 
 # TODO: all ldap, sybase support
 S=${WORKDIR}/${P}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 HOMEPAGE="http://www.inter7.com/vpopmail"
 
 DESCRIPTION="A collection of programs to manage virtual email domains and accounts on your Qmail or Postfix mail servers."

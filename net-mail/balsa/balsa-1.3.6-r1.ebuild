@@ -10,7 +10,7 @@ HOMEPAGE="http://www.balsa.net"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*

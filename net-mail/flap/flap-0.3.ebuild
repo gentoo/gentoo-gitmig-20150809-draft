@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/flap/flap-0.3.ebuild,v 1.3 2002/07/17 06:38:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/flap/flap-0.3.ebuild,v 1.4 2002/08/14 12:05:25 murphy Exp $
 
 S="${WORKDIR}/${P}-src"
 DESCRIPTION="mail user agent written in Java"
@@ -13,7 +13,7 @@ RDEPEND="virtual/jdk"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	ant || die

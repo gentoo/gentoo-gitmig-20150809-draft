@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="IPL-1"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 pkg_setup() {
 	if ! grep -q ^postdrop: /etc/group ; then

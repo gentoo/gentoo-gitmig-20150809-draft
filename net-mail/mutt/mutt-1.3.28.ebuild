@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.3.28.ebuild,v 1.5 2002/07/28 05:39:03 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.3.28.ebuild,v 1.6 2002/08/14 12:05:25 murphy Exp $
 
 S=$WORKDIR/${P}
 DESCRIPTION="a small but very powerful text-based mail client"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mutt.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND=">=sys-libs/ncurses-5.2 
 	ssl? ( >=dev-libs/openssl-0.9.6 )
