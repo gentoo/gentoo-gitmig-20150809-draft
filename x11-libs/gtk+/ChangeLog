@@ -1,11 +1,21 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.17 2002/06/17 13:22:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.18 2002/07/03 17:17:48 seemant Exp $
+
+*gtk+-2.0.5-r1 (03 Jul 2002)
+
+  03 Jul 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-2.0.5-r1.ebuild
+  files/digest-gtk+-2.0.5-r1 :
+
+  The DirectFB tarball was replaced on the directfb.org server with one that
+  has bugfixes in it.  No need for paranoia, the directfb folks have
+  verified it for us.  Thanks to: gentoo@tuurlijk.eu.org (Tuurlijk!) in bug
+  #4451 for spotting it.
 
 *gtk+-2.0.5 (17 Jun 2002)
 
   17 Jun 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-2.0.5.ebuild
-  files/digest-2.0.5 :
+  files/digest-gtk+-2.0.5 :
 
   Version bump for both regular GTK+2 and GTK+DirectFB
 
