@@ -1,7 +1,9 @@
 # ChangeLog for sys-apps/lsof
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.16 2003/08/03 06:22:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.17 2003/08/15 13:23:06 taviso Exp $
 
+  15 Aug 2003; Tavis Ormandy <taviso@gentoo.org> lsof-4.68.ebuild:
+  #26576 lsof 4.68 compile with -fstack-protector fails on Alpha
 
 *lsof-4.68 (30 Jun 2003)
 
