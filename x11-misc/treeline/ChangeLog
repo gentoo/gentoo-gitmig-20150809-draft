@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.8 2004/06/24 22:34:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.9 2004/08/16 08:49:17 taviso Exp $
+
+  16 Aug 2004; Tavis Ormandy <taviso@gentoo.org> treeline-0.8.1.ebuild:
+  marking stable on x86
 
 *treeline-0.8.1 (23 Jun 2004)
 
