@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ltris-1.0.5-r1.ebuild,v 1.1 2003/10/26 06:40:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ltris-1.0.5-r1.ebuild,v 1.2 2004/02/09 12:19:34 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/lgames/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND=">=media-libs/libsdl-1.1.5
 	media-libs/sdl-mixer"
@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install           || die "make install failed"
+	make DESTDIR="${D}" install         || die "make install failed"
 	dodoc AUTHORS README TODO ChangeLog || die "dodoc failed"
 	prepgamesdirs
 }
