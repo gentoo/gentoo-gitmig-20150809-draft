@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.5.ebuild,v 1.2 2004/05/02 12:04:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.6.ebuild,v 1.1 2004/05/05 17:49:44 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,26 +25,18 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gtk-query-immodules-gentoo.diff
-	epatch ${FILESDIR}/${P}-engines.diff
 }
 
 src_compile() {
-	if use gtk ; then
-		sed -i -e "s:@GTK2_TRUE@::g" -e "s:@GTK2_FALSE@:#:g" \
-			Makefile.in `echo */Makefile.in`
-	else
-		sed -i -e "s:@GTK2_TRUE@:#:g" -e "s:@GTK2_FALSE@::g" \
-			Makefile.in `echo */Makefile.in`
-		sed -i -e "/^SUBDIRS/s/gtk//" Makefile.in
-	fi
 
 	use debug && append-flags -g
-	econf `use_enable nls` || die
-	emake || die
+	econf `use_enable nls` \
+		`use_with gtk gtk2` || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL* NEWS README*
 }
 
