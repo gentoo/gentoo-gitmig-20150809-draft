@@ -3,6 +3,9 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> files/server.scm:
+  fixed sticky keyboard typo.  bug #44557.
+
   13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   festival-1.4.2-r3.ebuild:
   Removing borked ebuild to fix bug #41228.

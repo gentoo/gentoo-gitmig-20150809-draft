@@ -22,7 +22,7 @@
 (set! server_passwd nil)
 
 ; Server access list (hosts)
-(set! server_access_list '("[^.]+" "127.0.0.1" "localhost.*" "192.68.*"))
+(set! server_access_list '("[^.]+" "127.0.0.1" "localhost.*" "192.168.*"))
 
 ; Server deny list (hosts)
 (set! server_deny_list nil)
