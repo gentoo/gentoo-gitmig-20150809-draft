@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.12.ebuild,v 1.1 2004/10/03 10:28:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.12.ebuild,v 1.2 2004/11/30 02:33:49 vapier Exp $
 
 inherit eutils
 
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="nls tcpd"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	tcpd? ( sys-apps/tcp-wrappers )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/quota-tools
 
@@ -29,20 +31,23 @@ src_unpack() {
 	sed -i -e "s:,LIBS=\"\$saved_LIBS=\":;LIBS=\"\$saved_LIBS\":" configure
 }
 
+src_compile() {
+	econf $(use_enable nls) || die
+	emake || die
+}
+
 src_install() {
 	dodir {sbin,etc,usr/sbin,usr/bin,usr/share/man/man{1,3,8}}
-	make ROOTDIR=${D} install || die
-#	install -m 644 warnquota.conf ${D}/etc
+	make ROOTDIR="${D}" install || die
+	rm -r "${D}"/usr/include #70938
+
 	insinto /etc
 	insopts -m0644
 	doins warnquota.conf quotatab
+
 	dodoc doc/*
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/quota.rc6 quota
-
-	# NLS bloat reduction
-	use nls || rm -rf ${D}/usr/share/locale
+	newinitd ${FILESDIR}/quota.rc6 quota
 }
 
 pkg_postinst() {

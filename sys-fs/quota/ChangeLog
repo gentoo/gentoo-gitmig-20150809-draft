@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/quota
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.2 2004/10/03 20:46:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.3 2004/11/30 02:33:49 vapier Exp $
+
+  29 Nov 2004; Mike Frysinger <vapier@gentoo.org> quota-3.12.ebuild:
+  Dont install files owned by glibc #70938 by Jakub Moc and make sure we
+  respect USE=-nls #44539 by Johan Petersson.
 
 *quota-3.12 (03 Oct 2004)
 
