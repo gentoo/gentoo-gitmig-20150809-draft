@@ -44,7 +44,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} prefix=${D}/usr install || die
+	make prefix=${D}/usr sysconfdir=/etc install || die
 
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 }
