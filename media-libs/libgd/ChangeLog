@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.43 2004/03/25 07:11:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.44 2004/05/07 15:57:23 vapier Exp $
+
+*libgd-2.0.23 (07 May 2004)
+
+  07 May 2004; Mike Frysinger <vapier@gentoo.org> +libgd-2.0.23.ebuild:
+  Version bump #50302 by Daniel Webert
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> libgd-1.8.4-r2.ebuild:
   don't use deprecated ? : use syntax
