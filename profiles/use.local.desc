@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.380 2004/05/18 20:52:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.381 2004/05/21 15:30:15 st_lim Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -93,6 +93,14 @@ dev-java/ant-optional:xerces - Enable Xerces support
 dev-java/ant:optional-tasks - Enable Optional Tasks Support
 dev-java/gnu-classpath:native - Compile native .so libraries
 dev-java/sun-j2sdk:nptl - Enable support for NPTL 
+dev-java/quartz:oracle - Enable oracle support
+dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
+dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
+dev-java/quartz:dbcp - Enable dbcp support
+dev-java/quartz:jboss - Enable jboss support
+dev-java/quartz:jta - Enable jta support
+dev-java/quartz:jmx - Enable jmx support
+dev-java/quartz:struts - Enable struts support
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
