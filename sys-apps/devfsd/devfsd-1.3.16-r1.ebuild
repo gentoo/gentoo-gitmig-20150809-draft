@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Robbins et al <drobbins@gentoo.org>
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.16-r1.ebuild,v 1.3 2001/08/22 04:44:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.16-r1.ebuild,v 1.4 2001/08/22 05:56:27 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Daemon for the Linux Device Filesystem"
@@ -22,7 +22,7 @@ src_compile() {
 }
 
 src_install () {
-  	dodir /sbin /usr/share/man /etc
+  	dodir /sbin /usr/share/man/man5 /usr/share/man/man8 /etc
 	try make PREFIX=${D} install
 	dodir /dev-state
 	insinto /etc
