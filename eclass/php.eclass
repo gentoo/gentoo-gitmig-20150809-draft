@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.96 2004/01/08 07:23:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.97 2004/01/08 22:04:10 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This eclass is the old style of php, that was used before php-core was
@@ -201,6 +201,8 @@ php_src_unpack() {
 
 	[ "${MY_PV}" = "4.3.4" ] && \
 	epatch ${DISTDIR}/php-4.3.4-phpizeexecfix.patch
+	
+	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i configure
 }
 
 

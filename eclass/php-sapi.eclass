@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.3 2004/01/08 07:23:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.4 2004/01/08 22:04:10 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -217,6 +217,9 @@ php-sapi_src_unpack() {
 	# we keep a backup of it as we need it at the end of the install
 	#cp pear/PEAR/Registry.php pear/PEAR/Registry.old
 	#sed -e "s:\$pear_install_dir\.:\'${D}/usr/lib/php/\' . :g" -i pear/PEAR/Registry.php
+
+	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i configure
+
 }
 
 
