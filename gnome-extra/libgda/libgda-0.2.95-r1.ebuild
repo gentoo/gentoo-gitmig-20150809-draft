@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.95-r1.ebuild,v 1.10 2003/09/08 05:11:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.95-r1.ebuild,v 1.11 2004/01/25 13:13:57 obz Exp $
 
 IUSE="ldap odbc postgres mysql"
 
