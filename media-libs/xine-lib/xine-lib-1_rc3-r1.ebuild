@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r1.ebuild,v 1.2 2003/12/29 10:32:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3-r1.ebuild,v 1.3 2003/12/29 18:29:18 bazik Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,7 +34,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~hppa sparc ~amd64"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
@@ -46,8 +46,8 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
-	directfb? ( >=dev-libs/DirectFB-0.9.9
-		    dev-util/pkgconfig )
+	!sparc? ( directfb? ( >=dev-libs/DirectFB-0.9.9
+		    dev-util/pkgconfig ) )
 	gnome? ( >=gnome-base/gnome-vfs-2.0
 			dev-util/pkgconfig )
 	>=media-libs/flac-1.0.4
@@ -63,6 +63,16 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
+pkg_setup() {
+	# Make sure that the older libraries are not installed (bug #15081).
+	if [ `has_version =media-libs/xine-lib-0.9.13*` ]
+	then
+		einfo "Please uninstall older xine libraries.";
+		einfo "The compilation cannot proceed.";
+		die
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -73,17 +83,10 @@ src_unpack() {
 	epatch ${FILESDIR}/protect-CFLAGS.patch-${PV} || die
 	# plasmaroo: Kernel 2.6 headers patch
 	epatch ${FILESDIR}/xine-lib-2.6.patch || die
+	epatch ${FILESDIR}/xine-lib-1_rc3-configure-sparc.patch || die "sparc configure patch failed."
 }
 
 src_compile() {
-	# Make sure that the older libraries are not installed (bug #15081).
-	if [ -f /usr/lib/libxine.so.0 ]
-	then
-		einfo "Please uninstall older xine libraries.";
-		einfo "The compilation cannot proceed.";
-		die
-	fi
-
 	# Use the built-in dvdnav plugin.
 	local myconf="--with-included-dvdnav"
 
@@ -104,11 +107,14 @@ src_compile() {
 	use oggvorbis \
 		|| myconf="${myconf} --disable-ogg --disable-vorbis"
 
-	use avi	\
+	use avi	&& use x86 \
 		&& myconf="${myconf} --with-w32-path=/usr/lib/win32" \
 		|| myconf="${myconf} --disable-asf"
 	use sdl \
-		|| myconf="${myconf} --with-sdl-prefix=/null"
+		|| myconf="${myconf} --disable-sdltest"
+
+	use sparc \
+		&& myconf="${myconf} --enable-vis"
 
 	econf ${myconf} || die "Configure failed"
 

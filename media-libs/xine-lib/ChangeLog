@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.82 2003/12/29 10:32:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.83 2003/12/29 18:29:18 bazik Exp $
+
+  29 Dec 2003; Sven Blumenstein <bazik@gentoo.org> xine-lib-1_rc3-r1.ebuild:
+  Fixed handling of avi useflag on non-x86, fixed enabling of 
+  assembly optimization on sparc, fixed CFLAG handling of the
+  configure script on sparc, corrected checking for older 
+  versions (using has_version now) and moved it to pkg_setup,
+  fixed disabling of sdl if USE=-sdl, fixed directfb depend on sparc.
 
   29 Dec 2003; Martin Holzer <mholzer@gentoo.org> xine-lib-1_rc2.ebuild,
   xine-lib-1_rc3-r1.ebuild, xine-lib-1_rc3.ebuild:
