@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.9.10.ebuild,v 1.9 2005/01/01 11:23:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.9.10.ebuild,v 1.10 2005/01/03 00:10:33 gongloo Exp $
 
 DESCRIPTION="Return the canonicalized absolute pathname"
 HOMEPAGE="http://packages.debian.org/unstable/utils/realpath.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://debian/pool/main/d/dwww/dwww_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips amd64 ppc64 ~ppc-macos"
+KEYWORDS="x86 ppc sparc mips amd64 ppc64 ppc-macos"
 IUSE=""
 
 S=${WORKDIR}/dwww-${PV}

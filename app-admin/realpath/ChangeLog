@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/realpath
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.12 2005/01/01 11:23:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.13 2005/01/03 00:10:33 gongloo Exp $
+
+  02 Jan 2005; <gongloo@gentoo.org> realpath-1.9.10.ebuild:
+  Stable on ppc-macos.
 
   17 Dec 2004; Markus Rothe <corsair@gentoo.org> realpath-1.9.10.ebuild:
   Stable on ppc64
