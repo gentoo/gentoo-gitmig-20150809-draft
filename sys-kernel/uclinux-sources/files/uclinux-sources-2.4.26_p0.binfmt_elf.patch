@@ -1,6 +1,7 @@
---- linux-2.4.27/fs/binfmt_elf.c	2004-11-10 12:25:16 -08:00
-+++ linux-2.4.27-plasmaroo/fs/binfmt_elf.c	2004-11-10 12:25:16 -08:00
-@@ -335,9 +335,12 @@
+diff -ur linux-2.4.27/fs/binfmt_elf.c linux-2.4.27.plasmaroo/fs/binfmt_elf.c
+--- linux-2.4.27/fs/binfmt_elf.c	2004-04-14 14:05:40.000000000 +0100
++++ linux-2.4.27.plasmaroo/fs/binfmt_elf.c	2004-11-19 21:30:26.745410824 +0000
+@@ -299,9 +299,12 @@
  		goto out;
  
  	retval = kernel_read(interpreter,interp_elf_ex->e_phoff,(char *)elf_phdata,size);
@@ -15,7 +16,7 @@
  
  	eppnt = elf_phdata;
  	for (i=0; i<interp_elf_ex->e_phnum; i++, eppnt++) {
-@@ -532,8 +535,11 @@
+@@ -475,8 +478,11 @@
  		goto out;
  
  	retval = kernel_read(bprm->file, elf_ex.e_phoff, (char *) elf_phdata, size);
@@ -28,7 +29,17 @@
  		
  	files = current->files;		/* Refcounted so ok */
  	retval = unshare_files();
-@@ -580,8 +586,14 @@
+@@ -513,7 +519,8 @@
+ 			 */
+ 
+ 			retval = -ENOMEM;
+-			if (elf_ppnt->p_filesz > PATH_MAX)
++			if (elf_ppnt->p_filesz > PATH_MAX || 
++			    elf_ppnt->p_filesz == 0)
+ 				goto out_free_file;
+ 			elf_interpreter = (char *) kmalloc(elf_ppnt->p_filesz,
+ 							   GFP_KERNEL);
+@@ -523,8 +530,16 @@
  			retval = kernel_read(bprm->file, elf_ppnt->p_offset,
  					   elf_interpreter,
  					   elf_ppnt->p_filesz);
@@ -36,15 +47,17 @@
 +			if (retval != elf_ppnt->p_filesz) {
 +				if (retval >= 0)
 +					retval = -EIO;
- 				goto out_free_interp;
++				goto out_free_interp;
 +			}
 +			/* make sure path is NULL terminated */
-+			elf_interpreter[elf_ppnt->p_filesz - 1] = '\0';
++			retval = -EINVAL;
++			if (elf_interpreter[elf_ppnt->p_filesz - 1] != '\0')
+ 				goto out_free_interp;
 +
  			/* If the program interpreter is one of these two,
  			 * then assume an iBCS2 image. Otherwise assume
  			 * a native linux image.
-@@ -616,8 +628,11 @@
+@@ -543,8 +558,11 @@
  			if (IS_ERR(interpreter))
  				goto out_free_interp;
  			retval = kernel_read(interpreter, 0, bprm->buf, BINPRM_BUF_SIZE);
@@ -56,8 +69,8 @@
 +			}
  
  			/* Get the exec headers */
- 			loc->interp_ex = *((struct exec *) bprm->buf);
-@@ -776,8 +791,10 @@
+ 			interp_ex = *((struct exec *) bprm->buf);
+@@ -682,8 +700,10 @@
  		}
  
  		error = elf_map(bprm->file, load_bias + vaddr, elf_ppnt, elf_prot, elf_flags);

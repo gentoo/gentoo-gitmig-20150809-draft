@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/uclinux-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.21 2004/11/12 19:57:20 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.22 2004/11/20 11:26:08 plasmaroo Exp $
+
+*uclinux-sources-2.4.26_p0-r9 (20 Nov 2004)
+
+  20 Nov 2004; <plasmaroo@gentoo.org> -uclinux-sources-2.4.26_p0-r8.ebuild,
+  +uclinux-sources-2.4.26_p0-r9.ebuild, -uclinux-sources-2.6.7_p0-r8.ebuild,
+  +uclinux-sources-2.6.7_p0-r9.ebuild,
+  files/uclinux-sources-2.4.26_p0.binfmt_elf.patch,
+  +files/uclinux-sources-2.4.26_p0.smbfs.patch,
+  files/uclinux-sources-2.6.binfmt_elf.patch,
+  +files/uclinux-sources-2.6.smbfs.patch:
+  Version bump; updates binfmt_elf patch (bug #70681) and adds the smbfs
+  security patch (bug #65877).
 
 *uclinux-sources-2.6.7_p0-r8 (12 Nov 2004)
 
