@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.0.4-r1.ebuild,v 1.1 2003/02/01 21:49:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.0.4-r1.ebuild,v 1.2 2003/02/07 23:12:16 foser Exp $
 
 inherit gnome2 eutils
 
@@ -31,3 +31,6 @@ src_unpack() {
 	# add some eyecandy to the devices view
 	cd ${S}; epatch ${FILESDIR}/${PN}-devicesviewimprovements.patch
 }
+
+# fix some possible problem patchrelated
+MAKEOPTS="-j1"
