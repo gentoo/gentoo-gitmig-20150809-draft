@@ -22,8 +22,14 @@
 ##   End example
 ##
 
+# Brandon Low <lostlogic@gentoo.org> (31 Jul 2002)
+# masked for testing, hack out the arch specifications
+# in configure, please test.
+=media-video/xine-ui-0.9.12-r1
+=media-libs/xine-lib-0.9.12-r2
+
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1135 2002/07/31 14:58:33 seemant Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1136 2002/07/31 16:10:27 lostlogic Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
