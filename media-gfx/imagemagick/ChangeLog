@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.28 2003/01/25 17:42:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.29 2003/02/09 21:23:59 mholzer Exp $
 
 *imagemagick-5.5.3.2 (03 Jan 2003)
+
+  09 Feb 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.5.3.2.ebuild
+  Corrected html doc dir. Closes #15386.
 
   25 Jan 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.5.3.2.ebuild
   using flag-o-magic to force i586 for k6. Closes #14343.
@@ -13,6 +16,9 @@
   Version bump to latest.
 
 *imagemagick-5.4.9.1 (05 Nov 2002)
+
+  09 Feb 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.4.7.4-r1.ebuild
+  Corrected html doc dir. Closes #15386.
 
   22 Jan 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.4.7.4-r1.ebuild
   using flag-o-magic to force i586 for k6. Closes #14343.
@@ -31,6 +37,9 @@
   already had --with-jbig specified...
 
 *imagemagick-5.4.7.4 (28 Oct 2002)
+
+  09 Feb 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.4.7.4.ebuild
+  Corrected html doc dir. Closes #15386.
 
   28 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
   imagemagick-5.4.7.4.ebuild files/digest-imagemagick-5.4.7.4 :
