@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.33 2004/08/20 08:36:03 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.34 2004/08/24 03:14:40 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> grep-2.5.1-r1.ebuild,
+  grep-2.5.1-r4.ebuild, grep-2.5.1-r5.ebuild, grep-2.5.1-r6.ebuild:
+  Removed http://ftp.club.cc.cmu.edu/pub/gnu from SRC_URI as it's already used
+  with mirror://gnu
 
 *grep-2.5.1-r6 (20 Aug 2004)
 
