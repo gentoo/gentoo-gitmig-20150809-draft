@@ -1,0 +1,29 @@
+--- kgpg/kgpgoption.ui.orig	2002-10-21 05:21:35.000000000 +0200
++++ kgpg/kgpgoption.ui	2002-11-10 12:49:28.000000000 +0100
+@@ -229,6 +229,7 @@
+ </connections>
+ <includes>
+     <include location="local" impldecl="in implementation">kgpgoption.ui.h</include>
++    <include location="local" impldecl="in implementation">kcombobox.h</include>
+ </includes>
+ <slots>
+     <slot>toggle_fkey( bool ison )</slot>
+--- kgpg/Makefile.in.orig	2002-11-09 19:24:22.000000000 +0100
++++ kgpg/Makefile.in	2002-11-10 13:17:52.000000000 +0100
+@@ -704,13 +704,10 @@
+ #>+ 1
+ 	$(mkinstalldirs) $(DESTDIR)$(kde_datadir)/konqueror/servicemenus/
+ 
+-#	$(INSTALL_DATA) $(srcdir)/decryptfile.desktop $(kde_datadir)/konqueror/servicemenus/decryptfile.desktop
+-	-rm -f $(kde_datadir)/konqueror/servicemenus/decryptfile.desktop
+-
+-	$(INSTALL_DATA) $(srcdir)/encryptfile.desktop $(kde_datadir)/konqueror/servicemenus/encryptfile.desktop
++	$(INSTALL_DATA) $(srcdir)/encryptfile.desktop $(DESTDIR)$(kde_datadir)/konqueror/servicemenus/encryptfile.desktop
+ 	
+-	$(mkinstalldirs) $(kde_datadir)/kgpg/
+-	$(INSTALL_DATA) $(srcdir)/tips $(kde_datadir)/kgpg/tips
++	$(mkinstalldirs) $(DESTDIR)$(kde_datadir)/kgpg/
++	$(INSTALL_DATA) $(srcdir)/tips $(DESTDIR)$(kde_datadir)/kgpg/tips
+ 
+ uninstall-local:
+ #>- 	-rm -f $(kde_appsdir)/Applications/kgpg.desktop
