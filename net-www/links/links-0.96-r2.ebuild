@@ -1,18 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.96-r2.ebuild,v 1.3 2002/08/16 03:01:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.96-r2.ebuild,v 1.4 2002/08/29 22:42:37 seemant Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://artax.karlin.mff.cuni.cz/~mikulas/links/download/${P}.tar.gz"
 HOMEPAGE="http://artax.karlin.mff.cuni.cz/~mikulas/links"
 DESCRIPTION="A console-based web browser"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc sparc64"
+
 DEPEND=">=sys-libs/ncurses-5.1
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
-SLOT="0"
-LICENSE="GPL"
-KEYWORDS="x86 ppc sparc sparc64"
+PROVIDE="virtual/textbrowser"
 
 src_unpack() {
 

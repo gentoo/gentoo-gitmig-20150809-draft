@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r1.ebuild,v 1.4 2002/08/16 03:01:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r1.ebuild,v 1.5 2002/08/29 22:42:37 seemant Exp $
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -10,12 +10,12 @@ MYP="${P/_/}"
 S="${WORKDIR}/${MYP}"
 SRC_URI="${HOMEPAGE}/download/${MYP}.tar.bz2
 	http://www.ibiblio.org/gentoo/distfiles/links-2.1_pre2-patch.tar.bz2"
+
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
-DEPEND="virtual/glibc
-	ssl? ( >=dev-libs/openssl-0.9.6c )
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	gpm? ( sys-libs/gpm )
 	java? ( >=sys-devel/flex-2.5.4a )
 	png? ( >=media-libs/libpng-1.2.1 )
@@ -23,6 +23,8 @@ DEPEND="virtual/glibc
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	svga? ( >=media-libs/svgalib-1.4.3 )
 	X? ( virtual/x11 )"
+
+PROVIDE="virtual/textbrowser"
 
 src_compile ()
 {
