@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.65 2004/07/27 19:25:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.66 2004/07/28 02:18:38 lv Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -412,6 +412,9 @@ etexec-flags() {
 	# if you're not using a hardened compiler you wont need this
 	# PIC/no-pic kludge in the first place.
 	has_hardened || return 0
+	# this kludge breaks on amd64, and probably other -fPIC dependant
+	# archs.
+	use amd64 && return 0
 
 	if has_pie || has_pic; then
 		[ -z "`is-flag -fno-pic`" ] && 
