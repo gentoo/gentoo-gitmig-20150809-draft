@@ -1,0 +1,9 @@
+# ChangeLog for net-www/khttrack
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/ChangeLog,v 1.1 2003/07/07 17:30:23 ykoehler Exp $
+
+*khttrack-0.10 (07 Jul 2003)
+
+  07 Jul 2003; Yannick Koehler <ykoehler@gentoo.org> khttrack-0.10.ebuild, ChangeLog :
+  Initial import.  Ebuild submitted by tuXXer <bs.net@gmx.de>.
+
