@@ -1,0 +1,24 @@
+# ChangeLog for net-www/tux
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tux/ChangeLog,v 1.1 2004/08/08 19:03:31 stuart Exp $
+
+*tux-2.2.7 (08 Aug 2004)
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org> +files/tux.conf.d,
+  +files/tux.init.d, +tux-2.2.7.ebuild, +tux-3.2.16.ebuild:
+  Moved from net-www/tux to www-servers/tux.
+
+*tux-3.2.16 (21 Feb 2004)
+
+  21 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*tux-3.2.14 (18 Nov 2003)
+
+  18 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*tux-2.2.7 (17 Jun 2003)
+
+  17 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #7727.
