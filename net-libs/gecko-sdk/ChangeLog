@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.1 2004/10/23 13:57:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.2 2004/10/23 14:17:31 josejx Exp $
+
+  24 Oct 2004; Joseph Jezak <josejx@gentoo.org> :
+  Fixed manifest
 
   23 Oct 2004; Joseph Jezak <josejx@gentoo.org> :
   Initial import, bug #50822
