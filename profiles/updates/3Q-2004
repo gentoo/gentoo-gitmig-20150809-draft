@@ -163,3 +163,4 @@ move net-www/ntlmaps www-proxy/ntlmaps
 move net-www/oops www-proxy/oops
 move net-www/squid www-proxy/squid
 move net-www/squidguard www-proxy/squidguard
+move net-www/squirm www-proxy/squirm
