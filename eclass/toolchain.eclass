@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.23 2004/10/04 03:55:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.24 2004/10/04 13:05:51 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -511,16 +511,39 @@ split_out_specs_files() {
 }
 
 
+# This function will call gcc-config when appropriate, with the appropriate
+# arguments. Eventually this should only call gcc-config when we are
+# uninstalling the previously selected gcc version or the config is invalid.
+# consider this note a TODO list. :)
+#
+# Travis Tilley <lv@gentoo.org> (04 Oct 2004)
+#
 do_gcc_config() {
-	local current_gcc_config="$(gcc-config -c)"
-	local current_specs="$(echo ${current_gcc_config} | awk -F - '{ print $6 }')"
-	[ -n "${current_specs}" ] && local use_specs="-${current_specs}"
-
 	# we only want to switch compilers if installing to / and we're not
 	# building a cross-compiler.
-	if [ "${ROOT}" == "/" -a "${CHOST}" == "${CCHOST}" ] ; then
+	! [ "${ROOT}" == "/" -a "${CHOST}" == "${CCHOST}" ] && return 0
+
+	# the grep -v is in there to filter out informational messages >_<
+	local current_gcc_config="$(gcc-config -c | grep -v ^\ )"
+	local current_specs="$(echo ${current_gcc_config} | awk -F - '{ print $6 }')"
+	[ "${current_specs}" != "" ] && local use_specs="-${current_specs}"
+
+	if [ -n "${use_specs}" -a ! -e ${ROOT}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}${use_specs} ] ; then
+		ewarn "The currently selected specs-specific gcc config,"
+		ewarn "${current_specs}, doesn't exist anymore. This is usually"
+		ewarn "due to enabling/disabling hardened or switching to a version"
+		ewarn "of gcc that doesnt create multiple specs files. The default"
+		ewarn "config will be used, and the previous preference forgotten."
+		ebeep
+		epause
+	fi
+
+	if [ -e ${ROOT}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}${use_specs} ] ; then
 		# we dont want to lose the current specs setting!
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}${use_specs}
+	else
+		# ...unless of course the specs-specific entry doesnt exist :)
+		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
 	fi
 }
 
