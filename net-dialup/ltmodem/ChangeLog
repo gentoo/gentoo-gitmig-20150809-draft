@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ltmodem
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.10 2003/12/09 14:41:39 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.11 2004/02/04 14:14:02 lanius Exp $
+
+  04 Feb 2004; Heinrich Wendel <lanius@gentoo.org>
+  ltmodem-8.26_alpha9-r3.ebuild:
+  added support for kernel 2.6; fixed docs; fixed DEPEND
 
 *ltmodem-8.26_alpha9-r2 (09 Dec 2003)
 
