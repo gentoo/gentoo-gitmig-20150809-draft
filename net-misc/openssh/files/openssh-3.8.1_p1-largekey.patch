@@ -1,14 +1,14 @@
 diff -uNr openssh-3.8.1p1/auth2-pubkey.c openssh-3.8.1p1-hugekeys/auth2-pubkey.c
 --- openssh-3.8.1p1/auth2-pubkey.c	2004-01-21 01:02:50.000000000 +0100
 +++ openssh-3.8.1p1-hugekeys/auth2-pubkey.c	2004-06-24 13:53:28.493574960 +0200
-@@ -40,6 +40,7 @@
- #include "auth-options.h"
- #include "canohost.h"
- #include "monitor_wrap.h"
-+#include "authfile.h"
- 
- /* import */
- extern ServerOptions options;
+@@ -32,6 +32,7 @@
+ #include "log.h"
+ #include "servconf.h"
+ #include "compat.h"
++#include "authfile.h
+ #include "bufaux.h"
+ #include "auth.h"
+ #include "key.h"
 @@ -167,7 +168,8 @@
  static int
  user_key_allowed2(struct passwd *pw, Key *key, char *file)

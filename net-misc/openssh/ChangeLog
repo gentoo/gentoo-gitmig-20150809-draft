@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.95 2004/08/15 10:09:44 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.96 2004/08/16 10:40:40 aliz Exp $
+
+  16 Aug 2004; Daniel Ahlberg <aliz@gentoo.org>
+  files/openssh-3.8.1_p1-largekey.patch:
+  Fixed largekey patch. Closing #60417.
 
 *openssh-3.8.1_p1-r2 (15 Aug 2004)
 
