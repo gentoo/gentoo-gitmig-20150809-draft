@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r3.ebuild,v 1.1 2003/12/30 04:04:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r3.ebuild,v 1.2 2003/12/30 06:36:45 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,6 +28,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/automake-1.7.6
 	>=sys-devel/autoconf-2.57
 	sys-apps/help2man
+	sys-libs/libtermcap-compat
 	ppc? ( >=sys-devel/m4-1.4-r1 )
 	nls? ( sys-devel/gettext )
 	acl? ( !hppa? ( sys-apps/acl ) )
