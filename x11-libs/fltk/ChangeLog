@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.11 2002/09/21 02:07:45 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.12 2002/10/03 07:16:18 raker Exp $
 
 *fltk-1.1.0_rc7 (20 Sep 2002)
+
+  03 Oct 2002; Nick Hadaway <raker@gentoo.org> fltk-1.1.10_rc7.ebuild :
+  Added missing dependancy on virtual/x11 thanks to bcowan.  w00t!
 
   20 Sep 2002; Nick Hadaway <raker@gentoo.org> fltk-1.1.0_rc7.ebuild,
   files/digest-fltk-1.1.0_rc7 :
