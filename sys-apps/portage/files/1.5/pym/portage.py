@@ -1,7 +1,65 @@
 # Gentoo Linux Dependency Checking Code
 # Copyright 1998-2000 Daniel Robbins, Gentoo Technologies, Inc.
 # Distributed under the GNU Public License
-# Version 1.0 7/31/2000
+
+# TO-DO:
+# (I'm adding this here because I lose or forget about all my other Portage
+# TO-DO files... 
+#
+# subpackages
+# ===========
+#src_install will work as normal, and will create the master image that includes
+#everything in ${D}.  There will be a new function, called src_subpkg that contains
+#instructions for selecting files from ${D} and copying them to subpkg dirs, where
+#they will get seperately packaged.  The function will look something like this:
+#
+#src_subpkg() {
+#	subpkg bin
+#	#maybe grab should use regular expressions, not globbing?
+#	grab /usr/bin/* /usr/sbin/* /usr/lib/*.so
+#	
+#	subpkg dev
+#	grab /usr/lib/*.a (any way to say "everything but *.so"?)
+#}
+#
+#Subpackage naming will work as follows.  For a package foo-1.0, foo-1.0.tbz2
+#will be the master package and include all subpackages.  foo:dev-1.0.tbz2 will
+#be the development package, and foo:run-1.0.tbz2 will be a runtime package,
+#etc.  It should be possible to simply treat them as unique package names with
+#P="foo:dev" and P="foo:run" respectively.
+#
+#dep resolution needs to be upgraded a bit, though.  "sys-apps/foo" will depend
+#on the foo master package (i.e. foo-1.0.tbz2) for backwards compatibility.  However,
+#it will now also be possible to depend on "sys-apps/foo:dev" or "sys-apps/foo:run",
+#and the dep system needs to be upgraded so that it knows how to satisfy these 
+#dependencies.  This should allow the new subpackages system to be integrated 
+#seamlessly into our existing dependency hierarchy.
+#
+#Note: It may also be a good idea to allow a make.conf option so that "sys-apps/foo:run"
+#automatically resolves to the master package (for those who prefer complete packages
+#rather than installing things piecemeal; a great idea for development boxes where many
+#things will depend on "sys-apps/foo:dev" for headers, but the developer may want the
+#whole enchilada. (generally, I prefer this approach, though for runtime-only systems
+#subpackages make a lot of sense).
+#
+#new dependency functionality
+#============================
+#
+#Important new dep functionality:
+#
+#~sys-apps/foo-1.0 will match the latest rev of foo-1.0.  Useful because the latest rev
+#should be the most stable and reliable version.
+#
+#Next, sys-apps/foo-1.0* will match the latest package that starts with 1.0; so 1.0.3 will
+#match.  This is an excellent way to depend on libraries where you need a specific major
+#or minor version, but also want to be able to use the latest "really minor" version and
+#rev available.  For example, if your app depends on glib-1.2:
+#
+#dev-libs/glib-1.2*
+#
+#This will match glib-1.2, glib-1.2-r1, glib-1.2.1 and glib-1.2.1.1-r1.  Of these four
+#examples, the last will be chosen (most recent) if all are available.  However, glib-1.3
+#will not be considered for this dependency.
 
 import string,os
 from stat import *
@@ -12,16 +70,20 @@ import shlex
 import shutil
 import xpak
 
-# master category list.  Any new categories should be added to this list to ensure that they all categories are read
-# when we check the portage directory for available ebuilds.
+# master category list.  Any new categories should be added to this list to
+# ensure that they all categories are read when we check the portage directory
+# for available ebuilds.
 
-categories=("app-admin", "app-arch", "app-cdr", "app-crypt", "app-doc", "app-editors", "app-emulation", "app-games", "app-misc", 
-			"app-office", "app-shells", "app-text", "dev-db", "dev-java", "dev-lang", "dev-libs", "dev-perl", 
-			"dev-python", "dev-ruby", "dev-util", "gnome-apps", "gnome-base", "gnome-libs", 
-			"gnome-office","kde-apps", "kde-i18n", "kde-base", "kde-libs", "media-gfx", "media-libs", "media-sound", "media-video", 
-			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-im", "net-irc", "net-libs", "net-mail", "net-misc", "net-news", "net-nds", 
-			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
-			"x11-terms", "x11-wm","virtual")
+categories=("app-admin", "app-arch", "app-cdr", "app-crypt", "app-doc",
+"app-editors", "app-emulation", "app-games", "app-misc", "app-office",
+"app-shells", "app-text", "dev-db", "dev-java", "dev-lang", "dev-libs",
+"dev-perl", "dev-python", "dev-ruby", "dev-util", "gnome-apps", "gnome-base",
+"gnome-libs", "gnome-office","kde-apps", "kde-i18n", "kde-base", "kde-libs",
+"media-gfx", "media-libs", "media-sound", "media-video", "net-analyzer",
+"net-dialup", "net-fs", "net-ftp", "net-im", "net-irc", "net-libs", "net-mail",
+"net-misc", "net-news", "net-nds", "net-print", "net-www", "packages",
+"sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs",
+"x11-terms", "x11-wm","virtual")
 
 #beautiful directed graph object
 
