@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/iip-1.1.0.ebuild,v 1.6 2004/07/01 22:21:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/iip-1.1.0.ebuild,v 1.7 2004/07/27 17:27:18 swegener Exp $
 
-inherit eutils
-
-S="${WORKDIR}/${P}/src"
-DESCRIPTION="Proxy server for encrypted anonymous irc-like network"
+DESCRIPTION="Proxy server for encrypted anonymous IRC-like network"
 HOMEPAGE="http://www.invisiblenet.net/iip/"
 SRC_URI="mirror://sourceforge/invisibleip/${P}.tgz"
 LICENSE="GPL-2"
@@ -13,21 +10,32 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc"
-RDEPEND=""
+S="${WORKDIR}/${P}/src"
+
+RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+
+	sed -i -e "s/-g -Wall -O2/${CFLAGS}/" ${S}/Makefile || die "sed failed"
+}
 
 src_compile() {
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	ehome=/home/iip
-	enewuser iip
-	dodir /usr/man/man1
-	dodir /usr/bin
-	dodir /usr/share/iip
-	make PREFIX=${D}usr INSTALLFILEPATH=${D}usr/share/iip/ install || die
-	cd ${WORKDIR}/${P}
-	dodoc AUTHORS  CHANGELOG  COPYING  INSTALL  README
-}
+	dodir /usr/bin /usr/share/man/man1
 
+	make \
+		PREFIX=${D}/usr \
+		INSTALLMANDST=${D}/usr/share/man/man1/ \
+		INSTALLFILEPATH=${D}/usr/share/iip/ \
+		INSTALLUSER=root \
+		install || die "make install failed"
+
+	cd ${WORKDIR}/${P}
+	dodoc AUTHORS CHANGELOG README
+}
