@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.4.1.ebuild,v 1.1 2004/05/09 12:42:20 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.4.1.ebuild,v 1.2 2004/05/10 13:10:43 dholm Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
