@@ -2,8 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# /home/cvsroot/gentoo-x86/gnome-apps/nautilus/nautilus-1.0.ebuild,v 1.3 2001/04/29 18:42:54 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.3.ebuild,v 1.6 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.3.ebuild,v 1.7 2001/08/31 03:23:39 pm Exp $
 
 
 A=${P}.tar.gz

@@ -3,7 +3,7 @@
 # Author Daniel Robbins <drobbins@gentoo.org>
 # Script Revised by Parag Mehta <pm@gnuos.org>
 # /home/cvsroot/gentoo-x86/net-misc/bind/bind-9.1.3.ebuild,v 1.2 2001/05/28 14:32:32 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-9.1.3.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-9.1.3.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
 
 
 A=${P}.tar.gz

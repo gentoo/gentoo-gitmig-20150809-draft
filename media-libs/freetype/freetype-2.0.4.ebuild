@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.0.1-r1.ebuild,v 1.2 2001/02/13 14:29:40 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.0.4.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.0.4.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
 
 
 S=${WORKDIR}/${P}

@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Erik Van Reeth <erik@vanreeth.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/pan/pan-0.9.6.ebuild,v 1.3 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/pan/pan-0.9.6.ebuild,v 1.4 2001/08/31 03:23:39 pm Exp $
 
 
 #P=pan-0.9.6

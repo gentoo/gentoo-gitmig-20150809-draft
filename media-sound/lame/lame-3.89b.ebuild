@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/media-sound/lame/lame-3.89b.ebuild,v 1 2000/11/02 02:17:12 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.89b.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.89b.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
 
 
 A=lame3.89beta.tar.gz

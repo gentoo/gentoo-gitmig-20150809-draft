@@ -1,6 +1,6 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@intphsys.com>
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.95-r1.ebuild,v 1.3 2001/08/30 17:31:36 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.95-r1.ebuild,v 1.4 2001/08/31 03:23:39 pm Exp $
 
 
 S=${WORKDIR}/links-0.95

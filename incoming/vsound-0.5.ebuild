@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Chris Arndt <arndtc@mailandnews.com>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.5 2001/07/24 22:30:35 lordjoe Exp
-# $Header: /var/cvsroot/gentoo-x86/incoming/vsound-0.5.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/incoming/vsound-0.5.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
 
 
 

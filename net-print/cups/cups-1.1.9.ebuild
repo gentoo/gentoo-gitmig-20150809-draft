@@ -3,7 +3,7 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
 # /home/cvsroot/gentoo-x86/net-print/cups/cups-1.1.6.ebuild,v 1.1 2001/04/28 04:19:58 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.9.ebuild,v 1.2 2001/08/30 17:31:36 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.9.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
 
 
 S=${WORKDIR}/${P}

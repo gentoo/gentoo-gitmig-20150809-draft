@@ -1,7 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# /home/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.1.ebuild
+# /home/cvsroot/gentoo-x86/app-admin/powerteak/powertweak-0.99.1.ebuild
+# $Header: /var/cvsroot/gentoo-x86/incoming/powertweak-0.99.1.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
+
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}

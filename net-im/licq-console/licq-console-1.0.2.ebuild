@@ -1,6 +1,6 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jules Gagnon <eonwe@users.sourceforge.net>
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/licq-console-1.0.2.ebuild,v 1.4 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/licq-console-1.0.2.ebuild,v 1.5 2001/08/31 03:23:39 pm Exp $
 
 
 LICQV=licq-1.0.3

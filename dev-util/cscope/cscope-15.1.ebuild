@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <lewis@sistina.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.1.ebuild,v 1.4 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.1.ebuild,v 1.5 2001/08/31 03:23:38 pm Exp $
 
 
 A=${P}.tar.gz

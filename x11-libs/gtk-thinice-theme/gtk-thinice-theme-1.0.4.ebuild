@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-thinice-theme/gtk-thinice-theme-1.0.4.ebuild,v 1.2 2001/08/30 17:31:36 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-thinice-theme/gtk-thinice-theme-1.0.4.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
 
 
 S=${WORKDIR}/${P}

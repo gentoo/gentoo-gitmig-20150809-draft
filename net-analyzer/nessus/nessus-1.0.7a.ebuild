@@ -1,6 +1,6 @@
 #Copyright 2000 Achim Gottinger
 #Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.0.7a.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.0.7a.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
 
 
 # It's better to split it in four different packages

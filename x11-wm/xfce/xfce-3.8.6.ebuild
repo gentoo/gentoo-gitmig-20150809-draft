@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <ben@sistina.com>
 # /home/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.61.1.ebuild,v 1.1 2001/04/20 18:51:22 drobbins Exp
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.6.ebuild,v 1.2 2001/08/30 17:31:36 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.6.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
 
  
 A=${P}.tar.gz

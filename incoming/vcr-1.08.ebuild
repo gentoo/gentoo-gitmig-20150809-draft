@@ -5,6 +5,8 @@
 # ${P} == package name <path>/<$P>.ebuild
 # ${D} == temporary directory where to install the stuff (/tmp/portage/<$P>/image)
 # ${WORKDIR} == /tmp/portage/${P}/work
+# $Header: /var/cvsroot/gentoo-x86/incoming/vcr-1.08.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
+
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
