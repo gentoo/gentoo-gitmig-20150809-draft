@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.17 2004/01/21 05:35:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.18 2004/02/24 06:45:06 eradicator Exp $
 
 inherit libtool
 
@@ -59,5 +59,5 @@ src_install() {
 		install || die
 
 	dodoc API COPYING HACKING PRESETS.draft LICENSE README* TODO USAGE
-	dohtml -r ./
+	dohtml misc/lameGUI.html Dll/LameDLLInterface.htm
 }

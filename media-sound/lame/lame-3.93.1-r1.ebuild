@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.11 2004/01/12 22:50:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.12 2004/02/24 06:45:06 eradicator Exp $
 
 inherit flag-o-matic gcc
 
@@ -50,9 +50,8 @@ src_compile() {
 }
 
 src_install() {
-	einstall \
-		pkghtmldir=${D}/usr/share/doc/${PF}/html || die
+	make DESTDIR=${D} pkghtmldir=${D}/usr/share/doc/${PF}/html install || die
 
 	dodoc API COPYING HACKING PRESETS.draft LICENSE README* TODO USAGE
-	dohtml -r ./
+	dohtml misc/lameGUI.html Dll/LameDLLInterface.htm
 }
