@@ -1,11 +1,16 @@
 # ChangeLog for app-text/ispell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.12 2003/02/12 05:31:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.13 2003/02/12 13:16:27 seemant Exp $
+
+*ispell-3.2.06-r5 (17 Jul 2002)
+
+  12 Feb 2003; Seemant Kulleen <seemant@gentoo.org> :
+  
+  Added ~ppc ~alpha ~mips ~hppa to the -r5, and ~alpha ~mips ~hppa to the
+  -r4 ebuild.  Also, switched to using epatch from eutils.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*ispell-3.2.06-r5 (17 Jul 2002)
-
   17 Jul 2002; Seemant Kulleen <seemant@gentoo.org> ispell-3.2.06-r5.ebuild
   files/digest-ispell-3.2.06-r5 :
 
