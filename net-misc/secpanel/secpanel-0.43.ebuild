@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/secpanel-0.43.ebuild,v 1.6 2004/06/25 00:10:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/secpanel/secpanel-0.43.ebuild,v 1.7 2004/08/22 21:41:39 kloeri Exp $
 
 DESCRIPTION="Graphical frontend for managing and running SSH and SCP connections"
 HOMEPAGE="http://www.pingx.net/secpanel/"
@@ -9,7 +9,7 @@ SRC_URI="http://www.pingx.net/secpanel/${P/43/4.3}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 ~alpha ~sparc ~amd64"
+KEYWORDS="x86 alpha ~sparc ~amd64"
 IUSE="gif"
 
 DEPEND="!gif? ( media-gfx/imagemagick )"

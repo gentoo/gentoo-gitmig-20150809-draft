@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.32 2004/08/18 23:10:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.33 2004/08/22 21:39:49 kloeri Exp $
+
+  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> stunnel-4.05.ebuild:
+  Stable on alpha.
 
   18 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> files/stunnel.conf.4.05,
   files/stunnel.rc6.4.05:
