@@ -1,0 +1,18 @@
+--- python/Makefile.old	Fri Sep  6 04:39:34 2002
++++ python/Makefile	Fri Sep  6 04:40:57 2002
+@@ -538,11 +538,11 @@
+ 	cat $(srcdir)/libxml.py libxml2class.py > libxml2.py
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(libdir)/python${PYTHON_VERSION}/site-packages
+-	/bin/install -c -m 0644 libxml2.py $(libdir)/python${PYTHON_VERSION}/site-packages
+-	$(mkinstalldirs) $(DOCS_DIR)
++	$(mkinstalldirs) $(DESTDIR)/$(libdir)/python${PYTHON_VERSION}/site-packages
++	/bin/install -c -m 0644 libxml2.py  $(DESTDIR)/$(libdir)/python${PYTHON_VERSION}/site-packages
++	$(mkinstalldirs)  $(DESTDIR)/$(DOCS_DIR)
+ 	@(for doc in $(DOCS) ; \
+-	   do /bin/install -c -m 0644 $$doc $(DOCS_DIR) ; done)
++	   do /bin/install -c -m 0644 $$doc  $(DESTDIR)/$(DOCS_DIR) ; done)
+ 
+ $(GENERATED): gen_prog
+ 

@@ -1,7 +1,12 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.11 2002/08/02 03:24:39 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.12 2002/09/06 03:10:41 spider Exp $
 
+
+*libxml2-2.4.24 (06 Sep 2002)
+  06 Sep 2002; Spider <spider@gentoo.org> libxml2-2.4.24.ebuild :
+  new verison, patched up python/Makefile to make it adhere to DESTDIR
+  
 *libxml2-2.4.23 (07 Jul 2002)
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> libxml2-2.4.23.ebuild :
   Added ppc to keywords
