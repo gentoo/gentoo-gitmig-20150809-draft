@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.9 2004/08/14 14:45:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.10 2004/11/15 10:35:04 phosphan Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${P}.tar.gz
 	epatch ${FILESDIR}/${P}-gentoo.diff # Parallel make patch
+	epatch ${FILESDIR}/xio_timer.patch
 }
 
 src_compile() {
