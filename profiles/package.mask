@@ -41,10 +41,6 @@
 ~kde-base/kdetoys-3.1_rc5
 ~kde-base/kdeutils-3.1_rc5
 
-# <carpaski@gentoo.org> (05 Dec 2002)
-# Simple fixes + Sandbox fixes.
->=sys-apps/portage-2.0.45-r2
-
 # <george@gentoo.org> (03 Dec 2002)
 # this fix removes some functionality from graphviz but seems to be necessary if we are to
 # clean-up all that libpng mess
