@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.1.ebuild,v 1.2 2004/07/24 20:24:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.1.ebuild,v 1.3 2004/07/24 20:37:23 swegener Exp $
 
 inherit eutils ssl-cert
 
@@ -98,7 +98,8 @@ pkg_postinst() {
 	enewuser unrealircd
 	chown unrealircd \
 		${ROOT}/{etc,var/{lib,log,run}}/unrealircd \
-		${ROOT}/etc/unrealircd/server.cert.{key,pem}
+		${ROOT}/etc/unrealircd/server.cert.{key,pem} \
+		${ROOT}/etc/unrealircd/*.conf
 
 	einfo
 	einfo "UnrealIRCd will not run until you've set up /etc/unrealircd/unrealircd.conf"
