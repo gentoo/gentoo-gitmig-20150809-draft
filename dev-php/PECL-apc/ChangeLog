@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PECL-apc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/ChangeLog,v 1.8 2005/02/13 19:00:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/ChangeLog,v 1.9 2005/02/14 08:36:53 sebastian Exp $
+
+*PECL-apc-2.0.4 (14 Feb 2005)
+
+  14 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +PECL-apc-2.0.4.ebuild:
+  Version bump, closes #75216.
 
   13 Feb 2005; Stuart Herbert <stuart@gentoo.org> PECL-apc-2.0.ebuild:
   Added hard dependency on PHP 4.x; APC does not work with PHP 5.x yet
