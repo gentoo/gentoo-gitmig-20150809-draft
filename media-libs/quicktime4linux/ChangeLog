@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/quicktime4linux
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.18 2003/10/02 15:57:01 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.19 2004/02/20 10:54:55 mr_bones_ Exp $
+
+  20 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  quicktime4linux-1.5.5-r1.ebuild, quicktime4linux-1.6.2.ebuild,
+  quicktime4linux-2.0.0-r1.ebuild, quicktime4linux-2.0.0.ebuild:
+  header fix; media-libs/divx4linux is x86 only
 
 *quicktime4linux-2.0.0-r1 (02 Oct 2003)
 
