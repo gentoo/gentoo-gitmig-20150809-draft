@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.15 2003/09/09 01:06:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.16 2004/03/27 19:08:16 usata Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -107,8 +107,15 @@ latex-package_src_doinstall() {
                     doins $i
                 done
                 ;;
+            "bst")
+                for i in `find . -maxdepth 1 -type f -name "*.bst"`
+                do
+                    insinto ${TEXMF}/bibtex/bst/${PN}
+                    doins $i
+                done
+                ;;
             "styles")
-                latex-package_src_doinstall sty cls fd clo def
+                latex-package_src_doinstall sty cls fd clo def bst
                 ;;
             "doc")
                 latex-package_src_doinstall tex dtx dvi ps pdf
@@ -129,7 +136,6 @@ latex-package_src_doinstall() {
 
 latex-package_src_compile() {
     debug-print function $FUNCNAME $*
-    cd ${S}
     for i in `find \`pwd\` -maxdepth 1 -type f -name "*.ins"`
     do
         einfo "Extracting from $i"
@@ -139,7 +145,6 @@ latex-package_src_compile() {
 
 latex-package_src_install() {
     debug-print function $FUNCNAME $*
-    cd ${S}
     latex-package_src_doinstall all
 }
 
