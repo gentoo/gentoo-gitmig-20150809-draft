@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.30.ebuild,v 1.1 2003/07/09 16:46:58 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.30.ebuild,v 1.2 2003/07/09 16:52:21 utx Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
@@ -39,7 +39,7 @@ src_install() {
 	fperms 0750 /usr/bin/dep-clean
 
 	dobin ${FILESDIR}/scripts/revdep-rebuild-2
-	mv ${D}${DESTTREE}/bin/revdep-rebuild-1 ${D}${DESTTREE}/bin/revdep-rebuild
+	mv ${D}${DESTTREE}/bin/revdep-rebuild-2 ${D}${DESTTREE}/bin/revdep-rebuild
 	fperms 0750 /usr/bin/revdep-rebuild
 
 	dobin ${FILESDIR}/scripts/etcat
