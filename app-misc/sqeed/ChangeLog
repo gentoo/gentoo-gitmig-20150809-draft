@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sqeed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sqeed/ChangeLog,v 1.6 2004/09/29 23:37:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sqeed/ChangeLog,v 1.7 2004/10/21 14:51:47 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> sqeed-0.2.2.ebuild:
   Don't assign default to S; header fix
