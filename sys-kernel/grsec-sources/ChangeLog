@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.25 2004/06/24 22:57:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.26 2004/06/26 04:45:18 solar Exp $
+
+*grsec-sources-2.4.26.2.0-r5 (26 Jun 2004)
+
+  26 Jun 2004; <solar@gentoo.org> grsec-sources-2.4.26.2.0-r5.ebuild,
+  files/gentoo-sources-2.4.CAN-2004-0495.patch,
+  files/gentoo-sources-2.4.CAN-2004-0535.patch:
+  Privilege escalation bugs revealed by Sparse tool. bug 54976
 
   17 Jun 2004; <solar@gentoo.org> grsec-sources-2.4.26.2.0-r4.ebuild:
   #commented out the i2c-proc_bus_read.patch as it's unneeded as pointed out in
