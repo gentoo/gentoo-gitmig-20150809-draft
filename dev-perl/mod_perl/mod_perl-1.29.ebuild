@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.29.ebuild,v 1.4 2004/03/01 12:03:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.29.ebuild,v 1.5 2004/04/16 10:31:11 mr_bones_ Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Perl Module for Apache"
@@ -14,8 +16,6 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc alpha ia64"
 DEPEND="dev-lang/perl dev-perl/libwww-perl =net-www/apache-1* >=sys-apps/sed-4"
 
 IUSE="ipv6"
-
-inherit eutils
 
 src_unpack() {
 	unpack ${A}
