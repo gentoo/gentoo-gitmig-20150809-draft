@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.14.ebuild,v 1.4 2004/04/26 18:29:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.14.ebuild,v 1.5 2004/04/30 03:48:33 raker Exp $
 
 inherit gcc flag-o-matic
 
@@ -31,6 +31,11 @@ src_unpack() {
 	for i in `grep -lr "usr/local" "${S}"` ; do
 		sed -e "s:/usr/local:/usr:" -i "${i}" || die "sed failed"
 	done
+
+	# This was fixed in CVS but didn't make it into 0.14
+	# There is a problem  in the goom plugin
+	# 20040429 - raker@gentoo.org
+	epatch ${FILESDIR}/asm_fix.diff
 }
 
 src_compile() {
