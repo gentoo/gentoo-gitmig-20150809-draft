@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.16 2003/03/19 10:30:20 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.17 2003/03/19 12:09:25 lordvan Exp $
 
 
 # ECVS_TOP_DIR="${PORTAGE_TMPDIR}"
@@ -41,7 +41,7 @@ pkg_setup () {
 src_compile() {
 	elibtoolize
 	cd ${S}
-	local myconf=" --with-mozilla-snapshot=1.3b --disable-werror"
+	local myconf=" --with-mozilla-snapshot=1.3 --disable-werror"
 	local baseopts="--prefix=/usr\
 				--mandir=/usr/share/man \
 				--infodir=/usr/share/info \
