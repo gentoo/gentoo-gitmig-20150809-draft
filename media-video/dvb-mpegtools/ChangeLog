@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvb-mpegtools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvb-mpegtools/ChangeLog,v 1.1 2003/03/07 13:35:28 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvb-mpegtools/ChangeLog,v 1.2 2003/06/12 21:21:49 mholzer Exp $
+
+*dvb-mpegtools-0.2.5 (12 Jun 2003)
+
+  12 Jun 2003; Martin Holzer <mholzer@gentoo.org> dvb-mpegtools-0.2.5.ebuild:
+  Version bumped.
 
 *media-video/dvb-mpegtools-0.2.4 (07 Mar 2003)
   07 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org>: dvb-mpegtools-0.2.4.ebuild: 
