@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.19 2003/09/04 03:47:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.20 2003/09/28 17:22:11 pyrania Exp $
+
+  28 Sep 2003; Markus Nigbur <pyrania@gentoo.org> xv-3.10a-r3.ebuild,
+  xv-3.10a-r5.ebuild:
+  Added ~amd64 keyword. request by brad@mainstreetsoftworks.com in bug #29806.
 
 *xv-3.10a-r5 (07 Aug 2003)
 
