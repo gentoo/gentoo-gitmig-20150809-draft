@@ -1,6 +1,14 @@
 # ChangeLog for app-benchmarks/ltp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.1 2004/11/06 23:34:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.2 2004/12/04 05:02:55 dragonheart Exp $
+
+*ltp-20041203 (04 Dec 2004)
+
+  04 Dec 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/ltp-20041203-ballista-paths.patch, +files/ltp-ballista-paths.patch,
+  ltp-20041104.ebuild, +ltp-20041203.ebuild:
+  version bump and more patches added. Bug #71034 by BlaisorBlade
+  <blaisorblade_spam@yahoo.it>. Patches by Marien Zwart <m_zwart@123mail.org>
 
 *ltp-20041104 (07 Nov 2004)
 

@@ -1,16 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 035a54e7d8b3fbfa188d34c0f50fd852 ltp-20041104.ebuild 1119
+MD5 677993f0e16d3f9cbd6c03496da36078 ltp-20041104.ebuild 1161
 MD5 f592f012ff1df95e9b2dcd743df2405b metadata.xml 402
-MD5 68ccdadc573c7c5b65c824ea70affb1b ChangeLog 496
+MD5 5c1aca07a01a3e2979b58b1ed3bef4d3 ChangeLog 845
+MD5 d32b959898c9f29788224620c686b7bf ltp-20041203.ebuild 1168
 MD5 e2a7ff766a942e7a6a8e299cb74edacb files/runltp-path.patch 387
 MD5 e4bb569a7ad39bd83b66430469168d6b files/IDcheck-noninteractive.patch 729
 MD5 d1ba3a9b21ea0697d2b92b74e9147231 files/digest-ltp-20041104 67
+MD5 e17b3facc501915809ff69e8f9a12056 files/ltp-ballista-paths.patch 8166
+MD5 acbebd9bb97c2f8b55f62c4c87a48deb files/digest-ltp-20041203 67
+MD5 1c87578ced34310bd048cc03c9ac45c4 files/ltp-20041203-ballista-paths.patch 6203
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBjV95mdTrptrqvGERAtVMAJwOFNfTPvK0rpbMjR7T6sFONFHkFgCeP29l
-6ATZ35Dbc7jgYZDOzBq6tJw=
-=TrWr
+iD8DBQFBsUUGmdTrptrqvGERAtZTAJ93hw/F/c3gvBaj5AHvymt05HCK4wCfWWew
+2aYH3bN0HvEGCpJrmu5BVXk=
+=N5W6
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20041104.ebuild,v 1.2 2004/12/04 05:02:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20041203.ebuild,v 1.1 2004/12/04 05:02:55 dragonheart Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ltp/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE=""
 
@@ -24,7 +24,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/IDcheck-noninteractive.patch
 	epatch ${FILESDIR}/runltp-path.patch
-	epatch ${FILESDIR}/ltp-ballista-paths.patch
+	epatch ${FILESDIR}/ltp-${PV}-ballista-paths.patch
 }
 
 src_compile() {

@@ -1,0 +1,171 @@
+diff -ur ltp-full-20041104/testcases/ballista/ballista/batchcode ltp-dirty/testcases/ballista/ballista/batchcode
+--- ltp-full-20041104/testcases/ballista/ballista/batchcode	2004-10-18 18:29:45.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/batchcode	2004-11-22 10:24:50.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl5
++#!/usr/bin/env perl
+ # batchcode: sort output results and generate simple statistics
+ # Copyright (C) 1998-2001  Carnegie Mellon University
+ #
+diff -ur ltp-full-20041104/testcases/ballista/ballista/bdc_standalone ltp-dirty/testcases/ballista/ballista/bdc_standalone
+--- ltp-full-20041104/testcases/ballista/ballista/bdc_standalone	2004-10-18 18:29:45.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/bdc_standalone	2004-11-22 10:26:48.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl5
++#!/usr/bin/env perl
+ # bdc_standalone: Compiles specified template file into cpp and h files - no server
+ # Copyright (C) 1998-2001  Carnegie Mellon University
+ #
+diff -ur ltp-full-20041104/testcases/ballista/ballista/configure ltp-dirty/testcases/ballista/ballista/configure
+--- ltp-full-20041104/testcases/ballista/ballista/configure	2004-10-18 18:33:18.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/configure	2004-11-22 10:25:15.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl5
++#!/usr/bin/env perl
+ ########################
+ # configure: creates Makefiles that are configured for user's platform(s)
+ # Copyright (C) 1998-2001  Carnegie Mellon University
+diff -ur ltp-full-20041104/testcases/ballista/ballista/create_code.pl ltp-dirty/testcases/ballista/ballista/create_code.pl
+--- ltp-full-20041104/testcases/ballista/ballista/create_code.pl	2004-10-18 18:33:18.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/create_code.pl	2004-11-22 10:25:49.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl5
++#!/usr/bin/env perl
+ # create_code.pl: produces C++ code that reproduces a Ballista test case - bug reports
+ # Copyright (C) 1998-2001  Carnegie Mellon University
+ #
+diff -ur ltp-full-20041104/testcases/ballista/ballista/dataClimber ltp-dirty/testcases/ballista/ballista/dataClimber
+--- ltp-full-20041104/testcases/ballista/ballista/dataClimber	2004-10-18 18:33:18.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/dataClimber	2004-11-22 10:27:15.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl5
++#!/usr/bin/env perl
+ # dataClimber: extract the dataTypes required to Ballista test a function
+ # Copyright (C) 1998-2001  Carnegie Mellon University
+ #
+diff -ur ltp-full-20041104/testcases/ballista/ballista/Makefile ltp-dirty/testcases/ballista/ballista/Makefile
+--- ltp-full-20041104/testcases/ballista/ballista/Makefile	2004-10-18 19:38:23.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/Makefile	2004-11-22 10:34:37.000000000 +0100
+@@ -24,7 +24,7 @@
+ ########################
+ 
+ # compiler info for the host
+-CC = /usr/local/g++ -Wno-deprecated
++CC = /usr/bin/g++ -Wno-deprecated
+ CFLAGS = -w -O ${TARGET_DEF}
+ CLIBS = -lpthread -ldl -lnsl -rdynamic
+ TEST_MAN_FILE = selfHost
+diff -ur ltp-full-20041104/testcases/ballista/ballista/ostest_new.pl ltp-dirty/testcases/ballista/ballista/ostest_new.pl
+--- ltp-full-20041104/testcases/ballista/ballista/ostest_new.pl	2004-10-18 19:40:31.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/ostest_new.pl	2004-11-22 11:20:11.099138064 +0100
+@@ -81,22 +81,22 @@
+ 
+ # set symbolic links to perl path
+ 
+-$perl_realpath = `which perl`;
+-chomp ($perl_realpath);
+-$find_perllink = `ls /usr/local/bin/perl5`;
+-chomp($find_perllink);
+-if($find_perllink !~ "/usr/local/bin/perl5")
+-{
+-	system("ln -s $perl_realpath /usr/local/bin/perl5");
+-}
+-$find_perllink = `ls /usr/local/bin/perl5`;
+-if($find_perllink !~ "/usr/local/bin/perl5")
+-{
+-	print "\nCannot automatically link to your perl path.  Please create a symbolic link to /usr/local/bin/perl5 \n";
+-        print "and try again (i.e., \"ln -s $perl_realpath /usr/local/bin/perl5\").  If you do not have appropriate \n";
+-        print "permissions to do this, check with your administrator.\n";
+-	exit(1);
+-}
++#$perl_realpath = `which perl`;
++#chomp ($perl_realpath);
++#$find_perllink = `ls /usr/local/bin/perl5`;
++#chomp($find_perllink);
++#if($find_perllink !~ "/usr/local/bin/perl5")
++#{
++#	system("ln -s $perl_realpath /usr/local/bin/perl5");
++#}
++#$find_perllink = `ls /usr/local/bin/perl5`;
++#if($find_perllink !~ "/usr/local/bin/perl5")
++#{
++#	print "\nCannot automatically link to your perl path.  Please create a symbolic link to /usr/local/bin/perl5 \n";
++#        print "and try again (i.e., \"ln -s $perl_realpath /usr/local/bin/perl5\").  If you do not have appropriate \n";
++#        print "permissions to do this, check with your administrator.\n";
++#	exit(1);
++#}
+ 
+ # Determine user's operating system
+ $os_string = `uname -rsv`;
+diff -ur ltp-full-20041104/testcases/ballista/ballista/ostest.pl ltp-dirty/testcases/ballista/ballista/ostest.pl
+--- ltp-full-20041104/testcases/ballista/ballista/ostest.pl	2004-10-18 19:40:31.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/ostest.pl	2004-11-22 10:22:18.000000000 +0100
+@@ -81,22 +81,22 @@
+ 
+ # set symbolic links to perl path
+ 
+-$perl_realpath = `which perl`;
+-chomp ($perl_realpath);
+-$find_perllink = `ls /usr/local/bin/perl5`;
+-chomp($find_perllink);
+-if($find_perllink !~ "/usr/local/bin/perl5")
+-{
+-	system("ln -s $perl_realpath /usr/local/bin/perl5");
+-}
+-$find_perllink = `ls /usr/local/bin/perl5`;
+-if($find_perllink !~ "/usr/local/bin/perl5")
+-{
+-	print "\nCannot automatically link to your perl path.  Please create a symbolic link to /usr/local/bin/perl5 \n";
+-        print "and try again (i.e., \"ln -s $perl_realpath /usr/local/bin/perl5\").  If you do not have appropriate \n";
+-        print "permissions to do this, check with your administrator.\n";
+-	exit(1);
+-}
++#$perl_realpath = `which perl`;
++#chomp ($perl_realpath);
++#$find_perllink = `ls /usr/local/bin/perl5`;
++#chomp($find_perllink);
++#if($find_perllink !~ "/usr/local/bin/perl5")
++#{
++#	system("ln -s $perl_realpath /usr/local/bin/perl5");
++#}
++#$find_perllink = `ls /usr/local/bin/perl5`;
++#if($find_perllink !~ "/usr/local/bin/perl5")
++#{
++#	print "\nCannot automatically link to your perl path.  Please create a symbolic link to /usr/local/bin/perl5 \n";
++#        print "and try again (i.e., \"ln -s $perl_realpath /usr/local/bin/perl5\").  If you do not have appropriate \n";
++#        print "permissions to do this, check with your administrator.\n";
++#	exit(1);
++#}
+ 
+ # Determine user's operating system
+ $os_string = `uname -rsv`;
+diff -ur ltp-full-20041104/testcases/ballista/ballista/paramGen ltp-dirty/testcases/ballista/ballista/paramGen
+--- ltp-full-20041104/testcases/ballista/ballista/paramGen	2004-10-18 19:40:32.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/paramGen	2004-11-22 10:26:31.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl5
++#!/usr/bin/env perl
+ # paramGen: Ballista script to generate .param files from .tpl files
+ # Copyright (C) 1998-2001  Carnegie Mellon University
+ #
+diff -ur ltp-full-20041104/testcases/ballista/ballista/perllib/LWP/Debug.pm ltp-dirty/testcases/ballista/ballista/perllib/LWP/Debug.pm
+--- ltp-full-20041104/testcases/ballista/ballista/perllib/LWP/Debug.pm	2004-10-18 19:57:54.000000000 +0200
++++ ltp-dirty/testcases/ballista/ballista/perllib/LWP/Debug.pm	2004-11-22 10:27:03.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/env perl -w
+ #
+ # $Id: ltp-ballista-paths.patch,v 1.1 2004/12/04 05:02:56 dragonheart Exp $
+ #
+diff -ur ltp-full-20041104/testcases/ballista/create.sh ltp-dirty/testcases/ballista/create.sh
+--- ltp-full-20041104/testcases/ballista/create.sh	2004-10-18 18:11:21.000000000 +0200
++++ ltp-dirty/testcases/ballista/create.sh	2004-11-22 10:20:00.000000000 +0100
+@@ -3,7 +3,7 @@
+ # to run Ballista. 
+ # If the correct RPMs are installed ballista will be uncompressed and complied
+ 
+-
++exit 0;
+ @libs = ("'gcc version 3.3.3'","libg++-2.8.1-2","libg++-devel-2.8.1-2","libstdc++5-3.3.1-2mdk","libstdc++5-devel-3.3.1-2mdk","libstdc++5-static-devel-3.3.1-2mdk");
+ my @notfound;
+ system("touch temp_cmd_file.txt ");
