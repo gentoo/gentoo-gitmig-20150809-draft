@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.0.ebuild,v 1.3 2005/01/05 01:49:19 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.0.ebuild,v 1.4 2005/01/27 19:40:38 stkn Exp $
 
 IUSE="devfs26"
 
-inherit eutils kmod
+inherit eutils kernel-mod
 
 DESCRIPTION="Pseudo-TDM engine"
 HOMEPAGE="http://www.asterisk.org"
@@ -79,12 +79,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# workaround for 2.6 build system
-	if is_kernel 2 6 ; then
-		einfo "Enabled 2.6 module building workaround..."
-		addwrite /usr/src/linux
-	fi
-
 	set_arch_to_kernel
 	make || die
 	set_arch_to_portage

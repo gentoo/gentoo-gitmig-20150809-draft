@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.23 2005/01/13 21:19:50 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.24 2005/01/27 19:40:38 stkn Exp $
+
+  27 Jan 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.0.ebuild:
+  updated to use kernel-kmod
 
   13 Jan 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.3.ebuild:
   Only apply gcc-3.4 fix if gcc-3.4.3 is used, older versions seem not to be
