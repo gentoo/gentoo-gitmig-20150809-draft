@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ac0d9879d16df06ec07901c83fee49aa ChangeLog 11249
+MD5 0ff9355dff215bac36e858c08b598ac4 ChangeLog 11306
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3fcc315761823ea294e229bbcee4526d mpg123-0.59s-r7.ebuild 2877
 MD5 dbf789b6af2a514be860a64a64ee1667 mpg123-0.59s-r6.ebuild 2871
@@ -10,7 +10,7 @@ MD5 792c4eea53fd8d57facf635a93c11d5d files/digest-mpg123-0.59s-r6 141
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBiVrsArHZZzCEUG0RAlVlAJ9gifPFM2z9Vomvlhz4n6rTigJ/ywCeLS5L
-1QEiHCpEsmbLIvH6rcb17mo=
-=oJCq
+iD8DBQFBiV0KArHZZzCEUG0RAjkWAJ9Kyv+6T0oRwMqXVxAHUZgBLrX3RQCeKjsr
+yzw/B1YCCvk19FPFze11Kvk=
+=Eah0
 -----END PGP SIGNATURE-----
