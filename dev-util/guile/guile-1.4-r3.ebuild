@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r3.ebuild,v 1.11 2003/02/13 11:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r3.ebuild,v 1.12 2003/04/23 16:41:42 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Guile is an interpreter for Scheme"
+DESCRIPTION="Scheme interpreter"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/guile/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/guile/"
 
@@ -16,22 +15,17 @@ DEPEND=">=sys-libs/ncurses-5.1
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	cp  ${FILESDIR}/net_db.c libguile/
+	cp ${FILESDIR}/net_db.c ${S}/libguile/
 }
 
 src_compile() {
-
 	econf \
 		--with-threads \
 		--with-modules || die
-
 	make || die
 }
 
 src_install() {
 	einstall || die
-
-	dodoc AUTHORS COPYING ChangeLog GUILE-VERSION HACKING NEWS 
-	dodoc README SNAPSHOTS THANKS
+	dodoc AUTHORS ChangeLog GUILE-VERSION HACKING NEWS README SNAPSHOTS THANKS
 }
