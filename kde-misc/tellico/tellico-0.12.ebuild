@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-0.12.ebuild,v 1.3 2004/10/31 00:13:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-0.12.ebuild,v 1.4 2004/11/30 14:14:21 kingtaco Exp $
 
 inherit kde
 
@@ -8,7 +8,7 @@ DESCRIPTION="A collection manager for the KDE environment"
 HOMEPAGE="http://www.periapsis.org/tellico"
 SRC_URI="http://www.periapsis.org/tellico/download/${P}.tar.gz"
 
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 sparc ppc ~amd64"
 LICENSE="GPL-2"
 
 IUSE=""

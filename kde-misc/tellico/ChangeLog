@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.3 2004/10/31 00:13:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.4 2004/11/30 14:14:21 kingtaco Exp $
+
+  30 Nov 2004; Mike Doty <kingtaco@gentoo.org> tellico-0.12.ebuild:
+  ~amd64 keyword added per #65514
 
   31 Oct 2004; Lars Weiler <pylon@gentoo.org> tellico-0.12.ebuild:
   Stable on ppc as requested in bug #65514
