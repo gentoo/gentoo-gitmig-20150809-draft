@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.199 2004/04/04 01:37:59 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.200 2004/04/04 17:48:30 lv Exp $
 
-  03 Apr 2004; Jon Portnoy <avenj@gentoo.org> gcc-3.3.3.ebuild :
+  04 Apr 2004; Travis Tilley <lv@gentoo.org> gcc-3.3.3.ebuild:
+  added avenjs amd64 fixes to gcc-3.3.3.ebuild
+
+  03 Apr 2004; Jon Portnoy <avenj@gentoo.org> gcc-3.3.3-r1.ebuild :
   Yanked unnecessary amd64-related construct for finding libc.
   Bug #46697.
 
