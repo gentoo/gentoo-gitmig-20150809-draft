@@ -121,22 +121,17 @@
 ~sys-kernel/usermode-sources
 ~sys-kernel/xfs-sources
 
+
+# Actual profiled pkgs start here
 *app-arch/ncompress
 *sys-apps/baselayout
 *sys-apps/portage
 *=sys-devel/binutils-2.12.90.0.7
 *=sys-devel/gcc-3.2_pre
-
 *=sys-libs/glibc-2.2.5-r5
 *sys-apps/texinfo
-
-# Only 2.4.19 is patched for ppc
-# temporarily commented out (debugging)
-#>=sys-kernel/linux-headers-2.4.18
-#>=sys-kernel/linux-sources-2.4.18
 sys-kernel/ppc-sources
 >=sys-kernel/linux-headers-2.4.18
-
 sys-apps/sysklogd
 *>=dev-lang/python-2.2-r4
 >=x11-base/xfree-4.1.0-r2
@@ -145,11 +140,7 @@ sys-apps/sysklogd
 *sys-apps/hfsutils
 *sys-apps/yaboot
 *sys-apps/mac-fdisk
-
-
-# sash - static shell for system recovery
 *app-shells/sash
-
 *sys-devel/perl
 *net-ftp/ftp
 net-misc/dhcpcd
