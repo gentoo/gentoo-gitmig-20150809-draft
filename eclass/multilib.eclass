@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.10 2005/01/16 17:45:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.11 2005/01/17 04:14:56 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -225,30 +225,29 @@ get_ml_incdir() {
 # }
 
 prep_ml_includes() {
-	local dirs
-	if [ ${#} -eq 0 ]; then
-		dirs="/usr/include"
-	else
-		dirs="${@}"
-	fi
-
 	if [ $(number_abis) -gt 1 ]; then
 		local dir
+		local dirs
+		local base
+
+		if [ ${#} -eq 0 ]; then
+			dirs="/usr/include"
+		else
+			dirs="${@}"
+		fi
+
 		for dir in ${dirs}; do
-			mv ${D}/${dir} ${D}/${dir}.${ABI}
+			base=${T}/gentoo-multilib/${dir}/gentoo-multilib
+			mkdir -p ${base}
+			[ -d ${base}/${ABI} ] && rm -rf ${base}/${ABI}
+			mv ${D}/${dir} ${base}/${ABI}
 		done
 
 		if is_final_abi; then
-			for dir in ${dirs}; do
-				local args="${dir}"
-				local abi
-				dodir ${dir}/gentoo-multilib
-				for abi in $(get_abi_order); do
-					mv ${D}/${dir}.${abi} ${D}/${dir}/gentoo-multilib/${abi}
-					args="${args} $(get_abi_CDEFINE ${abi}):${dir}/gentoo-multilib/${abi}"
-				done
-				create_ml_includes ${args}
-			done
+			base=${T}/gentoo-multilib
+			pushd ${base}
+			find . | cpio -pmd --no-preserve-owner ${D}
+			popd
 		fi
 	fi
 }
