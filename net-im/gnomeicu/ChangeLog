@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.2 2002/03/28 01:49:47 seemant Exp $
+
+*gnomeicu-0.98.2 (27 Mar 2002)
+
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gnomeicu-0.98.2.ebuild :
+
+  Version bump submitted by lkthomas.  I added USE dependent nls compilation.
 
 *gnomeicu-0.98 (1 Feb 2002)
 
