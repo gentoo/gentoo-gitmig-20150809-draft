@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.20 2004/08/13 15:41:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.21 2004/08/27 23:44:49 kugelfang Exp $
+
+  28 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  libtomcrypt-0.98-r1.ebuild:
+  Marked ~amd64.
 
 *libtomcrypt-0.98-r1 (13 Aug 2004)
 
