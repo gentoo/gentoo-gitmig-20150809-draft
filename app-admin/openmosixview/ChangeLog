@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/openmosixview
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/ChangeLog,v 1.3 2002/11/04 20:11:38 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/ChangeLog,v 1.4 2002/11/04 21:30:31 tantive Exp $
+
+
+*openmosixview-1.2-r1 (04 Nov 2002)
+  
+  04 Nov 2002; Michael Imhof <tantive@gentoo.org>
+  Added a patch for gcc-3.2.
 
   04 Nov 2002; Michael Imhof <tantive@gentoo.org>
   Corrected path for openmosix-user
