@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.69 2003/03/21 23:00:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.70 2003/03/27 13:55:11 danarmak Exp $
+
+  27 Mar 2003; Dan Armak <danarmak@gentoo.org> all 3.x ebuilds:
+  
+  Added explicit dep on sys-devel/gettext, since it will soon be removed
+  from the sysem profiles and apps will have to depend on it directly.
 
   21 Mar 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.1.ebuild,
   kdelibs-3.1-r2.ebuild, kdelibs-3.1-r3.ebuild, kdelibs-3.1.1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.13 2003/03/21 23:00:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.14 2003/03/27 13:55:11 danarmak Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -32,7 +32,8 @@ newdepend "dev-lang/perl
 	app-admin/fam-oss
 	~kde-base/arts-1.1.0
 	app-text/ghostscript
-	media-libs/libart_lgpl"
+	media-libs/libart_lgpl
+	sys-devel/gettext"
 
 newdepend "/c"
 newdepend "/autotools"
