@@ -1,12 +1,13 @@
 # ChangeLog for app-text/docbook-xml-simple-dtd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.10 2003/09/13 05:56:43 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.11 2003/09/13 05:59:28 obz Exp $
 
 *docbook-xml-simple-dtd-1.0 (13 Sep 2003)
 
   13 Sep 2003; Mike Gardiner <obz@gentoo.org> docbook-xml-simple-dtd-1.0.ebuild,
   metadata.xml:
-  New version, 1.0 is the official OASIS release, slotted with 4.1 at the moment
+  New version, 1.0 is the official OASIS release, slotted with 4.1 at the
+  moment. Thanks to <st_lim@stlim.net> for help with bug #15351
 
   11 Feb 2003; Guy Martin <gmsoft@gentoo.org> docbook-xml-simple-dtd-4.1.2.4.ebuild :
   Added hppa to keywords.
