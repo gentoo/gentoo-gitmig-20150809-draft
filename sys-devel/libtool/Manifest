@@ -32,7 +32,7 @@ MD5 94591cd9fb847704a323c0faf31fdbf2 files/1.4.3/libtool-1.4.3-ltmain-SED.patch 
 MD5 a9be6866b7096092613595ccff0fd773 files/1.4.3/libtool-1.4.3-pass-thread-flags.patch 494
 MD5 c4fd959743953818fe6ab06c7d84e795 files/1.4.3/libtool-1.4.3-quotes.patch 12951
 MD5 5fc838faf61964397b525e579783c190 files/1.4.3/libtool-1.4.3-uclibc.patch 5911
-MD5 e9bbbf33e0ca9ed566c2bf5209265cfe files/1.5.6/libtool-1.5-filter-host-tags.patch 785
+MD5 156cac6117d0d22e752b18b2f40728d1 files/1.5.6/libtool-1.5-filter-host-tags.patch 806
 MD5 5e84c0a07a77ed6408b25453373914ab files/1.5.6/libtool-1.5.6-ltmain-SED.patch 431
 MD5 ec9cd0c9953bac111564122a5c209278 files/1.5.2/libtool-1.5-filter-host-tags.patch 1846
 MD5 6ef585a59058c79f3601bbd7787f2683 files/1.5.2/libtool-1.5-libtool.m4-x86_64.patch 466
@@ -42,7 +42,7 @@ MD5 b81a86ce5e9014e53bd7beb12e46ed12 files/1.5.2/libtool-1.5.2-ltmain_sh-max_cmd
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB5b5NroRuSHgZdywRAuK5AJ9Gjjx8GpziutL1ocUOD8bFwkqZ+QCeJZdD
-00mkFNz9OqAl3WhIr9N3H7s=
-=V84y
+iD8DBQFB6GGHroRuSHgZdywRAptdAJ0bs/x+fVo52awihRXoxkhj6mCK4gCdEsgc
+cXXU3wZgJfhpCgG6WJ2r6KE=
+=AOi5
 -----END PGP SIGNATURE-----

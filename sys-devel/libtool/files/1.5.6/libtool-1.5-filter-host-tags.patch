@@ -5,7 +5,7 @@
  	    CC_quoted="$CC_quoted $arg"
  	  done
 +	    # user sometimes does CC=<HOST>-gcc so we need to match that to 'gcc'
-+	    trimedcc="${CC/${host}-}"
++	    trimedcc=`echo ${CC} | $SED -e "/${host}-//g"`
  	    case "$@ " in
 +	      "gcc "* | " gcc "* | "${host}-gcc "* | " ${host}-gcc "*)
 +	      tagname=CC
