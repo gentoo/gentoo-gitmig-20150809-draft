@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.40 2003/09/12 16:14:33 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.41 2003/09/24 22:31:40 joker Exp $
+
+*bash-completion-20030911-r1 (25 Sep 2003)
+
+  25 Sep 2003; Christian Birchinger <joker@gentoo.org>
+  bash-completion-20030505-r1.ebuild, bash-completion-20030713.ebuild,
+  bash-completion-20030721.ebuild, bash-completion-20030911-r1.ebuild,
+  files/gentoo.completion:
+  New gentoo distcc-config completion feature. Removed old versions.
 
 *bash-completion-20030911 (12 Sep 2003)
 

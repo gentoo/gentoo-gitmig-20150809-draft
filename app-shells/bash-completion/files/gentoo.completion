@@ -10,11 +10,44 @@
 #
 
 #
+# distcc-config completion command
+#
+_distccconfig()
+{
+	local cur curword numwords opts
+	COMPREPLY=()
+	cur=${COMP_WORDS[COMP_CWORD]}
+	numwords=${#COMP_WORDS[*]}
+	curword=${COMP_CWORD}
+	if [ ${numwords} -gt 3 ]; then
+		return 0
+	fi
+	if [[ "${cur}" == -* ]] || [ ${curword} -eq 1 ]; then
+		if [ ${numwords} -le 2 ] && [ ${curword} -eq 1 ]; then
+			opts="--get-hosts \
+				--get-verbose \
+				--get-log \
+				--set-hosts \
+				--set-verbose \
+				--set-log \
+				--add-path \
+				--no-path"
+		else
+			opts=""
+		fi
+	else
+		opts=""
+	fi
+	COMPREPLY=($(compgen -W "${opts}" | grep ^$cur))
+	return 0
+}
+complete -F _distccconfig distcc-config
+
+#
 # simple completion for Gentoo style init
 #
 complete -W "start stop restart pause zap ineed needsme iuse usesme broken" \
 	$(for i in /etc/init.d/*; do echo ${i##*/}; done)
-
 
 #
 # emerge completion command
