@@ -1,20 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2-r1.ebuild,v 1.2 2003/04/28 11:11:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2-r1.ebuild,v 1.3 2003/04/28 14:32:06 liquidx Exp $
 
 inherit flag-o-matic libtool
 
 # won't configure with this
 filter-flags -fomit-frame-pointer
 
+DOC_VER="1.8.0"
+IUSE="nls postgres ofx hbci doc"
+
 DESCRIPTION="A personal finance manager"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	doc? ( mirror://sourceforge/${PN}/${PN}-docs-${DOC_VER}.tar.gz )"
 HOMEPAGE="http://www.gnucash.org/"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="nls postgres ofx hbci"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=dev-util/guile-1.6
@@ -42,7 +45,9 @@ DEPEND="${RDEPEND}
 	>=dev-lang/swig-1.3_alpha4
 	<gnome-base/libglade-2
 	gnome-base/libghttp
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	doc? ( >=app-text/scrollkeeper-0.3.1
+		app-text/docbook-xsl-stylesheets )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -60,12 +65,39 @@ src_compile() {
 	
 	econf \
 		`use_enable nls` \
-		${myconf} || die
+		${myconf} || die "configure failed"
 		
-	emake || die
+	emake || die "make failed"
+	
+	if [ -n "`use doc`" ]; then
+		cd ${WORKDIR}/${PN}-docs-${DOC_VER}
+		econf --localstatedir=/var/lib || die "doc configure failed"
+		emake || die "doc make failed"
+	fi		
 }
 
 src_install() {
 	einstall pkgdatadir=${D}/usr/share/gnucash || die "install failed"
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog HACKING NEWS README* TODO
+	dodoc docs/README*
+	
+	if [ -n "`use doc`" ]; then
+		cd ${WORKDIR}/${PN}-docs-${DOC_VER}
+		make DESTDIR=${D} install || die "doc install failed"
+		rm -rf ${D}/var/lib/scrollkeeper
+	fi
+}	
+
+pkg_postinst() {
+	if [ -x ${ROOT}/usr/bin/scrollkeeper-update ]; then
+		echo ">>> Updating Scrollkeeper"
+		scrollkeeper-update -q -p ${ROOT}/var/lib/scrollkeeper
+	fi
+}
+
+pkg_postrm() {
+	if [ -x ${ROOT}/usr/bin/scrollkeeper-update ]; then
+		echo ">>> Updating Scrollkeeper"
+		scrollkeeper-update -q -p ${ROOT}/var/lib/scrollkeeper
+	fi
 }
