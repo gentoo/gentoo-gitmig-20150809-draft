@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d8569f201be650b53c6f537446271b21 ChangeLog 1128
-MD5 fca26c9992e303bc522c26cd71219105 airtraf-1.0.ebuild 1047
-MD5 20caee7487eabf37daa6c83d3bf13a7f airtraf-1.1.ebuild 1015
+MD5 f2de1fe9a102f88938d19a1c9817e7ae ChangeLog 1289
+MD5 5944ba89dbf517f749b195f3b0d83f32 airtraf-1.0.ebuild 1038
+MD5 387c50b07fcd7bec7bd1296c5842ec03 airtraf-1.1.ebuild 1006
 MD5 7709ff5e9d567a780263e953728c7c6f metadata.xml 662
 MD5 740088b3171d11034ceca32ba2b02053 files/airtraf.patch 2302
 MD5 92f9aeb2621275bceb1c4707f6530049 files/digest-airtraf-1.0 63
@@ -11,7 +11,7 @@ MD5 630d7e86dcfce40f96fdf3f3db7a45df files/digest-airtraf-1.1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB5PTImdTrptrqvGERAoblAKCEzk9zxNy6165mWvJI9ax+dwyg6QCgmsjA
-GytJ6Kw5brLgVm4MPBhu3Dw=
-=NoKf
+iD8DBQFB/AAjmdTrptrqvGERAqpdAJ9MiwmGvJB7UAuzktg5sAUAX5iTpwCgjoYl
+d/cEh99EYn9pOw6AC5aeTbM=
+=y5mt
 -----END PGP SIGNATURE-----
