@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/blt
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.5 2003/12/16 12:37:47 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.6 2004/04/04 22:02:12 zx Exp $
+
+  04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> blt-2.4u.ebuild,
+  blt-2.4z.ebuild, metadata.xml:
+  Clean up. Added missing metadata.xml
 
   16 Dec 2003; Jason Wever <weeve@gentoo.org> blt-2.4z.ebuild:
   Added ~sparc keyword to fix broken dependencies of app-sci/tclspice.
