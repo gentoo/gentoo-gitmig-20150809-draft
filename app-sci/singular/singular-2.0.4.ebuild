@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.4.ebuild,v 1.1 2003/10/24 10:13:41 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.4.ebuild,v 1.2 2003/10/24 10:18:43 phosphan Exp $
 
 S=${WORKDIR}/${P}
 MINPV=${PV//./-}
@@ -83,4 +83,9 @@ src_install () {
 	dosym /usr/bin/Singular-2-0-4 /usr/bin/Singular
 	cd ${D}/usr
 	rm -r ${myarchprefix}-Linux
+}
+
+pkg_postinst() {
+	einfo "The authors ask you to register as a SINGULAR user."
+	einfo "Please check the license file for details."
 }
