@@ -1,8 +1,11 @@
 # ChangeLog for dev-ruby/amrita
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.4 2003/07/24 05:41:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.5 2003/09/12 12:26:53 twp Exp $
 
 *amrita-1.8.2 (10 May 2003)
+
+  12 Sep 2003; Tom Payne <twp@gentoo.org> amrita-1.8.2-r1.ebuild :
+  Fix strscan DEPEND (now needs ruby 1.8.0).
 
   23 Jul 2003; Guy Martin <gmsoft@gentoo.org> amrita-1.8.2.ebuild :
   Marked stable on hppa.
