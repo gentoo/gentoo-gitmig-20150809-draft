@@ -39,7 +39,18 @@ USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl
      esd lcms gif sdl vorbis ogg
      gnome gtk X qt kde motif opengl mozilla"
 
+# Other stable USE flags
+# 3dnow perl python tcltk java guile ruby mysql postgress ldap odbc
+# ggi fbcon svga tex bonobo nas qtmt aalib oss arts libg++
+# 
+# Other experimental/unstable flags
+# directfb gd ungif gtkhtml socks5 pdflib qt-embedded jfs
+# mta-tls mta-ldap mta-mysql
+#
+# Other build related use flags
+# pic static build bootstrap simpleinit 
 # C Compiler flags
+
 CFLAGS="-O2 -mpentiumpro"
 
 # C++ Compiler flags
