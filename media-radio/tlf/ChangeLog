@@ -1,0 +1,10 @@
+# ChangeLog for media-radio/tlf
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.1 2004/06/28 04:07:08 killsoft Exp $
+
+*tlf-0.9.19 (27 Jun 2004)
+
+  27 Jun 2004; Robb Romans <killsoft@gentoo.org> +metadata.xml,
+  +tlf-0.9.19.ebuild:
+  Initial import.
+
