@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/cm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/ChangeLog,v 1.1 2003/05/18 13:16:12 jje Exp $
+
+*cm-2.4.0 (18 May 2003)
+
+  18 May 2003; jje <jje@gentoo.org> cm-2.4.0.ebuild:
+  Initial revision. Very much masked, feedback needed.
+  
+  Submitted by: Burton Samograd <kruhft@kruhft.dyndns.org>
+
