@@ -2,6 +2,9 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # $Header
 
+  13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> saydate-0.3.0.ebuild:
+  Added ~sparc and ~amd64.
+
 *saydate-0.3.0 (4 Nov 2002)
 
   22 Apr 2003; Brandon Low <lostlogic@gentoo.org> saydate-0.3.0.ebuild:
