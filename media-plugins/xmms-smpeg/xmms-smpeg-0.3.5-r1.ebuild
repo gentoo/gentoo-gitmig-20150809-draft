@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-smpeg/xmms-smpeg-0.3.5-r1.ebuild,v 1.5 2004/07/14 20:44:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-smpeg/xmms-smpeg-0.3.5-r1.ebuild,v 1.6 2004/08/11 03:13:17 tgall Exp $
 
 IUSE="sdl"
 
@@ -20,7 +20,7 @@ DEPEND=">=media-sound/xmms-1.2.4
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ppc64"
 
 src_unpack() {
 	unpack ${A}

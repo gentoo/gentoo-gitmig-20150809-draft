@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-smpeg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-smpeg/ChangeLog,v 1.6 2004/06/24 23:45:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-smpeg/ChangeLog,v 1.7 2004/08/11 03:13:17 tgall Exp $
+
+  10 Aug 2004; Tom Gall <tgall@gentoo.org> xmms-smpeg-0.3.5-r1.ebuild:
+  stable on ppc64, bug #58095
 
   17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-smpeg-0.3.5-r1.ebuild:
