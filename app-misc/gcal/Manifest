@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7a20407d34a9fb84f9585e3cd5861b48 gcal-3.01.ebuild 1580
-MD5 b5dc1e6040100aee9a0e28f3a7816636 gcal-3.01-r2.ebuild 1746
+MD5 4dbbec25c3d1f681a834dbb2ca034904 ChangeLog 1669
 MD5 6b1766ebbb4c300b30c1bc4fb9b68bcb gcal-3.01-r1.ebuild 1649
-MD5 eb69055521977f48bbeb9b30d6ff040a ChangeLog 1576
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
+MD5 1fed6d8076a6b4ae70d9434bed4b9ee3 gcal-3.01-r2.ebuild 1744
+MD5 7a20407d34a9fb84f9585e3cd5861b48 gcal-3.01.ebuild 1580
 MD5 e1f8151e053aefc6508cc1bbd8a4b127 files/digest-gcal-3.01 62
 MD5 555a7b92fa6c53dbe05c24e66d0a2c73 files/gcal-3.01-mandir.diff 1515
 MD5 e1f8151e053aefc6508cc1bbd8a4b127 files/digest-gcal-3.01-r1 62
@@ -13,7 +13,7 @@ MD5 e1f8151e053aefc6508cc1bbd8a4b127 files/digest-gcal-3.01-r2 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBisy6EZCkKN40op4RAjyeAKCeNEl1IBAb4Jd+kVbSM55Nmf0exQCfWMt9
-8zZGX2Jj5ZJ8W94ZuYIgaZg=
-=8aIF
+iD8DBQFBux7QugEuf3OQ0akRAlT5AJ9/MzCgqC+U4hD8Os6LXRf7Y4ogbQCfdJx5
+Ze9Q7p7mRJxNIVzr0ZlVKAw=
+=8qUu
 -----END PGP SIGNATURE-----
