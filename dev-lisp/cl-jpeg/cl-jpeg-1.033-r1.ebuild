@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-jpeg/cl-jpeg-1.033-r1.ebuild,v 1.5 2005/03/22 15:47:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-jpeg/cl-jpeg-1.033-r1.ebuild,v 1.6 2005/03/28 19:05:10 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -19,7 +19,10 @@ S=${WORKDIR}/cljl
 
 src_unpack() {
 	unpack ${A}
+	# patch: defconstant - compilation fix for SBCL
+	# patch: exports - export symbols at load time as well
 	epatch ${FILESDIR}/${PV}-defconstant-gentoo.patch || die
+	epatch ${FILESDIR}/${PV}-exports-gentoo.patch || die
 }
 
 src_install() {
