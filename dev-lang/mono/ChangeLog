@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.24 2003/07/14 02:43:44 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.25 2003/07/16 14:16:31 tberman Exp $
+
+  16 Jul 2003; Todd Berman <tberman@gentoo.org> mono-0.25-r1.ebuild:
+  libxml2-2.5.8 breaks xslt on mono, and until ! blocker deps work, masking it
+  like this.
 
 *mono-0.25-r1 (13 Jul 2003)
 
