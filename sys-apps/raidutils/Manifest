@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f31596583ec502e126b470436d623ed1 ChangeLog 590
 MD5 6b2a95b826d212207a259717f1c7c6e2 metadata.xml 643
-MD5 84ab0ac31bab18625a59722896669085 raidutils-0.0.5.ebuild 792
+MD5 857b77e242cedc801a63d9282e758296 raidutils-0.0.5.ebuild 793
+MD5 e69bce3286515d50f3552b068138ed0a ChangeLog 883
+MD5 d2f5fe169c59982379f1e317a951d170 raidutils-0.0.6.ebuild 794
 MD5 4099a4c6960a610930541d55d9bb4e5d files/raidutils-0.0.5-i2octl-fixpath.patch 1597
 MD5 2e881a5176df7cf66a9c291521480d9b files/digest-raidutils-0.0.5 68
+MD5 ba1b41b51ca66f21326f777218441336 files/digest-raidutils-0.0.6 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB5VUhm/TpOlox+n8RAmdrAJ95e4r25Ld+Y4XFepuig7X+pxCsRACg3blu
-6NWe6kOujl2zv27lI8xtFqY=
-=+DZS
+iD8DBQFCRbBvgMUyd/cdjWsRAt2pAJ91Wn77XfqpLvIolI+4iCeJGNVUtgCeNUhu
+2QmxV6W5MQG/woe1F/XU32s=
+=ZuID
 -----END PGP SIGNATURE-----

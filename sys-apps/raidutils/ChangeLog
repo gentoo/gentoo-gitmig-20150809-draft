@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/raidutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.2 2005/01/12 00:02:00 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.3 2005/02/25 13:46:42 xmerlin Exp $
+
+*raidutils-0.0.6 (26 Mar 2005)
+
+  26 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> raidutils-0.0.5.ebuild,
+  +raidutils-0.0.6.ebuild:
+  raidutils-0.0.6 added to portage
+
+  26 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> raidutils-0.0.5.ebuild:
+  raidutils-0.0.5 marked stable on x86
 
   12 Jan 2005; John Mylchreest <johnm@gentoo.org> raidutils-0.0.5.ebuild:
   fixing linux-headers DEPEND for 2005.0. can we get away with a virtual?
