@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.33 2003/04/10 18:03:45 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.34 2003/04/11 14:20:53 phoenix Exp $
+
+*wine-* (11 Apr 2003)
+
+  11 Apr 2002; Tilman Klar <phoenix@gentoo.org> wine-2002*,
+  files/digest-wine-2002*, files/wine-2002* :
+  Removed all wine versions prior to Jan 2003 from the tree.
+
+  11 Apr 2002; Tilman Klar <phoenix@gentoo.org> wine-20030115.ebuild,
+  wine-20030219.ebuild, wine-20030318.ebuild,  wine-20030408.ebuild :
+  Updated DEPEND. There were major problems with the new version of
+  binutils, that's why i made wine depend on <=binutils-2.13.90.0.18-r1.
+  For further information check bug #19106.
 
 *wine-20030318 (10 Apr 2003)
 

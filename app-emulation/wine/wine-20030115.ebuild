@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030115.ebuild,v 1.5 2003/04/01 18:09:22 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030115.ebuild,v 1.6 2003/04/11 14:20:54 phoenix Exp $
 
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/Wine-${PV}.tar.gz"
@@ -16,6 +16,7 @@ DEPEND="sys-devel/gcc
 	dev-util/yacc
 	>=sys-libs/ncurses-5.2
 	>=media-libs/freetype-2.0.0
+	<=sys-devel/binutils-2.13.90.0.18-r1
 	X? ( 	virtual/x11 
 		dev-lang/tcl 
 		dev-lang/tk ) 
