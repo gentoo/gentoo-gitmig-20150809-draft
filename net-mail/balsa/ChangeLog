@@ -1,9 +1,12 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.11 2002/05/30 14:12:40 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.12 2002/05/30 22:54:51 spider Exp $
 
+balsa-2.0.0_pre1 (30 May 2002)
+  30 May 2002; Spider <spider@gentoo.org> balsa-2.0.0_pre1.ebuild :
+  add a missing dep for pspell
 
-*balsa-2.0.0_pre1 (30May 2002)
+*balsa-2.0.0_pre1 (30 May 2002)
   30 May 2002; Spider <spider@gentoo.org> balsa-2.0.0_pre1.ebuild :
   Adding the Gnome2 branch
   updated the patch to apply

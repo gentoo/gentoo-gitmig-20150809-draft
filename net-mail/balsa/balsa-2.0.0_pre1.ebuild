@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.0_pre1.ebuild,v 1.1 2002/05/30 14:12:40 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.0_pre1.ebuild,v 1.2 2002/05/30 22:54:51 spider Exp $
 
 MY_V="2.0.0"
 MY_P="${PN}-${MY_V}"
@@ -18,6 +18,7 @@ RDEPEND="=dev-libs/glib-2.0*
 	=x11-libs/gtk+-2.0*
 	>=net-libs/libesmtp-0.8.11
 	app-text/scrollkeeper
+	app-text/pspell
 	>=gnome-base/libgnome-1.117.2
 	>=gnome-base/libgnomeui-1.117.2
 	>=gnome-base/gnome-vfs-1.9.16
