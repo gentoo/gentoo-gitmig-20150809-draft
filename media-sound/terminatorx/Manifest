@@ -1,6 +1,18 @@
-MD5 673776604f5645497e17c552a8fad2f5 ChangeLog 1824
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c5390e7193db04746bb71818764b6a1f terminatorx-3.81.ebuild 2201
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 41c70e1b5a9f9c0e82c1c55b5d35fe0c terminatorx-3.81.ebuild 2203
-MD5 ed6038ad12972f0534133cb65dff99a0 files/digest-terminatorx-3.81 68
-MD5 b9c48043c327fb9f0fcb5b04b721e337 files/terminatorx-3.80.GNOMEpresent.patch 25091
+MD5 ff4b2e6776f1324ad9785d3f2f3668ca ChangeLog 2069
+MD5 3f32ed208369670fe90d0cd1b2e7b513 terminatorx-3.82.ebuild 1336
 MD5 a2074d5d27b3b2d3006703af2a500c3f files/terminatorx-3.80.fixGnomeMakefile.patch 1032
+MD5 b9c48043c327fb9f0fcb5b04b721e337 files/terminatorx-3.80.GNOMEpresent.patch 25091
+MD5 94137a13ec8a5f0c45a221fe3804a5f4 files/digest-terminatorx-3.82 68
+MD5 ed6038ad12972f0534133cb65dff99a0 files/digest-terminatorx-3.81 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCGK7Sp5vW4rUFj5oRApwKAJ4t0k6395XynlcUuJ6YwDPpC296iQCgkUOV
+uvMVdry5bZZXEsZvqWVr0cQ=
+=Nqd1
+-----END PGP SIGNATURE-----
