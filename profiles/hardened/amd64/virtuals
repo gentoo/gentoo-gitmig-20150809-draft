@@ -3,5 +3,4 @@ virtual/kernel          sys-kernel/linux26-headers
 virtual/linux-sources   sys-kernel/hardened-dev-sources
 virtual/bootloader	sys-boot/grub-static
 virtual/os-headers	sys-kernel/linux26-headers
-virtual/modutils	sys-apps/module-init-tools
 virtual/dev-manager	sys-fs/devfsd
