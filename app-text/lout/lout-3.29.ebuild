@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.29.ebuild,v 1.6 2005/01/01 16:24:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.29.ebuild,v 1.7 2005/01/03 21:52:07 gustavoz Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lout/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="zlib? ( >=sys-libs/zlib-1.1.4 )"
 
