@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnugo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.7 2004/07/01 11:11:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.8 2004/12/01 20:30:06 mr_bones_ Exp $
+
+*gnugo-3.6 (01 Dec 2004)
+
+  01 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +gnugo-3.6.ebuild:
+  version bump
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gnugo-3.2.ebuild,
   gnugo-3.3.22.ebuild, gnugo-3.4.ebuild:
