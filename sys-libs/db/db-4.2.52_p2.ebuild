@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p2.ebuild,v 1.10 2004/10/01 14:33:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p2.ebuild,v 1.11 2004/12/08 15:51:41 blubb Exp $
 
 IUSE="tcltk java doc"
 
@@ -30,7 +30,7 @@ done
 HOMEPAGE="http://www.sleepycat.com"
 SLOT="4.2"
 LICENSE="DB"
-KEYWORDS="~x86 ~sparc ~ia64 ~ppc"
+KEYWORDS="~x86 ~sparc ~ia64 ~ppc ~amd64"
 
 DEPEND="tcltk? ( >=dev-lang/tcl-8.4 )
 	java? ( virtual/jdk )"
@@ -46,6 +46,7 @@ src_unpack() {
 		epatch ${DISTDIR}/patch.${MY_PV}.${i}
 	done
 	epatch ${FILESDIR}/${PN}-${SLOT}-jarlocation.patch
+	epatch ${FILESDIR}/${PN}-${SLOT}-libtool.patch
 
 	epatch ${FILESDIR}/${PN}-4.0.14-fix-dep-link.patch
 

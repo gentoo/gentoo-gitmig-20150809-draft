@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.106 2004/12/01 15:21:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.107 2004/12/08 15:51:41 blubb Exp $
+
+  08 Dec 2004; Simon Stelling <blubb@gentoo.org>
+  +files/db-4.2-libtool.patch, db-4.2.52_p2.ebuild:
+  added Andy Lutomirski's patch and marked ~amd64, see bug #57654
 
   01 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> db-4.1.25_p1-r4.ebuild:
   Stable on sparc
@@ -425,7 +429,7 @@
   15 Jul 2002; Mark Guertin <gerk@gentoo.org>
   Added ppc to keywords
 
-  1 Feb 2002; JosÈ Alberto Su·rez LÛpez <bass@gentoo.org> Changelog db-1.85-r1.ebuild :
+  1 Feb 2002; Jos√© Alberto Su√°rez L√≥pez <bass@gentoo.org> Changelog db-1.85-r1.ebuild :
 
   Fixed an error with the source url.
 
