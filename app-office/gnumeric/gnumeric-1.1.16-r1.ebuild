@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.16-r1.ebuild,v 1.1 2003/04/15 10:37:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.16-r1.ebuild,v 1.2 2003/05/04 19:04:04 liquidx Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils
@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-scrollkeeper.patch
+	gnome2_omf_fix
 }
 
 src_compile() {
