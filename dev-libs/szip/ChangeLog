@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/szip
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/szip/ChangeLog,v 1.1 2003/12/16 14:47:07 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/szip/ChangeLog,v 1.2 2004/02/06 15:58:12 aliz Exp $
 
 *szip-1.1 (16 Dec 2003)
 
