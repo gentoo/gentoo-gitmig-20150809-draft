@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r6.ebuild,v 1.1 2003/11/18 17:14:42 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r6.ebuild,v 1.2 2003/11/24 06:43:16 zhen Exp $
 
 MY_PV=${PV//./_}
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://xml.apache.org/xerces-c/index.html"
 DEPEND="virtual/glibc"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="doc"
 
 S=${WORKDIR}/${PN}-src_${MY_PV}
