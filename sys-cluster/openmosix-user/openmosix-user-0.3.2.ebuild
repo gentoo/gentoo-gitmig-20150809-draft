@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.2.ebuild,v 1.6 2004/07/01 21:48:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.2.ebuild,v 1.7 2004/07/15 03:04:45 agriffis Exp $
 
 S=${WORKDIR}/openmosix-tools-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
@@ -15,6 +15,7 @@ RDEPEND="${DEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-* x86"
+IUSE=""
 
 pkg_setup() {
 	if [ -z "`readlink /usr/src/linux|grep openmosix`" ]; then

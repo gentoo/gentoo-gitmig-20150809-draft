@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon/openmosix-3dmon-0.2.1.ebuild,v 1.4 2004/07/01 21:48:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon/openmosix-3dmon-0.2.1.ebuild,v 1.5 2004/07/15 03:03:40 agriffis Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-* ~x86"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
