@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/kmousetool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kmousetool/ChangeLog,v 1.13 2005/01/14 23:17:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kmousetool/ChangeLog,v 1.14 2005/01/28 18:29:08 greg_g Exp $
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> kmousetool-1.05.ebuild,
   kmousetool-1.11.ebuild:
@@ -8,7 +8,7 @@
   from KDE 3.4, and on its mother package, kdeaccessibility. Eventually
   there'll be a move instruction from this package to that.
 
-  10 Jan 2005; Gregorio Guidi <greg@gentoo.org>
+  10 Jan 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/kmousetool-1.11-gcc34-fix.patch, kmousetool-1.11.ebuild:
   Fix for gcc 3.4 (#61595). Patch by Anton Starikov <antst@ifm.liu.se>.
 
