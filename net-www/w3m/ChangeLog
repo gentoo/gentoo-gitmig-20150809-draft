@@ -1,6 +1,11 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.48 2004/02/17 13:40:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.49 2004/03/21 19:21:18 usata Exp $
+
+*w3m-0.5 (22 Mar 2004)
+
+  22 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> w3m-0.5.ebuild:
+  Version bumped.
 
 *w3m-0.4.2-r9 (17 Feb 2004)
 
