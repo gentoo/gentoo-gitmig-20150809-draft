@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.112 2004/04/23 19:22:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.113 2004/04/24 14:00:06 lv Exp $
+
+  24 Apr 2004; Travis Tilley <lv@gentoo.org> binutils-2.14.90.0.7-r1.ebuild,
+  binutils-2.14.90.0.7-r2.ebuild, binutils-2.14.90.0.7-r3.ebuild,
+  binutils-2.14.90.0.7-r4.ebuild, binutils-2.14.90.0.7.ebuild,
+  binutils-2.14.90.0.8-r1.ebuild, binutils-2.14.90.0.8.ebuild,
+  binutils-2.15.90.0.1.1.ebuild, binutils-2.15.90.0.3-r1.ebuild,
+  binutils-2.15.90.0.3.ebuild:
+  GCC 3.4 breaks binutils if CFLAGS arent conservative. Adding fix for bug #47581
 
   23 Apr 2004; Travis Tilley <lv@gentoo.org> binutils-2.15.90.0.1.1.ebuild:
   added ~amd64 keyword for testing

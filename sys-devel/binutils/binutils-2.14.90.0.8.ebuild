@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8.ebuild,v 1.3 2004/02/23 00:18:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8.ebuild,v 1.4 2004/04/24 14:00:06 lv Exp $
 
 IUSE="nls bootstrap build"
 
@@ -69,6 +69,11 @@ src_compile() {
 	then
 		CFLAGS="$(echo "${CFLAGS}" | sed -e 's,-O[2-9] ,-O1 ,')"
 	fi
+
+	# GCC 3.4 miscompiles binutils unless CFLAGS are conservative. See
+	# bug #47581 for more information.
+	# Travis Tilley <lv@gentoo.org>
+	has_version "=sys-devel/gcc-3.4*" && CFLAGS="-O2"
 
 
 	# Fix /usr/lib/libbfd.la

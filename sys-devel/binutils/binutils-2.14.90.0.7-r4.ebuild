@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r4.ebuild,v 1.4 2004/04/21 17:44:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r4.ebuild,v 1.5 2004/04/24 14:00:06 lv Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -95,6 +95,12 @@ src_compile() {
 	# Generate borked binaries.  Bug #6730
 	filter-flags -fomit-frame-pointer -fssa
 	use arm && filter-flags -O2 -O3
+
+	# GCC 3.4 miscompiles binutils unless CFLAGS are conservative. See
+	# bug #47581 for more information.
+	# Travis Tilley <lv@gentoo.org>
+	has_version "=sys-devel/gcc-3.4*" && CFLAGS="-O2"
+
 
 	# Fix /usr/lib/libbfd.la
 	elibtoolize --portage
