@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.4 2004/10/20 01:39:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.5 2004/10/20 01:45:43 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -227,6 +227,13 @@ xmms-plugin_src_install() {
 	fi
 }
 
+xmms-plugin_pkg_postinst() {
+	if use bmp && [ "${NOBMP}" = "1" ]; then
+		ewarn "You have bmp in your USE flags, but this xmms plugin"
+		ewarn "does not support bmp, sorry."
+	fi
+}
+
 xmms2bmp_automate() {
 	find . -name Makefile -o -name Makefile.in -o -name configure |
 		xargs sed -i -e 's:xmms-config:beep-config:g' \
@@ -241,4 +248,4 @@ do_bmp() {
 	use bmp && [ "${NOBMP}" != "1" ]
 }
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst
