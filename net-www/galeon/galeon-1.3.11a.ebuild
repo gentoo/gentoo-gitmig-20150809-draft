@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.11a.ebuild,v 1.1 2003/12/20 17:59:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.11a.ebuild,v 1.2 2003/12/20 18:01:18 foser Exp $
 
 inherit gnome2 debug libtool
 
@@ -34,17 +34,10 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	>=sys-devel/gettext-0.11"
 
-#src_unpack() {
-#	unpack ${A}
-#	cd ${S}
-
-#	epatch ${FILESDIR}/${PN}-1.3.10-gcc2_fixes.patch
-#}
-
 pkg_setup () {
 	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk2.so ]
 	then
-		eerror "you need mozilla-1.3+ compiled against gtk+-2"
+		eerror "you need mozilla-1.4+ compiled against gtk+-2"
 		eerror "export USE=\"gtk2\" ;emerge mozilla -p "
 		die "Need Mozilla compiled with gtk+-2.0!!"
 	fi
