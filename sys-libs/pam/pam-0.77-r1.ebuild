@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.1 2004/03/26 11:10:42 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.2 2004/03/26 22:22:27 mr_bones_ Exp $
 
 PATCH_LEVEL="1.2"
 BDB_VER="4.1.25"
@@ -193,7 +193,7 @@ src_compile() {
 			-e "s:^HAVE_LIBNDBM=yes:HAVE_LIBNDBM=no:" \
 			-e "s:^HAVE_LIBDB=yes:HAVE_LIBDB=no:" \
 			Make.Rules
-		
+
 			# Also edit the configuration file else the wrong include files
 			  get used
 			sed -i -e "s:^#define HAVE_NDBM_H.*$:/* #undef HAVE_NDBM_H */:" \
@@ -205,7 +205,7 @@ src_compile() {
 		sed -i -e "s:^HAVE_NDBM_H=yes:HAVE_NDBM_H=no:" \
 			-e "s:^HAVE_LIBNDBM=yes:HAVE_LIBNDBM=no:" \
 			Make.Rules
-		
+
 		# Also edit the configuration file else the wrong include files
 		  get used
 		sed -i -e "s:^#define HAVE_NDBM_H.*$:/* #undef HAVE_NDBM_H */:" _pam_aconf.h
