@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.6.ebuild,v 1.9 2002/12/09 04:37:26 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.6.ebuild,v 1.10 2003/01/09 21:55:27 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure locate provides a secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
 SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz"
 HOMEPAGE="http://www.geekreview.org/slocate/"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 SLOT="0"
 DEPEND="virtual/glibc"
 LICENSE="GPL-2"
@@ -26,8 +26,8 @@ src_install() {
 	dodir /var/lib/slocate ; touch ${D}/var/lib/slocate/.keep
 
 	insinto /etc/cron.daily
-	chmod +x slocate.cron
-	doins slocate.cron
+        doins slocate.cron
+        fperms 0755 /etc/cron.daily/slocate.cron
 
 	# man pages are already compressed for us
 	insinto /usr/share/man/man1
