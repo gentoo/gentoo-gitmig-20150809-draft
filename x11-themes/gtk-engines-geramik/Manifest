@@ -3,8 +3,8 @@ MD5 18ce1ffa18e3b57ed247c95503405daf gtk-engines-geramik-0.24-r1.ebuild 462
 MD5 f1234a790b9271a5408b6406af77df2a gtk-engines-geramik-0.26.ebuild 659
 MD5 12969e15f8c1c2d45def1a1bf5b76d51 gtk-engines-geramik-0.24-r3.ebuild 700
 MD5 81904a4e0a2aca6c34f3874c77122434 gtk-engines-geramik-0.08-r2.ebuild 459
-MD5 3f34565372a4b928fe0b0376bb7d1101 gtk-engines-geramik-0.25.ebuild 658
-MD5 104e4c1c5e46d0794ec7309d72328486 ChangeLog 2343
+MD5 b1c63962d2082df4712379a606810596 gtk-engines-geramik-0.25.ebuild 656
+MD5 d462acb3c4910fffb6a881c8d8b4cff3 ChangeLog 2446
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 0473412a6124de5cb2f00d0833774c9b files/gtk-engines-geramik-0.08-gentoo.diff 513
 MD5 6f43a377fb6e9c3d3f9b902f114ff6f0 files/digest-gtk-engines-geramik-0.25 69
