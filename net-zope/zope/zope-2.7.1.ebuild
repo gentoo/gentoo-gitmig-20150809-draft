@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.1.ebuild,v 1.3 2004/07/27 16:02:41 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.1.ebuild,v 1.4 2004/10/02 19:20:30 radek Exp $
 
 inherit eutils
 
-SFPV="$(echo ${PV} | sed -e 's/_beta/-b/')"
-SDPV="$(echo ${PV} | sed -e 's/_beta/b/')"
+SFPV="${PV//_beta/-b}"
+SDPV="${PV//_beta/b}"
 DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
 HOMEPAGE="http://www.zope.org"
 SRC_URI="http://www.zope.org/Products/Zope/${SDPV}/Zope-${SFPV}.tgz"

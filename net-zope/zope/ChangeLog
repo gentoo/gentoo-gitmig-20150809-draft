@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.49 2004/09/28 01:46:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.50 2004/10/02 19:20:30 radek Exp $
+
+  02 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org> zope-2.6.4-r1.ebuild,
+  zope-2.7.1.ebuild, zope-2.7.2-r1.ebuild:
+  Removed sed calls from global scope. Bug 66021.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/2.7.2/zope.initd:
   Gentoo Technologies, Inc. -> Gentoo Foundation
