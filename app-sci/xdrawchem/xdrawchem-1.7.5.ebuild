@@ -1,8 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.7.5.ebuild,v 1.3 2003/10/08 05:51:06 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.7.5.ebuild,v 1.4 2004/01/04 02:10:02 caleb Exp $
 
-inherit kde-functions
 inherit flag-o-matic
 
 # There seems to be an issue with gcc 3.3.1, for the moment use -O0 only
@@ -18,9 +17,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 IUSE=""
 
-need-qt 3.1.0
-
-DEPEND="${DEPEND}
+DEPEND=">=x11-libs/qt-3.1.0
 	>=app-sci/openbabel-1.100.1*"
 
 src_compile() {

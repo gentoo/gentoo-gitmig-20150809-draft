@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.19 2003/09/29 08:29:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.20 2004/01/04 02:10:02 caleb Exp $
+
+  03 Jan 2004; Caleb Tennis <caleb@gentoo.org> xdrawchem-1.7.5.ebuild:
+  Remove the need-qt, add qt as a dependency in the ebuild
 
   29 Sep 2003; Patrick Kursawe <phosphan@gentoo.org> xdrawchem-1.7.5.ebuild:
   Typo fix.
