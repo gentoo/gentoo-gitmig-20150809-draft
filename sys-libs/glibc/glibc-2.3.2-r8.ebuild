@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r8.ebuild,v 1.5 2003/10/28 13:11:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r8.ebuild,v 1.6 2003/11/02 04:51:15 agriffis Exp $
 
 IUSE="nls pic build nptl"
 
@@ -53,7 +53,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="-* ~x86 ~sparc ~amd64 ~hppa"
+KEYWORDS="-* ~x86 ~sparc ~amd64 ~hppa ~alpha"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="LGPL-2"
@@ -325,10 +325,16 @@ src_unpack() {
 
 	if [ "${ARCH}" = "alpha" ]
 	then
+		cd ${S}
+
 		# Fix compatability with compaq compilers by ifdef'ing out some
 		# 2.3.2 additions.
 		# <taviso@gentoo.org> (14 Jun 2003).
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
+		epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
+
+		# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
+		epatch ${FILESDIR}/2.3.2/${P}-alpha-pwrite.patch
+		epatch ${FILESDIR}/2.3.2/${P}-alpha-crti.patch
 	fi
 
 	if [ "${ARCH}" = "amd64" ]

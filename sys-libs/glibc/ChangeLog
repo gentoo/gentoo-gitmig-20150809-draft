@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.100 2003/10/28 13:11:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.101 2003/11/02 04:51:15 agriffis Exp $
+
+  01 Nov 2003; Aron Griffis <agriffis@gentoo.org> glibc-2.3.2-r8.ebuild,
+  files/2.3.2/glibc-2.3.2-alpha-crti.patch,
+  files/2.3.2/glibc-2.3.2-alpha-pwrite.patch:
+  Add crti and pwrite patches for alpha
 
   28 Oct 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r8.ebuild :
   Added depend to >=hppa-headers-2.4.21_p13 for succefull compilation.
