@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9cd56a6d45e743e481d122c48d2e6fdf ChangeLog 5976
+MD5 2700c4f3064ef46a07142dcc586cb653 ChangeLog 6269
+MD5 f9b371afaa69f2a70d9990d7511b0653 f-prot-4.4.8-r1.ebuild 1129
 MD5 3bf44a2cd492aedb8f27a23f2fe357ff metadata.xml 261
 MD5 7cc888442e29098bf7bf062b166a26fd f-prot-4.4.8.ebuild 1084
 MD5 66f201719b958a89ce10a41fa439170f files/digest-f-prot-4.4.8 70
+MD5 66f201719b958a89ce10a41fa439170f files/digest-f-prot-4.4.8-r1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBn1vv10xuJSrg3/sRAqI5AJ42OsuptTtRjRCyoBGUiG61TBoxNwCfRWJl
-L2g8uSmI5hlhinLKzDmnKcU=
-=AXej
+iD8DBQFBouKA10xuJSrg3/sRAsUQAJ9gsvSxPDjIel7jEEDTPpR+AAQa0wCfTg8t
+ATvs9yYxS9hro7cW5C1r+38=
+=1RMQ
 -----END PGP SIGNATURE-----

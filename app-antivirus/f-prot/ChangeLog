@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.17 2004/11/20 14:59:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.18 2004/11/23 07:10:02 ticho Exp $
+
+*f-prot-4.4.8-r1 (23 Nov 2004)
+
+  23 Nov 2004; Andrej Kacian <ticho@gentoo.org> +f-prot-4.4.8-r1.ebuild:
+  Added symlink /usr/bin/f-prot -> /usr/bin/f-prot.sh for KMail (and possibly
+  other software) to detect f-prot correctly. Closes #56332, reported by
+  LuisMi Garcia <ktech@wanadoo.es>.
 
   20 Nov 2004; Andrej Kacian <ticho@gentoo.org> -f-prot-4.2.1.ebuild,
   -f-prot-4.3.0.ebuild, -f-prot-4.3.1.ebuild, -f-prot-4.3.2.ebuild,
