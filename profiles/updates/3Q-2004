@@ -97,3 +97,4 @@ move net-www/webfs www-servers/webfs
 move net-www/bozohttpd www-servers/bozohttpd
 move app-misc/glabels app-office/glabels
 move dev-perl/Apache-Gallery www-apps/Apache-Gallery
+move net-www/browser-config www-apps/browser-config
