@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/email
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.5 2005/01/31 18:34:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.6 2005/03/30 14:26:47 ticho Exp $
+
+  30 Mar 2005; Andrej Kacian <ticho@gentoo.org> email-2.3.2.ebuild:
+  Stable on x86. Bug #87257.
 
   31 Jan 2005; Simon Stelling <blubb@gentoo.org> email-2.3.2.ebuild:
   added ~amd64
