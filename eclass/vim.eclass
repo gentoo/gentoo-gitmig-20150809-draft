@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Ryan Phillips <rphillips@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.2 2002/10/28 01:04:58 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.3 2002/10/28 07:18:54 rphillips Exp $
 # Ripped from the vim ebuilds. src_compile and install
 # should be integrated in at some point
 
@@ -47,24 +47,6 @@ fi
 HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
-
-DEPEND="dev-util/cscope
-	>=sys-libs/ncurses-5.2-r2
-	gpm?	( >=sys-libs/gpm-1.19.3 )
-	perl?	( sys-devel/perl )
-	python? ( dev-lang/python )
-	ruby?	( >=dev-lang/ruby-1.6.4 )"
-#	tcltk?	( dev-lang/tcl )"
-# It appears that the tclinterp stuff in Vim is broken right now (at
-# least on Linux... it works on BSD).  When you --enable-tclinterp
-# flag, then the following command never returns:
-#
-#   VIMINIT='let OS = system("uname -s")' vim
-#
-# Please don't re-enable the tclinterp flag without verifying first
-# that the above works.  Thanks.  (08 Sep 2001 agriffis)
-
 
 src_unpack() {
 	unpack ${A}
