@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.51 2004/07/23 22:39:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.52 2004/09/12 02:38:21 swegener Exp $
+
+*irssi-0.8.10_rc5 (12 Sep 2004)
+
+  12 Sep 2004; Sven Wegener <swegener@gentoo.org> +irssi-0.8.10_rc5.ebuild:
+  Version bump to 0.8.10_rc5. This version has the features of
+  net-irc/irssi-charconv and net-irc/irssi-recode integrated, so we block them.
+  Closes bug #63367.
 
 *irssi-0.8.9-r1 (24 Jul 2004)
 
