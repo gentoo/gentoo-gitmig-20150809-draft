@@ -1,0 +1,11 @@
+--- qimhangul.pro.orig	2004-10-06 13:53:50.000000000 +0900
++++ qimhangul.pro	2004-10-06 15:27:52.000000000 +0900
+@@ -8,7 +8,7 @@
+ target.path = $(QTDIR)/plugins/inputmethods
+ INSTALLS += target
+ 
+-CONFIG += debug plugin qt
++CONFIG += debug plugin qt thread
+ 
+ # Input
+ HEADERS += \

@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/qimhangul
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/ChangeLog,v 1.1 2004/10/06 06:45:59 usata Exp $
+
+*qimhangul-0.0.1 (06 Oct 2004)
+
+  06 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/qimhangul-0.0.1-thread-gentoo.diff, +qimhangul-0.0.1.ebuild:
+  Initial import.
+
