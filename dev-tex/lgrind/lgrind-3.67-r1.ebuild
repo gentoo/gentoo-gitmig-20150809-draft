@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/lgrind-3.67-r1.ebuild,v 1.4 2004/05/08 09:56:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/lgrind/lgrind-3.67-r1.ebuild,v 1.5 2004/06/16 15:43:44 ciaranm Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ LICENSE="as-is"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 S=${WORKDIR}/${PN}
 
 src_compile() {
