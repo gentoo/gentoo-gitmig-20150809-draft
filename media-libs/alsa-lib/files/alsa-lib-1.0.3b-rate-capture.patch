@@ -1,0 +1,16 @@
+Index: pcm_rate.c
+===================================================================
+RCS file: /cvsroot/alsa/alsa-lib/src/pcm/pcm_rate.c,v
+retrieving revision 1.81
+diff -u -r1.81 pcm_rate.c
+--- pcm_rate.c	17 Mar 2004 11:48:15 -0000	1.81
++++ pcm_rate.c	23 Mar 2004 14:36:54 -0000
+@@ -1079,6 +1079,8 @@
+ 	      __partial:
+ 		xfer = 0;
+ 		cont = rate->slave->buffer_size - slave_offset;
++		if (cont > rate->slave->period_size)
++			cont = rate->slave->period_size;
+ 		snd_pcm_areas_copy(rate->sareas, 0,
+ 				   slave_areas, slave_offset,
+ 				   pcm->channels, cont,
