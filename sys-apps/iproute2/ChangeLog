@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.31 2005/03/12 21:52:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.32 2005/03/29 03:10:25 vapier Exp $
+
+*iproute2-2.6.11.20050310-r1 (29 Mar 2005)
+
+  29 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/iproute2-2.6.11.20050310-dsmark-qdisc.patch,
+  +iproute2-2.6.11.20050310-r1.ebuild:
+  Add patch from upstream to fix dsmark qdiscs adding #86729.
 
 *iproute2-2.6.11.20050310 (12 Mar 2005)
 
