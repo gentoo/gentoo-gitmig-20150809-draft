@@ -235,3 +235,4 @@ move dev-libs/libctl sci-libs/libctl
 move dev-libs/libtifiles sci-libs/libtifiles
 move dev-libs/libticalcs sci-libs/libticalcs
 move dev-libs/mkl sci-libs/mkl
+move app-sci/pariguide sci-mathematics/pariguide
