@@ -1,4 +1,6 @@
-MD5 81dff16681ddfb1f58f7395ea73578a5 ChangeLog 743
+MD5 e2d5c9ad3115c3cadea01ae3c0a21563 ChangeLog 880
 MD5 b0c44f37064f4122b3dbf308420ee5e8 efax-gtk-2.0.7.ebuild 970
 MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
+MD5 bf9170dcaa97fc3bb127e35e0eb6aec1 efax-gtk-2.2.4.ebuild 975
 MD5 ca201a77315e930e87f9e10c8819271d files/digest-efax-gtk-2.0.7 67
+MD5 527e24ebb9836c8cc12916c62ca0d6b9 files/digest-efax-gtk-2.2.4 67
