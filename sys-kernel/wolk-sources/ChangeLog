@@ -1,100 +1,101 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.29 2003/12/04 02:09:56 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.30 2003/12/04 23:22:34 plasmaroo Exp $
 
   03 Dec 2003; <nerdboy@gentoo.org> wolk-sources-3.8.ebuild,
   wolk-sources-4.0.ebuild, wolk-sources-4.3.ebuild:
-  Removed old ebuilds
+  Removed old ebuilds...
 
   03 Dec 2003; Brian Jackson <iggy@gentoo.org>
   wolk-sources-4.10_pre7-r1.ebuild, wolk-sources-4.10_pre7.ebuild:
-  turns out 4.10pre7 and up were already fixed
+  Turns out 4.10pre7 and up were already fixed...
 
 *wolk-sources-4.10_pre7-r1 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
   wolk-sources-4.10_pre7-r1.ebuild, wolk-sources-4.9-r2.ebuild:
-  version bump for do_brk vuln
+  Version bump for the 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org> wolk-sources-3.8.ebuild,
   wolk-sources-4.0.ebuild, wolk-sources-4.10_pre7.ebuild,
   wolk-sources-4.3.ebuild, wolk-sources-4.9-r1.ebuild,
   wolk-sources-4.9.ebuild, files/do_brk_fix.patch:
-  fix do_brk vuln
+  Fix the 'do_brk' vulnerability.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org> wolk-sources-3.8.ebuild,
   wolk-sources-4.0.ebuild, wolk-sources-4.10_pre7.ebuild,
   wolk-sources-4.3.ebuild, wolk-sources-4.9-r1.ebuild,
   wolk-sources-4.9.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
   14 Nov 2003; <nerdboy@gentoo.org> wolk-sources-4.10_pre7.ebuild,
   wolk-sources-4.9-r1.ebuild:
-  fixed nvidia patches (i think)
+  Fixed the NVIDIA patches.
 
 *wolk-sources-4.9-r1 (13 Nov 2003)
 
   13 Nov 2003; <nerdboy@gentoo.org> wolk-sources-4.10_pre7.ebuild,
   wolk-sources-4.9-r1.ebuild:
-  removed alsa patches, as well as old broken patches. 4.9 is as
+  Removed alsa patches, as well as old broken patches. 4.9 is as
   stable as it's gonna get (works for me).
 
   13 Nov 2003; <nerdboy@gentoo.org> wolk-sources-4.10_pre7.ebuild:
-  added missing patch file
+  Added missing patch file.
 
 *wolk-sources-4.10_pre7 (02 Nov 2003)
 
   02 Nov 2003; <nerdboy@gentoo.org> wolk-sources-4.10_pre7.ebuild:
-  new wolk 4.10_pre7 ebuild until the official 4.10s comes out
+  New wolk 4.10_pre7 ebuild until the official 4.10s comes out
 
   29 Sep 2003; Martin Holzer <mholzer@gentoo.org> wolk-sources-3.8.ebuild,
   wolk-sources-4.0.ebuild, wolk-sources-4.3.ebuild, wolk-sources-4.9.ebuild:
-  now uses mirror://kernel.
+  Mow uses mirror://kernel.
 
 *wolk-sources-4.9 (24 Sep 2003)
 
   24 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> wolk-sources-4.9.ebuild:
-  version bump to 4.9
+  Version bump to 4.9.
 
   22 Sep 2003; <paul@gentoo.org> metadata.xml:
-  Fix metadata.xml
+  Fix metadata.xml.
 
   14 Sep 2003; <nerdboy@gentoo.org> metadata.xml, wolk-sources-4.3.ebuild:
-  bumped to x86 added to x86-kernel herd
+  Bumped to 'x86' added to x86-kernel herd.
 
   07 Aug 2003; John Mylchreest <johnm@gentoo.org>; wolk-sources-4.3.ebuild:
-  Fixing security issue with /tmp/KV
+  Fixing security issue with /tmp/KV.
 
 *wolk-sources-4.3 (17 July 2003)
  
   17 July 2003; Bob Johnson <livewire@gentoo.org> wolk-sources-4.3.ebuild:
-  Final version of 4.3s
+  Final version of 4.3s.
 
 *wolk-sources-4.0 (13 May 2003)
 
   13 May 2003; Bob Johnson <livewire@gentoo.og> wolk-sources-4.0.ebuild:
-  Final version of 4.0s
+  Final version of 4.0s.
 
 *wolk-sources-4.0s-rc8
 
  09 May 2003; Bob Johnson <livewire@gentoo.org>:
 
-        -bumped to rc8 
-        -check wolk.sourceforge.net for many changes
+        - Bumped to -rc8. 
+        - Check wolk.sourceforge.net for many changes.
 
 *wolk-sources-4.0s-rc6
 
   26 April 2003; Bob Johnson <livewire@gentoo.org>:
 
-	-bumped to pre-final (skipping rc5)
-	-check wolk.sourceforge.net for many changes
+	- Bumped to pre-final (skipping rc5).
+	- Check wolk.sourceforge.net for many changes.
 
 *wolk-sources-4.0s-rc4
 
   24 March 2003; Bob Johnson <livewire@gentoo.org>:
 
 	Changelog from v4.0s-rc3 -> v4.0s-rc4
+
 	-     "reallyquiet" boot option to shut up all console log level output
 	-     This is important!
                		Use a sched_yield that scales well by default, this should
@@ -264,8 +265,7 @@
 *wolk-sources-4.0s-pre9
 
   26 Jan 2003; Bob Johnson <livewire@gentoo.org>:
-  
-  See /usr/share/doc/wolk-sources-4.0_pre9/patches.txt
+  Please see /usr/share/doc/wolk-sources-4.0_pre9/patches.txt
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
@@ -273,14 +273,11 @@
 *wolk-sources-3.8 (08 Dec 2002)
 
   24 Dec 2002; Brandon Low <lostlogic@gentoo.org> wolk-sources-3.8.ebuild :
-
-  Fix homepage
+  Fix "HOMEPAGE" in the ebuild.
 
   14 Dec 2002; Brandon Low <lostlogic@gentoo.org> wolk-sources-3.8.ebuild :
-
-  Fix patchdir
+  Fix patch directories.
 
   09 Dec 2002; Joachim Blaabjerg <styx@gentoo.org> wolk-sources-3.8.ebuild,
   files/digest-wolk-sources-3.8, ChangeLog :
-
   Initial import. Fixes bug #7349.
