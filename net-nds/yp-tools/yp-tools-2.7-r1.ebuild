@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.7-r1.ebuild,v 1.14 2004/07/01 22:38:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.7-r1.ebuild,v 1.15 2005/04/01 16:37:04 agriffis Exp $
 
 DESCRIPTION="NIS Tools"
 HOMEPAGE="http://www.linux-nis.org/nis/"
