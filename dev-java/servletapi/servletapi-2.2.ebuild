@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2.ebuild,v 1.4 2003/07/11 21:41:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2.ebuild,v 1.5 2004/01/14 04:00:59 strider Exp $
 
 S=${WORKDIR}/jakarta-servletapi-src
 DESCRIPTION="Servlet API ${PV} from jakarta.apache.org"
 HOMEPAGE="http://jakarta.apache.org/"
 SRC_URI="mirror://gentoo/servletapi-2.2-20021101.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-	>=ant-1.4"
+	>=dev-java/ant-1.4"
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="2.2"
