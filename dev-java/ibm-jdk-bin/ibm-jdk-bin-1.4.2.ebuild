@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.8 2004/07/27 15:36:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.9 2004/08/04 13:22:54 axxo Exp $
 
 IUSE="X doc javacomm"
 
@@ -15,12 +15,12 @@ else
 fi
 
 DESCRIPTION="IBM Java Development Kit ${PV}"
-SRC_URI="ppc? ( mirror://IBMJava2-SDK-142.ppc.tgz )
-	ppc64? ( mirror://IBMJava2-SDK-142.ppc64.tgz )
-	x86? ( mirror://IBMJava2-SDK-142.tgz )
+SRC_URI="ppc? ( mirror://gentoo/IBMJava2-SDK-142.ppc.tgz )
+	ppc64? ( mirror://gentoo/IBMJava2-SDK-142.ppc64.tgz )
+	x86? ( mirror://gentoo/IBMJava2-SDK-142.tgz )
 	javacomm? (
-		x86? ( mirror://IBMJava2-JAVACOMM-142.tgz )
-		ppc64? ( mirror://IBMJava2-JAVACOMM-142.tgz )
+		x86? ( mirror://gentoo/IBMJava2-JAVACOMM-142.tgz )
+		ppc64? ( mirror://gentoo/IBMJava2-JAVACOMM-142.tgz )
 		)"
 PROVIDE="virtual/jdk-1.4.2
 	virtual/jre-1.4.2
