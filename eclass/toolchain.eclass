@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.20 2004/09/25 16:33:54 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.21 2004/10/03 19:44:59 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -1068,6 +1068,52 @@ gcc-library-src_install() {
 		# filenames.
 		add_version_to_shared
 	fi
+}
+
+create_gcc_env_entry() {
+	dodir /etc/env.d/gcc
+	local gcc_envd_base="/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}"
+
+	if [ "$1" == "" ] ; then
+		gcc_envd_file="${D}${gcc_envd_base}"
+		gcc_specs_file="${LIBPATH}/specs"
+	elif [ "$1" == "vanilla" ] ; then
+		gcc_envd_file="${D}${gcc_envd_base}-vanilla"
+		gcc_specs_file="${LIBPATH}/vanilla.specs"
+	elif [ "$1" == "hardened" ] ; then
+		gcc_envd_file="${D}${gcc_envd_base}-hardened"
+		gcc_specs_file="${LIBPATH}/hardened.specs"
+	fi
+
+	echo "PATH=\"${BINPATH}\"" > ${gcc_envd_file}
+	echo "ROOTPATH=\"${BINPATH}\"" >> ${gcc_envd_file}
+
+	# Thanks to multilib, setting ldpath just got a little bit nuttier.
+	use amd64 && multilib_dirnames="32"
+	# we dont support this kind of amd64 multilib
+	#use x86 && multilib_dirnames="64"
+	# I'm unsure which of these is the default, so lets add both
+	use ppc64 && multilib_dirnames="64 32"
+	# same here.
+	use mips && multilib_dirnames="o32 32 64"
+
+	LDPATH="${LIBPATH}"
+
+	if [ -n "${multilib_dirnames}" ] ; then
+		for path in ${multilib_dirnames} ; do
+			LDPATH="${LDPATH}:${LIBPATH}/${path}"
+		done
+	fi
+
+	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
+	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
+	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
+	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
+	# Also set CC and CXX
+	echo "CC=\"gcc\"" >> ${gcc_envd_file}
+	echo "CXX=\"g++\"" >> ${gcc_envd_file}
+	# Set which specs file to use
+	echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
 }
 
 toolchain_src_install() {
