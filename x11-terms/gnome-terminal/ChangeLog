@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.67 2004/08/05 22:35:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.68 2004/08/18 06:57:04 obz Exp $
+
+  18 Aug 2004; Mike Gardiner <obz@gentoo.org>
+  +files/gnome-terminal-2.6.1-select.patch:
+  New revision, including the text-selection algorithm patch, supplied in bug
+  #52952
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-terminal-2.6.1.ebuild:
