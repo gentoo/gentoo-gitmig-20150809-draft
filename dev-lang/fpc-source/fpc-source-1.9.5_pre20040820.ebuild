@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-1.9.5_pre20040820.ebuild,v 1.2 2004/08/21 18:18:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-1.9.5_pre20040820.ebuild,v 1.3 2004/08/21 19:04:41 chriswhite Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ src_compile() {
 	cd ${S}
 
 	einfo "Building the fpc compiler and units"
-	emake \
+	# have to use -j1 as it doesn't seem to like -j2+
+	emake -j1 \
 	build \
 	OS_TARGET=linux \
 	PP=${S}/ppc386 \
@@ -32,7 +33,7 @@ src_compile() {
 src_install() {
 
 	einfo "Installing the fpc compiler and units"
-	emake \
+	emake -j1 \
 	install \
 	OS_TARGET=linux \
 	PP=${S}/ppc386 \
