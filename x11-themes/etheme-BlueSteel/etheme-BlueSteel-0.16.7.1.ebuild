@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-BlueSteel/etheme-BlueSteel-0.16.7.1.ebuild,v 1.6 2004/12/30 16:38:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-BlueSteel/etheme-BlueSteel-0.16.7.1.ebuild,v 1.7 2005/01/28 02:25:45 vapier Exp $
 
 MY_PV="0.02"
 MY_PN="${PN/etheme-}"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/enlightenment/enlightenment-theme-${MY_PN}-0.16-${
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=x11-wm/enlightenment-0.16.7_pre3"
