@@ -34,3 +34,4 @@ move app-gnustep/helpviewer gnustep-apps/helpviewer
 move app-gnustep/imageviewer gnustep-apps/imageviewer
 move app-gnustep/projectcenter gnustep-apps/projectcenter
 move app-gnustep/talksoup gnustep-apps/talksoup
+move app-gnustep/terminal gnustep-apps/terminal
