@@ -2,7 +2,7 @@
  * Copyright 1999-2003 Gentoo Technologies, Inc.
  * Distributed under the terms of the GNU General Public License v2
  * Author: Martin Schlemmer <azarah@gentoo.org>
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper.c,v 1.4 2003/01/19 19:14:52 azarah Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper.c,v 1.5 2003/01/19 23:39:05 azarah Exp $
  */
 
 #define _REENTRANT
@@ -50,7 +50,11 @@ int main(int argc, char **argv) {
 	} else
 		token = NULL;
 	
-	/* Find the first file with suitable name in PATH */
+	/* Find the first file with suitable name in PATH.  The idea here is
+	 * that we do not want to bind ourselfs to something static like the
+	 * default profile, or some odd environment variable, but want to be
+	 * able to build something with a non default gcc by just tweaking
+	 * the PATH ... */
 	while ((NULL != token) && (strlen(token) > 0)) {
 
 		tmpstr = (char *)malloc(strlen(token) + strlen(wrappername) + 2);
@@ -59,9 +63,10 @@ int main(int argc, char **argv) {
 
 		/* Does it exist and is a file? */
 		ret = stat(tmpstr, &sbuf);
-		/* It exists, and are not our wrapper, and its not in /usr/bin ... */
+		/* It exists, and are not our wrapper, and its in a dir containing
+		 * gcc-bin ... */
 		if ((0 == ret) && (sbuf.st_mode & S_IFREG) && 
-		    (0 != strcmp(tmpstr, wrapfullname)) && (0 == strstr(tmpstr, "/usr/bin"))) {
+		    (0 != strcmp(tmpstr, wrapfullname)) && (0 != strstr(tmpstr, "/gcc-bin/"))) {
 
 			strncpy(wrapperbin, tmpstr, MAXPATHLEN);
 				
