@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sound</herd>
+<longdescription>
+	xmms-kde is a MP3 player integrated into the KDE panel.
+	It can also be used to control XMMS and Noatun from the panel.
+
+	What are the features?
+
+	start/pause/stop the player
+	jump back/forward in the playlist
+	drag'n'drop files from the filemanager
+	on-screen-display to show the title of the song that starts playing
+	database support for Ogg / MP3 files (since version 3.1 beta1)
+	You can do most of these things by using the mouse or customizable keyboard shortcuts.
+	You can use diffrent themes
+</longdescription>
+</pkgmetadata>
