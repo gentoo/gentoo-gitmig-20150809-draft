@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3116 2004/08/28 09:06:00 hattya Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3117 2004/08/28 16:32:02 squinky86 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <squinky86@gentoo.org> (28 Aug 2004)
+# dependency on pygtk remasked
+>=net-p2p/gnome-btdownload-0.0.12
 
 # <ciaranm@gentoo.org> (27 Aug 2004)
 # This needs a loooot of testing, especially on selinux systems,
