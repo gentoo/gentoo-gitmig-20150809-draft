@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/texinfo
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.45 2004/08/24 03:45:16 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.46 2005/01/04 03:24:18 vapier Exp $
+
+*texinfo-4.8 (03 Jan 2005)
+
+  03 Jan 2005; Mike Frysinger <vapier@gentoo.org> +texinfo-4.8.ebuild:
+  Version bump.  Magically fixes #74926 by spiritus in the process.
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> texinfo-4.6.ebuild,
   texinfo-4.7-r1.ebuild, texinfo-4.7.ebuild:

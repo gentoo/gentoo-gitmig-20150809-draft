@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 be7fc3797edff0f7695422e5e96d120c ChangeLog 5901
+MD5 593b06dca2945e2e51c67c7c41ea470c ChangeLog 6067
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a96a564140ac4b23c3800e7ac7a2f6f5 texinfo-4.7-r1.ebuild 1979
+MD5 f57066b94ed4a56f3734f60cf028d73e texinfo-4.8.ebuild 1607
+MD5 75c60847c4f9b9d75375567cd1a3ba81 texinfo-4.7-r1.ebuild 1979
+MD5 1c6181fd6a19db98315a1f737a5ae839 files/digest-texinfo-4.8 65
 MD5 690fb86d0c0215155b1d18671099115a files/mkinfodir 7318
 MD5 a2c21c53079eb65c306a08d230d15b2b files/digest-texinfo-4.7-r1 65
 MD5 a0df107ca9e3036e2ee2d501343cbf2b files/makeinfo.patch 790
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2gD0roRuSHgZdywRAuuYAJ0bd/yyXNn3u7j9BQwiFLjiwMLbdwCeLQ2x
-Mq7uOn9v93MnGLES+7muR3w=
-=LqqM
+iD8DBQFB2gx0roRuSHgZdywRAs0CAJ9y5/NTmBSTTKtHf9LN6XgyfzjxAACeM2ye
+k8cFUsJAFrMbSA1H5jLO8W4=
+=FVVm
 -----END PGP SIGNATURE-----
