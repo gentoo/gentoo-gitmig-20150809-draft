@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dfea99400c7e5ae0c2033ad9ad8172c0 ChangeLog 396
-MD5 9134827f7af9ec66c58f3785457edf45 cvm-0.18.ebuild 1275
+MD5 922207f1292366c93d98dd98ab14bda5 cvm-0.18.ebuild 1269
+MD5 3c2d7cf01fb66abd1ecd9d6f645382dc ChangeLog 388
 MD5 dda571945279b300a80ccff143fe6fa7 files/digest-cvm-0.18 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA09LSHTu7gpaalycRAtJsAJ9chg7hUi2pWDZ+uQiwzde88/JrrwCfXPHh
-YMC7OSu0yYZDkvIvOKF1wI0=
-=UWVr
------END PGP SIGNATURE-----
