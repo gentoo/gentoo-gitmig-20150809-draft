@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.34-r1.ebuild,v 1.4 2004/04/25 16:56:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35_pre20040323.ebuild,v 1.1 2004/04/25 16:56:26 usata Exp $
 
 inherit elisp
 
@@ -8,20 +8,25 @@ IUSE="crypt"
 
 DESCRIPTION="The Big Brother Database"
 HOMEPAGE="http://bbdb.sourceforge.net/"
-SRC_URI="http://bbdb.sourceforge.net/${P}.tar.gz
+# taken from http://bbdb.sourceforge.net/${P}.tar.gz
+SRC_URI="mirror://gentoo/${P}.tar.gz
 	http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/point-at.el
 	http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/dates.el"
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
 	crypt? ( app-emacs/mailcrypt )"
 
+S="${WORKDIR}/${P/_pre*/}"
+
 src_unpack() {
 
 	unpack ${P}.tar.gz
+	cd ${S}
+	epatch ${FILESDIR}/bbdb-decode-header.diff
 	cd ${S}/bits
 	mv bbdb-mail-folders.el bbdb-mail-folders.txt
 	sed -e "0,/^--- bbdb-mail-folders.el ---$/d" \
@@ -32,7 +37,7 @@ src_unpack() {
 		bbdb-sort-mailrc.txt > bbdb-sort-mailrc.el
 	cp ${DISTDIR}/{dates,point-at}.el .
 
-	if ! use crypt; then
+	if [ -z "`use crypt`" ] ; then
 		rm ${S}/bits/bbdb-pgp.el
 		einfo "Excluding bits/bbdb-pgp.el because the \`crypt' USE flag was not"
 		einfo "specified."
@@ -43,10 +48,14 @@ src_unpack() {
 src_compile() {
 
 	econf --with-emacs=emacs || die "econf failed"
-	make || die
-	echo "(add-to-list 'load-path \"${S}/bits\")" > ${T}/lp.el
+	emake -j1 || die "emake failed"
+	cat >${T}/lp.el<<-EOF
+		(add-to-list 'load-path "${S}/bits")
+		(add-to-list 'load-path "${S}/lisp")
+	EOF
 	emacs -batch -q --no-site-file --no-init-file \
-		-l ${T}/lp.el -f batch-byte-compile bits/*.el || die
+		-l ${T}/lp.el -f batch-byte-compile bits/*.el \
+		|| die "make bits failed"
 }
 
 src_install() {

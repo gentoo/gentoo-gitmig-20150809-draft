@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/bbdb
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.4 2003/12/04 23:58:34 jbms Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.5 2004/04/25 16:56:26 usata Exp $
+
+*bbdb-2.35_pre20040323 (26 Apr 2004)
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> bbdb-2.34-r1.ebuild,
+  bbdb-2.34.ebuild, bbdb-2.35_pre20040323.ebuild,
+  files/bbdb-decode-header.diff:
+  Added CVS snapshot and decode-header fix patch. Thanks to Markus Knitting
+  <makmaster@arcor.de> for submitting the ebuild. Closing bug #48345
 
   04 Dec 2003; Jeremy Maitin-Shepard <jbms@gentoo.org> bbdb-2.34-r1.ebuild:
   bits/bbdb-pgp.el is excluded if crypt USE flag is not specified.
