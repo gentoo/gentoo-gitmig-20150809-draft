@@ -1,49 +1,45 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.7 2002/07/16 08:47:56 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.8 2002/09/20 20:59:39 raker Exp $
+
+*squirrelmail-1.2.8 (20 Sep 2002)
+
+  20 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  squirrelmail-1.2.8.ebuild, files/digest-squirrelmail-1.2.8 :
+  Version bump.  register_globals now no longer has to be turned on!
+  See the ChangeLog at http://www.squirrelmail.org for more...
 
 *squirrelmail-1.2.7 (08 Jul 2002)
 
-  15 Jul 2002l Ryan Phillips <rphillips@gentoo.org> :
-
+  15 Jul 2002; Ryan Phillips <rphillips@gentoo.org> :
   Updated for new dev-php/ tree
 
   08 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
-
   SquirrelMail will be installed into /home/httpd/htdocs/squirrelmail
   directly instead of into a version-dependant directory and
-  symlinking to it.
-
-  Fixed SRC_URI.
-
-  Removed dependency on net-www/apache and virtual/imapd.
-
-  Closes bug #4676.
+  symlinking to it.  Fixed SRC_URI.  Removed dependency on
+  net-www/apache and virtual/imapd.  Closes bug #4676.
 
 *squirrelmail-1.2.6-r1 (12 Jun 2002)
 
   12 Jun 2002; Grant Goodyear <g2boojum@gentoo.org> :
-
   Fixed postinst message to mention /etc/php4/php.ini, not
   /etc/PHP4/php.ini.  Thanks to Roman Weber.
   
 *squirrelmail-1.2.6 (21 May 2002)
 
   21 May 2002; Grant Goodyear <g2boojum@gentoo.org> :
-
   New version.  Also moved HTTPDROOT to the new /home/httpd/ location.
   Made sure that the squirrelmail directory is owned by apache.apache.
   
 *squirrelmail-1.2.5 (17 Apr 2002)
 
   17 Apr 2002; Grant Goodyear <g2boojum@gentoo.org> :
-
   New version.  Also moved HTTPDROOT to the new /home/httpd/ location.
   
 *squirrelmail-1.2.4 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
