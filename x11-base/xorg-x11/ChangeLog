@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.267 2005/01/13 20:04:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.268 2005/01/14 07:51:56 spyderous Exp $
+
+*xorg-x11-6.8.1.902 (13 Jan 2005)
+
+  13 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.8.1.902.ebuild:
+  6.8.2 RC2. I expect most archs will work roughly the same with this as with
+  6.8.2 RC1, but I'll let them do their own testing to confirm or deny. (fd.o
+  #2144) Update BenH's patch to fix some issues with miscalculation of MCLK
+  and SCLK values from his old patch.
 
   13 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.901-r1.ebuild:
