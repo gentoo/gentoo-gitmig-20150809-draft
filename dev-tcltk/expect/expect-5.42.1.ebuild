@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.42.1.ebuild,v 1.3 2005/01/19 23:37:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.42.1.ebuild,v 1.4 2005/01/28 02:17:47 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
 IUSE="X doc"
 
 RDEPEND=">=dev-lang/tcl-8.2
@@ -50,7 +50,7 @@ src_compile() {
 	#configure needs to find the files tclConfig.sh and tclInt.h
 	myconf="--with-tcl=/usr/$(get_libdir) --with-tclinclude=/usr/$(get_libdir)/tcl${tclv}/include/generic"
 
-	if use X; then
+	if use X ; then
 		#--with-x is enabled by default
 		#configure needs to find the file tkConfig.sh and tk.h
 		#tk.h is in /usr/lib so don't need to explicitly set --with-tkinclude
@@ -64,7 +64,14 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_install () {
+src_test() {
+	# we need dejagnu to do tests ... but dejagnu needs 
+	# expect ... so don't do tests unless we have dejagnu
+	type -p runtest || return 0
+	make check || die "make check failed"
+}
+
+src_install() {
 	dodir /usr/$(get_libdir)
 	make install INSTALL_ROOT=${D} || die "make install failed"
 
@@ -74,7 +81,7 @@ src_install () {
 	rm ${D}/usr/$(get_libdir)/${NON_MICRO_V/-/}/${static_lib}
 
 	#install examples if 'doc' is set
-	if use doc; then
+	if use doc ; then
 		docinto examples
 		local scripts=$(make -qp | \
 		                sed -e 's/^SCRIPTS = //' -et -ed | head -n1)
@@ -87,5 +94,4 @@ src_install () {
 		done
 		dodoc example/README
 	fi
-
 }
