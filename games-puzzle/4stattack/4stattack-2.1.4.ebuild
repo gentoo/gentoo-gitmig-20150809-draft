@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/4stattack/4stattack-2.1.4.ebuild,v 1.1 2003/09/10 06:35:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/4stattack/4stattack-2.1.4.ebuild,v 1.2 2004/01/29 08:55:46 vapier Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/forcedattack/4stAttack-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 hppa"
 
 DEPEND=">=dev-python/pygame-1.5"
 
