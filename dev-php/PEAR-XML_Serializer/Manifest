@@ -1,4 +1,14 @@
-MD5 b907676bf7a3f37f82de9cc57a1bdd79 ChangeLog 908
-MD5 caf0b472fe83a78608be137bc6de420a PEAR-XML_Serializer-0.15.0.ebuild 509
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 92dafb03784c32fb7a5813e576b3fafd PEAR-XML_Serializer-0.15.0.ebuild 509
+MD5 8b8fe3d9b3d7294d4c516be678eb7f88 ChangeLog 1047
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 9099056c198c11d76f73995d2114a674 files/digest-PEAR-XML_Serializer-0.15.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMt9waGfFFLhbXWkRAhz+AJoCKypZLp1FRwFygY0GzxfrKSibfwCePDgN
+3jv72+cMtMS/2CSzcP5fs2k=
+=Z2jJ
+-----END PGP SIGNATURE-----

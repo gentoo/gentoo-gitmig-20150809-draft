@@ -1,4 +1,14 @@
-MD5 6cf4ef8bee7856fa4eb293694ef951cd ChangeLog 1963
-MD5 c08c77ffedb1dc8e66fd1a2fae3ab552 PEAR-HTML_Common-1.2.1.ebuild 392
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1977d944168209c19877b89372b503bb PEAR-HTML_Common-1.2.1.ebuild 393
+MD5 e535f714ab1ff24a9d528a81429f299f ChangeLog 2098
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 4f9f8032edfdf4f179a6ff25c6954b90 files/digest-PEAR-HTML_Common-1.2.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMt2naGfFFLhbXWkRAqhiAJ9mueO3/710i9tppC7zsk8ll+W2NgCfX76O
+Jp1YPr/rxa20KTbSEqPzBc8=
+=TuLI
+-----END PGP SIGNATURE-----

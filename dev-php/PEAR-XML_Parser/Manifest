@@ -1,4 +1,14 @@
-MD5 01fc371d285af975f1a9bda329562a74 ChangeLog 869
-MD5 476bcde0f8d1b61f2f969d10f4b72427 PEAR-XML_Parser-1.2.4.ebuild 427
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2a740e99fa82acffc47375d3fd7de6d8 ChangeLog 1003
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 b083e7ab485ba7dfffab4ee6f3fa075a PEAR-XML_Parser-1.2.4.ebuild 427
 MD5 c2cd46eacb45d30f8248a3f6c1aadef8 files/digest-PEAR-XML_Parser-1.2.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMt9SaGfFFLhbXWkRAvCHAJ0SACsJH1uV0cfZyxeVw4XR1c6qZgCgg5qM
+OpweGdcrc309/UHo8BUVPjc=
+=xpZv
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 85535050c108e51d63d8fea8f8f9b98b ChangeLog 887
-MD5 9500baa78ad50b61aa919e51e5f6e254 PEAR-HTTP_Request-1.2.4.ebuild 479
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 12ce3db4eb1e8be15e811f8e95cdfc89 PEAR-HTTP_Request-1.2.4.ebuild 479
+MD5 1fe63de7a854aaffce98cdfee6d59481 ChangeLog 1023
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 062ecf5b4862d6f99629a73458fa333f files/digest-PEAR-HTTP_Request-1.2.4 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMt3XaGfFFLhbXWkRAuw7AKCdHx4dhSYWs7goXSZiieSxSTASMQCglqm2
+4Qy09MQug8FCQHv8kUDq83o=
+=IVpk
+-----END PGP SIGNATURE-----
