@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0.ebuild,v 1.2 2004/10/16 17:22:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/jessie-1.0.0.ebuild,v 1.3 2004/10/20 07:03:15 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nongnu.org/jessie"
 SRC_URI="http://syzygy.metastatic.org/jessie/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc jikes ssl"
 RDEPEND=">=dev-java/gnu-classpath-0.08_rc1"
 DEPEND=">=virtual/jdk-1.3
