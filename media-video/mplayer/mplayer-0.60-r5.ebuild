@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r5.ebuild,v 1.4 2002/04/14 18:59:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r5.ebuild,v 1.5 2002/04/16 09:44:01 seemant Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -48,9 +48,9 @@ src_unpack() {
 		patch < ${FILESDIR}/default-skin.diff || die "gtk patch failed"
 	)
 
-	use mga && ( \
+	use matrox && ( \
 		cd ${S}/drivers;
-		patch < ${FILESDIR}/mga_vid_devfs.patch || die "mga patch failed"
+		patch < ${FILESDIR}/mga_vid_devfs.patch || die "matrox patch failed"
 	)
 	
 	#patch mplayer with the DXR3 patch
@@ -87,7 +87,7 @@ src_compile() {
 	use X || use gtk \
 		|| myconf="${myconf} --disable-x11 --disable-xv --disable-xmga"
 
-	use mga && use X \
+	use matrox && use X \
 		&& myconf="${myconf} --enable-xmga"
 
 	use gtk \
@@ -124,7 +124,7 @@ src_compile() {
 	use dvd \
 		&& myconf="${myconf} --enable-dvdread --enable-css"
 
-	use mga \
+	use matrox \
 		&& myconf="${myconf} --enable-mga"
 
 	use 3dfx \
@@ -141,7 +141,7 @@ src_compile() {
 
 	emake all || die
 	
-	use mga && ( \
+	use matrox && ( \
 		cd drivers \
 		emake all || die
 	)
@@ -221,7 +221,7 @@ src_install() {
 	insinto /usr/share/mplayer
 	doins ${S}/etc/codecs.conf
 
-	use mga && ( \
+	use matrox && ( \
 		dodir /lib/modules/${KVERS}/kernel/drivers/char
 		cp ${S}/drivers/mga_vid.o ${D}/lib/modules/${KVERS}/kernel/drivers/char
 	)
