@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.1.ebuild,v 1.1 2004/09/30 00:46:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.1.1.ebuild,v 1.2 2005/02/08 11:51:49 blubb Exp $
 
 inherit eutils kde-functions
 
@@ -9,7 +9,7 @@ DESCRIPTION="QSA version ${PV}, Qt Script for Application is a ECMAScript based 
 to provide a scripting engine to applications developped with Qt"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 SRC_URI="ftp://ftp.trolltech.com/qsa/source/${PN}-x11-free-${PV}.tar.gz"
 HOMEPAGE="http://www.trolltech.com/"
 DEPEND=">=x11-libs/qt-3.1.2-r3"
