@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.19.ebuild,v 1.12 2004/06/25 00:51:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.19.ebuild,v 1.13 2004/09/22 05:56:44 lv Exp $
 
 DESCRIPTION="GNU VCDimager"
 HOMEPAGE="http://www.vcdimager.org/"
@@ -32,6 +32,7 @@ src_compile() {
 src_install() {
 	make \
 		prefix=${D}/usr \
+		libdir=${D}/usr/$(get_libdir) \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die

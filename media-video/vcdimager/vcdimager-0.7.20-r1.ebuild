@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r1.ebuild,v 1.1 2004/07/15 13:30:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r1.ebuild,v 1.2 2004/09/22 05:56:44 lv Exp $
 
 inherit eutils
 
@@ -37,6 +37,7 @@ src_compile() {
 src_install() {
 	make \
 		prefix=${D}/usr \
+		libdir=${D}/usr/$(get_libdir) \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
