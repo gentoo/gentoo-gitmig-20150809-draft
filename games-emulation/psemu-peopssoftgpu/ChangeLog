@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/psemu-peopssoftgpu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.5 2004/06/24 22:34:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.6 2004/08/15 06:31:49 vapier Exp $
+
+  15 Aug 2004; Mike Frysinger <vapier@gentoo.org>
+  psemu-peopssoftgpu-1.15.ebuild:
+  Remove all the x86-specifc code when ARCH != x86 #56763.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   psemu-peopssoftgpu-1.15.ebuild:
