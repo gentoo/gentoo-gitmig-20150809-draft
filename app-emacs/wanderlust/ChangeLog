@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.23 2004/09/12 17:06:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.24 2004/09/13 01:25:30 weeve Exp $
+
+  12 Sep 2004; Jason Wever <weeve@gentoo.org> wanderlust-2.10.1-r2.ebuild:
+  Stable on sparc.
 
 *wanderlust-2.11.31_pre20040912 (13 Sep 2004)
 
