@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.1 2003/07/18 08:25:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.2 2003/07/18 09:17:01 seemant Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -80,16 +80,17 @@ src_unpack() {
 		chmod +x ${S}/config.rpath
 	fi
 
-	if use nls; then
-		epatch ${FILESDIR}/${PN}-gettext-fix.patch
-	fi
-
 	# Add /usr/local/share/xmms/Skins to the search path for skins
 	epatch ${FILESDIR}/${PN}-fhs-skinsdir.patch
 
 	# We run automake and autoconf here else we get a lot of warning/errors.
 	# I have tested this with gcc-2.95.3 and gcc-3.1.
 	elibtoolize
+
+	if use nls; then
+		epatch ${FILESDIR}/${PN}-gettext-fix.patch
+	fi
+
 	echo ">>> Reconfiguring..."
 	for x in ${S} ${S}/libxmms
 	do

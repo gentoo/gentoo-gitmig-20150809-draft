@@ -1,5 +1,5 @@
 MD5 5618f4d14fd98b813b7be2b4df0087e7 xmms-1.2.7-r21.ebuild 4830
-MD5 1fbea1b6ee32ba22b6e70cda25bc7f00 xmms-1.2.7-r23.ebuild 5178
+MD5 60fe60be44cac79ab1b9b6d4c4b154d8 xmms-1.2.7-r23.ebuild 5179
 MD5 17680ff662d5980dc9c50f5469ca637d xmms-1.2.7-r20.ebuild 4950
 MD5 90740c69a0e1cdd3a65b037af5fe8a5a xmms-1.2.7-r22.ebuild 4989
 MD5 015c1a2e480c3ba66d81fcaf4feb6026 ChangeLog 10648
@@ -11,7 +11,7 @@ MD5 3268d7f38e954fd7ab541fa9e6f385ca files/digest-xmms-1.2.7-r22 130
 MD5 3268d7f38e954fd7ab541fa9e6f385ca files/digest-xmms-1.2.7-r23 130
 MD5 6361ee5e5b5402155308b62a1d1fde9a files/xmms-sigterm.patch 1002
 MD5 2b20eda67dba56621f05441eaa0ffab8 files/xmms-jump.patch 3013
-MD5 2df4e90fd2691fc50d74057ae531e81e files/xmms-gettext-fix.patch 774
+MD5 6340b8dd3175d70be72d527727ac1ef0 files/xmms-gettext-fix.patch 393
 MD5 b4d1fd03bbe7ceb4b756394354b3956e files/xmms-russian-charset.patch 110410
 MD5 a03fa7e2151194a6db4850897d16d128 files/xmms-1.2.7-mpg123j.patch 9333
 MD5 3137a462e1b8c82c5c2a8d7c4d983ee9 files/xmms-ipv6-20020408-nommx.patch 9214

@@ -1,17 +1,11 @@
-Index: files/xmms-gettext-fix.diff
-===================================================================
-RCS file: files/xmms-gettext-fix.diff
-diff -N files/xmms-gettext-fix.diff
---- /dev/null	1 Jan 1970 00:00:00 -0000
-+++ files/xmms-gettext-fix.diff	16 Jul 2003 13:20:49 -0000
-@@ -0,0 +1,10 @@
-+--- xmms-1.2.7/po/Makefile.in.in.orig	2003-07-16 14:11:06.000000000 +0200
-++++ xmms-1.2.7/po/Makefile.in.in	2003-07-16 14:12:54.000000000 +0200
-+@@ -88,6 +88,7 @@
-+ 	$(XGETTEXT) --default-domain=$(PACKAGE) --directory=$(top_srcdir) \
-+ 	  --add-comments --keyword=_ --keyword=N_ \
-+ 	  --files-from=$(srcdir)/POTFILES.in \
-++	  --from-code=iso-8859-1 \
-+ 	&& test ! -f $(PACKAGE).po \
-+ 	   || ( rm -f $(srcdir)/$(PACKAGE).pot \
-+ 		&& mv $(PACKAGE).po $(srcdir)/$(PACKAGE).pot )
+--- po/Makefile.in.in.old	2003-07-18 02:04:17.000000000 -0700
++++ po/Makefile.in.in	2003-07-18 02:05:03.000000000 -0700
+@@ -34,7 +34,7 @@
+ GENCAT = @GENCAT@
+ GMSGFMT = PATH=../src:$$PATH @GMSGFMT@
+ MSGFMT = @MSGFMT@
+-XGETTEXT = PATH=../src:$$PATH @XGETTEXT@
++XGETTEXT = PATH=../src:$$PATH @XGETTEXT@ --language=C --from-code=iso-8859-1
+ MSGMERGE = PATH=../src:$$PATH msgmerge
+ 
+ DEFS = @DEFS@
