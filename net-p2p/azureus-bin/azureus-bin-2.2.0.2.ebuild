@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.2.ebuild,v 1.4 2005/02/22 07:15:52 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.2.ebuild,v 1.5 2005/04/03 12:03:55 axxo Exp $
 
-inherit eutils
+inherit eutils java-pkg
 
 DESCRIPTION="Azureus - Java BitTorrent Client"
 HOMEPAGE="http://azureus.sourceforge.net/"
@@ -26,7 +26,8 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="kde gtk"
 
 DEPEND="virtual/libc
-	app-arch/unzip"
+	app-arch/unzip
+	!net-p2p/azureus"
 
 RDEPEND="${DEPEND}
 	kde? ( dev-java/systray4j )
@@ -70,7 +71,7 @@ src_unpack() {
 		cd ${WORKDIR}
 	fi
 
-	cp ${FILESDIR}/${PN}-2.0.8.0a-gentoo.sh ${MY_PN}/azureus
+	cp ${FILESDIR}/${PN}-gentoo.sh ${MY_PN}/azureus || die "failed to copy wrapper"
 
 	# Set runtime settings in the startup script
 	sed -i "s:##PROGRAM_DIR##:${PROGRAM_DIR}:" ${MY_PN}/azureus
@@ -92,7 +93,7 @@ src_install() {
 	insinto ${PROGRAM_DIR}
 	exeinto ${PROGRAM_DIR}
 
-	doins *.jar
+	java-pkg_dojar *.jar
 	doexe *.so
 
 	# keep the plugins dir bug reports from flowing in
@@ -107,7 +108,7 @@ src_install() {
 	insinto /usr/share/applications
 	doins ${FILESDIR}/azureus.desktop
 
-	dodoc README.linux seda-README.txt
+	dodoc seda-README.txt
 	dohtml swt-about.html
 }
 
