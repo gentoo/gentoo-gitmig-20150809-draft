@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.13.ebuild,v 1.1 2004/09/23 16:51:23 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.13.ebuild,v 1.2 2004/09/29 20:59:31 axxo Exp $
 
-IUSE="doc mozilla"
-
-inherit java nsplugins eutils
+inherit java eutils
 
 MY_PV=${PV%.*}_${PV##*.}
 MY_P=jdk${MY_PV}
@@ -27,6 +25,7 @@ SLOT="1.3"
 KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa"
 RESTRICT="fetch"
 
+IUSE="doc mozilla"
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
@@ -90,8 +89,7 @@ src_install () {
 	cp -a demo src.jar ${D}/opt/${P}/share/
 
 	if use mozilla ; then
-		dodir /usr/lib/mozilla/plugins
-		dosym /opt/${P}/jre/plugin/i386/ns600/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
+		install_mozilla_plugin /opt/${P}/jre/plugin/i386/ns600/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
 	fi
 
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
@@ -100,13 +98,13 @@ src_install () {
 pkg_postinst () {
 	# Set as default VM if none exists
 	java_pkg_postinst
-	inst_plugin /opt/${P}/jre/plugin/i386/mozilla/libjavaplugin_oji.so
 
 	# if chpax is on the target system, set the appropriate PaX flags
 	# this will not hurt the binary, it modifies only unused ELF bits
 	# but may confuse things like AV scanners and automatic tripwire
 	if has_version "sys-apps/chpax"
 	then
+		echo
 		einfo "setting up conservative PaX flags for jar, javac and java"
 
 		for paxkills in "jar" "javac" "java"
@@ -124,22 +122,9 @@ pkg_postinst () {
 		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
 	fi
 
-	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
-	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
-	einfo "********************************************************"
+	echo
 	eerror "Some parts of Sun's JDK require XFree86 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
-	einfo "********************************************************"
-	echo
-
-	einfo "******************************************************"
-	einfo " After installing ${P} this"
-	einfo " was set as the default JVM to run."
-	einfo " When finished please run the following so your"
-	einfo " enviroment gets updated."
-	eerror "    /usr/sbin/env-update && source /etc/profile"
-	einfo " Or use java-config program to set your preferred VM"
-	einfo "******************************************************"
 
 	ebeep 5
 	epause 8

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.17 2004/07/14 12:22:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.18 2004/09/29 20:59:21 axxo Exp $
 
-inherit java nsplugins gcc
+inherit java gcc
 
 S=${WORKDIR}/j2re1.3.1
 DESCRIPTION="Blackdown Java Runtime Environment 1.3.1"
@@ -12,7 +12,7 @@ SRC_URI="ppc? ( http://distro.ibiblio.org/pub/Linux/distributions/yellowdog/soft
 LICENSE="sun-bcla-java-vm"
 SLOT="0"
 KEYWORDS="ppc"
-IUSE=""
+IUSE="mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
 
-src_unpack () {
+src_unpack() {
 	for a in ${A}; do
 		if [[ ${a} == *.bin ]]; then
 			echo ">>> Unpacking ${a}..."
@@ -40,7 +40,7 @@ src_unpack () {
 	fi
 }
 
-src_install () {
+src_install() {
 	typeset platform
 
 	dodir /opt/${P}
@@ -52,31 +52,16 @@ src_install () {
 	dohtml README.html
 
 	# Install mozilla plugin
-	case ${ARCH} in
-		amd64|x86) platform="i386" ;;
-		ppc) platform="ppc" ;;
-		sparc*) platform="sparc" ;;
-	esac
-	inst_plugin /opt/${P}/plugin/${platform}/mozilla/javaplugin_oji.so
+	if use mozilla; then
+		case ${ARCH} in
+			amd64|x86) platform="i386" ;;
+			ppc) platform="ppc" ;;
+			sparc*) platform="sparc" ;;
+		esac
+		install_mozilla_plugin /opt/${P}/plugin/${platform}/mozilla/javaplugin_oji.so
+	fi
 
 	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/lib/font.properties
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
-}
-
-pkg_postinst () {
-	# Only install the JRE as the system default if there's no JDK 
-	# installed. Installing a JRE over an existing JDK will result
-	# in major breakage, see #9289.
-	if [ ! -f "${JAVAC}" ] ; then
-		ewarn "Found no JDK, setting ${P} as default system VM"
-		java_pkg_postinst
-	fi
-}
-
-pkg_prerm() {
-	if java-config -J | grep -q ${P} ; then
-		ewarn "It appears you are removing your default system VM!"
-		ewarn "Please run java-config -L then java-config -S to set a new system VM!"
-	fi
 }

@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.05.ebuild,v 1.3 2004/09/06 18:44:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.05.ebuild,v 1.4 2004/09/29 20:59:31 axxo Exp $
 
-IUSE="doc gnome kde mozilla jce"
-
-inherit java nsplugins eutils
+inherit java eutils
 
 MY_PV=${PV%.*}_${PV##*.}
 MY_P=j2sdk${MY_PV}
@@ -22,6 +20,7 @@ SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa"
 RESTRICT="fetch"
+IUSE="doc gnome kde mozilla jce"
 
 DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed
@@ -59,13 +58,11 @@ pkg_nofetch() {
 
 src_unpack() {
 	if [ ! -r ${DISTDIR}/${At} ]; then
-		eerror "cannot read ${MY_PV}.bin. Please check the permission and try again."
-		die
+		die "cannot read ${MY_PV}.bin. Please check the permission and try again."
 	fi
 	if use jce; then
 		if [ ! -r ${DISTDIR}/${jce_policy} ]; then
-			eerror "cannot read ${jce_policy}. Please check the permission and try again."
-			die
+			die "cannot read ${jce_policy}. Please check the permission and try again."
 		fi
 	fi
 	#Search for the ELF Header
@@ -90,7 +87,7 @@ src_unpack() {
 	fi
 }
 
-src_install () {
+src_install() {
 	local dirs="bin include jre lib man"
 	dodir /opt/${P}
 
@@ -117,14 +114,14 @@ src_install () {
 		dosym /opt/${P}/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/jre/lib/security/
 	fi
 
-	local plugin_dir="ns610"
-	if has_version '>=gcc-3.2*' ; then
-		plugin_dir="ns610-gcc32"
+	if use mozilla; then
+		local plugin_dir="ns610"
+		if has_version '>=gcc-3.2*' ; then
+			plugin_dir="ns610-gcc32"
+		fi
+
+		install_mozilla_plugin /opt/${P}/jre/plugin/i386/${plugin_dir}/libjavaplugin_oji.so
 	fi
-	if use mozilla ; then
-		install_mozilla_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so
-	fi
-	inst_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 
 	# create dir for system preferences
 	dodir /opt/${P}/.systemPrefs
@@ -154,7 +151,7 @@ src_install () {
 	#      is a directory and will not be gzipped ;)
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	# Create files used as storage for system preferences.
 	touch /opt/${P}/.systemPrefs/.system.lock
 	chmod 644 /opt/${P}/.systemPrefs/.system.lock
@@ -166,13 +163,11 @@ pkg_postinst () {
 
 	#Show info about netscape
 	if has_version '>=netscape-navigator-4.79-r1' || has_version '>=netscape-communicator-4.79-r1' ; then
-		einfo "********************************************************"
+		echo
 		einfo "If you want to install the plugin for Netscape 4.x, type"
 		einfo
 		einfo "   cd /usr/lib/nsbrowser/plugins/"
 		einfo "   ln -sf /opt/${P}/jre/plugin/i386/ns4/libjavaplugin.so"
-		einfo "********************************************************"
-		echo
 	fi
 
 	# if chpax is on the target system, set the appropriate PaX flags
@@ -180,6 +175,7 @@ pkg_postinst () {
 	# but may confuse things like AV scanners and automatic tripwire
 	if has_version "sys-apps/chpax"
 	then
+		echo
 		einfo "setting up conservative PaX flags for jar, javac and java"
 
 		for paxkills in "jar" "javac" "java"
@@ -197,22 +193,9 @@ pkg_postinst () {
 		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
 	fi
 
-	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
-	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
-	einfo "*********************************************************"
+	echo
 	eerror "Some parts of Sun's JDK require XFree86 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
-	einfo "*********************************************************"
-	echo
-
-	einfo "******************************************************"
-	einfo " After installing ${P} this"
-	einfo " was set as the default JVM to run."
-	einfo " When finished please run the following so your"
-	einfo " enviroment gets updated."
-	eerror "    /usr/sbin/env-update && source /etc/profile"
-	einfo " Or use java-config program to set your preferred VM"
-	einfo "******************************************************"
 
 	ebeep 5
 	epause 8

@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_rc1.ebuild,v 1.3 2004/09/06 18:44:20 ciaranm Exp $
-
-IUSE="doc gnome kde mozilla jce"
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_rc1.ebuild,v 1.4 2004/09/29 20:59:31 axxo Exp $
 
 inherit java eutils
 
@@ -26,6 +24,7 @@ SLOT="1.5"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="~x86 ~amd64"
 RESTRICT="fetch"
+IUSE="doc gnome kde mozilla jce"
 
 #
 DEPEND=">=dev-java/java-config-1.2
@@ -66,13 +65,11 @@ pkg_nofetch() {
 
 src_unpack() {
 	if [ ! -r ${DISTDIR}/${At} ]; then
-		eerror "cannot read ${At}. Please check the permission and try again."
-		die
+		die "cannot read ${At}. Please check the permission and try again."
 	fi
 	if use jce; then
 		if [ ! -r ${DISTDIR}/${jcefile} ]; then
-			eerror "cannot read ${jcefile}. Please check the permission and try again."
-			die
+			die "cannot read ${jcefile}. Please check the permission and try again."
 		fi
 	fi
 
@@ -102,7 +99,7 @@ src_unpack() {
 	${S}/bin/java -client -Xshare:dump
 }
 
-src_install () {
+src_install() {
 	local dirs="bin include jre lib man"
 	dodir /opt/${P}
 
@@ -128,13 +125,12 @@ src_install () {
 		dosym /opt/${P}/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/jre/lib/security/
 	fi
 
+	if use mozilla; then
+		local plugin_dir="ns7-gcc29"
+		if has_version '>=gcc-3*' ; then
+			plugin_dir="ns7"
+		fi
 
-	local plugin_dir="ns7-gcc29"
-	if has_version '>=gcc-3*' ; then
-		plugin_dir="ns7"
-	fi
-
-	if use mozilla ; then
 		if use x86 ; then
 			install_mozilla_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 		else
@@ -175,7 +171,7 @@ src_install () {
 	#      is a directory and will not be gzipped ;)
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	# Create files used as storage for system preferences.
 	PREFS_LOCATION=/opt/${P}/jre
 	mkdir -p ${PREFS_LOCATION}/.systemPrefs
@@ -193,13 +189,11 @@ pkg_postinst () {
 
 	#Show info about netscape
 	if has_version '>=netscape-navigator-4.79-r1' || has_version '>=netscape-communicator-4.79-r1' ; then
-		einfo "********************************************************"
+		echo
 		einfo "If you want to install the plugin for Netscape 4.x, type"
 		einfo
 		einfo "   cd /usr/lib/nsbrowser/plugins/"
 		einfo "   ln -sf /opt/${P}/jre/plugin/i386/ns4/libjavaplugin.so"
-		einfo "********************************************************"
-		echo
 	fi
 
 	# if chpax is on the target system, set the appropriate PaX flags
@@ -207,6 +201,7 @@ pkg_postinst () {
 	# but may confuse things like AV scanners and automatic tripwire
 	if has_version "sys-apps/chpax"
 	then
+		echo
 		einfo "setting up conservative PaX flags for jar, javac and java"
 
 		for paxkills in "jar" "javac" "java"
@@ -224,30 +219,15 @@ pkg_postinst () {
 		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
 	fi
 
-	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
-	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
-	einfo "*********************************************************"
+	echo
 	eerror "Some parts of Sun's JDK require XFree86 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
-	einfo "*********************************************************"
+
 	echo
-
-	einfo "*********************************************************"
-	einfo " After installing ${P} this"
-	einfo " was set as the default JVM to run."
-	einfo " When finished please run the following so your"
-	einfo " enviroment gets updated."
-	eerror "    /usr/sbin/env-update && source /etc/profile"
-	einfo " Or use java-config program to set your preferred VM"
-	einfo "*********************************************************"
-
-	# warn about a default setting in Java 1.5.0 rc
-	einfo "*********************************************************"
 	einfo " Be careful: ${P}'s Java compiler uses"
 	einfo " '-source 1.5' as default. Some keywords such as 'enum'"
 	einfo " are not valid identifiers any more in that mode,"
 	einfo " which can cause incompatibility with certain sources."
-	einfo "*********************************************************"
 
 	ebeep 5
 	epause 8

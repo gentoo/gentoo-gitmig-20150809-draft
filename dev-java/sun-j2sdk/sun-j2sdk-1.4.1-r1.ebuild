@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.13 2004/07/28 10:58:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.14 2004/09/29 21:01:53 axxo Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -8,9 +8,7 @@
 # Based on http://www.linuxfromscratch.org/~tushar/hints/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
 
-IUSE="nptl doc"
-
-inherit java nsplugins
+inherit java
 
 JAVA_PATCHES="disable-sanity-check
 	fix-intl-files
@@ -50,6 +48,8 @@ PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.1* )"
 PROVIDE="virtual/jre-1.4.1
 	virtual/jdk-1.4.1
 	virtual/java-scheme-2"
+
+IUSE="nptl doc mozilla"
 
 pkg_nofetch() {
 	einfo "Please download"
@@ -152,7 +152,7 @@ src_install () {
 
 	chown -R root:root ${D}/opt/${P}
 
-	inst_plugin /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so
+	use mozilla && install_mozilla_plugin /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so
 	set_java_env ${FILESDIR}/${VMHANDLE}
 }
 

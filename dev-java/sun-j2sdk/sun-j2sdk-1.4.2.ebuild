@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.12 2004/09/21 14:08:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.13 2004/09/29 21:01:53 axxo Exp $
 
-IUSE="nptl doc"
-
-inherit java nsplugins
+inherit java
 
 JAVA_PATCHES="
 	remove-fixed-paths
@@ -27,6 +25,7 @@ HOMEPAGE="http://wwws.sun.com/software/java2/download.html"
 SLOT="0"
 KEYWORDS="x86 -ppc -alpha -sparc"
 LICENSE="sun-csl"
+IUSE="nptl doc mozilla"
 
 RDEPEND="virtual/libc
 	virtual/x11
@@ -149,7 +148,7 @@ src_install () {
 
 	chown -R root:root ${D}/opt/${P}
 
-	inst_plugin /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so
+	use mozilla && install_mozilla_plugin /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so
 	set_java_env ${FILESDIR}/${VMHANDLE}
 }
 

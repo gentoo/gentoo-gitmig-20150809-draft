@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.2 2004/08/04 15:25:57 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.3 2004/09/29 20:59:12 axxo Exp $
 
-inherit java nsplugins
+inherit java
 
 S="${WORKDIR}/j2sdk${PV}"
 DESCRIPTION="IBM Java Development Kit ${PV}"
@@ -11,14 +11,13 @@ SRC_URI="ppc?(mirror://gentoo/IBMJava2-JRE-142.ppc.tgz)
 	x86?(mirror://gentoo/IBMJava2-JRE-142.tgz)"
 PROVIDE="virtual/jre-1.4.2
 	virtual/java-scheme-2"
-IUSE=""
+IUSE="mozilla"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
 KEYWORDS="ppc ~x86 ppc64"
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5"
 RDEPEND="${DEPEND}"
-
 
 if use ppc; then
 	S=${WORKDIR}/IBMJava2-ppc-142
@@ -33,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	# Copy all the files to the designated directory 
+	# Copy all the files to the designated directory
 	dodir /opt/${P}
 	cp -dpR ${S}/jre/* ${D}/opt/${P}/
 
@@ -48,16 +47,13 @@ src_install() {
 		< ${FILESDIR}/${P} \
 		> ${D}/etc/env.d/java/20${P} \
 		|| die "unable to install environment file"
-}
 
-pkg_postinst(){
-	inst_plugin /opt/${P}/bin/javaplugin.so
-	true
-}
-
-pkg_prerm() {
-	if [ ! -z "$(java-config -J | grep ${P})" ] ; then
-		ewarn "It appears you are removing your default system VM!"
-		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
+	if use mozilla; then
+		local plugin="libjavaplugin_oji.so"
+		if has_version '>=gcc-3*' ; then
+			plugin="libjavaplugin_ojigcc3.so"
+		fi
+		install_mozilla_plugin /opt/${P}/bin/${plugin}
 	fi
+
 }

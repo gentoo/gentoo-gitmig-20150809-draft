@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r2.ebuild,v 1.3 2004/07/02 04:19:42 eradicator Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r2.ebuild,v 1.4 2004/09/29 20:59:24 axxo Exp $
 
 inherit java fixheadtails
 
@@ -24,6 +22,7 @@ PROVIDE="virtual/jre-${PV}
 LICENSE="compaq-sdla"
 SLOT="1.3"
 KEYWORDS="-* alpha"
+IUSE="doc"
 
 src_unpack() {
 	rpm2targz ${DISTDIR}/jdk-${PV}-1-linux-alpha.rpm
@@ -44,9 +43,4 @@ src_install () {
 	cp -a demo src.jar ${D}/opt/${P}/share
 
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
-}
-
-pkg_postinst () {
-	# Set as default VM if none exists
-	java_pkg_postinst
 }

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.16 2004/09/21 13:58:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.17 2004/09/29 20:59:28 axxo Exp $
 
-inherit java nsplugins
+inherit java
 
 S=${WORKDIR}/j2sdk1.3.1
 DESCRIPTION="Blackdown Java Development Kit 1.3.1"
@@ -14,7 +14,7 @@ SRC_URI="x86? ( mirror://blackdown.org/JDK-${PV}/i386/FCS/j2sdk-${PV}-FCS-linux-
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
 KEYWORDS="x86 ~ppc sparc"
-IUSE="doc"
+IUSE="doc mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
@@ -23,7 +23,7 @@ PROVIDE="virtual/jdk-1.3.1
 	virtual/jre-1.3.1
 	virtual/java-scheme-2"
 
-src_unpack () {
+src_unpack() {
 	if use ppc || use sparc ; then
 		tail -n +400 ${DISTDIR}/${A} | tar jxpf -
 	else
@@ -37,7 +37,7 @@ src_unpack () {
 }
 
 
-src_install () {
+src_install() {
 
 	dodir /opt/${P}
 
@@ -49,16 +49,17 @@ src_install () {
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
 
-	# Install ns plugin
-	if [ "${ARCH}" == "x86" ] ; then
-		PLATFORM="i386"
-	elif [ "${ARCH}" == "ppc" ] ; then
-		PLATFORM="ppc"
-	elif [ "${ARCH}" == "sparc" ] ; then
-		PLATFORM="sparc"
-	fi
+	if use mozilla; then
+		if [ "${ARCH}" == "x86" ] ; then
+			PLATFORM="i386"
+		elif [ "${ARCH}" == "ppc" ] ; then
+			PLATFORM="ppc"
+		elif [ "${ARCH}" == "sparc" ] ; then
+			PLATFORM="sparc"
+		fi
 
-	inst_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
+		install_mozilla_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
+	fi
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
@@ -72,7 +73,13 @@ src_install () {
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	# Set as default system VM if none exists
 	java_pkg_postinst
+
+	if use mozilla; then
+		einfo "The java mozilla plugin supplied by this package does not"
+		einfo "work with newer version mozilla/firefox."
+		einfo "You need >=${PN}-1.4 for them."
+	fi
 }

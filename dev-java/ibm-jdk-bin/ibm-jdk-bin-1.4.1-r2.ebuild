@@ -1,18 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1-r2.ebuild,v 1.8 2004/09/06 18:12:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1-r2.ebuild,v 1.9 2004/09/29 20:59:27 axxo Exp $
 
-IUSE="X doc javacomm"
-
-inherit java nsplugins eutils
-
-if use ppc; then
-	S="${WORKDIR}/IBMJava2-ppc-141"
-elif use ppc64; then
-	S="${WORKDIR}/IBMJava2-ppc64-141"
-else
-	S="${WORKDIR}/IBMJava2-141"
-fi
+inherit java eutils
 
 DESCRIPTION="IBM Java Development Kit ${PV}"
 SRC_URI="ppc? ( mirror://gentoo/IBMJava2-SDK-141.ppc.tgz )
@@ -34,8 +24,16 @@ DEPEND="virtual/libc
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )
 	X? ( virtual/x11 )"
 RDEPEND=" !ppc64? sys-libs/lib-compat"
+IUSE="X doc javacomm mozilla"
 
-# No compilation needed!
+if use ppc; then
+	S="${WORKDIR}/IBMJava2-ppc-141"
+elif use ppc64; then
+	S="${WORKDIR}/IBMJava2-ppc64-141"
+else
+	S="${WORKDIR}/IBMJava2-141"
+fi
+
 src_compile() { :; }
 
 src_install() {
@@ -50,11 +48,15 @@ src_install() {
 	if use ppc; then
 		dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc.so
 		dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc_g.so
-		insinto ${D}/etc
+		insinto /etc
 		doins ${FILESDIR}/cpuinfo
-	else
-		# No java-plugin on ppc
-		inst_plugin /opt/${P}/jre/bin/libjavaplugin_oji.so
+	fi
+	if use mozilla && ! use ppc; then
+		local plugin="libjavaplugin_oji.so"
+		if has_version '>=gcc-3*' ; then
+			plugin="libjavaplugin_ojigcc3.so"
+		fi
+		install_mozilla_plugin /opt/${P}/jre/bin/${plugin}
 	fi
 
 	dohtml -a html,htm,HTML -r docs
@@ -67,22 +69,12 @@ src_install() {
 pkg_postinst() {
 	java_pkg_postinst
 	if ! use X; then
-		einfo "********************************************************"
+		echo
 		eerror "You're not using X so its possible that you dont have"
 		eerror "a X server installed, please read the following warning: "
 		eerror "Some parts of IBM JDK require XFree86 to be installed."
 		eerror "Be careful which Java libraries you attempt to use."
-		einfo "********************************************************"
-		echo
 	fi
-
-	einfo " After installing ${P} this"
-	einfo " was set as the default JVM to run."
-	einfo " When finished please run the following so your"
-	einfo " enviroment gets updated."
-	eerror "    /usr/sbin/env-update && source /etc/profile"
-	einfo " Or use java-config program to set your preferred VM"
-	einfo "******************************************************"
 
 	ebeep 5
 	epause 8

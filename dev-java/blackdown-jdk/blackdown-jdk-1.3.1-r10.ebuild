@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r10.ebuild,v 1.12 2004/07/14 01:44:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r10.ebuild,v 1.13 2004/09/29 20:59:28 axxo Exp $
 
-inherit java nsplugins gcc
+inherit java gcc
 
 S=${WORKDIR}/j2sdk1.3.1
 DESCRIPTION="Blackdown Java Development Kit 1.3.1"
@@ -12,7 +12,7 @@ SRC_URI="ppc? ( http://distro.ibiblio.org/pub/Linux/distributions/yellowdog/soft
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
 KEYWORDS="ppc"
-IUSE="doc"
+IUSE="doc mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
@@ -52,15 +52,17 @@ src_install() {
 	dohtml README.html
 
 	# Install ns plugin
-	if [ "${ARCH}" == "x86" ] ; then
-		PLATFORM="i386"
-	elif [ "${ARCH}" == "ppc" ] ; then
-		PLATFORM="ppc"
-	elif [ "${ARCH}" == "sparc" ] ; then
-		PLATFORM="sparc"
-	fi
+	if use mozilla; then
+		if [ "${ARCH}" == "x86" ] ; then
+			PLATFORM="i386"
+		elif [ "${ARCH}" == "ppc" ] ; then
+			PLATFORM="ppc"
+		elif [ "${ARCH}" == "sparc" ] ; then
+			PLATFORM="sparc"
+		fi
 
-	inst_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
+		install_mozilla_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/libjavaplugin_oji.so
+	fi
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
@@ -75,9 +77,4 @@ src_install() {
 
 	# install env into /etc/env.d
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
-}
-
-pkg_postinst () {
-	# Set as default system VM if none exists
-	java_pkg_postinst
 }

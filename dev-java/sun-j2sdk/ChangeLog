@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-j2sdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.31 2004/09/21 14:08:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.32 2004/09/29 21:01:53 axxo Exp $
+
+  29 Sep 2004; Thomas Matthijs <axxo@gentoo.org> sun-j2sdk-1.4.1-r1.ebuild,
+  sun-j2sdk-1.4.2.ebuild:
+  Cleaned up plugin instalation, Moved some messages to the eclass, see #22395
+  for more information
 
   21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> sun-j2sdk-1.4.2.ebuild:
   x86

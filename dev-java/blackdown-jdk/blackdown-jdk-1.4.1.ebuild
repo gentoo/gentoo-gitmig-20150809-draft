@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.20 2004/09/21 08:14:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.21 2004/09/29 20:59:28 axxo Exp $
 
 
-inherit java nsplugins
+inherit java
 
 JREV="01"
 
@@ -21,7 +21,7 @@ CHPAX_CONSERVATIVE_FLAGS="pemsv"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.4.1"
 KEYWORDS="x86 -ppc sparc amd64"
-IUSE="doc"
+IUSE="doc mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.6
@@ -48,7 +48,7 @@ get_offset() {
 	eval echo $offset
 }
 
-src_unpack () {
+src_unpack() {
 	local offset="`get_offset ${DISTDIR}/${A}`"
 
 	if [ -z "${offset}" ] ; then
@@ -61,7 +61,7 @@ src_unpack () {
 }
 
 
-src_install () {
+src_install() {
 	local PLATFORM=
 
 	dodir /opt/${P}
@@ -74,20 +74,21 @@ src_install () {
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
 
-	# Install mozilla plugin
-	if [ "${ARCH}" = "x86" ] ; then
-		PLATFORM="i386"
-	fi
+	if use mozilla; then
+		if [ "${ARCH}" = "x86" ] ; then
+			PLATFORM="i386"
+		fi
 
-	if [ "${ARCH}" = "amd64" ] ; then
-		PLATFORM="i386"
-	fi
+		if [ "${ARCH}" = "amd64" ] ; then
+			PLATFORM="i386"
+		fi
 
-	if [ "${ARCH}" = "sparc" ] ; then
-		PLATFORM="sparc"
-	fi
+		if [ "${ARCH}" = "sparc" ] ; then
+			PLATFORM="sparc"
+		fi
 
-	inst_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
+		install_mozilla_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
+	fi
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
@@ -104,7 +105,7 @@ src_install () {
 	fi
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	# Set as default system VM if none exists
 	java_pkg_postinst
 
@@ -113,6 +114,7 @@ pkg_postinst () {
 	# but may confuse things like AV scanners and automatic tripwire
 	if has_version "sys-apps/chpax"
 	then
+		echo
 		einfo "setting up conservative PaX flags for jar and javac"
 
 		for paxkills in "jar" "javac" "java"

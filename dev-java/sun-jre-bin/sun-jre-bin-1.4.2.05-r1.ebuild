@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.05-r1.ebuild,v 1.1 2004/09/10 21:43:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.05-r1.ebuild,v 1.2 2004/09/29 20:59:00 axxo Exp $
 
-IUSE="gnome kde mozilla"
-
-inherit java nsplugins eutils
+inherit java eutils
 
 At="j2re-1_4_2_05-linux-i586.bin"
 S="${WORKDIR}/j2re1.4.2_05"
@@ -15,6 +13,7 @@ SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa"
 RESTRICT="fetch"
+IUSE="gnome kde mozilla"
 
 DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed"
@@ -77,14 +76,13 @@ src_install () {
 	dodoc CHANGES COPYRIGHT README LICENSE THIRDPARTYLICENSEREADME.txt
 	dohtml Welcome.html ControlPanel.html
 
-	local plugin_dir="ns610"
-	if has_version '>=gcc-3.2*' ; then
-		plugin_dir="ns610-gcc32"
-	fi
 	if use mozilla ; then
+		local plugin_dir="ns610"
+		if has_version '>=gcc-3.2*' ; then
+			plugin_dir="ns610-gcc32"
+		fi
 		install_mozilla_plugin /opt/${P}/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 	fi
-	inst_plugin /opt/${P}/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 
 	# create dir for system preferences
 	dodir /opt/${P}/.systemPrefs
@@ -121,15 +119,15 @@ pkg_postinst () {
 	touch /opt/${P}/.systemPrefs/.systemRootModFile
 	chmod 644 /opt/${P}/.systemPrefs/.systemRootModFile
 
+	java_pkg_postinst
+
 	#Show info about netscape
 	if has_version '>=netscape-navigator-4.79-r1' || has_version '>=netscape-communicator-4.79-r1' ; then
-		einfo "********************************************************"
+		echo
 		einfo "If you want to install the plugin for Netscape 4.x, type"
 		einfo
 		einfo "   cd /usr/lib/nsbrowser/plugins/"
 		einfo "   ln -sf /opt/${P}/jre/plugin/i386/ns4/libjavaplugin.so"
-		einfo "********************************************************"
-		echo
 	fi
 
 	# if chpax is on the target system, set the appropriate PaX flags
@@ -137,6 +135,7 @@ pkg_postinst () {
 	# but may confuse things like AV scanners and automatic tripwire
 	if has_version "sys-apps/chpax"
 	then
+		echo
 		einfo "setting up conservative PaX flags for jar, javac and java"
 
 		for paxkills in "java"
@@ -154,36 +153,10 @@ pkg_postinst () {
 		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
 	fi
 
-	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
-	#comment found on the sun-jre 1.2.2 ebuild that he sent.
-	einfo "*********************************************************"
+	echo
 	eerror "Some parts of Sun's JDK require XFree86 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
-	einfo "*********************************************************"
-	echo
-
-	# Set as default VM if none exists
-	if [ ! -f "${JAVAC}" ] ; then
-		java_pkg_postinst
-
-		einfo "******************************************************"
-		einfo " After installing ${P} this"
-		einfo " was set as the default JVM to run."
-		einfo " When finished please run the following so your"
-		einfo " enviroment gets updated."
-		eerror "    /usr/sbin/env-update && source /etc/profile"
-		einfo " Or use java-config program to set your preferred VM"
-		einfo "******************************************************"
-	fi
 
 	ebeep 5
 	epause 8
-}
-
-pkg_prerm() {
-	if [ ! -z "$(java-config -J | grep ${P})" ] ; then
-		java-config -J
-		ewarn "It appears you are removing your default system VM!"
-		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
-	fi
 }

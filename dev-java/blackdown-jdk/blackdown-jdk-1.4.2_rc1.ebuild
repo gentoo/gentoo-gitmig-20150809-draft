@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.13 2004/07/14 01:44:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2_rc1.ebuild,v 1.14 2004/09/29 20:59:28 axxo Exp $
 
-IUSE="doc"
-
-inherit java nsplugins
+inherit java
 
 JREV=${PV#*_}
 JV=${PV%_*}
@@ -30,6 +28,8 @@ PROVIDE="virtual/jdk-1.4.2
 	virtual/jre-1.4.2
 	virtual/java-scheme-2"
 
+IUSE="doc mozilla"
+
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {
 	[ ! -f "$1" ] && return
@@ -44,7 +44,7 @@ get_offset() {
 	echo $offset
 }
 
-src_unpack () {
+src_unpack() {
 	local offset=$(get_offset ${DISTDIR}/${A})
 
 	if [ -z "${offset}" ] ; then
@@ -56,7 +56,7 @@ src_unpack () {
 }
 
 unpack_jars() {
-	# New to 1.4.2 
+	# New to 1.4.2
 	local PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/javaws/javaws.jar"
 	local JAVAHOME="${D}/opt/${P}"
 	local UNPACK_CMD=""
@@ -81,7 +81,7 @@ unpack_jars() {
 	rm -f "$UNPACK_CMD"
 }
 
-src_install () {
+src_install() {
 	typeset platform
 
 	dodir /opt/${P}
@@ -95,12 +95,15 @@ src_install () {
 	dohtml README.html
 
 	# Install mozilla plugin
-	case ${ARCH} in
-		amd64|x86) platform="i386" ;;
-		ppc) platform="ppc" ;;
-		sparc*) platform="sparc" ;;
-	esac
-	inst_plugin /opt/${P}/jre/plugin/${platform}/mozilla/javaplugin_oji.so
+	if use mozilla; then
+		case ${ARCH} in
+			amd64|x86) platform="i386" ;;
+			ppc) platform="ppc" ;;
+			sparc*) platform="sparc" ;;
+		esac
+
+		install_mozilla_plugin /opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
+	fi
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
@@ -118,7 +121,7 @@ src_install () {
 	unpack_jars
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	# Set as default system VM if none exists
 	java_pkg_postinst
 
@@ -127,6 +130,7 @@ pkg_postinst () {
 	# but may confuse things like AV scanners and automatic tripwire
 	if has_version "sys-apps/chpax"
 	then
+		echo
 		einfo "setting up conservative PaX flags for jar and javac"
 
 		for paxkills in "jar" "javac" "java"

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.15 2004/07/30 23:36:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.16 2004/09/29 20:59:21 axxo Exp $
 
-inherit java nsplugins gcc
+inherit java gcc
 
 S=${WORKDIR}/j2re1.4.1
 DESCRIPTION="Blackdown Java Runtime Environment 1.4.1"
@@ -32,7 +32,7 @@ PROVIDE="virtual/jre-1.4.1
 SLOT="0"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 sparc amd64"
-IUSE=""
+IUSE="mozilla"
 
 src_unpack () {
 	typeset a want_gcc_ver
@@ -69,12 +69,14 @@ src_install () {
 	dohtml README.html
 
 	# Install mozilla plugin
-	case ${ARCH} in
-		amd64|x86) platform="i386" ;;
-		ppc) platform="ppc" ;;
-		sparc*) platform="sparc" ;;
-	esac
-	inst_plugin /opt/${P}/plugin/${platform}/mozilla/javaplugin_oji.so
+	if use mozilla; then
+		case ${ARCH} in
+			amd64|x86) platform="i386" ;;
+			ppc) platform="ppc" ;;
+			sparc*) platform="sparc" ;;
+		esac
+		install_mozilla_plugin /opt/${P}/plugin/${platform}/mozilla/javaplugin_oji.so
+	fi
 
 	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/lib/font.properties
 
@@ -85,22 +87,5 @@ src_install () {
 	then
 		sed -i -e 's/\/\//\/sparc\//g' \
 			${D}/etc/env.d/java/20blackdown-jre-1.4.1
-	fi
-}
-
-pkg_postinst () {
-	# Only install the JRE as the system default if there's no JDK 
-	# installed. Installing a JRE over an existing JDK will result
-	# in major breakage, see #9289.
-	if [ ! -f "${JAVAC}" ] ; then
-		ewarn "Found no JDK, setting ${P} as default system VM"
-		java_pkg_postinst
-	fi
-}
-
-pkg_postrm() {
-	if java-config -J | grep -q ${P} ; then
-		ewarn "It appears you are removing your default system VM!"
-		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
 	fi
 }
