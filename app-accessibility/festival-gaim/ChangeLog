@@ -1,10 +1,10 @@
 # ChangeLog for app-accessibility/festival-gaim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.11 2004/07/28 06:06:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.12 2004/07/28 06:07:40 eradicator Exp $
 
   27 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   festival-gaim-0.78.ebuild:
-  Removing nomirror since portage is spart now.
+  Removing nomirror since portage is smart now.
 
   07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   festival-gaim-0.78.ebuild:
