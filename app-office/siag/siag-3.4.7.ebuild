@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.4.7.ebuild,v 1.2 2001/04/28 08:04:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.4.7.ebuild,v 1.3 2001/04/29 18:56:12 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A free Office package for Linux"
@@ -48,6 +48,7 @@ src_compile() {
 src_install () {
 
     try make DESTDIR=${D} install
-
+    insinto /etc/env.d
+    doins ${FILESDIR}/10siag
 }
 
