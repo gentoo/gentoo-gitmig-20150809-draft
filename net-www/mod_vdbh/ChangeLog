@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mod_vdbh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/ChangeLog,v 1.7 2004/07/14 06:15:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/ChangeLog,v 1.8 2004/07/25 22:16:40 zul Exp $
+
+*mod_vdbh-1.0.3 (27 Jul 2004)
+
+  27 Jul 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  mod_vdbh-1.0.3.ebuild:
+  Version bump, added metadata.xml.
+  Closes #58078.
 
   13 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   mod_vdbh-1.0.2-r1.ebuild, mod_vdbh-1.0.2.ebuild:
