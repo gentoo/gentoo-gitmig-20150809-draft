@@ -1,6 +1,4 @@
 #!/sbin/runscript
-#This was heavily copied from the generic-init.d script which comes with the
-#binary version of firebird-ss
 
 depend() {
 	need net
