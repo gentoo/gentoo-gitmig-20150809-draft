@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/mplus-fonts-2.2.2.ebuild,v 1.5 2004/10/20 14:54:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/mplus-fonts-2.2.2.ebuild,v 1.6 2005/03/14 09:43:43 nigoro Exp $
 
 IUSE="X"
 

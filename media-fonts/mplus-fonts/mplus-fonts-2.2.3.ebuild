@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/mplus-fonts-2.2.3.ebuild,v 1.6 2004/12/27 18:12:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/mplus-fonts-2.2.3.ebuild,v 1.7 2005/03/14 09:43:43 nigoro Exp $
 
 IUSE="X"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/5030/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 alpha ppc sparc hppa ~mips ~amd64 ia64 ~ppc64"
+KEYWORDS="x86 alpha ppc sparc hppa ~mips ~amd64 ia64 ppc64"
 
 DEPEND="virtual/x11
 	dev-lang/perl"
