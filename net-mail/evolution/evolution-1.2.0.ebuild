@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.1.90.ebuild,v 1.3 2002/11/10 21:06:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.0.ebuild,v 1.1 2002/11/16 21:05:47 azarah Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
 #provide Xmake and Xemake
 
-inherit gnome.org virtualx libtool
+inherit eutils gnome.org virtualx libtool
 
 DB3="db-3.1.17"
 S="${WORKDIR}/${P}"
@@ -41,7 +41,7 @@ RDEPEND="app-text/scrollkeeper
 	ldap?    ( >=net-nds/openldap-2.0 )
 	mozilla? ( >=net-www/mozilla-0.9.9 )
 	pda?     ( >=gnome-extra/gnome-pilot-0.1.61-r2 )
-	spell?   ( >=app-text/gnome-spell-0.4.1-r2 )"
+	spell?   ( >=app-text/gnome-spell-0.5 )"
 #	ssl?     ( mozilla? ( >=net-www/mozilla-0.9.9 ) )
 #	ssl?     ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
 # This is how the deps should be, but portage cannot handle it
@@ -59,10 +59,10 @@ src_unpack() {
 	
 	cd ${S};
 	# Mandrake patches
-	patch -p1 < ${FILESDIR}/${P}-kde.patch || die
-	patch -p1 < ${FILESDIR}/${P}-scrollkeeper.patch || die
-	patch -p1 < ${FILESDIR}/${P}-subversion.patch || die
-	patch -p1 < ${FILESDIR}/${P}-utf8.patch || die
+	epatch ${FILESDIR}/${PN}-1.1.90-kde.patch
+	epatch ${FILESDIR}/${PN}-1.1.90-scrollkeeper.patch
+	epatch ${FILESDIR}/${PN}-1.1.90-subversion.patch
+	epatch ${FILESDIR}/${PN}-1.1.90-utf8.patch
 	
 	# libtoolize to fix not all libs installing, and buggy .la files.
 	# also add the gnome-pilot.m4 to the macros directory to fix
