@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.62 2004/12/27 14:56:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.63 2004/12/29 02:14:27 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Guy Martin <gmsoft@gentoo.org> librsvg-2.8.1.ebuild:
   Stable on hppa.
@@ -24,7 +27,7 @@
   update croco dep (fix in older versions)
   add gnome USE for gnome-vfs
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> librsvg-2.6.5.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> librsvg-2.6.5.ebuild:
   Stable on alpha.
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> librsvg-2.6.5.ebuild:
@@ -42,7 +45,7 @@
   11 Jul 2004; <spider@gentoo.org> librsvg-1.0.3.ebuild:
   IUSE to shut repoman up
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> librsvg-2.6.4.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> librsvg-2.6.4.ebuild:
   Stable on alpha.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> librsvg-1.0.3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.110 2004/12/24 00:08:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.111 2004/12/29 02:04:48 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gnome-panel-2.8.2.ebuild:
@@ -60,7 +63,7 @@
   Gnome 2.8 release
   Add eds USE for the clock calendar
 
-  26 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gnome-panel-2.6.2.ebuild:
+  26 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gnome-panel-2.6.2.ebuild:
   Stable on alpha.
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org> gnome-panel-2.6.2.ebuild:
@@ -84,7 +87,7 @@
   11 Jul 2004; <spider@gentoo.org> +gnome-panel-2.6.2.ebuild:
   versionbump, removed patch for paralell build since its in upstream now
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gnome-panel-2.6.0.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gnome-panel-2.6.0.ebuild:
   Stable on alpha.
 
   04 Jun 2004; Stephen P. Becker <geoman@gentoo.org> gnome-panel-2.6.0.ebuild:

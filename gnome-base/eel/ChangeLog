@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/eel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.88 2004/12/24 00:28:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.89 2004/12/29 01:59:20 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> eel-2.8.2.ebuild:
   Stable on alpha.
@@ -38,7 +41,7 @@
   Gnome 2.8 release
   Add desktop-file-utils dep for the mime db stuff
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> eel-2.6.2.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> eel-2.6.2.ebuild:
   Stable on alpha.
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org> eel-2.6.2.ebuild:
@@ -64,7 +67,7 @@
   11 Jul 2004; <spider@gentoo.org> +eel-2.6.2.ebuild:
   Versionbump
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> eel-2.6.0.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> eel-2.6.0.ebuild:
   Stable on alpha.
 
   03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> eel-2.6.0.ebuild:
