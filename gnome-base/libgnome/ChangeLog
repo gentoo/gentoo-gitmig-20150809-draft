@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.34 2003/09/23 15:50:38 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.35 2003/10/02 16:18:10 obz Exp $
+
+  03 Oct 2003; Mike Gardiner <obz@gentoo.org> libgnome-2.4.0.ebuild:
+  Returning gnome-vfs dependency to it's correct version of >=2, not 2.4 as I
+  previously stated
 
   23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> libgnome-2.2.3.ebuild:
   set ppc in keywords
