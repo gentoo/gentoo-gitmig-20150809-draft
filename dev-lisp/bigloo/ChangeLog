@@ -1,0 +1,15 @@
+# ChangeLog for dev-lisp/bigloo
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/ChangeLog,v 1.1 2002/04/11 13:21:56 karltk Exp $
+
+*bigloo-2.4c (11 Apr 2002)
+
+  11 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> bigloo-2.4c.ebuild files/digest-bigloo-2.4c:
+
+  Bigloo is a Scheme implementation devoted to one goal: enabling Scheme based
+  programming style where C(++) is usually required. Bigloo attempts to make 
+  Scheme practical by offering features usually presented by traditional 
+  programming languages but not offered by Scheme and functional programming.
+  Bigloo compiles Scheme modules. It delivers small and fast stand alone 
+  binary executables. Bigloo enables full connections between Scheme and C 
+  programs and between Scheme and Java programs. 
