@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.33 2004/01/31 12:33:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.34 2004/02/27 00:39:55 eradicator Exp $
+
+*freenet-0.5.2.1-r8 (26 Feb 2004)
+
+  26 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  freenet-0.5.2.1-r8.ebuild:
+  Updated URL for wgets in pkg_config() per bug #37445. Direct to stable because
+  it only changes a URL in pkg_config().
 
   31 Jan 2004; Martin Holzer <mholzer@gentoo.org> freenet-0.5.2.1-r3.ebuild,
   freenet-0.5.2.1-r5.ebuild, freenet-0.5.2.1-r6.ebuild,
