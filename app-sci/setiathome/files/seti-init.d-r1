@@ -11,7 +11,7 @@ checkconfig() {
 	then
 		einfo "Setting up SETI@home for the first time"
 		cd ${SETIATHOME_DIR}
-		setiathome -login
+		./setiathome -login
 	fi
 }
 
