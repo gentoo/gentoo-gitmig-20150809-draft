@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/kwanda
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kwanda/ChangeLog,v 1.1 2002/02/01 21:53:08 gbevin Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kwanda/ChangeLog,v 1.2 2002/08/31 19:05:00 danarmak Exp $
+
+  31 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Don't use the deprecated , use /usr/kde/3 instead.
 
 *kwanda-1.0 (1 Feb 2002)
 
