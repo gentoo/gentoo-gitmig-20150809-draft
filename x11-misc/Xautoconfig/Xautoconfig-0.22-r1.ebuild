@@ -1,7 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation & Pieter Van den Abeele
-# xorg.conf patch (C) 2004 by Matt Jarjoura <eklispe@gentoo.org>
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/Xautoconfig-0.22-r1.ebuild,v 1.1 2004/09/27 18:35:23 eklipse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/Xautoconfig-0.22-r1.ebuild,v 1.2 2004/09/28 19:28:59 pvdabeel Exp $
 
 inherit eutils
 
@@ -22,7 +21,7 @@ src_unpack() {
 	fi
 
 	unpack ${A}
-	
+
 	cd ${S}
 	epatch ${FILESDIR}/Xautoconfig.patch || die
 	epatch ${FILESDIR}/XF4text.h.diff || die
