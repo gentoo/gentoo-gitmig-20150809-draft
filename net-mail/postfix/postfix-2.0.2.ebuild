@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.2.ebuild,v 1.3 2003/01/19 23:47:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.2.ebuild,v 1.4 2003/01/19 23:59:53 raker Exp $
 
 TLS_P="pfixtls-0.8.13-2.0.1-0.9.7"
 IPV6_P="tls+ipv6-1.12-pf-2.0.2"
@@ -165,6 +165,19 @@ src_install () {
 			doins ${FILESDIR}/smtpd.conf
 		fi
 	fi
+	cd ${D}/etc/postfix
+	if [ "`use maildir`" ]; then
+		cp main.cf main.cf.premaildir
+		sed -e "s:#home_mailbox = Maildir/:home_mailbox = .maildir/:" \
+			< main.cf.premaildir > main.cf
+		rm main.cf.premaildir
+	elif [ "`use mbox`" ]; then
+		cp main.cf main.cf.prembox
+		sed -e "s:#mail_spool_directory = /var/spool/mail:mail_spool_directory = /var/spool/mail:" \
+			< main.cf.prembox > main.cf
+		rm main.cf.prembox
+	fi
+	cd ${S}
 }
 
 pkg_postinst() {
