@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.4 2004/05/30 15:18:39 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.5 2004/06/01 14:37:43 lv Exp $
 
-IUSE="nls pic build nptl erandom"
+IUSE="nls pic build nptl erandom hardened"
 
 inherit eutils flag-o-matic gcc
 
@@ -451,8 +451,8 @@ src_unpack() {
 	#use hardened || sed -e 's/^ASFLAGS-config.*/ASFLAGS-config =/' -i ${S}/config.make.in
 	# mandatory, if binutils supports relro and the kernel is pax/grsecurity enabled
 	# solves almost all segfaults building the locale files on grsecurity enabled kernels
-	# lv_* remaining (it could depend on bind-now enabled later)
-	use hardened && sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
+	use build && sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
+	use build || (use hardened && sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig)
 }
 
 setup_flags() {
@@ -519,8 +519,10 @@ src_compile() {
 		                       --enable-kernel=${MIN_NPTL_KV} \
 		                       --with-headers=${kernelheaders}"
 	else
-		myconf="${myconf} --with-tls --without-__thread \
+		myconf="${myconf} --without-__thread \
 		                  --enable-add-ons=linuxthreads"
+		use build && myconf="${myconf} --without-tls" || \
+					 myconf="${myconf} --with-tls"
 
 		# If we build for the build system we use the kernel headers from the target
 		# We also now set it without "build" as well, else it might use the
