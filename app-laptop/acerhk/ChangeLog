@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.2 2004/11/25 23:16:23 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.3 2004/12/06 12:34:50 sekretarz Exp $
+
+*acerhk-0.5.18-r1 (06 Dec 2004)
+
+  06 Dec 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/acerhk-0.5.18-redef-wireless.patch, +acerhk-0.5.18-r1.ebuild:
+  Added patch, which redefines the key_wireless and key_wireless2 keys, bug
+  #73398
 
 *acerhk-0.5.18 (26 Nov 2004)
 
