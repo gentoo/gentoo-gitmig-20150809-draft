@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <tantive@gentoo.org> (18 Sep 2002)
+# Initial release, masked for testing.
+=app-admin/openmosixview-1.2
+
 # <danarmak@gentoo.org> (17 Sep 2002)
 # masked for testing of the gcc3 patch I added for this new version
 =media-gfx/kimagemapeditor-0.9.5.1
