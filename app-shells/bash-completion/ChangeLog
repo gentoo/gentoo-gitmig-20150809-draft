@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.113 2005/03/30 16:10:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.114 2005/04/06 11:43:49 ka0ttic Exp $
+
+*bash-completion-20050121-r6 (06 Apr 2005)
+
+  06 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +files/20050121-find.diff,
+  -bash-completion-20050121-r5.ebuild, +bash-completion-20050121-r6.ebuild:
+  Revision bump; fix find completion so that it properly completes on
+  -?(i)wholename. Thanks to ciaranm for the patch.
 
   30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   bash-completion-20050121-r1.ebuild:

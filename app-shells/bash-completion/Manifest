@@ -1,15 +1,26 @@
-MD5 9a2fbf3133e8372c5201102c2255109b bash-completion-20050121-r5.ebuild 1971
-MD5 08ab540760a142dbc2af127d5f71be07 metadata.xml 1019
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 966a1b97060ac3708d22d088e3cf49d6 bash-completion-20041017-r3.ebuild 2621
-MD5 7eadb4a9978931e66ee2f76b71e436f7 ChangeLog 18701
+MD5 76a60166ba7f3931477cea544f053c2d bash-completion-20050121-r6.ebuild 2007
 MD5 cae88b00c732a6f8f49afeff5568d1d6 bash-completion-20050121-r1.ebuild 2695
-MD5 b6b11ab0684a97cfd9a9ba78f5fa9f9a files/20041017-rcs.diff 574
-MD5 35fc8232b26ca995623692bea7df2e5d files/digest-bash-completion-20050121-r1 152
+MD5 147ac0e26356b28cea96b191f4d7dae7 ChangeLog 19020
+MD5 08ab540760a142dbc2af127d5f71be07 metadata.xml 1019
 MD5 4406981db9a6c4f413d3f9f4b14eae91 files/gentoo-bashcomp-20050117-equery.diff 3329
-MD5 64ca0b5063d0874c6104a4b174cb0d40 files/20050121-gentoo.diff 1894
-MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r5 76
-MD5 d2cefd3e4878b47d485936839bdd39ab files/20050121-muttng.diff 2261
-MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
 MD5 9aca91cdcddd5454ebc4f17efe465d71 files/digest-bash-completion-20041017-r3 152
 MD5 be3ee952819bf05163462ba9bbc69f0a files/20050121-tar.diff 315
+MD5 b6b11ab0684a97cfd9a9ba78f5fa9f9a files/20041017-rcs.diff 574
+MD5 35fc8232b26ca995623692bea7df2e5d files/digest-bash-completion-20050121-r1 152
+MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r6 76
 MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
+MD5 d2cefd3e4878b47d485936839bdd39ab files/20050121-muttng.diff 2261
+MD5 64ca0b5063d0874c6104a4b174cb0d40 files/20050121-gentoo.diff 1894
+MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
+MD5 cd58de29e9c7c320649a05ce73ab4df1 files/20050121-find.diff 915
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCU8uKEZCkKN40op4RAvaRAKCoil7q0WZn/mGU4+3Vx0GezZ1HKwCghggu
+arcV5GnKZ6rv2/RWzyd8vgk=
+=8Oyh
+-----END PGP SIGNATURE-----
