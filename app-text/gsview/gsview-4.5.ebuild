@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.5.ebuild,v 1.4 2004/06/24 22:37:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.5.ebuild,v 1.5 2004/10/07 15:24:13 lanius Exp $
 
 MY_PV="${PV/.}"
 DESCRIPTION="gsView PostScript and PDF viewer"
@@ -13,7 +13,7 @@ LICENSE="Aladdin"
 KEYWORDS="x86"
 
 RDEPEND="=x11-libs/gtk+-1.2*
-	app-text/ghostscript-afpl"
+	virtual/ghostscript"
 
 src_compile() {
 	## copy Unix makefile
