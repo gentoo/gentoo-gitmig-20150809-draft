@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.9 2002/10/24 19:45:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.10 2002/11/05 05:10:29 raker Exp $
 
 *pwlib-1.3.11 (24 Oct 2002)
+
+  04 Oct 2002; Nick Hadaway <raker@gentoo.org> pwlib-1.3.11.ebuild :
+  Added dependancy on dev-libs/expat.  See bug #9650
 
   24 Oct 2002; Nick Hadaway <raker@gentoo.org> pwlib-1.3.11.ebuild,
   files/digest-pwlib-1.3.11 :
