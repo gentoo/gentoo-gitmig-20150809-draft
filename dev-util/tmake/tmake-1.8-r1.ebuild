@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-1.8.ebuild,v 1.1 2002/01/08 23:12:19 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-1.8-r1.ebuild,v 1.1 2002/02/28 22:50:14 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Cross platform Makefile tool"
@@ -19,6 +19,7 @@ src_install () {
     dodoc CHANGES LICENSE README
     docinto html
     dodoc doc/*.html
-    
+	dodir /etc/env.d
+    echo "TMAKEPATH=/usr/lib/tmake/linux-g++" > ${D}/etc/env.d/51tmake
 }
 
