@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.34 2005/01/14 13:35:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.35 2005/01/15 03:10:55 vapier Exp $
 
-inherit eutils multilib flag-o-matic gcc versionator
+inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
@@ -349,7 +349,22 @@ pkg_setup() {
 }
 
 
+do_arch_alpha_patches() {
+	[[ $(tc-arch ${CTARGET}) != "alpha" ]] && return 0
+	cd ${S}
+
+	# Fix compatability with compaq compilers by ifdef'ing out some
+	# 2.3.2 additions.
+	# <taviso@gentoo.org> (14 Jun 2003).
+	epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-decc-compaq.patch
+
+	# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
+#	epatch ${FILESDIR}/2.3.2/${LOCAL_P}-alpha-pwrite.patch
+}
+
+
 do_arch_amd64_patches() {
+	[[ $(tc-arch ${CTARGET}) != "amd64" ]] && return 0
 	cd ${S};
 
 	if [ -z "${MULTILIB_ABIS}" ]; then
@@ -365,20 +380,8 @@ do_arch_amd64_patches() {
 }
 
 
-do_arch_alpha_patches() {
-	cd ${S}
-
-	# Fix compatability with compaq compilers by ifdef'ing out some
-	# 2.3.2 additions.
-	# <taviso@gentoo.org> (14 Jun 2003).
-	epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-decc-compaq.patch
-
-	# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
-#	epatch ${FILESDIR}/2.3.2/${LOCAL_P}-alpha-pwrite.patch
-}
-
-
 do_arch_arm_patches() {
+	[[ $(tc-arch ${CTARGET}) != "arm" ]] && return 0
 	cd ${S};
 
 	# Any needed patches for arm go here
@@ -387,6 +390,7 @@ do_arch_arm_patches() {
 
 
 do_arch_hppa_patches() {
+	[[ $(tc-arch ${CTARGET}) != "hppa" ]] && return 0
 	einfo "Applying hppa specific path of ${HPPA_PATCHES} ..."
 	cd ${T}
 	unpack glibc-hppa-patches-${HPPA_PATCHES}.tar.gz
@@ -405,6 +409,7 @@ do_arch_hppa_patches() {
 
 
 do_arch_ia64_patches() {
+	[[ $(tc-arch ${CTARGET}) != "ia64" ]] && return 0
 	cd ${S};
 
 	# The basically problem is glibc doesn't store information about
@@ -424,6 +429,7 @@ do_arch_ia64_patches() {
 
 
 do_arch_mips_patches() {
+	[[ $(tc-arch ${CTARGET}) != "mips" ]] && return 0
 	cd ${S}
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
@@ -447,6 +453,7 @@ do_arch_mips_patches() {
 
 
 do_arch_ppc_patches() {
+	[[ $(tc-arch ${CTARGET}) != "ppc" ]] && return 0
 	cd ${S};
 	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-getcontext.patch
 	# Any needed patches for ppc go here
@@ -454,6 +461,7 @@ do_arch_ppc_patches() {
 
 
 do_arch_ppc64_patches() {
+	[[ $(tc-arch ${CTARGET}) != "ppc64" ]] && return 0
 	cd ${S};
 	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-getcontext.patch
 	# Any needed patches for ppc64 go here
@@ -461,6 +469,7 @@ do_arch_ppc64_patches() {
 
 
 do_arch_s390_patches() {
+	[[ $(tc-arch ${CTARGET}) != "s390" ]] && return 0
 	cd ${S};
 
 	# Any needed patches for s390 go here
@@ -468,6 +477,7 @@ do_arch_s390_patches() {
 
 
 do_arch_sparc_patches() {
+	[[ $(tc-arch ${CTARGET}) != "sparc" ]] && return 0
 	cd ${S};
 
 	# Any needed patches for sparc go here
@@ -475,6 +485,7 @@ do_arch_sparc_patches() {
 
 
 do_arch_x86_patches() {
+	[[ $(tc-arch ${CTARGET}) != "x86" ]] && return 0
 	cd ${S};
 	# CONF_LIBDIR support
 	epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
@@ -581,17 +592,17 @@ src_unpack() {
 	do_hardened_fixes
 
 	# Arch specific patching
-	use amd64	&& do_arch_amd64_patches
-	use alpha	&& do_arch_alpha_patches
-	use arm		&& do_arch_arm_patches
-	use hppa	&& do_arch_hppa_patches
-	use ia64	&& do_arch_ia64_patches
-	use mips	&& do_arch_mips_patches
-	use ppc		&& do_arch_ppc_patches
-	use ppc64	&& do_arch_ppc64_patches
-	use s390	&& do_arch_s390_patches
-	use sparc	&& do_arch_sparc_patches
-	use x86		&& do_arch_x86_patches
+	do_arch_alpha_patches
+	do_arch_amd64_patches
+	do_arch_arm_patches
+	do_arch_hppa_patches
+	do_arch_ia64_patches
+	do_arch_mips_patches
+	do_arch_ppc_patches
+	do_arch_ppc64_patches
+	do_arch_s390_patches
+	do_arch_sparc_patches
+	do_arch_x86_patches
 
 	# Remaining patches
 	cd ${S}

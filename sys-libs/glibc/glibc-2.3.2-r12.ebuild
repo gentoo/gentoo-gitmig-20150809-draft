@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.6 2005/01/14 02:51:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.7 2005/01/15 03:10:55 vapier Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic toolchain-funcs
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
@@ -120,7 +120,7 @@ use_nptl() {
 		# - Or we have 'amd64' in USE
 		# - Or we have 'mips' in USE
 		# - Or we have 'ppc' in USE
-		case ${ARCH} in
+		case $(tc-arch ${CTARGET}) in
 			"x86")
 				if [ "${CHOST/-*}" = "i486" -o \
 				     "${CHOST/-*}" = "i586" -o \
@@ -292,18 +292,15 @@ src_unpack() {
 
 	cd ${S}
 	# Extract our threads package ...
-	if (! use_nptl) && [ -z "${BRANCH_UPDATE}" ]
-	then
+	if (! use_nptl) && [[ -z ${BRANCH_UPDATE} ]] ; then
 		unpack glibc-linuxthreads-${MY_PV}.tar.bz2
 	fi
 
-	if [ -n "${BRANCH_UPDATE}" ]
-	then
+	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		epatch ${DISTDIR}/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2
 	fi
 
-	if use_nptl
-	then
+	if use_nptl ; then
 		epatch ${FILESDIR}/2.3.2/${P}-redhat-nptl-fixes.patch
 	else
 		epatch ${FILESDIR}/2.3.2/${P}-redhat-linuxthreads-fixes.patch
@@ -313,8 +310,7 @@ src_unpack() {
 	# __guard_setup__stack_smash_handler
 	#
 	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" ]
-	then
+	if [[ $(tc-arch ${CTARGET}) != "hppa" ]] ; then
 		cd ${S}; epatch ${FILESDIR}/${PV}/${P}-propolice-guard-functions-v2.patch
 	fi
 
@@ -382,8 +378,7 @@ src_unpack() {
 	# do can be found in the patch headers.
 	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
 	# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
-	if [ "${ARCH}" = "mips" ]
-	then
+	if [[ $(tc-arch ${CTARGET}) == "mips" ]] ; then
 		cd ${S}
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libgcc-compat-mips.patch
@@ -394,8 +389,7 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.2/${P}-mips-fix-nested-entend-pairs.patch
 	fi
 
-	if [ "${ARCH}" = "alpha" ]
-	then
+	if [[ $(tc-arch ${CTARGET}) == "alpha" ]] ; then
 		cd ${S}
 		# Fix compatability with compaq compilers by ifdef'ing out some
 		# 2.3.2 additions.
@@ -410,13 +404,11 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.2/${P}-alpha-sysdeps.patch
 	fi
 
-	if [ "${ARCH}" = "amd64" ]
-	then
+	if [[ $(tc-arch ${CTARGET}) == "amd64" ]] ; then
 		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-amd64-nomultilib.patch
 	fi
 
-	if [ "${ARCH}" = "ia64" ]
-	then
+	if [[ $(tc-arch ${CTARGET}) == "ia64" ]] ; then
 		# The basically problem is glibc doesn't store information about
 		# what the kernel interface is so that it can't efficiently set up
 		# parameters for system calls.  This patch from H.J. Lu fixes it:
@@ -426,8 +418,7 @@ src_unpack() {
 		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-ia64-LOAD_ARGS-fixup.patch
 	fi
 
-	if [ "${ARCH}" = "hppa" ]
-	then
+	if [[ $(tc-arch ${CTARGET}) == "hppa" ]] ; then
 		cd ${WORKDIR}
 		unpack ${P}-hppa-patches-p1.tar.bz2
 		cd ${S}
@@ -445,8 +436,7 @@ src_unpack() {
 		patch -p 1 < ${FILESDIR}/2.3.1/glibc23-07-hppa-atomicity.dpatch
 	fi
 
-	if [ "${ARCH}" = "s390" ]
-	then
+	if [[ $(tc-arch ${CTARGET}) == "s390" ]] ; then
 		# The deprecated ustat.h causes problems on s390
 		#
 		#   http://sources.redhat.com/ml/bug-glibc/2003-08/msg00020.html
@@ -455,8 +445,7 @@ src_unpack() {
 		cd ${S}/sysdeps/unix/sysv/linux; epatch ${FILESDIR}/2.3.2/${P}-s390-deprecated-ustat-fixup.patch
 	fi
 
-	if [ "${ARCH}" == "arm" ]
-	then
+	if [[ $(tc-arch ${CTARGET}) == "arm" ]] ; then
 		cd ${S}
 		# sjlj exceptions causes undefined frame variables (ported from cvs)
 		epatch ${FILESDIR}/2.3.2/${P}-framestate-USING_SJLJ_EXCEPTIONS.patch
