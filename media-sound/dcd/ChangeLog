@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/dcd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/ChangeLog,v 1.2 2002/08/28 17:35:26 rphillips Exp $
+
+*dcd-0.95 (28 Aug 2002)
+
+  28 Aug 2002; Ryan Phillips <rphillips@gentoo.org> :
+
+  Fixes a sandbox bug and updates to the latest version
 
 *dcd-0.90 (1 Feb 2002)
 
