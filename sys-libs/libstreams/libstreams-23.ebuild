@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstreams/libstreams-23.ebuild,v 1.1 2004/11/07 19:02:03 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstreams/libstreams-23.ebuild,v 1.2 2004/11/07 21:03:59 kito Exp $
 
 DESCRIPTION="NeXT/Darwin Streams routines."
 HOMEPAGE="http://darwinsource.opendarwin.org/10.3.6/"
@@ -32,8 +32,8 @@ src_compile() {
 }
 
 src_install() {
-	into /usr/lib/system
-	dolib.a *.a
+	insinto /usr/lib/system
+	doins *.a
 
 	insinto /usr/include/streams
 	doins *.h
