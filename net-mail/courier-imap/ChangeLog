@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.28 2003/02/12 08:08:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.29 2003/02/18 10:20:24 raker Exp $
+
+  18 Feb 2003; Nick Hadaway <raker@gentoo.org> files/gentoo-*.rc :
+  Updated gentoo-*.rc with fix0rs found by Psi-Jack!
 
 *courier-imap-1.7.0 (01 Feb 2003)
 

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: gentoo-imapd.rc,v 1.2 2002/06/15 00:30:23 nitro Exp $
+# $Id: gentoo-imapd.rc,v 1.3 2003/02/18 10:20:24 raker Exp $
 #
 # Copyright 1998 - 2000 Double Precision, Inc.
 # See COPYING for distribution information.
@@ -19,7 +19,7 @@ do
 done
 
 ulimit -d $IMAP_ULIMITD
-export IMAP_STARTTLS=$IMAPDSTARTTLS
+export IMAPDSTARTTLS
 TLS_PROTOCOL=$TLS_STARTTLS_PROTOCOL
 eval `sed -n '/^#/d;/=/p' </etc/courier-imap/imapd | \
 	sed 's/=.*//;s/^/export /;s/$/;/'`
