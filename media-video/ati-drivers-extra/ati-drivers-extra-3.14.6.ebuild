@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.14.6.ebuild,v 1.1 2004/11/12 00:35:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.14.6.ebuild,v 1.2 2005/01/04 20:54:51 lu_zero Exp $
 
 IUSE="qt"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ati.com"
 SRC_URI="http://www2.ati.com/drivers/linux/fglrx-4.3.0-${PV}.i386.rpm"
 SLOT="${KV}"
 LICENSE="ATI GPL-2 QPL-1.0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 DEPEND=">=virtual/linux-sources-2.4
 	app-arch/rpm2targz
