@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.23.ebuild,v 1.4 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.23.ebuild,v 1.5 2003/03/19 14:33:52 liquidx Exp $
 
 IUSE="nls doc"
 
@@ -63,3 +63,6 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
 
+pkg_postinst() {
+	einfo "If you upgraded gal, you must emerge gtkhtml again to prevent breakage."
+}

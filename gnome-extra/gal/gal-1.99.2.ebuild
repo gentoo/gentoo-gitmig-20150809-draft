@@ -1,15 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.2.ebuild,v 1.2 2003/03/14 16:49:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.2.ebuild,v 1.3 2003/03/19 14:33:52 liquidx Exp $
 
 IUSE="doc"
 
-inherit libtool
+inherit gnome.org libtool
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="The Gnome Application Libraries"
-# also appears in gnome.org, but their latest is only 1.99.1 - 13 Mar 03
-SRC_URI="ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
