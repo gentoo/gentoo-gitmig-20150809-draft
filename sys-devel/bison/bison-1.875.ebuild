@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.14 2004/03/02 16:11:19 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.15 2004/03/21 21:17:17 vapier Exp $
 
-inherit gcc
+inherit gcc flag-o-matic
 
-IUSE="nls static"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="A yacc-compatible parser generator"
-SRC_URI="mirror://gnu/bison/${P}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/bison/bison.html"
+SRC_URI="mirror://gnu/bison/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ~ppc sparc alpha mips hppa ia64 ppc64 s390"
+IUSE="nls static"
 
 DEPEND="sys-devel/m4
 	nls? ( sys-devel/gettext )"
@@ -28,18 +27,16 @@ src_compile() {
 	# optimizations.  This will probably be fixed in a future gcc
 	# version, but for the moment just disable optimizations for that
 	# arch (04 Feb 2004 agriffis)
-	[[ $ARCH == amd64 ]] && append-flags -O0
+	[ "$ARCH" == "amd64" ] && append-flags -O0
 
 	# Bug 29017 says that bison has compile-time issues with
 	# -march=k6* prior to 3.4CVS.  Use -march=i586 instead 
 	# (04 Feb 2004 agriffis)
-	if [[ $(gcc-major-version) == 3 && $(gcc-minor-version) < 4 ]]; then
-		CFLAGS=" ${CFLAGS} "
-		CFLAGS=${CFLAGS// -march=k6-? / -march=i586 }
-		CFLAGS=${CFLAGS// -march=k6 / -march=i586 }
+	if [ $(gcc-major-version) == 3 ] && [ $(gcc-minor-version) < 4 ] ; then
+		replace-cpu-flags i586 k6 k6-1 k6-2
 	fi
 
-	econf $(use_enable nls) || die
+	econf `use_enable nls` || die
 
 	if use static; then
 		emake LDFLAGS="-static" || die
@@ -61,8 +58,7 @@ src_install() {
 	# We do not need this.
 	rm -f ${D}/usr/lib/liby.a
 
-	dodoc COPYING AUTHORS NEWS ChangeLog README REFERENCES OChangeLog
+	dodoc AUTHORS NEWS ChangeLog README REFERENCES OChangeLog
 	docinto txt
 	dodoc doc/FAQ
 }
-
