@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.4 2004/04/08 23:07:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.5 2004/04/25 09:01:37 mksoft Exp $
 
 inherit flag-o-matic eutils
 
@@ -135,9 +135,20 @@ pkg_config() {
 	done
 
 	# Create log
-	touch firebird.log
-	chown firebird:firebird firebird.log
-	chmod ug=rw,o= firebird.log
+	if [ ! -h firebird.log ]
+	then
+		if [ -f firebird.log ]
+		then
+			mv firebird.log /var/log
+		else
+			touch /var/log/firebird.log
+			chown firebird:firebird /var/log/firebird.log
+			chmod ug=rw,o= /var/log/firebird.log
+		fi
+
+		# symlink the log to /var/log
+		ln -s /var/log/firebird.log firebird.log
+	fi
 
 	# add gds_db to /etc/services
 	if [ -z "`grep gds_db  /etc/services`" ]
@@ -180,7 +191,7 @@ pkg_config() {
 		chmod u=rw,go=r /etc/hosts.equiv
 	fi
 
-	if [ -z "`grep localhost /etc/hosts.equiv`" ]
+	if [ -z "`grep 'localhost$' /etc/hosts.equiv`" ]
 	then
 		echo "localhost" >> /etc/hosts.equiv
 		einfo "Added localhost to /etc/hosts.equiv"
