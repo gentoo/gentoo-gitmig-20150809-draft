@@ -1,0 +1,7 @@
+MD5 29f0419f47226cfa1c5b7f04e08a1848 ChangeLog 2167
+MD5 10786da945a581e1a07d112f9700effd GD-1.32-r3.ebuild 1315
+MD5 6e5b8e70aaa276c066679e1865206bab GD-2.06.ebuild 1171
+MD5 b51ab87c113e42bd5560824fc63bc2bc files/2.06-gif-support.patch 21921
+MD5 09b39b1c077d8e72751e35850cc4b77c files/2.06-makefile-opts.patch 1209
+MD5 0608e756c077adb2d2b1e9bba551d499 files/digest-GD-1.32-r3 59
+MD5 930907847b20135f193fdeefac7601dd files/digest-GD-2.06 59
