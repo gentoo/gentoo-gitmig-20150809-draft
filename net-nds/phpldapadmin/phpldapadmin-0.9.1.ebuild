@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Don Seiler <rizzo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.1.ebuild,v 1.1 2003/11/13 21:05:34 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.1.ebuild,v 1.2 2003/12/09 01:36:02 rizzo Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server."
@@ -31,7 +31,7 @@ src_install() {
 	cp -a * "${D}/${HTTPD_ROOT}/phpldapadmin"
 	dodoc INSTALL LICENSE VERSION
 
-	chown -R "${HTTPD_USER}.${HTTPD_GROUP}" "${D}/${HTTPD_ROOT}/phpldapadmin"
+	chown -R "${HTTPD_USER}:${HTTPD_GROUP}" "${D}/${HTTPD_ROOT}/phpldapadmin"
 	chmod 0775 "${D}/${HTTPD_ROOT}/phpldapadmin"
 }
 
