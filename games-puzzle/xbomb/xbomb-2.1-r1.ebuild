@@ -1,16 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.1-r1.ebuild,v 1.2 2004/01/05 21:46:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.1-r1.ebuild,v 1.3 2004/02/03 20:50:09 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Minesweeper clone with hexagonal, rectangular and triangular grid"
 SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/games/strategy/${P}.tgz"
 HOMEPAGE="http://www.gedanken.demon.co.uk/xbomb/"
 
-LICENSE="GPL-2"
 KEYWORDS="x86"
+LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 
 DEPEND="virtual/x11
 	>=sys-apps/sed-4"
