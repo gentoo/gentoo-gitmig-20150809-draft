@@ -1073,7 +1073,15 @@ class packagetree:
 		"populates the tree with values"
 		populated=1
 		pass
-	
+
+	def inject(self,mycatpkg):
+		"add a catpkg to the deptree"
+		cps=catpkgsplit(mycatpkg,0)
+		mykey=cps[0]+"/"+cps[1]
+		if not self.tree.has_key(mykey):
+			self.tree[mykey]=[]
+		self.tree[mykey].append([mycatpkg,cps])
+		
 	def resolve_key(self,mykey):
 		"generates new key, taking into account virtual keys"
 		if self.virtual:
@@ -1138,7 +1146,7 @@ class packagetree:
 		"""
 		if not self.populated:
 			self.populate()
-		myusesplit=string.split(settings["USE"],self.root)
+		myusesplit=string.split(settings["USE"])
 		mysplit=string.split(depstring)
 		#convert parenthesis to sublists
 		mysplit=dep_parenreduce(mysplit)
