@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmustux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.14 2004/06/24 23:12:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.15 2004/07/13 05:26:58 eradicator Exp $
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libmustux-0.16.0.ebuild, libmustux-0.17.5.ebuild, libmustux-0.20.0.ebuild,
+  libmustux-0.20.1.ebuild, libmustux-0.20.2.ebuild:
+  Fixed HOMEPAGE
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> libmustux-0.16.0.ebuild:
   Add inherit eutils

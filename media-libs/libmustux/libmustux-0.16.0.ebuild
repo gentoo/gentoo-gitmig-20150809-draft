@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.16.0.ebuild,v 1.10 2004/06/24 23:12:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.16.0.ebuild,v 1.11 2004/07/13 05:26:58 eradicator Exp $
 
 inherit kde-functions eutils
 
 DESCRIPTION="Protux - Libary"
-HOMEPAGE="http://www.nognu.org/protux"
+HOMEPAGE="http://www.nongnu.org/protux"
 SRC_URI="http://savannah.nongnu.org/download/protux/${P}.tar.gz"
 
 SLOT="0"
