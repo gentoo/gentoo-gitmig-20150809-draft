@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.85 2004/01/08 23:43:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.86 2004/01/11 15:16:04 pyrania Exp $
+
+*fluxbox-0.9.7-r1 (11 Jan 2004)
+
+  11 Jan 2004; Markus Nigbur <pyrania@gentoo.org> fluxbox-0.9.7-r1.ebuild,
+  files/0.9.7/01_cache-bugfix.patch, files/0.9.7/02_iconbar-bugfix.patch:
+  Applied two important memory leak patches.
 
   08 Jan 2004; <gustavoz@gentoo.org> fluxbox-0.9.7.ebuild:
   marked stable on hppa
