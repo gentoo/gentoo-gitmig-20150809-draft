@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.3 2003/08/07 18:32:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.4 2003/08/16 05:38:51 jje Exp $
+
+*rezound-0.8.3_beta-r1 (16 Aug 2003)
+
+  16 Aug 2003; jje <jje@gentoo.org> rezound-0.8.3_beta-r1.ebuild:
+  Checking jack USE appropriately.
 
   07 Aug 2003; Martin Holzer <mholzer@gentoo.org> rezound-0.7.0_beta.ebuild,
   rezound-0.8.3_beta.ebuild:
