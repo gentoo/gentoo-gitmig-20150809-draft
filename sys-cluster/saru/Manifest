@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 caba33b42a4e13d13f3aaf49d83e2add saru-0.0.1.ebuild 2391
-MD5 0289ed28cd1402802b36e65bd8e783d6 ChangeLog 472
+MD5 e92aadd1d9a1e537cb4739bb88d9a1e4 saru-0.0.1.ebuild 2583
+MD5 62178998a0b164e2b944d590bc2646d5 ChangeLog 561
 MD5 137dd5a4f89430782c03c2c3068ad7f9 files/saru.conf 11
 MD5 c5e666d281f435e2d695c302b5716503 files/saru.init 904
 MD5 40d70f0580743972bfc3da261b384cc2 files/digest-saru-0.0.1 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBNieLKtJO8LeSoosRAtKzAJ9t8fDLb9bw63Xp7gGihk44jY/DxACfYByV
-TV/Da7x2+fhHVz8I2py4bRs=
-=Wx5g
+iD8DBQFBNiphKtJO8LeSoosRAgqfAJ9vL7sikAgYwyBH2LjXL3iMxZwTjgCfYOcX
+csZKI2W2HNaU0ltYlexyX1Q=
+=wmIv
 -----END PGP SIGNATURE-----

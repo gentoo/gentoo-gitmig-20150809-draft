@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/saru
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/ChangeLog,v 1.2 2004/09/01 19:46:46 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/saru/ChangeLog,v 1.3 2004/09/01 19:58:50 tantive Exp $
+
+  01 Sep 2004; Michael Imhof <tantive@gentoo.org> saru-0.0.1.ebuild:
+  more cleanups...
 
   01 Sep 2004; Michael Imhof <tantive@gentoo.org> saru-0.0.1.ebuild:
   cleaned up the ebuild...
