@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.57 2003/06/28 01:06:01 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.58 2003/07/07 09:48:58 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -73,6 +73,7 @@ sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/glibc:pic - If you want prelink support built into glibc
+x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/xfree-drm:gamma - If you have a 3dlabs video card
 x11-base/xfree-drm:i8x0 - If you have an ibm i810 or i830 video card
 x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
