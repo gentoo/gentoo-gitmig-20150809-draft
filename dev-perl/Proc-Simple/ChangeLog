@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/Proc-Daemon
+# ChangeLog for dev-perl/Proc-Simple
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.2 2003/12/07 08:04:02 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.3 2003/12/08 08:25:36 vapier Exp $
 
 *Proc-Simple-1.19 (07 Dec 2003)
 
