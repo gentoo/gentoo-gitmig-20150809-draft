@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.132 2004/12/26 22:23:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.133 2004/12/29 18:19:04 lanius Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -908,6 +908,13 @@ edos2unix() {
 	done
 }
 
+
+##############################################################
+# START: Handle .desktop files and menu entries              #
+# maybe this should be separated into a new eclass some time #
+# lanius@gentoo.org                                          #
+##############################################################
+
 # Make a desktop file !
 # Great for making those icons in kde/gnome startmenu !
 # Amaze your friends !  Get the women !  Join today !
@@ -970,6 +977,78 @@ Categories=Application;${type};" > "${desktop}"
 
 	return 0
 }
+
+# Make a GDM/KDM Session file
+#
+# make_desktop_entry(<title>, <command>)
+# title: File to execute to start the Window Manager
+# command: Name of the Window Manager
+
+make_session_desktop() {
+
+	[ -z "$1" ] && eerror "make_session_desktop: You must specify the title" && return 1
+	[ -z "$2" ] && eerror "make_session_desktop: You must specify the command" && return 1
+
+	local title="${1}"
+	local command="${2}"
+	local desktop="${T}/${wm}.desktop"
+
+echo "[Desktop Entry]
+Encoding=UTF-8
+Name=${title}
+Comment=This session logs you into ${title}
+Exec=${command}
+TryExec=${command}
+Type=Application" > "${desktop}"
+
+	insinto /usr/share/xsessions
+	doins "${desktop}"
+
+	return 0
+}
+
+domenu() {
+	local i
+	local j
+	insinto /usr/share/applications
+	for i in ${@}
+	do
+		if [ -f "${i}" ];
+		then
+			doins ${i}
+		elif [ -d "${i}" ];
+		then
+			for j in ${i}/*.desktop
+			do
+				doins ${j}
+			done
+		fi	
+	done
+}
+
+doicon() {
+	local i
+	local j
+	insinto /usr/share/pixmaps
+	for i in ${@}
+	do
+		if [ -f "${i}" ];
+		then
+			doins ${i}
+		elif [ -d "${i}" ];
+		then
+			for j in ${i}/*.png
+			do
+				doins ${j}
+			done
+		fi	
+	done
+}
+
+##############################################################
+# END: Handle .desktop files and menu entries              #
+##############################################################
+
 
 # for internal use only (unpack_pdv and unpack_makeself)
 find_unpackable_file() {
