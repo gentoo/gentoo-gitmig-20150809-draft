@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.6.0.ebuild,v 1.1 2004/04/05 22:55:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.6.0.ebuild,v 1.2 2004/04/05 23:03:31 mr_bones_ Exp $
 
 inherit games
 
-S="${WORKDIR}/tools-${PV}"
 DESCRIPTION="utilities for the SCUMM game engine"
 HOMEPAGE="http://scummvm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
