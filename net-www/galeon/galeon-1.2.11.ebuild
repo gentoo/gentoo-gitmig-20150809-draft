@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.11.ebuild,v 1.6 2003/10/09 18:56:54 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.11.ebuild,v 1.7 2003/10/09 19:24:59 pappy Exp $
 
 IUSE="nls"
 
@@ -72,6 +72,18 @@ src_compile() {
 	then
 		einfo "appending -yet_exec flags for galeon building"
 		append-flags "-yet_exec -fPIC -fstack-protector"
+	fi
+
+	if [ "${ARCH}" == "hppa" ] && has_version 'sys-devel/hardened-gcc'
+	then
+		einfo "appending -yet_exec flags for galeon building"
+		append-flags "-yet_exec -fPIC"
+	fi
+
+	if [ "${ARCH}" == "hppa64" ] && has_version 'sys-devel/hardened-gcc'
+	then
+		einfo "appending -yet_exec flags for galeon building"
+		append-flags "-yet_exec -fPIC"
 	fi
 
 	./configure --host=${CHOST} \
