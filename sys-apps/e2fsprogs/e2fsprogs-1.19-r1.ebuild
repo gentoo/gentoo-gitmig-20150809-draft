@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.19-r1.ebuild,v 1.1 2001/02/07 15:51:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.19-r1.ebuild,v 1.2 2001/02/27 15:29:12 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 filesystem utilities"
@@ -9,14 +9,27 @@ SRC_URI="ftp://download.sourceforge.net/pub/sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 
 DEPEND="virtual/glibc
-        >=sys-devel/gettext-0.10.35-r2"
+        nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"
+
+src_unpack() {
+    unpack ${A}
+    cd ${S}
+    patch -p0 < ${FILESDIR}/${P}-po-Makefile.in.in-gentoo.diff
+}
 
 src_compile() {
 
+    local myconf
+    if [ "`use nls`" ]
+    then
+      myconf="--enable-nls"
+    else
+      myconf="--disable-nls"
+    fi
 	try ./configure --host=${CHOST} --prefix=/usr \
                 --mandir=/usr/share/man --infodir=/usr/share/info \
-                --enable-elf-shlibs --enable-nls
+                --enable-elf-shlibs ${myconf}
 
 	# Parallel make sometimes fails
 	try make
@@ -30,11 +43,17 @@ src_install() {
 	then
 	  myopts="STRIP=\"echo\""
 	fi
-        myopts="${myopts} mandir=/usr/share/man infodir=/usr/share/info"
+
+    myopts="${myopts} mandir=/usr/share/man infodir=/usr/share/info"
 
 	try make DESTDIR=${D} ${myopts} install
 	try make DESTDIR=${D} ${myopts} install-libs
 
+    if [ "`use nls`" ]
+    then
+      cd po
+      try make DESTDIR=${D} install
+    fi
 	dodoc COPYING ChangeLog README RELEASE-NOTES SHLIBS
 	docinto e2fsck
 	dodoc e2fsck/ChangeLog e2fsck/CHANGES
