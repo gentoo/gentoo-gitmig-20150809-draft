@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.1 2004/10/19 17:15:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.2 2004/11/12 20:42:20 blubb Exp $
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> ivman-0.3.ebuild:
+  added ~amd64
 
 *ivman-0.3 (19 Oct 2004)
 
