@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-SmbHash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.4 2004/06/25 00:19:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.5 2004/07/28 04:57:53 kumba Exp $
+
+  28 Jul 2004; Joshua Kinard <kumba@gentoo.org> Crypt-SmbHash-0.02.ebuild:
+  Marked stable on mips.
 
   26 May 2004; Jason Wever <weeve@gentoo.org> Crypt-SmbHash-0.02.ebuild:
   Added ~sparc keyword.
