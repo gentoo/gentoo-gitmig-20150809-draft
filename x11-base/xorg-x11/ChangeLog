@@ -1,6 +1,24 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.329 2005/02/11 01:00:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.330 2005/02/11 08:06:34 spyderous Exp $
+
+*xorg-x11-6.8.2 (11 Feb 2005)
+
+  11 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.8.2.ebuild:
+  Here 'tis. Add 5180_all_6.8.2-back-out-extra-radeonsetfblocation.patch --
+  Somehow when applying fd.o #1220 and fd.o #1912, things got mixed up. An
+  extra call to RadeonSetFBLocation() was added to RADEONAdjustFrame(). Back
+  this out. Michel Daenzer says: As I said before: it's unnecessary writes to
+  GPU memory controller registers. In the best case, there's an unnecessary
+  slight delay maybe; in the worst case, the GPU might wedge. (#81283, fd.o
+  #2164) Add 5190_all_6.8.2-radeon-render-byteswap.patch -- Forgot to return
+  TRUE at the end of RADEONSetupRenderByteswap() so some render-accelerated
+  stuff was screwed up. (#76807) Break up xbox patch into two patches and
+  update it: 9990_x86_6.8.0-nvxbox-20050107.patch and
+  9991_x86_6.8.1.904-xbox-pci-20050207.patch. (#81459) Fix up libtool archives
+  for multilib; stop installing libMesaGLU.so symlink; Stop having
+  /usr/X11R6/lib in libtool archives because /usr/X11R6 is just a symlink now.
 
   10 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xorg-x11-6.8.1.904.ebuild:
