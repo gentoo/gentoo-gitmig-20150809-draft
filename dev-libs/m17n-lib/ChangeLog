@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/m17n-lib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.17 2005/01/01 16:20:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.18 2005/01/12 18:38:11 gmsoft Exp $
+
+  12 Jan 2005; Guy Martin <gmsoft@gentoo.org> m17n-lib-1.2.0.ebuild:
+  Stable on hppa.
 
 *m17n-lib-1.2.0 (02 Jan 2005)
 
