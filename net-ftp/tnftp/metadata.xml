@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
+<maintainer>
+	<email>swegener@gentoo.org</email>
+	<name>Sven Wegenery</name>
+	<description>Primary Maintainer</description>
+</maintainer>
 </pkgmetadata>

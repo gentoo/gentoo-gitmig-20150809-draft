@@ -1,51 +1,53 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050103.ebuild,v 1.3 2005/01/11 18:29:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/tnftp-20050103.ebuild,v 1.4 2005/03/21 14:14:45 swegener Exp $
 
 DESCRIPTION="NetBSD FTP client with several advanced features"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/misc/${PN}/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.netbsd.org/pub/NetBSD/misc/tnftp/"
-DEPEND="virtual/libc >=sys-libs/ncurses-5.1"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc ~ppc alpha ~amd64"
 IUSE="ipv6"
 
+RDEPEND="virtual/libc
+	>=sys-libs/ncurses-5.1"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+
 	# Adds a command line option: -s, which produces clean, informative output.
 	# Shows progess status, ETA, transfer speed, no server responses or login messages.
 	# ~woodchip
-	cp src/main.c src/main.orig
-	sed -e "s/46AadefginN:o:pP:q:r:RtT:u:vV/46AadefginN:o:pP:r:RstT:u:vV/" \
+	sed -i \
+		-e "s/46AadefginN:o:pP:q:r:RtT:u:vV/46AadefginN:o:pP:r:RstT:u:vV/" \
 		-e "s/case 't'/case 's':\n\t\t\tverbose = 0;\n\t\t\tprogress = 1;\n\t\t\tbreak;\n\n\t\t&/" \
-		src/main.orig > src/main.c || die "sed failed in src_unpack"
+		${S}/src/main.c || die "sed failed in src_unpack"
 }
 
 src_compile() {
-	local myconf
-	use ipv6 || myconf="${myconf} --disable-ipv6"
-	./configure \
-		--prefix=/usr \
+	econf \
 		--enable-editcomplete \
-		--host=${CHOST} ${myconf} || die "bad ./configure"
-	emake || die "compile problem"
+		$(use_enable ipv6) \
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	dodoc COPYING ChangeLog README* THANKS NEWS
-	newbin src/ftp tnftp
-	newman src/ftp.1 tnftp.1
-	if [ ! -e /usr/bin/ftp ]
-	then
-		cd ${D}/usr/bin
-		ln -s tnftp ftp
-	fi
-	if [ ! -e /usr/bin/lukemftp ]
-	then
-		cd ${D}/usr/bin
-		ln -s tnftp lukemftp
-	fi
+	newbin src/ftp tnftp || die "newbin failed"
+	newman src/ftp.1 tnftp.1 || die "newman failed"
+
+	for x in ftp lukemftp
+	do
+		if [ ! -e ${ROOT}/usr/bin/${X} ]
+		then
+			dosym tnftp /usr/bin/${x} || die "dosym failed"
+		fi
+	done
+
+	dodoc COPYING ChangeLog README THANKS || die "dodoc failed"
 }

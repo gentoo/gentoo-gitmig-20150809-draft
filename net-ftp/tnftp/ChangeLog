@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tnftp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.10 2005/01/11 18:29:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.11 2005/03/21 14:14:45 swegener Exp $
+
+  21 Mar 2005; Sven Wegener <swegener@gentoo.org> metadata.xml,
+  tnftp-20050103.ebuild:
+  Added ${ROOT} support. Taking over maintainership.
 
   11 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> tnftp-20050103.ebuild:
   Stable on alpha, bug 74704.

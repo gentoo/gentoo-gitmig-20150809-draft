@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9cae1c4d0d6ca6ad1495ada3e81a32f0 tnftp-20050103.ebuild 1489
-MD5 d2b6a4d2c5697e4fc5f377f5ff2b07c4 ChangeLog 1277
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 af5323fec80d49b86e29374307d2dd32 tnftp-20050103.ebuild 1439
+MD5 2abc4d8b1843dc1a6a46293fc8945388 ChangeLog 1422
+MD5 1f7353efef0082c74884b4a97c1191ba metadata.xml 298
 MD5 88f9ed44d5f60c45fbd236eb508e145a files/digest-tnftp-20050103 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFB5BsUugEuf3OQ0akRAt6gAJitKByBM5xdcLilayqv7l9lqtt2AJ98Nxp8
-fro2tt6rB7UWaC8MRG6xlg==
-=QQTg
+iD8DBQFCPtbdI1lqEGTUzyQRAp6XAJ98OKbBl4dfLvd1c0H7qsUnUazekwCcCXqr
+4xi42ibrqeBzvmmSGdCX4Sc=
+=mUNZ
 -----END PGP SIGNATURE-----
