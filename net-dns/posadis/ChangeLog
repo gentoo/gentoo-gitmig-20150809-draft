@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/posadis
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.7 2004/06/24 22:37:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.8 2004/08/07 23:57:57 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> posadis-0.60.2.ebuild,
+  posadis-0.60.4_p1.ebuild:
+  Typo in DESCRIPTION: authoritive -> authoritative. Bug 59717.
 
   13 Jun 2004; <matsuu@gentoo.org> files/posadis-init:
   Added 'provide dns' in files/posadis-init. Bugs #50437.

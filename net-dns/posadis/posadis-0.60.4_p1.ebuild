@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.4_p1.ebuild,v 1.3 2004/06/24 22:37:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.4_p1.ebuild,v 1.4 2004/08/07 23:57:57 slarti Exp $
 
-DESCRIPTION="An authoritive/caching Domain Name Server"
+DESCRIPTION="An authoritative/caching Domain Name Server"
 HOMEPAGE="http://www.posadis.org/projects/posadis.php"
 SRC_URI="mirror://sourceforge/posadis/${P/_p/-}.tar.gz"
 
