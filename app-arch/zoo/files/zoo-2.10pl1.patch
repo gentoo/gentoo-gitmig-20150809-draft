@@ -1,0 +1,684 @@
+diff -u -N zoo/ar.h /usr/src/redhat/SOURCES/zoo-2.10/ar.h
+--- zoo/ar.h	1993-05-01 06:04:22.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/ar.h	2002-06-20 17:19:36.000000000 +0200
+@@ -15,11 +15,9 @@
+ /* uchar should be 8 bits or more */
+ /* typedef unsigned char  uchar;   -- already in zoo.h */
+ 
+-typedef unsigned int   uint;    /* 16 bits or more */
+-#if !defined(__386BSD__) || !defined(_TYPES_H_)
+-typedef unsigned short ushort;  /* 16 bits or more */
+-#endif
+-typedef unsigned long  ulong;   /* 32 bits or more */
++typedef unsigned int   my_uint;    /* 16 bits or more */
++typedef unsigned short my_ushort;  /* 16 bits or more */
++typedef unsigned long  my_ulong;   /* 32 bits or more */
+ 
+ /* T_UINT16 must be #defined in options.h to be 
+ a 16-bit unsigned integer type */
+@@ -49,7 +47,7 @@
+ /* ar.c */
+ 
+ extern int unpackable;
+-extern ulong origsize, compsize;
++extern my_ulong origsize, compsize;
+ 
+ /* all the prototypes follow here for all files */
+ 
+@@ -78,7 +76,7 @@
+ 
+ /* DECODE.C */
+ void decode_start PARMS((void ));
+-int decode PARMS((uint count , uchar *buffer));
++int decode PARMS((uint count , uchar buffer []));
+ 
+ /* ENCODE.C */
+ void encode PARMS((FILE *, FILE *));
+@@ -87,14 +85,14 @@
+ void output PARMS((uint c , uint p ));
+ void huf_encode_start PARMS((void ));
+ void huf_encode_end PARMS((void ));
+-uint decode_c PARMS((void ));
+-uint decode_p PARMS((void ));
++my_uint decode_c PARMS((void ));
++my_uint decode_p PARMS((void ));
+ void huf_decode_start PARMS((void ));
+ 
+ /* IO.C */
+ void make_crctable PARMS((void ));
+ void fillbuf PARMS((int n ));
+-uint getbits PARMS((int n ));
++my_uint getbits PARMS((int n ));
+ void putbits PARMS((int n , uint x ));
+ int fread_crc PARMS((uchar *p , int n , FILE *f ));
+ void fwrite_crc PARMS((uchar *p , int n , FILE *f ));
+diff -u -N zoo/basename.c /usr/src/redhat/SOURCES/zoo-2.10/basename.c
+--- zoo/basename.c	1991-07-16 17:48:04.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/basename.c	2002-06-20 17:19:36.000000000 +0200
+@@ -18,7 +18,7 @@
+ 
+ /* This function strips device/directory information from
+ a pathname and returns just the plain filename */
+-void basename (pathname, fname)
++void mybasename (pathname, fname)
+ char *pathname;
+ char fname[];
+ {
+diff -u -N zoo/bsd.c /usr/src/redhat/SOURCES/zoo-2.10/bsd.c
+--- zoo/bsd.c	1993-05-01 06:21:53.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/bsd.c	1991-07-05 18:00:00.000000000 +0200
+@@ -74,26 +74,14 @@
+ #define SEC_IN_DAY	(24L * 60L * 60L)
+ #define INV_VALUE		(SEC_IN_DAY + 1L)
+ 	static long retval = INV_VALUE;	     /* cache, init to impossible value */
+-#ifndef __386BSD__
+    struct timeval tp;
+    struct timezone tzp;
+-#else
+-   time_t lt;
+-   struct tm *tm;
+-#endif
+ 	if (retval != INV_VALUE)				 /* if have cached value, return it */
+ 		return retval;
+-#ifndef __386BSD__
+    gettimeofday (&tp, &tzp);              /* specific to 4.3BSD */
+    /* return (tzp.tz_minuteswest * 60); */ /* old incorrect code */
+ 	/* Timezone fix thanks to Bill Davidsen <wedu@ge-crd.ARPA> */
+-	/* !! - ache@hq.demos.su */
+-	retval = tzp.tz_minuteswest * 60 - (tzp.tz_dsttime != 0) * 3600L;
+-#else
+-	time(&lt);
+-	tm = localtime(&lt);
+-	retval = -tm->tm_gmtoff;
+-#endif
++	retval = tzp.tz_minuteswest * 60 - tzp.tz_dsttime * 3600L;
+ 	return retval;
+ }
+ 
+diff -u -N zoo/Copyright /usr/src/redhat/SOURCES/zoo-2.10/Copyright
+--- zoo/Copyright	1991-07-16 17:47:06.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/Copyright	1970-01-01 01:00:00.000000000 +0100
+@@ -1,46 +0,0 @@
+-
+-                            COPYRIGHT
+-
+-
+-The following rules apply only to the zoo archiver itself.
+-Currently, all extract-only programs, and all supporting utili-
+-ties, are fully in the public domain and are expected to remain so
+-for the forseeable future.
+-
+-            COPYRIGHT STATEMENT FOR ZOO ARCHIVE PROGRAM
+-
+-1.   "This software" refers separately to each existing version, and
+-     each existing authorized derivative work, of my zoo archive
+-     program as of the date at the bottom of this copyright statement.
+-
+-2.   DISTRIBUTION IN UNMODIFIED FORM:  You may copy this software in
+-     unmodified form for any purpose, whether commercial or
+-     noncommercial, provided that you make no attempt to restrict
+-     distribution of it by others.
+-
+-3.   CREATION OF DERIVATIVE WORKS:  You may create and distribute
+-     derivative works made from any source code files that are part of
+-     this software, provided that you (a) preserve all copyright
+-     notices and author attributions, (b) do not create, whether
+-     deliberately or through negligence, any derivative work that
+-     violates the compatibility goals describe in the reference manual
+-     for zoo 2.1, (c) do not attempt to restrict the distribution or
+-     use of the derivative work by others, (d) make the fully commented
+-     source code of the derivative work available to me at no cost if
+-     I so request, and make no attempt to restrict the distribution
+-     or use of this source code.
+-
+-4.   NO WARRANTY.  I make no claim that this software is free of defects.
+-     I do not accept any legal obligation to provide any bug fixes or
+-     any other type of support whatsoever.  I disclaim all liability
+-     for damages, whether direct or consequential.
+-
+-5.   EXCEPTIONS:  Exceptions to the above conditions are probably
+-     possible.  Please contact me to negotiate.
+-
+-6.   The prohibition against incompatible derivative works does not 
+-     necessarily imply that the archiver and the archive format cannot
+-     be enhanced.  However, if any incompatibility is created, it may
+-     be done only with my permission.
+-
+-                                   -- Rahul Dhesi 1991/07/07
+diff -u -N zoo/decode.c /usr/src/redhat/SOURCES/zoo-2.10/decode.c
+--- zoo/decode.c	1993-05-01 06:04:21.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/decode.c	2002-06-20 17:19:36.000000000 +0200
+@@ -27,8 +27,8 @@
+ */
+ 
+ int decode(count, buffer)
+-uint count;
+-uchar *buffer;
++my_uint count;
++uchar buffer[];
+ 	/* The calling function must keep the number of
+ 	   bytes to be processed.  This function decodes
+ 	   either 'count' bytes or 'DICSIZ' bytes, whichever
+@@ -37,8 +37,8 @@
+ 	   Call decode_start() once for each new file
+ 	   before calling this function. */
+ {
+-	static uint i;
+-	uint r, c;
++	static my_uint i;
++	my_uint r, c;
+ 
+ 	r = 0;
+ 	while (--j >= 0) {
+diff -u -N zoo/encode.c /usr/src/redhat/SOURCES/zoo-2.10/encode.c
+--- zoo/encode.c	1993-05-01 05:46:58.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/encode.c	1991-07-05 18:00:00.000000000 +0200
+@@ -5,11 +5,6 @@
+ Adapted from "ar" archiver written by Haruhiko Okumura.
+ */
+ 
+-#ifdef ANSI_HDRS
+-# include <stdlib.h>
+-# include <string.h>
+-#endif
+-
+ #include "options.h"
+ #include "zoo.h"
+ #include "ar.h"
+@@ -20,6 +15,11 @@
+ 
+ #include <assert.h>
+ 
++#ifdef ANSI_HDRS
++# include <stdlib.h>
++# include <string.h>
++#endif
++
+ #include "errors.i"
+ 
+ FILE *lzh_infile;
+Binary files zoo/fiz and /usr/src/redhat/SOURCES/zoo-2.10/fiz differ
+diff -u -N zoo/huf.c /usr/src/redhat/SOURCES/zoo-2.10/huf.c
+--- zoo/huf.c	1993-05-01 05:46:40.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/huf.c	1991-07-05 18:00:00.000000000 +0200
+@@ -5,10 +5,6 @@
+ 
+ Adapted from "ar" archiver written by Haruhiko Okumura.
+ ***********************************************************/
+-#ifdef ANSI_HDRS
+-# include <stdlib.h>
+-#endif
+-
+ #include "options.h"
+ #include "zoo.h"
+ #include "ar.h"
+@@ -17,6 +13,10 @@
+ 
+ extern void prterror();
+ 
++#ifdef ANSI_HDRS
++# include <stdlib.h>
++#endif
++
+ #define NP (DICBIT + 1)
+ #define NT (CODE_BIT + 3)
+ #define PBIT 4  /* smallest integer such that (1U << PBIT) > NP */
+diff -u -N zoo/lzd.c /usr/src/redhat/SOURCES/zoo-2.10/lzd.c
+--- zoo/lzd.c	1993-05-01 06:06:19.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/lzd.c	1991-07-05 18:00:00.000000000 +0200
+@@ -59,7 +59,7 @@
+ extern unsigned int filt_lzd_word;
+ #endif /* FILTER */
+ 
+-void xwr_dchar PARMS ((int));
++void xwr_dchar PARMS ((char));
+ static int firstchar PARMS ((int));
+ static void cbfill PARMS ((void));
+ 
+diff -u -N zoo/lzh.c /usr/src/redhat/SOURCES/zoo-2.10/lzh.c
+--- zoo/lzh.c	1993-05-01 06:04:21.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/lzh.c	2002-06-20 17:19:36.000000000 +0200
+@@ -45,14 +45,14 @@
+ 
+ 	decode_start();
+ 	while (!decoded) {
+-		n = decode((uint) DICSIZ, (uchar *)out_buf_adr); /* n = count of chars decoded */
++		n = decode((my_uint) DICSIZ, out_buf_adr); /* n = count of chars decoded */
+ #ifdef COUNT_BYTES
+ 		bytes_decoded += n;	/*debug*/
+ #endif
+ #ifdef CHECK_BREAK
+ 		check_break();
+ #endif
+-		fwrite_crc((uchar *)out_buf_adr, n, outfile);
++		fwrite_crc(out_buf_adr, n, outfile);
+ #ifdef SHOW_DOTS
+ 		(void) putc('.', stderr);
+ 		(void) fflush(stderr);
+diff -u -N zoo/lzh.h /usr/src/redhat/SOURCES/zoo-2.10/lzh.h
+--- zoo/lzh.h	1991-07-16 17:51:50.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/lzh.h	2002-06-20 17:19:36.000000000 +0200
+@@ -34,4 +34,4 @@
+ #define CBIT 9  /* $\lfloor \log_2 NC \rfloor + 1$ */
+ #define CODE_BIT  16  /* codeword length */
+ 
+-extern ushort left[], right[];
++extern my_ushort left[], right[];
+diff -u -N zoo/makefile /usr/src/redhat/SOURCES/zoo-2.10/makefile
+--- zoo/makefile	1991-07-16 17:52:08.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/makefile	2002-06-20 17:21:13.000000000 +0200
+@@ -18,13 +18,13 @@
+ 
+ MAKE = make	      # needed for some systems e.g. older BSD
+ 
+-CC = cc
++CC = gcc
+ CFLAGS =
+ MODEL =
+ EXTRA = -DBIG_MEM -DNDEBUG
+ LINTFLAGS = -DLINT
+-OPTIM = -O
+-DESTDIR = /usr/local/bin
++OPTIM = -O3
++DESTDIR = /usr/bin
+ 
+ #List of all object files created for Zoo
+ ZOOOBJS = addbfcrc.o addfname.o basename.o comment.o crcdefs.o \
+@@ -50,6 +50,7 @@
+ 	@echo "generic:      generic **IX environment, minimal functionlity"
+ 	@echo "bsd:          4.3BSD or reasonable equivalent"
+ 	@echo "bsdansi:      4.3BSD with ANSI C"
++	@echo "linux:	     Linux for Alpha & i386"
+ 	@echo "ultrix:       ULTRIX 4.1"
+ 	@echo "convex:       Convex C200 series"
+ 	@echo "sysv:         System V Release 2 or 3; or SCO Xenix"
+@@ -106,6 +107,10 @@
+ convex:
+ 	$(MAKE) CFLAGS="-c $(OPTIM) -DBSD4_3 -DANSI_HDRS" $(TARGETS)
+ 
++# Linux
++linux:
++	$(MAKE) CFLAGS="-c $(OPTIM) -DSYS_V -DANSI_HDRS -DHAVE_MKDIR" $(TARGETS)
++
+ # SysV.2, V.3, SCO Xenix
+ sysv:
+ 	$(MAKE) CFLAGS="-c $(OPTIM) -DSYS_V" $(TARGETS)
+@@ -235,7 +240,7 @@
+ parse.o: zoofns.h zooio.h
+ portable.o: /usr/include/stdio.h assert.h debug.h machine.h options.h
+ portable.o: portable.h various.h zoo.h zoofns.h zooio.h
+-prterror.o: /usr/include/stdio.h /usr/include/varargs.h options.h various.h
++prterror.o: /usr/include/stdio.h options.h various.h
+ prterror.o: zoofns.h zooio.h
+ sysv.o: /usr/include/sys/stat.h /usr/include/sys/types.h /usr/include/time.h
+ sysv.o: nixmode.i nixtime.i
+diff -u -N zoo/maketbl.c /usr/src/redhat/SOURCES/zoo-2.10/maketbl.c
+--- zoo/maketbl.c	1991-07-16 17:52:32.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/maketbl.c	2002-06-20 17:19:36.000000000 +0200
+@@ -16,10 +16,10 @@
+ int nchar;
+ uchar bitlen[];
+ int tablebits;
+-ushort table[];
++my_ushort table[];
+ {
+-	ushort count[17], weight[17], start[18], *p;
+-	uint i, k, len, ch, jutbits, avail, nextcode, mask;
++	my_ushort count[17], weight[17], start[18], *p;
++	my_uint i, k, len, ch, jutbits, avail, nextcode, mask;
+ 
+ 	for (i = 1; i <= 16; i++) count[i] = 0;
+ 	for (i = 0; i < nchar; i++) count[bitlen[i]]++;
+@@ -27,7 +27,7 @@
+ 	start[1] = 0;
+ 	for (i = 1; i <= 16; i++)
+ 		start[i + 1] = start[i] + (count[i] << (16 - i));
+-	if (start[17] != (ushort)((unsigned) 1 << 16))
++	if (start[17] != (my_ushort)((unsigned) 1 << 16))
+ 		prterror('f', "Bad decode table\n");
+ 
+ 	jutbits = 16 - tablebits;
+@@ -41,7 +41,7 @@
+         }
+ 
+ 	i = start[tablebits + 1] >> jutbits;
+-	if (i != (ushort)((unsigned) 1 << 16)) {
++	if (i != (my_ushort)((unsigned) 1 << 16)) {
+ 		k = 1 << tablebits;
+ 		while (i != k) table[i++] = 0;
+ 	}
+diff -u -N zoo/maketree.c /usr/src/redhat/SOURCES/zoo-2.10/maketree.c
+--- zoo/maketree.c	1991-07-16 17:52:38.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/maketree.c	2002-06-20 17:19:36.000000000 +0200
+@@ -12,7 +12,7 @@
+ 
+ static int    n, heapsize;
+ static short  heap[NC + 1];
+-static ushort *freq, *sortptr, len_cnt[17];
++static my_ushort *freq, *sortptr, len_cnt[17];
+ static uchar  *len;
+ 
+ static void count_len(i)  /* call with i = root */
+@@ -33,7 +33,7 @@
+ int root;
+ {
+ 	int i, k;
+-	uint cum;
++	my_uint cum;
+ 
+ 	for (i = 0; i <= 16; i++) len_cnt[i] = 0;
+ 	count_len(root);
+@@ -75,10 +75,10 @@
+ static void make_code(j, length, code)
+ int j;
+ uchar length[];
+-ushort code[];
++my_ushort code[];
+ {
+ 	int    i;
+-	ushort start[18];
++	my_ushort start[18];
+ 
+ 	start[1] = 0;
+ 	for (i = 1; i <= 16; i++)
+@@ -88,9 +88,9 @@
+ 
+ int make_tree(nparm, freqparm, lenparm, codeparm)
+ int nparm;
+-ushort freqparm[];
++my_ushort freqparm[];
+ uchar lenparm[];
+-ushort codeparm[];
++my_ushort codeparm[];
+ 	/* make tree, calculate len[], return root */
+ {
+ 	int i, j, k, avail;
+diff -u -N zoo/options.h /usr/src/redhat/SOURCES/zoo-2.10/options.h
+--- zoo/options.h	1993-05-01 06:27:59.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/options.h	1991-07-05 18:00:00.000000000 +0200
+@@ -73,6 +73,7 @@
+ /* #define UNBUF_LIMIT	512 */
+ #define  T_SIGNAL void
+ #define DIRECT_CONVERT
++#define STDARG
+ #define CHECK_BREAK
+ #define check_break kbhit
+ #define HAVE_ISATTY
+@@ -88,6 +89,7 @@
+ /***********************************************************************/
+ 
+ #ifdef BSD4_3
++#define NOSTRCHR /* not really needed for 4.3BSD */
+ #define FILTER
+ #define IO_MACROS
+ #define EXISTS(f)		(access(f, 00) == 0)
+@@ -101,23 +103,12 @@
+ #define SETBUF
+ #define GETTZ
+ #define FATTR
+-#ifdef __STDC__
+-#ifndef ANSI_HDRS
+-#define ANSI_HDRS
+-#endif
+-#define T_SIGNAL        void
+-#define STDARG
+-#define ANSI_PROTO
+-#define VOIDPTR		void *
+-#else
+-#define NOSTRCHR /* not really needed for 4.3BSD */
+ #define T_SIGNAL	int
+ #define VARARGS
+ #define NEED_MEMMOVE
+-#define NEED_VPRINTF		/* older BSDs only; newer ones have vprintf */
+-#endif
+ #define T_UINT16		unsigned short		/* must be 16 bit unsigned */
+ #define HAVE_ISATTY
++#define NEED_VPRINTF		/* older BSDs only; newer ones have vprintf */
+ #endif /* BSD4_3 */
+ 
+ /*  Ultrix 4.1 */
+diff -u -N zoo/sysv.c /usr/src/redhat/SOURCES/zoo-2.10/sysv.c
+--- zoo/sysv.c	1991-07-16 17:55:34.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/sysv.c	2002-06-20 17:19:36.000000000 +0200
+@@ -129,6 +129,7 @@
+ exists by the name of the needed directory.
+ */
+ 
++#ifndef HAVE_MKDIR
+ int mkdir(dirname)
+ char *dirname;
+ {
+@@ -140,6 +141,7 @@
+    }
+ 	return (0);
+ }
++#endif
+ 
+ /* No file truncate system call in older System V.  If yours has one,
+ add it here -- see bsd.c for example.  It's ok for zootrunc to be
+diff -u -N zoo/zoo.1 /usr/src/redhat/SOURCES/zoo-2.10/zoo.1
+--- zoo/zoo.1	1993-05-01 06:10:09.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zoo.1	1991-07-05 18:00:00.000000000 +0200
+@@ -176,15 +176,15 @@
+ Novice@@Equivalent
+ Command@Description@Expert Command
+ _
+-\-add@add files to archive@ahP
++\-add@add files to archive@aP:
+ \-extract@extract files from archive@x
+-\-move@move files to archive@ahMP
++\-move@move files to archive@aMP:
+ \-test@test archive integrity@xNd
+ \-print@extract files to standard output@xp
+ \-delete@delete files from archive@DP
+-\-list@list archive contents@Vm
+-\-update@add new or newer files@ahunP
+-\-freshen@by add newer files@ahuP
++\-list@list archive contents@VC
++\-update@add new or newer files@aunP:
++\-freshen@by add newer files@auP:
+ \-comment@add comments to files@c
+ .TE
+ .fi
+@@ -1041,7 +1041,7 @@
+ Matches any sequence of zero or more characters.
+ .PP
+ .TP
+-.B ?
++.B \?
+ Matches any single character.
+ .sp 1
+ Arbitrary combinations of 
+diff -u -N zoo/zooadd2.c /usr/src/redhat/SOURCES/zoo-2.10/zooadd2.c
+--- zoo/zooadd2.c	1991-07-20 01:38:10.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zooadd2.c	1991-07-05 18:00:00.000000000 +0200
+@@ -263,7 +263,7 @@
+    direntry->zoo_tag = ZOO_TAG;
+    direntry->type = 2;                  /* type is now 2 */
+ #ifdef GETTZ
+-	direntry->tz = gettz() / (15 * 60); /* seconds => 15-min units */
++	direntry->tz = (uchar) (gettz() / (15 * 60)); /* seconds => 15-min units */
+ #else
+    direntry->tz = NO_TZ;                /* timezone unknown */
+ #endif
+diff -u -N zoo/zooadd.c /usr/src/redhat/SOURCES/zoo-2.10/zooadd.c
+--- zoo/zooadd.c	1993-05-01 05:43:38.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zooadd.c	2002-06-20 17:19:36.000000000 +0200
+@@ -34,9 +34,7 @@
+                int *, int *, int *, int *, int *, int *, int *, int *));
+ int ver_too_high PARMS ((struct zoo_header *));
+ void get_comment PARMS ((struct direntry *, ZOOFILE, char *));
+-#ifndef PORTABLE
+ void copyfields PARMS ((struct direntry *, struct tiny_header *));
+-#endif
+ void storefname PARMS ((struct direntry *, char *, int));
+ char *choosefname PARMS ((struct direntry *));
+ 
+@@ -134,7 +132,7 @@
+ 
+ if (zoo_file == NOFILE)
+    prterror ('f', could_not_open, zoo_path);
+-basename(zoo_path, zoo_fname);      /* get basename of archive */
++mybasename(zoo_path, zoo_fname);      /* get basename of archive */
+ rootname (zoo_path, zoo_bak);       /* name without extension */
+ strcat (zoo_bak, BACKUP_EXT);       /* name of backup of this archive */
+ 
+@@ -224,7 +222,7 @@
+ 		break;
+ 	}
+ 
+-   basename (this_path, this_fname);   /* get just filename for later */
++   mybasename (this_path, this_fname);   /* get just filename for later */
+ 
+    this_file = zooopen(this_path, Z_READ);
+    if (this_file == NOFILE) {
+diff -u -N zoo/zoo.c /usr/src/redhat/SOURCES/zoo-2.10/zoo.c
+--- zoo/zoo.c	1991-07-17 14:28:43.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zoo.c	1991-07-05 18:00:00.000000000 +0200
+@@ -225,17 +225,17 @@
+    if (cmd != NONE) {
+       switch (cmd) {
+ 
+-	 case ADD:      zooadd (zooname, filecount, &argv[3], "ahP"); break;
+-	 case FRESHEN:  zooadd (zooname, filecount, &argv[3], "ahuP"); break;
+-	 case UPDATE:   zooadd (zooname, filecount, &argv[3], "ahunP"); break;
+-	 case MOVE:     zooadd (zooname, filecount, &argv[3], "ahMP"); break;
++         case ADD:      zooadd (zooname, filecount, &argv[3], "aP:"); break;
++         case FRESHEN:  zooadd (zooname, filecount, &argv[3], "auP:"); break;
++         case UPDATE:   zooadd (zooname, filecount, &argv[3], "aunP:"); break;
++         case MOVE:     zooadd (zooname, filecount, &argv[3], "aMP:"); break;
+ 
+          case EXTRACT:  zooext (zooname, "x"); break;
+          case TEST:     zooext (zooname, "xNd"); break;
+          case PRINT:    zooext (zooname, "xp"); break;
+ 
+          case DELETE:   zoodel (zooname, "DP",1); break;
+-	 case LIST:     zoolist (&argv[2], "Vm", argc-2); break;
++         case LIST:     zoolist (&argv[2], "VC", argc-2); break;
+          case COMMENT:  comment (zooname, "c"); break;
+          default: goto show_usage;
+       }
+diff -u -N zoo/zooext.c /usr/src/redhat/SOURCES/zoo-2.10/zooext.c
+--- zoo/zooext.c	1993-05-01 05:58:50.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zooext.c	1991-07-05 18:00:00.000000000 +0200
+@@ -626,7 +626,7 @@
+ 
+ /* Ctrl_c() is called if ^C is hit while a file is being extracted.
+    It closes the files, deletes it, and exits. */
+-T_SIGNAL ctrl_c(int foo)
++T_SIGNAL ctrl_c()
+ {
+ #ifndef NOSIGNAL
+    signal (SIGINT, SIG_IGN);     /* ignore any more */
+diff -u -N zoo/zoofns.h /usr/src/redhat/SOURCES/zoo-2.10/zoofns.h
+--- zoo/zoofns.h	1993-05-01 05:57:35.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zoofns.h	2002-06-20 17:19:36.000000000 +0200
+@@ -42,12 +42,12 @@
+ int cfactor PARMS ((long, long));
+ int chname PARMS ((char *, char *));
+ int cmpnum PARMS ((unsigned int, unsigned int, unsigned int, unsigned int));
+-T_SIGNAL ctrl_c PARMS ((int));
++T_SIGNAL ctrl_c PARMS ((void));
+ int exists PARMS ((char *));
+ int getfile PARMS ((ZOOFILE, ZOOFILE, long, int));
+ int getutime PARMS ((char *, unsigned *, unsigned *));
+ int gettime PARMS ((ZOOFILE, unsigned *, unsigned *));
+-T_SIGNAL handle_break PARMS ((int));
++T_SIGNAL handle_break PARMS ((void));
+ 
+ #ifdef USE_ASCII
+ int isupper PARMS ((int));
+@@ -85,7 +85,7 @@
+ void addfname PARMS ((char *, long, unsigned int, unsigned int, 
+ 							unsigned, unsigned));
+ void add_version PARMS ((char *, struct direntry *));
+-void basename PARMS ((char *, char []));
++void mybasename PARMS ((char *, char []));
+ void break_off PARMS ((void));
+ void close_file PARMS ((ZOOFILE));
+ void comment PARMS ((char *, char *));
+diff -u -N zoo/zoo.h /usr/src/redhat/SOURCES/zoo-2.10/zoo.h
+--- zoo/zoo.h	1993-05-01 05:40:56.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zoo.h	1991-07-05 18:00:00.000000000 +0200
+@@ -1,9 +1,5 @@
+ /* derived from: zoo.h 2.16 88/01/27 23:21:36 */
+ 
+-#ifndef ZOO_H
+-
+-#define ZOO_H
+-
+ /*
+ The contents of this file are hereby released to the public domain.
+ 
+@@ -131,7 +127,7 @@
+    char fname[FNAMESIZE]; 		/* filename */
+ 
+    int var_dir_len;           /* length of variable part of dir entry */
+-   char tz;                   /* timezone where file was archived */
++   uchar tz;                   /* timezone where file was archived */
+    unsigned int dir_crc;      /* CRC of directory entry */
+ 
+    /* fields for variable part of directory entry follow */
+@@ -244,5 +240,3 @@
+ #define	MAXGEN				0x0f
+ /* version mask to prune down to correct size on large-word machines */
+ #define VER_MASK				0xffff
+-
+-#endif  /* ZOO_H */
+diff -u -N zoo/zooio.h /usr/src/redhat/SOURCES/zoo-2.10/zooio.h
+--- zoo/zooio.h	1993-05-01 05:39:50.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zooio.h	1991-07-05 18:00:00.000000000 +0200
+@@ -12,8 +12,6 @@
+ #define	OK_STDIO
+ #endif
+ 
+-#include "zoo.h"
+-
+ #ifndef PARMS
+ #ifdef LINT_ARGS
+ #define	PARMS(x)		x
+diff -u -N zoo/zoo.man /usr/src/redhat/SOURCES/zoo-2.10/zoo.man
+--- zoo/zoo.man	1991-07-17 15:12:22.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zoo.man	1991-07-05 18:00:00.000000000 +0200
+@@ -121,15 +121,15 @@
+      Novice                                        Equivalent
+      Command    Description                        Expert Command
+      ____________________________________________________________
+-     -add       add files to archive               ahP
++     -add       add files to archive               aP:
+      -extract   extract files from archive         x
+-     -move      move files to archive              ahMP
++     -move      move files to archive              aMP:
+      -test      test archive integrity             xNd
+      -print     extract files to standard output   xp
+      -delete    delete files from archive          DP
+-     -list      list archive contents              Vm
+-     -update    add new or newer files             ahunP
+-     -freshen   by add newer files                 ahuP
++     -list      list archive contents              VC
++     -update    add new or newer files             aunP:
++     -freshen   by add newer files                 auP:
+      -comment   add comments to files              c
+ 
+      Expert commands
+diff -u -N zoo/zoopack.c /usr/src/redhat/SOURCES/zoo-2.10/zoopack.c
+--- zoo/zoopack.c	1993-05-01 05:59:21.000000000 +0200
++++ /usr/src/redhat/SOURCES/zoo-2.10/zoopack.c	2002-06-20 17:20:15.000000000 +0200
+@@ -171,7 +171,7 @@
+ } else {
+    strcpy (temp_file, xes);
+ }
+-mktemp (temp_file);                    /* ... and make unique */
++mkstemp (temp_file);                    /* ... and make unique */
+ new_file = zoocreate (temp_file);
+ if (new_file == NOFILE)
+    prterror ('f', "Could not create temporary file %s.\n", temp_file);
+@@ -388,7 +388,7 @@
+ 
+ /* handle_break() */
+ /* Sets break_hit to 1 when called */
+-T_SIGNAL handle_break(int foo)
++T_SIGNAL handle_break()
+ {
+ #ifndef NOSIGNAL
+    signal (SIGINT, SIG_IGN);     /* ignore future control ^Cs for now */
