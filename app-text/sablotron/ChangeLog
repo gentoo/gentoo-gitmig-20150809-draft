@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.30 2004/05/03 08:08:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.31 2004/05/25 14:57:04 fmccor Exp $
+
+  25 May 2004; Ferris McCormick <fmccor@gentoo.org> sablotron-1.0.ebuild:
+  Marked stable on sparc.
 
   03 May 2004; Joshua Kinard <kumba@gentoo.org> sablotron-1.0.1.ebuild:
   Added ~mips to keywords and added gnuconfig support.

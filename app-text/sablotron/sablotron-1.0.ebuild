@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.ebuild,v 1.8 2004/04/29 00:19:11 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.ebuild,v 1.9 2004/05/25 14:57:04 fmccor Exp $
 
 inherit libtool
 
@@ -16,7 +16,7 @@ LICENSE="MPL-1.1"
 
 SLOT="0"
 IUSE="doc perl"
-KEYWORDS="x86 ~sparc ~ppc ~hppa alpha amd64 ia64"
+KEYWORDS="x86 sparc ~ppc ~hppa alpha amd64 ia64"
 
 DEPEND=">=dev-libs/expat-1.95.6-r1
 	>=dev-perl/XML-Parser-2.3"
