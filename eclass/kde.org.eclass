@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.org.eclass,v 1.26 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.org.eclass,v 1.27 2003/04/08 17:48:12 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -22,13 +22,15 @@ case "$PV" in
 	3.1_rc3)		SRC_PATH="unstable/kde-3.1-rc3/src/${P//3.1_rc3/3.0.99}.tar.bz2" ;;
 	3.1_rc5)		SRC_PATH="unstable/kde-3.1-rc5/src/${P//_}.tar.bz2" ;;
 	3.1_rc6)		SRC_PATH="unstable/kde-3.1-rc6/src/${P//_}.tar.bz2" ;;
-	3*)				SRC_PATH="stable/$PV/src/${P}.tar.bz2" ;;
+	3.1.1a)			SRC_PATH="stable/$PV/src/${PN}-3.1.1.tar.bz2"
+				SRC_URI="$SRC_URI mirror://gentoo/${P}.diff.bz2" ;;
+	3*)			SRC_PATH="stable/$PV/src/${P}.tar.bz2" ;;
 	5)					SRC_URI="" # cvs ebuilds, no SRC_URI needed
 		debug-print "$ECLASS: finished, cvs detected, SRC_URI=$SRC_URI"
 		return 0 ;; 
 	*)		debug-print "$ECLASS: Error: unrecognized version $PV, could not set SRC_URI" ;;
 esac
 
-SRC_URI="mirror://kde/$SRC_PATH"
+SRC_URI="$SRC_URI mirror://kde/$SRC_PATH"
 
 debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"

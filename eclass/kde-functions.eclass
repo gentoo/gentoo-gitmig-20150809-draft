@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.53 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.54 2003/04/08 17:48:12 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -90,6 +90,8 @@ need-kde() {
 		# maybe i should look at relocating it...
 		if [ "$PV" == "3.0.3" ]; then
 			newdepend "=kde-base/kdelibs-3.0.3*"
+		elif [ "$PV" == "3.1.1" ]; then
+			newdepend "=kde-base/kdelibs-3.1.1*"
 		elif [ "$PV" == "2.2.2" ]; then
 			newdepend "=kde-base/kdelibs-2.2.2*"
 		else
