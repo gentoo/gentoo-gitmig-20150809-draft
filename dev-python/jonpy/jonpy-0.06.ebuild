@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/jonpy-0.06.ebuild,v 1.1 2004/12/20 21:52:00 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/jonpy-0.06.ebuild,v 1.2 2004/12/20 22:02:34 port001 Exp $
 
 inherit distutils
 
@@ -20,17 +20,13 @@ RDEPEND="${DEPEND}"
 src_install() {
 	distutils_src_install
 
-	dodir /usr/share/${P}/wt-examples
 	insinto /usr/share/${P}/wt-examples
 	doins ${S}/example/printenv.html ${S}/example/wt/printenv.html.py
-	dodir /usr/share/${P}/wt-examples/cgi-bin
 	insinto /usr/share/${P}/wt-examples/cgi-bin
 	doins ${S}/example/cgi-bin/wt.py
 
-	dodir /usr/share/doc/${P}/html/
-	insinto /usr/share/doc/${P}/html
 	for file in `ls ${S}/doc/`; do
-		doins ${S}/doc/${file}
+		dohtml ${S}/doc/${file}
 	done
 
 	dodoc LICENCE README
