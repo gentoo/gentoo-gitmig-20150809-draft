@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.11.ebuild,v 1.13 2004/01/11 03:53:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.11.ebuild,v 1.14 2004/02/06 16:09:39 max Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
 
@@ -192,7 +192,8 @@ src_install () {
 	doexe postfix-script post-install postfix-files
 
 	insinto /etc/postfix
-	doins ${S}/conf/{main,master}.cf ${FILESDIR}/saslpass
+	doins ${S}/conf/{main,master}.cf
+	newins ${FILESDIR}/smtp.pass saslpass
 	cd ${D}/etc/postfix
 	epatch ${FILESDIR}/postfix-2.0.0/main.cf.diff
 	sed -i -e "s|/usr/share/doc/POSTFIX|/usr/share/doc/${PF}|" main.cf
@@ -200,11 +201,11 @@ src_install () {
 	rm -f main.cf~
 	fperms 600 /etc/postfix/saslpass
 
-	exeinto /etc/init.d ; doexe ${FILESDIR}/postfix
+	exeinto /etc/init.d ; doexe ${FILESDIR}/postfix.rc6
 	insinto /etc/pam.d ; newins ${FILESDIR}/smtp.pam smtp
 
 	insinto /etc/sasl2
-	doins ${FILESDIR}/smtpd-2.0.conf smtpd.conf
+	doins ${FILESDIR}/smtpd.conf
 	if [ "`use sasl`" ] ; then
 		dodir /usr/lib/sasl2
 		dosym ../../../etc/sasl2/smtpd.conf /usr/lib/sasl2/smtpd.conf
