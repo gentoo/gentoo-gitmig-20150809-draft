@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.4_pre20030311.ebuild,v 1.1 2003/04/16 15:01:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.4_pre20030311.ebuild,v 1.2 2003/05/04 19:07:00 mholzer Exp $
 
 inherit libtool flag-o-matic
 
@@ -95,7 +95,7 @@ src_compile() {
 
 	# Use the MPlayer libpostproc if present
 	[ -f ${ROOT}/usr/lib/libpostproc.a ] && \
-	[ -f ${ROOT}/usr/include/postprocess.h ] && \
+	[ -f ${ROOT}/usr/include/postproc/postprocess.h ] && \
 		myconf="${myconf} --with-libpostproc-builddir=${ROOT}/usr/lib"
 
 	
