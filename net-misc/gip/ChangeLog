@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.2 2004/06/26 13:10:29 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.3 2004/07/08 11:23:22 jmglov Exp $
+
+*gip-1.1.0.1 (08 Jul 2004)
+
+  08 Jul 2004; Josh Glover <jmglov@gentoo.org> gip-1.1.0.1.ebuild:
+  Version bump; submitted by Josh Glover in bug #55055
 
   26 Jun 2004; Josh Glover <jmglov@gentoo.org> gip-1.0.0.1.ebuild:
   Incorporates fix to Bug #55186 submitted solar@gentoo.org
