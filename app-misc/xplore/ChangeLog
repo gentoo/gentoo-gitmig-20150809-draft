@@ -1,6 +1,19 @@
 # ChangeLog for app-misc/xplore
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xplore/ChangeLog,v 1.1 2002/02/01 21:53:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xplore/ChangeLog,v 1.2 2002/03/06 06:01:24 tod Exp $
+
+*xplore-1.1e (5 Mar 2002)
+
+  5 Mar 2002; T.Neidt <tod@gentoo.org> ChangeLog, xplore-1.1e.ebuild :
+
+  Updated to latest bugfix version.
+
+*xplore-1.1-r1 (5 Mar 2002)
+
+  5 Mar 2002; T.Neidt <tod@gentoo.org> ChangeLog, xplore-1.1-r1.ebuild :
+
+  Added required openmotif dependency (Bug# 888, thanks Markinho).
+  Updated ebuild to install to /usr instead of /usr/X11R6. Cleanups.
 
 *xplore-1.1 (1 Feb 2002)
 
