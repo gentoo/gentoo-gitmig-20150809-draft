@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.9 2003/03/29 04:28:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.10 2003/05/28 20:54:57 g2boojum Exp $
+
+*nss_ldap-207 (28 May 2003)
+
+  28 May 2003; Grant Goodyear <g2boojum@gentoo.org> nss_ldap-207.ebuild:
+  Version update, plus installed a proper ldap.conf.
 
 *nss_ldap-202 (28 Mar 2003)
 
