@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/clientcookie
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientcookie/ChangeLog,v 1.1 2003/10/02 22:55:50 pythonhead Exp $
+
+*clientcookie-0.4.4a (02 Oct 2003)
+
+  02 Oct 2003; Rob Cakebread <pythonhead@gentoo.org>
+  clientcookie-0.4.4a.ebuild, metadata.xml:
+  Initial ebuild (#27582)
+
