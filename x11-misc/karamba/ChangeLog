@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/karamba
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.5 2004/02/28 19:19:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.6 2004/03/14 17:30:44 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> karamba-0.17-r1.ebuild,
+  karamba-0.17.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *karamba-0.17-r1 (04 May 2003)
 
