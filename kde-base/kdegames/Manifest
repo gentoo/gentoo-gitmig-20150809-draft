@@ -2,8 +2,8 @@ MD5 af215cb31f8ee3656b110dcca07b23c1 kdegames-3.2.1.ebuild 342
 MD5 a6ed52c0c72a48f6777a93e5377ed96c kdegames-3.1.5.ebuild 941
 MD5 78b19c928dae80f52fcd2da721faab81 kdegames-3.2.0.ebuild 449
 MD5 3500525a3526c69a39bb12bc0bd56145 kdegames-3.0.5b.ebuild 357
-MD5 1cc13e745f25dd164932a2c80813c06f kdegames-3.2.2.ebuild 346
-MD5 d4a6974663cbd5e378725e014ca9c3f2 ChangeLog 8792
+MD5 b25ea52c644a5dd79f0960c9d482415f kdegames-3.2.2.ebuild 349
+MD5 9ccd2dbed2da1444e411c4b3ee78fb28 ChangeLog 8914
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 9454a7045d01e70b0b5b69c46be36801 files/kdegames-3.0.5b-gentoo.diff 592
 MD5 5ab4efd4e815e8257d53a92a2a8eac4a files/digest-kdegames-3.1.5 68
