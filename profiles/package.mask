@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <phoenix@gentoo.org> (21 Aug 2002)
-# masked for testing
-=sys-apps/modutils-2.4.19
-
 # <danarmak@gentoo.org> (20 Aug 2002)
 # masked for extensive testing
 x11-libs/qt-embedded
