@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/wwwoffle-2.8c.ebuild,v 1.1 2004/09/19 07:18:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/wwwoffle-2.8c.ebuild,v 1.2 2004/09/19 14:30:40 dragonheart Exp $
 
 inherit eutils
 
@@ -111,7 +111,10 @@ src_install() {
 		keepdir /var/spool/wwwoffle/prevtime${number} /var/spool/wwwoffle/prevout${number}
 	done
 
-	fowners root:wwwoffle /var/spool/wwwoffle
+	# Need to sumbit patch upstream to allow this.
+	#fowners root:wwwoffle /var/spool/wwwoffle
+	fowners wwwoffle:wwwoffle /var/spool/wwwoffle
+
 	# empty dirs are removed during update
 	keepdir \
 	/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
@@ -151,7 +154,10 @@ pkg_postinst() {
 	${ROOT}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime[1-9],prevout[1-9],lastout,local} \
 	${ROOT}/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
 
-	chown root:wwwoffle /var/spool/wwwoffle
+	# Need to sumbit patch upstream to allow this.
+	#fowners root:wwwoffle /var/spool/wwwoffle
+	fowners wwwoffle:wwwoffle /var/spool/wwwoffle
+
 	[ -f ${T}/stopped ] && \
 		ewarn "wwwoffled was stopped. /etc/init.d/wwwoffled start to restart AFTER etc-update"
 

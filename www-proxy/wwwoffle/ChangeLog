@@ -1,6 +1,10 @@
 # ChangeLog for www-proxy/wwwoffle
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/ChangeLog,v 1.4 2004/09/19 07:18:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/ChangeLog,v 1.5 2004/09/19 14:30:40 dragonheart Exp $
+
+  19 Sep 2004; Daniel Black <dragonheart@gentoo.org> wwwoffle-2.8c.ebuild:
+  Ownership of /var/spool/wwwoffle changed to wwwoffle:wwwoffle. Thanks to Alan
+  Swanson <swanson@ukfsn.org> in bug #64629
 
 *wwwoffle-2.8c (19 Sep 2004)
 
