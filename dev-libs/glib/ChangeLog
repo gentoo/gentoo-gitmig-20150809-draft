@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.97 2004/09/29 04:22:39 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.98 2004/10/09 15:18:16 foser Exp $
+
+*glib-2.4.7 (09 Oct 2004)
+
+  09 Oct 2004; foser <foser@gentoo.org> glib-2.4.7.ebuild :
+  New release
 
   29 Sep 2004; Lina Pezzella <j4rg0n@gentoo.org> glib-2.4.4.ebuild, glib-2.4.5.ebuild, glib-2.4.6.ebuild:
   Updated to not install charset.alias on macos.
