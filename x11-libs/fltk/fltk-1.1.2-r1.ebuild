@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.2-r1.ebuild,v 1.2 2003/02/13 16:55:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.2-r1.ebuild,v 1.3 2003/02/14 21:38:08 vapier Exp $
 
-IUSE="opengl"
-
-S=${WORKDIR}/${P}
+inherit eutils
 
 DESCRIPTION="C++ user interface toolkit for X and OpenGL."
 HOMEPAGE="http://www.fltk.org"
@@ -13,24 +11,20 @@ SRC_URI="ftp://ftp.easysw.com/pub/fltk/${PV}/${P}-source.tar.bz2"
 SLOT="1.1"
 KEYWORDS="x86 ppc sparc"
 LICENSE="FLTK | GPL-2"
+IUSE="opengl"
 
 DEPEND="virtual/x11
 	media-libs/libpng
 	media-libs/jpeg
 	opengl? ( virtual/opengl )"
 
-inherit eutils
-
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/libs.diff || die "patch failed"
-
 }
 
 src_compile() {
-
 	local myconf
 	myconf="--enable-shared --enable-static --enable-threads \
 		--enable-xdbe"
@@ -55,11 +49,9 @@ src_compile() {
 		${myconf} || die "Configuration Failed"
 
 	emake || die "Parallel Make Failed"
-
 }
 
-src_install () {
-
+src_install() {
 	einstall \
 		includedir=${D}/usr/include/fltk-1.1 \
 		libdir=${D}/usr/lib/fltk-1.1 || die "Installation Failed"
