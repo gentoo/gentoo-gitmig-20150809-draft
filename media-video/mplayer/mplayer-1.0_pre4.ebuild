@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.9 2004/04/28 16:35:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4.ebuild,v 1.1 2004/04/28 16:35:03 mholzer Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2"
 
@@ -93,30 +93,15 @@ src_unpack() {
 
 	use gtk && unpack Blue-1.0.tar.bz2
 
-	# security problem, bug #46246
-	cd ${S}/libmpdemux; epatch ${FILESDIR}/vuln02-fix.diff
-
 	# Fix head/tail call for new coreutils
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
 
 	# Fix mencoder segfaulting with bad arguments
 	cd ${S}; epatch ${FILESDIR}/mencoder-segfault.patch
 
-	# Fix to diable xmms support. Closes 45356
-	epatch ${FILESDIR}/${P}-xmms.patch
-
-	#Fix libmatroska 
-	if has_version '>=libmatroska-0.6.3'
-	then
-		cd ${S}; epatch ${FILESDIR}/${P}-libmatroska063.diff
-	fi
-
-	#Add support for another G3 cpu
-	epatch ${FILESDIR}/ppc750FX-fix.patch
-
 	# GCC 3.4 fixes
-	epatch ${FILESDIR}/${P}-libavcodec-gcc34.patch
 	cd ${S}; epatch ${FILESDIR}/${P}-alsa-gcc34.patch
+
 
 	# Fix hppa detection
 	[ "${ARCH}" = "hppa" ] && sed -i -e "s/9000*/parisc*/" "${S}/configure"
@@ -257,7 +242,6 @@ src_compile() {
 		`use_enable arts` \
 		`use_enable lirc` \
 		`use_enable joystick` \
-		`use_enable matroska` \
 		`use_enable theora` \
 		`use_enable nas` \
 		`use_enable 3dfx tdfxfb` \
