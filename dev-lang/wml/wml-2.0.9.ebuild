@@ -1,6 +1,8 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.2 2002/12/09 04:20:59 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.3 2002/12/12 23:02:26 george Exp $
+
+IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Website META Language"
@@ -16,7 +18,11 @@ src_compile() {
 	# It barfs if CFLAGS is set. Dunno why.
 	# It'll default to -O2, which is probably safest.
 	unset CFLAGS
-	econf || die "./configure failed"
+	unset CC
+#	econf || die "./configure failed"
+	./configure --prefix=/usr \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info || die "./configure failed"
 	emake || die
 }
 
