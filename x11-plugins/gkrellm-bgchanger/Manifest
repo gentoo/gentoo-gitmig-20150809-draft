@@ -1,3 +1,5 @@
+MD5 0bde5afd9dba4d6c2c26186a21f2ceba gkrellm-bgchanger-0.0.8.ebuild 789
+MD5 5287d21a43d37ecd9c7c44e1275ff114 gkrellm-bgchanger-0.0.4-r1.ebuild 786
 MD5 431f2301ed05e74b9a428a1f751dbbea ChangeLog 575
-MD5 850a2eff0943bd2b64e338bb458a9301 gkrellm-bgchanger-0.0.4.ebuild 1418
-MD5 5044b5e11f2ff6bf19ffa553ed684275 files/digest-gkrellm-bgchanger-0.0.4 137
+MD5 bdad4dc3616d5aabd89e322f3219ac05 files/digest-gkrellm-bgchanger-0.0.4-r1 68
+MD5 6fef03f8c3e46cbc98399f67da5e847f files/digest-gkrellm-bgchanger-0.0.8 69
