@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/Xaw3d
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.14 2004/06/24 22:09:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.15 2004/06/28 19:42:46 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> Xaw3d-1.5-r1.ebuild:
+  add sed-4 dep
 
   14 Jun 2004; Tom Gall <tgall@gentoo.org> Xaw3d-1.5-r1.ebuild:
   ~ppc64 initial x support, bug #53763

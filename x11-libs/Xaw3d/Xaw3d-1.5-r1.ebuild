@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.22 2004/06/24 22:09:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.23 2004/06/28 19:42:46 agriffis Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -30,7 +30,8 @@ KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64 ~ppc64"
 IUSE=""
 
 # There _might_ be something else, but I doubt it.
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${P}.tar.gz
