@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1_pre5,v 1.1 2005/02/07 07:43:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1_pre5,v 1.2 2005/02/07 08:22:11 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -266,7 +266,7 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 
 		# Setup the includes
 		if [ -e "/usr/${LIBDIR}/opengl/${GL_LOCAL}/include" ]; then
-			for x in gl.h glx.h glxtokens.h glext.h; do
+			for x in gl.h glx.h glxtokens.h glext.h glxext.h glxmd.h glxproto.h; do
 				if [ -e /usr/X11R6/include/GL/${x} ]; then
 					rm -f /usr/X11R6/include/GL/${x}
 				fi

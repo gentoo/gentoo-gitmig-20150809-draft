@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.66 2005/02/07 07:43:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.67 2005/02/07 08:22:11 eradicator Exp $
+
+  07 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  files/opengl-update-2.1_pre5:
+  Added support for XiG GL headers: glxext.h glxmd.h glxproto.h.
 
 *opengl-update-2.1_pre5 (06 Feb 2005)
 
