@@ -1,4 +1,6 @@
+MD5 77ef8914c866dbc216748a431cd3ec12 hdf-4.2.0-r3.ebuild 1514
 MD5 3e2efb81d3ebd72d39821216301e4505 hdf-4.2.0-r2.ebuild 1468
-MD5 942db98473e2e20e1e57d96c9ad02c7e ChangeLog 785
+MD5 6a75635f33badbf89b7ed6b8d479214d ChangeLog 941
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 bdb6c3501721a0f1f6b81f2f9b052028 files/digest-hdf-4.2.0-r2 61
+MD5 bdb6c3501721a0f1f6b81f2f9b052028 files/digest-hdf-4.2.0-r3 61
