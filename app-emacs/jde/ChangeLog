@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/jde
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.1 2002/11/01 02:52:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.2 2003/01/31 19:09:19 mkennedy Exp $
+
+*jde-2.3.2 (30 Jan 2003)
+
+  30 Jan 2003; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  jde-2.3.2.ebuild, files/70jde-gentoo.el, 
+  files/digest-jde-2.3.2 :
+
+  Version bump.
 
 *jde-2.2.8 (31 Oct 2002)
 
