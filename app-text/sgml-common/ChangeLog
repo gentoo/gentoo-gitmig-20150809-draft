@@ -1,6 +1,14 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.11 2002/12/31 04:36:56 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.12 2003/02/05 08:28:18 satai Exp $
+
+*sgml-common-0.6.3-r4 (05 Feb 2003)
+
+  05 Feb 2003; Matthew Turk <satai@gentoo.org> :
+  Revision bump.  Now the install-catalog program puts quotations around the
+  catalog files, thus fixing sgmltools-lite.  Masking in package.mask and
+  ~arch.  Also included a script to convert the catalogs into the proper
+  format, with quotation marks.  In response to bug 12792.
 
 *sgml-common-0.6.3-r3 (30 Dec 2002)
 
