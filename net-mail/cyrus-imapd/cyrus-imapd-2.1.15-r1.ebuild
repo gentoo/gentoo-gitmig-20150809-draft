@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.15-r1.ebuild,v 1.3 2004/01/20 18:00:43 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.15-r1.ebuild,v 1.4 2004/02/25 04:27:50 weeve Exp $
 
 inherit eutils fixheadtails
 IPV6_P="${P}-ipv6-20030819"
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc"
+KEYWORDS="~x86 -ppc ~sparc"
 
 PROVIDE="virtual/imapd"
 DEPEND="virtual/glibc
