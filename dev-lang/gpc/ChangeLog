@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gpc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.1 2002/04/11 05:35:39 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.2 2002/04/14 09:14:32 george Exp $
+
+*gpc-20020410,  (13 Apr 2002)
+
+  10 Apr 2002; G Shapovalov <george@gentoo.org> ChangeLog :
+
+  gpc-r6 has been released. Updated ebuild to use this version (ebuild rename sufficed).
 
 *gpc-20020402,  (10 Apr 2002)
 
