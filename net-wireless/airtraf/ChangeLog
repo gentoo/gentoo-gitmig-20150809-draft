@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/airtraf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.7 2004/10/28 23:49:27 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.8 2005/01/12 09:58:25 dragonheart Exp $
+
+  12 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  -files/airtraf-amd64.patch, +files/airtraf.patch, airtraf-1.1.ebuild:
+  Combined patches from amd64 and bug #73313 to solve bug #73313. Thanks to
+  Peter K. Lee <saint@corenova.com>.
 
 *airtraf-1.1 (29 Oct 2004)
 
