@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3.ebuild,v 1.9 2004/06/24 21:21:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3.ebuild,v 1.10 2004/06/28 15:53:23 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ SRC_URI="${SITE}/${P}-release.tar.gz
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc amd64"
-IUSE="asterisk doc"
+IUSE="asterisk"
 
 RDEPEND=">=app-accessibility/speech-tools-1.2.3"
 DEPEND="${RDEPEND}
@@ -74,7 +74,7 @@ src_compile() {
 	make || die
 
 	cd ${S}
-	econf
+	econf || die "econf failed"
 	pushd src/arch/festival/
 	cp festival.cc festival.cc.orig
 	sed -e '/^const char \*festival_libdir/s:FTLIBDIR:"/usr/lib/festival":' \
