@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.11.2-r1.ebuild,v 1.1 2002/03/23 11:50:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.11.2-r1.ebuild,v 1.2 2002/03/29 03:55:52 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A newsreader for GNOME."
@@ -13,7 +13,7 @@ DEPEND="virtual/x11
 	>=gnome-base/gnome-libs-1.4.1.2-r1
 	>=media-libs/gdk-pixbuf-0.11.0-r1
 	>=dev-libs/libxml-1.8.11
-        gtkhtml? ( >=gnome-extra/gtkhtml-0.14.0-r1 )"
+	gtkhtml? ( >=gnome-extra/gtkhtml-0.14.0-r1 )"
 
 src_compile() {
 	local myconf
