@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.104 2004/11/15 06:05:07 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.105 2004/12/03 03:26:21 pylon Exp $
+
+*cdrtools-2.01.01_alpha01 (03 Dec 2004)
+
+  03 Dec 2004; Lars Weiler <pylon@gentoo.org>
+  +cdrtools-2.01.01_alpha01.ebuild:
+  New release with updates. Especially amd64 support should be improved.
+  Plextor GigaRec Feature added.
 
   14 Nov 2004; Hardave Riar <hardave@gentoo.org> cdrtools-2.01.ebuild:
   Added mips64 symlink.
