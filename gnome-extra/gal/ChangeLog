@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.29 2003/04/22 15:24:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.30 2003/04/28 23:38:55 liquidx Exp $
+
+  29 Apr 2003; Alastair Tse <liquidx@gentoo.org> gal-0.24.ebuild:
+  bump 0.24 to stable
 
 *gal-1.99.3 (21 Apr 2003)
 
