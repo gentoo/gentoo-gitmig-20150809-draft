@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/module-info
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.8 2004/10/19 07:57:18 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.9 2004/11/20 04:29:00 dragonheart Exp $
+
+  20 Nov 2004; Daniel Black <dragonheart@gentoo.org> module-info-0.26.ebuild:
+  ppc stable to support bug #68570
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> module-info-0.20.ebuild:
   Stable on amd64.
