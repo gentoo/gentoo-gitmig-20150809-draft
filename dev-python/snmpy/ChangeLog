@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/python-fchksum
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/ChangeLog,v 1.1 2002/04/28 16:18:41 jnelson Exp $
+
+*snmpy-1.0_alpha4 (28 Apr 2002)
+
+  28 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog 
+   snmpy-1.0_alpha4.ebuild:
+  
+  New ebuild
+  Closes bug #2027
