@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.41 2005/01/03 00:26:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.42 2005/01/12 16:18:42 luckyduck Exp $
+
+  12 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> readline-5.0-r1.ebuild:
+  marked as stable on amd64.
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
