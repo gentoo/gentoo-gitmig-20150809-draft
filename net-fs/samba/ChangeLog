@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.43 2003/09/04 20:38:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.44 2003/09/11 03:35:18 woodchip Exp $
+
+*samba-3.0.0_rc3 (10 Sep 2003)
+
+  10 Sep 2003; Donny Davies <woodchip@gentoo.org> samba-3.0.0_rc3.ebuild:
+  Bump to latest _rc plus latest samba-vscan.  All USE options should
+  build ok again.  This code is going gold soon, we just need to tidy
+  up the sample smb.conf.
 
   04 Sep 2003; Jason Wever <weeve@gentoo.org> samba-3.0.0_rc2.ebuild:
   Added previous patch from samba-2.2.8a to samba-3.0.0_rc2 to finish fixing bug
