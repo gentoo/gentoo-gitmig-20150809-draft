@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.92 2004/11/05 18:58:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.93 2004/11/07 23:35:30 pylon Exp $
+
+  08 Nov 2004; Lars Weiler <pylon@gentoo.org> kdeutils-3.3.1.ebuild:
+  Stable on ppc.
 
   05 Nov 2004; Caleb Tennis <caleb@gentoo.org> kdeutils-3.3.1.ebuild:
   x86 stable

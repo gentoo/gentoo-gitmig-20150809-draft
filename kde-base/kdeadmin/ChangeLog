@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.98 2004/11/05 19:17:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.99 2004/11/07 23:32:30 pylon Exp $
+
+  08 Nov 2004; Lars Weiler <pylon@gentoo.org> kdeadmin-3.3.1.ebuild:
+  Stable on ppc.
 
   05 Nov 2004; Caleb Tennis <caleb@gentoo.org> kdeadmin-3.3.1.ebuild:
   x86 stable
