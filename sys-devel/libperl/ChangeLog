@@ -1,0 +1,15 @@
+# ChangeLog for sys-devel/libperl
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.1 2003/01/06 14:31:24 mcummings Exp $
+
+*libperl-5.8.0 (06 Jan 2003)
+
+  06 Jan 2003; Michael Cummings <mcummings@gentoo.org> libperl-5.8.0:
+  Initial import. Ebuild was provided by azarah. The seperation of
+  the libperl portion of perl into a seperate ebuild is to counter 
+  problems experienced with migrating perl versions and the need to 
+  recompile libperl.so at each run. This should also allow us a smoother
+  upgrade with future perl releases as the libperl.so is no named
+  according to perl versions - that way, old libperl's can co-exist
+  with new ones and the need to recompile packages should be 
+  mitigated.
