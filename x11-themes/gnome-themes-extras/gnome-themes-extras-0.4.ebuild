@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.4.ebuild,v 1.1 2003/10/07 21:52:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.4.ebuild,v 1.2 2003/10/22 19:56:14 liquidx Exp $
 
 inherit gnome2
 
@@ -19,3 +19,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.23"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS README TODO"
+
+src_unpack() {
+	unpack ${A}
+	sed -e 's:gorilla-default:capplet-icons:' \
+		-i ${S}/Gorilla/gtk-2.0/iconrc.in \
+		-i ${S}/Gorilla/gtk-2.0/iconrc
+}

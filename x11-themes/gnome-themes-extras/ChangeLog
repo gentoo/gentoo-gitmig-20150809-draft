@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.4 2003/10/07 21:52:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.5 2003/10/22 19:56:14 liquidx Exp $
+
+  22 Oct 2003; Alastair Tse <liquidx@gentoo.org>
+  gnome-themes-extras-0.4.ebuild:
+  added workaround for gorilla typo (#31702)
 
 *gnome-themes-extras-0.4 (07 Oct 2003)
 
