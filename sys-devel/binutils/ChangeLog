@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.88 2003/11/08 16:56:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.89 2003/11/08 19:24:13 gmsoft Exp $
 
 *binutils-2.14.90.0.7-r2 (08 Nov 2003)
 
@@ -31,6 +31,9 @@
   Fix is an modified one from Jason Wever <weeve@gentoo.org>.
 
 *binutils-2.14.90.0.7 (01 Nov 2003)
+
+  08 Nov 2003; Guy Martin <gmsoft@gentoo.org> binutils-2.14.90.0.7.ebuild,
+  binutils-2.14.90.0.7-r1.ebuild : Marked -hppa as it can't even compile glibc.
 
   01 Nov 2003; Martin Schlemmer <azarah@gentoo.org>
   binutils-2.14.90.0.7.ebuild:
