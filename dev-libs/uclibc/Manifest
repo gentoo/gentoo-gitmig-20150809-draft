@@ -6,7 +6,7 @@ MD5 f694d40cf09e6c5511ae52f755a5ffe5 metadata.xml 998
 MD5 7fde305dfd21aeac12e0eb721e0f6a17 uclibc-0.9.21.ebuild 1096
 MD5 648448f5b143b6002812f0fb0a78c683 uclibc-0.9.26-r1.ebuild 2555
 MD5 ebf20118b3d6ced339721338685d97b0 uclibc-0.9.26-r2.ebuild 6191
-MD5 cd337e4466963e5aa74864363e61aca7 uclibc-0.9.26-r3.ebuild 6333
+MD5 03b8de2ae5acc3aa78d72abe3f8edd7b uclibc-0.9.26-r3.ebuild 6337
 MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
 MD5 799adc7fb6ec9ffd653831cea1d32dd5 files/digest-uclibc-0.9.21 67
 MD5 02ffb023d5b3be46c7e0c9aadf48d304 files/digest-uclibc-0.9.26-r2 231
@@ -27,7 +27,7 @@ MD5 f7c264d37687f1a32f1c6e31239f2276 files/0.9.26/uclibc-0.9.26-noexecstack.patc
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBBy0/HTu7gpaalycRAuahAJ9yg1IqzQIuPRx2rxfbJablbOxAkgCg8A+m
-kEi+3XxgBoO/D3VGlrXiAZ4=
-=kFgy
+iD8DBQFBCERWHTu7gpaalycRApnFAJ9Qid5fRimMUDYbAMipcVszJf2YSgCfRdli
+kR/EH7NORNd7cVLLWc2Cc4g=
+=KUIA
 -----END PGP SIGNATURE-----
