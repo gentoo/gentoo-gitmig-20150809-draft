@@ -1,18 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 afdf006ec8d2de7b5448e25a4d3ae4fc snortalog-2.3.0-r1.ebuild 1397
-MD5 af08c682dd6dd9c013f07adab35365b5 ChangeLog 1757
+MD5 46a3fe99cef6fdfae60f265b8ffd0018 snortalog-2.3.0-r1.ebuild 1556
+MD5 b23b2c51a9098b18c75e62a315d0d9bb ChangeLog 1989
 MD5 fc4e25d7343dc6d2b44602bd3972903a metadata.xml 245
 MD5 3c6299c73242108db6f0c15e9db57df6 snortalog-2.2.1.ebuild 771
 MD5 d310df1dda7c5bd218d9b38c97429c7c files/snortalog-2.3.0-fix-gui.diff 20004
 MD5 424d2f24724379f96c1c10b866081de4 files/digest-snortalog-2.2.1 65
 MD5 9ffebf50ecd9113ef41a27a476b5bbe5 files/digest-snortalog-2.3.0-r1 65
 MD5 2f2b2b3bb86008d2d74474f2523d1420 files/snortalog-notcltk.diff 813
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLbFZEZCkKN40op4RAuvwAJ9xwTlJA4L1IWBIAo/AwPKuzKjjoQCgpIqI
-kdX89UaO2b8Ex1QCCiTB4Y8=
-=tt7g
------END PGP SIGNATURE-----
+MD5 af01fbfd326839abf6cf3bb9f0bc5226 files/snortalog-2.3.0-limit-args.diff 484
