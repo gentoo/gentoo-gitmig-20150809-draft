@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.27 2005/03/09 17:41:45 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.28 2005/03/13 13:35:30 xmerlin Exp $
+
+  13 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/drbd-0.7-init:
+  fixed device check/creation closed bug #84871, thanks to joram agten
+  <joramagten@hotmail.com>
 
   09 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> drbd-0.7.10.ebuild:
   removed inherit check-kernel
