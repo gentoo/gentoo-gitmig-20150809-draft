@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.8 2004/10/16 18:16:29 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.9 2004/10/21 12:14:24 blubb Exp $
+
+  21 Oct 2004; Simon Stelling <blubb@gentoo.org> checkstyle-3.4-r2.ebuild:
+  added ~amd64
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> checkstyle-3.3.ebuild,
   checkstyle-3.4-r2.ebuild:
