@@ -2,6 +2,7 @@ MD5 e2467cd7bfd71e995269eb4d52c5a49c ChangeLog 892
 MD5 2a57441834a5cc3699753ef71ce8f125 gif2png-2.4.6.ebuild 639
 MD5 60a7c4735213266b5236ed7d5a7a5804 gif2png-2.4.7.ebuild 682
 MD5 52acdcb5d5cce3d10f9b20eb93c2a684 gif2png-2.5.1.ebuild 683
+MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
 MD5 0fdbb3630cf8118323c7a743ffa524cc files/digest-gif2png-2.4.6 64
 MD5 85a26ab79ebca9833924eddc58ef5952 files/digest-gif2png-2.4.7 65
 MD5 4fc0f6cac09879cc1e97b2a16ce32daf files/digest-gif2png-2.5.1 65
