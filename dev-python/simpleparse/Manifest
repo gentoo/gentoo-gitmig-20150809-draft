@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d151967996b3f1ddb29c0574d620e2d2 ChangeLog 1374
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 845bd65e703d1cf8c7c4ff1947ad8c29 simpleparse-1.0.ebuild 637
-MD5 f2465e99386465bd26762fe00070598f simpleparse-2.0.0.ebuild 647
-MD5 58be8c75562c598cc4a3eaa82723140e ChangeLog 1301
+MD5 147a87b067dd21a50e0f51a8a9cebc1c simpleparse-2.0.0.ebuild 651
 MD5 47d741d0204aab4b0b6cd42602522430 files/digest-simpleparse-1.0 63
 MD5 efc9ea4ea5675544632203216b25d361 files/digest-simpleparse-2.0.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOsODI1lqEGTUzyQRAqbhAJ9vwjSqb8Tt8OTGyVdsU8SI7VadtQCgk8dG
-CAE4pXVxMOBPliKp5QiQwxg=
-=Fz1O
------END PGP SIGNATURE-----
