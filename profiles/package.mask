@@ -83,8 +83,7 @@
 # <lordvan@gentoo.org> (14 Dec 2002)
 # ##changed Version scheme from 305 to 4.0.0
 # seems to have bug with gcc 3.x at least!
->=net-misc/omniORB-300
-##=dev-python/omniORBpy
+#>=net-misc/omniORB-300 #commented cuz of 'freeze' for 1.4
 
 # <mkennedy@gentoo.org> (14 Dec 2002)
 # needs to be assimilated with app-emacs/psgml
