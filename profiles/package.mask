@@ -263,30 +263,6 @@ dev-java/jaxp
 #=net-libs/linc-0.5.0-r2
 #=gnome-base/ORBit2-2.4.0-r2 
 
-<<<<<<< package.mask
-
-#not yet oficially released: kde 3.0.2
-#>=kde-base/arts-1.0.2
-#>=kde-base/kde-3.0.2
-#>=kde-base/kdeaddons-3.0.2
-#>=kde-base/kdeadmin-3.0.2
-#>=kde-base/kdeartwork-3.0.2
-#>=kde-base/kdebase-3.0.2
-#>=kde-base/kdebindings-3.0.2
-#>=kde-base/kdeedu-3.0.2
-#>=kde-base/kdegames-3.0.2
-#>=kde-base/kdegraphics-3.0.2
-#>=kde-base/kdelibs-3.0.2
-#>=kde-base/kdemultimedia-3.0.2
-#>=kde-base/kdenetwork-3.0.2
-#>=kde-base/kdepim-3.0.2
-#>=kde-base/kdesdk-3.0.2
-#>=kde-base/kdetoys-3.0.2
-#>=kde-base/kdeutils-3.0.2
-#>=dev-util/kdevelop-2.1.2
-
-=======
->>>>>>> 1.953
 #testing only (drobbins, 25 Jun 2002)
 #portage 2.0.8 is fast and apparently the most stable Portage 2.x release so far, unmasking:
 #=sys-apps/portage-2.0.8
