@@ -1,6 +1,6 @@
-# ChangeLog for sys-cluster/ccs
+# ChangeLog for sys-cluster/dlm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.1 2004/06/27 15:05:57 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.2 2004/06/27 15:17:58 zypher Exp $
 
 *dlm-20040626 (25 Jun 2004)
 
