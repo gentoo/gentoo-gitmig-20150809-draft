@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2.ebuild,v 1.1 2003/09/23 01:11:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2.ebuild,v 1.2 2003/09/25 08:45:00 usata Exp $
 
 inherit eutils
 
@@ -28,9 +28,16 @@ DEPEND=">=sys-libs/ncurses-5.2-r3
 PROVIDE="virtual/textbrowser
 	virtual/w3m"
 
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/w3m-w3mman-gentoo.diff
+}
+
 src_compile() {
 
-	local myconf
+	local myconf migemo_command
 
 	use cjk && myconf="${myconf} --enable-japanese=E"
 
@@ -40,17 +47,24 @@ src_compile() {
 		myconf="${myconf} --enable-image=no"
 	fi
 
+	if has_version 'app-emacs/migemo' ; then
+		migemo_command="migemo -t egrep /usr/share/migemo/migemo-dict"
+	else
+		migemo_command="no"
+	fi
+
 	econf --enable-keymap=w3m \
 		--with-editor=/usr/bin/nano \
 		--with-mailer=/bin/mail \
 		--with-browser=/usr/bin/mozilla \
 		--with-termlib=ncurses \
+		--with-migemo="${migemo_command}" \
 		`use_enable gpm mouse` \
 		`use_enable ssl digest-auth` \
 		`use_with ssl` \
 		${myconf} || die
 
-	emake MAN='env LC_MESSAGES=$${LC_MESSAGES:-$${LC_ALL:-$${LANG}}} LANG=C man'|| die "emake failed"
+	make || make || die "make failed"
 }
 
 src_install() {

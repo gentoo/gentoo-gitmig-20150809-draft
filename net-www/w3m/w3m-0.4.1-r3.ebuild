@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.1-r3.ebuild,v 1.3 2003/09/23 16:05:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.1-r3.ebuild,v 1.4 2003/09/25 08:45:00 usata Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	if use alpha; then
 		epatch ${FILESDIR}/w3m-0.4-alpha.patch || die "epatch failed"
 	fi
+	epatch ${FILESDIR}/w3m-w3mman-gentoo.diff
 }
 
 src_compile() {
@@ -66,6 +67,13 @@ src_compile() {
 		myuse="${myuse} use_image=n"
 	fi
 
+	if has_version 'app-emacs/migemo' ; then
+		myuse="${myuse} use_migemo=y"
+		export def_migemo_command="migemo -t egrep /usr/share/migemo/migemo-dict"
+	else
+		myuse="${myuse} use_migemo=n"
+	fi
+
 	env ${myuse} ./configure ${myconf} || die "configure failed"
 
 	# Test to make sure the above configuration was sane
@@ -78,11 +86,13 @@ src_compile() {
 	make clean
 	cd -
 
-	emake MAN='env LC_MESSAGES=$${LC_MESSAGES:-$${LC_ALL:-$${LANG}}} LANG=C man'|| die "emake failed"
+	make || make || die "make failed"
 }
 
 src_install() {
+
 	make DESTDIR=${D} install || die "make install failed"
+
 	dodoc doc/* README*
-	doman doc/w3m.1
+	#doman doc/w3m.1
 }
