@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.16 2005/02/10 07:15:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r3.ebuild,v 1.1 2005/02/10 07:15:05 eradicator Exp $
 
 inherit eutils
 
@@ -23,10 +23,10 @@ SRC_URI="${SITE}/${P}-release.tar.gz
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="asterisk doc"
 
-RDEPEND="=app-accessibility/speech-tools-1.2.3-r1"
+RDEPEND=">=app-accessibility/speech-tools-1.2.3-r2"
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
@@ -54,12 +54,12 @@ src_unpack() {
 
 	use asterisk && epatch ${FILESDIR}/${P}-asterisk.patch
 
-	sed -i 's@EST=$(TOP)/../speech_tools@EST=/usr/lib/speech-tools@' config/config.in
+	sed -i "s@EST=\$(TOP)/../speech_tools@EST=/usr/share/speech-tools@" config/config.in
 
 	# testsuite still fails to build under gcc-3.2
 	# sed -i '/^BUILD_DIRS =/s/testsuite//' Makefile || die
 
-	sed -i '/^const char \*festival_libdir/s:FTLIBDIR:"/usr/lib/festival":' src/arch/festival/festival.cc
+	sed -i "/^const char \*festival_libdir/s:FTLIBDIR:\"/usr/share/festival\":" src/arch/festival/festival.cc
 	sed -i '/^MODULE_LIBS/s/-ltermcap/-lncurses/' config/modules/editline.mak || die
 }
 
@@ -90,12 +90,16 @@ src_install() {
 	einfo ""
 
 	# Install the main libraries
-	insinto /usr/lib/festival
+	insinto /usr/share/festival
 	doins ${WORKDIR}/festival/lib/*
+
+	# Install the header files
+	insinto /usr/include/festival
+	doins ${WORKDIR}/festival/src/include/*.h
 
 	# Install the dicts and vioces
 	FESTLIB=${WORKDIR}/festival/lib
-	DESTLIB=/usr/lib/festival
+	DESTLIB=/usr/share/festival
 	insinto ${DESTLIB}/dicts
 	doins ${FESTLIB}/dicts/COPYING.poslex \
 		${FESTLIB}/dicts/wsj.wp39.poslexR ${FESTLIB}/dicts/wsj.wp39.tri.ngrambin
@@ -105,14 +109,14 @@ src_install() {
 	doins ${FESTLIB}/dicts/oald/*
 
 	FESTLIB=${WORKDIR}/festival/lib/voices/spanish/el_diphone
-	DESTLIB=/usr/lib/festival/voices/spanish/el_diphone
+	DESTLIB=/usr/share/festival/voices/spanish/el_diphone
 	insinto ${DESTLIB}/festvox
 	doins ${FESTLIB}/festvox/*
 	insinto ${DESTLIB}/group
 	doins ${FESTLIB}/group/*
 
 	FESTLIB=${WORKDIR}/festival/lib/voices/english
-	DESTLIB=/usr/lib/festival/voices/english
+	DESTLIB=/usr/share/festival/voices/english
 	insinto ${DESTLIB}/don_diphone
 	doins ${FESTLIB}/don_diphone/*
 	insinto ${DESTLIB}/don_diphone/festvox
@@ -181,6 +185,9 @@ src_install() {
 		cd ${S}/festdoc/festival/info
 		doinfo *
 	fi
+
+	# We used to put stuff here, so be safe for now...
+	dosym /usr/share/festival /usr/lib/festival
 }
 
 pkg_postinst() {
