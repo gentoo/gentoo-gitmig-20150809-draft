@@ -1,8 +1,12 @@
 # ChangeLog for media-video/xawtv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.19 2003/03/09 13:32:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.20 2003/03/10 10:32:27 seemant Exp $
 
 *xawtv-3.85 (09 Mar 2003)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xawtv-3.85.ebuild:
+  plugins directory fixed. thanks to Patrick Kursawe <phosphan@gentoo.org> in
+  bug #17195
 
   09 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xawtv-3.85.ebuild:
   version bump, thanks to: Chayim I. Kirshen <ckirshen@gnupower.net> in bug
