@@ -123,5 +123,5 @@ MD5 d490f38bd9ca9c48a9799f1e48629f6e files/2.3.4/glibc-2.3.4-mips-generate-sysca
 MD5 fe21fd44628b90f50e5024462cf4c348 files/2.3.4/glibc-2.3.4-res_init.patch 3417
 MD5 973e31ce24c9622234c4293b367de6b3 files/2.3.4/glibc-2.3.4-fedora-branch-no-libnoversion.patch 2288
 MD5 ad71dc5c3f84f026c6e28865b2e90fbb files/2.3.4/glibc-2.3.4-fedora-branch-no-force-nontls.patch 2337
-MD5 e78cc048b738241cda35941e87da7b66 files/2.3.4/glibc-2.3.3-mdns-resolver2.diff 10379
+MD5 9db90105eb74d75834d25a599cba97ea files/2.3.4/glibc-2.3.3-mdns-resolver2.diff 12272
 MD5 edcaf42f72d84a2cbbd911bfbcd4161a files/2.3.4/host.conf 1300

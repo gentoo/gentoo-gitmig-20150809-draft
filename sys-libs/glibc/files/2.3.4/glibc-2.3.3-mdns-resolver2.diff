@@ -1,19 +1,81 @@
---- resolv/res_query.c.orig	2004-02-07 16:20:17.000000000 +0000
-+++ resolv/res_query.c	2004-03-11 15:25:57.000000000 +0000
-@@ -272,6 +272,11 @@
+--- resolv/res_hconf.c
++++ resolv/res_hconf.c	2004/09/21 12:56:54
+@@ -59,6 +59,7 @@
+ #define ENV_TRIM_ADD	"RESOLV_ADD_TRIM_DOMAINS"
+ #define ENV_MULTI	"RESOLV_MULTI"
+ #define ENV_REORDER	"RESOLV_REORDER"
++#define ENV_MDNS	"RESOLV_MDNS"
+ 
+ static const char *arg_service_list (const char *, int, const char *,
+ 				     unsigned int);
+@@ -81,7 +82,8 @@
+   {"multi",		arg_bool,		HCONF_FLAG_MULTI},
+   {"nospoof",		arg_bool,		HCONF_FLAG_SPOOF},
+   {"spoofalert",	arg_bool,		HCONF_FLAG_SPOOFALERT},
+-  {"reorder",		arg_bool,		HCONF_FLAG_REORDER}
++  {"reorder",		arg_bool,		HCONF_FLAG_REORDER},
++  {"mdns",		arg_bool,		HCONF_FLAG_MDNS}
+ };
+ 
+ /* Structure containing the state.  */
+@@ -431,6 +433,9 @@
+ 
+   memset (&_res_hconf, '\0', sizeof (_res_hconf));
+ 
++  /* Default for mdns is "on".  */
++  _res_hconf.flags |= HCONF_FLAG_MDNS;
++ 
+   hconf_name = getenv (ENV_HOSTCONF);
+   if (hconf_name == NULL)
+     hconf_name = _PATH_HOSTCONF;
+@@ -483,6 +488,10 @@
+       arg_trimdomain_list (ENV_TRIM_OVERR, 1, envval, 0);
+     }
+ 
++  envval = getenv (ENV_MDNS);
++  if (envval)
++    arg_bool (ENV_MDNS, 1, envval, HCONF_FLAG_MDNS);
++
+   _res_hconf.initialized = 1;
+ }
+ 
+--- resolv/res_hconf.h
++++ resolv/res_hconf.h	2004/09/21 12:56:54
+@@ -44,6 +44,7 @@
+ #  define HCONF_FLAG_SPOOFALERT	(1 << 2) /* syslog warning of spoofed */
+ #  define HCONF_FLAG_REORDER	(1 << 3) /* list best address first */
+ #  define HCONF_FLAG_MULTI	(1 << 4) /* see comments for gethtbyname() */
++#  define HCONF_FLAG_MDNS	(1 << 5) /* Disable MDNS support */
+ };
+ extern struct hconf _res_hconf;
+ 
+--- resolv/res_query.c
++++ resolv/res_query.c	2004/09/21 12:57:59
+@@ -82,6 +82,8 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
++#include "res_hconf.h"
++
+ /* Options.  Leave them on. */
+ /* #undef DEBUG */
+ 
+@@ -278,6 +280,13 @@
  		     *domain && !done;
  		     domain++) {
  
-+			/* don't add "local" domain if query contains a dot */
-+			if (dots && (!__strcasecmp(*domain, "local") ||
-+				     !__strcasecmp(*domain, "local.")))
-+				continue;
++		        if ((_res_hconf.flags & HCONF_FLAG_MDNS) != 0) {
++			        /* don't add "local" domain if query contains a dot */
++			        if (dots && (!__strcasecmp(*domain, "local") ||
++				             !__strcasecmp(*domain, "local.")))
++				       continue;
++			}
 +
  			if (domain[0][0] == '\0' ||
  			    (domain[0][0] == '.' && domain[0][1] == '\0'))
  				root_on_list++;
---- resolv/res_send.c.orig	2004-02-07 16:21:17.000000000 +0000
-+++ resolv/res_send.c	2004-03-11 15:43:19.000000000 +0000
+--- resolv/res_send.c
++++ resolv/res_send.c	2004/09/21 12:58:14
 @@ -86,6 +86,9 @@
  #include <arpa/nameser.h>
  #include <arpa/inet.h>
@@ -24,7 +86,16 @@
  
  #include <errno.h>
  #include <netdb.h>
-@@ -188,6 +191,9 @@
+@@ -96,6 +99,8 @@
+ #include <string.h>
+ #include <unistd.h>
+ 
++#include "res_hconf.h"
++
+ #if PACKETSZ > 65536
+ #define MAXPACKET       PACKETSZ
+ #else
+@@ -188,6 +193,9 @@
  static int		send_dg(res_state, const u_char *, int,
  				u_char **, int *, int *, int,
  				int *, int *, u_char **);
@@ -33,16 +104,17 @@
 +				int *, int *, u_char **);
  #ifdef DEBUG
  static void		Aerror(const res_state, FILE *, const char *, int,
- 			       struct sockaddr_in);
-@@ -366,6 +372,34 @@
+ 			       const struct sockaddr *);
+@@ -366,6 +374,35 @@
  		 u_char *ans, int anssiz, u_char **ansp)
  {
  	int gotsomewhere, terrno, try, v_circuit, resplen, ns, n;
 +	int usemdns;
 +	HEADER *qhp = (HEADER *) buf;
-+	
++
 +	usemdns = 0;
-+	if (qhp->qr == 0 && qhp->opcode == QUERY && qhp->qdcount == htons(1)) {
++	if ((_res_hconf.flags & HCONF_FLAG_MDNS) != 0 &&
++	    qhp->qr == 0 && qhp->opcode == QUERY && qhp->qdcount == htons(1)) {
 +		/* got one simple query */
 +		const u_char *bp, *be;
 +		be = buf + buflen;
@@ -69,7 +141,7 @@
  
  	if (statp->nscount == 0) {
  		__set_errno (ESRCH);
-@@ -524,13 +558,28 @@
+@@ -524,13 +561,28 @@
  	 */
  	for (try = 0; try < statp->retry; try++) {
  #ifdef _LIBC
@@ -99,7 +171,7 @@
  
  		if (nsap == NULL)
  			goto next_ns;
-@@ -592,8 +641,11 @@
+@@ -602,8 +654,11 @@
  			resplen = n;
  		} else {
  			/* Use datagrams. */
@@ -113,7 +185,7 @@
  			if (n < 0)
  				return (-1);
  			if (n == 0)
-@@ -665,8 +717,15 @@
+@@ -675,8 +730,15 @@
  	if (!v_circuit) {
  		if (!gotsomewhere)
  			__set_errno (ECONNREFUSED);	/* no nameservers found */
@@ -130,7 +202,7 @@
  	} else
  		__set_errno (terrno);
  	return (-1);
-@@ -1127,6 +1186,255 @@
+@@ -1140,6 +1202,255 @@
  	return (resplen);
  }
  
