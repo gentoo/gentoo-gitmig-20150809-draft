@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/limit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.10 2004/07/19 12:21:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.11 2004/10/05 17:45:24 usata Exp $
+
+*limit-1.14.9_pre20041001 (06 Oct 2004)
+
+  06 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +limit-1.14.9_pre20041001.ebuild:
+  Version bumped. Added ~sparc keyword back because _pre20040112 snapshot
+  had that keyword.
 
   19 Jul 2004; Mamoru KOMACHI <usata@gentoo.org>
   limit-1.14.8_pre20040415.ebuild:
