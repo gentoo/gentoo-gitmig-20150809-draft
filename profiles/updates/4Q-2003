@@ -40,3 +40,4 @@ move games-fps/quake2-relnev games-fps/quake2-icculus
 move games-mud/tkMOO-light games-mud/tkmoo
 move app-misc/read-edid x11-misc/read-edid
 move dev-libs/commoncpp2 dev-cpp/commoncpp2
+move app-admin/fam-oss app-admin/fam
