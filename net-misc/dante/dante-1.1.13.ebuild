@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.11 2003/03/04 18:56:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.12 2003/03/04 19:39:44 vapier Exp $
 
 inherit gcc
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	sys-devel/perl"
 
 src_compile() {
-	[ "`gcc-fullversion`" == "3.2.1" ] && export CFLAGS=""
+	[ "`gcc-version`" == "3.2" ] && export CFLAGS=""
 
 	local myconf
 	use tcpd || myconf="--disable-libwrap"
