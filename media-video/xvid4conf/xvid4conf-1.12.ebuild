@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/xvid4conf-1.12.ebuild,v 1.4 2004/07/01 08:43:18 eradicator Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/xvid4conf-1.12.ebuild,v 1.5 2004/08/14 14:47:10 swegener Exp $
 
 DESCRIPTION="GTK2-configuration dialog for xvid4"
 HOMEPAGE="http://zebra.fh-weingarten.de/~transcode/xvid4conf"
