@@ -1,18 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-2.0.3.ebuild,v 1.1 2003/09/25 01:31:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-2.0.3.ebuild,v 1.2 2003/11/11 13:08:39 vapier Exp $
 
 MY_PN="par2cmdline"
 MY_PV="${PV/2./}"
 MY_P="${MY_PN}-${MY_PV}"
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="par2 is a PAR-2.0 and PAR-1 compatible file verification and repair tool."
-HOMEPAGE="http://parchive.sourceforge.net"
+DESCRIPTION="a PAR-2.0 and PAR-1 compatible file verification and repair tool"
+HOMEPAGE="http://parchive.sourceforge.net/"
 SRC_URI="mirror://sourceforge/parchive/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+
 DEPEND=""
 
 src_compile() {
