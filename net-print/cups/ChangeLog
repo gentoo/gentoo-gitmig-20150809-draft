@@ -1,8 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.20 2002/10/12 06:22:47 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.21 2002/10/19 05:20:28 woodchip Exp $
 
 *cups-1.1.16 (10 Oct 2002)
+
+  19 Oct 2002; Donny Davies <woodchip@gentoo.org> cupsd.rc6 : fix #9201.
 
   12 Oct 2002; Donny Davies <woodchip@gentoo.org> cupsomatic :
   Update to latest http://www.linuxprinting.org/cupsomatic; close #7350.
