@@ -1,6 +1,16 @@
 # ChangeLog for app-dicts/aspell-da
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.4 2003/10/29 01:59:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.5 2003/11/15 07:39:31 seemant Exp $
+
+*aspell-da-1.4.29 (14 Nov 2003)
+
+  14 Nov 2003; Seemant Kulleen <seemant@gentoo.org> aspell-da-1.4.27.ebuild,
+  aspell-da-1.4.29.ebuild:
+  version bump. We're using a modified tarball than that available at
+  da.speling.org. This tarball conforms to the standards at aspell.net, and thus
+  the new ebuild is like the other standard aspell ebuilds based on the eclass.
+  Thanks to: Martin Ehmsen <thames@get2net.dk> for making this tarball. Closes
+  bug #33156 by Henrik Brix Andersen <brix@gimp.org>
 
 *aspell-da-1.4.27 (28 Oct 2003)
 
