@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.14 2003/04/23 00:32:14 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.15 2003/06/30 18:50:51 darkspecter Exp $
+
+  30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> gtkspell-2.0.4.ebuild:
+  set ppc in keywords
 
 *gtkspell-2.0.4 (07 Mar 2003)
 
