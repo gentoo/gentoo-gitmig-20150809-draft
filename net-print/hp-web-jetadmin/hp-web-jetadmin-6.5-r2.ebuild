@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5-r2.ebuild,v 1.4 2002/10/04 06:18:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5-r2.ebuild,v 1.5 2002/11/18 06:49:54 blizzy Exp $
 
 # This package, in its most basic form (no optional components) will install
 # some 4300 files, totalling some 45MB. According to HP the minimum system
@@ -28,7 +28,7 @@ src_install() {
 	# masquerade as redhat; neccesary
 	install -m 644 ${FILESDIR}/etc.redhat-release /etc/redhat-release
 
-	this-ll_take_a_bit
+	thisll_take_a_bit
 	chmod 755 ${DISTDIR}/hpwebjet_linux.selfx
 	${DISTDIR}/hpwebjet_linux.selfx -s -d ${D}/opt/jetadmin
 	assert "Probably missing a DEPEND. Hmm what could it be!"
@@ -46,11 +46,7 @@ src_install() {
 	rm -f /var/lib/fpm/hp* # and this too
 }
 
-this-ll_take_a_bit() {
-	einfo "+ ------------------------------------------------- +"
-	einfo "+   This will take some time to completely merge!   +"
-	einfo "+ ------------------------------------------------- +"
-	einfo "+  Dont go hitting cntrl-c thinking that its stuck  +"
-	einfo "+                 because its not!                  +"
-	einfo "+ ------------------------------------------------- +"
+thisll_take_a_bit() {
+	einfo "This will take some time to completely merge."
+	einfo "Please don't hit CTRL-C."
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.1.ebuild,v 1.3 2002/10/04 06:44:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.1.ebuild,v 1.4 2002/11/18 06:49:54 blizzy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a GKrellM plugin for hddtemp (which reads the temperature of SMART IDE hard drives)"
@@ -33,18 +33,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "#######################################################"
-	einfo "#                                                     #"
-	einfo "#   Please note that hddtemp has to be set suid       #"
-	einfo "#   in order to allow regular user to run this        #"
-	einfo "#   plugin.                                           #"
-	einfo "#                                                     #"
-	einfo "#   Please execute (as root):                         #"
-	einfo "#   chmod u+s /usr/bin/hddtemp                        #"
-	einfo "#   to set the suid bit                               #"
-	einfo "#   (this is not done automatically for               #"
-	einfo "#   security reasons)                                 #"
-	einfo "#                                                     #"
-	einfo "#######################################################"
+	einfo "hddtemp has to be suid root to allow regular users to run this plugin."
+	einfo "To make it suid root, run"
+	einfo ""
+	einfo "\tchmod u+s /usr/bin/hddtemp"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.16 2002/10/22 15:50:39 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.17 2002/11/18 06:49:54 blizzy Exp $
 
 IUSE="gif nls png kde oss jpeg gnome"
 
@@ -126,10 +126,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	echo '######################################################################'
-	echo '# If do you want trans globes and other trans elements you need      #'
-	echo '# libxpm (media-libs/xpm).                                           #'
-	echo '######################################################################'
-	}
-			
+	einfo "You need to emerge media-libs/xpm to get transparent globes or"
+	einfo "other transparent elements."
+}

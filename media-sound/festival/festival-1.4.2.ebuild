@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2.ebuild,v 1.5 2002/11/16 10:56:36 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2.ebuild,v 1.6 2002/11/18 06:49:54 blizzy Exp $
 
 S=${WORKDIR}/${PN}
 T=${WORKDIR}/speech_tools
@@ -60,17 +60,8 @@ src_install () {
 }
 
 pkg_postinst() {
-
-	echo
-	echo '#########################################################'
-	echo '#                                                       #'
-	echo '#     To test festival, simply type:                    #'
-	echo '#         "saytime"                                     #'
-	echo '#                                                       #'
-	echo '#     Or for something more fun:                        #'
-	echo '#         "echo "Gentoo can speak" | festival --tts"    #'
-	echo '#                                                       #'
-	echo '#########################################################'
-	echo
-
+	einfo "To test festival, run \"saytime\"."
+	einfo "Or for something more fun, run"
+	einfo ""
+	einfo "\techo \"Gentoo Linux can speak\" | festival --tts"
 }

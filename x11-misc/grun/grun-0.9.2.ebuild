@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.11 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.12 2002/11/18 06:49:54 blizzy Exp $
 
 IUSE="nls"
 
@@ -55,31 +55,21 @@ src_install() {
 }
 
 pkg_postinst() {
-	# The following hints will be printed in white
-	MESSAGE_COLOR=37;
-	echo -e "\033[1;${MESSAGE_COLOR}m";
-	echo "####################################################################";
-	echo "#                                                                  #";
-	echo "# It is recommended to bind grun to a keychain. Fluxbox users can  #";
-	echo "# do this by appending e.g. the following line to ~/.fluxbox/keys: #";
-	echo "#                                                                  #";
-	echo "# Mod4 r :ExecCommand grun                                         #";
-	echo "#                                                                  #";
-	echo "# Then reconfigure Fluxbox (using the menu) and hit <WinKey>-<r>   #";
-	echo "#                                                                  #";
-	echo "# The default system-wide definition file for associating file     #";
-	echo "# extensions with applications is /usr/share/grun/gassoc, the      #";
-	echo "# default system-wide definition file for recognized console       #";
-	echo "# applications is /usr/share/grun/consfile. They can be overridden #";
-	echo "# on a per user basis by ~/.gassoc and ~/.consfile respectively.   #";
-	echo "#                                                                  #";
-	echo "# To change the default terminal application grun uses, adjust the #";
-	echo "# TERM environment variable accordingly and remerge grun, e.g.     #";
-	echo "#                                                                  #";
-	echo "# export TERM=Eterm && emerge grun                                 #";
-	echo "#                                                                  #";
-	echo "# Have fun!                                                        #";
-	echo "#                                                                  #";
-	echo "####################################################################";
-	echo -e "\033[0m";
+	einfo "It is recommended to bind grun to a keychain. Fluxbox users can"
+	einfo "do this by appending e.g. the following line to ~/.fluxbox/keys:"
+	einfo ""
+	einfo "Mod4 r :ExecCommand grun"
+	einfo ""
+	einfo "Then reconfigure Fluxbox (using the menu) and hit <WinKey>-<r>"
+	einfo ""
+	einfo "The default system-wide definition file for associating file"
+	einfo "extensions with applications is /usr/share/grun/gassoc, the"
+	einfo "default system-wide definition file for recognized console"
+	einfo "applications is /usr/share/grun/consfile. They can be overridden"
+	einfo "on a per user basis by ~/.gassoc and ~/.consfile respectively."
+	einfo ""
+	einfo "To change the default terminal application grun uses, adjust the"
+	einfo "TERM environment variable accordingly and remerge grun, e.g."
+	einfo ""
+	einfo "export TERM=Eterm && emerge grun"
 }

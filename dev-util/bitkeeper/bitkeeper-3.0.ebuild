@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.ebuild,v 1.2 2002/11/17 09:35:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.ebuild,v 1.3 2002/11/18 06:49:54 blizzy Exp $
 
 DESCRIPTION="BitKeeper is a scalable configuration management system"
 SRC_URI=""
@@ -21,14 +21,12 @@ use 'alpha' >/dev/null && A="bk-3.0-alpha-glibc21-linux.bin"
 
 pkg_setup() {
 	if [ ! -f ${DISTDIR}/${A} ] ; then
-		einfo "****************************************************************************"
-		einfo "* Perform the following steps to install this package:"
-		einfo "*  - Sign up at ${HOMEPAGE}"
-		einfo "*  - Check your mail and visit the download location"
-		einfo "*  - Download ${A} and place it in ${DISTDIR}"
-		einfo "*  - emerge this package again"
-		einfo "****************************************************************************"
-		die "Follow the above instructions, please"
+		eerror "You need to perform the following steps to install this package:"
+		eerror "- Sign up at ${HOMEPAGE}"
+		eerror "- Check your mail and visit the download location"
+		eerror "- Download ${A} and place it in ${DISTDIR}"
+		eerror "- emerge this package again"
+		die "package must be downloaded"
 	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ldapbrowser-282_beta2.ebuild,v 1.7 2002/10/17 00:54:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ldapbrowser/ldapbrowser-282_beta2.ebuild,v 1.8 2002/11/18 06:49:54 blizzy Exp $
 
 MY_P="Browser282b2"
 S=${WORKDIR}/ldapbrowser
@@ -22,7 +22,6 @@ src_unpack() {
 }
 
 src_install() {
-
 	local dirs="lib templates"
 	dodir /opt/${P}
 
@@ -35,14 +34,4 @@ src_install() {
 	dosym lbe.sh /usr/bin/ldapbrowser
 	dodoc CHANGES.TXT LICENSE.ICONS
 	dohtml faq.html readme.html relnotes.html help/*
-
-}
-
-pkg_postinst() {
-	einfo
-	einfo " ---------------------------------------------------------------"
-	einfo "| *** DON'T FORGET TO ADD THE JAVA EXECUTABLE TO YOUR PATH ***  |"
-	einfo "| ***              OR SET \$JAVA_HOME                       *** |"
-	einfo " ---------------------------------------------------------------"
-	einfo
 }

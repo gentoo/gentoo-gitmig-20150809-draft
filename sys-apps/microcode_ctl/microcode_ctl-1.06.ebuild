@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode_ctl/microcode_ctl-1.06.ebuild,v 1.7 2002/10/20 18:54:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode_ctl/microcode_ctl-1.06.ebuild,v 1.8 2002/11/18 06:49:54 blizzy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Intel IA32 microcode update utility"
@@ -27,16 +27,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo '################################################################'
-	einfo '# For the microcode update to work, you need to have a kernel  #'
-	einfo '# compiled with both devfs and microcode update support.       #'
-	einfo '#                                                              #'
-	einfo '#   To update the microcode now, simply type:                  #'
-	einfo '#        "microcode_ctl -u"                                    #'
-	einfo '#                                                              #'
-	einfo '#   The update will not survive a reboot, for that type:       #'
-	einfo '#        "rc-update add microcode_ctl default"                 #'
-	einfo '################################################################'
-	einfo
+	einfo "Your kernel must include both devfs and microcode update support."
+	echo
+	einfo "To update the microcode now, run"
+	einfo ""
+	einfo "\tmicrocode_ctl -u"
+	einfo ""
+	einfo "The update will not survive a reboot. To have it do that run"
+	einfo ""
+	einfo "\trc-update add microcode_ctl default"
 }
