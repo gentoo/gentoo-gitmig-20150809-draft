@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.80.ebuild,v 1.3 2003/01/07 02:37:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.82.ebuild,v 1.1 2003/01/07 02:37:58 seemant Exp $
 
 IUSE="aalib motif alsa opengl nls"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://bytesex.org/xawtv/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
@@ -24,7 +24,8 @@ DEPEND=">=sys-libs/ncurses-5.1
 	sys-apps/supersed
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
-	motif? ( virtual/motif )
+	motif? ( virtual/motif
+		app-text/recode )
 	opengl? ( virtual/opengl )
 	quicktime? ( media-libs/libquicktime )"
 
@@ -33,7 +34,6 @@ src_unpack() {
 	cd ${S}
 	patch -p1 < ${DISTDIR}/xaw-deinterlace-3.76-0.1.0.diff || die
 
-	# For non-MMX arches, we need to comment out a section of the code
 	use mmx || \
 		ssed -i "s:#define MMX::" libng/plugins/linear_blend.c
 
@@ -72,7 +72,7 @@ src_compile() {
 		--enable-zvbi \
 		${myconf} || die
 
-	emake || die
+	make || die
 
 	cd ${MY_FONT}
 	make || die

@@ -1,8 +1,19 @@
 # ChangeLog for media-video/xawtv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.14 2002/12/16 01:06:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.15 2003/01/07 02:37:58 seemant Exp $
+
+*xawtv-3.82 (06 Jan 2003)
+
+  06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> xawtv-3.82.ebuild
+  files/digest-xawtv-3.82 :
+
+  Version bump to newest upstream.
 
 *xawtv-3.81 (12 Dec 2002)
+
+  06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  changed to DEPEND on virtual/motif.
 
   15 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xawtv-3.81.ebuild :
 
