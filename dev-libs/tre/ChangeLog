@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.3 2004/06/06 00:05:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.4 2004/06/08 00:18:11 dragonheart Exp $
+
+*tre-0.6.8 (08 Jun 2004)
+
+  08 Jun 2004; Daniel Black <dragonheart@gentoo.org> +tre-0.6.8.ebuild:
+  version bump. Note this ebuild and app-misc/glimpse both provide
+  /usr/bin/agrep. Similar functionality I think so I haven't made them exclude
+  each other. Thanks to John Hampton <pacopablo@pacopablo.com> in bug #53250
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> tre-0.6.6.ebuild:
   x86 added. QA cvs header fix

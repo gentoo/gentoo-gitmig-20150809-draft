@@ -1,4 +1,6 @@
-MD5 412963af3748d695d9bd361dc4dd8ade ChangeLog 582
+MD5 f98d0c3c49c8a2809c207ab133417282 ChangeLog 904
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 MD5 1e33320866d5fa2d99a2624d987483c3 tre-0.6.6.ebuild 957
+MD5 1c226e0ceac6b7f8e0be02a88006a616 tre-0.6.8.ebuild 1184
+MD5 50afdfdea1dbb2f1cbf0fedb7d127e4a files/digest-tre-0.6.8 62
 MD5 b60e1dc7ab6d96f81c2428eb26320ac1 files/digest-tre-0.6.6 62
