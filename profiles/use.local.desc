@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.354 2004/05/06 05:41:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.355 2004/05/06 05:51:03 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -222,8 +222,8 @@ net-im/silc-toolkit:server - Enables silc server
 net-irc/unrealircd:leaf - Enables leaf node
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
-net-libs/libnvcserver:no24bpp - disable 24bpp support
-net-libs/libnvcserver:nobackchannel - disable backchannel support
+net-libs/libvncserver:no24bpp - disable 24bpp support
+net-libs/libvncserver:nobackchannel - disable backchannel support
 net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-mail/amavisd-new:milter - Enable Sendmail milter support
 net-mail/clamav:milter - Build sendmail mail filter (milter) support
