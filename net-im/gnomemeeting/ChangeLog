@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
 
+  08 Nov 2003; Alastair Tse <liquidx@gentoo.org> gnomemeeting-0.98.5.ebuild:
+  added patch to compile against libxml2-2.6.x (#32810)
+
 *gnomemeeting-0.98.5 (16 Sep 2003)
 
   16 Sep 2003; Alastair Tse <liquidx@gentoo.org> gnomemeeting-0.98.5.ebuild:

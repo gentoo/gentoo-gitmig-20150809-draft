@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.98.5.ebuild,v 1.1 2003/09/16 15:02:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.98.5.ebuild,v 1.2 2003/11/08 16:33:45 liquidx Exp $
 
 inherit gnome2
 
@@ -27,7 +27,7 @@ DEPEND=">=dev-libs/pwlib-1.5.0
 	>=x11-libs/gtk+-2.0.0
 	>=dev-libs/glib-2.0.0
 	>=gnome-base/gconf-2.0
-	>=dev-libs/libxml2-2.5.11
+	>=dev-libs/libxml2-2.6.2
 	>=media-sound/esound-0.2.28
 	>=gnome-base/ORBit2-2.5.0"
 
@@ -37,6 +37,11 @@ RDEPEND="${DEPEND}
 	dev-lang/perl"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-libxml_2.6.patch
+}
 
 src_compile() {
 
