@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <agenkin@gentoo.org> (21 Oct 2002)
+# Masking pending unfreeze.
+x11-libs/lesstif
+
 # <satai@gentoo.org> (21 Oct 2002)
 # severe issues.  now unsupported.
 =app-office/texmacs
