@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/twindistress
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/ChangeLog,v 1.1 2004/02/22 13:28:21 mr_bones_ Exp $
+
+*twindistress-1.03 (22 Feb 2004)
+
+  22 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  twindistress-1.03.ebuild:
+  initial commit; ebuild submitted by scott@teamslack.net via bug #42325
+
