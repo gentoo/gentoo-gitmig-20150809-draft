@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.3 2004/10/30 23:13:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.4 2004/10/31 12:59:10 ka0ttic Exp $
 #
 # Simple eclass that provides an interface for installing
 # contributed (ie not included in bash-completion proper)
@@ -27,6 +27,6 @@ dobashcompletion() {
 	[ -z "$1" ] && die "usage: dobashcompletion <file> <new file>"
 	if useq bash-completion ; then
 		insinto /usr/share/bash-completion
-		newins "$1" "${2:-${1##*/}}"
+		newins "$1" "${2:-${1##*/}}" || die "Failed to install $1"
 	fi
 }
