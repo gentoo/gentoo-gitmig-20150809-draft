@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.12-r1.ebuild,v 1.3 2003/08/10 21:09:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.12-r1.ebuild,v 1.4 2003/09/06 14:55:40 pappy Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -63,6 +63,9 @@ src_compile() {
 	
 	filter-flags -fPIC
 
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	has_version 'sys-devel/hardened-gcc' && append-flags '-yet_exec'
+	
 	einfo "Building modutils..."
 	cd ${WORKDIR}/modutils-${MODUTILS_PV}
 
