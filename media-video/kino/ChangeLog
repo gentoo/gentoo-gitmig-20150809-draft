@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.22 2004/07/29 00:17:27 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.23 2004/10/27 13:19:43 phosphan Exp $
+
+*kino-0.7.4 (27 Oct 2004)
+
+  27 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> +kino-0.7.4.ebuild:
+  Version bump, see bug #66091
 
   28 Jul 2004; Daniel Goller <morfic@gentoo.org> :
   Revision bump for upstream fixes including for gcc-3.4
