@@ -1,9 +1,13 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.4 2002/06/26 03:33:40 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.5 2002/07/08 02:02:55 spider Exp $
 
+*giftcurs-0.4.3 (08 Jul 2002)
+  08 Jul 2002; Spider <spider@gentoo.org> giftcurs-0.4.3.ebuild :
+  new version sneaked out, I upped the dep on gift just to force people to update that too.
+  
 *giftcurs-0.4.2 (26 Jun 2002)
-  26 Jun 2002; Spider <spider@gentoo.org> giftcurs-0.4.2:
+  06 Jun 2002; Spider <spider@gentoo.org> giftcurs-0.4.2.ebuild :
   in celebration of the move, here is 0.4.2
   added documentation
   added LICENSE
