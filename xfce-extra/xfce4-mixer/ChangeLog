@@ -1,6 +1,6 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.7 2003/11/13 00:37:02 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.8 2003/11/16 01:57:15 gmsoft Exp $
 
 *xfce4-mixer-4.0.1 (12 Nov 2003)
 
@@ -8,6 +8,9 @@
   bugfix release of xfce4.
 
 *xfce4-mixer-4.0.0 (25 Sep 2003)
+
+  16 Nov 2003; Guy Martin <gmsoft@gentoo.org> xfce4-mixer-4.0.0.ebuild :
+  Added hppa to KEYWORDS.
 
   25 Sep 2003; Brad Cowan <bcowan@gentoo.org> xfce4-mixer-4.0.0.ebuild:
   First official release of xfce4.

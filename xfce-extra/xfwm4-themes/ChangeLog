@@ -1,8 +1,11 @@
 # ChangeLog for xfce-extra/xfwm4-themes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.6 2003/09/25 21:23:58 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.7 2003/11/16 02:15:03 gmsoft Exp $
 
 *xfwm4-themes-4.0.0 (25 Sep 2003)
+
+  16 Nov 2003; Guy Martin <gmsoft@gentoo.org> xfwm4-themes-4.0.0.ebuild :
+  Added hppa to KEYWORDS.
 
   25 Sep 2003; Brad Cowan <bcowan@gentoo.org> xfwm4-themes-4.0.0.ebuild:
   First official release of xfce4.
