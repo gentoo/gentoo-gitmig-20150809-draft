@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/skk-jisyo-cdb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/ChangeLog,v 1.1 2003/05/05 08:16:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/ChangeLog,v 1.2 2003/07/13 02:45:24 matsuu Exp $
+
+*skk-jisyo-cdb-200307 (13 Jul 2003)
+
+  13 Jul 2003; MATSUU Takuto <matsuu@gentoo.org> skk-jisyo-cdb-200307.ebuild:
+  version bump. Thanks to usata@gentoo.org (Mamoru KOMACHI) in bug #23818.
 
 *skk-jisyo-cdb-200305 (05 May 2003)
 
