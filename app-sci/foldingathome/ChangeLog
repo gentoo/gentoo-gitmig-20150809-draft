@@ -1,6 +1,15 @@
 # ChangeLog for app-sci/foldingathome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.10 2004/03/26 12:13:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.11 2004/04/22 10:01:16 phosphan Exp $
+
+*foldingathome-4.0.0-r1 (22 Apr 2004)
+
+  22 Apr 2004; Patrick Kursawe <phosphan@gentoo.org>
+  foldingathome-4.0.0-r1.ebuild, files/folding-conf.d,
+  files/folding-init.d-r2, files/initfolding-r1:
+  Added support to run multiple clients for those with multiprocessors
+  and the ability to pass options to the Folding clients.
+  Based on bug #47526 (by Mike Caley <mjcaley@darkarctic.com>)
 
   26 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
   foldingathome-3.14.ebuild, foldingathome-3.24-r1.ebuild,
