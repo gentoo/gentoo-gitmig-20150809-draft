@@ -1,63 +1,42 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r5.ebuild,v 1.4 2002/04/08 12:36:57 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r7.ebuild,v 1.1 2002/04/29 15:21:51 drobbins Exp $
 
-PYVER="`echo ${PV} | cut -d '.' -f 1,2`"
+PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
+PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
+PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 S=${WORKDIR}/Python-${PV}
-FCHKSUM="python-fchksum-1.6"
-FCHKSUMP="python-fchksum_1.6-2"
 DESCRIPTION="A really great language"
-SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz
-	http://www.azstarnet.com/~donut/programs/fchksum/${FCHKSUM}.tar.gz
-	http://www.azstarnet.com/~donut/programs/fchksum/${FCHKSUMP}.diff.gz"
+SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz"
 
-HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum/"
+HOMEPAGE="http://www.python.org"
 
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
 	tcltk? ( >=dev-lang/tk-8.0 )"
+RDEPEND="$DEPEND dev-python/python-fchksum"
 
-RDEPEND="$DEPEND"
+# The dev-python/python-fchksum RDEPEND is needed to that this python provides
+# the functionality expected from previous pythons.
+
 PROVIDE="virtual/python"
 
 SLOT="2.2"
-
-src_unpack() {
-	# unpack python
-	unpack Python-${PV}.tgz
-	# unpack fchksum and move pieces into Modules subdir
-	cd ${S}/Modules
-	unpack ${FCHKSUM}.tar.gz
-	zcat ${DISTDIR}/${FCHKSUMP}.diff.gz | patch -p0
-	cd ${FCHKSUM}
-	cp md5.h ../md5_2.h
-	cp cksum.[ch] sum.[ch] fchksum.h ..
-	sed 's:"md5.h":"md5_2.h":' md5.c > ../md5_2.c
-	sed 's:"md5.h":"md5_2.h":' fchksum.c > ../fchksum.c
-	# add fchksum configuration to Setup
-	cd ${S}
-	echo "fchksum fchksum.c md5_2.c cksum.c sum.c" >> Modules/Setup.dist
-
-	# adjust makefile to install pydoc into ${D} correctly
-	t=${S}/Makefile.pre.in
-	cp $t $t.orig || die
-	sed 's:install-platlib.*:& --install-scripts=$(BINDIR):' $t.orig > $t
-}
 
 src_compile() {
 	# python's config seems to ignore CFLAGS
 	export OPT=$CFLAGS 
 
-	# configure fchksum
-	cd ${S}/Modules/${FCHKSUM}
-	./configure
-	cp pfconfig.h ..
-
+	# adjust makefile to install pydoc into ${D} correctly
+	t=${S}/Makefile.pre.in
+	cp $t $t.orig || die
+	sed 's:install-platlib.*:& --install-scripts=$(BINDIR):' $t.orig > $t
+        
 	# adjust Setup to include the various modules we need
 	cd ${S}
-	scmd=""
+        # turn **on** shared
+	scmd="s:#\(\*shared\*\):\1:;"
 	# adjust for USE readline
 	if use readline; then
 		scmd="$scmd  s:#\(readline .*\) -ltermcap:\1:;"
@@ -100,7 +79,7 @@ src_compile() {
 	scmd="$scmd  s:#\(termios .*\):\1:;"  # Steen Lumholt's termios module
 	scmd="$scmd  s:#\(resource .*\):\1:;" # Jeremy Hylton's rlimit interface
 	sed "$scmd" Modules/Setup.dist > Modules/Setup
-	
+       
 	local myopts
 	#if we are creating a new build image, we remove the dependency on g++
 	if [ "`use build`" -a ! "`use bootstrap`" ]
@@ -123,8 +102,9 @@ src_compile() {
 src_install() {
 	dodir /usr
 	make install prefix=${D}/usr || die
-	rm "${D}/usr/bin/python"
-	dosym python${PYVER} /usr/bin/python
+	rm "${D}/usr/bin/python"	
+	dosym python${PYVER_MAJOR} /usr/bin/python
+	dosym python${PYVER_MAJOR}.${PYVER_MINOR} /usr/bin/python${PYVER_MAJOR}
 	dodoc README
 
 	# install our own custom python-config

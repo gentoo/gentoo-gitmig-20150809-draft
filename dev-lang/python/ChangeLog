@@ -1,13 +1,17 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.6 2002/04/25 02:03:01 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.7 2002/04/29 15:21:51 drobbins Exp $
+
+*python-2.2-r7 (29 Apr 2002)
+
+  29 Apr 2002; Daniel Robbins <drobbins@gentoo.org>: New rev to fix bug #2199;
+  python-config should now work properly.
 
 *python-2.2-r6 (24 Apr 2002)
 
-  24 Apr 2002; Jon Nelson <jnelson@gentoo.org> python-2.2-r6.ebuild :
-  
-  Make python build with shared modules.
-  Depends on python-fchksum, as fchksum *no longer built in*
+  24 Apr 2002; Jon Nelson <jnelson@gentoo.org> python-2.2-r6.ebuild : Make
+  python build with shared modules.  Depends on python-fchksum, as fchksum *no
+  longer built in*
 	
 *python-2.2-r5 (8 Apr 2002)
 
