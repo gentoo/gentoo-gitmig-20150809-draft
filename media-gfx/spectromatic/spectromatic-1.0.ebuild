@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/spectromatic/spectromatic-1.0.ebuild,v 1.1 2004/12/24 02:55:48 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/spectromatic/spectromatic-1.0.ebuild,v 1.2 2004/12/28 20:29:42 ribosome Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=dev-libs/gsl-1.2
+DEPEND=">=sci-libs/gsl-1.2
 		>=media-libs/libpng-1.2.4"
 
 src_unpack() {
