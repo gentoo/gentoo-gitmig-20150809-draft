@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.2-r1.ebuild,v 1.5 2004/02/03 15:38:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.2-r1.ebuild,v 1.6 2004/06/02 15:58:59 agriffis Exp $
 
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
@@ -45,7 +45,7 @@ src_install () {
 	local pydir
 	pydir=`python-config | cut -d" " -f1 | sed -e 's/-l//g'`/site-packages
 
-	[ `use python` ] && dodir /usr/lib/${pydir}
+	use python && dodir /usr/lib/${pydir}
 	make DESTDIR=${D} install || die
 
 	dodoc CHANGES README WHATSNEW

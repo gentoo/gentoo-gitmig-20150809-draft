@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r1.ebuild,v 1.1 2004/02/13 21:48:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r1.ebuild,v 1.2 2004/06/02 15:58:59 agriffis Exp $
 
 inherit python
 
@@ -41,7 +41,7 @@ src_compile() {
 src_install () {
 	python_version
 
-	[ `use python` ] && dodir /usr/lib/python-${PYVER}/site-packages
+	use python && dodir /usr/lib/python-${PYVER}/site-packages
 	make DESTDIR=${D} install || die
 
 	dodoc CHANGES README WHATSNEW

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.2.ebuild,v 1.5 2004/03/14 13:19:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.2.ebuild,v 1.6 2004/06/02 15:58:59 agriffis Exp $
 
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
@@ -41,7 +41,7 @@ src_install () {
 
 	make DESTDIR=${D} install || die
 
-	if [ -n "`use python`" ]
+	if use python
 	then
 		dodir /usr/lib/${pydir}
 		# Because libmk4py.so export Mk4pyinit, that Python will look for ...
