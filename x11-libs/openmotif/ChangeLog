@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.91 2005/02/26 21:21:51 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.92 2005/03/02 17:01:34 lanius Exp $
+
+*openmotif-2.2.3-r4 (02 Mar 2005)
+
+  02 Mar 2005; Heinrich Wendel <lanius@gentoo.org> +files/CAN-2005-0605.patch,
+  +openmotif-2.1.30-r10.ebuild, openmotif-2.1.30-r8.ebuild,
+  +openmotif-2.1.30-r9.ebuild, +openmotif-2.2.3-r3.ebuild,
+  +openmotif-2.2.3-r4.ebuild:
+  fix CAN-2005-0605, bug #83655
 
   26 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> openmotif-2.1.30-r8.ebuild,
   openmotif-2.2.3-r2.ebuild:
