@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.4.ebuild,v 1.5 2002/10/20 18:51:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.4.ebuild,v 1.6 2002/11/19 13:03:05 cselkirk Exp $
 
 IUSE="socks5 ipv6 perl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://silcnet.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="=dev-libs/glib-1.2*
 	perl? ( sys-devel/perl )
