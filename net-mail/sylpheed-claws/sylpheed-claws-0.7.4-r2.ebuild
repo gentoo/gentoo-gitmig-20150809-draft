@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.4-r2.ebuild,v 1.2 2002/04/16 01:08:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.4-r2.ebuild,v 1.3 2002/04/16 09:50:40 seemant Exp $
 
 S=${WORKDIR}/sylpheed-${PV}claws
 DESCRIPTION="Bleeding edge version of Sylpheed"
@@ -17,7 +17,7 @@ DEPEND=">=x11-libs/gtk+-1.2.6
 	imlib? ( >=media-libs/imlib-1.9.10 )
 	spell? ( >=app-text/pspell-0.12.2 )
 	xface? ( >=media-libs/compface-1.4 )
-	jpilot? ( >=app-misc/jpilot-0.99 )"
+	pda? ( >=app-misc/jpilot-0.99 )"
 	
 RDEPEND="$DEPEND
 	nls? ( sys-devel/gettext )"
@@ -43,7 +43,7 @@ src_compile() {
 	
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
-	use jpilot && myconf="${myconf} --enable-jpilot"
+	use pda && myconf="${myconf} --enable-jpilot"
 
 	use nls || myconf="${myconf} --disable-nls"
 
