@@ -1,12 +1,15 @@
 # ChangeLog for net-im/ekg
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.1 2003/09/16 21:24:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.2 2003/09/16 21:27:57 seemant Exp $
 
 *ekg-1.3 (16 Sep 2003)
 
   16 Sep 2003; Seemant Kulleen <seemant@gentoo.org> ekg-1.3.ebuild:
   New client for gadu-gadu messenger protocol for my Polish friends. This ebuild
   thanks to: Michal 'Spock' Januszewski <spock@o2.pl> and Piotr Piasny
-  <p1t3r05@o2.pl> in bug #28656. I'll be relying on Mr. Spock and Mr. Piasny to
-  maintain this indirectly. All bug reports should be cc'd to them
-
+  <p1t3r05@o2.pl> in bug #28656.  Also: AstralStorm
+  <astralstorm@gorzow.mm.pl> in bug #24201, and Radoslaw Stachowiak
+  <radek@alter.pl> in bug#20363.  Thanks to all who submitted an ebuild,
+  sorry for the delay in getting it into portage.  I hope you will all help
+  me to maintain this package and fixing bugs with it. (Will be cc'ing all
+  of you on bug reports).
