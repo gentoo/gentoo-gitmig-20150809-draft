@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1.ebuild,v 1.1 2001/05/31 20:32:51 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1.ebuild,v 1.2 2001/09/09 16:44:42 karltk Exp $
 
 A="${P}.src.tar.gz"
 S=${WORKDIR}/${P}
@@ -25,6 +25,8 @@ src_unpack() {
     cp common.c common.c.orig
     cat common.c.orig |\
         sed -e "s:#include <stdarg.h>:#include <stdarg.h>\n#include <time.h>:" > common.c
+    cp po/Makefile po/Makefile.orig
+    cat po/Makefile.orig | sed -e 's:ko.mo::g' > po/Makefile
     
 }
 
