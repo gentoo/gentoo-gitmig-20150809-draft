@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-base
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-base/ChangeLog,v 1.32 2004/10/04 18:51:00 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-base/ChangeLog,v 1.33 2004/10/19 09:19:00 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xfce4-base-4.0.6.ebuild:
+  Stable on amd64.
 
 *xfce4-base-4.1.90 (04 Oct 2004)
 

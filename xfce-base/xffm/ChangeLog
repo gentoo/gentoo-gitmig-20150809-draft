@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xffm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.34 2004/10/04 18:22:37 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.35 2004/10/19 09:16:04 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xffm-4.0.6.ebuild:
+  Stable on amd64.
 
 *xffm-4.1.90 (04 Oct 2004)
 
