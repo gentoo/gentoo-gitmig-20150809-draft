@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.02.02.ebuild,v 1.2 2003/12/09 17:57:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.02.02.ebuild,v 1.3 2004/04/26 02:08:44 nerdboy Exp $
 
 DESCRIPTION="CAPI4HylaFAX - send/recieve faxes via CAPI and AVM Fritz!Cards."
 SRC_URI="ftp://ftp.avm.de/tools/capi4hylafax.linux/capi4hylafax-01.02.02.tar.gz"
@@ -22,7 +22,7 @@ RDEPEND="virtual/glibc
 	net-dialup/capi4k-utils
 	net-mail/metamail
 	virtual/ghostscript
-	hylafax? ( net-misc/hylafax )"
+	net-misc/hylafax"
 
 src_compile() {
 	./configure --prefix=/usr --with-hylafax-spooldir=/var/spool/fax || die
@@ -44,7 +44,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "To use CAPI4HylaFAX:"
-	einfo "Make sure the your isdn/capi devices are owned by"
+	einfo "Make sure that your isdn/capi devices are owned by"
 	einfo "the "fax" user (set in /etc/devfsd.conf)."
 	einfo "Modify /var/spool/fax/etc/config.faxCAPI"
 	einfo "to suit your system, and append the line"
