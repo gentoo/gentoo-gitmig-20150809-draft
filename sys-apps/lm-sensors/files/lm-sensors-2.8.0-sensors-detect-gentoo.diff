@@ -110,7 +110,7 @@
  #
 +# Please note that the numbers in MODULE_X must start at 0 and increase in
 +# steps of 1. Any number that is missing will make the init script skip the
-+# rest of the modules.
++# rest of the modules. Use MODULE_X_ARGS for arguments.
 +#
  # List the modules that are to be loaded for your system
  #

@@ -12,13 +12,13 @@ MD5 4e8f1427a529eb217c00370357991f73 files/digest-lm-sensors-2.6.5 68
 MD5 cf55e040bb5a4609f79212a60fa0c1c3 files/digest-lm-sensors-2.7.0 68
 MD5 f07f401256b40cdec1c0518d28ee1aca files/digest-lm-sensors-2.7.0-r1 158
 MD5 7488e37411028858e2c430ea2354d610 files/digest-lm-sensors-2.8.0 68
-MD5 265c3ccaffdf984cbd371aec994b3162 files/lm-sensors-2.8.0-sensors-detect-gentoo.diff 5173
+MD5 f2c16790be781d921f5da5f1905e0c43 files/lm-sensors-2.8.0-sensors-detect-gentoo.diff 5206
 MD5 2217cbce56dd9da8bbe4188a24c9412f files/rc 2006
 MD5 d8c62d91275ce75f12c70d068db57a97 files/rc_lm_sensors 621
 MD5 f0520fc5631209ae9278e18d9b464d8e files/no-isadump-ppc.patch 1193
 MD5 e7d4c59852cf30645216f50ef7a3377b files/digest-lm-sensors-2.8.1 68
-MD5 72151bdd499b580ff965dd1a2e4216fb files/lm-sensors-2.8.1-sensors-detect-gentoo.diff 4973
-MD5 72151bdd499b580ff965dd1a2e4216fb files/lm-sensors-2.8.2-sensors-detect-gentoo.diff 4973
+MD5 2634b37f6b5e364df64f34d79506ca51 files/lm-sensors-2.8.1-sensors-detect-gentoo.diff 5006
+MD5 2634b37f6b5e364df64f34d79506ca51 files/lm-sensors-2.8.2-sensors-detect-gentoo.diff 5006
 MD5 499af1d2975507a304a16c6a1bcba3cd files/digest-lm-sensors-2.8.2 68
 MD5 8fa08bc4e8fe32a411003d7a018c9536 files/digest-lm-sensors-2.8.3 68
 MD5 2008fdc749bfa5f92bc90711e9d0d34d files/digest-lm-sensors-2.8.4 68
