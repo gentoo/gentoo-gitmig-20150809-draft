@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.40 2004/07/17 16:39:19 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.41 2004/10/16 18:08:05 vapier Exp $
+
+  16 Oct 2004; Mike Frysinger <vapier@gentoo.org> whois-4.6.13-r1.ebuild:
+  Dont install mkpasswd anymore, shadow does #6428 by Paul Thompson.
 
   17 Jul 2004; Tom Gall <tgall@gentoo.org> whois-4.6.13-r1.ebuild:
   stable on ppc64, bug #55520

@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.13-r1.ebuild,v 1.2 2004/07/17 16:39:19 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.13-r1.ebuild,v 1.3 2004/10/16 18:08:05 vapier Exp $
 
 inherit eutils
 
-IUSE="nls"
 MY_P=${P/-/_}
 DESCRIPTION="improved Whois Client"
-SRC_URI="http://www.linux.it/~md/software/${MY_P}.tar.gz"
 HOMEPAGE="http://www.linux.it/~md/software/"
+SRC_URI="http://www.linux.it/~md/software/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips hppa ~ia64 alpha ~amd64 ppc64"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+IUSE="nls"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-lang/perl-5"
@@ -33,8 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make || die
-	make mkpasswd || die
+	emake || die
 }
 
 src_install() {
@@ -43,11 +43,5 @@ src_install() {
 	use nls && dodir /usr/share/locale
 	make BASEDIR=${D} prefix=/usr mandir=/usr/share/man install || die
 
-	dobin mkpasswd
-	doman mkpasswd.1
 	dodoc README whois.conf debian/changelog debian/copyright
-
-	einfo ""
-	einfo "The example whois.conf is located in /usr/doc/${P}"
-	einfo ""
 }
