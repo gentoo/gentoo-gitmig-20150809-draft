@@ -1,6 +1,19 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.5 2002/03/24 08:10:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.6 2002/04/25 06:08:40 mkennedy Exp $
+
+*nautilus-1.0.6-r7 (24 Apr 2002)
+
+  24 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  nautilus-1.0.6-r7.ebuild, files/nautilus-1.0.6-mozilla-1.0_rc1.diff,
+  files/digest-nautilus-1.0.6-r7, ChangeLog :
+
+  This patch to fix http://bugs.gentoo.org/show_bug.cgi?id=2082 (taken
+  from
+  http://lists.eazel.com/pipermail/nautilus-list/2002-April/008473.html)
+  Credit to Kaoru Fukui <k_fukui@highway.ne.jp>. This should allow
+  nautilus to build against mozilla-1.0_rc1.
+
 
 *nautilus-1.0.6-r6 (22 Mar 2002)
 
