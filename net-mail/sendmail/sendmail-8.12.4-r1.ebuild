@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4.ebuild,v 1.4 2002/06/11 21:19:16 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4-r1.ebuild,v 1.1 2002/06/12 19:15:55 g2boojum Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)."
 HOMEPAGE="http://www.sendmail.org"
@@ -99,7 +99,9 @@ src_install () {
 	OBJDIR="obj.`uname -s`.`uname -r`.`arch`"
 	dodir /etc/pam.d /usr/bin /usr/include/libmilter /usr/lib 
 	dodir /usr/share/man/man{1,5,8} /usr/sbin /var/log /usr/share/sendmail-cf
-	dodir /var/spool/{mqueue,clientmqueue}
+	dodir /var/spool/{mqueue,clientmqueue} /etc/conf.d
+	fperms 770 /var/spool/clientmqueue
+	fperms 700 /var/spool/mqueue
 	for dir in libmilter libsmutil sendmail mailstats praliases smrsh makemap vacation
 	do
 		make DESTDIR=${D} MANROOT=/usr/share/man/man \
@@ -110,6 +112,8 @@ src_install () {
 			install -C ${OBJDIR}/${dir} \
 			|| die "install failed"
 	done
+	fowners root.smmsp /usr/sbin/sendmail
+	fowners root.smmsp /var/spool/clientmqueue
 	for dir in rmail mail.local
 	do
 		make DESTDIR=${D} MANROOT=/usr/share/man/man \
@@ -131,11 +135,10 @@ src_install () {
 	newdoc cf/cf/README README.install-cf
 	cp -a cf/* ${D}/usr/share/sendmail-cf
 	insinto /etc/mail
-	newins cf/cf/generic-linux.mc sendmail.mc
-	newins cf/cf/generic-linux.cf sendmail.cf
+	doins ${FILESDIR}/{sendmail.cf,sendmail.mc}
 	echo "# local-host-names - include all aliases for your machine here" \
 		> ${D}/etc/mail/local-host-names
-	cat << EOF > ${D}/etc/mail/local-host-names
+	cat << EOF > ${D}/etc/mail/trusted-users
 # trusted-users - users that can send mail as others without a warning
 # apache, mailman, majordomo, uucp are good candidates
 EOF
@@ -151,4 +154,15 @@ localhost			RELAY
 127.0.0.1			RELAY
 
 EOF
+	cat << EOF > ${D}/etc/conf.d/sendmail
+# Config file for /etc/init.d/sendmail
+
+PIDFILE=/var/run/sendmail.pid
+
+# add start-up options here
+SENDMAIL_OPTS="-bd -q30m" # default daemon mode
+
+EOF
+	exeinto /etc/init.d
+	doexe ${FILESDIR}/sendmail
 }
