@@ -1,0 +1,19 @@
+--- abi/ac-helpers/abi-spell.m4	2002-06-06 21:44:16.000000000 +0200
++++ abi/ac-helpers/abi-spell.m4.new	2002-10-16 23:37:57.000000000 +0200
+@@ -41,12 +41,12 @@
+ 	if test $abi_spell = psyspell; then
+ 		_abi_cppflags="$CPPFLAGS"
+ 		CPPFLAGS="$CPPFLAGS -I$ABI_PSPELL_DIR/include"
+-		abi_pspell_libs="-L$ABI_PSPELL_DIR/lib -lpspell -lpspell-modules -lltdl"
++		abi_pspell_libs="-L$ABI_PSPELL_DIR/lib -laspell -lltdl"
+ 	else
+-		abi_pspell_libs="-lpspell -lpspell-modules -lltdl"
++		abi_pspell_libs="-laspell -lltdl"
+ 	fi
+-	AC_CHECK_HEADER(pspell/pspell.h,[
+-		AC_CHECK_LIB(pspell,new_pspell_config,[
++	AC_CHECK_HEADER(aspell.h,[
++		AC_CHECK_LIB(aspell,new_aspell_config,[
+ 			SPELL_LIBS="$abi_pspell_libs"
+ 		],[	AC_MSG_ERROR([* * * pspell not found in system location * * *])
+ 		],$abi_pspell_libs)
