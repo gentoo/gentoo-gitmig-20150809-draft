@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.22 2004/09/08 02:59:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.23 2004/09/15 08:49:55 usata Exp $
+
+*xmlto-0.0.18 (15 Sep 2004)
+
+  15 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +xmlto-0.0.18.ebuild:
+  Version bumped; bug #63624.
 
   07 Sep 2004; Tom Gall <tgall@gentoo.org> xmlto-0.0.17.ebuild:
   stable on ppc64
