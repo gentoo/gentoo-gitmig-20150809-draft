@@ -13,6 +13,21 @@ DEPEND="virtual/glibc
         >=sys-libs/ncurses-5.1"
 
 
+src_unpack() {
+
+    unpack ${A}
+    cd ${S}
+
+    # Adds a command line option: -s, which produces clean, informative output.
+    # Shows progess status, ETA, transfer speed, no server responses or login messages.
+    cp src/main.c src/main.orig
+    sed -e "s/Aadefgino:pP:r:RtT:u:vV/Aadefgino:pP:r:RstT:u:vV/" \
+        -e "s/case 't'/case 's':\n\t\t\tverbose = 0;\n\t\t\tprogress = 1;\n\t\t\tbreak;\n\n\t\t&/" \
+        src/main.orig > src/main.c
+}
+
+
+
 src_compile() {
     try ./configure --host=${CHOST} --prefix=/usr \
         --enable-editcomplete --program-prefix=lukemftp
