@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 454ecf5e0751c31ac8d3bbbde27d0d30 ChangeLog 280
+MD5 a3f943a043e5a75a8395647db7f494bf netboot-base-20041006.ebuild 590
+MD5 607dc51d1f0bcebda4b8fe238ddb7734 metadata.xml 286
+MD5 bc230c15850cb66aee1f3015d6f88348 files/digest-netboot-base-20041006 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBZDj+HTu7gpaalycRAoz8AJ9lCjUre6SKyMXDcUBDfEL3PB/EyACfSqmD
+ZhzSPo3RGHO4RVpEmmPnLAg=
+=dEUI
+-----END PGP SIGNATURE-----

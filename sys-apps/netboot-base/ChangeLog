@@ -1,0 +1,8 @@
+# ChangeLog for 
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netboot-base/ChangeLog,v 1.1 2004/10/06 18:27:01 vapier Exp $
+
+* (
+
+  ; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by 
