@@ -1,4 +1,4 @@
-MD5 64d509d0f87c04ea082dc58179fca2f4 quickcrypt-0.9.2b.ebuild 646
-MD5 d83bce71a935bf24c2cd95b0d21f53b0 ChangeLog 667
-MD5 ca3ae9cbd0a22038a1b1f56148b85dff metadata.xml 224
 MD5 b78af0cf105a7fea135ac02f38581719 files/digest-quickcrypt-0.9.2b 67
+MD5 07e3d55fd3cb688cc2759efc28845c5e ChangeLog 668
+MD5 ca3ae9cbd0a22038a1b1f56148b85dff metadata.xml 224
+MD5 4a8e8474acc222d65177e1eebafa2008 quickcrypt-0.9.2b.ebuild 647
