@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.928 2005/02/03 14:10:57 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.929 2005/02/05 00:29:07 fserb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -190,6 +190,7 @@ dev-python/bicyclerepair:vim - enable vim with bicyclerepair support
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/epydoc:pdf - enable support for exporting to pdf
 dev-python/ipython:gnuplot - enable gnuplot support
+dev-python/pycairo:numeric - enable Numeric support
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/soya:ode - include support for Open Dynamics Engine
 dev-ruby/ruby-sdl:image - enable sdl-image support
