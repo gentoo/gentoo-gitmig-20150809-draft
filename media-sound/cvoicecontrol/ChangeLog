@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cvoicecontrol
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/ChangeLog,v 1.7 2004/07/01 07:50:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/ChangeLog,v 1.8 2004/07/12 22:45:32 eradicator Exp $
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  cvoicecontrol-0.9_alpha.ebuild:
+  Added to ~amd64 ~sparc.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cvoicecontrol-0.9_alpha.ebuild:

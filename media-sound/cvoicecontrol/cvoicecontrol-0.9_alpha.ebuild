@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.10 2004/07/01 07:50:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.11 2004/07/12 22:45:32 eradicator Exp $
 
 inherit eutils
 
@@ -16,7 +16,10 @@ DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+# ~sparc, ~amd64: 0.9_alpha: Builds fine on these systems, but I lack the 
+# ability to test, so it will remain in ~arch until I get good user feedback
+# If you use this on amd64 or sparc, please contact me.  --eradicator
+KEYWORDS="x86 ~amd64 ~sparc"
 
 src_unpack() {
 	unpack ${A}
