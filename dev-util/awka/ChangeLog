@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/awka
+# Copyright 1999-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/ChangeLog,v 1.1 2003/08/24 11:19:35 azarah Exp $
+
+*awka-0.7.5 (24 Aug 2003)
+
+  24 Aug 2003; Martin Schlemmer <azarah@gentoo.org> awka-0.7.5.ebuild :
+  Initial import.  Ebuild submitted by Tom <Eckert.Thomas@gmx.net>, bug #19206.
+
