@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc6,v 1.6 2003/02/14 22:59:49 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc6,v 1.7 2004/03/04 19:22:49 vapier Exp $
 
 # rc file for automount using a Sun-style "master map".
 # We first look for a local /etc/auto.master, then a YP
@@ -51,12 +51,12 @@ fi
 #
 if [ -e /usr/bin/ypcat ] && [ `ypcat -k auto.master 2>/dev/null | wc -l` -gt 0 ]
 then
-    ypcat -k auto.master | (
+	ypcat -k auto.master | (
 	while read dir map options
 	do
-	    if [ ! -z "$dir" -a ! -z "$map" \
+		if [ ! -z "$dir" -a ! -z "$map" \
 			-a x`echo "$map" | cut -c1` != 'x-' ]
-	    then
+		then
 		map=`echo "$map" | sed -e 's/^auto_/auto./'`
 		if echo $options | grep -- '-t' >/dev/null 2>&1 ; then
 		    mountoptions="--timeout $(echo $options | \
@@ -66,9 +66,9 @@ then
                   s/--*t\(imeout\)*[ \t]*[0-9][0-9]*//g
                   s/\(^\|[ \t]\)-/\1/g'`
 		echo "/usr/sbin/automount $mountoptions $dir yp $map $options $localoptions"
-	    fi
+	fi
 	done
-    )
+	)
 fi
 }
 

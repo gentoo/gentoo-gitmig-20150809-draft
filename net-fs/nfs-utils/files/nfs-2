@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs-2,v 1.2 2003/07/26 09:32:16 cretin Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs-2,v 1.3 2004/03/04 19:23:32 vapier Exp $
 
 #---------------------------------------------------------------------------
 # This script starts/stops the following
