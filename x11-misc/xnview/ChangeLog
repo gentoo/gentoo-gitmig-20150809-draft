@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.11 2005/01/04 13:10:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.12 2005/01/09 10:36:54 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org> xnview-1.50.ebuild,
+  xnview-1.68.ebuild:
+  Added missing parentheses in SRC_URI/*DEPEND.
 
   04 Jan 2005; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.

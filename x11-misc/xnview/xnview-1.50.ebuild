@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.12 2005/01/04 13:10:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.13 2005/01/09 10:36:54 swegener Exp $
 
 inherit rpm
 
@@ -9,8 +9,8 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="XnView image viewer/converter"
 HOMEPAGE="http://www.xnview.com/"
-SRC_URI="x86? mirror://gentoo/${MY_P}.i386.rpm
-		ppc? mirror://gentoo/${MY_P}.ppc.rpm"
+SRC_URI="x86? ( mirror://gentoo/${MY_P}.i386.rpm )
+	ppc? ( mirror://gentoo/${MY_P}.ppc.rpm )"
 
 SLOT="0"
 LICENSE="free-noncomm as-is"

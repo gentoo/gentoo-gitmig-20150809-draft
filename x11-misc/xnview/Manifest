@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8d8df2603ec6b282875fba0e42b03647 xnview-1.50.ebuild 1135
-MD5 3d62ba78a108f87c550f8fdf2d7e7ae4 ChangeLog 2031
+MD5 dbc56ab365e37ffd99d6bcfc6a21a313 xnview-1.50.ebuild 1142
+MD5 420ea7da372e169e68fbf2fb406e50aa ChangeLog 2172
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 8a10bc55d696a215dead02a3ab849cc1 xnview-1.68.ebuild 1094
+MD5 d9033f4c677a8a6f1974dce701c5c5ec xnview-1.68.ebuild 1098
 MD5 7497208eecea3974c348190b50713744 files/digest-xnview-1.50 145
 MD5 8906b1ca75ddac450c6030f18d60aefb files/digest-xnview-1.68 73
 MD5 fe2cf2952d86b4eed345d6a7e405d64b files/99XnView 44
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2pXYI1lqEGTUzyQRAitJAJkB6O2Up2Ie+oquQ5pa2nPwmM8fIQCeLkYO
-OMfR5i59neJYx9w8uL1uvVE=
-=FDte
+iD8DBQFB4QlNI1lqEGTUzyQRAoeAAJ91tzja0YMPJ+r9q7F0Hc5NOEo62QCfZ3zB
+2kZyZK0x7rYEUqV8IJ0QYy8=
+=kfJM
 -----END PGP SIGNATURE-----
