@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.17 2004/06/15 01:50:59 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.18 2004/06/15 21:17:11 swtaylor Exp $
+
+  15 Jun 2004; Scott W Taylor <swtaylor@gentoo.org> gpa-0.7.0.ebuild:
+  dependancy fix for gpa #54013
 
 *gpa-0.7.0 (14 Jun 2004)
 

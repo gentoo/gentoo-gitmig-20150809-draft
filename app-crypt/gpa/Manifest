@@ -1,5 +1,5 @@
-MD5 1d23cdeaaf1974bb7937d252b033c397 ChangeLog 2019
+MD5 16756bbdf847d9672179c188cae5249b ChangeLog 2122
 MD5 942bdbd0392eed78a7047430c91b69c0 gpa-0.6.1.ebuild 748
-MD5 78ce22e471d91de5f26ab07adf6963a0 gpa-0.7.0.ebuild 753
+MD5 74510c09c5425ddd161ea50e01d7842a gpa-0.7.0.ebuild 755
 MD5 af557fa1397cace90cdb0338b00510c1 files/digest-gpa-0.7.0 61
 MD5 bf5fa46860f865ec7e86be8036c68e35 files/digest-gpa-0.6.1 61
