@@ -1,14 +1,19 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.23 2003/03/05 15:30:02 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.24 2003/03/17 18:34:48 mholzer Exp $
+
+*proftpd-1.2.8 (17 Mar 2003)
+
+  17 Mar 2003; Martin Holzer <mholzer@gentoo.org> proftpd-1.2.8.ebuild:
+  Version bumped. Ebuild submitted in #17666 by bugsubmit@snerk.org
+
+*proftpd-1.2.7 (15 Dec 2002)
 
   17 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/proftpd.conf :
   Closes #13734.
 
   15 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> proftpd-1.2.7.ebuild :
   Marked as stable.
-
-*proftpd-1.2.7 (15 Dec 2002)
 
   05 Mar 2003; Will Woods <wwoods@gentoo.org> proftpd-1.2.7.ebuild:
   Added alpha to KEYWORDS
