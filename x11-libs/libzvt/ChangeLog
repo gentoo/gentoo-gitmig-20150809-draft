@@ -1,7 +1,12 @@
 # ChangeLog for x11-libs/libzvt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.4 2002/06/05 14:33:37 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.5 2002/06/20 00:26:01 spider Exp $
 
+*libzvt-2.0.0.ebuild (19 Jun 2002)
+  19 Jun 2002  Spider <spider@gentoo.org> libzvt-2.0.0.ebuild libzvt-1.99999.0.ebuild ChangeLog:
+  seems my changelog got lost along the way, this is the new stable version, the other was there but with an uncommited changelog entry.
+  
+ 
 *libzvt-1.117.0 (05 June 2002)
   
   05 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> libzvt-1.117.0.ebuild:
