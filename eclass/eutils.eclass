@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.58 2003/09/22 22:09:51 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.59 2003/09/22 22:44:49 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -463,9 +463,11 @@ get_number_of_jobs() {
 #
 # Takes just 1 parameter (the directory to create tmpfile in)
 mymktemp() {
-	local topdir=$1
+	local topdir="$1"
+	
 	[ -z "${topdir}" ] && topdir=/tmp
-	if [ `which mktemp 2>/dev/null` ] ; then
+	if [ "`which mktemp 2>/dev/null`" ]
+	then
 		mktemp -p ${topdir}
 	else
 		local tmp="${topdir}/tmp.${RANDOM}.${RANDOM}.${RANDOM}"
@@ -490,7 +492,8 @@ mymktemp() {
 enewuser() {
 	# get the username
 	local euser="$1"; shift
-	if [ -z "${euser}" ] ; then
+	if [ -z "${euser}" ]
+	then
 		eerror "No username specified !"
 		die "Cannot call enewuser without a username"
 	fi
@@ -501,18 +504,21 @@ enewuser() {
 	local realuser="`ls -l ${tmpfile} | awk '{print $3}'`"
 
 	# see if user already exists
-	if [ "${euser}" == "${realuser}" ] ; then
+	if [ "${euser}" == "${realuser}" ]
+	then
 		return 0
 	fi
 	einfo "Adding user '${euser}' to your system ..."
 
 	# options to pass to useradd
-	local opts=""
+	local opts=
 
 	# handle uid
 	local euid="$1"; shift
-	if [ ! -z "${euid}" ] && [ "${euid}" != "-1" ] ; then
-		if [ ${euid} -gt 0 ] ; then
+	if [ ! -z "${euid}" ] && [ "${euid}" != "-1" ]
+	then
+		if [ "${euid}" -gt 0 ]
+		then
 			opts="${opts} -u ${euid}"
 		else
 			eerror "Userid given but is not greater than 0 !"
@@ -525,35 +531,41 @@ enewuser() {
 
 	# handle shell
 	local eshell="$1"; shift
-	if [ ! -z "${eshell}" ] ; then
-		if [ ! -e ${eshell} ] ; then
+	if [ ! -z "${eshell}" ]
+	then
+		if [ ! -e "${eshell}" ]
+		then
 			eerror "A shell was specified but it does not exist !"
 			die "${eshell} does not exist"
 		fi
 	else
-		eshell=/bin/false
+		eshell="/bin/false"
 	fi
 	einfo " - Shell: ${eshell}"
 	opts="${opts} -s ${eshell}"
 
 	# handle homedir
 	local ehome="$1"; shift
-	if [ -z "${ehome}" ] ; then
-		ehome=/dev/null
+	if [ -z "${ehome}" ]
+	then
+		ehome="/dev/null"
 	fi
 	einfo " - Home: ${ehome}"
 	opts="${opts} -d ${ehome}"
 
 	# handle groups
 	local egroups="$1"; shift
-	if [ ! -z "${egroups}" ] ; then
-		local realgroup
+	if [ ! -z "${egroups}" ]
+	then
+		local realgroup=
 		local oldifs="${IFS}"
 		export IFS=","
-		for g in ${egroups} ; do
+		for g in ${egroups}
+		do
 			chgrp ${g} ${tmpfile} >& /dev/null
 			realgroup="`ls -l ${tmpfile} | awk '{print $4}'`"
-			if [ "${g}" != "${realgroup}" ] ; then
+			if [ "${g}" != "${realgroup}" ]
+			then
 				eerror "You must add ${g} to the system first"
 				die "${g} is not a valid GID"
 			fi
@@ -567,9 +579,10 @@ enewuser() {
 
 	# handle extra and add the user
 	local eextra="$@"
-	local oldsandbox=${SANDBOX_ON}
+	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if [ -z "${eextra}" ] ; then
+	if [ -z "${eextra}" ]
+	then
 		useradd ${opts} ${euser} \
 			-c "added by portage for ${PN}" \
 			|| die "enewuser failed"
@@ -580,7 +593,8 @@ enewuser() {
 	fi
 	export SANDBOX_ON="${oldsandbox}"
 
-	if [ ! -e ${ehome} ] && [ ! -e ${D}/${ehome} ] ; then
+	if [ ! -e "${ehome}" ] && [ ! -e "${D}/${ehome}" ]
+	then
 		einfo " - Creating ${ehome} in ${D}"
 		dodir ${ehome}
 		fowners ${euser} ${ehome}
@@ -600,7 +614,8 @@ enewuser() {
 enewgroup() {
 	# get the group
 	local egroup="$1"; shift
-	if [ -z "${egroup}" ] ; then
+	if [ -z "${egroup}" ]
+	then
 		eerror "No group specified !"
 		die "Cannot call enewgroup without a group"
 	fi
@@ -611,18 +626,21 @@ enewgroup() {
 	local realgroup="`ls -l ${tmpfile} | awk '{print $4}'`"
 
 	# see if group already exists
-	if [ "${egroup}" == "${realgroup}" ] ; then
+	if [ "${egroup}" == "${realgroup}" ]
+	then
 		return 0
 	fi
 	einfo "Adding group '${egroup}' to your system ..."
 
 	# options to pass to useradd
-	local opts=""
+	local opts=
 
 	# handle gid
 	local egid="$1"; shift
-	if [ ! -z "${egid}" ] ; then
-		if [ ${egid} -gt 0 ] ; then
+	if [ ! -z "${egid}" ]
+	then
+		if [ "${egid}" -gt 0 ]
+		then
 			opts="${opts} -g ${egid}"
 		else
 			eerror "Groupid given but is not greater than 0 !"
@@ -638,7 +656,7 @@ enewgroup() {
 	opts="${opts} ${eextra}"
 
 	# add the group
-	local oldsandbox=${SANDBOX_ON}
+	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
 	groupadd ${opts} ${egroup} || die "enewgroup failed"
 	export SANDBOX_ON="${oldsandbox}"
@@ -649,7 +667,8 @@ enewgroup() {
 #
 # edos2unix(file, <more files>...)
 edos2unix() {
-	for f in $@ ; do
+	for f in $@
+	do
 		cp ${f} ${T}/edos2unix
 		sed 's/\r$//' ${T}/edos2unix > ${f}
 	done
@@ -675,19 +694,26 @@ edos2unix() {
 make_desktop_entry() {
 	[ -z "$1" ] && eerror "You must specify the executable" && return 1
 
-	local exec=${1}
-	local name=${2:-${PN}}
-	local icon=${3:-${PN}.png}
-	local type=${4}
-	local path=${5:-${GAMES_PREFIX}}
-	if [ -z "${type}" ] ; then
+	local exec="${1}"
+	local name="${2:-${PN}}"
+	local icon="${3:-${PN}.png}"
+	local type="${4}"
+	local path="${5:-${GAMES_PREFIX}}"
+	if [ -z "${type}" ]
+	then
 		case ${CATEGORY} in
-			app-emulation)	type=Emulator	;;
-			games-*)	type=Game	;;
-			*)		type=""		;;
+			"app-emulation")
+				type=Emulator
+				;;
+			"games-"*)
+				type=Game
+				;;
+			*)
+				type=
+				;;
 		esac
 	fi
-	local desktop=${T}/${exec}.desktop
+	local desktop="${T}/${exec}.desktop"
 
 echo "[Desktop Entry]
 Encoding=UTF-8
@@ -700,24 +726,29 @@ Path=${path}
 Icon=${icon}
 Categories=Application;${type};" > ${desktop}
 
-	if [ -d /usr/share/applications ] ; then
+	if [ -d "/usr/share/applications" ]
+	then
 		insinto /usr/share/applications
 		doins ${desktop}
 	fi
 
-	#if [ -d /usr/share/gnome/apps ] ; then
+	#if [ -d "/usr/share/gnome/apps" ]
+	#then
 	#	insinto /usr/share/gnome/apps/Games
 	#	doins ${desktop}
 	#fi
 
-	#if [ ! -z "`ls /usr/kde/* 2>/dev/null`" ] ; then
-	#	for ver in /usr/kde/* ; do
+	#if [ ! -z "`ls /usr/kde/* 2>/dev/null`" ]
+	#then
+	#	for ver in /usr/kde/*
+	#	do
 	#		insinto ${ver}/share/applnk/Games
 	#		doins ${desktop}
 	#	done
 	#fi
 
-	if [ -d /usr/share/applnk ] ; then
+	if [ -d "/usr/share/applnk" ]
+	then
 		insinto /usr/share/applnk/${type}
 		doins ${desktop}
 	fi
@@ -751,92 +782,113 @@ Categories=Application;${type};" > ${desktop}
 # - no support as yet for patches applying outside $S (and not directly in $WORKDIR).
 xpatch() {
 
-	debug-print-function $FUNCNAME $*
+	debug-print-function ${FUNCNAME} $*
 
-	local list=""
-	local list2=""
+	local list=
+	local list2=
 	declare -i plevel
 
 	# parse patch sources
-	for x in $*; do
-		debug-print "$FUNCNAME: parsing parameter $x"
-		if [ -f "$x" ]; then
-			list="$list $x"
-		elif [ -d "$x" ]; then
+	for x in $*
+	do
+		debug-print "${FUNCNAME}: parsing parameter ${x}"
+		if [ -f "${x}" ]
+		then
+			list="${list} ${x}"
+		elif [ -d "${x}" ]
+		then
 			# handles patchdirs like epatch() for now: no recursion.
 			# patches are sorted by filename, so with an xy_foo naming scheme you'll get the right order.
 			# only patches with _$ARCH_ or _all_ in their filenames are applied.
-			for file in `ls -A $x`; do
-				debug-print "$FUNCNAME:  parsing in subdir: file $file"
-				if [ -f "$x/$file" ] && [ "${file}" != "${file/_all_}" -o "${file}" != "${file/_$ARCH_}" ]; then
-					list2="$list2 $x/$file"
+			for file in `ls -A ${x}`
+			do
+				debug-print "${FUNCNAME}:  parsing in subdir: file ${file}"
+				if [ -f "${x}/${file}" -a "${file}" != "${file/_all_}" -o \
+				     "${file}" != "${file/_$ARCH_}" ]
+				then
+					list2="${list2} ${x}/${file}"
 				fi
 			done
-			list="`echo $list2 | sort` $list"
+			list="`echo ${list2} | sort` ${list}"
 		else
-			die "Couldn't find $x"
+			die "Couldn't find ${x}"
 		fi
 	done
 
-	debug-print "$FUNCNAME: final list of patches: $list"
+	debug-print "${FUNCNAME}: final list of patches: ${list}"
 
-	for x in $list; do
-		debug-print "$FUNCNAME: processing $x"
+	for x in ${list};
+	do
+		debug-print "${FUNCNAME}: processing ${x}"
 		# deal with compressed files. /usr/bin/file is in the system profile, or should be.
-		case "`/usr/bin/file -b $x`" in
-			*gzip*) patchfile="${T}/current.patch"; ungzip -c "$x" > "${patchfile}";;
-			*bzip2*) patchfile="${T}/current.patch"; bunzip2 -c "$x" > "${patchfile}";;
-			*text*) patchfile="$x";;
-			*) die "Could not determine filetype of patch $x";;
+		case "`/usr/bin/file -b ${x}`" in
+			*gzip*)
+				patchfile="${T}/current.patch"
+				ungzip -c "${x}" > "${patchfile}"
+				;;
+			*bzip2*)
+				patchfile="${T}/current.patch"
+				bunzip2 -c "${x}" > "${patchfile}"
+				;;
+			*text*)
+				patchfile="${x}"
+				;;
+			*)
+				die "Could not determine filetype of patch ${x}"
+				;;
 		esac
-		debug-print "$FUNCNAME: patchfile=$patchfile"
+		debug-print "${FUNCNAME}: patchfile=${patchfile}"
 
 		# determine patchlevel. supports p0 and higher with either $S or $WORKDIR as base.
-		target="`/bin/grep -m 1 '^+++ ' $patchfile`"
-		debug-print "$FUNCNAME: raw target=$target"
+		target="`/bin/grep -m 1 '^+++ ' ${patchfile}`"
+		debug-print "${FUNCNAME}: raw target=${target}"
 		# strip target down to the path/filename, remove leading +++
 		target="${target/+++ }"; target="${target%%	*}"
 		# duplicate slashes are discarded by patch wrt the patchlevel. therefore we need
 		# to discard them as well to calculate the correct patchlevel.
 		target="${target//\/\//\/}"
-		debug-print "$FUNCNAME: stripped target=$target"
+		debug-print "${FUNCNAME}: stripped target=${target}"
 
 		# look for target
-		for basedir in "$S" "$WORKDIR" "${PWD}"; do
-			debug-print "$FUNCNAME: looking in basedir=$basedir"
-			cd "$basedir"
+		for basedir in "${S}" "${WORKDIR}" "${PWD}"; do
+			debug-print "${FUNCNAME}: looking in basedir=${basedir}"
+			cd "${basedir}"
 
 			# try stripping leading directories
-			target2="$target"
+			target2="${target}"
 			plevel=0
-			debug-print "$FUNCNAME: trying target2=$target2, plevel=$plevel"
-			while [ ! -f "$target2" ]; do
+			debug-print "${FUNCNAME}: trying target2=${target2}, plevel=${plevel}"
+			while [ ! -f "${target2}" ]
+			do
 				target2="${target2#*/}" # removes piece of target2 upto the first occurence of /
-				plevel=plevel+1
-				debug-print "$FUNCNAME: trying target2=$target2, plevel=$plevel"
-				[ "$target2" == "${target2/\/}" ] && break
+				plevel=$((plevel+1))
+				debug-print "${FUNCNAME}: trying target2=${target2}, plevel=${plevel}"
+				[ "${target2}" == "${target2/\/}" ] && break
 			done
-			test -f "$target2" && break
+			test -f "${target2}" && break
 
 			# try stripping filename - needed to support patches creating new files
 			target2="${target%/*}"
 			plevel=0
-			debug-print "$FUNCNAME: trying target2=$target2, plevel=$plevel"
-			while [ ! -d "$target2" ]; do
+			debug-print "${FUNCNAME}: trying target2=${target2}, plevel=${plevel}"
+			while [ ! -d "${target2}" ]
+			do
 				target2="${target2#*/}" # removes piece of target2 upto the first occurence of /
-				plevel=plevel+1
-				debug-print "$FUNCNAME: trying target2=$target2, plevel=$plevel"
-				[ "$target2" == "${target2/\/}" ] && break
+				plevel=$((plevel+1))
+				debug-print "${FUNCNAME}: trying target2=${target2}, plevel=${plevel}"
+				[ "${target2}" == "${target2/\/}" ] && break
 			done
-			test -d "$target2" && break
+			test -d "${target2}" && break
 
 		done
 
-		test -f "${basedir}/${target2}" || test -d "${basedir}/${target2}" || die "Could not determine patchlevel for $x"
-		debug-print "$FUNCNAME: determined plevel=$plevel"
+		test -f "${basedir}/${target2}" || test -d "${basedir}/${target2}" \
+			|| die "Could not determine patchlevel for ${x}"
+		debug-print "${FUNCNAME}: determined plevel=${plevel}"
 		# do the patching
 		ebegin "Applying patch ${x##*/}..."
-		/usr/bin/patch -p$plevel < "$patchfile" > /dev/null || die "Failed to apply patch $x"
+		/usr/bin/patch -p${plevel} < "${patchfile}" > /dev/null \
+			|| die "Failed to apply patch ${x}"
 		eend $?
 
 	done
@@ -853,25 +905,30 @@ xpatch() {
 # - If the offset is not specified then we will attempt to extract
 #   the proper offset from the script itself.
 unpack_makeself() {
-	local src=$1
-	local skip=$2
+	local src="$1"
+	local skip="$2"
 
-	if [ -z "${src}" ] ; then
+	if [ -z "${src}" ]
+	then
 		src="${DISTDIR}/${A}"
 	else
-		if [ -e "${DISTDIR}/${src}" ] ; then
+		if [ -e "${DISTDIR}/${src}" ]
+		then
 			src="${DISTDIR}/${src}"
-		elif [ -e "${PWD}/${src}" ] ; then
+		elif [ -e "${PWD}/${src}" ]
+		then
 			src="${PWD}/${src}"
-		elif [ -e "${src}" ] ; then
+		elif [ -e "${src}" ]
+		then
 			src="${src}"
 		fi
 	fi
 	[ ! -e "${src}" ] && die "Could not find requested makeself archive ${src}"
 
-	local shrtsrc=`basename ${src}`
+	local shrtsrc="`basename ${src}`"
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
-	if [ -z "${skip}" ] ; then
+	if [ -z "${skip}" ]
+	then
 		local ver="`grep -a '#.*Makeself' ${src} | awk '{print $NF}'`"
 		local skip=0
 		case ${ver} in
@@ -909,7 +966,8 @@ unpack_makeself() {
 	tail -n +${skip} ${src} | gzip -cd | tar -x --no-same-owner -f - 2>/dev/null
 	local pipestatus="${PIPESTATUS[*]}"
 	pipestatus="${pipestatus// }"
-	if [ "${pipestatus//0}" != "" ] ; then
+	if [ "${pipestatus//0}" != "" ]
+	then
 		# maybe it isnt gzipped ... they usually are, but not always ...
 		tail -n +${skip} ${src} | tar -x --no-same-owner -f - \
 			|| die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
@@ -921,15 +979,20 @@ unpack_makeself() {
 # Usage: check_license [license]
 # - If the file is not specified then ${LICENSE} is used.
 check_license() {
-	local src=$1
-	if [ -z "${src}" ] ; then
+	local src="$1"
+	
+	if [ -z "${src}" ]
+	then
 		src="${PORTDIR}/licenses/${LICENSE}"
 	else
-		if [ -e "${PORTDIR}/licenses/${src}" ] ; then
+		if [ -e "${PORTDIR}/licenses/${src}" ]
+		then
 			src="${PORTDIR}/licenses/${src}"
-		elif [ -e "${PWD}/${src}" ] ; then
+		elif [ -e "${PWD}/${src}" ]
+		then
 			src="${PWD}/${src}"
-		elif [ -e "${src}" ] ; then
+		elif [ -e "${src}" ]
+		then
 			src="${src}"
 		fi
 	fi
@@ -937,10 +1000,12 @@ check_license() {
 
 	# here is where we check for the license...
 	# if we don't find one, we ask the user for it
-	if [ ! -d /usr/share/licenses ]; then
+	if [ ! -d "/usr/share/licenses" ]
+	then
 		mkdir -p /usr/share/licenses
 	fi
-	if [ -f /usr/share/licenses/${LICENSE} ]; then
+	if [ -f "/usr/share/licenses/${LICENSE}" ]
+	then
 		einfo "The license for this application has already been accepted."
 	else
 		ewarn "You MUST accept this license for installation to continue."
@@ -951,7 +1016,7 @@ check_license() {
 		einfo "Do you accept the terms of this license? [yes/no]"
 		read ACCEPT_TERMS
 		case ${ACCEPT_TERMS} in
-			yes|Yes|y|Y)
+			"yes"|"Yes"|"y"|"Y")
 				cp ${src} /usr/share/licenses
 				exit 0
 				;;
@@ -962,3 +1027,4 @@ check_license() {
 		esac
 	fi
 }
+
