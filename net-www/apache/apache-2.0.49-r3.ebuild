@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r3.ebuild,v 1.15 2004/06/25 00:48:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r3.ebuild,v 1.16 2004/06/25 11:52:56 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -9,8 +9,7 @@ S="${WORKDIR}/httpd-${PV}"
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"
 SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz
-	mirror://gentoo/apache-patches-${PATCH_LEVEL}.tar.bz2
-	http://dev.gentoo.org/~zul/apache/apache-patches-${PATCH_LEVEL}.tar.bz2"
+	mirror://gentoo/apache-patches-${PATCH_LEVEL}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="2"
@@ -33,21 +32,8 @@ DEPEND="dev-util/yacc
 apache_setup_vars() {
 	# Sets the USERDIR to default.
 	USERDIR="public_html"
-
-	if  use berkdb; then
-		db_major=`grep DB_VERSION_MAJOR /usr/include/db.h | cut -f3`
-		db_minor=`grep DB_VERSION_MINOR /usr/include/db.h | cut -f3`
-	    if [ $db_minor -gt 0 ];
-		then
-			db_version="db4"
-		else
-			db_version=`echo "db$db_major.$db_minor"`
-		fi
-		append-ldflags -l`echo "$db_version"`
-	fi
 	einfo "DATADIR is set to: ${DATADIR}"
 	einfo "USERDIR is set to: $USERDIR"
-	einfo "DB verison detected is $db_version"
 }
 
 set_filter_flags () {
@@ -77,6 +63,22 @@ src_unpack() {
 
 	if use ssl; then
 		epatch ${WORKDIR}/01_ssl_verify_client.patch || die
+	fi
+
+	if use berkdb; then
+		einfo "Enabling berkdb."
+		if has_version '=sys-libs/db-4*'; then
+			einfo "Enabling db4"
+			myconf="${myconf} --with-dbm=db4 --with-berkely-db=/usr"
+		elif has_version '=sys-libs/db-3*'; then
+			einfo "Enabling db3"
+			myconf="${myconf} --with-dbm=db3 --with-berkely-db=/usr"
+		elif has_version '=sys-libs/db-2'; then
+			einfo "Enabling db2"
+			myconf="${myconf} --with-dbm=db2 --with-berkely-db=/usr"
+		fi
+	else
+		echo "Disabling berkdb"
 	fi
 
 	#avoid utf-8 charset problems

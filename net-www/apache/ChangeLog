@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.210 2004/06/25 00:48:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.211 2004/06/25 11:52:56 zul Exp $
+
+  25 Jun 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r3.ebuild:
+  Replaced version berkdb detection with something that is much more smarter.
+  Shamelessly taken from the php.eclass. Closes #54932.
 
   21 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> apache-1.3.31-r2.ebuild:
   Marked stable on amd64.
