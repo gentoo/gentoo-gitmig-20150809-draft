@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.19 2003/04/24 19:59:47 leahcim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.20 2003/05/06 05:15:34 drobbins Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -9,7 +9,6 @@ RESTRICT="nostrip"
 
 IUSE="3dfx sse mmx 3dnow xml truetype nls cjk doc"
 
-inherit eutils flag-o-matic gcc
 
 filter-flags "-funroll-loops"
 
@@ -127,7 +126,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	truetype? ( app-arch/cabextract )
 	app-arch/unzip
 	!virtual/xft" 
-
+#RDEPEND="$DEPEND"
 # unzip - needed for savage driver (version 1.1.27t)
 # x11-libs/xft -- blocked because of interference with xfree's
  	
@@ -137,6 +136,10 @@ PROVIDE="virtual/x11
 	virtual/opengl
 	virtual/glu
 	virtual/xft"
+
+#inherit needs to happen *after* DEPEND has been defined to have "newdepend"
+#do the right thing. Otherwise RDEPEND doesn't get set properly.
+inherit eutils flag-o-matic gcc
 
 src_unpack() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.13 2003/04/18 12:09:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.14 2003/05/06 05:15:34 drobbins Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -8,8 +8,6 @@ DEBUG="yes"
 RESTRICT="nostrip"
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
-
-inherit eutils flag-o-matic gcc
 
 filter-flags "-funroll-loops"
 
@@ -140,6 +138,10 @@ PDEPEND=">=x11-libs/xft-2.0.1-r1
 PROVIDE="virtual/x11
 	virtual/opengl
 	virtual/glu"	
+
+#inherit needs to happen *after* DEPEND has been defined to have "newdepend"
+#do the right thing. Otherwise RDEPEND doesn't get set properly.
+inherit eutils flag-o-matic gcc
 
 src_unpack() {
 

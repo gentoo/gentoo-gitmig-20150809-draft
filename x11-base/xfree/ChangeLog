@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.129 2003/04/24 19:59:47 leahcim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.130 2003/05/06 05:15:34 drobbins Exp $
+
+  05 May 2003; Daniel Robbins <drobbins@gentoo.org>: xfree-4.3.0*.ebuild: moved
+  "inherit" line below DEPEND definition, since the "newdepend" lines in the
+  eclass were causing RDEPEND to get fried. RDEPEND should now be set
+  correctly.
 
 *xfree-4.3.0-r2 (08 Apr 2003)
 
