@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.8.ebuild,v 1.2 2003/02/28 13:18:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.8.ebuild,v 1.3 2003/03/16 18:01:09 liquidx Exp $
+
+inherit gcc
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console display library used by most text viewer"
@@ -26,4 +28,14 @@ src_install() {
 	dodoc COPYING* NEWS README *.txt
 	dodoc doc/*.txt doc/internal/*.txt doc/text/*.txt
 	dohtml doc/*.html
+}
+
+pkg_postinst() {
+	# ensure gcc uses the most recent slang.h (#16678)
+	if [ "`gcc-major-version`" = "3" ]; then
+		if [ -f "`gcc-libpath`/include/slang.h" ]; then
+			einfo "Removing gcc buffered slang.h to avoid conflicts"
+			rm -f `gcc-libpath`/include/slang.h
+		fi
+	fi            
 }
