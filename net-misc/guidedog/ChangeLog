@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/guidedog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.10 2004/12/29 19:48:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.11 2005/01/01 01:05:35 weeve Exp $
+
+  31 Dec 2004; Jason Wever <weeve@gentoo.org> guidedog-1.0.0.ebuild:
+  Added ~sparc keyword.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
