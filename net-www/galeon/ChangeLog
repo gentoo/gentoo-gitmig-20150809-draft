@@ -1,6 +1,11 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.44 2003/04/21 21:24:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.45 2003/04/23 09:05:10 liquidx Exp $
+
+*galeon-1.2.10a (23 Apr 2003)
+
+  23 Apr 2003; Alastair Tse <liquidx@gentoo.org> galeon-1.2.10a.ebuild:
+  version bump. this fixes gcc 2.9x compiler errors (#19748)
 
 *galeon-1.2.10 (21 Apr 2003)
 
