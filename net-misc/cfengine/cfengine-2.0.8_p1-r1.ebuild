@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.8_p1-r1.ebuild,v 1.1 2003/10/03 12:56:03 klieber Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.8_p1-r1.ebuild,v 1.2 2003/10/04 23:24:47 klieber Exp $ 
 
 PARCH=${P/_/}
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${PARCH}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 		>=sys-libs/db-3.2
