@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.2.6-r2.ebuild,v 1.4 2004/10/23 12:05:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.2.6-r2.ebuild,v 1.5 2004/10/23 12:13:10 kloeri Exp $
 
 IUSE="cups debug freetype opengl"
 DESCRIPTION="C++ based Toolkit for developing Graphical User Interfaces easily and effectively"
