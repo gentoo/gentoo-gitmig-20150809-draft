@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.6 2004/08/29 04:56:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.7 2004/09/25 07:40:33 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -50,7 +50,7 @@ src_unpack() {
 
 src_compile() {
 	# bug #11681; get b0rked code when using -march=k6 with this package.
-	replace-cpu-flags i586 k6 k6-2 k6-3
+	replace-cpu-flags k6 k6-2 k6-3 i586
 
 	local myconf
 	# The following fix is due to a bug with bdb on sparc's. See: 
