@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.57 2003/02/12 19:42:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.58 2003/02/13 07:03:45 seemant Exp $
 
 *gentoolkit-0.1.18-r1 (12 Feb 2003)
+
+  12 Feb 2003; Seemant Kulleen <seemant@gentoo.org> files/digest-gentoolkit-0.1.18-r1 :
+  added missing digest
 
   12 Feb 2003; Aron Griffis <agriffis@gentoo.org> gentoolkit-0.1.18-r1.ebuild files/scripts/echangelog files/scripts/ekeyword :
   Bump revision to pick up changes to echangelog and ekeyword
