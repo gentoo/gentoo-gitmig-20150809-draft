@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.78 2004/11/14 03:27:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.79 2004/11/15 02:18:17 agriffis Exp $
+
+  14 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-1.0-r2.ebuild:
+  Set HOME=~root when running regxpcom/regchrome in case this is being emerged
+  via sudo. Otherwise the commands will create ~/.mozilla owned by root and 700
+  perms, which makes subsequent execution of firefox by user impossible. #67031
 
 *mozilla-firefox-1.0-r2 (13 Nov 2004)
 
