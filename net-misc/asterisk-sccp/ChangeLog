@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk-sccp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/ChangeLog,v 1.5 2004/09/29 17:30:37 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/ChangeLog,v 1.6 2004/11/30 20:24:09 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> asterisk-sccp-0.2.ebuild:
+  Removed trailing space after ! in DEPEND.
 
   29 Sep 2004; <stkn@gentoo.org> asterisk-sccp-0.2.ebuild:
   chan_sccp-0.2 won't compile with >=asterisk-1.0.0, blocking that...
