@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.24 2003/11/14 15:58:02 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.25 2003/12/14 01:22:10 gmsoft Exp $
+
+  14 Dec 2003; root <root@gentoo.org> elfutils-0.84.ebuild:
+  Marked stable on hppa.
 
   14 Nov 2003; Brad House <brad_mssw@gentoo.org> elfutils-0.89.ebuild:
   add ~amd64 flag
