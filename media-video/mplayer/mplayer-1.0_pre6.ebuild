@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.15 2005/01/22 20:57:22 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.16 2005/01/22 21:27:47 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -44,8 +44,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 		dv? ( >=media-libs/libdv-0.9.5 )
 		)
 	esd? ( media-sound/esound )
-	gif? ( media-libs/giflib )
-	!gif? ( media-libs/libungif )
+	gif? ( ||( media-libs/giflib media-libs/libungif ) )
 	ggi? ( media-libs/libggi )
 	gtk? (
 		media-libs/libpng
@@ -415,12 +414,6 @@ src_compile() {
 		--with-x11incdir=/usr/X11R6/include \
 		--disable-sse2 \
 		${myconf} || die
-
-	# when gif is autodetected, GIF_LIB is set correctly.  We're explicitly controlling it, and it doesn't behave correctly.
-	# so... we have to help it along.
-	if use gif; then
-		sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
-	fi
 
 	einfo "Make"
 	make all || die "Failed to build MPlayer!"

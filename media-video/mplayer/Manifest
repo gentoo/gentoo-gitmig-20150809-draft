@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 22d980142e8aad8ea5230e0608e5b279 ChangeLog 47429
+MD5 c84aadb519bfcce14ab50a4a06332cf4 ChangeLog 47690
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 e59af451f7a05b0044a687f413bf4720 mplayer-1.0_pre4-r7.ebuild 12225
 MD5 c098282cf0148b2caac4682eceec5258 mplayer-1.0_pre5-r2.ebuild 14050
 MD5 101520d159844f194c02877d2c7e30d4 mplayer-1.0_pre5-r3.ebuild 14870
 MD5 db18f76ee40620f5142febc063834345 mplayer-1.0_pre5-r4.ebuild 16471
-MD5 71b901d26641a343800bc1ed39824e64 mplayer-1.0_pre5-r5.ebuild 16401
-MD5 ce0ed02e2c2cb47a7465880e3cb47cca mplayer-1.0_pre6.ebuild 15744
+MD5 52869cb3458f68afee315aa58fb31e83 mplayer-1.0_pre5-r5.ebuild 16401
+MD5 e7e189c8f92024e6225efb090f1a83d1 mplayer-1.0_pre6.ebuild 15503
 MD5 59120b22317a30fb88a5e4946eaed3f0 files/mplayer-nl.patch 673
 MD5 484c45fb52a157c6b056b4298f787f3d files/cachefill.patch 6053
 MD5 e4581f6934f66ccecc8c1682664623d0 files/digest-mplayer-1.0_pre4-r7 358
@@ -45,7 +45,7 @@ MD5 34f948b8f242a2aadb53a1e2b00e3155 files/vuln02-fix.diff 467
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB8rxQFdQwWVoAgN4RAmkbAKDxeqwkOTIKs+vq55LV4LGBos3QkQCdHqAJ
-HfC2Sn+ItZxbYGLWggwKKPo=
-=NQyZ
+iD8DBQFB8sNvFdQwWVoAgN4RAg3wAJ9d6W6LFINvKiX3/b6pIx/f4Db9RQCgoKEj
+nOLunx1/QBg8kQzGGeOqXXs=
+=iKu2
 -----END PGP SIGNATURE-----

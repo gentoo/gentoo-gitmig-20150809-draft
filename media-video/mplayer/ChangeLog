@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.258 2005/01/22 20:57:22 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.259 2005/01/22 21:27:47 chriswhite Exp $
+
+  23 Jan 2005; Chris White <chriswhite@gentoo.org>
+  mplayer-1.0_pre5-r5.ebuild, mplayer-1.0_pre6.ebuild:
+  Fixed bug #78209. Also removed the gif lib logic in pre6 as it's no longer
+  required (fixed upstream) and now gif is a true enable/disable style flag.
 
   23 Jan 2005; Chris White <chriswhite@gentoo.org> +files/mplayer-nl.patch,
   mplayer-1.0_pre6.ebuild:
