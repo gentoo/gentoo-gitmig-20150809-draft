@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.204 2004/11/23 16:15:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.205 2004/11/30 01:34:05 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -190,7 +190,7 @@ netcdf - Enable NetCDF data format support
 nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
 nis - Support for NIS/YP services
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
-nptl - Enable support for NPTL
+nptl - Enable support for Native POSIX Threads Library, the new threading module (requires linux-2.6 or better usually)
 nocardbus - Disables cardbus support in pcmcia-cs
 nocd - Tells emerge to install all files required to run the application without a CD mounted
 nocxx - Disable support for C++ (DONT USE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
