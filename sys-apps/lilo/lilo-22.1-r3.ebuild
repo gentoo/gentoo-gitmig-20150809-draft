@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.18 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.1-r3.ebuild,v 1.19 2003/06/21 21:19:40 drobbins Exp $
 
 inherit mount-boot
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://brun.dyndns.org/pub/linux/lilo/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 -ppc -sparc -alpha -mips"
+KEYWORDS="x86 amd64 -ppc -sparc -alpha -mips"
 
 DEPEND=">=sys-devel/bin86-0.15.5"
 

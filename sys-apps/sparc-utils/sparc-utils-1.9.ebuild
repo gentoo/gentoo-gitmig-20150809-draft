@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9.ebuild,v 1.14 2003/03/11 05:58:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9.ebuild,v 1.15 2003/06/21 21:19:40 drobbins Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI=" http://http.us.debian.org/debian/pool/main/s/${PN}/${PN}_${PV}.orig.ta
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="sparc -x86 -ppc -alpha -mips -hppa -arm"
+KEYWORDS="x86 amd64 -ppc -alpha -mips -hppa -arm"
 
 DEPEND="sys-kernel/linux-headers"
 RDEPEND="virtual/glibc"

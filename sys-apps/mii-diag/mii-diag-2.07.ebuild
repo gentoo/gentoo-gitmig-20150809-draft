@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/mii-diag-2.07.ebuild,v 1.2 2003/02/13 16:05:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/mii-diag-2.07.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
 
 MIIVER=${PV}
 LIBVER=2.04
@@ -13,7 +13,7 @@ SRC_URI="" # ftp://ftp.scyld.com/pub/diag/mii-diag.c
            # ftp://ftp.scyld.com/pub/diag/libmii.c
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 amd64 ~alpha"
 IUSE=""
 DEPEND=""
 

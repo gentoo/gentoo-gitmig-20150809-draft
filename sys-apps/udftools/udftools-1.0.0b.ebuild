@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udftools/udftools-1.0.0b.ebuild,v 1.4 2003/02/13 16:19:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udftools/udftools-1.0.0b.ebuild,v 1.5 2003/06/21 21:19:41 drobbins Exp $
 
 # Unfortunately, its true version name is illegal for portage
 P="udftools-1.0.0b2"
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/linux-udf/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 
 DEPEND="virtual/glibc"
 

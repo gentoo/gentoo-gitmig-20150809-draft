@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.4 2003/06/09 23:17:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.5 2003/06/21 21:19:39 drobbins Exp $
 
 inherit libtool eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/lct/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha ~mips"
 
 DEPEND="sys-devel/autoconf
 	>=sys-apps/sed-4

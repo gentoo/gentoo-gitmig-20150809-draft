@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-2.0.1.ebuild,v 1.1 2003/05/10 04:07:01 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-2.0.1.ebuild,v 1.2 2003/06/21 21:19:39 drobbins Exp $
 
 IUSE="ncurses gtk"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Utilities for the IBM Enterprise Volume Management System"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.sourceforge.net/projects/evms"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 

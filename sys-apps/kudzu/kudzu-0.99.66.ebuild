@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-0.99.66.ebuild,v 1.7 2003/03/26 19:01:41 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-0.99.66.ebuild,v 1.8 2003/06/21 21:19:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Red Hat Hardware detection tools"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.knopper.net"
 
-KEYWORDS="~x86 -ppc -sparc -alpha -mips"
+KEYWORDS="x86 amd64 -ppc -sparc -alpha -mips"
 SLOT="0"
 LICENSE="GPL-2"
 

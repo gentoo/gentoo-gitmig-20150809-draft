@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.2.0.ebuild,v 1.6 2003/02/13 15:55:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.2.0.ebuild,v 1.7 2003/06/21 21:19:39 drobbins Exp $
 
 IUSE="ncurses gtk"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 #EVMS uses libuuid from e2fsprogs
 DEPEND="virtual/glibc gtk? ( =x11-libs/gtk+-1* ) ncurses? ( sys-libs/ncurses ) sys-apps/e2fsprogs"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 amd64 -ppc"
 LICENSE="GPL-2"
 SLOT="0"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.2.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.2.ebuild,v 1.6 2003/06/21 21:19:41 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yard is a suite of Perl scripts for creating rescue disks (also
@@ -11,7 +11,7 @@ SRC_URI="http://www.linuxlots.com/~fawcett/yard/${P}.tar.gz
 HOMEPAGE="http://www.linuxlots.com/~fawcett/yard/"
 SLOT="0"
 LICENSE="GPL-2 Artistic"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 amd64 -ppc"
 DEPEND="dev-lang/perl"
 RDEPEND=""
 

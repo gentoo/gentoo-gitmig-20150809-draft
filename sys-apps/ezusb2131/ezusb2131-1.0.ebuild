@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ezusb2131/ezusb2131-1.0.ebuild,v 1.1 2003/05/22 11:15:09 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ezusb2131/ezusb2131-1.0.ebuild,v 1.2 2003/06/21 21:19:39 drobbins Exp $
 
 MY_P=${PN/e/E}-${PV}
 DESCRIPTION="This is a firmware uploader for EZ-USB devices"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/ezusb2131/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 IUSE=""
 DEPEND=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/systrace-1.0-r1.ebuild,v 1.3 2003/06/12 22:11:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/systrace-1.0-r1.ebuild,v 1.4 2003/06/21 21:19:41 drobbins Exp $
 
 DESCRIPTION="Systrace userland binary"
 HOMEPAGE="http://www.citi.umich.edu/u/provos/systrace/index.html"
@@ -13,7 +13,7 @@ INCLUDE0="/usr/src/linux/include/linux/systrace.h"
 INCLUDE1="/usr/include/linux/systrace.h"
 S="${WORKDIR}/${P}"
 
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 IUSE="gtk"
 DEPEND="gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )"
 

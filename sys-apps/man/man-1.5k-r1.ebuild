@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k-r1.ebuild,v 1.10 2003/05/25 15:10:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k-r1.ebuild,v 1.11 2003/06/21 21:19:40 drobbins Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ RDEPEND="sys-apps/cronbase
 	>=sys-apps/groff-1.18"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha hppa arm mips"
+KEYWORDS="x86 amd64 ppc ~sparc alpha hppa arm mips"
 LICENSE="GPL-2"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/yaboot-1.3.6-r1.ebuild,v 1.12 2003/02/13 16:24:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/yaboot-1.3.6-r1.ebuild,v 1.13 2003/06/21 21:19:41 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PPC Bootloader"
@@ -9,7 +9,7 @@ HOMEPAGE="http://penguinppc.org/projects/yaboot/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc -x86 -sparc -alpha"
+KEYWORDS="x86 amd64 -sparc -alpha"
 
 DEPEND="sys-apps/powerpc-utils sys-apps/hfsutils"
 

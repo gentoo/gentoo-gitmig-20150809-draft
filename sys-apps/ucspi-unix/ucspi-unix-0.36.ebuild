@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36.ebuild,v 1.1 2003/04/23 21:11:29 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36.ebuild,v 1.2 2003/06/21 21:19:41 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ucspi implementation for unix sockets."
@@ -8,7 +8,7 @@ SRC_URI="http://untroubled.org/ucspi-unix/${P}.tar.gz"
 
 DEPEND=">=dev-libs/bglibs-1.009"
 HOMEPAGE="http://untroubled.org/ucspi-unix/"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 SLOT="0"
 LICENSE="GPL-2"
 

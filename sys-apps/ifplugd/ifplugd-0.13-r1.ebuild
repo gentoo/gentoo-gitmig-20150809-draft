@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.13-r1.ebuild,v 1.1 2003/03/21 15:58:05 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.13-r1.ebuild,v 1.2 2003/06/21 21:19:40 drobbins Exp $
 
 DESCRIPTION="Brings up/down ethernet ports automatically with cable detection"
 HOMEPAGE="http://www.stud.uni-hamburg.de/users/lennart/projects/ifplugd"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 IUSE=""
 DEPEND=""
 #RDEPEND=""

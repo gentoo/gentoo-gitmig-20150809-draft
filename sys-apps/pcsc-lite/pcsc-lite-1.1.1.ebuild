@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.3 2003/04/24 10:57:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.4 2003/06/21 21:19:40 drobbins Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linuxnet.com/middle.html"
 SRC_URI="http://www.linuxnet.com/middleware/files/${P}.tar.gz"
 
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 SLOT="0"
 
 DEPEND="sys-devel/make

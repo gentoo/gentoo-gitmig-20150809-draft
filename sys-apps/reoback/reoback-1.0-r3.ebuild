@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reoback/reoback-1.0-r3.ebuild,v 1.2 2003/06/12 22:10:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reoback/reoback-1.0-r3.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
 
 DESCRIPTION="Reoback Backup Solution"
 SRC_URI="http://switch.dl.sourceforge.net/sourceforge/reoback/reoback-1.0_r3.tar.gz"
 HOMEPAGE="http://reoback.penguinsoup.org/"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 SLOT="0"
 
 RDEPEND=">=sys-apps/tar-1.13 

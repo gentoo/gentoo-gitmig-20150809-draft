@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.9 2003/03/25 06:02:52 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.10 2003/06/21 21:19:40 drobbins Exp $
 
 IUSE="selinux"
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
 
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3

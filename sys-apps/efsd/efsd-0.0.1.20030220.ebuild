@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220.ebuild,v 1.7 2003/03/20 13:24:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220.ebuild,v 1.8 2003/06/21 21:19:39 drobbins Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="dev-lang/perl"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/tmpreaper-1.4.12.ebuild,v 1.15 2003/02/13 16:18:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tmpreaper/tmpreaper-1.4.12.ebuild,v 1.16 2003/06/21 21:19:41 drobbins Exp $
 
 MYP="tmpreaper_1.4.12"
 S=${WORKDIR}/${P}
@@ -8,7 +8,7 @@ DESCRIPTION="A utility for removing files based on when they were last
 accessed"
 SRC_URI="http://ftp.debian.org/debian/dists/potato/main/source/admin/${MYP}.tar.gz"
 HOMEPAGE="http://packages.debian.org/stable/admin/tmpreaper.html"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 amd64 ppc sparc "
 SLOT="0"
 LICENSE="GPL-2"
 

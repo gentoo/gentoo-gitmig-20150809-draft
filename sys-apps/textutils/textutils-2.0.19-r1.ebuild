@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0.19-r1.ebuild,v 1.11 2003/02/13 16:17:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0.19-r1.ebuild,v 1.12 2003/06/21 21:19:41 drobbins Exp $
 
 IUSE="nls static build"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU text utilities"
 SRC_URI="http://fetish.sf.net/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/textutils/"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86  ppc sparc "
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"

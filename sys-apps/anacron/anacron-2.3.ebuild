@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.3 2003/02/15 08:15:34 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.4 2003/06/21 21:19:38 drobbins Exp $
 
 #MY_P=${PN}-${PV}
 #S=${WORKDIR}/${MY_P}
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Anacron -- a periodic command scheduler"
 SRC_URI=" http://umn.dl.sourceforge.net/sourceforge/anacron/${P}.tar.gz"
 HOMEPAGE="http://anacron.sourceforge.net/"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 amd64 ppc"
 SLOT="0"
 LICENSE="as-is"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.14 2003/04/08 23:04:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.15 2003/06/21 21:19:41 drobbins Exp $
 
 IUSE="gtk"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="strace meets expect"
 SRC_URI="mirror://sourceforge/subterfugue/${P}.tgz"
 HOMEPAGE="http://www.subterfugue.org/"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 amd64 -ppc"
 SLOT="0"
 LICENSE="GPL-2"
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r3.ebuild,v 1.8 2003/04/16 17:51:07 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r3.ebuild,v 1.9 2003/06/21 21:19:40 drobbins Exp $
 # Note: the daemon's current 2.4 version has nothing to do with kernel versions
 
 MY_P="${P/-/_}"
 S=${WORKDIR}/${P}.orig
 SRC_URI="http://download.sourceforge.net/noflushd/${MY_P}.orig.tar.gz"
 HOMEPAGE="http://noflushd.sourceforge.net/"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 SLOT="0"
 LICENSE="GPL-2"
 DESCRIPTION="A daemon to spin down your disks and force accesses to be cached"

@@ -1,22 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grsecurity-base-policy/grsecurity-base-policy-20030614.ebuild,v 1.1 2003/06/14 19:54:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grsecurity-base-policy/grsecurity-base-policy-20030614.ebuild,v 1.2 2003/06/21 21:19:39 drobbins Exp $
 
 S=${WORKDIR}/grsecurity-base-policy
 
 DESCRIPTION="Template access control lists for gentoo grsecurity"
 HOMEPAGE="http://cvs.gentoo.org/~solar/snapshots"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 LICENSE="GPL-2"
 SLOT="0"
 MAINTAINER="solar@gentoo.org"
 IUSE=""
 
 DEPEND="virtual/glibc \
-	sys-apps/fileutils \
-	sys-apps/textutils \
-	sys-apps/sh-utils \
 	sys-apps/sed"
 
 RDEPEND=">=sys-apps/gradm-1.9.9h-r1"

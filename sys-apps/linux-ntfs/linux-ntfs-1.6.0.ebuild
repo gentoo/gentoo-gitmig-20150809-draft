@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-ntfs/linux-ntfs-1.6.0.ebuild,v 1.3 2003/02/13 16:03:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-ntfs/linux-ntfs-1.6.0.ebuild,v 1.4 2003/06/21 21:19:40 drobbins Exp $
 
 DESCRIPTION="Utilities and library for accessing NTFS filesystems"
 HOMEPAGE="http://linux-ntfs.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.tar.gz"
 DEPEND=">=sys-devel/gcc-2.95"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 
 src_unpack() {
 	unpack ${A}

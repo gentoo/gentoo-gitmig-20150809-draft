@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.50.ebuild,v 1.14 2003/04/03 17:15:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.50.ebuild,v 1.15 2003/06/21 21:19:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
 SRC_URI="ftp://oss.lineo.com/busybox/${P}.tar.gz"
 HOMEPAGE="http://www.busybox.net"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 SLOT="0"
 LICENSE="GPL-2"
 

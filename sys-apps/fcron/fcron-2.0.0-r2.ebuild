@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r2.ebuild,v 1.3 2003/02/13 15:56:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r2.ebuild,v 1.4 2003/06/21 21:19:39 drobbins Exp $
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
-KEYWORDS="x86 -ppc sparc "
+KEYWORDS="x86 amd64 -ppc sparc "
 
 S=${WORKDIR}/${P}
 SRC_URI="http://fcron.free.fr/${P}.src.tar.gz"

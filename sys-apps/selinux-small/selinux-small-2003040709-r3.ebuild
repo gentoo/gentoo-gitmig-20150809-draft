@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003040709-r3.ebuild,v 1.2 2003/06/07 20:34:13 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003040709-r3.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
 
 DESCRIPTION="SELinux libraries and policy compiler"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -14,7 +14,7 @@ S="${WORKDIR}/selinux"
 # to easily specify that libsecure is in the workdir, and we want to use pam
 LIBSECURE="-I${S}/libsecure/include -L${S}/libsecure/src -DUSE_PAM"
 
-KEYWORDS="x86 ppc alpha sparc"
+KEYWORDS="x86 amd64 ppc alpha sparc"
 IUSE="selinux"
 DEPEND="<sys-libs/glibc-2.3.2
 	sys-devel/flex

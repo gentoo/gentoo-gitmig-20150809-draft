@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.11 2003/05/25 15:10:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.12 2003/06/21 21:19:40 drobbins Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
@@ -15,7 +15,7 @@ RDEPEND="virtual/glibc
 
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 amd64 ppc sparc "
 LICENSE="GPL-2"
 
 src_unpack() {

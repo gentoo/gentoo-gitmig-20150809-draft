@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.41.ebuild,v 1.2 2003/03/08 19:21:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.41.ebuild,v 1.3 2003/06/21 21:19:39 drobbins Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 	ftp://ftp.astron.com/pub/file/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
 SLOT="0"
 LICENSE="as-is"
 

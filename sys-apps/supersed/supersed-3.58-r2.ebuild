@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r2.ebuild,v 1.9 2003/02/13 16:16:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58-r2.ebuild,v 1.10 2003/06/21 21:19:41 drobbins Exp $
 
 IUSE="nls static build"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://queen.rett.polimi.it/~paolob/seders/ssed/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 
 DEPEND="dev-libs/libpcre
 	nls? ( sys-devel/gettext )"

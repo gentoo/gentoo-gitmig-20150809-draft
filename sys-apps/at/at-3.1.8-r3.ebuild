@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r3.ebuild,v 1.12 2003/02/13 15:48:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r3.ebuild,v 1.13 2003/06/21 21:19:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="queues jobs for later execution"
 SRC_URI="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.tar.bz2
 	 ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.dif"
 HOMEPAGE="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 SLOT="0"
 LICENSE="GPL-2"
 

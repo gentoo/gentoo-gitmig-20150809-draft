@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.1.ebuild,v 1.1 2003/06/01 04:50:44 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.1.ebuild,v 1.2 2003/06/21 21:19:41 drobbins Exp $
 
 MY_P="${PN}${PV//.}"
 DESCRIPTION="Mother Board Monitor Program for X Window System"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html"
 SRC_URI="http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/${MY_P}.tar.gz"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 IUSE="X"
 
 DEPEND="virtual/glibc

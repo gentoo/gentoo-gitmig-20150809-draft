@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.25-r2.ebuild,v 1.2 2003/03/13 09:50:04 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.25-r2.ebuild,v 1.3 2003/06/21 21:19:39 drobbins Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ DESCRIPTION="Daemon for the Linux Device Filesystem"
 SRC_URI="ftp://ftp.atnf.csiro.au/pub/people/rgooch/linux/daemons/devfsd/devfsd-v${PV}.tar.gz"
 HOMEPAGE="http://www.atnf.csiro.au/~rgooch/linux/"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa arm"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha ~mips ~hppa arm"
 SLOT="0"
 LICENSE="GPL-2"
 

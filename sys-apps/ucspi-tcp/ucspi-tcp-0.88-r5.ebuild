@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r5.ebuild,v 1.3 2003/03/16 23:12:16 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r5.ebuild,v 1.4 2003/06/21 21:19:41 drobbins Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
 HOMEPAGE="http://cr.yp.to/ucspi-tcp.html"
 
 SLOT="0"
-KEYWORDS="x86 sparc ppc alpha"
+KEYWORDS="x86 amd64 sparc ppc alpha"
 LICENSE="as-is"
 IUSE="ssl ipv6"
 

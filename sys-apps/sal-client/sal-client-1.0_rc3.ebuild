@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.3 2003/06/08 21:39:44 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/sal-client-1.0_rc3.ebuild,v 1.4 2003/06/21 21:19:40 drobbins Exp $
 
 MY_P=${P/_/-}
 
@@ -11,7 +11,7 @@ SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/secureaudit/${MY_P/rc3/RC3
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND="virtual/glibc \

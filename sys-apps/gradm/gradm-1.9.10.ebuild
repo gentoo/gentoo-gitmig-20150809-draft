@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-1.9.10.ebuild,v 1.1 2003/06/16 18:37:01 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-1.9.10.ebuild,v 1.2 2003/06/21 21:19:39 drobbins Exp $
 
 DESCRIPTION="Administrative interface for grsecurity ${PV} access control lists"
 SRC_URI="http://www.grsecurity.net/${P}.tar.gz"
 HOMEPAGE="http://www.grsecurity.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~x86 ~sparc ~ppc"
+KEYWORDS="x86 amd64 ~sparc ~ppc"
 SLOT="0"
 
 IUSE=""

@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.6.5-r1.ebuild,v 1.2 2003/02/13 16:01:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.6.5-r1.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="I2C Bus support"
 SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${P}.tar.gz"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 amd64 ppc"
 LICENSE="GPL-2"
 
 SLOT="0"

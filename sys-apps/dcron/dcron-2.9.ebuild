@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9.ebuild,v 1.3 2003/05/20 19:41:48 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9.ebuild,v 1.4 2003/06/21 21:19:39 drobbins Exp $
 
 # to use this, you must be part of the "cron" group
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${PN}
 DESCRIPTION="A cute little cron from Matt Dillon"
 SRC_URI="http://apollo.backplane.com/FreeSrc/${PN}${MY_PV}.tgz"
 HOMEPAGE="http://apollo.backplane.com/"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~hppa alpha"
 SLOT="0"
 LICENSE="GPL-2"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3-r1.ebuild,v 1.1 2003/04/03 17:28:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.3-r1.ebuild,v 1.2 2003/06/21 21:19:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.busybox.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 amd64 ppc sparc "
 
 DEPEND="virtual/glibc"
 

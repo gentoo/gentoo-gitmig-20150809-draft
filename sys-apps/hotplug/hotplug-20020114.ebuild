@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.12 2003/03/11 07:38:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.13 2003/06/21 21:19:39 drobbins Exp $
 
 # source maintainers named it hotplug-YYYY_MM_DD instead of hotplug-YYYYMMDD
 MY_P=${PN}-${PV:0:4}_${PV:4:2}_${PV:6:2}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/linux-hotplug/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 amd64 ppc sparc"
 
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
 DEPEND=">=sys-apps/pciutils-2.1.9

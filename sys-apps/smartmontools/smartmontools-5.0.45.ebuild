@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.0.45.ebuild,v 1.5 2003/03/10 17:19:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.0.45.ebuild,v 1.6 2003/06/21 21:19:40 drobbins Exp $
 
 MY_P="${PN}-5.0-45"
 DESCRIPTION="control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.)"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/smartmontools/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 amd64 sparc"
 
 S=${WORKDIR}/${MY_P}
 

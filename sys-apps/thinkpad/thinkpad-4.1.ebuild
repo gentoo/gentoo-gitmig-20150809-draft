@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-4.1.ebuild,v 1.2 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/thinkpad/thinkpad-4.1.ebuild,v 1.3 2003/06/21 21:19:41 drobbins Exp $
 
 #transform P to match tarball versioning
 MYPV=${PV/_beta/beta}
@@ -8,7 +8,7 @@ MYP="${PN}_${MYPV}"
 DESCRIPTION="Thinkpad system control kernel modules"
 SRC_URI="mirror://sourceforge/tpctl/${MYP}.tar.gz"
 HOMEPAGE="http://tpctl.sourceforge.net/tpctlhome.htm"
-KEYWORDS="x86 -ppc -mips"
+KEYWORDS="x86 amd64 -ppc -mips"
 SLOT="0"
 LICENSE="GPL-2"
 

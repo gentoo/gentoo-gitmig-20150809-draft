@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.19 2003/03/27 07:30:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.20 2003/06/21 21:19:40 drobbins Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa"
 
 DEPEND="virtual/glibc"
 

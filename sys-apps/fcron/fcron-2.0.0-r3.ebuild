@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r3.ebuild,v 1.3 2003/05/15 03:22:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r3.ebuild,v 1.4 2003/06/21 21:19:39 drobbins Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://fcron.free.fr/${P}.src.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc ~sparc hppa ~mips"
+KEYWORDS="x86 amd64 -ppc ~sparc hppa ~mips"
 
 DEPEND="virtual/editor"
 RDEPEND="!virtual/cron sys-apps/cronbase virtual/mta"

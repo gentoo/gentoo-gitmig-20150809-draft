@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.2 2003/06/11 01:26:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
 
 P=${P/-tools/}
 S=${WORKDIR}/${P}
@@ -16,7 +16,7 @@ RDEPEND=""
 SLOT="0"
 IUSE="trusted apm pnp nocardbus build gtk X"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 
 # check arch for configure
 if [ ${ARCH} = "x86" ] ; then

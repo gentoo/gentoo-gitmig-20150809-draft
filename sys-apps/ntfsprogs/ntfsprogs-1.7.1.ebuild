@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ntfsprogs/ntfsprogs-1.7.1.ebuild,v 1.2 2003/06/10 17:18:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ntfsprogs/ntfsprogs-1.7.1.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
 
 DESCRIPTION="Utilities and library for accessing NTFS filesystems"
 HOMEPAGE="http://linux-ntfs.sourceforge.net/"
@@ -10,7 +10,7 @@ DEPEND=">=sys-devel/gcc-2.95
 	>=sys-apps/sed-4"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 
 src_compile() {
 	econf || die "Configure failed"

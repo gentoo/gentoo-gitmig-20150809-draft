@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.13 2003/04/17 17:10:40 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.14 2003/06/21 21:19:40 drobbins Exp $
 # -r2 by Dan Armak
 
 DESCRIPTION="Premastering program for creating iso9660 volumes"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/mkisofs.html"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 SLOT="0"
 LICENSE="GPL-2"
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.8.5.ebuild,v 1.7 2003/02/13 15:47:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.8.5.ebuild,v 1.8 2003/06/21 21:19:39 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
 SRC_URI="http://www.sibbald.com/apcupsd/download/${P}.tar.gz"
 HOMEPAGE="http://www.sibbald.com/apcupsd/"
-KEYWORDS="x86 -ppc -sparc  -alpha"
+KEYWORDS="x86 amd64 -ppc -sparc  -alpha"
 SLOT="0"
 LICENSE="GPL-2"
  

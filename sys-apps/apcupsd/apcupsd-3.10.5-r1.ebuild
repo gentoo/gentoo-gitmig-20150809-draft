@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5-r1.ebuild,v 1.1 2003/02/26 22:41:29 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5-r1.ebuild,v 1.2 2003/06/21 21:19:38 drobbins Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
 SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz
 	ftp://ftp.apcupsd.com/pub/apcupsd/contrib/gd1.2.tar.gz"
 HOMEPAGE="http://www.sibbald.com/apcupsd/"
-KEYWORDS="x86 ~ppc arm"
+KEYWORDS="x86 amd64 ~ppc arm"
 SLOT="0"
 LICENSE="GPL-2"
 
