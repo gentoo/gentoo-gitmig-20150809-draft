@@ -480,10 +480,9 @@ net-misc/nt
 <=dev-java/sun-j2sdk-1.4.0-r1
 
 # <mcummings@gentoo.org> (28 Jul 2002)
-# THIS WILL BREAK MOST OF YOUR PERL DEPS. Until upstream fixes are made
-# for more apps that use perl, this is to remain masked. (22 Nov 2002)
-# new version of perl - incompatible with 5.6 IO model
->=sys-devel/perl-5.8.0
+# upstream fixes are 99% in place now. Please keep arch masked for the
+# interim though.
+#>=sys-devel/perl-5.8.0
 
 # <spider@gentoo.org> (26 Aug 2002)
 # Masked for testing -- tore out the broken id3lib included and
