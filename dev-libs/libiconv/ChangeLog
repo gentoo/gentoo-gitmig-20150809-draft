@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libiconv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.5 2003/02/12 06:06:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.6 2003/05/01 10:19:47 pylon Exp $
+
+  01 May 2003; Lars Weiler <pylon@gentoo.org> libiconv-1.7.ebuild:
+  Tested it on ppc for quite a long time and set KEYWORD now to ppc.
 
   04 Jan 2003; Spider <spider@gentoo.org> : updated DESCRIPTION to be more truthful
 
