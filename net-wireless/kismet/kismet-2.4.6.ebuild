@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.4.6.ebuild,v 1.5 2003/02/11 19:39:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.4.6.ebuild,v 1.6 2003/02/13 15:28:37 vapier Exp $
 
 IUSE="X snmp ssl"
 

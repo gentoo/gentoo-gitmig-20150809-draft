@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwavecontrol/kwavecontrol-0.2.ebuild,v 1.2 2003/02/02 18:26:30 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwavecontrol/kwavecontrol-0.2.ebuild,v 1.3 2003/02/13 15:29:25 vapier Exp $
 
 PATCHES="${FILESDIR}/${P}-gcc-2.95.3.diff"
 newdepend "net-wireless/wireless-tools"
