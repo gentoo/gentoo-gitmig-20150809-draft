@@ -1,20 +1,19 @@
 # ChangeLog for sys-apps/sysklogd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysklogd/ChangeLog,v 1.4 2002/09/19 02:42:38 vapier Exp $
-
-*sysklogd-1.4.1-r2.ebuild (18 Sept 2002)
-
-  18 Sept 2002; SpanKY <vapier@gentoo.org> sysklogd-1.4.1-r2.ebuild :
-  Fixed HOMEPAGE
-  18 Sept 2002; SpanKY <vapier@gentoo.org> sysklogd-1.4.1-r2.ebuild :
-  Fixed HOMEPAGE
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysklogd/ChangeLog,v 1.5 2002/09/19 02:46:31 vapier Exp $
 
 *sysklogd-1.4.1-r2.ebuild (14 July 2002)
+
+  18 Sept 2002; SpanKY <vapier@gentoo.org> sysklogd-1.4.1-r2.ebuild :
+  Fixed HOMEPAGE
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> sysklogd-1.4.1-r2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
 *sysklogd-1.4.1-r1 (11 March 2002)
+
+  18 Sept 2002; SpanKY <vapier@gentoo.org> sysklogd-1.4.1-r1.ebuild :
+  Fixed HOMEPAGE
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> sysklogd-1.4.1-r1.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
