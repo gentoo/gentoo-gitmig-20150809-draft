@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.183 2004/06/10 19:53:15 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.184 2004/06/10 20:58:48 lv Exp $
+
+  10 Jun 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20040605.ebuild:
+  passes "make check" on ppc64, adding ~ppc64 keyword
 
   10 Jun 2004; Stephen P. Becker <geoman@gentoo.org>
   glibc-2.3.3_pre20040529.ebuild:
