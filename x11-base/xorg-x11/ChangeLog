@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.352 2005/03/10 22:03:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.353 2005/03/11 03:21:26 spyderous Exp $
+
+  10 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r5.ebuild:
+  (#83598) Stable x86. 6.8.2-r1 may be stabled soon but it's pending
+  >=freetype-2.1.8, which I need to discuss with the maintainers, and this
+  can't wait.
 
   10 Mar 2005; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.8.2-r1.ebuild:
   Stable for sparc, closing Bug 83598 --- security patch for XPM.
