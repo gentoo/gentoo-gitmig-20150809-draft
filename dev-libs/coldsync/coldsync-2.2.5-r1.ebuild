@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/coldsync/coldsync-2.2.5-r1.ebuild,v 1.1 2002/08/15 06:05:45 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/coldsync/coldsync-2.2.5-r1.ebuild,v 1.2 2002/10/12 00:37:35 mcummings Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A command-line tool to synchronize PalmOS PDAs with Unix workstations"
@@ -30,6 +30,9 @@ src_install() {
 		SYSCONFDIR=${D}/etc \
 		DATADIR=${D}/usr/share \
 		INFODIR=${D}/usr/share/info \
+		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+		INSTALLSITEMAN3DIR=${D}/usr/share/man/man3 \
+		INSTALLVENDORMAN3DIR=${D}/usr/share/man/man3 \
 		install || die "couldn't install coldsync"
 
 	dodoc AUTHORS Artistic ChangeLog HACKING INSTALL NEWS README TODO
