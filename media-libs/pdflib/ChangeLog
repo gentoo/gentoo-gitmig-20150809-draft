@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.32 2004/01/24 11:43:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.33 2004/01/24 12:08:40 gustavoz Exp $
+
+  24 Jan 2004; <gustavoz@gentoo.org> pdflib-5.0.2.ebuild:
+  marked stable on sparc
 
   24 Jan 2004; Guy Martin <gmsoft@gentoo.org> pdflib-5.0.2.ebuild:
   Marked stable on hppa.
