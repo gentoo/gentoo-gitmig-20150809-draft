@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.2 2003/10/19 15:56:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.13.4-r1.ebuild,v 1.3 2003/10/19 16:12:49 lanius Exp $
 
 IUSE="ssl xml xml2 gnome"
 
@@ -40,23 +40,29 @@ src_compile() {
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
-	use gnome \
-		&& myconf="${myconf} --with-gnomefe"
 
 	econf ${myconf}
 
-	# gnome compile fix
-	sed -i -e "s:VERSION:PACKAGE_VERSION:" gnome/init.c
-	sed -i -e "s:VERSION:PACKAGE_VERSION:" gnome/main.c
-	echo "int fe_accept_cert(const ne_ssl_certificate *cert, int failures) { return 0; }" >> gnome/gcommon.c
-	sed -i -e "s:-lglib:-lglib -lgthread:" Makefile
-	sed -i -e "s:TARGET = xsitecopy:TARGET = xsitecopy sitecopy:" Makefile
-	sed -i -e 's:$(INSTALL_PROGRAM) $(TARGET) $(DESTDIR)$(bindir)/$(TARGET):$(INSTALL_PROGRAM) $(TARGET) $(DESTDIR)$(bindir)/:' Makefile
-	sed -i -e 's:install\: $(TARGET) install-xsitecopy:install\: $(TARGET) install-xsitecopy install-sitecopy:' Makefile
-
 	emake || die "emake failed"
+
+	if [ "`use gnome`" ]; then
+		econf ${myconf} --with-gnomefe
+
+		# gnome compile fix
+		sed -i -e "s:VERSION:PACKAGE_VERSION:" gnome/init.c
+		sed -i -e "s:VERSION:PACKAGE_VERSION:" gnome/main.c
+		echo "int fe_accept_cert(const ne_ssl_certificate *cert, int failures) { return 0; }" >> gnome/gcommon.c
+		sed -i -e "s:-lglib:-lglib -lgthread:" Makefile
+
+		emake || die "emake failed"
+	fi
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR=${D} install-sitecopy || die "install failed"
+
+	if [ "`use gnome`" ]; then
+		make DESTDIR=${D} install-xsitecopy || die "install failed"
+		dobin sitecopy
+	fi
 }
