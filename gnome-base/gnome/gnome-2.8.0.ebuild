@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0_pre1.ebuild,v 1.6 2004/09/23 15:01:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.0.ebuild,v 1.1 2004/10/08 22:30:11 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -47,7 +47,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/gconf-2.8
 	>=gnome-base/gnome-keyring-0.4
-	>=gnome-base/gnome-vfs-2.8
+	>=gnome-base/gnome-vfs-2.8.1
 
 	>=gnome-base/libbonobo-2.8
 	>=gnome-base/libbonoboui-2.8
@@ -69,7 +69,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-gfx/eog-2.8
 	!hppa? ( !mips? ( >=net-www/epiphany-1.4 ) )
 	>=app-arch/file-roller-2.8
-	>=gnome-extra/gcalctool-4.4.16
+	>=gnome-extra/gcalctool-4.4.19
 	>=gnome-extra/gconf-editor-2.8
 	>=gnome-base/gdm-2.6.0.4
 	>=app-editors/gedit-2.8
@@ -112,8 +112,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/zenity-2.8
 	>=net-analyzer/gnome-netstatus-2.8
 
-	cdr? ( >=gnome-extra/nautilus-cd-burner-2.8.1 )
-	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.8.1 )
+	cdr? ( >=gnome-extra/nautilus-cd-burner-2.8.2 )
+	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.8.2 )
 
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.1
@@ -131,7 +131,7 @@ RDEPEND="!gnome-base/gnome-core
 # gtk-doc
 
 RDEPEND="${RDEPEND}
-	hal? ( >=gnome-base/gnome-volume-manager-1.0.2 )
+	hal? ( >=gnome-base/gnome-volume-manager-1.0.2-r1 )
 	>=net-misc/vino-2.8
 
 	>=gnome-extra/gal-2.2.1
