@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.5 2004/10/20 01:45:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.6 2004/10/20 02:39:44 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -100,15 +100,17 @@ xmms-plugin_src_unpack() {
 		if do_xmms; then
 			cd ${XMMS_WORKDIR}
 			for f in ${XMMS_SRC_URI} ${BASE_SRC_URI}; do
-				unpack ${f}
+				XMMS_A="${XMMS_A} `basename ${f}`"
 			done
+			unpack ${XMMS_A}
 		fi
 
 		if do_bmp; then
 			cd ${BMP_WORKDIR}
 			for f in ${BMP_SRC_URI} ${BASE_SRC_URI}; do
-				unpack ${f}
+				BMP_A="${BMP_A} `basename ${f}`"
 			done
+			unpack ${BMP_A}
 		fi
 	else
 		if do_xmms; then
