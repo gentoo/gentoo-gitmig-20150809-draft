@@ -1,8 +1,13 @@
 # ChangeLog for net-www/amaya
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.9 2003/02/12 08:46:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.10 2003/02/20 16:49:54 lu_zero Exp $
 
-*amaya-7.0 (22 Jan 2003)
+*amaya-7.2 (22 Jan 2003)
+
+  22 Jan 2003; Luca Barbato <lu_zero@gentoo.org> amaya-7.2.ebuild:
+  New version
+
+*amaya-7.1 (22 Jan 2003)
 
   22 Jan 2003; Luca Barbato <lu_zero@gentoo.org> amaya-*.ebuild:
   removed the 7.0 one since isn't present anymore, added the 7.1,
