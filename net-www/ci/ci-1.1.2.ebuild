@@ -1,18 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ci/ci-1.0.0.ebuild,v 1.3 2003/12/17 18:22:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ci/ci-1.1.2.ebuild,v 1.1 2003/12/17 18:22:50 usata Exp $
 
 IUSE=""
 
-MY_P=${PN}.nr${PV%%.*}
-
 DESCRIPTION="C.i. - Compact Interface for 2ch"
 HOMEPAGE="http://wids.net/lab/Ci.html"
-SRC_URI="http://wids.net/archive/Ci/${MY_P/_/}.tar.gz"
+if [ "${P/_/}" = "${P}" ] ; then
+	# normal release
+	#MY_P=${PN}.nr${PV%%.*}
+	MY_P=${PN}.delta${PV##*.}
+	SRC_URI="http://wids.net/archive/Ci/${MY_P}.tar.gz"
+else
+	# snapshot
+	MY_P=${PN}.snapshot-${PV#*_p}
+	SRC_URI="http://wids.net/archive/Ci/snapshot/${MY_P}.tar.gz"
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="dev-lang/ruby
@@ -20,13 +27,17 @@ RDEPEND="dev-lang/ruby
 	>=dev-ruby/ruby-gtk-0.28
 	media-fonts/monafont"
 
-S=${WORKDIR}/Ci
+if [ "${P/_/}" = "${P}" ] ; then
+	S=${WORKDIR}/Ci
+else
+	S=${WORKDIR}/Ci-${PV#*_p}
+fi
 
 src_compile() {
 
 	local rubycmd bindir libdir datadir
 
-	if has_version 'app-text/migemo' ; then
+	if [ -d /usr/share/migemo ] ; then
 		local migemoDict=/usr/share/migemo/migemo-dict
 		local migemoDictCache=/usr/share/migemo/migemo-dict.cache
 		sed -i -e "/^migemoDict /s|''|'${migemoDict}'|" \
@@ -53,6 +64,10 @@ src_install() {
 	ruby install.rb install || die
 
 	dosed /usr/lib/ruby/site_ruby/ci/siteconfig.rb || die
+	#dosed /usr/lib/ruby/site_ruby/ci/gtkext.rb || die
+	dosed /usr/lib/ruby/site_ruby/ci/sitecfg.rb || die
 
-	dodoc Changelog README *.sample keybinds
+	dodoc Changelog README *.sample doc/*.rd
+	cd doc
+	dohtml -r .
 }
