@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.7 2003/08/24 20:38:22 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.8 2003/09/07 03:11:16 agriffis Exp $
+
+*rdtool-0.6.14 (06 Sep 2003)
+
+  06 Sep 2003; Aron Griffis <agriffis@gentoo.org> rdtool-0.6.11-r1.ebuild,
+  rdtool-0.6.11.ebuild, rdtool-0.6.14.ebuild:
+  Version bump to 0.6.14; still requires ruby-1.8.0 though
+
+  06 Sep 2003; Aron Griffis <agriffis@gentoo.org> rdtool-0.6.11-r1.ebuild,
+  rdtool-0.6.11.ebuild:
+  Restrict this ebuild to ruby 1.8.0 and mark ~arch until ruby 1.8.0 is marked
+  stable. This fixes bug 27047
 
 *rdtool-0.6.11-r1 (11 Jun 2003)
 
