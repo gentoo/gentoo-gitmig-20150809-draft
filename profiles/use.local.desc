@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.719 2004/11/06 15:53:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.720 2004/11/06 16:00:29 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -23,8 +23,9 @@ app-crypt/gnupg:smartcard - Enables smartcard support
 app-crypt/gpgme:smime - Add smime support
 app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
 app-crypt/johntheripper:skey - Enable S/Key (Single use password) authentication cracking support
-app-editors/emacs:nosendmail - If you do not want to install any MTA
 app-editors/emacs:aqua - Build Carbon Emacs
+app-editors/emacs:multi-tty - Add multi-tty support
+app-editors/emacs:nosendmail - If you do not want to install any MTA
 app-editors/gvim:mzscheme - Include support for the mzscheme interpreter
 app-editors/gvim:netbeans - Include netbeans integration support
 app-editors/nano:justify - Toggle the justify option ...
