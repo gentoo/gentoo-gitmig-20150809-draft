@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.66 2003/12/28 03:32:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.67 2004/01/03 13:50:23 caleb Exp $
+
+  03 Jan 2004; Caleb Tennis <caleb@gentoo.org> arts-1.1.4.ebuild,
+  arts-1.2.0_beta2.ebuild:
+  Alsa dep <= 0.9.8
 
   27 Dec 2003; Caleb Tennis <caleb@gentoo.org> arts-1.1.4.ebuild,
   arts-1.2.0_beta2.ebuild:

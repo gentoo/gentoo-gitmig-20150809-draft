@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.11 2004/01/02 14:55:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.12 2004/01/03 13:50:23 caleb Exp $
 inherit kde flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -13,7 +13,7 @@ DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manag
 
 KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
 
-DEPEND="alsa? ( media-libs/alsa-lib )
+DEPEND="alsa? ( <=media-libs/alsa-lib-0.9.8 )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	mad? ( media-libs/libmad media-libs/libid3tag )
 	media-libs/audiofile
@@ -42,8 +42,6 @@ use mad || myconf="$myconf --disable-libmad"
 PATCHES="$FILESDIR/optional-deps.diff"
 
 src_unpack() {
-	echo $DEPEND
-	echo $RDEPEND
 	kde_src_unpack
 	kde_sandbox_patch ${S}/soundserver
 	# for the configure.in.in patch, for some reason it's not automatically picked up
