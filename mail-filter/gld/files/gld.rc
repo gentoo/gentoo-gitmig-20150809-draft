@@ -1,0 +1,16 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/files/gld.rc,v 1.1 2004/08/10 00:45:19 slarti Exp $
+
+depend() {
+	need
+	use dns
+	before postfix
+}
+
+start() {
+	ebegin "Starting gld"
+	start-stop-daemon --start --exec --quiet /usr/bin/gld
+}
+
