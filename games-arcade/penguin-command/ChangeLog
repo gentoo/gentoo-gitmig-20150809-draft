@@ -1,12 +1,17 @@
 # ChangeLog for games-arcade/penguin-command
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.2 2003/09/10 20:32:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.3 2003/09/19 17:31:40 vapier Exp $
+
+*penguin-command-1.6.6 (19 Sep 2003)
+
+  19 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + games.eclass support.
+
+*penguin-command-1.6.5-r1 (28 Jul 2002)
 
   12 Jul 2003; Michael Sterrett <msterret@gentoo.org>
   penguin-command-1.6.5-r1.ebuild:
   fix DESCRIPTION; tidy; error messages
-
-*penguin-command-1.6.5-r1 (28 Jul 2002)
 
   01 Nov 2002; Jon Nall <nall@gentoo.org> penguin-command-1.6.5-r1.ebuild :
   added ppc to KEYWORDS
