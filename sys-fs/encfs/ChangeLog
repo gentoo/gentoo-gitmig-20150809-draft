@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/encfs
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.1 2004/11/20 19:45:13 genstef Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.2 2005/01/03 08:05:33 genstef Exp $
+
+  03 Jan 2005; Stefan Schweizer <genstef@gentoo.org> encfs-1.1.10.ebuild:
+  It does not work with fuse 2.1, thanks to Jay Phelps
+  <jayphelps@austin.rr.com> in bug 73975 for reporting and testing
 
 *encfs-1.1.10 (20 Nov 2004)
 
