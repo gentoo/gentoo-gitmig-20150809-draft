@@ -4,6 +4,7 @@
 #
 # Suggestions for improvements are mostly welcome, the sandbox were angry
 # with my home-brewn installer
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/bashish-1.9.19.ebuild,v 1.3 2003/06/12 23:42:50 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text console theme engine"

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bashish
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.1 2003/04/26 21:38:24 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.2 2003/06/12 23:42:50 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> bashish-1.9.19.ebuild:
+  add Header
 
 *bashish-1.9.19 (24 Apr 2003)
 
