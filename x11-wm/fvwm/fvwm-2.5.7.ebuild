@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.18 2003/07/31 22:41:37 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.19 2003/07/31 22:54:20 taviso Exp $
 
 inherit gnuconfig
 
@@ -23,10 +23,10 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 						>=media-libs/imlib-1.9.14-r1 ) )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 		rplay? ( >=media-sound/rplay-3.3.2 )
-		perl? ( >=dev-lang/perl-5.6.1-r10 )	
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		png? ( >=media-libs/libpng-1.0.12-r2 )
 		stroke? ( >=dev-libs/libstroke-0.4 )
+		>=dev-lang/perl-5.6.1-r10	
 		>=media-libs/netpbm-9.12-r4
 		>=media-libs/fontconfig-2.1-r1
 		>=dev-libs/expat-1.95.6-r1
@@ -168,11 +168,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	local i
 	ewarn
-	ewarn "The Gentoo FVWM ebuild has been altered since the 2.4.x Branch."
 	ewarn "The following features that you did not request are now"
-	ewarn "controlled via USE flags, and not enabled automatically:"
+	ewarn "controlled via USE flags:"
 	use readline	|| ewarn "	Readline support in FvwmConsole [readline]"
 	use ncurses		|| ewarn "	Ncurses support in FvwmConsole [ncurses]"
 	use stroke		|| ewarn "	Mouse Gestures [stroke]"
@@ -191,6 +189,4 @@ pkg_postinst() {
 	ewarn "available:"
 	ewarn "	$ emerge -pv fvwm"
 	ewarn
-	
-	for ((i=0;i<5;i++)); do echo -ne '\a'; sleep 1; done
 }
