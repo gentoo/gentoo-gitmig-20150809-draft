@@ -1,7 +1,7 @@
 MD5 29e4960bebfb2f9822681894d6de04c8 noip-updater-1.6.ebuild 1196
-MD5 255e1f770426864c44210127be697639 noip-updater-2.0.12.ebuild 1158
-MD5 8e7b3174f6751eaba687709813f8272e ChangeLog 1023
-MD5 e31934bf904d5d4cd4b8f8929b33c1ff noip-updater-2.0.15.ebuild 1163
+MD5 81d8665726684495a9f15754f49bd937 noip-updater-2.0.12.ebuild 1218
+MD5 cf149e56a796b6634d09e0c4f1c87fe0 ChangeLog 1286
+MD5 e42bb6654a8dd4b2beb1cf6eb56ab924 noip-updater-2.0.15.ebuild 1219
 MD5 ced8f9146ce6aaaa6254e329056676da files/noip2.start 786
 MD5 f9e8f8e05086da02238c8224c29234d5 files/digest-noip-updater-2.0.12 62
 MD5 99b1c0cb4c76aad553644c0a5b2dab81 files/digest-noip-updater-2.0.15 62
@@ -9,3 +9,4 @@ MD5 30c80856624fffbea9f30895dbeb411e files/noip-2.0.12.patch 647
 MD5 b6525d36838e7db757ee152a1bbdc8f6 files/digest-noip-updater-1.6 68
 MD5 dbba0145cdeb92a600483d7addcd8837 files/noip.start 692
 MD5 72fe1de71cd094fa1a00d0e1bc742dcd files/noip.c.patch 234
+MD5 52f1769a9095b987cf951d77b3bed3ce files/noip-2.0.15.patch 647
