@@ -1,11 +1,22 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.41 2004/04/10 09:12:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.42 2004/05/21 23:19:31 rac Exp $
+
+*xemacs-21.4.15 (21 May 2004)
+
+  21 May 2004; Robert Coie <rac@gentoo.org> xemacs-21.4.12.ebuild,
+  xemacs-21.4.15.ebuild:
+  New upstream version, abstract berkeley db support into USE=berkdb, make it
+  bring in db-1 to get ndbm.h if needed, take efs out of PDEPEND to make minimal
+  xemacs installations possible.
 
   10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   xemacs-21.4.10-r1.ebuild, xemacs-21.4.10-r2.ebuild, xemacs-21.4.10.ebuild,
   xemacs-21.4.11.ebuild:
   thin ebuilds
+
+  06 Apr 2004; <rac@gentoo.org> xemacs-21.4.12.ebuild:
+  keyword ppc
 
   29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   xemacs-21.4.10-r1.ebuild, xemacs-21.4.10-r2.ebuild, xemacs-21.4.10.ebuild,
