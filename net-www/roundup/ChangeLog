@@ -1,6 +1,11 @@
 # ChangeLog for net-www/roundup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/roundup/ChangeLog,v 1.6 2003/02/14 17:00:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/roundup/ChangeLog,v 1.7 2003/04/28 19:23:35 mholzer Exp $
+
+*roundup-0.5.6 (28 Apr 2003)
+
+  28 Apr 2003; Martin Holzer <mholzer@gentoo.org> roundup-0.5.6.ebuild:
+  Version bumped. Closes #20005.
 
 *roundup-0.5.5 (14 Feb 2003)
 
