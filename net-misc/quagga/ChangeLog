@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/quagga
 # Copyright 2003-2004 DataCore GmbH; Distributed under the GPL v2 
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.4 2004/04/27 21:46:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.5 2004/06/13 15:54:32 weeve Exp $
+
+  13 Jun 2004; Jason Wever <weeve@gentoo.org> files/init/bgpd:
+  Fixed typo in bgpd init script.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> quagga-0.96.4-r6.ebuild:
   Add inherit eutils
