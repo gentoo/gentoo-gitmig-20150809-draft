@@ -1,0 +1,132 @@
+--- modules/aboutBA.py.orig	2005-01-31 03:12:26.000000000 +0100
++++ modules/aboutBA.py	2005-01-31 03:15:50.000000000 +0100
+@@ -626,7 +626,7 @@
+         Layout6.addWidget(self.versionLabel,1,1)
+ 
+         self.TextLabel1 = QLabel(LayoutWidget,"TextLabel1")
+-        self.TextLabel1.setSizePolicy(QSizePolicy(7,1,0,0,self.TextLabel1.sizePolicy().hasHeightForWidth()))
++        self.TextLabel1.setSizePolicy(QSizePolicy(QSizePolicy.Expanding,QSizePolicy.Minimum,0,0,self.TextLabel1.sizePolicy().hasHeightForWidth()))
+         TextLabel1_font = QFont(self.TextLabel1.font())
+         TextLabel1_font.setFamily("helvetic")
+         self.TextLabel1.setFont(TextLabel1_font)
+--- modules/kodosBA.py.orig	2005-01-31 03:12:26.000000000 +0100
++++ modules/kodosBA.py	2005-01-31 03:16:13.000000000 +0100
+@@ -847,7 +847,7 @@
+         KodosBALayout.addWidget(self.buttonGroup2,1,0)
+ 
+         self.groupBox1 = QGroupBox(self.centralWidget(),"groupBox1")
+-        self.groupBox1.setSizePolicy(QSizePolicy(7,7,0,0,self.groupBox1.sizePolicy().hasHeightForWidth()))
++        self.groupBox1.setSizePolicy(QSizePolicy(QSizePolicy.Expanding,QSizePolicy.Expanding,0,0,self.groupBox1.sizePolicy().hasHeightForWidth()))
+         self.groupBox1.setLineWidth(1)
+         self.groupBox1.setColumnLayout(0,Qt.Vertical)
+         self.groupBox1.layout().setSpacing(6)
+--- modules/newUserDialogBA.py.orig	2005-01-31 03:12:26.000000000 +0100
++++ modules/newUserDialogBA.py	2005-01-31 03:17:16.000000000 +0100
+@@ -176,7 +176,7 @@
+         if not name:
+             self.setName("NewUserDialog")
+ 
+-        self.setSizePolicy(QSizePolicy(1,5,0,0,self.sizePolicy().hasHeightForWidth()))
++        self.setSizePolicy(QSizePolicy(QSizePolicy.Minimum,QSizePolicy.Preferred,0,0,self.sizePolicy().hasHeightForWidth()))
+         self.setIcon(self.image0)
+ 
+         NewUserDialogLayout = QVBoxLayout(self,11,6,"NewUserDialogLayout")
+@@ -190,7 +190,7 @@
+         layout13 = QGridLayout(None,1,1,0,6,"layout13")
+ 
+         self.pixmapLabel2 = QLabel(self,"pixmapLabel2")
+-        self.pixmapLabel2.setSizePolicy(QSizePolicy(0,0,0,0,self.pixmapLabel2.sizePolicy().hasHeightForWidth()))
++        self.pixmapLabel2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.pixmapLabel2.sizePolicy().hasHeightForWidth()))
+         self.pixmapLabel2.setPixmap(self.image1)
+         self.pixmapLabel2.setScaledContents(1)
+ 
+@@ -201,7 +201,7 @@
+         layout13.addWidget(self.textLabel4,1,0)
+ 
+         self.pixmapLabel1 = QLabel(self,"pixmapLabel1")
+-        self.pixmapLabel1.setSizePolicy(QSizePolicy(0,0,0,0,self.pixmapLabel1.sizePolicy().hasHeightForWidth()))
++        self.pixmapLabel1.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.pixmapLabel1.sizePolicy().hasHeightForWidth()))
+         self.pixmapLabel1.setPixmap(self.image2)
+         self.pixmapLabel1.setScaledContents(1)
+ 
+--- modules/prefsBA.py.orig	2005-01-31 03:12:26.000000000 +0100
++++ modules/prefsBA.py	2005-01-31 03:18:57.000000000 +0100
+@@ -82,12 +82,12 @@
+         layout4 = QGridLayout(None,1,1,0,6,"layout4")
+ 
+         self.TextLabel2 = QLabel(LayoutWidget,"TextLabel2")
+-        self.TextLabel2.setSizePolicy(QSizePolicy(0,1,0,0,self.TextLabel2.sizePolicy().hasHeightForWidth()))
++        self.TextLabel2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Minimum,0,0,self.TextLabel2.sizePolicy().hasHeightForWidth()))
+ 
+         layout4.addWidget(self.TextLabel2,1,0)
+ 
+         self.browserButton = QPushButton(LayoutWidget,"browserButton")
+-        self.browserButton.setSizePolicy(QSizePolicy(0,0,0,0,self.browserButton.sizePolicy().hasHeightForWidth()))
++        self.browserButton.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.browserButton.sizePolicy().hasHeightForWidth()))
+ 
+         layout4.addWidget(self.browserButton,0,3)
+ 
+@@ -112,26 +112,26 @@
+         layout4.addMultiCellWidget(self.emailServerEdit,4,4,1,3)
+ 
+         self.TextLabel1_2Emaii = QLabel(LayoutWidget,"TextLabel1_2Emaii")
+-        self.TextLabel1_2Emaii.setSizePolicy(QSizePolicy(0,1,0,0,self.TextLabel1_2Emaii.sizePolicy().hasHeightForWidth()))
++        self.TextLabel1_2Emaii.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Minimum,0,0,self.TextLabel1_2Emaii.sizePolicy().hasHeightForWidth()))
+ 
+         layout4.addMultiCellWidget(self.TextLabel1_2Emaii,3,4,0,0)
+ 
+         self.TextLabel1_2 = QLabel(LayoutWidget,"TextLabel1_2")
+-        self.TextLabel1_2.setSizePolicy(QSizePolicy(0,1,0,0,self.TextLabel1_2.sizePolicy().hasHeightForWidth()))
++        self.TextLabel1_2.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Minimum,0,0,self.TextLabel1_2.sizePolicy().hasHeightForWidth()))
+ 
+         layout4.addWidget(self.TextLabel1_2,5,0)
+         spacer = QSpacerItem(380,20,QSizePolicy.Expanding,QSizePolicy.Minimum)
+         layout4.addMultiCell(spacer,5,5,2,3)
+ 
+         self.recentFilesSpinBox = QSpinBox(LayoutWidget,"recentFilesSpinBox")
+-        self.recentFilesSpinBox.setSizePolicy(QSizePolicy(0,0,0,0,self.recentFilesSpinBox.sizePolicy().hasHeightForWidth()))
++        self.recentFilesSpinBox.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.recentFilesSpinBox.sizePolicy().hasHeightForWidth()))
+         self.recentFilesSpinBox.setMaxValue(25)
+         self.recentFilesSpinBox.setValue(5)
+ 
+         layout4.addWidget(self.recentFilesSpinBox,5,1)
+ 
+         self.TextLabel1 = QLabel(LayoutWidget,"TextLabel1")
+-        self.TextLabel1.setSizePolicy(QSizePolicy(0,1,0,0,self.TextLabel1.sizePolicy().hasHeightForWidth()))
++        self.TextLabel1.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Minimum,0,0,self.TextLabel1.sizePolicy().hasHeightForWidth()))
+ 
+         layout4.addWidget(self.TextLabel1,0,0)
+         layout5.addLayout(layout4)
+--- modules/referenceBA.py.orig	2005-01-31 03:12:26.000000000 +0100
++++ modules/referenceBA.py	2005-01-31 03:19:35.000000000 +0100
+@@ -617,7 +617,7 @@
+         self.referenceListView = QListView(self.centralWidget(),"referenceListView")
+         self.referenceListView.addColumn(self.__tr("Symbol"))
+         self.referenceListView.addColumn(self.__tr("Definition"))
+-        self.referenceListView.setSizePolicy(QSizePolicy(5,5,0,0,self.referenceListView.sizePolicy().hasHeightForWidth()))
++        self.referenceListView.setSizePolicy(QSizePolicy(QSizePolicy.Preferred,QSizePolicy.Preferred,0,0,self.referenceListView.sizePolicy().hasHeightForWidth()))
+         self.referenceListView.setFrameShape(QListView.StyledPanel)
+         self.referenceListView.setFrameShadow(QListView.Sunken)
+         self.referenceListView.setVScrollBarMode(QListView.Auto)
+--- modules/reportBugBA.py.orig	2005-01-31 03:12:26.000000000 +0100
++++ modules/reportBugBA.py	2005-01-31 03:20:07.000000000 +0100
+@@ -119,7 +119,7 @@
+         Layout22.addWidget(self.emailAddressEdit,0,1)
+ 
+         self.TextLabel2_2 = QLabel(self.GroupBox7,"TextLabel2_2")
+-        self.TextLabel2_2.setSizePolicy(QSizePolicy(1,0,0,0,self.TextLabel2_2.sizePolicy().hasHeightForWidth()))
++        self.TextLabel2_2.setSizePolicy(QSizePolicy(QSizePolicy.Minimum,QSizePolicy.Fixed,0,0,self.TextLabel2_2.sizePolicy().hasHeightForWidth()))
+ 
+         Layout22.addWidget(self.TextLabel2_2,0,0)
+ 
+--- modules/resultsBA.py.orig	2005-01-31 03:12:26.000000000 +0100
++++ modules/resultsBA.py	2005-01-31 03:20:30.000000000 +0100
+@@ -71,7 +71,7 @@
+ 
+         self.matchNumberSpinBox = QSpinBox(self,'matchNumberSpinBox')
+         self.matchNumberSpinBox.setEnabled(0)
+-        self.matchNumberSpinBox.setSizePolicy(QSizePolicy(0,0,self.matchNumberSpinBox.sizePolicy().hasHeightForWidth()))
++        self.matchNumberSpinBox.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,self.matchNumberSpinBox.sizePolicy().hasHeightForWidth()))
+         self.matchNumberSpinBox.setMinValue(1)
+         Layout10.addWidget(self.matchNumberSpinBox)
+         spacer_2 = QSpacerItem(20,20,QSizePolicy.Expanding,QSizePolicy.Minimum)

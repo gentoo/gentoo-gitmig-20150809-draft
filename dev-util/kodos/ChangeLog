@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kodos
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kodos/ChangeLog,v 1.7 2004/12/08 01:29:54 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kodos/ChangeLog,v 1.8 2005/02/22 18:08:37 carlo Exp $
+
+*kodos-2.4.5-r1 (22 Feb 2005)
+
+  22 Feb 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/kodos-2.4.5-sizetype.patch, +kodos-2.4.5-r1.ebuild:
+  PyQt 3.14 compatibility fix
 
   07 Dec 2004; Jason Wever <weeve@gentoo.org> kodos-2.4.5.ebuild:
   Stable on sparc.
