@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/x86/1.0/use.defaults,v 1.2 2004/03/18 01:11:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/x86/gcc31/use.defaults,v 1.1 2004/03/18 01:32:13 seemant Exp $
 
 # Use this file to override specific mappings indicating which package
 # satisfies a particular USE flag.  The base profile (in
@@ -10,5 +10,3 @@
 # Note, that these mappings extend the parent profiles' (its own parent,
 # grandparent, and so on up to the base profile).  However, mappings that
 # are present in the parents can be overridden in this file.
-
-gnome-libs	gnome-base/gnome-libs
