@@ -1,28 +1,8 @@
 # Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /home/cvsroot/gentoo-x86/profiles/default/packages,v 1.102
-# 2004/03/18 07:47:05 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/packages,v 1.10 2004/10/02 00:16:55 kumba Exp $
 
-# This file extends the base packages file for the default profile that all
-# architectures will enjoy.  Please note that default is what most
-# architectures
-# will have.  Some will have an selinux profile (see
-# ${PORTDIR}/profiles/selinux).
-# The idea is to only create a new family of profiles when absolutely
-# necessary
+# Top-level sparc profile
 
 # SPARC specific stuff (32 and 64 bit)
 *sys-apps/sparc-utils
-
-# default-sparc-1.4 pkgs 
->=sys-devel/binutils-2.13.90.0.16
->=sys-devel/gcc-3.2
->=sys-libs/glibc-2.3.1-r2
-<=sys-kernel/linux-headers-2.4.23
->=sys-apps/sysklogd-1.4.1
-
->=sys-apps/texinfo-4.2-r1
->=sys-devel/automake-1.6.1-r5
->=sys-devel/libtool-1.4.1-r4
->=sys-libs/ncurses-5.2.20020511-r3
->=sys-libs/pam-0.75-r10
