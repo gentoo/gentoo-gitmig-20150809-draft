@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.13 2003/11/14 03:13:10 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.14 2003/11/20 13:36:38 liquidx Exp $
+
+  20 Nov 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
+  fix download location (#33181)
 
   13 Nov 2003; Brad House <brad_mssw@gentoo.org> nss-3.8.ebuild,
   files/nss-3.8-amd64.patch:

@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.15 2003/11/14 03:13:10 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.16 2003/11/20 13:36:38 liquidx Exp $
 
 S=${WORKDIR}/${P}
 
 RTM_NAME="NSS_${PV/./_}_RTM"
 DESCRIPTION="Mozilla's Netscape Security Services Library that implements PKI support"
-SRC_URI="ftp://ftp.mozilla.org/pub/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz"
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
 
 SLOT="0"
