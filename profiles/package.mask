@@ -47,7 +47,7 @@
 
 # <mcummings@gentoo.org> (24 Sep 2002)
 # addresses bug 8299 - please test!
-=media-gfx/imagemagick-5.4.7-r2
+#=media-gfx/imagemagick-5.4.7-r2
 
 # <raker@gentoo.org> (23 Sep 2002)
 # Testing a patch for gstreamer with USE="doc"
