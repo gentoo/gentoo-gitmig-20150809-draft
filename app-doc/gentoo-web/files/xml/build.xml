@@ -199,7 +199,7 @@ of a system crash, preventing the chicken-and-egg problem where GRUB can't read
 your kernel (since your filesystem isn't consistent) but you can't bring your
 filesystem back to a consistent state (since you can't boot!)      </p>
 
-<warning>If you are using the -r11 ISO image, do <i>not</i> create any ext3
+<warn>If you are using the -r11 ISO image, do <i>not</i> create any ext3
 filesystems.  The ext3 patch included with that kernel has some problems with
 Linux's (at that time) brand new VM implementation.  Ext3 itself is solid,
 it's just that 2.4.10's ext3 and VM clashed.  If you want to use ext3 filesystems,
@@ -210,7 +210,7 @@ ext3 filesystems -- your filesystems can be mounted or unmounted when you type
 this; it doesn't matter.  Then, when you reboot into your newly bootstrapped
 Gentoo Linux system, you will have working and rock-solid ext3 filesystems!
 This problem will be fixed as soon as I have enough time to roll up a new ISO
-image. --Daniel</warning>
+image. --Daniel</warn>
 
 <p>Now, on to filesystem types.  Right now, you have three filesystem options:
 ext2, ext3 (journaling) and ReiserFS.  ext2 is the tried and true Linux
@@ -601,14 +601,14 @@ of any hostnames that may not be in your nameservers.  Here's a template for thi
 <title>Final network configuration</title>
 <body>
 <p>
-Look in <path>/lib/modules</path> for the ethernet module
-specific to your particular ethernet card, and append it to the
+Add the names of any modules that are necessary for the proper functioning of your system to 
 <path>/etc/modules.autoload</path> file (you can also add any options you
-need to the same line.)  This should be the same module as you used with
-insmod earlier.  When Gentoo Linux boots, this module will be automatically
-loaded:
+need to the same line.) When Gentoo Linux boots, these modules will be automatically
+loaded.  Of particular importance is your ethernet card module, if you happened to compile
+it as a module:
 </p>
-<pre caption="network config">
+<pre caption="/etc/modules.autoload">
+3c59x
 </pre>
 <p>If you have a static IP, use the <c>net.eth0</c> script to get your network
 configured for your first boot:</p>
