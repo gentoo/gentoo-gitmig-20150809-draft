@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.5.ebuild,v 1.9 2005/02/28 21:54:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.5.ebuild,v 1.10 2005/02/28 23:03:23 vapier Exp $
 
-inherit flag-o-matic gnuconfig
+inherit flag-o-matic
 
 DESCRIPTION="Apache Portable Runtime Library"
 HOMEPAGE="http://apr.apache.org/"
 SRC_URI="mirror://apache/apr/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-KEYWORDS="~x86 ~sparc ~ppc64 ~hppa ~amd64 ~ppc ~alpha ~ia64"
 SLOT="0"
-RESTRICT="maketest"
-
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6"
-DEPEND=">=sys-apps/sed-4"
+RESTRICT="test"
+
+DEPEND=""
 
 # this function shall maybe go into flag-o-matic.eclass
 lfs-flags() {
@@ -39,9 +39,6 @@ set_filter_flags() {
 
 src_compile() {
 	set_filter_flags
-
-	# Detect mips and uclibc systems properly
-	gnuconfig_update
 
 	myconf="--datadir=/usr/share/apr-0"
 
