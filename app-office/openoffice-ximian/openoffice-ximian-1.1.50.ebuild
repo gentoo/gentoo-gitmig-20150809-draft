@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.50.ebuild,v 1.4 2004/02/03 20:27:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.50.ebuild,v 1.5 2004/02/04 10:48:17 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -469,6 +469,8 @@ src_install() {
 	doins ${S}/sysui/${SOLPATH}/misc/kde/share/mimelnk/application/*
 	insinto /usr/share/application-registry
 	doins ${FILESDIR}/${OO_VER}/ximian-openoffice.applications
+	insinto /usr/share/mime-info
+	doins ${FILESDIR}/${OO_VER}/ximian-openoffice.keys
 
 	# Install corrected Symbol Font
 	insinto /usr/X11R6/lib/X11/fonts/truetype/

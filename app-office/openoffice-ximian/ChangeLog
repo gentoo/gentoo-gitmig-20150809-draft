@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.20 2004/02/03 20:27:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.21 2004/02/04 10:48:17 suka Exp $
+
+  04 Feb 2004; suka <suka@gentoo.org> openoffice-ximian-1.1.50.ebuild,
+  files/1.1.0/ximian-openoffice.keys:
+  GNOME mime type installation was incomplete, openoffice-ximian now registers
+  itself again as default application
 
   03 Feb 2004; suka <suka@gentoo.org> openoffice-ximian-1.1.50.ebuild:
   This update further simplifies the ebuild and aims to fix the distcc
