@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1-r1.ebuild,v 1.1 2002/01/15 01:27:50 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1-r1.ebuild,v 1.2 2002/01/23 20:06:16 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -44,11 +44,7 @@ src_unpack() {
 }
 if [ "`use java`" ]
 then
-        export JAVA_HOME="/opt/java"
-        CLASSPATH=/opt/java/src.jar:/opt/java/lib/tools.jar
-        CLASSPATH=$CLASSPATH:/usr/lib/java/jaxp.jar:/usr/lib/java/parser.jar
-        CLASSPATH=$CLASSPATH:/usr/lib/java/ant.jar:/usr/lib/java/poptional.jar
-        export CLASSPATH
+	export CLASSPATH=`java-config --full-classpath=ant,jaxp`
 fi
 
 src_compile() {

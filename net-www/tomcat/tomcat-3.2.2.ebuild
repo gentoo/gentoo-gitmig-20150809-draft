@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.2.2.ebuild,v 1.4 2001/09/17 16:04:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.2.2.ebuild,v 1.5 2002/01/23 20:06:16 karltk Exp $
 
 A="jakarta-tomcat-3.2.2-src.tar.gz jakarta-servletapi-3.2.2-src.tar.gz jakarta-ant-1.3-src.tar.gz"
 S=${WORKDIR}
@@ -19,72 +19,67 @@ DEPEND=">=sys-apps/bash-2.04
 	>=net-www/apache-1.3"
 
 src_unpack() {
-  unpack ${A}
-  mv jakarta-ant-1.3 jakarta-ant
-  mv jakarta-servletapi-3.2.2-src jakarta-servletapi
-  mv jakarta-tomcat-3.2.2-src jakarta-tomcat
+	unpack ${A}
+	mv jakarta-ant-1.3 jakarta-ant
+	mv jakarta-servletapi-3.2.2-src jakarta-servletapi
+	mv jakarta-tomcat-3.2.2-src jakarta-tomcat
 }
 
 src_compile() {
 
-  CLASSPATH=/opt/java/src.jar:/opt/java/lib/tools.jar:/usr/lib/java/jaxp.jar:/usr/lib/java/parser.jar
-  CLASSPATH=$CLASSPATH:${S}/jakarta-ant/lib/jaxp.jar:${S}/jakarta-ant/lib/parser.jar
-  CLASSPATH=$CLASSPATH:${S}/jakarta-ant/build/lib/ant.jar:${S}/jakarta-ant/build/lib/optional.jar
-  CLASSPATH=$CLASSPATH:/usr/lib/java/jsse.jar:/usr/lib/java/jnet.jar:/usr/lib/java/jcert.jar
+	CLASSPATH=`java-config --full-classpath=jaxp,jsse,ant`
 
-  export CLASSPATH
-  export JAVA_HOME=/opt/java
+	echo "Building ant..."
+	cd ${S}/jakarta-ant
+	./bootstrap.sh
+	mv bootstrap/bin .
+	cp build/lib/* lib
+	cd ..
+	mkdir jaxp-1.0.1
+	mv jakarta-ant/lib/{jaxp,parser}.jar jaxp-1.0.1  
 
-  echo "Building ant..."
-  cd ${S}/jakarta-ant
-  ./bootstrap.sh
-  mv bootstrap/bin .
-  cp build/lib/* lib
-  cd ..
-  mkdir jaxp-1.0.1
-  mv jakarta-ant/lib/{jaxp,parser}.jar jaxp-1.0.1  
-  echo "Building servletapi..."
-  cd ${S}/jakarta-servletapi
-  sh ./build.sh dist
+	echo "Building servletapi..."
+	cd ${S}/jakarta-servletapi
+	sh ./build.sh dist
 
-  echo "Building tomcat..."
-  cd ${S}/jakarta-tomcat
-  sh ./build.sh dist
-  cd src/native/apache1.3
-  make -f Makefile.linux
-
+	echo "Building tomcat..."
+	cd ${S}/jakarta-tomcat
+	sh ./build.sh dist
+	cd src/native/apache1.3
+	make -f Makefile.linux
 }
 
 src_install() {
 
-  dodir /opt/jakarta
-  cp -a ${S}/dist/servletapi ${D}/opt/jakarta
-  cp -a ${S}/dist/tomcat ${D}/opt/jakarta
-  rm -r ${D}/opt/jakarta/{servletapi,tomcat}/src
-  rm -r ${D}/opt/jakarta/tomcat/lib/{ant,jaxp,parser}.jar
-  insinto /usr/lib/apache
-  doins ${S}/jakarta-tomcat/src/native/apache1.3/mod_jk.so
-  insinto /etc/httpd
-  doins ${FILESDIR}/httpd.tomcat
-  insinto /etc/rc.d/init.d
-  insopts -m755
-  doins ${FILESDIR}/tomcat
-  #insinto /opt/tomcat/conf
-  #doins ${O}/files/web.xml
+	dodir /usr/share/jakarta
+	cp -a ${S}/dist/servletapi ${D}/usr/share/jakarta
+	cp -a ${S}/dist/tomcat ${D}/usr/share/jakarta
+	rm -r ${D}/usr/share/jakarta/{servletapi,tomcat}/src
+	rm -r ${D}/usr/share/jakarta/tomcat/lib/{ant,jaxp,parser}.jar
+	insinto /usr/lib/apache
+	doins ${S}/jakarta-tomcat/src/native/apache1.3/mod_jk.so
+	insinto /etc/httpd
+	doins ${FILESDIR}/httpd.tomcat
+	insinto /etc/rc.d/init.d
+	insopts -m755
+	doins ${FILESDIR}/tomcat
 
-  cd ${S}/jakarta-tomcat
-  dodoc BUGS LICENSE README RELEASE-* TODO src/doc/faq src/doc/readme src/doc/JDBCRealm.howto
-  docinto html
-  dodoc src/doc/*.html
-  cd ${D}/usr/share/doc/${PF}/html
-  mv ${D}/opt/jakarta/servletapi/docs servletapi
+	#insinto /opt/tomcat/conf
+	#doins ${O}/files/web.xml
 
+	cd ${S}/jakarta-tomcat
+	dodoc BUGS LICENSE README RELEASE-* TODO src/doc/faq src/doc/readme src/doc/JDBCRealm.howto
+
+	dohtml src/doc/*.html
+
+	cd ${D}/usr/share/doc/${PF}/html
+	mv ${D}/opt/jakarta/servletapi/docs servletapi
 }
 
 pkg_config() {
 
-   einfo "Activating Servlet Engine..."
-   ${ROOT}/usr/sbin/rc-update add jakarta
+	einfo "Activating Servlet Engine..."
+	${ROOT}/usr/sbin/rc-update add jakarta
 }
 
 

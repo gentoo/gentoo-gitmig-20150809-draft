@@ -1,7 +1,8 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6-r4.ebuild,v 1.3 2001/12/29 17:41:37 danarmak Exp $
+# Maintainer: Desktop Team <desktop@gentoo.org>
+# Author: Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6-r4.ebuild,v 1.4 2002/01/23 20:06:16 karltk Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -19,7 +20,7 @@ RDEPEND=">=gnome-base/ORBit-0.5.10-r1
 	x11-libs/gtk+"
 #	gtk?   ( x11-libs/gtk+ )
 #	mozqt? ( x11-libs/qt )
-#	java?  ( virtual/jdk )"
+	java?  ( virtual/jdk )"
 
 DEPEND="${RDEPEND}
 	virtual/x11
@@ -34,8 +35,7 @@ export BUILD_OFFICIAL=1
 [ "`use ssl`" ] && export MOZ_PSM=1
 
 # do we build java support for the NSS stuff ?
-# NOTE: this is broken for the moment.
-#[ "`use java`" ] && export NS_USE_JDK=1 && export JAVA_HOME=/opt/java
+[ "`use java`" ] && export NS_USE_JDK=1
 
 src_compile() {
 
@@ -223,12 +223,12 @@ pkg_postinst() {
 
         # Make symlink for Java plugin (do not do in src_install(), else it only
 	# gets installed every second time)
-	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/javaplugin_oji.so ]
+	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/`java-config --browser-plugin` ]
 	then
-		if [ -e /opt/java/jre/plugin/i386/mozilla/javaplugin_oji.so ]
+		if [ -e `java-config --full-browser-plugin-path` ]
 		then
-			ln -sf /opt/java/jre/plugin/i386/mozilla/javaplugin_oji.so \
-				/usr/lib/mozilla/plugins/javaplugin_oji.so
+			ln -sf `java-config --full-browser-plugin-path`
+				/usr/lib/mozilla/plugins/`java-config --browser-plugin`
 		fi
 	fi
 

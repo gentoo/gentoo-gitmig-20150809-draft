@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641b.ebuild,v 1.1 2001/12/06 20:40:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641b.ebuild,v 1.2 2002/01/23 20:06:16 karltk Exp $
 
 # notes/todo:
 # 0. this is not complete. src_install is missing.
@@ -57,7 +57,7 @@ src_unpack() {
 src_compile() {
 
     local myconf
-    use java && myconf="${myconf} --with-jdk-home=/opt/jdk-1.3.1"
+    use java && myconf="${myconf} --with-jdk-home=${JAVA_HOME}"
     
     cd ${S}/config_office
     ./configure --with-perl-home=/usr \

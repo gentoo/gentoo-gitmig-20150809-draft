@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@hotmail.com>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r2.ebuild,v 1.2 2002/01/16 22:05:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r2.ebuild,v 1.3 2002/01/23 20:06:16 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
@@ -13,8 +13,6 @@ DEPEND="tcltk? ( >=dev-lang/tk-8.2 )
 	python? ( >=dev-lang/python-2.0 )
 	java? ( >=virtual/jdk-1.3 )"
 
-
-[ -n "`use java`" ] && PATH=${PATH}:${JAVA_HOME}/bin
 
 src_compile() {
 
@@ -43,7 +41,7 @@ src_compile() {
 		myconf="$myconf --with-pyincl=/usr/include/python${pyver}"
 	fi
 	if [ "`use java`" ] ; then
-		myconf="$myconf --with-java=/opt/java"
+		myconf="$myconf --with-java=${JAVA_HOME}"
 	else
 		myconf="$myconf --with-java=no"
 	fi
@@ -99,24 +97,17 @@ src_install() {
 
 	dodoc readme.txt doc/*
 
+	# karltk: This is definitely NOT how it should be done!
 	# we need this to create pdflib.jar (we will not have the source when
 	# this is a binary package ...)
 	insinto /usr/share/pdflib
 	doins ${S}/bind/java/pdflib.java
-}
-
-pkg_postinst() {
-
-	# now compile and install the pdflib.jar
-	cd ${T}
-	jar cvf /usr/share/pdflib/pdflib.jar /usr/share/pdflib/pdflib.class
-	rm -rf /usr/share/pdflib/pdflib.class
-
-	echo
-	echo "******************************************************"
-	echo "* Add /usr/share/pdflib to you \$CLASSPATH, or copy   *"
-	echo "* /usr/share/pdflib/pdflib.jar to a directory in     *"
-	echo "* your \$CLASSPATH.                                   *"
-	echo "******************************************************"
-	echo
+	
+	mkdir -p com/pdflib
+	mv ${S}/bind/java/pdflib.java com/pdflib
+	javac com/pdflib/pdflib.java
+	
+	jar cf pdflib.jar com/pdflib/*.class
+	
+	dojar pdflib.jar
 }

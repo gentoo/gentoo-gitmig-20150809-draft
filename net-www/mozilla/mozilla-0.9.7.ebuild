@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.7.ebuild,v 1.1 2001/12/31 23:45:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.7.ebuild,v 1.2 2002/01/23 20:06:16 karltk Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -34,8 +34,7 @@ export BUILD_OFFICIAL=1
 [ "`use ssl`" ] && export MOZ_PSM=1
 
 # do we build java support for the NSS stuff ?
-# NOTE: this is broken for the moment.
-#[ "`use java`" ] && export NS_USE_JDK=1 && export JAVA_HOME=/opt/java
+[ "`use java`" ] && export NS_USE_JDK=1
 
 src_compile() {
 
@@ -218,12 +217,12 @@ pkg_postinst() {
 
         # Make symlink for Java plugin (do not do in src_install(), else it only
 	# gets installed every second time)
-	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/javaplugin_oji.so ]
+	if [ "`use java`" ] && [ ! -L /usr/lib/mozilla/plugins/`java-config --browser-plugin=mozilla` ]
 	then
-		if [ -e /opt/java/jre/plugin/i386/mozilla/javaplugin_oji.so ]
+		if [ -e `java-config --full-browser-plugin-path=mozilla` ]
 		then
-			ln -sf /opt/java/jre/plugin/i386/mozilla/javaplugin_oji.so \
-				/usr/lib/mozilla/plugins/javaplugin_oji.so
+			ln -sf `java-config --full-browser-plugin-path=mozilla` \
+				/usr/lib/mozilla/plugins/`java-config --browser-plugin=mozilla` 
 		fi
 	fi
 

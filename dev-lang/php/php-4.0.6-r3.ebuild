@@ -1,7 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.5 2001/12/29 17:41:37 danarmak Exp $
+# Maintainer: Tools Team <tools@gentoo.org>
+# Author: Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.6 2002/01/23 20:06:16 karltk Exp $
 
 A=${PN}-4.0.6.tar.gz
 S=${WORKDIR}/${PN}-4.0.6
@@ -10,7 +11,6 @@ SRC_URI="http://www.php.net/distributions/${A}"
 HOMEPAGE="http://www.php.net/"
 
 DEPEND="virtual/glibc
-
 	>=dev-libs/gmp-3.1.1
 	~media-libs/freetype-1.3.1
 	>=media-libs/jpeg-6b
@@ -35,7 +35,8 @@ DEPEND="virtual/glibc
 	imap? ( virtual/imap )
 	flash? ( media-libs/libswf media-libs/ming )
 	xml2? ( dev-libs/libxml2 )
-	java? ( virtual/jdk )"
+#	java? ( virtual/jdk )
+	"
 
 RDEPEND="virtual/glibc
 	>=dev-libs/gmp-3.1.1
@@ -57,7 +58,8 @@ RDEPEND="virtual/glibc
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	xml2? ( dev-libs/libxml2 )
 	imap? ( virtual/imap )
-	java? ( virtual/jdk )"
+#	java? ( virtual/jdk )
+	"
 
 src_compile() {
 
@@ -111,9 +113,10 @@ src_compile() {
     if [ "`use xml2`" ] ; then
       myconf="$myconf --with-dom"
     fi
-    if [ "`use java`" ] ; then
-      myconf="$myconf --with-java=/opt/java"
-    fi
+#	The PHP build system does not support Blackdown
+#    if [ "`use java`" ] ; then
+#      myconf="$myconf --with-java=${JAVA_HOME}"
+#    fi
 
     LDFLAGS="$LDFLAGS -ltiff -ljpeg"
 
