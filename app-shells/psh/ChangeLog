@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/psh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.15 2005/02/18 05:23:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.16 2005/03/15 04:17:18 hparker Exp $
+
+  14 Mar 2005; <hparker@gentoo.org> :
+  Mark ~amd64. Closes #85171
 
 *psh-1.8-r1 (18 Feb 2005)
 
