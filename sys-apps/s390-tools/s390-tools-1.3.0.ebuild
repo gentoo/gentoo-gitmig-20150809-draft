@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.3.0.ebuild,v 1.4 2004/07/01 21:37:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.3.0.ebuild,v 1.5 2004/07/15 02:32:09 agriffis Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ SRC_URI="mirror://gentoo/${PN}-${PV}-${STREAM}.tar.gz
 HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/linux390/april2004_recommended.shtml"
 LICENSE="GPL-2"
 KEYWORDS="~s390"
+IUSE=""
 SLOT="0"
 DEPEND="virtual/libc
 	net-analyzer/ucd-snmp
@@ -44,4 +45,3 @@ src_install() {
 	einstall INSTROOT=${D}
 	prepall
 }
-
