@@ -1,0 +1,11 @@
+# ChangeLog for kde-base/kfile-cert
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile-cert/ChangeLog,v 1.1 2005/02/05 18:34:18 danarmak Exp $
+
+*kfile-cert-3.4.0_beta2 (05 Feb 2005)
+
+  05 Feb 2005; Dan Armak <danarmak@gentoo.org> +metadata.xml,
+  +kfile-cert-3.4.0_beta2.ebuild:
+  New ebuild (missed it in 3.4.0_beta1): kfile plugin for certificate files,
+  from kdeaddons.
+
