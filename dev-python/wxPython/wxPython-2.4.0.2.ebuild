@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.2.ebuild,v 1.4 2003/06/22 12:16:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.0.2.ebuild,v 1.5 2003/07/08 00:58:46 liquidx Exp $
 
 MY_P="${P/-/Src-}"
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -41,8 +41,6 @@ src_compile() {
 		myconf="${myconf} BUILD_GLCANVAS=1"
 	else
 		myconf="${myconf} BUILD_GLCANVAS=0"
-		patch -p1 < ${FILESDIR}/wxPython-2.3.3.1-noglcanvas.diff \
-			|| die "patch failed"
 	fi
 	if [ `use gtk2` ]; then
 		myconf="${myconf} WXPORT=gtk2"

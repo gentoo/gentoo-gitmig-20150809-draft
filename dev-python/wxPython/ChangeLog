@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.26 2003/07/07 01:58:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.27 2003/07/08 00:58:46 liquidx Exp $
+
+  08 Jul 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.2.ebuild:
+  removed non-functional patch from wxWindows-2.4.0.2
 
   07 Jul 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.7.ebuild:
   bump to stable
