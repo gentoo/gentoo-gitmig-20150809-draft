@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14.ebuild,v 1.3 2003/07/28 23:26:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14.ebuild,v 1.4 2003/08/01 03:02:58 robbat2 Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -50,11 +50,6 @@ src_unpack() {
 		local msg="MySQL does not support building statically with SSL support"
 		eerror "${msg}"
 		die "${msg}"
-	fi
-	if use ssl; then
-		ewarn "SSL connections are broken in MySQL-4.0.13. See MySQL bug #673"
-		ewarn "(http://bugs.mysql.com/bug.php?id=673&error=no). If you need SSL"
-		ewarn "connections, you should revert to 4.0.12."
 	fi
 	unpack ${A} || die
 	cd ${S} || die

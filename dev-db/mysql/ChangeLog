@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.61 2003/07/28 23:24:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.62 2003/08/01 03:02:58 robbat2 Exp $
+
+  31 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.14.ebuild:
+  Remove extraneous warning about a bug that was fixed between .13 and .14
 
   28 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.14.ebuild,
   files/mysql-4.0.14-mysqld-safe-sh.diff:
