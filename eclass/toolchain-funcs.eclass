@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.23 2005/01/15 01:19:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.24 2005/01/15 09:05:56 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -93,7 +93,7 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 
 	local type=$1
 	local host=$2
-	[[ -z ${host} ]] && arg=${CHOST}
+	[[ -z ${host} ]] && arg=${CTARGET:-${CHOST}}
 
 	case ${host} in
 		alpha*)		echo alpha;;

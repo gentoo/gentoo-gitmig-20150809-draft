@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.78 2005/01/15 04:12:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.79 2005/01/15 09:05:56 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -764,7 +764,7 @@ gcc_src_unpack() {
 
 	# Fixup libtool to correctly generate .la files with portage
 	cd ${S}
-	elibtoolize --portage --shallow
+	elibtoolize --portage --shallow --no-uclibc
 
 	gnuconfig_update
 
@@ -1009,7 +1009,7 @@ gcc_do_make() {
 		# 3 stage bootstrapping doesnt quite work when you cant run the
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET:-all}
-	elif use x86 || use amd64 || use ppc64; then
+	elif { use x86 || use amd64 || use ppc64 ;} && [[ ${GCC_BRANCH_VER} != "3.3" ]] ; then
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET:-profiledbootstrap}
 	else
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET:-bootstrap-lean}
@@ -1075,7 +1075,15 @@ gcc_do_filter_flags() {
 	# ...sure, why not?
 	strip-unsupported-flags
 
+	# dont want to funk ourselves
 	filter-flags '-mabi*' -m32 -m64
+
+	# filter *common* flags that will make other gcc's angry
+	if [[ ${GCC_BRANCH_VER} == "3.3" ]] ; then
+		case $(tc-arch ${CTARGET}) in
+			x86) filter-flags '-mtune=*';;
+		esac
+	fi
 
 	export GCJFLAGS=${GCJFLAGS:-CFLAGS}
 }
