@@ -122,7 +122,7 @@ sys-kernel/linux-sources-vanilla
 >=app-text/pspell-0.12
 >=app-text/aspell-0.33
 >=sys-libs/readline-4.2
->sys-devel/automake-1.4-r2
+>=sys-devel/automake-1.5
 >=media-libs/mesa-glu-3.5
 >=net-nds/openldap-2.0
 >=app-text/ghostscript-7
