@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6051e5ca17e21cf35e3c4c8e76d78d73 ChangeLog 678
+MD5 a8affee58ae6267447591da83a2603eb ChangeLog 681
 MD5 748b03c9a89252520064e32fc9acbb0b lush-0.1.0-r1.ebuild 709
 MD5 93fa19f85aed6754a09d82eafb75694e lush-0.1.0.ebuild 697
 MD5 77a747b5fbf7edf698a0c698141ecf02 metadata.xml 163
 MD5 30eef944f34eac32e48b3815a3a3285e files/digest-lush-0.1.0 67
 MD5 30eef944f34eac32e48b3815a3a3285e files/digest-lush-0.1.0-r1 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBHho1I1lqEGTUzyQRAluUAJ9XMuR07xGzVbKRInKndVbwgNAXlwCfeEba
-jXLoIU+j1t7VR2bla5YMyIA=
-=OwFD
+iD8DBQFBXsyVI1lqEGTUzyQRAi9vAJ9+BPok4Y3BqR0dJRLKVZrMwhhH0gCeOwbg
+jay4tUUxD4fsDliXA4aQoKo=
+=DbU1
 -----END PGP SIGNATURE-----
