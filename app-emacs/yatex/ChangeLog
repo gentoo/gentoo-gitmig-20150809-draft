@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/yatex
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.1 2003/09/12 01:35:54 usata Exp $
+
+*yatex-1.71 (12 Sep 2003)
+
+  12 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> yatex-1.71.ebuild:
+  Initial import.  Ebuild submitted by Naoki Shindo
+  <shindo-n@zephyr.dti.ne.jp> at GentooJP BugTrack.
+
