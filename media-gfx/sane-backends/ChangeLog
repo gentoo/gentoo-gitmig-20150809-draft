@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.37 2004/06/11 10:38:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.38 2004/06/17 16:04:34 phosphan Exp $
+
+*sane-backends-1.0.14-r3 (17 Jun 2004)
+
+  17 Jun 2004; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.14-r3.ebuild, files/libusbscanner-device-r1.patch:
+  Should get the right path in /proc from hotplug now.
 
   11 Jun 2004; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.12-r2.ebuild, sane-backends-1.0.13-r1.ebuild,
