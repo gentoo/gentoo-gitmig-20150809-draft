@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc8,v 1.2 2002/11/25 07:11:33 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc8,v 1.3 2003/01/13 04:28:23 bcowan Exp $
 
 # rc file for automount using a Sun-style "master map".
 # We first look for a local /etc/auto.master, then a YP
@@ -116,14 +116,14 @@ function getmounts()
 		fi
 		map=`echo $map | cut -f2- -d:`
 
-		echo STARTUPOPTIONS $startupoptions > /tmp/debug
-		echo DIR $dir >> /tmp/debug
-		echo MAPTYPE $maptype >> /tmp/debug
-		echo MAP $map >> /tmp/debug
-		echo MAPOPTIONS $mapoptions >> /tmp/debug
-		echo LOCALOPTIONS $localoptions >> /tmp/debug
+		#echo STARTUPOPTIONS $startupoptions > /tmp/debug
+		#echo DIR $dir >> /tmp/debug
+		#echo MAPTYPE $maptype >> /tmp/debug
+		#echo MAP $map >> /tmp/debug
+		#echo MAPOPTIONS $mapoptions >> /tmp/debug
+		#echo LOCALOPTIONS $localoptions >> /tmp/debug
 
-		echo "$DAEMON $dir $maptype $map $mapoptions $localoptions" | sed -e 's/	/ /g' -e 's/  / /g'
+		echo "$DAEMON $startupoptions $dir $maptype $map $mapoptions $localoptions" | sed -e 's/	/ /g' -e 's/  / /g'
 
 		# echo ------------------------
 	    fi
