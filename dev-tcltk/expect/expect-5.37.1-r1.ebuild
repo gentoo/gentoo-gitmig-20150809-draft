@@ -1,8 +1,8 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.6 2002/10/20 18:47:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.7 2002/10/28 08:31:59 george Exp $
 
-IUSE="X"
+IUSE="X doc"
 
 #remove the trailing ".0" from the tarball version
 S=${WORKDIR}/${P%.1}
@@ -56,5 +56,11 @@ src_install () {
 	#docs
 	dodoc Changelog FAQ HISTORY NEWS README
 	
+	#install examples if 'doc' is set
+	if use doc; then
+		cd ${S}
+		dodir /usr/share/doc/${PF}/examples/
+		cp example/* ${D}/usr/share/doc/${PF}/examples/
+	fi
 }
 

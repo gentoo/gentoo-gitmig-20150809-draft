@@ -1,8 +1,13 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.5 2002/10/26 04:02:49 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.6 2002/10/28 08:31:59 george Exp $
 
 *expect-5.37.1 (08 July 2002)
+
+  27 Oct 2002; George Shapovalov <george@gentoo.org> epect-5.37.1-r1.ebuild, epect-5.37.1-r2.ebuild :
+
+  incorporated changes in -r2 into -r1 and deleted -r2 keeping -r1 unmasked. 
+  Avoiding revision bump in unmasked version, since the fix will only concern some users.
 
   25 Oct 2002; George Shapovalov <george@gentoo.org> epect-5.37.1-r2.ebuild :
   modified src_install to add examples if doc is defined. 
