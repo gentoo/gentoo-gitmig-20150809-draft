@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/dxr2-driver-1.0.4.ebuild,v 1.3 2002/10/04 06:43:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/dxr2-driver-1.0.4.ebuild,v 1.4 2002/11/17 09:48:15 vapier Exp $
 
 DESCRIPTION="Driver and minimal DVD player(s) for the Creative Labs Dxr2 Card"
 HOMEPAGE="http://dxr2.sourceforge.net/"
@@ -12,7 +12,6 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=media-libs/libdvdread-0.9.3"
-#RDEPEND=""
 
 # Non-standard source dir name for dxr2-driver
 S=${WORKDIR}/${PN}
