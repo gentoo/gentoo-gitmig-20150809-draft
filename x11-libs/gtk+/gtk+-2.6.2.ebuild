@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.2.ebuild,v 1.1 2005/02/05 06:56:32 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.2.ebuild,v 1.2 2005/03/02 21:53:19 foser Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE="doc tiff jpeg static"
 
 RDEPEND="virtual/x11
@@ -34,6 +34,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 
 	unpack ${A}
+
+	epunt_cxx
 
 	cd ${S}
 	# Turn of --export-symbols-regex for now, since it removes

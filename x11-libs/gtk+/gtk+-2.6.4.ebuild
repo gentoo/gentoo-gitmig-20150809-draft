@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.1-r1.ebuild,v 1.2 2005/01/22 17:47:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.4.ebuild,v 1.1 2005/03/02 21:53:19 foser Exp $
 
-inherit libtool flag-o-matic eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
@@ -35,18 +35,14 @@ src_unpack() {
 
 	unpack ${A}
 
+	epunt_cxx
+
 	cd ${S}
-	# Turn of --export-symbols-regex for now, since it removes
-	# the wrong symbols
-#	epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
 	epatch ${DISTDIR}/${PN}-2.6-smoothscroll-r2.patch
-	# fix empty filechooser combo (http://bugzilla.gnome.org/show_bug.cgi?id=164290)
-	cd ${S}/gtk
-	epatch ${FILESDIR}/${P}-empty_default_combo.patch
 
 	cd ${S}
 	# use an arch-specific config directory so that 32bit and 64bit versions
@@ -55,6 +51,7 @@ src_unpack() {
 	# and this line is just here to make building emul-linux-x86-gtklibs a bit
 	# easier, so even this should be amd64 specific.
 	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
+
 	# patch for ppc64 (#64359)
 	use ppc64 && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch
 	use ppc64 && append-flags -mminimal-toc
