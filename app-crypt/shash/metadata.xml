@@ -3,7 +3,9 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>bug-wranglers@gentoo.org</email>
-		<description>This package lacks a primary herd or maintainer.</description>
+		<email>swegener@gentoo.org</email>
+		<name>Sven Wegener</name>
+		<description>primary maintainer</description>
 	</maintainer>
+	<longdescription>shash is a command-line interface for libmhash and is used to generate or check digests or MACs of files.</longdescription>
 </pkgmetadata>
