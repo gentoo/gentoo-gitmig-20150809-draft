@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.2.ebuild,v 1.1 2004/02/01 16:22:51 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.2.ebuild,v 1.2 2004/03/31 20:24:52 dholm Exp $
 
 DESCRIPTION="Howl is a cross-platform implementation of the Zeroconf networking standard. Zeroconf brings a new ease of use to IP networking."
 HOMEPAGE="http://www.porchdogsoft.com/products/howl/"
 SRC_URI="http://www.porchdogsoft.com/download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86" # Should work on ~sparc but I haven't tested yet. New platform suppot can be added via: include/salt/vtypes.h
+KEYWORDS="~x86 ~ppc" # Should work on ~sparc but I haven't tested yet. New platform suppot can be added via: include/salt/vtypes.h
 IUSE=""
 DEPEND="sys-libs/glibc" # sys-devel/automake - needed if we remove the html docs from /usr/share
 RDEPEND="sys-libs/glibc"
@@ -22,6 +22,11 @@ src_compile() {
 	#aclocal || die "aclocal failed"
 	#automake || die "automake failed"
 
+	case "${ARCH}" in
+	ppc)
+		epatch ${FILESDIR}/${PV}-ppc.patch
+		;;
+	esac
 	econf || die "econf failed"
 	emake || die "emake failed"
 }

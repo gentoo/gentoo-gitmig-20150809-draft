@@ -1,0 +1,11 @@
+--- include/salt/vtypes.h.orig	2004-03-31 22:14:38.000000000 +0200
++++ include/salt/vtypes.h	2004-03-31 22:15:24.000000000 +0200
+@@ -121,7 +121,7 @@
+ 
+ #	if defined(i386)
+ #		define SW_ENDIAN		1
+-#	elif defined(__sparc__)
++#	elif defined(__sparc__) || defined(__powerpc__)
+ #		define SW_ENDIAN		0
+ #	else
+ #		error "CPU unknown"
