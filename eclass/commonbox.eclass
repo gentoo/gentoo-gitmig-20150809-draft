@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.3 2002/07/14 23:51:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.4 2002/07/15 00:03:13 seemant Exp $
 
 # The commonbox eclass is designed to allow easier installation of the box
 # window managers such as blackbox and fluxbox and commonbox
@@ -40,10 +40,10 @@ commonbox_commonify() {
 
 	cd ${S}/src
 	cp Makefile Makefile.orig
-	sed -e 's:$(pkgdatadir)/menu:\\"/usr/share/commonbox/menu\\":' \
-		-e 's:$(pkgdatadir)/styles:\\"/usr/share/commonbox/styles\\":' \
-		-e 's:\(DEFAULT_INITFILE\).*:\1=\\"/usr/share/commonbox/init\\":' \
-		Makefile.orig > Makefile
+#	sed -e 's:$(pkgdatadir)/menu:\\"/usr/share/commonbox/menu\\":' \
+#		-e 's:$(pkgdatadir)/styles:\\"/usr/share/commonbox/styles:' \
+#		-e 's:\(DEFAULT_INITFILE\).*:\1=\\"/usr/share/commonbox/init\\":' \
+#		Makefile.orig > Makefile
 
 	cd ${S}
 
@@ -69,14 +69,16 @@ commonbox_src_compile() {
 		${myconf} || die
 	
 	commonify || die
-	emake || die
+	emake \
+		pkgdatadir="/usr/share/commonbox" || die
 }
 
 
 commonbox_src_install() {
 
 	dodir /usr/share/commonbox
-	einstall || die
+	einstall \
+		pkgdatadir="${D}/usr/share/commonbox" || die
 
 	dodoc README* AUTHORS TODO* ${mydoc}
 
