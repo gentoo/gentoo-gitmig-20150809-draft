@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0.ebuild,v 1.1 2004/01/12 01:59:47 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0.ebuild,v 1.2 2004/01/24 02:26:08 humpback Exp $
 
 DESCRIPTION="Jabber Multi-User Chat"
 HOMEPAGE="http://mu-conference.jabberstudio.org/"
@@ -44,7 +44,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Please read /usr/share/doc/${P}/README.Gentoo"
+	einfo "Please read /usr/share/doc/${P}/README.Gentoo.gz"
 	einfo
 }
 
