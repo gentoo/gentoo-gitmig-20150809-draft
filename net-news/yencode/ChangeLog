@@ -1,6 +1,10 @@
 # ChangeLog for net-news/yencode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/ChangeLog,v 1.3 2003/02/10 08:22:02 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/ChangeLog,v 1.4 2003/02/11 08:32:57 rajiv Exp $
+
+  11 Feb 2003; Rajiv Manglani <rajiv@gentoo.org> yencode-0.46.ebuild :
+
+  moved to stable ppc.
 
   10 Feb 2003; Rajiv Manglani <rajiv@gentoo.org> yencode-0.46.ebuild :
 
