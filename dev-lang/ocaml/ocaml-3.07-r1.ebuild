@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.14 2004/07/14 01:09:33 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.15 2004/07/21 17:55:41 mattam Exp $
 
 inherit flag-o-matic eutils
 
@@ -70,7 +70,7 @@ pkg_postinst() {
 	einfo "so you (may) need to rebuild all packages depending on it that"
 	einfo "are actually installed on your system."
 	einfo "To do so, you can run: "
-	einfo "sh ${FILESDIR}/ocaml-rebuild.sh [emerge options]"
+	einfo "sh ${FILESDIR}/ocaml-rebuild.sh [-h | emerge options]"
 	einfo "Which will call emerge on all old packages with the given options"
 	echo
 }

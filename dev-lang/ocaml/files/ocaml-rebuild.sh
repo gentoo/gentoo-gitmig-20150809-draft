@@ -1,5 +1,5 @@
 #!/bin/sh
-# run like this: ocaml-rebuild.sh [emerge_options]
+# run like this: ocaml-rebuild.sh [-h | -f] [emerge_options]
 
 emerge=/usr/bin/emerge
 qpkg=/usr/bin/qpkg
@@ -10,11 +10,30 @@ then
 	exit 1
 fi
 
-deps=`$qpkg -nc -n -q -I dev-lang/ocaml-3.06 | grep -v -e "\(DEPEND.*\)\|\(dev-lang.*\)" | sort | uniq`
+if [ "$1" = "-h" ]
+then
+	echo "usage: ocaml-rebuild.sh [-h | -f(orce)] [emerge_options]"
+	echo "With -f, 	the packages will first be unmerged and then emerged"
+	echo "with the given options to ensuree correct dependancy analysis."
+	echo "Otherwise emerge is run with the --pretend flag and the given"
+	echo "options."
+	exit 1
+fi
+
+if [ "$1" = "-f" ]
+then
+	pretend=0
+	shift
+else
+	pretend=1
+fi
+
+deps=`$qpkg -nc -q -I dev-lang/ocaml | grep -v -e "\(DEPEND.*\)\|\(dev-lang.*\)" | sort | uniq`
 toclean=""
 
 for dep in $deps
   do
+  	dep=`basename ${dep}`
 	dirs=`find /var/db/pkg/ -name ${dep}`
 	
 	for dir in $dirs
@@ -24,12 +43,8 @@ for dep in $deps
 		  ocamldep=`grep dev-lang/ocaml $dir/DEPEND > /dev/null`
 		  if [[ $ocamldep -eq 0 ]]
 		  then
-			  SLOT=`cat $dir/SLOT`
-			  if [[ "$SLOT" = "" || "$SLOT" = "0" ]]
-				  then
-				  category=`cat $dir/CATEGORY`
-				  toclean="=$category/$dep $toclean"
-			  fi
+			category=`cat $dir/CATEGORY`
+			toclean="=$category/$dep $toclean"
 		  fi
 	  fi
 	done	
@@ -37,9 +52,13 @@ done
 
 if [ "$toclean" != "" ]
 then
-	cmd="$emerge $@ $toclean"
-	#echo "Debug:" $cmd
-	$cmd
+	if [ $pretend -eq 1 ]
+	then
+		$emerge --pretend $@ $toclean		
+	else
+		$emerge unmerge $toclean
+		$emerge $@ $toclean
+	fi
 else
 	echo "Nothing to update"
 fi

@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.34 2004/07/14 01:09:33 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.35 2004/07/21 17:55:41 mattam Exp $
+
+  21 Jul 2004; Matthieu Sozeau <mattam@gentoo.org> files/ocaml-rebuild.sh,
+  ocaml-3.07-r1.ebuild:
+  Yet a little more robustness in the rebuild script.
+
+  21 Jul 2004; Matthieu Sozeau <mattam@gentoo.org> files/ocaml-rebuild.sh:
+  Fixed bug in the rebuild script. see #56597.
 
   13 Jul 2004; Travis Tilley <lv@gentoo.org> ocaml-3.07-r1.ebuild:
   adding back ~amd64 keyword
