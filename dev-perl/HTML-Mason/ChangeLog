@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.5 2002/11/21 13:00:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.6 2002/11/26 15:36:21 mcummings Exp $
+
+*HTML-Mason-1.15-r2 (26 Nov 2002)
+
+  26 Nov 2002; Michael Cummings <mcummings@gentoo.org> ChangeLog,
+  HTML-Mason-1.15-r2, files/digest-HTML-Mason-1.15-r2 :
+
+  Version bump is because on of the required perl modules, Params-Validate,
+  was missing a sub-dep - it would install, but not function correctly, and 
+  since it was a dep of HTML-Mason, I'm bumping the chain.
 
 *HTML-Mason-1.15-r1 (21 Nov 2002)
 
