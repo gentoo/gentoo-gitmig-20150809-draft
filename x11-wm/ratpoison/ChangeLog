@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.7 2003/01/06 00:56:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.8 2003/01/26 23:39:58 nall Exp $
 
 *ratpoison-1.1.1 (06 Jun 2002)
+
+  26 Jan 2003; Jon Nall <nall@gentoo.org> ratpoison-1.1.1.ebuild :
+  added ~ppc
 
   05 Jan 2003: Jason Wever <weeve@gentoo.org> ratpoison-1.1.1.ebuild :
 
