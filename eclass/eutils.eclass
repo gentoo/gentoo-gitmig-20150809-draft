@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.77 2004/01/29 08:38:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.78 2004/02/09 17:08:44 brad_mssw Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -424,7 +424,7 @@ get_number_of_jobs() {
 			jobs=2
 		fi
 
-	elif [ "${ARCH}" = "ppc" ]
+	elif [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
 	then
 		# ppc has "processor", but only when compiled with SMP
 		if [ "`grep -c "^processor" /proc/cpuinfo`" -eq 1 ]
