@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.4 2003/08/15 00:43:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.5 2003/08/24 22:26:11 matsuu Exp $
 
 *freewnn-1.1.1_alpha20 (15 Aug 2003)
+
+  25 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> freewnn-1.1.1_alpha20.ebuild:
+  Stable for x86 and sparc.
 
   15 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> freewnn-1.1.1_alpha20.ebuild:
   New version. Added IUSE. Added ipv6 support.
