@@ -1,9 +1,9 @@
 # (C) 2002 The TelemetryBox Corporation. http://telemetrybox.biz
 # Christoph Lameter, <christoph@lameter.com>, July 15, 2002
 # Released under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-1.5-r1.ebuild,v 1.3 2002/07/31 16:42:11 christoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-1.5-r1.ebuild,v 1.4 2002/09/21 03:07:56 vapier Exp $
 DESCRIPTION="Discover hardware and load the appropriate drivers for that hardware."
-HOMEPAGE="http://www.progeny.com/discover"
+HOMEPAGE="http://hackers.progeny.com/discover/"
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/d/discover/${PN}_${PV}-1.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
