@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.1 2004/03/04 18:17:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.2 2004/04/20 00:52:21 port001 Exp $
+
+IUSE="threads"
 
 DESCRIPTION="Tool Command Language"
 HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
@@ -18,14 +20,36 @@ RDEPEND="virtual/glibc"
 
 S=${WORKDIR}/${PN}${PV}
 
+pkg_setup() {
+
+	if [ "`use threads`" ]
+	then
+		ewarn ""
+		ewarn "PLEASE NOTE: You are compiling tcl-8.4 with"
+		ewarn "threading enabled."
+		ewarn "Threading is not supported by all applications"
+		ewarn "that compile against tcl. You use threading at"
+		ewarn "your own discretion."
+		ewarn ""
+		sleep 5
+	fi
+}
+
 src_compile() {
+
+	local local_config_use=""
+
+	if [ "`use threads`" ]
+	then
+		local_config_use="--enable-threads"
+	fi
+
 	cd ${S}/unix
 	./configure --host=${CHOST} \
 				--prefix=/usr \
 				--mandir=/usr/share/man \
+				${local_config_use} \
 				|| die
-	# threading is not recommended as it breaks some packages
-	#			--enable-threads \
 
 	emake CFLAGS="${CFLAGS}" || die
 }
