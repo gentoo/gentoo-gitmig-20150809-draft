@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.8 2002/03/29 18:39:16 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.9 2002/04/12 21:35:16 spider Exp $
+
+*cups-1.1.14-r3 (12 Apr 2002)
+  12 Apr 2002; Spider <spider@gentoo.org>:
+  new revision with updated libpng dependency forces a rebuild
 
 *cups-1.1.14-r2 (29 Mar 2002)
 
