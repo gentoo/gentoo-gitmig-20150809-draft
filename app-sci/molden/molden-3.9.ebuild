@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-3.9.ebuild,v 1.7 2004/07/28 08:08:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-3.9.ebuild,v 1.8 2004/10/26 17:04:50 spyderous Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
@@ -35,8 +35,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${PF}-fixMakefile.patch
-	# Respect $CC
-	sed -i -e "s:^CC = cc:CC = $(gcc-getCC):g" ${S}/makefile
+	# Respect CC
+	sed -i -e "s:^CC = cc:CC = $(tc-getCC):g" ${S}/makefile
 	# Respect $CFLAGS
 	sed -i -e "s:^CFLAGS = :CFLAGS = ${CFLAGS} :g" ${S}/makefile
 	# Respect $FC if set

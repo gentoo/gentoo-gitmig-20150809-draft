@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/molden
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/ChangeLog,v 1.14 2004/07/28 08:08:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/ChangeLog,v 1.15 2004/10/26 17:04:50 spyderous Exp $
+
+  26 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-3.9.ebuild,
+  molden-4.0.ebuild, molden-4.1.ebuild:
+  Move eclasses from gcc to toolchain-funcs. Get rid of ${CC} use (#68990).
 
   28 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-3.9.ebuild,
   molden-4.0.ebuild, molden-4.1.ebuild:

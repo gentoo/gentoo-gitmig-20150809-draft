@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-4.0.ebuild,v 1.10 2004/07/28 08:08:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-4.0.ebuild,v 1.11 2004/10/26 17:04:50 spyderous Exp $
 
-inherit eutils gcc flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
@@ -47,7 +47,7 @@ src_compile() {
 	# unfortunately a bash bug prevents us from doing typeset and
 	# assignment on the same line.
 	typeset -a args
-	args=( CC="${CC} ${CFLAGS}" \
+	args=( CC="$(tc-getCC) ${CFLAGS}" \
 		${FC:+FC="${FC}" LDR="${FC}"} \
 		${FFLAGS:+FFLAGS="${FFLAGS}"} )
 
