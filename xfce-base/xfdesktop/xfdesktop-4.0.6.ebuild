@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.0.6.ebuild,v 1.8 2004/10/19 09:18:21 absinthe Exp $
-
-IUSE="X"
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.0.6.ebuild,v 1.9 2004/11/05 00:12:31 vapier Exp $
 
 DESCRIPTION="Xfce4 desktop"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz
 	http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-${PV}/src/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ia64 x86 ppc alpha sparc amd64 hppa ~mips ppc64"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
+IUSE="X"
 
 RDEPEND=">=x11-libs/gtk+-2.0.6
 	dev-libs/libxml2
