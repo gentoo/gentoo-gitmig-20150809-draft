@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-syslog
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-syslog/ChangeLog,v 1.3 2004/06/24 23:55:45 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-syslog/ChangeLog,v 1.4 2005/02/03 05:51:28 mkennedy Exp $
+
+  02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-syslog-0.9.1-r1.ebuild, -cl-syslog-0.9.1.ebuild:
+  Override src_compile()
 
 *cl-syslog-0.9.1-r1 (12 Feb 2004)
 

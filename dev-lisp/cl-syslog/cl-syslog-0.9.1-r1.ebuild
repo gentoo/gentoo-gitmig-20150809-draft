@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-syslog/cl-syslog-0.9.1-r1.ebuild,v 1.3 2004/07/14 16:17:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-syslog/cl-syslog-0.9.1-r1.ebuild,v 1.4 2005/02/03 05:51:28 mkennedy Exp $
 
 inherit common-lisp
 
@@ -18,6 +18,10 @@ DEPEND="dev-lisp/common-lisp-controller
 CLPACKAGE=cl-syslog
 
 S=${WORKDIR}/${PN}
+
+src_compile() {
+	:
+}
 
 src_install() {
 	common-lisp-install *.lisp *.asd
