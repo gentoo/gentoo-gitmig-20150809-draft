@@ -1,5 +1,18 @@
-MD5 56dc54e0cb41eab61a75cd5d75017ce2 visualboyadvance-1.7.1-r1.ebuild 1295
-MD5 8802e07671ec99be3abbf91732cf5983 ChangeLog 2410
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d8160c10a249236570de5892c624f5be ChangeLog 2602
+MD5 ba74c994952b7572856c506b1abf37dc visualboyadvance-1.7.2.ebuild 1113
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6db235a2f4659121d5898a9c6d6f92fe files/digest-visualboyadvance-1.7.1-r1 79
+MD5 56dc54e0cb41eab61a75cd5d75017ce2 visualboyadvance-1.7.1-r1.ebuild 1295
+MD5 342ffeee3202543937ea62e7008dbdef files/digest-visualboyadvance-1.7.2 79
 MD5 a0c26da0983eebc48c3ca83825dde876 files/visualboyadvance 631
+MD5 ef02d9be59ab74afa9a8f12e17e359d4 files/1.7.2-homedir.patch 415
+MD5 6db235a2f4659121d5898a9c6d6f92fe files/digest-visualboyadvance-1.7.1-r1 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBHwmEHTu7gpaalycRApf4AKCyhF1gCNt0QzZ0QXz/2tWfJwz2cwCeIKcx
+raapFUCcxr9QKOaXx2EiTQc=
+=Vjhm
+-----END PGP SIGNATURE-----
