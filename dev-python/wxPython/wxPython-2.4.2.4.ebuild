@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.2.4.ebuild,v 1.2 2003/10/08 10:21:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.2.4.ebuild,v 1.3 2003/10/08 19:11:11 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,8 +20,8 @@ RDEPEND=">=dev-lang/python-2.1
 	>=x11-libs/wxGTK-2.4.2
 	gtk2? ( >=x11-libs/gtk+-2.0
 		>=x11-libs/pango-1.2
-		>=dev-libs/glib-2.0 ) 
-	!gtk2? ( =x11-libs/gtk+-1.2* 
+		>=dev-libs/glib-2.0 )
+	!gtk2? ( =x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2* )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
@@ -53,7 +53,7 @@ pkg_setup() {
 
 src_compile() {
 	local mypyconf
-	
+
 	use opengl \
 		&& 	mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
 		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
