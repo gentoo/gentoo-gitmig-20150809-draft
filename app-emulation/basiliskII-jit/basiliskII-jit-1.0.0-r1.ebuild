@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.1 2004/09/02 15:47:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.2 2004/09/27 10:51:49 dragonheart Exp $
 
 inherit flag-o-matic
 
@@ -23,12 +23,13 @@ IUSE="X gtk xv esd dga"
 ### gtk and esd support are compile time options, we'll check the usual
 ### use variables here and set ./configure options accordingly
 
-DEPEND="gtk? ( x11-libs/gtk+ )
+DEPEND="gtk? ( =x11-libs/gtk+-1.2* )
 	esd? ( media-sound/esound )
 	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/basiliskII-jit-gcc34.patch
 
 	# Fix up the vendor (bug 35352)
 	sed -i \

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20020115.ebuild,v 1.5 2004/06/27 23:01:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20020115.ebuild,v 1.6 2004/09/27 10:50:38 dragonheart Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 ### This package requires a Mac II/Classic ROM, A Mac OS Image
 ### Mac OS 7.5.3r2 is available freely from the Apple Homepage
@@ -24,8 +24,14 @@ S=${WORKDIR}/BasiliskII-1.0/src/Unix
 ### gtk and esd support are compile time options, we'll check the usual
 ### use variables here and set ./configure options accordingly
 
-DEPEND="gtk? ( x11-libs/gtk+ )
-	esd? ( media-sound/esound )"
+DEPEND="esd? ( media-sound/esound )
+	gtk? ( =x11-libs/gtk+-1.2* )"
+
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/basiliskII-gcc34.patch || die
+}
 
 src_compile() {
 	#fpu_x86 doesnt compile properly if -O3 or greater :(

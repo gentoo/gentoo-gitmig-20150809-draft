@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/basiliskII-jit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.3 2004/09/02 15:47:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/ChangeLog,v 1.4 2004/09/27 10:51:49 dragonheart Exp $
+
+  27 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/basiliskII-jit-gcc34.patch, basiliskII-jit-1.0.0-r1.ebuild:
+  Patches to fix with gcc-3.4 by fn_x@hotmail.com in bug #65444
 
 *basiliskII-jit-1.0.0-r1 (02 Sep 2004)
 
