@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plotutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.18 2004/07/31 03:18:33 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.19 2004/08/24 11:02:30 lanius Exp $
+
+  24 Aug 2004; Heinrich Wendel <lanius@gentoo.org> plotutils-2.4.1-r3.ebuild:
+  stable on x86
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> plotutils-2.4.1-r3:
   stable on ppc64, bug #57147
