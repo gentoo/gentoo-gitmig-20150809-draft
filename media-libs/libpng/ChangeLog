@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.19 2003/01/15 20:17:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.20 2003/01/16 17:06:58 seemant Exp $
 
 *libpng-1.0.15 (14 Jan 2003)
+
+  16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> libpng-1.0.15.ebuild
+  libpng-1.2.5-r2.ebuild files/libpng-1.0.15-gentoo.diff :
+
+  fixed the diff and using epatch
 
   15 Jan 2003; Seemant Kulleen <seemant@gentoo.org>
   files/libpng-1.0.15-gentoo.diff :

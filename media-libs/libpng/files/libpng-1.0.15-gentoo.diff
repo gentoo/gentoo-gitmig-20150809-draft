@@ -1,6 +1,7 @@
---- libpng-1.0.12.orig/pngconf.h
-+++ libpng-1.0.12/pngconf.h
-@@ -243,8 +243,13 @@
+diff -urN libpng-1.0.15-old/pngconf.h libpng-1.0.15/pngconf.h
+--- libpng-1.0.15-old/pngconf.h	2002-10-03 04:13:12.000000000 -0700
++++ libpng-1.0.15/pngconf.h	2003-01-16 08:57:40.000000000 -0800
+@@ -254,8 +254,13 @@
  #      undef _BSD_SOURCE
  #    endif
  #    ifdef _SETJMP_H
@@ -16,8 +17,10 @@
  #    endif
  #  endif /* __linux__ */
  
-+++ libpng-1.0.12/pngrtran.c
-@@ -1924,8 +1924,8 @@
+diff -urN libpng-1.0.15-old/pngrtran.c libpng-1.0.15/pngrtran.c
+--- libpng-1.0.15-old/pngrtran.c	2002-10-03 04:13:15.000000000 -0700
++++ libpng-1.0.15/pngrtran.c	2003-01-16 08:57:40.000000000 -0800
+@@ -1965,8 +1965,8 @@
           /* This changes the data from RRGGBB to RRGGBBXX */
           if (flags & PNG_FLAG_FILLER_AFTER)
           {
@@ -28,7 +31,7 @@
              for (i = 1; i < row_width; i++)
              {
                 *(--dp) = hi_filler;
-@@ -1946,8 +1946,8 @@
+@@ -1987,8 +1987,8 @@
           /* This changes the data from RRGGBB to XXRRGGBB */
           else
           {

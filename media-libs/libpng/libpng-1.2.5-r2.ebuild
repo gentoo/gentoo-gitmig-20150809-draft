@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r2.ebuild,v 1.1 2003/01/08 14:26:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r2.ebuild,v 1.2 2003/01/16 17:06:58 seemant Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Portable Network Graphics library"
@@ -19,9 +19,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
-	replace-flags "-march=k6*" "-march=i586"
+	replace-flags "-march=k6-3" "-march=i586"
+	replace-flags "-march=k6-2" "-march=i586"
+	replace-flags "-march=k6" "-march=i586"
 
 	sed -e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \
 		-e "s:ZLIBINC=.*:ZLIBINC=/usr/include:" \
