@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.8.ebuild,v 1.3 2004/03/06 17:30:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.8.ebuild,v 1.4 2004/03/28 17:28:38 liquidx Exp $
 
 inherit gnome2
 
@@ -81,3 +81,9 @@ DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 	  MAINTAINERS NEWS README THANKS TODO"
 
 export GST_INSPECT=/bin/true
+
+src_install() {
+	gnome2_src_install
+	insinto /etc/gconf/schemas
+	doins data/rhythmbox.schemas
+}
