@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.3 2001/05/02 18:59:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.4 2001/05/02 22:48:26 achim Exp $
 
-A=${PN}_${PV}.tar.gz
+A="${PN}_${PV}.tar.gz omniORBpy_1_3.tar.gz"
 S=${WORKDIR}/omni
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
-SRC_URI="ftp://ftp.uk.research.att.com/pub/omniORB/omniORB3/${A}"
+SRC_URI="ftp://ftp.uk.research.att.com/pub/omniORB/omniORB3/${PN}_${PV}.tar.gz
+	 ftp://ftp.uk.research.att.com/pub/omniORB/omniORBpy/${PN}py_1_3.tar.gz"
 HOMEPAGE="http://www.uk.research.att.com/omniORB/"
 
 DEPEND=""
@@ -15,7 +16,9 @@ PLT="i586_linux_2.0_glibc2.1"
 
 src_unpack() {
 
-  unpack ${A}
+  unpack ${PN}_${PV}.tar.gz
+  cd ${S}/src/lib
+  unpack ${PN}py_1_3.tar.gz
 
   cd ${S}/config
   cp config.mk config.mk.orig
@@ -38,7 +41,8 @@ src_compile() {
 
     cd src
     try make export
-
+    cd src/lib/omniORBpy
+    try make export
 }
 
 src_install () {
@@ -46,7 +50,7 @@ src_install () {
     T=/opt/berlin
     into ${T}
     cd ${S}
-    dobin bin/${PLT}/*
+    dobin bin/${PLT}/* bin/scripts/*
     insinto ${T}/lib/idl
     doins idl/*.idl
     insinto ${T}/lib/idl/COS
@@ -55,8 +59,8 @@ src_install () {
     dolib lib/${PLT}/*.{a,so*}
     exeinto ${T}/lib
     doexe lib/${PLT}/omnicpp
-    dodir /usr/lib/python2.0
-    cp -af lib/python/* ${D}/usr/lib/python2.0/
+    dodir ${T}/lib/python
+    cp -af lib/python/* ${D}/${T}/lib/python/
     doman man/man[15]/*.[15]
 
     dodoc CHANGES* COPYING* CREDITS PORTING README* ReleaseNote_omniORB_303 THIS_IS_omniORB_3_0_3
