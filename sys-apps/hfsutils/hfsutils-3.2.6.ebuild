@@ -22,11 +22,6 @@ pkg_setup() {
 
 src_compile() {
 
-	if [ ${ARCH} = "x86" ] ; then
-		einfo "PPC Only build, sorry"
-		exit 1
-	fi
-
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \

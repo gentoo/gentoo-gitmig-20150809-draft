@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4.ebuild,v 1.3 2002/06/21 20:10:31 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4.ebuild,v 1.4 2002/06/22 00:40:29 gerk Exp $
 
 A="hfsplus_1.0.4.src.tar.bz2"
 S=${WORKDIR}/hfsplus-1.0.4
@@ -16,12 +16,14 @@ SLOT="0"
 
 MAKEOPTS='PREFIX=/usr MANDIR=/usr/share/man'
 
-src_compile() {
-	# if not ppc bail
-	if [ ${ARCH} = "x86" ] ; then
-		einfo "Sorry, this is a PPC only utility"
-		exit 1
+pkg_setup() {
+	if [ ${ARCH} != "ppc" ] ; then
+		eerror "Sorry, this is a PPC only package."
+		die "Sorry, this as a PPC only pacakge."
 	fi
+}
+
+src_compile() {
 
 	# This does a autoconf, automake, etc.
 	emake -f Makefile.cvs all || die
