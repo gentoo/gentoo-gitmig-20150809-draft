@@ -1,19 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5a4448ae35d3029d5fe26a4e9103e639 ChangeLog 2057
-MD5 b4ff557017ea62e193c58704d2cb75fe kterm-6.2.0-r2.ebuild 1629
+MD5 4d7b101ea5e224b2a9901cdc2b444ef1 ChangeLog 2258
+MD5 ebc3032cec848cde9c374b31aa1f7aa3 kterm-6.2.0-r3.ebuild 1698
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 475848cbd321dd481bfc82cabaea12bf kterm-6.2.0-r3.ebuild 1659
-MD5 a56faea61552cc728261f1021372c95d files/digest-kterm-6.2.0-r2 200
+MD5 b4ff557017ea62e193c58704d2cb75fe kterm-6.2.0-r2.ebuild 1629
+MD5 a56faea61552cc728261f1021372c95d files/digest-kterm-6.2.0-r3 200
 MD5 60f864908bc68079f6edb20c923f280f files/kterm-6.2.0-gentoo.patch 1519
+MD5 a56faea61552cc728261f1021372c95d files/digest-kterm-6.2.0-r2 200
 MD5 2456d786b69d21ffb9ac133e8de1718b files/kterm-6.2.0-Xaw3d.patch 937
 MD5 3ba95cde993d406153d9466a73203c4f files/kterm-ad-gentoo.diff 737
-MD5 a56faea61552cc728261f1021372c95d files/digest-kterm-6.2.0-r3 200
+MD5 1726f252d396e02078426f66314df803 files/kterm-6.2.0-openpty.patch 1734
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBblAMVWNWqTUmv+0RAp3cAKC1QBJKvUUvyzrkdEofilAcQwSaVACgibkB
-KLg9Vkhntyqa/UQq94xewBw=
-=bheh
+iD8DBQFBeg2iVWNWqTUmv+0RAp0lAJ4sfCJ1LbzWgLWNc94TkPOuJkhWrACfZcEb
+3/XXWH89zh+/BTk5gyoZ3po=
+=OOA1
 -----END PGP SIGNATURE-----
