@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/jtag
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/ChangeLog,v 1.2 2004/02/24 16:11:15 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/ChangeLog,v 1.3 2004/03/27 05:26:13 dragonheart Exp $
+
+  27 Mar 2004; Daniel Black <dragonheart@gentoo.org> jtag-0.5.1.ebuild,
+  metadata.xml:
+  Marked x86 sparc stable. Added RESTRICT=nomirror as it is a sourceforge
+  SRC_URI. Added IUSE=. Added more complete list of dependancies
 
   24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> jtag-0.5.1.ebuild:
   KEYWORDS+=~sparc
