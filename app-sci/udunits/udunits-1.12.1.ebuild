@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.1.ebuild,v 1.1 2004/05/08 22:14:35 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.1.ebuild,v 1.2 2004/06/06 17:16:06 nerdboy Exp $
 
 inherit eutils
 
@@ -14,11 +14,12 @@ SRC_URI="ftp://unidata.ucar.edu/pub/udunits/udunits-${PV}.tar.Z"
 
 SLOT="0"
 LICENSE="UCAR-Unidata"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
-DEPEND="dev-lang/perl"
+DEPEND="dev-lang/perl
+	sys-apps/sed"
 
-RDEPEND="${DEPEND}"
+RDEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
@@ -64,4 +65,12 @@ src_install() {
 	chmod -R u+w ${D}/*
 
 	dodoc COPYRIGHT README RELEASE_NOTES VERSION CUSTOMIZE INSTALL
+}
+
+pkg_postinst() {
+	ewarn "This package requires a Fortran compiler for maximum utility."
+	ewarn "For now, make sure you have at least g77 for the f77 interface."
+	ewarn "The internal configure should detect many f77 compilers, however,"
+	ewarn "if you have the PG compiler you will need to change the above"
+	ewarn "preprocessor macro to something like -Dpgifortran."
 }
