@@ -13,7 +13,7 @@ src_install() {
 	insinto /etc/env.d
 	doins ${FILESDIR}/90gnome
 	exeinto /usr/X11R6/bin/wm
-	doins ${FILESDIR}/gnome
+	doexe ${FILESDIR}/gnome
 	dodir /etc/opt/gnome /opt/gnome
 	dosym /etc/opt/gnome /opt/gnome/etc
 }
