@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/gauche-gl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gl/ChangeLog,v 1.5 2004/02/28 15:21:35 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gl/ChangeLog,v 1.6 2004/03/14 10:57:30 hattya Exp $
+
+  14 Mar 2004; Akinori Hattori <hattya@gentoo.org> gauche-gl-0.1.3.ebuild,
+  files/destdir-gentoo.diff, files/nvidia-headers-gentoo.diff,
+  files/0.1.3/destdir-gentoo.diff, files/0.1.3/nvidia-headers-gentoo.diff:
+  cleaned out.
 
   29 Feb 2004; Akinori Hattori <hattya@gentoo.org> gauche-gl-0.3.1.ebuild:
   marked stable on x86.
