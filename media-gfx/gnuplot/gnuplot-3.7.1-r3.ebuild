@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.1-r3.ebuild,v 1.5 2002/09/07 20:04:49 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.7.1-r3.ebuild,v 1.6 2002/09/19 20:05:26 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Quick and useful plotting program"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnuplot.info"
 
 SLOT="0"
 LICENSE="gnuplot"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )
