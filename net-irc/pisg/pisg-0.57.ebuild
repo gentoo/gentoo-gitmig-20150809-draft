@@ -1,22 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.51.ebuild,v 1.6 2004/08/28 02:16:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.57.ebuild,v 1.1 2004/08/28 02:16:23 swegener Exp $
+
+inherit eutils
 
 DESCRIPTION="Perl IRC Statistics Generator"
 HOMEPAGE="http://pisg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
-RDEPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl
+	dev-perl/Text-Iconv"
 DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/0.56-network-option-fix.patch
 
 	sed -i 's!lang\.txt!/usr/share/pisg/lang.txt!' modules/Pisg.pm
 	sed -i 's!layout/!/usr/share/pisg/layout/!' modules/Pisg.pm
@@ -37,6 +42,9 @@ src_install () {
 		docs/{CREDITS,Changelog,FORMATS,pisg-doc.txt} \
 		docs/dev/API pisg.cfg README
 	dohtml docs/html/*
+
+	find ${D}/usr/{lib,share} -type d -exec chmod 755 {} \;
+	find ${D}/usr/{lib,share} -type f -exec chmod 644 {} \;
 }
 
 pkg_postinst() {
