@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.3 2005/03/29 22:16:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.4 2005/03/30 20:03:15 genstef Exp $
 
 opts="start stop info"
 
@@ -12,23 +12,23 @@ depend() {
 start() {
 	if [ ! -e /etc/capi.conf ] ; then
 		eerror "You're missing /etc/capi.conf (comes with a capi-driver)."
-		eerror "Emerge net-dialup/fritzcapi if you are having an AVM Fritz!Card"
+		eerror "Emerge net-dialup/fritzcapi if you're having an AVM Fritz!Card"
 		return 1
 	fi
 
 	ebegin "Loading CAPI"
-	( [ -f /proc/capi/capi20 ] || /sbin/modprobe -s capi ) && \
-	( [ -f /proc/capi/capidrv -o "$CAPI_LOAD_CAPIDRV" = "0" ] || /sbin/modprobe -s capidrv )
+	[ -f /proc/capi/capi20 ] || /sbin/modprobe -s capi
 	eend $? || return 1
-
-	ebegin "Starting CAPI"
 
 	local CNT=0  # wait for udev
 	while [ ! -e /dev/capi20 -a $CNT -lt 10 ]; do
 		sleep 1; : $((CNT++))
 	done
 
+	ebegin "Starting CAPI"
+
 	if /usr/sbin/capiinit 2>/dev/null activate ; then
+		[ -f /proc/capi/capidrv -o "$CAPI_LOAD_CAPIDRV" = "0" ] || /sbin/modprobe -s capidrv
 		eindent
 		while read INFO; do einfo "$INFO"; done < /proc/capi/controller
 		eoutdent

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.29 2005/03/29 22:16:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.30 2005/03/30 20:03:15 genstef Exp $
+
+  30 Mar 2005; Stefan Schweizer <genstef@gentoo.org> files/capi.hotplug,
+  files/capi.initd, capi4k-utils-20050322.ebuild:
+  Fix capidrv/isdnlog bug thanks to sbriesen
 
   29 Mar 2005; Stefan Schweizer <genstef@gentoo.org> files/capi.blacklist,
   files/capi.conf, files/capi.confd, files/capi.hotplug, files/capi.initd,
