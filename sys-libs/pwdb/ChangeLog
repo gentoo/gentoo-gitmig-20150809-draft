@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pwdb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.22 2004/02/06 20:32:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.23 2004/02/09 09:49:02 gmsoft Exp $
+
+  09 Feb 2004; Guy Martin <gmsoft@gentoo.org> pwdb-0.62.ebuild:
+  Marked stable on hppa.
 
   06 Feb 2004; Martin Schlemmer <azarah@gentoo.org> pwdb-0.62.ebuild:
   Bump to stable for x86 (needed by pam).
