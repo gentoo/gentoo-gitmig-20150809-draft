@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r2.ebuild,v 1.8 2004/11/25 13:12:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r2.ebuild,v 1.9 2004/11/25 14:29:10 weeve Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/pine/${PN}${PV}.tar.bz2
 
 LICENSE="PICO"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha amd64 ppc-macos"
+KEYWORDS="x86 ppc sparc ~alpha amd64 ppc-macos"
 #IUSE="ipv6 maildir ssl ldap kerberos passfile"
 IUSE="ssl ldap kerberos pam passfile debug"
 
