@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.18 2004/08/16 11:51:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.19 2004/09/23 13:43:30 gustavoz Exp $
+
+  23 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  seahorse-0.6.3-r1.ebuild:
+  Stable on sparc wrt #64485
 
   16 Aug 2004; Daniel Black <dragonheart@gentoo.org> seahorse-0.6.3-r1.ebuild:
   Have modified gpgme-0.3.14-r1 a bit to make it easier. As a result this needed
