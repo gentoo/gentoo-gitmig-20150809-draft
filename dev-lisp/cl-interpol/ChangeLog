@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-interpol
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-interpol/ChangeLog,v 1.2 2003/10/26 17:26:16 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-interpol/ChangeLog,v 1.3 2003/12/21 22:22:12 mkennedy Exp $
+
+*cl-interpol-0.1.1 (21 Dec 2003)
+
+  21 Dec 2003; <mkennedy@gentoo.org> cl-interpol-0.1.1.ebuild:
+  minor version bump
 
   26 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> cl-interpol-0.1.0.ebuild:
   corrected description, hopepage
