@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.6 2004/05/25 13:15:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.7 2004/05/27 23:37:55 wolf31o2 Exp $
 
 inherit games
 
@@ -172,7 +172,8 @@ src_install() {
 
 	use amd64 && rm ${Ddir}/System/ucc-bin ${Ddir}/System/ut2004-bin \
 		&& mv ${Ddir}/System/ucc-bin-linux-amd64 ${Ddir}/System/ucc-bin \
-		&& ${Ddir}/System/ut2004-bin-linux-amd64 ${Ddir}/System/ut2004-bin
+		&& mv ${Ddir}/System/ut2004-bin-linux-amd64 ${Ddir}/System/ut2004-bin \
+		&& chmod ug+x ${Ddir}/System/ucc-bin ${Ddir}/System/ut2004-bin
 	use x86 && rm ${Ddir}/System/ucc-bin-linux-amd64 \
 		${Ddir}/System/ut2004-bin-linux-amd64
 
