@@ -1,0 +1,85 @@
+--- installer/services.sh	2003-10-02 08:00:37.000000000 +0900
++++ installer/services.sh	2003-12-20 01:12:19.835868864 +0900
+@@ -632,11 +632,12 @@
+ 
+ # Start the virtual machine parallel port kernel service
+ vmware_start_vmppuser() {
+-   if ! grep -q ' parport_release[^'$'\t'']*$' /proc/ksyms; then
++   test -f /proc/ksyms && ksyms=/proc/ksyms || ksyms=/proc/kallsyms
++   if ! grep -q ' parport_release[^'$'\t'']*$' $ksyms; then
+      # parport support is not built in the kernel
+      /sbin/modprobe parport || exit 1
+    fi
+-   if ! grep -q ' parport_pc_[^'$'\t'']*$' /proc/ksyms; then
++   if ! grep -q ' parport_pc_[^'$'\t'']*$' $ksyms; then
+      # parport_pc support is not built in the kernel
+      /sbin/modprobe parport_pc || exit 1
+    fi
+--- bin/vmware-config.pl	2003-10-02 08:00:36.000000000 +0900
++++ bin/vmware-config.pl	2003-12-20 01:11:05.144216413 +0900
+@@ -513,6 +513,7 @@
+ my $cConnectSocketDir = '/var/run/vmware';
+ my $machine = 'host';
+ my $os = 'host';
++my $ksyms = -f '/proc/ksyms' ? ' /proc/ksyms' : ' /proc/kallsyms';
+ if (vmware_product() eq 'server') {
+   $machine = 'machine';
+   $os = "Console OS";
+@@ -2211,7 +2212,7 @@
+       $gSystem{'smp'} = (direct_command(shell_string($gHelper{'uname'})
+                                         . ' -v') =~ / SMP /) ? 'yes' : 'no';
+       $gSystem{'versioned'} = (direct_command(shell_string($gHelper{'grep'}) . ' '
+-        . shell_string('^[0-9a-fA-F]\{8\} Using_Versions') . ' /proc/ksyms')
++        . shell_string('^[0-9a-fA-F]\{8\} Using_Versions') . $ksyms)
+           eq '') ? 'no' : 'yes';
+     }
+ 
+@@ -2224,7 +2225,7 @@
+ 
+       @fields = split(' ', direct_command(
+         shell_string($gHelper{'grep'}) . ' '
+-        . shell_string('^[0-9a-fA-F]\{8\} printk') . ' /proc/ksyms'));
++        . shell_string('^[0-9a-fA-F]\{8\} printk') . $ksyms));
+       if (defined($fields[0])) {
+         my $first;
+ 
+@@ -2248,7 +2249,7 @@
+     # Linux kernel build bug
+     $gSystem{'build_bug'} = (direct_command(shell_string($gHelper{'grep'}) . ' '
+       . shell_string('^[0-9a-fA-F]\{8\} __global_cli_R__ver___global_cli')
+-      . ' /proc/ksyms') eq '') ? 'no' : 'yes';
++      . $ksyms) eq '') ? 'no' : 'yes';
+   }
+ 
+   # Warning, the return after the end of the if statement
+@@ -2287,10 +2288,10 @@
+   if ($gSystem{'version_integer'} < kernel_version_integer(2, 1, 0)) {
+     if (   (direct_command(shell_string($gHelper{'grep'}) . ' '
+                            . shell_string('^[0-9a-fA-F]\{8\} misc_register')
+-                           . ' /proc/ksyms') eq '')
++                           . $ksyms) eq '')
+         || (direct_command(shell_string($gHelper{'grep'}) . ' '
+                            . shell_string('^[0-9a-fA-F]\{8\} misc_deregister')
+-                           . ' /proc/ksyms') eq '')) {
++                           . $ksyms) eq '')) {
+       error('You are running a Linux kernel version '
+             . $gSystem{'version_utsclean'} . ' that was not built with the '
+             . 'CONFIG_UMISC configuration parameter set.  '
+@@ -2886,7 +2887,7 @@
+     # make sure it is loaded before beginning our tests
+     if (direct_command(shell_string($gHelper{'grep'}) . '  '
+                        . shell_string(' parport_release[^' . "\t" . ']*$')
+-                       . ' /proc/ksyms') eq '') {
++                       . $ksyms) eq '') {
+       # This comment fixes emacs's broken syntax highlighting
+       # parport support is not built in the kernel
+       if (system(shell_string($gHelper{'modprobe'})
+@@ -2908,7 +2909,7 @@
+     # make sure it is loaded before beginning our tests
+     if (direct_command(shell_string($gHelper{'grep'}) . '  '
+                        . shell_string(' parport_pc_[^' . "\t" . ']*$')
+-                       . ' /proc/ksyms') eq '') {
++                       . $ksyms) eq '') {
+       # This comment fixes emacs's broken syntax highlighting
+       # parport_pc support is not built in the kernel
+       if (system(shell_string($gHelper{'modprobe'})
