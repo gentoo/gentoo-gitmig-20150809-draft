@@ -27,6 +27,6 @@ start() {
 
 stop() {
         ebegin "Stopping Shoutcast Trans"
-        start-stop-daemon --stop --quiet --exec /opt/shoutcast/sc_trans_linux
+	start-stop-daemon --stop --quiet --pidfile /var/run/shoutcast_trans.pid
         eend $?
 }

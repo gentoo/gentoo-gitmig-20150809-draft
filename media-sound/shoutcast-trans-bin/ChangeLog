@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/shoutcast-trans-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.3 2004/09/05 02:17:10 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.4 2004/09/05 02:38:34 chriswhite Exp $
+
+  05 Sep 2004; Chris White <chriswhite@gentoo.org> files/shoutcast_trans:
+  Fixed the stop() function in shoutcast_trans init.d script.
 
   05 Sep 2004; Chris White <chriswhite@gentoo.org> files/shoutcast_trans,
   shoutcast-trans-bin-0.4.0.ebuild:
