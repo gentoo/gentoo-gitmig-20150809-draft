@@ -1,6 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.13 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.14 2004/12/21 03:24:34 latexer Exp $
+
+# !!!!!!!!!!
+#
+# BEWARE: DO NOT USE. THIS ECLASS IS DEPRECATED, BROKEN, AND WILL EAT YOUR
+# CHILDREN. DO NOT USE. -latexer
+#
+# !!!!!!!!!!
 
 # This eclass provides help for compiling external kernel modules from
 # source.
