@@ -266,10 +266,6 @@ media-video/kxine
 # needs testing as I just copied the old ebuild
 =app-office/gnumeric-1.0.9
 
-# Owen Stampflee <owen@gentoo.org> (28 Jul 2002)
-# Finally, a from source xforms ebuild, lets test it!
-=x11-libs/xforms-1.0_rc4
-
 # <verwilst@gentoo.org> (28 Jul 2002)
 # stupid thing can't find a c++ compiler half the time
 
@@ -473,11 +469,6 @@ sys-apps/mkisofs
 # initscript needs testing, I don't run a system wide fetchmail so can't
 # verify.
 =net-mail/fetchmail-5.9.11-r1
-
-# owen@gentoo.org (15 Jul 2002)
-# The CVS snapshot of Lyx should have been masked in the first place!
-# It simply does not compile. Please Devs, mask all new ebuilds!
->=app-office/lyx-1.2.0.20020705
 
 # drobbins@gentoo.org (15 Jul 2002)
 #bad/old versions:
