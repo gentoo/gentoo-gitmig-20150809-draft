@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/lookup
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.3 2003/09/29 11:31:09 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.4 2004/02/13 18:17:28 usata Exp $
+
+*lookup-1.4 (14 Feb 2004)
+
+  14 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> lookup-1.4.ebuild:
+  Version bumped
 
 *lookup-1.3 (01 Sep 2003)
 
