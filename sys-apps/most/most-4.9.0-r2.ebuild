@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.9.0-r2.ebuild,v 1.2 2001/05/10 01:52:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.9.0-r2.ebuild,v 1.3 2001/11/14 22:35:46 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,9 +14,13 @@ DEPEND=">=sys-libs/slang-1.4.2
 
 src_compile() {
 
-    try ./configure --host=${CHOST} --prefix=/usr
+    try ./configure 	\
+	--host=${CHOST} \
+	--prefix=/usr \
+	--sysconfdir=/etc
+
 	#*possible* (not definite) pmake problems, let's not risk it.
-	try make 
+	make SYS_INITFILE="/etc/most.conf" || die
 }
 
 src_install() {
