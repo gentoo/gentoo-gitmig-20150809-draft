@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/scsign
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/scsign/ChangeLog,v 1.1 2005/01/02 09:52:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scsign/ChangeLog,v 1.2 2005/01/12 08:13:29 dragonheart Exp $
+
+*scsign-0.0.5 (12 Jan 2005)
+
+  12 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/scsign-0.0.5-printid.patch, +scsign-0.0.5.ebuild:
+  version bump
 
 *scsign-0.0.4 (02 Jan 2005)
 
