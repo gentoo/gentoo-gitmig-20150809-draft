@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.30 2004/01/07 08:23:54 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.31 2004/01/08 12:47:02 mboman Exp $
+
+*snort-2.1.0-r1 (08 Jan 2004)
+
+  08 Jan 2004; Michael Boman <mboman@gentoo.org> snort-2.1.0-r1.ebuild,
+  files/snort-2.1.0-pgsql.patch:
+  Made use of 'doc' USE flag to install signature documentation. Patched
+  configure.in to solve bug #37436.
 
   07 Jan 2004; Michael Boman <mboman@gentoo.org> snort-2.1.0.ebuild:
   Forgot to include the threshold.conf file in the installation process.
