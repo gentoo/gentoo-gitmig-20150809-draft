@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/openmosixview
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/ChangeLog,v 1.1 2003/10/17 22:43:04 tantive Exp $
+
+*mpiexec-0.74 (18 Oct 2003)
+
+  18 Oct 2003; Michael Imhof <tantive@gentoo.org>
+  Initial release. Ebuild submitted by Joseph Spadavecchia 
+  <j.spadavecchia@ed.ac.uk>. Closes #30565.
