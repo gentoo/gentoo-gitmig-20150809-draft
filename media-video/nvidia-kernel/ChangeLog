@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.12 2002/12/09 04:26:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.13 2002/12/11 20:52:47 lostlogic Exp $
+
+*nvidia-kernel-1.0.4191 (11 Dec 2002)
+
+  11 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
+  Update to latest version, the patches that we'd been applying are
+  no longer needed as they should now be in the mainstream of the 
+  package from nvidia.  Update the modules.d file for new module
+  name.
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
