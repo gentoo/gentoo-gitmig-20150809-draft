@@ -288,8 +288,8 @@ media-video/lives
 # initial testing for python 2.3.x. do not unmask unless you
 # are prepared for a non-working portage.
 # - note: if you unmask this, you should unmask >=portage-2.0.49-r16
-=dev-lang/python-2.3*
-=dev-python/python-docs-2.3*
+#=dev-lang/python-2.3*
+#=dev-python/python-docs-2.3*
 
 # msterret@gentoo.org (20 Aug 2003)
 # New versioning scheme so hid the old one from portage
