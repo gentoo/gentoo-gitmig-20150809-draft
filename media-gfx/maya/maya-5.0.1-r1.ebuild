@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.5 2004/05/31 05:53:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.6 2004/06/08 02:16:07 eradicator Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:
@@ -192,7 +192,7 @@ src_install() {
 	find ${D}/usr/aw -type d -exec chmod 755 {} \;
 }
 
-pkg_postinstall() {
+pkg_postinst() {
 	# What follows is modified from rpm -qp --scripts RPMS/Maya5_0-5.0.1-135.i686.rpm
 	cp /etc/services /tmp/services.maya_save
 	awk '/mi-ray3_2maya5_0/ { found++; print ; next } {print} END {if (0==found) print "mi-ray3_2maya5_0 7054/tcp" }' /tmp/services.maya_save > /etc/service
