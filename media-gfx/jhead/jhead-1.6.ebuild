@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/jhead-1.6.ebuild,v 1.4 2003/02/13 12:36:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/jhead-1.6.ebuild,v 1.5 2003/04/05 02:19:50 vladimir Exp $
 
 S=${WORKDIR}/${PN}1.6
 DESCRIPTION="a program for making thumbnails for websites."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.sentex.net/~mwandel/jhead/"
 
 SLOT="0"
 LICENSE="BSD | GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/glibc"
 
