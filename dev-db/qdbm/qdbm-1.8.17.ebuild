@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.17.ebuild,v 1.11 2005/01/04 20:12:45 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.17.ebuild,v 1.12 2005/02/04 12:36:40 cryos Exp $
 
-inherit java-pkg
+inherit java-pkg multilib
 
 IUSE="debug java perl ruby zlib"
 
@@ -56,8 +56,8 @@ src_install() {
 	if use java; then
 		cd java
 		make DESTDIR=${D} install || die
-		java-pkg_dojar ${D}/usr/lib/*.jar
-		rm ${D}/usr/lib/*.jar
+		java-pkg_dojar ${D}/usr/$(get_libdir)/*.jar
+		rm ${D}/usr/$(get_libdir)/*.jar
 		cd -
 	fi
 
