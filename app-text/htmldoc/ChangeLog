@@ -1,6 +1,11 @@
 # ChangeLog for app-text/htmldoc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.7 2003/02/15 07:18:03 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.8 2003/07/08 21:04:57 mholzer Exp $
+
+*htmldoc-1.8.20-r1 (08 Jul 2003)
+
+  08 Jul 2003; Martin Holzer <mholzer@gentoo.org> htmldoc-1.8.20-r1.ebuild:
+  Fixing patch for online help. Closes #23985.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
