@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <woodchip@gentoo.org> (17 Jun 2003)
+# It is alpha after all.
+>=app-crypt/mit-krb5-1.3_alpha
+
 # <foser@gentoo.org> 17 Jun 2003
 # experimental gst-plugins eclass stuff
 # needs testing
