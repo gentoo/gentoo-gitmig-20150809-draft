@@ -1,9 +1,10 @@
-MD5 c9e7efb3a98f64d3ec7d92721eed3eda ChangeLog 6429
+MD5 d4e2ccb0090616b6f10605812f8e2fea ChangeLog 6495
 MD5 818341ff579ee7d21ed37a42b91cb945 dspam-3.0.0.ebuild 7029
 MD5 b08fbc1616907518bbe03909a57b8b6e dspam-3.1.2.ebuild 14858
 MD5 8a08e7029b398b05ff2e2472ffde5465 dspam-3.2.0.ebuild 15966
 MD5 b98b3dde5ed0d1d0313a65d6d0211e73 dspam-3.2.1.ebuild 15929
 MD5 c63cb857eba5be84b0763d36ab8be0db dspam-3.2.2.ebuild 15833
+MD5 d7849496b874735c406cf6b089f9a6e3 dspam-3.2.3.ebuild 15833
 MD5 dbfbe5a3bbe3347938107f5f5bd2197e metadata.xml 308
 MD5 c12a54112c6fec3530a7b1a368d04ac8 files/README.postfix 309
 MD5 e0469b961385fda4305602dc2519d319 files/README.qmail 2317
@@ -24,3 +25,4 @@ MD5 4b7bb6bbede742676e3e7017210104c5 files/digest-dspam-3.2.0 63
 MD5 4d666bbdf8092d4bd49428ea31eadbfb files/digest-dspam-3.2.1 63
 MD5 a8c089a75fb1ee3c2b4f32ffc04c638e files/digest-dspam-3.1.2 63
 MD5 5e423ac033f04ebc7dcc1d61e77c34fa files/digest-dspam-3.2.2 63
+MD5 e8b69a8c4c9e136977f8b1485a914d18 files/digest-dspam-3.2.3 63
