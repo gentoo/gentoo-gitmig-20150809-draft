@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.6 2003/07/11 22:01:40 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.7 2003/07/13 01:05:28 liquidx Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,6 +14,7 @@ LICENSE="MPL-1.1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc
+	app-arch/zip
 	>=dev-libs/nspr-4.3"
 
 MAKEOPTS="${MAKEOPTS} -j1"
