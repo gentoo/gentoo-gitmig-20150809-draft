@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-pmu
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-pmu/ChangeLog,v 1.1 2003/12/05 03:48:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-pmu/ChangeLog,v 1.2 2003/12/19 14:52:58 lu_zero Exp $
+
+  19 Dec 2003; Luca Barbato <lu_zero@gentoo.org> gkrellm-pmu-2.0.ebuild:
+  sandboxing fix
 
 *gkrellm-pmu-2.0 (05 Dec 2003)
 

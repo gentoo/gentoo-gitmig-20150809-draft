@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-pmu/gkrellm-pmu-2.0.ebuild,v 1.1 2003/12/05 03:48:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-pmu/gkrellm-pmu-2.0.ebuild,v 1.2 2003/12/19 14:52:58 lu_zero Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GKrellM2 plugin for battery display on Apple machines"
@@ -19,7 +19,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	dodir /usr/lib/gkrellm2/plugins
+	einstall PLUGIN_INSTALL="${D}/usr/lib/gkrellm2/plugins" \
+	|| die
 
 	dodoc COPYING ChangeLog INSTALL README
 }
