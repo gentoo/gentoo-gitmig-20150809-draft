@@ -1,4 +1,16 @@
-MD5 f5bc7263e002a35902a2eb96e5f9cd43 ChangeLog 769
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e3169eef90de6dffe087849edd5d3292 gruntspud-0.4.6_beta.ebuild 1139
+MD5 91cb4a28f16fc2d494ab56e8174539f3 ChangeLog 929
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 d55fa5b0d8e153373b0c8a940571d5ae gruntspud-0.4.6_beta-r1.ebuild 1480
 MD5 5481dcb48a4eb119e5cb97441bed2eb1 files/digest-gruntspud-0.4.6_beta 74
+MD5 5481dcb48a4eb119e5cb97441bed2eb1 files/digest-gruntspud-0.4.6_beta-r1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBSq47/rLF9B432nYRAqIXAJ9K9HVb2Y3iwokOJUagPr6mF98gbACgpYBO
+cSQ0XDuEj9vD2t9H0H1UyHA=
+=E8TX
+-----END PGP SIGNATURE-----
