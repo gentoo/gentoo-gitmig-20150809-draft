@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-46.ebuild,v 1.1 2004/11/01 01:44:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-46.ebuild,v 1.2 2004/11/03 09:48:58 mr_bones_ Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_install() {
 	for x in ${S}/migrate_*; do
 		[ -f ${x} ] && doexe ${x}
 	done
-						
+
 	diropts -m0750
 	dodir /usr/share/migrationtools/ads
 	exeinto /usr/share/migrationtools/ads
@@ -52,4 +52,3 @@ pkg_postinst() {
 	einfo "to start."
 	draw_line "                                                           "
 }
-

@@ -1,19 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dee6eb341ec194fb2eb96d60c5c2aecb migrationtools-46.ebuild 1427
-MD5 9fcb1b08a078d3b7646d7820e425a376 migrationtools-44-r1.ebuild 665
-MD5 f877d27a61f1055a578b3bba5d9ad2b3 migrationtools-45.ebuild 784
 MD5 d0f4ae8890590f12dd085499e184e33e ChangeLog 1174
+MD5 9fcb1b08a078d3b7646d7820e425a376 migrationtools-44-r1.ebuild 665
 MD5 e0e5990445daa201b90143d6d8c0a8ec metadata.xml 393
+MD5 f877d27a61f1055a578b3bba5d9ad2b3 migrationtools-45.ebuild 784
+MD5 4fbe1bbee2626a24002eef7bf038bfb8 migrationtools-46.ebuild 1422
 MD5 be251920a61a40bb429028a3e9f8b77d files/digest-migrationtools-44-r1 68
 MD5 7f95cbec231a441eeb6638da670e49ad files/digest-migrationtools-45 68
 MD5 f5023a2d2ae00e24e441191d96200baa files/digest-migrationtools-46 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFBhaM8PpIsIjIzwiwRApfNAJ9FzxUJg0DZQ+mWwR0jCUTYw03ySwCgud6e
-5Ss9sp9wN2S094+aAZ8Hv8I=
-=oe/K
------END PGP SIGNATURE-----
