@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.2 2004/11/18 07:35:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.3 2004/11/18 07:37:55 eradicator Exp $
 
 IUSE="oss"
 
@@ -102,7 +102,7 @@ src_install() {
 	test -e ${D}/etc/rc.d/init.d/alsasound && rm ${D}/etc/rc.d/init.d/alsasound
 
 	rm doc/Makefile
-	dodoc CARDS-STATUS COPYING FAQ INSTALL README WARNING TODO doc/*
+	dodoc CARDS-STATUS INSTALL FAQ README WARNING TODO doc/*
 }
 
 pkg_postinst() {
