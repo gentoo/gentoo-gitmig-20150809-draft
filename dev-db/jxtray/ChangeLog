@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/jxtray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.3 2005/02/03 17:14:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.4 2005/03/04 11:37:19 luckyduck Exp $
+
+  04 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> jxtray-0.5.ebuild:
+  fixed a typo which broke postgresql support and changed xml-commons dependency
+  to xerces-2 dependency to fix #82561
 
   03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> jxtray-0.5.ebuild:
   updated to reflect the new jdom slots
