@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mmpython
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.18 2004/12/30 22:31:58 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.19 2005/01/29 17:59:33 iggy Exp $
+
+*mmpython-0.4.8 (29 Jan 2005)
+
+  29 Jan 2005; Brian Jackson <iggy@gentoo.org> +mmpython-0.4.8.ebuild:
+  version bump
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
