@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-5.0_pre20030822.ebuild,v 1.2 2003/10/06 00:00:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-5.0_pre20030822.ebuild,v 1.3 2003/10/06 07:08:16 dholm Exp $
 
 inherit gnat
 
@@ -27,6 +27,7 @@ src_unpack() {
 
 	# Install the bootstrap compiler
 	cd "${GNATBOOTINST}"
+	patch -p1 < ${FILESDIR}/gnat-3.15p-i686-pc-linux-gnu-bin.patch
 	echo $'\n'3$'\n'${GNATBOOT}$'\n' | ./doconfig > doconfig.log 2>&1
 	./doinstall
 
