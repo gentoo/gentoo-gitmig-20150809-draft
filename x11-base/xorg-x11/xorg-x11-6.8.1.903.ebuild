@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.903.ebuild,v 1.3 2005/02/02 16:05:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.903.ebuild,v 1.4 2005/02/02 16:31:31 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1631,6 +1631,9 @@ cleanup_fonts() {
 	if use bitmap-fonts; then
 		G_FONTDIRS="${G_FONTDIRS} 75dpi 100dpi"
 	fi
+	if use nls; then
+		G_FONTDIRS="${G_FONTDIRS} cyrillic"
+	fi
 
 	for G_FONTDIR in ${G_FONTDIRS}; do
 		# clean out old fonts.* and encodings.dir files, as we
@@ -1663,7 +1666,7 @@ remove_font_dirs() {
 							einfo "Moving ${G_FONTDIR} to /usr/share/fonts/"
 							mv ${G_FONTDIR} /usr/share/fonts/
 						else
-							die "/usr/share/fonts/${G_FONTDIR##*/} exists. Remove it and try again."
+							ewarn "/usr/share/fonts/${G_FONTDIR##*/} exists. Remove it and try again."
 						fi
 					else
 						ewarn "${G_FONTDIR} does not exist."

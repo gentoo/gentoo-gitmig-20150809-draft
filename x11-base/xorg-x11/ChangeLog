@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.310 2005/02/02 16:05:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.311 2005/02/02 16:31:31 spyderous Exp $
+
+  02 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.903.ebuild:
+  Change die() to ewarn() if a directory exists in both font locations in
+  remove_font_dirs(). The migration should catch that problem, so there's no
+  need to die. Also append cyrillic to G_FONTDIRS if USE=nls, so its fonts.*
+  files get cleaned. Reported by Andres Järv <andresjarv@gmail.com>.
 
   02 Feb 2005; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.1.903.ebuild:
   Added ~ppc64 to KEYWORDS
