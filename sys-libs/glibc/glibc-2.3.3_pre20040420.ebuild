@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040420.ebuild,v 1.2 2004/04/27 03:17:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040420.ebuild,v 1.3 2004/04/28 15:09:34 solar Exp $
 
 IUSE="nls pic build nptl"
 
@@ -284,6 +284,12 @@ src_unpack() {
 	#
 	# *** PaX related patches starts here ***
 	#
+
+	# localedef contains nested function trampolines, which trigger
+	# segfaults under PaX -solar
+	# Debian Bug (#231438, #198099)
+	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch
+
 
 	# With latest versions of glibc, a lot of apps failed on a PaX enabled
 	# system with:

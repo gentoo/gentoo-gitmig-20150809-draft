@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.146 2004/04/27 09:13:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.147 2004/04/28 15:09:34 solar Exp $
+
+  28 Apr 2004; <solar@gentoo.org> glibc-2.3.3_pre20040420.ebuild,
+  files/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch:
+  localedef contains nested function trampolines, which trigger segfaults under
+  PaX while building. Adding patch that inlines functions in order to avoid
+  this. Debian Bug (#231438, #198099)
 
   27 Apr 2004; Mike Frysinger <vapier@gentoo.org> 
   +files/2.3.2/glibc-2.3.2-arm-bus-defines.patch,
