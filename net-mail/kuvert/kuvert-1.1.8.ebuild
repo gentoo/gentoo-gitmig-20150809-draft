@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.3 2004/11/20 09:46:44 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.4 2004/11/30 22:20:40 swegener Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 SLOT="0"
 
 DEPEND=">=app-crypt/gnupg-1.0.6
-	>=app-crypt/quintuple-agent
+	app-crypt/quintuple-agent
 	dev-perl/MailTools
 	dev-perl/MIME-tools
 	dev-perl/TermReadKey
