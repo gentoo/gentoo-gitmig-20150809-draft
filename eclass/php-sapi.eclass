@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.19 2004/04/01 08:32:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.20 2004/04/21 00:37:20 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -35,6 +35,8 @@ fi
 if [ "${PHPSAPI}" != "cli" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
 fi
+
+[ "${PV//4.3.6}" != "${PV}" ] && SRC_URI="${SRC_URI} http://www.apache.org/~jorton/php-4.3.6-pcrealloc.patch"
 
 # Where we work
 S=${WORKDIR}/${MY_P}
@@ -240,6 +242,9 @@ php-sapi_src_unpack() {
 	#sed -e "s:\$pear_install_dir\.:\'${D}/usr/lib/php/\' . :g" -i pear/PEAR/Registry.php
 
 	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i configure
+
+	# bug 47498
+	[ "${PV//4.3.6}" != "${PV}" ] && EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/php-4.3.6-pcrealloc.patch
 
 }
 
@@ -453,6 +458,8 @@ php-sapi_src_compile() {
 		--enable-trans-sid \
 		--enable-versioning \
 		--with-config-file-path=${PHPINIDIRECTORY}" 
+
+	php-sapi_is_providerbuild || myconf="${myconf} --without-pear"
 
 	#fixes bug #24373 
 	filter-flags "-D_FILE_OFFSET_BITS=64"
