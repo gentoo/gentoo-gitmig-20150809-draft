@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/prosite
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/prosite/ChangeLog,v 1.1 2004/06/25 03:36:40 ribosome Exp $
+
+*prosite-18.26 (24 Jun 2004)
+
+  24 Jun 2004; Olivier Fisette <ribosome@gentoo.org>
+  prosite-18.26.ebuild, metadata.xml :
+  Initial import.  Ebuild submitted by Olivier Fisette <ribosome@gentoo.org>.
+  Reference: Gentoo Bugzilla, bug #54326
+
