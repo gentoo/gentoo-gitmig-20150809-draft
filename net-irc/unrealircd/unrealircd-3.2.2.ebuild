@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.1-r1.ebuild,v 1.6 2004/12/05 03:08:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.2.ebuild,v 1.1 2004/12/05 03:08:23 swegener Exp $
 
 inherit eutils ssl-cert
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.gower.net/unrealircd/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="hub ipv6 ssl zlib"
 
 RDEPEND="ssl? ( dev-libs/openssl )
@@ -121,8 +121,5 @@ pkg_postinst() {
 	einfo "   /usr/share/doc/${PF}/ircdchk.gz"
 	einfo
 	einfo "You can also use /etc/init.d/unrealircd to start at boot"
-	einfo
-	einfo "With this revision the hub support in UnrealIRCd is optional."
-	einfo "Set USE=\"hub\" if you need it."
 	einfo
 }
