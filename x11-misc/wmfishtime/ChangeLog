@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/wmfishtime
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmfishtime/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmfishtime/ChangeLog,v 1.2 2002/06/07 18:34:57 blackmore Exp $
+
+*wmfishtime-1.23-r2 (7 Jun 2002)
+
+  7 Jun 2002; J. Perrot <blackmore@gentoo.org> :
+
+  Correction of the sed substitution in the ebuild file
 
 *wmfishtime-1.23-r1 (1 Feb 2002)
 
