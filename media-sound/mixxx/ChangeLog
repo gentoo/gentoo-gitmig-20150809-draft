@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.14 2003/12/29 16:39:07 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.15 2004/01/28 04:30:19 raker Exp $
+
+*mixxx-1.2.1 (27 Jan 2004)
+
+  27 Jan 2004; Nick Hadaway <raker@gentoo.org> mixxx-1.2.1.ebuild:
+  Version bump.  Some ebuild changes contributed by Mike Verdone on bug
+  #28548.  Added some of my own changes as well.
 
 *mixxx-1.1-r1 (29 Dec 2003)
 
