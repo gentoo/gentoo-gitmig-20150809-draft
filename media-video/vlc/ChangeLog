@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.55 2004/08/10 17:04:43 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.56 2004/08/19 22:17:08 chriswhite Exp $
+
+  20 Aug 2004; Chris White <chriswhite@gentoo.org> vlc-0.7.2-r1.ebuild:
+  Fixed LIVE version.
 
 *vlc-0.7.2-r1 (10 Aug 2004)
 
