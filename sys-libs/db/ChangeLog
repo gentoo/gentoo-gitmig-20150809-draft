@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.74 2003/12/21 16:50:51 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.75 2003/12/22 11:20:31 pauldv Exp $
+
+*db-4.2.52_p1 (22 Dec 2003)
+
+  22 Dec 2003; <paul@gentoo.org> db-4.2.52_p1.ebuild,
+  files/db-4.2-jarlocation.patch:
+  New upstream version. It is for now still masked for testing. There should be
+  no problems though.
 
   21 Dec 2003; Brad House <brad_mssw@gentoo.org> db-4.1.25_p1-r3.ebuild:
   mark stable on amd64
