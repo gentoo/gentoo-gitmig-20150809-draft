@@ -1,6 +1,6 @@
 MD5 0bbba13bf65f4b5ffddbe74265a7184c ChangeLog 826
 MD5 82273a50c2a86005ee75d0e5aab34ffc exiftags-0.97.ebuild 608
-MD5 ff3568c1421561b886447f251e0fd7c4 exiftags-0.99.1.ebuild 622
+MD5 fd42d32cf54625afd1705439eee431e9 exiftags-0.99.1.ebuild 629
 MD5 4394578b73ca26cc2d724704f536bf7c metadata.xml 223
 MD5 c3395bd33944cc769dc040ae12146fb2 files/digest-exiftags-0.97 64
 MD5 740013c9c097d469094b0ee9b33f7ef3 files/digest-exiftags-0.99.1 66
