@@ -1,6 +1,9 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.53 2004/06/06 17:15:43 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.54 2004/06/20 01:49:58 khai Exp $
+
+  19 Jun 2004; Yi Qiang <khai@gentoo.org> :
+  Version bump, fixes compilation with latest mozilla trunks
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> :
   Marked stable on amd64.
