@@ -1,10 +1,15 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.36 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.37 2002/12/17 09:13:07 cretin Exp $
 
   10 Dec 2002; foser <foser@gentoo.org> evolution-1.0.7.ebuild evolution-1.0.8-r2.ebuild evolution-1.2.0.ebuild evolution-1.2.0-r1.ebuild :
   Fixed gob deps (bug #11633)
- 
+
+*evolution-1.2.1 (17 Dec 2002) 
+
+  17 Dec 2002; Stefan Jones <cretin@gentoo.org> :
+  New version, removed old patches and updated deps.
+  
 *evolution-1.2.0-r1 (09 Dec 2002)
 
   09 Dec 2002; Martin Schlemmer <azarah@gentoo.org> evolution-1.2.0-r1.ebuild :
