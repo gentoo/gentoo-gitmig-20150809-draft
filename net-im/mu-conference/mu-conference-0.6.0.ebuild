@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0.ebuild,v 1.2 2004/01/24 02:26:08 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.6.0.ebuild,v 1.3 2004/01/29 23:54:49 humpback Exp $
 
 DESCRIPTION="Jabber Multi-User Chat"
 HOMEPAGE="http://mu-conference.jabberstudio.org/"
@@ -25,7 +25,7 @@ src_compile() {
 
 src_install() {
 	dodir /etc/jabber /usr/lib/jabberd /var/log/jabber/conference
-	touch ${D}/var/log/jabber/conference/.keep
+	keepdir ${D}/var/log/jabber/conference/
 
 	insinto /usr/lib/jabberd
 	doins src/mu-conference.so
