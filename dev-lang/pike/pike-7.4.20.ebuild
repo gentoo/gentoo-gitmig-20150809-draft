@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Emil Sköldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.13 2003/10/04 09:10:21 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.14 2003/10/09 18:09:35 scandium Exp $
 
 inherit flag-o-matic
 
@@ -34,7 +34,8 @@ src_compile() {
 	# We have to use --disable-make_conf to override make.conf settings
 	# Otherwise it may set -fomit-frame-pointer again
 	# disable ffmpeg support because it does not compile
-	emake CONFIGUREARGS="${myconf} --prefix=/usr --disable-make_conf --without-ffmpeg" || die
+	# disable dvb support because it does not compile
+	emake CONFIGUREARGS="${myconf} --prefix=/usr --disable-make_conf --without-ffmpeg --without-dvb" || die
 
 	# only build documentation if 'doc' is in USE
 	if use doc; then
