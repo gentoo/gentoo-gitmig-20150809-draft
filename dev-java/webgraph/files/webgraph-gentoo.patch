@@ -1,0 +1,38 @@
+diff -uprN webgraph-1.4.old/build.xml webgraph-1.4/build.xml
+--- webgraph-1.4.old/build.xml	2004-11-25 22:09:18.924727128 +0100
++++ webgraph-1.4/build.xml	2004-11-25 22:31:37.224274672 +0100
+@@ -15,6 +15,14 @@
+   <property name="jal.apiurl"
+     value="http://vigna.dsi.unimi.it/jal/docs/"/>
+ 
++  <path id="compile.classpath">
++	<pathelement location="lib/jal.jar" />
++	<pathelement location="lib/colt.jar" />
++	<pathelement location="lib/fastutil.jar" />
++	<pathelement location="lib/gnu.getopt.jar" />
++	<pathelement location="lib/mg4j.jar" />
++  </path>
++
+   <target name="init">
+     <mkdir dir="${build}"/>
+   </target>
+@@ -25,7 +33,10 @@
+ 	optimize="on"
+         destdir="${build}"
+ 	source="1.4"
+-    />
++	target="1.4">
++    
++	<classpath refid="compile.classpath" />
++</javac>
+   </target>
+ 
+   <target name="jar" depends="compile">
+@@ -48,6 +59,7 @@
+ 	<link href="${fastutil.apiurl}"/>
+ 	<link href="${mg4j.apiurl}"/>
+ 	<link href="${colt.apiurl}"/>
++	<classpath refid="compile.classpath" />
+     </javadoc>
+   </target>
+ 

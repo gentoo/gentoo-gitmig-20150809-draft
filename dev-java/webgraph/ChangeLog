@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/webgraph
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/webgraph/ChangeLog,v 1.5 2004/12/04 13:53:41 karltk Exp $
+
+*webgraph-1.4 (04 Dec 2004)
+
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> webgraph-1.4.ebuild:
+  Initial import. Ebuild submitted by Jan Brinkmann <luck@the-luckyduck.de>.
