@@ -1,13 +1,14 @@
 # ChangeLog for x11-plugins/wmpower
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.6 2004/03/19 10:04:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.7 2004/06/22 19:28:26 s4t4n Exp $
 
-  19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmpower-0.3.0.ebuild:
-  Inherit eutils.
+*wmpower-0.3.1 (22 Jun 2004)
 
-  01 Nov 2003; Markus Nigbur <pyrania@gentoo.org> wmpower-0.3.0.ebuild,
-  files/cflags.patch:
-  'Fixed' cflags determination. Thanks to Brandy for the notice.
+  22 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> wmpower-0.3.1.ebuild:
+  Version Bump. Closes #45076.
+  The cflags.patch is no longer needed as the problem was fixed upstream.
+  wmpower-0.1.3.ebuild, wmpower-0.1.2.ebuild:
+  Fix the Copyright headers to make repoman happy
 
 *wmpower-0.3.0 (22 Oct 2003)
 
