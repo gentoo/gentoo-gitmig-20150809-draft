@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.0-r3.ebuild,v 1.2 2002/07/06 23:59:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.0-r3.ebuild,v 1.3 2002/07/07 23:58:00 spider Exp $
 
 inherit gnome2
 
@@ -33,9 +33,11 @@ kill_gconf () {
 	then
 		/usr/bin/gconftool-1 --shutdown
 	fi
+
+	# and for gconf 2
 	if [ -x /usr/bin/gconftool-2 ]
 	then
-		/usr/bin/gconftool-1 --shutdown
+		/usr/bin/gconftool-2 --shutdown
 	fi
 }
 
