@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.66 2004/03/11 01:29:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.67 2004/03/23 09:21:23 kumba Exp $
+
+  23 Mar 2004; Joshua Kinard <kumba@gentoo.org> openldap-2.1.27.ebuild:
+  Marked stable on mips.
 
   10 Mar 2004; Jason Wever <weeve@gentoo.org> openldap-2.1.26.ebuild:
   Stable on sparc.
@@ -22,9 +25,6 @@
   for bug #31202 (also fixes a weird problem case).
 
   27 Feb 2004; Joshua Kinard <kumba@gentoo.org> openldap-2.1.26.ebuild:
-  Added ~mips to KEYWORDS to satisfy repoman deps.
-
-  26 Feb 2004; Joshua Kinard <kumba@gentoo.org> openldap-2.1.26.ebuild:
   Added ~mips to KEYWORDS to satisfy repoman deps.
 
   15 Feb 2004; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.26.ebuild:
