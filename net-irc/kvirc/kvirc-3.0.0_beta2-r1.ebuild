@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2-r1.ebuild,v 1.5 2004/01/04 02:37:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_beta2-r1.ebuild,v 1.6 2004/04/16 13:54:52 caleb Exp $
 
-inherit kde-base
+inherit kde
 
 MYP=${P//_/-}
 MYPV=${PV//_/-}
@@ -22,7 +22,7 @@ DEPEND="esd? ( media-sound/esound )
 	>=x11-libs/qt-3
 	kde? ( >=kde-base/kdelibs-3 )"
 
-[ `use debug` ]		&& myconf="$myconf --with-debug-symbols"
+use debug		&& myconf="$myconf --with-debug-symbols"
 
 #disabling as the assembly is less than stable
 #[ "$ARCH" == "x86" ]	&& myconf="$myconf --with-ix86-asm"
@@ -57,7 +57,7 @@ src_compile() {
 	use kde || export KDEDIR=""
 
 	need-automake 1.5
-	need-autoconf 2.5
+#	need-autoconf 2.5
 
 	kde_src_compile configure make
 }
