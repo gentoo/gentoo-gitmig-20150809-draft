@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.4.ebuild,v 1.1 2004/06/17 12:38:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.4.ebuild,v 1.2 2004/06/17 15:31:37 carlo Exp $
 
 inherit python kde
 
 IUSE="doc java python ruby"
 DESCRIPTION="KDevelop is an easy to use C/C++ IDE for Unix. It supports KDE/Qt, GNOME, plain C and C++ projects."
-SRC_URI="mirror://kde/stable/3.2.2/src/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/3.2.3/src/${P}.tar.bz2"
 HOMEPAGE="http://www.kdevelop.org"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc ~amd64"
