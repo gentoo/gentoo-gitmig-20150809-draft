@@ -1,3 +1,5 @@
 MD5 85af0bedebbe850ff57b363b86998887 testdisk-5.2.ebuild 845
-MD5 fc1919b2cc2d8e0fc22af1f0306653be ChangeLog 404
+MD5 240c8672d578ccf759533f1bf1495073 testdisk-5.3.ebuild 844
+MD5 c2891a1030b48afd40325968d904972b ChangeLog 535
 MD5 c20ec4c0b429ad420cd79fa49b334e24 files/digest-testdisk-5.2 64
+MD5 ae3fa6940aea5b018c3377fbcdae2981 files/digest-testdisk-5.3 64
