@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libyahoo2/libyahoo2-0.7.4.ebuild,v 1.1 2004/02/05 03:13:52 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libyahoo2/libyahoo2-0.7.4.ebuild,v 1.2 2004/06/24 23:15:44 agriffis Exp $
 
 DESCRIPTION="libyahoo2 is an interface to the new Yahoo! Messenger protocol."
 HOMEPAGE="http://libyahoo2.sourceforge.net/"

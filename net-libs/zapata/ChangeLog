@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/zapata
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zapata/ChangeLog,v 1.6 2004/05/10 01:27:19 stkn Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zapata/ChangeLog,v 1.7 2004/06/24 23:18:47 agriffis Exp $
 
 *zapata-0.9.1 (10 May 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-174-r2.ebuild,v 1.12 2004/01/30 06:55:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-174-r2.ebuild,v 1.13 2004/06/24 23:16:38 agriffis Exp $
 
 inherit fixheadtails
 S=${WORKDIR}/${P}

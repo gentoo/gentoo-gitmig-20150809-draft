@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.1.ebuild,v 1.5 2004/03/05 13:54:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.1.ebuild,v 1.6 2004/06/24 23:13:27 agriffis Exp $
 
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
 HOMEPAGE="http://www.packetfactory.net/libnet/"

@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/c-client
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.15 2004/04/16 20:25:06 randy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.16 2004/06/24 23:10:47 agriffis Exp $
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> c-client-2002e-r2.ebuild:
   adding s390 keywords

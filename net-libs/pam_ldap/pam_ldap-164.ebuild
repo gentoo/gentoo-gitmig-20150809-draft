@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/pam_ldap-164.ebuild,v 1.2 2004/02/08 21:00:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/pam_ldap-164.ebuild,v 1.3 2004/06/24 23:17:31 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PAM LDAP Module"

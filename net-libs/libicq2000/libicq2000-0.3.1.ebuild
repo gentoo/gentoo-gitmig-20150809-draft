@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/libicq2000-0.3.1.ebuild,v 1.8 2003/02/13 14:19:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/libicq2000-0.3.1.ebuild,v 1.9 2004/06/24 23:12:53 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ICQ 200x compatible ICQ libraries."

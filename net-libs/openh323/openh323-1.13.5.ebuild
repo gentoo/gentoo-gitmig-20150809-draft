@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.4 2004/06/10 20:22:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.5 2004/06/24 23:16:49 agriffis Exp $
 
 IUSE="ssl"
 

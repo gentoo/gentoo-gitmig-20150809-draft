@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/openhbci-0.9.14.ebuild,v 1.5 2004/06/07 01:08:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/openhbci-0.9.14.ebuild,v 1.6 2004/06/24 23:17:00 agriffis Exp $
 
 DESCRIPTION="Implementation of the HBCI protocol used by some banks"
 HOMEPAGE="http://openhbci.sourceforge.net/"

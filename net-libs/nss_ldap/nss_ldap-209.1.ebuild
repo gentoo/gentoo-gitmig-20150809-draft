@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-209.1.ebuild,v 1.5 2004/01/30 06:55:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-209.1.ebuild,v 1.6 2004/06/24 23:16:38 agriffis Exp $
 
 inherit fixheadtails
 IUSE="berkdb debug ssl"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/vanessa-socket-0.0.5_beta4.ebuild,v 1.3 2004/03/19 10:05:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/vanessa-socket-0.0.5_beta4.ebuild,v 1.4 2004/06/24 23:18:26 agriffis Exp $
 
 DESCRIPTION="Simplifies TCP/IP socket operations."
 HOMEPAGE="http://www.vergenet.net/linux/vanessa/"

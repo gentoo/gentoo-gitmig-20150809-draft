@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/libnids
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.10 2003/11/10 16:28:29 solar Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.11 2004/06/24 23:13:37 agriffis Exp $
 
   10 Nov 2003; <solar@gentoo.org> libnids-1.18.ebuild:
   bumping to stable on x86

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libident/libident-0.22.ebuild,v 1.6 2004/04/16 23:30:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libident/libident-0.22.ebuild,v 1.7 2004/06/24 23:13:04 agriffis Exp $
 
 DESCRIPTION="A small library to interface to the Ident protocol server"
 HOMEPAGE="ftp://ftp.lysator.liu.se/pub/ident/libs"

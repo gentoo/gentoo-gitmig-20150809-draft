@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci-plugin-ddvcard/openhbci-plugin-ddvcard-0.3-r1.ebuild,v 1.2 2003/10/16 14:56:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci-plugin-ddvcard/openhbci-plugin-ddvcard-0.3-r1.ebuild,v 1.3 2004/06/24 23:17:11 agriffis Exp $
 
 DESCRIPTION="Plugin to use DDV cards with openhbci."
 HOMEPAGE="http://openhbci.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.0.9a.ebuild,v 1.6 2004/03/21 09:31:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.0.9a.ebuild,v 1.7 2004/06/24 23:17:21 agriffis Exp $
 
 DESCRIPTION="An open-source implementation of Service Location Protocol"
 HOMEPAGE="http://www.openslp.org"
