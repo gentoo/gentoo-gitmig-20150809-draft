@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.112 2004/11/25 11:46:16 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.113 2004/11/30 09:13:38 obz Exp $
+
+*nautilus-2.8.2-r1 (30 Nov 2004)
+
+  30 Nov 2004; Mike Gardiner <obz@gentoo.org>
+  +files/nautilus-2-nocdda.patch, +nautilus-2.8.2-r1.ebuild:
+  Added patch from bug #72294 to disable the hidden cdparanoia linking
 
 *nautilus-2.8.2 (25 Nov 2004)
 

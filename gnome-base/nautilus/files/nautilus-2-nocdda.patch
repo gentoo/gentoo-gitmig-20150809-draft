@@ -1,0 +1,20 @@
+diff -ur nautilus-2.8.2/configure.in nautilus-2.8.2-nocdda/configure.in
+--- nautilus-2.8.2/configure.in	2004-10-28 23:06:04.000000000 +0800
++++ nautilus-2.8.2-nocdda/configure.in	2004-11-30 17:00:50.569384976 +0800
+@@ -191,16 +191,6 @@
+ 
+ dnl ==========================================================================
+ 
+-dnl cdda
+-
+-AM_CONDITIONAL(HAVE_CDDA, false)
+-AC_CHECK_HEADERS(cdda_interface.h cdda_paranoia.h, [
+-	CDDA_LIBS="-lcdda_paranoia -lcdda_interface"
+-	AM_CONDITIONAL(HAVE_CDDA, true)
+-	])
+-
+-dnl ==========================================================================
+-
+ dnl jw (for doc build)
+ 
+ AC_PATH_PROG(JW,jw,no)
