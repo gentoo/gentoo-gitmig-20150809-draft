@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/ranpwd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.1 2005/02/26 00:32:45 dragonheart Exp $
+
+*ranpwd-1.1 (26 Feb 2005)
+
+  26 Feb 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +ranpwd-1.1.ebuild:
+  Initial import as per bug #82113 thanks to Florian Fainelli
+  <florian@alphacore.net>
+
