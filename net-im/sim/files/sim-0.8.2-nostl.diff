@@ -1,0 +1,24 @@
+diff -urN sim-0.8.orig/sim/msgedit.cpp sim-0.8/sim/msgedit.cpp
+--- sim/msgedit.cpp	2002-10-20 03:06:15.000000000 +0200
++++ sim/msgedit.cpp	2002-12-05 19:34:23.000000000 +0200
+@@ -15,6 +15,8 @@
+  *                                                                         *
+  ***************************************************************************/
+ 
++#define QT_NO_STL
++
+ #include "msgedit.h"
+ #include "msgview.h"
+ #include "editspell.h"
+diff -urN sim-0.8.orig/sim/parse.ll sim-0.8/sim/parse.ll
+--- sim/parse.ll	2002-10-20 01:20:35.000000000 +0200
++++ sim/parse.ll	2002-12-05 19:34:08.000000000 +0200
+@@ -16,6 +16,8 @@
+  *                                                                         *
+  ***************************************************************************/
+ 
++#define QT_NO_STL
++
+ #include "mainwin.h"
+ #include "client.h"
+ #include <stack>

@@ -1,6 +1,11 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.8 2003/04/05 22:26:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.9 2003/05/20 06:20:49 aliz Exp $
+
+*sim-0.8.2 (20 May 2003)
+
+  20 May 2003; Daniel Ahlberg <aliz@gentoo.org> sim-0.8.2.ebuild :
+  Version bump.
 
 *sim-0.8.1 (19 Dec 2002)
 
