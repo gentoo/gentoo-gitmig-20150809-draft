@@ -1,0 +1,62 @@
+===================================================================
+RCS file: /cvsroot/partysip/cvsroot/partysip/partysip/ppl/unix/ppldso.c,v
+retrieving revision 1.7
+retrieving revision 1.8
+diff -u -r1.7 -r1.8
+--- partysip/partysip/ppl/unix/ppldso.c	2003/05/14 15:40:14	1.7
++++ partysip/partysip/ppl/unix/ppldso.c	2004/02/13 18:50:24	1.8
+@@ -80,6 +80,7 @@
+  */
+ 
+ #include <ppl/ppl_dso.h>
++#include <osipparser2/osip_port.h>
+ 
+ #if !defined(DSO_USE_DLFCN) && !defined(DSO_USE_SHL) && !defined(DSO_USE_DYLD)
+ #error No DSO implementation specified.
+@@ -94,9 +95,6 @@
+ #if HAVE_STRING_H
+ #include <string.h>		/* for strerror() on HP-UX */
+ #endif
+-
+-void *osip_malloc (int len);
+-void osip_free (void *);
+ 
+ ppl_status_t
+ ppl_dso_unload (ppl_dso_handle_t * thedso)
+===================================================================
+RCS file: /cvsroot/partysip/cvsroot/partysip/partysip/ppl/unix/pplgetopt.c,v
+retrieving revision 1.7
+retrieving revision 1.8
+diff -u -r1.7 -r1.8
+--- partysip/partysip/ppl/unix/pplgetopt.c	2003/05/14 15:40:14	1.7
++++ partysip/partysip/ppl/unix/pplgetopt.c	2004/02/13 18:50:24	1.8
+@@ -53,9 +53,7 @@
+  */
+ 
+ #include <ppl/ppl_getopt.h>
+-
+-void *osip_malloc (int size);
+-void osip_free (void *);
++#include <osipparser2/osip_port.h>
+ 
+ #define EMSG    ""
+  
+ /* This is a modified version from Aymeric MOIZARD
+===================================================================
+RCS file: /cvsroot/partysip/cvsroot/partysip/partysip/ppl/unix/pplpipe.c,v
+retrieving revision 1.8
+retrieving revision 1.9
+diff -u -r1.8 -r1.9
+--- partysip/partysip/ppl/unix/pplpipe.c	2004/01/30 23:44:45	1.8
++++ partysip/partysip/ppl/unix/pplpipe.c	2004/02/13 18:50:24	1.9
+@@ -20,9 +20,8 @@
+ 
+ 
+ #include <ppl/ppl_pipe.h>
++#include <osipparser2/osip_port.h>
+ 
+-void *osip_malloc (int size);
+-void osip_free (void *);
+ 
+ PPL_DECLARE (ppl_pipe_t *) ppl_pipe ()
+ {

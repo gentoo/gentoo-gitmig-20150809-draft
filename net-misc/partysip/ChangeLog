@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/partysip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.5 2004/09/21 19:46:44 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.6 2004/09/21 20:20:38 stkn Exp $
+
+  21 Sep 2004; <stkn@gentoo.org> +files/partysip-2.1.1-libosip2fix.diff,
+  partysip-2.1.1.ebuild:
+  found a fix in the partysip cvs, works with >=libosip-2.0.7 and previous
+  versions
 
   21 Sep 2004; <stkn@gentoo.org> partysip-2.1.1.ebuild:
   partysip won't compile with >=libosip-2.0.7, changing dependency to
