@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a116d84ae8566d6c9862cd069b9b0fa ChangeLog 2091
+MD5 ac27ccc5c6a96aadf2efa37f427f5a9b ChangeLog 2177
 MD5 74ccd316ff23f741b5b714809029d1d3 djvu-3.5.12.ebuild 1049
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 2f77465e4f71702f06d70f7e88d8002f djvu-3.5.14.ebuild 1113
+MD5 1e2a75a87af2c167f671ecccdf702ec1 djvu-3.5.14.ebuild 1112
 MD5 376a63d9cbc58a7737d37680734f0ee0 files/digest-djvu-3.5.12 69
 MD5 4a5cc41ce600d15a29fd720f279aaaf1 files/digest-djvu-3.5.14 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaFHdVWNWqTUmv+0RApbaAKCfs94u2jB0FTWH4qXzB1TxgoAwOQCgiVGJ
-5Isw+cxLli43dqcuhlBG2vA=
-=OomN
------END PGP SIGNATURE-----
