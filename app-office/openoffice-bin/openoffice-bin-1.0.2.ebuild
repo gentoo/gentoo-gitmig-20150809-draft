@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.5 2003/01/29 17:10:12 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.6 2003/02/10 19:56:47 sethbc Exp $
 
 IUSE="kde gnome"
 
@@ -86,6 +86,10 @@ src_install() {
 	export maketype="./setup"
 	# We need X to install...
 	virtualmake "-v -r:${T}/autoresponse"
+
+	#fix the libstdc++.so symlink
+	cd ${D}/${INSTDIR}/program
+	ln -sf libstdc++.so.3 libstdc++
 
 	echo
 	einfo "Removing build root from registry..."
