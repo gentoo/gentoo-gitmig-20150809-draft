@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.148 2004/10/11 08:46:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.149 2004/10/11 09:14:03 spyderous Exp $
+
+  11 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r1.ebuild:
+  PATCH_VER 0.2.2. Update 9001_all_4.3.0-lnx-evdev-keyboard-v2.patch to restore
+  case insensitivity of Option "Protocol" "Standard" for keyboard by Alan
+  Swanson <swanson@ukfsn.org> (#63568). FILES_VER 0.3. Fix xfs lockup so it's
+  usable again (#61737). Also, fix xdm init script for empty DISPLAYMANAGER in
+  /etc/rc.conf (#65586).
 
   11 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
