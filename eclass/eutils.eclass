@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.66 2003/11/15 21:48:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.67 2003/11/18 18:45:04 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -531,7 +531,7 @@ enewuser() {
 
 	# handle shell
 	local eshell="$1"; shift
-	if [ ! -z "${eshell}" ]
+	if [ ! -z "${eshell}" ] && [ "${eshell}" != "-1" ]
 	then
 		if [ ! -e "${eshell}" ]
 		then
@@ -546,7 +546,7 @@ enewuser() {
 
 	# handle homedir
 	local ehome="$1"; shift
-	if [ -z "${ehome}" ]
+	if [ -z "${ehome}" ] && [ "${eshell}" != "-1" ]
 	then
 		ehome="/dev/null"
 	fi
