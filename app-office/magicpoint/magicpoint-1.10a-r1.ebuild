@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.9 2005/02/05 21:43:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.10a-r1.ebuild,v 1.10 2005/03/18 14:04:17 usata Exp $
 
 inherit elisp-common eutils
 
@@ -31,6 +31,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# bug #85720
+	sed -i -e "s/ungif/gif/g" configure* || die
+
 	econf \
 		`use_enable gif` \
 		`use_enable imlib` \

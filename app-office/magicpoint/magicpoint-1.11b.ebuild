@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.6 2005/02/05 21:43:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.11b.ebuild,v 1.7 2005/03/18 14:04:17 usata Exp $
 
 inherit elisp-common eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 alpha sparc ppc ~amd64"
 IUSE="cjk nls m17n-lib emacs truetype gif imlib"
 
 DEPEND="virtual/x11
-	gif? ( >=media-libs/libungif-4.0.1 )
+	gif? ( >=media-libs/giflib-4.0.1 )
 	imlib? ( media-libs/imlib )
 	truetype? ( virtual/xft )
 	emacs? ( virtual/emacs )
@@ -42,6 +42,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# bug #85720
+	sed -i -e "s/ungif/gif/g" configure* || die
+
 	econf \
 		$(use_enable gif) \
 		$(use_enable imlib) \
