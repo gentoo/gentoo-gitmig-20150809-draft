@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a0510e05005ef3d8d628b656c9c8ce6b ChangeLog 1060
+MD5 b87079d523cd9bbe3e7975de6bf7fac0 ChangeLog 1157
+MD5 c74cc7121c8f04677cba6bd63f0c4784 jump-0.4.1-r1.ebuild 898
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 66abf55bfba2c9531d003be516e11f3b jump-0.4.1-r1.ebuild 887
 MD5 8639e23fcf927f50dce51882c08403a1 files/digest-jump-0.4.1-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVoD/rLF9B432nYRAhfiAKCI8tKvgLC+bvHRYiCwHhZP54996wCfc+iH
-kRNMiCI3RqIwIIonLllxb2o=
-=4aRy
------END PGP SIGNATURE-----
