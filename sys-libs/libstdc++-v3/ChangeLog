@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.10 2004/07/13 14:02:20 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.11 2004/07/15 21:49:59 lv Exp $
+
+  15 Jul 2004; Travis Tilley <lv@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
+  added -fstack-protector and a few others to the list of filtered flags
 
   13 Jul 2004; Travis Tilley <lv@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
   filter some gcc 3.4 flags that the gcc 3.3.3 xgcc will fail on
