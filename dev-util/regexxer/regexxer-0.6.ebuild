@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.6.ebuild,v 1.1 2004/01/25 14:00:29 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.6.ebuild,v 1.2 2004/04/11 14:54:20 pyrania Exp $
 
 DESCRIPTION="An interactive tool for performing search and replace operations"
 HOMEPAGE="http://regexxer.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/regexxer/${P}.tar.gz"
 LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=x11-libs/gtk+-2.2
 	>=dev-libs/glib-2
