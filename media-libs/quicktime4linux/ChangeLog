@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/quicktime4linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.15 2003/08/06 13:14:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.16 2003/09/03 03:39:53 vapier Exp $
+
+*quicktime4linux-2.0.0 (02 Sep 2003)
+
+  02 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *quicktime4linux-1.6.2 (26 Jul 2003)
 
