@@ -14,7 +14,7 @@ HOMEPAGE="http://divx.euro.ru/"
 DEPEND="media-libs/win32codecs
 	>=media-libs/libsdl-1.2.2
 	>=media-libs/divx4linux-20011025
-	qt? ( >=x11-libs/qt-2.2.2 )
+	qt? ( >=x11-libs/qt-2 )
 	nas? ( >=media-libs/nas-1.4.2 )"
 
 src_compile() {
@@ -28,9 +28,10 @@ src_compile() {
 	LDFLAGS="-L/usr/X11R6/lib -lXt"
     fi
     export CFLAGS=${CFLAGS/-O?/-O2}
+    LDFLAGS="$LDFLAGS -L/usr/kde/2/lib"
     export LDFLAGS
     ./configure --prefix=/usr --host=${CHOST} \
-	--enable-quiet --disable-tsc $myconf || die
+	--enable-quiet --disable-tsc --with-extra-libraries=/usr/kde/2 $myconf || die
 #    cp Makefile Makefile.orig
 #    sed -e "s:/usr/lib/win32:${D}/usr/lib/win32:" \
 #	Makefile.orig > Makefile
