@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.594 2004/09/03 18:44:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.595 2004/09/03 20:54:03 axxo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -209,7 +209,6 @@ dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/monodevelop:nptl - Enable or disable nptl support (mainly for mono-debugger)
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
-drivers
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
