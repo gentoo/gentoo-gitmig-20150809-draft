@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5.ebuild,v 1.4 2004/02/15 22:15:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5-r1.ebuild,v 1.1 2004/02/15 22:15:19 foser Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,16 +8,25 @@ SPV="`echo ${PV} | cut -d. -f1,2`"
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
-SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
-	doc? ( mirror://sourceforge/${PN}/ftdocs-${PV}.tar.bz2 )"
+SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2"
 
 SLOT="2"
 LICENSE="FTL | GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~arm ~ia64 ~amd64 ppc64"
-IUSE="zlib bindist"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~ia64 ~amd64 ~ppc64"
+IUSE="zlib bindist cjk"
 
 DEPEND="virtual/glibc
 	zlib? ( sys-libs/zlib )"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# add autohint patch from http://www.kde.gr.jp/~akito/patch/freetype2/2.1.5/
+	use cjk && epatch ${FILESDIR}/${SPV}/${P}-autohint-cjkfonts-20031105.patch
+
+}
 
 src_compile() {
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.38 2003/11/29 22:00:27 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.39 2004/02/15 22:15:19 foser Exp $
+
+*freetype-2.1.5-r1 (15 Feb 2004)
+
+  15 Feb 2004; foser <foser@gentoo.org> freetype-2.1.5-r1.ebuild :
+  Add cjk USE ing autohint patch requested in #31347 & #36068
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> freetype-2.1.5.ebuild:
   add ~amd64 flag
