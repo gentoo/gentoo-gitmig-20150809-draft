@@ -2,6 +2,14 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/dev-libs/tinyqt/ChangeLog,v 1.1 2002/03/26 10:52:11 gbevin Exp
 
+*tinyq-3.0.5 (16 Jul 2002)
+  
+  16 Jul 2002; FA.Meyndert <m0rpheus@gentoo.org> : tinyq-3.0.5.ebuild,
+  tinyq-3.0.4.ebuild,files/digest-tinyq-3.0.5
+   
+  Added new version 3.0.5 and fixed missing lisence and keyword for
+  3.0.4 and 3.0.5
+
 *tinyq-3.0.4 (30 May 2002)
 
   26 Mar 2002; G.Bevin <gbevin@uwyn.com> : tinyq-3.0.4.ebuild,
