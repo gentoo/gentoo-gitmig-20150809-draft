@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r1.ebuild,v 1.4 2002/10/20 18:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r1.ebuild,v 1.5 2002/11/04 20:10:26 tantive Exp $
 
 S=${WORKDIR}/omtest
 DESCRIPTION="openMosix stress test"
@@ -10,7 +10,7 @@ IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.6.9g
 	>=sys-devel/perl-5.6.1
-	>=sys-apps/openmosix-user-0.2.4
+	>=sys-cluster/openmosix-user-0.2.4
 	>=sys-kernel/openmosix-sources-2.4.18"
 
 SLOT="0"
