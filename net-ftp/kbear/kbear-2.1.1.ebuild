@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/kbear-2.1.1.ebuild,v 1.4 2004/06/24 22:46:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/kbear-2.1.1.ebuild,v 1.5 2004/07/14 14:43:59 lv Exp $
 
-inherit kde
+inherit kde flag-o-matic eutils
 
 DESCRIPTION="A KDE 3.x FTP Manager"
 SRC_URI="mirror://sourceforge/kbear/${P}-1.src.tar.bz2"
@@ -12,7 +12,15 @@ SLOT="0"
 IUSE=""
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ~ppc sparc ~amd64"
 S=${WORKDIR}/kbear-2.1
 
 need-kde 3
+
+src_unpack() {
+	use amd64 && append-flags -fPIC
+	kde_src_unpack
+	cd ${S}
+	epatch ${FILESDIR}/kbear-2.1.1-gcc-3.4.patch
+}
+
