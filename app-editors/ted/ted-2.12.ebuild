@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12.ebuild,v 1.2 2003/02/13 06:59:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12.ebuild,v 1.3 2003/02/28 23:11:40 vapier Exp $
 
-DESCRIPTION="ted is an X-based rich text editor."
+DESCRIPTION="X-based rich text editor."
 HOMEPAGE="http://www.nllgg.nl/Ted"
 SRC_URI="ftp://ftp.nluug.nl/pub/editors/ted/${P}.src.tar.gz"
 
@@ -26,13 +26,9 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S} || die "where are we? `pwd`"
-
 	for dir in Ted tedPackage appFrame appUtil ind bitmap libreg; do
-		( 
-		cd ${dir}
+		cd ${S}/${dir}
 		econf --cache-file=../config.cache
-		)
 	done
 
 	# The makefile doesn't really allow parallel make, but it does
@@ -63,4 +59,3 @@ src_install() {
 
 	rm -rf ${T}
 }
-
