@@ -1,7 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.12.2.6.6.ebuild,v 1.1 2000/08/16 17:16:16 achim Exp $
+# $Header: 
+/home/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.12.2.6.6.ebuild,v 
+1.1 2000/08/16 17:16:16 achim Exp $
 
 P=apache-ssl-1.3.12-2.6.6
 A="apache_1.3.12.tar.gz mod_ssl-2.6.6-1.3.12.tar.gz"
@@ -45,7 +47,7 @@ src_install() {
 
 pkg_config() {
 
-  source ${ROOT}/var/lib/packages/install.config
+  source ${ROOT}/var/db/pkg/install.config
 
   # Make apache start at boot
   ${ROOT}/usr/sbin/rc-update add httpd
@@ -57,5 +59,6 @@ pkg_config() {
 	${ROOT}/etc/httpd/httpd.conf.orig > ${ROOT}/etc/httpd/httpd.conf
 
 }
+
 
 

@@ -1,7 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03-r1.ebuild,v 1.2 2000/08/16 04:38:17 drobbins Exp $
+# $Header: 
+/home/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03-r1.ebuild,v 1.2 
+2000/08/16 04:38:17 drobbins Exp $
 
 P=qmail-mysql-1.03
 A="qmail-1.03.tar.gz checkpassword-0.81.tar.gz"
@@ -17,12 +19,14 @@ src_compile() {
   cd ${S}
   cp Makefile Makefile.orig
   sed -e "s:MYSQL_LIBS=.*:MYSQL_LIBS=/usr/lib/mysql/libmysqlclient.a -lm:" \
-      -e "s:MYSQL_INCLUDE=.*:MYSQL_INCLUDE=-I/usr/include/mysql:" Makefile.orig > Makefile
+      -e "s:MYSQL_INCLUDE=.*:MYSQL_INCLUDE=-I/usr/include/mysql:" 
+Makefile.orig > Makefile
   make it man
   cd checkpassword-0.81
   cp Makefile Makefile.orig
   sed -e "s:MYSQL_LIBS=.*:MYSQL_LIBS=/usr/lib/mysql/libmysqlclient.a -lm:" \
-      -e "s:MYSQL_INCLUDE=.*:MYSQL_INCLUDE=-I/usr/include/mysql:" Makefile.orig > Makefile
+      -e "s:MYSQL_INCLUDE=.*:MYSQL_INCLUDE=-I/usr/include/mysql:" 
+Makefile.orig > Makefile
   make it man
 }
 
@@ -98,13 +102,15 @@ src_install() {
 
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/boot
-	for i in home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 binm3+df
+	for i in home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 
+binm3+df
 	do
 	  doins $i $i
 	done
 
 	into /usr
-	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY ${O}/files/mysqldump
+	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY 
+${O}/files/mysqldump
 	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION
 	insopts -o qmailq -g qmail -m 4711
 	insinto /var/qmail/bin
@@ -117,7 +123,8 @@ src_install() {
 	done
 	
 	insopts -o root -g qmail -m 711
-	for i in qmail-getpw qmail-local qmail-remote qmail-rspawn qmail-clean qmail-send splogger qmail-pw2u
+	for i in qmail-getpw qmail-local qmail-remote qmail-rspawn qmail-clean 
+qmail-send splogger qmail-pw2u
 	do
 	  doins $i $i
 	done
@@ -186,7 +193,7 @@ pkg_postinst() {
 
 pkg_config () {
 
-    . ${ROOT}/var/lib/packages/install.config
+    . ${ROOT}/var/db/pkg/install.config
 
 cat <<__ENDE__ > ${ROOT}/var/qmail/control/sqlserver
 server=${QmailSQLHost}
@@ -205,8 +212,10 @@ __ENDE__
 
 	if [ ! -d /var/mysql/$QmailSQLdb ] ; then
 	    mysqladmin -p$MySQLpass create $QmailSQLdb
-	    gzip -dc /usr/doc/qmail-mysql-1.03/mysqldump.gz | mysql -p$MySQLpass $QmailSQLdb 
+	    gzip -dc /usr/doc/qmail-mysql-1.03/mysqldump.gz | mysql -p$MySQLpass 
+$QmailSQLdb 
 	fi
     fi
 }
+
 

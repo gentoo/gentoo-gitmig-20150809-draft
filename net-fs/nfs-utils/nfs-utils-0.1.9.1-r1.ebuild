@@ -1,7 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.1.9.1-r1.ebuild,v 1.2 2000/08/16 04:38:14 drobbins Exp $
+# $Header: 
+/home/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.1.9.1-r1.ebuild,v 1.2 
+2000/08/16 04:38:14 drobbins Exp $
 
 P=nfs-utils-0.1.9.1
 A=${P}.tar.gz
@@ -30,7 +32,7 @@ src_install() {
 pkg_config() {
 
   . ${ROOT}/etc/rc.d/config/functions
-  . ${ROOT}/var/lib/packages/install.config
+  . ${ROOT}/var/db/pkg/install.config
 
   einfo "Generating symlinks..."
   ${ROOT}/usr/sbin/rc-update add nfsserver
@@ -44,5 +46,6 @@ pkg_config() {
 	${ROOT}/etc/exports.orig > ${ROOT}/etc/exports
   fi
 }
+
 
 
