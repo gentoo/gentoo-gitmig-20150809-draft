@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pv/ChangeLog,v 1.4 2004/08/16 03:23:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pv/ChangeLog,v 1.5 2004/10/18 22:14:11 kloeri Exp $
+
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pv-0.8.1.ebuild:
+  ~alpha keyword.
 
   15 Aug 2004; Jason Wever <weeve@gentoo.org> pv-0.8.1.ebuild:
   Added ~sparc keyword.
