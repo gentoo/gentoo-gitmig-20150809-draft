@@ -1,11 +1,22 @@
-MD5 974be18db46e52f0ca13837c8b82b372 openmotif-2.1.30-r5.ebuild 3360
-MD5 ffa109b480ab5485f7c3369004fb66ff ChangeLog 7578
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 5d90a86cb73a36c4e2b43fc967fca1e6 openmotif-2.1.30-r4.ebuild 3127
+MD5 b6822ff753f5f0b8d55cfa0774c6b718 openmotif-2.1.30-r5.ebuild 3536
+MD5 c81baba9bbe0af44b759f485466422d9 ChangeLog 7723
 MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r4 79
 MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r5 79
-MD5 7284e10e14cac30429821b824dd2f722 files/site.def 2062
 MD5 ed2738dd3cbdc87b0800fe9710092d18 files/openmotif-2.1.30-imake-ansi.patch 6554
-MD5 f586e24ce0a2b3eeea25a82c8ec1d3c4 files/openmotif-2.1.30-uil-bad_grammar_fix.diff 832
 MD5 28350d5dab901ef8cd0dc92e578e3f45 files/openmotif-2.1.30-imake-tmpdir.patch 1083
+MD5 f586e24ce0a2b3eeea25a82c8ec1d3c4 files/openmotif-2.1.30-uil-bad_grammar_fix.diff 832
+MD5 7284e10e14cac30429821b824dd2f722 files/site.def 2062
 MD5 7284e10e14cac30429821b824dd2f722 files/site.def.1 2062
+MD5 61fb956ff4bc34bc503cdb2226fd037b files/openmotif-2.1.30-darwin-netbsd.diff 16799
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBe5qYVWNWqTUmv+0RAtkGAJ97DIvkh5XJ2W2V0jusBBSPoGNcYACgsKkO
+kmbSwrUuGBvHNfEt0Ho1PBM=
+=nlZa
+-----END PGP SIGNATURE-----
