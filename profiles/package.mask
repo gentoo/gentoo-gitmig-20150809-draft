@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3672 2005/03/01 01:34:32 carpaski Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3673 2005/03/01 21:08:50 lu_zero Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Luca Barbato <lu_zero@gentoo.org> (01 Mar 2005)
+# double free and other issues
+=media-libs/flac-1.1.2
 
 # Olivier Fisette <ribosome@gentoo.org> (27 Feb 2005)
 # Requires some testing.
