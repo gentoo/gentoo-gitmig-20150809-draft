@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/plucker
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/ChangeLog,v 1.1 2004/06/21 01:14:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/ChangeLog,v 1.2 2004/06/22 02:56:05 agriffis Exp $
+
+*plucker-1.8-r1 (21 Jun 2004)
+
+  21 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/plucker-1.8-Makefile.in.patch, +plucker-1.8-r1.ebuild:
+  Fix warnings and Makefile errors. Enable building of gtk viewer and desktop if
+  USE=gtk
 
 *plucker-1.8 (20 Jun 2004)
 
