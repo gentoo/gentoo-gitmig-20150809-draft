@@ -33,6 +33,10 @@
 
 # PPC PROFILE
 
+# masked for x86 only patch present (and nothing needed in new build for ppc anyway)
+# Gerk - June 10 2002
+>=media-sound/xmms-1.2.7-r8
+
 # ebuilds installing precompiled stuff:
 
 net-www/netscape-communicator
