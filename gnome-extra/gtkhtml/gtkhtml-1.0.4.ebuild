@@ -1,10 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.4.ebuild,v 1.6 2002/12/09 11:45:16 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.4.ebuild,v 1.7 2002/12/16 01:55:15 nall Exp $
 
 IUSE="nls gnome"
 
-inherit libtool
+inherit libtool || die "I lost my inheritance"
+inherit flag-o-matic || die "I lost my inheritance"
+
+# on PPC gtkhtml gets an assertion in spell checking code with -O3
+# this is present in at least gcc-3.2. This fixes bug #11703
+if [ "${ARCH}" = "ppc" ]
+then
+	einfo "Changing optimization to -O2 for PPC"
+	replace-flags -O[3-9] -O2
+fi
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight HTML rendering/printing/editing engine."
