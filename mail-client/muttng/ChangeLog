@@ -1,0 +1,10 @@
+# ChangeLog for mail-client/muttng
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/ChangeLog,v 1.1 2005/03/17 18:46:46 agriffis Exp $
+
+*muttng-20050317 (17 Mar 2005)
+
+  17 Mar 2005; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +muttng-20050317.ebuild:
+  Add muttng, thanks to Christopher Korn #81900
+
