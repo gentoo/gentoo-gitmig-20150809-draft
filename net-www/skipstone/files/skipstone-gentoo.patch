@@ -1,6 +1,6 @@
-diff -urN skipstone-0.8.1.orig/locale/ru.po skipstone-0.8.1/locale/ru.po
---- skipstone-0.8.1.orig/locale/ru.po	Thu Mar 28 02:26:05 2002
-+++ skipstone-0.8.1/locale/ru.po	Thu Apr 18 07:06:34 2002
+diff -urN skipstone-0.8.2.old/locale/ru.po skipstone-0.8.2/locale/ru.po
+--- skipstone-0.8.2.old/locale/ru.po	Fri May 10 13:20:45 2002
++++ skipstone-0.8.2/locale/ru.po	Tue May 21 06:56:18 2002
 @@ -616,14 +616,6 @@
  msgid "Respect java script window sizing?"
  msgstr "Учитывать размеры окон ява-скриптов"
@@ -39,53 +39,17 @@ diff -urN skipstone-0.8.1.orig/locale/ru.po skipstone-0.8.1/locale/ru.po
  #: ../src/skipstone-print.c:34
  msgid "Print Error!"
  msgstr "Ошибка печати!"
-diff -urN skipstone-0.8.1.orig/locale/skipstone.pot skipstone-0.8.1/locale/skipstone.pot
---- skipstone-0.8.1.orig/locale/skipstone.pot	Thu Apr 18 07:06:41 2002
-+++ skipstone-0.8.1/locale/skipstone.pot	Thu Apr 18 07:02:30 2002
-@@ -7,7 +7,7 @@
- msgid ""
- msgstr ""
- "Project-Id-Version: PACKAGE VERSION\n"
--"POT-Creation-Date: 2002-04-18 07:06-0700\n"
-+"POT-Creation-Date: 2002-04-18 07:02-0700\n"
- "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
- "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
- "Language-Team: LANGUAGE <LL@li.org>\n"
-diff -urN skipstone-0.8.1.orig/locale/zh_TW.Big5.po skipstone-0.8.1/locale/zh_TW.Big5.po
---- skipstone-0.8.1.orig/locale/zh_TW.Big5.po	Thu Mar 28 02:26:05 2002
-+++ skipstone-0.8.1/locale/zh_TW.Big5.po	Thu Apr 18 07:06:13 2002
-@@ -1564,10 +1564,6 @@
+diff -urN skipstone-0.8.2.old/locale/zh_TW.Big5.po skipstone-0.8.2/locale/zh_TW.Big5.po
+--- skipstone-0.8.2.old/locale/zh_TW.Big5.po	Fri May 10 13:20:45 2002
++++ skipstone-0.8.2/locale/zh_TW.Big5.po	Tue May 21 06:56:35 2002
+@@ -1583,10 +1583,6 @@
  msgid "Russian (ru)"
  msgstr "╚X╩y (ru)"
  
--#: ../src/skipstone-config.c:1377
+-#: ../src/skipstone-config.c:1381
 -msgid "Scots Gaelic (gd)"
 -msgstr "д╛╝ФдУ╩\\╨╦╩y (gd)"
 -
- #: ../src/skipstone-config.c:1378
+ #: ../src/skipstone-config.c:1382
  msgid "Serbian (sr)"
  msgstr "╤К╨╦╨Ш╗х╩y (sr)"
-Binary files skipstone-0.8.1.orig/src/PromptService.o and skipstone-0.8.1/src/PromptService.o differ
-Binary files skipstone-0.8.1.orig/src/SkipStonePrompter.o and skipstone-0.8.1/src/SkipStonePrompter.o differ
-Binary files skipstone-0.8.1.orig/src/bookmarks.o and skipstone-0.8.1/src/bookmarks.o differ
-Binary files skipstone-0.8.1.orig/src/callbacks.o and skipstone-0.8.1/src/callbacks.o differ
-Binary files skipstone-0.8.1.orig/src/context.o and skipstone-0.8.1/src/context.o differ
-Binary files skipstone-0.8.1.orig/src/crash.o and skipstone-0.8.1/src/crash.o differ
-Binary files skipstone-0.8.1.orig/src/debug.o and skipstone-0.8.1/src/debug.o differ
-Binary files skipstone-0.8.1.orig/src/encoding.o and skipstone-0.8.1/src/encoding.o differ
-Binary files skipstone-0.8.1.orig/src/go.o and skipstone-0.8.1/src/go.o differ
-Binary files skipstone-0.8.1.orig/src/history.o and skipstone-0.8.1/src/history.o differ
-Binary files skipstone-0.8.1.orig/src/interface-notebook.o and skipstone-0.8.1/src/interface-notebook.o differ
-Binary files skipstone-0.8.1.orig/src/interface.o and skipstone-0.8.1/src/interface.o differ
-Binary files skipstone-0.8.1.orig/src/ipc.o and skipstone-0.8.1/src/ipc.o differ
-Binary files skipstone-0.8.1.orig/src/main.o and skipstone-0.8.1/src/main.o differ
-Binary files skipstone-0.8.1.orig/src/moz_callbacks.o and skipstone-0.8.1/src/moz_callbacks.o differ
-Binary files skipstone-0.8.1.orig/src/mozilla.o and skipstone-0.8.1/src/mozilla.o differ
-Binary files skipstone-0.8.1.orig/src/session.o and skipstone-0.8.1/src/session.o differ
-Binary files skipstone-0.8.1.orig/src/skipdownload and skipstone-0.8.1/src/skipdownload differ
-Binary files skipstone-0.8.1.orig/src/skipdownload.o and skipstone-0.8.1/src/skipdownload.o differ
-Binary files skipstone-0.8.1.orig/src/skipstone-bin and skipstone-0.8.1/src/skipstone-bin differ
-Binary files skipstone-0.8.1.orig/src/skipstone-config.o and skipstone-0.8.1/src/skipstone-config.o differ
-Binary files skipstone-0.8.1.orig/src/skipstone-plugin.o and skipstone-0.8.1/src/skipstone-plugin.o differ
-Binary files skipstone-0.8.1.orig/src/skipstone-print.o and skipstone-0.8.1/src/skipstone-print.o differ
-Binary files skipstone-0.8.1.orig/src/support.o and skipstone-0.8.1/src/support.o differ
