@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.67 2003/05/30 01:57:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.68 2003/05/30 13:06:35 caleb Exp $
+
+*qt-3.2.0_beta1 (29 May 2003)
+
+  29 May 2003; Caleb Tennis <caleb@gentoo.org> qt-3.2.0_beta1.ebuild:
+  Added a prelim ebuild for qt 3.2.  Has been package.mask'd until
+  we get a more thorough chance to work out the bugs.
 
   28 May 2003: Caleb Tennis <caleb@gentoo.org>
   Removed the following old ebuilds:
