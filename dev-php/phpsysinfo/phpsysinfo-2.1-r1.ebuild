@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r1.ebuild,v 1.3 2003/12/16 12:17:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r1.ebuild,v 1.4 2004/01/05 10:40:49 trance Exp $
 
 MY_PN="phpSysInfo"
 MY_P="${MY_PN}-${PV}"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/phpsysinfo/${MY_P}.tar.gz
 http://ftp.debian.org/debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}-${PR/r}.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha hppa"
+KEYWORDS="x86 ppc ~alpha hppa"
 IUSE=""
 DEPEND=">=apache-1.3.27-r1 >=mod_php-4.2.3-r2"
 S=${WORKDIR}/${MY_P}
