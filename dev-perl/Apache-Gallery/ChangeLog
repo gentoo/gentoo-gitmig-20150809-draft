@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Apache-Gallery
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Gallery/ChangeLog,v 1.1 2003/06/21 02:40:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Gallery/ChangeLog,v 1.2 2003/07/29 15:51:19 mcummings Exp $
+
+  29 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  files/apache-gallery.conf:
+  Totally missed the missing apache-gallery.conf file. Thanks to Dan Noe
+  <dpn@isomerica.net> in Bug 25136 for catching that
 
 *Apache-Gallery-0.6 (20 Jun 2003)
 
