@@ -20,7 +20,7 @@ src_install () {
 	doins src/xosd.h
 	into /usr
 	dolib.a src/libxosd/.libs/libxosd.a
-	dolib.so src/libxosd/.libs/libxosd.so.1
+	dolib.so src/libxosd/.libs/libxosd.so.2
 	dobin src/.libs/osd_cat
 	dobin script/xosd-config
 	doman man/*.1 man/*.3
