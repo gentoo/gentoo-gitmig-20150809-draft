@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/plptools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+*plptools-0.11-r1 (19 Apr 2003)
+
+  02 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *plptools-0.11.ebuild (17 Dec 2002)
 
   10 Apr 2003; B.Lauwers <blauwers@gentoo.org> plptools-0.11-r1.ebuild :
