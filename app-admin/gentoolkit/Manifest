@@ -5,7 +5,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoolkit-0.1.20 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoolkit-0.1.21 0
 MD5 c37f15d47fff40bdc38af94152263522 files/scripts/qpkg 12665
 MD5 63305561ae679ea9ae5db64252c0b296 files/scripts/echangelog.pod 5055
-MD5 a874448c75098025a2ab533b96e33780 files/scripts/echangelog.1 9275
+MD5 907aec00ccefd07a5801e35f135ed83f files/scripts/echangelog.1 9275
 MD5 1425d74a069e5cdd5fe2d99f12f2bf9c files/scripts/etcat 27417
 MD5 4b6bed0e41c186eda2d830d89a84b344 files/scripts/dep-clean 6956
 MD5 1dc6c0bf013a3bca5e5b05257934acda files/scripts/etcat.1 2196

@@ -135,11 +135,6 @@ echangelog \- update portage ChangeLogs
 .SH "SYNOPSIS"
 .IX Header "SYNOPSIS"
 echangelog [ \fItext\fR ]
-.SH "OPTIONS"
-.IX Header "OPTIONS"
-Presently echangelog is simple enough that it supplies no options.
-Probably I'll add \fB\-\-help\fR and \fB\-\-version\fR in the future, but for
-now it's enough to track the gentoolkit version.
 .SH "DESCRIPTION"
 .IX Header "DESCRIPTION"
 This tool provides an easy way to create or update portage ChangeLogs
@@ -162,6 +157,11 @@ be too wide, (2) edit the ChangeLog manually.  If you prefer (2), I'd
 recommend something like \*(L"echangelog blah\*(R" so that the header lines
 are computed correctly, then edit and change \*(L"blah\*(R" to your preferred
 text.
+.SH "OPTIONS"
+.IX Header "OPTIONS"
+Presently echangelog is simple enough that it supplies no options.
+Probably I'll add \fB\-\-help\fR and \fB\-\-version\fR in the future, but for
+now it's enough to track the gentoolkit version.
 .SH "EXAMPLES"
 .IX Header "EXAMPLES"
 To create a ChangeLog for a completely new package.  The header is
@@ -179,7 +179,7 @@ parsed from skel.ebuild.
 \&  @@ -0,0 +1,9 @@
 \&  +# ChangeLog for app-admin/metalog
 \&  +# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-\&  +# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/echangelog.1,v 1.1 2003/04/27 19:39:39 agriffis Exp $
+\&  +# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/echangelog.1,v 1.2 2003/04/27 19:48:02 agriffis Exp $
 \&  +
 \&  +*metalog-0.1 (23 Feb 2003)
 \&  +
@@ -202,7 +202,7 @@ will notice the new file.
 \&  +++ ChangeLog.new       2003-02-23 14:07:48.000000000 -0500
 \&  @@ -2,6 +2,11 @@
 \&   # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-\&   # $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/echangelog.1,v 1.1 2003/04/27 19:39:39 agriffis Exp $
+\&   # $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/echangelog.1,v 1.2 2003/04/27 19:48:02 agriffis Exp $
 .Ve
 .PP
 .Vb 6
@@ -230,7 +230,7 @@ For a multi-line entry, omit the command-line arg.
 \&  +++ ChangeLog.new       2003-02-23 14:12:43.000000000 -0500
 \&  @@ -2,6 +2,13 @@
 \&   # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-\&   # $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/echangelog.1,v 1.1 2003/04/27 19:39:39 agriffis Exp $
+\&   # $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/echangelog.1,v 1.2 2003/04/27 19:48:02 agriffis Exp $
 .Ve
 .PP
 .Vb 8
