@@ -1,4 +1,6 @@
 MD5 21af081cc3db5b66e8c96a77ba8198e5 ChangeLog 1691
 MD5 e1d1b17d24932d84db6122c279bf6008 metadata.xml 938
+MD5 0043424e53acdc27ead1d9f5979255a1 xmlada-1.0.ebuild 2683
 MD5 af85a1859d04b9b8b1c4f8d572f0d927 xmlada-0.7.1-r2.ebuild 2687
+MD5 04741d70df78b3e33bea42b18423e457 files/digest-xmlada-1.0 59
 MD5 9d2b99c18fffcb88c4d56d762a271e19 files/digest-xmlada-0.7.1-r2 61
