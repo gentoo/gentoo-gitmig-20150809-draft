@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3163 2004/09/18 18:00:55 leonardop Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3164 2004/09/18 18:24:23 eradicator Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# Jeremy Huddleston <eradicator@gentoo.org> (18 Sep 2004)
+# Buggy beta...
+=amarok-1.1-beta2
 
 # Olivier Fisette <ribosome@gentoo.org> (16 Sep 2004)
 # Insufficient testing and many issues. In Portage for testing.
