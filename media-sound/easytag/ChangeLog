@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.17 2004/01/18 19:52:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.18 2004/03/23 05:04:57 seemant Exp $
+
+*easytag-0.30d (22 Mar 2004)
+
+  22 Mar 2004; Seemant Kulleen <seemant@gentoo.org> easytag-0.30.ebuild,
+  easytag-0.30d.ebuild:
+  version bump thanks to Daniel Drake <dan@reactivated.net> (who's doing a gtk2
+  port for us too) in bug #44841
 
   17 Jan 2004; Seemant Kulleen <seemant@gentoo.org> easytag-0.30c.ebuild: 
   set x86 and sparc in keywords
