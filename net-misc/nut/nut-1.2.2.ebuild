@@ -1,23 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.1 2003/04/21 03:32:55 prez Exp $
-
-IUSE="png"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.2 2003/04/28 14:51:08 prez Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
 SRC_URI="http://www.exploits.org/nut/release/${PV%.*}/${P}.tar.gz"
 HOMEPAGE="http://www.exploits.org/nut/"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
-# -- [ FIXME ] --
-# a better idea would be to have virtual/httpd dependencies and
-# USE cgi-bin support.  USE png and apache are used for now :\
+DEPEND=""
+RDEPEND=">=sys-apps/baselayout-1.8.2"
 
-DEPEND="png? ( =sys-libs/zlib-1* =media-libs/libgd-1* =media-libs/libpng-1.2* )"
-RDEPEND="${DEPEND} png? ( net-www/apache ) >=sys-apps/baselayout-1.8.2"
+APACHE="`which apache`"
+if [ -z "${APACHE}" -a -x /usr/sbin/apache ]; then
+  APACHE=/usr/sbin/apache
+fi
+
+if [ -n "${APACHE}" ]; then
+  DEPEND="${DEPEND} =sys-libs/zlib-1* =media-libs/libgd-1* =media-libs/libpng-1.2*"
+  RDEPEND="${RDEPEND} net-www/apache"
+fi
+RDEPEND="${RDEPEND} ${DEPEND}"
 
 src_unpack() {
 	unpack ${A} || die
@@ -30,8 +35,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use png && myconf="--with-cgi --with-cgipath=/home/httpd/cgi-bin"
-	use png || myconf="--without-cgi"
+	[ -n "${APACHE}" ] && myconf="--with-cgi --with-cgipath=/home/httpd/cgi-bin"
+	[ -n "${APACHE}" ] || myconf="--without-cgi"
 
 	#default is to build all drivers; but the following is common:
 	#--with-drivers=apcsmart,hidups
@@ -59,7 +64,7 @@ src_compile() {
 
 	emake || die
 
-	if [ -n "`use png`" ]
+	if [ -n "${APACHE}" ]
 	then
 		emake cgi || die
 	fi
@@ -71,7 +76,7 @@ src_install() {
 	# up in pkg_postinst().
 	make DESTDIR=${D} RUNUID=root RUNGID=root install || die
 
-	if [ -n "`use png`" ]
+	if [ -n "${APACHE}" ]
 	then
 		make DESTDIR=${D} install-cgi || die
 	fi
