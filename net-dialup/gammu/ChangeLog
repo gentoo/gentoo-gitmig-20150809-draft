@@ -1,11 +1,11 @@
 # ChangeLog for net-dialup/gammu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.14 2004/11/06 13:54:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.15 2004/11/17 18:49:10 mrness Exp $
 
   06 Nov 2004; Lars Weiler <pylon@gentoo.org> gammu-0.98.9.ebuild:
   Stable on ppc.
 
-*gammu-0.97.0 (14 Oct 2004)
+*gammu-0.98.9 (14 Oct 2004)
 
   14 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> -gammu-0.94.4.ebuild,
   -gammu-0.95.0.ebuild, -gammu-0.96.0.ebuild, -gammu-0.97.0.ebuild,

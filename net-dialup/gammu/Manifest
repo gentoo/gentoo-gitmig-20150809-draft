@@ -1,6 +1,16 @@
-MD5 650b3f0ddf2f3fefbe4e9c87b94e9ed6 ChangeLog 2161
-MD5 87844c6e9a700c2b04cceac0b33a1a79 metadata.xml 225
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 64dd21bf728b9fa0f0fe0e3e8d99ac6f ChangeLog 2162
 MD5 9922a8c4a3adbb7bf957294457082cd2 gammu-0.98.0.ebuild 1596
 MD5 2f2acd5afdb4a11eb4cbe119f331cde8 gammu-0.98.9.ebuild 1574
+MD5 87844c6e9a700c2b04cceac0b33a1a79 metadata.xml 225
 MD5 ab27d8faf8ed2c30aed067a8197fdba6 files/digest-gammu-0.98.0 64
 MD5 d20644667ef26b29d4c532fb1bff45f4 files/digest-gammu-0.98.9 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm50xjtv59x0+BrURAhFUAKDGZ346gKScnXmDkP0IHGx0PT0GaACeO+wG
+LHfXA8zw7qY+774tl5KdHOk=
+=9F7D
+-----END PGP SIGNATURE-----
