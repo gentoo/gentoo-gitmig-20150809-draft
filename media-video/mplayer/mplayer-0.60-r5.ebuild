@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r5.ebuild,v 1.2 2002/04/14 13:01:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r5.ebuild,v 1.3 2002/04/14 13:30:24 seemant Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -45,7 +45,7 @@ src_unpack() {
 	use gtk && ( \
 		unpack default-skin-0.1.tar.bz2
 		cd ${WORKDIR}/default
-		patch < ${FILESDIR}/default-skin.diff || die
+		patch < ${FILESDIR}/default-skin.diff || die "gtk patch failed"
 	)
 
 	use mga && ( \
@@ -73,31 +73,64 @@ src_compile() {
 
 	local myconf=""
 
-	use 3dnow         || myconf="${myconf} --disable-3dnow --disable-3dnowex"
-	use sse           || myconf="${myconf} --disable-sse --disable-sse2"
+	use 3dnow \
+		|| myconf="${myconf} --disable-3dnow --disable-3dnowex"
+
+	use sse	\
+		|| myconf="${myconf} --disable-sse --disable-sse2"
+
 	# Only disable MMX if 3DNOW or SSE is not in USE
-	! use mmx         && \
-	! use 3dnow       && \
-	! use sse         && myconf="${myconf} --disable-mmx --disable-mmx2"
+	use mmx || use 3dnow || use sse \
+		|| myconf="${myconf} --disable-mmx --disable-mmx2"
+
 	# Only disable X if gtk is not in USE
-	! use X           && \
-	! use gtk         && myconf="${myconf} --disable-x11 --disable-xv --disable-xmga"
-	use gtk           && myconf="${myconf} --enable-gui --enable-x11 --enable-xv"
-	use oss           || myconf="${myconf} --disable-ossaudio"
-	use opengl        || myconf="${myconf} --disable-gl"
-	use sdl           || myconf="${myconf} --disable-sdl"
-	use ggi           || myconf="${myconf} --disable-ggi"
-	use svga          || myconf="${myconf} --disable-svga"
-	use directfb      && myconf="${myconf} --enable-fbdev"
-	use alsa          || myconf="${myconf} --disable-alsa"
-	use oggvorbis     || myconf="${myconf} --disable-vorbis"
-	use encode        && myconf="${myconf} --enable-mencoder --enable-tv"
-	use encode        || myconf="${myconf} --disable-mencoder"
-	use dvd           && myconf="${myconf} --enable-dvdread --enable-css"
-	use mga           && myconf="${myconf} --enable-mga"
-	use mga           && \
-	use X             && myconf="${myconf} --enable-xmga"
-	use 3dfx          && myconf="${myconf} --enable-3dfx --enable-tdfxfb"
+	use X || use gtk \
+		|| myconf="${myconf} --disable-x11 --disable-xv --disable-xmga"
+
+	use mga && use X \
+		&& myconf="${myconf} --enable-xmga"
+
+	use gtk \
+		&& myconf="${myconf} --enable-gui --enable-x11 --enable-xv"
+
+	use oss \
+		|| myconf="${myconf} --disable-ossaudio"
+
+	use opengl \
+		|| myconf="${myconf} --disable-gl"
+
+	use sdl \
+		|| myconf="${myconf} --disable-sdl"
+
+	use ggi \
+		|| myconf="${myconf} --disable-ggi"
+
+	use svga \
+		|| myconf="${myconf} --disable-svga"
+
+	use directfb \
+		&& myconf="${myconf} --enable-fbdev"
+
+	use alsa \
+		|| myconf="${myconf} --disable-alsa"
+
+	use oggvorbis \
+		|| myconf="${myconf} --disable-vorbis"
+
+	use encode \
+		&& myconf="${myconf} --enable-mencoder --enable-tv"
+
+	use encode \
+		|| myconf="${myconf} --disable-mencoder"
+
+	use dvd \
+		&& myconf="${myconf} --enable-dvdread --enable-css"
+
+	use mga \
+		&& myconf="${myconf} --enable-mga"
+
+	use 3dfx \
+		&& myconf="${myconf} --enable-3dfx --enable-tdfxfb"
 
 	# Crashes on start when compiled with most optimizations.
 	# The code have CPU detection code now, with CPU specific
@@ -107,12 +140,13 @@ src_compile() {
 	CXXFLAGS="" \
 	./configure --prefix=/usr \
 		${myconf} || die
-		    
+
 	emake all || die
 	
-	use mga \
-		&& cd drivers \
-		&& emake all || die
+	use mga && ( \
+		cd drivers \
+		emake all || die
+	)
 }
 
 src_install() {
@@ -213,7 +247,7 @@ pkg_postinst() {
 	echo '#                                                                    #'
 	echo '#   after launching mplayer for the first time.                      #'
 	echo '#                                                                    #'
-	use gtk \
+	use gtk &>/dev/null \
 		|| echo '# NB: the GUI needs "gtk" as USE flag to build.                      #'
 	echo '######################################################################'
 	echo

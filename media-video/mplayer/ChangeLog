@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.7 2002/04/14 10:20:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.8 2002/04/14 13:30:24 seemant Exp $
+
+*mplayer-0.60-r5 (14 Apr 2002)
+
+  14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> mplayer-0.60-r5.ebuild :
+
+  Cleaned up some of the USE flag checking, and made it more consistent, so
+  that there are no if then fi constructs for USE flags.
 
 *mplayer-0.60-r5 (12 Apr 2002)
 
