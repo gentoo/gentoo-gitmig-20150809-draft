@@ -6,9 +6,10 @@ HOMEPAGE="http://wmpager.sourceforge.net/"
 DESCRIPTION="wmpager is a simple pager docklet for the Window Maker."
 SRC_URI="mirror://sourceforge/wmpager/wmpager-${PV}.tar.gz"
 SLOT="0"
-LICENSE=""
+LICENSE="BSD"
 KEYWORDS="~x86"
-DEPEND=""
+DEPEND="x11-base/xfree
+		virtual/glibc"
 RDEPEND=""
 
 src_compile() {
