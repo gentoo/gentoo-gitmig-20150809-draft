@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <styx@gentoo.org> (13 Aug 2002)
+# masked for b0rkage, removing them soon
+<dev-util/glimmer-1.2.1-r3
+
 # <blizzy@gentoo.org> (13 Aug 2002)
 # masked for testing, might pose security problems!
 sys-apps/fakeroot
