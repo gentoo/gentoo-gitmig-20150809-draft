@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/etox/etox-0.9.0.20040529.ebuild,v 1.2 2004/06/24 22:59:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/etox/etox-0.9.0.20040710.ebuild,v 1.1 2004/07/12 12:35:57 vapier Exp $
 
 EHACKAUTOGEN=yes
 export WANT_AUTOMAKE=1.8
