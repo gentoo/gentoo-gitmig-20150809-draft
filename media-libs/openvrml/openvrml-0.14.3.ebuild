@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.8 2004/11/06 15:28:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.9 2005/03/23 16:18:10 seemant Exp $
 
 IUSE="java javascript jpeg opengl png truetype truetype zlib"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/x11
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	truetype? ( media-libs/freetype media-libs/fontconfig )
-	javascript? ( net-www/mozilla )
+	javascript? ( www-client/mozilla )
 	java? ( virtual/jdk )
 	opengl? ( virtual/opengl virtual/glut )"
 
