@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.57 2003/12/13 16:51:36 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.58 2003/12/14 00:55:46 pylon Exp $
+
+  14 Dec 2003; Lars Weiler <pylon@gentoo.org> libgtkhtml-3.0.9.ebuild:
+  Make stable on ppc
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> libgtkhtml-3.0.9.ebuild:
   mark stable on amd64
