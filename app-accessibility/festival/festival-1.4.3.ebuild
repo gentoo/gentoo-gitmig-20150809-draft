@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3.ebuild,v 1.4 2004/03/25 17:50:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3.ebuild,v 1.5 2004/03/29 00:52:52 eradicator Exp $
 
 inherit eutils
 
@@ -24,12 +24,6 @@ SRC_URI="${SITE}/${P}-release.tar.gz
 	${SITE}/festvox_us2.tar.gz
 	${SITE}/festvox_us3.tar.gz
 	doc? ( ${SITE}/festdoc-1.4.2.tar.gz )"
-
-	# Keeping these things in external patch files (that dont even live in
-	# the files subdir) makes it far too difficult to modify the ebuild. These
-	# patches are easily replaced by a bit of sed, consistant with the rest of
-	# the ebuild, and moving the ebuild commands from the external shell script
-	# into the ebuild where they belong.
 
 SLOT="0"
 LICENSE="FESTIVAL BSD as-is"
