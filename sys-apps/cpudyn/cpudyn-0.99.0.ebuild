@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.99.0.ebuild,v 1.6 2004/10/10 06:21:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.99.0.ebuild,v 1.7 2004/10/10 06:24:17 vapier Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ src_unpack() {
 	cd ${S}
 	mkdir gentoo
 	cp debian/cpudyn.conf gentoo
-	cp ${FILESDIR}/cpudyn.init-0.99.0 gentoo/cpudyn.init
+	cp ${FILESDIR}/cpudyn.init gentoo/cpudyn.init
 	epatch ${FILESDIR}/${PN}-0.99.0-init_conf_updates.patch
 }
 
