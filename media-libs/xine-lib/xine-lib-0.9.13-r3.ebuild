@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.7 2004/02/02 00:15:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.8 2004/02/08 22:28:15 vapier Exp $
 
 
 inherit libtool flag-o-matic eutils gcc
@@ -49,6 +49,7 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -maltivec -mabi=altivec
+	has_version sys-devel/hardened-gcc && filter-flags -fPIC
 	if [ "`gcc-version`" == "3.2" ] ; then
 		replace-flags -march=k6-3 -march=i686
 		replace-flags -march=k6-2 -march=i686
