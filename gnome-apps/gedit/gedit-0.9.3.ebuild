@@ -1,18 +1,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gedit/gedit-0.9.3.ebuild,v 1.1 2000/11/25 13:01:56 achim Exp $
 
-P=GConf-${PV}
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="Gconf"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/GConf/${A}"
-HOMEPAGE="http://www.gnome.org/"
+DESCRIPTION="Gnome Text Editor"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
+HOMEPAGE="http://gedit.sourceforge.net/"
 
-DEPEND=">=dev-util/guile-1.4
-	>=x11-libs/gtk+-1.2.8
-	>=gnome-base/oaf-0.5.1"
+DEPEND=">=gnome-base/libglade-0.14
+	>=gnome-base/gnome-print-0.25"
 
 src_unpack() {
   unpack ${A}
@@ -20,7 +18,7 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome 
+  try ./configure --host=${CHOST} --prefix=/opt/gnome
   try make
 }
 
