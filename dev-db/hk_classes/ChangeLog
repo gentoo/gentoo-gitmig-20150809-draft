@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.18 2004/07/04 13:59:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.19 2004/07/13 12:37:06 carlo Exp $
+
+*hk_classes-0.7 (13 Jul 2004)
+
+  13 Jul 2004; Carsten Lohrke <carlo@gentoo.org>
+  -hk_classes-0.6.3_alpha3.ebuild, +hk_classes-0.7.ebuild,
+  -hk_classes-0.7_alpha1.ebuild, -hk_classes-0.7_alpha3.ebuild:
+  ebuild clean up, fixed digest, version bump
 
 *hk_classes-0.7_alpha3 (04 Jul 2004)
 
