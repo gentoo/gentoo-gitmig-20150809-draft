@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21.ebuild,v 1.4 2004/02/20 06:13:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21.ebuild,v 1.5 2004/03/14 18:26:04 vapier Exp $
 
 inherit games
 
@@ -19,9 +19,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	mirror://sourceforge/${PN}/${PN}-sound-tracks-${snd_trk_ver}.tar.bz2
 	mirror://sourceforge/${PN}/${PN}-sound-effects-${snd_eff_ver}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
 IUSE="sdl nls ggi"
 
 DEPEND="virtual/x11
