@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rexima
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.2 2004/03/01 05:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.3 2004/04/01 07:53:01 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> rexima-1.4.ebuild:
+  Removed explicot S=.  Stable x86.
 
 *rexima-1.4 (19 Jul 2003)
 
