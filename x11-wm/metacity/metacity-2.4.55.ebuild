@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.55.ebuild,v 1.2 2003/07/01 19:17:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.55.ebuild,v 1.3 2003/08/24 18:09:02 obz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="Small gtk2 WindowManager"
 HOMEPAGE="http://www.gnome.org/softwaremap/projects/metacity/"
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa"
 IUSE=""
 
 # not parallel-safe; see bug #14405
