@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.37 2005/01/02 02:21:38 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.38 2005/01/05 02:55:18 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -867,6 +867,7 @@ host_def_setup() {
 
 		if use minimal; then
 			echo "#define BuildClients NO" >> ${HOSTCONF}
+			echo "#define BuildLBX NO" >> ${HOSTCONF}
 
 			# Without nls, truetype-fonts, type1-fonts, we only build misc
 			# Now let's try to reduce what gets built in misc
