@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.47.ebuild,v 1.12 2004/09/26 21:59:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.47.ebuild,v 1.13 2004/10/24 16:30:42 eldad Exp $
 
 inherit perl-module flag-o-matic gnuconfig eutils
 
@@ -33,7 +33,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-fPIC.patch
+	sed -e 's/^LTCOMPILE = $(LIBTOOL) --mode=compile $(CC)/& -prefer-pic/' -i src/Makefile.in
+
+	if [[ ! $(grep '^LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) -prefer-pic' src/Makefile.in) ]]; then
+		die "Makefile.in sed failed"
+	fi
 }
 
 src_compile() {
