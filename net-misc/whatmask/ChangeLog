@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/whatmask
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.5 2003/02/12 08:35:04 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.6 2004/01/24 16:45:50 zul Exp $
+
+*whatmask-1.2 (23 Jan 2004)
+
+  23 Jan 2004; Chuck Short <zul@gentoo.org> metadata.xml, whatmask-1.1.ebuild,
+  whatmask-1.2.ebuild:
+  Added metadata.xml.
+
+*whatmask-1.2 (23 Jan 2004)
+
+  23 Jan 2004; Chuck Short <zul@gentoo.org> whatmask-1.1.ebuild,
+  whatmask-1.2.ebuild:
+  Version bump, closes #39047. Header fixes as well.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
