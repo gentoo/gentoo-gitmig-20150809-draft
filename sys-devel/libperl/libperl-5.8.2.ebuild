@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.2.ebuild,v 1.10 2004/02/19 22:29:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.2.ebuild,v 1.11 2004/03/09 00:33:16 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -53,7 +53,7 @@
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
 
-IUSE="berkdb gdbm"
+IUSE="berkdb gdbm threads"
 
 inherit eutils flag-o-matic
 
