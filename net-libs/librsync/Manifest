@@ -1,3 +1,5 @@
 MD5 d5d4cf9f61ec76eb1c631425bab794a4 ChangeLog 437
 MD5 d1470ad86db77248d006934a3e08cbb1 librsync-0.9.5.ebuild 718
+MD5 74f63a4f0b6de242126c807e018f00ce librsync-0.9.5.1.ebuild 702
 MD5 52f787dffd6d0e8d1f04f3ffe8a7da34 files/digest-librsync-0.9.5 66
+MD5 1ec3cfeaf5b7008219c1acffbdf940fc files/digest-librsync-0.9.5.1 68
