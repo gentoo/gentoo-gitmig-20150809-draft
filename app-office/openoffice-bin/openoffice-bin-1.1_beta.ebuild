@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_beta.ebuild,v 1.3 2003/04/16 18:50:06 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1_beta.ebuild,v 1.4 2003/04/19 19:55:45 sethbc Exp $
 
 IUSE="kde gnome"
 
@@ -34,7 +34,7 @@ DEPEND="virtual/glibc
 	virtual/x11
 	app-arch/zip
 	app-arch/unzip
-	>=virtual/jdk-1.3.1
+	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
 	!app-office/openoffice"
 
 LICENSE="LGPL-2 | SISSL-1.1"
@@ -122,7 +122,7 @@ src_install() {
 	# Install wrapper script
 	exeinto /usr/bin
 	sed -e "s|<pv>|${PV}|g" \
-		${FILESDIR}/${PV}/ooffice-wrapper-1.2 > ${T}/ooffice
+		${FILESDIR}/${PV}/ooffice-wrapper-1.3 > ${T}/ooffice
 	doexe ${T}/ooffice
 	# Component symlinks
 	dosym ooffice /usr/bin/oocalc

@@ -22,7 +22,7 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA      
 
 # this string should be exactly as in ~/.sversionrc
-OOVERSION="OpenOffice.org 1.0.3"
+OOVERSION="OpenOffice.org 1.1beta"
 
 ##
 ## Source system configuration file
@@ -126,7 +126,7 @@ if [ -z "$OOHOME" ] ; then
     if oldhome="`get_settings_dir "OpenOffice.org 1.0.2"`" ; then
       OOHOME="$oldhome"
       echo "Using settings from 1.0.2"
-      /bin/echo -e "OpenOffice.org 1.0.3=file://$oldhome\r" >> ~/.sversionrc
+      /bin/echo -e "OpenOffice.org 1.1beta=file://$oldhome\r" >> ~/.sversionrc
     else
       # first install
       OOHOME=`grep DESTINATIONPATH /etc/openoffice/autoresponse.conf | \
@@ -211,7 +211,7 @@ case `basename $0` in
 esac
 ## Changelog
 # 2003/04/01 halls
-#   * Version 1.0.3
+#   * Version 1.1beta
 # 2003/02/03 halls
 #   * Check for nonexistent ooLocale every run
 # 2003/01/09 halls
