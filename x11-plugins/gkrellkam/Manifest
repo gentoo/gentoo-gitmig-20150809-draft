@@ -1,5 +1,5 @@
-MD5 b7cecbe03aebd3e73f3cb1bec0969c42 gkrellkam-2.0.0.ebuild 700
-MD5 d25af814264f0cb62cce96d5de801a9f ChangeLog 1178
+MD5 2b21f98ecfc50e83a593d4e98f076065 ChangeLog 1275
 MD5 ebac41bbdcbb4e427cae124b66d7c7d6 gkrellkam-0.3.4.ebuild 686
+MD5 0e60ed0c7b49da372868c6678abbeff6 gkrellkam-2.0.0.ebuild 710
 MD5 003cc4de0a739a28af21074bff0b63cd files/digest-gkrellkam-0.3.4 66
 MD5 92da7650bdbd91e8256c259310a1efb3 files/digest-gkrellkam-2.0.0 66

@@ -1,5 +1,5 @@
-MD5 a40b89f1056508df1ae12fdf6c9209b7 ChangeLog 895
+MD5 0c3b395acc1b81fb359a3dd44f40042c ChangeLog 992
 MD5 ce3c16973a26b68274f5748ad50b77f1 gkrellaclock-0.2.1.ebuild 686
-MD5 df0d49c677d13005a84a07777df2723c gkrellaclock-0.3.2.ebuild 688
+MD5 86222858c0a4011f21f8160b6c35fcc1 gkrellaclock-0.3.2.ebuild 693
 MD5 0ed63877aea75f4150337326535bdf77 files/digest-gkrellaclock-0.2.1 68
 MD5 c9dbdb43a9e9c1479a59d00e6f856886 files/digest-gkrellaclock-0.3.2 68
