@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2-r1.ebuild,v 1.5 2003/07/16 16:45:25 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2-r1.ebuild,v 1.6 2003/09/11 01:16:25 msterret Exp $
 
 IUSE="nas esd motif gtk slang alsa"
 inherit kde-dist eutils
@@ -12,8 +12,8 @@ DESCRIPTION="KDE $PV - multimedia apps"
 KEYWORDS="x86 sparc ppc"
 MAKEOPTS="${MAKEOPTS} -j1"
 newdepend ">=sys-libs/ncurses-5.2
-    >=media-sound/cdparanoia-3.9.8
-    >=media-libs/libvorbis-1.0_beta4
+	>=media-sound/cdparanoia-3.9.8
+	>=media-libs/libvorbis-1.0_beta4
 	>=media-video/xanim-2.80.1
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	nas? ( >=media-libs/nas-1.4.1 )

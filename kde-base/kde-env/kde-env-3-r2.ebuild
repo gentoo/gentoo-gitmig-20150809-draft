@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r2.ebuild,v 1.10 2003/08/03 05:39:17 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r2.ebuild,v 1.11 2003/09/11 01:16:25 msterret Exp $
 
 DESCRIPTION="Sets up some env.d files for kde"
 SRC_URI=""
@@ -18,8 +18,8 @@ src_compile() { true; }
 
 src_install() {
 
-    dodir /etc/env.d
-    echo "KDEDIRS=/usr
+	dodir /etc/env.d
+	echo "KDEDIRS=/usr
 CONFIG_PROTECT=/usr/share/config" > ${D}/etc/env.d/99kde-env
 
 }

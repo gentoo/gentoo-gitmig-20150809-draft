@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.0.5b.ebuild,v 1.3 2003/07/16 16:17:22 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.0.5b.ebuild,v 1.4 2003/09/11 01:16:25 msterret Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="sdl svga"
@@ -18,7 +18,7 @@ use sdl && myconf="$myconf --with-sdl --with-sdl-prefix=/usr" || myconf="$myconf
 
 # fix bug #7625
 if [ "$COMPILER" == "gcc3" ]; then
-    if [ -n "`is-flag -march=pentium4`" -o -n "`is-flag -mcpu=pentium4`" ]; then
-	append-flags -mno-sse2
-    fi
+	if [ -n "`is-flag -march=pentium4`" -o -n "`is-flag -mcpu=pentium4`" ]; then
+		append-flags -mno-sse2
+	fi
 fi

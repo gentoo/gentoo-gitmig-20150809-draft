@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.1.3.ebuild,v 1.6 2003/09/08 01:55:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.1.3.ebuild,v 1.7 2003/09/11 01:16:25 msterret Exp $
 inherit kde-dist
 
 IUSE="pam foreign-package foreign-sysvinit"
@@ -15,12 +15,12 @@ use pam		&& myconf="$myconf --with-pam"	|| myconf="$myconf --without-pam --with-
 #if [ -n "`use foreign-package`" ]; then
 #    myconf="$myconf --with-rpmlib"
 #else
-    myconf="$myconf --without-rpm"
-    KDE_REMOVE_DIR="$KDE_REMOVE_DIR kpackage"
+	myconf="$myconf --without-rpm"
+	KDE_REMOVE_DIR="$KDE_REMOVE_DIR kpackage"
 #fi
 
 if [ -z "`use foreign-sysvinit`" ]; then
-    KDE_REMOVE_DIR="$KDE_REMOVE_DIR ksysv"
+	KDE_REMOVE_DIR="$KDE_REMOVE_DIR ksysv"
 fi
 
 
@@ -32,8 +32,8 @@ fi
 # lilo's presense
 src_unpack() {
 
-    kde_src_unpack
-    use x86 && echo > ${S}/lilo-config/configure.in.in
+	kde_src_unpack
+	use x86 && echo > ${S}/lilo-config/configure.in.in
 
 }
 
