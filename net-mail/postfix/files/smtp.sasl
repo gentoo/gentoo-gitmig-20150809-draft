@@ -1,2 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/files/smtp.sasl,v 1.1 2003/09/24 05:08:51 max Exp $
-pwcheck_method:pam
