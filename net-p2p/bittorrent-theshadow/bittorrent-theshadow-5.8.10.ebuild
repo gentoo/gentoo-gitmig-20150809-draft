@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.10.ebuild,v 1.3 2004/06/17 02:04:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.10.ebuild,v 1.4 2004/06/25 00:29:01 agriffis Exp $
 
 inherit distutils eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/opendchub
-# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.4 2004/06/15 02:33:40 agriffis Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.5 2004/06/25 00:35:41 agriffis Exp $
 
   14 Jun 2004; Aron Griffis <agriffis@gentoo.org> opendchub-0.7.14.ebuild:
   Fix use invocation

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r1.ebuild,v 1.4 2004/06/04 01:30:08 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r1.ebuild,v 1.5 2004/06/25 00:37:06 agriffis Exp $
 
 MY_P=${P}b
 S=${WORKDIR}/${MY_P}

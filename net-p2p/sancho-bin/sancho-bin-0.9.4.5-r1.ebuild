@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.5-r1.ebuild,v 1.2 2004/06/21 23:35:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.5-r1.ebuild,v 1.3 2004/06/25 00:36:34 agriffis Exp $
 
 IUSE="gtk2"
 

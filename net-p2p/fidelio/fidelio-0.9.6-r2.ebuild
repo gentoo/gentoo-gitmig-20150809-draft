@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fidelio/fidelio-0.9.6-r2.ebuild,v 1.7 2004/03/01 06:26:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fidelio/fidelio-0.9.6-r2.ebuild,v 1.8 2004/06/25 00:30:57 agriffis Exp $
 
 IUSE="nls esd"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/nicotine-1.0.8_rc1.ebuild,v 1.2 2004/06/11 13:40:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/nicotine-1.0.8_rc1.ebuild,v 1.3 2004/06/25 00:35:30 agriffis Exp $
 
 inherit distutils
 

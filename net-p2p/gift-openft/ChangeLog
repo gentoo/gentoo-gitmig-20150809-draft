@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/gift-openft
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.12 2004/06/24 03:46:07 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.13 2004/06/25 00:32:12 agriffis Exp $
 
   23 Jun 2004; Jason Wever <weeve@gentoo.org> gift-openft-0.2.1.2.ebuild:
   Stable on sparc.

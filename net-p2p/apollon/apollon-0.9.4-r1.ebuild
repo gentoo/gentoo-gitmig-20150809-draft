@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/apollon-0.9.4-r1.ebuild,v 1.1 2004/06/15 00:43:53 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/apollon-0.9.4-r1.ebuild,v 1.2 2004/06/25 00:28:08 agriffis Exp $
 
 inherit kde
 need-kde 3

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.13 2004/06/23 22:12:02 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.14 2004/06/25 00:36:55 agriffis Exp $
 
 IUSE="xmms gtk ipv6 tcpd"
 

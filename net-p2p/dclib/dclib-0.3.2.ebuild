@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.2.ebuild,v 1.1 2004/06/05 19:29:56 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.2.ebuild,v 1.2 2004/06/25 00:30:04 agriffis Exp $
 
 inherit gcc eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/nap-1.5.2.ebuild,v 1.5 2004/05/21 23:13:33 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/nap-1.5.2.ebuild,v 1.6 2004/06/25 00:35:10 agriffis Exp $
 
 IUSE=""
 
