@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/Speex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/Speex/ChangeLog,v 1.2 2002/10/29 17:53:30 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/Speex/ChangeLog,v 1.3 2002/11/06 07:54:56 mkeadle Exp $
+
+*Speex-1.0_beta2-r1 (6 Nov 2002)
+
+  6 Nov 2002; Matt Keadle <mkeadle@gentoo.org> Speex-1.0_beta2-r1.ebuild files/digest-Speex-1.0_beta2-r1 :
+
+  manual.pdf now goes into /usr/share/doc/Speex and gcc issues seem to be resolved.
 
 *Speex-1.0_beta2 (29 Oct 2002) Bart Verwilst <verwilst@gentoo.org>
 
