@@ -1,4 +1,14 @@
-MD5 218fe57c648b1260b49e08aa5e20c534 ChangeLog 483
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c22bb022045c35b759232df772d1a0c8 ChangeLog 598
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 dec66b000ed6957ec08b37e764255f74 psindustrializer-0.2.2.ebuild 785
+MD5 730618228addb9f112bd8680b1c50c53 psindustrializer-0.2.2.ebuild 730
 MD5 3843e3a04144768082bf109e09cb6182 files/digest-psindustrializer-0.2.2 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoxDrArHZZzCEUG0RArK/AKCAffuNrfTefGmniRDpO6yVN8MyOACcClyt
+Z5I/zTs4eFXZNZK+mz+dRaY=
+=CkIn
+-----END PGP SIGNATURE-----

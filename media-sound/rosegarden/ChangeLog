@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.21 2004/11/22 05:14:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.22 2004/11/23 10:25:07 eradicator Exp $
+
+  23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rosegarden-4.0.9.91_rc2.ebuild:
+  Added to ~sparc.
 
 *rosegarden-4.0.9.91_rc2 (21 Nov 2004)
 

@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ddd42c5d69e1a41574637425ab5a0147 rosegarden-4.0.9.8.ebuild 943
-MD5 a58b1d53778d60cf13e5e97b339e1bf8 rosegarden-4.0.9.91_rc2.ebuild 1574
-MD5 13a7851faefe5ba80acc5122ada65c62 ChangeLog 3270
+MD5 f9478219a5dc439689ee2b7905abb9d8 ChangeLog 3381
 MD5 c88092184926549fd28a504c79731af2 metadata.xml 256
+MD5 ddd42c5d69e1a41574637425ab5a0147 rosegarden-4.0.9.8.ebuild 943
+MD5 208a51265ee1b76e8143bdc8f5b71da7 rosegarden-4.0.9.91_rc2.ebuild 1581
 MD5 f9434a09349540e99ec3ef2e25b0f894 files/digest-rosegarden-4.0.9.91_rc2 76
 MD5 eedfa71e3000918862d19d5ac29cc0ef files/digest-rosegarden-4.0.9.8 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBobzRI1lqEGTUzyQRAs8FAKCl4+jLF3dcMqZn6Cm2qSadpo2QBgCeNh1v
-hNTSseEytnk5isZX5629Luo=
-=KqN4
+iD8DBQFBoxACArHZZzCEUG0RAjhAAJwNox5JoDaYvVI11RKbA+PgD6zq1ACfehSU
+C/frVH3nnZnrzoWx+RPG+0A=
+=DyfY
 -----END PGP SIGNATURE-----
