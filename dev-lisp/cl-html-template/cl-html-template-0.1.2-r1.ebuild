@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-html-template/cl-html-template-0.1.2-r1.ebuild,v 1.3 2004/07/14 15:31:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-html-template/cl-html-template-0.1.2-r1.ebuild,v 1.4 2005/03/21 07:33:39 mkennedy Exp $
 
 inherit common-lisp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://weitz.de/html-template/
 SRC_URI="mirror://gentoo/${P/cl-/}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
