@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.8 2003/06/24 21:36:01 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.9 2003/08/18 06:04:47 kumba Exp $
 
 IUSE="kde gnome nls xinerama truetype cjk"
 
-inherit commonbox flag-o-matic eutils
+inherit commonbox flag-o-matic eutils gnuconfig
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on Blackbox -- has tabs."
@@ -13,7 +13,7 @@ HOMEPAGE="http://fluxbox.sf.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc hppa"
+KEYWORDS="x86 ~ppc sparc hppa ~mips"
 
 mydoc="ChangeLog COPYING NEWS"
 if pkg-config xft
@@ -41,6 +41,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Allow configure to detect mipslinux systems
+	use mips && gnuconfig_update
 
 	commonbox_src_compile
 
