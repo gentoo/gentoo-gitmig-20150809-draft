@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.94 2004/10/10 09:06:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.95 2004/10/18 05:27:26 hardave Exp $
+
+  17 Oct 2004; Hardave Riar <hardave@gentoo.org> ruby-1.6.8-r11.ebuild:
+  Stable on mips, bug #60525.
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/oniguruma-2.3.1-fix-ppc.patch, ruby-1.6.8-r11.ebuild,
