@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/robotfindskitten
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.4 2004/09/04 23:18:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.5 2004/12/28 18:11:51 josejx Exp $
+
+  29 Dec 2004; Joseph Jezak <josejx@gentoo.org>
+  robotfindskitten-1.4142135.349.ebuild:
+  Marked ppc stable.
 
   05 Sep 2004; David Holm <dholm@gentoo.org>
   robotfindskitten-1.4142135.349.ebuild:
