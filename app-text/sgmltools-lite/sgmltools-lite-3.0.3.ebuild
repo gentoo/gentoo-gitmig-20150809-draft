@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3.ebuild,v 1.4 2001/10/21 22:11:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3.ebuild,v 1.5 2002/02/15 08:48:09 gbevin Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://prdownloads.sourceforge.net/sgmltools-lite/${P}.tar.gz
@@ -32,6 +32,10 @@ src_compile() {
 }
 
 src_install () {
+	mv bin/gensgmlenv bin/gensgmlenv_orig
+	sed -e "s#/etc/sgml/sgml.env#${D}/etc/sgml/sgml.env#g" \
+		-e "s#/etc/sgml/sgml.cenv#${D}/etc/sgml/sgml.cenv#g" \
+		bin/gensgmlenv_orig > bin/gensgmlenv
 	make DESTDIR=${D} install
 
 	cd ${S}/bin
