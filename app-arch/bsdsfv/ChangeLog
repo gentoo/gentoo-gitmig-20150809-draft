@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/bsdsfv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.8 2003/04/16 20:13:55 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.9 2003/06/29 20:34:36 vapier Exp $
+
+*bsdsfv-1.17 (29 Jun 2003)
+
+  29 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *bsdsfv-1.14 (15 Apr 2003)
 
