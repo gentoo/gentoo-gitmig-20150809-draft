@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.138 2003/10/21 21:28:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.139 2003/10/26 15:43:27 azarah Exp $
+
+*gcc-3.3.2-r1 (26 Oct 2003)
+
+  26 Oct 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2-r1.ebuild:
+  New snapshot of gcc-3_3-rhl-branch CVS branch that fixes the visibility issues
+  for x86 at least.
 
   21 Oct 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.2.ebuild:
   Mask this puppy again until I figure out why it breaks visibility attribute
