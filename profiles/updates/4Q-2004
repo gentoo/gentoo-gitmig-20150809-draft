@@ -61,3 +61,4 @@ move app-sci/hmmer sci-biology/hmmer
 move app-sci/ncbi-tools sci-biology/ncbi-tools
 move app-sci/clustalw sci-biology/clustalw
 move app-sci/primer3 sci-biology/primer3
+move app-sci/aaindex sci-biology/aaindex
