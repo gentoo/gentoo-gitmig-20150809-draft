@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 00201f5a52464447ca7b5c3a2ca8fa9d ChangeLog 77598
-MD5 197f9713e4529bbfe6ef20b7633bf437 gcc-2.95.3-r8.ebuild 8541
+MD5 aa7f9fb82c023a1343426871e52d4a7d gcc-2.95.3-r8.ebuild 7442
 MD5 f95107278e3a6306068d0f9ef63fc5de gcc-3.2.3-r4.ebuild 19890
 MD5 56c1cbd04a9101da0f0ea0c6b0fdc491 gcc-3.3.2-r2.ebuild 18040
 MD5 86682b4c98aa21f0132b1d9cbc0bde2c gcc-3.3.2-r5.ebuild 21364
@@ -21,7 +21,6 @@ MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 87ff3720447f20ff12321c1fed5ea2d8 gcc-3.4.3.20050110.ebuild 5290
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
-MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
 MD5 5a9db19cd5ad6ad16b0f838d525d842a files/digest-gcc-3.3.3-r3 522
 MD5 9b68e03bb1a6a1494399c8a6537bb766 files/digest-gcc-3.4.3-r1 527
 MD5 a3edf5e9d8bb500178f8dd29c1f9eadd files/digest-gcc-3.3.5-r1 442
@@ -33,6 +32,7 @@ MD5 6df16eb92245a931ecfc4cbcc73c84cf files/digest-gcc-3.3.4-r1 442
 MD5 cf81ae4b2da79c34a005da1182c40134 files/digest-gcc-3.3.2 130
 MD5 9bb4a999eb75c9e3eadab9aa71e91879 files/fix_libtool_files.sh 1731
 MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r2 361
+MD5 47eeaf2ebd915e107081602b157b4e45 files/digest-gcc-2.95.3-r8 137
 MD5 60e02a7ee2f579ac72ab223679d81e7a files/gcc-spec-env.patch 819
 MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
 MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
@@ -116,7 +116,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB6HSRroRuSHgZdywRAkDpAJ4uemhcptnSVEpDlF1W3d6FAQc7BQCeJbVO
-aSsIPr+M2PHMS9QZ5WRrYDI=
-=DrZM
+iD8DBQFB6Ig2roRuSHgZdywRAs97AJ44NokebrnlJjXLaqrCrRJja9SENwCfa2sX
+mxTG0AxmgoqWnGv/MuG2yUg=
+=GBMs
 -----END PGP SIGNATURE-----
