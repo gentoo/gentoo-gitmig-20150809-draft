@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.18 2003/05/31 09:01:32 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.19 2003/08/17 07:23:53 pauldv Exp $
+
+*neon-0.23.9 (17 Aug 2003)
+
+  17 Aug 2003; Paul de Vrieze <pauldv@gentoo.org> neon-0.23.8.ebuild,
+  neon-0.23.9.ebuild:
+  Add new upstream version that could probably fix some pkg-config bugs
+
+  17 Aug 2003; Paul de Vrieze <pauldv@gentoo.org> neon-0.23.8.ebuild:
+  Mark neon stable as it is needed for subversion to become stable
 
   31 May 2003; root <root@gentoo.org> neon-0.21.3.ebuild, neon-0.23.2.ebuild,
   neon-0.23.3.ebuild, neon-0.23.5.ebuild, neon-0.23.8.ebuild:
