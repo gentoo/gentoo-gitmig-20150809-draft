@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/thinkeramik
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.16 2004/05/26 00:05:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.17 2004/06/04 16:00:01 carlo Exp $
+
+  04 Jun 2004; Carsten Lohrke <carlo@gentoo.org> metadata.xml,
+  thinkeramik-3.2.1.ebuild:
+  wrong herd name: kde -> kde-other
+  deprecated eclass: kde-base -> kde
 
 *thinkeramik-3.2.1 (25 May 2004)
 
