@@ -1,14 +1,27 @@
-MD5 4e8eebd835dbf4f24182d7cce7af8ab7 opengl-update-1.7.2.ebuild 541
-MD5 8c379f3db72c5092a1aec955685a4a66 opengl-update-2.0_pre4-r1.ebuild 1742
-MD5 020171f71e450cf568dac04eabd695f4 opengl-update-1.8.2.ebuild 1594
-MD5 e09cd4f7c702a46b98cc51358fe1e8fa ChangeLog 10476
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aa9d3d45162d00f2d519830de2e7934e ChangeLog 10709
 MD5 06e66398889b0eaf43fd1a634521bdb0 metadata.xml 318
 MD5 5b48e832f6c2794525ab473968ad7071 opengl-update-1.5.ebuild 525
-MD5 bd56a074f4d53f9ff26e828e0a34cbf3 files/opengl-update-1.7.2 4975
-MD5 17ebb42dcebb9fcf0d717b135586fca3 files/opengl-update-1.8.2 8303
-MD5 0ca46fbf32086f062609ee83fc042c87 files/opengl-update-1.5 3774
+MD5 4e8eebd835dbf4f24182d7cce7af8ab7 opengl-update-1.7.2.ebuild 541
+MD5 020171f71e450cf568dac04eabd695f4 opengl-update-1.8.2.ebuild 1594
+MD5 8c379f3db72c5092a1aec955685a4a66 opengl-update-2.0_pre4-r1.ebuild 1742
+MD5 e725d080e1e71e9d14d5c77266a65322 opengl-update-2.1_pre1.ebuild 2465
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-opengl-update-1.5 0
-MD5 745fdf145b2e08f0c996a3ca40b1ca16 files/digest-opengl-update-2.0_pre4-r1 64
-MD5 976b6bf00cfdfeaa6cdadbfd49cd2e95 files/opengl-update-2.0_pre4 9755
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-opengl-update-1.7.2 0
 MD5 745fdf145b2e08f0c996a3ca40b1ca16 files/digest-opengl-update-1.8.2 64
+MD5 745fdf145b2e08f0c996a3ca40b1ca16 files/digest-opengl-update-2.0_pre4-r1 64
+MD5 0ca46fbf32086f062609ee83fc042c87 files/opengl-update-1.5 3774
+MD5 bd56a074f4d53f9ff26e828e0a34cbf3 files/opengl-update-1.7.2 4975
+MD5 17ebb42dcebb9fcf0d717b135586fca3 files/opengl-update-1.8.2 8303
+MD5 54a36998c154d8f5b6958956ff15d555 files/opengl-update-2.1_pre1 7471
+MD5 976b6bf00cfdfeaa6cdadbfd49cd2e95 files/opengl-update-2.0_pre4 9755
+MD5 745fdf145b2e08f0c996a3ca40b1ca16 files/digest-opengl-update-2.1_pre1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB9Z1HArHZZzCEUG0RAmY/AJ92Dh36pmkOwDnJ3G9do0ii4ll3XwCfX9vS
+sdbEVpm7VEJr3/O36aAPUzU=
+=qM1S
+-----END PGP SIGNATURE-----
