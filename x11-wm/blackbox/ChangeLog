@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.1 2002/02/01 21:53:39 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.2 2002/02/02 11:48:55 aeoo Exp $
+
+*blackbox-0.62.1 (2 Feb 2002)
+
+  2 Feb 2002; Leo Lipelis <aeoo@gentoo.org> ChangeLog :
+
+  Blackbox ebuild update.
 
 *blackbox-0.61.1-r1 (1 Feb 2002)
 
