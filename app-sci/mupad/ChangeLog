@@ -1,10 +1,6 @@
 # ChangeLog for app-sci/mupad
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/ChangeLog,v 1.8 2004/07/01 11:53:26 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  mupad-2.5.2-r1.ebuild, mupad-2.5.2-r2.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/ChangeLog,v 1.9 2004/07/01 19:38:47 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mupad-2.5.2-r1.ebuild, mupad-2.5.2-r2.ebuild:

@@ -1,10 +1,6 @@
 # ChangeLog for app-sci/tbass
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.15 2004/07/01 11:55:06 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  tbass-20030108.ebuild, tbass-20030725.3.3.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/ChangeLog,v 1.16 2004/07/01 19:38:48 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   tbass-20030108.ebuild, tbass-20030725.3.3.ebuild:
