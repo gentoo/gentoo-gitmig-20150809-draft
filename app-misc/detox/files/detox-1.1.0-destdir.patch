@@ -1,0 +1,29 @@
+--- detox-1.1.0/Makefile.in.orig	2005-03-05 21:58:20.021389152 +0000
++++ detox-1.1.0/Makefile.in	2005-03-05 21:59:01.885024912 +0000
+@@ -90,16 +90,16 @@
+ #
+ 
+ install: detox
+-	${INSTALL} -d ${bindir}
+-	${INSTALL} -d ${mandir}/man1
+-	${INSTALL} -d ${mandir}/man5
+-	${INSTALL} -d ${sysconfdir}
+-	${INSTALL} -d ${datadir}/detox
+-	${INSTALL} detox ${bindir}
+-	${INSTALL} detox.1 ${mandir}/man1
+-	${INSTALL} detoxrc.5 detox.tbl.5 ${mandir}/man5
+-	${INSTALL} detoxrc ${sysconfdir}
+-	${INSTALL} iso8859_1.tbl unicode.tbl ${datadir}/detox
++	${INSTALL} -d ${DESTDIR}/${bindir}
++	${INSTALL} -d ${DESTDIR}/${mandir}/man1
++	${INSTALL} -d ${DESTDIR}/${mandir}/man5
++	${INSTALL} -d ${DESTDIR}/${sysconfdir}
++	${INSTALL} -d ${DESTDIR}/${datadir}/detox
++	${INSTALL} detox ${DESTDIR}/${bindir}
++	${INSTALL} detox.1 ${DESTDIR}/${mandir}/man1
++	${INSTALL} detoxrc.5 detox.tbl.5 ${DESTDIR}/${mandir}/man5
++	${INSTALL} detoxrc ${DESTDIR}/${sysconfdir}
++	${INSTALL} iso8859_1.tbl unicode.tbl ${DESTDIR}/${datadir}/detox
+ 
+ clean:
+ 	rm -f *.o core *~ a.out *.core

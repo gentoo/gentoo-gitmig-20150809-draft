@@ -1,0 +1,18 @@
+--- detox-1.1.0/Makefile.in.orig	5 Mar 2005 05:02:12 -0000	1.24
++++ detox-1.1.0/Makefile.in	6 Mar 2005 05:19:41 -0000
+@@ -72,11 +72,14 @@
+ 	${LEX} config_file.l
+ 	mv lex.yy.c config_file_l.c
+ 
+-config_file_y.h config_file_y.c: config_file.y
++config_file_y.c: config_file.y
+ 	${YACC} -d config_file.y
+ 	mv y.tab.c config_file_y.c
+ 	mv y.tab.h config_file_y.h
+ 
++# In case some future rule depends on config_file_y.h
++config_file_y.h: config_file_y.c
++
+ detox_path.h: config.status
+ 	> detox_path.h
+ 	echo "char default_etc_dir[]=\"${sysconfdir}\";" >> detox_path.h
