@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabber.rc6-r5,v 1.1 2004/01/12 00:04:44 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabber.rc6-r5,v 1.2 2004/02/02 21:40:45 humpback Exp $
 depend() {
         need net
 }
@@ -27,9 +27,13 @@ start() {
 stop() {
         ebegin "Stopping Jabber Server"
         killall jabberd
-		if [ "$addon" == "/etc/jabber/jit.xml" ]; then
-    	    killall jit-wpjabber
+	if [ "$addon" == "/etc/jabber/jit.xml" ]; then
+		killall jit-wpjabber
         fi
     	sleep 2
+	killall -9 jabberd
+	if [ "$addon" == "/etc/jabber/jit.xml" ]; then
+		killall -9 jit-wpjabber
+	fi
         eend $?
 }
