@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.4.1.ebuild,v 1.2 2003/03/22 12:41:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.4.1.ebuild,v 1.3 2003/04/06 08:12:08 absinthe Exp $
 
 inherit jakarta-commons
 
@@ -19,7 +19,7 @@ RDEPEND=">=virtual/jdk-1.3
 	>=dev-java/commons-logging-1.0.2"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ppc sparc"
 IUSE="doc jikes junit"
 
 src_compile() {
