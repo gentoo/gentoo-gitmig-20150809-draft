@@ -1,4 +1,6 @@
 MD5 68bf5fa3b9bda25c33a40e939d156a79 files/digest-evas-1.0.0.20031013_pre12 79
+MD5 2a4c365f5f5f53fa58277726e410163c files/digest-evas-1.0.0.20031018_pre12 79
+MD5 65ca614ff35e7d1c3eaea54f9040fbbe evas-1.0.0.20031018_pre12.ebuild 2314
 MD5 26c809f49210a4b8bdc7770cf56ea15f evas-1.0.0.20031013_pre12.ebuild 2285
-MD5 eb206a897448ccf6adc1ef9b4cb07b0c ChangeLog 784
+MD5 46e3f63dad84d91847158ef8484aa155 ChangeLog 913
 MD5 f252e043af6a26e0d6d472a0af071f6d metadata.xml 1304
