@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (13 Aug 2002)
+# masked for testing.  PLEASE TEST
+>=app-text/aspell-0.50_pre20020730
+
 # <styx@gentoo.org> (13 Aug 2002)
 # masked for b0rkage, removing them soon
 <dev-util/glimmer-1.2.1-r3
