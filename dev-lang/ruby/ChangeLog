@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.102 2004/11/09 20:22:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.103 2004/11/09 20:34:14 fmccor Exp $
+
+  09 Nov 2004; Ferris McCormick <fmccor@gentoo.org> ruby-1.8.2_pre3.ebuild:
+  Stable for sparc wrt security Bug 69985. My tests and applications work as
+  expected.
 
   10 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
   -files/oniguruma-2.3.1-fix-ppc.patch, +files/oniguruma-2.3.1-gentoo.patch,
