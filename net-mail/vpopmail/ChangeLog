@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.47 2004/11/23 00:07:49 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.48 2005/02/21 05:59:38 robbat2 Exp $
+
+  20 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  vpopmail-5.4.6-r1.ebuild:
+  Bug #80506, need workaround for portage bug.
 
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
