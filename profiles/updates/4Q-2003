@@ -28,3 +28,4 @@ move app-misc/xtrlock x11-misc/xtrlock
 move app-misc/xbatt x11-misc/xbatt
 move app-misc/xnc x11-misc/xnc
 move app-misc/xlockmore x11-misc/xlockmore
+move app-misc/xchm x11-misc/xchm
