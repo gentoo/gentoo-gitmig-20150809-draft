@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-charconv/irssi-charconv-1.13.ebuild,v 1.3 2004/06/24 23:05:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-charconv/irssi-charconv-1.13.ebuild,v 1.4 2004/07/24 01:39:26 swegener Exp $
+
+inherit gcc flag-o-matic
 
 IRSSI_VERSION="0.8.6"
 
@@ -14,27 +16,25 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=">=dev-libs/glib-1.2
-		sys-libs/ncurses
-		net-irc/irssi"
-RDEPEND=""
+	sys-libs/ncurses
+	>=net-irc/irssi-${IRSSI_VERSION}"
 
-src_unpack() {
-	unpack ${A}
-}
+S=${WORKDIR}
 
 src_compile() {
 	IRSSI="${WORKDIR}/irssi-${IRSSI_VERSION}"
 
+	append-flags -fPIC
+
 	touch ${IRSSI}/config.h && \
-	gcc ${FILESDIR}/charconv.c -Wall -g -o ${T}/libcharconv.so -shared \
-	-I$IRSSI/src -I$IRSSI/src/core -I$IRSSI/src/fe-common/core \
-	`glib-config --cflags`
+		$(gcc-getCC) ${FILESDIR}/charconv.c -Wall -g ${CFLAGS} -o ${T}/libcharconv.so -shared \
+		-I$IRSSI/src -I$IRSSI/src/core -I$IRSSI/src/fe-common/core \
+		`glib-config --cflags`
 }
 
 src_install() {
-	insinto /usr/lib/irssi/modules
-	doins ${T}/libcharconv.so
+	exeinto /usr/lib/irssi/modules
+	doexe ${T}/libcharconv.so
 
 	dodoc ${FILESDIR}/README
 }
-
