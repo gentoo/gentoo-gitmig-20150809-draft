@@ -57,10 +57,6 @@
 =app-games/quakeforge-0.5.0
 
 # <phoenix@gentoo.org> (09 Sep 2002)
-# masked for testing
->=app-emulation/wine-20020804
-
-# <phoenix@gentoo.org> (09 Sep 2002)
 # Testing a workaround in emerge-webrsync
 =app-admin/gentoolkit-0.1.17-r1
 
@@ -211,10 +207,6 @@ x11-themes/redhat-artwork
 # <cselkirk@gentoo.org> (31 Aug 2002)
 # masked for testing
 =net-libs/libpcap-0.7.1-r1
-
-# <phoenix@gentoo.org> (31 Aug 2002)
-# masked for testing
-=app-emulation/wine-20020710-r2
 
 # <phoenix@gentoo.org> (30 Aug 2002)
 # masked for testing
