@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-lyrc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lyrc/ChangeLog,v 1.1 2004/06/16 19:39:41 eradicator Exp $
+
+*xmms-lyrc-0.3 (16 Jun 2004)
+
+  16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +files/xmms-lyrc-0.3-makefile.patch, +xmms-lyrc-0.3.ebuild:
+  Initial ebuild submitted in bug #34552 by Eric Villani
+  <caligari@libertysurf.fr>.
+
