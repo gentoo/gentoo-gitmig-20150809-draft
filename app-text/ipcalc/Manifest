@@ -2,14 +2,12 @@
 Hash: SHA1
 
 MD5 77a0a0b7daf584bea95d58dda8da0297 ChangeLog 1215
-MD5 284d06b815258878a7db319b3a078f6f ipcalc-0.35.ebuild 687
 MD5 1372d774a6ce6765b40c71eeeb072943 ipcalc-0.37.ebuild 648
-MD5 ef5f53a6735c525771c20b1e5efbda4f files/digest-ipcalc-0.35 61
 MD5 db6d4e6711e63467c59f936c53991bd2 files/digest-ipcalc-0.37 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBh5+kHTu7gpaalycRAhC4AKDhMXQ5rTnRRxRaQ7JmxE/rQY16TgCdE7wz
-yff3lhjWi5V4YfAxdeFoh/E=
-=JSkV
+iD8DBQFBh5/oHTu7gpaalycRAkrRAKCJNK9ED1hSbhXVkgtfl0hlE6ed8QCg3Yq3
+WnXbYhfezdJFqJLtarGHiT8=
+=JiCF
 -----END PGP SIGNATURE-----
