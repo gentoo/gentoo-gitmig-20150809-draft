@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/splint
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.1 2003/05/08 17:44:29 rac Exp $
+
+*splint-3.0.1.6 (08 May 2003)
+
+  08 May 2003; <rac@gentoo.org> splint-3.0.1.6.ebuild:
+  initial import. based on ebuild submitted by Matt Hartley
+  <matthartley@yahoo.com> in bug 14410.
+
