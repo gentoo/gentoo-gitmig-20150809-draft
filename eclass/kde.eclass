@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.84 2003/10/11 11:19:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.85 2003/12/30 22:54:59 gmsoft Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -113,23 +113,9 @@ kde_src_compile() {
 				# due to the messed up way configure searches for things
 				export KDEDIRS="${PREFIX}:${KDEDIR}"
 
-				# *FLAGS need to be set correctly if we want a succefull build
-				if [ "${ARCH}" = "hppa" ]
-				then
-					export LDFLAGS="-ffunction-sections -Wl,--stub-group-size=25000 -fPIC"
-					export CFLAGS="-O1 -pipe"
-					export CXXFLAGS="-O1 -pipe"
-				fi
-				
 				cd $S
 				./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
 
-				# Seems ./configure add -O2 by default but we don't want it but we need -fPIC
-				if [ "${ARCH}" = "hppa" ]
-				then
-					einfo Fixating Makefiles
-					find ${S} -name Makefile | while read a; do cp $a $a.orig; sed -e s/-O2/-ffunction-sections\ -fPIC/ $a.orig > $a; done
-				fi
 				;;
 			make)
 				export PATH="${KDEDIR}/bin:${PATH}"
