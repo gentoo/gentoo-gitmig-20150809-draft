@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.16 2004/08/29 08:02:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.17 2004/11/04 14:59:53 voxus Exp $
+
+*cdk-4.9.11.20031210-r1 (04 Nov 2004)
+
+  04 Nov 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  +cdk-4.9.11.20031210-r1:
+  Closing bug #66332.
 
   29 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   cdk-4.9.11.20031210.ebuild:
