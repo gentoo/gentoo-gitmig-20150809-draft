@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/iso-relax
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/ChangeLog,v 1.1 2004/11/14 14:55:39 axxo Exp $
+
+*iso-relax-20041111 (14 Nov 2004)
+
+  14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +files/build.xml, +iso-relax-20041111.ebuild:
+  initial import, ebuild submitted by Jan Brinkmann <lucky@the-luckyduck.de>
+

@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aa666b80225107819ea14a1ea945fdba iso-relax-20041111.ebuild 993
+MD5 be2a402cd6e75235e61caa41b7fefd68 ChangeLog 432
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 4467af450e2c64d807928bbd784d8012 files/digest-iso-relax-20041111 66
+MD5 58122807af7666b9c9286aaf556d8f2a files/build.xml 1922
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBl3H+/rLF9B432nYRAtWOAJwKMikg9B9iioFHCOU8FbChTsduNgCgtkvT
+tmBapd2NZqGQObWV//sXLvY=
+=UVxF
+-----END PGP SIGNATURE-----
