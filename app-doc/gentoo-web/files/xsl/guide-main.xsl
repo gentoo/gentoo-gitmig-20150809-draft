@@ -29,12 +29,15 @@
 					<tr><td class="logobg" valign="top" align="center" height="48"><img src="/images/gbot-new.gif"/></td></tr>
 				</table>
 			</td>
-			<td class="menu" valign="bottom" height="168" width="70%" bgcolor="#000000">
+			<td valign="bottom" height="168" width="70%" bgcolor="#000000">
 				<!--Netscape 4.7 table hack-->
+				<p class="menu">
 				<xsl:variable name="mylink"><xsl:value-of select="/guide/@link"/></xsl:variable>
 				main menu ::<br/>
 				&#160;&#160;<a class="oldlink" href="/index.html">About Gentoo Linux</a><br/>
-				&#160;&#160;<a class="oldlink" href="/index-download.html">Download/Install</a><br/> <br/>
+				&#160;&#160;<a class="oldlink" href="/index-download.html">Download/Install</a><br/> 
+				&#160;&#160;<a class="oldlink" href="/index-changelog.html">CVS Changelog</a><br/> 
+				<br/>
 				<xsl:choose>
 				<xsl:when test="/guide/@type='project'">
 					projects
@@ -45,6 +48,7 @@
 				</xsl:choose>
 				::<br/>
 				&#160;&#160;<a class="highlight" href="{$mylink}"><xsl:value-of select="title"/></a>
+				</p>
 			</td>
 		</tr>
 		<tr>
@@ -83,6 +87,7 @@
 		<p class="dochead"><xsl:value-of select="/guide/title"/></p>
 <xsl:apply-templates select="chapter"/> 
 <br/>
+<br/>
 <!--content end-->
 </td></tr></table>
 <!--Netscape 4.7 hack end-->
@@ -103,7 +108,7 @@
 <xsl:template match="/mainpage">
 <html>
 <head>
-    <link title="new" rel="stylesheet" href="main-new.css" type="text/css"></link>
+    <link title="new" rel="stylesheet" href="/main-new.css" type="text/css"></link>
 	<title>Gentoo Linux -- <xsl:value-of select="title"/></title>
 </head>
 <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff">
@@ -116,8 +121,9 @@
 					<tr><td class="logobg" valign="top" align="center" height="48"><img src="/images/gbot-new.gif"/></td></tr>
 				</table>
 			</td>
-			<td class="menu" valign="bottom" height="168" width="70%" bgcolor="#000000">
+			<td valign="bottom" height="168" width="70%" bgcolor="#000000">
 				<!--Netscape 4.7 table hack-->
+				<p class="menu">
 				<xsl:choose>
 					<xsl:when test="/mainpage/@id='about'">
 						<a class="highlight" href="/index.html"> About Gentoo Linux</a> |
@@ -128,12 +134,21 @@
 				</xsl:choose>
 				<xsl:choose>
 					<xsl:when test="/mainpage/@id='download'">
-						<a class="highlight" href="/index-download.html">Download/Install</a>
+						<a class="highlight" href="/index-download.html">Download/Install</a> |
 					</xsl:when>
 					<xsl:otherwise>
-						<a class="menulink" href="/index-download.html">Download/Install</a>
+						<a class="menulink" href="/index-download.html">Download/Install</a> |
 					</xsl:otherwise>
 				</xsl:choose>
+				<xsl:choose>
+					<xsl:when test="/mainpage/@id='changelog'">
+						<a class="highlight" href="/index-changelog.html">CVS Changelog</a>
+					</xsl:when>
+					<xsl:otherwise>
+						<a class="menulink" href="/index-changelog.html">CVS Changelog</a>
+					</xsl:otherwise>
+				</xsl:choose>
+				</p>
 			</td>
 		</tr>
 		<tr>
@@ -150,20 +165,23 @@
 						<p class="infolist"><a href="http://www.ibiblio.org/gentoo">ibiblio.org mirror</a></p>
 						<p class="infolist"><a href="http://download.sourceforge.net/pub/mirrors/metalab/Linux/distributions/gentoo/">SourceForge mirror</a></p>
 
+						<p class="infosub">User Documentation:</p>
+						<p class="infolist"><a href="/doc/faq.html">Gentoo Linux FAQ</a></p>
+						<p class="infolist"><a href="/doc/install.html">Gentoo Linux CD Installation Guide</a></p>
+						<p class="infolist"><a href="/doc/portage-user.html">Portage User Guide</a></p>
+						<p class="infolist"><a href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a></p>
+						
+						<p class="infosub">Developer Documentation:</p>
+						<p class="infolist"><a href="/doc/xml-guide.html">Gentoo Linux Documentation Guide</a></p>
+						<p class="infolist"><a href="/doc/gentoo-howto.html">Development HOWTO</a></p>
+
+	
 						<p class="infosub">Mailing Lists (click to subscribe/access archive):</p>
 						<p class="infolist"><a href="http://www.gentoo.org/mailman/listinfo/gentoo-dev">Developer discussion</a></p>
 						<p class="infolist"><a href="http://www.gentoo.org/mailman/listinfo/gentoo-announce">Announcements</a></p>
 						<p class="infolist"><a href="http://www.gentoo.org/mailman/listinfo/gentoo-cvs">Daily CVS log</a></p>
 
-						<p class="infosub">Gentoo Linux Documentation:</p>
-						<p class="infolist"><a href="doc/faq.html">Gentoo Linux FAQ</a></p>
-						<p class="infolist"><a href="doc/xml-guide.html">Gentoo Linux Documentation Guide</a></p>
-						<p class="infolist"><a href="doc/install.html">Gentoo Linux CD Installation Guide</a></p>
-						<p class="infolist"><a href="doc/portage-user.html">Portage User Guide</a></p>
-						<p class="infolist"><a href="doc/gentoo-howto.html">Development HOWTO</a></p>
-						<p class="infolist"><a href="doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a></p>
-
-						<p class="infosub">Other Resources:</p>
+												<p class="infosub">Other Resources:</p>
 						<p class="infolist">Use <a href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> to browse our repository</p>
 						<p class="infolist">IRC: #gentoo on <a href="http://www.openprojects.net/">irc.openprojects.net</a></p>
 						</td></tr></table>
@@ -193,6 +211,7 @@
 		<img src="/images/gentoo-new.gif"/><br/>
 		<p class="subhead"><xsl:value-of select="/mainpage/title"/></p>
 <xsl:apply-templates select="chapter"/> 
+<br/>
 <br/>
 <!--content end-->
 </td></tr></table>
@@ -239,11 +258,9 @@
 </xsl:template>
 
 <xsl:template match="section">
-	<xsl:if test="/guide">
-		<xsl:if test="title">
-			<xsl:variable name="sectid"><xsl:value-of select="$chapid"/>_sect<xsl:number/></xsl:variable>
-			<p class="secthead"><a name="{$sectid}"><xsl:value-of select="title"/>&#160;</a></p>
-		</xsl:if>
+	<xsl:if test="title">
+		<xsl:variable name="sectid"><xsl:value-of select="$chapid"/>_sect<xsl:number/></xsl:variable>
+		<p class="secthead"><a name="{$sectid}"><xsl:value-of select="title"/>&#160;</a></p>
 	</xsl:if>
 	<xsl:apply-templates select="body"/>
 </xsl:template>
