@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.1.ebuild,v 1.5 2004/07/06 23:55:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.1.ebuild,v 1.6 2004/08/06 00:31:37 arj Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 
 IUSE="oggvorbis"
 
-RDEPEND=">=dev-db/sqlite-2.8
+RDEPEND="=dev-db/sqlite-2*
 	>=media-libs/id3lib-3.8
 	>=media-sound/xmms-1.2.7-r20
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
