@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/bittorrent-theshadow
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/ChangeLog,v 1.17 2004/01/22 02:55:38 rizzo Exp $
+
+*bittorrent-theshadow-5.8.7 (21 Jan 2004)
+
+  21 Jan 2004; Don Seiler <rizzo@gentoo.org>;
+  bittorrent-theshadow-5.8.7.ebuild, metadata.xml:
+  Re-adding from scratch. Thanks Anders Bruun Olsen for submitting. Takes care
+  of Bug 36112
+
