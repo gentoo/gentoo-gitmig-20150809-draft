@@ -1,5 +1,15 @@
-MD5 70b1837e39b202c61e7f12f4dd514baf toolbar-0.4.ebuild 1112
-MD5 c47a6c6700f854bccc4e918e1e9a61d7 ChangeLog 712
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1f25b7c5d8a19706706847c2d0c810d9 toolbar-0.4.ebuild 1165
+MD5 e8a15b02440227c782a5d1415db0083b ChangeLog 848
 MD5 0a7e021f886fb1b2e57c3ceb9eb8f9e7 metadata.xml 308
 MD5 e5ce19963fde6a9749d952db98ef48cd files/build.xml 528
 MD5 12b4db855198c8649910a8a07208d7cf files/digest-toolbar-0.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSRcO06ebR+OMO78RAvJcAKCKs0NI/Bj2etONhL11XmI5KjgXCgCgiJh2
+iNiST/a3MYyps4XwR1C1DhE=
+=A8bF
+-----END PGP SIGNATURE-----
