@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.25 2004/08/05 03:47:15 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.26 2004/08/08 12:33:40 kugelfang Exp $
+
+  08 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/synaptics-0.13.4-amd64.patch:
+  Added correct patch on amd64.
 
   18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> files/rc.init:
   Added full path to syndaemon in initscript, closing #56827.
