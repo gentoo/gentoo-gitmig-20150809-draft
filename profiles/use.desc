@@ -1,20 +1,6 @@
-#
-# The purpose of this file is to record all possible use items available 
-# in Gentoo at this time.
-#
-# Gentoo Developers:
-# * If you add a use item to an ebuild, please add it to this list
-#   along with a short description.
-# * If you remove a use item from this list, make sure it is no longer used
-#   in ANY ebuild.
-# * If you think you can write a better description of a use item, please do.
-# * If you see use items without a description, and know what it means,
-#   please fill it in.
-#
-# <jhhudso@gentoo.org>
-#
-# Last updated: 16 Mar 2003 21:31:03 CDT
-#
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.81 2003/03/17 05:33:41 jhhudso Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
