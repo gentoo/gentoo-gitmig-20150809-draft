@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.8 2005/02/24 20:05:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.9 2005/03/02 21:23:29 swegener Exp $
+
+*x11vnc-0.7-r1 (02 Mar 2005)
+
+  02 Mar 2005; Sven Wegener <swegener@gentoo.org> files/0.7-autotools.patch,
+  -files/0.7.1-autotools.patch, +x11vnc-0.7-r1.ebuild,
+  +x11vnc-0.7.1-r1.ebuild, -x11vnc-0.7.1.ebuild, -x11vnc-0.7.ebuild:
+  Revision bump for both arch and ~arch version. No longer link against the
+  system libvncserver. The included libvncserver is more recent and includes
+  fixes not yet included in the system libvncserver.
 
 *x11vnc-0.7.1 (24 Feb 2005)
 

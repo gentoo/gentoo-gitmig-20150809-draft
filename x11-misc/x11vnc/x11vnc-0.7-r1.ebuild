@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.7.ebuild,v 1.5 2005/02/06 17:58:47 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.7-r1.ebuild,v 1.1 2005/03/02 21:23:29 swegener Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ RDEPEND="virtual/x11
 	)"
 DEPEND="${RDEPEND}
 	net-libs/libvncserver
-	sys-devel/autoconf"
+	sys-devel/autoconf
+	sys-devel/automake"
 
 src_unpack() {
 	unpack ${A}
@@ -32,10 +33,13 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
+	use jpeg && myconf="--enable-zlib"
+
 	econf \
 		$(use_with jpeg) \
-		$(use_with jpeg zlib) \
 		$(use_with zlib) \
+		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
