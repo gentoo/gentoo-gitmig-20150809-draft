@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r3.ebuild,v 1.1 2004/09/05 11:03:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r3.ebuild,v 1.2 2004/09/05 11:06:59 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -67,8 +67,8 @@ src_install() {
 	cat >${D}/$(get_libdir)/pkgconfig/silc.pc <<EOF
 prefix=/usr
 exec_prefix=\${prefix}
-libdir=/usr/$(get_libdir)
-includedir=/usr/include
+libdir=\${prefix}/$(get_libdir)
+includedir=\${prefix}/include/${PN}
 
 Name: silc
 Version: ${PV}
