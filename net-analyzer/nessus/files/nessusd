@@ -11,7 +11,7 @@ EXE=/usr/sbin/nessusd
 start() {
 
 		ebegin "Starting $SERVICE..."
-     		start-stop-daemon --start --quiet --exec $EXE 
+     		start-stop-daemon --start --quiet --exec $EXE -- -D
 		eend $? "Started $SERVICE." "Error Starting $SERVICE."
 }
 
