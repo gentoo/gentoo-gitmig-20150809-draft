@@ -1,19 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gt-itm/gt-itm-19961004.ebuild,v 1.1 2004/01/11 09:16:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gt-itm/gt-itm-19961004.ebuild,v 1.2 2004/05/25 05:10:20 mr_bones_ Exp $
 
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="A collection of routines to generate and analyze graphs using a wide variety of models for internetwork topology"
 HOMEPAGE="http://www.cc.gatech.edu/fac/Ellen.Zegura/graphs.html
 		  http://www.isi.edu/nsnam/ns/ns-topogen.html#gt-itm"
 SRC_URI="http://www.cc.gatech.edu/fac/Ellen.Zegura/gt-itm/gt-itm.tar.gz
 		 http://www.isi.edu/nsnam/dist/sgb2ns.tar.gz"
+
 LICENSE="as-is BSD"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND="dev-util/sgb"
-S=${WORKDIR}/${PN}
-S2=${WORKDIR}/sgb2ns
+S="${WORKDIR}/${PN}"
+S2="${WORKDIR}/sgb2ns"
 
 src_unpack() {
 	unpack sgb2ns.tar.gz
