@@ -2,8 +2,10 @@ MD5 4883734a02bdc69645efe96dbd31367b pfeifer-sources-2.4.20.1_pre10.ebuild 4480
 MD5 5a04f0f1e82d5a9ae8946ef1bc486dae pfeifer-sources-2.4.21.1_pre1.ebuild 4010
 MD5 8aa9b0fcc508e39928f2b1b3e62136f4 pfeifer-sources-2.4.20.1_pre12.ebuild 4609
 MD5 5d33c8ebfbf4d0694ccd5b289b802e0f pfeifer-sources-2.4.20.1_pre11.ebuild 4570
-MD5 28892618d63d624e3e2091fa43b0bbd0 ChangeLog 5576
+MD5 eba04f2872a9c255f91c70d03960c217 pfeifer-sources-2.4.21.1_pre2.ebuild 3907
+MD5 060dcefe84cadb498f8c107aaa692cfe ChangeLog 5875
 MD5 bd89ec02d8177ccbe69947e0810b5060 files/digest-pfeifer-sources-2.4.20.1_pre10 152
 MD5 1ada6b5466d035f65ce80c2cd3ed060e files/digest-pfeifer-sources-2.4.20.1_pre11 152
 MD5 31a37f6216dd3d883c38e0701ccf686e files/digest-pfeifer-sources-2.4.20.1_pre12 152
 MD5 1b5fbe4e181d5226247c99e9e54dbd8b files/digest-pfeifer-sources-2.4.21.1_pre1 151
+MD5 bd6b12f1ad4db5f2aa1035b0cc291a0d files/digest-pfeifer-sources-2.4.21.1_pre2 151

@@ -1,19 +1,31 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.11 2003/06/19 01:35:41 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.12 2003/06/30 19:09:52 pfeifer Exp $
 
   TODO:
 	update FreeSWAN, aic7xxx
-	readd USAGI
+	readd USAGI - i have a 2.4.21 diff but won't re-add till i clean it up.
 	update some of the docs
+	add ja1 patch 
     
   * Maybe:
     RSBAC
     NPTL (doubtful)
-    skas - probably through yet another use flag... cause most will *not* want this
-  * Not in 2.4.x:
-    XFS will wait for official inclusion in 2.6 til then xfs-sources is the Gentoo
-    kernel for xfs support
+
+*pfeifer-sources-2.4.21.1_pre2 (30 Jun 2003)
+
+30 Jun 2003: Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.21._pre2.ebuild
+ Changes:
+ * Added some of ck3 - Thanks Con.
+ * Updated ACPI to 20030619
+ * Updated proconfig to 0.9.8
+ * bcm4400 & 5700 driver updates
+ * Update to WE16
+ * Updated to usb scanner 0.4.13
+ * Added kmsgdump
+ * Removed imon & reiser xattrs
+ * Other things I am forgetting to mention
+ * Oh, did I mention xfs?
 
 *pfeifer-sources-2.4.21.1_pre1 (18 Jun 2003)
 
