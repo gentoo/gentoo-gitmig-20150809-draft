@@ -2,6 +2,6 @@
 Name=Gtk-Gnutella
 Comment=Gtk+ Gnutella Client
 Exec=gtk-gnutella
-Icon=gtk-gnutella.png
+Icon=/usr/share/gtk-gnutella/pixmaps/icon.xpm
 Terminal=0
 Type=Application
