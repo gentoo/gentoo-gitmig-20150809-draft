@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.51 2005/01/31 17:24:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.52 2005/02/06 22:25:18 kumba Exp $
+
+  06 Feb 2005; Joshua Kinard <kumba@gentoo.org> libpcre-5.0.ebuild:
+  Marked stable on mips.
 
   31 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org> libpcre-5.0.ebuild:
   Stable amd64, sparc, x86.
