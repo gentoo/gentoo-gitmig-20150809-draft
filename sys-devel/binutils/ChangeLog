@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.144 2004/07/24 17:45:54 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.145 2004/07/27 15:07:31 vapier Exp $
+
+  27 Jul 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/2.14/binutils-2.14.90.0.6-build_modules.patch,
+  +files/2.14/binutils-2.14.90.0.6-cflags.patch,
+  +files/2.14/binutils-2.14.90.0.6-conf.patch,
+  +files/2.14/binutils-2.14.90.0.6-debian.patch,
+  binutils-2.14.90.0.6-r7.ebuild:
+  Add patches from uClibc build root.
 
   24 Jul 2004; Travis Tilley <lv@gentoo.org> binutils-2.15.91.0.1-r1.ebuild:
   removing ~amd64 keyword

@@ -1,25 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r7.ebuild,v 1.11 2004/07/15 03:10:41 agriffis Exp $
-
-IUSE="nls bootstrap build"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r7.ebuild,v 1.12 2004/07/27 15:07:31 vapier Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
 
 inherit eutils libtool flag-o-matic
 
-# Generate borked binaries.  Bug #6730
-filter-flags "-fomit-frame-pointer -fssa"
-
 DESCRIPTION="Tools necessary to build programs"
+HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2"
-HOMEPAGE="http://sources.redhat.com/binutils/"
 
-SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="amd64 ~x86 ~ppc ~alpha ~sparc ~mips ~hppa ~ia64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
+IUSE="nls bootstrap build"
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
@@ -27,15 +23,12 @@ DEPEND="virtual/libc
 # This is a hairy one.  Basically depend on dev-lang/perl
 # if "build" or "bootstrap" not in USE.
 
-
-# filter CFLAGS=".. -O2 .." on arm
-if [ "${ARCH}" = "arm" ]; then
-	CFLAGS="$(echo "${CFLAGS}" | sed -e 's,-O[2-9] ,-O1 ,')"
-fi
-
 src_unpack() {
-
 	unpack ${A}
+
+	# Generate borked binaries.  Bug #6730
+	filter-flags -fomit-frame-pointer -fssa
+	use arm && replace-flags -O2 -O1 && replace-flags -O3 -O1
 
 	cd ${S}
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-glibc21.patch
@@ -103,6 +96,12 @@ src_unpack() {
 			}' ${x}.orig > ${x}
 		rm -rf ${x}.orig
 	done
+
+	# some uclibc patches
+	epatch ${FILESDIR}/2.14/${P}-debian.patch
+	epatch ${FILESDIR}/2.14/${P}-conf.patch
+	epatch ${FILESDIR}/2.14/${P}-build_modules.patch
+	epatch ${FILESDIR}/2.14/${P}-cflags.patch
 }
 
 src_compile() {
