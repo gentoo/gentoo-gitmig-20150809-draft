@@ -1,20 +1,20 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/net-mail/courier/files/courier-esmtpd-msa
+# /space/gentoo/cvsroot/gentoo-x86/net-mail/courier/files/courier-ldapaliasd
 
 depend() {
 	need net courier-authdaemond
 }
 
 start() {
-	ebegin "Starting courier esmtpd-msa"
-	/usr/sbin/esmtpd-msa start
+	ebegin "Starting courier ldapaliasd"
+	/usr/sbin/courierldapaliasd start
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping courier esmtpd-msa"
-	/usr/sbin/esmtpd-msa stop
+	ebegin "Stopping courier ldapaliasd"
+	/usr/sbin/courierldapaliasd stop
 	eend $?
 }

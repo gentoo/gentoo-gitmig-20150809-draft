@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/net-misc/bind/files/named.rc6,v 1.3 2002/02/09 01:08:04 woodchip Exp
+# /space/gentoo/cvsroot/gentoo-x86/net-mail/courier/files/courier
 
 depend() {
-	need net courier-authdaemond courier-mta courier-esmtpd courier-esmtpd-ssl courier-esmtpd-msa courier-imapd courier-imapd-ssl courier-pop3d courier-pop3d-ssl
+	need net courier-authdaemond courier-mta courier-esmtpd courier-esmtpd-ssl courier-imapd courier-imapd-ssl courier-pop3d courier-pop3d-ssl
 }
 
 start() {
-	ebegin "Courier MTA startet"
+	ebegin "Courier MTA started"
 	eend $?
 }
 
