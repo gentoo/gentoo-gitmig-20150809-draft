@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.3.ebuild,v 1.10 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.3.ebuild,v 1.11 2003/12/02 04:19:13 iggy Exp $
 
 IUSE="build"
 
@@ -33,6 +33,7 @@ src_unpack() {
 	bzcat ${DISTDIR}/linux-${OKV}-wolk4.0s-to-4.1s.patch.bz2 | patch -p1 || die
 	bzcat ${DISTDIR}/linux-${OKV}-wolk4.1s-to-4.2s.patch.bz2 | patch -p1 || die
 	bzcat ${DISTDIR}/linux-${OKV}-wolk4.2s-to-4.3s.patch.bz2 | patch -p1 || die
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 }
 src_install() {
 	dodir /usr/src
