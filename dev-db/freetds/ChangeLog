@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/freetds
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.7 2003/04/25 21:47:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.8 2003/05/11 18:18:46 robbat2 Exp $
 
 *freetds-0.61 (25 Apr 2003)
+
+  11 May 2003; Robin Johnson <robbat2@gentoo.org> freetds-0.61.ebuild:
+  Moved to x86
 
   25 Apr 2003; Robin Johnson <robbat2@gentoo.org> freetds-0.61.ebuild:
   version bump. fixed SOURCE_URI.
