@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ia64-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.15 2004/06/02 12:48:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.16 2004/06/24 21:45:37 plasmaroo Exp $
+
+*ia64-sources-2.4.24-r5 (24 Jun 2004)
+
+  24 Jun 2004; <plasmaroo@gentoo.org> +ia64-sources-2.4.24-r5.ebuild,
+  +files/ia64-sources-2.4.24.CAN-2004-0495.patch,
+  +files/ia64-sources-2.4.24.CAN-2004-0535.patch:
+  Security bump for the CAN-2004-0495 and CAN-2004-0535 vulnerabilities.
 
 *ia64-sources-2.4.24-r4 (02 Jun 2004)
 
