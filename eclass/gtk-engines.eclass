@@ -10,7 +10,7 @@ ECLASS=gtk-engines
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
-HOMEPAGE=""
+HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
