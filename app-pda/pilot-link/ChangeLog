@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.5 2003/09/17 01:39:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.6 2003/10/27 02:05:50 brad_mssw Exp $
+
+  26 Oct 2003; Brad House <brad_mssw@gentoo.org> pilot-link-0.11.8.ebuild:
+  add amd64 flag
 
   16 Sep 2003; Jason Wever <weeve@gentoo.org> pilot-link-0.11.7-r1.ebuild:
   Marked stable for sparc.
