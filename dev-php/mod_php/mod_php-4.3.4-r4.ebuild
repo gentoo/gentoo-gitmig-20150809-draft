@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r4.ebuild,v 1.7 2004/04/01 06:30:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r4.ebuild,v 1.8 2004/06/03 17:20:19 agriffis Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -22,7 +22,7 @@ detectapache() {
 	1) [ -n "${domsg}" ] && einfo 'Apache1 only detected' ;;
 	2) [ -n "${domsg}" ] && einfo 'Apache2 only detected';;
 	both)
-		if [ "`use apache2`" ]; then
+		if use apache2; then
 			[ -n "${domsg}" ] && einfo "Multiple Apache versions detected, using Apache2 (USE=apache2)"
 			APACHEVER=2
 		else
