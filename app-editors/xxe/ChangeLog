@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/xxe
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.14 2004/07/06 18:37:46 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.15 2004/08/31 17:10:29 rizzo Exp $
+
+*xxe-2.7 (31 Aug 2004)
+
+  31 Aug 2004; Don Seiler <rizzo@gentoo.org> files/xxe.desktop,
+  -xxe-2.6_p1.ebuild, +xxe-2.7.ebuild:
+  Version bump and old version removed upstream.  Fixes bug 61690, thanks Jose Gonzalez Gomez.
 
 *xxe-2.6_p1 (06 Jul 2004)
 
