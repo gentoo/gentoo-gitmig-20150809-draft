@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/XML-DOM-1.25.ebuild,v 1.5 2000/11/04 12:54:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/XML-DOM-1.25.ebuild,v 1.6 2000/12/15 07:29:29 jerry Exp $
 
 P=XML-DOM-1.25
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-CATEGORY="dev-perl"
 DESCRIPTION="A Perl module for an DOM Level 1 compliant interface"
 SRC_URI="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${A}"
 HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${P}.readme"
