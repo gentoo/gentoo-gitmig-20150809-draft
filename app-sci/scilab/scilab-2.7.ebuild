@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7.ebuild,v 1.1 2003/07/16 22:31:16 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7.ebuild,v 1.2 2003/09/06 22:23:06 msterret Exp $
 
 DESCRIPTION="scientific software package for numerical computations"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/${P}.src.tar.gz"
@@ -20,7 +20,7 @@ src_compile() {
 
 	use tcltk || myopts="--without-tk"
 	if [ !"`use tcltk`" ] ; then
-        mv ${S}/tcl/Makefile ${S}/tcl/Makefile.orig 
+        mv ${S}/tcl/Makefile ${S}/tcl/Makefile.orig
         sed -e 's,all:: browsehelpexe,all::,' ${S}/tcl/Makefile.orig > ${S}/tcl/Makefile
 	fi
 
@@ -103,7 +103,7 @@ src_install() {
 	dodir /usr/bin
 	dosym /usr/lib/${P}/bin/scilab /usr/bin/scilab
 	dosym /usr/lib/${P}/bin/intersci /usr/bin/intersci
-	dosym /usr/lib/${P}/bin/intersci-n /usr/bin/intersci-n	
+	dosym /usr/lib/${P}/bin/intersci-n /usr/bin/intersci-n
 }
 
 # the following is needed in order to create the startup scripts with
@@ -118,5 +118,5 @@ pkg_postrm() {
 	rm -r /usr/lib/${P}/bin
 	rm -r /usr/lib/${P}/util
 	rm -r /usr/lib/${P}/examples
-	rmdir /usr/lib/${P} 
+	rmdir /usr/lib/${P}
 }

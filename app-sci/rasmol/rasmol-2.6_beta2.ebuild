@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.6_beta2.ebuild,v 1.5 2003/02/13 09:25:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.6_beta2.ebuild,v 1.6 2003/09/06 22:23:06 msterret Exp $
 
 DESCRIPTION="Free program which displays molecular structure."
 HOMEPAGE="http://www.umass.edu/microbio/rasmol/index2.htm"
@@ -46,7 +46,7 @@ src_install () {
 	doins rasmol.{8,16,32} rasmol.hlp
 	chmod a+x ${D}/usr/lib/${PN}/rasmol.{8,16,32}
 	dodoc INSTALL Announce PROJECTS README TODO doc/manual.ps doc/rasmol.txt
-	dodoc doc/refcard.doc doc/refcard.ps 
+	dodoc doc/refcard.doc doc/refcard.ps
 	doman debian/rasmol.1
 	insinto /usr/lib/${PN}/databases
 	doins data/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.7.1.ebuild,v 1.1 2003/09/04 03:45:49 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.7.1.ebuild,v 1.2 2003/09/06 22:23:05 msterret Exp $
 
 
 S=${WORKDIR}/EMBOSS-2.7.1
@@ -20,7 +20,7 @@ src_install() {
 	einstall || die
 
 	# env file
-	dodir /etc/env.d 
+	dodir /etc/env.d
 	insinto /etc/env.d
 	doins ${FILESDIR}/22emboss
 
@@ -31,7 +31,7 @@ src_install() {
 	dosym /usr/share/EMBOSS/doc/manuals /usr/share/doc/${P}/manuals
 	dosym /usr/share/EMBOSS/doc/programs /usr/share/doc/${P}/programs
 	dosym /usr/share/EMBOSS/doc/tutorials /usr/share/doc/${P}/tutorials
-	
+
 
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.0.2.ebuild,v 1.5 2003/08/05 18:30:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.0.2.ebuild,v 1.6 2003/09/06 22:23:05 msterret Exp $
 
 inherit perl-module
 CATEGORY="app-sci"
@@ -35,7 +35,7 @@ src_compile() {
 	# note: these echo's are for the default values for testing. Not that we're
 	# testing.
 	use mysql && (
-		echo y  
+		echo y
 		echo test
 		echo localhost
 		echo undef

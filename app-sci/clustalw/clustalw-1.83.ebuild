@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Gontran Zepeda <gontran@gontran.net>
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83.ebuild,v 1.2 2003/04/05 12:45:38 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83.ebuild,v 1.3 2003/09/06 22:23:05 msterret Exp $
 
 DESCRIPTION="Improving the sensitivity of progressive multiple sequence alignment through sequence weighting, position specific gap penalties and weight matrix choice."
 
@@ -33,5 +33,5 @@ src_compile() {
 src_install() {
 	# a mano
 	dobin clustalw
-	dodoc README clustalw.doc clustalw.ms clustalw_help 
+	dodoc README clustalw.doc clustalw.ms clustalw_help
 }

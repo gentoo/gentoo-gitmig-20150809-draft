@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-0.8.8a.ebuild,v 1.5 2003/06/19 14:04:24 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-0.8.8a.ebuild,v 1.6 2003/09/06 22:23:05 msterret Exp $
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 
 IUSE=""
 DEPEND="app-shells/bash"
-	
+
 
 src_unpack() {
 	unpack ${A}

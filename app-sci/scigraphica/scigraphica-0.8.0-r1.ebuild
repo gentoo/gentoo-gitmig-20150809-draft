@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0-r1.ebuild,v 1.3 2003/09/02 22:41:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0-r1.ebuild,v 1.4 2003/09/06 22:23:06 msterret Exp $
 
 DESCRIPTION="Scientific application for data analysis and technical graphics"
 SRC_URI="http://scigraphica.sourceforge.net/src/${P}.tar.gz"
@@ -17,7 +17,7 @@ DEPEND=">=x11-libs/gtk+extra-0.99.17
 	>=media-libs/imlib-1.9.14
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r3 >=gnome-base/ORBit-0.5.12-r1 >=gnome-base/gnome-print-0.34 )"
 	#bonobo? ( >=gnome-base/bonobo-1.0.18 )"
-		
+
 src_compile() {
 	#bonobo breaks compile when enabled so it is not enabled for now.
 	#the result seems to be no printing under gnome.
@@ -34,14 +34,14 @@ src_compile() {
 	#fix termcap dependency
 	cp configure configure.orig
 	sed -e 's:-ltermcap:-lncurses:' configure.orig > configure
-	
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		${myconf} || die "Configuration Failed"
-	
+
 	emake || die "Parallel Make Failed"
 }
 

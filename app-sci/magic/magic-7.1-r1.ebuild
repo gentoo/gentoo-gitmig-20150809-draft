@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r1.ebuild,v 1.6 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r1.ebuild,v 1.7 2003/09/06 22:23:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The VLSI design CAD tool"
@@ -9,8 +9,8 @@ HOMEPAGE="http://vlsi.cornell.edu/magic/"
 KEYWORDS="x86"
 LICENSE="as-is"
 DEPEND="sys-apps/findutils
-	dev-lang/perl	
-	>=app-shells/tcsh-6.10-r3 
+	dev-lang/perl
+	>=app-shells/tcsh-6.10-r3
 	sys-libs/libtermcap-compat"
 RDEPEND="sys-libs/libtermcap-compat"
 SLOT="7"
@@ -19,8 +19,8 @@ src_unpack() {
 	unpack ${A}
 
 	# Patch to use FHS paths
-	patch -p1 < ${FILESDIR}/${P}-fhs.patch 
-	
+	patch -p1 < ${FILESDIR}/${P}-fhs.patch
+
 	# Patch for GCC 3.2 compatibility
 	patch -p1 < ${FILESDIR}/${P}-gcc3.2.patch
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.1.ebuild,v 1.7 2003/08/05 18:35:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.1.ebuild,v 1.8 2003/09/06 22:23:06 msterret Exp $
 
 DESCRIPTION="Satellite tracking and orbital prediction."
 HOMEPAGE="http://www.qsl.net/kd2bd/predict.html"
@@ -25,37 +25,37 @@ fi
 src_compile() {
 	# predict uses a ncurses based configure script
 	# this is what it does if it was bash based ;)
-	
+
 	# set compiler string to a var so if compiler checks
 	# can be added at a later date
 	COMPILER="cc ${CFLAGS} -fomit-frame-pointer"
 
-	# write predict.h 
-	echo "char *predictpath=\"/usr/share/predict/\";" > predict.h 
+	# write predict.h
+	echo "char *predictpath=\"/usr/share/predict/\";" > predict.h
 	echo "char soundcard=1;" >> predict.h
 	echo "char *version=\"${PV}\";" >> predict.h
-	
+
 	# compile predict
 	einfo "compiling predict"
 	${COMPILER} -L/lib -lm -lncurses -lpthread predict.c -o predict
-	
+
 	# write vocalizer.h
 	cd vocalizer
 	echo "char *path={\"/use/share/predict/vocalizer/\"};" > vocalizer.h
-	
+
 	# compile vocalizer
 	einfo "compiling vocalizer"
 	${COMPILER} vocalizer.c -o vocalizer
-	
+
 	einfo "compiling clients"
-	
+
 	# earthtrack
 	if test "${EARTHTRACKOK}" = "yes"; then
 		einfo "compiling earthtrack"
 		cd ${S}/clients/earthtrack
 		${COMPILER} -lm earthtrack.c -o earthtrack
 	fi
-	
+
 	# geosat
 	einfo "compiling geosat"
 	cd ${S}/clients/geosat
@@ -65,7 +65,7 @@ src_compile() {
 	einfo "compiling kep_reload"
 	cd ${S}/clients/kep_reload
 	${COMPILER} kep_reload.c -o kep_reload
-	
+
 	# map
 	if [ "`use xforms`" ]; then
 		einfo "compiling map"
@@ -73,7 +73,7 @@ src_compile() {
 		TCOMP="${COMPILER} -I/usr/X11R6/include -L/usr/X11R6/lib -lforms -lX11 -lm map.c map_cb.c map_main.c -o map"
 		${TCOMP}
 	fi
-	
+
 	# gsat
 	if [ "`use gtk`" ]; then
 		# note there are plugins for gsat but they are missing header files and wont compile
@@ -98,7 +98,7 @@ src_install() {
 	dodoc docs/pdf/predict.pdf
 	dodoc docs/postscript/predict.ps
 	doman docs/man/predict.1
-	
+
 	#install vocalizer
 	cd vocalizer
 	insinto /usr/share/predict/vocalizer
@@ -111,31 +111,31 @@ src_install() {
 	dodoc README.vocalizer
 
 	# install clients
-	
+
 	# earthtrack
 	if test "${EARTHTRACKOK}" = "yes"; then
 		cd ${S}/clients/earthtrack
 		ln -s earthtrack earthtrack2
 		dobin earthtrack earthtrack2
-		mv INSTALL INSTALL.earthtrack 
+		mv INSTALL INSTALL.earthtrack
 		mv README README.earthtrack
 		dodoc INSTALL.earthtrack README.earthtrack
 	fi
-	
+
 	# geosat
 	cd ${S}/clients/geosat
 	dobin geosat
 	mv INSTALL INSTALL.geosat
 	mv README README.geosat
 	dodoc INSTALL.geosat README.geosat
-	
+
 	# kep_reload
 	cd ${S}/clients/kep_reload
 	dobin kep_reload
 	mv INSTALL INSTALL.kep_reload
 	mv README README.kep_reload
 	dodoc INSTALL.kep_reload README.kep_reload
-	
+
 	# map
 	if [ "`use xforms`" ]; then
 		cd ${S}/clients/map

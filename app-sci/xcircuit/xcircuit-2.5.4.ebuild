@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-2.5.4.ebuild,v 1.11 2003/02/13 09:26:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-2.5.4.ebuild,v 1.12 2003/09/06 22:23:06 msterret Exp $
 
 inherit flag-o-matic
 
@@ -28,7 +28,7 @@ src_unpack() {
 	patch xcircuit.c < ${FILESDIR}/${PN}-${PV}-XQueryColor.patch || die "patch failed"
 
 	#only apply this patch if under gcc-3.2
-	if [ "`gcc -dumpversion | cut -d. -f1,2`" == "3.2" ]; then 
+	if [ "`gcc -dumpversion | cut -d. -f1,2`" == "3.2" ]; then
 		patch files.c <${FILESDIR}/${PN}-${PV}-sigsegv.patch || die "patch failed"
 	fi
 
@@ -36,12 +36,12 @@ src_unpack() {
 
 
 src_compile() {
-	
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man || die "./configure failed"
-	
+
 	#Parallel make bombs on parameter.c looking for menudep.h
 	make || die
 
@@ -50,7 +50,7 @@ src_compile() {
 src_install () {
 
 	make DESTDIR=${D} install || die "Installation failed"
-	
+
 	dodoc COPYRIGHT README*
 
 }

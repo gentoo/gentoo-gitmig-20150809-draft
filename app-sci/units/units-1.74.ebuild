@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/units/units-1.74.ebuild,v 1.10 2003/03/20 21:09:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/units/units-1.74.ebuild,v 1.11 2003/09/06 22:23:06 msterret Exp $
 
 DESCRIPTION="program for units conversion and units calculation"
 SRC_URI="ftp://ftp.gnu.org/gnu/units/${P}.tar.gz"
@@ -21,5 +21,5 @@ src_compile() {
 
 src_install() {
 	einstall datadir=${D}/usr/share/${PN}/ || die
-	dodoc ChangeLog NEWS README 
+	dodoc ChangeLog NEWS README
 }

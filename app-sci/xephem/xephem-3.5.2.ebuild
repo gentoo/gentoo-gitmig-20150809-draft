@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/xephem-3.5.2.ebuild,v 1.9 2003/02/13 09:27:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/xephem-3.5.2.ebuild,v 1.10 2003/09/06 22:23:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XEphem is the X Windows Ephemeris, and provides a scientific-grade solar system model, star charts, sky views, plus a whole lot more."
@@ -37,7 +37,7 @@ src_compile() {
 	sed -e "s:CDEBUGFLAGS = .*:CDEBUGFLAGS = ${CFLAGS} -fno-strength-reduce:" \
 			Makefile.orig > Makefile
 	emake || die
-	
+
 }
 
 src_install() {
@@ -58,7 +58,7 @@ XEphem.ShareDir: /opt/xephem
 EOT
 	insinto /usr/lib/X11/app-defaults/
 	doins ${S}/XEphem
-	
+
 	dodoc Copyright README INSTALL
 	mv ${S}/GUI/xephem/xephem.man ${S}/xephem.1
 	doman ${S}/xephem.1

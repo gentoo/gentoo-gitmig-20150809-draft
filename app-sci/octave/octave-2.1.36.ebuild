@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36.ebuild,v 1.5 2003/02/13 09:24:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36.ebuild,v 1.6 2003/09/06 22:23:06 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Octave is a high-level language (MatLab compatible) intended for numerical computations."
@@ -51,7 +51,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
