@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/cyrus-imap-admin
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.18 2003/09/18 22:35:09 max Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.19 2004/01/20 18:07:08 max Exp $
 
   18 Sep 2003; Max Kalika <max@gentoo.org> cyrus-imap-admin-2.1.11-r1.ebuild,
   cyrus-imap-admin-2.1.11.ebuild, cyrus-imap-admin-2.1.12.ebuild,
