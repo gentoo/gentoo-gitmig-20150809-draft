@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 32679d015976536f95443be7a980597f ChangeLog 824
-MD5 7e843e738bb83f40d7ebc045ad04bc84 thlnk-1.2.1.ebuild 462
+MD5 0826a473886e4a9318943b5e8f6edb67 ChangeLog 910
+MD5 f2f838c5f67d948a7baaa5831b5fa47b thlnk-1.2.1.ebuild 461
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 baf6db8312129b417a4cc12ae46ead48 files/digest-thlnk-1.2.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBPN2cLLFUmVNQ7rkRAsh6AKDTaRkhZyFwaEbK4fC5odfVTyPtfACbBRlA
-NT81pMDkG6mh9rxklYF7Y/U=
-=WTa4
------END PGP SIGNATURE-----
