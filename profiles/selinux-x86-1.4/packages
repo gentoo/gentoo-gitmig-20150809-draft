@@ -79,9 +79,7 @@
 *sys-apps/kbd
 *sys-apps/cpio
 *sys-apps/debianutils
-*sys-fs/devfsd
 *sys-apps/diffutils
-*sys-fs/e2fsprogs
 *sys-apps/ed
 *sys-apps/fbset
 *sys-apps/file
@@ -112,6 +110,8 @@
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
+*sys-fs/devfsd
+*sys-fs/e2fsprogs
 *sys-libs/cracklib  
 *<sys-libs/db-3.2.10
 *>=sys-libs/ncurses-5.2.20020112a
