@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.7 2003/11/24 10:57:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/alternatives.eclass,v 1.8 2004/01/18 01:32:35 liquidx Exp $
 
 # Author :     Alastair Tse <liquidx@gentoo.org> (03 Oct 2003)
 # Short Desc:  Creates symlink to the latest version of multiple slotted
@@ -58,10 +58,11 @@ alternatives_auto_makesym() {
 	else
 		myregex=${REGEX}
 	fi
-	
+
 	# sort a space delimited string by converting it to a multiline list
 	# and then run sort -r over it.
-	ALT="$(for i in $(echo ${myregex}); do echo $i; done | sort -r)"
+	# make sure we use ${ROOT} because otherwise stage-building will break
+	ALT="$(for i in $(echo ${ROOT}${myregex}); do echo ${i#${ROOT}}; done | sort -r)"
 	alternatives_makesym ${SYMLINK} ${ALT}
 }
 
@@ -69,9 +70,11 @@ alternatives_makesym() {
 	local ALTERNATIVES=""
 	local SYMLINK=""
 	local alt pref
+	
 	# usage: alternatives_makesym <resulting symlink> [alternative targets..]
 	SYMLINK=$1
-	pref=${ROOT:0:${#ROOT}-1}
+	# this trick removes the trailing / from ${ROOT}
+	pref=$(echo ${ROOT} | sed 's:/$::')
 	shift
 	ALTERNATIVES=$@
 
@@ -80,14 +83,15 @@ alternatives_makesym() {
 	
 	for alt in ${ALTERNATIVES}; do
 		if [ -f "${pref}${alt}" ]; then
-			einfo "Linking ${alt} to ${pref}${SYMLINK}"
 			#are files in same directory?
 			if [ "${alt%/*}" = "${SYMLINK%/*}" ]
 			then
 				#yes; strip leading dirname from alt to create relative symlink
+				einfo "Linking ${alt} to ${pref}${SYMLINK} (relative)"
 				ln -sf ${alt##*/} ${pref}${SYMLINK}
 			else
 				#no; keep absolute path
+				einfo "Linking ${alt} to ${pref}${SYMLINK} (absolute)"
 				ln -sf ${pref}${alt} ${pref}${SYMLINK}
 			fi
 			break

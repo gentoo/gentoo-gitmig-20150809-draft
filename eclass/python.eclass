@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.12 2003/12/08 19:02:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.13 2004/01/18 01:32:35 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -136,6 +136,10 @@ python_mod_compile() {
 #         python_mod_optimize ${ROOT}usr/share/codegen
 #
 python_mod_optimize() {
+	local myroot
+	# strip trailing slash
+	myroot=$(echo ${ROOT} | sed 's:/$::')
+
 	# allow compiling for older python versions
 	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
 		PYVER=${PYTHON_OVERRIDE_PYVER}
@@ -151,8 +155,8 @@ python_mod_optimize() {
 	fi
 
 	ebegin "Byte compiling python modules for python-${PYVER} .."
-	python${PYVER} ${ROOT}usr/lib/python${PYVER}/compileall.py ${compileopts} $@
-	python${PYVER} -O ${ROOT}usr/lib/python${PYVER}/compileall.py ${compileopts} $@
+	python${PYVER} ${myroot}/usr/lib/python${PYVER}/compileall.py ${compileopts} $@
+	python${PYVER} -O ${myroot}/usr/lib/python${PYVER}/compileall.py ${compileopts} $@
 	eend $?
 }
 
@@ -166,14 +170,17 @@ python_mod_optimize() {
 #         if they are, then it will remove their corresponding .pyc and .pyo
 #
 python_mod_cleanup() {
-	local SEARCH_PATH
+	local SEARCH_PATH myroot
+	
+	# strip trailing slash
+	myroot=$(echo ${ROOT} | sed 's:/$::')
 
 	if [ $# -gt 0 ]; then
 		for path in $@; do
-			SEARCH_PATH="${SEARCH_PATH} ${ROOT}${path#/}"
+			SEARCH_PATH="${SEARCH_PATH} ${myroot}/${path#/}"
 		done
 	else
-		for path in ${ROOT}usr/lib/python*/site-packages; do
+		for path in ${myroot}/usr/lib/python*/site-packages; do
 			SEARCH_PATH="${SEARCH_PATH} ${path}"
 		done
 	fi
