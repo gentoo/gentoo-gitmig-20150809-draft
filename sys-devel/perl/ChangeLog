@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.50 2003/01/19 16:54:11 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.51 2003/02/05 10:33:54 jrray Exp $
+
+  05 Feb 2003; J Robert Ray <jrray@gentoo.org> perl-5.8.0-r9.ebuild; Changed to strip
+  "-malign-double" from CFLAGS, fixing bug 14608.
 
   17 Jan 2003;Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r9;
 

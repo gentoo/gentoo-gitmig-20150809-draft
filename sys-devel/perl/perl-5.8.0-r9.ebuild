@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r9.ebuild,v 1.5 2003/01/19 16:13:04 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r9.ebuild,v 1.6 2003/02/05 10:33:54 jrray Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -59,6 +59,8 @@ inherit eutils flag-o-matic
 
 # Perl has problems compiling with -Os in your flags
 replace-flags "-Os" "-O2"
+# This flag makes compiling crash in interesting ways
+filter-flags "-malign-double"
 
 
 # The slot of this binary compat version of libperl.so
