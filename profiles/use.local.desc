@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.739 2004/11/16 20:57:25 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.740 2004/11/18 01:56:38 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -568,6 +568,7 @@ net-www/kazehakase:thumbnail - enable thumbnail support.
 net-www/links:javascript - enable javascript support
 net-www/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 net-www/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
+net-www/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
 net-www/mozilla-firefox:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
 net-www/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
@@ -579,7 +580,7 @@ net-www/mozilla:moznomail - Disable building mozilla's mail client
 net-www/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 net-www/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
 net-www/mozilla:mozplaintext - Disallow HTML editing for email
-net-www/mozilla:mozsvg - Enable SVG support in mozilla
+net-www/mozilla:mozsvg - Enable SVG support in mozilla and firefox
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
