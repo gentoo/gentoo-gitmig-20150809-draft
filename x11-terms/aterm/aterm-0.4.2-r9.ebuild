@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.7 2004/06/13 15:15:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r9.ebuild,v 1.8 2004/06/17 21:29:34 spock Exp $
 
 inherit eutils
 
 IUSE="cjk"
-S=${WORKDIR}/${P}
 DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility"
 SRC_URI="mirror://sourceforge/aterm/${P}.tar.bz2
 	cjk? (http://dev.gentoo.org/~spock/portage/distfiles/aterm-0.4.2-ja.patch)"
