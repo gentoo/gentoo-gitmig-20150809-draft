@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.2-r1.ebuild,v 1.6 2003/09/11 03:32:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.2-r1.ebuild,v 1.7 2003/09/11 03:33:08 drobbins Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -82,9 +82,9 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-arch/file-roller-2.2.5
 	>=gnome-extra/acme-2.0.6
 	>=app-text/ggv-2.0.1
-	
+
 	bindist? ( x11-misc/xscreensaver )
-	
+
 	!hppa? ( !alpha? (
 		>=gnome-extra/gnome-media-2.2.2
 		>=gnome-extra/nautilus-media-0.2.2
