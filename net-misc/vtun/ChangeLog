@@ -2,6 +2,10 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
 
+  16 Oct 2003; Chuck Short <zul@gentoo.org> files/vtun.rc:
+  Fixed init script, removed start-stop-daemon. It was not starting vtun
+  when run init script. Fixes bug #21351.
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
