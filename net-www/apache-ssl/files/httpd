@@ -3,6 +3,7 @@
 #
 
 . /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
 
 # Apache control script designed to allow an easy command line interface
 # to controlling Apache.  Written by Marc Slemko, 1997/08/23
@@ -40,7 +41,6 @@ LYNX="lynx -dump"
 # have one, then status and fullstatus will not work.
 STATUSURL="http://localhost/server-status"
 #
-HTTPD_OPTS="-DSSL"
 # --------------------                              --------------------
 # ||||||||||||||||||||   END CONFIGURATION SECTION  ||||||||||||||||||||
 
