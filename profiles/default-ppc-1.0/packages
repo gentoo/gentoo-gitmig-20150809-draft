@@ -63,6 +63,10 @@
 # Profile specific pkgs start here
 #
 
+# lock down the gcc 2.95.3 compiled versions of blackdown
+<=dev-java/blackdown-jdk-1.3.1-r8
+<=dev-java/blackdown-jre-1.3.1-r8
+
 *app-arch/ncompress
 *sys-apps/baselayout
 *sys-apps/portage
