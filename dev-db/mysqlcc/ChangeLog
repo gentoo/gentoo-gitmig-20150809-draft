@@ -1,6 +1,23 @@
 # ChangeLog for dev-db/mysqlcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.4 2003/03/03 10:33:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.5 2003/03/05 03:41:44 rac Exp $
+
+*mysqlcc-0.8.10-r1 (04 Mar 2003)
+
+  04 Mar 2003; Robert Coie <rac@gentoo.org> mysqlcc-0.8.10-r1.ebuild,
+  files/mysqlcc-0.8.10-libmysqlclientac.patch,
+  files/mysqlcc-0.8.10-qmakespec.patch:
+  The config.sub included with this package does not recognize linux-gnu
+  machines correctly, so replace it with one taken from a local automake
+  installation and run autoreconf.  Allow the ebuild to override the
+  QMAKESPEC variable, so that 'linux-g++' is picked up correctly.
+  Replace the libmysqlclient autoconf macro with a simpler and sleeker
+  use of mysql_config, so that optionally dependent libraries (such as
+  libssl) are picked up for free.  Make dependency on MySQL >=4.0, as
+  this version attempts to use command-line option processing from
+  libmysqlclient that is not available before that version.  Fixes bug
+  #16733.  Thanks to Peter Penkala <pjp@gentoo.org> for testing
+  assistance.
 
 *mysqlcc-0.8.10 (03 Mar 2003)
 

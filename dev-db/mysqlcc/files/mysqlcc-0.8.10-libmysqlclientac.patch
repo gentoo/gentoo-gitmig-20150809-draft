@@ -1,0 +1,46 @@
+--- acinclude.m4.orig	2003-03-04 01:07:26.000000000 -0800
++++ acinclude.m4	2003-03-04 12:46:35.000000000 -0800
+@@ -6,34 +6,15 @@
+         AC_MSG_CHECKING([for libmysqlclient])
+         AC_MSG_RESULT()
+ 
+-        mysql_ok=no
+-
+-        SAVE_LIBS=$LIBS
+-    
+-        mysql_lib="$mysql_lib /usr/lib /usr/lib/mysql \
+-                   /usr/local/lib /usr/local/lib/mysql \
+-                   /usr/local/mysql/lib"
+-    
+-        for dir in $mysql_lib; do
+-            if test "x$mysql_found" != "xyes"
+-            then
+-                AC_CHECK_FILE("$dir/libmysqlclient.a",
+-                              mysql_found=yes, mysql_found=no)
+-                if test "x$mysql_found" = "xyes"
+-                then
+-                    LIBS="-L$dir $SAVE_LIBS $LIBZ_LIB"
+-                    MYSQL_LIB="$dir/libmysqlclient.a $LIBZ_LIB"
+-                    AC_SUBST(MYSQL_LIB)
+-                    AC_CHECK_LIB(mysqlclient, mysql_real_connect,
+-                                 mysql_ok=yes, mysql_ok=no)
+-                fi
+-            fi
+-        done
+-
+-        if test "x$mysql_ok" != "xyes"
+-        then
+-            AC_MSG_ERROR([Could not find libmysqlclient in '$mysql_lib'])
+-        fi
++	# dependencies are guaranteed to ensure we have mysql_config
++	# available, and it is a much cleaner way of discovering what
++	# must be linked against libmysqlclient, that transparently
++	# covers USE="ssl" and other issues.
++	# Robert Coie <rac@gentoo.org> 2003.03.04
++
++	mysql_ok=yes
++	MYSQL_LIB=`mysql_config --libs`
++	LIBS="${LIBS} ${MYSQL_LIB}"
+ ])
+ 
+ 
