@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.237 2004/05/04 23:40:57 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.238 2004/05/05 04:24:53 iluxa Exp $
+
+  04 May 2004; Ilya A. Volynets-Evenbaks <iluxa@gentoo.org> gcc-3.4.0.ebuild:
+  gcc reqires glibc-2.3.3_pre20040420, primarily because of bunch of missing
+  sgidefs.h includes, patch for which is included there.
 
 *gcc-3.4.0-r1 (04 May 2004)
 
