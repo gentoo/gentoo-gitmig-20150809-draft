@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r1.ebuild,v 1.1 2004/06/01 08:36:09 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-0.9.12-r1.ebuild,v 1.2 2004/06/02 22:28:03 vapier Exp $
 
+DESCRIPTION="SDK for the SILC protocol"
+HOMEPAGE="http://silcnet.org/"
+SRC_URI="http://silcnet.org/download/toolkit/sources/silc-toolkit-${PV}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64"
 IUSE="client server debug ipv6"
 
-DESCRIPTION="Software development toolkit which provides full SILC protocol implementation for application developers."
-HOMEPAGE="http://silcnet.org"
-SRC_URI="http://silcnet.org/download/toolkit/sources/silc-toolkit-${PV}.tar.bz2"
-KEYWORDS="~amd64"
-LICENSE="GPL-2"
-
-SLOT="0"
-
 DEPEND="virtual/glibc
-		!net-im/silc-client"
+	!net-im/silc-client"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
