@@ -133,3 +133,4 @@ move app-sci/gperiodic sci-chemistry/gperiodic
 move app-sci/gromacs sci-chemistry/gromacs
 move app-sci/kemistry sci-chemistry/kemistry
 move app-sci/molden sci-chemistry/molden
+move app-sci/moldy sci-chemistry/moldy
