@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-ucspi-tcp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ucspi-tcp/ChangeLog,v 1.6 2004/11/13 20:15:38 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ucspi-tcp/ChangeLog,v 1.7 2004/12/12 12:55:49 kaiowas Exp $
+
+*selinux-ucspi-tcp-20041211 (12 Dec 2004)
+
+  12 Dec 2004; petre rodan <kaiowas@gentoo.org>
+  +selinux-ucspi-tcp-20041211.ebuild:
+  added rblsmtpd-related rules from Andy Dustman
 
 *selinux-ucspi-tcp-20041016 (13 Nov 2004)
 
