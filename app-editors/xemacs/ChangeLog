@@ -1,7 +1,6 @@
-
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.26 2002/12/16 00:14:37 rendhalver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.27 2002/12/17 19:53:37 vapier Exp $
 	
 *xemacs-21.4.10-r1 (16 Dec 2002)
 
