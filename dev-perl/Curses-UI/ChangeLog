@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Curses-UI
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.4 2004/10/28 11:24:42 mcummings Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.5 2005/03/07 15:30:33 mcummings Exp $
+
+  07 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  Curses-UI-0.94.ebuild:
+  bug 78008 - marking stable
 
 *Curses-UI-0.94 (28 Oct 2004)
 
