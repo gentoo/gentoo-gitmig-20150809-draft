@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/umbrello/umbrello-1.1.1.ebuild,v 1.4 2003/12/28 04:08:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/umbrello/umbrello-1.1.1.ebuild,v 1.5 2004/01/02 15:56:11 pauldv Exp $
 inherit kde
 
 # This project was formerly known as simply 'uml', and there were ebuilds under dev-util/uml
@@ -12,6 +12,11 @@ HOMEPAGE="http://uml.sourceforge.net"
 
 LICENSE="GPL-2"
 KEYWORDS="x86"
+
+#do our own dependencies
+NEED_KDE_DONT_ADD_KDELIBS_DEP=1
+
+need-kde 3
 
 DEPEND=">=kde-base/kdebase-3
 	sys-devel/flex"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/umbrello
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/umbrello/ChangeLog,v 1.5 2003/12/28 04:08:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/umbrello/ChangeLog,v 1.6 2004/01/02 15:56:11 pauldv Exp $
+
+  02 Jan 2004; <paul@gentoo.org> umbrello-1.1.1.ebuild:
+  Add need-kde back in, as it is needed to ensure that PREFIX is set
 
   27 Dec 2003; Caleb Tennis <caleb@gentoo.org> umbrello-1.1.1.ebuild,
   umbrello-1.1_beta2.ebuild:
