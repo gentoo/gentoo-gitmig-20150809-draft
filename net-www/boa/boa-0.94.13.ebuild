@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.9 2004/01/20 20:45:06 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.10 2004/04/26 19:15:35 agriffis Exp $
 
 DESCRIPTION="Boa - A very small and very fast http daemon"
 SRC_URI="http://www.boa.org/${P}.tar.gz"
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	cd src
-	econf
+	econf || die "econf failed"
 	emake || die
 	cd ../docs
 	make boa.html boa.info || die
