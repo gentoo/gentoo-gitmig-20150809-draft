@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/libtool
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.44 2004/06/24 07:40:58 solar Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.45 2004/06/24 22:47:32 agriffis Exp $
 
   24 Jun 2004; <solar@gentoo.org> libtool-1.4.3-r4.ebuild,
   libtool-1.5.2-r5.ebuild, files/libltdl-uclibc.patch,

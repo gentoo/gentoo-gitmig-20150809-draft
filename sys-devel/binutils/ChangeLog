@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.136 2004/06/24 03:25:52 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.137 2004/06/24 22:43:22 agriffis Exp $
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   binutils-2.11.92.0.12.3-r2.ebuild, binutils-2.11.92.0.7.ebuild,

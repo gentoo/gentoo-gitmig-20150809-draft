@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/bison
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.29 2004/06/24 03:35:06 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.30 2004/06/24 22:43:46 agriffis Exp $
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> bison-1.34-r1.ebuild,
   bison-1.35.ebuild, bison-1.75.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc-config
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.48 2004/06/19 18:34:21 azarah Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.49 2004/06/24 22:45:42 agriffis Exp $
 
   19 Jun 2004; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.3.5.ebuild:
   Mark stable for all.

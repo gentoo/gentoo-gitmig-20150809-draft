@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r3.ebuild,v 1.3 2004/02/26 05:48:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r3.ebuild,v 1.4 2004/06/24 22:49:00 agriffis Exp $
 
 inherit eutils
 EPATCH_SOURCE="${FILESDIR}"

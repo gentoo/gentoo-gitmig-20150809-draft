@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc-hppa64
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.6 2004/06/23 15:34:57 gmsoft Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.7 2004/06/24 22:45:53 agriffis Exp $
 
 *gcc-hppa64-3.3.2-r1 (23 Jun 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.6.ebuild,v 1.2 2004/06/21 04:12:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.6.ebuild,v 1.3 2004/06/24 22:45:42 agriffis Exp $
 
 # Version of .c wrapper to use
 W_VER="1.4.2"

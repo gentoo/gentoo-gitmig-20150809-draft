@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57-r1.ebuild,v 1.12 2004/06/11 18:39:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57-r1.ebuild,v 1.13 2004/06/24 22:42:33 agriffis Exp $
 
 IUSE=""
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gnuconfig
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.10 2004/06/24 07:31:43 solar Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.11 2004/06/24 22:46:59 agriffis Exp $
 
   24 Jun 2004; <solar@gentoo.org> gnuconfig-20040214.ebuild,
   files/automake-1.8.5-config-guess-uclibc.patch,

@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/spython
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.8 2004/06/24 13:48:44 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.9 2004/06/24 22:49:34 agriffis Exp $
 
 *spython-2.0-r8 (24 Jun 2004)
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gecc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/ChangeLog,v 1.5 2004/03/01 12:16:10 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/ChangeLog,v 1.6 2004/06/24 22:46:37 agriffis Exp $
 
 *gecc-20021102 (16 Nov 2002)
 

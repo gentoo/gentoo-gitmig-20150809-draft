@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.14.90.0.7.ebuild,v 1.1 2004/01/03 16:14:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.14.90.0.7.ebuild,v 1.2 2004/06/24 22:43:34 agriffis Exp $
 
 IUSE="nls bootstrap build"
 
