@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/elscreen
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.4 2005/01/02 00:51:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.5 2005/02/22 05:41:51 mkennedy Exp $
+
+*elscreen-1.3.2 (21 Feb 2005)
+
+  21 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +elscreen-1.3.2.ebuild:
+  New upstream version
 
   01 Jan 2005; Jason Wever <weeve@gentoo.org> elscreen-1.2.4.ebuild:
   Added ~sparc keyword.
