@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.18 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.19 2004/11/04 10:53:14 ferringb Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -12,7 +12,14 @@ DEPEND="virtual/x11"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 
-[ -z "${SANDBOX_DISABLED}" ] && export SANDBOX_DISABLED="0" || :
+#
+# Brian Harring <ferringb@gentoo.org> 11/04/2004
+# do not disable the sandbox during the depend phase.
+# ebuilds shouldn't touch the fs during depend phase, nor screw with the sandbox.
+#
+if [ "${EBUILD_PHASE/depend}" == "${EBUILD_PHASE}" ]; then
+	[ -z "${SANDBOX_DISABLED}" ] && export SANDBOX_DISABLED="0" || :
+fi
 
 virtualmake() {
 	local retval=0
