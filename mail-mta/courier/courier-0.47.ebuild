@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.ebuild,v 1.4 2004/11/29 22:54:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.ebuild,v 1.5 2004/12/01 18:26:25 swtaylor Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~mips"
+KEYWORDS="x86 alpha ppc sparc amd64 ~mips"
 IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite uclibc"
 
 PROVIDE="virtual/mta
