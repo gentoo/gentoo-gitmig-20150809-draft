@@ -43,8 +43,6 @@ MD5 6df16eb92245a931ecfc4cbcc73c84cf files/digest-gcc-3.3.4-r2 442
 MD5 40e6872c09149a81973f01a78c80bbb7 files/digest-gcc-3.2.3-r4 279
 MD5 e58b6c1f3122b79a5d0d273acc3c008c files/digest-gcc-3.3.2-r7 361
 MD5 c6ea8a92bac6d2638c54c011f98bc5b8 files/digest-gcc-3.4.1-r3 442
-MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
-MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
 MD5 27120401d2355e5d959b8d2d55eba310 files/3.3.4/gcc334-gentoo-branding.patch 876
 MD5 5fb5b49f3f16cc9e7e27e582c92ffa2f files/3.3.4/libffi-without-libgcj.patch 890
 MD5 86ae592deb82c4564eb61f770fe5f8a7 files/3.4.1/gcc-3.4.1-gentoo-branding.patch 759
@@ -116,7 +114,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB6Ig2roRuSHgZdywRAs97AJ44NokebrnlJjXLaqrCrRJja9SENwCfa2sX
-mxTG0AxmgoqWnGv/MuG2yUg=
-=GBMs
+iD4DBQFB6IidroRuSHgZdywRAiyHAJ4mpoWYZSoNTFER1GAuCbJJhXs8bwCY00yq
+aqUAkolWWOjhRdKMBPTwXA==
+=Fd5j
 -----END PGP SIGNATURE-----
