@@ -1,5 +1,5 @@
-MD5 87cbaea08bd59b1e5bbb8367ee4c9cd5 ChangeLog 681
+MD5 318f0ce33a3e35bd2cee735326e6e3f4 ChangeLog 680
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a6d062ed6c24e79429837495f2500baa missile-1.0.1.ebuild 1257
+MD5 068da025e127c1bc60541041a0441ecf missile-1.0.1.ebuild 1262
 MD5 e35eefe94cc7a26de7e4c770d3156d4a files/1.0.1-Makefile-path-fix.patch 2730
 MD5 449b6e72f32105137a91e533ddfa6f59 files/digest-missile-1.0.1 65
