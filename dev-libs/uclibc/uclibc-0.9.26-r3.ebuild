@@ -1,19 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r3.ebuild,v 1.4 2004/07/14 15:16:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r3.ebuild,v 1.5 2004/07/24 17:05:10 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
 MY_P="${P/ucl/uCl}"
+CVS_VER="20040630"
+PATCH_VER="1.1"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
-SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2"
-
-CVS_VER="20040630"
-SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-cvs-update-${CVS_VER}.patch.bz2"
-
-PATCH_VER="1.1"
-SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2"
+SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
+	mirror://gentoo/${MY_P}-cvs-update-${CVS_VER}.patch.bz2
+	mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -26,7 +24,7 @@ PROVIDE="virtual/glibc virtual/libc"
 S=${WORKDIR}/${MY_P}
 
 check_main_libc() {
-	if [ -f /lib/lib${MY_P}.so -a ! -f /lib/libc.so.6 ] ; then
+	if [ -f ${ROOT}/lib/libuClibc-*.so -a ! -f ${ROOT}/lib/libc.so.6 ] ; then
 		if echo "${CHOST}" | grep -q uclibc ; then
 			retval=0
 		else
@@ -50,8 +48,8 @@ src_unpack() {
 		epatch ${DISTDIR}/${MY_P}-cvs-update-${CVS_VER}.patch.bz2
 	fi
 
-	cp ${FILESDIR}/0.9.26/ssp.c ${S}/libc/sysdeps/linux/common/ || \
-		die "failed to copy ssp.c to ${S}/libc/sysdeps/linux/common/"
+	cp ${FILESDIR}/0.9.26/ssp.c ${S}/libc/sysdeps/linux/common/ \
+		|| die "failed to copy ssp.c to ${S}/libc/sysdeps/linux/common/"
 	# gcc 3.4 nukes ssp without this patch
 	if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
