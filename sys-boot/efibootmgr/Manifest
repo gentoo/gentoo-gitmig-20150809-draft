@@ -1,3 +1,5 @@
-MD5 cff788a1e8ca8e1ab6038d0f26aafdaf efibootmgr-0.4.2.ebuild 1269
+MD5 8ff6c90ea70f119ffccd91e4be6f500c efibootmgr-0.4.2.ebuild 1309
+MD5 6ea59989752e00a98ca5545631433df0 metadata.xml 164
+MD5 1f52c25a1995c8132cb38e0c63ed8ce3 ChangeLog 480
 MD5 8234d5c715dd59b7b135a7372b626de5 files/digest-efibootmgr-0.4.2 67
 MD5 52674d9178b4c50989bfc0724bdd879d files/efibootmgr-0.4.1-makefile.patch 548

@@ -1,0 +1,10 @@
+--- efibootmgr-0.4.1/Makefile.makefile	2002-10-22 22:45:30.000000000 +0200
++++ efibootmgr-0.4.1/Makefile	2003-05-26 15:09:58.000000000 +0200
+@@ -9,6 +9,7 @@
+   RELEASE_STRING := $(RELEASE_NAME)-$(RELEASE_MAJOR).$(RELEASE_MINOR).$(RELEASE_SUBLEVEL)$(RELEASE_EXTRALEVEL)
+ 
+   CFLAGS += -DEFIBOOTMGR_VERSION=\"$(RELEASE_MAJOR).$(RELEASE_MINOR).$(RELEASE_SUBLEVEL)$(RELEASE_EXTRALEVEL)\" -Wall
++  CFLAGS += $(shell if $(CC) -fno-merge-constants -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-fno-merge-constants"; fi)
+ 
+   MODULES := src
+ 
