@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r8.ebuild,v 1.1 2002/04/27 15:52:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r8.ebuild,v 1.2 2002/06/01 11:01:51 blocke Exp $
 
 
 S=${WORKDIR}/${P}
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	>=app-text/scrollkeeper-0.2
 	>=dev-util/intltool-0.11"
+
+SLOT="0"
 
 src_unpack() {
 
