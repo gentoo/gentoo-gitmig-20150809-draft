@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.8 2004/07/23 13:41:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.9 2004/07/23 20:34:22 solar Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -163,7 +163,7 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 # Do we really have no 2.4.x nptl kernels in portage?
 if [ "${USE_NPTL}" = 1 ]; then
 	myOS_HEADERS="$(portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0')"
-	[ ${myOS_HEADERS}" != "" ] && myOS_HEADERS=">=${myOS_HEADERS}"
+	[ "${myOS_HEADERS}" != "" ] && myOS_HEADERS=">=${myOS_HEADERS}"
 fi
 [ "${myOS_HEADERS}" = "" ] && myOS_HEADERS="virtual/os-headers"
 
