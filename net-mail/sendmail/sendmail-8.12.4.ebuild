@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4.ebuild,v 1.2 2002/06/11 20:55:31 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4.ebuild,v 1.3 2002/06/11 21:15:50 g2boojum Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)."
 HOMEPAGE="http://www.sendmail.org"
@@ -64,9 +64,10 @@ src_unpack() {
 	confLIBS="-lnsl -lcrypt"
 	conf_sendmail_ENVDEF="-DFALSE=0 -DTRUE=1"
 	conf_sendmail_LIBS=""
-	use sasl && confLIBS="${confLIBS} -lsasl" && \
-		conf_sendmail_ENVDEF="${conf_sendmail_ENVDEF} -DSASL" && \
-		conf_sendmail_LIBS="${conf_sendmail_LIBS} -lsasl"
+	use sasl && confLIBS="${confLIBS} -lsasl"  \
+		&& confENVDEF="${confENVDEF} -DSASL" \
+		&& conf_sendmail_ENVDEF="${conf_sendmail_ENVDEF} -DSASL"  \
+		&& conf_sendmail_LIBS="${conf_sendmail_LIBS} -lsasl"
 	use tcpd && confENVDEF="${confENVDEF} -DTCPWRAPPERS" \
 		&& confLIBS="${confLIBS} -lwrap"
 	use ssl && confENVDEF="${confENVDEF} -DSTARTTLS" \
@@ -79,7 +80,7 @@ src_unpack() {
 	sed -e "s/@@confCCOPTS@@/${confCCOPTS}/" \
 		-e "s/@@confMAPDEF@@/${confMAPDEF}/" \
 		-e "s/@@confENVDEF@@/${confENVDEF}/" \
-		-e "s/@@confLIBS/${confLIBS}/" \
+		-e "s/@@confLIBS@@/${confLIBS}/" \
 		-e "s/@@conf_sendmail_ENVDEF@@/${conf_sendmail_ENVDEF}/" \
 		-e "s/@@conf_sendmail_LIBS@@/${conf_sendmail_LIBS}/" \
 		${FILESDIR}/site.config.m4 > ${S}/devtools/Site/site.config.m4
@@ -128,8 +129,7 @@ src_install () {
 	newdoc libmilter/README README.libmilter
 	newdoc cf/README README.cf
 	newdoc cf/cf/README README.install-cf
-	insinto /usr/share/sendmail-cf
-	doins cf/*
+	cp -a cf/* ${D}/usr/share/sendmail-cf
 	insinto /etc/mail
 	newins cf/cf/generic-linux.mc sendmail.mc
 	newins cf/cf/generic-linux.cf sendmail.cf
