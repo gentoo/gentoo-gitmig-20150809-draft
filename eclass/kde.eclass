@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.86 2004/01/05 03:24:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.87 2004/01/21 23:28:22 gmsoft Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -115,7 +115,12 @@ kde_src_compile() {
 
 				cd $S
 				./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
-
+				# Seems ./configure add -O2 by default but hppa don't want that but we need -ffunction-sections
+				if [ "${ARCH}" = "hppa" ]
+				then
+					einfo Fixating Makefiles
+					find ${S} -name Makefile | while read a; do sed -e s/-O2/-ffunction-sections/ -i "${a}" ; done
+				fi
 				;;
 			make)
 				export PATH="${KDEDIR}/bin:${PATH}"
