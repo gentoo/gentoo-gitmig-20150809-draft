@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: William McArthur <sandymac@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-5.0.1.ebuild,v 1.3 2002/04/25 06:56:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-5.0.1.ebuild,v 1.4 2002/04/29 20:53:42 sandymac Exp $
 
 S=${WORKDIR}
 
@@ -13,6 +13,8 @@ DESCRIPTION="Intel C++ Compiler - The Pentium optimized compiler for linux"
 SRC_URI="http://www.intel.com/software/products/downloads/cc010911rh71.tar"
 
 HOMEPAGE="http://www.intel.com/software/products/compilers/c50/linux/"
+
+LICENSE="icc-5.0"
 
 # Orginally I included app-shells/tcsh because there is one shell script that
 # uses it but I found there is alse a ksh/bash version of that script provided

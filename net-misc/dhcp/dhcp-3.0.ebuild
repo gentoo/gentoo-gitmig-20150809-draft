@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.ebuild,v 1.1 2002/02/14 18:58:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.ebuild,v 1.2 2002/04/29 20:53:42 sandymac Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/DHCP"
+LICENSE="isc-dhcp"
 
 DEPEND="virtual/glibc sys-apps/groff"
 RDEPEND="virtual/glibc"

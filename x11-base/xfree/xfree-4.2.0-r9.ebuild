@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r9.ebuild,v 1.5 2002/04/16 19:58:20 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r9.ebuild,v 1.6 2002/04/29 20:53:42 sandymac Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -22,6 +22,7 @@ SRC_URI="$SRC_PATH0/X${MY_V}src-1.tgz
 # NOTE:  4.2.0-xlib-i18n-module.patch is ONLY for XFree86 4.2.0
 
 HOMEPAGE="http://www.xfree.org"
+LICENSE="X11"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2

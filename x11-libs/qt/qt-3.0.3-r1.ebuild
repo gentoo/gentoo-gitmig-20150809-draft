@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3-r1.ebuild,v 1.3 2002/04/27 21:40:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3-r1.ebuild,v 1.4 2002/04/29 20:53:42 sandymac Exp $
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -9,6 +9,7 @@ DESCRIPTION="QT version ${PV}"
 SLOT="3"
 SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-free-${PV}.tar.gz"
 HOMEPAGE="http://www.trolltech.com/"
+LICENSE="QPL-1.0 | GPL-2.0"
 
 DEPEND="virtual/x11
 	media-libs/libpng
