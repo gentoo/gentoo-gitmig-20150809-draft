@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r1.ebuild,v 1.1 2004/04/16 01:25:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r1.ebuild,v 1.2 2004/04/16 06:03:36 kumba Exp $
 
 
 # Version Data
@@ -67,6 +67,9 @@ src_unpack() {
 			epatch ${x}
 		done
 		cp ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/cobalt-patches.txt ${S}
+		cd ${WORKDIR}
+		mv ${WORKDIR}/linux-${OKV}-${CVSDATE} ${WORKDIR}/linux-${OKV}-${CVSDATE}.cobalt
+		S="${S}.cobalt"
 	fi
 
 	kernel_universal_unpack

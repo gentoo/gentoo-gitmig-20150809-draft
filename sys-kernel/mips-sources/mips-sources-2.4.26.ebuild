@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.21-r8.ebuild,v 1.2 2004/04/16 06:03:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26.ebuild,v 1.1 2004/04/16 06:03:36 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20030803"
+CVSDATE="20040415"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
-COBALTPATCHVER="1.0"
+COBALTPATCHVER="1.1"
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
+IUSE=""
 
 # Eclass stuff
 ETYPE="sources"
@@ -20,15 +21,11 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 03 Aug 2003
+# 2) linux-mips.org CVS snapshot diff from 28 Nov 2003
 # 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
-# 4) Fix for headers on big-endian machines
-# 5) do_brk fix
-# 6) mremap fix
-# 7) RTC fixes
-# 8) do_munmap fix
-# 9) ISO9660 Fix
-# 10) Patches for Cobalt support
+# 4) patch to fix the mips64 Makefile to allow building of mips64 kernels
+# 5) iso9660 fix
+# 6) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -38,7 +35,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources"
-KEYWORDS="-* mips"
+KEYWORDS="-* ~mips"
 
 
 src_unpack() {
@@ -51,26 +48,6 @@ src_unpack() {
 
 	# Patch arch/mips/Makefile for gcc (Pass -mips3/-mips4 for r4k/r5k cpus)
 	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch
-
-	# Big Endian Fix (Fix in headers for big-endian machines)
-	epatch ${FILESDIR}/bigendian-byteorder-fix.patch
-
-	# MIPS RTC Fixes (Fixes memleaks, backport from 2.4.24)
-	epatch ${FILESDIR}/rtc-fixes.patch
-
-	# Binutils-2.14.90.0.8 and does some magic with page alignment
-	# that prevents the kernel from booting.  This patch fixes it.
-	epatch ${FILESDIR}/mipscvs-${OKV}-no-page-align.patch
-
-	# Security Fixes
-	echo -e ""
-	ebegin "Applying Security Fixes"
-		epatch ${FILESDIR}/CAN-2003-0961-do_brk.patch
-		epatch ${FILESDIR}/CAN-2003-0985-mremap.patch
-		epatch ${FILESDIR}/CAN-2004-0010-ncpfs.patch
-		epatch ${FILESDIR}/CAN-2004-0077-do_munmap.patch
-		epatch ${FILESDIR}/CAN-2004-0109-2.4-iso9660.patch
-	eend
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
