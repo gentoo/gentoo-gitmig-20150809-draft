@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glide-v3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.14 2004/06/14 19:51:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.15 2004/06/14 19:53:17 spyderous Exp $
+
+  14 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  Add metadata.
 
   14 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
   glide-v3-3.10-r4.ebuild:
