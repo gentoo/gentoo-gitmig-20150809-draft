@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre1.ebuild,v 1.1 2004/09/08 20:16:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre1.ebuild,v 1.2 2004/09/23 19:45:06 karltk Exp $
 
 inherit eutils java-utils
 
@@ -34,10 +34,6 @@ DEPEND="${RDEPEND}
 	app-arch/zip"
 
 pkg_setup() {
-	ewarn "This package is _highly_ experimental."
-	ewarn "If you are using Eclipse 2.1.x for any serious work, stop now."
-	ewarn "You cannot expect to be productive with this packaging of 3.0!"
-
 	java-utils_setup-vm
 
 	# karltk: refactor, put in java-pkg.eclass?
@@ -340,4 +336,11 @@ src_install() {
 	fi
 
 	doman ${FILESDIR}/eclipse.1
+}
+
+pkg_postinst() {
+	ewarn "This is a development version of Eclipse. Be sensible when reporting"
+	ewarn "bugs upstream, and verify that the problem exists in the official"
+	ewarn "binary drop, too."
+
 }
