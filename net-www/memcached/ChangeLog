@@ -1,6 +1,10 @@
 # ChangeLog for net-www/memcached
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/memcached/ChangeLog,v 1.6 2004/01/11 00:12:04 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/memcached/ChangeLog,v 1.7 2004/01/11 00:14:01 lisa Exp $
+
+  10 Jan 2004; Lisa Seelye <lisa@gentoo.org> memcached-1.1.9.ebuild:
+  1.1.9 has been ~x86 for so long. Bump it (and extend copyright to 2004 for
+  this change)
 
 *memcached-1.1.10 (10 Jan 2004)
 
