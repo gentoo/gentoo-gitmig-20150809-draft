@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3.ebuild,v 1.1 2003/11/01 23:36:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3.ebuild,v 1.2 2003/11/02 07:14:17 seemant Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -51,4 +51,10 @@ src_install() {
 	dosed "s:/usr/local/lib':/usr/lib':g" /usr/lib/libgdbm.la
 
 	dodoc COPYING ChangeLog NEWS README
+}
+
+pkg_postinst() {
+	ewarn "Please run revdep-rebuild --soname libgdbm.so"
+	ewarn "Because things compiled against the previous version will not"
+	ewarn "work"
 }
