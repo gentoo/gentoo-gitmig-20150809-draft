@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r3.ebuild,v 1.1 2003/09/20 20:23:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r3.ebuild,v 1.2 2003/09/25 02:14:37 azarah Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -51,7 +51,7 @@ PP_FVER="${PP_VER//_/.}-3"
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
-PATCH_VER="1.2"
+PATCH_VER="1.3"
 
 # Snapshot support ...
 #SNAPSHOT="2002-08-12"
@@ -95,7 +95,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-*"
+KEYWORDS="-* ~x86"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -195,7 +195,6 @@ src_unpack() {
 	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2
 	if [ -n "${PATCH_VER}" ]
 	then
-		rm -f ${WORKDIR}/patch/{12,13}*
 		epatch ${WORKDIR}/patch
 	fi
 
