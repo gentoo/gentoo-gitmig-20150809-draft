@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.9 2005/01/09 06:35:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.10 2005/01/10 22:30:07 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -404,6 +404,7 @@ src_compile() {
 		--enable-network --enable-ftp \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
+		--disable-sse2 \
 		${myconf} || die
 
 	# when gif is autodetected, GIF_LIB is set correctly.  We're explicitly controlling it, and it doesn't behave correctly.
