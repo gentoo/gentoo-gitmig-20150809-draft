@@ -64,4 +64,6 @@ kerberos
 smartcard
 
 # get to this later
+bash-completion
+crypt
 doc
