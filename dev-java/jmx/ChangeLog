@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.7 2004/10/16 17:25:08 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.8 2004/10/17 07:22:11 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jmx-1.2.1.ebuild:
+  keywords ~amd64; closes #67332.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jmx-1.2.1.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

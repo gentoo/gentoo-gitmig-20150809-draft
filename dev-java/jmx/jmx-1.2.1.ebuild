@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.6 2004/10/16 17:25:08 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.7 2004/10/17 07:22:11 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://java.sun.com/products/JavaManagement/index.jsp"
 SRC_URI="${PN}-${PV//./_}-scsl.zip"
 LICENSE="sun-csl"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="jikes doc"
 DEPEND=">=virtual/jdk-1.4
 		sys-apps/sed"
