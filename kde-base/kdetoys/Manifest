@@ -1,6 +1,7 @@
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 b5795b802a0e7e20dffeeee0f1ce7750 kdetoys-3.4.0.ebuild 300
 MD5 eac4817d1c8ef40938697e61038cd14b kdetoys-3.4.0_beta1.ebuild 299
-MD5 a3debca1d187a1e2eeb238a2ab5c32ff ChangeLog 11891
+MD5 9a0f890409766c300625dc797039eb62 ChangeLog 12023
 MD5 f4921aec2fa04519c90386827daabdce kdetoys-3.2.3.ebuild 320
 MD5 3249d9693d1fbdceaa87beef1a3ef110 kdetoys-3.4.0_rc1.ebuild 304
 MD5 0471184b18d81dae2a1215fae5656174 kdetoys-3.3.2.ebuild 331
@@ -8,6 +9,7 @@ MD5 d6f28c5e075f20bfc9114bcd8450e1ed kdetoys-3.4.0_beta2.ebuild 305
 MD5 4c95624fff5d40c4c50b6a4623180a5a kdetoys-3.3.1.ebuild 320
 MD5 1c250f3c0eb43e5ae1c5ac2e17a633f6 files/digest-kdetoys-3.3.1 67
 MD5 0cfc1e7d7a127fc26acfa1078576bee2 files/digest-kdetoys-3.3.2 67
+MD5 5b4e3adba5796dc0f4ac34763f6e0bff files/digest-kdetoys-3.4.0 67
 MD5 0aee8cc03152159ed87f6dfa026ccff4 files/digest-kdetoys-3.4.0_beta1 68
 MD5 b0267eb5bbbe209179be1b5fa27599c4 files/digest-kdetoys-3.4.0_rc1 71
 MD5 3a6b7f9c9d0c67b230ead9cce1683c44 files/digest-kdetoys-3.2.3 67

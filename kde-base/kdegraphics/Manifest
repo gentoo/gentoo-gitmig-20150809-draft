@@ -3,11 +3,13 @@ MD5 daf76d8c68170b2452404914c54af23d kdegraphics-3.4.0_beta1.ebuild 1157
 MD5 d168992c0e7f21589c7706bf69219dce kdegraphics-3.2.3-r4.ebuild 1372
 MD5 ab15789e18bbae0deb2fc770c9a245a9 kdegraphics-3.3.1-r2.ebuild 1470
 MD5 1a94b890ef32b8efef495515bb4aac46 kdegraphics-3.4.0_beta2.ebuild 1252
-MD5 9e44acde04e01c7eb3527d90baac5239 ChangeLog 22268
+MD5 f1c9b0282dd8af4096aed9f60f98844c ChangeLog 22408
 MD5 d2028ede99c0950869e387c95f0748c9 kdegraphics-3.2.3-r3.ebuild 1329
 MD5 9e3d09c0f431e517ae59ec3d80ff7121 kdegraphics-3.4.0_beta1-r1.ebuild 1249
 MD5 67b0e7e86ba69203632a811de88e421e kdegraphics-3.3.2-r2.ebuild 1511
 MD5 4fca61037cfddd00db6569ea470d5da9 kdegraphics-3.4.0_rc1.ebuild 1122
+MD5 16eec6ea77d3c97e782f64834bb0b856 kdegraphics-3.4.0.ebuild 1125
+MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kdegraphics-3.4.0 71
 MD5 e43eeb201ab38aa05917d4de1573ff59 files/digest-kdegraphics-3.2.3-r4 71
 MD5 bf6b28780e0f5ea8f99e0777187e73cb files/post-3.3.2-kdegraphics.diff 1385
 MD5 9eb12845ce85cc31e216d463877cb519 files/digest-kdegraphics-3.3.2-r2 71
