@@ -3,4 +3,4 @@ MD5 a646ae235e082e137b9f8c7b8a6efe12 files/digest-help2man-1.33.1 66
 MD5 0534a2984bb54753063fbef02d1620f9 ChangeLog 1613
 MD5 fd074c868fd5d88d1112c87dc5848268 help2man-1.29.ebuild 589
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 487971a5d9b41bc3a682e7238e35d67f help2man-1.33.1.ebuild 819
+MD5 09deb7e4b3eb91528d6148379f0720bb help2man-1.33.1.ebuild 786
