@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.1.ebuild,v 1.6 2005/03/03 18:57:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.1.ebuild,v 1.7 2005/03/15 03:19:53 vapier Exp $
 
 inherit eutils gnuconfig
-IUSE="fam berkdb gdbm debug ipv6 nls selinux"
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 HOMEPAGE="http://www.courier-mta.org/"
@@ -13,7 +12,8 @@ SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 mips ~ppc ~ppc64 ~s390 sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 mips ~ppc ~ppc64 s390 sparc x86"
+IUSE="fam berkdb gdbm debug ipv6 nls selinux"
 #userpriv breaks linking against vpopmail
 RESTRICT="nouserpriv"
 
