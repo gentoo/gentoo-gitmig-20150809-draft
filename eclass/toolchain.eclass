@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.10 2004/09/09 17:55:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.11 2004/09/09 23:09:02 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -170,6 +170,7 @@ gcc_get_s_dir() {
 #
 gcc_quick_unpack() {
 	pushd ${WORKDIR}
+	gcc_setup_variables
 
 	if [ -n "${PRERELEASE}" ] ; then
 		unpack gcc-${PRERELEASE}.tar.bz2
@@ -335,22 +336,24 @@ disgusting_gcc_multilib_HACK() {
 }
 
 
+hardened_gcc_works() {
+	for myarch in ${HARDENED_GCC_WORKS}
+	do
+		[ "${ARCH}" == "${myarch}" ] && return 0
+	done
+	return 1
+}
+
+
 # generic GCC src_unpack, to be called from the ebuild's src_unpack.
 # BIG NOTE regarding hardened support: ebuilds with support for hardened are
 # expected to export the following variable:
 #
 #	HARDENED_GCC_WORKS
-#			If set, then it is assumed that hardened gcc works for this
-#			release and version. If empty, the hardened USE flag has no
-#			effect.
-#
-# For example, the following would be useful:
-#
-#	pkg_setup() {
-#		use x86 || use amd64 && HARDENED_GCC_WORKS="true"
-#	}
-#
-# This allows for additional archs to be supported by hardened when ready.
+#			This variable should be set to the archs on which hardened should
+#			be allowed. For example: HARDENED_GCC_WORKS="x86 sparc amd64"
+#			This allows for additional archs to be supported by hardened when
+#			ready.
 #
 # Travis Tilley <lv@gentoo.org> (03 Sep 2004)
 #
@@ -375,7 +378,7 @@ gcc_src_unpack() {
 	if [ -n "${PIE_VER}" ] ; then
 		do_gcc_PIE_patches
 	fi
-	if use hardened && [ -n "${HARDENED_GCC_WORKS}" ] ; then
+	if use hardened && hardened_gcc_works ; then
 		einfo "updating configuration to build hardened GCC"
 		make_gcc_hard || die "failed to make gcc hard"
 	fi
