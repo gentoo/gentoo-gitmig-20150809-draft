@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-0.9-r2.ebuild,v 1.9 2002/12/09 04:21:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-0.9-r2.ebuild,v 1.10 2003/01/18 19:17:25 mholzer Exp $
+
+inherit gnome.org
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ Documentation Generator"
-SRC_URI="ftp://ftp.gnome.org/pub/gnome/pre-gnome2/sources/gtk-doc/${P}.tar.gz"
 HOMEPAGE="http://www.gtk.org/"
 
 SLOT="0"

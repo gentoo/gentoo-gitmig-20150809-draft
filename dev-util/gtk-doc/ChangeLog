@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.8 2003/01/09 11:30:44 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.9 2003/01/18 19:17:25 mholzer Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -15,6 +15,10 @@
   Added the new version, marked as testing, added DEBUG logic to the build.
   
 *gtk-doc-0.9-r2 (Mar 29 2002)
+
+  18 Jan 2003; Martin Holzer <mholzer@gentoo.org> gtk-doc-0.9-r2.ebuild
+  files/digest-gtk-doc-0.9-r2 ChangeLog :
+  Fixed SRC_URI.
 
   01 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
