@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.13 2003/10/02 21:52:49 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.14 2003/11/01 15:43:29 gmsoft Exp $
 
 *perl-tk-800.025 (02 Oct 2003)
+
+  01 Nov 2003; Guy Martin <gmsoft@gentoo.org> perl-tk-800.025.ebuild :
+  Added ~hppa to KEYWORDS.
 
   02 Oct 2003; <rac@gentoo.org> perl-tk-800.025.ebuild:
   Upstream version bump, works with new makemakers (and therefore with perl
