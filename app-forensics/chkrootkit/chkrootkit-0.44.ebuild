@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.44.ebuild,v 1.3 2004/10/30 21:14:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.44.ebuild,v 1.4 2004/11/01 19:24:55 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz
 
 LICENSE="AMS"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~ia64 ~amd64 ~ppc64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~ia64 ~amd64 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc
