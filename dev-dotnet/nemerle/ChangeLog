@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/nemerle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nemerle/ChangeLog,v 1.4 2005/01/01 17:49:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nemerle/ChangeLog,v 1.5 2005/02/09 00:58:58 latexer Exp $
+
+*nemerle-0.2.1-r2 (08 Feb 2005)
+
+  08 Feb 2005; Peter Johanson <latexer@gentoo.org> -nemerle-0.1.4.ebuild,
+  +nemerle-0.2.1-r2.ebuild, -nemerle-0.2.1.ebuild:
+  Revision bump to disable AOT compilation. AOT only works on x86, and is still
+  experimental with mono. Remove some older versions as well.
 
 *nemerle-0.2.1-r1 (10 Oct 2004)
 
