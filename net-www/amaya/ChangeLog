@@ -1,6 +1,11 @@
 # ChangeLog for net-www/amaya
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.12 2003/03/30 20:28:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.13 2003/04/28 03:41:40 lu_zero Exp $
+
+*amaya-8.0 (28 Apr 2003)
+
+  28 Apr 2003; Luca Barbato <lu_zero@gentoo.org> amaya-8.0.ebuild:
+  New version.
 
 30 Mar 2003; Luca Barbato <lu_zero@gentoo.org> amaya-7.2.ebuild:
   Enabled gtk support
