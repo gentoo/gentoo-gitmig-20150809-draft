@@ -1,6 +1,16 @@
-MD5 2a2ec7a2db60c22596a1c35fb769aba4 ChangeLog 718
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 2ec85460cd73a36fc050f6eb89928da7 openjnlp-0.7.1-r1.ebuild 1207
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b29696d5feb47d95dec5bbe71ee68bf9 openjnlp-0.7.1-r1.ebuild 1208
 MD5 84972886557010a633ef3356eb3f45d9 openjnlp-0.7.1.ebuild 779
-MD5 ba9692cf36101897c3f8b13354757dd4 files/digest-openjnlp-0.7.1 66
+MD5 47a748f20993cf92e35f88e1fb3a3435 ChangeLog 804
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 19f0742529b1213caf92b0f15f66de24 files/digest-openjnlp-0.7.1-r1 75
+MD5 ba9692cf36101897c3f8b13354757dd4 files/digest-openjnlp-0.7.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBYwTU/rLF9B432nYRAuLiAJ41KGjNSemZWKEBZ+IBDHK/ufDytwCfRDSD
+PISj14XlnVYtpYqo4q7Bc8E=
+=9lfE
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/openjnlp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/ChangeLog,v 1.5 2004/10/05 13:34:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/ChangeLog,v 1.6 2004/10/05 20:32:06 axxo Exp $
+
+  05 Oct 2004; Thomas Matthijs <axxo@gentoo.org> openjnlp-0.7.1-r1.ebuild:
+  fix wrapper
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   openjnlp-0.7.1.ebuild:

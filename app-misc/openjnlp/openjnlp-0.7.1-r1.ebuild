@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r1.ebuild,v 1.1 2004/09/21 19:37:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/openjnlp-0.7.1-r1.ebuild,v 1.2 2004/10/05 20:32:06 axxo Exp $
 
 inherit java-pkg
 
@@ -39,7 +39,7 @@ src_install() {
 	java-pkg_dojar lib/*.jar
 
 	echo "#!/bin/sh" > ${PN}
-	echo '${JAVA_HOME}'/bin/java -cp $(java-config --classpath=openjnlp) org.nanode.app.OpenJNLP '$*' >> ${PN}
+	echo "\${JAVA_HOME}/bin/java -cp \$(java-config --classpath=openjnlp) org.nanode.app.OpenJNLP \$*" >> ${PN}
 
 	dodoc {History,ReadMe}.txt
 
