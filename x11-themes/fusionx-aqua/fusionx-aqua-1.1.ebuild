@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.5 2004/04/17 12:26:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.6 2004/04/27 19:54:53 pvdabeel Exp $
 
 inherit kde
 need-kde 3.1
@@ -13,7 +13,7 @@ SRC_URI="http://www.kdelook.org/content/files/5296-${MY_P}.tar.gz"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 
 DEPEND="kde-base/kdebase"
 
