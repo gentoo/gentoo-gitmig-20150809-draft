@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r1.ebuild,v 1.3 2001/11/11 11:33:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r1.ebuild,v 1.4 2001/11/13 18:31:20 azarah Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -83,6 +83,6 @@ src_install() {
 	doins ${FILESDIR}/${PVR}/Xsession
 	insinto /etc/pam.d
 	doins ${FILESDIR}/${PVR}/xdm
-	exeinto /etc/init.d
+	exeinto /etc/rc.d/init.d
 	newexe ${FILESDIR}/${PVR}/xdm.start xdm
 }
