@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20041129-r1.ebuild,v 1.1 2004/11/30 13:41:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20041129-r1.ebuild,v 1.2 2004/11/30 13:56:01 ticho Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa unicode"
 
@@ -24,8 +24,7 @@ DEPEND="!media-sound/mpd
 	mikmod? ( media-libs/libmikmod )
 	alsa? ( media-libs/alsa-lib )
 	>=media-libs/libao-0.8.4
-	sys-libs/zlib"
-RDEPEND="${DEPEND}
+	sys-libs/zlib
 	dev-util/gperf"
 
 pkg_setup() {
