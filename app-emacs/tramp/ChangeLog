@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/tramp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.4 2003/09/09 00:07:22 usata Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.5 2004/02/17 21:14:24 usata Exp $
+
+*tramp-2.0.38 (18 Feb 2004)
+
+  18 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> tramp-2.0.38.ebuild:
+  Version bumped. Can't find tramp-2.0.38.tar.gz at main site, so
+  picked up a source from Debian mirror instead. Also added a
+  workaround for the bug described in bug #22563
 
 *tramp-2.0.36 (04 Aug 2003)
 

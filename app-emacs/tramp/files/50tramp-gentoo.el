@@ -1,5 +1,8 @@
 
 ;;; tramp site-lisp configuration
 
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
+(setq auto-save-file-name-transforms
+      `(("\\`/[^/]*:\\(.+/\\)*\\(.*\\)"
+	 ,(expand-file-name "\\2" temporary-file-directory))))
 (require 'tramp)
