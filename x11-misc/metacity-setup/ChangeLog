@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/metacity-setup
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/metacity-setup/ChangeLog,v 1.5 2002/07/12 00:54:49 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/metacity-setup/ChangeLog,v 1.6 2002/10/09 10:59:57 foser Exp $
+
+*metacity-setup-0.7.1-r1 (09 Oct 2002)
+  09 Oct 2002; foser <foser@gentoo.org> metacity-setup-0.7.1-r1.ebuild :
+  Added patch to make metacity-setup functional again see bug #8822
+  Patch by Jonathan Nall <nall@themountaingoats.net>, thanks
 
 *metacity-setup-0.6.1 (12 Jul 2002)
   12 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> metacity-setup-0.6.1.ebuild :
