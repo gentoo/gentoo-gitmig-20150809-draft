@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 a090774a90afbcd6e234c005e95772dc ChangeLog 7090
-MD5 63f358022d82a849890e755b4e71a56c dhcp-3.0.1.ebuild 3828
+MD5 4521c2b83f6c80e95c4a070331291acb dhcp-3.0.1.ebuild 3893
 MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
 MD5 b0de173ad7421c26fb21ae878db5df1e dhcp-3.0_p2-r4.ebuild 2816
 MD5 cfb1b7d604eca6d6fb13f4effe6707ed dhcp-3.0_p2-r5.ebuild 3846
@@ -24,7 +24,7 @@ MD5 66becf9870e0293bbd35d1fba770751a files/dhcp-3.0+paranoia.patch 5366
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA/d75HTu7gpaalycRAlsFAJ91MD/KYtRA+lXwOMoCB0AuNJU8FgCg70TF
-f/C6xjc14TbQUVmI4rw9vFQ=
-=UFHO
+iD8DBQFBCcFkHTu7gpaalycRAremAJ4sglfIkFIVBJ2ouDH27M5fzGLpDACgyRod
+B2RVbdg1pq+OS6uDkH3Z/uM=
+=HSIf
 -----END PGP SIGNATURE-----
