@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 51a07b90ea9880f50cd66f5782dd5d7e enhancedcommentify-2.1-r1.ebuild 573
-MD5 b322afb2306241c50ff3b5ed01a3cdc2 enhancedcommentify-2.1-r3.ebuild 695
-MD5 7b925ec528861e2cc8979a2190c5abc6 ChangeLog 2647
+MD5 d20427527aa1c3be52378f0036b278f5 enhancedcommentify-2.1-r3.ebuild 843
+MD5 b91cd5551dd89220f233e8341a4a4c9b ChangeLog 2757
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 a7f84bad8ce3a8e9217114e1cf3449d8 files/enhancedcommentify-2.1-gentooisms.patch 809
 MD5 dc6810e2bc0248b2c6c4da46dbf3d276 files/digest-enhancedcommentify-2.1-r1 77
@@ -11,7 +11,7 @@ MD5 dc6810e2bc0248b2c6c4da46dbf3d276 files/digest-enhancedcommentify-2.1-r3 77
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB+PpbEZCkKN40op4RAh/TAKCYrhTJ0nwy2oogXtnnkPQ1eCWU7ACeL3Ke
-8IHPHbPWPstzrUqSOyHYL40=
-=AEt4
+iD8DBQFCDk1FEZCkKN40op4RAlSEAKCMkPhJG6gg+/Xp2CkOmFFcj5nFYACghtvm
+OHIBaZVyUPZ7PSMLxaW6Aww=
+=vRPn
 -----END PGP SIGNATURE-----
