@@ -4,9 +4,12 @@
 
 inherit kde-base
 
-LICENSE="GPL-2"
 DESCRIPTION="KRename - a very powerful batch file renamer"
 SRC_URI="http://ftp.kde.com/Utilities/File_System/krename/${P}.tar.bz2"
 HOMEPAGE="http://krename.sourceforge.net/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 need-kde 3

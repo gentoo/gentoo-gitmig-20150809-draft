@@ -1,19 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.28.ebuild,v 1.1 2002/07/17 19:08:05 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.28.ebuild,v 1.2 2002/07/25 17:19:59 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 SRC_URI="mirror://sourceforge/gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.obsession.se/gentoo/"
 
-DEPEND="=x11-libs/gtk+-1.2*"
-
-RDEPEND="nls? ( sys-devel/gettext )"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+
+DEPEND="=x11-libs/gtk+-1.2*"
+RDEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 
@@ -28,8 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
-		--sysconfdir=/etc/gentoo || die "./configure failed"
+	econf --sysconfdir=/etc/gentoo || die "./configure failed"
 	emake || die
 }
 
