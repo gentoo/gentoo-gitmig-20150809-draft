@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.30 2003/04/22 22:16:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.31 2003/04/25 01:19:38 lostlogic Exp $
+
+*util-linux-2.11z-r2 (24 Apr 2003)
+
+  24 Apr 2003; Brandon Low <lostlogic@gentoo.org> util-linux-2.11z-r2.ebuild:
+  Several changes, including support for USE=static the use of sed -i, proper
+  die messages, econf instead of ./configure. Please test this and let me know
+  if there are any regressions
+
+  See bug 19597
 
 *util-linux-2.11z (03 Feb 2003)
 
