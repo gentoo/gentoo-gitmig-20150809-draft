@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 a6fdaac9621260c31417f3dde29e8868 capi4k-firmware-2004.4.5.ebuild 663
-MD5 0fa4c13e29389c5bc58bc22ffdfcc735 ChangeLog 429
+MD5 85b1f1923eb31e3cf7dfdba47b0208ab capi4k-firmware-2004.4.5.ebuild 699
+MD5 207958af194d43e2901ebff78baebd23 ChangeLog 569
 MD5 89ba560b85c0e4aaaec2e36831fa2470 files/digest-capi4k-firmware-2004.4.5 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBlhkZjtv59x0+BrURAlzKAJ0Q3nfjOPuvmJOIbBsZk5LsyNbR+ACeJNCG
-j4gKMtMFH/YvmU2OCVyVrkA=
-=NGtG
+iD8DBQFBliKnjtv59x0+BrURAl9WAJ4iCr2Z1vOj2v2BpddzlZvZYaExFACfdaEl
+u6/gey4HWiBtC2c6S5JBmYY=
+=I/Qp
 -----END PGP SIGNATURE-----
