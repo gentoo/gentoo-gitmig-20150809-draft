@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.3.ebuild,v 1.2 2003/12/08 07:58:08 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.3.ebuild,v 1.3 2003/12/08 23:47:02 luke-jr Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server & JUD,MUC,AIM,MSN,ICQ and Yahoo transports"
@@ -17,7 +17,7 @@ SRC_URI="http://jabberd.jabberstudio.org/1.4/dist/jabberd-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="ssl ldap ipv6"
 # Internal USE flags that I do not really want to advertise ...
 IUSE="${IUSE} j-nomsn j-noaim j-noyahoo j-nomuconf j-nojud"
@@ -183,10 +183,10 @@ pkg_postinst() {
 		useradd jabber -s /bin/false -d /var/spool/jabber -g jabber -m
 	fi
 
-	chown jabber.jabber /etc/jabber
-	chown jabber.jabber /usr/sbin/jabberd
-	chown jabber.jabber /var/log/jabber -R
-	chown jabber.jabber /var/spool/jabber -R
+	chown jabber:jabber /etc/jabber
+	chown jabber:jabber /usr/sbin/jabberd
+	chown jabber:jabber /var/log/jabber -R
+	chown jabber:jabber /var/spool/jabber -R
 	chmod o-rwx /etc/jabber
 	chmod o-rwx /usr/sbin/jabberd
 	chmod o-rwx /var/log/jabber -R
