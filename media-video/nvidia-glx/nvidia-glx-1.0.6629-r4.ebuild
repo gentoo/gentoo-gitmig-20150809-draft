@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r4.ebuild,v 1.2 2005/01/26 06:23:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r4.ebuild,v 1.3 2005/02/03 05:45:13 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -83,7 +83,7 @@ src_install() {
 	local MLTEST=$(type dyn_unpack)
 	if [ "${MLTEST/set_abi}" = "${MLTEST}" ] && has_multilib_profile; then
 		local OABI=${ABI}
-		for ABI in $(get_abi_order); do
+		for ABI in $(get_install_abis); do
 			src_install-libs
 		done
 		ABI=${OABI}

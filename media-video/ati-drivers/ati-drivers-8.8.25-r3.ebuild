@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25-r3.ebuild,v 1.5 2005/02/01 19:44:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25-r3.ebuild,v 1.6 2005/02/03 05:44:13 eradicator Exp $
 
 IUSE=""
 
@@ -111,7 +111,7 @@ src_install() {
 	local MLTEST=$(type dyn_unpack)
 	if [ "${MLTEST/set_abi}" = "${MLTEST}" ] && has_multilib_profile; then
 		local OABI=${ABI}
-		for ABI in $(get_abi_order); do
+		for ABI in $(get_install_abis); do
 			src_install-libs
 		done
 		ABI=${OABI}
