@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bonobo-python
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/ChangeLog,v 1.13 2004/08/23 12:06:28 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/ChangeLog,v 1.14 2004/10/23 13:32:21 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> bonobo-python-0.2.0-r5.ebuild:
+  Stable on sparc.
 
   23 Aug 2004; Lukasz Strzygowski <lucass@gentoo.org>
   bonobo-python-0.2.0-r5.ebuild:
