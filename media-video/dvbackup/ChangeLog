@@ -1,0 +1,9 @@
+# ChangeLog for media-video/dvbackup
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbackup/ChangeLog,v 1.1 2005/01/17 09:45:03 kzimmerm Exp $
+
+*dvbackup-0.0.4 (17 Jan 2005)
+
+	17 Jan 2005;  Kai Zimmermann <kzimmerm@gentoo.org>,
+	Initial import into the tree.  Closes bug #51790.  Thanks to 
+	ozric@tampabay.rr.com for the ebuild submission.
