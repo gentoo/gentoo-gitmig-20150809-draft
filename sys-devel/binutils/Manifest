@@ -1,4 +1,3 @@
-MD5 ec2ef143f977e988e63fd7738e61964a ChangeLog 35653
 MD5 b60efe46b3d022ade1a74c6fa2c09d7f binutils-2.11.92.0.12.3-r2.ebuild 2980
 MD5 1872c47d3b04308a4237ea2dbcc47bc5 binutils-2.11.92.0.7.ebuild 2290
 MD5 a7b48133d78b1efde98f85bea80d6ea5 binutils-2.12.90.0.15.ebuild 3257
@@ -24,7 +23,8 @@ MD5 50ca49430b20bc9727ceece6289c7dad binutils-2.15.91.0.1-r2.ebuild 4994
 MD5 5af514431a384af812da84665ea8612a binutils-2.15.91.0.1.ebuild 4668
 MD5 722667759a5cd99eef79be263a5f4834 binutils-2.15.91.0.2.ebuild 5120
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 0dd27009bd169e3742f7d7b8100fae14 binutils-2.15.92.0.2.ebuild 5085
+MD5 a9bb9ead4c7c0f5a21bf63ee97c242da binutils-2.15.92.0.2.ebuild 5090
+MD5 cfd1e037173735369d3b5a503ccee1a5 ChangeLog 35776
 MD5 fe5fb935b171a472f5eb1a8bca63c136 files/binutils-2.12.90.0.14-glibc21.patch 7936
 MD5 f453b3f208b17cd18380bc3653936487 files/binutils-2.12.90.0.14-x86_64-libpic.patch 1184
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
