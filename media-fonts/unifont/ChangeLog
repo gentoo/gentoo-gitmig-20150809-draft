@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unifont
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.4 2004/02/04 00:19:33 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.5 2004/04/25 15:19:51 usata Exp $
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> unifont-1.0-r1.ebuild,
+  unifont-1.0-r2.ebuild, unifont-1.0.ebuild:
+  Marked stable on x86. Added eutils for epatch. Removed old ebuilds.
 
   03 Feb 2004; <augustus@gentoo.org> unifont-1.0-r2.ebuild:
   Added ~amd64 keyword.
