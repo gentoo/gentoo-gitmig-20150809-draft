@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.26 2003/05/29 12:42:50 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.27 2003/05/31 18:57:46 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -18,6 +18,7 @@ media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-video/transcode - Enable Altivec code portions
 net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
+net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
 net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
 net-www/mozilla:moznomail - If you do NOT want the mail client built with mozilla
 net-www/mozilla:moznocompose - If you do NOT want the web page composer built with mozilla
