@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libxcrypt
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/ChangeLog,v 1.1 2004/01/20 23:10:23 method Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/ChangeLog,v 1.2 2004/04/26 14:40:52 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> libxcrypt-2.0.ebuild:
+  Add die following econf for bug 48950
 
 *libxcrypt-2.0 (20 Jan 2004)
 

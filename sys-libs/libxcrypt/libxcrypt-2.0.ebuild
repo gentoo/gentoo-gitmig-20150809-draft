@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/libxcrypt-2.0.ebuild,v 1.1 2004/01/20 23:10:23 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/libxcrypt-2.0.ebuild,v 1.2 2004/04/26 14:40:52 agriffis Exp $
 
 DESCRIPTION="Libxcrypt is a replacement for libcrypt, which comes with the GNU C \
 Library. It supports DES crypt, MD5, and passwords with blowfish encryption."
@@ -25,7 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake
 
 }
