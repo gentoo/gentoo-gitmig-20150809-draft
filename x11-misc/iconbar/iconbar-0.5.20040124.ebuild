@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbar/iconbar-0.5.20040117.ebuild,v 1.1 2004/01/20 04:32:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbar/iconbar-0.5.20040124.ebuild,v 1.1 2004/01/25 04:03:02 vapier Exp $
 
 inherit enlightenment
 
