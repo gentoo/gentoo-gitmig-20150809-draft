@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.5 2002/04/02 18:55:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.6 2002/04/03 00:46:55 azarah Exp $
+
+  3 Apr 2002; M.Schlemmer <azarah@gentoo.org> gdk-pixbuf-0.16.0-r7.ebuild :
+
+  Remove unneeded auto* stuff.
 
 *gdk-pixbuf-0.16.0-r7 (2 Apr 2002)
 

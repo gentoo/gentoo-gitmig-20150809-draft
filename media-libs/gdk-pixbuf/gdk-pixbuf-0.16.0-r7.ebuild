@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0-r7.ebuild,v 1.1 2002/04/02 18:55:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0-r7.ebuild,v 1.2 2002/04/03 00:46:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Image Library"
@@ -30,9 +30,6 @@ src_compile() {
 
 	#update libtool, else we get the "relink bug"
 	libtoolize --copy --force
-	aclocal
-	autoconf
-	automake --add-missing
 
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
