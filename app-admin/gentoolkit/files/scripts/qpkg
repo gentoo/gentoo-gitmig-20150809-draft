@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.8 2002/06/08 13:52:14 lostlogic Exp $
-ID='$Id: qpkg,v 1.8 2002/06/08 13:52:14 lostlogic Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.9 2002/06/11 14:45:03 lostlogic Exp $
+ID='$Id: qpkg,v 1.9 2002/06/11 14:45:03 lostlogic Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -439,7 +439,9 @@ for p in ${ipak} ${upak} -;do
 	
 done | (
 	if [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o ${verb} -gt 0 \) ]; then
-		sed -e "s:-r[0-9]\+$::" -e "s:-[0-9][^-]*$::"|sort|uniq
+		sed -e "s:-r[0-9]\+$::" -e "s:-[0-9][^-]*$::"|sort -k2|uniq -1
+	elif [ ${verb} -lt 2 ]; then
+		sed -e "s:-[0-9][^-]*$::"|sort -k2|uniq -1
 	else
 		cat
 	fi | sed \
