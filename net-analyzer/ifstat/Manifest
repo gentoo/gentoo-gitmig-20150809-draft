@@ -1,4 +1,6 @@
-MD5 fa346fa51cf9bd43f84f8b87e23f12c7 ChangeLog 739
+MD5 eb1ff6791020a65630d3fd6befe05bbb ChangeLog 857
 MD5 73ba1b0a944b2859ddd93a3d0cb0a1aa ifstat-1.0.ebuild 692
 MD5 f0a9c192b67f67de43a0632a3b4ffe44 metadata.xml 431
+MD5 7c63afa92b30e52373afdbcdfd93afea ifstat-1.1.ebuild 672
 MD5 e017f0ba646dda4a948483bbb0ab56eb files/digest-ifstat-1.0 61
+MD5 920405b5079fac9a9d124de3a4aa3a06 files/digest-ifstat-1.1 61
