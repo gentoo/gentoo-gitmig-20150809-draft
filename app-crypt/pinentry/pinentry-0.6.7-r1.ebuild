@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.6.7-r1.ebuild,v 1.1 2003/02/07 14:01:42 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.6.7-r1.ebuild,v 1.2 2003/02/07 14:06:03 jrray Exp $
 
 DESCRIPTION="This is a collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol as described by the aegypten project."
 HOMEPAGE="http://www.gnupg.org/aegypten/"
@@ -54,8 +54,7 @@ EOF
 }
 
 src_compile() {
-	econf	--disable-pinentry-qt \
-			$(use_enable qt pinentry-qt) \
+	econf	$(use_enable qt pinentry-qt) \
 			$(use_enable gtk pinentry-gtk) \
 			$(use_enable ncurses pinentry-curses) \
 			$(use_enable ncurses fallback-curses) \
