@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/ORBit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ChangeLog,v 1.20 2003/11/15 02:50:43 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ChangeLog,v 1.21 2004/01/27 21:49:56 kumba Exp $
+
+  27 Jan 2004; Joshua Kinard <kumba@gentoo.org> ORBit-0.5.17.ebuild:
+  Added gnuconfig_update to detect mips systems properly
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> ORBit-0.5.17.ebuild:
   Stable on ia64

@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.18 2003/11/15 02:50:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.19 2004/01/27 21:49:56 kumba Exp $
 
-inherit gnome.org libtool
+inherit gnome.org libtool gnuconfig
 
 IUSE="nls"
 
@@ -25,6 +25,9 @@ src_compile() {
 	if [ -z "`use nls`" ] ; then
 		myconf="--disable-nls"
 	fi
+
+	# Detect mips systems properly
+	use mips && gnuconfig_update
 
 	# Libtoolize to fix "relink bug" in older libtool's distributed
 	# with packages.
