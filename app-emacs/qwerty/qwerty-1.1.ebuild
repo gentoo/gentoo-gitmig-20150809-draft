@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/qwerty-1.1.ebuild,v 1.1 2003/09/21 02:41:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/qwerty-1.1.ebuild,v 1.2 2003/09/23 00:09:11 msterret Exp $
 
-inherit elisp 
+inherit elisp
 
 IUSE=""
 DESCRIPTION="Switch between QWERTY and DVORAK without changing the console keymap."
