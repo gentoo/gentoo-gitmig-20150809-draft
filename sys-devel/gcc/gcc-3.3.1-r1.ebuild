@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r1.ebuild,v 1.7 2003/09/17 18:43:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r1.ebuild,v 1.8 2003/09/28 21:26:55 azarah Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -195,6 +195,10 @@ src_unpack() {
 	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2
 	if [ -n "${PATCH_VER}" ]
 	then
+		# Exclude this as it is fixed in apps according to lu_zero.
+		mkdir -p ${WORKDIR}/exclude
+		mv -f ${WORKDIR}/patch/08* ${WORKDIR}/exclude/
+
 		epatch ${WORKDIR}/patch
 	fi
 
