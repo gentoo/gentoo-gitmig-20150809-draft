@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.69 2003/11/26 22:13:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.70 2003/11/30 11:22:32 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -898,19 +898,9 @@ xpatch() {
 
 }
 
-# Unpack those pesky makeself generated files ...
-# They're shell scripts with the binary package tagged onto
-# the end of the archive.  Loki utilized the format as does
-# many other game companies.
-#
-# Usage: unpack_makeself [file to unpack] [offset]
-# - If the file is not specified then unpack will utilize ${A}.
-# - If the offset is not specified then we will attempt to extract
-#   the proper offset from the script itself.
-unpack_makeself() {
+# for internal use only (unpack_pdv and unpack_makeself)
+find_unpackable_file() {
 	local src="$1"
-	local skip="$2"
-
 	if [ -z "${src}" ]
 	then
 		src="${DISTDIR}/${A}"
@@ -926,7 +916,89 @@ unpack_makeself() {
 			src="${src}"
 		fi
 	fi
-	[ ! -e "${src}" ] && die "Could not find requested makeself archive ${src}"
+	[ ! -e "${src}" ] && die "Could not find requested archive ${src}"
+	echo "${src}"
+}
+
+# Unpack those pesky pdv generated files ...
+# They're self-unpacking programs with the binary package stuffed in
+# the middle of the archive.  Valve seems to use it a lot ... too bad
+# it seems to like to segfault a lot :(.  So lets take it apart ourselves.
+#
+# Usage: unpack_pdv [file to unpack] [size of off_t]
+# - you have to specify the off_t size ... i have no idea how to extract that
+#   information out of the binary executable myself.  basically you pass in
+#   the size of the off_t type (in bytes) on the machine that built the pdv
+#   archive.  one way to determine this is by running the following commands:
+#   strings <pdv archive> | grep lseek
+#   strace -elseek <pdv archive>
+#   basically look for the first lseek command (we do the strings/grep because
+#   sometimes the function call is _llseek or something) and steal the 2nd
+#   parameter.  here is an example:
+#   root@vapier 0 pdv_unpack # strings hldsupdatetool.bin | grep lseek
+#   lseek
+#   root@vapier 0 pdv_unpack # strace -elseek ./hldsupdatetool.bin
+#   lseek(3, -4, SEEK_END)                  = 2981250
+#   thus we would pass in the value of '4' as the second parameter.
+unpack_pdv() {
+	local src="`find_unpackable_file $1`"
+	local sizeoff_t="$2"
+
+	[ -z "${sizeoff_t}" ] && die "No idea what off_t size was used for this pdv :("
+
+	local shrtsrc="`basename ${src}`"
+	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
+	local metaskip=`tail -c ${sizeoff_t} ${src} | hexdump -e \"%i\"`
+	local tailskip=`tail -c $((${sizeoff_t}*2)) ${src} | head -c ${sizeoff_t} |  hexdump -e \"%i\"`
+
+	# grab metadata for debug reasons
+	local metafile="`mymktemp ${T}`"
+	tail -c +$((${metaskip}+1)) ${src} > ${metafile}
+
+	# rip out the final file name from the metadata
+	local datafile="`tail -c +$((${metaskip}+1)) ${src} | strings | head -n 1`"
+	datafile="`basename ${datafile}`"
+
+	# now lets uncompress the file if need be
+	local tmpfile="`mymktemp ${T}`"
+	tail -c +$((${tailskip}+1)) ${src} 2>/dev/null | head -c 512 > ${tmpfile}
+	local filetype="`file -b ${tmpfile}`"
+	case ${filetype} in
+		compress*)
+			#for some reason gzip dies with this ... dd cant provide buffer fast enough ?
+			#dd if=${src} ibs=${metaskip} count=1 \
+			#	| dd ibs=${tailskip} skip=1 \
+			#	| gzip -dc \
+			#	> ${datafile}
+			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
+				| head -c $((${metaskip}-${tailskip})) \
+				| gzip -dc \
+				> ${datafile}
+			;;
+		*)
+			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
+				| head -c $((${metaskip}-${tailskip})) \
+				> ${datafile}
+			#dd if=${src} ibs=${metaskip} count=1 \
+			#	| dd ibs=${tailskip} skip=1 of=${datafile}
+			;;
+	esac
+	[ -s "${datafile}" ] || die "failure unpacking pdv ('${metaskip}' '${tailskip}' '${datafile}')"
+	#assert "failure unpacking pdv ('${metaskip}' '${tailskip}' '${datafile}')"
+}
+
+# Unpack those pesky makeself generated files ...
+# They're shell scripts with the binary package tagged onto
+# the end of the archive.  Loki utilized the format as does
+# many other game companies.
+#
+# Usage: unpack_makeself [file to unpack] [offset]
+# - If the file is not specified then unpack will utilize ${A}.
+# - If the offset is not specified then we will attempt to extract
+#   the proper offset from the script itself.
+unpack_makeself() {
+	local src="`find_unpackable_file $1`"
+	local skip="$2"
 
 	local shrtsrc="`basename ${src}`"
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
