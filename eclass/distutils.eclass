@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.14 2003/09/09 22:50:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.15 2003/10/02 23:14:17 liquidx Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -33,13 +33,13 @@ else
 fi
 
 distutils_src_compile() {
-	${python} setup.py build ${@} || die "compilation failed"
+	${python} setup.py build "$@" || die "compilation failed"
 }
 
 distutils_src_install() {
-	${python} setup.py install --root=${D} ${@} || die
+	${python} setup.py install --root=${D} "$@" || die
 	
-	dodoc CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS
+	dodoc CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO
 	dodoc CONTRIBUTORS LICENSE COPYING*
 	dodoc Change* MANIFEST* README*
 	
