@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 efd7d74f2bad96e94ff64356a848be56 kwebget-0.8.1.ebuild 667
-MD5 6a2ed1caa1712f84ef30b44a158e34d3 ChangeLog 589
+MD5 662b0f9339479914b45cf60d3d2f0d7b ChangeLog 678
+MD5 e0a80a780f0346cac86c70cb45629868 kwebget-0.8.1.ebuild 670
 MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
 MD5 ae1f25b48b8a7db439b7b328604c1052 files/digest-kwebget-0.8.1 66
 MD5 a39b795975542e606033d3cd29fc01f5 files/kwebget-0.8.1-configure.patch 3504
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByJ1xZ/iYVBmujdURAkbsAKDucvZue9aOoLifvkDkG1F910fXmgCgpmQe
-vvx0mUWFdjlGQANlSfkVLdU=
-=OpIc
------END PGP SIGNATURE-----
