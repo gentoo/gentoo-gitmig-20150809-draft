@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/manpages-ja
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.10 2004/02/17 15:57:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.11 2004/02/19 21:19:13 gmsoft Exp $
+
+  19 Feb 2004; Guy Martin <gmsoft@gentoo.org> manpages-ja-20040115.ebuild,
+  manpages-ja-20040215.ebuild:
+  Marked stable on hppa.
 
 *manpages-ja-20040215 (18 Feb 2004)
 
