@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/macchanger
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.10 2004/07/24 13:58:11 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.11 2004/07/31 22:45:55 malc Exp $
+
+  31 Jul 2004; Malcolm Lashley <malc@gentoo.org> macchanger-1.5.0.ebuild:
+  ~amd64 - closes bug #58056
 
 *macchanger-1.5.0 (24 Jul 2004)
 
