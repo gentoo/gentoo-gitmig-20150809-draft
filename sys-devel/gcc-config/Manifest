@@ -5,7 +5,7 @@ MD5 0b8a51c11885531a2411c0ca751095f2 gcc-config-1.3.9.ebuild 1370
 MD5 3e436a19e566d77e4ed9d9d97e1ed01d ChangeLog 14605
 MD5 0a250a07d02f1343f64fe7f7bbdbd820 gcc-config-1.3.6-r4.ebuild 2636
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 84d0ca7a875fc1a7a353ab8f0f71792e gcc-config-1.3.8-r3.ebuild 1359
+MD5 4afa82e91f513ea1db20555dcdfd2c74 gcc-config-1.3.8-r3.ebuild 1347
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.6-r4 0
 MD5 11d24a6f5defba5a8a8bbc65f26e2215 files/wrapper-1.4.2.c 7439
 MD5 5f5ba2d67203ed8386ae76352f15000d files/gcc-config-1.3.6 10285
@@ -18,7 +18,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.8-r3 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB0gPXroRuSHgZdywRAh+SAJ4pjd/bxPh75VY0BiNAw0rhtIaiMgCfVpHz
-EVnEHhWCu02pXwtOE+bw67o=
-=pelY
+iD8DBQFB1xk9roRuSHgZdywRAqaZAJ9h405I3G6XGRA0vE41ZUfR/y3wlACgjnak
+teR+lVqIkG3CjtiHSoTn1H0=
+=tvIz
 -----END PGP SIGNATURE-----
