@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/gtkscintilla2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/ChangeLog,v 1.1 2003/07/20 15:00:39 liquidx Exp $
+
+*gtkscintilla2-0.0.8 (20 Jul 2003)
+
+  20 Jul 2003; Alastair Tse <liquidx@gentoo.org> gtkscintilla2-0.0.8.ebuild:
+  initial commit. contributed by TGL <degrenier@easyconnect.fr> and Mike
+  Gardiner <driver@iinet.net.au>
+
