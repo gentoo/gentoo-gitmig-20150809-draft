@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.15 2002/10/04 04:59:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.16 2003/01/30 19:57:06 danarmak Exp $
 
 inherit kde-base || die
 
@@ -25,7 +25,7 @@ DEPEND="$DEPEND
 #	>=sys-devel/autoconf-1.13"
 
 src_unpack() {
-	base_src_unpack all patch
+	kde_src_unpack all patch
 }
 
 src_compile() {
