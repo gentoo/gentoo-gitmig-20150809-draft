@@ -1,5 +1,5 @@
-MD5 f24494502fd311a3d610c2349d11558f ChangeLog 1598
+MD5 812a9848b8bbbac81eb33ff3e36d888a ChangeLog 1693
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 0cdde5552ce3507098dc6f96ec8f9195 mingetty-1.00.3.ebuild 845
+MD5 62cb47baf4ecb95979b3957c620b7c20 mingetty-1.00.3.ebuild 851
 MD5 5f50d456f26044f81b45f8ca250ab5c6 files/digest-mingetty-1.00.3 67
 MD5 2468fd4da2ffd9439faecf5eb7630d85 files/mingetty-1.00-autologin.patch 13742
