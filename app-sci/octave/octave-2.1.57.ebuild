@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57.ebuild,v 1.1 2004/03/29 05:49:39 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57.ebuild,v 1.2 2004/03/30 12:17:26 phosphan Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="GNU Octave is a high-level language (MatLab compatible) intended for numerical computations"
 HOMEPAGE="http://www.octave.org/"
-SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2"
+SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2
+		ftp://ftp.math.uni-hamburg.de/pub/soft/math/octave/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
