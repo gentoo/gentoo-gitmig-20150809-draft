@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.16 2004/12/15 06:40:23 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.17 2004/12/19 19:13:36 stuart Exp $
+
+  19 Dec 2004; Stuart Herbert <stuart@gentoo.org> +files/0.35/df.patch,
+  +files/0.35/space_chars.patch, +files/0.35/uidgid32.patch:
+  Added patches; see bug #60270; thanks to S.Caglar Onur
+  <caglar.onur@tubitak.gov.tr>
 
   14 Dec 2004; Stuart Herbert <stuart@gentoo.org> shfs-0.35.ebuild:
   Marked stable on x86 after plenty of user feedback ;)

@@ -1,0 +1,45 @@
+--- TODO	1 Jun 2004 13:03:21 -0000	1.10
++++ TODO	18 Jun 2004 12:19:52 -0000
+@@ -1,5 +1,8 @@
+ TODO for shfs:
+ 
++* revise 2.6 kernel module install (according to lk post)
++* more comprehensive error messages
++* local uid preserve..
+ * rewrite stack allocations -> kmalloc
+ * sftp server code support
+ * autoconf
+--- shfs/Linux-2.4/shell.c	3 Jun 2004 13:20:44 -0000	1.8
++++ shfs/Linux-2.4/shell.c	18 Jun 2004 12:19:52 -0000
+@@ -961,11 +961,11 @@
+ 
+ 	s = info->sockbuf;
+ 	if ((p = strsep(&s, " ")))
+-		attr->f_blocks = simple_strtoull(p, NULL, 10);
++		attr->f_blocks = simple_strtoull(p, NULL, 10) >> 2;
+ 	if ((p = strsep(&s, " ")))
+-		attr->f_bfree = attr->f_blocks - simple_strtoull(p, NULL, 10);
++		attr->f_bfree = attr->f_blocks - (simple_strtoull(p, NULL, 10) >> 2);
+ 	if ((p = strsep(&s, " ")))
+-		attr->f_bavail = simple_strtoull(p, NULL, 10);
++		attr->f_bavail = simple_strtoull(p, NULL, 10) >> 2;
+ 
+ 	result = sock_readln(info, info->sockbuf, SOCKBUF_SIZE);
+ 	if (result < 0)
+--- shfs/Linux-2.6/shell.c	3 Jun 2004 13:20:47 -0000	1.9
++++ shfs/Linux-2.6/shell.c	18 Jun 2004 12:19:53 -0000
+@@ -974,11 +974,11 @@
+ 
+ 	s = info->sockbuf;
+ 	if ((p = strsep(&s, " ")))
+-		attr->f_blocks = simple_strtoull(p, NULL, 10);
++		attr->f_blocks = simple_strtoull(p, NULL, 10) >> 2;
+ 	if ((p = strsep(&s, " ")))
+-		attr->f_bfree = attr->f_blocks - simple_strtoull(p, NULL, 10);
++		attr->f_bfree = attr->f_blocks - (simple_strtoull(p, NULL, 10) >> 2);
+ 	if ((p = strsep(&s, " ")))
+-		attr->f_bavail = simple_strtoull(p, NULL, 10);
++		attr->f_bavail = simple_strtoull(p, NULL, 10) >> 2;
+ 
+ 	result = sock_readln(info, info->sockbuf, SOCKBUF_SIZE);
+ 	if (result < 0)
