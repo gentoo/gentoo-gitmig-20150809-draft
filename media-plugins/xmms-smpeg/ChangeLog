@@ -1,0 +1,54 @@
+# ChangeLog for media-video/smpeg-xmms
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-smpeg/ChangeLog,v 1.1 2004/04/22 08:27:34 eradicator Exp $
+
+*xmms-smpeg-0.3.5-r1 (22 Apr 2004)
+
+  22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmms-smpeg-0.3.5-r1.ebuild, files/xmms-smpeg-0.3.5-gcc.patch:
+  Package moved to media-plugins/xmms-smpeg.
+
+  21 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  smpeg-xmms-0.3.5-r1.ebuild:
+  Inherit eutils.
+
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  smpeg-xmms-0.3.5-r1.ebuild:
+  To ~arch because of bug #40446.
+
+  26 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  smpeg-xmms-0.3.4-r1.ebuild, smpeg-xmms-0.3.4-r2.ebuild,
+  smpeg-xmms-0.3.5-r1.ebuild, smpeg-xmms-0.3.5.ebuild, files/gcc.patch,
+  files/smpeg-xmms-0.3.5-gcc.patch:
+  Bumping gcc fix into stable.  Removing old ebuilds.
+
+  20 Sep 2003; jje <jje@gentoo.org> files/gcc.patch:
+  Updated gcc patch. Missed one literal.
+
+*smpeg-xmms-0.3.5-r1 (20 Sep 2003)
+
+  20 Sep 2003; jje <jje@gentoo.org> smpeg-xmms-0.3.5-r1.ebuild,
+  files/gcc.patch:
+  Added patch for gcc-3.3. ~x86 masked. Closes #29028.
+
+*smpeg-xmms-0.3.5 (13 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*smpeg-xmms-0.3.4-r2 (03 Aug 2002)
+  
+  03 Aug 2002; Doug Goldstein <cardoe@gentoo.org> smpeg-xmms-0.3.4-r2 :
+ 
+  I updated the depends to smpeg-0.4.4-r3 to require the newer version with gcc-3.1 support
+  Bug #5558 Olivier Crete <tester@videotron.ca> posted the patch from Redhat.
+
+*smpeg-xmms-0.3.4-r1 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

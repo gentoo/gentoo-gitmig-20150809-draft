@@ -1,0 +1,34 @@
+--- configure.orig	2004-02-26 19:54:31.000000000 -0800
++++ configure	2004-02-26 19:55:25.000000000 -0800
+@@ -2701,22 +2701,22 @@
+     }
+   else
+     {
+-      printf("\n*** 'smpeg-config --version' returned %d.%d.%d, but the 
+-minimum version\n", $smpeg_major_version, $smpeg_minor_version, 
+-$smpeg_micro_version);
+-      printf("*** of SMPEG required is %d.%d.%d. If smpeg-config is 
+-correct, then it is\n", major, minor, micro);
++      printf("\n*** 'smpeg-config --version' returned %d.%d.%d, but the minimum version\n", $smpeg_major_version, $smpeg_minor_version, $smpeg_micro_version);
++      printf("*** of SMPEG required is %d.%d.%d. If smpeg-config is correct, then it is\n", major, minor, micro);
+       printf("*** best to upgrade to the required version.\n");
+-      printf("*** If smpeg-config was wrong, set the environment variable 
+-SMPEG_CONFIG\n");
+-      printf("*** to point to the correct copy of smpeg-config, and remove 
+-the file\n");
++      printf("*** If smpeg-config was wrong, set the environment variable SMPEG_CONFIG\n");
++      printf("*** to point to the correct copy of smpeg-config, and remove the file\n");
+       printf("*** config.cache before re-running configure\n");
+       return 1;
+     }
+ }
+ 
+ 
++
++
++
++
++
+ EOF
+ if { (eval echo configure:2722: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext} && (./conftest; exit) 2>/dev/null
+ then
