@@ -1,0 +1,10 @@
+# ChangeLog for net-news/bnr2
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/ChangeLog,v 1.1 2002/12/12 16:22:50 phoenix Exp $
+
+*bnr2-0.7.3 (12 Dec 2002)
+
+  12 Dec 2002; phoen][x <phoenix@gentoo.org> ChangeLog, bnr2-0.7.3.ebuild,
+  files/digest-bnr2-0.7.3 :
+  Initial import.  Ebuild submitted by Per Wigren <wigren@home.se>.
+  This closes bug #2722.
