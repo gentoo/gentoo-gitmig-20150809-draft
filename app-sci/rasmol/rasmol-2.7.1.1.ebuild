@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.7.1.1.ebuild,v 1.1 2004/03/01 06:04:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.7.1.1.ebuild,v 1.2 2004/04/01 19:44:53 spyderous Exp $
 
 MY_P="RasMol_${PV}"
 
 DESCRIPTION="Free program that displays molecular structure."
 HOMEPAGE="http://www.openrasmol.org/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="public-domain"
 DEPEND="virtual/x11"
