@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/uptimed
+# ChangeLog for app-misc/uptimed
 # Distributed under the terms of GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.3 2002/10/19 15:48:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.4 2002/12/17 19:16:44 vapier Exp $
 
 *uptimed-0.2.0 (21 Jun 2002)
 
