@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r2.ebuild,v 1.1 2005/02/16 13:44:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r2.ebuild,v 1.2 2005/02/16 14:08:49 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -40,7 +40,7 @@ src_unpack() {
 	# various patches
 	epatch ${FILESDIR}/${P}-mwm-configdir.patch
 	epatch ${FILESDIR}/${P}-CAN-2004-0687-0688.patch.bz2
-	epatch ${FILESDIR}/${P}-CAN-2004-0914.patch.bz2
+	epatch ${FILESDIR}/${P}-CAN-2004-0914-newer.patch.bz2
 	epatch ${FILESDIR}/${P}-CAN-2004-0914_sec8.patch
 	epatch ${FILESDIR}/${P}-char_not_supported.patch
 	epatch ${FILESDIR}/${P}-pixel_length.patch
