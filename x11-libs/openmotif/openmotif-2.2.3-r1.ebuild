@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r1.ebuild,v 1.1 2005/02/14 14:52:23 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r1.ebuild,v 1.2 2005/02/14 19:15:12 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -19,10 +19,11 @@ DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4
 	!ppc-macos? ( =sys-devel/automake-1.4* )
-	=sys-devel/autoconf-2.5*"
+	=sys-devel/autoconf-2.5*
+	x11-libs/motif-config"
 RDEPEND="virtual/libc
-	virtual/x11"
-#x11-libs/motif-config
+	virtual/x11
+	x11-libs/motif-config"
 
 PROVIDE="virtual/motif"
 SLOT="2.2"
@@ -129,11 +130,13 @@ src_install() {
 	dodoc README RELEASE RELNOTES
 	dodoc BUGREPORT TODO
 
-	# insinto /et/env.d/motif openmotif-2.2
-	# motif-config openmotif-2.2
+	# install profile
+	echo "$P" > ${D}/usr/lib/motif/openmotif-2.2
 }
 
 pkg_postinst() {
+	motif-config openmotif-2.2
+
 	ewarn "This breaks applications linked against libXm.so.2."
 	ewarn "You have to rebuild these applications with revdep-rebuild."
 }

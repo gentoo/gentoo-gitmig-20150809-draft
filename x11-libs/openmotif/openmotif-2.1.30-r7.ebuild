@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r7.ebuild,v 1.4 2005/02/14 14:52:23 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r7.ebuild,v 1.5 2005/02/14 19:15:12 lanius Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -17,10 +17,11 @@ IUSE=""
 
 PROVIDE="virtual/motif"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	virtual/x11
+	x11-libs/motif-config"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
-# x11-libs/motif-config
 
 SLOT="2.1"
 
@@ -153,6 +154,10 @@ src_install() {
 	dodoc README COPYRIGHT.MOTIF RELEASE RELNOTES
 	dodoc BUGREPORT OPENBUGS CLOSEDBUGS
 
-	# insinto /et/env.d/motif openmotif-2.2
-	# motif-config openmotif-2.2
+	# install profile
+	echo "$P" > ${D}/usr/lib/motif/openmotif-2.1
+}
+
+pkg_postinst() {
+	motif-config openmotif-2.1
 }
