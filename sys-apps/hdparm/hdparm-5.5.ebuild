@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.5.ebuild,v 1.4 2004/03/22 04:08:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.5.ebuild,v 1.5 2004/05/03 18:50:05 vapier Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,8 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/system/hardware/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~ia64 mips ~ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc mips ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64 s390"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -30,7 +31,7 @@ src_compile() {
 
 src_install() {
 	into /
-	dosbin hdparm contrib/idectl
+	dosbin hdparm contrib/idectl || die
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/hdparm-new-init hdparm
