@@ -208,6 +208,4 @@ gnome-apps/gnapster
 >=gnome-extra/gal-0.14
 
 # Untested
->=gnome-base/ORBit-0.5.11
 >=gnome-base/bonobo-1.0.11
->=gnome-extra/bonobo-conf-0.13
