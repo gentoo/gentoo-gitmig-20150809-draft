@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.21 2004/09/19 08:00:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.22 2004/09/22 19:22:23 vapier Exp $
 
-inherit gnuconfig
+inherit gnuconfig libtool
 
 DESCRIPTION="XML parsing libraries"
 HOMEPAGE="http://expat.sourceforge.net/"
@@ -18,8 +18,8 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# Detect mips systems properly
 	gnuconfig_update
+	uclibctoolize
 }
 
 src_install() {
