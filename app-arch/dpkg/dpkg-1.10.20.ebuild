@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.20.ebuild,v 1.2 2004/05/02 16:07:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.20.ebuild,v 1.3 2004/05/02 19:45:15 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc arm"
+KEYWORDS="x86 ppc sparc arm"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.0
@@ -32,8 +32,6 @@ src_install() {
 	make DESTDIR=${D} install || die
 	rm -f ${D}/usr/sbin/install-info
 	rm -f ${D}/usr/bin/md5sum
-	dodir /etc/alternatives
-	insinto /etc/alternatives
-	doins scripts/README.alternatives
+	mv ${D}/usr/etc ${D}/
 	dodoc ChangeLog INSTALL THANKS TODO
 }
