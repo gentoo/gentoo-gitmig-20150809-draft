@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.4.7.ebuild,v 1.1 2004/08/15 19:01:21 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.4.7.ebuild,v 1.2 2004/08/16 01:29:20 cyfred Exp $
 
 inherit eutils
 
@@ -11,8 +11,11 @@ MY_P=${PN}-2.4.STABLE7
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A caching web proxy, with advanced features"
 HOMEPAGE="http://www.squid-cache.org/"
+PATCH_URI="http://dev.gentoo.org/~cyfred/distfiles/squid-2.4.STABLE7-patches.tar.gz
+	http://dev.gentoo.org/~cyfred/distfiles/msntauth-v2.0.3-squid.2.tar.gz"
 SRC_URI="ftp://ftp.squid-cache.org/pub/squid-2/STABLE/${MY_P}-src.tar.gz
-	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/STABLE/${MY_P}-src.tar.gz"
+	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/STABLE/${MY_P}-src.tar.gz
+	${PATCH_URI}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -32,6 +35,14 @@ src_unpack() {
 	# see the tops of these patches for details..
 	epatch ${FILESDIR}/${P}-debian.diff
 	epatch ${FILESDIR}/${P}-gentoo.diff
+
+	# We are applying several patches for the 2.4 tree
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patch
+
+	# Now copy the msnt_auth updates over the top of the tree
+	einfo "Updating msnt_auth module"
+	rm -rf auth_modules/MSNT/*
+	cp ${WORKDIR}/msntauth-v2.0.3-squid.2/* auth_modules/MSNT/
 
 	if ! use debug
 	then
