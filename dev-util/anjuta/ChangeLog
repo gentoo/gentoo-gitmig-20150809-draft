@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.17 2003/06/27 13:46:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.18 2003/07/09 15:31:08 liquidx Exp $
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> anjuta-1.0.2.ebuild,
+  anjuta-1.1.1.ebuild:
+  dep cleanup. removing libzvt from 1.0.2 because gtk1 ver is provide by
+  gnome-libs
 
   27 Jun 2003; foser <foser@gentoo.org> anjuta-1.0.2.ebuild :
   Removed db dep, it's not needed at all (!) (#23376)
