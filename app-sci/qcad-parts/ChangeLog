@@ -1,12 +1,16 @@
 # ChangeLog for app-sci/qcad-parts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad-parts/ChangeLog,v 1.5 2004/10/17 10:46:27 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad-parts/ChangeLog,v 1.6 2004/11/02 15:13:46 phosphan Exp $
 
-  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  02 Nov 2004; Patrick Kursawe <phosphan@gentoo.org>
+  qcad-parts-2.0.1.2.ebuild:
+  Adding unzip to dependencies
+
+   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   qcad-parts-2.0.1.2.ebuild:
   keywords amd64.
 
-  11 May 2004; Patrick Kursawe <phosphan@gentoo.org>
+ 11 May 2004; Patrick Kursawe <phosphan@gentoo.org>
   qcad-parts-2.0.1.2.ebuild:
   Declaring stable
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad-parts/qcad-parts-2.0.1.2.ebuild,v 1.5 2004/10/17 10:46:27 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad-parts/qcad-parts-2.0.1.2.ebuild,v 1.6 2004/11/02 15:13:46 phosphan Exp $
 
 MY_PN="partlibrary"
 MY_PV="${PV}-1"
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/unzip"
+RDEPEND=""
 
 S=${WORKDIR}/${MY_PN}-${MY_PV}
 
