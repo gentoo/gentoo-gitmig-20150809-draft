@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/gens
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.1 2003/09/09 16:26:50 vapier Exp $
+
+*gens-2.12 (01 Aug 2003)
+
+  01 Aug 2003; Michael Sterrett <msterret@gentoo.org> gens-2.12.ebuild:
+  initial commit.  ebuild contributed by David Holm (modified) via bug 24821.
+

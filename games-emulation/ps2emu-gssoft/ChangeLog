@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/ps2emu-gssoft
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-gssoft/ChangeLog,v 1.1 2003/09/09 16:26:50 vapier Exp $
+
+*ps2emu-gssoft-0.5 (14 Aug 2003)
+
+  14 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

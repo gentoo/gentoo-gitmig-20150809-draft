@@ -1,0 +1,25 @@
+# ChangeLog for app-emulation/gxmame
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.1 2003/09/09 16:26:50 vapier Exp $
+
+*gxmame-0.33 (13 Jul 2003)
+
+  13 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #24105.
+
+*gxmame-0.32 (06 Apr 2003)
+
+  06 Apr 2003; Martin Holzer <mholzer@gentoo.org> gxmame-0.32.ebuild:
+  Version bumped. Closes #18398.
+
+*gxmame-0.31 (13 Jan 2003)
+
+  06 Apr 2003; Martin Holzer <mholzer@gentoo.org> gxmame-0.31.ebuild:
+  Added xmame as RDEPEND. Closes #17760
+
+  16 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gxmame-0.31.ebuild:
+  added src_install function.  closes bug #17477 by Kfir Ozer <ufk2k@yahoo.com>
+
+  13 Jan 2003; Ryan Phillips <rphillips@gentoo.org> gxmame-0.31.ebuild:
+  Official version
+

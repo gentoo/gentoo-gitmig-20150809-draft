@@ -1,0 +1,11 @@
+--- src/Linux/Makefile.orig	2003-08-14 20:56:46.568240992 -0400
++++ src/Linux/Makefile	2003-08-14 20:56:54.059102208 -0400
+@@ -6,7 +6,7 @@
+ BUILD = 2
+ PLUGIN = libCDVDiso-${VERSION}.${BUILD}.so
+ CFG = cfgCDVDiso
+-CFLAGS = -fPIC -Wall -O2 -fomit-frame-pointer -I.. -I. -D__LINUX__
++CFLAGS = -fPIC -Wall $(OPTFLAGS) -I.. -I. -D__LINUX__
+ OBJECTS = ../CDVDiso.o Config.o Linux.o
+ CFGOBJS = conf.o interface.o support.o Config.o
+ LIBS = -lz -lbz2

@@ -1,0 +1,11 @@
+--- src/Makefile.orig	2003-08-14 01:55:53.161740568 -0400
++++ src/Makefile	2003-08-14 01:56:01.737436864 -0400
+@@ -3,7 +3,7 @@
+ BUILD = 8
+ PLUGIN = libpadJoy-${VERSION}.${BUILD}.so
+ CFGPRG = cfgPadJoy
+-CFLAGS = -fPIC -Wall -O2 -fomit-frame-pointer -D_REENTRANT
++CFLAGS = -fPIC -Wall $(OPTFLAGS) -D_REENTRANT
+ OBJECTS = pad.o
+ CFGOBJ = cfg.o
+ LIBS = $(shell gtk-config --libs) -lpthread

@@ -1,0 +1,4 @@
+MD5 2bb8283c0041934b8dcf50003f408ea0 files/digest-psemu-peopssoftgpu-1.15 67
+MD5 d7d6d0e073fab50e7fc57d7efe5dcf31 files/1.15-makefile-cflags.patch 971
+MD5 d07e49c3ffde69978fb3f3e1eeb984be ChangeLog 1345
+MD5 eb45d600eb7d9d8af1888b1f2ae11292 psemu-peopssoftgpu-1.15.ebuild 1164

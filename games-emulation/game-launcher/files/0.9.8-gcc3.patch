@@ -1,0 +1,11 @@
+--- ./startup/unix/glaunch.cc.old	2003-01-08 15:38:38.000000000 -0800
++++ ./startup/unix/glaunch.cc	2003-01-08 15:41:38.000000000 -0800
+@@ -5,6 +5,8 @@
+ #include "exit.h"
+ #include <stdio.h>
+ 
++using namespace std;
++
+ static int runProgram(const char * program);
+ 
+ int main(int argc, char *argv[])

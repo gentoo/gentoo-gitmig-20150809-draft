@@ -1,0 +1,50 @@
+# ChangeLog for app-emulation/advancemame
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.1 2003/09/09 16:26:49 vapier Exp $
+
+*advancemame-0.70.0 (13 Jul 2003)
+
+  13 Jul 2003; Martin Schlemmer <azarah@gentoo.org> advancemame-0.70.0.ebuild:
+  New version.  Closes bug #18798.
+
+  03 Feb 2003; Martin Schlemmer <azarah@gentoo.org> advancemame-0.63.0.ebuild :
+
+  Add missing 'mkdir -p ${S}' to src_unpack(), closing bug #15046.
+
+*advancemame-0.63.0 (03 Feb 2003)
+
+  03 Feb 2003; Martin Schlemmer <azarah@gentoo.org> advancemame-0.63.0.ebuild :
+
+  New version.
+
+*advancemame-0.62.2 (25 Dec 2002)
+
+  25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> advancemame-0.62.2.ebuild :
+
+  New version.
+
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> advancemame-0.61.1.ebuild :
+
+  Replace econf with ./configure, as it breaks if we pass --host.
+
+  28 Nov 2002; Mark Guertin <gerk@gentoo.org> advancemame-0.62.0.ebuild,
+  advancemame-0.61.1.ebuild:
+  
+  Set -ppc in keywords, uses x86 asm
+
+*advancemame-0.62.0 (20 Nov 2002)
+
+  20 Nov 2002; Martin Schlemmer <azarah@gentoo.org> advancemame-0.62.0.ebuild :
+
+  New version.  Close bugs #10537 and #10540.
+
+  26 Aug 2002; Martin Schlemmer <azarah@gentoo.org> advancemame-0.61.1.ebuild :
+
+  Add dev-lang/nasm to the DEPEND.
+
+*advancemame-0.61.1 (24 Aug 2002)
+
+  24 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Initial version contributed by myself.
+

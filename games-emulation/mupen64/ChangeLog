@@ -1,0 +1,21 @@
+# ChangeLog for app-emulation/mupen64
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.1 2003/09/09 16:26:50 vapier Exp $
+
+*mupen64-0.2 (03 Sep 2003)
+
+  03 Sep 2003; Michael Sterrett <msterret@gentoo.org> mupen64-0.2.ebuild:
+  version bump (bug 26448)
+
+  25 Jun 2003; <msterret@gentoo.org> mupen64-0.1.ebuild:
+  KEYWORD sparc64 doesn't exist; use sed -i (added src_unpack)
+
+*mupen64-0.1 (21 Jun 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped + build from src + games.eclass support #13141.
+
+*mupen64-0.0.90a (26 Dec 2002)
+
+  26 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  initial release

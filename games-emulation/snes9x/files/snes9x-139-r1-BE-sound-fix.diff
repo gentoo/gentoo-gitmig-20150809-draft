@@ -1,0 +1,26 @@
+--- release/unix/unix.cpp.orig	2003-03-02 03:33:54.000000000 +0100
++++ release/unix/unix.cpp	2003-03-02 03:35:10.000000000 +0100
+@@ -1463,7 +1463,11 @@
+ 	perror ("ioctl SNDCTL_DSP_SETTRIGGER");
+ #endif
+ 
++#ifdef MSB_FIRST
++    J = AFMT_S16_BE;
++#else
+     J = AFMT_S16_LE;
++#endif
+ //    J = AFMT_U8;
+     if (ioctl (so.sound_fd, SNDCTL_DSP_SETFMT, &J) < 0)
+     {
+@@ -1471,7 +1475,11 @@
+ 	return (FALSE);
+     }
+ 
++#ifdef MSB_FIRST
++    if (J != AFMT_S16_BE)
++#else
+     if (J != AFMT_S16_LE)
++#endif
+     {
+ 	so.sixteen_bit = FALSE;
+ 	J = AFMT_U8;

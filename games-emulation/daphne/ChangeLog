@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/daphne
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.1 2003/09/09 16:26:49 vapier Exp $
+
+*daphne-0.99.6 (15 Jul 2003)
+
+  15 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Andrea Cerrito <cerrito@centromultimediale.it> #18807.

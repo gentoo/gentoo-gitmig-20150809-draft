@@ -1,0 +1,12 @@
+diff -u -r atari800-1.2.2-ORIG/src/configure atari800-1.2.2/src/configure
+--- atari800-1.2.2-ORIG/src/configure	Mon Dec 31 06:16:27 2001
++++ atari800-1.2.2/src/configure	Mon Feb 25 10:15:47 2002
+@@ -883,7 +883,7 @@
+ 	;;
+   mingw32 ) a800_host=win;;
+   msdosdjgpp ) a800_host=dos;;
+-  linux ) a800_host=linux;;
++  *linux* ) a800_host=linux;;
+   mint ) a800_host=falcon;;
+ esac
+ 

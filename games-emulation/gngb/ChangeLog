@@ -1,0 +1,37 @@
+# ChangeLog for app-emulation/gngb
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngb/ChangeLog,v 1.1 2003/09/09 16:26:50 vapier Exp $
+
+*gngb-20030809 (09 Aug 2003)
+
+  09 Aug 2003; Hanno Boeck <hanno@gentoo.org> gngb-20030809.ebuild:
+  Version bump.
+
+*gngb-20020819 (13 Oct 2002)
+
+ 13 Oct 2002; Hanno Boeck <hanno@gentoo.org> gngb-20020819.ebuild :
+
+ Version updated.
+
+*gngb-20020111 (27 Jul 2002)
+
+  03 Sep 2002; Seemant Kulleen <seemant@gentoo.org> gngb-20020111.ebuild :
+
+  HOMEPAGE fix by Rachel Holmes, and modernised syntax to econf.
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added -ppc to keywords
+
+  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> gngb-20020111.ebuild :
+
+  Added KEYWORS="x86" and SLOT to bring ebuild in line with QA.  
+
+*gngb-20020111 (18 Jun 2002)
+
+  18 Jun 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

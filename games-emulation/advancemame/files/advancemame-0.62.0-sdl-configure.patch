@@ -1,0 +1,24 @@
+--- advmame/configure.orig	2002-11-20 11:31:46.000000000 +0200
++++ advmame/configure	2002-11-20 11:32:23.000000000 +0200
+@@ -4513,9 +4513,7 @@
+ 
+   test -n "$SDLCONFIG" && break
+ done
+-test -n "$SDLCONFIG" || SDLCONFIG="no
+-			"
+-
++test -n "$SDLCONFIG" || SDLCONFIG="no"
+ 		else
+ 			for ac_prog in ${host_alias}-sdl-config
+ do
+@@ -4556,9 +4554,7 @@
+ 
+   test -n "$SDLCONFIG" && break
+ done
+-test -n "$SDLCONFIG" || SDLCONFIG="no
+-			"
+-
++test -n "$SDLCONFIG" || SDLCONFIG="no"
+ 		fi
+ 		if test ! $SDLCONFIG = no; then
+ 			SDLCFLAGS=`$SDLCONFIG --cflags`
