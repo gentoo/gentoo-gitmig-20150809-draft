@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0.ebuild,v 1.2 2002/09/02 17:02:14 lostlogic Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0.ebuild,v 1.3 2002/10/04 06:06:03 vapier Exp $
 
 S=${WORKDIR}/Libnet-latest
 DESCRIPTION="library to provide an API for commonly used low-level network

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03.ebuild,v 1.8 2002/09/28 18:55:26 owen Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03.ebuild,v 1.9 2002/10/04 06:05:58 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Implements functions designed to lock the standard mailboxes."
