@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.54.0.ebuild,v 1.7 2004/07/14 23:12:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.54.0.ebuild,v 1.8 2004/11/23 05:35:56 mrness Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="virtual/libc
 	net-dialup/ppp
-	>=net-libs/wvstreams-3.74"
+	>=net-libs/wvstreams-4.00"
 
 src_unpack() {
 	unpack ${A}
