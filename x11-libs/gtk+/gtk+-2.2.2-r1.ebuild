@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.2-r1.ebuild,v 1.5 2003/07/19 23:36:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.2-r1.ebuild,v 1.6 2003/07/25 11:19:59 foser Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -70,7 +70,7 @@ src_compile() {
 		&& myconf="${myconf}  --enable-debug" \
 		|| myconf="${myconf}  --disable-debug"
 		
-	econf --with-gdktarget=x11 --with-xinput=yes ${myconf} || die
+	econf --with-gdktarget=x11 --with-xinput=xfree ${myconf} || die
 
 	# gtk+ isn't multithread friendly due to some obscure code generation bug
 	make || die
