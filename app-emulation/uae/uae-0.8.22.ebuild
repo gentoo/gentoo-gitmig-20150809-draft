@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.6 2002/11/02 23:56:35 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.7 2002/11/17 22:52:09 hanno Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An amiga emulator"
@@ -35,7 +35,7 @@ src_compile() {
 		--enable-threads \
 		--enable-scsi-device \
 		${myconf} || die "./configure failed"
-	
+
 	make || die
 }
 
