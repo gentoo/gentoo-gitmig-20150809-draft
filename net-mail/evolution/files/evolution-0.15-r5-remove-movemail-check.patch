@@ -1,0 +1,60 @@
+Only in evolution-0.15: confdefs.h
+Only in evolution-0.15: config.cache
+Only in evolution-0.15: config.log
+diff -u -r evolution-0.15.orig/configure evolution-0.15/configure
+--- evolution-0.15.orig/configure	Wed Oct  3 00:12:24 2001
++++ evolution-0.15/configure	Mon Oct  8 15:31:35 2001
+@@ -270,8 +270,6 @@
+ ac_help="$ac_help
+   --enable-gtk-doc  Use gtk-doc to build documentation [default=auto]"
+ ac_help="$ac_help
+-  --with-movemail=PATH    Path to a movemail binary"
+-ac_help="$ac_help
+   --with-sub-version=VERSION Specify a sub-version string"
+ 
+ # Initialize some variables set by options.
+@@ -11899,39 +11897,10 @@
+   :
+ fi
+ 
+-echo $ac_n "checking for movemail""... $ac_c" 1>&6
+-echo "configure:11904: checking for movemail" >&5
+-if test x$with_movemail = xyes -o x$with_movemail = x; then
+-    with_movemail=no
+-fi
+-if test x$with_movemail != xno; then
+-    cat >> confdefs.h <<EOF
++with_movemail=no
++cat >> confdefs.h <<EOF
+ #define MOVEMAIL_PATH "$with_movemail"
+ EOF
+-
+-    echo "$ac_t""$with_movemail" 1>&6
+-else
+-    emacs_exec_dir=`emacs --batch --eval '(message exec-directory)' 2>&1`
+-    case $emacs_exec_dir in
+-    /*) if test -x $emacs_exec_dir/movemail; then
+-	    if test -u $emacs_exec_dir/movemail -o -g $emacs_exec_dir/movemail; then
+-		echo "$ac_t""$emacs_exec_dir/movemail" 1>&6
+-		cat >> confdefs.h <<EOF
+-#define MOVEMAIL_PATH "$emacs_exec_dir/movemail"
+-EOF
+-
+-	    else
+-		echo "$ac_t""$emacs_exec_dir/movemail... not set-id: ignored" 1>&6
+-	    fi
+-	else
+-	    echo "$ac_t""no" 1>&6
+-	fi
+-	;;
+-    *)
+-	echo "$ac_t""no" 1>&6
+-	;;
+-    esac
+-fi
+ 
+ # Check whether --with-sub-version or --without-sub-version was given.
+ if test "${with_sub_version+set}" = set; then
+Only in evolution-0.15/intl: po2tbl.sed
+Only in evolution-0.15: libtool
+Only in evolution-0.15/po: POTFILES
