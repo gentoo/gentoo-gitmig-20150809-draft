@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.3 2005/02/27 20:21:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.4 2005/03/06 01:37:06 motaboy Exp $
+
+  06 Mar 2005; Simone Gotti <motaboy@gentoo.org>
+  kdemultimedia-meta-3.4.0_rc1.ebuild:
+  Change kde-base/mpeglib deps as it was updated.
 
 *kdemultimedia-meta-3.4.0_rc1 (27 Feb 2005)
 
