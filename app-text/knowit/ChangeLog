@@ -1,0 +1,9 @@
+# ChangeLog for app-text/knowit
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/ChangeLog,v 1.1 2003/04/28 21:27:19 caleb Exp $
+
+*knowit-0.7 (28 Apr 2003)
+
+  28 Apr 2003; Caleb Tennis <caleb@gentoo.org> ChangeLog, knowit-0.7.ebuild:
+  Initial import.  Ebuild submitted by Juergen Nagel (juergen@kroell.net).
+
