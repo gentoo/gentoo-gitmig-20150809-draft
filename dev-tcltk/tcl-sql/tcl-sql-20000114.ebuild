@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114.ebuild,v 1.1 2004/08/08 15:10:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/tcl-sql-20000114.ebuild,v 1.2 2004/08/09 04:33:27 cardoe Exp $
 
 inherit eutils
 
@@ -17,16 +17,15 @@ DEPEND="dev-lang/tcl
 
 S=${WORKDIR}/${PN}
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
 	chmod +w sql-mysql.cc
-
 	epatch ${FILESDIR}/fix-const.patch
+}
 
-	sed -i -e 's|(int resHandle=0)|(int resHandle)|g' sql-mysql.cc || die "sed failed"
-	sed -i -e 's|char \*msg = mysql_error|char \*msg = (char *)mysql_error|' sql-mysql.cc || die "sed failed"
-	echo '#define USE_OLD_FUNCTIONS' > sql-mysql.cc.temp
-	cat sql-mysql.cc >> sql-mysql.cc.temp
-	mv sql-mysql.cc.temp sql-mysql.cc
+src_compile() {
 	emake || die
 }
 

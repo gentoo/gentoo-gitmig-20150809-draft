@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tcl-sql
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.1 2004/08/08 15:10:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.2 2004/08/09 04:33:27 cardoe Exp $
+
+  09 Aug 2004; Doug Goldstein <cardoe@gentoo.org> files/fix-const.patch,
+  tcl-sql-20000114.ebuild:
+  Cleaner patch and cleaned up ebuild
 
   07 Aug 2004; Doug Goldstein <cardoe@gentoo.org> tcl-sql-20000114.ebuild:
   Initial addition to portage
