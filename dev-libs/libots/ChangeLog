@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libots
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/ChangeLog,v 1.5 2003/05/20 19:30:50 taviso Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/ChangeLog,v 1.6 2004/02/07 00:53:07 agriffis Exp $
+
+*libots-2.2.7-r1 (06 Feb 2004)
+
+  06 Feb 2004; Aron Griffis <agriffis@gentoo.org> libots-2.2.7-r1.ebuild:
+  move libots to /lib
 
   20 May 2003; Tavis Ormandy <taviso@gentoo.org> libots-2.2.7.ebuild:
   Debian project say its okay to mirror libots.
