@@ -51,6 +51,8 @@ gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
 gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
 gtkhtml - Adds support for gnome-extra/gtkhtml
 guile - Adds support for dev-util/guile (interpreter for Scheme)
+icc - Use the Intel C++ Compiler if the package supports it
+icc-pgo - Enable PGO data generation or use when use icc.
 imap - Adds support for IMAP
 imlib - Adds support for media-libs/imlib (Image loading and rendering library)
 innodb - Adds innodb support for mySQL (transaction support)
