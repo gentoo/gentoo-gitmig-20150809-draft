@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0292-r1.ebuild,v 1.3 2005/03/25 17:51:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0301.ebuild,v 1.1 2005/03/25 17:51:04 luckyduck Exp $
 
 inherit eutils linux-mod
 
@@ -24,7 +24,7 @@ S=${WORKDIR}/${NV_PACKAGE}-${PKG_V}/nvsound
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* ~x86 ~amd64"
 RESTRICT="nostrip"
 IUSE=""
 
@@ -37,12 +37,6 @@ src_unpack() {
 
 	cd ${WORKDIR}
 	bash ${DISTDIR}/${NV_PACKAGE}-${PKG_V}.run --extract-only
-	if kernel_is 2 6 10; then
-		epatch ${FILESDIR}/nforce-2.6.10.patch
-	fi
-	if kernel_is gt 2 6 10; then
-		epatch ${FILESDIR}/nforce-2.6.11.patch
-	fi
 }
 
 src_compile() {
@@ -59,7 +53,6 @@ src_compile() {
 
 src_install() {
 	linux-mod_src_install
-
 	dobin nvmixer
 	dodoc ${S}/ReleaseNotes.html
 }
