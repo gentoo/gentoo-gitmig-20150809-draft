@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.3 2004/01/19 11:50:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.4 2004/01/22 01:46:48 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -140,6 +140,8 @@ src_install() {
 	# with compiling things with conflicting opts later.
 	dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib/python${PYVER}/config/Makefile
 
+	# install python-updater in /usr/sbin
+	dosbin ${FILESDIR}/python-updater
 }
 
 pkg_postrm() {
@@ -159,7 +161,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "If you have just upgraded from python-2.2.x you will need to run:"
 	ewarn
-	ewarn "${PORTDIR}/dev-lang/python/files/python-updater"
+	ewarn "/usr/sbin/python-updater"
 	ewarn
 	ewarn "This will automatically rebuild all the python dependent modules"
 	ewarn "to run with python-2.3."

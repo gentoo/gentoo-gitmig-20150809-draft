@@ -18,19 +18,26 @@ DEP_DEPLIST = 1
 DEP_SLOT = 2
 dep_cache = {}
 
+    
 # very simply, we extract the dependencies for each package
 for pkg in pkgs_to_reorder:
     try:
-	deps, slot = varapi.aux_get(pkg, ["DEPEND", "SLOT"])
+        deps, slot = varapi.aux_get(pkg, ["DEPEND", "SLOT"])
     except ValueError:
-	sys.stderr.write("Error getting dependency information off " + pkg + "\n")
-	continue
-    realdeps = portage.dep_check(deps, fakedbapi)
+        sys.stderr.write("Error getting dependency information off " + pkg + "\n")
+        continue
+    try:
+        realdeps = portage.dep_check(deps, fakedbapi)
+    except TypeError:
+        # we're probably running >=portage-2.0.50
+        pkgsettings = portage.config(clone=portage.settings)        
+        realdeps = portage.dep_check(deps, fakedbapi, pkgsettings)
+
     vardeps = []
     # match() finds the versions of all those that are installed
     for dep in realdeps[1]:
-	vardeps = vardeps + varapi.match(dep)
-    dep_cache[pkg] = ( 0, vardeps, slot )
+        vardeps = vardeps + varapi.match(dep)
+        dep_cache[pkg] = ( 0, vardeps, slot )
 
 # then we just naively append to a sorted list of deps using this rule.
 # if a dependency is going to be merged, we add it to the list like
@@ -40,8 +47,9 @@ for pkg in pkgs_to_reorder:
 for pkg, depinfo in dep_cache.items():
     dep_to_add = []
     for dep in depinfo[DEP_DEPLIST]:
-	if dep in pkgs_to_reorder:
-	    dep_to_add.append(dep)
+        if dep in pkgs_to_reorder:
+            dep_to_add.append(dep)
+            
     pkgs_ordered += dep_to_add + [pkg]
     
 # now, because the packages may have nested or multple dependencies, we
@@ -50,8 +58,8 @@ for pkg, depinfo in dep_cache.items():
 # comes before the package that depends on it.
 pkgs_final_order = []
 for pkg in pkgs_ordered:
-	if pkg not in pkgs_final_order:
-	    pkgs_final_order += [pkg]
+    if pkg not in pkgs_final_order:
+        pkgs_final_order += [pkg]
 	    
 print string.join(pkgs_final_order, "\n")
 #print portage.dep_expand("=dev-python/sip-3.8", portage.portdb)
