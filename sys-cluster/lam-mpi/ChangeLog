@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.2 2003/07/11 15:54:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.3 2003/11/03 04:07:14 spyderous Exp $
+
+*lam-mpi-7.0.2 (02 Nov 2003)
+
+  02 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; lam-mpi-7.0.2.ebuild,
+  metadata.xml:
+  Bump to close bug #31288. Added metadata.xml for cluster herd.
 
   07 Jul 2003; George Shapovalov <george@gentoo.org> :
   moved from dev-libs into sys-cluster
