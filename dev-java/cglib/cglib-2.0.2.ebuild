@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2.ebuild,v 1.1 2004/12/27 14:54:56 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2.ebuild,v 1.2 2004/12/27 15:26:33 st_lim Exp $
 
 inherit java-pkg
 
@@ -34,7 +34,8 @@ src_compile() {
 }
 
 src_install () {
-	java-pkg_dojar dist/${PN}-full-${PV}.jar || die "installation failed"
+	mv dist/${PN}-full-${PV}.jar dist/${PN}-full.jar
+	java-pkg_dojar dist/${PN}-full.jar || die "installation failed"
 	dodoc README NOTICE LICENSE
 	use doc && java-pkg_dohtml -r build/apidocs/*
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.1 2004/12/27 14:54:56 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.2 2004/12/27 15:26:33 st_lim Exp $
+
+  27 Dec 2004; Lim Swee Tat <st_lim@gentoo.org> cglib-2.0.2.ebuild:
+  Removed the version number from the jar
 
 *cglib-2.0.2 (27 Dec 2004)
 
