@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.7 2004/03/06 13:35:01 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.8 2004/03/06 17:22:47 pappy Exp $
 
 IUSE="static nls bootstrap java build X multilib nogcj hardened"
 
@@ -97,10 +97,11 @@ fi
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-manpages.tar.bz2"
 
-PIE_SSP_PATCH="gcc-3.3.2-v5-nodefault-pie-ssp.patch"
-# this will move to /space/distfiles when the package becomes available via ~arch
+# remember that this will move to /space/distfiles when the package becomes available via ~arch
+# bug #6148 - the bounds checking patch interferes with gcc.c, so we stick them both together ;-)
+PIE_SSP_BOUNDS_PATCH="pie-ssp-bounds-checking-3.3.3-v7.patch"
 SRC_URI="${SRC_URI}
-	hardened? ( http://dev.gentoo.org/~pappy/gentoo-projects/hardened-gcc/gentoo/distrib/4.0.3.3.2/noarch/${PIE_SSP_PATCH} )"
+	hardened? ( http://dev.gentoo.org/~pappy/gentoo-projects/hardened-gcc/gentoo/distrib/4.0.3.3.2/noarch/${PIE_SSP_BOUNDS_PATCH} )"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers and support for hardened PIE and SSP"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -345,7 +346,7 @@ src_unpack() {
 	# This patch enables improved PIE and SSP behaviour but does not
 	# enable it by default ...
 
-	cd ${WORKDIR}/${P}; epatch "${DISTDIR}/${PIE_SSP_PATCH}"
+	cd ${WORKDIR}/${P}; epatch "${DISTDIR}/${PIE_SSP_BOUNDS_PATCH}"
 
 	release_version="${release_version}, pie-${PIE_VER}"
 
