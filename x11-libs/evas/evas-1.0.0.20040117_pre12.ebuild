@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20031225_pre12.ebuild,v 1.1 2003/12/25 05:52:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20040117_pre12.ebuild,v 1.1 2004/01/20 02:23:28 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -11,7 +11,7 @@ IUSE="${IUSE} X mmx opengl jpeg png directfb fbcon"
 
 DEPEND="virtual/x11
 	>=media-libs/imlib2-1.1.0
-	>=dev-libs/eet-0.9.0.20031013
+	>=dev-libs/eet-0.9.0.20040117
 	>=dev-db/edb-1.0.4.20031013
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
