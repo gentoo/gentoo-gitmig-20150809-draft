@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.3.20041109-r1.ebuild,v 1.2 2005/01/01 16:37:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.9.20050111.ebuild,v 1.1 2005/01/21 10:32:52 usata Exp $
 
 inherit tetex eutils flag-o-matic
 
