@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.52 2003/10/27 21:27:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.53 2003/11/04 07:35:07 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,msterret}@gentoo.org
 #
@@ -91,6 +91,13 @@ prepgamesdirs() {
 			find ${D}/${dir} -type d -print0 | xargs --null chmod 750
 			find ${D}/${dir} -type f -print0 | xargs --null chmod o-rwx,g+r
 		) >& /dev/null
+	done
+	local f=""
+	for f in `find ${D}/${GAMES_STATEDIR} -type f -printf '%P ' 2>/dev/null` ; do
+		if [ -e "${ROOT}/${GAMES_STATEDIR}/${f}" ] ; then
+			cp -p "${ROOT}/${GAMES_STATEDIR}/${f}" "${D}/${GAMES_STATEDIR}/${f}"
+			touch "${D}/${GAMES_STATEDIR}/${f}"
+		fi
 	done
 	chmod 750 ${D}/${GAMES_BINDIR}/* >& /dev/null
 }
