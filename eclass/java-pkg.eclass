@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.2 2003/05/14 04:35:54 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.3 2003/05/14 16:44:46 absinthe Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -17,11 +17,18 @@ java-pkg_dojar()
 		JARDESTTREE="lib"
 	fi
 	
+	# Set install paths
 	sharepath="${DESTTREE}/share"
-	shareroot="${sharepath}/${PN}"
-	jardest="${shareroot}/${JARDESTTREE}"
-	package_env="${D}${shareroot}/package.env"
-	#dodir "${jardest}"
+	if [ "$SLOT" == "0" ] ; then
+		
+		shareroot="${sharepath}/${PN}"
+		jardest="${shareroot}/${JARDESTTREE}"
+		package_env="${D}${shareroot}/package.env"
+	else
+		shareroot="${sharepath}/${PN}-${PV}"
+		jardest="${shareroot}/${JARDESTTREE}"
+		package_env="${D}${shareroot}/package.env"
+	fi
 
 	debug-print "JARDESTTREE=${JARDESTTREE}"
 	debug-print "sharepath=${sharepath}"
