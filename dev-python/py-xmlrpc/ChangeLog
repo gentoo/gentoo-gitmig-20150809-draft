@@ -1,7 +1,13 @@
 # ChangeLog for dev-python/py-xmlrpc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.1 2002/04/13 21:18:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.2 2002/05/24 06:20:40 rphillips Exp $
 
+*py-xmlrpc-0.8.8.2 (23 Apr 2002)
+
+  23 Apr 2002; Ryan Phillips <rphillips@gentoo.org> py-xmlrpc-0.8.8.2.ebuild :
+
+  Updated package
+  
 *py-xmlrpc-0.8.7 (13 Apr 2002)
 
   13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> py-xmlrpc-0.8.7.ebuild files/py-xmlrpc-0.8.7 :
