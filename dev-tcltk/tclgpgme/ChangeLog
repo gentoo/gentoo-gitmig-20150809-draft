@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.6 2004/06/25 02:08:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.7 2004/08/16 14:04:30 dragonheart Exp $
+
+*tclgpgme-1.0-r1 (16 Aug 2004)
+
+  16 Aug 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  +tclgpgme-1.0-r1.ebuild:
+  Revision bump to handle gpgme-0.3.14-r1
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> tclgpgme-1.0.ebuild:
   Added ~sparc keyword.
