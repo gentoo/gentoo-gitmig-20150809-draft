@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9f2b75a5738fb492bdd6a50db9b1c8a0 gcc-3.2.3-r4.ebuild 19754
 MD5 a48f0b2b1ee2697060cb2cd31a0e963d gcc-3.3.2-r5.ebuild 21248
 MD5 9b8536edd1111148d5a8ac9c3ab02288 gcc-3.3.4-r1.ebuild 24749
@@ -13,7 +10,7 @@ MD5 b51ad5b522016590a155af2ab03f4e20 gcc-3.4.2-r2.ebuild 13458
 MD5 453632339c41cdb4c4a6949c282556e2 gcc-3.4.3.ebuild 13325
 MD5 4bcf46d8a3f5509cf09f23017408095d gcc-2.95.3-r8.ebuild 8407
 MD5 872c3e4633f5a8414f8e2c004fa3b374 gcc-3.3.3-r3.ebuild 23468
-MD5 d79c040e0e95d6f967c5cb03ce508bae gcc-3.4.3-r1.ebuild 13795
+MD5 1f9bd717a591da1b1a937d6f69d71070 gcc-3.4.3-r1.ebuild 13858
 MD5 5bdc72e6f0fedd6b932d93692a4e4fa6 ChangeLog 74977
 MD5 483487724c94691b62abeb1a32023e9e gcc-3.3.2.ebuild 16758
 MD5 b52666d9d366f9dd02c00cdedb65b281 gcc-3.3.4-r2.ebuild 24553
@@ -105,13 +102,7 @@ MD5 2c1ce849de55d8c81af4e081dbb2f5e4 files/3.4.2/gcc34-m32-no-sse2.patch 1058
 MD5 b2922cfe76692e7d2b373a0a255f405e files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch 14248
 MD5 a720c913b78bcfbd7f63319130fadd4a files/3.4.2/810-arm-bigendian-uclibc.patch 1139
 MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 1658
+MD5 3f6d070c2a4a899e7d879fdb55eecba4 files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
 MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
 MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBqccjI1lqEGTUzyQRAgiVAJ0Z/UsXqrLxo75CyZARcVknXVTn0QCg3rO3
-ua9WSOlkOGhZsGrNykzgr6o=
-=lf2b
------END PGP SIGNATURE-----
