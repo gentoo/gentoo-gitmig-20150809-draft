@@ -1,8 +1,12 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.16 2003/02/23 22:05:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.17 2003/03/02 08:03:03 seemant Exp $
 
 *gmp-4.1.2 (22 Feb 2003)
+
+  02 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gmp-4.1.2.ebuild:
+  filter out -ffast-math, closing bug #16284 by David Cozatt
+  <yggsdrasil@hotmail.com>
 
   23 Feb 2003; Aron Griffis <agriffis@gentoo.org> gmp-4.1.2.ebuild :
   Only run "make check" when DEBUG is set
