@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.41 2004/05/07 23:44:49 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.42 2004/06/22 22:51:32 malc Exp $
+
+  22 Jun 2004; <malc@gentoo.org> hotplug-20040401.ebuild:
+  Mark stable on amd64
 
   07 May 2004; Greg Kroah-Hartman <gregkh@gentoo.org> hotplug-20040401.ebuild:
   fix bug #50376 to the hotplug-20040401.ebuild file
