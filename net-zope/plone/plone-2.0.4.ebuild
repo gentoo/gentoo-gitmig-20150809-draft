@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.4.ebuild,v 1.3 2004/09/24 21:00:32 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.4.ebuild,v 1.4 2004/10/20 11:20:04 radek Exp $
 
 SLOT="2.0"
 
@@ -27,6 +27,7 @@ RDEPEND=">=net-zope/cmf-1.4.7
 	>=net-zope/portaltransforms-1.0.4
 	>=net-zope/externaleditor-0.8
 	>=net-zope/epoz-0.8.2
+	>=app-admin/zope-config-0.4
 	${RDEPEND}"
 
 ZPROD_LIST="CMFPlone"
