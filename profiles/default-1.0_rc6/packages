@@ -57,7 +57,7 @@
 *sys-apps/cpio
 *>=sys-apps/dcron-2.7-r5
 *sys-apps/debianutils
-*sys-apps/devfsd
+*>=sys-apps/devfsd-1.3.16-r1
 *sys-apps/diffutils
 *sys-apps/e2fsprogs
 *sys-apps/ed
