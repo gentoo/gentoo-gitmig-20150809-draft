@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.31 2005/02/14 20:23:45 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.32 2005/03/10 00:19:16 stkn Exp $
+
+*zaptel-1.0.6 (10 Mar 2005)
+
+  10 Mar 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/zaptel-bristuff-0.2.0-RC7k.patch, +zaptel-1.0.6.ebuild:
+  New version. Adds bristuff (+florz patches) support.
 
   14 Feb 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/zaptel-1.0.4-experimental-devfs26.diff, zaptel-1.0.4.ebuild:
