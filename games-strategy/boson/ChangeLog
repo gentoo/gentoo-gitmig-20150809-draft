@@ -1,6 +1,6 @@
-# ChangeLog for app-games/boson
+# ChangeLog for games-strategy/boson
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.1 2003/09/10 05:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.2 2003/09/10 15:50:59 vapier Exp $
 
   03 Sep 2003; Michael Sterrett <msterret@gentoo.org> boson-0.8.ebuild:
   added Gentoo Technologies, Inc. to Copyright line
