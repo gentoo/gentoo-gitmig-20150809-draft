@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.91.0.3.ebuild,v 1.1 2004/08/10 21:05:06 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.91.0.3.ebuild,v 1.2 2004/08/23 18:10:50 humpback Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 		then
 		unpack ${PN}_ver-${SVER}-staticQT.tar.bz2
 		cd ${WORKDIR}
-		mv ${PN}_ver-${SVER}-staticQT ${PN}_ver-${SVER}
+		mv ${PN}_ver_${SVER}-staticQT ${PN}_ver_${SVER}
 		cd ${S}
 	else
 		unpack ${PN}_ver-${SVER}.tar.bz2
