@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.42 2004/06/21 22:01:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.43 2004/06/23 14:42:59 jforman Exp $
+
+  23 June 2004; Jeffrey Forman <jforman@gentoo.org> bind-9.2.2-r4.ebuild:
+  add mysql functionality into bind. 
 
   21 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> files/named.ca:
   updated named.ca (bug #53848)
