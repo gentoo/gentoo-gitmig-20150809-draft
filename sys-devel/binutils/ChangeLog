@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.162 2004/10/11 09:48:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.163 2004/10/18 14:30:59 gmsoft Exp $
+
+  18 Oct 2004; Guy Martin <gmsoft@gentoo.org> binutils-2.15.92.0.2-r1.ebuild:
+  Added ~hppa.
 
 *binutils-2.15.92.0.2-r1 (11 Oct 2004)
 
