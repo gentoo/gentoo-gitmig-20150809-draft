@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.2 2003/12/02 02:29:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.3 2003/12/02 16:56:55 vapier Exp $
 
 inherit games
 
@@ -60,4 +60,5 @@ src_install() {
 	doman doc/falconseye.6
 	dodoc ChangeLog README falcon.txt
 	prepgamesdirs
+	chmod -R g+w ${D}/${GAMES_STATEDIR}
 }
