@@ -1,6 +1,12 @@
 # ChangeLog for net-www/cmfphotoalbum
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/ChangeLog,v 1.1 2003/03/04 01:59:48 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/ChangeLog,v 1.2 2003/03/08 11:38:14 kutsuya Exp $
+
+*cmfphotoalbum-0.1 (08 Mar 2003)
+
+  08 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> cmfphotoalbum-0.1.ebuild:
+  This ebuild makes .22 obsolete, strange as that sounds. So will remove .22 to
+  avoid versioning problems.
 
 *cmfphotoalbum-0.22 (27 Feb 2003)
 
