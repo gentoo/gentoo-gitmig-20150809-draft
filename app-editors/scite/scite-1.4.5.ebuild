@@ -1,7 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Taras Glek <taras.glek@home.com>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.5.ebuild,v 1.2 2002/05/23 06:50:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.5.ebuild,v 1.3 2002/07/25 20:25:49 kabau Exp $
 
 S=${WORKDIR}/$PN/gtk
 MY_PV=145
@@ -11,6 +11,11 @@ HOMEPAGE="http://www.scintilla.org"
 
 DEPEND="virtual/glibc
 	=x11-libs/gtk+-1.2*"
+RDEPEND=""
+
+SLOT="0"
+LICENSE="PYTHON"
+KEYWORDS="x86"
 
 src_compile() {
 	make -C ../../scintilla/gtk || die
