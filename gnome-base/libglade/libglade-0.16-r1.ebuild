@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.16-r1.ebuild,v 1.5 2001/08/31 22:11:27 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.16-r1.ebuild,v 1.6 2001/08/31 22:38:18 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/opt/gnome install || die
+	make DESTDIR=${D} install || die
 	
 	dodoc AUTHORS COPYING* ChangeLog NEWS
 	dodoc doc/*.txt

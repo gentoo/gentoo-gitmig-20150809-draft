@@ -19,7 +19,7 @@ src_compile() {
 }
 
 src_install() {                               
-	make prefix=${D}/opt/gnome install || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING.* ChangeLog NEWS README THANKS TODO
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.10.1.ebuild,v 1.6 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.10.1.ebuild,v 1.7 2001/08/31 22:38:18 hallski Exp $
 
 
 A=${P}.tar.gz
@@ -9,6 +9,13 @@ S=${WORKDIR}/${P}
 DESCRIPTION="gtkhtml"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gtkhtml/${A}"
 HOMEPAGE="http://www.gnome.org/"
+
+RDEPEND=">=gnome-base/gal-0.5
+	 >=gnome-base/control-center-1.2.4
+         >=gnome-base/libghttp-1.0.9
+         >=gnome-base/libunicode-0.4
+	 >=gnome-base/gconf-1.0.1
+         bonobo? ( >=gnome-base/bonobo-1.0.4 )"
 
 DEPEND=">=gnome-base/gal-0.6
 	>=gnome-base/control-center-1.2.4
@@ -18,12 +25,6 @@ DEPEND=">=gnome-base/gal-0.6
 	>=gnome-base/gconf-1.0.1
         bonobo? ( >=gnome-base/bonobo-1.0.4 )"
 
-RDEPEND=">=gnome-base/gal-0.5
-	 >=gnome-base/control-center-1.2.4
-         >=gnome-base/libghttp-1.0.9
-         >=gnome-base/libunicode-0.4
-	 >=gnome-base/gconf-1.0.1
-         bonobo? ( >=gnome-base/bonobo-1.0.4 )"
 
 
 src_compile() {
