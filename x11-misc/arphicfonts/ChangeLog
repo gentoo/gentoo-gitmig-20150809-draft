@@ -1,8 +1,15 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arphicfonts/ChangeLog,v 1.1 2002/06/26 17:49:08 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arphicfonts/ChangeLog,v 1.2 2002/08/21 16:31:50 stubear Exp $
 
 *arphicfonts-0.1 (27 June 2002)
+
+  22 Aug 2002; Stuart Bouyer <stubear@gentoo.org> arphicfonts-0.1-r1.ebuild,
+  files/CN-fonts.scale, files/TW-fonts.scale:
+
+  Marko Daniel <mdaniel@soton.ac.uk> has updated the ebuild to install the
+  fonts in their own directory and fixed a bug where the font encoding info
+  wasn't being correctly produced for big5 and gb encodings. Closes bug 6281. 
 
   27 June 2002; Stuart Bouyer <stubear@gentoo.org> arphicfonts-0.1.ebuild:
   First ebuild added
