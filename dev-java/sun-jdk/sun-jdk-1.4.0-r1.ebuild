@@ -15,7 +15,8 @@ DEPEND="virtual/glibc
 RDEPEND="$DEPEND"
 
 PROVIDE="virtual/jre-1.4
-	virtual/jdk-1.4"
+	virtual/jdk-1.4
+	virtual/java-scheme-2"
 	
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then

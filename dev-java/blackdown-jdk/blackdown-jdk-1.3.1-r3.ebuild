@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r3.ebuild,v 1.2 2002/03/21 14:00:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r3.ebuild,v 1.3 2002/03/23 19:20:10 karltk Exp $
 
 A=j2sdk-1.3.1-FCS-linux-i386.tar.bz2
 S=${WORKDIR}/j2sdk1.3.1
@@ -13,8 +13,9 @@ DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.0"
 	
 RDEPEND="$DEPEND"
-PROVIDE="virtual/jdk-1.3-r1
-	 virtual/jre-1.3-r1"
+PROVIDE="virtual/jdk-1.3
+	virtual/jre-1.3
+	virtual/java-scheme-2"
 
 src_install () {
 
