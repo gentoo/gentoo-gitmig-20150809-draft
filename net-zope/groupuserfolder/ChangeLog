@@ -1,8 +1,8 @@
 # ChangeLog for net-zope/groupuserfolder
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/ChangeLog,v 1.2 2004/03/01 21:37:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/ChangeLog,v 1.3 2004/03/02 08:11:16 aliz Exp $
 
-*groupusfolder-1.32 (22 Jan 2004)
+*groupuserfolder-1.32 (22 Jan 2004)
 
   22 Jan 2004; Heinrich Wendel <lanius@gentoo.org> :
   initial import, thx to solution2u.net
