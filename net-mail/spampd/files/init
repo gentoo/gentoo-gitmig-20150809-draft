@@ -18,6 +18,6 @@ start() {
 
 stop() {
 	ebegin "Stopping spampd"
-	start-stop-daemon --stop --quiet --pidfile /var/run/spamd.pid
+	start-stop-daemon --stop --quiet --pidfile /var/run/spampd.pid
 	eend $? "Failed to stop spampd"
 }
