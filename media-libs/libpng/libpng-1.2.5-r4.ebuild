@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r4.ebuild,v 1.1 2003/01/21 21:22:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r4.ebuild,v 1.2 2003/02/12 18:09:17 gmsoft Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.libpng.org/"
 
 SLOT="1.2"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND="sys-libs/zlib"
 
