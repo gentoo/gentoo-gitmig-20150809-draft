@@ -1,0 +1,123 @@
+--- gcc-2.95.x/gcc/config/alpha/crtbegin.asm.jj     Wed Dec 16 22:00:53 1998
++++ gcc-2.95.x/gcc/config/alpha/crtbegin.asm        Wed Jun 13 12:41:28 2001
+@@ -97,6 +97,31 @@ __EH_FRAME_BEGIN__:
+  # Support recursive calls to exit.
+ $ptr:  .quad   __DTOR_LIST__
+
++/* A globally unique widget for c++ local destructors to hang off.
++
++   This has a unique value in every dso; in the main program its
++   value is zero.  The object should be protected.  This means the
++   instance in any dso or the main program is not used in any other
++   dso.  The dynamic linker takes care of this.  */
++
++       .global __dso_handle
++       .type __dso_handle,@object
++       .size __dso_handle,8
++#ifdef SHARED
++.section .data
++       .align 3
++__dso_handle:
++       .quad   __dso_handle
++#else
++.section .bss
++       .align 3
++__dso_handle:
++       .zero 8
++#endif
++#ifdef HAVE_GAS_HIDDEN
++       .hidden __dso_handle
++#endif
++
+ .text
+
+        .align 3
+============================================================
+Index: gcc/crtstuff.c
+--- gcc-2.95.x/gcc/crtstuff.c	2001/04/03 10:34:32	1.18.4.1
++++ gcc-2.95.x/gcc/crtstuff.c	2001/08/09 06:56:33
+@@ -55,6 +55,7 @@ Boston, MA 02111-1307, USA.  */
+ #include "defaults.h"
+ #include <stddef.h>
+ #include "frame.h"
++#include "auto-host.h"
+ 
+ /* We do not want to add the weak attribute to the declarations of these
+    routines in frame.h because that will cause the definition of these
+@@ -134,7 +135,29 @@ typedef void (*func_ptr) (void);
+ #ifdef INIT_SECTION_ASM_OP
+ 
+ #ifdef OBJECT_FORMAT_ELF
++/* Declare the __dso_handle variable.  It should have a unique value
++   in every shared-object; in a main program its value is zero.  The
++   object should in any case be protected.  This means the instance
++   in one DSO or the main program is not used in another object.  The
++   dynamic linker takes care of this.  */
++
++/* XXX Ideally the following should be implemented using
++   __attribute__ ((__visibility__ ("hidden")))
++   but the __attribute__ support is not yet there.  */
++#ifdef HAVE_GAS_HIDDEN
++asm (".hidden\t__dso_handle");
++#endif
++
++#ifdef CRTSTUFFS_O
++void *__dso_handle = &__dso_handle;
++#else
++void *__dso_handle = 0;
++#endif
+ 
++/* The __cxa_finalize function may not be available so we use only a
++   weak declaration.  */
++extern void __cxa_finalize (void *) TARGET_ATTRIBUTE_WEAK;
++
+ /* Run all the global destructors on exit from the program.  */
+  
+ /* Some systems place the number of pointers in the first word of the
+@@ -164,6 +187,11 @@ __do_global_dtors_aux (void)
+ 
+   if (completed)
+     return;
++
++#ifdef CRTSTUFFS_O
++  if (__cxa_finalize)
++    __cxa_finalize (__dso_handle);
++#endif
+ 
+   while (*p)
+     {
+--- gcc-2.95.x/gcc/configure.in.jj  Wed Oct 13 09:58:02 1999
++++ gcc-2.95.x/gcc/configure.in     Wed Jun 13 12:44:34 2001
+@@ -4053,6 +4053,21 @@ EOF
+ fi
+ AC_MSG_RESULT($gcc_cv_as_subsections)
+
++AC_MSG_CHECKING(assembler hidden support)
++gcc_cv_as_hidden=
++if test x$gcc_cv_as != x; then
++       # Check if we have .hidden
++       echo "  .hidden foobar" > conftest.s
++       echo "foobar:" >> conftest.s
++       if $gcc_cv_as -o conftest.o conftest.s > /dev/null 2>&1; then
++               AC_DEFINE(HAVE_GAS_HIDDEN, 1,
++                       [Define if your assembler supports .hidden.])
++               gcc_cv_as_hidden="yes"
++       fi
++       rm -f conftest.s conftest.o conftest.nm1 conftest.nm2
++fi
++AC_MSG_RESULT($gcc_cv_as_hidden)
++
+ AC_MSG_CHECKING(assembler instructions)
+ gcc_cv_as_instructions=
+ if test x$gcc_cv_as != x; then
+--- gcc-2.95.x/gcc/config.in.jj     Mon Oct 25 10:02:08 1999
++++ gcc-2.95.x/gcc/config.in        Wed Jun 13 12:45:56 2001
+2 the beginning of your section */
+ #undef HAVE_GAS_SUBSECTION_ORDERING
+
++/* Define if your assembler supports .hidden. */
++#undef HAVE_GAS_HIDDEN
++
+ /* Define if your assembler uses the old HImode fild and fist notation.  */
+ #undef HAVE_GAS_FILDS_FISTS
+
