@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.3 2004/04/07 18:29:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.4 2004/04/07 20:58:38 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -488,11 +488,6 @@ fi
 			echo "#define HasPamMisc NO" >> config/cf/host.def
 		fi
 
-		if use nls
-		then
-			echo "#define XtermWithI18N YES" >> config/cf/host.def
-		fi
-
 		if use x86 || use alpha
 		then
 			# build with glide3 support? (build the tdfx_dri.o module)
@@ -724,12 +719,6 @@ src_install() {
 		${D}/etc/X11/xorg.conf.example
 	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
 		${D}/etc/X11/fs/config
-
-	# Make sure the user running xterm can only write to utmp.
-	fowners root:utmp /usr/X11R6/bin/xterm
-	fperms 2755 /usr/X11R6/bin/xterm
-	# bug #24414, somehow it slips through stripping later in the ebuild
-	strip ${D}/usr/X11R6/bin/xterm
 
 	# Fix permissions on locale/common/*.so
 	for x in ${D}/usr/X11R6/lib/X11/locale/lib/common/*.so*
