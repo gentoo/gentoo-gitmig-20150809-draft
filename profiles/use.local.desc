@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.720 2004/11/06 16:00:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.721 2004/11/07 02:40:17 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -53,8 +53,8 @@ app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/uade:beepmp - Support for Beep Media Player
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
-app-i18n/anthy:ucs4 - Enable ucs4 support
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
+app-i18n/anthy:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
 app-i18n/scim:immqt - Enable immodule for Qt support (binary incompatible)
@@ -120,11 +120,9 @@ app-sci/vienna-rna:no-utils - Do not include sequence format conversion and repr
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/a2ps:vanilla - Do not add extra patches which change default behaviour
 app-text/acroread:noplugin - Do not install the acroread browser plugin
-app-text/crm114:normalizemime - Add support for using the normalizemime
-mime preprocessor.
 app-text/crm114:mew - Add support for using the mewdecode mime decoder.
 app-text/crm114:mimencode - Adds support for using the mimencode mime
-decoder.
+app-text/crm114:normalizemime - Add support for using the normalizemime
 app-text/estraier:chasen - Enable chasen support for Estraier
 app-text/estraier:kakasi - Enable kakasi support for Estraier
 app-text/estraier:mecab - Enable mecab support for Estraier
@@ -134,6 +132,7 @@ app-text/noweb:icon - Enable icon language support for noweb
 app-text/sword-modules:intl - Enable different languages
 app-text/sword:icu - Enable icu support for sword
 app-text/xpdf:nodrm - Disable the drm feature
+decoder.
 dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
@@ -190,8 +189,8 @@ dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
-dev-lang/ruby:threads - Enable pthread support.
 dev-lang/ruby-cvs:threads - Enable pthread support.
+dev-lang/ruby:threads - Enable pthread support.
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-lang/tcl:threads - Enable threads as some packages require it.
 dev-lang/tk:threads - Enable threads as some packages require it.
@@ -207,9 +206,9 @@ dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
-dev-libs/qsa:threads	- enable thread support
-dev-libs/qsa:ide - enable the qsa ide
 dev-libs/qsa:examples - build the examples that come with qsa
+dev-libs/qsa:ide - enable the qsa ide
+dev-libs/qsa:threads	- enable thread support
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
 dev-lisp/gcl:ansi - build a GCL with ANSI support (else build a traditional CLtL1 image)
 dev-lisp/gcl:custreloc - build a GCL which uses custom GCL code for linking
@@ -226,11 +225,10 @@ dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/adodb-py:postgresql - Support psycopg (python postgresql bindings)
 dev-python/anygui:wxwin - enable wxwin support
 dev-python/bicyclerepair:vim - enable vim with bicyclerepair support
-dev-python/epydoc:pdf - enable support for exporting to pdf
 dev-python/docutils:glep - Install support for GLEPs
+dev-python/epydoc:pdf - enable support for exporting to pdf
 dev-python/ipython:gnuplot - enable gnuplot support
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
-dev-python/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 dev-python/wxPython:unicode - enable unicode support (must be enabled in wxGTK as well)
 dev-ruby/ruby-amazon:geoip - enable GeoIP support
 dev-ruby/ruby-sdl:image - enable sdl-image support
@@ -320,8 +318,8 @@ mail-filter/dspam:exim - Build with delivery options for exim
 mail-filter/dspam:maildrop - Build with delivery options for maildrop
 mail-filter/dspam:neural - Build neural support for dspam
 mail-filter/dspam:procmail - Build procmail filter support
-mail-filter/spamassassin:qmail - Build qmail functionality and docs
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
+mail-filter/spamassassin:qmail - Build qmail functionality and docs
 mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
 mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
@@ -343,8 +341,8 @@ media-gfx/graphicsmagick:gs - enable ghostscript support
 media-gfx/graphicsmagick:jbig - enable jbig support
 media-gfx/graphicsmagick:jp2 - enable jpeg v2 support
 media-gfx/graphicsmagick:lzw - enable LZW support
-media-gfx/imagemagick:graphviz - enable graphviz support
 media-gfx/imagemagick:fpx - enable libfpx support
+media-gfx/imagemagick:graphviz - enable graphviz support
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
@@ -367,6 +365,8 @@ media-libs/sdif:threads  - Enables posix thread support
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/tiff:lzw-tiff - Enable the LZW Compression Toolkit (Unisys license)
 media-libs/tiff:private - Install additional "private" headers
+media-libs/win32codecs:real - Installs the real video codecs
+media-libs/win32codecs:xanim - Installs the xanim video codecs
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-plugins/mythphone:festival - Enable festival support
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
@@ -395,6 +395,8 @@ media-tv/mythtv:lcd - Enable LCD display support using lcdproc
 media-tv/mythtv:nvidia - Enable nVidia XvMC decoding support
 media-tv/xawdecode:ffmpeg - Enable ffmpeg support
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
+media-video/chaplin:transcode - Enable DVD ripping and transcoding
+media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
 media-video/cinelerra-cvs:ffmpeg - Enable ffmpeg support
 media-video/emovix:codecs - Enables use of the win32 dll codecs for playback
 media-video/ffmpeg:faac - Enables faac support
@@ -427,18 +429,15 @@ media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/tcvp:faad - Enables faad2 support
 media-video/tcvp:ffmpeg - Enable ffmpeg support
+media-video/transcode:pvm Enables private virtual machine support
 media-video/vlc:dts - Enables DTS audio support
 media-video/vlc:dvdread - Enables usage of Ogle's libdvdread for DVD playback
 media-video/vlc:faad - Enables faad2 support
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
-media-video/transcode:pvm Enables private virtual machine support
-media-video/chaplin:transcode - Enable DVD ripping and transcoding
-media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
 media-video/winki:css - Enables ripping of encrypted dvds
 media-video/winki:vcd - Enables creation of vcds
-media-libs/win32codecs:real - Installs the real video codecs
-media-libs/win32codecs:xanim - Installs the xanim video codecs
+mime preprocessor.
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
@@ -492,10 +491,10 @@ net-im/silc-toolkit:client - Enables silc client
 net-im/silc-toolkit:server - Enables silc server
 net-irc/bitchx:cdrom - Enables CD-ROM support
 net-irc/unrealircd:hub - Enable hub support
+net-irc/xchat-xsys:uptimed - Enables optional uptime records through uptimed
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
-net-irc/xchat-xsys:uptimed - Enables optional uptime records through uptimed
 net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
@@ -511,8 +510,8 @@ net-misc/asterisk:noiax - Disable iax (Inter-Asterisk eXchange) support
 net-misc/asterisk:nopri - Disable pri support
 net-misc/asterisk:nozaptel - Disable zaptel support
 net-misc/asterisk:pri - Enables pri support (>=asterisk-1.0.1)
-net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
 net-misc/asterisk:resperl - Enables support for embedded perl in extensions.conf
+net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
 net-misc/gnugk:accounting - Enables call logging (accounting)
 net-misc/gnugk:radius - Enables radius support
@@ -574,20 +573,20 @@ net-www/mozilla:mozplaintext - Disallow HTML editing for email
 net-www/mozilla:mozsvg - Enable SVG support in mozilla
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/mozilla:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
-net-www/nvu:xprint - placeholder until mozilla eclass is modified for nvu
 net-www/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
+net-www/nvu:xprint - placeholder until mozilla eclass is modified for nvu
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 sys-apps/busybox:devfs - Remove devfs options that crash busybox systems without devfs unless explicitly requested
 sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
-sys-apps/mkinitrd:diet - Compile and link with dietlibc
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/iproute2:minimal - Builds and installs only the traffic control util.
 sys-apps/lm-sensors:rrdtool - Builds sensord (Needs RRDTool).
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
+sys-apps/mkinitrd:diet - Compile and link with dietlibc
 sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 and older
 sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/partimage:nologin - Do not include login support
@@ -598,12 +597,12 @@ sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/lam-mpi:f77 - Adds support for f77
 sys-devel/binutils:multitarget - Adds support to binutils for canadian cross compiling. (does not work with gas)
+sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checking (disables PIE and SSP building in gcc)
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 ABI support on mips
-sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checking (disables PIE and SSP building in gcc)
 sys-devel/gcc:nomultilib - Disables multilib support in gcc
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gdb:objc - Build support for the Objective C code language
@@ -621,9 +620,9 @@ sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
 sys-kernel/gentoo-sources:evms2 - adds EVMS 2.0 support drop EVMS 1.2.1
 sys-kernel/gentoo-sources:usagi - adds USAGI (Linux IPv6 Development Project) support drops {superfreeswan/patch-int/loop-jari}
 sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
+sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
-sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/ppc-development-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/ppc64-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
@@ -633,9 +632,9 @@ sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and prevents it from installing unless all the tests pass
 sys-libs/glibc:n32 - Enable n32 ABI support on mips
 sys-libs/glibc:n64 - Enable n64 ABI support on mips
+sys-libs/glibc:nomalloccheck - default to not performing some sanity checks that prevent and detect data corruption. this removes the small overhead introduced by the check.
 sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
-sys-libs/glibc:nomalloccheck - default to not performing some sanity checks that prevent and detect data corruption. this removes the small overhead introduced by the check.
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/nut:cgi - Add CGI script support
@@ -647,12 +646,13 @@ www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mi
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-client/w3m:migemo - Enables migemo support
 www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
-www-servers/lighttpd:modchat - if you want mod_chat enabled
 www-servers/lighttpd:modcache - if you want mod_cache enabled
+www-servers/lighttpd:modchat - if you want mod_chat enabled
 www-servers/lighttpd:modlocalizer - if you want mod_localizer enabled
 www-servers/lighttpd:xattr - if you want extended attributes enabled
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
+www-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:freetype - Enables Freetype font support
 x11-base/kdrive:fs - Enables font server support
