@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20040313-r1.ebuild,v 1.1 2004/05/06 09:10:12 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20040313-r1.ebuild,v 1.2 2004/05/07 15:47:48 jhuebel Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/putty-cvs-${PV}.tar.bz2"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
 IUSE="doc"
 
 RDEPEND="=x11-libs/gtk+-1.2* virtual/x11"
@@ -33,6 +33,9 @@ src_unpack() {
 	ebegin "Setting CFLAGS"
 	sed -i "s!-O2!${CFLAGS}!g" ${S}/unix/Makefile.gtk
 	eend $?
+
+	# apply ut_time patch for amd64
+	use amd64 && epatch ${FILESDIR}/putty-ut_time.patch
 }
 
 src_compile() {
