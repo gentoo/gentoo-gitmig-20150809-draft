@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/hermes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.17 2004/07/23 19:58:48 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.18 2004/11/17 00:18:57 eradicator Exp $
+
+  16 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/hermes-1.3.2-destdir.patch, hermes-1.3.2-r2.ebuild:
+  Added DESTDIR patch and set higher versions for required auto* tools. Closes
+  bug #71369.
 
   23 Jul 2004; Tom Gall <tgall@gentoo.org> hermes-1.3.2-r2.ebuild:
   stable on ppc64

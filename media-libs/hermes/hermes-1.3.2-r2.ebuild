@@ -1,11 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.24 2004/07/23 19:58:48 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.25 2004/11/17 00:18:57 eradicator Exp $
 
-inherit eutils gnuconfig
+IUSE=""
+
+inherit eutils libtool gnuconfig
 
 MY_P=${P/h/H}
 S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="Library for fast colorspace conversion and other graphics routines"
 HOMEPAGE="http://hermes.terminal.at/"
 SRC_URI="http://dark.x.dtu.dk/~mbn/clanlib/download/download-sphair/${MY_P}.tar.gz"
@@ -13,34 +16,37 @@ SRC_URI="http://dark.x.dtu.dk/~mbn/clanlib/download/download-sphair/${MY_P}.tar.
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ~mips amd64 ~hppa ppc64"
-IUSE=""
 
-DEPEND="sys-devel/libtool
-	sys-devel/automake
-	sys-devel/autoconf"
+DEPEND=">=sys-devel/autoconf-2.50
+	>=sys-devel/automake-1.8"
 
 RDEPEND="virtual/libc"
 
-src_unpack() {
+asrc_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	epatch ${FILESDIR}/hermes-1.3.2-amd64.patch
-	gnuconfig_update
+	epatch ${FILESDIR}/${P}-amd64.patch
+	epatch ${FILESDIR}/${P}-destdir.patch
+
+	export WANT_AUTOMAKE=1.8
+	export WANT_AUTOCONF=2.5
+
 	aclocal || die "aclocal failed"
-	env WANT_AUTOMAKE=1.4 automake -a || die "automake failed"
+	automake -a || die "automake failed"
 	autoconf || die "autoconf failed"
+
+	gnuconfig_update
+	elibtoolize
 }
 
-src_compile() {
+asrc_compile() {
 	econf || die
 	sh ltconfig ltmain.sh || die "ltconfig failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make \
-		prefix=${D}/usr \
-		install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog FAQ NEWS README TODO*
 
