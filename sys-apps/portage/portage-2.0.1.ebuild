@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.ebuild,v 1.1 2002/06/17 01:00:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.1.ebuild,v 1.1 2002/06/17 05:10:08 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -25,8 +25,14 @@ src_unpack() {
 src_compile() {                           
 	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
 	cd ${S}/src/sandbox
-	emake || die
+	if [ "${ARCH}" = "x86" ]; then
+		emake CFLAGS="-O2 -march=i486 -pipe" || die
+	else
+		emake || die
+	fi
+
 }
+
 
 src_install() {
 	#config files
@@ -51,7 +57,7 @@ src_install() {
 
 	# we gotta compile these modules
 	python -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
-	#python -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
+	python -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
 	
 	#binaries, libraries and scripts
 	dodir /usr/lib/portage/bin
@@ -82,7 +88,7 @@ src_install() {
 	dosym ../lib/portage/bin/xpak /usr/bin/xpak
 	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
 	dosym newins /usr/lib/portage/bin/donewins
-	dosym ../lib/portage/bin/repoman /usr/bin/repoman	
+	
 	# man pages
 	doman ${S}/man/*.[15]
 	
