@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r8.ebuild,v 1.1 2004/08/11 09:48:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r9.ebuild,v 1.1 2004/09/29 09:46:15 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040222"
+CVSDATE="20040222"			# Date of diff between kernel.org and lmo CVS
+COBALTPATCHVER="1.4"			# Tarball version for cobalt patches
+SECPATCHVER="1.2"			# Tarball version for security patches
+GENPATCHVER="1.0"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
-COBALTPATCHVER="1.4"
-SECPATCHVER="1.2"
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
-IUSE=""
 
 # Eclass stuff
 ETYPE="sources"
@@ -32,12 +32,15 @@ inherit kernel eutils
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 		mirror://gentoo/mipscvs-${OKV}-${CVSDATE}.diff.bz2
-		mirror://gentoo/cobalt-patches-24xx-${COBALTPATCHVER}.tar.bz2
-		mirror://gentoo/${PN}-security_patches-${SECPATCHVER}.tar.bz2"
+		mirror://gentoo/${PN}-security_patches-${SECPATCHVER}.tar.bz2
+		mirror://gentoo/${PN}-generic_patches-${GENPATCHVER}.tar.bz2
+		cobalt? ( mirror://gentoo/cobalt-patches-24xx-${COBALTPATCHVER}.tar.bz2 )"
+
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources"
 KEYWORDS="-* mips"
+IUSE="cobalt"
 
 
 src_unpack() {
@@ -51,14 +54,14 @@ src_unpack() {
 	# Patch arch/mips/Makefile for gcc (Pass -mips3/-mips4 for r4k/r5k cpus)
 	echo -e ""
 	einfo ">>> Generic Patches"
-	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-fix.patch
+	epatch ${WORKDIR}/mips-patches/mipscvs-${OKV}-makefile-fix.patch
 
 	# Patch to fix mips64 Makefile so that -finline-limit=10000 gets added to CFLAGS
-	epatch ${FILESDIR}/mipscvs-${OKV}-makefile-inlinelimit.patch
+	epatch ${WORKDIR}/mips-patches/mipscvs-${OKV}-makefile-inlinelimit.patch
 
 	# Binutils-2.14.90.0.8 and does some magic with page alignment
 	# that prevents the kernel from booting.  This patch fixes it.
-	epatch ${FILESDIR}/mipscvs-${OKV}-no-page-align.patch
+	epatch ${WORKDIR}/mips-patches/mipscvs-${OKV}-no-page-align.patch
 
 	# Security Fixes
 	echo -e ""
@@ -78,8 +81,9 @@ src_unpack() {
 		epatch ${WORKDIR}/security/security-2.4-proc_race.patch
 	eend
 
+
 	# Cobalt Patches
-	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
+	if use cobalt; then
 		echo -e ""
 		einfo ">>> Patching kernel for Cobalt support ..."
 		for x in ${WORKDIR}/cobalt-patches-24xx-${COBALTPATCHVER}/*.patch; do

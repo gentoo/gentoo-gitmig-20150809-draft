@@ -1,6 +1,37 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.54 2004/08/15 03:59:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.55 2004/09/29 09:46:15 kumba Exp $
+
+*mips-sources-2.4.26-r9 (29 Sep 2004)
+
+  29 Sep 2004; Joshua Kinard <kumba@gentoo.org>
+  -files/mipscvs-2.4.25-makefile-fix.patch,
+  -files/mipscvs-2.4.25-makefile-inlinelimit.patch,
+  -files/mipscvs-2.4.25-no-page-align.patch,
+  -files/mipscvs-2.4.26-makefile-fix.patch,
+  -files/mipscvs-2.4.27-makefile-fix.patch,
+  -files/mipscvs-2.6.5-swapbug-fix.patch,
+  -files/mipscvs-2.6.5-unistd-linkage.patch,
+  -files/mipscvs-2.6.7-maceisa_rtc_irq-fix.patch,
+  -files/mipscvs-2.6.x-ip32-kern_entry-arcboot.patch,
+  -files/mipscvs-2.6.x-no-page-align.patch,
+  -files/misc-2.6-compat_alloc_user_space.patch,
+  -files/misc-2.6-force_mouse_detection.patch,
+  -files/misc-2.6-iptables_headers.patch, -mips-sources-2.4.25-r8.ebuild,
+  +mips-sources-2.4.25-r9.ebuild, -mips-sources-2.4.26-r8.ebuild,
+  +mips-sources-2.4.26-r9.ebuild, +mips-sources-2.4.27-r1.ebuild,
+  -mips-sources-2.4.27.ebuild, -mips-sources-2.6.4-r8.ebuild,
+  +mips-sources-2.6.4-r9.ebuild, -mips-sources-2.6.6-r8.ebuild,
+  +mips-sources-2.6.6-r9.ebuild, -mips-sources-2.6.7-r6.ebuild,
+  +mips-sources-2.6.7-r7.ebuild, +mips-sources-2.6.8.1-r1.ebuild,
+  -mips-sources-2.6.8.1.ebuild:
+  Yet another overhaul. Removed all files except digests from FILESDIR and put
+  them into a generic patches tarball pulled off the mirrors by the ebuilds.
+  Also a brand-spankin' new ebuild for 2.6.8.1 that includes a bunch of patches
+  and backports from linux-mips CVS (which will be in 2.6.9). Fixes for 2.6.8
+  include ip22zilog finally getting fixed, IP22 64-bit support available, statfs
+  fixes useful for n32 userland, and patches to allow building of mips kernels
+  w/ gcc-3.4.x (not for 2.4 kernels, that is forth-coming).
 
 *mips-sources-2.6.8.1 (14 Aug 2004)
 
