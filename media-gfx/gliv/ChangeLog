@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gliv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.17 2005/03/05 19:47:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.18 2005/03/24 09:31:21 lu_zero Exp $
+
+*gliv-1.9.2 (24 Mar 2005)
+
+  24 Mar 2005; Luca Barbato <lu_zero@gentoo.org> +gliv-1.9.2.ebuild:
+  New version
 
   05 Mar 2005; Simon Stelling <blubb@gentoo.org> gliv-1.8.2.ebuild:
   added ~amd64
