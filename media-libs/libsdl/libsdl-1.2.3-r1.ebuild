@@ -1,26 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.3-r1.ebuild,v 1.4 2002/08/17 02:40:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.3-r1.ebuild,v 1.5 2002/08/26 12:13:52 seemant Exp $
 
 S=${WORKDIR}/SDL-${PV}
 DESCRIPTION="Simple Direct Media Layer"
 SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 HOMEPAGE="http://www.libsdl.org/"
 
-DEPEND="virtual/glibc
-	>=dev-lang/nasm-0.98
-	>=media-libs/audiofile-0.1.9
-	opengl? ( virtual/opengl )
-	svga? ( >=media-libs/svgalib-1.4.2 )
-	esd? ( >=media-sound/esound-0.2.19 )
-	X? ( virtual/x11 )
-	arts? ( >=kde-base/kdelibs-2.0.1 )
-	nas? ( media-libs/nas )
-	ggi? ( >=media-libs/libggi-2.0_beta3 )
-	alsa? ( media-libs/alsa-lib )
-	directfb? ( >=dev-libs/DirectFB-0.9.7 )"
+SLOT="0"
+LICENSE="LGPL-2"
+KEYWORDS="x86"
 
-RDEPEND="virtual/glibc
+DEPEND=">=dev-lang/nasm-0.98
 	>=media-libs/audiofile-0.1.9
 	opengl? ( virtual/opengl )
 	svga? ( >=media-libs/svgalib-1.4.2 )
