@@ -16,7 +16,7 @@
      /* Scan the program header table, collecting its load commands.  */
      struct loadcmd
        {
-@@ -503,9 +505,23 @@
+@@ -503,9 +505,21 @@
          int prot;
        } loadcmds[16], *c;
      size_t nloadcmds = 0, maplength;
@@ -24,9 +24,7 @@
  
 -    fd = wld_open( name, O_RDONLY );
 -    if (fd == -1) fatal_error("%s: could not open\n", name );
-+    if (strlen(name)+5 >= MAXPATHLEN)
-+        fatal_error("%s: path too long\n", name);
-+    for (i=0; i<strlen(name); ++i)
++    for (i=0; (i<MAXPATHLEN-5) && (name[i]!='\0'); ++i)
 +        altname[i] = name[i];
 +    altname[i++] = '-';
 +    altname[i++] = 'b';

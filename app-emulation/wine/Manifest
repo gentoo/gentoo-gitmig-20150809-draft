@@ -6,7 +6,7 @@ MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
 MD5 4d56a684f6d2b0b0056c7b3fab3603dc wine-20041019-r1.ebuild 3556
 MD5 56b0990c71158a55583c149383d8b652 wine-20041019.ebuild 3753
 MD5 0b8a40b373bf8ab6c0368dd5a64f5449 wine-20040716.ebuild 3443
-MD5 f619ca99f68a2d81076b45b3c19ddbc5 files/20041019-load-wrappers.patch 1402
+MD5 9dbf73d557110996f187b6ed6ae4f7ea files/20041019-load-wrappers.patch 1333
 MD5 1668a758aa2007cb99a773b3c5c844c9 files/winearts-kdecvs-fix.patch 325
 MD5 ae28341f05c0916661c1346a28720230 files/QueryActCtxw_Photoshop7.0.diff 686
 MD5 90d546d818e0470698ca6b743abe9fca files/digest-wine-20041019-r1 212
@@ -16,7 +16,7 @@ MD5 db29ae371718f3db0a915e65dc76f6f2 files/20041019-no-stack.patch 286
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBgEz1HTu7gpaalycRAgsKAJ9XOOn0+7vsaRFSVEgg5B6ZWjeswgCdEiAr
-4DCyR61T/LGfLSyhR0e3zq0=
-=SR0B
+iD8DBQFBhDZVHTu7gpaalycRApOPAJ9s8yRXmBEb32vp4t6G3fZ+g4Xt6wCgz6oD
+h8UVByueWyCy99irzSuVpfs=
+=lfWa
 -----END PGP SIGNATURE-----
