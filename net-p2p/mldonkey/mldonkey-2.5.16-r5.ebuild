@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r5.ebuild,v 1.4 2004/07/19 23:16:41 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r5.ebuild,v 1.5 2004/07/27 13:14:20 kang Exp $
 
 inherit eutils
 
@@ -79,8 +79,9 @@ src_install() {
 
 	insinto /etc/conf.d; newins ${FILESDIR}/mldonkey.confd mldonkey
 	exeinto /etc/init.d; newexe ${FILESDIR}/mldonkey.initd mldonkey
+}
 
-	# add user
+pkg_preinst() {
 	enewuser ${MLUSER} -1 /bin/bash /home/p2p users
 }
 
