@@ -1,0 +1,15 @@
+--- GemPC430/Makefile.bac	2003-09-03 05:15:09.000000000 +0930
++++ GemPC430/Makefile	2004-03-23 13:57:23.353466344 +0930
+@@ -64,9 +64,9 @@
+ 	rm -f check_stamp dep_stamp
+ 
+ install: all
+-	mkdir -p $(DESTDIR)/pcsc/drivers/ifd-GemPC430.bundle/Contents/Linux/
+-	cp libGemPC430.so $(DESTDIR)/pcsc/drivers/ifd-GemPC430.bundle/Contents/Linux/libGemPC430.so.$(version)
+-	sed s/VERSION/$(version)/ Info.plist > $(DESTDIR)/pcsc/drivers/ifd-GemPC430.bundle/Contents/Info.plist
++	mkdir -p $(DESTDIR)/pcsc/drivers/usb
++	cp libGemPC430.so $(DESTDIR)/pcsc/drivers/usb/libGemPC430.so.$(version)
++	sed s/VERSION/$(version)/ Info.plist > $(DESTDIR)/pcsc/drivers/usb/Info.plist
+ 
+ dep: dep_stamp
+ dep_stamp:

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer><email>dragonheart@gentoo.org</email>
+<description>embedded got assigned to a pcsc-lite bug and this is a driver for it. base-system is assigned to 
+pcsc-lite so if those wonderful people want to take over they want.
+</description>
+</maintainer>
+<longdescription>This library provides PC/SC IFD handler implementation for Gemplus GemCore based serial and USB 
+smart cards readers.
+</longdescription>
+</pkgmetadata>

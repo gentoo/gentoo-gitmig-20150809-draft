@@ -1,0 +1,22 @@
+--- GemPC410/Makefile.bac	2004-03-23 13:44:54.166360096 +0930
++++ GemPC410/Makefile	2004-03-23 13:46:35.893895160 +0930
+@@ -14,7 +14,7 @@
+ 
+ # by default install in /usr/local
+ ifeq ($(DESTDIR),)
+-DESTDIR=/usr/local/pcsc/drivers/serial
++DESTDIR=/usr/local
+ endif
+ 
+ # /home/rousseau/sc/pcsc/i/ifd-gempc-0.5.10/GemPC410 -> 0.5.10
+@@ -69,8 +69,8 @@
+ 	rm -f check_stamp dep_stamp
+ 
+ install: all
+-	if [ ! -d $(DESTDIR) ] ; then install -d $(DESTDIR) ; fi
+-	cp -R libGemPC410.so* $(DESTDIR)
++	if [ ! -d $(DESTDIR)/pcsc/drivers/serial ] ; then install -d $(DESTDIR)/pcsc/drivers/serial ; fi
++	cp -R libGemPC410.so* $(DESTDIR)/pcsc/drivers/serial
+ 
+ dep: dep_stamp
+ dep_stamp:
