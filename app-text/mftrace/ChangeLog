@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.18 2005/01/01 16:25:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.19 2005/01/02 22:30:17 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -mftrace-1.0.31.ebuild,
   mftrace-1.0.34.ebuild:
@@ -20,7 +23,7 @@
   mftrace-1.0.33.ebuild:
   Added to ~sparc.
 
-  04 Jul 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> mftrace-1.0.31.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mftrace-1.0.31.ebuild:
   Stable on alpha.
 
 *mftrace-1.0.33 (24 Jun 2004)

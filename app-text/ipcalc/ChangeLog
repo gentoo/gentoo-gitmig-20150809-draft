@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ipcalc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ipcalc/ChangeLog,v 1.13 2005/01/01 16:21:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ipcalc/ChangeLog,v 1.14 2005/01/02 22:26:06 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   22 Sep 2004; Michael Hanselmann <hansmi@gentoo.org> ipcalc-0.37.ebuild:
   Added to ~ppc, bug 63718.
@@ -10,7 +13,7 @@
   14 Sep 2004; <solar@gentoo.org> +ipcalc-0.37.ebuild:
   version bump
 
-  12 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> ipcalc-0.35.ebuild:
+  12 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ipcalc-0.35.ebuild:
   Add ~alpha keyword, bug 63726.
 
   29 Aug 2004; Tom Gall <tgall@gentoo.org> ipcalc-0.35.ebuild:
