@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8.ebuild,v 1.2 2001/07/08 16:35:34 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8.ebuild,v 1.3 2001/09/22 06:20:39 blocke Exp $
 
 P=rp8_linux20_libc6_i386_cs2_rpm
 A=rp8_linux20_libc6_i386_cs2_rpm
@@ -56,9 +56,9 @@ src_install () {
 	exeinto /usr/lib/RealPlayer8
 	doexe lib/RealPlayer8/*.sh
 	doexe lib/RealPlayer8/realplay
-	dodir /opt/kde2.1/share
-	insinto /opt/kde2.1/share/ 
-	doins share/*
+#	dodir /opt/kde2.1/share
+#	insinto /opt/kde2.1/share/ 
+#	doins share/*
 	dodir /usr/bin
 	dosym /usr/lib/RealPlayer8/realplay /usr/bin/realplay
 }
