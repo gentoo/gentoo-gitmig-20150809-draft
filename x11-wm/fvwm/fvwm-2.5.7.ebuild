@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.5 2003/07/30 21:55:48 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.6 2003/07/30 22:06:01 taviso Exp $
 
 inherit gnuconfig
 
@@ -49,7 +49,7 @@ src_compile() {
 		|| myconf="${myconf} --without-readline-library"
 
 	use gtk \
-		|| myconf="${myconf} --disable-gtktest --disable-imlibtest --with-gtk-prefix=/no/dir --with-imlib-prefix=/no/dir"
+		|| myconf="${myconf} --with-gtk-prefix=/no/dir --with-imlib-prefix=/no/dir"
 		
 	use gnome \
 		&& myconf="${myconf} --with-gnome" \
