@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.9 2002/04/12 05:15:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.10 2002/05/19 19:03:41 azarah Exp $
+
+*xmms-1.2.7-r5 (19 May 2002)
+
+  19 May 2002; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r5.ebuild :
+
+  Fix things to actually compile the plugin when "avi" is in USE, and made
+  it compadible with the latest avifile (0.7.4) which use an suffix ( this
+  having /usr/bin/avifile-config0.7 and not /usr/bin/avifile-config).
+
+  I am not too sure with this suffix thing .. we need to decide if we are
+  going to keep it, or just fix the broken stuff .. personally I think we
+  should rather fix broken build, and drop the suffix from avifile.
 
 *xmms-1.2.7-r4 (11 Apr 2002)
 
