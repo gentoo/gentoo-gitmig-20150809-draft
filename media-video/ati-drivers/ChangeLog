@@ -1,9 +1,10 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.23 2003/10/13 00:03:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.24 2003/10/13 00:07:54 lu_zero Exp $
 
   12 Oct 2003; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.8.ebuild:
-  Small fix: bug #30975
+  Small fix: bug #30975, thanks to Wedge_ <wedge__@fastmail.fm> for the
+  suggestion
 
 *ati-drivers-3.2.8 (08 Oct 2003)
 

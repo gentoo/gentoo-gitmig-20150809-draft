@@ -1,4 +1,4 @@
-MD5 5716fb07598650b67a2f59889bfa017d ChangeLog 4309
+MD5 1b563d6a8b9d7a534ca017991125c5c1 ChangeLog 4370
 MD5 76a5204e775bfa12f13f85bd26d163e6 ati-drivers-2.5.1-r1.ebuild 3714
 MD5 20b39fca85cbd3239466ccf8f24fdfc2 ati-drivers-2.5.1.ebuild 3036
 MD5 bd9fe6f01ec4d68241cf5c9ba51e907b ati-drivers-2.9.12.ebuild 3636
@@ -9,7 +9,7 @@ MD5 77684e92f813491b90e7bbe3ed6f5992 ati-drivers-3.2.4.ebuild 4712
 MD5 59a37b1c6f7cc09308773178c3d414b4 ati-drivers-3.2.5.ebuild 4583
 MD5 bca4dd1758b390509e46f966d475006d metadata.xml 221
 MD5 d2e36344a43730865709052aab657821 ati-drivers-3.2.5-r1.ebuild 4605
-MD5 808cd49b764011bff9d7ee36c94878f9 ati-drivers-3.2.8.ebuild 4614
+MD5 7640b1b23ef7f513b38cdc908f6e52b6 ati-drivers-3.2.8.ebuild 4588
 MD5 e61309d064f12cc623e4d6e78aa82b36 files/09ati 39
 MD5 f21aff99b8b4d8a6134d44d5e00e649e files/ati-2.5.1.diff 660
 MD5 bbaa57c2af6fb97bc2d8c9e149932f74 files/digest-ati-drivers-2.5.1 78
