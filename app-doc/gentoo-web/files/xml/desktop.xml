@@ -11,8 +11,8 @@
    and samba (unix/windows interoperability).
 </abstract>
 
-<version>0.21</version>
-<date>10 Oct 2001</date>
+<version>0.22</version>
+<date>18 Oct 2001</date>
 
 <chapter>
 <title>Preliminaries</title>
@@ -768,15 +768,272 @@ for additional help.
 <title>Apache and Squirrelmail webmail</title>
 <section>
 <title>Apache with SSL and PHP</title>
-<p>Coming soon!</p>
+<body>
+<p>Assuming that you have a static IP address (or you use a service 
+such as dyndns with your dynamic IP address), then you might want an
+effective way to check your e-mail when you're out of town.  The
+solution that I have chosen is to set up a webmail server,
+Squirrelmail, that I can access remotely using any web browser.</p>
+<p>The first step is to install a web server.  Most of the
+rest of the world uses Apache; we will too.  We will also
+install PHP (PHP4, actually) at the same time, since Squirrelmail
+is a PHP program.</p>
+<pre>
+# <i>emerge net-www/apache dev-lang/php</i>
+# <i>nano /etc/httpd/httpd.conf</i>
+</pre>
+<impo>You want to make sure that "ssl" is in your USE
+variables if you want Apache to have SSL support.  If 
+you want to check your e-mail remotely without sending
+your password across the internet unencrypted, then you
+<e>do</e> want SSL!.</impo>
+<p>You should take a good look at <path>/etc/httpd/httpd.conf</path>,
+since Apache is very customizable.  By default the Apache server
+root (where the Apache server first looks for html files when
+you connect to http://www.servername.foo or http://localhost) 
+is <path>/usr/local/httpd</path>;
+feel free to relocate it if you wish.</p>
+<pre caption="/etc/httpd/httpd.conf">
+# Do NOT add a slash at the end of the directory path.
+#
+ServerRoot "/usr/local/httpd" <comment>(edit this line if desired)</comment>
+
+</pre>
+<pre>
+# <i>rc-update add httpd default</i>
+ * httpd added to runlevel default...
+ * Caching service dependencies...               [ ok ]
+ * rc-update complete.
+# <i>nano /etc/rc.conf</i>
+</pre>
+<p>Use <c>rc-update</c> to add Apache to the default runlevel,
+and then edit <path>/etc/rc.conf</path> to add 
+the following lines so that Apache 
+automatically loads the SSL and PHP modules at start-up.</p>
+<pre caption="/etc/rc.conf -- add to the end for Apache SSL and PHP">
+#Apache options
+HTTPD_OPTS="-D SSL -D PHP4"
+</pre>
+<note>Pre-rc6 users should use <c>rc-update add httpd</c>
+and edit the <path>/etc/rc.d/init.d/httpd</path> init script
+by hand to add the -D options.</note>
+<pre>
+# <i>/etc/init.d/httpd start</i>
+ * Starting Apache...                            [ OK ]
+# <i>lynx localhost</i>
+</pre>
+<pre caption="working Apache server">
+      Test Page for the SSL/TLS-aware Apache Installation on Web Site (p1 of 2)
+                               Hey, it worked !
+                    The SSL/TLS-aware Apache webserver was
+                    successfully installed on this website.
+</pre>
+<p>You can check to make sure your Apache web server is working
+by using any browser to connect to localhost, and you should see
+results similar to that above.  To make sure that SSL support
+is functional, use a browser to connect to <uri>http<comment>s</comment>://localhost</uri>.
+The <c>https</c> prefix tells the browser to make a <e>secure</e> connection
+to the server using SSL.  The result is a page that should look the same as
+the one above, but graphical browsers will have a padlock icon somewhere indicating
+the secure connection.</p>
+<note>When making a secure connection to your server, you will most likely receive
+a warning that the site's security certificate is not recognized.  The Apache ebuild
+installs a self-signed security certificate.  See the <c>mod_ssl</c> manual: 
+<uri>http://localhost/manual/mod/mod_ssl/ssl_intro.html#ToC5</uri>.  For personal
+use a self-signed certificate is just fine.</note>
+<p>Now we need to make sure that PHP is working correctly.  The first step
+is to create a simple PHP file and put it in the Apache server root directory.</p>
+<pre>
+# <i>echo "&lt;? phpinfo(); ?&gt;" > /usr/local/httpd/htdocs/test.php</i>
+# <i>lynx http://localhost/test.php</i>
+</pre>
+<pre caption="working Apache + PHP">
+                                                           phpinfo() (p1 of 26)
+                                  PHP Logo
+ 
+                             PHP Version 4.0.6
+ 
+     System Linux my.server.edu 2.4.10 #1 Tue Oct 9 16:33:50 Local
+           time zone must be set--see zic manuali686 i686 unknown
+                           Build Date Oct 16 2001
+</pre>
+<p>If you see something like the above, then Apache is successfully
+processing PHP code.</p>
+<warn>If you look at the full output of the above, you'll find out that
+the <path>test.php</path> script gives out a <e>lot</e> of information 
+about your system.  You should probably get rid of it once you know that
+php is working.  (Or you can do what I do, and just <c>mv test.php test.phps</c>.
+Apache will display <path>test.phps</path> as a PHP source file instead
+of executing the script.)</warn>
+</body>
 </section>
 <section>
 <title>Courier IMAP</title>
-<p>Coming soon!</p>
+<body>
+<p>Squirrelmail is a PHP application, but it relies on an IMAP server
+as the glue between the web server and e-mail.  Since Gentoo linux
+uses Maildir mail folders by default, Courier IMAP is a good choice.</p>
+<pre>
+# <i>emerge net-mail/courier-imap</i>
+# <i>rc-update add courier-imap default</i>
+ * courier-imap added to runlevel default...
+ * Caching service dependencies...                        [ ok ]
+ * rc-update complete.
+# <i>/etc/init.d/courier-imap start</i>
+# <i>telnet localhost 143</i>
+Trying 127.0.0.1...
+Connected to localhost.localdomain.
+Escape character is '^]'.
+* OK Courier-IMAP ready. Copyright 1998-2001 Double Precision, Inc.  
+See COPYING for distribution information.
+<comment>(Hit &lt;ctrl&gt;-"]" and type "quit" to exit)</comment>
+</pre>
+<note>Pre-rc6 users need to use <c>rc-update add courier-imap</c>
+and <c>/etc/rc.d/init.d/courier-imap start</c>, respectively.</note>
+<impo>Courier IMAP usually hardwires the name of the user's Maildir-type
+inbox directory that is used in its rc start-up script,
+<path>/usr/lib/courier-imap/imapd.rc</path>, to be <path>$HOME/Maildir</path>.  
+Gentoo linux, however, uses $HOME/.maildir instead, so the courier-imap ebuild
+modifies the <path>imapd.rc</path> script to use <e>$MAILDIR</e>, which it obtains
+from the Gentoo init script <path>/etc/init.d/courier-imap</path>.  If you choose
+to use a home user's mailbox other than <path>.maildir</path>, you'll need to modify
+the <e>MAILDIR=.maildir</e> entry in courier-imap's init script.
+(Pre-rc6 users need not worry about this issue.  The pre-rc6 init script included
+a reworked version of the Courier <path>imapd.rc</path> file that replaced
+"Maildir" with ".maildir", which seemed like overkill.)</impo>
+<p>
+If you want Courier IMAP to have SSL support you just need to make
+the IMAP SSL certificate (and tell courier-imap where to find it),
+</p>
+<pre>
+# <i>/usr/sbin/mkimapdcert</i> 
+# <i>nano /etc/courier-imap/imapd-ssl</i>
+</pre>
+<pre caption="/etc/courier-imap/imapd-ssl -- SSL certificate location">
+##NAME: TLS_CERTFILE:0
+#
+# TLS_CERTFILE - certificate to use.  TLS_CERTFILE is required for SSL/TLS
+# servers, and is optional for SSL/TLS clients.  TLS_CERTFILE is usually
+# treated as confidential, and must not be world-readable.
+#
+#TLS_CERTFILE=/usr/share/imapd.pem
+TLS_CERTFILE=/etc/courier-imap/imapd.pem
+
+</pre>
+<p>and then start up imap-ssl.</p>
+<pre>
+# <i>rc-update add courier-imap-ssl default</i>
+# <i>/etc/init.d/courier-imap-ssl start</i>
+</pre>
+<note>Pre-rc6 users should see the note above.</note>
+<p>You can verify that imap is working by using any
+IMAP-enabled mail client, such as netscape, kmail,
+or mutt.</p>
+<pre>
+# <i>mutt -f imap://localhost</i>
+</pre>
+</body>
 </section>
 <section>
 <title>Squirrelmail</title>
-<p>Coming soon!</p>
+<body>
+<p>Fortunately, installing and configuring
+Squirrelmail, once all of the components are in
+place, is straightforward.</p>
+<pre>
+# <i>emerge net-mail/squirrelmail</i>
+# <i>cd /usr/local/httpd/htdocs</i>
+# <i>chown -R nobody.nobody squirrelmail</i>
+# <i>cd squirrelmail</i>
+# <i>./configure</i>
+</pre>
+<note>If your Apache server root is not <path>/usr/local/httpd</path>,
+you will want to edit the <path>net-mail/squirrelmail</path> ebuild
+to point to your httpd root.</note>
+<p>For squirrelmail to work correctly, you need to make sure that
+all of the files are owned by "nobody" -- the user that Apache runs
+as.  Use <c>./configure</c> to select option <e>2</e>.</p>
+<pre caption="Squirrelmail configuration -- Server settings">
+SquirrelMail Configuration : Read: config.php
+---------------------------------------------------------
+Server Settings
+1.  Domain               : my.server.edu
+2.  IMAP Server          : localhost
+3.  IMAP Port            : 143
+4.  Use Sendmail/SMTP    : SMTP
+6.    SMTP Server        : localhost
+7.    SMTP Port          : 25
+8.    Authenticated SMTP : false
+9.  Server               : courier
+10. Invert Time          : false
+11. Delimiter            : detect
+ 
+R   Return to Main Menu
+C.  Turn color off
+S   Save data
+Q   Quit
+ 
+Command >>
+</pre>
+<p>Make sure that <e>Server</e> is set to <e>courier</e>.
+Return to the main menu and select option <e>4</e>, General
+Options.</p>
+<pre caption="Squirrelmail configuration -- General options">
+SquirrelMail Configuration : Read: config.php
+---------------------------------------------------------
+General Options
+1.  Default Charset        : iso-8859-1
+2.  Data Directory         : ../data/
+3.  Attachment Directory   : /tmp/
+4.  Default Left Size      : 150
+5.  Usernames in Lowercase : false
+ 
+R   Return to Main Menu
+C.  Turn color off
+S   Save data
+Q   Quit
+ 
+Command >>
+</pre>
+<p>I use the data directory in the package, although it would be
+better security to use one outside the Apache document tree.  I
+also use <path>/tmp</path> as my directory to store attachments.</p>
+<p>You also need to make a minor change to the Apache's configuration
+so that it knows that <path>index.php</path> should be executed upon
+entering a directory that has such a file in it.</p>
+<pre>
+# <i>nano /etc/httpd/httpd.conf</i>
+</pre>
+<pre caption="/etc/httpd/httpd.conf">
+#
+# DirectoryIndex: Name of the file or files to use as a pre-written HTML
+# directory index.  Separate multiple entries with spaces.
+#
+&lt;IfModule mod_dir.c&gt;
+    DirectoryIndex index.html index.htm <comment>index.php</comment>
+&lt;/IfModule&gt;
+
+</pre>
+<p>Browse to <uri>https://localhost/squirrelmail/</uri>, and it should work!</p>
+<pre>
+# <i>lynx https://localhost/squirrelmail/</i>
+</pre>
+<pre caption="Squirrelmail login page">
+                                                           SquirrelMail - Login
+                               [sm_logo.jpg]
+ 
+                      SquirrelMail version 1.2.0 [rc2]
+                    By the SquirrelMail Development Team
+ 
+                             SquirrelMail Login
+ 
+       Name: ____________________
+   Password: ____________________
+ 
+                                   Login
+</pre>
+<p>(I don't really suggest using lynx with Squirrelmail, but you could!)</p>
+</body>
 </section>
 </chapter>
 </guide>
