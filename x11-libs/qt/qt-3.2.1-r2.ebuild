@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1-r2.ebuild,v 1.1 2003/10/02 20:29:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1-r2.ebuild,v 1.2 2003/10/08 19:15:24 caleb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -176,10 +176,12 @@ src_install() {
 	dodir ${QTBASE}/doc
 
 	if [ `use doc` ]; then
-		dodir ${QTBASE}/doc/html
-		dodir ${QTBASE}/doc/man
-		cp -r ${S}/doc/html/* ${D}/${QTBASE}/doc/html
-		cp -r ${S}/doc/man/* ${D}/${QTBASE}/doc/man
+		cd ${S}/doc
+		for x in html flyers; do
+			cp -r $x ${D}/${QTBASE}/doc
+		done
+
+		cp -r ${S}/doc/man ${D}/${QTBASE}
 		cp -r ${S}/examples ${D}/${QTBASE}
 		cp -r ${S}/tutorial ${D}/${QTBASE}
 	fi
