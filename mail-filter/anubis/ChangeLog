@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/anubis
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.3 2004/07/18 15:40:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.4 2004/09/08 19:45:29 ticho Exp $
+
+*anubis-3.9.95 (08 Sep 2004)
+
+  08 Sep 2004; Andrej Kacian <ticho@gentoo.org>
+  +files/3.9.95-authmode.c.patch, +files/3.9.95-transmode.c.patch,
+  +anubis-3.9.95.ebuild:
+  Version bump. Closes #59850, reported by Daniel Black
+  <dragonheart@gentoo.org>, who also provided two patches applied to source by
+  the ebuild.
 
 *anubis-3.6.2 (03 Jun 2004)
 
