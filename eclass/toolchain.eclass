@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.99 2005/01/31 07:50:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.100 2005/02/02 07:11:55 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1309,7 +1309,7 @@ gcc-compiler_src_install() {
 
 		# These should be symlinks
 		cd "${D}"${BINPATH}
-		for x in gcc g++ c++ g77 gcj ; do
+		for x in gcc g++ c++ g77 gcj gcjh gfortran; do
 			# For some reason, g77 gets made instead of ${CTARGET}-g77... this makes it safe
 			[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
 
@@ -1372,8 +1372,8 @@ gcc_movelibs() {
 	#FROMDIR=${D}/${PREFIX}/libexec/gcc/${CTARGET}/${GCC_RELEASE_VER}
 	#[ -d "${FROMDIR}" ] && mv ${FROMDIR}/* ${FROMDIR}/../
 
-	if [ -n "${MULTILIB_ABIS}" ]; then
-		for abi in ${MULTILIB_ABIS}; do
+	if has_multilib_profile; then
+		for abi in $(get_abi_order); do
 			local OS_MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-os-directory)
 			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 			local TODIR=${D}/${LIBPATH}/${MULTIDIR}
