@@ -1,3 +1,5 @@
-MD5 d58127b851daa1cbab55cc7b8058d814 ChangeLog 753
+MD5 78d7b59a305076c54e1718f9368eb05e ChangeLog 880
 MD5 16faa219bc807fb23ce0626863b55e1b libgringotts-1.1.2.ebuild 760
+MD5 57c658f911b97c8017ec568fa5bf7b7a libgringotts-1.2.1.ebuild 761
 MD5 5a9124ad272c62b5efc959029718cfca files/digest-libgringotts-1.1.2 71
+MD5 d7df2cb04b19c13bb8323152bd77760c files/digest-libgringotts-1.2.1 71
