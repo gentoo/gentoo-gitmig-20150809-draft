@@ -1,9 +1,0 @@
---- daemontools-0.70/tai64nlocal.c~	Mon Mar  6 06:21:09 2000
-+++ daemontools-0.70/tai64nlocal.c	Mon Feb 19 09:06:54 2001
-@@ -1,5 +1,5 @@
- #include <sys/types.h>
--#include <sys/time.h>
-+#include <time.h>
- #include "buffer.h"
- #include "exit.h"
- #include "fmt.h"
