@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.8a.ebuild,v 1.3 2003/11/19 08:01:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.8a.ebuild,v 1.4 2003/12/09 07:54:11 phosphan Exp $
 
 DESCRIPTION="A remote security scanner for Linux (nessus-core)"
 HOMEPAGE="http://www.nessus.org/"
@@ -14,9 +14,10 @@ IUSE="tcpd X gtk gtk2 debug prelude"
 
 DEPEND="=net-analyzer/libnasl-${PV}
 	tcpd? ( sys-apps/tcp-wrappers )
-	X? ( x11-base/xfree )
-	gtk? ( =x11-libs/gtk+-1.2* )
-	gtk2? ( =x11-libs/gtk+-2* )
+	X? ( virtual/x11
+		!gtk2? ( =x11-libs/gtk+-1.2* )
+		gtk2? ( =x11-libs/gtk+-2* )
+	)
 	prelude? ( dev-libs/libprelude )"
 
 S=${WORKDIR}/${PN}

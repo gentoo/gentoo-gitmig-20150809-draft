@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.27 2003/12/01 07:01:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.28 2003/12/09 07:54:11 phosphan Exp $
+
+  09 Dec 2003; Patrick Kursawe <phosphan@gentoo.org>
+  nessus-core-2.0.8a.ebuild:
+  Backporting new dependencies from 2.0.9
 
   01 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> nessus-core-2.0.9.ebuild:
   Making USE="+-X" work again, the last comment is wrong.
