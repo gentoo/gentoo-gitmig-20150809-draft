@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Matthew Kennedy <mbkennedy@ieee.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.3.1.ebuild,v 1.1 2002/02/05 18:39:01 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.3.1.ebuild,v 1.2 2002/04/28 04:35:05 seemant Exp $
 
-A=NetBeansIDE-release331.tar.gz
-S=${WORKDIR}/netbeans
+MY_P=NetBeansIDE-release331
+S=${WORKDIR}/${PN}
 DESCRIPTION="Netbeans ${PV} IDE for Java"
-SRC_URI="http://www.netbeans.org/download/release33/night/build200202011224/${A}"
+SRC_URI="http://www.netbeans.org/download/release33/night/build200202011224/${MY_P}.tar.gz"
 HOMEPAGE="http://www.netbeans.org"
 
 RDEPEND=">=virtual/jdk-1.3"
@@ -59,4 +59,3 @@ src_install() {
 		doins ${FILESDIR}/netbeans.desktop
 	fi
 }
-
