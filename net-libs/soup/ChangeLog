@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/soup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.15 2003/04/10 05:35:21 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.16 2003/04/10 06:17:55 vladimir Exp $
 
 *soup-0.7.11 (04 Mar 2003)
 
@@ -13,6 +13,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *soup-0.7.10 (24 Dec 2002)
+
+  09 Apr 2003; Graham Forest <vladimir@gentoo.org> soup-0.7.10.ebuild:
+  Downgraded to ~ppc
 
   09 Apr 2003; Graham Forest <vladimir@gentoo.org> soup-0.7.10.ebuild:
   set ppc in keywords
