@@ -22,6 +22,10 @@
 ##
 
 
+# <g2boojum@gentoo.org> (10 Oct 2002)
+# masking new cups for testing
+=net-print/cups-1.1.16
+
 # <tantive@gentoo.org> (10 Oct 2002)
 # Enabled the autodiscovery daemon (omdiscd).
 =sys-apps/openmosix-user-0.2.4-r2
