@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.1-r4.ebuild,v 1.1 2005/03/07 19:54:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.5.1-r4.ebuild,v 1.2 2005/03/11 03:18:15 latexer Exp $
 
 inherit mono eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 DEPEND=">=dev-libs/icu-2.6
-	>=dev-dotnet/mono-1.0
+	>=dev-lang/mono-1.0
 	>=dev-util/monodoc-1.0
 	>=dev-dotnet/gtk-sharp-1.0.4-r1
 	>=dev-dotnet/glade-sharp-1.0.4

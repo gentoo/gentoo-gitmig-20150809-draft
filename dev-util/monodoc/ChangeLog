@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.32 2005/02/22 20:15:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.33 2005/03/11 03:19:07 latexer Exp $
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> monodoc-1.0.4-r1.ebuild,
+  monodoc-1.0.5.ebuild, monodoc-1.0.6.ebuild:
+  mono moved from dev-dotnet -> dev-lang
 
   22 Feb 2005; Peter Johanson <latexer@gentoo.org> monodoc-1.0.4-r1.ebuild,
   monodoc-1.0.5.ebuild, monodoc-1.0.6.ebuild:
