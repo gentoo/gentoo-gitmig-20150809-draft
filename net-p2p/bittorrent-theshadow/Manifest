@@ -5,8 +5,10 @@ MD5 904bed341f701bb04706bc167dfed521 bittorrent-theshadow-5.7.ebuild 1717
 MD5 342ff0931f3ca523df00f2bb12091fed bittorrent-theshadow-5.8.2.ebuild 2227
 MD5 c74a920d49452f3d7bcd21258ac99c35 bittorrent-theshadow-5.8.3.ebuild 2119
 MD5 83f2b62b16904e997005968b8e7ea82a metadata.xml 222
+MD5 c74a920d49452f3d7bcd21258ac99c35 bittorrent-theshadow-5.8.5.ebuild 2119
 MD5 8b336bc047ea1eb5dbc389a286410deb files/digest-bittorrent-theshadow-5.7 78
 MD5 4da0f64e13bc339ef3818a4df2c84fef files/digest-bittorrent-theshadow-5.7.6 80
 MD5 4da0f64e13bc339ef3818a4df2c84fef files/digest-bittorrent-theshadow-5.7.6-r1 80
 MD5 6e05644a5f01c9c76b297a224d50e400 files/digest-bittorrent-theshadow-5.8.2 80
 MD5 acfd6e21cb4a2a4bb106ee615912b1be files/digest-bittorrent-theshadow-5.8.3 83
+MD5 fd71399737d3eecfb72f437e80efee45 files/digest-bittorrent-theshadow-5.8.5 83
