@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.8 2002/11/12 22:17:21 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.9 2002/12/05 00:19:47 woodchip Exp $
+
+*dhcpcd-1.3.22_p3-r2 (04 Dec 2002)
+
+  04 Dec 2002; Donny Davies <woodchip@gentoo.org> dhcpcd-1.3.22_p3-r1.ebuild :
+  Added a fix to force the pidfile into /var/run.
 
 *dhcpcd-1.3.22_p3-r1 (31 Oct 2002)
 
