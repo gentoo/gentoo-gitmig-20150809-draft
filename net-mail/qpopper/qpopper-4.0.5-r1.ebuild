@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r1.ebuild,v 1.2 2004/07/24 05:33:46 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r1.ebuild,v 1.3 2004/09/29 18:17:45 langthang Exp $
 
 IUSE="debug gdbm mailbox pam ssl xinetd"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/mta
 
 SLOT="0"
 LICENSE="qpopper | GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 src_compile() {
 
