@@ -1,4 +1,4 @@
 MD5 7c7691426d4fb6cbf6adf197c562240c ChangeLog 349
-MD5 17be566556edd27da02dea52ab30e01d cdctl-0.15.ebuild 633
+MD5 f1872e1e2e35dd320aa3c227ded92aba cdctl-0.15.ebuild 638
 MD5 65699ac25cca9d0d86e0588dbebe7cb2 files/00_all_Makefile.in.patch.bz2 672
 MD5 c5efe4abf3b6a476cad53ea639ddf263 files/digest-cdctl-0.15 61

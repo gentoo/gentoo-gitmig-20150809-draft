@@ -1,5 +1,5 @@
-MD5 1c776a2adbfcc6f557d76ec3c1b76943 cdcat-0.2.ebuild 1184
-MD5 45e2f6e6e05d7f5e4133778dedeac75b cdcat-0.3.ebuild 1177
 MD5 ddfed4320ca4dc153e6dac22b408c1e0 ChangeLog 851
+MD5 d76db3eb1789e42bad782c5a03cc5a7f cdcat-0.2.ebuild 1189
+MD5 8516523ad41fe056068677c90724ab24 cdcat-0.3.ebuild 1182
 MD5 e13ac4bbced4adf7df0d1e308ba8596d files/digest-cdcat-0.2 119
 MD5 f6c631031edc8dd1dde9ab31d518cb4c files/digest-cdcat-0.3 119
