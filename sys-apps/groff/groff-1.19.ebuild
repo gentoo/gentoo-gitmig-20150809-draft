@@ -1,25 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.ebuild,v 1.3 2004/04/17 07:40:38 lv Exp $
-
-IUSE="X" # cjk"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.ebuild,v 1.4 2004/04/24 08:40:24 vapier Exp $
 
 inherit eutils flag-o-matic
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Text formatter used for man pages"
 MB_PATCH="groff_1.18.1-7" #"${P/-/_}-7"
+HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 SRC_URI="mirror://gnu/groff/${P}.tar.gz"
 #	cjk? ( http://people.debian.org/~ukai/groff/${MB_PATCH}.diff.gz )"
-HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 
-KEYWORDS="~x86 amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~ppc64 s390"
+KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha arm ~hppa amd64 ~ia64 s390"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="X" # cjk"
 
 DEPEND="virtual/glibc
 	>=sys-apps/texinfo-4.0"
-
 PDEPEND=">=sys-apps/man-1.5k-r1"
 
 src_unpack() {
