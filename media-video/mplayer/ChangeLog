@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.74 2003/09/03 20:52:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.75 2003/09/04 10:12:01 lanius Exp $
+
+  04 Sep 2003; Heinrich Wendel <lanius@gentoo.org> mplayer-0.90-r2.ebuild,
+  mplayer-0.90-r5.ebuild, mplayer-0.90_rc4.ebuild, mplayer-0.91.ebuild,
+  mplayer-1.0_pre1.ebuild, files/mplayer-0.90-fix-version.patch:
+  - removed old ebuilds
+  - fixed samba bug #25912
+  - fixed fs bug #12751
+  - marked 0.91 stable on x86 and ppc
 
 *mplayer-1.0_pre1 (04 Sep 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.91.ebuild,v 1.2 2003/08/24 07:43:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.91.ebuild,v 1.3 2003/09/04 10:12:01 lanius Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2"
 
@@ -53,6 +53,7 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	nls? ( sys-devel/gettext )
 	media-sound/cdparanoia
 	mpeg? ( media-libs/faad2 )
+	samba? ( net-fs/samba )
 	>=sys-apps/portage-2.0.36"
 #	dvd? ( media-libs/libdvdnav )
 # Hardcode paranoia support for now, as there is no
@@ -64,7 +65,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 
 
 src_unpack() {
@@ -98,7 +99,7 @@ src_unpack() {
 	else
 		einfo "Old DivX Api found"
 	fi
-	
+
 	if [ "`use svga`" ]
 	then
 		echo
@@ -106,7 +107,7 @@ src_unpack() {
 		einfo "(You need a proper svgalib_helper.o module for your kernel"
 		einfo " to actually use this)"
 		echo
-                                                                                                                            
+
 		mv ${WORKDIR}/svgalib_helper ${S}/libdha
 		cd ${S}/libdha
 		sed -i -e "s/^#CFLAGS/CFLAGS/" Makefile
@@ -227,6 +228,10 @@ src_compile() {
 		&& myconf="${myconf} --enable-i18n" \
 		|| myconf="${myconf} --disable-i18n"
 
+	use samba \
+		&& myconf="${myconf} --enable-smb" \
+		|| myconf="${myconf} --disable-smb"
+
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
 		einfo "Setting REALLIBDIR to /opt/RealPlayer9/Real/Codecs..."
@@ -272,7 +277,6 @@ src_compile() {
 		--enable-largefiles \
 		--enable-menu \
 		--enable-real \
-		--enable-smb \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die
@@ -339,7 +343,7 @@ src_install() {
 	then
 		dodir /usr/share/mplayer/Skin
 		cp -r ${WORKDIR}/Blue ${D}/usr/share/mplayer/Skin/default || die
-		
+
 		# Fix the symlink
 		rm -rf ${D}/usr/bin/gmplayer
 		dosym mplayer /usr/bin/gmplayer
@@ -362,6 +366,7 @@ src_install() {
 	insinto /etc
 	newins ${S}/etc/example.conf mplayer.conf
 	dosed -e 's/include =/#include =/' /etc/mplayer.conf
+	dosed -e 's/fs=yes/fs=no/' /etc/mplayer.conf
 	dosym ../../../etc/mplayer.conf /usr/share/mplayer/mplayer.conf
 
 	insinto /usr/share/mplayer
@@ -416,4 +421,3 @@ pkg_postrm() {
 		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
 	fi
 }
-
