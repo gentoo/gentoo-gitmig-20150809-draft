@@ -1,8 +1,12 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.42 2003/11/26 16:26:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.43 2003/11/30 08:11:17 usata Exp $
 
 *w3m-0.4.2-r4 (27 Nov 2003)
+
+  30 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2-r4.ebuild,
+  files/w3m-m17n-search-gentoo.diff:
+  Added a patch to fix m17n search
 
   27 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2-r4.ebuild:
   Fixed strange character problem
