@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/wm2
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.1 2003/10/20 12:24:43 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.2 2004/04/25 17:20:29 usata Exp $
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> wm2-4.ebuild:
+  Marked stable on x86. Don't assign default to S. inherit eutils for epatch.
 
 *wm2-4 (20 Oct 2003)
 
