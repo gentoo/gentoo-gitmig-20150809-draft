@@ -40,3 +40,19 @@
              for (i = 0; i < row_width; i++)
              {
                 *(--dp) = *(--sp);
+--- libpng3-1.2.5.orig/pngerror.c       2002-10-03 05:32:27.000000000 -0600
++++ libpng3-1.2.5/pngerror.c     2004-04-29 09:26:18.000000000 -0600
+@@ -135,10 +135,12 @@
+       buffer[iout] = 0;
+    else
+    {
++      png_size_t len = strnlen(error_message, 63);
++
+       buffer[iout++] = ':';
+       buffer[iout++] = ' ';
+-      png_memcpy(buffer+iout, error_message, 64);
+-      buffer[iout+63] = 0;
++      png_memcpy(buffer+iout, error_message, len);
++      buffer[iout+len] = 0;
+    }
+ }
