@@ -1,0 +1,18 @@
+diff -uNr gcc-3.4.0.orig/gcc/version.c gcc-3.4.0/gcc/version.c
+--- gcc-3.4.0.orig/gcc/version.c	2004-06-22 10:16:27.349833112 +0000
++++ gcc-3.4.0/gcc/version.c	2004-06-22 10:19:06.461644440 +0000
+@@ -5,7 +5,7 @@
+    please modify this string to indicate that, e.g. by putting your
+    organization's name in parentheses at the end of the string.  */
+ 
+-const char version_string[] = "3.4.0";
++const char version_string[] = "3.4.0 @GENTOO@";
+ 
+ /* This is the location of the online document giving instructions for
+    reporting bugs.  If you distribute a modified version of GCC,
+@@ -14,4 +14,4 @@
+    forward us bugs reported to you, if you determine that they are
+    not bugs in your modifications.)  */
+ 
+-const char bug_report_url[] = "<URL:http://gcc.gnu.org/bugs.html>";
++const char bug_report_url[] = "<URL:http://bugs.gentoo.org/>";
