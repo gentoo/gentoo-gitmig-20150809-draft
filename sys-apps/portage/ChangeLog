@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.14 2002/06/13 20:54:04 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.15 2002/06/13 21:06:33 azarah Exp $
 
 See the gentoo-src Portage ChangeLog for up-to-date release information:
 http://www.gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/portage/ChangeLog?rev=HEAD&content-type=text/vnd.viewcvs-markup
@@ -10,7 +10,7 @@ http://www.gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/portage/ChangeLog?rev=HEAD&
   13 June 2002; Bart Verwilst <verwilst@gentoo.org> : 
 
   Sandbox fixed for gentoo 1.3+ users!!! :o) Uses "-O2 -march=i486 -pipe" 
-  now to compile sandbox, and that fixes it, yay!
+  now to compile sandbox, and that fixes it, yay! (bug #2929).
 
 *portage-1.9.5-r1 (2 May 2002)
 
