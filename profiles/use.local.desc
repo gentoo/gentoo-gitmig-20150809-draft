@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.924 2005/02/02 13:04:24 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.925 2005/02/02 18:57:03 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -467,6 +467,7 @@ net-ftp/frox:clamav - ClamAV antivirus support on proxy
 net-ftp/proftpd:sendfile - Enable support for sendfile()
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
+net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risc)
 net-im/bitlbee:flood - Enable flood protection support
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
