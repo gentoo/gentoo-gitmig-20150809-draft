@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.8 2003/09/30 07:01:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.9 2003/09/30 07:22:40 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -51,27 +51,42 @@ is_kernel() {
 }
 
 # For stripping binaries, but not drivers or modules.
+strip_bins_x11r6() {
+	einfo "Stripping binaries..."
+	# This bit I got from Redhat ... strip binaries and drivers ..
+	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
+	for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
+		grep -v ' shared object,' | \
+		sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
+	do
+	if [ -f ${x} ]
+		then
+			# Dont do the modules ...
+			if [ "${x/\usr\/X11R6\/lib\/modules}" = "${x}" ]
+			then
+				echo "`echo ${x} | sed -e "s|${D}||"`"
+				strip ${x} || :
+			fi
+		fi
+	done
+}
+
 strip_bins() {
-        einfo "Stripping binaries..."
-        # This bit I got from Redhat ... strip binaries and drivers ..
-        # NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
-        for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
-                grep -v ' shared object,' | \
-                sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
-        do
-        if [ -f ${x} ]
-                then
-                        # Dont do the modules ...
-                        if [ "${x/\/lib\/modules}" = "${x}" ]
-                        then
-                                echo "`echo ${x} | sed -e "s|${D}||"`"
-                                strip ${x} || :
-                        fi
-                        if [ "${x/\usr\/X11R6\/lib\/modules}" = "${x}" ]
-                        then
-                                echo "`echo ${x} | sed -e "s|${D}||"`"
-                                strip ${x} || :
-                        fi
-                fi
-        done
+	einfo "Stripping binaries..."
+	# This bit I got from Redhat ... strip binaries and drivers ..
+	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
+	for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
+		grep -v ' shared object,' | \
+		sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
+	do
+	if [ -f ${x} ]
+		then
+			# Dont do the modules ...
+			if [ "${x/\/lib\/modules}" = "${x}" ]
+			then
+				echo "`echo ${x} | sed -e "s|${D}||"`"
+				strip ${x} || :
+			fi
+		fi
+	done
 }
