@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/supertab-0.32.ebuild,v 1.4 2003/12/05 04:13:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/supertab-0.32.ebuild,v 1.5 2004/01/23 15:47:37 agriffis Exp $
 
 inherit vim-plugin
 
@@ -8,5 +8,5 @@ DESCRIPTION="vim plugin: enhanced Tab key functionality"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=182"
 
 LICENSE="vim"
-KEYWORDS="~alpha sparc x86 ~ppc amd64"
+KEYWORDS="alpha sparc x86 ~ppc amd64 ia64"
 

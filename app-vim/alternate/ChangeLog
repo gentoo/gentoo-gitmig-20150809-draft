@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/alternate
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.3 2003/12/10 01:51:02 ciaranm Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.4 2004/01/23 15:36:57 agriffis Exp $
+
+  23 Jan 2004; Aron Griffis <agriffis@gentoo.org> alternate-2.4.ebuild:
+  stable on alpha and ia64
 
   10 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> alternate-2.4.ebuild:
   Added amd64 keyword
