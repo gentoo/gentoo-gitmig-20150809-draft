@@ -954,16 +954,15 @@ def dep_frontend(mytype,depstring):
 #		This is the semi-working auto-ebuild stuff, disabled for now
 #		dep_print_resolve(myparse[1])		
 	return 1
-
+"""
 def port_porttree():
-	"""
+	
 	This function builds a dictionary of available ebuilds in the portage tree.
 	Dictionary format is:
 	mydict["cat/pkg"]=[
 					["cat/fullpkgname",["cat","pkg","ver","rev"]
 					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
 					]
-	"""
 	portagedict={}
 	mydir=getsetting("PORTDIR")
 	if not os.path.isdir(mydir):
@@ -989,7 +988,7 @@ def port_porttree():
 				portagedict[mykey].append([fullpkg,catpkgsplit(fullpkg)])
 	os.chdir(origdir)
 	return portagedict
-
+"""
 class packagetree:
 	def __init__(self):
 		self.tree={}
@@ -1101,6 +1100,9 @@ class packagetree:
 				return None
 			if self.hasnode(getgeneral(cpv)):
 				mycatpkg=catpkgsplit(cpv)
+				if mycatpkg==None:
+					#parse error
+					return 0
 				mykey=mycatpkg[0]+"/"+mycatpkg[1]
 				if not self.hasnode(mykey):
 					return 0
@@ -1190,6 +1192,9 @@ class packagetree:
 			if not isspecific(cpv):
 				return []
 			mycatpkg=catpkgsplit(cpv)
+			if mycatpkg==None:
+				#parse error
+				return []
 			mykey=mycatpkg[0]+"/"+mycatpkg[1]
 			if not self.hasnode(mykey):
 				return []
@@ -1234,6 +1239,9 @@ class vartree(packagetree):
 				else:
 					fullpkg=x+"/"+y
 				mysplit=catpkgsplit(fullpkg)
+				if mysplit==None:
+					print "!!! Error:",self.root+"var/db/pkg/"+x+"/"+y,"is not a valid database entry, skipping..."
+					continue
 				mykey=x+"/"+mysplit[1]
 				if not self.tree.has_key(mykey):
 					self.tree[mykey]=[]
@@ -1266,7 +1274,11 @@ class portagetree(packagetree):
 					fullpkg=x+"/"+mypkg
 					if not self.tree.has_key(mykey):
 						self.tree[mykey]=[]
-					self.tree[mykey].append([fullpkg,catpkgsplit(fullpkg)])
+					mysplit=catpkgsplit(fullpkg)
+					if mysplit==None:
+						print "!!! Error:",self.root+"/"+x+"/"+y,"is not a valid Portage directory, skipping..."
+						continue	
+					self.tree[mykey].append([fullpkg,mysplit])
 		os.chdir(origdir)
 		self.populated=1
 	def getdeps(self,pf):
@@ -1275,6 +1287,9 @@ class portagetree(packagetree):
 			self.populate()
 		if self.exists_specific(pf):
 			mysplit=catpkgsplit(pf)
+			if mysplit==None:
+				#parse error
+				return ""
 			mydepfile=self.root+"/"+mysplit[0]+"/"+mysplit[1]+"/files/depend-"+string.split(pf,"/")[1]
 			if os.path.exists(mydepfile):
 				myd=open(mydepfile,"r")
@@ -1303,6 +1318,9 @@ class currenttree(packagetree):
 				continue
 			fullpkg=string.join([myline[0],myline[2]],"/")
 			mysplit=catpkgsplit(fullpkg)
+			if mysplit==None:
+				print "!!! Error:",self.root+":"+fullpkg,"is not a valid current packages entry, skipping..."
+				continue
 			mykey=mysplit[0]+"/"+mysplit[1]
 			if not self.tree.has_key(mykey):
 				self.tree[mykey]=[]
@@ -1330,6 +1348,9 @@ class binarytree(packagetree):
 			mycat=string.strip(mycat)
 			fullpkg=mycat+"/"+mypkg[:-5]
 			cps=catpkgsplit(fullpkg)
+			if cps==None:
+				print "!!! Error:",mytbz2,"contains corrupt cat/pkg information, skipping..."
+				continue
 			mykey=mycat+"/"+cps[1]
 			if not self.tree.has_key(mykey):
 				self.tree[mykey]=[]
