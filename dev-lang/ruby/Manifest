@@ -4,6 +4,7 @@ MD5 d8f0f1e2eec3c4ec31107cc3dbc2dd85 ruby-1.6.8-r3.ebuild 2134
 MD5 0b45d4b26301ad383c99dc8a7092aa99 ruby-1.6.8-r4.ebuild 2401
 MD5 cbaaf90adcfd34b3ea5b7ad536673778 ruby-1.8.0-r2.ebuild 2975
 MD5 1fcf8dad89fedfa322d116b5accbdff2 ruby-1.8.0-r3.ebuild 3175
+MD5 921e69c697a9d274c2906000aa1a007e ruby-1.8.1_pre4.ebuild 3177
 MD5 6c669e6e45fb864d765b9989efb815f8 ruby-1.8.0-r1.ebuild 2700
 MD5 921e69c697a9d274c2906000aa1a007e ruby-1.8.1_pre3.ebuild 3177
 MD5 3da42d1704918eca7ecf885c81661a30 files/digest-ruby-1.6.8-r4 128
@@ -13,5 +14,6 @@ MD5 1b04774d0056760ad9f57c4623a47946 files/digest-ruby-1.8.0-r3 128
 MD5 d2922d69e61de0bef77ed561b6107cca files/ruby-config 2863
 MD5 11702b3cb52c88daf5d3934e3a0c2e2a files/digest-ruby-1.6.8-r3 63
 MD5 e1c6eac35da8ce7f11bab66795de0b80 files/digest-ruby-1.8.0-r2 63
+MD5 10afca7e3c8992d2a17d31d90637f837 files/digest-ruby-1.8.1_pre4 72
 MD5 23687a2214c992785f50deba577552fd files/digest-ruby-1.8.1_pre3 72
 MD5 d05f63da27634456886e7c924eaf96da files/ruby-1.6.8-fix-x86_64.patch 431
