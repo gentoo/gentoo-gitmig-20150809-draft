@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r1.ebuild,v 1.4 2005/03/31 09:04:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.1 2005/04/05 01:47:33 eradicator Exp $
 
 IUSE="oss nas esd motif X gtk gtk2 oggvorbis tcltk slang alsa arts jack portaudio emacs ao speex flac ncurses"
 
@@ -45,6 +45,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gtk26.patch
+	epatch ${FILESDIR}/${P}-exiterror.patch
+
 	# fix header location of speex
 	sed -i -e "s:#include <speex:#include <speex/speex:g" configure* timidity/speex_a.c
 }
@@ -82,6 +84,7 @@ src_compile() {
 		--enable-network \
 		--enable-dynamic \
 		--enable-vt100 \
+		--enable-spline=cubic \
 		$(use_enable emacs) \
 		$(use_enable slang) \
 		$(use_enable ncurses) \

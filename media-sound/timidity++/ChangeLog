@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.48 2005/03/31 09:04:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.49 2005/04/05 01:47:33 eradicator Exp $
+
+*timidity++-2.13.2-r2 (05 Apr 2005)
+
+  05 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/timidity++-2.13.2-exiterror.patch, -timidity++-2.13.2-r1.ebuild,
+  +timidity++-2.13.2-r2.ebuild:
+  Have timidity exit with an error code if it fails to start so the initscript
+  will detect it. Also, use cubic splines instead of linear. Closes bug #76364
+  thanks to Stian Skjelstad <stian@nixia.no>.
 
   31 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   timidity++-2.13.2.ebuild, timidity++-2.13.2-r1.ebuild:
