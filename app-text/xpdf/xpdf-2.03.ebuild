@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.03.ebuild,v 1.1 2003/10/15 21:29:29 seemant Exp $
-
-IUSE="motif"
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.03.ebuild,v 1.2 2003/11/25 22:23:08 vapier Exp $
 
 MY_PV=${PV/.1/pl1}
 
@@ -11,12 +9,13 @@ DESCRIPTION="An X Viewer for PDF Files"
 HOMEPAGE="http://www.foolabs.com/xpdf/xpdf.html"
 SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${PN}-${MY_PV}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ~ia64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips hppa ~arm ~amd64 ~ia64"
+IUSE="motif"
 
 DEPEND="motif? ( virtual/x11
-		virtual/motif )
+	virtual/motif )
 	>=media-libs/freetype-2.0.5
 	>=media-libs/t1lib-1.3
 	app-text/ghostscript"
@@ -29,7 +28,6 @@ src_compile() {
 
 	make ${MAKEOPTS} || die
 }
-
 
 src_install() {
 	make DESTDIR=${D} install || die
