@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.0.ebuild,v 1.1 2003/09/08 14:35:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.4.0.ebuild,v 1.2 2003/09/08 18:19:05 msterret Exp $
 
 inherit gnome2 eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libbonobo-2
 	>=dev-libs/libxml2-2.2.8
 	>=gnome-base/gnome-mime-data-2
-	
+
 	app-admin/fam-oss
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 
@@ -39,5 +39,3 @@ src_install() {
 	echo "trash:    libvfolder-desktop" >> ${D}/etc/gnome-vfs-2.0/modules/default-modules.conf
 
 }
-
-
