@@ -1,6 +1,19 @@
-MD5 08a14f889b5e1820077e0e2855c1cbed ChangeLog 823
-MD5 a19d1bf8266fa0258760eaf90e213afa irqbalance-0.08.ebuild 701
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6cc74b1cdcc2965d8eed6c74076c4921 irqbalance-0.09.ebuild 704
+MD5 fe98921e5f621098c6a532cd0d1a6692 irqbalance-0.12.ebuild 704
+MD5 d9f7d6d9af41cdeeff5a506f9c9f5819 ChangeLog 966
+MD5 451b7d85bff03cb2761abc311f63f619 irqbalance-0.08.ebuild 702
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a95fc88c2698dfeba298f7ef2fbdc5ba irqbalance-0.09.ebuild 702
 MD5 995857a736d39db7fe479520cc79387f files/digest-irqbalance-0.08 66
 MD5 ba4df3dffbb3da9f20c39e4dc8aa2aa1 files/digest-irqbalance-0.09 66
+MD5 f29fe20053c7ada0f2a8b16296290d13 files/digest-irqbalance-0.12 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFB6r9TPpIsIjIzwiwRAim9AJ98aPLtorzM42J7r4iKJvTlFz+a0ACeKeeb
+2CKPFQJSgplXg4qS4wSR/oQ=
+=UQ/x
+-----END PGP SIGNATURE-----
