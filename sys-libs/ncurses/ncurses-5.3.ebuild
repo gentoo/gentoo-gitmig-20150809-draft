@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3.ebuild,v 1.2 2002/10/20 06:06:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3.ebuild,v 1.3 2002/10/23 18:00:57 azarah Exp $
 
 IUSE=""
 
@@ -22,6 +22,14 @@ src_compile() {
 
 	[ -z "${DEBUGBUILD}" ] && myconf="${myconf} --without-debug"
 
+	# From version 5.3, ncurses also build c++ bindings, and as
+	# we do not have a c++ compiler during bootstrap, disable
+	# building it.  We will rebuild ncurses after gcc's second
+	# build in bootstrap.sh.
+	# <azarah@gentoo.org> (23 Oct 2002)
+	( use build || use bootstrap ) \
+		&& myconf="${myconf} --without-cxx --without-cxx-binding"
+
 	econf \
 		--libdir=/lib \
 		--disable-termcap \
@@ -29,7 +37,8 @@ src_compile() {
 		--with-rcs-ids \
 		${myconf} || die "configure failed"
 
-	emake || die "parallel make failed"
+	# do not work with -j2 on P4 - <azarah@gentoo.org> (23 Oct 2002)
+	make || die "parallel make failed"
 }
 
 src_install() {
@@ -70,3 +79,9 @@ src_install() {
 	fi
 }
 
+pkg_postinst() {
+
+	# Old ncurses may still be around from old build tbz2's.
+	rm -f /lib/libncurses.so.5.2
+	rm -f /usr/lib/lib{form,menu,panel}.so.5.2
+}
