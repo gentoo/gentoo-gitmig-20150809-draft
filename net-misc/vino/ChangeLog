@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.4 2004/09/16 22:53:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.5 2004/09/18 22:35:37 lv Exp $
+
+  18 Sep 2004; Travis Tilley <lv@gentoo.org> vino-2.8.0.ebuild:
+  added ~amd64 keyword
 
 *vino-2.8.0 (17 Sep 2004)
 

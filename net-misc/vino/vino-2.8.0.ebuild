@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.8.0.ebuild,v 1.1 2004/09/16 22:53:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.8.0.ebuild,v 1.2 2004/09/18 22:35:37 lv Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="jpeg zlib gnutls crypt"
 
 RDEPEND=">=x11-libs/gtk+-2
