@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/elisp-manual
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elisp-manual/ChangeLog,v 1.1 2002/08/23 06:15:10 mkennedy Exp $
+
+*elisp-manual-21.2.8 (23 Aug 2002)
+
+  23 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  elisp-manual-21.2.8.ebuild, files/digest-elisp-manual-21.2.8 :
+
+  New ebuild. Based on ebuild submitted by Ben Cornett
+  <acornet@emory.edu>. Bug #3232
