@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-firebird/jdbc2-firebird-1.5.3.ebuild,v 1.1 2004/10/20 12:07:08 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-firebird/jdbc2-firebird-1.5.3.ebuild,v 1.2 2004/10/20 12:09:02 absinthe Exp $
 
 inherit java-pkg
 
@@ -25,5 +25,5 @@ src_install() {
 	java-pkg_dojar lib/*.jar
 
 	use doc && java-pkg_dohtml -r docs/
-	dodoc ChangeLog release_notes.html 
+	dodoc ChangeLog release_notes.html
 }
