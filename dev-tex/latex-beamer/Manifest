@@ -1,8 +1,18 @@
-MD5 61fa4a1e96b3801be7621eeff6dcb718 ChangeLog 2058
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a56ce0aa1c0d36ecfca7b09d7d9d8366 ChangeLog 2166
 MD5 e595fd7236a49caf8badf3abf6841e33 latex-beamer-2.21.ebuild 1108
-MD5 d697b2b5d1432c519a95d30f1f6241d8 latex-beamer-3.00.ebuild 1117
+MD5 5ead1be8ed6903a66a758685c396e937 latex-beamer-3.00.ebuild 1114
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 0dbc46f23a51559765d9abb8fcea0547 latex-beamer-2.20-r1.ebuild 1111
 MD5 bd3ae36cde42552c7e31b4234f69aa1c files/digest-latex-beamer-2.21 70
 MD5 520aa98920f74208cbcfb7c97e967060 files/digest-latex-beamer-3.00 70
 MD5 1390180b1572035ec8ee20fc4587448b files/digest-latex-beamer-2.20-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuC0iVWNWqTUmv+0RApNtAKCVlf8G35ytc+Z3XzySJFeTfHvBbQCdFSR0
+gxUTpZjjPZQ+QNy5+PrB2To=
+=CMmK
+-----END PGP SIGNATURE-----
