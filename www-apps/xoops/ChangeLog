@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/xoops
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.1 2004/09/22 07:43:41 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.2 2004/10/18 12:32:56 dholm Exp $
+
+  18 Oct 2004; David Holm <dholm@gentoo.org> xoops-2.0.7.3.ebuild:
+  Added to ~ppc.
 
 *xoops-2.0.7.3 (22 Sep 2004)
 
