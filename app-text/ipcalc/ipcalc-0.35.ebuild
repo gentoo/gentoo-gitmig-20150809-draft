@@ -12,7 +12,7 @@ SRC_URI="http://jodies.de/ipcalc-archive/${MY_P}.tar.gz"
 
 DEPEND=">=dev-lang/perl-5.6.0"
 
-KEYWORDS="~x86 ~hppa"
+KEYWORDS="x86 hppa"
 SLOT="0"
 LICENSE="as-is"
 
