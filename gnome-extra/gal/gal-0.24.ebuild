@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.6 2003/07/06 11:29:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.7 2003/08/20 03:44:57 agriffis Exp $
 
 IUSE="nls doc"
 
@@ -51,6 +51,13 @@ src_compile() {
 		    --sysconfdir=/etc \
 		    --localstatedir=/var/lib \
 		     ${myconf} || die
+
+	if use alpha; then
+		# This program doesn't link on alpha, at least with the
+		# variety of CFLAGS I tried.  It isn't installed, so just fake
+		# out that it built correctly.  (19 Aug 2003 agriffis)
+		touch -d 'next year' gal/e-text/e-completion-test
+	fi
 
 	make || die # Doesn't work with -j 4 (hallski)
 }
