@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/usermode/usermode-20020104.ebuild,v 1.1 2002/01/06 10:52:16 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/usermode/usermode-20020104.ebuild,v 1.2 2002/01/08 04:28:17 blocke Exp $
 
 S=${WORKDIR}/tools
 DESCRIPTION="Tools for use with Usermode Linux virtual machines"
@@ -17,9 +17,6 @@ src_compile() {
 }
 
 src_install () {
-
-	mv port-helper/Makefile port-helper/Makefile.orig
-	sed -e 's/\/usr\/lib\/uml/\/usr\/bin/' port-helper/Makefile.orig > port-helper/Makefile
 
 	make DESTDIR=${D} install
 
