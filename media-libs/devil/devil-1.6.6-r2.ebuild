@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.6-r2.ebuild,v 1.1 2004/05/30 06:53:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.6-r2.ebuild,v 1.2 2004/06/24 22:57:41 agriffis Exp $
 
 inherit eutils libtool
 

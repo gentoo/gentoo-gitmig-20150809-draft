@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.5.ebuild,v 1.4 2004/05/07 20:51:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.5.ebuild,v 1.5 2004/06/24 22:59:29 agriffis Exp $
 
 inherit libtool
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r1.ebuild,v 1.11 2004/03/26 16:27:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r1.ebuild,v 1.12 2004/06/24 23:02:33 agriffis Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}

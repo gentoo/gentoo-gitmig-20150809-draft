@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/pdflib
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.37 2004/06/07 23:37:43 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.38 2004/06/24 23:19:11 agriffis Exp $
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> pdflib-5.0.2.ebuild:
   Fix use invocation

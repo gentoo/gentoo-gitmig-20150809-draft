@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.7 2004/06/06 16:55:29 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.8 2004/06/24 23:20:14 agriffis Exp $
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Geometry library"

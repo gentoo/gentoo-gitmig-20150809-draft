@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.7 2004/06/19 20:39:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.8 2004/06/24 23:17:21 agriffis Exp $
 
 DESCRIPTION="Network Audio System"
 SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"

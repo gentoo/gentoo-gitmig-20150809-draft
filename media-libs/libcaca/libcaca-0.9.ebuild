@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9.ebuild,v 1.10 2004/06/21 06:34:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9.ebuild,v 1.11 2004/06/24 23:05:58 agriffis Exp $
 
 DESCRIPTION="A library that creates colored ASCII-art graphics"
 HOMEPAGE="http://sam.zoy.org/projects/libcaca"

@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/a52dec
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.14 2004/04/05 16:46:02 phosphan Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.15 2004/06/24 22:54:49 agriffis Exp $
 
 *a52dec-0.7.4-r1 (05 Apr 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.3.7.ebuild,v 1.4 2004/06/17 07:15:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.3.7.ebuild,v 1.5 2004/06/24 23:11:05 agriffis Exp $
 
 DESCRIPTION="A library for the manipulation of RDF file in LADSPA plugins"
 HOMEPAGE="http://plugin.org.uk"

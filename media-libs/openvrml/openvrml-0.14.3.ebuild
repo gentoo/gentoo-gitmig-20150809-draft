@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.3 2004/03/30 09:35:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/openvrml-0.14.3.ebuild,v 1.4 2004/06/24 23:18:26 agriffis Exp $
 
 IUSE="zlib png jpeg truetype javascript java opengl doc"
 

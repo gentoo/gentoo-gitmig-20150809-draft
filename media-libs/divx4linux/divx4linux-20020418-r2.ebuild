@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418-r2.ebuild,v 1.6 2004/03/19 07:56:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418-r2.ebuild,v 1.7 2004/06/24 22:57:51 agriffis Exp $
 
 DXVER="501"
 DESCRIPTION="Binary release of DivX Codec 5.0.1"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.0.ebuild,v 1.4 2004/04/30 20:27:54 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.0.ebuild,v 1.5 2004/06/24 23:01:52 agriffis Exp $
 
 # FIXME : re-enable docs build
 inherit eutils flag-o-matic libtool gnome2

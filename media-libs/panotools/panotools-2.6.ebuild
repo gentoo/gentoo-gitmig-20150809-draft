@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panotools/panotools-2.6.ebuild,v 1.1 2004/03/05 05:12:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panotools/panotools-2.6.ebuild,v 1.2 2004/06/24 23:18:48 agriffis Exp $
 
 inherit eutils
 

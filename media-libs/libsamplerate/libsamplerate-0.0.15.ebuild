@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.0.15.ebuild,v 1.3 2004/02/28 20:34:39 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.0.15.ebuild,v 1.4 2004/06/24 23:13:49 agriffis Exp $
 
 DESCRIPTION="a library for converting 44.1kHz CD Audio to 48kHz for DAT"
 HOMEPAGE="http://www.mega-nerd.com/SRC/"

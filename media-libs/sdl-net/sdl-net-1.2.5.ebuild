@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.5.ebuild,v 1.5 2004/03/19 17:03:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.5.ebuild,v 1.6 2004/06/24 23:22:03 agriffis Exp $
 
 MY_P=${P/sdl-/SDL_}
 S=${WORKDIR}/${MY_P}

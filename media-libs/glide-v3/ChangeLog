@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/glide-v3
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.16 2004/06/24 16:45:01 battousai Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.17 2004/06/24 23:01:18 agriffis Exp $
 
   24 Jun 2004; Bryan Stine <battousai@gentoo.org>;
   +files/glide-v3-3.10-2.6-headers-fix.patch, glide-v3-3.10-r4.ebuild:

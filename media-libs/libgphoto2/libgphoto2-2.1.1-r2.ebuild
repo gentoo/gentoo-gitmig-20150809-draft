@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.13 2004/06/17 01:54:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.14 2004/06/24 23:10:03 agriffis Exp $
 
 inherit libtool eutils flag-o-matic
 MAKEOPTS="-j1" # or the documentation fails. bah!

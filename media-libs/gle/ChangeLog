@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/gle
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.10 2003/12/13 13:07:51 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.11 2004/06/24 23:01:07 agriffis Exp $
 
   13 Dec 2003; Guy Martin <gmsoft@gentoo.org> gle-3.0.1-r2.ebuild:
   Marked stable on hppa.

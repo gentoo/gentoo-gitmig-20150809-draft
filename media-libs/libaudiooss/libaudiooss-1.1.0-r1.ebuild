@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/libaudiooss-1.1.0-r1.ebuild,v 1.4 2004/03/19 07:56:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/libaudiooss-1.1.0-r1.ebuild,v 1.5 2004/06/24 23:05:48 agriffis Exp $
 
 HOMEPAGE="http://romeo.skybert.no/~erik/linux.html"
 DESCRIPTION="Transparent OSS emulation on top of the Network Audio System"

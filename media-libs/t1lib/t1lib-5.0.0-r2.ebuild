@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.12 2004/06/07 22:47:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.13 2004/06/24 23:24:07 agriffis Exp $
 
 inherit gnuconfig flag-o-matic
 

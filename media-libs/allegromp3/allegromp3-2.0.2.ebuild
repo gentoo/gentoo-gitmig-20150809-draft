@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegromp3/allegromp3-2.0.2.ebuild,v 1.6 2004/04/20 16:39:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegromp3/allegromp3-2.0.2.ebuild,v 1.7 2004/06/24 22:55:44 agriffis Exp $
 
 IUSE=""
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc2.ebuild,v 1.14 2004/01/09 17:59:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc2.ebuild,v 1.15 2004/06/24 22:56:06 agriffis Exp $
 
 MY_P=${P/_rc/rc}
 S=${WORKDIR}/${MY_P}

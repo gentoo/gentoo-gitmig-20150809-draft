@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/libart_lgpl
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.25 2004/06/20 04:46:51 tgall Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.26 2004/06/24 23:05:37 agriffis Exp $
 
   19 Jun 2004; Tom Gall <tgall@gentoo.org> libart_lgpl-2.3.16.ebuild:
   stable on ppc64 bug #54138

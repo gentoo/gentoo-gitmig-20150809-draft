@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.18 2004/06/07 23:37:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.19 2004/06/24 23:19:11 agriffis Exp $
 
 MY_PN="${PN/pdf/PDF}-Lite"
 MY_P="${MY_PN}-${PV}-Unix-src"

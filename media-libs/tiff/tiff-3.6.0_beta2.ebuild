@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.0_beta2.ebuild,v 1.6 2004/02/22 21:22:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.0_beta2.ebuild,v 1.7 2004/06/24 23:24:27 agriffis Exp $
 
 MY_S=${P/tiff-/tiff-v}
 MY_P=${PN}-v${PV/_beta/-beta}

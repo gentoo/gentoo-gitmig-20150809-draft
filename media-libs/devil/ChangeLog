@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/devil
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.11 2004/05/30 06:53:10 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.12 2004/06/24 22:57:41 agriffis Exp $
 
 *devil-1.6.6-r2 (30 May 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.2.ebuild,v 1.9 2004/02/17 20:05:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.2.ebuild,v 1.10 2004/06/24 23:10:33 agriffis Exp $
 
 DESCRIPTION="library for Irman control of Unix software"
 SRC_URI="http://www.lirc.org/software/snapshots/${P}.tar.gz"

@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/libnjb
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.10 2004/06/15 04:48:03 eradicator Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.11 2004/06/24 23:12:56 agriffis Exp $
 
   14 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> libnjb-1.1.ebuild:
   Stable x86 and amd64
