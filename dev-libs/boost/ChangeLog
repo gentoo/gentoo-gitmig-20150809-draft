@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.21 2004/07/02 04:34:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.22 2004/12/10 18:08:14 morfic Exp $
+
+*boost-1.32.0 (10 Dec 2004)
+
+  10 Dec 2004; Daniel Goller <morfic@gentoo.org> +metadata.xml,
+  +boost-1.32.0.ebuild:
+  Version Bump + added metadata.xml
+  Thanks to all on Bug #71808
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> boost-1.30.0.ebuild,
   boost-1.30.2.ebuild, boost-1.31.0.ebuild:
