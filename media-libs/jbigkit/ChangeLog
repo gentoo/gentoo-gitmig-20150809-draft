@@ -1,11 +1,14 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.8 2003/07/09 20:13:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.9 2003/08/04 19:25:03 gmsoft Exp $
 
   09 Jul 2003; Michael Sterrett <msterret@gentoo.org> jbigkit-1.4.ebuild:
   use sed -i in src_unpack
 
 *jbigkit-1.4 (05 Nov 2002)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> jbigkit-1.4.ebuild :
+  Added hppa to KEYWORDS.
 
   30 Mar 2003; <rac@gentoo.org> jbigkit-1.4.ebuild:
   marking stable on ppc, as stable imagemagick version depends on it
