@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.24 2004/07/27 04:15:16 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.25 2004/10/07 07:19:51 eradicator Exp $
+
+  07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> jpeg-6b-r3.ebuild:
+  multilib fixes
 
   27 Jul 2004; Hasan Khalil <gongloo@gentoo.org> jpeg-6b-r3.ebuild:
   Added ~macos to keywords, needs dolib fix still (bug 57858)

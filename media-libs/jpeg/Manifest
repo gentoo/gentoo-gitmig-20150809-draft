@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 053c7cb8f17e20e4505eb723dfcd8390 ChangeLog 3274
-MD5 23d988612e0edc665136eb1242e2e5bb jpeg-6b-r3.ebuild 1222
+MD5 54df7363f395f21f068ea02ca6365b2e jpeg-6b-r3.ebuild 1391
 MD5 3637cbaea842b04f1aa4693a1f68e286 metadata.xml 224
+MD5 a27115aec3167e3df2b4a6d614168a43 ChangeLog 3371
 MD5 232dd13c6edffa89c6ccd5f911bbac64 files/digest-jpeg-6b-r3 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBVSFPHTu7gpaalycRArFTAKC7hv/8LzX12itWmB/2mXwnJ6Jl/gCg9kP9
-pQdtJ5k0J/Eir0yvb2n6ZgY=
-=2g7z
+iD8DBQFBZO5TArHZZzCEUG0RAtOBAJ4xBTuHRdCWkwhsJx1lKrqHcqvUFwCdHa7B
+7U+ne1QNOAN7jLa2GfTFZlQ=
+=qSq0
 -----END PGP SIGNATURE-----

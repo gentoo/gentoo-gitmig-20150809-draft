@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.31 2004/09/25 07:41:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.32 2004/10/07 07:19:51 eradicator Exp $
 
-inherit gnuconfig flag-o-matic libtool
+inherit gnuconfig flag-o-matic libtool eutils
 
 MY_P=${PN}src.v${PV}
 DESCRIPTION="Library to load, handle and manipulate images in the JPEG format"
@@ -37,11 +37,15 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{include,lib,bin,share/man/man1}
+	dodir /usr/{include,$(get_libdir),bin,share/man/man1}
 	make \
 		prefix=${D}/usr \
+		libdir=${D}/usr/$(get_libdir) \
 		mandir=${D}/usr/share/man/man1 \
 		install || die
+
+	dosym libjpeg.so.62.0.0 /usr/$(get_libdir)/libjpeg.so.62
+	dosym libjpeg.so.62.0.0 /usr/$(get_libdir)/libjpeg.so
 
 	dodoc README install.doc usage.doc wizard.doc change.log \
 		libjpeg.doc example.c structure.doc filelist.doc \
