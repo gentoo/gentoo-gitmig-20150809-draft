@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.3 2004/02/20 06:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.4 2004/04/01 03:26:47 jhuebel Exp $
 
 inherit games
 
@@ -10,14 +10,15 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-${PV}-3.x86
 
 LICENSE="Q3AEULA"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~amd64"
 IUSE="${IUSE} X opengl"
 RESTRICT="nostrip"
 
 RDEPEND="virtual/glibc
 	opengl? ( virtual/opengl )
 	X? ( virtual/x11 )
-	dedicated? ( app-misc/screen )"
+	dedicated? ( app-misc/screen )
+	amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 S=${WORKDIR}
 
@@ -66,4 +67,12 @@ pkg_postinst() {
 	einfo "\t/etc/init.d/q3ded start"
 	echo
 	einfo "The dedicated server is started under the ${GAMES_USER_DED} user account."
+	
+	# IA32 Emulation required for amd64
+	if use amd64
+	then
+		echo
+		einfo "NOTE: IA32 Emulation must be compiled into your kernel for Quake3 to run."
+	fi
+
 }
