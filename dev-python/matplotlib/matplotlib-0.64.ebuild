@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.64.ebuild,v 1.1 2004/12/05 12:16:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.64.ebuild,v 1.2 2005/01/24 22:13:05 fserb Exp $
 
 inherit distutils virtualx
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="as-is"
 
 DEPEND="virtual/python

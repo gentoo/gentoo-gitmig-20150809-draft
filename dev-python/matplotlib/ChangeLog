@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/matplotlib
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.2 2004/12/20 00:30:06 kloeri Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.3 2005/01/24 22:13:05 fserb Exp $
+
+*matplotlib-0.71 (24 Jan 2005)
+
+  24 Jan 2005; <fserb@gentoo.org> +matplotlib-0.71.ebuild:
+  Version bump
 
 *matplotlib-0.65 (20 Dec 2004)
 
