@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdlabelgen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.8 2003/08/27 01:53:11 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.9 2003/09/16 23:13:31 zul Exp $
+
+*cdlabelgen-2.6.1 (16 Sep 2003)
+
+  16 Sep 2003; Chuck Short <zul@gentoo.org> cdlabelgen-2.6.1.ebuild,
+  files/makefile.patch-2.6.1:
+  Version bump.
 
 *cdlabelgen-2.6.0 (26 Aug 2003)
 
