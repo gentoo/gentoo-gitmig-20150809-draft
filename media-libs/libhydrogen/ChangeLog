@@ -1,6 +1,19 @@
 # ChangeLog for media-libs/libhydrogen
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.2 2003/04/12 06:49:16 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.3 2003/05/25 09:12:33 jje Exp $
+
+*libhydrogen-0.8.0 (25 May 2003)
+
+  25 May 2003; jje <jje@gentoo.org> libhydrogen-0.7.4.ebuild,
+  libhydrogen-0.7.4.ebuild, libhydrogen-0.7.6.ebuild,
+  libhydrogen-0.7.6.ebuild, libhydrogen-0.8.0.ebuild:
+  Removing old versions.
+
+*libhydrogen-0.8.0 (25 May 2003)
+
+  25 May 2003; jje <jje@gentoo.org> libhydrogen-0.7.4.ebuild,
+  libhydrogen-0.7.4.ebuild, libhydrogen-0.8.0.ebuild:
+  Version bump. Needed libtoolizing.
 
 *libhydrogen-0.7.6 (12 Apr 2003)
 
