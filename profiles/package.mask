@@ -439,10 +439,10 @@ dev-lang/tcl-tk
 #Don't want any unwary user to merge these packages, because almost
 #everthing to do with sound will break until recomiled.  Don't know
 #if a compatibility ln would suffice.
-=media-sound/alsa-driver-0.9.0_beta10
-=media-sound/alsa-utils-0.9.0.1_beta10
-=media-libs/alsa-lib-0.9.0.1_beta10
-=media-sound/alsa-tools-0.9.0_beta10-r1
+>=media-sound/alsa-driver-0.9.0_beta10
+>=media-sound/alsa-utils-0.9.0_beta10
+>=media-libs/alsa-lib-0.9.0_beta10
+>=media-sound/alsa-tools-0.9.0_beta10-r1
 
 # This is an experimental patched version that is
 # supposed to work with both alsa 0.5 and alsa 0.9
