@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/countrycodes-1.0.5.ebuild,v 1.5 2004/06/28 01:08:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/countrycodes-1.0.5.ebuild,v 1.6 2004/06/28 03:30:35 vapier Exp $
 
-DESCRIPTION="An ISO 3166 country code finder."
+DESCRIPTION="An ISO 3166 country code finder"
 HOMEPAGE="http://www.grigna.com/diego/linux/countrycodes/"
 SRC_URI="http://www.grigna.com/diego/linux/${PN}/${P}.tar.gz"
 
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ~mips"
 IUSE=""
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
@@ -19,7 +19,7 @@ src_compile() {
 	emake -C src $MAKEOPTS CCOPTS="$CFLAGS" || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	dodir /usr/bin /usr/share/man/man1
 	make \
 		-C src \

@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.1.ebuild,v 1.4 2004/06/26 21:11:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.1.ebuild,v 1.5 2004/06/28 03:39:03 vapier Exp $
 
 inherit gnome2 virtualx
 
-IUSE=""
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
-SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 HOMEPAGE="http://gramps.sourceforge.net/"
+SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+IUSE=""
 
 RDEPEND=">=dev-lang/python-2.2
 	>=dev-python/pygtk-1.99.14
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-text/scrollkeeper"
 
-DOCS="COPYING NEWS README TODO"
+DOCS="NEWS README TODO"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {

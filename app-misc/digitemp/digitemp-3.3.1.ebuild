@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.3.1.ebuild,v 1.3 2004/06/24 22:08:19 agriffis Exp $
-
-IUSE="perl python"
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.3.1.ebuild,v 1.4 2004/06/28 03:31:40 vapier Exp $
 
 DESCRIPTION="Temperature logging and reporting using Dallas Semiconductor's iButtons and 1-Wire protocol"
 HOMEPAGE="http://www.digitemp.com http://www.ibutton.com"
 SRC_URI="http://www.digitemp.com/software/linux/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86"
+IUSE="perl python"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	# default is to compile to the ds9097u. local use flag takes care of
@@ -32,8 +31,8 @@ src_compile() {
 }
 
 src_install() {
-	dobin digitemp
-	dodoc README COPYING FAQ TODO
+	dobin digitemp || die
+	dodoc README FAQ TODO
 
 	# method one: don't treat the examples as docs; place them somewhere else.
 	# then tell the user where to find this stuff. suitable alternative:

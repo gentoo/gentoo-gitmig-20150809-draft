@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-221-r1.ebuild,v 1.4 2004/06/24 22:11:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-221-r1.ebuild,v 1.5 2004/06/28 03:34:31 vapier Exp $
 
 inherit eutils
 
@@ -15,12 +15,12 @@ SRC_URI="ftp://ftp.figlet.org/pub/figlet/program/unix/${MY_P}.tar.gz
 	mirror://gentoo/contributed-${P}.tar.gz
 	mirror://gentoo/ms-dos-${P}.tar.gz"
 
-KEYWORDS="x86 ppc sparc alpha mips hppa"
 LICENSE="Artistic"
 SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa"
 IUSE=""
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -40,7 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make clean   || die "make clean failed"
+	make clean || die "make clean failed"
 	emake figlet || die "emake failed"
 }
 

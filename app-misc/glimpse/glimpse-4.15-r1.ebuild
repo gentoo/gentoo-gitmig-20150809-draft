@@ -1,23 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.15-r1.ebuild,v 1.7 2004/06/24 22:13:43 agriffis Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.15-r1.ebuild,v 1.8 2004/06/28 03:38:22 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="A index/query system to search a large set of files quickly"
-SRC_URI="http://webglimpse.net/trial/${P}.tar.gz"
 HOMEPAGE="http://webglimpse.net/"
+SRC_URI="http://webglimpse.net/trial/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc ~mips amd64 sparc alpha ia64"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc ~mips alpha amd64 ia64"
+IUSE=""
+
 RDEPEND="!dev-libs/tre
-	virtual/glibc"
-
-DEPEND="virtual/glibc"
-
+	virtual/libc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	epatch ${FILESDIR}/${PV}-errno.patch

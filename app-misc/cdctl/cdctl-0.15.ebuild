@@ -1,20 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/cdctl-0.15.ebuild,v 1.10 2004/06/24 22:05:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/cdctl-0.15.ebuild,v 1.11 2004/06/28 03:28:37 vapier Exp $
 
 inherit eutils
 EPATCH_SOURCE=${FILESDIR}
 
 DESCRIPTION="Utility to control your cd/dvd drive"
-SRC_URI="mirror://sourceforge/cdctl/${P}.tar.gz"
 HOMEPAGE="http://cdctl.sourceforge.net/"
+SRC_URI="mirror://sourceforge/cdctl/${P}.tar.gz"
 
+LICENSE="free-noncomm"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
-SLOT="0"
-LICENSE="free-noncomm"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -24,5 +24,5 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc NEWS NUTSANDBOLTS LICENSE PUBLICKEY README
+	dodoc NEWS NUTSANDBOLTS PUBLICKEY README
 }

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.10 2004/06/24 22:11:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.11 2004/06/28 03:35:06 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="Set of utilities such as crlf which converts files between UNIX and DOS newlines."
+DESCRIPTION="Set of utilities such as crlf which converts files between UNIX and DOS newlines"
 HOMEPAGE="http://e.co.za/marius/"
 SRC_URI="http://e.co.za/marius/downloads/misc/fixDos-${PV}.tar.gz"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/fixDos-${PV}
 
@@ -30,6 +30,6 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make INSTALLDIR=${D}/usr/bin install || die
 }

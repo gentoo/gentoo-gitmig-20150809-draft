@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.0.ebuild,v 1.3 2004/06/24 22:14:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.0.ebuild,v 1.4 2004/06/28 03:39:03 vapier Exp $
 
 inherit gnome2
 
-IUSE=""
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
-SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 HOMEPAGE="http://gramps.sourceforge.net/"
+SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~sparc"
+IUSE=""
 
 RDEPEND=">=dev-lang/python-2.2
 	>=dev-python/pygtk-1.99.14
@@ -20,14 +20,14 @@ RDEPEND=">=dev-lang/python-2.2
 	>=dev-python/pyxml-0.7.1
 	>=dev-python/Imaging-1.1.3
 	>=dev-python/reportlab-1.11"
-
 DEPEND="${RDEPEND}
 	dev-lang/swig
 	dev-util/pkgconfig
 	app-text/scrollkeeper"
 
-DOCS="COPYING NEWS README TODO"
+DOCS="NEWS README TODO"
 MAKEOPTS="${MAKEOPTS} -j1"
+
 pkg_setup() {
 	if ! python -c "import gtk.glade" 2>&1 > /dev/null ; then
 		eerror "You need to install pygtk with libglade support. Try:"

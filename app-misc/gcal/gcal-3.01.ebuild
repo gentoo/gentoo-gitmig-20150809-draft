@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01.ebuild,v 1.6 2004/06/24 22:12:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01.ebuild,v 1.7 2004/06/28 03:36:10 vapier Exp $
 
 DESCRIPTION="The GNU Calendar - a replacement for cal"
 HOMEPAGE="http://www.gnu.org/software/gcal/gcal.html"
@@ -20,7 +20,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc ABOUT-NLS ATTENTION BUGS COPYING DISCLAIM HISTORY \
+	dodoc ABOUT-NLS ATTENTION BUGS DISCLAIM HISTORY \
 		INSTALL LIMITATIONS MANIFEST NEWS README SYMBOLS THANKS TODO
 
 	# Need to fix up paths for scripts in misc directory

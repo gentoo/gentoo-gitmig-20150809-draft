@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.7 2004/06/28 00:59:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.8 2004/06/28 03:29:42 vapier Exp $
 
 inherit ccc
 
 DESCRIPTION="Easily add ANSI colouring to shell scripts"
 HOMEPAGE="http://runslinux.net/projects.html#color"
-
 SRC_URI="http://runslinux.net/projects/color/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-
-KEYWORDS="x86 alpha ~sparc ~mips"
+KEYWORDS="x86 ~sparc ~mips alpha"
 IUSE=""
-DEPEND="virtual/glibc"
+
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-
 	# replace hardcoded compiler and CFLAGS.
 	replace-cc-hardcode
 	sed -i "s/-W -Wall -O2 -g/${CFLAGS}/g" ${S}/Makefile
@@ -25,14 +24,13 @@ src_unpack() {
 
 src_compile() {
 	emake || die
-
 	# some feedback everything went ok.
 	echo; ls -l color; size color
 }
 
 src_install() {
 	dobin color
-	dodoc CHANGELOG COPYING README
+	dodoc CHANGELOG README
 
 	# symlink for british users.
 	dosym /usr/bin/color /usr/bin/colour
