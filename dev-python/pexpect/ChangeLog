@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.15 2004/10/02 10:37:17 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.16 2004/10/21 04:50:29 pythonhead Exp $
+
+  20 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> pexpect-0.999.ebuild:
+  Marked stable x86
 
   02 Oct 2004; Hasan Khalil <gongloo@gentoo.org> pexpect-0.999.ebuild:
   Keyworded ~ppc-macos.
