@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>taviso@gentoo.org</email>
+  <name>Tavis Ormandy</name>
+</maintainer>
+<longdescription>
+The Ladebug Debugger is a powerful, fully symbolic debugger that helps you locate runtime errors (bugs) in your code. Ladebug allows you to:
+Perform source-level debugging,
+Attach to a running process,
+Debug programs with shared libraries,
+Debug massively parallel program.
+Ladebug is a command-line debugger much like gdb. It provides extensive support for debugging programs written in C, C++, and Fortran (77 and 90) and compiled with the Compaq Linux Alpha compilers, which generate Dwarf-2 debugging information. Ladebug comes with an extensive html manual. This is the same debugger that HP ships on its Tru64 systems. 
+</longdescription>
+</pkgmetadata>
