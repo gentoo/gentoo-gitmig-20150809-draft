@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.19 2004/04/15 08:45:19 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.20 2004/04/17 09:48:14 plasmaroo Exp $
+
+*gaming-sources-2.4.20-r10 (17 Apr 2004)
+
+  17 Apr 2004; <plasmaroo@gentoo.org>
+  +files/gaming-sources-2.4.20.CAN-2004-0010.patch,
+  +files/gaming-sources-2.4.20.CAN-2004-0177.patch,
+  +files/gaming-sources-2.4.20.CAN-2004-0178.patch,
+  +gaming-sources-2.4.20-r10.ebuild, -gaming-sources-2.4.20-r9.ebuild:
+  Added patches for the CAN-2004-0010, CAN-2004-0177 and CAN-2004-0178
+  vulnerabilities.
 
   15 Apr 2004; <plasmaroo@gentoo.org> gaming-sources-2.4.20-r9.ebuild,
   files/gaming-sources-2.4.20.CAN-2004-0109.patch:
