@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.316 2004/08/31 18:49:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.317 2004/09/05 23:26:26 lv Exp $
+
+*gcc-3.4.2_pre20040902 (05 Sep 2004)
+
+  05 Sep 2004; Travis Tilley <lv@gentoo.org> +gcc-3.4.2_pre20040902.ebuild:
+  - added 3.4.2_pre20040902 for testing and working on the new toolchain.eclass
+  - updated the gcc symbol visibility patch
+  - removed uclibc patches temporarily, they break every time I update gcc
+  - added a hack to make gcj not build multilib
+  - made libgcc_s.so install to /lib{,32,64}
+  - added a potential cross-compile fix that should run the correct target
+    when CCHOST != CHOST
+  - added java gui backport from 3.5
 
   31 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> gcc-3.3.4-r1.ebuild:
   Stable on sparc
