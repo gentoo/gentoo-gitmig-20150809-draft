@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.38 2002/02/26 03:19:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.39 2002/02/26 04:01:26 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -34,7 +34,7 @@ src_install() {
 	insinto ${WEBROOT}/doc
 	cd ${S}
 	local x
-	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial shots ebuild-submit
+	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial shots ebuild-submit altinstall
 	do
 		xsltproc $TEMPLATE xml/${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
 	done
