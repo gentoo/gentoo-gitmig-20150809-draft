@@ -157,3 +157,4 @@ move net-www/zoneminder www-misc/zoneminder
 move net-www/adzapper www-proxy/adzapper
 move net-www/amphetadesk www-proxy/amphetadesk
 move net-www/dansguardian www-proxy/dansguardian
+move net-www/junkbuster www-proxy/junkbuster
