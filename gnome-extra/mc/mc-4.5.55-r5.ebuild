@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r5.ebuild,v 1.1 2002/06/20 20:26:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r5.ebuild,v 1.2 2002/07/25 04:20:22 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Midnight Commander"
@@ -20,9 +20,9 @@ DEPEND="virtual/glibc
 #currently broken
 #	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 
-SLOT=""
+SLOT="0"
 LICENSE="GPL-2"
-
+KEYWORDS="x86"
 
 src_compile() {                           
 	local myconf=""
