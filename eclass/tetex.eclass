@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.13 2004/09/08 09:00:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.14 2004/09/08 20:05:18 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -70,6 +70,7 @@ tetex_src_unpack() {
 			cd ${S}
 			epatch ${FILESDIR}/../../tetex/files/tetex-${TETEX_PV}-dont-run-config.diff
 			epatch ${FILESDIR}/../../tetex/files/tetex-${TETEX_PV}.diff
+			epatch ${FILESDIR}/../../tetex/files/tetex-texdoctk-gentoo.patch
 
 			# fix up misplaced listings.sty in the 2.0.2 archive. 
 			# this should be fixed in the next release <obz@gentoo.org>
