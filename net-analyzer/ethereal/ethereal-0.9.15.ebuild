@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.14.ebuild,v 1.3 2003/09/25 20:28:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.15.ebuild,v 1.1 2003/09/25 20:28:46 mholzer Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 inherit libtool
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ethereal.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	snmp? ( virtual/snmp )
@@ -32,9 +32,8 @@ src_unpack() {
 	# gcc related configure script braindamage
 	sed -i "s|-I/usr/local/include||" configure
 	chmod +x ./configure
-	mv Makefile.am Makefile.am.orig
-	sed "s|@PCAP_LIBS@ @SOCKET_LIBS@ @NSL_LIBS@|@PCAP_LIBS@ @SOCKET_LIBS@ @NSL_LIBS@ @ADNS_LIBS@|" \
-		Makefile.am.orig > Makefile.am
+	sed -i "s|@PCAP_LIBS@ @SOCKET_LIBS@ @NSL_LIBS@|@PCAP_LIBS@ @SOCKET_LIBS@ @NSL_LIBS@ @ADNS_LIBS@|" \
+		Makefile.am
 }
 
 src_compile() {
