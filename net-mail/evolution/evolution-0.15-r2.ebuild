@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r1.ebuild,v 1.3 2001/10/06 16:10:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r2.ebuild,v 1.1 2001/10/07 00:09:25 hallski Exp $
 
 DB3=db-3.1.17
 A="${P}.tar.gz ${DB3}.tar.gz"
@@ -12,13 +12,11 @@ SRC_URI="ftp://ftp.ximian.com/pub/source/${PN}/${A}
 	 http://www.sleepycat.com/update/3.1.17/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 
-# Fixed bonobo-conf, gal, gtkhtml order as specified in Evolution README 
-# (really needed?)
-DEPEND=">=gnome-libs/bonobo-conf-0.11
+DEPEND=">=gnome-extra/bonobo-conf-0.12
         >=gnome-base/bonobo-1.0.9-r1
-	>=gnome-base/gal-0.13-r1
-        >=gnome-extra/gconf-1.0.4-r1
-	>=gnome-base/gtkhtml-0.14-r1
+	>=gnome-extra/gal-0.13-r1
+        >=gnome-base/gconf-1.0.4-r1
+	>=gnome-extra/gtkhtml-0.14.0-r1
 	>=gnome-base/oaf-0.6.6-r1
 	>=gnome-base/ORBit-0.5.10-r1
 	>=gnome-base/libglade-0.17-r1
@@ -31,7 +29,7 @@ DEPEND=">=gnome-libs/bonobo-conf-0.11
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
 	mozilla? ( >=net-www/mozilla-0.9.4-r2 )
-	pda? ( >=gnome-apps/gnome-pilot-0.1.61 )" 
+	pda? ( >=gnome-extra/gnome-pilot-0.1.61-r1 )" 
 
 src_compile() {
 	cd ${WORKDIR}/${DB3}/build_unix
@@ -61,12 +59,16 @@ src_compile() {
 				--with-nspr-libs=${MOZILLA}"
 	fi
 
-	./configure --prefix=/opt/gnome --host=${CHOST} 		     \
-		    --sysconfdir=/etc/opt/gnome 			     \
-		    --enable-file-locking=no 				     \
-		    --with-db3=${WORKDIR}/db3 				     \
-	            --without-movemail 					     \
-		    --enable-nntp $myconf || die
+	CFLAGS="-I${WORKDIR}/db3/include ${CFLAGS} 			\
+		`gnome-config --cflags bonobo`"
+
+	./configure --host=${CHOST} 		     			\
+		    --prefix=/usr					\
+		    --sysconfdir=/etc		 			\
+		    --enable-file-locking=no 				\
+		    --with-db3=${WORKDIR}/db3 				\
+	            --without-movemail 					\
+		    $myconf || die
 
 	make || die # emake didn't work.
 }
