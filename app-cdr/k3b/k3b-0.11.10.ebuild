@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.10.ebuild,v 1.5 2004/06/11 01:20:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.10.ebuild,v 1.6 2004/06/16 19:25:10 mholzer Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE="debug dvdr kde oggvorbis mad flac encode monkey"
 
-DEPEND="kde? ( >=kde-base/kdebase-3.1 )
+DEPEND="kde? ( >=kde-base/kdebase-3.2.2 )
 	>=media-sound/cdparanoia-3.9.8
 	>=media-libs/id3lib-3.8.0_pre2
 	flac? ( media-libs/flac )
