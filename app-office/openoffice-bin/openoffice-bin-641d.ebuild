@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-641d.ebuild,v 1.2 2002/04/20 22:12:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-641d.ebuild,v 1.3 2002/04/20 22:38:58 azarah Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -17,8 +17,8 @@ LOC="/opt"
 MAIN_VER="`echo ${PV} |sed -e "s:[a-z]::g"`"
 S="${WORKDIR}/normal"
 DESCRIPTION="OpenOffice productivity suite"
-SRC_URI="http://ny1.mirror.openoffice.org/${MY_PV}/install${MY_PV}_linux_intel.tar.gz
-	http://sf1.mirror.openoffice.org/install${MY_PV}_linux_intel.tar.gz"
+SRC_URI="http://ny1.mirror.openoffice.org/${PV}/install${MY_PV}_linux_intel.tar.gz
+	http://sf1.mirror.openoffice.org/${PV}/install${MY_PV}_linux_intel.tar.gz"
 HOMEPAGE="http://www.openoffice.org"
 
 DEPEND="virtual/glibc
