@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5.ebuild,v 1.1 2003/02/04 06:02:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5.ebuild,v 1.2 2003/02/05 02:16:14 lostlogic Exp $
 
 IUSE="X"
 
@@ -23,7 +23,14 @@ src_compile() {
 	cp Makefile.comp Makefile
 
 	make ${MAKEOPTS} spim || die "make spim failed"
-	[ `use X` ] && make ${MAKEOPTS} xspim || die "make xspim failed"
+	if [ `use X` ]; then
+		make ${MAKEOPTS} xspim
+		die "make xspim failed"
+	else
+		sed -e "/install:: xspim/,+4d" \
+		    Makefile > Makefile.nox
+		cp Makefile.nox Makefile
+	fi
 }
 
 src_install() {
