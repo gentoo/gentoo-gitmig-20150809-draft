@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.2.ebuild,v 1.2 2003/12/14 17:04:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.2.ebuild,v 1.3 2003/12/16 17:01:14 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ SLOT="${KV}"
 KEYWORDS="~x86 ~amd64 -ppc -sparc"
 LICENSE="GPL-2"
 
-DEPEND=">=sys-apps/i2c-2.8.0"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A} || die
@@ -97,7 +97,7 @@ src_install() {
 	else
 		emake LINUX=$LINUX DESTDIR=${D} PREFIX=${D}/usr MANDIR=${D}/usr/share/man install || die "Install failed!"
 	fi
-	mv ${D}/${D}* ${D}
+	cp ${D}/${D}* ${D} -Rf
 	rm ${D}/var -Rf
 
 	exeinto /etc/init.d

@@ -3,7 +3,7 @@ MD5 efdd071257ee7e4314b70e1903efab32 lm-sensors-2.6.5.ebuild 2036
 MD5 07940dcd0942c7b3b6b238fb09eede72 lm-sensors-2.8.0.ebuild 3919
 MD5 37443e54165d5bcdaa8550d52edafa98 metadata.xml 228
 MD5 655b7e9df1b01c8a7f9cdb30d5daa475 lm-sensors-2.7.0.ebuild 2321
-MD5 2cbf5e3ffda8514db04d21f3e8100200 lm-sensors-2.8.2.ebuild 4670
+MD5 9d9d2e94e87e1c2ccb44695b6abe1685 lm-sensors-2.8.2.ebuild 4654
 MD5 4114af2a24bbb2cce7e2b199279f45d7 lm-sensors-2.7.0-r1.ebuild 2666
 MD5 f0ffc9035755aae9c0ac6ceb3e85de80 lm-sensors-2.8.1.ebuild 3919
 MD5 e7d4c59852cf30645216f50ef7a3377b files/digest-lm-sensors-2.8.1 68
