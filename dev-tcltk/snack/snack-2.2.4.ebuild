@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.4.ebuild,v 1.5 2004/06/25 02:07:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.4.ebuild,v 1.6 2004/09/03 20:30:10 eradicator Exp $
 
 IUSE="alsa oggvorbis"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.speech.kth.se/snack/"
 SRC_URI="http://www.speech.kth.se/~kare/${PN}${PV}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 SLOT="0"
 
 DEPEND=">dev-lang/tcl-8.4.3
