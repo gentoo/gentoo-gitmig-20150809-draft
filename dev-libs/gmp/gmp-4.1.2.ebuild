@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.7 2003/10/16 16:42:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.8 2003/10/18 19:45:42 mholzer Exp $
 
 inherit flag-o-matic libtool
 filter-flags -ffast-math
@@ -17,7 +17,9 @@ DEPEND="~sys-devel/m4-1.4"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
-	[ $ARCH = "amd64" ] && epatch ${FILESDIR}/longlong.patch || die
+	if [ `$ARCH = "amd64"` ] ; then
+	 	epatch ${FILESDIR}/longlong.patch || die
+	fi
 }
 
 src_compile() {
