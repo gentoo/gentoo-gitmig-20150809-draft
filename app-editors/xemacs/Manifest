@@ -1,5 +1,5 @@
 MD5 cd336f54fb85ddaeaf1a46bda0909ddb xemacs-21.4.9.ebuild 4175
-MD5 e8cf33b6c221ceaf75d6e12dee61d685 ChangeLog 9207
+MD5 58dfd01a10513d297bed4093766772c8 ChangeLog 9352
 MD5 0f39d0139849956930b1a500aca9c6de metadata.xml 365
 MD5 55a82a5bffcca6d02689a1b3cad052a9 xemacs-21.4.15-r2.ebuild 5109
 MD5 e575bd3c0a8ac4756e3bb8b118c525ef xemacs-21.4.12.ebuild 4944
@@ -18,4 +18,4 @@ MD5 94beef92edcaf12edef657556fbb7a7e files/xemacs-21.4.8-ppc.diff 1032
 MD5 678239bc0954d838f5a9c53a6570c850 files/xemacs-21.4.9-ppc-glibc-2.3.x.diff 1112
 MD5 c72c4643e7b5e7c44a57766a88838600 files/xemacs-21.4.9-ppc.diff 1031
 MD5 6a3d383a050855607a702a56c850ff1a files/digest-xemacs-21.4.15-r1 130
-MD5 f6e1525d3bd987735c9b4bdd169b1591 files/xemacs-21.4.15-gdbm.patch 670
+MD5 0da90396cb9e3ca915e9e00a2f99ee32 files/xemacs-21.4.15-gdbm.patch 639

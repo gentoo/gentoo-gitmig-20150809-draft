@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.50 2004/09/03 19:04:54 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.51 2004/09/10 21:46:18 rac Exp $
+
+  10 Sep 2004; Robert Coie <rac@gentoo.org> files/xemacs-21.4.15-gdbm.patch:
+  modify gdbm patch so it will build against either 1.8.0 or 1.8.3
 
   03 Sep 2004; Robert Coie <rac@gentoo.org> xemacs-21.4.15-r2.ebuild:
   keywording amd64 and alpha to match gdbm 1.8.3
