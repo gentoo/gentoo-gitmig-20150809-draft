@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040117.ebuild,v 1.3 2004/02/09 16:20:35 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20031210.ebuild,v 1.1 2004/02/09 16:20:35 brad_mssw Exp $
 
 IUSE="nls pic build nptl"
 
@@ -35,7 +35,7 @@ export CFLAGS="${CFLAGS//-O?} -O2"
 export CXXFLAGS="${CFLAGS}"
 export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 
-BRANCH_UPDATE="20040117"
+#BRANCH_UPDATE="20040117"
 
 # Minimum kernel version for --enable-kernel
 export MIN_KV="2.4.1"
@@ -45,19 +45,21 @@ export MIN_KV="2.4.1"
 export MIN_NPTL_KV="2.6.0"
 
 #MY_PV="${PV/_}"
-MY_PV="2.3.2"
+MY_PV="2.3.3"
+SNAPSHOT="20031210"
 #S="${WORKDIR}/${P%_*}"
-S="${WORKDIR}/${PN}-${MY_PV}"
+S="${WORKDIR}/${PN}-${SNAPSHOT}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
-SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
-	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-${MY_PV}.tar.bz2
-	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${MY_PV}.tar.bz2
-	ftp://sources.redhat.com/pub/glibc/snapshots/glibc-linuxthreads-${MY_PV}.tar.bz2
-	mirror://gentoo/${P/_*}-branch-update-${BRANCH_UPDATE}.patch.bz2
-	hppa? ( mirror://gentoo/${PN}-${MY_PV}-hppa-patches-p1.tar.bz2 )"
+SRC_URI="ftp://ftp.linuxppc64.org/pub/people/tgall/libc/glibc-20031210.tar.bz2"
+#         hppa? ( mirror://gentoo/${PN}-${MY_PV}-hppa-patches-p1.tar.bz2 )"
+
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64"
+#KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64 ppc64"
+# likely if you're on another architecture this snapshot isn't that interesting
+# it's a pull before the current altivec / vmx work went into cvs head
+# and started to cause problems for ppc64
+KEYWORDS="-* ppc64"
 SLOT="2.2"
 LICENSE="LGPL-2"
 
@@ -149,7 +151,7 @@ use_nptl() {
 					return 0
 				fi
 				;;
-			"alpha"|"amd64"|"mips"|"ppc"|"sparc")
+			"alpha"|"amd64"|"mips"|"ppc"|"sparc"|"ppc64")
 				return 0
 				;;
 			*)
@@ -247,158 +249,166 @@ src_unpack() {
 
 	local P="${PN}-${MY_PV}"
 
-	unpack glibc-${MY_PV}.tar.bz2
+	unpack glibc-${SNAPSHOT}.tar.bz2
 
 	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir -p ${S}/man; cd ${S}/man
-	use_nptl || tar xjf ${FILESDIR}/glibc-manpages-${MY_PV}.tar.bz2
 
-	cd ${S}
-	# Extract our threads package ...
-	if (! use_nptl) && [ -z "${BRANCH_UPDATE}" ]
+	if [ "${ARCH}" != "ppc64" ]
 	then
-		unpack glibc-linuxthreads-${MY_PV}.tar.bz2
-	fi
-
-	if [ -n "${BRANCH_UPDATE}" ]
-	then
-		epatch ${DISTDIR}/${PN}-${PV/_*}-branch-update-${BRANCH_UPDATE}.patch.bz2
-	fi
-
-	if use_nptl
-	then
-		epatch ${FILESDIR}/2.3.2/${P}-redhat-nptl-fixes.patch
-	else
-		epatch ${FILESDIR}/2.3.2/${P}-redhat-linuxthreads-fixes.patch
-	fi
-
-	# To circumvent problems with propolice __guard and
-	# __guard_setup__stack_smash_handler
-	#
-	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" ]
-	then
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-propolice-guard-functions-v2.patch
-	fi
-
-	# With latest versions of glibc, a lot of apps failed on a PaX enabled
-	# system with:
-	#
-	#  cannot enable executable stack as shared object requires: Permission denied
-	#
-	# This is due to PaX 'exec-protecting' the stack, and ld.so then trying
-	# to make the stack executable due to some libraries not containing the
-	# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
-	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch
-
-	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
-#	cd ${S}/io; epatch ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
-
-	# This add back glibc 2.2 compadibility.  See bug #8766 and #9586 for more info,
-	# and also:
-	#
-	#  http://lists.debian.org/debian-glibc/2002/debian-glibc-200210/msg00093.html
-	#
-	# We should think about remoing it in the future after things have settled.
-	#
-	# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
-	#
-	# <azarah@gentoo.org> (26 Oct 2002).
-	cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-ctype-compat-v3.patch
-
-	# One more compat issue which breaks sun-jdk-1.3.1.  See bug #8766 for more
-	# info, and also:
-	#
-	#   http://sources.redhat.com/ml/libc-alpha/2002-04/msg00143.html
-	#
-	# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
-	#
-	# <azarah@gentoo.org> (30 Oct 2002).
-	cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libc_wait-compat.patch
-
-	# One more compat issue ... libc_stack_end is missing from ld.so.
-	# Got this one from diffing redhat glibc tarball .. would help if
-	# they used patches and not modified tarball ...
-	#
-	# <azarah@gentoo.org> (7 Nov 2002).
-#	cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-stack_end-compat.patch
-
-	# The mathinline.h header omits the middle term of a ?: expression.  This
-	# is a gcc extension, but since the ISO standard forbids it, it's a
-	# GLIBC bug (bug #27142).  See also:
-	#
-	#   http://bugs.gentoo.org/show_bug.cgi?id=27142
-	#
-#	cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-fix-omitted-operand-in-mathinline_h.patch
-
-	# We do not want name_insert() in iconvconfig.c to be defined inside
-	# write_output() as it causes issues with PaX.
-	cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-iconvconfig-name_insert.patch
-
-	# A few patches only for the MIPS platform.  Descriptions of what they
-	# do can be found in the patch headers.
-	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
-	# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
-	if [ "${ARCH}" = "mips" ]
-	then
+		use_nptl || tar xjf ${FILESDIR}/glibc-manpages-${MY_PV}.tar.bz2
 		cd ${S}
-		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
-		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libgcc-compat-mips.patch
-		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-add-n32-n64-sysdep-cancel.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-configure-for-n64-symver.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-pread-linux2.5.patch
-	fi
+		# Extract our threads package ...
+		if (! use_nptl) && [ -z "${BRANCH_UPDATE}" ]
+		then
+			unpack glibc-linuxthreads-${MY_PV}.tar.bz2
+		fi
 
-	if [ "${ARCH}" = "alpha" ]
-	then
-		cd ${S}
-		# Fix compatability with compaq compilers by ifdef'ing out some
-		# 2.3.2 additions.
-		# <taviso@gentoo.org> (14 Jun 2003).
-		epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
+		if [ -n "${BRANCH_UPDATE}" ]
+		then
+			epatch ${DISTDIR}/${PN}-${PV/_*}-branch-update-${BRANCH_UPDATE}.patch.bz2
+		fi
 
-		# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
-		epatch ${FILESDIR}/2.3.2/${P}-alpha-pwrite.patch
-	fi
+		if use_nptl
+		then
+			epatch ${FILESDIR}/2.3.2/${P}-redhat-nptl-fixes.patch
+		else
+			epatch ${FILESDIR}/2.3.2/${P}-redhat-linuxthreads-fixes.patch
+		fi
 
-	if [ "${ARCH}" = "amd64" ]
-	then
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-amd64-nomultilib.patch
-	fi
-
-	if [ "${ARCH}" = "ia64" ]
-	then
-		# The basically problem is glibc doesn't store information about
-		# what the kernel interface is so that it can't efficiently set up
-		# parameters for system calls.  This patch from H.J. Lu fixes it:
+		# To circumvent problems with propolice __guard and
+		# __guard_setup__stack_smash_handler
 		#
-		#   http://sources.redhat.com/ml/libc-alpha/2003-09/msg00165.html
+		#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+		if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" ]
+		then
+			cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-propolice-guard-functions-v2.patch
+		fi
+
+		# With latest versions of glibc, a lot of apps failed on a PaX enabled
+		# system with:
 		#
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-ia64-LOAD_ARGS-fixup.patch
-	fi
+		#  cannot enable executable stack as shared object requires: Permission denied		  #
+		# This is due to PaX 'exec-protecting' the stack, and ld.so then trying
+		# to make the stack executable due to some libraries not containing the
+		# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
+		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch
 
-	if [ "${ARCH}" = "hppa" ]
-	then
-		local x=
+		# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
+		#      cd ${S}/io; epatch ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
 
-		cd ${WORKDIR}
-		unpack ${P}-hppa-patches-p1.tar.bz2
+		# This add back glibc 2.2 compadibility.  See bug #8766 and #9586 for more info,
+		# and also:
+		#
+		#  http://lists.debian.org/debian-glibc/2002/debian-glibc-200210/msg00093.html		  #
+		# We should think about remoing it in the future after things have settled.
+		#
+		# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
+		#
+		# <azarah@gentoo.org> (26 Oct 2002).
+		cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-ctype-compat-v3.patch
+
+		# One more compat issue which breaks sun-jdk-1.3.1.  See bug #8766 for more
+		# info, and also:
+		#
+		#   http://sources.redhat.com/ml/libc-alpha/2002-04/msg00143.html
+		#
+		# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
+		#
+		# <azarah@gentoo.org> (30 Oct 2002).
+		cd ${S}; epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libc_wait-compat.patch
+
+		# The mathinline.h header omits the middle term of a ?: expression.  This
+		# is a gcc extension, but since the ISO standard forbids it, it's a
+		# GLIBC bug (bug #27142).  See also:
+		#
+		#   http://bugs.gentoo.org/show_bug.cgi?id=27142
+		#
+		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-fix-omitted-operand-in-mathinline_h.patch
+
+		# We do not want name_insert() in iconvconfig.c to be defined inside
+		# write_output() as it causes issues with trampolines/PaX.
+		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-iconvconfig-name_insert.patch
+
+		# A few patches only for the MIPS platform.  Descriptions of what they
+		# do can be found in the patch headers.
+		# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
+		# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
+		if [ "${ARCH}" = "mips" ]
+		then
+			cd ${S}
+			epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
+			epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libgcc-compat-mips.patch
+			epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
+			epatch ${FILESDIR}/2.3.2/${P}-mips-add-n32-n64-sysdep-cancel.patch
+			epatch ${FILESDIR}/2.3.2/${P}-mips-configure-for-n64-symver.patch
+			epatch ${FILESDIR}/2.3.2/${P}-mips-pread-linux2.5.patch
+		fi
+
+		if [ "${ARCH}" = "alpha" ]
+		then
+			cd ${S}
+			# Fix compatability with compaq compilers by ifdef'ing out some
+			# 2.3.2 additions.
+			# <taviso@gentoo.org> (14 Jun 2003).
+			epatch ${FILESDIR}/2.3.2/${P}-decc-compaq.patch
+
+			# Fix compilation with >=gcc-3.2.3 (01 Nov 2003 agriffis)
+			epatch ${FILESDIR}/2.3.2/${P}-alpha-pwrite.patch
+		fi
+		
+		if [ "${ARCH}" = "amd64" ]
+		then
+			cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-amd64-nomultilib.patch
+		fi
+
+		if [ "${ARCH}" = "ia64" ]
+		then
+			# The basically problem is glibc doesn't store information about
+			# what the kernel interface is so that it can't efficiently set up
+			# parameters for system calls.  This patch from H.J. Lu fixes it:
+			#
+			#   http://sources.redhat.com/ml/libc-alpha/2003-09/msg00165.html
+			#
+			cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-ia64-LOAD_ARGS-fixup.patch
+		fi
+
+		if [ "${ARCH}" = "hppa" ]
+		then
+			local x=
+
+			cd ${WORKDIR}
+			unpack ${P}-hppa-patches-p1.tar.bz2
+			cd ${S}
+			EPATCH_EXCLUDE="010* 020* 030* 040* 050* 055* 130* 190* 200*"
+			for x in ${EPATCH_EXCLUDE}
+			do
+				rm -f ${WORKDIR}/${P}-hppa-patches/${x}
+			done
+			for x in ${WORKDIR}/${P}-hppa-patches/*
+			do
+				epatch ${x}
+			done
+			epatch ${FILESDIR}/2.3.1/glibc23-07-hppa-atomicity.dpatch
+		fi
+
 		cd ${S}
-		EPATCH_EXCLUDE="010* 020* 030* 040* 050* 055* 130* 190* 200*"
-		for x in ${EPATCH_EXCLUDE}
-		do
-			rm -f ${WORKDIR}/${P}-hppa-patches/${x}
-		done
-		for x in ${WORKDIR}/${P}-hppa-patches/*
-		do
-			epatch ${x}
-		done
-		epatch ${FILESDIR}/2.3.1/glibc23-07-hppa-atomicity.dpatch
-	fi
 
-	# Fix permissions on some of the scripts
-	chmod u+x ${S}/scripts/*.sh
+		# program header support for pax
+		epatch ${FILESDIR}/2.3.3/${PN}-${PV}-pt_pax.diff
+
+		# Sanity check the forward and backward chunk pointers in the
+		# unlink() macro used by Doug Lea's implementation of malloc(3).
+		epatch ${FILESDIR}/2.3.3/glibc-2.3.3-owl-malloc-unlink-sanity-check.diff
+
+		# cosmetic change to ssp
+		# send a SEGV vs ABRT on self termniation.
+		# KILL might be even better?
+		epatch ${FILESDIR}/2.3.3/${PN}-${PV}-signal-ssp.diff
+
+		# Fix permissions on some of the scripts
+		chmod u+x ${S}/scripts/*.sh
+	fi
 }
 
 setup_flags() {
@@ -443,7 +453,7 @@ src_compile() {
 
 	use nls || myconf="${myconf} --disable-nls"
 
-	if use_nptl
+	if (use_nptl) && [ "${ARCH}" != "ppc64" ]
 	then
 		local kernelheaders="$(get_KHV "`KV_to_int ${MIN_NPTL_KV}`")"
 
@@ -454,7 +464,8 @@ src_compile() {
 		                       --with-headers=${kernelheaders}"
 	else
 		myconf="${myconf} --without-__thread \
-		                  --enable-add-ons=linuxthreads"
+		                  --enable-add-ons=linuxthreads "
+#						  --with-headers=/usr/src/linux/include"
 
 		# If we build for the build system we use the kernel headers from the target
 		# We also now set it without "build" as well, else it might use the
@@ -585,7 +596,7 @@ EOF
 
 	# Is this next line actually needed or does the makefile get it right?
 	# It previously has 0755 perms which was killing things.
-	fperms 4755 /usr/lib/misc/pt_chown
+	fperms 4711 /usr/lib/misc/pt_chown
 
 	# Currently libraries in  /usr/lib/gconv do not get loaded if not
 	# in search path ...
