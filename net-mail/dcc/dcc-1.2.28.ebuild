@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dcc/dcc-1.2.28.ebuild,v 1.2 2004/03/29 01:12:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dcc/dcc-1.2.28.ebuild,v 1.3 2004/04/26 20:09:41 agriffis Exp $
 
 DESCRIPTION="Distributed Checksum Clearinghouse"
 HOMEPAGE="http://www.rhyolite.com/anti-spam/dcc/"
@@ -38,7 +38,7 @@ src_compile() {
 	#myconf="${myconf} --without-cgibin"
 	myconf="${myconf} --with-rundir=/var/run/dcc"
 	myconf="${myconf} `use_enable ipv6 IPv6`"
-	./configure ${myconf} || die "econf failed!"
+	./configure ${myconf} || die "configure failed!"
 	#make -C homedir
 	emake || die "emake failed!"
 }
