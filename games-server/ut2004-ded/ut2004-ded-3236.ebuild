@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3236.ebuild,v 1.2 2004/07/09 23:52:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3236.ebuild,v 1.3 2004/08/15 06:51:51 vapier Exp $
 
 inherit games
 
@@ -17,8 +17,8 @@ SRC_URI="mirror://3dgamers/pub/3dgamers5/games/unrealtourn2k4/${ORIG_P}
 LICENSE="ut2003"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-RESTRICT="nostrip nomirror"
 IUSE=""
+RESTRICT="nostrip nomirror"
 
 DEPEND="app-arch/unzip"
 
@@ -69,7 +69,7 @@ pkg_postinst() {
 	einfo "The server can be started with the /etc/init.d/ut2004-ded init script."
 	echo
 	ewarn "You should take the time to edit the default server INI."
-	ewarn "Consult the INI Reference at http://unrealadmin.net/"
+	ewarn "Consult the INI Reference at http://unrealadmin.org/"
 	ewarn "for assistance in adjusting the following file:"
 	ewarn "      /opt/ut2004-ded/System/Default.ini"
 	echo
