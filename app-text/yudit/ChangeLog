@@ -1,6 +1,11 @@
 # ChangeLog for app-text/yudit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.7 2003/02/12 05:37:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.8 2003/04/05 02:09:48 g2boojum Exp $
+
+*yudit-2.7.2 (04 Apr 2003)
+
+  04 Apr 2003; Grant Goodyear <g2boojum@gentoo.org> yudit-2.7.2.ebuild:
+  Update; thanks to Ulrich Plate, closes bug 18230
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
