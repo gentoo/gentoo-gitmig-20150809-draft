@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipcad
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.5 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.6 2005/01/31 14:03:03 ka0ttic Exp $
+
+  31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> ipcad-3.6.4.ebuild:
+  Marked stable on x86.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> ipcad-3.6.2.ebuild,
   ipcad-3.6.4.ebuild:
