@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.23 2001/12/24 13:41:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.24 2001/12/24 20:54:31 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base || die
 ECLASS=kde
@@ -10,9 +10,7 @@ DESCRIPTION="Based on the $ECLASS eclass"
 
 HOMEPAGE="http://www.kde.org/"
 
-DEPEND="$DEPEND kde-base/kdelibs
-				objprelink? ( >=dev-util/objprelink-0-r1 )"
-RDEPEND="$RDEPEND kde-base/kdelibs"
+DEPEND="$DEPEND objprelink? ( >=dev-util/objprelink-0-r1 )"
 
 # resolution function: kde version -> qt version
 # wish we had something like python dictionaries here :-)
@@ -127,7 +125,7 @@ kde_src_install() {
 
 EXPORT_FUNCTIONS src_compile src_install
 
-# This used to be depend.eclass. At some point I realized it might as well be called kd-depend.eclass. And then
+# This used to be depend.eclass. At some point I realized it might as well be called kde-depend.eclass. And then
 # because functions fom there needed functions from here and vice versa I merged them.
 
 #---------------
