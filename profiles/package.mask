@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <liquidx@gentoo.org> (02 Sep 2003)
+# Breaks API from 0.4.x, gnutls will break if unmasked.
+>=app-crypt/opencdk-0.5
+
 # <spider@gentoo.org> (01 Sep 2003)
 # This one requires more testing. Appears to be buggier than the i
 # previous version
