@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.42.ebuild,v 1.9 2004/10/19 10:41:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.42.ebuild,v 1.10 2004/10/23 06:41:16 mr_bones_ Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha amd64 macos ppc64 ppc-macos"
+KEYWORDS="x86 ppc sparc alpha amd64 ppc64 ppc-macos"
 
 src_unpack() {
 	unpack ${A}
