@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r1.ebuild,v 1.1 2002/04/30 23:37:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r1.ebuild,v 1.2 2002/04/30 23:39:55 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -18,7 +18,6 @@ ETYPE="sources"
 #	grsecurity-1.9.4 (with fixes and a fix for an NVIDIA driver compile problem)
 #   2.4.19-pre7-low-latency
 #   htb2 (QoS support)
-#	00_3.5G-address-space-4 (from Andrea Archangeli)
 #   preempt-kernel-rml-2.4.19-pre7-ac2-1.patch
 #	preempt-stats-rml-2.4.19-pre5-ac3-1.patch
 #	1000 HZ patch
@@ -28,6 +27,8 @@ ETYPE="sources"
 #		50_crypto-patch-int-2.4.18.1-1.bz2
 #		51_loop-jari-2.4.16.0.bz2
 #		90_freeswan-1.97.bz2
+#	from aa:
+#		00_3.5G-address-space-4 (from Andrea Archangeli)
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
