@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmad
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.13 2004/02/18 09:26:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.14 2004/03/26 19:23:18 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libmad-0.15.0b-r1.ebuild, libmad-0.15.1b.ebuild:
+  Bump to stable.  remove cruft.
 
 *libmad-0.15.1b (18 Feb 2004)
 
