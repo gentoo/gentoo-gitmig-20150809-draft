@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-0.2.ebuild,v 1.3 2004/11/03 00:20:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-0.2.ebuild,v 1.4 2004/11/11 21:18:48 blubb Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/freedoom/doom1.zip
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="ppc x86 ~amd64"
 IUSE=""
 
 RDEPEND="!games-fps/doom-data"
