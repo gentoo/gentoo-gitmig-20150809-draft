@@ -44,7 +44,7 @@ src_unpack() {
 	#Thers is some anti-grsecurity sentiment, so I'll
 	#make it easy not to patch it in.
 	#Uncomment the following line to not patch grsecurity.
-	rm 14*
+	#rm 14*
 
 	./addpatches . ${WORKDIR}/linux-${KV}
 
