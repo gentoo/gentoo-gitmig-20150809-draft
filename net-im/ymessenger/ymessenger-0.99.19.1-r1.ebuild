@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.1-r1.ebuild,v 1.1 2003/03/03 12:39:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.1-r1.ebuild,v 1.2 2003/04/04 06:06:12 seemant Exp $
 
 inherit kde
 
@@ -42,6 +42,9 @@ src_install () {
 
 	insinto /opt/ymessenger/bin
 	doins yahoo_kde.xpm yahoo_gnome.png
+
+	insinto /opt/ymessenger/bin
+	doins ymessenger.desktop
 
 	if use gnome
 	then
