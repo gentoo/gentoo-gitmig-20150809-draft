@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.4.ebuild,v 1.3 2003/09/11 10:40:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.4.ebuild,v 1.4 2003/10/08 09:40:44 liquidx Exp $
 
 
 MY_PV=$(echo ${PV} | sed 's:\.::g')
@@ -16,7 +16,7 @@ S=${WORKDIR}/${PN}/gtk
 
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="gtk2 gnome"
 
 src_unpack() {
