@@ -1,5 +1,5 @@
 MD5 0a2562fa39c3652c8b13d2b246266db5 files/digest-monkeyd-0.8.2 63
 MD5 2179cd4a96ad04873e7e406a4f3e5698 files/monkeyd.conf.d 281
 MD5 73e1f4120c3f5b32ad9c5a35eb42ae46 files/monkeyd.init.d 619
-MD5 78a94d4eaedbb104b4402bc6256873dc ChangeLog 862
-MD5 375d7c1324f8c28ad1bcbbc2df11d5b7 monkeyd-0.8.2.ebuild 1407
+MD5 262b9b62c431c5c42b78a491e249ef55 monkeyd-0.8.2.ebuild 1628
+MD5 c895471289c046e6220bc87064c5e5e1 ChangeLog 953
