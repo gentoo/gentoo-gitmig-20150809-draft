@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.12 2004/04/02 16:16:38 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.13 2004/05/09 16:41:34 usata Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-debian-autoconf-2.5.patch
 	epatch ${FILESDIR}/${P}-autoconf-gentoo.diff
 	epatch ${FILESDIR}/${P}-automake-gentoo.diff	# bug #41959
+	epatch ${FILESDIR}/${P}-disable-ndebug-gentoo.diff	# bug #50483
 
 	libtoolize -c -f || die "libtoolize failed"
 	aclocal || die "aclocal failed"
