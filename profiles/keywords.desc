@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/keywords.desc,v 1.1 2003/03/18 09:17:16 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/keywords.desc,v 1.2 2003/03/28 17:39:32 carpaski Exp $
 
 # This is a list of official KEYWORDS available in portage
 
+-*
 x86
 ppc
 sparc
@@ -11,4 +12,3 @@ alpha
 mips
 hppa
 arm
-
