@@ -1,0 +1,11 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages.sparc,v 1.1 2002/04/16 20:12:53 murphy Exp $
+#
+# Please edit the file packages.sparc, it will be included in
+# packages the next time you run generate-packages.sh
+#
+# SPARC specific packages
+*sys-apps/sparc-utils
+*sys-apps/silo
+
+# Not working
+#*sys-devel/sparc-egcs64

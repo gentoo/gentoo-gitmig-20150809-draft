@@ -1,0 +1,55 @@
+#3dnow
+#fbcon		
+#ldap
+#libg++
+#mitshm
+#mmx
+#objprelink
+#odbc
+#oss
+#qtmt
+#sse
+aalib		media-libs/aalib	
+alsa		media-libs/alsa-lib
+arts		kde-base/kdelibs
+berkdb		sys-libs/db
+bonobo		gnome-base/bonobo
+cups		net-print/cups
+directfb	dev-libs/DirectFB
+esd		media-sound/esound
+gdbm		sys-libs/gdbm
+ggi		media-libs/libggi
+gif		media-libs/giflib
+gnome		gnome-base/gnome
+gpm		sys-libs/gpm
+gtk		x11-libs/gtk+
+gtkhtml		gnome-extra/gtkhtml
+guile		dev-util/guile
+imlib		media-libs/imlib
+java		virtual/jre
+kde		kde-base/kde
+libwww		net-libs/libwww
+motif		x11-libs/openmotif
+mozilla		net-www/mozilla
+mysql		dev-db/mysql
+nas		media-libs/nas
+nls		sys-devel/gettext
+oggvorbis	media-libs/libvorbis
+opengl		virtual/opengl
+pam		sys-libs/pam
+perl		sys-devel/perl
+png		media-libs/libpng
+postgres	dev-db/postgresql
+python		dev-lang/python
+qt		x11-libs/qt
+readline	sys-libs/readline
+ruby		dev-lang/ruby
+sdl		media-libs/libsdl
+slang		sys-libs/slang
+ssl		dev-libs/openssl
+svga		media-libs/svgalib
+tcltk		dev-lang/tcl dev-lang/tk
+tcpd		sys-apps/tcp-wrappers
+tex		app-text/tetex
+tiff		media-libs/tiff
+X		x11-base/xfree
