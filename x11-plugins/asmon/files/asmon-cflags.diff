@@ -1,0 +1,22 @@
+--- asmon-0.62/asmon/Makefile	2000-07-20 07:05:05.000000000 -0400
++++ asmon-0.62-ww/asmon/Makefile	2003-05-12 12:39:03.000000000 -0400
+@@ -18,16 +18,16 @@
+ 		../wmgeneral/list.o
+ 
+ .c.o:
+-	gcc -c -Wall $(SOLARIS) $< -o $*.o $(INCLUDES)
++	gcc -c -Wall $(CFLAGS) $(SOLARIS) $< -o $*.o $(INCLUDES)
+ 
+ asmon: $(OBJS)
+ 	gcc -o asmon $(OBJS) $(LIBDIR) $(LIBS) $(INCLUDES)
+ 
+ clean:
+ 	for i in $(OBJS) ; do \
+-		rm $$i;\
++		rm -f $$i;\
+ 	done
+-	rm asmon
++	rm -f asmon
+ 
+ install:
+ 	cp -f asmon $(PR_NAME); $(CHMOD_BSD)

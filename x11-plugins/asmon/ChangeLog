@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/asmon
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.1 2003/05/12 22:46:35 wwoods Exp $
+
+*asmon-0.62 (12 May 2003)
+
+  12 May 2003; Will Woods <wwoods@gentoo.org> asmon-0.62.ebuild:
+  Initial import. Comes with a patch to use CFLAGS and another to fix
+  CPU reporting on machines with high HZ values (e.g. alpha)
