@@ -1,10 +1,17 @@
 # ChangeLog for sys-apps/hfsutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsutils/ChangeLog,v 1.4 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsutils/ChangeLog,v 1.5 2003/02/05 02:43:09 nall Exp $
+
+ 
+*hfsutils-3.2.6-r1 (04 Feb 2003)
+
+  04 Feb 2002; Jon Nall <nall@gentoo.org> hfsutils-3.2.6-r1.ebuild,
+  files/digest-hfsutils-3.2.6-r1 :
+  added tcltk dependency if tcltk use var is set
+
+*hfsutils-3.2.6 (Sun Mar 17 23:27:28 CST 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*hfsutils-3.2.6 (Sun Mar 17 23:27:28 CST 2002)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> hfsutils-3.2.6.ebuild :
   Added KEYWORDS.
