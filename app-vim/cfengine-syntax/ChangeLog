@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/cfengine-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.1 2005/01/05 04:05:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.2 2005/01/25 20:43:39 hansmi Exp $
+
+  25 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  cfengine-syntax-20050105.ebuild:
+  Added to ~ppc, bug 79493.
 
 *cfengine-syntax-20050105 (05 Jan 2005)
 
