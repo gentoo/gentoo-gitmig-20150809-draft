@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ondir
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.7 2004/10/25 13:57:02 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.8 2004/10/26 13:35:39 ka0ttic Exp $
+
+  26 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> ondir-0.2.2.ebuild:
+  Use tc-getCC from toolchain-funcs.eclass instead of ${CC}; fixes bug #68985
 
 *ondir-0.2.2 (25 Oct 2004)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ondir-0.2.2.ebuild,v 1.1 2004/10/25 13:57:02 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ondir-0.2.2.ebuild,v 1.2 2004/10/26 13:35:39 ka0ttic Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="program that automatically executes scripts as you traverse directories"
 HOMEPAGE="http://swapoff.org/OnDir"
@@ -23,7 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="${CC:-gcc}" || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
