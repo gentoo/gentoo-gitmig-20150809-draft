@@ -1,6 +1,14 @@
 # ChangeLog for games-action/maelstrom
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.6 2003/10/19 17:33:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.7 2003/10/24 10:07:35 mr_bones_ Exp $
+
+*maelstrom-3.0.6-r1 (24 Oct 2003)
+
+  24 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  maelstrom-3.0.6-r1.ebuild, files/maelstrom-3.0.6-r1-security.patch:
+  move high score file to ${GAMES_STATEDIR}; move data to $(datadir); more error
+  checking; use sed-4; clean doc install; remove Makefile cruft in Images/; more
+  games eclass usage
 
   19 Oct 2003; Chris Gianelloni <wolf31o2@gentoo.org> maelstrom-3.0.6.ebuild:
   Closing bug #30852, again.
