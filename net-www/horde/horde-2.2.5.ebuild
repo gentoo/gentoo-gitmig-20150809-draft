@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.5.ebuild,v 1.6 2004/06/25 00:53:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.5.ebuild,v 1.7 2004/08/13 19:59:16 vapier Exp $
 
-HORDE_PHP_FEATURES="nls"
+HORDE_PHP_FEATURES="nls session"
 inherit horde
 
 DESCRIPTION="Horde Application Framework"
