@@ -11,6 +11,7 @@ avi
 emacs
 icc
 icc-pgo
+ifc
 krb4
 mmx
 mplayer
