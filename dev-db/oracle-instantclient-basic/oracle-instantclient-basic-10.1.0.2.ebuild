@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.2.ebuild,v 1.1 2004/03/22 21:24:54 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.2.ebuild,v 1.2 2004/03/22 21:29:15 rizzo Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="${MY_P}.rpm"
 
 LICENSE="OTN"
 SLOT="${KV}"
-KEYWORDS="-* ~x86"
+KEYWORDS="~x86"
 RESTRICT="fetch"
 
 DEPEND="app-arch/rpm2targz"
