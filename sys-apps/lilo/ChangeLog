@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.28 2003/07/17 21:10:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.29 2003/08/03 13:33:37 azarah Exp $
+
+*lilo-22.5.6-r3 (03 Aug 2003)
+
+  03 Aug 2003; Martin Schlemmer <azarah@gentoo.org> lilo-22.5.6-r3.ebuild,
+  files/lilo-22.5.6-animated-menu.patch:
+  Add updated animated graphical bootmenu support (bug #19397), thanks to
+  Quequero <quequero@bitchx.it>.
 
 *lilo-22.5.6-r2 (17 Jul 2003)
 
