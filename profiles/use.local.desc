@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.841 2005/01/07 12:59:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.842 2005/01/07 18:36:11 aliz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -574,6 +574,8 @@ net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
 net-misc/strongswan:smartcard - Enables smartcard support
 net-misc/zaptel:devfs26 - Devfs support for Linux-2.6
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
+net-misc/vnc:client - Build VNC client
+net-misc/vnc:server - Build VNC client
 net-news/inn:innkeywords - Enable automatic keyword generation support
 net-news/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-news/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
