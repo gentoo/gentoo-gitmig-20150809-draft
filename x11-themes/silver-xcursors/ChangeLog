@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/silver-xcursors
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.1 2003/06/19 02:18:18 tad Exp $
+
+*silver-xcursors-0.3 (18 Jun 2003)
+
+  18 Jun 2003; Troy Dack <tad@gentoo.org> silver-xcursors-0.3.ebuild:
+  Initial import. Thanks to Eric Ball <phoenix@webone.com.au> for submitting the
+  ebuilds. Closes Bug #19996.
+
