@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.5 2003/09/07 00:23:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.6 2003/09/08 02:43:05 msterret Exp $
 
 inherit libtool
 
@@ -41,7 +41,7 @@ src_unpack() {
 	#	a) add wrappers that set XAPPLRESDIR and UIDPATH,
 	#	b) clutter two more system directories with demo related files,
 	#	c) put sources, data, binaries AND wrappers in
-        #	   /usr/X11R6/share/Xm/ (move this to X11R6/lib/X11/Xm/demos ?),
+	#	   /usr/X11R6/share/Xm/ (move this to X11R6/lib/X11/Xm/demos ?),
 	#	OR
 	#	D) don't install them at all.
 	#
