@@ -1,7 +1,15 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.8 2002/07/19 16:08:39 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.9 2002/08/04 02:24:05 blocke Exp $
 
+*proftpd-1.2.6_rc1-r1 (03 Aug 2002)
+
+  03 Aug 2002; Bruce A. Locke <blocke@shivan.org> proftpd-1.2.6_rc1-r1.ebuild,
+  files/digest-proftpd-1.2.6_rc1-r1:
+
+  Added xinetd file contributed by alextxm@tin.it (Alessandro Pisani) and
+  fixed minor directory and documentation buglets
+  
 *proftpd-1.2.6_rc1 (19 Jul 2002)
   19 Jul 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.6_rc1.ebuild
 
