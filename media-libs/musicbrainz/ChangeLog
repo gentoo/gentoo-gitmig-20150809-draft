@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.29 2004/06/18 05:41:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.30 2004/06/18 06:27:04 eradicator Exp $
+
+  17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  musicbrainz-2.1.1.ebuild:
+  Slottage since this version's library has a different version number. Added
+  einfo to recommend revdep-rebuild.
 
   17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   musicbrainz-2.0.1.ebuild, musicbrainz-2.0.2-r2.ebuild,
