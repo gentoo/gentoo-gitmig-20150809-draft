@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.42 2005/03/21 21:32:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.43 2005/03/24 19:21:16 kloeri Exp $
+
+  24 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  bittorrent-4.0.0.ebuild:
+  Add ~alpha keyword, bug 86127.
 
   21 Mar 2005; Jason Wever <weeve@gentoo.org> bittorrent-4.0.0.ebuild:
   Added ~sparc keyword wrt bug #86127.
