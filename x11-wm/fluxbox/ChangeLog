@@ -1,7 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.55 2003/06/03 20:53:51 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.56 2003/06/11 20:50:37 mkeadle Exp $
 
+*fluxbox-0.9.3 (11 Jun 2003)
+
+  11 Jun 2003; mkeadle <mkeadle@gentoo.org> fluxbox-0.9.3.ebuild:
+  Bumping devel release to 0.9.3. This release is considerably more stable
+  then 0.9.0, but remember it's still a dev release. This ebuild contains
+  the Blueflux theme.
 
 *fluxbox (20 May 2003)
 
