@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.111 2004/08/21 01:13:13 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.112 2004/08/22 19:14:09 lisa Exp $
+
+*distcc-2.17-r1 (22 Aug 2004)
+
+  22 Aug 2004; Lisa Seelye <lisa@gentoo.org>
+  +files/2.17/2.17-ipv6-fix.diff.gz, +files/2.17/conf,
+  +files/2.17/distcc-config, +files/2.17/init, +distcc-2.17-r1.ebuild:
+  Adding a patch for 2.17 to enable ipv6, updating the init and conf scripts.
+  also set the distcc-config script to try and use userid 240.
 
   20 Aug 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.17.ebuild:
   <@SpanKY> make the first line 'ipv6 does not work with distcc-2.17' ?
