@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ ! -e ~/.e/enotes/data ] ; then
+	cd /usr/e17/share/enotes
+	cp data/arial.ttf ~/.e/enotes/data -rf
+	cp data/bg.jpg ~/.e/enotes/data -rf
+	mkdir ~/.e/enotes/
+	mkdir ~/.e/enotes/data
+	cp data/samplenotes ~/.e/enotes/notes
+	cp data/sampleconfig ~/.e/enotes/config
+	cp data/* ~/.e/enotes/data
+fi
+
+[ -z "$@" ] \
+	&& enotes_exe -N \
+	|| enotes_exe $@
