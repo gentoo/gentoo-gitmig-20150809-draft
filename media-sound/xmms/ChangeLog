@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.60 2003/08/09 02:03:47 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.61 2003/08/10 03:09:28 jje Exp $
+
+  10 Aug 2003; jje <jje@gentoo.org> xmms-1.2.7-r24.ebuild:
+  Fixed typo in SRC_URI fix. Moral? Don't change anything after you've tested...
 
   09 Aug 2003; jje <jje@gentoo.org> xmms-1.2.7-r24.ebuild:
   Fix SRC_URI to handle USE="3dnow -mmx". See #25255.
