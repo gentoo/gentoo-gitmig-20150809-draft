@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 16a25e3d07043f9fd054fd66d6fb3d9c ChangeLog 1813
+MD5 b358219335d484b06457c3cd2414c51c xview-3.2.ebuild 2283
+MD5 4f08c5ef54b9a30315db5d696d35d93e xview-3.2-r1.ebuild 2599
+MD5 b0c445a5d700fa01033dc1f327a08822 ChangeLog 1958
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 d87709e16fca935a377b34c6ff14e754 xview-3.2-r1.ebuild 2600
-MD5 a18dab3c3b4ed7edf87d5c02c3d74abc xview-3.2-r3.ebuild 2675
-MD5 b1c37b2caa7f1d2968c3cbd84c77af2e xview-3.2.ebuild 2283
-MD5 ca8ca75012c0086e91666513ea0da88d files/CAN-2005-0076.patch 984
+MD5 9bc33e895b8d8a8504ee88eb53272a62 xview-3.2-r3.ebuild 2673
 MD5 6de3c812dee458777db24502d252984f files/digest-xview-3.2 138
-MD5 48636f5ace70cc3f5033a87188e4e7bf files/digest-xview-3.2-r1 138
 MD5 d7d90bd733aab393a20a5919e05c0b49 files/digest-xview-3.2-r3 70
+MD5 48636f5ace70cc3f5033a87188e4e7bf files/digest-xview-3.2-r1 138
+MD5 ca8ca75012c0086e91666513ea0da88d files/CAN-2005-0076.patch 984
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCFMCa8zY1VwezZiERAhAKAJ0V+F8kj8VF6DiV/EuQMO6HKPLLSgCfcIkA
-v2gNDmbi1bqHnHLjAPnmZCU=
-=so1b
+iD8DBQFCTXdXKf2g/qXtneoRAjnaAJ0UlTm+s5vrbxD+jP7pomxuS63rLgCfXcWF
+GYNn+8kAJE9h3Z3e4gSryoc=
+=/qVy
 -----END PGP SIGNATURE-----
