@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r1.ebuild,v 1.1 2001/06/21 16:35:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r1.ebuild,v 1.2 2001/06/27 03:52:56 achim Exp $
 
 P=openssh-2.9p2
 A=${P}.tar.gz
@@ -51,13 +51,5 @@ src_install() {
     newexe ${FILESDIR}/svc-openssh svc-sshd
     exeinto /var/lib/supervise/services/sshd
     newexe ${FILESDIR}/sshd-run run
-}
-
-
-pkg_postinst() {
-	# Make ssh start at boot
-	. /etc/rc.d/config/functions
-	einfo ">>> Generating symlinks"
-	${ROOT}/usr/sbin/rc-update add svc-sshd
 }
 
