@@ -1,13 +1,13 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
 # Author Jerry A! <jerry@thehutt.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.0.4.ebuild,v 1.1 2001/11/27 08:55:30 jerrya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.2.ebuild,v 1.1 2002/02/09 17:01:11 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely configurable ftp client"
-SRC_URI="ftp://ftp.ncftp.com/ncftp/${P}-src.tar.gz"
+SRC_URI="ftp://ftp.ncftp.com/ncftp/${P}-src.tar.bz2"
 HOMEPAGE="http://www.ncftp.com/"
-
+SLOT="0"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2"
 
