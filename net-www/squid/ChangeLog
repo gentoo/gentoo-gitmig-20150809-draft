@@ -1,6 +1,6 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.21 2003/07/03 20:09:21 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.22 2003/07/05 13:51:46 gmsoft Exp $
 
   03 Jul 2003; Brad Laue <brad@gentoo.org> squid-2.5.3.ebuild:
   Mark 2.5.3 stable on x86.
@@ -9,6 +9,9 @@
   Added sparc stable keyword
 
 *squid-2.5.3 (04 Jun 2003)
+
+  05 Jul 2003; Guy martin <gmsoft@gentoo.org> squid-2.5.3.ebuild :
+  Fixed the loop problem with glibc-2.3.1 on hppa . Marked stable for hppa.
 
   04 Jun 2003; Donny Davies <woodchip@gentoo.org> Manifest, squid-2.5.3.ebuild,
   files/squid-2.5.3-gentoo.diff:
