@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.23 2005/03/27 17:23:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.24 2005/03/28 03:14:47 luckyduck Exp $
+
+  28 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> files/5.0.28/tomcat.init,
+  tomcat-5.0.28-r2.ebuild:
+  introduced support for the examples useflag, also modified the init script to
+  fix #86905
 
   27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> tomcat-5.0.28-r2.ebuild:
   moved from dev-java/regexp to dev-java/jakarta-regexp dependency. see #71336

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r2.ebuild,v 1.3 2005/03/27 17:23:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r2.ebuild,v 1.4 2005/03/28 03:14:47 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -38,7 +38,7 @@ RDEPEND=">=virtual/jdk-1.4
 	   dev-java/sun-jaf-bin
 	   >=dev-java/xerces-2.6.2-r1
 		jikes? ( dev-java/jikes )"
-IUSE="doc jikes"
+IUSE="doc examples jikes"
 
 S=${WORKDIR}/jakarta-${P}-src
 
@@ -186,8 +186,8 @@ src_install() {
 	cp -ra bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	# if the useflag is set, copy over the examples
-	if use doc; then
-		dodir /var/lib/${TOMCAT_NAME}/default/webapps
+	dodir /var/lib/${TOMCAT_NAME}/default/webapps
+	if use examples; then
 		cp ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
 		cp -r webapps/{tomcat-docs,jsp-examples,servlets-examples,ROOT,webdav} \
 			${D}/var/lib/${TOMCAT_NAME}/default/webapps
@@ -199,7 +199,7 @@ src_install() {
 	dosym /var/tmp/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/temp
 	dosym /var/run/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/work
 
-	dodoc ${S}/jakarta-tomcat-5/{LICENSE,RELEASE-NOTES,RUNNING.txt}
+	use doc && dodoc ${S}/jakarta-tomcat-5/{LICENSE,RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/default/tomcat-users.xml
 }
 
@@ -265,9 +265,9 @@ pkg_postinst() {
 	einfo " "
 	einfo " To test Tomcat while it's running, point your web browser to:"
 	einfo " http://localhost:8080/"
-	if ! use doc; then
+	if ! use examples; then
 		ewarn ""
-		ewarn "You do not have the doc USE flag set, examples have NOT been installed."
+		ewarn "You do not have the examples USE flag set, examples have NOT been installed."
 		ewarn " "
 	fi
 	einfo " "
