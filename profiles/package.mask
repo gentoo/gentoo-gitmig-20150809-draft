@@ -22,8 +22,6 @@
 ##
 
 # <carpaski@gentoo.org> (12 Jan 2003)
-# Testing before public release
-=sys-apps/portage-2.0.46-r6
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
 >=sys-apps/portage-2.0.47_pre1
 
