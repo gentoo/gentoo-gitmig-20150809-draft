@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.17 2004/04/20 08:59:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.18 2004/04/27 19:49:23 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> jed-0.99.16-r2.ebuild:
+  Add inherit eutils
 
 *jed-0.99.16-r2 (20 Apr 2004)
 
