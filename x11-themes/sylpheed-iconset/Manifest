@@ -1,19 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 06fa4a24e9d5c961b115d0b11e887d80 sylpheed-iconset-20030712.ebuild 606
-MD5 597b54dff6e92695fb05291e7c90af0e sylpheed-iconset-20031130.ebuild 724
-MD5 21cf605775ed2db095dce07e0be3688f sylpheed-iconset-20040206.ebuild 726
-MD5 afad20db0e3394b224e420501ce4a9b6 ChangeLog 2215
-MD5 2e30f89209b560f25329ea4fd370bc78 sylpheed-iconset-20040525.ebuild 728
-MD5 35b460ebc46a0d43be0ae5c4c1a124bc files/digest-sylpheed-iconset-20030712 77
-MD5 be64b9943c9a86fbf5236beade9d2462 files/digest-sylpheed-iconset-20031130 77
+MD5 5c26826d77cc21f11457be092fa01b35 ChangeLog 2463
+MD5 9ba161ce5020d228755f1ff48f55e267 sylpheed-iconset-20040206.ebuild 729
+MD5 ee1a3b671b35bca8d8c930ad56d6d2d6 sylpheed-iconset-20040525.ebuild 731
 MD5 e15d29fd52e4da3b91a75f39032fe255 files/digest-sylpheed-iconset-20040206 77
 MD5 1c9ad255f210270bd8c2fc180d0e2efc files/digest-sylpheed-iconset-20040525 77
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBLPbh6J2i8a8J4okRAkxRAKDZ5J00DtVdWuacC2yXYEMSrxaUrACghJXe
-nT4W6RfHv5wNX0NF3M1/9GQ=
-=7lLJ
+iD8DBQFBcwLL6J2i8a8J4okRAg2tAKCtu57HXnjZ6LgfnaJHaIwAw1cACACfQQxp
+pOufwIsO1pMTohvFoyRDLvU=
+=lTWz
 -----END PGP SIGNATURE-----

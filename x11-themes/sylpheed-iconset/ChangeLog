@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/sylpheed-iconset
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.15 2004/08/25 20:30:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.16 2004/10/17 23:39:44 genone Exp $
+
+  18 Oct 2004; <genone@gentoo.org> -sylpheed-iconset-20030712.ebuild,
+  -sylpheed-iconset-20031130.ebuild, sylpheed-iconset-20040206.ebuild,
+  sylpheed-iconset-20040525.ebuild:
+  changing rm to rm -f to avoid error messages, cleaning old ebuilds.
 
 *sylpheed-iconset-20040525 (25 Aug 2004)
 
