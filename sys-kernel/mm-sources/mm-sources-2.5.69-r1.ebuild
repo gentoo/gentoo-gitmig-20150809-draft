@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.68-r1.ebuild,v 1.1 2003/04/20 07:29:22 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.69-r1.ebuild,v 1.1 2003/05/05 16:38:20 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 inherit eutils 
