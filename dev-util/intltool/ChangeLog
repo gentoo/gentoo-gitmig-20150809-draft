@@ -1,11 +1,14 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.18 2003/04/09 02:46:32 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.19 2003/04/18 20:02:44 tuxus Exp $
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> intltool-0.25.ebuild :
   Marked ppc stable.
 
 *intltool-0.25 (07 Jan 2002)
+
+  18 Apr 2003; Jan Seiddel <tuxus@gentoo.org> intltool-0.25.ebuild:
+  Added mips to keywords.
 
   08 Apr 2003; Todd Sunderlin <todd@gentoo.org> intltool-0.25.ebuild:
   Marked stable for sparc
