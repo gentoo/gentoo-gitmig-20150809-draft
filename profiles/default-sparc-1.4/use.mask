@@ -70,3 +70,7 @@ solid
 sybase
 sybase-ct
 djbfft
+
+# Mono doesn't work on sparc
+# eradicator@gentoo.org
+mono

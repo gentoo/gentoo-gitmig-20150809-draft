@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.6 2004/10/17 20:12:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.7 2004/10/20 08:48:47 eradicator Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -58,3 +58,8 @@ cobalt
 # must use a SELinux profile
 selinux
 uclibc
+
+# Mono doesn't work on sparc
+# eradicator@gentoo.org
+mono
+
