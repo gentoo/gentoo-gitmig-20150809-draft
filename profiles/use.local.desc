@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.328 2004/05/01 20:44:26 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.329 2004/05/02 05:13:14 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -295,6 +295,7 @@ sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in 
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/busybox:uclibc - Compile with uclibc
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
+sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/parted:noreiserfs - Do not include reiserfs support
@@ -305,13 +306,14 @@ sys-apps/tinylogin:uclibc - Compile with uclibc
 sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-devel/gcc:hardened - improve PIE (position independent executables) and SSP (stack smashing protector) building of executables and libraries
-sys-devel/gcc-config:hardened - enable environment aware wrapper for comfortable PIE and SSP building
-sys-devel/gcc-config:debug - activate verbose commandline output of the wrapper in gcc-config
-sys-devel/hardened-gcc:debug - activate verbose commandline output of the default PIE SSP hardened-gcc wrapper
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Do not build gcj (java compiler included with gcc package)
+sys-devel/gcc:objc - Build support for the Objective C code language
+sys-devel/gcc-config:hardened - enable environment aware wrapper for comfortable PIE and SSP building
+sys-devel/gcc-config:debug - activate verbose commandline output of the wrapper in gcc-config
 sys-devel/gdb:objc - Build support for the Objective C code language
+sys-devel/hardened-gcc:debug - activate verbose commandline output of the default PIE SSP hardened-gcc wrapper
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
 sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
