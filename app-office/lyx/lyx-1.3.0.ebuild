@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.0.ebuild,v 1.3 2003/03/01 01:13:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.0.ebuild,v 1.4 2003/03/05 21:27:27 danarmak Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.gz"
@@ -52,15 +52,17 @@ src_compile() {
 	fi
 	[ -n "$DEBUG" ] && myconf="$myconf --enable-debug" || myconf="$myconf --disable-debug"
 
+	export WANT_AUTOCONF_2_5=1
+
+	# note from bug #15692: don't set CFLAGS/CXXFLAGS in the env, beacuse that overrides
+	# some necessary default values. rather, pass that to configure.
 	# from 1.2.x, should be rechecked:
 	# -O3 and higher breaks
-	export CXXFLAGS="${CXXFLAGS//-O[3..9]/-O2}"
-	export CFLAGS="${CFLAGS//-O[3..9]/-O2}"
+	flags="${CFLAGS//-O[3..9]/-O2}"
+	unset CFLAGS
+	unset CXXFLAGS
+	econf ${myconf} --enable-optimization="$flags"
 
-	export WANT_AUTOCONF_2_5=1
-	
-	#./autogen.sh
-	econf ${myconf}
 	emake || die "emake failed"
 
 }
