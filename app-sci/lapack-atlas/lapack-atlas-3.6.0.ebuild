@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.9 2004/07/04 22:19:03 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.10 2004/07/04 22:48:23 fmccor Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="ifc doc"
 
 DEPEND="virtual/libc

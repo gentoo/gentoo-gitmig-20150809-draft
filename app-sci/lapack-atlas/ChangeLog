@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/lapack-atlas
 # Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.10 2004/07/04 22:19:03 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.11 2004/07/04 22:48:23 fmccor Exp $
+
+  04 Jul 2004; Ferris McCormick <fmccor@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  Add (missed) ~sparc keyword.
 
   05 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> lapack-atlas-3.6.0.ebuild:
   Marked ~ppc (tested myself) and ~sparc (tested by fmccor).
