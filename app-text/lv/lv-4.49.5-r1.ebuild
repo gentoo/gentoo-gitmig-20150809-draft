@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.49.5-r1.ebuild,v 1.2 2003/05/18 15:06:47 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.49.5-r1.ebuild,v 1.3 2003/05/19 22:13:27 nakano Exp $
 MY_P=${PN}${PV//./}
 DESCRIPTION="Powerful Multilingual File Viewer"
 HOMEPAGE="http://www.ff.iij4u.or.jp/~nrt/lv/"
 SRC_URI="http://www.ff.iij4u.or.jp/~nrt/freeware/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ppc alpha"
 IUSE=""
 DEPEND="virtual/glibc
 	sys-libs/ncurses"
