@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r2.ebuild,v 1.5 2002/10/16 23:17:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2-r2.ebuild,v 1.6 2002/10/29 18:19:29 wwoods Exp $
 
 IUSE="X nls motif leim"
 
@@ -28,7 +28,7 @@ PROVIDE="virtual/emacs"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 ~alpha"
 
 src_compile() {
 	local myconf
