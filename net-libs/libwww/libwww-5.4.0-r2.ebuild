@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.2 2003/12/10 14:22:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.3 2003/12/12 07:01:24 usata Exp $
 
 IUSE="ssl mysql"
 
@@ -37,12 +37,6 @@ src_unpack() {
 }
 
 src_compile() {
-
-	# <sys-devel/autoconf-2.57a
-	WANT_AUTOCONF_2_5=1
-	# >=sys-devel/autoconf-2.58
-	WANT_AUTOCONF=2.5
-	export WANT_AUTOCONF_2_5 WANT_AUTOCONF
 
 	elibtoolize
 
