@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/stellarium
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.2 2003/11/18 08:53:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.3 2004/01/05 20:34:47 mr_bones_ Exp $
+
+*stellarium-0.5.2 (05 Jan 2004)
+
+  05 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  stellarium-0.5.2.ebuild:
+  version bump; added myself to the metadata.xml file
 
   18 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
   stellarium-0.5.1.ebuild:
