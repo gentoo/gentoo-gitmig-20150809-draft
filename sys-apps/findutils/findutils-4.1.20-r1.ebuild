@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.11 2004/03/22 03:48:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.12 2004/03/23 10:09:18 kumba Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc sparc hppa alpha ia64 ppc64"
+KEYWORDS="x86 amd64 ppc sparc hppa alpha ia64 ppc64 ~mips"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls build afs selinux"

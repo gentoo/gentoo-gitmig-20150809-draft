@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.31 2004/03/09 23:37:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.32 2004/03/23 10:09:18 kumba Exp $
+
+  23 Mar 2004; Joshua Kinard <kumba@gentoo.org> findutils-4.1.20-r1.ebuild:
+  Added ~mips to KEYWORDS.
 
   09 Mar 2004; <agriffis@gentoo.org> findutils-4.1.20-r1.ebuild:
   stable on alpha and ia64

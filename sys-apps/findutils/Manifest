@@ -1,4 +1,5 @@
-MD5 0192836cc3a7d7707c02040abb7b5266 findutils-4.1.20-r1.ebuild 2047
+MD5 32ea9662811d92a594511731af7c3e32 ChangeLog 4941
+MD5 466b885919e7071dba1935ca786d7ef5 findutils-4.1.20-r1.ebuild 2232
 MD5 277288683d68c89402c3fe07aa1cf9e4 findutils-4.1.20.ebuild 1750
 MD5 5e2fcb03f22648d2160269198a3e6cc8 findutils-4.1.7-r1.ebuild 1385
 MD5 731e7f22dc2ed28f40aab9be357cdd54 findutils-4.1.7-r2.ebuild 1539
@@ -6,7 +7,6 @@ MD5 eca2df8559fa6c4daaff8dd66d0cb792 findutils-4.1.7-r3.ebuild 1469
 MD5 43ddef2036c98b1a044111e9864e9fc6 findutils-4.1.7-r4.ebuild 1702
 MD5 40fe0b0d2e8f1faed8fd9c56fe4a8616 findutils-4.1.7-r5.ebuild 1874
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3617cbedd246aa49cde05d1422f2c226 ChangeLog 4840
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20 68
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
 MD5 d6a2c5cf6a7fd16e1470d1818b08e0ca files/digest-findutils-4.1.7-r1 67
