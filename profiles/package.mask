@@ -71,9 +71,6 @@ net-www/zope
 # blocke, March 7, 2002
 <=dev-lang/php-4.1.2-r1
 
-# Won't compile yet for me..<Verwilst, 10 feb 2002>
-=net-misc/tightvnc-1.2.2
-
 #per jnelson's request (30 Jan 2002, drobbins)
 =net-www/boa-0.94.12_pre3
 
