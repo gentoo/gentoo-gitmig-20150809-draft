@@ -1,12 +1,19 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.42 2003/02/28 14:58:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.43 2003/03/01 19:55:02 lostlogic Exp $
 
   TODO:
   * Update NTFS
   * Check EVMS version
   * Keep grabbing hardware stuff from xfs-sources
   * Look into the new IDE core for this set maybe
+  * Update iptables a few more times (just for good measure)
+  * Maybe:
+    Look into updating ACPI although CK recommends against it
+    RSBAC
+    Win4Lin
+    Optional RMAP
+    Re-add XFS
 
 *lolo-sources-2.4.20.2_pre3 (28 Feb 2003)
 
