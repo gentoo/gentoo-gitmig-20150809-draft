@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.3.ebuild,v 1.1 2003/11/18 20:57:43 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.3.ebuild,v 1.2 2003/12/08 07:58:08 luke-jr Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server & JUD,MUC,AIM,MSN,ICQ and Yahoo transports"
@@ -114,8 +114,7 @@ src_install() {
 	dodir /usr/sbin /etc/jabber /usr/lib/jabber /var/log/jabber
 	touch ${D}/var/log/jabber/error.log
 	touch ${D}/var/log/jabber/record.log
-	dodir /var/spool/jabber
-	touch ${D}/var/spool/jabber/.keep
+	keepdir /var/spool/jabber
 	dodir /var/run
 
 	cp ${S}/jabberd/jabberd ${D}/usr/sbin/
