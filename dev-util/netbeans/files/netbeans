@@ -1,6 +1,6 @@
 # Author: Dylan Carlson
 # May 2003
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/files/netbeans,v 1.1 2003/05/26 10:49:11 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/files/netbeans,v 1.2 2004/07/18 03:13:23 dragonheart Exp $
 
 JAVA_HOME=`/usr/bin/java-config --jdk-home`
 if [ -z "${JAVA_HOME}" ] ; then
