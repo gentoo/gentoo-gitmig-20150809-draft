@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/kpsk/kpsk-1.0.1.ebuild,v 1.1 2004/03/08 07:23:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/kpsk/kpsk-1.0.1.ebuild,v 1.2 2004/04/28 14:00:46 caleb Exp $
 
 DESCRIPTION="KPSK is a PSK31 digital radio communications application for use by licensed amateur radio operators"
 HOMEPAGE="http://kpsk.sourceforge.net/"
@@ -19,6 +19,7 @@ RDEPEND=""
 S=${WORKDIR}/${P}
 
 src_compile() {
+	addwrite $QTDIR/etc/settings
 	econf || die
 	emake || die
 }
