@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22.ebuild,v 1.5 2003/07/18 20:46:52 tester Exp $
-
-IUSE="ssl tcpd readline ipv6 gdbm sasl kerberos odbc perl slp berkdb"
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22.ebuild,v 1.6 2003/08/03 04:13:52 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="LDAP suite of application and development tools"
-SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
 HOMEPAGE="http://www.OpenLDAP.org/"
+SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
 
+LICENSE="OPENLDAP"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
-LICENSE="OPENLDAP"
+IUSE="ssl tcpd readline ipv6 gdbm sasl kerberos odbc perl slp berkdb"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-apps/sed-4
@@ -28,15 +27,8 @@ DEPEND=">=sys-libs/ncurses-5.1
 	perl? ( >=dev-lang/perl-5.6 )"
 
 pkg_preinst() {
-	if ! grep -q ^ldap: /etc/group
-	then
-		groupadd -g 439 ldap || die "problem adding group ldap"
-	fi
-	if ! grep -q ^ldap: /etc/passwd
-	then
-		useradd -u 439 -d /usr/lib/openldap -g ldap -s /dev/null ldap \
-			|| die "problem adding user ldap"
-	fi
+	enewgroup ldap 439
+	enewuser ldap 439 /dev/null /usr/lib/openldap ldap
 }
 
 src_unpack() {
@@ -49,7 +41,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
 
 	# enable debugging to syslog
@@ -58,39 +49,16 @@ src_compile() {
 	myconf="${myconf} --enable-ldap"
 	myconf="${myconf} --enable-slapd --enable-slurpd"
 
-	use crypt \
-		&& myconf="${myconf} --enable-crypt" \
-		|| myconf="${myconf} --disable-crypt"
-
-	use ipv6 \
-		&& myconf="${myconf} --enable-ipv6" \
-		|| myconf="${myconf} --disable-ipv6"
-
-	use sasl \
-		&& myconf="${myconf} --with-cyrus-sasl --enable-spasswd" \
-		|| myconf="${myconf} --without-cyrus-sasl --disable-spasswd"
-
-	use kerberos \
-		&& myconf="${myconf} --with-kerberos --enable-kpasswd" \
-		|| myconf="${myconf} --without-kerberos --disable-kpasswd"
-
-	use readline \
-		&& myconf="${myconf} --with-readline" \
-		|| myconf="${myconf} --without-readline"
-
-	use ssl \
-		&& myconf="${myconf} --with-tls" \
-		|| myconf="${myconf} --without-tls"
-
-	# slapd options
-
-	use tcpd \
-		&& myconf="${myconf} --enable-wrappers" \
-		|| myconf="${myconf} --disable-wrappers"
-
-	use odbc \
-		&& myconf="${myconf} --enable-sql" \
-		|| myconf="${myconf} --disable-sql"
+	myconf="${myconf} `use_enable crypt`"
+	myconf="${myconf} `use_enable ipv6`"
+	myconf="${myconf} `use_with sasl cyrus-sasl` `use_enable sasl spasswd`"
+	myconf="${myconf} `use_with kerberos` `use_enable kerberos kpasswd`"
+	myconf="${myconf} `use_with readline`"
+	myconf="${myconf} `use_with ssl tls`"
+	myconf="${myconf} `use_enable tcpd wrappers`"
+	myconf="${myconf} `use_enable odbc sql`"
+	myconf="${myconf} `use_enable perl`"
+	myconf="${myconf} `use_enable slp`"
 
 	use berkdb \
 		&& myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley"
@@ -99,14 +67,6 @@ src_compile() {
 	use gdbm && [ ! `use berkdb` ] \
 		&& myconf="${myconf} --enable-ldbm --disable-bdb --with-ldbm-api=gdbm" \
    		|| myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley"
-
-	use perl \
-		&& myconf="${myconf} --enable-perl" \
-		|| myconf="${myconf} --disable-perl"
-
-	use slp \
-		&& myconf="${myconf} --enable-slp" \
-		|| myconf="${myconf} --disable-slp"
 
 	myconf="${myconf} --enable-dynamic --enable-modules"
 	myconf="${myconf} --enable-rewrite --enable-rlookups"
