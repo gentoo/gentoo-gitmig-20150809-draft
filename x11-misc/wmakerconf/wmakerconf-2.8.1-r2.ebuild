@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.8.1-r2.ebuild,v 1.18 2004/07/06 20:25:31 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.8.1-r2.ebuild,v 1.19 2004/12/05 19:53:24 fafhrd Exp $
 
 IUSE="nls gnome imlib perl"
 
@@ -13,6 +13,7 @@ KEYWORDS="x86 sparc ~amd64"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	x11-wm/windowmaker
+	!=x11-wm/windowmaker-0.9*
 	x11-libs/libPropList
 	gnome? ( =gnome-base/gnome-libs-1.4* )
 	imlib? ( media-libs/imlib )"

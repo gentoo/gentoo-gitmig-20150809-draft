@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/wmakerconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.14 2004/11/14 20:47:06 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.15 2004/12/05 19:53:24 fafhrd Exp $
+
+  05 Dec 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  wmakerconf-2.8.1-r2.ebuild, wmakerconf-2.9.ebuild:
+  wmakerconf is not compatible with windowmaker-0.9X series; forgot to add
+  blockers for the older ebuilds.
 
   14 Nov 2004; Armando Di Cianno <fafhrd@gentoo.org> wmakerconf-2.9.2.ebuild:
   fixes related to bug 70552
