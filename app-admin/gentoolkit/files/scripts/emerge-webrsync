@@ -1,39 +1,41 @@
-#!/usr/bin/perl -w
+#! /bin/sh
 
-use strict;
+# Copyright(c) 2002 Gentoo Technologies, Inc.
+# Author: Karl Trygve Kalleberg
+# Rewritten from the old, Perl-based emerge-webrsync script
 
-my $tempRsyncPath = "/var/tmp/emerge-webrsync";
+. /etc/make.conf
 
-unless(-e $tempRsyncPath)
-{
-	mkdir($tempRsyncPath);
-}
+syncpath="/var/tmp/emerge-webrsync"
 
-chdir($tempRsyncPath);
+if [ ! -f $syncpath ] ; then
+	mkdir -p $syncpath
+fi
 
-my $mytime = time;
-my $flag = 1;
+cd $syncpath
 
-while($flag)
-{
-	my @date = localtime($mytime);
-	my $day = sprintf("%02d", $date[3]);
-	++$date[4];
-	my $month = sprintf("%02d", $date[4]);
-	$date[5] += 1900;
-	my $year = sprintf("%04d", $date[5]);
-	
-	my $file = "portage-".$year.$month.$day.".tar.bz2";
-	my $url = "http://www.ibiblio.org/gentoo/snapshots/$file"
-	print "Trying to get $url...\n";
-	$flag = system "wget $url";
-	if(!$flag)
-	{
-		system "tar xjf $file";
-		unlink($file);
-		system "rsync -av . /usr/";
-	}
-	else { $mytime -= 86400; }
-}
+found=0
 
-system "rm -rf portage";
+attempts=0
+
+while (( $attempts <  40 )) ; do
+
+	day=`date -d "-$attempts day" +"%d"`
+	month=`date -d "-$attempts day" +"%m"`
+	year=`date -d "-$attempts day" +"%Y"`
+
+	file="portage-${year}${month}${day}.tar.bz2"
+
+	for i in $GENTOO_MIRRORS ; do 
+		url="${i}/snapshots/$file"
+		echo $url
+		wget $url && ( 
+			tar xjf $file
+			rm $file
+			rsync -av . /usr/
+			exit 0 )
+	done
+	attempts=$[attempts+1]
+done
+
+rm -rf portage
