@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-light
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.5 2004/01/14 15:49:26 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.6 2004/02/05 23:35:05 spider Exp $
+
+*gnome-light-2.4.2 (06 Feb 2004)
+
+  06 Feb 2004; <spider@gentoo.org> gnome-light-2.4.2.ebuild:
+  Updated for gnome 2.4.2,  Added ~ppc and ~amd64 in a blatant manner.
 
   14 Jan 2004; Mike Gardiner <obz@gentoo.org> gnome-light-2.4.1.ebuild:
   Marked the slimming GNOME-light, stable on x86 (now with a quarter less fat!)
