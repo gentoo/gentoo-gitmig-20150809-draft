@@ -27,7 +27,7 @@
 <=sys-kernel/linux-headers-2.4.23
 >=sys-apps/sysklogd-1.4.1
 
->=x11-base/xfree-4.2.1
+virtual/x11
 <sys-apps/shadow-5
 >=sys-apps/texinfo-4.2-r1
 >=sys-devel/automake-1.6.1-r5

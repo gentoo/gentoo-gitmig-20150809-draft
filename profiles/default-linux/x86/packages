@@ -19,4 +19,4 @@
 >=sys-devel/binutils-2.13.90.0.4
 >=sys-devel/libtool-1.4.1-r4
 <sys-apps/shadow-5
->=x11-base/xfree-4.1.0-r2
+virtual/x11

@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.1/packages,v 1.1 2004/04/09 19:27:13 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.1/packages,v 1.2 2004/04/16 05:13:11 vapier Exp $
 
 >dev-lang/gpc-2.1
 
@@ -30,4 +30,4 @@
 *>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb      
 
->=x11-base/xfree-4.1.0-r12
+virtual/x11

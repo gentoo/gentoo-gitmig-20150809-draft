@@ -23,4 +23,4 @@
 >=sys-devel/libtool-1.4.1-r9
 >=sys-libs/ncurses-5.2.20020112a
 >=sys-libs/pam-0.75-r9
->=x11-base/xfree-4.2.1
+virtual/x11
