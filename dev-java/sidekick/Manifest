@@ -1,5 +1,5 @@
-MD5 e678790b492b55babb512d9b6a91d17e ChangeLog 475
+MD5 7c7a7ffc07a5c226ff3d44a96627353e sidekick-0.3.ebuild 1053
+MD5 230a06f61e13da22ca13095c9eabaa43 ChangeLog 576
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 41582326e4066add17f413ac5daa662f sidekick-0.3.ebuild 1021
 MD5 047efe6e4b69596b77e37d190e0adbaa files/build.xml.patch 314
 MD5 764c2030037576f85d86d4ed38c8dd68 files/digest-sidekick-0.3 60
