@@ -1,12 +1,22 @@
-MD5 bc21c4e19cfebbf65a452499f0943b61 ChangeLog 3466
-MD5 5c223c6896440b679a2ab2fe0c27df87 metadata.xml 322
-MD5 db1af7e30a1134fbda178138a025cb25 yahoo-transport-2.3.2.ebuild 1156
-MD5 f287e252f1486a96e98d2a75aae54def yahoo-transport-2.3.0-r3.ebuild 1679
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa2d87ea2349eac23358bea9e9df6589 yahoo-transport-2.3.1-r1.ebuild 1300
-MD5 31c9597366163e1bee5dc028112f312c files/README.Gentoo 1525
-MD5 f3a51b0d70597ca89b0853a1b7500f75 files/digest-yahoo-transport-2.3.2 73
-MD5 850986afafb4e6fdbc0643e72d9f22b7 files/yahoo-makefile.patch 507
+MD5 911f2f410704369dfe8886fd0c6ba0a2 yahoo-transport-2.3.2.ebuild 1161
+MD5 f287e252f1486a96e98d2a75aae54def yahoo-transport-2.3.0-r3.ebuild 1679
+MD5 2ccca19fc92c2b737ea6054b83d3a8e1 ChangeLog 3558
+MD5 5c223c6896440b679a2ab2fe0c27df87 metadata.xml 322
+MD5 0675393b45e7b7c85feb696d6974fc96 files/digest-yahoo-transport-2.3.0-r3 217
+MD5 a371a226764fb60422b9ded9af8e87b6 files/digest-yahoo-transport-2.3.1-r1 145
 MD5 b43507d37be4f3898900c6ceeada90f2 files/yahoo-transport.init 606
 MD5 08ceef62612049225eff1b23061f72b4 files/yahootrans.xml 791
-MD5 a371a226764fb60422b9ded9af8e87b6 files/digest-yahoo-transport-2.3.1-r1 145
-MD5 0675393b45e7b7c85feb696d6974fc96 files/digest-yahoo-transport-2.3.0-r3 217
+MD5 31c9597366163e1bee5dc028112f312c files/README.Gentoo 1525
+MD5 850986afafb4e6fdbc0643e72d9f22b7 files/yahoo-makefile.patch 507
+MD5 f3a51b0d70597ca89b0853a1b7500f75 files/digest-yahoo-transport-2.3.2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBf2zXCHk4+ZoBpvsRAjWFAJ4o4zNFiJYJM94qWgd6wkppcw+C9QCggXPl
+gIQxOrfevwrIBiqhjYuSH64=
+=EfuV
+-----END PGP SIGNATURE-----
