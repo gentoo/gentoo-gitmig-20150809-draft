@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.2 2003/03/26 00:57:49 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.3 2003/04/12 03:26:08 vladimir Exp $
 
 *perlmagick-5.5.5.3 (17 Mar 2003)
+
+  11 Apr 2003; Graham Forest <vladimir@gentoo.org> perlmagick-5.5.5.3.ebuild:
+  Changed .bz2 to .gz to match imagemagick
 
   25 Mar 2003; Graham Forest <vladimir@gentoo.org> perlmagick-5.5.5.3.ebuild:
   Set stable on ppc and x86
