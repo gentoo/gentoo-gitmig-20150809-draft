@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.25.ebuild,v 1.5 2004/12/20 13:57:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.26.ebuild,v 1.1 2004/12/20 13:57:11 ka0ttic Exp $
 
+inherit eutils
 
 DESCRIPTION="Brings up/down ethernet ports automatically with cable detection"
 HOMEPAGE="http://0pointer.de/lennart/projects/ifplugd/"
@@ -9,11 +10,10 @@ SRC_URI="http://0pointer.de/lennart/projects/ifplugd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc"
 
-DEPEND=">=sys-apps/sed-4
-	dev-util/pkgconfig
+DEPEND="dev-util/pkgconfig
 	doc? ( net-www/lynx )"
 RDEPEND=">=dev-libs/libdaemon-0.5"
 
@@ -25,11 +25,7 @@ CONFFILE=${FILESDIR}/gentoo-ifplugd-conf-v3
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# This moves the default location for the script that handles
-	# calling the distro network scripts to /usr/sbin. The reason
-	# is that the user very probably shouldn't mess with it.
-	sed -i 's:SYSCONFDIR"/ifplugd/:"/usr/sbin/:' src/ifplugd.c \
-		|| die "sed failed"
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {

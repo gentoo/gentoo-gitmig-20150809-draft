@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.12 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.13 2004/12/20 13:57:11 ka0ttic Exp $
+
+*ifplugd-0.26 (20 Dec 2004)
+
+  20 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  -files/gentoo-ifplugd-init-v2, +files/ifplugd-0.26-gentoo.diff,
+  ifplugd-0.13-r1.ebuild, -ifplugd-0.15.ebuild, -ifplugd-0.20.ebuild,
+  -ifplugd-0.24.ebuild, ifplugd-0.25.ebuild, +ifplugd-0.26.ebuild:
+  Version bump; 0.25 stable on x86. Major cleanup and uncrustification; old
+  ebuilds/filesdir cruft removed. Doxygen removed from deps as it was never
+  required in the first place. Also updated metadata.xml.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   ifplugd-0.20.ebuild, ifplugd-0.24.ebuild, ifplugd-0.25.ebuild:

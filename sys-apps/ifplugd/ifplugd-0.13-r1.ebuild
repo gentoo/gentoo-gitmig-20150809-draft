@@ -1,40 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.13-r1.ebuild,v 1.5 2004/06/24 22:11:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.13-r1.ebuild,v 1.6 2004/12/20 13:57:11 ka0ttic Exp $
 
 DESCRIPTION="Brings up/down ethernet ports automatically with cable detection"
-HOMEPAGE="http://www.stud.uni-hamburg.de/users/lennart/projects/ifplugd"
-SRC_URI="${HOMEPAGE}/${P}.tar.gz"
+HOMEPAGE="http://0pointer.de/lennart/projects/ifplugd/"
+SRC_URI="http://0pointer.de/lennart/projects/ifplugd/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
-DEPEND=""
-#RDEPEND=""
 
-S=${WORKDIR}/ifplugd
+DEPEND=">=sys-apps/sed-4"
+
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
-	perl -pi.orig -e 's:^CFLAGS=.*$:CFLAGS='"${CFLAGS}:" Makefile
-	perl -pi.orig -e 's:/etc/ifplugd/ifplugd.action:/usr/sbin/ifplugd.action:' ifplugd.c
-}
-
-src_compile() {
-	emake
+	sed -i -e "s|\(^CFLAGS=\).*$|\1${CFLAGS}|" Makefile \
+		-e 's:/etc/ifplugd/ifplugd.action:/usr/sbin/ifplugd.action:' ifplugd.c \
+		|| die "sed failed"
 }
 
 src_install() {
 	dosbin ifplugd ${FILESDIR}/ifplugd.action ifstatus
 	doman ifplugd.8 ifstatus.8
 
-	dodir /etc/conf.d
-	mv ifplugd.conf ${D}/etc/conf.d/ifplugd
-
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/ifplugd
+	insinto /etc/conf.d ; newins ifplugd.conf ifplugd
+	exeinto /etc/init.d ; doexe ${FILESDIR}/ifplugd
 
 	dodoc README SUPPORTED_DRIVERS FAQ NEWS
 }
