@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmaiload
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.2 2003/02/12 09:42:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.3 2003/06/12 22:28:44 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> wmmaiload-0.6.0.ebuild:
+  add Header
 
 *wmmaiload-0.6.0 (29 Oct 2002)
 

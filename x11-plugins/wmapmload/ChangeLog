@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmapmload
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapmload/ChangeLog,v 1.2 2003/02/12 09:39:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapmload/ChangeLog,v 1.3 2003/06/12 22:26:01 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> wmapmload-0.3.0.ebuild:
+  add Header
 
 *wmapmload-0.3.0 (29 Oct 2002)
 
