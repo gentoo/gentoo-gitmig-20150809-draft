@@ -10,7 +10,7 @@ HOMEPAGE="www.nomachine.com"
 IUSE=""
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips"
+KEYWORDS="x86 -ppc -sparc -alpha -mips"
 RESTRICT="nostrip"
 
 MY_PV="${PV}-7"
@@ -25,7 +25,8 @@ DEPEND=">=media-libs/jpeg-6b-r3
 	>=dev-libs/expat-1.95.6-r1
 	>=media-libs/fontconfig-2.2.0-r2
 	>=media-libs/freetype-2.1.4
-	>=media-libs/jpeg-6b-r3"
+	>=media-libs/jpeg-6b-r3
+	>=x11-libs/qt-3.3.2"
 
 S="${WORKDIR}"
 
