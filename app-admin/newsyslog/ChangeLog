@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/newsyslog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.14 2004/11/03 16:30:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.15 2004/11/17 16:29:57 vapier Exp $
+
+  17 Nov 2004; Mike Frysinger <vapier@gentoo.org> -newsyslog-1.0.103.ebuild,
+  newsyslog-1.1.ebuild:
+  Use make install DESTDIR.
 
   03 Nov 2004; Markus Rothe <corsair@gentoo.org> newsyslog-1.1.ebuild:
   Marked ~ppc64; bug #69502

@@ -1,7 +1,15 @@
-MD5 946abb3c768ea7bf56765bd1c376fbf8 ChangeLog 1736
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad19e50db28a17b9eec9beb625941ee0 ChangeLog 1865
+MD5 b566704319376891e05e51876b4977c6 newsyslog-1.1.ebuild 1158
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 629cda7e96dc9fba91960d3bcda616c6 newsyslog-1.0.103.ebuild 1131
-MD5 f888adf63a00ac2883013509e2fc5332 newsyslog-1.1.ebuild 1133
-MD5 481746f23b0ca7fd8a696c0f7197e611 files/digest-newsyslog-1.0.103 69
 MD5 ebd330386233c527897b821b2a2c524c files/digest-newsyslog-1.1 65
 MD5 3ead41144e79173c79f70ac7f83d4c39 files/newsyslog-html.patch 589
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBm3zcHTu7gpaalycRAgM5AKDvnXn+l9RaZ4tdEpwLDUt0O/kwEwCgiADj
+O+MswmHBFFyCGdAJB0dZb3w=
+=s+qM
+-----END PGP SIGNATURE-----
