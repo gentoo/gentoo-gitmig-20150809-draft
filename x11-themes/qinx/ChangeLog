@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qinx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.22 2005/01/28 18:33:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.23 2005/03/21 23:46:09 luckyduck Exp $
+
+  22 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> qinx-1.2.ebuild:
+  added ~amd64 to KEYWORDS, fixes #85121
 
   20 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> -qinx-0.6.ebuild,
   -qinx-1.0.ebuild, -qinx-1.1.ebuild:
