@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.8 2002/10/05 05:39:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.9 2002/10/21 13:09:35 phoenix Exp $
 
 IUSE="ssl esd gnome xmms ncurses ipv6 gtk"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 inherit flag-o-matic
-replace-flags -O3 -O2
+replace-flags -O[3-9] -O2
 
 DEPEND=">=sys-libs/ncurses-5.1 
 	ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -28,7 +28,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 		>=media-libs/imlib-1.9.10-r1 )"
 
 src_compile() {
-
 	local myconf
 
 	if [ "${DEBUG}" ]
