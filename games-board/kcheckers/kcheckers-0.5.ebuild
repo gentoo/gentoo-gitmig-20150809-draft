@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.5.ebuild,v 1.1 2004/12/07 22:26:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/kcheckers-0.5.ebuild,v 1.2 2004/12/08 04:04:41 mr_bones_ Exp $
 
-inherit games
+inherit kde games
 
 DESCRIPTION="Qt version of the classic boardgame checkers."
 HOMEPAGE="http://kcheckers.osdn.org.ua/"
@@ -17,6 +17,7 @@ DEPEND="virtual/x11
 	>=x11-libs/qt-3.3.2"
 
 src_compile() {
+	kde_src_compile nothing
 	qmake
 	emake || die "emake failed"
 }
