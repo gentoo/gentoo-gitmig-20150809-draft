@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.9 2004/06/24 23:03:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.10 2004/07/02 08:44:40 eradicator Exp $
 
 inherit gnuconfig libtool eutils db
 
@@ -15,7 +15,7 @@ SLOT="3"
 KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm ~hppa ia64 ppc64 s390"
 IUSE="doc java"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	=sys-libs/db-1.85*
 	sys-devel/libtool

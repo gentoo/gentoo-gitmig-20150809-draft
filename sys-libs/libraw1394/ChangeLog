@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.14 2004/06/24 23:06:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.15 2004/07/02 08:47:18 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libraw1394-0.9.0.ebuild:
+  virtual/glibc -> virtual/libc
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> libraw1394-0.9.0.ebuild:
   stable on amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r2.ebuild,v 1.2 2004/06/24 23:07:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r2.ebuild,v 1.3 2004/07/02 08:49:47 eradicator Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -13,7 +13,7 @@ SLOT="5"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="build bootstrap debug uclibc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 # This doesn't fix the problem. bootstrap builds ncurses again with
 # normal USE flags while bootstrap is unset, which apparently causes
 # things to break -- avenj  2 Apr 04

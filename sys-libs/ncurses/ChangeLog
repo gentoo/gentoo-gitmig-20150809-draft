@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.68 2004/06/28 02:07:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.69 2004/07/02 08:49:47 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ncurses-5.3-r5.ebuild, ncurses-5.4-r1.ebuild, ncurses-5.4-r2.ebuild:
+  virtual/glibc -> virtual/libc
 
   27 Jun 2004; Aron Griffis <agriffis@gentoo.org> ncurses-5.3-r5.ebuild:
   QA - fix use invocation

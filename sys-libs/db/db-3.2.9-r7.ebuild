@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.13 2004/06/24 23:03:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.14 2004/07/02 08:44:40 eradicator Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ LICENSE="DB"
 # in the tree.
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	=sys-libs/db-1.85-r1
 	sys-devel/libtool

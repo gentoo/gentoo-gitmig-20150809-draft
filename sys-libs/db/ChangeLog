@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.94 2004/06/25 16:18:30 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.95 2004/07/02 08:44:40 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> db-1.85-r1.ebuild,
+  db-3.2.9-r10.ebuild, db-3.2.9-r7.ebuild, db-3.2.9-r9.ebuild,
+  db-3.3.11.ebuild:
+  virtual/glibc -> virtual/libc
 
   25 Jun 2004; <solar@gentoo.org> db-4.1.25_p1-r4.ebuild:
   uclibc update

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.5 2004/06/25 03:09:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.6 2004/07/02 08:46:01 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,11 +16,11 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64"
 IUSE="python pic static"
 
 #patch is in recent 2.2 kernels so it works there
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/os-headers
 	python? ( >=virtual/python-2.2.1 >=dev-lang/swig-1.3.10 )"
 RDEPEND="python? ( >=virtual/python-2.2.1 )
-	virtual/glibc"
+	virtual/libc"
 
 src_unpack() {
 	unpack ${A}

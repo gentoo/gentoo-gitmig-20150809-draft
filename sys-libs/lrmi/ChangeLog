@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/lrmi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.6 2004/06/24 23:07:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.7 2004/07/02 08:49:04 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lrmi-0.6.ebuild,
+  lrmi-0.7.ebuild, lrmi-0.8.ebuild:
+  virtual/glibc -> virtual/libc
 
 *lrmi-0.8 (15 Jun 2004)
 

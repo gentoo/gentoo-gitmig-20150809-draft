@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pwdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.29 2004/06/24 23:09:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.30 2004/07/02 08:50:20 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> pwdb-0.61-r4.ebuild,
+  pwdb-0.62.ebuild:
+  virtual/glibc -> virtual/libc
 
   09 Mar 2004; <agriffis@gentoo.org> pwdb-0.62.ebuild:
   stable on alpha and ia64

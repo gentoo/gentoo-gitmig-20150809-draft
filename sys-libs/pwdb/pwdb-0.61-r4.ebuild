@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.22 2004/06/24 23:09:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.23 2004/07/02 08:50:20 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ LICENSE="BSD | GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	selinux? ( sys-libs/libselinux )"
 
 src_unpack () {

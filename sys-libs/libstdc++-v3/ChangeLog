@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.7 2004/06/24 23:06:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.8 2004/07/02 08:48:15 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libstdc++-v3-3.3.3-r1.ebuild:
+  virtual/glibc -> virtual/libc
 
   10 Jun 2004; Travis Tilley <lv@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
   stable on amd64

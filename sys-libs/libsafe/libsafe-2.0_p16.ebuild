@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16.ebuild,v 1.2 2004/06/24 23:06:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16.ebuild,v 1.3 2004/07/02 08:47:38 eradicator Exp $
 
 MY_P="${P/_p/-}"
 DESCRIPTION="Protection against buffer overflow vulnerabilities"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="prelude"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	prelude? ( dev-libs/libprelude )"
 
 S=${WORKDIR}/${MY_P}

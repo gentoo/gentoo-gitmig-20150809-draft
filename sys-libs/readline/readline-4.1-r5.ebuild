@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.1-r5.ebuild,v 1.8 2004/06/24 23:09:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.1-r5.ebuild,v 1.9 2004/07/02 08:50:47 eradicator Exp $
 
 inherit eutils
 
@@ -13,10 +13,10 @@ KEYWORDS="x86 ppc sparc "
 SLOT="0"
 HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r2"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 

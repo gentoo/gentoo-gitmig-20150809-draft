@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-mysql/libnss-mysql-1.2.ebuild,v 1.3 2004/06/24 23:05:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-mysql/libnss-mysql-1.2.ebuild,v 1.4 2004/07/02 08:47:03 eradicator Exp $
 
 DESCRIPTION="NSS MySQL Library."
 HOMEPAGE="http://libnss-mysql.sourceforge.net/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-db/mysql-3.2
 	!sys-libs/nss-mysql"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.30 2004/06/24 23:09:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.31 2004/07/02 08:50:47 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  readline-4.1-r5.ebuild, readline-4.2a-r1.ebuild, readline-4.2a-r2.ebuild:
+  virtual/glibc -> virtual/libc
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> readline-4.3-r5.ebuild:
   Stable on alpha.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r2.ebuild,v 1.7 2004/06/24 23:09:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r2.ebuild,v 1.8 2004/07/02 08:50:47 eradicator Exp $
 
 inherit eutils gnuconfig
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc alpha mips"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r2
 	>=app-shells/bash-2.05a-r3
 	>=sys-apps/sed-4.0.5"
