@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a958a5a91f453de289e02e4bfbcc6f2a ChangeLog 1444
-MD5 9f5280ebe8f84d8f8ef26125fd2285b0 kover-2.8.7.ebuild 443
-MD5 48dd6b5d17b5bcd3531605babf7cdb00 kover-2.9.3.ebuild 525
-MD5 10b6a3b6fad438d7ff6b0bf0e220a116 kover-2.9.5.ebuild 642
+MD5 7d6f97c6579a952332e6b4e7dcb51bce kover-2.9.3.ebuild 530
+MD5 f8fd471dd5ad1061d68be266a35c745a kover-2.8.7.ebuild 448
+MD5 177aeec8044e17fa6d20884834a218bf kover-2.9.5.ebuild 650
+MD5 aaaae19c1207f07ffada5a0245c1fd87 ChangeLog 1583
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 eb73229fac3e9bcb51e0f89e06add9eb files/digest-kover-2.8.7 63
 MD5 c156b0ff95582eff8775a0dc67f1c311 files/digest-kover-2.9.3 63
 MD5 10e9fc1fc3ae42f24e217df8cc90725c files/digest-kover-2.9.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3zlRHTu7gpaalycRAkVlAKDhDLWTGFn3sjj1onmhmiVo0XsXdQCfavHQ
-bgjQVf7nLNzjqWoZmFnsNtI=
-=9tI9
------END PGP SIGNATURE-----
