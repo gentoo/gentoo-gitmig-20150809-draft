@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.5.4.ebuild,v 1.2 2004/08/14 17:26:56 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.5.4.ebuild,v 1.3 2004/08/14 17:40:26 pythonhead Exp $
 
 inherit python
 
@@ -29,6 +29,7 @@ src_install() {
 	DHOME="${D}/usr/lib/python${PYVER}/site-packages/opendict"
 	dodir /usr/share/locale/lt/LC_MESSAGES
 	dodir /usr/share/applications
+	dodir /usr/share/opendict
 	mkdir -p ${DHOME}
 	cp -r lib/* ${DHOME}
 	cp -r pixmaps/ ${DHOME}
@@ -41,5 +42,12 @@ src_install() {
 
 	cp misc/opendict.desktop ${D}/usr/share/applications/
 	dodoc BUGS ChangeLog README.txt TODO.txt doc/OpenDict_plugin_dev.txt
+}
+
+pkg_postinst() {
+	einfo "You can download plugins from:"
+	einfo "http://kebil.ghost.lt/OpenDict_plugins.html"
+	einfo "Put them in /usr/share/${PN} for system-wide use or"
+	einfo "~/.opendict/plugins/"
 }
 
