@@ -133,4 +133,5 @@
 *sys-libs/zlib
 *net-misc/openssh
 *sys-fs/devfsd
+*sys-devel/sparc32
 <=app-portage/portagemaster-0.1.5
