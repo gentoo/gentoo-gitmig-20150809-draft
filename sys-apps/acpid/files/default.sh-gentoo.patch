@@ -1,0 +1,27 @@
+--- acpi/default.sh	2003-07-27 19:06:47.000000000 +0200
++++ acpi-gentoo/default.sh	2003-07-27 19:11:45.000000000 +0200
+@@ -3,17 +3,20 @@
+ 
+ set $*
+ 
+-case "$1" in
++group=${1/\/*/}
++action=${1/*\//}
++
++case "$group" in
+ 	button)
+-		case "$2" in
++		case "$action" in
+ 			power)	/sbin/init 0
+ 				;;
+-			*)	logger "ACPI action $2 is not defined"
++			*)	logger "ACPI action $action is not defined"
+ 				;;
+ 		esac
+ 		;;
+ 
+ 	*)
+-		logger "ACPI group $1 / action $2 is not defined"
++		logger "ACPI group $group / action $action is not defined"
+ 		;;
+ esac
