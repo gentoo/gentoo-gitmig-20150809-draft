@@ -10,7 +10,7 @@ diff -u -r1.193 -r1.198
  			if (data[pos] == 0xc0 && data[pos + 1] == 0x80)
  				break;
 +			if (x >= sizeof(key)-1) {
-+				x++;
++				x++; pos++;
 +				continue;
 +			}
  			key[x++] = data[pos++];
