@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r4.ebuild,v 1.3 2002/04/12 05:15:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r4.ebuild,v 1.4 2002/05/01 10:55:18 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
@@ -80,6 +80,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO 
 	
+	mkdir -p ${D}/usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
 	donewins gnomexmms/gnomexmms.xpm xmms.xpm
 	doins xmms/xmms_logo.xpm
