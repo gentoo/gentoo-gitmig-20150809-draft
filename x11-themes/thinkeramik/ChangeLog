@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/thinkeramik
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.22 2004/08/30 19:44:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.23 2005/01/01 02:52:19 weeve Exp $
+
+  31 Dec 2004; Jason Wever <weeve@gentoo.org> thinkeramik-3.2.1.ebuild:
+  Added ~sparc keyword.
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   thinkeramik-3.2.1.ebuild:
