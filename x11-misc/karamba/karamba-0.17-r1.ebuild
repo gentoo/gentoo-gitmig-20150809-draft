@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17-r1.ebuild,v 1.5 2003/10/30 10:01:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17-r1.ebuild,v 1.6 2004/02/04 13:23:36 aliz Exp $
 
 inherit kde-base
 
@@ -11,10 +11,16 @@ HOMEPAGE="http://www.efd.lth.se/~d98hk/karamba/"
 SRC_URI="http://www.efd.lth.se/~d98hk/karamba/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 newdepend ">=kde-base/kdelibs-3.1
 	>=sys-apps/portage-2.0.26"
+
+src_compile() {
+        local myconf="--enable-libsuffix="
+
+        kde_src_compile all
+}
 
 src_install () {
 	einstall
