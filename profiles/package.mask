@@ -23,7 +23,6 @@
 
 # <foser@gentoo.org> (30 Jan 2003)
 # GNOME 2.2 RC2 Mask
-# !!! DO NOT UNMASK, COMMIT IS NOT YET COMPLETE !!!
 >=gnome-base/gnome-2.2_rc2
 >=gnome-base/gnome-desktop-2.2.0
 >=gnome-base/ORBit2-2.5.1
@@ -117,12 +116,6 @@ dev-libs/libtomcrypt
 # new alpha release.  do not use tmpfs by default for dep cache, and
 # move dep cache dir to /var/state/init.d.  also some raid updates.
 >=sys-apps/baselayout-1.8.6.0
-
-# <azarah@gentoo.org> (27 Dec 2002)
-# Breaks things for now .. wait till new versions
-# of monkey-media, etc are out.
->=media-libs/gstreamer-0.5.0
->=media-libs/gst-plugins-0.5.0
 
 # <jhhudso@gentoo.org> (24 Dec 2002)
 # Testing xemacs without sandbox disable, since --pdump has been added
