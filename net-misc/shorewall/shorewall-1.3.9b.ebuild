@@ -15,10 +15,6 @@ DEPEND="virtual/glibc
 	sys-apps/iptables
 	sys-apps/iproute"
 
-src_compile() {
-	echo "nothing to compile!"
-}
-
 src_install () {
 	mkdir -p ${D}/etc/init.d
 	mkdir -p ${D}/var/state
