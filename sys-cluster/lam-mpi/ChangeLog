@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.14 2004/04/24 20:03:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.15 2004/06/16 05:14:45 mr_bones_ Exp $
+
+  15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  lam-mpi-6.5.6-r1.ebuild, lam-mpi-6.5.9-r1.ebuild, lam-mpi-7.0.2.ebuild,
+  lam-mpi-7.0.3.ebuild, lam-mpi-7.0.4.ebuild:
+  PROVIDE is for virtuals
 
   24 Apr 2004; Tom Gall <tgall@gentoo.org> lam-mpi-7.0.4.ebuild:
   Marked stable for ppc64

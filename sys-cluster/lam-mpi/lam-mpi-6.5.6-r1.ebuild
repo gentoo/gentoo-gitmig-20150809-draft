@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.6-r1.ebuild,v 1.4 2004/01/07 15:29:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.6-r1.ebuild,v 1.5 2004/06/16 05:14:45 mr_bones_ Exp $
 
 Name="lam"
 S=${WORKDIR}/${Name}-${PV}
@@ -17,7 +17,6 @@ SLOT="6"
 KEYWORDS="x86 sparc "
 LICENSE="as-is"
 
-PROVIDE="dev-libs/lam-mpi"
 
 src_unpack() {
 	unpack ${A}
