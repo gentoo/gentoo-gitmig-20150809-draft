@@ -1,12 +1,15 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.59 2003/02/23 00:01:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.60 2003/03/01 00:36:05 rac Exp $
 
-  23 Feb 2003; Guy Martin <gmsoft@gentoo.org> perl-5.8.0-r9.ebuild :
-  Added -fPIC to CFLAGS on hppa. It's needed by apps linking to some perl libs.
+*perl-5.8.0-r10 (28 Feb 2003)
 
-  18 Feb 2003; Zach Welch <zwelch@gentoo.org> perl-5.8.0-r9.ebuild :
-  Added arm to keywords.
+  28 Feb 2003; <rac@gentoo.org> perl-5.8.0-r10.ebuild:
+  Ensure that libpthread is linked against by perl, so that runtime
+  signal handling works correctly (bug #14380).
+  
+  Patch perldoc to not abort when it attempts to search nonexistent
+  directories (bug #16589).
 
 *perl-5.6.1-r11 (14 Feb 2003)
 
@@ -20,6 +23,12 @@
   Added hppa to keywords.
 
 *perl-5.8.0-r9 (15 Jan 2003)
+
+  23 Feb 2003; Guy Martin <gmsoft@gentoo.org> perl-5.8.0-r9.ebuild :
+  Added -fPIC to CFLAGS on hppa. It's needed by apps linking to some perl libs.
+
+  18 Feb 2003; Zach Welch <zwelch@gentoo.org> perl-5.8.0-r9.ebuild :
+  Added arm to keywords.
 
   10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
 
