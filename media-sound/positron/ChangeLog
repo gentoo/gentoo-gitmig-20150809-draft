@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/positron
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.4 2003/07/30 12:59:27 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.5 2003/08/01 20:14:09 tberman Exp $
+
+  01 Aug 2003; Todd Berman <tberman@gentoo.org> positron-1.0.ebuild:
+  marking stable on ppc per upstream request.
 
   30 Jul 2003; Todd Berman <tberman@gentoo.org> positron-1.0.ebuild,
   positron-1.0_beta1.ebuild, positron-1.0_beta2.ebuild:
