@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.19.ebuild,v 1.1 2004/10/22 12:22:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.19.ebuild,v 1.2 2004/10/22 12:27:08 foser Exp $
 
 inherit gnome2 eutils
 
@@ -47,7 +47,7 @@ use gstreamer && G2CONF="${G2CONF} --enable-gstreamer"
 #	&& G2CONF="${G2CONF} --disable-gtk" \
 #	|| G2CONF="${G2CONF} --enable-gtk"
 
-G2CONF="${G2CONF} $(use_enable lirc)"
+G2CONF="${G2CONF} $(use_enable lirc) --disable-mozilla"
 
 src_unpack() {
 
