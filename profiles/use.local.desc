@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.727 2004/11/11 04:38:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.728 2004/11/11 06:27:46 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -53,6 +53,7 @@ app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/uade:beepmp - Support for Beep Media Player
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
+app-emulation/wine:glut - Enable glut support
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/anthy:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
@@ -520,8 +521,8 @@ net-misc/ices:faad - Enables support for MP4 (AAC) transcoding using libfaad
 net-misc/knemo:wifi - wireless support
 net-misc/neon:expat - Use the expat xml library instead of libxml2
 net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
-net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
+net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support.
 net-misc/openssh:sftplogging - Enables sftplogging patch
