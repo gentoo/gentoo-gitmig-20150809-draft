@@ -1,5 +1,7 @@
 MD5 b68b67ad7747dbe78f2b19ee3381117e ChangeLog 666
 MD5 3299db093a31aac5109d5f665b35f8cf HTML-SimpleParse-0.10.ebuild 606
 MD5 6ff3e0d976fb488e3e268644e8d7f9a7 HTML-SimpleParse-0.11.ebuild 592
+MD5 d12b568013466e30f1bddcb5ccad37d6 HTML-SimpleParse-0.12.ebuild 473
 MD5 4deae54287f2ec5d5a3cafc963a033e0 files/digest-HTML-SimpleParse-0.10 71
 MD5 14cfe6b2a2ae46d3f2d305c05d5ff78d files/digest-HTML-SimpleParse-0.11 71
+MD5 a1ad75793b799af70a31476ce4c536dd files/digest-HTML-SimpleParse-0.12 71
