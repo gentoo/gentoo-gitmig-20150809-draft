@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.2_pre1.ebuild,v 1.1 2004/06/23 21:49:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.2_pre1.ebuild,v 1.2 2004/06/23 21:53:19 squinky86 Exp $
 
 inherit kde
 need-kde 3
@@ -8,7 +8,7 @@ need-kde 3
 IUSE="curl"
 DESCRIPTION="BibleTime KDE Bible study application using the SWORD library."
 HOMEPAGE="http://bibletime.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~squinky86/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # temporary ebuild to fix #48523
