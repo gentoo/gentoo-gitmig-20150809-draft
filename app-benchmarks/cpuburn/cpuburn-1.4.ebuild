@@ -1,27 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/cpuburn/cpuburn-1.4.ebuild,v 1.7 2004/06/24 21:27:32 agriffis Exp $
-
-DESCRIPTION="This program is designed to heavily load CPU chips [testing purposes]"
-HOMEPAGE="http://users.ev1.net/~redelm/"
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/cpuburn/cpuburn-1.4.ebuild,v 1.8 2004/09/17 04:58:29 vapier Exp $
 
 MY_P="${PV/./_}"
-SRC_URI="http://users.ev1.net/~redelm/cpuburn_${MY_P}_tar.gz"
+DESCRIPTION="designed to heavily load CPU chips [testing purposes]"
+HOMEPAGE="http://pages.sbcglobal.net/redelm/"
+SRC_URI="http://pages.sbcglobal.net/redelm/cpuburn_${MY_P}_tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="-* x86"
 IUSE=""
-KEYWORDS="x86 -ppc -sparc -alpha"
-
 RESTRICT="nostrip"
+
 DEPEND="sys-devel/gcc"
 RDEPEND=""
 
 src_unpack() {
-	#for some reason he has it _tar instead of .tar ...
+	# for some reason he has it _tar instead of .tar ...
 	unpack ${A}
-	cd ${WORKDIR}
-	tar -xf cpuburn_${MY_P}_tar
+	tar -xf cpuburn_${MY_P}_tar || die
 }
 
 src_compile() {
@@ -30,5 +28,5 @@ src_compile() {
 
 src_install() {
 	dodoc Design README
-	dobin burn{BX,K6,K7,MMX,P5,P6}
+	dobin burn{BX,K6,K7,MMX,P5,P6} || die
 }
