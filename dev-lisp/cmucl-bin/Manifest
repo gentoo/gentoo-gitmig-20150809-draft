@@ -1,0 +1,5 @@
+MD5 82249dd2ed6b613005c4e8b7661a79aa ChangeLog 2529
+MD5 1609fe6e7d7f4e60e7841fbafcdff6be cmucl-bin-18d-r1.ebuild 1409
+MD5 7eee22c81db5d5a9b61d049cf6ee3017 files/digest-cmucl-bin-18d-r1 152
+MD5 0f5ac81611c6ba526f6915c15a3c0d9a files/18d/README.config 355
+MD5 f0e7517dee56641c3a458f469a6a98b9 files/18d/wrapper.patch 525

@@ -1,0 +1,5 @@
+MD5 fd07627b9b33f0ccf07d2c63d5c3e87b ChangeLog 1116
+MD5 16d90aad6f4e00ea5f1bd2bd6c44f069 gauche-0.5.7.ebuild 925
+MD5 8edd27bfaab9ecd52bb2d66e62da762e gauche-0.6.ebuild 923
+MD5 c18c00a2c663b57c0da69ccc7d589d39 files/digest-gauche-0.5.7 62
+MD5 970a94ed0e9da51ed4b007b7a3456111 files/digest-gauche-0.6 60
