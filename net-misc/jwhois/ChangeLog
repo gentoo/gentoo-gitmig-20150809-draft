@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/jwhois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.8 2003/05/22 22:39:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.9 2003/07/27 21:20:58 mholzer Exp $
+
+*jwhois-3.2.2 (27 Jul 2003)
+
+  27 Jul 2003; Martin Holzer <mholzer@gentoo.org> jwhois-3.2.2.ebuild:
+  Version bumped
 
 *jwhois-3.2.1 (23 May 2003)
 
