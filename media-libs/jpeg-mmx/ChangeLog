@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/jpeg-mmx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.6 2003/03/10 11:42:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.7 2003/09/15 12:19:02 hanno Exp $
+
+  15 Sep 2003; Hanno Boeck <hanno@gentoo.org> jpeg-mmx-1.1.2-r1.ebuild,
+  files/jpeg-mmx-gcc33fix.gz:
+  Fix for gcc 3.3.
+  Thanks to Chandler Carruth in bug #22315.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

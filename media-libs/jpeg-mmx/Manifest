@@ -1,3 +1,4 @@
-MD5 120d0a9bc5d6f8a35d85ca600e2fb6d9 ChangeLog 1155
-MD5 1de5f6bad12614ef26c65568e9698c1e jpeg-mmx-1.1.2-r1.ebuild 1557
+MD5 e809544af50df4c5842c6ba2453a482a ChangeLog 1319
+MD5 8888fbc3a5c855f05a4d2513183c3b4e jpeg-mmx-1.1.2-r1.ebuild 1640
 MD5 0562da8a4f2d6f76b4058e3df63735a5 files/digest-jpeg-mmx-1.1.2-r1 66
+MD5 51e9986bede75ee9f551d4f040fe5aeb files/jpeg-mmx-gcc33fix.gz 1756

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.11 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.12 2003/09/15 12:19:02 hanno Exp $
 
 inherit libtool flag-o-matic gnuconfig
 
@@ -12,8 +12,13 @@ HOMEPAGE="http://mjpeg.sourceforge.net/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 -ppc -sparc -amd64"
-
+IUSE=""
 DEPEND="virtual/glibc"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	epatch ${FILESDIR}/jpeg-mmx-gcc33fix.gz
+}
 
 src_compile() {
 	# Doesn't work with -fomit-frame-pointer, at least not on k6-2.
