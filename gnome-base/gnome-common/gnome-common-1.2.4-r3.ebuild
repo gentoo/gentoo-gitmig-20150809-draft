@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/gnome-common-1.2.4-r3.ebuild,v 1.17 2004/05/14 03:56:54 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/gnome-common-1.2.4-r3.ebuild,v 1.18 2004/06/02 17:51:50 leonardop Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gnome.org
 # Do _NOT_ strip symbols in the build!
 RESTRICT="nostrip"
 append-flags -g
 
 DESCRIPTION="Some Common files for Gnome2 applications"
 HOMEPAGE="http://www.gnome.org/"
-SRC_URI="ftp://ftp.gnome.org/pub/gnome/sources/${PN}/1.2/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0.0"
 DEPEND="${RDEPEND}
