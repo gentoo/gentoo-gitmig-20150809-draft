@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4-r1.ebuild,v 1.1 2003/07/15 08:01:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4-r1.ebuild,v 1.2 2003/09/15 17:54:00 seemant Exp $
 
 S="${WORKDIR}/${PN}sdk-${PV}"
 
@@ -11,7 +11,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc"
 
-RDEPEND="sys-apps/e2fsprogs"
+RDEPEND="sys-fs/e2fsprogs"
 DEPEND="${RDEPEND}"
 
 src_compile() {
