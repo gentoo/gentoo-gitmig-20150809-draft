@@ -1,7 +1,12 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47
-gbevin Exp
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.2 2002/07/03 21:00:11 danarmak Exp $
+
+*texmacs-1.0.0.8 (03 Jul 2002)
+
+  03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version, close submission #4277
 
 *texmacs-1.0 (29 May 2002)
 
