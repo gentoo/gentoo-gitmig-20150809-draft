@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.16 2002/10/20 23:12:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.17 2002/10/26 13:58:02 doctomoe Exp $
 
 *gkrellm-2.1.0 (20 Oct 2002)
 
@@ -10,6 +10,9 @@
   Version bump, thanks to: pilux@gmx.net (Andreas Dolfen) in bug #9370.
 
 *gkrellm-2.0.4 (15 Oct 2002)
+
+  26 Oct 2002; Olivier Reisch <doctomoe@gentoo.org> gkrellm-2.0.4.ebuild:
+  Added PPC keyword to this version
 
   17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> gkrellm-2.0.4.ebuild :
   Added IUSE.
