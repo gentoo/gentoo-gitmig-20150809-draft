@@ -1,5 +1,15 @@
-MD5 dfeec77df686a0f52b957bdffd18eb86 qmhandle-1.1.1.ebuild 813
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c2fa36a5d7ad6eb5aa6445877212f760 ChangeLog 917
 MD5 93b626f01fce25041ed35c909d8238ce metadata.xml 615
+MD5 538ebc6f9b28c30e39f053127ee4f21e qmhandle-1.1.1.ebuild 779
 MD5 16b0d5bca4caac432062b96b8b91865f files/digest-qmhandle-1.1.1 64
 MD5 3674410545148cf5c003bd4f8c9d7406 files/qmHandle-gentoo.patch 703
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBs+piroRuSHgZdywRAmUxAJ4/F6A0asdi8k3kyPKoKRy2xHLSgwCggNXS
+HlzjvslxmmQORc1gOrFtreo=
+=VAlQ
+-----END PGP SIGNATURE-----
