@@ -1,5 +1,5 @@
 MD5 411d5319b6036bd7c00dd132a9a855b3 xmms-1.2.7-r23.ebuild 5336
-MD5 288db3982364d2f70356278cfa8fecae xmms-1.2.9_pre1.ebuild 5202
+MD5 6c124fa220d97da48ffdaab5a905e725 xmms-1.2.9_pre1.ebuild 5308
 MD5 ce0dc3b9f4e3f210a8216e606c14df62 xmms-1.2.7-r25.ebuild 5744
 MD5 2d4718e21d3e5c99f989af60bc257d4d ChangeLog 16884
 MD5 ad11502b641ce7df48f6441954239cde xmms-1.2.8-r3.ebuild 4819
@@ -7,4 +7,4 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 20b60b9c94a35974970dafd0bbd050c4 files/digest-xmms-1.2.7-r23 211
 MD5 20b60b9c94a35974970dafd0bbd050c4 files/digest-xmms-1.2.7-r25 211
 MD5 924d785f5c63c99d5c20c0853c1a719b files/digest-xmms-1.2.8-r3 216
-MD5 2d6836483eedf09cad8bcf8d03be717f files/digest-xmms-1.2.9_pre1 226
+MD5 5b15dcb62d3db97b5231650cf843be2f files/digest-xmms-1.2.9_pre1 226
