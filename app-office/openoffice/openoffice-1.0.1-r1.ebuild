@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r1.ebuild,v 1.4 2002/11/04 01:33:26 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r1.ebuild,v 1.5 2002/11/05 21:56:31 gerk Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -63,7 +63,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
@@ -72,7 +72,9 @@ RDEPEND=">=sys-libs/glibc-2.1
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	>=virtual/jdk-1.3.1"
+	>=virtual/jdk-1.3.1
+	ppc? ( >=sys-libs/glibc-2.2.5-r7
+	>=sys-devel/gcc-3.2 )" # needed for sqrtl patch recently introduced
 
 DEPEND="${RDEPEND}
 	app-shells/tcsh"
