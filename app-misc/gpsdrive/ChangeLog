@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.4 2003/02/12 04:59:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.5 2003/07/27 14:58:31 latexer Exp $
+
+*gpsdrive-2.01 (27 Jul 2003)
+
+  27 Jul 2003; Peter Johanson <latexer@gentoo.org> gpsdrive-1.33.ebuild,
+  gpsdrive-2.01.ebuild:
+  Adding gpsdrive-2.01 which is the new gtk2 version of gpsdrive, and 1.33 which
+  fixes map downloading for 1.x
 
 *gpsdrive-1.32 (28 Jan 2003)
 
