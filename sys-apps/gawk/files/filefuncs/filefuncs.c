@@ -27,10 +27,10 @@
  */
 
 /*
- * Copyright 1999-2003 Gentoo Technologies, Inc.
+ * Copyright 1999-2004 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
  * Author:  Martin Schlemmer <azarah@gentoo.org>, Nov 2002
- * $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/files/filefuncs/filefuncs.c,v 1.1 2003/03/25 15:27:34 azarah Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/files/filefuncs/filefuncs.c,v 1.2 2004/09/28 01:52:18 swegener Exp $
  * 
  * Extended with: do_symlink()
  *                do_unlink()
