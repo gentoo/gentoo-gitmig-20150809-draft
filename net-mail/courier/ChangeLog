@@ -1,7 +1,28 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.4 2002/08/13 16:13:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.5 2002/11/06 08:22:09 raker Exp $
 
+*courier-0.40.0.20021026 (29 Oct 2002)
+
+  06 Nov 2002; Nick Hadaway <raker@gentoo.org> :
+  Added ebuild to portage.  Marked unstable.
+
+  29 Oct 2002; Andreas Erhart <andi@zollhaus.net> / Alexandru Hartmann <alex@nimic.net>
+  courier-0.40.0.20021026.ebuild, files/digest-courier-0.40.0.20021026
+  sqwebmail finally works !
+  new version
+  
+*courier-0.40.0 (28 Oct 2002)
+  28 Oct 2002; Alexandru Hartmann <alex@nimic.net>
+  courier-0.40.0.ebuild, files/digest-courier-0.40.0
+  sometimes /var/lib/courier/msgs and msgq just disappear after an upgrade.
+  this is now fixed.
+ 
+*courier-0.40.0 (26 Oct 2002)
+  26 Oct 2002; Andreas Erhart <andi@zollhaus.net>
+  courier-0.40.0.ebuild, files/digest-courier-0.40.0
+  new version
+  
 *courier-0.39.3 (12 Aug 2002)
   12 Aug 2002; Andreas Erhart <andi@zollhaus.net>
   courier-0.39.3.ebuild, files/digest-courier-0.39.3
