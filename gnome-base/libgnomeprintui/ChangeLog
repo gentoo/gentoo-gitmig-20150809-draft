@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomeprintui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/ChangeLog,v 1.31 2003/11/08 15:23:31 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/ChangeLog,v 1.32 2003/11/15 02:52:10 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
+  libgnomeprintui-2.4.0.ebuild:
+  Stable on ia64
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> libgnomeprintui-2.4.0.ebuild:
   added sparc keyword

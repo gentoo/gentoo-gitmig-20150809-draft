@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.9 2003/11/08 16:01:19 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.0.ebuild,v 1.10 2003/11/15 02:49:38 agriffis Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="A filemanager for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
-KEYWORDS="x86 ppc alpha sparc ~hppa amd64"
+KEYWORDS="x86 ppc alpha sparc ~hppa amd64 ia64"
 IUSE="oggvorbis cups"
 
 # depend on libbonobo-2.3 and up to remove bonobo-activation dep
