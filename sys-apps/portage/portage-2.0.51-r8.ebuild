@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r8.ebuild,v 1.6 2005/01/10 22:52:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r8.ebuild,v 1.7 2005/01/10 23:41:04 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -63,6 +63,7 @@ src_compile() {
 	if use ppc-macos || use x86-fbsd; then
 		ewarn "NOT BUILDING SANDBOX ON ${ARCH}"
 	elif [ -n "${MULTILIB_ABIS}" ] && ! hasq ${FEATURES}; then
+		OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			make clean
@@ -72,6 +73,7 @@ src_compile() {
 		make clean
 		export ABI="${DEFAULT_ABI}"
 		make CFLAGS="-O1 -pipe" || die
+		ABI="${OABI}"
 	elif [ "${ARCH}" == "amd64" ]; then
 		check_multilib
 		make CFLAGS="-O1 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
@@ -132,6 +134,7 @@ src_install() {
 	if use ppc-macos || use x86-fbsd; then
 		ewarn "Not installing sandbox on ${ARCH}"
 	elif [ -n "${MULTILIB_ABIS}" ]; then
+		OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			cp libsandbox.so.${ABI} libsandbox.so
 			make DESTDIR="${D}" install || \
@@ -144,6 +147,7 @@ src_install() {
 			fi
 		done
 		[ -f "${D}/lib/libsandbox.so.real" ] && mv ${D}/lib/libsandbox.so.real ${D}/lib/libsandbox.so
+		ABI="${OABI}"
 	elif [ "${ARCH}" == "amd64" -a -z "${MULTILIB_ABIS}" ]; then
 		check_multilib
 		make DESTDIR="${D}" HAVE_64BIT_ARCH="${MULTILIB}" install || \
