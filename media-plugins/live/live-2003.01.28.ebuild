@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2003.01.28.ebuild,v 1.1 2003/01/30 05:41:43 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2003.01.28.ebuild,v 1.2 2003/01/30 06:06:04 jrray Exp $
 
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
 
@@ -38,8 +38,12 @@ src_install() {
 	do
 		local dir
 		dir=$(basename $(dirname ${lib}))
-		dodir "${DESTTREE}/lib/live/${dir}"
-		install ${LIBOPTIONS} "${lib}" "${D}${DESTTREE}/lib/live/${dir}"
+
+		insinto "/usr/lib/live/${dir}"
+		doins "${lib}"
+
+		insinto "/usr/lib/live/${dir}/include"
+		doins ${S}/${dir}/include/*.hh
 	done
 
 	# find and install test programs
