@@ -1,6 +1,9 @@
 # ChangeLog for net-www/snownews
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.16 2004/12/09 17:35:39 citizen428 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.17 2005/01/21 21:51:29 pylon Exp $
+
+  21 Jan 2005; Lars Weiler <pylon@gentoo.org> snownews-1.5.6.1.ebuild:
+  Stable on ppc.
 
 *snownews-1.5.6.1 (09 Dec 2004)
 

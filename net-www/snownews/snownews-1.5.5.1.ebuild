@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/snownews-1.5.5.1.ebuild,v 1.2 2004/12/09 17:35:39 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/snownews-1.5.5.1.ebuild,v 1.3 2005/01/21 21:51:29 pylon Exp $
 
 IUSE=""
 
