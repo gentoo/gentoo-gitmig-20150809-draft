@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r5.ebuild,v 1.3 2003/08/04 17:11:25 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r5.ebuild,v 1.4 2003/08/06 18:48:21 lostlogic Exp $
 
 IUSE=""
 
@@ -99,17 +99,20 @@ pkg_config() {
 	fi
 	if [ ! -f /etc/freenet.conf ] || [ "${YN}" == C ] || [ "${YN}" == "c" ]; then
 		einfo "Preparing to configure freenet..."
-		# Pre-determine IP address
-		IP="$(hostname -i)"
-		declare -i DEFLP
-		if [ "${RANDOM}" ]; then
-			DEFLP=${RANDOM}%30000+2000
+		if [ -f /etc/freenet.conf ]; then
+			cp /etc/freenet.conf .
 		else
-			echo "no random in shell, enter a FNP port number + <ENTER>"
-			read DEFLP
-		fi
-	
-		cat << EOF > freenet.conf
+			# Pre-determine IP address
+			IP="$(hostname -i)"
+			declare -i DEFLP
+			if [ "${RANDOM}" ]; then
+				DEFLP=${RANDOM}%30000+2000
+			else
+				echo "no random in shell, enter a FNP port number + <ENTER>"
+				read DEFLP
+			fi
+		
+			cat << EOF > freenet.conf
 ipAddress=${IP}
 listenPort=${DEFLP}
 seedFile=/var/freenet/seednodes.ref
@@ -119,7 +122,8 @@ diagnosticsPath=/var/freenet/stats
 routingDir=/var/freenet
 nodeFile=/var/freenet/node
 EOF
-	
+		fi
+
 		CLASSPATH="/usr/lib/freenet/freenet.jar:/usr/lib/freenet/freenet-ext.jar:${CLASSPATH}"
 		$(java-config --java) freenet.node.Main --config
 		mv freenet.conf /etc
