@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-x11-2.2.1.ebuild,v 1.2 2000/10/29 20:36:59 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-x11-2.2.1.ebuild,v 1.3 2000/11/06 12:28:04 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/qt-2.2.1
@@ -11,13 +11,20 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 HOMEPAGE="http://www.kde.org/"
 
+DEPEND=">=media-libs/libpng-1.0.7
+	>=media-libs/libmng-0.9.3
+	>=media-sound/nas-1.4.1
+	>=x11-base/xfree-4.0.1"
+
 export QTDIR=${S}
+
 src_unpack() {
   unpack ${A}
   cd ${S}
   cp configure configure.orig
   sed -e "s:read acceptance:acceptance=yes:" configure.orig > configure
 }
+
 src_compile() {
     cd ${S}
     export LDFLAGS="-ldl"
@@ -51,18 +58,20 @@ src_install() {
 	cd ${D}/usr/lib
  	ln -sf  qt-x11-${PV} qt
 	cd ${S}
-	cp -a include ${D}/usr/lib/${P}/
-	cp -a extensions ${D}/usr/lib/${P}/
-	cd src
-	try make clean
-	cd ..
-	cp -a src ${D}/usr/lib/${P}/
-	into /usr
+	dodir /usr/lib/${P}/include
+	cp include/* ${D}/usr/lib/${P}/include/
+#	cp -a extensions ${D}/usr/lib/${P}/
+#	cd src
+#	try make clean
+#	cd ..
+#	cp -a src ${D}/usr/lib/${P}/
+#	into /usr
 	doman doc/man/man3/*
 
 	dodoc ANNOUNCE FAQ LICENSE.QPL MANIFEST PLATFORMS
 	dodoc PORTING README*
         cp -af ${S}/doc/html ${D}/usr/doc/${P}
+
 }
 
 
