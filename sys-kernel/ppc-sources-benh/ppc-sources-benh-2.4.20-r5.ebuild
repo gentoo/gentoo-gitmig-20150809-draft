@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.20-r5.ebuild,v 1.3 2003/02/04 23:07:07 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.20-r5.ebuild,v 1.4 2003/02/04 23:32:51 gerk Exp $
 
 IUSE=""
 
@@ -15,6 +15,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://www.kernel.org/pub/linux/kernel/people/benh/patch-${OKV}-${MY_R}.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/benh/"
 KEYWORDS="-x86 -ppc -sparc -alpha"
+PROVIDE="virtual/linux-sources"
 LICENSE="GPL-2"
 SLOT="${KV}"
 DEPEND=">=sys-devel/binutils-2.11.90.0.31"
