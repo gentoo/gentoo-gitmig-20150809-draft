@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.82.ebuild,v 1.8 2003/08/05 15:47:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/pymol-0.82.ebuild,v 1.9 2003/09/02 22:45:15 liquidx Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 
 DEPEND="dev-lang/python
 	dev-python/pmw
-	dev-python/Numeric
+	dev-python/numeric
 	dev-lang/tk
 	media-libs/libpng
 	sys-libs/zlib

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0.ebuild,v 1.8 2003/04/23 14:35:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0.ebuild,v 1.9 2003/09/02 22:41:58 liquidx Exp $
 
 DESCRIPTION="Scientific application for data analysis and technical graphics"
 SRC_URI="http://scigraphica.sourceforge.net/src/${P}.tar.gz"
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 IUSE="gnome"
 
 DEPEND=">=x11-libs/gtk+extra-0.99.17
-	>=dev-python/Numeric-20.3
+	>=dev-python/numeric-20.3
 	>=dev-libs/libxml-1.8.16
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r3 >=gnome-base/ORBit-0.5.12-r1 >=gnome-base/gnome-print-0.34 )"
 	#bonobo? ( >=gnome-base/bonobo-1.0.18 )"

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/biopython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/ChangeLog,v 1.3 2003/08/08 23:36:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/ChangeLog,v 1.4 2003/09/02 22:45:51 liquidx Exp $
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> biopython-1.10.ebuild,
+  biopython-1.21.ebuild:
+  moved dev-python/Numeric to dev-python/numeric
 
 *biopython-1.21 (08 Aug 2003)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/scigraphica
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/ChangeLog,v 1.4 2003/04/26 10:43:34 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/ChangeLog,v 1.5 2003/09/02 22:41:58 liquidx Exp $
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> scigraphica-0.8.0-r1.ebuild,
+  scigraphica-0.8.0.ebuild:
+  moved dev-python/Numeric to dev-python/numeric
 
 *scigraphica-0.8.0-r1 (26 Apr 2003)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/pymol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.6 2003/07/24 01:12:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.7 2003/09/02 22:45:15 liquidx Exp $
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> pymol-0.82.ebuild,
+  pymol-0.86.ebuild, pymol-0.88.ebuild, pymol-0.90.ebuild:
+  moved dev-python/Numeric to dev-python/numeric
 
 *pymol-0.90 (23 Jul 2003)
 
