@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.10_pre7-r1.ebuild,v 1.4 2004/02/22 12:41:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.10_pre7-r1.ebuild,v 1.5 2004/03/04 18:07:43 vapier Exp $
 
 IUSE="build wolk-bootsplash wolk-supermount ipv6"
 
@@ -8,7 +8,7 @@ IUSE="build wolk-bootsplash wolk-supermount ipv6"
 
 ETYPE="sources"
 
-inherit kernel || die
+inherit kernel
 
 OKV=2.4.20
 EXTRAVERSION="-${PN/-*/}4.10s-pre7"

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.24-r1.ebuild,v 1.2 2004/02/29 14:34:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.24-r1.ebuild,v 1.3 2004/03/04 18:07:43 vapier Exp $
 
 IUSE="selinux"
 ETYPE="sources"
 
-inherit kernel || die
+inherit kernel
 
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 EXTRAVERSION="-${PN/-*/}-${PR}"
