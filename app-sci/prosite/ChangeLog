@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/prosite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/prosite/ChangeLog,v 1.5 2004/09/29 23:50:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/prosite/ChangeLog,v 1.6 2004/10/31 03:11:29 ribosome Exp $
+
+*prosite-18.38 (30 Oct 2004)
+
+  30 Oct 2004; Olivier Fisette <ribosome@gentoo.org> -prosite-18.32.ebuild,
+  prosite-18.36.ebuild, +prosite-18.38.ebuild:
+  Removed obsolete version (18.32). Added to x86 (18.36). New version (18.38).
 
 *prosite-18.36 (29 Sep 2004)
 
