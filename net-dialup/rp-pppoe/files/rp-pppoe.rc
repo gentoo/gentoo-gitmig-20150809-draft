@@ -1,20 +1,21 @@
-#!/sbin/runscript 
-# This init script controls the pppoe connection for adsl lines. 
-# Distributed under the terms of the GNU General Public License v2 
- 
-depend() { 
-        need net
-		after domainname
-} 
- 
-start() { 
-        ebegin "Starting adsl" 
-        start-stop-daemon --start --quiet --exec /usr/sbin/adsl-start
-        eend $? 
-} 
- 
-stop() { 
-        ebegin "Stopping adsl" 
-        start-stop-daemon --start --quiet --exec /usr/sbin/adsl-stop
-        eend $? 
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/files/rp-pppoe.rc,v 1.4 2004/05/02 05:35:14 vapier Exp $
+
+depend() {
+	need net
+	after domainname
+}
+
+start() {
+	ebegin "Starting adsl"
+	start-stop-daemon --start --quiet --exec /usr/sbin/adsl-start
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping adsl"
+	start-stop-daemon --start --quiet --exec /usr/sbin/adsl-stop
+	eend $?
 }
