@@ -1,0 +1,41 @@
+diff -aur avidemux-2.0.30/avidemux/ADM_audio/audio_packetizer.cpp /root/downloads/avidemux-2.0.30/avidemux/ADM_audio/audio_packetizer.cpp
+--- avidemux-2.0.30/avidemux/ADM_audio/audio_packetizer.cpp	2004-10-13 20:31:57.000000000 +0200
++++ /root/downloads/avidemux-2.0.30/avidemux/ADM_audio/audio_packetizer.cpp	2004-10-18 12:20:08.846812432 +0200
+@@ -118,7 +118,7 @@
+ //
+ 	uint32_t count,sample;
+ 			sample=_wavheader->frequency/100;			
+-			count*=_wavheader->channels;
++			count=sample*_wavheader->channels;
+ 			if(_wavheader->encoding!=WAV_ULAW)
+ 			{
+ 				count*=2;			
+diff -aur avidemux-2.0.30/avidemux/ADM_memsupport.cpp /root/downloads/avidemux-2.0.30/avidemux/ADM_memsupport.cpp
+--- avidemux-2.0.30/avidemux/ADM_memsupport.cpp	2004-10-10 20:36:48.000000000 +0200
++++ /root/downloads/avidemux-2.0.30/avidemux/ADM_memsupport.cpp	2004-10-18 12:21:59.286023120 +0200
+@@ -76,7 +76,9 @@
+ 	uint32_t *backdoor;
+ 	uint32_t size,offset;
+ 	char	 *c=(char *)ptr;
+-	
++
++	if(!ptr) return;
++
+ 	backdoor=(uint32_t *)ptr;
+ 	backdoor-=2;
+ 	
+Only in avidemux-2.0.30: avidemux-2.0.30_audiopacketizer.patch
+diff -aur avidemux-2.0.30/configure.in.in /root/downloads/avidemux-2.0.30/configure.in.in
+--- avidemux-2.0.30/configure.in.in	2004-10-15 18:14:34.000000000 +0200
++++ /root/downloads/avidemux-2.0.30/configure.in.in	2004-10-18 12:22:07.025846488 +0200
+@@ -459,8 +459,8 @@
+   
+ dnl _______________/faad_______________
+ dnl ____________ faac ?________________
+- AC_CHECK_HEADERS(faac.h,,have_faad=no)
+- AC_CHECK_HEADERS(faacfg.h,,have_faad=no)
++ AC_CHECK_HEADERS(faac.h,,have_faac=no)
++ AC_CHECK_HEADERS(faaccfg.h,,have_faac=no)
+  
+  AC_ARG_ENABLE(faac,[  --disable-faac           Force no faac],have_faac=no)
+    
