@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.69_pre6.ebuild,v 1.1 2003/11/14 20:07:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.69_pre6.ebuild,v 1.2 2003/11/18 23:43:00 lu_zero Exp $
 
 inherit flag-o-matic
 
@@ -20,6 +20,12 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc -x86 -sparc -alpha -mips"
 IUSE="alsa esd debug oldworld X"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/26-arch-fix.patch || die
+}
+
 src_compile() {
 
 	local myconf
@@ -28,6 +34,11 @@ src_compile() {
 	use esd      && myconf="${myconf} --enable-esd"
 	use oldworld || myconf="${myconf} --disable-oldworld"
 	use X        && myconf="${myconf} --with-x"
+	
+	#workaround
+	[ "`echo ${KV}|grep 2.6`" ] \
+	&& myconf="${myconf} --disable-sheep" \
+	&& einfo "sheep.ko module won't build, disabling"
 
 	einfo "MOL will be build with the following options:"
 	einfo "${myconf}"
@@ -39,13 +50,12 @@ src_compile() {
 	sed -i "s:#ddns-update-style:ddns-update-style:g" Doc/config/dhcpd-mol.conf || die
 	sed -i "s:DHCPD\ -q\ -cf:DHCPD\ -cf:g" Doc/config/tunconfig || die
 	export KERNEL_SOURCE="/usr/src/linux"
-	export ARCH=ppc
 	./autogen.sh
 	./configure ${myconf} --prefix=/usr || die "This is a ppc-only package (time to buy that iBook, no?)"
 
 	addwrite "/usr/src/${FK}"
 
-	emake ARCH=ppc || die
+	emake || die
 }
 
 src_install() {
@@ -53,9 +63,12 @@ src_install() {
 	# MOL needs write access to some .depend-files in the kernel-dir
 	# (at least arch/ppc/) to build the kernel-modules.  With
 	# sandboxing enabled this would result in an access violation.
-
+	
+	addwrite "/usr/src/${FK}"
 	emake DESTDIR=${D} install || die "Failed to install MOL"
 
+	#workaround
+	
 	dodoc 0README BUILDING COPYRIGHT CREDITS Doc/*
 
 }
