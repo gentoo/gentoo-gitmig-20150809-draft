@@ -1,8 +1,12 @@
 # ChangeLog for dev-java/jakarta-regexp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.1 2002/06/03 21:40:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.2 2002/08/01 17:41:56 karltk Exp $
 
 *jakarta-regexp-1.2 (03 Jun 2002)
+
+  03 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> jakarta-regexp-1.2.ebuild :
+
+  Added KEYWORDS.
 
   03 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> jakarta-regexp-1.2.ebuild files/digest-jakarta-regexp-1.2 :
 
