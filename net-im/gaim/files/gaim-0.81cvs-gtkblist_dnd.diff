@@ -1,0 +1,37 @@
+===================================================================
+RCS file: /cvsroot/gaim/gaim/src/gtkblist.c,v
+retrieving revision 1.134
+retrieving revision 1.136
+diff -u -r1.134 -r1.136
+--- gaim/gaim/src/gtkblist.c	2004/07/15 01:59:05	1.134
++++ gaim/gaim/src/gtkblist.c	2004/07/18 18:21:26	1.136
+@@ -3040,12 +3040,14 @@
+ 	GtkSizeGroup *sg;
+ 	GtkAccelGroup *accel_group;
+ 	GtkTreeSelection *selection;
+-	GtkTargetEntry gte[] = {{"GAIM_BLIST_NODE", GTK_TARGET_SAME_APP, DRAG_ROW},
++	GtkTargetEntry dte[] = {{"GAIM_BLIST_NODE", GTK_TARGET_SAME_APP, DRAG_ROW},
+ 				{"application/x-im-contact", 0, DRAG_BUDDY},
+ 				{"text/x-vcard", 0, DRAG_VCARD },
+ 				{"text/uri-list", 0, DRAG_URI},
+ 				{"text/plain", 0, DRAG_TEXT}};
+-
++	GtkTargetEntry ste[] = {{"GAIM_BLIST_NODE", GTK_TARGET_SAME_APP, DRAG_ROW},
++				{"application/x-im-contact", 0, DRAG_BUDDY},
++				{"text/x-vcard", 0, DRAG_VCARD }};
+ 	if (gtkblist && gtkblist->window) {
+ 		gtk_widget_show(gtkblist->window);
+ 		return;
+@@ -3114,10 +3116,10 @@
+ 
+ 	/* Set up dnd */
+ 	gtk_tree_view_enable_model_drag_source(GTK_TREE_VIEW(gtkblist->treeview),
+-					       GDK_BUTTON1_MASK, gte, NUM_TARGETS,
++					       GDK_BUTTON1_MASK, ste, 3,
+ 					       GDK_ACTION_COPY);
+ 	gtk_tree_view_enable_model_drag_dest(GTK_TREE_VIEW(gtkblist->treeview),
+-					     gte, NUM_TARGETS,
++					     dte, 5,
+ 					     GDK_ACTION_COPY | GDK_ACTION_MOVE);
+ 
+   	g_signal_connect(G_OBJECT(gtkblist->treeview), "drag-data-received", G_CALLBACK(gaim_gtk_blist_drag_data_rcv_cb), NULL);

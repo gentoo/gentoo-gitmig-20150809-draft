@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.1 2004/07/16 12:54:40 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.2 2004/07/19 01:42:10 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -61,6 +61,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
+	epatch ${FILESDIR}/gaim-0.81cvs-gtkblist_dnd.diff
+	epatch ${FILESDIR}/gaim-0.81cvs-icon_scaling.diff
+	epatch ${FILESDIR}/gaim-0.81cvs-irc-ison-lessflood.patch
 }
 
 src_compile() {
