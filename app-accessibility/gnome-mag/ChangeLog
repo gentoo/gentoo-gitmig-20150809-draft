@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.24 2004/11/12 10:53:39 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.25 2004/11/24 03:17:30 leonardop Exp $
+
+*gnome-mag-0.11.10 (23 Nov 2004)
+
+  23 Nov 2004; Leonardo Boshell <leonardop@gentoo.org>
+  gnome-mag-0.11.10.ebuild:
+  Version bump. Added support for the `static' USE flag.
 
   12 Nov 2004; Mike Gardiner <obz@gentoo.org> gnome-mag-0.11.5.ebuild:
   Keyworded ppc for GNOME 2.8
