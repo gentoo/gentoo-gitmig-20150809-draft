@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/glickomania
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/glickomania/ChangeLog,v 1.1 2003/12/02 06:33:12 mr_bones_ Exp $
+
+*glickomania-1.0 (01 Dec 2003)
+
+  01 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> glickomania-1.0.ebuild,
+  metadata.xml:
+  initial commit; ebuild supplied by Eric Harney via bug 34847 (modified)
+
