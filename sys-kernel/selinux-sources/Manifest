@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 645cfca1cf7691a073dc63846ace39a7 ChangeLog 6196
+MD5 87aeebf9a9d46b26487a9a8061ed8f91 selinux-sources-2.4.26-r1.ebuild 672
+MD5 5e14903fdfe1d4262fae1b85ab643986 ChangeLog 6188
 MD5 f455fbb5d96167058282b93599457a4f metadata.xml 470
-MD5 7ff252c9b7a0ba39619ba2114438d7c8 selinux-sources-2.4.26-r1.ebuild 680
 MD5 8e29d8447b2dad414d874b9f126e468e files/digest-selinux-sources-2.4.26-r1 145
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFAz2K6GFJQsIJWJy4RApHRAJ9NVqeWO+8YCtPa6Nw8ul74TfxCEQCfcI4v
-1KCkAcKh1T4gaB0ksodYod8=
-=M83c
------END PGP SIGNATURE-----
