@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r2.ebuild,v 1.3 2004/03/11 02:22:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r2.ebuild,v 1.4 2004/03/30 20:49:43 spyderous Exp $
 
 inherit eutils gcc flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc"
 IUSE="X ssl"
 
 DEPEND=">=dev-lang/perl-5.6.1
-	X? ( >=x11-base/xfree-4.2.0-r12 )
+	X? ( virtual/x11 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )"
 
 S=${WORKDIR}/${MY_P}

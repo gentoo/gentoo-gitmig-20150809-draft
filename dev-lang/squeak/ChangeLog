@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/squeak
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.8 2004/02/15 07:59:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.9 2004/03/30 20:51:06 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; squeak-3.2.5.ebuild,
+  squeak-3.4.1-r1.ebuild, squeak-3.4.1-r2.ebuild, squeak-3.4.1.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   15 Feb 2004; David Holm <dholm@gentoo.org> squeak-3.4.1-r2.ebuild:
   Added to ~ppc.

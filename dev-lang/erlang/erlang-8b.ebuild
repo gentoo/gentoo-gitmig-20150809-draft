@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-8b.ebuild,v 1.8 2003/07/28 13:34:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-8b.ebuild,v 1.9 2004/03/30 20:49:43 spyderous Exp $
 
 MY_P=otp_src_R8B-2
 DESCRIPTION="Erlang programming language, runtime environment, and large collection of libraries"
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc"
 IUSE="X ssl"
 
 DEPEND=">=dev-lang/perl-5.6.1
-	X? ( >=x11-base/xfree-4.2.0-r12 )
+	X? ( virtual/x11 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )"
 
 S=${WORKDIR}/${MY_P}

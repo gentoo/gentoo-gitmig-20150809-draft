@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1.ebuild,v 1.3 2004/01/04 07:10:42 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1.ebuild,v 1.4 2004/03/30 20:51:06 spyderous Exp $
 
 #Simply change these numbers for different versions
 MV=3.4
@@ -17,10 +17,10 @@ IUSE="X oss mmx mozilla"
 # a ffi flag would be nice
 
 DEPEND="virtual/glibc
-	X? ( x11-base/xfree )"
+	X? ( virtual/x11 )"
 RDEPEND="dev-lang/squeak-vm
 		virtual/glibc
-		X? ( x11-base/xfree )"
+		X? ( virtual/x11 )"
 
 S="${WORKDIR}/Squeak-${NV}"
 

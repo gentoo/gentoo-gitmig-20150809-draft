@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.2.5.ebuild,v 1.5 2004/01/04 07:10:42 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.2.5.ebuild,v 1.6 2004/03/30 20:51:06 spyderous Exp $
 
 DESCRIPTION="Highly-portable Smalltalk-80 implementation"
 HOMEPAGE="http://www.squeak.org/"
@@ -12,10 +12,10 @@ IUSE="X oss mmx mozilla"
 # a ffi flag would be nice
 
 DEPEND="virtual/glibc
-	X? ( x11-base/xfree )"
+	X? ( virtual/x11 )"
 RDEPEND="=dev-lang/squeak-vm-3.2*
 	virtual/glibc
-	 X? ( x11-base/xfree )"
+	 X? ( virtual/x11 )"
 
 S="${WORKDIR}/Squeak-3.2-5"
 
