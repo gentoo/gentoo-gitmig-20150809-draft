@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/xdiskusage
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.3 2003/10/29 12:49:51 brandy Exp $
+
+*xdiskusage-1.46 (30 Oct 2003)
+
+  30 Oct 2003; Brandy Westcott brandy@gentoo.org xdiskusage-1.46.ebuild:
+  Initial import. ebuild submitted by Eloi Granado <eloi.granado@millorsoft.es>.
+  Closes bug #31863
+
