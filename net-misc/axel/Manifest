@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b460a462de7d26dc1a33f7929febfd88 ChangeLog 1183
 MD5 537b7a9717e8e409b07e85d0db1da0fa axel-1.0a.ebuild 762
-MD5 f0aacd661981d5c42419aee387cb561a ChangeLog 1020
 MD5 c22097decf3dd805e61a9c46bba96f9b files/digest-axel-1.0a 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHhcUI1lqEGTUzyQRAiNgAJ0S5Mu7PLLj8ko0VURGJXiuW2fWdgCgv/s3
+BWXMyCaY30Z/3FB2WfWflvM=
+=XIPg
+-----END PGP SIGNATURE-----
