@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.15 2004/05/01 22:02:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.16 2004/05/23 19:56:33 kloeri Exp $
+
+  23 May 2004; Bryan Østergaard <kloeri@gentoo.org> lzo-1.08-r1.ebuild:
+  Stable on alpha.
 
   01 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> lzo-1.08-r1.ebuild:
   Stable on sparc
