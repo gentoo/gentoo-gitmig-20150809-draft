@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r4.ebuild,v 1.2 2004/08/19 19:39:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r4.ebuild,v 1.3 2004/09/29 05:02:34 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -35,6 +35,9 @@ DEPEND="virtual/os-headers
 
 src_unpack() {
 	unpack ${A}
+
+	# Let glibc handle nscd #43076
+	rm ${S}/init.d/nscd
 
 	#
 	# Baselayout setup

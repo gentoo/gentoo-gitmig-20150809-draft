@@ -1,16 +1,26 @@
-MD5 1c585962f1f569f5874459eaf37c7ffa baselayout-1.10.3.ebuild 15503
-MD5 d759b7747667de07ea70eb4fcb881c39 baselayout-1.9.4-r3.ebuild 17716
-MD5 f23564a03a44eacefd674686eb7c1b2d baselayout-1.11.1.ebuild 15700
-MD5 81e5a3bd7b9a9fd472f1216e493a4108 ChangeLog 39050
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3de7e7bac989ca95fa6dde0a2729735e ChangeLog 39335
+MD5 69b1c56caaf57202bcd58ef23791909d baselayout-1.9.4-r3.ebuild 17770
+MD5 4b53b9423e9915cf6b5eadb5736cea77 baselayout-1.10.3.ebuild 15557
+MD5 585ceeb81e8191eac7e266e2901b2648 baselayout-1.10.4.ebuild 15557
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
-MD5 c9ec9e536609cd23dd178c0645b6c0d7 baselayout-1.10.4.ebuild 15503
-MD5 0e60f7030427d948f6264bfba6ce612a baselayout-1.9.4-r4.ebuild 16501
-MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
-MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
-MD5 ab3b5bbd5ce8a8b1386c834ff4a118b4 files/digest-baselayout-1.10.3 69
-MD5 2a99e8726f3939af8e637269f4fd4818 files/digest-baselayout-1.10.4 69
-MD5 5610331ea31b164a8eb9c45ddc9adbbf files/digest-baselayout-1.11.1 69
-MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
+MD5 df992044b789706cad9bb1f8980ee123 baselayout-1.9.4-r4.ebuild 16555
+MD5 4e084e0c5d7a5291c86bd16161b2b0aa baselayout-1.11.1.ebuild 15752
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r3 134
+MD5 ab3b5bbd5ce8a8b1386c834ff4a118b4 files/digest-baselayout-1.10.3 69
+MD5 2a99e8726f3939af8e637269f4fd4818 files/digest-baselayout-1.10.4 69
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r4 134
+MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
+MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
+MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
+MD5 5610331ea31b164a8eb9c45ddc9adbbf files/digest-baselayout-1.11.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBWkIWHTu7gpaalycRAuBeAJ0ZOnFAcod0lz4XnbweJqtz7BulnwCgk8H8
+bWcbiTj8Y6FpMpGwlqwH4/o=
+=LrvO
+-----END PGP SIGNATURE-----

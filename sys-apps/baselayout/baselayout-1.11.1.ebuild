@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.1.ebuild,v 1.1 2004/09/27 23:31:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.1.ebuild,v 1.2 2004/09/29 05:02:34 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,6 +30,9 @@ DEPEND="virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}
+
+	# Let glibc handle nscd #43076
+	rm ${S}/init.d/nscd
 
 	# Fix Sparc specific stuff
 	if [[ ${ARCH} == sparc ]]; then
