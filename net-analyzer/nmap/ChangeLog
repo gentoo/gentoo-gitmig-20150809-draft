@@ -1,51 +1,48 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.7 2002/08/02 16:50:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.8 2002/10/23 21:03:40 vapier Exp $
+
+*nmap-3.10_alpha3 (23 Oct 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> nmap-3.10_alpha3.ebuild :
+  Version bump with ~ in KEYWORDS, and general ebuild cleanup
 
 *nmap-3.00 (02 Aug 2002)
 
   02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> nmap-3.00.ebuild:
-
   Final is out. Ebuild contributed by Hannes Mehnert <hannes@mehnert.org>.
 
 *nmap-2.99_rc1 (28 Jul 2002)
 
   28 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> nmap-2.99_rc1.ebuild :
-
   Version bump. Ebuild contributed by SpanKY <vapier@netzero.com>.
 
 *nmap-2.54_beta37 (19 Jul 2002)
 
   19 Jul 2002; Seemant Kulleen <seemant@gentoo.org> nmap-2.54_beta37.ebuild
   files/digest-nmap-2.54_beta37 :
-
   Version bump.
 
 *nmap-2.54_beta36 (17 Jun 2002)
 
   17 Jun 2002; Seemant Kulleen <seemant@gentoo.org> nmap-2.54_beta36.ebuild
   files/digest-nmap-2.54_beta36 :
-
   Version bump thanks to: kikov@fco-gimeno.com (Francisco Gimeno) in bug
   #3833
 
 *nmap-2.54_beta33 (27 Apr 2002)
 
   27 Apr 2002; Seemant Kulleen <seemant@gentoo.org> nmap-2.54_beta33.ebuild :
-
   Version bump.
 
 *nmap-2.54_beta31 (21 Mar 2002)
 
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> nmap-2.54_beta31 :
-
   Version bump.  Copied old ebuild over, and updated to reflect new syntax style
-
 
 *nmap-2.54_beta30 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
