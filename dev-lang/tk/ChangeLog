@@ -1,8 +1,11 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.3 2002/07/13 22:21:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.4 2002/08/03 04:58:50 gerk Exp $
 
 *tk-8.3.3-r1 (13 Jul 2002)
+
+  02 Aug 2002; mark Guertin <gerk@gentoo.org> tk-8.3.3-r1.ebuild :
+  Added ppc to keywords
 
   13 Jul 2002; Seemant Kulleen <seemant@gentoo.org> tk-8.3.3-r1.ebuild
   files/digest-tk-8.3.3-r1 :
