@@ -239,7 +239,7 @@ dyn_fetch() {
 			local _SRC_URI
 		        for x in ${GENTOO_MIRRORS}
 			do
-			  _SRC_URI="${_SRC_URI} ${x}/distributions/gentoo/gentoo-sources/${y}"
+			  _SRC_URI="${_SRC_URI} ${x}/distfiles/${y}"
 			done
 			_SRC_URI="${_SRC_URI} `queryhost.sh "${SRC_URI}"`"
 			for x in ${_SRC_URI}

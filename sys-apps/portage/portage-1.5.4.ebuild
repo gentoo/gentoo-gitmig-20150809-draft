@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.4.ebuild,v 1.1 2001/08/13 16:12:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.4.ebuild,v 1.2 2001/08/22 21:36:53 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -18,7 +18,6 @@ src_unpack() {
 src_compile() {                           
 	gcc ${CFLAGS} tbz2tool.c -o tbz2tool
 }
-
 
 src_install() {
 	#config files
@@ -67,6 +66,8 @@ src_install() {
 	  #docs
 	  dodoc ${FILESDIR}/${PPV}/doc/*
    fi
+	dodir /var/tmp
+	chmod 1777 ${D}/var/tmp
 }
 
 pkg_postinst() {
