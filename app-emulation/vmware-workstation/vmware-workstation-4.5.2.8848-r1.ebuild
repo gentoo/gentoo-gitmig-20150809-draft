@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r1.ebuild,v 1.4 2004/08/19 02:04:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r1.ebuild,v 1.5 2004/09/10 17:39:55 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -9,7 +9,7 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-N26KernSupport="vmware-any-any-update75"
+N26KernSupport="vmware-any-any-update82"
 NP="VMware-workstation-4.5.2-8848"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
@@ -28,8 +28,7 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
-# EXPERIMENTAL support for amd64 has been added to this release.
+KEYWORDS="-* x86 amd64"
 RESTRICT="nostrip"
 
 DEPEND="virtual/libc

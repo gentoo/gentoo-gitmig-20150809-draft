@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.54 2004/08/19 02:04:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.55 2004/09/10 17:39:55 wolf31o2 Exp $
+
+  10 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -vmware-workstation-3.2.1.2242-r1.ebuild,
+  vmware-workstation-3.2.1.2242-r2.ebuild,
+  vmware-workstation-4.5.2.8848-r1.ebuild,
+  -vmware-workstation-4.5.2.8848.ebuild:
+  Updated to use vmware-any-any82 and marking stable on supported platforms.
 
 *vmware-workstation-3.2.1.2242-r2 (18 Aug 2004)
 
