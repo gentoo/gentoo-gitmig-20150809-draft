@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/webcomics-collector
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/webcomics-collector/ChangeLog,v 1.6 2004/09/14 23:15:01 vapier Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/webcomics-collector/ChangeLog,v 1.7 2004/09/28 00:23:17 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
 *webcomics-collector-0.7.1 (14 Sep 2004)
 
