@@ -1,7 +1,17 @@
-MD5 dc73bdd7f8e4e52e4c1fe605786a7f36 gtk-qt-engine-0.6.ebuild 686
-MD5 1464efe254dbb8f9bd8010420462a261 gtk-qt-engine-0.5.ebuild 773
-MD5 32bb036215e79fb1b9954d1c320e1fea ChangeLog 903
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 39114013edd48a022af1fda652a9dc47 ChangeLog 1012
+MD5 06b074a0c7262897d71f60504f39099f gtk-qt-engine-0.5.ebuild 770
+MD5 19f4dd63dfa307f30fd5e7a8e0c561ad gtk-qt-engine-0.6.ebuild 690
 MD5 0e79bc82b6162e7b6e378a4eb9845eed metadata.xml 203
-MD5 e196ce1ba2450ad5143189c23599dea7 files/scrollbars.patch 590
 MD5 c14fd0a50b68b19f5a9ad65022681cb1 files/digest-gtk-qt-engine-0.5 70
 MD5 5581455144e4c925a184778c26ba5b78 files/digest-gtk-qt-engine-0.6 70
+MD5 e196ce1ba2450ad5143189c23599dea7 files/scrollbars.patch 590
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB24mfntT9W3vfTuoRAkwBAKCpqz8k5+h4PZiyDUwzBtOxR3boKwCeIYc0
+8Elu3JdEBkXXRxrFt1Uovhs=
+=UGjM
+-----END PGP SIGNATURE-----
