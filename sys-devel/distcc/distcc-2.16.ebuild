@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.15.ebuild,v 1.2 2004/07/08 22:29:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16.ebuild,v 1.1 2004/07/09 02:18:51 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -16,6 +16,10 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~ia64 ~amd64 ~s390"
+# ATTN s390 MAINTANER: if you bump this stable on s390 please remove 2.14 from cvs -lisa
+# 2004-07-08
+
+
 IUSE="gnome gtk selinux ipv6"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
@@ -23,8 +27,7 @@ DEPEND=">=sys-apps/portage-2.0.49-r6
 	sys-apps/shadow
 	dev-util/pkgconfig"
 RDEPEND="
-	!mips? (
-	!arm? (
+	!arm? ( !mips? (
 	gnome? (
 		>=x11-libs/gtk+-2.0.0
 		>=gnome-base/libgnome-2.0.0
@@ -33,12 +36,11 @@ RDEPEND="
 		x11-libs/pango
 		>=gnome-base/gconf-2.0.0
 	)
-	)
 	gtk? (
 		>=x11-libs/gtk+-2.0.0
 		x11-libs/pango
 	)
-	)
+	) )
 	selinux? ( sec-policy/selinux-distcc )"
 
 src_compile() {
