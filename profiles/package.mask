@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (01 Sep 2002)
+# masked because there is a freeze and for testing
+net-misc/d4x
+
 # <blocke@shivan.org> (31 Aug 2002)
 # Masked out due to the ebuild freeze
 x11-themes/redhat-artwork
