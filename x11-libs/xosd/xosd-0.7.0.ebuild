@@ -1,17 +1,17 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # $ Header: $
-NAME=xosd
-S=${WORKDIR}/${NAME}-${PV}
+
+S=${WORKDIR}/${P}
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows \
 X-On-Screen-Display plus binary for sending text from command line."
-SRC_URI="http://www.ignavus.net/${NAME}-${PV}.tar.gz"
 HOMEPAGE="http://www.ignavus.net/"
-DEPEND="virtual/x11
-	virtual/glibc"
-RDEPEND="${DEPEND}"
-LICENSE="GPL"
+SRC_URI="http://www.ignavus.net/${P}.tar.gz"
+
+DEPEND="virtual/x11"
+
 SLOT="0"
+LICENSE="GPL"
 KEYWORDS="x86"
 
 src_unpack() {
