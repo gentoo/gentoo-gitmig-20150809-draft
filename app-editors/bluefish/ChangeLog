@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.15 2003/02/12 03:45:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.16 2003/02/18 11:34:23 lu_zero Exp $
+
+*bluefish-0.9 (18 Feb 2003)
+
+  18 Feb 2003; Luca Barbato <lu_zero@gentoo.org> bluefish-0.9.ebuild :
+  New version
 
   17 Dec 2002; Hanno Boeck <hanno@gentoo.org> bluefish-0.8.ebuild :
   Added libpcre to dependency, resolves bug #12270.
