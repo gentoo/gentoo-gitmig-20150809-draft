@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.38 2003/08/10 11:06:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.39 2003/08/24 09:57:03 gmsoft Exp $
 
 *libxslt-1.0.32 (10 Aug 2003)
 
@@ -8,7 +8,10 @@
   New version, removed perl dep, seems unneeded, see how it goes
 
 *libxslt-1.0.31 (07 Jul 2003)
- 
+
+  23 Aug 2003; Guy Martin <gmsoft@gentoo.org> libxslt-1.0.31.ebuild :
+  Marked stable on hppa.
+
   12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
 
