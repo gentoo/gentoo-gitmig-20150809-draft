@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.37 2003/09/25 18:43:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.38 2003/09/26 19:55:11 azarah Exp $
+
+  26 Sep 2003; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r7.ebuild:
+  Mark stable.
 
   26 Sep 2003; Martin Holzer <mholzer@gentoo.org> shadow-4.0.3-r3.ebuild,
   shadow-4.0.3-r4.ebuild, shadow-4.0.3-r5.ebuild, shadow-4.0.3-r6.ebuild,
