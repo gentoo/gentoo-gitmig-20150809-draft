@@ -1,0 +1,8 @@
+# ChangeLog for net-zope/indexedcatalog
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/indexedcatalog/ChangeLog,v 1.1 2003/11/09 13:46:02 lanius Exp $
+
+  09 Nov 2003; Heinrich Wendel <lanius@gentoo.org>
+  indexedcatalog-0.6.0.ebuild, metadata.xml:
+  initial commit, thx to Thomas Eckert <eckert.thomas@gmx.net>
+
