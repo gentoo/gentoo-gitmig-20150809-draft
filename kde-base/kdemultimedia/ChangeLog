@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.82 2004/02/05 16:43:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.83 2004/02/09 15:57:55 caleb Exp $
+
+  09 Feb 2004; Caleb Tennis <caleb@gentoo.org> kdemultimedia-3.2.0.ebuild,
+  files/flac-patch.diff:
+  Fix compilation for earlier flac versions with a patch
 
   05 Feb 2004; Luca Barbato <lu_zero@gentoo.org> kdemultimedia-3.2.0.ebuild:
   Marked ~ppc

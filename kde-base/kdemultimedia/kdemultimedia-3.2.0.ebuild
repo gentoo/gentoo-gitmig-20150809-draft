@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0.ebuild,v 1.2 2004/02/05 16:43:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0.ebuild,v 1.3 2004/02/09 15:57:56 caleb Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="nas encode esd motif slang tcltk oggvorbis gtk alsa gstreamer"
@@ -50,3 +50,8 @@ use oggvorbis	&& myconf="$myconf --with-vorbis=/usr"		|| myconf="$myconf --witho
 
 myconf="$myconf $myaudio $myinterface --with-cdda --disable-strict --disable-warnings"
 
+src_unpack()
+{
+	kde_src_unpack
+	epatch ${FILESDIR}/flac-patch.diff
+}

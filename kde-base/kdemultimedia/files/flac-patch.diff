@@ -1,0 +1,13 @@
+--- kfile-plugins/flac/configure.in.in	2003/10/16 10:52:00	1.1
++++ kfile-plugins/flac/configure.in.in	2004/01/21 21:27:36	1.3
+@@ -6,7 +6,9 @@ AC_DEFUN([AC_CHECK_LIBFLAC],
+   kde_has_flac_lib=no
+   AC_CHECK_HEADER(FLAC/metadata.h,
+   [ 
+-     kde_has_flac_lib=yes
++     AC_CHECK_LIB(FLAC,FLAC__seekable_stream_decoder_process_single,
++	          kde_has_flac_lib=yes)
++		
+     ])
+   if test "x$kde_has_flac_lib" = "xyes"; then
+       LIBFLAC="-lFLAC"
