@@ -1,0 +1,27 @@
+diff -ur d1x.orig/main/inferno.c d1x/main/inferno.c
+--- d1x.orig/main/inferno.c	2003-11-18 23:31:29.000000000 -0500
++++ d1x/main/inferno.c	2004-01-18 22:48:53.122566416 -0500
+@@ -1144,6 +1144,11 @@
+ 	// Things to initialize before anything else
+ 	arch_init_start();
+ 
++	if ((t = FindArg( "-missiondir" )))
++		cfile_use_alternate_hogdir(Args[t+1]);
++        else
++                cfile_use_alternate_hogdir("");
++
+ 	load_text();
+ 
+ //	set_exit_message("\n\n%s", TXT_THANKS);
+@@ -1172,11 +1177,6 @@
+          }
+ //end this section addition - VR
+ 
+-	if ((t = FindArg( "-missiondir" )))
+-		cfile_use_alternate_hogdir(Args[t+1]);
+-        else
+-                cfile_use_alternate_hogdir("");
+-
+ 	if ((t=FindArg("-tmap"))){
+ 		select_tmap(Args[t+1]);
+ 	}else

@@ -1,0 +1,42 @@
+--- defines.mak.orig	2004-01-18 22:48:53.176558208 -0500
++++ defines.mak	2004-01-18 22:56:45.215797336 -0500
+@@ -1,5 +1,5 @@
+ # NOERROR:       make sure there are no warnings in compile
+-NOERROR = 1
++#NOERROR = 1
+ 
+ # NO_ASM:       don't use assembler
+ #NO_ASM = 1
+@@ -38,12 +38,12 @@
+ RELEASE = 1
+ 
+ # environment
+-ENV_DJGPP = 1
++#ENV_DJGPP = 1
+ #ENV_DJGPP_REALDOS =1
+ #ENV_MINGW32 = 1
+ #ENV_CYGWIN = 1
+ #ENV_MSVC = 1
+-#ENV_LINUX = 1
++ENV_LINUX = 1
+ 
+ # if compiling with Cygwin, you need extra mingw compatible c++ libraries (see compile.txt)
+ #MINGW_EXTRA = /Cygnus/mingw/
+@@ -79,7 +79,7 @@
+ #GLX_IO = 1
+ 
+ # linux audio options (choose one)
+-#SDL_AUDIO = 1
++SDL_AUDIO = 1
+ #ALSA_AUDIO = 1
+ 
+ # secondary compiler options
+@@ -93,7 +93,7 @@
+ #sound options for dos: choose which
+ #MIKMOD = 1     #MikMod digital, can be used with allg_midi
+ #ALLG_MIDI = 1  #Allegro midi, can be used with mikmod
+-ALLEGRO = 1     #Allegro for midi and digi, should be used alone
++#ALLEGRO = 1     #Allegro for midi and digi, should be used alone
+ 
+ #music options for linux:
+ #HMIPLAY = 1
