@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_rc3.ebuild,v 1.8 2004/10/07 01:13:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_rc3.ebuild,v 1.9 2004/10/07 05:41:28 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Utilities for rescue and embedded systems"
 #SNAPSHOT=20040726
 HOMEPAGE="http://www.busybox.net/"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~mips ~arm ~amd64 ~sparc hppa"
-IUSE="debug uclibc static savedconfig make-busybox-symlinks"
+IUSE="debug uclibc static savedconfig netboot make-busybox-symlinks"
 #IUSE="${IUSE} cross"
 
 MY_PV=${PV/_/-}
@@ -28,7 +29,6 @@ S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
 	!amd64? ( uclibc? ( dev-libs/uclibc ) )
 	>=sys-apps/sed-4"
-
 RDEPEND="!static? ( ${DEPEND} )"
 
 # <pebenito> then eventually turning on selinux would mean
@@ -57,7 +57,13 @@ src_unpack() {
 	# [package]-[version].config
 	# [package].config
 
-	if use savedconfig ; then
+	if use netboot ; then
+		cp ${FILESDIR}/config-netboot .config
+		sed -i \
+			-e '/DEFAULT_SCRIPT/s:/share/udhcpc/default.script:/lib/udhcpc.script:' \
+			networking/udhcp/libbb_udhcp.h \
+			|| die "fixing netboot/udhcpc"
+	elif use savedconfig ; then
 		[ -r .config ] && rm .config
 		for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
 			configfile=/etc/${PN}/${CHOST}/${conf}.config
@@ -156,6 +162,10 @@ src_install() {
 
 	into /
 	dobin busybox
+	if use netboot ; then
+		dosym busybox /bin/sh
+		return 0
+	fi
 	if use make-busybox-symlinks ; then
 		if [ ! "${VERY_BRAVE_OR_VERY_DUMB}" = "yes" ] && [ "${ROOT}" = "/" ];
 		then
@@ -181,7 +191,7 @@ src_install() {
 		cd ${S}
 	fi
 
-	dodoc AUTHORS Changelog LICENSE README TODO
+	dodoc AUTHORS Changelog README TODO
 
 	cd docs || die
 	docinto txt
@@ -202,7 +212,7 @@ src_install() {
 	dodoc bootfloppy.txt display.txt mkdevs.sh etc/* etc/init.d/* 2>/dev/null
 
 	cd ../../ || die
-	if [ `has buildpkg ${FEATURES}` -a `has keepwork ${FEATURES}` ]; then
+	if has buildpkg ${FEATURES} && has keepwork ${FEATURES} ; then
 		cd ${S}
 		# this should install to the ./_install/ dir by default.
 		# we make a micro pkg of busybox that can be used for
