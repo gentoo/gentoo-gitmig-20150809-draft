@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.1.14.ebuild,v 1.6 2001/10/24 16:02:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.1.14.ebuild,v 1.7 2001/10/24 21:00:46 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XEmacs"
 EFS=1.26
 BASE=1.55
-DEPEND="X? virtual/x11"
+DEPEND="sys-libs/ncurses nas? media-libs/nas X? ( virtual/x11 media-libs/libpng media-libs/tiff media-libs/jpeg )"
 SRC_URI="ftp://ftp.xemacs.org/pub/current/${P}.tar.bz2 ftp://ftp.xemacs.org/xemacs/packages/efs-${EFS}-pkg.tar.gz ftp://ftp.xemacs.org/xemacs/packages/xemacs-base-${BASE}-pkg.tar.gz"
 HOMEPAGE="http://www.xemacs.org"
 
@@ -20,8 +20,20 @@ src_unpack() {
 src_compile() {                           
 	local myopts
 	myopts="--without-x"
-	use X && myopts="--with-x"
-	./configure $myopts --prefix=/usr || die
+	use X && myopts="--with-x --with-jpeg --with-png --with-tiff"
+	if [ "`use gpm`" ]
+	then
+		myopts="$myopts --with-gpm"
+	else
+		myopts="$myopts --without-gpm"
+	fi
+	if [ "`use nas`" ]
+	then
+		myopts="$myopts --with-sound=both"
+	else
+		myopts="$myopts --with-sound=native"
+	fi
+	./configure $myopts --without-offix --with-ncurses --with-xpm --without-xface --without-gif --prefix=/usr || die
 	make || die
 }
 
