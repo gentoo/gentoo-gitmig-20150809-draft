@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.86 2005/03/09 04:28:56 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.87 2005/04/02 04:25:06 geoman Exp $
+
+  02 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
+  gnome-desktop-2.8.1.ebuild:
+  stable on mips
 
 *gnome-desktop-2.10.0 (08 Mar 2005)
 

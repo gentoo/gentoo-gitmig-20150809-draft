@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.6.ebuild,v 1.8 2005/01/22 06:32:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.6.ebuild,v 1.9 2005/04/02 04:18:05 geoman Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.jirka.org/gdm.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips ~ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
 IUSE="tcpd xinerama selinux"
 
 SRC_URI="${SRC_URI}

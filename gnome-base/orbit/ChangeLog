@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.13 2005/02/17 06:42:11 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.14 2005/04/02 04:30:35 geoman Exp $
+
+  02 Apr 2005; Stephen P. Becker <geoman@gentoo.org> orbit-2.12.0.ebuild:
+  stable on mips
 
   17 Feb 2005; Joe McCann <joem@gentoo.org> :
   gnome-2.8.3 bugfix release
