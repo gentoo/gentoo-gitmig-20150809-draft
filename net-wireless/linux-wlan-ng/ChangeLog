@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.13 2003/02/28 20:02:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.14 2003/03/02 06:28:15 latexer Exp $
+
+  3 Mar 2003; Peter Johanson <latexer@gentoo.org> linux-wlan-ng-0.1.16_pre9.ebuild :
+  PCMIA_VERSION seems to work better with double quotes.
 
   27 Feb 2003; Peter Johanson <latexer@gentoo.org> linux-wlan-ng-0.1.16_pre9.ebuild :
   small fix to PCMCIA_VERSION. bug #16537
