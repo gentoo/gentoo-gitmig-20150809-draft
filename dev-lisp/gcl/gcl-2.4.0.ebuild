@@ -6,8 +6,10 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common Lisp"
 SRC_URI="ftp://rene.ma.utexas.edu/pub/gcl/gcl-2.4.0.tgz"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
-
 PROVIDE="virtual/commonlisp"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 src_compile() {
 
