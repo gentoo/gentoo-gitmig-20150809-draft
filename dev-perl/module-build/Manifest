@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 72727b07b1edb50cb699a174c0beeaf0 ChangeLog 2105
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 cf098eb42df0bb25c7bb41f9df2607f6 module-build-0.18.ebuild 692
 MD5 cee3a0091b41b34411976310ff51c9b5 module-build-0.19.ebuild 691
 MD5 0e756b2a0902ba35bdbcf85d6d104d5a module-build-0.22.ebuild 733
-MD5 d16160dbebad81399159f7618d3a0c29 module-build-0.25.ebuild 698
-MD5 4b4fd055641a50dc1b69c274919791f8 ChangeLog 1995
+MD5 f6d2d463770907d35e97c41ad297e8ec module-build-0.25.ebuild 699
 MD5 46c83a840d25a11c761e0cbceae27a95 files/digest-module-build-0.18 68
 MD5 0d078cff23ce12c13c3e9525bff85314 files/digest-module-build-0.19 68
 MD5 804380d9ccfd232c890ace70f8539d70 files/digest-module-build-0.22 68
 MD5 02fe7753001f89b0f496f0669d31a1da files/digest-module-build-0.25 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhO8OtG5z4I8BtQoRAm6XAJ9VkJH5AFlPzLJQfz6rt2trnSQvzwCfdMdN
-UArpUcvYwvWdtW2VHPX0/nM=
-=7CBA
+iD8DBQFBns0HmdTrptrqvGERAkXPAKCHGkCRN/bJDTVYnqIAm2eHms4ZqACgh+CO
+eKM/RAXGQmgQCcKpGLJIutE=
+=SoC7
 -----END PGP SIGNATURE-----
