@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r3.ebuild,v 1.4 2004/11/07 00:42:23 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r3.ebuild,v 1.5 2004/11/07 12:26:14 carpaski Exp $
 
 IUSE="build selinux"
 inherit flag-o-matic
@@ -54,6 +54,7 @@ src_unpack() {
 	cd ${S}
 	sed -i "s:^CFLAGS =.*:CFLAGS = :" src/sandbox-1.1/Makefile
 	sed -i "/PORTAGE_RESTRICT.*'')/s:''):' '):" pym/portage.py
+	sed -i "s/self.config/self.options/" bin/dispatch-conf
 }
 
 src_compile() {

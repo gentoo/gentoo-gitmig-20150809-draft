@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5b4876d1ff22198d4a400054b7b529cd portage-2.0.51-r3.ebuild 12379
+MD5 fd921f2db89809d28d25cdcef43fae76 portage-2.0.51-r3.ebuild 12435
 MD5 0470399965cfb502cde05cb35599b7f9 portage-2.0.51_rc7.ebuild 11795
 MD5 2baf8f1a5dcf8f500d4b2888b2fedaa1 portage-2.0.51-r2.ebuild 12293
 MD5 63cadb5f6ef798aaa8b95a899fdea82f portage-2.0.50-r11.ebuild 11572
@@ -15,7 +15,7 @@ MD5 a754ca9e2eea9f8484bf5f93d339043a files/README.RESCUE 1911
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBjW+IBDOEqLMd+jQRAq4eAKC7fm6cyYP2YqLbN8tPXgYgqhLZNgCgtuHF
-/hnwQTbZcirBQaOyE69T5Gk=
-=7wSa
+iD8DBQFBjhR7BDOEqLMd+jQRArU8AJ9hRvT07Q0myPe8+Um6F4EwJRDZkQCePAq7
+zBo7sSp+AYWRVyogacW9WN8=
+=lhY7
 -----END PGP SIGNATURE-----
