@@ -1,0 +1,43 @@
+diff -r -C2 sharutils-4.2.1.orig/doc/remsync.texi sharutils-4.2.1/doc/remsync.texi
+*** sharutils-4.2.1.orig/doc/remsync.texi	Thu Nov 30 18:15:37 1995
+--- sharutils-4.2.1/doc/remsync.texi	Fri Aug  3 18:57:02 2001
+***************
+*** 8,11 ****
+--- 8,15 ----
+  
+  @ifinfo
++ 
++ @direntry
++ * remsync: (remsync).       Synchronize remote files (sharutils).
++ @end direntry
+  This file documents the @code{remsync} command and friends, which have
+  the purpose of synchronizing remote directory trees using email.
+diff -r -C2 sharutils-4.2.1.orig/doc/sharutils.texi sharutils-4.2.1/doc/sharutils.texi
+*** sharutils-4.2.1.orig/doc/sharutils.texi	Fri Nov 24 21:42:52 1995
+--- sharutils-4.2.1/doc/sharutils.texi	Fri Aug  3 18:29:43 2001
+***************
+*** 16,31 ****
+  
+  @ifinfo
+! @format
+! START-INFO-DIR-ENTRY
+  * Shar utilities: (sharutils).          GNU shar utilities.
+! * mail-files: (sharutils)mail-files invocation. Send files to remote site.
+! * mailshar: (sharutils)mailshar invocation.     Make and send a shell archive.
+! * remsync: (sharutils)remsync invocation.       Synchronize remote files.
+! * shar: (sharutils)shar invocation.             Make a shell archive.
+! * unshar: (sharutils)unshar invocation.         Explode a shell archive.
+! * uudecode: (sharutils)uudecode invocation.     Restore file from 7-bits.
+! * uuencode: (sharutils)uuencode invocation.     Force binary file to 7-bits.
+! END-INFO-DIR-ENTRY
+! @end format
+  @end ifinfo
+  
+--- 16,22 ----
+  
+  @ifinfo
+! @direntry
+  * Shar utilities: (sharutils).          GNU shar utilities.
+! @end direntry
+  @end ifinfo
+  
