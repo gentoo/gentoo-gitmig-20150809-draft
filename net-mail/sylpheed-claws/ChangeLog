@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.44 2003/08/07 19:43:05 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.45 2003/08/30 09:28:30 liquidx Exp $
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> sylpheed-claws-0.8.11.ebuild,
+  sylpheed-claws-0.9.0-r1.ebuild, sylpheed-claws-0.9.0.ebuild,
+  sylpheed-claws-0.9.3.ebuild, sylpheed-claws-0.9.4.ebuild:
+  moving app-misc/jpilot to app-pda/jpilot
 
 *sylpheed-claws-0.9.4 (07 Aug 2003)
 
