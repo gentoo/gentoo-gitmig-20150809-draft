@@ -1,27 +1,27 @@
 # ChangeLog for dev-ruby/testunit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit/ChangeLog,v 1.6 2004/02/26 17:50:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit/ChangeLog,v 1.7 2004/03/18 21:35:00 aliz Exp $
 
   27 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> testunit-0.1.5.ebuild,
   testunit-0.1.8.ebuild:
   Make it hard-depend on ruby16 since it's now part of ruby distribution.
   Thanks to Kirill Vasiliev <redled@ornet.ru> for reporting the bug #42455
 
-*testunit-0.1.8.ebuild (10 Apr 2003)
+*testunit-0.1.8 (10 Apr 2003)
 
   10 Apr 2003; Tom Payne <twp@gentoo.org> testunit-0.1.8.ebuild :
 
   Version bump (bug # 17610).
 
-*testunit-0.1.6.ebuild (07 Feb 2003)
+*testunit-0.1.6 (07 Feb 2003)
 
   07 Feb 2002; Ryan Phillips <rphillips@gentoo.org> : new version
 
-*testunit-0.1.5.ebuild (27 Dec 2002)
+*testunit-0.1.5 (27 Dec 2002)
 
   27 Dec 2002; Ryan Phillips <rphillips@gentoo.org> : new version
 
-*testunit-0.1.4.ebuild (19 Aug 2002)
+*testunit-0.1.4 (19 Aug 2002)
 
   19 Aug 2002; G Shapovalov <george@gentoo.org> testunit-0.1.4.ebuild, files/digest-testunit-0.1.4 :
 
