@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.15.ebuild,v 1.3 2004/10/12 03:33:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.15.ebuild,v 1.4 2004/11/30 20:56:03 lu_zero Exp $
 
 inherit eutils gnuconfig
 
@@ -24,10 +24,13 @@ DEPEND=">=sys-fs/e2fsprogs-1.27
 PATCHDIR=${WORKDIR}/patches
 
 src_unpack() {
+	local WANT_AUTOCONF=1.7
 	unpack ${A}
 	cd ${S}
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 	gnuconfig_update
+	libtoolize --force
+	aclocal
 	autoconf
 }
 
