@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mkennedy@gentoo.org> (8 May 2003)
+# waiting for jboss user to be added to passwd
+=net-www/jboss-3.2.1
+
 # <liquidx@gentoo.org> (8 May 2003)
 # testing patch for >=tk-8.4
 =dev-lang/python-2.2.2-r1
