@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.2 2002/04/24 17:21:24 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.3 2002/07/09 05:02:25 seemant Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
@@ -13,6 +12,11 @@ DEPEND="virtual/glibc"
 RDEPEND="virtual/glibc
 	sys-apps/cronbase
 	sys-apps/groff"
+
+
+SLOT="0"
+KEYWORDS="*"
+LICENSE="GPL-2"
 
 src_unpack() {
 	unpack ${A}
