@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8.ebuild,v 1.4 2004/12/24 10:31:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8.ebuild,v 1.5 2004/12/29 09:08:01 mr_bones_ Exp $
 
-inherit toolchain-funcs eutils gnuconfig
+inherit flag-o-matic toolchain-funcs eutils gnuconfig
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha -amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca noaudio novideo nojoystick"
 # if you disable audio/video/joystick and something breaks, you pick up the pieces
 
@@ -64,6 +64,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
+
+	use amd64 && replace-flags -O? -O1 # bug #74608
 	use noaudio && myconf="${myconf} --disable-audio"
 	use novideo \
 		&& myconf="${myconf} --disable-video" \
