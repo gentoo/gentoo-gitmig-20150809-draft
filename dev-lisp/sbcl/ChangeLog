@@ -1,6 +1,18 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.32 2004/04/18 07:37:18 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.33 2004/05/07 17:34:27 mkennedy Exp $
+
+*sbcl-0.8.10 (06 May 2004)
+
+  06 May 2004; <mkennedy@gentoo.org> +files/0.8.10/README.Gentoo,
+  +files/0.8.10/customize-target-features.lisp,
+  +files/0.8.10/customize-target-features.lisp.no-threads,
+  +files/0.8.10/install-clc.lisp, +files/0.8.10/sbcl-asdf-install.1,
+  +files/0.8.10/sbcl-gentoo.patch, +files/0.8.10/sbcl.sh,
+  +files/0.8.10/sbclrc, +sbcl-0.8.10.ebuild:
+  New upstream version; New depend of sys-apps/texinfo for texinfo
+  documentation; Controll generation of PostScript and PDF via doc
+  USE flag (new depend virtual/tetex)
 
   18 Apr 2004; <mkennedy@gentoo.org> files/sbcl.sh, files/0.8.9/sbcl.sh:
   Change /etc/sbcl.rc to /etc/sbclrc for sbcl.sh
