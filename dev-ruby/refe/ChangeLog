@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/refe
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/refe/ChangeLog,v 1.1 2004/01/23 06:37:01 usata Exp $
+
+*refe-0.7.2 (23 Jan 2004)
+
+  23 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> refe-0.7.2.ebuild,
+  refe-0.8.0.ebuild:
+  Initial import.
+
