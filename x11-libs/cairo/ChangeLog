@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.4 2004/05/09 13:18:51 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.5 2004/05/12 00:16:41 lv Exp $
+
+*cairo-0.1.23 (11 May 2004)
+
+  11 May 2004; Travis Tilley <lv@gentoo.org> +cairo-0.1.23.ebuild:
+  version bump and add ~amd64 to keywords
 
   09 May 2004; <twp@gentoo.org> cairo-0.1.18.ebuild:
   Stable on x86.
