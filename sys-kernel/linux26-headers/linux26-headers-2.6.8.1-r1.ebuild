@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.11 2004/12/02 15:30:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.12 2004/12/03 19:25:53 vapier Exp $
 
 # What's in this kernel?
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="${CTARGET}"
-KEYWORDS="-* amd64 arm hppa ~ia64 ~ppc ppc64 ~sparc sh ~x86"
+KEYWORDS="-* amd64 arm hppa ia64 ~ppc ppc64 ~sparc sh x86"
 IUSE=""
 
 DEPEND="!virtual/os-headers"
@@ -84,13 +84,21 @@ src_compile() {
 	[ -f "${ROOT}"/usr/include/linux/autoconf.h ] \
 		|| touch include/linux/autoconf.h
 
+	# When cross-compiling, we need to set the CROSS_COMPILE var properly
+	local extra_makeopts=
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		extra_makeopts="CROSS_COMPILE=${CTARGET}-"
+	fi
+
 	# if there arent any installed headers, then there also isnt an asm
 	# symlink in /usr/include/, and make defconfig will fail, so we have
 	# to force an include path with $S.
+	local HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
+
 	set_arch_to_kernel
 	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
-	make defconfig HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/" || die "defconfig failed"
-	make prepare HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/" || die "prepare failed"
+	make defconfig HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "defconfig failed"
+	make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "prepare failed"
 	set_arch_to_portage
 }
 
@@ -100,17 +108,17 @@ src_install() {
 
 	# If this is sparc, then we need to place asm_offsets.h in the proper location(s)
 	if [ "${PROFILE_ARCH}" = "sparc64" ] ; then
-		# We don't need /usr/include/asm, generate-asm-sparc will take care of this
-		rm -Rf ${D}/usr/include/asm
+		# We don't need the asm dir, generate-asm-sparc will take care of this
+		rm -Rf ${D}/${LINUX_INCDIR}/asm
 
 		# We do need empty directories, though...
-		dodir /usr/include/asm
-		dodir /usr/include/asm-sparc
-		dodir /usr/include/asm-sparc64
+		dodir ${LINUX_INCDIR}/asm
+		dodir ${LINUX_INCDIR}/asm-sparc
+		dodir ${LINUX_INCDIR}/asm-sparc64
 
 		# Copy asm-sparc and asm-sparc64
-		cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
-		cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
+		cp -ax ${S}/include/asm-sparc/* ${D}/${LINUX_INCDIR}/asm-sparc
+		cp -ax ${S}/include/asm-sparc64/* ${D}/${LINUX_INCDIR}/asm-sparc64
 
 		# Check if generate-asm-sparc exists
 		if [ -a "${FILESDIR}/generate-asm-sparc" ]; then
@@ -122,8 +130,8 @@ src_install() {
 				chmod +x ${WORKDIR}/generate-asm-sparc
 			fi
 
-			# Generate /usr/include/asm for sparc systems
-			${WORKDIR}/generate-asm-sparc ${D}/usr/include
+			# Generate asm for sparc systems
+			${WORKDIR}/generate-asm-sparc ${D}/${LINUX_INCDIR}
 		else
 			eerror "${FILESDIR}/generate-asm-sparc doesn't exist!"
 			die
@@ -132,8 +140,8 @@ src_install() {
 
 	# If this is 2.5 or 2.6 headers, then we need asm-generic too
 	if [ "`KV_to_int ${OKV}`" -ge "`KV_to_int 2.6.0`" ]; then
-		dodir /usr/include/asm-generic
-		cp -ax ${S}/include/asm-generic/* ${D}/usr/include/asm-generic
+		dodir ${LINUX_INCDIR}/asm-generic
+		cp -ax ${S}/include/asm-generic/* ${D}/${LINUX_INCDIR}/asm-generic
 	fi
 }
 
