@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.43 2003/10/15 01:26:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.44 2003/11/13 02:06:00 weeve Exp $
+
+  12 Nov 2003; Jason Wever <weeve@gentoo.org> gnumeric-1.2.0.ebuild:
+  Marked stable on sparc, fixes bug #32405.
 
   14 Oct 2003; Jason Wever <weeve@gentoo.org> gnumeric-1.0.8.ebuild:
   Added ~sparc keyword.  Fixes bug #31150.
