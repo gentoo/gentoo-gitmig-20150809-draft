@@ -2,7 +2,11 @@
 *>=sys-apps/baselayout-1.8.11
 *>=sys-apps/portage-2.0.50-r8
 *>=sys-devel/binutils-2.15.90.0.1.1-r1
-*>=sys-devel/gcc-3.4.0-r6
+
+# lets not mask gcc 3.3.x so that repoman doesnt have a hissy fit
+#*>=sys-devel/gcc-3.4.0-r6
+*>=sys-devel/gcc-3.3.3
+
 *sys-libs/libstdc++-v3
 *>=sys-libs/glibc-2.3.4.20040605
 *virtual/modutils
