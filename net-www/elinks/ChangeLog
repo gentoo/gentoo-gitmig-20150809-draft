@@ -1,6 +1,9 @@
 # ChangeLog for net-www/elinks
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.14 2004/04/09 14:25:26 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.15 2004/04/13 10:09:24 spock Exp $
+
+  13 Apr 2004; Michal Januszewski <spock@gentoo.org> elinks-0.9.1.ebuild:
+  Fixed a minor IUSE issue in the latest ebuild.
 
   09 Apr 2004; Michal Januszewski <spock@gentoo.org> elinks-0.4.2.ebuild,
   elinks-0.4.3_rc2.ebuild, elinks-0.9.1.ebuild:
