@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.0.ebuild,v 1.6 2004/08/22 20:39:47 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.0.ebuild,v 1.7 2004/08/23 14:47:13 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -243,7 +243,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${OO_VER}/gentoo-splash.diff
 
 	if use ooo-kde; then
-		DISTRO=KDE
+		DISTRO=GentooKDE
 		ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
 		WIDGETSET=kde
 	else
