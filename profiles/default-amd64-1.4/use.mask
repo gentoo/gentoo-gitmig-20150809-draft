@@ -24,3 +24,6 @@ icc
 
 # Firebird doesnt build on amd64
 firebird
+
+# DirectFB doesnt build on amd64
+directfb
