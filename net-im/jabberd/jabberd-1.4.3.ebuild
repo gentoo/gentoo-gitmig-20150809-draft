@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3.ebuild,v 1.1 2004/01/12 00:04:44 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3.ebuild,v 1.2 2004/01/29 23:47:06 humpback Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
@@ -52,7 +52,8 @@ src_install() {
 	touch ${D}/var/log/jabber/error.log
 	touch ${D}/var/log/jabber/record.log
 	dodir /var/spool/jabber
-	touch ${D}/var/spool/jabber/.keep
+	keepdir ${D}/var/spool/jabber/
+	keepdir ${D}/var/log/jabber/
 	dodir /var/run
 
 	exeinto /usr/sbin
@@ -97,7 +98,6 @@ src_install() {
 	fowners jabber:jabber /var/log/jabber/error.log
 	fowners jabber:jabber /var/log/jabber/record.log
 	fowners jabber:jabber /var/spool/jabber
-	fowners jabber:jabber /var/spool/jabber/.keep
 
 	fperms o-rwx /etc/jabber
 	fperms o-rwx /usr/sbin/jabberd
@@ -105,7 +105,6 @@ src_install() {
 	fperms o-rwx /var/log/jabber/error.log
 	fperms o-rwx /var/log/jabber/record.log
 	fperms o-rwx /var/spool/jabber
-	fperms o-rwx /var/spool/jabber/.keep
 	fperms u+rwx /usr/sbin/jabberd
 
 	fperms g-x /etc/jabber
@@ -114,7 +113,6 @@ src_install() {
 	fperms g-x /var/log/jabber/error.log
 	fperms g-x /var/log/jabber/record.log
 	fperms g-x /var/spool/jabber
-	fperms g-x /var/spool/jabber/.keep
 
 	fperms g+rw /etc/jabber
 	fperms g+rw /usr/sbin/jabberd
@@ -122,7 +120,6 @@ src_install() {
 	fperms g+rw /var/spool/jabber/error.log
 	fperms g+rw /var/spool/jabber/record.log
 	fperms g+rw /var/log/jabber
-	fperms g+rw /var/log/jabber/.keep
 	fperms u+xs /usr/sbin/jabberd
 
 	#Install header files for transports to use
