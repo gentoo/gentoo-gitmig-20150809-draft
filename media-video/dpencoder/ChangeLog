@@ -1,0 +1,9 @@
+# ChangeLog for media-video/dpencoder
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dpencoder/ChangeLog,v 1.1 2004/03/09 03:13:45 rphillips Exp $
+
+*dpencoder-0.6c (08 Mar 2004)
+
+  08 Mar 2004; rphillips <rphillips@gentoo.org> dpencoder-0.6c.ebuild:
+  new package. created by me
+
