@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.5 2002/08/14 11:52:27 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.6 2002/10/31 02:30:56 raker Exp $
 
 DESCRIPTION="foreign function call libraries"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P}.tar.gz"
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	econf || die "./configure failed"
-	emake || die
+	make || die
 }
 
 src_install () {
