@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.2-r1.ebuild,v 1.1 2002/03/21 19:31:48 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.2-r1.ebuild,v 1.2 2002/03/30 00:23:40 blocke Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz
+SRC_URI="
 	 ftp://ftp.ximian.com/pub/source/${PN}/${P}.tar.gz
 	 http://people.codefactory.se/~micke/${PN}/${P}.tar.gz
 	 http://www.sleepycat.com/update/3.1.17/${DB3}.tar.gz"

@@ -1,12 +1,17 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.4 2002/03/29 10:11:57 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.5 2002/03/30 00:23:40 blocke Exp $
 
-*evolution-1.0.3 	(29 Mar 2002)
-  29 Mar 2002; Spider <spider@gentoo.org> :
+*evolution-1.0.3 (29 Mar 2002)
+
+  29 Mar 2002; Spider <spider@gentoo.org> evolution-1.0.3.ebuild :
   
   Update to latest evolution, keep 2 patches
   Add optional perl dependency in order to use gtk-doc
+
+  29 Mar 2002; Bruce A. Locke <blocke@shivan.org> evolution-1.0.3.ebuild :
+
+  Removed an invalid mirror from the SRC_URI.
 
 
 *evolution-1.0.2-r1 (21 Mar 2002)
