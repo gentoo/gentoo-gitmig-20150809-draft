@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.7.ebuild,v 1.4 2004/04/03 14:01:58 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.7.ebuild,v 1.5 2004/04/26 00:18:23 agriffis Exp $
 
 inherit base
 
@@ -24,7 +24,7 @@ src_compile() {
 	# ICC: if we've got it, use it
 	use icc && myconf="--with-cxx=icc" || myconf="--with-cxx=gcc"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake lib || die
 }
 
