@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/make
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.2 2002/08/07 21:29:36 azarah Exp $
+
+*make-3.79.1-r4 (07 Aug 2002)
+
+  07 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Do not install make sgid.  Resolves bug #4056.
 
 *make-3.79.1-r3 (1 Feb 2002)
 
