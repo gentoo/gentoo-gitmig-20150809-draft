@@ -3,7 +3,7 @@ MD5 3d7a4b17fdd65d58410d13c492450f99 kdewebdev-3.3.0.ebuild 401
 MD5 0467cb983c56636ea410b51feff0ab1f kdewebdev-3.3.2.ebuild 419
 MD5 5f8a0b3b79f7c5f5163f93a7747557a0 ChangeLog 3877
 MD5 64b750dcb7f408a45ca4edf19c9fd36c kdewebdev-3.3.0-r1.ebuild 571
-MD5 67c2b1cf799ddfedb79046a50c3f40d8 kdewebdev-3.4.0_beta1.ebuild 715
+MD5 9755ae8ab51e85b14681aa0f6c63d22b kdewebdev-3.4.0_beta1.ebuild 736
 MD5 4a430bb29e0f333be026d9ed2469322d kdewebdev-3.3.1.ebuild 420
 MD5 5e1d564c67981383f6c070b65c3a4475 files/digest-kdewebdev-3.3.1 69
 MD5 6cc96fa9a343126d0cf662767723c48b files/digest-kdewebdev-3.3.0 69

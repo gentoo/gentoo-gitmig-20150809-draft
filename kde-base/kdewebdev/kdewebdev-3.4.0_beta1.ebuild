@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/kdewebdev-3.4.0_beta1.ebuild,v 1.4 2005/01/16 17:23:10 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/kdewebdev-3.4.0_beta1.ebuild,v 1.5 2005/01/16 17:25:41 greg_g Exp $
 
 inherit kde-dist
 
@@ -11,10 +11,12 @@ IUSE="doc tidy"
 
 DEPEND="~kde-base/kdebase-${PV}
 	doc? ( app-doc/quanta-docs )
-	tidy? ( app-text/htmltidy )
 	!app-editors/quanta
 	!app-text/kfilereplace
 	!media-gfx/kimagemapeditor"
+
+RDEPEND="${DEPEND}
+	tidy? ( app-text/htmltidy )"
 
 src_install() {
 	kde_src_install
