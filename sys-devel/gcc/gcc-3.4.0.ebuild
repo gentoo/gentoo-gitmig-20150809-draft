@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.8 2004/04/27 06:11:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.9 2004/04/27 16:57:10 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -115,7 +115,7 @@ fi
 
 # PERL cannot be present at bootstrap, and is used to build the man pages. So..
 # lets include some pre-generated ones, shall we?
-#SRC_URI="${SRC_URI} mirror://gentoo/${P}-manpages.tar.bz2"
+SRC_URI="${SRC_URI} mirror://gentoo/${P}-manpages.tar.bz2"
 
 # We need the later binutils for support of the new cleanup attribute.
 # 'make check' fails for about 10 tests (if I remember correctly) less
@@ -251,6 +251,14 @@ update_gcc_for_libc_ssp() {
 }
 
 src_unpack() {
+	# I think it's a little messed up to allow people to compile just to have
+	# it fail right near the end, so lets die right away when parts that are
+	# known to be broken are going to be compiled.
+	# Travis Tilley <lv@gentoo.org>
+	use java && use gcj && die "gcj will not compile yet with gcc 3.4.0. re-emerge with USE=-gcj"
+	use amd64 && use multilib && die "multilib support will not compile yet with gcc 3.4.0. re-emerge with USE=-multilib"
+
+
 	local release_version="Gentoo Linux ${PVR}"
 
 	ewarn "Do not hold me accountable if GCC 3.4 makes things unstable, wont"
@@ -322,10 +330,10 @@ src_unpack() {
 	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
 
 	# Install our pre generated manpages if we do not have perl ...
-	#if [ ! -x /usr/bin/perl ]
-	#then
-	#	cd ${S}; unpack ${P}-manpages.tar.bz2
-	#fi
+	if [ ! -x /usr/bin/perl ]
+	then
+		cd ${S}; unpack ${P}-manpages.tar.bz2
+	fi
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
@@ -432,10 +440,10 @@ src_compile() {
 	touch ${S}/gcc/c-gperf.h
 
 	# Do not make manpages if we do not have perl ...
-	#if [ ! -x /usr/bin/perl ]
-	#then
-	#	find ${S} -name '*.[17]' -exec touch {} \; || :
-	#fi
+	if [ ! -x /usr/bin/perl ]
+	then
+		find ${S} -name '*.[17]' -exec touch {} \; || :
+	fi
 
 	# Setup -j in MAKEOPTS
 	get_number_of_jobs

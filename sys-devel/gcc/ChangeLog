@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.223 2004/04/27 14:30:45 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.224 2004/04/27 16:57:09 lv Exp $
 
 *gcc-3.3.3_pre20040426 (27 Apr 2004)
 
@@ -11,6 +11,10 @@
 
   27 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.4.0.ebuild:
   cleanup flag stuff and remove CHOST setting with hppa gcc-3.4.0.ebuild
+
+  27 Apr 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0.ebuild:
+  re-added manpages and made the ebuild automatically die if gcj or multilib are
+  in USE, as these are sure to make gcc 3.4.0 fail at this point...
 
   26 Apr 2004; Tom Gall <tgall@gentoo.org> gcc-3.4.0.ebuild:
   fix bug 49111, appears to work quite well on ppc64
