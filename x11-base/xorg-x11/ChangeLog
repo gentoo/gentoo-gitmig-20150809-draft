@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.18 2004/04/09 22:42:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.19 2004/04/10 04:15:08 spyderous Exp $
+
+  10 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
+  Add sys-apps/util-linux to DEPEND, reported by IceD^ in Freenode #gentoo.
 
   09 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
   PATCH_VER 0.3. Add 9110_all_xorg-6.7.0-pci-domains.patch to close #43630. This
