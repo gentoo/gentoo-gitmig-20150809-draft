@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.2.1.ebuild,v 1.2 2003/03/09 12:11:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.2.1.ebuild,v 1.3 2003/03/25 02:14:23 liquidx Exp $
 
-inherit eutils
+inherit eutils kde
 
 DESCRIPTION="Cross-platform gettext catalogs (.po files) editor."
 SRC_URI="mirror://sourceforge/poedit/${P}.tar.bz2"
@@ -34,6 +34,7 @@ src_install () {
 	einstall \
 		datadir=${D}/usr/share \
 		GNOME_DATA_DIR=${D}/usr/share || die
+        KDE_DATA_DIR=${D}/${KDEDIR}/share || die
 
 	dodoc AUTHORS LICENSE NEWS README TODO
 }

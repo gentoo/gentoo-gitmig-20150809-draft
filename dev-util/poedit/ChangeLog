@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/poedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/ChangeLog,v 1.6 2003/03/09 01:15:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/ChangeLog,v 1.7 2003/03/25 02:14:23 liquidx Exp $
 
 *poedit-1.2.1 (08 Mar 2003)
+
+  25 Mar 2003; Alastair Tse <liquidx@gentoo.org> poedit-1.2.1.ebuild:
+  added correct KDE install paths
 
   08 Mar 2003; foser <foser@gentoo.org> poedit-1.2.1.ebuild :
   New version
