@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.55 2004/11/12 00:06:52 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.56 2004/11/12 17:49:00 gustavoz Exp $
+
+  12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> hotplug-20040923.ebuild:
+  Stable on sparc
 
   12 Nov 2004; Daniel Drake <dsd@gentoo.org> hotplug-20040923.ebuild:
   Update coldplug warning message to suggest coldplug to go into boot runlevel
