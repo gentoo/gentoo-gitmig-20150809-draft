@@ -1,9 +1,14 @@
 # ChangeLog for app-i18n/imhangul_status_applet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul_status_applet/ChangeLog,v 1.5 2003/02/12 04:22:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul_status_applet/ChangeLog,v 1.6 2003/02/13 04:13:09 seo Exp $
 
 *imhangul_status_applet-0.2-r1 (27 Jan 2003)
 
+  14 Feb 2003; Jungmin Seo <seo@gentoo.org> 
+  imhangul_status_applet-0.2-r1.ebuild :
+  included src_install. This now solves access problems while some
+  some users tried to build.
+  
   27 Jan 2003; Jungmin Seo <seo@gentoo.org> 
   imhangul_status_applet-0.2-r1.ebuild, 
   files/digest-imhangul_status_applet-02-r1, ChangeLog :
