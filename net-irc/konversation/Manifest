@@ -2,11 +2,11 @@
 Hash: SHA1
 
 MD5 89e9d70ce5273141b221be5658eb2232 konversation-0.14.ebuild 553
-MD5 5c157f6f0ba6a5655cc48f8c42d1f540 konversation-0.15.1.ebuild 562
+MD5 ccb0faf117bd3bcde8f74f27ddc0e47f konversation-0.15.1.ebuild 561
 MD5 c2778519cbbe48143209f8814572481b konversation-0.13.ebuild 551
 MD5 623664780d12eec8d332ff504973cc67 konversation-0.15.ebuild 560
 MD5 f4ccc728132f1de391fea642b285a639 konversation-0.10.ebuild 555
-MD5 fdd6a36a508f4eb10cbc3eb1f15b1c2d ChangeLog 1913
+MD5 e2342bf4fcafd31b442f84f541cfea37 ChangeLog 2011
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 16524313d45151786b72dee746cc8804 files/digest-konversation-0.15.1 73
 MD5 7cab566cc135e0f562f8393a7e7a7545 files/digest-konversation-0.10 69
@@ -16,7 +16,7 @@ MD5 1f09ef7bdc5865fd2446a76b84f4c1e8 files/digest-konversation-0.15 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB7uK8I1lqEGTUzyQRAn5gAJwKGxyRbgFvg9JqyROwkTbqA00NQACgkt/c
-adCW41P1nJBxvlcLisfwtdU=
-=MtSA
+iD8DBQFB7vAfI1lqEGTUzyQRAk47AJ9VXPclF4IMDBySM6WllNJ3qKlDZwCgjMiB
+ae3IHgV6L0Pgo7w++B/pWOI=
+=D1KX
 -----END PGP SIGNATURE-----
