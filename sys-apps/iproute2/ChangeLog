@@ -1,11 +1,15 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.2 2002/02/08 05:37:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.3 2002/05/26 09:33:14 prez Exp $
 
 *iproute2-2.4.7-r1 (7 Feb 2002)
 
+ 26 May 2002: Preston A. Elder <prez@gentoo.org>:  Removed -Werror from the
+ makefile, which allows gcc 3.1 to compile.
+
  7 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: Added a dead-route-fix.diff to
  close bug #595 (see it for a description of the problem it fixes)
+
 
 *iproute2-2.4.7 (1 Feb 2002)
 
