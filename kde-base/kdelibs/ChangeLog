@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.42 2003/01/08 21:45:57 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.43 2003/01/15 01:23:01 hannes Exp $
+
+  14 Jan 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.1.ebuild:
+  fixes for kde-3.1 (removed unneeded patches)
 
   08 Jan 2003; Mark Guertin <gerk@gentoo.org> kdelibs-3.1_rc6.ebuild:
   added ~ppc to keywords
