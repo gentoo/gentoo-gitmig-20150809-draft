@@ -1,16 +1,26 @@
-MD5 ceaa83da79c90966c8126983cad74dbe gconf-editor-2.8.0.ebuild 705
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e62e93a96d8efc1f69b611a75b8a2f26 ChangeLog 5448
 MD5 dd169995c69c19a9a9fa15dfaa9bf32e gconf-editor-2.4.0.ebuild 694
-MD5 0e491d300cb46de0592ea885fe13fb3b gconf-editor-2.6.1.ebuild 629
-MD5 f01e5bd33509a426f6a12d386421f9bc gconf-editor-2.8.2.ebuild 690
 MD5 2bd2d557c2a9dcc663eb8102547b1b9f gconf-editor-2.6.0.ebuild 861
+MD5 0e491d300cb46de0592ea885fe13fb3b gconf-editor-2.6.1.ebuild 629
 MD5 435227d80a16247ada1b96a524c2f76f gconf-editor-2.6.2.ebuild 626
-MD5 6565b1bc41067f1103431d8866811a45 ChangeLog 5341
+MD5 ceaa83da79c90966c8126983cad74dbe gconf-editor-2.8.0.ebuild 705
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 37d0c602679587424d11f7b6363421a8 files/gconf-editor-2.4.0-gtk+-2.4.patch 1528
+MD5 deb8cd38ad5c15605c56f923ee66dc86 gconf-editor-2.8.2.ebuild 694
 MD5 a2b72e9cea80bfd300183397a4487a72 files/digest-gconf-editor-2.4.0 71
 MD5 e1005344b4be9e39de4829d91f0c2aba files/digest-gconf-editor-2.6.0 71
 MD5 8866f71c7c4162fc9ed59f0f60bdfe6c files/digest-gconf-editor-2.6.1 71
 MD5 6b1fcd04a46411dda1c62bd9df47e431 files/digest-gconf-editor-2.6.2 71
 MD5 dc5bba44c0b64bae5537992930ccd9d0 files/digest-gconf-editor-2.8.0 71
-MD5 1a02c71e7fe8df4aeb8b35a48667c2b9 files/digest-gconf-editor-2.8.2 71
+MD5 37d0c602679587424d11f7b6363421a8 files/gconf-editor-2.4.0-gtk+-2.4.patch 1528
 MD5 d82811e98599090bb20b4e7173356556 files/gconf-editor-2.6.0-revert_escape_cjk.patch 3887
+MD5 1a02c71e7fe8df4aeb8b35a48667c2b9 files/digest-gconf-editor-2.8.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByOFLKRy60XGEcJIRAuIdAKCk5wZ7gjU/mepjcoBYfPVClLdKqACdGh5c
+ZEWadyO3AIb0urI91a6vS+s=
+=zWsO
+-----END PGP SIGNATURE-----
