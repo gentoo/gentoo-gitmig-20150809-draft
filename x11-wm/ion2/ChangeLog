@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.22 2004/10/07 12:19:22 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.23 2004/10/07 12:28:01 twp Exp $
+
+  07 Oct 2004; Tom Payne <twp@gentoo.org> -files/ion2-20040207-20040211.patch,
+  -files/ion2-20040207-rename.patch, -files/ion2-20040407-rename.patch,
+  -files/xftde-20040207.patch:
+  Removed old files.
 
   07 Oct 2004; Tom Payne <twp@gentoo.org> -ion2-20040407.ebuild,
   -ion2-20040601.ebuild:
