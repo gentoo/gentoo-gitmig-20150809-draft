@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.6 2004/06/30 01:05:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.7 2004/07/26 04:04:52 lv Exp $
 
 DESCRIPTION="MPEG 4 implementation library"
 
@@ -27,8 +27,7 @@ RDEPEND="sys-devel/libtool
 	nas? ( media-libs/nas virtual/x11 )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
-	esd? ( media-sound/esound )
-	!media-libs/faad2"
+	esd? ( media-sound/esound )"
 
 DEPENDS="${RDEPEND}
 	x86? ( mmx? ( >=dev-lang/nasm-0.98.19 ) )"

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.12 2004/06/30 01:05:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.13 2004/07/26 04:04:52 lv Exp $
+
+  26 Jul 2004; Travis Tilley <lv@gentoo.org> mpeg4ip-1.1.ebuild:
+  removed invalid blocker that prevents faad2 from being installed when mpeg4ip
+  is also installed
 
   29 Jun 2004; <tester@gentoo.org> mpeg4ip-1.0.ebuild, mpeg4ip-1.1.ebuild:
   Removed superfluous S= and marked 1.1 stable on x86
