@@ -1,6 +1,16 @@
 # ChangeLog for media-video/drip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.5 2002/05/26 14:05:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.6 2002/05/27 19:44:17 azarah Exp $
+
+*drip-0.8.1-r4 (27 May 2002)
+
+  27 May 2002; M.Schlemmer <azarah@gentoo.org> drip-0.8.1-r4.ebuild :
+
+  Resolve bug #3052.  Seems the older divx4linux headers included 
+  stdio.h, and I missed it due to multiple versions on my system.
+
+  Also fix the startup problem if /dev/dvd are not an absolute
+  symlink.
 
 *drip-0.8.1-r3 (26 May 2002)
 
