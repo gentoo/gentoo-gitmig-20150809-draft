@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2.1-r1.ebuild,v 1.2 2001/02/27 17:46:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2.1-r1.ebuild,v 1.3 2001/02/27 18:10:31 achim Exp $
 
 
 SRC_URI="ftp://ftp.freesoftware.com/pub/sourceware/gcc/releases/${PN}-2.95.2/${PN}-2.95.2.tar.gz
@@ -161,6 +161,7 @@ src_install() {
             dodoc ChangeLog NEWS
         fi
     else
+        rm -rf ${D}/usr/share/{man,info}
         cd texinfo
         dobin makeinfo/makeinfo util/texi2dvi util/install-info util/texindex
     fi
