@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.49 2003/03/23 07:45:22 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.50 2003/03/25 10:14:41 seemant Exp $
 
   10 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> xchat-2.0.0.ebuild:
   Mark stable on ppc
@@ -40,6 +40,10 @@
   new version
 
 *xchat-1.8.11 (23 Jan 2003)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xchat-1.8.10-r1.ebuild,
+  xchat-1.8.10.ebuild, xchat-1.8.10.ebuild, xchat-1.8.11.ebuild:
+  made gtk an optional USE based dep
 
   09 Mar 2003; Aron Griffis <agriffis@gentoo.org> xchat-1.8.11.ebuild:
   Mark stable on alpha
