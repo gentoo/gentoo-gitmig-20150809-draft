@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.1.94.ebuild,v 1.12 2003/09/07 22:32:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.1.94.ebuild,v 1.13 2003/11/20 02:20:13 vapier Exp $
 
 IUSE="nls bonobo"
 
@@ -59,8 +59,7 @@ pkg_postinst() {
 	SOURCE=xml::/etc/gconf/gconf.xml.defaults
 	GCONF_CONFIG_SOURCE=$SOURCE \
 		gconftool-1 --makefile-install-rule \
-		/etc/gconf/schemas/${PN}.schemas \
-		# 2>/dev/null >/dev/null || exit 1
+		/etc/gconf/schemas/${PN}.schemas
 	assert "gconftool-1 execution failed"
 }
 
