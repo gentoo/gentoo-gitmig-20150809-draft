@@ -1,3 +1,13 @@
-MD5 71e9c127750337107aab91afcf29effc ChangeLog 691
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 97cbc3645039f4f6e078a4dc9a2316d0 linklint-2.3.4.ebuild 656
+MD5 504c4a7b76039e0be613c34cd7a34aa9 ChangeLog 774
 MD5 0f498c7e407bf42a5e0a14d31a83d34a files/digest-linklint-2.3.4 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsT0I1lqEGTUzyQRAqpwAKC4MgJDvOXSyx8VRYlCXy7aDpeh4ACfaiPb
+H1Xj1FkB/2JBiN325CET41E=
+=rRnW
+-----END PGP SIGNATURE-----

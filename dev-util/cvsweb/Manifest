@@ -1,10 +1,20 @@
-MD5 54f6d6de5275ee025d36df796c3d1a5d cvsweb-3.0.1.ebuild 1053
-MD5 1f0eec037240e30424285b813075be80 cvsweb-1.93-r1.ebuild 756
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6d2fc394b485647fcfec06710f50c3ec cvsweb-1.112.ebuild 870
-MD5 4a9fd87380bfbf92063e5b58596492c9 ChangeLog 1571
+MD5 1f0eec037240e30424285b813075be80 cvsweb-1.93-r1.ebuild 756
+MD5 54f6d6de5275ee025d36df796c3d1a5d cvsweb-3.0.1.ebuild 1053
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 7d1cab46b5ebaf4e21ef0b5232cde864 files/postinstall-en.txt 35
+MD5 b9dad0248cc26a2016a6cec010813053 ChangeLog 1655
 MD5 1f9930e7dc9c78f027d027ea8e8ca952 files/digest-cvsweb-1.112 63
-MD5 dbe3501ba30cd9e302a359c3c8fb2afe files/digest-cvsweb-3.0.1 63
 MD5 947f34c2c4de11e6d9ebbd7a5129afa9 files/digest-cvsweb-1.93-r1 62
+MD5 dbe3501ba30cd9e302a359c3c8fb2afe files/digest-cvsweb-3.0.1 63
+MD5 7d1cab46b5ebaf4e21ef0b5232cde864 files/postinstall-en.txt 35
 MD5 96989d4820737c98f7ff8199c2a1c423 files/reconfig 321
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsRnI1lqEGTUzyQRAlmXAJ9Sw9s0zyAlDy0a7Ue31L73FP2TIACePUQa
+92UnxLosnJppX3Sj1NJa5zo=
+=oxwh
+-----END PGP SIGNATURE-----
