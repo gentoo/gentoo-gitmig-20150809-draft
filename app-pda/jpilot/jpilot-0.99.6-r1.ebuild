@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.6-r1.ebuild,v 1.8 2004/05/03 10:15:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.6-r1.ebuild,v 1.9 2004/05/04 22:42:20 kloeri Exp $
 
 SYNCMAL="0.72.1"
 MALSYNC="2.2.0"
@@ -16,7 +16,7 @@ HOMEPAGE="http://jpilot.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~alpha amd64 ~ppc"
+KEYWORDS="x86 sparc alpha amd64 ~ppc"
 IUSE="nls gtk2"
 
 RDEPEND="gtk2? ( >=x11-libs/gtk+-2 )

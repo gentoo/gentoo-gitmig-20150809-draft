@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.15 2004/05/03 20:38:57 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.16 2004/05/04 22:42:20 kloeri Exp $
+
+  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> jpilot-0.99.6-r1.ebuild:
+  Stable on alpha.
 
 *jpilot-0.99.7 (03 May 2004)
 
