@@ -1,16 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r4.ebuild,v 1.5 2003/11/24 17:48:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r4.ebuild,v 1.6 2004/02/14 05:20:06 vapier Exp $
 
 inherit eutils
 
 MY_P=nc${PV}
-S=${WORKDIR}/nc-${PV}
 DESCRIPTION="A network piping program"
+HOMEPAGE="http://www.atstake.com/research/tools/network_utilities/"
 SRC_URI="http://www.atstake.com/research/tools/network_utilities/${MY_P}.tgz
 	ipv6?( ftp://sith.mimuw.edu.pl/pub/users/baggins/IPv6/nc-v6-20000918.patch.gz )
 	mirror://gentoo/${P}-deb-patches.tbz2"
-HOMEPAGE="http://www.atstake.com/research/tools/network_utilities/"
 
 LICENSE="as-is"
 SLOT="0"
@@ -18,6 +17,8 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE="ipv6 static"
 
 DEPEND="virtual/glibc"
+
+S=${WORKDIR}/nc-${PV}
 
 src_unpack() {
 	mkdir ${S}
@@ -42,7 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin nc
+	dobin nc || die "dobin failed"
 	dodoc README README.Debian netcat.blurb
 	doman nc.1
 	docinto scripts
