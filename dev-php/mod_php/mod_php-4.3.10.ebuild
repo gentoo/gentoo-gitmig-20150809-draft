@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.10.ebuild,v 1.3 2004/12/16 10:42:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.10.ebuild,v 1.4 2004/12/17 01:38:38 gustavoz Exp $
 
 IUSE="${IUSE} apache2"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa amd64 ~ia64 ~s390 ppc64 ~mips"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64 ~ia64 ~s390 ppc64 ~mips"
 
 detectapache() {
 	local domsg=
@@ -75,6 +75,7 @@ src_unpack() {
 	if [ "${ARCH}" == "amd64" ] ; then
 		epatch ${FILESDIR}/mod_php-4.3.4-amd64hack.diff
 	fi
+	[ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/stdint.diff
 
 	# bug fix for security problem - bug #39952
 	# second revision as the apache2 stuff was resolved upstream
