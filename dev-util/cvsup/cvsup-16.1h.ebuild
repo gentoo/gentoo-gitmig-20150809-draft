@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.10 2004/06/25 02:26:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.11 2004/06/28 04:22:56 agriffis Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ RDEPEND="virtual/glibc"
 S=${WORKDIR}
 
 seduse() {
-	[ -z "`use ${1}`" ] && echo "${2}" || echo ":"
+	useq !${1} && echo "${2}" || echo ":"
 }
 
 src_unpack() {
