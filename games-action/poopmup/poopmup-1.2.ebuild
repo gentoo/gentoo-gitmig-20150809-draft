@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.2 2004/02/20 06:13:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.3 2004/03/02 14:26:10 vapier Exp $
 
-inherit games
+inherit games gcc
 
 DESCRIPTION="You are now free to fly around the city and poop on passers-by"
 HOMEPAGE="http://poopmup.sourceforge.net/"
@@ -20,24 +20,23 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/includes
-	cp textureLoader.h{,.orig}
-	sed -e "s:textures/:${GAMES_DATADIR}/${PN}/:" \
-		textureLoader.h.orig > textureLoader.h
 	cd ${S}
-	cp myConfig.h{,.orig}
-	sed -e "s:config/:${GAMES_SYSCONFDIR}/:" \
-		myConfig.h.orig > myConfig.h
+	sed -i \
+		-e "s:textures/:${GAMES_DATADIR}/${PN}/:" \
+		includes/textureLoader.h || die
+	sed -i \
+		-e "s:config/:${GAMES_SYSCONFDIR}/:" \
+		myConfig.h || die
 }
 
 src_compile() {
-	emake CC="${CXX:-g++} ${CFLAGS}" || die
+	emake CC="$(gcc-getCXX) ${CFLAGS}" || die
 }
 
 src_install() {
 	rm -rf `find -name CVS`
 
-	newgamesbin poopmup.o poopmup
+	newgamesbin poopmup.o poopmup || die
 
 	insinto ${GAMES_DATADIR}/${PN}
 	doins textures/*
