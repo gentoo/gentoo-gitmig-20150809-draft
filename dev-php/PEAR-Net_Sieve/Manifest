@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb262f83091f36b32a9cc18bc8e98a6c ChangeLog 2622
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 5a151798080e1473adc949c68fcc5c36 PEAR-Net_Sieve-1.1.1.ebuild 537
 MD5 0e2214b2fd76c4baf749d5c5ca21db2b PEAR-Net_Sieve-0.9.0.ebuild 475
-MD5 fbe1247032825fe12b2fca0c692fb394 PEAR-Net_Sieve-1.1.1.ebuild 536
+MD5 76293bb433bfd0681a0fdbab3eb14212 ChangeLog 2721
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 b0e345db764e54eca5b429533c3c0dab files/digest-PEAR-Net_Sieve-0.9.0 62
 MD5 18d89c9aa63c77fb9e800790e7bd4f8f files/digest-PEAR-Net_Sieve-1.1.1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRsamugEuf3OQ0akRAnNPAJ9a871AcoK0zqT0547AlLZj3vrPWwCfSs1A
-xgEjMV6OcRCZtyj9yOrfaag=
-=MUVU
------END PGP SIGNATURE-----
