@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 ae5a20e715b012a99bfd3b7fc0583a85 kenosis-0.92.ebuild 612
-MD5 eba4b6a021756c705fe89fc73d4f96c2 metadata.xml 258
 MD5 394e0c0c7bd2a09de46482ff05c4eebc ChangeLog 347
+MD5 760a55aa181d5c557b4912d88a300d50 metadata.xml 281
 MD5 3c5b1b91bb0c3f0df1944275718412d3 files/digest-kenosis-0.92 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB5Etez2gxt1z4IGYRAm4+AKDJ5G1gbfA4g4rCbAx2/l3PZnVM4QCfTWh5
-n1276ueGXcf8JFQxNs6xlck=
-=K1QC
+iD8DBQFB5F4YI1lqEGTUzyQRAqL9AKCbuKL9Kw/tm2Tpg1mzOHRv1lyPBgCgx8gg
+7blIFIFd1mDZYarzoHw0xqk=
+=imMF
 -----END PGP SIGNATURE-----
