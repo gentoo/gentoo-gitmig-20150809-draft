@@ -1,11 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.8 2005/03/25 04:04:53 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.9 2005/03/25 04:15:10 pythonhead Exp $
 
   25 Mar 2005; Rob Cakebread <pythonhead@gentoo.org>
-  +files/rails-0.11.0-dispatch.fcgi.diff, rails-0.11.0.ebuild:
+  +files/rails-0.11.0-dispatch.fcgi.diff, +rails-0.11.0-r1.ebuild:
   Patched borken dispatch.fcgi, added some helpful einfo about upgrading from
-  0.10
+  0.10. Removed 0.11.0
 
 *rails-0.11.0 (22 Mar 2005)
 
