@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.3.ebuild,v 1.1 2001/09/15 19:56:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.3.ebuild,v 1.2 2001/09/15 20:12:32 drobbins Exp $
 
 SV=1.1.6
 S=${WORKDIR}/rc-scripts-${SV}
@@ -212,6 +212,10 @@ src_install()
 			[ -e ${S}/init.d/${bar} ] && dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
 		done
 	done
+
+	cat << EOF >> ${D}/etc/hosts
+127.0.0.1	localhost
+EOF
 }
 
 pkg_postinst() {
