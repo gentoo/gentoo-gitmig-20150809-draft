@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0_beta1.ebuild,v 1.1 2004/07/08 22:22:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0_beta1.ebuild,v 1.2 2004/08/03 13:06:48 vapier Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
@@ -44,7 +44,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	#fix bug 13453
 	filter-flags -foptimize-sibling-calls
 

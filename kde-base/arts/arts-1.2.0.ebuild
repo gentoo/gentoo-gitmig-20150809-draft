@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0.ebuild,v 1.15 2004/06/24 22:11:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0.ebuild,v 1.16 2004/08/03 13:06:48 vapier Exp $
 
 inherit kde flag-o-matic
 set-kdedir 3.2
@@ -36,12 +36,6 @@ src_unpack() {
 }
 
 src_compile() {
-#	if [ "${COMPILER}" == "gcc3" ]; then
-#		# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with
-#		# these.. Even starting a compile shuts down the arts server
-#		filter-flags -fomit-frame-pointer -fstrength-reduce
-#	fi
-
 	#fix bug 13453
 	filter-flags -foptimize-sibling-calls
 
