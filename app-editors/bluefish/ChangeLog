@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.37 2005/01/16 11:44:50 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.38 2005/01/16 11:46:45 hanno Exp $
+
+*bluefish-1.0 (16 Jan 2005)
+
+  16 Jan 2005; Hanno Boeck <hanno@gentoo.org> +bluefish-1.0.ebuild:
+  Version bump.
 
   16 Jan 2005; Hanno Boeck <hanno@gentoo.org> bluefish-0.13.ebuild:
   Mark stable x86.
