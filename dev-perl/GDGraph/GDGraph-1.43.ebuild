@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/GDGraph-1.43.ebuild,v 1.5 2004/06/30 17:19:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/GDGraph-1.43.ebuild,v 1.6 2004/09/03 16:14:45 pvdabeel Exp $
 
 inherit perl-module
 CATEGORY="dev-perl"
@@ -11,7 +11,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/GD/${P}.tar.gz"
 
 LICENSE="Artistic | GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha amd64 ia64"
+KEYWORDS="x86 ppc ~sparc alpha amd64 ia64"
 IUSE=""
 
 DEPEND="dev-perl/GDTextUtil
