@@ -1,0 +1,10 @@
+--- man-1.5m2/src/Makefile.in.orig	2004-12-13 14:10:10.234084393 -0500
++++ man-1.5m2/src/Makefile.in	2004-12-13 14:10:32.624709119 -0500
+@@ -37,4 +37,7 @@
+ 
++makemsg:
++	$(BUILD_CC) -o makemsg makemsg.c
++
+ msg.c gripedefs.h: ../msgs/mess.en makemsg
+ 	./makemsg ../msgs/mess.en gripedefs.h msg.c
+ 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r2.ebuild,v 1.4 2004/11/12 14:29:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r2.ebuild,v 1.5 2004/12/13 19:53:01 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 NV="1.5m2"
 DESCRIPTION="Standard commands to read man pages"
@@ -24,8 +24,8 @@ S="${WORKDIR}/${PN}-${NV}"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 
-	cd "${S}" && \
 	sed -i \
 		-e 's:/usr/lib/locale:$(prefix)/usr/lib/locale:g' \
 		-e 's!/usr/bin:/usr/ucb:!/usr/bin:!' \
@@ -76,14 +76,21 @@ src_unpack() {
 	# Make sure the locale is searched in the right order #37778
 	epatch ${FILESDIR}/${P}-locale-order.patch
 
+	# Fix cross compiling ... a few build apps need to be compiled 
+	# with the native gcc instead of target gcc
+	epatch ${FILESDIR}/${P}-cross-compile.patch
+
 	# use non-lazy binds for man. And let portage handling stripping.
 	append-ldflags -Wl,-z,now
-	sed -i -e \
-		s/'LDFLAGS = -s'/"LDFLAGS:=${LDFLAGS}"/g ${S}/src/Makefile.in \
+	sed -i \
+		-e "/^LDFLAGS = -s/s:=.*:=${LDFLAGS}:" \
+		${S}/src/Makefile.in \
 		|| die "failed to edit default LDLFAGS"
 }
 
 src_compile() {
+	tc-export CC BUILD_CC
+
 	local myconf=
 	use nls && myconf="+lang all" || myconf="+lang none"
 	./configure \
