@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.1.ebuild,v 1.3 2004/11/13 01:35:33 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.1.ebuild,v 1.4 2004/11/13 03:18:49 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://fcron.free.fr/archives/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~hppa ~amd64"
+KEYWORDS="x86 ~ppc sparc ~mips ~hppa ~amd64"
 IUSE=""
 
 DEPEND="virtual/editor"
