@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpoison
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.1 2005/01/31 10:35:13 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.2 2005/02/03 16:35:37 ka0ttic Exp $
+
+  03 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> arpoison-0.6.ebuild:
+  Update src_unpack now that upstream fixed their tarball.
 
 *arpoison-0.6 (31 Jan 2005)
 
