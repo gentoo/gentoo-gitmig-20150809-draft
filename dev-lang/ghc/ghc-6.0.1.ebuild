@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.1.ebuild,v 1.3 2003/11/11 19:42:36 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.1.ebuild,v 1.4 2003/12/17 17:58:09 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -69,6 +69,9 @@ GHCPATH="${PATH}:/opt/ghc/bin"
 
 src_unpack() {
 	base_src_unpack
+
+	# haddock-0.6 cannot parse Control/Monad.hs
+	patch -p0 < ${FILESDIR}/ghc-6.0.1.haddock.patch
 
 	# fix libraries/OpenGL/Makefile
 	cd ${S}

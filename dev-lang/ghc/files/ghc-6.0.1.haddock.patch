@@ -1,0 +1,13 @@
+diff -Naur ghc-6.0.1.orig/libraries/base/Control/Monad.hs ghc-6.0.1/libraries/base/Control/Monad.hs
+--- ghc-6.0.1.orig/libraries/base/Control/Monad.hs	2003-12-16 13:35:44.000000000 +0100
++++ ghc-6.0.1/libraries/base/Control/Monad.hs	2003-12-16 13:36:59.000000000 +0100
+@@ -173,7 +173,9 @@
+ 
+ 
+ >	foldM f a1 [x1, x2, ..., xm ]
++
+ ==  
++
+ >	do
+ >	  a2 <- f a1 x1
+ >	  a3 <- f a2 x2
