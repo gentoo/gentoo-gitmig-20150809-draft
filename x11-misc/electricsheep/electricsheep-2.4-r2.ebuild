@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4-r2.ebuild,v 1.3 2004/03/23 22:31:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.4-r2.ebuild,v 1.4 2004/03/29 03:53:45 vapier Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="virtual/x11
 	media-libs/libmpeg2"
 RDEPEND="virtual/x11
 	dev-libs/expat
-	net-ftp/curl
+	net-misc/curl
 	media-gfx/xloadimage"
 
 src_unpack() {
