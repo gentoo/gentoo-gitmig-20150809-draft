@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.14 2003/07/22 14:47:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.15 2003/07/22 15:46:33 lostlogic Exp $
+
+  22 Jul 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r1.ebuild,
+  files/rc.freenet:
+  2 bug fixes, because I am dumb.  No bump, because no one has it yet
+
+  22 Jul 2003; Brandon Low <lostlogic@gentoo.org> freenet-0.5.2.1-r1.ebuild:
+  Mark stable on x86
 
   22 Jul 2003; Brandon Low <lostlogic@gentoo.org> files/rc.freenet:
   Make initscript check for config file

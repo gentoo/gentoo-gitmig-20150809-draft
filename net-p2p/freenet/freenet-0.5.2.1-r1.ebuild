@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r1.ebuild,v 1.1 2003/07/22 05:15:07 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r1.ebuild,v 1.2 2003/07/22 15:46:33 lostlogic Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/freenet/${P}.tar.gz"
 HOMEPAGE="http://freenetproject.org/"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 
 DEPEND="virtual/jre"
@@ -79,6 +79,7 @@ seedFile=/var/freenet/seednodes.ref
 logFile=/var/log/freenet.log
 storeFile=/var/freenet/store
 diagnosticsPath=/var/freenet/stats
+routingDir=/var/freenet
 nodeFile=/var/freenet/node
 EOF
 	

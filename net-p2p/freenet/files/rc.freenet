@@ -50,8 +50,8 @@ start() {
 	ulimit -n 4096
 	start-stop-daemon --start --quiet --pidfile \
 		/var/run/freenet.pid -m --background -N ${FREENET_NICENESS} \
-		--exec ${JAVA} ${JAVA_ARGS} -- \
-		freenet.node.Main -p /etc/freenet.conf
+		--exec ${JAVA} -- \
+		${JAVA_ARGS} freenet.node.Main -p /etc/freenet.conf
 	eend $?
 }
 
