@@ -1,8 +1,9 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.45 2003/03/03 02:31:18 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.46 2003/03/03 03:13:37 lostlogic Exp $
 
   TODO:
+  * Solve the no priorities issue (pfeifer seems to have this nailed)
   * Keep grabbing hardware stuff from xfs-sources
   * Look into the new IDE core for this set maybe
   * Update iptables a few more times (just for good measure)
