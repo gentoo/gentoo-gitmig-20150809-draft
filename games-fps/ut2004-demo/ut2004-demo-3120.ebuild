@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120.ebuild,v 1.3 2004/02/15 05:34:01 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120.ebuild,v 1.4 2004/02/15 07:14:54 brad_mssw Exp $
 
 inherit games eutils
 
@@ -22,8 +22,10 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	unpack_makeself ut2004-lnx-demo-${PV}.run
-	rm ut2004-lnx-demo-${PV}.run
+	[ "${ARCH}" = "amd64" ] && RNAME="ut2004-lnx64-demo-${PV}.run"
+	[ "${ARCH}" = "x86" ] && RNAME="ut2004-lnx-demo-${PV}.run"
+	unpack_makeself ${RNAME}
+	rm ${RNAME}
 }
 
 src_install() {
