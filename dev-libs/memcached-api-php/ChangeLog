@@ -1,13 +1,18 @@
 # ChangeLog for dev-libs/memcached-api-php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-php/ChangeLog,v 1.3 2003/08/08 20:23:42 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-php/ChangeLog,v 1.4 2003/08/10 23:33:12 lisa Exp $
 
+*memcached-api-php-1.0.7 (10 Aug 2003)
+
+  10 Aug 2003; Lisa Seelye <lisa@gentoo.org> memcached-api-php-1.0.7.ebuild:
+  version bump
+
+* dev-libs/memcached-api-php-1.0.6-r1
   08 Aug 2003; Lisa M. Seelye <lisa@gentoo.org>
   memcached-api-php-1.0.6-r1.ebuild:
   Removed RDEPEND and made x86
 
-* dev-libs/memcached-api-php-1.0.6-r1
-30 Jul 2003; Lisa Seelye <lisa@gentoo.org>
+  30 Jul 2003; Lisa Seelye <lisa@gentoo.org>
   Updated ${S}. *sigh* bump to -r1 to get this installed for everyone
 
 

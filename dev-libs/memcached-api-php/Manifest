@@ -1,5 +1,7 @@
 MD5 2f019d4d14aa0e7e3082f003cdc772f5 memcached-api-php-1.0.6.ebuild 1037
 MD5 5b5d10d4440b424a890f784bb0b92929 memcached-api-php-1.0.6-r1.ebuild 882
+MD5 2f019d4d14aa0e7e3082f003cdc772f5 memcached-api-php-1.0.7.ebuild 1037
 MD5 3ea4a59107511611f31077835a7bcf7e ChangeLog 739
 MD5 86ef06379987a2a46a33ae5718762644 files/digest-memcached-api-php-1.0.6 69
+MD5 79994cee0604a4b23842e29d2c3a686c files/digest-memcached-api-php-1.0.7 69
 MD5 86ef06379987a2a46a33ae5718762644 files/digest-memcached-api-php-1.0.6-r1 69
