@@ -377,7 +377,7 @@
 # You may want to turn off guest acces if you enable this, as it
 # hasn't been thoroughly tested.
 ;root preexec = PROFILE=/var/lib/samba/profiles/%u; if [ ! -e $PROFILE ]; \
-;                then mkdir -pm700 $PROFILE; chown %u.%g $PROFILE;fi
+;                then mkdir -pm700 $PROFILE; chown %u:%g $PROFILE;fi
 
 # NOTE: If you have a CUPS print system there is no need to 
 # specifically define each individual printer.

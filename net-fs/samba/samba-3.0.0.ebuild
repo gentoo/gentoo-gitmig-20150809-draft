@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0.ebuild,v 1.2 2003/09/25 19:08:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0.ebuild,v 1.3 2003/12/09 00:21:12 spider Exp $
 
 inherit eutils
 
@@ -291,7 +291,7 @@ src_install() {
 		dodoc */*.conf
 		cd ${S}
 	fi
-	chown -R root.root ${D}/usr/share/doc/${PF}
+	chown -R root:root ${D}/usr/share/doc/${PF}
 
 	# link /usr/bin/smbmount to /sbin/mount.smbfs which allows it
 	# to work transparently with the standard 'mount' command..
