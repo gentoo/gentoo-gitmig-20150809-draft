@@ -1,0 +1,30 @@
+# ChangeLog for app-misc/kalbum
+# Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kalbum/ChangeLog,v 1.1 2004/10/30 23:31:30 carlo Exp $
+
+*kalbum-0.8.0 (31 Oct 2004)
+
+  31 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +kalbum-0.8.0.ebuild:
+  Moved from app-misc/kalbum to kde-misc/kalbum.
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> kalbum-0.8.0.ebuild:
+  Stable on sparc.
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> kalbum-0.8.0.ebuild:
+  Added ~sparc keyword.
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kalbum-0.8.0.ebuild:
+  inherit kde instead of deprecated kde-base
+
+  12 Jun 2003; <msterret@gentoo.org> kalbum-0.8.0.ebuild:
+  add Header
+
+*kalbum-0.8.0 (22 May 2003)
+
+  22 May 2003; Caleb Tennis <caleb@gentoo.org> ChangeLog :
+
+  Kalbum is a KDE application for generating Photo albums.  It can
+  generate & display "binary" albums, and create HTML albums with the
+  click of a button.  Initial import, thanks to Ed Cates (Bug # 14934)
+
