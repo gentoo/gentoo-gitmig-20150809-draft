@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.91 2004/08/20 23:27:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.92 2004/08/21 09:50:58 seemant Exp $
+
+*xorg-x11-6.7.99.902 (21 Aug 2004)
+
+  21 Aug 2004; Seemant Kulleen <seemant@gentoo.org>
+  +xorg-x11-6.7.99.902.ebuild:
+  Version bump to rc2, but this is an identical ebuild to 99.2 just so we can
+  easily make diffs of the changes. Real ebuild to follow momentarily
 
   20 Aug 2004; Seemant Kulleen <seemant@gentoo.org> xorg-x11-6.7.99.2.ebuild:
   fix sed properly, thanks to ciaranm and swegener
