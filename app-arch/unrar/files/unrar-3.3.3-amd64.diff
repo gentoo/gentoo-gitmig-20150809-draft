@@ -1,0 +1,14 @@
+--- unrar/rarvm.cpp.orig	2004-01-04 18:28:01.532948504 -0500
++++ unrar/rarvm.cpp	2004-01-04 18:28:20.920001224 -0500
+@@ -791,8 +791,8 @@
+           CurPos++;
+           if (CurByte==0xe8 || CurByte==CmpByte2)
+           {
+-            long Offset=CurPos+FileOffset;
+-            long Addr=GET_VALUE(false,Data);
++            int Offset=CurPos+FileOffset;
++            int Addr=GET_VALUE(false,Data);
+             if (Addr<0)
+             {
+               if (Addr+Offset>=0)
+
