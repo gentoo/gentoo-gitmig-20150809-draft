@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.11 2004/10/20 23:23:28 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.12 2004/10/24 02:19:32 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas network nls nvidia oggvorbis opengl oss png rtc samba sdl sse svga tga theora truetype v4l v4l2 X xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas network nls nvidia oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -27,7 +27,7 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	x86? (
 		divx4linux? (  >=media-libs/divx4linux-20030428 )
-		>=media-libs/win32codecs-0.60
+		>=media-libs/win32codecs-20040916
 		)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -73,6 +73,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	xinerama? ( virtual/x11 )
 	jack? ( >=media-libs/bio2jack-0.3-r1 )
 	xmms? ( media-sound/xmms )
+	xanim? ( >=media-video/xanim-2.80.1-r4 )
 	>=sys-apps/portage-2.0.36
 	sys-libs/ncurses"
 
@@ -321,16 +322,20 @@ src_compile() {
 	myconf="${myconf} $(use_enable debug)"
 	myconf="${myconf} $(use_enable nls i18n)"
 
-	if [ -d /opt/RealPlayer9/Real/Codecs ]
+	if use real
 	then
-		einfo "Setting REALLIBDIR to /opt/RealPlayer9/Real/Codecs..."
-		REALLIBDIR="/opt/RealPlayer9/Real/Codecs"
-	elif [ -d /opt/RealPlayer8/Codecs ]
+		if [ -d /usr/$(get_libdir)/real ]
+		then
+			REALLIBDIR="/usr/$(get_libdir)/real"
+		else
+			eerror "Real libs not found!  Install a stable version of win32codecs"
+			die "Real libs not found"
+		fi
+	fi
+
+	if use xanim
 	then
-		einfo "Setting REALLIBDIR to /opt/RealPlayer8/Codecs..."
-		REALLIBDIR="/opt/RealPlayer8/Codecs"
-	else
-		REALLIBDIR="/usr/$(get_libdir)/real"
+		myconf="${myconf} --with-xanimlibdir=/usr/lib/xanim/mods"
 	fi
 
 	if [ -e /dev/.devfsd ]
