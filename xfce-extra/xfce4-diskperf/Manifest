@@ -3,7 +3,7 @@ MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 f250f0095c94464f14d029d0476979d2 xfce4-diskperf-1.0.ebuild 704
 MD5 975c122c6262a7878ac72186b3b96cad xfce4-diskperf-1.1.ebuild 701
 MD5 e97e8f9f1d678f011f23c2d5c69d4ba4 xfce4-diskperf-1.3.ebuild 696
-MD5 d2c980e497dc90ad4c4ea99993d3f35b xfce4-diskperf-1.4.1.ebuild 710
+MD5 31a020ac5aa556dfb6837b5389eee294 xfce4-diskperf-1.4.1.ebuild 731
 MD5 7bc22c1f5e460719bbdf65148dee3e0a xfce4-diskperf-1.4.ebuild 696
 MD5 74ab9cca84a3df848b9abb2c0857adc2 files/digest-xfce4-diskperf-1.0 77
 MD5 8f0e7a534e941fc9a3f036e1d408b4cf files/digest-xfce4-diskperf-1.1 77
