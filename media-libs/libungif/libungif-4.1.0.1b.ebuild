@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.14 2004/07/13 04:57:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.15 2004/10/02 22:24:21 lv Exp $
 
 inherit eutils libtool
 
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr install || die
+	make DESTDIR=${D} install || die
 
 	use gif && rm -rf ${D}/usr/bin
 
