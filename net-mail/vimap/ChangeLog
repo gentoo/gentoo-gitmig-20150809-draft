@@ -1,0 +1,15 @@
+# ChangeLog for net-mail/vimap
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/ChangeLog,v 1.1 2003/02/10 02:32:00 alron Exp $
+
+*vimap-2001a (09 Feb 2003)
+
+  09 Feb 2003; Dean Bailey <alron@gentoo.org> vimap-2001a :
+  Initial import. Based some of the config off of current uw-imap 
+  ebuilds. The other half of the config is from the srpm on the
+  vimap website. This ebuild includes many patches by redhat for 
+  their uw-imap rpm. Support for maildir and mbox was removed.
+  Support for gss (kerberos) was enabled on machines with krb5 
+  installed. This provides all of the same deps that uw-imap does.
+  Also added xinetd as a dep, as one can not use this package as
+  an imap server without it.
