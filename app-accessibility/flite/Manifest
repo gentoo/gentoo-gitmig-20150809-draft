@@ -1,5 +1,5 @@
-MD5 c9c85a8ab9907b7541c62ab49dbb4838 ChangeLog 2344
-MD5 0e4a75ea74b76f5b3059f57f6e4ffa10 flite-1.2-r1.ebuild 1731
+MD5 aefbe6334e565c8cce7f70fd7432b586 ChangeLog 2346
+MD5 0102668bc2d4af66c8fdbfa3402e8e4a flite-1.2-r1.ebuild 1734
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
 MD5 ef87fb0bdde5622c0ee9200d14bc683c files/const.patch 466
 MD5 c5214c4d79e701e6750fdff2be9d56a8 files/digest-flite-1.2-r1 136
