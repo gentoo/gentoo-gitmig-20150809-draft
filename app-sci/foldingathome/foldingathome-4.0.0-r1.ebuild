@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/foldingathome-4.0.0-r1.ebuild,v 1.1 2004/04/22 10:01:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/foldingathome-4.0.0-r1.ebuild,v 1.2 2004/04/22 22:08:06 dholm Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -16,7 +16,7 @@ RESTRICT="nomirror"
 SLOT="0"
 IUSE=""
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-apps/baselayout-1.8.0
 	>=sys-libs/glibc-2.3.0
