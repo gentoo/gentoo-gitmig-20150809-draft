@@ -1,0 +1,319 @@
+diff -ruN snort-1.9.1-orig/src/bounds.h snort-1.9.1/src/bounds.h
+--- snort-1.9.1-orig/src/bounds.h	1970-01-01 01:00:00.000000000 +0100
++++ snort-1.9.1/src/bounds.h	2003-04-22 12:55:32.000000000 +0100
+@@ -0,0 +1,127 @@
++#ifndef _BOUNDS_H
++#define _BOUNDS_H
++/*
++** Copyright (C) 2003, Sourcefire, Inc.
++**               Chris Green <cmg@sourcefire.com>
++**
++** This program is free software; you can redistribute it and/or modify
++** it under the terms of the GNU General Public License as published by
++** the Free Software Foundation; either version 2 of the License, or
++** (at your option) any later version.
++**
++** This program is distributed in the hope that it will be useful,
++** but WITHOUT ANY WARRANTY; without even the implied warranty of
++** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++** GNU General Public License for more details.
++**
++** You should have received a copy of the GNU General Public License
++** along with this program; if not, write to the Free Software
++** Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
++**
++*/
++
++
++#ifdef HAVE_CONFIG_H
++#include "config.h"
++#endif
++
++#include "snort.h"
++
++#include <string.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <assert.h>
++#include <unistd.h>
++
++/* This INLINE is conflicting with the INLINE defined in bitop.h.
++ * So, let's just add a little sanity check here.
++ */
++#ifndef DEBUG
++    #ifndef INLINE
++        #define INLINE inline
++    #endif
++    #define ERRORRET return 0;
++#else
++    #ifdef INLINE
++        #undef INLINE
++    #endif
++    #define INLINE
++    #define ERRORRET assert(0==1)
++#endif /* DEBUG */
++
++/*
++ * Check to make sure that p is less than or equal to the ptr range
++ * pointers
++ *
++ * 1 means it's in bounds, 0 means it's not
++ */
++static INLINE int inBounds(u_int8_t *start, u_int8_t *end, u_int8_t *p)
++{
++    if(p >= start && p < end)
++    {
++        return 1;
++    }
++
++    return 0;
++}
++
++/**
++ * A Safer Memcpy
++ *
++ * @param dst where to copy to
++ * @param src where to copy from
++ * @param n number of bytes to copy
++ * @param start start of the dest buffer
++ * @param end end of the dst buffer
++ *
++ * @return 0 on failure, 1 on success
++ */
++static INLINE int SafeMemcpy(void *dst, void *src, size_t n, void *start, void *end)
++{
++     if(n < 1)
++     {
++         ERRORRET;
++     }
++
++     if(!inBounds(start,end, dst) || !inBounds(start,end,((u_int8_t*)dst)+n))
++     {
++         ERRORRET;
++     }
++
++     memcpy(dst, src, n);
++     return 1;
++}
++
++/**
++ * A Safer *a = *b
++ *
++ * @param start start of the dst buffer
++ * @param end end of the dst buffer
++ * @param dst the location to write to
++ * @param src the source to read from
++ *
++ * @return 0 on failure, 1 on success
++ */
++static INLINE int SafeWrite(u_int8_t *start, u_int8_t *end, u_int8_t *dst, u_int8_t *src)
++{
++    if(!inBounds(start, end, dst))
++    {
++        ERRORRET;
++    }
++
++    *dst = *src;
++    return 1;
++}
++
++static inline int SafeRead(u_int8_t *start, u_int8_t *end, u_int8_t *src, u_int8_t *read)
++{
++    if(!inBounds(start,end, src))
++    {
++        ERRORRET;
++    }
++
++    *read = *start;
++    return 1;
++}
++
++#endif /* _BOUNDS_H */
+diff -ruN snort-1.9.1-orig/src/decode.h snort-1.9.1/src/decode.h
+--- snort-1.9.1-orig/src/decode.h	2003-02-14 19:32:26.000000000 +0000
++++ snort-1.9.1/src/decode.h	2003-04-22 12:55:32.000000000 +0100
+@@ -165,6 +165,10 @@
+ #define UDP_HEADER_LEN          8
+ #define ICMP_HEADER_LEN         4
+ 
++#ifndef IP_MAXPACKET
++#define IP_MAXPACKET            65535   /* maximum packet size */
++#endif /* IP_MAXPACKET */
++
+ #define TH_FIN  0x01
+ #define TH_SYN  0x02
+ #define TH_RST  0x04
+diff -ruN snort-1.9.1-orig/src/preprocessors/spp_http_decode.c snort-1.9.1/src/preprocessors/spp_http_decode.c
+--- snort-1.9.1-orig/src/preprocessors/spp_http_decode.c	2003-02-23 22:46:04.000000000 +0000
++++ snort-1.9.1/src/preprocessors/spp_http_decode.c	2003-04-22 12:59:45.000000000 +0100
+@@ -444,11 +444,11 @@
+     psize = (u_int16_t) (p->dsize);
+     
+     /* first skip past the HTTP method */
+-    while(index < end && !lookup_whitespace[(u_int)(*index)])
++    while(index < end && !lookup_whitespace[(u_char)(*index)])
+ 	index++;
+     
+     /* skip over whitespace seperator */
+-    while(index < end && lookup_whitespace[(u_int)(*index)])
++    while(index < end && lookup_whitespace[(u_char)(*index)])
+ 	index++;
+     
+     /* evilness check */
+@@ -562,8 +562,8 @@
+ 					"Double hex encoding received\n"););
+ 	    }
+ 
+-	    hex1=lookup_hexvalue[(u_int)(*(index+1))];
+-	    hex2=lookup_hexvalue[(u_int)(*(index+2))];
++	    hex1=lookup_hexvalue[(u_char)(*(index+1))];
++	    hex2=lookup_hexvalue[(u_char)(*(index+2))];
+ 
+ 	    if(hex1 != -1 && hex2 != -1)
+ 	    {
+@@ -612,7 +612,7 @@
+ 	    }
+ 
+ 	}
+-	else if(lookup_whitespace[(u_int)(*index)])
++	else if(lookup_whitespace[(u_char)(*index)])
+ 	{
+ 	    /* we've reached the delimiting whitespace */
+ 	    /* UriBufs[0].http_version = (u_int8_t *) index; */
+@@ -629,7 +629,7 @@
+ 		while(index < end &&
+ 		      ((cur - (char *) UriBufs[0].uri) < URI_LENGTH))
+ 		{
+-		    if(lookup_whitespace[(u_int)(*index)])
++		    if(lookup_whitespace[(u_char)(*index)])
+ 		    {
+ 			/* we've reached the delimiting whitespace */
+ 			/* Time to get HTTP version? */
+diff -ruN snort-1.9.1-orig/src/preprocessors/spp_stream4.c snort-1.9.1/src/preprocessors/spp_stream4.c
+--- snort-1.9.1-orig/src/preprocessors/spp_stream4.c	2003-02-14 19:32:27.000000000 +0000
++++ snort-1.9.1/src/preprocessors/spp_stream4.c	2003-04-22 12:58:44.000000000 +0100
+@@ -37,6 +37,17 @@
+ #include "config.h"
+ #endif
+ 
++#ifndef DEBUG
++    #ifndef INLINE
++        #define INLINE inline
++    #endif
++#else
++    #ifdef INLINE
++        #undef INLINE
++    #endif
++    #define INLINE···
++#endif /* DEBUG */
++
+ #include <sys/types.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -65,6 +76,7 @@
+ #include "generators.h"
+ #include "detect.h"
+ #include "perf.h"
++#include "bounds.h"
+ 
+ #include "ubi_SplayTree.h"
+ 
+@@ -143,6 +155,8 @@
+ #define SPARC_TWIDDLE       0
+ #endif
+ 
++#define MAX_STREAM_SIZE (IP_MAXPACKET - IP_HEADER_LEN - TCP_HEADER_LEN)
++
+ /* random array of flush points */
+ 
+ #define FCOUNT 64
+@@ -325,6 +339,7 @@
+ void WriteSsnStats(BinStats *);
+ void OpenStatsFile();
+ static int RetransTooFast(struct timeval *a, struct timeval *b);
++static INLINE int isBetween(u_int32_t low, u_int32_t high, u_int32_t cur);
+ 
+ /*
+   Here is where we separate which functions will be called in the
+@@ -340,6 +355,10 @@
+ static void TcpActionAsync(Session *ssn, Packet *p, int action, int direction, 
+                            u_int32_t pkt_seq, u_int32_t pkt_ack);
+ 
++static INLINE int isBetween(u_int32_t low, u_int32_t high, u_int32_t cur)
++{
++        return (cur - low) <= (high - low);
++}
+ 
+     
+ 
+@@ -462,7 +481,7 @@
+     /* don't reassemble if we're before the start sequence number or 
+      * after the last ack'd byte
+      */
+-    if(spd->seq_num < s->base_seq || spd->seq_num > s->last_ack) {
++    if(!isBetween(s->base_seq, s->last_ack, spd->seq_num)) {
+         DEBUG_WRAP(DebugMessage(DEBUG_STREAM,
+                                 "not reassembling because"
+                                 " we're (%u) before isn(%u) or after last_ack(%u)\n",
+@@ -471,8 +490,8 @@
+     }
+ 
+     /* if it's in bounds... */
+-    if(spd->seq_num >= s->base_seq && spd->seq_num >= s->next_seq &&
+-       (spd->seq_num+spd->payload_size) <= s->last_ack)
++    if(isBetween(s->base_seq, s->last_ack, spd->seq_num) &&
++       isBetween(s->base_seq, s->last_ack, (spd->seq_num+spd->payload_size)))
+     {
+         offset = spd->seq_num - s->base_seq;
+         
+@@ -487,16 +506,16 @@
+                                 spd->seq_num, s->last_ack, s->base_seq,
+                                 spd->payload_size, s->next_seq, offset));
+ 
+-        memcpy(buf+offset, spd->payload, spd->payload_size);
++	SafeMemcpy(buf+offset, spd->payload, spd->payload_size,
++		stream_pkt->data, stream_pkt->data + MAX_STREAM_SIZE);
+ 
+         pc.rebuilt_segs++;
+ 
+         spd->chuck = 1;
+         bd->total_size += spd->payload_size;
+     } 
+-    else if(spd->seq_num >= s->base_seq && 
+-            spd->seq_num < s->last_ack &&
+-            spd->seq_num + spd->payload_size > s->last_ack)
++    	else if(isBetween(s->base_seq, s->last_ack, spd->seq_num) &&
++		((spd->seq_num + spd->payload_size) > s->last_ack))
+     {
+         /*
+          *  if it starts in bounds and hasn't been completely ack'd, 
+@@ -518,7 +537,8 @@
+             DEBUG_WRAP(DebugMessage(DEBUG_STREAM, "Copying %d bytes into buffer, "
+                                     "offset %d, buf %p\n", trunc_size, offset, 
+                                     buf););
+-            memcpy(buf+offset, spd->payload, trunc_size);
++            SafeMemcpy(buf+offset, spd->payload, trunc_size,
++                       stream_pkt->data, stream_pkt->data + MAX_STREAM_SIZE);
+             pc.rebuilt_segs++;
+             bd->total_size += trunc_size;
+         }
+@@ -530,8 +550,7 @@
+ 
+         spd->chuck = 1;
+     }
+-    else if(spd->seq_num < s->base_seq && 
+-            spd->seq_num+spd->payload_size > s->base_seq)
++    else if(isBetween(s->base_seq, s->last_ack, (spd->seq_num+spd->payload_size)))
+     {
+         /* case where we've got a segment that wasn't completely ack'd 
+          * last time it was processed, do a partial copy into the buffer
+@@ -550,7 +569,8 @@
+             DEBUG_WRAP(DebugMessage(DEBUG_STREAM, "Copying %d bytes into buffer, "
+                                     "offset %d, buf %p\n", trunc_size, offset, 
+                                     buf););
+-            memcpy(buf, spd->payload+offset, trunc_size);
++            SafeMemcpy(buf, spd->payload+offset, trunc_size,
++                       stream_pkt->data, stream_pkt->data + MAX_STREAM_SIZE);
+             pc.rebuilt_segs++;
+             bd->total_size += trunc_size;
+         }
