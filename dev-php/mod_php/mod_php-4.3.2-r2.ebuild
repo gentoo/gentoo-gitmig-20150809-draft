@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r2.ebuild,v 1.2 2003/06/12 10:24:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r2.ebuild,v 1.3 2003/06/21 10:45:27 robbat2 Exp $
 
 inherit php eutils
 
@@ -15,31 +15,47 @@ DEPEND="${DEPEND}
 	>=net-www/apache-1.3.26-r2
 	apache2? ( >=net-www/apache-2.0.43-r1 ) "
 
-HAVE_APACHE1=
-HAVE_APACHE2=
-has_version '=net-www/apache-1*' && HAVE_APACHE1=1
-has_version '=net-www/apache-2*' && HAVE_APACHE2=1
 
-[ -n "${HAVE_APACHE1}" ] && APACHEVER=1
-[ -n "${HAVE_APACHE2}" ] && APACHEVER=2
-[ -n "${HAVE_APACHE1}" ] && [ -n "${HAVE_APACHE2}" ] && APACHEVER='both'
+detectapache() {
+	local domsg=
+	[ -n "$$" ] && domsg=1
+	HAVE_APACHE1=
+	HAVE_APACHE2=
+	has_version '=net-www/apache-1*' && HAVE_APACHE1=1
+	has_version '=net-www/apache-2*' && HAVE_APACHE2=1
 
-case "${APACHEVER}" in
-	1) einfo 'Apache1 only detected' ;;
-	2) einfo 'Apache2 only detected';;
+	[ -n "${HAVE_APACHE1}" ] && APACHEVER=1
+	[ -n "${HAVE_APACHE2}" ] && APACHEVER=2
+	[ -n "${HAVE_APACHE1}" ] && [ -n "${HAVE_APACHE2}" ] && APACHEVER='both'
+
+	case "${APACHEVER}" in
+	1) [ -n "${domsg}" ] && einfo 'Apache1 only detected' ;;
+	2) [ -n "${domsg}" ] && einfo 'Apache2 only detected';;
 	both) 
-	if [ "`use apache2`" ]; then
-		einfo "Multiple Apache versions detected, using Apache2 (USE=apache2)"
-		APACHEVER=2
-	else
-		einfo 'Multiple Apache versions detected, using Apache1 (USE=-apache2)'
-		APACHEVER=1
-	fi ;;
-	*) MSG="Unknown Apache version!"; eerror $MSG ; die $MSG ;;
-esac
+		if [ "`use apache2`" ]; then
+			[ -n "${domsg}" ] && einfo "Multiple Apache versions detected, using Apache2 (USE=apache2)"
+			APACHEVER=2
+		else
+			[ -n "${domsg}" ] && einfo 'Multiple Apache versions detected, using Apache1 (USE=-apache2)'
+			APACHEVER=1
+		fi ;;
+	*) if [ -n "${domsg}" ]; then
+			MSG="Unknown Apache version!"; eerror $MSG ; die $MSG
+	   else
+			APACHEVER=0
+	   fi; ;;
+	esac
+}
+
+detectapache
 
 SLOT="${APACHEVER}"
 [ "${APACHEVER}" -eq '2' ] && USE_APACHE2='2' || USE_APACHE2='' 
+
+src_unpack() {
+	detectapache domsg
+	php_src_unpack
+}
 
 src_compile() {
 	#no readline on server SAPI

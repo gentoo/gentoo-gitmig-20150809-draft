@@ -1,13 +1,16 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.83 2003/06/12 10:24:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.84 2003/06/21 10:45:27 robbat2 Exp $
 
 *mod_php-4.3.2-r2 (10 June 2003)
 
-  12 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2.ebuild:
+  21 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r2.ebuild:
+  Cleanup some of the magic, hopefully make it work better.
+
+  12 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r2.ebuild:
   syntax errors are bad.
 
-  10 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2.ebuild:
+  10 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r2.ebuild:
   This is an extension of the fixes in 4.3.2-r1, but I'm uncertain if some of
   this magic is valid, so it is in a sepearate ebulid for now.
   A special note on the change of behavior depending on the Apache(s) you have installed:
@@ -17,7 +20,7 @@
 
 *mod_php-4.3.2-r1 (10 June 2003)
 
-  10 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2.ebuild:
+  10 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r1.ebuild:
   Try to fix bug #22352. mod_php is now SLOTed by the major version of Apache
   that you are building it for. This SHOULD enable you to have mod_php
   installed on both at the same time, but is is experimental at this time.
