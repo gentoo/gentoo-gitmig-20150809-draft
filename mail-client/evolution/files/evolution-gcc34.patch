@@ -1,0 +1,53 @@
+diff -Nurd evolution-1.4.6-old/calendar/cal-client/cal-client.c evolution-1.4.6/calendar/cal-client/cal-client.c
+--- evolution-1.4.6-old/calendar/cal-client/cal-client.c	2004-05-23 03:14:19.266120688 -0500
++++ evolution-1.4.6/calendar/cal-client/cal-client.c	2004-05-23 03:14:34.210848744 -0500
+@@ -2886,7 +2886,7 @@
+ 	return cal_client_remove_object_with_mod (client, uid, CALOBJ_MOD_ALL);
+ }
+ 
+-CalClientResult
++CalClientSendResult
+ cal_client_send_object (CalClient *client, icalcomponent *icalcomp, 
+ 			icalcomponent **new_icalcomp, GList **users,
+ 			char error_msg[256])
+diff -Nurd evolution-1.4.6-old/calendar/gui/e-day-view.c evolution-1.4.6/calendar/gui/e-day-view.c
+--- evolution-1.4.6-old/calendar/gui/e-day-view.c	2004-05-23 03:14:19.238124944 -0500
++++ evolution-1.4.6/calendar/gui/e-day-view.c	2004-05-23 03:14:40.862837488 -0500
+@@ -3236,6 +3236,7 @@
+ 		e_day_view_scroll (day_view, -E_DAY_VIEW_WHEEL_MOUSE_STEP_SIZE);
+ 		return TRUE;
+ 	default:
++		break;
+ 	}
+ 
+ 	return FALSE;
+@@ -3256,6 +3257,7 @@
+ 		e_day_view_scroll (day_view, -E_DAY_VIEW_WHEEL_MOUSE_STEP_SIZE);
+ 		return TRUE;
+ 	default:
++		break;
+ 	}
+ 
+ 	return FALSE;
+diff -Nurd evolution-1.4.6-old/e-util/e-component-listener.c evolution-1.4.6/e-util/e-component-listener.c
+--- evolution-1.4.6-old/e-util/e-component-listener.c	2004-05-23 03:14:19.227126616 -0500
++++ evolution-1.4.6/e-util/e-component-listener.c	2004-05-23 03:14:30.000488816 -0500
+@@ -53,6 +53,7 @@
+ 			g_object_unref (cl);
+ 			break;
+ 		default :
++			break;
+ 		}
+ 	}
+ }
+diff -Nurd evolution-1.4.6-old/mail/message-browser.c evolution-1.4.6/mail/message-browser.c
+--- evolution-1.4.6-old/mail/message-browser.c	2004-05-23 03:14:19.055152760 -0500
++++ evolution-1.4.6/mail/message-browser.c	2004-05-23 03:14:44.330310352 -0500
+@@ -345,6 +345,7 @@
+ 		message_browser_close (NULL, mb, NULL);
+ 		return TRUE;	
+ 	default:
++		break;
+ 	}
+ 	
+ 	return FALSE;
