@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.1-r1.ebuild,v 1.5 2000/10/23 11:27:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.1-r1.ebuild,v 1.6 2000/10/29 20:37:01 achim Exp $
 
 P=ncurses-5.1
 A=${P}.tar.gz
@@ -23,6 +23,7 @@ src_install() {
 	cd ${D}/usr/lib
 	dodir /lib
 	mv *.so* ../../lib
+        preplib /
 	cd ${S}
 	dodoc ANNOUNCE MANIFEST NEWS README* TO-DO 
 	dodoc doc/*.doc

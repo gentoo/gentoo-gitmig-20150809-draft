@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r1.ebuild,v 1.4 2000/09/15 20:09:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r1.ebuild,v 1.5 2000/10/29 20:37:00 achim Exp $
 
 A=cracklib2_2.7.orig.tar.gz
 A0=${P}-redhat.patch
@@ -29,6 +29,7 @@ src_install() {
   dodir /usr/sbin
   dodir /usr/include
   ROOT=${D} try make install
+  preplib /usr
   dodoc HISTORY LICENCE MANIFEST POSTER README
 }
 
