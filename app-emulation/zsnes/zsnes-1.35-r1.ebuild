@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 	
 
 src_compile() {
-	patch -p1 < ${FILESDIR}/${P}-cvs.patch
+	patch -p1 < ${FILESDIR}/${P}-cvs.patch || die "CVS patch failed"
 	cd ${S}/src
 	use opengl || myconf="--without-opengl"
 	./configure --prefix=/usr --host=${CHOST} $myconf || die
