@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/xstow
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.1 2003/04/17 10:26:07 liquidx Exp $
+
+*xstow-0.4.6 (03 Apr 2003)
+
+  03 Apr 2003; Alastair Tse <liquidx@gentoo.org> xstow-0.4.6.ebuild,
+  files/xstow-0.4.6-configure-ncurses.diff:
+  intial ebuild. thanks to Andrew Mahone (#16783)
+
