@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.62.1-r1.ebuild,v 1.4 2000/11/02 08:31:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.62.1-r1.ebuild,v 1.5 2001/05/07 15:51:46 achim Exp $
 
 P=WindowMaker-0.62.1
 A="${P}.tar.gz WindowMaker-extra-0.1.tar.bz2"
@@ -20,7 +20,6 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=x11-base/xfree-4.0.1"
 
 src_compile() {                           
-  cd ${S}
   try ./configure --host=${CHOST} --prefix=/usr/X11R6 --sysconfdir=/etc/X11 \
 	--enable-gnome --enable-kde --with-x --enable-newstyle --enable-superfluous
   try make
@@ -30,17 +29,15 @@ src_compile() {
 }
 
 src_install() {                               
-  cd ${S}
   try make prefix=${D}/usr/X11R6 sysconfdir=${D}/etc/X11 install
+  exeinto /usr/X11R6/bin/wm
+  doexe ${FILESDIR}/windowmaker
   cp -f WindowMaker/plmenu ${D}/etc/X11/WindowMaker/WMRootMenu
-  strip ${D}/usr/X11R6/bin/*
-  strip ${D}/usr/X11R6/GNUstep/Apps/WPrefs.app/WPrefs
   dodoc AUTHORS BUGFORUM BUGS ChangeLog COPYING* FAQ* README* NEWS TODO
   
   cd ../WindowMaker-extra-0.1
   try make prefix=${D}/usr/X11R6 install
   newdoc README README.extra
-  prepman /usr/X11R6
   
   
 

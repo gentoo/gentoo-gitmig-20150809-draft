@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.3.28.ebuild,v 1.1 2001/03/02 03:32:14 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.3.28.ebuild,v 1.2 2001/05/07 15:45:41 achim Exp $
 
 #P=
 A=${P}.tar.bz2
@@ -27,5 +27,9 @@ src_compile() {
 }
 
 src_install () {
+
     try make DESTDIR=${D} install
+    exeinto /usr/X11R6/bin/wm
+    doexe ${FILESDIR}/fvwm
+
 }

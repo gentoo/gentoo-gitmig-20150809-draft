@@ -16,6 +16,8 @@ src_compile(){
 src_install(){
 
 	try make prefix=${D}/usr/X11R6 DOCDIR=${S}/dummy install
+	exeinto /usr/X11R6/bin/wm
+	doexe ${FILESDIR}/icewm
         dodoc BUGS CHANGES COPYING FAQ PLATFORMS README TODO VERSION
         docinto html
 	dodoc doc/*.html
