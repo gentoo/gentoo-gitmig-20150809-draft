@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.24 2004/01/31 20:24:24 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.25 2004/02/04 17:54:27 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -295,7 +295,10 @@ unipatch() {
 
 	# This function will unpack all passed tarballs, add any passed patches, and remove any passed patchnumbers
 	# usage can be either via an env var or by params
-	[ -z "${UNIPATCH_LIST}" ] && UNIPATCH_LIST="${@}"
+	# although due to the nature we pass this within this eclass
+	# it shall be by param only.
+	# -z "${UNIPATCH_LIST}" ] && UNIPATCH_LIST="${@}"
+	UNIPATCH_LIST="${@}"
 
 	#unpack any passed tarballs
 	for i in ${UNIPATCH_LIST}
@@ -328,49 +331,38 @@ unipatch() {
 				eerror "Failed to unpack ${i}"
 				die "unable to unpack patch tarball"
 			fi
-
-			UNIPATCH_LIST="${UNIPATCH_LIST/${i}/}"
-		fi
-	done
-
-	#so now everything is unpacked, lets work out whats to be dropped and whats to be included.
-	for i in ${UNIPATCH_LIST}
-	do
-		extention=${i/*./}
-		PIPE_CMD=""
-		case ${extention} in
-			    bz2) PIPE_CMD="bzip2 -dc";;
-			  patch) PIPE_CMD="cat";;
-			   diff) PIPE_CMD="cat";;
-			 gz|Z|z) PIPE_CMD="gzip -dc";;
-			ZIP|zip) PIPE_CMD="unzip -p";;
-			      *) UNIPATCH_DROP="${UNIPATCH_DROP} ${i}";;
-		esac
-		x=${i/*\//}
-		x=${x/\.${extention}/}
-
-		if [ -n "${UNIPATCH_STRICTORDER}" -a -n "${PIPE_CMD}" ]
-		then
-			STRICT_COUNT=$((${STRICT_COUNT} + 1))
-			mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
-			$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch)
 		else
-			$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch)
+			extention=${i/*./}
+			PIPE_CMD=""
+			case ${extention} in
+				    bz2) PIPE_CMD="bzip2 -dc";;
+				  patch) PIPE_CMD="cat";;
+				   diff) PIPE_CMD="cat";;
+				 gz|Z|z) PIPE_CMD="gzip -dc";;
+				ZIP|zip) PIPE_CMD="unzip -p";;
+				      *) UNIPATCH_DROP="${UNIPATCH_DROP} ${i}";;
+			esac
+			x=${i/*\//}
+			x=${x/\.${extention}/}
+	
+			if [ -n "${UNIPATCH_STRICTORDER}" -a -n "${PIPE_CMD}" ]
+			then
+				STRICT_COUNT=$((${STRICT_COUNT} + 1))
+				mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
+				$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch)
+			else
+				$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${x}.patch)
+			fi
 		fi
 	done
 
 	#populate KPATCH_DIRS so we know where to look to remove the excludes
 	x=${KPATCH_DIR}
 	KPATCH_DIR=""
-	for i in $(find ${x} -type d)
+	for i in $(find ${x} -type d | sort -n)
 	do
 		KPATCH_DIR="${KPATCH_DIR} ${i}"
 	done
-	
-	# this is to ensure the returned list is sorted.
-	# this doesnt appear to happen in findutils in the current stable profile.
-	# inefficient and not very nice, but "thats life"
-	KPATCH_DIR="$(echo ${KPATCH_DIR} | sort -u)"
 
 	#so now lets get rid of the patchno's we want to exclude
 	UNIPATCH_DROP="${UNIPATCH_EXCLUDE} ${UNIPATCH_DROP}"
@@ -390,22 +382,33 @@ unipatch() {
 	# and now, finally, we patch it :)
 	for x in ${KPATCH_DIR}
 	do
-		for i in $(find ${x} -maxdepth 1 -iname "*.patch" -or -iname "*.diff" | sort -u)
+		for i in $(find ${x} -maxdepth 1 -iname "*.patch" -or -iname "*.diff" | sort -n)
 		do
+			STDERR_T="${T}/${i/*\//}"
+			STDERR_T="${STDERR_T/.patch/.err}"
+		
 			PATCH_DEPTH=0
 			ebegin "Applying ${i/*\//}"
 			while [ ${PATCH_DEPTH} -lt 5 ]
 			do
-				if (patch -p${PATCH_DEPTH} --dry-run -f < ${i} >/dev/null)
+				echo "Attempting Dry-run:" > ${STDERR_T}
+				echo "cmd: patch -p${PATCH_DEPTH} --dry-run -f < ${i}" >> ${STDERR_T}
+				echo "=======================================================" >> ${STDERR_T}
+				if (patch -p${PATCH_DEPTH} --dry-run -f < ${i} >> ${STDERR_T})
 				then
-					$(patch -p${PATCH_DEPTH} -f < ${i} >/dev/null)
+					echo "Attempting patch:" > ${STDERR_T}
+					echo "cmd: patch -p${PATCH_DEPTH} -f < ${i}" >> ${STDERR_T}
+					echo "=======================================================" >> ${STDERR_T}
+					$(patch -p${PATCH_DEPTH} -f < ${i} >> ${STDERR_T})
 					if [ "$?" -eq 0 ]
 					then
 						eend 0
+						rm ${STDERR_T}
 						break
 					else
 						eend 1
 						eerror "Failed to apply patch ${i/*\//}"
+						eerror "Please attach ${STDERR_T} to any bug you may post."
 						die "Failed to apply ${i/*\//}"
 					fi
 				else
@@ -415,10 +418,9 @@ unipatch() {
 			if [ ${PATCH_DEPTH} -eq 5 ]
 			then
 				eend 1
+				eerror "Please attach ${STDERR_T} to any bug you may post."
 				die "Unable to dry-run patch."
 			fi
-
-
 		done
 	done
 }
@@ -470,7 +472,7 @@ detect_version() {
 		OKV="${KV_MAJOR}.${KV_MINOR}.$([ $((${KV_PATCH} - 1)) -lt 0 ] && echo ${KV_PATCH} || echo $((${KV_PATCH} - 1)))"
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${PV//_/-}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-		UNIPATCH_LIST="${DISTDIR}/patch-${PV//_/-}.bz2 ${UNIPATCH_LIST}"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${PV//_/-}.bz2"
 		KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
@@ -479,7 +481,7 @@ detect_version() {
 		OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-		UNIPATCH_LIST="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2 ${UNIPATCH_LIST}"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 		KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
@@ -490,7 +492,7 @@ detect_version() {
 		
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-		UNIPATCH_LIST="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2 ${UNIPATCH_LIST}"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 		KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
 	
@@ -512,9 +514,8 @@ src_unpack() {
 	cd ${S}
 
 	universal_unpack
-	[ -n "${UNIPATCH_LIST}" ] && unipatch ${UNIPATCH_LIST}
+	[ -n "${UNIPATCH_LIST}" -o -n "${UNIPATCH_LIST_DEFAULT}" ] && unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST}"
 	[ -z "${K_NOSETEXTRAVERSION}" ] && unpack_set_extraversion
-
 	[ $(kernel_is_2_4) $? == 0 ] && unpack_2_4
 }
 
