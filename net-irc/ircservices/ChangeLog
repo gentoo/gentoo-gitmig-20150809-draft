@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/ircservices
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.1 2004/08/14 21:38:26 swegener Exp $
+
+*ircservices-5.0.37 (14 Aug 2004)
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +files/5.0.37-fPIC.patch, +files/ircservices.init.d,
+  +ircservices-5.0.37.ebuild:
+  Initial import, ebuild written by me.
+
