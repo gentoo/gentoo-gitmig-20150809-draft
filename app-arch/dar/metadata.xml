@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>matsuu@gentoo.org</email>
+  <name>MATSUU Takuto</name>
+</maintainer>
+<longdescription>
+Backup directory tree and files.
+Full featured archiver with support for differential backups, slices,
+compression, ATTR/ACL support. DAR also supports Pipes for remote
+operations, including with ssh.
+</longdescription>
+</pkgmetadata>
