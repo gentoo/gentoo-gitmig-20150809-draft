@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.295 2004/11/05 19:37:20 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.296 2004/11/05 20:54:33 corsair Exp $
+
+  05 Nov 2004; Markus Rothe <corsair@gentoo.org> apache-2.0.52-r1.ebuild:
+  Stable on ppc64; bug #70138
 
   05 Nov 2004; <SeJo@gentoo.org> apache-2.0.52-r1.ebuild:
   stable on ppc gdsla: 70138
