@@ -1,4 +1,5 @@
-MD5 80ff34cd4483bbafc9a43fc9bb0d266d ChangeLog 1167
 MD5 353346a97e7492743f28d1952f38ea39 psemu-padxwin-1.6.ebuild 827
-MD5 8a6a7a643ef5b6edca937f877af362d2 files/1.6-makefile-cflags.patch 645
+MD5 80ff34cd4483bbafc9a43fc9bb0d266d ChangeLog 1167
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 7742a797d41435bfcac4b6c355813907 files/digest-psemu-padxwin-1.6 59
+MD5 8a6a7a643ef5b6edca937f877af362d2 files/1.6-makefile-cflags.patch 645
