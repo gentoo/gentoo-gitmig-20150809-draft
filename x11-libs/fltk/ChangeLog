@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.27 2003/10/12 18:42:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.28 2003/10/31 13:53:42 lanius Exp $
+
+  31 Oct 2003; Heinrich Wendel <lanius@gentoo.org> fltk-1.1.4.ebuild,
+  fltk-1.1.4_rc2.ebuild:
+  x86
 
 *fltk-1.1.4 (12 Oct 2003)
 
