@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ns
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.5 2004/01/28 04:04:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.6 2004/05/17 16:09:48 usata Exp $
+
+  18 May 2004; Mamoru KOMACHI <usata@gentoo.org> ns-2.26-r1.ebuild,
+  ns-2.26.ebuild, ns-2.27-r1.ebuild, ns-2.27.ebuild:
+  Changed app-text/tetex to virtual/tetex, see bug #50865
 
 *ns-2.27-r1 (27 Jan 2004)
 
