@@ -4,7 +4,7 @@ MD5 18a9f26be711130a947219f4432fe069 dillo-0.8.3.ebuild 3475
 MD5 2e853f9207a33d2fd352132561c48e6a dillo-0.7.3-r7.ebuild 3072
 MD5 4fc1e2923e0c7813f33a1346dfbdfbde ChangeLog 9348
 MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
-MD5 9cd1c85eb212177f59519b6b68303af3 dillo-0.8.3-r4.ebuild 3640
+MD5 42d26ac0d0813c16e61c29c3215b279f dillo-0.8.3-r4.ebuild 3642
 MD5 ba28c8a3ac90eda9150e386ab318bbcd files/digest-dillo-0.8.3 220
 MD5 7750091e1346c986eeb58aef81297fd0 files/dillo-format-string-vulnerability.diff 787
 MD5 e257387d2c71e79a44b93b59e5240db3 files/digest-dillo-0.7.3-r7 226
