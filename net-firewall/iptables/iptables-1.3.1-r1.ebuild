@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r1.ebuild,v 1.2 2005/03/28 00:08:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r1.ebuild,v 1.3 2005/03/28 23:04:02 eradicator Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 #extensions versions
 
@@ -117,10 +117,12 @@ src_compile() {
 
 		make COPT_FLAGS="${CFLAGS}" ${myconf} \
 			KERNEL_DIR=/usr/src/linux \
+			CC="$(tc-getCC)" \
 			|| die "${diemsg}"
 	else
 		make COPT_FLAGS="${CFLAGS}" ${myconf} \
 			KERNEL_DIR=/usr \
+			CC="$(tc-getCC)" \
 			|| die
 	fi
 }

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.12 2005/03/09 10:16:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.13 2005/03/28 23:04:01 eradicator Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 #extensions versions
 
@@ -87,6 +87,7 @@ src_compile() {
 			MANDIR=/usr/share/man \
 			INCDIR=/usr/include \
 			KERNEL_DIR=/usr/src/linux \
+			CC="$(tc-getCC)" \
 			|| die "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ if your kernel needs to be patched for iptables"
 	else
 		make COPT_FLAGS="${CFLAGS}" ${myconf} \
@@ -96,6 +97,7 @@ src_compile() {
 			MANDIR=/usr/share/man \
 			INCDIR=/usr/include \
 			KERNEL_DIR=/usr \
+			CC="$(tc-getCC)" \
 			|| die
 	fi
 }
