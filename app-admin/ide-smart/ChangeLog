@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ide-smart
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ChangeLog,v 1.8 2004/08/11 09:03:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ChangeLog,v 1.9 2004/11/06 04:13:48 mr_bones_ Exp $
+
+  05 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> ide-smart-1.4.ebuild:
+  gcc eclass -> toolchain-funcs eclass
 
   11 Aug 2004; Tavis Ormandy <taviso@gentoo.org> ide-smart-1.4.ebuild:
   Makefile doesnt like parallel make, adding -j1.
