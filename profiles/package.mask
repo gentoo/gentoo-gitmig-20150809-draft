@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <net-im@gentoo.org> (20 Jan 2004)
+# doesnt work with current msn protocol #38747
+net-im/msn4lin
+
 # <foser@gentoo.org> (16 Jan 2004)
 # development release
 >=gnome-extra/gnome-network-1.99
