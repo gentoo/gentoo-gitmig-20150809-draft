@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-21.7.5-r1.ebuild,v 1.2 2002/02/19 04:28:54 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-21.7.5-r2.ebuild,v 1.1 2002/04/09 03:36:31 woodchip Exp $
 
 #
-# This lilo has the Suse animated bootlogo patches.. fun stuff.
+# This lilo has the Suse animated bootlogo patches.. fun!
 #
 
 S=${WORKDIR}/${P}
@@ -15,13 +15,20 @@ DEPEND="virtual/glibc >=sys-devel/bin86-0.15.5"
 RDEPEND="virtual/glibc"
 
 pkg_setup() {
-	if [ `cut -f 2 -d " " /proc/mounts | grep "/boot"` ]
+	[ "${ROOT}" != "/" ] && return 0
+	. ${ROOT}/etc/init.d/functions.sh
+	local fstabstate="$(cat /etc/fstab |grep -v -e '#' |awk '{print $2}')"
+	local procstate="$(cat /proc/mounts |awk '{print $2}')"
+	if [ -n "$(echo ${fstabstate} |grep -e "/boot")" ] && \
+	   [ -n "$(echo ${procstate} |grep -e "/boot")" ]
 	then
 		einfo "Your boot partition was detected as being mounted as /boot."
 		einfo "Files will be installed there for lilo to function correctly."
-	else
-		mount /boot
-		if [ `cut -f 2 -d " " /proc/mounts | grep "/boot"` ]
+	elif [ -n "$(echo ${fstabstate} |grep -e "/boot")" ] && \
+	     [ -z "$(echo ${procstate} |grep -e "/boot")" ]
+	then
+		mount /boot &>/dev/null
+		if [ "$?" -eq 0 ]
 		then
 			einfo "Your boot partition was not mounted as /boot, but portage was able to mount"
 			einfo "it without additional intervention."
@@ -31,6 +38,8 @@ pkg_setup() {
 			eerror "can continue. Lilo needs to install important files there."
 			die "Please mount your /boot partition."
 		fi
+	else
+		einfo "You do not have a seperate /boot partition."
 	fi
 }
 
@@ -61,6 +70,9 @@ src_install() {
 	doins boot-text.b boot-menu.b chain.b os2_d.b
 	doman manPages/*.[5-8]
 	dodoc CHANGES COPYING INCOMPAT QuickInst README*
+
+	insinto /etc
+	newins ${FILESDIR}/lilo.conf lilo.conf.example
 }
 
 pkg_preinst() {
@@ -87,12 +99,13 @@ pkg_postinst() {
 	einfo "Activating boot-menu..."
 	ln -sf boot-menu.b $ROOT/boot/boot.b
 
-	einfo "You need to put: message=/boot/foo.boot in your"
-	einfo "/etc/lilo.conf global section."
 	echo
-	einfo "See http://www.gamers.org/~quinet/lilo/index.html"
-	einfo "for downloadable animations.  Put them in your"
-	einfo "/boot directory."
+	echo "*****************************************************"
+	echo "* You need to use: message=/boot/foo.boot in your   *"
+	echo "* /etc/lilo.conf global section.                    *"
+	echo "*                                                   *"
+	echo "* See http://www.gamers.org/~quinet/lilo/index.html *"
+	echo "* for downloadable animations.                      *"
+	echo "*****************************************************"
 	echo
-	einfo "Have fun :>"
 }

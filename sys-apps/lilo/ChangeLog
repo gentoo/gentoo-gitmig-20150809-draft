@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.6 2002/04/06 07:55:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.7 2002/04/09 03:36:31 woodchip Exp $
+
+*lilo-21.7.5-r2 (8 Apr 2002)
+
+  8 Apr 2002; Donny Davies <woodchip@gentoo.org> lilo-21.7.5-r2.ebuild,
+  lilo-21.7.5-r1.ebuild, lilo-22.1-r2.ebuild :
+
+  Sync pkg_setup() with lilo-22.1-r3 and added the sample lilo.conf.
+  Removed the stale ebuilds.
 
 *lilo-22.1-r3 (5 Apr 2002)
 
@@ -10,11 +18,9 @@
 
   18 Feb 2002; Donny Davies <woodchip@gentoo.org> lilo-21.7.5-r1.ebuild :
   
-  Cleaned up the comments I left behind in .ebuild.  Also added the pkg_setup() from
-  lilo-22.1 into this one.. good stuff.  ATTN Maintainers:  This lilo has the
-  patches from SuSe for animated boot logo stuff, quite fun, so please dont go
-  deleting it because its simply older than the lilo-22.1 version in portage!
-  I deleted the stale ebuilds to simply the situation.
+  ATTN Maintainers:  This lilo has the patches from SuSe for animated boot
+  logos.  Please dont delete it simply because it's older than the lilo-22.1
+  version in portage!
 
 *lilo-22.1-r2 (4 Feb 2002)
 
@@ -28,8 +34,7 @@
 
   2 Feb 2002; Donny Davies <woodchip@gentoo.org> lilo-22.1-r1.ebuild:
 
-  Added several patches from SuSE for animated boot logos.  Not completly finished
-  yet, but totally usable.  Please read the ebuild first before merging this!
+  Added several patches from SuSE for animated boot logos.
   Get animations at: http://www.gamers.org/~quinet/lilo/index.html.
 
 *lilo-22.1-r1 (1 Feb 2002)
