@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.36-r1.ebuild,v 1.4 2005/01/22 10:20:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.36-r1.ebuild,v 1.5 2005/02/28 22:20:07 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.blender.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| (GPL-2 BL)"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 
 RDEPEND="virtual/x11
 	media-libs/libsdl
