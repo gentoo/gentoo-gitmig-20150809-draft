@@ -1,41 +1,46 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.10 2005/01/02 06:24:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.8_rc1.ebuild,v 1.1 2005/01/02 06:24:55 eradicator Exp $
 
-IUSE="static jack"
+IUSE="static jack doc"
 
 inherit libtool eutils
 
+MY_P="${P/_rc/rc}"
+S="${WORKDIR}/${MY_P}"
+
 DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
-SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
+SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ppc64 -sparc x86"
 LICENSE="GPL-2 LGPL-2.1"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="virtual/alsa
-	 >=media-sound/alsa-headers-1.0.5a"
+	>=media-sound/alsa-headers-${PV}"
 
-DEPEND=">=sys-devel/automake-1.7.2
-	>=sys-devel/autoconf-2.57-r1"
+DEPEND="${RDEPEND}
+	doc? ( >=app-doc/doxygen-1.2.6 )"
 
 PDEPEND="jack? ( =media-plugins/alsa-jack-${PV}* )"
 
-src_unpack() {
-	unpack ${A}
-
-	if use static; then
-		mv ${S} ${S}.static
-		unpack ${A}
-
-		cd ${S}.static
-		elibtoolize
-	fi
-
-	cd ${S}
-	elibtoolize
-}
+#src_unpack() {
+#	unpack ${A}
+#
+#	if use static; then
+#		mv ${S} ${S}.static
+#		unpack ${A}
+#
+#		cd ${S}.static
+#		epatch ${FILESDIR}/${P}-pcm_wait.patch
+#		elibtoolize
+#	fi
+#
+#	cd ${S}
+#	epatch ${FILESDIR}/${P}-pcm_wait.patch
+#	elibtoolize
+#}
 
 src_compile() {
 	local myconf=""
@@ -43,15 +48,19 @@ src_compile() {
 	# needed to avoid gcc looping internaly
 	use hppa && export CFLAGS="-O1 -pipe"
 
-	econf --enable-static=no --enable-shared=yes || die
+	econf $(use_enable static) --enable-shared=yes || die
 	emake || die
 
-	# Can't do both according to alsa docs and bug #48233
-	if use static; then
-		cd ${S}.static
-		econf --enable-static=yes --enable-shared=no || die
-		emake || die
+	if use doc; then
+		emake doc || die
 	fi
+
+	# Can't do both according to alsa docs and bug #48233
+#	if use static; then
+#		cd ${S}.static
+#		econf --enable-static=yes --enable-shared=no || die
+#		emake || die
+#	fi
 }
 
 src_install() {
@@ -60,11 +69,12 @@ src_install() {
 	preserve_old_lib /usr/$(get_libdir)/libasound.so.1
 
 	dodoc ChangeLog COPYING TODO
+	use doc && dohtml -r doc/doxygen/html/*
 
-	if use static; then
-		cd ${S}.static
-		make DESTDIR="${D}" install || die "make install failed"
-	fi
+#	if use static; then
+#		cd ${S}.static
+#		make DESTDIR="${D}" install || die "make install failed"
+#	fi
 }
 
 pkg_postinst() {
