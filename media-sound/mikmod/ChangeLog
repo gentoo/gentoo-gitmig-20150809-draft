@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/mikmod
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.1 2002/07/28 07:53:10 cybersystem Exp $
+
+*mikmod-3.1.6 (28 July 2002)
+
+  28 July 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, mikmod-3.1.6.ebuild, files/digest-mikmod-3.1.6 :
+
+  Initial version in Portage now..
+
