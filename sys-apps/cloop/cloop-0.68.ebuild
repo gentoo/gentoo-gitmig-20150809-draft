@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/cloop-0.68.ebuild,v 1.3 2003/08/26 14:17:05 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/cloop-0.68.ebuild,v 1.4 2003/09/04 13:04:37 stuart Exp $
 
 inherit kernel-mod
 
@@ -39,6 +39,11 @@ badconfig () {
 	die
 }
 
+badconfig_deps () {
+	eerror "You must enable one of these kernel configuration options, to"
+	eerror "ensure that the kernel's zlib support is included:"
+}
+
 src_compile() {
 	kernel-mod_getversion
 	[ "$KV_MAJOR" = "2" ] && [ "$KV_MINOR" != "4" ] && badversion
@@ -47,13 +52,14 @@ src_compile() {
 	[ "$CONFIG_ZLIB_INFLATE" != "y" ] && badconfig
 	[ "$CONFIG_ZLIB_DEFLATE" != "y" ] && badconfig
 
+	kernel-mod_checkzlibinflate_configured
 	kernel-mod_src_compile
 }
 
 src_install() {
 	insinto /lib/modules/$KV_VERSION_FULL/misc
 	doins cloop.o
-	dobin create_compressed_fs compressloop
+	dobin create_compressed_fs compressloop extract_compressed_fs
 	doman debian/create_compressed_fs.1
 	dodoc CHANGELOG README
 }

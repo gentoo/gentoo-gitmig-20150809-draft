@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/cloop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/ChangeLog,v 1.3 2003/08/26 14:17:05 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cloop/ChangeLog,v 1.4 2003/09/04 13:04:37 stuart Exp $
+
+  04 Sep 2003; stuart cloop-0.68.ebuild:
+  Fix for bug #27882
+  
+  cloop needs to be *sure* that the zlib code is linked into the kernel.
+  Simply enabling the zlib config options isn't enough; the code needs
+  to be called from elsewhere in the kernel.
+  
+  The kernel-mod eclass now provides a function to test for this, and
+  I've updated the cloop-0.68 ebuild to use it.
 
   26 Aug 2003; stuart cloop-1.0.ebuild:
   Added test to catch cause of bug #27343

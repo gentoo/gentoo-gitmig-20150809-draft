@@ -1,5 +1,5 @@
-MD5 fc97b5e2afe2985fb35dc3b127e64642 cloop-0.68.ebuild 1842
+MD5 0aa22b40a06cb0a362cb73beb7326b8b cloop-0.68.ebuild 2060
 MD5 3db0f939da34558d619d860bd53d6885 cloop-1.0.ebuild 1842
-MD5 c2f7050d70e06e429c1cc8d0469cc3ee ChangeLog 505
+MD5 049c66687f0bd72819ce054e757f22ed ChangeLog 881
 MD5 35d772e2810697ea7458e58d4cd8dac1 files/digest-cloop-1.0 62
 MD5 a2d81d30f83079df12804981e490bd8c files/digest-cloop-0.68 64
