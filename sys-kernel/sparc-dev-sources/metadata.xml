@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>sparc</herd>
+<maintainer>
+  <email>sparc@gentoo.org</email>
+  <name>Sparc Team</name>
+</maintainer>
+<longdescription>
+sparc-dev-sources is a Gentoo customized development kernel tailored for supporting 32 and 64 bit sparc computers.  The primary objective is testing bleeding-edge patches.
+</longdescription>
+</pkgmetadata>
