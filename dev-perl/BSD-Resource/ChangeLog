@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BSD-Resource
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.11 2005/02/06 12:51:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.12 2005/04/01 17:32:05 blubb Exp $
+
+  01 Apr 2005; Simon Stelling <blubb@gentoo.org> BSD-Resource-1.24.ebuild:
+  stable on amd64
 
   06 Feb 2005; Michael Cummings <mcummings@gentoo.org>
   +files/portage_niceness.patch, BSD-Resource-1.24.ebuild:
