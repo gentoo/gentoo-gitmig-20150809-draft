@@ -1,7 +1,7 @@
 diff -ruN gcc-3.2.3.orig/gcc/config/rs6000/altivec.h gcc-3.2.3/gcc/config/rs6000/altivec.h
---- gcc-3.2.3.orig/gcc/config/rs6000/altivec.h	2002-05-18 07:40:16.000000000 +0200
-+++ gcc-3.2.3/gcc/config/rs6000/altivec.h	2003-07-02 10:11:35.000000000 +0200
-@@ -8535,4 +8535,52 @@
+--- gcc-3.2.3.orig/gcc/config/rs6000/altivec.h	2003-07-03 02:47:36.000000000 +0200
++++ gcc-3.2.3/gcc/config/rs6000/altivec.h	2003-07-03 02:49:17.000000000 +0200
+@@ -8535,4 +8535,57 @@
  
  #endif /* __cplusplus */
  
@@ -35,6 +35,10 @@ diff -ruN gcc-3.2.3.orig/gcc/config/rs6000/altivec.h gcc-3.2.3/gcc/config/rs6000
 +    };
 +    return vec_perm (A, B, lowword);
 +}
++/*#define my_vmrglb my_vmrglb 
++#define my_vmrglh my_vmrglh 
++#define my_vmrglw my_vmrglw 
++*/
 +#undef vec_mergel
 +
 +#define vec_mergel(a1, a2) \
@@ -53,4 +57,5 @@ diff -ruN gcc-3.2.3.orig/gcc/config/rs6000/altivec.h gcc-3.2.3/gcc/config/rs6000
 +__ch (__bin_args_eq (vector unsigned int, (a1), vector unsigned int, (a2)), \
 +      ((vector unsigned int) my_vmrglw ((vector signed int) (a1), (vector signed int) (a2))), \
 +    __altivec_link_error_invalid_argument ())))))))
-#endif /* _ALTIVEC_H */
++
+ #endif /* _ALTIVEC_H */
