@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.2.ebuild,v 1.4 2003/08/20 07:48:00 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.2.ebuild,v 1.5 2003/08/21 06:13:48 vapier Exp $
 
 inherit eutils
 
@@ -12,11 +12,11 @@ SRC_URI="http://www.nano-editor.org/dist/v1.2/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
-IUSE="nls build spell justify debug" # slang"
+IUSE="nls build spell justify debug slang"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	nls? ( sys-devel/gettext )"
-#	slang? ( sys-libs/slang )" see bug #26897
+	nls? ( sys-devel/gettext )
+	slang? ( sys-libs/slang )"
 PROVIDE="virtual/editor"
 
 S=${WORKDIR}/${MY_P}
@@ -27,7 +27,9 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
 	use build && myconf="${myconf} --disable-wrapping-as-root"
+	[ `use ncurses` ] || myconf="${myconf} `use_with slang`"
 
 	econf \
 		--bindir=/bin \
@@ -38,7 +40,6 @@ src_compile() {
 		`use_enable spell` \
 		`use_enable debug` \
 		`use_enable nls` \
-#		`use_with slang` \
 		${myconf} \
 		|| die "configure failed"
 	emake || die
