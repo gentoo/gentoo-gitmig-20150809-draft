@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b7063fead3ccbb3334ed3c069452a12 njplot-unrooted-1.ebuild 810
-MD5 57201e611df919577b3e0730db02d3c4 ChangeLog 580
+MD5 0707bd52088bd9183070446128bda71f njplot-1.ebuild 805
+MD5 d81ad28c7a708f0001c2f2b72c661215 ChangeLog 749
 MD5 a1727bd238aff0cb1debdf9b11b21b5e metadata.xml 609
-MD5 72fe56f3a4074cf7324d469c568a242a files/digest-njplot-unrooted-1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy3+0I1lqEGTUzyQRArfrAKCio/B0oVGtAuWxHntw7ID0TY9iAQCcDTU4
-asoDWb0XFWReaxfLEToYzso=
-=n7QS
------END PGP SIGNATURE-----
+MD5 72fe56f3a4074cf7324d469c568a242a files/digest-njplot-1 69
