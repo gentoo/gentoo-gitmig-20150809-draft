@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.3.ebuild,v 1.5 2004/11/08 16:28:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.3.ebuild,v 1.6 2004/11/08 19:24:16 mr_bones_ Exp $
 
-inherit kde-functions
-inherit eutils
+inherit eutils kde-functions
 
 DESCRIPTION="program for drawing organic molecules"
 HOMEPAGE="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/"
