@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.01.ebuild,v 1.1 2003/11/02 03:04:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/wmbio-1.01.ebuild,v 1.2 2004/01/04 02:58:09 pyrania Exp $
 
 S=${WORKDIR}/wmbio/src
 DESCRIPTION="a Window Maker applet that shows your biorhythm"
-SRC_URI="http://wmbio.sourceforge.net/${P}.tar.gz"
+SRC_URI="mirror://wmbio/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/wmbio/"
 
 DEPEND="virtual/x11"
@@ -14,7 +14,9 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 src_compile() {
-	rm wmbio
+	cp Makefile Makefile_
+	sed -e 's:cc:cc ${CFLAGS}:' Makefile_ > Makefile
+
 	emake || die
 }
 
@@ -22,5 +24,5 @@ src_install ()
 {
 	dobin wmbio
 	cd ..
-	dodoc README INSTALL COPYING NEWS
+	dodoc README INSTALL COPYING NEWS Changelog
 }

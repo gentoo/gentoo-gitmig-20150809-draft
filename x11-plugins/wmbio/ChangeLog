@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbio
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.1 2003/11/02 03:04:52 pyrania Exp $
+# Copyright 2001-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.2 2004/01/04 02:58:09 pyrania Exp $
+
+  04 Jan 2004; Markus Nigbur <pyrania@gentoo.org> wmbio-1.01.ebuild:
+  ebuild fixes
 
 *wmbio-1.0 (02 Nov 2003)
 
