@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.22 2004/07/07 21:30:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.23 2004/07/09 13:26:33 fmccor Exp $
+
+  09 Jul 2004; Ferris McCormick <fmccor@gentoo.org> fox-1.2.6.ebuild:
+  Add ~sparc keyword.
 
 *fox-1.2.6 (07 Jul 2004)
 

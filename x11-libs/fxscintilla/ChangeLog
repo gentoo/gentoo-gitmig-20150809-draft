@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.5 2004/07/07 21:34:46 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.6 2004/07/09 13:30:35 fmccor Exp $
+
+  09 Jul 2004; Ferris McCormick <fmccor@gentoo.org> fxscintilla-1.61.ebuild:
+  Add ~sparc keyword.
 
 *fxscintilla-1.61 (07 Jul 2004)
 
