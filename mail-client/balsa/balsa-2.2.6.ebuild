@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.2.6.ebuild,v 1.5 2005/03/29 23:25:33 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.2.6.ebuild,v 1.6 2005/03/30 09:20:07 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND=">=gnome-base/libgnome-2.0
 	>=gnome-base/libgnomeui-2.0
-	>=gnome-vfs-2.0
+	>=gnome-base/gnome-vfs-2.0
 	=dev-libs/gmime-2.1.9*
 	>=gnome-base/libbonobo-2.0
 	>=gnome-base/libgnomeprint-2.1.4
