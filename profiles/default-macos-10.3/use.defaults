@@ -18,5 +18,5 @@ ssl		dev-libs/openssl
 tcltk		dev-lang/tcl dev-lang/tk
 tcpd		sys-apps/tcp-wrappers
 tetex		app-text/tetex
-bitmap-fonts
-xprint
+
+

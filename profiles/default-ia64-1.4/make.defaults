@@ -4,6 +4,7 @@
 USE="
 ia64
 berkdb
+bitmap-fonts
 crypt
 cups
 encode
@@ -42,6 +43,7 @@ truetype
 X
 xml2
 xmms
+xprint
 xv
 zlib
 "
