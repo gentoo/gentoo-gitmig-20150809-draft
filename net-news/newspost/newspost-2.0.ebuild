@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-2.0.ebuild,v 1.9 2004/07/05 18:04:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-2.0.ebuild,v 1.10 2004/07/19 09:37:30 dholm Exp $
 
 DESCRIPTION="a usenet binary autoposter for unix"
 HOMEPAGE="http://newspost.unixcab.org/"
@@ -12,7 +12,7 @@ IUSE=""
 # NOTE: This package should work on PPC but not tested!
 # It also has a solaris make file but we don't do solaris.
 # but it should mean that it is 64bit clean.
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 
 DEPEND="sys-libs/glibc sys-devel/gcc"
 

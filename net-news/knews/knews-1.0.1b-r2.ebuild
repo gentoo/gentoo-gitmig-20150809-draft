@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r2.ebuild,v 1.9 2004/07/08 21:11:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r2.ebuild,v 1.10 2004/07/19 09:37:32 dholm Exp $
 
 IUSE="xface png jpeg"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.matematik.su.se/~kjj/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~ppc"
 
 DEPEND="virtual/x11
 	virtual/mta
