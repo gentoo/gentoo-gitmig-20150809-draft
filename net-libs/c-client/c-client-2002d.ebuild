@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002d.ebuild,v 1.2 2003/06/21 11:50:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2002d.ebuild,v 1.3 2003/06/28 17:24:15 taviso Exp $
 
 MY_PN=imap
 MY_P=${MY_PN}-${PV}
@@ -21,12 +21,17 @@ RDEPEND="ssl? ( dev-libs/openssl )
 DEPEND="${RDEPEND}
 		>=sys-libs/pam-0.72"
 
+inherit flag-o-matic 
+
 src_unpack() {
 	unpack ${A}
 
 	# Tarball packed with bad file perms
 	chmod -R ug+w ${S} 
 
+	# alpha needs -fPIC
+	use alpha && append-flags -fPIC
+	
 	# Modifications so we can build it optimially and correctly
 	cd ${S}/src/osdep/unix/
 	cp Makefile Makefile.orig
