@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.0.6.ebuild,v 1.1 2003/03/17 09:19:09 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.0.6.ebuild,v 1.2 2003/03/26 12:24:10 absinthe Exp $
 
 MY_P="jboss-3.0.6-src"
 S=${WORKDIR}/${MY_P}
@@ -8,7 +8,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="The Open Source J2EE app server implementation"
 SRC_URI="mirror://sourceforge/jboss/${MY_P}.tgz"
 HOMEPAGE="http://www.jboss.org"
-LICENSE="LGPL"
+LICENSE="LGPL-2"
 IUSE="doc"
 
 RDEPEND=">=virtual/jdk-1.3"
