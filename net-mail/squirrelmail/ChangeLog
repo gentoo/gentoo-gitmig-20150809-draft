@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.27 2003/10/15 17:52:02 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.28 2003/11/02 15:30:54 mholzer Exp $
+
+*squirrelmail-1.4.2-r1 (02 Nov 2003)
+
+  02 Nov 2003; Martin Holzer <mholzer@gentoo.org>
+  squirrelmail-1.4.2-r1.ebuild:
+  making use of webapps.eclass
+  Patch submitted by Adrian Almenar <strider@gentoo.org> In #30405.
 
   15 Oct 2003; Brad House <brad_mssw@gentoo.org> squirrelmail-1.4.2.ebuild:
   add ~amd64 flag
