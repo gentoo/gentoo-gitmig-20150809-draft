@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.8 2004/12/31 01:27:26 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.9 2005/03/14 20:36:57 ferringb Exp $
+
+  14 Mar 2005; Brian Harring <ferringb@gentoo.org> :
+  keyworded bsdiff-4.2 x86.
+
+*bsdiff-4.2 (15 Mar 2005)
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
