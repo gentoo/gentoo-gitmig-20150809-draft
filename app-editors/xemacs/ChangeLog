@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.18 2002/09/26 18:39:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.19 2002/09/27 05:09:43 mkennedy Exp $
 
 *xemacs-21.4.9 (26 Sep 2002)
 
@@ -8,6 +8,8 @@
   xemacs-21.4.9.ebuild :
 
   Minor version bump. USE flag fix. Resolves bug #6177.
+
+  Updated xemacs-base (resolves bug #8440)
 
 *xemacs-21.4.8-r3 (28 Jul 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.1 2002/09/26 18:39:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.9.ebuild,v 1.2 2002/09/27 05:09:43 mkennedy Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 S="${WORKDIR}/${P}"
 DESCRIPTION="XEmacs is a highly customizable open source text editor and application development system."
 EFS=1.29
-BASE=1.67
+BASE=1.68
 MULE=1.42
 
 SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
