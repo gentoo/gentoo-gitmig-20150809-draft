@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <bcowan@gentoo.org> (27 Sep 2002)
+# updated verion that includes all the patches and fixes over the last 2 years
+=sys-apps/procps-2.0.8
+
 # <g2boojum@gentoo.org> (27 Sep 2002)
 # useful security tool; masked while in freeze
 app-admin/logsentry
