@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.17 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.18 2003/11/01 09:43:54 seemant Exp $
 
 inherit debug eutils
 
 S="${WORKDIR}/fcpackage.${PV/\./_}/fontconfig"
 DESCRIPTION="A library for configuring and customizing font access."
-SRC_URI="http://fontconfig.org/release/fcpackage.${PV/\./_}.tar.gz"
-HOMEPAGE="http://fontconfig.org/"
+HOMEPAGE="http://freedesktop.org/"
+SRC_URI="http://pdx.freedesktop.org/software/fontconfig/releases/fcpackage.${PV/\./_}.tar.gz"
 
 LICENSE="fontconfig"
 SLOT="1.0"
