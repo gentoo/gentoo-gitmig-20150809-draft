@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/atlas-c++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.5 2003/02/12 07:06:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.6 2003/12/31 19:31:04 george Exp $
+
+*atlas-c++-0.4.6 (31 Dec 2003)
+
+  31 Dec 2003; George Shapovalov <george@gentoo.org> atlas-c++-0.4.{5,6).ebuild :
+  new version. Corrected SRC_URI's (site has moved)
+  Also looks like this package has been long abandoned (and its not my epitarhy either,
+  I only got it (I suspect) because of atlas in name)
+  any game dev to pick it up?
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
