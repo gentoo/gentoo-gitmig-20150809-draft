@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/lwp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.5 2004/04/26 14:41:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.6 2004/04/27 19:56:40 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> lwp-1.10.ebuild:
+  Add inherit eutils
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> lwp-1.9.ebuild:
   Add die following econf for bug 48950

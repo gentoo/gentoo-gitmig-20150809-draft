@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2-r1.ebuild,v 1.15 2003/09/08 07:02:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2-r1.ebuild,v 1.16 2004/04/27 19:57:45 agriffis Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="Allows important system files to be stored in a fast database file rather than plain text"
 HOMEPAGE="http://www.gnu.org/"
