@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-0_beta2.ebuild,v 1.1 2002/08/20 04:30:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-0_beta2.ebuild,v 1.2 2002/10/05 05:39:11 drobbins Exp $
+
+IUSE="X"
 
 DESCRIPTION="RDoc produces documentation from Ruby source files"
 HOMEPAGE="http://rdoc.sourceforge.net/"
