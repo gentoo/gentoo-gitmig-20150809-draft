@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>taviso@gentoo.org</email>
+  <name>Tavis Ormandy</name>
+</maintainer>
+<longdescription>
+Compaq C++ for Linux Alpha is a native programming language product, which generates optimized object code. Compaq C++ for Linux Alpha is based on the ANSI/ISO C++ International Standard, reference designation number ISO/IEC 14882:1998. In addition to this standard, C++ supports the ARM, CFRONT, GNU, and MS dialects. In addition to the compiler, the kit includes the C++ Standard Library, the Compaq Portable Math Library (CPML) and the Ladebug debugger ported from Tru64 UNIX. Documentation includes man pages, a README document, a Using Guide, and a Class Library Reference Manual.
+</longdescription>
+</pkgmetadata>
