@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.94 2005/03/29 13:46:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.95 2005/03/29 14:36:39 gustavoz Exp $
+
+  29 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> openbox-3.2-r2.ebuild:
+  Stable on sparc
 
 *openbox-3.3_rc1-r1 (29 Mar 2005)
 
