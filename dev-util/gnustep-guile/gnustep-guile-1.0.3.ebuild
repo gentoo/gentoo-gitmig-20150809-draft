@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-guile/gnustep-guile-1.0.3.ebuild,v 1.3 2003/02/13 11:54:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-guile/gnustep-guile-1.0.3.ebuild,v 1.4 2003/03/04 00:30:00 vladimir Exp $
 
 DESCRIPTION="GNUstep Guile bridge"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P}.tar.gz"
-LICENSE="LGPL"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc "
 DEPEND=">=dev-util/gnustep-base-1.3.4
