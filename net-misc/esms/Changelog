@@ -1,10 +1,14 @@
 # ChangeLog for net-misc/esms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # AUTHOR: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/esms/Changelog,v 1.2 2002/06/01 08:51:15 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/esms/Changelog,v 1.3 2002/06/01 13:03:57 bass Exp $
 
 *ems-0.95 (14 May 2002)
 
+  01 JUN 2002; J.Alberto S.L. <bass@gentoo.org> ems-0.95.ebuild:
+
+  Ebuild clean
+  
   01 Jun 2002; Bruce A. Locke <blocke@shivan.org> ems-0.95.ebuild:
 
   Fixed circular dependency issue

@@ -6,7 +6,7 @@
 S=${WORKDIR}/${P}
 DESCRIPTION="Gui for firewalls (iptables & ipchains), and a firewall
 monitor."
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/firestarter/firestarter-0.8.2.tar.gz"
+SRC_URI="mirror://sourceforge/firestarter/${P}.tar.gz"
 HOMEPAGE="http://firestarter.sf.net"
 
 LICENSE="GPL-2"
@@ -14,18 +14,22 @@ LICENSE="GPL-2"
 DEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/gnome-libs-1.4.1.4
 	sys-apps/iptables"
-RDEPEND="${DEPEND}"
+RDEPEND="nls? ( sys-devel/gettext )"
 SLOT="0"
 
 src_compile() {
 
-	econf || die "econf failed"
+	local myconf
+	use nls \
+           && myconf="${myconf} --enable-nls"
+		   || myconf="${myconf} --disable-nls"
+	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
 	
-	einstall || die "einstall failed"
+	einstall PIXMAPSDIR=${D}//usr/share/pixmaps/ || die "einstall failed"
 }
 
 pkg_postinstall() {

@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/gtkesms-0.0.4.ebuild,v 1.3 2002/06/01 08:48:12 blocke Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkesms/gtkesms-0.0.4.ebuild,v 1.4 2002/06/01 13:03:57 bass Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtk gui for esms."
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/esms/gtkesms-0.0.4.tar.gz"
+SRC_URI="mirror://sourceforge/esms/${P}.tar.gz"
 HOMEPAGE="http://esms.sourceforge.net"
 LICENSE="GPL"
 DEPEND="=x11-libs/gtk+-1.2*

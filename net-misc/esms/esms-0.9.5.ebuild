@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/esms/esms-0.9.5.ebuild,v 1.3 2002/06/01 08:54:38 blocke Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-misc/esms/esms-0.9.5.ebuild,v 1.4 2002/06/01 13:03:57 bass Exp $ 
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="A small console program to send messages to spanish cellular phones"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/esms/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/esms/${P}.tar.gz"
 
 HOMEPAGE="http://esms.sourceforge.net"
 
