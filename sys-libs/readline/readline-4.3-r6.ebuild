@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.3 2004/07/29 02:11:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.4 2004/08/15 06:33:08 lv Exp $
 
 inherit eutils gnuconfig
 
@@ -36,6 +36,14 @@ src_unpack() {
 	gnuconfig_update
 }
 
+pkg_setup() {
+	# this adds support for installing to lib64/lib32. since only portage
+	# 2.0.51 will have this functionality supported in dolib and friends,
+	# and since it isnt expected that many profiles will define it, we need
+	# to make this variable default to lib.
+	[ -z "${CONF_LIBDIR}" ] && export CONF_LIBDIR="lib"
+}
+
 src_compile() {
 	econf --with-curses || die
 
@@ -46,28 +54,26 @@ src_compile() {
 
 
 src_install() {
-	make prefix=${D}/usr mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info install || die
+	einstall || die
 	cd ${S}/shlib
-	make prefix=${D}/usr mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info install || die
+	einstall || die
 
 	cd ${S}
 
 	if ! use macos; then
-		dodir /lib
-		mv ${D}/usr/lib/*.so* ${D}/lib
-		rm -f ${D}/lib/*.old
+		dodir /${CONF_LIBDIR}
+		mv ${D}/usr/${CONF_LIBDIR}/*.so* ${D}/${CONF_LIBDIR}
+		rm -f ${D}/${CONF_LIBDIR}/*.old
 		# bug #4411
 		gen_usr_ldscript libreadline.so
 		gen_usr_ldscript libhistory.so
 		# end bug #4411
-		dosym libhistory.so.${PV/a/} /lib/libhistory.so
-		dosym libreadline.so.${PV/a/} /lib/libreadline.so
+		dosym libhistory.so.${PV/a/} /${CONF_LIBDIR}/libhistory.so
+		dosym libreadline.so.${PV/a/} /${CONF_LIBDIR}/libreadline.so
 		# Needed because make install uses ${D} for the link
-		dosym libhistory.so.${PV/a/} /lib/libhistory.so.4
-		dosym libreadline.so.${PV/a/} /lib/libreadline.so.4
-		chmod 755 ${D}/lib/*.${PV/a/}
+		dosym libhistory.so.${PV/a/} /${CONF_LIBDIR}/libhistory.so.4
+		dosym libreadline.so.${PV/a/} /${CONF_LIBDIR}/libreadline.so.4
+		chmod 755 ${D}/${CONF_LIBDIR}/*.${PV/a/}
 	fi
 
 	dodoc CHANGELOG CHANGES README USAGE
@@ -77,6 +83,7 @@ src_install() {
 
 	# Backwards compatibility #29865
 	if [ -e ${ROOT}/lib/libreadline.so.4.1 ] ; then
+		[ "${CONF_LIBDIR}" != "lib" ] && dodir /lib
 		cp -a ${ROOT}/lib/libreadline.so.4.1 ${D}/lib/
 		touch ${D}/lib/libreadline.so.4.1
 	fi

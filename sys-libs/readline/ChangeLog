@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.32 2004/07/29 02:11:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.33 2004/08/15 06:33:08 lv Exp $
+
+  14 Aug 2004; Travis Tilley <lv@gentoo.org> readline-4.3-r5.ebuild,
+  readline-4.3-r6.ebuild, readline-5.0.ebuild:
+  added CONF_LIBDIR support and changed make install to einstall to avoid a
+  sandbox violation that occurs when CONF_LIBDIR is set
 
 *readline-5.0 (28 Jul 2004)
 

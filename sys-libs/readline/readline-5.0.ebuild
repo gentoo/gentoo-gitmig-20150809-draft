@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0.ebuild,v 1.1 2004/07/29 02:11:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0.ebuild,v 1.2 2004/08/15 06:33:08 lv Exp $
 
 inherit eutils gnuconfig
 
@@ -36,15 +36,23 @@ src_unpack() {
 	gnuconfig_update
 }
 
+pkg_setup() {
+	# this adds support for installing to lib64/lib32. since only portage
+	# 2.0.51 will have this functionality supported in dolib and friends,
+	# and since it isnt expected that many profiles will define it, we need
+	# to make this variable default to lib.
+	[ -z "${CONF_LIBDIR}" ] && export CONF_LIBDIR="lib"
+}
+
 src_compile() {
 	econf --with-curses || die
 	emake || die
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
-	dodir /lib
-	mv ${D}/usr/lib/*.so* ${D}/lib
+	einstall || die
+	dodir /${CONF_LIBDIR}
+	mv ${D}/usr/${CONF_LIBDIR}/*.so* ${D}/${CONF_LIBDIR}
 
 	# Bug #4411
 	gen_usr_ldscript libreadline.so
