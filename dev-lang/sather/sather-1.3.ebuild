@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.11 2003/06/14 03:23:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.12 2003/08/05 16:21:25 vapier Exp $
 
-IUSE=""
+inherit eutils
 
 MY_P="Sather-${PV}"
-DESCRIPTION="Sather is an object oriented language designed to be simple, efficient, safe, flexible and non-proprietary."
+DESCRIPTION="object oriented language designed to be simple, efficient, safe, flexible and non-proprietary"
+HOMEPAGE="http://www.cs.waikato.ac.nz/sather/ http://www.icsi.berkeley.edu/~sather/"
 SRC_URI="http://www.cs.waikato.ac.nz/${PN}/release/downloads/${MY_P}.tar.gz
 	ftp://ftp.gnu.org/gnu/${PN}/Doc/${PN}-tutorial-000328.ps.gz
 	ftp://ftp.gnu.org/gnu/${PN}/Doc/${PN}-tutorial-000328.html.tar.gz
@@ -13,11 +14,10 @@ SRC_URI="http://www.cs.waikato.ac.nz/${PN}/release/downloads/${MY_P}.tar.gz
 	ftp://ftp.gnu.org/gnu/${PN}/Doc/${PN}-specification-000328.ps.gz
 	http://www.icsi.berkeley.edu/~${PN}/Publications/satish-thatte.ps.gz
 	http://www.icsi.berkeley.edu/~${PN}/Documentation/LanguageDescription/Descript.ps.gz"
-HOMEPAGE="http://www.cs.waikato.ac.nz/sather/ http://www.icsi.berkeley.edu/~sather/"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+SLOT="0"
+KEYWORDS="x86 sparc"
 
 DEPEND=">=sys-devel/gcc-2.95.3-r5
 	>=dev-libs/boehm-gc-6.0"
@@ -51,7 +51,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	dodir /usr
 	cp -a ${WORKDIR}/${MY_P} ${D}/usr/sather
 	rm -rf ${D}/usr/${PN}/bin/sacomp.code

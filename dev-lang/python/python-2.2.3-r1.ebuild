@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r1.ebuild,v 1.4 2003/07/23 12:22:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r1.ebuild,v 1.5 2003/08/05 16:21:25 vapier Exp $
 
 IUSE="readline tcltk berkdb bootstrap build doc"
 
@@ -37,7 +37,7 @@ PROVIDE="virtual/python"
 
 SLOT="2.2"
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 src_unpack() {
 	unpack ${A}

@@ -1,31 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.12.ebuild,v 1.8 2003/06/12 20:31:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.12.ebuild,v 1.9 2003/08/05 16:21:25 vapier Exp $
 
-IUSE="readline"
-
-TARBALL=nhc98src-${PV}.tar.gz
+inherit eutils
 
 DESCRIPTION="Haskell 98 compiler"
-SRC_URI="ftp://ftp.cs.york.ac.uk/pub/haskell/nhc98/${TARBALL}"
 HOMEPAGE="http://www.cs.york.ac.uk/fp/nhc98/"
+SRC_URI="ftp://ftp.cs.york.ac.uk/pub/haskell/nhc98/nhc98src-${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="nhc98"
-KEYWORDS="x86 sparc "
+SLOT="0"
+KEYWORDS="x86 sparc"
+IUSE="readline"
 
 DEPEND="readline? ( >=readline-4.1 )"
 
 src_unpack() {
-	# unpack the source
-	unpack "${TARBALL}"
+	unpack ${A}
 	# patch to fix the getenv bug when tracing
 	cd ${P}
-	patch -p0 < ${FILESDIR}/nhc98-1.12-getenv.patch
+	epatch ${FILESDIR}/nhc98-1.12-getenv.patch
 }
 
 src_compile() {
-
 	./configure --buildwith=gcc \
 		--prefix=/usr --installdir=/usr \
 		-man -docs \
@@ -35,7 +32,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	# The install location is taken care of by the
 	# configure script.
 	make DESTDIR=${D} install || die

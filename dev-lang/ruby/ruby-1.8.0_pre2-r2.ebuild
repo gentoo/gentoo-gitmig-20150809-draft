@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre2-r2.ebuild,v 1.3 2003/08/01 03:23:26 agriffis Exp $
-
-IUSE="socks5 tcltk"
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre2-r2.ebuild,v 1.4 2003/08/05 16:21:25 vapier Exp $
 
 inherit flag-o-matic eutils
 
-S=${WORKDIR}/${P%_pre*}
 DESCRIPTION="An object-oriented scripting language"
-SRC_URI="mirror://ruby/${P/_pre/-preview}.tar.gz"
 HOMEPAGE="http://www.ruby-lang.org/"
+SRC_URI="mirror://ruby/${P/_pre/-preview}.tar.gz"
+
 LICENSE="Ruby"
-KEYWORDS="~x86 ~alpha"
 SLOT="0"
+KEYWORDS="~x86 ~alpha"
+IUSE="socks5 tcltk"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
@@ -20,6 +19,8 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/ncurses-5.2
 	socks5? ( >=net-misc/dante-1.1.13 )
 	tcltk?  ( dev-lang/tk )"
+
+S=${WORKDIR}/${P%_pre*}
 
 src_unpack() {
 	unpack ${A}
@@ -49,7 +50,7 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc COPYING* ChangeLog MANIFEST README* ToDo
 }
