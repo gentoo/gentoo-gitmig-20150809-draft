@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.4.ebuild,v 1.1 2003/09/10 17:46:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.4-r1.ebuild,v 1.1 2003/09/26 18:40:58 vapier Exp $
 
 inherit games
 
@@ -32,8 +32,8 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin scid sc_addmove sc_epgn sc_spell sc_eco sc_import sc_remote \
-		sc_tree scidpgn pgnfix pgnscid tkscid tcscid scmerge
+	dogamesbin pgnfix pgnscid sc_addmove sc_eco sc_epgn sc_import sc_remote \
+		sc_spell sc_tree scid scidpgn scmerge spliteco tcscid tkscid
 
 	dodoc CHANGES COPYING README THANKS
 	dohtml help/*.html
