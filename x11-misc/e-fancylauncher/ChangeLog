@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/e-fancylauncher
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e-fancylauncher/ChangeLog,v 1.3 2003/03/01 20:55:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e-fancylauncher/ChangeLog,v 1.4 2003/11/06 19:49:23 mr_bones_ Exp $
+
+  06 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  e-fancylauncher-0.7-r1.ebuild, e-fancylauncher-0.7.ebuild:
+  x11-misc/epplet-base -> x11-plugins/epplets
 
 *e-fancylauncher-0.7-r1 (01 Mar 2003)
 
