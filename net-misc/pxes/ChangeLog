@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/pxes
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.1 2003/08/03 00:05:03 wolf31o2 Exp $
+
+  02 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> files/makedevices.sh,
+  files/pxes-0.6-gentoo.patch:
+  Initial import.  Ebuild by me.
+
