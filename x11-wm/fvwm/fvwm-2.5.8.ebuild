@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.2 2003/11/02 13:01:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.3 2003/11/03 13:40:40 taviso Exp $
 
 inherit eutils
 
@@ -21,8 +21,8 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 				!ncurses? ( >=sys-libs/libtermcap-compat-1.2.3 ) )
 		gtk? ( =x11-libs/gtk+-1.2*
 				imlib? ( >=media-libs/gdk-pixbuf-0.21.0
-						>=media-libs/imlib-1.9.14-r1 ) )
-		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
+						>=media-libs/imlib-1.9.14-r1 )
+				gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 ) )
 		rplay? ( >=media-sound/rplay-3.3.2 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		png? ( >=media-libs/libpng-1.0.12-r2 )
@@ -87,20 +87,19 @@ src_compile() {
 	# since fvwm-2.5.8 GTK support can be diabled with --disable-gtk, previously
 	# we had to hide the includes/libs during configure. this is still the case
 	# for GDK image suport _with_ gtk, unfortunately.
+	# FvwmGtk can be built as a gnome application, or a Gtk+ application.
 	if ! use gtk; then
-		myconf="${myconf} --disable-gtk"
+		myconf="${myconf} --disable-gtk --without-gnome"
 	else
 		if ! use imlib; then
 			einfo "ATTN: You can safely ignore any imlib related configure errors."
 			myconf="${myconf} --with-imlib-prefix=${T}"
 		fi
-	fi
-
-	# link with the gnome libraries, for better integration with the gnome desktop.
-	if use gnome; then
-		myconf="${myconf} --with-gnome"
-	else
-		myconf="${myconf} --without-gnome"
+		if ! use gnome; then
+			myconf="${myconf} --without-gnome"
+		else
+			myconf="${myconf} --with-gnome"
+		fi
 	fi
 
 	# rplay is a cool, but little used way of playing sounds over a network
@@ -109,7 +108,7 @@ src_compile() {
 		myconf="${myconf} --without-rplay-library"
 	fi
 
-	# Install perl bindings for FvwmPerl.
+	# Install perl bindings.
 	if use perl; then
 		myconf="${myconf} --enable-perllib"
 	else
@@ -167,7 +166,6 @@ src_compile() {
 	fi
 
 	# disable xsm protocol (session management) support?
-	# `nosm` instead of `sm` as some people dont check USE flags
 	if use nosm; then
 		myconf="${myconf} --disable-sm"
 	else
@@ -175,7 +173,6 @@ src_compile() {
 	fi
 
 	# disable xpm support? (maybe you only use png in your themes, or just solid colour?)
-	# `noxpm` instead of `xpm`, as most people will want this.
 	if use noxpm; then
 		myconf="${myconf} --without-xpm-library"
 	fi
