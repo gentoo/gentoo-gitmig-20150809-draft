@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.5.ebuild,v 1.12 2004/03/26 17:04:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.5-r1.ebuild,v 1.1 2004/04/13 17:17:16 eradicator Exp $
+
+inherit eutils
 
 DESCRIPTION="Network Audio System"
 SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
@@ -16,6 +18,13 @@ IUSE=""
 # provides it. 20020607 (Seemant): Actually, the homepage says it needs
 # the entire X11 build environment, so this is ok.
 DEPEND="virtual/x11"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-libaudioMakefile.patch
+}
 
 src_compile() {
 	xmkmf

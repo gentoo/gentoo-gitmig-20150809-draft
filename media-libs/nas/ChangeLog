@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.17 2004/04/13 05:35:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.18 2004/04/13 17:17:16 eradicator Exp $
+
+*nas-1.5-r1 (13 Apr 2004)
+
+  13 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> nas-1.5-r1.ebuild,
+  nas-1.5.ebuild, files/nas-1.5-libaudioMakefile.patch:
+  Patching libaudio's Imakefile to link properly for bug #47665.
 
   12 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> nas-1.6c-r1.ebuild:
   Stable on x86 and sparc.  Fixes bug #47665.
