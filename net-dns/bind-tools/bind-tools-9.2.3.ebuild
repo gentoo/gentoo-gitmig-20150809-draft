@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3.ebuild,v 1.12 2004/07/01 22:10:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3.ebuild,v 1.13 2004/07/14 23:21:13 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -12,6 +12,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9-beta.html"
 
 KEYWORDS="-x86 -ppc -sparc -alpha -hppa -amd64 -ia64"
+IUSE="ipv6"
 LICENSE="as-is"
 SLOT="0"
 
