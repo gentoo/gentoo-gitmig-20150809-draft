@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.13 2002/07/09 04:27:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.14 2002/08/12 15:37:10 gerk Exp $
 
 *imagemagick-5.4.7 (08 Jul 2002)
+
+  12 Aug 2002; Mark Guertin <gerk@gentoo.org> imagemagick-5.4.7.ebuild :
+  Added ppc to keywords
 
   08 Jul 2002; Seemant Kulleen <seemant@gentoo.org> imagemagick-5.4.7.ebuild
   files/digest-imagemagick-5.4.7 :
