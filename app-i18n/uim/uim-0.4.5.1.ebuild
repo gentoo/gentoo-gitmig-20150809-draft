@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5.1.ebuild,v 1.5 2005/02/24 11:01:15 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.5.1.ebuild,v 1.6 2005/02/24 18:25:52 sekretarz Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="gtk nls X m17n-lib"
 
 RDEPEND="X? ( virtual/x11 )
