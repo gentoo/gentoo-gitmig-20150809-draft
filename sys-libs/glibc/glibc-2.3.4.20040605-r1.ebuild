@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.13 2004/07/09 09:44:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.14 2004/07/09 17:30:51 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
@@ -78,13 +78,9 @@ setup_flags() {
 	fi
 
 
-	# temporary fix for a few gcc 3.4 related problems
-	# note: the problem this fixes should no longer exist as of gcc
-	# 3.4.0-r6. i'll keep this around for a short time longer since not
-	# everyone recompiles their compiler at every upgrade...
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
-		filter-flags -funit-at-a-time
-		append-flags -fno-unit-at-a-time
+		# broken in 3.4.x
+		replace-cpu-flags pentium-m pentium4
 	fi
 
 

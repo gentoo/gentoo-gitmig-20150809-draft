@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.12 2004/07/09 09:44:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.13 2004/07/09 17:30:51 lv Exp $
 
 IUSE="nls pic build nptl erandom debug"
 
@@ -501,6 +501,11 @@ setup_flags() {
 			[ "${CHOST}" == "sparc-unknown-linux-gnu" ] && \
 				export CHOST="sparcv9-unknown-linux-gnu"
 		fi
+	fi
+
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
+		# broken in 3.4.x
+		replace-cpu-flags pentium-m pentium4
 	fi
 }
 
