@@ -463,7 +463,7 @@ To merge your logger of choice, type <e>one</e> of the next three lines:
 # <i>rc-update add sysklogd default</i>
 <comment>or</comment>
 # <i>emerge app-admin/syslog-ng</i>
-# <i>rc-update syslog-ng default</i>
+# <i>rc-update add syslog-ng default</i>
 <comment>or</comment>
 # <i>emerge app-admin/metalog</i>
 # <i>rc-update add metalog default</i>
