@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9.ebuild,v 1.2 2003/03/31 00:52:01 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9.ebuild,v 1.3 2003/05/11 17:53:17 tberman Exp $
 
 IUSE="ssl ldap sasl berkdb tcpd gdbm"
 
@@ -29,7 +29,7 @@ then
 elif [ -n "`use berkdb`" ]
 then
 	DEPEND="${DEPEND}
-			sys-libs/db-3.2"
+			>=sys-libs/db-3.2"
 else
 	DEPEND="${DEPEND}
 			sys-libs/gdbm"
