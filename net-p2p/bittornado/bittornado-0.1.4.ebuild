@@ -1,6 +1,5 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.1.4.ebuild,v 1.1 2004/04/10 15:08:00 mholzer Exp $
 
 inherit distutils
 inherit eutils
@@ -27,13 +26,14 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/bittorrent"
 
 S="${WORKDIR}/${MY_PN}-CVS"
-PIXMAPLOC="/usr/share/pixmaps/bittorrent"
+PIXMAPLOC="/usr/share/pixmaps/bittornado"
 
-# Why did we do this???
-#src_unpack() {
-#	unpack ${A}
-#	sed -i "s:os.path.abspath(os.path.dirname(sys.argv\[0\])):\"${PIXMAPLOC}/\":" ${S}/btdownloadgui.py || die "sed failure 1"
-#}
+src_unpack() {
+	unpack ${A}
+
+	# fixes wrong icons path
+	sed -i "s:os.path.abspath(os.path.dirname(os.path.realpath(sys.argv\[0\]))):\"${PIXMAPLOC}/\":" ${S}/btdownloadgui.py
+}
 
 src_install() {
 	distutils_src_install
@@ -41,6 +41,9 @@ src_install() {
 	dodir etc
 	cp -a /etc/mailcap ${D}/etc/
 	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
+
+	rm ${D}/usr/bin/*.ico
+	rm ${D}/usr/bin/*.gif
 
 	if use X; then
 		dodir ${PIXMAPLOC}
@@ -61,3 +64,4 @@ src_install() {
 		rm ${D}/usr/bin/*gui.py
 	fi
 }
+
