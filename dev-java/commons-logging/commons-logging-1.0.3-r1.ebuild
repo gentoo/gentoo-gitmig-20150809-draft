@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.3-r1.ebuild,v 1.4 2004/06/24 22:22:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.3-r1.ebuild,v 1.5 2004/07/15 14:49:12 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="The Jakarta-Commons Logging package is an ultra-thin bridge between different logging libraries."
 HOMEPAGE="http://jakarta.apache.org/commons/logging/"
 SRC_URI="mirror://apache/jakarta/commons/logging/source/${PN}-${PV}-src.tar.gz"
-DEPEND=">=virtual/jdk-1.3
-	>=dev-java/log4j-1.2.5
+DEPEND=">=dev-java/log4j-1.2.5
 	dev-java/avalon-logkit
 	>=dev-java/ant-1.4
 	jikes? ( dev-java/jikes )
-	junit? ( >=dev-java/junit-3.7 )"
+	junit? ( >=dev-java/junit-3.7 >=virtual/jdk-1.4 ) : ( >=virtual/jdk-1.3 )"
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
