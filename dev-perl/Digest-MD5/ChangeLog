@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Digest-MD5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/ChangeLog,v 1.19 2003/12/24 23:12:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/ChangeLog,v 1.20 2003/12/24 23:16:24 mcummings Exp $
+
+  24 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  Digest-MD5-2.20-r1.ebuild, Digest-MD5-2.20.ebuild, Digest-MD5-2.24.ebuild,
+  Digest-MD5-2.26.ebuild, Digest-MD5-2.27.ebuild, Digest-MD5-2.33.ebuild:
+  Previous versions no longer exist on CPAN mirrors
 
 *Digest-MD5-2.33 (24 Dec 2003)
 
