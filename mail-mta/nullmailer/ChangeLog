@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.9 2005/03/03 17:23:16 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.10 2005/03/03 17:24:09 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  nullmailer-1.00_rc7-r1.ebuild:
+  Dependency update: sys-apps/supervise-scripts -> sys-process/supervise-scripts.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   nullmailer-1.00_rc7-r5.ebuild:
