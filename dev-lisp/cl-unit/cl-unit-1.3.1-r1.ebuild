@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/cl-unit-1.3.1-r1.ebuild,v 1.3 2004/06/24 23:56:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/cl-unit-1.3.1-r1.ebuild,v 1.4 2005/02/08 08:12:21 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -23,7 +23,8 @@ CLPACKAGE=clunit
 
 src_unpack() {
 	unpack ${A}
-	epatch cl-unit_${PV}-${DEB_PV}.diff
+	epatch cl-unit_${PV}-${DEB_PV}.diff || die
+	epatch ${FILESDIR}/${PV}-no-self-tests-gentoo.patch || die
 }
 
 src_install() {
