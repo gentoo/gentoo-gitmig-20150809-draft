@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptplug
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.6 2004/01/08 02:25:23 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.7 2004/02/10 06:06:08 pylon Exp $
+
+  10 Feb 2004; Lars Weiler <pylon@gentoo.org> cryptplug-0.3.15.ebuild:
+  Stable on ppc
 
   07 Jan 2004; Jon Portnoy <avenj@gentoo.org> cryptplug-0.3.15.ebuild :
   AMD64 keywords.
