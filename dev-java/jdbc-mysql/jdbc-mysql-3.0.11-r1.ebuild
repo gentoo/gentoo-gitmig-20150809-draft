@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.11-r1.ebuild,v 1.2 2004/09/28 04:32:16 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.11-r1.ebuild,v 1.3 2004/10/23 07:04:06 absinthe Exp $
 
 inherit eutils java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://mysql/Downloads/Connector-J/${At}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 RDEPEND=">=virtual/jdk-1.2
 	dev-java/ant
