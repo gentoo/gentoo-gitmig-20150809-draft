@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.21 2004/07/29 16:00:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.22 2004/08/06 19:16:25 vapier Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -437,6 +437,7 @@ src_unpack() {
 	then
 		# ProPolice Stack Smashing protection
 		epatch ${WORKDIR}/protector.dif
+		epatch ${FILESDIR}/pro-police-docs.patch
 
 		cp ${WORKDIR}/gcc/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/gcc/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"

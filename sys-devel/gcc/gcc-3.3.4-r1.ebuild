@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.6 2004/07/29 08:55:35 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.7 2004/08/06 19:16:25 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -363,6 +363,7 @@ src_unpack() {
 		epatch ${FILESDIR}/3.3.3/gcc333-ssp-3.3.2_1-fixup.patch
 
 		epatch ${WORKDIR}/protector.dif
+		epatch ${FILESDIR}/pro-police-docs.patch
 
 		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
