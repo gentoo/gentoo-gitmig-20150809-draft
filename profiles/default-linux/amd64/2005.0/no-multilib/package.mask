@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.12 2005/04/04 20:22:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.13 2005/04/04 20:24:10 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -36,18 +36,22 @@ games-fps/doom3
 games-fps/enemy-territory
 games-fps/postal2mpdemo
 games-fps/quake3
+games-fps/rtcw
 games-fps/vendetta-online-bin
+games-rpg/nwn
+games-rpg/nwn-cep
+games-server/nwn-ded
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/teamspeak2-client-bin
 media-sound/teamspeak2-server-bin
 media-sound/ventrilo-server-bin
+media-video/realplayer
 net-im/skype
 net-www/netscape-flash
 sys-boot/grub
 www-client/opera
 www-client/mozilla-bin
 www-client/mozilla-firefox-bin
-media-video/realplayer
 
 -<media-video/nvidia-glx-1.0.6629-r3
