@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-embedded
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.2 2003/02/12 09:24:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.3 2003/07/20 13:16:40 caleb Exp $
+
+*qt-embedded-3.1.2 (20 Jul 2003)
+
+  20 Jul 2003; Caleb Tennis <caleb@gentoo.org> qt-embedded-3.1.2.ebuild:
+ 
+  Providing the latest stable version of Qt Embedded due to request from
+  users.  It compiles and installs fine for me, but there may be some conflicts
+  with the existing Qt-free ebuild installation.  Only time will tell.
 
 *qt-embedded-3.0.5 (26 Aug 2002)
 
