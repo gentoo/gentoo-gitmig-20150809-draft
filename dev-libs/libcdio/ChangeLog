@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.16 2004/09/24 08:45:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.17 2004/11/11 03:41:52 eradicator Exp $
+
+  10 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml:
+  Stable amd64, sparc, x86.
 
   24 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> libcdio-0.69.ebuild:
   Added ~alpha back to KEYWORDS as it looks like it was accidently dropped from

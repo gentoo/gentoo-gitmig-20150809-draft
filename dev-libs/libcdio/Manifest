@@ -1,10 +1,20 @@
-MD5 ffd1ec91b51bbf7c51555a066a1f672e ChangeLog 2090
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 647f5d7f806193a35446e049836ab77f ChangeLog 2190
 MD5 7096d603313f3a1edc85c965a05f9bed libcdio-0.68.ebuild 761
 MD5 d4cc992046cd8fe2a9ba5af9e2aca63d libcdio-0.64.ebuild 601
 MD5 0c8be17b9454f6c080acfafdc21ac690 libcdio-0.66.ebuild 603
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 e256095175a1996124761c8ad212edfe libcdio-0.69.ebuild 786
+MD5 526f11a066c4a4c196484c623e3aa5c5 metadata.xml 164
+MD5 024e0e0331e824ae4e8247df53afd3c6 libcdio-0.69.ebuild 783
 MD5 669fc93980342ed536189ec2257cc609 files/digest-libcdio-0.68 65
 MD5 8276d2edab3e451a5639073967339ebb files/digest-libcdio-0.69 65
 MD5 0165911115603b51b34b8ae19ab71e2a files/digest-libcdio-0.64 65
 MD5 3c4bd402e71264bc35217a49c0b680ff files/digest-libcdio-0.66 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBkt+xArHZZzCEUG0RAtOvAJ9273okoiJHeb5KhZZhSCLp0RHPcACbBBt+
+HufjYtXcPXQjQPk5i5LdUoY=
+=FBqy
+-----END PGP SIGNATURE-----
