@@ -1,0 +1,7 @@
+# ChangeLog for app-misc/away
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.1 2004/02/06 22:56:45 pyrania Exp $
+
+  06 Feb 2004; Markus Nigbur <pyrania@gentoo.org> :
+  Initial import. Thanks to Diego Carcia (bug #40607).
+
