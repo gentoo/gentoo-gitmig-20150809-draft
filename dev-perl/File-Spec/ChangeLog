@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/File-Spec
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.8 2003/07/25 18:08:54 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.9 2003/08/04 01:09:56 gmsoft Exp $
 
   25 Jul 2003; <rac@gentoo.org> File-Spec-0.84-r1.ebuild:
   Remove ~arch protection on all but hppa and arm
 
 *File-Spec-0.84-r1 (15 Jul 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> File-Spec-0.84-r1.ebuild :
+  Marked stable on hppa.
 
   15 Jul 2003; <rac@gentoo.org> File-Spec-0.84-r1.ebuild:
   This version installs into vendordir, and therefore requires the
