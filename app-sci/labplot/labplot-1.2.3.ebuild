@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/labplot/labplot-1.2.3.ebuild,v 1.1 2004/05/01 10:19:05 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/labplot/labplot-1.2.3.ebuild,v 1.2 2004/05/02 13:40:06 dholm Exp $
 
 inherit eutils kde
 need-kde 3.1
@@ -13,7 +13,7 @@ HOMEPAGE="http://mitarbeiter.mbi-berlin.de/gerlach/Linux/LabPlot/"
 SRC_URI="${HOMEPAGE}src/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 RESTRICT="nomirror"
 
 SLOT="0"
