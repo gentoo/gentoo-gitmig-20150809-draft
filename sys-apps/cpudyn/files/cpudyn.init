@@ -1,16 +1,19 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/files/cpudyn.init,v 1.4 2004/07/15 00:38:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/files/cpudyn.init,v 1.5 2004/10/10 06:42:10 vapier Exp $
 #
 # Based on the Debian init script written by Celso Gonzalez <celso@bulma.net>,
 # and on the cpufreqd Gentoo init script written by Robert Gogolok <robertgogolok@web.de>.
 # Heavily modified by Robin H. Johnson <robbat2@gentoo.org> to ensure correct
 # start only under support conditions
+# More preconditions by Karl Trygve Kalleberg <karltk@gentoo.org> 
 # 
 
 DAEMON=/usr/sbin/cpudynd
 PIDFILE=/var/run/cpudynd.pid
+
+opts="${opts} min max dynamic"
 
 depend() {
 	need localmount
@@ -41,6 +44,25 @@ checkconfig() {
 			return 1
 		fi
 	fi
+	# CPUFREQ_25 has more than one entry, hence the grep -- karltk
+	if [ ! -z "$(echo ${CPUFREQ_25} | grep ${CPUFREQ_FILE})" ]; then
+		# Silently try to load the governors; shouldn't hurt if they're already there
+		modprobe -q cpufreq_performance
+		modprobe -q cpufreq_powersave
+		# Check that all governors required are actually present
+		missing=""
+		for x in userspace performance powersave ; do
+			if [ -z "$(grep ${x} ${CPUFREQ_FILE}/scaling_available_governors)" ]; then
+				missing="${missing} ${x}"
+			fi
+		done
+		# If some are missing, report which, then bail
+		if [ ! -z "${missing}" ]; then
+			eerror "2.5/2.6 CPUfreq support needs userspace, performance and powersave governors"
+			eerror "Missing${missing}"
+			return 1
+		fi
+	fi
 }
 
 
@@ -51,6 +73,7 @@ start() {
 	if [ -n "$THROTTLING_LOW" ]; then CPUDYN_OPTS="$CPUDYN_OPTS -l $THROTTLING_LOW"; fi
 	if [ -n "$TIMEOUT" ]; then CPUDYN_OPTS="$CPUDYN_OPTS -t $TIMEOUT"; fi
 	if [ -n "$DISKS" ]; then CPUDYN_OPTS="$CPUDYN_OPTS -h $DISKS"; fi
+	if [ "$NICE" == "yes" ]; then CPUDYN_OPTS="$CPUDYN_OPTS -nice"; fi
 
 	ebegin "Starting cpudynd"
 	if checkconfig; then
@@ -66,6 +89,22 @@ stop() {
 	ebegin "Stopping cpudynd"
 	start-stop-daemon --stop --quiet --pidfile $PIDFILE \
 		--exec $DAEMON && rm -f $PIDFILE
+	eend $?
+}
+
+min() {
+	ebegin "Forcing minimal speed"
+	kill -USR2 $(cat ${PIDFILE})
+	eend $?
+}
+max() {
+	ebegin "Forcing maximal speed"
+	kill -USR1 $(cat ${PIDFILE})
+	eend $?
+}
+dynamic() {
+	ebegin "Resetting to default dynamic speed"
+	kill -HUP $(cat ${PIDFILE})
 	eend $?
 }
 
