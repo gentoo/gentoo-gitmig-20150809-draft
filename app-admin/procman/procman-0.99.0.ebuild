@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-0.10.3.ebuild,v 1.2 2001/10/06 22:47:06 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-0.99.0.ebuild,v 1.1 2001/11/09 00:39:37 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Process viewer for GNOME"
-SRC_URI="http://www.personal.psu.edu/users/k/f/kfv101/procman/source/${A}"
+SRC_URI="http://www.personal.psu.edu/users/k/f/kfv101/${PN}/source/${P}.tar.gz"
 HOMEPAGE="http://www.personal.psu.edu/kfv101/procman"
 
 DEPEND="nls? ( sys-devel/gettext )
@@ -20,9 +19,12 @@ src_compile() {
 		myconf="--disable-nls"
 	fi
 
+	CFLAGS="$CFLAGS `gdk-pixbuf-config --cflags`"
+
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
 		    --sysconfdir=/etc					\
+		    --localstatedir=/var/lib				\
 		    --disable-more-warnings				\
 		    $myconf || die
 
@@ -30,7 +32,10 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	dodoc AUTHORS COPYING ChangeLog README NEWS TODO
 }
