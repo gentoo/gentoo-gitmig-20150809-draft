@@ -51,3 +51,4 @@ virtual/ghostscript		app-text/ghostscript
 virtual/w3m			net-www/w3m
 virtual/xemacs			app-editors/xemacs
 virtual/mpg123		media-sound/mpg123
+virtual/jack			media-sound/jack-audio-connection-kit
