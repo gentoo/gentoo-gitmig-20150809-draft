@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/pccts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.10 2003/06/11 08:14:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.11 2003/07/11 20:39:23 gmsoft Exp $
 
 *pccts-1.33.33 (11 Jun 2003)
+
+  11 Jul 2003; Guy Martin <gmsoft@gentoo.org> pccts-1.33.33.ebuild :
+  Added hppa to KEYWORDS.
 
   11 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> pccts-1.33.33.ebuild,
   files/pccts-1.33.33-gentoo.diff:
