@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.4.0_beta1.ebuild,v 1.2 2005/02/05 11:39:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.4.0_beta1.ebuild,v 1.3 2005/02/06 13:39:54 danarmak Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -12,7 +12,7 @@ SLOT="3.4"
 KEYWORDS="~x86"
 IUSE=""
 
-RRDEPEND="
+RDEPEND="
 $(deprange $PV $MAXKDEVER kde-base/dcopperl)
 $(deprange $PV $MAXKDEVER kde-base/dcoppython)
 $(deprange $PV $MAXKDEVER kde-base/kalyptus)
