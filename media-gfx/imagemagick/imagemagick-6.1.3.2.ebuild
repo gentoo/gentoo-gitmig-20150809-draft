@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.3.2.ebuild,v 1.6 2004/11/02 19:00:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.3.2.ebuild,v 1.7 2004/11/02 19:15:26 sekretarz Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -76,7 +76,7 @@ src_install() {
 	make DESTDIR=${D} install
 
 	#bug 69705
-	rm -f ${D}/usr/lib/libltdl*
+#	rm -f ${D}/usr/lib/libltdl*
 
 	dosed "s:-I/usr/include ::" /usr/bin/Magick-config
 	dosed "s:-I/usr/include ::" /usr/bin/Magick++-config
