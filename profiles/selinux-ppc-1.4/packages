@@ -1,37 +1,43 @@
-# core stuff
+# Core Packages
 
 *virtual/os-headers
 *>=sys-apps/baselayout-1.7.9-r1
 *>=sys-devel/binutils-2.13.90.0.18
 *>=sys-devel/gcc-3.2.1
 *>=sys-libs/glibc-2.3.1-r2
-*>=sys-apps/portage-2.0.49_pre19
 
 ###########################################################
 # SELinux versionings
+
+# Core Packages
+*>=sys-apps/portage-2.0.49_pre19
 
 # Base SELinux packages
 *sys-libs/libselinux
 *sys-apps/checkpolicy
 *sys-apps/policycoreutils
-*sec-policy/selinux-base-policy
-*dev-python/python-selinux
+*>=sec-policy/selinux-base-policy-20030817
+*>=dev-python/python-selinux-2.0
 
 # SELinux-patched packages
-*>=net-misc/openssh-3.0.1_p1
-*>=sys-apps/coreutils-5.0
-*sys-apps/findutils
+*>=net-misc/openssh-3.7.1_p2
+*>=sys-apps/coreutils-5.0.91
+*sys-apps/findutils-4.1.20
 *=sys-apps/procps-3.1.12
-*sys-apps/psmisc
-*sys-apps/util-linux
-*sys-apps/pam-login
-*>=sys-libs/pam-0.75-r9
-*sys-libs/pwdb
+*sys-apps/psmisc-21.2-r4
+*sys-apps/util-linux-2.12
+*>=sys-apps/pam-login-3.12-r1
+*>=sys-libs/pam-0.77
+*>=sys-libs/pwdb-0.61-r4
 
 # must use coreutils (these RDEP on it):
 >=sys-apps/fileutils-4.1.11-r2
 >=sys-apps/textutils-2.1-r1
 >=sys-apps/sh-utils-2.0.15-r1
+
+# optional SELinux-patched programs:
+>=app-admin/logrotate-3.6.5-r1
+>=sys-apps/vcron-3.0.1-r1
 
 # SELinux merged into 2.6.0-test3:
 >=sys-kernel/ppc-sources-2.6.0_beta3
