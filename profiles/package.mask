@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <games@gentoo.org> (06 Oct 2003)
+# needs an update ... currently broken #30452
+games-sports/soccar
+
 # <carpaski@gentoo.org> (05 Oct 2003)
 # Masking new portage pre-~arch.
 >=sys-apps/portage-2.0.49-r8
