@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/grsecurity-base-policy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grsecurity-base-policy/ChangeLog,v 1.1 2003/05/17 02:40:13 method Exp $
+
+*grsecurity-base-policy-20030516 (16 May 2003)
+
+  16 May 2003; Joshua Brindle <method@gentoo.org> Manifest,
+  grsecurity-base-policy-20030516.ebuild:
+  Initial import courtesy of solarx <solar@linbsd.net>
+
