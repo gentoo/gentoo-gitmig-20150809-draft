@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/kth-krb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.24 2004/05/12 22:14:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.25 2004/05/27 09:23:21 kumba Exp $
+
+  27 May 2004; Joshua Kinard <kumba@gentoo.org> kth-krb-1.2.2-r2.ebuild:
+  Marked stable on mips.
 
   12 May 2004; Guy Martin <gmsoft@gentoo.org> kth-krb-1.2.2-r2.ebuild:
   Marked stable on hppa.
