@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.74 2004/10/01 15:55:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.75 2004/10/04 22:05:10 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -221,6 +221,12 @@ vim_src_unpack() {
 	# this is NeXT, but it's actually just a file in dev-libs/9libs
 	# This fixes bug 43885 (20 Mar 2004 agriffis)
 	sed -i 's/ libc\.h / /' ${S}/src/configure.in || die 'sed failed'
+
+	# gcc on sparc32 has this, uhm, interesting problem with detecting EOF
+	# correctly. To avoid some really entertaining error messages about stuff
+	# which isn't even in the source file being invalid, we'll do some trickery
+	# to make the error never occur. bug 66162 (02 October 2004 ciaranm)
+	find ${S} -name '*.c' | while read c ; do echo >> "$c" ; done
 }
 
 src_compile() {
