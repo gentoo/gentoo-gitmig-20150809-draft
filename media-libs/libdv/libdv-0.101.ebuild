@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.99-r1.ebuild,v 1.11 2004/02/09 19:58:14 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.101.ebuild,v 1.1 2004/02/09 19:58:14 max Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://libdv.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 IUSE="debug gtk sdl xv"
 
 RDEPEND="dev-libs/popt
@@ -22,8 +22,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
-	epatch "${FILESDIR}/${P}-disablegtk.patch"
-	epatch "${FILESDIR}/${P}-2.6.patch"
+	epatch "${FILESDIR}/${PN}-0.99-2.6.patch"
 }
 
 src_compile() {

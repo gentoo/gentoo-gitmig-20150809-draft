@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.25 2004/01/29 18:13:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.26 2004/02/09 19:58:14 max Exp $
+
+*libdv-0.101 (09 Feb 2004)
+
+  09 Feb 2004; Max Kalika <max@gentoo.org> libdv-0.101.ebuild,
+  libdv-0.9.5-r1.ebuild, libdv-0.98.ebuild, libdv-0.99-r1.ebuild:
+  Bump to version 0.101. Clean out old versions. Inherit eutils to silence
+  epatch() warnings. Move pkgconfig out of RDEPEND.
 
   29 Jan 2004; <gustavoz@gentoo.org> libdv-0.99-r1.ebuild:
   stable on sparc
