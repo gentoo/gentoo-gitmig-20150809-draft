@@ -1,4 +1,4 @@
-MD5 0d6f6d9afb7fab686df39a68428e12e8 ChangeLog 12260
+MD5 09fa442ba23adf7f8624d8a76f113c7a ChangeLog 12409
 MD5 57e645b49da83f3ea04d985cc044a003 courier-0.45.4.ebuild 10584
 MD5 a0706b9eeb116339eec4213e311797fd courier-0.45.5.20040606.ebuild 10341
 MD5 eb543b129e4195f08f51e1e54147bb28 courier-0.45.5.ebuild 10681
@@ -7,6 +7,7 @@ MD5 596ad37ec14be07ebe4dd1fa67bf2b92 courier-0.45.6.ebuild 9849
 MD5 18ab0c5a59588ac3efd359dcdfb2147c courier-0.46.ebuild 9853
 MD5 b287829e2f9edbcf1ff7bb349055e77e metadata.xml 392
 MD5 80bf959fcf17b2150e9a61f652d94452 courier-0.46.20040816.ebuild 10082
+MD5 80bf959fcf17b2150e9a61f652d94452 courier-0.46.20040825.ebuild 10082
 MD5 d8967dea60963b1c0abaccbb2c57ea64 files/apache-sqwebmail.inc 347
 MD5 a546a21f960e4f921e71f614f719a2ce files/bofh 23
 MD5 8041db031156342e93407a73a0ae75f5 files/courier-init 5206
@@ -22,3 +23,4 @@ MD5 098e16e61446aceb242735b1ca70509a files/norewrite.patch 489
 MD5 52f032e570c6f5f9f69b4e4bdfa562a1 files/password.dist 247
 MD5 e3a4ab031bd750b7ce2c7b85fee83d8e files/set-mime 741
 MD5 28eba6ea784530a54e83fd33ee9402d6 files/digest-courier-0.46.20040816 75
+MD5 04278164118b43ab59e28746fe957787 files/digest-courier-0.46.20040825 75
