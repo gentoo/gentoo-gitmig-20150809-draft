@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.66 2004/04/27 20:50:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.67 2004/04/28 18:16:15 lv Exp $
+
+  28 Apr 2004; Travis Tilley <lv@gentoo.org> +files/avifile-gcc34.patch,
+  avifile-0.7.38.20030710.ebuild:
+  patched to compile using gcc 3.4
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   avifile-0.7.37.20030522-r2.ebuild, avifile-0.7.38.20030710.ebuild:
