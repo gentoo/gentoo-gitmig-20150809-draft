@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.18 2003/03/27 19:23:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.19 2003/04/17 16:57:47 lostlogic Exp $
 
 *gawk-3.1.2-r3 (27 Mar 2003)
+
+  17 Apr 2003; Brandon Low <lostlogic@gentoo.org> gawk-3.1.2-r3.ebuild:
+  Changed x86 keywords
 
   27 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gawk-3.1.2-r3.ebuild :
   Special files like those in /proc, report themselves as regular files
