@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.47 2004/08/27 06:02:45 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.48 2004/08/30 18:59:06 langthang Exp $
+
+  30 Aug 2004; Tuan Van <langthang@gentoo.org> cyrus-imapd-2.2.8.ebuild:
+  depend on virtual/snmp.
 
   26 Aug 2004; Tuan Van <langthang@gentoo.org> files/imapd.conf:
   add options to use auxprop with sql.

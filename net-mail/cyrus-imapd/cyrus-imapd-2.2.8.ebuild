@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.8.ebuild,v 1.2 2004/08/27 00:16:56 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.8.ebuild,v 1.3 2004/08/30 18:59:06 langthang Exp $
 
 inherit eutils ssl-cert gnuconfig
 
@@ -19,7 +19,7 @@ RDEPEND=">=sys-libs/db-3.2
 	afs? ( >=net-fs/openafs-1.2.2 )
 	pam? ( >=sys-libs/pam-0.75 )
 	kerberos? ( virtual/krb5 )
-	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
+	snmp? ( virtual/snmp )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	drac? ( >=mail-client/drac-1.12-r1 )"
