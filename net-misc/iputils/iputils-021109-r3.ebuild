@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.17 2005/01/04 04:47:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.18 2005/01/04 23:41:43 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils toolchain-funcs
 
@@ -52,6 +52,7 @@ src_unpack() {
 		Makefile \
 		|| die "sed Makefile opts failed"
 	sed -i \
+		-e '/^all:/s:check-kernel::' \
 		-e 's:-I$(KERNEL_INCLUDE)::' \
 		-e 's:-I/usr/src/linux/include::' \
 		Makefile libipsec/Makefile setkey/Makefile \
