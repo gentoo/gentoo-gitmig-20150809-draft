@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.8_pre20031130.ebuild,v 1.9 2004/04/19 15:01:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.8_pre20031130.ebuild,v 1.10 2004/04/25 21:31:19 agriffis Exp $
 
 DESCRIPTION="A highly configurable replacement for syslogd/klogd"
 SRC_URI="mirror://sourceforge/metalog/${P}.tar.gz"
@@ -33,7 +33,7 @@ src_compile() {
 	automake --add-missing --gnu
 	autoconf
 
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.31 2004/04/19 15:01:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.32 2004/04/25 21:31:19 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> metalog-0.7-r1.ebuild,
+  metalog-0.8_pre20031130.ebuild:
+  Add die following econf
 
   20 Apr 2004; Daniel Black <dragonheart@gentoo.org>
   metalog-0.8_pre20031130.ebuild:
