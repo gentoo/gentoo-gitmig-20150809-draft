@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+depend() {
+	use logger dns
+	need net
+}
+
+start() {
+	ebegin "Starting tinyproxy"
+	/usr/sbin/tinyproxy
+	eend $?
+}
+
+stop() {
+	local pid=0
+	if [ -f /var/run/tinyproxy.pid ] ; then
+		pid=$(</var/run/tinyproxy.pid)
+		rm /var/run/tinyproxy.pid
+	fi
+	ebegin "Stopping tinyproxy"
+	[ ${pid} -ne 0 ] && kill ${pid}
+	eend $?
+}
