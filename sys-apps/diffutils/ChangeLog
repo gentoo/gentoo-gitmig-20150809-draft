@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.27 2003/12/10 04:00:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.28 2003/12/19 12:04:23 gmsoft Exp $
+
+  19 Dec 2003; Guy Martin <gmsoft@gentoo.org> diffutils-2.8.4-r4.ebuild:
+  Marked stable on hppa.
 
   09 Dec 2003; Seemant Kulleen <seemant@gentoo.org> diffutils-2.7.7.ebuild,
   diffutils-2.8.4-r1.ebuild, diffutils-2.8.4-r2.ebuild,
