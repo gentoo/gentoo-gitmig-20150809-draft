@@ -134,7 +134,7 @@ diff -Naur iproute2-2.6.9.orig/tc/Makefile iproute2-2.6.9.wrr/tc/Makefile
 diff -Naur iproute2-2.6.9.orig/tc/q_wrr.c iproute2-2.6.9.wrr/tc/q_wrr.c
 --- iproute2-2.6.9.orig/tc/q_wrr.c	1969-12-31 16:00:00.000000000 -0800
 +++ iproute2-2.6.9.wrr/tc/q_wrr.c	2004-10-26 02:52:12.655006743 -0700
-@@ -0,0 +1,323 @@
+@@ -0,0 +1,322 @@
 +#include <stdio.h>
 +#include <stdlib.h>
 +#include <unistd.h>
@@ -450,11 +450,10 @@ diff -Naur iproute2-2.6.9.orig/tc/q_wrr.c iproute2-2.6.9.wrr/tc/q_wrr.c
 +
 +
 +struct qdisc_util wrr_util = {
-+	NULL,
-+	"wrr",
-+	wrr_parse_opt,
-+	wrr_print_opt,
-+	wrr_print_xstats,
-+	wrr_parse_copt,
-+	wrr_print_copt
++	.id = "wrr",
++	.parse_qopt = wrr_parse_opt,
++	.print_qopt = wrr_print_opt,
++	.print_xstats = wrr_print_xstats,
++	.parse_copt = wrr_parse_copt,
++	.print_copt = wrr_print_copt
 +};

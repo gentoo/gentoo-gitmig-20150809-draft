@@ -46,7 +46,7 @@ diff -Naur iproute2-2.6.9.orig/tc/Makefile iproute2-2.6.9.esqf/tc/Makefile
 diff -Naur iproute2-2.6.9.orig/tc/q_esfq.c iproute2-2.6.9.esqf/tc/q_esfq.c
 --- iproute2-2.6.9.orig/tc/q_esfq.c	1969-12-31 16:00:00.000000000 -0800
 +++ iproute2-2.6.9.esqf/tc/q_esfq.c	2004-10-26 02:49:58.969905912 -0700
-@@ -0,0 +1,169 @@
+@@ -0,0 +1,168 @@
 +/*
 + * q_esfq.c		ESFQ.
 + *
@@ -210,9 +210,8 @@ diff -Naur iproute2-2.6.9.orig/tc/q_esfq.c iproute2-2.6.9.esqf/tc/q_esfq.c
 +
 +
 +struct qdisc_util esfq_util = {
-+	NULL,
-+	"esfq",
-+	esfq_parse_opt,
-+	esfq_print_opt,
-+	esfq_print_xstats,
++	.id = "esfq",
++	.parse_qopt = esfq_parse_opt,
++	.print_qopt = esfq_print_opt,
++	.print_xstats = esfq_print_xstats,
 +};
