@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.599 2004/09/04 23:42:57 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.600 2004/09/06 09:59:11 axxo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -124,7 +124,6 @@ dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
 dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace-cvs:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
-dev-java/ant-optional:javamail - Enable Java Mail API Support
 dev-java/ant-tasks:javamail - Enable JavaMail Ant task
 dev-java/ant-tasks:noantlr - Disable ANTLR Ant task -- Warning: Disabling this could break some of the Java packages!!
 dev-java/ant-tasks:nobcel - Disable bcel Ant task -- Warning: Disabling this could break some of the Java packages!!
