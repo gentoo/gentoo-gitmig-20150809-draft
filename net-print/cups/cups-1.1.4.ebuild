@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.4.ebuild,v 1.3 2000/12/11 18:05:42 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.4.ebuild,v 1.4 2000/12/17 20:09:02 achim Exp $
 
 GPV="4.0.4"
 S=${WORKDIR}/${P}
@@ -31,10 +31,10 @@ src_compile() {
     sed -e "s:/usr/share/doc/cups:/usr/share/cups/doc:" \
 	Makedefs.orig > Makedefs 
     try make 
-    cd ${S0}
-      try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc \
-	--disable-gimptest
-    try make
+#    cd ${S0}
+#      try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc \
+#	--disable-gimptest
+#    try make
 }
 
 src_install () {
@@ -57,13 +57,13 @@ src_install () {
     insopts -m 644
     doins ${FILESDIR}/cups
 
-    cd ${S0}
-    dodir /etc
-    dodir /usr/share /usr/lib/cups/backend
-    try make prefix=${D}/usr exec_prefix=${D}/usr sysconfdir=${D}/etc install
-    gunzip ${D}/usr/share/cups/model/*.gz
-    docinto gimp-print-cups
-    dodoc *.txt
+#    cd ${S0}
+#    dodir /etc
+#    dodir /usr/share /usr/lib/cups/backend
+#    try make prefix=${D}/usr exec_prefix=${D}/usr sysconfdir=${D}/etc install
+#    gunzip ${D}/usr/share/cups/model/*.gz
+#    docinto gimp-print-cups
+#    dodoc *.txt
 }
 
 
