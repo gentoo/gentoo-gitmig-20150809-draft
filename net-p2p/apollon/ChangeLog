@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/apollon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.11 2004/06/29 12:20:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.12 2004/07/07 19:24:28 lv Exp $
+
+  07 Jul 2004; Travis Tilley <lv@gentoo.org> apollon-0.9.3.ebuild:
+  stable on amd64
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> apollon-0.9.2.ebuild,
   apollon-0.9.3.ebuild, apollon-0.9.4-r1.ebuild:
