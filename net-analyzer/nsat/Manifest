@@ -1,4 +1,4 @@
-MD5 8c7a3d341a784664a863ea10e43515e0 ChangeLog 707
-MD5 7c1c90819f846a7e2b04ac380d29e4fc nsat-1.5.ebuild 1307
-MD5 99fbec45790d1b3bcdc76807e592f1bf files/digest-nsat-1.5 57
 MD5 dd2688ef10995aad69fac0669f7413eb files/nsat-1.5-configure.patch 566
+MD5 99fbec45790d1b3bcdc76807e592f1bf files/digest-nsat-1.5 57
+MD5 3b720c34e2b39fabc9ce16bcaad94d85 nsat-1.5.ebuild 1289
+MD5 8c7a3d341a784664a863ea10e43515e0 ChangeLog 707
