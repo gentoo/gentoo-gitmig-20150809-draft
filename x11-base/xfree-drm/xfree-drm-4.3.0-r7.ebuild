@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.9 2004/02/15 09:47:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.10 2004/02/21 21:33:28 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -66,7 +66,7 @@ pkg_setup() {
 	fi
 
 	# 2.6 kernels are broken for now
-	is_kernel "2" "6" && \
+	is_kernel 2 6 && \
 		die "Please link /usr/src/linux to 2.4 kernel sources. xfree-drm does not yet work with 2.6 kernels, use the DRM in the kernel."
 
 	# Force at least make dep (this checks for bzImage, actually) (bug #22853)
@@ -85,15 +85,14 @@ src_unpack() {
 	if use gatos
 	then
 		unpack linux-drm-gatos-${PV}-kernelsource-${SNAPSHOT}.tar.bz2
-		unpack ${PF}-gentoo-${PATCHVER}.tar.bz2
 	elif use video_cards_mach64
 	then
 		unpack linux-drm-mach64-${PV}-kernelsource-${SNAPSHOT}.tar.bz2
-		unpack ${PF}-gentoo-${PATCHVER}.tar.bz2
 	else # standard case
 		unpack linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.bz2
-		unpack ${PF}-gentoo-${PATCHVER}.tar.bz2
 	fi
+
+	unpack ${PF}-gentoo-${PATCHVER}.tar.bz2
 
 	cd ${S}
 
@@ -211,10 +210,12 @@ set_vidcards() {
 
 patch_prepare() {
 	# Do patch excluding based on standard, mach64 or gatos here.
-	# Works everywhere:
-	# 002_all_dristat-compile-fix.patch
+	# 001-099: Patches used in multiple sources
+	# 100-199: Standard-only patches
+	# 200-299: Mach64 patches
+	# 300-399: Gatos patches
 
-	# if [ ! "`is_kernel 2 6" ]
+	# if [ ! "`is_kernel 2 6`" ]
 	# then
 	# 	mv -f ${PATCHDIR}/*2.6* ${EXCLUDED}
 	# fi
@@ -222,13 +223,12 @@ patch_prepare() {
 	if use video_cards_mach64
 	then
 		einfo "Updating for mach64 build..."
-		# Also exclude all non-mach64 patches
-		# mv -f ${PATCHDIR}/3* ${EXCLUDED}
+		# Exclude all non-mach64 patches
 		mv -f ${PATCHDIR}/004* ${EXCLUDED}
+		mv -f ${PATCHDIR}/3* ${EXCLUDED}
 	elif use gatos
 	then
 		einfo "Updating for gatos build..."
-		# This Makefile.linux might be more work to port to alanh's version
 		# Exclude all non-gatos patches
 		mv -f ${PATCHDIR}/004* ${EXCLUDED}
 		mv -f ${PATCHDIR}/2* ${EXCLUDED}
