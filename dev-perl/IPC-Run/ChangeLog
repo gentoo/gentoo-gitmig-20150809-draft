@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/IPC-Run
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.1 2004/08/05 21:47:31 agriffis Exp $
+
+*IPC-Run-0.78 (05 Aug 2004)
+
+  05 Aug 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +IPC-Run-0.78.ebuild:
+  Add IPC-Run module in support of cvsweb-3.0.1 (not yet in portage)
+
