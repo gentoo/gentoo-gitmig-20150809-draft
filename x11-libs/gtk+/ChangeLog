@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.41 2002/12/13 11:00:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.42 2002/12/23 01:26:41 foser Exp $
+
+*gtk+-2.2.0 (22 Dec 2002)
+
+  22 Dec 2002; foser <foser@gentoo.org> gtk+-2.2.0.ebuild :
+  New version
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
