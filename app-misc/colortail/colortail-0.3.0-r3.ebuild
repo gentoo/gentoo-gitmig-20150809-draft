@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.7 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.8 2004/02/09 07:31:55 absinthe Exp $
 
 DESCRIPTION="Colortail custom colors your log files and works like tail"
 SRC_URI="http://www.student.hk-r.se/~pt98jan/colortail-0.3.0.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.student.hk-r.se/~pt98jan/colortail.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc amd64"
 
 src_unpack() {
 	unpack ${A}
