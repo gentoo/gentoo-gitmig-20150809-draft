@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/psyco
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.1 2003/04/20 02:53:39 blauwers Exp $
+
+*psyco-1.0.0_beta1 (20 Apr 2003)
+
+  20 Apr 2003; Bart Lauwers <blauwers@gentoo.org> :
+  Initial import. ebuild submitted per Bug#15155
