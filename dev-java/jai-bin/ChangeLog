@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jai
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/ChangeLog,v 1.1 2004/07/30 20:07:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/ChangeLog,v 1.2 2004/07/31 15:25:35 axxo Exp $
+
+*jai-bin-1.1.2-r3 (31 Jul 2004)
+
+  31 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +jai-bin-1.1.2-r3.ebuild:
+  don't install in jdk dir anymore
 
   30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
   move dev-java/jai dev-java/jai-bin
