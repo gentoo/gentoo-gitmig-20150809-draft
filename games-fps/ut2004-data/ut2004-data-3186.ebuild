@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186.ebuild,v 1.2 2005/02/24 01:58:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186.ebuild,v 1.3 2005/02/24 02:20:20 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -47,11 +47,11 @@ pkg_setup() {
 				${DISK5}/Speech/ons.xml ${DISK6}/DirectX9/BDA.cab
 		fi
 	else
-		cdrom_get_cds ${DISK1}/System/UT2004.ini \
-			${DISK2}/Textures/2K4Fonts.utx.uz2 \
-			${DISK3}/Textures/ONSDeadVehicles-TX.utx.uz2 \
-			${DISK4}/Music/KR-UT2004-Menu.ogg \
-			${DISK5}/Speech/ons.xml ${DISK6}/DirectX9/BDA.cab
+		cdrom_get_cds System/UT2004.ini \
+			Textures/2K4Fonts.utx.uz2 \
+			Textures/ONSDeadVehicles-TX.utx.uz2 \
+			Music/KR-UT2004-Menu.ogg \
+			Speech/ons.xml DirectX9/BDA.cab
 	fi
 
 	games_pkg_setup
