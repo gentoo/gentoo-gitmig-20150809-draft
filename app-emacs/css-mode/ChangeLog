@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/css-mode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/ChangeLog,v 1.5 2004/08/20 15:55:15 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/ChangeLog,v 1.6 2004/10/09 20:14:08 usata Exp $
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> css-mode-0.11.ebuild:
+  Stable on x86 and ppc.
 
   20 Aug 2004; Tom Gall <tgall@gentoo.org> css-mode-0.11.ebuild:
   stable on ppc64, bug #58499
