@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/kiosktool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/ChangeLog,v 1.7 2004/11/21 11:27:19 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kiosktool/ChangeLog,v 1.8 2004/11/23 15:08:54 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kiosktool-0.9.ebuild:
+  QA: fixed IUSE
 
   21 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> kiosktool-0.9.ebuild:
   Added to amd64, bug #71921
