@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/krename
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.10 2003/02/12 05:02:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.11 2003/02/18 17:27:14 hannes Exp $
+
+*krename-2.5.3 (18 Feb 2003)
+
+  18 Feb 2003; Hannes Mehnert <hannes@gentoo.org> krename-2.5.3.ebuild:
+  version bump
 
 *krename-2.5.1 (02 Feb 2003)
 
