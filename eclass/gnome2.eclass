@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.9 2002/06/04 09:21:59 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.10 2002/06/04 10:10:03 blocke Exp $
 
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -51,16 +51,16 @@ gnome2_src_install() {
 
 	einstall " scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}"
 
+	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
+
 	# manual document installation
 	if [ -n "${DOCS}" ]
 	then
 		dodoc ${DOCS}
 	fi
 
-	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-
 	# only update scrollkeeper if this package needs it
-	[ -a ${D}/var/lib/scrollkeeper ] && SCROLLKEEPER_UPDATE="1"
+	[ -d ${D}/var/lib/scrollkeeper ] && SCROLLKEEPER_UPDATE="1"
 
 }
 
