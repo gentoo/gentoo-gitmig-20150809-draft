@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/popa3d
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.1 2003/09/11 17:36:43 port001 Exp $
+
+*popa3d-0.6.3 (11 Sep 2003)
+
+  11 Sep 2003; Ian Leitch <port001@gentoo.org> popa3d-0.6.3.ebuild:
+  New package, thanks to Hallgrimur H. Gunnarsson <hhg@data.is> bug #28277,
+  ebuild modified by Hallgrimur and myself. metadata.xml supplied.
+
