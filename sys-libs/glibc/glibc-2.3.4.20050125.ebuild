@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.26 2005/02/14 20:18:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.27 2005/02/15 09:57:23 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -266,6 +266,14 @@ toolchain-glibc_src_install() {
 	fi
 
 	if tc-is-cross-compiler; then
+		# Glibc doesn't setup multilib crosscompiled dirs right, but it
+		# sets up native multilib dirs right, so just do this when we
+		# crosscompile.
+		if [[ $(get_libdir) != "lib" && -d ${D}$(alt_prefix)/lib ]]; then
+			dodir $(alt_libdir)
+			mv ${D}$(alt_prefix)/lib/* ${D}$(alt_libdir)
+		fi
+
 		# punt all the junk not needed by a cross-compiler
 		rm -rf "${D}"$(alt_prefix)/{bin,etc,$(get_libdir)/gconv,sbin,share}
 	fi
@@ -978,6 +986,16 @@ pkg_setup() {
 		die "nptlonly without nptl"
 	fi
 
+	if tc-is-cross-compiler && ! has_version "${CATEGORY}/${PN}"; then
+		ewarn "This is your first install of ${CATEGORY}/${PN}, so we"
+		ewarn "must disable some configure checks to get glibc to compile.  You should"
+		ewarn "re-emerge ${CATEGORY}/${PN} after this one installs to"
+		ewarn "be safe.  Additionally, you must use -nptl for the first emerge."
+		want_nptl && die "You need to use -nptl when emerging a crosscompiled glibc for the first time"
+		ebeep
+		epause 5
+	fi
+
 	# give some sort of warning about the nptl logic changes...
 	if want_nptl && use !nptlonly ; then
 		ewarn "Warning! Gentoo's GLIBC with NPTL enabled now behaves like the"
@@ -988,7 +1006,7 @@ pkg_setup() {
 		ewarn "fallback, you can disable this behavior by adding nptlonly to"
 		ewarn "USE to save yourself some compile time."
 		ebeep
-		epause
+		epause 5
 	fi
 }
 
@@ -1041,16 +1059,12 @@ src_unpack() {
 		sed -i -e 's:-lgcc_eh::' Makeconfig || die "sed gcc_eh"
 	fi
 
-	# nptl/sysdeps/pthread/configure isn't x-compile friendly
+	# Some configure checks fail on the first emerge through because they
+	# try to link.  This doesn't work well if we don't have a libc yet.
 	# http://sourceware.org/ml/libc-alpha/2005-02/msg00042.html
 	if tc-is-cross-compiler && ! has_version "${CATEGORY}/${PN}"; then
-		ewarn "This is your first install of ${CATEGORY}/${PN}, so we"
-		ewarn "must disable some configure checks to get glibc to compile.  You should"
-		ewarn "re-emerge ${CATEGORY}/${PN} after this one installs to"
-		ewarn "be safe."
 		rm ${S}/sysdeps/sparc/sparc64/elf/configure{,.in}
 		rm ${S}/nptl/sysdeps/pthread/configure{,.in}
-		epause 5
 	fi
 
 	find . -type f -size 0 -o -name "*.orig" -exec rm -f {} \;
