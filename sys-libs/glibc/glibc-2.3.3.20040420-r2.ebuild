@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r2.ebuild,v 1.5 2005/01/17 23:19:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r2.ebuild,v 1.6 2005/03/15 20:45:17 eradicator Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -8,13 +8,12 @@ inherit eutils flag-o-matic gcc
 #  BRANCH_UPDATE=
 BRANCH_UPDATE="20040420"
 
-
 # Minimum kernel version for --enable-kernel
-export MIN_KV="2.4.1"
+export MIN_KV=${LT_KERNEL_VERSION:-"2.4.1"}
 # Minimum kernel version for enabling TLS and NPTL ...
 # NOTE: do not change this if you do not know what
 #       you are doing !
-export MIN_NPTL_KV="2.6.0"
+export MIN_NPTL_KV=${NPTL_KERNEL_VERSION:-"2.6.0"}
 
 #MY_PV="${PV/_}"
 MY_PV="2.3.2"

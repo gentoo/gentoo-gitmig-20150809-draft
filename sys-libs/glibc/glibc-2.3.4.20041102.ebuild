@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.47 2005/03/03 22:33:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.48 2005/03/15 20:45:17 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -672,7 +672,7 @@ glibc_do_configure() {
 		want_tls && myconf="${myconf} --with-tls --without-__thread"
 		want_tls || myconf="${myconf} --without-tls --without-__thread"
 		myconf="${myconf} --enable-add-ons=linuxthreads${ADDONS}"
-		myconf="${myconf} --enable-kernel=2.4.1"
+		myconf="${myconf} --enable-kernel=${LT_KERNEL_VERSION:-2.4.1}"
 	elif [ "$1" == "nptl" ] ; then
 		want_nptl && myconf="${myconf} --with-tls --with-__thread"
 		myconf="${myconf} --enable-add-ons=nptl${ADDONS}"
