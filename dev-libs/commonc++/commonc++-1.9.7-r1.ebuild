@@ -16,6 +16,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 
@@ -28,16 +29,18 @@ src_compile() {
 
     cd ${S}
     ./configure \
-		--prefix=/usr --host=${CHOST} --mandir=/usr/share/man \
-		--infodir=/usr/share/info || die "./configure failed"
-    emake || die "make failed"
+		--prefix=/usr --host=${CHOST} \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		|| die "./configure failed"
+    emake ||:
 
 }
 
 src_install () {
 
-    make prefix=${D} install || die
-    dodoc AUTHORS INSTALL NEWS OVERVIEW.TXT ChangeLog\
+    make DESTDIR=${D} install || die
+	dodoc AUTHORS INSTALL NEWS OVERVIEW.TXT ChangeLog\
 		  README THANKS TODO COPYING COPYING.addendum
 	dohtml doc/*
 }
