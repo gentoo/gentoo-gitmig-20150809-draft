@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.20.ebuild,v 1.5 2004/09/27 15:39:59 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.20.ebuild,v 1.6 2004/10/07 21:57:05 george Exp $
 
 inherit eutils;
 
@@ -12,7 +12,7 @@ SRC_URI="http://fabrice.bellard.free.fr/tcc/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 -sparc"
+KEYWORDS="~x86 -sparc -amd64"
 
 DEPEND="virtual/libc"
 
