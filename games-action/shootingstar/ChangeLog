@@ -1,0 +1,10 @@
+# ChangeLog for games-action/shootingstar
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/ChangeLog,v 1.1 2004/02/23 12:33:46 mr_bones_ Exp $
+
+*shootingstar-1.2.0 (23 Feb 2004)
+
+  23 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  shootingstar-1.2.0.ebuild:
+  initial commit; ebuild submitted by Thomas Preissler via bug #42569 (modified)
+
