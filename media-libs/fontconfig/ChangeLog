@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.20 2003/03/12 19:07:02 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.21 2003/03/12 19:48:03 seo Exp $
 
   08 Feb 2003; Jason Wever <weeve@gentoo.org> fontconfig-2.1-r1.ebuild :
   Changed ~sparc keyword to sparc
@@ -15,6 +15,13 @@
   Masked -ppc  Breaks fonts on PPC platform.
 
 *fontconfig-2.1-r1 (23 Dec 2002)
+
+  12 Mar 2003; Jungmin Seo <seo@gentoo.org> fontconfig-2.1-r1.ebuild,
+  files/patch/fontconfig-2.1-fixedwidth.patch:
+
+  the patch fixes a font fixedwith bug, it has been applied in cvs,
+  so not required for the next version. Thanks to ganadist@mizi.com for
+  the patch.
 
   12 Mar 2003; Zach Welch <zwelch@gentoo.org> fontconfig-2.1-r1.ebuild:
   add arm keyword

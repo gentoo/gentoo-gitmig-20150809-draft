@@ -1,0 +1,52 @@
+diff -u -r1.18 -r1.20
+--- fontconfig/fonts.conf.in	2003/02/24 17:18:50	1.18
++++ fontconfig/fonts.conf.in	2003/02/27 08:12:13	1.20
+@@ -140,6 +140,31 @@
+ 	</match>
+ 	
+ <!--
++  Some Asian fonts misadvertise themselves as monospaced when
++  in fact they are dual-spaced (half and full).  This makes
++  FreeType very confused as it forces all widths to match.
++  Undo this magic by disabling the width forcing code -->
++	<match target="font">
++		<test name="family"><string>GulimChe</string></test>
++		<edit name="globaladvance"><bool>false</bool></edit>
++	</match>
++	
++	<match target="font">
++		<test name="family"><string>DotumChe</string></test>
++		<edit name="globaladvance"><bool>false</bool></edit>
++	</match>
++
++	<match target="font">
++		<test name="family"><string>BatangChe</string></test>
++		<edit name="globaladvance"><bool>false</bool></edit>
++	</match>
++
++	<match target="font">
++		<test name="family"><string>GungsuhChe</string></test>
++		<edit name="globaladvance"><bool>false</bool></edit>
++	</match>
++
++<!--
+   Load per-user customization file
+ -->
+ 	<include ignore_missing="yes">~/.fonts.conf</include>
+diff -u -r1.13 -r1.14
+--- fontconfig/src/fcfreetype.c	2003/02/06 17:46:06	1.13
++++ fontconfig/src/fcfreetype.c	2003/02/27 07:04:59	1.14
+@@ -467,7 +467,12 @@
+     if (!FcPatternAddString (pat, FC_SOURCE, (FcChar8 *) "FreeType"))
+ 	goto bail1;
+ 
+-#if 1
++#if 0
++    /*
++     * don't even try this -- CJK 'monospace' fonts are really
++     * dual width, and most other fonts don't bother to set
++     * the attribute.  Sigh.
++     */
+     if ((face->face_flags & FT_FACE_FLAG_FIXED_WIDTH) != 0)
+ 	if (!FcPatternAddInteger (pat, FC_SPACING, FC_MONO))
+ 	    goto bail1;

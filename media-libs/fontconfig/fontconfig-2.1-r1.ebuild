@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.8 2003/03/12 19:07:02 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.9 2003/03/12 19:48:03 seo Exp $
 
 inherit debug eutils
 
@@ -40,6 +40,8 @@ src_unpack() {
 	epatch ${PPREFIX}-0.0.1.020826.1330-blacklist.patch
 	# Fix config script to alway include X11 fontpath and remove date
 	epatch ${PPREFIX}-${PV}-x11fontpath-date-configure-v2.patch 
+	# fix font width bug with cjk fonts
+	epatch ${PPREFIX}-${PV}-fixedwidth.patch
 }
 
 src_compile() {
