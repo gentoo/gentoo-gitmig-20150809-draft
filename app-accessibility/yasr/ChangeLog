@@ -1,6 +1,6 @@
-# ChangeLog for app-misc/yasr
+# ChangeLog for app-accessibility/yasr
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.3 2004/03/18 00:17:29 dmwaters Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.4 2004/03/18 11:36:09 aliz Exp $
 
   17 Mar 2004; <dmwaters@gentoo.org> yasr-0.6.5.ebuild:
   Also fixed a typeo in the ebuild file.
