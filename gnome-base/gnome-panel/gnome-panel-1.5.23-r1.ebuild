@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider  <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.5.23-r1.ebuild,v 1.2 2002/06/01 11:26:29 blocke Exp $
 
 inherit gnome2
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
-LIBTOOL_HACK="1"
+LIBTOOL_FIX="1"
 
 DOC="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS  README*"
 SCHEMA="clock.schemas panel-global-config.schemas panel-per-panel-config.schemas mailcheck.schemas pager.schemas tasklist.schemas fish.schemas"
