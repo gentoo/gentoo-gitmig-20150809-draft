@@ -716,8 +716,6 @@ app-admin/va-systemimager-client
 >=media-gfx/gimp-1.3
 gnome-extra/gal2
 >=app-office/gnumeric-1.1.3
-# glademm-1.x has been renamed to libglademm.
->=dev-util/glademm-1.1.0
 
 # mkennedy@gentoo.org 19 Apr 2002
 # not fit for release (working on it though)
