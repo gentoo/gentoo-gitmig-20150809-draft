@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.7.ebuild,v 1.10 2005/01/10 18:21:47 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.7.ebuild,v 1.11 2005/01/29 17:22:08 plasmaroo Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ IUSE="rrdtool"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-apps/i2c-${PV}
-	rrdtool? ( x86? ( net-analyzer/rrdtool ) )"
+	rrdtool? ( net-analyzer/rrdtool )"
 
 src_unpack() {
 	unpack ${A} || die
