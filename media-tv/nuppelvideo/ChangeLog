@@ -1,0 +1,10 @@
+# ChangeLog for media-tv/nuppelvideo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuppelvideo/ChangeLog,v 1.1 2003/09/02 14:36:35 phosphan Exp $
+
+*nuppelvideo-0.52a (02 Sep 2003)
+
+  02 Sep 2003; Patrick Kursawe <phosphan@gentoo.org> nuppelvideo-0.52a.ebuild:
+  Initial import. Slight changes to original submission by Roman Valls
+  <brainlinux@softhome.net> in bug 24010.
+
