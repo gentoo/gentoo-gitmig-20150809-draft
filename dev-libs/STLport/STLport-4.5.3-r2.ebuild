@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r2.ebuild,v 1.7 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r2.ebuild,v 1.8 2004/01/04 17:27:55 aliz Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.stlport.org"
 DEPEND="virtual/glibc"
 
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc amd64"
 LICENSE="as-is"
 
 src_unpack() {
