@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2809 2004/04/08 01:56:05 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2810 2004/04/08 02:34:18 spyderous Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -26,11 +26,11 @@
 # <humpback@gentoo.org> (07 Apr 2004)
 # these are here waiting for jabberd2
 >=net-im/jit-1.1.6-r3
->=msn-transport-20040228
->=aim-transport-20040131-r1
->=mu-conference-0.6.0-r1
->=yahoo-transport-2.3.0-r2
->=jabberd-1.4.3-r3
+>=net-im/msn-transport-20040228
+>=net-im/aim-transport-20040131-r1
+>=net-im/mu-conference-0.6.0-r1
+>=net-im/yahoo-transport-2.3.0-r2
+>=net-im/jabberd-1.4.3-r3
 
 
 # <foser@gentoo.org> (07 Apr 2004)
