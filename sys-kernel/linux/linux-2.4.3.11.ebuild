@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.3.11.ebuild,v 1.2 2001/04/25 23:29:42 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.3.11.ebuild,v 1.3 2001/04/28 02:42:45 achim Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -140,6 +140,18 @@ src_compile() {
     cd ${S}/extras/lm_sensors-${SENV}
     try make
     
+
+
+    if [ "$PN" == "linux" ]
+    then
+
+      cd ${S}
+      try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
+      try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
+      try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
+
+    fi
+
     if [ "`use alsa`" ]
     then
         cd ${S}
@@ -149,16 +161,6 @@ src_compile() {
         try ./configure --with-kernel=\"${S}\" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
         try make
     fi
-
-    if [ "$PN" != "linux" ]
-    then
-	return
-    fi
-
-    cd ${S}
-    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
-    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
-    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
 }
 
 src_install() {
