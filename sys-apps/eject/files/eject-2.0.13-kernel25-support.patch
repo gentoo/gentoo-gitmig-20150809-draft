@@ -5,7 +5,7 @@
  #include <sys/wait.h>
  #include <sys/mtio.h>
 -#include <linux/types.h>
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,0) /* 2.5.x breaks things again */
++#ifndef __KERNEL__
 +# define __KERNEL__
 +# include <linux/types.h>
 +# undef __KERNEL__

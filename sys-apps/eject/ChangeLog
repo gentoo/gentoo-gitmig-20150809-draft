@@ -1,15 +1,20 @@
 # ChangeLog for sys-apps/eject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.15 2003/11/15 02:21:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.16 2003/12/05 17:08:19 plasmaroo Exp $
+
+  05 Dec 2003; <plasmaroo@gentoo.org>
+  files/eject-2.0.12-kernel25-support.patch,
+  files/eject-2.0.13-kernel25-support.patch:
+  Fixed the patches to work happily with 2.6. kernels; closing bug #35088.
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> eject-2.0.12-r1.ebuild:
-  Stable on ia64
+  Stable on ia64.
 
 *eject-2.0.13 (08 Nov 2003)
 
   08 Nov 2003; Martin Holzer <mholzer@gentoo.org> eject-2.0.13.ebuild,
   files/eject-2.0.13-kernel25-support.patch:
-  Version bumped. Closes #32953
+  Version bumped. Closes bug #32953.
 
   06 Mar 2003; Martin Schlemmer <azarah@gentoo.org> eject-2.0.12-r1.ebuild :
   Get eject to build with kernel-2.5.x.
@@ -35,10 +40,10 @@
 *eject-2.0.12 (05 Nov 2002)
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> eject-2.0.12.ebuild :
-  Mark stable on Alpha
+  Mark stable on Alpha.
 
   05 Dec 2002; Will Woods <wwoods@gentoo.org> eject-2.0.10.ebuild, eject-2.0.12.ebuild: 
-  added alpha keyword.
+  Added 'alpha' keyword.
 
   06 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
