@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hppa-dev-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.16 2004/06/24 22:57:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.17 2004/07/03 21:09:24 gmsoft Exp $
+
+*hppa-dev-sources-2.6.7_p1-r1 (03 Jul 2004)
+
+  03 Jul 2004; Guy Martin <gmsoft@gentoo.org>
+  hppa-dev-sources-2.6.7_p1-r1.ebuild, files/CAN-2004-0626-death_packet.patch:
+  CAN-2004-0626 fix (#55694).
 
 *hppa-dev-sources-2.6.7_p1 (23 Jun 2004)
 
