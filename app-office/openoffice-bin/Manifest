@@ -2,10 +2,10 @@ MD5 87cdcf3dcef19c66ccfd76ef09dbfc85 openoffice-bin-1.1_rc2.ebuild 6344
 MD5 98d48815cb1b470eaa680bee025cd825 openoffice-bin-1.0.2.ebuild 6174
 MD5 286e13ebb4c41e2b2a502ac3b12fa6b4 openoffice-bin-1.0.3.1.ebuild 6448
 MD5 56ef01c9cde2c8d14a33456381be87a5 openoffice-bin-1.1_rc1.ebuild 6345
-MD5 ff7eb4a7e3f2d9c38ae0eb284a61946b openoffice-bin-1.1_rc3.ebuild 6376
+MD5 97ebaa004033e97d1464da173ce04db7 openoffice-bin-1.1_rc3.ebuild 6373
 MD5 1d4d7e2d4125513818b334f9be8a9dcb openoffice-bin-1.1_beta2-r1.ebuild 6285
 MD5 7576a51aef82508612fa18256c0e7c85 openoffice-bin-1.0.3.ebuild 6167
-MD5 6f967c35c22761414765b3bfa7aa050f ChangeLog 5789
+MD5 91258107ea411fbc00f272d5fba0cb7e ChangeLog 5952
 MD5 b53b5b274336275ed73675bae1fc5dfc files/digest-openoffice-bin-1.1_beta2-r1 85
 MD5 6bb2dccd6a53a5457be6670d628c77d3 files/digest-openoffice-bin-1.0.2 168
 MD5 7f69df73d15c5fca3829e9f3083cf440 files/digest-openoffice-bin-1.0.3 82
