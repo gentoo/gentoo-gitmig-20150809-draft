@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@intphsys.com>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0-r1.ebuild,v 1.1 2001/02/06 12:57:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0-r1.ebuild,v 1.2 2001/06/03 09:54:22 achim Exp $
 
 S=${WORKDIR}/pwm-1.0
 SRC_URI="http://www.students.tut.fi/~tuomov/dl/pwm-1.0.tar.gz"
@@ -21,7 +21,7 @@ src_unpack() {
     sed -e "s:PREFIX\"/etc/pwm/\":\"/etc/X11/pwm/\":" \
         config.orig > config.h
     cp system.mk system.orig
-    sed -e "s:-g -O2:${CFLAGS}:" system.orig > system.mk
+    sed -e "s:-g -O2:${CFLAGS}:" -e 's:\$(WARN)::' system.orig > system.mk
 
 }
 

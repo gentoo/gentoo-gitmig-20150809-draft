@@ -1,13 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.50-r2.ebuild,v 1.4 2001/05/01 18:29:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.50-r2.ebuild,v 1.5 2001/06/03 09:54:22 achim Exp $
 
 GPV="4.1.1"
 A="${P}.tar.gz ghostscript-fonts-std-6.0.tar.gz print-${GPV}.tar.gz"
 A1=jpegsrc.v6b.tar.gz
 A2=zlib-1.1.3.tar.gz
-A3=libpng-1.0.9.tar.gz
+A3=libpng-1.0.11.tar.gz
 
 S=${WORKDIR}/gs${PV}
 DESCRIPTION="Aladin Ghostscript"
@@ -16,7 +16,7 @@ SRC_URI="http://download.sourceforge.net/ghostscript/${P}.tar.gz
 	 http://download.sourceforge.net/gimp-print/print-${GPV}.tar.gz"
 
 DEPEND="virtual/glibc
-	>=media-libs/libpng-1.0.7
+	=media-libs/libpng-1.0.11
 	virtual/x11"
 
 src_unpack() {

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.9 2001/05/15 15:41:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.10 2001/06/03 09:54:22 achim Exp $
 
 P=mpeg-movie-1.6.0
 A=mpeg_movie-1.6.0.tar.gz
@@ -10,7 +10,7 @@ DESCRIPTION="Tools for MPEG-I movies"
 SRC_URI="http://heroine.linuxave.net/${A}"
 HOMEPAGE="http://heroine.linuxave.net/toys.html"
 
-DEPEND=">=sys-libs/glibc-2.1.3
+DEPEND="virtual/glibc
 	>=sys-devel/gcc-2.95.2
 	>=media-libs/jpeg-6b
 	>=media-libs/libsdl-1.1.5
@@ -66,7 +66,6 @@ src_compile() {
 
 src_install () {
 
-    cd ${S}
     into /usr
     newbin audio_in/encode mpeg_audio_encode
     newbin audio_out/plaympeg mpeg_audio_play

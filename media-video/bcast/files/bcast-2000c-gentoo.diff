@@ -1,0 +1,21 @@
+--- bcast-2000c/bcast/Makefile~	Tue Jan  2 22:27:16 2001
++++ bcast-2000c/bcast/Makefile	Sat Jun  2 16:50:30 2001
+@@ -199,6 +199,7 @@
+ 	-I../quicktime/libdv \
+ 	-I../audiofile \
+ 	-I../esound \
++	-I../tiff \
+ 	$(shell glib-config --cflags)
+ 
+ export CFLAGS
+--- bcast-2000c/bcast/main.C~	Tue Jan  2 22:27:16 2001
++++ bcast-2000c/bcast/main.C	Sat Jun  2 16:51:24 2001
+@@ -231,7 +231,7 @@
+ 	char path[1024];
+ 
+ // get the plugin directories
+-	sprintf(global_plugin_dir, "/usr/local/bcast/plugins");
++	sprintf(global_plugin_dir, "/usr/X11R6/lib/bcast/plugins");
+ 	defaults->get("GLOBAL_PLUGIN_DIR", global_plugin_dir);
+ 	sprintf(local_plugin_dir, "");
+ 	defaults->get("LOCAL_PLUGIN_DIR", local_plugin_dir);

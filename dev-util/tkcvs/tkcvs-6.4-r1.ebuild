@@ -7,7 +7,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="TkCVS"
 SRC_URI="http://www.twobarleycorns.net/${A}"
 HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html" 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	>=dev-lang/tcl-tk-8.1.1"
 
 src_compile() {                           

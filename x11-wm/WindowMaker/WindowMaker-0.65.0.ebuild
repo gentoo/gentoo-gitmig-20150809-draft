@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.65.0.ebuild,v 1.1 2001/05/16 15:40:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.65.0.ebuild,v 1.2 2001/06/03 09:54:22 achim Exp $
 
 A="${P}.tar.gz WindowMaker-extra-0.1.tar.bz2"
 S=${WORKDIR}/${P}
@@ -11,7 +11,6 @@ SRC_URI="ftp://ftp.windowmaker.org/pub/source/release/${P}.tar.gz
 HOMEPAGE="http://www.windowmaker.org/"
 
 DEPEND="virtual/glibc virtual/x11
-	>=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.0.7
 	>=media-libs/giflib-4.1.0

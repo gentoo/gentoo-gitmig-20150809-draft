@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.07a.ebuild,v 1.1 2001/05/07 20:08:03 aj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.07a.ebuild,v 1.2 2001/06/03 09:54:22 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,11 +9,10 @@ DESCRIPTION="an X11 based presentation tool"
 SRC_URI="ftp://ftp.mew.org/pub/MagicPoint/${A}"
 HOMEPAGE="http://www.mew.org/mgp/"
 
-DEPEND="virtual/glibc
-	>=x11-base/xfree-4.0.1
+DEPEND="virtual/glibc virtual/x11
 	ungif? ( >=media-libs/libungif-4.0.1 )
 	gif?   ( >=media-libs/giflib-4.0.1 )"
-	
+
 src_compile() {
    source /etc/profile
    export LIBS="-L/usr/lib/ -L/usr/X11R6/lib/ -lX11"

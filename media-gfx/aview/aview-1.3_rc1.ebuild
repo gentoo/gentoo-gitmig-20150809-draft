@@ -1,14 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/aview-1.3_rc1.ebuild,v 1.2 2001/05/21 17:34:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/aview-1.3_rc1.ebuild,v 1.3 2001/06/03 09:54:22 achim Exp $
 
 A=${PN}-1.3.0rc1.tar.gz
 S=${WORKDIR}/${PN}-1.3.0
 DESCRIPTION="An ASCII PNG-Viewer"
 SRC_URI="http://prdownloads.sourceforge.net/aa-project/${A}"
 HOMEPAGE="http://aa-project.sourceforge.net/aview/" 
-DEPEND=">=media-libs/aalib-1.2"
+DEPEND=">=media-libs/aalib-1.4_rc4"
 
 src_compile() {
 

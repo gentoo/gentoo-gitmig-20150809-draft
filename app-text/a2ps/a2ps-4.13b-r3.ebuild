@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r3.ebuild,v 1.1 2001/03/19 23:09:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r3.ebuild,v 1.2 2001/06/03 09:54:22 achim Exp $
 
 P=a2ps-4.13b
 A=${P}.tar.gz
@@ -14,10 +14,14 @@ DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
 	>=app-text/ghostscript-6.23
 	>=app-text/psutils-1.17
-	>=app-text/tetex-1.0.7"
+	tex? ( >=app-text/tetex-1.0.7 )"
 
+RDEPEND="virtual/glibc
+	>=app-text/ghostscript-6.23
+	>=app-text/psutils-1.17
+	tex? ( >=app-text/tetex-1.0.7 )"
 
-src_compile() {                           
+src_compile() {
 
   local myconf
 

@@ -10,13 +10,16 @@ DESCRIPTION="Grace is a WYSIWYG 2D plotting tool for the X Window System"
 SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/${A}"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
 
-DEPEND="virtual/x11
+DEPEND="virtual/glibc virtual/x11
 	>=x11-libs/openmotif-2.1
-	>=media-libs/jpeg-6.0
 	>=media-libs/libpng-0.96
 	>=media-libs/tiff-3.5
 	pdflib? ( >=media-libs/pdflib-3.0.2 )"
-
+RDEPEND="virtual/glibc virtual/x11
+	>=x11-libs/openmotif-2.1
+	>=media-libs/libpng-0.96
+	>=media-libs/jpeg-6
+	pdflib? ( >=media-libs/pdflib-3.0.2 )"
 src_compile() {
 
     if [ -z "`use pdflib`" ] ; then

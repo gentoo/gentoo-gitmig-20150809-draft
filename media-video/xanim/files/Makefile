@@ -140,7 +140,7 @@ XA_DLL_LIB = -ldl
 # If you'd like to change the default directory that XAnim searches while
 # looking for dlls, then change the directory below. 
 #
-XA_DLL_PATH = /usr/libexec/xanim/mods
+XA_DLL_PATH = /usr/X11R6/lib/xanim/mods
 
 
 ##########################################################################

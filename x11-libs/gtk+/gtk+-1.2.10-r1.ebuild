@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r1.ebuild,v 1.1 2001/04/30 02:46:21 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r1.ebuild,v 1.2 2001/06/03 09:54:22 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,9 +11,8 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${A}
 	 http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${A}"
 HOMEPAGE="http://www.gtk.org/"
 
-DEPEND="virtual/glibc
-	>=dev-libs/glib-1.2.10
-	>=x11-base/xfree-4.0.1"
+DEPEND="virtual/glibc virtual/x11
+	>=dev-libs/glib-1.2.10"
 
 src_compile() {
 	local myconf

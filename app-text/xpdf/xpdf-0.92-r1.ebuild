@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@intphsys.com>
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-0.92-r1.ebuild,v 1.3 2001/05/01 18:29:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-0.92-r1.ebuild,v 1.4 2001/06/03 09:54:22 achim Exp $
 
 S=${WORKDIR}/${P}
 
@@ -17,8 +17,8 @@ DEPEND="virtual/x11
 
 src_compile() {
 
-    try ./configure --prefix=/usr/X11R6 --mandir=/usr/X11R6/share/man \
-	--with-gzip 
+    try ./configure --prefix=/usr/X11R6 --mandir=/usr/X11R6/man \
+	--with-gzip
     try make
 
 }
