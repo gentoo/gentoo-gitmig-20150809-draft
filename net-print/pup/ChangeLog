@@ -1,6 +1,9 @@
 # ChangeLog for net-print/pup
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pup/ChangeLog,v 1.4 2004/06/25 00:41:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pup/ChangeLog,v 1.5 2004/08/24 11:27:13 lanius Exp $
+
+  24 Aug 2004; Heinrich Wendel <lanius@gentoo.org> pup-1.1.ebuild:
+  mark stable on x86
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> pup-1.1.ebuild:
   Add inherit eutils
