@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.648.ebuild,v 1.4 2004/02/29 21:06:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.648.ebuild,v 1.5 2004/03/15 16:28:35 dholm Exp $
 
 inherit games eutils flag-o-matic
 append-flags -I../include -I/usr/X11R6/include
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/slashem/${SE_PN}
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="X qt gnome gtk"
 
 DEPEND="virtual/glibc
