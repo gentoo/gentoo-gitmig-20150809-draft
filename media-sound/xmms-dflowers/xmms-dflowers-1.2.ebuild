@@ -1,25 +1,24 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-dflowers/xmms-dflowers-1.2.ebuild,v 1.2 2002/05/22 23:55:56 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-dflowers/xmms-dflowers-1.2.ebuild,v 1.3 2002/07/22 00:48:13 seemant Exp $
 
-SHORTNAME="dflowers-1.2"
-S=${WORKDIR}/${SHORTNAME}
+MY_P=${PN/xmms-/}-${PV}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Dual Flowers visualization plugin for xmms"
-SRC_URI="http://hem.passagen.se/joakime/${SHORTNAME}.tar.gz"
+SRC_URI="http://hem.passagen.se/joakime/${MY_P}.tar.gz"
 HOMEPAGE="http://hem.passagen.se/joakime/linuxapp.html"
 
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
-DEPEND="virtual/glibc
-	sys-devel/gcc
-	 >=media-sound/xmms-1.2.5-r1"
-RDEPEND="${DEPEND}"
+DEPEND="media-sound/xmms"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S} || die
 	# patch in DESTDIR support
-	patch -p0 < ${FILESDIR}/${SHORTNAME}-destdir.patch || die
+	patch -p0 < ${FILESDIR}/${MY_P}-destdir.patch || die
 }
 
 src_compile() {     
