@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e27f594d6898daa2f23e87fc6eea6d47 ChangeLog 5075
 MD5 74b9bd3cc5015b286abc33eb51408252 metadata.xml 521
-MD5 f84adc826950786aea218ef8e01d35ba totem-0.99.15.1.ebuild 1587
+MD5 3a099802658c8b0f280b577253e04088 totem-0.99.15.1.ebuild 1585
+MD5 5dfdca0eea96b57d7cedbed76bf00a9b totem-0.99.19.ebuild 1646
 MD5 8665c4280f28ef9dd7654fae6bd35a99 totem-0.99.5.ebuild 1391
 MD5 d491742489c165c2321c610b8abbdd68 totem-0.99.8-r2.ebuild 2023
-MD5 5dfdca0eea96b57d7cedbed76bf00a9b totem-0.99.19.ebuild 1646
 MD5 3d9e7881aa0ec7d110c1487cd95d6c40 files/digest-totem-0.99.15.1 69
 MD5 c24abb8ac12e32b2372e91d65343cc34 files/digest-totem-0.99.5 65
 MD5 5555967d2623a7a6476864d9294bf323 files/digest-totem-0.99.8-r2 65
 MD5 ffee6132520a471d092c6101e2cfcfc4 files/totem-0.99.8-curl.patch 762
 MD5 f19c916fffc4e302cb84b4d6f50c8c03 files/totem-0.99.8-nvidia.patch 526
 MD5 eeba2ab1c3ed87a4a630addd709262ea files/digest-totem-0.99.19 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBejnXI1lqEGTUzyQRAkuLAKCDDrN5VWvzTGh6VgBmuqSCTnBFdACgkiaw
-TzsHnmTp8KtUfOwm64FGd7M=
-=BKUx
------END PGP SIGNATURE-----
