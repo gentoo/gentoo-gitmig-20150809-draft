@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.13 2004/07/16 21:20:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.14 2004/08/19 03:37:03 hardave Exp $
+
+  18 Aug 2004; Hardave Riar <hardave@gentoo.org> fribidi-0.10.4.ebuild:
+  Added ~mips keyword
 
   16 Jul 2004; Tom Gall <tgall@gentoo.org> fribidi-0.10.4.ebuild:
   stable on ppc64
