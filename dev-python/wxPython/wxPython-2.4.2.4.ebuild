@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.2.4.ebuild,v 1.4 2003/10/08 21:16:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.2.4.ebuild,v 1.5 2003/10/12 03:00:05 liquidx Exp $
 
 inherit eutils
 
-IUSE="opengl tiff jpeg png gtk2"
+IUSE="opengl tiff jpeg png gtk2 unicode"
 
 MY_P="${P/-/Src-}"
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	# make sure if you want gtk2, you have wxGTK with gtk2, and vice versa
 	if [ -n "`use gtk2`" ]; then
-		if [ ! -f "/usr/bin/wxgtk2u-2.4-config" -a ! -f "/usr/bin/wxgtk2-2.4-config" -a ! -f "/usr/bin/wxgtk2d-2.4-config" ]; then
+		if [ ! -f "/usr/bin/wxgtk2u-2.4-config" -a ! -f "/usr/bin/wxgtk2ud-2.4-config" -a ! -f "/usr/bin/wxgtk2-2.4-config" -a ! -f "/usr/bin/wxgtk2d-2.4-config" ]; then
 			eerror "You need x11-libs/wxGTK compiled with GTK+2 support."
 			eerror "Either emerge wxGTK with 'gtk2' in your USE flags or"
 			eerror "emerge wxPython without 'gtk2' in your USE flags."
@@ -49,6 +49,24 @@ pkg_setup() {
 			die "wxGTK needs to be compiled without gtk2"
 		fi
 	fi
+
+	# make sure that wxPython and wxGTK have same unicode setting:
+	if [ -n "`use unicode`" ]; then
+		if [ ! -f "/usr/bin/wxgtk2u-2.4-config" -a ! -f "/usr/bin/wxgtk2ud-2.4-config" ]; then
+			eerror "You need x11-libs/wxGTK compiled with Unicode support."
+			eerror "Either emerge wxGTK with 'unicode' in your USE flags or"
+			eerror "emerge wxPython without 'unicode' in your USE flags."
+			die "wxGTK needs to be compiled with unicode"
+		fi
+	else
+		if [ ! -f "/usr/bin/wxgtk-2.4-config" -a ! -f "/usr/bin/wxgtk2-2.4-config" -a ! -f "/usr/bin/wxgtkd-2.4-config" -a ! -f "/usr/bin/wxgtk2d-2.4-config" ]; then
+			eerror "You need x11-libs/wxGTK compiled without Unicode."
+			eerror "Either emerge wxGTK without 'unicode' in your USE flags or"
+			eerror "emerge wxPython with 'unicode' in your USE flags."
+			die "wxGTK needs to be compiled without unicode"
+		fi
+	fi
+	
 }
 
 src_compile() {
@@ -61,6 +79,8 @@ src_compile() {
 	use gtk2 \
 		&&	mypyconf="${mypyconf} WXPORT=gtk2" \
 		|| mypyconf="${mypyconf} WXPORT=gtk"
+	
+	use unicode && mypyconf="${mypyconf} UNICODE=1"
 
 	python setup.py ${mypyconf} build || die "build failed"
 }
@@ -75,6 +95,8 @@ src_install() {
 	use gtk2 \
 		&& mypyconf="${mypyconf} WXPORT=gtk2" \
 		|| mypyconf="${mypyconf} WXPORT=gtk"
+	
+	use unicode && mypyconf="${mypyconf} UNICODE=1"
 
 	python setup.py ${mypyconf} install --prefix=/usr --root=${D} || die
 }

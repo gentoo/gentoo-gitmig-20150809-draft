@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.32 2003/10/08 21:16:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.33 2003/10/12 03:00:05 liquidx Exp $
+
+  12 Oct 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.2.4.ebuild:
+  add unicode support to match wxGTK-2.4.2 thanks to Vaclav Slavik
+  <vaclav.slavik@matfyz.cz> (#30768)
 
   08 Oct 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.1.2.ebuild,
   wxPython-2.4.2.4.ebuild:
