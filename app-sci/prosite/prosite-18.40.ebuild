@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/prosite/prosite-18.39.ebuild,v 1.2 2004/11/23 20:20:24 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/prosite/prosite-18.40.ebuild,v 1.1 2004/11/23 20:20:24 ribosome Exp $
 
 DESCRIPTION="A protein families and domains database"
 HOMEPAGE="http://ca.expasy.org/${PN}"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="swiss-prot"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="no-emboss no-rawdb"
 
 src_compile() {
