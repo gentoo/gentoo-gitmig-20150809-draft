@@ -2,9 +2,8 @@ MD5 d9c8849cae242068d01a8eb056d3d2f1 speedtouch-1.2_beta2.ebuild 2280
 MD5 d6cb75f836823289e9672f65ed3be0e4 speedtouch-1.2_beta1-r1.ebuild 2238
 MD5 82b7f4357577518d94c77ea454c01d71 speedtouch-1.1.ebuild 2098
 MD5 38251e811522fe5fef480ffe14d6b28b ChangeLog 1727
-MD5 c9fabfc23fa34c0edea53024f3c81f7b speedtouch-1.2_beta3.ebuild 2140
+MD5 9725af3676405f4e247f784be91d0849 speedtouch-1.2_beta3.ebuild 2001
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 ace8aa951468588814e3438d8bd4b5fc .speedtouch-1.2_beta3.ebuild.swp 12288
 MD5 c877ec28583dc934867e0f83bdcce5b0 files/speedtouch.rc6 2217
 MD5 9c89baff861a43250255b1db0e5c1f6f files/speedtouch.confd 355
 MD5 95f539c58595e5274cd5a8f57873d497 files/digest-speedtouch-1.2_beta1-r1 73

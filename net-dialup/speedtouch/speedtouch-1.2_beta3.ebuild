@@ -1,36 +1,32 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2_beta1.ebuild,v 1.6 2003/09/07 00:09:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2_beta3.ebuild,v 1.1 2003/12/14 19:16:07 lanius Exp $
 
 inherit flag-o-matic
 filter-flags -mpowerpc-gfxopt -mpowerpc-gpopt
 
 MY_P=${P/_/-}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="GPL Driver for the Alcatel Speedtouch USB under *nix"
 HOMEPAGE="http://speedtouch.sf.net/"
 SRC_URI="mirror://sourceforge/speedtouch/${MY_P}.tar.bz2"
 
+IUSE="static debug"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha hppa amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~hppa ~amd64"
 
 DEPEND=""
 RDEPEND=">=net-dialup/ppp-2.4.1"
 
 src_compile() {
-	local myconf
-
-	[ `use debug` ] && myconf="--enable-debug"
+	use debug && myconf="--enable-debug"
 	use static && myconf="${myconf} --enable-static"
 
-	sed 's/^C$/#&/' < configure > configure.new
-	mv --force configure.new configure && chmod u+x configure
-
-	econf 	--enable-syslog  \
+	econf --enable-syslog  \
 		${myconf} || die "./configure failed"
 
-	#sed '90,104d' < Makefile > Makefile.new
-	#mv --force Makefile.new Makefile
 	emake || die "make failed"
 }
 
@@ -40,7 +36,6 @@ src_install () {
 	echo $(find ${D}/usr/share/doc/speedtouch/ -type f) | xargs dodoc
 	rm -rf ${D}/usr/share/doc/speedtouch/
 	dodoc AUTHORS COPYING ChangeLog INSTALL TODO VERSION
-	rm -r ${D}/etc/init.d/speedtouch
 	exeinto /etc/init.d ; newexe ${FILESDIR}/speedtouch.rc6 speedtouch
 	insinto /etc/conf.d ; newins ${FILESDIR}/speedtouch.confd speedtouch
 	insopts -m 600 ; insinto /etc/ppp/peers ; doins ${FILESDIR}/adsl.sample
