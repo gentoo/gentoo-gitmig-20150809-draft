@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/lam-mpi-6.5.6.ebuild,v 1.1 2002/07/30 03:53:31 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/lam-mpi-6.5.6.ebuild,v 1.2 2002/08/14 11:52:27 murphy Exp $
 
 Name="lam"
 S=${WORKDIR}/${Name}-${PV}
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc"
 RDEPEND="net-misc/openssh"
 
 SLOT="6"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="as-is"
 
 

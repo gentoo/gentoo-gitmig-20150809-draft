@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.6.ebuild,v 1.4 2002/08/01 18:46:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.6.ebuild,v 1.5 2002/08/14 11:52:27 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Log4c is a library of C for flexible logging to files, syslog and other destinations. It is modeled after the Log for Java library (http://jakarta.apache.org/log4j/), staying as close to their API as is reasonable."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cimai.com/opensource/log4c/index.html"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=dev-libs/expat-1.95.2
 	>=app-doc/doxygen-1.2.15

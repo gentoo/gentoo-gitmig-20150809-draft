@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/publib/publib-0.31.ebuild,v 1.2 2002/08/01 18:46:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/publib/publib-0.31.ebuild,v 1.3 2002/08/14 11:52:28 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C library of misc utility functions (parsing, data structs, etc.)"
@@ -9,7 +9,7 @@ HOMEPAGE="http://liw.iki.fi/liw/programs/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.5.ebuild,v 1.1 2002/08/07 18:15:22 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.5.ebuild,v 1.2 2002/08/14 11:52:27 murphy Exp $
 
 inherit debug
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mrproject.codefactory.se/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 RDEPEND=">=dev-util/pkgconfig-0.12.0
 	>=dev-libs/glib-2.0.3

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3.ebuild,v 1.6 2002/08/01 17:17:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3.ebuild,v 1.7 2002/08/14 11:52:27 murphy Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="C subroutine library for computing the Discrete Fourier Transform (DFT)"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.fftw.org"
 DEPEND="mpi? ( >=dev-libs/lam-mpi-6.5.6 )"
 SLOT="2.1"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
 	#doc suggests installing single and double precision versions via separate compilations

@@ -9,7 +9,7 @@ HOMEPAGE="http://sources.redhat.com/gsl/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc"
 

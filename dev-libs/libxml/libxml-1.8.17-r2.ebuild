@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.6 2002/08/11 22:54:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.7 2002/08/14 11:52:27 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Version 1 of the library to manipulate XML files."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 
