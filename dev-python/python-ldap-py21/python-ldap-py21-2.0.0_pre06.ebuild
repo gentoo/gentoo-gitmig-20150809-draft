@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap-py21/python-ldap-py21-2.0.0_pre06.ebuild,v 1.10 2004/07/11 15:14:44 kloeri Exp $
 
 PYTHON_SLOT_VERSION=2.1
 
