@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/aqmoney
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aqmoney/ChangeLog,v 1.1 2003/06/11 21:12:07 hanno Exp $
+
+*aqmoney-0.6.1 (11 Jun 2003)
+
+  11 Jun 2003; Hanno Boeck <hanno@gentoo.org> aqmoney-0.6.1.ebuild:
+  Added aqmoney ebuild, a textmode HBCI online banking client.
+
