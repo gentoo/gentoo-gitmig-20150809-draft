@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.ebuild,v 1.5 2002/08/30 08:01:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.ebuild,v 1.6 2002/09/17 14:07:38 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X based config tool for the windowmaker X windowmanager."
@@ -9,7 +9,7 @@ SRC_URI="http://www.windowmaker.org/pub/contrib/source/wmakerconf/${P}.tar.bz2"
 HOMEPAGE="http://ulli.on.openave.net/wmakerconf/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 alpha"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	x11-wm/WindowMaker 
