@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/openrpg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/ChangeLog,v 1.7 2004/12/08 08:23:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openrpg/ChangeLog,v 1.8 2004/12/08 09:03:19 mr_bones_ Exp $
+
+*openrpg-1.6.1-r1 (08 Dec 2004)
+
+  08 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +openrpg-1.6.1-r1.ebuild, -openrpg-1.6.1.ebuild:
+  make src_install static; tidy; clean older broken version (re: bug #73718)
 
   08 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> -openrpg-1.4.1.ebuild,
   -openrpg-1.5.1.ebuild:
