@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.10.ebuild,v 1.1 2004/10/30 11:10:59 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.10.ebuild,v 1.2 2004/11/01 16:32:01 scandium Exp $
 
 DESCRIPTION="Portable .NET C# library"
 HOMEPAGE="http://www.dotgnu.org/"
 SRC_URI="mirror://gnu/dotgnu/pnet/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
 IUSE="truetype X"
