@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.1 2004/02/25 18:16:55 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.2 2004/06/02 21:58:30 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> fop-0.20.5.ebuild:
+  Fix use invocation
 
 *fop-0.20.5 (25 Feb 2004)
 

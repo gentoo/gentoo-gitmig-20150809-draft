@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.1 2004/02/25 18:16:55 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.2 2004/06/02 21:58:30 agriffis Exp $
 
 inherit java-pkg
 
@@ -28,7 +28,7 @@ src_unpack() {
 src_compile() {
 		ant package || die "Failed building classes"
 
-		if [ -n "`use doc`" ]; then
+		if use doc; then
 			ant javadocs || die "Failed building javadocs"
 		fi
 }
@@ -41,7 +41,7 @@ src_install () {
 		exeinto /usr/bin
 		doexe fop
 
-		if [ -n "`use doc`" ]; then
+		if use doc; then
 			dodoc CHANGES STATUS README LICENSE
 			dohtml ReleaseNotes.html
 			dodir /usr/share/doc/${P}
