@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r1.ebuild,v 1.1 2002/02/21 22:24:41 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r1.ebuild,v 1.2 2002/02/21 22:33:59 g2boojum Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="Pine 'a Program for Internet News & Email', email client"
@@ -28,6 +28,9 @@ src_unpack() {
 	patch -d ${S} -p1 < ${FILESDIR}/pine-4.21-passwd.patch
 	if [ "`use ldap`" ] ; then
 		patch -d ${S} -p1 < ${FILESDIR}/pine-4.30-ldap.patch
+		mkdir ${S}/ldap
+		ln -s /usr/lib ${S}/ldap/libraries
+		ln -s /usr/include ${S}/ldap/include
 	fi
 	patch -d ${S} -p0 < ${FILESDIR}/pine-4.40-boguswarning.patch
 	patch -d ${S} -p1 < ${FILESDIR}/pine-4.31-segfix.patch
@@ -56,9 +59,6 @@ src_compile() {
 	fi
 	if [ "`use ldap`" ]
 	then
-		mkdir ldap
-		ln -s /usr/lib ldap/libraries
-		ln -s /usr/include ldap/include
 		./contrib/ldap-setup lnp lnp
 	else
 		BUILDOPTS="${BUILDOPTS} NOLDAP"
@@ -69,7 +69,7 @@ src_compile() {
 
 src_install() {                               
 	into /usr
-	dobin bin/pine bin/pico bin/pilot bin/mtest
+	dobin bin/pine bin/pico bin/pilot bin/mtest bin/rpdump bin/rpload
 	dosbin bin/imapd
 
 	if [ "`use imap`" ] ; then
@@ -78,7 +78,7 @@ src_install() {
 		dolib.a imap/c-client/c-client.a
 	fi
 
-	doman doc/pico.1 doc/pine.1
+	doman doc/pico.1 doc/pine.1 doc/pine.1 doc/pilot.1 doc/rpdump.1 doc/rpload.1
 
 	insinto /etc
 	doins doc/mime.types
