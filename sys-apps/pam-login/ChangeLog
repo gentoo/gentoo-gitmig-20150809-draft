@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.21 2003/07/13 13:03:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.22 2003/07/13 20:13:17 azarah Exp $
+
+  13 Jul 2003; Martin Schlemmer <azarah@gentoo.org> pam-login-3.11-r1.ebuild,
+  files/pam-login-3.11-selinux-gcc33.patch:
+  Fix gcc-3.3 patch to play nice with selinux.
 
 *pam-login-3.11-r1 (13 Jul 2003)
 
