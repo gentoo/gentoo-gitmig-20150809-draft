@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17.ebuild,v 1.4 2004/04/30 21:31:57 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17.ebuild,v 1.5 2004/06/19 14:25:16 pyrania Exp $
 
 inherit kde
 
