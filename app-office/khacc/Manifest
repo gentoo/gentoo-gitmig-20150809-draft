@@ -2,8 +2,9 @@ MD5 7d2e5f3f315e33608d8364eeca372755 khacc-3.2.1.ebuild 1008
 MD5 44c7407c3497ef285780e559d0760d22 khacc-1.7.8.ebuild 843
 MD5 41c277faf02c6d09714b5637cd99af7d khacc-1.7.2.ebuild 483
 MD5 10ff79a6d571473b24536544c119d438 khacc-1.7.9.ebuild 850
-MD5 e6a5a0248e821a12a5bafcb029a80a86 ChangeLog 1225
+MD5 e9b096cf54bc19cbf0c7d7de96d9b73d ChangeLog 1331
 MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
+MD5 7110503bd51fe6625682c349b38b4365 files/khacc-3.2.1.diff 636
 MD5 51ee80d47afaa16d79ecabd545fae66d files/digest-khacc-1.7.2 64
 MD5 c5338f11ed339e1e95adf995e6eae14b files/digest-khacc-1.7.8 64
 MD5 727e733ec8e9b73b8f50b00b2d584986 files/digest-khacc-1.7.9 63
