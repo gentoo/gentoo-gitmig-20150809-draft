@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-blursk/xmms-blursk-1.3.ebuild,v 1.8 2004/07/14 20:41:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-blursk/xmms-blursk-1.3.ebuild,v 1.9 2004/09/15 19:23:18 eradicator Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ DEPEND="media-sound/xmms"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc -amd64 ~sparc"
+KEYWORDS="x86 ~ppc -amd64 sparc"
 
 src_unpack() {
 	unpack ${A}

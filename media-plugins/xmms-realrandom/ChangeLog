@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-realrandom
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-realrandom/ChangeLog,v 1.8 2004/07/07 09:21:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-realrandom/ChangeLog,v 1.9 2004/09/15 19:27:52 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-realrandom-0.2.ebuild:
+  Stable sparc.
 
   07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-realrandom-0.2.ebuild:

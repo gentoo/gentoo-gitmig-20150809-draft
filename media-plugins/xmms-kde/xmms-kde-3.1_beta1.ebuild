@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1_beta1.ebuild,v 1.8 2004/06/29 00:40:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1_beta1.ebuild,v 1.9 2004/09/15 19:26:29 eradicator Exp $
 
 inherit kde eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://xmms-kde.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xmms-kde/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc"
+KEYWORDS="x86 amd64 ~ppc sparc"
 IUSE="xmms sdl xinerama"
 
 DEPEND="xmms? ( >=media-sound/xmms-1.2.7-r23 )

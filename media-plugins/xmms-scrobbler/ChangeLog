@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-scrobbler
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/ChangeLog,v 1.14 2004/09/15 18:41:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/ChangeLog,v 1.15 2004/09/15 19:30:44 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-scrobbler-0.3.3.ebuild:
+  Stable sparc.
 
 *xmms-scrobbler-0.3.4 (15 Sep 2004)
 

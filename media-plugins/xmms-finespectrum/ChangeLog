@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-finespectrum
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/ChangeLog,v 1.5 2004/06/24 23:39:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/ChangeLog,v 1.6 2004/09/15 19:25:23 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-finespectrum-1.0.1_alpha1.ebuild:
+  Stable sparc.
 
   17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-finespectrum-1.0.1_alpha1.ebuild:

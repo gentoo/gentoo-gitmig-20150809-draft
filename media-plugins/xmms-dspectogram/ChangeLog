@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-dspectogram
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/ChangeLog,v 1.12 2004/07/06 23:11:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/ChangeLog,v 1.13 2004/09/15 19:24:56 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-dspectogram-1.2.1.ebuild:
+  Stable sparc.
 
   06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-dspectogram-1.2.1.ebuild:
