@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4-r1.ebuild,v 1.5 2003/03/22 22:53:43 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4-r1.ebuild,v 1.6 2003/03/23 19:16:45 method Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -13,20 +13,26 @@
 #  - Jon Nelson, 27 Apr 2002
 
 DESCRIPTION="A usefull diagnostic, instructional, and debugging tool"
-SRC_URI="mirror://sourceforge/strace/strace_4.4-1.tar.gz"
+SRC_URI="mirror://sourceforge/strace/strace_4.4-1.tar.gz
+	 selinux? mirror://gentoo/${P}-selinux.patch.bz2"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~ppc ~sparc alpha hppa arm"
-IUSE="static"
+IUSE="static selinux"
+inherit eutils
 
 DEPEND="virtual/glibc
-	sys-devel/autoconf"
+	sys-devel/autoconf
+	selinux? ( >=sys-apps/selinux-small )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
+
 	if [ "${ARCH}" = "arm" ]; then
 		epatch ${FILESDIR}/${P}-arm.patch
 		epatch ${FILESDIR}/${P}-arm-configure.patch
