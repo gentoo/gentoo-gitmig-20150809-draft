@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.39 2004/08/19 07:03:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.40 2004/11/30 06:28:49 solar Exp $
+
+*gradm-2.0.2 (30 Nov 2004)
+
+  30 Nov 2004; <solar@gentoo.org> +gradm-2.0.2.ebuild:
+  version bump
 
   19 Aug 2004; <solar@gentoo.org> gradm-2.0.1-r1.ebuild, gradm-2.0.1.ebuild:
   change device nods to major 1 minor 12 to match current grsecurity kernels

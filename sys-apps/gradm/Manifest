@@ -1,27 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e6a0dc437eb5c10fbbb218f9d01f590c ChangeLog 5907
-MD5 dd780c1382fa681402cc19cd6c1559f9 gradm-2.0.ebuild 2315
-MD5 2413c7ee7a3e8df9cee929e1318a456b gradm-2.0-r1.ebuild 2505
-MD5 695a3bd3cfb34ea27e7dd493ce9ef398 metadata.xml 221
 MD5 1b3c6a4feb6d2518c5bb4d4a1fe26597 gradm-1.9.14.ebuild 1639
+MD5 249fa3408e660df6d594f12578f8c08b gradm-2.0.2.ebuild 2246
 MD5 65e1508f6a89778d87de6d04d63ce27f gradm-2.0.1-r1.ebuild 2249
 MD5 aff679c90b8d89922841da9e4dc58a67 gradm-2.0.1.ebuild 2551
-MD5 62ba83f9a7bd71b4011ad2a2cf48f4a3 files/digest-gradm-2.0 60
-MD5 62ba83f9a7bd71b4011ad2a2cf48f4a3 files/digest-gradm-2.0-r1 60
-MD5 838722234beedbde03008d451ec2327d files/digest-gradm-2.0.1 62
-MD5 c2618fc7963e008681dfd08db6886058 files/gradm_parse.c-1.9.x.patch 524
-MD5 36344ecbd7f54bdd4979c2fe6322c9c7 files/grsecurity 2325
+MD5 dd780c1382fa681402cc19cd6c1559f9 gradm-2.0.ebuild 2315
+MD5 ade29fb16c36da286c50d78df5553a6e ChangeLog 6006
+MD5 2413c7ee7a3e8df9cee929e1318a456b gradm-2.0-r1.ebuild 2505
+MD5 695a3bd3cfb34ea27e7dd493ce9ef398 metadata.xml 221
 MD5 f2401396b01c577f727c2da3b694c779 files/grsecurity.rc 1810
-MD5 f008a8f1133ea0db35a4ee305d390c23 files/digest-gradm-1.9.14 63
+MD5 36344ecbd7f54bdd4979c2fe6322c9c7 files/grsecurity 2325
+MD5 838722234beedbde03008d451ec2327d files/digest-gradm-2.0.1 62
+MD5 a631aadfb61d10c6a99256f1cf0fbc53 files/digest-gradm-2.0.2 62
+MD5 62ba83f9a7bd71b4011ad2a2cf48f4a3 files/digest-gradm-2.0 60
 MD5 264e377e7c3221570d3730444e84d792 files/gradm2-cvs-20Jun2004.diff 8251
+MD5 c2618fc7963e008681dfd08db6886058 files/gradm_parse.c-1.9.x.patch 524
 MD5 838722234beedbde03008d451ec2327d files/digest-gradm-2.0.1-r1 62
+MD5 f008a8f1133ea0db35a4ee305d390c23 files/digest-gradm-1.9.14 63
 MD5 c016f75a48190153dcb63f9cba78abef files/gradm-2.0.1-install.patch 488
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWM45HTu7gpaalycRAn5rAJ9QdxF2J+4kXnt/4k6MtFS+A9AXCQCfXbw2
-jHddZALr3v5RDFJKD/KOGl4=
-=tnFo
------END PGP SIGNATURE-----
+MD5 62ba83f9a7bd71b4011ad2a2cf48f4a3 files/digest-gradm-2.0-r1 60
