@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.ebuild,v 1.7 2004/03/13 01:49:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.ebuild,v 1.8 2004/04/03 21:22:42 spyderous Exp $
 
 #SNAPSHOT="20020825"
 TVISIONVER="2.0.1"
@@ -145,30 +145,30 @@ src_compile() {
 	export GDB_SRC="${WORKDIR}/gdb-${GDBVER}"
 
 	#
-	# *** DETECT XFREE86 with tvision-2.0 ***
+	# *** DETECT X11 with tvision-2.0 ***
 	#
-	# None of these packages have any way to specify XFree86 support,
-	# thus we check if tvision compiled with xfree support or not.
+	# None of these packages have any way to specify X11 support,
+	# thus we check if tvision compiled with X11 support or not.
 	#
-	# If it did compile with xfree support, we need to get rhide to link
+	# If it did compile with X11 support, we need to get rhide to link
 	# against libX11 ...
 	#
-	local have_xfree="$(gawk '/HAVE_X11/ { if (/yes/) print "Yes" }' \
+	local have_x11="$(gawk '/HAVE_X11/ { if (/yes/) print "Yes" }' \
 	                    ${WORKDIR}/tvision/configure.cache)"
 
 	if [ ! -f "${WORKDIR}/.rhide-configured" ]
 	then
 		econf || die
 
-		if [ "${have_xfree}" = "Yes" ]
+		if [ "${have_x11}" = "Yes" ]
 		then
-			einfo "Compiling with XFree86 support..."
+			einfo "Compiling with X11 support..."
 			perl -pi -e 's|LDFLAGS= |LDFLAGS= -L/usr/X11R6/lib -lXmu|' \
 				${S}/config.env
 
 			touch ${WORKDIR}/.tvision-with-X11
 		else
-			einfo "Compiling without XFree86 support..."
+			einfo "Compiling without X11 support..."
 		fi
 
 		touch "${WORKDIR}/.rhide-configured"
