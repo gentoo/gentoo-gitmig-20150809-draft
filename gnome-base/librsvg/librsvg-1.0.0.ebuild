@@ -13,7 +13,7 @@ DEPEND=">=gnome-base/gnome-libs-1.2.10
 	>=media-libs/freetype-2.0.1
 	>=gnome-base/libxml-1.8
 	>=gnome-base/gdk-pixbuf-0.10
-        >=app-arch/rpm-3.0.6"
+        >=dev-libs/popt-1.5"
 RDEPEND="virtual/glibc"
 
 
