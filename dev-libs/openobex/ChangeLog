@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.18 2005/02/21 22:21:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.19 2005/04/02 17:26:36 ticho Exp $
+
+  02 Apr 2005; Andrej Kacian <ticho@gentoo.org> openobex-1.0.1.ebuild:
+  Marked 1.0.1 as -amd64, wrt bug #82961.
 
   21 Feb 2005; Simon Stelling <blubb@gentoo.org> openobex-1.0.0.ebuild:
   added ~amd64
