@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/aspectwerkz
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.1 2005/01/05 22:12:05 luckyduck Exp $
+
+*aspectwerkz-2.0_rc2 (05 Jan 2005)
+
+  05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/aspectwerkz-2.0_rc2-gentoo.patch, +aspectwerkz-2.0_rc2.ebuild:
+  Initial import. Needed as a dependency of #76738.
+
