@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/powerd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/powerd/ChangeLog,v 1.6 2004/07/16 15:57:17 tigger Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/powerd/ChangeLog,v 1.7 2005/03/25 13:58:16 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> powerd-2.0.2.ebuild:
+  added ~amd64
 
   16 Jul 2004; Rob Holland <tigger@ereet.co.uk> powerd-2.0.2.ebuild:
   Fix ebuild to included man page and all the docs. Closes #35734. Thanks to

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/powerd/powerd-2.0.2.ebuild,v 1.5 2004/07/16 15:57:17 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/powerd/powerd-2.0.2.ebuild,v 1.6 2005/03/25 13:58:16 blubb Exp $
 inherit eutils
 
 IUSE=""
@@ -9,7 +9,7 @@ DESCRIPTION="Generic UPS daemon"
 HOMEPAGE="http://power.sourceforge.net/"
 
 SRC_URI="mirror://sourceforge/power/${P}.tar.gz"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
