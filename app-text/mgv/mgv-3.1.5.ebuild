@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Desktop Team <desktop@gentoo.org>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5.ebuild,v 1.5 2002/04/27 09:27:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5.ebuild,v 1.6 2002/04/27 09:28:17 seemant Exp $
 
 
 S=${WORKDIR}/${P}
@@ -12,6 +12,8 @@ HOMEPAGE="http://www.trends.net/~mu/mgv.html"
 
 DEPEND=">=app-text/ghostscript-3.33
 		x11-libs/openmotif"
+
+SLOT="0"
 
 src_compile() {
 
