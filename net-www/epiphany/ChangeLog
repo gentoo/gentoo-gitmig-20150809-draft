@@ -1,6 +1,10 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.51 2004/05/04 12:09:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.52 2004/05/21 00:45:32 leonardop Exp $
+
+  20 May 2004; L. Boshell <leonardop@gentoo.org> epiphany-1.2.5.ebuild,
+  files/epiphany-1.2.5-gcc2_fix.patch:
+  Added patch to fix compilation under gcc-2.
 
 *epiphany-1.2.5 (04 May 2004)
 

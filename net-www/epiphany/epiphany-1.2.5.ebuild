@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.5.ebuild,v 1.1 2004/05/04 12:09:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.5.ebuild,v 1.2 2004/05/21 00:45:32 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="GNOME webbrowser based on the mozilla rendering engine"
 HOMEPAGE="http://www.gnome.org/projects/epiphany/"
@@ -47,4 +47,12 @@ pkg_setup () {
 		die "Need Mozilla compiled with gtk+-2.0!"
 	fi
 
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix C sources, so it compiles using gcc-2.
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 }
