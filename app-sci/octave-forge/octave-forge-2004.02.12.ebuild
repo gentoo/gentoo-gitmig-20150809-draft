@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2004.02.12.ebuild,v 1.2 2004/03/17 21:53:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2004.02.12.ebuild,v 1.3 2004/03/23 08:55:57 phosphan Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 	sed -e 's:a"key":a["key"]:' -i configure || die "sed failed on configure"
 	sed -e 's:\(^man1dir = \):\1$(DESTDIR)/:; s:$(bindir):$(DESTDIR)/$(bindir):' -i extra/mex/Makefile \
 		|| die "sed failed on mex/Makefile"
-
+	epatch ${FILESDIR}/octave-2.1.57+.patch
 	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 

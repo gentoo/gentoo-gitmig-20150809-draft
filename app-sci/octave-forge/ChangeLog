@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/octave-forge
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/ChangeLog,v 1.8 2004/03/17 21:53:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/ChangeLog,v 1.9 2004/03/23 08:55:57 phosphan Exp $
+
+  23 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
+  octave-forge-2004.02.12.ebuild:
+  Added patch for octave-2.1.57+ from
+  http://www.octave.org/mailing-lists/bug-octave/2004/182 - thanks to Jonathan
+  Stickel <jjstickel@sbcglobal.net> for the hint.
 
   17 Mar 2004; Daniel Ahlberg <aliz@gentoo.org>
   octave-forge-2004.02.12.ebuild:
