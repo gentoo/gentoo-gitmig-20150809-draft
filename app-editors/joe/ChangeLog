@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/joe
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.12 2003/11/29 01:19:01 joker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.13 2004/02/06 16:12:16 agriffis Exp $
+
+  06 Feb 2004; Aron Griffis <agriffis@gentoo.org> joe-2.9.8.ebuild:
+  stable on alpha for bug 39593.  Thanks to Jay Maynard for testing
 
   29 Nov 2003; Christian Birchinger <joker@gentoo.org> joe-2.9.8.ebuild:
   Added replace-flag to fix bug 34609
