@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmusepack/libmusepack-1.0.1.ebuild,v 1.3 2004/09/05 22:25:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmusepack/libmusepack-1.0.1.ebuild,v 1.4 2004/09/22 10:31:54 eradicator Exp $
 
 IUSE=""
 
@@ -27,7 +27,6 @@ src_compile() {
 
 
 src_install() {
-	dodir /usr/include/musepack
 	insinto /usr/include/musepack
 	doins *.h
 	dolib.so libmusepack.so.1.0.1
