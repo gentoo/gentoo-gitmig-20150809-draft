@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.113 2005/02/16 11:11:33 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.114 2005/02/16 19:59:04 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -27,13 +27,15 @@ RDEPEND="~kde-base/kde-env-3"
 SLOT="0"
 
 kde_pkg_setup() {
-	use arts && if ! built_with_use kdelibs arts ; then
-		eerror "You are trying to compile ${CATEGORY}/${P} with the \"arts\" USE flag enabled."
-		eerror "However, $(best_version kdelibs) was compiled with this flag disabled."
-		eerror
-		eerror "You must either disable this use flag, or recompile"
-		eerror "$(best_version kdelibs) with this use flag enabled."
-		die 
+	if [ "${PN}" != "arts" ] && [ "${PN}" != "kdelibs" ] ; then
+		use arts && if ! built_with_use kdelibs arts ; then
+			eerror "You are trying to compile ${CATEGORY}/${P} with the \"arts\" USE flag enabled."
+			eerror "However, $(best_version kdelibs) was compiled with this flag disabled."
+			eerror
+			eerror "You must either disable this use flag, or recompile"
+			eerror "$(best_version kdelibs) with this use flag enabled."
+			die
+		fi
 	fi
 }
 
