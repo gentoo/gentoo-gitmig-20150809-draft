@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.31.ebuild,v 1.11 2004/07/14 14:44:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.31.ebuild,v 1.12 2004/12/28 03:30:33 vapier Exp $
 
 inherit games
 
@@ -10,16 +10,23 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-${PV}.x86.r
 
 LICENSE="Q3AEULA"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* amd64 x86"
 IUSE="X dedicated opengl"
 RESTRICT="nostrip"
 
 RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
 	X? ( virtual/x11 )
-	dedicated? ( app-misc/screen )"
+	dedicated? ( app-misc/screen )
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-nvidia
+	)"
 
 S=${WORKDIR}
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 pkg_setup() {
 	check_license
@@ -31,19 +38,17 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir ${dir}
 
 	insinto ${dir}/baseq3
 	doins baseq3/*.pk3
-	mv Docs ${D}/${dir}/
+	mv Help ${Ddir}/
 	insinto ${dir}/missionpack
 	doins missionpack/*.pk3
-	mv pb ${D}/${dir}/
 
 	exeinto ${dir}
 	insinto ${dir}
-	doexe bin/Linux/x86/{quake3.x86,q3ded}
+	doexe bin/x86/{quake3.x86,q3ded}
 	doins quake3.xpm README* Q3A_EULA.txt
 	games_make_wrapper quake3 ./quake3.x86 ${dir}
 	games_make_wrapper q3ded ./q3ded ${dir}
