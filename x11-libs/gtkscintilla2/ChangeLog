@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkscintilla2
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/ChangeLog,v 1.4 2003/12/13 22:36:45 zul Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/ChangeLog,v 1.5 2004/02/18 10:25:48 liquidx Exp $
+
+*gtkscintilla2-0.1.0 (18 Feb 2004)
+
+  18 Feb 2004; Alastair Tse <liquidx@gentoo.org> gtkscintilla2-0.1.0.ebuild:
+  version bump
 
   13 Dec 2003; Chuck Short <zul@gentoo.org> gtkscintilla2-0.0.8.ebuild:
   Added amd64 support.
