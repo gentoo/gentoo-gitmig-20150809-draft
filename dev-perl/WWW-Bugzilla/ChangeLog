@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/WWW-Bugzilla
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.4 2004/06/11 08:45:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.5 2004/06/13 13:53:26 mcummings Exp $
+
+  13 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  WWW-Bugzilla-0.4.ebuild:
+  Forcing a lower version of Class-MethodMaker until bug 6603 on rt.cpan can be
+  addressed. I have a nasty fix, but would rather upstream corrected it on their
+  end.
 
 *WWW-Bugzilla-0.4 (11 Jun 2004)
 
