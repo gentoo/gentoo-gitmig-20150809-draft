@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The gnome-extra category contains additional non-core GNOME packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie gnome-extra enthält zusätzliche GNOME-Pakete die nicht
+		Teil des Basissystems sind.
+	</longdescription>
 </catmetadata>
 
