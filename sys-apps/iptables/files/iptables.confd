@@ -8,3 +8,5 @@ IPTABLES_SAVE="/var/lib/iptables/rules-save"
 ENABLE_FORWARDING_IPv4="no"
 ENABLE_FORWARDING_IPv6="no"
 
+#Options to pass to iptables-save and iptables-restore 
+SAVE_RESTORE_OPTIONS="-c"

@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.16 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.17 2003/01/07 13:11:15 aliz Exp $
+
+  07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Cleaned out old files.
+
+*iptables-1.2.7a-r2 (07 Jan 2003)
+
+  07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a-r2.ebuild, files/iptables.init,
+						files/iptables.confd :
+  Closes #13366, #13144 and #10424. Added new patching method and made installation prettier. 
 
 *iptables-1.2.7a-r1 (10 Dec 2002)
   
