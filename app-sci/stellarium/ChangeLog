@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/stellarium
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.1 2003/07/13 19:30:43 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.2 2003/11/18 08:53:23 mr_bones_ Exp $
+
+  18 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  stellarium-0.5.1.ebuild:
+  use edos2unix from eutils; DEPEND on media-libs/libsdl; more error
+  checking/messages; tidy
 
 *stellarium-0.5.1 (13 Jul 2003)
 
