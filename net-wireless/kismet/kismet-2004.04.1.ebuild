@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1.ebuild,v 1.4 2004/06/25 12:56:58 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.04.1.ebuild,v 1.5 2004/07/27 20:53:43 solar Exp $
+
+inherit gnuconfig eutils
 
 MY_P=${P/\./-}
 MY_P=${MY_P/./-R}
@@ -24,6 +26,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/kismet_gcc34.gz
+	gnuconfig_update ${S}
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.35 2004/06/25 12:56:58 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.36 2004/07/27 20:53:43 solar Exp $
+
+  27 Jul 2004; <solar@gentoo.org> kismet-2004.04.1.ebuild:
+  added missing inherit eutils, needed for epatch ; added call to
+  gnuconfig_update, needed for uclibc and maybe others
 
   25 Jun 2004; Hanno Boeck <hanno@gentoo.org> +files/kismet_gcc34.gz,
   kismet-2004.04.1.ebuild:
