@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.5 2004/05/12 00:58:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.6 2004/05/27 03:02:47 mr_bones_ Exp $
+
+  26 May 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  zsnes-1.37_pre20041220.ebuild:
+  remove version from the future
 
 *zsnes-1.37_pre20040508 (11 May 2004)
 
