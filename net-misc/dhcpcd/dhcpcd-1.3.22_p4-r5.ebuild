@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r5.ebuild,v 1.2 2004/04/16 18:24:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r5.ebuild,v 1.3 2004/05/23 01:01:22 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
-S=${WORKDIR}/${P/_p/-pl}
 DESCRIPTION="A dhcp client only"
 HOMEPAGE="http://www.phystech.com/download/"
 SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz
@@ -13,14 +12,16 @@ SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa ~mips ~amd64 ~ia64 ppc64 s390"
 IUSE="build static"
 
 DEPEND="virtual/glibc"
 PROVIDE="virtual/dhcpc"
 
+S=${WORKDIR}/${P/_p/-pl}
+
 src_unpack() {
-	unpack ${A} || die "unpack failed"
+	unpack ${A}
 	use alpha && gnuconfig_update
 	use amd64 && gnuconfig_update
 	use hppa && gnuconfig_update
