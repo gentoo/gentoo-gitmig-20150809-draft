@@ -1,9 +1,12 @@
 # ChangeLog for x11-misc/kmousetool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kmousetool/ChangeLog,v 1.1 2002/07/29 13:56:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kmousetool/ChangeLog,v 1.2 2002/12/05 06:23:38 zwelch Exp $
 
 *kmousetool-1.05 (29 Jul 2002)
 
+  28 Nov 2002; Zach Welch <zwelch@gentoo.org> :
+  Keyword for ppc
+  
   29 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
-
   User submission #5018 by Rigo Ketelings. kmousetool is an anti-RSI tool.
+
