@@ -1,5 +1,5 @@
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 de88786b2867af13bf150597795a29b4 mldonkey-0.0.2a.ebuild 668
+MD5 62c88e88509cca350a24944c0b6f62e7 mldonkey-0.0.2a.ebuild 673
+MD5 c435773563e760ee1e3ce44438c66c28 ChangeLog 436
 MD5 869a7357865c5d310fbec2c8fed8b964 files/digest-mldonkey-0.0.2a 69
 MD5 58b5d93adb430c00b575876b47f3c695 files/50mldonkey-gentoo.el 104
-MD5 7b49d0c81c1449edefe128e62b98d5fd files/50mldonkey-gentoo.el~ 44
