@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Sean Mitchell <sean@arawak.tzo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04.ebuild,v 1.3 2002/06/09 02:17:18 daybird Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Objective Caml is a fast modern type-inferring functional programming language descended from the ML (Meta Language) family."
@@ -12,6 +12,19 @@ HOMEPAGE="http://www.ocaml.org/"
 DEPEND="virtual/glibc
 	>=dev-lang/tk-3.3.3"
 #RDEPEND=""
+
+# The unpack function is needed only so that we can apply a ppc patch from cvs.
+# This should be fixed in v.>3.04, so the function can be removed then.
+
+src_unpack()
+{
+	unpack ${A}
+	cd ${S}
+	if [ ${ARCH} == "ppc" ]
+	then
+		patch -l -p1 < ${FILESDIR}/${P}-ppc.diff
+	fi
+}
 
 src_compile()
 {
