@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.5.2.ebuild,v 1.2 2004/01/25 11:30:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.5.2.ebuild,v 1.3 2004/01/27 09:23:46 usata Exp $
 
 IUSE="gtk nls debug"
 
@@ -19,7 +19,8 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-Parser
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )"
-RDEPEND="gtk? ( >=x11-libs/gtk+-2 )"
+RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
+	!app-i18n/uim-svn"
 
 # for debugging use
 use debug && RESTRICT="nostrip"

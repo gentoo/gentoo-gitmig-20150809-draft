@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.4.ebuild,v 1.4 2004/01/27 09:23:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.7.ebuild,v 1.1 2004/01/27 09:23:46 usata Exp $
 
 IUSE="gtk nls debug"
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/Software/UimDownload/${P}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="~x86 ~alpha"
 
 S="${WORKDIR}/${P}"
 
@@ -64,8 +64,9 @@ pkg_postinst() {
 
 	einfo
 	einfo "To use uim-anthy you should emerge app-i18n/anthy or app-i18n/anthy-ss."
-	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo."
-	einfo "To use uim-prime you should emerge app-i18n/prime."
+	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo (uim doesn't support skkserv)."
+	einfo "To use uim-prime you should emerge app-i18n/prime and make sure you have"
+	einfo ">=dev-libs/suikyo-1.3.0."
 	einfo
 }
 
