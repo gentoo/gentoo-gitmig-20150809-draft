@@ -1,0 +1,33 @@
+--- ne-1.36/src/term.c	2004-08-22 15:13:30.837485144 +0200
++++ ne-1.36-include-fix/src/term.c	2004-08-22 15:13:35.912713592 +0200
+@@ -34,7 +34,7 @@
+ 
+ #ifndef TERMCAP
+ #include <curses.h>
+-#include <ncurses/term.h>
++#include <term.h>
+ #else
+ #include "info2cap.h"
+ #endif
+--- ne-1.36/src/cm.c	2004-08-22 15:15:54.931579512 +0200
++++ ne-1.36-include-fix/src/cm.c	2004-08-22 15:16:00.143787136 +0200
+@@ -28,7 +28,7 @@
+ 
+ #ifndef TERMCAP
+ #include <curses.h>
+-#include <ncurses/term.h>
++#include <term.h>
+ #else
+ #include "info2cap.h"
+ #endif
+--- ne-1.36/src/ne.h.orig	2004-08-22 15:18:03.876976832 +0200
++++ ne-1.36-include-fix/src/ne.h	2004-08-22 15:18:10.033040968 +0200
+@@ -23,7 +23,7 @@
+ 
+ #ifndef TERMCAP
+ #include <curses.h>
+-#include <ncurses/term.h>
++#include <term.h>
+ #else
+ #include <stdio.h>
+ #include "info2cap.h"
