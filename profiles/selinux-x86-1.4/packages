@@ -57,7 +57,7 @@
 *net-misc/iputils
 *net-misc/rsync
 *net-misc/wget
-*sys-apps/bzip2
+*app-arch/bzip2
 *sys-apps/kbd
 *sys-apps/cpio
 *sys-apps/debianutils

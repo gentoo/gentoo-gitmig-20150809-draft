@@ -13,3 +13,4 @@ move dev-python/TwistedDocs dev-python/twisted-docs
 move x11-misc/epplet-base x11-plugins/epplets
 move sys-apps/tar app-arch/tar
 move sys-apps/star app-arch/star
+move sys-apps/bzip2 app-arch/bzip2

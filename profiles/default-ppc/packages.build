@@ -1,7 +1,7 @@
 sys-apps/baselayout
 sys-libs/glibc
 app-shells/bash
-sys-apps/bzip2
+app-arch/bzip2
 sys-apps/debianutils
 sys-apps/diffutils
 sys-apps/file

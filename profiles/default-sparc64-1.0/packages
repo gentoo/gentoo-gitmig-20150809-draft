@@ -26,7 +26,7 @@
 *net-misc/rsync
 *net-misc/wget
 *app-shells/bash
-*sys-apps/bzip2
+*app-arch/bzip2
 *sys-apps/kbd
 *sys-apps/cpio
 *sys-apps/debianutils
@@ -140,7 +140,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.41 2003/11/14 12:42:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.42 2003/11/14 20:12:36 seemant Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh

@@ -35,7 +35,7 @@
 
 >=sys-apps/apmd-3.0.1-r6
 >=sys-apps/at-3.1.8-r6
-*sys-apps/bzip2
+*app-arch/bzip2
 *sys-apps/cpio
 *sys-apps/debianutils
 *>=sys-fs/devfsd-1.3.20

@@ -47,7 +47,7 @@
 *net-misc/wget
 *net-misc/iputils
 *app-shells/bash
-*sys-apps/bzip2
+*app-arch/bzip2
 *sys-apps/kbd
 *sys-apps/cpio
 *sys-apps/coreutils
