@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5.ebuild,v 1.4 2004/07/28 05:04:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5.ebuild,v 1.5 2004/07/29 00:11:20 vapier Exp $
 
 inherit eutils
-
-IUSE="kerberos mysql postgres xml xml2 acl cups ldap pam readline python doc"
-IUSE="${IUSE} oav"
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org/
@@ -22,6 +19,12 @@ S=${WORKDIR}/${PN}${_CVS}
 SRC_URI="mirror://samba/${PN}${_CVS}.tar.gz
 	oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2
 	ldap? http://samba.idealx.org/dist/smbldap-tools-${SMBLDAP_TOOLS_VER}.tgz"
+
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ~ia64 ppc64"
+SLOT="0"
+IUSE="kerberos mysql postgres xml xml2 acl cups ldap pam readline python doc"
+IUSE="${IUSE} oav"
 
 _COMMON_DEPS="dev-libs/popt
 	readline? sys-libs/readline
@@ -40,10 +43,6 @@ DEPEND="sys-devel/autoconf
 	${_COMMON_DEPS}"
 #IDEALX scripts are now using Net::LDAP
 RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}"
-
-KEYWORDS="x86 ~ppc sparc mips hppa amd64 ~ia64 alpha ppc64"
-LICENSE="GPL-2"
-SLOT="0"
 
 src_unpack() {
 	local i
