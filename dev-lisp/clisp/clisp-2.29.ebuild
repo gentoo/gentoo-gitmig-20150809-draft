@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.28.ebuild,v 1.2 2002/07/29 09:48:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.29.ebuild,v 1.1 2002/07/29 09:48:23 mkennedy Exp $
 
 DESCRIPTION="A portable, bytecode-compiled implementation of Common Lisp"
 HOMEPAGE="http://clisp.sourceforge.net/"
 SRC_URI="http://cvs2.cons.org/ftp-area/clisp/source/latest/${P}.tar.gz"
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${PN}
 DEPEND="X? ( x11-base/xfree )"
 RDEPEND="$DEPEND"
 LICENSE="GPL-2"
@@ -18,9 +18,13 @@ src_compile() {
 		myconf="${myconf} --with-module=clx/new-clx"
 	fi
 
-	unset CHOST   # compilation of modules fails if we don't do this
-	unset CFLAGS
-	unset CXXFLAGS
+	# compilation of modules fails if we don't do this (mkennedy: yep
+	# -- confirmed on gcc3.2 too)
+
+ 	unset CHOST
+ 	unset CFLAGS
+ 	unset CXXFLAGS
+
 	./configure --prefix=/usr ${myconf} || die "./configure failed"
 	cd src
 	./makemake ${myconf} > Makefile
