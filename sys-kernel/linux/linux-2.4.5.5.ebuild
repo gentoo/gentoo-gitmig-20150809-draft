@@ -112,8 +112,7 @@ then
     RDEPEND=">=sys-apps/reiserfs-utils-3.6.25-r1"
     DEPEND=">=sys-apps/modutils-2.4.2
 	    >=sys-devel/flex-2.5.4a-r3
-	    >=dev-util/yacc-1.9.1-r1
-            sys-devel/perl"
+	    >=dev-util/yacc-1.9.1-r1"
 #### XFS
 #    if [ "`use xfs`" ]
 #    then
@@ -171,7 +170,7 @@ src_unpack() {
 #	try bzip2 -dc ${DISTDIR}/bigpatch-${OKV}.diff.bz2 | patch -p1
 	
 	echo "Applying ac5-reiserfs-quota patch..."
-	try patch -p1 < ${FILESDIR}/linux-${OKV}-ac5-reiserfs-quota-gentoo.diff
+	try patch -p1 < ${FILESDIR}/linux-${KV}-ac5-reiserfs-quota-gentoo.diff
 	
 	if [ "`use lvm`" ] || [ "`use alsa`" ] || [ "`use i2c`" ] || [ "`use lm_sensors`" ] || [ "`use pcmcia-cs`" ]
 	then
