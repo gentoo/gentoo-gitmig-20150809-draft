@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.44 2003/11/29 23:15:29 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.45 2003/12/03 22:52:21 caleb Exp $
+
+*kdetoys-3.2.0_beta2 (03 Dec 2003)
+
+  03 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdetoys-3.2.0_beta2.ebuild:
+  New Beta version
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> kdetoys-3.1.4.ebuild:
   mark stable on amd64
