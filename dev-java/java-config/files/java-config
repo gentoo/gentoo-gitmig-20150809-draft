@@ -1,0 +1,139 @@
+#! /bin/sh
+# 
+# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Maintainer: Tools Team <tools@gentoo.org>
+# Author: Karl Trygve Kalleberg <karltk@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.1 2002/01/20 22:30:04 karltk Exp $
+
+version=0.1.1
+
+. /etc/env.d/20java
+
+usage() {
+        cat <<EOF
+Usage: java-config [OPTIONS] [LIBRARIES]
+Options:
+	[--javac]
+	[--java]
+	[--jar]
+	[--java-home]
+	[--java-version]
+	[--classpath[=package-name]]
+	[--full-classpath=package-name]
+	[--exec=filename]
+	[--list-available-packages]
+EOF
+	exit $1
+}
+
+find_exec() {
+	if [ -f ${JAVA_HOME}/bin/$1 ] ; then
+		echo ${JAVA_HOME}/bin/$1
+	elif [ -f ${JAVA_HOME}/jre/bin/$1 ] ; then
+		echo ${JAVA_HOME}/jre/bin/$1
+	else
+		echo $1 not found > /dev/stderr
+		exit 1
+	fi
+}                                                                       
+
+classpathfor()
+{
+	local pkgs=`echo $1 | sed "s/,/ /g"`
+	local total=""
+	for i in $pkgs ; do
+		if [ -f /usr/share/${i}/classpath.env ] ; then
+			total="${total}`cat /usr/share/${i}/classpath.env`"
+		else
+			echo "Package ${i} not found" > /dev/stderr
+			exit 1
+		fi
+	done
+	echo $total
+}
+
+findpluginpath() {
+	rootpath=${JAVA_HOME}/jre/plugin/i386
+	
+	if [ $1 == "ns4" ] || [ $1 == "netscape4" ] ; then
+		for i in ${rootpath}/{ns4,netscape4}/javaplugin.so ; do
+			if [ -e $i ] ; then
+				echo $i
+			fi
+		done
+	elif [ $1 == "ns6" ] || [ $1 == "netscape6" ] || [ $1 == "moz" ] || [ $1 == "mozilla" ] ; then
+		for i in ${rootpath}/{mozilla,ns600,netscape6}/{libjavaplugin_oji,javaplugin_oji}.so ; do
+			if [ -e $i ] ; then
+				echo $i
+			fi
+		done
+	else
+		echo Browser "$1" unknow > /dev/stderr
+	fi
+}
+
+while test $# -gt 0; do
+
+	case "$1" in
+	-*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+	*) optarg= ;;
+	esac
+       
+	case $1 in
+		--debug)
+			set -x
+		;;
+		--browser-plugin=*)
+			pluginpath=`findpluginpath $optarg`
+			if [ ! -z $pluginpath ] ; then
+				echo `basename $pluginpath`
+			else
+				echo "Plugin not found" > /dev/stderr
+			fi
+		;;
+		--full-browser-plugin-path=*)
+			findpluginpath $optarg
+		;;
+		--classpath)
+			echo ${CLASSPATH}
+		;;
+		--classpath=*)
+			classpathfor $optarg
+		;;
+		--full-classpath=*)
+			echo "${CLASSPATH}:`classpathfor $optarg`."
+		;;
+		--java-home)
+			echo ${JAVA_HOME}
+		;;
+		--javac)
+			find_exec javac
+		;;
+		--java)
+			find_exec java
+		;;
+		--jar)
+			find_exec jar
+		;;
+		--java-version)
+			`find_exec java` -version
+		;;
+		--exec=*)
+			find_exec $optarg
+		;;
+		--version)
+			echo java-config $version
+		;;
+		--list-available-packages)
+			for i in `ls /usr/share/*/classpath.env` ; do
+				dn=`dirname $i`
+				echo `basename $dn`
+			done
+		;;
+		*)
+			usage
+		;;
+	esac
+	shift
+done
