@@ -1,4 +1,4 @@
-MD5 bcfae9591c9931439f5bcb29d8c93a94 files/digest-xfm-1.4.3 61
-MD5 e707e02ea591424b54ebfb64283ae056 xfm-1.4.3.ebuild 1041
-MD5 7d80da2056c59d7cf7a6211bc5eeb34a ChangeLog 726
+MD5 b697a750c18801a2542244e634505076 ChangeLog 843
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 5816127f7b8a6bc5d1b178bc0a220d7a xfm-1.4.3.ebuild 1041
+MD5 bcfae9591c9931439f5bcb29d8c93a94 files/digest-xfm-1.4.3 61
