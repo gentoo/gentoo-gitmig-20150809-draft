@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.1 2002/12/22 01:40:40 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.2 2002/12/27 00:29:11 raker Exp $
 
 IUSE="nls"
 
@@ -18,14 +18,6 @@ DEPEND=">=sys-libs/ncurses-5.2-r2
 
 inherit flag-o-matic
 replace-flags -O? -O2
-
-src_unpack() {
-
-	unpack ${A}
-	cd ${S}
-	patch -p1 < ${FILESDIR}/man.diff || die "patch failed"
-
-}
 
 src_compile() {
 
