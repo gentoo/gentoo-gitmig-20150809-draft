@@ -362,13 +362,20 @@ class config:
 			print ">>> /etc/make.profile/make.defaults not found, continuing anyway..."
 			self.configlist=[self.origenv.copy(),getconfig("/etc/make.conf"),getconfig("/etc/make.globals")]
 		self.populated=1
+	
 	def __getitem__(self,mykey):
 		if not self.populated:
 			self.populate()
+		if mykey=="CONFIG_PROTECT_MASK":
+			#Portage needs to always auto-update these files (so that builds don't die when remerging gcc)
+			returnme="/etc/env.d "
+		else:
+			returnme=""
 		for x in self.configlist:
 			if x.has_key(mykey):
-				return expand(x[mykey],self.configlist)
-		return ""		
+				returnme=returnme+expand(x[mykey],self.configlist)
+		return returnme		
+	
 	def has_key(self,mykey):
 		if not self.populated:
 			self.populate()
