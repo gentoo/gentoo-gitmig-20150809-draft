@@ -536,24 +536,6 @@ diff -ur linux-2.6.4/include/asm-i386/ipc.h linux-2.6.4-gentoo/include/asm-i386/
  struct ipc_kludge {
  	struct msgbuf __user *msgp;
  	long msgtyp;
-diff -ur linux-2.6.4/include/linux/compiler-gcc3.h linux-2.6.4-gentoo/include/linux/compiler-gcc3.h
---- linux-2.6.4/include/linux/compiler-gcc3.h	2004-03-13 13:04:57.718981680 +0000
-+++ linux-2.6.4-gentoo/include/linux/compiler-gcc3.h	2004-03-13 13:15:55.937917192 +0000
-@@ -3,6 +3,8 @@
- /* These definitions are for GCC v3.x.  */
- #include <linux/compiler-gcc.h>
- 
-+#ifdef __KERNEL__
-+
- #if __GNUC_MINOR__ >= 1
- # define inline		__inline__ __attribute__((always_inline))
- # define __inline__	__inline__ __attribute__((always_inline))
-@@ -25,3 +27,5 @@
- #if __GNUC_MINOR__ >= 1
- #define  noinline __attribute__((noinline))
- #endif
-+
-+#endif /* __KERNEL__ */
 diff -ur linux-2.6.4/include/linux/mroute.h linux-2.6.4-gentoo/include/linux/mroute.h
 --- linux-2.6.4/include/linux/mroute.h	2004-03-13 13:04:54.084534200 +0000
 +++ linux-2.6.4-gentoo/include/linux/mroute.h	2004-03-13 13:14:04.356880088 +0000
@@ -1311,4 +1293,31 @@ diff -ur linux-2.6.7/include/asm-x86_64/pda.h linux-2.6.7-gentoo/include/asm-x86
 +#define typeof_field(type,field)  __typeof__(((type *)0)->field)
  
  extern void __bad_pda_field(void);
+ 
+diff -ur linux-2.6.7/include/linux/compiler-gcc3.h linux-2.6.7-gentoo/include/linux/compiler-gcc3.h
+--- linux-2.6.7/include/linux/compiler-gcc3.h	2004-07-10 01:47:34.000000000 +0100
++++ linux-2.6.7-gentoo/include/linux/compiler-gcc3.h	2004-07-27 13:09:20.420468272 +0100
+@@ -3,12 +3,6 @@
+ /* These definitions are for GCC v3.x.  */
+ #include <linux/compiler-gcc.h>
+ 
+-#if __GNUC_MINOR__ >= 1  && __GNUC_MINOR__ < 4
+-# define inline		__inline__ __attribute__((always_inline))
+-# define __inline__	__inline__ __attribute__((always_inline))
+-# define __inline	__inline__ __attribute__((always_inline))
+-#endif
+-
+ #if __GNUC_MINOR__ > 0
+ # define __deprecated	__attribute__((deprecated))
+ #endif
+diff -ur linux-2.6.7/include/linux/sem.h linux-2.6.7-gentoo/include/linux/sem.h
+--- linux-2.6.7/include/linux/sem.h	2004-07-10 01:47:34.000000000 +0100
++++ linux-2.6.7-gentoo/include/linux/sem.h	2004-07-27 11:48:07.440273000 +0100
+@@ -1,6 +1,7 @@
+ #ifndef _LINUX_SEM_H
+ #define _LINUX_SEM_H
+ 
++#include <linux/compiler.h>
+ #include <linux/ipc.h>
+ #include <asm/atomic.h>
  
