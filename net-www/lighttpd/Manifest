@@ -1,12 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0ba0225d1e9096490ca923b03a0c75b7 ChangeLog 1757
-MD5 629a7ed714fea393e45028431e91124d lighttpd-1.1.8-r1.ebuild 1924
 MD5 5b17c3dd42a8e796044afd225fcab492 lighttpd-1.1.8.ebuild 1921
 MD5 3d182d43f7f0341a9a42f96694f04e72 metadata.xml 224
+MD5 629a7ed714fea393e45028431e91124d lighttpd-1.1.8-r1.ebuild 1924
 MD5 272c2cde7967a5147d9575838ed2fb79 lighttpd-1.2.2.ebuild 2039
 MD5 eb94c0fc2149e2543beb50e93058de99 files/digest-lighttpd-1.1.8 66
-MD5 eb94c0fc2149e2543beb50e93058de99 files/digest-lighttpd-1.1.8-r1 66
 MD5 352e2fac9cb73bdae7672f977b044894 files/lighttpd-1.1.8-gentoo.diff 1301
-MD5 8201ea6394b0c7ea9fc90deecd68bec3 files/lighttpd.initd 637
+MD5 5773b97a6eeaa0a6dea3d00159b2c55b files/lighttpd.initd 642
+MD5 eb94c0fc2149e2543beb50e93058de99 files/digest-lighttpd-1.1.8-r1 66
 MD5 0d9277bbfb98755640329afa81c8bee2 files/digest-lighttpd-1.2.2 66
 MD5 32569e20d3ecdd51ac0534cc85d52354 files/lighttpd-1.2.2-php.diff 1184
 MD5 59b78c3d7f4bb89134a61bacd16f8e9e files/lighttpd-1.2.2.initd 802
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fyrmdTrptrqvGERAkvIAKCa9D9wCEveeY1DOvk1cCNrjhFJbgCghRQe
+f3CRBUFETOi3ImhrPJHV1KA=
+=eC3w
+-----END PGP SIGNATURE-----

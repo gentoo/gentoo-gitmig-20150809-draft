@@ -1,14 +1,24 @@
-MD5 8a96576f0d0ec1eed870f12b50870f04 lynx-2.8.5.ebuild 1770
-MD5 325aae6ae2667fbf5a8f0d0a39c4cb2a lynx-2.8.4.1d.ebuild 2304
-MD5 4da35c9aef12b57eb9a4d5e24ed9791a lynx-2.8.4.1d-r1.ebuild 2402
-MD5 600fb7d641bd31f1a30dedb8c4db1d49 lynx-2.8.4.1c.ebuild 2170
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c377ac998e547db05c1524207f256705 ChangeLog 5151
+MD5 600fb7d641bd31f1a30dedb8c4db1d49 lynx-2.8.4.1c.ebuild 2170
+MD5 4da35c9aef12b57eb9a4d5e24ed9791a lynx-2.8.4.1d-r1.ebuild 2402
+MD5 325aae6ae2667fbf5a8f0d0a39c4cb2a lynx-2.8.4.1d.ebuild 2304
+MD5 950bc24b833e5cb17eead71c782de98a lynx-2.8.5.ebuild 1776
 MD5 acaa86fdf4e340e1180ce324110007cd metadata.xml 224
 MD5 a5a3cf665f0451dfebbbdc90b2d23a89 files/digest-lynx-2.8.4.1c 260
 MD5 a48ecda8afc164dc0252e8d0ed579d49 files/digest-lynx-2.8.4.1d 324
-MD5 d256ae9121ae1557872c376683b93cc8 files/digest-lynx-2.8.5 63
-MD5 0dacb03b3e82b0069b0b2d8e9706f234 files/lynx-2.8.4a-LYStrings.c-gentoo.patch 188
 MD5 a48ecda8afc164dc0252e8d0ed579d49 files/digest-lynx-2.8.4.1d-r1 324
-MD5 b0b269efc9ff697e40a10f99919599ea files/lynx2.8.4rel.1a.patch 7515
-MD5 2290b4fe7526899243941069f01d01eb files/lynx-2.8.4.1d-gentoo.patch 196
 MD5 2290b4fe7526899243941069f01d01eb files/lynx-2.8.4.1c-gentoo.patch 196
+MD5 2290b4fe7526899243941069f01d01eb files/lynx-2.8.4.1d-gentoo.patch 196
+MD5 0dacb03b3e82b0069b0b2d8e9706f234 files/lynx-2.8.4a-LYStrings.c-gentoo.patch 188
+MD5 b0b269efc9ff697e40a10f99919599ea files/lynx2.8.4rel.1a.patch 7515
+MD5 d256ae9121ae1557872c376683b93cc8 files/digest-lynx-2.8.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fzOmdTrptrqvGERAvtpAKCcCrmGKEGfm5yDddizeJ5N245RTgCfZnsz
+fXYIjkvGONAU60VMwVc+y6Q=
+=Tkji
+-----END PGP SIGNATURE-----

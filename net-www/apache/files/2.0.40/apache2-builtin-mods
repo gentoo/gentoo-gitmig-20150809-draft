@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2-builtin-mods,v 1.4 2003/10/30 17:51:18 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2-builtin-mods,v 1.5 2004/07/18 04:20:47 dragonheart Exp $
 #
 # This file will be installed into /etc/apache2 when you first emerge
 # Apache2.  If/when you upgrade, it will be consulted for your options,

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b1f4c75f8087b96c19fd4b13fbdb43f0 ChangeLog 1162
-MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 3cfed9ccce4d0bc6ffc1dadac497bc03 mod_dav-1.0.3-r1.ebuild 1469
+MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 48fd840765d593fa280f25c60f073e0c files/digest-mod_dav-1.0.3-r1 71
 MD5 9e45a81bd2b37f2eb70cb5190a60c8ff files/mod_dav-shared-expat.patch 5637
-MD5 f9203f501018426af69adac097ce8f16 files/mod_dav.conf 183
+MD5 336d5f4431aa83af65ea97a2bb8a8572 files/mod_dav.conf 186
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fz0mdTrptrqvGERAj/VAJ9zuQ77rkTg+h42gCGUy81xTOHZngCfVl0b
++zbWEbnPJSrgnwhVCeI4oCc=
+=4sM9
+-----END PGP SIGNATURE-----

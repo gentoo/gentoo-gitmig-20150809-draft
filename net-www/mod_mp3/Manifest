@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9bcfa011a21db8ee019ec42f80c3af29 ChangeLog 1821
-MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 ba527b015d570bc1d185e44d20a2186a mod_mp3-0.35-r1.ebuild 1368
 MD5 2820bd43230cefaf221a72f8ce2812b5 mod_mp3-0.35-r2.ebuild 1480
 MD5 7d91b582ee143471f7ff487f8fc6e895 mod_mp3-0.39.ebuild 1568
+MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 4f0a5498ea81b66cda3cbb2a6425288a mod_mp3-0.40.ebuild 1573
 MD5 8a7822e7dc0ef7f482a9eea2f2dc7f99 files/digest-mod_mp3-0.35-r1 63
 MD5 8a7822e7dc0ef7f482a9eea2f2dc7f99 files/digest-mod_mp3-0.35-r2 63
 MD5 eed7a5bfc98ac86ce87a0e8acc8cc63d files/digest-mod_mp3-0.39 63
+MD5 b5e3152aec6736c0cb2be7346b0423dd files/mod_mp3.conf 316
 MD5 a87aa3881f9296ed5334e2bccf010ab1 files/digest-mod_mp3-0.40 63
-MD5 55dd0606f7732892267263c5bab3ee6f files/mod_mp3.conf 313
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+f1CmdTrptrqvGERAgbhAJ0dHmaCc7uCsyMyDLsFTeGaBAC76ACdGm3V
+4F2IKYmW7/UlRnPBlse1xWI=
+=TD/Q
+-----END PGP SIGNATURE-----
