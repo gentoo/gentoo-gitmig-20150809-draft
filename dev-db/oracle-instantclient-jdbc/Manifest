@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c54c2b2897df45205bad8b9c1c6567c1 oracle-instantclient-jdbc-10.1.0.2_p2.ebuild 1374
 MD5 71700bab58f376aec6ae1c71ec8bb9de ChangeLog 805
-MD5 be21f1b8658247ec78eba9d3e7c37537 metadata.xml 422
+MD5 0cde0af1778937296983dc2cd11a03fe metadata.xml 351
 MD5 7d3e4c7886b1d1ff429ea98a8182faca files/digest-oracle-instantclient-jdbc-10.1.0.2_p2 91
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw0j6I1lqEGTUzyQRAjOnAKCSREeN3bbzbgx1AXxFx+71VLR6xgCguJSB
+6wiuQyZSJMRgpsvHgHCXJTE=
+=gnji
+-----END PGP SIGNATURE-----
