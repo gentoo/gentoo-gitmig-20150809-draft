@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.5 2004/01/27 22:02:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.6 2004/01/29 01:37:12 agriffis Exp $
+
+*netperf-2.2.4 (28 Jan 2004)
+
+  28 Jan 2004; <agriffis@gentoo.org> netperf-2.2.4.ebuild,
+  files/netperf-2.2-conf, files/netperf-2.2-init:
+  update to netperf-2.2pl4 for bug 19463. Thanks to Jyrki Muukkonen for some
+  good ideas in this ebuild
 
   27 Jan 2004; <agriffis@gentoo.org> netperf-2.2.ebuild:
   stable on alpha and ia64
