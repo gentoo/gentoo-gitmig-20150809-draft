@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50-r1.ebuild,v 1.4 2004/06/25 01:08:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50-r1.ebuild,v 1.5 2004/06/25 15:45:13 agriffis Exp $
 
 IUSE="static"
 
@@ -94,7 +94,7 @@ src_install() {
 	echo "Plugin Path=/opt/opera/lib/opera/plugins" >> ${D}/etc/opera6rc
 
 	# enable spellcheck
-	if [ `use static` ]; then
+	if use static; then
 		DIR=$OPERAVER.1
 	else
 		use sparc && DIR=$OPERAVER.2 || DIR=$OPERAVER.5

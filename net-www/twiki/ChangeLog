@@ -1,6 +1,9 @@
 # ChangeLog for net-www/twiki
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/ChangeLog,v 1.5 2004/06/25 01:14:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/ChangeLog,v 1.6 2004/06/25 15:50:31 agriffis Exp $
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> twiki-20030201.ebuild:
+  QA - fix use invocation
 
   02 Jun 2004; Martin Holzer <mholzer@gentoo.org> twiki-20030201.ebuild:
   adding S

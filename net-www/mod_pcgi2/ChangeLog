@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_pcgi2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/ChangeLog,v 1.7 2004/06/25 01:03:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/ChangeLog,v 1.8 2004/06/25 15:56:37 agriffis Exp $
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> mod_pcgi2-2.0.1.ebuild:
+  QA - fix use invocation
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_pcgi2-2.0.1.ebuild:
   Ebuild cleanups.

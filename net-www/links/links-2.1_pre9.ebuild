@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre9.ebuild,v 1.10 2004/06/25 00:57:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre9.ebuild,v 1.11 2004/06/25 15:42:37 agriffis Exp $
 
 IUSE="ssl java png X gpm tiff fbcon svga jpeg"
 
@@ -34,7 +34,7 @@ PROVIDE="virtual/textbrowser"
 
 pkg_setup (){
 
-	if [ ! `use gpm` ] && [ `use fbcon` ] ; then
+	if ! use gpm && use fbcon ; then
 		einfo
 		einfo "gpm has been installed since you have included fbcon in your USE flags."
 		einfo "The links framebuffer driver requires gpm in order to compile."

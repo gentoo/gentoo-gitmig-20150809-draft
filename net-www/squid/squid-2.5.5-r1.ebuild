@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r1.ebuild,v 1.4 2004/06/25 01:12:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r1.ebuild,v 1.5 2004/06/25 15:47:51 agriffis Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 
@@ -40,7 +40,7 @@ src_unpack() {
 	sed -e 's%^\(LINK =.*\)\(-o.*\)%\1\$(XTRA_LIBS) \2%' \
 		Makefile.in.orig > Makefile.in
 
-	if [ -z "`use debug`" ]
+	if ! use debug
 	then
 		cd ${S}
 		mv configure.in configure.in.orig
@@ -54,7 +54,7 @@ src_compile() {
 	local basic_modules="getpwnam,YP,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
 	use ldap && basic_modules="LDAP,${basic_modules}"
 	use pam && basic_modules="PAM,${basic_modules}"
-	if [ `use sasl` ]; then
+	if use sasl; then
 		basic_modules="SASL,${basic_modules}"
 		#support for cyrus-sasl-1.x and 2.x; thanks Raker!
 		if [ -f /usr/include/sasl/sasl.h ]; then
@@ -79,7 +79,7 @@ src_compile() {
 	use snmp && myconf="${myconf} --enable-snmp" || myconf="${myconf} --disable-snmp"
 	use ssl && myconf="${myconf} --enable-ssl" || myconf="${myconf} --disable-ssl"
 
-	if [ `use underscores` ]; then
+	if use underscores; then
 		ewarn "Enabling underscores in domain names will result in dns resolution"
 		ewarn "failure if your local DNS client (probably bind) is not compatible."
 		myconf="${myconf} --enable-underscores"

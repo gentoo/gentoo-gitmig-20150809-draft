@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.1.4.ebuild,v 1.3 2004/06/25 00:50:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.1.4.ebuild,v 1.4 2004/06/25 15:59:10 agriffis Exp $
 
 inherit java-pkg
 
@@ -22,11 +22,13 @@ src_unpack() {
 
 	cd ${S}
 	echo -e "# Gentoo build properties" > local.build.properties
-	[ ! `use doc` ] && echo -e "exclude.javadocs=true\n" >> local.build.properties
-	[ ! `use doc` ] && echo -e "exclude.webapp.javadocs=true\n" >> local.build.properties
-	[ ! `use doc` ] && echo -e "exclude.webapp.documentation=true\n" >> local.build.properties
-	[ ! `use doc` ] && echo -e "exclude.idldocs=true\n" >> local.build.properties
-	[ ! `use doc` ] && echo -e "exclude.webapp.idldocs=true\n" >> local.build.properties
+	if ! use doc; then
+		echo -e "exclude.javadocs=true\n" >> local.build.properties
+		echo -e "exclude.webapp.javadocs=true\n" >> local.build.properties
+		echo -e "exclude.webapp.documentation=true\n" >> local.build.properties
+		echo -e "exclude.idldocs=true\n" >> local.build.properties
+		echo -e "exclude.webapp.idldocs=true\n" >> local.build.properties
+	fi
 }
 
 src_compile() {

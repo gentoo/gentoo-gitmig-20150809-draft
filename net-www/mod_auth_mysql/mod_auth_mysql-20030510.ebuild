@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-20030510.ebuild,v 1.7 2004/06/25 00:59:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-20030510.ebuild,v 1.8 2004/06/25 15:55:47 agriffis Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="x86"
 IUSE=""
 SLOT="0"
 
-if [ -n "`use apache2`" ]; then
+if use apache2; then
 	APXS="apxs2 -D APACHE2"
 else
 	APXS="apxs -D APACHE1"

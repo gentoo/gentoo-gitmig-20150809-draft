@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.18.ebuild,v 1.8 2004/06/25 01:14:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.18.ebuild,v 1.9 2004/06/25 16:10:25 agriffis Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/gentoo.diff
 
-	if [ ! `use doc` ] ; then
+	if ! use doc ; then
 		rm -rf webapps/{tomcat-docs,jsp-examples,servlets-examples}
 	fi
 }

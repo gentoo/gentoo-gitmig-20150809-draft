@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r4.ebuild,v 1.5 2004/06/25 01:15:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r4.ebuild,v 1.6 2004/06/25 16:05:46 agriffis Exp $
 
 inherit alternatives eutils
 
@@ -55,7 +55,7 @@ src_compile() {
 	myuse="use_cookie=y use_ansi_color=y use_history=y
 		display_code=E system_code=E"
 
-	if [ -n "`use ssl`" ] ; then
+	if use ssl ; then
 		myconf="${myconf} --ssl-includedir=/usr/include/openssl
 			--ssl-libdir=/usr/lib"
 		myuse="${myuse} use_ssl=y use_ssl_verify=y
@@ -64,19 +64,19 @@ src_compile() {
 		myuse="${myuse} use_ssl=n"
 	fi
 
-	if [ -n "`use gpm`" ] ; then
+	if use gpm ; then
 		myuse="${myuse} use_mouse=y"
 	else
 		myuse="${myuse} use_mouse=n"
 	fi
 
-	if [ -n "`use nls`" ] ; then
+	if use nls ; then
 		myconf="${myconf} -locale_dir=/usr/share/locale"
 	else
 		myconf="${myconf} -locale_dir='(NONE)'"
 	fi
 
-	if [ -n "`use imlib`" ] ; then
+	if use imlib ; then
 		myuse="${myuse} use_image=y use_w3mimg_x11=y
 		use_w3mimg_fb=n w3mimgdisplay_setuid=n use_xface=y"
 	else

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.12 2004/06/25 01:05:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.13 2004/06/25 16:00:39 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -157,7 +157,7 @@ src_unpack() {
 	unset WANT_AUTOCONF
 
 	# Unpack the enigmail plugin
-	if [ -n "`use crypt`" -a -z "`use moznomail`" ]
+	if use crypt && ! use moznomail
 	then
 		mv -f ${WORKDIR}/ipc ${S}/extensions/
 		mv -f ${WORKDIR}/enigmail ${S}/extensions/
@@ -205,7 +205,7 @@ src_compile() {
 
 		# Currently --enable-elf-dynstr-gc only works for x86 and ppc,
 		# thanks to Jason Wever <weeve@gentoo.org> for the fix.
-		if [ -n "`use x86`" -o -n "`use ppc`" ]
+		if use x86 || use ppc
 		then
 			myconf="${myconf} --enable-elf-dynstr-gc"
 		fi
@@ -304,7 +304,7 @@ src_compile() {
 	then
 		myconf="${myconf} --disable-mailnews"
 	fi
-	if [ -n "`use moznocompose`" -a -n "`use moznomail`" ]
+	if use moznocompose && use moznomail
 	then
 		myconf="${myconf} --disable-composer"
 	fi
@@ -418,7 +418,7 @@ src_compile() {
 	# *********************************************************************
 
 	# Build the enigmail plugin
-	if [ -n "`use crypt`" -a -z "`use moznomail`" ]
+	if use crypt && ! use moznomail
 	then
 		einfo "Building Enigmail plugin..."
 		cd ${S}/extensions/ipc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/twiki-20030201.ebuild,v 1.7 2004/06/25 01:14:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/twiki-20030201.ebuild,v 1.8 2004/06/25 15:50:31 agriffis Exp $
 
 inherit webapp-apache
 
@@ -42,7 +42,7 @@ src_install() {
 	dodir ${destdir}
 	cp -r . ${D}${destdir}
 
-	if [ "`use apache2`" ]; then
+	if use apache2; then
 		dodir /etc/apache2/conf/modules.d
 		insinto /etc/apache2/conf/modules.d
 		newins ${FILESDIR}/twiki.conf 97_twiki.conf

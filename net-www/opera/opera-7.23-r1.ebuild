@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.23-r1.ebuild,v 1.8 2004/06/25 01:08:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.23-r1.ebuild,v 1.9 2004/06/25 15:45:13 agriffis Exp $
 
 IUSE="static operanom2"
 
@@ -60,7 +60,7 @@ src_unpack() {
 	       install.sh || die
 
 	# Make mail and irc support optional
-	if [ "`use operanom2`" ]; then
+	if use operanom2; then
 		einfo "Removing mail and chat support"
 		rm -f ${S}/lib/m2.so
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r2.ebuild,v 1.9 2004/06/25 01:12:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.5-r2.ebuild,v 1.10 2004/06/25 15:47:51 agriffis Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_unpack() {
 	sed -e 's%^\(LINK =.*\)\(-o.*\)%\1\$(XTRA_LIBS) \2%' \
 		Makefile.in.orig > Makefile.in
 
-	if [ -z "`use debug`" ]
+	if ! use debug
 	then
 		cd ${S}
 		mv configure.in configure.in.orig
@@ -59,7 +59,7 @@ src_compile() {
 	local basic_modules="getpwnam,YP,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
 	use ldap && basic_modules="LDAP,${basic_modules}"
 	use pam && basic_modules="PAM,${basic_modules}"
-	if [ `use sasl` ]; then
+	if use sasl; then
 		basic_modules="SASL,${basic_modules}"
 		#support for cyrus-sasl-1.x and 2.x; thanks Raker!
 		if [ -f /usr/include/sasl/sasl.h ]; then
@@ -86,7 +86,7 @@ src_compile() {
 
 	use amd64 && myconf="${myconf} --disable-internal-dns "
 
-	if [ `use underscores` ]; then
+	if use underscores; then
 		ewarn "Enabling underscores in domain names will result in dns resolution"
 		ewarn "failure if your local DNS client (probably bind) is not compatible."
 		myconf="${myconf} --enable-underscores"

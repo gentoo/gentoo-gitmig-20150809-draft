@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.7.ebuild,v 1.13 2004/06/25 01:12:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.7.ebuild,v 1.14 2004/06/25 15:47:51 agriffis Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-debian.diff
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
-	if [ -z "`use debug`" ]
+	if ! use debug
 	then
 		sed -i 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
 		autoconf || die

@@ -1,6 +1,11 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.67 2004/06/25 01:08:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.68 2004/06/25 15:45:13 agriffis Exp $
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> opera-6.12.ebuild,
+  opera-7.11-r2.ebuild, opera-7.23-r1.ebuild, opera-7.50-r1.ebuild,
+  opera-7.51.ebuild:
+  QA - fix use invocation
 
   04 Jun 2004; Jason Wever <weeve@gentoo.org> opera-7.51.ebuild:
   Marked stable on sparc wrt bug #52867.

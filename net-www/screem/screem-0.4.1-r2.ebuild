@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1-r2.ebuild,v 1.14 2004/06/25 01:12:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1-r2.ebuild,v 1.15 2004/06/25 16:09:15 agriffis Exp $
 
 IUSE="gtkhtml ssl nls"
 
@@ -27,11 +27,11 @@ src_compile() {
 	libtoolize --copy --force
 
 	local myopts=""
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		myopts="--disable-nls"
 	fi
-	if [ "`use ssl`" ]
+	if use ssl
 	then
 		myopts="$myopts --with-ssl"
 	fi
@@ -48,7 +48,7 @@ src_compile() {
 		    --with-gnomevfs \
 		    ${myopts} || die
 
-	if [ "`use ssl`" ]
+	if use ssl
 	then
 		cd ${S}/plugins/uploadWizard
 		cp Makefile Makefile.orig

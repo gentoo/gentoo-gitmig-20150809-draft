@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.6 2004/06/25 01:08:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.12.ebuild,v 1.7 2004/06/25 15:45:13 agriffis Exp $
 #
 # 1. static       # Statically linked libraries, default.
 # 2. shared-2.95  # Dynamically linked libaries, compiled with gcc 2.95.
@@ -69,14 +69,14 @@ src_unpack() {
 src_install() {
 	# Prepare installation directories for Opera's installer script.
 	dodir /etc
-	if [ "`use kde`" ]
+	if use kde
 	then
 		# Install stuff for KDE2, and then simply copy it over
 		# into the KDE3 directories.
 		dodir /usr/kde/2/share/icons/{locolor,hicolor}/{16x16,22x22,32x32,48x48}/apps
 		dodir /usr/kde/2/share/applnk/Internet
 	fi
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		dodir /usr/share/gnome/pixmaps
 		dodir /usr/share/gnome/apps/Internet
@@ -84,7 +84,7 @@ src_install() {
 
 	# Opera's native installer.
 	./install.sh --prefix="${D}"/opt/opera || die
-	if [ "`use kde`" ]
+	if use kde
 	then
 		cp -R ${D}/usr/kde/2 ${D}/usr/kde/3
 	fi

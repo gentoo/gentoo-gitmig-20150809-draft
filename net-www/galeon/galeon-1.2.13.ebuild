@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.13.ebuild,v 1.2 2004/06/25 00:52:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.13.ebuild,v 1.3 2004/06/25 15:58:40 agriffis Exp $
 
 IUSE="nls"
 
@@ -115,7 +115,7 @@ pkg_postinst() {
 	galeon-config-tool --pkg-install-schemas
 	scrollkeeper-update
 
-	if [ -z "`use gnome`" ]
+	if ! use gnome
 	then
 		einfo "Please make sure libglade was built with gnome support, or"
 		einfo "else galeon will not be able to start up."

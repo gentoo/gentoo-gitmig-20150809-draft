@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.1-r1.ebuild,v 1.6 2004/06/25 00:56:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jboss/jboss-3.2.1-r1.ebuild,v 1.7 2004/06/25 15:38:30 agriffis Exp $
 
 MY_P="${P}-src"
 
@@ -67,7 +67,7 @@ src_install() {
 
 	einfo ">>> Setting up documentation..."
 	dodoc server/src/docs/LICENSE.txt ${FILESDIR}/README.gentoo
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		dohtml -a html,htm,png,gif,css,java -r build/output/${PN}-${PV}/docs/
 	fi
 
