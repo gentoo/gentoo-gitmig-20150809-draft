@@ -1,11 +1,15 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.6 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.7 2003/01/09 22:10:53 seemant Exp $
+
+*libmpeg3-1.5-r1 (15 Apr 2002)
+
+  09 Jan 2003; Seemant Kulleen <seemant@gentoo.org> libmpeg3-1.5-r1.ebuild :
+
+  filter out the -fPIC flag, if the user has it.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*libmpeg3-1.5-r1 (15 Apr 2002)
-
   11 Sep 2002; Mark Guertin <gerk@gentoo.org> flac-1.0.3.ebuild :
   set nasm as x86 only dependancy
 
