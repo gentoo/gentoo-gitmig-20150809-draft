@@ -1,2 +1,5 @@
-MD5 4542552f39bc3df9acfb2b88f70f751b fargoal-20030731b.ebuild 1051
+MD5 7c1e7dd5a0ec65353830d6b2d6ec9db4 fargoal-20030731b.ebuild 1404
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 04a79bb0af5e002c3bb22f24293e4606 ChangeLog 483
 MD5 336cedc9e4543c149a20bbf8a0446ea7 files/digest-fargoal-20030731b 65
+MD5 bbb65152078901fe1ae1775f6956da7b files/gentoo-home-write.patch 5709
