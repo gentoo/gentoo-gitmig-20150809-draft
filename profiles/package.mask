@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <carpaski@gentoo.org> (09 Dec 2002)
-# Quick masking.
->=sys-apps/portage-2.0.45-r2
-
 # <danarmak@gentoo.org> (08 Dec 2002)
 # kde 3.1 rc5: masked permanently
 ~kde-base/arts-1.1.0_rc5
