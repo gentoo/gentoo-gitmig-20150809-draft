@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.20 2003/12/05 13:59:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.21 2003/12/28 04:30:03 caleb Exp $
+
+  27 Dec 2003; Caleb Tennis <caleb@gentoo.org> arson-0.9.7-r1.ebuild,
+  arson-0.9.7-r2.ebuild, arson-0.9.7-r3.ebuild, arson-0.9.7.ebuild:
+  remove old versions - fix dependency stuff
 
   05 Dec 2003; Jason Wever <weeve@gentoo.org> arson-0.9.7.ebuild:
   Changed sparc keyword to ~sparc as numerous dependencies were masked. Need

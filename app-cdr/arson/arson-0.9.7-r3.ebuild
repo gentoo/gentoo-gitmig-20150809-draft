@@ -1,14 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.4 2003/10/02 07:56:23 kumba Exp $
-inherit kde-base
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7-r3.ebuild,v 1.5 2003/12/28 04:30:03 caleb Exp $
+inherit kde-base eutils
+need-kde 3
 
 DESCRIPTION="A KDE frontend to CD burning and CD ripping tools."
 HOMEPAGE="http://arson.sourceforge.net/"
+SRC_URI="mirror://sourceforge/arson/${P}-kde3.tar.bz2"
 LICENSE="GPL-2"
+IUSE="oggvorbis"
 
-newdepend ">=media-sound/cdparanoia-3.9.8
+DEPEND=">=media-sound/cdparanoia-3.9.8
 	>=media-sound/bladeenc-0.94.2
 	>=app-cdr/cdrtools-1.11.24
 	>=media-sound/normalize-0.7.4
@@ -16,12 +18,9 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	>=media-sound/lame-3.92
 	>=app-cdr/cdrdao-1.1.5
 	>=media-libs/flac-1.1.0"
-need-kde 3
 
-IUSE="oggvorbis"
 KEYWORDS="x86"
 S=${WORKDIR}/${P}-kde3
-SRC_URI="mirror://sourceforge/arson/${P}-kde3.tar.bz2"
 
 use oggvorbis && myconf="$myconf --with-vorbis" || myconf="$myconf --without-vorbis"
 myconf="$myconf --with-flac"
