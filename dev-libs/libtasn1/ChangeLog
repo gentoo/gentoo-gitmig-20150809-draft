@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.13 2005/01/11 16:28:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.14 2005/02/09 10:06:40 dragonheart Exp $
+
+  09 Feb 2005; Daniel Black <dragonheart@gentoo.org> libtasn1-0.2.13.ebuild,
+  libtasn1-0.2.6.ebuild:
+  bad yacc DEPEND as per bug #81056. Thanks to Benoit Boissinot
+  <b.boissinot@ifrance.com>. x86 stbale for 0.2.13 too
 
   11 Jan 2005; Guy Martin <gmsoft@gentoo.org> libtasn1-0.2.13.ebuild:
   Added ~hppa to KEYWORDS.

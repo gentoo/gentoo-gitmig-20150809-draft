@@ -1,6 +1,16 @@
-MD5 3fa155cb523a6a0f424b3f15ef2a8ff6 ChangeLog 1694
-MD5 b01c25da41705e1f6b76c83dbe96b91f libtasn1-0.2.13.ebuild 817
-MD5 3261ebee08a82e9c4b0ee362a99a2e28 libtasn1-0.2.6.ebuild 807
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5c3a2e0d8ed70f6f227d0f1562f2ff5a ChangeLog 1921
+MD5 1f27146494a4d0be09896f685ac776cf libtasn1-0.2.6.ebuild 820
 MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
-MD5 9ce33a169762260d8c07cfbbec9969ca files/digest-libtasn1-0.2.13 67
+MD5 cd2956b7e4b7b71de71301428a37075c libtasn1-0.2.13.ebuild 743
 MD5 01089c6e853fb2c5754ea6a5cfd21ae8 files/digest-libtasn1-0.2.6 66
+MD5 9ce33a169762260d8c07cfbbec9969ca files/digest-libtasn1-0.2.13 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCCeC3mdTrptrqvGERAmMEAJ9iH8tXme2bgCU2ZlBBDA2sIogC4ACglMRW
+r2R0tMq2lvnlwAZ0cplusKQ=
+=VGBM
+-----END PGP SIGNATURE-----
