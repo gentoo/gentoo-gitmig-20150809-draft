@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.13.ebuild,v 1.5 2004/07/06 15:11:47 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.14.ebuild,v 1.1 2004/07/06 15:11:47 arj Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ DEPEND="virtual/libc
 	dev-lang/tcl"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha mips hppa ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ppc64"
 
 src_compile() {
 	local myconf
