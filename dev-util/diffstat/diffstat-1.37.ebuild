@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.37.ebuild,v 1.4 2005/01/26 14:53:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.37.ebuild,v 1.5 2005/02/01 23:26:14 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="diffstat reads the output of diff and displays a histogram of the insertions, deletions, and modifications per-file"
-SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
+DESCRIPTION="creates a histogram from a diff of the insertions, deletions, and modifications per-file"
 HOMEPAGE="http://invisible-island.net/diffstat/diffstat.html"
+SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ~ppc ~mips ~amd64 ~ia64 ~alpha"
+SLOT="0"
+KEYWORDS="~alpha amd64 ia64 ~mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/diffutils"
@@ -23,5 +23,5 @@ src_unpack() {
 src_install() {
 	dobin diffstat || die "dobin failed"
 	doman diffstat.1 || die "doman failed"
-	dodoc README CHANGES || die "dodoc failed"
+	dodoc README CHANGES
 }
