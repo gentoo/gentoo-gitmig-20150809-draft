@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cheesetracker
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.1 2004/02/27 02:50:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cheesetracker/ChangeLog,v 1.2 2004/04/08 08:16:25 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  cheesetracker-0.9.1.ebuild:
+  Added virtual/jack to DEPEND as an option.
 
 *cheesetracker-0.9.1 (26 Feb 2004)
 
