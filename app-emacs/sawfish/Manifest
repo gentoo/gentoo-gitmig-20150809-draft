@@ -1,5 +1,5 @@
 MD5 64ffd4048b6f0f802f8f3d8496191533 sawfish-1.31.ebuild 753
-MD5 05e3f9cfc7a3c608c6be73bcae803630 ChangeLog 416
+MD5 47c4817edaafddac321c5193b45d2b89 ChangeLog 543
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 535e1a023f372d4e0f59347dd85b5f3e files/digest-sawfish-1.31 68
-MD5 1cb3fa061898fe493b47c14f13fdd391 files/50sawfish-gentoo.el 373
+MD5 c897705b0c8b795093a38e82f981b9d2 files/50sawfish-gentoo.el 534
