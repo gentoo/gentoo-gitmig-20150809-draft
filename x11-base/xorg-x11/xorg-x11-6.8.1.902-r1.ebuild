@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.7 2005/01/25 21:05:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.8 2005/01/30 07:15:47 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -160,7 +160,7 @@ src_unpack() {
 
 	patch_setup
 
-	patch
+	do_patch
 
 	host_def_setup
 
@@ -433,7 +433,7 @@ unpack_all() {
 	rm -f ${WORKDIR}/usr/share/fonts/encodings/urdunaqsh-0.enc
 }
 
-patch() {
+do_patch() {
 	# Bulk patching - based on patch name
 	# Will create excluded stuff once it's needed
 	cd ${WORKDIR}
