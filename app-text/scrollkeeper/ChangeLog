@@ -1,6 +1,13 @@
 # ChangeLog for app-text/scrollkeeper
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.29 2003/11/15 02:57:50 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.30 2004/02/05 23:01:04 spider Exp $
+
+*scrollkeeper-0.3.14
+
+  05 Feb 2004; <spider@gentoo.org> scrollkeeper-0.3.14.ebuild 
+  files/scrollkeeper-0.3.14-gentoo.diff :
+  Versionbump. Removed echo formatting fluff in pkg_, moved to einfo. removed
+  old comment/buildfix
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> scrollkeeper-0.3.12.ebuild:
   Stable on ia64
