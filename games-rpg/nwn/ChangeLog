@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.7 2004/02/28 09:21:45 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.8 2004/04/19 11:29:44 mr_bones_ Exp $
+
+  19 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> nwn-1.62.ebuild:
+  opengl isn't optional.
 
 *nwn-1.62 (28 Feb 2004)
 
