@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 33c84a4a0e46f47fb46a76166274bfac ChangeLog 1788
 MD5 7dfbc7d74e6423964154125f19a921d0 sonar-1.2.1.ebuild 755
-MD5 9cf6e58c281a440bc03ccf779bb6db2c ChangeLog 1654
-MD5 23b864fd287d7ffb67150621ab59e47f sonar-1.2.2-r1.ebuild 761
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
-MD5 02ce498d95c40abebb98f70e9fe12181 files/digest-sonar-1.2.1 64
+MD5 b989ef4d4f852287f1421c3b2f7a21cd sonar-1.2.2-r1.ebuild 768
 MD5 189953c096922833ac4d284bdef9aabe files/1.2.1-libtool.patch 1491
+MD5 02ce498d95c40abebb98f70e9fe12181 files/digest-sonar-1.2.1 64
 MD5 251b9638fa8ba8ffa0fc50d7540ae082 files/digest-sonar-1.2.2-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+S1vT+MN7JbqCpMRAvyQAJ0d+WFFv97Hp2GklZwe4xrXorOZBwCeLFec
-xUU10Wz1MpwAL8Sh2EXyUto=
-=Q9X+
------END PGP SIGNATURE-----
