@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3325 2004/11/16 17:52:54 trapni Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3326 2004/11/17 17:47:36 danarmak Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -66,25 +66,6 @@ sys-kernel/selinux-sources
 # <taviso@gentoo.org> (09 Nov 2004)
 # preparing for removal, please contact me with comments.
 app-editors/videoteco
-
-# <danarmak@gentoo.org> (06 Nov 2004)
-# Masked incoming 'split' kde ebuilds pending more extensive testing
-# These are on track to replace the monolithic kde-base ebuilds
-# Cf. kde-metaebuilds.berlios.de
-kde-base/dcopc
-kde-base/dcopjava
-kde-base/dcopperl
-kde-base/dcoppython
-kde-base/kalyptus
-kde-base/kdebindings-meta
-kde-base/kdejava
-kde-base/kjsembed
-kde-base/korundum
-kde-base/qtjava
-kde-base/qtruby
-kde-base/qtsharp
-kde-base/smoke
-kde-base/xparts
 
 # <chriswhite@gentoo.org> (05 Nov 2004)
 # Masked until all arches have re-marked per 
