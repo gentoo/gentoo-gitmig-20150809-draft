@@ -1,7 +1,14 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.3 2002/07/07 15:32:49 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.4 2002/07/18 20:09:31 spider Exp $
 
+18 Jul 2002; Spider <spider@gentoo.org>
+  KEYWORDS and SLOT fixes
+
+*gstreamer-0.4.0-r1 (18 Jul 2002)
+  18 Jul 2002; Spider <spider@gentoo.org>
+  DEPENDS on zlib, build changes and make config work okay
+      
 *gstreamer-0.4.0 (07 Jul 2002)
   07 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gstreamer-0.4.0.ebuild:
   new version, LICENSE added
