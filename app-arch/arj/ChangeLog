@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.4 2004/02/25 11:34:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.5 2004/02/29 12:16:31 plasmaroo Exp $
+
+  29 Feb 2004; <plasmaroo@gentoo.org> arj-3.10.18.ebuild,
+  files/arj-3.10.18-2.6.headers.patch:
+  Added patch for compatibility with 2.6 Linux headers; closes bug #42763.
 
   25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> arj-3.10.18.ebuild:
   Fix amd64 compilation. Closing #40936.
