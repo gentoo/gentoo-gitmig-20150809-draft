@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r1.ebuild,v 1.1 2004/11/30 23:37:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r1.ebuild,v 1.2 2005/01/01 17:55:45 eradicator Exp $
 
 inherit kde
 need-kde 3

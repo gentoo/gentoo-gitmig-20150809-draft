@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picptk/picptk-0.5a.ebuild,v 1.5 2004/07/19 02:48:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picptk/picptk-0.5a.ebuild,v 1.6 2005/01/01 17:55:31 eradicator Exp $
 
 #this is for autoconf
 inherit kde-functions eutils

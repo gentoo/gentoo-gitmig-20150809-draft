@@ -1,6 +1,6 @@
 # ChangeLog for dev-embedded/gpsim-lcd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/ChangeLog,v 1.6 2004/06/24 22:06:31 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/ChangeLog,v 1.7 2005/01/01 17:53:12 eradicator Exp $
 
   24 Mar 2004; Daniel Black <dragonheart@gentoo.org> gpsim-lcd-0.1.1.ebuild:
   Added IUSE to ebuild

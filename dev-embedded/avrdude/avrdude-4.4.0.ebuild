@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-4.4.0.ebuild,v 1.2 2004/12/04 02:37:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-4.4.0.ebuild,v 1.3 2005/01/01 17:51:35 eradicator Exp $
 
 
 DESCRIPTION="AVR Downloader/UploaDEr"

@@ -1,6 +1,6 @@
 # ChangeLog for dev-embedded/gnusim8085
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/ChangeLog,v 1.4 2004/06/24 22:06:10 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/ChangeLog,v 1.5 2005/01/01 17:52:32 eradicator Exp $
 
   24 Mar 2004; Daniel Black <dragonheart@gentoo.org> gnusim8085-1.2.89.ebuild:
   Marked stable on x86

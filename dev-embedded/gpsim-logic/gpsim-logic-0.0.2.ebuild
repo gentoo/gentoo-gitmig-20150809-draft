@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-logic/gpsim-logic-0.0.2.ebuild,v 1.5 2004/06/29 13:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-logic/gpsim-logic-0.0.2.ebuild,v 1.6 2005/01/01 17:53:37 eradicator Exp $
 
 inherit eutils
 

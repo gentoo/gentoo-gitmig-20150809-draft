@@ -1,6 +1,6 @@
 # ChangeLog for dev-embedded/picprog
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/ChangeLog,v 1.8 2004/07/18 06:05:37 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/ChangeLog,v 1.9 2005/01/01 17:55:18 eradicator Exp $
 
   18 Jul 2004; Daniel Black <dragonheart@gentoo.org> picprog-1.7.ebuild:
   x86 stable

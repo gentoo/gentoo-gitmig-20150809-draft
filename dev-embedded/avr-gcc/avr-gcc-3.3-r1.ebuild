@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/avr-gcc-3.3-r1.ebuild,v 1.8 2004/06/29 13:21:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/avr-gcc-3.3-r1.ebuild,v 1.9 2005/01/01 17:51:53 eradicator Exp $
 
 MY_P=${P/avr-/}
 DESCRIPTION="The GNU C compiler for the AVR microcontroller architecture"

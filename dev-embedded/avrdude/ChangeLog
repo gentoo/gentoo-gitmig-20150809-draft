@@ -1,6 +1,6 @@
 # ChangeLog for dev-embedded/avrdude
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.2 2004/12/04 02:37:52 pyrania Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.3 2005/01/01 17:51:35 eradicator Exp $
 
   04 Dec 2004; <pyrania@gentoo.org> avrdude-4.4.0.ebuild:
   Added app-text/texi2html dependency.

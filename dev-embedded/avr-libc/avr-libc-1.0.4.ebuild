@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.0.4.ebuild,v 1.1 2004/09/23 22:35:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.0.4.ebuild,v 1.2 2005/01/01 17:52:05 eradicator Exp $
 
 IUSE="nls"
 

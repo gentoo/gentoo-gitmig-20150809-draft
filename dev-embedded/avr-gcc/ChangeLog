@@ -1,6 +1,6 @@
 # ChangeLog for dev-embedded/avr-gcc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/ChangeLog,v 1.8 2004/09/24 02:54:02 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/ChangeLog,v 1.9 2005/01/01 17:51:53 eradicator Exp $
 
   24 Sep 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml:
   Daniel Black taking maintaince
