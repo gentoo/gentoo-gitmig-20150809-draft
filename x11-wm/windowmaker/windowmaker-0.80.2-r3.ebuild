@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r3.ebuild,v 1.4 2003/09/04 07:35:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r3.ebuild,v 1.5 2003/10/16 16:05:20 drobbins Exp $
 
 inherit eutils flag-o-matic
 filter-mfpmath "sse" "387"
@@ -27,7 +27,7 @@ RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips amd64"
 
 src_unpack() {
 	unpack ${A}
