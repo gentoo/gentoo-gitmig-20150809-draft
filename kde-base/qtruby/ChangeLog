@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.2 2004/11/24 23:30:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.3 2004/12/10 20:22:02 danarmak Exp $
+
+  10 Dec 2004; Dan Armak <danarmak@gentoo.org> files/no-gtk-glib-check.diff,
+  qtruby-3.3.1.ebuild:
+  Fixed compile failure when gtk is not installed.
 
   25 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.

@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/qtsharp-3.3.1.ebuild,v 1.3 2004/11/17 17:48:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/qtsharp-3.3.1.ebuild,v 1.4 2004/12/10 20:22:02 danarmak Exp $
 
 KMNAME=kdebindings
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="C# bindings for QT"
-KEYWORDS="-*"
+KEYWORDS="~x86"
 IUSE=""
-# DEPEND="dev-dotnet/csant" -- TBA when a csant ebuild exists. Disabled for now to let repoman let me commit this.
+DEPEND="dev-dotnet/csant"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 pkg_setup() {

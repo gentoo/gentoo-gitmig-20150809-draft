@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d32a1d9781a888415774cd30da6f6945 dcopjava-3.3.1.ebuild 752
-MD5 c317c5b15d4b45fce94ce157880ccb29 ChangeLog 972
+MD5 30df3dc54d80fe305901374e8e4f7014 dcopjava-3.3.1.ebuild 669
+MD5 ced57e8c563fc690454fe8cfffc121b1 ChangeLog 1126
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 5b4709a4940e69ed965855ca38b4ee56 files/no-gtk-glib-check.diff 596
-MD5 ba6821665cdc96b40f48b2271478b7a1 files/digest-dcopjava-3.3.1 300
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBpRgKI1lqEGTUzyQRAlYzAJ99L7TttSrwem06Hf6b4BGCgFI7ZACcDIBs
-FCqAZ0DD0FvHJSVtrystZKw=
-=SGnV
------END PGP SIGNATURE-----
+MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
+MD5 4ed500d857695c546e771eac1fbd8a55 files/digest-dcopjava-3.3.1 300
