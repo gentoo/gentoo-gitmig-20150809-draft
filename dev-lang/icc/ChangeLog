@@ -1,8 +1,8 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.6 2002/12/10 19:52:58 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.7 2002/12/10 20:08:16 avenj Exp $
 
-*icc-7.0.065-r1 (10 Dec 2002)
+*icc-7.0.065 (10 Dec 2002)
 
   10 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065-r1.ebuild:
 
