@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.12 2004/02/26 14:45:41 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.13 2004/03/31 00:35:47 mksoft Exp $
+
+  31 Mar 2004; <mksoft@gentoo.org> firebird-1.5.0.ebuild, files/firebird.conf.d,
+  files/firebird.init.d:
+  Default build method changed to SuperServer Added local USE flag - classic, to
+  build the inetd version Modified config() to add localhost to /etc/hosts.equiv
+  instead of localhost.localdomain
 
 *firebird-1.5.0 (26 Feb 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.1 2004/02/26 14:45:41 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.2 2004/03/31 00:35:47 mksoft Exp $
 
 DESCRIPTION="A relational database offering many ANSI SQL-92 features"
 extra_ver="4290"
@@ -10,8 +10,9 @@ HOMEPAGE="http://firebird.sourceforge.net/"
 SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="~x86"
+IUSE="classic"
 DEPEND="virtual/glibc
-	virtual/inetd"
+	classic? ( virtual/inetd )"
 RESTRICT="nouserpriv"
 inherit flag-o-matic
 
@@ -19,7 +20,12 @@ inherit flag-o-matic
 strip-flags "-funroll-loops"
 
 src_compile() {
-	./autogen.sh --prefix=/opt/firebird --with-editline || die "couldn't run autogen.sh"
+	local myconf
+
+	myconf="${myconf} --prefix=/opt/firebird"
+	myconf="${myconf} --with-editline"
+	[ -z "`use classic`" ] && myconf="${myconf} --enable-superserver"
+	./autogen.sh ${myconf} || die "couldn't run autogen.sh"
 	make || die "error during make"
 }
 
@@ -43,13 +49,19 @@ src_install() {
 	rm -r ${D}/opt/firebird/{README,WhatsNew,doc,misc}
 	rm -r ${D}/opt/firebird/examples
 
-	insinto /etc/xinetd.d ; newins ${FILESDIR}/${P}.xinetd firebird
+	if [ -n "`use classic`" ]; then
+		insinto /etc/xinetd.d ; newins ${FILESDIR}/${P}.xinetd firebird
+	else
+		exeinto /etc/init.d ; newexe ${FILESDIR}/${PN}.init.d firebird
+		insinto /etc/conf.d ; newins ${FILESDIR}/firebird.conf.d firebird
+		fperms 640 /etc/conf.d/firebird
+	fi
 	insinto /etc/env.d ; newins ${FILESDIR}/70${P} 70firebird
 
 	# Following is adapted from postinstall.sh
 
 	# make sure everything is owned by firebird
-	chown -R firebird.firebird ${D}/opt/firebird
+	chown -R firebird:firebird ${D}/opt/firebird
 
 	# make sure permissions are set
 	chmod -R o= ${D}/opt/firebird
@@ -63,7 +75,7 @@ src_install() {
 	chmod a=rx isql
 	chmod a=rx qli
 
-	chmod ug=rxs,o= ${D}/opt/firebird/bin/{fb_lock_mgr,gds_drop,fb_inet_server}
+	[ -n "`use classic`" ] && chmod ug=rxs,o= ${D}/opt/firebird/bin/{fb_lock_mgr,gds_drop,fb_inet_server}
 	chmod u=rw,go=r ${D}/opt/firebird/{aliases.conf,firebird.conf}
 	chmod ug=rw,o= ${D}/opt/firebird/{security.fdb,help/help.fdb}
 
@@ -91,7 +103,7 @@ pkg_postinst() {
 	einfo "   to create lockfiles, set permissions and more"
 	einfo
 	einfo "2. Firebird now runs with it's own user. Please remember to"
-	einfo "   set permissions to firebird.firebird on databases you "
+	einfo "   set permissions to firebird:firebird on databases you "
 	einfo "   already have (if any)."
 	einfo
 }
@@ -104,13 +116,13 @@ pkg_config() {
 	do
 		FileName=$i.`hostname`
 		touch $FileName
-		chown firebird.firebird $FileName
+		chown firebird:firebird $FileName
 		chmod ug=rw,o= $FileName
 	done
 
 	# Create log
 	touch firebird.log
-	chown firebird.firebird firebird.log
+	chown firebird:firebird firebird.log
 	chmod ug=rw,o= firebird.log
 
 	# add gds_db to /etc/services
@@ -136,7 +148,7 @@ pkg_config() {
 		rm /etc/firebird/isc4.gbk
 
 		# make sure they are readable only to firebird
-		chown firebird.firebird /etc/firebird/{isc4.*,security.*}
+		chown firebird:firebird /etc/firebird/{isc4.*,security.*}
 		chmod 660 /etc/firebird/{isc4.*,security.*}
 
 		einfo
@@ -154,10 +166,10 @@ pkg_config() {
 		chmod u=rw,go=r /etc/hosts.equiv
 	fi
 
-	if [ -z "`grep localhost.localdomain /etc/hosts.equiv`" ]
+	if [ -z "`grep localhost /etc/hosts.equiv`" ]
 	then
-		echo "localhost.localdomain" >> /etc/hosts.equiv
-		einfo "Added localhost.localdomain to /etc/hosts.equiv"
+		echo "localhost" >> /etc/hosts.equiv
+		einfo "Added localhost to /etc/hosts.equiv"
 	fi
 
 	HS_NAME=`hostname`
