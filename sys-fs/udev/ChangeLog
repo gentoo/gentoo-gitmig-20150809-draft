@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.9 2003/11/19 20:51:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.10 2003/11/24 18:36:23 azarah Exp $
+
+*udev-007 (24 Nov 2003)
+
+  24 Nov 2003; Martin Schlemmer <azarah@gentoo.org> udev-007.ebuild,
+  files/namedev.permissions, files/udev-007-check-valid-mode.patch,
+  files/udev.permissions:
+  Update version. Add patch to stop udev segfault due to my type-o's that was in
+  udev.permissions. Move namedev.permissions to udev.permissions and update it
+  with more nodes.
 
 *udev-006 (19 Nov 2003)
 
