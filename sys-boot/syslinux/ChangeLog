@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.4 2004/04/27 21:41:20 agriffis Exp $
+# $Id: ChangeLog,v 1.5 2004/04/29 03:53:12 solar Exp $
+
+*syslinux-2.09 (28 Apr 2004)
+
+  28 Apr 2004; <solar@gentoo.org> syslinux-2.06.ebuild, syslinux-2.09.ebuild,
+  files/syslinux-2.06-nossp.patch, files/syslinux-2.09-nossp.patch:
+  Marked syslinux-2.06 stable. Added version syslinux-2.09 ~x86. Added patches
+  which force -fno-stack-protector to be used for both
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> syslinux-2.05.ebuild,
   syslinux-2.06.ebuild:

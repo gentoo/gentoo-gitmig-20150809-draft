@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.06.ebuild,v 1.4 2004/04/29 03:53:12 solar Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.09.ebuild,v 1.1 2004/04/29 03:53:12 solar Exp $ 
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
 SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${P}.tar.bz2"
 
-KEYWORDS="x86 -ppc -sparc"
+KEYWORDS="~x86 -ppc -sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -18,9 +18,9 @@ DEPEND="dev-lang/nasm
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-nasm.patch
+	epatch ${FILESDIR}/2.06-nasm.patch
 	# -fstack-protector really does not play along well with any boot loader
-	epatch ${FILESDIR}/${PN}-2.06-nossp.patch
+	epatch ${FILESDIR}/${PN}-2.09-nossp.patch
 	sed -i 's:$(MAKE) -C win32 all::' Makefile
 }
 
