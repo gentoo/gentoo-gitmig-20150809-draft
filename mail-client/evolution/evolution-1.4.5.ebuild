@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.5.ebuild,v 1.3 2004/06/09 15:36:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.5.ebuild,v 1.4 2004/06/24 22:15:44 agriffis Exp $
 
 # kde before gnome2, otherwise kde_src_install will override gnome2_src_install
 use kde && inherit kde

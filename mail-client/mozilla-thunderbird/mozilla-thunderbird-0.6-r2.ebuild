@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.6-r2.ebuild,v 1.1 2004/06/17 23:25:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.6-r2.ebuild,v 1.2 2004/06/24 22:16:39 agriffis Exp $
 
 IUSE="gnome gtk2 ipv6 ldap crypt xinerama"
 

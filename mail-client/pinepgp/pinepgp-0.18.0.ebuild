@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pinepgp/pinepgp-0.18.0.ebuild,v 1.2 2004/05/30 11:18:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pinepgp/pinepgp-0.18.0.ebuild,v 1.3 2004/06/24 22:17:56 agriffis Exp $
 
 DESCRIPTION="Use GPG/PGP with Pine"
 HOMEPAGE="http://www.megaloman.com/~hany/software/pinepgp/"

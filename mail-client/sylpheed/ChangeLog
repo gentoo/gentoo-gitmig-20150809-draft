@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/sylpheed
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.13 2004/06/24 11:00:16 hattya Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.14 2004/06/24 22:18:41 agriffis Exp $
 
   24 Jun 2004; Akinori Hattori <hattya@gentoo.org> -sylpheed-0.9.8-r2.ebuild,
   -sylpheed-0.9.9-r1.ebuild:

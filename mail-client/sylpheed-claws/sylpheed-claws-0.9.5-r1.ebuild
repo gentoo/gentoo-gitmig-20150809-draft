@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.5-r1.ebuild,v 1.2 2004/06/24 16:30:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.5-r1.ebuild,v 1.3 2004/06/24 22:18:53 agriffis Exp $
 
 IUSE="nls gnome gtk2 xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
