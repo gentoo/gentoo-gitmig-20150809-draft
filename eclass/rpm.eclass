@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.7 2003/06/25 23:50:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.8 2003/08/31 19:43:05 liquidx Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
@@ -33,7 +33,7 @@ INHERITED="$INHERITED $ECLASS"
 
 USE_RPMOFFSET_ONLY=${USE_RPMOFFSET_ONLY-""}
 
-newdepend "app-arch/rpm2targz"
+newdepend ">=app-arch/rpm2targz-9.0-r1"
 
 # extracts the contents of the RPM in ${WORKDIR}
 rpm_unpack() {
