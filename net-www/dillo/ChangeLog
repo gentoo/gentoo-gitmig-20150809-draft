@@ -1,6 +1,13 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.2 2002/04/12 22:11:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.3 2002/04/27 06:26:57 seemant Exp $
+
+*dillo-0.6.5 (26 Apr 2002)
+
+  26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> dillo-0.6.5.ebuild
+  files/digest-dillo-0.6.5 :
+
+  Version bump.
 
 *dillo-0.6.4-r1 (12 Apr 2002)
 

@@ -1,31 +1,33 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.4.ebuild,v 1.2 2002/01/30 18:08:27 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.5.ebuild,v 1.1 2002/04/27 06:27:25 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lean GTK+-based web browser"
-SRC_URI="http://prdownloads.sourceforge.net/dillo/dillo-0.6.4.tar.gz"
-HOMEPAGE="http://dillo.sf.net"
+SRC_URI="http://dillo.cipsga.org.br/download/${P}.tar.gz"
+HOMEPAGE="http://dillo.cipsga.org.br"
 
 DEPEND=">=x11-libs/gtk+-1.2.0
 	>=media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.3
-	>=media-libs/libpng-1.0.11"
+	>=media-libs/libpng-1.2.1"
+
 RDEPEND="$DEPEND"
 
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf || die
 	emake || die
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+
+	dodir /etc
+
+	make \
+		DESTDIR=${D} \
+		install || die
 
 	dodoc AUTHORS COPYING ChangeLog ChangeLog.old INSTALL README NEWS
 
