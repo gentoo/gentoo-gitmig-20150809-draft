@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.6 2004/07/27 23:44:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.7 2004/08/26 14:08:36 fmccor Exp $
 
 DESCRIPTION="Tcl/C++ interface library"
 SF_PN="otcl-tclcl"
@@ -9,7 +9,7 @@ MY_P="${PN}-src-${PV}"
 SRC_URI="mirror://sourceforge/${SF_PN}/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 IUSE=""
 DEPEND=">=dev-lang/tcl-8.3.2
 		>=dev-lang/tk-8.3.2
