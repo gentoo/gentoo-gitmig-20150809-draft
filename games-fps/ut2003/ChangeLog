@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2003
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.7 2003/12/13 16:16:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.8 2003/12/15 16:21:45 wolf31o2 Exp $
+
+  15 Dec 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
+  Changed Benchmark copy to not use doexe.  Closing bug #35603.
 
   13 Dec 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
   Modified cdkey creation and added more error checking.
