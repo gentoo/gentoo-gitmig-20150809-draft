@@ -265,8 +265,13 @@ dev-lisp/cmucl-bin
 # No need for the cvs snap anymore since the beta is out.
 =games-strategy/freeciv-1.15.0_alpha20030901
 
-# <caleb@gentoo.org> (10 Sep 2003)
-# new kde versions mask
+# <avenj@gentoo.org> (16 Sep 2003)
+# Produces broken code. See bug 28875.
+=sys-devel/gcc-3.3.1-r2
+
+# <caleb@gentoo.org> (18 Jan 2004 Update)
+# new kde versions mask - will clean up shortly
+
 =kde-base/kde-3.2.0_beta1
 =kde-base/kdeaccessibility-3.2.0_beta1
 =kde-base/kdeaddons-3.2.0_beta1
@@ -305,6 +310,26 @@ dev-lisp/cmucl-bin
 =kde-base/kdelibs-3.2.0_beta2
 =kde-base/kdebase-3.2.0_beta2
 =kde-base/arts-1.2.0_beta2
+
+=kde-base/kde-3.2.0_rc1
+=kde-base/kde-i18n-3.2.0_rc1
+=kde-base/kdeaccessibility-3.2.0_rc1
+=kde-base/kdeadmin-3.2.0_rc1
+=kde-base/kdeaddons-3.2.0_rc1
+=kde-base/kdeartwork-3.2.0_rc1
+=kde-base/kdebindings-3.2.0_rc1
+=kde-base/kdeedu-3.2.0_rc1
+=kde-base/kdegames-3.2.0_rc1
+=kde-base/kdegraphics-3.2.0_rc1
+=kde-base/kdesdk-3.2.0_rc1
+=kde-base/kdetoys-3.2.0_rc1
+=kde-base/kdeutils-3.2.0_rc1
+=kde-base/kdemultimedia-3.2.0_rc1
+=kde-base/kdepim-3.2.0_rc1
+=kde-base/kdenetwork-3.2.0_rc1
+=kde-base/kdelibs-3.2.0_rc1
+=kde-base/kdebase-3.2.0_rc1
+=kde-base/arts-1.2.0_rc1
 
 # <lu_zero@gentoo.org> (04 Sep 2003)
 # Not working for me, still builds fine
