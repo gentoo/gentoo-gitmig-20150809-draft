@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.8 2002/09/02 07:54:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.9 2002/09/08 20:52:24 blocke Exp $
+
+*iptables-1.2.7a-r2
+*iptables-1.2.6a-r3
+
+  08 Sep 2002; Bruce A. Locke <blocke@shivan.org> iptables-1.2.6a-r3.ebuild, iptables-1.2.7a-r2, files/iptables.confd-2, files/iptables.init-2
+  Fix #2335.  Forwarding is disabled on script stop and only turned on 
+  during script start if conf.d/iptables settings are enabled.
 
 *iptables-1.2.6a-r2 (29 Aug 2002)
 
