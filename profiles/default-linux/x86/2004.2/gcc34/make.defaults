@@ -1,9 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.2/gcc34/make.defaults,v 1.2 2004/08/25 13:58:06 vapier Exp $
-#
-# System-wide defaults for the Portage system
-# See portage(5) manpage
+# Copyright 2002-2004 Gentoo Foundation.
+# System-wide defaults for the >=gcc 3.2 Portage system
+
+#Experimental: trying to use these USE variables to build up from stage 2->3 
+#thus eliminating the inherent fragility of using USE for this
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
 
