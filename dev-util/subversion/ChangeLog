@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.29 2003/07/24 20:39:47 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.30 2003/08/26 12:50:31 pauldv Exp $
+
+*subversion-0.27.0 (26 Aug 2003)
+
+  26 Aug 2003; Paul de Vrieze <pauldv@gentoo.org> subversion-0.27.0.ebuild,
+  files/subversion-db4.patch:
+  New upstream version
 
 *subversion-0.26.0 (24 Jul 2003)
 
