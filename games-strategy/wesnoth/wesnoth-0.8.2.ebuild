@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.8.2.ebuild,v 1.1 2004/08/15 10:41:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.8.2.ebuild,v 1.2 2004/08/16 23:59:22 mr_bones_ Exp $
 
 inherit flag-o-matic gcc games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.wesnoth.org/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
-IUSE="server editor tools gnome kde"
+IUSE="server editor tools gnome kde nomusic"
 
 DEPEND=">=media-libs/libsdl-1.2.7
 	>=media-libs/sdl-image-1.2
@@ -24,6 +24,7 @@ src_compile() {
 	[ "$(gcc-fullversion)" == "3.4.0" ] && filter-flags -ftracer
 	egamesconf \
 		--disable-dependency-tracking \
+		$(use_enable nomusic lite) \
 		$(use_enable server) \
 		$(use_enable editor) \
 		$(use_enable tools) \
