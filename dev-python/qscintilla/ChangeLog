@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/PyQt
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.1 2002/12/19 20:32:10 verwilst Exp $
+
+*qscintilla-1.49 (19 December 2002) Bart Verwilst <verwilst@gentoo.org>
+ 
+  initial ebuild.
+
