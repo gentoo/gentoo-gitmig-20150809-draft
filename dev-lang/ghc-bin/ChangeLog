@@ -1,0 +1,15 @@
+# ChangeLog for dev-lang/ghc-bin
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.1 2002/12/15 06:52:54 george Exp $
+
+*ghc-bin-5.04.2.ebuild (14 ‰≈À 2002)
+
+  14 Dec 2002; George Shapovalov <george@gentoo.org> ChangeLog, ghc-bin-5.04.2.ebuild, files/digest-ghc-bin-5.04.2 :
+  initial release
+  Glasgow Haskell Compiler - binary package, prebuilt for i386
+  
+  ghc has been quite a mess as well as a long and resurce-hungry compile.
+  This is a first step towards sorting things out. This is the binary installation of ghc, currently 
+  for x86 only. It can be used to bootstrap ghc build from source. In fact it is *necessary* to use this 
+  binary version to bootstrap ghc on >=gcc-3.2 systems. The old 4.08 ->5.04 way of bootstrapping fails 
+  with gcc-3.2.
