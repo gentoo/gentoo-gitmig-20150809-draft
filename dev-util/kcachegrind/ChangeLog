@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kcachegrind
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kcachegrind/ChangeLog,v 1.10 2004/07/03 16:45:43 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kcachegrind/ChangeLog,v 1.11 2004/07/25 22:02:43 carlo Exp $
+
+  26 Jul 2004; Carsten Lohrke <carlo@gentoo.org> -kcachegrind-0.3b.ebuild,
+  -kcachegrind-0.4.1.ebuild, -kcachegrind-0.4.4.ebuild,
+  kcachegrind-0.4.5.ebuild:
+  blocked by kde-base/kdesdk, ebuild clean up
 
   03 Jul 2004; Dominik Stadler <centic@gentoo.org> kcachegrind-0.3b.ebuild,
   kcachegrind-0.4.4.ebuild, kcachegrind-0.4.5.ebuild:
