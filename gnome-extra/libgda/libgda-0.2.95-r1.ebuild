@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.95-r1.ebuild,v 1.15 2004/06/24 22:08:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.95-r1.ebuild,v 1.16 2004/07/01 19:47:48 eradicator Exp $
 
 IUSE="ldap odbc postgres mysql"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 sparc ppc"
 
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	 >=gnome-base/gconf-1.0.4-r2
 	 >=gnome-base/oaf-0.6.6-r1
 	 >=gnome-base/bonobo-1.0.9-r1

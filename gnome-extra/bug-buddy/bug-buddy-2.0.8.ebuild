@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.0.8.ebuild,v 1.17 2004/06/24 22:02:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.0.8.ebuild,v 1.18 2004/07/01 19:47:17 eradicator Exp $
 
 DESCRIPTION="Bug Report helper for Gnome"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
@@ -11,7 +11,7 @@ KEYWORDS="x86 ppc sparc"
 LICENSE="GPL-2"
 IUSE="nls"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=gnome-base/gnome-vfs-1.0.2-r1
 	>=gnome-base/libglade-0.17-r1
 	>=media-libs/gdk-pixbuf-0.11.0-r1

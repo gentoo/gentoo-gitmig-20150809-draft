@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.13.ebuild,v 1.11 2004/06/24 22:02:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.13.ebuild,v 1.12 2004/07/01 19:46:56 eradicator Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=gnome-base/gnome-libs-1.4.1.7
 	>=gnome-base/gnome-core-1.4.0.8
 	>=sys-apps/apmd-3.0.2-r2
