@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac1738555442bbea3870f85ec82a01fe ChangeLog 683
 MD5 d7e01f43f9258ec608de0eee56880c8a gnuboy-1.0.3.ebuild 616
-MD5 0976a6c170bff21ea511f65ec0245a86 ChangeLog 574
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 aaa1c3b3b75fac31451803f7290c595a files/digest-gnuboy-1.0.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1VXI1lqEGTUzyQRAtWSAJ44Aqti1AN1EcvMg+FNWoXTmsO69QCgyDf/
+wYsdsfuXtaNvCJMKvJZVcZ8=
+=Bo5C
+-----END PGP SIGNATURE-----

@@ -1,5 +1,6 @@
 # ChangeLog for games-emulation/gnuboy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/ChangeLog,v 1.7 2004/09/30 00:37:28 swegener Exp $
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> gnuboy-1.0.3.ebuild:
   Added IUSE and marking stable on amd64 (no bugs in 415 days).
