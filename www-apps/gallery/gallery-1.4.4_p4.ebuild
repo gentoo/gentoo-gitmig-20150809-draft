@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.4.4_p4.ebuild,v 1.4 2004/11/06 00:21:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.4.4_p4.ebuild,v 1.5 2004/11/10 06:11:53 vapier Exp $
 
 inherit webapp
 
 MY_P=${P/_p/-pl}
-DESCRIPTION="Web based (PHP Script) photo album viewer/creator."
+DESCRIPTION="Web based (PHP Script) photo album viewer/creator"
 HOMEPAGE="http://gallery.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
-KEYWORDS="x86 ppc sparc alpha ~hppa ~amd64"
+
 RDEPEND=">=net-www/apache-1.3.24-r1
 	>=dev-php/mod_php-4.1.2-r5
 	>=media-gfx/jhead-1.6
