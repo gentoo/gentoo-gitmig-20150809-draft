@@ -1,6 +1,4 @@
 MD5 7b96f2d3a1ec07f7a9733ea1a6d14116 ChangeLog 1402
 MD5 6509e9226ac1a3b27bc9e6c6ce5513bb sqsh-2.1-r1.ebuild 1337
-MD5 bd336913d5a6f1d53a51e0d23b2e8b59 sqsh-2.1.ebuild 1328
 MD5 b22849774e1f051fc6a523993f7f6325 files/config.patch 543
-MD5 19272f9055a78c6035e2f605dad0268c files/digest-sqsh-2.1 64
 MD5 19272f9055a78c6035e2f605dad0268c files/digest-sqsh-2.1-r1 64
