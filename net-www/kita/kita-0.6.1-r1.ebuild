@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.6.1.ebuild,v 1.2 2003/11/27 12:47:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.6.1-r1.ebuild,v 1.1 2003/12/04 19:41:32 usata Exp $
 
 IUSE=""
 
@@ -29,6 +29,15 @@ DEPEND=">=x11-libs/qt-3.1
 #RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-0.6.4-close-gentoo.diff
+	epatch ${FILESDIR}/${PN}-boardview-gentoo.diff
+}
 
 src_install() {
 
