@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.4 2004/02/04 13:15:28 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.5 2004/06/14 18:27:47 pyrania Exp $
 
 DESCRIPTION="eXtended XKB - assign different keymaps to different windows"
 HOMEPAGE="http://${PN}.sourceforge.net"
@@ -9,6 +9,7 @@ LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86"
 DEPEND="virtual/x11"
+IUSE=""
 
 src_compile() {
 	xmkmf || die

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtrlock
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.4 2004/04/27 21:09:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.5 2004/06/14 18:29:01 pyrania Exp $
+
+  14 Jun 2004; <pyrania@gentoo.org> xtrlock-2.0-r1.ebuild:
+  Added IUSE.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> xtrlock-2.0-r1.ebuild:
   Add inherit eutils

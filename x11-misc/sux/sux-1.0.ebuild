@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0.ebuild,v 1.3 2003/06/24 07:39:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0.ebuild,v 1.4 2004/06/14 18:34:51 pyrania Exp $
 
 DESCRIPTION="\"su\" wrapper which transfers X credentials"
 HOMEPAGE="http://fgouget.free.fr/sux/sux-readme.shtml"
