@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.4.ebuild,v 1.4 2004/03/24 19:06:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/blueglass-xcursors-0.4.ebuild,v 1.5 2004/03/24 21:40:19 jmaynard Exp $
 
 MY_P="5532-BlueGlass-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.kde-look.org/content/show.php?content=5532"
 SRC_URI="http://kde-look.org/content/files/$MY_P.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="x86 sparc amd64 ~alpha"
 IUSE=""
 DEPEND=""
 RDEPEND=">=x11-base/xfree-4.3.0-r2"
