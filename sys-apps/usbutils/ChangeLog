@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.16 2003/09/24 08:08:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.17 2003/11/17 22:12:46 weeve Exp $
+
+  17 Nov 2003; Jason Wever <weeve@gentoo.org> usbutils-0.11-r3.ebuild:
+  Marked stable on sparc.
 
   24 Sep 2003; Hanno Boeck <hanno@gentoo.org> usbutils-0.11-r3.ebuild:
   Move to x86 stable.
