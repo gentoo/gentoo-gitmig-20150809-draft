@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/oscache
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/ChangeLog,v 1.1 2004/10/30 19:46:10 axxo Exp $
+
+*oscache-2.0.2 (30 Oct 2004)
+
+  30 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +oscache-2.0.2.ebuild:
+  inital import, ebuild contributed by Dan <dan@intuitivelyobvious.net>
+

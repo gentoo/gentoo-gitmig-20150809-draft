@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a97b889f594ed79d7cda2e370a2e8b01 oscache-2.0.2.ebuild 2120
+MD5 c998056cbbf723aa12740a08aefa2a0b ChangeLog 395
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 d52039b83271f4379d0aefff244164aa files/digest-oscache-2.0.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBg++M/rLF9B432nYRAiIsAJ4925pEydUXPiouZWbJppeAorpemQCeKgRl
+G2wqcONwZD27xzTK3a3cC8o=
+=hjc3
+-----END PGP SIGNATURE-----
