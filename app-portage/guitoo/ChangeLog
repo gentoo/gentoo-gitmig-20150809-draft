@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/guitoo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/ChangeLog,v 1.1 2004/10/24 22:05:54 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/ChangeLog,v 1.2 2004/11/25 10:19:14 motaboy Exp $
+
+*guitoo-0.50.01 (25 Nov 2004)
+
+  25 Nov 2004; Simone Gotti <motaboy@gentoo.org> +guitoo-0.50.01.ebuild:
+  Version bump. Closes bug #72125.
 
 *guitoo-0.47.0 (25 Oct 2004)
 

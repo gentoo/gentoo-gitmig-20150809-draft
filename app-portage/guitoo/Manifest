@@ -1,4 +1,6 @@
 MD5 9027fcd6239935740f5211d71714d219 guitoo-0.47.0.ebuild 440
-MD5 942a3ab11cdb5c4620c99b0696171033 ChangeLog 379
+MD5 f7f504e6b2e78d941f65f111d552ff35 guitoo-0.50.01.ebuild 479
+MD5 3bcf38ce7438dea08858c56327d50f29 ChangeLog 519
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 7ab0cdf38df848bd6745c008e5eb6ed6 files/digest-guitoo-0.47.0 66
+MD5 3c9af3de5a8bcd19180bafe77af6428d files/digest-guitoo-0.50.01 66
