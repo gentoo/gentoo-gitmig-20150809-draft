@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.6 2004/06/24 21:58:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.7 2004/06/25 20:18:59 agriffis Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 		-e "s:\(MANDIR\=\${PREFIX}\)\(/man\):\1/share\2:" \
 		Makefile.orig > Makefile
 
-	if [ `use X` ] ; then
+	if use X ; then
 		echo -e "xinstall:\n\tinstall\txapm\t\${PREFIX}/bin" >> Makefile
 	else
 		cp Makefile Makefile.orig
@@ -65,11 +65,11 @@ src_install() {
 	insinto /etc/conf.d ; newins ${FILESDIR}/apmd.confd apmd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/apmd.rc6 apmd
 
-	if [ `use X` ] ; then
+	if use X ; then
 		make DESTDIR=${D} xinstall || die "xinstall failed"
 	fi
 
-	if [ ! `use nls` ]
+	if ! use nls
 	then
 		rm -rf ${D}/usr/share/man/fr
 	fi

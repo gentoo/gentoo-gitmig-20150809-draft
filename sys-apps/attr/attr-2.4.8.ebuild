@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.8.ebuild,v 1.4 2004/06/24 21:58:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.8.ebuild,v 1.5 2004/06/25 20:19:36 agriffis Exp $
 
 inherit eutils
 
@@ -43,8 +43,8 @@ src_compile() {
 	fi
 
 	local myconf="`use_enable nls gettext`"
-	[ `use sparc` ] && unset PLATFORM
-	[ `use ppc` ] && unset PLATFORM
+	use sparc && unset PLATFORM
+	use ppc && unset PLATFORM
 	econf ${myconf} || die
 
 
