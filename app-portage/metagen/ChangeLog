@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.2 2004/08/23 06:56:05 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.3 2004/08/25 06:19:09 pythonhead Exp $
+
+  24 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> :
+  Version bump.
 
 *metagen-0.2 (22 Aug 2004)
 
