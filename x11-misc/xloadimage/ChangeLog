@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/xloadimage
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.4 2002/05/30 01:54:49 sandymac Exp
+
+*xloadimage-4.1 (19 Jul 2002)
+
+  19 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> : 
+  Initial release. This packaged is pretty much the same as Debian is distributing becuse it uses
+  the same patch for the sourcecode to make it compile.
