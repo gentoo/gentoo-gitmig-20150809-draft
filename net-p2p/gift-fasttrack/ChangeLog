@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift-fasttrack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/ChangeLog,v 1.17 2004/06/25 00:31:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/ChangeLog,v 1.18 2004/07/01 09:19:56 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> gift-fasttrack-0.8.7.ebuild:
+  virtual/glibc needs changed to virtual/libc
 
   23 Jun 2004; Jason Wever <weeve@gentoo.org> gift-fasttrack-0.8.7.ebuild:
   Stable on sparc wrt bug #54452.
