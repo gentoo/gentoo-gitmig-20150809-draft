@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-0.4.11.ebuild,v 1.2 2003/02/13 15:22:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.0.0.ebuild,v 1.1 2003/03/14 23:15:51 tantive Exp $
 
 MY_PN="${PN/soulseek/slsk}"
 MY_P="${MY_PN}-${PV}"
