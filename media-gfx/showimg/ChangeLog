@@ -1,6 +1,8 @@
 # ChangeLog for media-gfx/showimg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.16 2004/07/06 21:55:16 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.17 2004/07/17 22:11:02 aliz Exp $
+
+*showimg-0.9.3 (06 Jul 2004)
 
   06 Jul 2004; Dominik Stadler <centic@gentoo.org> :
   Add new Version 0.9.3
