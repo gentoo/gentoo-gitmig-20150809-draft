@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.6 2005/02/01 14:47:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.7 2005/03/21 23:56:21 luckyduck Exp $
+
+  22 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> libemf-1.0.ebuild:
+  added ~amd64 to KEYWORDS. fixes #80338
 
   01 Feb 2005; Patrick Kursawe <phosphan@gentoo.org>
   +files/libEMF-1.0-amd64.patch, libemf-1.0.ebuild:
