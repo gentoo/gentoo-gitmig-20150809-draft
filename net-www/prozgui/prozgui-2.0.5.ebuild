@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/prozgui/prozgui-2.0.5.ebuild,v 1.5 2004/07/14 05:28:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/prozgui/prozgui-2.0.5.ebuild,v 1.6 2004/09/09 19:11:17 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://prozilla.genesys.ro/downloads/${PN}/tarballs/${P}beta.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-configure.patch
+	epatch ${FILESDIR}/${P}-options.patch
 }
 
 src_compile() {

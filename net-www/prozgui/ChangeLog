@@ -1,6 +1,10 @@
 # ChangeLog for net-www/prozgui
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/prozgui/ChangeLog,v 1.4 2004/07/01 22:49:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/prozgui/ChangeLog,v 1.5 2004/09/09 19:11:17 blubb Exp $
+
+  09 Sep 2004; <blubb@gentoo.org> +files/prozgui-2.0.5-options.patch,
+  prozgui-2.0.5.ebuild:
+  added the options-patch to get the package compile and marked testing on amd64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> prozgui-2.0.5.ebuild:
   virtual/glibc -> virtual/libc
