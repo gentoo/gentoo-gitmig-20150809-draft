@@ -1,0 +1,176 @@
+diff -Nur grub-0.94/docs/Makefile.am grub-0.94-new/docs/Makefile.am
+--- grub-0.94/docs/Makefile.am	2003-07-09 12:45:35.000000000 +0100
++++ grub-0.94-new/docs/Makefile.am	2004-08-22 18:06:12.234375720 +0100
+@@ -19,7 +19,7 @@
+ boot.o: multiboot.h
+ endif
+ 
+-EXTRA_DIST = menu.lst $(man_MANS) $(noinst_SCRIPTS) \
++EXTRA_DIST = grub.conf $(man_MANS) $(noinst_SCRIPTS) \
+ 	$(EXAMPLES) $(multiboot_TEXINFOS)
+ CLEANFILES = $(noinst_PROGRAMS)
+ 
+diff -Nur grub-0.94/docs/Makefile.in grub-0.94-new/docs/Makefile.in
+--- grub-0.94/docs/Makefile.in	2003-10-19 18:28:23.000000000 +0100
++++ grub-0.94-new/docs/Makefile.in	2004-08-22 18:06:12.244374200 +0100
+@@ -159,7 +159,7 @@
+ 
+ @BUILD_EXAMPLE_KERNEL_TRUE@kernel_LDFLAGS = -nostdlib -Wl,-N -Wl,-Ttext -Wl,100000
+ 
+-EXTRA_DIST = menu.lst $(man_MANS) $(noinst_SCRIPTS) \
++EXTRA_DIST = grub.conf $(man_MANS) $(noinst_SCRIPTS) \
+ 	$(EXAMPLES) $(multiboot_TEXINFOS)
+ 
+ CLEANFILES = $(noinst_PROGRAMS)
+diff -Nur grub-0.94/docs/grub.8 grub-0.94-new/docs/grub.8
+--- grub-0.94/docs/grub.8	2004-01-18 19:19:41.000000000 +0000
++++ grub-0.94-new/docs/grub.8	2004-08-22 18:06:12.247373744 +0100
+@@ -15,7 +15,7 @@
+ specify stage2 boot_drive [default=0x0]
+ .TP
+ \fB\-\-config\-file\fR=\fIFILE\fR
+-specify stage2 config_file [default=/boot/grub/menu.lst]
++specify stage2 config_file [default=/boot/grub/grub.conf]
+ .TP
+ \fB\-\-device\-map\fR=\fIFILE\fR
+ use the device map file FILE
+diff -Nur grub-0.94/docs/grub.info grub-0.94-new/docs/grub.info
+--- grub-0.94/docs/grub.info	2004-01-25 15:41:23.000000000 +0000
++++ grub-0.94-new/docs/grub.info	2004-08-22 18:06:12.180383928 +0100
+@@ -921,7 +921,7 @@
+ (*note Menu interface::) from which you can select an item (using arrow
+ keys) that will do everything to boot an OS.
+ 
+-   To enable the menu, you need a configuration file, `menu.lst' under
++   To enable the menu, you need a configuration file, `grub.conf' under
+ the boot directory. We'll analyze an example file.
+ 
+    The file first contains some general settings, the menu interface
+@@ -1147,7 +1147,7 @@
+      foo:ht=1:ha=63655d0334a7:ip=145.71.35.127:\
+              :bf=/nbgrub:\
+              :tc=.allhost:\
+-             :T150="(nd)/tftpboot/menu.lst.foo":
++             :T150="(nd)/tftpboot/grub.conf.foo":
+ 
+    Note that you should specify the drive name `(nd)' in the name of
+ the configuration file. This is because you might change the root drive
+@@ -1458,7 +1458,7 @@
+ 
+    An absolute file name resembles a Unix absolute file name, using `/'
+ for the directory separator (not `\' as in DOS). One example is
+-`(hd0,0)/boot/grub/menu.lst'. This means the file `/boot/grub/menu.lst'
++`(hd0,0)/boot/grub/grub.conf'. This means the file `/boot/grub/grub.conf'
+ in the first partition of the first hard disk. If you omit the device
+ name in an absolute file name, GRUB uses GRUB's "root device"
+ implicitly. So if you set the root device to, say, `(hd1,0)' by the
+@@ -3161,7 +3161,7 @@
+      grub shell just ignores this option.
+ 
+ `--config-file=FILE'
+-     Read the configuration file FILE instead of `/boot/grub/menu.lst'.
++     Read the configuration file FILE instead of `/boot/grub/grub.conf'.
+      The format is the same as the normal GRUB syntax. See *Note
+      Filesystem::, for more information.
+ 
+diff -Nur grub-0.94/docs/grub.texi grub-0.94-new/docs/grub.texi
+--- grub-0.94/docs/grub.texi	2004-01-25 15:39:14.000000000 +0000
++++ grub-0.94-new/docs/grub.texi	2004-08-22 18:06:12.219378000 +0100
+@@ -1018,7 +1018,7 @@
+ keys) that will do everything to boot an OS.
+ 
+ To enable the menu, you need a configuration file,
+-@file{menu.lst} under the boot directory. We'll analyze an example
++@file{grub.conf} under the boot directory. We'll analyze an example
+ file.
+ 
+ The file first contains some general settings, the menu interface
+@@ -1291,7 +1291,7 @@
+ foo:ht=1:ha=63655d0334a7:ip=145.71.35.127:\
+         :bf=/nbgrub:\
+         :tc=.allhost:\
+-        :T150="(nd)/tftpboot/menu.lst.foo":
++        :T150="(nd)/tftpboot/grub.conf.foo":
+ @end group
+ @end example
+ 
+@@ -1626,8 +1626,8 @@
+ 
+ An absolute file name resembles a Unix absolute file name, using
+ @samp{/} for the directory separator (not @samp{\} as in DOS). One
+-example is @samp{(hd0,0)/boot/grub/menu.lst}. This means the file
+-@file{/boot/grub/menu.lst} in the first partition of the first hard
++example is @samp{(hd0,0)/boot/grub/grub.conf}. This means the file
++@file{/boot/grub/grub.conf} in the first partition of the first hard
+ disk. If you omit the device name in an absolute file name, GRUB uses
+ GRUB's @dfn{root device} implicitly. So if you set the root device to,
+ say, @samp{(hd1,0)} by the command @command{root} (@pxref{root}), then
+@@ -3278,7 +3278,7 @@
+ 
+ @item --config-file=@var{file}
+ Read the configuration file @var{file} instead of
+-@file{/boot/grub/menu.lst}. The format is the same as the normal GRUB
++@file{/boot/grub/grub.conf}. The format is the same as the normal GRUB
+ syntax. See @ref{Filesystem}, for more information.
+ 
+ @item --boot-drive=@var{drive}
+diff -Nur grub-0.94/grub/asmstub.c grub-0.94-new/grub/asmstub.c
+--- grub-0.94/grub/asmstub.c	2004-01-11 09:39:22.000000000 +0000
++++ grub-0.94-new/grub/asmstub.c	2004-08-22 18:06:12.373354592 +0100
+@@ -71,7 +71,7 @@
+ unsigned long boot_drive = 0;
+ int saved_entryno = 0;
+ char version_string[] = VERSION;
+-char config_file[128] = "/boot/grub/menu.lst"; /* FIXME: arbitrary */
++char config_file[128] = "/boot/grub/grub.conf"; /* FIXME: arbitrary */
+ unsigned long linux_text_len = 0;
+ char *linux_data_tmp_addr = 0;
+ char *linux_data_real_addr = 0;
+diff -Nur grub-0.94/stage2/asm.S grub-0.94-new/stage2/asm.S
+--- grub-0.94/stage2/asm.S	2004-08-22 18:07:55.258713640 +0100
++++ grub-0.94-new/stage2/asm.S	2004-08-22 18:06:13.157235424 +0100
+@@ -97,7 +97,7 @@
+ 	.string VERSION
+ VARIABLE(config_file)
+ #ifndef STAGE1_5
+-	.string "/boot/grub/menu.lst"
++	.string "/boot/grub/grub.conf"
+ #else   /* STAGE1_5 */
+ 	.long	0xffffffff
+ 	.string "/boot/grub/stage2"
+diff -Nur grub-0.94/stage2/builtins.c grub-0.94-new/stage2/builtins.c
+--- grub-0.94/stage2/builtins.c	2004-08-22 18:07:55.263712880 +0100
++++ grub-0.94-new/stage2/builtins.c	2004-08-22 18:06:13.556174776 +0100
+@@ -3976,7 +3976,7 @@
+ 
+   /* The prefix was determined.  */
+   grub_sprintf (stage2, "%s%s", prefix, "/stage2");
+-  grub_sprintf (config_filename, "%s%s", prefix, "/menu.lst");
++  grub_sprintf (config_filename, "%s%s", prefix, "/grub.conf");
+   *real_config_filename = 0;
+ 
+   /* Check if stage2 exists.  */
+diff -Nur grub-0.94/stage2/builtins.c.orig grub-0.94-new/stage2/builtins.c.orig
+--- grub-0.94/stage2/builtins.c.orig	2004-08-22 18:07:55.272711512 +0100
++++ grub-0.94-new/stage2/builtins.c.orig	2004-08-22 18:06:13.505182528 +0100
+@@ -3844,7 +3844,7 @@
+ 
+   /* The prefix was determined.  */
+   grub_sprintf (stage2, "%s%s", prefix, "/stage2");
+-  grub_sprintf (config_filename, "%s%s", prefix, "/menu.lst");
++  grub_sprintf (config_filename, "%s%s", prefix, "/grub.conf");
+   *real_config_filename = 0;
+ 
+   /* Check if stage2 exists.  */
+diff -Nur grub-0.94/util/grub-image.in grub-0.94-new/util/grub-image.in
+--- grub-0.94/util/grub-image.in	2003-07-09 12:45:51.000000000 +0100
++++ grub-0.94-new/util/grub-image.in	2004-08-22 18:06:12.393351552 +0100
+@@ -64,7 +64,7 @@
+   mkdir -p $bootdir/boot/grub
+   cp -p $stage1dir/stage1 $stage2dir/*_stage1_5 $stage2dir/stage2 \
+     $bootdir/boot/grub
+-  test ! -f menu.lst || cp -p menu.lst $bootdir/boot/grub
++  test ! -f grub.conf || cp -p grub.conf $bootdir/boot/grub
+   trap "rm -f $bootdir.tar.gz" 0
+   GZIP=-9 tar -zcf $bootdir.tar.gz $bootdir
+   trap '' 0

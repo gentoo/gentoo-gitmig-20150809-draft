@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.19 2004/06/24 22:34:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.20 2004/08/22 17:50:22 robmoss Exp $
+
+*grub-0.94-r2 (22 Aug 2004)
+
+  22 Aug 2004; <rmoss@gentoo.org> +files/grub-0.94-grub.conf.patch,
+  +grub-0.94-r2.ebuild:
+  Trying to get rid of the need for that filthy menu.lst -> grub.conf symlink.
 
   10 Jun 2004; Travis Tilley <lv@gentoo.org> grub-0.94-r1.ebuild:
   fixed multilib check
