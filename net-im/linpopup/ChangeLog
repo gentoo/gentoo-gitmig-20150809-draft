@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/gentoolkit
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/ChangeLog,v 1.1 2003/01/05 12:53:42 mholzer Exp $
+
+*linpopup-1.2.0.ebuild (04 Jan 2002)
+
+  04 Jan 2002; Martin Holzer <mholzer@gentoo.org> linpopup-1.2.0.ebuild files/digest-linpopup-1.2.0 ChangeLog :
+  Initial Version submitted by m@lcolm.org.uk in #11861.
+
