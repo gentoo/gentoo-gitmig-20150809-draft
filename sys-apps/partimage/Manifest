@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e3ee984135353ac0b354e0992a7cd9d ChangeLog 2181
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 03d7ca866eff824ae7fe02abf0fd69a6 partimage-0.6.2.ebuild 1450
-MD5 0a47175d5767d8aa6da118a80ff273bb partimage-0.6.4.ebuild 3879
-MD5 0adcf1f64a2d38c56a14f80a417f9846 partimage-0.6.4-r1.ebuild 4207
+MD5 c56dd7234dac3308d7ecd9bcbb75fdf3 partimage-0.6.2.ebuild 1440
+MD5 c6a6c1c540180a6e0438f6ece0d9411c partimage-0.6.4.ebuild 3869
+MD5 481a4ce98d92f3b30172a006fbb559b3 ChangeLog 2348
+MD5 7a6a82185c98dd517558628135d6e6cc partimage-0.6.4-r1.ebuild 4197
 MD5 6fd04332b7f640a2aa71f208d2bd2dc8 files/digest-partimage-0.6.2 68
 MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4 68
-MD5 e723db4854081a8495b84f4b27ff813a files/servercert.cnf 1099
 MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4-r1 68
 MD5 7954fdb6067557fdd593a66ecae93ab3 files/partimage-0.6.4-nodumbpermchecks.diff 817
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+f/imdTrptrqvGERAooKAJ9kjuYgXCsMcP3+xZ6Lcz11ZL3c1ACeNR6/
-3nhrA8nxY0+bACicrisgDFc=
-=BOTh
------END PGP SIGNATURE-----
+MD5 e723db4854081a8495b84f4b27ff813a files/servercert.cnf 1099
