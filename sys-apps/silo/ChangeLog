@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/silo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.6 2002/12/17 19:47:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.7 2003/01/06 09:18:00 seemant Exp $
 
 *silo-1.2.5 (15 Feb 2002)
+
+  06 Jan 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  PROVIDE=virtual/bootloader
 
   14 Dec 2002; jack Morgan <jmorgan@gento.org> silo-1.2.6.ebuild :
   Changed ~sparc keyword to sparc
