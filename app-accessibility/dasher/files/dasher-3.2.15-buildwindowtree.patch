@@ -1,0 +1,11 @@
+diff -NurdB dasher-3.2.13-orig/Src/Gtk2/accessibility.cc dasher-3.2.13/Src/Gtk2/accessibility.cc
+--- dasher-3.2.13-orig/Src/Gtk2/accessibility.cc	2005-03-01 22:52:44.462707952 -0500
++++ dasher-3.2.13/Src/Gtk2/accessibility.cc	2005-03-01 22:54:40.062134168 -0500
+@@ -445,6 +445,7 @@
+ 	std::string name;
+ 	GList *windows = wnck_screen_get_windows(wnckscreen);
+ 
++	tmptree->parent = NULL;
+ 	for (l = windows; l; l = l->next) {
+ 		window = (WnckWindow*)l->data;
+ 		name = wnck_window_get_name (window);

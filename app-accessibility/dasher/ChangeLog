@@ -1,15 +1,21 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.28 2005/03/02 17:32:54 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.29 2005/03/10 22:44:13 leonardop Exp $
 
-*dasher-3.2.13 (01 Mar 2004)
+*dasher-3.2.15 (10 Mar 2005)
 
-  01 Mar 2004; Leonardo Boshell <leonardop@gentoo.org> dasher-3.2.13.ebuild,
+  10 Mar 2005; Leonardo Boshell <leonardop@gentoo.org> dasher-3.2.15.ebuild,
+  files/dasher-3.2.15-buildwindowtree.patch:
+  New release. Updated patch.
+
+*dasher-3.2.13 (01 Mar 2005)
+
+  01 Mar 2005; Leonardo Boshell <leonardop@gentoo.org> dasher-3.2.13.ebuild,
   files/dasher-3.2.13-buildwindowtree.patch:
   New release. Added dependency to libwnck. Added new patch to avoid
   segmentation fault.
 
-  12 Feb 2004; Leonardo Boshell <leonardop@gentoo.org> dasher-3.2.11.ebuild,
+  12 Feb 2005; Leonardo Boshell <leonardop@gentoo.org> dasher-3.2.11.ebuild,
   files/dasher-3.2.11-xtst_fix.patch:
   Added patch to fix a broken library test that can break compilation.
   Thanks to <s.b.wielinga> for his contribution on bug #79181.
@@ -23,7 +29,7 @@
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> dasher-3.2.11.ebuild:
   Stable on hppa.
 
-  11 Dec 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> dasher-3.2.11.ebuild:
+  11 Dec 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> dasher-3.2.11.ebuild:
   Stable on alpha.
 
   25 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> dasher-3.2.11.ebuild:
@@ -41,7 +47,7 @@
   18 Sep 2004; Leonardo Boshell <leonardop@gentoo.org> dasher-3.2.11.ebuild:
   New release.
 
-  23 Aug 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> dasher-3.2.10-r1.ebuild:
+  23 Aug 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> dasher-3.2.10-r1.ebuild:
   Stable on alpha.
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> dasher-3.2.10-r1.ebuild:
