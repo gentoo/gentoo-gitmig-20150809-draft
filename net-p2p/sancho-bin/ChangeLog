@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/sancho-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.7 2004/07/01 09:39:49 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.8 2004/08/04 00:45:31 squinky86 Exp $
+
+*sancho-bin-0.9.4.7 (03 Aug 2004)
+
+  03 Aug 2004; Jon Hood <squinky86@gentoo.org> +sancho-bin-0.9.4.7.ebuild:
+  Version bump; closes #56924; thanks spiralvoice <spiralvoice@hotmail.com>.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> sancho-bin-0.9.4.5-r1.ebuild:
   change virtual/glibc to virtual/libc
