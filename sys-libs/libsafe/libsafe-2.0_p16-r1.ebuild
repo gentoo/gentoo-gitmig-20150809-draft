@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16-r1.ebuild,v 1.2 2005/02/03 10:08:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16-r1.ebuild,v 1.3 2005/03/02 15:24:31 matsuu Exp $
 
-inherit toolchain-funcs multilib
+inherit flag-o-matic toolchain-funcs multilib
 
 MY_P="${P/_p/-}"
 DESCRIPTION="Protection against buffer overflow vulnerabilities"
@@ -21,6 +21,8 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	local mycflags=""
+
+	filter-flags "-fomit-frame-pointer"
 
 	mycflags="${mycflags} ${CFLAGS}"
 	mycflags="${mycflags} -DLIBSAFE_VERSION=\"\$(VERSION)\""
