@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/desklet-ltvariations-0.21-r1.ebuild,v 1.4 2004/06/24 22:49:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/desklet-ltvariations-0.21-r1.ebuild,v 1.5 2004/07/13 04:00:56 obz Exp $
 
 DESKLET_NAME="LTVariations"
 
@@ -9,7 +9,7 @@ S=${WORKDIR}
 
 DESCRIPTION="The clock sensors and displays for gdesklets"
 SRC_URI="http://gdesklets.gnomedesktop.org/files/${MY_P}.tgz"
-HOMEPAGE="http://www.pycage.de/"
+HOMEPAGE="http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_app_id=46"
 LICENSE="as-is"
 
 SLOT="0"

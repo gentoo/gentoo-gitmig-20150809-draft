@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/desklet-goodweather-0.4.ebuild,v 1.2 2004/06/24 22:49:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/desklet-goodweather-0.4.ebuild,v 1.3 2004/07/13 03:57:33 obz Exp $
 
 DESKLET_NAME="GoodWeather"
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${DESKLET_NAME}
 
 DESCRIPTION="A desklet producing weather forecasts for the coming week"
 SRC_URI="http://gdesklets.gnomedesktop.org/files/${MY_P}.tar.bz2"
-HOMEPAGE="http://gdesklets.gnomedesktop.org/"
+HOMEPAGE="http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_app_id=93"
 LICENSE="as-is"
 
 SLOT="0"
