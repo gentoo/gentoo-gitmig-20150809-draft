@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.125 2004/04/21 01:48:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.126 2004/04/25 03:36:16 psi29a Exp $
+
+*kdebase-3.2.2 (24 Apr 2004)
+
+  24 Apr 2004; Bret Curtis <psi29a@gentoo.org> kdebase-3.2.2.ebuild:
+  Added to ~mips
 
   20 Apr 2004; Caleb Tennis <caleb@gentoo.org>
   -files/3.0.5b/kdebase-3.0.5b-nspluginviewer-qt31.diff.gz,
