@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb96c15869555a3381e73745b20a5f18 ChangeLog 1865
-MD5 5590c66a04e4a8c41eebeaabc1cf706f crossfire-client-1.6.1.ebuild 1416
 MD5 558223609e46a54824114b9499d9d972 crossfire-client-1.7.0.ebuild 1376
+MD5 5590c66a04e4a8c41eebeaabc1cf706f crossfire-client-1.6.1.ebuild 1416
+MD5 bb96c15869555a3381e73745b20a5f18 ChangeLog 1865
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 28ec33590a7f24478841e039ce87f81c files/digest-crossfire-client-1.6.1 153
+MD5 85c1a21c69c23d3fd2540dd54a0f0fc3 files/digest-crossfire-client-1.7.0 74
 MD5 ad1e49c4a56222488166b9c4f4091a55 files/1.5.0-errno.patch 682
 MD5 ad1e49c4a56222488166b9c4f4091a55 files/1.6.0-errno.patch 682
-MD5 28ec33590a7f24478841e039ce87f81c files/digest-crossfire-client-1.6.1 153
-MD5 2cec844ed3c101ffe5aa13f2a98e431e files/digest-crossfire-client-1.7.0 153
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBW1X6I1lqEGTUzyQRAiFVAJ93RvhZjIEJMWbKzlCUaYm2YNoLxACguWsH
-d0rf3lelBOgJxYugv/Lhf38=
-=nWJa
+iD8DBQFBpP6yI1lqEGTUzyQRAu+pAKC4XIsa7XqcmIm22McpFP3jaZvBgwCg3Ob3
+WrsEWRvQpQse0/Y7hNSRqCA=
+=4rN+
 -----END PGP SIGNATURE-----
