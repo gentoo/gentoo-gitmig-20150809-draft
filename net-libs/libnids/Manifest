@@ -5,5 +5,5 @@ MD5 0166cdd9c4b00a3ca63138f8ba65fda9 files/digest-libnids-1.17_rc1 66
 MD5 2398bb37cb63ed70642a6e2fa23edbd5 files/libnids_gcc33_fix 4724
 MD5 03eebd35f2b2fc021e0dc1eabd042a14 libnids-1.16.ebuild 974
 MD5 de63fb82374710080f77a5e97d9a475f ChangeLog 1467
-MD5 cb3a0561d311a79b37793cad09584359 libnids-1.16-r1.ebuild 1068
+MD5 3f6280ea530eac5b96c31d3dec98c8ba libnids-1.16-r1.ebuild 1068
 MD5 1f280b2f6d82675f469043889579e45c libnids-1.17_rc1.ebuild 867
