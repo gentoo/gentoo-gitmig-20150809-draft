@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 491471a315f161b29332493073516fea grsec-sources-2.4.29.2.1.3.ebuild 1840
+MD5 cd6433305bd0bf549af7749e11ed3aef grsec-sources-2.4.29.2.1.3.ebuild 1835
 MD5 7235d75ed54028ffe82395810967c77f ChangeLog 10979
 MD5 0b2ea9b53b5d526e39afbdc5040ff07a metadata.xml 487
 MD5 06a21789396d1b9fd46fb7f32355d000 grsec-sources-2.4.28.2.1.0-r3.ebuild 1902
@@ -20,12 +17,3 @@ MD5 b1f723b1661a3fcbe79e921ddfe40584 files/2.4.28-grsec-2.1.0-pax-mmap-pgtables.
 MD5 a0c6a4f388d0481b6e25bb12f71da868 files/digest-grsec-sources-2.4.29.2.1.3 231
 MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/CAN-2004-1016.patch 2835
 MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iQCVAwUBQi0UhZ4WFLgrx1GWAQLzFwQApKzP3QPWniunSK7N+xV+/GNvx69cOknH
-zGkV1sBQ/8iHDOwHDYMlI5rcEYHLJYAmMQ4bxyKyl++NpMCGUjNBW7F6cMMdLF1m
-xIW3b/xL9YKXVlTySelRSDD2KWafcHwA1atBPBdmKQClUUUMPUGspSXeUmTV9+6n
-UbIEGynYu8w=
-=MYPd
------END PGP SIGNATURE-----

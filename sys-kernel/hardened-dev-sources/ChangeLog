@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.59 2005/03/10 12:48:41 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.60 2005/03/11 16:49:14 solar Exp $
+
+  11 Mar 2005; <solar@gentoo.org> hardened-dev-sources-2.6.11-r1.ebuild:
+  - marking 2.1.3 stable for all supporting arches
 
 *hardened-dev-sources-2.6.11-r1 (10 Mar 2005)
 
