@@ -1,6 +1,14 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.2 2002/04/19 09:21:23 seemant Exp $
+
+*jadetex-3.12 (19 Apr 2002)
+
+  19 Apr 2002; Seemant Kulleen <seemant@gentoo.org> jadetex-3.12.ebuild
+  files/digest-jadetex-3.12 :
+
+  Version bump for bugfixes to newest stable.  Also, SRC_URI and HOMEPAGE
+  information updated.  Thanks to Geert Bevin in bug #1931 for the update.
 
 *jadetex-2.20 (1 Feb 2002)
 
