@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.29 2005/01/21 04:35:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.30 2005/02/06 17:09:45 foser Exp $
+
+*dbus-0.23-r2 (06 Feb 2005)
+
+  06 Feb 2005; foser <foser@gentoo.org> dbus-0.23-r2.ebuild :
+  Add include fix (#78617)
+  Add fix for unsafe default permissions (#80601)
+  Fix the X switch to actually work
 
   20 Jan 2005; Aron Griffis <agriffis@gentoo.org> dbus-0.22-r1.ebuild,
   dbus-0.22-r2.ebuild, dbus-0.22-r3.ebuild, dbus-0.23-r1.ebuild:

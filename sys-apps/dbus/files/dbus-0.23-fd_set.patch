@@ -1,0 +1,10 @@
+--- tools/dbus-launch.c.orig	2005-01-21 01:56:42.937860640 -0600
++++ tools/dbus-launch.c	2005-01-21 01:41:01.748943104 -0600
+@@ -26,6 +26,7 @@
+ #include <fcntl.h>
+ #include <signal.h>
+ #include <sys/wait.h>
++#include <sys/select.h>
+ #include <errno.h>
+ #include <stdio.h>
+ #include <string.h>

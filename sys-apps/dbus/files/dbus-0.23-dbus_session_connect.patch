@@ -1,0 +1,35 @@
+Index: bus/policy.c
+===================================================================
+RCS file: /cvs/dbus/dbus/bus/policy.c,v
+retrieving revision 1.22
+diff -u -p -u -r1.22 policy.c
+--- bus/policy.c	25 Aug 2004 22:11:49 -0000	1.22
++++ bus/policy.c	31 Jan 2005 23:57:32 -0000
+@@ -453,8 +453,9 @@ bus_policy_allow_user (BusPolicy        
+                      uid);
+       return FALSE;
+     }
+-  
+-  allowed = FALSE;
++
++  /* Default to "user owning bus" or root can connect */
++  allowed = uid == _dbus_getuid ();
+ 
+   allowed = list_allows_user (allowed,
+                               &policy->default_rules,
+Index: bus/session.conf.in
+===================================================================
+RCS file: /cvs/dbus/dbus/bus/session.conf.in,v
+retrieving revision 1.8
+diff -u -p -u -r1.8 session.conf.in
+--- bus/session.conf.in	25 Oct 2004 18:48:58 -0000	1.8
++++ bus/session.conf.in	31 Jan 2005 23:57:32 -0000
+@@ -19,8 +19,6 @@
+     <allow eavesdrop="true"/>
+     <!-- Allow anyone to own anything -->
+     <allow own="*"/>
+-    <!-- Allow any user to connect -->
+-    <allow user="*"/>
+   </policy>
+ 
+   <!-- This is included last so local configuration can override what's 
