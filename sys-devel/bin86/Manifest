@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 f66b884dc84ecec1fd4ea4b111e3a27d ChangeLog 2098
 MD5 0b199aee3f3f957ca86b85e4869293a7 bin86-0.16.16.ebuild 808
 MD5 8e0508feb90979c46f166f82c4eff84a bin86-0.16.0.ebuild 726
-MD5 afed085598df4f009289797465374474 bin86-0.16.13.ebuild 764
+MD5 db7c738a8e1e7ad3f7e1cab4981f84ca bin86-0.16.13.ebuild 793
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 9737e2b2121543298c07b50ccd22abbc files/digest-bin86-0.16.16 65
 MD5 7d22d60b602b4280bac1e01f3d92a31a files/digest-bin86-0.16.0 65
@@ -12,7 +12,7 @@ MD5 3e8b2cbfe9d20036521c1a53960279e8 files/digest-bin86-0.16.13 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBq9yEroRuSHgZdywRAl/mAJ98bOo+Iy8NtoNqU1Kc4v9dkySv8QCdFFAA
-zDNnkkjpxrONYjZTnMjxBXI=
-=scqv
+iD8DBQFBq9zaroRuSHgZdywRAmBMAJ4qudro7BC5sZrJddIzxN6P6i3QOACfaYbY
+mIBkYJJhFwsLXQX6ad5YTYo=
+=gxaj
 -----END PGP SIGNATURE-----
