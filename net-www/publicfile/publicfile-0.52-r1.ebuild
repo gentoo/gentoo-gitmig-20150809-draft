@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52-r1.ebuild,v 1.2 2004/04/06 10:55:48 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/publicfile-0.52-r1.ebuild,v 1.3 2004/04/23 09:55:51 stuart Exp $
 
 inherit eutils
 
@@ -56,8 +56,8 @@ pkg_setup() {
 pkg_postinst() {
 	/usr/bin/publicfile-conf ftp ftplog /home/public `hostname`
 	echo
-	echo -e "\e[32;01m httpd and ftpd are serving out of /home/public.\033[0m"
-	echo -e "\e[32;01m remember to start the servers with:\033[0m"
-	echo -e "\e[32;01m   ln -s /home/public/httpd /home/public/home/ftpd /service\033[0m"
+	einfo "httpd and ftpd are serving out of /home/public."
+	einfo "remember to start the servers with:"
+	einfo "  ln -s /home/public/httpd /home/public/ftpd /service"
 	echo
 }
