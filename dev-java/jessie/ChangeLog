@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jessie
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.4 2004/06/24 22:34:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.5 2004/08/31 03:45:48 zx Exp $
+
+*jessie-1.0.0 (30 Aug 2004)
+
+  30 Aug 2004; Chris Aniszczyk <zx@gentoo.org> -jessie-0.9.7.ebuild,
+  +jessie-1.0.0.ebuild:
+  Version bump and cleanup
 
   03 Jun 2004; David Holm <dholm@gentoo.org> jessie-0.9.7.ebuild:
   Added to ~ppc.

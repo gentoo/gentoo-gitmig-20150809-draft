@@ -1,4 +1,4 @@
-MD5 ae694c075cb7e5a6665247dc37411de9 jessie-0.9.7.ebuild 1104
-MD5 b4f4df5042a9b304e989fefbfb0a2f05 ChangeLog 558
+MD5 6b8066c5b6a2e60a831ebd0b9ae4576b ChangeLog 702
 MD5 d7a22352b39820b369e6e067dcac7fff metadata.xml 2204
-MD5 59b4fef8154b01c51687fb80620b62f2 files/digest-jessie-0.9.7 64
+MD5 9f5e0c4937131ccfe0852272378e9d25 jessie-1.0.0.ebuild 1114
+MD5 c614b4d53c89c67391b2d7e5c0d06fcf files/digest-jessie-1.0.0 64
