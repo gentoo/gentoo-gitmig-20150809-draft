@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.3-r1.ebuild,v 1.1 2005/01/23 12:08:51 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.3-r1.ebuild,v 1.2 2005/01/25 16:30:31 liquidx Exp $
 
-inherit eutils virtualx gnome2 flag-o-matic alternatives
+inherit eutils gnome2 flag-o-matic alternatives
 
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 HOMEPAGE="http://ximian.com/products/evolution/"
@@ -122,8 +122,7 @@ src_compile() {
 
 	gnome2_src_configure ${G2CONF} ${myconf}
 
-	# Needs to be able to connect to X display to build.
-	Xemake || Xmake || die "make failed"
+	emake || make || die "make failed"
 }
 
 pkg_postinst() {
