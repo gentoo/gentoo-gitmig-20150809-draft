@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.16 2004/12/23 20:16:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.17 2004/12/28 11:32:58 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -135,22 +135,22 @@ setup_flags() {
 			fi
 		fi
 
-		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then        
+		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
 			CFLAGS_ABI="$(get_abi_var CFLAGS)"
 
 			# glibc isn't too smart about guessing our flags.  It
 			# will default to -xarch=v9, but assembly in sparc64 glibc
-			# requires v9a or greater...                 
+			# requires v9a or greater...
 			if is-flag "-mcpu=ultrasparc3"; then
 				# Change CHOST to include us3 assembly
-				if [ "${ABI}" = "sparc32" ]; then         
+				if [ "${ABI}" = "sparc32" ]; then
 					CTARGET="sparcv9b-unknown-linux-gnu"
 				else
 					CTARGET="sparc64b-unknown-linux-gnu"
 					CFLAGS_ABI="${CFLAGS_ABI} -Wa,-xarch=v9b"
 				fi
 			else
-                                if [ "${ABI}" = "sparc32" ]; then
+				if [ "${ABI}" = "sparc32" ]; then
 					CTARGET="sparcv9-unknown-linux-gnu"
 				else
 					CTARGET="sparc64-unknown-linux-gnu"
@@ -158,11 +158,11 @@ setup_flags() {
 				fi
 			fi
 
-			CHOST="${CTARGET}"                
+			CHOST="${CTARGET}"
 			filter-flags -mvis -m32 -m64 -Wa,-xarch -Wa,-A
 			export CC="${ORIG_CC} ${CFLAGS_ABI}"
 		fi
- 	fi
+	fi
 
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
 		# broken in 3.4.x
@@ -571,7 +571,7 @@ src_unpack() {
 	# disable binutils -as-needed
 	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
 
-	# Glibc is stupid sometimes, and doesn't realize that with a 
+	# Glibc is stupid sometimes, and doesn't realize that with a
 	# static C-Only gcc, -lgcc_eh doesn't exist.
 	# http://sources.redhat.com/ml/libc-alpha/2003-09/msg00100.html
 	echo 'int main(){}' > ${T}/gcc_eh_test.c
@@ -942,7 +942,7 @@ fix_lib64_symlinks() {
 
 pkg_preinst() {
 	# PPC64+others may want to eventually be added to this logic if they
-	# decide to be multilib compatible and FHS compliant. note that this 
+	# decide to be multilib compatible and FHS compliant. note that this
 	# chunk of FHS compliance only applies to 64bit archs where 32bit
 	# compatibility is a major concern (not IA64, for example).
 	use amd64 && [ "$(get_libdir)" == "lib64" ] && fix_lib64_symlinks
