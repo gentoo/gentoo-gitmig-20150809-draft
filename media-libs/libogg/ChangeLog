@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libogg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.29 2004/10/20 13:45:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.30 2004/11/01 10:50:21 kloeri Exp $
+
+  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> libogg-1.1.2.ebuild:
+  Stable on alpha.
 
   20 Oct 2004; Guy Martin <gmsoft@gentoo.org> libogg-1.1.2.ebuild:
   Stable on hppa.
