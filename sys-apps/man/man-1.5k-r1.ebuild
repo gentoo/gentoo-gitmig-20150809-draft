@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k-r1.ebuild,v 1.1 2002/12/26 04:51:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k-r1.ebuild,v 1.2 2002/12/26 19:05:31 azarah Exp $
 
 IUSE=""
 
@@ -60,6 +60,16 @@ src_unpack() {
 
 	# Fix wierd failing in rare cases
 	epatch ${FILESDIR}/${P}-wrong-quotes.patch
+
+	# Fix a crash when calling man with:  man -k "foo bar" (bug #9761).
+	# <azarah@gentoo.org> (26 Dec 2002).
+	epatch ${FILESDIR}/${P}-util_c-segfault.patch
+
+	# Do not print the 'man: No such file or directory' error if
+	# 'man -d' was called and the NLS catalogue was not found, as
+	# it confuses people, and be more informative  ... (bug #6360)
+	# <azarah@gentoo.org> (26 Dec 2002).
+	epatch ${FILESDIR}/${P}-locale-debug-info.patch
 }
 
 src_compile() {
@@ -86,6 +96,9 @@ src_install() {
 	
 	chmod 2555 ${D}/usr/bin/man
 	chown root.man ${D}/usr/bin/man
+
+	# Needed for makewhatis
+	keepdir /var/cache/man
 	
 	insinto /etc
 	cd ${S}

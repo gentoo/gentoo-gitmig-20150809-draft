@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.10 2002/12/26 04:56:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.11 2002/12/26 19:05:31 azarah Exp $
+
+  26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> man-1.5k.ebuild,
+                                                    man-1.5k-r1.ebuild :
+
+  Bugfixes:
+  - Add man-1.5k-util_c-segfault.patch to fix a crash when calling man
+    with:  man -k "foo bar" (bug #9761).
+  - Add man-1.5k-locale-debug-info.patch to make man not print the
+    'man: No such file or directory' error if 'man -d' was called and
+    the NLS catalogue was not found, as it confuses people, and be
+	more informative ... (bug #6360)
 
 *man-1.5k-r1 (26 Dec 2002)
 

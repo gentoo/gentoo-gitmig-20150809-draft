@@ -1,9 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k.ebuild,v 1.8 2002/12/15 10:44:23 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k.ebuild,v 1.9 2002/12/26 19:05:31 azarah Exp $
 
-NV=1.5k
-S=${WORKDIR}/${PN}-${NV}
+IUSE=""
+
+inherit eutils
+
+NV="${PV}"
+S="${WORKDIR}/${PN}-${NV}"
 DESCRIPTION="Standard commands to read man pages"
 SRC_URI="http://www.kernel.org/pub/linux/utils/man/man-${NV}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/man/"
@@ -19,6 +23,7 @@ LICENSE="GPL-2"
 
 src_unpack() {
 	unpack ${A}
+	
 	cd ${S}
 	cp configure configure.orig
 	sed	-e 's:/usr/lib/locale:$(prefix)/usr/lib/locale:g' \
@@ -41,6 +46,16 @@ src_unpack() {
 	cp Makefile Makefile.orig
 	sed -e "s:cc -o:gcc -o:" Makefile.orig > Makefile
 
+	cd ${S}
+	# Fix a crash when calling man with:  man -k "foo bar" (bug #9761).
+	# <azarah@gentoo.org> (26 Dec 2002).
+	epatch ${FILESDIR}/${P}-util_c-segfault.patch
+
+	# Do not print the 'man: No such file or directory' error if
+	# 'man -d' was called and the NLS catalogue was not found, as
+	# it confuses people, and be more informative ... (bug #6360)
+	# <azarah@gentoo.org> (26 Dec 2002).
+	epatch ${FILESDIR}/${P}-locale-debug-info.patch
 }
 
 src_compile() {
@@ -67,7 +82,10 @@ src_install() {
 	
 	chmod 2555 ${D}/usr/bin/man
 	chown root.man ${D}/usr/bin/man
-	
+
+	# Needed for makewhatis
+	keepdir /var/cache/man
+
 	insinto /etc
 	cd ${S}
 	doins src/man.conf
