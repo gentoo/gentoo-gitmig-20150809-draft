@@ -1,10 +1,14 @@
 # ChangeLog for net-wireless/kwavecontrol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwavecontrol/ChangeLog,v 1.4 2003/02/12 08:45:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwavecontrol/ChangeLog,v 1.5 2003/02/12 14:09:31 hannes Exp $
+
+  12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kwavecontrol-0.3.ebuild:
+  added patch to initialize variables, thanks to Sebastian Kratzert for this
+  patch
 
 *kwavecontrol-0.3 (09 Feb 2003)
 
-  09 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kwavecontrol-0.3.ebuild,
+  09 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kwavecontrol-0.3.ebuild:
   version bump
   
   02 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kwavecontrol-0.2.ebuild:
