@@ -1,6 +1,9 @@
-# ChangeLog for media-sound/splay 
+# ChangeLog for media-sound/splay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.7 2004/07/01 07:59:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.8 2004/09/05 08:02:17 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> splay-0.9.5.2.ebuild:
   virtual/glibc -> virtual/libc
