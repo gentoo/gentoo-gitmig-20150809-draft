@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.14 2004/09/06 20:42:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.15 2004/10/17 00:21:47 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mmx2 mpeg mythtv nas network nls oggvorbis opengl oss png rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 xinerama X xmms xv xvid gnome"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mmx2 mpeg mythtv nas network nls oggvorbis opengl oss png rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama X xmms xv xvid gnome"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -66,7 +66,8 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
 	xmms? ( media-sound/xmms )
-	>=sys-apps/portage-2.0.36"
+	>=sys-apps/portage-2.0.36
+	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
@@ -75,18 +76,6 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc alpha amd64 ~ia64 ~hppa ~sparc"
-
-
-pkg_setup() {
-	echo
-	einfo "Please note that we do not use C[XX]FLAGS from /etc/make.conf"
-	einfo "or the environment, as the upstream maintainers will then"
-	einfo "ignore bug reports and refuse support."
-
-	echo
-	ebeep 3
-	epause 5
-}
 
 src_unpack() {
 
@@ -213,7 +202,6 @@ src_compile() {
 	myconf="${myconf} $(use_enable 3dnow)"
 	myconf="${myconf} $(use_enable 3dnowex)"
 	myconf="${myconf} $(use_enable sse)"
-	myconf="${myconf} $(use_enable sse2)"
 	myconf="${myconf} $(use_enable mmx)"
 	myconf="${myconf} $(use_enable mmx2)"
 
@@ -244,7 +232,6 @@ src_compile() {
 		cd ${S}
 	fi
 
-	unset CFLAGS CXXFLAGS
 	./configure --prefix=/usr 		\
 		--confdir=/usr/share/mplayer	\
 		--datadir=/usr/share/mplayer	\

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.18 2004/09/06 20:42:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.19 2004/10/17 00:21:47 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -72,7 +72,8 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
 	xmms? ( media-sound/xmms )
-	>=sys-apps/portage-2.0.36"
+	>=sys-apps/portage-2.0.36
+	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
@@ -81,17 +82,6 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~ia64 ~hppa sparc"
-
-
-pkg_setup() {
-	echo
-	einfo "Please note that we do not use C[XX]FLAGS from /etc/make.conf"
-	einfo "or the environment, as the MPlayer guys then do not give support"
-	einfo "in case of bug reports!."
-	echo
-	ebeep 3
-	epause 5
-}
 
 src_unpack() {
 
@@ -328,7 +318,6 @@ src_compile() {
 	# it *will* be removed asap; in the meantime, doesn't hurt anything.
 	echo "${myconf}" > ${T}/configure-options
 
-	unset CFLAGS CXXFLAGS
 	./configure --prefix=/usr \
 		--confdir=/usr/share/mplayer \
 		--datadir=/usr/share/mplayer \
