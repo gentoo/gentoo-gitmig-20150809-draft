@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.8 2004/02/07 05:46:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.9 2004/02/11 20:43:22 azarah Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -368,10 +368,12 @@ src_compile() {
 	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
 
 	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.  This is especially true for gcc-3.3 ...
-	export CFLAGS="${CFLAGS/-O?/-O2}"
-	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
-	export GCJFLAGS="${CFLAGS/-O?/-O2}"
+	export CFLAGS="$(echo "${CFLAGS}" | sed -e 's|-O[0123456789]\?|-O2|g')"
+	einfo "CFLAGS=\"${CFLAGS}\""
+	export CXXFLAGS="$(echo "${CXXFLAGS}" | sed -e 's|-O[0123456789]\?|-O2|g')"
+	einfo "CXXFLAGS=\"${CXXFLAGS}\""
+	export GCJFLAGS="$(echo "${GCJFLAGS}" | sed -e 's|-O[0123456789]\?|-O2|g')"
+	einfo "GCJFLAGS=\"${GCJFLAGS}\""
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
