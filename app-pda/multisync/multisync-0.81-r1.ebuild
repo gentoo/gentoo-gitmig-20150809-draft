@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.12 2004/10/04 18:54:55 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.13 2004/10/16 17:53:14 liquidx Exp $
 
 inherit eutils
 
@@ -29,9 +29,8 @@ DEPEND="virtual/libc
 	evo?  ( =mail-client/evolution-1.4* )
 	irmc? ( >=net-wireless/irda-utils-0.9.15
 		>=dev-libs/openobex-1
-		bluetooth? ( >=net-wireless/bluez-libs-2.3
-					 >=net-wireless/bluez-sdp-1.0
-			         >=net-wireless/bluez-utils-2.3 )
+		bluetooth? ( >=net-wireless/bluez-libs-2.7
+			         >=net-wireless/bluez-utils-2.7 )
 	)
 	opie? ( >=net-misc/curl-7.10.5 )
 	ldap? ( >=net-nds/openldap-2.0.27
