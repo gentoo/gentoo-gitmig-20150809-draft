@@ -1,6 +1,13 @@
 # ChangeLog for net-www/moinmoin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.1 2004/08/15 15:10:32 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.2 2004/08/16 19:12:55 g2boojum Exp $
+
+*moinmoin-1.2.3 (16 Aug 2004)
+
+  16 Aug 2004; Grant Goodyear <g2boojum@gentoo.org> +files/postinstall-en.txt,
+  +moinmoin-1.2.3.ebuild:
+  Version / security bump (bug 57913).
+  I think that 58381 still needs work before it can be added.
 
 *moinmoin-1.2.2 (15 Aug 2004)
 
