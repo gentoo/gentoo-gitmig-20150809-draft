@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/p5-Palm
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/ChangeLog,v 1.1 2002/07/17 04:17:13 seemant Exp $
+
+*p5-Palm-1.2.4 (16 Jul 2002)
+
+  16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> p5-Palm-1.2.4.ebuild
+  ChangeLog files/digest-p5-Palm-1.2.4 :
+
+  Added new package for lbdb to be able to use.
