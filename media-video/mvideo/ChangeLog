@@ -1,0 +1,9 @@
+# ChangeLog for media-video/mvideo
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mvideo/ChangeLog,v 1.1 2005/02/08 15:19:31 kzimmerm Exp $
+
+*mvideo-0.89.99 (08 Feb 2005)
+
+	08 Feb 2005;  Kai Zimmermann <kzimmerm@gentoo.org> :
+	Initial import into the tree.  Closes bug #24403.  Thanks to 
+	Federico Moro <zayer@frikis.org> for the ebuild submission.
