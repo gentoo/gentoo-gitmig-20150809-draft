@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r1.ebuild,v 1.3 2004/03/19 04:58:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r1.ebuild,v 1.4 2004/03/19 05:23:51 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -160,13 +160,13 @@ src_compile() {
 		alpha|amd64|ia64)
 			# Allow -O0 or -O1: Anything more than this causes
 			# segfaults on startup on 64-bit (bug 33767)
-			enable_optimize=$(echo "$CFLAGS" | sed 's/.*\(-O[01]\?\).*/\1/p')
+			enable_optimize=$(echo "$CFLAGS" | grep -Eoe '-O[01]|-O\>')
 			enable_optimize=${enable_optimize:--O1}
 			filter-flags -O -O?
 			;;
 		*)
 			# -O2 and below allowed on 32-bit
-			enable_optimize=$(echo "$CFLAGS" | sed 's/.*\(-O[012]\?\).*/\1/p')
+			enable_optimize=$(echo "$CFLAGS" | grep -Eoe '-O[012]|-O\>')
 			enable_optimize=${enable_optimize:--O2}
 			filter-flags -O -O?
 			;;
