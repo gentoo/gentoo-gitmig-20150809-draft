@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.0.1-r3.ebuild,v 1.3 2002/08/01 16:07:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.0.1-r3.ebuild,v 1.4 2002/08/02 03:51:15 gerk Exp $
 
 inherit libtool
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="X86"
+KEYWORDS="X86 ppc"
 
 RDEPEND=">=dev-libs/glib-2.0.1"
 
