@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/bwwhois
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.6 2003/11/16 09:42:02 brandy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.7 2004/03/28 21:25:40 avenj Exp $
 
-  16 Nov 2003; Brandy Westcott brandy@gentoo.org bwwhois-3.4.ebuild:
+  28 Mar 2004; Jon Portnoy <avenj@gentoo.org> bwwhois-3.4.ebuild :
+  AMD64 keywords.
+
+  16 Nov 2003; Brandy Westcott <brandy@gentoo.org> bwwhois-3.4.ebuild:
   Removed binary symlink to avoid conflict with net-misc/whois. Thanks to Chris
   Case <ccase@divinia.com> for reporting this (bug #32930)
 
