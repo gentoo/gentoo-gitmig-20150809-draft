@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.19 2003/06/19 13:23:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.20 2003/06/25 03:27:43 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -80,14 +80,8 @@ strip-flags() {
 	local NEW_CXXFLAGS=""
 
 	# Allow unstable C[XX]FLAGS if we are using unstable profile ...
-	if [ "${ACCEPT_KEYWORDS/~/}" != "${ACCEPT_KEYWORDS}" -a \
-	     "${ACCEPT_KEYWORDS/-~/}" = "${ACCEPT_KEYWORDS}" ]
-	then
-		if use debug &> /dev/null
-		then
-			einfo "Enabling the use of some unstable flags"
-		fi
-
+	if [ `has ~${ARCH} ${ACCEPT_KEYWORDS}` ] ; then
+		[ `use debug` ] && einfo "Enabling the use of some unstable flags"
 		ALLOWED_FLAGS="${ALLOWED_FLAGS} ${UNSTABLE_FLAGS}"
 	fi
 
@@ -121,9 +115,10 @@ strip-flags() {
 
 	set +f
 
-	use debug &>/dev/null && einfo "CFLAGS=\"${NEW_CFLAGS}\""
-	use debug &>/dev/null && einfo "CXXFLAGS=\"${NEW_CXXFLAGS}\""
-	
+	[ `use debug` ] \
+		&& einfo "CFLAGS=\"${NEW_CFLAGS}\"" \
+		&& einfo "CXXFLAGS=\"${NEW_CXXFLAGS}\""
+
 	export CFLAGS="${NEW_CFLAGS}"
 	export CXXFLAGS="${NEW_CXXFLAGS}"
 }
