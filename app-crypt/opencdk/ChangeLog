@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/opencdk
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.1 2003/09/02 22:15:28 liquidx Exp $
+
+*opencdk-0.4.5 (02 Sep 2003)
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> opencdk-0.4.5.ebuild,
+  opencdk-0.5.1.ebuild:
+  initial ebuild. thanks to Marshall T. Vandegrift <vandem2@rpi.edu> (#19339)
+
