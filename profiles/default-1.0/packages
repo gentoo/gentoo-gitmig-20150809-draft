@@ -103,7 +103,6 @@ dev-lang/perl
 *sys-devel/bin86
 *sys-devel/bison
 *sys-devel/flex
-*sys-devel/ld.so
 *>=sys-devel/libtool-1.4.1-r4
 *sys-devel/m4
 *sys-devel/make
