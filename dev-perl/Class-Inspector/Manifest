@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 af3ab2ee139d1a009f4a168763afe8b9 ChangeLog 1176
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 1094ebc3bae219520292146101cb179f ChangeLog 1280
 MD5 c141c888e801f1fd8b07fda157e2908d Class-Inspector-1.04.ebuild 602
-MD5 c046950ebf959955c19a6d2dc84b59cd Class-Inspector-1.06.ebuild 588
+MD5 e28f432e1968adb08f34ec6263f1c923 Class-Inspector-1.06.ebuild 586
 MD5 cd4c7b8b6c40881c5296dfcc5eca90d3 Class-Inspector-1.ebuild 599
-MD5 e39b4a673172886478848571d92ba7ac files/digest-Class-Inspector-1.04 71
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 c29219a3f94b0b3dc7eeb821f7067664 files/digest-Class-Inspector-1 68
+MD5 e39b4a673172886478848571d92ba7ac files/digest-Class-Inspector-1.04 71
 MD5 97cd0626d4cf5abbebfd0cfaf64f97ac files/digest-Class-Inspector-1.06 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB8WxJtG5z4I8BtQoRAqjoAJ98FXk1NVk7qYfCLN1D0LPHFIwPXgCghF/u
-388QBp8jYJjwX3BX9pMmCQs=
-=KPxh
+iD8DBQFB8W10KRy60XGEcJIRAiGbAJ4lcRq1DALZU5FZuyrkfPGAzfwBEACeMFi0
+6bFKGp4K77jw+ZfVtXRxocE=
+=cDBJ
 -----END PGP SIGNATURE-----
