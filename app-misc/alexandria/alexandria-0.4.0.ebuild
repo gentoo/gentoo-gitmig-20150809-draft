@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.4.0.ebuild,v 1.4 2005/01/04 15:45:06 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.4.0.ebuild,v 1.5 2005/03/24 12:10:51 citizen428 Exp $
 
 inherit ruby gnome2
 
@@ -45,4 +45,6 @@ pkg_postinst() {
 	export GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
 	einfo "Installing GNOME 2 GConf schemas"
 	${ROOT}/usr/bin/gconftool-2 --makefile-install-rule ${S}/schemas/* 1>/dev/null
+	# Added to fix bug #76726
+	${ROOT}/usr/bin/gconftool-2 --shutdown
 }
