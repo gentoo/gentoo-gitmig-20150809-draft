@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/arpstar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/ChangeLog,v 1.1 2005/03/04 13:32:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/ChangeLog,v 1.2 2005/03/04 14:34:37 genstef Exp $
+
+  04 Mar 2005; Stefan Schweizer <genstef@gentoo.org> arpstar-0.5.0.ebuild:
+  Updated to depend on CONFIG_NETFILTER, added docs and also let it compile on
+  2.6.11 thanks to John Shaw <jtshaw@jtshaw.com> in bug 82757
 
 *arpstar-0.5.0 (04 Mar 2005)
 
