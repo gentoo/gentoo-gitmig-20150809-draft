@@ -1,8 +1,13 @@
 # ChangeLog for games-emulation/xmess
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.7 2003/12/12 17:32:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.8 2003/12/31 15:40:32 vapier Exp $
 
 *xmess-0.77.1 (30 Nov 2003)
+
+  31 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add patch to fix icc compilation #35607.
+  Increase number of available joybuttons from 16 to 32 #36818.
+  Add a local USE flag, net, to control network support #34802.
 
   12 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
   Add patch to work with alsa-1.0.0 #35108.
