@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/quota
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.19 2003/12/10 10:18:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.20 2003/12/29 09:28:59 seemant Exp $
+
+  29 Dec 2003; Seemant Kulleen <seemant@gentoo.org> files/quota.rc:
+  typo fix in the initscript, thanks to:   crazor@web.de in bug #36636
 
   10 Dec 2003; Seemant Kulleen <seemant@gentoo.org> quota-3.06-r1.ebuild,
   quota-3.06-r2.ebuild, quota-3.06.ebuild, quota-3.09.ebuild,

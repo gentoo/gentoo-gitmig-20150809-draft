@@ -8,7 +8,7 @@ start() {
 	ebegin "Starting Quota"
 	if [ -x /sbin/quotacheck ]
 	then
-		echo "Checking quotas. This make take some time."
+		echo "Checking quotas. This may take some time."
 		/sbin/quotacheck -avug
 		echo "Done."
 	fi
