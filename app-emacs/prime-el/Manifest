@@ -1,5 +1,7 @@
 MD5 f6e3f65572bb6636d5ff8cd91288c21b prime-el-1.2.0.ebuild 984
 MD5 b5fdfdb443a94c51bb339c56188361e9 metadata.xml 175
 MD5 b8c787bcb31e2e7760f417c84e17870e ChangeLog 547
+MD5 f6e3f65572bb6636d5ff8cd91288c21b prime-el-1.2.1.ebuild 984
 MD5 a6e9dc761a05be1097baf0ad92ad5a67 files/50prime-el-gentoo.el 62
 MD5 d8282da36c7c3a4f251db15f0be741db files/digest-prime-el-1.2.0 66
+MD5 cf95a340ad3136d2f93b38a0658d75eb files/digest-prime-el-1.2.1 66
