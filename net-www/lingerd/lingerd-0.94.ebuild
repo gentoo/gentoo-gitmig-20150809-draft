@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/lingerd-0.94.ebuild,v 1.2 2005/01/26 06:52:30 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/lingerd-0.94.ebuild,v 1.3 2005/01/30 11:40:25 hansmi Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.iagora.com/about/software/lingerd/"
 SRC_URI="http://images.iagora.com/media/software/lingerd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=sys-apps/sed-4"
 RDEPEND=""
