@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.18.ebuild,v 1.4 2003/01/13 02:03:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.18.ebuild,v 1.5 2003/01/13 06:24:10 raker Exp $
 
 IUSE="tcltk"
 
@@ -17,6 +17,8 @@ DEPEND="tcltk?  ( dev-lang/tcl dev-lang/tk )"
 src_compile() {
 	local myconf
 	use tcltk || myconf="--disable-tcl --disable-tk"
+
+	[ -n "${DEBUGBUILD}" ] && myconf="${myconf} --disable-optimize"
 
 	./configure \
 		--host=${CHOST} \

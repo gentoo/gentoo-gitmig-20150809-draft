@@ -1,10 +1,14 @@
 # ChangeLog for app-text/uudeview
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.6 2003/01/13 02:03:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.7 2003/01/13 06:24:10 raker Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *uudeview-0.5.18.ebuild (08 Nov 2002)
+
+  13 Jan 2003; Nick Hadaway <raker@gentoo.org> uudeview-0.5.18.ebuild :
+  Added DEBUGBUILD support so those with -g options in their make.conf
+  don't get them stripped out by configure.
 
   12 Jan 2003; Nick Hadaway <raker@gentoo.org> uudeview-0.5.18.ebuild :
   Changed from emake to make.
