@@ -1,6 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation & Pieter Van den Abeele
+# xorg.conf patch (C) 2004 by Matt Jarjoura <eklispe@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/Xautoconfig-0.22.ebuild,v 1.2 2004/06/24 22:37:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xautoconfig/Xautoconfig-0.22.ebuild,v 1.3 2004/09/27 18:29:13 eklipse Exp $
 
 inherit eutils
 
@@ -15,7 +16,16 @@ IUSE=""
 DEPEND="sys-apps/pciutils"
 
 src_unpack() {
+	if [ ${ARCH} != ppc ]
+	then
+		die "This is a PPC-only package"
+	fi
+
 	unpack ${A}
+	
+	cd ${S}
+	epatch ${FILESDIR}/Xautoconfig.patch || die
+	epatch ${FILESDIR}/XF4text.h.diff || die
 }
 
 src_compile() {
