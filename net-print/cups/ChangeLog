@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.72 2004/07/01 22:40:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.73 2004/07/05 15:31:24 lanius Exp $
+
+*cups-1.1.21_rc1 (05 Jul 2004)
+
+  05 Jul 2004; Heinrich Wendel <lanius@gentoo.org> cups-1.1.19-r1.ebuild,
+  cups-1.1.20.ebuild, cups-1.1.21_rc1.ebuild:
+  version bump, add samba use flag, bug #52198
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cups-1.1.19-r1.ebuild, cups-1.1.20-r1.ebuild, cups-1.1.20.ebuild:

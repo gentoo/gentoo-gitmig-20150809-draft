@@ -1,16 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.16 2004/07/01 22:40:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.21_rc1.ebuild,v 1.1 2004/07/05 15:31:24 lanius Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="ssl slp pam"
+MY_P=${P/_/}
 
 DESCRIPTION="The Common Unix Printing System"
-HOMEPAGE="http://www.cups.org"
+HOMEPAGE="http://www.cups.org/"
+SRC_URI="ftp://ftp.easysw.com/pub/cups/test/${MY_P}-source.tar.bz2"
 
-SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2"
-PROVIDE="virtual/lpr"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+IUSE="ssl slp pam"
 
 DEP="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -18,34 +21,28 @@ DEP="virtual/libc
 	slp? ( >=net-libs/openslp-1.0.4 )
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
-	>=media-libs/jpeg-6b"
-
+	>=media-libs/jpeg-6b
+	samba? ( net-fs/samba )"
 DEPEND="${DEP}
 	>=sys-devel/autoconf-2.58"
-
 RDEPEND="${DEP}
 	!virtual/lpr"
+PROVIDE="virtual/lpr"
 
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
-
-filter-flags -fomit-frame-pointer
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
-
-	#make sure libcupsimage gets linked with libjpeg 
-	epatch ${FILESDIR}/configure-jpeg-buildfix.diff || die
-
-	epatch ${FILESDIR}/disable-strip.patch || die
-
-	WANT_AUTOCONF_2_5=1 autoconf || die
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/disable-strip.patch
+	WANT_AUTOCONF=2.5 autoconf || die
 }
 
 src_compile() {
+	filter-flags -fomit-frame-pointer
+
 	local myconf
+	use amd64 && replace-flags -Os -O2
 	use pam || myconf="${myconf} --disable-pam"
 	use ssl || myconf="${myconf} --disable-ssl"
 	use slp || myconf="${myconf} --disable-slp"
@@ -98,25 +95,17 @@ src_install() {
 	rm -rf ${D}/etc/cups/{certs,interfaces,ppd}
 	rm -rf ${D}/var
 
-	mv ${D}/etc/cups/cupsd.conf ${D}/etc/cups/cupsd.conf.orig
-	sed -e "s:^#\(DocumentRoot\).*:\1 /usr/share/cups/docs:" \
+	sed -i -e "s:^#\(DocumentRoot\).*:\1 /usr/share/cups/docs:" \
 		-e "s:^#\(SystemGroup\).*:\1 lp:" \
 		-e "s:^#\(User\).*:\1 lp:" \
 		-e "s:^#\(Group\).*:\1 lp:" \
-		${D}/etc/cups/cupsd.conf.orig > ${D}/etc/cups/cupsd.conf
-	rm -f ${D}/etc/cups/cupsd.conf.orig
-
-	# foomatic cups filters
-	# now provided by foomatic-scripts
-	#exeinto /usr/lib/cups/filter
-	#doexe ${FILESDIR}/cupsomatic
-	#doexe ${FILESDIR}/foomatic-gswrapper
+		${D}/etc/cups/cupsd.conf
 
 	insinto /etc/pam.d ; newins ${FILESDIR}/cups.pam cups
 	exeinto /etc/init.d ; newexe ${FILESDIR}/cupsd.rc6 cupsd
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/cups.xinetd cups-lpd
 
-	insinto /etc/cups; newins ${FILESDIR}/cupsd.conf-1.1.18 cupsd.conf
+	#insinto /etc/cups; newins ${FILESDIR}/cupsd.conf-1.1.18 cupsd.conf
 }
 
 pkg_postinst() {
@@ -126,12 +115,6 @@ pkg_postinst() {
 	install -m1700 -o lp -d ${ROOT}/var/spool/cups/tmp
 	install -m0711 -o lp -d ${ROOT}/etc/cups/certs
 	install -d -m0755 ${ROOT}/etc/cups/{interfaces,ppd}
-
-	einfo
-	einfo "emerge virtual/ghostscript if you need to print"
-	einfo "to a non-postscript printer (after cups itself! even if it's"
-	einfo "already installed!)"
-	einfo
 
 	einfo "If you're using a USB printer, \"emerge hotplug; rc-update add"
 	einfo "hotplug default\" is something you should probably do. This"
