@@ -1,10 +1,20 @@
-MD5 a3ce1b23f2d3798222ccc53f9b496b6f ChangeLog 1218
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 599dea27280c6bc4797753981fd10595 gtk-engines-smooth-0.5.2.ebuild 1097
 MD5 2342c5f68d757b80472c054486161d15 gtk-engines-smooth-0.5.4.ebuild 832
 MD5 079ea57c42907415daf32e42cffa88bd gtk-engines-smooth-0.5.6.ebuild 833
+MD5 aa791f7968ce986672c299e21d54b96a ChangeLog 1335
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 dde8ce412f26d64de85d4f35abfc8328 gtk-engines-smooth-0.5.8.ebuild 832
+MD5 68bd23617d728ab2463fe93d3ea16554 gtk-engines-smooth-0.5.8.ebuild 839
 MD5 c552bb1ce742d643b8f6bc7bb01a8c18 files/digest-gtk-engines-smooth-0.5.2 75
 MD5 403a4820588ec69500c4ec551808aa50 files/digest-gtk-engines-smooth-0.5.4 75
 MD5 adebf847f2134c083010e8a903bbca6d files/digest-gtk-engines-smooth-0.5.6 75
 MD5 8d95b783acc3e25aad7a0e6b8ebe0d39 files/digest-gtk-engines-smooth-0.5.8 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBF9WdCHk4+ZoBpvsRAi7PAKCtejlXcq4yv307QrAwh3iHHtTCYACdH4y2
+o67mdNuUUG1QGphfdjF1LrE=
+=T+VX
+-----END PGP SIGNATURE-----
