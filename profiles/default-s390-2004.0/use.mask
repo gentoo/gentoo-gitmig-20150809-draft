@@ -1,5 +1,4 @@
 # This file contains a list of useflags that cannot be used on s390.
-jpeg
 gpm
 3dfx
 3dnow
@@ -25,7 +24,7 @@ wavelan
 java
 X
 vim-with-x
-
+qt
 # I need to have some of the bad tcltk uses fixed, until then...
 tcltk
 
