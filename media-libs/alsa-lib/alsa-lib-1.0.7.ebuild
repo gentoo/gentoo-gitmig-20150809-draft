@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.8 2004/11/12 10:58:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.7.ebuild,v 1.1 2004/11/12 10:58:15 eradicator Exp $
 
 IUSE="static jack"
 
@@ -11,14 +11,11 @@ HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86"
 LICENSE="GPL-2 LGPL-2.1"
 
-RDEPEND="virtual/alsa
-	 >=media-sound/alsa-headers-1.0.5a"
-
-DEPEND=">=sys-devel/automake-1.7.2
-	>=sys-devel/autoconf-2.57-r1"
+DEPEND="virtual/alsa
+	>=media-sound/alsa-headers-${PV}"
 
 PDEPEND="jack? ( =media-plugins/alsa-jack-${PV}* )"
 
@@ -30,10 +27,12 @@ src_unpack() {
 		unpack ${A}
 
 		cd ${S}.static
+		epatch ${FILESDIR}/${P}-pcm_wait.patch
 		elibtoolize
 	fi
 
 	cd ${S}
+	epatch ${FILESDIR}/${P}-pcm_wait.patch
 	elibtoolize
 }
 
