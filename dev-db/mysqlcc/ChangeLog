@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysqlcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.7 2003/03/09 22:42:42 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.8 2003/05/05 14:20:41 caleb Exp $
+
+*mysqlcc-0.9.2 (05 May 2003)
+
+  05 May 2003; <caleb@gentoo.org> mysqlcc-0.9.2.ebuild,
+  files/mysqlcc-0.9.2-configperms.patch, files/mysqlcc-0.8.7-qmakespec.patch:
+  Version bump, keeping same patches as version noted below.  Keeping ~86
+  until mysql-4 becomes unmasked in portage.
 
 *mysqlcc-0.8.7-r1 (09 Mar 2003)
 
