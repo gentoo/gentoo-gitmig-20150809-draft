@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.4 2004/11/30 23:12:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.5 2004/12/22 21:46:09 gmsoft Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -81,6 +81,8 @@ mozconfig_init() {
 	# Set optimization level based on CFLAGS
 	if is-flag -O0; then
 		mozconfig_annotate "from CFLAGS" --enable-optimize=-O0
+	elif [[ ${ARCH} == hppa ]]; then
+		mozconfig_annotate "more than -O0 causes segfaults on hppa" --enable-optimize=-O0
 	elif [[ ${ARCH} == alpha || ${ARCH} == amd64 || ${ARCH} == ia64 ]]; then
 		mozconfig_annotate "more than -O1 causes segfaults on 64-bit (bug 33767)" \
 			--enable-optimize=-O1
