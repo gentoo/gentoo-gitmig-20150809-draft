@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.11 2004/11/11 08:53:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.4.ebuild,v 1.1 2004/11/11 08:53:07 eradicator Exp $
 
 inherit eutils versionator
 
@@ -15,7 +15,7 @@ SRC_URI="http://www-crca.ucsd.edu/~msp/Software/${MY_P}.src.tar.gz"
 
 LICENSE="|| ( BSD as-is )"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="X alsa debug"
 
 RDEPEND=">=dev-lang/tcl-8.3.3
@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-exp.patch
 
 	# Fix install borkage... this errors in sandbox, but it still performs the copy,
 	# so we remove it from the makefile and just do it ourselves ignoring the error
@@ -53,7 +52,6 @@ src_compile() {
 }
 
 src_install() {
-	# -k to bypass the errors about doc missing, etc...
 	make DESTDIR=${D} install || die "install failed"
 
 	cd ..
