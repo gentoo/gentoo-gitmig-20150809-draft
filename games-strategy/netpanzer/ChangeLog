@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/netpanzer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.12 2004/08/03 11:55:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.13 2004/08/04 17:49:49 mr_bones_ Exp $
+
+  04 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  netpanzer-0.1.5-r1.ebuild:
+  needs wxGTK to build even if it isn't used (bug #59113)
 
   03 Aug 2004; David Holm <dholm@gentoo.org> netpanzer-0.1.5-r1.ebuild:
   Added to ~ppc.
