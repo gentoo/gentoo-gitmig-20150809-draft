@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/ladebug
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ChangeLog,v 1.1 2003/04/15 03:15:38 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ChangeLog,v 1.2 2003/04/15 10:47:29 taviso Exp $
 
 *ladebug-4.0.67 (15 Apr 2003)
+
+  15 Apr 2003; Tavis Ormandy <taviso@gentoo.org> ladebug-4.0.67.ebuild:
+  missed RDEPEND.
 
   15 Apr 2003; Tavis Ormandy <taviso@gentoo.org> ladebug-4.0.67.ebuild:
   Initial import of ebuild, with optional emacs support.
