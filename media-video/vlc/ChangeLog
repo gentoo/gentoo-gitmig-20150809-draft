@@ -1,18 +1,19 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.13 2002/08/17 13:08:07 danarmak Exp $
-
-  17 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
-
-  Use kde-functions.eclass to determine kdelibs, arts locations.
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.14 2002/09/28 23:36:03 raker Exp $
 
 *vlc-0.4.4 (13 Aug 2002)
+
+  28 Sep 2002; Nick Hadaway <raker@gentoo.org> vlc-0.4.4.ebuild :
+  Removed redundant configure options.  Changed to einstall.
+
+  17 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+  Use kde-functions.eclass to determine kdelibs, arts locations.
 
   15 Aug 2002; Mark Guertin <gerk@gentoo.org> vlc-0.4.4.ebuild :
   Added ppc to keywords
 
   13 Aug 2002; Seemant Kulleen <seemant@gentoo.org> vlc-0.4.4.ebuild :
-
   Version bump.
 
 *vlc-0.4.3 (25 Jul 2002)
@@ -21,7 +22,6 @@
   Added support for libdvbpsi.
 
   29 Jul 2002; Nick Hadaway <raker@gentoo.org> :
-
   Added support for a52dec by default as it is marked as enabled by
   default in vlc's configure options and the a52dec author says we
   should give it a try.  :)  I have it set to depend on
@@ -29,21 +29,18 @@
   safe.
 
   25 Jul 2002; Seemant Kulleen <seemant@gentoo.org>  vlc-0.4.3.ebuild :
-
   Version bump.
 
 *vlc-0.4.2 (13 Jul 2002)
 
   13 Jul 2002; Nick Hadaway <raker@gentoo.org> 
   vlc-0.4.2.ebuild files/digest-vlc-0.4.2:
-
   Version bump.
 
 *vlc-0.4.1 (09 Jul 2002)
 
   09 Jul 2002; Nick Hadaway <raker@gentoo.org> vlc-0.4.1.ebuild
   files/digest-vlc-0.4.1
-
   Version bump.  Added required dependancy for mad (MPEG audio library)
   which allows vlc to read divx files.  Updated configure options.
   Special thanks to to the vlc support team for the quick response
@@ -53,7 +50,6 @@
 
   17 Jun 2002; Seemant Kulleen <seemant@gentoo.org> vlc-0.4.0-r1.ebuild
   files/digest-vlc-0.4.0-r1 :
-
   This now works with Qt2 and Qt3, depending on which is reflected in
   $QTDIR.  Thanks to BradPritt@gmx.de (Markus Mohr) in bug #3678 for
   providing this fix.
@@ -62,27 +58,23 @@
 
   24 May 2002; Seemant Kulleen <seemant@gentoo.org> vlc-0.4.0.ebuild
   files/digest-vlc-0.4.0 :
-
   Version bump.
 
 *vlc-0.3.1-r1 (19 May 2002)
 
   19 May 2002; Seemant Kulleen <seemant@gentoo.org> vlc-0.3.1-r1.ebuild
   files/digest-vlc-0.3.1-r1 :
-
   Added USE dependent ALSA support, since gentoo now defaults to alsa-0.9
 
 *vlc-0.3.1 (07 May 2002)
 
   07 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> vlc-0.3.1.ebuild files/digest-vlc-0.3.1 :
-
   New upstream version.
 
 
 *vlc-0.2.91 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

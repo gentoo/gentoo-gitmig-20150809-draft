@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.4.ebuild,v 1.3 2002/08/17 13:08:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.4.ebuild,v 1.4 2002/09/28 23:36:03 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="VideoLAN Client - DVD/video player"
@@ -134,24 +134,22 @@ src_compile(){
 	autoconf || die
 	
 	econf \
-		--build=${CHOST} \
-		--target=${CHOST} \
-		--localstatedir=/var/state/vlc \
 		--with-sdl \
 		--disable-a52 \
 		--enable-release \
 		--enable-mad \
 		--enable-a52 \
 		--enable-dvbpsi \
-		${myconf} || die
+		${myconf} || die "configure failed"
 
-	emake || die
+	emake || die "parallel make failed"
 }
 
 src_install() {
 
 	dodir /usr/{bin,lib}
-	make DESTDIR=${D} install || die
+
+	einstall || die "make install failed"
 
 	dodoc AUTHORS COPYING ChangeLog FAQ INSTALL* README* MODULES TODO
 
