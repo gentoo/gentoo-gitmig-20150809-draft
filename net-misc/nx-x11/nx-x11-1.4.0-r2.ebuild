@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r2.ebuild,v 1.2 2004/09/12 09:51:51 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r2.ebuild,v 1.3 2004/09/13 00:33:37 pvdabeel Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_NXESD="nxesd-1.4.0-1.tar.gz"
 SRC_URI="$URI_BASE/${SRC_NX_X11} $URI_BASE/${SRC_NXAGENT} $URI_BASE/${SRC_NXAUTH} $URI_BASE/${SRC_NXCOMP} $URI_BASE/${SRC_NXCOMPEXT} $URI_BASE/${SRC_NXVIEWER} $URI_BASE/${SRC_NXDESKTOP} $URI_BASE/${SRC_NXESD}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 #RESTRICT="nostrip"
 DEPEND="virtual/x11"
