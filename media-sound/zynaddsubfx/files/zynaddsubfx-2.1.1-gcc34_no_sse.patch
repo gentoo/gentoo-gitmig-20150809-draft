@@ -1,0 +1,12 @@
+diff -burN portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/src/Makefile ZynAddSubFX-2.1.1/src/Makefile
+--- portage/zynaddsubfx-2.1.1/work/ZynAddSubFX-2.1.1/src/Makefile	2004-10-20 18:09:29.786226273 -0500
++++ ZynAddSubFX-2.1.1/src/Makefile	2004-10-20 19:20:34.940269677 -0500
+@@ -1,7 +1,7 @@
+ include Makefile.inc
+ 
+ ifneq ($(MAKECMDGOALS),debug)
+-  CXXFLAGS= -O6 -ggdb -Wall 
++  CXXFLAGS= -O6 -ggdb -Wall -mno-sse
+ else 
+   CXXFLAGS= -O0 -ggdb -Wall -Wpointer-arith -Wstrict-prototypes
+ endif
