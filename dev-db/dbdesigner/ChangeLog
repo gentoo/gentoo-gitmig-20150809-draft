@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/dbdesigner
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/ChangeLog,v 1.4 2004/06/24 21:52:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/ChangeLog,v 1.5 2004/07/17 10:12:18 dholm Exp $
+
+  17 Jul 2004; David Holm <dholm@gentoo.org> dbdesigner-4.0.5.4.ebuild:
+  Added -* to keywords.
 
   10 Jun 2004; Don Seiler <rizzo@gentoo.org> dbdesigner-4.0.5.4.ebuild:
   Added x11-lib/qt to DEPENDS, closes Bug #53523 - thanks Christian Apolloni
