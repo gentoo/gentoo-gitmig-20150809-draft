@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/powerbook-tools
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerbook-tools/ChangeLog,v 1.1 2002/12/18 06:53:51 sethbc Exp $
+
+*powerbook-tools-0.1 (18 Dec 2002)
+
+  18 Dec 2002; Seth Chandler <sethbc@gentoo.org> powerbook-tools-0.1.ebuild:
+  This is a meta package/wrapper package to install the tools necessary to run
+  linux on an apple powerbook
