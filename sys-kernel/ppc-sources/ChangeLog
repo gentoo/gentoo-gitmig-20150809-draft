@@ -1,9 +1,14 @@
 # ChangeLog for sys-kernel/ppc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.20 2003/03/15 20:40:04 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.21 2003/03/31 23:41:30 kain Exp $
+
+*ppc-sources-2.4.20-r4 (31 Mar 2003)
+
+  31 Mar 2003; Kain <kain@gentoo.org> ppc-sources-2.4.20-r4.ebuild:
+  New PPC kernel. Patches to various systems are the same versions as in -r3,
+  except that we are now using the 2.4.20-ben9 kernel.
 
   11 Feb 2003; Bryon Roche <kain@kain.org> ppc-sources-2.4.20-r3.ebuild:
-
   New PPC kernel. Included patches are: ext2/3 xattr+ACL patch (upgraded to
   0.8.55),2.4.20-ben5,Super FreeS/WAN 1.99-p4, and a reversion of the dmasound
   code, which should fix some sound issues.  Also, this kernel has the
