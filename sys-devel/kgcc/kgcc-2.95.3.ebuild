@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.3 2003/02/13 16:32:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.4 2003/09/05 02:01:39 msterret Exp $
 
 IUSE="static"
 
@@ -24,11 +24,11 @@ DEPEND="${DEPEND}
 
 src_unpack() {
 	unpack gcc-core-${PV}.tar.bz2
-	
+
 	cd ${S}
 
 	libtoolize --copy --force &> ${T}/foo-out
-	
+
 	# This new patch for the atexit problem occured with glibc-2.2.3 should
 	# work with glibc-2.2.4.  This closes bug #3987 and #4004.
 	#
@@ -45,7 +45,7 @@ src_unpack() {
 	# Azarah - 30 Jun 2002
 	#
 	epatch ${FILESDIR}/${P}-new-atexit.diff
-	
+
 }
 
 src_compile() {
@@ -56,7 +56,7 @@ src_compile() {
 
 	unset CFLAGS
 	unset CXXFLAGS
-	
+
 	${S}/configure --prefix=${LOC} \
 		--mandir=${LOC}/share/man \
 		--infodir=${LOC}/share/info \
@@ -89,7 +89,7 @@ src_install() {
 	# binutils libiberty.a and we want to use that version
 	# closes bug #2262
 	rm -f ${D}/usr/lib/libiberty.a
-	
+
 	# Don't need man and info files
 	cd ${D}/usr/share
 	rm -rf info man
@@ -102,7 +102,7 @@ src_install() {
 	rm -rf *-linux-gnu
 
 	cd ${S}
-	docinto /	
+	docinto /
 	dodoc COPYING COPYING.LIB README* FAQ MAINTAINERS
 	docinto html
 	dodoc faq.html

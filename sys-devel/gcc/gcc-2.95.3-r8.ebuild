@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.19 2003/06/25 19:21:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.20 2003/09/05 02:01:09 msterret Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -72,7 +72,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.2
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
-			  
+
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.2.3
 	>=sys-libs/zlib-1.1.4
@@ -105,7 +105,7 @@ src_unpack() {
 	#
 	# Azarah - 30 Jun 2002
 	#
-	if ! use alpha >/dev/null ;then 
+	if ! use alpha >/dev/null ;then
 		epatch ${FILESDIR}/${P}-new-atexit.diff
 	else
 		epatch ${FILESDIR}/${P}-alpha.diff
@@ -121,17 +121,17 @@ src_unpack() {
 		cp ${x} ${x}.orig
 		sed -e 's:datadir = @datadir@:datadir = $(FAKE_ROOT)@datadir@:' \
 			${x}.orig > ${x}
-		
+
 		# Fix --bindir=
 		cp ${x} ${x}.orig
 		sed -e 's:bindir = @bindir@:bindir = $(FAKE_ROOT)@bindir@:' \
 			${x}.orig > ${x}
-		
+
 		# Fix --with-gxx-include-dir=
 		cp ${x} ${x}.orig
 		sed -e 's:gxx_include_dir=${includedir}:gxx_include_dir=$(FAKE_ROOT)${includedir}:' \
 			${x}.orig > ${x}
-		
+
 		rm -f ${x}.orig
 	done
 }
@@ -178,7 +178,7 @@ src_compile() {
 		${myconf} || die
 
 	touch ${S}/gcc/c-gperf.h
-	
+
 	# Setup -j in MAKEOPTS
 	get_number_of_jobs
 
@@ -221,9 +221,9 @@ src_install() {
 		LIBPATH="${LIBPATH}" \
 		FAKE_ROOT="${D}" \
 		install || die
-	
+
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
-	
+
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
@@ -235,13 +235,13 @@ src_install() {
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	
+
 	# Install wrappers
 	exeinto /lib
 	doexe ${FILESDIR}/cpp
 	exeinto /usr/bin
 	doexe ${FILESDIR}/cc
-	
+
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
 	if [ -z "`use build`" ]
@@ -284,7 +284,7 @@ src_install() {
     if [ -z "`use build`" ]
     then
 		cd ${S}
-		docinto /       
+		docinto /
 		dodoc COPYING COPYING.LIB README* FAQ MAINTAINERS
 		docinto html
 		dodoc faq.html

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1-r8.ebuild,v 1.12 2003/06/12 22:12:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1-r8.ebuild,v 1.13 2003/09/05 02:01:09 msterret Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -31,7 +31,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 sparc  -ppc"
 
 DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc 
+RDEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4"
 if [ -z "`use build`" ]
@@ -60,7 +60,7 @@ build_multiple() {
 		return 0
 	else
 		return 1
-	fi	  
+	fi
 }
 
 # used to patch Makefiles to install into the build dir
@@ -68,7 +68,7 @@ FAKE_ROOT=""
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	
+
 	cd ${SORIG}
 	# Fixup libtool to correctly generate .la files with portage
 	# Only apply the portage patch, and only to ltmain.sh in ${SORIG}/
@@ -99,7 +99,7 @@ src_unpack() {
 		bzip2 -dc ${FILESDIR}/${PV}/${x} | \
 			patch -p0 || die "failed with patch ${x}"
 	done
-	
+
 	# SuSE patches
 	bzip2 -dc ${FILESDIR}/${PV}/gcc31-i386-expand-clrstr.patch.bz2 | \
 		patch -p1 || die "failed with patch gcc31-i386-expand-clrstr"
@@ -200,14 +200,14 @@ src_install() {
 		infodir=${D}${LOC}/share/info \
 		FAKE_ROOT=${D} \
 		install || die
-	
+
 	if ! build_multiple
 	then
 		GCC_SUFFIX=""
 	fi
 
 	[ -e ${D}${LOC}/bin/gcc${GCC_SUFFIX} ] || die "gcc not found in ${D}"
-	
+
 	FULLPATH=${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	FULLPATH_D=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH_D}
@@ -282,7 +282,7 @@ src_install() {
     if [ -z "`use build`" ]
     then
 		cd ${SORIG}
-		docinto /	
+		docinto /
 		dodoc BUGS COPYING COPYING.LIB ChangeLog GNATS README* FAQ MAINTAINERS
 		docinto html
 		dodoc *.html
@@ -332,7 +332,7 @@ pkg_postrm() {
 	then
 		ln -sf gcc ${ROOT}/usr/bin/cc
 	fi
-	
+
 	# Fix ncurses b0rking (if r5 isn't unmerged)
         find /usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.17 2003/02/10 07:22:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.18 2003/09/05 02:08:20 msterret Exp $
 
 IUSE="readline build"
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
 DESCRIPTION="A really great language -- minimalist python environment"
-SRC_URI="http://www.python.org/ftp/python/2.0/BeOpen-Python-2.0.tar.bz2 
+SRC_URI="http://www.python.org/ftp/python/2.0/BeOpen-Python-2.0.tar.bz2
 	 http://www.azstarnet.com/~donut/programs/fchksum/python-fchksum-1.1.tar.gz"
 
 HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum/"
@@ -32,7 +32,7 @@ src_unpack() {
 	cd ${S}/Modules
 
 	cp -a ${FILESDIR}/pfconfig.h .
-	unpack python-fchksum-1.1.tar.gz 
+	unpack python-fchksum-1.1.tar.gz
 
 	echo '*static*' >> Setup.local
 
@@ -75,15 +75,15 @@ src_compile() {
 src_install() {
 	 dodir /usr/share/man
 	 make install prefix=${D}/usr MANDIR=${D}/usr/share/man || die
-	dosym spython /usr/bin/python	
+	dosym spython /usr/bin/python
 
 	rm -rf ${D}/usr/include
 	rm -rf ${D}/usr/lib/${PN}${PV}/config
-	
+
 	dodir /usr/lib/python${PV}/site-packages
 	rm -rf ${D}/usr/lib/spython${PV}/site-packages
 	dosym ../python${PV}/site-packages /usr/lib/spython${PV}/site-packages
-	
+
 	 if [ "`use build`" ]
 	 then
 		rm -rf ${D}/usr/share/man
@@ -91,7 +91,7 @@ src_install() {
 	 	cd ${D}/usr/lib/spython2.0
 		#remove test and lib-tk directory; we can do much more cleaning too.
 		rm -rf test lib-tk
-		#clean out byte-compiled stuff.	They aren't required, and doing so saves space 
+		#clean out byte-compiled stuff.	They aren't required, and doing so saves space
 		#cd to root so "find" works properly.
 		cd ${D}
 		local x

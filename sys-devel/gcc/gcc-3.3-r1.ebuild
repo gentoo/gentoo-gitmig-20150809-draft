@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.5 2003/08/24 17:30:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.6 2003/09/05 02:01:10 msterret Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -67,7 +67,7 @@ if [ -z "${SNAPSHOT}" ]
 then
 	S="${WORKDIR}/${PN}-${MAIN_BRANCH}"
 	SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${PN}-${MAIN_BRANCH}.tar.bz2"
-	
+
 	if [ -n "${PATCH_VER}" ]
 	then
 		SRC_URI="${SRC_URI}
@@ -118,7 +118,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.3.1
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
-			  
+
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
@@ -163,7 +163,7 @@ src_unpack() {
 	if [ -z "${SNAPSHOT}" ]
 	then
 		unpack ${PN}-${MAIN_BRANCH}.tar.bz2
-		
+
 		if [ -n "${PATCH_VER}" ]
 		then
 			unpack ${P}-patches-${PATCH_VER}.tar.bz2
@@ -224,7 +224,7 @@ src_unpack() {
 	then
 		epatch ${FILESDIR}/3.3/gcc33-no-multilib-amd64.patch
 	fi
-	
+
 	# PPC mergel miscompilation workaround
 	if use ppc
 	then
@@ -243,7 +243,7 @@ src_unpack() {
 	then
 		cd ${S}; unpack ${P}-manpages.tar.bz2
 	fi
-	
+
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
@@ -254,7 +254,7 @@ src_compile() {
 
 	local myconf=
 	local gcc_lang=
-	
+
 	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
@@ -326,7 +326,7 @@ src_compile() {
 
 	# Do not make manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
-	then 
+	then
 		find ${S} -name '*.[17]' -exec touch {} \; || :
 	fi
 
@@ -379,7 +379,7 @@ src_install() {
 		DESTDIR="${D}" \
 		LIBPATH="${LIBPATH}" \
 		install || die
-	
+
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
 
 	dodir /lib /usr/bin
@@ -393,7 +393,7 @@ src_install() {
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	
+
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
@@ -509,7 +509,7 @@ src_install() {
 		dohtml -r -a css,diff,html,txt,xml docs/html/*
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
-		
+
 		if [ -n "`use java`" ]
 		then
 			cd ${S}/fastjar
@@ -563,7 +563,7 @@ pkg_postinst() {
 	# Update libtool linker scripts to reference new gcc version ...
 	if [ "${ROOT}" = "/" ] && \
 	   [ -f "${WORKDIR}/.oldgccversion" -o -f "${WORKDIR}/.oldgccchost" ]
-	then 
+	then
 		local OLD_GCC_VERSION=
 		local OLD_GCC_CHOST=
 
@@ -574,7 +574,7 @@ pkg_postinst() {
 		else
 			OLD_GCC_VERSION="${MY_PV_FULL}"
 		fi
-		
+
 		if [ -f "${WORKDIR}/.oldgccchost" ] && \
 		   [ -n "$(cat "${WORKDIR}/.oldgccchost")" ]
 		then
@@ -583,7 +583,7 @@ pkg_postinst() {
 
 		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
 	fi
-	
+
 	# Fix ncurses b0rking (if r5 isn't unmerged)
 	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 

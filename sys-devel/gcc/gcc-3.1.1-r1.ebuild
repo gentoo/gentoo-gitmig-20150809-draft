@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r1.ebuild,v 1.9 2003/08/10 01:18:41 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r1.ebuild,v 1.10 2003/09/05 02:01:09 msterret Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -36,7 +36,7 @@ DEPEND="virtual/glibc
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
-RDEPEND="virtual/glibc 
+RDEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
@@ -58,7 +58,7 @@ build_multiple() {
 		return 0
 	else
 		return 1
-	fi	  
+	fi
 }
 
 # used to patch Makefiles to install into the build dir
@@ -70,7 +70,7 @@ src_unpack() {
 	mkdir -p ${WORKDIR}/patches
 	tar -jxf ${DISTDIR}/${P}_final-patches-1.0.tbz2 -C ${WORKDIR}/patches || \
 		die "Could not unpack patches"
-	
+
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
@@ -189,14 +189,14 @@ src_install() {
 		infodir=${D}${LOC}/share/info \
 		FAKE_ROOT=${D} \
 		install || die
-	
+
 	if ! build_multiple
 	then
 		GCC_SUFFIX=""
 	fi
 
 	[ -e ${D}${LOC}/bin/gcc${GCC_SUFFIX} ] || die "gcc not found in ${D}"
-	
+
 	FULLPATH=${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	FULLPATH_D=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH_D}
@@ -293,7 +293,7 @@ src_install() {
     if [ -z "`use build`" ]
     then
 		cd ${S}
-		docinto /	
+		docinto /
 		dodoc COPYING COPYING.LIB ChangeLog LAST_UPDATED README MAINTAINERS
 		cd ${S}/boehm-gc
 		docinto boehm-gc
@@ -320,7 +320,7 @@ src_install() {
 		cd ${S}/libstdc++-v3
 		docinto libstdc++-v3
 		dodoc ChangeLog* README
-		
+
         if [ -n "`use java`" ]
         then
 			cd ${S}/fastjar
@@ -347,7 +347,7 @@ pkg_postrm() {
 	then
 		ln -sf gcc ${ROOT}/usr/bin/cc
 	fi
-	
+
 	# Fix ncurses b0rking (if r5 isn't unmerged)
 	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }

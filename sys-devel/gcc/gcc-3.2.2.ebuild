@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2.ebuild,v 1.18 2003/08/24 08:40:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2.ebuild,v 1.19 2003/09/05 02:01:09 msterret Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -62,7 +62,7 @@ if [ -z "${SNAPSHOT}" ]
 then
 	S="${WORKDIR}/${PN}-${MAIN_BRANCH}"
 	SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${PN}-${MAIN_BRANCH}.tar.bz2"
-	
+
 	if [ -n "${PATCH_VER}" ]
 	then
 		SRC_URI="${SRC_URI}
@@ -103,7 +103,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.3.1
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
-			  
+
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
@@ -143,7 +143,7 @@ src_unpack() {
 	if [ -z "${SNAPSHOT}" ]
 	then
 		unpack ${PN}-${MAIN_BRANCH}.tar.bz2
-		
+
 		if [ -n "${PATCH_VER}" ]
 		then
 			unpack ${P}-patches-${PATCH_VER}.tar.bz2
@@ -205,7 +205,7 @@ src_unpack() {
 		cp ${x} ${x}.orig
 		sed -e 's:datadir = @datadir@:datadir = $(FAKE_ROOT)@datadir@:' \
 			${x}.orig > ${x}
-		
+
 		# Fix --bindir=
 		cp ${x} ${x}.orig
 		sed -e 's:bindir = @bindir@:bindir = $(FAKE_ROOT)@bindir@:' \
@@ -221,12 +221,12 @@ src_unpack() {
 		sed -e 's:gxx_include_dir = @gxx_:gxx_include_dir = $(FAKE_ROOT)@gxx_:' \
 			-e 's:glibcppinstalldir = @gxx_:glibcppinstalldir = $(FAKE_ROOT)@gxx_:' \
 			${x}.orig > ${x}
-		
+
 		# Where java security stuff should be installed
 		cp ${x} ${x}.orig
 		sed -e 's:secdir = $(libdir)/security:secdir = $(FAKE_ROOT)$(LIBPATH)/security:' \
 			${x}.orig > ${x}
-		
+
 		rm -f ${x}.orig
 	done
 }
@@ -234,7 +234,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	local gcc_lang=""
-	
+
 	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
@@ -290,7 +290,7 @@ src_compile() {
 
 	# Do not make manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
-	then 
+	then
 		find ${S} -name '*.[17]' -exec touch {} \; || :
 	fi
 
@@ -342,9 +342,9 @@ src_install() {
 		LIBPATH="${LIBPATH}" \
 		FAKE_ROOT="${D}" \
 		install || die
-	
+
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
-	
+
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
@@ -356,14 +356,14 @@ src_install() {
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	
+
 	# Install wrappers
 # Handled by gcc-config now ...
 #	exeinto /lib
 #	doexe ${FILESDIR}/cpp
 #	exeinto /usr/bin
 #	doexe ${FILESDIR}/cc
-	
+
 # This should be invalidated by the linker scripts we have as the latest
 # fix for bug #4411
 #
@@ -482,7 +482,7 @@ src_install() {
 		dohtml -r -a css,diff,html,txt,xml docs/html/*
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
-		
+
 		if [ -n "`use java`" ]
 		then
 			cd ${S}/fastjar
@@ -532,7 +532,7 @@ pkg_postinst() {
 	# Update libtool linker scripts to reference new gcc version ...
 	if [ "${ROOT}" = "/" ] && \
 	   [ -f "${WORKDIR}/.oldgccversion" -o -f "${WORKDIR}/.oldgccchost" ]
-	then 
+	then
 		local OLD_GCC_VERSION=
 		local OLD_GCC_CHOST=
 
@@ -543,7 +543,7 @@ pkg_postinst() {
 		else
 			OLD_GCC_VERSION="${MY_PV_FULL}"
 		fi
-		
+
 		if [ -f "${WORKDIR}/.oldgccchost" ] && \
 		   [ -n "$(cat "${WORKDIR}/.oldgccchost")" ]
 		then
@@ -552,7 +552,7 @@ pkg_postinst() {
 
 		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
 	fi
-	
+
 	# Fix ncurses b0rking (if r5 isn't unmerged)
 	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }

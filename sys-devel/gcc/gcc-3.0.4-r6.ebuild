@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.12 2003/02/13 16:29:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.13 2003/09/05 02:01:09 msterret Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -44,12 +44,12 @@ build_multiple() {
 		return 0
 	else
 		return 1
-	fi	  
+	fi
 }
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	
+
 	#now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
 	cd ${S}
 	tar xzf ${DISTDIR}/texinfo-${TV}.tar.gz || die
@@ -160,7 +160,7 @@ src_install() {
 	cp Makefile Makefile.orig
 	sed -e "s:datadir = /usr/share:datadir = ${D}/usr/share:" \
 		Makefile.orig >Makefile
-	
+
 	#make install from the build directory
 	cd ${WORKDIR}/build
 	make prefix=${D}${LOC} \
@@ -168,14 +168,14 @@ src_install() {
 		infodir=${D}${LOC}/share/info \
 		datadir=${D}${LOC}/share/gcc-${PV} \
 		install || die
-	
+
 	if ! build_multiple
 	then
 		GCC_SUFFIX=""
 	fi
 
 	[ -e ${D}${LOC}/bin/gcc${GCC_SUFFIX} ] || die "gcc not found in ${D}"
-	
+
 	FULLPATH=${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	FULLPATH_D=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH_D}
@@ -246,14 +246,14 @@ src_install() {
     if [ -z "`use build`" ]
     then
 		#do a full texinfo-${TV} install
-		
+
 		if ! build_multiple
 		then
 			cd ${WORKDIR}/build/texinfo
 		  	make DESTDIR=${D} \
 				infodir=${D}/usr/share/info \
 				install || die
-			
+
 			exeinto /usr/sbin
 			doexe ${FILESDIR}/mkinfodir
 
@@ -266,7 +266,7 @@ src_install() {
 
 			cd ${S}/texinfo
 		   	docinto texinfo
-			dodoc AUTHORS ChangeLog COPYING INTRODUCTION NEWS README TODO 
+			dodoc AUTHORS ChangeLog COPYING INTRODUCTION NEWS README TODO
 			docinto texinfo/info
 			dodoc info/README
 			docinto texinfo/makeinfo
@@ -276,7 +276,7 @@ src_install() {
 		# end texinfo 4.0; begin more gcc stuff
 
 		cd ${S}
-		docinto /	
+		docinto /
 		dodoc BUGS COPYING COPYING.LIB ChangeLog GNATS README* FAQ MAINTAINERS
 		docinto html
 		dodoc *.html

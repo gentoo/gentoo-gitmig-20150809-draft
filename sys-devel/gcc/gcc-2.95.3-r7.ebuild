@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.18 2003/02/13 16:29:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.19 2003/09/05 02:01:09 msterret Exp $
 
 IUSE="nls static build"
 
@@ -26,7 +26,7 @@ then
 	DEPEND="${DEPEND} nls? ( sys-devel/gettext )
 		>=sys-libs/ncurses-5.2-r2
 		>=sys-apps/texinfo-4.2-r4"
-	
+
 	RDEPEND="${RDEPEND} >=sys-libs/ncurses-5.2-r2"
 fi
 
@@ -35,11 +35,11 @@ fi
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	
+
 	cd ${S}
 
 	libtoolize --copy --force &> ${T}/foo-out
-	
+
 	# This new patch for the atexit problem occured with glibc-2.2.3 should
 	# work with glibc-2.2.4.  This closes bug #3987 and #4004.
 	#
@@ -56,7 +56,7 @@ src_unpack() {
 	# Azarah - 30 Jun 2002
 	#
 	epatch ${FILESDIR}/${P}-new-atexit.diff
-	
+
 	# Now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
 #	cd ${S}
 #	tar xzf ${DISTDIR}/texinfo-${TV}.tar.gz || die
@@ -120,9 +120,9 @@ src_install() {
 	# binutils libiberty.a and we want to use that version
 	# closes bug #2262
 	rm -f ${D}/usr/lib/libiberty.a
-		
+
 	[ -e ${D}/usr/bin/gcc ] || die "gcc not found in ${D}"
-	
+
     FULLPATH=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
 	dosym g++ /usr/bin/${CHOST}-g++
@@ -133,7 +133,7 @@ src_install() {
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/05gcc
-	
+
 	# Install wrappers
 	exeinto /lib
 	doexe ${FILESDIR}/cpp
@@ -144,7 +144,7 @@ src_install() {
     if [ -z "`use build`" ]
     then
 		#do a full texinfo-${TV} install
-		
+
 #		cd ${S}/texinfo
 #	  	make DESTDIR=${D} infodir=${D}/usr/share/info install || die
 #		exeinto /usr/sbin
@@ -159,7 +159,7 @@ src_install() {
 #
 #		cd ${S}/texinfo
 #	   	docinto texinfo
-#		dodoc AUTHORS ChangeLog COPYING INTRODUCTION NEWS README TODO 
+#		dodoc AUTHORS ChangeLog COPYING INTRODUCTION NEWS README TODO
 #		docinto texinfo/info
 #		dodoc info/README
 #		docinto texinfo/makeinfo
@@ -168,7 +168,7 @@ src_install() {
 		# end texinfo 4.0; begin more gcc stuff
 
 		cd ${S}
-		docinto /	
+		docinto /
 		dodoc COPYING COPYING.LIB README* FAQ MAINTAINERS
 		docinto html
 		dodoc faq.html

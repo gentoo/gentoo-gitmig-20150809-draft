@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.14 2003/07/12 02:52:41 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.15 2003/09/05 02:02:21 msterret Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -55,7 +55,7 @@
 
 IUSE="berkdb gdbm"
 
-inherit eutils flag-o-matic 
+inherit eutils flag-o-matic
 
 # Perl has problems compiling with -Os in your flags
 replace-flags "-Os" "-O2"
@@ -71,7 +71,7 @@ MY_P="${P/lib}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.gz"
-HOMEPAGE="http://www.perl.org" 
+HOMEPAGE="http://www.perl.org"
 
 if [ "${PN}" = "libperl" ]
 then
@@ -170,7 +170,7 @@ src_compile() {
 
 	export LC_ALL="C"
 	local myconf=""
-	
+
 	if [ "`use threads`" ]
 	then
 		einfo "using threads"
@@ -206,7 +206,7 @@ src_compile() {
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
-	
+
 	if [ "${PN}" = "libperl" ]
 	then
 		rm -f config.sh Policy.sh
@@ -232,7 +232,7 @@ src_compile() {
 			${myconf} || die
 
 		emake -f Makefile depend || die "Couldn't make libperl.so depends"
-		emake -f Makefile ${LIBPERL} || die "Unable to make libperl.so" 
+		emake -f Makefile ${LIBPERL} || die "Unable to make libperl.so"
 		mv ${LIBPERL} ${WORKDIR}
 	else
 cat > config.over <<EOF
@@ -269,17 +269,17 @@ sleep 10
 			-Dcf_by='Gentoo' \
 			-Ud_csh \
 			${myconf} || die "Unable to configure"
-			
+
 		MAKEOPTS="${MAKEOPTS} -j1" emake || die "Unable to make"
-	
+
 		emake -i test CCDLFLAGS=
 	fi
 }
 
 src_install() {
-	
+
 	export LC_ALL="C"
-	
+
 	if [ "${PN}" = "libperl" ]
 	then
 		dolib.so ${WORKDIR}/${LIBPERL}
@@ -292,7 +292,7 @@ src_install() {
 		dosym ../../../../${LIBPERL} ${coredir}/${LIBPERL}
 		dosym ../../../../${LIBPERL} ${coredir}/libperl.so.${PERLSLOT}
 		dosym ../../../../${LIBPERL} ${coredir}/libperl.so
-		
+
 		# Fix for "stupid" modules and programs
 		dodir /usr/lib/perl5/site_perl/${PV}/${myarch}${mythreading}
 
@@ -336,19 +336,19 @@ EOF
 			--man3dir="${D}/usr/share/man/man3" --man3ext='3'
 
 		# This removes ${D} from Config.pm and .packlist
-		for i in `find ${D} -iname "Config.pm"` `find ${D} -iname ".packlist"`;do 
+		for i in `find ${D} -iname "Config.pm"` `find ${D} -iname ".packlist"`;do
 			einfo "Removing ${D} from ${i}..."
 			sed -e "s:${D}::" ${i} > ${i}.new &&\
 				mv ${i}.new ${i} || die "Sed failed"
 		done
 	fi
-	
+
 	dodoc Changes* Artistic Copying README Todo* AUTHORS
 
 	if [ "${PN}" = "perl" ]
 	then
 		# HTML Documentation
-		# We expect errors, warnings, and such with the following. 
+		# We expect errors, warnings, and such with the following.
 
 		dodir /usr/share/doc/${PF}/html
 		./perl installhtml \
@@ -385,20 +385,20 @@ pkg_postinst() {
 				# if there are already a perl installed, if so, link libperl.so
 				# to that *soname* version of libperl.so ...
 				local perlversion="`${ROOT}/usr/bin/perl -V:version | cut -d\' -f2 | cut -d. -f1,2`"
-				
+
 				cd ${ROOT}usr/lib
 				# Link libperl.so to the *soname* versioned lib ...
 				ln -snf `echo libperl.so.?.${perlversion} | cut -d. -f1,2,3` libperl.so
 			else
 				local x latest
-				
+
 				# Nope, we are not so lucky ... try to figure out what version
 				# is the latest, and keep fingers crossed ...
 				for x in `ls -1 ${ROOT}usr/lib/libperl.so.?.*`
 				do
 					latest="${x}"
 				done
-				
+
 				cd ${ROOT}usr/lib
 				# Link libperl.so to the *soname* versioned lib ...
 				ln -snf `echo ${latest##*/} | cut -d. -f1,2,3` libperl.so
@@ -420,7 +420,7 @@ pkg_postinst() {
 			# Create libperl.so (we use the *soname* versioned lib here ..)
 			ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/lib/libperl.so
 		fi
-		
+
 		if [ "${ROOT}" = "/" ]
 		then
 			ebegin "Converting C header files to the corresponding Perl format"
@@ -449,7 +449,7 @@ pkg_postinst() {
 		eerror ""
 		sleep 5
 		eerror ""
-		
+
 	fi
 }
 

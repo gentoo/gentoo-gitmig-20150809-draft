@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r5.ebuild,v 1.10 2003/08/10 01:18:41 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r5.ebuild,v 1.11 2003/09/05 02:01:09 msterret Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -82,7 +82,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.2
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
-			  
+
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.2
 	>=sys-libs/zlib-1.1.4
@@ -142,23 +142,23 @@ src_unpack() {
 		cp ${x} ${x}.orig
 		sed -e 's:datadir = @datadir@:datadir = $(FAKE_ROOT)@datadir@:' \
 			${x}.orig > ${x}
-		
+
 		# Fix --bindir=
 		cp ${x} ${x}.orig
 		sed -e 's:bindir = @bindir@:bindir = $(FAKE_ROOT)@bindir@:' \
 			${x}.orig > ${x}
-		
+
 		# Fix --with-gxx-include-dir=
 		cp ${x} ${x}.orig
 		sed -e 's:gxx_include_dir = @gxx_:gxx_include_dir = $(FAKE_ROOT)@gxx_:' \
 			-e 's:glibcppinstalldir = @gxx_:glibcppinstalldir = $(FAKE_ROOT)@gxx_:' \
 			${x}.orig > ${x}
-		
+
 		# Where java security stuff should be installed
 		cp ${x} ${x}.orig
 		sed -e 's:secdir = $(libdir)/security:secdir = $(FAKE_ROOT)$(LIBPATH)/security:' \
 			${x}.orig > ${x}
-		
+
 		rm -f ${x}.orig
 	done
 }
@@ -259,9 +259,9 @@ src_install() {
 		LIBPATH="${LIBPATH}" \
 		FAKE_ROOT="${D}" \
 		install || die
-	
+
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
-	
+
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
@@ -273,11 +273,11 @@ src_install() {
 	# Also set CC and CXX
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/05gcc
-	
+
 	# Dummies to get CONTENTS right .. will handle with gcc-config
 	touch ${D}/lib/cpp
 	touch ${D}/usr/bin/cc
-	
+
 # This should be invalidated by the linker scripts we have as the latest
 # fix for bug #4411
 #
@@ -396,7 +396,7 @@ src_install() {
 		dohtml -r -a css,diff,html,txt,xml docs/html/*
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
-		
+
         if [ -n "`use java`" ]
         then
 			cd ${S}/fastjar
@@ -420,7 +420,7 @@ pkg_postinst() {
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
 	fi
-	
+
 	# Fix ncurses b0rking (if r5 isn't unmerged)
 	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }

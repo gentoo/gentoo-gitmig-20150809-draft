@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p-r1.ebuild,v 1.6 2003/03/11 21:11:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p-r1.ebuild,v 1.7 2003/09/05 02:03:56 msterret Exp $
 
 inherit gnuconfig
 
@@ -34,9 +34,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-	
+
 	use nls || myconf="--disable-nls"
-	
+
 	./configure --prefix=/usr \
 		--libexecdir=/usr/lib \
 		--mandir=/usr/share/man \
@@ -44,7 +44,7 @@ src_compile() {
 		--with-modules \
 		--host=${CHOST} \
 		${myconf} || die
-		
+
 	make ${MAKEOPTS} || die
 }
 
@@ -62,9 +62,8 @@ src_install() {
 	dodoc modules/README modules/TODO
 	docinto html
 	dohtml examples/WWW/*.htm
-	
+
 	# mkconfig.sh creates this file in other revisions...
 	# It shouldn't be there, so we delete it.
 	rm -f /tmp/env
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.ebuild,v 1.6 2003/06/22 06:18:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.ebuild,v 1.7 2003/09/05 02:03:56 msterret Exp $
 
 IUSE="nls"
 
@@ -33,14 +33,14 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-	
+
 	use nls || myconf="--disable-nls"
-	
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--enable-changeword \
 		${myconf} || die
-		
+
 	emake || die
 }
 
