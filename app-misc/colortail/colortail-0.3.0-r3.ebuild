@@ -1,13 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.4 2002/10/20 18:40:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.5 2002/11/30 19:44:41 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Colortail custom colors your log files and works like tail"
 SRC_URI="http://www.student.hk-r.se/~pt98jan/colortail-0.3.0.tar.gz"
 HOMEPAGE="http://www.student.hk-r.se/~pt98jan/colortail.html"
-
-DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -16,13 +13,12 @@ KEYWORDS="x86 ppc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	# 2002-09-08: karltk
 	# This bit of trickery conditionally applies the gcc-3.2 patch
 	# if the desired compiler is not the 2.95.x series. It is assumed
 	# that if it's not 2.95, it is 3.0.x or newer.
-	if [ -z "${CXX}" ] ; then
-		CXX=g++
-	fi
+	[ -z "${CXX}" ] && CXX=g++
 	if [ "`${CXX} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
 		# Both 3.1.x and 3.2 work with the patch.
 		patch -p1 < ${FILESDIR}/${PV}/ansi-c++-gcc-3.2.diff || die
@@ -31,19 +27,16 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ -z "${CXX}" ] ; then
-		CXX=g++
-	fi
+	[ -z "${CXX}" ] && CXX=g++
 	if [ "`cat .gentoo-compiler-version`" != "`${CXX} -dumpversion`" ] ; then
 		eerror "You must unpack and compile with the same CXX setting"
 		die
 	fi
-	econf || die
+	econf
 	make || die
 }
  
-src_install()  {
-	
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc README example-conf/conf*
 	dodir /usr/bin/wrappers

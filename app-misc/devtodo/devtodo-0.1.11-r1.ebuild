@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.11-r1.ebuild,v 1.6 2002/10/20 18:40:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.11-r1.ebuild,v 1.7 2002/11/30 19:45:23 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A nice command line todo list for developers"
 SRC_URI="http://activelysecure.net/~alec/development/devtodo/0.1.11/${P}.tar.gz"
 HOMEPAGE="http://activelysecure.net/~alec/development/devtodo/"
@@ -21,11 +20,11 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
+	econf
 	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog QuickStart README TODO
 }
