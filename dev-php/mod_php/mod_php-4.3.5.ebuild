@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.5 2004/04/01 06:30:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.6 2004/04/01 22:54:28 jhuebel Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -68,7 +68,7 @@ src_unpack() {
 	detectapache domsg
 	php-sapi_src_unpack
 	if [ "${ARCH}" == "amd64" ] ; then
-		epatch ${FILESDIR}/php-4.3.4-amd64hack.diff
+		epatch ${FILESDIR}/mod_php-4.3.4-amd64hack.diff
 	fi
 
 	# bug fix for security problem - bug #39952
