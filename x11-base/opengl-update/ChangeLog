@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.32 2004/06/28 16:58:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.33 2004/07/17 03:25:31 cyfred Exp $
+
+*opengl-update-1.8 (17 Jul 2004)
+
+  17 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; +files/glext.h-20040714,
+  +files/opengl-update-1.8, +opengl-update-1.8.ebuild:
+  Version bump. We now provide a system with glext.h file from here for GL
+  implementations that do not provide one them selves. Also support is now
+  available for 32 bit compatibility libraries and TLS under the nvidia drivers.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> opengl-update-1.5.ebuild,
   opengl-update-1.7.1.ebuild, opengl-update-1.7.2.ebuild:
