@@ -3,6 +3,7 @@
 # Tom Gall <tgall@gentoo.org> manages this list
 acl
 afs
+acpi
 3dfx
 3dnow
 directfb
