@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.50 2004/11/04 02:48:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.51 2004/11/04 03:00:01 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -144,10 +144,13 @@ cflag_setup() {
 	# Set up CFLAGS
 	filter-flags "-funroll-loops"
 
-	ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -Os -pipe -fomit-frame-pointer -g -gstabs+ -gstabs -ggdb"
+	ALLOWED_FLAGS="-fstack-protector -march -mcpu -mtune -O -O0 -O1 -O2 -O3 -Os"
+	ALLOWED_FLAGS="${ALLOWED_FLAGS} -pipe -fomit-frame-pointer"
+	ALLOWED_FLAGS="${ALLOWED_FLAGS} -g -g0 -g1 -g2 -g3"
+	ALLOWED_FLAGS="${ALLOWED_FLAGS} -ggdb -ggdb0 -ggdb1 -ggdb2 -ggdb3"
 	# arch-specific section added by popular demand
 	case "${ARCH}" in
-		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mtune -mips1 -mips2 -mips3 -mips4 -mabi"
+		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi"
 			;;
 		# -fomit-frame-pointer known to break things and is pointless
 		# according to ciaranm
