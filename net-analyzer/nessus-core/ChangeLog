@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.52 2005/01/12 08:33:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.53 2005/01/12 19:38:26 dragonheart Exp $
+
+  13 Jan 2005; Daniel Black <dragonheart@gentoo.org> nessus-core-2.3.0.ebuild:
+  Prelude patch disabled as per bug #77710. Thanks to Tuan Van
+  <langthang@gentoo.org>
 
 *nessus-core-2.3.0 (12 Jan 2005)
 
