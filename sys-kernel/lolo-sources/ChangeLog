@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.22 2002/12/18 00:12:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.23 2002/12/19 23:46:32 lostlogic Exp $
+
+*lolo-sources-2.4.20.1_pre5 (19 Dec 2002)
+
+  19 Dec 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre5.ebuild:
+  You ever get the feeling that the world is out to get you?  Well it is...
+  I scrapped everything and started over based HEAVILY on Con Kolivas kernel from
+  http://kernel.kolivas.net.  I think this will do much better at serving us all
+  than where we were headed before.
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
