@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.24 2004/06/24 23:59:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.25 2004/06/29 00:16:46 vapier Exp $
 
 inherit eutils
 
@@ -10,10 +10,11 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-telnet-${PV}.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ppc64"
 IUSE="build"
 
-DEPEND=">=sys-libs/ncurses-5.2"
+DEPEND=">=sys-libs/ncurses-5.2
+	!net-misc/telnet-bsd"
 
 S=${WORKDIR}/netkit-telnet-${PV}
 
@@ -37,7 +38,6 @@ src_compile() {
 }
 
 src_install() {
-	into /usr
 	dobin telnet/telnet || die
 	#that's it if we're going on a build image
 	use build && return 0

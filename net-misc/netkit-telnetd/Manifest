@@ -1,6 +1,16 @@
-MD5 212a296c8ca920747184fc5774afb6cc netkit-telnetd-0.17-r3.ebuild 1477
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6557c9833572d0cc193696a6aa4030bc ChangeLog 2409
-MD5 0bdd0131a5803a2e4a4ec8b3b9fb5039 files/telnetd.xinetd 205
+MD5 e4cfffd72d55d6943694b125bb63ae5b netkit-telnetd-0.17-r3.ebuild 1486
 MD5 248ab0551e59a480cbe3d64657fa586f files/digest-netkit-telnetd-0.17-r3 70
-MD5 d741260d55b46b1e6ae6cf923b4542e5 files/netkit-telnetd-0.17-gentoo.patch 3155
 MD5 6d23345a3ccb8e7b572752f14aee4860 files/net.issue.sample 117
+MD5 d741260d55b46b1e6ae6cf923b4542e5 files/netkit-telnetd-0.17-gentoo.patch 3155
+MD5 0bdd0131a5803a2e4a4ec8b3b9fb5039 files/telnetd.xinetd 205
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4LUGHTu7gpaalycRAqgnAJ9X6Vb9TNITuQSp6ZrS4oiAnrmayQCdGqEl
+yS1AotljSzx2h9B4cib+BB8=
+=bIDN
+-----END PGP SIGNATURE-----
