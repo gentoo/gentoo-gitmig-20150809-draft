@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.7.5_beta.ebuild,v 1.1 2003/09/12 14:26:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawdecode/xawdecode-1.7.5_beta.ebuild,v 1.2 2003/09/12 19:45:06 seemant Exp $
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc"
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/x11
 	>=media-libs/zvbi-0.2.4
 	x86? ( >=media-libs/divx4linux-20030428 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.6 )
-	!ffmpeg? ( x11-libs/neXtaw x11-libs/Xaw3d )
+	!ffmpeg? ( x11-libs/neXtaw x11-libs/Xaw )
 	xvid? ( >=media-libs/xvid-0.9.0 )
 	encode? ( >=media-sound/lame-3.93 )
 	jpeg? ( media-libs/jpeg )
@@ -43,7 +43,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-lirc" \
 		|| myconf="${myconf} --disable-lirc"
 
-	use divx4linux \
+	use x86 \
 		&& myconf="${myconf} --enable-divx4linux" \
 		|| myconf="${myconf} --disable-divx4linux"
 
