@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.3 2003/07/08 17:34:16 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.4 2003/07/08 21:42:49 taviso Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -309,6 +309,13 @@ src_compile() {
 		then
 			myconf="${myconf} --enable-old-abi-compat-wrappers"
 		fi
+	fi
+
+	if [ -n "`use alpha`" ]
+	then
+		# mozilla wont link with X11 on alpha, for some crazy reason.
+		# set it to link explicitly here.
+		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -lX11/' ${S}/gfx/src/gtk/Makefile.in
 	fi
 
 	# *********************************************************************
