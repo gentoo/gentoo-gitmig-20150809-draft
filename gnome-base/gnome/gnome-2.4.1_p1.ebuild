@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.2 2003/12/23 15:10:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.3 2004/01/07 15:28:07 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -12,7 +12,11 @@ IUSE="cdr doc accessibility samba"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc ~hppa"
+
+# NOTE TO DEVS : 
+# THIS IS AN UPDATE TRACKING PACK ONLY MEANT FOR GNOME DEVS
+# NO NEED TO ADD ARCH KEYWORDS, THOSE WILL BE ADDED IN REGULAR RELEASES
+KEYWORDS="~x86"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop,
@@ -93,7 +97,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/librsvg-2.4
 	>=x11-libs/libwnck-2.4.0.1-r1
 	>=x11-wm/metacity-2.6.3
-	>=gnome-extra/zenity-1.6
+	>=gnome-extra/zenity-1.8
 
 	>=x11-libs/startup-notification-0.5
 
