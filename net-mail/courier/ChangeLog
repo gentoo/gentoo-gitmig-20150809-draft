@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.45 2004/02/16 01:40:18 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.46 2004/03/08 04:58:22 iggy Exp $
+
+*courier-0.45.0 (07 Mar 2004)
+
+  07 Mar 2004; Brian Jackson <iggy@gentoo.org> courier-0.45.0.ebuild,
+  files/courier-init:
+  version bump, fix for bug 42164, and an issue reported by 
+  hachre@dynaloop.net
 
   15 Feb 2004; Brian Jackson <iggy@gentoo.org> courier-0.44.2.20040201.ebuild:
   a few cleanups, and fix bug 32878

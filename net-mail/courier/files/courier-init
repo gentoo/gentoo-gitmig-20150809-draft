@@ -32,6 +32,12 @@ checkconfig() {
 	[ ! -f ${datadir}/imapd.pem ] && \
 	ebegin " generating-IMAP-SSL-certificate..." && "${sbindir}/mkimapdcert"
 
+	[ -f ${sysconfdir}/esmtpd-ssl ] && . ${sysconfdir}/esmtpd-ssl
+
+	# If we do not have a certificate, make one up.
+	[ ! -f ${datadir}/esmtpd.pem ] && \
+	ebegin " generating-ESMTP-SSL-certificate..." && "${sbindir}/mkesmtpdcert"
+
 	# First time after install create aliases.dat and smtpaccess.dat
 
 	[ -f ${sysconfdir}/aliases.dat ] || ${sbindir}/makealiases
@@ -90,7 +96,7 @@ start() {
 
 	# start esmtpd-ssl if so written
 	[ -f ${sysconfdir}/esmtpd-ssl ] && source ${sysconfdir}/esmtpd-ssl
-	case x$ESMTPDSTART in
+	case x$ESMTPDSSLSTART in
 	x[yY]*)
 		ebegin " Starting esmtpd-ssl"
 		${sbindir}/esmtpd-ssl start
