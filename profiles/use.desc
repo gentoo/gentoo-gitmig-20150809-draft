@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.186 2004/10/06 14:04:21 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.187 2004/10/06 18:28:58 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -179,6 +179,7 @@ mysql - Adds mySQL support
 mysqli - Adds support for the improved mySQL libraries
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
+netboot - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during netboot building.
 netcdf - Enable NetCDF data format support
 nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
 nis - Support for NIS/YP services
