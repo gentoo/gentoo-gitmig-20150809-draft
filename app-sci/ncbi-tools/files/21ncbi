@@ -1,0 +1,4 @@
+# where you keep your formatdb formated data sets
+BLASTDB="/usr/var/ncbi/db"
+# convenient for binary or odd location isntall
+#PATH=/usr/bin
