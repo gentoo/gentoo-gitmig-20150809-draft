@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.3.ebuild,v 1.5 2004/02/22 22:43:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.3.ebuild,v 1.6 2004/04/14 09:35:57 aliz Exp $
 
-IUSE="ssl ncurses zlib python readline"
+IUSE="ssl ncurses zlib python"
 
 DESCRIPTION="EKG (Eksperymentalny Klient Gadu-Gadu) - a text client for Polish instant messaging system Gadu-Gadu"
 SRC_URI="http://dev.null.pl/ekg/${P}.tar.gz"

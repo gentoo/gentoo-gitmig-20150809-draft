@@ -1,10 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7-r3.ebuild,v 1.11 2003/09/05 23:58:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7-r3.ebuild,v 1.12 2004/04/14 09:35:57 aliz Exp $
+
+inherit eutils
 
 IUSE="xmms ssl nls crypt"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME Jabber Client"
 SRC_URI="mirror://sourceforge/gabber/${P}.tar.gz"
 HOMEPAGE="http://gabber.sourceforge.net"
@@ -31,7 +32,7 @@ src_unpack() {
 	# patch for minor C++ coding error. sent upstream
 	# (mkennedy@gentoo.org).
 	cd ${S}
-	patch -p1 <${FILESDIR}/TCPtransmitter.cc-gcc3-gentoo.patch || die
+	epatch ${FILESDIR}/TCPtransmitter.cc-gcc3-gentoo.patch
 }
 
 src_compile() {

@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.6.ebuild,v 1.3 2004/03/29 00:47:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.6.ebuild,v 1.4 2004/04/14 09:35:57 aliz Exp $
 
 # arts causes segfault
 IUSE="truetype esd gnome nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Are you talking to me? - MSN, Jabber, IRC, ICQ, AIM, SMTP instant messenger"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://ayttm.sourceforge.net/"

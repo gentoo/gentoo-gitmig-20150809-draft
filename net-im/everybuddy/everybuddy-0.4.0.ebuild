@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.4.0.ebuild,v 1.8 2003/09/05 23:58:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.4.0.ebuild,v 1.9 2004/04/14 09:35:57 aliz Exp $
 
 IUSE="arts esd gnome"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Universal Instant Messaging Client"
 SRC_URI="http://www.everybuddy.com/files/${P}.tar.gz"
 HOMEPAGE="http://www.everybuddy.com/"

@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.9.ebuild,v 1.3 2004/02/17 13:26:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.9.ebuild,v 1.4 2004/04/14 09:35:57 aliz Exp $
 
 inherit eutils
 
-IUSE="nls ssl"
+IUSE="nls ssl bidi"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A ncurses ICQ/Yahoo!/AIM/IRC/Jabber Client"
 SRC_URI="http://konst.org.ua/download/${P}.tar.gz"
 HOMEPAGE="http://konst.org.ua/eng/software/centericq/info.html"
