@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.4.ebuild,v 1.1 2002/11/05 15:44:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.9.4.ebuild,v 1.2 2002/11/05 16:31:47 foser Exp $
 
 IUSE="perl gnome ssl gtk python mmx ipv6 nls kde" 
 
@@ -82,10 +82,9 @@ src_install() {
 	# some magic to create a menu entry for xchat 2	
 	sed -e "s:Exec=xchat:Exec=xchat-2:" -e "s:Name=X-Chat:Name=X-Chat 2:" xchat.desktop > xchat-2.desktop
 
-	use kde && insinto ${KDEDIR}/share/applnk/Internet; \
-		doins xchat-2.desktop
-	use gnome && insinto /usr/share/gnome/apps/Internet; \
-		doins xchat-2.desktop	
+	use kde && insinto ${KDEDIR}/share/applnk/Internet \
+		|| insinto /usr/share/gnome/apps/Internet
+	doins xchat-2.desktop	
 
 	einstall install || die "Install failed"
 
