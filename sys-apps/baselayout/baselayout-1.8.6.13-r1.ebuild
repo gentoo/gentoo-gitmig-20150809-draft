@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13-r1.ebuild,v 1.1 2004/02/26 21:22:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13-r1.ebuild,v 1.2 2004/02/27 19:08:15 mr_bones_ Exp $
 
 IUSE="bootstrap build livecd static selinux"
 
@@ -486,13 +486,13 @@ pkg_preinst() {
 
 pkg_postinst() {
 	local x=
-	
+
 	# Make sure all needed dirs exist ...
 	for x in $(cat "${ROOT}/usr/share/baselayout/dirlist.txt")
 	do
 		[ ! -d "${x}" ] && mkdir -m0666 -p "${x}" &>/dev/null
 	done
-	
+
 	if [ -f "${ROOT}/lib/udev-state/devices.tar.bz2.old" ]
 	then
 		# Rather use our current device tarball ...
