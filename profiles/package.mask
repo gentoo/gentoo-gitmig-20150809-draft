@@ -101,10 +101,6 @@
 # compiled against gtk+-1.2 or not.
 #=net-www/mozilla-1.0-r3
 
-# seemant@gentoo.org (09 Jul 2002)
-# new package, masked for testing
-=app-admin/webmin-0.992
-
 # <danarmak@gentoo.org> (10 July 2002)
 # short-term mask for testing - see bug #2483. Anyone except the user there doesn't care about this.
 =x11-libs/qt-3.0.4.20020606-r3
