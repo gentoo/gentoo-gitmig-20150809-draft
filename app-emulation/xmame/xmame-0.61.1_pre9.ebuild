@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.61.1_pre9.ebuild,v 1.1 2002/10/31 23:50:45 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.61.1_pre9.ebuild,v 1.2 2002/11/12 17:50:55 gerk Exp $
 
 IUSE="sdl dga xv alsa esd opengl X 3dfx"
 
@@ -34,7 +34,7 @@ DEPEND="xv? ( virtual/x11 )
 # please either test on ppc, or send it to a ppc developer for testing before
 # you commit the ebuild.  Thanks :-)
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 -ppc"
 
 src_unpack() {
 	unpack ${A}.tar.bz2
