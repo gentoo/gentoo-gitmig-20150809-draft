@@ -76,6 +76,14 @@ media-video/lumiere
 # package is no longer distributed
 dev-libs/libtomcrypt
 
+<<<<<<< package.mask
+# <mjc@gentoo.org> (10 Jan 2003)
+# fixed others silly dates
+# masked, I just copied the old ebuild
+#>=net-www/mozilla-1.3a
+
+=======
+>>>>>>> 1.2031
 # <rendhalver@gentoo.org> (03 Jan 2003)
 # new XEmacs version masking for testing xemacs without sandbox disable
 #>=app-editors/xemacs-21.4.11
@@ -84,10 +92,6 @@ dev-libs/libtomcrypt
 # new alpha release.  do not use tmpfs by default for dep cache, and
 # move dep cache dir to /var/state/init.d.  also some raid updates.
 >=sys-apps/baselayout-1.8.6.0
-
-# <jhhudso@gentoo.org> (24 Dec 2002)
-# Testing xemacs without sandbox disable, since --pdump has been added
-=app-editors/xemacs-21.4.10-r2
 
 # <blizzy@gentoo.org> (23 Dec 2002)
 # needs quite some testing (especially with sasl 1+2)
