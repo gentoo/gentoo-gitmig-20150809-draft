@@ -1,8 +1,14 @@
 # ChangeLog for app-shells/psh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.2 2002/07/08 15:50:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.3 2002/07/29 03:46:35 cselkirk Exp $
 
 *psh-0.009-r2 (8 Jul 2002)
+  
+  28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> psh-0.009-r2.ebuild :
+
+  Added ppc to KEYWORDS.
+  Fixed illegal space characters.
+  Fixed date in header.
 
   8 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> psh-0.009-r2.ebuild files/digest-psh-0.009-r2:
 
