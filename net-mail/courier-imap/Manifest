@@ -1,3 +1,8 @@
+MD5 5320008e6cc1095213db6727b8da5314 ChangeLog 10236
+MD5 9934ee3f9b504af0b330c34393267b83 courier-imap-1.7.3-r1.ebuild 6884
+MD5 d1c708092b3a6346a01b4b7e6569f826 courier-imap-2.1.2-r1.ebuild 7708
+MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
+MD5 a9c4d75d3159329b2744ef12b48b622f courier-imap-3.0.2.ebuild 7873
 MD5 75f9598c5aca89a4aa533beb920c001c files/authdaemond.conf 448
 MD5 56cc308283ae98e263ed4ee6f4be9c58 files/authdaemond.rc6 965
 MD5 ff6234859377e6e830592de36bc84797 files/courier-imap-2.1.1-db40vs41.patch 559
@@ -22,8 +27,3 @@ MD5 60552b53a15c049f8f490d454764315d files/courier-imap-2.1.2-res_query.patch 61
 MD5 dfe2c230fed9f3be8e27d5d0baeef193 files/courier-imap-3.0.2-db40vs41.patch 585
 MD5 ce975bfaa13118f7fcc463f2e0486277 files/courier-imap-3.0.2-removerpm.patch 4264
 MD5 d56218342e6b7d9e7aec913b9d44de87 files/digest-courier-imap-3.0.2 72
-MD5 bfb58bb938ab83b5ddc937a0ebbcacd1 ChangeLog 10093
-MD5 9934ee3f9b504af0b330c34393267b83 courier-imap-1.7.3-r1.ebuild 6884
-MD5 6164037eefb5e9dde4f751abe05ca0db courier-imap-2.1.2-r1.ebuild 7652
-MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
-MD5 fed0b793fd67c08cf6a9ffdbe2c6b3ee courier-imap-3.0.2.ebuild 7817
