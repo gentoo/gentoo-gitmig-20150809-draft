@@ -1,6 +1,16 @@
-MD5 fea404e4956717876e12689095aebf29 qmailanalog-0.70-r1.ebuild 1254
-MD5 fd70d0f0cee0f57fa193d6430719836d ChangeLog 1222
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 df825fec98eff217f9e36b4f696eb875 qmailanalog-0.70-r1.ebuild 1310
+MD5 ee03903a5940c322fb315199a2e3fe9d ChangeLog 1352
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 b989e185e6bb05f98c4060136f96be7e files/digest-qmailanalog-0.70-r1 67
 MD5 170b78e7a24cf34fa1256bc6b1e4f469 files/0.70-errno.patch 243
 MD5 a822ae65e64ab729dc40a95964bf06e6 files/tai64nfrac.c 1519
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfqKdCHk4+ZoBpvsRAs++AJ4kN+M9Etvf6Jv5UupKjalb6AdXAQCePNfm
+3jrgOr9UbGLZP4pD9MT0GKc=
+=cpFV
+-----END PGP SIGNATURE-----
