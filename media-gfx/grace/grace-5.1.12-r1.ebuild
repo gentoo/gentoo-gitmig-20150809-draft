@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.12-r1.ebuild,v 1.9 2004/07/14 17:39:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.12-r1.ebuild,v 1.10 2004/09/08 13:58:36 usata Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_compile() {
 
 	local gracehelpviewer
 
-	if has_version 'net-www/dillo' ; then
+	if has_version 'www-client/dillo' ; then
 		gracehelpviewer="dillo"
 	elif has_version 'net-www/opera' ; then
 		gracehelpviewer="opera"
