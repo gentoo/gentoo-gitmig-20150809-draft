@@ -1,4 +1,14 @@
-MD5 32dbdb6a5558df3ecc3aab5f0d8d9cc1 SIunits-1.25.ebuild 693
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d8f790304fa978cbb5462fd4093310dd ChangeLog 687
+MD5 e175038de3b9a1647737c50cc163dd1a SIunits-1.25.ebuild 649
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 6a957c7c3adb3eaf4a7e98314cfde2bb files/digest-SIunits-1.25 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBYG4LI1lqEGTUzyQRAivhAJ0cGUUDsHk62E1D47prQ8gfMtXb2QCeKMhA
+krgR2ht4GodPNF4FfcQmR7Q=
+=H8nc
+-----END PGP SIGNATURE-----
