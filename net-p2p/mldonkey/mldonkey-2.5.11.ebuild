@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.11.ebuild,v 1.1 2004/02/11 21:08:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.11.ebuild,v 1.2 2004/02/24 11:20:48 eradicator Exp $
 
 inherit eutils
 
@@ -32,11 +32,7 @@ src_compile() {
 		--sysconfdir=/etc/mldonkey \
 		--sharedstatedir=/var/mldonkey \
 		--localstatedir=/var/mldonkey \
-		--enable-ocamlver=3 \
 		--enable-batch
-
-	# ocalm 3.07 fix
-	sed -i -e"s:format:format4:g" src/utils/lib/autoconf.ml
 
 	emake || die
 }
@@ -47,14 +43,14 @@ src_install() {
 	dobin ${FILESDIR}/mldonkey
 
 	cd ${S}/distrib
-	dodoc AUTHORS BUGS COPYING ChangeLog ed2k_links.txt INSTALL TODO
+	dodoc ChangeLog Authors.txt Bugs.txt Copying.txt Developers.txt Install.txt Readme.txt Todo.txt ed2k_links.txt
 	dohtml FAQ.html
 
 	insinto /usr/share/doc/${PF}/scripts
 	doins kill_mldonkey mldonkey_command mldonkey_previewer
 
 	insinto /usr/share/doc/${PF}/distrib
-	doins directconnect.ini servers.ini
+	doins directconnect.ini
 
 	cd ${S}/docs
 	dodoc *.txt *.tex *.pdf

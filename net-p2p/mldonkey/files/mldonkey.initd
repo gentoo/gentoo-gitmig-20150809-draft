@@ -12,7 +12,7 @@ start() {
 	then
 		einfo "Directory ${BASEDIR}/${SUBDIR} not existing, trying to create..."
 		su ${USER} -c "mkdir ${BASEDIR}/${SUBDIR}" 
-		if [ ! -d ${BASEDIR}/${DIR} ]
+		if [ ! -d ${BASEDIR}/${SUBDIR} ]
 		then
 			eerror "Directory ${BASEDIR}/${SUBDIR} could not be created!"
 			return 1
@@ -20,8 +20,8 @@ start() {
 		einfo "...ok!"
 	fi
 	cd ${BASEDIR}/${SUBDIR}/
-	start-stop-daemon --quiet --start -c ${USER}  \
-	-x /usr/bin/mlnet &>${LOG} &
+	env HOME=/home/${USER} start-stop-daemon --quiet --start -c ${USER}  \
+		-x /usr/bin/mlnet &>${LOG} &
 	sleep 5
 	if ! pgrep -u ${USER} mlnet >/dev/null
 	then
