@@ -3,7 +3,7 @@
 
 . /etc/rc.d/config/functions
 
-SERVICE="Secure Shell"
+SERVICE="supervised OpenSSH"
 opts="start stop restart"
 
 PIDFILE=/var/run/sshd.pid
@@ -11,32 +11,20 @@ EXE=/usr/sbin/sshd
 
 start() {
 
-		if [ ! -e /etc/ssh/ssh_host_key ] ; then
-  		  einfo "Generate Hostkey..."
-		  /usr/bin/ssh-keygen -b 1024 -f /etc/ssh/ssh_host_key -N ''
-		fi
-
-		if [ ! -e /etc/ssh/ssh_host_dsa_key ] ; then
-		  einfo "Generate DSA-Hostkey..."
-		  /usr/bin/ssh-keygen -d -f /etc/ssh/ssh_host_dsa_key -N ''
-		fi
-
 		ebegin "Starting $SERVICE..."
-     		start-stop-daemon --start --quiet --exec $EXE 
+		/usr/bin/svc -u /etc/svc.d/control/sshd 
 		eend $? "Started $SERVICE." "Error Starting $SERVICE."
 }
 
 stop() {
 		ebegin "Stopping $SERVICE..."
-		start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
+		/usr/bin/svc -d /etc/svc.d/control/sshd
 		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
 }
 
 restart() {
-
 		stop
 		start
-
 }
 
 doservice ${@}
