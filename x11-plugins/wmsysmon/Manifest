@@ -1,21 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21759d11bce831423f45252446467624 wmsysmon-0.7.6-r2.ebuild 913
-MD5 df81447e58929f0e873fdfda99240f21 ChangeLog 2733
-MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 f718d7a3380de0378405d73f086b2013 wmsysmon-0.7.6-r3.ebuild 991
-MD5 bda5d5e112857e678ba3b3e2b77ee836 wmsysmon-0.7.6-r1.ebuild 877
-MD5 9d821044994f6d28abad10ac5fa52e29 files/wmsysmon-0.7.6-s4t4n.patch 34234
+MD5 8d844712c54e38c6ff3bcc81692850ef ChangeLog 2866
+MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 f6ea24927a41e35eff0f022c8f74612c files/digest-wmsysmon-0.7.6-r3 65
-MD5 f6ea24927a41e35eff0f022c8f74612c files/digest-wmsysmon-0.7.6-r1 65
-MD5 cb3fe81dd11ad3973b2151e228fa2f53 files/fanta.diff 423
 MD5 f92c36a3e2cda76a531745835a0bb145 files/wmsysmon-0.7.6-high-ints.patch 489
-MD5 f6ea24927a41e35eff0f022c8f74612c files/digest-wmsysmon-0.7.6-r2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBj/7gugEuf3OQ0akRAowxAKCKf7FCnrQg+xN5YM9cDrNha28fAwCaAqS9
-uFr3w2MUVxiycfXFoHp1Qs0=
-=GJZ7
------END PGP SIGNATURE-----
+MD5 9d821044994f6d28abad10ac5fa52e29 files/wmsysmon-0.7.6-s4t4n.patch 34234
