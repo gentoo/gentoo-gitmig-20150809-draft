@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/nibbles
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/ChangeLog,v 1.1 2004/12/03 11:57:09 mr_bones_ Exp $
+
+*nibbles-0.0.4 (03 Dec 2004)
+
+  03 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +nibbles-0.0.4.ebuild:
+  initial commit - ebuild submitted by Adrian Fruehwirth via bug #72775
+
