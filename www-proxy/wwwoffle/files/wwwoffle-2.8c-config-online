@@ -1,0 +1,10 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/files/wwwoffle-2.8c-config-online,v 1.1 2004/09/19 07:18:43 dragonheart Exp $
+
+# Enter the interface that connects you to the outside world
+# This will correspond to /etc/wwwoffle/init.d/net.${IFACE}
+
+# IMPORTANT: Be sure to run depscan.sh after modifiying IFACE
+
+#IFACE=ppp0

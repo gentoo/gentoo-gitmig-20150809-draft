@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/files/wwwoffle-2.8c-init-online,v 1.1 2004/09/19 07:18:43 dragonheart Exp $
+
+depend() {
+	need wwwoffled dns
+
+	if [ -n ${IFACE} ];
+	then
+		need net.${IFACE}
+	else
+		ewarn "No IFACE is defined in /etc/conf.d/wwwoffle-online"
+		need net
+	fi
+}
+
+start() {
+	ebegin "Starting wwwoffled-online"
+	wwwoffle -online -c /etc/wwwoffle/wwwoffle.conf
+	wwwoffle -fetch -c /etc/wwwoffle/wwwoffle.conf
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping wwwoffled-online"
+	wwwoffle -offline -c /etc/wwwoffle/wwwoffle.conf
+	eend $?
+}
