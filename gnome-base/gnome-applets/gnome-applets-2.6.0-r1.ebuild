@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.6.0.ebuild,v 1.3 2004/04/27 21:09:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.6.0-r1.ebuild,v 1.1 2004/05/20 22:43:06 foser Exp $
 
 inherit gnome2 eutils
 
@@ -43,6 +43,13 @@ src_unpack() {
 
 	gnome2_omf_fix
 	epatch ${FILESDIR}/gnome-applets-2.6.0-battstat.patch
+
+	cd ${S}
+	# fix weather reporting (#46389)
+	epatch ${FILESDIR}/${P}-weather_icon_fix.patch
+	# fix problem with alsa volume control (#50770)
+	epatch ${FILESDIR}/${P}-fix_alsa_mixer.patch
+
 }
 
 src_install () {
