@@ -1,17 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880-r1.ebuild,v 1.2 2002/04/29 07:04:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880-r1.ebuild,v 1.3 2002/05/03 06:59:50 agenkin Exp $
+
+DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
+HOMEPAGE="http://www.nvidia.com/"
 
 NV_V=${PV/1.0./1.0-}
 NV_PACKAGE=NVIDIA_kernel-${NV_V}
 S="${WORKDIR}/${NV_PACKAGE}"
-DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 SRC_URI="ftp://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz
 	http://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz"
-HOMEPAGE="http://www.nvidia.com/"
 
-DEPEND="virtual/linux-sources >=sys-apps/portage-1.9.4"
+DEPEND="virtual/linux-sources
+	>=sys-apps/portage-1.9.4"
 
 # Make sure Portage does _NOT_ strip symbols.  Need both lines for
 # Portage 1.8.9+
@@ -19,6 +21,15 @@ DEBUG="yes"
 RESTRICT="nostrip"
 
 src_compile() {
+	# Portage should determine the version of the kernel sources
+	if [ x"${KV}" = x ]
+	then
+		eerror ""
+		eerror "Could not determine you kernel version."
+		eerror "Make sure that you have /usr/src/linux symlink."
+		eerror ""
+		die
+	fi
 	make KERNDIR="/usr/src/linux-${KV}" \
 		clean NVdriver || die
 }
