@@ -1,5 +1,5 @@
 MD5 ab1680a329fe6633cec7405a7be523e7 ChangeLog 826
-MD5 dd90134be8ed756ee75e1803c44bd933 zssh-1.5a.ebuild 939
-MD5 f52cf7d8f81baebdc41762a9e2403d86 files/zssh-1.5a-gentoo-termcap.diff 312
+MD5 cb361a684e9d375c03603cb17dc9a11d zssh-1.5a.ebuild 847
 MD5 761d5c3c6844a11229f8ec48df476b1c files/digest-zssh-1.5a 58
 MD5 e6b1336b7eaaa0ca2e2bf12cdfbd7b4b files/zssh-1.5a-gentoo-include.diff 321
+MD5 f52cf7d8f81baebdc41762a9e2403d86 files/zssh-1.5a-gentoo-termcap.diff 312
