@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.0-r1.ebuild,v 1.2 2004/02/29 10:26:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.0-r1.ebuild,v 1.3 2004/05/02 02:09:42 mr_bones_ Exp $
 
 inherit games gnome2
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/teg/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc"
+IUSE="nls"
 
 DEPEND="virtual/glibc
 	virtual/x11
@@ -23,18 +24,18 @@ RDEPEND="${DEPEND}
 
 src_compile() {
 	econf \
-		`use_enable nls` \
-		--bindir=${GAMES_BINDIR} \
+		$(use_enable nls) \
+		--bindir="${GAMES_BINDIR}" \
 		|| die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	make \
-		DESTDIR=${D} install \
+		DESTDIR="${D}" install \
 		" sScrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}" \
-		|| die
+		|| die "make install failed"
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 	prepgamesdirs
 }
