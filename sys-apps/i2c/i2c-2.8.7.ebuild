@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.7.ebuild,v 1.4 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.7.ebuild,v 1.5 2004/09/06 00:42:53 ciaranm Exp $
 
 inherit eutils
 
@@ -103,7 +103,7 @@ src_install() {
 			PREFIX=/usr \
 			MANDIR=/usr/share/man \
 			install || die
-		sleep 5 # Show important warnings from the Makefile
+		epause 5 # Show important warnings from the Makefile
 		dodoc CHANGES INSTALL README
 	fi
 }
