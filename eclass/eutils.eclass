@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.154 2005/02/23 01:10:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.155 2005/03/06 21:28:14 carlo Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -911,7 +911,7 @@ edos2unix() {
 #			this can be relative (to /usr/share/pixmaps) or
 #			a full path to an icon
 # type:		what kind of application is this ?  for categories:
-#			http://www.freedesktop.org/standards/menu-spec/
+#			http://www.freedesktop.org/wiki/Standards_2fmenu_2dspec
 # path:		if your app needs to startup in a specific dir
 make_desktop_entry() {
 	[ -z "$1" ] && eerror "make_desktop_entry: You must specify the executable" && return 1
