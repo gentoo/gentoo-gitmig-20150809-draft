@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.70 2002/12/15 15:38:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.71 2002/12/16 02:30:06 azarah Exp $
+
+*mozilla-1.2.1-r3 (16 Dec 2002)
+
+  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
+
+  Fix include problem with Xrender if the updated headers are not installed
+  system wide.  Should close bug #12223.
 
   15 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r2.ebuild :
 
