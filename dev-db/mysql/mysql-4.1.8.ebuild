@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8.ebuild,v 1.1 2004/12/23 10:56:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8.ebuild,v 1.2 2004/12/26 06:55:45 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -90,8 +90,9 @@ src_unpack() {
 	fi
 
 	cd ${S}
+	autoconf
 	# this does the libtoolize stuff
-	autoreconf --install --force
+	libtoolize --copy --force
 	# Saving this for a rainy day, in case we need it again
 	#WANT_AUTOMAKE=1.7 automake
 	gnuconfig_update
