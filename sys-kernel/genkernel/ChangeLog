@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.23 2004/01/10 20:39:36 gmsoft Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.24 2004/01/12 01:55:53 brad_mssw Exp $
+
+*genkernel-3.0.1_beta4 (11 Jan 2004)
+
+  11 Jan 2004; Brad House <brad_mssw@gentoo.org> genkernel-3.0.1_beta4.ebuild:
+  parisc and livecd fixes
 
 *genkernel-3.0.1_beta3 (07 Jan 2004)
 
