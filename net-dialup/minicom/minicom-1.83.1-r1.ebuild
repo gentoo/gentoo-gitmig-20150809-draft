@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.3 2002/07/17 10:43:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.4 2002/07/17 22:16:01 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Serial Communication Program"
@@ -18,18 +18,23 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/src
 	cp Makefile Makefile.orig
-	sed -e "s:^FLAGS\t=.*$:FLAGS\t= -Wall -D_POSIX -D_SYSV -D_SELECT -pipe # -I/usr/include/ncurses ${CFLAGS}:" |\
-		sed -e "s:^LFLAGS\t=.*$:LFLAGS\t= -s ${CFLAGS}:" |\
-		sed -e "s:^CC\t=.*$:CC\t= gcc:" |\
+	sed -e "s:^FLAGS\t=.*$:FLAGS\t= -Wall -D_POSIX -D_SYSV -D_SELECT -pipe # -I/usr/include/ncurses ${CFLAGS}:" \
+		sed -e "s:^LFLAGS\t=.*$:LFLAGS\t= -s ${CFLAGS}:" \
+		sed -e "s:^CC\t=.*$:CC\t= gcc:" \
 		sed -e "s:^LIBDIR\t=.*$:LIBDIR\t= /etc/minicom:" \
 			Makefile.orig > Makefile
+
 	cp dial.c dial.c.orig
-	cat dial.c.orig | sed -e "s:<sys/time.h>:<time.h>:" > dial.c
+	sed -e "s:<sys/time.h>:<time.h>:" \
+		dial.c.orig > dial.c
+
 	cp common.c common.c.orig
-	cat common.c.orig |\
-		sed -e "s:#include <stdarg.h>:#include <stdarg.h>\n#include <time.h>:" > common.c
+	sed -e "s:#include <stdarg.h>:#include <stdarg.h>\n#include <time.h>:" \
+		common.c.orig > common.c
+
 	cp po/Makefile po/Makefile.orig
-	cat po/Makefile.orig | sed -e 's:ko.mo::g' > po/Makefile
+	sed -e 's:ko.mo::g' \
+		po/Makefile.orig > po/Makefile
 	
 }
 
