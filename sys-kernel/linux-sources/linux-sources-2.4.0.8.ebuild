@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0.8.ebuild,v 1.1 2001/01/16 03:40:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0.8.ebuild,v 1.2 2001/01/16 06:59:16 drobbins Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac8
@@ -145,7 +145,7 @@ src_install() {
 		try make INSTALL_MOD_PATH=${D} modules_install
 
 		#install ALSA modules
-		cd ${S}/extras/alsa-driver-0.5.10
+		cd ${S}/extras/alsa-driver-0.5.10a
 		dodir /lib/modules/${KV}/misc
 		cp modules/*.o ${D}/lib/modules/${KV}/misc
 		into /usr
