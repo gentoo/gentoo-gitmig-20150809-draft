@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/xmms-iris-0.11.ebuild,v 1.8 2004/06/24 23:41:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/xmms-iris-0.11.ebuild,v 1.9 2004/06/28 09:25:49 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://cdelfosse.free.fr/xmms-iris/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 
 DEPEND="virtual/opengl
 	=x11-libs/gtk+-1.2*
