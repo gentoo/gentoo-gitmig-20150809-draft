@@ -64,9 +64,9 @@ for x in sys.argv[1:]:
 		rdep=""
 		for x in myrlines:
 			rdep=rdep+" "+x[:-1]
-	if (portage.dep_frontend("runtime",rdep))!=0:
-		cleanup()
-		sys.exit(1)
+		if (portage.dep_frontend("runtime",rdep))!=0:
+			cleanup()
+			sys.exit(1)
 	portage.doebuild("var/db/pkg/"+mycat+"/"+mypkg+"/"+mypkg+".ebuild","preinst")	
 	portage.merge(mycat,mypkg,os.getcwd())
 	portage.doebuild(portage.root+"var/db/pkg/"+mycat+"/"+mypkg+"/"+mypkg+".ebuild","postinst")	

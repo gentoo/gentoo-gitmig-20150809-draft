@@ -11,7 +11,8 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=gnome-base/gnome-vfs-0.4.2
 	>=gnome-base/libglade-0.14
-	>=gnome-base/libunicode-0.4"
+	>=gnome-base/libunicode-0.4
+	>=gnome-base/gnome-print-0.25"
 RDEPEND=">=sys-libs/glibc-2.1.3"
 
 src_unpack() {
