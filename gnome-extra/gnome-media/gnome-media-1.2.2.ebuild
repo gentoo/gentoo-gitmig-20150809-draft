@@ -22,6 +22,11 @@ src_compile() {
   fi
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
 	--with-ncurses $myconf
+
+  if [ -z "`use alsa`"  ] ; then
+    cp config.h config.h.orig
+    sed -e "s:#define ALSA 1:/* #define ALSA 0*/:" config.h.orig > config.h
+  fi
   try pmake
 }
 
