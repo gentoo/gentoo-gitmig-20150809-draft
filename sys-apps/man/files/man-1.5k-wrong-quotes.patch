@@ -5,7 +5,7 @@
  pager = @pager@
  
 -GS = -DGREPSILENT=\'@grepsilent@\'
-+GS = -DGREPSILENT=\"@grepsilent@\"
++GS = -DGREPSILENT="'@grepsilent@'"
  DEFS = @DEFS@ $(GS)
  CWARN = -Wall -Wstrict-prototypes -Wmissing-prototypes
  CWARNNP = -Wall
