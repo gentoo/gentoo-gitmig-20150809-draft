@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/shared-mime-info
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.1 2002/07/13 13:43:11 stroke Exp $ 
+
+*shared-mime-info-0.7 (13 Jul 2002)
+
+  13 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> shared-mime-info-0.7.ebuild :
+  
+  New package.
+  Ebuild written by: Riccardo Persichetti <ricpersi@libero.it>
