@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.12 2004/10/08 01:36:47 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.13 2004/12/06 03:40:43 pebenito Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
@@ -49,10 +49,22 @@ selinux-policy_src_install() {
 		doins ${TEFILES} || die
 	fi
 
+	if [ -n "${TEMISC}" ]; then
+		debug-print "TEMISC is \"${TEMISC}\""
+		insinto ${POLICYDIR}/domains/misc
+		doins ${TEMISC} || die
+	fi
+
 	if [ -n "${FCFILES}" ]; then
 		debug-print "FCFILES is \"${FCFILES}\""
 		insinto ${POLICYDIR}/file_contexts/program
 		doins ${FCFILES} || die
+	fi
+
+	if [ -n "${FCMISC}" ]; then
+		debug-print "FCMISC is \"${FCMISC}\""
+		insinto ${POLICYDIR}/file_contexts/misc
+		doins ${FCMISC} || die
 	fi
 
 	if [ -n "${MACROS}" ]; then
