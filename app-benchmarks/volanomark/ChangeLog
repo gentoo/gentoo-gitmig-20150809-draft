@@ -1,0 +1,22 @@
+# ChangeLog for app-benchmarks/volcanomark
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/ChangeLog,v 1.1 2004/02/10 04:34:42 absinthe Exp $
+
+*volanomark-2.5.0.9 (09 Feb 2004)
+
+  09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> metadata.xml,
+  volanomark-2.5.0.9.ebuild:
+  package moved from app-benchmarks/volcanomark to app-benchmarks/volanomark.
+  added ~amd64 keyword.
+
+  09 Feb 2004; Daniel Black <dragonheart@gentoo.org>
+  volcanomark-2.5.0.9.ebuild:
+  Fixed a few things. Should be able to run from any dir now.
+
+*volcanomark-2.5.0.9 (09 Feb 2004)
+
+  09 Feb 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  volcanomark-2.5.0.9.ebuild:
+  Initial import. Thanks to Chris Aniszczyk <zx@mea-culpa.net> for doing the
+  ebuild. bug #40790
+
