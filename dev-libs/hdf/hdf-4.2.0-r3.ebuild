@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.5 2004/11/04 13:32:40 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.6 2004/12/28 19:02:46 ribosome Exp $
 
 inherit flag-o-matic
 
@@ -22,7 +22,7 @@ IUSE="szip"
 
 DEPEND="sys-libs/zlib
 		media-libs/jpeg
-		app-sci/netcdf
+		sci-libs/netcdf
 		>=sys-apps/sed-4
 		szip? ( dev-libs/szip )"
 
