@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.29.ebuild,v 1.5 2004/02/10 06:38:43 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.29.ebuild,v 1.6 2004/06/25 03:15:35 agriffis Exp $
 
 inherit gnome.org
 
