@@ -1,4 +1,14 @@
-MD5 58b857b9af05a0b86daa52355b96d3e0 adodb-py-1.0.1.ebuild 761
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 43cd7b30bc861355c7f81345a32c13da adodb-py-1.0.1.ebuild 757
 MD5 3c8739250cd740951ca171f6b1c8d046 metadata.xml 234
-MD5 d854b244402c0e48372d7b4690ec41b3 ChangeLog 797
+MD5 b12478fe403b292fbacb8576c8b0b7c3 ChangeLog 912
 MD5 450db37bc2cdb99957226a0f971b1cb3 files/digest-adodb-py-1.0.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4IFKz2gxt1z4IGYRArBvAJ0S/jZrFHm1Ie2JJt4o5LMb6O8O3QCgvZtC
+mfsV1LG+nNMyLw+nLhH068c=
+=gV6Y
+-----END PGP SIGNATURE-----
