@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.9 2003/02/01 20:21:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.10 2003/02/10 03:58:12 lostlogic Exp $
 
 *module-init-tools-0.9.9 (01 Feb 2003)
+
+  09 Feb 2003; Brandon Low <lostlogic@gentoo.org> module-init-tools-0.9.9 :
+  Make not die if the user doesn't have a modules.conf file already...
 
   01 Feb 2003; Martin Schlemmer <azarah@gentoo.org> module-init-tools-0.9.9 :
   New version.

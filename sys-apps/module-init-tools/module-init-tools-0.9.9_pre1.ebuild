@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.9_pre1.ebuild,v 1.2 2003/01/19 21:21:58 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.9_pre1.ebuild,v 1.3 2003/02/10 03:58:12 lostlogic Exp $
 
 # This includes backwards compatability for stable kernels
 IUSE=""
@@ -89,11 +89,12 @@ src_install () {
 
 	# Create the new modprobe.conf
 	dodir /etc
-	einfo "Generating /etc/modprobe.conf ..."
-	PATH="${D}/sbin:${PATH}" \
-	${S}/generate-modprobe.conf /etc/modules.conf \
-		> ${D}/etc/modprobe.conf || die "Could not create modprobe.conf"
-	
+	if [ -f /etc/modules.conf ]; then
+		einfo "Generating /etc/modprobe.conf ..."
+		PATH="${D}/sbin:${PATH}" \
+		${S}/generate-modprobe.conf /etc/modules.conf \
+			> ${D}/etc/modprobe.conf || die "Could not create modprobe.conf"
+	fi
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 }
 
