@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/aspell-ga
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ga/ChangeLog,v 1.1 2003/09/10 08:32:24 seemant Exp $
+
+*aspell-ga-0.50.3 (10 Sep 2003)
+
+  10 Sep 2003; Seemant Kulleen <seemant@gentoo.org> aspell-ga-0.50.3.ebuild:
+  New Irish (Gaelic) language dictionary for aspell. Thanks to: Kevin Scannel
+  <scannell@slu.edu> in bug #25127
+
