@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.1 2003/04/16 21:51:49 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.2 2003/04/18 18:09:05 taviso Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -25,7 +25,9 @@ DEPEND="sys-devel/gcc-config
 	app-arch/rpm2targz
 	>=sys-apps/sed-4
 	app-crypt/gnupg
-	>=app-shells/bash-2.05b"
+	>=app-shells/bash-2.05b
+	>=dev-libs/libcpml-5.2.01-r2
+	dev-libs/libots"
 
 RDEPEND="virtual/glibc
 	dev-libs/libots
@@ -55,11 +57,14 @@ src_unpack() {
 	
 	# :-NULL safeguards against bash bug.
 	einfo "Decrypting cxx distribution..."
-	gpg --quiet --passphrase-fd 0 --output ${cxx_rpm} \
-		--decrypt ${DISTDIR}/${cxx_rpm}.crypt \
-		<<< ${CXX_LICENSE_KEY:-NULL} >/dev/null 2>&1 || \
-		die "Sorry, your license key doesnt seem to unlock the distribution"
-
+        gpg --quiet \
+                --homedir=${T} --no-permission-warning \
+                --no-mdc-warning \
+                --passphrase-fd 0 \
+                --output ${cxx_rpm} \
+                --decrypt ${DISTDIR}/${cxx_rpm}.crypt \
+                <<< ${CXX_LICENSE_KEY:-NULL}
+        
 	ebegin "Unpacking cxx distribution..."
 	# This is the same as using rpm2targz then extracting 'cept that
 	# it's faster, less work, and less hard disk space.  rpmoffset is
