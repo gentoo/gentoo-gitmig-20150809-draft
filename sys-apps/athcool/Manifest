@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a40ec178ee6b8c46451103cc14479c30 ChangeLog 857
-MD5 b44454d6a1e1343e2a0ae11f12477a81 athcool-0.3.0.ebuild 657
-MD5 f14bfe454c2c62331c07cc0ce90b0c38 athcool-0.3.3.ebuild 657
+MD5 39448ad97618299b81043a6645147e07 athcool-0.3.7.ebuild 653
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 85f9dfede541a9d24343fd1e4194a2f9 athcool-0.3.5.ebuild 657
-MD5 a80da7e658daafbd1dafd8a403fb3c53 files/athcool 319
-MD5 c5c2eaff010f73be06e7035d5c2414ae files/digest-athcool-0.3.0 64
-MD5 85946f7642080558d2459d34a6488ebe files/digest-athcool-0.3.3 64
+MD5 ee8d09ed428521c97e9cefeb49ec239b athcool-0.3.5.ebuild 652
+MD5 848cd637adc5c8f17aaff8c2a2ff332c ChangeLog 1062
 MD5 521cca904d73ce476ab44c4b794dbe39 files/digest-athcool-0.3.5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+f8AmdTrptrqvGERAs8sAJ9RV6c1XH+Fs8M370492/j/ZE0sHgCeIQCd
-JFmFVVEpYOqeAB6lVddCpPY=
-=kd2S
------END PGP SIGNATURE-----
+MD5 a80da7e658daafbd1dafd8a403fb3c53 files/athcool 319
+MD5 555fe39ffe16d5d8cfad0816347a572a files/digest-athcool-0.3.7 64
