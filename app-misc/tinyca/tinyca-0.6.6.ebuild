@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/tinyca-0.6.6.ebuild,v 1.1 2004/08/14 23:43:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/tinyca-0.6.6.ebuild,v 1.2 2004/12/08 22:37:33 sekretarz Exp $
 
 DESCRIPTION="Simple Perl/Tk GUI to manage a small certification authority"
 HOMEPAGE="http://tinyca.sm-zone.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://tinyca.sm-zone.net/${P}.tar.bz2"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
 RDEPEND=">=dev-libs/openssl-0.9.6i
