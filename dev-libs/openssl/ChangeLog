@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.38 2003/05/24 01:16:32 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.39 2003/06/14 03:21:14 gmsoft Exp $
 
 *openssl-0.9.6j (23 May 2003)
+
+  14 Jun 2003; Guy Martin <gmsoft@gentoo.org> openssl-0.9.6j.ebuild :
+  Added a build fix for people running a 64bit kernel.
 
   23 May 2003; Brandon Low <lostlogic@gentoo.org> openssl-0.9.6j.ebuild:
   Bump, lots of nice security fixes, several patches from 0.9.6i-r2 are merged
@@ -29,6 +32,9 @@
   Bump
 
 *openssl-0.9.6i-r2 (24 Mar 2003)
+
+  14 Jun 2003; Guy Martin <gmsoft@gentoo.org> openssl-0.9.6i-r2.ebuild :
+  Added a build fix for people running a 64bit kernel.
 
   19 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update. Added patch against Klima-Pokorny-Rosa attack.
