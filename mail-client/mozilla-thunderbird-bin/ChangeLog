@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/mozilla-thunderbird-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.4 2004/06/17 00:37:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.5 2004/06/18 14:58:27 agriffis Exp $
+
+  18 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  files/0.7/icon/mozillathunderbird-bin.desktop,
+  mozilla-thunderbird-bin-0.7.ebuild:
+  - Fix bug 54179: Install mozillathunderbird-bin.desktop to
+    /usr/share/applications instead of /usr/share/gnome/apps/Internet.
+    This also necessitated some changes to the .desktop file which I
+    based on balsa.desktop.  Additionally modified the .desktop file to
+    explicitly mention (bin) in the Name entry so that both from-source
+    and -bin versions can be installed simultaneously.
+  - Fix bug 54295: Move init file unpacking from pkg_postinst to
+    src_install
 
 *mozilla-thunderbird-bin-0.7 (16 Jun 2004)
 

@@ -1,7 +1,7 @@
 MD5 78f5f39541e8d8459b0d16b89233619a mozilla-thunderbird-bin-0.6.ebuild 1886
 MD5 9c0f9fb55a5e11407144aea8ac12580e mozilla-thunderbird-bin-0.5.ebuild 2105
-MD5 31ca167dc8df1fc54c8f6fbf4a010d35 mozilla-thunderbird-bin-0.7.ebuild 2735
-MD5 4036b04a4eb940bf29e6f12cb9a4310e ChangeLog 2425
+MD5 e46622f9702b6bb599da9d9aa69a382b mozilla-thunderbird-bin-0.7.ebuild 2865
+MD5 e7340a723905f14be715a29784207937 ChangeLog 3044
 MD5 5dd0418c191830dfcfd74400e3f9608c metadata.xml 182
 MD5 7dd2dac40d6bb1cad39c82742ac7a949 files/MozillaThunderbird 294
 MD5 7dd2dac40d6bb1cad39c82742ac7a949 files/thunderbird 294
@@ -16,5 +16,5 @@ MD5 4513b2f650df9b907c09257373a9f879 files/0.5/icon/thunderbird-icon.png 2537
 MD5 bb431eebb28f85d1c07957846fd3e4d2 files/0.5/icon/mozillathunderbird.desktop 148
 MD5 04115f0e204444eac76a092a63c89027 files/0.6/icon/thunderbird-icon.png 6499
 MD5 bb431eebb28f85d1c07957846fd3e4d2 files/0.6/icon/mozillathunderbird.desktop 148
-MD5 d53215cf1aac217ff533ef0fc06a5736 files/0.7/icon/mozillathunderbird-bin.desktop 156
+MD5 2a65eefd9de928054e33268c1d0081e3 files/0.7/icon/mozillathunderbird-bin.desktop 198
 MD5 04115f0e204444eac76a092a63c89027 files/0.7/icon/mozillathunderbird-bin-icon.png 6499

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.7.ebuild,v 1.2 2004/06/17 02:10:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.7.ebuild,v 1.3 2004/06/18 14:58:27 agriffis Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -47,9 +47,18 @@ src_install() {
 	if use gnome; then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/${PV}/icon/mozillathunderbird-bin-icon.png
-		insinto /usr/share/gnome/apps/Internet
+		# Fix bug 54179: Install .desktop file into /usr/share/applications
+		# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
+		insinto /usr/share/applications
 		doins ${FILESDIR}/${PV}/icon/mozillathunderbird-bin.desktop
 	fi
+
+	# Normally thunderbird-bin-0.7 must be run as root once before it
+	# can be run as a normal user.  Drop in some initialized files to
+	# avoid this.
+	einfo "Extracting firefox-bin-${PV} initialization files"
+	tar xjpf ${FILESDIR}/thunderbird-bin-${PV}-init.tar.bz2 \
+		-C ${D}/opt/thunderbird
 }
 
 pkg_preinst() {
@@ -70,12 +79,6 @@ pkg_postinst() {
 	einfo "Please note that the binary name has changed from MozillaThunderbird"
 	einfo "to simply thunderbird-bin"
 	einfo ""
-
-	# Normally thunderbird-bin-0.7 must be run as root once before it
-	# can be run as a normal user.  Drop in some initialized files to
-	# avoid this.
-	einfo "Extracting firefox-bin-${PV} initialization files"
-	cd ${ROOT}/opt/thunderbird && tar xjpf ${FILESDIR}/thunderbird-bin-${PV}-init.tar.bz2
 
 	# This should be called in the postinst and postrm of all the
 	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
