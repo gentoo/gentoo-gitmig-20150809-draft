@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libiterm-mbt
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libiterm-mbt/ChangeLog,v 1.1 2003/10/02 03:21:49 hhg Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libiterm-mbt/ChangeLog,v 1.2 2004/02/29 12:28:44 dholm Exp $
+
+  29 Feb 2004; David Holm <dholm@gentoo.org> libiterm-mbt-0.5.ebuild:
+  Added to ~amd64 since y-windows depends on it (I assume it's been tested since
+  y-windows is in ~amd64).
 
 *libiterm-mbt-0.5 (02 Oct 2003)
 
