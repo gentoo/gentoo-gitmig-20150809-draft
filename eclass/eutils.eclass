@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.112 2004/10/05 03:43:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.113 2004/10/05 05:15:59 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -584,6 +584,7 @@ egetent() {
 		fi
 		pw show "${action}" "$2" -q
 	else
+		which nscd >& /dev/null && nscd -i "$1"
 		getent "$1" "$2"
 	fi
 }
