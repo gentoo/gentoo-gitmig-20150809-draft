@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.20 2003/10/06 04:24:19 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.21 2003/10/07 14:30:16 brad_mssw Exp $
+
+  07 Oct 2003; Brad House <brad_mssw@gentoo.org> mpg123-0.59r-r3.ebuild,
+  files/mpg123-0.59r-amd64.diff, files/mpg123-0.59s-amd64.patch:
+  fix mpg123-0.59r-r3 as it was marked stable on amd64. The amd64 patch wasn't
+  being pulled out of the patch ball, manually epatch it. The diff for
+  mpg123-0.59s had a bunch of .orig files in it which made the patch huge,
+  remove. Remove the diff for mpg123-0.59r as it's in the patchball.
 
   06 Oct 2003; Brad House <brad_mssw@gentoo.org> mpg123-0.59s-r1.ebuild,
   files/mpg123-0.59s-amd64.patch:

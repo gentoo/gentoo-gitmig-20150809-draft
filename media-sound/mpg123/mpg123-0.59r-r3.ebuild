@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r3.ebuild,v 1.2 2003/09/30 09:49:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r3.ebuild,v 1.3 2003/10/07 14:30:16 brad_mssw Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ src_unpack () {
 	cd ${S}
 
 	EPATCH_SUFFIX="diff" epatch ${WORKDIR}/patches
+	use amd64 && epatch ${WORKDIR}/patches/003_amd64-compile.diff
 
 	sed -i \
 		-e "s:-O2 -m486:${CFLAGS}:" \
