@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.3 2002/09/18 20:46:24 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.4 2002/11/29 20:45:59 aliz Exp $
 
 *chkrootkit-0.37 (18 Sept 2002)
+
+  29 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> chkrootkit-0.37.ebuild :
+  Added patch from Kurt V. Hindenburg <khindenburg@cherrynebula.net> in #11164.
 
   18 Sept 2002; Daniel Seyffer <gentoo@getroot.de> 
   chkrootkit-0.37.ebuild :
