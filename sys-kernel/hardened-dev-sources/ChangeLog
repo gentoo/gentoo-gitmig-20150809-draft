@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.5 2004/03/23 13:41:56 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.6 2004/03/24 16:24:54 tseng Exp $
+
+  24 Mar 2004; Brandon Hale <tseng@gentoo.org>
+  hardened-dev-sources-2.6.4-r2.ebuild:
+  Mask -r2 for now, a few different things turned out to be broken.
 
 *hardened-dev-sources-2.6.4-r2 (23 Mar 2004)
 
