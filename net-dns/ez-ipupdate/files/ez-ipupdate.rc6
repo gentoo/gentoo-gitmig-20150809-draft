@@ -1,0 +1,50 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/files/ez-ipupdate.rc6,v 1.1 2004/08/15 11:06:00 aliz Exp $
+
+opts="${opts} reload update"
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -e /etc/ez-ipupdate.conf ]; then
+		eerror "You need a /etc/ez-ipupdate.conf containing"
+		eerror "your username and password or the service"
+		eerror "you wish to utilize."
+		return 1
+	fi
+
+	return 0
+}
+
+start() {
+	checkconfig || exit 1
+
+	local host=$( egrep "^host=" /etc/ez-ipupdate.conf | awk -F'=' '{print $2}' )
+	local interface=$( egrep "^interface=" /etc/ez-ipupdate.conf | awk -F'=' '{print $2}' )
+
+	ebegin "Starting ez-ipupdate for ${host} on ${interface}"
+	start-stop-daemon -p /var/run/ez-ipupdate.pid --start --quiet --exec /usr/bin/ez-ipupdate -- -c /etc/ez-ipupdate.conf -d -F /var/run/ez-ipupdate.pid 
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ez-ipupdate"
+	kill -QUIT `cat /var/run/ez-ipupdate.pid`
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading configfile"
+	kill -HUP `cat /var/run/ez-ipupdate.pid`
+	eend $?
+}
+
+update() {
+	ebegin "Forcing update"
+	kill -TERM `cat /var/run/ez-ipupdate.pid`
+	eend $?
+}

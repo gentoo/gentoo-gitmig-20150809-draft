@@ -1,3 +1,4 @@
-MD5 e4c5edae810687bad22de91a3d5d3b1a ez-ipupdate-3.0.11_beta8.ebuild 756
-MD5 b802673d244a8b720a9eb451e784372d ChangeLog 1503
+MD5 11167a67d84e335dd2398694a4a2563c ez-ipupdate-3.0.11_beta8.ebuild 802
+MD5 9e763c59243fb7796e36e4227a6faf3a ChangeLog 1642
+MD5 cce1451ebc90d2c8a8068f6fe7d7a875 files/ez-ipupdate.rc6 1226
 MD5 fc53ff461d5187c04a36e96c42f0d7e2 files/digest-ez-ipupdate-3.0.11_beta8 71
