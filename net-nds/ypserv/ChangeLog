@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.15 2004/04/29 08:47:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.16 2004/06/08 05:28:54 raker Exp $
+
+*ypserv-2.13-r1 (08 Jun 2004)
+
+  08 Jun 2004; Nick Hadaway <raker@gentoo.org> ypserv-2.13.ebuild,
+  files/rpc.yppasswdd.confd, rpc.yppasswdd :
+  Changes made to the init scripts as suggested by users on bug #40048.
+  This allows for an easy reference to some common options for rpc.yppasswdd
 
   29 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> ypserv-2.13.ebuild,
   ypserv-2.8.ebuild, files/rpc.ypxfrd:

@@ -1,26 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.10 2004/06/08 05:28:54 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.13-r1.ebuild,v 1.1 2004/06/08 05:28:54 raker Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Network Information Service server"
-SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.gz"
 HOMEPAGE="http://www.linux-nis.org/nis/"
+SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.bz2"
 
-IUSE=""
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc ppc64"
-DEPEND=">=sys-libs/gdbm-1.8.0"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~ppc64"
+IUSE=""
 
-src_compile() {
-	econf --enable-yppasswd || die
-	emake || die
-}
+DEPEND=">=sys-libs/gdbm-1.8.0"
 
 src_install() {
 	make DESTDIR=${D} install
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO
 
 	insinto /etc
 	doins etc/ypserv.conf etc/netgroup etc/netmasks
@@ -30,10 +25,11 @@ src_install() {
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/ypserv.confd ypserv
+	newins ${FILESDIR}/rpc.yppasswdd.confd rpc.yppasswdd
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/ypserv.rc ypserv
-	newexe ${FILESDIR}/rpc.yppasswdd rpc.yppasswdd
+	newexe ${FILESDIR}/rpc.yppasswdd-r1 rpc.yppasswdd
 	newexe ${FILESDIR}/rpc.ypxfrd rpc.ypxfrd
 
 	# Save the old config into the new package as CONFIG_PROTECT
@@ -49,6 +45,9 @@ src_install() {
 
 pkg_postinst() {
 	einfo "To complete setup, you will need to edit /var/yp/securenets,"
-	einfo "/etc/conf.d/ypserv, /etc/ypserv.conf, and possibly"
-	einfo "/var/yp/Makefile."
+	einfo "/etc/conf.d/ypserv, /etc/ypserv.conf, /etc/conf.d/rpc.yppasswdd"
+	einfo "and possibly /var/yp/Makefile."
+
+	einfo "To start the services at boot, you need to enable ypserv and optionally"
+	einfo "the rpc.yppasswdd and/or rpc.ypxfrd services"
 }
