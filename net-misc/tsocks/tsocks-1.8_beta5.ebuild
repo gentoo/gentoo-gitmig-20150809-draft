@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsocks/tsocks-1.8_beta5.ebuild,v 1.1 2004/02/22 09:19:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsocks/tsocks-1.8_beta5.ebuild,v 1.2 2004/02/22 09:19:44 vapier Exp $
 
 DESCRIPTION="Transparent SOCKS v4 proxying library"
 HOMEPAGE="http://tsocks.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/tsocks/${PN}-${PV/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 S=${WORKDIR}/tsocks-1.8
 
