@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.40 2004/04/20 01:51:37 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.41 2004/04/26 04:43:25 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> lftp-2.6.10.ebuild,
+  lftp-2.6.11.ebuild, lftp-3.0.1.ebuild, lftp-3.0.2.ebuild:
+  Add die following econf for bug 48950
 
 *lftp-3.0.2 (19 Apr 2004)
 

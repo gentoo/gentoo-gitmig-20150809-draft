@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18.ebuild,v 1.3 2004/04/13 21:02:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18.ebuild,v 1.4 2004/04/26 04:44:26 agriffis Exp $
 
 IUSE="pam mysql postgres ldap ssl"
 
@@ -36,7 +36,7 @@ src_compile() {
 		--with-uploadscript --with-virtualhosts \
 		--with-virtualchroot --with-diraliases \
 		--with-peruserlimits --with-largefile \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die "compile problem"
 }

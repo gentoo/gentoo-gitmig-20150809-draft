@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.10.ebuild,v 1.6 2004/03/27 05:48:18 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.10.ebuild,v 1.7 2004/04/26 04:43:25 agriffis Exp $
 
 IUSE="ssl socks5 nls"
 
@@ -37,7 +37,7 @@ src_compile() {
 	econf \
 		--sysconfdir=/etc/lftp \
 		--without-modules \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	make || die "compile problem"
 }
