@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.7.ebuild,v 1.2 2003/07/13 05:02:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.7.ebuild,v 1.3 2003/08/20 05:08:05 vapier Exp $
 
 DESCRIPTION="The client libraries for GGZ Gaming Zone"
-SRC_URI="mirror://sourceforge/ggz/${P}.tar.gz"
 HOMEPAGE="http://ggz.sourceforge.net/"
+SRC_URI="mirror://sourceforge/ggz/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~sparc"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=dev-games/libggz-0.0.7
 	dev-libs/expat
