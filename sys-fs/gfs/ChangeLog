@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/gfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.5 2005/03/23 02:53:06 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.6 2005/03/23 14:35:55 xmerlin Exp $
+
+  23 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/gfs.rc:
+  added lock_harness module remove in init
 
   23 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/gfs.rc:
   fixed a dep in init
