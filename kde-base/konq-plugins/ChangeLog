@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.2 2005/02/27 20:21:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.3 2005/02/28 17:49:36 danarmak Exp $
+
+*konq-plugins-3.4.0_rc1-r1 (28 Feb 2005)
+
+  28 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  +konq-plugins-3.4.0_rc1-r1.ebuild, -konq-plugins-3.4.0_rc1.ebuild:
+  The rc1 ebuild was, by mistake, a copy of the konqueror-arkplugin ebuild.
+  Restoring the correct ebuild (same as the beta2 one) and increasing the rev.
+  Bug 83504, thanks to Tom Shaw for noticing.
 
   27 Feb 2005; Dan Armak <danarmak@gentoo.org> :
   Ebuild for 3.4.0 RC1.
