@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-forms
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.1 2004/12/23 00:43:59 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.2 2005/03/28 20:44:27 luckyduck Exp $
+
+  28 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  jgoodies-forms-1.0.5.ebuild:
+  added ~amd64 to KEYWORDS, introduced support for the source useflag.
 
 *jgoodies-forms-1.0.5 (23 Dec 2004)
 
