@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.110 2005/03/09 22:03:28 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.111 2005/03/10 22:37:55 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -378,7 +378,7 @@ postinst_sources() {
 	fi
 
 	# Don't forget to make directory for sysfs
-	[[ ! -d ${ROOT}sys ]] && kernel_is 2 6 && mkdir /sys
+	[[ ! -d ${ROOT}sys ]] && kernel_is 2 6 && mkdir ${ROOT}sys
 
 	echo
 	einfo "After installing a new kernel of any version, it is important"
