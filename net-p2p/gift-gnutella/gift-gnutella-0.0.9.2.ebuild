@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.9.2.ebuild,v 1.6 2004/05/04 05:03:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.9.2.ebuild,v 1.7 2004/06/24 03:52:05 weeve Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gift/${P}.tar.bz2"
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc amd64"
+KEYWORDS="x86 sparc ~ppc amd64"
 
 DEPEND="virtual/glibc
 	>=net-p2p/gift-0.11.6
