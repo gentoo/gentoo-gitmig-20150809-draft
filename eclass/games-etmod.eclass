@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.4 2005/01/20 14:04:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.5 2005/02/23 21:29:20 wolf31o2 Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ DESCRIPTION="Enemy Territory - ${MOD_DESC}"
 
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-IUSE="opengl dedicated emul-linux-x86"
+IUSE="opengl dedicated"
 
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/libc
@@ -45,26 +45,30 @@ games-etmod_src_install() {
 		mv ${S}/* ${D}/${mdir}/
 	fi
 
-	games-etmod_make_etded_exec
-	newgamesbin ${T}/et-${MOD_NAME}-ded.bin et-${MOD_BINS}-ded
-	games-etmod_make_enemy-territory_exec
-	newgamesbin ${T}/et-${MOD_NAME}.bin et-${MOD_BINS}
+	if use dedicated; then
+		games-etmod_make_etded_exec
+		newgamesbin ${T}/et-${MOD_NAME}-ded.bin et-${MOD_BINS}-ded
+	fi
+	if use opengl; then
+		games-etmod_make_enemy-territory_exec
+		newgamesbin ${T}/et-${MOD_NAME}.bin et-${MOD_BINS}
+	fi
 
-	games-etmod_make_init.d
-	exeinto /etc/init.d
-	newexe ${T}/et-${MOD_NAME}-ded.init.d et-${MOD_BINS}-ded
-	games-etmod_make_conf.d
-	insinto /etc/conf.d
-	newins ${T}/et-${MOD_NAME}-ded.conf.d et-${MOD_BINS}-ded
+	if use dedicated; then
+		games-etmod_make_init.d
+		newinitd ${T}/et-${MOD_NAME}-ded.init.d et-${MOD_BINS}-ded
+		games-etmod_make_conf.d
+		newconfd ${T}/et-${MOD_NAME}-ded.conf.d et-${MOD_BINS}-ded
 
-	dodir ${GAMES_SYSCONFDIR}/enemy-territory
+		dodir ${GAMES_SYSCONFDIR}/enemy-territory
 
-	dodir ${bdir}/etwolf-homedir
-	dosym ${bdir}/etwolf-homedir ${GAMES_PREFIX}/.wolfet
-	keepdir ${bdir}/etwolf-homedir
+		dodir ${bdir}/etwolf-homedir
+		dosym ${bdir}/etwolf-homedir ${GAMES_PREFIX}/.wolfet
+		keepdir ${bdir}/etwolf-homedir
+		chmod g+rw ${D}/${mdir} ${D}/${bdir}/etwolf-homedir
+		chmod -R g+rw ${D}/${GAMES_SYSCONFDIR}/enemy-territory
+	fi
 	prepgamesdirs
-	chmod g+rw ${D}/${mdir} ${D}/${bdir}/etwolf-homedir
-	chmod -R g+rw ${D}/${GAMES_SYSCONFDIR}/enemy-territory
 }
 
 games-etmod_pkg_postinst() {
@@ -74,10 +78,11 @@ games-etmod_pkg_postinst() {
 		cp ${samplecfg} ${realcfg}
 	fi
 
-	einfo "To play this mod:             et-${MOD_BINS}"
-	einfo "To launch a dedicated server: et-${MOD_BINS}-ded"
-	use dedicated && \
-	einfo "To launch server at startup:  /etc/init.d/et-${MOD_NAME}-ded"
+	use opengl && einfo "To play this mod:             et-${MOD_BINS}"
+	if use dedicated; then
+		einfo "To launch a dedicated server: et-${MOD_BINS}-ded"
+		einfo "To launch server at startup:  /etc/init.d/et-${MOD_NAME}-ded"
+	fi
 
 	games_pkg_postinst
 }
