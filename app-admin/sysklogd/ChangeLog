@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.36 2005/01/01 11:29:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.37 2005/02/12 00:59:21 vapier Exp $
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org> files/sysklogd.rc6:
+  Add custom reload() func by Cory Visi to init.d script #52044.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,10 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.9 2004/07/24 21:38:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.10 2005/02/12 00:59:21 vapier Exp $
 
-# NB: Config is in /etc/conf.d/sysklogd
-
+opts="reload"
 
 depend() {
 	need clock hostname
@@ -13,12 +12,11 @@ depend() {
 
 start_daemon() {
 	local retval=0
-	local daemon="$1"
-	local options="$2"
+	local daemon=$1
+	local options=$2
 
-	[ -z "${daemon}" ] && return 1
-
-	[ -n "${options}" ] && options="-- ${options}"
+	[[ -z ${daemon} ]] && return 1
+	[[ -n ${options} ]] && options="-- ${options}"
 
 	ebegin "sysklogd -> start: ${daemon}"
 	start-stop-daemon --start --quiet --background \
@@ -31,9 +29,9 @@ start_daemon() {
 
 stop_daemon() {
 	local retval=0
-	local daemon="$1"
+	local daemon=$1
 
-	[ -z "${daemon}" ] && return 1
+	[[ -z ${daemon} ]] && return 1
 
 	ebegin "sysklogd -> stop: ${daemon}"
 	# syslogd can be stubborn some times (--retry 15)...
@@ -47,12 +45,12 @@ stop_daemon() {
 
 start() {
 	start_daemon "syslogd" "${SYSLOGD}" || return 1
-	
+
 	# klogd do not always start proper if started too early
 	sleep 1
-	
+
 	start_daemon "klogd" "${KLOGD}" || {
-		if [ -n "`pidof syslogd`" ]; then
+		if [[ -n $(pidof syslogd) ]] ; then
 			stop_daemon "syslogd"
 		fi
 		return 1
@@ -66,9 +64,9 @@ stop() {
 
 	# Give klogd time to stop
 	sleep 1
-	
+
 	stop_daemon "syslogd" || {
-		if [ -n "`pidof syslogd`" ]; then
+		if [[ -n $(pidof syslogd) ]] ; then
 			# Not sure if we should really try to start
 			# klogd again ...
 			start_daemon "klogd" "${KLOGD}"
@@ -79,3 +77,10 @@ stop() {
 	return 0
 }
 
+reload() {
+	local ret=0
+	ebegin "Reloading configuration"
+	killall -HUP syslogd &> /dev/null ; ret=$((ret+$?))
+	killall -USR2 klogd &> /dev/null  ; ret=$((ret+$?))
+	eend ${ret}
+}
