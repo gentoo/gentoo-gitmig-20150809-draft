@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/filelight/filelight-0.6.4.1-r1.ebuild,v 1.1 2004/05/26 00:03:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/filelight/filelight-0.6.4.1-r1.ebuild,v 1.2 2004/05/30 02:06:50 vapier Exp $
+
+inherit kde
+need-kde 3
 
 DESCRIPTION="Filelight is a tool to display where the space is used on the harddisk"
 HOMEPAGE="http://www.methylblue.com/filelight/"
@@ -10,9 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="arts"
-
-inherit kde
-need-kde 3
 
 S=${WORKDIR}/${PN}-0.6.4
 
