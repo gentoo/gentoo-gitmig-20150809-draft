@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.1.ebuild,v 1.2 2004/08/19 09:58:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.1-r1.ebuild,v 1.1 2004/09/08 16:06:45 lanius Exp $
 
 IUSE="X debug nas esd audiofile snmp"
 
@@ -53,7 +53,7 @@ ltsp-tcp_wrappers-1.0-0-i386.tgz
 ltsp-portmap-1.0-0-i386.tgz
 ltsp-rdesktop-1.3-0-i386.tgz
 ltsp-libvncserver-1.0-0-i386.tgz
-ltsp-localdev-1.0-0-i386.tgz
+ltsp-localdev-1.1-0-i386.tgz
 ltsp-openssl-1.0-0-i386.tgz
 ltsp-samba-1.0-0-i386.tgz
 ltsp-util-linux-1.0-0-i386.tgz
@@ -61,7 +61,7 @@ ltsp-vidlist-1.1-0-i386.tgz
 ltsp-aumix-1.0-0-i386.tgz
 ltsp-freetype-1.0-0-i386.tgz"
 
-use snmp && LTSP_CORE="${LTSP_CORE} ltsp-snmpd-1.0-0-i386.tgz"
+use snmp && LTSP_CORE="${LTSP_CORE} ltsp-snmpd-1-0-i386.tgz"
 
 LTSP_DEBUG="ltsp-gdb-1.0-0-i386.tgz
 ltsp-strace-1.0-0-i386.tgz"
