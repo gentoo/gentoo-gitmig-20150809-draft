@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnosis-utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.4 2004/10/31 01:03:59 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.5 2004/12/30 21:45:47 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   30 Oct 2004; Rob Cakebread <pythonhead@gentoo.org>
   gnosis-utils-1.1.1.ebuild:
@@ -8,7 +11,7 @@
 
 *gnosis-utils-1.1.1 (28 Mar 2004)
 
-  28 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> gnosis-utils-1.0.6.ebuild,
+  28 Mar 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gnosis-utils-1.0.6.ebuild,
   gnosis-utils-1.1.1.ebuild:
   Add new version, update SRC_URI.
 

@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.7 2004/06/25 01:26:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.8 2004/12/30 21:17:24 ciaranm Exp $
 
-  31 May 2004; Bryan Østergaard <kloeri@gentoo.org> cheetah-0.9.15.ebuild:
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  31 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> cheetah-0.9.15.ebuild:
   Stable on alpha.
 
   18 Apr 2004; David Holm <dholm@gentoo.org> cheetah-0.9.15.ebuild:

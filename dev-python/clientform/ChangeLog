@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/clientform
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.9 2004/10/07 21:38:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.10 2004/12/30 21:21:13 ciaranm Exp $
 
-  07 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> -clientform-0.1.15.ebuild,
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  07 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> -clientform-0.1.15.ebuild,
   -clientform-0.1.7b.ebuild:
   Remove old version.
 
@@ -21,7 +24,7 @@
   +clientform-0.1.16.ebuild:
   Version bump
 
-  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> clientform-0.1.7b.ebuild:
+  01 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> clientform-0.1.7b.ebuild:
   Stable on x86.
 
 *clientform-0.1.15 (10 Mar 2004)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/clientcookie
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientcookie/ChangeLog,v 1.7 2004/06/27 18:09:35 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientcookie/ChangeLog,v 1.8 2004/12/30 21:18:18 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Jun 2004; Rob Cakebread <pythonhead@gentoo.org>
   clientcookie-0.4.19.ebuild:
@@ -16,7 +19,7 @@
   +clientcookie-0.4.19.ebuild:
   Version bump
 
-  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org>
+  01 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   clientcookie-0.4.4a.ebuild:
   Stable on x86.
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/empy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.5 2004/09/08 12:33:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.6 2004/12/30 21:31:10 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   08 Sep 2004; <blubb@gentoo.org> empy-3.3.ebuild:
   added ~amd64 keyword
@@ -10,7 +13,7 @@
 
 *empy-3.3 (01 Apr 2004)
 
-  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> empy-3.2.ebuild,
+  01 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> empy-3.2.ebuild,
   empy-3.3.ebuild:
   Mark 3.2 stable on x86, add new 3.3 version, fix homepage + src_uri.
 

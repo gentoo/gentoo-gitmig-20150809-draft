@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.27 2004/12/29 22:59:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.28 2004/12/30 21:28:10 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   -egenix-mx-base-2.0.3.ebuild, -egenix-mx-base-2.0.4.ebuild:
@@ -19,7 +22,7 @@
   01 Jun 2004; Tom Gall <tgall@gentoo.org> egenix-mx-base-2.0.5.ebuild:
   stable on ppc64, bug #52709
 
-  07 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  07 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   egenix-mx-base-2.0.3.ebuild:
   Add missing IUSE.
 
@@ -29,7 +32,7 @@
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> egenix-mx-base-2.0.5.ebuild:
   Marked stable on mips.
 
-  16 Mar 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  16 Mar 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   egenix-mx-base-2.0.3.ebuild, egenix-mx-base-2.0.4.ebuild,
   egenix-mx-base-2.0.5.ebuild:
   Corrected SRC_URI, bug #44788.

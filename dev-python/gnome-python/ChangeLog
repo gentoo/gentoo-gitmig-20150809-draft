@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.37 2004/12/20 00:46:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.38 2004/12/30 21:40:49 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gnome-python-2.6.1.ebuild:
@@ -11,7 +14,7 @@
   24 Nov 2004; Alastair Tse <liquidx@gentoo.org> +gnome-python-2.6.1.ebuild:
   version bump (#68206)
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gnome-python-2.0.0-r1.ebuild:
   Stable on alpha.
 
@@ -19,7 +22,7 @@
   gnome-python-1.4.4.ebuild:
   Fix use invocation
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> gnome-python-1.4.2.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gnome-python-1.4.2.ebuild,
   gnome-python-1.4.4.ebuild:
   Remove default S.
 
@@ -43,7 +46,7 @@
   gnome-python-2.0.0-r1.ebuild:
   stable on sparc
 
-  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org>
+  01 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gnome-python-1.4.4-r1.ebuild, gnome-python-2.0.0-r1.ebuild:
   Stable on x86.
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.18 2004/11/12 15:31:39 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.19 2004/12/30 21:25:30 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   12 Nov 2004; Grant Goodyear <g2boojum@gentoo.org> docutils-0.3.5.ebuild:
   Fixing my glep booboo (bug # 69882).
@@ -28,7 +31,7 @@
 
 *docutils-0.3.3 (12 Jun 2004)
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   +files/docutils-0.3.3-extramodules.patch, +docutils-0.3.3.ebuild:
   Version bump, bug #51422.
 

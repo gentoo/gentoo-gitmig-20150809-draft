@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fpconst
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.6 2004/12/07 23:54:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.7 2004/12/30 21:36:58 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   07 Dec 2004; Jason Wever <weeve@gentoo.org> fpconst-0.6.0.ebuild:
   Added ~sparc keyword.
@@ -8,7 +11,7 @@
   10 Oct 2004; Simon Stelling <blubb@gentoo.org> fpconst-0.6.0.ebuild:
   added ~amd64
 
-  11 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> fpconst-0.6.0.ebuild:
+  11 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> fpconst-0.6.0.ebuild:
   Stable on x86.
 
   10 Apr 2004; David Holm <dholm@gentoo.org> fpconst-0.6.0.ebuild:
@@ -16,7 +19,7 @@
 
 *fpconst-0.6.0 (03 Jan 2004)
 
-  03 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org> fpconst-0.6.0.ebuild,
+  03 Jan 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> fpconst-0.6.0.ebuild,
   metadata.xml:
   Initial import
 
