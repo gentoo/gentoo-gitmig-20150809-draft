@@ -21,6 +21,7 @@ sse
 svga
 tcc
 trusted
+uml
 voodoo3
 wavelan
 
