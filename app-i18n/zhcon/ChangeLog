@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/zhcon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.3 2004/06/24 21:57:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.4 2004/08/25 10:17:30 sekretarz Exp $
+
+  25 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/zhcon-0.2.3-gcc34.patch, zhcon-0.2.3.ebuild:
+  Fixed compile problems with gcc-34. Bug #61381. Thanks to Jackey Yang
 
   25 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> zhcon-0.2.3.ebuild:
   Marked stable on x86

@@ -1,16 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 99805ed62bef799fbf82cb552195a6df ChangeLog 552
+MD5 6832c76f1ab1555fdb4d73db3585a787 zhcon-0.2.3.ebuild 810
+MD5 682497035bd66c7e18891e6bc0627add ChangeLog 734
 MD5 8ef70951aa06be1284427310a2ef8eb5 metadata.xml 466
-MD5 ee34d242f9c10c7395620b80c8e95061 zhcon-0.2.3.ebuild 769
-MD5 aaa0c58daca46525014d59831e32a3b8 files/digest-zhcon-0.2.3 64
 MD5 527bb0c1a80fcb0f8c916d2be40271e4 files/zhcon-0.2.3-assert-gentoo.diff 1063
+MD5 aaa0c58daca46525014d59831e32a3b8 files/digest-zhcon-0.2.3 64
+MD5 fa0b7fc976eef786cf9d61bbcd01584d files/zhcon-0.2.3-gcc34.patch 2127
 MD5 33c30557b9d62f9593d178f718431a1b files/zhcon-0.2.3-gentoo.diff 4788
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA332oHTu7gpaalycRApc0AKDbxTwEtTZfXJSmYv3bcPppkUVjnQCeKatn
-N0fW2CPNMuDKQRFaclOjbRE=
-=QFNO
------END PGP SIGNATURE-----

@@ -1,0 +1,49 @@
+diff -Naur zhcon-0.2.3.orig/config.h.in zhcon-0.2.3/config.h.in
+--- zhcon-0.2.3.orig/config.h.in	2003-04-13 07:05:29.000000000 +0200
++++ zhcon-0.2.3/config.h.in	2004-08-25 11:40:00.905785096 +0200
+@@ -275,11 +275,11 @@
+ #undef WORDS_BIGENDIAN
+ 
+ /* Define to empty if `const' does not conform to ANSI C. */
+-#undef const
++/*#undef const*/
+ 
+ /* Define as `__inline' if that's what the C compiler calls it, or to nothing
+    if it is not supported. */
+-#undef inline
++/*#undef inline*/
+ 
+ /* Define to `long' if <sys/types.h> does not define. */
+ #undef off_t
+diff -Naur zhcon-0.2.3.orig/src/display/fblinear24.cpp zhcon-0.2.3/src/display/fblinear24.cpp
+--- zhcon-0.2.3.orig/src/display/fblinear24.cpp	2002-05-12 05:58:28.000000000 +0200
++++ zhcon-0.2.3/src/display/fblinear24.cpp	2004-08-25 11:40:00.635826136 +0200
+@@ -203,11 +203,13 @@
+             d1 = (-(*cdat >> 3 & 1) & eorx) ^ bgx;
+             d2 = (-(*cdat >> 2 & 1) & eorx) ^ bgx;
+             fb_writel(d1 | (d2<<24), dest32++);
+-            fb_writew(d2>>8, ((__u16*)dest32)++);
++	    dest32 = (__u32*)((__u16*)dest32 + 1);
++            fb_writew(d3, dest32);
+         }
+         if (pFont->w & 1) {
+             d3 = (-(*cdat >> 1 & 1) & eorx) ^ bgx;
+-            fb_writew(d3, ((__u16*)dest32)++);
++	    dest32 = (__u32*)((__u16*)dest32 + 1);
++            fb_writew(d3, dest32);
+             fb_writeb(d3>>16, (__u8*)dest32);
+         }
+         cdat++;
+diff -Naur zhcon-0.2.3.orig/src/display/fblinear8.cpp zhcon-0.2.3/src/display/fblinear8.cpp
+--- zhcon-0.2.3.orig/src/display/fblinear8.cpp	2002-05-12 05:58:28.000000000 +0200
++++ zhcon-0.2.3/src/display/fblinear8.cpp	2004-08-25 11:40:00.641825224 +0200
+@@ -102,7 +102,8 @@
+             fb_writel((nibbletab_cfb8[*cdat >> 4] & eorx) ^ bgx, dest32++);
+         }
+         if (pFont->w & 2) {
+-            fb_writew((nibbletab_cfb8[*cdat & 0xc] & eorx) ^ bgx, ((__u16*)dest32)++);
++            dest32 = (__u32*)((__u16*)dest32 + 1);
++            fb_writew((nibbletab_cfb8[*cdat & 0xc] & eorx) ^ bgx, dest32);
+         }
+         if (pFont->w & 1) {
+             fb_writeb((*cdat & 2) ? fg : bg, (__u8*)dest32);
