@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.89 2004/03/11 00:38:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.90 2004/04/16 10:32:45 liquidx Exp $
+
+*python-2.3.3-r1 (12 Apr 2004)
+
+  12 Apr 2004; Alastair Tse <liquidx@gentoo.org> python-2.3.3-r1.ebuild,
+  files/python-2.3-add_portage_search_path_take_2.patch:
+  add workaround for python-2.2 to python-2.3 upgrade possibly breaking older
+  portage versions. make /usr/lib/portage/pym appear before
+  /usr/lib/python*/site-packages in sys.path (not really critical, but better be
+  safe than sorry)
 
   11 Mar 2004; Alastair Tse <liquidx@gentoo.org> python-2.2.1-r5.ebuild:
   removing 2.2.1 from tree for security reasons (#44230)
