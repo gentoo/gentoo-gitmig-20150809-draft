@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.12 2004/06/24 21:48:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.13 2004/07/01 20:45:57 khai Exp $
+
+  01 Jul 2004; Yi Qiang <khai@gentoo.org> gconfmm-2.0.2.ebuild:
+  Fix slotting issue
 
 *gconfmm-2.0.2 (12 Jun 2004)
 
