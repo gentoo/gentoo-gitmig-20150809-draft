@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r1.ebuild,v 1.1 2003/11/05 16:05:05 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r1.ebuild,v 1.2 2003/11/17 23:55:26 kumba Exp $
 
-inherit eutils flag-o-matic ccc
+inherit eutils flag-o-matic ccc gnuconfig
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
 
 # Make it more portable between straight releases
@@ -62,6 +62,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	# Allow OpenSSH to detect mips systems
+	use mips && gnuconfig_update
 
 	myconf="\
 		$( use_with tcpd tcp-wrappers ) \
