@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/rtl8180
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.1 2005/02/19 23:05:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.2 2005/03/08 21:49:29 genstef Exp $
+
+*rtl8180-0.20.2 (08 Mar 2005)
+
+  08 Mar 2005; Stefan Schweizer <genstef@gentoo.org> +rtl8180-0.20.2.ebuild:
+  Version bump thanks to atlantic in #gentoo-laptop
 
 *rtl8180-0.19 (20 Feb 2005)
 
