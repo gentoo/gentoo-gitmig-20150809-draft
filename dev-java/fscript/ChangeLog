@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fscript
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/ChangeLog,v 1.1 2004/02/19 03:42:13 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/ChangeLog,v 1.2 2004/03/23 03:12:45 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> fscript-1.14.ebuild:
+  QA fixes. Clean up. Stable on x86. Fixes according to #45398
 
 *fscript-1.14 (18 Feb 2004)
 
