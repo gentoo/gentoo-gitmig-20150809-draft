@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.0.ebuild,v 1.6 2004/06/24 23:49:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.0.ebuild,v 1.7 2004/08/27 03:00:59 tgall Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.icecast.org/ices.php"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="x86 sparc amd64 ppc64"
 
 DEPEND="dev-libs/libxml2
 	dev-util/pkgconfig
