@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.4.ebuild,v 1.4 2002/10/20 10:20:52 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.4.ebuild,v 1.5 2002/11/09 01:03:39 azarah Exp $
 
 IUSE="ssl doc"
 
@@ -39,7 +39,8 @@ src_compile() {
 		${myconf} \
 		--with-libxml=2 || die
 
-	emake || die
+	# dont always work with -j4 -- <azarah@gentoo.org> 9 Nov 2002
+	make || die
 }
 
 src_install() {
