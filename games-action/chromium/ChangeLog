@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.6 2004/02/22 10:28:30 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.7 2004/03/28 09:32:41 mr_bones_ Exp $
+
+  28 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  chromium-0.9.12-r5.ebuild:
+  fix IUSE
 
 *chromium-0.9.12-r5 (19 Nov 2003)
 
