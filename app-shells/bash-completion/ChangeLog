@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.98 2005/01/18 13:22:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.99 2005/01/20 11:51:15 ka0ttic Exp $
+
+*bash-completion-20050120 (20 Jan 2005)
+
+  20 Jan 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/20050120-gentoo.diff, +bash-completion-20050120.ebuild:
+  Version bump; also updated gentoo patch with fix for bug 78439.
 
   18 Jan 2005; Joshua Kinard <kumba@gentoo.org>
   bash-completion-20041017-r3.ebuild:
