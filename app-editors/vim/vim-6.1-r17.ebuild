@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.8 2002/12/15 12:35:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.9 2002/12/16 21:08:15 rphillips Exp $
 
 VIMPATCH="vimpatch-1-263.tar.bz2"
 inherit vim
@@ -41,7 +41,7 @@ src_compile() {
 	#
 	./configure \
 		--prefix=/usr --mandir=/usr/share/man --host=$CHOST \
-		--with-features=huge --with-cscope $myconf \
+		--with-features=huge --enable-cscope $myconf \
 		--enable-gui=no \
 		|| die "vim configure failed"
 
