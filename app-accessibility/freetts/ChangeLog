@@ -1,0 +1,10 @@
+# ChangeLog for app-accessibility/freetts
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.1 2004/03/17 02:45:08 zx Exp $
+
+*freetts-1.2_beta (20 Mar 2004)
+
+  20 Mar 2004; Chris Aniszczyk <zx@gentoo.org> freetts-1.2_beta.ebuild,
+  metadata.xml, files/jsapi-gentoo.diff:
+  Initial Import :)
+
