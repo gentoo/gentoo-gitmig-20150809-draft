@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-0.8.ebuild,v 1.8 2005/01/21 22:13:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.0.ebuild,v 1.1 2005/01/21 22:13:24 ka0ttic Exp $
 
 DESCRIPTION="Honeyd is a small daemon that creates virtual hosts on a network"
 HOMEPAGE="http://www.citi.umich.edu/u/provos/honeyd/"
@@ -9,11 +9,11 @@ SRC_URI="http://www.citi.umich.edu/u/provos/honeyd/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="doc"
 
 DEPEND=">=dev-libs/libdnet-1.7
-	>=dev-libs/libevent-0.6
+	>=dev-libs/libevent-1.0
 	>=net-libs/libpcap-0.7.1"
 
 src_unpack() {
@@ -28,17 +28,13 @@ src_compile() {
 }
 
 src_install() {
-	dodoc README
+	dodoc README TODO
 	dosbin honeyd
 
 	einstall || die "make install failed"
 
 	rm ${D}/usr/bin/honeyd
 	rm ${D}/usr/share/honeyd/README
-
-	dodir /usr/share/honeyd/scripts
-	exeinto /usr/share/honeyd/scripts
-	doexe scripts/web.sh scripts/router-telnet.pl scripts/test.sh
 
 	insinto /etc
 	newins config.sample honeyd.conf || die "failed to install honeyd.conf"
@@ -59,9 +55,8 @@ src_install() {
 	dodoc xprobe2.conf.new honeyd.conf.networks
 
 	# Install all the example scripts
-	cd ${WORKDIR}/honeyd-0.7a-beta2/scripts
-	cp -R * ${D}/usr/share/honeyd/scripts/
-	cd ${D}/usr/share/honeyd/scripts/
-	find -type f -name "*.sh" -o -name "*.pl" | xargs chmod +x
+	cp -R scripts ${D}/usr/share/honeyd/
+	find ${D}/usr/share/honeyd/scripts \
+		-type f -name "*.sh" -o -name "*.pl" | xargs chmod +x
 }
 
