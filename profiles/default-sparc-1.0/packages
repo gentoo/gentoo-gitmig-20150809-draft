@@ -47,7 +47,7 @@
 # sash - static shell for system recovery
 *app-shells/sash
 
-*sys-devel/perl
+*<sys-devel/perl-5.8.0
 *app-editors/nano
 #no real cost for nano, since we already have ncurses
 *net-ftp/ftp
@@ -169,7 +169,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/packages,v 1.18 2002/08/18 21:05:37 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/packages,v 1.19 2002/08/30 20:24:02 verwilst Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
