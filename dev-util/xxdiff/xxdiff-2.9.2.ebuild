@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.9.2.ebuild,v 1.5 2004/02/11 18:15:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.9.2.ebuild,v 1.6 2004/03/14 05:54:02 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A graphical file and directories comparator and merge tool."
@@ -16,7 +16,7 @@ RDEPEND="=x11-libs/qt-3*
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 IUSE=""
 
 src_compile() {
