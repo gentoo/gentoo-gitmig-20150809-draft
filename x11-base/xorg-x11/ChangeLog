@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.349 2005/03/07 23:34:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.350 2005/03/09 14:01:09 geoman Exp $
+
+  09 Mar 2005; Stephen P. Becker <geoman@gentoo.org>
+  xorg-x11-6.8.2-r1.ebuild:
+  stable on mips - bug 83598
 
   08 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   xorg-x11-6.8.2-r1.ebuild:
