@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.21.ebuild,v 1.10 2004/06/24 21:54:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.21.ebuild,v 1.11 2004/07/14 15:01:30 agriffis Exp $
 
 IUSE="nls"
 
 inherit gnome.org libtool
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="A set of language and system independant CORBA interfaces"
 HOMEPAGE="http://www.gnome.org/"
 
@@ -41,4 +40,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
 }
-

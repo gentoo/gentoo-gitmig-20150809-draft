@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-1.0.3.ebuild,v 1.12 2004/06/24 21:54:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-1.0.3.ebuild,v 1.13 2004/07/14 15:02:11 agriffis Exp $
 
 IUSE="doc"
 
 inherit gnome2
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Gnome2 replacement for OAF"
 SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
@@ -29,5 +28,3 @@ DEPEND="${RDEPEND}
 LIBTOOL_FIX="1"
 
 DOCS="AUTHORS  ABOUT-NLS COPYING* ChangeLog  README* INSTALL NEWS TODO docs/* api-docs/*"
-
-

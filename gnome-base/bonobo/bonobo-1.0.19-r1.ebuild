@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.19 2004/06/24 21:54:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.20 2004/07/14 15:01:30 agriffis Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A set of language and system independant CORBA interfaces"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
@@ -51,4 +50,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
 }
-
