@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.20 2004/11/14 15:45:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.21 2004/12/29 03:13:55 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Nov 2004; Sven Wegener <swegener@gentoo.org> -bnc-2.8.9.ebuild:
   Removed old ebuild.
@@ -20,7 +23,7 @@
   +bnc-2.9.1.ebuild:
   Version bump for security #70674.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> bnc-2.8.9.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> bnc-2.8.9.ebuild:
   Stable on alpha, bug 66912.
 
   09 Oct 2004; Jason Wever <weeve@gentoo.org> bnc-2.8.9.ebuild:
@@ -41,10 +44,10 @@
 
 *bnc-2.8.6-r1 (22 Jun 2004)
 
-  22 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +bnc-2.8.6-r1.ebuild files/bncsetup.patch:
+  22 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +bnc-2.8.6-r1.ebuild files/bncsetup.patch:
   Add patch to bncsetup, thanks to redeeman and GurliGebis.
 
-  21 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  21 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   +files/bnc-2.8.6-gotofail-labelfix.patch, bnc-2.8.6.ebuild:
   Add patch by redeeman <redeeman@metanurb.dk>, close bug #54689.
 
