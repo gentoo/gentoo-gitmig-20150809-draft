@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/id3-py
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.1 2003/04/19 00:56:25 blauwers Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.2 2004/02/15 13:02:44 dholm Exp $
+
+  15 Feb 2004; David Holm <dholm@gentoo.org> id3-py-1.2.ebuild:
+  Added to ~ppc.
 
 *id3-py-1.2 (19 Apr 2003)
 
