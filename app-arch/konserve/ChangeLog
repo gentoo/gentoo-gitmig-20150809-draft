@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/konserve
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/konserve/ChangeLog,v 1.1 2003/01/23 08:51:12 verwilst Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/konserve/ChangeLog,v 1.2 2003/02/12 02:56:59 vapier Exp $
 
 *konserve-0.7.1 (23 Jan 2002) Bart Verwilst <verwilst@gentoo.org>
 

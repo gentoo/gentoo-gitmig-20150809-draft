@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/cksfv
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.4 2003/01/05 16:36:28 weeve Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.5 2003/02/12 02:56:19 vapier Exp $
  
   05 Jan 2003: Jason Wever <weeve@gentoo.org> : updated ~sparc keyword to sparc
 

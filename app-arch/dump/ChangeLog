@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/dump
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.13 2003/01/15 18:32:52 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.14 2003/02/12 02:56:28 vapier Exp $
 
 *dump-0.4.32 (15 Jan 2003)
 
