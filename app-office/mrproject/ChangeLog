@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mrproject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/ChangeLog,v 1.20 2003/09/21 18:50:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/ChangeLog,v 1.21 2003/11/18 20:22:29 spider Exp $
+
+  18 Nov 2003; <spider@gentoo.org> mrproject-0.10.ebuild,
+  mrproject-0.5.1-r1.ebuild, mrproject-0.6.ebuild:
+  move to stable, remove old stuffs
 
 *mrproject-0.10 (21 Sep 2003)
 
