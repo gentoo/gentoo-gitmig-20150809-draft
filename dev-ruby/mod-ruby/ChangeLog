@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/mod-ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.4 2003/02/12 06:35:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.5 2003/05/10 13:17:52 twp Exp $
+
+*mod-ruby-1.1.1 (10 May 2003)
+
+  10 May 2003; Tom Payne <twp@gentoo.org> mod-ruby-1.1.1.ebuild :
+
+  Version bump. Ebuild tidy. Experimental apache-1.3 support. Bugs # 16539 and 18916.
 
 *mod-ruby-1.0.1 (29 Nov 2002)
 
