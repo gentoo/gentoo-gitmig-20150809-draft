@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.1 2004/07/02 08:11:27 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.2 2004/10/10 18:37:46 eradicator Exp $
 
 inherit eutils
 
@@ -18,8 +18,13 @@ DEPEND=">=x11-libs/qt-3.1.2
 
 IUSE="oggvorbis"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-errno.patch
+}
 
 src_compile() {
 	addwrite ${QTDIR}/etc/settings

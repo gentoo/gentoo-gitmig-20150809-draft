@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qmbtagger
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/ChangeLog,v 1.7 2004/07/02 08:11:27 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/ChangeLog,v 1.8 2004/10/10 18:37:46 eradicator Exp $
+
+  10 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/qmbtagger-0.07-errno.patch, -qmbtagger-0.04.ebuild,
+  -qmbtagger-0.05.ebuild:
+  Fix compilation.  Added to ~amd64.  Removed old versions.
 
 *qmbtagger-0.07 (02 Jul 2004)
 
