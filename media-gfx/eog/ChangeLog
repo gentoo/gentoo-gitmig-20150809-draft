@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.75 2004/11/12 03:12:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.76 2004/11/12 17:24:18 foser Exp $
+
+*eog-2.8.1 (12 nov 2004)
+
+  12 Nov 2004; foser <foser@gentoo.org> eog-2.8.1.ebuild :
+  New release
+
+  12 Nov 2004; foser <foser@gentoo.org> eog-2.8.0.ebuild :
+  Add patch to fix building with USE=-jpeg, reported on irc by geoman
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> eog-2.8.0.ebuild:
   Stable on sparc

@@ -1,0 +1,35 @@
+diff -uNr eog-2.8.0/libeog/eog-image.c eog-2.8.0.patched/libeog/eog-image.c
+--- eog-2.8.0/libeog/eog-image.c	2004-09-12 19:42:51.000000000 +0200
++++ eog-2.8.0.patched/libeog/eog-image.c	2004-11-12 17:50:10.316509248 +0100
+@@ -1409,13 +1409,15 @@
+ 			     _("Temporary file creation failed."));
+ 		return FALSE;
+ 	}
+-	
++
++#if HAVE_JPEG
+ 	/* determine kind of saving */
+ 	if ((g_ascii_strcasecmp (source->format, EOG_FILE_FORMAT_JPEG) == 0) && 
+ 	    source->exists && source->modified) 
+ 	{
+ 		success = eog_image_jpeg_save_file (img, tmpfile, source, NULL, error);
+ 	}
++#endif
+ 
+ 	if (!success && (*error == NULL)) {
+ 		success = gdk_pixbuf_save (priv->image, tmpfile, source->format, error, NULL);
+@@ -1541,11 +1543,14 @@
+ 		success = eog_image_copy_file (source, target, error);
+ 		direct_copy = success;
+ 	}
++
++#if HAVE_JPEG
+ 	else if ((g_ascii_strcasecmp (source->format, EOG_FILE_FORMAT_JPEG) == 0 && source->exists) ||
+ 		 (g_ascii_strcasecmp (target->format, EOG_FILE_FORMAT_JPEG) == 0))
+ 	{
+ 		success = eog_image_jpeg_save_file (img, tmpfile, source, target, error);
+ 	}
++#endif
+ 
+ 	if (!success && (*error == NULL)) {
+ 		success = gdk_pixbuf_save (priv->image, tmpfile, target->format, error, NULL);
