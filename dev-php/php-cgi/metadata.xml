@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <herd>php</herd>
+    <maintainer>
+        <email>robbat2@gentoo.org</email>
+        <name>Robin H. Johnson</name>
+        <description>Eclass author and primary maintainer (See the herd for other maintainers)</description>
+    </maintainer>
+</pkgmetadata>
