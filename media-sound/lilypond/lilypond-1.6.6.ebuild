@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.6.ebuild,v 1.1 2002/12/03 17:13:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.6.ebuild,v 1.2 2003/01/18 17:16:17 agriffis Exp $
 
 IUSE="doc"
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/python-2.2.1-r2
 	>=sys-devel/perl-5.6.1-r6
 	>=dev-util/guile-1.4-r3
 	>=sys-devel/bison-1.35
-	>=app-text/tetex-1.0.7-r10
+	>=app-text/tetex-1.0.7-r12
 	>=sys-apps/texinfo-4.2-r5
 	>=sys-devel/flex-2.5.4a-r5
 	doc? ( >=app-text/mftrace-1.0.8

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.3 2002/12/03 17:16:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.4 2003/01/18 17:16:17 agriffis Exp $
+
+  18 Jan 2003; Aron Griffis <agriffis@gentoo.org> lilypond-1.6.6.ebuild :
+  Fix bug 13396 by requiring tetex-1.0.7-r12 which should fix the missing
+  mf.base compilation problem.
 
 *lilypond-1.6.6 (03 Dec 2002)
 
