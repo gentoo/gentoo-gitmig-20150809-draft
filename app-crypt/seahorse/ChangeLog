@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.33 2005/02/28 09:47:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.34 2005/03/25 23:17:24 vanquirius Exp $
+
+  25 Mar 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/seahorse-0.7.6-gnome-2.10.patch, seahorse-0.7.6.ebuild:
+  Fix bug 85701, allow seahorse-0.7.6 to compile with gedit-2.10. Thanks to
+  Marien Zwart <m_zwart@123mail.org> and Alexander M. Turek <me@derrabus.de>.
 
 *seahorse-0.7.6 (28 Feb 2005)
 

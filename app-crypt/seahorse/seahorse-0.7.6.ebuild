@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.6.ebuild,v 1.1 2005/02/28 09:47:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.6.ebuild,v 1.2 2005/03/25 23:17:24 vanquirius Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="gnome front end to gnupg"
 HOMEPAGE="http://seahorse.sourceforge.net/"
@@ -37,7 +37,14 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 IUSE="doc ldap"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${P}-gnome-2.10.patch"
+}
+
 src_compile() {
+	autoconf
 	# note below doesn't work - need to fix
 	append-ldflags -Wl,-z,now
 	export LDFLAGS
