@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.4 2004/03/16 19:26:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.5 2004/03/19 18:33:05 wolf31o2 Exp $
 
 inherit games
 
@@ -110,16 +110,14 @@ src_install() {
 	insinto ${dir}
 	doins ${S}/README.linux ${S}/Unreal.xpm || die "copying readme/icon"
 
-	#sed -e "s:GENTOO_DIR:${dir}:" ${FILESDIR}/ucc > ucc
-	sed -e -i "s:GENTOO_DIR:${dir}:" ${FILESDIR}/ut2003
-	#dogamesbin ucc ut2003
+	sed -i "s:GENTOO_DIR:${dir}:" ${FILESDIR}/ut2003
 	dogamesbin ut2003
 
 	rm ${Ddir}/System/{UT2003,User}.ini || die "deleting ini files"
 
 	# this brings our install up to the newest version
 	cd ${S}
-	bin/Linux/x86/loki_patch --verify patch.dat
+	bin/Linux/x86/loki_patch --verify patch.dat || die "verifying patch"
 	bin/Linux/x86/loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
