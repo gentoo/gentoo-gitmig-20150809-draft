@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.6.ebuild,v 1.5 2005/01/01 15:39:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.6.ebuild,v 1.6 2005/01/07 23:41:08 hansmi Exp $
 
 # Notes:
 #
@@ -240,6 +240,10 @@ src_unpack() {
 	cd ${S}
 	cp ${DISTDIR}/STLport-4.6.2.tar.gz ${S}/stlport/download || die
 	epatch ${FILESDIR}/${OO_VER}/newstlportfix.patch
+
+	if use ppc; then
+		epatch ${FILESDIR}/${OO_VER}/STLport-vector.patch
+	fi
 
 	#Add our own splash screen
 	epatch ${FILESDIR}/${OO_VER}/gentoo-splash.diff
