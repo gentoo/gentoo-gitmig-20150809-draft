@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.3.ebuild,v 1.1 2002/09/21 05:00:55 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.3.ebuild,v 1.2 2002/09/24 15:36:48 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK Instant Messenger client"
@@ -37,39 +37,41 @@ src_unpack() {
 
 src_compile() {
 	
-	local myopts gnomeopts
+	local myconf gnomeopts
 
-	use esd  || myopts="--disable-esd"
-	use nas  || myopts="${myopts} --disable-nas"
-	use perl || myopts="${myopts} --disable-perl"
+	use esd  || myconf="--disable-esd"
+	use perl || myconf="${myconf} --disable-perl"
+	use nas \
+		&& myconf="${myconf} --enable-nas" \
+		|| myconf="${myconf} --disable-nas"
 
 	if [ "` use arts`" ]; then
 	    inherit kde-functions
 	    set-kdedir 3
 	    # $KDEDIR now points to arts location
 	else
-	    myopts="${myopts} --disable-artsc"
+	    myconf="${myconf} --disable-artsc"
 	fi
 
-	use nls  || myopts="${myopts} --disable-nls"
+	use nls  || myconf="${myconf} --disable-nls"
 
-	gnomeopts="${myopts}"
+	gnomeopts="${myconf}"
 
 	if [ "`use gtk2`" ];
 	then
 
 		# GTK+ 2 support
-		myopts="${myopts} --enable-gtk2"
+		myconf="${myconf} --enable-gtk2"
 
 	fi
 
-	gnomeopts="${myopts}"
+	gnomeopts="${myconf}"
 
 	# Gnome is disabled for GTK+ 2.0 build and first build of GTK 1.4 version
-	myopts="${myopts} --disable-gnome"
+	myconf="${myconf} --disable-gnome"
 
 	# always build standalone gaim program
-	econf ${myopts} || die
+	econf ${myconf} || die
 	emake || die
 
 	# if gnome support is enabled (and gtk2 disabled), then build gaim_applet
