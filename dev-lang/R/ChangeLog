@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.22 2004/05/28 06:17:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.23 2004/06/04 22:17:32 phosphan Exp $
+
+*R-1.9.0-r1 (05 Jun 2004)
+
+  05 Jun 2004; Patrick Kursawe <phosphan@gentoo.org> R-1.9.0-r1.ebuild:
+  Added a few USE flags according to suggestions by Leo Chen <lcheu@cs.sfu.ca>
 
   28 May 2004; Patrick Kursawe <phosphan@gentoo.org> R-1.9.0.ebuild:
   Removing the f77 USE flag check - just giving a hint when no g77 found.
