@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.4 2003/03/23 23:49:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.5 2003/03/30 23:08:58 foser Exp $
 
-IUSE="arts gtk gnome nls"
+IUSE="arts gtk gnome nls tcltk"
  
 S=${WORKDIR}/${P}
 
@@ -21,7 +21,8 @@ DEPEND="virtual/x11
 	gtk? ( >=media-libs/gdk-pixbuf-0.11.0-r1 >=media-libs/imlib-1.9.10-r1 )
 	arts? ( kde-base/arts )"
 	
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="nls? ( sys-devel/gettext )
+	tcltk? ( dev-lang/tk )"
 
 src_compile() {
 	local myconf
