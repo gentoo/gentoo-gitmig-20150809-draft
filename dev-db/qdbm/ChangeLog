@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.17 2004/12/06 03:29:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.18 2004/12/22 13:13:11 gustavoz Exp $
+
+  22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> qdbm-1.8.17.ebuild:
+  Stable on sparc wrt #72440
 
   05 Dec 2004; Jason Wever <weeve@gentoo.org> qdbm-1.8.17.ebuild:
   Added ~sparc keyword wrt bug #73460.
