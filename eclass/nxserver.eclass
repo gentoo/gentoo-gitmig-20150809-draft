@@ -67,15 +67,6 @@ nxserver_src_install() {
 		fi
 	done
 
-	# NX renamed the nxhome directory in 1.3.0
-	#
-	# Gentoo is sticking with the old name to make it easier to handle
-	# upgrades for now
-
-	if [ -d usr/NX/home ]; then
-		mv usr/NX/home usr/NX/nxhome
-	fi
-
 	tar -cf - * | ( cd ${D} ; tar -xf - )
 
 	dodir /usr/NX/var
@@ -84,13 +75,9 @@ nxserver_src_install() {
 
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PV}/50nxserver
-
-	fperms 0600 /usr/NX/etc/passwd
 }
 
 nxserver_pkg_postinst() {
-	einfo "Adding user 'nx' for the NX server"
-	enewuser nx -1 /usr/NX/bin/nxserver /usr/NX/nxhome
 
 	# this is support for users upgrading from NX 1.2.2 to 1.3.0
 
@@ -101,13 +88,24 @@ nxserver_pkg_postinst() {
 		l_szPasswd=passwords
 	fi
 
-	if [ ! -d /usr/NX/home ]; then
-		ln -s /usr/NX/nxhome /usr/NX/home
+	l_szHome=nxhome
+	if [ -d /usr/NX/home ]; then
+		l_szHome=home
 	fi
+
+	if [ -d /usr/NX/nxhome -a -d /usr/NX/home ]; then
+		usermod -d /usr/NX/home nx
+	fi
+
+	# end of upgrade support
+
+	einfo "Adding user 'nx' for the NX server"
+	enewuser nx -1 /usr/NX/bin/nxserver /usr/NX/$l_szHome
 
 	einfo "Changing permissions for files under /usr/NX"
 	chown nx:root /usr/NX/etc/$l_szPasswd
-	chown -R nx:root /usr/NX/nxhome
+	chmod 0600 /usr/NX/etc/$l_szPasswd
+	chown -R nx:root /usr/NX/$l_szHome
 	chown -R nx:root /usr/NX/var
 
 	einfo "Generating SSH keys for the 'nx' user"
@@ -115,7 +113,7 @@ nxserver_pkg_postinst() {
 		ssh-keygen -q -t dsa -N '' -f /usr/NX/etc/users.id_dsa
 	fi
 	chown nx:root /usr/NX/etc/users.id_dsa
-	cp -f /usr/NX/nxhome/.ssh/server.id_dsa.pub.key /usr/NX/nxhome/.ssh/authorized_keys2
+	cp -f /usr/NX/$l_szHome/.ssh/server.id_dsa.pub.key /usr/NX/$l_szHome/.ssh/authorized_keys2
 
 	if [ ! -f /usr/NX/var/broadcast.txt ]; then
 	    einfo "Creating NX user registration database"
