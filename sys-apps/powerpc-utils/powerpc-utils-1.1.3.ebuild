@@ -1,15 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Kain X <kain@kain.org>
-# $Id: powerpc-utils-1.1.3.ebuild,v 1.1 2002/04/27 10:36:20 pvdabeel Exp $
+# $Id: powerpc-utils-1.1.3.ebuild,v 1.2 2002/06/22 00:13:53 gerk Exp $
 
 S=${WORKDIR}/${P}
 DEBRV=3
 DESCRIPTION="PowerPC utils; nvsetenv"
 SRC_URI="http://http.us.debian.org/debian/pool/main/p/powerpc-utils/powerpc-utils_${PV}.orig.tar.gz
 	http://http.us.debian.org/debian/pool/main/p/powerpc-utils/powerpc-utils_${PV}-${DEBRV}.diff.gz"
-#HOMEPAGE=""
+HOMEPAGE=""
 DEPEND="virtual/glibc"
+RDEPEND=""
+SLOT="0"
+LICENSE="GPL"
+
+pkg_setup() {
+	if [ ${ARCH} != "ppc" ] ; then
+		die "Sorry, this as a PPC only pacakge."		
+	fi
+}
 
 src_unpack() {
 	cd ${WORKDIR}

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/powerpc-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: Changelog,v 1.1 2002/04/27 10:36:20 pvdabeel Exp $
+# $Id: Changelog,v 1.2 2002/06/22 00:13:53 gerk Exp $
+
+*powerpc-utils-1.1.3 (21 June 2002)
+
+21 June 2002; Gerk (gerk@gentoo.org)
+
+	Adjusted ARCH check, didn't bump revision (no need to rebuild)
+
 
 *powerpc-utils-1.1.3 (05 Apr 2002)
 
