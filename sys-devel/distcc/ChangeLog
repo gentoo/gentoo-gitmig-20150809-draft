@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.100 2004/03/21 21:44:24 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.101 2004/04/12 00:33:42 lisa Exp $
+
+  11 Apr 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.12.1.ebuild,
+  distcc-2.13-r1.ebuild, distcc-2.13.ebuild:
+  bump to stable. yell at me if your arch breaks
+
+  11 Apr 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.12.1.ebuild,
+  distcc-2.13.ebuild:
+  General cleanup of old ebuilds & digests.
 
   21 Mar 2004; Lisa Seelye <lisa@gentoo.org> files/2.11.1p/init:
   Change the init script to do TMPDIR=TMPDIR basically so that the user can

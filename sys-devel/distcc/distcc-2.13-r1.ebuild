@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.13-r1.ebuild,v 1.2 2004/03/12 11:20:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.13-r1.ebuild,v 1.3 2004/04/12 00:33:42 lisa Exp $
+
+# If you change this in any way please email lisa@gentoo.org and make an
+# entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
 
 inherit eutils gcc flag-o-matic
 
@@ -12,12 +15,13 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~mips ~ia64 ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa mips ia64 amd64"
 IUSE="gnome gtk selinux ipv6"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
 	>=sys-devel/gcc-config-1.3.1
-	sys-apps/shadow"
+	sys-apps/shadow
+	dev-util/pkgconfig"
 
 RDEPEND="!mips? ( gnome? ( >=x11-libs/gtk+-2.0.0
 		  >=gnome-base/libgnome-2.0.0
