@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/boost-jam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-jam/ChangeLog,v 1.4 2004/05/01 19:44:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-jam/ChangeLog,v 1.5 2004/06/14 18:04:19 eradicator Exp $
+
+  14 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/boost-jam-3.1.9-dir.patch:
+  Added dev-libs/boost DEPEND for bug #53852 and revbumped to change the
+  BOOST_BUILD_PATH to match dev-libs/boost to close bug #53853.  Added
+  ~amd64 and ~sparc KEYWORDs.
 
   01 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
   boost-jam-3.1.4.ebuild, boost-jam-3.1.9.ebuild:

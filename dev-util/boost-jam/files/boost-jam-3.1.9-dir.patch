@@ -1,0 +1,24 @@
+diff -Naur boost-jam-3.1.9.orig/Jambase boost-jam-3.1.9/Jambase
+--- boost-jam-3.1.9.orig/Jambase	2004-01-25 21:14:42.000000000 -0800
++++ boost-jam-3.1.9/Jambase	2004-06-14 04:22:38.285370451 -0700
+@@ -49,7 +49,7 @@
+ # required by Debian Policy.
+ if ! $(BOOST_BUILD_PATH) && $(UNIX)
+ {
+-    BOOST_BUILD_PATH = /usr/share/boost-build ;
++    BOOST_BUILD_PATH = /usr/share/boost ;
+ }
+ 
+ 
+diff -Naur boost-jam-3.1.9.orig/jambase.c boost-jam-3.1.9/jambase.c
+--- boost-jam-3.1.9.orig/jambase.c	2004-01-25 21:14:42.000000000 -0800
++++ boost-jam-3.1.9/jambase.c	2004-06-14 04:22:13.105483672 -0700
+@@ -21,7 +21,7 @@
+ "BOOST_BUILD_PATH.user-value = $(BOOST_BUILD_PATH) ;\n",
+ "if ! $(BOOST_BUILD_PATH) && $(UNIX)\n",
+ "{\n",
+-"BOOST_BUILD_PATH = /usr/share/boost-build ;\n",
++"BOOST_BUILD_PATH = /usr/share/boost ;\n",
+ "}\n",
+ "rule boost-build ( dir ? )\n",
+ "{\n",
