@@ -1,0 +1,35 @@
+# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Ben Lutgens <lamer@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.1 2001/07/18 00:46:22 lamer Exp $
+
+S=${WORKDIR}/${P}
+DESCRIPTION="extracts urls from text and will send them to another app"
+SRC_URI="ftp://gd.tuwien.ac.at/infosys/mail/mutt/contrib/${P}.tar.gz"
+HOMEPAGE="http://www.mutt.org"
+DEPEND=">=sys-libs/ncurses-5.2"
+
+#RDEPEND=""
+
+src_compile() {
+	try ./configure --infodir=/usr/share/info --mandir=/usr/share/man \
+	--prefix=/usr --sysconfdir=/etc --host=${CHOST}
+	
+	try emake
+	#try make
+}
+
+src_install () {
+	
+	# try make prefix=${D}/usr install
+
+    try make DESTDIR=${D} install
+	 dodoc README INSTALL ChangeLog AUTHORS COPYING sample.urlview
+	 dobin url_handler.sh
+}
+
+pkg_postinst() {
+	einfo "There is a sample.urlview in /usr/share/doc/${P}"
+	einfo "You can also customize /usr/bin/url_handler.sh"
+}
+
