@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbweather
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.2 2002/03/15 15:19:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.3 2002/07/07 08:55:03 seemant Exp $
+
+*bbweather-0.5 (07 Jul 2002)
+
+  07 Jul 2002; Seemant Kulleen <seemant@gentoo.org> bbweather-0.5.ebuild
+  files/digest-bbweather-0.5 :
+
+  Version bump.
 
 *bbweather-0.3-r2 (15 Mar 2002)
 
