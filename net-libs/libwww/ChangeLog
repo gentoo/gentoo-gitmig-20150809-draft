@@ -1,8 +1,11 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.11 2003/03/07 21:00:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.12 2003/03/28 06:37:48 rac Exp $
 
 *libwww-5.4.0-r1 (05 Sep 2002)
+
+  27 Mar 2003; <rac@gentoo.org> libwww-5.4.0-r1.ebuild:
+  remove mysql4 block, as -DUSE_OLD_FUNCTIONS is now defined there
 
   07 Mar 2003; Martin Holzer <mholzer@gentoo.org> libwww-5.4.0-r1.ebuild :
   Corrected mysql to <dev-db/mysql-4. Closes #17042.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.10 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.11 2003/03/28 06:37:48 rac Exp $
 
 IUSE="ssl mysql"
 
@@ -18,7 +18,7 @@ KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND="dev-lang/perl
 	>=sys-libs/zlib-1.1.4
-	mysql? ( >=dev-db/mysql-3.23.26 <dev-db/mysql-4 )
+	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_compile() {
