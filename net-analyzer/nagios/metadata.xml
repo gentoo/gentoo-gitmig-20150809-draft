@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>netmon</herd>
+<maintainer>
+  <email>mboman@gentoo.org</email>
+  <name>Michael Boman</name>
+  <description>Interim Maintainer</description>
+</maintainer>
+<longdescription>The Nagios metapackage - merge this to pull install all of the nagios packages.</longdescription>
+</pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.14 2004/03/19 09:44:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.15 2004/03/21 15:45:06 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> :
+  Version-bumped the Nagios meta package.
 
   18 Feb 2004; Martin Holzer <mholzer@gentoo.org> nagios-1.1.ebuild:
   removing einfo since this is done in nagios-core
