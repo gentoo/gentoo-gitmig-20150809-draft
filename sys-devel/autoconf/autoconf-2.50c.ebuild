@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.50c.ebuild,v 1.1 2001/08/08 20:37:43 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.50c.ebuild,v 1.2 2002/04/07 13:36:44 gbevin Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,6 +10,8 @@ SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${A}"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 
 DEPEND=">=sys-devel/m4-1.4o-r2"
+
+SLOT="2.5"
 
 src_unpack() {
     unpack ${A}

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.52i.ebuild,v 1.1 2002/03/26 00:48:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.52i.ebuild,v 1.2 2002/04/07 13:36:44 gbevin Exp $
 
 OLD_PV=2.13
 OLD_P=${PN}-${OLD_PV}
@@ -14,6 +14,8 @@ HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 
 DEPEND=">=sys-devel/m4-1.4p
 	sys-devel/perl"
+
+SLOT="2.5"
 
 src_unpack() {
 
