@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.3.ebuild,v 1.1 2004/09/15 14:51:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.3.ebuild,v 1.2 2004/09/16 18:33:04 mr_bones_ Exp $
 
 inherit eutils
 
@@ -70,7 +70,7 @@ src_install () {
 	# only one file needs suid root to make a psuedo device
 	fperms 4755 ${D}/usr/sbin/mgnokiidev
 
-	if [ `use sms` ]
+	if use sms
 	then
 		cd ${S}/smsd
 
