@@ -67,3 +67,6 @@ sybase-ct
 fdftk
 gtk
 gtk2
+
+# dietlibc
+diet

@@ -63,3 +63,6 @@ qdbm
 hardened
 djbfft
 mzscheme
+
+# dietlibc
+diet

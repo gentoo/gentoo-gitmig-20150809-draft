@@ -63,3 +63,6 @@ pfpro
 solid
 sybase
 sybase-ct
+
+# dietlibc
+diet

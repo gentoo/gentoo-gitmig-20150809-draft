@@ -77,3 +77,6 @@ solid
 sybase
 sybase-ct
 djbfft
+
+# dietlibc
+diet
