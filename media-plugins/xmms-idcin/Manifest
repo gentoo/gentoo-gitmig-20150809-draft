@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fd08539036b03f0475bbf487878b4544 ChangeLog 1194
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 f36638baf9aae519b2b3e4d8a1344cda xmms-idcin-0.5.ebuild 697
+MD5 99a73b76596646bcf749e6360fb13c95 xmms-idcin-0.5.ebuild 641
 MD5 03f2eb44669d234fda110979e397183d files/digest-xmms-idcin-0.5 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZLVQArHZZzCEUG0RAtT/AJ9gNdJ3DLCe6ZC5Hu3NY5gHw9NWOQCfXfoI
-4soE08EJE92XvyuVH4sa4xo=
-=sw23
------END PGP SIGNATURE-----
