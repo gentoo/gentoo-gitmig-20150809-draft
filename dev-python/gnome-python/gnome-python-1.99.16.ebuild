@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.99.16.ebuild,v 1.1 2003/03/31 21:04:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.99.16.ebuild,v 1.2 2003/06/10 13:00:25 liquidx Exp $
 
 # devel version - debug
 inherit gnome2 debug
@@ -29,7 +29,7 @@ DEPEND=">=dev-lang/python-2.2
 	>=gnome-base/gnome-panel-2
 	>=gnome-base/libgnomeprint-2.2
 	>=gnome-base/libgnomeprintui-2.2
-	gtkhtml? ( >=gnome-extra/libgtkhtml-2 )"
+	gtkhtml? ( =gnome-extra/libgtkhtml-2* )"
 
 RDEPEND="${DEPEND} 
 	>=dev-util/pkgconfig-0.12.0"

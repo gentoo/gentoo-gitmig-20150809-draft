@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.13 2003/03/31 21:04:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.14 2003/06/10 13:00:25 liquidx Exp $
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnome-python-1.99.16.ebuild:
+  fix libgtkhtml deps
 
 *gnome-python-1.99.16 (31 Mar 2003)
 
