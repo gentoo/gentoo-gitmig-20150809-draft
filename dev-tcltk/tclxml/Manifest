@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 65959ae30f6605f423791d6c92a2bcf9 tclxml-2.6.ebuild 658
-MD5 01c213a010d8094ede737f10be6a482e ChangeLog 1268
+MD5 d6a8a216512ccced0ba5e851ff0d6f40 tclxml-2.6.ebuild 657
+MD5 44cfdb8a715f9398594251f29af732ab ChangeLog 1360
 MD5 bad9961dce9bfbcc407e624ce1f8c322 tclxml-2.5.ebuild 737
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 1b617cdf2264e2a5dbf65e576f70ef46 tclxml-2.4.ebuild 656
@@ -12,7 +12,7 @@ MD5 2770e7494e3f147c5a80579ff7334250 files/digest-tclxml-2.5 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFByF0VugEuf3OQ0akRAtxQAJ9B4g39+IDaxfGVXGsk1VGsexf0+wCfcZlz
-Cp1bfy8BUGrSXsfuAOOsaDs=
-=HnvM
+iD8DBQFByefKugEuf3OQ0akRAtyPAJ4kI0JrEfvgUcXu8N2J/5q9ePEuWgCglgBm
+wsdYlAQ9WWcYaC1hW6uyIqo=
+=dIX8
 -----END PGP SIGNATURE-----
