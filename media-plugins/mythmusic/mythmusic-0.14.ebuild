@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.14.ebuild,v 1.3 2004/02/22 13:23:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.14.ebuild,v 1.4 2004/04/26 18:29:00 agriffis Exp $
 
 inherit gcc flag-o-matic
 
@@ -51,7 +51,7 @@ src_compile() {
 
 	qmake -o "Makefile" "${PN}.pro"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "compile problem"
 }
 
