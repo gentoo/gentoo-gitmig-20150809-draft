@@ -1,16 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/howto-html-single-20020328.ebuild,v 1.10 2003/02/13 06:35:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/howto-html-single-20031006.ebuild,v 1.1 2003/10/06 13:16:45 lanius Exp $
 
 MY_P="Linux-html-single-HOWTOs-${PV}"
 S=${WORKDIR}
+
 DESCRIPTION="The LDP howtos, html single-page format."
-SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/gentoo-sources/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.linuxdoc.org"
 
 SLOT="0"
 LICENSE="GPL-2 LDP"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="~x86 ~ppc ~sparc"
 
 src_install() {
 	dodir /usr/share/doc/howto
