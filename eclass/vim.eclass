@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.87 2005/01/01 22:55:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.88 2005/01/13 21:03:42 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -8,18 +8,20 @@
 # 	Aron Griffis <agriffis@gentoo.org>
 # 	Ciaran McCreesh <ciaranm@gentoo.org>
 
-# This eclass handles vim, gvim and vim-core. Starting with vim 7, it will also
-# handle kvim. Support for -cvs ebuilds is included in the eclass, since it's
-# rather easy to do, but there are no official vim*-cvs ebuilds in the tree.
+# This eclass handles vim, gvim and vim-core.  Support for -cvs ebuilds is
+# included in the eclass, since it's rather easy to do, but there are no
+# official vim*-cvs ebuilds in the tree.
 
 # gvim's GUI preference order is as follows:
-# carbon                          CARBON (not yet)
-# -carbon gtk gtk2 gnome          GNOME2 (6.3-r1+, earlier uses GTK2)
-# -carbon gtk gtk2 -gnome         GTK2
-# -carbon gtk -gtk2 gnome         GNOME1
-# -carbon gtk -gtk2 -gnome        GTK1
-# -carbon -gtk motif              MOTIF
-# -carbon -gtk -motif             ATHENA
+# aqua                          CARBON (not tested, 7+)
+# -aqua gtk gtk2 gnome          GNOME2 (6.3-r1+, earlier uses GTK2)
+# -aqua gtk gtk2 -gnome         GTK2
+# -aqua gtk -gtk2 gnome         GNOME1
+# -aqua gtk -gtk2 -gnome        GTK1
+# -aqua -gtk qt                 QT (7+)
+# -aqua -gtk -qt motif          MOTIF
+# -aqua -gtk -motif nextaw      NEXTAW (7+)
+# -aqua -gtk -motif -nextaw     ATHENA
 
 inherit eutils vim-doc flag-o-matic versionator
 
@@ -74,8 +76,8 @@ else
 
 	# vim7 has some extra options. tcltk is working again, and mzscheme support
 	# has been added. netbeans now has its own USE flag, but it's only available
-	# under gvim (*not* kvim). We can also install a vimpager (this is in vim6
-	# as well, but the ebuilds don't handle it).
+	# under gvim. We have a few new GUI toolkits, and we can also install a
+	# vimpager (this is in vim6 as well, but the ebuilds don't handle it).
 	if [[ $(get_major_version ) -ge 7 ]] ; then
 		if [[ "${MY_PN}" != "vim-core" ]] ; then
 			IUSE="${IUSE} tcltk mzscheme"
@@ -87,7 +89,7 @@ else
 				mzscheme? ( dev-lisp/mzscheme )"
 		fi
 		if [[ "${MY_PN}" == "gvim" ]] ; then
-			IUSE="$IUSE netbeans"
+			IUSE="$IUSE netbeans aqua nextaw qt"
 			DEPEND="$DEPEND   netbeans? ( dev-util/netbeans )"
 			RDEPEND="$RDEPEND netbeans? ( dev-util/netbeans )"
 		fi
@@ -249,9 +251,12 @@ vim_src_unpack() {
 			&& use vim-pager ; then
 		cat <<END > ${S}/runtime/macros/manpager.sh
 #!/bin/sh
-col -b | \
-		vim -c 'let no_plugin_maps = 1' -c 'set nolist nomod ft=man' -c \
-		'runtime! macros/less.vim' -
+tr '\\267' '.' | col -b | \\
+		vim \\
+			-c 'let no_plugin_maps = 1' \\
+			-c 'set nolist nomod ft=man' \\
+			-c 'let g:showmarks_enable=0' \\
+			-c 'runtime! macros/less.vim' -
 END
 	fi
 
@@ -338,11 +343,15 @@ src_compile() {
 
 			# prior to gvim 6.3-r1 we do things a bit strangely
 			if version_is_at_least "6.3-r1" ; then
-				if use gtk ; then
+				echo ; echo
+				if [[ $(get_major_version ) -ge 7 ]] && use aqua ; then
+					einfo "Building gvim with the Carbon GUI"
+					myconf="${myconf} --enable-gui=carbon"
+				elif use gtk ; then
 					if use gtk2 ; then
 						myconf="${myconf} --enable-gtk2-check"
 						if use gnome ; then
-							einfo "Building gvim with the GNOME 2 GUI"
+							einfo "Building gvim with the Gnome 2 GUI"
 							myconf="${myconf} --enable-gui=gnome2"
 						else
 							einfo "Building gvim with the gtk+-2 GUI"
@@ -350,20 +359,27 @@ src_compile() {
 						fi
 					else
 						if use gnome ; then
-							einfo "Building gvim with the GNOME 1 GUI"
+							einfo "Building gvim with the Gnome 1 GUI"
 							myconf="${myconf} --enable-gui=gnome"
 						else
 							einfo "Building gvim with the gtk+-1.2 GUI"
 							myconf="${myconf} --enable-gui=gtk"
 						fi
 					fi
+				elif [[ $(get_major_version ) -ge 7 ]] && use qt ; then
+					einfo "Building gvim with the Qt GUI"
+					myconf="${myconf} --enable-gui=kde --enable-kde-toolbar"
 				elif use motif ; then
 					einfo "Building gvim with the MOTIF GUI"
 					myconf="${myconf} --enable-gui=motif"
+				elif [[ $(get_major_version ) -ge 7 ]] && use nextaw ; then
+					einfo "Building gvim with the neXtaw GUI"
+					myconf="${myconf} --enable-gui=nextaw"
 				else
 					einfo "Building gvim with the Athena GUI"
 					myconf="${myconf} --enable-gui=athena"
 				fi
+				echo ; echo
 
 			else
 				if use gtk && use gtk2 ; then
@@ -408,25 +424,43 @@ src_compile() {
 	else
 		emake || die "emake failed"
 	fi
+
+	[[ $(get_major_version ) -ge 7 ]] && [[ -f src/kvim ]] && mv src/{k,g}vim
 }
 
 src_install() {
 	if [[ "${MY_PN}" == "vim-core" ]] ; then
 		dodir /usr/{bin,share/{man/man1,vim}}
 		cd src || die "cd src failed"
-		make \
-			installruntime \
-			installhelplinks \
-			installmacros \
-			installtutor \
-			installtools \
-			install-languages \
-			install-icons \
-			DESTDIR=${D} \
-			BINDIR=/usr/bin \
-			MANDIR=/usr/share/man \
-			DATADIR=/usr/share \
-			|| die "install failed"
+		if [[ $(get_major_version ) -ge 7 ]] ; then
+			make \
+				installruntime \
+				installmanlinks \
+				installmacros \
+				installtutor \
+				installtools \
+				install-languages \
+				install-icons \
+				DESTDIR=${D} \
+				BINDIR=/usr/bin \
+				MANDIR=/usr/share/man \
+				DATADIR=/usr/share \
+				|| die "install failed"
+		else
+			make \
+				installruntime \
+				installhelplinks \
+				installmacros \
+				installtutor \
+				installtools \
+				install-languages \
+				install-icons \
+				DESTDIR=${D} \
+				BINDIR=/usr/bin \
+				MANDIR=/usr/share/man \
+				DATADIR=/usr/share \
+				|| die "install failed"
+		fi
 
 		keepdir /usr/share/vim/vim${VIM_VERSION/.}/keymap
 
