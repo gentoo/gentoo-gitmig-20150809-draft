@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.9 2004/12/28 10:32:45 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.10 2005/02/12 19:46:04 mr_bones_ Exp $
 
 inherit games
 
@@ -13,21 +13,19 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="x86 sparc ~amd64 ppc"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
-DEPEND="$RDEPEND
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} && \
+	cd "${S}"
 	sed -i \
-		-e "s-O3${CXXFLAGS}"  makefile || \
-			die "sed makefile failed"
+		-e "s-O3${CXXFLAGS}"  makefile \
+		|| die "sed makefile failed"
 }
 
 src_compile() {
@@ -37,7 +35,7 @@ src_compile() {
 src_install () {
 	dogamesbin starfighter || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}/parallelrealities/"
-	doins starfighter.pak
+	doins starfighter.pak || die "doins failed"
 	dohtml -r docs/
 	prepgamesdirs
 }
