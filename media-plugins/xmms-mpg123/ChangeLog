@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-mpg123
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mpg123/ChangeLog,v 1.1 2005/02/12 02:22:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mpg123/ChangeLog,v 1.2 2005/02/13 21:48:04 kloeri Exp $
+
+  13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  xmms-mpg123-1.2.10-r1.ebuild:
+  ~alpha keyword.
 
 *xmms-mpg123-1.2.10 (11 Feb 2005)
 

@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
+MD5 efad1ce919e8cfb4e35472d85110af7e xmms-mpg123-1.2.10-r1.ebuild 600
 MD5 7606f0d6e616a43706f1f096704c64a3 xmms-mpg123-1.2.10.ebuild 529
-MD5 f748b1a53413353e8b40566d53aa412e xmms-mpg123-1.2.10-r1.ebuild 597
-MD5 990662f152ce5909ed247b078476f5f4 ChangeLog 449
-MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-mpg123-1.2.10 142
+MD5 7f2e4b04ecbeea3c47f3b37370582dfc ChangeLog 549
 MD5 ee4c50bc643c29df08e03dffa42613b8 files/digest-xmms-mpg123-1.2.10-r1 227
+MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-mpg123-1.2.10 142
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCDXFkArHZZzCEUG0RAojdAJ9+GtyI0W2cZ3zbOH26ofGmeY4NEwCeLVEb
-2EDN6iQszcOLKUfpVMs0pW4=
-=4pyi
+iD4DBQFCD8suugEuf3OQ0akRAiXXAKCdzgUKZfvZzNmKXRoYnhxmcPu/eQCYvFES
+BJPi+6F5bw013/c/pXfAzg==
+=jWoi
 -----END PGP SIGNATURE-----
