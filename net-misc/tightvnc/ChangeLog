@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.19 2003/09/17 14:03:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.20 2003/09/18 09:00:13 aliz Exp $
+
+  *18 Sep 2003; Daniel Ahlberg <aliz@gento.org> tightvnc-1.2.9-r1.ebuild :
+  Fix unpacking.
 
 *tightvnc-1.2.9-r1 (17 Sep 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r1.ebuild,v 1.1 2003/09/17 14:03:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r1.ebuild,v 1.2 2003/09/18 09:00:13 aliz Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A} && cd ${S}
-	epatch ${FILESDIR}/tightvnc-${PVR}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-gentoo.security.patch
 	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
 }
