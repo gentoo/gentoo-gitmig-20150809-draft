@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.5 2004/10/19 07:59:22 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.6 2004/11/20 04:34:29 dragonheart Exp $
+
+  20 Nov 2004; Daniel Black <dragonheart@gentoo.org> yaml-0.35.ebuild:
+  ppc stable to support bug #68570
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> yaml-0.35.ebuild:
   Stable on amd64.
