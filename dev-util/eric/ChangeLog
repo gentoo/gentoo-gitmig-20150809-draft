@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.18 2004/11/23 19:13:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.19 2004/12/05 00:36:38 kloeri Exp $
+
+*eric-3.5.1 (05 Dec 2004)
+
+  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> +eric-3.5.1.ebuild:
+  Version bump.
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> eric-3.5.0.ebuild:
   stable on x86
