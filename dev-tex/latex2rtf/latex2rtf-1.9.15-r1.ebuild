@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.15.ebuild,v 1.2 2004/04/17 16:36:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.15-r1.ebuild,v 1.1 2004/04/21 14:16:33 usata Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-Makefile-gentoo.diff
+	epatch ${FILESDIR}/${P}-direntry.patch
 }
 
 src_compile() {
@@ -28,12 +29,13 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/share/doc/latex2rtf
 	PREFIX=${D}/usr make -e install || die
 	dodoc README doc/latex2rtf.txt
 	# if doc is not used, only the text version is intalled.
 	if use doc; then
-		dodoc doc/latex2rtf.html doc/latex2rtf.pdf doc/latex2rtf.txt
+		dohtml doc/latex2rtf.html
+		dodoc doc/latex2rtf.pdf doc/latex2rtf.txt
+		sed -i "s/\r/\n/g" doc/latex2rtf.info
 		doinfo doc/latex2rtf.info
 	fi
 }
