@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libglade
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.57 2005/03/09 05:59:24 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.58 2005/03/20 23:13:52 joem Exp $
+
+*libglade-2.5.1 (20 Mar 2005)
+
+  20 Mar 2005; Joe McCann <joem@gentoo.org> +libglade-2.5.1.ebuild:
+  new version
 
 *libglade-2.5.0 (08 Mar 2005)
 
