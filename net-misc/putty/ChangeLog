@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/putty
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.14 2004/05/07 15:47:48 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.15 2004/06/01 21:33:54 taviso Exp $
+
+*putty-0.54_pre1 (01 Jun 2004)
+
+  01 Jun 2004; Tavis Ormandy <taviso@gentoo.org> putty-0.54.ebuild,
+  putty-0.54_pre1.ebuild, putty-20030902-r1.ebuild, putty-20040313.ebuild:
+  upstream made a unix release, starting at 0.54 which breaks previous
+  versioning system based on snapshot dates. 
+  Removed old ebuilds, 20040313-r1 is marked stable and becomes 0.54_pre1.
+  0.54 is added and masked.
+  Fixes #52710.
 
   07 May 2004; Jason Eric Huebel <jhuebel@gentoo.org>
   +files/putty-ut_time.patch, putty-20040313-r1.ebuild:
