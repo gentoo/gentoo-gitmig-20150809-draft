@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.5 2003/04/18 18:34:41 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.6 2003/07/28 09:52:46 foser Exp $
 
 *gtkdiskfree-1.9.3 (18 Apr 2003)
+
+  28 Jul 2003; foser <foser@gentoo.org> gtkdiskfree-1.9.3.ebuild :
+  Remove gdk-pixbuf dep (#25346)
 
   18 Apr 2003; Jon Portnoy <avenj@gentoo.org> gtkdiskfree-1.9.3.ebuild :
   New ~arch-masked development-tree gtkdiskfree using GTK-2.
