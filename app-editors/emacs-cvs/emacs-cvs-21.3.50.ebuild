@@ -1,12 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.18 2003/12/31 16:57:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.19 2004/01/04 14:49:52 jbms Exp $
 
 ECVS_AUTH="ext"
+export CVS_RSH="ssh"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
 ECVS_USER="anoncvs"
+ECVS_PASS=""
 ECVS_CVS_OPTIONS="-dP"
+ECVS_SSH_HOST_KEY="savannah.gnu.org,199.232.41.3 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAzFQovi+67xa+wymRz9u3plx0ntQnELBoNU4SCl3RkwSFZkrZsRTC0fTpOKatQNs1r/BLFoVt21oVFwIXVevGQwB+Lf0Z+5w9qwVAQNu/YUAFHBPTqBze4wYK/gSWqQOLoj7rOhZk0xtAS6USqcfKdzMdRWgeuZ550P6gSzEHfv0="
 
 inherit elisp-common cvs
 
@@ -23,19 +26,15 @@ RESTRICT="$RESTRICT nostrip"
 
 DEPEND=">=sys-libs/ncurses-5.3
 	sys-libs/gdbm
-	dev-util/cvs
 	dev-python/pexpect
-	spell? ( || ( app-text/ispell
-		app-text/aspell ) )
+	spell? ( || ( app-text/ispell app-text/aspell ) )
 	X? ( virtual/x11
-		>=media-libs/libungif-4.1.0.1b
-		>=media-libs/jpeg-6b
-		>=media-libs/tiff-3.5.7
-		>=media-libs/libpng-1.2.5 )
-	gtk? ( =x11-libs/gtk+-2* )
-	gtk2? ( =x11-libs/gtk+-2* )
-	Xaw3d? ( x11-libs/Xaw3d )
-	gnome? ( gnome-base/gnome-desktop )
+		gif? ( >=media-libs/libungif-4.1.0.1b )
+		jpeg? ( >=media-libs/jpeg-6b )
+		tiff? ( >=media-libs/tiff-3.5.7 )
+		png? ( >=media-libs/libpng-1.2.5 )
+		gtk? ( =x11-libs/gtk+-2* ) : ( Xaw3d? ( x11-libs/Xaw3d ) )
+		gnome? ( gnome-base/gnome-desktop ) )
 	nls? ( >=sys-devel/gettext-0.11.5 )"
 
 PROVIDE="virtual/emacs virtual/editor"
@@ -51,27 +50,26 @@ src_compile() {
 
 	use nls || myconf="${myconf} --disable-nls"
 
-	if use X ;
-	then
-		myconf="${myconf}
-			--with-x
-			--with-xpm
-			--with-jpeg
-			--with-tiff
-			--with-gif
-			--with-png"
-		if use gtk || use gtk2
-		then
+	myconf="${myconf} $(use_with X x)"
+
+	if use X; then
+		myconf="${myconf} --with-xpm"
+		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
+		myconf="${myconf} $(use_with gif) $(use_with png)"
+		if use gtk; then
+			einfo "Configuring to build with GTK support"
 			myconf="${myconf} --with-x-toolkit=gtk
-				--with-gtk
 				--with-toolkit-scroll-bars"
-		elif use Xaw3d
-		then
+		elif use Xaw3d; then
+			einfo "Configuring to build with Xaw3d support"
 			myconf="${myconf} --with-x-toolkit=athena
 				--with-toolkit-scroll-bars"
+		else
+			einfo "Configuring to build without X toolkit support"
+			myconf="${myconf} --without-gtk"
+			myconf="${myconf} --with-x-toolkit=no"
+			myconf="${myconf} --without-toolkit-scroll-bars"
 		fi
-	else
-		myconf="${myconf} --without-x"
 	fi
 
 	unset CFLAGS CPPFLAGS
@@ -104,19 +102,8 @@ src_install () {
 
 	dodoc BUGS ChangeLog README
 
-	if use gnome
-	then
+	if use gnome; then
 		insinto /usr/share/gnome/apps/Application
 		doins ${FILESDIR}/${DFILE}
 	fi
-}
-
-pkg_postinst() {
-
-	elisp-site-regen
-}
-
-pkg_postrm() {
-
-	elisp-site-regen
 }

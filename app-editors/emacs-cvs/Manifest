@@ -1,5 +1,5 @@
-MD5 bf47dbd0efe506d0df5c6933dde67f01 emacs-cvs-21.3.50.ebuild 3054
-MD5 63793751ed4ecd3f48a47888089433ae ChangeLog 2378
+MD5 15a80c5f839cd933037cbc8a6c077c0f emacs-cvs-21.3.50.ebuild 3052
+MD5 bdb61ed41c67681952b6d4d5b63be002 ChangeLog 2581
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 0e5a4a35651f5365c6191636a2c26eb7 files/emacs.desktop 190
 MD5 04a64867694a98538309b433c80aaa62 files/40aspell-gentoo.el 80
