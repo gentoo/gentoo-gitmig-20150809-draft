@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmcliphist
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.4 2004/06/24 23:06:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.5 2004/07/20 11:02:20 s4t4n Exp $
+
+  20 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmcliphist-0.5.ebuild:
+  Fix ebuild to make it produce a working binary. Closes #56782.
+  wmcliphist-0.5.ebuild:
+  Remove old ebuilds.
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> wmcliphist-0.5.ebuild:
   Added ~sparc keyword.

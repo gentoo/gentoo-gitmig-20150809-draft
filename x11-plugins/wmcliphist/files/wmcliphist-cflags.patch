@@ -1,0 +1,11 @@
+--- Makefile	2004-07-20 12:51:28.886633728 +0200
++++ Makefile	2004-07-20 12:52:15.305576976 +0200
+@@ -5,7 +5,7 @@
+ DESTDIR = "/usr/local/bin"
+ 
+ # for normal use
+-CFLAGS = -Wall -O2 -ansi -pedantic $(INCLUDES)
++CFLAGS = -Wall ${GENTOO_CFLAGS} -ansi -pedantic $(INCLUDES)
+ DEBUG = 
+ 
+ # for debuggind purposes
