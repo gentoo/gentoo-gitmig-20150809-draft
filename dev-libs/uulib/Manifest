@@ -1,4 +1,14 @@
-MD5 3efe314f754e7f2544a9508a0e24737b ChangeLog 788
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2d0dc7ed9411593829b5f18f22dcb227 uulib-0.5.20.ebuild 647
+MD5 a34c883c5a7a4c9763d20d74c0dcecd1 ChangeLog 915
 MD5 473efc81f813b68e72150d8470fa83ee metadata.xml 367
-MD5 636077d04397203bdba6111156212ccd uulib-0.5.20.ebuild 642
 MD5 dadaf02caf53bd14d197889095810182 files/digest-uulib-0.5.20 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA9dFq04iMKjbTpdgRAtxvAJ4ko0YcV3ri9XN3knwit9FMi9I3kgCfcMbN
+jOOJh5IhSsMmh/9rU0aw/0Y=
+=BuOT
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/uulib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.6 2004/06/24 23:37:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.7 2004/07/15 00:34:42 swegener Exp $
+
+  15 Jul 2004; Sven Wegener <swegener@gentoo.org> uulib-0.5.20.ebuild:
+  Added to ~arm after testing on coral.dev.gentoo.org.
 
   22 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> uulib-0.5.20.ebuild:
   Keyworded ~sparc wrt #54351
