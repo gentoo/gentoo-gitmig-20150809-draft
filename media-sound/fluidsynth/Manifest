@@ -1,3 +1,5 @@
-MD5 ce3e185dcf6cf833c99def777a8febc0 ChangeLog 393
 MD5 f4fe95939ff66d3ebd2975d889f71ba1 fluidsynth-1.0.1.ebuild 1392
+MD5 ce3e185dcf6cf833c99def777a8febc0 ChangeLog 393
+MD5 8fb3a3d5ab6e55e0cd171ef577e83ac8 fluidsynth-1.0.3.ebuild 1451
 MD5 76597f227dd6266c408aab1d4f58da85 files/digest-fluidsynth-1.0.1 68
+MD5 751ab7ab31fc6b9ccf266a683545b750 files/digest-fluidsynth-1.0.3 68

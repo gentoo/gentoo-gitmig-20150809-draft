@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.1 2003/05/24 09:26:43 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.2 2003/09/21 02:23:34 jje Exp $
+
+*fluidsynth-1.0.3 (21 Sep 2003)
+
+  21 Sep 2003; jje <jje@gentoo.org> fluidsynth-1.0.3.ebuild:
+  Version bump. Now checks USE=sse, codified some comments from Jonathan Kraut
+  on not enabling -msse2 and having USE=sse.
+  
+  Submitted by: Jonathan Kraut <krautj@earthlink.net>
+		Rossen Apostolov <rossen@protein.osaka-u.ac.jp>
 
 *fluidsynth-1.0.1 (24 May 2003)
 
