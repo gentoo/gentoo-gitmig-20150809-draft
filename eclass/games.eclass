@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.28 2003/06/24 22:22:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.29 2003/06/26 22:24:41 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -24,8 +24,10 @@ export GAMES_STATEDIR="/var/games"
 export GAMES_LIBDIR="/usr/games/lib"
 export GAMES_BINDIR="/usr/games/bin"
 export GAMES_ENVD="90games"
-export GAMES_USER="games"
-export GAMES_GROUP="games"
+# if you want to use a different user/group than games.games,
+# just add these two variables to your environment (aka /etc/profile)
+export GAMES_USER="${GAMES_USER:-games}"
+export GAMES_GROUP="${GAMES_GROUP:-games}"
 
 egamesconf() {
 	if [ -x ./configure ] ; then
