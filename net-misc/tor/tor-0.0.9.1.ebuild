@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.0.9.1.ebuild,v 1.1 2004/12/16 16:59:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.0.9.1.ebuild,v 1.2 2005/01/04 18:50:58 latexer Exp $
 
 DESCRIPTION="Anonymizing overlay network for TCP"
 HOMEPAGE="http://www.freehaven.net/tor/"
