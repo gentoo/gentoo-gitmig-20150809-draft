@@ -90,3 +90,4 @@ move net-mail/spamass-milter mail-filter/spamass-milter
 move net-mail/spambayes mail-filter/spambayes
 move net-mail/spampd mail-filter/spampd
 move net-mail/tmda mail-filter/tmda
+move dev-perl/Mail-SpamAssassin mail-filter/spamassassin
