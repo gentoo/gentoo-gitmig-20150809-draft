@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.0.0.ebuild,v 1.4 2004/06/24 22:00:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.0.0.ebuild,v 1.5 2004/08/08 11:49:16 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -27,27 +27,27 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e 's/icons//' share/Makefile.in \
-			|| die "sed share/Makefile.in failed"
+		|| die "sed share/Makefile.in failed"
 }
 
 src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
-		--with-highscores=${GAMES_STATEDIR}/${PN}-highscores || \
-			die "egamesconf failed"
+		--with-highscores=${GAMES_STATEDIR}/${PN}-highscores \
+		|| die "egamesconf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install            || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	insinto /usr/share/pixmaps
 	doins share/icons/*png || die "doins failed"
 	make_desktop_entry trackballs "Trackballs" trackballs-48x48.png
 	insinto "${GAMES_DATADIR}/${PN}/music"
-	doins "${WORKDIR}"/tb_*.ogg            || die "doins failed"
-	dodoc AUTHORS ChangeLog README* NEWS   || die "dodoc failed"
+	doins "${WORKDIR}"/tb_*.ogg || die "doins failed"
+	dodoc AUTHORS ChangeLog README* NEWS
 	prepgamesdirs
 }
