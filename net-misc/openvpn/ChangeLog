@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.7 2003/02/12 08:30:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.8 2003/05/20 18:05:19 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*openvpn-1.3.2-r1 (20 May 2003)
+
+   20 May 2003; Ryan Phillips <rphillips@gentoo.org> openvpn-1.3.2-r1.ebuild :
+   Included init script. Bug #20085 Fixed. Submitted by Warp Zero
  
 *openvpn-1.3.2 (31 Jan 2003)
 

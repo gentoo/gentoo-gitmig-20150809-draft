@@ -1,0 +1,31 @@
+#!/sbin/runscript
+
+VPNDIR="/etc/openvpn"
+
+depend() {
+	need net
+}
+
+start() {
+	cd $VPNDIR
+	for VPN in *
+	do
+		ebegin "Starting openvpn for $VPN"
+		start-stop-daemon --start --pidfile \
+			/var/run/openvpn-$VPN.pid --startas /usr/sbin/openvpn \
+			-- --config $VPN/local.conf --writepid \
+			/var/run/openvpn-$VPN.pid \
+			--daemon --cd $VPN
+		eend $?
+	done
+}
+
+stop() {
+	cd $VPNDIR
+	for VPN in *
+	do
+		ebegin "Stoping openvpn for $VPN"
+		start-stop-daemon --stop --pidfile /var/run/openvpn-$VPN.pid
+		eend $?
+	done
+}
