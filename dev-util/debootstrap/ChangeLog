@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.12 2004/07/21 18:38:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.13 2004/08/24 10:40:27 lanius Exp $
+
+  24 Aug 2004; Heinrich Wendel <lanius@gentoo.org> debootstrap-0.2.31.ebuild,
+  -debootstrap-0.2.4.ebuild:
+  mark 0.2.31 stable; bump to 0.2.41
 
   21 Jul 2004; David Holm <dholm@gentoo.org> debootstrap-0.2.31.ebuild:
   Added to ~ppc.
