@@ -29,7 +29,7 @@ net-mail/vqadmin
 # This is the new pre-release, block it for the moment
 >=net-mail/vpopmail-5.4*
 
-# <verwilst@gentoo.org> (05 Jan 2004)
+# <caleb@gentoo.org> (05 Jan 2004)
 # Remask this qt
 =x11-libs/qt-3.3.0_beta1
 
