@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.8 2002/11/01 18:49:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.9 2002/12/06 01:11:20 sethbc Exp $
 
 IUSE="kde gnome"
 
@@ -45,6 +45,9 @@ src_install() {
 	# Sandbox issues; bug #8587
 	addpredict "/user"
 	addpredict "/share"
+	
+	# Sandbox issues; bug 8063
+	addpredict "/dev/dri"	
 
 	# Autoresponse file for main installation
 	cat > ${T}/rsfile-global <<-"END_RS"
