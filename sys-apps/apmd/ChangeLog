@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.13 2004/03/31 16:02:21 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.14 2004/06/06 21:01:14 lv Exp $
+
+  06 Jun 2004; Travis Tilley <lv@gentoo.org> apmd-3.2.1_p4.ebuild:
+  marking stable on amd64 for gcc 3.4 fix
 
   31 Mar 2004; Tom Gall <tgall@gentoo.org> apmd-3.2.0.ebuild, apmd-3.0.2-r3.ebuild
   apmd-3.2.1_p4.ebuild:
