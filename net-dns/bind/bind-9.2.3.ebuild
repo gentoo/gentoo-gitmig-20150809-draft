@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.1 2003/10/29 05:03:35 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.2 2003/10/29 20:56:12 blkdeath Exp $
 
 IUSE="ssl ipv6 doc"
 
@@ -79,6 +79,11 @@ src_install() {
 	dosym ../../var/bind/named.ca /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri
 	dosym ../../var/bind/sec /etc/bind/sec
+
+	# Fix lib dependancy craziness
+	cd ${D}/usr/lib
+	dosym libisc.so.7 libisc.so.4
+	dosym libdns.so.11.0.2 libdns.so.10
 }
 
 pkg_preinst() {
