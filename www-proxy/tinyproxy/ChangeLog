@@ -1,6 +1,10 @@
 # ChangeLog for www-proxy/tinyproxy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/tinyproxy/ChangeLog,v 1.5 2004/09/05 09:26:39 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/tinyproxy/ChangeLog,v 1.6 2005/02/16 22:34:36 mrness Exp $
+
+  17 Feb 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  -tinyproxy-1.6.1.ebuild, tinyproxy-1.6.2.ebuild:
+  Remove old version and add metadata.xml
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
