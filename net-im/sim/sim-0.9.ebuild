@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.ebuild,v 1.1 2003/11/04 07:57:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.ebuild,v 1.2 2003/11/05 18:39:01 sergey Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -23,7 +23,7 @@ DEPEND="$DEPEND sys-devel/flex"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-
+	epatch ${FILESDIR}/icqlogon-gentoo.patch
 	sed -i "s:head -\([0-9]\):head -n \1:g" acinclude.m4 aclocal.m4 configure
 	sed -i "s:\.\/Makefile:Makefile:g" configure
 	sed -i 's:rm -rf $(sim_plugindir)/.*::g' plugins/*/Makefile.in
