@@ -1,7 +1,13 @@
 # ChangeLog for net-p2p/bittorrent-theshadow
 # Copyright 2000-2003 Gentoo Technologies, Inc. and Luke-Jr
 # Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/ChangeLog,v 1.7 2003/09/11 22:50:52 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/ChangeLog,v 1.8 2003/09/12 14:12:41 luke-jr Exp $
+
+*bittorrent-theshadow-5.7.6-r1 (12 Sep 2003)
+
+  12 Sep 2003; Luke-Jr <luke-jr@gentoo.org>
+  bittorrent-theshadow-5.7.6-r1.ebuild:
+  Fixed bug 28438
 
 *bittorrent-theshadow-5.7.6 (11 Sep 2003)
 
