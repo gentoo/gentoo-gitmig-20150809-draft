@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0.ebuild,v 1.1 2004/03/06 03:46:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0.ebuild,v 1.2 2004/03/06 03:47:50 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -98,9 +98,11 @@ src_compile() {
 	touch aclocal.m4 configure config.hin \
 		Makefile.in */Makefile.in */*/Makefile.in
 
+	ebegin "Reconfiguring configure scripts"
 	aclocal -I m4 &>/dev/null || die
 	autoconf || die
 	automake || die
+	eend $?
 
 	econf \
 		--bindir=/bin \
