@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.36 2003/08/05 11:48:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.37 2003/08/28 11:05:24 joker Exp $
+
+  28 Aug 2003; Christian Birchinger <joker@gentoo.org> nmap-3.30.ebuild:
+  Added sparc stable keyword
 
   04 Aug 2003; Martin Holzer <mholzer@gentoo.org> nmap-3.30.ebuild:
   Marked x86 stable.
