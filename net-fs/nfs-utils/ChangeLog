@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.51 2004/12/04 19:51:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.52 2004/12/05 02:33:11 hardave Exp $
+
+  04 Dec 2004; Hardave Riar <hardave@gentoo.org> nfs-utils-1.0.6-r5.ebuild:
+  Stable on mips, bug #72113
 
   04 Dec 2004; Markus Rothe <corsair@gentoo.org> nfs-utils-1.0.6-r5.ebuild:
   Stable on ppc64; bug #72113
