@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.49 2003/06/19 04:09:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.50 2003/06/20 16:40:52 yakina Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -16,6 +16,8 @@ app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-sci/octave-forge:ginac - Adds app-sci/ginac (symbolic math) support
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extentions) support
+app-text/namazu:chasen - Enable chasen support for namazu
+app-text/namazu:kakasi - Enable kakasi support for namazu
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-libs/crystalspace:mng - Enables mng support in CrystalSpace
 dev-libs/crystalspace:openal - Enables Open Audio Library support in CrystalSpace
