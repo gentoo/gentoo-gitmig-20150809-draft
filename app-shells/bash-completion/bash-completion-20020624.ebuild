@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020624.ebuild,v 1.10 2002/10/04 20:50:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020624.ebuild,v 1.11 2002/10/17 14:31:29 vapier Exp $
 
 S=${WORKDIR}/${PN/-/_}
 
@@ -11,11 +11,10 @@ KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=""
+DEPEND="sys-apps/tar sys-apps/bzip2"
 RDEPEND=">=sys-apps/bash-2.05a"
 
-src_install () {
-
+src_install() {
 	insinto /etc
 	doins bash_completion
 
@@ -35,15 +34,12 @@ src_install () {
 	doins ${FILESDIR}/bash-completion
 
 	dodoc COPYING Changelog README
-
 }
 
 pkg_postinst() {
-
 	echo
 	einfo "Add the following line to your ~/.bashrc to"
 	einfo "activate completion support in your bash:"
 	einfo "[ -f /etc/profile.d/bash-completion ] && source /etc/profile.d/bash-completion"
 	echo
-
 }

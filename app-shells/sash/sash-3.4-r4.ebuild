@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r4.ebuild,v 1.7 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r4.ebuild,v 1.8 2002/10/17 14:31:29 vapier Exp $
 
 IUSE="readline"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small static UNIX Shell with readline suppport"
 SRC_URI="http://www.canb.auug.org.au/~dbell/programs/${P}.tar.gz
-         http://dimavb.st.simbirsk.su/vlk/sash-3.x-readline.diff.gz"
+	http://dimavb.st.simbirsk.su/vlk/sash-3.x-readline.diff.gz"
 HOMEPAGE="http://www.canb.auug.org.au/~dbell/ http://dimavb.st.simbirsk.su/vlk/"
 SLOT="0"
-LICENSE="Freeware"
+LICENSE="freedist"
 
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3
@@ -18,6 +18,7 @@ DEPEND="virtual/glibc
 
 RDEPEND=""
 KEYWORDS="x86 ppc sparc sparc64"
+
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
@@ -35,18 +36,13 @@ src_unpack() {
 }
 
 src_compile() {
-
 	make || die
-
 }
 
 src_install() {
-
 	into /
 	dobin sash
 	into /usr
 	doman sash.1
 	dodoc README
-
 }
-

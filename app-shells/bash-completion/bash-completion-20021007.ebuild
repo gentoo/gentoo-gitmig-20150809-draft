@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20021007.ebuild,v 1.1 2002/10/12 10:02:18 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20021007.ebuild,v 1.2 2002/10/17 14:31:29 vapier Exp $
 
 S=${WORKDIR}/${PN/-/_}
 
@@ -11,10 +11,10 @@ KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND=""
+DEPEND="sys-apps/tar sys-apps/bzip2"
 RDEPEND=">=sys-apps/bash-2.05a"
 
-src_install () {
+src_install() {
 	insinto /etc
 	doins bash_completion
 

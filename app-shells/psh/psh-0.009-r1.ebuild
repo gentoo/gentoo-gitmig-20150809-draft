@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/psh-0.009-r1.ebuild,v 1.7 2002/10/04 05:02:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/psh-0.009-r1.ebuild,v 1.8 2002/10/17 14:31:29 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Combines the interactive nature of a Unix shell with the power of Perl"
@@ -19,10 +19,10 @@ src_compile() {
 }
 
 src_install() {
-	make PREFIX=${D}/usr						\
-	     prefix=${D}/usr						\
-	     INSTALLMAN3DIR=${D}/usr/share/man/man3			\
-	     install || die
+	make PREFIX=${D}/usr \
+		prefix=${D}/usr \
+		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+		install || die
 
 	dodoc COPYRIGHT HACKING MANIFEST README* RELEASE TODO
 	dodoc examples/complete-examples
