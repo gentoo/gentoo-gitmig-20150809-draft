@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.52 2003/04/15 20:30:04 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.53 2003/04/29 07:30:30 lostlogic Exp $
+
+*xine-lib-1_beta11 (29 Apr 2003)
+
+  29 Apr 2003; Brandon Low <lostlogic@gentoo.org> xine-lib-1_beta11.ebuild:
+  A bump, and several ebuild changes. Specifically removed the use of
+  flag-o-matic since CFLAGS and CXXFLAGS are unset later in the ebuild to let
+  the configure script save us from ourselves, I'd like to find a better
+  solution to this eventually since the current setup isn't real good for
+  cross-compiling. Also set the ebuild to use emake instead of make, it looks as
+  if the xine folks have gotten parallel building fixed, but please test this
+  extensively, especially in SMP configurations to confirm.
 
 *xine-lib-1_beta10 (09 Apr 2003)
 
