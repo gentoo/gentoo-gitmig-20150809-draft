@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.97.5.ebuild,v 1.1 2003/11/13 06:59:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.97.5.ebuild,v 1.2 2003/11/14 03:29:26 vapier Exp $
 
 inherit games gcc eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="A portable NES/Famicom emulator"
 HOMEPAGE="http://fceultra.sourceforge.net/"
 SRC_URI="http://xodnizel.net/fceultra/downloads/fceu-${PV}.src.tar.gz"
 
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 LICENSE="GPL-2"
 SLOT="0"
 
