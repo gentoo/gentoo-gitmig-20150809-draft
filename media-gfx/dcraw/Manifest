@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a24f6d939a3f422bb57481aff9502e0 ChangeLog 641
 MD5 f78c827bc477a685547949b958050814 dcraw-6.08.ebuild 1239
-MD5 5cb5fe96c98ccbf22e387ff49b6968e6 dcraw-6.09.ebuild 1323
+MD5 84f84e8e477f74120a609878dd76b17b dcraw-6.09.ebuild 1330
 MD5 9ec463cfd8dec8ebebb2d61eb070ada3 metadata.xml 728
-MD5 d42ed43859da6fc456900614fa9a7e4a ChangeLog 551
 MD5 75a3faedfe2fbc457ef792c7438bf2ef files/digest-dcraw-6.08 62
 MD5 f18fbdbd428d34df0a063484f690219f files/digest-dcraw-6.09 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsmeg0K3RJaeXx6cRAmY6AJ9J52/MTLAZnowoIkG1vnIuwpUiFACeJ9Vf
+RCXltXBH0QY2mLdrz0fGVGc=
+=lHnw
+-----END PGP SIGNATURE-----
