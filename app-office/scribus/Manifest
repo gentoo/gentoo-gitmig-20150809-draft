@@ -1,4 +1,6 @@
+MD5 dfed60b04f71e4f534dfd52bd2b2f4e2 scribus-1.1.3.ebuild 1233
 MD5 40e3d373be9a77e7b7eaf6b2df51af7b scribus-1.1.2.ebuild 1451
-MD5 c37a5b14cd0398f1df90050a6b6ca72d ChangeLog 2810
+MD5 7659188101685d265024e922828e81a5 ChangeLog 2980
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 b81a55d52cff149b4115d4d77d8aa992 files/digest-scribus-1.1.2 66
+MD5 4479ccef15c0738f83eb5d58405c276e files/digest-scribus-1.1.3 66
