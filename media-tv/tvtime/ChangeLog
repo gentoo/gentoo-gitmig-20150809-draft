@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.4 2003/09/15 10:58:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.5 2003/09/16 16:04:40 max Exp $
+
+*tvtime-0.9.10-r1 (16 Sep 2003)
+
+  16 Sep 2003; Max Kalika <max@gentoo.org> tvtime-0.9.10-r1.ebuild,
+  tvtime-0.9.10.ebuild:
+  Clean up, add support for sdl and directfb, fix location of localstatedir, and
+  make sure there are proper permissions on /var/run/tvtime.
 
 *tvtime-0.9.10 (14 Sep 2003)
 
