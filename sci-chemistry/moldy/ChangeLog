@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/moldy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.2 2004/12/24 20:16:26 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.3 2005/01/24 04:40:26 gongloo Exp $
+
+  23 Jan 2005; <gongloo@gentoo.org> moldy-2.16e.ebuild:
+  Stable on ppc-macos.
 
 *moldy-2.16e (24 Dec 2004)
 
