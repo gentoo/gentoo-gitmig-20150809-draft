@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.4.28.ebuild,v 1.1 2003/11/09 03:17:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.4.28.ebuild,v 1.2 2004/02/22 18:24:35 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A danish dictionary for ispell"
@@ -11,7 +11,7 @@ DEPEND="app-text/ispell"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc x86 sparc alpha mips hppa arm"
+KEYWORDS="ppc x86 sparc alpha mips hppa"
 
 src_compile() {
 	emake || die

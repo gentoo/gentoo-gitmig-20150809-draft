@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt-br/ispell-pt-br-2.4-r2.ebuild,v 1.2 2003/09/06 22:15:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt-br/ispell-pt-br-2.4-r2.ebuild,v 1.3 2004/02/22 18:26:55 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ime.usp.br/~ueda/br.ispell/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86 sparc alpha mips hppa arm"
+KEYWORDS="ppc x86 sparc alpha mips hppa"
 
 DEPEND="app-text/ispell
 	sys-apps/gawk"

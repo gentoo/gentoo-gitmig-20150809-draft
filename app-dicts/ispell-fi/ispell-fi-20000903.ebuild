@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fi/ispell-fi-20000903.ebuild,v 1.5 2003/11/14 20:01:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fi/ispell-fi-20000903.ebuild,v 1.6 2004/02/22 18:25:26 agriffis Exp $
 
 DESCRIPTION="Finnish dictionary for ispell"
 HOMEPAGE="http://ispell-fi.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="http://ispell-fi.sourceforge.net/finnish.dict.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~hppa ~mips"
 
 DEPEND="app-text/ispell
 	app-arch/bzip2"
