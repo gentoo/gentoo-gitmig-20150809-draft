@@ -1,5 +1,5 @@
-MD5 eb2b6b6f5b951ce0ef6bebefe44eebb7 sal-client-1.0_rc3.ebuild 1936
 MD5 ce9d211f534eb2c00d40ff0a8dadbcf7 ChangeLog 1204
-MD5 5aa22bbbe3279a7d60625851d5e92f4a files/digest-sal-client-1.0_rc3 69
+MD5 3670b2c5d04b6495e81283b64f22b59a sal-client-1.0_rc3.ebuild 1945
 MD5 addafa7dedf783750bfdd94b7bb3c07e files/auditd.confd 439
+MD5 5aa22bbbe3279a7d60625851d5e92f4a files/digest-sal-client-1.0_rc3 69
 MD5 2fd8c6d4639c639d6c75bb42ce160296 files/sal-client-init 709
