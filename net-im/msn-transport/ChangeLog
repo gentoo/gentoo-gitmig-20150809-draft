@@ -1,0 +1,11 @@
+# ChangeLog for net-im/msn-transport
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/ChangeLog,v 1.1 2004/01/23 18:12:27 humpback Exp $
+
+*msn-transport-1.2.8_rc1 (23 Jan 2004)
+
+  23 Jan 2004; Gustavo Felisberto <humpback@gentoo.org>; metadata.xml,
+  msn-transport-1.2.8_rc1.ebuild, files/README.Gentoo,
+  files/msn-configure-patch-00, files/msnt.xml:
+  Initial import. Helps close bug 37316
+
