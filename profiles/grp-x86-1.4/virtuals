@@ -30,3 +30,4 @@ virtual/krb5			app-crypt/heimdal
 virtual/motif           x11-libs/openmotif
 virtual/os-headers	sys-kernel/linux-headers
 virtual/ghc             dev-lang/ghc-bin
+virtual/modutils sys-apps/modutils

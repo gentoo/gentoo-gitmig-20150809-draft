@@ -33,3 +33,4 @@ virtual/editor		app-editors/vi
 virtual/jack		media-sound/jack-audio-connection-kit
 virtual/quicktime	media-libs/libquicktime
 virtual/os-headers	sys-kernel/arm-headers
+virtual/modutils sys-apps/modutils

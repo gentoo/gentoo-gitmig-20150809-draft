@@ -30,3 +30,4 @@ virtual/motif           x11-libs/openmotif
 virtual/bootloader		sys-apps/yaboot
 virtual/editor			app-editors/nano
 virtual/os-headers	sys-kernel/linux-headers
+virtual/modutils sys-apps/modutils

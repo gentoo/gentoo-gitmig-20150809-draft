@@ -5,3 +5,4 @@ virtual/kernel			sys-apps/baselayout
 virtual/glibc 			sys-libs/glibc
 
 virtual/os-headers	sys-kernel/linux-headers
+virtual/modutils sys-apps/modutils
