@@ -1,19 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.13 2003/07/20 18:42:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.1 2003/07/20 18:42:47 azarah Exp $
 
-IUSE="static nls bootstrap java build"
+IUSE="static nls bootstrap java build X"
 
 inherit eutils flag-o-matic libtool
 
 # Compile problems with these (bug #6641 among others)...
-# We don't need these since we strip-flags below -- Joshua
-#filter-flags "-fno-exceptions -fomit-frame-pointer"
+#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
 # still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himself) yet.
+# combinations (protecting the user maybe from himeself) yet.
 #
 # This can clearly be seen in large builds like glibc, where too aggressive
 # CFLAGS cause the tests to fail miserbly.
@@ -23,7 +22,7 @@ inherit eutils flag-o-matic libtool
 #
 #   People really shouldn't force code-specific options on... It's a
 #   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when appropriate).
+#   options that are sensible (and include sse,mmx,3dnow when apropriate).
 #
 # The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
 # you do not like it, comment it, but do not bugreport if you run into
@@ -42,27 +41,27 @@ MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
 LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
 BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
 DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
-# Don't install in /usr/include/g++-v3/, but in gcc internal directory.
+# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # ProPolice version
-PP_VER1="3_2_2"
-PP_VER2="3.2.2-8"
+PP_VER="3_3"
+PP_FVER="${PP_VER//_/.}-1"
 
 # Patch tarball support ...
 #PATCH_VER="1.0"
-PATCH_VER=""
+PATCH_VER="1.2"
 
 # Snapshot support ...
 #SNAPSHOT="2002-08-12"
-SNAPSHOT=""
+SNAPSHOT=
 
 # Branch update support ...
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
 
 #BRANCH_UPDATE="20021208"
-BRANCH_UPDATE=""
+BRANCH_UPDATE="20030718"
 
 if [ -z "${SNAPSHOT}" ]
 then
@@ -84,16 +83,19 @@ else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
 	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
 fi
+if [ -n "${PP_VER}" ]
+then
+	SRC_URI="${SRC_URI}
+		http://www.trl.ibm.com/projects/security/ssp/gcc${PP_VER}/protector-${PP_FVER}.tar.gz"
+fi
 SRC_URI="${SRC_URI}
-	http://www.trl.ibm.com/projects/security/ssp/gcc${PP_VER1}/protector-${PP_VER2}.tar.gz
-	mirror://gentoo/${P}-manpages.tar.bz2
-	mirror://gentoo/${P}-tls-update.patch.bz2"
+	mirror://gentoo/${P}-manpages.tar.bz2"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc sparc alpha -hppa ~arm mips"
+KEYWORDS="-*"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -101,13 +103,18 @@ KEYWORDS="x86 ppc sparc alpha -hppa ~arm mips"
 # their old gcc unmerged ...
 if [ "${CHOST}" == "${CCHOST}" ]
 then
-	SLOT="${MY_PV}"
+# GCC-3.3 is supposed to be binary compatible with 3.2..
+#	SLOT="${MY_PV}"
+	SLOT="3.2"
 else
-	SLOT="${CCHOST}-${MY_PV}"
+# GCC-3.3 is supposed to be binary compatible with 3.2..
+#	SLOT="${CCHOST}-${MY_PV}"
+	SLOT="${CCHOST}-3.2"
 fi
 
+# We need the later binutils for support of the new cleanup attribute
 DEPEND="virtual/glibc
-	mips? >=sys-devel/binutils-2.13.90.0.16 : >=sys-devel/binutils-2.13.90.0.18
+	>=sys-devel/binutils-2.14.90.0.4.1-r1
 	>=sys-devel/gcc-config-1.3.1
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
@@ -120,9 +127,6 @@ RDEPEND="virtual/glibc
 
 PDEPEND="sys-devel/gcc-config"
 
-
-# Hack used to patch Makefiles to install into the build dir
-FAKE_ROOT=""
 
 chk_gcc_version() {
 	# This next bit is for updating libtool linker scripts ...
@@ -139,8 +143,9 @@ chk_gcc_version() {
 
 version_patch() {
 	[ ! -f "$1" ] && return 1
+	[ -z "$2" ] && return 1
 
-	sed -e "s:@PV@:${PVR}:g" ${1} > ${T}/${1##*/}
+	sed -e "s:@GENTOO@:$2:g" ${1} > ${T}/${1##*/}
 	epatch ${T}/${1##*/}
 }
 
@@ -157,7 +162,10 @@ src_unpack() {
 		unpack gcc-${SNAPSHOT//-}.tar.bz2
 	fi
 
-	unpack protector-${PP_VER2}.tar.gz
+	if [ -n "${PP_VER}" ]
+	then
+		unpack protector-${PP_FVER}.tar.gz
+	fi
 
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
@@ -177,106 +185,65 @@ src_unpack() {
 		epatch ${WORKDIR}/patch
 	fi
 
-	# Update to support TLS and __thread
-	epatch ${DISTDIR}/${P}-tls-update.patch.bz2
-
-	# Make gcc's version info specific to Gentoo
-	version_patch ${FILESDIR}/3.2.3/gcc323-gentoo-branding.patch
-
-	# ProPolice Stack Smashing protection - protector-3.2.2-8
-	# ProPolice does not work on archs where the stack grows upward (HPPA)
-	if [ ${ARCH} != "hppa" ]
+	if [ -z "${PP_VER}" ]
 	then
+		# Make gcc's version info specific to Gentoo
+	 	version_patch ${FILESDIR}/3.3/gcc33-gentoo-branding-1.patch \
+			"${BRANCH_UPDATE} (Gentoo Linux ${PVR})" || die "Failed Branding"
+	fi
+
+	if [ -n "${PP_VER}" ]
+	then
+		# ProPolice Stack Smashing protection - protector-3.2.2-7
 		epatch ${WORKDIR}/protector.dif
 		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
-		version_patch ${FILESDIR}/3.2.3/gcc-323-propolice-version.patch 
+		version_patch ${FILESDIR}/3.3/gcc33-gentoo-branding-1.patch \
+			"${BRANCH_UPDATE} (Gentoo Linux ${PVR}, propolice)" \
+			|| die "Failed Branding"
 	fi
 
 	# Patches from Mandrake/Suse ...
-	epatch ${FILESDIR}/3.2.1/gcc31-loop-load-final-value.patch
-	epatch ${FILESDIR}/3.2.1/gcc32-strip-dotdot.patch
-	epatch ${FILESDIR}/3.2.1/gcc32-athlon-alignment.patch
-	epatch ${FILESDIR}/3.2.3/gcc32-c++-classfn-member-template.patch
 	epatch ${FILESDIR}/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch
 
-	# GCC bugfixes ...
-	epatch ${FILESDIR}/3.2.2/gcc32-pr7768.patch
-	epatch ${FILESDIR}/3.2.2/gcc32-pr8213.patch
+	# Fixup for coreutils (head an tail fixes)
+	epatch ${FILESDIR}/3.3/gcc33-coreutils-compat.patch.bz2
 
-	# Get gcc to decreases the number of times the collector has to be run
-	# by increasing its memory workspace, bug #16548.
-	epatch ${FILESDIR}/3.2.2/gcc322-ggc_page-speedup.patch
-
-	# sparc patches from Redhat ...
-	use sparc && epatch ${FILESDIR}/3.2.1/gcc32-sparc32-hack.patch
-
-	# Patches from debian-arm
-	if use arm
+	# We do not use multilib on amd64 yet
+	if use amd64
 	then
-		epatch ${FILESDIR}/3.2.1/gcc32-arm-disable-mathf.patch
-		epatch ${FILESDIR}/3.2.1/gcc32-arm-reload1-fix.patch
+		epatch ${FILESDIR}/3.3/gcc33-no-multilib-amd64.patch
 	fi
-	#ppc mergel miscompilation workaround
+	
+	# PPC mergel miscompilation workaround
 	if use ppc
 	then
 		epatch ${FILESDIR}/3.2.3/gcc-3.2.3-mergel-fix.patch
 	fi
-	if use hppa
+
+	# Patches from debian-arm
+	if use arm
 	then
-		# There exists a bug in the ebuild patched gcc that prevents hppa from
-		# getting build because of default_assemble_visibility is not compiled.
-		# Alexander Gabert <pappy@nikita.ath.cx> (14 Jul 2003).
-		epatch ${FILESDIR}/3.2.3/gcc323-hppa-default_assemble_visibility.patch
+#		epatch ${FILESDIR}/3.2.1/gcc32-arm-disable-mathf.patch
+		epatch ${FILESDIR}/3.2.1/gcc32-arm-reload1-fix.patch
 	fi
-	
+
 	# Install our pre generated manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
 	then
 		cd ${S}; unpack ${P}-manpages.tar.bz2
 	fi
+	
+	# Misdesign in libstdc++ (Redhat)
+	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
-	# Currently if any path is changed via the configure script, it breaks
-	# installing into ${D}.  We should not patch it in src_install() with
-	# absolute paths, as some modules then gets rebuild with the wrong
-	# paths.  Thus we use $FAKE_ROOT.
-	einfo "Fixing Makefiles..."
-	cd ${S}
-	for x in $(find . -name Makefile.in)
-	do
-		# Fix --datadir=
-		cp ${x} ${x}.orig
-		sed -e 's:datadir = @datadir@:datadir = $(FAKE_ROOT)@datadir@:' \
-			${x}.orig > ${x}
-		
-		# Fix --bindir=
-		cp ${x} ${x}.orig
-		sed -e 's:bindir = @bindir@:bindir = $(FAKE_ROOT)@bindir@:' \
-			${x}.orig > ${x}
-
-		# Fix --includedir=
-		cp ${x} ${x}.orig
-		sed -e 's:includedir = @includedir@:includedir = $(FAKE_ROOT)@includedir@:' \
-			${x}.orig > ${x}
-
-		# Fix --with-gxx-include-dir=
-		cp ${x} ${x}.orig
-		sed -e 's:gxx_include_dir = @gxx_:gxx_include_dir = $(FAKE_ROOT)@gxx_:' \
-			-e 's:glibcppinstalldir = @gxx_:glibcppinstalldir = $(FAKE_ROOT)@gxx_:' \
-			${x}.orig > ${x}
-		
-		# Where java security stuff should be installed
-		cp ${x} ${x}.orig
-		sed -e 's:secdir = $(libdir)/security:secdir = $(FAKE_ROOT)$(LIBPATH)/security:' \
-			${x}.orig > ${x}
-		
-		rm -f ${x}.orig
-	done
+	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }
 
 src_compile() {
-	local myconf=""
-	local gcc_lang=""
+
+	local myconf=
+	local gcc_lang=
 	
 	if [ -z "`use build`" ]
 	then
@@ -285,22 +252,37 @@ src_compile() {
 	else
 		gcc_lang="c"
 	fi
-	if [ -z "`use nls`" ] || [ "`use build`" ]
+	if [ -z "`use nls`" -o "`use build`" ]
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
-	if [ -n "`use java`" ] && [ -z "`use build`" ]
+	if [ -n "`use java`" -a -z "`use build`" ]
 	then
 		gcc_lang="${gcc_lang},java"
 	fi
 
+	# Enable building of the gcj Java AWT & Swing X11 backend
+	# if we have X as a use flag and are not in a build stage.
+	# X11 support is still very experimental but enabling it is
+	# quite innocuous...  [No, gcc is *not* linked to X11...]
+	# <dragon@gentoo.org> (15 May 2003)
+	if [ -n "`use java`" -a -n "`use X`" -a -z "`use build`" -a \
+	     -f /usr/X11R6/include/X11/Xlib.h ]
+	then
+		myconf="${myconf} --x-includes=/usr/X11R6/include --x-libraries=/usr/X11R6/lib"
+		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
+	fi
+
+	# Multilib not yet supported
+	myconf="${myconf} --disable-multilib"
+
 	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.
-	# These aren't needed since we strip-flags above -- Joshua
-	#export CFLAGS="${CFLAGS//-O?}"
-	#export CXXFLAGS="${CXXFLAGS//-O?}"
+	# it is safe.  This is especially true for gcc-3.3 ...
+	export CFLAGS="${CFLAGS/-O?/-O2}"
+	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
+	export GCJFLAGS="${CFLAGS/-O?/-O2}"
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
@@ -359,6 +341,7 @@ src_compile() {
 		emake bootstrap-lean \
 			LIBPATH="${LIBPATH}" \
 			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
+
 	fi
 }
 
@@ -377,18 +360,18 @@ src_install() {
 	# Do the 'make install' from the build directory
 	cd ${WORKDIR}/build
 	S="${WORKDIR}/build" \
-	make prefix=${D}${LOC} \
-		bindir=${D}${BINPATH} \
-		includedir=${D}${LIBPATH}/include \
-		datadir=${D}${DATAPATH} \
-		mandir=${D}${DATAPATH}/man \
-		infodir=${D}${DATAPATH}/info \
+	make prefix=${LOC} \
+		bindir=${BINPATH} \
+		includedir=${LIBPATH}/include \
+		datadir=${DATAPATH} \
+		mandir=${DATAPATH}/man \
+		infodir=${DATAPATH}/info \
+		DESTDIR="${D}" \
 		LIBPATH="${LIBPATH}" \
-		FAKE_ROOT="${D}" \
 		install || die
 	
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
-	
+
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
@@ -401,13 +384,7 @@ src_install() {
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	
-	# Install wrappers
-# Handled by gcc-config now ...
-#	exeinto /lib
-#	doexe ${FILESDIR}/cpp
-#	exeinto /usr/bin
-#	doexe ${FILESDIR}/cc
-	
+
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
 	if [ -z "`use build`" ]
@@ -428,7 +405,7 @@ src_install() {
 		# Move all the libraries to version specific libdir.
 		for x in ${D}${LOC}/lib/*.{so,a}* ${D}${LIBPATH}/../*.{so,a}*
 		do
-			[ -f ${x} ] && mv -f ${x} ${D}${LIBPATH}
+			[ -f ${x} -o -L ${x} ] && mv -f ${x} ${D}${LIBPATH}
 		done
 
 		# Move Java headers to compiler-specific dir
@@ -446,6 +423,13 @@ src_install() {
 			fi
 		done
 
+		if [ -d ${D}${LOC}/lib/security ]
+		then
+			dodir /${LIBPATH}/security
+			mv -f ${D}${LOC}/lib/security/* ${D}${LIBPATH}/security
+			rm -rf ${D}${LOC}/lib/security
+		fi
+
 		# Move libgcj.spec to compiler-specific directories
 		[ -f ${D}${LOC}/lib/libgcj.spec ] && \
 			mv -f ${D}${LOC}/lib/libgcj.spec ${D}${LIBPATH}/libgcj.spec
@@ -461,11 +445,17 @@ src_install() {
 
 		# These should be symlinks
 		cd ${D}${BINPATH}
-		rm -f ${CCHOST}-{gcc,g++,c++,g77}
-		[ -f gcc ] && ln -sf gcc ${CCHOST}-gcc
-		[ -f g++ ] && ln -sf g++ ${CCHOST}-g++
-		[ -f g++ ] && ln -sf g++ ${CCHOST}-c++
-		[ -f g77 ] && ln -sf g77 ${CCHOST}-g77
+		for x in gcc g++ c++ g77 gcj
+		do
+			rm -f ${CCHOST}-${x}
+			[ -f ${x} ] && ln -sf ${x} ${CCHOST}-${x}
+
+			if [ -f ${CCHOST}-${x}-${PV} ]
+			then
+				rm -f ${CCHOST}-${x}-${PV}
+				ln -sf ${x} ${CCHOST}-${x}-${PV}
+			fi
+		done
 	fi
 
 	# This one comes with binutils
@@ -479,7 +469,7 @@ src_install() {
 	then
 		cd ${S}
 		docinto /${CCHOST}
-		dodoc COPYING COPYING.LIB ChangeLog FAQ GNATS MAINTAINERS README
+		dodoc COPYING COPYING.LIB ChangeLog* FAQ GNATS MAINTAINERS README
 		docinto ${CCHOST}/html
 		dohtml *.html
 		cd ${S}/boehm-gc
@@ -492,16 +482,16 @@ src_install() {
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
 		cd ${S}/libf2c
 		docinto ${CCHOST}/libf2c
-		dodoc ChangeLog README TODO *.netlib
+		dodoc ChangeLog* README TODO *.netlib
 		cd ${S}/libffi
 		docinto ${CCHOST}/libffi
 		dodoc ChangeLog* LICENSE README
 		cd ${S}/libiberty
 		docinto ${CCHOST}/libiberty
-		dodoc ChangeLog COPYING.LIB README
+		dodoc ChangeLog* COPYING.LIB README
 		cd ${S}/libobjc
 		docinto ${CCHOST}/libobjc
-		dodoc ChangeLog README* THREADS*
+		dodoc ChangeLog* README* THREADS*
 		cd ${S}/libstdc++-v3
 		docinto ${CCHOST}/libstdc++-v3
 		dodoc ChangeLog* README
@@ -514,7 +504,7 @@ src_install() {
 		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar
-			dodoc AUTHORS CHANGES COPYING ChangeLog NEWS README
+			dodoc AUTHORS CHANGES COPYING ChangeLog* NEWS README
 			cd ${S}/libjava
 			docinto ${CCHOST}/libjava
 			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS

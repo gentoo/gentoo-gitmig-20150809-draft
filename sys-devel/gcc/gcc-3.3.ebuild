@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.5 2003/07/14 18:15:27 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.6 2003/07/20 18:42:47 azarah Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -230,6 +230,11 @@ src_unpack() {
 	then
 		cd ${S}; unpack ${P}-manpages.tar.bz2
 	fi
+
+	if [ "$ARCH" = "amd64" ]
+	then
+		epatch ${FILESDIR}/3.3/gcc33-no-multilib-amd64.patch
+	fi
 }
 
 src_compile() {
@@ -267,9 +272,8 @@ src_compile() {
 		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
 	fi
 
-	#multilib not yet supported
-	#multilib allows dynamic support for 32-bit or 64-bit on amd64, s390, sparc, mips, ppc systems
-	myconf="$myconf --disable-multilib"
+	# Multilib not yet supported
+	myconf="${myconf} --disable-multilib"
 
 	# In general gcc does not like optimization, and add -O2 where
 	# it is safe.  This is especially true for gcc-3.3 ...
@@ -332,8 +336,8 @@ src_compile() {
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
 		emake bootstrap-lean \
+			LIBPATH="${LIBPATH}" \
 			BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
-#			LIBPATH="${LIBPATH}" \
 
 	fi
 }
@@ -360,8 +364,8 @@ src_install() {
 		mandir=${DATAPATH}/man \
 		infodir=${DATAPATH}/info \
 		DESTDIR="${D}" \
+		LIBPATH="${LIBPATH}" \
 		install || die
-		#LIBPATH="${LIBPATH}" \
 	
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
 
@@ -369,12 +373,7 @@ src_install() {
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	if [ "$ARCH" = "amd64" ]
-	then
-	echo "LDPATH=\"${LIBPATH}:${LOC}/lib/gcc-lib/${CCHOST}/lib:${LOC}/lib/gcc-lib/${CCHOST}/lib64\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	else
 	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	fi
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
@@ -524,12 +523,6 @@ src_install() {
 
 	# Fix ncurses b0rking
 	find ${D}/ -name '*curses.h' -exec rm -f {} \;
-
-	#interim hack to disable multilib on amd64
-	if [ "$ARCH" = "amd64" ]
-	then
-		cp ${FILESDIR}/specs-3.3-amd64-unilib ${D}/usr/lib/gcc-lib/x86_64-pc-linux-gnu/3.3/specs
-	fi
 
 }
 
