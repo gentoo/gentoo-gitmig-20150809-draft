@@ -1,11 +1,14 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.18 2003/04/06 06:19:55 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.19 2003/06/17 21:02:15 gmsoft Exp $
 
   05 Feb 2003; Aron Griffis <agriffis@gentoo.org> procmail-3.22-r5.ebuild :
   Mark stable on alpha
 
 *procmail-3.22-r5 (28 Oct 2002)
+
+  17 Jun 2003; Guy Martin <gmsoft@gentoo.org> procmail-3.22-r5.ebuild :
+  Added hppa to KEYWORDS.
 
   05 Apr 2003; Zach Welch <zwelch@gentoo.org> procmail-3.22-r5.ebuild:
   add arm keyword
