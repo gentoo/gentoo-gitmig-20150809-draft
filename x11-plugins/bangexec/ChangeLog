@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/bangexec
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/ChangeLog,v 1.1 2005/04/03 20:53:55 anarchy Exp $
+
+*bangexec-1.1.4 (03 Apr 2005)
+
+  03 Apr 2005; Jory A. Pratt <anarch@gentoo.org> +metadata.xml,
+  +bangexec-1.1.4.ebuild:
+  Initial port.  Ebuild contributed by Jory A Pratt <anarchy@gentoo.org>.
+
