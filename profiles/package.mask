@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (16 Aug 2002)
+# Masked for testing
+=app-admin/modlogan-0.7.18
+
 # <spider@gentoo.org> (16 Aug 2002 )
 # Masking for testing, new gnome2.eclass mungling with schemas
 =gnome-base/gnome-applets-2.0.1-r1
