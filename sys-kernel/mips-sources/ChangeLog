@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.20 2003/12/17 07:03:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.21 2004/01/06 01:53:15 kumba Exp $
+
+*mips-sources-2.4.21-r3 (05 Jan 2004)
+
+  05 Jan 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.4.21-r2.ebuild,
+  mips-sources-2.4.21-r3.ebuild, mips-sources-2.4.22-r4.ebuild,
+  mips-sources-2.4.22-r5.ebuild, mips-sources-2.4.22-r6.ebuild,
+  mips-sources-2.4.23-r1.ebuild, mips-sources-2.4.23-r2.ebuild,
+  files/mremap-fix.patch, files/rtc-fixes.patch:
+  Added a patch to fix a new kernel vunerability for 2.4.21, 2.4.22, and 2.4.23
+  and added a patch to fix a memory leak in MIPS-related RTC drivers (and the 
+  generic RTC driver, as cobalt uses this). Also removed older ebuilds lacking 
+  aforementioned patches.
 
   17 Dec 2003; Joshua Kinard <kumba@gentoo.org> mips-sources-2.4.22-r1.ebuild,
   mips-sources-2.4.22-r2.ebuild, mips-sources-2.4.22-r3.ebuild,
