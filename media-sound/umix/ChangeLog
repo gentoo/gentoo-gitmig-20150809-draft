@@ -1,8 +1,11 @@
-# ChangeLog for app-games/ytin
+# ChangeLog for media-sound/umix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/ChangeLog,v 1.1 2002/07/14 10:31:26 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/ChangeLog,v 1.2 2002/07/17 16:42:13 phoenix Exp $
 
-*ytin-1.83.5.ebuild (14 July 2002)
+*umix-1.83.5.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog:
+  Changelog cleanup.
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog, umix-0.9.1.ebuild,
   files/digest-umix-0.9.1 :
