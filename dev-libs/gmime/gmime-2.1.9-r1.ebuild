@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.9-r1.ebuild,v 1.3 2004/11/26 21:40:38 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.9-r1.ebuild,v 1.4 2004/11/26 21:51:15 pylon Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="x86 amd64 ppc"
 
 RDEPEND=">=dev-libs/glib-2
 	doc? ( >=dev-util/gtk-doc-1.0 )"
