@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.18 2002/11/25 12:43:41 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.19 2002/11/26 19:48:24 spider Exp $
 
 *sylpheed-0.8.6 (25 Nov 2002)
+
+  26 Nov 2002; Spider <spider@gentoo.org> sylpheed-0.8.6.ebuild : I updated
+  the ebuild so It actually adheres to USE flags now.  missed a ${myconf} in a critical place.
 
   25 Nov 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-0.8.6.ebuild,
   files/digest-sylpheed-0.8.6:
