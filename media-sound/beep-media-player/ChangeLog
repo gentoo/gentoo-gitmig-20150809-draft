@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.26 2004/11/15 19:39:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.27 2004/11/24 17:15:13 geoman Exp $
+
+  24 Nov 2004; Stephen P. Becker <geoman@gentoo.org>
+  beep-media-player-0.9.7_rc2-r3.ebuild:
+  added ~mips keyword wrt bug 68223
 
   15 Nov 2004; Tony Vroon <chainsaw@gentoo.org>
   beep-media-player-0.9.7_rc2-r3.ebuild:
