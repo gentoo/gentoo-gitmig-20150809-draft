@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.9 2004/09/21 17:25:39 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.10 2004/11/02 01:21:31 sekretarz Exp $
 
 inherit eutils
 
@@ -30,15 +30,9 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 		dev-lang/swig )"
 
 DEPEND="${RDEPEND}
-	virtual/libc"
-
-if has_version =dev-lang/tcl-8.3*; then
-	newdepend dev-lang/swig
-fi
-
-if has_version =dev-lang/tcl-8.4*; then
-	newdepend sys-devel/autoconf
-fi
+	virtual/libc
+	>=dev-lang/tcl-8.4*
+	sys-devel/autoconf"
 
 S=${WORKDIR}/${P}.0
 
