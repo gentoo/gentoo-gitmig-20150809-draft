@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.1 2004/11/14 14:40:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.2 2004/11/16 17:21:49 genstef Exp $
+
+*fuse-1.4 (16 Nov 2004)
+
+  16 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +fuse-1.4.ebuild:
+  Adding version 1.4 to support siefs
 
 *fuse-2.1_pre1 (14 Nov 2004)
 
