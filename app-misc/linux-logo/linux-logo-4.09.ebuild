@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.09.ebuild,v 1.14 2005/01/01 15:11:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.09.ebuild,v 1.15 2005/03/19 15:20:41 luckyduck Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~mips hppa ~amd64 ppc"
+KEYWORDS="x86 sparc ~mips hppa amd64 ppc"
 IUSE="nls"
 
 DEPEND="virtual/libc
