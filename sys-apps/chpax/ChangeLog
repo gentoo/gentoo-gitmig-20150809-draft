@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.18 2004/02/17 23:39:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.19 2004/03/08 21:09:26 avenj Exp $
+
+  08 Mar 2004; Jon Portnoy <avenj@gentoo.org> chpax-0.6.1.ebuild :
+  Stable on AMD64 to make repoman happy.
 
   18 Feb 2004; Guy Martin <gmsoft@gentoo.org> chpax-0.6.1.ebuild :
   Marked stable on hppa.
