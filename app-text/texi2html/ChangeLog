@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.21 2004/12/03 03:30:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.22 2004/12/16 10:31:43 corsair Exp $
+
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> texi2html-1.64-r1.ebuild,
+  texi2html-1.70.ebuild:
+  added ~ppc64 to KEYWORDS/Stable on ppc64
 
   03 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> texi2html-1.64.ebuild,
   texi2html-1.70.ebuild:

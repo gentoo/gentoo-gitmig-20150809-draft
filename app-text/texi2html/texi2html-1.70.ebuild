@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.70.ebuild,v 1.4 2004/12/03 03:30:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.70.ebuild,v 1.5 2004/12/16 10:31:43 corsair Exp $
 
 DESCRIPTION="Perl script that converts Texinfo to HTML"
 HOMEPAGE="https://texi2html.cvshome.org/"
@@ -8,7 +8,7 @@ SRC_URI="https://texi2html.cvshome.org/files/documents/70/173/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.64-r1.ebuild,v 1.11 2004/11/22 15:18:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.64-r1.ebuild,v 1.12 2004/12/16 10:31:43 corsair Exp $
 
 inherit alternatives
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mathematik.uni-kl.de/~obachman/Texi2html/Distrib/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
