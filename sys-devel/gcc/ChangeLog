@@ -1,8 +1,17 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.40 2002/11/21 15:41:40 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.41 2002/11/21 22:16:23 azarah Exp $
+
+*gcc-3.2.1 (21 Nov 2002)
+*gcc-3.2.1-r5 (21 Nov 2002)
+
+  21 Nov 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.1.ebuild,
+  gcc-3.2.1-r5.ebuild :
+
+  Update to new version.  Multi arch version is -r5.
 
   21 Nov 2002; Olivier Reisch <doctomoe@gentoo.org> gcc-3.2-r4.ebuild :
+  
   Added -ppc, it does not compile on PPC test machine.
 
   20 Nov 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2-r4.ebuild :
