@@ -1,10 +1,14 @@
 # ChangeLog for app-text/lout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.1 2002/07/11 06:46:28 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.2 2002/08/26 17:52:59 phoenix Exp $
 
 *lout-3.25-r1 (11 July 2002)
 
-  11 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ytin-1.83.5.ebuild, 
+  26 Aug 2002; phoen][x <phoenix@gentoo.org> lout-3.25.ebuild :
+  Removed comments and fixed dependencies.
+  This closes bug 6771.
+
+  11 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog, lout-3.25.ebuild, 
   files/digest-lout-3.25-r1, files/lout-3.25-r1-makefile-gentoo.patch :
 
   Initial cvs commit. Ebuild contributed by Christian V. J. Brüssow <cvjb@epost.de>.
