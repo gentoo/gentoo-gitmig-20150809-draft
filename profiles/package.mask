@@ -306,14 +306,9 @@ sys-apps/fakeroot
 =dev-java/sun-jdk-1.4.1_beta
 
 # <george@gentoo.org> (06 Aug 2002)
-# new version, masked for testing
-# tested Ok
-#=dev-libs/gsl-1.2
-
-# <george@gentoo.org> (06 Aug 2002)
 # new version, masked for testing.
 # supposedly fixes some ppc problems, ppc people, please test!
-=dev-lang/ocaml-3.05
+#=dev-lang/ocaml-3.05
 
 # Dan Armak <danarmak@gentoo.org> (06 aug 2002)
 # mask kvim (committing now); the ebuild is ok but conflicts with generic vim
@@ -380,12 +375,6 @@ x11-themes/gtk-xfce-engine
 # Testing...
 =net-ftp/kbear-2.0_beta1
 
-# <george@gentoo.org> (03 Aug 2002)
-# masked for testing.
-# PLEASE DO NOT UNMASK ON SERVER! Insted please let me know if it tested Ok
-# (with USE="-tcltk").
-=dev-lang/ocaml-3.04-r2
-
 # Doug Goldstein <cardoe@gentoo.org> (03 Aug 2002)
 # masked for testing
 =net-dialup/hsflinmodem-5.03.03.02072100
@@ -435,10 +424,6 @@ media-video/kxine
 # <spider@gentoo.org> (25 Jul 2002)
 # we need to fix deps on >=dev-util/gob-1.0.x
 >=dev-util/gob-1.99.3
-
-# <george@gentoo.org> (25 Jul 2002)
-# masking omniORB-305 for testing
-#=net-misc/omniORB-305
 
 # <seemant@gentoo.org> (25 Jul 2002)
 # masked because of unhealthy groupadd operation in postinst
@@ -518,10 +503,6 @@ net-misc/radvd
 # <seemant@gentoo.org> (20 Jul 2002)
 # masked because GNU Readline 4.2 is not in 1.0 default inclusion
 =media-sound/cdcd-0.6.4
-
-# <george@gentoo.org> (19 Jul 2002)
-# masked for testing
-=dev-lang/tcc-0.9.8
 
 # <nitro@gentoo.org> (19 Jun 2002)
 # new version, please test
