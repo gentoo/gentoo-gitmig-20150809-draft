@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.2.ebuild,v 1.4 2003/09/12 23:20:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.2.ebuild,v 1.5 2003/12/08 06:28:34 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -175,7 +175,7 @@ src_install() {
 	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/lib/MozillaThunderbird
 
 	#fix permissions
-	chown -R root.root ${D}/usr/lib/MozillaThunderbird
+	chown -R root:root ${D}/usr/lib/MozillaThunderbird
 
 	dobin ${FILESDIR}/MozillaThunderbird
 
