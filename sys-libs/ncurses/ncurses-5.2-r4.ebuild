@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r4.ebuild,v 1.3 2001/10/19 02:29:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r4.ebuild,v 1.4 2001/11/14 22:52:40 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Linux console display libarary"
@@ -39,6 +39,7 @@ src_install() {
 	dodir /usr/lib
 	mv libform* libmenu* libpanel* ../usr/lib
 	mv *.a ../usr/lib
+	dosym /lib/libncurses.so /usr/lib/libncurses.so.5.2
 
 	#with this fix, the default xterm has color as it should
 	cd ${D}/usr/share/terminfo/x
