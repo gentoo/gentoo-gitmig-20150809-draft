@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/obsd-sources
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/obsd-sources/ChangeLog,v 1.1 2003/12/07 14:00:53 g2boojum Exp $
+
+*obsd-sources-3.4_p8 (07 Dec 2003)
+
+  07 Dec 2003; Grant Goodyear <g2boojum@gentoo.org> metadata.xml,
+  obsd-sources-3.4_p8.ebuild:
+  New package: openbsd sources (kernel + userland) for x86obsd.
+
