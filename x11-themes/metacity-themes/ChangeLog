@@ -1,8 +1,11 @@
 # ChangeLog for x11-themes/metacity-themes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/ChangeLog,v 1.1 2002/10/29 09:42:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/ChangeLog,v 1.2 2003/01/26 23:39:17 nall Exp $
 
 *metacity-themes-1.0 (29 Oct 2002)
+
+  26 Jan 2003; Jon Nall <nall@gentoo.org> metacity-themes-1.0.ebuild :
+  added ~ppc
 
   29 Oct 2002; L. Boshell <leonardop@gentoo.org> ChangeLog,
   metacity-themes-1.0.ebuild : Initial release.
