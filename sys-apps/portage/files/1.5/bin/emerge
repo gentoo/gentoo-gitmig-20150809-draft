@@ -1,8 +1,13 @@
 #!/usr/bin/env spython
 
-import portage
-import sys
 import os
+import sys
+
+if os.getuid()!=0:
+	print "!!! emerge must be run by root."
+	sys.exit(1)
+
+import portage
 import xpak
 import string
 import commands
