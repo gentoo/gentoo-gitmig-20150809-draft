@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.5.4.ebuild,v 1.1 2003/12/27 07:43:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.5.4.ebuild,v 1.2 2004/01/01 23:58:24 vapier Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="An Angband variant, with a Japanese/fantasy theme"
 HOMEPAGE="http://hengband.sourceforge.jp/en/"
 SRC_URI="ftp://clockwork.dementia.org/angband/Variant/Hengband/${P}.tar.gz"
 
-LICENSE="Moria | GPL-2"
+LICENSE="Moria"
 SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="cjk X"
