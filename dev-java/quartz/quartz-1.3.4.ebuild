@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.3.4.ebuild,v 1.5 2004/06/24 22:41:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.3.4.ebuild,v 1.6 2004/07/14 02:51:42 agriffis Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/quartz/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="oracle servlet-2.3 servlet-2.4 dbcp jboss jta jmx struts jikes"
+IUSE="dbcp doc jboss jikes jmx jta oracle servlet-2.3 servlet-2.4 struts"
 
 DEPEND=">=virtual/jdk-1.4
 		oracle? ( =dev-java/jdbc2-oracle-9.2.0.3 )
