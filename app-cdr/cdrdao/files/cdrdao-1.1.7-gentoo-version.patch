@@ -1,0 +1,24 @@
+diff -urN cdrdao-1.1.7/configure cdrdao-1.1.7.az/configure
+--- cdrdao-1.1.7/configure	2002-10-06 20:53:55.000000000 +0200
++++ cdrdao-1.1.7.az/configure	2003-12-16 20:46:10.293799472 +0200
+@@ -998,7 +998,7 @@
+ PATH_SEPARATOR="$ac_path_separator"
+ rm -f conftest.sh
+ 
+-cdrdao_version=1.1.7
++cdrdao_version=1.1.7-gentoo
+ 
+ ac_config_headers="$ac_config_headers config.h"
+ 
+diff -urN cdrdao-1.1.7/configure.in cdrdao-1.1.7.az/configure.in
+--- cdrdao-1.1.7/configure.in	2002-10-06 20:53:55.000000000 +0200
++++ cdrdao-1.1.7.az/configure.in	2003-12-16 20:46:19.002475552 +0200
+@@ -2,7 +2,7 @@
+ AC_REVISION($Revision: 1.1 $)dnl
+ AC_INIT(cdrdao.lsm)
+ 
+-cdrdao_version=1.1.7
++cdrdao_version=1.1.7-gentoo
+ 
+ AC_CONFIG_HEADER(config.h)
+ AC_CONFIG_SUBDIRS(paranoia)
