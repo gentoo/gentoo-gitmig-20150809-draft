@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/vnc2swf
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.1 2004/03/06 02:56:49 pyrania Exp $
+
+*vnc2swf-0.3 (06 Mar 2004)
+
+  06 Mar 2004; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
+  vnc2swf-0.3.ebuild:
+  Initial import.  Ebuild submitted by Greg Bowyer <bg115@gre.ac.uk>.
+
