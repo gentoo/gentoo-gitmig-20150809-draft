@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/konversation
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.13 2004/07/07 15:42:29 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.14 2004/12/01 16:38:01 carlo Exp $
+
+*konversation-0.15 (01 Dec 2004)
+
+  01 Dec 2004; Carsten Lohrke <carlo@gentoo.org> +konversation-0.15.ebuild:
+  versionbump
 
 *konversation-0.14 (07 Jul 2004)
 
