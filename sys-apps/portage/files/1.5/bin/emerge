@@ -60,7 +60,7 @@ class depgraph:
 				print "!!! depgraph.create() error: string format:",mydep
 				return 0
 			for x in mycheck[1]:
-				mynew=self.match(x)
+				mynew=self.match(x,dep)
 				if not self.digraph.hasnode(mynew):
 					if not self.create(mynew,mybigkey):
 						return 0
@@ -108,7 +108,7 @@ class depgraph:
 			else:
 				self.create(self.match(myline))
 	
-	def match(self,mydep):
+	def match(self,mydep,myroot=portage.root):
 		myeb=self.db[portage.root]["porttree"].dep_bestmatch(mydep)
 		if not myeb:
 			print "\n!!! Error: couldn't find match for",mydep,"\n"
@@ -118,9 +118,9 @@ class depgraph:
 			if myeb==mypk:
 				myk="binary "+portage.root+" "+mypk
 			else:
-				myk="ebuild "+portage.root+" "+myeb
+				myk="ebuild "+myroot+" "+myeb
 		else:
-			myk="ebuild "+portage.root+" "+myeb
+			myk="ebuild "+myroot+" "+myeb
 		return myk	
 	
 	def display(self,mylist):
