@@ -37,7 +37,7 @@
 
 # <carpaski@gentoo.org> (24 Dec 2002)
 # Testing some fixups. Includes sparc and alpha configs.
->=sys-apps/portage-2.0.46-r5
+=sys-apps/portage-2.0.46-r5
 # Testing for UserPriv compile (broken-ish)
 >=sys-apps/portage-2.0.47_pre1
 
