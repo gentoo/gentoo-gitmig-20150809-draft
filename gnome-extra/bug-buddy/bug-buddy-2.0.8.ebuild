@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.0.8.ebuild,v 1.13 2003/04/24 11:18:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.0.8.ebuild,v 1.14 2003/04/24 11:18:52 vapier Exp $
 
-DESCRIPTION="bug-buddy"
+DESCRIPTION="Bug Report helper for Gnome"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 

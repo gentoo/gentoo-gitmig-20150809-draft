@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.2.103.ebuild,v 1.3 2003/03/30 22:26:37 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.2.103.ebuild,v 1.4 2003/04/24 11:20:30 vapier Exp $
 
 inherit gnome2
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Bug Buddy is a Bug Report helper for Gnome"
+DESCRIPTION="Bug Report helper for Gnome"
 HOMEPAGE="http://www.gnome.org/"
+
 SLOT="2"
 LICENSE="Ximian-logos GPL-2"
-KEYWORDS="x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 RDEPEND=">=gnome-base/gconf-1.2.0
 	>=gnome-base/libglade-2.0.0
@@ -29,7 +29,6 @@ RDEPEND=">=gnome-base/gconf-1.2.0
 	>=sys-devel/gdb-5.1
 	>=sys-devel/gettext-0.10.40
 	>=dev-lang/python-2.2"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
         >=dev-util/intltool-0.17
