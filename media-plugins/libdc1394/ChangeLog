@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/libdc1394
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.1 2003/10/11 14:12:37 hanno Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.2 2004/03/02 15:03:14 hanno Exp $
+
+*libdc1394-0.9.3 (02 Mar 2004)
+
+  02 Mar 2004; Hanno Boeck <hanno@gentoo.org> libdc1394-0.9.3.ebuild:
+  Version bump, resolves bug # 41792.
 
 *libdc1394-0.9.1 (11 Oct 2003)
 
