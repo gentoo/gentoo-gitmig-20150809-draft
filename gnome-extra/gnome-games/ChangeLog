@@ -1,16 +1,18 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.10 2002/07/25 03:38:18 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.11 2002/07/29 05:01:14 spider Exp $
 
-
-  25 Jul 2002; Spider <spider@gentoo.org>
-  SLOT KEYWORDS and LICENSE added
-      
+*gnome-games-2.0.1.1 (29 Jul 2002)
+  29 Jul 2002; Spider <spider@gentoo.orgi>  gnome-games-2.0.1.1.ebuild :
+  new version, keep debugging info for now
+  now uses gnome2.eclass wherever it is realistic
 
 *gnome-games-2.0.1-r1 (28 Jun 2002)
   28 Jun 2002; Spider <spider@gentoo.org> gnome-games-2.0.1-r1.ebuild :
   I had forgotten a schema, something that caused bugs :/
 
+  25 Jul 2002;Spider <spider@gentoo.org>
+  SLOT KEYWORDS and LICENSE added
 
   
 *gnome-games-2.0.1 (19 Jun 2002)
