@@ -1,3 +1,5 @@
 MD5 0e95402502006d082e18fe3a50a2512f files/digest-hydra-3.0 60
-MD5 9ef9e4ae42f14aabdb92f06a179b8b95 ChangeLog 358
+MD5 afcf39b78ccc8fa0569e7ad828d56e55 files/digest-hydra-3.1 60
 MD5 de2bfe48b5a4808dd40b9fdf23aea79f hydra-3.0.ebuild 877
+MD5 9acbcb735fd7344dcec5e0ec2ecef8cb ChangeLog 478
+MD5 638d56d9a5c2a8275f8626b024877eeb hydra-3.1.ebuild 872
