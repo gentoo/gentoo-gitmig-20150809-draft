@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/stimg
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/ChangeLog,v 1.1 2003/06/16 14:53:10 phosphan Exp $
+
+*stimg-0.1.0 (16 Jun 2003)
+
+  16 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> stimg-0.1.0.ebuild:
+  Initial import. Ebuild written mby Mamoru KOMACHI
+  <usata@sodan.ecc.u-tokyo.ac.jp>
+
