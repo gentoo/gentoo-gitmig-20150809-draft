@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+
+# <azarah@gentoo.org> (28 Sep 2002)
+# Test please, as this is going to be the next stable
+# moz (also for galeon-1.2.6)
+=net-www/mozilla-1.0.1
+
 # <raker@gentoo.org> (28 Sep 2002)
 # masking new lbreakout2 build to respect the freeze
 =app-games/lbreakout2-2.3.5
