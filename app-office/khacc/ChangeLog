@@ -1,8 +1,8 @@
 # ChangeLog for app-office/khacc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.1 2003/10/10 13:44:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.2 2004/03/02 08:27:16 aliz Exp $
 
-*khacc-2.9 (12 Aug 2003)
+*khacc-1.7.2 (12 Aug 2003)
 
   10 Oct 2003; Caleb Tennis <caleb@gentoo.org> khacc-1.7.2.ebuild:
   Initial ebuild - closes bug #7146
