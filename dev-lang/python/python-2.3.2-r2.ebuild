@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r2.ebuild,v 1.6 2003/12/13 11:43:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r2.ebuild,v 1.7 2003/12/24 04:24:20 bazik Exp $
 
 inherit flag-o-matic python
 
@@ -53,7 +53,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	# adds /usr/lib/portage/pym to sys.path - liquidx (08 Oct 03)
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3.2-disable_modules_and_ssl.patch
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path.patch
 	# adds support for PYTHON_DONTCOMPILE shell environment to
 	# supress automatic generation of .pyc and .pyo files - liquidx (08 Oct 03)
