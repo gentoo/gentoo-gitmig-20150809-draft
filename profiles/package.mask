@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3254 2004/10/17 00:06:16 dsd Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3255 2004/10/17 00:23:30 chriswhite Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -333,11 +333,6 @@ net-misc/gnupsc
 # upstream development suspended
 # package can be removed in a few months
 dev-db/mysqlcc
-
-# <chriswhite@gentoo.org> (21 Aug 2004)
-# MPlayer with custom CFLAGS
-# Masking until I see what breakage it may have
->=media-video/mplayer-1.0_pre5-r4
 
 # <chriswhite@gentoo.org> (21 Aug 2004)
 # CVS snapshot source testing version
