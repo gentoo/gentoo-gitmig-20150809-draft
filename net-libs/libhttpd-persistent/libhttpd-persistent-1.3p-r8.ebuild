@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r8.ebuild,v 1.1 2004/08/18 20:56:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r8.ebuild,v 1.2 2004/09/22 17:50:23 eradicator Exp $
+
+IUSE=""
 
 MY_P="libhttpd-1.3p-h"
 S="${WORKDIR}/libhttpd-1.3-persistent-h"
@@ -10,8 +12,7 @@ HOMEPAGE="http://www.deleet.de/projekte/daap/daapd/"
 SRC_URI="http://www.deleet.de/projekte/daap/daapd/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-IUSE=""
+KEYWORDS="x86 ~ppc amd64 sparc"
 DEPEND=""
 
 src_compile() {
