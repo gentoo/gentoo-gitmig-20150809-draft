@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.89 2004/12/28 22:39:26 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.90 2005/02/05 23:30:46 superlag Exp $
+
+  05 Feb 2005; Aaron Kulbe <superlag@gentoo.org> metadata.xml:
+  Changing maintainer from commonbox herd to SuperLag (Aaron Kulbe)
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
