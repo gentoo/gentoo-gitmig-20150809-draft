@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.114 2004/11/01 18:55:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.115 2004/11/02 21:49:23 agriffis Exp $
+
+  04 Nov 2004; Aron Griffis <agriffis@gentoo.org> subversion-1.0.9.ebuild,
+  subversion-1.1.0.ebuild:
+  add ia64 keywords
 
   01 Nov 2004; Markus Rothe <corsair@gentoo.org>
 
