@@ -1,9 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.16 2002/10/26 00:11:05 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.17 2002/10/26 18:22:46 woodchip Exp $
 
-  25 Oct 2002; Donny Davies <woodchip@gentoo.org> : Fix openldap dependency
-  from #9249.
+  26 Oct 2002; Donny Davies <woodchip@gentoo.org> : Fix openldap dependency :)
+
+  25 Oct 2002; Donny Davies <woodchip@gentoo.org> : Fix openldap dependency from #9249.
 
 *samba-2.2.6 (Oct 24 2002)
 
