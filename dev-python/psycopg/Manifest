@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b235088a6c4ffbaf02792570affec02 ChangeLog 3073
 MD5 a0351ffa30ba98de85e4f4abe64956b2 psycopg-1.1.15.ebuild 1227
+MD5 fd6ae89bae26bb2ee2ae422ab7c391bd ChangeLog 3185
 MD5 e36336118c28193c05f42f4721817d99 psycopg-1.1.5.1.ebuild 1237
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 f2892887282b0c850cc2ad30fb5d7d81 psycopg-1.1.11.ebuild 1226
-MD5 8ebd6298fe5d6837e93909612aecf857 files/digest-psycopg-1.1.15 66
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 4577d9aefb1ed568484cd95d726d3913 files/digest-psycopg-1.1.5.1 67
 MD5 3fc499ea0154ff7e29eaf5795012bcf1 files/digest-psycopg-1.1.11 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByFyHugEuf3OQ0akRApKCAKCIDNKh4EEPYl3/Pn4jQHLu+cBlmwCfchTH
-eAa8YZS9i//iqiwg7AX09rY=
-=aRQ3
------END PGP SIGNATURE-----
+MD5 8ebd6298fe5d6837e93909612aecf857 files/digest-psycopg-1.1.15 66

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 998500234f0a59b96fa285dbe647aa75 py2play-0.1.6.ebuild 648
 MD5 1f8697b0bcc1b6901f9e4411f6e6c9ed py2play-0.1.2.ebuild 743
-MD5 77b3606970c7d600dddb48f95bdd621f metadata.xml 178
+MD5 a18590d0535f4bc88b9afdf94397b7a7 ChangeLog 1471
 MD5 b778f9e0232f8b8fc728f583b06eb798 py2play-0.1.7.ebuild 534
-MD5 bccd32e39da8926c9c21563e3e22a5f7 ChangeLog 1362
-MD5 5584d2cf8eb44b1d98d591460a36a794 files/digest-py2play-0.1.7 64
+MD5 998500234f0a59b96fa285dbe647aa75 py2play-0.1.6.ebuild 648
+MD5 77b3606970c7d600dddb48f95bdd621f metadata.xml 178
 MD5 db69982f29f44b02ae35c0bf7795e208 files/digest-py2play-0.1.6 64
 MD5 3f936eac8da4ba9519fa216a323ec969 files/digest-py2play-0.1.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcSnWugEuf3OQ0akRAhPDAKCeTAPsirfRbmXB+ZmGAVHwXRmgtgCcCq82
-m7+JpHjKtvcyDx4ACEtsIFg=
-=27ql
------END PGP SIGNATURE-----
+MD5 5584d2cf8eb44b1d98d591460a36a794 files/digest-py2play-0.1.7 64
