@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.7 2004/07/31 21:14:30 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.8 2004/09/22 10:31:47 phosphan Exp $
 
 IUSE="opengl"
 
@@ -26,7 +26,7 @@ src_compile() {
 	addwrite ${QTDIR}/etc/settings
 	local myconf
 	use opengl || myconf="${myconf} --disable-glgraph"
-	use amd64 && epatch ${FILESDIR}/fung-calc-fPIC || die
+	epatch ${FILESDIR}/fung-calc-fPIC
 	# use kde || myconf="${myconf} --disable-kde-app"
 	econf ${myconf} || die "configure failed"
 	epatch ${FILESDIR}/fung-calc-gcc34-fix || die
