@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1.1,v 1.1 2005/02/10 00:03:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1.1,v 1.2 2005/02/10 01:37:59 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -161,6 +161,7 @@ set-new-implementation() {
 	local GL_LOCAL
 
 	check_version
+	check_user
 
 	if ! hasq ${GL_IMPLEM} ${AVAIL_IMPLEMS}; then
 		eerror "Invalid profile selected."
@@ -250,7 +251,7 @@ set-new-implementation() {
 						[[ -h ${file} ]] && rm -f ${file}
 					done
 
-					for file in ${PREFIX}/opengl/${GL_LOCAL}/extensions/*.{so,a,la}; do
+					for file in ${PREFIX}/${LIBDIR}/opengl/${GL_LOCAL}/extensions/*.{so,a,la}; do
 						[[ -f "${file}" ]] || continue
 						[[ -f "${file##*/}" ]] && rm -f ${file##*/}
 
@@ -307,7 +308,6 @@ DST_PREFIX="/usr"
 AVAIL_IMPLEMS=$(get_implementations)
 CURRENT_GL_IMPLEM=$(get_current_implem)
 
-check_user
 parse_options ${@}
 
 case ${ACTION} in
