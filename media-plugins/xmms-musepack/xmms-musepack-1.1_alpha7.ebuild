@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.1_alpha7.ebuild,v 1.1 2004/09/05 22:23:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.1_alpha7.ebuild,v 1.2 2004/09/05 22:23:54 eradicator Exp $
 
 IUSE=""
 
@@ -17,16 +17,16 @@ KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="media-sound/xmms
 	media-libs/libmusepack"
-	
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
 	sed -i 's:-O2 -march=i686 -pipe:${CFLAGS}:g' Makefile
-}	
+}
 
 src_compile() {
-        emake || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
