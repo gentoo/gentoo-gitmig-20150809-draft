@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.2-r1.ebuild,v 1.9 2004/01/19 01:10:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-2.1.2-r1.ebuild,v 1.10 2004/01/19 10:52:47 mr_bones_ Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -110,10 +110,10 @@ src_compile() {
 		ewarn "The package presently provides no way to disable fam support if you don't want it"
 	fi
 
-	# fix for non-x86 platforms, bug #38606 
+	# fix for non-x86 platforms, bug #38606
 	# courier-imap doesn't respect just --host=$CHOST without --build
 	[ -z "${CBUILD}" ] && export CBUILD="${CHOST}"
-	
+
 	# Do the actual build now
 	LDFLAGS="${LDFLAGS}" econf \
 		--disable-root-check \
