@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.27 2003/03/10 12:01:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.28 2003/03/24 11:48:06 malverian Exp $
+
+*gimp-1.3.13 (24 Mar 2003)
+
+  24 Mar 2003; Philip Walls <malverian@gentoo.org> gimp-1.3.13.ebuild,
+  files/digest-gimp-1.3.13 :
+
+  Version bump, check for perl in USE, re-enable gnome-desktop 
+  functionality.
 
 *gimp-1.3.12 (24 Feb 2003)
 
