@@ -1,0 +1,12 @@
+--- makefile.machine.orig       2004-12-04 18:18:22.193007744 +0100
++++ makefile.machine    2004-12-04 18:18:33.908226760 +0100
+@@ -9,7 +9,7 @@
+ CC=gcc $(ALLFLAGS)
+ LINK_SHARED=-shared
+
+-LOCAL_LIBS=-lpthread -ldl
++# LOCAL_LIBS=-lpthread -ldl
+ # static linkage
+-# LOCAL_LIBS=-static -lpthread
++LOCAL_LIBS=-static -lpthread
+
