@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.5 2002/04/04 08:14:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.6 2002/04/12 18:56:05 spider Exp $
+
+
+  11 Apr 2002; Spider <spider@gentoo.org>
+  Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
+
 
   04 Apr 2002; M.Schlemmer <azarah@gentoo.org> pam-0.75-r6.ebuild :
 

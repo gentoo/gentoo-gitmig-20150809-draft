@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r5.ebuild,v 1.2 2002/04/03 09:48:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r5.ebuild,v 1.3 2002/04/12 18:56:05 spider Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
@@ -11,7 +11,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.ta
 HOMEPAGE="http://www.redhat.com/linux-info/pam/"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3
-	>=dev-libs/glib-1.2.10
+	=dev-libs/glib-1.2*
 	>=sys-libs/pwdb-0.61-r3
 	>=sys-devel/autoconf-2.13
 	>=sys-devel/automake-1.4
