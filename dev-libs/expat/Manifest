@@ -3,11 +3,11 @@ MD5 a6902abc6ebd52482888e7eba179159b expat-1.95.4.ebuild 763
 MD5 cfbd7c4948d872a21af754fc601fccb0 expat-1.95.5-r1.ebuild 634
 MD5 990e27113f8887a61f0a36be26879333 expat-1.95.6-r1.ebuild 859
 MD5 86b967b7e27907d10a76a59fd9d67f81 expat-1.95.6.ebuild 630
-MD5 a860f218cd7a37e1c51863eedc93028c expat-1.95.7.ebuild 692
+MD5 c0a6dc3bbab656bbf2426c1a1c355e64 expat-1.95.7.ebuild 697
 MD5 7868bf2a29b820e0358f371167bc740f files/digest-expat-1.95.4 64
 MD5 a39abdca141d50129afe4aeccd400e19 files/digest-expat-1.95.5-r1 64
 MD5 5a60260c06d2a4e63854a754788998ac files/digest-expat-1.95.6 64
 MD5 5a60260c06d2a4e63854a754788998ac files/digest-expat-1.95.6-r1 64
-MD5 fc080bb7f4438c40244db79d3a22b63e files/xmlstatus.patch 846
 MD5 0137bf2c738329ab03f266ac859b4613 files/digest-expat-1.95.7 64
 MD5 ef6e63456a1e54d230d665fd7e9fe0d0 files/expat-1.95.6-uclibc.patch 1466
+MD5 fc080bb7f4438c40244db79d3a22b63e files/xmlstatus.patch 846
