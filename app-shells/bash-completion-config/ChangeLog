@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion-config
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.13 2004/11/10 12:58:33 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.14 2004/11/14 22:50:25 ka0ttic Exp $
+
+*bash-completion-config-0.6 (14 Nov 2004)
+
+  14 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
+  -files/0.4-r1_fix-relative-path-install.diff,
+  -bash-completion-config-0.4-r1.ebuild, +bash-completion-config-0.6.ebuild:
+  Version bump.
 
 *bash-completion-config-0.5 (10 Nov 2004)
 
