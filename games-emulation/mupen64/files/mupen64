@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ ! -d ~/.mupen64/save ] ; then
 	mkdir -p ~/.mupen64/save
@@ -6,7 +6,12 @@ if [ ! -d ~/.mupen64/save ] ; then
 	ln -s GENTOO_DIR/plugins plugins
 	ln -s GENTOO_DIR/mupen64 mupen64
 	ln -s GENTOO_DIR/mupen64_nogui mupen64_nogui
+	cp GENTOO_DIR/mupen64.ini .
 fi
 
 cd ~/.mupen64
-exec GENTOO_DIR/$(basename $0) "$@"
+# We must execute ./blah not /foo/bar/blah because mupen64 tries to
+# write to files in the directory from which the application is run.
+# It segfaults if it can't write to the directory.  Upstream has been
+# notified of the problem.
+exec ./$(basename $0) "$@"

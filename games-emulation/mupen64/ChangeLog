@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/mupen64
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.3 2003/09/19 05:58:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.4 2003/09/27 08:06:11 mr_bones_ Exp $
+
+  27 Sep 2003; Michael Sterrett <msterret@gentoo.org> mupen64-0.3.ebuild,
+  files/mupen64:
+  disable the riceplugin for anything < gcc 3.3; more error messages; make
+  wrapper script run out of ~/.mupen64 to avoid segfault on exit; wrapper is a
+  bash script; cp ini file to ~ so it can be updated on exit. Should work
+  around bug 29206 enough to close that bug.
 
 *mupen64-0.3 (19 Sep 2003)
 

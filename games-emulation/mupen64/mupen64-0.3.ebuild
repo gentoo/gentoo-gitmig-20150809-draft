@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.3.ebuild,v 1.1 2003/09/19 05:58:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.3.ebuild,v 1.2 2003/09/27 08:06:11 mr_bones_ Exp $
 
-inherit games eutils
+inherit games gcc eutils
 
 DESCRIPTION="A Nintendo 64 (N64) emulator"
 SRC_URI="http://mupen64.emulation64.com/files/src/mupen64_src-${PV}.tar.bz2
@@ -11,38 +11,51 @@ SRC_URI="http://mupen64.emulation64.com/files/src/mupen64_src-${PV}.tar.bz2
 	http://mupen64.emulation64.com/files/src/tr64_oglv078_src.tar.bz2
 	http://mupen64.emulation64.com/files/src/mupen64_hle_rsp.tar.bz2
 	http://mupen64.emulation64.com/files/src/riceplugin.tar.bz2"
-#SRC_URI="http://mupen64.emulation64.com/files/${P}.tar.bz2"
 HOMEPAGE="http://mupen64.emulation64.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* x86"
 
-DEPEND="=x11-libs/gtk+-1.2*
-	>=sys-apps/sed-4
+RDEPEND="=x11-libs/gtk+-1.2*
 	media-libs/libsdl
 	virtual/glu
 	virtual/opengl"
+DEPEND="${RDEPEND}
+	sys-devel/gcc
+	>=sys-apps/sed-4"
 
 S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-gcc3.patch
-	sed -i "/^CC/s:-O3.*-Wall:${CFLAGS}:" \
-		emu64/Makefile \
-		mupen64_input/Makefile
-	sed -i "/^CFLAGS/s:-O3.*-march=athlon:${CFLAGS}:" mupen64_sound/Makefile
-	sed -i "/^CFLAGS/s:-O3.*$:${CFLAGS}:" \
-		riceplugin/Makefile \
+	# the riceplugin seems to want gcc 3.3 to compile.
+	if [ "`gcc-major-version`" -lt 3 -o "`gcc-version`" = "3.2" ] ; then
+		rm -rf riceplugin
+	else
+		epatch ${FILESDIR}/${PV}-gcc3.patch
+		sed -i \
+			-e "/^CFLAGS/s:-O3.*$:${CFLAGS}:" riceplugin/Makefile || \
+			die "sed riceplugin/Makefile failed"
+	fi
+	sed -i \
+		-e "/^CC/s:-O3.*-Wall:${CFLAGS}:" emu64/Makefile \
+			mupen64_input/Makefile || \
+				die "sed mupen64_input/Makefile failed"
+	sed -i \
+		-e "/^CFLAGS/s:-O3.*-march=athlon:${CFLAGS}:" \
+		mupen64_sound/Makefile || die "sed mupen64_sound/Makefile failed"
+	sed -i \
+		-e "/^CFLAGS/s:-O3.*$:${CFLAGS}:" \
 		rsp_hle/Makefile \
-		tr64_oglv078_src/Makefile
+		tr64_oglv078_src/Makefile || \
+			sed "other sed Makefiles failed"
 }
 
 src_compile() {
 	for d in * ; do
 		cd ${S}/${d}
-		emake || die "failed on $d"
+		emake || die "emake failed on $d"
 	done
 }
 
