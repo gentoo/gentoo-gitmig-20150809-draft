@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.1.ebuild,v 1.1 2003/07/01 10:02:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.1.ebuild,v 1.2 2003/07/09 17:24:32 liquidx Exp $
 
 inherit gnome2
 
@@ -20,14 +20,18 @@ SLOT="0"
 KEYWORDS="~x86"
 
 
-DEPEND=">=gnome-base/libbonobo-2.2.0
+RDEPEND=">=gnome-base/libbonobo-2.2.0
 	>=gnome-base/libgnome-2.2.0
 	>=gnome-base/libgnomeui-2.2.0
 	>=gnome-base/bonobo-activation-2.2.0
 	>=sys-libs/zlib-1.1.4
 	>=gnome-base/gconf-1.2
 	>=dev-libs/popt-1.7
-	>=gnome-base/ORBit2-2.6"
+	>=gnome-base/ORBit2-2.6
+	>=x11-libs/gtk+-2"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
