@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.45 2004/04/09 22:21:35 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.46 2004/04/10 17:15:37 swtaylor Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -339,13 +339,9 @@ filter-ldflags() {
 etexec-flags() {
 	has_pie || has_pic
 	if [ $? == 0 ] ; then
-		# strip -fPIC regardless if you've gotten this far
-		strip-flags -fPIC -fpic -fPIE -fpie -pie
 		if [ "`is-flag -yet_exec`" != "true" ]; then
-			# If our compile support -yet_exec, append it now
-			[ -z "`gcc -yet_exec -S -o /dev/null -xc /dev/null 2>&1`" ] \
-				&& ( debug-print ">>> appending flags -yet_exec" ; \
-					append-flags -yet_exec ; append-ldflags -yet_exec )
+			debug-print ">>> appending flags -yet_exec" 
+			export CFLAGS="${CFLAGS} `test_flag -yet_exec`"
 		fi
 	fi
 }
@@ -353,13 +349,9 @@ etexec-flags() {
 fstack-flags() {
 	has_ssp
 	if [ $? == 0 ] ; then
-		# strip -fstack-protector regardless if you've gotten this far
-		strip-flags -fstack-protector -fstack-protector-all
 		if [ "`is-flag -yno_propolice`" != "true" ]; then
-			# If our compile support -yno_propolice, append it now
-			[ -z "`gcc -yno_propolice -S -o /dev/null -xc /dev/null 2>&1`" ] \
-				&& ( debug-print ">>> appending flags -yno_propolice" ; \
-					append-flags -yno_propolice ; append-ldflags -yno_propolice )
+			debug-print ">>> appending flags -fno-stack-protector" 
+			export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
 		fi
 	fi
 }
