@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20-r6.ebuild,v 1.1 2003/10/28 21:02:25 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20-r6.ebuild,v 1.2 2003/12/01 22:40:53 iggy Exp $
 
 IUSE="build"
 
@@ -35,4 +35,5 @@ src_unpack() {
 
 	epatch ${FILESDIR}/gaming-sources-2.4.20-gcc33.patch
 
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 }
