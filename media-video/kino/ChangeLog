@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.10 2004/02/09 11:04:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.11 2004/03/17 12:50:01 aliz Exp $
+
+*kino-0.7.0 (17 Mar 2004)
+
+  17 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> kino-0.7.0.ebuild:
+  Version bump. Ebuild submitted by Cena Salvatore <cena@cenas.it>.
 
   09 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> kino-0.6.5.ebuild:
   AMD64 keyword.
