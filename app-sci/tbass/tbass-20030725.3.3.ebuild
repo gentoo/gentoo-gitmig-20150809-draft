@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.2 2003/08/01 20:55:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.3 2003/09/11 01:02:54 msterret Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/${My_PV}/${Name}-${My_PV}.tar.g
 	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/examples/examples.tar.gz
 	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-tech-verilog-20030204.tar.gz
 	ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/snapshots/${Name}-tech-xilinx-20021029.tar.gz"
- 	#ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/${My_PV}/${Name}-lard-${My_PV}.tar.gz"
+	#ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/${My_PV}/${Name}-lard-${My_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,7 +29,7 @@ DEPEND="virtual/glibc
 	dev-libs/gmp
 	dev-lang/perl
 	x11-libs/gtk+"
- 	#>=app-sci/lard-2.0.15"
+	#>=app-sci/lard-2.0.15"
 
 RDEPEND="${DEPEND}
 	dev-util/guile
@@ -123,12 +123,12 @@ src_install() {
 	#
 	# Lets just ignore the problem and hope it goes away.
 	#
-        #cd ${WORKDIR}/balsa-lard-${PV}
+	#cd ${WORKDIR}/balsa-lard-${PV}
 	# hack - imports come from hard coded path, we set this
 	# for install,
 	#echo "patching ${WORKDIR}/balsa-lard-${PV}/share/scheme/base-local.scm"
 	#sed -i -e "s:/usr/share/scheme/:${D}/usr/share/scheme/:g" share/scheme/base-local.scm
-        #make DESTDIR=${D} install || die "make install failed"
+	#make DESTDIR=${D} install || die "make install failed"
 }
 
 pkg_postinst() {

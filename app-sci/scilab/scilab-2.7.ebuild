@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7.ebuild,v 1.2 2003/09/06 22:23:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7.ebuild,v 1.3 2003/09/11 01:02:54 msterret Exp $
 
 DESCRIPTION="scientific software package for numerical computations"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/${P}.src.tar.gz"
@@ -20,8 +20,8 @@ src_compile() {
 
 	use tcltk || myopts="--without-tk"
 	if [ !"`use tcltk`" ] ; then
-        mv ${S}/tcl/Makefile ${S}/tcl/Makefile.orig
-        sed -e 's,all:: browsehelpexe,all::,' ${S}/tcl/Makefile.orig > ${S}/tcl/Makefile
+		mv ${S}/tcl/Makefile ${S}/tcl/Makefile.orig
+		sed -e 's,all:: browsehelpexe,all::,' ${S}/tcl/Makefile.orig > ${S}/tcl/Makefile
 	fi
 
 	./configure \

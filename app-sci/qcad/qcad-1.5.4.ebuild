@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-1.5.4.ebuild,v 1.5 2003/05/28 17:38:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-1.5.4.ebuild,v 1.6 2003/09/11 01:02:54 msterret Exp $
 inherit kde-functions
 
 MY_P=${P}-src
@@ -19,7 +19,7 @@ set-qtdir 3
 
 src_compile() {
 	cd ${S}
-    	emake CXXFLAGS="$CXXFLAGS" || die
+	emake CXXFLAGS="$CXXFLAGS" || die
 }
 
 src_install () {
