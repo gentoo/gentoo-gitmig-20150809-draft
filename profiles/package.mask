@@ -87,6 +87,7 @@ sys-devel/prelink
 ~kde-base/kdetoys-3.1
 ~kde-base/kdeutils-3.1
 ~app-editors/quanta-3.1
+~app-doc/kdelibs-apidocs-3.1
 
 # <hannes@gentoo.org> (12 Nov 2002)
 # kde 3.1 rc3: masked permanently
