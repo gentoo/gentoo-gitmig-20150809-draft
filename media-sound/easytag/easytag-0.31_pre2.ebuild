@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2.ebuild,v 1.3 2004/04/09 16:18:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2.ebuild,v 1.4 2004/04/09 17:49:42 mr_bones_ Exp $
 
 IUSE="nls oggvorbis flac gtk2"
 
@@ -39,7 +39,7 @@ src_unpack() {
 	else
 		epatch ${FILESDIR}/${MY_P}-fix-configure.patch
 		export WANT_AUTOCONF=2.5
-		autoconf		
+		autoconf
 	fi
 }
 
