@@ -1,10 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pnet/pnet-0.5.6.ebuild,v 1.1 2003/05/03 10:58:09 scandium Exp $
-
-# filter -march= since it breaks compile in cvm.c
-inherit flag-o-matic
-filter-flags "-march=*"
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pnet/pnet-0.5.6-r1.ebuild,v 1.1 2003/05/07 19:29:00 scandium Exp $
 
 DESCRIPTION="Portable .NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -19,6 +15,9 @@ IUSE=""
 DEPEND=">=dev-util/treecc-0.2.4"
 
 src_compile() {
+	# replace -march with -mcpu since -march=* breaks compile in cvm.c
+	CFLAGS="${CFLAGS/-march/-mcpu}" \
+	CXXFLAGS="${CXXFLAGS/-march/-mcpu}" \
 	econf || die
 	emake || die
 }
