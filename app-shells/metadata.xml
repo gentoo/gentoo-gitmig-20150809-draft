@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The app-shells category contains shells and their extensions.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-shells enthält Kommandozeileninterpreter (Shells)
+		sowie deren Erweiterungen.
+	</longdescription>
 </catmetadata>
 
