@@ -1,0 +1,11 @@
+# ChangeLog for rox-extra/edit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/edit/ChangeLog,v 1.1 2004/12/02 14:46:19 sergey Exp $
+
+*edit-1.9.5 (02 Dec 2004)
+
+  02 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +edit-1.9.5.ebuild:
+  First commit of editor rox app. Thanks to Alexander Simonov for the ebuild.
+  (Bug #51996).
+
