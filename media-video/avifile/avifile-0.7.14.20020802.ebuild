@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.2 2002/08/13 23:21:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.3 2002/08/27 20:09:00 raker Exp $
 
 inherit libtool
 
 MY_P=${P/.200/-200}
 MY_S=${PN}0.7-0.7.14
 S=${WORKDIR}/${MY_S}
+
 DESCRIPTION="Library for AVI-Files"
 SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz"
 HOMEPAGE="http://avifile.sourceforge.net/"
@@ -36,10 +37,6 @@ src_compile() {
 		&& myconf="${myconf} --with-qt-dir=${QTDIR}" \
 		|| myconf="${myconf} --without-qt"
 	
-	use kde \
-		&& myconf="${myconf} --enable-kde" \
-		|| myconf="${myconf} --disable-kde"
-	
 	use sdl \
 		&& myconf="${myconf} --enable-sdl" \
 		|| myconf="${myconf} --disable-sdl --disable-sdltest"
@@ -64,8 +61,7 @@ src_compile() {
 	# safe by itself.
 	unset CFLAGS CXXFLAGS LDFLAGS
 	
-	./configure --prefix=/usr \
-		--host=${CHOST} \
+	econf \
 		--enable-quiet \
 		--disable-tsc \
 		${myconf} || die

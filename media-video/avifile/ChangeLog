@@ -1,11 +1,14 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.17 2002/08/13 23:21:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.18 2002/08/27 20:09:00 raker Exp $
+
+*avifile-0.7.14.20020802 (04 Aug 2002)
+
+  17 Aug 2002; Nick Hadaway <raker@gentoo.org> avifile-0.7.14.20020802.ebuild :
+  Changed to econf.  Removed redundanct "use kde" section.
 
   14 Aug 2002; Martin Schlemmer <azarah@gentoo.org> avifile-0.7.14.20020802.ebuild :
   Elibtoolize this one.
-
-*avifile-0.7.14.20020802 (04 Aug 2002)
 
   04 Aug 2002; Nick Hadaway <raker@gentoo.org>
   avifile-0.7.14.20020802.ebuild, files/digest-avifile-0.7.14.2020802 :
