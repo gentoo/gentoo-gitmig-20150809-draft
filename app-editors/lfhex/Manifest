@@ -1,4 +1,14 @@
-MD5 df8a2651a05f6ea088fdab118442a272 lfhex-0.3.7.ebuild 763
-MD5 7b6f1d95127f3da54b29ecf7d3daed5c ChangeLog 508
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b0376a3a63911905d80b073b56812ff7 lfhex-0.3.7.ebuild 765
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 228fe74904c76a99d37fdddf45722865 ChangeLog 598
 MD5 278540748b028890d6885b09b0ab834c files/digest-lfhex-0.3.7 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+hMJmdTrptrqvGERAsQqAJ9RTz4ZPDk+R9MCXTtMKxa8DZxLYACcCtMb
+W4cfmvJi7QsvlqiQrCTogNk=
+=BqAI
+-----END PGP SIGNATURE-----

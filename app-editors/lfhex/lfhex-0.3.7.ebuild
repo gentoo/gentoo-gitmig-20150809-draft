@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.3.7.ebuild,v 1.3 2004/06/24 21:58:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.3.7.ebuild,v 1.4 2004/07/18 05:57:25 dragonheart Exp $
 
 DESCRIPTION="A fast, efficient hex-editor with support for large files and comparing binary files"
 HOMEPAGE="http://freshmeat.net/projects/lfhex"
 SRC_URI="http://home.earthlink.net/~eyekode/data/${P}.tar.gz"
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
