@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.2-r2.ebuild,v 1.2 2003/07/16 16:38:05 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.2-r2.ebuild,v 1.3 2003/09/09 00:48:34 usata Exp $
 inherit kde-dist eutils
 
 IUSE="tetex gphoto2"
@@ -8,7 +8,7 @@ DESCRIPTION="KDE $PV - graphics-related apps"
 KEYWORDS="x86 sparc ppc"
 DEPEND="$DEPEND dev-lang/perl
 	media-gfx/sane-backends
-	tetex? ( >=app-text/tetex-1.0.7 )"
+	tetex? ( virtual/tetex )"
 
 newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 )"
 
