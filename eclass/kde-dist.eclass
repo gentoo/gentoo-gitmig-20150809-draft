@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.60 2005/01/15 16:06:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.61 2005/02/04 21:21:15 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -20,6 +20,7 @@ case "$PV" in
 	3.2.0)			SRC_PATH="stable/3.2/src/${P}.tar.bz2" ;;
 	3.3.0)			SRC_PATH="stable/3.3/src/${P}.tar.bz2" ;;
 	3.4.0_beta1)           SRC_PATH="unstable/3.3.91/src/${PN}-3.3.91.tar.bz2" ;;
+	3.4.0_beta2)           SRC_PATH="unstable/3.3.92/src/${PN}-3.3.92.tar.bz2" ;;
 	3*)			SRC_PATH="stable/$PV/src/${P}.tar.bz2" ;;
 	5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
 				debug-print "$ECLASS: cvs detected" ;;
@@ -32,6 +33,7 @@ need-kde $PV
 
 # 3.4 prereleases
 [ "$PV" == "3.4.0_beta1" ] && S=${WORKDIR}/${PN}-3.3.91
+[ "$PV" == "3.4.0_beta2" ] && S=${WORKDIR}/${PN}-3.3.92
 
 DESCRIPTION="KDE ${PV} - "
 HOMEPAGE="http://www.kde.org/"

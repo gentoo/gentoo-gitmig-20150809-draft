@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.15 2005/01/17 21:20:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.16 2005/02/04 21:21:15 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -21,6 +21,7 @@ myPN="$KMNAME"
 case "$PV" in
 	3.4.0_alpha1)	myPV="${PV/3.4.0_alpha1/3.3.90}" ;;
 	3.4.0_beta1)	myPV="${PV/3.4.0_beta1/3.3.91}" ;;
+	3.4.0_beta2)	myPV="${PV/3.4.0_beta1/3.3.92}" ;;
 	*)		myPV="$PV" ;;
 esac
 myP="$myPN-$myPV"
@@ -67,6 +68,9 @@ if [ "$KDEBASE" = "true" ]; then
 					;;
 		3.3.91)		XDELTA_BASE="unstable/3.3.90/src/${myPN}-3.3.90.tar.bz2"
 					XDELTA_DELTA="unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta"
+					;;
+		3.3.92)		XDELTA_BASE="unstable/3.3.90/src/${myPN}-3.3.90.tar.bz2"
+					XDELTA_DELTA="unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta unstable/3.3.92/src/${myPN}-3.3.91-3.3.92.tar.xdelta"
 					;;
 		*)			;;
 	esac	
