@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.12 2004/06/13 08:29:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.13 2004/06/17 07:16:22 eradicator Exp $
+
+  16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/jack-rack-1.4.3-gtkdep.patch:
+  Stable amd64.  Added patch to fix bug #50500 with gtk-2.4 and higher installed.
 
   13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   jack-rack-1.4.1.ebuild, jack-rack-1.4.2.ebuild, jack-rack-1.4.3.ebuild:
