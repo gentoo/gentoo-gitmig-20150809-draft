@@ -1,0 +1,7 @@
+*iperf-1.6.3 (14 Nov 2002)
+
+  14 Nov 2002; Martin Holzer <mholzer@gentoo.org> iperf-1.6.3.ebuild 
+  ChangeLog files/digest-iperf-1.6.3  files/iperf-1.6.3-Makefile-gentoo.diff :
+
+  Iperf is a tool to measure IP bandwidth using UDP or TCP.
+
