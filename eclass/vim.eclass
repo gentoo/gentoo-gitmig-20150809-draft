@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.82 2004/12/11 21:42:38 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.83 2004/12/11 23:44:58 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -237,6 +237,18 @@ vim_src_unpack() {
 	# which isn't even in the source file being invalid, we'll do some trickery
 	# to make the error never occur. bug 66162 (02 October 2004 ciaranm)
 	find ${S} -name '*.c' | while read c ; do echo >> "$c" ; done
+
+	# if we're vim-7 and USE vim-pager, make the manpager.sh script
+	if [[ "${MY_PN}" == "vim" ]] && [[ $(get_major_version ) -ge 7 ]] \
+			&& use vim-pager ; then
+		cat <<END > ${S}/runtime/macros/manpager.sh
+#!/bin/sh
+col -b | \
+		vim -c 'let no_plugin_maps = 1' -c 'set nolist nomod ft=man' -c \
+		'runtime! macros/less.vim' -
+END
+	fi
+
 }
 
 src_compile() {
@@ -466,10 +478,14 @@ src_install() {
 		ln -s vim ${D}/usr/bin/view && \
 		ln -s vim ${D}/usr/bin/rview \
 			|| die "/usr/bin symlinks failed"
-		if [[ $(get_major_version ) -ge 7 ]] ; then
-			use vim-pager && \
-					ln -s /usr/share/vim/vim${VIM_VERSION//./}/macros/less.sh \
+		if [[ $(get_major_version ) -ge 7 ]] && use vim-pager ; then
+			ln -s /usr/share/vim/vim${VIM_VERSION//./}/macros/less.sh \
 					${D}/usr/bin/vimpager
+			ln -s /usr/share/vim/vim${VIM_VERSION//./}/macros/manpager.sh \
+					${D}/usr/bin/vimmanpager
+			insinto /usr/share/vim/vim${VIM_VERSION//./}/macros
+			doins runtime/macros/manpager.sh
+			fperms a+x /usr/share/vim/vim${VIM_VERSION//./}/macros/manpager.sh
 		fi
 	fi
 }
