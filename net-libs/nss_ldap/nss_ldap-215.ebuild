@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-210.ebuild,v 1.5 2004/01/30 06:55:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-215.ebuild,v 1.1 2004/01/30 06:55:05 raker Exp $
 
 inherit fixheadtails
-IUSE="berkdb debug ssl"
+
+IUSE="berkdb debug"
 
 DESCRIPTION="NSS LDAP Module"
 HOMEPAGE="http://www.padl.com/OSS/nss_ldap.html"
@@ -14,7 +15,7 @@ LICENSE="LGPL-2"
 KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=net-nds/openldap-1.2.11
-	berkdb? ( =sys-libs/db-3* )"
+	berkdb? ( >=sys-libs/db-3 )"
 
 src_unpack() {
 	unpack ${A}
@@ -26,14 +27,10 @@ src_compile() {
 	local myconf=""
 	# --enable-schema-mapping   enable attribute/objectclass mapping
 	# --enable-paged-results    enable paged results control
-	# --enable-configurable-krb5-ccname   enable configurable
-	#			Kerberos V credentials cache name
 
 	use berkdb && myconf="${myconf} --enable-rfc2307bis"
 
 	use debug && myconf="${myconf} --enable-debugging"
-
-	use ssl || myconf="${myconf} --disable-ssl"
 
 	econf \
 		--with-ldap-lib=openldap \
