@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.8 2003/02/13 12:32:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.9 2003/03/04 00:51:28 lostlogic Exp $
 
 IUSE="python nls gnome aalib perl"
 
@@ -28,6 +28,15 @@ DEPEND="nls? ( sys-devel/gettext )
 	${RDEPEND}"
 
 src_unpack() {
+	if [ "`use threads`" ]; then
+		eerror "I'm sorry I can't build against a threaded perl,"
+		eerror "please remerge perl and libperl without"
+		eerror "'USE=threads' and try again.  (Note: this message"
+		eerror "is triggered by having threads in USE so you must"
+		eerror "leave threads out of your USE var when merging"
+		eerror "gimp."
+		die "Not compatible with threaded perl"
+	fi
 	unpack ${A}
 	
 	cd ${S}/plug-ins/common
