@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.72 2005/01/20 18:08:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.73 2005/01/20 23:21:45 eradicator Exp $
+
+  20 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  nvidia-glx-1.0.6629-r2.ebuild:
+  Make new revision install both 32bit and 64bit versions to make games herd
+  QA hapy.
 
   20 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   nvidia-glx-1.0.6629-r2.ebuild:
