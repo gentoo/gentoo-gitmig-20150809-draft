@@ -1,21 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha03.ebuild,v 1.1 2003/02/18 04:02:45 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha03.ebuild,v 1.2 2003/02/28 21:56:14 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A set of tools for CDR drives, including cdrecord."
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
+SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.gz"
+
 LICENSE="GPL-2"
-
-DEPEND="virtual/glibc"
-
-IUSE=""
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.gz"
-S="${WORKDIR}/${PN}-2.01"
+DEPEND="virtual/glibc"
 
-inherit eutils
+S="${WORKDIR}/${PN}-2.01"
 
 src_unpack() {
 	unpack ${A}
