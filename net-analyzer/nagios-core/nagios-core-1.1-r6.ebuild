@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.10 2004/07/03 09:06:26 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.11 2004/07/04 19:55:26 eldad Exp $
 
 inherit eutils
 
@@ -162,7 +162,11 @@ pkg_preinst() {
 	keepdir /var/nagios/archives
 	chown -R nagios:nagios ${D}/var/nagios || die "Failed Chown of ${D}/var/nagios"
 	keepdir /var/nagios/rw
-	chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+	if use noweb; then
+		chown nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+	else
+		chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+	fi
 }
 
 pkg_postinst() {
