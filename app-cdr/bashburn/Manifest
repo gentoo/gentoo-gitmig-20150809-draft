@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 46ed332a03f42e78ddb48214a5b60464 ChangeLog 853
-MD5 b9f200ee0541a9a4de7c19810bcecad1 bashburn-1.3.ebuild 998
+MD5 a24e7b3fa51c8dadfa8a18c97747acbc bashburn-1.4.ebuild 1155
+MD5 8548d1513878ec9ca81eccbe48f3cfd8 ChangeLog 936
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
-MD5 24084bc4e6e9facd765962d2071a50ed bashburn-1.4.ebuild 1148
+MD5 b9f200ee0541a9a4de7c19810bcecad1 bashburn-1.3.ebuild 998
 MD5 6e40db728418e8f6c0888f6ff5c59b30 files/digest-bashburn-1.3 63
 MD5 95d2f6782fd6b3110c90c5be7af436da files/digest-bashburn-1.4 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFA3ze4HTu7gpaalycRAo7tAKCFK7b4rAz21pmC32ccJ6fOMCSIhwCg9Tlc
-GkEYbq0opHKpAju6ry4cHT4=
-=O1tD
+iD8DBQFBXG/PCHk4+ZoBpvsRAn5XAJ9xYz3Q1DlwPXLkMULqp/5Yuvq9rQCfXqLW
+QvU0N45diQJb+CYY1BVI02E=
+=altm
 -----END PGP SIGNATURE-----

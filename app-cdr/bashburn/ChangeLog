@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/bashburn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.6 2004/06/24 21:29:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.7 2004/09/30 20:41:55 slarti Exp $
+
+  30 Sep 2004; Tom Martin <slarti@gentoo.org> bashburn-1.4.ebuild:
+  Marked ~amd64.
 
   06 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> bashburn-1.4.ebuild:
   mpg123 dep to virtual to fix bug #46844.
