@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/smbc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smbc/ChangeLog,v 1.1 2004/06/18 11:09:18 satya Exp $
+
+*smbc-0.8.0 (18 Jun 2004)
+
+  18 Jun 2004; Christian Andreetta <satya@gentoo.org> metadata.xml,
+  smbc-0.8.0.ebuild:
+  new package, thanks to Octavio Ruiz. See bug #44624
+
