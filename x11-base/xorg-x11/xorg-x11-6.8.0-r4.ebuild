@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.3 2004/11/18 16:25:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.4 2004/11/18 16:43:41 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -986,6 +986,9 @@ backward_compat_setup() {
 
 	# Another symlink for the keysym database (#70927)
 	dosym ../XKeysymDB /usr/$(get_libdir)/X11/XKeysymDB
+
+	# dev-java/sun-j2sdk wants /usr/X11R6/libdir/X11/config (#71654)
+	dosym ../../../$(get_libdir)/config /usr/X11R6/$(get_libdir)/X11/config
 }
 
 fix_permissions() {
