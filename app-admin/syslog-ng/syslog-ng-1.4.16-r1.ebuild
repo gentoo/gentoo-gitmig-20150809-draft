@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.16-r1.ebuild,v 1.4 2003/02/28 22:25:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.16-r1.ebuild,v 1.5 2003/03/11 21:55:14 seemant Exp $
 
 DESCRIPTION="syslog replacement with advanced filtering features"
 SRC_URI="http://www.balabit.hu/downloads/syslog-ng/1.4/${P}.tar.gz"
@@ -19,13 +19,6 @@ src_compile() {
 	local myconf
 	use tcpd && myconf="--enable-tcp-wrapper"
 	econf ${myconf}
-
-	# configure script braindamage?
-#    cd ${S}/src
-#	mv Makefile Makefile.orig
-
-#	use tcpd && ( sed -e "s|-lnsl|-lwrap|" Makefile.orig > Makefile  || die "sed failure" )
-#	use tcpd || ( sed -e "s|-lnsl||" Makefile.orig > Makefile  || die "sed failure" )
 
 	emake prefix=${D}/usr all || die "compile problem"
 }
