@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/breakpts-3.1.ebuild,v 1.5 2005/01/01 16:46:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/breakpts-3.1.ebuild,v 1.6 2005/02/22 23:21:30 agriffis Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: sets vim breakpoints visually"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=618"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc mips ~ppc"
+KEYWORDS="x86 sparc mips ~ppc alpha ia64"
 IUSE=""
 
 RDEPEND="
