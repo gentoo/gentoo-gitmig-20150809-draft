@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/sparc-dev-sources
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-dev-sources/ChangeLog,v 1.1 2003/12/15 03:21:12 wesolows Exp $
+
+*sparc-dev-sources-2.6.0_beta11 (14 Dec 2003)
+
+  14 Dec 2003; Keith M Wesolowski <wesolows@gentoo.org> metadata.xml,
+  sparc-dev-sources-2.6.0_beta11.ebuild, files/U1-hme-lockup.patch:
+  SPARC/SPARC64 specific enhancements and fixes for Linux 2.6.
+
