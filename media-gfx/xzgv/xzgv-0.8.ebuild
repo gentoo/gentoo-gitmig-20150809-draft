@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8.ebuild,v 1.1 2003/10/07 04:09:29 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8.ebuild,v 1.2 2004/06/02 17:39:40 kugelfang Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An X image viewer."
@@ -25,8 +25,10 @@ src_unpack() {
 
 	cd ${S}
 	cp config.mk config.mk.orig
-	sed -e "s:-O2 -Wall:${CFLAGS}:" \
-		config.mk.orig > config.mk
+	sed -i -e "s:-O2 -Wall:${CFLAGS}:" config.mk
+	if [ -z "`use !x86`" ]; then
+		sed -i -e "s/CFLAGS+=-DINTERP_MMX/#&/" config.mk
+	fi
 }
 
 src_compile() {
