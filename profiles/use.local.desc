@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.638 2004/09/22 17:41:31 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.639 2004/09/22 22:38:34 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -342,12 +342,10 @@ media-sound/mcdp:diet - Compile and link with dietlibc
 media-sound/mpd:aac - Enable support for aac using the faad2 library
 media-sound/mpd:droproot - Run the daemon as non-root by default.
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
-media-sound/rezound:portaudio - compile with support for portaudio
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:faad - Enables faad2 support
 media-sound/tagtool:mp3 - Enables id3lib support for tagging mp3's
 media-sound/terminatorx:sox - Enable sox support
-media-sound/timidity++:portaudio - Enable support for the portaudio API
 media-tv/freevo:matrox - Enable output support on Matrox cards
 media-tv/mythfrontend:cle266 - Enable viaslice hardware MPEG decoding support
 media-tv/mythfrontend:lcd - Enable LCD display support using lcdproc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.182 2004/09/16 18:38:04 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.183 2004/09/22 22:38:34 eradicator Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -208,6 +208,7 @@ pie - Enable support for Position Independent Executables
 plotutils - Adds plotutils support to gnuplot (library for 2-D vector graphics)
 png - Adds support for libpng (PNG images)
 pnp - Adds support for PNP in pcmcia-cs (Plug-N-Play)
+portaudio - Adds support for the crossplatform portaudio audio API
 posix - Adds support for POSIX-compatible functions
 postgres - Adds support for the postgresql database
 ppds - Adds support for automatically generated ppd (printing driver) files
