@@ -1,19 +1,19 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r1.ebuild,v 1.3 2000/11/23 04:27:02 drobbins Exp $
-
-BA="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
-	patch-2.4.0-test9.bz2 patch-2.4.0-test10.bz2
-	i2c-2.5.4.tar.gz lm_sensors-2.5.4.tar.gz jfs-0.0.18-patch.tar.gz
-	alsa-driver-0.5.9d.tar.bz2 NVIDIA_kernel-0.9-5.tar.gz lvm_0.9.tar.gz"
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r2.ebuild,v 1.1 2000/11/23 06:52:12 drobbins Exp $
 
 S=${WORKDIR}/linux
-DESCRIPTION="Linux kernel sources package.  Everything you need to build a kernel (no kernel included, just sources)"
+if [ "$PN" = "linux" ]
+then
+	DESCRIPTION="Linux kernel, including modules, binary tools, libraries and includes"
+else
+	DESCRIPTION="Kernel source package, including full sources, binary tools and libraries"
+fi
 SRC_URI="
-http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2 
-http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test9.bz2 
 http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test10.bz2 
+hhttp://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test9.bz2 
+hhttp://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2 
 http://devlinux.com/pub/namesys/2.4-beta/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
 http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz 
 http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz 
@@ -24,7 +24,9 @@ ftp://ftp.sistina.com/pub/LVM/0.9/lvm_0.9.tar.gz"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
-	  http://devlinux.com/projects/reiserfs/"
+	  http://devlinux.com/projects/reiserfs/
+	  http://www.alsa-project.org
+	  http://www.nvidia.com"
 	
 src_compile() {
 	cd ${S}/fs/reiserfs/utils
@@ -56,7 +58,7 @@ src_unpack() {
     gzip -dc ${DISTDIR}/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz | patch -p1
 	echo "Applying test10 patch..."
 	cat ${DISTDIR}/patch-2.4.0-test10.bz2 | bzip2 -d | patch -p1
-    
+    cd ${S}
 	mkdir extras
 	echo "Applying IBM JFS patch..."
 	cd extras
@@ -91,6 +93,8 @@ src_unpack() {
 	done
 	cd ${S}/extras
 	echo "Applying LVM 0.9 patch..."
+#	one patch will fail, this is OK (it was applied earlier probably by the JFS patch)
+#	we pass the -f argument to patch to get around and already-applied patch
 	unpack lvm_0.9.tar.gz
 	cd LVM/0.9/PATCHES
 	cat linux-2.4.0-test10-VFS-lock.patch | ( cd ${S}; patch -p1 -f)
@@ -124,8 +128,8 @@ src_install() {
 	do
 		doman $x
 	done
-	cd ${S}/extras/JFS/0.9
-	make install prefix=${D}
+	cd ${S}/extras/LVM/0.9
+	make install prefix=${D} MAN8DIR=${D}/usr/man/man8 LIBDIR=${D}/lib
 	dodir /usr/src
 	if [ "$PN" = "linux" ]
 	then
@@ -149,7 +153,7 @@ src_install() {
 		try make INSTALL_MOD_PATH=${D} modules_install
 		#install nvidia driver
 		cd ${S}/extras/NVIDIA_kernel-0.9-5
-		insinto ${D}/lib/modules/2.4.0-test10/video
+		insinto /lib/modules/2.4.0-test10/video
 		doins NVdriver
 		#fix symlink
 		cd ${D}/lib/modules/2.4.0-test10
