@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmock
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.1 2005/01/04 21:34:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.2 2005/01/05 09:20:39 luckyduck Exp $
+
+  05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> jmock-1.0.1.ebuild:
+  some minor fixes.
 
 *jmock-1.0.1 (04 Jan 2005)
 

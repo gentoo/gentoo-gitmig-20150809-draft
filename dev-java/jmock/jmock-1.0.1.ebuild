@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-1.0.1.ebuild,v 1.1 2005/01/04 21:34:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-1.0.1.ebuild,v 1.2 2005/01/05 09:20:39 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -40,7 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar lib/*.jar
+	java-pkg_dojar build/dist/jars/*.jar
 	dodoc CHANGELOG VERSION LICENSE.txt
 
 	if use doc; then
