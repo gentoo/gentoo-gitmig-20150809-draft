@@ -1,0 +1,11 @@
+--- src/story_screen.cxx.orig	2004-09-12 17:09:51.000000000 -0700
++++ src/story_screen.cxx	2004-09-12 17:10:43.000000000 -0700
+@@ -142,7 +142,7 @@
+ 
+   if (!page_displayed_completly)
+     {
+-      unsigned int len = static_cast<unsigned int>(20.0f * time_passed);
++      size_t len = static_cast<size_t>(20.0f * time_passed);
+       display_text = current_page.text.substr(0, Math::min(current_page.text.length(), len));
+ 
+       if (current_page.text.length() < len)

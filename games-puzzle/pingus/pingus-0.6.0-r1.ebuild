@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.7 2004/08/15 08:53:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.8 2004/09/13 02:23:56 mr_bones_ Exp $
 
-inherit games eutils flag-o-matic
+inherit eutils flag-o-matic games
 
 DESCRIPTION="free Lemmings clone"
 HOMEPAGE="http://pingus.seul.org/"
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/${PV}-gcc3.patch"
+	epatch "${FILESDIR}/${PV}-gcc34.patch" # bug 63773
 	autoconf || die
 }
 
@@ -39,8 +40,8 @@ src_compile() {
 src_install() {
 	make install DESTDIR=${D} || die "make install failed"
 	# pos install process ... FIXME
-	mv ${D}/usr/games/{games,bin}
-	cd ${D}/usr/share/games
+	mv "${D}/usr/games/"{games,bin}
+	cd "${D}/usr/share/games"
 	use nls && mv locale ../
 	mv games/pingus .
 	rm -rf games
