@@ -1,12 +1,11 @@
-MD5 5156dbb2146c99e02eab8e6dcd40ac85 ucd-snmp-4.2.6-r1.ebuild 1683
-MD5 a7469ad9a140645129c9b60178fbec36 ChangeLog 4543
-MD5 b02464a37d939848f0277631141a923c ucd-snmp-4.2.6-r2.ebuild 2222
-MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
-MD5 44590fec309fff6dd494d4e161eb225b files/ucd-snmp-4.2.6-Makefile-fixes.patch 1218
-MD5 49b593493c840a940b816caacf7f92fe files/ucd-snmp-4.2.6-coreutils-2.patch 6482
-MD5 183ae5320f0a2d1d22f8403e0df1cce1 files/snmpd.conf 313
-MD5 44772dee27e41b0e9b37881019306f60 files/snmpd.rc6 485
-MD5 5373330fe4b7a9764712aedc2f9fc36a files/ucd-snmp-4.2.6-agent-parallel-fixes.patch 1648
-MD5 0b7185775cd34df5a4b4390a49d480fd files/digest-ucd-snmp-4.2.6-r2 67
-MD5 0b7185775cd34df5a4b4390a49d480fd files/digest-ucd-snmp-4.2.6-r1 67
-MD5 4ff916bcceac5a47315c3c25834e45bb files/ucd-snmp-4.2.6-openssl-0.9.7.patch 5417
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCGWi4mdTrptrqvGERAj6TAJ42TuIObPCm1pBu8bmQS+Mhkev++QCePgjW
+aM1vaF4TZrRzdTx5S/5EXfs=
+=yoLx
+-----END PGP SIGNATURE-----
