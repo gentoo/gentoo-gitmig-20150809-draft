@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/pdv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/ChangeLog,v 1.1 2003/07/07 13:39:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/ChangeLog,v 1.2 2003/09/24 20:42:40 pyrania Exp $
+
+*pdv-1.5.1-r1 (24 Sep 2003)
+
+  24 Sep 2003; Markus Nigbur <pyrania@gentoo.org> pdv-1.5.1-r1.ebuild:
+  Emerge died when using -X (bug #29508)
 
 *pdv-1.5.1 (09 Jul 2003)
 
