@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.0.40.ebuild,v 1.4 2004/06/24 23:01:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.0.40.ebuild,v 1.5 2004/07/15 05:28:49 agriffis Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -22,6 +22,7 @@ HOMEPAGE="http://www.kernel.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="x86 -ppc sparc "
+IUSE="build"
 
 if [ $ETYPE = "sources" ] && ! use build
 then
