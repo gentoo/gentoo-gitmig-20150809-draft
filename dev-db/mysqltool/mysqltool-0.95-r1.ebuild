@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.4 2002/10/04 05:09:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.5 2002/10/15 16:44:47 mcummings Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.dajoba.com/projects/mysqltool/"
 DEPEND="virtual/glibc sys-devel/perl"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc64"
 
 RDEPEND="${DEPEND} >=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38
 	dev-perl/CGI dev-perl/DBI dev-perl/DBD-mysql dev-perl/Crypt-Blowfish"
