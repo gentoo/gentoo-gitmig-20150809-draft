@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.16 2004/06/24 22:56:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.17 2004/06/29 12:22:48 carlo Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="2"
 KEYWORDS="x86 ppc sparc alpha ia64 ~amd64"
 IUSE="ssl socks5 qt kde ncurses"
 
-# we can't have conditional dependencies so "use kde && inherit kde-base"
+# we can't have conditional dependencies so "use kde && inherit kde"
 # won't work -- messes up dep caching.
 
 # need-kde and their eclass friends inject things into DEPEND. But we only
