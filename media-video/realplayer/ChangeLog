@@ -1,6 +1,6 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.8 2003/01/13 04:11:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.9 2003/01/13 04:12:01 seemant Exp $
 
 
 *realplayer-8-r4 (08 Jan 2003)
@@ -8,7 +8,8 @@
   12 Jan 2003; Seemant Kulleen <seemant@gentoo.org> realplayer-8-r4.ebuild :
 
   Removed ${MY_P} from SRC_URI, so the ebuild doesn't break after it tries
-  to fetch the fetch restricted stuffs.
+  to fetch the fetch restricted stuffs.  Thanks to: moixa@gmx.ch <Tobias
+  Sager> in bug #10066.
 
   12 Jan 2003; Martin Holzer <mholzer@gentoo.org> realplayer-8-r4.ebuild :
   Fixed script, now display's how it should do 
