@@ -1,6 +1,10 @@
 # ChangeLog for app-gnustep/pantomime
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/ChangeLog,v 1.6 2004/04/17 19:43:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/ChangeLog,v 1.7 2004/05/04 16:06:47 kloeri Exp $
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pantomime-1.1.0.ebuild,
+  pantomime-1.1.0_pre2.ebuild:
+  Stable on alpha.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> pantomime-1.1.0_pre2.ebuild:
   Added IUSE=
