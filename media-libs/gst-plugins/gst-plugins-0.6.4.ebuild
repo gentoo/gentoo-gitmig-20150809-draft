@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.4.ebuild,v 1.1 2003/10/23 22:25:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.4.ebuild,v 1.2 2003/10/24 16:21:29 foser Exp $
 
 # IMPORTANT
 #
@@ -29,6 +29,9 @@ DEPEND="${RDEPEND}
 PDEPEND=">=media-plugins/gst-plugins-oss-${PV}"
 
 BUILD_GST_PLUGINS="ffmpeg"
+
+# needed for ffmpeg
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 
