@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/ghemical
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ChangeLog,v 1.3 2002/11/02 10:31:44 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ghemical/ChangeLog,v 1.4 2002/12/05 21:41:06 hannes Exp $
+
+  05 Dec 2002; Hannes Mehnert <hannes@gentoo.org> ghemical-1.00.ebuild:
+  version bump
 
   02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> ghemical-0.90.ebuild:
   marked stable for x86
