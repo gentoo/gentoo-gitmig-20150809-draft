@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 226602c7685598767a1df196b5ac4876 ChangeLog 955
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 674bbd01b0314b3e07b2c16d78222e66 xgammon-0.98.ebuild 861
+MD5 5a55276257a0feaf891458769c3ad6e8 xgammon-0.98.ebuild 868
+MD5 e595e9cd35b33f6c8b7a2c3b80312a89 ChangeLog 1049
 MD5 713a4a778934c4793f43df1ba783d07c files/digest-xgammon-0.98 64
 MD5 30d019c96ba991fbc030e1acab5d1f4d files/gcc33.patch 3672
 MD5 5e492c857cd63f9bc13aced6d469814f files/xgammon-0.98-broken.patch 263
 MD5 9a1350fd77ab6f36cd2539f73c4b0a6a files/xgammon-0.98-config.patch 823
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW1UqI1lqEGTUzyQRAoarAJ4r4Py4pYL6oslloIROjjVXuWr51wCfWTEQ
-d6D37Emtlccpo3tugZFsdDA=
-=yC4T
------END PGP SIGNATURE-----
