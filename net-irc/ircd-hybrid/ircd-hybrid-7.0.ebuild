@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.ebuild,v 1.2 2003/12/31 20:30:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.ebuild,v 1.3 2004/04/01 21:38:52 zul Exp $
 
 MAX_NICK_LENGTH=16
 MAX_CLIENTS=256
@@ -218,6 +218,7 @@ src_install()
 	cp ${FILESDIR}/init.d_ircd ${D}/etc/init.d/ircd
 	cp ${FILESDIR}/conf.d_ircd ${D}/etc/conf.d/ircd
 
+	chmod +x ${D}/etc/init.d/ircd
 	# Go back.
 	cd ${S}
 }
