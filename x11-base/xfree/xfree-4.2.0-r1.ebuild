@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r1.ebuild,v 1.1 2002/01/20 16:16:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r1.ebuild,v 1.2 2002/01/20 20:06:11 azarah Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -42,7 +42,7 @@ src_unpack () {
 	# fix build problem
 	cp ${S}/programs/Xserver/os/Imakefile \
 		${S}/programs/Xserver/os/Imakefile.orig
-	sed -e 's:NormalLibraryTarget(os,$(OBJS)):NormalLibraryTarget(os,$(OBJS) ../../lib/Xau/libXau.a):' \
+	sed -e '2i LDFLAGS = $(LDFLAGS) ../../lib/Xau/libXau.a' \
 		${S}/programs/Xserver/os/Imakefile.orig \
 		> ${S}/programs/Xserver/os/Imakefile
 }
