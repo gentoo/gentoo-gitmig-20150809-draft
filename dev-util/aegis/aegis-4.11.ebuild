@@ -46,7 +46,7 @@ src_install () {
 	# OK so ${D}/var/lib/aegis gets UID=3, but for some
 	# reason so do the files under /usr/share, even though
 	# they are read-only.
-	chown -R root.root ${D}/usr/share
+	chown -R root:root ${D}/usr/share
 	dodoc lib/en/*
 
 	# Link to share dir so user has a chance of noticing it.
