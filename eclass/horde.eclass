@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.1 2004/01/27 00:51:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.2 2004/03/19 01:33:45 vapier Exp $
 #
 # Author: vapier@gentoo.org
 # Help manage the horde project http://www.horde.org/
@@ -14,7 +14,7 @@ EXPORT_FUNCTIONS pkg_setup src_install pkg_postinst
 
 [ -z "${HORDE_PN}" ] && HORDE_PN="${PN/horde-}"
 HOMEPAGE="http://www.horde.org/${HORDE_PN}"
-SRC_URI="http://ftp.horde.org/pub/${HORDE_PN}/tarballs/${HORDE_PN}-${PV}.tar.gz"
+SRC_URI="http://ftp.horde.org/pub/${HORDE_PN}/${HORDE_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
