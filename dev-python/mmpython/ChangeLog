@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mmpython
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.13 2004/07/03 15:17:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.14 2004/08/18 22:12:29 seemant Exp $
+
+*mmpython-0.4.5 (18 Aug 2004)
+
+  18 Aug 2004; Seemant Kulleen <seemant@gentoo.org> +mmpython-0.4.5.ebuild:
+  version bump as required by freevo-1.5.0. Thanks to: Benjamin Schleinzer
+  <thor@4players.de> in bug #58398
 
 *mmpython-0.4.4 (03 Jul 2004)
 
