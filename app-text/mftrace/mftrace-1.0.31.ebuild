@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.31.ebuild,v 1.5 2004/07/03 23:49:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.31.ebuild,v 1.6 2004/08/28 15:50:04 usata Exp $
 
 IUSE="truetype"
 
-PYVER=$(python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:')
 DESCRIPTION="traces TeX fonts to PFA or PFB fonts (formerly pktrace)"
 HOMEPAGE="http://www.cs.uu.nl/~hanwen/mftrace/"
 SRC_URI="http://www.cs.uu.nl/~hanwen/mftrace/${P}.tar.gz"
@@ -22,11 +21,13 @@ RDEPEND=">=dev-lang/python-2.2.2
 	truetype? ( || ( media-gfx/fontforge >=media-gfx/pfaedit-030512 ) )"
 
 src_compile() {
+	local PYVER=$(python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:')
 	econf --datadir=/usr/lib/python${PYVER}/site-packages || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install () {
+	local PYVER=$(python -V 2>&1 | sed -e 's:Python \([0-9].[0-9]\).*:\1:')
 	make \
 		prefix=${D}/usr \
 		datadir=${D}/usr/lib/python${PYVER}/site-packages/mftrace \

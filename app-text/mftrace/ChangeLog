@@ -1,6 +1,12 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.14 2004/07/19 09:43:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.15 2004/08/28 15:50:04 usata Exp $
+
+*mftrace-1.0.34 (29 Aug 2004)
+
+  29 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -mftrace-1.0.19.ebuild,
+  mftrace-1.0.31.ebuild, mftrace-1.0.33.ebuild, +mftrace-1.0.34.ebuild:
+  Version bumped. Marked previous version stable on x86 and ppc.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mftrace-1.0.33.ebuild:
