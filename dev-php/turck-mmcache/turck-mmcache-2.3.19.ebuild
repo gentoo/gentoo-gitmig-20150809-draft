@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.19.ebuild,v 1.3 2003/07/20 13:27:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.19.ebuild,v 1.4 2003/07/20 13:31:55 stuart Exp $
 
 DESCRIPTION="Turck MMCache is a free open source PHP accelerator, optimizer, encoder and dynamic content cache for PHP. It increases performance of PHP scripts by caching them in compiled state, so that the overhead of compiling is almost completely eliminated. Also it uses some optimizations to speed up execution of PHP scripts. Turck MMCache typically reduces server load and increases the speed of your PHP code by 1-10 times."
 SRC_URI="mirror://sourceforge/turck-mmcache/${P}.tar.gz"
@@ -33,14 +33,11 @@ src_install() {
 	# please file a bug in http://bugs.gentoo.org if this happens
 	# for you
 
-	if [ ! -d ${D}/var/cache/mmcache ] 
-	then
-  		mkdir -p ${D}/var/cache/mmcache
-	fi
-	chown root.root ${D}/var/cache/mmcache
-	chmod 1777 ${D}/var/cache/mmcache
+	dodir /var/cache/mmcache
+	fowner root.root /var/cache/mmcache
+	fperms 1777 /var/cache/mmcache
 
-    insinto ${D}/usr/share/${PN}
+    insinto /usr/share/${PN}
 	doins encoder.php mmcache.php mmcache.gif
 	
 	dodoc CREDITS LICENSE README TODO EXPERIMENTAL

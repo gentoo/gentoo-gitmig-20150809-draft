@@ -1,12 +1,14 @@
 # ChangeLog for net-misc/ipv6tools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.3 2003/07/20 13:27:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.4 2003/07/20 13:31:55 stuart Exp $
 
 *turck-mmcache-2.3.19 (20 07 2003)
 
   20 07 2003: Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.19.ebuild
   Changed src_install() to make more use of the ${D} installation directory
   image support provided by Portage, to help with bug 24871.
+
+  Thanks to Mike Gardiner (driver@iinet.net.au) for the patch.
 
 *turck-mmcache-2.3.19 (19 07 2003)
 
