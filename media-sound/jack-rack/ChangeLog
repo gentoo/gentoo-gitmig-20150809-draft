@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.16 2004/09/30 01:39:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.17 2004/11/12 08:47:18 eradicator Exp $
+
+  12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -jack-rack-1.4.1.ebuild, -jack-rack-1.4.2.ebuild, jack-rack-1.4.3.ebuild:
+  Stable sparc.
 
   29 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   jack-rack-1.4.3.ebuild:
