@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.21 2004/08/02 08:57:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.22 2004/08/02 19:42:06 spyderous Exp $
 
 inherit eutils flag-o-matic gcc xfree
 
@@ -1157,7 +1157,7 @@ pkg_postinst() {
 		if [ -x ${ROOT}/usr/bin/fc-cache ]
 		then
 			ebegin "Creating FC font cache..."
-			HOME="/root" ${ROOT}/usr/bin/fc-cache -f
+			HOME="/root" ${ROOT}/usr/bin/fc-cache
 			eend 0
 		fi
 

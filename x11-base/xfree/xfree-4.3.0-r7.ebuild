@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.6 2004/07/26 20:13:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.7 2004/08/02 19:42:06 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -1254,7 +1254,7 @@ pkg_postinst() {
 		if [ -x ${ROOT}/usr/bin/fc-cache ]
 		then
 			ebegin "Creating FC font cache..."
-			HOME="/root" ${ROOT}/usr/bin/fc-cache -f
+			HOME="/root" ${ROOT}/usr/bin/fc-cache
 			eend 0
 		fi
 

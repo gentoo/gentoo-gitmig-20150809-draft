@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.356 2004/08/02 08:57:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.357 2004/08/02 19:42:06 spyderous Exp $
+
+  02 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r5.ebuild,
+  xfree-4.3.0-r6.ebuild, xfree-4.3.0-r7.ebuild:
+  fc-cache -f breaks the font eclass, according to foser.
 
   02 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>; files/4.3.0/10xfree,
   files/4.3.0/xfs.start, xfree-4.3.0-r5.ebuild, xfree-4.3.0-r6.ebuild:

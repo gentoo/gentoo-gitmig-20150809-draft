@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.86 2004/08/02 09:05:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.87 2004/08/02 19:45:02 spyderous Exp $
+
+  02 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r1.ebuild, xorg-x11-6.7.0-r2.ebuild:
+  fc-cache -f breaks the font eclass, according to foser.
 
   02 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>; :
   Note that the last commit was FILES_VER 0.3.
