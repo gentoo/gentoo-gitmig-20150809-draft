@@ -1,11 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.4.ebuild,v 1.1 2001/11/26 20:35:20 azarah Exp $
+# /space/gentoo/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.2-r1.ebuild,v 1.1 2001/10/06 13:20:34 azarah Exp
+
+
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Single process stack of various system monitors"
-SRC_URI="http://web.wt.net/~billw/${PN}/${P}.tar.gz"
+SRC_URI="http://web.wt.net/~billw/gkrellm/${P}.tar.gz"
+HOMEPAGE="http://www.gkrellm.net/"
 
 DEPEND="virtual/glibc
 	>=x11-libs/gtk+-1.2.10-r4
@@ -13,26 +16,26 @@ DEPEND="virtual/glibc
 
 
 src_compile() {
-
-	use nls && ./enable_nls
-
-	emake || die
-
+	emake  PREFIX=/usr prefix=/usr || die
 }
 
-src_install () {
+src_install() {
+	cd ${S}/src
 
-	dodir /usr/{bin,include,share/man}
+	exeinto /usr/bin
+	doexe gkrellm
 
-	make install \
-		INSTALLDIR=${D}/usr/bin \
-		MANDIR=${D}/usr/share/man/man1 \
-		INCLUDEDIR=${D}/usr/include \
-		LOCALEDIR=/usr/share/locale
+	insinto /usr/include/gkrellm
+	for i in gkrellm.h gkrellm_private_proto.h gkrellm_public_proto.h
+	do
+		doins $i
+	done
+
+	dodir /usr/share/gkrellm/{themes,plugins}
+
+	cd ${S}
 
 	dodoc COPYRIGHT README Changelog
 	docinto html
 	dodoc Changelog-plugins.html Changelog-themes.html Themes.html
 }
-
-
