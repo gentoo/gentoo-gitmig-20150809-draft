@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.15.ebuild,v 1.6 2003/12/18 12:45:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.15.ebuild,v 1.7 2004/04/26 14:58:59 agriffis Exp $
 
 DESCRIPTION="WMBiff is a dock applet for WindowMaker which can monitor up to 5 mailboxes."
 SRC_URI="mirror://sourceforge/wmbiff/${P}.tar.gz"
@@ -15,7 +15,7 @@ KEYWORDS="x86 sparc amd64"
 
 src_compile() {
 	cd ${S}
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

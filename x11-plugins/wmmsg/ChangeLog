@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmsg
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.1 2003/04/15 17:11:19 liquidx Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.2 2004/04/26 14:59:56 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> wmmsg-1.0.ebuild:
+  Add die following econf for bug 48950
 
 *wmmsg-1.0 (15 Apr 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbiff
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.9 2004/03/19 10:04:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.10 2004/04/26 14:58:59 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> wmbiff-0.4.15.ebuild:
+  Add die following econf for bug 48950
 
   19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmbiff-0.4.20.ebuild:
   Inherit eutils.
