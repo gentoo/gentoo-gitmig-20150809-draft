@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.15 2004/09/04 13:00:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.16 2004/09/10 10:04:35 axxo Exp $
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> files/jython,
+  jython-2.1-r5.ebuild:
+  install the registry file, add the library path to the wrapper, added a
+  comment in postinst on how to enable readline. closes bug 63496
 
   04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jython-2.1-r5.ebuild:
   move jython-bin -> jython, stable on sparc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.3 2004/09/04 13:00:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.4 2004/09/10 10:04:35 axxo Exp $
 
 inherit java-pkg
 
@@ -67,4 +67,18 @@ src_install() {
 
 	dodir /usr/share/${PN}/tools/
 	cp -R Tools/* ${D}/usr/share/${PN}/tools/
+	cp registry ${D}/usr/share/${PN}/
+}
+
+pkg_postinst() {
+	if use readline; then
+		einfo "To use readline you need to add the following to your registery"
+		einfo
+		einfo "python.console=org.python.util.ReadlineConsole"
+		einfo "python.console.readlinelib=GnuReadline"
+		einfo
+		einfo "The global registry can be found in /usr/share/${PN}/registry"
+		einfo "User registry in \$HOME/.jython"
+		einfo "See http://www.jython.org/docs/registry.html for more information"
+	fi
 }
