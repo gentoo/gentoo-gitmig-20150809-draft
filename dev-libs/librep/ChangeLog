@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.5 2002/06/12 01:29:57 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.6 2002/06/24 01:42:07 azarah Exp $
+
+*librep-0.16 (24 Jun 2002)
+  24 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Version update.
 
 *librep-20020611 (12 Jun 2002) 
   12 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> librep-20020611.ebuild :
