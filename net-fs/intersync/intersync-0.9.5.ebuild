@@ -6,7 +6,7 @@ HOMEPAGE="http://www.inter-mezzo.org"
 
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="net-ftp/curl
 	media-gfx/transfig

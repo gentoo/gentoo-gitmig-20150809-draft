@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r4.ebuild,v 1.1 2002/10/27 05:21:15 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r4.ebuild,v 1.2 2003/01/07 05:23:20 bcowan Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Kernel based automounter"
@@ -15,7 +15,7 @@ RDEPEND=">=net-nds/portmap-5b-r6
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}  
