@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4.ebuild,v 1.1 2002/01/03 08:32:28 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r2.ebuild,v 1.1 2002/01/14 10:34:13 hallski Exp $
 
 MY_V="`echo ${PV} |cut -b -5`"
 S=${WORKDIR}/${P}
@@ -42,6 +42,11 @@ src_compile() {
 }
 
 src_install() {
+        cd omf-install
+        cp Makefile Makefile.old
+        sed -e "s:scrollkeeper-update.*::g" Makefile.old > Makefile
+        rm Makefile.old
+        cd ${S}
 
 	make prefix=${D}/usr						\
 	     sysconfdir=${D}/etc/X11					\
@@ -97,6 +102,8 @@ src_install() {
 }
 
 pkg_postinst() {
+        echo ">>> Updating Scrollkeeper database..."
+        scrollkeeper-update >/dev/null 2>&1
 
 	# Attempt to restart GDM softly by use of the fifo.  Wont work on older
 	# then 2.2.3.1 versions but should work nicely on later upgrades.
@@ -130,6 +137,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+        echo ">>> Updating Scrollkeeper database..."
+        scrollkeeper-update >/dev/null 2>&1
 
 	echo
 	echo "**********************************************"
