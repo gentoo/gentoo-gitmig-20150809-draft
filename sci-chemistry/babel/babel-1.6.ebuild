@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/babel-1.6.ebuild,v 1.1 2004/12/24 16:27:59 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/babel-1.6.ebuild,v 1.2 2004/12/24 16:55:54 ribosome Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 IUSE=""
 
 #Doesn't really seem to depend on anything (?)
-DEPEND="!app-sci/openbabel"
+DEPEND="!sci-chemistry/openbabel"
 
 src_unpack() {
 
