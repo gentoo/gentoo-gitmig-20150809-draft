@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009-r1.ebuild,v 1.5 2004/02/22 20:00:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009-r1.ebuild,v 1.6 2004/04/28 06:13:48 vapier Exp $
 
-inherit fixheadtails
+inherit fixheadtails gcc
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Bruce Guenters Libraries Collection"
 HOMEPAGE="http://untroubled.org/bglibs/"
 SRC_URI="http://untroubled.org/bglibs/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 sparc ~mips ~alpha ~ppc amd64 ~hppa"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -26,11 +26,9 @@ src_unpack() {
 
 src_compile() {
 	echo "${D}/usr/lib/bglibs" > conf-home
-	echo "${CC} ${CFLAGS}" > conf-cc
-	echo "${CC} ${LDFLAGS}" > conf-ld
-	# parallel builds fail badly
-	MAKEOPTS="`echo ${MAKEOPTS} | sed -re 's/-j[[:digit:]]+//g'`" \
-	emake || die
+	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
+	emake -j1 || die
 }
 
 src_install () {
