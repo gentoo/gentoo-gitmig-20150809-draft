@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.55 2004/11/13 17:47:33 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.56 2005/01/07 00:47:04 swegener Exp $
+
+  07 Jan 2005; Sven Wegener <swegener@gentoo.org> irssi-0.8.10_rc5.ebuild:
+  Removed blockers on irssi-charconv and irssi-recode.
 
   13 Nov 2004; Sven Wegener <swegener@gentoo.org>
   -files/irssi-0.8.6-configure.patch, -files/irssi-0.8.8-configure.patch,
