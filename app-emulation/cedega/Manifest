@@ -4,13 +4,14 @@ Hash: SHA1
 MD5 d5de2e15a3770dc3a9b91bba46acb141 ChangeLog 639
 MD5 004baf5ffeb9ec3444feabac0e68eb1f cedega-4.0.ebuild 1962
 MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
-MD5 272f3a43bf9605d4a0631f23e8bf9860 cedega-4.0.1.ebuild 2319
+MD5 05552411637b297ce37345937af11f9b cedega-4.0.1.ebuild 2346
 MD5 7eccc393a8bb2164b799f66650fc2b54 files/digest-cedega-4.0 67
-MD5 c32df3be597bc84f86c228b63bec407d files/digest-cedega-4.0.1 69
+MD5 192285710cbb377af02862ec9898cb4d files/digest-cedega-4.0.1 69
+MD5 93176d7f478cbd718985c964952331db files/remove-watermark.sh 214
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBINNOHTu7gpaalycRAt5pAKCZuJlaOUUrYlsFm+1itnEqRCSOJwCfTpfc
-mBwmwLK0QnBR5Vvxa9YJnSk=
-=RV9Q
+iD8DBQFBIO88HTu7gpaalycRAkwqAJ9Xa3LCnLvg8vbkoZikYxATRJ0QOQCfX4JH
+oJyn7Ccg+xpkxIZx3g67z2g=
+=gr1Q
 -----END PGP SIGNATURE-----
