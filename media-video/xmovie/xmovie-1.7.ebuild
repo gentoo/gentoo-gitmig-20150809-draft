@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.7.ebuild,v 1.1 2001/05/06 18:06:10 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.7.ebuild,v 1.2 2001/05/11 20:42:31 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -26,7 +26,7 @@ src_compile() {
 src_install () {
 
     into /usr/X11R6
-    dobin xmovie/${CHOST%%-*}/xmovie
+    dobin xmovie/`uname -m`/xmovie
     dodoc README
     docinto html
     dodoc docs/index.html
