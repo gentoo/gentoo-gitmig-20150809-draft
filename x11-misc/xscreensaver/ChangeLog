@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.42 2003/12/16 12:27:53 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.43 2004/01/08 17:20:07 gustavoz Exp $
+
+  08 Jan 2004; <gustavoz@gentoo.org> xscreensaver-4.14-r1.ebuild:
+  going stable for sparc
 
   16 Dec 2003; Guy Martin <gmsoft@gentoo.org> xscreensaver-4.14-r1.ebuild:
   Marked stable on hppa.
