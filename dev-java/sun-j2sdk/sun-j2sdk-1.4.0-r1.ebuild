@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.2 2002/11/08 08:15:52 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.3 2002/11/08 15:02:59 cretin Exp $
 
 # Based on http://tushar.lfsforum.org/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
@@ -50,12 +50,12 @@ PROVIDE="virtual/jre-1.4.0
 src_unpack() {
 	die_flag=""
 	if [ ! -f ${DISTDIR}/${SRC_MOZHEADERS} ] ; then
-      eerror "Please download ${SRC_MOZHEADERS} from ${HOMEPAGE}"
+      eerror "Please download ${SRC_MOZHEADERS} from ${HOMEPAGE} to ${DISTDIR}"
       die_flag=1
 	fi
 			
 	if [ ! -f ${DISTDIR}/${SRC_JAVA} ] ; then
-      eerror "Please download ${SRC_JAVA} from ${HOMEPAGE}"
+      eerror "Please download ${SRC_JAVA} from ${HOMEPAGE} to ${DISTDIR}"
 	  die_flag=1
 	fi
 

@@ -16,7 +16,7 @@ KEYWORDS="x86 -ppc"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
-		die "Please download ${At} from ${HOMEPAGE}"
+		die "Please download ${At} from ${HOMEPAGE} to ${DISTDIR}"
 	fi
 	unpack ${At}
 }
