@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.8.ebuild,v 1.4 2005/02/03 14:02:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.8.ebuild,v 1.5 2005/02/05 10:51:50 hansmi Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libpng/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos s390 sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 ~ppc-macos s390 sh sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib"
