@@ -1,6 +1,6 @@
 MD5 6dd4db69399ea021171a0c490a2cd8c5 xpdf-3.00-r1.ebuild 978
 MD5 9f80037668ee21ff1e8772317ca8f6a0 xpdf-2.03.ebuild 1154
-MD5 8c4208d1f9710df3e8a4354f6f65e5ca xpdf-3.00-r4.ebuild 3212
+MD5 f742ad32d4c5b24cb970b12f2bc0243c xpdf-3.00-r4.ebuild 3211
 MD5 be96efb6e64c3af690a4b2fee11e2a57 ChangeLog 6235
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 8221707abac9c48b486b8c2b9bc7a7a0 files/xpdf-3.00-empty-bookmark.patch 373
