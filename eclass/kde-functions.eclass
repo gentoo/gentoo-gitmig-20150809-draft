@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.51 2003/01/28 11:58:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.52 2003/01/31 17:00:40 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -14,11 +14,13 @@ need-automake() {
 	unset WANT_AUTOMAKE_1_4
 	unset WANT_AUTOMAKE_1_5
 	unset WANT_AUTOMAKE_1_6
+	unset WANT_AUTOMAKE
     
 	case $1 in
 		1.4)	export WANT_AUTOMAKE_1_4=1;;
 		1.5)	export WANT_AUTOMAKE_1_5=1;;
 		1.6)	export WANT_AUTOMAKE_1_6=1;;
+		1.7)	export WANT_AUTOMAKE='1.7';;
 		*)		echo "!!! $FUNCNAME: Error: unrecognized automake version $1 requested";;
 	esac
 
