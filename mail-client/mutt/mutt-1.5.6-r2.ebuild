@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r2.ebuild,v 1.8 2004/07/23 11:32:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r2.ebuild,v 1.9 2004/07/29 13:37:41 agriffis Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp vanilla"
@@ -10,6 +10,7 @@ compressed_patch="patch-${PV}.rr.compressed.gz"
 nntp_patch="patch-${PV}.vvv.nntp-gentoo-r1.bz2"
 mbox_hook_patch="patch-${PV}.dw.mbox-hook.1"
 maildir_header_cache_patch="mutt-cvs-maildir-header-cache.16"
+pgp_timeout_patch="patch-${PV}.dw.pgp-timeout.1"
 
 DESCRIPTION="a small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
@@ -20,6 +21,7 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 		http://www.woolridge.ca/mutt/patches/${mbox_hook_patch}
 		nntp? ( mirror://gentoo/${nntp_patch} )
 		http://wwwcip.informatik.uni-erlangen.de/~sithglan/mutt/${maildir_header_cache_patch}
+		http://www.woolridge.ca/mutt/patches/${pgp_timeout_patch}
 	)"
 #	nntp? ( http://mutt.kiev.ua/download/${P}/${nntp_patch} )
 #	http://cedricduval.free.fr/mutt/patches/download/${edit_threads_patch}
@@ -58,6 +60,7 @@ src_unpack() {
 		epatch ${DISTDIR}/${edit_threads_patch}
 		epatch ${DISTDIR}/${mbox_hook_patch}
 		epatch ${DISTDIR}/${maildir_header_cache_patch}
+		epatch ${DISTDIR}/${pgp_timeout_patch}
 		use nntp && epatch ${DISTDIR}/${nntp_patch}
 
 		# The following steps are necessary for the nntp patch and the

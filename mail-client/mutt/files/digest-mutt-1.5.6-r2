@@ -4,3 +4,4 @@ MD5 0d57a62f17c93eb1d2eff60e070933b3 patch-1.5.6.rr.compressed.gz 10077
 MD5 1ea285e44d0fe45eb841559914b57170 patch-1.5.6.dw.mbox-hook.1 6445
 MD5 fa7dae5a50ecb9e79c20cb3c5f695478 patch-1.5.6.vvv.nntp-gentoo-r1.bz2 83418
 MD5 b901329a115d23ff8e6db8cfd1a0d39e mutt-cvs-maildir-header-cache.16 23431
+MD5 758dff57c494e86ac885ef2ecb736f11 patch-1.5.6.dw.pgp-timeout.1 1448
