@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # This ebuild by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.4-r1.ebuild,v 1.1 2002/02/05 18:08:09 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.4-r2.ebuild,v 1.1 2002/03/03 19:37:28 karltk Exp $
 
 
 S=${WORKDIR}/${P}
@@ -46,4 +46,6 @@ src_install() {
  	dodoc StartupFiles/z*
 	dodir /etc/zsh
 	cp ${S}/StartupFiles/z* ${D}/etc/zsh
+
+	rm -rf ${D}/share
 }

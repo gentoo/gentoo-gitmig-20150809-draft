@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.3 2002/02/05 18:16:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.4 2002/03/03 19:37:28 karltk Exp $
+
+*zsh-4.0.4-r2 (3 Mar 2002)
+
+  3 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> zsh-4.0.4-r2.ebuild zsh-4.0.4-r1.ebuild files/digest-zsh-4.0.4-r1 files/digest-zsh-4.0.4-r2
+
+  /share and all its (empty) directories have been removed.
+
+  Old revisions have been removed.
 
 *zsh-4.0.4-r1 (5 Feb 2002)
 
