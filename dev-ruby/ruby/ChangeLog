@@ -1,0 +1,17 @@
+# ChangeLog for dev-ruby/ruby
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby/ChangeLog,v 1.1 2002/03/04 22:13:01 karltk Exp $
+
+*ruby-1.6.7 (4 Mar 2002)
+
+  4 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> all:
+
+  Ruby is the interpreted scripting language for quick and easy 
+  object-oriented programming. It has many features to process text files 
+  and to do system management tasks (as in Perl). It is simple, 
+  straight-forward, extensible, and portable.
+
+  Moved from dev-lang/ruby to dev-ruby/ruby.
+
+  Ebuild submitted by Tuurlijk <gentoo@tuurlijk.eu.org>
+
