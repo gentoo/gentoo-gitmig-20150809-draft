@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-vfs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.68 2003/12/07 23:35:54 foser Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.69 2004/01/10 14:05:49 agriffis Exp $
+
+  10 Jan 2004; <agriffis@gentoo.org> gnome-vfs-1.0.5-r3.ebuild:
+  stable on ia64
 
   08 Dec 2003; foser <foser@gentoo.org> gnome-vfs-2.4.{0,1}.ebuild :
   dep fix fam-oss > fam, due to move
