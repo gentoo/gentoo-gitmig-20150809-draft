@@ -1,2 +1,6 @@
-MD5 65a284d020e9f9da295fb42af8961862 ibm-jdk-bin-1.4.1.ebuild 3344
+MD5 f8c4a15b1f753d52f64baf0c46c9fdef ChangeLog 500
+MD5 aeecaca2d746cb6a5f84f0898a3010e5 ibm-jdk-bin-1.4.1.ebuild 3071
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 971e2c067f8f28bd0f7c882607650469 files/cpuinfo 12
 MD5 de9e44ca05e6dc855700ef2c5844b60e files/digest-ibm-jdk-bin-1.4.1 138
+MD5 6abf225f93a87dd76d44b734d0a0cf48 files/ibm-jdk-bin-1.4.1 457

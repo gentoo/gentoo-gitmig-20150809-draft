@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.1 2004/04/28 20:35:21 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.2 2004/04/28 23:13:55 dholm Exp $
+
+*ibm-jdk-bin-1.4.1 (29 Apr 2004)
+
+  29 Apr 2004; David Holm <dholm@gentoo.org> +files/cpuinfo,
+  +files/ibm-jdk-bin-1.4.1, ibm-jdk-bin-1.4.1.ebuild:
+  Added missing files and fixed some bugs in the ebuild.
 
   28 Apr 2004; <SeJo@gentoo.org> +metadata.xml:
   new package same bin
