@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/eroaster
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.13 2003/02/12 03:06:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.14 2003/09/02 09:31:56 aliz Exp $
+
+*eroaster-2.1.0-r2 (02 Sep 2003)
+
+  02 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> eroaster-2.1.0-r2.ebuild :
+  Security update.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
