@@ -1,5 +1,5 @@
-MD5 01c512f39bea47cd6836bdbfdda7cc0a fontconfig-2.1-r1.ebuild 2717
+MD5 48dd657b7ed9fb1f64943ac51f225112 fontconfig-2.1-r1.ebuild 2687
 MD5 87edbc8b9cf2579b978ed0fcbb22b759 ChangeLog 6153
-MD5 52d37424b23bee5e9ede1634cf49a0bc fontconfig-2.2.0-r2.ebuild 3277
+MD5 b6e64ece314625d055c3620278ccf462 fontconfig-2.2.0-r2.ebuild 3248
 MD5 fd11506a1969709b4d447084344006ba files/digest-fontconfig-2.1-r1 140
 MD5 82f9bbcca9f5c665c6610cbaace58579 files/digest-fontconfig-2.2.0-r2 145

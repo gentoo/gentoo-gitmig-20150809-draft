@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.7 2003/06/10 12:05:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.8 2003/06/10 12:09:30 seemant Exp $
 
 inherit eutils
 
@@ -30,7 +30,6 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
-	unpack ${PF}-gentoo.tar.bz2
 	cd ${S}
 
 	local PPREFIX="${WORKDIR}/patch/${PN}"
