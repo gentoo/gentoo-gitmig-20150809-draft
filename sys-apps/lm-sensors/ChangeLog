@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.15 2004/01/11 20:10:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.16 2004/01/13 20:58:16 gmsoft Exp $
+
+  13 Jan 2004; Guy Martin <gmsoft@gentoo.org> lm-sensors-2.8.1.ebuild,
+  lm-sensors-2.8.2.20040111.ebuild, lm-sensors-2.8.2.ebuild:
+  Filter flag -fstack-protector.
 
 *lm-sensors-2.8.2.20040111 (11 Jan 2004)
 
