@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.6 2004/02/26 19:35:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.7 2004/02/29 12:07:57 azarah Exp $
+
+*sysfsutils-1.0.0 (29 Feb 2004)
+
+  29 Feb 2004; Martin Schlemmer <azarah@gentoo.org> sysfsutils-1.0.0.ebuild,
+  files/sysfsutils-1.0.0-dont-check-for-libsysfs.patch:
+  Update version. Do not check for external libsysfs, else it links systool, etc
+  against old libsysfs as well if older sysfsutils is installed.
 
   26 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> sysfsutils-0.4.0.ebuild:
   Seems happy on sparc
