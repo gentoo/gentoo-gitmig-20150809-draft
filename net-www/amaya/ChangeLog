@@ -1,6 +1,10 @@
 # ChangeLog for net-www/amaya
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.16 2003/12/19 14:16:24 lu_zero Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.17 2004/01/09 21:54:01 weeve Exp $
+
+  09 Jan 2004; Jason Wever <weeve@gentoo.org> amaya-8.0.ebuild,
+  amaya-8.2.ebuild:
+  Added ~sparc keyword to 8.0 and 8.2
 
 *amaya-8.2 (19 Dec 2003)
 
