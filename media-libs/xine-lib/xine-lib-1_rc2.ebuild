@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.4 2003/11/29 23:12:13 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.5 2003/12/19 00:03:53 tseng Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic
 # at make time any way.
 # Brandon Low (29 Apr 2003)
 # inherit flag-o-matic
-filter-flags "-maltivec -mabi=altivec"
+filter-flags "-maltivec -mabi=altivec -fstack-protector"
 # replace-flags k6-3 i686
 # replace-flags k6-2 i686
 # replace-flags k6   i686
