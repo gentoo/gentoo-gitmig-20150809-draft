@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3.ebuild,v 1.1 2004/05/14 19:18:59 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3.ebuild,v 1.2 2004/06/09 17:55:23 agriffis Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="net-libs/libpcap"
 src_compile() {
 	./configure || die
 
-	if [ `use debug` ]
+	if use debug
 	then
 		make CCOPT="${CFLAGS}" || die
 	else
